@@ -1,4 +1,14 @@
-import { type BaseHTMLAttributes, type ElementRef, forwardRef } from "react"
+import {
+  type BaseHTMLAttributes,
+  Children,
+  cloneElement,
+  type ElementRef,
+  forwardRef,
+  Fragment,
+  isValidElement,
+  type ReactElement,
+  useMemo,
+} from "react"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
@@ -31,17 +41,46 @@ const Center = forwardRef<FlexElement, FlexProps>(
 
 Center.displayName = "Center"
 
-const Stack = forwardRef<FlexElement, FlexProps>(
-  ({ className, ...props }, ref) => {
+type StackProps = FlexProps & { separator?: ReactElement }
+
+const Stack = forwardRef<FlexElement, StackProps>(
+  ({ className, separator, children, ...props }, ref) => {
+    const cloneChildren = useMemo(() => {
+      if (!separator) return children
+
+      const validChildren = Children.toArray(children).filter((child) =>
+        isValidElement(child)
+      )
+
+      const sep = cloneElement(separator, {
+        className: cn(
+          separator.props.className,
+          "size-auto border self-stretch"
+        ),
+      })
+
+      return validChildren.map((child, index) => {
+        const key = typeof child.key !== "undefined" ? child.key : index
+
+        return (
+          <Fragment key={key}>
+            {index === 0 ? null : sep}
+            {child}
+          </Fragment>
+        )
+      })
+    }, [separator, children])
     return (
-      <Flex ref={ref} className={cn("flex-col gap-2", className)} {...props} />
+      <Flex ref={ref} className={cn("flex-col gap-2", className)} {...props}>
+        {cloneChildren}
+      </Flex>
     )
   }
 )
 
 Stack.displayName = "Stack"
 
-const HStack = forwardRef<FlexElement, FlexProps>(
+const HStack = forwardRef<FlexElement, StackProps>(
   ({ className, ...props }, ref) => {
     return (
       <Stack
@@ -55,7 +94,7 @@ const HStack = forwardRef<FlexElement, FlexProps>(
 
 HStack.displayName = "HStack"
 
-const VStack = forwardRef<FlexElement, FlexProps>(
+const VStack = forwardRef<FlexElement, StackProps>(
   ({ className, ...props }, ref) => {
     return (
       <Stack
@@ -69,4 +108,4 @@ const VStack = forwardRef<FlexElement, FlexProps>(
 
 VStack.displayName = "VStack"
 
-export { Center, Flex, HStack, Stack, VStack }
+export { Center, Flex, type FlexProps, HStack, Stack, VStack }

@@ -294,7 +294,7 @@ Pour certaines valeurs de `P` et `w`, la fonction `pow(x, w, P)` peut présenter
 Étant donné que `P` est un nombre premier, alors un `w` approprié pour une fonction de hachage d'exponentiation modulaire peut être choisi en utilisant le résultat suivant :
 
 > Observation 3. Laissez `P` être un nombre premier ; `w` et `P-1` sont relativement premiers si et seulement si pour tous les `a` et `b` en `ℤ/Pℤ` :
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P` si et seulement si `a mod P ≡ b mod P`
 > </center>

@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "Wybierz kategorię",
   "page-dapps-category-social": "Media społecznościowe",
   "page-dapps-category-content": "Treść",
+  "page-dapps-category-community": "Społeczność",
   "page-dapps-category-messaging": "Wiadomości",
   "page-dapps-category-identity": "Tożsamość",
   "page-dapps-collectibles-benefits-1-description": "Gdy dzieło sztuki jest tokenizowane na Ethereum, można udowodnić jego własność w sposób widoczny dla wszystkich. Można prześledzić drogę dzieła sztuki od momentu jego stworzenia do obecnego posiadacza. Zapobiega to fałszerstwom.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "Platforma handlowa peer-to-peer stworzona z myślą o szybkości.",
   "page-dapps-dapp-description-marble-cards": "Twórz unikalne karty cyfrowe oparte na adresach URL i handluj nimi.",
   "page-dapps-dapp-description-matcha": "Wyszukuje wiele giełd, aby pomóc Ci znaleźć najlepsze ceny.",
+  "page-dapps-dapp-description-meeds": "Centra społeczności Web3 w erze zdecentralizowanej pracy. Sprawiedliwe i przejrzyste nagradzanie wkładu, który ma znaczenie.",
   "page-dapps-dapp-description-mirror": "Zbudowana na web3 dla web3, solidna platforma wydawnicza Mirror przesuwa granice pisania online",
   "page-dapps-dapp-description-multichain": "Najlepszy router dla web3. Jest to infrastruktura stworzona do dowolnych interakcji międzyłańcuchowych.",
   "page-dapps-dapp-description-nifty-gateway": "Kupuj prace w łańcuchu od najlepszych artystów, sportowców, marek i twórców.",
@@ -113,6 +115,7 @@
   "page-dapps-dapp-description-rotki": "Narzędzie open source do śledzenia portfela, analizy, księgowości i raportowania podatkowego, które szanuje Twoją prywatność.",
   "page-dapps-dapp-description-krystal": "Kompleksowa platforma umożliwiająca dostęp do wszystkich Twoich ulubionych usług DeFi.",
   "page-dapps-dapp-description-rarible": "Twórz, sprzedawaj i kupuj tokenizowane przedmioty kolekcjonerskie.",
+  "page-dapps-dapp-description-request-finance": "Zestaw narzędzi finansowych do kryptowalutowych faktur, list płac i wydatków.",
   "page-dapps-dapp-description-rubic": "Międzyłańcuchowy agregator technologii dla użytkowników i zdecentralizowanych aplikacji.",
   "page-dapps-dapp-description-sablier": "Przesyłaj pieniądze w czasie rzeczywistym.",
   "page-dapps-dapp-description-spatial": "Stwórz swój własny awatar i światy 3D",
@@ -217,6 +220,7 @@
   "page-dapps-marble-cards-logo-alt": "Logo marble.cards",
   "page-dapps-async-logo-alt": "Logo Async",
   "page-dapps-matcha-logo-alt": "Logo Matcha",
+  "page-dapps-meeds-logo-alt": "Logo Meeds",
   "page-dapps-metaverse-benefits-title": "metaverse",
   "page-dapps-metaverse-benefits-description": "Co takiego jest w Ethereum, że pozwala metaverse rozwijać się?",
   "page-dapps-metaverse-benefits-1-title": "Tokeny NFT",
@@ -241,6 +245,7 @@
   "page-dapps-ready-button": "Przejdź",
   "page-dapps-ready-description": "Wybierz aplikację, aby wypróbować",
   "page-dapps-ready-title": "Gotów?",
+  "page-dapps-request-finance-logo-alt": "Logo Request Finance",
   "page-dapps-rubic-logo-alt": "Logo Rubic",
   "page-dapps-sablier-logo-alt": "Logo Sablier",
   "page-dapps-set-up-a-wallet-button": "Znajdź portfel",
@@ -281,5 +286,7 @@
   "page-dapps-dapp-description-dodo": "DODO jest dostawcą płynności w łańcuchu, który wykorzystuje algorytm Proactive Market Maker (PMM)",
   "page-dapps-dodo-image-alt": "Logo DODO",
   "page-dapps-dapp-description-artblocks": "Art Blocks zajmuje się ożywianiem fascynujących dzieł współczesnej sztuki generatywnej",
-  "page-dapps-artblocks-image-alt": "Logo Art Blocks"
+  "page-dapps-artblocks-image-alt": "Logo Art Blocks",
+  "page-dapps-explore-title": "Chcesz zobaczyć więcej aplikacji?",
+  "page-dapps-explore": "Sprawdź setki zdecentralizowanych aplikacji"
 }

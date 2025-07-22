@@ -1,5 +1,3 @@
-import { ComponentProps } from "react"
-
 import IdAnchor from "@/components/IdAnchor"
 import Translation from "@/components/Translation"
 import { Stack } from "@/components/ui/flex"
@@ -12,7 +10,7 @@ import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
 interface GlossaryDefinitionProps {
   term: string
   size?: "md" | "sm"
-  options?: ComponentProps<typeof Translation>["options"]
+  ns?: string
 }
 
 // Override the default `a` mapping to prevent displaying the glossary tooltip
@@ -24,30 +22,22 @@ const components = {
 const GlossaryDefinition = ({
   term,
   size = "md",
-  options = { ns: DEFAULT_GLOSSARY_NS },
+  ns = DEFAULT_GLOSSARY_NS,
 }: GlossaryDefinitionProps) => {
   const textClasses = size === "sm" ? "mb-0" : ""
 
   return (
     <Stack className="mb-8 items-stretch gap-4 text-start">
       <h4
-        className={term ? "relative scroll-mt-28" : ""}
+        className={term ? "group relative scroll-mt-28" : ""}
         {...(term ? { "data-group": true, id: term } : {})}
       >
         <IdAnchor id={term} />
-        <Translation
-          id={term + "-term"}
-          options={options}
-          transform={components}
-        />
+        <Translation id={term + "-term"} ns={ns} transform={components} />
       </h4>
 
       <div className={cn("inline-block", textClasses)}>
-        <Translation
-          id={term + "-definition"}
-          options={options}
-          transform={components}
-        />
+        <Translation id={term + "-definition"} ns={ns} transform={components} />
       </div>
     </Stack>
   )

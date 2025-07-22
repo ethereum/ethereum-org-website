@@ -4,11 +4,11 @@ description: 'Birleşim: Ana Ağ Ethereum''un hisse ispatını kullanmaya başla
 lang: tr
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
-summaryPoint1: Ethereum Ana Ağı hisse ispatı kullanır, ancak bu her zaman geçerli olan durum değildi.
+alt:
+summaryPoint1: Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi.
 summaryPoint2: Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır.
-summaryPoint3: Birleşim, esas Ethereum Ana Ağı'nın İşaret Zinciri olarak adlandırılan ayrı bir iş ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder.
-summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~%99,95 oranında azalttı.
+summaryPoint3: Birleşim, esas Ethereum Ana Ağının İşaret Zinciri olarak adlandırılan ayrı bir iş ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder.
+summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azalttı.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -92,7 +92,7 @@ title="Dapp ve akıllı sözleşme geliştiricileri"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunlarla ilişkili olanları da içerir:<
+Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunlarla ilişkili olanları da içerir:
 
 <ul>
   <li>blok yapısı</li>
@@ -108,7 +108,7 @@ Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.
 
 ## Birleşim ve enerji tüketimi {#merge-and-energy}
 
-Birleşim Ethereum için iş ispatının sonunu getirdi ve daha sürdürülebilir ve doğa dostu bir Ethereum devrini başlattı. Ethereum'un enerji tüketimi %99,95 düştü ve Ethereum çevre dostu bir blok zincir haline geldi. [Ethereum enerji tüketimi](/energy-consumption/) hakkında daha fazla bilgi edinin.
+Birleşim, Ethereum için iş ispatının sonunu getirdi ve daha sürdürülebilir, doğa dostu bir Ethereum çağının başlangıcı oldu. Ethereum'un enerji tüketimi %99,95 düştü ve Ethereum çevre dostu bir blok zincir haline geldi. [Ethereum enerji tüketimi](/energy-consumption/) hakkında daha fazla bilgi edinin.
 
 ## Birleşim ve ölçeklendirme {#merge-and-scaling}
 

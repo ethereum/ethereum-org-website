@@ -17,7 +17,7 @@ One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](/de
 Eventually, whoever ends up with them might want to bridge them back to L1.
 When doing this, the assets are burned on L2 and then released back to the user on L1.
 
-This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge) works.
+This is the way the [Optimism standard bridge](https://docs.optimism.io/app-developers/bridging/standard-bridge) works.
 In this article we go over the source code for that bridge to see how it works and study it as an example of well written Solidity code.
 
 ## Control flows {#control-flows}
@@ -1347,7 +1347,7 @@ The only way we can do this from L2 is to send a message that will have to wait 
 
 The standard bridge is the most flexible mechanism for asset transfers.
 However, because it is so generic it is not always the easiest mechanism to use.
-Especially for withdrawals, most users prefer to use [third party bridges](https://www.optimism.io/apps/bridges) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
+Especially for withdrawals, most users prefer to use [third party bridges](https://optimism.io/apps#bridge) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
 
 These bridges typically work by having assets on L1, which they provide immediately for a small fee (often less than the cost of gas for a standard bridge withdrawal).
 When the bridge (or the people running it) anticipates being short on L1 assets it transfers sufficient assets from L2. As these are very big withdrawals, the withdrawal cost is amortized over a large amount and is a much smaller percentage.

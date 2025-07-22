@@ -18,7 +18,7 @@ A prova de participação requer nós, conhecidos como validadores, para enviar 
 
 A prova de trabalho consome muito mais energia porque a eletricidade é consumida no processo de mineração. Por outro lado, a prova de participação requer apenas uma quantidade muito pequena de energia: os validadores do Ethereum podem até ser executados em um dispositivo de baixa potência, como o Raspberry Pi. O mecanismo de prova de participação do Ethereum é considerado mais seguro do que a prova de trabalho, porque o custo do ataque é maior e as consequências para um invasor são mais severas.
 
-A comparação entre prova de trabalho e prova de participação é um tópico controverso. [O blog de Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e o debate entre Justin Drake e Lyn Alden dão um bom resumo dos argumentos.
+A comparação entre prova de trabalho e prova de participação é um tópico controverso. [O blog do Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e o debate entre Justin Drake e Lyn Alden fornecem um bom resumo dos argumentos.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -54,7 +54,7 @@ Não. Um usuário do BitcoinTalk [propôs a ideia básica de prova de participa�
 
 ## O que tem de especial na prova de participação do Ethereum? {#why-is-ethereum-pos-special}
 
-O mecanismo de prova de participação do Ethereum possui um design único. Esse mecanismo não foi o primeiro a ser planejado ou implementado, mas é o mais robusto. O mecanismo de prova de participação é conhecido como “Casper”. O Casper se define a partir de como os validadores são selecionados para propor blocos, como e quando os certificados são feitos, como os certificados são contados, as recompensas e penalidades dadas aos validadores, condições de redução, mecanismos seguros, assim como a fuga de inatividade e as condições de “finalidade”. Enquanto isso, “finalidade” é a condição de que, para que um bloco seja considerado uma parte permanente da cadeia padronizada, ele deve ter sido votado pelo menos por 66% do ETH total em participação na rede. Os pesquisadores desenvolveram o Casper especificamente para o Ethereum, que é a primeira e única blockchain a ter implementado tal mecanismo.
+O mecanismo de prova de participação do Ethereum possui um design único. Esse mecanismo não foi o primeiro a ser planejado ou implementado, mas é o mais robusto. O mecanismo de prova de participação é conhecido como “Casper”. O Casper é definido a partir de como os validadores são selecionados para propor blocos, como e quando os certificados são feitos, como os certificados são contados, as recompensas e penalidades dadas aos validadores, condições de redução, mecanismos seguros, assim como a fuga de inatividade e as condições de “finalidade”. Enquanto isso, “finalidade” é a condição de que, para que um bloco seja considerado uma parte permanente da cadeia padronizada, ele deve ter sido votado pelo menos por 66% do ETH total em participação na rede. Os pesquisadores desenvolveram o Casper especificamente para o Ethereum, que é a primeira e única blockchain a ter implementado tal mecanismo.
 
 Além do Casper, a prova de participação do Ethereum usa um algoritmo de escolha de bifurcação (fork) chamado LMD-GHOST. Isso é necessário no caso de surgir uma condição em que há dois blocos para o mesmo slot. Isso cria duas bifurcações (forks) na blockchain. O LMD-GHOST escolhe a que tem o maior “peso” de atestações. O peso é o número de atestações ponderado pelo saldo efetivo dos validadores. O LMD-GHOST é de exclusividade do Ethereum.
 
@@ -74,7 +74,7 @@ Os validadores têm que colocar ETH em participação (stake) para que tenham al
 
 ## Como os validadores são selecionados? {#how-are-validators-selected}
 
-Um único validador é pseudo-aleatoriamente escolhido para propor um bloco em cada slot usando um algoritmo chamado RANDAO, que mistura um hash do proponente do bloco com uma semente que é atualizada em cada bloco. Esse valor é usado para selecionar um validador específico do conjunto total de validadores. A seleção do validador é fixada com quatro épocas de antecedência.
+Um único validador é pseudo-aleatoriamente escolhido para propor um bloco em cada slot usando um algoritmo chamado RANDAO, que mistura um hash do proponente do bloco com uma semente que é atualizada em cada bloco. Esse valor é usado para selecionar um validador específico do conjunto total de validadores. A seleção do validador é fixada com duas épocas de antecedência.
 
 [Mais sobre a seleção do validador](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

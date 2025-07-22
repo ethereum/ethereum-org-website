@@ -1,5 +1,5 @@
 ---
-title: Skálázás
+title: Méretezés
 description: Bevezetés a különböző skálázási lehetőségekbe, melyet jelenleg az Ethereum közösség fejleszt.
 lang: hu
 sidebarDepth: 3
@@ -59,7 +59,7 @@ Kétfajta összevont tranzakció létezik különböző biztonsági modellekkel:
 - **Optimista összevont tranzakció**: alapértelmezésben érvényes tranzakciókat feltételez, és csak kétely esetén végez számításokat egy [**csalási bizonyíték**](/glossary/#fraud-proof) révén. [Bővebben az optimista összevont tranzakciókról](/developers/docs/scaling/optimistic-rollups/).
 - **Zero-knowledge összevont tranzakció**: számítást végez a láncon kívül, és [**érvényességi bizonyítékot**](/glossary/#validity-proof) ad a láncnak. [Bővebben a zero-knowledge összevont tranzakciókról](/developers/docs/scaling/zk-rollups/).
 
-#### Státuszcsatornák {#channels}
+#### Állapot csatornák {#channels}
 
 A státuszcsatornák többaláírásos szerződéseket használnak, hogy a résztvevők gyorsan és szabadon tudjanak tranzakciókat lebonyolítani a láncon kívül, majd a végleges elszámolást a főhálózattal végezzék. Ez minimalizálja a hálózati torlódásokat, díjakat és késedelmeket. Két típusa jelenleg a státuszcsatorna és a fizetési csatorna.
 
@@ -106,7 +106,7 @@ _Vegye figyelembe, hogy a videóban szereplő magyarázat az L2 kifejezést hasz
 - [Egy nem teljeskörű útmutató az összevont tranzakciókhoz](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-alapú ZK összevont tranzakciók: világverők](https://hackmd.io/@canti/rkUT0BD8K)
 - [Az optimista összevont tranzakciók és a ZK összevont tranzakciók összehasonlítása](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Zero-knowledge blokklánc skálázhatósága](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Zero-knowledge blokklánc skálázhatósága](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Miért az összevont tranzakciók és az adatmegosztások (sharding) adják az egyetlen fenntartható megoldást a nagyfokú skálázhatósághoz](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Milyen L3 megoldásoknak van értelme?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Adatelérhetőség vagy hogyan tanulták meg az összevont tranzakciók, hogy ne aggódjanak és szeressék az Ethereumot](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)

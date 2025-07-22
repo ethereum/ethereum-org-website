@@ -24,6 +24,7 @@ export type Product = {
   battleTested: FlagType
   trustless?: FlagType
   selfCustody?: FlagType
+  socials?: Array<string>
   liquidityToken?: FlagType
   permissionless?: FlagType
   permissionlessNodes?: FlagType

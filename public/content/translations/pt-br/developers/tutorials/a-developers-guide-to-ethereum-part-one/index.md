@@ -59,7 +59,7 @@ Os desenvolvedores do Python que querem interagir com o Ethereum provavelmente u
 
 <FeaturedText>Nota: "Nó Ethereum" e "Cliente Ethereum" são usados de forma intercambiável. Em ambos os casos, refere-se ao software que um participante da rede Ethereum executa. Este software pode ler dados de blocos, receber atualizações quando novos blocos são adicionados à cadeia, transmitir novas transações e mais. Tecnicamente, o cliente é o software, o nódulo é o computador que executa o software.</FeaturedText>
 
-[Clientes Ethereum](/developers/docs/nodes-and-clients/) podem ser configurados para serem acessíveis por [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTPS ou Websockets, então Web3. y precisará espelhar esta configuração. Web3.py refere-se a estas opções de conexão como **provedores**. Você vai querer escolher um dos três provedores para vincular a instância da Web3.py ao seu nó.
+[Clientes Ethereum](/developers/docs/nodes-and-clients/) podem ser configurados para serem acessíveis por [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTPS ou Websockets, então Web3.py precisará espelhar esta configuração. Web3.py refere-se a estas opções de conexão como **provedores**. Você vai querer escolher um dos três provedores para vincular a instância da Web3.py ao seu nó.
 
 ![Um diagrama mostrando como web3.py usa IPC para conectar seu aplicativo a um nódulo Ethereum](./web3py-and-nodes.png)
 
@@ -140,7 +140,7 @@ Um padrão similar é usado ao lidar com transações em <b>ether</b>. No entant
 
 </FeaturedText>
 
-Tente converter alguns valores de e para wei. Note que [existem nomes para muitas das denominações](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) entre ether e wei. Um dos mais conhecidos entre eles é o **gwei**, já que é frequentemente como as taxas de transação são representadas.
+Tente converter alguns valores de e para wei. Note que [existem nomes para muitas das denominações](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) entre ether e wei. Um dos mais conhecidos entre eles é o **gwei**, já que é frequentemente como as taxas de transação são representadas.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -234,7 +234,7 @@ Out[9]: AttributeDict({
 })
 ```
 
-Sãp fornecidas muitas informações sobre um bloco, mas há apenas alguns pontos para salientar aqui:
+São fornecidas muitas informações sobre um bloco, mas há apenas alguns pontos para salientar aqui:
 
 - O número de bloco é zero — não importa quanto tempo você configurou o provedor de teste. Ao contrário da rede Ethereum real, que minera um novo bloco aproximadamente a cada 12 segundos, essa simulação esperará até que você a instrua a fazer alguma coisa.
 - `transactions` é uma lista vazia, pelo mesmo motivo: ainda não fizemos nada. Este primeiro bloco é um **bloco vazio**, apenas para iniciar a cadeia.

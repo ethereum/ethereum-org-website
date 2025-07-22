@@ -6,6 +6,10 @@ lang: fr
 
 # Introduction au Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 La centralisation a permis à des milliards de personnes d'accéder au World Wide Web et de créer l'infrastructure stable et robuste sur laquelle il repose. Dans le même temps, une poignée d'entités centralisées ont pris le contrôle de larges pans du World Wide Web, décidant de manière unilatérale de ce qui est autorisé ou non.
 
 Le Web3 est la réponse à ce dilemme. Contrairement à un Web dominé par les grandes entreprises technologiques, le Web3 est décentralisé et est construit, exploité et détenu par ses utilisateurs. Le Web3 donne le pouvoir aux individus plutôt qu'aux entreprises. Avant de parler du Web3, il faut comprendre comment nous en sommes arrivés là.
@@ -64,7 +68,7 @@ Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glos
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink href="/nft/">
-    Plus d'infos sur les NTF
+    Plus d'infos sur les NFT
   </ButtonLink>
 </InfoBanner>
 
@@ -147,11 +151,11 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 Le Web3 n’est pas strictement défini. Plusieurs participants de la Communauté ont des points de vue différents à ce sujet. Voici quelques-uns d'entre eux :
 
-- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Comprendre le Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Importance du Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Pourquoi la décentralisation est importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Panorama du Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

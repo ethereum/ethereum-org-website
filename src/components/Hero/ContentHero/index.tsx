@@ -1,42 +1,22 @@
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react"
-
 import type { CommonHeroProps } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { Image } from "@/components/Image"
+import { Stack } from "@/components/ui/flex"
 
 import { CallToAction } from "../CallToAction"
 
 export type ContentHeroProps = Omit<CommonHeroProps<string>, "header">
 
 const ContentHero = (props: ContentHeroProps) => {
-  const {
-    breadcrumbs,
-    heroImg,
-    buttons,
-    title,
-    description,
-    blurDataURL,
-    maxHeight,
-  } = props
+  const { breadcrumbs, heroImg, buttons, title, description, blurDataURL } =
+    props
   return (
-    <Box bgImg="bgMainGradient">
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        maxW="1536px"
-        mx="auto"
-        alignItems="center"
-      >
-        <Box
-          order={{ lg: 1 }}
-          py={{ base: 0, lg: 12 }}
-          height={{
-            base: "300px",
-            md: "400px",
-            lg: maxHeight ? maxHeight : "full",
-          }}
-        >
+    <div className="bg-gradient-main">
+      <div className="mx-auto grid max-w-screen-2xl grid-cols-1 items-center lg:grid-cols-2">
+        <div className="h-[300px] md:h-[400px] lg:order-1 lg:h-full">
           <Image
+            className="box h-full max-h-[451px] w-full flex-auto object-contain md:flex-none"
             src={heroImg}
             alt=""
             priority
@@ -45,25 +25,19 @@ const ContentHero = (props: ContentHeroProps) => {
             height={451}
             // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
             sizes="(max-width: 992px) 100vw, 760px"
-            boxSize="full"
-            style={{ objectFit: "contain" }}
-            flex={{ base: "1 1 100%", md: "none" }}
-            maxHeight={451}
           />
-        </Box>
-        <Stack p={{ base: "8", lg: "16" }} spacing="9" justify="center">
+        </div>
+        <Stack className="justify-center gap-9 p-8 lg:p-16">
           <Breadcrumbs {...breadcrumbs} />
-          <Stack spacing="6">
-            <Heading as="h1" size="2xl">
-              {title}
-            </Heading>
+          <Stack className="gap-6">
+            <h1>{title}</h1>
             {typeof description === "string" ? (
-              <Text fontSize="lg">{description}</Text>
+              <p className="text-lg">{description}</p>
             ) : (
               description
             )}
             {buttons && (
-              <Stack direction={{ base: "column", md: "row" }} spacing="4">
+              <Stack className="flex-col gap-4 md:flex-row">
                 {buttons.map((button, idx) => {
                   if (!button) return
                   return <CallToAction key={idx} index={idx} {...button} />
@@ -75,8 +49,8 @@ const ContentHero = (props: ContentHeroProps) => {
            * Add conditional Big Stat box here
            */}
         </Stack>
-      </SimpleGrid>
-    </Box>
+      </div>
+    </div>
   )
 }
 

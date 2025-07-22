@@ -49,7 +49,7 @@ _Το Web3 έχει εξελιχθεί σε ένα οικοσύστημα από
 
 ### Dapps σε άλλες κρυπτοαλυσίδες {#dapps-other-chains}
 
-Εάν χρησιμοποιούσατε το Aave στο κεντρικό δίκτυο του Ethereum για να δανείσετε USDT, αλλά το επιτόκιο για δανεισμό USDT χρησιμοποιώντας το Aave στο Polygon είναι υψηλότερο.
+Εάν χρησιμοποιούσατε το Aave στο Ethereum Mainnet για την παροχή USDT, αλλά το επιτόκιο που ενδέχεται να λάβετε για την παροχή USDT χρησιμοποιώντας το Aave στο Polygon είναι υψηλότερο.
 
 ### Εξερεύνηση οικοσυστημάτων blockchain {#explore-ecosystems}
 
@@ -95,7 +95,16 @@ _Το Web3 έχει εξελιχθεί σε ένα οικοσύστημα από
 
 <Divider />
 
-## Κίνδυνοι χρήσης γεφυρών {#bridge-risk}
+## Χρήση γεφυρών {#use-bridge}
+
+Η χρήση γεφυρών σας επιτρέπει να μεταφέρετε τα κρυπτονομίσματά σας μεταξύ διαφορετικών κρυπτοαλυσίδων. Δείτε παρακάτω μερικές πηγές που θα σας βοηθήσουν στην εύρεση και χρήση γεφυρών:
+
+- **[Σύνοψη των γεφυρών L2BEAT](https://l2beat.com/bridges/summary) & [ ανάλυση κινδύνου γεφυρών L2BEAT](https://l2beat.com/bridges/risk)**: Μια περιεκτική σύνοψη διαφόρων γεφυρών, συμπεριλαμβανομένων λεπτομερειών σχετικά με το μερίδιο αγοράς, τον τύπο της γέφυρας και τις αλυσίδες προορισμού. Το L2BEAT διαθέτει επίσης ανάλυση κινδύνου για γέφυρες, βοηθώντας τους χρήστες να λαμβάνουν τεκμηριωμένες αποφάσεις όταν επιλέγουν μια γέφυρα.
+- **[Σύνοψη της γέφυρας DefiLlama](https://defillama.com/bridges/Ethereum)**: Σύνοψη των όγκων γεφυρών στα δίκτυα Ethereum.
+
+<Divider />
+
+## Κίνδυνος χρήσης γεφυρών {#bridge-risk}
 
 Οι γέφυρες βρίσκονται στα αρχικά στάδια ανάπτυξης. Είναι πιθανό ο βέλτιστος σχεδιασμός της γέφυρας να μην έχει ακόμη ανακαλυφθεί. Η αλληλεπίδραση με οποιονδήποτε τύπο γέφυρας ενέχει κινδύνους:
 
@@ -122,7 +131,9 @@ _Το Web3 έχει εξελιχθεί σε ένα οικοσύστημα από
 <Divider />
 
 ## Περισσότερες πληροφορίες {#further-reading}
+- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 Ιουνίου 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _05 Ιουλίου 2022 - Bartek Kiepuszewski_
+- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _08 Ιανουαρίου 2022 - Vitalik Buterin_
+- [Εκμετάλλευση κοινής ασφάλειας για ασφαλή διαλειτουργικότητα μεταξύ των αλυσίδων: Επιτροπές πολιτειών Lagrange και πέρα](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Ιουνίου 2024 - Emmanuel Awosika_
+- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Ιουνίου 2024 - Alex Hook_
 
-- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 Ιουνίου 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _05 Ιουλίου 2022 - Bartek Kiepuszewski_
-- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _08 Ιανουαρίου 2022 - Vitalik Buterin_

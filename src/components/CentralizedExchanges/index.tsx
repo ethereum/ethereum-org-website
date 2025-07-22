@@ -1,19 +1,21 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+"use client"
+
+import { useLocale } from "next-intl"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
-import Select from "@/components/ui/Select"
+import InlineLink from "@/components/ui/Link"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { WEBSITE_EMAIL } from "@/lib/constants"
 
-import InlineLink from "../ui/Link"
+import Select from "../Select"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const ListContainer = (props: ChildOnlyProp) => (
   <div className="mt-16 flex flex-col gap-4" {...props} />
@@ -66,7 +68,7 @@ const CentralizedExchanges = ({
   lastDataUpdateDate,
 }: CentralizedExchangesProps) => {
   const { t } = useTranslation("page-get-eth")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const {
     selectOptions,
     handleSelectChange,
@@ -79,12 +81,8 @@ const CentralizedExchanges = ({
   const lastUpdated = getLocaleTimestamp(locale as Lang, lastDataUpdateDate)
 
   return (
-    <div className="flex flex-col items-center">
-      <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>
-      <p className="mb-8 max-w-screen-md text-center">
-        {t("page-get-eth-exchanges-intro")}
-      </p>
-      <div className="w-full max-w-screen-sm">
+    <>
+      <div className="relative z-50 w-full max-w-screen-sm">
         <Select
           instanceId="eth-exchange-region"
           aria-label={t("page-get-eth-exchanges-header")}
@@ -93,6 +91,7 @@ const CentralizedExchanges = ({
           placeholder={placeholderString}
           isSearchable
           variant="outline"
+          className="z-50"
         />
       </div>
       {!hasSelectedCountry && (
@@ -142,7 +141,7 @@ const CentralizedExchanges = ({
           </p>
         </>
       )}
-    </div>
+    </>
   )
 }
 

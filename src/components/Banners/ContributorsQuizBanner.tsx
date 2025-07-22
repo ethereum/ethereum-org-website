@@ -1,64 +1,58 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
-
-import { Image } from "@/components/Image"
-
 import { cn } from "@/lib/utils/cn"
 
-import { ButtonLink } from "../Buttons"
+import { Image } from "../Image"
+import { ButtonLink } from "../ui/buttons/Button"
+import { Flex, Stack } from "../ui/flex"
 
+import useTranslation from "@/hooks/useTranslation"
 import PeopleLearning from "@/public/images/people-learning.png"
 
 // TODO: refactor to use CalloutBanner component
-function ContributorsQuizBanner(props: React.HTMLAttributes<HTMLDivElement>) {
+function ContributorsQuizBanner({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  const { t } = useTranslation("common")
   return (
     <aside
       className={cn(
         "flex flex-col rounded md:flex-row",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        className
       )}
       {...props}
     >
       <Flex
-        flex="1 1 50%"
-        position="relative"
-        justify={{ base: "center", md: "end" }}
-        align="end"
-        minH={{ base: 200, md: "auto" }}
-        px={{ base: 8, md: 0 }}
+        className={cn(
+          "relative flex-[1_1_50%]",
+          "justify-center md:justify-end",
+          "items-end",
+          "md:min-h-auto min-h-[200px]",
+          "px-8 md:px-0"
+        )}
       >
         <Image
-          position="absolute"
+          className="absolute max-h-[120%] w-full object-contain"
           src={PeopleLearning}
           alt="People learning about Ethereum"
-          w="full"
-          maxH="120%"
-          style={{
-            objectFit: "contain",
-          }}
         />
-        <Box hideFrom="md" borderBottom="1px solid #D3C5F1" w="full" />
+        <div className="w-full border-b border-[#D3C5F1] md:hidden" />
       </Flex>
-      <Flex
-        flex="1 1 50%"
-        flexDir="column"
-        gap="8"
-        py="8"
-        ps="8"
-        pe={{ base: 8, lg: 0 }}
+      <Stack
+        className={cn("flex-[1_1_50%]", "gap-8 py-8 ps-8", "pe-8 lg:pe-0")}
       >
-        <Flex gap="2" flexDir="column">
-          <Heading size="lg">Unsure where to start?</Heading>
-          <Text size="lg" color="body.base">
-            Take a quick quiz and find out how you can contribute on
-            ethereum.org.
-          </Text>
-        </Flex>
-        <Box>
+        <Stack>
+          <h2>{t("contributor-quiz-banner-title")}</h2>
+          <p className="text-lg text-body">
+            {t("contributor-quiz-banner-description")}
+          </p>
+        </Stack>
+        <div>
           <ButtonLink href="https://ethdotorg.typeform.com/contributor">
-            Take a quiz
+            {t("contributor-quiz-banner-button")}
           </ButtonLink>
-        </Box>
-      </Flex>
+        </div>
+      </Stack>
     </aside>
   )
 }

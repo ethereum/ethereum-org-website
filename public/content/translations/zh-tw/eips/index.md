@@ -54,9 +54,17 @@ lang: zh-tw
 
 若有興趣進一步瞭解以太坊改進提案，請參閱[以太坊改進提案網站](https://eips.ethereum.org/)和 [EIP-1](https://eips.ethereum.org/EIPS/eip-1)。 以下為一些實用連結：
 
-- [以太坊改進提案完整清單](https://eips.ethereum.org/all)
+- [每個以太坊改進提案的清單](https://eips.ethereum.org/all)
 - [所有以太坊改進提案類型的說明](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [所有以太坊改進提案狀態的說明](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### 社群教育專案 {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP 是一個教育影片系列，討論以太坊改進提案 (EIP) 以及即將到來的升級的主要功能。*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds 以ELI5 風格、全面概述各種以太坊改進提案 (EIP)，包括核心 EIP 和應用程式/基礎設施層 EIP (ERC)，以教育讀者並圍繞以太坊協定的提議變更達成共識。*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf 提供以太坊改進提案 (EIP) 的額外資訊，包括它們的狀態、實作細節、相關拉取請求和社群意見回饋。*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun 提供有關以太坊改進提案 (EIP) 的最新消息，EIP 會議更新等等。*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight 根據從不同資源收集的資訊，展示以太坊改進提案 (EIP) 流程的狀態和統計資料。*
 
 ## 參與方式 {#participate}
 

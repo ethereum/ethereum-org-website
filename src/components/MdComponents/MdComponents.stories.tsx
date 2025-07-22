@@ -1,9 +1,7 @@
-import pickBy from "lodash/pickBy"
+import { pickBy } from "lodash"
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-
-import { viewportModes } from "../../../.storybook/modes"
+import { viewportModes } from "@/storybook/modes"
 
 import MdComponentSet from "."
 
@@ -34,8 +32,6 @@ const {
   hr: HR,
   pre: Pre,
   Page,
-  MobileButton,
-  MobileButtonDropdown,
 } = MdComponentSet
 
 const Para = () => (
@@ -53,9 +49,6 @@ export const MdComponents: StoryObj = {
     <div className="mx-auto max-w-screen-lg">
       <Page>
         <ContentContainer>
-          <MobileButton>
-            <MobileButtonDropdown list={roadmapDropdownLinks} />
-          </MobileButton>
           <Heading1>Heading1</Heading1>
           <Para />
           <Heading2>Heading2</Heading2>
@@ -74,56 +67,4 @@ export const MdComponents: StoryObj = {
       </Page>
     </div>
   ),
-}
-
-const roadmapDropdownLinks: ButtonDropdownList = {
-  text: "nav-roadmap-options",
-  ariaLabel: "nav-roadmap-options-alt",
-  items: [
-    {
-      text: "nav-roadmap-home",
-      href: "/roadmap/",
-      matomo: {
-        eventCategory: `Roadmap dropdown`,
-        eventAction: `Clicked`,
-        eventName: "clicked roadmap home",
-      },
-    },
-    {
-      text: "nav-roadmap-security",
-      href: "/roadmap/security",
-      matomo: {
-        eventCategory: `Roadmap security dropdown`,
-        eventAction: `Clicked`,
-        eventName: "clicked roadmap security",
-      },
-    },
-    {
-      text: "nav-roadmap-scaling",
-      href: "/roadmap/scaling",
-      matomo: {
-        eventCategory: `Roadmap scaling dropdown`,
-        eventAction: `Clicked`,
-        eventName: "clicked roadmap scaling home",
-      },
-    },
-    {
-      text: "nav-roadmap-user-experience",
-      href: "/roadmap/user-experience/",
-      matomo: {
-        eventCategory: `Roadmap user experience dropdown`,
-        eventAction: `Clicked`,
-        eventName: "clicked roadmap user experience home",
-      },
-    },
-    {
-      text: "nav-roadmap-future-proofing",
-      href: "/roadmap/future-proofing",
-      matomo: {
-        eventCategory: `Roadmap future-proofing dropdown`,
-        eventAction: `Clicked`,
-        eventName: "clicked roadmap future-proofing home",
-      },
-    },
-  ],
 }

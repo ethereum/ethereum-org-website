@@ -1,18 +1,19 @@
 import type { HTMLAttributes } from "react"
 
+import { FileContributor } from "@/lib/types"
+
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import LeftNavBar, { LeftNavBarProps } from "@/components/LeftNavBar"
-import {
-  ContentContainer,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
-} from "@/components/MdComponents"
+import { ContentContainer, Page } from "@/components/MdComponents"
+import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<LeftNavBarProps, "dropdownLinks" | "tocItems" | "maxDepth"> & {
     children: React.ReactNode
     heroSection: React.ReactNode
+    contributors: FileContributor[]
+    lastEditLocaleTimestamp: string
   }
 
 export const ContentLayout = ({
@@ -21,6 +22,8 @@ export const ContentLayout = ({
   tocItems,
   maxDepth,
   heroSection,
+  contributors,
+  lastEditLocaleTimestamp,
   ...props
 }: ContentLayoutProps) => {
   return (
@@ -37,14 +40,15 @@ export const ContentLayout = ({
 
         <ContentContainer>
           {children}
+
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
           <FeedbackCard />
         </ContentContainer>
-
-        {dropdownLinks && (
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        )}
+        {dropdownLinks && <MobileButtonDropdown list={dropdownLinks} />}
       </Page>
     </div>
   )

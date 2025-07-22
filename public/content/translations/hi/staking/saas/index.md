@@ -22,7 +22,7 @@ summaryPoints:
 इथेरियम प्रोटोकॉल मूल रूप से स्टेकिंग के प्रतिनिधित्व का समर्थन नहीं करता है, इसलिए इस मांग को पूरा करने के लिए इन सेवाओं का निर्माण किया गया है। अगर आपके पास 32 ETH स्टेक करने के लिए है, लेकिन आप हार्डवेयर से निपटने में सहज महसूस नहीं करते हैं, SaaS सेवाएं आपको कठिन भाग को सौंपने की अनुमति देती हैं जबकि आप मूल ब्लॉक पुरस्कार कमा रहे हैं।
 
 <CardGrid>
-  <Card title="आपका अपना सत्यापनकर्ता" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="आपका अपना सत्यापनकर्ता" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="आसान शुरूआत" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="अपना जोखिम सीमित करें" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -49,7 +49,7 @@ summaryPoints:
 
 कृपया ध्यान दें कि [क्लाइंट विविधता](/developers/docs/nodes-and-clients/client-diversity/) का समर्थन महत्वपूर्ण है, क्योंकि यह नेटवर्क की सुरक्षा में सुधार और आपके जोखिम को सीमित करता है। जिन सेवाओं में बहुमत क्लाइंट उपयोग को सीमित करने के सबूत हैं, उन्हें <em style={{ textTransform: "uppercase" }}>"निष्पादन ग्राहक विविधता"</em> और <em style={{ textTransform: "uppercase" }}>"सहमति ग्राहक विविधता"</em> के साथ इंगित किया जाता है।
 
-### कुंजी जनरेटर
+### प्रमुख जनरेटर
 
 <StakingProductsCardGrid category="keyGen" />
 
@@ -91,4 +91,5 @@ SaaS प्रदाता का उपयोग करके, आप अपन
 
 ## अग्रिम पठन {#further-reading}
 
+- [एथेरियम स्टेकिंग डायरेक्टरी](https://www.staking.directory/) - _एरिडियन और स्पेससाइडर_
 - [स्टेकिंग सेवाओं का मूल्यांकन](https://www.attestant.io/posts/evaluating-staking-services/) - _जिम मैकडॉनल्ड 2020_

@@ -27,6 +27,6 @@ Intresserad av att titta på fler appar som är byggda på Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Uppdaterad ofta - Defiprime_
 - [DeFi Llama](https://defillama.com/) _Analys + ranking av DeFi-protokoll - Defi Llama_
 
-Vissa Ethereum-appar kräver en plånbok - [lär dig mer om Ethereum-plånböcker här](/se/wallets/).
+Vissa Ethereum-appar kräver en plånbok - [lär dig mer om Ethereum-plånböcker här](/wallets/).
 
-Vissa Ethereum-appar kräver ETH - [lär dig mer om ETH här](/se/eth/).
+Vissa Ethereum-appar kräver ETH - [lär dig mer om ETH här](/eth/).

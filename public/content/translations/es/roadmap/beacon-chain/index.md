@@ -1,13 +1,13 @@
 ---
 title: La cadena de baliza
-description: 'Descubra todo lo relacionado con la cadena de baliza: la actualización que introdujo la prueba de participación en Ethereum.'
+description: 'Descubra todo lo relacionado con la Cadena de Baliza: la actualización que introdujo la prueba de participación en Ethereum.'
 lang: es
 template: upgrade
 image: /images/upgrades/core.png
-alt: 
-summaryPoint1: La cadena de baliza ha introducido la prueba de participación en el ecosistema de Ethereum.
+alt:
+summaryPoint1: La Cadena de Baliza introdujo la prueba de participación en el ecosistema de Ethereum.
 summaryPoint2: Se fusionó con la cadena de prueba de trabajo original de Ethereum en septiembre de 2022.
-summaryPoint3: La cadena de baliza introdujo la lógica de consenso y bloqueó el protocolo de cotilleo que ahora asegura Ethereum.
+summaryPoint3: La Cadena de Baliza introdujo la lógica de consenso y el protocolo de gossiping de bloques que ahora asegura Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -28,7 +28,7 @@ Cadena de baliza es el nombre que se le ha dado a un libro mayor de cuentas que 
 
 La cadena de baliza introdujo la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) en Ethereum. Esta mantiene la seguridad de Ethereum y permite a los validadores obtener más ETH en el proceso. En la práctica, la participación supone comprometer ETH para poder activar el software de validación. Como participante, se encargará de ejecutar el software que crea y valida los nuevos bloques de la cadena.
 
-La participación cumple un propósito similar al que solía realizar la [minería](/developers/docs/consensus-mechanisms/pow/mining/), pero con muchas diferencias entre ambos. La minería requería de una inversión inicial significativa destinada a la adquisición de un productivo hardware y a cubrir los gastos de consumo energético, lo que derivó en economías de escala y en la promoción de la centralización. La minería tampoco requería la retención de activos colaterales, lo que limitaba los alcances del protocolo a castigar las acciones incorrectas solo tras un ataque.
+El staking cumple un propósito similar al de la [minería](/developers/docs/consensus-mechanisms/pow/mining/), pero difiere en muchos aspectos. La minería requería de una inversión inicial significativa destinada a la adquisición de un productivo hardware y a cubrir los gastos de consumo energético, lo que derivó en economías de escala y en la promoción de la centralización. La minería tampoco requería la retención de activos colaterales, lo que limitaba los alcances del protocolo a castigar las acciones incorrectas solo tras un ataque.
 
 La transición de Ethereum a la prueba de participación hace que la red sea significativamente más segura y descentralizada en comparación con la prueba de trabajo. Cuantas más personas participan en la red, más descentralizada y menos segura frente a ataques se vuelve.
 
@@ -70,6 +70,6 @@ La fragmentación solo podría implementarse en el ecosistema de Ethereum de man
 
 ## Más información
 
-- [Más sobre las futuras actualizaciones de Ethereum](/roadmap/vision)
+- [Más sobre las futuras actualizaciones de Ethereum ](/roadmap/vision)
 - [Más sobre arquitectura de nodos](/developers/docs/nodes-and-clients/node-architecture)
-- [Más sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)
+- [Más sobre la prueba de participación ](/developers/docs/consensus-mechanisms/pos)

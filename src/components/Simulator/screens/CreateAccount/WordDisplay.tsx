@@ -1,67 +1,37 @@
-import React from "react"
-import {
-  Box,
-  type BoxProps,
-  ListItem,
-  type ListItemProps,
-} from "@chakra-ui/react"
+import React, { type HTMLAttributes } from "react"
+import { tv, type VariantProps } from "tailwind-variants"
 
-const wordStyleVariants = {
-  initial: {
-    borderBottom: "1px",
-    borderColor: "body.medium",
-    mt: { base: 1.5, md: 4 },
-    zIndex: 1,
-  },
-  complete: {
-    borderRadius: "md",
-    bg: "background.base",
-    color: "body.base",
-    border: "1px",
-    borderColor: "body.base",
-    px: 2,
-  },
-  active: {
-    borderRadius: "md",
-    bg: "background.base",
-    color: "primary.base",
-    border: "1px",
-    borderColor: "primary.base",
-    px: 2,
-  },
-  incomplete: {
-    borderRadius: "md",
-    bg: "background.base",
-    color: "body.base",
-    border: "1px",
-    borderColor: "body.light",
-    px: 2,
-  },
-  disabled: {
-    borderRadius: "md",
-    bg: "body.light",
-    color: "body.medium",
-    px: 2,
-    border: "1px",
-    borderColor: "transparent",
-  },
-} as const
+import { ListItem } from "@/components/ui/list"
 
-export type WordStyleVariant = keyof typeof wordStyleVariants
+const wordStyle = tv({
+  base: "relative transition duration-1000 ease-in-out",
+  variants: {
+    variant: {
+      initial: "border-b border-body-medium mt-1.5 md:mt-4 z-[1]",
+      complete: "rounded-md bg-background text-body border border-body px-2",
+      active:
+        "rounded-md bg-background text-primary border border-primary px-2",
+      incomplete:
+        "rounded-md bg-background text-body border border-body-light px-2",
+      disabled:
+        "rounded-md bg-body-light text-body-medium px-2 border border-transparent",
+    },
+  },
+})
 
-type WordDisplayProps = Pick<ListItemProps, "children"> &
-  Omit<BoxProps, "children"> & {
-    variant: WordStyleVariant
-  }
+export type WordStyleVariantProps = VariantProps<typeof wordStyle>
+
+type WordDisplayProps = WordStyleVariantProps & HTMLAttributes<HTMLDivElement>
 
 export const WordDisplay = ({
   children,
   variant,
+  className,
   ...boxProps
 }: WordDisplayProps) => (
-  <Box {...wordStyleVariants[variant]} {...boxProps}>
-    <ListItem fontSize="sm" lineHeight={9} mb={0} listStylePos="inside">
+  <div className={wordStyle({ variant, className })} {...boxProps}>
+    <ListItem className="mb-0 list-inside text-sm leading-9">
       {children}
     </ListItem>
-  </Box>
+  </div>
 )

@@ -20,7 +20,7 @@ Düğüm, Ehereum yazılımını çalıştırmakta olan bilgisayarlara bağlı v
 - Yürütüm İstemcisi (Yürütüm Motoru, EL istemcisi ya da eski adıyla Eth1 istemcisi olarak da bilinir) ağda yayınlanan yeni işlemleri takip eder, bunları Ethereum Sanal Makinesinde çalıştırır ve son durumlarıyla tüm güncel Ethereum verilerinin veritabanını tutar.
 - Fikir Birliği İstemcisi (İşaret Düğümü, CL istemcisi ya da eski adıyla Eth2 istemcisi olarak da bilinir), ağın yürütüm istemcisinden gelen doğrulanmış veriler üzerinde anlaşmaya varmasını sağlayan hisse ispatı mutabakat algoritmasını uygular. Ayrıca yazılımın, düğümün ağı güvende tutma sürecine katılmasını sağlayan, fikir birliği istemcisine eklenebilecek ve "doğrulayıcı" olarak bilinen üçüncü bir parçası daha vardır.
 
-Bu istemciler Ethereum zincirinin başını takip ederler ve kullanıcıların Ethereum ağıyla etkileşime geçmelerini sağlarlar. Çoklu yazılım parçalarının birlikte çalışmasıyla oluşan modüler tasarıma [kapsüllenmiş karışıklık](https://vitalik.eth.limo/general/2022/02/28/complexity.html) adı verilir. Bu yaklaşım [Birleşim](/roadmap/merge)'i sorunsuz bir şekilde uygulamaya geçirmeyi kolaylaştırdı, istemci yazılımını yönetmeyi ve geliştirmeyi kolayşatırdı ve de bireysel istemcilerinin tekrar kullanılabilmesini sağladı, örnek olarak [katman 2 ekosistemi](/layer-2/)verilebilir.
+Bu istemciler Ethereum zincirinin başını takip ederler ve kullanıcıların Ethereum ağıyla etkileşime geçmelerini sağlarlar. Çoklu yazılım parçalarının birlikte çalışmasıyla oluşan modüler tasarıma [kapsüllenmiş karışıklık](https://vitalik.eth.limo/general/2022/02/28/complexity.html) adı verilir. Bu yaklaşım [Birleşim](/roadmap/merge)'i sorunsuz bir şekilde uygulamaya geçirmeyi kolaylaştırdı, istemci yazılımını yönetmeyi ve geliştirmeyi kolayşatırdı ve de bireysel istemcilerinin tekrar kullanılabilmesini sağladı, örnek olarak [katman 2 ekosistemi](/layer-2/) verilebilir.
 
 ![Birleştirilmiş yürütüm ve fikir birliği istemcileri](./eth1eth2client.png) Birleştirilmiş yürütüm ve fikir birliği istemcisinin basitleştirilmiş diyagramı.
 
@@ -45,7 +45,6 @@ Tek bir özelliğe uymaları bu uygulamaların ortak noktalarıdır. Özellikler
 
 - [Düğümlerin haritası](https://etherscan.io/nodetracker), Etherscan
 - [Ethernodes](https://ethernodes.org/), Bitfly
-- [Ethereum Düğüm Solucanı](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/), Chainsafe. Sürünen mutabakat düğümleri
 
 ## Düğüm türleri {#node-types}
@@ -130,12 +129,14 @@ Ethereum topluluğu, farklı programlama dilleri kullanan, farklı ekipler taraf
 
 Bu tablo, farklı istemcileri özetlemektedir. Hepsi [istemci testlerini](https://github.com/ethereum/tests) başarıyla geçer ve ağ yükseltmeleriyle güncel kalmak için aktif olarak bakıma tabi tutulur.
 
-| İstemci                                         | Dil      | İşletim sistemleri    | Ağlar                                    | Senkronizasyon stratejileri       | Durum budaması  |
-| ----------------------------------------------- | -------- | --------------------- | ---------------------------------------- | --------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Ana Ağ, Sepolia, Goerli                  | Snap, Full                        | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Ana Ağ, Sepolia, Goerli, ve daha fazlası | Snap (hizmet olmadan), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Ana Ağ, Sepolia, Goerli, ve daha fazlası | Snap, Fast, Full                  | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Ana Ağ, Sepolia, Goerli, ve daha fazlası | Full                              | Archive, Pruned |
+| İstemci                                                                  | Dil        | İşletim sistemleri    | Ağlar                    | Senkronizasyon stratejileri                                   | Durum budaması  |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------ | ------------------------------------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Ana Ağ, Sepolia, Holesky | [Snap](#snap-sync), [Full](#full-sync)                        | Archive, Pruned |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Ana Ağ, Sepolia, Holesky | [Snap](#snap-sync) (hizmet olmadan), Fast, [Full](#full-sync) | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Ana Ağ, Sepolia, Holesky | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)    | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Ana Ağ, Sepolia, Holesky | [Full](#full-sync)                                            | Archive, Pruned |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Ana Ağ, Sepolia, Holesky | [Full](#full-sync)                                            | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky         | [Full](#full-sync)                                            | Pruned          |
 
 Desteklenen ağlar hakkında daha fazla bilgi için [Ethereum ağları](/developers/docs/networks/) hakkında bilgi edinin.
 
@@ -163,9 +164,27 @@ Nethermind, C# .NET teknoloji yığınıyla oluşturulmuş bir Ethereum uygulama
 
 - optimize edilmiş bir sanal makine
 - durum erişimi
-- Prometheus/Grafana gösterge panelleri, sıralı kurumsal kayıt desteği, JSON RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
+- Prometheus/Grafana gösterge panelleri, sıralı kurumsal kayıt desteği, JSON-RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
 
 Nethermind ayrıca premium kullanıcılar için [ayrıntılı dokümanlar](https://docs.nethermind.io), güçlü geliştirici desteği, çevrimiçi bir topluluk ve 7/24 desteğe de sahiptir.
+
+### Reth {#reth}
+
+Reth (Rust Ethereum'un kısaltması) kullanıcı dostu, yüksek derecede modüler, hızlı ve verimli olmaya odaklanan bir Ethereum tam düğüm uygulamasıdır. Red başlangıçta Paradigm tarafından geliştirildi ve çalıştırıldı ve Apache ve MIT lisansları altında lisanslandı.
+
+Reth, üretime hazırdır ve hisseleme veya yüksek çalışma süresi gerektiren hizmetler gibi kritik görev ortamlarında kullanıma uygundur. RPC, MEV, indeksleme, simülasyonlar ve P2P aktiviteler gibi yüksek performans ve büyük marjların gerektiği kullanım durumlarında iyi performans gösterir.
+
+Daha fazla bilgi edinmek için [Reth Kitabına](https://reth.rs/) veya [Reth GitHub deposuna](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth) göz atın.
+
+### Geliştirme aşamasında {#execution-in-development}
+
+Bu istemciler hala geliştirme sürecinin erken aşamalarındadır ve henüz üretim kullanımı için önerilmemektedir.
+
+#### EthereumJS {#ethereumjs}
+
+EthereumJS Yürütüm İstemcisi (EthereumJS), TypeScript'te yazılmıştır ve Blok, İşlem ve Merkle-Patricia Ağacı sınıfları tarafından temsil edilen temel Ethereum ilkeleri ve Ethereum Sanal Makinesi'nin (EVM) bir uygulaması, bir blokzincir sınıfı ve DevP2P ağ yığınını içeren temel istemci bileşenleri de dahil olmak üzere bir dizi paketten oluşur.
+
+[Dokümanları](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master) okuyarak daha fazla bilgi edinin
 
 ## Mutabakat istemcileri {#consensus-clients}
 
@@ -219,21 +238,32 @@ Senkronizasyon modları, çeşitli değiş tokuşlarla bu sürece farklı yakla�
 
 ### Yürütüm katmanı senkronizasyon modları {#execution-layer-sync-modes}
 
-#### Tam arşiv senkronizasyonu {#full-sync}
+Yürütüm katmanı, blokzincirin durumunu yeniden yürütmekten güvenilir bir kontrol noktasından yalnızca zincirin ucuyla sekronize etmeye kadar farklı kullanım durumlarına uyan farklı modlarla çalıştırılabilir.
 
-Tam senkronizasyon, tüm blokları (başlıklar, işlemler ve makbuzlar dahil) indirir ve her bloku başlangıçtan yürüterek aşamalı olarak blok zincirin durumunu oluşturur.
+#### Tam senkronizasyon {#full-sync}
+
+Tam senkronizasyon, tüm blokları (başlıklar ve blok gövdeleri dahil) indirir ve her bloğu başlangıçtan yürüterek aşamalı olarak blokzincirin durumunu yeniden oluşturur.
 
 - Her işlemi doğrulayarak güven ihtiyacını en aza indirir ve en yüksek güvenliği sunar.
 - Artan sayıda işlemle, tüm işlemlerin işlenmesi günler ila haftalar alabilir.
 
-#### Tam snap senkronizasyonu {#snap-sync}
+[Arşiv düğümleri](#archive-node), her bloktaki her işlemde yapılan durum değişikliklerinin eksiksiz bir geçmişini oluşturmak (ve saklamak) amacıyla tam bir senkronizasyon gerçekleştirir.
 
-Snap senkronizasyonu tıpkı bir tam arşiv senkronizasyonu gibi zinciri blok blok doğrular; ancak başlangıç blokunda başlamak yerine, doğru blok zincirin bir parçası olduğu bilinen daha yakın tarihli bir "güvenilir" kontrol noktasında başlar. Düğüm belli bir yaştan daha yaşlı olan veriyi silerken periyodik kontrol noktaları kaydeder. Bu anlık çekimler sonsuza kadar veriyi depolamaya ihtiyaç duymaktansa durum verisinin ihtiyaç duyulduğunda yeniden oluşturulabilmesi için kullanılır.
+#### Hızlı senkronizasyon {#fast-sync}
 
-- Ethereum ana ağında güncel olarak varsayılanda bulunan, en hızlı senkronizasyon stratejisi
-- Güvenlikten ödün vermeden çok fazla disk kullanımı ve ağ bant genişliği tasarrufu sağlar
+Tam senkronizasyonla aynı şekilde, hızlı senkronizasyon da tüm blokları indirir (başlıklar, işlemler ve makbuzlar dahil olacak şekilde). Bununla birlikte, geçmiş işlemleri yeniden işlemek yerine, hızlı senkronizasyon, tam bir düğüm sağlamak için blokları içe aktarmaya ve işlemeye geçtiğinde yeni bir başa ulaşana kadar makbuzlara güvenir.
 
-[Snap senkronizasyonu hakkında daha fazlası](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Hızlı senkronizasyon stratejisi.
+- Bant genişliği kullanımını destekleyerek işlem talebini azaltır.
+
+#### Snap senkronizasyonu {#snap-sync}
+
+Snap senkronizasyonları aynı zamanda zinciri her seferinde bir blok olacak şekilde doğrular. Ancak bir snap senkronizasyonu, başlangıç bloğundan başlamak yerine, gerçek blokzincirin bir parçası olduğu bilinen daha yeni bir "güvenilir" kontrol noktasından başlar. Düğüm belli bir yaştan daha yaşlı olan veriyi silerken periyodik kontrol noktaları kaydeder. Bu snap görüntüleri, veriyi sonsuza kadar depolamak yerine gerektiğinde durum verisini yeniden oluşturmak için kullanılır.
+
+- Ethereum Ana Ağında güncel olarak varsayılan olan en hızlı senkronizasyon stratejisi.
+- Güvenlikten ödün vermeden çok fazla disk kullanımı ve ağ bant genişliği tasarrufu sağlar.
+
+[Snap senkronizasyonu hakkında daha fazla bilgi](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Hafif senkronizasyon {#light-sync}
 
@@ -256,15 +286,13 @@ Optimistik senkronizasyon kayıt ile ve geriye dönük uyumlu olması için tasa
 
 #### Kontrol noktası senkronizasyonu {#checkpoint-sync}
 
-Aynı zamanda zayıf öznellik senkronizasyonu olarak da bilinen kontrol noktası senkronizasyonu, İşaret Zinciri'nin senkronize edilmesi için üstün bir kullanıcı deneyimi oluşturmaktadır. İşaret Zinciri'nin senkronizasyonunu başlangıç yerine yakın tarihli bir zayıf öznellikten başlatan [zayıf öznellik](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) varsayımlarına dayanır. Kontrol noktası senkronizasyonu başlangıç senkronizasyon zamanını [başlangıçtan](/glossary/#genesis-block) senkronize etmeye benzer güven varsayımları ile büyük oranda hızlandırır.
+Aynı zamanda zayıf öznellik senkronizasyonu olarak da bilinen kontrol noktası senkronizasyonu, bir İşaret Zincirinin senkronize edilmesine yönelik üstün bir kullanıcı deneyimi sağlar. İşaret Zincirinin senkronizasyonunu başlangıç yerine yakın tarihli bir zayıf öznellikten başlatan [zayıf öznellik](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) varsayımlarını temel alır. Kontrol noktası senkronizasyonu, başlangıç senkronizasyon zamanını [başlangıçtan](/glossary/#genesis-block) senkronize etmeye benzer güven varsayımları ile büyük oranda hızlandırır.
 
-Pratikte, bu düğümünüzün yakın tarihli kesinleştirilmiş durumları indirmek için uzak bir servise bağlandığı anlamına gelir ve o noktadan sonra veri doğrulamaya devam eder. Veriyi sağlayan üçüncü şahısa güvenilir ve dikkatlice seçilmelidir.
+Pratikte, bu düğümünüzün yakın tarihli kesinleştirilmiş durumları indirmek için uzak bir servise bağlandığı anlamına gelir ve o noktadan sonra veri doğrulamaya devam eder. Verileri sağlayan üçüncü taraf güvenilirdir ve dikkatlice seçilmelidir.
 
 [Kontrol noktası senkronizasyonu](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice) hakkında daha fazlası
 
 ## Daha fazla bilgi {#further-reading}
-
-İnternette Ethereum istemcileri hakkında birçok bilgi var. İşte size yardımcı olabilecek birkaç kaynak.
 
 - [Ethereum 101 - 2. Bölüm - Düğümleri Anlamak](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 Şubat 2019_
 - [Ethereum Tam Düğümlerini Çalıştırmak: Pek Motivasyonu Olmayanlar İçin Kılavuz](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Kasım 2019_

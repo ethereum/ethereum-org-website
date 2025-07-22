@@ -79,7 +79,7 @@ Az általad használt módszertől függetlenül, ha könyvtárat importálsz be
 
 Egy okosszerződés könyvtár használatának számos előnye van. Először is, időt takarít meg azzal, hogy használatra kész építőelemeket biztosít, amelyeket beépíthetsz a rendszeredbe, ahelyett, hogy saját magadnak kellene leprogramozni őket.
 
-A biztonság is egy fontos pozitívum. A nyílt forráskódú okosszerződés könyvtárakat gyakran alaposan megvizsgálják. Tekintettel arra, hogy sok projekt függ tőlük, a közösségnek erős ösztönzője van arra, hogy folyamatosan felülvizsgálja őket. Sokkal gyakrabban lehet hibákat találni az alkalmazáskódban, mint az újrafelhasználható szerződés könyvtárakban. Némely könyvtár [külső auditnak](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) veti alá magát magasabb fokú biztonságért.
+A biztonság is egy fontos pozitívum. A nyílt forráskódú okosszerződés könyvtárakat gyakran alaposan megvizsgálják. Tekintettel arra, hogy sok projekt függ tőlük, a közösségnek erős ösztönzője van arra, hogy folyamatosan felülvizsgálja őket. Sokkal gyakrabban lehet hibákat találni az alkalmazáskódban, mint az újrafelhasználható szerződés könyvtárakban. Némely könyvtár [külső auditnak](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) veti alá magát magasabb fokú biztonságért.
 
 Az okosszerződés könyvtárak használata azonban azt a kockázatot hordozza magával, hogy számodra ismeretlen kódot veszel fel a projektbe. Csábító egy szerződést importálni és közvetlenül beilleszteni a projektbe, de anélkül, hogy megértenéd, hogy ez a szerződés mit csinál pontosan, véletlenül bevihetsz egy hibát a rendszerbe egy váratlan viselkedésből kifolyólag. Mindig feltétlenül olvasd el az importált kód dokumentációját, majd nézd át magát a kódot, mielőtt a projekt részévé tennéd!
 
@@ -104,7 +104,7 @@ Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe a
 
 **thirdweb Solidity SDK –** **_Olyan eszközöket biztosít, melyekkel hatékonyan lehet személyre szabott okosszerződéseket létrehozni_**
 
-- [Dokumentáció](https://portal.thirdweb.com/solidity/)
+- [Dokumentáció](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Kapcsolódó útmutatók {#related-tutorials}

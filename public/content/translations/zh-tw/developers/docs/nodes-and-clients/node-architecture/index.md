@@ -12,8 +12,6 @@ lang: zh-tw
 
 ![](node-architecture-text-background.png)
 
-_此圖借用自 geth.ethereum.org，並使用 Geth 標誌代表執行用戶端；執行用戶端還有其他選項，如 Erigon、Nethermind 和 Besu。_
-
 要讓這兩種用戶端架構運作，驗證用戶端必須能夠將大量交易傳送至執行用戶端。 透過在本機執行交易，用戶端驗證交易沒有違反任何以太坊的規則且提議的以太坊狀態更新是否正確。 同樣地，當節點被選為區塊生產者，共識用戶端必須能夠從 Geth 請求各種交易，以添加到新的區塊裡並執行它們來更新全域狀態。 用戶端間的通訊由本機遠端程序呼叫連線使用[引遠端程序呼叫](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)處理。
 
 ## 執行用戶端的作用為何？ {#execution-client}

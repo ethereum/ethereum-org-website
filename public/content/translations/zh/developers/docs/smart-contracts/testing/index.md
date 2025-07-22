@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 这是一个简单的拍卖合约，用于在竞标期间接收竞标。 如果 `highestBid` 增加，先前的最高出价者将收到他们的钱；一旦竞标期结束，`beneficiary` 调用合约以收取他们的钱。
 
-对这样的合约进行的单元测试将涵盖用户在与合约交互时可能调用的不同函数。 一个例子是进行单元测试，检查用户是否能够在拍卖进行期间出价（即调用 `bid()` 成功），或者检查用户是否能够出价高于当前的 `highestBid`。
+对这样的合约进行的单元测试将涵盖用户在与合约交互时可能调用的不同函数。 以单元测试为例，它会检查用户是否能够在拍卖进行期间出价（即调用 `bid()` 成功），或者检查用户是否能够出高于当前 `highestBid` 的价格。
 
 了解合约的运行流程还有助于编写单元测试，以检查执行是否满足要求。 例如，拍卖合约规定，在拍卖结束时（即当 `auctionEndTime` 小于 `block.timestamp` 时），用户无法进行竞标。 因此，开发者可能会运行一个单元测试，检查当拍卖结束时（即当 `auctionEndTime` > `block.timestamp` 时）对 `bid()` 函数的调用成功还是失败。
 
@@ -130,7 +130,7 @@ function auctionEnd() external {
 
 ##### 3. 度量代码覆盖率
 
-[代码覆盖率](https://en.m.wikipedia.org/wiki/Code_coverage)是一种测试指标，用于跟踪在测试过程中执行的代码分支、行数和语句数量。 测试应该具有良好的代码覆盖率，否则你可能会遇到“误报”，即合约通过了所有的测试，但代码中仍存在漏洞。 记录高代码覆盖率，可以确保智能合约中的所有语句/函数都经过了足够的正确性测试。
+[代码覆盖率](https://en.m.wikipedia.org/wiki/Code_coverage)是一种测试指标，用于跟踪在测试过程中执行的代码分支、行数和语句数量。 测试应该具有良好的代码覆盖率，以最大程度地减少未经测试漏洞的风险。 如果没有充足的代码覆盖率，你可能会误认为你的合约是安全的，因为所有测试都通过了，而未经测试的代码路径中仍存在漏洞。 记录高代码覆盖率，可以确保智能合约中的所有语句/函数都经过了足够的正确性测试。
 
 ##### 4. 使用完善的测试框架
 
@@ -144,12 +144,13 @@ function auctionEnd() external {
 - **[使用 Remix 运行单元测试](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[使用 Ape 运行单元测试](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[使用安全帽运行单元测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[使用 Wake 运行单元测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### 集成测试 {#integration-testing-for-smart-contracts}
 
 虽然单元测试可以独立调试合约函数，但集成测试会将智能合约的各个组件作为一个整体进行评估。 集成测试可以检测到跨合约调用或同一智能合约中不同函数之间的交互引起的问题。 例如，集成测试可以帮助检查诸如[继承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)和依赖注入等功能是否正常工作。
 
-如果合约采用模块化架构或在执行过程中与其他链上合约进行接口交互，集成测试非常有用。 一种运行集成测试的方法是在特定的高度[让区块链分叉](/glossary/#fork)（使用 [Forge](https://book.getfoundry.sh/forge/fork-testing) 或[安全帽](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)等工具），并模拟你的合约与已部署合约之间的交互。
+如果合约采用模块化架构或在执行过程中与其他链上合约进行接口交互，集成测试将非常有用。 一种运行集成测试的方法是在特定的高度[让区块链分叉](/glossary/#fork)（使用 [Forge](https://book.getfoundry.sh/forge/fork-testing) 或[安全帽](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)等工具），并模拟你的合约与已部署合约之间的交互。
 
 分叉的区块链将与主网的行为类似，其帐户具有关联的状态和余额。 但是它只是一个沙盒式的本地开发环境，举例来说这意味着你不需要真正的以太币进行交易，同时你的更改也不会影响真实的以太坊协议。
 
@@ -188,9 +189,11 @@ function auctionEnd() external {
 配置正确后，属性测试工具将使用随机生成的输入执行你的智能合约函数。 如果存在任何断言违规情况，你应该获得一份报告，其中包含违反正在评估的属性的具体输入数据。 请参阅下面的指南，了解如何使用不同的工具开始运行基于属性的测试：
 
 - **[使用 Slither 进行智能合约静态分析](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[使用 Wake 进行智能合约静态分析](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[使用 Brownie 进行基于属性的测试](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[使用 Foundry 进行合约模糊测试](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[使用 Echidna 进行合约模糊测试](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[使用 Wake 进行合约模糊测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[使用 Manticore 完成智能合约符号执行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[使用 Mythril 完成智能合约符号执行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -210,7 +213,7 @@ function auctionEnd() external {
 
 ### 在测试网上测试合约 {#testing-contracts-on-testnets}
 
-测试网络或测试网的运行方式与以太坊主网完全相同，唯一的区别在于它使用没有现实价值的以太币 (ETH)。 在[测试网](/developers/docs/networks/#ethereum-testnets)上部署你的合约意味着任何人都可以与之交互（例如，通过去中心化应用程序的前端界面），而无需承担资金风险。
+测试网络或测试网的运行方式与以太坊主网完全相同，唯一的区别在于它使用的是没有现实价值的以太币 (ETH)。 在[测试网](/developers/docs/networks/#ethereum-testnets)上部署你的合约意味着任何人都可以与之交互（例如，通过去中心化应用程序的前端界面），而无需承担资金风险。
 
 这种手动测试形式对于从用户角度评估应用程序的端到端流程非常有用。 在这里，测试人员还可以进行试运行，并报告与合约的业务逻辑和整体功能有关的任何问题。
 
@@ -256,11 +259,13 @@ function auctionEnd() external {
 
 - **[Brownie 单元测试框架](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie 采用了 Pytest，这是一个功能丰富的测试框架，让你只需使用最少的代码即可编写小型测试，并能有效地扩展以用于大型项目，而且具有很强的可扩展性。_
 
-- **[Foundry 测试](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry 提供了 Forge，这是一个快速灵活的以太坊测试框架，能够执行简单的单元测试、燃料优化检查和合约模糊测试。_
+- **[Foundry 测试](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry 提供了 Forge，这是一个快速灵活的以太坊测试框架，能够执行简单的单元测试、燃料优化检查和合约模糊测试。_
 
 - **[Hardhat 测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _基于 ethers.js、Mocha 和 Chai 的智能合约测试框架。_
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _基于 Python 的智能合约开发和测试框架，针对太坊虚拟机。_
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _基于 Python 的单元测试和模糊测试框架，具有强大的调试功能和跨链测试支持，利用 pytest 和 Anvil 实现最佳用户体验和性能。_
 
 ### 基于属性测试的工具 {#property-based-testing-tools}
 
@@ -269,6 +274,10 @@ function auctionEnd() external {
 - **[Slither](https://github.com/crytic/slither)** - _基于 Python 的 Solidity 静态分析框架，用于查找漏洞、增强代码理解以及为智能合约编写自定义分析。_
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _用于执行Solidity 智能合约编程语言的风格和安全最佳实践的 Linter。_
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _基于 Rust 的静态分析器，专为 Web3 智能合约安全和开发而设计。_
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _基于 Python 的静态分析框架，具有漏洞和代码质量检测器，用于从代码中提取有用信息的打印机以及对编写自定义子模块的支持。_
 
 #### 动态分析工具 {#dynamic-analysis-tools}
 
@@ -287,7 +296,7 @@ function auctionEnd() external {
 - [不同测试产品的概述和比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [如何使用 Echidna 测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [如何使用 Manticore 查找智能合约漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [如何使用Slither发现智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Slither 查找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模拟测试 Solidity 合约](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何利用 Foundry 在 Solidity 中运行单元测试](https://www.rareskills.io/post/foundry-testing-solidity)
 

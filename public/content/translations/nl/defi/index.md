@@ -55,7 +55,7 @@ Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen
 
 Bitcoin was in vele opzichten de eerste DeFi-applicatie. Bitcoin laat u echt waarde bezitten en beheren en u kunt het overal ter wereld heen sturen. Het doet dit door een manier te bieden voor een groot aantal mensen die elkaar niet vertrouwen, om akkoord te gaan met een grootboekrekening zonder dat een vertrouwde tussenpersoon nodig is. Bitcoin is toegankelijk voor iedereen en niemand heeft de bevoegdheid om de regels te wijzigen. De regels van Bitcoin, zoals de schaarste en de openheid ervan, zijn in de technologie verwerkt. Het is niet zoals traditionele financiën waar regeringen geld kunnen bijprinten zodat jouw spaargeld devalueert, en waar bedrijven de markten zomaar kunnen sluiten.
 
-Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen en heeft iedereen toegang. Maar het maakt dit digitale geld ook programmeerbaar met behulp van [slimme contracten](/glossary#smart-contract), zodat u veel meer kunt doen dan enkel het opslaan en verzenden van waarde.
+Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen en heeft iedereen toegang. Maar het maakt dit digitale geld ook programmeerbaar met behulp van [slimme contracten](/glossary/#smart-contract), zodat je veel meer kunt doen dan enkel het opslaan en verzenden van waarde.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -90,7 +90,7 @@ Er is een gedecentraliseerd alternatief voor de meeste financiële diensten. Maa
 
 ### Stuur snel geld over de hele wereld {#send-money}
 
-Als blockchain is Ethereum ontworpen voor het op veilige en mondiale manier verzenden van transacties. Net als Bitcoin, maakt Ethereum het verzenden van geld over de hele wereld zo eenvoudig als het verzenden van een e-mail. Voer gewoon de [ENS-naam](/nft/#nft-domains) (zoals bob.eth) van uw ontvanger in of het accountadres van hun portemonnee, en uw betaling zal (doorgaans) direct in minuten naar hen gaan. Om betalingen te kunnen verzenden en/of ontvangen, heeft u een [portemonnee](/wallets/) nodig.
+Als blockchain is Ethereum ontworpen voor het op veilige en mondiale manier verzenden van transacties. Net als Bitcoin, maakt Ethereum het verzenden van geld over de hele wereld zo eenvoudig als het verzenden van een e-mail. Voer gewoon de [ENS-naam](/glossary/#ens) (zoals bob.eth) van je ontvanger in of het accountadres van hun portemonnee, en je betaling zal (doorgaans) direct binnen een paar minuten naar hen gaan. Om betalingen te kunnen verzenden en/of ontvangen, heeft u een [portemonnee](/wallets/) nodig.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Zie betaling-dapps
@@ -100,7 +100,7 @@ Als blockchain is Ethereum ontworpen voor het op veilige en mondiale manier verz
 
 U kunt ook geld over Ethereum streamen. Hiermee kunt u iemands salaris per seconde betalen, waardoor hij/zij toegang krijgt tot zijn/haar geld waar en wanneer hij/zij dat nodig heeft. Of iets huren per seconde, zoals een opslagplaats of een elektrische scooter.
 
-En als u niet [ETH](/eth/) wilt verzenden of streamen vanwege het feit dat de waarde kan veranderen, zijn er alternatieve valuta op Ethereum: stablecoins.
+En als je [ETH](/glossary/#ether) niet wilt verzenden of streamen omdat de waarde ervan sterk kan veranderen, dan zijn er alternatieve munteenheden op Ethereum: [stablecoins](/glossary/#stablecoin).
 
 <Divider />
 
@@ -133,7 +133,7 @@ Er zijn vele voordelen voor het gebruik van een gedecentraliseerd grootboek...
 
 Vandaag gaat het bij het lenen en krediet verstrekken van geld allemaal om de personen die betrokken zijn. Banken moeten weten of u een lening kunt terugbetalen voordat u de lening krijgt.
 
-Gedecentraliseerde leningen werken zonder dat een van beide partijen zich hoeft te identificeren. In plaats daarvan moet de lener een onderpand stellen die de kredietverstrekker automatisch krijgt als de lening niet wordt terugbetaald. Sommige kredietverstrekkers accepteren zelfs NFT's als onderpand. NFT's zijn een akte voor een uniek goed, zoals een schilderij. [Meer over NFT's](/nft/)
+Gedecentraliseerde leningen werken zonder dat een van beide partijen zich hoeft te identificeren. In plaats daarvan moet de lener een onderpand stellen die de kredietverstrekker automatisch krijgt als de lening niet wordt terugbetaald. Sommige kredietverstrekkers accepteren zelfs [NFT's](/glossary/#nft) als onderpand. NFT's zijn een akte voor een uniek goed, zoals een schilderij. [Meer over NFT's](/nft/)
 
 Dit stelt u in staat om geld te lenen zonder kredietcontroles of het geven van privé-gegevens.
 
@@ -168,7 +168,9 @@ Als het aanbod van exchange B plotseling afnam en de gebruiker niet genoeg kon k
 
 Om het bovenstaande voorbeeld in de traditionele financiële wereld te kunnen doen, zou u een enorme hoeveelheid geld nodig hebben. Deze strategieën voor het verdienen van geld zijn alleen toegankelijk voor mensen met bestaande rijkdom. Flash-leningen zijn een voorbeeld van een toekomst waarin het hebben van geld niet noodzakelijkerwijs een voorwaarde is voor het verdienen van geld.
 
-[Meer over flash-leningen](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+  Meer over flash-leningen
+</ButtonLink>
 
 <Divider />
 
@@ -180,7 +182,7 @@ U kunt rente verdienen op uw crypto door het uit te lenen en uw geld in realtime
 
 - U leent uw 100 dai uit, een [stablecoin](/stablecoins/), voor een product als Aave.
 - U ontvangt 100 Aave Dai (aDai), wat een token is dat uw uitgeleende Dai vertegenwoordigt.
-- Uw aDai zal toenemen op basis van de rente en u zult uw saldo zien groeien in uw portemonnee. Afhankelijk van de APR, zal uw portemonneesaldo na een paar dagen of zelfs uren veranderen in iets als 100,1234!
+- Uw aDai zal toenemen op basis van de rente en u zult uw saldo zien groeien in uw portemonnee. Afhankelijk van de [APR](/glossary/#apr), zal het saldo van je portemonnee na een paar dagen (of zelfs na enkele uren) veranderen in iets als 100,1234!
 - U kunt op elk gewenst moment een hoeveelheid normale Dai opnemen die gelijk is aan uw aDai-saldo.
 
 <ButtonLink href="/dapps/?category=finance#explore">
@@ -233,7 +235,7 @@ Wanneer u een gecentraliseerde exchange gebruikt, moet u uw geld storten vóór 
 
 Er zijn producten voor fondsbeheer op Ethereum die zullen proberen uw portefeuille te laten groeien op basis van een strategie naar eigen keuze. Dit is automatisch, open voor iedereen, en heeft geen menselijke manager nodig die een deel van uw winst afneemt.
 
-Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/blog/defi-pulse-index/). Dit is een fonds dat automatisch in evenwicht blijft om ervoor te zorgen dat je portfolio altijd [de beste DeFi-tokens volgens marktkapitalisatie bevat](https://www.coingecko.com/en/defi). U hoeft nooit enige gegevens te beheren en u kunt zich uit het fonds terugtrekken wanneer u dat maar wilt.
+Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/blog/defi-pulse-index/). Dit is een fonds dat automatisch in evenwicht blijft om ervoor te zorgen dat je portfolio altijd de beste DeFi-tokens volgens marktkapitalisatie bevat. U hoeft nooit enige gegevens te beheren en u kunt zich uit het fonds terugtrekken wanneer u dat maar wilt.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Bekijk investering-dapps
@@ -266,7 +268,9 @@ Kwadratische financiering zorgt ervoor dat de projecten die het meeste worden ge
 
 Dit betekent dat Project A met zijn 100 donaties van 1 dollar uiteindelijk meer geld zou kunnen krijgen dan Project B met één donatie van 10, 00 dollar (afhankelijk van de grootte van de overeenkomende pool).
 
-[Meer over kwadratische financiering](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  Meer over kwadratische financiering
+</ButtonLink>
 
 <Divider />
 
@@ -320,6 +324,8 @@ U kunt DeFi zien als verschillende lagen:
 3. De protocollen – [slimme contracten](/glossary/#smart-contract) die de functionaliteit leveren, bijvoorbeeld een service die het mogelijk maakt om activa gedecentraliseerd uit te lenen.
 4. [De applicaties](/dapps/) – de producten die we gebruiken om de protocollen te beheren en te raadplegen.
 
+Opmerking: een groot deel van DeFi gebruikt de [ERC-20-standaard](/glossary/#erc-20). Applicaties in DeFi gebruiken een wrapper voor ETH, met de naam Wrapped Ether (WETH). [Lees meer over wrapped ether](/wrapped-eth).
+
 ## DeFi opbouwen {#build-defi}
 
 DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan allemaal open voor u om te inspecteren, te forken en te vernieuwen. Vanwege deze gelaagde stack (ze delen allemaal dezelfde basis-blockchain en activa), kunnen protocollen worden gemengd en gematched om unieke combo mogelijkheden te ontgrendelen.
@@ -328,13 +334,12 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
   Meer over het bouwen van dapps
 </ButtonLink>
 
-## Verder lezen {#futher-reading}
+## Verder lezen {#further-reading}
 
 ### DeFi-data {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### DeFi-artikelen {#defi-articles}
 
@@ -348,5 +353,9 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
 
 ### Gemeenschappen {#communities}
 
-- [DeFi Llama Discord server](https://discord.gg/buPFYXzDDd)
+- [DeFi Llama Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

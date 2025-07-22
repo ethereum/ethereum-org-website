@@ -47,7 +47,7 @@ Odată ce v-ați creat un cont Alchemy, puteți să generați o cheie API creân
 
 Avem nevoie de un cont Ethereum pentru a trimite și primi tranzacții. În acest tutorial vom folosi un portofel virtual în browser, MetaMask, pentru a gestiona adresa contului Ethereum. Dacă doriți să înțelegeți mai multe despre cum funcționează tranzacțiile pe Ethereum, consultaţi [această pagină](/developers/docs/transactions/) de la fundația Ethereum.
 
-Puteți descărca și crea un cont MetaMask pe gratis [aici](https://metamask.io/download.html). Atunci când vă creați un cont sau dacă aveți deja unul, aveţi grijă să comutaţi pe „Ropsten Test Network” („Rețeaua de testare Ropsten”) în dreapta sus (pentru a nu avea de-a face cu bani reali).
+Puteți descărca și crea un cont MetaMask pe gratis [aici](https://metamask.io/download). Atunci când vă creați un cont sau dacă aveți deja unul, aveţi grijă să comutaţi pe „Ropsten Test Network” („Rețeaua de testare Ropsten”) în dreapta sus (pentru a nu avea de-a face cu bani reali).
 
 ![Setați Ropsten ca rețeaua dvs.](./metamask-goerli.png)
 
@@ -77,7 +77,7 @@ Odată ce suntem în dosarul proiectului nostru, vom folosi npm init pentru a in
     npm init
 
 Nu este prea important cum răspundeți la întrebările de instalare; iată cum am făcut-o noi, ca referință:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -100,7 +100,7 @@ Nu este prea important cum răspundeți la întrebările de instalare; iată cum
       "author": "",
       "license": "ISC"
     }
-
+```
 Aprobați package.json și suntem gata să începem!
 
 ## Etapa 7: Instalarea [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -258,6 +258,7 @@ Până acum am adăugat mai multe dependențe și plugin-uri, acum trebuie să a
 
 Actualizați hardhat.config.js pentru a arăta astfel:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -275,6 +276,7 @@ Actualizați hardhat.config.js pentru a arăta astfel:
           }
        },
     }
+```
 
 ## Etapa 14: Compilarea contractului nostru {#compile-contract}
 

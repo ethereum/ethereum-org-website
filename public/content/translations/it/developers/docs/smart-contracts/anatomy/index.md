@@ -1,6 +1,6 @@
 ---
 title: Anatomia dei contratti intelligenti
-description: "Uno sguardo approfondito all'anatomia di un contratto intelligente: le funzioni, i dati e le variabili."
+description: 'Uno sguardo approfondito all''anatomia di un contratto intelligente: le funzioni, i dati e le variabili.'
 lang: it
 ---
 
@@ -16,10 +16,10 @@ Tutti i dati del contratto devono essere assegnati a una posizione: `storage` op
 
 ### Storage {#storage}
 
-I dati persistenti sono detti storage (o spazio di archiviazione) e sono rappresentati da variabili di stato. Questi valori sono memorizzati permanentemente nella blockchain. È necessario dichiarare il tipo così che il contratto possa tenere traccia di quanto storage è necessario sulla blockchain quando viene compilato.
+I dati persistenti sono detti storage (o spazio di archiviazione) e sono rappresentati da variabili di stato.  Questi valori sono memorizzati permanentemente nella blockchain. È necessario dichiarare il tipo così che il contratto possa tenere traccia di quanto storage è necessario sulla blockchain quando viene compilato.
 
 ```solidity
-// Esempio in Solidity
+// Esempio in Solidity 
 contract SimpleStorage {
     uint storedData; // Variabile di stato
     // ...
@@ -27,7 +27,7 @@ contract SimpleStorage {
 ```
 
 ```python
-# Esempio in Vyper
+# Esempio in Vyper 
 storedData: int128
 ```
 
@@ -52,13 +52,13 @@ Per ulteriori spiegazioni, consulta la documentazione:
 - [Vedi Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Vedi Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memory {#memory}
+### Memoria {#memory}
 
 I valori che vengono memorizzati solo per la durata di esecuzione di una funzione di contratto sono detti variabili di memoria. Dal momento che non sono memorizzati in modo permanente sulla blockchain, sono molto più economici da usare.
 
 Scopri di più su come l'EVM memorizza i dati (Archiviazione, Memoria e lo Stack), nella [documentazione di Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Variabili d'ambiente {#environment-variables}
+### Variabili ambientali {#environment-variables}
 
 Oltre alle variabili che vengono definite nel contratto, sono presenti alcune variabili globali speciali. Vengono utilizzate principalmente per fornire informazioni sulla blockchain o sulla transazione corrente.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - È dichiarato `public` e quindi chiunque può accedervi
 - Non è dichiarato `view`, quindi può modificare lo stato del contratto
 
-### Funzioni view {#view-functions}
+### Funzioni 'view' {#view-functions}
 
 Queste funzioni promettono di non modificare lo stato dei dati del contratto. Tra gli esempi più comuni vi sono le funzioni "getter": puoi usarle ad esempio per ricevere un saldo dell'utente.
 
@@ -131,7 +131,7 @@ Ecco cosa è considerato modifica dello stato:
 7. Utilizzo di chiamate di basso livello.
 8. Utilizzo di assembly inline contenente determinati opcode.
 
-### Funzioni constructor {#constructor-functions}
+### Funzioni del costruttore {#constructor-functions}
 
 Quando il contratto viene distribuito per la prima volta, le funzioni `constructor` sono eseguite solo una volta. Come accade per `constructor` in molti linguaggi di programmazione basati su classi, queste funzioni spesso inizializzano le variabili di stato ai valori specificati.
 
@@ -167,7 +167,7 @@ Oltre alle variabili che vengono definite nel contratto, sono presenti alcune fu
 
 Queste, consentono ai contratti di inviare ETH agli altri conti.
 
-## Scrivere funzioni {#writing-functions}
+## Scrittura delle funzioni {#writing-functions}
 
 Una funzione ha bisogno di:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Un contratto completo potrebbe avere questa forma. Qui la funzione `constructor` fornisce un valore iniziale per la variabile `dapp_name`.
 
-## Eventi e log {#events-and-logs}
+## Eventi e registri {#events-and-logs}
 
-Gli eventi ti consentono di comunicare con il tuo contratto intelligente dal tuo frontend o da altre applicazioni che prevedono un'iscrizione. Quando una transazione è minata, i contratti intelligenti possono emettere eventi e scrivere registri alla blockchain, che il frontend può poi elaborare.
+Gli eventi consentono al tuo contratto intelligente di comunicare con il tuo frontend o con altre applicazioni di iscrizione. Una volta che una transazione viene convalidata e aggiunta a un blocco, i contratti intelligenti possono emettere eventi e registrare informazioni, che possono quindi essere elaborati e utilizzati dal frontend.
 
-## Esempi commentati {#annotated-examples}
+## Esempi annotati {#annotated-examples}
 
 Questi sono alcuni esempi scritti in Solidity. Se vuoi sperimentare con il codice, puoi interagire con questi esempi in [Remix](http://remix.ethereum.org).
 
-### Hello world {#hello-world}
+### Ciao mondo {#hello-world}
 
 ```solidity
 // Specifica la versione di Solidity, utilizzando il controllo delle versioni semantico.

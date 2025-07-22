@@ -15,7 +15,7 @@ lang: fr
 
 Pour utiliser les actifs L1 sur Optimism (ou n'importe quel autre L2), les actifs doivent être [connectés](/bridges/#prerequisites). Une façon d'y arriver est pour les utilisateurs de verrouiller les actifs (ETH et les [jetons ERC-20](/developers/docs/standards/tokens/erc-20/) sont les plus communs) sur L1 et de recevoir des actifs équivalents à utiliser sur L2. Finalement, celui qui se retrouve avec souhaitera peut-être les ramener en L1. En faisant cela, les actifs sont brûlés sur L2 puis redistribués à l'utilisateur sur L1.
 
-C'est ainsi que fonctionne la [passerelle standard Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). Dans cet article, nous passerons en revue le code source de cette passerelle pour comprendre comment elle fonctionne et l'étudier comme un exemple de code Solidity parfaitement écrit.
+C'est ainsi que fonctionne la [passerelle standard Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge). Dans cet article, nous passerons en revue le code source de cette passerelle pour comprendre comment elle fonctionne et l'étudier comme un exemple de code Solidity parfaitement écrit.
 
 ## Flux de contrôle {#control-flows}
 
@@ -1270,7 +1270,7 @@ Si un utilisateur a fait une erreur détectable en utilisant la mauvaise adresse
 
 ## Conclusion {#conclusion}
 
-La passerelle standard est le mécanisme le plus souple pour les transferts d'actifs. Cependant, parce qu'il est si générique, ce n'est pas toujours le mécanisme le plus facile à utiliser. Spécialement pour les retraits, la plupart des utilisateurs préfèrent utiliser des [passerelles tierces](https://www.optimism.io/apps/bridges) qui n'attendent pas la période problématique et ne nécessitent pas de preuve de Merkle pour finaliser le retrait.
+La passerelle standard est le mécanisme le plus souple pour les transferts d'actifs. Cependant, parce qu'il est si générique, ce n'est pas toujours le mécanisme le plus facile à utiliser. Spécialement pour les retraits, la plupart des utilisateurs préfèrent utiliser des [passerelles tierces](https://optimism.io/apps#bridge) qui n'attendent pas la période problématique et ne nécessitent pas de preuve de Merkle pour finaliser le retrait.
 
 Ces passerelles fonctionnent généralement en ayant des actifs sur L1 qu'ils fournissent immédiatement moyennant un petit supplément (souvent inférieur au coût du gaz pour un retrait standard d'une passerelle). Quand la passerelle (ou la personne qui la gère) prévoit d'être en deçà des actifs L1, elle transfère suffisamment d'actifs de L2. Comme il s'agit de retraits très importants, le coût de retrait est amorti sur une somme importante et représente un pourcentage beaucoup plus faible.
 

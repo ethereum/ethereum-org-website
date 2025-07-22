@@ -191,7 +191,7 @@ event Deposit(
 
 #### 出金イベント
 
-[`redeem`](#redeem)あるいは [`withdraw`](#withdraw)メソッドにより、預金者がボールトからシェアを引き出す際に、**必ず**発行しなければなりません。
+[`redeem`](#redeem) あるいは [`withdraw`](#withdraw)メソッドにより、預金者がボールトからシェアを引き出す際に、**必ず**発行しなければなりません。
 
 ```solidity
 event Withdraw(

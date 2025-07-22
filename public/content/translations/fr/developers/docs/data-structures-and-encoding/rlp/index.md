@@ -5,7 +5,7 @@ lang: fr
 sidebarDepth: 2
 ---
 
-La sérialisation Recursive Length Prefix (RLP) est largement utilisée dans les clients d'exécution d'Ethereum. RLP normalise le transfert de données entre les nœuds dans un format peu encombrant. L'objectif de RLP est d'encoder des tableaux de données binaires arbitrairement imbriqués. RLP est la principale méthode d'encodage utilisée pour sérialiser les objets dans la couche d'exécution d'Ethereum. Le seul but de RLP est d'encoder la structure ; l'encodage de types de données spécifiques (par exemple, chaînes de caractères, flottants) est laissé aux protocoles d'ordre supérieur ; mais les entiers positifs de RLP doivent être représentés sous forme binaire big-endian sans zéros de tête (ce qui rend la valeur zéro de l'entier équivalente au tableau d'octets vide). Les entiers positifs désérialisés avec des zéros en tête sont traités comme invalide. La représentation entière de la longueur de la chaîne doit également être encodée de cette façon, ainsi que les entiers dans le bloc de charge.
+La sérialisation Recursive Length Prefix (RLP) est largement utilisée dans les clients d'exécution d'Ethereum. RLP normalise le transfert de données entre les nœuds dans un format peu encombrant. L'objectif de RLP est d'encoder des tableaux de données binaires arbitrairement imbriqués. RLP est la principale méthode d'encodage utilisée pour sérialiser les objets dans la couche d'exécution d'Ethereum. L'objectif principal du RLP est d'encoder la structure ; à l'exception des entiers positifs, le RLP délègue l'encodage de types de données spécifiques (par exemple, les chaînes, les flottants) à des protocoles d'ordre supérieur. Les nombres entiers positifs doivent être représentés sous forme binaire big-endian sans zéros initiaux (ce qui rend la valeur entière zéro équivalente à un tableau d'octets vide). Les entiers positifs désérialisés avec des zéros en tête doivent être traités comme invalides par tout protocole d'ordre supérieur utilisant RLP.
 
 Plus d'informations dans [le livre jaune Ethereum (Annexe B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -20,6 +20,7 @@ La fonction d'encodage RLP prend en charge un item. Un item est défini comme su
 
 - une chaîne (c'est-à-dire un tableau d'octets) est un item
 - une liste d'items est un item
+- un nombre entier positif est un item
 
 Par exemple, tous les éléments suivants sont des items :
 
@@ -27,14 +28,17 @@ Par exemple, tous les éléments suivants sont des items :
 - la chaîne contenant le mot "cat" ;
 - une liste contenant un nombre quelconque de chaînes ;
 - et une structure de données plus complexe comme `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
+- le nombre `100`
 
-Notez que dans le contexte du reste de cette page, 'string' signifie "un certain nombre d'octets de données binaires"; aucun encodage spécial n'est utilisé, et aucune connaissance du contenu des chaînes n'est implicite.
+Notez que dans le contexte du reste de cette page, "chaîne" signifie "un certain nombre d'octets de données binaires" ; aucun codage spécial n'est utilisé et aucune connaissance du contenu des chaînes n'est impliquée (à l'exception de la règle contre les nombres entiers positifs non minimaux).
 
 L'encodage RLP est défini comme suit :
 
+- Pour un entier positif, il est converti en tableau d'octets le plus court dont l'interprétation big-endian est l'entier, puis encodé en tant que chaîne de caractères selon les règles ci-dessous.
 - Pour un seul octet dont la valeur se situe dans la plage `[0x00, 0x7f]` (décimal `[0, 127]`), cet octet est son propre codage RLP.
 - Sinon, si une chaîne a une longueur de 0 à 55 octets, le codage RLP consiste en un seul octet de valeur **0x80** (déc. 128) plus la longueur de la chaîne, suivi de la chaîne. La plage du premier octet est donc `[0x80, 0xb7]` (déc. `[128, 183]`).
 - Si une chaîne de caractères a une longueur de plus de 55 octets, le codage RLP consiste en un seul octet ayant la valeur **0xb7** (déc. 183) plus la longueur en octets de la longueur de la chaîne de caractères sous forme binaire, suivie de la longueur de la chaîne de caractères, suivie de la chaîne de caractères. Par exemple, une chaîne de 1024 octets de long sera codée sous la forme `\xb9\x04\x00` (déc. `185, 4, 0`) suivie de la chaîne. Ici, `0xb9` (183 + 2 = 185) comme premier octet, suivi des 2 octets `0x0400` (déc. 1024) qui indiquent la longueur de la chaîne réelle. La plage du premier octet est donc `[0xb8, 0xbf]` (déc. `[184, 191]`).
+- Si une chaîne de caractères a une longueur de 2^64 octets ou plus, elle ne peut pas être encodée.
 - Si la charge utile totale d'une liste (c'est-à-dire la longueur combinée de tous ses éléments codés RLP) est de 0 à 55 octets, le codage RLP consiste en un seul octet de valeur **0xc0** plus la longueur de la charge utile, suivi de la concaténation des codages RLP des éléments. La plage du premier octet est donc `[0xc0, 0xf7]` (déc. `[192, 247]`).
 - Si la charge utile totale d'une liste est supérieure à 55 octets, le codage RLP consiste en un seul octet ayant la valeur **0xf7** plus la longueur en octets de la charge utile sous forme binaire, suivie de la longueur de la charge utile, suivie de la concaténation des codages RLP des éléments. La plage du premier octet est donc `[0xf8, 0xff]` (déc. `[248, 255]`).
 
@@ -73,9 +77,9 @@ def to_binary(x):
 - la chaîne de caractères vide ('null') = `[ 0x80 ]`
 - la liste vide = `[ 0xc0 ]`
 - l'entier 0 = `[ 0x80 ]`
-- l'entier encodé 0 ('\\x00') = `[ 0x00 ]`
-- l'entier encodé 15 ('\\x0f') = `[ 0x0f ]`
-- l'entier encodé 1024 ('\\x04\\x00') = `[ 0x82, 0x04, 0x00 ]`
+- l'octet '\\x00' = `[ 0x00 ]`
+- l'octet '\\x0f' = `[ 0x0f ]`
+- les octets '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - la [représentation théorique en théorie des ensembles](https://fr.wikipedia.org/wiki/Construction_des_entiers_naturels) de trois, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc0, 0xc1, 0xc0 ]`
 - la chaîne de caractères "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
@@ -85,7 +89,7 @@ Selon les règles et le processus d'encodage RLP, l'entrée du décodage RLP est
 
 1.  en fonction du premier octet (c'est-à-dire le préfixe) des données d'entrée et du décodage du type de données, de la longueur des données et du décalage ;
 
-2.  en fonction du type et du décalage des données, décodage des données en conséquence ;
+2.  selon le type et le décalage des données, décoder les données en conséquence, en respectant la règle de codage minimal pour les nombres entiers positifs ;
 
 3.  continue à décoder le reste de l'entrée ;
 

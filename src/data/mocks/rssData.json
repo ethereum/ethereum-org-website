@@ -1,0 +1,66 @@
+[
+  [
+    {
+      "pubDate": "Sat, 28 Sep 2024 00:00:00 +0000",
+      "title": "Making Ethereum alignment legible",
+      "link": "https://vitalik.ca/general/2024/09/28/alignment.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin's website",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Fri, 13 Sep 2024 00:00:00 GMT",
+      "title": "4844 Data Challenge: Insights and Winners",
+      "link": "https://blog.ethereum.org/en/2024/09/13/4844-data-challenge",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_84404ba6ed463992c8eaee78610b3264.jpeg",
+      "source": "Ethereum Foundation Blog",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/en/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 31 Dec 2013 18:00:37 GMT",
+      "title": "Bootstrapping A Decentralized Autonomous Corporation: Part I",
+      "link": "https://blog.ethereum.org/en/2013/12/31/bootstrapping-a-decentralized-autonomous-corporation-part-i",
+      "imgSrc": "https://blog.ethereum.org/images/posts/blackhole.jpg",
+      "source": "Ethereum Foundation Blog",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/en/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Thu, 22 Aug 2024 00:00:00 +0000",
+      "title": "Xatu Consensus Layer P2P tables now available",
+      "link": "https://ethpandaops.io/posts/xatu-consensus-layer-p2p/",
+      "imgSrc": "https://ethpandaops.io/posts/xatu-consensus-layer-p2p/featured.png",
+      "source": "Posts 🤓 on ethPandaOps",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/index.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Tue, 02 Jul 2024 00:00:00 GMT",
+      "title": "Staking Survey 2024",
+      "link": "https://paragraph.xyz/@ethstaker/staking-survey-2024",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/9a642b5e66cd993febd6e331cfa62de9.jpg",
+      "source": "ethstaker",
+      "sourceUrl": "https://paragraph.xyz/@ethstaker",
+      "sourceFeedUrl": "https://paragraph.xyz/api/blogs/rss/@ethstaker"
+    }
+  ],
+  [
+    {
+      "pubDate": "Thu, 27 Dec 2024 12:00:00 GMT",
+      "title": "Solidity Developer Survey 2024 is Live!",
+      "link": "https://soliditylang.org/blog/2024/12/27/solidity-developer-survey-2024-announcement/",
+      "imgSrc": "/images/solidity-banner.png",
+      "source": "Solidity",
+      "sourceUrl": "https://soliditylang.org/blog",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    }
+  ]
+]

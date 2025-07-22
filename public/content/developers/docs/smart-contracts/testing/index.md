@@ -130,7 +130,7 @@ Many unit testing frameworks allow you to create assertions—simple statements 
 
 ##### 3. Measure code coverage
 
-[Code coverage](https://en.m.wikipedia.org/wiki/Code_coverage) is a testing metric that tracks the number of branches, lines, and statements in your code executed during tests. Tests should have good code coverage, otherwise you may get "false negatives" which happen a contract passes all tests, but vulnerabilities still exist in the code. Recording high code coverage, however, gives the assurance all statements/functions in a smart contract were sufficiently tested for correctness.
+[Code coverage](https://en.m.wikipedia.org/wiki/Code_coverage) is a testing metric that tracks the number of branches, lines, and statements in your code executed during tests. Tests should have good code coverage to minimize the risk of untested vulnerabilities. Without sufficient coverage, you might falsely assume your contract is secure because all tests pass, while vulnerabilities still exist in untested code paths. Recording high code coverage, however, gives the assurance all statements/functions in a smart contract were sufficiently tested for correctness.
 
 ##### 4. Use well-developed testing frameworks
 
@@ -150,7 +150,7 @@ Unit testing frameworks for Solidity smart contracts come in different languages
 
 While unit testing debugs contract functions in isolation, integration tests evaluate the components of a smart contract as a whole. Integration testing can detect issues arising from cross-contract calls or interactions between different functions in the same smart contract. For example, integration tests can help check if things like [inheritance](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) and dependency injection work properly.
 
-Integration testing is useful if your contract adopts a modular architecture or interfaces with other on-chain contracts during execution. One way of running integration tests is to [fork the blockchain](/glossary/#fork) at a specific height (using a tool like [Forge](https://book.getfoundry.sh/forge/fork-testing) or [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) and simulate interactions between your contract and deployed contracts.
+Integration testing is useful if your contract adopts a modular architecture or interfaces with other onchain contracts during execution. One way of running integration tests is to [fork the blockchain](/glossary/#fork) at a specific height (using a tool like [Forge](https://book.getfoundry.sh/forge/fork-testing) or [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) and simulate interactions between your contract and deployed contracts.
 
 The forked blockchain will behave similarly to Mainnet and have accounts with associated states and balances. But it only acts as a sandboxed local development environment, meaning you won't need real ETH for transactions, for example, nor will your changes affect the real Ethereum protocol.
 
@@ -207,13 +207,13 @@ While automated testing performed in a local development environment can provide
 
 Testing your contract on a local blockchain (also known as a [development network](/developers/docs/development-networks/)) is a recommended alternative to testing on Mainnet. A local blockchain is a copy of the Ethereum blockchain running locally on your computer which simulates the behavior of Ethereum's execution layer. As such, you can program transactions to interact with a contract without incurring significant overhead.
 
-Running contracts on a local blockchain could be useful as a form of manual integration testing. [Smart contracts are highly composable](/developers/docs/smart-contracts/composability/), allowing you to integrate with existing protocols—but you'll still need to ensure that such complex on-chain interactions produce the correct results.
+Running contracts on a local blockchain could be useful as a form of manual integration testing. [Smart contracts are highly composable](/developers/docs/smart-contracts/composability/), allowing you to integrate with existing protocols—but you'll still need to ensure that such complex onchain interactions produce the correct results.
 
 [More on development networks.](/developers/docs/development-networks/)
 
 ### Testing contracts on testnets {#testing-contracts-on-testnets}
 
-A test network or testnet works exactly like Ethereum Mainnet, except that it uses Ether (ETH) with no real-world value. Deploying your contract on a [testnet](/developers/docs/networks/#ethereum-testnets) means anyone can interact with it (e.g., via the dapp's frontend) without putting funds at risk.
+A test network or testnet works exactly like Ethereum Mainnet, except that it uses ether (ETH) with no real-world value. Deploying your contract on a [testnet](/developers/docs/networks/#ethereum-testnets) means anyone can interact with it (e.g., via the dapp's frontend) without putting funds at risk.
 
 This form of manual testing is useful for evaluating the end-to-end flow of your application from a user’s point of view. Here, beta testers can also perform trial runs and report any issues with the contract’s business logic and overall functionality.
 
@@ -259,7 +259,7 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utilizes Pytest, a feature-rich test framework that lets you write small tests with minimal code, scales well for large projects, and is highly extendable._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry offers Forge, a fast and flexible Ethereum testing framework capable of executing simple unit tests, gas optimization checks, and contract fuzzing._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry offers Forge, a fast and flexible Ethereum testing framework capable of executing simple unit tests, gas optimization checks, and contract fuzzing._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework for testing smart contracts based on ethers.js, Mocha, and Chai._
 

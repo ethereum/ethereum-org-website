@@ -1,5 +1,4 @@
-import { Box } from "@chakra-ui/react"
-import { useColorModeValue } from "@chakra-ui/react"
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 const EthVideo = () => {
   const src = useColorModeValue(
@@ -8,7 +7,7 @@ const EthVideo = () => {
   )
 
   return (
-    <Box>
+    <div>
       <video
         id="hero-video"
         width="100%"
@@ -19,7 +18,7 @@ const EthVideo = () => {
         loop
         muted
       />
-    </Box>
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 ---
 title: 燃料和費用
+metaTitle: "以太坊燃料和費用：技術概覽"
 description:
 lang: zh-tw
 ---
@@ -117,11 +118,12 @@ lang: zh-tw
 
 二層網路擴容為一項主要倡議，可大幅減低燃料費用並加強用戶體驗及可擴容性。 [更多二層網路擴容相關資訊](/developers/docs/scaling/#layer-2-scaling)。
 
-## 監控燃料費 {#moitoring-gas-fees}
+## 監控燃料費 {#monitoring-gas-fees}
 
 若你想要監控燃料價格，以便能以更低的費用發送以太幣，你可以使用許多不同的工具，例如：
 
 - [Etherscan](https://etherscan.io/gastracker) _交易燃料費價格估算器_
+- [以太幣燃料追蹤器](https://www.ethgastracker.com/)_監控並追蹤以太坊和二層網路的燃料價格，以降低交易費用並節省資金_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _燃料估算 Chrome 延伸模組，支援 0 類原始交易及 2 類 EIP-1559 交易。_
 - [Cryptoneur燃料Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _在主網、Arbitrum、Polygon 上使用當地貨幣計算不同交易類型的燃料費。_
 

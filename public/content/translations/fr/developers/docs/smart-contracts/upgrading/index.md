@@ -160,6 +160,6 @@ Les timelocks donnent aux utilisateurs un certain temps pour quitter le système
 
 - [L'état des mises à jour des contrats intelligents](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) par Santiago Palladino
 - [Plusieurs façons de mettre à jour un contrat intelligent Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Blog Crypto Market Pool
-- [ Apprendre à mettre à jour un contrat intelligent](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
+- [Apprendre à mettre à jour un contrat intelligent](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
 - [La méthode proxy pour mettre à jour les contrats en Solidity : Proxy Transparent vs UUPS](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) par Naveen Samu
 - [Comment les mises à jour en diamant fonctionnent ?](https://dev.to/mudgen/how-diamond-upgrades-work-417j) par Nick Mudge

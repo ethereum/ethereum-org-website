@@ -1,5 +1,6 @@
 ---
 title: Decentralized finance (DeFi)
+metaTitle: What is DeFi? | Benefits and Use of Decentralised Finance
 description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
@@ -31,7 +32,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 - Financial services can block you from getting paid.
 - A hidden charge of financial services is your personal data.
 - Governments and centralized institutions can close down markets at will.
-- Trading hours are often limited to business hours of specific time zone.
+- Trading hours are often limited to business hours of a specific time zone.
 - Money transfers can take days due to internal human processes.
 - There's a premium to financial services because intermediary institutions need their cut.
 
@@ -139,7 +140,7 @@ This allows you to borrow money without credit checks or handing over private in
 
 #### Access to global funds {#access-global-funds}
 
-When you use a decentralized lender you have access to funds deposited from all over the globe, not just the funds in the custody of your chosen bank or institution. This make loans more accessible and improves the interest rates.
+When you use a decentralized lender you have access to funds deposited from all over the globe, not just the funds in the custody of your chosen bank or institution. This makes loans more accessible and improves the interest rates.
 
 #### Tax-efficiencies {#tax-efficiencies}
 
@@ -168,7 +169,7 @@ If exchange B's supply dropped suddenly and the user wasn't able to buy enough t
 
 To be able to do the above example in the traditional finance world, you'd need an enormous amount of money. These money-making strategies are only accessible to those with existing wealth. Flash loans are an example of a future where having money is not necessarily a prerequisite for making money.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   More on flash loans
 </ButtonLink>
 
@@ -324,7 +325,7 @@ You can think of DeFi in layers:
 3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/dapps/) – the products we use to manage and access the protocols.
 
-Note: much of DeFi uses the [ERC-20 standard](/glossary/#erc-20). Applications in DeFi use a wrapper for ETH called Wrapped Ether (WETH). [Learn more about wrapped ether](/wrapped-eth).
+Note: much of DeFi uses the [ERC-20 standard](/glossary/#erc-20). Applications in DeFi use a wrapper for ETH called Wrapped ether (WETH). [Learn more about wrapped ether](/wrapped-eth).
 
 ## Build DeFi {#build-defi}
 
@@ -355,3 +356,7 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

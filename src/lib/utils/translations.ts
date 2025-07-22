@@ -25,6 +25,10 @@ export const filterRealLocales = (locales: string[] | undefined) => {
   return locales?.filter((locale) => locale !== FAKE_LOCALE) || []
 }
 
+export const isLocaleValidISO639_1 = (locale: string) => {
+  return i18nConfig.find((language) => language.code === locale)?.validISO639_1
+}
+
 // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
@@ -41,6 +45,7 @@ export const getRequiredNamespacesForPage = (
   const baseNamespaces = ["common"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
+  // TODO remove layout case since we can't use it anymore
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
 
   return [
@@ -62,6 +67,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path === "/") {
     primaryNamespace = "page-index"
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
   if (path === "/contributing/translation-program/acknowledgements/") {
@@ -95,6 +101,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.startsWith("/history/")) {
     primaryNamespace = "page-history"
+  }
+
+  if (path.startsWith("/resources/")) {
+    primaryNamespace = "page-resources"
   }
 
   if (path.startsWith("/stablecoins/")) {
@@ -138,8 +148,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/roadmap/vision/")) {
-    primaryNamespace = "page-roadmap-vision"
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades-index",
+      "page-roadmap-vision",
+    ]
   }
 
   if (path.startsWith("/gas/")) {
@@ -165,21 +178,44 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.endsWith("/wallets/find-wallet/")) {
     primaryNamespace = "page-wallets-find-wallet"
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "table"]
   }
 
+  // TODO: Remove this when the page is translated
   if (path.startsWith("/layer-2/")) {
     primaryNamespace = "page-layer-2"
+  }
+
+  if (path.startsWith("/layer-2/learn/")) {
+    primaryNamespace = "page-layer-2-learn"
+  }
+
+  if (path.startsWith("/layer-2/networks/")) {
+    primaryNamespace = "page-layer-2-networks"
+    requiredNamespaces = [...requiredNamespaces, "table"]
+  }
+
+  if (path.startsWith("/roadmap/")) {
+    primaryNamespace = "page-roadmap"
+  }
+
+  if (path.startsWith("/start/")) {
+    requiredNamespaces = [...requiredNamespaces]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
     primaryNamespace = "page-translatathon"
   }
 
+  if (path.startsWith("/10years/")) {
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
+  }
+
   // Glossary tooltips
   if (
     path.startsWith("/dapps/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/layer-2/learn/") ||
     path.startsWith("/get-eth/") ||
     path.startsWith("/stablecoins/") ||
     path.startsWith("/staking/") ||
@@ -197,6 +233,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/eth/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/layer-2/learn/") ||
     path.startsWith("/nft/") ||
     path.startsWith("/roadmap/merge/") ||
     path.startsWith("/roadmap/scaling/") ||
@@ -206,7 +243,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/wallets/") ||
     path.startsWith("/web3/") ||
     path.startsWith("/what-is-ethereum/") ||
-    path.startsWith("/quizzes/")
+    path.startsWith("/quizzes/") ||
+    path.startsWith("/stablecoins/") ||
+    path.startsWith("/defi/") ||
+    path.startsWith("/gas/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

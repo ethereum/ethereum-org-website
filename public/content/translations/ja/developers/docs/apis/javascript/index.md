@@ -8,7 +8,7 @@ Webアプリはイーサリアムブロックチェーンとやりとりを行�
 
 この目的のために、すべてのイーサリアムクライアントは[JSON-RPC](/developers/docs/apis/json-rpc/)の仕様を実装しています。そのため、アプリケーションは統一された[メソッド](/developers/docs/apis/json-rpc/#json-rpc-methods)のセットを使用できます。
 
-JavaScriptでイーサリアムノードに接続する場合、通常のJavaScriptを使用することは可能です。しかし、エコシステム内には、作業をより簡単にするいくつかの便利なライブラリがあります。 これらのライブラリにより、デベロッパーは直感的な1行のメソッドを作成するだけで、イーサリアムとやり取りするJSON-RPCリクエストを(内部的に)初期化できるようになります。
+JavaScriptでイーサリアムノードに接続する場合、通常のJavaScriptを使用することは可能です。しかし、エコシステム内には、作業をより簡単にするいくつかの便利なライブラリがあります。 これらのライブラリにより、デベロッパーは直感的な1行のメソッドを作成するだけで、イーサリアムとやり取りするJSON-RPCリクエストを (内部的に) 初期化できるようになります。
 
 [マージ](/roadmap/merge/)以降は、ノードの実行には、実行クライアントとコンセンサスクライアントという2つのつながったイーサリアムソフトウェアが必要になることに注意してください。 必ず、ノードに実行クライアントとコンセンサスクライアントの両方が含まれるようにしてください。 ノードがローカルマシン上にない(ノードがAWSインスタンス上で動作しているなど)場合は、適宜、チュートリアルのIPアドレスをアップデートしてください。 詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)ページをご覧ください。
 
@@ -29,9 +29,9 @@ providersライブラリを使用することで、JSON-RPC、INFURA、Etherscan
 **Ethers.jsを使った例**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
+// A BrowserProvider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+const provider = new ethers.BrowserProvider(window.ethereum)
 
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
@@ -80,7 +80,7 @@ Ethers.jsを使った例
 // Create a wallet instance from a mnemonic...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
 // ...or from a private key
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)

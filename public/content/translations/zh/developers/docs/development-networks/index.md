@@ -14,7 +14,7 @@ lang: zh
 
 ## 什么是开发网络？ {#what-is-a-development-network}
 
-实质上开发网络是指对本地开发特殊设计的以太坊客户端（会对以太坊进行部署应用）。
+实质上开发网络是指哪些对本地开发特殊设计的以太坊客户端（会对以太坊进行部署应用）。
 
 **为什么不在本地运行一个标准的以太坊节点？**
 
@@ -41,24 +41,25 @@ lang: zh
 
 一些共识客户端具有内置工具，用于启动本地信标链以进行测试。 提供了 Lighthouse、Nimbus 和 Lodestar 的说明：
 
-- [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/usage/local/)
+- [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lightthouse 的本地测试网](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [使用 Nimbus 的本地测试网](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公共以太坊测试链 {#public-beacon-testchains}
 
-以太坊还有两个维护中的公共测试网实现：Goerli 和 Sepolia。 推荐使用获得长期支持的测试网 Goerli，任何人都可以自由地在其上验证。 Sepolia 是一个较新、较小的测试链，预计在可预见的未来也会得到维护。Sepolia 上有具有权限的验证者集，这意味着不可以对此测试网上的新验证者进行常规访问。 Ropsten 链预计在 2022 第四季度弃用，Rinkeby 链预计将在 2023 第二/第三季度弃用。
+以太坊还有两个维护中的公共测试网实现：Sepolia 和 Hoodi。 Sepolia 是推荐的应用程序开发标准测试网，具有封闭的验证器集以实现快速同步。 Hoodi 是一个用于验证和质押的测试网，它使用开放的验证器集，并允许任何人进行验证。
 
-- [Goerli 质押启动板](https://goerli.launchpad.ethereum.org/)
-- [Ropsten、Rinkeby 和 Kiln 弃用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi 质押启动板](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia 网站](https://sepolia.dev/)
+- [Hoodi 网站](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis 以太坊包 {#kurtosis}
 
 Kurtosis 是一个用于多容器测试环境的构建系统，让开发者能够在本地构建区块链网络的可复现实例。
 
-以太坊 Kurtosis 包在本地实例化了一个容器化和可参数化的以太坊测试网，支持多种不同的执行层 (EL) 和共识层 (CL) 客户端以及 n 个节点。 Kurtosis 优雅地处理所有本地端口映射和服务连接，以方便去中心化应用程序和智能合约原型设计和测试。
+以太坊 Kurtosis 包可用于通过 Docker 或 Kubernetes 快速实例化一个可参数化和高度可扩展的私有以太坊测试网。 该包支持所有主要的执行层 (EL) 和共识层 (CL) 客户端。 Kurtosis 可从容处理代表性网络的所有本地端口映射和服务连接，以用于与以太坊核心基础设施相关的验证和测试工作流程。
 
-- [以太坊网络包](https://github.com/kurtosis-tech/eth-network-package)
+- [以太坊网络包](https://github.com/kurtosis-tech/ethereum-package)
 - [网站](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [相关文档](https://docs.kurtosis.com/)

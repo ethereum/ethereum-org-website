@@ -79,7 +79,7 @@ Kullandığınız yola bakmaksızın, bir kütüphane dahil ederken, her zaman g
 
 Projeniz için bir akıllı sözleşme kütüphanesi kullanmanın birçok yararı vardır. İlk ve en önemlisi, kendiniz kodlamanızdansa size kullanıma hazır, sisteminize dahil edebileceğiniz yapı taşları sunarak zamandan tasarruf etmenizi sağlar.
 
-Güvenlik ayrıca büyük bir artısıdır. Açık kaynak akıllı sözleşme kütüphaneleri sık sık ciddi ölçüde denetlenir. Birçok projenin onlara dayandığı ele alındığında, onların sürekli teftiş altında tutulması topluluk tarafından güçlü bir teşvik bulmaktadır. Uygulama kodunda hatalar bulmak, yeniden kullanılabilir sözleşme kütüphanelerinden çok daha yaygındır. Bazı kütüphaneler ayrıca ek güvenlik için [dış denetlemelerden](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) geçerler.
+Güvenlik ayrıca büyük bir artısıdır. Açık kaynak akıllı sözleşme kütüphaneleri sık sık ciddi ölçüde denetlenir. Birçok projenin onlara dayandığı ele alındığında, onların sürekli teftiş altında tutulması topluluk tarafından güçlü bir teşvik bulmaktadır. Uygulama kodunda hatalar bulmak, yeniden kullanılabilir sözleşme kütüphanelerinden çok daha yaygındır. Bazı kütüphaneler, ek güvenlik için [dış denetimlerden](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) de geçer.
 
 Ancak, akıllı sözleşme kütüphanelerini kullanmak aşina olmadığınız kodu projenize dahil etme riskini de beraberinde getirir. Bir sözleşmeyi aktarmak ve projenize doğrudan dahil etmek çekici gelebilir, ancak o sözleşmenin ne yaptığı hakkında iyi bir anlayışa sahip olmadan, farkında olmadan sisteminizde beklenmeyen davranışlara bağlı olarak bir soruna neden olabilirsiniz. Her zaman dahil ettiğiniz kodun belgelerini okuduğunuzdan emin olun ve kodu projenizin bir parçası yapmadan önce gözden geçirin!
 
@@ -104,7 +104,7 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 
 **thirdweb Solidity SDK -** **_Özel akıllı sözleşmeleri verimli bir şekilde oluşturmak için gereken araçları sağlar_**
 
-- [Dokümanlar](https://portal.thirdweb.com/solidity/)
+- [Dokümanlar](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## İlgili eğitimler {#related-tutorials}

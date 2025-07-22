@@ -3,28 +3,29 @@ import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ContentHero, HubHero } from "@/components/Hero"
-import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 
 import { ContentLayout } from "../ContentLayout"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
-
-const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2" {...props} />
-)
 
 // Roadmap layout components
 export const roadmapComponents = {
-  CardGrid,
-  Pill,
   RoadmapActionCard,
   RoadmapImageContent,
 }
 
 type RoadmapLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+  Pick<
+    MdPageContent,
+    | "slug"
+    | "tocItems"
+    | "contentNotTranslated"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: RoadmapFrontmatter
   }
 export const RoadmapLayout = ({
@@ -32,14 +33,18 @@ export const RoadmapLayout = ({
   frontmatter,
   slug,
   tocItems,
+  contributors,
+  lastEditLocaleTimestamp,
   contentNotTranslated,
 }: RoadmapLayoutProps) => {
+  const { t } = useTranslation("common")
+
   const dropdownLinks: ButtonDropdownList = {
-    text: "nav-roadmap-options",
-    ariaLabel: "nav-roadmap-options-alt",
+    text: t("common:nav-roadmap-options"),
+    ariaLabel: t("common:nav-roadmap-options-alt"),
     items: [
       {
-        text: "nav-roadmap-home",
+        text: t("common:nav-roadmap-home"),
         href: "/roadmap/",
         matomo: {
           eventCategory: `Roadmap dropdown`,
@@ -48,7 +53,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-security",
+        text: t("common:nav-roadmap-security"),
         href: "/roadmap/security",
         matomo: {
           eventCategory: `Roadmap security dropdown`,
@@ -57,7 +62,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-scaling",
+        text: t("common:nav-roadmap-scaling"),
         href: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
@@ -66,7 +71,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-user-experience",
+        text: t("common:nav-roadmap-user-experience"),
         href: "/roadmap/user-experience/",
         matomo: {
           eventCategory: `Roadmap user experience dropdown`,
@@ -75,7 +80,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-future-proofing",
+        text: t("common:nav-roadmap-future-proofing"),
         href: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,
@@ -98,6 +103,8 @@ export const RoadmapLayout = ({
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={
         slug === "/roadmap/" ? (
           <HubHero

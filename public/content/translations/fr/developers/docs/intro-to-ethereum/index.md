@@ -36,7 +36,7 @@ Les mécanismes cryptographiques garantissent qu'une fois que les transactions s
 
 **Ether (ETH)** est la cryptomonnaie native d'Ethereum. L'objectif de l'ETH est de créer un marché du calcul. Un tel marché incite économiquement les participants à vérifier/exécuter les demandes de transaction et à fournir des ressources informatiques au réseau.
 
-Tout participant qui diffuse une demande de transaction doit également offrir une certaine quantité d'ETH au réseau comme prime. Le réseau versera cette prime à quiconque effectuera le travail nécessaire pour vérifier la transaction, l'exécuter, la consigner dans la blockchain et la diffuser sur le réseau.
+Tout participant qui diffuse une demande de transaction doit également offrir une certaine quantité d'ETH au réseau comme prime. Le réseau brule une partie de cette prime et versera le reste à quiconque effectuera le travail de vérification de la transaction, l'exécutera, l'enregistrera dans la blockchain et la diffusera sur le réseau.
 
 La quantité d'ETH payée correspond aux ressources nécessaires pour effectuer les calculs. Ces primes empêchent également les participants malveillants de bloquer intentionnellement le réseau en demandant l'exécution de boucles infinies ou d'autres scripts gourmands en ressources, dans la mesure où ces participants doivent payer les ressources de calcul qu'ils réquisitionnent.
 
@@ -107,7 +107,7 @@ Extraits de code réutilisables (un programme) qu'un développeur publie dans l'
 ## Complément d'information {#further-reading}
 
 - [Livre blanc Ethereum](/whitepaper/)
-- [Comment fonctionne Ethereum de toute manière ?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** cette ressource est toujours utile mais sachez qu'elle est antérieure à [La Fusion](/roadmap/merge) et fait donc toujours référence au mécanisme de preuve de travail d'Ethereum - Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos))
+- [Comment fonctionne Ethereum, en fait ?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** cette ressource est toujours utile mais sachez qu'elle est antérieure à [La Fusion](/roadmap/merge) et fait donc toujours référence au mécanisme de preuve de travail d'Ethereum - Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos))
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 

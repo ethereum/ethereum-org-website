@@ -69,7 +69,7 @@ ethereum.orgにウォレットの追加をご希望の場合は、GitHubでイ�
 
 イーサリアムの流動的な性質により、チームと製品が現れては消え、イノベーションは毎日起こっています。そのため、下記のようなコンテンツの定期的なチェックを実施しています。
 
-- 掲載されているウォレットと分散型アプリ(Dapp)すべてが、引き続き基準を満たしているかどうかの確認
+- 掲載されているウォレットと分散型アプリ(Dapp)のすべてが、引き続き基準を満たしているかどうかの確認
 - 現在掲載されている製品よりも、多くの基準を満たす製品の提案がないかの確認
 
 ethereum.orgは、オープンソースコミュニティによって維持されており、最新の状態に保つためにコミュニティの力を借りています。 掲載されているウォレットに関する情報に更新が必要であることに気付いた場合は、 [イシューを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml)するか[プルリクエスト](https://github.com/ethereum/ethereum-org-website/pulls)をしてください！

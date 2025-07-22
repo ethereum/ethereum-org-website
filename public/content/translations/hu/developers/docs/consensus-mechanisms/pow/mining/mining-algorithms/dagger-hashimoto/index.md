@@ -60,7 +60,7 @@ def dbl_sha3(x):
     return decode_int(utils.sha3(utils.sha3(x)))
 ```
 
-### Parameters {#parameters}
+### Paraméterek {#parameters}
 
 Az algoritmushoz a következő paramétereket használjuk:
 
@@ -256,7 +256,7 @@ Emellett érdemes megjegyezni, hogy a Dagger-Hashimoto a blokkfejlécre egyéb k
 
 ## További olvasnivaló {#further-reading}
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
 
 ## Függelék {#appendix}
 

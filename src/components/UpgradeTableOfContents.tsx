@@ -1,10 +1,9 @@
-import { Box, List, ListItem } from "@chakra-ui/react"
-
 import type { ToCItem } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
 import { ItemsListProps } from "@/components/TableOfContents/ItemsList"
+import { BaseLink } from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
 import { trimmedTitle } from "@/lib/utils/toc"
 
 export type TableOfContentsLinkProps = {
@@ -19,25 +18,13 @@ const TableOfContentsLink = ({
     isActive = window.location.hash === url
   }
 
-  const classes = isActive ? "active" : ""
-
   return (
     <BaseLink
       href={url}
-      className={classes}
-      position="relative"
-      display="inline-block"
-      // `li :last-child` global selector wants to override this without `!important`
-      mb="4 !important"
-      textDecoration="none"
-      color="body.medium"
-      fontWeight="normal"
-      fontSize="xl"
-      _hover={{
-        color: "primary.hover",
-        textDecoration: "none",
-      }}
-      _visited={{}}
+      className={cn(
+        "relative !mb-4 inline-block text-xl font-normal text-gray-500 no-underline hover:text-primary hover:no-underline dark:text-gray-400",
+        isActive && "text-primary"
+      )}
     >
       {trimmedTitle(title)}
     </BaseLink>
@@ -50,9 +37,9 @@ const ItemsList = ({ items, depth, maxDepth }: ItemsListProps) => {
   return (
     <>
       {items.map((item, index) => (
-        <ListItem m={0} key={index}>
+        <li key={index} className="m-0">
           <TableOfContentsLink item={item} />
-        </ListItem>
+        </li>
       ))}
     </>
   )
@@ -67,17 +54,11 @@ const UpgradeTableOfContents = ({
   items,
   maxDepth = 1,
 }: UpgradeTableOfContentsProps) => (
-  <Box
-    as="nav"
-    p={0}
-    mb={8}
-    overflowY="auto"
-    display={{ base: "none", l: "block" }}
-  >
-    <List m={0} py={0} lineHeight="1.4">
+  <nav className="mb-8 hidden overflow-y-auto p-0 lg:block">
+    <ul className="m-0 py-0 leading-relaxed">
       <ItemsList items={items} depth={0} maxDepth={maxDepth} />
-    </List>
-  </Box>
+    </ul>
+  </nav>
 )
 
 export default UpgradeTableOfContents

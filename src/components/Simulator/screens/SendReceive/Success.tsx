@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { PiCheckThin } from "react-icons/pi"
-import { Flex, Icon, Spinner, Text } from "@chakra-ui/react"
+import { Check } from "lucide-react"
+
+import { Flex, VStack } from "@/components/ui/flex"
+import { Spinner } from "@/components/ui/spinner"
+
+import { cn } from "@/lib/utils/cn"
 
 import { getMaxFractionDigitsUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
-const ICON_SIZE = "4.5rem" as const
+const ICON_SIZE = "text-[4.5rem]"
 
 type SuccessProps = {
   tokenBalances: Array<TokenBalance>
@@ -72,55 +76,55 @@ export const Success = ({
         </motion.div>
       ) : (
         <Flex
-          animate={{ opacity: [0, 1] }}
-          exit={{ opacity: 0 }}
-          key="success-fade-out"
-          as={motion.div}
-          justify="center"
-          h="full"
-          bg="background.highlight"
-          pt={{ base: 24, md: 0 }}
-          alignItems={{ base: "start", md: "center" }}
+          className="h-full justify-center bg-background-highlight max-md:pt-24 md:items-center"
+          asChild
         >
-          <Flex direction="column" alignItems="center" pt={8} gap={4}>
-            {txPending ? (
-              <motion.div
-                key="spinner"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Spinner w={ICON_SIZE} h={ICON_SIZE} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="checkmark"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: "spring", delay: 0.25 }}
-              >
-                <Icon
-                  as={PiCheckThin}
-                  w={ICON_SIZE}
-                  h={ICON_SIZE}
-                  transform="rotate(-10deg)"
-                />
-              </motion.div>
-            )}
-            <Text textAlign="center" px={{ base: 4, md: 8 }}>
+          <motion.div
+            animate={{ opacity: [0, 1] }}
+            exit={{ opacity: 0 }}
+            key="success-fade-out"
+          >
+            <VStack className="gap-4 pt-8">
               {txPending ? (
-                "Sending transaction"
+                <motion.div
+                  key="spinner"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Spinner className={ICON_SIZE} />
+                </motion.div>
               ) : (
-                <Text as="span">
-                  You sent{" "}
-                  <strong>
-                    <>{sentEthValue} ETH</>
-                  </strong>{" "}
-                  ({usdValue}) to <strong>{recipient}</strong>
-                </Text>
+                <motion.div
+                  key="checkmark"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: "spring", delay: 0.25 }}
+                  data-testid="success-icon"
+                >
+                  <Check
+                    className={cn(
+                      ICON_SIZE,
+                      "size-[1em] -rotate-[10deg] stroke-1"
+                    )}
+                  />
+                </motion.div>
               )}
-            </Text>
-          </Flex>
+              <p className="px-4 text-center md:px-8">
+                {txPending ? (
+                  "Sending transaction"
+                ) : (
+                  <span>
+                    You sent{" "}
+                    <strong>
+                      <>{sentEthValue} ETH</>
+                    </strong>{" "}
+                    ({usdValue}) to <strong>{recipient}</strong>
+                  </span>
+                )}
+              </p>
+            </VStack>
+          </motion.div>
         </Flex>
       )}
     </AnimatePresence>

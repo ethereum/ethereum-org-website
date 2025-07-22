@@ -14,112 +14,99 @@ lang: zh-tw
 
 ## 公共網路 {#public-networks}
 
-公共網路可供世界上任何有網際網路連線的人訪問。 任何人都能在公共區塊鏈上讀取或創建交易並驗證被執行的交易。 對等節點間的共識決定了交易的打包和網路的狀態。
+公共網路可由全球任何人透過網際網路進行存取。 任何人都可以在公共區塊鏈上讀取或建立交易，並且可以驗證已經執行的交易。 網路中對等節點間的共識決定了交易的納入和網路的狀態。
 
-### 以太坊主網 {#ethereum-mainnet}
+### 主網 {#mainnet}
 
-主網為以太坊的主要公共生產區塊鏈，也為實際交易發生於分佈式帳本之所在。
+主網是指主要的以太坊生產區塊鏈，所有具有實際價值的交易都發生在主網的去中心化帳本上。
 
-當人們和交易所討論以太幣價格時，討論的是主網以太幣。
+當人們和交易所討論 ETH 價格時，他們談論的是主網上的 ETH。
 
-### 以太坊測試網 {#ethereum-testnets}
+### 測試網 {#testnets}
 
-除主網外，還有一些公共測試網。 應用程式開發者或智慧型合約開發者使用測試網來測試協議升級，也用於在部署到主網之前在一個類生產環境中測試潛在的智慧型合約。 可將主網與測試網類比於生產伺服器與暫置伺服器。
+除了主網外，還有公共測試網。 測試網由協議開發者或智慧型合約開發者使用，用於在將建議部署到主網之前，在模擬主網的環境中測試協議升級和潛在的智慧型合約。 將其視為生產與試運行伺服器的類比。
 
-部署至主網前，應在測試網上測試你編寫的所有合約程式碼。 在整合了智慧型合約的去中心化應用程式中，大部分專案都有部署到測試網的版本。
+在將你的合約部署到主網前，你應該先在測試網上測試你編寫的任何合約程式碼。 在與現有智慧型合約整合的去中心化應用程式中，大多數專案會將副本部署在測試網上。
 
-大部分測試網一開使都使用權威證明共識機制。 這表示將挑選出一小部分節點驗證交易並創建新區塊 – 並在此過程中質押其身分。 或者，有些測試網採用開放的權益證明共識機制，任何人都可以測試驗證者的運行狀況，就像在以太坊主網上一樣。
-
-測試網上的以太幣原本應該是沒有實際價值的；然而，已經有為取得一些稀少或難以獲得的測試網以太幣而建立的市場。 因為要和以太坊（即使在測試網上）實際互動需要以太幣，多數人透過水龍頭免費獲得測試網以太幣。 多數水龍頭為 Web 應用程式，你可以在其中輸入你請求發送以太幣的地址。
-
-#### 我該使用哪個測試網？
-
-目前用戶端開發者維護的兩個公共測試網分別為 Sepolia 及 Goerli。 Sepolia 是合約和應用程式開發者用來測試其應用程式的網路。 在 Goerli 網路上，協議開發者測試網路升級，質押者測試驗證者的運行狀況。
+目前主要的測試網是 Sepolia 和 Hoodi。 Sepolia 是合約和應用程式開發者用來測試其應用程式的網路。 而在 Hoodi 網路上，協議開發者測試網路升級，質押者測試驗證者的運行狀況。
 
 #### Sepolia {#sepolia}
 
-**Sepolia 是推薦的針對應用程式開發的預設測試網**。 Sepolia 網路使用經許可的驗證者集合。 此網路還很新，表示它的狀態和歷史記錄都非常小。 這表示網路可以快速完成同步，且在它上面運行節點需要的空間較少。 這對想要快速啟動節點並直接與網路互動的使用者來說非常有用。
+Sepolia 是推薦供開發者測試其應用程式的測試網。 Sepolia 網路採用許可制的驗證者集。 這意味著此測試網不對外開放新的驗證者，因此不具高風險性不會分叉或遇到下線的問題。 相對而言，該網路也擁有較小的狀態，這意味著需同步的網路較小，運行節點和與網路交互會更加容易。
 
-- 封閉的驗證者集合，由用戶端和測試團隊控制
-- 新測試網，已部署的應用程式比其他測試網上少
-- 快速同步和運行節點所需硬碟空間極小
+- 採許可制的驗證者集，由用戶端和測試團隊控制
+- 新測試網，狀態資料較少
+- 快速同步且建立節點容易
+- 若需測試合約或去中心化應用程式，可使用此網路
 
 ##### 資源
 
-- [官網](https://sepolia.dev/)
+- [網站](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
-- [以太掃瞄器（Etherscan）](https://sepolia.etherscan.io)
-- [Blockscout](https://eth-sepolia.blockscout.com/)
+- [Etherscan](https://sepolia.etherscan.io)
 
 ##### 水龍頭
 
-- [QuickNode 的 Sepolia 水龍頭](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
 - [工作量證明水龍頭](https://sepolia-faucet.pk910.de/)
 - [Coinbase 錢包水龍頭 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia 水龍頭](https://sepoliafaucet.com/)
+- [QuickNode Sepolia 水龍頭](https://faucet.quicknode.com/drip)
 - [Infura Sepolia 水龍頭](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龍頭](https://faucet.chainstack.com/sepolia-faucet)
+- [Alchemy Sepolia 水龍頭](https://sepoliafaucet.com/)
 
-#### Goerli_（長期支援）_ {#goerli}
+#### Hoodi {#hoodi}
 
-_注意：[Goerli 測試網已被棄用](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)且將在 2023 年被 [Holesovice](https://github.com/eth-clients/holesovice) 取代。 請考慮將你的應用程式遷移到 Sepolia。_
+Hoodi 是為測試驗證和質押而設計的測試網。 Hoodi 網路對於希望運行測試網驗證者的使用者開放。 因此，想測試協議升級的質押者，應在部署至主網前先使用 Hoodi 測試。
 
-Goerli 是測試驗證和質押的測試網。 Goerli 測試網對想要運行測試網驗證者的使用者開放。 因此，想測試協議升級的質押者，應在部署至主網前先使用 Goerli 測試。
+- 開放的驗證者集，質押者可測試網路升級
+- 較大的狀態資料，適用於測試複雜的智慧合約互動
+- 同步時間較長，運行節點需要更多儲存空間
 
-- 開放的驗證者集合，質押者可以測試網路升級
-- 龐大的狀態，對於測試複雜智慧型合約的互動很有用
-- 同步時間更長，且需要更多儲存空間運行節點
+##### 資源
 
-##### 相關資源
-
-- [官網](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [網站](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [區塊瀏覽器](https://explorer.hoodi.ethpandaops.io/)
+- [檢查點同步](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### 水龍頭
 
-- [QuickNode 的 Goerli 水龍頭](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [工作量證明水龍頭](https://goerli-faucet.pk910.de/)
-- [Paradigm 水龍頭](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli 水龍頭](https://goerlifaucet.com/)
-- [All That Node Goerli 水龍頭](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase 錢包水龍頭 | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli 水龍頭](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi 水龍頭](https://hoodi.ethpandaops.io/)
 
-要在 Goerli 測試網上啟動驗證者，請使用 ethstaker 的[「cheap goerli validator（實惠的 goerli 驗證者）」啟動面板](https://goerli.launchpad.ethstaker.cc/en/)。
+要在 Hoodi 測試網上啟動驗證者，請使用 [Hoodi 啟動面板](https://hoodi.launchpad.ethereum.org/en/)。
 
-### 二層網路測試網 {#layer-2-testnets}
+### 第 2 層測試網 {#layer-2-testnets}
 
-[二層網路 (L2)](/layer-2/) 是個統稱，描述一組特定的以太坊擴容方案。 二層網路是獨立的區塊鏈，拓展了以太坊並繼承了以太坊的安全保證。 二層網路測試網通常與以太坊公共測試網緊密相關。
+[第 2 層 (L2)](/layer-2/) 是一個統稱，用於描述一系列特定的以太坊擴容解決方案。 第 2 層是一個單獨的區塊鏈，它擴展以太坊並繼承了以太坊的安全保障。 第 2 層測試網通常與公共以太坊測試網緊密結合。
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 [Arbitrum](https://arbitrum.io/) 的測試網。
 
 ##### 水龍頭
 
-- [Chainlink 水龍頭](https://faucets.chain.link/)
+- [Chainlink 水龍頭](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy 水龍頭](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 [Optimism](https://www.optimism.io/) 的測試網。
 
 ##### 水龍頭
 
-- [Paradigm 水龍頭](https://faucet.paradigm.xyz/)
-- [Coinbase 錢包水龍頭 | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink 水龍頭](https://faucets.chain.link/optimism-sepolia)
+- [Coinbase 錢包水龍頭 | Optimism Sepolia](https://coinbase.com/faucets/optimism-sepolia-faucet)
+- [Alchemy 水龍頭](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 [Starknet](https://www.starknet.io) 的測試網。
 
 ##### 水龍頭
 
-- [Starknet 水龍頭](https://faucet.goerli.starknet.io)
+- [Alchemy 水龍頭](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## 私人網路 {#private-networks}
 

@@ -12,26 +12,21 @@ export const fetchTotalEthStaked = async (): Promise<MetricReturnData> => {
 
   const url = new URL("api/v1/query/3915587/results", DUNE_API_URL)
 
-  try {
-    const response = await fetch(url, {
-      headers: { "X-Dune-API-Key": DUNE_API_KEY },
-    })
-    if (!response.ok) {
-      console.log(response.status, response.statusText)
-      throw new Error("Failed to fetch eth staked data")
-    }
-
-    const json: EthStakedResponse = await response.json()
-    const {
-      result: { rows = [] },
-    } = json
-    // Today's value at start of array
-    const value = rows[0].cum_deposited_eth
-
-    // current value (number, unformatted)
-    return { value, timestamp: Date.now() }
-  } catch (error: unknown) {
-    console.error((error as Error).message)
-    return { error: (error as Error).message }
+  const response = await fetch(url, {
+    headers: { "X-Dune-API-Key": DUNE_API_KEY },
+  })
+  if (!response.ok) {
+    console.log(response.status, response.statusText)
+    throw new Error("Failed to fetch eth staked data")
   }
+
+  const json: EthStakedResponse = await response.json()
+  const {
+    result: { rows = [] },
+  } = json
+  // Today's value at start of array
+  const value = rows[0].cum_deposited_eth
+
+  // current value (number, unformatted)
+  return { value, timestamp: Date.now() }
 }

@@ -1,9 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
-import BeaconChainActions from "@/components/BeaconChainActions"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ContentHero } from "@/components/Hero"
 import MergeArticleList from "@/components/MergeArticleList"
@@ -15,18 +12,23 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
 import { ContentLayout } from "../ContentLayout"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 // Upgrade layout components
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
   UpgradeStatus,
-  BeaconChainActions,
 }
 
 type UpgradeLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
+    | "slug"
+    | "tocItems"
+    | "lastEditLocaleTimestamp"
+    | "contentNotTranslated"
+    | "contributors"
   > & {
     frontmatter: UpgradeFrontmatter
   }
@@ -37,6 +39,7 @@ export const UpgradeLayout = ({
   tocItems,
   lastEditLocaleTimestamp,
   contentNotTranslated,
+  contributors,
 }: UpgradeLayoutProps) => {
   const { t } = useTranslation("page-upgrades")
 
@@ -44,7 +47,7 @@ export const UpgradeLayout = ({
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("page-upgrades-upgrades-guide"),
-    ariaLabel: t("page-upgrades-upgrades-aria-label"),
+    ariaLabel: t("page-upgrades-index:page-upgrades-upgrades-aria-label"),
     items: [
       {
         text: t("page-upgrades-upgrades-beacon-chain"),
@@ -93,6 +96,8 @@ export const UpgradeLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}

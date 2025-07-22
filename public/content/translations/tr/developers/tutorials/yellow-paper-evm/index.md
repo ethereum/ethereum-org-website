@@ -167,7 +167,7 @@ Bu durumlardan biri doğruysa bir istisnai durma söz konusudur:
 
   _W(w,μ)_ fonksiyonu daha sonra 150.denklemde anlatılacaktır. _W(w,μ)_ aşağıdaki durumlardan biri doğruysa doğru olur:
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Bu işlem kodları, yeni bir söyleşme oluşturarak, bir değer depolayarak ya da güncel sözleşmeyi yok ederek durumu değiştirirler.
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Bu işlem kodları, yeni bir söyleşme oluşturarak, bir değer depolayarak ya da güncel sözleşmeyi yok ederek durumu değiştirirler.
 
   - **_LOG0≤w ∧ w≤LOG4_** statik olarak çağrıldıysak günlük girdileri yayımlayamayız. Günlük işlem kodları [`LOG0` (A0)](https://www.evm.codes/#a0) ve [`LOG4` (A4)](https://www.evm.codes/#a4) arasında değişmektedir. Günlük işlem kodundan sonraki numara, günlük girdisinin kaç konu içerdiğini belirtir.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_** Statikken başka bir sözleşme çağırabilirsiniz fakat ona ETH transfer edemezsiniz.
@@ -228,7 +228,7 @@ Bakiyesini bulmamız gereken hesap: _μ<sub>s</sub>[0] mod 2<sup>160</sup>_. Yı
 
 Eğer _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_ ise, bu adresle ilgili bilgi bulunduğu anlamına gelir. Bu durumda _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_, bu hesabın bakiyesidir. Eğer _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_ ise, bu da adresin başlatılmadığını ve bakiyenin 0 olduğu anlamına gelir. Hesap bilgisi alanları listesini 4. sayfadaki 4.1. bölümünde bulabilirsiniz.
 
-İkinci denklem olan _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, sıcak depolama (yakın zamanda erişilmiş ve muhtemelen önbellekte olan depolama) ile soğuk depolama (erişilmemiş ve muhtemelen daha yavaş ve alması daha pahalı olan depolama) arasındaki maliyet farkıyla alakalıdır. _A<sub>a</sub>_, işlem tarafından önceden erişilmiş adreslerin listesidir, bu yüzden 8. sayfada 6.1. bölümde anlatıldığı üzere erişilmesi daha ucuz olmalıdır. [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929)'da bu konuyla ilgili daha fazla okuma yapabilirsiniz.
+İkinci denklem olan _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, sıcak depolama (yakın zamanda erişilmiş ve muhtemelen önbellekte olan depolama) ile soğuk depolama (erişilmemiş ve muhtemelen daha yavaş ve alması daha pahalı olan depolama) arasındaki maliyet farkıyla alakalıdır. _A<sub>a</sub>_, işlem tarafından önceden erişilmiş adreslerin listesidir, bu yüzden 8. sayfada 6.1. bölümde anlatıldığı üzere erişilmesi daha ucuz olmalıdır. [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929)'da bu konuyla ilgili daha fazla okuma yapabilirsiniz.
 
 | Değer | Anımsatıcı | δ   | α   | Açıklama                                |
 | ----: | ---------- | --- | --- | --------------------------------------- |

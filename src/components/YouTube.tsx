@@ -1,6 +1,7 @@
+"use client"
+
 import React from "react"
 import LiteYouTubeEmbed from "react-lite-youtube-embed"
-import { Box } from "@chakra-ui/react"
 
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
 
@@ -24,7 +25,7 @@ const YouTube = ({ id, start = "0", title = "YouTube" }: YouTubeProps) => {
   const params = new URLSearchParams()
   ;+start > 0 && params.set("start", start)
   return (
-    <Box as="figure" maxW={560} my={8}>
+    <figure className="my-8 max-w-[560px]">
       <LiteYouTubeEmbed
         aspectHeight={9}
         aspectWidth={16}
@@ -33,7 +34,7 @@ const YouTube = ({ id, start = "0", title = "YouTube" }: YouTubeProps) => {
         params={params.toString()}
         noCookie
       />
-    </Box>
+    </figure>
   )
 }
 

@@ -182,7 +182,7 @@ Quanto gli utenti pagano per le transazioni sui rollup ZK, dipende dalla commiss
 
 2. **Pubblicazione dei dati**: i rollup ZK pubblicano i dati di stato per ogni transazione in Ethereum come `calldata`. I costi di `calldata` sono correntemente disciplinati dall'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che stipola un costo di 16 gas per i byte diversi da zero e di 4 gas per i byte zero di `calldata`, rispettivamente. Il costo pagato su ogni transazione è influenzato dalla quantità di `calldata` da pubblicare sulla catena per essa.
 
-3. **Commissioni dell'operatore del L2**: questo è l'importo pagato all'operatore del rollup come compenso per i costi di calcolo sostenuti nell'elaborazione delle transazioni, proprio come le commissioni del miner su Ethereum.
+3. **Commissioni dell'operatore del L2**: questo è l'importo pagato all'operatore del rollup come compenso per i costi di calcolo sostenuti nell'elaborazione delle transazioni, proprio come le ["commissioni prioritarie (mance)" della transazione](/developers/docs/gas/#how-are-gas-fees-calculated) sulla Rete Principale di Ethereum.
 
 4. **Generazione e verifica della prova**: gli operatori del rollup ZK devono produrre prove di validità per i batch di transazioni, il che impiega molte risorse. Anche verificare le prove a conoscenza zero sulla Rete Principale costa del gas (circa 500.000 gas).
 
@@ -222,12 +222,6 @@ Guarda Finematics spiegare i rollup ZK:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### Utilizzo dei rollup ZK {#use-zk-rollups}
-
-Esistono molteplici implementazioni dei rollup ZK che puoi integrare nelle tue dapp:
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## Chi sta lavorando a una zkEVM? {#zkevm-projects}
 
 I progetti che stanno lavorando alle zkEVM includono:
@@ -240,7 +234,7 @@ I progetti che stanno lavorando alle zkEVM includono:
 
 - **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [ZK-EVM di Tipo 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/)** - _ZkSync Era è un rollup ZK compatibile con l'EVM sviluppato da Matter Labs, basato sulla propria zkEVM._
+- **[ZKsync](https://docs.zksync.io/)**: _ZKsync Era è un Rollup ZK compatibile con l'EVM creato da Matter Labs, basato sulla propria zkEVM._
 
 - **[StarkNet](https://starkware.co/starknet/)**. _StarkNet è una soluzione di ridimensionamento del livello 2 compatibile con l'EVM, creata da StarkWare._
 

@@ -6,36 +6,36 @@ lang: pl
 
 # Mosty blockchain {#prerequisites}
 
-_Web3 przekształcił się w ekosystem blockchainów warstwy 1 i rozwiązań skalujących warstwy 2, z których każdy ma unikalne możliwości i kompromisy. Wraz ze wzrostem liczby protokołów blockchain, rośnie [zapotrzebowanie na przenoszenie aktywów pomiędzy łańcuchami](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Aby zaspokoić to zapotrzebowanie, potrzebujemy mostów._
+_Web3 przekształcił się w ekosystem blockchainów warstwy 1 i rozwiązań skalujących warstwy 2, z których każdy ma unikalne możliwości i kompromisy. Wraz ze wzrostem liczby protokołów blockchain rośnie zapotrzebowanie na przenoszenie aktywów pomiędzy łańcuchami. Aby zaspokoić to zapotrzebowanie, potrzebujemy mostów._
 
 <Divider />
 
 ## Czym są mosty? {#what-are-bridges}
 
-Mosty blockchain działają podobnie jak mosty znane nam w świecie fizycznym. Tak jak fizyczny most łączy dwie fizyczne lokalizacje, most blockchain łączy dwa ekosystemy blockchain. Mosty ułatwiają komunikację pomiędzy blockchainami poprzez transfer informacji i aktywów.
+Mosty blockchain działają podobnie jak mosty znane nam w świecie fizycznym. Tak jak fizyczny most łączy dwie fizyczne lokalizacje, most blockchain łączy dwa ekosystemy blockchain. **Mosty ułatwiają komunikację pomiędzy blockchainami poprzez transfer informacji i aktywów**.
 
 Rozważmy przykład:
 
 Jesteś z USA i planujesz podróż do Europy. Masz USD, ale potrzebujesz EUR do wydania. Aby wymienić USD na EUR, można skorzystać z kantoru wymiany walut za niewielką opłatą.
 
-Ale co zrobić, jeśli chcesz dokonać podobnej wymiany, aby użyć innego blockchainu? Powiedzmy, że chcesz wymienić ETH na sieci głównej Ethereum na ETH na [Arbitrum](https://arbitrum.io/). Podobnie jak w przypadku wymiany walut na EUR potrzebujemy mechanizmu umożliwiającego przeniesienie ETH z Ethereum do Arbitrum. I właśnie mosty umożliwia taką transakcję. W tym przypadku [Arbitrum ma natywny most](https://bridge.arbitrum.io/) , który może przenieść ETH z sieci głównej do Arbitrum.
+Ale co zrobić, jeśli chcesz dokonać podobnej wymiany, aby użyć innego [blockchainu](/glossary/#blockchain)? Powiedzmy, że chcesz wymienić [ETH](/glossary/#ether) na sieci głównej Ethereum na ETH na [Arbitrum](https://arbitrum.io/). Podobnie jak w przypadku wymiany walut na EUR potrzebujemy mechanizmu umożliwiającego przeniesienie ETH z Ethereum do Arbitrum. I właśnie mosty umożliwia taką transakcję. W tym przypadku [Arbitrum ma natywny most](https://bridge.arbitrum.io/) , który może przenieść ETH z sieci głównej do Arbitrum.
 
 ## Dlaczego potrzebujemy mostów? {#why-do-we-need-bridges}
 
-Wszystkie blockchainy mają swoje ograniczenia. Aby Ethereum mogło się skalować i nadążać za popytem, wymagane były pakiety zbiorcze. Alternatywnie, warstwy 1 takie jak Solana i Avalanche, są zaprojektowane inaczej, aby umożliwić wyższą przepustowość, ale kosztem decentralizacji.
+Wszystkie blockchainy mają swoje ograniczenia. Aby Ethereum mogło się skalować i nadążać za popytem, wymagane były [pakiety zbiorcze](/glossary/#rollups). Alternatywnie, warstwy 1 takie jak Solana i Avalanche, są zaprojektowane inaczej, aby umożliwić wyższą przepustowość, ale kosztem decentralizacji.
 
-Jednakże wszystkie blockchainy rozwijają się w izolowanych środowiskach i mają różne zasady i mechanizmy konsensusu. Oznacza to, że nie mogą komunikować się w sposób naturalny, a tokeny nie mogą swobodnie przenosić się między blockchainami.
+Jednakże wszystkie blockchainy rozwijają się w izolowanych środowiskach i mają różne zasady i mechanizmy [konsensusu](/glossary/#consensus). Oznacza to, że nie mogą komunikować się w sposób naturalny, a tokeny nie mogą swobodnie przenosić się między blockchainami.
 
 Mosty istnieją do łączenia sieci blockchain, umożliwiając transfer informacji i tokenów między nimi.
 
-Mosty umożliwiają:
+**Mosty umożliwiają**:
 
 - międzyłańcuchowy transfer aktywów i informacji.
-- zdecentralizowanym aplikacjom uzyskiwanie dostępu do mocnych stron różnych blockchainów — zwiększając w ten sposób ich możliwości (ponieważ protokoły mają teraz więcej miejsca na innowacje).
+- [zdecentralizowanym aplikacjom](/glossary/#dapp) uzyskiwanie dostępu do mocnych stron różnych blockchainów, zwiększając w ten sposób ich możliwości (gdyż protokoły mają teraz więcej miejsca na innowacje).
 - użytkownikom uzyskać dostęp do nowych platform i czerpać korzyści z różnych łańcuchów.
 - deweloperom z różnych ekosystemów blockchainowych współpracę i tworzenie nowych platform dla użytkowników.
 
-[Jak zmostkować tokeny do warstwy 2](/guides/how-to-use-a-bridge/)
+[Jak przenieść tokeny do warstwy 2 przy użyciu mostu](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -57,7 +57,7 @@ Jeśli posiadasz ETH w sieci głównej Ethereum i chcesz odkryć alternatywną w
 
 ### Posiadaj natywne aktywa kryptograficzne {#own-native}
 
-Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w sieci głównej Ethereum. Aby uzyskać ekspozycję na BTC na Ethereum, możesz kupić Wrapped Bitcoin (WBTC). WBTC jest jednak tokenem ERC-20 natywnym dla sieci Ethereum, co oznacza, że jest to wersja Bitcoina w Ethereum, a nie oryginalne aktywo w blockchainie Bitcoina. Aby posiadać natywne BTC, musiałbyś połączyć swoje aktywa z Ethereum do Bitcoina za pomocą mostu. Spowoduje to zmostkowanie WBTC i przekształcenie go w natywny BTC. Alternatywnie, możesz posiadać BTC i chcieć wykorzystać go w protokołach DeFi Ethereum. Wymagałoby to mostkowania w drugą stronę, z BTC do WBTC, który można następnie wykorzystać jako aktywa na Ethereum.
+Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w sieci głównej Ethereum. Aby uzyskać ekspozycję na BTC na Ethereum, możesz kupić Wrapped Bitcoin (WBTC). WBTC jest jednak tokenem [ERC-20](/glossary/#erc-20) natywnym dla sieci Ethereum, co oznacza, że jest to wersja Bitcoina w Ethereum, a nie oryginalny zasób w blockchainie Bitcoin. Aby posiadać natywne BTC, musiałbyś połączyć swoje aktywa z Ethereum do Bitcoina za pomocą mostu. Spowoduje to zmostkowanie WBTC i przekształcenie go w natywny BTC. Ewentualnie możesz posiadać BTC i chcieć wykorzystać go w protokołach [DeFi](/glossary/#defi) Ethereum. Wymagałoby to mostkowania w drugą stronę, z BTC do WBTC, który można następnie wykorzystać jako aktywa na Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
   Wszystkie powyższe czynności można również wykonać za pomocą <a href="/get-eth/">scentralizowanej giełdy</a>. Jeśli jednak Twoje środki nie znajdują się już na giełdzie, wymagałoby to wielu kroków i prawdopodobnie lepiej byłoby skorzystać z mostu.
@@ -69,11 +69,11 @@ Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w
 
 Mosty mają wiele rodzajów konstrukcji i zawiłości. Ogólnie rzecz biorąc, mosty dzielą się na dwie kategorie: mosty zaufane i mosty niewymagające zaufania.
 
-| Zaufane mosty                                                                                                                                                 | Mosty niewymagające zaufania                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Operacje zaufanych mostów zależą od centralnego podmiotu lub systemu.                                                                                         | Mosty bez zaufania działają przy użyciu inteligentnych kontraktów i algorytmów.                                       |
-| Mają założenia dotyczące zaufania w odniesieniu do przechowywania funduszy i bezpieczeństwa mostu. Użytkownicy polegają głównie na reputacji operatora mostu. | Nie wymagają zaufania, tj. bezpieczeństwo mostu jest takie samo jak bezpieczeństwo bazowego blochainu.                |
-| Użytkownicy muszą zrezygnować z kontroli nad swoimi aktywami kryptograficznymi.                                                                               | Dzięki inteligentnym kontraktom, mosty bez zaufania umożliwiają użytkownikom zachowanie kontroli nad swoimi środkami. |
+| Zaufane mosty                                                                                                                                                 | Mosty niewymagające zaufania                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Operacje zaufanych mostów zależą od centralnego podmiotu lub systemu.                                                                                         | Mosty bez zaufania działają przy użyciu inteligentnych kontraktów i algorytmów.                                                                              |
+| Mają założenia dotyczące zaufania w odniesieniu do przechowywania funduszy i bezpieczeństwa mostu. Użytkownicy polegają głównie na reputacji operatora mostu. | Nie wymagają zaufania, tj. bezpieczeństwo mostu jest takie samo jak bezpieczeństwo bazowego blochainu.                                                       |
+| Użytkownicy muszą zrezygnować z kontroli nad swoimi aktywami kryptograficznymi.                                                                               | Dzięki [inteligentnym kontraktom](/glossary/#smart-contract), mosty niewymagające zaufania umożliwiają użytkownikom zachowanie kontroli nad swoimi środkami. |
 
 W skrócie możemy powiedzieć, że zaufane mosty mają założenia dotyczące zaufania, podczas gdy mosty bez zaufania są zminimalizowane pod względem zaufania i nie przyjmują nowych założeń dotyczących zaufania poza tymi z domen bazowych. Oto jak można opisać te terminy:
 
@@ -126,9 +126,3 @@ Mosty mają kluczowe znaczenie dla wdrażania użytkowników do Ethereum, a nawe
 - [EIP-5164: Wykonanie międzyłańcuchowe](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 czerwca 2022 r. — Brendan Asselstine_
 - [Ramy ryzyka L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 lipca 2022 r. — Bartek Kiepuszewski_
 - [„Dlaczego przyszłość będzie wielołańcuchowa, ale nie będzie międzyłańcuchowa?.”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 stycznia 2022 r. — Vitalik Buterin_
-- [Czym są mosty blockchain i jak możemy je sklasyfikować?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18 lutego 2021 r. — Arjun Chand_
-- [Czym są mosty międzyłańcuchowe?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 maja 2022 r. — Alchemy_
-- [Mosty Blockchain: Budowanie sieci kryptograficznych](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 września 2021 r. — Dmitriy Berenzon_
-- [Mosty w przestrzeni kryptograficznej](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 sierpnia 2021 r. — Ben Adar Hyman_
-- [Dylemat interoperacyjności](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1 października 2021 r. — Arjun Bhuptani_
-- [Zabezpiecz most: Prawidłowa komunikacja międzyłańcuchowa](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 sierpnia 2021 r. — Celia Wan_

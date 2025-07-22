@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Ez egy egyszerű aukciós szerződés, amelynek célja, hogy a licitidőszak alatt ajánlatokat fogadjon. Ha a `highestBid` (legmagasabb ajánlat) emelkedik, az előző legmagasabb ajánlatot tevő kapja meg a pénzét; ha a licitidőszak véget ér, a `beneficiary` (kedvezményezett) meghívja a szerződést, hogy megkapja a pénzt.
 
-Egy ilyen szerződés egységtesztjei lefedik a különböző funkciókat, amelyeket a felhasználó meghívhat a szerződés használata során. Ilyen például egy olyan teszt, amely ellenőrzi, hogy a felhasználó tud-e licitálni, miközben az aukció folyamatban van (azaz a `bid()` meghívása sikeres), vagy egy olyan, amely ellenőrzi, hogy a felhasználó tud-e magasabb licitet tenni, mint az aktuális `highestBid` (legmagasabb ajánlat).
+Egy ilyen szerződés egységtesztjei lefedik a különböző funkciókat, amelyeket a felhasználó meghívhat a szerződés használata során. Ilyen például egy olyan egységteszt, amely ellenőrzi, hogy a felhasználó tud-e licitálni, miközben az aukció folyamatban van (azaz a `bid()` meghívása sikeres), vagy egy olyan, amely ellenőrzi, hogy a felhasználó tud-e magasabb licitet tenni, mint az aktuális `highestBid` (legmagasabb ajánlat).
 
 A szerződés működési folyamatának megértése segít az egységtesztek megírásában, amelyek ellenőrzik, hogy a végrehajtás megfelel-e a követelményeknek. Az aukciós szerződés például előírja, hogy a felhasználók nem tehetnek ajánlatot, ha az aukció már véget ért (azaz ha az `auctionEndTime` alacsonyabb, mint a `block.timestamp`). Így a fejlesztő futtathat egy olyan egységtesztet, amely ellenőrzi, hogy a `bid()` függvény hívása sikeres vagy sikertelen, amikor az aukció véget ér (amikor `auctionEndTime` > `block.timestamp`).
 
@@ -130,7 +130,7 @@ Sok egységtesztelési keretrendszer lehetővé teszi, hogy állításokat hozzo
 
 ##### 3. Kódlefedettség mérése
 
-A [kódlefedettség](https://en.m.wikipedia.org/wiki/Code_coverage) egy tesztelési metrika, amely a tesztek során végrehajtott ágak, sorok és utasítások számát követi a kódban. A teszteknek jó kódlefedettséggel kell rendelkezniük, különben előfordulhat, hogy „hamis negatív eredményt” kapunk, amikor a szerződés átmegy az összes teszten, de a kódban még vannak sebezhetőségek. A magas kódlefedettség rögzítése biztosítékot ad arra, hogy az okosszerződésben szereplő összes utasítást/függvényt megfelelően tesztelték a helyesség szempontjából.
+A [kódlefedettség](https://en.m.wikipedia.org/wiki/Code_coverage) egy tesztelési metrika, amely a tesztek során végrehajtott ágak, sorok és utasítások számát követi a kódban. A teszteknek jó kódlefedettséggel kell rendelkezniük, hogy minimalizálják a feltáratlan sebezhetőségek kockázatát. Megfelelő kódlefedettség nélkül azt hiheti, hogy a szerződése biztonságos, mert átmegy az összes teszten, de a kódban még vannak sebezhetőségek a nem tesztelt útvonalakon. A magas kódlefedettség rögzítése biztosítékot ad arra, hogy az okosszerződésben szereplő összes utasítást/függvényt megfelelően tesztelték a helyesség szempontjából.
 
 ##### 4. Jól kidolgozott tesztelési keretrendszerek használata
 
@@ -144,6 +144,7 @@ A Solidity okosszerződések egységtesztelési keretrendszerei különböző ny
 - **[Egységtesztek futtatása a Remix segítségével](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Egységtesztek futtatása az Ape segítségével](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Egységtesztek futtatása a Hardhat segítségével](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Egységtesztek futtatása a Wake segítségével](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Integrációs tesztelés {#integration-testing-for-smart-contracts}
 
@@ -159,7 +160,7 @@ A tulajdonságalapú tesztelés annak ellenőrzése, hogy egy okosszerződés me
 
 A **statikus** és a **dinamikus elemzés** két gyakori technika a tulajdonságalapú tesztelésre, és mindkettő képes ellenőrizni, hogy egy program (jelen esetben egy okosszerződés) kódja megfelel-e valamilyen előre meghatározott tulajdonságnak. Egyes tulajdonságalapú tesztelési eszközök előre meghatározott szabályokat tartalmaznak a szerződés várható tulajdonságairól, és a kódot ezek alapján ellenőrzik, míg mások lehetővé teszik, hogy egyéni tulajdonságokat hozzon létre az okosszerződéshez.
 
-#### Static analysis {#static-analysis}
+#### Statikus elemzés {#static-analysis}
 
 A statikus elemzés bemenetként egy okosszerződés forráskódját veszi, és olyan eredményeket ad ki, amelyek kijelentik, hogy a szerződés megfelel-e egy tulajdonságnak vagy sem. A dinamikus elemzéssel ellentétben a statikus elemzés nem foglalja magában a szerződés végrehajtását, hogy megvizsgálja annak helyességét. A statikus elemzés az összes lehetséges útvonalat megvizsgálja, amelyet egy okosszerződés a végrehajtás során bejárhat (azaz a forráskód szerkezetét vizsgálja, hogy az mit jelentene a szerződések működése kapcsán a futtatásakor).
 
@@ -188,9 +189,11 @@ A tulajdonságalapú tesztelés futtatása általában egy tulajdonság (példá
 A megfelelő konfigurálás után a tulajdonságtesztelő eszköz véletlenszerűen generált bemenetekkel hajtja végre az okosszerződések funkcióit. Ha az állítások sérülnek, akkor a fejlesztő egy jelentést kap a konkrét bemeneti adatokkal, amelyek sértik az értékelt tulajdonságot. Tekintse meg az alábbi útmutatókat, hogy elkezdhesse a tulajdonságalapú tesztelést különböző eszközökkel:
 
 - **[Okosszerződések statikus elemzése a Slither segítségével](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Okosszerződések statikus elemzése a Wake segítségével](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Tulajdonságalapú tesztelés a Brownie segítségével](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Fuzzing szerződések a Foundry segítségével](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[Fuzzing szerződések a Echidna segítségével](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Fuzzing szerződések a Wake segítségével](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Okosszerződések szimbolikus végrehajtása a Manticore segítségével](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Okosszerződések szimbolikus végrehajtása a Mythril segítségével](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -210,7 +213,7 @@ A szerződések futtatása egy helyi blokkláncon hasznos lehet a manuális inte
 
 ### Szerződések tesztelése a teszthálózatokon {#testing-contracts-on-testnets}
 
-A teszthálózat pontosan úgy működik, mint az Ethereum fő hálózat, azzal a különbséggel, hogy a használt ethernek (ETH) nincs valós értéke. Ha a szerződést egy [teszthálózatra](/developers/docs/networks/#ethereum-testnets) telepíti, akkor bárki kapcsolatba léphet azzal (például a dapp felületén keresztül) anélkül, hogy pénzeszközt kockáztatna.
+A teszthálózat pontosan úgy működik, mint az Ethereum fő hálózata, azzal a különbséggel, hogy a használt ethernek (ETH) nincs valós értéke. Ha a szerződést egy [teszthálózatra](/developers/docs/networks/#ethereum-testnets) telepíti, akkor bárki kapcsolatba léphet azzal (például a dapp felületén keresztül) anélkül, hogy pénzeszközt kockáztatna.
 
 A manuális tesztelés ezen formája hasznos az alkalmazás teljes folyamatának kiértékeléséhez a felhasználó szemszögéből. Itt a béta tesztelők próbafuttatásokat is végezhetnek, és jelenthetik a szerződés üzleti logikájával és általános funkcionalitásával kapcsolatos problémákat.
 
@@ -256,11 +259,13 @@ A fő különbség az, hogy a hibavadász-programok nyitottak a szélesebb fejle
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** – _A Brownie a Pytest-et használja, amely egy funkciógazdag tesztelési keretrendszert, és amely lehetővé teszi kis tesztek írását minimális kóddal, jól skálázható nagyobb projektekhez és nagymértékben bővíthető._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** – _A Foundry a Forge megoldást kínálja, amely egy gyors és rugalmas Ethereum tesztelési keretrendszert, és amely képes egyszerű egységtesztek, gázoptimalizálási ellenőrzések és szerződés fuzzing végrehajtására._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _A Foundry a Forge megoldást kínálja, amely egy gyors és rugalmas Ethereum-tesztelési keretrendszer, és amely képes egyszerű egységtesztek, gázoptimalizálási ellenőrzések és szerződés fuzzing végrehajtására._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** – _Keretrendszer az ethers.js, Mocha és Chai alapú okosszerződések tesztelésére._
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** – _Python-alapú fejlesztési és tesztelési keretrendszer az Ethereum virtuális gépen működő okosszerződésekhez._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Python-alapú keretrendszer az egységtesztelésre és fuzzingra erős hibakeresési képességekkel és láncok közötti teszttámogatással, mely a pytest és az Anvil használatával jó felhasználói élményt és teljesítményt biztosít._
 
 ### Tulajdonságalapú tesztelőeszközök {#property-based-testing-tools}
 
@@ -271,6 +276,8 @@ A fő különbség az, hogy a hibavadász-programok nyitottak a szélesebb fejle
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** – _Linter a stílusra és biztonságra vonatkozó bevált gyakorlatok érvényesítésére a Solidity okosszerződések programozási nyelvéhez._
 
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** – _Rust-alapú statikus elemző, amelyet kifejezetten a web3 okosszerződések biztonságához és fejlesztéséhez terveztek._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-alapú statikus elemzési keretrendszer sebezhetőségi és kódminőségi ellenőrzéssel, a printer minden hasznos információt kiszed a kódból és támogatja a személyre szabott almodulok készítését._
 
 #### Dinamikus elemzőeszközök {#dynamic-analysis-tools}
 

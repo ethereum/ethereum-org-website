@@ -105,7 +105,7 @@ Noong Mayo 2022, [inanunsyo ng Instagram ang suporta para sa NFTs sa Ethereum at
 - [Ang Web3 ang susi mga social network na decentralized at pinapatakbo ng komunidad](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Pangkalahatang-ideya ng Landscape ng Blockchain Social Media](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - "[Paano Malulutas ng Blockchain ang Problema sa Privacy sa Social Media](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_."
-- [Papunta na sa Blockchain ang Mga Social Media Network](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Papunta na sa Blockchain ang Mga Social Media Network](https://eawosika.com/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 - [Sapat na Decentralization para sa Mga Social Network](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Videos {#videos}

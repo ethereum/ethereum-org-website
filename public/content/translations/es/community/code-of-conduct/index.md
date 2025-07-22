@@ -4,7 +4,7 @@ description: Los estándares básicos por los que nos esforzamos en todos los es
 lang: es
 ---
 
-# Código de conducta {#conduct-intro}
+# Código de conducta {#code-of-conduct}
 
 ## Misión {#mission}
 

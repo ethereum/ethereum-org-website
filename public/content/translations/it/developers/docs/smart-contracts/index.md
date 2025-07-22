@@ -109,3 +109,4 @@ I contratti multifirma (a firma multipla), sono conti del contratto intelligente
 - [Coinbase: Cos'è un contratto intelligente?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Cos'è un contratto intelligente?](https://chain.link/education/smart-contracts)
 - [Video: Spiegato in modo semplice - Contratti intelligenti](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Piattaforma di apprendimento e controllo Web3](https://updraft.cyfrin.io)

@@ -29,8 +29,8 @@ Cientos de miles de entusiastas de Ethereum se reúnen en estos foros en línea 
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link>: comunidad de creadores web3 donde los constructores, los testaferros y los entusiastas de Ethereum se relacionan. Nos apasiona la cultura, el diseño y el desarrollo de la Web 3.0. Venga a construir con nosotros.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link>: chat sobre el desarrollo de Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link>: chat sobre el desarrollo de Solidity (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _: foro de preguntas y respuestas_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> _: foro descentralizado de preguntas y respuestas_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *: foro de preguntas y respuestas*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *: foro descentralizado de preguntas y respuestas*</SocialListItem>
 
 ## YouTube y Twitter {#youtube-and-twitter}
 
@@ -41,7 +41,7 @@ Cientos de miles de entusiastas de Ethereum se reúnen en estos foros en línea 
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Más información sobre las DAO

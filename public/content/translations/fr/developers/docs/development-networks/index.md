@@ -41,24 +41,25 @@ Le réseau Hardhat est intégré avec Hardhat, un environnement de développemen
 
 Certains clients de consensus disposent d'outils intégrés pour faire tourner les chaînes phares locales à des fins de test. Les instructions pour Lighthouse, Nimbus et Lodestar sont disponibles ici :
 
-- [Réseau de test local utilisant Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Réseau de test local utilisant Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Réseau de test local utilisant Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Réseau de test local utilisant Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Chaînes publiques de test pour Ethereum {#public-beacon-testchains}
 
-Il y a aussi deux implémentations de test publiques maintenues d'Ethereum : Goerli et Sepolia. Le réseau testnet recommandé avec support à long terme est Goerli, que tout le monde est libre de valider. Sepolia est une nouvelle chaîne plus petite et devrait également être maintenue dans un avenir proche, avec un ensemble de validateurs autorisés (ce qui signifie qu'il n'y a pas d'accès général aux nouveaux validateurs sur ce réseau de test). La chaîne Ropsten devrait être dépréciée au quatrième trimestre 2022, et la chaîne Rinkeby devrait être dépréciée aux T2/T3 2023.
+Il y a aussi deux implémentations de test publiques maintenues d'Ethereum : Sepolia et Hoodi. Sepolia est le réseau de test standard recommandé pour le développement d'applications, avec un ensemble de validateurs fermé pour une synchronisation rapide. Hoodi est un réseau de test pour la validation et la mise en jeu, qui utilise un ensemble de validateurs ouvert et permet potentiellement à tout le monde de valider.
 
-- [Plateforme de lancement de la mise en jeu de Goerli](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby & Annonce de dépréciation Kiln](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Plateforme de lancement de la mise en jeu de Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Site Web de Sepolia](https://sepolia.dev/)
+- [Site Web de Hoodi](https://hoodi.ethpandaops.io/)
 
 ### Pack Ethereum de Kurtosis {#kurtosis}
 
 Kurtosis est un système de construction d'environnements de test multi-conteneurs qui permet aux développeurs de créer localement des instances reproductibles de réseaux de blockchain.
 
-Le pack Ethereum Kurtosis permet de mettre localement en place un réseau de test Ethereum paramétrable, prenant en charge plusieurs clients différents de la couche d'exécution et de la couche de consensus, ainsi qu'un nombre "n" de nœuds. Kurtosis gère harmonieusement toutes les cartographies de ports locaux et les connexions de services pour faciliter le prototypage et le test des dApp et des contrats intelligents.
+Le pack Ethereum de Kurtosis peut être utilisé pour instancier rapidement un réseau de test Ethereum paramétrable, hautement évolutif, et privé sur Docker ou Kubernetes. Le pack supporte tous les clients majeurs de la couche d'exécution (EL) et de la couche de consensus (CL). Kurtosis gère gracieusement tous les mappages de ports locaux et les connexions de service sur un réseau représentatif à utiliser dans les flux de validation et de test en lien avec l'infrastructure de base d'Ethereum.
 
-- [Pack réseau Ethereum](https://github.com/kurtosis-tech/eth-network-package)
+- [Pack réseau Ethereum](https://github.com/kurtosis-tech/ethereum-package)
 - [Site Web](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentation](https://docs.kurtosis.com/)

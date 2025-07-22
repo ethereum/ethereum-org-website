@@ -10,7 +10,7 @@ lang: hu
 
 Egy hivatalos Ethereum ügyfélszolgálatot keres? Tudnia kell, hogy az Ethereum decentralizált. Nincs központi szervezet, entitás vagy ember, aki birtokolná az Ethereumot, ezért nincs hivatalos ügyfélszolgálat vagy támogatói csapat sem.
 
-Ezt azért is fontos megérteni, mert bárki jelentkezik Önnél, mint hivatalos ügyfélszolgálatos, az csak csaló lehet! A csalók ellen a legjobb védekezés az ismeretek szerzése és a biztonság komolyan vétele.
+Ezt azért is fontos megérteni, mert **bárki jelentkezik Önnél, mint hivatalos ügyfélszolgálatos, az csak csaló lehet!** A csalókkal szemben a legjobb védekezés, ha Ön mindig jól informált és komolyan veszi a saját biztonságát.
 
 <DocLink href="/security/">
   Ethereum-biztonság és átverés elleni védelem
@@ -91,6 +91,7 @@ Az Ethereum klienseket építő csapatok is dedikált, nyilvános fórumokkal re
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Konszenzusos kliensek {#consensus-clients}
 
@@ -99,5 +100,6 @@ Az Ethereum klienseket építő csapatok is dedikált, nyilvános fórumokkal re
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 Tudja meg, hogy [futtathat csomópontot](/developers/docs/nodes-and-clients/run-a-node/).
