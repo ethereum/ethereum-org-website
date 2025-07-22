@@ -18,9 +18,11 @@ const FaqTrigger = React.forwardRef<
     ref={ref}
     className={cn(
       "w-full p-4 md:px-8 md:py-6",
-      "border-t border-body-light",
       "text-start font-medium",
-      "[&_[data-label='icon-container']]:ms-8 [&_[data-label='icon-container']]:rounded-full [&_[data-label='icon-container']]:border [&_[data-label='icon-container']]:border-current [&_[data-label='icon-container']]:p-2 hover:[&_[data-label='icon-container']]:shadow-[4px_4px_0_hsla(var(--primary-low-contrast),1)] [&_svg]:text-lg",
+      "hover:text-body [&[data-state=open]_h2]:text-current [&[data-state=open]_svg]:-rotate-90 hover:[&_h2]:!text-body [&_svg]:rotate-90",
+      "[&_[data-label='icon-container']]:ms-8 [&_[data-label='icon-container']]:rounded-full [&_[data-label='icon-container']]:border [&_[data-label='icon-container']]:border-body [&_[data-label='icon-container']]:p-2 [&_svg]:text-lg",
+      "[&_[data-label='icon-container']:hover_svg]:text-primary-hover hover:[&_[data-label='icon-container']]:!border-primary-hover hover:[&_[data-label='icon-container']]:shadow-[4px_4px_0_hsla(var(--primary-low-contrast),1)]",
+      "[&[data-state=open]]:text-current",
       className
     )}
     {...props}
@@ -40,8 +42,8 @@ const Faq = ({
       type={type}
       collapsible
       className={cn(
-        "rounded border border-body-light first:border-t-0",
-        "w-full overflow-hidden bg-background",
+        "overflow-hidden rounded border",
+        "w-full bg-background",
         props?.className
       )}
       {...props}
@@ -57,7 +59,10 @@ const FaqItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionItem
     ref={ref}
-    className={cn("w-full hover:bg-background-highlight", className)}
+    className={cn(
+      "w-full border-b last:border-b-0 hover:bg-background-highlight [&[data-state=open]]:bg-background-highlight",
+      className
+    )}
     {...props}
   />
 ))
