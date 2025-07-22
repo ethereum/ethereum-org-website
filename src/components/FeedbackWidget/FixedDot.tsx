@@ -44,7 +44,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         >
           <span
             className={cn(
-              "line-clamp-2 hidden h-full items-center font-bold text-white",
+              "line-clamp-2 hidden h-full items-center font-bold text-white leading-5",
               isExpanded && "lg:flex"
             )}
           >
