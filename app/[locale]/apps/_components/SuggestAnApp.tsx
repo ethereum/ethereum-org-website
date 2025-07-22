@@ -8,7 +8,12 @@ const SuggestAnApp = () => {
         We&apos;re always looking for new apps to add to our list. If you know
         of an app that you think should be on the list, please let us know.
       </p>
-      <ButtonLink href="/" variant="outline" className="w-fit" hideArrow>
+      <ButtonLink
+        href="https://submitapp.paperform.co/"
+        variant="outline"
+        className="w-fit"
+        hideArrow
+      >
         Suggest an app
       </ButtonLink>
     </div>
