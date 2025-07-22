@@ -2016,7 +2016,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/clacladev"><img src="https://avatars.githubusercontent.com/u/161903?v=4?s=100" width="100px;" alt="clacla"/><br /><sub><b>clacla</b></sub></a><br /><a href="#maintenance-clacladev" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://a30a.dev/"><img src="https://avatars.githubusercontent.com/u/1610146?v=4?s=100" width="100px;" alt="Daehyun Paik"/><br /><sub><b>Daehyun Paik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abaumstern" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dbarabashh.com"><img src="https://avatars.githubusercontent.com/u/10253529?v=4?s=100" width="100px;" alt="Dima Barabash"/><br /><sub><b>Dima Barabash</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dbarabashh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/YashIIT0909"><img src="https://avatars.githubusercontent.com/u/182656811?v=4?s=100" width="100px;" alt="Yash Agarwal"/><br /><sub><b>Yash Agarwal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AYashIIT0909" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.linkedin.com/in/tom-reppelin"><img src="https://avatars.githubusercontent.com/u/75627352?v=4?s=100" width="100px;" alt="Reppelin Tom"/><br /><sub><b>Reppelin Tom</b></sub></a><br /><a href="#tool-tomrpl" title="Tools">🔧</a></td>
+    </tr>
+    <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://mdqst.com"><img src="https://avatars.githubusercontent.com/u/98899785?v=4?s=100" width="100px;" alt="Dmitry"/><br /><sub><b>Dmitry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amdqst" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
