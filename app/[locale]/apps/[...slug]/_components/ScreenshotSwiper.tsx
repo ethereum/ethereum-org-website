@@ -48,7 +48,7 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
               width={340}
               height={700}
               sizes="170px"
-              className="h-[350px] w-[170px] rounded-lg object-cover"
+              className="h-[350px] w-[170px] rounded-lg object-contain"
             />
           </SwiperSlide>
         ))}

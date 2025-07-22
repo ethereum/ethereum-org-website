@@ -62,19 +62,20 @@ const TopApps = ({ appsData }: TopAppsProps) => {
   return (
     <SwiperContainer>
       <Swiper
+        slidesPerView={1.2}
         spaceBetween={32}
         breakpoints={{
           [breakpointAsNumber.sm]: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
+            slidesPerView: 1.2,
+            slidesPerGroup: 1.2,
           },
           [breakpointAsNumber.md]: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
+            slidesPerView: 2.2,
+            slidesPerGroup: 2.2,
           },
           [breakpointAsNumber.lg]: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerView: 3.2,
+            slidesPerGroup: 3.2,
           },
         }}
       >

@@ -37,8 +37,8 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
 
   return (
     <div className="flex flex-col gap-7">
-      <div className="flex flex-row items-center justify-between border-b pb-2">
-        <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-end justify-between border-b pb-2 sm:items-center">
+        <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
           <p className="whitespace-nowrap">Filter by</p>
           <Select value={filterBy} onValueChange={setFilterBy}>
             <SelectTrigger className="min-w-28">

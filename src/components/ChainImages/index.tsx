@@ -29,7 +29,7 @@ export const ChainImages = ({
           (network) => network.chainName === chain
         )
         return (
-          <div key={chain} className="-ml-1.5 overflow-hidden rounded-full">
+          <div key={chain} className="overflow-hidden rounded-full">
             <Tooltip content={chainData?.name || ""}>
               <Image
                 src={chainData?.logo || ""}

@@ -136,7 +136,7 @@ const Page = async ({
             </BreadcrumbList>
           </Breadcrumb>
           <div className="flex flex-col items-start justify-between sm:flex-row lg:items-center">
-            <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
+            <div className="flex w-full flex-col gap-6 lg:flex-row lg:gap-10">
               <div>
                 <Image
                   src={app.image}
@@ -181,11 +181,16 @@ const Page = async ({
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 lg:flex-row">
-                  <ButtonLink href={app.url} target="_blank" hideArrow>
+                  <ButtonLink
+                    href={app.url}
+                    target="_blank"
+                    hideArrow
+                    className="w-full sm:w-fit"
+                  >
                     Visit {app.name}
                   </ButtonLink>
-                  <div className="flex flex-row gap-4">
-                    <div className="flex flex-row flex-wrap gap-4">
+                  <div className="flex flex-row justify-between gap-4">
+                    <div className="flex h-fit flex-row flex-wrap gap-4">
                       {app.twitter && (
                         <ButtonLink
                           href={app.twitter}
@@ -221,7 +226,7 @@ const Page = async ({
                       )}
                     </div>
                     {nextApp && (
-                      <LinkBox className="group flex flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:hidden">
+                      <LinkBox className="group flex flex-row items-center rounded-lg hover:bg-background-highlight sm:hidden">
                         <div className="mr-2 flex flex-col text-right">
                           <p className="text-sm text-gray-500">See next</p>
                           <p className="text-primary group-hover:text-primary-hover">
