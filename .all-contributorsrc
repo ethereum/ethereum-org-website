@@ -12965,6 +12965,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "mdqst",
+      "name": "Dmitry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98899785?v=4",
+      "profile": "https://mdqst.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
