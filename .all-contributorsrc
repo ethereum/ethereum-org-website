@@ -12992,6 +12992,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "IlyaSmiyukha",
+      "name": "Ilya Smiyukha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39830587?v=4",
+      "profile": "https://ilyasmiyukha.github.io/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
