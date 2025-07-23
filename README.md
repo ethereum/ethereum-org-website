@@ -2023,6 +2023,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://mdqst.com"><img src="https://avatars.githubusercontent.com/u/98899785?v=4?s=100" width="100px;" alt="Dmitry"/><br /><sub><b>Dmitry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amdqst" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/3eph1r0th"><img src="https://avatars.githubusercontent.com/u/26237289?v=4?s=100" width="100px;" alt="Sephiroth"/><br /><sub><b>Sephiroth</b></sub></a><br /><a href="#tool-3eph1r0th" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ilyasmiyukha.github.io/"><img src="https://avatars.githubusercontent.com/u/39830587?v=4?s=100" width="100px;" alt="Ilya Smiyukha"/><br /><sub><b>Ilya Smiyukha</b></sub></a><br /><a href="#maintenance-IlyaSmiyukha" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jorgesumle"><img src="https://avatars.githubusercontent.com/u/14212780?v=4?s=100" width="100px;" alt="Jorge"/><br /><sub><b>Jorge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajorgesumle" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
