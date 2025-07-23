@@ -2028,6 +2028,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alinobrasil"><img src="https://avatars.githubusercontent.com/u/1214559?v=4?s=100" width="100px;" alt="AK"/><br /><sub><b>AK</b></sub></a><br /><a href="#maintenance-alinobrasil" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xumarkhatab"><img src="https://avatars.githubusercontent.com/u/71306738?v=4?s=100" width="100px;" alt="0xumarkhatab"/><br /><sub><b>0xumarkhatab</b></sub></a><br /><a href="#maintenance-0xumarkhatab" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/albertocuesta/"><img src="https://avatars.githubusercontent.com/u/38806121?v=4?s=100" width="100px;" alt="Alberto Cuesta Cañada"/><br /><sub><b>Alberto Cuesta Cañada</b></sub></a><br /><a href="#maintenance-alcueca" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
