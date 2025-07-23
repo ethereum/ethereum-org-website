@@ -52,6 +52,7 @@ const TenYearHomeBanner = async () => {
         </div>
         {/* CLIENT SIDE, lazy loaded */}
         <Countdown
+          dateTime="2025-07-30T15:44:00Z"
           className="mb-8 mt-4 bg-background"
           timeLeftLabels={timeLeftLabels}
           expiredLabel={t("page-10-year-countdown-expired")}

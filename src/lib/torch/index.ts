@@ -154,7 +154,7 @@ export const extractTwitterHandle = (twitterUrl: string): string | null => {
 }
 
 export const formatAddress = (address: Address) => {
-  return `${address.slice(0, 6)}...${address.slice(-4)}`
+  return `${address.slice(0, 7)}...${address.slice(-5)}`
 }
 
 export const formatDate = (timestamp: number) => {
@@ -197,4 +197,21 @@ export async function resolveEnsName(
     console.warn(`Failed to resolve ENS name "${ensName}":`, error)
     return null
   }
+}
+
+export const getErrorMessage = (error: Error) => {
+  if (error.message.includes("insufficient funds")) {
+    return "Insufficient funds"
+  }
+  if (error.message.includes("not enough ETH")) {
+    return "Not enough ETH"
+  }
+  if (error.message.includes("EnforcedPause")) {
+    return "Contract is paused"
+  }
+  if (error.message.includes("already minted")) {
+    return "You have already minted an NFT"
+  }
+
+  return "An error occurred during minting"
 }
