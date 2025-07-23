@@ -105,7 +105,6 @@ const quizzes = {
       "smart-contracts-2",
       "smart-contracts-3",
       "smart-contracts-4",
-      "smart-contracts-5",
     ],
   },
 } satisfies RawQuizzes

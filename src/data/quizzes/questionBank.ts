@@ -157,7 +157,6 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 4, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 1 },
   ],
 }
 
