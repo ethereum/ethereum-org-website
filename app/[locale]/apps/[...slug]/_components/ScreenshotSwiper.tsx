@@ -8,8 +8,6 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
-import { breakpointAsNumber } from "@/lib/utils/screen"
-
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 interface ScreenshotSwiperProps {
@@ -22,33 +20,19 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
   return (
     <SwiperContainer>
       <Swiper
-        slidesPerView={2}
+        slidesPerView="auto"
         spaceBetween={16}
         lazyPreloadPrevNext={lazyPreloadPrevNext}
-        breakpoints={{
-          [breakpointAsNumber.sm]: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-          },
-          [breakpointAsNumber.lg]: {
-            slidesPerView: 4,
-            spaceBetween: 16,
-          },
-          [breakpointAsNumber.xl]: {
-            slidesPerView: 5,
-            spaceBetween: 16,
-          },
-        }}
       >
         {screenshots.map((screenshot, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="!w-auto">
             <Image
               src={screenshot}
               alt={`Screenshot ${index + 1} of ${appName} showing the application interface`}
-              width={340}
-              height={700}
-              sizes="170px"
-              className="h-[350px] w-[170px] rounded-lg object-contain"
+              width={300}
+              height={600}
+              sizes="(max-width: 640px) 150px, (max-width: 1024px) 200px, 250px"
+              className="h-[200px] w-auto rounded-lg object-contain md:h-[350px]"
             />
           </SwiperSlide>
         ))}
