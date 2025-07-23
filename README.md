@@ -2025,6 +2025,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://ilyasmiyukha.github.io/"><img src="https://avatars.githubusercontent.com/u/39830587?v=4?s=100" width="100px;" alt="Ilya Smiyukha"/><br /><sub><b>Ilya Smiyukha</b></sub></a><br /><a href="#maintenance-IlyaSmiyukha" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jorgesumle"><img src="https://avatars.githubusercontent.com/u/14212780?v=4?s=100" width="100px;" alt="Jorge"/><br /><sub><b>Jorge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajorgesumle" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/CryptoDelirium"><img src="https://avatars.githubusercontent.com/u/6353394?v=4?s=100" width="100px;" alt="Crypto Delirium"/><br /><sub><b>Crypto Delirium</b></sub></a><br /><a href="#content-CryptoDelirium" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alinobrasil"><img src="https://avatars.githubusercontent.com/u/1214559?v=4?s=100" width="100px;" alt="AK"/><br /><sub><b>AK</b></sub></a><br /><a href="#maintenance-alinobrasil" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
