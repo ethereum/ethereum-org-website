@@ -44,7 +44,7 @@ lang: zh-tw
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client)：由 TypeScript 編寫的輕量用戶端
 - [Helios](https://github.com/a16z/helios)：由 Rust 編寫的執行和共識組合輕量用戶端
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light)：由 Go 編寫，執行用戶端的輕量模式（開發中）
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：用 Go 語言編寫的執行用戶端輕量模式（開發中）
 - [Nimbus](https://nimbus.guide/el-light-client.html)：由 Nim 編寫的共識輕量用戶端
 
 據我們所知，上述這些服務都尚未準備好在生產環境中使用。

@@ -168,7 +168,7 @@ Se o estoque da exchange B cair de repente e o usuário não conseguir comprar o
 
 Para ser capaz de fazer o exemplo acima no mundo financeiro tradicional, você precisaria de uma quantidade enorme de dinheiro. Estas estratégias de fazer dinheiro só são acessíveis aos que já possuem economias. Os empréstimos rápidos são um exemplo do futuro em que possuir dinheiro não é necessariamente uma condição prévia para se fazer dinheiro.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Mais sobre empréstimos rápidos
 </ButtonLink>
 
@@ -355,3 +355,7 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
 
 - [Servidor DeFi Llama no Discord](https://discord.defillama.com/)
 - [Servidor DeFi Pulse no Discord](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

@@ -46,6 +46,7 @@ Les crackers multiples offrent une vue d'ensemble en temps réel des nœuds du r
 - [Carte des nœuds](https://etherscan.io/nodetracker) par Etherscan
 - [Ethernodes](https://ethernodes.org/) par Bitfly
 - [Nodewatch](https://www.nodewatch.io/) par Chainsafe, exploration des nœuds de consensus
+- [Monitoreth](https://monitoreth.io/) - par MigaLabs, un outil de surveillance de réseau distribué
 
 ## Types de nœuds {#node-types}
 
@@ -190,13 +191,14 @@ Pour en savoir plus, lisez sa [documentation](https://github.com/ethereumjs/ethe
 
 De nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') prennent en charge les [mises à niveau du consensus](/roadmap/beacon-chain/). Ils sont responsables de toute la logique liée au consensus, y compris l'algorithme de choix de fourche, le traitement des attestations et la gestion des récompenses et des pénalités de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos).
 
-| Client                                                        | Langage    | Systèmes d'exploitation | Réseaux                                                                 |
-| ------------------------------------------------------------- | ---------- | ----------------------- | ----------------------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS   | Chaîne Phare, Goerli, Pyrmont, Sepolia, Ropsten, et plus encore         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS   | Chaîne Phare, Goerli, Sepolia, Ropsten, et plus encore                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS   | Chaîne Phare, Goerli, Sepolia, Ropsten, et plus encore                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS   | Chaîne Phare, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten, et plus encore |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS   | Chaîne Phare, Gnosis, Goerli, Sepolia, Ropsten, et plus encore          |
+| Client                                                        | Langage    | Systèmes d'exploitation | Réseaux                                                         |
+| ------------------------------------------------------------- | ---------- | ----------------------- | --------------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS   | Beacon Chain, Holesky, Pyrmont, Sepolia, et plus encore         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, et plus encore |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Sepolia, et plus encore          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
 
 ### Lighthouse {#lighthouse}
 
@@ -229,6 +231,12 @@ Teku est l'un des clients originaux de la genèse de la Chaine Phare. En plus de
 Teku offre des options de déploiement très flexibles. Le nœud phare et le client de validation peuvent être exécutés ensemble dans le cadre d'un seul processus, ce qui est extrêmement pratique pour les validateurs individuels. Les nœuds peuvent également être exécutés séparément pour des opérations de mise en jeu sophistiquées. En outre, Teku est entièrement compatible avec [Web3Signer](https://github.com/ConsenSys/web3signer/) s'agissant de sécuriser les clés de signature et de les protéger contre les délestages.
 
 Teku est écrit en Java et est disponible sous licence Apache 2.0. Il est développé par l'équipe de protocoles de ConsenSys qui est également responsable de Besu et Web3Signer. Pour en savoir plus, consultez la documentation [Teku](https://docs.teku.consensys.net/en/latest/).
+
+### Grandine {#grandine}
+
+Grandine est une implémentation de client de consensus, écrite en Rust sous la licence GPL-3.0. Il est maintenu par l’équipe Grandine Core et est rapide, performant et léger. Il convient à une large gamme de validateurs, des validateurs individuels utilisant des appareils à faibles capacités, comme le Raspberry Pi, aux grandes institutions gérant des dizaines de milliers de validateurs.
+
+La documentation est disponible dans le [Livre Grandine](https://docs.grandine.io/)
 
 ## Modes de synchronisation {#sync-modes}
 

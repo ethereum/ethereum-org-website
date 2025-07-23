@@ -16,9 +16,9 @@ lang: yo
 
 ## Àwọn ohun tó ṣe pàtàkì nípa ààbò
 
-1. [ Báwo ni o ṣe le fagilé ìgbà láàyè àdéhùn ọlọ́gbọ́n sí owó crypto rẹ ](/guides/how-to-revoke-token-access/) - tí o bá ṣàdédé rí ìdúnàádúrà kan tí o kò béèrè fún nínú wọ́lẹ́ẹ́tì rẹ, ìtọ́sọ́nà yìí yóò kọ́ ọ bí o ṣe le dènà irú rẹ̀ láti má ṣẹlẹ̀ mọ́.
+1. [Báwo ni o ṣe le fagilé ìgbà láàyè àdéhùn ọlọ́gbọ́n sí owó crypto rẹ](/guides/how-to-revoke-token-access/) - tí o bá ṣàdédé rí ìdúnàádúrà kan tí o kò béèrè fún nínú wọ́lẹ́ẹ́tì rẹ, ìtọ́sọ́nà yìí yóò kọ́ ọ bí o ṣe le dènà irú rẹ̀ láti má ṣẹlẹ̀ mọ́.
 
-2. [ Báwo ní a ṣe le ṣe ìdánimọ̀ àwọn tọ́kẹ̀n ayédèrú ](/guides/how-to-id-scam-tokens/) — kíni àwọn tọ́kẹ̀n ayédèrú, báwo ní wọ́n ṣe le jẹ́ kí ara wọn dàbí ojúlówó, àti pé báwo ní a ṣe e le ṣe ìdánimọ̀ wọn làti dáàbò bo ara rẹ àti dènà kíkó sí páńpẹ́ ẹ̀tàn.
+2. [Báwo ní a ṣe le ṣe ìdánimọ̀ àwọn tọ́kẹ̀n ayédèrú](/guides/how-to-id-scam-tokens/) — kíni àwọn tọ́kẹ̀n ayédèrú, báwo ní wọ́n ṣe le jẹ́ kí ara wọn dàbí ojúlówó, àti pé báwo ní a ṣe e le ṣe ìdánimọ̀ wọn làti dáàbò bo ara rẹ àti dènà kíkó sí páńpẹ́ ẹ̀tàn.
 
 ## Lílo Ethereum
 

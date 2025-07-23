@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react"
 
+import { Lang } from "@/lib/types"
+
 import FindWalletProductTable from "@/components/FindWalletProductTable"
 
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
@@ -130,7 +132,12 @@ type Story = StoryObj<typeof meta>
 export const WalletProductTableStory: Story = {
   args: {
     wallets: walletsData.map((wallet) => {
-      return { ...wallet, supportedLanguages: wallet.languages_supported }
+      return {
+        ...wallet,
+        languages_supported: wallet.languages_supported as Lang[],
+        supportedLanguages: wallet.languages_supported as Lang[],
+        supported_chains: [],
+      }
     }),
   },
   render: (args) => {

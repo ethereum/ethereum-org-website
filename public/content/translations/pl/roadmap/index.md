@@ -8,10 +8,10 @@ alt: "Plan działania Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Kolejne ulepszenia
+    content: Kolejne ulepszenia
     toId: what-changes-are-coming
   - 
-    label: Poprzednie ulepszenia
+    content: Poprzednie ulepszenia
     href: /history/
     variant: outline
 ---

@@ -19,7 +19,7 @@ Home staking is the act of [running an Ethereum node](/run-a-node/) connected to
 
 **Home staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Awọn ọna idokowo miiran le ma ṣe iranlọwọ fun nẹtiwọọki naa ni awọn ọna kanna. Home staking is the best staking option for securing Ethereum.
 
-Nodu Etereum kan ni onibaara ipele mimusise, ati onibaara ipele ifohunsokan. Awọn onibaara wọnyi jẹ sofitiwia ti o ṣiṣẹ pọ, pẹlu eto ti o wulo ti awọn kokoro iwole, lati jẹrisi si awon idunadura ati bulooku, jẹrisi olori ilana naa, ijerisi akopo, ati awon bulooku idabaa.
+Nodu Ethereum kan ni onibaara ipele mimusise, ati onibaara ipele ifohunsokan. Awọn onibaara wọnyi jẹ sofitiwia ti o ṣiṣẹ pọ, pẹlu eto ti o wulo ti awọn kokoro iwole, lati jẹrisi si awon idunadura ati bulooku, jẹrisi olori ilana naa, ijerisi akopo, ati awon bulooku idabaa.
 
 Home stakers are responsible for operating the hardware needed to run these clients. Idabaa gidi wa pe ki o lo ero to wa fun eyi nikan ti wa dari lati ile–eleyii je anfaani pataki si ilera netiwooki naa.
 
@@ -129,7 +129,7 @@ Iwọnyi jẹ diẹ ninu awọn ibeere ti o wọpọ julọ nipa idokowo ti o se
 
 <ExpandableCard title="Kí ni olùṣàyẹ̀wò?">
 
-<em>Olufowosi</em> kan jẹ nkan aifojuri to n gbe lori etereum, to si n kopa ninu ifohunsokan ti Ilana Ethereum. Awọn olufowosi ni aṣoju nipasẹ iye to ku, kokoro gbogbo eniyan, ati awọn abuda miiran. <em>Onibara olufọwọsi</em> jẹ sofitiwia to n ṣiṣẹ nipo olufowosi nipa didimu kokoro ikọkọ rẹ ati lilo. Onibaara olufọwọṣi kan ṣoṣo le mu ọpọlọpọ awọn kokoro meji dani, ṣiṣakoso ọpọlọpọ awọn olufowosi.
+<em>Olufowosi</em> kan jẹ nkan aifojuri to n gbe lori ethereum, to si n kopa ninu ifohunsokan ti Ilana Ethereum. Awọn olufowosi ni aṣoju nipasẹ iye to ku, kokoro gbogbo eniyan, ati awọn abuda miiran. <em>Onibara olufọwọsi</em> jẹ sofitiwia to n ṣiṣẹ nipo olufowosi nipa didimu kokoro ikọkọ rẹ ati lilo. Onibaara olufọwọṣi kan ṣoṣo le mu ọpọlọpọ awọn kokoro meji dani, ṣiṣakoso ọpọlọpọ awọn olufowosi.
 
 </ExpandableCard>
 
@@ -203,4 +203,4 @@ Lati ṣii ati gba gbogbo iyoku owo rẹ pada o gbọdọ pari ilana ti jijjade 
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

@@ -47,34 +47,26 @@ Sans la Technologie DVT, il est plus facile pour les fournisseurs d'actifs de ne
 Une solution DVT contient les éléments suivants :
 
 - **[Le partage secret de Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validateurs utilisant [des clés BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). Les partages individuels de clés BLS (key shares) peuvent être combinés en une seule clé agrégée (signature). Dans la Technologie de validation distribuée (DVT), la clé privée d'un validateur est la combinaison de signatures BLS de chaque opérateur à l'intérieur du cluster.
-- **[Seuil du schéma de signature](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Détermine le nombre de partages de clés individuelles requis au sujet des droits de signature. Exemple : 3 sur 4.
-- **[Génération de clés distribuées (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Processus cryptographique qui génère les partages de clé, puis utilisé à distribuer les partages d'une clé de validateur nouvelle ou déjà existante à l'endroit des nœuds d'un cluster.
+- **Seuil du schéma de signature** - Détermine le nombre de partages de clés individuelles requis au sujet des droits de signature. Exemple : 3 sur 4.
+- **Génération de clés distribuées (DKG)** - Processus cryptographique qui génère les partages de clé, puis utilisé à distribuer les partages d'une clé de validateur nouvelle ou déjà existante à l'endroit des nœuds d'un cluster.
 - **[Calcul multipartite (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - L'intégralité de la clé du validateur est générée de manière confidentielle via l'apport d'un calcul multipartite sécurisé. L'intégralité de la clé n'est jamais connue par aucun opérateur individuel : chaque opérateur n'a connaissance que de son propre fragment de clé (leur "part").
 - **Protocole de consensus** - Le protocole de consensus sélectionne un nœud qui deviendra le proposant de bloc. Ils partagent ledit bloc avec les autres nœuds du cluster, qui ajoutent leurs fragments de clé à la signature agrégée. Lorsque suffisamment de fragments de clé ont été agrégés, le bloc est proposé sur Ethereum.
 
 Les validateurs distribués bénéficient d'une tolérance aux défaillances intégrées et peuvent continuer à fonctionner, et ce même, si certains des nœuds individuels demeurent hors-ligne. Il faut interpréter que le cluster est résistant, même si certains de ses nœuds s'avèrent être malveillants ou très peu actifs.
 
-
-
 ## Cas d'utilisation de la Technologie de Validation Distribuée (DVT) {#dvt-use-cases}
 
 La DVT a des implications significatives pour l'ensemble de l'industrie du "staking" (verrouillage d'ETH dans le but de sécuriser la blockchain Ethereum) :
 
-
-
 ### Mise en enjeu individuelle {#solo-stakers}
 
 La technologie DVT permet également une participation non-custodienne (staking), en vous autorisant à distribuer votre clé de validateur à travers des nœuds distants, tout en conservant l'intégralité de la clé de manière totalement hors-ligne. Ce qui signifie que les participants individuels n'ont pas nécessairement besoin d'investir dans du matériel (hardware), tandis que la distribution des fragments de clé, peut aider à les renforcer contre d'éventuelles attaques (hack).
-
-
 
 ### Mise en jeu en tant que service (SaaS) {#saas}
 
 Les opérateurs comme les pools de staking (verrouillage d'actifs - ETH) ainsi que les fournisseurs d'actifs institutionnels gérant de multiples validateurs, peuvent utiliser la technologie de validation distribuée (DVT) afin de réduire leurs risques. En distribuant leur infrastructure, ils peuvent rajouter de la redondance à leurs opérations, et ainsi diversifier les types de matériel hardware qu'ils utilisent.
 
 La technologie DVT partage la responsabilité de la gestion des clés entre plusieurs nœuds, entendant le fait que certains coûts opérationnels peuvent également être répartis. La technologie DVT peut aussi réduire les coûts opérationnels et d'assurance pour les fournisseurs d'actifs.
-
-
 
 ### Les pools de mise en jeu {#staking-pools}
 
@@ -86,15 +78,11 @@ En optimisant la Technologie de validation distribuée (DVT), le niveau de confi
 
 L'autre avantage de minimiser la confiance en un seul opérateur, c'est que les pools de staking permettent une participation plus ouverte sans le consentement des autres opérateurs. En procédant ainsi, les acteurs peuvent réduire leur risque et soutenir la décentralisation d'Ethereum, en utilisant tout à la fois des ensembles d'opérateurs supervisés et ouverts, par exemple, en associant des fournisseurs d'actifs (Staking) individuels ou de moindre envergure à des acteurs plus importants.
 
-
-
 ## Inconvénients possibles à l'utilisation de la Technologie de validation distribuée (DVT) {#potential-drawbacks-of-using-dvt}
 
 - **Composant additionnel** - L' introduction d'un nœud DVT ajoute une partie supplémentaire potentiellement défectueuse ou vulnérable. Une manière d'atténuer cette situation est de forcer plusieurs mises en œuvre d'un nœud DVT, c'est-à-dire plusieurs clients DVT (tout comme il existe plusieurs clients pour le consensus en lui-même et les couches d'exécution).
 - **Coûts opérationnels** - comme la technologie DVT distribue la validation de façon multipartite, davantage de nœuds sont requis pour le fonctionnement au lieu d'un nœud seul, ce qui génère des coûts liés à ce processus bien plus élevés.
 - **Possibilité d'une latence accrue** - étant donné que la technologie DVT utilise un protocole de consensus pour finaliser ledit consensus via les nœuds multiples exploitant un validateur ; ce qui peut entraîner une latence accrue possible.
-  
-  
 
 ## Complément d'information {#further-reading}
 

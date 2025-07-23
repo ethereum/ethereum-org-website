@@ -92,13 +92,13 @@ title="Dapp and smart contract developers"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-The Merge came with changes to consensus, which also includes changes related to:<
+The Merge came with changes to consensus, which also includes changes related to:
 
 <ul>
   <li>block structure</li>
   <li>slot/block timing</li>
   <li>opcode changes</li>
-  <li>sources of on-chain randomness</li>
+  <li>sources of onchain randomness</li>
   <li>concept of <em>safe head</em> and <em>finalized blocks</em></li>
 </ul>
 

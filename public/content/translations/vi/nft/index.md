@@ -75,7 +75,7 @@ Trang web này cũng có một tên miền thay thế được vận hành bởi
 
 ## NFT hoạt động như thế nào? {#how-nfts-work}
 
-NTF, giống như mặt hàng kĩ thuật số trên chuỗi khối Ethereum, và được tạo ra thông qua một chương trình máy tính đặc biệt dựa trên Ethereum được gọi là "Hợp đồng thông minh" Những hợp đồng này tuân theo một quy tắc nhất định, như tiêu chuẩn [ERC-721](/glossary/#erc-721) hoặc [ERC-1155](/glossary/#erc-1155), những tiêu chuẩn này có thể xác định những gì hợp đồng có thể làm.
+NFT, giống như mặt hàng kĩ thuật số trên chuỗi khối Ethereum, và được tạo ra thông qua một chương trình máy tính đặc biệt dựa trên Ethereum được gọi là "Hợp đồng thông minh" Những hợp đồng này tuân theo một quy tắc nhất định, như tiêu chuẩn [ERC-721](/glossary/#erc-721) hoặc [ERC-1155](/glossary/#erc-1155), những tiêu chuẩn này có thể xác định những gì hợp đồng có thể làm.
 
 Hợp đồng thông minh NFT có thể làm một số điều quan trọng:
 

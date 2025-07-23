@@ -1,5 +1,5 @@
 {
-  "page-gas-meta-title": "Frais de gaz sur Ethereum : comment cela fonctionne-t-il ?",
+  "page-gas-meta-title": "Frais Ethereum : qu'est-ce que le gaz et comment payer moins ?",
   "page-gas-meta-description": "En savoir plus sur le gaz sur Ethereum : comment cela fonctionne-t-il et comment payer moins de frais de gaz",
   "page-gas-hero-title": "Frais de Gaz",
   "page-gas-hero-header": "Frais de réseau",
@@ -12,7 +12,7 @@
   "page-gas-summary-item-3": "Les frais de gaz ne sont pas fixes, ils varient en fonction de la congestion du réseau",
   "page-gas-what-are-gas-fees-header": "Que sont les frais de gaz ?",
   "page-gas-what-are-gas-fees-text-1": "Pensez à Ethereum comme à un grand réseau informatique où les personnes peuvent effectuer des tâches telles que l'envoi de messages ou l'exécution de programmes. Comme dans le monde réel, ces tâches nécessitent de l'énergie pour être accomplies.",
-  "page-gas-what-are-gas-fees-text-2": "Dans Ethereum, chaque calcul a un prix de « gaz » fixé. <b>Vos frais de gaz représentent le coût total des actions de votre transaction<b>. Lorsque vous envoyez une transaction ou exécutez un <a href=\"/glossary/#smart-contract\"> contrat intelligent</a>, vous payez des frais de gaz pour la traiter.",
+  "page-gas-what-are-gas-fees-text-2": "Dans Ethereum, chaque calcul a un prix de « gaz » fixé. <b>Vos frais de gaz représentent le coût total des actions de votre transaction</b>. Lorsque vous envoyez une transaction ou exécutez un <a href=\"/glossary/#smart-contract\"> contrat intelligent</a>, vous payez des frais de gaz pour la traiter.",
   "page-gas-how-do-i-pay-less-gas-header": "Comment payer moins de gaz ?",
   "page-gas-how-do-i-pay-less-gas-text": "Si l'augmentation des frais sur Ethereum est parfois inévitable, il existe des stratégies pour en réduire le coût :",
   "page-gas-how-do-i-pay-less-gas-card-1-title": "Effectuez vos transactions au bon moment",

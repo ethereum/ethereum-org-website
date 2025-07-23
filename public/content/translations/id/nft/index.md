@@ -1,5 +1,6 @@
 ---
 title: Token yang tidak dapat dipertukarkan (NFT)
+metaTitle: Apa itu NFT? | Manfaat dan kegunaannya
 description: Gambaran umum tentang NFT di Ethereum
 lang: id
 template: use-cases
@@ -75,7 +76,7 @@ Situs web ini juga memiliki nama domain alternatif yang didukung oleh NFT, **eth
 
 ## Bagaimana cara kerja NFT? {#how-nfts-work}
 
-NFT, seperti barang digital apa pun di rantai blok Ethereum, dibuat melalui program komputer khusus berbasis Ethereum yang disebut "kontrak pintar." Kontrak-kontrak ini mengikuti aturan tertentu, seperti standar [ERC-721](/glossary/#erc-721) atau [ERC-1155](/glossary/#erc-1155), yang menentukan apa saja yang dapat dilakukan oleh kontrak tersebut.
+NFT, seperti barang digital apa pun di rantai blok Ethereum, dibuat melalui program komputer khusus berbasis Ethereum yang disebut "kontrak pintar". Kontrak-kontrak ini mengikuti aturan tertentu, seperti standar [ERC-721](/glossary/#erc-721) atau [ERC-1155](/glossary/#erc-1155), yang menentukan apa saja yang dapat dilakukan oleh kontrak tersebut.
 
 Kontrak pintar NFT dapat melakukan beberapa hal penting:
 

@@ -41,16 +41,17 @@ lang: zh
 
 一些共识客户端具有内置工具，用于启动本地信标链以进行测试。 提供了 Lighthouse、Nimbus 和 Lodestar 的说明：
 
-- [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/usage/local/)
+- [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lightthouse 的本地测试网](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [使用 Nimbus 的本地测试网](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公共以太坊测试链 {#public-beacon-testchains}
 
-以太坊还有两个维护中的公共测试网实现：Goerli 和 Sepolia。 推荐使用获得长期支持的测试网 Goerli，任何人都可以自由地在其上验证。 Sepolia 是一个较新、较小的测试链，预计在可预见的未来也会得到维护。Sepolia 上有具有权限的验证者集，这意味着不可以对此测试网上的新验证者进行常规访问。 Ropsten 链预计在 2022 第四季度弃用，Rinkeby 链预计将在 2023 第二/第三季度弃用。
+以太坊还有两个维护中的公共测试网实现：Sepolia 和 Hoodi。 Sepolia 是推荐的应用程序开发标准测试网，具有封闭的验证器集以实现快速同步。 Hoodi 是一个用于验证和质押的测试网，它使用开放的验证器集，并允许任何人进行验证。
 
-- [Goerli 质押启动板](https://goerli.launchpad.ethereum.org/)
-- [Ropsten、Rinkeby 和 Kiln 弃用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi 质押启动板](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia 网站](https://sepolia.dev/)
+- [Hoodi 网站](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis 以太坊包 {#kurtosis}
 

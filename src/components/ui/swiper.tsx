@@ -1,11 +1,12 @@
+"use client"
+
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
-import { useTranslation } from "next-i18next"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
 import {
   Swiper as SwiperReact,
   type SwiperProps as SwiperReactProps,
-  SwiperRef,
+  type SwiperRef,
   SwiperSlide,
 } from "swiper/react"
 
@@ -19,6 +20,8 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-cards"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,
@@ -148,7 +151,6 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
         slidesPerView={1}
         slidesPerGroup={1}
         lazyPreloadPrevNext={0}
-        slideClass="swiper-slide"
         className={cn(variants({ navigationPlacement, className }))}
         {...props}
       >

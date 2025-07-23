@@ -1,8 +1,10 @@
+"use client"
+
 import React, { type ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { Flex, HStack, VStack } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import {
@@ -10,18 +12,20 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../tailwind/ui/accordion"
+} from "./ui/accordion"
 
-import type { IconBaseType } from "./icons/icon-base"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: IconBaseType
+  svg?: React.FC<React.SVGProps<SVGElement>>
   eventAction?: string
   eventCategory?: string
   eventName?: string
+  visible?: boolean
+  className?: string
 }
 
 const ExpandableCard = ({
@@ -32,8 +36,10 @@ const ExpandableCard = ({
   eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
+  visible = false,
+  className,
 }: ExpandableCardProps) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(visible)
   const { t } = useTranslation("common")
   const matomo = {
     eventAction,
@@ -55,7 +61,12 @@ const ExpandableCard = ({
 
   return (
     <>
-      <Accordion type="single" collapsible className="mb-4">
+      <Accordion
+        type="single"
+        collapsible
+        className={cn("mb-4", className)}
+        defaultValue={visible ? "item-1" : undefined}
+      >
         <AccordionItem
           value="item-1"
           className="rounded-sm border hover:bg-background-highlight"

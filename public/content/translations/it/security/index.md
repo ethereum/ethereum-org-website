@@ -8,6 +8,8 @@ lang: it
 
 Il crescente interesse per le criptovalute comporta un maggiore rischio di esporsi a truffatori e hacker. Questo articolo delinea alcune delle migliori pratiche per mitigare tali rischi.
 
+**Ricorda: nessuno ti contatterà mai da ethereum.org. Non rispondere alle email che dichiarano di provenire dal supporto ufficiale di Ethereum.**
+
 <Divider />
 
 ## Sicurezza criptovalute 101 {#crypto-security}

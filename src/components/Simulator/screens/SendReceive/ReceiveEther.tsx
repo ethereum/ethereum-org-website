@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 import EthGlyph from "@/components/icons/eth-glyph-solid.svg"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
@@ -26,10 +26,10 @@ export const ReceiveEther = () => (
     <NotificationPopover
       title="Example walkthrough"
       content="Share QR containing your address (public identifier) from your own wallet when finished here"
-      placement="top"
+      side="top"
     >
       <div className="relative mx-auto mb-3 w-fit bg-background p-3 md:mb-5">
-        <TwImage
+        <Image
           alt=""
           src={QrImage}
           className="size-[6rem] rounded p-1 md:size-[7.5rem] dark:invert"
@@ -46,7 +46,8 @@ export const ReceiveEther = () => (
       <NotificationPopover
         title="Example walkthrough"
         content="Share your address (public identifier) from your own wallet when finished here"
-        placement="top-start"
+        side="top"
+        align="end"
       >
         <Button className="h-fit rounded-lg bg-body-light px-2 py-1.5 text-xs font-bold text-body">
           Copy

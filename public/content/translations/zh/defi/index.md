@@ -1,5 +1,6 @@
 ---
 title: 去中心化金融 (DeFi)
+metaTitle: 什么是去中心化金融？ 去中心化金融的优势和作用
 description: 以太坊上的去中心化金融简介
 lang: zh
 template: use-cases
@@ -168,7 +169,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 要想在传统金融世界实现上述操作，你需要大量的资金。 这些赚钱的策略仅供已经拥有财富的人士使用。 闪电贷款是一个未来的例子，在这里，拥有金钱不一定是赚钱的先决条件。
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   关于闪电贷的更多信息
 </ButtonLink>
 
@@ -324,7 +325,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 3. 协议 — 提供功能的[智能合约](/glossary/#smart-contract)，例如，一项提供去中心化资产借贷的服务。
 4. [应用程序](/dapps/) - 我们用来管理和访问协议的产品。
 
-注意：许多去中心化金融使用 [ERC-20 标准](/glossary/#erc-20)。 去中心化金融中的应用程序使用一种称为包装以太币 (WETH) 的以太币包装器。 [了解更多关于包装以太币的信息](/wrapped-eth)。
+注意：许多去中心化金融使用 [ERC-20 标准](/glossary/#erc-20)。 去中心化金融 (DeFi) 中的应用程序使用一种包装的以太币，称为包装以太币 (WETH)。 [了解更多关于包装以太币的信息](/wrapped-eth)。
 
 ## 构建去中心化金融 {#build-defi}
 
@@ -355,3 +356,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 - [去中心化金融 Llama Discord 服务器](https://discord.defillama.com/)
 - [去中心化金融 Pulse Discord 服务器](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

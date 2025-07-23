@@ -1,5 +1,4 @@
 import { forwardRef } from "react"
-import { useTranslation } from "next-i18next"
 import type { ButtonHTMLAttributes } from "react"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -7,6 +6,8 @@ import { Button } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 
 import { FeedbackGlyphIcon } from "../icons"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isExpanded: boolean
@@ -33,7 +34,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         {...props}
       >
         <FeedbackGlyphIcon
-          className={cn("text-white", !isExpanded && "-mx-1")}
+          className={cn("!h-8 !w-[26px] text-white", !isExpanded && "-mx-1")}
         />
         <div
           className={cn(
@@ -43,7 +44,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         >
           <span
             className={cn(
-              "line-clamp-2 hidden h-full items-center font-bold text-white",
+              "line-clamp-2 hidden h-full items-center font-bold leading-5 text-white",
               isExpanded && "lg:flex"
             )}
           >

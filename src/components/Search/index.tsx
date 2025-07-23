@@ -1,9 +1,9 @@
+"use client"
+
 import { useRef } from "react"
 import dynamic from "next/dynamic"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { useDocSearchKeyboardEvents } from "@docsearch/react"
-import { DocSearchHit } from "@docsearch/react/dist/esm/types"
+import { useLocale } from "next-intl"
+import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
 import * as Portal from "@radix-ui/react-portal"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -11,6 +11,7 @@ import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
@@ -22,7 +23,7 @@ const Search = ({ children }: Props) => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
 
-  const { locale } = useRouter()
+  const locale = useLocale()
   const searchButtonRef = useRef<HTMLButtonElement>(null)
   const { t } = useTranslation("common")
 

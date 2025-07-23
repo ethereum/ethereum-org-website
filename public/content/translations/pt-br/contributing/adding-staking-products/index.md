@@ -87,14 +87,14 @@ Para qualquer sistema personalizado ou contrato inteligente envolvido:
 
 Para produtos de software relacionados à configuração de nó ou cliente, gerenciamento ou migração:
 
-**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm) são suportados?**
+**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm, Grandine) são suportados?**
 
 - Quais clientes são suportados? O usuário pode escolher?
 - Isso é usado para determinar a pontuação dos produtos "multicliente".
 
 #### Participação sobre Serviço {#staking-as-a-service}
 
-Para [listagens de staking-as-a-service ](/staking/saas/) (ou seja, operação de nó delegada):
+Para [listagens de staking-as-a-service](/staking/saas/) (ou seja, operação de nó delegada):
 
 **Quais são as taxas associadas ao uso do serviço?**
 

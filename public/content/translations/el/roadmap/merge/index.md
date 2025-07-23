@@ -92,13 +92,13 @@ title="Προγραμματιστές Dapp και Έξυπνων συμβολα�
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Η Συγχώνευση πρόσθεσε αλλαγές στη συναίνεση, η οποία περιλαμβάνει επίσης αλλαγές που σχετίζονται με:<
+Η Συγχώνευση πρόσθεσε αλλαγές στη συναίνεση, η οποία περιλαμβάνει επίσης αλλαγές που σχετίζονται με:
 
 <ul>
   <li>δομή μπλοκ</li>
   <li>θέση/ χρόνος μπλοκ</li>
   <li>αλλαγές opcode</li>
-  <li>τυχαίες πηγές επί της αλυσίδας</li>
+  <li>Τυχαίες πηγές τυχαίας στην αλυσίδα.</li>
   <li>έννοιες <em>safe head</em> και <em>finalized blocks</em></li>
 </ul>
 

@@ -1,18 +1,18 @@
 import { FilterInputState } from "@/lib/types"
 
-import Checkbox from "@/../tailwind/ui/Checkbox"
+import Checkbox from "@/components/ui/checkbox"
 
 interface CheckboxFilterInputProps {
   label: string
   filterIndex: number
   itemIndex: number
-  optionIndex: number
+  optionIndex?: number
   inputState: FilterInputState
   updateFilterState: (
     filterIndex: number,
     itemIndex: number,
     newInputState: boolean,
-    optionIndex: number
+    optionIndex?: number
   ) => void
 }
 
@@ -25,15 +25,19 @@ const CheckboxFilterInput = ({
   updateFilterState,
 }: CheckboxFilterInputProps) => {
   return (
-    <div className="flex flex-row items-center gap-2">
+    <label className="flex cursor-pointer flex-row items-center gap-2">
       <Checkbox
         checked={inputState as boolean}
         onCheckedChange={(e) => {
-          updateFilterState(filterIndex, itemIndex, e as boolean, optionIndex)
+          if (typeof optionIndex !== "undefined") {
+            updateFilterState(filterIndex, itemIndex, e as boolean, optionIndex)
+          } else {
+            updateFilterState(filterIndex, itemIndex, e as boolean)
+          }
         }}
       />
-      <p>{label}</p>
-    </div>
+      <span className="select-none">{label}</span>
+    </label>
   )
 }
 

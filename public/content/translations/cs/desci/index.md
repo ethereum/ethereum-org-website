@@ -96,7 +96,7 @@ Podívejte se na níže uvedené projekty a zapojte se do DeSci komunity.
 - [VitaDAO: Získávejte financování prostřednictvím sponzorovaných smluv o výzkumu pro výzkum dlouhověkosti](https://www.vitadao.com/)
 - [ResearchHub: Publikujte vědecké výsledky a zapojte se do konverzace s kolegy](https://www.researchhub.com/)
 - [LabDAO: Skládejte bílkoviny in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: Poptávejte klimatická data shromážděná decentralizovanou komunitou](https://api.dclimate.net/)
+- [dClimate API: Poptávejte klimatická data shromážděná decentralizovanou komunitou](https://www.dclimate.net/)
 - [DeSci Foundation: Publikační nástroj v rámci DeSci](https://descifoundation.org/)
 - [DeSci.World: Jednotné kontaktní místo, kde se uživatelé mohou podívat a zapojovat do DeSci](https://desci.world)
 - [OceanDAO: Financování řízené DAO pro vědu zabývající se daty](https://oceanprotocol.com/)
@@ -118,7 +118,7 @@ Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro z
 - [Průvodce decentralizovanou biotechnologií od Jocelynn Pearl pro budoucnost a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Případ pro DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Průvodce DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Decentralizované vědecké zdroje](https://www.vincentweisser.com/decentralized-science)
+- [Decentralizované vědecké zdroje](https://www.vincentweisser.com/desci)
 - [Molecule's Biopharma IP-NFTs – technický popis](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Budování důvěryhodných systémů vědy od Jona Starra](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas – DeSci: Budoucnost decentralizované vědy (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,6 +126,7 @@ Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro z
 - [DeSci: Budoucnost výzkumu od Samuela Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financování vědy (Epilolog: DeSci a nové krypto základní prvky) od Nadie](https://nadia.xyz/science-funding)
 - [Decentralizace narušuje vývoj léků](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Co je DeSci – decentralizovaná věda?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videa {#videos}
 
@@ -134,3 +135,4 @@ Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro z
 - [Vědecké publikování je rozbité. Může ho opravit Web3?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet – DeSci, nezávislé laboratoře & velké škálování Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier – Jak může DeSci transformovat biomedicínský výzkum & rizikový kapitál](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Tooling Open Science with Web3 & The Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

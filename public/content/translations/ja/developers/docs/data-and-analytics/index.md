@@ -34,7 +34,7 @@ lang: ja
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/)は、リレーショナルデータベース(PostgreSQLおよびDatabricksSQL)テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーはSQLを使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
+[Dune Analytics](https://dune.com/)は、リレーショナルデータベース(DuneSQL)テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーはSQLを使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
 
 ## SubQueryネットワーク {#subquery-network}
 
@@ -47,7 +47,7 @@ lang: ja
 
 ## 参考文献 {#further-reading}
 
-- [Graphネットワークの概要](https://thegraph.com/docs/en/about/network/)
+- [Graphネットワークの概要](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [EtherScanのAPIコードの例](https://etherscan.io/apis#contracts)
 - [Beaconcha.inビーコンチェーンエクスプローラー](https://beaconcha.in)

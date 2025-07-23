@@ -1,5 +1,6 @@
 ---
-title: Organizzazioni autonome decentralizzate (DAO)
+title: Cos'è una DAO?
+metaTitle: Cos'è una DAO? | Organizzazione autonoma decentralizzata
 description: Una panoramica delle DAO su Ethereum
 lang: it
 template: use-cases
@@ -91,7 +92,7 @@ Nel 1977, il Wyoming inventò la LLC, che protegge gli imprenditori e ne limita 
 
 ### Un celebre esempio {#law-example}
 
-[CityDAO](https://citydao.io) – CityDao ha utilizzato la legge sulle DAO del Wyoming per acquistare 40 acri di terreno nei pressi del Parco Nazionale di Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDao ha utilizzato la legge sulle DAO del Wyoming per acquistare 40 acri di terreno nei pressi del Parco Nazionale di Yellowstone.
 
 ## Aderire a una DAO {#dao-membership}
 
@@ -160,3 +161,7 @@ _Sono tipicamente utilizzate per lo sviluppo e governance decentralizzati di pro
 
 - [Che cos'è una DAO nel mondo delle criptovalute?](https://youtu.be/KHm0uUPqmVE)
 - [Può una DAO costruire una città?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

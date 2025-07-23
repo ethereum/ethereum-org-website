@@ -116,7 +116,7 @@ A melhor maneira de lidar com links é copiá-los diretamente da fonte, clicando
 
 ![Exemplo de link.png](./example-of-link.png)
 
-Links também aparecem no texto fonte na forma de tags (ou seja, <0> </0>). Se você passar o mouse por cima da tag, o editor exibirá seu conteúdo completo. Às vezes, essas tags representarão links.
+Links também aparecem no texto fonte na forma de tags (ou seja, \<0> \</0>). Se você passar o mouse por cima da tag, o editor exibirá seu conteúdo completo. Às vezes, essas tags representarão links.
 
 É muito importante copiar os links da origem e não mudar a sua ordem.
 
@@ -154,7 +154,7 @@ nonce — _Texto não traduzível_
 
 O texto original também contém tags abreviadas, que contêm apenas números, o que significa que sua função não é imediatamente óbvia. Você pode passar o mouse sobre essas tags para ver exatamente para qual função elas servem.
 
-No exemplo abaixo, ao passar o mouse sobre a <0> tag mostra que ela representa `<code>` e contém um trecho de código. Portanto, o conteúdo dentro dessas tags não deve ser traduzido.
+No exemplo abaixo, ao passar o mouse sobre a \<0> tag mostra que ela representa `<code>` e contém um trecho de código. Portanto, o conteúdo dentro dessas tags não deve ser traduzido.
 
 ![Exemplo de tags.png ambíguas](./example-of-ambiguous-tags.png)
 

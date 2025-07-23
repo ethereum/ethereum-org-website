@@ -168,7 +168,7 @@ Kung biglang bumaba ang supply ng exchange B at kulang ang binili ng user para s
 
 Para magawa ang halimbawa sa itaas sa tradisyonal na mundo ng pinansyal, kakailanganin mo ng napakalaking halaga ng pera. Ang mga may pera lang ang makakagamit ng mga pamamaraang ito ng pagkakapera. Ang mga flash loan ay halimbawa ng hinaharap kung saan hindi kailangang magkaroon ng pera para kumita ng pera.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Iba pang detalye tungkol sa mga flash loan
 </ButtonLink>
 
@@ -348,7 +348,7 @@ Ang DeFi ay isang open-source movement. Ang mga protokol at application ng DeFi 
 ### Videos {#videos}
 
 - [Finematics - edukasyon tungkol sa decentralized finance](https://finematics.com/) – _Mga video tungkol sa DeFi_
-- [The Defiant ](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Mga pangunahing kaalaman sa DeFi: Lahat ng kailangan mong malaman para makapagsimula sa nakakalitong lugar na ito._
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Mga pangunahing kaalaman sa DeFi: Lahat ng kailangan mong malaman para makapagsimula sa nakakalitong lugar na ito._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA)_Ano ang DeFi?_
 
 ### Mga Komunidad {#communities}

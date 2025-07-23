@@ -16,7 +16,7 @@ summaryPoint3: Ein Ort, an dem sich Geldmittel für einen bestimmten Zweck siche
 
 Eine DAO ist eine Organisation im kollektiven Besitz, die auf eine gemeinsame Mission hinarbeitet.
 
-DAOs ermöglichen es uns, mit Gleichgesinnten rund um den Globus zusammenzuarbeiten, ohne auf das Wohlwollen einer Führungskraft vertrauen zu müssen, die unsere Geldmittel oder die Operationen verwaltet. Es gibt keinen CEO, der Geld nach Lust und Laune ausgibt, und keinen Finanzchef, der die Buchhaltung manipulieren kann. Stattdessen bestimmen die in den Code eingebauten, Blockchain-basierten Regeln, wie die Organisation funktioniert und wie Geldmittel ausgegeben werden.
+DAOs ermöglichen es uns, mit Gleichgesinnten rund um den Globus zusammenzuarbeiten, ohne auf das Wohlwollen einer Führungskraft vertrauen zu müssen, die unsere Geldmittel oder die Operationen verwaltet. Es gibt keinen CEO, der Geldmittel nach Lust und Laune ausgibt, und keinen Finanzchef, der die Buchhaltung manipulieren kann. Stattdessen bestimmen die in den Code eingebauten, Blockchain-basierten Regeln, wie die Organisation funktioniert und wie Geldmittel ausgegeben werden.
 
 Die Finanzverwaltung ist integriert und niemand kann ohne die Zustimmung der Gruppe auf die Mittel zugreifen. Entscheidungen werden nach Vorschlägen und Abstimmungen getroffen. So wird sichergestellt, dass jeder in der Organisation eine Stimme hat und dass alles transparent [on-Chain](/glossary/#on-chain) abläuft.
 
@@ -67,7 +67,7 @@ Um DAOs zu verwalten, sind vorher zahlreiche Überlegungen notwendig – etwa wi
 
 ### Delegation {#governance-delegation}
 
-Die Delegation ist die DAO-Variante repräsentativer Demokratie. Tokenbesitzer delegieren Stimmen an Nutzer, die sich selbst nominieren und sich verpflichten, auf dem aktuellen Stand zu bleiben und das Protokoll zu verwalten.
+Die Delegation ist die DAO-Variante repräsentativer Demokratie. Tokenbesitzer delegieren Stimmen an Benutzer, die sich selbst nominieren und sich verpflichten, auf dem aktuellen Stand zu bleiben und das Protokoll zu verwalten.
 
 #### Bekanntes Beispiel {#governance-example}
 
@@ -91,7 +91,7 @@ Im US-Bundesstaat Wyoming wurde 1977 die LCC eingeführt, die Unternehmer schüt
 
 ### Bekanntes Beispiel {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO hat durch Wyomings DAO-Gesetz rund 16 Hektar Land in der Nähe des Yellowstone-Nationalparks gekauft.
+[CityDAO](https://citizen.citydao.io/) – CityDAO hat durch Wyomings DAO-Gesetz rund 16 Hektar Land in der Nähe des Yellowstone-Nationalparks gekauft.
 
 ## DAO-Mitgliedschaft {#dao-membership}
 
@@ -125,7 +125,7 @@ _Wird üblicherweise für die dezentralisierte Entwicklung und Verwaltung von Pr
 
 #### Bekanntes Beispiel {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao war eine weltweit souveräne Gemeinschaft, die seit 2019 dezentralisierte Protokolle und Applikationen entwickelte und verwaltete. Sie nutzte reputationsbasierte Verwaltung und [holografischen Konsens](/glossary/#holographic-consensus) zur Koordiantion und Verwaltung von Geldmitteln, d. h. niemand konnte sich Einfluss auf ihre Entwicklung oder Verwaltung erkaufen.
+[DXdao](https://DXdao.eth.limo) – DXdao war eine weltweit souveräne Gemeinschaft, die seit 2019 dezentralisierte Protokolle und Anwendungen entwickelte und verwaltete. Sie nutzte reputationsbasierte Verwaltung und [holografischen Konsens](/glossary/#holographic-consensus) zur Koordiantion und Verwaltung von Geldmitteln, d. h. niemand konnte sich Einfluss auf ihre Entwicklung oder Verwaltung erkaufen.
 
 ## DAO – Beitritt und Gründung {#join-start-a-dao}
 

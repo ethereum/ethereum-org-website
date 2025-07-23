@@ -13,7 +13,7 @@ summaryPoint3: Ọpẹ́ ni fún kírípítò, àwọn olùmúlò ní báyìí �
 
 Ìdánimọ̀ ṣe àtìlẹ́yìn fún gbogbo agbala ti ìgbésí ayé rẹ lónìí. Lílò àwọn iṣẹ́ orí ayélujára, ṣíṣí àkọọ́lẹ̀ ìfowópamọ́ kan, dídìbòyàn ní àwọn ìdìbò, ríra ohun-ìní, ṣíṣe ààbò iṣẹ́ – gbogbo ǹkan wọ̀nyí nílò láti ṣe ìjẹ́ẹ̀rísí ìdánimọ̀ rẹ.
 
-Àmọ́, àwọn ètò íṣàkóso ìdánimọ̀ ìbílẹ̀ ti gbéralé àwọn agbedeméjì àárín tí ó fún ni, dìmú, àti ṣàkóso àwọn ìdánimọ̀ rẹ [ àwọn ìjẹ́ẹ̀rísí ](/glossary/#attestation). Èyí túmọ̀ sí pé o kò le ṣàkóso àlàyé tí ó ní ìbátan ìdánimọ̀ tàbí pinnu taani ó ní àǹfàní ìwọlé sí àlàyé ìdánimọ̀ ti ara ẹni (PII) àti iye ìgbà wíwolé àwọn ẹgbẹ́ wọ̀nyí.
+Àmọ́, àwọn ètò íṣàkóso ìdánimọ̀ ìbílẹ̀ ti gbéralé àwọn agbedeméjì àárín tí ó fún ni, dìmú, àti ṣàkóso àwọn ìdánimọ̀ rẹ [àwọn ìjẹ́ẹ̀rísí](/glossary/#attestation). Èyí túmọ̀ sí pé o kò le ṣàkóso àlàyé tí ó ní ìbátan ìdánimọ̀ tàbí pinnu taani ó ní àǹfàní ìwọlé sí àlàyé ìdánimọ̀ ti ara ẹni (PII) àti iye ìgbà wíwolé àwọn ẹgbẹ́ wọ̀nyí.
 
 Láti yanjú àwọn ìṣòro wọnyí, a ní àwọn ètò ìdánimọ̀ tí kò ní àkóso tí a ti ṣe lórí blockchains gbangba bí Ẹ̀tẹ́ríọ̀mù. Ìdánimọ̀ tí kò ní àkóso gba àwọn ènìyàn láàyè láti ṣàkóso àlàyé tí ó ní ìbátan ìdánimọ̀ wọn. Pẹ̀lú àwọn ojútùú ìdánimọ̀ tí kò ní àkóso, _ ìwọ _ le ṣ'èdá àwọn ìdámọ̀, àti kí o bèèrè àti kí o dì àwọn ẹ̀rí rẹ mú láìṣe ìgbékẹ̀lé àwọn aláṣẹ àárín, bíi olùpèsè iṣẹ́ tàbí àwọn ìjọba.
 
@@ -85,7 +85,7 @@ Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn è
 
 Àwọn ohun ìdánimọ̀ ìbílẹ̀ bíi orúkọ rẹ tàbí àdírẹ́ẹ̀sì ímeèlì rẹ gbẹ́kẹ̀lé àwọn ẹnìkẹta — àwọn ìjọba àti àwọn olùpèsè ímeèlì. Àwọn ìdámò tí a kò ṣàkóso (DIDS) yàtọ̀ — wọn kìí ṣàtẹ̀jáde, ṣalábòójútó, tàbí ṣàkóso nípasẹ̀ èyíkéyìí ile-iṣẹ́ ààrin-gbùngbùn.
 
-Àwọn ìdámò tí a kò pín ní àtẹ̀jáde, dìmú, àti ìṣàkóso nípasẹ̀ àwọn ẹnì-kọ̀ọ̀kan. [Àkosílẹ̀ Ẹ̀tẹ́ríọ̀mù ](/glossary/#account) jẹ́ àpẹẹrẹ fún àwọn ìdánimọ̀ tí kò ní àkóso. O le ṣẹ̀dá iye àkọọ́lẹ̀ tóo bá fẹ́ láìsí ìgbàṣẹ lọ́wọ́ ẹnikẹ́ni àti láìsí ìdí láti fi wọ́n pamọ́ sínú ìwé ìforúkọsílẹ̀ ààrin-gbùngbùn.
+Àwọn ìdámò tí a kò pín ní àtẹ̀jáde, dìmú, àti ìṣàkóso nípasẹ̀ àwọn ẹnì-kọ̀ọ̀kan. [Àkosílẹ̀ Ẹ̀tẹ́ríọ̀mù](/glossary/#account) jẹ́ àpẹẹrẹ fún àwọn ìdánimọ̀ tí kò ní àkóso. O le ṣẹ̀dá iye àkọọ́lẹ̀ tóo bá fẹ́ láìsí ìgbàṣẹ lọ́wọ́ ẹnikẹ́ni àti láìsí ìdí láti fi wọ́n pamọ́ sínú ìwé ìforúkọsílẹ̀ ààrin-gbùngbùn.
 
 Àwọn ìdánimọ̀ tí kò ní àkóso ní àfipamọ́ lórí àwọn ìwé-ìpamọ́ pínpín ([blockchains](/glossary/#blockchain)) [àwọn nẹ́tíwọ̀ọ̀kì ẹlẹ́gbẹ́-sí-ẹgbẹ́](/glossary/#peer-to-peer-network). Èyí jẹ́ kí àwọn DIDs [jẹ́ aláìlẹ́gbẹ́ ní àgbáyé, tí o le yanjú pẹ̀lú wiwà tí ó ga, àti tí o le ìjẹ́ẹ̀rísí cryptographically](https://w3c-ccg.github.io/did-primer/). Àmì ìdánimọ tí kò ní àkóso lè ní í ṣe pẹ̀lú àwọn ẹ̀dá tí ó yàtọ̀ síra, títí kan àwọn ènìyàn, àwọn àjọ, tàbí àwọn ilé-iṣẹ́ ìjọba.
 
@@ -93,7 +93,7 @@ Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn è
 
 ### 1. Bọ́tìnì cryptography gbangba {#public-key-cryptography}
 
-Bọ́tìnì cryptography gbangba jẹ́ ìgbésẹ̀ ààbò àlàyé tí ó ṣe àgbéjáde [ bọ́tìnì gbangba ](/glossary/#public-key) àti [ bọ́tìnì ìkọ̀kọ̀](/glossary/#private-key) fún ẹ̀dá kan. Bọ́tìnì gbangba [ cryptography](/glossary/#cryptography) ni a nlo nínú àwọn nẹtiwọọki blockchain láti fi ìdánilójú ìdánimọ̀ àwọn olùmúlò hàn àti láti fi ẹ̀rí níní àwọn ohun-ìní oní-nóḿbà hàn.
+Bọ́tìnì cryptography gbangba jẹ́ ìgbésẹ̀ ààbò àlàyé tí ó ṣe àgbéjáde [bọ́tìnì gbangba](/glossary/#public-key) àti [bọ́tìnì ìkọ̀kọ̀](/glossary/#private-key) fún ẹ̀dá kan. Bọ́tìnì gbangba [cryptography](/glossary/#cryptography) ni a nlo nínú àwọn nẹtiwọọki blockchain láti fi ìdánilójú ìdánimọ̀ àwọn olùmúlò hàn àti láti fi ẹ̀rí níní àwọn ohun-ìní oní-nóḿbà hàn.
 
 Díẹ̀ nínú àwọn ìdánimọ̀ tí kò ní àkóso, gẹ́gẹ́bí àkọọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù, ní àwọn bọ́tìnì gbangba àti ìkọ̀kọ̀. Bọ́tìnì gbangba ń ṣe ìdánimọ̀ olùdarí, nígbà tí àwọn àkọọ́lẹ̀ àdáni lè fọwọ́ sí àti tú àwọn ìfiránsẹ́ fún àkọọ́lẹ̀ yìí. Bọ́tìnì cryptography gbangba ṣe ẹ̀rí tí ó nílò láti ṣe ìjẹ́ẹ̀rísí àwọn àjọ àti dènà afinipeni lọ́nà èrú àti lílo ìdánimọ̀ ayédèrú, lílo [ìbuwọ́lù cryptographic](https://andersbrownworth.com/blockchain/public-private-keys/) láti ṣe ìjẹ́ẹ̀rísí àwọn ẹ̀tọ́.
 
@@ -133,13 +133,13 @@ Nítorípé àwọn DID wà ní ìfipamọ́ lórí blockchain, ẹnikẹ́ni le
 
 ### Àwọn ìjẹ́ẹ̀rísí tí kò sí lórí ẹ̀rọ pẹ̀lú ìgbaniláàyè wíwọlé igbagbogbo {#offchain-attestations-with-persistent-access}
 
-Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fáìlì JSON àti fífipamọ́ lórí off-chain (ní bòjúmu lórí pẹpẹ[ìpamọ àwọsánmà tí kò ní àkóso](/developers/docs/storage/), bíi IPFS tàbí Swarm). Síbẹ̀síbẹ̀, [ hash ](/glossary/#hash) ti fáìlì JSON ti wà ní ìfipamọ́ lórí on-chain àti tí o sopọ̀ mọ́ DID nípasẹ̀ ìforúkọsílẹ on-chain kan. DID tí ó sopọ̀ le jẹ́ bóyá tí olùfúnni ní ìjẹ́ẹ̀rísí tàbí ti olùgbà.
+Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fáìlì JSON àti fífipamọ́ lórí off-chain (ní bòjúmu lórí pẹpẹ[ìpamọ àwọsánmà tí kò ní àkóso](/developers/docs/storage/), bíi IPFS tàbí Swarm). Síbẹ̀síbẹ̀, [hash](/glossary/#hash) ti fáìlì JSON ti wà ní ìfipamọ́ lórí on-chain àti tí o sopọ̀ mọ́ DID nípasẹ̀ ìforúkọsílẹ on-chain kan. DID tí ó sopọ̀ le jẹ́ bóyá tí olùfúnni ní ìjẹ́ẹ̀rísí tàbí ti olùgbà.
 
 Ọ̀nà yìí jẹ́ kí àwọn ìwé-ẹ̀ri ó ní ìdúróṣinṣin tí ó dá l'órí blockchain, láàkókò tí a bá ń tọ́jú àlàyé ìpàrokò àwọn ẹ̀tọ́ àti tí ó ṣe ṣàyẹ̀wò. Ó tún jẹ́ kí yíyan ìṣàfihàn ṣeéṣe nítorípé olùdìmú bọ́tìnì ìkọ̀kọ̀ le tú àlàyé ìpàrokò náà.
 
 ### Àwọn ẹ̀rí orí on-chain {#onchain-attestations}
 
-Àwọn ẹ̀rí orí on-chain ni ó má ń wáyé ní [ àwọn àdéhùn ọlọ́gbọ́n](/glossary/#smart-contract) lórí blockchain Ẹ̀tẹ́ríọ̀mù. Àdéhùn ọlọ́gbọ́n náà (tí ó ṣiṣẹ́ bíi ìforúkọsílẹ̀) yóò ṣe àfiwé ìjẹ́ẹ̀rísí sí ìdánimọ̀ tí kò ní àkóso on-chain tí ó báamu (bọ́tìnì gbangba).
+Àwọn ẹ̀rí orí on-chain ni ó má ń wáyé ní [àwọn àdéhùn ọlọ́gbọ́n](/glossary/#smart-contract) lórí blockchain Ẹ̀tẹ́ríọ̀mù. Àdéhùn ọlọ́gbọ́n náà (tí ó ṣiṣẹ́ bíi ìforúkọsílẹ̀) yóò ṣe àfiwé ìjẹ́ẹ̀rísí sí ìdánimọ̀ tí kò ní àkóso on-chain tí ó báamu (bọ́tìnì gbangba).
 
 Èyí ni àpẹẹrẹ láti fihàn bí àwọn ìfọwọ́sí on-chain le ṣiṣẹ́ ní ìṣe:
 
@@ -170,10 +170,10 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 ### Awọn arokọ {#articles}
 
 - [Àwọn ọnà èlò blockchain: blockchain ní ìdánimọ̀ oní-nọ́ḿbà](https://consensys.net/blockchain-use-cases/digital-identity/) —_ ConsenSys_
-- [Kí ni Ẹ̀tẹ́ríọ̀mù ERC725? Ṣíṣàkóso ìdánimọ̀ tí ara ẹni lórí Blockchain ](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) —_Sam Town _
+- [Kí ni Ẹ̀tẹ́ríọ̀mù ERC725? Ṣíṣàkóso ìdánimọ̀ tí ara ẹni lórí Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) —_Sam Town _
 - [Báwo ni Blockchain Ṣe Lè Yanjú Ìṣòro Ìdánimọ̀ Oní-nọ́ḿbà](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow _
-- [ Kí Ni Ìdánimọ̀ Tí Kò Ní Àkóso, Ati Pé Kí Ni Ìdí Tó Fi Kàn Ọ́?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
-- [Ìfihàn sí ìdánimọ̀ tí kò ní àkóso ](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
+- [Kí Ni Ìdánimọ̀ Tí Kò Ní Àkóso, Ati Pé Kí Ni Ìdí Tó Fi Kàn Ọ́?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Ìfihàn sí ìdánimọ̀ tí kò ní àkóso](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Videos {#videos}
 

@@ -34,7 +34,7 @@ La [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/)
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) pre-elabora i dati della blockchain in tabelle relazionali del database (PostgreSQL e DatabricksSQL), consente agli utenti di interrogare i dati della blockchain usando SQL e crea pannelli di controllo basati sui risultati della richiesta. I dati sulla catena sono organizzati in 4 tabelle grezze: `blocks`, `transactions`, `logs` (di eventi) e `traces` (di chiamate). I contratti e protocolli popolari sono stati decodificati e ognuno ha la propria serie di tabelle di eventi e chiamate. Queste tabelle di eventi e chiamate sono ulteriormente elaborate e organizzate in tabelle di astrazione secondo il tipo di protocolli, ad esempio dex, lending, stablecoins, ecc.
+[Dune Analytics](https://dune.com/) pre-elabora i dati della blockchain nelle tabelle del database relazionale (DuneSQL), consente agli utenti di richiedere i dati della blockchain utilizzando SQL e crea pannelli di controllo basati sui risultati della richiesta. I dati sulla catena sono organizzati in 4 tabelle grezze: `blocks`, `transactions`, `logs` (di eventi) e `traces` (di chiamate). I contratti e protocolli popolari sono stati decodificati e ognuno ha la propria serie di tabelle di eventi e chiamate. Queste tabelle di eventi e chiamate sono ulteriormente elaborate e organizzate in tabelle di astrazione secondo il tipo di protocolli, ad esempio dex, lending, stablecoins, ecc.
 
 ## Rete di SubQuery {#subquery-network}
 
@@ -47,7 +47,7 @@ Per iniziare, visita la [guida rapida per principianti di Ethereum](https://acad
 
 ## Letture consigliate {#further-reading}
 
-- [Panoramica della rete Graph](https://thegraph.com/docs/en/about/network/)
+- [Panoramica della rete Graph](https://thegraph.com/docs/en/about/)
 - [GraphQL Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Esempi di codice API su EtherScan](https://etherscan.io/apis#contracts)
 - [Esploratore della Beacon Chain di Beaconcha.in](https://beaconcha.in)

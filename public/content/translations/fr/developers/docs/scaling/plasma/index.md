@@ -24,7 +24,7 @@ Le contrat Plasma fonctionne, entre autres, comme un [pont](/developers/docs/bri
 
 Les composants de base de Plasma sont :
 
-### Calcul hors chaîne {#off-chain-computation}
+### Calcul hors chaîne {#offchain-computation}
 
 La vitesse de traitement actuelle d'Ethereum est limitée à environ 15 à 20 transactions par seconde, ce qui ne permet pas de gérer un fort accroissement du nombre d'utilisateurs sans engorger le réseau. Ce problème existe principalement parce que le [mécanisme de consensus](/developers/docs/consensus-mechanisms/) d'Ethereum nécessite de nombreux nœuds peer-to-peer pour vérifier chaque mise à jour de l'état de la blockchain.
 
@@ -32,7 +32,7 @@ Bien que ce mécanisme de consensus soit nécessaire pour la sécurité du rése
 
 Plasma suppose que le réseau principal Ethereum n'a pas besoin de vérifier toutes les transactions. Au lieu de ça, nous pouvons traiter les transactions en dehors du réseau principal, ce qui libère les noeuds d'une certaine charge de travail puisqu'ils n'auront plus à valider toutes les transactions.
 
-Ces calculs réalisés hors chaîne sont nécessaires car les chaînes Plasma peuvent permettre d'optimiser la vitesse et le coût des transactions. Par exemple, une chaîne Plasma peut, et va le plus souvent, utiliser un seul « opérateur » pour gérer l'ordre et l'exécution des transactions. Avec une seule entité vérifiant les transactions, les temps de traitement sur une chaîne Plasma sont plus rapides que sur le réseau principal Ethereum.
+Les calculs hors chaîne sont nécessaires car les chaînes Plasma peuvent optimiser la vitesse et le coût. Par exemple, une chaîne Plasma peut, et va le plus souvent, utiliser un seul « opérateur » pour gérer l'ordre et l'exécution des transactions. Avec une seule entité vérifiant les transactions, les temps de traitement sur une chaîne Plasma sont plus rapides que sur le réseau principal Ethereum.
 
 ### Engagements d'état {#state-commitments}
 
@@ -42,7 +42,7 @@ Un [schéma d'engagement](https://en.wikipedia.org/wiki/Commitment_scheme) est u
 
 Les racines de Merkle sont des primitives cryptographiques qui permettent de compresser de grandes quantités d'informations. Une racine Merkle (également appelée « racine de bloc » dans ce cas) pourrait représenter toutes les transactions d'un bloc. Les racines de Merkle permettent également de vérifier plus facilement qu'un petit élément de données fait partie d'un ensemble de données plus vaste. Par exemple, un utilisateur peut produire une [preuve Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) pour prouver l'inclusion d'une transaction dans un bloc spécifique.
 
-Les racines Merkle sont importantes pour fournir à Ethereum des informations sur l'état de la chaîne externe. Vous pouvez considérer les racines de Merkle comme des « points de sauvegarde » : l'opérateur dit : « Voici l'état de la chaîne Plasma à un moment x, et voici la racine de Merkle comme preuve. » L'opérateur s'engage sur l'_état actuel_ de la chaîne plasma avec une racine de Merkle, c'est pourquoi on parle d'un « engagement d'état ».
+Les racines Merkle sont importantes pour fournir à Ethereum des informations sur l'état hors chaîne. Vous pouvez considérer les racines de Merkle comme des « points de sauvegarde » : l'opérateur dit : « Voici l'état de la chaîne Plasma à un moment x, et voici la racine de Merkle comme preuve. » L'opérateur s'engage sur l'_état actuel_ de la chaîne plasma avec une racine de Merkle, c'est pourquoi on parle d'un « engagement d'état ».
 
 ### Entrées et sorties {#entries-and-exits}
 

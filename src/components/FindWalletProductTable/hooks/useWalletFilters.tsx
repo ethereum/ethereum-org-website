@@ -1,8 +1,9 @@
-import { useTranslation } from "next-i18next"
+import { useRef } from "react"
 
 import { FilterOption } from "@/lib/types"
 
 import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/FindWalletLanguageSelectInput"
+import Layer2SelectInput from "@/components/FindWalletProductTable/Layer2SelectInput"
 import {
   BrowserIcon,
   BuyCryptoIcon,
@@ -32,8 +33,11 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 export const useWalletFilters = (): FilterOption[] => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const prevNetworkArray = useRef<string[]>([])
   return [
     {
       title: t("page-find-wallet-device"),
@@ -426,6 +430,42 @@ export const useWalletFilters = (): FilterOption[] => {
                     eventAction: `${t("page-find-wallet-hardware")}`,
                     eventName: `hardware ${newInputState}`,
                   })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+      ],
+    },
+    {
+      title: "Network support",
+      showFilterOption: true,
+      items: [
+        {
+          filterKey: "layer_2_support",
+          filterLabel: "layer_2_support",
+          description: "",
+          inputState: [],
+          ignoreFilterReset: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <Layer2SelectInput
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  const newArray = newInputState as string[]
+                  const oldArray = prevNetworkArray.current
+                  if (newArray.length > oldArray.length) {
+                    trackCustomEvent({
+                      eventCategory: "WalletFilterSidebar",
+                      eventAction: "network",
+                      eventName: newArray[newArray.length - 1],
+                    })
+                  }
+                  prevNetworkArray.current = newArray
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />
@@ -932,7 +972,7 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: "New to crypto",
           description: "",
           inputState: false,
-          input: (_) => {
+          input: () => {
             return <></>
           },
           options: [],

@@ -4,61 +4,72 @@ description: Leer meer over de Beacon Chain - de upgrade die proof-of-stake Ethe
 lang: nl
 template: upgrade
 image: /images/upgrades/core.png
-alt: 
-summaryPoint1: De Beacon Chain verandert niks aan de Ethereum die we nu gebruiken.
-summaryPoint2: Het zal het netwerk coördineren en als consensuslaag fungeren.
-summaryPoint3: Het introduceerde Proof-of-Stake in het Ethereum-ecosysteem.
-summaryPoint4: U kent dit wellicht als "Fase 0" op technische routekaarten.
+alt:
+summaryPoint1: De Beacon Chain introduceerde proof-of-stake in het Ethereum-ecosysteem.
+summaryPoint2: Het werd samengevoegd met de oorspronkelijke Ethereum proof-of-work-chain in september 2022.
+summaryPoint3: De Beacon Chain introduceerde de consensuslogica en het block gossip protocol dat Ethereum nu beveiligt.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-    De Beacon Chain werd op 1 december 2020 om 12:00 uur UTC verzonden. <a href="https://beaconscan.com/">Bekijk de gegevens</a> voor meer informatie. Als u wilt helpen met het valideren van de keten, kunt u <a href="/staking/">uw ETH staken</a>.
+  De Beacon Chain werd op 1 december 2020 beschikbaar, en formaliseerde proof-of-stake als het consensusmechanisme van Ethereum met de samenvoegingsupgrade op 15 september 2022.
 </UpgradeStatus>
+
+## Wat is de Beacon Chain? {#what-is-the-beacon-chain}
+
+De Beacon Chain is de naam van de originele proof-of-stake blockchain die werd gelanceerd in 2020. Het werd gecreëerd om ervoor te zorgen dat de proof-of-stake consensuslogica degelijk en duurzaam was voordat het op het hoofdnet van Ethereum werd gebruikt. Daarom functioneerde het parallel aan het originele proof-of-work Ethereum. De Beacon Chain was een chain van 'lege' blocks, maar het uitschakelen van proof-of-work en het inschakelen van proof-of-stake op Ethereum betekende dat de Beacon Chain geïnstrueerd moest worden om transactiegegevens van uitvoerende clients te accepteren, ze te bundelen in blocks en ze vervolgens te organiseren in een blockchain via een op proof-of-stake gebaseerd consensusmechanisme. Op hetzelfde moment schakelden de oorspronkelijke Ethereum-clients hun mining, block propagation en consensuslogica uit en droegen ze alles over aan de Beacon Chain. Deze gebeurtenis stond bekend als [de samenvoeging.](/roadmap/merge/). Zodra de samenvoeging had plaatsgevonden, waren er niet langer twee blockchains. Er was slechts één proof-of-stake Ethereum, dat nu twee verschillende clients per node vereist. De Beacon Chain is nu de consensuslaag, een peer-to-peer netwerk van consensusclients dat block gossip en consensuslogica verwerkt, terwijl de oorspronkelijke clients de uitvoeringslaag vormen, welke verantwoordelijk is voor gossiping en het uitvoeren van transacties, en het beheren van de status van Ethereum. De twee lagen kunnen met elkaar communiceren via de engine API.
 
 ## Wat doet de Beacon Chain? {#what-does-the-beacon-chain-do}
 
-De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/roadmap/danksharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
+De naam Beacon Chain werd gegeven aan de ledger van accounts die het netwerk van Ethereum [stakers](/staking/) leidde en coördineerde voordat diezelfde stakers begonnen met het valideren van echte Ethereum-blocks. Het verwerkt echter geen transacties of interacties met smart contracts, aangezien dit wordt gedaan in de uitvoeringslaag. De Beacon Chain is verantwoordelijk voor zaken als het afhandelen van blocks en bevestigingen, het uitvoeren van het algoritme voor de forkkeuze en het regelen van beloningen en straffen. Ontdek meer op onze [node-architectuurpagina](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is een fundamenteel onderdeel voor [het veilige, duurzame en haalbare Ethereum waar we naartoe werken.](/roadmap/vision/).
+## Impact Beacon Chain {#beacon-chain-features}
 
-## Beacon Chain-kenmerken {#beacon-chain-features}
+### Introductie van staking {#introducing-staking}
 
-### Introductie van staken {#introducing-staking}
+De Beacon Chain introduceerde [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) aan Ethereum. Dit houdt Ethereum veilig en levert validators meer ETH op in het proces. In de praktijk komt staking neer op het staken van ETH om validatorsoftware te activeren. Als staker voert u de software uit die nieuwe blocks in de chain creëert en valideert.
 
-De Beacon Chain zal [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) introduceren bij Ethereum. Dit is een nieuwe manier waarbij u kunt helpen om Ethereum veilig te houden. Zie het als iets dat voor iedereen toegankelijk is en wat Ethereum beter maakt en waarmee je tegelijk meer ETH verdiend. In de praktijk betekent het dat het uw betrokkenheid vergt door het staken van ETH om zo de validatorsoftware te activeren. Als validator verwerkt u transacties en creëert u nieuwe blokken in de keten.
+Staking heeft hetzelfde doel als [mining](/developers/docs/consensus-mechanisms/pow/mining/), maar is in veel opzichten anders. Mining vereiste grote initiële uitgaven in de vorm van krachtige hardware en energieverbruik, wat schaalvoordelen opleverde en centralisatie bevorderde. Mining kwam ook niet met de eis om activa te vergrendelen als borg, waardoor de mogelijkheid van het protocol om slechte actoren te straffen na een aanval werd beperkt.
 
-Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/consensus-mechanisms/pow/mining/) (hoe het huidige netwerk nu beveiligd wordt). Hopelijk zal dit helpen om Ethereum op langere termijn veilig te maken. Hoe meer mensen meewerken aan het netwerk, hoe meer het zal decentraliseren en hoe veiliger het zal worden.
+De overgang naar proof-of-stake maakte Ethereum aanzienlijk veiliger en gedecentraliseerder in vergelijking met proof-of-work. Hoe meer mensen deelnemen aan het netwerk, hoe meer gedecentraliseerd en veilig het wordt tegen aanvallen.
+
+Bovendien is proof-of-stake gebruiken als consensusmechanisme een fundamenteel onderdeel voor het [veilige, milieuvriendelijke en schaalbare Ethereum van nu](/roadmap/vision/).
 
 <InfoBanner emoji=":money_bag:">
-Als u geïnteresseerd bent om een validator te worden en de Beacon Chain te beveiligen, <a href="/staking/">hier vindt u meer informatie over staken</a>.
+  Wilt u een validator worden en de Beacon Chain beveiligen? <a href="/staking/">Ontdek dan hier meer over staking</a>.
 </InfoBanner>
 
-Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/roadmap/danksharding/).
+### Voorbereiden van sharding {#setting-up-for-sharding}
 
-### Opzetten van shardketens {#setting-up-for-shard-chains}
+Sinds de Beacon Chain samengevoegd is met het originele hoofdnet van Ethereum, is de Ethereum-gemeenschap begonnen met het opschalen van het netwerk.
 
-Nadat het hoofdnet is samengevoegd met de Beacon Chain, zal de volgende upgrade shardketens introduceren in het proof-of-stake netwerk. Deze "shards" verhogen de capaciteit van het netwerk en verbeteren de transactiesnelheid door het netwerk uit te breiden naar 64 blockchains. De Beacon Chain is een belangrijke eerste stap voor het introduceren van shardketens, dit komt omdat staken noodzakelijk is voor de beveiliging.
+Proof-of-stake heeft het voordeel dat er een register is van alle goedgekeurde blockproducenten op elk gegeven moment, elk met een stake in ETH. Dit register maakt verdeel-en-heers mogelijk, maar verdeelt op een betrouwbare manier specifieke netwerkverantwoordelijkheden.
 
-Uiteindelijk zal de Beacon Chain verantwoordelijk zijn voor het willekeurig selecteren van stakers om de shardketens te valideren. Dit is van essentieel belang om het voor stakers moeilijk te maken om te bedriegen en zich een shard toe te eigenen. Dit betekent eigenlijk dat ze [een kans hebben van minder dan 1 op een triljoen](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Deze verantwoordelijkheid staat in contrast met proof-of-work, waarbij miners geen verplichtingen hebben naar het netwerk toe, kunnen stoppen met minen en hun nodesoftware ogenblikkelijk en zonder gevolgen uitschakelen. Er is ook geen register van bekende blockvoorstellers en geen betrouwbare manier om netwerkverantwoordelijkheden veilig te verdelen.
 
-## Relatie tussen upgrades {#relationship-between-upgrades}
+[Meer over sharding](/roadmap/danksharding/)
 
-Alle Ethereum-upgrades zijn ietwat met elkaar verbonden. Laten we nu samenvatten hoe de Beacon Chain de andere upgrades beïnvloedt.
+## Verband tussen upgrades {#relationship-between-upgrades}
 
-### Het hoofdnet en de Beacon Chain {#mainnet-and-beacon-chain}
+Alle Ethereum-upgrades zijn ietwat met elkaar verbonden. Laten we nu even samenvatten hoe de Beacon Chain de andere upgrades beïnvloedt.
 
-In het begin zal de Beacon Chain apart bestaan van het Ethereum-hoofdnet dat we dagelijks gebruiken. Maar uiteindelijke zullen ze verbonden worden. Het plan is om het hoofdnet "samen te voegen" met het proof-of-stake systeem dat gecontroleerd en gecoördineerd wordt door de Beacon Chain.
+### Beacon Chain en de samenvoeging {#merge-and-beacon-chain}
+
+Aanvankelijk bestond The Beacon Chain apart van het hoofdnet van Ethereum, maar in 2022 werden ze samengevoegd.
 
 <ButtonLink href="/roadmap/merge/">
-    De Merge
+  De samenvoeging
 </ButtonLink>
 
 ### Shards en de Beacon Chain {#shards-and-beacon-chain}
 
-Shardketens kunnen alleen op een veilige manier in het Ethereum-netwerk komen als er een proof-of-stake consensusmechanisme geïmplementeerd is. De Beacon Chain zal het staken introduceren en de weg vrijmaken voor de upgrade van de shardketen die zal volgen.
+Sharding kan alleen veilig zijn intrede doen in het Ethereum-ecosysteem met een proof-of-stake consensusmechanisme. De Beacon Chain introduceerde staking, wat 'samengevoegd' werd met het hoofdnet en zo het pad effende voor sharding om Ethereum verder te helpen opschalen.
 
 <ButtonLink href="/roadmap/danksharding/">
-    Shardketens
+  Shard-chains
 </ButtonLink>
 
-<Divider />
+## Verder lezen
+
+- [Meer over Ethereum's toekomstige upgrades](/roadmap/vision)
+- [Meer over node-architectuur](/developers/docs/nodes-and-clients/node-architecture)
+- [Meer over proof-of-stake](/developers/docs/consensus-mechanisms/pos)

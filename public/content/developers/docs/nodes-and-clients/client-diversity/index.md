@@ -80,6 +80,8 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
 
+[Grandine](https://docs.grandine.io/)
+
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
 ## Client diversity dashboards {#client-diversity-dashboards}
@@ -90,7 +92,8 @@ Several dashboards give real-time client diversity statistics for the execution 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-  **Execution layer:**
+
+**Execution layer:**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)

@@ -19,7 +19,7 @@ Nós somos uma comunidade de braços abertos que irá ajudá-lo a crescer e se i
 - [Trabalhe em um problema aberto](https://github.com/ethereum/ethereum-org-website/issues) – Trabalho que nós identificamos que deve ser feito
 
 **Visual**
-- [Ajude a estruturar o site ](/contributing/design/) Profissionais de design de todos os níveis podem contribuir para melhorar o site
+- [Ajude a estruturar o site](/contributing/design/) Profissionais de design de todos os níveis podem contribuir para melhorar o site
 
 **Conteúdo**
 - [Criar/editar conteúdo](/contributing/#how-to-update-content) – Sugira novas páginas ou ajustes para o que já existe aqui
@@ -90,7 +90,7 @@ Em nosso repositório do GitHub, temos uma categoria de envio de tíquetes espec
 
 Se sua contribuição for incluída no ethereum.org, você terá a chance de reivindicar um badge especial no [Galxe](https://app.galxe.com/quest/ethereumorg). Um token de conquista on-chain (OAT) é uma prova de que você contribuiu com o ecossistema de maneira considerável.
 
-[Mais sobre OATs](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Mais sobre OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Como solicitar seu POAP
 1. Junte-se ao nosso [servidor Discord](https://discord.gg/ethereum-org).

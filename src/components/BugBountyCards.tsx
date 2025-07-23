@@ -1,5 +1,4 @@
 import { BaseHTMLAttributes } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -8,13 +7,18 @@ import { cn } from "@/lib/utils/cn"
 import { ButtonLink, ButtonLinkProps } from "./ui/buttons/Button"
 import { Center, Flex, Stack } from "./ui/flex"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 type FlexProps = BaseHTMLAttributes<HTMLDivElement>
 
 const CardRow = ({ children }: ChildOnlyProp) => (
   <Flex className="mx-4 my-16 flex-wrap justify-between">{children}</Flex>
 )
 
-const SubmitBugBountyButton = ({ children, ...props }: ButtonLinkProps) => (
+const SubmitBugBountyButton = ({
+  children,
+  ...props
+}: Omit<ButtonLinkProps, "href">) => (
   <ButtonLink
     className="m-4"
     href="https://forms.gle/Gnh4gzGh66Yc3V7G8"

@@ -8,7 +8,7 @@ lang: yo
 
 Ṣe o ni ìrẹwẹsi látí wá páṣípáárọ tí o sè àtòjọ gbogbo àwọn tọ́kẹ̀n áyànfẹ rẹ bi? O lè páárọ pùpọ júlọ nínù àwón tọ́kẹ̀n nípá lílo [decentrelized exchanges](/glossary/#dex).
 
-Páṣípáárọ tọ́kẹ̀n pẹlù páṣípáárọ áwọn ohùn-íní oriṣi mèjí tí o wá lorí nẹtíwọọkí Etherum, fùn ápẹẹrẹ pípáárọ ẸTH fùn DÁI (an[ERC-20](/glossary/#erc-20) token). Ìláná náà yára gan o tùn jẹ olọwọ pókù. Ìwọ yoo ní látí nílo wọ́lẹ́ẹ́tì crypto látí páárọ àwón tọ́kẹ̀n.
+Páṣípáárọ tọ́kẹ̀n pẹlù páṣípáárọ áwọn ohùn-íní oriṣi mèjí tí o wá lorí nẹtíwọọkí Ethereum, fùn ápẹẹrẹ pípáárọ ẸTH fùn DÁI (an[ERC-20](/glossary/#erc-20) token). Ìláná náà yára gan o tùn jẹ olọwọ pókù. Ìwọ yoo ní látí nílo wọ́lẹ́ẹ́tì crypto látí páárọ àwón tọ́kẹ̀n.
 
 **Pátákí ṣáájù:**
 

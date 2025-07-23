@@ -72,7 +72,7 @@ Awọn olumulo n lo $MIND to je token [ERC-20](/glossary/#erc-20) ti abinibi pep
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol jẹ alapapo ati aworan atọka awujọ alailakoso to n ṣe iranlọwọ fun awọn olupilẹṣẹ lati je oni nnkan akoonu wọn nibikibi ti wọn lọ ninu ọgba digita ti intanẹẹti alailakoso._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster jẹ nẹtiwọọki awujọ alailakoso ti o to. O jẹ ilana to ṣi sile to le ṣe atilẹyin ọpọlọpọ awọn onibaara, gẹgẹ bi imeeli._
 
-## Awọn nẹtiwọki awujọ Web2 lori Etereum {#web2-social-networks-and-ethereum}
+## Awọn nẹtiwọki awujọ Web2 lori Ethereum {#web2-social-networks-and-ethereum}
 
 Awọn pepe awujọ abinibi [Web3](/glossary/#web3) kii ṣe awọn nikan lo n gbiyanju lati ṣafikun imọ-ẹrọ blockchain sinu ikanni ajọlo. Ọpọlọpọ awọn pepe to ni akoso tun n gbero lati se apapo Ethereum sinu ero wọn:
 

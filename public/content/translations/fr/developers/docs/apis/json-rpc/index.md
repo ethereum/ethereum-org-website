@@ -207,8 +207,8 @@ Aucune
 La liste complète des identifiants de réseau actuels est disponible à l'adresse suivante : [chainlist.org](https://chainlist.org). Quelques spécifications habituelles sont :
 
 - `1`: réseau principal Ethereum
-- `5`: Réseau de test Goerli
 - `11155111`: Réseau de test Sepolia
+- `560048`: Réseau de test Hoodi
 
 **Exemple**
 
@@ -385,6 +385,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 ### eth_coinbase {#eth_coinbase}
 
 Renvoie l'adresse coinbase du client.
+
+> **Note :** Cette méthode est obsolète depuis la version **v1.14.0** et n'est plus prise en charge. Essayer d’utiliser cette méthode entraînera une erreur « Méthode non prise en charge ».
 
 **Paramètres**
 
@@ -1649,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 Cela démarrera l'interface HTTP RPC sur `http://localhost:8545`.
 
-Nous pouvons vérifier que l'interface fonctionne en récupérant l'adresse et le solde de Coinbase en utilisant [curl](https://curl.se). Veuillez noter que les données contenues dans ces exemples seront différentes sur votre noeud local. Si vous voulez essayer ces commandes, remplacez les paramètres de la requête dans la deuxième requête avec le résultat retourné par la première.
+Nous pouvons vérifier que l'interface est en cours d'exécution en récupérant l'adresse coinbase (en obtenant la première adresse dans le tableau des comptes) et le solde en utilisant [curl](https://curl.se). Veuillez noter que les données contenues dans ces exemples seront différentes sur votre noeud local. Si vous voulez essayer ces commandes, remplacez les paramètres de la requête dans la deuxième requête avec le résultat retourné par la première.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545

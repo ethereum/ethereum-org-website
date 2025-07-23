@@ -34,7 +34,7 @@ lang: zh
 
 #### 我应该使用哪个测试网？
 
-客户端开发者目前还在维护的两个公共测试网是 Sepolia 和 Goerli。 Sepolia 是一个供合约和应用程序开发者测试其应用程序的网络。 Goerli 网络是让协议开发者测试网络升级，并让质押人测试运行验证者。
+客户端开发者目前还在维护的两个公共测试网是 Sepolia 和 Hoodi。 Sepolia 是一个供合约和应用程序开发者测试其应用程序的网络。 Hoodi 网络是让协议开发者测试网络升级，并让质押人测试运行验证者。
 
 #### Sepolia {#sepolia}
 
@@ -60,14 +60,14 @@ lang: zh
 - [Coinbase Wallet 水龙头 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
-- [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [以太坊生态系统水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _（长期支持）_ {#goerli}
+#### Hoodi {#hoodi}
 
-_注意：[Goerli 测试网已弃用](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)，它将在 2023 年被 [Holesovice](https://github.com/eth-clients/holesovice) 取代。 请考虑把你的应用程序迁移至 Sepolia。_
+_注意：[Goerli 测试网已弃用](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)，它已被 Hoodi 取代。 请考虑把你的应用程序迁移至 Sepolia。_
 
-Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运行测试网验证者的用户开放。 因此，希望在部署到主网之前测试协议升级的质押人应该使用 Goerli。
+Hoodi 是用于测试验证和质押的测试网。 Hoodi 网络对想要运行测试网验证者的用户开放。 因此，希望在部署到主网之前测试协议升级的质押人应该使用 Hoodi。
 
 - 开放式验证者设置，质押者可以测试网络升级
 - 状态比较大，用于测试复杂的智能合约交互
@@ -75,52 +75,46 @@ Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运�
 
 ##### 资源
 
-- [网站](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [网站](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### 水龙头
 
-- [QuickNode Goerli 水龙头](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW 水龙头](https://goerli-faucet.pk910.de/)
-- [Paradigm 水龙头](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli 水龙头](https://goerlifaucet.com/)
-- [All That Node Goerli 水龙头](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet 水龙头 | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli 水龙头](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi 水龙头](https://hoodi.ethpandaops.io/)
 
-要在 Goerli 测试网上启动验证者，请使用 ethstaker 的 ["cheap goerli validator" 启动板](https://holesky.launchpad.ethstaker.cc/en/)。
+要在 Hoodi 测试网上启动验证者，请使用 [Hoodi 启动板](https://hoodi.launchpad.ethereum.org/en/)。
 
 ### 二层网络测试网 {#layer-2-testnets}
 
 [二层网络 (L2)](/layer-2/) 是一种统称，用来描述一系列特定的以太坊扩容解决方案。 二层网络是一条扩展以太坊并继承以太坊安全保障的独立区块链。 二层网络测试网通常与公共以太坊测试网紧密关联。
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 [Arbitrum](https://arbitrum.io/) 测试网。
 
 ##### 水龙头
 
-- [Chainlink 水龙头](https://faucets.chain.link/)
+- [Chainlink 水龙头](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy 水龙头](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 [Optimism](https://www.optimism.io/) 测试网。
 
 ##### 水龙头
 
-- [Paradigm 水龙头](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet 水龙头 | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink 水龙头](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy 水龙头](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 [Starknet](https://www.starknet.io) 的测试网。
 
 ##### 水龙头
 
-- [Starknet 水龙头](https://faucet.goerli.starknet.io)
+- [Alchemy 水龙头](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## 私有网络 {#private-networks}
 
