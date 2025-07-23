@@ -132,13 +132,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       {!showNFTMint && (
         <div className="w-full px-8 py-12">
           <CountDown
+            dateTime="2025-07-30T15:44:00Z"
             timeLeftLabels={timeLeftLabels}
             expiredLabel={t("page-10-year-countdown-expired")}
           />
         </div>
       )}
 
-      <div className="mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8">
+      <div
+        className={cn(
+          "mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8",
+          showNFTMint && "max-w-none"
+        )}
+      >
         <div className="flex flex-1 flex-col gap-5">
           <div>
             <h1 className="text-2xl font-bold">
@@ -153,7 +159,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
         <div className="flex flex-1 flex-row items-center justify-center">
           {showNFTMint ? (
-            <NFTMintCardWrapper className="flex-1" locale={locale} />
+            <NFTMintCardWrapper locale={locale} />
           ) : (
             <CurrentTorchHolderCard
               className="w-[420px]"
