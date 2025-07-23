@@ -25,11 +25,11 @@ published: 2021-02-26
 - Yarn ya da npm gibi bazı paket yöneticilerini daha önce kullandınız
 - Akıllı sözleşmeler ve Solidity ile ilgili giriş seviyesinde bilgi sahibisiniz
 
-# Başlarken {#getting-started}
+## Başlarken {#getting-started}
 
 Bu öğretici, yarn kullanarak test kurulumunu ve çalıştırmasını göstermektedir ancak npm tercihinde bulunmanız da sorun teşkil etmez. Resmi Waffle [dokümanlarına](https://ethereum-waffle.readthedocs.io/en/latest/index.html) uygun referanslar sunacağım.
 
-## Bağımlılıkları Yükleme {#install-dependencies}
+### Bağımlılıkları Yükleme {#install-dependencies}
 
 Ethereum-waffle ve typescript bağımlılıklarını projenizin dev bağımlılıklarına [ekleyin](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation).
 
@@ -37,7 +37,7 @@ Ethereum-waffle ve typescript bağımlılıklarını projenizin dev bağımlıl�
 yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
-## Örnek akıllı sözleşme {#example-smart-contract}
+### Örnek akıllı sözleşme {#example-smart-contract}
 
 Öğretici boyunca basit bir akıllı sözleşme örneği olan EtherSplitter üzerinde çalışacağız. Bu, herhangi birinin belirli bir miktarda wei göndermesine ve bu miktarı önceden tanımlanmış iki alıcı arasında eşit olarak bölmesine izin vermenin haricinde pek bir şey yapmaz. Bölme işleminin gerçekleşmesi için wei sayısının çift olması gerekir, aksi takdirde işlem geri döner. Her iki alıcı için de, önce bir wei transferi ve ardından Transfer olayı gerçekleştirilir.
 
@@ -67,7 +67,7 @@ contract EtherSplitter {
 }
 ```
 
-## Sözleşmeyi derleme {#compile-the-contract}
+### Sözleşmeyi derleme {#compile-the-contract}
 
 Sözleşmeyi [derlemek](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) için aşağıdaki girdiyi package.json dosyasına ekleyin:
 
@@ -90,7 +90,7 @@ Sonraki adım olarak, proje kök dizininde - `waffle.json` - Waffle yapılandır
 
 `yarn build` komutunu çalıştırın. Sonuç olarak, JSON formatında derlenmiş EtherSplitter sözleşmesinin bulunduğu `build` dizini görünecektir.
 
-## Test kurulumu {#test-setup}
+### Test kurulumu {#test-setup}
 
 Waffle ile test yapmak için Chai eşleştiricilerini ve Mocha'yı kullanmanız gerekeceğinden, bunları projenize [eklemeniz](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) gerekir. Package.json dosyanızı güncelleyin ve komut dosyaları bölümüne `test` girdisini ekleyin:
 
@@ -103,7 +103,7 @@ Waffle ile test yapmak için Chai eşleştiricilerini ve Mocha'yı kullanmanız 
 
 Eğer testlerinizi [çalıştırmak](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) istiyorsanız, sadece `yarn test` komutunu çalıştırmanız yeterlidir.
 
-# Test {#testing}
+## Test {#testing}
 
 Şimdi `test` dizinini ve `test\EtherSplitter.test.ts` yeni dosyasını oluşturun. Aşağıdaki kod parçasını kopyalayın ve test dosyanıza yapıştırın.
 
@@ -134,7 +134,7 @@ Başlamadan önce bir kaç kelime. `MockProvider`, blokzinciri taklit eden bir s
 
 Sonraki adımda, "splitter" adında bir değişken tanımlıyoruz; bu, taklit EtherSplitter sözleşmemizdir. Bu, tek bir testin her yürütülmesinden önce `deployContract` yöntemi ile oluşturulur. Bu yöntem, ilk parametre olarak aktarılan cüzdandan (bizim durumumuzda göndericinin cüzdanı) bir sözleşmenin dağıtımını simüle eder. İkinci parametre, test edilen sözleşmenin ABI'si ve bit kodudur; burada `build` dizininden derlenmiş EtherSplitter sözleşmesinin json dosyasını aktarıyoruz. Üçüncü parametre, sözleşmenin oluşturucu argümanlarının bir dizisidir; bizim durumumuzda ise alıcıların iki adresidir.
 
-## changeBalances {#changebalances}
+### changeBalances {#changebalances}
 
 İlk olarak, bölme yönteminin alıcıların cüzdan bakiyelerini gerçekten değiştirip değiştirmediğini kontrol edeceğiz. Eğer gönderen hesaptan 50 wei bölersek, her iki alıcının bakiyelerinin de 25 wei artmasını bekleriz. Waffle'ın `changeBalances` eşleştiricisini kullanacağız:
 
@@ -162,7 +162,7 @@ Hem `changeBalance` hem de `changeBalances` durumlarında, eşleştiricinin ça�
 
 Sonra, her wei transferi sonrası Transfer olayının yayımlanıp yayımlanmadığını test ediyoruz. Waffle'daki başka bir eşleştiriciye geçeceğiz:
 
-## Emit {#emit}
+### Emit {#emit}
 
 ```ts
 it("Emits event on the transfer to the first receiver", async () => {
@@ -180,7 +180,7 @@ it("Emits event on the transfer to the second receiver", async () => {
 
 `emit` eşleştiricisi, bir sözleşmenin bir yöntemi çağırırken bir etkinlik yayımlayıp yayımlamadığını kontrol etmemizi sağlar. `emit` eşleştiricisinin parametreleri olarak, olayı yayımlayacağını tahmin ettiğimiz taklit sözleşmeyi ve bu olayın adını sağlıyoruz. Bizim durumumuzda, taklit sözleşme `splitter` ve olayın adı `Transfer`'dir. Ayrıca, olayın yayımlandığı sırada verilen argümanların kesin değerlerini de doğrulayabiliriz; `withArgs` eşleştiricisine, olay bildirimi beklediğimiz sayıda argümanı aktarırız. EtherSplitter sözleşmesi durumunda ise, gönderici ve alıcının adresleri ile transfer edilen wei miktarını aktarırız.
 
-## revertedWith {#revertedwith}
+### revertedWith {#revertedwith}
 
 Son örnek olarak, wei miktarının çift olmadığı durumlarda işlemin geri dönüp dönmediğini kontrol edeceğiz. `revertedWith` eşleştiricisini kullanacağız:
 
@@ -194,7 +194,7 @@ it("Reverts when Vei amount uneven", async () => {
 
 Eğer test başarılı olursa, işlemin gerçekten geri döndüğüne emin olacağız. Ancak `require` ifadesine aktardığımız mesajlar ile `revertedWith` içinde beklediğimiz mesaj arasında kesin bir eşleşme olmalıdır. EtherSplitter sözleşmesinin koduna geri dönersek, wei miktarı için `require` ifadesine mesaj olarak "Tek wei miktarına izin verilmiyor" ifadesini giriyoruz. Bu, testimizde beklediğimiz mesajla eşleşir. Eğer eşit değillerse, test başarısız olacaktır.
 
-# Tebrikler! {#congratulations}
+## Tebrikler! {#congratulations}
 
 Waffle ile akıllı sözleşmeleri test etmenin ilk büyük adımını tamamladınız! Diğer Waffle öğreticileri de ilginizi çekebilir:
 

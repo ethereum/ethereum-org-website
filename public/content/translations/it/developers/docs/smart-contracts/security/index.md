@@ -6,9 +6,9 @@ lang: it
 
 I contratti intelligenti sono estremamente flessibili e in grado di gestire grandi quantità di valori e dati, eseguendo allo stesso tempo una logica immutata basata sul codice distribuito sulla blockchain. Questo ha dato vita a un vivace ecosistema di applicazioni senza fiducia e decentralizzate, che offrono molti vantaggi rispetto ai sistemi legacy. I contratti intelligenti rappresentano anche un'opportunità per gli utenti malevoli che provano a speculare sfruttandone le vulnerabilità.
 
-Blochchain pubbliche come Ethereun rendono ancora più complessa la questione della sicurezza dei contratti intelligenti. Una volta distribuito, il codice dei contratti _di solito_ non può essere modificato per correggere falle di sicurezza. In più, le risorse rubate dai contratti intelligenti sono estremamente difficili da tracciare e praticamente irrecuperabili per via della loro immutabilità.
+Blochchain pubbliche come Ethereum rendono ancora più complessa la questione della sicurezza dei contratti intelligenti. Una volta distribuito, il codice dei contratti _di solito_ non può essere modificato per correggere falle di sicurezza. In più, le risorse rubate dai contratti intelligenti sono estremamente difficili da tracciare e praticamente irrecuperabili per via della loro immutabilità.
 
-Anche se i dati possono variare, si stima che l'ammontare totale di valore rubato o perduto a causa di falle di sicurezza nei contratti intelligenti superi facilmente $1 miliardo. In questo sono inclusi incidenti rilievo come la [violazione della DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore superiore a $1 miliardo al prezzo attuale), la [violazione del portafoglio multi-firma di Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30 milioni sottratti dagli hacker), e la questione del [portafoglio Parity congelato](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (più di $300 milioni di ETH bloccati per sempre).
+Anche se i dati possono variare, si stima che l'ammontare totale di valore rubato o perduto a causa di falle di sicurezza nei contratti intelligenti superi facilmente $1 miliardo. In questo sono inclusi incidenti rilievo come la [violazione della DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore superiore a $1 miliardo al prezzo attuale), la [violazione del portafoglio multi-firma di Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30 milioni sottratti dagli hacker), e la questione del [portafoglio Parity congelato](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (più di $300 milioni di ETH bloccati per sempre).
 
 Per via di tutte queste problematiche, è imperativo per gli sviluppatori investire risorse nella costruzione di contratti intelligenti sicuri, robusti e resilienti. La sicurezza dei contratti intelligenti è una questione seria, su cui ogni sviluppatore farebbe bene a informarsi. Questa guida tratterà alcune considerazioni sulla sicurezza rivolte agli sviluppatori Ethereum ed esaminerà le risorse per migliorare la sicurezza dei contratti intelligenti.
 
@@ -304,7 +304,7 @@ Non c'è nulla di sbagliato qui, tranne il fatto che l'`Attacker` ha un'altra fu
 - `Victim` infine applica i risultati della prima transazione (e delle successive) al proprio stato, così che il saldo di `Attacker` è impostato su 0
 ```
 
-Riepilogando: poiché il saldo del chiamante non è impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo, consentendo al chiamante di prelevare il proprio saldo numerose volte. Questo tipo di attacco è utilizzabile per sottrarre a un contratto intelligente i suoi fondi, come è avvenuto nella [violazione della DAO del 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Gli attacchi di rientranza sono ancora oggi un problema critico per i contratti intelligenti, come mostrato dagli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
+Riepilogando: poiché il saldo del chiamante non è impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo, consentendo al chiamante di prelevare il proprio saldo numerose volte. Questo tipo di attacco è utilizzabile per sottrarre a un contratto intelligente i suoi fondi, come è avvenuto nella [violazione della DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Gli attacchi di rientranza sono ancora oggi un problema critico per i contratti intelligenti, come mostrato dagli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Come prevenire gli attacchi di rientranza
 
@@ -505,7 +505,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Hacken](https://hacken.io)**: _Controllore della cybersicurezza in Web3 che porta un approccio a 360 gradi alla sicurezza della blockchain._
 
-- **[](https://nethermind.io/smart-contracts-audits)**: _servizi di controllo in Solidity e Carico che garantiscono l'integrità dei contratti intelligenti e la sicurezza degli utenti nell'ecosistema Ethereum e Starknet._
+- **[](https://www.nethermind.io/smart-contract-audits)**: _servizi di controllo in Solidity e Carico che garantiscono l'integrità dei contratti intelligenti e la sicurezza degli utenti nell'ecosistema Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)**: _HashEx è incentrata sul controllo della blockchain e dei controlli intelligenti allo scopo di garantire la sicurezza delle criptovalute, fornendo servizi come lo sviluppo di contratti intelligenti, test di penetrazione o consulenza sulla blockchain._
 
@@ -515,7 +515,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Cyfrin](https://cyfrin.io)**: _motore di sicurezza per Web3, che incuba la criptosicurezza tramite prodotti e servizi di controllo dei contratti intelligenti._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)**: _studio di sicurezza del Web3 che offre controlli di sicurezza per i sistemi della blockchain tramite un team di revisori esperti e strumenti di prim'ordine._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _studio di sicurezza del Web3 che offre controlli di sicurezza per i sistemi della blockchain tramite un team di revisori esperti e strumenti di prim'ordine._
 
 - **[Oxorio](https://oxor.io/)**: _servizi di controllo dei contratti intelligenti e sicurezza della blockchain con esperienza nell'EVM, in Solidity, tecnologie tra catene per cripto-aziende e progetti di DeFi._
 

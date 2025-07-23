@@ -53,6 +53,10 @@ const quizzes = {
     title: "learn-quizzes:page-assets-merge",
     questions: ["merge-1", "merge-2", "merge-3", "merge-4", "merge-5"],
   },
+  gas: {
+    title: "gas",
+    questions: ["gas-1", "gas-2", "gas-3", "gas-4", "gas-5"],
+  },
   daos: {
     title: "DAOs",
     questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
@@ -174,6 +178,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "staking-solo",
+    level: "advanced",
+  },
+  {
+    id: "gas",
     level: "advanced",
   },
 ]

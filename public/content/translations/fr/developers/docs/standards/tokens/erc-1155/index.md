@@ -141,6 +141,6 @@ _Note_ : Toutes les fonctions par lot, y compris le crochet, existent également
 ## Complément d'information {#further-reading}
 
 - [Norme de multijeton ERC-1155](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155 : Documentation Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155 : Documentation Openzeppelin](https://docs.openzeppelin.com/contracts/5.x/erc1155)
 - [ERC-1155 : Répertoire GitHub](https://github.com/enjin/erc-1155)
 - [API NFT d'Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -18,7 +18,7 @@ Bagi yang lebih suka belajar secara visual, tonton Luka menjelaskan langkah-lang
 
 Anda harus masuk ke akun Crowdin atau mendaftar jika belum memiliki akun. Yang diperlukan untuk mendaftar hanyalah akun email dan kata sandi.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Bergabung dengan proyek
 </ButtonLink>
 
@@ -82,7 +82,7 @@ Setelah Anda menyelesaikan terjemahan (yaitu, semua file untuk satu kelompok kon
 
 ### Hubungi kami {#get-in-touch}
 
-Ada pertanyaan? Atau ingin kolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](/discord/) kami
+Ada pertanyaan? Atau ingin berkolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](/discord/) kami
 
 Anda juga dapat menghubungi kami di translations@ethereum.org
 

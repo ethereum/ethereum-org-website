@@ -264,7 +264,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Soporte técnico directo
 
 - [**MegaNode de NodeReal**](https://nodereal.io/)
-  - [Documentos](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Documentos](https://docs.nodereal.io/docs/introduction)
   - Características
     - Servicios de API RPC de confianza, rápidos y escalables
     - API mejorada para desarrolladores de Web3

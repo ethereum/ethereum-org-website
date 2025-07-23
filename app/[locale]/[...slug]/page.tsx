@@ -1,12 +1,20 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
+
+import { SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
-import { getPostSlugs } from "@/lib/utils/md"
+import { dateToString } from "@/lib/utils/date"
+import { getLayoutFromSlug } from "@/lib/utils/layout"
+import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
@@ -21,20 +29,15 @@ const loadData = dataLoader([["gfissues", fetchGFIs]])
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<SlugPageParams>
 }) {
   const { locale, slug: slugArray } = await params
 
   // Check if this specific path is in our valid paths
   const validPaths = await generateStaticParams()
-  const isValidPath = validPaths.some(
-    (path) =>
-      path.locale === locale && path.slug.join("/") === slugArray.join("/")
-  )
+  const isValidPath = checkPathValidity(validPaths, await params)
 
-  if (!isValidPath) {
-    notFound()
-  }
+  if (!isValidPath) notFound()
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -49,20 +52,28 @@ export default async function Page({
     tocItems,
     lastEditLocaleTimestamp,
     isTranslated,
+    contributors,
+    timeToRead,
   } = await getPageData({
     locale,
     slug,
     // TODO: Address component typing error here (flip `FC` types to prop object types)
     // @ts-expect-error Incompatible component function signatures
-    components: { ...mdComponents, ...componentsMapping },
+    baseComponents: mdComponents,
+    componentsMapping,
     scope: {
       gfissues,
     },
   })
 
   // Determine the actual layout after we have the frontmatter
-  const layout = frontmatter.template || "static"
+  const layout = frontmatter.template || getLayoutFromSlug(slug)
   const Layout = layoutMapping[layout]
+
+  // If the page has a published date, format it
+  if ("published" in frontmatter) {
+    frontmatter.published = dateToString(frontmatter.published)
+  }
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -77,6 +88,8 @@ export default async function Page({
         tocItems={tocItems}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
+        contributors={contributors}
+        timeToRead={Math.round(timeToRead.minutes)}
       >
         {content}
       </Layout>
@@ -85,25 +98,45 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const slugs = await getPostSlugs("/", /\/developers/)
+  try {
+    const slugs = await getPostSlugs("/")
 
-  return LOCALES_CODES.flatMap((locale) =>
-    slugs.map((slug) => ({
-      slug: slug.split("/").slice(1),
-      locale,
-    }))
-  )
+    return LOCALES_CODES.flatMap((locale) =>
+      slugs.map((slug) => ({
+        slug: slug.split("/").slice(1),
+        locale,
+      }))
+    )
+  } catch (error) {
+    // If content directory doesn't exist (e.g., in Netlify serverless environment),
+    // return empty array to allow ISR to handle all routes dynamically
+    console.warn(
+      "Content directory not found, enabling full dynamic routing:",
+      error
+    )
+    return []
+  }
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<SlugPageParams>
 }) {
   const { locale, slug } = await params
 
-  return await getMdMetadata({
-    locale,
-    slug,
-  })
+  try {
+    return await getMdMetadata({
+      locale,
+      slug,
+    })
+  } catch (error) {
+    const t = await getTranslations({ locale, namespace: "common" })
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
+  }
 }

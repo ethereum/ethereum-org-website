@@ -1,10 +1,14 @@
 ---
-title: وب 3 چیست و چرا اهمیت دارد?
-description: مقدمه‌ای بر Web3- تکامل بعدی اینترنت - و چرایی اهمیت آن.
+title: وب 3 چیست و چرا اهمیت دارد؟
+description: مقدمه‌ای بر وب 3- تکامل بعدی اینترنت - و چرایی اهمیت آن.
 lang: fa
 ---
 
 # مقدمه ای بر وب 3 {#introduction}
+
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
 
 متمرکزسازی به فراهم‌سازی امکان حضور میلیاردها نفر در اینترنت کمک کرده است و زیرساخت پایدار و مستحکمی را ایجاد کرده است که بر بستر آن بنا شده است. در عین حال، تعداد انگشت‌شماری از نهادهای متمرکز کنترل بخش‌های وسیعی از اینترنت را در دست دارند و به طور یکجانبه تصمیم می‌گیرند که چه چیزی باید مجاز باشد و چه چیزی نباید مجاز باشد.
 
@@ -64,7 +68,7 @@ Web3 امکان مالکیت مستقیم را از طریق [توکن‌های 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>درباره‌ی NFTها بیشتر بدانید</div>
   <ButtonLink href="/nft/">
-    اطلاعات بیشتر درباره NTFها
+    اطلاعات بیشتر درباره NFTها
   </ButtonLink>
 </InfoBanner>
 
@@ -147,11 +151,11 @@ Web3 یک اکوسیستم جوان و در حال تکامل است. گاوین
 
 Web3 تعریف سفت و محکمی ندارد. شرکت‌کنندگان مختلف جامعه، دیدگاه‌های متفاوتی در مورد آن دارند. چند نمونه از آن‌ها در ادامه ذکر شده است:
 
-- [وب 3 چیست؟ توضیح تعامل غیرمتمرکز آینده](https://www.freecodecamp.org/news/what-is-web3/) – _نادر دبیت_
+- [وب 3 چیست؟ توضیح تعامل غیرمتمرکز آینده](https://www.freecodecamp.org/news/what-is-web3) – _نادر دبیت_
 - [درک وب 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ جاش استارک_
 - [چرا وب 3 مهم است](https://future.a16z.com/why-web3-matters/) – _کریس دیکسون_
 - [چرا تمرکززدایی مهم است](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _کریس دیکسون_
 - [فضای وب 3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate?s=r) - _پکی مک‌کورمیک_
+- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate) - _پکی مک‌کورمیک_
 
 <QuizWidget quizKey="web3" />

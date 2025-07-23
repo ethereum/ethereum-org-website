@@ -74,7 +74,7 @@ The Portal Network developers also made the design choice to build three separat
 The Portal Network clients are:
 
 - [Trin](https://github.com/ethereum/trin): written in Rust
-- [Fluffy](https://nimbus.team/docs/fluffy.html): written in Nim
+- [Fluffy](https://fluffy.guide): written in Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): written in Typescript
 - [Shisui](https://github.com/optimism-java/shisui): written in Go
 

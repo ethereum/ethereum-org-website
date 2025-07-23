@@ -207,8 +207,8 @@ Nenhum
 A lista completa das IDs da rede atual está disponível em [chainlist.org](https://chainlist.org). Alguns exemplos comuns são:
 
 - `1`: Ethereum Mainnet
-- `5`: Goerli testnet
 - `11155111`: Sepolia testnet
+- `560048` : Hoodi testnet
 
 **Exemplo**
 

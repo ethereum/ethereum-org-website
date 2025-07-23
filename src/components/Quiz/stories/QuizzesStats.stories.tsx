@@ -23,6 +23,7 @@ const meta = {
       stablecoins: [false, 0],
       "smart-contracts": [false, 0],
       defi: [false, 0],
+      gas: [false, 0],
     },
     totalCorrectAnswers: 0,
   },

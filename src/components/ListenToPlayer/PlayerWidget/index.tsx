@@ -1,14 +1,15 @@
-import { useEffect, useRef, useState } from "react"
-import { IoClose } from "react-icons/io5"
-
+import { useCallback, useEffect, useRef, useState } from "react"
 import {
-  ArrowIcon,
-  AutoplayIcon,
-  CollapseIcon,
-  ExpandIcon,
-  PauseCircleIcon,
-  PlayCircleIcon,
-} from "@/components/icons/listen-to"
+  CirclePause,
+  CirclePlay,
+  Maximize2,
+  Minimize2,
+  SkipBack,
+  SkipForward,
+  X,
+} from "lucide-react"
+
+import AutoplayIcon from "@/components/icons/listen-to/autoplay.svg"
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
@@ -75,15 +76,18 @@ const PlayerWidget = ({
   const [showSpeedMenu, setShowSpeedMenu] = useState(false)
   const speedMenuRef = useRef<HTMLDivElement>(null)
 
-  const calculateNewTime = (clientX: number) => {
-    if (!scrubBarRef.current) return 0
-    const rect = scrubBarRef.current.getBoundingClientRect()
-    const position = Math.max(
-      0,
-      Math.min(1, (clientX - rect.left) / rect.width)
-    )
-    return duration * position
-  }
+  const calculateNewTime = useCallback(
+    (clientX: number) => {
+      if (!scrubBarRef.current) return 0
+      const rect = scrubBarRef.current.getBoundingClientRect()
+      const position = Math.max(
+        0,
+        Math.min(1, (clientX - rect.left) / rect.width)
+      )
+      return duration * position
+    },
+    [duration]
+  )
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true)
@@ -91,11 +95,14 @@ const PlayerWidget = ({
     onSeek(newTime)
   }
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return
-    const newTime = calculateNewTime(e.clientX)
-    onSeek(newTime)
-  }
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging) return
+      const newTime = calculateNewTime(e.clientX)
+      onSeek(newTime)
+    },
+    [isDragging, calculateNewTime, onSeek]
+  )
 
   const handleMouseUp = () => {
     setIsDragging(false)
@@ -110,7 +117,7 @@ const PlayerWidget = ({
       document.removeEventListener("mousemove", handleMouseMove)
       document.removeEventListener("mouseup", handleMouseUp)
     }
-  }, [isDragging])
+  }, [handleMouseMove, isDragging])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -153,7 +160,7 @@ const PlayerWidget = ({
                 })
               }}
             >
-              <CollapseIcon />
+              <Minimize2 className="-m-1 stroke-1" />
             </button>
           </Tooltip>
         </div>
@@ -222,17 +229,21 @@ const PlayerWidget = ({
               title="Previous"
               aria-label={"Previous"}
             >
-              <ArrowIcon />
+              <SkipBack className="stroke-[1.5]" />
             </button>
           </PlayerButton>
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
+              className="text-//[32px] cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
-              {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+              {isPlaying ? (
+                <CirclePause className="size-8 stroke-[1.5]" />
+              ) : (
+                <CirclePlay className="size-8 stroke-[1.5]" />
+              )}
             </button>
           </PlayerButton>
           <PlayerButton tooltipContent={"Next"}>
@@ -247,7 +258,7 @@ const PlayerWidget = ({
               title="Next"
               aria-label={"Next"}
             >
-              <ArrowIcon className="rotate-180" />
+              <SkipForward className="stroke-[1.5]" />
             </button>
           </PlayerButton>
           <PlayerButton
@@ -278,12 +289,16 @@ const PlayerWidget = ({
         <div className="flex flex-row items-center gap-2">
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
+              className="cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
-              {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+              {isPlaying ? (
+                <CirclePause className="size-8" />
+              ) : (
+                <CirclePlay className="size-8" />
+              )}
             </button>
           </PlayerButton>
           <div className="text-sm text-body-medium">
@@ -305,7 +320,7 @@ const PlayerWidget = ({
                 })
               }}
             >
-              <ExpandIcon />
+              <Maximize2 className="stroke-1" />
             </button>
           </PlayerButton>
           <PlayerButton tooltipContent={"Close"}>
@@ -318,7 +333,7 @@ const PlayerWidget = ({
                 handleCloseWidget()
               }}
             >
-              <IoClose />
+              <X className="stroke-[1.5]" />
             </button>
           </PlayerButton>
         </div>
