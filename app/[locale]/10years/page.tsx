@@ -30,7 +30,7 @@ import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import NFTMintCardWrapper from "./_components/NFTMintCardWrapper"
-import TenYearGlobe from "./_components/TenYearGlobe/lazy"
+// import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import Stories from "./_components/UserStories/lazy"
@@ -176,7 +176,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
           <div className="h-[max(fit,260px)] sm:h-[400px] md:h-[500px] lg:h-[600px]">
             {/* CLIENT SIDE, lazy loaded */}
-            <TenYearGlobe
+            {/* <TenYearGlobe
               actionLabel={t("page-10-year-globe-go-to-event")}
               events={Object.values(fetched10YearEvents).flatMap((region) =>
                 region.events.map((event) => ({
@@ -185,7 +185,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   lng: Number(event.lng),
                 }))
               )}
-            />
+            /> */}
           </div>
         </div>
       </div>
