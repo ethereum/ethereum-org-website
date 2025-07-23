@@ -9,16 +9,17 @@ export const shouldShowNFTMintCard = (): boolean => {
     return false
   }
 
+  // TODO: testing purposes, remove before merging
   return true
 
-  try {
-    const mintDate = new Date(mintDateEnv)
-    const now = new Date()
+  // try {
+  //   const mintDate = new Date(mintDateEnv)
+  //   const now = new Date()
 
-    // Check if the mint date has passed (or is current)
-    return now >= mintDate
-  } catch (error) {
-    console.error("Invalid NFT_MINT_DATE format:", mintDateEnv)
-    return false
-  }
+  //   // Check if the mint date has passed (or is current)
+  //   return now >= mintDate
+  // } catch (error) {
+  //   console.error("Invalid NFT_MINT_DATE format:", mintDateEnv)
+  //   return false
+  // }
 }
