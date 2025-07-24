@@ -48,7 +48,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
             {/* Curved text */}
             <Curved10YearsText
               viewBox="0 0 313 186"
-              className="absolute left-1/2 top-0 h-min w-full max-w-[300px] -translate-x-1/2"
+              className="absolute left-1/2 top-0 h-min w-full max-w-[300px] -translate-x-1/2 fill-primary"
               width="100%"
               height="auto"
             />
