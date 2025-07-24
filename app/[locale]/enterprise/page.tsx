@@ -48,6 +48,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import CasesColumn from "./_components/CasesColumn"
+import EnterpriseContactForm from "./_components/ContactForm/lazy"
 import FeatureCard from "./_components/FeatureCard"
 import { ENTERPRISE_MAILTO } from "./constants"
 import type { Case, EcosystemPlayer, Feature } from "./types"
@@ -95,6 +96,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const [
     { txCount, txCostsMedianUsd },
@@ -492,16 +494,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
           <p className="max-w-prose px-6 text-center md:px-8">
             {t("page-enterprise-team-description")}
           </p>
-          <ButtonLink
-            href={ENTERPRISE_MAILTO}
-            customEventOptions={{
-              eventCategory: "enterprise",
-              eventAction: "CTA",
-              eventName: "bottom_mail",
-            }}
-          >
-            {t("page-enterprise-hero-cta")}
-          </ButtonLink>
+          <EnterpriseContactForm
+            buttonLabel={tCommon("set-up-a-call")}
+            emailPlaceholder={tCommon("your-email")}
+            bodyPlaceholder={t("page-enterprise-team-form-placeholder")}
+          />
         </section>
       </MainArticle>
     </div>

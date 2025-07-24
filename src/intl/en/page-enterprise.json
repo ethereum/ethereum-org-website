@@ -40,8 +40,9 @@
   "page-enterprise-reason-3-header": "Reduced risk",
   "page-enterprise-reason-4-content": "The only programmable distributed ledger infrastructure that has never gone down, and has thrived through multiple existential threats.",
   "page-enterprise-reason-4-header": "Battle-tested",
-  "page-enterprise-team-description": "We will answer your questions, help identify potential paths forward, provide technical support, and connect you with relevant industry leaders.",
-  "page-enterprise-team-header": "EF Enterprise Team",
+  "page-enterprise-team-description": "We will answer your questions, help identify potential paths forward, provide technical support and connect you with relevant industry leaders.",
+  "page-enterprise-team-header": "Ethereum Enterprise Team",
+  "page-enterprise-team-form-placeholder": "Tell us about your project",
   "page-enterprise-why-description": "Ethereum supports enterprise compliance with transparent, auditable infrastructure that aligns with GDPR and KYC while protecting sensitive data in private or consortium environments.",
   "page-enterprise-why-header": "Why Ethereum"
 }

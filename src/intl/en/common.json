@@ -415,6 +415,7 @@
   "secret-leader-election": "Secret leader election",
   "security": "Security",
   "see-contributors": "See contributors",
+  "set-up-a-call": "Set up a call",
   "set-up-local-env": "Set up local environment",
   "sharding": "Sharding",
   "show-all": "Show all",
@@ -464,5 +465,6 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
+  "your-email": "Your e-mail",
   "zero-knowledge-proofs": "Zero-knowledge proofs"
 }
