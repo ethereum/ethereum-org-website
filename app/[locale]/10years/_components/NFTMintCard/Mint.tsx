@@ -9,21 +9,20 @@ import {
 
 import { Button } from "@/components/ui/buttons/Button"
 
-import TenYearsNftData from "@/data/TenYearsNFT.json"
-
 import MintConnect from "./views/MintConnect"
 import MintError from "./views/MintError"
 import MintSuccess from "./views/MintSuccess"
 import Connected from "./Connected"
 
+import { useNetworkContract } from "@/hooks/useNetworkContract"
 import { getErrorMessage } from "@/lib/torch"
 
 type MintState = "idle" | "minting" | "success" | "error"
 
 export default function Mint() {
   const { address, isConnected } = useAccount()
-
   const { data: ensName } = useEnsName({ address })
+  const { contractData, isSupportedNetwork } = useNetworkContract()
 
   const [mintState, setMintState] = useState<MintState>("idle")
   const [errorMessage, setErrorMessage] = useState("")
@@ -88,8 +87,8 @@ export default function Mint() {
       setErrorMessage("")
 
       mint({
-        address: TenYearsNftData.address as `0x${string}`,
-        abi: TenYearsNftData.abi,
+        address: contractData.address,
+        abi: contractData.abi,
         functionName: "mint",
       })
     } catch (error) {
@@ -119,10 +118,16 @@ export default function Mint() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <Button size="lg" onClick={handleMint} disabled={mintState === "minting"}>
-        {mintState === "minting" ? "Minting..." : "Mint NFT"}
-      </Button>
+    <div className="flex flex-col items-center justify-center space-y-6">
+      {isSupportedNetwork && (
+        <Button
+          size="lg"
+          onClick={handleMint}
+          disabled={mintState === "minting"}
+        >
+          {mintState === "minting" ? "Minting..." : "Mint NFT"}
+        </Button>
+      )}
 
       <Connected address={address} ensName={ensName} />
     </div>
