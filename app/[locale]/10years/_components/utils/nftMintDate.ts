@@ -3,11 +3,11 @@
  * NEXT_PUBLIC_NFT_MINT_DATE (ISO date string)
  */
 export const shouldShowNFTMintCard = (): boolean => {
-  const mintDateEnv = process.env.NEXT_PUBLIC_NFT_MINT_DATE
+  // const mintDateEnv = process.env.NEXT_PUBLIC_NFT_MINT_DATE
 
-  if (!mintDateEnv) {
-    return false
-  }
+  // if (!mintDateEnv) {
+  //   return false
+  // }
 
   // TODO: testing purposes, remove before merging
   return true
