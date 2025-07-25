@@ -9,7 +9,7 @@ import {
   zerionWallet,
 } from "@rainbow-me/rainbowkit/wallets"
 
-import { mockWallet } from "@/config/mockWallet"
+import { mockWallet } from "../../tests/e2e/fixtures/mockWallet"
 
 const walletGroups = [
   {
