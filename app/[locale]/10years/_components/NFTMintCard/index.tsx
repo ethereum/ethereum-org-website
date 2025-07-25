@@ -65,7 +65,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
         <CardContent className="space-y-6 p-6 text-center">
           <p className="text-body-medium">
             Celebrate a decade of decentralization with a free, limited-time
-            10th anniversary NFT. Mmint yours before time runs out.
+            10th anniversary NFT. Mint yours before time runs out.
           </p>
 
           <div className="space-y-2">
