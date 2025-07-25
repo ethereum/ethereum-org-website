@@ -49,6 +49,7 @@ export default function Mint() {
     writeContract: mint,
     data: hash,
     error: writeError,
+    reset: resetWriteContract,
   } = useWriteContract()
 
   const { isLoading: isConfirming, isSuccess: isConfirmed } =
@@ -58,6 +59,9 @@ export default function Mint() {
 
   // Handle transaction states
   useEffect(() => {
+    // Only process transaction states when wallet is connected
+    if (!isConnected || !address) return
+
     if (isConfirming) {
       setMintState("minting")
     } else if (isConfirmed && hash) {
@@ -69,10 +73,21 @@ export default function Mint() {
       setMintState("error")
       setErrorMessage(getErrorMessage(writeError))
     }
-  }, [isConfirming, isConfirmed, writeError, hash, reportMintSuccess])
+  }, [
+    isConnected,
+    address,
+    isConfirming,
+    isConfirmed,
+    writeError,
+    hash,
+    reportMintSuccess,
+  ])
 
   // Handle queue state changes
   useEffect(() => {
+    // Only process queue states when wallet is connected
+    if (!isConnected || !address) return
+
     if (queueError) {
       setMintState("error")
       setErrorMessage(queueError.message)
@@ -87,7 +102,7 @@ export default function Mint() {
         setErrorMessage("This wallet has already minted")
       }
     }
-  }, [queueState, queueError])
+  }, [isConnected, address, queueState, queueError])
 
   const triggerConfetti = () => {
     const duration = 5000
@@ -157,6 +172,7 @@ export default function Mint() {
     setMintState("idle")
     setErrorMessage("")
     resetQueue()
+    resetWriteContract()
   }
 
   if (mintState === "success") {
