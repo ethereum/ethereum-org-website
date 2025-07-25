@@ -23,6 +23,7 @@
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
     "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
     "update-tutorials": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/update-tutorials-list.ts",
+    "load-test": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/simulate-mint-demand.ts",
     "prepare": "husky",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
