@@ -2,7 +2,6 @@
 
 import { useMemo } from "react"
 
-import { Image } from "@/components/Image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
@@ -11,7 +10,6 @@ import CountDown from "../CountDown"
 
 import Mint from "./Mint"
 
-import TorchCoverImage from "@/public/images/10-year-anniversary/10y-cover.png"
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-curved-heading.svg"
 
 interface NFTMintCardProps {
@@ -36,13 +34,20 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
           <div className="relative">
             {/* Torch/flame video */}
             <div className="flex items-center justify-center pt-12">
-              <Image
-                src={TorchCoverImage}
-                alt="Ethereum 10th Anniversary NFT"
-                width={200}
-                height={200}
-                className="rounded-lg"
-              />
+              <div className="relative max-h-[170px] max-w-[170px] overflow-hidden rounded-full border-4 border-white bg-white">
+                <video
+                  className="pointer-events-none h-full w-full select-none rounded-full object-cover"
+                  src="/videos/10y-video.mp4"
+                  aria-label="Torch video"
+                  autoPlay
+                  loop
+                  muted
+                  poster="/images/10-year-anniversary/10y-cover.png"
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
+                />
+              </div>
             </div>
 
             {/* Curved text */}
