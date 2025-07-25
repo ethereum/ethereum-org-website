@@ -34,7 +34,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
           <div className="relative">
             {/* Torch/flame video */}
             <div className="flex items-center justify-center pt-12">
-              <div className="relative max-h-[170px] max-w-[170px] overflow-hidden rounded-full border-4 border-white bg-white">
+              <div className="relative max-h-[200px] max-w-[200px] overflow-hidden rounded-full border-4 border-white bg-white">
                 <video
                   className="pointer-events-none h-full w-full select-none rounded-full object-cover"
                   src="/videos/10y-video.mp4"
