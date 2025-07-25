@@ -38,7 +38,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
                 <video
                   className="pointer-events-none h-full w-full select-none rounded-full object-cover"
                   src="/videos/10y-video.mp4"
-                  aria-label="Torch video"
+                  aria-label="10th anniversary video"
                   autoPlay
                   loop
                   muted
