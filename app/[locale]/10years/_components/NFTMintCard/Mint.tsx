@@ -176,7 +176,7 @@ export default function Mint() {
   }
 
   if (mintState === "success") {
-    return <MintSuccess />
+    return <MintSuccess txHash={hash} />
   }
 
   if (mintState === "error") {
