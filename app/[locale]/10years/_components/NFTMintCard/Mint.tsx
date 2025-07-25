@@ -13,11 +13,19 @@ import MintConnect from "./views/MintConnect"
 import MintError from "./views/MintError"
 import MintSuccess from "./views/MintSuccess"
 import Connected from "./Connected"
+import QueueStatus from "./QueueStatus"
 
 import { useNetworkContract } from "@/hooks/useNetworkContract"
+import { useNFTQueue } from "@/hooks/useNFTQueue"
 import { getErrorMessage } from "@/lib/torch"
 
-type MintState = "idle" | "minting" | "success" | "error"
+type MintState =
+  | "idle"
+  | "checking"
+  | "queued"
+  | "minting"
+  | "success"
+  | "error"
 
 export default function Mint() {
   const { address, isConnected } = useAccount()
@@ -26,6 +34,16 @@ export default function Mint() {
 
   const [mintState, setMintState] = useState<MintState>("idle")
   const [errorMessage, setErrorMessage] = useState("")
+
+  const {
+    queueState,
+    error: queueError,
+    isLoading: isQueueLoading,
+    requestMint,
+    checkQueueStatus,
+    reportMintSuccess,
+    reset: resetQueue,
+  } = useNFTQueue()
 
   const {
     writeContract: mint,
@@ -42,14 +60,34 @@ export default function Mint() {
   useEffect(() => {
     if (isConfirming) {
       setMintState("minting")
-    } else if (isConfirmed) {
+    } else if (isConfirmed && hash) {
       setMintState("success")
       triggerConfetti()
+      // Report successful mint to backend
+      reportMintSuccess(hash)
     } else if (writeError) {
       setMintState("error")
       setErrorMessage(getErrorMessage(writeError))
     }
-  }, [isConfirming, isConfirmed, writeError])
+  }, [isConfirming, isConfirmed, writeError, hash, reportMintSuccess])
+
+  // Handle queue state changes
+  useEffect(() => {
+    if (queueError) {
+      setMintState("error")
+      setErrorMessage(queueError.message)
+    } else if (queueState) {
+      if (queueState.mintAllowed) {
+        setMintState("idle") // Ready to mint
+      } else if (queueState.estimatedTime) {
+        setMintState("queued") // In queue
+      } else {
+        // Already minted
+        setMintState("error")
+        setErrorMessage("This wallet has already minted")
+      }
+    }
+  }, [queueState, queueError])
 
   const triggerConfetti = () => {
     const duration = 5000
@@ -81,13 +119,24 @@ export default function Mint() {
     }, 250)
   }
 
+  const handleMintClick = async () => {
+    if (queueState?.mintAllowed) {
+      // User is allowed to mint, proceed with transaction
+      handleMint()
+    } else {
+      // Check queue status first
+      setMintState("checking")
+      await requestMint()
+    }
+  }
+
   const handleMint = async () => {
     try {
       setMintState("minting")
       setErrorMessage("")
 
       mint({
-        address: contractData.address,
+        address: contractData.address as `0x${string}`,
         abi: contractData.abi,
         functionName: "mint",
       })
@@ -100,9 +149,14 @@ export default function Mint() {
     }
   }
 
+  const handleCheckStatus = async () => {
+    await checkQueueStatus()
+  }
+
   const resetMintState = () => {
     setMintState("idle")
     setErrorMessage("")
+    resetQueue()
   }
 
   if (mintState === "success") {
@@ -117,15 +171,38 @@ export default function Mint() {
     return <MintConnect />
   }
 
+  if (
+    mintState === "queued" &&
+    queueState?.estimatedTime &&
+    queueState?.delaySeconds
+  ) {
+    return (
+      <QueueStatus
+        estimatedTime={queueState.estimatedTime}
+        delaySeconds={queueState.delaySeconds}
+        onCheckStatus={handleCheckStatus}
+        isLoading={isQueueLoading}
+      />
+    )
+  }
+
   return (
     <div className="flex flex-col items-center justify-center space-y-6">
       {isSupportedNetwork && (
         <Button
           size="lg"
-          onClick={handleMint}
-          disabled={mintState === "minting"}
+          onClick={handleMintClick}
+          disabled={
+            mintState === "minting" ||
+            mintState === "checking" ||
+            isQueueLoading
+          }
         >
-          {mintState === "minting" ? "Minting..." : "Mint NFT"}
+          {mintState === "minting" && "Minting..."}
+          {mintState === "checking" && "Checking eligibility..."}
+          {(mintState === "idle" || (!mintState && queueState?.mintAllowed)) &&
+            "Mint NFT"}
+          {!queueState && mintState === "idle" && "Check Mint Status"}
         </Button>
       )}
 
