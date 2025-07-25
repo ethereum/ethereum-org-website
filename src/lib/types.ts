@@ -1066,6 +1066,8 @@ export type AppCategoryData = {
   slug: string
   description: string
   icon: React.ComponentType<{ className?: string }>
+  metaTitle: string
+  metaDescription: string
 }
 
 export type AppCategories = Record<AppCategoryEnum, AppCategoryData>

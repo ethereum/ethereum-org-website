@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
@@ -127,16 +123,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-apps",
-  })
-
   return await getMetadata({
     locale,
     slug: ["apps"],
-    title: t("page-apps-meta-title"),
-    description: t("page-apps-meta-description"),
+    title: "Top crypto apps on Ethereum",
+    description:
+      "Discover  crypto apps on ethereum: explore DeFi, NFTs, Social, Gaming, Bridges, Privacy, Productivity & DAO dApps. Find trusted on-chain apps to trade, earn, and interact.",
   })
 }
 
