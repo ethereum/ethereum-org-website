@@ -3,11 +3,10 @@ import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 import { Button } from "@/components/ui/buttons/Button"
 import Checkbox from "@/components/ui/checkbox"
-import Modal from "@/components/ui/dialog-modal"
+import InlineLink from "@/components/ui/Link"
 
 export default function MintConnect() {
   const [acceptedTerms, setAcceptedTerms] = useState(false)
-  const [showTermsModal, setShowTermsModal] = useState(false)
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
@@ -40,29 +39,12 @@ export default function MintConnect() {
           />
           <span>
             I accept the{" "}
-            <Button
-              onClick={() => setShowTermsModal(true)}
-              variant="link"
-              className="!px-0"
-            >
+            <InlineLink href="/10years/terms-and-conditions">
               Terms &amp; Conditions
-            </Button>
+            </InlineLink>
           </span>
         </label>
       </div>
-
-      {/* Terms & Conditions Modal */}
-      <Modal
-        open={showTermsModal}
-        onOpenChange={setShowTermsModal}
-        title="Terms & Conditions"
-        size="xl"
-        isSimulator
-      >
-        <div className="max-h-96 overflow-y-auto">
-          <pre className="whitespace-pre-wrap text-sm">Terms & Conditions</pre>
-        </div>
-      </Modal>
     </div>
   )
 }
