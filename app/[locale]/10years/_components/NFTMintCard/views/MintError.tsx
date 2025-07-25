@@ -1,9 +1,4 @@
-import {
-  Alert,
-  AlertContent,
-  AlertDescription,
-  AlertTitle,
-} from "@/components/ui/alert"
+import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
 
 export default function MintError({
@@ -14,11 +9,12 @@ export default function MintError({
   onTryAgain: () => void
 }) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <Alert variant="error">
+    <div className="flex flex-col items-center justify-center space-y-8">
+      <Alert variant="error" className="w-full rounded-none border-none">
         <AlertContent>
-          <AlertTitle>Error</AlertTitle>
-          <AlertDescription>{errorMessage}</AlertDescription>
+          <AlertDescription className="text-error-dark">
+            {errorMessage}
+          </AlertDescription>
         </AlertContent>
       </Alert>
 
