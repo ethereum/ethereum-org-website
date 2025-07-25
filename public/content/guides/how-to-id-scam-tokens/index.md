@@ -13,7 +13,7 @@ There are two ways in which they are likely to deceive you:
 - **Selling you a scam token**, which may look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
 - **Tricking you into signing bad transactions**, usually by directing you into their own user interface. They might try to get you into giving their contracts an allowance on your ERC-20 tokens, exposing sensitive information that gives them access to your assets, etc. These user interfaces might be near-perfect clones of honest sites, but with hidden tricks.
 
-To illustrate what scam tokens are, and how to identify them, we are going to look at an example of one: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
+To illustrate what scam tokens are, and how to identify them, we are going to look at an example of one: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). This token attempts to look like the legitimate [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
 <ExpandableCard
 title="What is ARB?"
@@ -55,7 +55,7 @@ There are several tricks that scam token creators do to appear legitimate.
 
 - **Legitimate owners**. Scam tokens often airdrop significant balances to addresses that can be expected to be legitimate holders of the real token.
 
-  For example, let's look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is _not_ a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  For example, let's look at `wARB` again. [About 16% of the tokens](https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F). This is _not_ a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
   Because the ERC-20 balance of an address is part of the ERC-20 contract's storage, it can be specified by the contract to be whatever the contract developer wishes. It is also possible for a contract to forbid transfers so the legitimate users won't be able to get rid of those scam tokens.
 
@@ -94,4 +94,4 @@ As long as there is value in the world, there are going to be scammers who attem
 - Scam tokens impersonate legitimate tokens, they can use the same name, symbol, etc.
 - Scam tokens _cannot_ use the same contract address.
 - The best source for the address of the legitimate token is the organization whose token it is.
-- Failing that, you can use popular, trusted applications such as [Uniswap](https://app.uniswap.org/#/swap) and [Etherscan](https://etherscan.io/).
+- Failing that, you can use popular, trusted applications such as [Uniswap](https://app.uniswap.org/#/swap) and [Blockscout](https://eth.blockscout.com/).
