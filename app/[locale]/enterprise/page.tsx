@@ -36,6 +36,7 @@ import Visa from "@/components/icons/enterprise/visa.svg"
 import Walmart from "@/components/icons/enterprise/walmart.svg"
 import WFP from "@/components/icons/enterprise/wfp.svg"
 import MainArticle from "@/components/MainArticle"
+import NetlifyFormsDetection from "@/components/NetlifyFormsDetection"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
@@ -284,6 +285,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
   return (
     <div className="mb-12 space-y-12 md:mb-20 md:space-y-20">
+      <NetlifyFormsDetection />
       <HubHero
         header={t("page-enterprise-hero-title")}
         description={t("page-enterprise-hero-subtitle")}
