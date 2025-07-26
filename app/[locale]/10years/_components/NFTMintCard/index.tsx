@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils/cn"
 
 import CountDown from "../CountDown"
 
-import Mint from "./Mint"
+import Connection from "./Connection"
 
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-curved-heading.svg"
 
@@ -85,7 +85,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
             <p className="text-sm text-body-medium">Time remaining to mint</p>
           </div>
 
-          <Mint />
+          <Connection />
         </CardContent>
       </Card>
     </>
