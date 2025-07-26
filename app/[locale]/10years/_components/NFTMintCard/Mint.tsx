@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react"
 import confetti from "canvas-confetti"
+import { Address } from "viem"
 import {
-  useAccount,
   useEnsName,
-  useReadContract,
   useWaitForTransactionReceipt,
   useWriteContract,
 } from "wagmi"
 
 import { Button } from "@/components/ui/buttons/Button"
 
-import MintAlreadyMinted from "./views/MintAlreadyMinted"
-import MintConnect from "./views/MintConnect"
 import MintError from "./views/MintError"
 import MintSuccess from "./views/MintSuccess"
 import Connected from "./Connected"
@@ -28,10 +25,8 @@ type MintState =
   | "minting"
   | "success"
   | "error"
-  | "already_minted"
 
-export default function Mint() {
-  const { address, isConnected } = useAccount()
+export default function Mint({ address }: { address: Address }) {
   const { data: ensName } = useEnsName({ address })
   const { contractData, isSupportedNetwork } = useNetworkContract()
 
@@ -60,25 +55,9 @@ export default function Mint() {
       hash,
     })
 
-  // Check if the address has already minted
-  const { data: hasMinted } = useReadContract({
-    address: contractData.address,
-    abi: contractData.abi,
-    functionName: "hasMinted",
-    args: [address],
-    query: {
-      enabled: !!address && isSupportedNetwork && mintState === "idle",
-    },
-  })
-
   // Handle transaction states
   useEffect(() => {
-    // Only process transaction states when wallet is connected
-    if (!isConnected || !address) return
-
-    if (hasMinted) {
-      setMintState("already_minted")
-    } else if (isConfirming) {
+    if (isConfirming) {
       setMintState("minting")
     } else if (isConfirmed && hash) {
       setMintState("success")
@@ -89,22 +68,10 @@ export default function Mint() {
       setMintState("error")
       setErrorMessage(getErrorMessage(writeError))
     }
-  }, [
-    isConnected,
-    address,
-    isConfirming,
-    isConfirmed,
-    writeError,
-    hash,
-    reportMintSuccess,
-    hasMinted,
-  ])
+  }, [address, isConfirming, isConfirmed, writeError, hash, reportMintSuccess])
 
   // Handle queue state changes
   useEffect(() => {
-    // Only process queue states when wallet is connected
-    if (!isConnected || !address) return
-
     if (queueError) {
       setMintState("error")
       setErrorMessage(queueError.message)
@@ -119,7 +86,7 @@ export default function Mint() {
         setErrorMessage("This wallet has already minted")
       }
     }
-  }, [isConnected, address, queueState, queueError])
+  }, [queueState, queueError])
 
   const triggerConfetti = () => {
     const duration = 5000
@@ -198,14 +165,6 @@ export default function Mint() {
 
   if (mintState === "error") {
     return <MintError errorMessage={errorMessage} onTryAgain={resetMintState} />
-  }
-
-  if (mintState === "already_minted") {
-    return <MintAlreadyMinted />
-  }
-
-  if (!isConnected || !address) {
-    return <MintConnect />
   }
 
   if (
