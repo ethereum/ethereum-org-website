@@ -50,7 +50,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
 import FeatureCard from "./_components/FeatureCard"
-import { ENTERPRISE_MAILTO } from "./constants"
+import { CONTACT_FORM_CHAR_MIN, ENTERPRISE_MAILTO } from "./constants"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -96,7 +96,6 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const [
     { txCount, txCostsMedianUsd },
@@ -483,7 +482,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
         <section
           id="team"
-          className="flex w-full flex-col items-center gap-y-12 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 py-10 md:py-12"
+          className="flex w-full flex-col items-center gap-y-12 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-4 py-10 md:py-12"
         >
           <div className="flex flex-col items-center gap-2">
             <EthGlyph className="size-14" />
@@ -495,9 +494,31 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             {t("page-enterprise-team-description")}
           </p>
           <EnterpriseContactForm
-            buttonLabel={tCommon("set-up-a-call")}
-            emailPlaceholder={tCommon("your-email")}
-            bodyPlaceholder={t("page-enterprise-team-form-placeholder")}
+            strings={{
+              error: {
+                domain: t("page-enterprise-team-form-error-domain"),
+                emailInvalid: t(
+                  "page-enterprise-team-form-error-email-invalid"
+                ),
+                general: t("page-enterprise-team-form-error-general"),
+                minLength: t.rich("page-enterprise-team-form-error-short", {
+                  span: () => CONTACT_FORM_CHAR_MIN,
+                }),
+                required: t("page-enterprise-team-form-error-required"),
+              },
+              placeholder: {
+                input: t("page-enterprise-team-form-placeholder-input"),
+                textarea: t("page-enterprise-team-form-placeholder-textarea"),
+              },
+              button: {
+                label: t("page-enterprise-hero-cta"),
+                loading: t("page-enterprise-team-form-button-loading"),
+              },
+              success: {
+                heading: t("page-enterprise-team-form-success-heading"),
+                message: t("page-enterprise-team-form-success-message"),
+              },
+            }}
           />
         </section>
       </MainArticle>

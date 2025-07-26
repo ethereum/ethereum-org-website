@@ -42,7 +42,16 @@
   "page-enterprise-reason-4-header": "Battle-tested",
   "page-enterprise-team-description": "We will answer your questions, help identify potential paths forward, provide technical support and connect you with relevant industry leaders.",
   "page-enterprise-team-header": "Ethereum Enterprise Team",
-  "page-enterprise-team-form-placeholder": "Tell us about your project",
+  "page-enterprise-team-form-button-loading": "Beaming request",
+  "page-enterprise-team-form-error-domain": "Please use a business, institutional, or organizational email address",
+  "page-enterprise-team-form-error-email-invalid": "Please enter a valid email address",
+  "page-enterprise-team-form-error-general": "Unable to send your message. Please try again or contact us directly at enterprise@ethereum.org",
+  "page-enterprise-team-form-error-required": "Required",
+  "page-enterprise-team-form-error-short": "Please provide at least <span>#</span> characters describing your inquiry",
+  "page-enterprise-team-form-placeholder-input": "Your e-mail",
+  "page-enterprise-team-form-placeholder-textarea": "Tell us about your project",
+  "page-enterprise-team-form-success-heading": "Thanks for reaching out!",
+  "page-enterprise-team-form-success-message": "We've received your message and someone from our enterprise team will get back to you within a few business days.",
   "page-enterprise-why-description": "Ethereum supports enterprise compliance with transparent, auditable infrastructure that aligns with GDPR and KYC while protecting sensitive data in private or consortium environments.",
   "page-enterprise-why-header": "Why Ethereum"
 }
