@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 
 import { CONTACT_FORM_CHAR_MIN } from "../../[locale]/enterprise/constants"
 
-const ENTERPRISE_EMAIL = "enterprise@ethereum.org"
+const ENTERPRISE_EMAIL = "website@ethereum.org" // TODO: Testing only; revert to enterprise
 const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
 const MAX_REQUESTS_PER_WINDOW = 3
 
