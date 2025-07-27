@@ -4,6 +4,7 @@ import { isAddress } from "viem"
 import {
   checkMintEligibility,
   cleanupExpiredQueue,
+  cleanupStaleQueue,
   isMintWindowOpen,
 } from "@/lib/redis"
 
@@ -36,8 +37,9 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    // Clean up expired queue entries
+    // Clean up expired and stale queue entries
     await cleanupExpiredQueue()
+    await cleanupStaleQueue()
 
     // Check current status
     const status = await checkMintEligibility(wallet)

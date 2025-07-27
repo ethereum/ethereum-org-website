@@ -26,7 +26,7 @@ interface RequestResult {
   timestamp: number
 }
 
-const LOCALHOST_URL = "http://localhost:3000/api/request-mint"
+const LOCALHOST_URL = "http://localhost:3000/api/queue-status"
 
 // Test scenarios
 const TEST_SCENARIOS: Record<string, TestConfig> = {
@@ -79,13 +79,7 @@ async function makeMintRequest(wallet: string): Promise<RequestResult> {
   const startTime = Date.now()
 
   try {
-    const response = await fetch(LOCALHOST_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ wallet }),
-    })
+    const response = await fetch(`${LOCALHOST_URL}?wallet=${wallet}`)
 
     const responseData = (await response.json()) as MintResponse
     const responseTime = Date.now() - startTime
