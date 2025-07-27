@@ -52,6 +52,8 @@ import {
   isTorchBurned,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+import { InnovationCard, AdoptionCard } from "./_components/types"
+import { TransferEvent } from "@/lib/torch/etherscan"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -89,14 +91,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const timeLeftLabels = await getTimeUnitTranslations()
   
-  let innovationCards = []
+  let innovationCards: InnovationCard[] = []
   try {
     innovationCards = await getInnovationCards()
   } catch (error) {
     console.error("Failed to fetch innovation cards", error)
   }
 
-  let adoptionCards = []
+  let adoptionCards: AdoptionCard[] = []
   try {
     adoptionCards = await getAdoptionCards()
   } catch (error) {
@@ -104,7 +106,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   }
 
   // Torch NFT data fetching logic
-  let transferEvents = []
+  let transferEvents: TransferEvent[] = []
   try {
     transferEvents = await getTransferEvents()
   } catch (error) {
