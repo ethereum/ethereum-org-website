@@ -88,11 +88,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   })
 
   const timeLeftLabels = await getTimeUnitTranslations()
-  const innovationCards = await getInnovationCards()
-  const adoptionCards = await getAdoptionCards()
+  
+  let innovationCards = []
+  try {
+    innovationCards = await getInnovationCards()
+  } catch (error) {
+    console.error("Failed to fetch innovation cards", error)
+  }
+
+  let adoptionCards = []
+  try {
+    adoptionCards = await getAdoptionCards()
+  } catch (error) {
+    console.error("Failed to fetch adoption cards", error)
+  }
 
   // Torch NFT data fetching logic
-  const transferEvents = await getTransferEvents()
+  let transferEvents = []
+  try {
+    transferEvents = await getTransferEvents()
+  } catch (error) {
+    console.error("Failed to fetch torch transfer events", error)
+  }
 
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
@@ -357,8 +374,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div>
               <h3 className="text-lg font-bold">Time-limited custody:</h3>
               <p>
-                Each holder keeps the torch for 24hours before passing it to the
-                next guardian. On July 30 this NFT wil be burned to celebrate
+                Each holder keeps the torch for 24 hours before passing it to the
+                next guardian. On July 30 this NFT will be burned to celebrate
                 the anniversary.
               </p>
             </div>
