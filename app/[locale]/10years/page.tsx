@@ -23,12 +23,15 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import Curved10YearsText from "./_components/10y.svg"
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import CountDown from "./_components/CountDown/lazy"
+import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
+import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
@@ -37,8 +40,17 @@ import {
   parseStoryDates,
 } from "./_components/utils"
 
+import { routing } from "@/i18n/routing"
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
+import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
+import {
+  getCurrentHolder,
+  getHolderEvents,
+  getTransferEvents,
+  isAddressFiltered,
+  isTorchBurned,
+} from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
 // In seconds
@@ -48,6 +60,7 @@ const loadData = dataLoader(
   [
     ["fetched10YearEvents", fetch10YearEvents],
     ["fetched10YearStories", fetch10YearStories],
+    ["fetchedTorchHolders", fetchTorchHolders],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -59,7 +72,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+  const [fetched10YearEvents, fetched10YearStories, allTorchHolders] =
+    await loadData()
 
   const stories = parseStoryDates(fetched10YearStories, locale)
 
@@ -77,27 +91,66 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
+  // Torch NFT data fetching logic
+  const transferEvents = await getTransferEvents()
+
+  const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
+    allTorchHolders.reduce(
+      (acc, holder) => {
+        acc[holder.address.toLowerCase()] = holder
+        return acc
+      },
+      {} as Record<string, (typeof allTorchHolders)[0]>
+    )
+
+  const torchHoldersEvents = await getHolderEvents(
+    torchHolderMap,
+    transferEvents
+  )
+
+  let isBurned = false
+  try {
+    isBurned = await isTorchBurned()
+  } catch (error) {
+    console.error("Error fetching torch burned status:", error)
+  }
+
+  // Filter out events where the address is in the filtered list
+  const torchHolders = torchHoldersEvents.filter(
+    (holder) => !isAddressFiltered(holder.address)
+  )
+
+  const currentHolder = getCurrentHolder(torchHolders)
+
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <TenYearHero locale={locale} />
 
-      <div className="mt-16 flex w-full flex-col gap-16 px-8 py-4 md:flex-row md:py-8">
+      <div className="w-full px-8 py-12">
+        <CountDown
+          timeLeftLabels={timeLeftLabels}
+          expiredLabel={t("page-10-year-countdown-expired")}
+        />
+      </div>
+
+      <div className="mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8">
         <div className="flex flex-1 flex-col gap-5">
           <div>
             <h1 className="text-2xl font-bold">
               {t("page-10-year-hero-title")}
             </h1>
           </div>
+
           <div className="flex flex-1 flex-col gap-4">
             <p className="text-lg">{t("page-10-year-hero-description")}</p>
             <p className="text-lg">{t("page-10-year-hero-tagline")}</p>
           </div>
         </div>
-        <div className="flex flex-1 flex-row items-center justify-center">
-          {/* CLIENT SIDE, lazy loaded */}
-          <CountDown
-            timeLeftLabels={timeLeftLabels}
-            expiredLabel={t("page-10-year-countdown-expired")}
+        <div className="flex flex-row items-center justify-center">
+          <CurrentTorchHolderCard
+            className="w-[420px]"
+            currentHolder={currentHolder}
+            isBurned={isBurned}
           />
         </div>
       </div>
@@ -236,7 +289,84 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
+      <div
+        id="torch-history"
+        className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
+      >
+        <div className="p-8">
+          <div className="relative">
+            <div className="flex items-center justify-center pt-12 sm:pt-24">
+              <div className="relative max-h-[380px] max-w-[380px]">
+                <video
+                  className="pointer-events-none select-none"
+                  src="/videos/torch.mp4"
+                  aria-label="Torch video"
+                  autoPlay
+                  loop
+                  muted
+                  poster="/images/10-year-anniversary/torch-cover.png"
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
+                />
+                <div className="pointer-events-none absolute top-0 h-full w-full select-none bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat" />
+              </div>
+            </div>
+            {/* Curved text */}
+            <Curved10YearsText
+              viewBox="0 0 356 186"
+              className="absolute left-1/2 top-0 h-min w-full max-w-[600px] -translate-x-1/2"
+              width="100%"
+              height="auto"
+            />
+          </div>
+        </div>
+
+        <TorchHistorySwiper
+          holders={torchHolders}
+          currentHolderAddress={currentHolder?.address || null}
+        />
+
+        <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
+          <div className="flex flex-1 flex-col gap-8">
+            <p>
+              To commemorate this historic milestone, we&apos;re introducing the{" "}
+              <strong>Ethereum Torch NFT</strong> a NFT that embodies the spirit
+              of decentralization and community that has defined Ethereum&apos;s
+              first decade.
+            </p>
+
+            <p>
+              Like a ceremonial flame that travels from community to community,
+              the Ethereum Torch will journey across the global Ethereum
+              ecosystem. This special NFT will be passed from wallet to wallet
+              among carefully selected community members, developers, and
+              builders who have shaped Ethereum&apos;s story over the past 10
+              years.
+            </p>
+          </div>
+          <div className="flex flex-1 flex-col gap-8">
+            <div>
+              <h3 className="text-lg font-bold">One-of-a-kind:</h3>
+              <p>
+                Only one Ethereum Torch NFT exists, making each holder a
+                temporary guardian of Ethereum&apos;s legacy
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold">Time-limited custody:</h3>
+              <p>
+                Each holder keeps the torch for 24hours before passing it to the
+                next guardian. On July 30 this NFT wil be burned to celebrate
+                the anniversary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex w-full flex-col items-center gap-8 px-8 py-8 lg:flex-row">
         <div className="flex flex-1 flex-col gap-6">
           <h2 className="flex flex-col gap-2 font-black">
             <span className="text-4xl text-accent-a">
@@ -353,6 +483,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       </div>
     </MainArticle>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
 }
 
 export async function generateMetadata({

@@ -129,6 +129,7 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 Below are a few projects which can help you install and control clients just with a few clicks:
 
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Quickest and easiest way to setup a full node. One-liner setup tool and node management TUI. Free. Open source. Public goods for Ethereum by solo stakers. ARM64 and AMD64 support.
 - [eth-docker](https://eth-docker.net/) - Automated setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
@@ -467,7 +468,7 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 ## Further reading {#further-reading}
 
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
-- [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
+- [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated often_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
 - [Sample AWS Blockchain Node Runner app for Ethereum Nodes](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, updated often_
 - [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _July 2022_

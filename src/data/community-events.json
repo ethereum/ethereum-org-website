@@ -177,6 +177,16 @@
     "hackathon": true
   },
   {
+    "title": "TUM Blockchain Conference",
+    "startDate": "2025-09-11",
+    "endDate": "2025-09-12",
+    "href": "https://conference.tum-blockchain.com",
+    "location": "Munich, Germany",
+    "description": "Europe's top Blockchain Conference in Munich is back! Discover how Web3 is moving beyond promise to real world impact with top experts.",
+    "imageUrl": "https://conference.tum-blockchain.com/banners/c25-banner.svg",
+    "hackathon": false
+  },
+  {
     "title": "ETHSofia",
     "startDate": "2025-09-23",
     "endDate": "2025-09-25",
@@ -184,6 +194,15 @@
     "location": "Sofia, BGR",
     "description": "The first major Ethereum community conference in Bulgaria. Bringing ETH enthusiasts, professionals, and developers to the IT heart of the Balkans. 23 - 25 September 2025.",
     "imageUrl": "https://framerusercontent.com/assets/OHGIdIaZVjWGAwpmJhN1z6Yuh5g.png"
+  },
+  {
+    "title": "ETHVenice",
+    "startDate": "2025-10-01",
+    "endDate": "2025-10-01",
+    "href": "https://ethvenice.com/",
+    "location": "Venice, ITA",
+    "description": "Join the third edition in the beautiful San Servolo Island (Venice), to learn more about blockchain, technology and with an eye towards art.",
+    "imageUrl": "https://ethvenice.com/org/ethvenice.jpg"
   },
   {
     "title": "ProtoLayers Conference",

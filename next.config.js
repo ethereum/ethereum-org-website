@@ -101,6 +101,10 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "assets.poap.xyz",
         },
+        {
+          protocol: "https",
+          hostname: "unavatar.io",
+        },
       ],
     },
     async headers() {

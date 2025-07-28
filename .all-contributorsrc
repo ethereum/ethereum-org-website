@@ -12883,6 +12883,170 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rvmz",
+      "name": "Roman Mazurenko",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92804957?v=4",
+      "profile": "https://github.com/rvmz",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "standstaff",
+      "name": "ZhengXingRu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/163401255?v=4",
+      "profile": "https://github.com/standstaff",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "imbarty",
+      "name": "barty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/191963641?v=4",
+      "profile": "https://github.com/imbarty",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "futreall",
+      "name": "futreall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86553580?v=4",
+      "profile": "https://github.com/futreall",
+      "contributions": [
+        "translation",
+        "bug"
+      ]
+    },
+    {
+      "login": "0xshikhar",
+      "name": "Shikhar Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64684053?v=4",
+      "profile": "https://github.com/0xshikhar",
+      "contributions": [
+        "code",
+        "content"
+      ]
+    },
+    {
+      "login": "clacladev",
+      "name": "clacla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161903?v=4",
+      "profile": "https://github.com/clacladev",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "baumstern",
+      "name": "Daehyun Paik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1610146?v=4",
+      "profile": "https://a30a.dev/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "dbarabashh",
+      "name": "Dima Barabash",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10253529?v=4",
+      "profile": "https://dbarabashh.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "YashIIT0909",
+      "name": "Yash Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/182656811?v=4",
+      "profile": "https://github.com/YashIIT0909",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "tomrpl",
+      "name": "Reppelin Tom",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75627352?v=4",
+      "profile": "http://www.linkedin.com/in/tom-reppelin",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "mdqst",
+      "name": "Dmitry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98899785?v=4",
+      "profile": "https://mdqst.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "3eph1r0th",
+      "name": "Sephiroth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26237289?v=4",
+      "profile": "https://github.com/3eph1r0th",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "IlyaSmiyukha",
+      "name": "Ilya Smiyukha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39830587?v=4",
+      "profile": "https://ilyasmiyukha.github.io/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "jorgesumle",
+      "name": "Jorge",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14212780?v=4",
+      "profile": "https://github.com/jorgesumle",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "CryptoDelirium",
+      "name": "Crypto Delirium",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6353394?v=4",
+      "profile": "https://github.com/CryptoDelirium",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "alinobrasil",
+      "name": "AK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1214559?v=4",
+      "profile": "https://github.com/alinobrasil",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "0xumarkhatab",
+      "name": "0xumarkhatab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71306738?v=4",
+      "profile": "https://github.com/0xumarkhatab",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "alcueca",
+      "name": "Alberto Cuesta Cañada",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38806121?v=4",
+      "profile": "https://www.linkedin.com/in/albertocuesta/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
