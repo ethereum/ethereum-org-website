@@ -112,7 +112,10 @@ const Page = async ({
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col px-4 md:px-8">
             <h2>Highlights</h2>
-            <AppsHighlight apps={highlightedApps} />
+            <AppsHighlight
+              apps={highlightedApps}
+              matomoCategory={`category_page`}
+            />
           </div>
 
           <div className="flex flex-col px-4 md:px-8">

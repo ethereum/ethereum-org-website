@@ -65,7 +65,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col gap-8 px-4 md:px-8">
           <h2>Highlights</h2>
-          <AppsHighlight apps={highlightedApps} />
+          <AppsHighlight apps={highlightedApps} matomoCategory="apps" />
         </div>
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -77,6 +77,8 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                 app={app}
                 imageSize={24}
                 showDescription={true}
+                matomoCategory="apps"
+                matomoAction="staff"
               />
             ))}
           </div>
@@ -98,6 +100,11 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                 description={category.description}
                 icon={<category.icon className="h-8 w-8" />}
                 href={`/apps/categories/${category.slug}`}
+                matomoEvent={{
+                  eventCategory: "apps",
+                  eventAction: "categories",
+                  eventName: `category name ${category.name}`,
+                }}
               />
             ))}
           </div>

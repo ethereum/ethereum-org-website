@@ -11,6 +11,8 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 interface ScreenshotSwiperProps {
@@ -46,7 +48,14 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
               height={600}
               sizes="(max-width: 640px) 150px, (max-width: 1024px) 200px, 250px"
               className="h-[200px] w-auto cursor-pointer rounded-lg object-contain transition-transform hover:scale-105 md:h-[350px]"
-              onClick={() => handleImageClick(index)}
+              onClick={() => {
+                handleImageClick(index)
+                trackCustomEvent({
+                  eventCategory: "detail",
+                  eventAction: "gallery_open",
+                  eventName: `app name ${appName}`,
+                })
+              }}
             />
           </SwiperSlide>
         ))}

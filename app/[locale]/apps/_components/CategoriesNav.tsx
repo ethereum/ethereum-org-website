@@ -12,7 +12,16 @@ const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
     })
   )
 
-  return <TabNav items={items} activeKey={activeCategory} />
+  return (
+    <TabNav
+      items={items}
+      activeKey={activeCategory}
+      customEventOptions={{
+        eventCategory: "categories_page",
+        eventAction: "navigation",
+      }}
+    />
+  )
 }
 
 export default CategoriesNav
