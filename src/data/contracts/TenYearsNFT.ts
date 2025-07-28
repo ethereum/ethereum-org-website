@@ -9,8 +9,8 @@ export const TEN_YEARS_NFT_CONTRACTS = {
     abi: TenYearsNFT.abi,
   },
   [sepolia.id]: {
-    address: "0x0f150b47894538f0247ba35e69c9a15f81724c1f",
-    blockNumber: 8825480,
+    address: "0x388B10E1F9aC2a0a6bd874d00a971875Ae89Ec6E",
+    blockNumber: 8863414,
     abi: TenYearsNFT.abi,
   },
 } as const
