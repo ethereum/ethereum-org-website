@@ -12,6 +12,7 @@ interface CountDownProps {
   expiredLabel: string
   dateTime: string
   hideZeroUnits?: boolean
+  onExpired?: () => void
 }
 
 const CountDown = ({
@@ -20,6 +21,7 @@ const CountDown = ({
   expiredLabel,
   dateTime,
   hideZeroUnits = false,
+  onExpired,
 }: CountDownProps) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -45,7 +47,10 @@ const CountDown = ({
           seconds: Math.floor((difference / 1000) % 60),
         })
       } else {
-        setIsExpired(true)
+        if (!isExpired) {
+          setIsExpired(true)
+          onExpired?.()
+        }
       }
     }
 
@@ -55,7 +60,7 @@ const CountDown = ({
     const timer = setInterval(calculateTimeLeft, 1000)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [isExpired, onExpired, dateTime])
 
   if (isExpired) {
     return <div className="text-center text-2xl font-bold">{expiredLabel}</div>

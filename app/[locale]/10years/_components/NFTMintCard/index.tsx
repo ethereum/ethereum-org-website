@@ -1,7 +1,8 @@
 "use client"
 
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 
+import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
@@ -16,11 +17,22 @@ interface NFTMintCardProps {
   className?: string
 }
 
+const endTimestamp = process.env.NEXT_PUBLIC_MINT_TIMESTAMP_END
+
+if (!endTimestamp) {
+  throw new Error("NEXT_PUBLIC_MINT_TIMESTAMP_END is not set")
+}
+
 const NFTMintCard = ({ className }: NFTMintCardProps) => {
-  const testDate = useMemo(() => {
-    // for testing purposes, 12 hours from now
-    return new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString()
+  const endDateTime = useMemo(() => {
+    return new Date(Number(endTimestamp) * 1000).toISOString()
   }, [])
+
+  const [isExpired, setIsExpired] = useState(false)
+
+  const handleExpired = () => {
+    setIsExpired(true)
+  }
 
   return (
     <>
@@ -68,24 +80,44 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
             10th anniversary NFT. Mint yours before time runs out.
           </p>
 
-          <div className="space-y-2">
-            <CountDown
-              className="text-primary"
-              // TODO: change to final date!!!
-              dateTime={testDate}
-              hideZeroUnits
-              timeLeftLabels={{
-                days: { singular: "day", plural: "days" },
-                hours: { singular: "hour", plural: "hours" },
-                minutes: { singular: "minute", plural: "minutes" },
-                seconds: { singular: "second", plural: "seconds" },
-              }}
-              expiredLabel="Minting has ended"
-            />
-            <p className="text-sm text-body-medium">Time remaining to mint</p>
-          </div>
+          {isExpired ? (
+            <Alert
+              variant="update"
+              className="w-full rounded-none border-none text-center"
+            >
+              <AlertContent>
+                <AlertTitle className="!text-primary">
+                  The claim period has ended
+                </AlertTitle>
+                <p className="text-primary">
+                  Thank you all for joining the celebration
+                </p>
+              </AlertContent>
+            </Alert>
+          ) : (
+            <>
+              <div className="space-y-2">
+                <CountDown
+                  className="text-primary"
+                  dateTime={endDateTime}
+                  onExpired={handleExpired}
+                  hideZeroUnits
+                  timeLeftLabels={{
+                    days: { singular: "day", plural: "days" },
+                    hours: { singular: "hour", plural: "hours" },
+                    minutes: { singular: "minute", plural: "minutes" },
+                    seconds: { singular: "second", plural: "seconds" },
+                  }}
+                  expiredLabel="Minting has ended"
+                />
+                <p className="text-sm text-body-medium">
+                  Time remaining to mint
+                </p>
+              </div>
 
-          <Connection />
+              <Connection />
+            </>
+          )}
         </CardContent>
       </Card>
     </>

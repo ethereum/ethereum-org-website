@@ -1,25 +1,22 @@
 /**
  * Checks if the NFT mint card should be displayed based on the environment variable
- * NEXT_PUBLIC_NFT_MINT_DATE (ISO date string)
+ * NEXT_PUBLIC_MINT_TIMESTAMP_START (timestamp in seconds)
  */
 export const shouldShowNFTMintCard = (): boolean => {
-  // const mintDateEnv = process.env.NEXT_PUBLIC_NFT_MINT_DATE
+  const mintTimestamp = process.env.NEXT_PUBLIC_MINT_TIMESTAMP_START
 
-  // if (!mintDateEnv) {
-  //   return false
-  // }
+  if (!mintTimestamp) {
+    return false
+  }
 
-  // TODO: testing purposes, remove before merging
-  return true
+  try {
+    const mintDate = new Date(Number(mintTimestamp) * 1000)
+    const now = new Date()
 
-  // try {
-  //   const mintDate = new Date(mintDateEnv)
-  //   const now = new Date()
-
-  //   // Check if the mint date has passed (or is current)
-  //   return now >= mintDate
-  // } catch (error) {
-  //   console.error("Invalid NFT_MINT_DATE format:", mintDateEnv)
-  //   return false
-  // }
+    // Check if the mint date has passed (or is current)
+    return now >= mintDate
+  } catch (error) {
+    console.error("Invalid NFT_MINT_DATE format:", mintTimestamp)
+    return false
+  }
 }
