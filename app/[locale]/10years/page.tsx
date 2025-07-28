@@ -52,6 +52,8 @@ import {
   isTorchBurned,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+import { InnovationCard, AdoptionCard } from "./_components/types"
+import { TransferEvent } from "@/lib/torch/etherscan"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -88,11 +90,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   })
 
   const timeLeftLabels = await getTimeUnitTranslations()
-  const innovationCards = await getInnovationCards()
-  const adoptionCards = await getAdoptionCards()
+  
+  let innovationCards: InnovationCard[] = []
+  try {
+    innovationCards = await getInnovationCards()
+  } catch (error) {
+    console.error("Failed to fetch innovation cards", error)
+  }
+
+  let adoptionCards: AdoptionCard[] = []
+  try {
+    adoptionCards = await getAdoptionCards()
+  } catch (error) {
+    console.error("Failed to fetch adoption cards", error)
+  }
 
   // Torch NFT data fetching logic
-  const transferEvents = await getTransferEvents()
+  let transferEvents: TransferEvent[] = []
+  try {
+    transferEvents = await getTransferEvents()
+  } catch (error) {
+    console.error("Failed to fetch torch transfer events", error)
+  }
 
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
@@ -121,6 +140,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 
   const currentHolder = getCurrentHolder(torchHolders)
+  const eventsEntries = Object.entries(fetched10YearEvents);
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -188,7 +208,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             className="w-full"
           >
             <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
-              {Object.entries(fetched10YearEvents).map(([key, data]) => (
+              {eventsEntries.map(([key, data]) => (
                 <TabsTrigger
                   key={key}
                   value={key}
@@ -199,7 +219,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </TabsTrigger>
               ))}
             </TabsList>
-            {Object.entries(fetched10YearEvents).map(([key, data]) => {
+            {eventsEntries.map(([key, data]) => {
               const events = data.events.sort((a, b) =>
                 a.country.localeCompare(b.country)
               )
@@ -357,8 +377,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div>
               <h3 className="text-lg font-bold">Time-limited custody:</h3>
               <p>
-                Each holder keeps the torch for 24hours before passing it to the
-                next guardian. On July 30 this NFT wil be burned to celebrate
+                Each holder keeps the torch for 24 hours before passing it to the
+                next guardian. On July 30 this NFT will be burned to celebrate
                 the anniversary.
               </p>
             </div>
