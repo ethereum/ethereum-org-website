@@ -108,13 +108,16 @@ This message was sent via the enterprise contact form on ethereum.org/enterprise
     try {
       const formData = new URLSearchParams()
       formData.append("form-name", "enterprise-contact")
+      formData.append("subject", emailSubject)
+      formData.append("bot-field", "") // Honeypot field (should be empty)
       formData.append("email", sanitizedEmail)
       formData.append("message", sanitizedMessage)
-      formData.append("subject", emailSubject)
-      formData.append("ip", clientIP)
-      formData.append("timestamp", new Date().toISOString())
 
-      const netlifyResponse = await fetch("/__forms.html", {
+      // Get the base URL for absolute URL construction
+      const baseUrl =
+        request.nextUrl.origin || `https://${request.headers.get("host")}`
+
+      const netlifyResponse = await fetch(`${baseUrl}/__forms.html`, {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
