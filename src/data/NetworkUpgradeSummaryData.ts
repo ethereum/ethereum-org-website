@@ -92,13 +92,13 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   beaconChainGenesis: {
-    dateTimeAsString: "2020-12-01T12:00:35.000Z",
+    dateTimeAsString: "2020-12-01T12:00:23.000Z",
     ethPriceInUSD: 586.23,
     waybackLink:
       "https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/",
     blockNumber: undefined,
     epochNumber: undefined,
-    slotNumber: 1,
+    slotNumber: 0,
   },
   stakingDepositContractDeployed: {
     dateTimeAsString: "2020-10-14T09:22:52.000Z",
