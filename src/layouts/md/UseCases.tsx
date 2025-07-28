@@ -171,7 +171,9 @@ export const UseCasesLayout = ({
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
     heroImg: frontmatter.image,
-    description: (
+    description: frontmatter.summary ? (
+      <p className="text-lg">{frontmatter.summary}</p>
+    ) : (
       <div>
         <List>
           {summaryPoints.map((point, idx) => (

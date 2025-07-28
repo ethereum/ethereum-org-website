@@ -51,15 +51,14 @@ const Page = async ({ params }: { params: { locale: string } }) => {
         breadcrumbs={<Breadcrumbs slug={"/apps"} />}
         title="Apps"
         subtitle="Discover a list of curated applications that run on ethereum and layer 2 networks"
-        // TODO: Add learn about apps button when we have info page
-        // buttons={[
-        //   {
-        //     href: "/apps/learn",
-        //     label: "Learn about apps",
-        //     variant: "outline",
-        //     isSecondary: true,
-        //   },
-        // ]}
+        buttons={[
+          {
+            href: "/apps/learn",
+            label: "Learn about apps",
+            variant: "outline",
+            isSecondary: true,
+          },
+        ]}
       />
 
       <MainArticle className="flex flex-col gap-32 py-10">
