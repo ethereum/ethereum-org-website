@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
 
-import { CONTACT_FORM_CHAR_MIN } from "../../[locale]/enterprise/constants"
-
 const ENTERPRISE_EMAIL = "enterprise@ethereum.org"
 const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
 const MAX_REQUESTS_PER_WINDOW = 3
@@ -86,16 +84,6 @@ export async function POST(request: NextRequest) {
     if (!validateEmail(sanitizedEmail)) {
       return NextResponse.json(
         { error: "Invalid email format" },
-        { status: 400 }
-      )
-    }
-
-    // Validate message length
-    if (sanitizedMessage.length < CONTACT_FORM_CHAR_MIN) {
-      return NextResponse.json(
-        {
-          error: `Message must be at least ${CONTACT_FORM_CHAR_MIN} characters`,
-        },
         { status: 400 }
       )
     }

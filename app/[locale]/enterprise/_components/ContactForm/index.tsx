@@ -8,15 +8,12 @@ import Input from "@/components/ui/input"
 import { Spinner } from "@/components/ui/spinner"
 import { Textarea } from "@/components/ui/textarea"
 
-import { CONTACT_FORM_CHAR_MIN } from "../../constants"
-
 type EnterpriseContactFormProps = {
   strings: {
     error: {
       domain: string
       emailInvalid: string
       general: string
-      minLength: React.ReactNode // constant injected into span
       required: string
     }
     placeholder: {
@@ -126,8 +123,6 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
     const sanitized = sanitizeInput(message)
 
     if (!sanitized) return strings.error.required
-
-    if (sanitized.length < CONTACT_FORM_CHAR_MIN) return strings.error.minLength
 
     return undefined
   }
