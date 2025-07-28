@@ -26,8 +26,17 @@ export default function Mint({ address }: { address: Address }) {
     reset: resetWriteContract,
   } = useWriteContract()
 
-  const { isSuccess: isConfirmed } = useWaitForTransactionReceipt({
+  const {
+    isSuccess: isConfirmed,
+    isLoading: isReceiptLoading,
+    error: receiptError,
+  } = useWaitForTransactionReceipt({
     hash,
+    query: {
+      refetchOnWindowFocus: false,
+      staleTime: 60 * 60 * 1000,
+      enabled: !!hash,
+    },
   })
 
   const handleMintClick = async () => {
@@ -48,15 +57,38 @@ export default function Mint({ address }: { address: Address }) {
 
   if (writeError) {
     const errorMessage = getErrorMessage(writeError)
-    return <MintError errorMessage={errorMessage} onTryAgain={resetMintState} />
+    return (
+      <MintError
+        errorMessage={errorMessage}
+        onTryAgain={resetMintState}
+        hash={hash}
+      />
+    )
+  }
+
+  if (receiptError) {
+    const errorMessage = getErrorMessage(receiptError)
+    return (
+      <MintError
+        errorMessage={errorMessage}
+        onTryAgain={resetMintState}
+        hash={hash}
+      />
+    )
   }
 
   return (
     <div className="flex flex-col items-center justify-center space-y-6">
       {isSupportedNetwork && (
-        <Button size="lg" onClick={handleMintClick} disabled={isMinting}>
-          {isMinting ? "Minting..." : "Mint NFT"}
-        </Button>
+        <>
+          <Button
+            size="lg"
+            onClick={handleMintClick}
+            disabled={isMinting || isReceiptLoading}
+          >
+            {isMinting || isReceiptLoading ? "Minting..." : "Mint NFT"}
+          </Button>
+        </>
       )}
 
       <Connected address={address} ensName={ensName} />

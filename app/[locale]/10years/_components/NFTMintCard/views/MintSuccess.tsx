@@ -65,7 +65,7 @@ export default function MintSuccess({ txHash }: { txHash?: string }) {
                 href={getTxEtherscanUrl(txHash)}
                 className="text-sm text-white hover:text-white/80"
               >
-                View transaction on etherscan
+                View transaction on Etherscan
               </BaseLink>
             </AlertDescription>
           )}
