@@ -140,6 +140,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 
   const currentHolder = getCurrentHolder(torchHolders)
+  const eventsEntries = Object.entries(fetched10YearEvents);
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -207,7 +208,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             className="w-full"
           >
             <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
-              {Object.entries(fetched10YearEvents).map(([key, data]) => (
+              {eventsEntries.map(([key, data]) => (
                 <TabsTrigger
                   key={key}
                   value={key}
@@ -218,7 +219,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </TabsTrigger>
               ))}
             </TabsList>
-            {Object.entries(fetched10YearEvents).map(([key, data]) => {
+            {eventsEntries.map(([key, data]) => {
               const events = data.events.sort((a, b) =>
                 a.country.localeCompare(b.country)
               )
