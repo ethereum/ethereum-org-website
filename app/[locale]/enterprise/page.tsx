@@ -40,6 +40,7 @@ import NetlifyFormsDetection from "@/components/NetlifyFormsDetection"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
+import Link from "@/components/ui/Link"
 import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
@@ -51,7 +52,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
 import FeatureCard from "./_components/FeatureCard"
-import { CONTACT_FORM_CHAR_MIN, ENTERPRISE_MAILTO } from "./constants"
+import { ENTERPRISE_MAILTO } from "./constants"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -498,14 +499,13 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
           <EnterpriseContactForm
             strings={{
               error: {
-                domain: t("page-enterprise-team-form-error-domain"),
+                domain: t.rich("page-enterprise-team-form-error-domain", {
+                  a: (chunks) => <Link href="/discord/">{chunks}</Link>,
+                }),
                 emailInvalid: t(
                   "page-enterprise-team-form-error-email-invalid"
                 ),
                 general: t("page-enterprise-team-form-error-general"),
-                minLength: t.rich("page-enterprise-team-form-error-short", {
-                  span: () => CONTACT_FORM_CHAR_MIN,
-                }),
                 required: t("page-enterprise-team-form-error-required"),
               },
               placeholder: {
