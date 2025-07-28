@@ -103,6 +103,24 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
       }
     }
 
+  const handleBlur =
+    (field: keyof FormState) =>
+    (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const value = e.target.value
+
+      if (field === "email") {
+        const emailError = validateEmail(value)
+        if (emailError) setErrors((prev) => ({ ...prev, email: emailError }))
+        return
+      }
+      if (field === "message") {
+        const messageError = validateMessage(value)
+        if (messageError)
+          setErrors((prev) => ({ ...prev, message: messageError }))
+        return
+      }
+    }
+
   const validateEmail = (email: string): string | undefined => {
     const sanitized = sanitizeInput(email)
 
@@ -190,6 +208,8 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
           placeholder={strings.placeholder.input}
           value={formData.email}
           onChange={handleInputChange("email")}
+          onBlur={handleBlur("email")}
+          hasError={!!errors.email}
           disabled={submissionState === "submitting"}
         />
         {errors.email && (
@@ -204,6 +224,8 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
           placeholder={strings.placeholder.textarea}
           value={formData.message}
           onChange={handleInputChange("message")}
+          onBlur={handleBlur("message")}
+          hasError={!!errors.message}
           disabled={submissionState === "submitting"}
           className="min-h-[120px]"
         />
