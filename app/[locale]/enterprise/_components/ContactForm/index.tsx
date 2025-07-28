@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 type EnterpriseContactFormProps = {
   strings: {
     error: {
-      domain: string
+      domain: React.ReactNode // Link injected
       emailInvalid: string
       general: string
       required: string

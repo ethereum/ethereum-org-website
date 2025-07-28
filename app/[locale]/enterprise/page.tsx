@@ -40,6 +40,7 @@ import NetlifyFormsDetection from "@/components/NetlifyFormsDetection"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
+import Link from "@/components/ui/Link"
 import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
@@ -498,7 +499,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
           <EnterpriseContactForm
             strings={{
               error: {
-                domain: t("page-enterprise-team-form-error-domain"),
+                domain: t.rich("page-enterprise-team-form-error-domain", {
+                  a: (chunks) => <Link href="/discord/">{chunks}</Link>,
+                }),
                 emailInvalid: t(
                   "page-enterprise-team-form-error-email-invalid"
                 ),

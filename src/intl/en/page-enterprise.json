@@ -43,7 +43,7 @@
   "page-enterprise-team-description": "We will answer your questions, help identify potential paths forward, provide technical support and connect you with relevant industry leaders.",
   "page-enterprise-team-header": "Ethereum Enterprise Team",
   "page-enterprise-team-form-button-loading": "Beaming request",
-  "page-enterprise-team-form-error-domain": "Please use a business, institutional, or organizational email address",
+  "page-enterprise-team-form-error-domain": "Please use a business, institutional, or organizational email address (e.g., no @gmail). For general question join our <a>Discord</a>.",
   "page-enterprise-team-form-error-email-invalid": "Please enter a valid email address",
   "page-enterprise-team-form-error-general": "Unable to send your message. Please try again or contact us directly at enterprise@ethereum.org",
   "page-enterprise-team-form-error-required": "Required",
