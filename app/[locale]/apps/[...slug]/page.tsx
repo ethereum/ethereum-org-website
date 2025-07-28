@@ -186,6 +186,11 @@ const Page = async ({
                     target="_blank"
                     hideArrow
                     className="w-full sm:w-fit"
+                    customEventOptions={{
+                      eventCategory: "detail",
+                      eventAction: `app name ${app.name}`,
+                      eventName: "visit",
+                    }}
                   >
                     Visit {app.name}
                   </ButtonLink>
@@ -198,6 +203,11 @@ const Page = async ({
                           variant="outline"
                           isSecondary
                           hideArrow
+                          customEventOptions={{
+                            eventCategory: "detail",
+                            eventAction: `app name ${app.name}`,
+                            eventName: "twitter",
+                          }}
                         >
                           <Twitter />
                         </ButtonLink>
@@ -209,6 +219,11 @@ const Page = async ({
                           variant="outline"
                           isSecondary
                           hideArrow
+                          customEventOptions={{
+                            eventCategory: "detail",
+                            eventAction: `app name ${app.name}`,
+                            eventName: "discord",
+                          }}
                         >
                           <Discord />
                         </ButtonLink>
@@ -220,6 +235,11 @@ const Page = async ({
                           variant="outline"
                           isSecondary
                           hideArrow
+                          customEventOptions={{
+                            eventCategory: "detail",
+                            eventAction: `app name ${app.name}`,
+                            eventName: "github",
+                          }}
                         >
                           <Github />
                         </ButtonLink>
@@ -234,6 +254,11 @@ const Page = async ({
                           </p>
                           <LinkOverlay
                             href={`/apps/${slugify(nextApp.name)}`}
+                            matomoEvent={{
+                              eventCategory: "detail",
+                              eventAction: `app name ${app.name}`,
+                              eventName: "see_next",
+                            }}
                           />
                         </div>
                         <div className="flex gap-2">
@@ -252,7 +277,14 @@ const Page = async ({
                   <p className="text-primary group-hover:text-primary-hover">
                     {nextApp.name}
                   </p>
-                  <LinkOverlay href={`/apps/${slugify(nextApp.name)}`} />
+                  <LinkOverlay
+                    href={`/apps/${slugify(nextApp.name)}`}
+                    matomoEvent={{
+                      eventCategory: "detail",
+                      eventAction: `app name ${app.name}`,
+                      eventName: "see_next",
+                    }}
+                  />
                 </div>
                 <div className="flex gap-2">
                   <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
@@ -307,6 +339,8 @@ const Page = async ({
                       imageSize={24}
                       showDescription={true}
                       hoverClassName="hover:bg-background-highlight/50"
+                      matomoCategory="detail"
+                      matomoAction="more_apps"
                     />
                   </div>
                 ))}

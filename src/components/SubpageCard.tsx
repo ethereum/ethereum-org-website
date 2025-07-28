@@ -4,6 +4,7 @@ import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
+import { MatomoEventOptions } from "@/lib/utils/matomo"
 
 interface InlineLinkData {
   text: string
@@ -17,6 +18,7 @@ interface SubpageCardProps {
   href: string
   className?: string
   inlineLink?: InlineLinkData
+  matomoEvent?: MatomoEventOptions
 }
 
 const SubpageCard = ({
@@ -26,6 +28,7 @@ const SubpageCard = ({
   href,
   className,
   inlineLink,
+  matomoEvent,
 }: SubpageCardProps) => {
   return (
     <LinkBox
@@ -41,7 +44,7 @@ const SubpageCard = ({
       <p className="m-0 p-0 text-body-medium">{description}</p>
 
       {inlineLink ? (
-        <LinkOverlay href={href} asChild>
+        <LinkOverlay href={href} asChild matomoEvent={matomoEvent}>
           <InlineLink
             href={href}
             className={cn("hover:text-primary-hover", inlineLink.className)}

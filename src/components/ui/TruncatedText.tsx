@@ -4,12 +4,15 @@ import { useState } from "react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+
 interface TruncatedTextProps {
   text: string
   maxLines?: number
   showMoreText?: string
   showLessText?: string
   className?: string
+  matomoEvent: MatomoEventOptions
 }
 
 const TruncatedText = ({
@@ -18,6 +21,7 @@ const TruncatedText = ({
   showMoreText = "Show more",
   showLessText = "Show less",
   className = "",
+  matomoEvent,
 }: TruncatedTextProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -36,6 +40,9 @@ const TruncatedText = ({
                 overflow: "hidden",
               }
             : {}
+        }
+        onClick={() =>
+          matomoEvent && !isExpanded && trackCustomEvent(matomoEvent)
         }
       >
         {text}

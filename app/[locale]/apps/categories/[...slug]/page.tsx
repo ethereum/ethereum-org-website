@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { AppCategoryEnum } from "@/lib/types"
 
@@ -116,7 +112,10 @@ const Page = async ({
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col px-4 md:px-8">
             <h2>Highlights</h2>
-            <AppsHighlight apps={highlightedApps} />
+            <AppsHighlight
+              apps={highlightedApps}
+              matomoCategory={`category_page`}
+            />
           </div>
 
           <div className="flex flex-col px-4 md:px-8">
@@ -140,11 +139,6 @@ export async function generateMetadata({
   const { locale, slug } = await params
   const [firstSegment] = slug
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-apps",
-  })
-
   // Normalize slug to lowercase
   const normalizedSlug = firstSegment.toLowerCase()
 
@@ -163,13 +157,8 @@ export async function generateMetadata({
     notFound()
   }
 
-  // Format category name for display
-  const formattedCategory = category.name
-
-  const title = t("page-apps-meta-title", { category: formattedCategory })
-  const description = t("page-apps-meta-description", {
-    category: formattedCategory,
-  })
+  const title = category.metaTitle
+  const description = category.metaDescription
 
   return await getMetadata({
     locale,

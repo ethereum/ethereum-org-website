@@ -17,6 +17,8 @@ interface AppCardProps {
   hideTag?: boolean
   disableLink?: boolean
   hoverClassName?: string
+  matomoCategory: string
+  matomoAction: string
 }
 
 const AppCard = ({
@@ -27,6 +29,8 @@ const AppCard = ({
   hideTag = false,
   disableLink = false,
   hoverClassName,
+  matomoCategory,
+  matomoAction,
 }: AppCardProps) => {
   const cardContent = (
     <div
@@ -67,6 +71,11 @@ const AppCard = ({
             text={app.description}
             maxLines={2}
             className="text-body group-hover:text-body"
+            matomoEvent={{
+              eventCategory: matomoCategory,
+              eventAction: `${matomoAction}_show_more`,
+              eventName: `app description ${app.name}`,
+            }}
           />
         )}
         <p className="text-sm text-body-medium">
@@ -87,7 +96,15 @@ const AppCard = ({
         hoverClassName || "hover:bg-background-highlight"
       )}
     >
-      <LinkOverlay href={`/apps/${slugify(app.name)}`} className="no-underline">
+      <LinkOverlay
+        href={`/apps/${slugify(app.name)}`}
+        className="no-underline"
+        matomoEvent={{
+          eventCategory: matomoCategory,
+          eventAction: `${matomoAction}`,
+          eventName: `app name ${app.name}`,
+        }}
+      >
         {cardContent}
       </LinkOverlay>
     </LinkBox>

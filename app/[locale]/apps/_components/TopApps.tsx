@@ -13,6 +13,7 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 import { slugify } from "@/lib/utils/url"
 
@@ -78,6 +79,13 @@ const TopApps = ({ appsData }: TopAppsProps) => {
             slidesPerGroup: 3,
           },
         }}
+        onSlideChange={({ activeIndex }) => {
+          trackCustomEvent({
+            eventCategory: "apps",
+            eventAction: "categories",
+            eventName: `topapps_swipe_${activeIndex + 1}`,
+          })
+        }}
       >
         {Object.keys(appsData).map((category) => (
           <SwiperSlide key={category}>
@@ -86,6 +94,13 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                 <LinkOverlay
                   href={`/apps/categories/${slugify(category)}`}
                   className="text-body no-underline"
+                  onClick={() =>
+                    trackCustomEvent({
+                      eventCategory: "apps",
+                      eventAction: "categories",
+                      eventName: `topapps_category_name_${category}`,
+                    })
+                  }
                 >
                   <div className="flex flex-row items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
@@ -128,6 +143,8 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                       imageSize={imageSize}
                       isVertical={isVertical}
                       hideTag={true}
+                      matomoCategory="apps"
+                      matomoAction="top_apps"
                     />
                   </div>
                 ))}

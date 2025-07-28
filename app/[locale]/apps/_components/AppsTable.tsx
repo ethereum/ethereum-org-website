@@ -12,6 +12,8 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import AppCard from "./AppCard"
 
 const AppsTable = ({ apps }: { apps: AppData[] }) => {
@@ -40,7 +42,17 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
       <div className="flex flex-row items-end justify-between border-b pb-2 sm:items-center">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
           <p className="whitespace-nowrap">Filter by</p>
-          <Select value={filterBy} onValueChange={setFilterBy}>
+          <Select
+            value={filterBy}
+            onValueChange={(value) => {
+              setFilterBy(value)
+              trackCustomEvent({
+                eventCategory: "category_page",
+                eventAction: "filter_by",
+                eventName: `subcategory name ${value}`,
+              })
+            }}
+          >
             <SelectTrigger className="min-w-28">
               <SelectValue />
             </SelectTrigger>
@@ -79,7 +91,13 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {filteredApps.map((app) => (
           <div key={app.name}>
-            <AppCard app={app} imageSize={14} hideTag />
+            <AppCard
+              app={app}
+              imageSize={14}
+              hideTag
+              matomoCategory="category_page"
+              matomoAction="apps"
+            />
           </div>
         ))}
       </div>

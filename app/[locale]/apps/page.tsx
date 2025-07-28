@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
@@ -69,7 +65,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col gap-8 px-4 md:px-8">
           <h2>Highlights</h2>
-          <AppsHighlight apps={highlightedApps} />
+          <AppsHighlight apps={highlightedApps} matomoCategory="apps" />
         </div>
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -81,6 +77,8 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                 app={app}
                 imageSize={24}
                 showDescription={true}
+                matomoCategory="apps"
+                matomoAction="staff"
               />
             ))}
           </div>
@@ -102,6 +100,11 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                 description={category.description}
                 icon={<category.icon className="h-8 w-8" />}
                 href={`/apps/categories/${category.slug}`}
+                matomoEvent={{
+                  eventCategory: "apps",
+                  eventAction: "categories",
+                  eventName: `category name ${category.name}`,
+                }}
               />
             ))}
           </div>
@@ -127,16 +130,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-apps",
-  })
-
   return await getMetadata({
     locale,
     slug: ["apps"],
-    title: t("page-apps-meta-title"),
-    description: t("page-apps-meta-description"),
+    title: "Top crypto apps on Ethereum",
+    description:
+      "Discover  crypto apps on ethereum: explore DeFi, NFTs, Social, Gaming, Bridges, Privacy, Productivity & DAO dApps. Find trusted on-chain apps to trade, earn, and interact.",
   })
 }
 
