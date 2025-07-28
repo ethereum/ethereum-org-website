@@ -1,5 +1,5 @@
 ---
-title: Introduction to dapps
+title: Technical introduction to dapps
 description:
 lang: en
 ---
