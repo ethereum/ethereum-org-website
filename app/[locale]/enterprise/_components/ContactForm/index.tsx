@@ -37,7 +37,7 @@ type FormState = {
 }
 
 type FormErrors = {
-  email?: string
+  email?: React.ReactNode
   message?: React.ReactNode
   general?: string
 }
@@ -121,7 +121,7 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
       }
     }
 
-  const validateEmail = (email: string): string | undefined => {
+  const validateEmail = (email: string): React.ReactNode | undefined => {
     const sanitized = sanitizeInput(email)
 
     if (!sanitized) return strings.error.required
