@@ -26,7 +26,7 @@ const CountDown = ({
   const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date("2025-07-30T15:44:00Z")
+    const targetDate = new Date("2025-07-30T15:26:13Z")
 
     const calculateTimeLeft = () => {
       const now = new Date()
