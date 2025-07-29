@@ -52,7 +52,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
 import FeatureCard from "./_components/FeatureCard"
-import { ENTERPRISE_MAILTO } from "./constants"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -62,6 +61,8 @@ import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
+
+const GET_IN_TOUCH_ID = "get-in-touch"
 
 const FeaturesSwiper = dynamic(() => import("./_components/FeaturesSwiper"), {
   ssr: false,
@@ -295,7 +296,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
         buttons={[
           {
             content: t("page-enterprise-hero-cta"),
-            href: ENTERPRISE_MAILTO,
+            href: `#${GET_IN_TOUCH_ID}`,
             matomo: {
               eventCategory: "enterprise",
               eventAction: "CTA",
@@ -484,7 +485,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
         </section>
 
         <section
-          id="team"
+          id={GET_IN_TOUCH_ID}
           className="flex w-full flex-col items-center gap-y-12 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-4 py-10 md:py-12"
         >
           <div className="flex flex-col items-center gap-2">
