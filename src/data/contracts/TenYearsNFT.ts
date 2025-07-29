@@ -1,4 +1,4 @@
-import { hardhat, sepolia } from "wagmi/chains"
+import { hardhat, mainnet, sepolia } from "wagmi/chains"
 
 import TenYearsNFT from "./TenYearsNFT.json"
 
@@ -11,6 +11,11 @@ export const TEN_YEARS_NFT_CONTRACTS = {
   [sepolia.id]: {
     address: "0x388B10E1F9aC2a0a6bd874d00a971875Ae89Ec6E",
     blockNumber: 8863414,
+    abi: TenYearsNFT.abi,
+  },
+  [mainnet.id]: {
+    address: "0x26d85a13212433fe6a8381969c2b0db390a0b0ae",
+    blockNumber: 23023215,
     abi: TenYearsNFT.abi,
   },
 } as const
