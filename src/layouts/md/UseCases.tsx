@@ -64,6 +64,15 @@ export const UseCasesLayout = ({
     ariaLabel: t("template-usecase:template-usecase-dropdown-aria"),
     items: [
       {
+        text: t("template-usecase:template-usecase-dropdown-apps"),
+        href: "/what-are-apps/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "apps",
+        },
+      },
+      {
         text: t("template-usecase:template-usecase-dropdown-defi"),
         href: "/defi/",
         matomo: {

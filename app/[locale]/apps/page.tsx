@@ -53,7 +53,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
         subtitle="Discover a list of curated applications that run on ethereum and layer 2 networks"
         buttons={[
           {
-            href: "/apps/learn",
+            href: "/what-are-apps/",
             label: "Learn about apps",
             variant: "outline",
             isSecondary: true,
