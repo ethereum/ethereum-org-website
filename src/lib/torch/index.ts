@@ -125,10 +125,8 @@ export const getAvatarImage = (holder: TorchHolderMetadata | null) => {
 
   // If there's a Twitter handle, use Twitter profile image
   if (holder.twitter && holder.twitter.trim() !== "") {
-    const twitterHandle = extractTwitterHandle(holder.twitter)
-    if (twitterHandle) {
-      return `https://unavatar.io/x/${twitterHandle}`
-    }
+    const address = holder.address
+    return `/images/10-year-anniversary/torchbearers/${address}.jpg`
   }
 
   // Otherwise, fall back to blockie

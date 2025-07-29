@@ -22,6 +22,9 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+// Import static torch holders data
+import torchHoldersData from "@/data/torchHolders.json"
+
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Curved10YearsText from "./_components/10y.svg"
@@ -45,13 +48,13 @@ import { shouldShowNFTMintCard } from "./_components/utils/nftMintDate"
 import { routing } from "@/i18n/routing"
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
-import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import {
   getCurrentHolder,
   getHolderEvents,
   getTransferEvents,
   isAddressFiltered,
   isTorchBurned,
+  type TorchHolder,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
@@ -62,7 +65,6 @@ const loadData = dataLoader(
   [
     ["fetched10YearEvents", fetch10YearEvents],
     ["fetched10YearStories", fetch10YearStories],
-    ["fetchedTorchHolders", fetchTorchHolders],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -74,8 +76,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories, allTorchHolders] =
-    await loadData()
+  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+
+  const allTorchHolders: TorchHolder[] = torchHoldersData as TorchHolder[]
 
   const stories = parseStoryDates(fetched10YearStories, locale)
 
