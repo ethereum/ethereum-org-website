@@ -141,7 +141,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
       <div
         className={cn(
-          "mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8",
+          "mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-4 py-4 md:flex-row md:py-8",
           showNFTMint && "max-w-none"
         )}
       >
