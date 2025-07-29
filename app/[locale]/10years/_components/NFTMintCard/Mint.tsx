@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Address } from "viem"
 import {
   useEnsName,
@@ -15,7 +16,12 @@ import GasPriceDisplay from "./GasPriceDisplay"
 import { useNetworkContract } from "@/hooks/useNetworkContract"
 import { getErrorMessage } from "@/lib/torch"
 
-export default function Mint({ address }: { address: Address }) {
+interface MintProps {
+  address: Address
+  onSuccess?: (txHash: string) => void
+}
+
+export default function Mint({ address, onSuccess }: MintProps) {
   const { data: ensName } = useEnsName({ address })
   const { contractData, isSupportedNetwork } = useNetworkContract()
 
@@ -39,6 +45,12 @@ export default function Mint({ address }: { address: Address }) {
       enabled: !!hash,
     },
   })
+
+  useEffect(() => {
+    if (isConfirmed && hash && onSuccess) {
+      onSuccess(hash)
+    }
+  }, [isConfirmed, hash, onSuccess])
 
   const handleMintClick = async () => {
     mint({
