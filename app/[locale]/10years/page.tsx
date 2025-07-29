@@ -174,7 +174,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       </div>
 
       <div className="w-full px-4 py-8 md:px-8">
-        <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
+        <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
           <div className="flex flex-col gap-4 text-center">
             <h2 className="text-4xl font-black">Join the livestream</h2>
           </div>
@@ -182,6 +182,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             className="w-full max-w-none"
             id="igPIMF1p5Bo"
             title="Livestream 10 years of Ethereum"
+            poster="maxresdefault"
           />
         </div>
       </div>

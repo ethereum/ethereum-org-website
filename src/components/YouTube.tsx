@@ -22,13 +22,14 @@ type YouTubeProps = {
   start?: string
   title?: string
   className?: string
-}
+} & React.ComponentProps<typeof LiteYouTubeEmbed>
 
 const YouTube = ({
   id,
   start = "0",
   title = "YouTube",
   className,
+  ...props
 }: YouTubeProps) => {
   const params = new URLSearchParams()
   ;+start > 0 && params.set("start", start)
@@ -41,6 +42,7 @@ const YouTube = ({
         title={title}
         params={params.toString()}
         noCookie
+        {...props}
       />
     </figure>
   )
