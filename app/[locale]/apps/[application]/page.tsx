@@ -52,9 +52,9 @@ const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 const Page = async ({
   params,
 }: {
-  params: { locale: string; slug: string[] }
+  params: { locale: string; application: string }
 }) => {
-  const { locale, slug } = await params
+  const { locale, application } = await params
   setRequestLocale(locale)
 
   // Get i18n messages
@@ -62,11 +62,11 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const [appSlug] = slug
+  // const [application] = application
   const [appsData] = await loadData()
   const app = Object.values(appsData)
     .flat()
-    .find((app) => slugify(app.name) === appSlug)!
+    .find((app) => slugify(app.name) === application)!
 
   if (!app) {
     notFound()
@@ -76,7 +76,7 @@ const Page = async ({
   const findNextApp = () => {
     const categoryApps = appsData[app.category] || []
     const currentIndex = categoryApps.findIndex(
-      (a) => slugify(a.name) === appSlug
+      (a) => slugify(a.name) === application
     )
 
     if (currentIndex === -1) return null
@@ -97,7 +97,7 @@ const Page = async ({
     return categoryApps
       .filter((a) => {
         // Exclude the current app
-        if (slugify(a.name) === appSlug) return false
+        if (slugify(a.name) === application) return false
 
         // Check if this app has at least one matching subcategory
         return a.subCategory.some((sub) => currentSubcategories.includes(sub))
@@ -356,16 +356,15 @@ const Page = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<{ locale: string; application: string }>
 }) {
-  const { locale, slug } = await params
-  const [firstSegment] = slug
+  const { locale, application } = await params
 
   const [appsData] = await loadData()
 
   const app = Object.values(appsData)
     .flat()
-    .find((app) => slugify(app.name) === firstSegment)!
+    .find((app) => slugify(app.name) === application)!
 
   if (!app) {
     notFound()
@@ -376,7 +375,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["apps", ...slug],
+    slug: ["apps", application],
     title,
     description,
   })

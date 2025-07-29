@@ -64,6 +64,15 @@ export const UseCasesLayout = ({
     ariaLabel: t("template-usecase:template-usecase-dropdown-aria"),
     items: [
       {
+        text: t("template-usecase:template-usecase-dropdown-apps"),
+        href: "/what-are-apps/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "apps",
+        },
+      },
+      {
         text: t("template-usecase:template-usecase-dropdown-defi"),
         href: "/defi/",
         matomo: {
@@ -171,7 +180,9 @@ export const UseCasesLayout = ({
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
     heroImg: frontmatter.image,
-    description: (
+    description: frontmatter.summary ? (
+      <p className="text-lg">{frontmatter.summary}</p>
+    ) : (
       <div>
         <List>
           {summaryPoints.map((point, idx) => (

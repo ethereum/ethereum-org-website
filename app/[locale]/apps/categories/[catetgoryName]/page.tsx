@@ -45,9 +45,9 @@ const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 const Page = async ({
   params,
 }: {
-  params: { locale: string; slug: string[] }
+  params: { locale: string; catetgoryName: string }
 }) => {
-  const { locale, slug } = await params
+  const { locale, catetgoryName } = await params
   setRequestLocale(locale)
 
   const [appsData] = await loadData()
@@ -58,7 +58,7 @@ const Page = async ({
   const messages = pick(allMessages, requiredNamespaces)
 
   // Normalize slug to lowercase
-  const normalizedSlug = slug[0].toLowerCase()
+  const normalizedSlug = catetgoryName.toLowerCase()
 
   // Find category by matching the slug
   const categoryEntry = Object.entries(appsCategories).find(
@@ -134,13 +134,12 @@ const Page = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<{ locale: string; catetgoryName: string }>
 }) {
-  const { locale, slug } = await params
-  const [firstSegment] = slug
+  const { locale, catetgoryName } = await params
 
   // Normalize slug to lowercase
-  const normalizedSlug = firstSegment.toLowerCase()
+  const normalizedSlug = catetgoryName.toLowerCase()
 
   // Find category by matching the slug
   const categoryEntry = Object.entries(appsCategories).find(
