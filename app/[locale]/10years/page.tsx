@@ -132,7 +132,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       {!showNFTMint && (
         <div className="w-full px-8 py-12">
           <CountDown
-            dateTime="2025-07-30T15:44:00Z"
+            dateTime="2025-07-30T15:26:13Z"
             timeLeftLabels={timeLeftLabels}
             expiredLabel={t("page-10-year-countdown-expired")}
           />
