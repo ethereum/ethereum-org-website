@@ -73,40 +73,34 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
   }, [address, badges])
 
   return (
-    <section className="mx-auto mb-8 flex w-full flex-col gap-8 px-4 lg:flex-row lg:items-start lg:justify-center dark:bg-black">
+    <section className="flex flex-col gap-8 xl:flex-row">
       {/* Already a contributor? section */}
       <CollectiblesContributor badges={badgesWithOwned} />
 
       {/* How it works section */}
-      <div className="flex-1 dark:text-white">
+      <div className="flex-1">
         <section className="mx-auto space-y-6 border-b p-2 pb-6">
           <h2 className="text-4xl">{t("page-collectibles-how-title")}</h2>
-          <div className="flex flex-col items-center justify-center gap-8 py-4 sm:flex-row sm:gap-12">
-            {steps.map((step, idx) => {
-              return (
+          <div className="flex flex-col justify-center gap-8 py-4 md:flex-row md:items-center md:gap-12">
+            {steps.map((step, idx) => (
+              <div
+                key={step.title}
+                className="flex w-full flex-1 flex-row items-center gap-4 max-md:max-w-xs"
+              >
                 <div
-                  key={step.title}
-                  className="flex w-full flex-1 flex-row items-center gap-4 max-md:max-w-xs"
+                  className={cn(
+                    "flex size-16 shrink-0 items-center justify-center rounded-full border text-2xl font-bold shadow-2xl xl:size-20",
+                    step.color
+                  )}
                 >
-                  <div
-                    className={cn(
-                      "flex size-16 items-center justify-center rounded-full border text-2xl font-bold shadow-2xl xl:size-20",
-                      step.color
-                    )}
-                  >
-                    {idx + 1}
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="mb-1 text-left text-base font-bold text-[#3B2C4A] md:text-lg dark:text-white">
-                      {step.title}
-                    </div>
-                    <div className="mb-2 max-w-[180px] text-left text-xs text-gray-500 md:text-sm dark:text-gray-400">
-                      {step.description}
-                    </div>
-                  </div>
+                  {idx + 1}
                 </div>
-              )
-            })}
+                <div className="space-y-1 text-lg">
+                  <div className="font-bold">{step.title}</div>
+                  <div>{step.description}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

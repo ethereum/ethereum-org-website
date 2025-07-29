@@ -30,7 +30,7 @@ const CollectiblesContributor = ({ badges }: CollectiblesContributorProps) => {
   const ownedCount = currentYearBadges.filter((b) => b.owned).length
 
   return (
-    <div className="flex w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 lg:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
+    <div className="flex h-fit w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 xl:sticky xl:top-24 xl:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
       <Image
         src={alreadyContributorImg}
         alt={t("page-collectibles-contributor-img-alt")}

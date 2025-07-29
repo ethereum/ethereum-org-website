@@ -16,12 +16,12 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/Collectibles/lazy"
-import { Badge, Stats } from "./types"
+import { COLLECTIBLES_BASE_URL } from "./constants"
+import type { Badge, Stats } from "./types"
 
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 
 // API endpoints
-const COLLECTIBLES_BASE_URL = "https://ethereum-org-collectibles.vercel.app"
 const BADGES_API = `${COLLECTIBLES_BASE_URL}/api/badges`
 const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
 
@@ -90,41 +90,38 @@ export default async function Page({
             </p>
           </div>
 
-          <div className="grid flex-1 grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
+          <div className="grid min-w-fit grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
             {/* Minted */}
-            <div className="flex w-full flex-col items-center rounded-xl border border-accent-a/10 bg-gradient-to-b from-accent-a/5 to-accent-a/15 p-6 text-accent-a max-md:col-span-2 xl:col-span-2">
-              <div className="text-3xl font-bold md:text-4xl">
+            <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
+              <div className="text-4xl font-bold md:text-6xl">
                 {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
               </div>
-              <div className="text-base font-medium">
+              <div className="text-center font-bold">
                 {t("page-collectibles-stats-minted")}
               </div>
             </div>
             {/* Collectors */}
-            <div className="flex w-full flex-col items-center rounded-xl border border-accent-b/10 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
-              <div className="text-3xl font-bold md:text-4xl">
+            <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
+              <div className="text-4xl font-bold md:text-6xl">
                 {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
               </div>
-              <div className="text-base font-medium">
+              <div className="text-center font-bold">
                 {t("page-collectibles-stats-collectors")}
               </div>
             </div>
             {/* Unique Badges */}
-            <div className="flex w-full flex-col items-center rounded-xl border border-accent-c/10 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
-              <div className="text-3xl font-bold md:text-4xl">
+            <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
+              <div className="text-4xl font-bold md:text-6xl">
                 {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
               </div>
-              <div className="text-base font-medium">
+              <div className="text-center font-bold">
                 {t("page-collectibles-stats-unique-badges")}
               </div>
             </div>
           </div>
         </Section>
 
-        <Section
-          id="main"
-          className="flex w-full flex-col px-4 md:px-12 xl:flex-row"
-        >
+        <Section id="main" className="px-4 md:px-12">
           <CollectiblesPage badges={badges} />
         </Section>
       </MainArticle>
