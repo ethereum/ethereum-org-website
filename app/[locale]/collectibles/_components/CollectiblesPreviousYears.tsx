@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl"
 
 import { Image } from "@/components/Image"
 
-import { Badge } from "../page"
+import type { Badge } from "../types"
 
 interface CollectiblesPreviousYearsProps {
   badges: Badge[]

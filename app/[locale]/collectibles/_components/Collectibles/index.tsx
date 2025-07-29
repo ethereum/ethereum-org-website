@@ -6,7 +6,7 @@ import { WagmiProvider } from "wagmi"
 import { type Locale, RainbowKitProvider } from "@rainbow-me/rainbowkit"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
-import { Badge } from "../../types"
+import type { Badge } from "../../types"
 import CollectiblesContent from "../CollectiblesContent/lazy"
 
 import { rainbowkitConfig } from "@/config/rainbow-kit"
@@ -22,7 +22,13 @@ const CollectiblesPage = ({ badges }: CollectiblesPageProps) => {
   return (
     <WagmiProvider config={rainbowkitConfig}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider locale={locale as Locale}>
+        <RainbowKitProvider
+          locale={locale as Locale}
+          appInfo={{
+            appName: "RainbowKit Demo",
+            learnMoreUrl: "/wallets",
+          }}
+        >
           <CollectiblesContent badges={badges} />
         </RainbowKitProvider>
       </QueryClientProvider>
