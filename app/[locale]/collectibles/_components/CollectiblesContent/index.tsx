@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react"
 import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 
+import { cn } from "@/lib/utils/cn"
+
 import { COLLECTIBLES_BASE_URL } from "../../constants"
 import type { Badge } from "../../types"
 import { type CollectiblesPageProps } from "../Collectibles"
@@ -77,19 +79,20 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
 
       {/* How it works section */}
       <div className="flex-1 dark:text-white">
-        <section className="mx-auto p-2">
-          <h2 className="mb-12 text-2xl font-bold text-[#3B2C4A] dark:text-white">
-            {t("page-collectibles-how-title")}
-          </h2>
-          <div className="mb-6 flex flex-col items-center justify-center gap-8 sm:flex-row sm:gap-12 dark:text-white">
+        <section className="mx-auto space-y-6 border-b p-2 pb-6">
+          <h2 className="text-4xl">{t("page-collectibles-how-title")}</h2>
+          <div className="flex flex-col items-center justify-center gap-8 py-4 sm:flex-row sm:gap-12">
             {steps.map((step, idx) => {
               return (
                 <div
                   key={step.title}
-                  className="flex w-full max-w-xs flex-1 flex-row items-center md:max-w-none"
+                  className="flex w-full flex-1 flex-row items-center gap-4 max-md:max-w-xs"
                 >
                   <div
-                    className={`mr-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-gray-100 bg-white text-2xl font-bold md:h-16 md:w-16 md:text-3xl dark:bg-transparent ${step.color}`}
+                    className={cn(
+                      "flex size-16 items-center justify-center rounded-full border text-2xl font-bold shadow-2xl xl:size-20",
+                      step.color
+                    )}
                   >
                     {idx + 1}
                   </div>
@@ -105,7 +108,6 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
               )
             })}
           </div>
-          <div className="h-px w-full bg-[#E5E7EB] dark:bg-[#23202A]" />
         </section>
 
         <CollectiblesCurrentYear

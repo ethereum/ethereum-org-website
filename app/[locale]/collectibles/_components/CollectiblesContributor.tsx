@@ -6,6 +6,7 @@ import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 
 import { Image } from "@/components/Image"
+import { Progress } from "@/components/ui/progress"
 
 import { CollectiblesConnectButton } from "./CollectiblesConnectButton"
 import { BadgeWithOwned } from "./CollectiblesContent"
@@ -29,18 +30,18 @@ const CollectiblesContributor = ({ badges }: CollectiblesContributorProps) => {
   const ownedCount = currentYearBadges.filter((b) => b.owned).length
 
   return (
-    <div className="mx-auto flex w-full flex-col rounded-2xl border border-[#E5D6FF] bg-[#F6F1FF] px-6 py-6 shadow lg:max-w-xs xl:mt-0 xl:self-start dark:border-[#2D2536] dark:bg-gradient-to-br dark:from-[#2B3A4B] dark:to-[#1B2A3A] dark:text-white dark:shadow-[0_0_12px_#4FC3FF]">
+    <div className="flex w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 lg:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
       <Image
         src={alreadyContributorImg}
         alt={t("page-collectibles-contributor-img-alt")}
         className="h-32 w-32 object-cover"
       />
-      <h3 className="mb-1 mt-4 text-lg font-bold text-[#3B2C4A] dark:text-white">
-        {t("page-collectibles-already-title")}
-      </h3>
-      <p className="mb-4 text-sm text-[#4B445A] dark:text-gray-300">
-        {t("page-collectibles-already-desc")}
-      </p>
+      <div>
+        <h3 className="text-lg">{t("page-collectibles-already-title")}</h3>
+        <p className="text-body-medium">
+          {t("page-collectibles-already-desc")}
+        </p>
+      </div>
 
       <CollectiblesConnectButton />
 
@@ -48,20 +49,17 @@ const CollectiblesContributor = ({ badges }: CollectiblesContributorProps) => {
         <div className="mt-4 w-full">
           <div className="mb-1 flex justify-between text-xs font-medium">
             <span className="font-semibold">
-              {t("page-collectibles-contributor-progress-this-year")}
+              {t("page-collectibles-contributor-progress-label")}
             </span>
             <span>
               {ownedCount}/{currentYearBadges.length}
             </span>
           </div>
-          <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-            <div
-              className="h-2.5 rounded-full bg-purple-500 transition-all"
-              style={{
-                width: `${(ownedCount / (currentYearBadges.length || 1)) * 100}%`,
-              }}
-            />
-          </div>
+          <Progress
+            color="primary"
+            className="h-2.5"
+            value={(ownedCount / (currentYearBadges.length || 1)) * 100}
+          />
           <div className="mt-2 text-center text-xs text-gray-600 dark:text-gray-300">
             {t("page-collectibles-contributor-progress-total", {
               count: badges.filter((b) => b.owned).length,
