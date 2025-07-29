@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils/cn"
 import CountDown from "../CountDown"
 
 import Connection from "./Connection"
+import GasFeeInformation from "./GasFeeInformation"
+import GasPriceDisplay from "./GasPriceDisplay"
 
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-curved-heading.svg"
 
@@ -114,6 +116,10 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
                   Time remaining to mint
                 </p>
               </div>
+
+              <GasFeeInformation />
+
+              <GasPriceDisplay />
 
               <Connection />
             </>
