@@ -3,6 +3,8 @@
 import React from "react"
 import LiteYouTubeEmbed from "react-lite-youtube-embed"
 
+import { cn } from "@/lib/utils/cn"
+
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
 
 /**
@@ -19,13 +21,19 @@ type YouTubeProps = {
   id: string
   start?: string
   title?: string
+  className?: string
 }
 
-const YouTube = ({ id, start = "0", title = "YouTube" }: YouTubeProps) => {
+const YouTube = ({
+  id,
+  start = "0",
+  title = "YouTube",
+  className,
+}: YouTubeProps) => {
   const params = new URLSearchParams()
   ;+start > 0 && params.set("start", start)
   return (
-    <figure className="my-8 max-w-[560px]">
+    <figure className={cn("my-8 max-w-[560px]", className)}>
       <LiteYouTubeEmbed
         aspectHeight={9}
         aspectWidth={16}
