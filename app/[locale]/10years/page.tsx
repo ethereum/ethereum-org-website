@@ -173,9 +173,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <div className="w-full px-4 py-8 md:px-8">
         <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
           <div className="flex flex-col gap-4 text-center">
-            <h2 className="text-4xl font-black">
-              Watch the livestream recording
-            </h2>
+            <h2 className="text-4xl font-black">Join the livestream</h2>
           </div>
           <YouTube
             className="w-full max-w-none"
@@ -275,21 +273,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               )
             })}
           </Tabs>
-        </div>
-      </div>
-      <div className="flex w-full flex-col-reverse gap-8 px-8 py-8 md:flex-row">
-        <div className="flex flex-1 flex-col gap-4 md:gap-8 md:pt-8">
-          <p>{t("page-10-year-events-description-1")}</p>
-          <p>{t("page-10-year-events-description-2")}</p>
-        </div>
-        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
-          <h2 className="text-2xl font-bold">
-            {t("page-10-year-host-event-title")}
-          </h2>
-          <p className="text-md">{t("page-10-year-host-event-description")}</p>
-          <ButtonLink href="https://10yearsofethereum.paperform.co" hideArrow>
-            {t("page-10-year-host-event-cta")}
-          </ButtonLink>
         </div>
       </div>
 
