@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/buttons/Button"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
-export const CollectiblesConnectButton = () => {
+const CollectiblesConnectButton = () => {
   const { t } = useTranslation("page-collectibles")
   return (
     <ConnectButton.Custom>
@@ -32,3 +32,5 @@ export const CollectiblesConnectButton = () => {
     </ConnectButton.Custom>
   )
 }
+
+export default CollectiblesConnectButton

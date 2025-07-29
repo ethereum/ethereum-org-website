@@ -1,19 +1,23 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
+
+import { Image } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
 
 import { COLLECTIBLES_BASE_URL } from "../../constants"
 import type { Badge } from "../../types"
 import { type CollectiblesPageProps } from "../Collectibles"
-import CollectiblesContributor from "../CollectiblesContributor"
+import CollectiblesConnectButton from "../CollectiblesConnectButton/lazy"
 import CollectiblesCurrentYear from "../CollectiblesCurrentYear"
 import CollectiblesPreviousYears from "../CollectiblesPreviousYears"
+import CollectiblesProgress from "../CollectiblesProgress/lazy"
 
 import useTranslation from "@/hooks/useTranslation"
+import alreadyContributorImg from "@/public/images/10-year-anniversary/adoption-1.png"
 
 export type BadgeWithOwned = Badge & {
   owned: boolean
@@ -75,7 +79,23 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
   return (
     <section className="flex flex-col gap-8 xl:flex-row">
       {/* Already a contributor? section */}
-      <CollectiblesContributor badges={badgesWithOwned} />
+      <div className="flex h-fit w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 xl:sticky xl:top-28 xl:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
+        <Image
+          src={alreadyContributorImg}
+          alt={t("page-collectibles-contributor-img-alt")}
+          className="h-32 w-32 object-cover"
+        />
+        <div>
+          <h3 className="text-lg">{t("page-collectibles-already-title")}</h3>
+          <p className="text-body-medium">
+            {t("page-collectibles-already-desc")}
+          </p>
+        </div>
+
+        <CollectiblesConnectButton />
+
+        {isConnected && <CollectiblesProgress badges={badgesWithOwned} />}
+      </div>
 
       {/* How it works section */}
       <div className="flex-1">
