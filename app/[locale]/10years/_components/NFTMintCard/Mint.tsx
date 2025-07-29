@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/buttons/Button"
 import MintError from "./views/MintError"
 import MintSuccess from "./views/MintSuccess"
 import Connected from "./Connected"
+import GasPriceDisplay from "./GasPriceDisplay"
 
 import { useNetworkContract } from "@/hooks/useNetworkContract"
 import { getErrorMessage } from "@/lib/torch"
@@ -79,6 +80,8 @@ export default function Mint({ address }: { address: Address }) {
 
   return (
     <div className="flex flex-col items-center justify-center space-y-6">
+      <GasPriceDisplay className="w-full" />
+
       {isSupportedNetwork && (
         <>
           <Button
