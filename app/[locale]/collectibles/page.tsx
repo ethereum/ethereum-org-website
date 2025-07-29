@@ -15,7 +15,7 @@ import { Section } from "@/components/ui/section"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import CollectiblesPage from "./_components/collectibles"
+import CollectiblesPage from "./_components/Collectibles/lazy"
 import { Badge, Stats } from "./types"
 
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
@@ -67,8 +67,10 @@ export default async function Page({
           description={t("page-collectibles-hero-description")}
           className="dark:bg-black"
         />
-        {/* Already a contributor? + Improve ethereum.org + Stats section */}
-        <Section className="flex flex-col gap-x-6 gap-y-4 px-4 md:px-12 xl:flex-row">
+        <Section
+          id="stats"
+          className="flex flex-col gap-x-6 gap-y-4 px-4 md:px-12 xl:flex-row"
+        >
           <div className="flex flex-[2] flex-col rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 dark:from-primary/20 dark:to-primary/10">
             <h2 className="mb-4 text-xl font-bold text-[#3B2C4A] md:text-2xl dark:text-[#F3F3F5]">
               {t("page-collectibles-improve-title")}
@@ -118,7 +120,13 @@ export default async function Page({
             </div>
           </div>
         </Section>
-        <CollectiblesPage badges={badges} />
+
+        <Section
+          id="main"
+          className="flex w-full flex-col px-4 md:px-12 xl:flex-row"
+        >
+          <CollectiblesPage badges={badges} />
+        </Section>
       </MainArticle>
     </I18nProvider>
   )

@@ -6,9 +6,8 @@ import { WagmiProvider } from "wagmi"
 import { type Locale, RainbowKitProvider } from "@rainbow-me/rainbowkit"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
-import { Badge } from "../types"
-
-import CollectiblesContent from "./CollectiblesContent/lazy"
+import { Badge } from "../../types"
+import CollectiblesContent from "../CollectiblesContent/lazy"
 
 import { rainbowkitConfig } from "@/config/rainbow-kit"
 

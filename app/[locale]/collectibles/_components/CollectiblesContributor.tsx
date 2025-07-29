@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { useTranslations } from "next-intl"
 import { useIsMounted } from "usehooks-ts"
@@ -8,11 +10,13 @@ import { Image } from "@/components/Image"
 import { CollectiblesConnectButton } from "./CollectiblesConnectButton"
 import { BadgeWithOwned } from "./CollectiblesContent"
 
-import alreadyContributorImg from "@/public/images/collectibles/already-contributor.png"
+import alreadyContributorImg from "@/public/images/10-year-anniversary/adoption-1.png"
 
-const CollectiblesContributor: React.FC<{ badges: BadgeWithOwned[] }> = ({
-  badges,
-}) => {
+type CollectiblesContributorProps = {
+  badges: BadgeWithOwned[]
+}
+
+const CollectiblesContributor = ({ badges }: CollectiblesContributorProps) => {
   const t = useTranslations("page-collectibles")
 
   const isMounted = useIsMounted()
@@ -28,7 +32,7 @@ const CollectiblesContributor: React.FC<{ badges: BadgeWithOwned[] }> = ({
     <div className="mx-auto flex w-full flex-col rounded-2xl border border-[#E5D6FF] bg-[#F6F1FF] px-6 py-6 shadow lg:max-w-xs xl:mt-0 xl:self-start dark:border-[#2D2536] dark:bg-gradient-to-br dark:from-[#2B3A4B] dark:to-[#1B2A3A] dark:text-white dark:shadow-[0_0_12px_#4FC3FF]">
       <Image
         src={alreadyContributorImg}
-        alt="Already a contributor?"
+        alt={t("page-collectibles-contributor-img-alt")}
         className="h-32 w-32 object-cover"
       />
       <h3 className="mb-1 mt-4 text-lg font-bold text-[#3B2C4A] dark:text-white">

@@ -6,7 +6,7 @@ import { useAccount } from "wagmi"
 
 import { COLLECTIBLES_BASE_URL } from "../../constants"
 import type { Badge } from "../../types"
-import { type CollectiblesPageProps } from "../collectibles"
+import { type CollectiblesPageProps } from "../Collectibles"
 import CollectiblesContributor from "../CollectiblesContributor"
 import CollectiblesCurrentYear from "../CollectiblesCurrentYear"
 import CollectiblesPreviousYears from "../CollectiblesPreviousYears"
