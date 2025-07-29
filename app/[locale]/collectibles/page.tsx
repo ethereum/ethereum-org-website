@@ -1,13 +1,24 @@
 import { pick } from "lodash"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
+import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
+import MainArticle from "@/components/MainArticle"
+import { Section } from "@/components/ui/section"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/collectibles"
+import { Badge, Stats } from "./types"
+
+import communityHeroImg from "@/public/images/heroes/community-hero.png"
 
 // API endpoints
 const COLLECTIBLES_BASE_URL = "https://ethereum-org-collectibles.vercel.app"
@@ -26,29 +37,13 @@ async function fetchStats() {
   return res.json()
 }
 
-export type Badge = {
-  id: string
-  name: string
-  image: string
-  link: string
-  category: string
-  year: string
-  description: string
-  collectors_count: number
-}
-
-export type Stats = {
-  collectorsCount: number
-  uniqueAddressesCount: number
-  collectiblesCount: number
-}
-
 export default async function Page({
   params,
 }: {
   params: Promise<{ locale: Lang }>
 }) {
   const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "page-collectibles" })
   setRequestLocale(locale)
 
   // Fetch data
@@ -64,7 +59,83 @@ export default async function Page({
 
   return (
     <I18nProvider locale={locale} messages={pickedMessages}>
-      <CollectiblesPage badges={badges} stats={stats} locale={locale} />
+      <MainArticle className="space-y-12 md:space-y-20">
+        <HubHero
+          heroImg={communityHeroImg}
+          title={t("page-collectibles-hero-title")}
+          header={t("page-collectibles-hero-header")}
+          description={t("page-collectibles-hero-description")}
+          className="dark:bg-black"
+        />
+        {/* Already a contributor? + Improve ethereum.org + Stats section */}
+        <Section className="flex flex-col gap-x-6 gap-y-4 px-4 md:px-12 xl:flex-row">
+          <div className="flex flex-[2] flex-col rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 dark:from-primary/20 dark:to-primary/10">
+            <h2 className="mb-4 text-xl font-bold text-[#3B2C4A] md:text-2xl dark:text-[#F3F3F5]">
+              {t("page-collectibles-improve-title")}
+            </h2>
+            <p className="mb-4 text-sm leading-relaxed text-[#4B445A] md:text-base dark:text-[#F3F3F5]">
+              {t.rich("page-collectibles-improve-desc-1", {
+                strong: (chunks) => <span className="font-bold">{chunks}</span>,
+              })}
+            </p>
+            <p className="text-sm leading-relaxed text-[#4B445A] md:text-base dark:text-[#F3F3F5]">
+              {t.rich("page-collectibles-improve-desc-2", {
+                strong: (chunks) => <span className="font-bold">{chunks}</span>,
+                em: (chunks) => (
+                  <span className="font-bold text-[#A259FF]">{chunks}</span>
+                ),
+              })}
+            </p>
+          </div>
+
+          <div className="grid flex-1 grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
+            {/* Minted */}
+            <div className="flex w-full flex-col items-center rounded-xl border border-accent-a/10 bg-gradient-to-b from-accent-a/5 to-accent-a/15 p-6 text-accent-a max-md:col-span-2 xl:col-span-2">
+              <div className="text-3xl font-bold md:text-4xl">
+                {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
+              </div>
+              <div className="text-base font-medium">
+                {t("page-collectibles-stats-minted")}
+              </div>
+            </div>
+            {/* Collectors */}
+            <div className="flex w-full flex-col items-center rounded-xl border border-accent-b/10 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
+              <div className="text-3xl font-bold md:text-4xl">
+                {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
+              </div>
+              <div className="text-base font-medium">
+                {t("page-collectibles-stats-collectors")}
+              </div>
+            </div>
+            {/* Unique Badges */}
+            <div className="flex w-full flex-col items-center rounded-xl border border-accent-c/10 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
+              <div className="text-3xl font-bold md:text-4xl">
+                {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
+              </div>
+              <div className="text-base font-medium">
+                {t("page-collectibles-stats-unique-badges")}
+              </div>
+            </div>
+          </div>
+        </Section>
+        <CollectiblesPage badges={badges} />
+      </MainArticle>
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "page-collectibles" })
+  return await getMetadata({
+    locale,
+    slug: ["collectibles"],
+    title: t("page-collectibles-hero-header"),
+    description: t("page-collectibles-hero-description"),
+    image: "/images/heroes/community-hero.png",
+  })
 }
