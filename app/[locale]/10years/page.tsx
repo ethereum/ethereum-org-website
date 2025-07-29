@@ -15,6 +15,7 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -30,7 +31,6 @@ import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import NFTMintCardWrapper from "./_components/NFTMintCardWrapper"
-// import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import Stories from "./_components/UserStories/lazy"
@@ -171,28 +171,17 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       </div>
 
       <div className="w-full px-4 py-8 md:px-8">
-        <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
-          <div className="flex max-w-[770px] flex-col gap-4 text-center">
+        <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
+          <div className="flex flex-col gap-4 text-center">
             <h2 className="text-4xl font-black">
-              {t("page-10-year-join-party-title")}
+              Watch the livestream recording
             </h2>
-            <p className="text-md">
-              {t("page-10-year-join-party-description")}
-            </p>
           </div>
-          <div className="h-[max(fit,260px)] sm:h-[400px] md:h-[500px] lg:h-[600px]">
-            {/* CLIENT SIDE, lazy loaded */}
-            {/* <TenYearGlobe
-              actionLabel={t("page-10-year-globe-go-to-event")}
-              events={Object.values(fetched10YearEvents).flatMap((region) =>
-                region.events.map((event) => ({
-                  ...event,
-                  lat: Number(event.lat),
-                  lng: Number(event.lng),
-                }))
-              )}
-            /> */}
-          </div>
+          <YouTube
+            className="w-full max-w-none"
+            id="igPIMF1p5Bo"
+            title="Livestream 10 years of Ethereum"
+          />
         </div>
       </div>
 
