@@ -66,22 +66,21 @@ export default async function Page({
           title={t("page-collectibles-hero-title")}
           header={t("page-collectibles-hero-header")}
           description={t("page-collectibles-hero-description")}
-          className="dark:bg-black"
         />
         <Section
           id="stats"
-          className="flex flex-col gap-x-6 gap-y-4 px-4 md:px-12 xl:flex-row"
+          className="flex flex-col gap-x-6 gap-y-4 px-4 xl:flex-row xl:px-12"
         >
-          <div className="flex flex-[2] flex-col rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 dark:from-primary/20 dark:to-primary/10">
-            <h2 className="mb-4 text-xl font-bold text-[#3B2C4A] md:text-2xl dark:text-[#F3F3F5]">
+          <div className="flex-[2] space-y-4 rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
+            <h2 className="text-3xl md:text-4xl">
               {t("page-collectibles-improve-title")}
             </h2>
-            <p className="mb-4 text-sm leading-relaxed text-[#4B445A] md:text-base dark:text-[#F3F3F5]">
+            <p>
               {t.rich("page-collectibles-improve-desc-1", {
                 strong: (chunks) => <span className="font-bold">{chunks}</span>,
               })}
             </p>
-            <p className="text-sm leading-relaxed text-[#4B445A] md:text-base dark:text-[#F3F3F5]">
+            <p>
               {t.rich("page-collectibles-improve-desc-2", {
                 strong: (chunks) => <span className="font-bold">{chunks}</span>,
                 a: (chunks) => (
@@ -124,7 +123,7 @@ export default async function Page({
           </div>
         </Section>
 
-        <Section id="main" className="px-4 md:px-12">
+        <Section id="main" className="px-4 xl:px-12">
           <h2 className="sr-only">
             {t("page-collectibles-current-year-title")}
           </h2>
