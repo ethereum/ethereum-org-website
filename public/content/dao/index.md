@@ -135,7 +135,7 @@ _Typically used for decentralized development and governance of protocols and [d
 - [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
 - [Tally.xyz list of DAOs](https://www.tally.xyz)
-- [DeGov.Ai list of DAOs](https://apps.degov.ai/)
+- [DeGov.AI list of DAOs](https://apps.degov.ai/)
 
 ### Start a DAO {#start-a-dao}
 
