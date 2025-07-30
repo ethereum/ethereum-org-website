@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import {
   CircleCheckIcon,
@@ -527,7 +529,8 @@ const CollectiblesCurrentYear = ({
               <div className="text-primary">
                 {badge.name
                   .replace(/ - ethereum.org community/, "")
-                  .replace(/^ethereum.org /, "")}
+                  .replace(/^ethereum.org /, "")
+                  .trim()}
               </div>
             </div>
           ))}

@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { useTranslations } from "next-intl"
 
@@ -11,9 +13,9 @@ interface CollectiblesPreviousYearsProps {
   badges: Badge[]
 }
 
-const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
+const CollectiblesPreviousYears = ({
   badges,
-}) => {
+}: CollectiblesPreviousYearsProps) => {
   const t = useTranslations("page-collectibles")
   const currentYear = new Date().getFullYear().toString()
   const previousYears = badges.filter((badge) => badge.year !== currentYear)
@@ -74,7 +76,7 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
                   return (
                     <div
                       key={badge.id}
-                      className="flex flex-col items-center gap-2 rounded-xl bg-white p-2 text-center dark:bg-[#23202A]"
+                      className="flex flex-col items-center gap-2 rounded-xl p-2 text-center"
                     >
                       <Link href={badge.link} hideArrow>
                         <Image
