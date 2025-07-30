@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { useLocale } from "next-intl"
 
 import { Progress } from "@/components/ui/progress"
 
@@ -14,34 +15,51 @@ type CollectiblesProgressProps = {
 
 const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
   const { t } = useTranslation("page-collectibles")
+  const locale = useLocale()
 
   const currentYear = new Date().getFullYear().toString()
   const currentYearBadges = badges.filter(
     (badge) => String(badge.year) === currentYear
   )
   const ownedCount = currentYearBadges.filter((b) => b.owned).length
+  const contributorSinceYear = badges
+    .filter((b) => b.owned)
+    .reduce(
+      // Return the oldest badge date
+      (prev, curr) => {
+        const currYear = Number(curr.year)
+        return !isNaN(currYear) && currYear < prev ? currYear : prev
+      },
+      Infinity
+    )
 
   return (
-    <div className="mt-4 w-full">
-      <div className="mb-1 flex justify-between text-xs font-medium">
-        <span className="font-semibold">
-          {t("page-collectibles-contributor-progress-label")}
-        </span>
-        <span>
-          {ownedCount}/{currentYearBadges.length}
-        </span>
+    <>
+      {contributorSinceYear < Infinity && (
+        <p className="text-body-medium">
+          Contributing since:{" "}
+          {new Intl.DateTimeFormat(locale, {
+            year: "numeric",
+          }).format(new Date().setFullYear(contributorSinceYear))}
+        </p>
+      )}
+      <div className="space-y-1">
+        <div className="flex justify-between text-sm">
+          <span className="font-bold">
+            {t("page-collectibles-contributor-progress-label")}
+          </span>
+          <span>
+            {ownedCount}/{currentYearBadges.length}
+          </span>
+        </div>
+
+        <Progress
+          color="primary"
+          className="h-2.5"
+          value={(ownedCount / (currentYearBadges.length || 1)) * 100}
+        />
       </div>
-      <Progress
-        color="primary"
-        className="h-2.5"
-        value={(ownedCount / (currentYearBadges.length || 1)) * 100}
-      />
-      <div className="mt-2 text-center text-xs text-gray-600 dark:text-gray-300">
-        {t("page-collectibles-contributor-progress-total", {
-          count: badges.filter((b) => b.owned).length,
-        })}
-      </div>
-    </div>
+    </>
   )
 }
 

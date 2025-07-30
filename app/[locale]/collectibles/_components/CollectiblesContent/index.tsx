@@ -77,13 +77,14 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
   }, [address, badges])
 
   return (
-    <section className="flex flex-col gap-8 xl:flex-row">
+    <div className="flex flex-col gap-8 xl:flex-row">
       {/* Already a contributor? section */}
       <div className="flex h-fit w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 xl:sticky xl:top-28 xl:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
         <Image
           src={alreadyContributorImg}
           alt={t("page-collectibles-contributor-img-alt")}
           className="h-32 w-32 object-cover"
+          sizes="128px"
         />
         <div>
           <h3 className="text-lg">{t("page-collectibles-already-title")}</h3>
@@ -135,7 +136,7 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
           badges={isMounted() && isConnected ? addressBadges : badges}
         />
       </div>
-    </section>
+    </div>
   )
 }
 

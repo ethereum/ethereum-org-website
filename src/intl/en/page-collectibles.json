@@ -60,6 +60,5 @@
   "page-collectibles-previous-years-badge-count": "{count, plural, =0 {no badges} =1 {1 badge} other {# badges}}",
   "page-collectibles-previous-years-collectors-count": "{count, plural, =0 {no collectors} =1 {1 collector} other {# collectors}}",
   "page-collectibles-previous-years-no-badges": "No badges minted",
-  "page-collectibles-contributor-progress-label": "Claimed",
-  "page-collectibles-contributor-progress-total": "All time: {count, plural, =0 {no badges} =1 {1 badge} other {# badges}}"
+  "page-collectibles-contributor-progress-label": "Claimed"
 }
