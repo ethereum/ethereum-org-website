@@ -7,6 +7,8 @@ import {
   Zap,
 } from "lucide-react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { Image, ImageProps } from "@/components/Image"
 import Translation from "@/components/Translation"
 import {
@@ -17,7 +19,12 @@ import {
 } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
 import Link, { LinkProps } from "@/components/ui/Link"
-import { ListItem, OrderedList } from "@/components/ui/list"
+import {
+  ListItem,
+  ListProps,
+  OrderedList,
+  UnorderedList,
+} from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -98,6 +105,29 @@ const HighlightCardFooter = ({
       {children}
     </Link>
   </div>
+)
+
+const CheckList = ({ className, ...props }: ListProps) => (
+  <UnorderedList
+    className={cn(
+      "m-0 my-2 list-none space-y-2 text-xs text-body-medium",
+      className
+    )}
+    {...props}
+  />
+)
+
+type CheckItemProps = ChildOnlyProp & {
+  owned?: boolean
+}
+
+const CheckItem = ({ children, owned }: CheckItemProps) => (
+  <ListItem className="mb-0 flex items-center gap-2">
+    <CircleCheckIcon
+      className={cn("size-4 text-body-medium", owned && "text-success")}
+    />
+    {children}
+  </ListItem>
 )
 
 type CollectiblesCurrentYearProps = {
@@ -250,36 +280,25 @@ const CollectiblesCurrentYear = ({
                 alt="Developer"
                 href={developerBadge.link}
               >
-                <div className="mb-1 mt-1 text-left text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
+                <h4 className="text-lg font-bold">
                   {t("page-collectibles-code-content-developer-title")}
-                </div>
-                <div className="mb-1 text-left text-[10px] text-gray-500 md:text-sm dark:text-gray-300">
-                  {t("page-collectibles-code-content-developer-desc")}
-                </div>
-                <ul className="mb-4 ml-0 list-none text-left text-[10px] text-gray-500 md:text-xs dark:text-gray-400">
-                  <li className="mb-1">
-                    <CircleCheckIcon
-                      className={`mr-2 inline h-4 w-auto align-middle ${developerBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                    />
+                </h4>
+                <p>{t("page-collectibles-code-content-developer-desc")}</p>
+                <CheckList>
+                  <CheckItem owned={developerBadge.owned}>
                     {t("page-collectibles-code-content-developer-1pr")}
-                  </li>
+                  </CheckItem>
                   {developer5Badge && (
-                    <li className="mb-1">
-                      <CircleCheckIcon
-                        className={`mr-2 inline h-4 w-auto align-middle ${developer5Badge.owned ? "text-green-500" : "text-gray-300"}`}
-                      />
+                    <CheckItem owned={developer5Badge.owned}>
                       {t("page-collectibles-code-content-developer-5pr")}
-                    </li>
+                    </CheckItem>
                   )}
                   {developer10Badge && (
-                    <li className="mb-1">
-                      <CircleCheckIcon
-                        className={`mr-2 inline h-4 w-auto align-middle ${developer10Badge.owned ? "text-green-500" : "text-gray-300"}`}
-                      />
+                    <CheckItem owned={developer10Badge.owned}>
                       {t("page-collectibles-code-content-developer-10pr")}
-                    </li>
+                    </CheckItem>
                   )}
-                </ul>
+                </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="https://github.com/ethereum/ethereum-org-website/issues">
                 {t("page-collectibles-get-started")}
@@ -297,20 +316,15 @@ const CollectiblesCurrentYear = ({
                 alt="Developer"
                 href={writingBadge.link}
               >
-                <div className="mb-1 mt-1 text-left text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
+                <h4 className="text-lg font-bold">
                   {t("page-collectibles-code-content-writing-title")}
-                </div>
-                <div className="mb-1 text-left text-[10px] text-gray-500 md:text-sm dark:text-gray-300">
-                  {t("page-collectibles-code-content-writing-desc")}
-                </div>
-                <ul className="mb-4 ml-0 list-none text-left text-[10px] text-gray-500 md:text-xs dark:text-gray-400">
-                  <li className="mb-1">
-                    <CircleCheckIcon
-                      className={`mr-2 inline h-4 w-auto align-middle ${writingBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                    />
+                </h4>
+                <p>{t("page-collectibles-code-content-writing-desc")}</p>
+                <CheckList>
+                  <CheckItem owned={writingBadge.owned}>
                     {t("page-collectibles-code-content-writing-1pr")}
-                  </li>
-                </ul>
+                  </CheckItem>
+                </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/#how-to-update-content">
                 {t("page-collectibles-get-started")}
@@ -331,26 +345,18 @@ const CollectiblesCurrentYear = ({
                 alt="Developer"
                 href={designBadge.link}
               >
-                <div className="mb-1 mt-1 text-left text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
+                <h4 className="text-lg font-bold">
                   {t("page-collectibles-code-content-design-title")}
-                </div>
-                <div className="mb-1 text-left text-[10px] text-gray-500 md:text-sm dark:text-gray-300">
-                  {t("page-collectibles-code-content-design-desc")}
-                </div>
-                <ul className="mb-4 ml-0 list-none text-left text-[10px] text-gray-500 md:text-xs dark:text-gray-400">
-                  <li className="mb-1">
-                    <CircleCheckIcon
-                      className={`mr-2 inline h-4 w-auto align-middle ${designBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                    />
+                </h4>
+                <p>{t("page-collectibles-code-content-design-desc")}</p>
+                <CheckList>
+                  <CheckItem owned={designBadge.owned}>
                     {t("page-collectibles-code-content-design-1issue")}
-                  </li>
-                  <li className="mb-1">
-                    <CircleCheckIcon
-                      className={`mr-2 inline h-4 w-auto align-middle ${userTestingBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                    />
+                  </CheckItem>
+                  <CheckItem owned={userTestingBadge.owned}>
                     {t("page-collectibles-code-content-design-user-testing")}
-                  </li>
-                </ul>
+                  </CheckItem>
+                </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/design/">
                 {t("page-collectibles-get-started")}
@@ -368,20 +374,15 @@ const CollectiblesCurrentYear = ({
                 alt="Developer"
                 href={gitpoapBadge.link}
               >
-                <div className="mb-1 mt-1 text-left text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
+                <h4 className="text-lg font-bold">
                   {t("page-collectibles-code-content-gitpoap-title")}
-                </div>
-                <div className="mb-1 text-left text-[10px] text-gray-500 md:text-sm dark:text-gray-300">
-                  {t("page-collectibles-code-content-gitpoap-desc")}
-                </div>
-                <ul className="mb-4 ml-0 list-none text-left text-[10px] text-gray-500 md:text-xs dark:text-gray-400">
-                  <li className="mb-1">
-                    <CircleCheckIcon
-                      className={`mr-2 inline h-4 w-auto align-middle ${gitpoapBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                    />
+                </h4>
+                <p>{t("page-collectibles-code-content-gitpoap-desc")}</p>
+                <CheckList>
+                  <CheckItem owned={gitpoapBadge.owned}>
                     {t("page-collectibles-code-content-gitpoap-1pr")}
-                  </li>
-                </ul>
+                  </CheckItem>
+                </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="https://github.com/ethereum/ethereum-org-website/issues">
                 {t("page-collectibles-get-started")}
@@ -437,44 +438,30 @@ const CollectiblesCurrentYear = ({
                   address && !translationBadge.owned && "[&_img]:grayscale"
                 )}
               >
-                <div className="mb-1 mt-1 text-left text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
+                <h4 className="text-lg font-bold">
                   {t("page-collectibles-translations-title")}
-                </div>
-                <div className="mb-1 text-left text-[10px] text-gray-500 md:text-sm dark:text-gray-300">
-                  {t("page-collectibles-translations-badge-desc")}
-                </div>
-                <ul className="mb-4 ml-0 list-none text-left text-[10px] text-gray-500 md:text-xs dark:text-gray-400">
-                  <li className="mb-1">
-                    <CircleCheckIcon
-                      className={`mr-2 inline h-4 w-auto align-middle ${translationBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                    />
+                </h4>
+                <p>{t("page-collectibles-translations-badge-desc")}</p>
+                <CheckList>
+                  <CheckItem owned={translationBadge.owned}>
                     {t("page-collectibles-translations-250")}
-                  </li>
+                  </CheckItem>
                   {translation1kBadge && (
-                    <li className="mb-1">
-                      <CircleCheckIcon
-                        className={`mr-2 inline h-4 w-auto align-middle ${translation1kBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                      />
+                    <CheckItem owned={translation1kBadge.owned}>
                       {t("page-collectibles-translations-1000")}
-                    </li>
+                    </CheckItem>
                   )}
                   {translation10kBadge && (
-                    <li className="mb-1">
-                      <CircleCheckIcon
-                        className={`mr-2 inline h-4 w-auto align-middle ${translation10kBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                      />
+                    <CheckItem owned={translation10kBadge.owned}>
                       {t("page-collectibles-translations-10000")}
-                    </li>
+                    </CheckItem>
                   )}
                   {translation50kBadge && (
-                    <li className="mb-1">
-                      <CircleCheckIcon
-                        className={`mr-2 inline h-4 w-auto align-middle ${translation50kBadge.owned ? "text-green-500" : "text-gray-300"}`}
-                      />
+                    <CheckItem owned={translation50kBadge.owned}>
                       {t("page-collectibles-translations-50000")}
-                    </li>
+                    </CheckItem>
                   )}
-                </ul>
+                </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/translation-program/">
                 {t("page-collectibles-get-started")}
