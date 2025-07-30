@@ -35,8 +35,10 @@ const CollectiblesPreviousYears = ({
     return Number(b) - Number(a)
   })
   return (
-    <section className="mx-auto mt-8 p-2">
-      <h2 className="mb-8 text-xl">{t("page-collectibles-previous-years")}</h2>
+    <section className="mx-auto mt-8 space-y-8 p-2">
+      <h2 className="text-2xl xl:text-3xl">
+        {t("page-collectibles-previous-years")}
+      </h2>
       {years.length > 0 ? (
         years.map((year) => {
           const badgeCount = grouped[year].length
@@ -46,7 +48,7 @@ const CollectiblesPreviousYears = ({
             0
           )
           return (
-            <div key={year} className="mb-12 space-y-4 md:space-y-6">
+            <div key={year} className="space-y-4 py-4 md:space-y-6">
               <div className="flex items-center gap-6 border-b py-4">
                 <h3 className="text-2xl md:text-3xl">{year}</h3>
                 <div className="flex gap-2">
@@ -70,7 +72,7 @@ const CollectiblesPreviousYears = ({
                     .replace(/\s?\(\s?\)\s?/, " ") // Remove any empty parentheses
                     .replace(/\s+/, " ") // Trim sequential whitespace to single space
                     .trim() // Trim edge whitespace
-                    .replace(/\son$/, "") // Remove cases of trailing " on" after sanitizing
+                    .replace(/\s(on|-)$/, "") // Remove edge cases of trailing items after sanitizing
                   const label =
                     sanitizedName[0].toUpperCase() + sanitizedName.slice(1) // Force capitalize first character
                   return (

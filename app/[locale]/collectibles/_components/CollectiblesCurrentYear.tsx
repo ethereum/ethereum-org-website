@@ -237,6 +237,7 @@ const CollectiblesCurrentYear = ({
 
   return (
     <section className="mx-auto space-y-8 p-2">
+      <h2 className="sr-only">{t("page-collectibles-current-year-title")}</h2>
       {/* Custom Code & Content block */}
       <div>
         <div className="flex items-center gap-2">
@@ -279,7 +280,7 @@ const CollectiblesCurrentYear = ({
                   address && !developerBadge.owned && "[&_img]:grayscale"
                 )}
                 src={developerBadge.image}
-                alt="Developer"
+                alt="Developer badge" // TODO: extract intl
                 href={developerBadge.link}
               >
                 <h4 className="text-lg font-bold">
@@ -315,7 +316,7 @@ const CollectiblesCurrentYear = ({
                   address && !writingBadge.owned && "[&_img]:grayscale"
                 )}
                 src={writingBadge.image}
-                alt="Developer"
+                alt="Writer badge" // TODO: extract intl
                 href={writingBadge.link}
               >
                 <h4 className="text-lg font-bold">
@@ -324,7 +325,7 @@ const CollectiblesCurrentYear = ({
                 <p>{t("page-collectibles-code-content-writing-desc")}</p>
                 <CheckList>
                   <CheckItem owned={writingBadge.owned}>
-                    {t("page-collectibles-code-content-writing-1pr")}
+                    {t("page-collectibles-code-content-writing-badge-1")}
                   </CheckItem>
                 </CheckList>
               </HighlightCardBody>
@@ -344,7 +345,7 @@ const CollectiblesCurrentYear = ({
                     "[&_img]:grayscale"
                 )}
                 src={designBadge.image}
-                alt="Developer"
+                alt="Design / user testing badge" // TODO: extract intl
                 href={designBadge.link}
               >
                 <h4 className="text-lg font-bold">
@@ -373,7 +374,7 @@ const CollectiblesCurrentYear = ({
                   address && !gitpoapBadge.owned && "[&_img]:grayscale"
                 )}
                 src={gitpoapBadge.image}
-                alt="Developer"
+                alt="GitPOAP badge" // TODO: extract intl
                 href={gitpoapBadge.link}
               >
                 <h4 className="text-lg font-bold">
