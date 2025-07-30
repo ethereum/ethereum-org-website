@@ -69,6 +69,7 @@ const HighlightCardBody = ({
         width={500}
         height={500}
         alt={alt}
+        sizes="160px"
         className="w-32 md:w-40"
       />
     </Link>
@@ -104,52 +105,102 @@ type CollectiblesCurrentYearProps = {
   address?: `0x${string}`
 }
 
-const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
+const CollectiblesCurrentYear = ({
   badges,
   address,
-}) => {
+}: CollectiblesCurrentYearProps) => {
   const { t } = useTranslation("page-collectibles")
 
-  const socialBadges = badges.filter((b) => b.category === "Events/Calls")
-  const developerBadge = badges.find(
-    (b) => b.category === "Github" && b.name.startsWith("1 PR merged")
+  const socialBadges = React.useMemo(
+    () => badges.filter((b) => b.category === "Events/Calls"),
+    [badges]
   )
-  const developer5Badge = badges.find(
-    (b) => b.category === "Github" && b.name.startsWith("5 PRs merged")
+  const developerBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) => b.category === "Github" && b.name.startsWith("1 PR merged")
+      ),
+    [badges]
   )
-  const developer10Badge = badges.find(
-    (b) => b.category === "Github" && b.name.startsWith("10 PRs merged")
+  const developer5Badge = React.useMemo(
+    () =>
+      badges.find(
+        (b) => b.category === "Github" && b.name.startsWith("5 PRs merged")
+      ),
+    [badges]
   )
-  const writingBadge = badges.find(
-    (b) => b.category === "Github" && b.name.startsWith("Content contributor")
+  const developer10Badge = React.useMemo(
+    () =>
+      badges.find(
+        (b) => b.category === "Github" && b.name.startsWith("10 PRs merged")
+      ),
+    [badges]
   )
-  const designBadge = badges.find(
-    (b) => b.category === "Design" && b.name.startsWith("Design contributor")
+  const writingBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) =>
+          b.category === "Github" && b.name.startsWith("Content contributor")
+      ),
+    [badges]
   )
-  const userTestingBadge = badges.find(
-    (b) => b.category === "Design" && b.name.startsWith("User testing")
+  const designBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) =>
+          b.category === "Design" && b.name.startsWith("Design contributor")
+      ),
+    [badges]
   )
-  const gitpoapBadge = badges.find(
-    (b) => b.category === "Github" && b.name.startsWith("GitPOAP")
+  const userTestingBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) => b.category === "Design" && b.name.startsWith("User testing")
+      ),
+    [badges]
   )
-  const translationBadge = badges.find(
-    (b) =>
-      b.category === "Translation" && b.name.startsWith("250 words translated")
+  const gitpoapBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) => b.category === "Github" && b.name.startsWith("GitPOAP")
+      ),
+    [badges]
   )
-  const translation1kBadge = badges.find(
-    (b) =>
-      b.category === "Translation" &&
-      b.name.startsWith("1,000 words translated")
+  const translationBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) =>
+          b.category === "Translation" &&
+          b.name.startsWith("250 words translated")
+      ),
+    [badges]
   )
-  const translation10kBadge = badges.find(
-    (b) =>
-      b.category === "Translation" &&
-      b.name.startsWith("10,000 words translated")
+  const translation1kBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) =>
+          b.category === "Translation" &&
+          b.name.startsWith("1,000 words translated")
+      ),
+    [badges]
   )
-  const translation50kBadge = badges.find(
-    (b) =>
-      b.category === "Translation" &&
-      b.name.startsWith("50,000 words translated")
+  const translation10kBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) =>
+          b.category === "Translation" &&
+          b.name.startsWith("10,000 words translated")
+      ),
+    [badges]
+  )
+  const translation50kBadge = React.useMemo(
+    () =>
+      badges.find(
+        (b) =>
+          b.category === "Translation" &&
+          b.name.startsWith("50,000 words translated")
+      ),
+    [badges]
   )
 
   return (
@@ -470,24 +521,26 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
           {socialBadges.map((badge) => (
             <div
               key={badge.id}
-              className="flex w-full flex-col items-center rounded-xl p-4"
+              className="flex w-full flex-col items-center gap-2 rounded-xl p-4 text-center text-sm"
             >
-              <a
-                href={badge.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mb-2"
-              >
+              <Link href={badge.link} hideArrow>
                 <Image
                   src={badge.image}
                   width={130}
                   height={130}
                   alt={badge.name}
-                  className={`h-24 w-24 md:h-32 md:w-32 ${address && !badge.owned ? "grayscale filter" : ""}`}
+                  sizes="128px"
+                  className={cn(
+                    "size-24 md:size-32",
+                    address && !badge.owned && "grayscale"
+                  )}
                 />
-              </a>
-              <div className="mb-1 mt-1 text-center text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
-                {badge.name}
+              </Link>
+              <div className="font-bold">Social</div>
+              <div className="text-primary">
+                {badge.name
+                  .replace(/ - ethereum.org community/, "")
+                  .replace(/^ethereum.org /, "")}
               </div>
             </div>
           ))}
