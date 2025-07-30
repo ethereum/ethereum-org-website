@@ -61,29 +61,37 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
                 </div>
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,_minmax(120px,_1fr))] gap-4 md:gap-6">
-                {grouped[year].map((badge: Badge) => (
-                  <div
-                    key={badge.id}
-                    className="flex flex-col items-center gap-2 rounded-xl bg-white p-2 text-center dark:bg-[#23202A]"
-                  >
-                    <Link href={badge.link} hideArrow>
-                      <Image
-                        width={80}
-                        height={80}
-                        sizes="80px"
-                        src={badge.image}
-                        alt={badge.name}
-                        className="size-16 md:size-20"
-                      />
-                    </Link>
-                    <div className="text-xs text-primary md:text-sm">
-                      {badge.name
-                        .replace(/^ethereum.org\s/i, "")
-                        .replace(/\s?ethereum.org$/i, "")
-                        .replace(/\s?ethereum.org\s?/i, " ")}
+                {grouped[year].map((badge: Badge) => {
+                  const sanitizedName = badge.name
+                    .replace(/\s?ethereum.org\s?/i, " ") // Remove "ethereum.org" from label
+                    .replace(new RegExp(` ?${year} ?`), " ") // Remove year (shown in section header)
+                    .replace(/\s?\(\s?\)\s?/, " ") // Remove any empty parentheses
+                    .replace(/\s+/, " ") // Trim sequential whitespace to single space
+                    .trim() // Trim edge whitespace
+                    .replace(/\son$/, "") // Remove cases of trailing " on" after sanitizing
+                  const label =
+                    sanitizedName[0].toUpperCase() + sanitizedName.slice(1) // Force capitalize first character
+                  return (
+                    <div
+                      key={badge.id}
+                      className="flex flex-col items-center gap-2 rounded-xl bg-white p-2 text-center dark:bg-[#23202A]"
+                    >
+                      <Link href={badge.link} hideArrow>
+                        <Image
+                          width={80}
+                          height={80}
+                          sizes="80px"
+                          src={badge.image}
+                          alt={badge.name}
+                          className="size-16 md:size-20"
+                        />
+                      </Link>
+                      <div className="text-xs text-primary md:text-sm">
+                        {label}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
           )
