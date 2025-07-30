@@ -4,9 +4,9 @@ import { type Address, isAddress } from "viem"
 import { getPublicClient } from "@wagmi/core"
 
 import Torch from "@/data/Torch.json"
+import torchTransferEvents from "@/data/torchTransferEvents.json"
 
 import { config } from "./config"
-import { fetchTorchTransfersFromEtherscan } from "./etherscan"
 
 const TORCH_CONTRACT_ADDRESS = Torch.address as Address
 const TORCH_ABI = Torch.abi
@@ -48,14 +48,9 @@ export type TorchHolderEvent = TorchHolder & {
   event: TransferEvent
 }
 
-export const getTransferEvents = cache(
-  async () => {
-    const transferEvents = await fetchTorchTransfersFromEtherscan()
-    return transferEvents
-  },
-  ["torch-transfer-events"],
-  { revalidate: 86400 }
-)
+export const getTransferEvents = () => {
+  return torchTransferEvents as TransferEvent[]
+}
 
 export const getHolderEvents = async (
   torchHolderMap: Record<string, TorchHolderMetadata>,
