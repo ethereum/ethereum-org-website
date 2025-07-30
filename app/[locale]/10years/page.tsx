@@ -53,7 +53,6 @@ import {
   getHolderEvents,
   getTransferEvents,
   isAddressFiltered,
-  isTorchBurned,
   type TorchHolder,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
@@ -97,7 +96,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const adoptionCards = await getAdoptionCards()
 
   // Torch NFT data fetching logic
-  const transferEvents = await getTransferEvents()
+  const transferEvents = getTransferEvents()
 
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
@@ -112,13 +111,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     torchHolderMap,
     transferEvents
   )
-
-  let isBurned = false
-  try {
-    isBurned = await isTorchBurned()
-  } catch (error) {
-    console.error("Error fetching torch burned status:", error)
-  }
 
   // Filter out events where the address is in the filtered list
   const torchHolders = torchHoldersEvents.filter(
@@ -167,7 +159,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <CurrentTorchHolderCard
               className="w-[420px]"
               currentHolder={currentHolder}
-              isBurned={isBurned}
+              isBurned={false}
             />
           )}
         </div>
