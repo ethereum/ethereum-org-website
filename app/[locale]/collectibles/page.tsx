@@ -122,6 +122,9 @@ export default async function Page({
         </Section>
 
         <Section id="main" className="px-4 md:px-12">
+          <h2 className="sr-only">
+            {t("page-collectibles-current-year-title")}
+          </h2>
           <CollectiblesPage badges={badges} />
         </Section>
       </MainArticle>
