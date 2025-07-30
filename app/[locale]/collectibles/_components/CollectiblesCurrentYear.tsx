@@ -508,11 +508,8 @@ const CollectiblesCurrentYear = ({
 
         <div className="mt-4 grid grid-cols-[repeat(auto-fill,_minmax(180px,_1fr))] gap-2">
           {socialBadges.map((badge) => (
-            <div
-              key={badge.id}
-              className="flex w-full flex-col items-center gap-2 rounded-xl p-4 text-center text-sm"
-            >
-              <Link href={badge.link} hideArrow>
+            <Link key={badge.id} href={badge.link} hideArrow className="group">
+              <div className="flex w-full flex-col items-center gap-4 rounded-xl p-4 text-center text-sm">
                 <Image
                   src={badge.image}
                   width={130}
@@ -520,19 +517,18 @@ const CollectiblesCurrentYear = ({
                   alt={badge.name}
                   sizes="128px"
                   className={cn(
-                    "size-24 md:size-32",
+                    "size-24 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-32",
                     address && !badge.owned && "grayscale"
                   )}
                 />
-              </Link>
-              <div className="font-bold">Social</div>
-              <div className="text-primary">
-                {badge.name
-                  .replace(/ - ethereum.org community/, "")
-                  .replace(/^ethereum.org /, "")
-                  .trim()}
+                <div className="text-primary">
+                  {badge.name
+                    .replace(/ - ethereum.org community/, "")
+                    .replace(/^ethereum.org /, "")
+                    .trim()}
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -74,24 +74,24 @@ const CollectiblesPreviousYears = ({
                   const label =
                     sanitizedName[0].toUpperCase() + sanitizedName.slice(1) // Force capitalize first character
                   return (
-                    <div
+                    <Link
                       key={badge.id}
-                      className="flex flex-col items-center gap-2 rounded-xl p-2 text-center"
+                      href={badge.link}
+                      className="group flex flex-col items-center gap-3 rounded-xl p-2 text-center"
+                      hideArrow
                     >
-                      <Link href={badge.link} hideArrow>
-                        <Image
-                          width={80}
-                          height={80}
-                          sizes="80px"
-                          src={badge.image}
-                          alt={badge.name}
-                          className="size-16 md:size-20"
-                        />
-                      </Link>
+                      <Image
+                        width={80}
+                        height={80}
+                        sizes="80px"
+                        src={badge.image}
+                        alt={badge.name}
+                        className="size-16 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-20"
+                      />
                       <div className="text-xs text-primary md:text-sm">
                         {label}
                       </div>
-                    </div>
+                    </Link>
                   )
                 })}
               </div>
