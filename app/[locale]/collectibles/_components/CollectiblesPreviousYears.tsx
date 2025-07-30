@@ -44,7 +44,7 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
             0
           )
           return (
-            <div key={year} className="mb-12">
+            <div key={year} className="mb-12 space-y-4 md:space-y-6">
               <div className="flex items-center gap-6 border-b py-4">
                 <h3 className="text-2xl md:text-3xl">{year}</h3>
                 <div className="flex gap-2">
@@ -60,7 +60,7 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
                   </Tag>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-4 md:grid-cols-4 md:gap-6 lg:grid-cols-6 xl:grid-cols-7">
+              <div className="grid grid-cols-[repeat(auto-fill,_minmax(120px,_1fr))] gap-4 md:gap-6">
                 {grouped[year].map((badge: Badge) => (
                   <div
                     key={badge.id}
@@ -76,7 +76,12 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
                         className="size-16 md:size-20"
                       />
                     </Link>
-                    <div className="text-xs md:text-sm">{badge.name}</div>
+                    <div className="text-xs text-primary md:text-sm">
+                      {badge.name
+                        .replace(/^ethereum.org\s/i, "")
+                        .replace(/\s?ethereum.org$/i, "")
+                        .replace(/\s?ethereum.org\s?/i, " ")}
+                    </div>
                   </div>
                 ))}
               </div>

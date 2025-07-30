@@ -504,7 +504,7 @@ const CollectiblesCurrentYear = ({
           </AccordionItem>
         </Accordion>
 
-        <div className="mt-4 grid grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] gap-2">
+        <div className="mt-4 grid grid-cols-[repeat(auto-fill,_minmax(180px,_1fr))] gap-2">
           {socialBadges.map((badge) => (
             <div
               key={badge.id}
