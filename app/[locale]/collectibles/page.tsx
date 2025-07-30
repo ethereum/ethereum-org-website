@@ -10,6 +10,7 @@ import { Lang } from "@/lib/types"
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -83,8 +84,10 @@ export default async function Page({
             <p className="text-sm leading-relaxed text-[#4B445A] md:text-base dark:text-[#F3F3F5]">
               {t.rich("page-collectibles-improve-desc-2", {
                 strong: (chunks) => <span className="font-bold">{chunks}</span>,
-                em: (chunks) => (
-                  <span className="font-bold text-[#A259FF]">{chunks}</span>
+                a: (chunks) => (
+                  <Link href="https://x.com/Xeift1/status/1896200245949968828">
+                    {chunks}
+                  </Link>
                 ),
               })}
             </p>
