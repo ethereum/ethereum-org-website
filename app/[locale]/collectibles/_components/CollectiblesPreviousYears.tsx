@@ -2,6 +2,8 @@ import React from "react"
 import { useTranslations } from "next-intl"
 
 import { Image } from "@/components/Image"
+import Link from "@/components/ui/Link"
+import { Tag } from "@/components/ui/tag"
 
 import type { Badge } from "../types"
 
@@ -32,9 +34,7 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
   })
   return (
     <section className="mx-auto mt-8 p-2">
-      <div className="mb-8 text-left text-xl font-bold text-[#3B2C4A] dark:text-white">
-        {t("page-collectibles-previous-years")}
-      </div>
+      <h2 className="mb-8 text-xl">{t("page-collectibles-previous-years")}</h2>
       {years.length > 0 ? (
         years.map((year) => {
           const badgeCount = grouped[year].length
@@ -45,46 +45,38 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
           )
           return (
             <div key={year} className="mb-12">
-              <div className="mb-2 flex items-center">
-                <span className="mr-4 text-2xl font-extrabold text-[#3B2C4A] md:text-3xl dark:text-white">
-                  {year}{" "}
-                  <span className="text-base font-normal text-[#7c7c7c] dark:text-gray-400">
-                    (
+              <div className="flex items-center gap-6 border-b py-4">
+                <h3 className="text-2xl md:text-3xl">{year}</h3>
+                <div className="flex gap-2">
+                  <Tag>
                     {t("page-collectibles-previous-years-badge-count", {
                       count: badgeCount,
                     })}
-                    ,{" "}
+                  </Tag>
+                  <Tag>
                     {t("page-collectibles-previous-years-collectors-count", {
                       count: collectorsCount,
                     })}
-                    )
-                  </span>
-                </span>
+                  </Tag>
+                </div>
               </div>
-              <div className="mb-6 h-px w-full bg-[#E5E7EB] dark:bg-[#23202A]" />
               <div className="grid grid-cols-3 gap-4 md:grid-cols-4 md:gap-6 lg:grid-cols-6 xl:grid-cols-7">
                 {grouped[year].map((badge: Badge) => (
                   <div
                     key={badge.id}
-                    className="flex flex-col items-center rounded-xl bg-white p-2 dark:bg-[#23202A]"
+                    className="flex flex-col items-center gap-2 rounded-xl bg-white p-2 text-center dark:bg-[#23202A]"
                   >
-                    <a
-                      href={badge.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mb-2"
-                    >
+                    <Link href={badge.link} hideArrow>
                       <Image
                         width={80}
                         height={80}
+                        sizes="80px"
                         src={badge.image}
                         alt={badge.name}
-                        className="h-16 w-16 md:h-20 md:w-20"
+                        className="size-16 md:size-20"
                       />
-                    </a>
-                    <div className="mb-1 mt-1 text-center text-xs font-semibold text-[#3B2C4A] md:text-sm dark:text-white">
-                      {badge.name}
-                    </div>
+                    </Link>
+                    <div className="text-xs md:text-sm">{badge.name}</div>
                   </div>
                 ))}
               </div>
@@ -92,7 +84,7 @@ const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
           )
         })
       ) : (
-        <div className="text-center text-lg font-bold text-[#3B2C4A] dark:text-white">
+        <div className="text-lg font-bold">
           {t("page-collectibles-previous-years-no-badges")}
         </div>
       )}
