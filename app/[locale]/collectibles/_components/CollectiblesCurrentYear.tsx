@@ -8,8 +8,16 @@ import {
 } from "lucide-react"
 
 import { Image, ImageProps } from "@/components/Image"
+import Translation from "@/components/Translation"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
 import Link, { LinkProps } from "@/components/ui/Link"
+import { ListItem, OrderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -145,19 +153,40 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
   )
 
   return (
-    <section className="mx-auto p-2">
+    <section className="mx-auto space-y-8 p-2">
       {/* Custom Code & Content block */}
-      <div className="mt-8">
-        <div className="mb-2 flex items-center">
-          <PencilRulerIcon className="mr-2 h-6 w-auto" />
-          <span className="text-left text-2xl font-bold text-[#3B2C4A] dark:text-white">
+      <div>
+        <div className="flex items-center gap-2">
+          <PencilRulerIcon className="h-6 w-auto" />
+          <h3 className="text-2xl">
             {t("page-collectibles-code-content-title")}
-          </span>
+          </h3>
         </div>
-        <div className="mb-6 text-left text-sm text-gray-500 dark:text-gray-300">
-          {t("page-collectibles-code-content-desc")}
-        </div>
-        <HighlightCardGrid>
+        <p className="mt-2">{t("page-collectibles-code-content-desc")}</p>
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1" className="mt-4">
+            <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
+              {t("page-collectibles-instructions-label")}
+            </AccordionTrigger>
+            <AccordionContent className="text-base">
+              <OrderedList className="mb-0 ms-3">
+                <ListItem>
+                  <Translation
+                    id="page-collectibles-code-content-instructions-1"
+                    ns="page-collectibles"
+                  />
+                </ListItem>
+                <ListItem>
+                  {t("page-collectibles-code-content-instructions-2")}
+                </ListItem>
+                <ListItem className="mb-0">
+                  {t("page-collectibles-code-content-instructions-3")}
+                </ListItem>
+              </OrderedList>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <HighlightCardGrid className="mt-4">
           {/* First row: Developer & Writing */}
           {/* Developer */}
           {developerBadge && (
@@ -313,22 +342,49 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
 
       {/* Translations section */}
       {translationBadge && (
-        <div className="mt-8">
-          <div className="mb-2 flex items-center">
-            <LanguagesIcon className="mr-2 h-6 w-auto" />
-            <span className="text-left text-2xl font-bold text-[#3B2C4A] dark:text-white">
+        <div>
+          <div className="flex items-center gap-2">
+            <LanguagesIcon className="h-6 w-auto" />
+            <h3 className="text-2xl">
               {t("page-collectibles-translations-title")}
-            </span>
+            </h3>
           </div>
-          <div className="mb-6 text-left text-sm text-gray-500 dark:text-gray-300">
-            {t("page-collectibles-translations-desc")}
-          </div>
-          <HighlightCardGrid>
+
+          <p className="mt-2">{t("page-collectibles-translations-desc")}</p>
+
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" className="mt-4">
+              <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
+                {t("page-collectibles-instructions-label")}
+              </AccordionTrigger>
+              <AccordionContent className="text-base">
+                <OrderedList className="mb-0 ms-3">
+                  <ListItem>
+                    <Translation
+                      id="page-collectibles-translations-instructions-1"
+                      ns="page-collectibles"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    {t("page-collectibles-translations-instructions-2")}
+                  </ListItem>
+                  <ListItem className="mb-0">
+                    {t("page-collectibles-translations-instructions-3")}
+                  </ListItem>
+                </OrderedList>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          <HighlightCardGrid className="mt-4">
             <HighlightCard>
               <HighlightCardBody
                 href={translationBadge.link}
                 src={translationBadge.image}
                 alt="Translations"
+                className={cn(
+                  address && !translationBadge.owned && "[&_img]:grayscale"
+                )}
               >
                 <div className="mb-1 mt-1 text-left text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
                   {t("page-collectibles-translations-title")}
@@ -378,43 +434,63 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
       )}
 
       {/* Social section */}
-      <div className="mt-8">
-        <div className="mb-2 flex items-center">
-          <MessageCircleMoreIcon className="mr-2 h-6 w-auto" />
-          <span className="text-left text-2xl font-bold text-[#3B2C4A] dark:text-white">
-            {t("page-collectibles-social-title")}
-          </span>
+      <div>
+        <div className="flex items-center gap-2">
+          <MessageCircleMoreIcon className="h-6 w-auto" />
+          <h3 className="text-2xl">{t("page-collectibles-social-title")}</h3>
         </div>
-        <div className="mb-6 text-left text-sm text-gray-500 dark:text-gray-300">
-          {t("page-collectibles-social-desc")}
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {socialBadges.map((badge) => {
-            return (
-              <div
-                key={badge.id}
-                className="flex w-[48%] w-full flex-col items-center rounded-xl bg-white p-4 md:w-[32%] lg:w-[24%] xl:w-[18%] dark:bg-transparent"
-              >
-                <a
-                  href={badge.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mb-2"
-                >
-                  <Image
-                    src={badge.image}
-                    width={130}
-                    height={130}
-                    alt={badge.name}
-                    className={`h-24 w-24 md:h-32 md:w-32 ${address && !badge.owned ? "grayscale filter" : ""}`}
+
+        <p className="mt-2">{t("page-collectibles-social-desc")}</p>
+
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1" className="mt-4">
+            <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
+              {t("page-collectibles-instructions-label")}
+            </AccordionTrigger>
+            <AccordionContent className="text-base">
+              <OrderedList className="mb-0 ms-3">
+                <ListItem>
+                  <Translation
+                    id="page-collectibles-social-instructions-1"
+                    ns="page-collectibles"
                   />
-                </a>
-                <div className="mb-1 mt-1 text-center text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
-                  {badge.name}
-                </div>
+                </ListItem>
+                <ListItem>
+                  {t("page-collectibles-social-instructions-2")}
+                </ListItem>
+                <ListItem className="mb-0">
+                  {t("page-collectibles-social-instructions-3")}
+                </ListItem>
+              </OrderedList>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        <div className="mt-4 grid grid-cols-[repeat(auto-fit,_minmax(180px,_1fr))] gap-2">
+          {socialBadges.map((badge) => (
+            <div
+              key={badge.id}
+              className="flex w-full flex-col items-center rounded-xl p-4"
+            >
+              <a
+                href={badge.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-2"
+              >
+                <Image
+                  src={badge.image}
+                  width={130}
+                  height={130}
+                  alt={badge.name}
+                  className={`h-24 w-24 md:h-32 md:w-32 ${address && !badge.owned ? "grayscale filter" : ""}`}
+                />
+              </a>
+              <div className="mb-1 mt-1 text-center text-sm font-bold text-[#3B2C4A] md:text-base dark:text-white">
+                {badge.name}
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

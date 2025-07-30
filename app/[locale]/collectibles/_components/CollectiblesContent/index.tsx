@@ -98,7 +98,7 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
       </div>
 
       {/* How it works section */}
-      <div className="flex-1">
+      <div className="flex-1 space-y-8">
         <section className="mx-auto space-y-6 border-b p-2 pb-6">
           <h2 className="text-4xl">{t("page-collectibles-how-title")}</h2>
           <div className="flex flex-col justify-center gap-8 py-4 md:flex-row md:items-center md:gap-12">
