@@ -2,18 +2,14 @@ import { type CardProps } from "@/components/CardList"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import aaveImg from "@/public/images/dapps/aave.png"
-// -- borrow
+import buidlboxImg from "@/public/images/dapps/buidlbox.png"
 import compoundImg from "@/public/images/dapps/compound.png"
-// -- earn
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
-// Static assets
-// -- dapps
 import uniImg from "@/public/images/dapps/uni.png"
 import ethImg from "@/public/images/eth-org-logo.png"
 import oneInchImg from "@/public/images/exchanges/1inch.png"
 import binanceImg from "@/public/images/exchanges/binance.png"
-// -- exchanges
 import coinbaseImg from "@/public/images/exchanges/coinbase.png"
 import coinmamaImg from "@/public/images/exchanges/coinmama.png"
 import geminiImg from "@/public/images/exchanges/gemini.png"
@@ -65,6 +61,13 @@ export const useStablecoinAccordion = () => {
   ]
 
   const earn: Array<CardProps> = [
+    {
+      title: "buidlbox",
+      image: buidlboxImg,
+      link: "https://app.buidlbox.io/",
+      description: t("page-stablecoins-accordion-earn-project-1-description"),
+      alt: t("buidlbox-logo"),
+    },
     {
       title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
       image: ethImg,

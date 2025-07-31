@@ -177,6 +177,16 @@
     "hackathon": true
   },
   {
+    "title": "TUM Blockchain Conference",
+    "startDate": "2025-09-11",
+    "endDate": "2025-09-12",
+    "href": "https://conference.tum-blockchain.com",
+    "location": "Munich, Germany",
+    "description": "Europe's top Blockchain Conference in Munich is back! Discover how Web3 is moving beyond promise to real world impact with top experts.",
+    "imageUrl": "https://conference.tum-blockchain.com/banners/c25-banner.svg",
+    "hackathon": false
+  },
+  {
     "title": "ETHSofia",
     "startDate": "2025-09-23",
     "endDate": "2025-09-25",
@@ -184,6 +194,15 @@
     "location": "Sofia, BGR",
     "description": "The first major Ethereum community conference in Bulgaria. Bringing ETH enthusiasts, professionals, and developers to the IT heart of the Balkans. 23 - 25 September 2025.",
     "imageUrl": "https://framerusercontent.com/assets/OHGIdIaZVjWGAwpmJhN1z6Yuh5g.png"
+  },
+  {
+    "title": "ETHVenice",
+    "startDate": "2025-10-01",
+    "endDate": "2025-10-01",
+    "href": "https://ethvenice.com/",
+    "location": "Venice, ITA",
+    "description": "Join the third edition in the beautiful San Servolo Island (Venice), to learn more about blockchain, technology and with an eye towards art.",
+    "imageUrl": "https://ethvenice.com/org/ethvenice.jpg"
   },
   {
     "title": "ProtoLayers Conference",
@@ -220,6 +239,24 @@
     "location": "Buenos Aires, Argentina",
     "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Intelligence | Cybersecurity",
     "imageUrl": "https://cdn.prod.website-files.com/6695a56b501ba1fda80ae466/67851f884a16785150e18e2c_Group%20116.svg"
+  },
+  {
+    "title": "ETHRome Hackathon",
+    "startDate": "2025-10-17",
+    "endDate": "2025-10-19",
+    "href": "https://ethrome.org",
+    "location": "Rome, ITA",
+    "description": "The hackathon for builders by builders",
+    "imageUrl": "https://www.ethrome.org/opengraph-image.png"
+  },
+  {
+    "title": "Urbe Village",
+    "startDate": "2025-10-05",
+    "endDate": "2025-10-19",
+    "href": "https://urbe.build/urbe-village",
+    "location": "Rome, ITA",
+    "description": "The Web3 Popup Village by builders for builders",
+    "imageUrl": "https://framerusercontent.com/images/b1WtEoffV6kSBqG9o3cJEUvjkY.png"
   },
   {
     "title": "ETH Latam",

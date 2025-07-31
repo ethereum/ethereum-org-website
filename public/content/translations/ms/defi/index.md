@@ -139,7 +139,7 @@ Ini membolehkan anda meminjam wang tanpa semakan kredit atau menyerahkan makluma
 
 #### Akses kepada dana global {#access-global-funds}
 
-Apabila anda menggunakan pemberi pinjaman teragih, anda mempunyai akses kepada dana yang didepositkan dari seluruh dunia, bukan hanya dana dalam jagaan bank atau institusi pilihan anda. Ini menjadikan pinjaman lebih mudah diakses dan manjadikan kadar faedah lebih baik.
+Apabila anda menggunakan pemberi pinjaman teragih, anda mempunyai akses kepada dana yang didepositkan dari seluruh dunia, bukan hanya dana dalam jagaan bank atau institusi pilihan anda. Ini menjadikan pinjaman lebih mudah diakses dan menjadikan kadar faedah lebih baik.
 
 #### Kecekapan cukai {#tax-efficiencies}
 
@@ -245,7 +245,7 @@ Contoh yang baik ialah [dana DeFi Pulse Index (DPI)](https://defipulse.com/blog/
 
 ### Biayai idea anda {#crowdfunding}
 
-Ethereum ialah platform yang cermerlang untuk pendanaan awam:
+Ethereum ialah platform yang cemerlang untuk pendanaan awam:
 
 - Pembiaya yang berpotensi boleh datang dari mana-mana sahaja – Ethereum dan tokennya terbuka kepada sesiapa sahaja, di mana-mana sahaja di dunia.
 - Ia telus supaya pengumpul dana dapat membuktikan jumlah wang yang telah dikumpulkan. Anda juga boleh menjejaki cara dana dibelanjakan kemudiannya.
