@@ -48,7 +48,7 @@ const FeatureCard = ({
       <Icon className="text-7xl text-primary" />
       <h3 className="text-xl">{header}</h3>
       {content.map((p, i) => (
-        <p key={i} className="mb-8 last:mb-0 text-body-medium">
+        <p key={i} className="mb-8 text-body-medium last:mb-0">
           {p}
         </p>
       ))}

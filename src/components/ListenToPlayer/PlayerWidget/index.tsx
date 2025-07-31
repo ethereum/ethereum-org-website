@@ -160,7 +160,7 @@ const PlayerWidget = ({
                 })
               }}
             >
-              <Minimize2 className="stroke-1" />
+              <Minimize2 className="-m-1 stroke-1" />
             </button>
           </Tooltip>
         </div>

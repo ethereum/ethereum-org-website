@@ -22,7 +22,7 @@ const meta = {
     content: <TooltipContent />,
     children: (
       <span data-testid="tooltip-icon">
-        <Info />
+        <Info className="size-4" />
       </span>
     ),
   },
