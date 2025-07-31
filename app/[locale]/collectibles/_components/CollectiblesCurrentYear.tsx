@@ -72,18 +72,14 @@ const HighlightCardBody = ({
   children,
 }: HighlightCardContentProps) => (
   <div className={cn("flex flex-1 gap-4 p-4 ring", className)}>
-    <Link
-      href={href}
-      hideArrow
-      className="transition-transform hover:scale-105 hover:transition-transform"
-    >
+    <Link href={href} hideArrow className="group">
       <Image
         src={src}
         width={500}
         height={500}
         alt={alt}
         sizes="160px"
-        className="w-32 md:w-40"
+        className="w-32 transition-transform group-hover:scale-105 group-hover:transition-transform md:w-40"
       />
     </Link>
     <div className="w-full">{children}</div>
