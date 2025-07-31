@@ -3,6 +3,7 @@
 import React from "react"
 import { useTranslations } from "next-intl"
 
+import IdAnchor from "@/components/IdAnchor"
 import { Image } from "@/components/Image"
 import Link from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
@@ -50,7 +51,13 @@ const CollectiblesPreviousYears = ({
           return (
             <div key={year} className="space-y-4 py-4 md:space-y-6">
               <div className="flex items-center gap-6 border-b py-4">
-                <h3 className="text-2xl md:text-3xl">{year}</h3>
+                <h3
+                  id={year}
+                  className="group relative scroll-mt-28 text-2xl md:text-3xl"
+                >
+                  <IdAnchor id={year} />
+                  {year}
+                </h3>
                 <div className="flex gap-2">
                   <Tag>
                     {t("page-collectibles-previous-years-badge-count", {
