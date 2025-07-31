@@ -59,6 +59,9 @@ const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
           value={(ownedCount / (currentYearBadges.length || 1)) * 100}
         />
       </div>
+      <p className="text-sm text-body-medium">
+        {t("page-collectibles-index-frequency")}
+      </p>
     </>
   )
 }
