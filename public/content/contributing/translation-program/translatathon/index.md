@@ -13,7 +13,7 @@ template: translatathon
   <EmojiCard
     emoji=':trophy:'
     title='Win prizes'
-    description='Compete for your share of 30,000$ in prizes and a chance to get Devcon tickets'
+    description=''
   />
   <EmojiCard
     emoji=':bulb:'
