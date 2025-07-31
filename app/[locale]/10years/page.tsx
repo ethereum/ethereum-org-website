@@ -30,7 +30,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import Curved10YearsText from "./_components/10y.svg"
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import CountDown from "./_components/CountDown/lazy"
-import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import NFTMintCardWrapper from "./_components/NFTMintCardWrapper"
@@ -53,7 +52,6 @@ import {
   getHolderEvents,
   getTransferEvents,
   isAddressFiltered,
-  isTorchBurned,
   type TorchHolder,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
@@ -97,7 +95,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const adoptionCards = await getAdoptionCards()
 
   // Torch NFT data fetching logic
-  const transferEvents = await getTransferEvents()
+  const transferEvents = getTransferEvents()
 
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
@@ -112,13 +110,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     torchHolderMap,
     transferEvents
   )
-
-  let isBurned = false
-  try {
-    isBurned = await isTorchBurned()
-  } catch (error) {
-    console.error("Error fetching torch burned status:", error)
-  }
 
   // Filter out events where the address is in the filtered list
   const torchHolders = torchHoldersEvents.filter(
@@ -161,15 +152,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
         <div className="flex flex-1 flex-row items-center justify-center">
-          {showNFTMint ? (
-            <NFTMintCardWrapper locale={locale} />
-          ) : (
-            <CurrentTorchHolderCard
-              className="w-[420px]"
-              currentHolder={currentHolder}
-              isBurned={isBurned}
-            />
-          )}
+          <NFTMintCardWrapper locale={locale} />
         </div>
       </div>
 

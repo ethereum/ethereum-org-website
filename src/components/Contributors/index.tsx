@@ -20,12 +20,20 @@ export interface Contributor {
 
 const allContributors = JSON.parse(data)
 
-const Contributors = () => {
+interface ContributorsProps {
+  contributors?: Contributor[]
+}
+
+const Contributors = ({ contributors }: ContributorsProps) => {
   const [contributorsList, setContributorsList] = useState<Contributor[]>([])
 
   useEffect(() => {
-    setContributorsList(shuffle(allContributors.contributors))
-  }, [])
+    if (contributors) {
+      setContributorsList(contributors)
+    } else {
+      setContributorsList(shuffle(allContributors.contributors))
+    }
+  }, [contributors])
 
   return (
     <>
@@ -44,6 +52,9 @@ const Contributors = () => {
               className="h-[132px] w-[132px]"
               src={contributor.avatar_url}
               alt={contributor.name}
+              width={132}
+              height={132}
+              sizes="132px"
             />
             <div className="p-4">
               <h3 className="mb-4 mt-2 text-md">

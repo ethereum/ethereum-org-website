@@ -102,6 +102,15 @@ const quizzes = {
     title: "DeFi",
     questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
   },
+  "smart-contracts": {
+    title: "smart-contracts",
+    questions: [
+      "smart-contracts-1",
+      "smart-contracts-2",
+      "smart-contracts-3",
+      "smart-contracts-4",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -123,6 +132,10 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "security",
+    level: "beginner",
+  },
+  {
+    id: "smart-contracts",
     level: "beginner",
   },
 ]

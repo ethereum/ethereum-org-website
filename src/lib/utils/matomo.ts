@@ -18,6 +18,10 @@ export const trackCustomEvent = ({
   eventValue,
 }: MatomoEventOptions): void => {
   if (!IS_PROD) return
+
+  // Respect Do Not Track header
+  if (navigator.doNotTrack === "1") return
+
   const optedOutValue = localStorage.getItem(MATOMO_LS_KEY) || "false"
   const isOptedOut = JSON.parse(optedOutValue)
   if (isOptedOut) return
