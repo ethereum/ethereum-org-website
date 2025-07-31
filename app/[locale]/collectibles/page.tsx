@@ -60,7 +60,7 @@ export default async function Page({
 
   return (
     <I18nProvider locale={locale} messages={pickedMessages}>
-      <MainArticle className="space-y-12 md:space-y-20">
+      <MainArticle className="space-y-12 pb-24 md:space-y-20">
         <HubHero
           heroImg={communityHeroImg}
           title={t("page-collectibles-hero-title")}
