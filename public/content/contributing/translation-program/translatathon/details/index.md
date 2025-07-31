@@ -43,10 +43,6 @@ For a detailed guide to navigating and using the Crowdin online editor, we recom
 
 To learn more about the conventions and best practices for translating ethereum.org content, you can also check out our [translation style guide](/contributing/translation-program/translators-guide/).
 
-### Prizes
-
-<TranslatathonPrizes />
-
 **How points work**
 
 Every Translatathon participant will earn points towards their final score by translating content in the ethereum.org Crowdin project and other eligible projects (the full list of eligible projects is available in the next section).
