@@ -1,5 +1,5 @@
 ---
-title: 2024 ethereum.org Translatathon
+title: 2025 ethereum.org Translatathon
 lang: en
 template: translatathon
 ---
@@ -34,7 +34,7 @@ If you are bilingual and want to help make Ethereum content more accessible whil
 
 ## Timeline
 
-Here are the important dates for the 2024 Translatathon:
+Here are the important dates for the 2025 Translatathon:
 
 <DatesAndTimeline />
 
@@ -79,18 +79,5 @@ For more details, [see the full Terms & conditions](/contributing/translation-pr
 
 <StepByStepInstructions />
 
-## Prizes
-
-<TranslatathonPrizes />
-
-## Stay up to date
-
-<TranslationHubCallout>
-  <h3 style={{margin:0}}>Translatathon hubs</h3>
-
-  This year we bring IRL community hubs to join local communities and help translate. These hubs are located all over the world, find out if there is one close to you and join the community!
-</TranslationHubCallout>
-
-<TranslatathonCalendar />
 
 <ApplyNow />

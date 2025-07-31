@@ -38,7 +38,7 @@ const instructions = [
     ctaLabel: "Join",
   },
   {
-    title: "Translate! August 9th to August 18th",
+    title: "Translate! August 25th to August 31st",
     description:
       "Translate content to earn points. Each word you translate counts towards your final score",
     ctaLink: CROWDIN_PROJECT_URL,
@@ -54,7 +54,7 @@ const instructions = [
     title: "Claim your prizes",
     description: (
       <>
-        Results will be announced on <strong>August 29th</strong>. Eligible
+        Results will be announced on <strong>September 30th</strong>. Eligible
         participants will receive an email with prize claim instructions.
       </>
     ),
