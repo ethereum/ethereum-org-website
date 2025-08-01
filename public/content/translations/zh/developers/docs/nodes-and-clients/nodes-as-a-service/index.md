@@ -264,7 +264,7 @@ sidebarDepth: 2
     - 直接技术支持
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [相关文档](https://docs.nodereal.io/docs/introduction)
+  - [相关文档](https://docs.nodereal.io/nodereal/meganode/introduction)
   - 功能
     - 可靠、快速而且可扩展的远程过程调用应用程序接口服务
     - 面向 Web3 开发者的增强型应用程序接口
