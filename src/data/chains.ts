@@ -330,17 +330,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Fraxtal",
-    infoURL: "https://mainnet.frax.com",
-    chainId: 252,
-    nativeCurrency: {
-      name: "Frax Ether",
-      symbol: "frxETH",
-      decimals: 18,
-    },
-    chain: "FRAX",
-  },
-  {
     name: "Swan Chain Mainnet",
     infoURL: "https://swanchain.io/",
     chainId: 254,
