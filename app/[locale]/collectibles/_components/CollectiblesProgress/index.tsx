@@ -46,7 +46,7 @@ const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
       <div className="space-y-1">
         <div className="flex justify-between text-sm">
           <span className="font-bold">
-            {t("page-collectibles-contributor-progress-label")}
+            {t("page-collectibles-contributor-progress-label")} ({currentYear})
           </span>
           <span>
             {ownedCount}/{currentYearBadges.length}
