@@ -106,7 +106,7 @@ _Notez que l’explication dans la vidéo utilise le terme « Couche 2 » pour
 - [Un guide incomplet pour les rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollups ZK alimentés par Ethereum : Wolrd Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollups optimisés vs Rollups ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Évolutivité de la blockchain ZK](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Pourquoi les rollups + les data shards sont les seules solutions durables pour une grande évolutivité](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Quels types de couches 3 ont un sens ?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Disponibilité des données ou : Comment les Rollups ont appris à ne plus s'inquiéter et à aimer Ethereum](https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)

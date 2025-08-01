@@ -264,7 +264,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Assistance technique directe
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Documentation](https://docs.nodereal.io/docs/introduction)
+  - [Documentation](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Fonctionnalités
     - Services API RPC fiables, rapides et évolutifs
     - API améliorée pour les développeurs web3
