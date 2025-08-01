@@ -94,7 +94,7 @@ The `calldata` keyword is also used in Solidity to pass arguments to a smart con
 
 In the context of optimistic rollups, `calldata` is used to send compressed transaction data to the onchain contract. The rollup operator adds a new batch by calling the required function in the rollup contract and passing the compressed data as function arguments. Using `calldata` reduces user fees since most costs that rollups incur come from storing data onchain.
 
-Here is [an example](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
+Here is [an example](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
 
 Some rollups now use blobs to post batches of transactions to Ethereum.
 
