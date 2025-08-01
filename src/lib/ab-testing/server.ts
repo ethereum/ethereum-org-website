@@ -24,12 +24,26 @@ export const getABTestAssignment = async (
 
   if (!testConfig || !testConfig.enabled) return null
 
-  // Create deterministic assignment using IP + User-Agent fingerprint
+  // Create deterministic assignment using enhanced fingerprint
   const headers = await import("next/headers").then((m) => m.headers())
-  const userAgent = headers.get("user-agent") || ""
+
+  // Get IP and user agent (primary identifier)
   const forwardedFor =
     headers.get("x-forwarded-for") || headers.get("x-real-ip") || "unknown"
-  const fingerprint = `${forwardedFor}-${userAgent}`
+  const userAgent = headers.get("user-agent") || ""
+
+  // Add privacy-preserving entropy sources
+  const acceptLanguage = headers.get("accept-language") || ""
+  const acceptEncoding = headers.get("accept-encoding") || ""
+
+  // Create enhanced fingerprint with more entropy
+  const fingerprint = [
+    forwardedFor,
+    userAgent,
+    acceptLanguage,
+    acceptEncoding,
+    testKey, // Include test key to ensure different tests get different distributions
+  ].join("|")
 
   const variantIndex = assignVariantIndexDeterministic(testConfig, fingerprint)
   const variant = testConfig.variants[variantIndex]
@@ -56,23 +70,22 @@ const assignVariantIndexDeterministic = (
   // Handle case where total weight is 0
   if (totalWeight === 0) return 0
 
-  // Use a better hash function for more uniform distribution
-  // This is a simple implementation of djb2 hash algorithm
-  let hash = 5381
+  // Hash function to evenly distribute fingerprints amongst assignments
+  // Implementation of FNV-1a hash algorithm
+  let hash = 2166136261 // FNV offset basis
   for (let i = 0; i < fingerprint.length; i++) {
-    hash = (hash << 5) + hash + fingerprint.charCodeAt(i)
+    hash ^= fingerprint.charCodeAt(i) // XOR
+    hash = (hash * 16777619) >>> 0 // FNV prime, ensure 32-bit unsigned
   }
 
-  // Ensure positive value and create uniform distribution
-  const normalized = Math.abs(hash) / 0x7fffffff // Max 32-bit signed int
+  // Convert to uniform distribution [0, 1)
+  const normalized = hash / 0x100000000 // 2^32 for full 32-bit range
   const weighted = normalized * totalWeight
 
   let cumulativeWeight = 0
   for (let i = 0; i < config.variants.length; i++) {
     cumulativeWeight += config.variants[i].weight
-    if (weighted <= cumulativeWeight) {
-      return i
-    }
+    if (weighted <= cumulativeWeight) return i
   }
 
   return 0
