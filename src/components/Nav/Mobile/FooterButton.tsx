@@ -1,10 +1,10 @@
 import { forwardRef } from "react"
-import type { IconType } from "react-icons"
+import { LucideIcon } from "lucide-react"
 
 import { Button, type ButtonProps } from "../../ui/buttons/Button"
 
 type FooterButtonProps = ButtonProps & {
-  icon: IconType
+  icon: React.FC<React.SVGProps<SVGElement>> | LucideIcon
 }
 
 const FooterButton = forwardRef<HTMLButtonElement, FooterButtonProps>(
@@ -15,7 +15,7 @@ const FooterButton = forwardRef<HTMLButtonElement, FooterButtonProps>(
       variant="ghost"
       {...props}
     >
-      <Icon className="h-6 w-6" />
+      <Icon className="text-xl" />
       {children}
     </Button>
   )

@@ -106,7 +106,7 @@ _Observe que a explicação no vídeo usa o termo “Camada 2" para se referir a
 - [Um guia incompleto sobre rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum com tecnologia de ZK-Rollups: campeões do mundo](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Dimensionamento blockchain de conhecimento zero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Dimensionamento blockchain de conhecimento zero](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Por que os rollups, junto com as fragmentações dos dados, são a única solução sustentável para atingir alto dimensionamento](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Que tipo de camada 3 faz sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Disponibilidade de dados ou: como os rollups aprenderam a parar de se preocupar e amar o Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)

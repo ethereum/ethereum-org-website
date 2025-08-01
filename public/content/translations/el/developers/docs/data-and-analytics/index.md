@@ -51,9 +51,9 @@ lang: el
 
 ## Περισσότερες πληροφορίες {#further-reading}
 - [Εξερευνώντας Δεδομένα Κρύπτο I: Αρχιτεκτονική Ροής Δεδομένων](https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Επισκόπηση του Δικτύου Graph](https://thegraph.com/docs/en/about/network/)
+- [Επισκόπηση του Δικτύου Graph](https://thegraph.com/docs/en/about/)
 - [Χώρος ανάπτυξης Graph Query](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Παραδείγματα κώδικα API στο EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in εξερευνητής κύριας αλυσίδας](https://beaconcha.in)
 - [Τα βασικά για το Dune](https://docs.dune.com/#dune-basics)
-- [Γλώσσα ερωτήματος EVM](https://eql.sh/blog/alpha-release-notes) 
+- [Γλώσσα ερωτήματος EVM](https://eql.sh/blog/alpha-release-notes)

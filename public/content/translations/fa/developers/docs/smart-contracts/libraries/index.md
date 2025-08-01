@@ -104,7 +104,7 @@ contract MyNFT is ERC721 {
 
 **کیت توسعه نرم‌افزار سالیدیتی Thirdweb-****_ ابزار های لازم برای ساخت قراردادهای هوشمند بهینه و مؤثر را در اختیار توسعه دهندگان میگذارد_**
 
-- [اسناد](https://portal.thirdweb.com/solidity/)
+- [اسناد](https://portal.thirdweb.com/contracts/build/overview)
 - [گیت هاب](https://github.com/thirdweb-dev/contracts)
 
 ## آموزش های مرتبط {#related-tutorials}

@@ -1,7 +1,6 @@
 "use client"
 
-import { BsCopy } from "react-icons/bs"
-import { FaRegCheckCircle } from "react-icons/fa"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -42,7 +41,11 @@ export const CopyButton = ({ message, ...props }: CopyButtonProps) => {
   const { onCopy, hasCopied } = useClipboard({ timeout: 1500 })
   return (
     <Button variant="ghost" onClick={() => onCopy(message)} {...props}>
-      {hasCopied ? <FaRegCheckCircle /> : <BsCopy />}
+      {hasCopied ? (
+        <ClipboardCheck className="size-5" />
+      ) : (
+        <Clipboard className="size-5" />
+      )}
     </Button>
   )
 }

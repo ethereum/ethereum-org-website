@@ -1,13 +1,12 @@
 import { ComponentPropsWithoutRef } from "react"
+import { Check } from "lucide-react"
 import { useLocale } from "next-intl"
-import { BsCheck } from "react-icons/bs"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
 import { CommandItem } from "../ui/command"
-import { Tag } from "../ui/tag"
 
 import ProgressBar from "./ProgressBar"
 
@@ -24,7 +23,6 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
     targetName,
     approvalProgress,
     wordsApproved,
-    isBrowserDefault,
   } = displayInfo
   const { t } = useTranslation("common")
   const locale = useLocale()
@@ -64,16 +62,11 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
             >
               {targetName}
             </p>
-            {isBrowserDefault && (
-              <Tag variant="outline" size="small">
-                {t("page-languages-browser-default")}
-              </Tag>
-            )}
           </div>
           <p className="text-xs uppercase text-body">{sourceName}</p>
         </div>
         {isCurrent && (
-          <BsCheck
+          <Check
             aria-hidden={true}
             className="text-2xl text-primary-high-contrast"
           />

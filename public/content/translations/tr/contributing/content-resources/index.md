@@ -27,6 +27,6 @@ Bir sayfaya eklenmesi gerektiğini düşündüğünüz bir içerik kaynağı var
 
 Eğer ethereum.org'a içerik kaynağı eklemek istiyorsanız ve kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Bir konu oluştur
 </ButtonLink>
