@@ -474,7 +474,7 @@ const RunANodePage = ({
               </ul>
             </div>
             <ButtonContainer>
-              <ButtonLink href="https://dappnode.io/">
+              <ButtonLink href="https://dappnode.com/collections/frontpage">
                 {t("page-run-a-node-shop-dappnode")}
               </ButtonLink>
               <ButtonLink href="https://ava.do/">
