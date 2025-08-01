@@ -55,19 +55,17 @@ lang: el
 
 Παλαιότερα φιλοξενούταν σε ένα αυτόνομο [`αποθετήριο`](https://github.com/ethereumjs/ethereumjs-client), ωστόσο αργότερα συγχωνεύτηκε στο monorepo EthereumVM ως πακέτο.
 
-**Ενημερωθείτε για τον πελάτη**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
-
 ## Άλλα έργα {#other-projects}
 
-Υπάρχουν επίσης πολλά άλλα πράγματα που συμβαίνουν στον κόσμο του Ethereum JavaScript, όπως:
+**Ενημερωθείτε για τον πελάτη**  
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 - Βιβλιοθήκες βοηθητικών προγραμμάτων πορτοφολιού.
 - Εργαλεία για τη δημιουργία, εισαγωγή και εξαγωγή κλειδιών Ethereum.
 - Υλοποίηση του `merkle-patricia-tree` – μια δομή δεδομένων που περιγράφεται στην τεχνική ανάλυση του Ethereum.
 
-Εξετάστε ό,τι σας ενδιαφέρει περισσότερο στο [αποθετήριο EthereumJS](https://github.com/ethereumjs)
+Υπάρχουν επίσης πολλά άλλα πράγματα που συμβαίνουν στον κόσμο του Ethereum JavaScript, όπως:
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
-_Γνωρίζετε κάποιο πόρο της κοινότητας που σας βοήθησε; Επεξεργαστείτε αυτή τη σελίδα και προσθέστε το!_
+_ _

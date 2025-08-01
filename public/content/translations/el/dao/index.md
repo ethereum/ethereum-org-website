@@ -92,7 +92,7 @@ summaryPoint3: Ένα ασφαλές μέρος συγκέντρωσης κεφ�
 
 ### Ένα δημοφιλές παράδειγμα {#law-example}
 
-[CityDAO](https://citizen.citydao.io/) – Η CityDAO χρησιμοποίησε το νόμο DAO του Wyoming για να αγοράσει 40 στρέμματα γης κοντά στο Εθνικό Πάρκο Yellowstone.
+[CityDAO](https://citydao.io) – Η CityDAO χρησιμοποίησε το νόμο DAO του Wyoming για να αγοράσει 40 στρέμματα γης κοντά στο Εθνικό Πάρκο Yellowstone.
 
 ## Μέλη DAO {#dao-membership}
 

@@ -46,7 +46,7 @@ lang: el
     function isApprovedForAll(address _owner, address _operator) external view returns (bool)˙
 ```
 
-### Συμβάντα {#events}
+### Εκδηλώσεις {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

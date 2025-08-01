@@ -1,6 +1,6 @@
 ---
 title: Πρότυπο Ψηφιακού Στοιχείου ERC-777
-description: null
+description:
 lang: el
 ---
 
