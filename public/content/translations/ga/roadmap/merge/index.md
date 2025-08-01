@@ -98,7 +98,7 @@ Tháinig an Cumasc le hathruithe ar chomhdhearcadh, lena n-áirítear freisin at
   <li>struchtúr bloc</li>
   <li>uainiú sliotán/bloc</li>
   <li>athruithe opcode</li>
-  <li>sources of onchain randomness</li>
+  <li>foinsí randamachta ar shlabhra</li>
   <li>coincheap <em>ceann sábháilte</em> agus <em>bloic chríochnaithe</em></li>
 </ul>
 
@@ -219,7 +219,7 @@ Ar dtús, ba é an plean a bhí ann oibriú ar sharding roimh An Cumasc chun agh
 Tá na pleananna sciartha ag athrú go tapa, ach i bhfianaise ardú agus rathúlacht theicneolaíochtaí ciseal 2 chun feidhmiú idirbheart a scála, tá na pleananna sciartha aistrithe chuig an mbealach is fearr a aimsiú chun an t-ualach a bhaineann le sonraí glaonna comhbhrúite a stóráil ó chonarthaí rollta suas a dháileadh, rud a cheadaíonn fás easpónantúil in acmhainn an líonra. Ní bheadh ​​sé seo indéanta gan aistriú chuig cruthúnais-gheallta ar dtús.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Roinnt
+  Sceardadh
 </ButtonLink>
 
 ## Tuilleadh léitheoireachta {#further-reading}

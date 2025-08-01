@@ -15,21 +15,36 @@ Déanfar cuid den [cripteagrafaíocht](/glossary/#cryptography) a dhaingníonn E
 
 Is é an dúshlán atá roimh fhorbróirí Ethereum ná go mbraitheann an prótacal reatha [cruthúnas-gheallta](/glossary/#pos) ar scéim sínithe an-éifeachtach ar a dtugtar BLS chun vótaí a chomhiomlánú ar [bhloic bhailí](/glossary/#block). Tá an scéim sínithe seo briste ag ríomhairí chandamacha, ach níl na roghanna frithsheasmhacha chandamach chomh héifeachtach.
 
-Is eol go bhfuil na scéimeanna gealltanais [“KZG”](/roadmap/danksharding/#what-is-kzg) a úsáidtear in áiteanna éagsúla ar fud Ethereum chun rúin cripteagrafacha a ghiniúint candamach-leochaileach. Faoi láthair, déantar é seo a shárú trí úsáid a bhaint as “socruithe iontaofa” ina ngineann go leor úsáideoirí randamacht nach féidir le ríomhaire chandamach a aisiompú. Mar sin féin, is é an réiteach idéalach ná cripteagrafaíocht chandamach sábháilte a ionchorprú ina ionad. Tá dhá chur chuige cheannródaíocha ann a d’fhéadfadh a bheith ina n-ionadaí éifeachtacha don scéim BLS: [STARK-bhunaithe](https://hackmd.io/@vbuterin/stark_aggregation) agus [laitíse-bhunaithe](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) ag síniú. **Tá taighde agus fréamhshamhlú á ndéanamh orthu seo fós**.
+Is eol go bhfuil na scéimeanna gealltanais [“KZG”](/roadmap/danksharding/#what-is-kzg) a úsáidtear in áiteanna éagsúla ar fud Ethereum chun rúin cripteagrafacha a ghiniúint candamach-leochaileach. Faoi láthair, seachnaítear é seo trí “socruithe iontaofa” a úsáid (a ndearnadh an príomh-seanchas socraithe a chríochnú go rathúil in 2023), áit ar ghin go leor úsáideoirí randamacht nach féidir le ríomhaire candamach a ais-innealtóireacht. Mar sin féin, is é an réiteach fadtéarmach idéalach ná cripteagrafaíocht shábháilte chandamach a ionchorprú ina ionad. Tá dhá chur chuige cheannródaíocha ann a d’fhéadfadh a bheith ina n-ionadaí éifeachtacha don scéim BLS: [STARK-bhunaithe](https://hackmd.io/@vbuterin/stark_aggregation) agus [laitíse-bhunaithe](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) ag síniú. **Tá taighde agus fréamhshamhlacha á ndéanamh orthu seo fós.**.
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Léigh faoi KZG agus socruithe iontaofa</ButtonLink>
+[Léigh faoi KZG agus socruithe iontaofa](/roadmap/danksharding#what-is-kzg)
 
 ## Ethereum níos simplí agus níos éifeachtaí {#simpler-more-efficient-ethereum}
 
-Cruthaíonn castacht deiseanna le haghaidh fabhtanna nó leochaileachtaí ar féidir le hionsaitheoirí leas a bhaint astu. Mar sin, is cuid den treochlár Ethereum a shimpliú agus fáil réidh leis an gcód a d'fhan thart trí uasghráduithe éagsúla ach nach bhfuil ag teastáil a thuilleadh nó ar féidir é a fheabhsú anois. Is fusa d'fhorbróirí bunchód níos barainní, níos simplí a choimeád agus réasúnú a dhéanamh faoi.
+Cruthaíonn castacht deiseanna le haghaidh fabhtanna nó leochaileachtaí ar féidir le hionsaitheoirí leas a bhaint astu. Dá bhrí sin, is cuid den phlean oibre Ethereum a shimpliú agus cód a bhaint nó a mhodhnú atá fágtha le linn uasghráduithe éagsúla ach nach bhfuil gá leis a thuilleadh nó ar féidir feabhas a chur air anois. Is fusa d’fhorbróirí bunachar cóid níos éadroime agus níos simplí a chothabháil agus réasúnú a dhéanamh faoi.
 
-Tá roinnt nuashonruithe a dhéanfar ar an [Meaisín Fíorúil Ethereum (EVM)](/developers/docs/evm) chun é a dhéanamh níos simplí agus níos éifeachtaí. Ina measc seo tá [ódchód SELFDESTRUCT a bhaint](https://hackmd.io/@vbuterin/selfdestruct) - ordú is annamh a úsáidtear nach bhfuil ag teastáil a thuilleadh agus a d’fhéadfadh a bheith contúirteach le húsáid i gcásanna áirithe, go háirithe nuair a bheidh sé in éineacht le huasghráduithe eile sa todhchaí ar mhúnla stórála Ethereum. Tacaíonn [cliaint Ethereum](/glossary/#consensus-client) freisin le roinnt seanchineálacha idirbheart is féidir a bhaint go hiomlán anois. Is féidir an bealach a ríomhtar [gas](/glossary/#gas) a fheabhsú freisin agus is féidir modhanna níos éifeachtaí a thabhairt isteach don uimhríocht atá mar bhonn agus mar thaca ag roinnt oibríochtaí cripteagrafacha.
+Chun [Meaisín Fíorúil Ethereum (EVM)](/developers/docs/evm) a dhéanamh níos simplí agus níos éifeachtaí, déantar feabhsuithe a thaighde agus a chur i bhfeidhm i gcónaí. Baineann sé seo le dul i ngleic le comhpháirteanna oidhreachta agus optamuithe a thabhairt isteach araon.
 
-Mar an gcéanna, tá nuashonruithe ann is féidir a dhéanamh le codanna eile de chliaint Ethereum an lae inniu. Sampla amháin is ea go n-úsáideann cliaint reatha forghníomhaithe agus comhdhearcadh cineál difriúil comhbhrú sonraí. Beidh sé i bhfad níos éasca agus níos iomasaí sonraí a roinnt idir na cliaint nuair a bheidh an scéim chomhbhrúite aontaithe ar fud an ghréasáin ar fad.
+**Athruithe a cuireadh i bhfeidhm le déanaí:**
+
+- **Athchóiriú ar Ríomh Gáis:** Feabhsaíodh an bealach a [gás](/glossary/#gas) go suntasach le **EIP-1559 (a cuireadh i bhfeidhm in uasghrádú Londain, 2021)**, rud a thug isteach táille bhunúsach agus sásra dóite le haghaidh praghsáil idirbhirt níos intuartha.
+- Srian ar **`SELFDESTRUCT`:** Cé nach n-úsáidtear an cód oibríochta `SELFDESTRUCT` go minic, bhí rioscaí féideartha ann. Cuireadh srian mór ar a **fheidhmiúlacht in uasghrádú Dencun (Márta 2024) trí EIP-6780** chun contúirtí a mhaolú, go háirithe maidir le bainistíocht stáit.
+- **Cineálacha Idirbhirt Nuachóirithe:** Tugadh isteach formáidí nua idirbhirt (m.sh., trí **EIP-2718** agus **EIP-4844** le haghaidh blobanna san uasghrádú Dencun) chun tacú le gnéithe nua agus éifeachtúlacht a fheabhsú thar chineálacha oidhreachta.
+
+**Spriocanna leanúnacha agus amach anseo:**
+
+- **Tuilleadh Láimhseála `SELFDESTRUCT`:** Cé go bhfuil srian leis, táthar fós ag smaoineamh ar **bhaint iomlán fhéideartha** an opcode `SELFDESTRUCT` le haghaidh uasghráduithe amach anseo chun staid an EVM a shimpliú tuilleadh. ([Tuilleadh comhthéacs ar shaincheisteanna SELFDESTRUCT](https://hackmd.io/@vbuterin/selfdestruct)).
+- **Deireadh a Chur le hIdirbhearta Seanré de réir a chéile:** Cé go dtacaíonn [cliaint Ethereum](/glossary/#consensus-client) fós le cineálacha idirbheart níos sine le haghaidh comhoiriúnachta siarghabhálach, is é an sprioc ná imirce chuig cineálacha níos nuaí a spreagadh agus **tacaíocht do na formáidí is sine a dhíchur nó a bhaint go hiomlán** sa todhchaí.
+- **Taighde ar Éifeachtúlacht Gháis Leantach:** Leanann an taiscéalaíocht ar aghaidh chuig **feabhsuithe breise le haghaidh ríomh gáis**, lena n-áirítear coincheapa amhail gás iltoiseach chun úsáid acmhainní a léiriú níos fearr.
+- **Oibríochtaí Cripteagrafacha Optamaithe:** Tá iarrachtaí ar bun chun **modhanna níos éifeachtaí a thabhairt isteach don uimhríocht** a bhuntacaíonn le hoibríochtaí cripteagrafacha a úsáidtear laistigh den EVM.
+
+Ar an gcaoi chéanna, tá nuashonruithe ann is féidir a dhéanamh ar chodanna eile de chliaint Ethereum an lae inniu. Sampla amháin is ea go n-úsáideann cliaint fhorghníomhaithe agus comhthola reatha cineál difriúil comhbhrú sonraí. Beidh sé i bhfad níos éasca agus níos iomasaí sonraí a roinnt idir cliaint nuair a bheidh an scéim chomhbhrúite aontaithe ar fud an líonra ar fad. Is réimse taiscéalaíochta é seo fós.
 
 ## Dul chun cinn reatha {#current-progress}
 
-Tá an chuid is mó de na huasghráduithe a theastaíonn chun Ethereum a chosaint amach anseo ** fós sa chéim taighde agus d'fhéadfadh go mbeadh siad roinnt blianta fada ar shiúl** go dtí go gcuirfear i bhfeidhm iad. Is dócha go dtiocfaidh uasghráduithe ar nós SELFDESTRUCT a bhaint agus comhchuibhiú na scéime comhbhrúite a úsáidtear sa fhorghníomhú agus cliaint chomhthoil níos luaithe ná cripteagrafaíocht chandamach frithsheasmhach.
+Tá go leor de na huasghráduithe fadtéarmacha a fhéachfaidh leis an todhchaí, go háirithe **friotaíocht iomlán chandamach do phrótacail lárnacha, fós sa chéim taighde agus d'fhéadfadh sé go mbeadh roinnt blianta ann** sula gcuirfear i bhfeidhm iad.
+
+Mar sin féin, **tá dul chun cinn suntasach déanta cheana féin ar iarrachtaí simplithe.** Mar shampla, cuireadh príomhathruithe ar nós an **srian ar `SELFDESTRUCT` (EIP-6780)** agus tabhairt isteach **idirbhearta iompar blóige (EIP-484)** i bhfeidhm sna **uasghrádú Dencun (Márta 2024)**. Leanann an obair ar chomhchuibhiú scéimeanna comhbhrú cliant agus feabhsuithe eile ar éifeachtúlacht ar aghaidh freisin.
 
 **Tuilleadh léitheoireachta**
 
