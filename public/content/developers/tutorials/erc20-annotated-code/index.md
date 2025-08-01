@@ -92,7 +92,7 @@ more valuable than it actually is. However, that fear ignores the true nature of
 every node. To achieve this, every contract's machine language code and storage is available on every node. While you are not required to publish the Solidity
 code for your contract, nobody would take you seriously unless you publish the source code and the version of Solidity with which it was complied, so it can
 be verified against the machine language code you provided.
-For example, see [this contract](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
+For example, see [this contract](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
 &nbsp;
 
