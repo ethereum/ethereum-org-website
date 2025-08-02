@@ -25,8 +25,8 @@ export const dates = [
     title: "Workshops",
     description:
       "Join our Discord to participate in onboarding calls and workshops and learn all about the Translatathon",
-    startDate: new Date("2024-08-05T12:00:00Z"),
-    endDate: new Date("2024-08-08T12:00:00Z"),
+    startDate: new Date("2025-08-15T12:00:00Z"),
+    endDate: new Date("2025-08-22T12:00:00Z"),
     link: "/discord/",
     linkText: "Prepare",
   },
@@ -34,8 +34,8 @@ export const dates = [
     title: "Translatathon",
     description:
       "The translation period - translate as much or as little as you want",
-    startDate: new Date("2024-08-09T12:00:00Z"),
-    endDate: new Date("2024-08-18T12:00:00Z"),
+    startDate: new Date("2025-08-25T12:00:00Z"),
+    endDate: new Date("2025-08-31T12:00:00Z"),
     link: CROWDIN_PROJECT_URL,
     linkText: "Translate",
   },
@@ -43,8 +43,8 @@ export const dates = [
     title: "Evaluation period",
     description:
       "Each translation will be evaluated by professional reviewers to verify translations were not done with AI tools and meet the minimum quality threshold",
-    startDate: new Date("2024-08-19T12:00:00Z"),
-    endDate: new Date("2024-08-28T12:00:00Z"),
+    startDate: new Date("2025-09-01T12:00:00Z"),
+    endDate: new Date("2025-09-30T12:00:00Z"),
     link: null,
     linkText: null,
   },
@@ -52,7 +52,7 @@ export const dates = [
     title: "Results announcement",
     description:
       "We will announce the results and winners on the ethereum.org community Call",
-    startDate: new Date("2024-08-29T12:00:00Z"),
+    startDate: new Date("2025-09-30T12:00:00Z"),
     endDate: null,
     link: null,
     linkText: null,
