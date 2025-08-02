@@ -68,6 +68,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                     src={image}
                     alt={alt}
                     width={66}
+                    height={66}
                     className="rounded-xl shadow-lg dark:shadow-body-light"
                   />
                 )}
