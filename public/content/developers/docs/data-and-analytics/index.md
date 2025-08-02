@@ -64,7 +64,7 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 
 ## Further Reading {#further-reading}
 
-- [Exploring Crypto Data I: Data Flow Architectures](https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Exploring Crypto Data I: Data Flow Architectures](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Network Overview](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
