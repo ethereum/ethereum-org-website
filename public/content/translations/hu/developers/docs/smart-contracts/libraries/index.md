@@ -104,7 +104,7 @@ Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe a
 
 **thirdweb Solidity SDK –** **_Olyan eszközöket biztosít, melyekkel hatékonyan lehet személyre szabott okosszerződéseket létrehozni_**
 
-- [Dokumentáció](https://portal.thirdweb.com/contracts/build/overview)
+- [Dokumentáció](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Kapcsolódó útmutatók {#related-tutorials}

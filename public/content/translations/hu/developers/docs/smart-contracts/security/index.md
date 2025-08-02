@@ -8,7 +8,7 @@ Az okosszerződések rendkívüli módon rugalmasak és képesek nagy mennyiség
 
 A nyilvános blokkláncok, mint az Ethereum, tovább bonyolítják az okosszerződések biztosításának problémáját. A telepített szerződéskód _általában_ nem módosítható, hogy ezzel a biztonsági kockázatokat elkerüljék, eközben az okosszerződésekből ellopott eszközöket rendkívül nehéz lekövetni és a legtöbb esetben visszaszerezhetetlenek a megváltoztathatatlanság miatt.
 
-Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az okosszerződésből ellopott vagy onnan elvesztett értékek teljes összege könnyen meghaladhatja az 1 milliárd dollárt is. Ez magába foglal olyan nagy horderejű incidenseket is, mint amilyen a [DAO-hackelés volt](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millió ETH-t loptak, ami meghaladja az 1 milliárd dollárt mai áron), [Parity több aláírásos tárca hackelését](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 millió USD-t veszett el), és a [Parity befagyasztott tárcaproblémát](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 millió USD-nyi ETH örökre elérhetetlenné vált).
+Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az okosszerződésből ellopott vagy onnan elvesztett értékek teljes összege könnyen meghaladhatja az 1 milliárd dollárt is. Ez magába foglal olyan nagy horderejű incidenseket is, mint amilyen a [DAO-hackelés volt](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millió ETH-t loptak, ami meghaladja az 1 milliárd dollárt mai áron), [Parity több aláírásos tárca hackelését](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (30 millió USD-t veszett el), és a [Parity befagyasztott tárcaproblémát](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 millió USD-nyi ETH örökre elérhetetlenné vált).
 
 Ezek az esetek kötelezővé teszik a fejlesztők számára, hogy folyamatosan azon dolgozzanak, hogy az okosszerződések biztonságosak, robusztusak és ellenállók legyenek. Az okosszerződésbiztonság komoly téma, melyet minden fejlesztőnek a maga érdekében meg kell ismerni. Ez az útmutató lefedi azokat a biztonsági megfontolásokat, amelyek az Ethereum-fejlesztőknek fontosak, és forrásokat tár fel az okosszerződésbiztonság továbbfejlesztésére.
 
@@ -304,7 +304,7 @@ Ebben még nincs semmi rossz, viszont a `attacker` (támadó) szerződésben van
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/understanding-the-dao-attack) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
+Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
 
 ##### Hogyan lehet megakadályozni egy újrabelépéses támadást
 
@@ -505,7 +505,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Hacken](https://hacken.io)** – _Web3 kiberbiztonsági auditor, amely 360 fokos megközelítést alkalmaz a blokkláncbiztonságban._
 
-- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
+- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
 
 - **[HashEx](https://hashex.org/)** – _A HashEx a blokkláncok és okosszerződések auditálásra szakosodott a kriptovaluták biztonságának biztosítása céljából, illetve olyan szolgáltatásokat nyújt, mint az okosszerződés-fejlesztés, sérülékenység-vizsgálat, blokklánctanácsadás._
 
@@ -515,7 +515,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3 biztonsági erőmű, elősegíti kriptobiztonságot termékeken és okosszerződés-ellenőrzési szolgáltatásokon keresztül._
 
-- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
 
 - **[Oxorio](https://oxor.io/)** - _Okosszerződés-auditok és blokkláncbiztonsági szolgáltatások, szakértelem az EVM, Solidity, ZK, kriptocégek láncok közötti technológiái és DeFi projektek területén._
 
