@@ -69,6 +69,7 @@ import lido from "@/public/images/dapps/lido.png"
 import matcha from "@/public/images/dapps/matcha.png"
 import meeds from "@/public/images/dapps/meeds.png"
 import mirror from "@/public/images/dapps/mirror.png"
+import morpho from "@/public/images/dapps/morpho.png"
 import nexus from "@/public/images/dapps/nexus.png"
 import nifty from "@/public/images/dapps/nifty.png"
 import opensea from "@/public/images/dapps/opensea.png"
@@ -488,6 +489,13 @@ const DappsPage = ({
       alt: t("page-dapps-aave-logo-alt"),
     },
     {
+      title: "Morpho",
+      description: t("page-dapps-dapp-description-morpho"),
+      link: "https://morpho.org/",
+      image: morpho,
+      alt: t("page-dapps-morpho-logo-alt"),
+    },
+    {
       title: "Compound",
       description: t("page-dapps-dapp-description-compound"),
       link: "https://compound.finance/",
@@ -851,7 +859,7 @@ const DappsPage = ({
     {
       title: "1inch",
       description: t("page-dapps-dapp-description-1inch"),
-      link: "https://1inch.exchange/",
+      link: "https://1inch.io/",
       image: oneinch,
       alt: t("page-dapps-1inch-logo-alt"),
     },

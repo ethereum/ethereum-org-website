@@ -109,7 +109,7 @@ Once you’re done editing the JSON file, save it and upload it to Pinata, follo
 
 ## Step 5: Create an instance of your contract {#instance-contract}
 
-Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://sepolia.etherscan.io/) by looking up the address you used to deploy the contract.
+Now, to interact with our contract, we need to create an instance of it in our code. To do so we'll need our contract address which we can get from the deployment or [Blockscout](https://eth-sepolia.blockscout.com/) by looking up the address you used to deploy the contract.
 
 ![View your contract address on Etherscan](./view-contract-etherscan.png)
 
@@ -316,7 +316,7 @@ Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of second
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Sepolia Etherscan](https://sepolia.etherscan.io/) and search for your transaction hash.
+Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Blockscout](https://eth-sepolia.blockscout.com/) and search for your transaction hash.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_View your NFT transaction hash on Etherscan_
 

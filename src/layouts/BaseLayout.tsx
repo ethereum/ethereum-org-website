@@ -16,7 +16,7 @@ const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
   ssr: false,
 })
 
-export const BaseLayout = ({
+export const BaseLayout = async ({
   children,
   // contentIsOutdated,
   // contentNotTranslated,
@@ -52,8 +52,6 @@ export const BaseLayout = ({
        */}
       <SkipLink />
       <div className="mx-auto max-w-screen-2xl">
-        
-
         {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
         {/* <TranslationBanner
             shouldShow={shouldShowTranslationBanner}

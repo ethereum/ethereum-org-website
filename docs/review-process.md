@@ -50,4 +50,6 @@ Adding new products is currently a low-to-medium priority (depending on the type
 
 Adding new tutorials to [ethereum.org](http://ethereum.org) is currently low-priority. We are currently in the middle of an epic to revamp our tutorials. As part of this, we’ll be reviewing our existing tutorials, purging outdated or low-quality tutorials, and refining our listing criteria for future tutorials to meet our increased standards. Please always create an issue to discuss the usefulness of your proposed tutorial before opening a PR.
 
+New tutorials should be placed in `public/content/developers/tutorials/your-tutorial-name/index.md`, with `your-tutorial-name` added to `src/data/internalTutorials.json` for inclusion.
+
 **Timeline:** PRs should be closed or merged within 30 days of opening.

@@ -21,9 +21,9 @@
   "page-10-year-join-party-description": "Celebrate 10 years of Ethereum with the global community. Find a local event or start your own celebration.",
   "page-10-year-events-description-1": "Join people around the world for talks, networking, and celebrations as we mark Ethereum's tenth birthday.",
   "page-10-year-events-description-2": "Can't make it in person? Watch our livestream and follow updates from events worldwide, so everyone can celebrate this milestone together.",
-  "page-10-year-host-event-title": "Host an event",
-  "page-10-year-host-event-description": "Want to host an event? Limited-time grants are available to help fund your event.",
-  "page-10-year-host-event-cta": "Apply Now",
+  "page-10-year-host-event-title": "Share your event",
+  "page-10-year-host-event-description": "Are you hosting an event? Enter event details below to get it listed on the map.",
+  "page-10-year-host-event-cta": "Share event",
   "page-10-year-innovation-title": "10 years of",
   "page-10-year-innovation-subtitle": "Innovation",
   "page-10-year-innovation-description-1": "Ethereum transformed blockchain by introducing smart contracts",
@@ -103,5 +103,14 @@
   "page-10-year-adoption-card-5-link-text": "More on Ethereum energy consumption",
   "page-10-year-adoption-card-6-title": "Over 250 TPS",
   "page-10-year-adoption-card-6-description": "Ethereum's throughput has increased dramatically since launch, with Ethereum's ecosystem now handling over <a href=\"https://l2beat.com/scaling/activity\">250 transactions per second.</a>",
-  "page-10-year-adoption-card-6-link-text": "More on layer 2s"
+  "page-10-year-adoption-card-6-link-text": "More on layer 2s",
+  "page-10-year-torch-title": "The Ethereum Torch",
+  "page-10-year-torch-description": "A unique NFT celebrating Ethereum's 10th anniversary. The Torch passes between community members, representing the spirit of collaboration and decentralization that defines Ethereum.",
+  "page-10-year-torch-current-holder": "Current Torch Holder",
+  "page-10-year-torch-no-holder": "No current holder",
+  "page-10-year-torch-history-title": "Torch Holder History",
+  "page-10-year-torch-no-history": "No transfer history available",
+  "page-10-year-torch-from": "From",
+  "page-10-year-torch-to": "To",
+  "page-10-year-torch-view-tx": "View Transaction"
 }

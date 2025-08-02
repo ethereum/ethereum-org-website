@@ -1,8 +1,7 @@
 "use client"
 
 import { forwardRef, useEffect, useRef, useState } from "react"
-import { FaCheck } from "react-icons/fa"
-import { MdClose } from "react-icons/md"
+import { Check, X } from "lucide-react"
 
 import type { ValuesPairing } from "@/lib/types"
 
@@ -55,7 +54,7 @@ const Item = ({
           <div className="flex flex-col gap-4">
             <div className="flex gap-2 text-body-medium">
               <div className="p-1 text-lg">
-                <MdClose />
+                <X />
               </div>
               <div>
                 {pairing.legacy.content.map((line) => (
@@ -196,7 +195,11 @@ const ValuesMarquee = ({
             eventCategory={eventCategory}
             direction={direction}
           >
-            <FaCheck className="me-1 text-success group-hover/item:text-white" />
+            <Check
+              className="me-1 size-[1em] stroke-[4.5] text-success group-hover/item:text-white"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+            />
             {pairing.ethereum.label}
           </Item>
         ))}

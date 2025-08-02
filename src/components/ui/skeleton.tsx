@@ -4,7 +4,7 @@ import { Card, CardBanner, CardContent } from "../ui/card"
 
 // Pseudo-random list of skeleton widths for multiple lines
 const widths = [
-  "w-1/3",
+  "w-2/3",
   "w-1/5",
   "w-4",
   "w-1/4",
@@ -22,13 +22,15 @@ const widths = [
   "w-1/5",
 ]
 
-const Skeleton = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => {
+type SkeletonProps = React.HTMLAttributes<HTMLDivElement>
+
+const Skeleton = ({ className, ...props }: SkeletonProps) => {
   return (
     <div
-      className={cn("h-4 animate-pulse rounded bg-disabled/20", className)}
+      className={cn(
+        "h-4 animate-pulse-light rounded bg-disabled opacity-5 dark:opacity-60",
+        className
+      )}
       {...props}
     />
   )
@@ -62,14 +64,18 @@ type SkeletonCardProps = {
   className?: string
 }
 
+const SkeletonCardContent = ({ className }: SkeletonCardProps) => (
+  <CardContent className={cn("cursor-default space-y-3", className)}>
+    <Skeleton className="h-6 w-3/4" />
+    <Skeleton className="h-4 w-1/2" />
+    <Skeleton className="h-4 w-1/3" />
+  </CardContent>
+)
+
 const SkeletonCard = ({ className }: SkeletonCardProps) => (
   <Card className={cn("cursor-default", className)}>
     <CardBanner />
-    <CardContent className="space-y-3">
-      <Skeleton className="h-6 w-3/4" />
-      <Skeleton className="h-4 w-1/2" />
-      <Skeleton className="h-4 w-1/3" />
-    </CardContent>
+    <SkeletonCardContent />
   </Card>
 )
 
@@ -85,4 +91,10 @@ const SkeletonCardGrid = ({ className }: SkeletonCardGridProps) => (
   </div>
 )
 
-export { Skeleton, SkeletonCardGrid, SkeletonLines }
+export {
+  Skeleton,
+  SkeletonCard,
+  SkeletonCardContent,
+  SkeletonCardGrid,
+  SkeletonLines,
+}
