@@ -6,7 +6,7 @@ lang: en
 
 # Pectra {#pectra}
 
-Prague-Electra (Pectra) is an upgrade to the Ethereum network, following [Dencun](/roadmap/dencun/). This major upgrade brings changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to Ethereum users, developers and validators.
+The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to Ethereum users, developers and validators.
 
 This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
