@@ -89,7 +89,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 - Always fresh state, short term testing of validators and apps
 - Includes only basic set of contracts
 - Open validator set and easy to access large amounts of funds
-- Smallest node requirements and quickest sync, <5GB on average
+- Smallest node requirements and quickest sync, &lt;5GB on average
 
 ##### Resources
 
