@@ -4,7 +4,7 @@ import dynamic from "next/dynamic"
 import type { Root } from "@/lib/types"
 
 import Footer from "@/components/Footer"
-import Nav from "@/components/Nav"
+// import Nav from "@/components/Nav"
 import { SkipLink } from "@/components/SkipLink"
 
 // import TranslationBanner from "@/components/TranslationBanner"
@@ -52,8 +52,6 @@ export const BaseLayout = async ({
        */}
       <SkipLink />
       <div className="mx-auto max-w-screen-2xl">
-        <Nav />
-
         {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
         {/* <TranslationBanner
             shouldShow={shouldShowTranslationBanner}
