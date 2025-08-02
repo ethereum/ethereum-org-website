@@ -20,6 +20,8 @@ lang: el
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Cointool](https://cointool.app/approve/eth) (πολλαπλά δίκτυα)
 - [Revoke](https://revoke.cash/) (πολλαπλά δίκτυα)
 - [Unrekt](https://app.unrekt.net/) (πολλαπλά δίκτυα)
 - [EverRevoke](https://everrise.com/everrevoke/) (πολλαπλά δίκτυα)

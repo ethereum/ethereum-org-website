@@ -15,32 +15,53 @@ lang: el
 Αυτά τα προγράμματα υποστηρίζουν το ευρύ οικοσύστημα Ethereum προσφέροντας επιχορηγήσεις σε ένα ευρύ φάσμα έργων. Αυτά περιλαμβάνουν λύσεις για την επεκτασιμότητα, τη δημιουργία κοινότητας, την ασφάλεια, την ιδιωτικότητα και πολλά άλλα. Αυτές οι επιχορηγήσεις δεν είναι συγκεκριμένες για καμία πλατφόρμα Ethereum και είναι ένα καλό μέρος για να ξεκινήσετε εάν δεν είστε σίγουροι.
 
 - [Πρόγραμμα Υποστήριξης Οικοσυστήματος EF](https://esp.ethereum.foundation) - _Χρηματοδότηση έργων ανοιχτού κώδικα που ωφελούν το Ethereum, με ιδιαίτερη έμφαση στα γενικά εργαλεία, τις υποδομές, την έρευνα και τα δημόσια αγαθά_
-- [Moloch DAO](https://www.molochdao.com/) - _Απόρρητο, αναβάθμιση επιπέδου 2, ασφάλεια πελάτη και πολλά άλλα_
-- [Χορηγίες DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Υπολογιστικό φύλλο Google για οργανισμούς που προσφέρουν επιχορηγήσεις_
 - [Ακαδημαϊκές υποτροφίες](https://esp.ethereum.foundation/academic-grants) - _Χορηγίες για την υποστήριξη ακαδημαϊκής εργασίας που σχετίζεται με το Ethereum_
+
+## Χορηγοί και Πλατφόρμες Επιχορηγήσεων {#grant-list-aggregators}
+
+Αυτοί οι πόροι συγκεντρώνουν και οργανώνουν διάφορες ευκαιρίες επιχορηγήσεων σε ολόκληρο το οικοσύστημα του Ethereum, διευκολύνοντας την ανακάλυψη ευκαιριών χρηματοδότησης που ταιριάζουν στις ανάγκες του έργου σας. Τους έχουμε οργανώσει ανά οντότητα για να σας βοηθήσουμε να ξεκινήσετε να βρίσκετε τους πιο σχετικούς πόρους με βάση τις συγκεκριμένες ανάγκες χρηματοδότησης σας.
+
+### Για αυτούς που αναζητούν επιχορηγήσεις: Ολοκληρωμένοι κατάλογοι {#comprehensive-directories}
+
+Αυτές οι γενικές πλατφόρμες προσφέρουν ευρεία κάλυψη επιχορηγήσεων σε ολόκληρο τον χώρο του Web3 και αποτελούν χρήσιμα σημεία εκκίνησης για όποιον αναζητά χρηματοδότηση:
+
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Η Blockworks έχει συντάξει έναν ολοκληρωμένο κατάλογο με όλες τις επιχορηγήσεις, τα RFP και τις αμοιβές εύρεσης σφαλμάτων._
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _Κατάλογος επιχορηγήσεων blockchain και κρυπτονομισμάτων._
 
-## Συγκεκριμένο έργο {#project-specific}
+### Για προγραμματιστές και δημιουργούς {#for-developers-and-builders}
 
-Αυτά τα έργα έχουν δημιουργήσει τις δικές τους επιχορηγήσεις για τα έργα που στοχεύουν στην ανάπτυξη και τον πειραματισμό με τη δική τους τεχνολογία.
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Δημόσια βάση δεδομένων Airtable προγραμμάτων επιχορηγήσεων._
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Υπολογιστικό φύλλο Google με ευκαιρίες επιχορηγήσεων Web3._
 
-- [Πρόγραμμα Επιχορηγήσεων Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) επιχορήγηση DAO_
-- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/) χρηματοδότηση οικοσυστήματος_
-- [Πρόγραμμα Επιχορηγήσεων Chainlink](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) κοινοτικές επιχορηγήσεις_
-- [Πρόγραμμα Επιχορηγήσεων Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
-- [Lido Ecosystem Grants Organization (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) χρηματοοικονομικό οικοσύστημα_
-- [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
-- [Πρόγραμμα επιχορήγησης δικτύου SKALE](https://skale.space/developers#grants) - _[SKALE](https://skale.space/)δίκτυο οικοσυστήματος_
-- [Ίδρυμα Swarm πρόγραμμα χρηματοδοτήσεων](https://my.ethswarm.org) - _Οικοσύστημα [Ιδρύματος Swarm](https://www.ethswarm.org/)_
-- [The Graph](https://thegraph.com/ecosystem/grants/) – _Οικοσύστημα [The Graph](https://thegraph.com/)_
-- [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/approach) – _Κοινότητα [Uniswap](https://uniswap.org/)_
+### Για έργα DeFi και χρηματοοικονομικές εφαρμογές {#for-defi-projects}
 
-## Τετραγωνική χρηματοδότηση {#quadratic-funding}
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _Κατάλογος προγραμμάτων επιχορηγήσεων του DeFi Llama._
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Ολοκληρωμένη λίστα επιχορηγήσεων crypto και Web3._
 
-Οι βάσεις ανοιχτού κώδικα του Ethereum οδήγησαν στην ανάπτυξη ενός ενδιαφέροντος νέου μοντέλου συγκέντρωσης κεφαλαίων: της τετραγωνικής χρηματοδότησης. Αυτό έχει τη δυνατότητα να βελτιώσει τον τρόπο με τον οποίο χρηματοδοτούμε όλα τα είδη δημόσιων αγαθών στο μέλλον. Η τετραγωνική χρηματοδότηση διασφαλίζει ότι τα έργα που λαμβάνουν τη μεγαλύτερη χρηματοδότηση, είναι αυτά με τη μεγαλύτερη ζήτηση. Με άλλα λόγια, έργα που μπορούν να βελτιώσουν τη ζωή των περισσότερων ανθρώπων. [Περισσότερα για την τετραγωνική χρηματοδότηση.](/defi/#quadratic-funding)
+### Για συνεισφέροντες DAO και καινοτόμους στη διακυβέρνηση {#for-dao-contributors}
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+Πόροι για κοινοτικά έργα και πειράματα διακυβέρνησης:
+
+- [Χορηγίες DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Υπολογιστικό φύλλο Google για οργανισμούς που προσφέρουν επιχορηγήσεις_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Ολοκληρωμένος χάρτης επιχορηγήσεων Web3._
+
+### Για επιχειρηματίες και νεοσύστατες επιχειρήσεις {#for-entrepreneurs-and-startups}
+
+Πόροι για όσους δημιουργούν προϊόντα και αναζητούν επενδύσεις πέρα ​​από απλές επιχορηγήσεις:
+
+- [Web3Native](https://www.web3native.co/) - _Κατάλογος επιχορηγήσεων, επενδυτών και προγραμμάτων επιτάχυνσης Web3_
+- [Επιχορηγήσεις Cryptoneur Web3](https://www.cryptoneur.xyz/web3-grants) - _Πλατφόρμα για την εύρεση χρηματοδότησης έργων Web3_
+
+### Δημόσια αγαθά και αντίκτυπος {#public-goods-and-impact}
+
+Αυτά τα προγράμματα επικεντρώνονται στη χρηματοδότηση έργων που ωφελούν την ευρύτερη κοινότητα, τα δημόσια αγαθά και τις πρωτοβουλίες αντίκτυπου. Αυτά περιλαμβάνουν παρόχους επιχορηγήσεων, καθώς και πλατφόρμες δωρεών που χρησιμοποιούν μηχανισμούς κατανομής κεφαλαίων onchain, συμπεριλαμβανομένης της τετραγωνικής χρηματοδότησης [quadratic funding](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Το Gitcoin Grants χρησιμοποιεί πολλαπλούς μηχανισμούς κατανομής κεφαλαίων για τη χρηματοδότηση έργων ανοιχτού κώδικα και δημόσιων αγαθών στο οικοσύστημα του Ethereum._
+- [Octant](https://octant.app/home) - _Οικοσύστημα χρηματοδότησης δημόσιων αγαθών που ισορροπεί το κοινό καλό και την ατομική οικονομική ενδυνάμωση._
+- [Giveth](https://giveth.io/) - _Πλατφόρμα δωρεών κρυπτονομισμάτων που επιτρέπει απευθείας δωρεές από έργα για το καλό, χωρίς επιπλέον χρεώσεις._
+- [Artizen](https://artizen.fund/) - _Βοηθά τους δημιουργούς να χρηματοδοτήσουν νέα έργα στην αιχμή της τέχνης, της επιστήμης, της τεχνολογίας και του πολιτισμού._
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _Πρόγραμμα επιταχυντή startup που χρησιμοποιεί τετραγωνική χρηματοδότηση για την υποστήριξη έργων που ωφελούν το δημόσιο καλό._
+
 
 ## Εργασία στο Ethereum {#work-in-ethereum}
 

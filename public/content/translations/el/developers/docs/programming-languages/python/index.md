@@ -84,7 +84,7 @@ incomplete: true
 Τα ακόλουθα έργα που βασίζονται στο Ethereum χρησιμοποιούν εργαλεία που αναφέρονται σε αυτήν τη σελίδα. Τα σχετικά αποθετήρια ανοιχτού κώδικα χρησιμεύουν ως μια καλή αναφορά για παράδειγμα κώδικα και βέλτιστες πρακτικές.
 
 - [Χρηματοοικονομικά έτους](https://yearn.finance/) και [αποθετήριο συμβάσεων Yearn Vault](https://github.com/yearn/yearn-vaults)
-- [Curve](https://curve.fi/) και [αποθετήριο έξυπνων συμβολαίων Curve](https://github.com/curvefi/curve-contract)
+- [Curve](https://www.curve.finance/) και [αποθετήριο έξυπνων συμβολαίων Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) και [έξυπνα συμβόλαια χρησιμοποιώντας την αλυσίδα εργαλείων Brownie](https://github.com/Badger-Finance/badger-system)
 - Το [Sushi](https://sushi.com/) χρησιμοποιεί την [Python για τη διαχείριση και την ανάπτυξη των κατοχυρωμένων συμβολαίων τους](https://github.com/sushiswap/sushi-vesting-protocols)
 - Η [Alpha Finance](https://alphafinance.io/), της Alpha Homora, χρησιμοποιεί το [ Brownie για δοκιμή και ανάπτυξη των έξυπνων συμβολαίων](https://github.com/AlphaFinanceLab/alpha-staking-contract)

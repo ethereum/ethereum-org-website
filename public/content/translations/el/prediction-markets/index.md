@@ -29,7 +29,7 @@ buttons:
 
 Σε αντίθεση με τις παραδοσιακές προβλέψεις, οι αγορές πρόβλεψης που βασίζονται σε blockchain είναι:
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
   <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
   <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />

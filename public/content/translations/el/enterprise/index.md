@@ -156,6 +156,6 @@ lang: el
 - [Lamborghini](https://venturebeat.com/games/lamborghini-and-animocas-motorverse-tap-base-blockchain-for-in-game-assets/) - _δημιουργεί in-game assets για το Web3 παιχνίδι αγώνων Motorverse της Animoca._
 - [Nike Swoosh](https://www.swoosh.nike/) — _μια πλατφόρμα NFT_
 - [Sothbebys Metaverse](https://metaverse.sothebys.com/) — _μια ψηφιακή αγορά τέχνης NFT από τη Sothebys_
-- [Soneium](https://soneium.org/) - _ένα Layer 2 από τη Sony για την υποστήριξη παιχνιδιών Web3 και NFT._
+- [Soneium](https://soneium.org/) - </em x-id="4">ένα Layer 2 από τη Sony για την υποστήριξη παιχνιδιών Web3 και NFT.</em>
 
 Αν θέλετε να προσθέσετε κάτι σε αυτήν τη λίστα, ανατρέξτε στις [οδηγίες για τη συνεισφορά](/contributing/).
