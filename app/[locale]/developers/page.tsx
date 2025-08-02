@@ -33,7 +33,7 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
-import heroImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 
 const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
 
