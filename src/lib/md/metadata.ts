@@ -6,16 +6,18 @@ import { importMd } from "./import"
 export const getMdMetadata = async ({
   locale,
   slug: slugArray,
+  timeToRead,
 }: {
   locale: string
   slug: string[]
+  timeToRead?: string
 }) => {
   const slug = slugArray.join("/")
 
   const { markdown } = await importMd(locale, slug)
   const { frontmatter } = await compile({
     markdown,
-    slugArray: slug.split("/"),
+    slugArray,
     locale,
     components: {},
   })
@@ -24,6 +26,8 @@ export const getMdMetadata = async ({
   const description = frontmatter.description
   const image = frontmatter.image
   const author = frontmatter.author
+  const tags = frontmatter.tags
+  const skill = frontmatter.skill
 
   return await getMetadata({
     locale,
@@ -32,5 +36,8 @@ export const getMdMetadata = async ({
     description,
     image,
     author,
+    tags,
+    skill,
+    timeToRead,
   })
 }
