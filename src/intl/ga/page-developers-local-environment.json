@@ -28,8 +28,6 @@
   "page-local-environment-setup-subtitle": "Má tá tú réidh le tosú ag tógáil, tá sé in am do chruach a roghnú.",
   "page-local-environment-setup-subtitle-2": "Seo iad na huirlisí agus na creataí is féidir leat a úsáid chun cabhrú leat d’fheidhmchlár Ethereum a thógáil.",
   "page-local-environment-setup-title": "Socraigh do thimpeallacht forbartha áitiúil",
-  "page-local-environment-solidity-template-desc": "Teimpléad GitHub le haghaidh socrú réamhthógtha faoi choinne do chonarthaí cliste Solidity. Áirítear leis líonra áitiúil Hardhat, Waffle le haghaidh tástálacha, Éitear le haghaidh cur i bhfeidhm sparán agus tuilleadh.",
-  "page-local-environment-solidity-template-logo-alt": "Lógó teimpléid Solidity",
-  "page-local-environment-waffle-desc": "An tsaotharlann tástála is forásaí le haghaidh conarthaí cliste. Bain úsáid as ina n-aonar nó le Scafall-eth nó Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Lógó Waffle"
+  "page-local-environment-solidity-template-desc": "Teimpléad GitHub le haghaidh socrú réamhthógtha do do chonarthaí cliste Solidity. Áirítear líonra áitiúil Hardhat, Ethers le haghaidh cur i bhfeidhm sparán, agus tuilleadh.",
+  "page-local-environment-solidity-template-logo-alt": "Lógó teimpléid Solidity"
 }
