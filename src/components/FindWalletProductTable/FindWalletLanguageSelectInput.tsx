@@ -1,7 +1,9 @@
+import { useState } from "react"
 import { useLocale } from "next-intl"
 
 import { FilterInputState, Lang } from "@/lib/types"
 
+import Input from "@/components/ui/input"
 import {
   Select,
   SelectContent,
@@ -34,9 +36,10 @@ const FindWalletLanguageSelectInput = ({
   updateFilterState,
 }: FindWalletLanguageSelectInputProps) => {
   const locale = useLocale()
+  const [searchQuery, setSearchQuery] = useState("")
   const { t } = useTranslation("page-wallets-find-wallet")
   const languageCountWalletsData = getLanguageCountWalletsData(locale as string)
-  const countSortedLanguagesCount = languageCountWalletsData.sort(
+  const countSortedLanguagesCount = [...languageCountWalletsData].sort(
     (a, b) => b.count - a.count
   )
 
@@ -51,15 +54,36 @@ const FindWalletLanguageSelectInput = ({
             eventName: getLanguageCodeName(e, locale!),
           })
           updateFilterState(filterIndex, itemIndex, e)
+          setSearchQuery("") // Reset search when selection is made
         }}
       >
         <SelectTrigger className="w-full">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
+          <div
+            className="sticky top-0 z-10 bg-background p-2"
+            onKeyDown={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Input
+              type="search"
+              placeholder={t("page-find-wallet-search-languages")}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full"
+            />
+          </div>
           {languageCountWalletsData.map((language) => {
+            const isVisible = language.name
+              .toLowerCase()
+              .includes(searchQuery.toLowerCase())
             return (
-              <SelectItem key={language.langCode} value={language.langCode}>
+              <SelectItem
+                key={language.langCode}
+                value={language.langCode}
+                className={!isVisible ? "hidden" : ""}
+              >
                 {`${language.name} (${language.count})`}
               </SelectItem>
             )

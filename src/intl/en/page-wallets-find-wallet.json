@@ -84,5 +84,6 @@
   "page-find-wallet-social-links": "Links",
   "page-find-wallet-empty-results-title": "No results",
   "page-find-wallet-empty-results-desc": "There are no wallets matching your criteria, try removing some filters.",
-  "page-find-wallet-see-wallets": "See wallets"
+  "page-find-wallet-see-wallets": "See wallets",
+  "page-find-wallet-search-languages": "Search languages..."
 }
