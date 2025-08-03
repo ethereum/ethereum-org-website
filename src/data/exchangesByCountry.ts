@@ -890,7 +890,8 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
-  "Czech republic": [
+  "Czech Republic": [
+    "coinmate",
     "coinmama",
     "simplex",
     "wyre",
