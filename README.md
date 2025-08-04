@@ -2032,6 +2032,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xumarkhatab"><img src="https://avatars.githubusercontent.com/u/71306738?v=4?s=100" width="100px;" alt="0xumarkhatab"/><br /><sub><b>0xumarkhatab</b></sub></a><br /><a href="#maintenance-0xumarkhatab" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/albertocuesta/"><img src="https://avatars.githubusercontent.com/u/38806121?v=4?s=100" width="100px;" alt="Alberto Cuesta Cañada"/><br /><sub><b>Alberto Cuesta Cañada</b></sub></a><br /><a href="#maintenance-alcueca" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Co1nB3e"><img src="https://avatars.githubusercontent.com/u/91367832?v=4?s=100" width="100px;" alt="Co1nB3e"/><br /><sub><b>Co1nB3e</b></sub></a><br /><a href="#maintenance-Co1nB3e" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Verestra"><img src="https://avatars.githubusercontent.com/u/44845508?v=4?s=100" width="100px;" alt="Revo Arya"/><br /><sub><b>Revo Arya</b></sub></a><br /><a href="#maintenance-Verestra" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
