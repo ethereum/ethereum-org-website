@@ -102,6 +102,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 - [Οδηγόε για αρχάριους στα NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Ιανουάριος 2020_
 - [Ανιχνευτής EtherscanNFT](https://etherscan.io/nft-top-contracts)
+- [Ανιχνευτής Blockscout NFT](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Πρότυπο κρυπτονομισμάτων ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Πρότυπο κρυπτονομισμάτων ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 - [Δημοφιλή εφαρμογές NFT και εργαλεία](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)

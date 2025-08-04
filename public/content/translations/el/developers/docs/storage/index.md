@@ -43,7 +43,7 @@ lang: el
 Πλατφόρμες με μονιμότητα βάσει συμβάσεων:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Δίκτυο Crust](https://crust.network)
@@ -126,11 +126,11 @@ lang: el
 - [Έγγραφα](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Το Skynet είναι μια αποκεντρωμένη αλυσίδα PoW αποκλειστικά για ένα αποκεντρωμένο web._**
+**Sia - _Αξιοποιεί την κρυπτογραφία για να δημιουργήσει μια έμπιστη αγορά αποθήκευσης cloud, επιτρέποντας στους αγοραστές και τους πωλητές να πραγματοποιούν απευθείας συναλλαγές._**
 
-- [Skynet.net](https://siasky.net/)
-- [Τεκμηρίωση](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Τεκμηρίωση](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _Το Filecoin δημιουργήθηκε από την ίδια ομάδα που είναι υπεύθυνη για το IPFS. Είναι ένα επίπεδο κινήτρων πάνω από τα πρότυπα του IPFS._**
 

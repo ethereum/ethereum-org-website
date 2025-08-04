@@ -27,7 +27,7 @@ summaryPoint3: Πληρωμές που λήφθηκαν μέσα σ' ένα λε
 
 Για εκατομμύρια ανθρώπους που εργάζονται στο εξωτερικό, η αποστολή χρημάτων στην πατρίδα τους είναι μια τακτική ανάγκη. Οι παραδοσιακές υπηρεσίες εμβασμάτων συχνά συνοδεύονται από υψηλές χρεώσεις και αργούς χρόνους διεκπεραίωσης. Το Ethereum προσφέρει μια συναρπαστική εναλλακτική λύση.
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
   <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
   <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
