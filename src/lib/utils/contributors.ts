@@ -8,7 +8,7 @@ import {
   convertToFileContributorFromCrowdin,
   getCrowdinContributors,
 } from "./crowdin"
-import { getAppPageLastCommitDate, getMarkdownLastCommitDate } from "./gh"
+import { getAppPageLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
 
 import { fetchAndCacheGitHubContributors } from "@/lib/api/fetchGitHistory"
@@ -27,7 +27,7 @@ export const getMarkdownFileContributorInfo = async (
     cache
   )
 
-  const latestCommitDate = getMarkdownLastCommitDate(slug, locale!)
+  const latestCommitDate = new Date().toISOString()
   const gitHubLastEdit = gitHubContributors[0]?.date
   const lastUpdatedDate = gitHubLastEdit || latestCommitDate
 
@@ -93,9 +93,9 @@ export const getAppPageContributorInfo = async (
   const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
 
   if (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) {
-    throw new Error(
-      `No contributors found, path: ${pagePath}, locale: ${locale}`
-    )
+    // throw new Error(
+    //   `No contributors found, path: ${pagePath}, locale: ${locale}`
+    // )
   }
 
   return { contributors: uniqueGitHubContributors, lastEditLocaleTimestamp }
