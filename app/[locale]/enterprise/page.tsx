@@ -51,6 +51,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
 import FeatureCard from "./_components/FeatureCard"
+import { MAX_EMAIL_LENGTH, MAX_MESSAGE_LENGTH } from "./constants"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -504,7 +505,19 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                 emailInvalid: t(
                   "page-enterprise-team-form-error-email-invalid"
                 ),
+                emailTooLong: t(
+                  "page-enterprise-team-form-error-email-too-long",
+                  {
+                    length: MAX_EMAIL_LENGTH,
+                  }
+                ),
                 general: t("page-enterprise-team-form-error-general"),
+                messageTooLong: t(
+                  "page-enterprise-team-form-error-message-too-long",
+                  {
+                    length: MAX_MESSAGE_LENGTH,
+                  }
+                ),
                 required: t("page-enterprise-team-form-error-required"),
               },
               placeholder: {

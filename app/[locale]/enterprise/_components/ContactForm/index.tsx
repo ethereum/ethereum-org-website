@@ -8,12 +8,18 @@ import Input from "@/components/ui/input"
 import { Spinner } from "@/components/ui/spinner"
 import { Textarea } from "@/components/ui/textarea"
 
+import { cn } from "@/lib/utils/cn"
+
+import { MAX_EMAIL_LENGTH, MAX_MESSAGE_LENGTH } from "../../constants"
+
 type EnterpriseContactFormProps = {
   strings: {
     error: {
       domain: React.ReactNode // Link injected
       emailInvalid: string
+      emailTooLong: string // Length injected via {length}
       general: string
+      messageTooLong: string // Length injected via {length}
       required: string
     }
     placeholder: {
@@ -83,6 +89,13 @@ const sanitizeInput = (input: string): string =>
     .trim()
 
 const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
+  const getCharacterCountClasses = (currentLength: number, maxLength: number) =>
+    cn(
+      currentLength >= Math.floor(maxLength * 0.9) && "block", // Show char count when within 10% remaining to limit
+      currentLength > maxLength - 64 && "text-warning-border", // Warning color within 64 chars (border version for proper contrast ratio),
+      currentLength > maxLength && "text-error" // Error color over limit
+    )
+
   const [formData, setFormData] = useState<FormState>({
     email: "",
     message: "",
@@ -126,6 +139,8 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
 
     if (!sanitized) return strings.error.required
 
+    if (sanitized.length > MAX_EMAIL_LENGTH) return strings.error.emailTooLong
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(sanitized)) return strings.error.emailInvalid
 
@@ -141,6 +156,9 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
     const sanitized = sanitizeInput(message)
 
     if (!sanitized) return strings.error.required
+
+    if (sanitized.length > MAX_MESSAGE_LENGTH)
+      return strings.error.messageTooLong
 
     return undefined
   }
@@ -220,15 +238,28 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
       </div>
 
       <div className="space-y-2">
-        <Textarea
-          placeholder={strings.placeholder.textarea}
-          value={formData.message}
-          onChange={handleInputChange("message")}
-          onBlur={handleBlur("message")}
-          hasError={!!errors.message}
-          disabled={submissionState === "submitting"}
-          className="min-h-[120px]"
-        />
+        <div className="relative">
+          <Textarea
+            placeholder={strings.placeholder.textarea}
+            value={formData.message}
+            onChange={handleInputChange("message")}
+            onBlur={handleBlur("message")}
+            hasError={!!errors.message}
+            disabled={submissionState === "submitting"}
+            className="min-h-[120px]"
+          />
+          <div
+            className={cn(
+              "absolute bottom-1 end-3 hidden rounded bg-background px-1 py-0.5 text-xs shadow",
+              getCharacterCountClasses(
+                formData.message.length,
+                MAX_MESSAGE_LENGTH
+              )
+            )}
+          >
+            {formData.message.length}/{MAX_MESSAGE_LENGTH}
+          </div>
+        </div>
         {errors.message && (
           <p className="text-sm text-error" role="alert">
             {errors.message}
