@@ -13086,6 +13086,33 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "dinitheth",
+      "name": "Dinith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170238361?v=4",
+      "profile": "https://github.com/dinitheth",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "julio4",
+      "name": "Julio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30329843?v=4",
+      "profile": "https://github.com/julio4",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "abeldotam",
+      "name": "Abel Derderian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5216201?v=4",
+      "profile": "http://abel.fr",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
