@@ -2034,6 +2034,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Co1nB3e"><img src="https://avatars.githubusercontent.com/u/91367832?v=4?s=100" width="100px;" alt="Co1nB3e"/><br /><sub><b>Co1nB3e</b></sub></a><br /><a href="#maintenance-Co1nB3e" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Verestra"><img src="https://avatars.githubusercontent.com/u/44845508?v=4?s=100" width="100px;" alt="Revo Arya"/><br /><sub><b>Revo Arya</b></sub></a><br /><a href="#maintenance-Verestra" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dinitheth"><img src="https://avatars.githubusercontent.com/u/170238361?v=4?s=100" width="100px;" alt="Dinith"/><br /><sub><b>Dinith</b></sub></a><br /><a href="#maintenance-dinitheth" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/julio4"><img src="https://avatars.githubusercontent.com/u/30329843?v=4?s=100" width="100px;" alt="Julio"/><br /><sub><b>Julio</b></sub></a><br /><a href="#maintenance-julio4" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
