@@ -13095,6 +13095,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "abeldotam",
+      "name": "Abel Derderian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5216201?v=4",
+      "profile": "http://abel.fr",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
