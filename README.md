@@ -2035,6 +2035,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Verestra"><img src="https://avatars.githubusercontent.com/u/44845508?v=4?s=100" width="100px;" alt="Revo Arya"/><br /><sub><b>Revo Arya</b></sub></a><br /><a href="#maintenance-Verestra" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dinitheth"><img src="https://avatars.githubusercontent.com/u/170238361?v=4?s=100" width="100px;" alt="Dinith"/><br /><sub><b>Dinith</b></sub></a><br /><a href="#maintenance-dinitheth" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/julio4"><img src="https://avatars.githubusercontent.com/u/30329843?v=4?s=100" width="100px;" alt="Julio"/><br /><sub><b>Julio</b></sub></a><br /><a href="#maintenance-julio4" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://abel.fr"><img src="https://avatars.githubusercontent.com/u/5216201?v=4?s=100" width="100px;" alt="Abel Derderian"/><br /><sub><b>Abel Derderian</b></sub></a><br /><a href="#maintenance-abeldotam" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
