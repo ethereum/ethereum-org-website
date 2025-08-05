@@ -8,7 +8,7 @@ Akıllı sözleşmeler son derece esnektir ve blokzincirlere dağıtılan kod te
 
 Ethereum gibi halka açık blokzincirler, akıllı sözleşmelerin güvenliğini sağlama sorununu daha da karmaşık hale getirir. Dağıtılmış sözleşme kodu _genellikle_ güvenlik açıklarını kapatmak için değiştirilemez, ayrıca akıllı sözleşmelerden çalınan varlıkların takibi aşırı derecede zordur ve çoğunlukla değiştirilemezlik kaynaklı olarak geri alınamaz.
 
-Rakamlar değişkenlik gösterse de, akıllı sözleşmelerdeki güvenlik açıklarından kaynaklı kaybedilen veya çalınan toplam değerin miktarının 1 milyar doları rahatlıkla aştığı tahmin edilmektedir. Bu, [DAO hacki](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6 milyon ETH çalınmıştır; değeri, günümüz fiyatlarıyla 1 milyar doların üzerindedir), [Parity çoklu imza cüzdanı hacki](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (Hackerlara 30 milyon dolar kaybedilmiştir), [Parity donmuş cüzdan sorunu](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 milyon dolardan fazla ETH sonsuza kadar kilitlenmiştir) gibi yüksek profilli olayları içerir.
+Rakamlar değişkenlik gösterse de, akıllı sözleşmelerdeki güvenlik açıklarından kaynaklı kaybedilen veya çalınan toplam değerin miktarının 1 milyar doları rahatlıkla aştığı tahmin edilmektedir. Bu, [DAO hacki](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6 milyon ETH çalınmıştır; değeri, günümüz fiyatlarıyla 1 milyar doların üzerindedir), [Parity çoklu imza cüzdanı hacki](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (Hackerlara 30 milyon dolar kaybedilmiştir), [Parity donmuş cüzdan sorunu](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 milyon dolardan fazla ETH sonsuza kadar kilitlenmiştir) gibi yüksek profilli olayları içerir.
 
 Sayılan sorunlar geliştiricilerin güvenli, güçlü ve sağlam akıllı sözleşmeler oluşturmaya çaba harcamasını zorunlu kılmaktadır. Akıllı sözleşme güvenliği ciddi bir iştir ve her geliştiricinin öğrenmesi gerekir. Bu kılavuz, Ethereum geliştiricilerinin güvenlik konusunda dikkat etmesi gereken hususları ele alacak ve akıllı sözleşme güvenliğini geliştirmeye yönelik kaynakları inceleyecektir.
 
@@ -304,7 +304,7 @@ Burada, gelen `msg.sender.call.value` tarafından bırakılan gaz miktarı 40.00
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) olayında olduğu gibi akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş suistimallerinin herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
+Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack) olayında olduğu gibi akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş suistimallerinin herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
 
 ##### Yeniden giriş saldırılarını engelleme
 
@@ -504,7 +504,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Hacken](https://hacken.io)** - _Blokzincir güvenliğine 360 derece yaklaşımını getiren Web3 siber güvenlik denetimcisi._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
 
 - **[HashEx](https://hashex.org/)** - _HashEx, kripto paraların güvenliğini güvence altına almak için blokzincir ve akıllı sözleşme denetimlerine odaklanırken akıllı sözleşme geliştirme, penetrasyon testi ve blokzincir danışmanlığı gibi hizmetler de sunar._
 
@@ -514,7 +514,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Cyfrin](https://cyfrin.io)** - _Kripto güvenliğini ürünler ve akıllı sözleşme denetim hizmetleri aracılığıyla geliştiren Web3 güvenlik merkezi._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
 
 - **[Oxorio](https://oxor.io/)** - _Kripto şirketleri ve DeFi projeleri için EVM, Solidity, ZK, Zincirler Arası teknolojilerinde uzmanlığa sahip akıllı sözleşme denetimleri ve blokzincir güvenlik hizmetleri._
 

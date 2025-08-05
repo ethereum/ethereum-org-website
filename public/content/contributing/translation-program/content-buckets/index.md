@@ -254,7 +254,6 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [About ethereum.org](/about/)
 - [Enterprise Ethereum](/enterprise/)
-- [Private Ethereum](/enterprise/private-ethereum/)
 - [Brand assets](/assets/)
 - [About the Ethereum Foundation](/foundation/)
 - [Bug bounty program](/bug-bounty/)

@@ -17,32 +17,25 @@ export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("common")
   const locale = useLocale()
 
-  const languages = useMemo<LocaleDisplayInfo[]>(() => {
-    const locales = filterRealLocales(LOCALES_CODES)
+  // Get the preferred language for the users browser
+  const [navLang] = typeof navigator !== "undefined" ? navigator.languages : []
+  const locales = useMemo(() => filterRealLocales(LOCALES_CODES), [])
+  const intlLocalePreference = useMemo(
+    () =>
+      locales?.reduce((acc, cur) => {
+        if (cur.toLowerCase() === navLang.toLowerCase()) return cur
+        if (
+          navLang.toLowerCase().startsWith(cur.toLowerCase()) &&
+          acc !== navLang
+        )
+          return cur
+        return acc
+      }, "") as Lang,
+    [navLang, locales]
+  )
 
-    // Get the preferred languages for the users browser
-    const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
-
-    // For each browser preference, reduce to the most specific match found in `locales` array
-    const allBrowserLocales: Lang[] = navLangs
-      .map(
-        (navLang) =>
-          locales?.reduce((acc, cur) => {
-            if (cur.toLowerCase() === navLang.toLowerCase()) return cur
-            if (
-              navLang.toLowerCase().startsWith(cur.toLowerCase()) &&
-              acc !== navLang
-            )
-              return cur
-            return acc
-          }, "") as Lang
-      )
-      .filter((i) => !!i) // Remove those without matches
-
-    // Remove duplicate matches
-    const browserLocales = Array.from(new Set(allBrowserLocales))
-
-    return (
+  const languages = useMemo<LocaleDisplayInfo[]>(
+    () =>
       (locales as Lang[])
         ?.map((localeOption) => {
           const displayInfo = localeToDisplayInfo(
@@ -50,19 +43,22 @@ export const useLanguagePicker = (handleClose?: () => void) => {
             locale as Lang,
             t
           )
-          const isBrowserDefault = browserLocales.includes(localeOption)
+          const isBrowserDefault = intlLocalePreference === localeOption
           return { ...displayInfo, isBrowserDefault }
         })
         .sort((a, b) => {
-          const indexA = browserLocales.indexOf(a.localeOption as Lang)
-          const indexB = browserLocales.indexOf(b.localeOption as Lang)
-          if (indexA >= 0 && indexB >= 0) return indexA - indexB
-          if (indexA >= 0) return -1
-          if (indexB >= 0) return 1
-          return b.approvalProgress - a.approvalProgress
-        }) || []
-    )
-  }, [locale, t])
+          // Always put the browser's preferred language first
+          if (a.localeOption === intlLocalePreference) return -1
+          if (b.localeOption === intlLocalePreference) return 1
+          // Otherwise, sort alphabetically by source name using localeCompare
+          return a.sourceName.localeCompare(b.sourceName, locale)
+        }) || [],
+    [intlLocalePreference, locale, locales, t]
+  )
+
+  const intlLanguagePreference = languages.find(
+    (lang) => lang.localeOption === intlLocalePreference
+  )
 
   const { isOpen, setValue, ...menu } = useDisclosure()
 
@@ -99,5 +95,6 @@ export const useLanguagePicker = (handleClose?: () => void) => {
   return {
     disclosure: { isOpen, setValue, onOpen, onClose },
     languages,
+    intlLanguagePreference,
   }
 }

@@ -19,7 +19,7 @@ type SummaryItem = [code: string, bucket: string, needsReview: number]
  *    4. Select "Translation Status" under "Projects" for scope
  *    5. Click: "Create" and authenticate
  *    6. Copy the token to the .env file
- * - Can be run with `yarn crowdin-needs-review`
+ * - Can be run with `pnpm crowdin-needs-review`
  * - Results are saved to src/data/crowdin/bucketsAwaitingReviewReport.csv
  * - Report is git ignored, and should not be committed
  */

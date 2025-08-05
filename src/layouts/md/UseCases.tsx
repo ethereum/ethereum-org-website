@@ -5,6 +5,7 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
+import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -17,14 +18,30 @@ import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
+const CardGrid = (props: ChildOnlyProp) => (
+  <div
+    className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8"
+    {...props}
+  />
+)
+
 // UseCases layout components
 export const useCasesComponents = {
+  CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+  PredictionMarketLists,
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+  Pick<
+    MdPageContent,
+    | "slug"
+    | "tocItems"
+    | "contentNotTranslated"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: UseCasesFrontmatter
   }
 export const UseCasesLayout = ({
@@ -33,6 +50,8 @@ export const UseCasesLayout = ({
   slug,
   tocItems,
   contentNotTranslated,
+  contributors,
+  lastEditLocaleTimestamp,
 }: UseCasesLayoutProps) => {
   const { t } = useTranslation("template-usecase")
 
@@ -125,6 +144,26 @@ export const UseCasesLayout = ({
           eventName: "ai-agents",
         },
       },
+      {
+        text: t(
+          "template-usecase:template-usecase-dropdown-prediction-markets"
+        ),
+        href: "/prediction-markets/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "prediction-markets",
+        },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-rwa"),
+        href: "/real-world-assets/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "real-world-assets",
+        },
+      },
     ],
   }
 
@@ -149,7 +188,7 @@ export const UseCasesLayout = ({
         <Emoji text=":pencil:" className="me-4 shrink-0 text-2xl" />
         <p>
           {t("template-usecase:template-usecase-banner")}{" "}
-          <InlineLink href={absoluteEditPath}>
+          <InlineLink href={absoluteEditPath} className="text-white">
             {t("template-usecase-edit-link")}
           </InlineLink>
         </p>
@@ -159,6 +198,8 @@ export const UseCasesLayout = ({
         tocItems={tocItems}
         dropdownLinks={dropdownLinks}
         maxDepth={frontmatter.sidebarDepth}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<ContentHero {...heroProps} />}
       >
         {children}

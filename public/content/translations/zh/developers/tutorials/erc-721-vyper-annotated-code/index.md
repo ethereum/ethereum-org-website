@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 任何可以转移代币的人都可以销毁它。 虽然销毁代币看起来等同于 转移到零地址，但零地址实际上并没有接收到代币。 这样我们可以释放所有用于代币的 存储，因而可以降低交易的燃料成本。
 
-# 使用此合约 {#using-contract}
+## 使用此合约 {#using-contract}
 
 与 Solidity 相比，Vyper 中没有继承。 这种有意而为之的设计选择，是为了使代码 更清晰，从而更容易受保护。 因此，要创建你自己的 Vyper ERC-721 合约，你可以 利用[此合约](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)，并修改 它以实现想要的业务逻辑。
 
-## 总结 {#conclusion}
+### 总结 {#conclusion}
 
 回顾一下，下面是此合约中最重要的几点：
 

@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -48,10 +48,8 @@ export async function generateMetadata({
   return await getMetadata({
     locale,
     slug: ["developers", "learning-tools"],
-    title: t("page-developers-learning-tools:page-learning-tools-meta-title"),
-    description: t(
-      "page-developers-learning-tools:page-learning-tools-meta-desc"
-    ),
+    title: t("page-learning-tools-meta-title"),
+    description: t("page-learning-tools-meta-desc"),
   })
 }
 

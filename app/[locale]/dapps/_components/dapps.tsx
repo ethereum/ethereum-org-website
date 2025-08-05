@@ -11,7 +11,7 @@ import React, {
 import { useSearchParams } from "next/navigation"
 import { useLocale } from "next-intl"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import Callout from "@/components/Callout"
@@ -20,6 +20,7 @@ import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -68,6 +69,7 @@ import lido from "@/public/images/dapps/lido.png"
 import matcha from "@/public/images/dapps/matcha.png"
 import meeds from "@/public/images/dapps/meeds.png"
 import mirror from "@/public/images/dapps/mirror.png"
+import morpho from "@/public/images/dapps/morpho.png"
 import nexus from "@/public/images/dapps/nexus.png"
 import nifty from "@/public/images/dapps/nifty.png"
 import opensea from "@/public/images/dapps/opensea.png"
@@ -270,7 +272,10 @@ interface Categories {
   [key: string]: Category
 }
 
-const DappsPage = () => {
+const DappsPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation(["page-dapps", "common"])
   const searchParams = useSearchParams()
   const locale = useLocale()
@@ -484,6 +489,13 @@ const DappsPage = () => {
       alt: t("page-dapps-aave-logo-alt"),
     },
     {
+      title: "Morpho",
+      description: t("page-dapps-dapp-description-morpho"),
+      link: "https://morpho.org/",
+      image: morpho,
+      alt: t("page-dapps-morpho-logo-alt"),
+    },
+    {
       title: "Compound",
       description: t("page-dapps-dapp-description-compound"),
       link: "https://compound.finance/",
@@ -538,7 +550,7 @@ const DappsPage = () => {
     {
       title: "Curve",
       description: t("page-dapps-dapp-description-curve"),
-      link: "https://curve.fi/",
+      link: "https://www.curve.finance/",
       image: curve,
       alt: t("page-dapps-curve-logo-alt"),
     },
@@ -847,7 +859,7 @@ const DappsPage = () => {
     {
       title: "1inch",
       description: t("page-dapps-dapp-description-1inch"),
-      link: "https://1inch.exchange/",
+      link: "https://1inch.io/",
       image: oneinch,
       alt: t("page-dapps-1inch-logo-alt"),
     },
@@ -1107,7 +1119,7 @@ const DappsPage = () => {
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>
         <CenterText>{t("page-dapps-explore-dapps-description")}</CenterText>
         <H3>{t("page-dapps-choose-category")}</H3>
-        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
+        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-[repeat(4,auto)]">
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
             const category = categories[categoryType]
@@ -1530,6 +1542,11 @@ const DappsPage = () => {
         </Row>
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>

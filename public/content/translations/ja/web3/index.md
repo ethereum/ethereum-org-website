@@ -6,6 +6,10 @@ lang: ja
 
 # Web3入門 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 中央集権化により、何十億人もの人々がワールドワイドウェブを使い始め、またその基盤となる安定し、堅牢なインフラストラクチャの構築に貢献しました。 同時に、一握りの中央集権組織が大規模にワールドワイドウェブ(World Wide Web)の拠点を占め、一方的に、何が許され、何が許されないかを決定しています。
 
 Web3は、このジレンマに対する答えです。 Web3は、大企業が独占するWebではなく、ユーザーにより構築、運営、所有される非中央集権的な分散化を採用しています。 Web3は企業ではなく個人の手に権力を与えます。 Web3について話す前に、これまでの経緯について振り返ってみましょう。
@@ -147,11 +151,11 @@ Web3によるより良いWebの実現はまだ始まったばかりですが、�
 
 Web3とは何かは、厳密に定義されていません。 さまざまなコミュニティが多様な視点を持っています。 下記にこれらのいくつかをご紹介します。
 
-- [Web3とは? 未来の非中央集権インターネットの説明](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Web3とは? 未来の非中央集権インターネットの説明](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Web3の理解](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) - _Josh Stark_
 - [Web3が重要な理由](https://future.a16z.com/why-web3-matters/) - _Chris Dixon_
 - [非中央集権化が重要な理由](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3のランドスケープ](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _a16z_
-- [Web3に関する議論](https://www.notboring.co/p/the-web3-debate?s=r) - _Packy McCormick_
+- [Web3に関する議論](https://www.notboring.co/p/the-web3-debate) - _Packy McCormick_
 
 <QuizWidget quizKey="web3" />
