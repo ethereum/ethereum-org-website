@@ -172,7 +172,7 @@ const Avatar = React.forwardRef<
                 sizes="4rem"
                 src={src}
                 alt={name}
-                quality={90}
+                quality={100}
               />
             ) : (
               <AvatarImage />
@@ -195,7 +195,7 @@ const Avatar = React.forwardRef<
             sizes="4rem"
             src={src}
             alt={name}
-            quality={90}
+            quality={100}
           />
         ) : (
           <AvatarImage />

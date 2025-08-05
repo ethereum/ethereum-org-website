@@ -2748,7 +2748,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/2653167?v=4",
       "profile": "http://austingriffith.com",
       "contributions": [
-        "content"
+        "content",
+        "tool",
+        "maintenance"
       ]
     },
     {
@@ -12365,7 +12367,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/82784104?v=4",
       "profile": "https://github.com/JoshDavisLight",
       "contributions": [
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -12858,6 +12861,15 @@
       ]
     },
     {
+      "login": "Tri-stone",
+      "name": "Tri-stone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17921243?v=4",
+      "profile": "https://github.com/Tri-stone",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
       "login": "deca12x",
       "name": "deca",
       "avatar_url": "https://avatars.githubusercontent.com/u/74135582?v=4",
@@ -13044,6 +13056,24 @@
       "name": "Alberto Cuesta Cañada",
       "avatar_url": "https://avatars.githubusercontent.com/u/38806121?v=4",
       "profile": "https://www.linkedin.com/in/albertocuesta/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Co1nB3e",
+      "name": "Co1nB3e",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91367832?v=4",
+      "profile": "https://github.com/Co1nB3e",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Verestra",
+      "name": "Revo Arya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44845508?v=4",
+      "profile": "https://github.com/Verestra",
       "contributions": [
         "maintenance"
       ]

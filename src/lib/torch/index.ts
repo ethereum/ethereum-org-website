@@ -1,15 +1,10 @@
 import blockies from "ethereum-blockies-base64"
-import { unstable_cache as cache } from "next/cache"
 import { type Address, isAddress } from "viem"
 import { getPublicClient } from "@wagmi/core"
 
-import Torch from "@/data/Torch.json"
+import torchTransferEvents from "@/data/torchTransferEvents.json"
 
 import { config } from "./config"
-import { fetchTorchTransfersFromEtherscan } from "./etherscan"
-
-const TORCH_CONTRACT_ADDRESS = Torch.address as Address
-const TORCH_ABI = Torch.abi
 
 // Addresses to filter from the UI (show as "Unknown Holder")
 const FILTERED_ADDRESSES: string[] = [
@@ -48,14 +43,9 @@ export type TorchHolderEvent = TorchHolder & {
   event: TransferEvent
 }
 
-export const getTransferEvents = cache(
-  async () => {
-    const transferEvents = await fetchTorchTransfersFromEtherscan()
-    return transferEvents
-  },
-  ["torch-transfer-events"],
-  { revalidate: 86400 }
-)
+export const getTransferEvents = () => {
+  return torchTransferEvents as TransferEvent[]
+}
 
 export const getHolderEvents = async (
   torchHolderMap: Record<string, TorchHolderMetadata>,
@@ -94,26 +84,6 @@ export const getHolderEvents = async (
   })
 }
 
-export const getCurrentHolder = (holderEvents: TorchHolderEvent[]) => {
-  return holderEvents[holderEvents.length - 1]
-}
-
-export const isTorchBurned = cache(
-  async () => {
-    const publicClient = getPublicClient(config)
-
-    const isBurned = (await publicClient.readContract({
-      address: TORCH_CONTRACT_ADDRESS,
-      abi: TORCH_ABI,
-      functionName: "isBurned",
-    })) as boolean
-
-    return isBurned
-  },
-  ["torch-burned-status"],
-  { revalidate: 86400 }
-)
-
 export const getBlockieImage = (address: Address) => {
   return blockies(address)
 }
@@ -125,10 +95,8 @@ export const getAvatarImage = (holder: TorchHolderMetadata | null) => {
 
   // If there's a Twitter handle, use Twitter profile image
   if (holder.twitter && holder.twitter.trim() !== "") {
-    const twitterHandle = extractTwitterHandle(holder.twitter)
-    if (twitterHandle) {
-      return `https://unavatar.io/x/${twitterHandle}`
-    }
+    const address = holder.address
+    return `/images/10-year-anniversary/torchbearers/${address}.jpg`
   }
 
   // Otherwise, fall back to blockie
@@ -154,7 +122,7 @@ export const extractTwitterHandle = (twitterUrl: string): string | null => {
 }
 
 export const formatAddress = (address: Address) => {
-  return `${address.slice(0, 6)}...${address.slice(-4)}`
+  return `${address.slice(0, 7)}...${address.slice(-5)}`
 }
 
 export const formatDate = (timestamp: number) => {
@@ -197,4 +165,21 @@ export async function resolveEnsName(
     console.warn(`Failed to resolve ENS name "${ensName}":`, error)
     return null
   }
+}
+
+export const getErrorMessage = (error: Error) => {
+  if (error.message.includes("insufficient funds")) {
+    return "Insufficient funds"
+  }
+  if (error.message.includes("not enough ETH")) {
+    return "Not enough ETH"
+  }
+  if (error.message.includes("EnforcedPause")) {
+    return "Contract is paused"
+  }
+  if (error.message.includes("already minted")) {
+    return "You have already minted an NFT"
+  }
+
+  return "An error occurred during minting"
 }
