@@ -323,7 +323,7 @@ contract NoLongerAVictim {
 }
 ```
 
-Tento kontrakt provádí _kontrolu_ zůstatku uživatele, aplikuje _efekty_ funkce `withdraw()` (nastavením zůstatku uživatele na 0) a poté pokračuje v _interakci_ (odesláním ETH na uživatelovu adresu). Tímto způsobem kontrakt aktualizuje svůj stav před externím voláním, čímž eliminuje podmínku opětovného vstupu, která umožňovala původní útok. Kontrakt `Attacker` stále může znovu volat funkci `withdraw()` v kontraktu `NoLongerAVictim`, ale protože <0>balances[msg.sender]</0> byla nastavena na 0, pokus o opětovné výběry by vyvolal chybu.
+Tento kontrakt provádí _kontrolu_ zůstatku uživatele, aplikuje _efekty_ funkce `withdraw()` (nastavením zůstatku uživatele na 0) a poté pokračuje v _interakci_ (odesláním ETH na uživatelovu adresu). Tímto způsobem kontrakt aktualizuje svůj stav před externím voláním, čímž eliminuje podmínku opětovného vstupu, která umožňovala původní útok. Kontrakt `Attacker` stále může znovu volat funkci `withdraw()` v kontraktu `NoLongerAVictim`, ale protože `balances[msg.sender]` byla nastavena na 0, pokus o opětovné výběry by vyvolal chybu.
 
 Další možností je použití zámku pro vzájemné vyloučení (běžně označovaného jako „mutex“), který uzamkne část stavu kontraktu, dokud se nedokončí volání funkce. To je implementováno pomocí proměnné typu Boolean, která je nastavena na `true` před provedením funkce a po dokončení volání se vrací na hodnotu `false`. Jak je vidět v níže uvedeném příkladu, použití mutexu chrání funkci před rekurzivními voláními, zatímco původní volání je stále zpracováváno, což účinně zastavuje reentrancy.
 
