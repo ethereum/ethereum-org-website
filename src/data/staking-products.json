@@ -40,7 +40,7 @@
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 10.4,
+      "minEth": 8,
       "tokens": [
         {
           "name": "Rocket Pool ETH",
