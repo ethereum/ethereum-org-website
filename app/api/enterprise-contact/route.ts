@@ -8,7 +8,7 @@ const MAX_REQUESTS_PER_WINDOW = 3
 
 // Configure SES client
 const sesClient = new SESClient({
-  region: process.env.SES_REGION || "us-east-1",
+  region: process.env.SES_REGION || "us-east-2",
   credentials: {
     accessKeyId: process.env.SES_ACCESS_KEY_ID!,
     secretAccessKey: process.env.SES_SECRET_ACCESS_KEY!,
@@ -16,7 +16,7 @@ const sesClient = new SESClient({
 })
 
 // Log the region being used for debugging
-console.log("Using AWS SES region:", process.env.SES_REGION || "us-east-1")
+console.log("Using AWS SES region:", process.env.SES_REGION || "us-east-2")
 
 // Simple in-memory rate limiting (in production, use Redis or similar)
 const requestHistory = new Map<string, number[]>()
