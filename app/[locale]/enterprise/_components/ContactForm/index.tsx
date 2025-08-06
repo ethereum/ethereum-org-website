@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { HeartHandshake } from "lucide-react"
+import { HeartHandshake, TriangleAlert } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
@@ -91,9 +91,9 @@ const sanitizeInput = (input: string): string =>
 const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
   const getCharacterCountClasses = (currentLength: number, maxLength: number) =>
     cn(
-      currentLength >= Math.floor(maxLength * 0.9) && "block", // Show char count when within 10% remaining to limit
+      currentLength >= Math.floor(maxLength * 0.9) && "flex", // Show char count when within 10% remaining to limit
       currentLength > maxLength - 64 && "text-warning-border", // Warning color within 64 chars (border version for proper contrast ratio),
-      currentLength > maxLength && "text-error" // Error color over limit
+      currentLength > maxLength && "text-error [&_svg]:inline" // Error color over limit
     )
 
   const [formData, setFormData] = useState<FormState>({
@@ -250,13 +250,14 @@ const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
           />
           <div
             className={cn(
-              "absolute bottom-1 end-3 hidden rounded bg-background px-1 py-0.5 text-xs shadow",
+              "absolute bottom-1 end-3 hidden items-center rounded bg-background px-1 py-0.5 text-xs shadow",
               getCharacterCountClasses(
                 formData.message.length,
                 MAX_MESSAGE_LENGTH
               )
             )}
           >
+            <TriangleAlert className="mb-px me-1 hidden size-3" />
             {formData.message.length}/{MAX_MESSAGE_LENGTH}
           </div>
         </div>
