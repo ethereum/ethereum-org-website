@@ -1,4 +1,5 @@
 const exchangesByCountry = {
+  // Afghanistan
   AF: [
     "coinmama",
     "bittrex",
@@ -12,6 +13,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Albania
   AL: [
     "coinmama",
     "kraken",
@@ -25,6 +27,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Algeria
   DZ: [
     "coinmama",
     "simplex",
@@ -41,6 +44,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // American Samoa (USA)
   AS: [
     "simplex",
     "kraken",
@@ -50,6 +54,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
   ],
+  // Andorra
   AD: [
     "coinmama",
     "simplex",
@@ -67,6 +72,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Angola
   AO: [
     "coinmama",
     "simplex",
@@ -83,6 +89,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Anguilla (UK)
   AI: [
     "coinmama",
     "simplex",
@@ -96,6 +103,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Antigua and Barbuda
   AG: [
     "coinmama",
     "simplex",
@@ -112,6 +120,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Argentina
   AR: [
     "coinmama",
     "simplex",
@@ -134,6 +143,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
   ],
+  // Armenia
   AM: [
     "coinmama",
     "simplex",
@@ -151,6 +161,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Aruba (Netherlands)
   AW: [
     "coinmama",
     "simplex",
@@ -167,6 +178,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Australia
   AU: [
     "coinmama",
     "simplex",
@@ -189,6 +201,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Austria
   AT: [
     "coinmama",
     "simplex",
@@ -210,6 +223,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Azerbaijan
   AZ: [
     "coinmama",
     "simplex",
@@ -226,6 +240,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bahamas
   BS: [
     "coinmama",
     "coinbase",
@@ -242,6 +257,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bahrain
   BH: [
     "coinmama",
     "simplex",
@@ -260,6 +276,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bangladesh
   BD: [
     "coinmama",
     "simplex",
@@ -273,6 +290,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Barbados
   BB: [
     "coinmama",
     "coinbase",
@@ -288,6 +306,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Belarus
   BY: [
     "coinmama",
     "bittrex",
@@ -304,6 +323,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Belgium
   BE: [
     "coinmama",
     "simplex",
@@ -326,6 +346,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Belize
   BZ: [
     "coinmama",
     "simplex",
@@ -342,6 +363,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Benin
   BJ: [
     "coinmama",
     "simplex",
@@ -359,6 +381,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bermuda (UK)
   BM: [
     "coinmama",
     "simplex",
@@ -376,6 +399,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bhutan
   BT: [
     "coinmama",
     "simplex",
@@ -393,6 +417,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bolivia
   BO: [
     "coinmama",
     "simplex",
@@ -406,6 +431,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bonaire (Netherlands)
   "Bonaire-Netherlands": [
     "coinmama",
     "simplex",
@@ -421,6 +447,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bosnia and Herzegovina
   BA: [
     "coinmama",
     "bittrex",
@@ -436,6 +463,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Botswana
   BW: [
     "coinmama",
     "bittrex",
@@ -450,6 +478,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Brazil
   BR: [
     "coinmama",
     "simplex",
@@ -472,6 +501,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
   ],
+  // British Virgin Islands (UK)
   VG: [
     "coinmama",
     "simplex",
@@ -490,6 +520,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Brunei
   BN: [
     "coinmama",
     "simplex",
@@ -507,6 +538,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Bulgaria
   BG: [
     "coinmama",
     "simplex",
@@ -528,6 +560,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Burkina Faso
   BF: [
     "coinmama",
     "simplex",
@@ -543,6 +576,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Burundi
   BI: [
     "coinmama",
     "bittrex",
@@ -559,6 +593,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cambodia
   KH: [
     "coinmama",
     "bittrex",
@@ -573,6 +608,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cameroon
   CM: [
     "coinmama",
     "simplex",
@@ -590,6 +626,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Canada
   CA: [
     "coinmama",
     "simplex",
@@ -609,6 +646,7 @@ const exchangesByCountry = {
     "bybit",
     "shakepay",
   ],
+  // Cape Verde
   CV: [
     "coinmama",
     "simplex",
@@ -625,6 +663,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cayman Islands (UK)
   KY: [
     "coinmama",
     "simplex",
@@ -641,6 +680,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Central African Republic (CAR)
   CF: [
     "coinmama",
     "bittrex",
@@ -655,6 +695,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Chad
   TD: [
     "coinmama",
     "simplex",
@@ -671,6 +712,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Chile
   CL: [
     "coinmama",
     "simplex",
@@ -692,6 +734,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // China
   CN: [
     "coinmama",
     "simplex",
@@ -702,6 +745,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
   ],
+  // Clipperton Island (France)
   CP: [
     "coinmama",
     "simplex",
@@ -718,6 +762,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Colombia
   CO: [
     "coinmama",
     "simplex",
@@ -740,6 +785,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
   ],
+  // Comoros
   KM: [
     "coinmama",
     "simplex",
@@ -755,6 +801,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Congo
   CG: [
     "coinmama",
     "simplex",
@@ -768,6 +815,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cook Islands (New Zealand)
   CK: [
     "coinmama",
     "simplex",
@@ -785,6 +833,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Costa Rica
   CR: [
     "coinmama",
     "simplex",
@@ -804,6 +853,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cote d'Ivoire
   CI: [
     "coinmama",
     "bittrex",
@@ -819,6 +869,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Crimea
   Crimea: [
     "bittrex",
     "simplex",
@@ -830,6 +881,7 @@ const exchangesByCountry = {
     "kucoin",
     "bitfinex",
   ],
+  // Croatia
   HR: [
     "coinmama",
     "simplex",
@@ -850,7 +902,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cuba
   CU: ["bittrex", "simplex", "mtpelerin", "wazirx", "bitfinex"],
+  // Curacao (Netherlands)
   CW: [
     "coinmama",
     "simplex",
@@ -867,6 +921,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Cyprus
   CY: [
     "coinmama",
     "simplex",
@@ -889,6 +944,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Czech republic
   CZ: [
     "coinmama",
     "simplex",
@@ -911,6 +967,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Denmark
   DK: [
     "coinmama",
     "simplex",
@@ -933,6 +990,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Djibouti
   DJ: [
     "coinmama",
     "simplex",
@@ -949,6 +1007,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Dominica
   DM: [
     "coinmama",
     "simplex",
@@ -965,6 +1024,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Dominican Republic
   DO: [
     "coinmama",
     "simplex",
@@ -984,6 +1044,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Ecuador
   EC: [
     "coinmama",
     "simplex",
@@ -997,6 +1058,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Egypt
   EG: [
     "coinmama",
     "bittrex",
@@ -1016,6 +1078,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // El Salvador
   SV: [
     "coinmama",
     "simplex",
@@ -1035,6 +1098,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Equatorial Guinea
   GQ: [
     "coinmama",
     "simplex",
@@ -1051,6 +1115,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Eritrea
   ER: [
     "coinmama",
     "bittrex",
@@ -1066,6 +1131,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Estonia
   EE: [
     "coinmama",
     "simplex",
@@ -1088,6 +1154,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Eswatini (formerly Swaziland)
   SZ: [
     "coinmama",
     "simplex",
@@ -1101,6 +1168,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Ethiopia
   ET: [
     "coinmama",
     "bittrex",
@@ -1116,6 +1184,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Falkland Islands (UK)
   FK: [
     "coinmama",
     "simplex",
@@ -1130,6 +1199,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Fiji
   FJ: [
     "coinmama",
     "simplex",
@@ -1147,6 +1217,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Finland
   FI: [
     "coinmama",
     "simplex",
@@ -1169,6 +1240,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // France
   FR: [
     "coinmama",
     "simplex",
@@ -1191,6 +1263,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // French Guiana (France)
   GF: [
     "coinmama",
     "simplex",
@@ -1207,6 +1280,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // French Polynesia (France)
   PF: [
     "coinmama",
     "simplex",
@@ -1222,6 +1296,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Gabon
   GA: [
     "coinmama",
     "simplex",
@@ -1238,6 +1313,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Gambia
   GM: [
     "coinmama",
     "simplex",
@@ -1254,6 +1330,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Georgia
   GE: [
     "coinmama",
     "simplex",
@@ -1270,6 +1347,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Germany
   DE: [
     "coinmama",
     "simplex",
@@ -1291,6 +1369,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Ghana
   GH: [
     "coinmama",
     "coinbase",
@@ -1304,6 +1383,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Gibraltar
   GI: [
     "coinmama",
     "simplex",
@@ -1323,6 +1403,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Greece
   GR: [
     "coinmama",
     "simplex",
@@ -1346,6 +1427,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Greenland (Denmark)
   GL: [
     "coinmama",
     "simplex",
@@ -1362,6 +1444,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Grenada
   GD: [
     "coinmama",
     "simplex",
@@ -1378,6 +1461,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Guadeloupe (France)
   GP: [
     "coinmama",
     "simplex",
@@ -1394,7 +1478,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Guam (USA)
   GU: ["simplex", "kraken", "kucoin", "huobiglobal", "bybit"],
+  // Guatemala
   GT: [
     "coinmama",
     "simplex",
@@ -1413,6 +1499,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Guernsey
   GG: [
     "coinmama",
     "simplex",
@@ -1431,6 +1518,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Guinea
   GN: [
     "coinmama",
     "bittrex",
@@ -1445,6 +1533,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Guinea-Bissau
   GW: [
     "coinmama",
     "bittrex",
@@ -1458,6 +1547,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Guyana
   GY: [
     "coinmama",
     "bittrex",
@@ -1474,6 +1564,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Haiti
   HT: [
     "coinmama",
     "simplex",
@@ -1487,6 +1578,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Honduras
   HN: [
     "coinmama",
     "simplex",
@@ -1505,6 +1597,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Hong Kong
   HK: [
     "coinmama",
     "simplex",
@@ -1523,6 +1616,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
   ],
+  // Hungary
   HU: [
     "coinmama",
     "simplex",
@@ -1545,6 +1639,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Iceland
   IS: [
     "coinmama",
     "wyre",
@@ -1564,6 +1659,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // India
   IN: [
     "coinmama",
     "simplex",
@@ -1585,6 +1681,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Indonesia
   ID: [
     "coinmama",
     "simplex",
@@ -1604,7 +1701,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Iran
   IR: ["bittrex", "itezcom", "okx", "huobiglobal", "bitfinex"],
+  // Iraq
   IQ: [
     "coinmama",
     "bittrex",
@@ -1617,6 +1716,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Ireland
   IE: [
     "coinmama",
     "simplex",
@@ -1639,6 +1739,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Isle of Man
   IM: [
     "coinmama",
     "simplex",
@@ -1656,6 +1757,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Israel
   IL: [
     "simplex",
     "wyre",
@@ -1675,6 +1777,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Italy
   IT: [
     "coinmama",
     "simplex",
@@ -1698,6 +1801,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Jamaica
   JM: [
     "coinmama",
     "coinbase",
@@ -1712,6 +1816,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Japan
   JP: [
     "coinmama",
     "simplex",
@@ -1728,6 +1833,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
   ],
+  // Jersey
   JE: [
     "coinmama",
     "simplex",
@@ -1746,6 +1852,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Jordan
   JO: [
     "coinmama",
     "simplex",
@@ -1764,6 +1871,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Kazakhstan
   KZ: [
     "coinmama",
     "simplex",
@@ -1782,6 +1890,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Kenya
   KE: [
     "coinmama",
     "simplex",
@@ -1800,6 +1909,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Kiribati
   KI: [
     "coinmama",
     "simplex",
@@ -1816,6 +1926,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Kosovo
   XK: [
     "coinmama",
     "simplex",
@@ -1830,6 +1941,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Kuwait
   KW: [
     "coinmama",
     "simplex",
@@ -1849,6 +1961,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Kyrgyzstan
   KG: [
     "coinmama",
     "simplex",
@@ -1862,6 +1975,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Laos
   LA: [
     "coinmama",
     "bittrex",
@@ -1878,6 +1992,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Latvia
   LV: [
     "coinmama",
     "simplex",
@@ -1901,6 +2016,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Lebanon
   LB: [
     "bittrex",
     "simplex",
@@ -1914,6 +2030,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Lesotho
   LS: [
     "coinmama",
     "simplex",
@@ -1930,6 +2047,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Liberia
   LR: [
     "coinmama",
     "simplex",
@@ -1944,6 +2062,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Libya
   LY: [
     "coinmama",
     "bittrex",
@@ -1957,6 +2076,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Liechtenstein
   LI: [
     "coinmama",
     "simplex",
@@ -1978,6 +2098,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Lithuania
   LT: [
     "coinmama",
     "simplex",
@@ -2000,6 +2121,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Luxembourg
   LU: [
     "coinmama",
     "simplex",
@@ -2022,6 +2144,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Madagascar
   MG: [
     "coinmama",
     "simplex",
@@ -2038,6 +2161,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Malawi
   MW: [
     "coinmama",
     "simplex",
@@ -2053,6 +2177,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Malaysia
   MY: [
     "coinmama",
     "simplex",
@@ -2070,6 +2195,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Maldives
   MV: [
     "coinmama",
     "bittrex",
@@ -2088,6 +2214,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Mali
   ML: [
     "coinmama",
     "bittrex",
@@ -2102,6 +2229,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Malta
   MT: [
     "coinmama",
     "simplex",
@@ -2120,6 +2248,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Marshall Islands
   MH: [
     "coinmama",
     "simplex",
@@ -2136,6 +2265,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Martinique (France)
   MQ: [
     "coinmama",
     "simplex",
@@ -2153,6 +2283,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Mauritania
   MR: [
     "coinmama",
     "simplex",
@@ -2169,6 +2300,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Mauritius
   MU: [
     "coinmama",
     "coinbase",
@@ -2183,6 +2315,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Mexico
   MX: [
     "coinmama",
     "simplex",
@@ -2204,6 +2337,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
   ],
+  // Micronesia
   FM: [
     "coinmama",
     "simplex",
@@ -2220,6 +2354,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Moldova
   MD: [
     "coinmama",
     "simplex",
@@ -2236,6 +2371,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Monaco
   MC: [
     "coinmama",
     "simplex",
@@ -2253,6 +2389,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Mongolia
   MN: [
     "coinmama",
     "coinbase",
@@ -2268,6 +2405,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Montenegro
   ME: [
     "coinmama",
     "simplex",
@@ -2284,6 +2422,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Montserrat (UK)
   MS: [
     "coinmama",
     "simplex",
@@ -2299,6 +2438,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Morocco
   MA: [
     "coinmama",
     "simplex",
@@ -2313,6 +2453,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Mozambique
   MZ: [
     "coinmama",
     "simplex",
@@ -2328,6 +2469,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Myanmar (formerly Burma)
   MM: [
     "coinmama",
     "bittrex",
@@ -2341,6 +2483,7 @@ const exchangesByCountry = {
     "gateio",
     "bybit",
   ],
+  // Namibia
   NA: [
     "coinmama",
     "simplex",
@@ -2358,6 +2501,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Nauru
   NR: [
     "coinmama",
     "simplex",
@@ -2374,6 +2518,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Navassa Island (USA)
   "Navassa-Island-USA": [
     "coinmama",
     "simplex",
@@ -2384,6 +2529,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Nepal
   NP: [
     "coinmama",
     "simplex",
@@ -2401,6 +2547,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Netherlands
   NL: [
     "coinmama",
     "simplex",
@@ -2421,6 +2568,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // New Caledonia (France)
   NC: [
     "coinmama",
     "simplex",
@@ -2436,6 +2584,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // New Zealand
   NZ: [
     "coinmama",
     "simplex",
@@ -2458,6 +2607,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Nicaragua
   NI: [
     "coinmama",
     "bittrex",
@@ -2472,6 +2622,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Niger
   NE: [
     "coinmama",
     "simplex",
@@ -2488,6 +2639,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Nigeria
   NG: [
     "coinmama",
     "simplex",
@@ -2506,6 +2658,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Niue (New Zealand)
   NU: [
     "coinmama",
     "simplex",
@@ -2521,6 +2674,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Norfolk Island (Australia)
   NF: [
     "coinmama",
     "simplex",
@@ -2536,7 +2690,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // North Korea
   KP: ["bittrex", "bitfinex"],
+  // North Macedonia (formerly Macedonia)
   MK: [
     "coinmama",
     "simplex",
@@ -2552,7 +2708,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Northern Mariana Islands (USA)
   MP: ["simplex", "kraken", "kucoin", "huobiglobal", "bybit"],
+  // Norway
   NO: [
     "coinmama",
     "simplex",
@@ -2575,6 +2733,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Oman
   OM: [
     "coinmama",
     "simplex",
@@ -2594,6 +2753,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Pakistan
   PK: [
     "coinmama",
     "bittrex",
@@ -2607,6 +2767,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Palau
   PW: [
     "coinmama",
     "simplex",
@@ -2623,6 +2784,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Palestine
   PS: [
     "simplex",
     "moonpay",
@@ -2638,6 +2800,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Panama
   PA: [
     "coinmama",
     "bittrex",
@@ -2654,6 +2817,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Papua New Guinea
   PG: [
     "coinmama",
     "simplex",
@@ -2670,6 +2834,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Paraguay
   PY: [
     "coinmama",
     "simplex",
@@ -2689,6 +2854,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Peru
   PE: [
     "coinmama",
     "simplex",
@@ -2710,6 +2876,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Philippines
   PH: [
     "coinmama",
     "simplex",
@@ -2731,6 +2898,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Pitcairn Islands (UK)
   PN: [
     "coinmama",
     "simplex",
@@ -2746,6 +2914,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Poland
   PL: [
     "coinmama",
     "simplex",
@@ -2769,6 +2938,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Portugal
   PT: [
     "coinmama",
     "simplex",
@@ -2792,7 +2962,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Puerto Rico (USA)
   PR: ["simplex", "moonpay", "kraken", "kucoin", "huobiglobal", "bybit"],
+  // Qatar
   QA: [
     "coinmama",
     "simplex",
@@ -2810,6 +2982,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Romania
   RO: [
     "coinmama",
     "simplex",
@@ -2832,6 +3005,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Russia
   RU: [
     "coinmama",
     "simplex",
@@ -2848,6 +3022,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
   ],
+  // Rwanda
   RW: [
     "coinmama",
     "simplex",
@@ -2864,6 +3039,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saba (Netherlands)
   "Saba-Netherlands": [
     "coinmama",
     "simplex",
@@ -2879,6 +3055,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saint Barthelemy (France)
   BL: [
     "coinmama",
     "simplex",
@@ -2894,6 +3071,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saint Kitts and Nevis
   KN: [
     "coinmama",
     "simplex",
@@ -2910,6 +3088,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saint Lucia
   LC: [
     "coinmama",
     "simplex",
@@ -2926,6 +3105,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saint Martin (France)
   MF: [
     "coinmama",
     "simplex",
@@ -2943,6 +3123,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saint Pierre and Miquelon (France)
   PM: [
     "coinmama",
     "simplex",
@@ -2958,6 +3139,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saint Vincent and the Grenadines
   VC: [
     "coinmama",
     "simplex",
@@ -2974,6 +3156,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Samoa
   WS: [
     "coinmama",
     "simplex",
@@ -2988,6 +3171,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // San Marino
   SM: [
     "coinmama",
     "simplex",
@@ -3005,6 +3189,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Sao Tome and Principe
   ST: [
     "coinmama",
     "simplex",
@@ -3021,6 +3206,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Saudi Arabia
   SA: [
     "coinmama",
     "simplex",
@@ -3040,6 +3226,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Senegal
   SN: [
     "coinmama",
     "simplex",
@@ -3055,6 +3242,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Serbia
   RS: [
     "coinmama",
     "simplex",
@@ -3071,6 +3259,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Seychelles
   SC: [
     "coinmama",
     "simplex",
@@ -3086,6 +3275,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Sierra Leone
   SL: [
     "coinmama",
     "simplex",
@@ -3100,6 +3290,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Singapore
   SG: [
     "coinmama",
     "simplex",
@@ -3116,6 +3307,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
   ],
+  // Sint Eustatius (Netherlands)
   "Sint-Eustatius-Netherlands": [
     "coinmama",
     "simplex",
@@ -3132,6 +3324,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Sint Maarten (Netherlands)
   SX: [
     "coinmama",
     "simplex",
@@ -3149,6 +3342,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Slovakia
   SK: [
     "coinmama",
     "simplex",
@@ -3172,6 +3366,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Slovenia
   SI: [
     "coinmama",
     "simplex",
@@ -3194,6 +3389,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Solomon Islands
   SB: [
     "coinmama",
     "simplex",
@@ -3210,6 +3406,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Somalia
   SO: [
     "coinmama",
     "bittrex",
@@ -3224,6 +3421,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // South Africa
   ZA: [
     "coinmama",
     "simplex",
@@ -3245,6 +3443,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // South Georgia and the South Sandwich Islands (UK)
   GS: [
     "coinmama",
     "simplex",
@@ -3259,6 +3458,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // South Korea
   KR: [
     "coinmama",
     "simplex",
@@ -3278,6 +3478,7 @@ const exchangesByCountry = {
     "korbit",
     "matrixport",
   ],
+  // South Sudan
   SS: [
     "bittrex",
     "simplex",
@@ -3291,6 +3492,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Spain
   ES: [
     "coinmama",
     "simplex",
@@ -3314,6 +3516,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Sri Lanka
   LK: [
     "coinmama",
     "bittrex",
@@ -3330,7 +3533,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Sudan
   SD: ["bittrex", "simplex", "kucoin", "bitfinex", "matrixport"],
+  // Suriname
   SR: [
     "coinmama",
     "simplex",
@@ -3347,6 +3552,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Sweden
   SE: [
     "coinmama",
     "simplex",
@@ -3369,6 +3575,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Switzerland
   CH: [
     "coinmama",
     "simplex",
@@ -3392,7 +3599,9 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Syria
   SY: ["bittrex", "wazirx", "okx", "bitfinex"],
+  // Taiwan
   TW: [
     "coinmama",
     "simplex",
@@ -3413,6 +3622,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Tajikistan
   TJ: [
     "coinmama",
     "simplex",
@@ -3429,6 +3639,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Tanzania
   TZ: [
     "coinmama",
     "simplex",
@@ -3445,6 +3656,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Thailand
   TH: [
     "coinmama",
     "simplex",
@@ -3463,6 +3675,7 @@ const exchangesByCountry = {
     "bitkub",
     "matrixport",
   ],
+  // Timor-Leste
   TL: [
     "coinmama",
     "simplex",
@@ -3478,6 +3691,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Togo
   TG: [
     "coinmama",
     "simplex",
@@ -3494,6 +3708,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Tokelau (New Zealand)
   TK: [
     "coinmama",
     "simplex",
@@ -3510,6 +3725,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Tonga
   TO: [
     "coinmama",
     "simplex",
@@ -3526,6 +3742,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Trinidad and Tobago
   TT: [
     "coinmama",
     "bittrex",
@@ -3541,6 +3758,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Tunisia
   TN: [
     "coinmama",
     "bittrex",
@@ -3557,6 +3775,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Turkey
   TR: [
     "coinmama",
     "simplex",
@@ -3578,6 +3797,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Turkmenistan
   TM: [
     "coinmama",
     "simplex",
@@ -3593,6 +3813,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Turks and Caicos Islands (UK)
   TC: [
     "coinmama",
     "simplex",
@@ -3608,6 +3829,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Tuvalu
   TV: [
     "coinmama",
     "simplex",
@@ -3624,6 +3846,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Uganda
   UG: [
     "coinmama",
     "bittrex",
@@ -3639,6 +3862,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Ukraine
   UA: [
     "coinmama",
     "bittrex",
@@ -3656,6 +3880,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // United Arab Emirates (UAE)
   AE: [
     "coinmama",
     "simplex",
@@ -3675,6 +3900,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // United Kingdom (UK)
   GB: [
     "coinmama",
     "simplex",
@@ -3695,6 +3921,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // United States of America (USA)
   US: [
     "coinmama",
     "simplex",
@@ -3704,6 +3931,7 @@ const exchangesByCountry = {
     "binanceus",
     "bitflyer",
   ],
+  // Uruguay
   UY: [
     "coinmama",
     "simplex",
@@ -3723,6 +3951,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // US Virgin Islands (USA)
   VI: [
     "simplex",
     "coinbase",
@@ -3733,6 +3962,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Uzbekistan
   UZ: [
     "coinmama",
     "simplex",
@@ -3748,6 +3978,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
   ],
+  // Vanuatu
   VU: [
     "coinmama",
     "bittrex",
@@ -3764,6 +3995,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Venezuela
   VE: [
     "coinmama",
     "bittrex",
@@ -3775,6 +4007,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Vietnam
   VN: [
     "coinmama",
     "simplex",
@@ -3794,6 +4027,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Wake Island (USA)
   "Wake-Island-USA": [
     "coinmama",
     "simplex",
@@ -3803,6 +4037,7 @@ const exchangesByCountry = {
     "kucoin",
     "bybit",
   ],
+  // Wallis and Futuna (France)
   WF: [
     "coinmama",
     "simplex",
@@ -3818,6 +4053,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Yemen
   YE: [
     "coinmama",
     "bittrex",
@@ -3828,6 +4064,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Zambia
   ZM: [
     "coinmama",
     "simplex",
@@ -3845,6 +4082,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
   ],
+  // Zimbabwe
   ZW: [
     "coinmama",
     "bittrex",
