@@ -598,7 +598,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
           >
             <ABTestWrapper
-              testKey="AppTest"
+              testKey="StablecoinApps"
               variants={[
                 <div key="two-buttons" className="flex flex-wrap gap-4">
                   <ButtonLink href="/dapps/">

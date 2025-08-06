@@ -122,7 +122,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
     },
     {
       label: "Upgrades",
-      state: { value: "15" }, // TODO: Calculate from upgrades list
+      state: { value: "16" }, // TODO: Calculate from upgrades list
     },
     {
       label: "Downtime",
