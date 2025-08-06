@@ -1,10 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useMemo } from "react"
 import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
+import { useQuery } from "@tanstack/react-query"
 
 import { Image } from "@/components/Image"
+import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -48,33 +50,36 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
     },
   ]
 
-  const [addressBadges, setAddressBadges] = useState<Badge[]>([])
-  const [badgesWithOwned, setBadgesWithOwned] = useState<BadgeWithOwned[]>([])
-
   const isMounted = useIsMounted()
   const { address, isConnected } = useAccount()
 
-  useEffect(() => {
-    const updateBadgesWithOwned = async () => {
+  const {
+    data: addressBadges = [],
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["addressBadges", address],
+    queryFn: async (): Promise<Badge[]> => {
+      if (!address) return []
       const response = await fetch(`${ADDRESS_STATS_API}${address}`)
-      const badgesFromAddress = await response.json()
-      const newBadgedWithOwned: BadgeWithOwned[] = badges.map((badge) => {
-        const addressBadge = badgesFromAddress.find((b) => b.id === badge.id)
-        return {
-          ...badge,
-          owned: addressBadge ? true : false,
-        }
-      })
-      setAddressBadges(badgesFromAddress)
-      setBadgesWithOwned(newBadgedWithOwned)
-    }
-    if (address) {
-      updateBadgesWithOwned()
-    } else {
-      setAddressBadges([])
-      setBadgesWithOwned(badges.map((badge) => ({ ...badge, owned: false })))
-    }
-  }, [address, badges])
+      if (!response.ok) {
+        throw new Error("Failed to fetch address badges")
+      }
+      return response.json()
+    },
+    enabled: !!address,
+    // staleTime: ???
+  })
+
+  const badgesWithOwned = useMemo((): BadgeWithOwned[] => {
+    return badges.map((badge) => {
+      const addressBadge = addressBadges.find((b) => b.id === badge.id)
+      return {
+        ...badge,
+        owned: addressBadge ? true : false,
+      }
+    })
+  }, [badges, addressBadges])
 
   return (
     <div className="flex flex-col gap-8 xl:flex-row">
@@ -95,7 +100,20 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
 
         <CollectiblesConnectButton />
 
-        {isConnected && <CollectiblesProgress badges={badgesWithOwned} />}
+        {isConnected && !isLoading && !error && (
+          <CollectiblesProgress badges={badgesWithOwned} />
+        )}
+        {isLoading && (
+          <div className="flex w-full flex-col gap-y-4">
+            <Skeleton className="h-10 w-full rounded-2xl" />
+            <Skeleton className="h-10 w-full rounded-2xl" />
+          </div>
+        )}
+        {error && (
+          <div className="text-body-medium text-red-500">
+            Error fetching address badges
+          </div>
+        )}
       </div>
 
       {/* How it works section */}
