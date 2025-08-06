@@ -94,9 +94,9 @@ The `calldata` keyword is also used in Solidity to pass arguments to a smart con
 
 In the context of optimistic rollups, `calldata` is used to send compressed transaction data to the onchain contract. The rollup operator adds a new batch by calling the required function in the rollup contract and passing the compressed data as function arguments. Using `calldata` reduces user fees since most costs that rollups incur come from storing data onchain.
 
-Here is [an example](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
+Here is [an example](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
 
-Some rollups now use blobs to post batches of transactions to Ethereum. 
+Some rollups now use blobs to post batches of transactions to Ethereum.
 
 Blobs are non-modifiable and non-persistent (just like `calldata`) but are pruned from history after ~18 days. For more information on blobs, see [Danksharding](/roadmap/danksharding).
 
@@ -257,9 +257,9 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 
 - [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [What is a Blockchain Rollup? A Technical Introduction](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
+- [The Essential Guide to Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [The Practical Guide To Ethereum Rollups](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [The State Of Fraud Proofs In Ethereum L2s](https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [How does Optimism's Rollup really work?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [How does Optimism's Rollup really work?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

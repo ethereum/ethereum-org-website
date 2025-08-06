@@ -151,11 +151,11 @@ Kami hanya pada permulaan mencipta Web yang lebih baik dengan Web3, tetapi sambi
 
 Web3 tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspektif yang berbeza mengenainya. Berikut adalah antaranya:
 
-- [Apakah Web3? Internet Teragih Masa Depan Dijelaskan](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Apakah Web3? Internet Teragih Masa Depan Dijelaskan](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Memahami Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
 - [Kepentingan Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Kepentingan Keteragihan](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Lanskap Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – *a16z*
-- [Debat Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Debat Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

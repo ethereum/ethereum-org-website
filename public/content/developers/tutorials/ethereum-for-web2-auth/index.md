@@ -644,7 +644,7 @@ Get the request ID, and delete the nonce from `nonces` to make sure it cannot be
   try {
 ```
 
-Becasue there are so many ways in which the signature can be invalid, we wrap this in a `try ... catch` block to catch any thrown errors.
+Because there are so many ways in which the signature can be invalid, we wrap this in a `try ... catch` block to catch any thrown errors.
 
 ```typescript
     const validSignature = await verifyMessage({

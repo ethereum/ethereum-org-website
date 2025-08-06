@@ -1,12 +1,12 @@
 [
   {
-    "title": "NapulETH",
-    "startDate": "2025-07-17",
-    "endDate": "2025-07-19",
-    "href": "https://napuleth.org/",
-    "location": "Naples, ITA",
-    "description": "NapulETH - Biggest Web3 Event In Southern Italy",
-    "imageUrl": "https://cdn.moongate.id/events/59f82809-1766-4dd4-a641-7bf10bb007df/featured-image-1732163941338.svg"
+    "title": "ETHNigeria 2025",
+    "startDate": "2025-08-08",
+    "endDate": "2025-08-09",
+    "href": "https://ethereumnigeria.org",
+    "location": "Lagos, Nigeria",
+    "description": "",
+    "imageUrl": ""
   },
   {
     "title": "Pragma New York",
@@ -15,7 +15,8 @@
     "href": "https://ethglobal.com/events/pragma-newyork2025",
     "location": "New York, NYC, USA",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "SBC (The Science of Blockchain Conference 2025)",
@@ -33,7 +34,8 @@
     "href": "https://ethglobal.com/events/newyork2025",
     "location": "New York, NYC, USA",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "ProdFest Jos",
@@ -81,13 +83,32 @@
     "imageUrl": "https://cdn.prod.website-files.com/649014d99c5194ad73558cd3/649af7b1f1fdaa7868890166_ThumbnailPicture.png"
   },
   {
+    "title": "Ethereum Brasil",
+    "startDate": "2025-09-10",
+    "endDate": "2025-09-11",
+    "href": "https://www.ethereumbrasil.com/ethbrasil25",
+    "location": "São Paulo, MorumBIS Stadium",
+    "description": "Growing &amp; supporting the Web3 builder community in Brazil.",
+    "imageUrl": "http://static1.squarespace.com/static/627921e48d48986f142cbeb0/t/683e314da0a66461ec03ea42/1743427289450/ethereu+brasil+logo+w+BG.png?format=1500w"
+  },
+  {
+    "title": "EDCON",
+    "startDate": "2025-09-16",
+    "endDate": "2025-09-19",
+    "href": "https://edcon.io/en/",
+    "location": "Osaka,Japan",
+    "description": "Join the global Ethereum community at EDCON 2025 in Osaka, Japan, from August - September . Explore the latest in Ethereum technology through workshops, keynotes, and networking opportunities. Don’t miss this premier global Ethereum event!",
+    "imageUrl": "https://ueth.s3.us-west-2.amazonaws.com/edcon/2025/metadata/index.png"
+  },
+  {
     "title": "Pragma New Delhi",
     "startDate": "2025-09-25",
     "endDate": "2025-09-25",
     "href": "https://ethglobal.com/events/pragma-newdelhi",
     "location": "New Delhi, IND",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "ETHGlobal New Delhi",
@@ -96,7 +117,8 @@
     "href": "https://ethglobal.com/events/newdelhi",
     "location": "New Delhi, IND",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "EthAccra",
@@ -123,7 +145,8 @@
     "href": "https://ethsafari.xyz/",
     "location": "Nairobi, Kenya",
     "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
-    "imageUrl": "https://ethsafari.xyz/_next/image?url=%2FHackathon.png&w=640&q=75"
+    "imageUrl": "https://ethsafari.xyz/_next/image?url=%2FHackathon.png&w=640&q=75",
+    "hackathon": true
   },
   {
     "title": "ETH Boston",
@@ -168,7 +191,18 @@
     "href": "https://ethistanbul.io/",
     "location": "Istanbul, TR",
     "description": "ETHIstanbul is a conference and hackathon connecting you with global talents, industry professionals, and web3 companies advancing technology.",
-    "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75"
+    "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75",
+    "hackathon": true
+  },
+  {
+    "title": "TUM Blockchain Conference",
+    "startDate": "2025-09-11",
+    "endDate": "2025-09-12",
+    "href": "https://conference.tum-blockchain.com",
+    "location": "Munich, Germany",
+    "description": "Europe's top Blockchain Conference in Munich is back! Discover how Web3 is moving beyond promise to real world impact with top experts.",
+    "imageUrl": "https://conference.tum-blockchain.com/banners/c25-banner.svg",
+    "hackathon": false
   },
   {
     "title": "ETHSofia",
@@ -178,6 +212,15 @@
     "location": "Sofia, BGR",
     "description": "The first major Ethereum community conference in Bulgaria. Bringing ETH enthusiasts, professionals, and developers to the IT heart of the Balkans. 23 - 25 September 2025.",
     "imageUrl": "https://framerusercontent.com/assets/OHGIdIaZVjWGAwpmJhN1z6Yuh5g.png"
+  },
+  {
+    "title": "ETHVenice",
+    "startDate": "2025-10-01",
+    "endDate": "2025-10-01",
+    "href": "https://ethvenice.com/",
+    "location": "Venice, ITA",
+    "description": "Join the third edition in the beautiful San Servolo Island (Venice), to learn more about blockchain, technology and with an eye towards art.",
+    "imageUrl": "https://ethvenice.com/org/ethvenice.jpg"
   },
   {
     "title": "ProtoLayers Conference",
@@ -212,8 +255,26 @@
     "endDate": "2025-11-16",
     "href": "https://invisible.garden",
     "location": "Buenos Aires, Argentina",
-    "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Inteligence | Cybersecurity",
+    "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Intelligence | Cybersecurity",
     "imageUrl": "https://cdn.prod.website-files.com/6695a56b501ba1fda80ae466/67851f884a16785150e18e2c_Group%20116.svg"
+  },
+  {
+    "title": "ETHRome Hackathon",
+    "startDate": "2025-10-17",
+    "endDate": "2025-10-19",
+    "href": "https://ethrome.org",
+    "location": "Rome, ITA",
+    "description": "The hackathon for builders by builders",
+    "imageUrl": "https://www.ethrome.org/opengraph-image.png"
+  },
+  {
+    "title": "Urbe Village",
+    "startDate": "2025-10-05",
+    "endDate": "2025-10-19",
+    "href": "https://urbe.build/urbe-village",
+    "location": "Rome, ITA",
+    "description": "The Web3 Popup Village by builders for builders",
+    "imageUrl": "https://framerusercontent.com/images/b1WtEoffV6kSBqG9o3cJEUvjkY.png"
   },
   {
     "title": "ETH Latam",

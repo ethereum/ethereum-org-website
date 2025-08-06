@@ -245,22 +245,23 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
+    path.startsWith("/defi/") ||
     path.startsWith("/eth/") ||
+    path.startsWith("/gas/") ||
     path.startsWith("/layer-2/") ||
     path.startsWith("/layer-2/learn/") ||
     path.startsWith("/nft/") ||
+    path.startsWith("/quizzes/") ||
     path.startsWith("/roadmap/merge/") ||
     path.startsWith("/roadmap/scaling/") ||
     path.startsWith("/run-a-node/") ||
     path.startsWith("/security/") ||
+    path.startsWith("/smart-contracts/") ||
+    path.startsWith("/stablecoins/") ||
     path.startsWith("/staking/solo/") ||
     path.startsWith("/wallets/") ||
     path.startsWith("/web3/") ||
-    path.startsWith("/what-is-ethereum/") ||
-    path.startsWith("/quizzes/") ||
-    path.startsWith("/stablecoins/") ||
-    path.startsWith("/defi/") ||
-    path.startsWith("/gas/")
+    path.startsWith("/what-is-ethereum/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

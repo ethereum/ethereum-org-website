@@ -105,7 +105,7 @@ Reddit은 [ERC-20 토큰](/developers/docs/standards/tokens/erc-20/) 기반의
 - [Web3는 탈중앙화, 커뮤니티 기반 소셜 네트워크의 핵심이다](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — *Sumit Ghosh*
 - [블록체인 소셜 미디어의 개요](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — *Gemini Cryptopedia*
 - [블록체인은 어떻게 소셜 미디어의 개인 정보 문제를 어떻게 해결하는가](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — *Prableen Bajpai*
-- [블록체인에 소셜 미디어 네트워크가 다가오고 있다](https://businesstechguides.co/what-are-decentralized-social-networks) — *Emmanuel Awosika*
+- [블록체인에 소셜 미디어 네트워크가 다가오고 있다](https://eawosika.com/what-are-decentralized-social-networks) — *Emmanuel Awosika*
 - [소셜 네트워크를 위한 충분한 탈중앙화](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### 영상 {#videos}

@@ -168,7 +168,7 @@ Idan musanya B darajar sa ya sauka haka kawai kuma mai asusun ya kasa siyan isas
 
 Don iya yin misalin da ke sama a cibiyar hada-hadar kuɗinmu na asali na duniya, kuna buƙatar kuɗaɗe masu yawa. Waɗannan tsalon yin kuɗi ana samun su ne kawai idan akwai wani kuɗi. Rance kamar walkiya misalai ne na zamanin da inda ba lallai sai ana da kuɗi za a sami kuɗi ba.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Ƙari akan rancen flash
 </ButtonLink>
 

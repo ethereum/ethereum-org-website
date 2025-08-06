@@ -609,6 +609,8 @@ export type CommunityConference = {
   startDate: string
   endDate: string
   imageUrl: string
+  hackathon?: boolean
+  formattedDate?: string
 }
 
 // Chains

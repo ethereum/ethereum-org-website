@@ -118,7 +118,7 @@ Per norma general, els desacords s'aborden en llargues discussions en fòrums p�
 
 Les bifurcacions es donen quan s'han de fer importants millores tècniques o modificacions a la xarxa i canvien les «normes» del protocol. [Els clients Ethereum](/developers/docs/nodes-and-clients/) han d'actualitzar el software per a implementar les noves normes de la bifurcació.
 
-La bifurcació d'una DAO va ser la resposta a [l'atac d'una DAO el 2016](https://www.coindesk.com/understanding-dao-hack-journalists), on un contracte insegur d'una [DAO](/glossary/#dao) va patir un drenatge de més de 3,6 milions d'ETH en un hack. La bifurcació va moure els fons del contracte defectuós al nou contracte i va permetre recuperar els fons a qui n'hagués perdut a causa del pirateig.
+La bifurcació d'una DAO va ser la resposta a [l'atac d'una DAO el 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), on un contracte insegur d'una [DAO](/glossary/#dao) va patir un drenatge de més de 3,6 milions d'ETH en un hack. La bifurcació va moure els fons del contracte defectuós al nou contracte i va permetre recuperar els fons a qui n'hagués perdut a causa del pirateig.
 
 La comunitat d'Ethereum va votar a favor d'aquest pla d'acció. Qualsevol titular d'ETH va poder votar mitjançant una transacció a [una plataforma de votació](http://v1.carbonvote.com/). La decisió de bifurcar va assolir el 85% dels vots.
 

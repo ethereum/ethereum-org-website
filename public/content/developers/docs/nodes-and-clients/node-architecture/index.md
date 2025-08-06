@@ -14,7 +14,7 @@ The diagram below shows the relationship between the two Ethereum clients. The t
 
 _There are several options for the execution client including Erigon, Nethermind, and Besu_.
 
-For this two-client structure to work, consensus clients must pass bundles of transactions to the execution client. The execution client executes the transactions locally to validate that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. When a node is selected to be a block producer its consensus client instance requests bundles of transactions from the execution client to include in the new block and execute them to update the global state. The consensus client drives the execution client via a local RPC connection using the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). 
+For this two-client structure to work, consensus clients must pass bundles of transactions to the execution client. The execution client executes the transactions locally to validate that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. When a node is selected to be a block producer its consensus client instance requests bundles of transactions from the execution client to include in the new block and execute them to update the global state. The consensus client drives the execution client via a local RPC connection using the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## What does the execution client do? {#execution-client}
 
@@ -37,20 +37,20 @@ The consensus client does not participate in attesting to or proposing blocks - 
 
 ## Validators {#validators}
 
-Staking and running the validator software makes a node eligible to be selected to propose a new block. Node operators can add a validator to their consensus clients by depositing 32 ETH in the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. It also enables a node to accrue rewards or lose ETH via penalties or slashing. 
+Staking and running the validator software makes a node eligible to be selected to propose a new block. Node operators can add a validator to their consensus clients by depositing 32 ETH in the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. It also enables a node to accrue rewards or lose ETH via penalties or slashing.
 
 [More on staking](/staking/).
 
 ## Components of a node comparison {#node-comparison}
 
-| Execution Client                                   | Consensus Client                                                 | Validator                    |
-| -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
-| Gossips transactions over its P2P network          | Gossips blocks and attestations over its P2P network             | Proposes blocks              |
-| Executes/re-executes transactions                  | Runs the fork choice algorithm                                   | Accrues rewards/penalties    |
-| Verifies incoming state changes                    | Keeps track of the head of the chain                             | Makes attestations           |
-| Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |
-| Creates execution payload                          | Keeps track of accumulated randomness in RANDAO                  | Can be slashed               |
-| Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    |                              |
+| Execution Client                                   | Consensus Client                                                                                                                                          | Validator                    |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| Gossips transactions over its P2P network          | Gossips blocks and attestations over its P2P network                                                                                                      | Proposes blocks              |
+| Executes/re-executes transactions                  | Runs the fork choice algorithm                                                                                                                            | Accrues rewards/penalties    |
+| Verifies incoming state changes                    | Keeps track of the head of the chain                                                                                                                      | Makes attestations           |
+| Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info)                                                                                          | Requires 32 ETH to be staked |
+| Creates execution payload                          | Keeps track of accumulated randomness in RANDAO (an algorithm that provides verifiable randomness for validator selection and other consensus operations) | Can be slashed               |
+| Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                                                                                                             |                              |
 
 ## Further reading {#further-reading}
 

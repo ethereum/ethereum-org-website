@@ -10,11 +10,8 @@ import {
   DankshardingIcon,
   ExtraSecurityIcon,
   FutureProofingIcon,
-  ProposerBuilderSeparationIcon,
-  SecretLeaderElectionIcon,
   SingleSlotFinalityIcon,
   StatelessnessIcon,
-  VerkleTreesIcon,
 } from "@/components/icons/roadmap"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -98,32 +95,11 @@ const RoadmapPage = () => {
       href: "/roadmap/single-slot-finality",
     },
     {
-      icon: <ProposerBuilderSeparationIcon className="size-7" />,
-      title: "Proposer-builder separation",
-      description:
-        "Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.",
-      href: "/roadmap/pbs",
-    },
-    {
-      icon: <SecretLeaderElectionIcon className="size-7" />,
-      title: "Secret leader election",
-      description:
-        "Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.",
-      href: "/roadmap/secret-leader-election",
-    },
-    {
       icon: <AccountAbstractionIcon className="size-7" />,
       title: "Account abstraction",
       description:
         "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
       href: "/roadmap/account-abstraction",
-    },
-    {
-      icon: <VerkleTreesIcon className="size-7" />,
-      title: "Verkle trees",
-      description:
-        "Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These clients will require a small amount of storage space but will still be able to verify new blocks.",
-      href: "/roadmap/verkle-trees",
     },
     {
       icon: <StatelessnessIcon className="size-7" />,
@@ -157,11 +133,11 @@ const RoadmapPage = () => {
             from its current form into a fully scaled, maximally resilient
             platform.
           </p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
             {changesComingItems.map((item) => (
               <div
                 key={item.title}
-                className="bg-roadmap-card-gradient flex h-full flex-col gap-4 rounded-3xl border p-6"
+                className="bg-roadmap-card-gradient flex flex-col gap-4 rounded-3xl border p-6"
               >
                 <div className="flex flex-row items-center justify-between gap-4">
                   <h3 className="m-0">{item.title}</h3>
@@ -237,7 +213,7 @@ const RoadmapPage = () => {
           <h2 className="text-center">
             What technical upgrades are coming to Ethereum?
           </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {technicalUpgradesItems.map((item) => (
               <SubpageCard
                 key={item.title}

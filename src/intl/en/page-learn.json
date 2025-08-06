@@ -1,4 +1,5 @@
 {
+  "about-ethereum-video-series": "Video series about Ethereum",
   "toc-learn-hub": "Learn hub",
   "toc-what-is-crypto-ethereum": "What is Ethereum?",
   "toc-how-do-i-use-ethereum": "How do I use Ethereum?",
@@ -117,6 +118,8 @@
   "zeroknowledge-description": "Goes deep into the tech that will power the emerging decentralized web and the community building this",
   "green-pill-title": "Green Pill",
   "green-pill-description": "Explores the crypto-economic systems that create positive externalities for the world",
+  "ethereum-basics-title": "Ethereum Basics",
+  "ethereum-basics-description": "Learn the basics of Ethereum network architecture with an easy-to-understand video series.",
   "unchained-title": "Unchained",
   "unchained-description": "Dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy",
   "the-daily-gwei-title": "The Daily Gwei",

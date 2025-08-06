@@ -168,7 +168,7 @@ Ako bi potražnja menjačnice B naglo opala i korisnik ne može da kupi dovoljno
 
 Da biste mogli da izvedete gornji primer u tradicionalnom finansijskom svetu, bila bi vam potrebna ogromna količina novca. Ovakve strategije za pravljenje novca dostupne su samo onima koji već imaju bogatstvo. Brzi zajmovi su primer budućnosti u kojima posedovanje novca nije nužno uslov za zaradu novca.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Više informacija o brzim zajmovima
 </ButtonLink>
 

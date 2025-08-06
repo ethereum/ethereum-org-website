@@ -31,14 +31,14 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
       <Button
         ref={ref}
         id={HAMBURGER_BUTTON_ID}
-        aria-label={t("aria-toggle-search-button")}
+        aria-label={t("aria-toggle-menu-button")}
         className={cn("px-2 py-0 text-body", className)}
         variant="ghost"
         {...props}
       >
         <svg
           viewBox="0 0 24 40"
-          className="relative h-10 w-6 stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover [&>path]:fill-none hover:[&>path]:stroke-primary-hover"
+          className="relative !h-10 !w-6 stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover [&>path]:fill-none hover:[&>path]:stroke-primary-hover"
           strokeLinecap="round"
           strokeLinejoin="round"
         >

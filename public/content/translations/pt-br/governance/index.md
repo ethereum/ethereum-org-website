@@ -118,7 +118,7 @@ De um modo geral, os desacordos são tratados com discussões de longo prazo em 
 
 Forks são quando é necessário fazer grandes melhorias técnicas ou alterações na rede e modificar as "regras" do protocolo. [Os clientes da Ethereum](/developers/docs/nodes-and-clients/) devem atualizar seu software para implementar as novas regras do fork.
 
-O fork da DAO foi em resposta ao [ataque da DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) no qual um contrato inseguro de [DAO](/glossary/#dao) foi drenado em mais de 3 milhões de ETH em um hack. O fork transferiu os fundos do contrato falho para um novo contrato, permitindo que qualquer um que perdeu fundos no hack os recuperasse.
+O fork da DAO foi em resposta ao [ataque da DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) no qual um contrato inseguro de [DAO](/glossary/#dao) foi drenado em mais de 3 milhões de ETH em um hack. O fork transferiu os fundos do contrato falho para um novo contrato, permitindo que qualquer um que perdeu fundos no hack os recuperasse.
 
 Este curso de ação foi votado pela comunidade Ethereum. Qualquer titular de ETH pôde votar por meio de uma transação em [uma plataforma de votação](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). A decisão de criar fork ultrapassou 85% dos votos.
 

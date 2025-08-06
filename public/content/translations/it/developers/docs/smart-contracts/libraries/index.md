@@ -104,7 +104,7 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 
 **thirdweb Solidity SDK -** **_Fornisce gli strumenti necessari per costruire contratti intelligenti personalizzati in modo efficiente_**
 
-- [Documentazione](https://portal.thirdweb.com/solidity/)
+- [Documentazione](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Tutorial correlati {#related-tutorials}

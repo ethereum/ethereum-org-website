@@ -8,7 +8,7 @@ Los contratos inteligentes son extremadamente flexibles y capaces de controlar g
 
 Las cadenas de bloques públicas como Ethereum complican aún más la cuestión de la seguridad de los contratos inteligentes. El código de los contratos ya implementado _por lo general_ no puede cambiarse para corregir fallas de seguridad, mientras que los activos robados de los contratos inteligentes son extremadamente difíciles de rastrear y en su mayor parte irrecuperables debido a la inmutabilidad.
 
-Aunque las cifras varían, se estima que la cantidad total de valor robado o perdido debido a defectos de seguridad en los contratos inteligentes supera fácilmente los USD 1000 millones de dólares. Esto incluye incidentes de alto perfil, tal como el [hackeo a la DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millones de ETH robados, por valor de más de USD 1000 millones a precios actuales), el [hackeo de la billetera multifirma de Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (USD 30M perdidos a manos de hackers) y el [problema de billeteras congeladas de Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mas de USD 300M en ETH bloqueados para siempre).
+Aunque las cifras varían, se estima que la cantidad total de valor robado o perdido debido a defectos de seguridad en los contratos inteligentes supera fácilmente los USD 1000 millones de dólares. Esto incluye incidentes de alto perfil, tal como el [hackeo a la DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millones de ETH robados, por valor de más de USD 1000 millones a precios actuales), el [hackeo de la billetera multifirma de Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (USD 30M perdidos a manos de hackers) y el [problema de billeteras congeladas de Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mas de USD 300M en ETH bloqueados para siempre).
 
 Los problemas mencionados anteriormente hacen que sea imperativo que los desarrolladores inviertan esfuerzos en la creación de contratos inteligentes seguros, robustos y resistentes. La seguridad de los contratos inteligentes es un asunto serio que todo desarrollador hará bien en aprender. Esta guía abordará consideraciones de seguridad para los desarrolladores de Ethereum y explorará recursos para mejorar la seguridad de los contratos inteligentes.
 
@@ -304,7 +304,7 @@ No hay nada malo aquí, excepto que `Attacker` tiene otra función que llama a `
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
+El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cómo prevenir los ataques de reentrada
 
@@ -505,7 +505,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Hacken:](https://hacken.io)** _Auditor de ciberseguridad Web3 que aporta el enfoque de 360 grados a la seguridad de la cadena de bloques. _
 
-- **[Nethermind:](https://nethermind.io/smart-contracts-audits)** _Servicios de auditoría de Solidity y Cairo que garantizan la integridad de los contratos inteligentes y la seguridad de los usuarios en Ethereum y Starknet._
+- **[Nethermind:](https://www.nethermind.io/smart-contract-audits)** _Servicios de auditoría de Solidity y Cairo que garantizan la integridad de los contratos inteligentes y la seguridad de los usuarios en Ethereum y Starknet._
 
 - **[HashEx:](https://hashex.org/)** _HashEx se centra en la auditoría de cadena de bloques y contratos inteligentes para garantizar la seguridad de las criptomonedas, proporcionando servicios como el desarrollo de contratos inteligentes, las pruebas de penetración y la consultoría de cadenas de bloques. _
 
@@ -515,7 +515,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Cyfrin:](https://cyfrin.io)** _Plataforma de seguridad web3 que incuba la seguridad criptográfica a través de productos y servicios de auditoría de contratos inteligentes._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
 
 - **[Oxorio:](https://oxor.io/)** _Auditorías de contratos inteligentes y servicios de seguridad de cadena de bloques con experiencia en EVM, Solidity, ZK y tecnología de cadena cruzada para empresas criptográficas y proyectos DeFi._
 
