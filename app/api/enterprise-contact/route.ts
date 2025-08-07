@@ -3,8 +3,6 @@ import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses"
 
 const ENTERPRISE_EMAIL = "enterprise@ethereum.org"
 const SES_FROM_EMAIL = "enterprise-contact@ethereum.org"
-const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
-const MAX_REQUESTS_PER_WINDOW = 3
 
 // Configure SES client
 const sesClient = new SESClient({
@@ -14,34 +12,6 @@ const sesClient = new SESClient({
     secretAccessKey: process.env.SES_SECRET_ACCESS_KEY!,
   },
 })
-
-// Log the region being used for debugging
-console.log("Using AWS SES region:", process.env.SES_REGION || "us-east-2")
-
-// Simple in-memory rate limiting (in production, use Redis or similar)
-const requestHistory = new Map<string, number[]>()
-
-function isRateLimited(identifier: string): boolean {
-  const now = Date.now()
-  const requests = requestHistory.get(identifier) || []
-
-  // Filter out requests outside the current window
-  const recentRequests = requests.filter(
-    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS
-  )
-
-  // Update the history
-  requestHistory.set(identifier, recentRequests)
-
-  // Check if we're over the limit
-  if (recentRequests.length >= MAX_REQUESTS_PER_WINDOW) return true
-
-  // Add this request
-  recentRequests.push(now)
-  requestHistory.set(identifier, recentRequests)
-
-  return false
-}
 
 function sanitizeInput(input: string): string {
   return input
@@ -120,16 +90,6 @@ Reply to this email to respond directly to the sender.
 
 export async function POST(request: NextRequest) {
   try {
-    // Rate limiting based on a simple identifier (could be improved with real session tracking)
-    const userAgent = request.headers.get("user-agent") || "unknown"
-
-    if (isRateLimited(userAgent)) {
-      return NextResponse.json(
-        { error: "Too many requests. Please try again later." },
-        { status: 429 }
-      )
-    }
-
     const body = await request.json()
     const { email, message } = body
 
