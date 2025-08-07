@@ -92,6 +92,6 @@ _我們認為，其他不使用以太坊來實現資料可用性或安全性的�
 
 如果你想在 ethereum.org 上新增二層網路層，請在 GitHub 上建立議題。
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   建立一個議題
 </ButtonLink>
