@@ -13,12 +13,7 @@ const LABELS_TO_EMOJI = {
 
 const GFI_LABEL = "good first issue"
 
-export async function GET(req: Request) {
-  const { method } = req
-
-  if (method !== "POST") {
-    return NextResponse.json({ message: "Method not allowed" }, { status: 405 })
-  }
+export async function POST(req: Request) {
 
   const { action, label, issue } = await req.json()
 
