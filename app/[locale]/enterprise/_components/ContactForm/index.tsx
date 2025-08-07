@@ -17,9 +17,9 @@ type EnterpriseContactFormProps = {
     error: {
       domain: React.ReactNode // Link injected
       emailInvalid: string
-      emailTooLong: string // Length injected via {length}
+      emailTooLong: string
       general: string
-      messageTooLong: string // Length injected via {length}
+      messageTooLong: string
       required: string
     }
     placeholder: {
