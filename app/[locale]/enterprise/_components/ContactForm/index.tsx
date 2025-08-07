@@ -19,7 +19,7 @@ type EnterpriseContactFormProps = {
       domain: React.ReactNode // Link injected
       emailInvalid: string
       emailTooLong: string
-      general: string
+      general: React.ReactNode // Link injected
       messageTooLong: string
       required: string
     }
@@ -46,7 +46,7 @@ type FormState = {
 type FormErrors = {
   email?: React.ReactNode
   message?: React.ReactNode
-  general?: string
+  general?: React.ReactNode
 }
 
 type SubmissionState = "idle" | "submitting" | "success" | "error"

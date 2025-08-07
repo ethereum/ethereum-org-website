@@ -46,7 +46,7 @@
   "page-enterprise-team-form-error-domain": "Please use a business, institutional, or organizational email address (e.g., no @gmail). For general question <a>join our Discord</a>.",
   "page-enterprise-team-form-error-email-invalid": "Please enter a valid email address",
   "page-enterprise-team-form-error-email-too-long": "Email address is too long (maximum {length} characters)",
-  "page-enterprise-team-form-error-general": "Unable to send your message. Please try again or contact us directly at enterprise@ethereum.org",
+  "page-enterprise-team-form-error-general": "Unable to send your message. Please try again or contact us directly at <a>@</a>",
   "page-enterprise-team-form-error-message-too-long": "Message is too long (maximum {length} characters)",
   "page-enterprise-team-form-error-required": "Required",
   "page-enterprise-team-form-error-short": "Please provide at least <span>#</span> characters describing your inquiry",
