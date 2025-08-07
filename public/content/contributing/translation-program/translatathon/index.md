@@ -47,29 +47,29 @@ Here are the important dates for the 2025 Translatathon:
 
 <TwoColumnContent>
   <CardContent>
-    <h3>Who can participate?</h3>
+    <h3 className="mt-6">Who can participate?</h3>
     Be older than 18 years, native speaker of at least one non-English language and proficient in English.
   </CardContent>
   <CardContent>
-    <h3>Do I need to be a translator?</h3>
+    <h3 className="mt-6">Do I need to be a translator?</h3>
     No. You simply have to be bilingual and suggest human translations (using machine translation is forbidden!) to the best of your ability, no professional experience required.
   </CardContent>
 </TwoColumnContent>
 
 <TwoColumnContent>
   <CardContent>
-    <h3>How much time do I have to commit?</h3>
+  <h3 className="mt-6">How much time do I have to commit?</h3>
     As much as you want. The minimum threshold to be eligible for participatory prizes is 500 translated words, which takes about 1 hour to complete, while competing for the top prizes will require a larger time commitment.
   </CardContent>
   <CardContent>
-    <h3>Do I need to be familiar with Ethereum?</h3>
+    <h3 className="mt-6">Do I need to be familiar with Ethereum?</h3>
     No. While being familiar with Ethereum can help with your productivity and quality, the Translatathon is as much a learning experience as it is a competition, and everyone is invited to join and learn more about Ethereum while participating.
   </CardContent>
 </TwoColumnContent>
 
 <TwoColumnContent>
   <CardContent>
-    <h3>What do I need to participate?</h3>
+    <h3 className="mt-6">What do I need to participate?</h3>
     We recommend using a computer to translate since Crowdin, the translation platform we use, is optimized for desktop.
   </CardContent>
 </TwoColumnContent>
