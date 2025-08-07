@@ -7,7 +7,7 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getHighlightedApps, getStaffPickApps } from "@/lib/utils/apps"
+import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -39,7 +39,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
   const highlightedApps = getHighlightedApps(appsData, 3)
 
   // Get 6 random staff pick apps
-  const staffPickApps = getStaffPickApps(appsData, 6)
+  const discoverApps = getDiscoverApps(appsData, 6)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -68,9 +68,9 @@ const Page = async ({ params }: { params: { locale: string } }) => {
         </div>
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
-          <h2>Staff picks</h2>
+          <h2>Discover</h2>
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {staffPickApps.map((app) => (
+            {discoverApps.map((app) => (
               <AppCard
                 key={app.name}
                 app={app}
@@ -84,7 +84,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
         </div>
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
-          <h2>Top applications</h2>
+          <h2>Applications</h2>
           <TopApps appsData={appsData} />
         </div>
 

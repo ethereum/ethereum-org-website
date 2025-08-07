@@ -1090,7 +1090,7 @@ export type App = {
   discord: string
   kpiUrl: string
   sortingWeight: number
-  staffPicks: boolean
+  discover: boolean
   highlight: boolean
   languages: Lang[]
   parentCompany: string

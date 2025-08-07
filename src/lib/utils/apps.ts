@@ -19,17 +19,17 @@ export const getHighlightedApps = (
   return count ? highlightedApps.slice(0, count) : highlightedApps
 }
 
-// Get staff pick apps (apps with staffPicks=true)
-export const getStaffPickApps = (
+// Get discover apps (apps with discover=true)
+export const getDiscoverApps = (
   appsData: Record<AppCategory, AppData[]>,
   count?: number
 ) => {
-  const staffPickApps = Object.values(appsData)
+  const discoverApps = Object.values(appsData)
     .flatMap((categoryDapps) => categoryDapps)
-    .filter((app) => app.staffPicks)
+    .filter((app) => app.discover)
     .sort(() => Math.random() - 0.5)
 
-  return count ? staffPickApps.slice(0, count) : staffPickApps
+  return count ? discoverApps.slice(0, count) : discoverApps
 }
 
 export const APP_TAG_VARIANTS: Record<AppCategoryEnum, TagProps["status"]> = {

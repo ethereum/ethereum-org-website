@@ -91,7 +91,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
             discord: row[12] || "",
             kpiUrl: row[13] || "",
             sortingWeight: parseInt(row[14] || "0") || 0,
-            staffPicks: row[15]?.toLowerCase() === "true",
+            discover: row[15]?.toLowerCase() === "true",
             highlight: row[16]?.toLowerCase() === "true",
             languages: parseCommaSeparated(row[17] || ""),
             parentCompany: row[18] || "",
