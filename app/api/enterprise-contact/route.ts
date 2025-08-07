@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses"
 
+import { sanitizeInput } from "@/lib/utils/sanitize"
+
 const ENTERPRISE_EMAIL = "enterprise@ethereum.org"
 const SES_FROM_EMAIL = "enterprise-contact@ethereum.org"
 
@@ -12,16 +14,6 @@ const sesClient = new SESClient({
     secretAccessKey: process.env.SES_SECRET_ACCESS_KEY!,
   },
 })
-
-function sanitizeInput(input: string): string {
-  return input
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
-    .replace(/javascript:/gi, "")
-    .replace(/on\w+\s*=/gi, "")
-    .replace(/&lt;script/gi, "")
-    .replace(/&lt;\/script/gi, "")
-    .trim()
-}
 
 function validateEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/

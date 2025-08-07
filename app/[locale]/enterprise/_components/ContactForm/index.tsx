@@ -9,6 +9,7 @@ import { Spinner } from "@/components/ui/spinner"
 import { Textarea } from "@/components/ui/textarea"
 
 import { cn } from "@/lib/utils/cn"
+import { sanitizeInput } from "@/lib/utils/sanitize"
 
 import { MAX_EMAIL_LENGTH, MAX_MESSAGE_LENGTH } from "../../constants"
 
@@ -78,15 +79,6 @@ const CONSUMER_DOMAINS = [
   "10minutemail.com",
   "guerrillamail.com",
 ]
-
-const sanitizeInput = (input: string): string =>
-  input
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
-    .replace(/javascript:/gi, "")
-    .replace(/on\w+\s*=/gi, "")
-    .replace(/&lt;script/gi, "")
-    .replace(/&lt;\/script/gi, "")
-    .trim()
 
 const EnterpriseContactForm = ({ strings }: EnterpriseContactFormProps) => {
   const getCharacterCountClasses = (currentLength: number, maxLength: number) =>
