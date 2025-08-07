@@ -2,6 +2,7 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
+import BrowseApps from "@/components/BrowseApps"
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/Image/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
@@ -153,6 +154,7 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
+  BrowseApps,
   ButtonLink,
   Card,
   ContentContainer,
