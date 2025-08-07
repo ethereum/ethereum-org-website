@@ -68,7 +68,6 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
       return response.json()
     },
     enabled: !!address,
-    // staleTime: ???
   })
 
   const badgesWithOwned = useMemo((): BadgeWithOwned[] => {
