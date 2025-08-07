@@ -142,15 +142,6 @@ export const TranslatathonLayout = ({
           eventName: "translatathon terms and conditions",
         },
       },
-      {
-        text: "Translatathon Hubs",
-        href: "/contributing/translation-program/translatathon/translatathon-hubs",
-        matomo: {
-          eventCategory: "translatathon menu",
-          eventAction: "click",
-          eventName: "translatathon hubs",
-        },
-      },
     ],
   }
 

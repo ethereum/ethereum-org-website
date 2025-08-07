@@ -24,7 +24,7 @@ const instructions = [
     ctaLabel: "Apply",
   },
   {
-    title: "Register on Crowdin (translation platform)",
+    title: "Register on Crowdin",
     description:
       "Join the ethereum.org project and familiarize yourself with Crowdin, where all the translations will take place",
     ctaLink: CROWDIN_PROJECT_URL,
@@ -54,7 +54,7 @@ const instructions = [
     title: "Claim your prizes",
     description: (
       <>
-        Results will be announced on <strong>September 30th</strong>. Eligible
+        Results will be announced on <strong>September 25th</strong>. Eligible
         participants will receive an email with prize claim instructions.
       </>
     ),
