@@ -32,7 +32,7 @@ const BrowseApps = () => {
     <div className="mt-16 flex flex-col items-center justify-center rounded-3xl bg-radial-b p-8 md:p-20">
       <div className="flex max-w-2xl flex-col items-center justify-center gap-2 text-center">
         <h2>Browse apps</h2>
-        <p className="text-gray-500">
+        <p className="text-body-medium">
           We&apos;ve listed some of the most popular apps out there so you can
           try one out. You&apos;ll need ETH and a wallet to get the most out of
           them.

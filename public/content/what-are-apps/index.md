@@ -6,6 +6,7 @@ lang: en
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
+showDropdown: false
 image: /images/doge-computer.png
 summary: Apps on Ethereum are free, global and use public blockchain instead of private company servers. This means you can use the same account in every project and maintain your privacy.
 ---

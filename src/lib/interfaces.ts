@@ -72,6 +72,7 @@ export interface UseCasesFrontmatter
     SummaryPointsNumbered,
     ImageInfo {
   emoji: string
+  showDropdown?: boolean
 }
 
 export interface StakingFrontmatter
