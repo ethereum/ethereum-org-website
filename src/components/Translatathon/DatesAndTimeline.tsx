@@ -33,7 +33,7 @@ export const dates = [
   {
     title: "Translatathon",
     description:
-      "The translation period - translate as much or as little as you want",
+      "Collect points for any translations you add during the translation period",
     startDate: new Date("2025-08-25T00:00:00"),
     endDate: new Date("2025-08-31T23:59:59"),
     link: CROWDIN_PROJECT_URL,
@@ -42,7 +42,7 @@ export const dates = [
   {
     title: "Evaluation period",
     description:
-      "Each translation will be evaluated by professional reviewers to verify translations were not done with AI tools and meet the minimum quality threshold",
+      "Each translation will be evaluated by professional reviewers to make sure no AI tools were used and they meet the minimum quality threshold",
     startDate: new Date("2025-09-01T00:00:00"),
     endDate: new Date("2025-09-22T23:59:59"),
     link: null,

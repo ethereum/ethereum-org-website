@@ -29,7 +29,7 @@ To move closer to this goal, the ethereum.org translation program is an initiati
 
 As part of the translation program, we are organizing the 3rd edition of the Translatathon in order to incentivize translation contributions in less-active languages, increase the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
 
-If you are bilingual and want to help make Ethereum content more accessible while competing for prizes, read on to learn more!
+If you are a native speaker of a language other than English and want to help make Ethereum content more accessible while competing for prizes, read on to learn more!
 
 [Learn more about the ethereum.org translation program](/contributing/translation-program/)
 
@@ -48,7 +48,7 @@ Here are the important dates for the 2025 Translatathon:
 <TwoColumnContent>
   <CardContent>
     <h3 className="mt-6 mb-3">Who can participate?</h3>
-    Be older than 18 years, native speaker of at least one non-English language and proficient in English.
+    Anyone older than 18 years, native speaker of at least one non-English language and proficient in English.
   </CardContent>
   <CardContent>
     <h3 className="mt-6 mb-3">Do I need to be a translator?</h3>
@@ -59,11 +59,11 @@ Here are the important dates for the 2025 Translatathon:
 <TwoColumnContent>
   <CardContent>
   <h3 className="mt-6 mb-3">How much time do I have to commit?</h3>
-    As much as you want. The minimum threshold to be eligible for participatory prizes is 500 translated words, which takes about 1 hour to complete, while competing for the top prizes will require a larger time commitment.
+    As much as you want. The minimum threshold to be eligible for prizes is 1,000 translated words, which should take about 2 hours to complete, while competing for the top prizes will require a larger time commitment.
   </CardContent>
   <CardContent>
     <h3 className="mt-6 mb-3">Do I need to be familiar with Ethereum?</h3>
-    No. While being familiar with Ethereum can help with your productivity and quality, the Translatathon is as much a learning experience as it is a competition, and everyone is invited to join and learn more about Ethereum while participating.
+    No. While being familiar with Ethereum can help with your productivity and quality, the Translatathon is also a learning experience, and everyone is invited to join and learn more about Ethereum while participating.
   </CardContent>
 </TwoColumnContent>
 

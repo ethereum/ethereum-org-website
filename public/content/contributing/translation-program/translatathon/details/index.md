@@ -39,9 +39,9 @@ Translations are suggested directly in the online editor so there is no need to 
 - Each string has a status indicator that shows whether it’s _Translated_, _Untranslated_, or _Approved_. If a source string already has a suggested translation in your language, there is no need to translate it
 - You can also filter strings in the editor to show _Untranslated first_ or _Untranslated only_
 
-For a detailed guide to navigating and using the Crowdin online editor, we recommend all Translatathon participants to read our [How to translate](/contributing/translation-program/how-to-translate/) guide.
+For a detailed guide to navigating and using the Crowdin editor, we recommend that all Translatathon participants read our [How to translate](/contributing/translation-program/how-to-translate/) guide.
 
-To learn more about the conventions and best practices for translating ethereum.org content, you can also check out our [translation style guide](/contributing/translation-program/translators-guide/).
+You can also find some tips and best practices by checking out our [translation style guide](/contributing/translation-program/translators-guide/).
 
 **How points work**
 
@@ -49,7 +49,7 @@ Every Translatathon participant will earn points towards their final score by tr
 
 The scoring is simple: **1 translated word = 1 point**
 
-Please note that in order to receive your final points allocation, your suggested translations will need to pass the evaluation process, where professional reviewers will check each participant's translations to ensure they meet the minimum quality threshold and no machine or AI translations were used in the process.
+In order to receive your final points allocation, your suggested translations will need to pass the evaluation process, where professional reviewers will check each participant's translations to ensure they meet the minimum quality threshold and no machine or AI translations were used in the process.
 
 ### Ecosystem content
 
@@ -67,11 +67,7 @@ Ethereum.org
 Ethereum.org developer tutorials
 - https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97
 
-Remix
-- https://crowdin.com/project/remix-translation
-- https://crowdin.com/project/remix-ui
-- https://crowdin.com/project/remix-learneth
-- https://crowdin.com/project/361d7e8c3b07220fa22e9d5a901b0021
+More eligible projects will be added soon.
 
 ### Evaluation process
 
@@ -79,10 +75,10 @@ All translations will be subject to QA and feedback, where professional linguist
 
 We will also be running **anti-machine translation measures** using some tools that automatically detect machine or AI translations.
 
-While translation quality will not play a critical role in the scoring, any **participants found using machine or AI translations** or suggesting low-quality and inaccurate translations **will be disqualified** and not eligible for prizes!
+While translation quality will not play a critical role in the scoring, any **participants found using machine or AI translations** or suggesting low-quality and inaccurate translations will not be eligible for prizes!
 
 The evaluation period will take place between throughout September and the results will be announced on the ethereum.org community call on September 25th.
 
-All translations will also be subject to a thorough review before being added to the website.
+All translations will also be fully reviewed before being added to the website.
 
 <ApplyNow />
