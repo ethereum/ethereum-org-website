@@ -466,5 +466,11 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "region-crimea": "Crimea",
+  "region-navassa-island-usa": "Navassa Island (USA)",
+  "region-wake-island-usa": "Wake Island (USA)",
+  "region-bonaire-netherlands": "Bonaire (Netherlands)",
+  "region-saba-netherlands": "Saba (Netherlands)",
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)"
 }
