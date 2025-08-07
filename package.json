@@ -30,6 +30,7 @@
     "test:e2e:report": "playwright show-report tests/e2e/__report__"
   },
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.859.0",
     "@crowdin/crowdin-api-client": "^1.25.0",
     "@docsearch/react": "^3.5.2",
     "@hookform/resolvers": "^3.8.0",
