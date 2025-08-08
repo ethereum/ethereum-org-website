@@ -148,3 +148,14 @@ module.exports = (phase, { defaultConfig }) => {
 
   return withBundleAnalyzer(withNextIntl(nextConfig))
 }
+
+const { withSentryConfig } = require("@sentry/nextjs")
+
+module.exports = withSentryConfig(module.exports, {
+  org: "none-aou",
+  project: "ethorg",
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  disableLogger: true,
+  automaticVercelMonitors: true,
+})
