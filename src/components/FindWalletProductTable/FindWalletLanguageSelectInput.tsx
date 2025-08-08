@@ -77,7 +77,7 @@ const FindWalletLanguageSelectInput = ({
         </SelectTrigger>
         <SelectContent>
           <div
-            className="sticky -top-1 z-10 bg-background p-2"
+            className="sticky -top-2 z-10 bg-background p-2"
             onKeyDown={(e) => e.stopPropagation()}
             onClick={(e) => e.stopPropagation()}
           >
