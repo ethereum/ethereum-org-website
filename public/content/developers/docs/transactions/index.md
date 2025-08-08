@@ -219,6 +219,8 @@ Based on the `TransactionType` value, a transaction can be classified as:
 
 4. **Type 3 (Blob) Transactions** were introduced in [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) as part of Ethereum's [Dencun Upgrade](/history/#dencun). These transactions are designed to handle "blob" data (Binary Large Objects) more efficiently, particularly benefiting Layer 2 rollups by providing a way to post data to the Ethereum network at a lower cost. Blob transactions include additional fields such as `blobVersionedHashes`, `maxFeePerBlobGas`, and `blobGasPrice`. They start with the byte `0x03`, and their TransactionType value is `0x3`. Blob transactions represent a significant improvement in Ethereum's data availability and scaling capabilities.
 
+5. **Type 4 Transactions** were introduced in [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) as part of Ethereum’s [Pectra Upgrade](/history/#pectra). These transactions are designed to be forward-compatible with account abstraction. They allow EOAs to temporarily behave like smart contract accounts without compromising their original functionality. They include an `authorization_list` parameter, which specifies the smart contract to which the EOA delegates its authority. After the transaction, the EOA’s code field will have the address of the delegated smart contract.
+
 ## Further reading {#further-reading}
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
