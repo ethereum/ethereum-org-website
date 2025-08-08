@@ -6,21 +6,25 @@
       "description": "Aave is a decentralised non-custodial liquidity protocol where users can participate as suppliers or borrowers. Suppliers provide liquidity to the market while earning interest, and borrowers can access liquidity by providing collateral that exceeds the borrowed amount.",
       "image": "https://i.imgur.com/iaxZ9N8.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing" ],
+      "subCategory": [
+        "Lending and borrowing"
+      ],
       "networks": [
+        "Base",
+        "Scroll",
         "Ethereum Mainnet",
         "Arbitrum One",
-        "Base",
         "OP Mainnet",
-        "Scroll",
-        "ZKSync Era"
+        "zkSync Mainnet"
       ],
       "screenshots": [
         "https://i.imgur.com/gfy4ae2.png",
         "https://i.imgur.com/RRyZ9HN.png"
       ],
       "bannerImage": "https://i.imgur.com/lCDltCK.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/aave",
       "github": "https://github.com/aave",
       "discord": "https://discord.com/invite/aave",
@@ -28,14 +32,16 @@
       "sortingWeight": 1,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Avara",
       "parentCompanyURL": "https://avara.xyz",
       "openSource": true,
       "contractAddress": "https://aave.com/docs/resources/addresses",
       "dateOfLaunch": "9/18/2018",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Sky/Maker - USDS",
@@ -43,26 +49,39 @@
       "description": "Sky.money is a non-custodial gateway to the decentralized Sky Protocol, which centers around the USDS stablecoin.",
       "image": "https://i.imgur.com/qwvHjfZ.png",
       "category": "DeFi",
-      "subCategory": [ "Stablecoin issuance", "RWA", "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet" ],
+      "subCategory": [
+        "Stablecoin issuance",
+        "RWA",
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/YrlOLfQ.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/SkyEcosystem",
       "github": "https://github.com/sky-ecosystem",
       "discord": "https://discord.com/invite/skyecosystem",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Sky Ecosystem",
       "parentCompanyURL": "https://sky.money/",
       "openSource": true,
       "contractAddress": "https://developers.sky.money/quick-start/deployments-tracker/",
       "dateOfLaunch": "9/18/2024",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Ethena - USDE",
@@ -70,16 +89,25 @@
       "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money, USDe, alongside a globally accessible dollar savings asset, sUSDe.",
       "image": "https://i.imgur.com/4Y0s8zC.png",
       "category": "DeFi",
-      "subCategory": [ "RWA", "Stablecoin issuance", "Yield" ],
+      "subCategory": [
+        "RWA",
+        "Stablecoin issuance",
+        "Yield"
+      ],
       "networks": [
-        "Ethereum Mainnet", "Arbitrum One",
-        "Base",     "OP Mainnet",
-        "Scroll",   "Linea",
-        "Blast"
+        "Base",
+        "Linea",
+        "Blast",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/jE4oO4N.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/ethena_labs",
       "github": "https://github.com/ethena-labs",
       "discord": "https://discord.com/invite/ethena",
@@ -87,14 +115,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Ethena Labs",
       "parentCompanyURL": "https://ethena.fi/",
       "openSource": true,
       "contractAddress": "https://docs.ethena.fi/api-documentation/overview",
       "dateOfLaunch": "2/19/2024",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Uniswap",
@@ -102,25 +132,31 @@
       "description": "Uniswap is an automated liquidity protocol powered by a constant product formula and implemented in a system of non-upgradeable smart contracts on the Ethereum blockchain. It obviates the need for trusted intermediaries, prioritizing decentralization, censorship resistance, and security.",
       "image": "https://i.imgur.com/6NqxUnZ.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
+      "subCategory": [
+        "DEX"
+      ],
       "networks": [
+        "Base",
+        "Blast",
         "Ethereum Mainnet",
         "Arbitrum One",
-        "Base",
         "OP Mainnet",
-        "Blast",
-        "ZKSync Era"
+        "zkSync Mainnet"
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/rah0enO.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/Uniswap/",
       "github": "https://github.com/uniswap",
       "discord": "https://discord.com/invite/uniswap",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": false,
+      "discover": true,
+      "highlight": true,
       "languages": [
         "English",
         "Chinese",
@@ -136,7 +172,7 @@
       "contractAddress": "https://docs.uniswap.org/contracts/v4/deployments",
       "dateOfLaunch": "11/2/2018",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Pendle",
@@ -144,11 +180,20 @@
       "description": "Pendle is a DeFi protocol focused on yield trading, allowing users to both fix or leverage their yield.",
       "image": "https://i.imgur.com/WyUeZqC.png",
       "category": "DeFi",
-      "subCategory": [ "RWA" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet" ],
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/Ki7C0XF.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/pendle_fi/",
       "github": "https://github.com/pendle-finance",
       "discord": "https://discord.com/invite/EAujvncY2R",
@@ -156,14 +201,17 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English", "Chinese" ],
+      "languages": [
+        "English",
+        "Chinese"
+      ],
       "parentCompany": "Pendle Finance",
       "parentCompanyURL": "https://www.pendle.finance/",
       "openSource": true,
       "contractAddress": "https://github.com/pendle-finance/pendle-core-v2-public/blob/main/deployments/1-core.json",
       "dateOfLaunch": "6/17/2021",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Spark",
@@ -171,11 +219,21 @@
       "description": "Spark Fi is a non-custodial DeFi protocol that allows users to lend and borrow digital assets through SparkLend, while earning passive income via the USDS stablecoin and its associated Sky Savings Rate.",
       "image": "https://i.imgur.com/XsBN52D.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing", "RWA" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet" ],
+      "subCategory": [
+        "Lending and borrowing",
+        "RWA"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/54aFOoV.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/sparkdotfi",
       "github": "https://github.com/sparkdotfi",
       "discord": "https://discord.com/invite/sparkdotfi",
@@ -183,14 +241,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Spark Foundation",
       "parentCompanyURL": "https://spark.fi/",
       "openSource": true,
       "contractAddress": "https://github.com/sparkdotfi/spark-address-registry/tree/master/src",
       "dateOfLaunch": "5/9/2023",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Morpho",
@@ -198,11 +258,18 @@
       "description": "Morpho is an open, efficient, and resilient platform that allows anyone to earn yield and borrow assets. At the same time, developers or businesses can create markets, curate vaults, and build a range of applications on its flexible, permissionless infrastructure.",
       "image": "https://i.imgur.com/IPLyiMT.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet", "Base" ],
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/VrzR6Pp.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/MorphoLabs/",
       "github": "https://github.com/morpho-org",
       "discord": "https://discord.com/invite/BWXbJMHMdz/",
@@ -210,14 +277,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Morpho Labs",
       "parentCompanyURL": "https://morpho.org/",
       "openSource": true,
       "contractAddress": "https://docs.morpho.org/overview/resources/addresses#addresses",
       "dateOfLaunch": "12/20/2022",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Compound",
@@ -225,26 +294,38 @@
       "description": "Compound is an EVM compatible protocol that enables supplying of crypto assets as collateral in order to borrow the base asset. Accounts can also earn interest by supplying the base asset to the protocol.",
       "image": "https://i.imgur.com/yFoeO1U.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet", "Scroll" ],
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/oBflT3o.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/compoundfinance/",
       "github": "https://github.com/compound-finance",
       "discord": "https://discord.com/invite/rps4rfjeGz",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Compound Labs Inc.",
       "parentCompanyURL": "https://compound.finance/",
       "openSource": true,
       "contractAddress": "https://docs.compound.finance/",
       "dateOfLaunch": "9/27/2018",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Curve",
@@ -252,26 +333,36 @@
       "description": "Curve.fi is a non-custodial decentralized exchange that revolutionized stablecoin trading. It began by offering superior exchange rates for stablecoin swaps (like DAI to USDC) through liquidity pools, where users earn yield by depositing their assets.",
       "image": "https://i.imgur.com/NmXvivo.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base" ],
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/8q4O5Hd.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/CurveFinance/",
       "github": "https://github.com/curvefi",
       "discord": "https://discord.com/invite/9uEHakc",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Curve DAO",
       "parentCompanyURL": "https://www.curve.finance/dao/",
       "openSource": true,
       "contractAddress": "https://docs.curve.finance/deployments/amm/",
       "dateOfLaunch": "2/20/2020",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Balancer",
@@ -279,11 +370,20 @@
       "description": "Balancer is a decentralized automated market maker (AMM) protocol built on Ethereum with a clear focus on fungible and yield-bearing liquidity. Balancer's success is intrinsically linked to the success of protocols and products built on the platform.",
       "image": "https://i.imgur.com/9yZ7IJ8.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet" ],
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/u2l56hQ.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/Balancer",
       "github": "https://github.com/balancer",
       "discord": "https://discord.com/invite/fEPBpe6F",
@@ -291,14 +391,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Balancer Labs",
       "parentCompanyURL": "https://balancer.fi/",
       "openSource": true,
       "contractAddress": "https://docs.balancer.fi/developer-reference/contracts/deployment-addresses/mainnet.html",
       "dateOfLaunch": "3/31/2020",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Usual ",
@@ -306,11 +408,21 @@
       "description": "Usual is a decentralized protocol, embracing the shape of a decentralized banking system. It issues a fiat-backed stablecoin, collateralized by Real-World Assets (RWAs), combining the security of real assets with the composability and liquidity of DeFi.",
       "image": "https://i.imgur.com/MPWo9qE.png",
       "category": "DeFi",
-      "subCategory": [ "RWA", "Stablecoin issuance", "Yield" ],
-      "networks": [ "Ethereum Mainnet", "Base", "Arbitrum One" ],
+      "subCategory": [
+        "RWA",
+        "Stablecoin issuance",
+        "Yield"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/MPWo9qE.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/usualmoney",
       "github": "https://github.com/usual-dao",
       "discord": "https://discord.usual.money/",
@@ -318,14 +430,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Usual Protocol",
       "parentCompanyURL": "https://usual.money",
       "openSource": true,
       "contractAddress": "https://tech.usual.money/smart-contracts/contract-deployments",
       "dateOfLaunch": "5/23/2024",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Fluid",
@@ -333,11 +447,20 @@
       "description": "Fluid is a DeFi protocol combining a liquidity layer, automated limits, lending and vault protocols, robust oracle system, and DEX protocol,",
       "image": "https://i.imgur.com/5Oh1Lek.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing", "DEX" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base" ],
+      "subCategory": [
+        "Lending and borrowing",
+        "DEX"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/G2JQeje.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/0xfluid",
       "github": "https://github.com/Instadapp",
       "discord": "https://discord.com/invite/C76CeZc",
@@ -345,14 +468,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Instadapp",
       "parentCompanyURL": "https://instadapp.io/",
       "openSource": true,
       "contractAddress": "https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md",
       "dateOfLaunch": "10/29/2024",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Frax",
@@ -360,11 +485,19 @@
       "description": "Frax currently issues 3 stablecoins: FRAX, FPI, and frxETH, along with numerous other non-stablecoin tokens. There are also multiple contract groups or \"subprotocols\" within it that integrate these tokens to provide utility and stability, including Fraxtal, a modular L2 chain.",
       "image": "https://i.imgur.com/2lwTQ6d.png",
       "category": "DeFi",
-      "subCategory": [ "RWA", "Stablecoin issuance", "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "RWA",
+        "Stablecoin issuance",
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/Q2AXkzE.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/fraxfinance",
       "github": "https://github.com/FraxFinance",
       "discord": "https://discord.gg/fraxfinance",
@@ -372,14 +505,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Frax Finance",
       "parentCompanyURL": "https://frax.finance",
       "openSource": true,
       "contractAddress": "https://docs.frax.com/protocol/assets/frxusd/addresses",
       "dateOfLaunch": "12/20/2020",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Aerodrome",
@@ -387,11 +522,17 @@
       "description": "Aerodrome is a decentralized exchange where you can execute low-fee swaps, deposit tokens to earn rewards, and actively participate in the onchain economy.",
       "image": "https://i.imgur.com/ESTKcyO.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/fJWk5bn.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/AerodromeFi",
       "github": "https://github.com/aerodrome-finance",
       "discord": "https://discord.gg/aerodrome",
@@ -399,14 +540,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Aerodrome Finance",
       "parentCompanyURL": "https://aerodrome.finance",
       "openSource": true,
       "contractAddress": "https://aerodrome.finance/security",
       "dateOfLaunch": "8/28/2023",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Moonwell",
@@ -414,11 +557,19 @@
       "description": "Put your digital assets to work. Lend or borrow to handle whatever life throws your way. Pay it back on your own schedule, with no monthly payments or additional fees.",
       "image": "https://i.imgur.com/cIgVDSd.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing" ],
-      "networks": [ "Base", "OP Mainnet" ],
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/WeCuzJq.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/MoonwellDeFi",
       "github": "https://github.com/moonwell-fi/",
       "discord": "https://discord.com/invite/moonwellfi",
@@ -426,14 +577,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Moonwell",
       "parentCompanyURL": "https://moonwell.fi",
       "openSource": true,
       "contractAddress": "https://docs.moonwell.fi/moonwell/protocol-information/contracts",
       "dateOfLaunch": "8/9/2023",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Franklin Templeton - BENJI",
@@ -441,11 +594,19 @@
       "description": "Benji is Franklin Templeton's proprietary blockchain-integrated recordkeeping system that enables the tokenization and servicing of mutual funds on public blockchain infrastructure.",
       "image": "https://i.imgur.com/e7QgHwP.png",
       "category": "DeFi",
-      "subCategory": [ "RWA" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base" ],
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/8FU1YZ3.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "",
       "github": "",
       "discord": "",
@@ -453,14 +614,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Franklin Templeton",
       "parentCompanyURL": "https://franklintempleton.com",
       "openSource": false,
       "contractAddress": "https://digitalassets.franklintempleton.com/benji/benji-contracts/",
       "dateOfLaunch": "11/14/2024",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Synthetix",
@@ -468,26 +631,35 @@
       "description": "Synthetix provides liquidity for permissionless derivatives like perpetual futures, options, parimutuel markets, and more across EVM chains.",
       "image": "https://i.imgur.com/v4Xkjp7.png",
       "category": "DeFi",
-      "subCategory": [ "Prediction" ],
-      "networks": [ "Ethereum Mainnet", "OP Mainnet" ],
+      "subCategory": [
+        "Prediction"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/eOcFBl5.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/synthetix_io",
       "github": "https://github.com/synthetixio",
       "discord": "https://discord.gg/synthetix",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Synthetix",
       "parentCompanyURL": "https://synthetix.io",
       "openSource": true,
       "contractAddress": "https://github.com/Synthetixio/synthetix-deployments",
       "dateOfLaunch": "6/26/2018",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "ZeroLend",
@@ -495,11 +667,20 @@
       "description": "ZeroLend is a user-friendly and frictionless lending experience to onboard the masses to Defi. Built on L2s.",
       "image": "https://i.imgur.com/WKj2WDX.png",
       "category": "DeFi",
-      "subCategory": [ "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet", "ZKSync Era", "Linea", "Blast" ],
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Linea",
+        "Blast",
+        "Ethereum Mainnet",
+        "zkSync Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/MjlZo57.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/zerolendxyz",
       "github": "https://github.com/zerolend",
       "discord": "https://discord.gg/zerolend",
@@ -507,14 +688,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "ZeroLend",
       "parentCompanyURL": "https://zerolend.xyz",
       "openSource": true,
       "contractAddress": "https://docs.zerolend.xyz/security/deployed-addresses",
       "dateOfLaunch": "1/1/2023",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "SyncSwap",
@@ -522,11 +705,20 @@
       "description": "Powered by zero-knowledge technology, SyncSwap brings more people easy-to-use and low-cost DeFi with complete Ethereum security.",
       "image": "https://i.imgur.com/vpk2LXa.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
-      "networks": [ "Scroll", "Linea", "Taiko Alethia", "ZKSync Era" ],
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Scroll",
+        "Linea",
+        "zkSync Mainnet",
+        "Taiko Alethia"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/CEPC1m9.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/syncswap",
       "github": "https://github.com/syncswap",
       "discord": "https://discord.gg/syncswap",
@@ -534,14 +726,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "SyncSwap",
       "parentCompanyURL": "https://syncswap.xyz",
       "openSource": true,
       "contractAddress": "https://docs.syncswap.xyz/syncswap/smart-contracts/smart-contracts",
       "dateOfLaunch": "3/4/2023",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Ekubo",
@@ -549,11 +743,18 @@
       "description": "Ekubo is an automated market maker, with several unique features including concentrated liquidity and a extensible and gas efficient architecture.",
       "image": "https://i.imgur.com/xFOVA9S.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
-      "networks": [ "Ethereum Mainnet", "Starknet" ],
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Starknet",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/VCZaLrd.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/EkuboProtocol",
       "github": "https://github.com/EkuboProtocol",
       "discord": "https://discord.com/invite/RFbSXxtqUG",
@@ -561,14 +762,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Ekubo",
       "parentCompanyURL": "https://ekubo.org",
       "openSource": true,
       "contractAddress": "https://docs.ekubo.org/integration-guides/reference/contract-addresses",
       "dateOfLaunch": "8/26/2023",
       "lastUpdated": "7/7/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Maple",
@@ -576,11 +779,18 @@
       "description": "Maple delivers full-spectrum yield strategies and financing across USDC, USDT, BTC, and more – for institutions and onchain participants around the world.",
       "image": "https://i.imgur.com/39h1fde.png",
       "category": "DeFi",
-      "subCategory": [ "RWA", "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "RWA",
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/tpdQ0Hx.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/maplefinance",
       "github": "https://github.com/maple-labs/address-registry/blob/main/MapleAddressRegistryETH.md",
       "discord": "",
@@ -588,14 +798,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Maple Finance",
       "parentCompanyURL": "https://maple.finance",
       "openSource": true,
       "contractAddress": "https://github.com/maple-labs/address-registry/blob/main/MapleAddressRegistryETH.md",
       "dateOfLaunch": "5/12/2021",
       "lastUpdated": "7/11/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Centrifuge",
@@ -603,11 +815,19 @@
       "description": "Centrifuge is the platform for tokenized real-world assets, providing the infrastructure and ecosystem to tokenize, manage, and invest into RWAs.",
       "image": "https://i.imgur.com/JSO0lIV.png",
       "category": "DeFi",
-      "subCategory": [ "RWA" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base" ],
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/blvCZ8y.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/centrifuge",
       "github": "https://github.com/centrifuge/",
       "discord": "https://discord.com/invite/yEzyUq5gxF",
@@ -615,14 +835,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Centrifuge",
       "parentCompanyURL": "https:.//centrifuge.io",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "5/22/2023",
       "lastUpdated": "7/11/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Goldfinch",
@@ -630,26 +852,34 @@
       "description": "Goldfinch is a decentralized credit protocol that enables crypto borrowing without crypto collateral. It connects investors with real-world businesses.",
       "image": "https://i.imgur.com/iPhuqPh.png",
       "category": "DeFi",
-      "subCategory": [ "RWA" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/K1R5KEC.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/goldfinch_fi",
       "github": "https://github.com/goldfinch-eng",
       "discord": "https://discord.com/invite/HVeaca3fN8",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Goldfinch",
       "parentCompanyURL": "https://goldfinch.finance",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "1/31/2021",
       "lastUpdated": "7/11/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Superstate",
@@ -657,26 +887,34 @@
       "description": "Superstate connects financial assets with crypto capital markets through on-chain public listings and tokenized securities.",
       "image": "https://i.imgur.com/xDIoI7M.png",
       "category": "DeFi",
-      "subCategory": [ "RWA" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/q3KFe1l.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/superstatefunds",
       "github": "https://github.com/superstateinc",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Superstate",
       "parentCompanyURL": "https://superstate.co",
       "openSource": true,
       "contractAddress": "https://docs.superstate.com/introduction-to-superstate/smart-contracts",
       "dateOfLaunch": "1/3/2024",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Ondo",
@@ -684,11 +922,18 @@
       "description": "Ondo designs institutional-grade platforms, assets, and infrastructure to bring financial markets onchain.",
       "image": "https://i.imgur.com/lI0Kd4R.png",
       "category": "DeFi",
-      "subCategory": [ "RWA" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One" ],
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Arbitrum One",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/6wE3z1t.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/OndoFinance",
       "github": "https://github.com/ondoprotocol",
       "discord": "",
@@ -696,14 +941,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Ondo",
       "parentCompanyURL": "https://ondo.finance",
       "openSource": true,
       "contractAddress": "https://docs.ondo.finance/addresses",
       "dateOfLaunch": "7/27/2021",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "PayPal - PYUSD",
@@ -711,15 +958,22 @@
       "description": "PayPal USD (PYUSD) is a stablecoin backed by secure and highly liquid assets. Buy, sell, hold, and transfer it in the PayPal app or website.",
       "image": "https://i.imgur.com/0MC9QNU.png",
       "category": "DeFi",
-      "subCategory": [ "RWA", "Stablecoin issuance" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "RWA",
+        "Stablecoin issuance"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [
         "https://i.imgur.com/pDessgi.jpeg",
         "https://i.imgur.com/rHoNrFW.jpeg",
         "https://i.imgur.com/bRa61P0.jpeg"
       ],
       "bannerImage": "https://i.imgur.com/N98oDCJ.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "",
       "github": "https://github.com/paxosglobal/pyusd-contract",
       "discord": "",
@@ -727,14 +981,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Paypal",
       "parentCompanyURL": "https://paypal.com",
       "openSource": false,
       "contractAddress": "https://etherscan.io/token/0x6c3ea9036406852006290770bedfcaba0e23a0e8",
       "dateOfLaunch": "8/7/2023",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Etherisc",
@@ -742,11 +998,17 @@
       "description": "Etherisc provides a complete suite of solutions to build, manage, and inspect decentralized insurance products.",
       "image": "https://i.imgur.com/ZVOa4fY.png",
       "category": "DeFi",
-      "subCategory": [ "Insurance" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Insurance"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/EBgQucz.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/etherisc?lang=en",
       "github": "https://github.com/etherisc",
       "discord": "https://discord.gg/cVsgakVG4R",
@@ -754,14 +1016,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Etherisc",
       "parentCompanyURL": "https://etherisc.com",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "7/28/2016",
       "lastUpdated": "7/28/2016",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Polymarket",
@@ -769,26 +1033,76 @@
       "description": "Polymarket is the world’s largest prediction market, allowing you to stay informed and profit from your knowledge by betting on future events across various topics.",
       "image": "https://i.imgur.com/2YlJ2Jq.png",
       "category": "DeFi",
-      "subCategory": [ "Prediction" ],
+      "subCategory": [
+        "Prediction"
+      ],
       "networks": [],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/pXUEFwa.png",
-      "platforms": [ "Browser", "Android", "iOS" ],
+      "platforms": [
+        "Browser",
+        "Android",
+        "iOS"
+      ],
       "twitter": "https://twitter.com/Polymarket",
       "github": "",
       "discord": "https://discord.gg/Polymarket",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": false,
-      "languages": [ "English" ],
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Adventure One QSS Inc",
       "parentCompanyURL": "a1qss.com",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "6/16/2020",
       "lastUpdated": "7/11/2025",
-      "ready": true
+      "ready": "true"
+    },
+    {
+      "name": "1inch",
+      "url": "https://1inch.io/",
+      "description": "1inch is an exchange aggregator that scans decentralized exchanges to find the lowest cryptocurrency prices for traders.",
+      "image": "https://i.imgur.com/8NYV5YL.png",
+      "category": "DeFi",
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Base",
+        "Linea",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/v9VqXmC.png",
+      "platforms": [
+        "Browser",
+        "Android",
+        "iOS"
+      ],
+      "twitter": "https://twitter.com/intent/follow?screen_name=1inch",
+      "github": "https://github.com/1inch",
+      "discord": "https://discord.com/invite/1inch",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "1inch",
+      "parentCompanyURL": "https://1inch.io",
+      "openSource": true,
+      "contractAddress": "https://portal.1inch.dev/documentation/contracts/aggregation-protocol/aggregation-introduction",
+      "dateOfLaunch": "5/9/2019",
+      "lastUpdated": "7/15/2025",
+      "ready": "true"
     },
     {
       "name": "Liquity",
@@ -796,11 +1110,20 @@
       "description": "Liquity v2 is a decentralized borrowing protocol that lets users deposit ETH or LSTs as collateral, and mint the stablecoin BOLD.",
       "image": "https://i.imgur.com/mG928HR.png",
       "category": "DeFi",
-      "subCategory": [ "RWA", "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "OP Mainnet" ],
+      "subCategory": [
+        "RWA",
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/4EWjy7M.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/LiquityProtocol",
       "github": "https://github.com/liquity/bold",
       "discord": "https://discord.com/invite/HFKpCdgQm6",
@@ -808,14 +1131,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Liquity",
       "parentCompanyURL": "https://liquity.org",
       "openSource": true,
       "contractAddress": "https://discord.com/invite/HFKpCdgQm6",
       "dateOfLaunch": "4/5/2021",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Cowswap",
@@ -823,26 +1148,36 @@
       "description": "CoW Swap finds the lowest prices from all decentralized exchanges and DEX aggregators & saves you more with p2p trading and protection from MEV.",
       "image": "https://i.imgur.com/9wgR8rv.png",
       "category": "DeFi",
-      "subCategory": [ "DEX" ],
-      "networks": [ "Ethereum Mainnet", "Base", "Arbitrum One" ],
+      "subCategory": [
+        "DEX"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/s6mJj9Z.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/CoWSwap",
       "github": "https://github.com/cowprotocol",
       "discord": "https://discord.com/invite/cowprotocol",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": false,
-      "languages": [ "English" ],
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "CoW DAO",
       "parentCompanyURL": "https://cowswap.exchange",
       "openSource": true,
       "contractAddress": "https://docs.cow.fi/cow-protocol/reference/contracts/core",
       "dateOfLaunch": "4/28/2021",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "PoolTogether",
@@ -850,11 +1185,20 @@
       "description": "PoolTogether is a prize savings game, where users pool yield from their tokens for a chance to win prizes. The protocol is a gamification layer that allows users to have a chance to win big while holding their favourite token.",
       "image": "https://i.imgur.com/wtLeg1K.png",
       "category": "DeFi",
-      "subCategory": [ "Yield" ],
-      "networks": [ "OP Mainnet", "Base", "Arbitrum One", "Ethereum Mainnet" ],
+      "subCategory": [
+        "Yield"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/0Kmydrv.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/PoolTogether_",
       "github": "https://github.com/pooltogether",
       "discord": "https://discord.com/invite/hFJh4zJx",
@@ -862,14 +1206,161 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "PoolTogether",
       "parentCompanyURL": "https://pooltogether.com",
       "openSource": true,
       "contractAddress": "https://dev.pooltogether.com/protocol/deployments/",
       "dateOfLaunch": "6/24/2019",
       "lastUpdated": "7/11/2025",
-      "ready": true
+      "ready": "true"
+    },
+    {
+      "name": "Yearn",
+      "url": "https://yearn.finance/",
+      "description": "Yearn Finance is yield aggregator that automatically seeks out profit-generating strategies for crypto users through smart contracts.",
+      "image": "https://i.imgur.com/HR0IJKk.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Yield",
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/aCh22JJ.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/yearnfi",
+      "github": "https://github.com/yearn",
+      "discord": "https://discord.com/invite/yearn",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Yearn",
+      "parentCompanyURL": "https://yearn.finance",
+      "openSource": true,
+      "contractAddress": "https://docs.yearn.fi/developers/addresses/",
+      "dateOfLaunch": "7/17/2020",
+      "lastUpdated": "7/15/2025",
+      "ready": "true"
+    },
+    {
+      "name": "True Markets",
+      "url": "https://app.truemarkets.org/en",
+      "description": "TrueMarkets is a decentralized prediction market platform that enables users to forecast real-world event outcomes by trading binary options, facilitating real-time sentiment analysis and information discovery.",
+      "image": "https://i.imgur.com/DOJRAj0.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Prediction"
+      ],
+      "networks": [
+        "Base"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/kgDbq7g.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/TrueMarketsOrg",
+      "github": "https://github.com/truemarketsorg",
+      "discord": "https://discord.gg/truemarkets",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "truemarkets.org",
+      "parentCompanyURL": "https://truemarkets.org",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "3/11/2025",
+      "lastUpdated": "7/15/2025",
+      "ready": "true"
+    },
+    {
+      "name": "Flaunch",
+      "url": "https://flaunch.gg/",
+      "description": "Flaunch is a permissionless protocol and engine for all forms of tokenization — memes, AI agents, products, art, RWAs and more. The protocol allows builders to create their own Token Managers, providing complete flexibility in the monetization of the assets launched.",
+      "image": "https://i.imgur.com/NgyChQC.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Launchpad"
+      ],
+      "networks": [
+        "Base"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/tw4fnPz.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/flaunchgg",
+      "github": "https://github.com/flayerlabs/flaunchgg-contracts",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Flaunch",
+      "parentCompanyURL": "https://flaunch.gg",
+      "openSource": true,
+      "contractAddress": "https://docs.flaunch.gg/developer-resources/contract-addresses",
+      "dateOfLaunch": "2/1/2025",
+      "lastUpdated": "7/15/2025",
+      "ready": "true"
+    },
+    {
+      "name": "Octant",
+      "url": "https://octant.build/",
+      "description": "Octant aims to become the first self-sustaining global public goods funding ecosystem that balances the common good and individual financial empowerment.",
+      "image": "https://i.imgur.com/f7NBrxB.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Crowdfunding"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/Mxu9vWC.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/DZKTArI.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/octantapp",
+      "github": "https://github.com/golemfoundation/octant",
+      "discord": "https://discord.gg/octant",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Golem Foundation",
+      "parentCompanyURL": "https://golem.foundation/",
+      "openSource": true,
+      "contractAddress": "https://github.com/golemfoundation/octant/tree/develop/contracts-v1",
+      "dateOfLaunch": "8/8/2023",
+      "lastUpdated": "7/14/2025",
+      "ready": "true"
     },
     {
       "name": "SuperFluid",
@@ -877,11 +1368,23 @@
       "description": "Earn every second. Superfluid is the money streaming protocol, powering apps for earning, investing, and trading by the second onchain.",
       "image": "https://i.imgur.com/kGnnASt.png",
       "category": "DeFi",
-      "subCategory": [ "Salary distribution", "Lending and borrowing" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "OP Mainnet", "Scroll" ],
-      "screenshots": [ "https://i.imgur.com/wRkER30.png" ],
+      "subCategory": [
+        "Salary distribution",
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Scroll",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/wRkER30.png"
+      ],
       "bannerImage": "https://i.imgur.com/xiI2Rsk.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/Superfluid_HQ",
       "github": "https://github.com/superfluid-finance",
       "discord": "https://discord.gg/EFAUmTnPd9",
@@ -889,14 +1392,197 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Superfluid Finance LTD",
       "parentCompanyURL": "https://superfluid.org/",
       "openSource": true,
       "contractAddress": "0x4E583d9390082B65Bef884b629DFA426114CED6d",
       "dateOfLaunch": "",
       "lastUpdated": "7/7/2025",
-      "ready": true
+      "ready": "true"
+    },
+    {
+      "name": "Splits.org",
+      "url": "https://splits.org",
+      "description": "Splits.org is a decentralized platform for easy, automated on-chain payment splitting and revenue sharing across multiple blockchains.",
+      "image": "https://i.imgur.com/YNFXeUv.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Payments"
+      ],
+      "networks": [
+        "Base",
+        "Blast",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/J87FFyg.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/0xsplits",
+      "github": "https://github.com/0xSplits",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Splits Protocols, Inc",
+      "parentCompanyURL": "https://splits.org",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "2/15/2022",
+      "lastUpdated": "7/11/2025",
+      "ready": "true"
+    },
+    {
+      "name": "JuiceboxETH",
+      "url": "https://juicebox.money",
+      "description": "Juicebox is a programmable treasury and community funding protocol on Ethereum that lets users launch projects with configurable funding cycles, allocate funds transparently, and issue tokens or NFTs in return—commonly used for DAOs, creative initiatives, and experimental public goods.",
+      "image": "https://i.imgur.com/Iqlc83m.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Crowdfunding"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/SUqxpOa.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/juiceboxETH",
+      "github": "https://github.com/jbx-protocol",
+      "discord": "https://discord.com/invite/wFTh4QnDzk",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Juicebox",
+      "parentCompanyURL": "https://juicebox.money",
+      "openSource": true,
+      "contractAddress": "https://docs.juicebox.money/v4/addresses/",
+      "dateOfLaunch": "7/15/2021",
+      "lastUpdated": "7/11/2025",
+      "ready": "true"
+    },
+    {
+      "name": "zkp2p",
+      "url": "https://zkp2p.xyz",
+      "description": "ZKP2P is a trust-minimized, peer-to-peer fiat-to-crypto on-ramp/off-ramp protocol using zero-knowledge proofs (ZKPs) to verify off-chain payments (e.g., Venmo, Revolut) without exposing sensitive data—enabling secure fiat conversion to crypto.",
+      "image": "https://i.imgur.com/HalUEnr.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Onramp / offramp"
+      ],
+      "networks": [
+        "Base"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/a7zBmeQ.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/zkp2p",
+      "github": "https://github.com/zkp2p",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "P2P Labs Inc.",
+      "parentCompanyURL": "https://zkp2p.xyz",
+      "openSource": true,
+      "contractAddress": "https://docs.zkp2p.xyz/developer/smart-contracts/deployments",
+      "dateOfLaunch": "2/3/2025",
+      "lastUpdated": "7/14/2025",
+      "ready": "true"
+    },
+    {
+      "name": "Teller",
+      "url": "https://teller.org",
+      "description": "Teller is a decentralized, peer-to-peer lending protocol on Ethereum and Polygon that offers time-based, fixed-term loans with no margin liquidations—borrowers pay fixed interest and return the full collateral at maturity.",
+      "image": "https://i.imgur.com/AoqkHhy.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/a6SgPLC.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/useteller",
+      "github": "https://github.com/teller-protocol",
+      "discord": "https://discord.com/invite/teller",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Teller",
+      "parentCompanyURL": "https://teller.org",
+      "openSource": true,
+      "contractAddress": "https://docs.teller.org/v2/resources/deployed-contracts",
+      "dateOfLaunch": "1/4/2021",
+      "lastUpdated": "7/14/2025",
+      "ready": "true"
+    },
+    {
+      "name": "EigenCloud",
+      "url": "https://eigencloud.xyz",
+      "description": "EigenLayer (EigenCloud) is a restaking protocol on Ethereum enabling ETH and LST (Liquid Staking Token) holders to reuse their staked assets to secure additional protocols (called AVSs) and earn extra yield.",
+      "image": "https://i.imgur.com/FvUtF9r.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Infrastructure"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/XhOY5jZ.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/eigenlayer",
+      "github": "https://github.com/Layr-Labs",
+      "discord": "https://discord.gg/eigenlayer",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Eigen Labs",
+      "parentCompanyURL": "https://eigencloud.xyz",
+      "openSource": true,
+      "contractAddress": "https://github.com/Layr-Labs/eigenlayer-contracts",
+      "dateOfLaunch": "6/14/2023",
+      "lastUpdated": "7/15/2025",
+      "ready": "true"
     }
   ],
   "Social": [
@@ -906,26 +1592,39 @@
       "description": "Zora is an onchain social network revealing new opportunities to create, connect, and earn from your life online.",
       "image": "https://i.imgur.com/3ti964X.png",
       "category": "Social",
-      "subCategory": [ "Social network" ],
-      "networks": [ "Ethereum Mainnet", "Base" ],
-      "screenshots": [ "https://i.imgur.com/6OxNqMF.jpeg" ],
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/6OxNqMF.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/GBBRB59.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://twitter.com/zora",
       "github": "https://github.com/ourzora",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": false,
-      "languages": [ "English" ],
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Zora Labs",
       "parentCompanyURL": "https://zora.co",
       "openSource": true,
       "contractAddress": "0xaD031EeE55f595dF6Dbd61e9ef3B908FaD1B3671",
       "dateOfLaunch": "1/1/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Rodeo",
@@ -933,8 +1632,12 @@
       "description": "Rodeo is a creative social network where artists, makers, and creators come together to share and celebrate their work. It combines the familiar features of social platforms with unique ways to support and earn from creativity.",
       "image": "https://i.imgur.com/R3AaFkG.png",
       "category": "Social",
-      "subCategory": [ "Social network" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [
         "https://i.imgur.com/stYV9Rv.png",
         "https://i.imgur.com/zEPpsoL.png",
@@ -942,7 +1645,10 @@
         "https://i.imgur.com/X0wUCxY.png"
       ],
       "bannerImage": "https://i.imgur.com/FDduCHZ.png",
-      "platforms": [ "Browser", "iOS" ],
+      "platforms": [
+        "Browser",
+        "iOS"
+      ],
       "twitter": "https://x.com/rodeodotclub",
       "github": "",
       "discord": "",
@@ -950,14 +1656,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Rodeo Club",
       "parentCompanyURL": "https://rodeo.club",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "12/24/2024",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Towns",
@@ -965,11 +1673,18 @@
       "description": "Towns Protocol is an open source protocol for building decentralized real-time messaging apps. It consists of an EVM-compatible L2 chain, decentralized off-chain stream nodes, and smart contracts that are deployed on Base.",
       "image": "https://i.imgur.com/1XjFcVW.png",
       "category": "Social",
-      "subCategory": [ "Messaging" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "Messaging"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/YNOquL3.png",
-      "platforms": [ "Browser", "iOS" ],
+      "platforms": [
+        "Browser",
+        "iOS"
+      ],
       "twitter": "https://x.com/townsxyz",
       "github": "https://github.com/river-build",
       "discord": "",
@@ -977,14 +1692,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Here Not There Labs",
       "parentCompanyURL": "https://towns.com",
       "openSource": true,
       "contractAddress": "https://docs.towns.com/towns-smart-contracts/contracts",
       "dateOfLaunch": "2/23/2023",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Farcaster",
@@ -992,11 +1709,21 @@
       "description": "Farcaster is a sufficiently decentralized social network built on Ethereum. It is a public social network similar to X and Reddit. Users can create profiles, post \"casts\" and follow others. They own their accounts and relationships with other users and are free to move between different apps.",
       "image": "https://i.imgur.com/Xv6wvV9.png",
       "category": "Social",
-      "subCategory": [ "Social network", "Messaging" ],
-      "networks": [ "Base", "Ethereum Mainnet" ],
+      "subCategory": [
+        "Social network",
+        "Messaging"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/Dpb0JFt.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/farcaster_xyz",
       "github": "https://github.com/farcasterxyz",
       "discord": "",
@@ -1004,14 +1731,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Farcaster Labs",
       "parentCompanyURL": "https://farcaster.xyz",
       "openSource": true,
       "contractAddress": "https://docs.farcaster.xyz/reference/contracts/deployments",
       "dateOfLaunch": "2/23/2023",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Orb",
@@ -1019,11 +1748,18 @@
       "description": "Orb.club is a consumer social mobile app built on Lens Protocol, known for its viral sticker drops, collectible posts, native tipping, and creator-first features.",
       "image": "https://i.imgur.com/Rx9ooN8.png",
       "category": "Social",
-      "subCategory": [ "Social network" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/9mRCEGT.png",
-      "platforms": [ "iOS", "Android" ],
+      "platforms": [
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/orb_club",
       "github": "",
       "discord": "",
@@ -1031,14 +1767,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Orb Technology Inc.",
       "parentCompanyURL": "https://orb.club",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "10/18/2024",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Shibuya Films",
@@ -1046,11 +1784,17 @@
       "description": "Shibuya is a crowdfunding platform for bold, independent filmmakers, that gives creators the tools to raise capital, build community, and bring original stories to life—one episode at a time.",
       "image": "https://i.imgur.com/ERgwg6l.png",
       "category": "Social",
-      "subCategory": [ "Video" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Video"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/WM93RX5.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/shibuyaxyz",
       "github": "",
       "discord": "",
@@ -1058,14 +1802,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Shibuya.xyz",
       "parentCompanyURL": "https://shibuya.xyz",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "2/28/2022",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Hey.xyz",
@@ -1073,11 +1819,17 @@
       "description": "Hey is a decentralized and permissionless social media app built with Lens Protocol.",
       "image": "https://i.imgur.com/gOpRfUD.png",
       "category": "Social",
-      "subCategory": [ "Social network" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/yFCtj1d.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/heydotxyz",
       "github": "https://github.com/heyverse/hey",
       "discord": "https://hey.xyz/discord",
@@ -1085,14 +1837,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Hey.xyz",
       "parentCompanyURL": "https://hey.xyz",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "9/29/2023",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Audius",
@@ -1100,26 +1854,34 @@
       "description": "Audius is an innovative music streaming platform that uses blockchain technology to give artists and listeners more control and freedom. With Audius, artists can easily upload their music and keep full control over their content, while listeners get to enjoy a vast and diverse library of tunes from talented musicians and producers all around the world. ",
       "image": "https://i.imgur.com/8oeEo3l.png",
       "category": "Social",
-      "subCategory": [ "Music" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Music"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/GodKnNZ.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/AudiusProject",
       "github": "https://github.com/AudiusProject",
       "discord": "https://discord.gg/audius",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Open Audio Foundation",
       "parentCompanyURL": "https://audius.org/",
       "openSource": true,
       "contractAddress": "0x44617F9dCEd9787C3B06a05B35B4C779a2AA1334",
       "dateOfLaunch": "10/23/2020",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Paragraph",
@@ -1127,11 +1889,20 @@
       "description": "Paragraph is a Web3 publishing platform that lets writers create token-gated newsletters and mint content as NFTs on Ethereum and Base.",
       "image": "https://i.imgur.com/qn3J0qz.png",
       "category": "Social",
-      "subCategory": [ "Publishing" ],
-      "networks": [ "Ethereum Mainnet", "Base" ],
-      "screenshots": [ "https://i.imgur.com/3VKBKAn.jpeg" ],
+      "subCategory": [
+        "Publishing"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/3VKBKAn.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/s7v5uty.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/paragraph_xyz",
       "github": "",
       "discord": "https://paragraph.xyz/discord",
@@ -1139,14 +1910,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Paragraph",
       "parentCompanyURL": "https://paragraph.com",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "10/1/2021",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Ethereum Follow Protocol",
@@ -1154,11 +1927,21 @@
       "description": "EFP is an on‑chain social graph protocol, enabling Ethereum users to \"follow\" or \"tag\" other addresses via NFT-powered lists. It complements ENS and Sign‑In with Ethereum (SIWE)—forming part of the emerging Ethereum identity stack ",
       "image": "https://i.imgur.com/mk6kT65.png",
       "category": "Social",
-      "subCategory": [ "Social network" ],
-      "networks": [ "Ethereum Mainnet", "Base", "OP Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/M7BSS6c.jpeg" ],
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/M7BSS6c.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/pzYxz9M.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/efp",
       "github": "https://github.com/ethereumfollowprotocol",
       "discord": "https://discord.com/invite/ZUyG3mSXFD",
@@ -1166,14 +1949,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Ethereum Identity Foundation",
       "parentCompanyURL": "https://efp.app",
       "openSource": true,
       "contractAddress": "https://docs.efp.app/production/deployments/",
       "dateOfLaunch": "9/24/2024",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     }
   ],
   "Privacy": [
@@ -1183,11 +1968,22 @@
       "description": "Fluidkey allows users to seamlessly manage, receive, and send onchain assets while protecting their privacy.",
       "image": "https://i.imgur.com/lkEMfCo.png",
       "category": "Privacy",
-      "subCategory": [ "Stealth address", "Payments", "Identity" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet" ],
+      "subCategory": [
+        "Stealth address",
+        "Payments",
+        "Identity"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/CnsW57W.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/fluidkey",
       "github": "https://github.com/fluidkey",
       "discord": "",
@@ -1195,7 +1991,9 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Fluidkey SA",
       "parentCompanyURL": "https://fluidkey.com/",
       "openSource": true,
@@ -1210,11 +2008,18 @@
       "description": "Unlocking a new generation of social apps, where users stay private without losing historical actions, networks, and identities",
       "image": "https://i.imgur.com/53RT7xX.png",
       "category": "Privacy",
-      "subCategory": [ "Identity" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Identity"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/2XGpnYg.png",
-      "platforms": [ "Browser", "Android" ],
+      "platforms": [
+        "Browser",
+        "Android"
+      ],
       "twitter": "https://x.com/Rarimo_protocol",
       "github": "https://github.com/rarimo",
       "discord": "",
@@ -1222,7 +2027,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Rarilabs Ltd.",
       "parentCompanyURL": "https://rarimo.com/",
       "openSource": true,
@@ -1237,19 +2044,28 @@
       "description": "Privacy Pools by 0xbow is a compliant way to anonymously transact on Ethereum. 0xbow blocks illicit actors to ensure pool integrity.",
       "image": "https://i.imgur.com/eTwgSVR.png",
       "category": "Privacy",
-      "subCategory": [ "Pools", "Compliance" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Pools",
+        "Compliance"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/vdqDZB5.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/0xbowio",
       "github": "https://github.com/0xbow-io/privacy-pools-core",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "0xbow",
       "parentCompanyURL": "https://0xbow.io/",
       "openSource": true,
@@ -1264,18 +2080,26 @@
       "description": "Secure, Decentralized, Private protocol",
       "image": "https://i.imgur.com/9S2K8kO.png",
       "category": "Privacy",
-      "subCategory": [ "Pools" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "OP Mainnet" ],
+      "subCategory": [
+        "Pools"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/P8xZqf8.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/TornadoCash",
       "github": "https://github.com/tornadocash",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": false,
+      "discover": true,
+      "highlight": true,
       "languages": [
         "Ukrainian",
         "Turkish",
@@ -1298,11 +2122,17 @@
       "description": "0xbow is a privacy protocol for Ethereum that enables compliant, zero-knowledge-based private transactions through customizable Privacy Pools.",
       "image": "https://i.imgur.com/PAb3BvU.png",
       "category": "Privacy",
-      "subCategory": [ "Pools" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Pools"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/REXrQxe.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/0xbowio",
       "github": "https://github.com/0xbow-io/privacy-pools-core",
       "discord": "",
@@ -1310,7 +2140,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "0xbow",
       "parentCompanyURL": "https://0xbow.io",
       "openSource": true,
@@ -1327,17 +2159,29 @@
       "description": "OpenSea is an online marketplace for non-fungible tokens (NFTs), enabling users to buy, sell, and create NFTs. It functions as a decentralized platform where users can trade various digital assets, including art, music, gaming items, and more, across multiple blockchains. ",
       "image": "https://i.imgur.com/J4vZUTN.png",
       "category": "Collectibles",
-      "subCategory": [ "Market" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "Base", "OP Mainnet", "Blast" ],
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Base",
+        "Blast",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/bxhdZRK.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://twitter.com/opensea",
       "github": "https://github.com/projectopensea",
       "discord": "https://discord.gg/opensea",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": true,
       "languages": [
         "English",
@@ -1355,7 +2199,7 @@
       "contractAddress": "0xA5409eC958C83C3f309868bABaCA7c86DCB077c1 ",
       "dateOfLaunch": "12/20/2017",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Blur",
@@ -1363,26 +2207,37 @@
       "description": "Blur is a professional NFT marketplace offering zero-fee NFT trading and features for intermediate and advanced traders.",
       "image": "https://i.imgur.com/qaTlXOZ.png",
       "category": "Collectibles",
-      "subCategory": [ "Market" ],
-      "networks": [ "Ethereum Mainnet", "Blast" ],
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Blast",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/XYzhlqX.png",
-      "platforms": [ "Browser", "Android", "iOS" ],
+      "platforms": [
+        "Browser",
+        "Android",
+        "iOS"
+      ],
       "twitter": "https://twitter.com/blur_io",
       "github": "",
       "discord": "https://discord.gg/blurdao",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Blur LLC",
       "parentCompanyURL": "https://blur.io",
       "openSource": false,
       "contractAddress": "https://docs.blur.foundation/contracts",
       "dateOfLaunch": "10/19/2022",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Highlight",
@@ -1390,33 +2245,39 @@
       "description": "Highlight is a platform for creating and collecting digital art and culture.",
       "image": "https://i.imgur.com/gvbFr2a.png",
       "category": "Collectibles",
-      "subCategory": [ "Art" ],
+      "subCategory": [
+        "Art"
+      ],
       "networks": [
+        "Base",
+        "Scroll",
         "Ethereum Mainnet",
         "Arbitrum One",
-        "Base",
         "OP Mainnet",
-        "Scroll",
-        "ZKSync Era"
+        "zkSync Mainnet"
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/FxFbMqo.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/Highlight_xyz",
       "github": "https://github.com/highlightxyz",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Highlight, Inc.",
       "parentCompanyURL": "https://highlight.xyz",
       "openSource": true,
       "contractAddress": "https://support.highlight.xyz/knowledge-base/for-developers/nft-contracts/official-addresses",
       "dateOfLaunch": "7/26/2023",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Manifold",
@@ -1424,11 +2285,17 @@
       "description": "Manifold Studio is a series of tools that allow you to build your own web3 creative platform. Studio allows for the creation and distribution of digital assets known as non-fungible tokens(NFTs).",
       "image": "https://i.imgur.com/2WZrZfG.png",
       "category": "Collectibles",
-      "subCategory": [ "Art" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Art"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/D0J823R.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/manifoldxyz",
       "github": "https://github.com/manifoldxyz",
       "discord": "https://discord.gg/XNVfgutbeK",
@@ -1436,14 +2303,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Manifold Technologies Ltd.",
       "parentCompanyURL": "https://manifold.xyz",
       "openSource": true,
       "contractAddress": "https://github.com/manifoldxyz/royalty-registry-solidity",
       "dateOfLaunch": "10/1/2021",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Rarible",
@@ -1451,26 +2320,38 @@
       "description": "Rarible is a multi-chain platform where you can buy, sell, and create non-fungible tokens (NFTs).",
       "image": "https://i.imgur.com/0dhVyXp.png",
       "category": "Collectibles",
-      "subCategory": [ "Market" ],
-      "networks": [ "Ethereum Mainnet", "Arbitrum One", "ZKSync Era", "Base" ],
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "zkSync Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/WhOG44D.png",
-      "platforms": [ "Browser", "iOS" ],
+      "platforms": [
+        "Browser",
+        "iOS"
+      ],
       "twitter": "https://x.com/rarible",
       "github": "https://github.com/rarible",
       "discord": "http://discord.gg/rarible",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Rarible, Inc.",
       "parentCompanyURL": "https://rarible.com",
       "openSource": true,
       "contractAddress": "https://docs.rarible.org/reference/contract-addresses",
       "dateOfLaunch": "8/17/2020",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Pudgy Penguins",
@@ -1478,11 +2359,19 @@
       "description": "Pudgy Penguins is a global IP focused on proliferating the penguin, memetic culture, and good vibes.",
       "image": "https://i.imgur.com/jdf0uFw.png",
       "category": "Collectibles",
-      "subCategory": [ "Art", "IP" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Art",
+        "IP"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/fBRUbxB.png",
-      "platforms": [ "iOS", "Browser" ],
+      "platforms": [
+        "iOS",
+        "Browser"
+      ],
       "twitter": "https://x.com/pudgypenguins",
       "github": "",
       "discord": "https://discord.gg/pudgypenguins",
@@ -1490,14 +2379,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "LSLTTT Holdings, Inc.",
       "parentCompanyURL": "https://pudgypenguins.com",
       "openSource": false,
       "contractAddress": "https://etherscan.io/address/0xBd3531dA5CF5857e7CfAA92426877b022e612cf8",
       "dateOfLaunch": "7/22/2021",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Bored Ape Yacht Club",
@@ -1505,11 +2396,19 @@
       "description": "The Bored Ape Yacht Club is a collection of 10000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain.",
       "image": "https://i.imgur.com/EmOxvhI.png",
       "category": "Collectibles",
-      "subCategory": [ "Art", "IP" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Art",
+        "IP"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/CAAi7lV.png",
-      "platforms": [ "iOS", "Browser" ],
+      "platforms": [
+        "iOS",
+        "Browser"
+      ],
       "twitter": "https://x.com/BoredApeYC",
       "github": "",
       "discord": "https://discord.com/invite/3P5K3dzgdB",
@@ -1517,14 +2416,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Yuga Labs LLC",
       "parentCompanyURL": "https://yuga.com",
       "openSource": false,
       "contractAddress": "https://etherscan.io/address/0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
       "dateOfLaunch": "4/23/2021",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Art Blocks",
@@ -1532,11 +2433,17 @@
       "description": "Art Blocks is a digital platform where generative artists publish unique artworks using creative code. With historical roots in conceptual art, generative art involves the creation of an algorithm using computer code, with randomness introduced into the artist’s algorithm to produce unique works.",
       "image": "https://i.imgur.com/6POOwm3.png",
       "category": "Collectibles",
-      "subCategory": [ "Art" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Art"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/Rs44gsk.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/artblocks_io",
       "github": "https://github.com/ArtBlocks",
       "discord": "https://discord.com/invite/artblocks",
@@ -1544,14 +2451,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Art Blocks, Inc.",
       "parentCompanyURL": "https://artblocks.io",
       "openSource": true,
       "contractAddress": "https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md",
       "dateOfLaunch": "11/27/2020",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Cool Cats",
@@ -1559,11 +2468,18 @@
       "description": "Cool Cats is a collection of 9,999 randomly generated NFT avatars, each featuring a unique Blue Cat with various traits like clothing, hairstyles, and accessories.",
       "image": "https://i.imgur.com/Z20S33T.png",
       "category": "Collectibles",
-      "subCategory": [ "IP", "Art" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "IP",
+        "Art"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/tYwCO41.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/coolcatsnft",
       "github": "",
       "discord": "https://discord.gg/coolcatsnft",
@@ -1571,14 +2487,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Cool Cats",
       "parentCompanyURL": "https://coolcatsnft.com",
       "openSource": false,
       "contractAddress": "https://etherscan.io/address/0x1a92f7381b9f03921564a437210bb9396471050c",
       "dateOfLaunch": "6/9/2021",
       "lastUpdated": "7/4/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Doodles",
@@ -1586,11 +2504,18 @@
       "description": "Doodles is a next-generation entertainment company focused on immersive storytelling through the creation and distribution of live and digital experiences, original content, and lifestyle products.",
       "image": "https://i.imgur.com/xgn185K.png",
       "category": "Collectibles",
-      "subCategory": [ "IP", "Art" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "IP",
+        "Art"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/SEx1boH.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/doodles",
       "github": "",
       "discord": "https://discord.gg/doodles",
@@ -1598,14 +2523,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Doodles, Inc.",
       "parentCompanyURL": "https://doodles.app`",
       "openSource": false,
       "contractAddress": "https://etherscan.io/address/0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
       "dateOfLaunch": "10/16/2021",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Basepaint",
@@ -1613,11 +2540,18 @@
       "description": "BasePaint.xyz is a collaborative, onchain pixel art application where artists create daily, shared canvases that are then minted as NFTs.",
       "image": "https://i.imgur.com/svBfl50.png",
       "category": "Collectibles",
-      "subCategory": [ "IP", "Art" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "IP",
+        "Art"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/dtcQL5j.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/basepaint_xyz",
       "github": "",
       "discord": "",
@@ -1625,14 +2559,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "BasePaint",
       "parentCompanyURL": "https://basepaint.xyz",
       "openSource": false,
       "contractAddress": "https://hackmd.io/@uTlMZA23Qz-cK8e7PqQt0A/rkOAbFIhn",
       "dateOfLaunch": "8/8/2023",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Foundation",
@@ -1640,11 +2576,18 @@
       "description": "Foundation.app is an NFT marketplace that allows artists to tokenize their creations as NFTs and provides a platform for collectors to buy, sell, and trade these digital artworks.",
       "image": "https://i.imgur.com/s5zw9NG.png",
       "category": "Collectibles",
-      "subCategory": [ "Market" ],
-      "networks": [ "Ethereum Mainnet", "Base" ],
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/fyNzBFy.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/foundation",
       "github": "https://github.com/f8n",
       "discord": "",
@@ -1652,14 +2595,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Foundation Labs, Inc.",
       "parentCompanyURL": "https://foundation.app",
       "openSource": true,
       "contractAddress": "https://os.foundation.app/docs/creator-tools/drop",
       "dateOfLaunch": "2/1/2021",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Sandbox",
@@ -1667,11 +2612,20 @@
       "description": "The Sandbox is a community-driven creative platform that empowers artists, storytellers, and game makers to create, publish, own, and monetise a myriad of unique content on a decentralised platform on the blockchain.",
       "image": "https://i.imgur.com/u2UXDq4.png",
       "category": "Collectibles",
-      "subCategory": [ "Gaming", "Market" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Gaming",
+        "Market"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/m9DGm5H.png",
-      "platforms": [ "Browser", "Desktop", "iOS" ],
+      "platforms": [
+        "Browser",
+        "Desktop",
+        "iOS"
+      ],
       "twitter": "https://twitter.com/thesandboxgame",
       "github": "https://discord.gg/thesandboxgame",
       "discord": "https://discord.gg/thesandboxgame",
@@ -1694,7 +2648,7 @@
       "contractAddress": "https://etherscan.io/token/0x3845badade8e6dff049820680d1f14bd3903a5d0",
       "dateOfLaunch": "11/29/2021",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "SuperRare",
@@ -1702,11 +2656,20 @@
       "description": "SuperRare is a platform to issue, collect, and trade rare digital art backed by non-fungible tokens (NFTs) on the Ethereum blockchain. Every piece of art on SuperRare is a single edition - this means each artwork is unique without duplicates.",
       "image": "https://i.imgur.com/HRl4kUv.png",
       "category": "Collectibles",
-      "subCategory": [ "Art", "Market" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Art",
+        "Market"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/n9YsZCt.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://twitter.com/SuperRare",
       "github": "",
       "discord": "",
@@ -1714,14 +2677,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "SuperRare Labs, Inc.",
       "parentCompanyURL": "https://superrare.com",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "4/4/2018",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Decentraland",
@@ -1729,11 +2694,22 @@
       "description": "Decentraland was the world’s first fully decentralized, social virtual world, empowering users to own, create, and control their digital assets and experiences. Launched in 2020, Decentraland features an open, traversable landscape filled with user-generated content that evolves and changes in real-time.",
       "image": "https://i.imgur.com/1cghrNy.png",
       "category": "Collectibles",
-      "subCategory": [ "Gaming", "Art", "Market" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Gaming",
+        "Art",
+        "Market"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/V1mpz2o.png",
-      "platforms": [ "Browser", "iOS", "Android", "Desktop" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android",
+        "Desktop"
+      ],
       "twitter": "https://twitter.com/decentraland",
       "github": "https://github.com/decentraland",
       "discord": "https://dcl.gg/discord",
@@ -1756,7 +2732,7 @@
       "contractAddress": "https://github.com/decentraland/marketplace/tree/master/indexer",
       "dateOfLaunch": "2/20/2020",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Magic Eden",
@@ -1764,11 +2740,19 @@
       "description": "Magic Eden is a non-fungible token marketplace that allows users to buy, sell, mint, and manage NFTs. It's a popular platform for both creators launching new NFT projects and for trading on the secondary market. ",
       "image": "https://i.imgur.com/oSGwPR4.png",
       "category": "Collectibles",
-      "subCategory": [ "Market" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/mtBvmC3.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://twitter.com/MagicEden",
       "github": "https://github.com/magiceden",
       "discord": "https://discord.gg/magiceden",
@@ -1776,14 +2760,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Magic Eden",
       "parentCompanyURL": "https://magiceden.io",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "9/17/2021",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Azuki",
@@ -1791,11 +2777,19 @@
       "description": "Azuki is a brand born at the intersection of art, technology, and internet culture. What started as a web3 project has evolved into a global community of artists and builders shaping original characters, stories, and experiences together. From digital collectibles to fashion and real-world events, Azuki is building a universe for digital natives drawn to what's next.",
       "image": "https://i.imgur.com/fe1Tipo.png",
       "category": "Collectibles",
-      "subCategory": [ "IP", "Art", "Membership" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "IP",
+        "Art",
+        "Membership"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/3Rqf7Dp.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://www.azuki.com/icons/x-twitter-solid-black.svg",
       "github": "",
       "discord": "",
@@ -1803,14 +2797,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Chiru Labs",
       "parentCompanyURL": "https://azuki.com",
       "openSource": false,
       "contractAddress": "https://nfthud.io/collection/azuki",
       "dateOfLaunch": "1/12/2022",
       "lastUpdated": "7/6/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "POAP",
@@ -1818,26 +2814,39 @@
       "description": "POAP are the bookmarks for your life. Mint the most important memories of your life as digital collectibles (NFTs) forever on the blockchain.",
       "image": "https://i.imgur.com/U3ZyEUt.png",
       "category": "Collectibles",
-      "subCategory": [ "Attendance", "Collect", "Membership" ],
-      "networks": [ "Ethereum Mainnet", "Gnosis" ],
+      "subCategory": [
+        "Attendance",
+        "Collect",
+        "Membership"
+      ],
+      "networks": [
+        "Gnosis",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/tGp8SmS.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/poapxyz",
       "github": "https://github.com/poapxyz",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "POAP Inc",
       "parentCompanyURL": "https://poap.xyz",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "1/1/2021",
       "lastUpdated": "7/15/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Courtyard",
@@ -1845,11 +2854,17 @@
       "description": "Courtyard is a platform for minting and trading NFTs backed by real-world collectibles like trading cards, with assets stored in insured vaults and redeemable on-chain.",
       "image": "https://i.imgur.com/a50EywS.png",
       "category": "Collectibles",
-      "subCategory": [ "Market" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/y5nQjIL.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/Courtyard_NFT",
       "github": "",
       "discord": "https://discord.gg/courtyard-io",
@@ -1857,14 +2872,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Courtyard, Inc.",
       "parentCompanyURL": "https://courtyard.io",
       "openSource": false,
       "contractAddress": "https://docs.courtyard.io/courtyard/resources/useful-links#ethereum-mainnet",
       "dateOfLaunch": "5/8/2022",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     }
   ],
   "Gaming": [
@@ -1874,26 +2891,36 @@
       "description": "EVE Frontier is a sandbox shaped by player-driven activity. From player-made factions, to bases, private economies and the stargate network, you create the ultimate living world.",
       "image": "https://i.imgur.com/8VI7Xmb.png",
       "category": "Gaming",
-      "subCategory": [ "MMORPG" ],
-      "networks": [ "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/pylOP7f.png" ],
+      "subCategory": [
+        "MMORPG"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/pylOP7f.png"
+      ],
       "bannerImage": "https://i.imgur.com/YGuDW8X.png",
-      "platforms": [ "Desktop" ],
+      "platforms": [
+        "Desktop"
+      ],
       "twitter": "https://x.com/EVE_Frontier",
       "github": "",
       "discord": "https://discord.com/invite/evefrontier",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": false,
-      "languages": [ "English" ],
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "CCP Games",
       "parentCompanyURL": "https://www.ccpgames.com/",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "6/11/2025",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Pirate Nation",
@@ -1901,11 +2928,20 @@
       "description": "Pirate Nation is a new type of game, filled with high seas adventure, treasure, fun, and unexpected surprises. Players collect and send pirates on adventures where they collect materials for crafting, treasures, and pirate gold! Pirates gain experience and can level up from their many adventures.",
       "image": "https://i.imgur.com/STvJczx.png",
       "category": "Gaming",
-      "subCategory": [ "RPG", "retro gaming" ],
-      "networks": [ "Arbitrum One" ],
-      "screenshots": [ "https://i.imgur.com/OgvQVcV.jpeg" ],
+      "subCategory": [
+        "RPG",
+        "retro gaming"
+      ],
+      "networks": [
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/OgvQVcV.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/H1gUp2B.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/piratenation",
       "github": "",
       "discord": "https://discord.com/invite/piratenation",
@@ -1913,14 +2949,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Pirate Nation",
       "parentCompanyURL": "https://piratenation.game",
       "openSource": false,
       "contractAddress": "https://docs.piratenation.game/important/contracts",
       "dateOfLaunch": "12/2/2022",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Remix",
@@ -1928,26 +2966,39 @@
       "description": "Remix is a platform combining AI and mobile gaming, designed to offer on-chain, AI-powered games.",
       "image": "https://i.imgur.com/KBHOee9.png",
       "category": "Gaming",
-      "subCategory": [ "retro gaming", "Casual", "AI gaming" ],
-      "networks": [ "Base", "world" ],
-      "screenshots": [ "https://i.imgur.com/RHH5ukf.jpeg" ],
+      "subCategory": [
+        "retro gaming",
+        "Casual",
+        "AI gaming"
+      ],
+      "networks": [
+        "Base",
+        "world"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/RHH5ukf.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/ILekHLM.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/RemixGG_",
       "github": "",
       "discord": "https://discord.gg/a3bgdr4RC6",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Remix (formerly Farcade)",
       "parentCompanyURL": "https://remix.gg/",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "4/4/2021",
-      "lastUpdated": 2025,
-      "ready": true
+      "lastUpdated": "2025",
+      "ready": "true"
     },
     {
       "name": "Illuvium",
@@ -1956,25 +3007,34 @@
       "image": "https://i.imgur.com/LBo34WC.png",
       "category": "Gaming",
       "subCategory": [],
-      "networks": [ "Ethereum Mainnet" ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/ONlCXAt.png",
-      "platforms": [ "Windows", "Mac", "Android", "iOS" ],
+      "platforms": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
       "twitter": "https://x.com/illuviumio",
       "github": "https://github.com/illuviumgame",
       "discord": "https://discord.com/invite/illuvium",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "discover": true,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Illuvium",
       "parentCompanyURL": "https://illuvium.io",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "7/25/2024",
       "lastUpdated": "",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Parallel",
@@ -1982,11 +3042,18 @@
       "description": "Parallel is a free-to-play, turn-based strategy game where players build 40-card decks using cards from five factions or universal cards to battle each other.",
       "image": "https://i.imgur.com/OcpP6tZ.png",
       "category": "Gaming",
-      "subCategory": [ "Card & deck building" ],
-      "networks": [ "Ethereum Mainnet", "Base" ],
+      "subCategory": [
+        "Card & deck building"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/zLLypAz.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/ParallelTCG",
       "github": "",
       "discord": "https://discord.com/invite/paralleltcg",
@@ -1994,14 +3061,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Parallel Studios",
       "parentCompanyURL": "https://parallel.life",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "4/22/2024",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     }
   ],
   "DAO": [
@@ -2011,11 +3080,20 @@
       "description": "Snapshot is a voting platform that allows DAOs, DeFi protocols, or NFT communities to vote easily and without gas fees.The tool allows high customization of the voting process to cater to the diverse needs of the users and organizations.",
       "image": "https://i.imgur.com/B2nGDiy.png",
       "category": "DAO",
-      "subCategory": [ "Governance", "Organization", "Offchain voting" ],
-      "networks": [ "Starknet", "Ethereum Mainnet" ],
+      "subCategory": [
+        "Governance",
+        "Organization",
+        "Offchain voting"
+      ],
+      "networks": [
+        "Starknet",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/lyAL0O7.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/SnapshotLabs",
       "github": "https://github.com/snapshot-labs",
       "discord": "https://discord.snapshot.org",
@@ -2023,7 +3101,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Snapshot",
       "parentCompanyURL": "https://snapshot.box",
       "openSource": true,
@@ -2045,10 +3125,19 @@
         "DAO creation",
         "Governor"
       ],
-      "networks": [ "Arbitrum One", "Base", "Blast", "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/LpyPBZv.png" ],
+      "networks": [
+        "Base",
+        "Blast",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/LpyPBZv.png"
+      ],
       "bannerImage": "https://i.imgur.com/9Jo8BK3.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/tallyxyz",
       "github": "https://github.com/withtally/",
       "discord": "",
@@ -2056,7 +3145,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Tally",
       "parentCompanyURL": "https://www.tally.xyz/",
       "openSource": false,
@@ -2071,11 +3162,25 @@
       "description": "Hats turns organizations into a digital object, ready to be programmed. All of the properties of your organization and its individual roles and permissions can now be automated, just like any other software system.",
       "image": "https://i.imgur.com/78IAtVT.png",
       "category": "DAO",
-      "subCategory": [ "Role management", "Permissions", "Organization" ],
-      "networks": [ "Arbitrum One", "Base", "OP Mainnet", "Celo", "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/XKumEus.png" ],
+      "subCategory": [
+        "Role management",
+        "Permissions",
+        "Organization"
+      ],
+      "networks": [
+        "Base",
+        "Celo",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/XKumEus.png"
+      ],
       "bannerImage": "https://i.imgur.com/CPBwsLj.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/hatsprotocol",
       "github": "https://github.com/Hats-Protocol",
       "discord": "",
@@ -2083,7 +3188,9 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Haberdasher Labs",
       "parentCompanyURL": "https://www.hatsprotocol.xyz/open-roles",
       "openSource": true,
@@ -2098,19 +3205,29 @@
       "description": "Aragon builds full-stack DAO technology that enables organizations to easily and securely govern their protocols and assets onchain.",
       "image": "https://i.imgur.com/K7oLCS6.png",
       "category": "DAO",
-      "subCategory": [ "DAO creation", "Governance", "Framework" ],
-      "networks": [ "Ethereum Mainnet" ],
+      "subCategory": [
+        "DAO creation",
+        "Governance",
+        "Framework"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/4Krl2j6.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/aragonproject",
       "github": "https://github.com/aragon",
       "discord": "https://discord.gg/aragonorg",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Aragon Foundation",
       "parentCompanyURL": "https://www.aragonfoundation.org/",
       "openSource": true,
@@ -2125,11 +3242,23 @@
       "description": "DAOhaus allows communities to create a DAO and manage, grow, and distribute a shared treasury.",
       "image": "https://i.imgur.com/E6DLY0N.png",
       "category": "DAO",
-      "subCategory": [ "DAO creation", "Treasury management", "Framework", "Moloch" ],
-      "networks": [ "Arbitrum One", "OP Mainnet", "Base", "Ethereum Mainnet" ],
+      "subCategory": [
+        "DAO creation",
+        "Treasury management",
+        "Framework",
+        "Moloch"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/QkydX2p.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/daohaus",
       "github": "https://github.com/HausDAO",
       "discord": "",
@@ -2137,7 +3266,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "",
       "parentCompanyURL": "",
       "openSource": false,
@@ -2152,17 +3283,23 @@
       "description": "Event Horizon is a public good that helps DAOs improve their voter participation, token participation, and generally improve the governance process of DAOs with the help of agentic governance and Incentivized Delegation Vaults. ",
       "image": "https://i.imgur.com/uAwjyR8.png",
       "category": "DAO",
-      "subCategory": [ "Governance", "Delegation", "Agentic" ],
+      "subCategory": [
+        "Governance",
+        "Delegation",
+        "Agentic"
+      ],
       "networks": [
+        "Scroll",
+        "Ethereum Mainnet",
         "Arbitrum One",
         "OP Mainnet",
-        "Scroll",
-        "ZKSync Era",
-        "Ethereum Mainnet"
+        "zkSync Mainnet"
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/xKdrkcq.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/EventHorizonDAO",
       "github": "",
       "discord": "https://discord.gg/pJwYfRUcjK",
@@ -2170,7 +3307,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Event Horizon",
       "parentCompanyURL": "https://eventhorizon.vote/",
       "openSource": false,
@@ -2185,11 +3324,20 @@
       "description": "Splits is a platform offering financial infrastructure for onchain teams, specializing in managing onchain payments using audited, open-source smart contracts.",
       "image": "https://i.imgur.com/CAiSLc5.png",
       "category": "DAO",
-      "subCategory": [ "Treasury management" ],
-      "networks": [ "OP Mainnet", "Base", "Arbitrum One", "Ethereum Mainnet" ],
+      "subCategory": [
+        "Treasury management"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/yfMGVxo.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/0xsplits",
       "github": "https://github.com/0xSplits",
       "discord": "",
@@ -2197,7 +3345,9 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "",
       "parentCompanyURL": "",
       "openSource": false,
@@ -2212,18 +3362,26 @@
       "description": "Own the Internet. Ethereum Smart Accounts to safeguard your digital assets and build the future of ownership.",
       "image": "https://i.imgur.com/kRMy55h.png",
       "category": "DAO",
-      "subCategory": [ "Treasury management", "Multi-sig", "Smart account" ],
+      "subCategory": [
+        "Treasury management",
+        "Multi-sig",
+        "Smart account"
+      ],
       "networks": [
-        "Arbitrum One",
         "Base",
-        "OP Mainnet",
         "Scroll",
-        "ZKSync Era",
-        "Ethereum Mainnet"
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/skOZTBy.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/safe",
       "github": "https://github.com/safe-global",
       "discord": "",
@@ -2231,7 +3389,9 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Safe Ecosystem Foundation ",
       "parentCompanyURL": "https://safe.global",
       "openSource": true,
@@ -2246,11 +3406,21 @@
       "description": "Coordinape provides tools to discover, recognize and collaborate in onchain networks of trust.",
       "image": "https://i.imgur.com/Rkky5a1.png",
       "category": "DAO",
-      "subCategory": [ "Recognition", "Compensation", "Signalling" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "Recognition",
+        "Compensation",
+        "Signalling"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/bmKyuk1.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/coordinape",
       "github": "https://github.com/coordinape",
       "discord": "https://discord.coordinape.com/",
@@ -2258,7 +3428,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "",
       "parentCompanyURL": "",
       "openSource": false,
@@ -2273,11 +3445,19 @@
       "description": "Endaoment is a public charity that offers Donor-Advised Funds (DAFs) and facilitates donations to non-profits.",
       "image": "https://i.imgur.com/iXSGSbp.png",
       "category": "DAO",
-      "subCategory": [ "Philanthropy" ],
-      "networks": [ "OP Mainnet", "Base", "Ethereum Mainnet" ],
+      "subCategory": [
+        "Philanthropy"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "OP Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/A8Xu5E5.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/endaomentdotorg",
       "github": "",
       "discord": "",
@@ -2285,7 +3465,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Endaoment (501(c)(3) nonprofit)",
       "parentCompanyURL": "https://endaoment.org",
       "openSource": false,
@@ -2300,11 +3482,18 @@
       "description": "ResearchHub is designed to accelerate the pace of scientific research by encouraging academics to interact in a fully open and collaborative manner. ",
       "image": "https://i.imgur.com/bs1ElQd.png",
       "category": "DAO",
-      "subCategory": [ "Governance" ],
-      "networks": [ "Base", "Ethereum Mainnet" ],
+      "subCategory": [
+        "Governance"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/2tqDp6c.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/researchhub",
       "github": "https://github.com/ResearchHub",
       "discord": "",
@@ -2312,7 +3501,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "ResearchHub Technologies, Inc. / ResearchHub Foundation",
       "parentCompanyURL": "https://researchhub.foundation",
       "openSource": false,
@@ -2327,11 +3518,17 @@
       "description": "Prime Intellect democratizes AI development at scale by making it easy to find global compute resources and train state-of-the-art models through distributed training across clusters.",
       "image": "https://i.imgur.com/GlSYmTI.png",
       "category": "DAO",
-      "subCategory": [ "AI" ],
-      "networks": [ "Base" ],
+      "subCategory": [
+        "AI"
+      ],
+      "networks": [
+        "Base"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/5lnpIGl.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/PrimeIntellect",
       "github": "https://github.com/PrimeIntellect-ai",
       "discord": "https://discord.gg/aHXbW7gtzY",
@@ -2339,7 +3536,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Prime Intellect",
       "parentCompanyURL": "https://www.primeintellect.ai",
       "openSource": true,
@@ -2354,11 +3553,22 @@
       "description": "Agora is an advanced on-chain governance platform that empowers protocols and communities (like Uniswap, Optimism, ENS) with scalable, secure, and user-friendly voting systems—eliminating the need for custom code.",
       "image": "https://i.imgur.com/a1KpeEc.png",
       "category": "DAO",
-      "subCategory": [ "Governance" ],
-      "networks": [ "Arbitrum One", "Base", "OP Mainnet", "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/GPmgEFp.png" ],
+      "subCategory": [
+        "Governance"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/GPmgEFp.png"
+      ],
       "bannerImage": "https://i.imgur.com/zQV6jJ3.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/agoragovernance",
       "github": "https://github.com/voteagora",
       "discord": "",
@@ -2366,12 +3576,57 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Agora",
       "parentCompanyURL": "https://agora.xyz",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "5/31/2024",
+      "lastUpdated": "7/14/2025",
+      "ready": "true"
+    },
+    {
+      "name": "Sablier",
+      "url": "https://sablier.finance/",
+      "description": "Sablier is a protocol that facilitates the automated distribution of tokens over time. This \"streaming\" functionality removes the need for manual transactions, saving time and resources.",
+      "image": "https://i.imgur.com/w5i4Q5k.png",
+      "category": "DAO",
+      "subCategory": [
+        "Payments"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Linea",
+        "Blast",
+        "Mode",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/CNIkIB0.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/Sablier",
+      "github": "https://github.com/sablier-labs",
+      "discord": "https://discord.gg/bSwRCwWRsT",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Sablier Labs",
+      "parentCompanyURL": "https://sablier.com",
+      "openSource": true,
+      "contractAddress": "https://github.com/sablier-labs",
+      "dateOfLaunch": "12/13/2019",
       "lastUpdated": "7/14/2025",
       "ready": "true"
     }
@@ -2383,19 +3638,30 @@
       "description": "The Ethereum Name Service or ENS is the decentralized naming protocol that is built on the Ethereum blockchain. It adheres to open-source standards and is based on a set of decentralized smart contracts that translate blockchain addresses into human-readable names.",
       "image": "https://i.imgur.com/Ocl9okb.png",
       "category": "Productivity",
-      "subCategory": [ "DNS", "Identity" ],
-      "networks": [ "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/YZGOPFM.png" ],
+      "subCategory": [
+        "DNS",
+        "Identity"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/YZGOPFM.png"
+      ],
       "bannerImage": "https://i.imgur.com/Oq3MDGp.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/ensdomains",
       "github": "https://github.com/ensdomains",
       "discord": "https://discord.com/invite/faTEB36",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "ENS Labs",
       "parentCompanyURL": "https://www.enslabs.org/",
       "openSource": true,
@@ -2410,11 +3676,22 @@
       "description": "Huddle01 is a decentralized real-time communication platform that offers an alternative to centralized video conferencing systems and aims to reduce latency, improve performance, and cut infrastructure costs, making communication more efficient and scalable.",
       "image": "https://i.imgur.com/GcVR2ag.png",
       "category": "Productivity",
-      "subCategory": [ "Communication" ],
-      "networks": [ "Arbitrum One", "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/9oqfxDM.png" ],
+      "subCategory": [
+        "Communication"
+      ],
+      "networks": [
+        "Arbitrum One",
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/9oqfxDM.png"
+      ],
       "bannerImage": "https://i.imgur.com/fJ2npPi.png",
-      "platforms": [ "Browser", "iOS", "Android" ],
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
       "twitter": "https://x.com/huddle01com",
       "github": "https://github.com/huddle01",
       "discord": "https://discord.com/invite/huddle01",
@@ -2422,7 +3699,9 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Huddle01 Labs Inc.",
       "parentCompanyURL": "https://huddle01.com/",
       "openSource": false,
@@ -2437,19 +3716,30 @@
       "description": "Livepeer is a decentralized network for limitless video computing, enabling AI processing and transcoding jobs to power the future of video.",
       "image": "https://i.imgur.com/rwonhAA.png",
       "category": "Productivity",
-      "subCategory": [ "Storage", "Video" ],
-      "networks": [ "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/mgAUNbe.png" ],
+      "subCategory": [
+        "Storage",
+        "Video"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/mgAUNbe.png"
+      ],
       "bannerImage": "https://i.imgur.com/beqsMqo.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/Livepeer",
       "github": "https://github.com/livepeer",
       "discord": "https://discord.com/invite/livepeer",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "discover": true,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Livepeer Inc.",
       "parentCompanyURL": "https://www.livepeer.org/",
       "openSource": true,
@@ -2464,9 +3754,13 @@
       "description": "ZKPassport SDK enables privacy-preserving identity verification using passports and ID cards. It allows developers to request and verify specific identity attributes without exposing unnecessary personal information.",
       "image": "https://i.imgur.com/sBVlmsl.png",
       "category": "Productivity",
-      "subCategory": [ "Identity" ],
+      "subCategory": [
+        "Identity"
+      ],
       "networks": [],
-      "screenshots": [ "https://i.imgur.com/nj8j1E2.jpeg" ],
+      "screenshots": [
+        "https://i.imgur.com/nj8j1E2.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/6Y8auId.png",
       "platforms": [],
       "twitter": "https://x.com/zkpassport",
@@ -2475,14 +3769,16 @@
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Self Protocol ",
       "parentCompanyURL": "https://self.xyz/",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "",
-      "lastUpdated": "",
+      "lastUpdated": "7/21/2025",
       "ready": "true"
     },
     {
@@ -2491,11 +3787,18 @@
       "description": "QuarkID is the digital trust framework developed by the Government of the City of Buenos Aires that creates a new digital identity system.",
       "image": "https://i.imgur.com/K3T8EYJ.png",
       "category": "Productivity",
-      "subCategory": [ "Identity" ],
-      "networks": [ "Ethereum Mainnet", "ZKSync Era" ],
+      "subCategory": [
+        "Identity"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "zkSync Mainnet"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/cdB0kAC.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/quark_id",
       "github": "https://github.com/ssi-quarkid",
       "discord": "",
@@ -2503,7 +3806,10 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English", "Spanish" ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
       "parentCompany": "Extrimian S.A.",
       "parentCompanyURL": "https://extrimian.io/",
       "openSource": true,
@@ -2518,19 +3824,34 @@
       "description": "Rotki is an open source, self-hosted portfolio manager, accounting and analytics tool that protects your privacy.",
       "image": "https://i.imgur.com/0AVcfDU.png",
       "category": "Productivity",
-      "subCategory": [ "DePIN" ],
-      "networks": [ "Arbitrum One", "Base", "OP Mainnet", "Scroll", "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/ouKp1Dq.jpeg" ],
+      "subCategory": [
+        "DePIN"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/ouKp1Dq.jpeg"
+      ],
       "bannerImage": "https://i.imgur.com/Zjtf2Rc.png",
-      "platforms": [ "Browser", "Desktop" ],
+      "platforms": [
+        "Browser",
+        "Desktop"
+      ],
       "twitter": "https://x.com/rotkiapp",
       "github": "https://github.com/rotki/",
       "discord": "https://discord.rotki.com/",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Rotki Software GmbH",
       "parentCompanyURL": "https://rotki.com/",
       "openSource": true,
@@ -2540,30 +3861,159 @@
       "ready": "true"
     },
     {
+      "name": "Fileverse - ddocs",
+      "url": "https://docs.fileverse.io/document/create",
+      "description": "Fileverse is the decentralized alternative to Notion and Google Workspace. Use it to write notes, collab on docs & sheets, sketch ideas, organize your files, manage a knowledgebase, create a personal webpage and more - individually or as a group.",
+      "image": "https://i.imgur.com/micDfkJ.png",
+      "category": "Productivity",
+      "subCategory": [
+        "DePIN"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/XAdzWtj.png"
+      ],
+      "bannerImage": "https://i.imgur.com/VqQG462.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/fileverse",
+      "github": "https://x.com/fileverse",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": " Fileverse PTE. LTD",
+      "parentCompanyURL": "https://fileverse.io",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "4/7/2024",
+      "lastUpdated": "7/11/2025",
+      "ready": "true"
+    },
+    {
+      "name": "Fileverse - dsheets",
+      "url": "https://sheets.fileverse.io/sheet/create",
+      "description": "dSheets is an open-source spreadsheet tool focused on privacy and onchain interactions that allows users to import onchain data, execute smart contracts and access Web3 features. It's equipped with end-to-end encryption and zero data storage capabilities.",
+      "image": "https://i.imgur.com/micDfkJ.png",
+      "category": "Productivity",
+      "subCategory": [
+        "DePIN"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/kGl5UXb.png"
+      ],
+      "bannerImage": "https://i.imgur.com/VqQG462.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/fileverse",
+      "github": "https://x.com/fileverse",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": " Fileverse PTE. LTD",
+      "parentCompanyURL": "https://fileverse.io",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "6/23/2025",
+      "lastUpdated": "7/11/2025",
+      "ready": "true"
+    },
+    {
+      "name": "EAS",
+      "url": "https://attest.org/",
+      "description": "Ethereum Attestation Service (EAS) is an infrastructure public good for making attestations onchain or offchain about anything.",
+      "image": "https://i.imgur.com/d8kqvW4.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Governance"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/eZUAXjc.png"
+      ],
+      "bannerImage": "https://i.imgur.com/gBWM7Ez.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/eas_eth",
+      "github": "https://github.com/ethereum-attestation-service",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Ethereum Attestation Service",
+      "parentCompanyURL": "https://attest.org",
+      "openSource": true,
+      "contractAddress": "https://github.com/ethereum-attestation-service/eas-contracts",
+      "dateOfLaunch": "2/27/2023",
+      "lastUpdated": "7/14/2025",
+      "ready": "true"
+    },
+    {
       "name": "Unlock",
       "url": "https://unlock-protocol.com/",
       "description": "Unlock Protocol is a protocol that enables creators to monetize their content with a few lines of code in a fully decentralized way. It focuses on memberships and subscription NFTs with features like time constraints, pricing updates, and recurring payments. It is trusted by thousands of developers and community members for building next-generation membership products",
       "image": "https://i.imgur.com/4p38CFx.png",
       "category": "Productivity",
-      "subCategory": [ "Governance", "Ticketing", "Memberships" ],
-      "networks": [
-        "Ethereum Mainnet", "OP Mainnet",
-        "Polygon",  "Celo",
-        "Gnosis",   "ZKSync Era",
-        "Arbitrum One", "Base",
-        "Linea",    "Scroll"
+      "subCategory": [
+        "Governance",
+        "Ticketing",
+        "Memberships"
       ],
-      "screenshots": [ "https://i.imgur.com/ZVki3qp.png" ],
+      "networks": [
+        "Polygon",
+        "Celo",
+        "Gnosis",
+        "Base",
+        "Linea",
+        "Scroll",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/ZVki3qp.png"
+      ],
       "bannerImage": "https://i.imgur.com/SZ5K9mw.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/UnlockProtocol",
       "github": "https://github.com/unlock-protocol/unlock",
       "discord": "https://discord.unlock-protocol.com/",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
-      "highlight": true,
-      "languages": [ "English" ],
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Unlock Inc",
       "parentCompanyURL": "https://unlock-protocol.com",
       "openSource": true,
@@ -2573,16 +4023,110 @@
       "ready": "true"
     },
     {
+      "name": "Human Passport",
+      "url": "https://passport.human.tech/",
+      "description": "Human Passport is an identity verification application and Sybil resistance protocol. Developers can utilize the different Human Passport products and services to build a unique humanity solution for their app or project, enabling more trustworthy and fair participation in their community.",
+      "image": "https://i.imgur.com/qvNkDAK.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Identity",
+        "Privacy",
+        "Proof-of-personhood"
+      ],
+      "networks": [
+        "Base",
+        "Linea",
+        "Shape",
+        "Scroll",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/WutTNUy.png"
+      ],
+      "bannerImage": "https://i.imgur.com/IjoDBkB.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/HumnPassport",
+      "github": "https://github.com/passportxyz/passport",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Human Tech",
+      "parentCompanyURL": "https://holonym.io",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "",
+      "lastUpdated": "6/13/2025",
+      "ready": "true"
+    },
+    {
+      "name": "Sequence",
+      "url": "https://sequence.xyz",
+      "description": "Sequence is a developer platform offering smart contract wallets, SDKs, and infrastructure for building Web3 apps and games on Ethereum and EVM chains.",
+      "image": "https://i.imgur.com/POagFpG.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Gaming"
+      ],
+      "networks": [
+        "Base",
+        "Polygon",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/z3huNf6.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://www.twitter.com/0xsequence",
+      "github": "https://github.com/0xsequence",
+      "discord": "https://discord.gg/sequence",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Sequence",
+      "parentCompanyURL": "https://sequence.xyz",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "1/20/2021",
+      "lastUpdated": "7/14/2025",
+      "ready": "true"
+    },
+    {
       "name": "Eternal AI",
       "url": "https://eternalai.org/",
       "description": "Eternal AI is a blockchain-based platform for creating, deploying, and monetizing cryptographically secure AI agents as smart contracts.",
       "image": "https://i.imgur.com/AFYIGAo.png",
       "category": "Productivity",
-      "subCategory": [ "Privacy", "AI Agents" ],
-      "networks": [ "Ethereum Mainnet", "Base", "Arbitrum One" ],
+      "subCategory": [
+        "Privacy",
+        "AI Agents"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/UGkjMLB.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/CryptoEternalAI",
       "github": "https://github.com/eternalai-org",
       "discord": "",
@@ -2590,10 +4134,49 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "EternalAI DAO ",
       "parentCompanyURL": "https://eternalai.org",
       "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "",
+      "lastUpdated": "",
+      "ready": "true"
+    },
+    {
+      "name": "Virtuals",
+      "url": "https://app.virtuals.io/",
+      "description": "Virtuals Protocol is a society of productive AI agents, each designed to generate services or products and autonomously engage in onchain commerce. These agents are tokenized, allowing for capital formation, permissionless participation, and aligned incentives among creators, investors, and agents.",
+      "image": "https://i.imgur.com/fZ0nGYw.png",
+      "category": "Productivity",
+      "subCategory": [
+        "AI Agents"
+      ],
+      "networks": [
+        "Base"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/QWIvUfZ.png"
+      ],
+      "bannerImage": "https://i.imgur.com/wx6PJpU.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/virtuals_io",
+      "github": "",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Virtuals",
+      "parentCompanyURL": "https://virtuals.io",
+      "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
@@ -2607,7 +4190,9 @@
       "description": "Pay with any asset. Transact across chains effortlessly. Never bridge again.",
       "image": "https://i.imgur.com/IX6ESQ7.png",
       "category": "Bridge",
-      "subCategory": [ "Chain abstraction" ],
+      "subCategory": [
+        "Chain abstraction"
+      ],
       "networks": [
         "Base",
         "Scroll",
@@ -2623,7 +4208,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/gYm3FIR.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/ParticleNtwrk",
       "github": "",
       "discord": "https://discord.com/invite/2y44qr6CR2",
@@ -2631,14 +4218,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Particle Network",
       "parentCompanyURL": "https://particle.network/",
       "openSource": false,
       "contractAddress": "",
       "dateOfLaunch": "9/9/2024",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Layerswap",
@@ -2646,7 +4235,9 @@
       "description": "Layerswap is the reliable solution for transferring crypto assets across networks in a matter of minutes. The app enables frictionless cross-chain transfers across 35+ blockchains as well as direct transfers between chains and 15+ exchanges.",
       "image": "https://i.imgur.com/H8Mp3kO.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Starknet",
@@ -2661,22 +4252,26 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/S3R1wzQ.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/layerswap",
       "github": "https://github.com/layerswap/layerswapapp",
       "discord": "https://discord.gg/layerswap",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Layerswap",
       "parentCompanyURL": "https://layerswap.io",
       "openSource": true,
       "contractAddress": "0x2Fc617E933a52713247CE25730f6695920B3befe",
       "dateOfLaunch": "6/11/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Hop",
@@ -2684,7 +4279,9 @@
       "description": "Hop is a scalable rollup-to-rollup general token bridge. It allows users to send tokens from one rollup or sidechain to another almost immediately without having to wait for the networks challenge period.",
       "image": "https://i.imgur.com/xraNXM1.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Linea",
@@ -2694,22 +4291,26 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/9Yjx6vL.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/HopProtocol",
       "github": "https://github.com/hop-protocol",
       "discord": "https://discord.gg/PwCF88emV4",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": true,
-      "highlight": true,
-      "languages": [ "English" ],
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Hop Protocol",
       "parentCompanyURL": "https://hop.exchange",
       "openSource": true,
       "contractAddress": "0x914f986a44acb623a277d6bd17368171fcbe4273",
       "dateOfLaunch": "7/12/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Stargate",
@@ -2717,7 +4318,10 @@
       "description": "Stargate is a composable cross-chain liquidity transport protocol enabling seamless asset transfers between blockchains.",
       "image": "https://i.imgur.com/E9Jw36o.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network", "Generalized message passing" ],
+      "subCategory": [
+        "Liquidity network",
+        "Generalized message passing"
+      ],
       "networks": [
         "Base",
         "Scroll",
@@ -2732,7 +4336,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/BpaHCYm.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/StargateFinance",
       "github": "https://github.com/stargate-protocol",
       "discord": "https://stargate.finance/discord",
@@ -2740,14 +4346,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Stargate",
       "parentCompanyURL": "https://stargate.finance/discord",
       "openSource": true,
       "contractAddress": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
       "dateOfLaunch": "3/18/2022",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Across",
@@ -2755,7 +4363,10 @@
       "description": "Across is a cross-chain bridge for L2s and rollups secured by UMA's optimistic oracle. It is optimized for capital efficiency with a single liquidity pool, a competitive relayer landscape, and a no-slippage fee model.",
       "image": "https://i.imgur.com/70fOLRm.png",
       "category": "Bridge",
-      "subCategory": [ "Validator or oracle", "Liquidity network" ],
+      "subCategory": [
+        "Validator or oracle",
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Blast",
@@ -2768,7 +4379,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/ug6iZSa.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/AcrossProtocol",
       "github": "https://github.com/across-protocol",
       "discord": "https://discord.across.to/",
@@ -2776,14 +4389,16 @@
       "sortingWeight": 0,
       "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Across",
       "parentCompanyURL": "https://across.to/",
       "openSource": true,
       "contractAddress": "0x7355Efc63Ae731f584380a9838292c7046c1e433",
       "dateOfLaunch": "11/8/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Meson",
@@ -2791,7 +4406,9 @@
       "description": "Meson is the faster and safer way to execute low-cost, zero-slippage universal cross-chain swaps across all leading blockchains and layer-2 rollups.",
       "image": "https://i.imgur.com/lDCO7eA.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Mode",
         "Blast",
@@ -2807,7 +4424,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/TSj3ccw.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/mesonfi",
       "github": "https://github.com/mesonfi",
       "discord": "https://discord.gg/mesonfi",
@@ -2815,14 +4434,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Meson",
       "parentCompanyURL": "https://meson.fi",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "12/1/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "deBridge",
@@ -2830,7 +4451,9 @@
       "description": "DeBridge is DeFi's internet of liquidity, enabling real-time movement of assets and information across the DeFi landscape. Without the bottlenecks and risks of liquidity pools, deBridge can power all type of cross-chain interactions with deep liquidity, tight spreads, and guaranteed rates.",
       "image": "https://i.imgur.com/O1iVt88.png",
       "category": "Bridge",
-      "subCategory": [ "Validator or oracle" ],
+      "subCategory": [
+        "Validator or oracle"
+      ],
       "networks": [
         "Base",
         "Linea",
@@ -2840,7 +4463,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/3aBiKjz.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/deBridge",
       "github": "https://github.com/debridge-finance/",
       "discord": "https://discord.com/invite/debridge",
@@ -2848,14 +4473,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "deBridge",
       "parentCompanyURL": "https://debridge.finance/",
       "openSource": true,
       "contractAddress": "0x43de2d77bf8027e25dbd179b491e8d64f38398aa",
       "dateOfLaunch": "2/17/2022",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Orbiter Finance",
@@ -2863,7 +4490,9 @@
       "description": "Orbiter Finance enables cross-rollup transactions of Ethereum/Bitcoin native assets in a trustless and seamless manner.",
       "image": "https://i.imgur.com/xkJIVGd.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Starknet",
@@ -2879,7 +4508,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/aYA1Ei0.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/Orbiter_Finance",
       "github": "https://github.com/Orbiter-Finance",
       "discord": "https://discord.gg/FFT5wfmTXT",
@@ -2887,14 +4518,17 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English", "Korean" ],
+      "languages": [
+        "English",
+        "Korean"
+      ],
       "parentCompany": "Orbiter Finance",
       "parentCompanyURL": "https://orbiter.finance",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "12/30/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Celer cBridge",
@@ -2902,7 +4536,9 @@
       "description": "Celer is a blockchain interoperability protocol enabling a one-click user experience accessing tokens, DeFi, GameFi, NFTs, governance, and more across multiple chains.",
       "image": "https://i.imgur.com/TyZdpEU.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Scroll",
@@ -2915,7 +4551,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/FEr4emk.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/CelerNetwork",
       "github": "https://github.com/celer-network",
       "discord": "https://discord.com/invite/uGx4fjQ",
@@ -2923,14 +4561,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Celer",
       "parentCompanyURL": "https://celer.network",
       "openSource": true,
       "contractAddress": "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820",
       "dateOfLaunch": "6/10/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Synapse",
@@ -2938,7 +4578,9 @@
       "description": "Synapse Bridge is built on top of the cross-chain infrastructure enabling users to seamlessly transfer assets across all blockchains.",
       "image": "https://i.imgur.com/07lCxpa.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Blast",
@@ -2950,22 +4592,26 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/hp1Fnlu.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://twitter.com/SynapseProtocol",
       "github": "https://github.com/synapsecns",
-      "discord": "https://discord.gg/synapseprotocol",
+      "discord": "htts://discord.gg/synapseprotocol",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Synapse",
       "parentCompanyURL": "https://synapseprotocol.com",
       "openSource": true,
       "contractAddress": "0x7E7A0e201FD38d3ADAA9523Da6C109a07118C96a",
       "dateOfLaunch": "8/29/2021",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Gas.zip",
@@ -2973,7 +4619,9 @@
       "description": "Fastest one-stop gas refuel bridge for over 350+ chains. Bridge and explore all your favorite alt-chains and L2s, instantly.",
       "image": "https://i.imgur.com/BE9zVpY.png",
       "category": "Bridge",
-      "subCategory": [ "Liquidity network" ],
+      "subCategory": [
+        "Liquidity network"
+      ],
       "networks": [
         "Base",
         "Scroll",
@@ -2988,7 +4636,9 @@
       ],
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/EfeBVwX.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/gasdotzip",
       "github": "https://github.com/gasdotzip",
       "discord": "https://discord.com/invite/gasdotzip",
@@ -2996,14 +4646,16 @@
       "sortingWeight": 0,
       "discover": false,
       "highlight": false,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "Gas.zip",
       "parentCompanyURL": "https://gas.zip",
       "openSource": true,
       "contractAddress": "0x2a37D63EAdFe4b4682a3c28C1c2cD4F109Cc2762",
       "dateOfLaunch": "8/9/2023",
       "lastUpdated": "7/3/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Staking Launchpad",
@@ -3011,11 +4663,19 @@
       "description": "Become a validator and help secure the future of Ethereum.",
       "image": "https://i.imgur.com/PO19A9T.png",
       "category": "Bridge",
-      "subCategory": [ "Validator or oracle" ],
-      "networks": [ "Ethereum Mainnet" ],
-      "screenshots": [ "https://i.imgur.com/UoV3Mfn.png" ],
+      "subCategory": [
+        "Validator or oracle"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/UoV3Mfn.png"
+      ],
       "bannerImage": "https://i.imgur.com/PO19A9T.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "",
       "github": "https://github.com/ethereum/staking-launchpad",
       "discord": "",
@@ -3046,7 +4706,7 @@
       "contractAddress": "0x00000000219ab540356cBB839Cbe05303d7705Fa",
       "dateOfLaunch": "12/1/2020",
       "lastUpdated": "7/7/2025",
-      "ready": true
+      "ready": "true"
     },
     {
       "name": "Bungee",
@@ -3054,7 +4714,10 @@
       "description": "Bungee provides seamless swaps between any blockchain. With over $20B in volume and trusted by major wallets and dApps, Bungee makes moving assets between networks efficient, secure, and accessible to everyone.",
       "image": "https://i.imgur.com/X2vpia7.png",
       "category": "Bridge",
-      "subCategory": [ "Chain abstraction", "swap" ],
+      "subCategory": [
+        "Chain abstraction",
+        "swap"
+      ],
       "networks": [
         "Base",
         "Scroll",
@@ -3065,24 +4728,30 @@
         "Arbitrum One",
         "OP Mainnet"
       ],
-      "screenshots": [ "https://i.imgur.com/axNSOBz.png" ],
+      "screenshots": [
+        "https://i.imgur.com/axNSOBz.png"
+      ],
       "bannerImage": "https://i.imgur.com/254aaAe.png",
-      "platforms": [ "Browser" ],
+      "platforms": [
+        "Browser"
+      ],
       "twitter": "https://x.com/BungeeExchange",
       "github": "https://github.com/SocketDotTech",
       "discord": "https://discord.com/invite/DrvfYq6fvc",
       "kpiUrl": "",
       "sortingWeight": 0,
-      "discover": false,
+      "discover": true,
       "highlight": true,
-      "languages": [ "English" ],
+      "languages": [
+        "English"
+      ],
       "parentCompany": "SocketDotTech",
       "parentCompanyURL": "https://www.socket.tech/",
       "openSource": true,
       "contractAddress": "https://github.com/SocketDotTech/bungee-contracts-public/tree/master/deployments",
       "dateOfLaunch": "10/10/2023",
       "lastUpdated": "7/14/2025",
-      "ready": true
+      "ready": "true"
     }
   ]
 }

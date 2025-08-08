@@ -18,22 +18,30 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
+import CommunityPicks from "./_components/CommunityPicks"
 import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 
 import { fetchApps } from "@/lib/api/fetchApps"
+import { fetchCommunityPicks } from "@/lib/api/fetchCommunityPicks"
 
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
+const loadData = dataLoader(
+  [
+    ["appsData", fetchApps],
+    ["communityPicks", fetchCommunityPicks],
+  ],
+  REVALIDATE_TIME * 1000
+)
 
 const Page = async ({ params }: { params: { locale: string } }) => {
   const { locale } = await params
 
   setRequestLocale(locale)
 
-  const [appsData] = await loadData()
+  const [appsData, communityPicks] = await loadData()
 
   // Get 3 random highlighted apps
   const highlightedApps = getHighlightedApps(appsData, 3)
@@ -109,10 +117,10 @@ const Page = async ({ params }: { params: { locale: string } }) => {
           </div>
         </div>
 
-        {/* TODO: Add community picks when we have a way to get them */}
-        {/* <div className="flex flex-col gap-4 px-4 md:px-8">
+        <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Community picks</h2>
-        </div> */}
+          <CommunityPicks communityPicks={communityPicks} appsData={appsData} />
+        </div>
 
         <div className="flex flex-col px-4 md:px-8">
           <SuggestAnApp />

@@ -9,11 +9,11 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
-interface AppsHighlightSwiperProps {
+interface AppsSwiperProps {
   cards: ReactNode[]
 }
 
-const AppsHighlightSwiper = ({ cards }: AppsHighlightSwiperProps) => {
+const AppsSwiper = ({ cards }: AppsSwiperProps) => {
   return (
     <SwiperContainer className="md:hidden">
       <Swiper
@@ -35,4 +35,4 @@ const AppsHighlightSwiper = ({ cards }: AppsHighlightSwiperProps) => {
   )
 }
 
-export default AppsHighlightSwiper
+export default AppsSwiper

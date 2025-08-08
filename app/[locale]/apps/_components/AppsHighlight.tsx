@@ -7,7 +7,7 @@ import TruncatedText from "@/components/ui/TruncatedText"
 import { slugify } from "@/lib/utils/url"
 
 import AppCard from "./AppCard"
-import AppsHighlightSwiper from "./AppsHighlightSwiper"
+import AppsSwiper from "./AppsSwiper"
 
 interface AppsHighlightProps {
   apps: AppData[]
@@ -62,7 +62,7 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
   return (
     <div className="flex flex-col gap-8">
       {/* Mobile - dynamic / lazy loaded */}
-      <AppsHighlightSwiper cards={cards} />
+      <AppsSwiper cards={cards} />
 
       {/* Desktop - server-side rendered */}
       <div className="hidden gap-6 md:grid md:grid-cols-3">{cards}</div>

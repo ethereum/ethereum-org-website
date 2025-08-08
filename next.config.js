@@ -101,6 +101,10 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "imgur.com",
         },
+        {
+          protocol: "https",
+          hostname: "unavatar.io",
+        },
       ],
     },
     async headers() {

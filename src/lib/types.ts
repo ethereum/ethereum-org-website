@@ -1171,6 +1171,15 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export type CommunityPick = {
+  name: string
+  twitterURL: string
+  twitterHandle: string
+  app1Name: string | null
+  app2Name: string | null
+  app3Name: string | null
+}
+
 type ValuesItem = {
   label: string
   content: string[]
