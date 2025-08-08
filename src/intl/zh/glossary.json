@@ -88,7 +88,7 @@
   "dag-term": "有向无环图",
   "dag-definition": "DAG 代表有向无环图。它是由节点和节点之间的链接组成的数据结构。在合并之前，以太坊在其<a href=\"/glossary/#pow\">工作量证明</a>算法 <a href=\"/glossary/#ethash\">Ethash</a> 中使用有向无环图，但在<a href=\"/glossary/#pos\">权益证明</a>中不再使用。",
   "dapp-term": "去中心化应用程序",
-  "dapp-definition": "Dapp 是在区块链网络上运行的去中心化应用程序，不通过中央控制机构提供服务。<a href=\"/dapps/\">了解有关去中心化应用程序的更多信息</a>。<br />去中心化应用程序至少有一个连接至网络界面的智能合约。此外，许多去中心化应用程序还包含去中心化存储和/或信息协议及平台。",
+  "dapp-definition": "Dapp 是在区块链网络上运行的去中心化应用程序，不通过中央控制机构提供服务。<a href=\"/apps/\">了解有关去中心化应用程序的更多信息</a>。<br />去中心化应用程序至少有一个连接至网络界面的智能合约。此外，许多去中心化应用程序还包含去中心化存储和/或信息协议及平台。",
   "data-availability-term": "数据可用性",
   "data-availability-definition": "为了维护系统的透明与信任，任何节点都可以单独地验证区块链上的交易。",
   "decentralization-term": "去中心化",

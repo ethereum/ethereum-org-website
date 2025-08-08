@@ -56,7 +56,7 @@ Potser sou un artista i voleu compartir la vostra obra utilitzant els NFT, sense
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Exploreu, compreu o creeu els vostres propis NFT d'art o col·leccionables...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Exploreu l'art NFT
   </ButtonLink>
 </InfoBanner>

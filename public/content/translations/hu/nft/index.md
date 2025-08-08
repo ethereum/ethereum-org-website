@@ -56,7 +56,7 @@ Tegyük fel, hogy Ön egy művész, aki szeretné NFT-ként megosztani az alkot�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Fedezzen fel, vásároljon vagy készítsen saját NFT-műalkotásokat/gyűjthető tárgyakat...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Fedezzen fel NFT-műalkotásokat
   </ButtonLink>
 </InfoBanner>

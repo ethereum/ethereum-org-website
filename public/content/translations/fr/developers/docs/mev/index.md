@@ -12,7 +12,7 @@ La valeur extractible maximale a été appliquée pour la première fois dans le
 
 ## Prérequis {#prerequisites}
 
-Assurez-vous d'être à l'aise avec les concepts de [transactions](/developers/docs/transactions/), [blocs](/developers/docs/blocks/), [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) ainsi que [de gaz](/developers/docs/gas/). Se familiariser avec les [applications décentralisées (dApps)](/dapps/) et la [finance décentralisée (DeFi)](/defi/) peut également être utile.
+Assurez-vous d'être à l'aise avec les concepts de [transactions](/developers/docs/transactions/), [blocs](/developers/docs/blocks/), [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) ainsi que [de gaz](/developers/docs/gas/). Se familiariser avec les [applications décentralisées (dApps)](/apps/) et la [finance décentralisée (DeFi)](/defi/) peut également être utile.
 
 ## Extraction MEV {#mev-extraction}
 

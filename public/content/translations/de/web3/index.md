@@ -139,7 +139,7 @@ Wir stehen erst am Anfang der Entwicklung eines besseren Internets mit Web3, doc
 
 - [Eine Wallet wählen](/wallets/)
 - [Eine Community finden](/community/)
-- [Web3-Anwendungen erkunden](/dapps/)
+- [Web3-Anwendungen erkunden](/apps/)
 - [Einer DAO beitreten](/dao/)
 - [Web3 als Grundlage nutzen](/developers/)
 

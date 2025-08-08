@@ -12,7 +12,7 @@ Dieses Konzept wurde erstmals im Rahmen des [Arbeitsnachweis](/developers/docs/c
 
 ## Voraussetzungen {#prerequisites}
 
-Stellen Sie sicher, dass Sie mit [Transaktionen](/developers/docs/transactions/), [Blöcken](/developers/docs/blocks/), [Gas](/developers/docs/gas/) und [Mining](/developers/docs/consensus-mechanisms/pow/mining/) vertraut sind. Eine Vertrautheit mit [dApps](/dapps/) und [DeFi](/defi/) ist ebenfalls hilfreich.
+Stellen Sie sicher, dass Sie mit [Transaktionen](/developers/docs/transactions/), [Blöcken](/developers/docs/blocks/), [Gas](/developers/docs/gas/) und [Mining](/developers/docs/consensus-mechanisms/pow/mining/) vertraut sind. Eine Vertrautheit mit [dApps](/apps/) und [DeFi](/defi/) ist ebenfalls hilfreich.
 
 ## MEV-Extrahierung {#mev-extraction}
 

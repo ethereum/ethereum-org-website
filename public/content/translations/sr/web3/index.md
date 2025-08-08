@@ -139,7 +139,7 @@ Tek smo na početku stvaranja boljeg veba sa Web3, ali kako nastavljamo da unapr
 
 - [Nabavite novčanik](/wallets/)
 - [Pronađite zajednicu](/community/)
-- [Istražite Web3 aplikacije](/dapps/)
+- [Istražite Web3 aplikacije](/apps/)
 - [Join a DAO](/dao/)
 - [Gradite na Web3](/developers/)
 

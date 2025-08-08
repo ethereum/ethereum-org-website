@@ -12,7 +12,7 @@ Il valore estraibile massimo fu applicato per la prima volta nel contesto del [p
 
 ## Prerequisiti {#prerequisites}
 
-Assicurati di essere familiare con le [transazioni](/developers/docs/transactions/), i [blocchi](/developers/docs/blocks/), il [proof-of-stake](/developers/docs/consensus-mechanisms/pos) e il [gas](/developers/docs/gas/). Anche la familiarità con [dApp](/dapps/) e [DeFi](/defi/) è utile.
+Assicurati di essere familiare con le [transazioni](/developers/docs/transactions/), i [blocchi](/developers/docs/blocks/), il [proof-of-stake](/developers/docs/consensus-mechanisms/pos) e il [gas](/developers/docs/gas/). Anche la familiarità con [dApp](/apps/) e [DeFi](/defi/) è utile.
 
 ## Estrazione del MEV {#mev-extraction}
 

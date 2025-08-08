@@ -44,7 +44,7 @@ Er zijn verschillende belanghebbenden in de [Ethereum-gemeenschap](/community/),
 
 - **Ether-houders**: deze mensen hebben een willekeurige hoeveelheid ETH. [Meer over ETH](/eth/).
 - **Applicatie-gebruikers**: deze mensen communiceren met applicaties op de Ethereum-blockchain.
-- **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/dapps/).
+- **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/apps/).
 - **Nodebeheerders**: deze mensen voeren nodes uit die blokken en transacties propageren, waarbij ze elke ongeldige transactie of blok die ze tegenkomen verwerpen. [Meer over nodes](/developers/docs/nodes-and-clients/).
 - **EIP-auteurs**: deze mensen stellen wijzigingen voor aan het Ethereum-protocol, in de vorm van Ethereum-verbeteringsvoorstellen (EIPs). [Meer over EIPs](/eips/).
 - **Validators**: deze mensen draaien nodes die nieuwe blokken kunnen toevoegen aan de Ethereum-blockchain.

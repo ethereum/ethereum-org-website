@@ -12,7 +12,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-确保你已熟悉[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)、[权益证明](/developers/docs/consensus-mechanisms/pos)和[燃料](/developers/docs/gas/)。 熟悉 [dapps](/dapps/) 和 [DeFi](/defi/) 也很有帮助。
+确保你已熟悉[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)、[权益证明](/developers/docs/consensus-mechanisms/pos)和[燃料](/developers/docs/gas/)。 熟悉 [dapps](/apps/) 和 [DeFi](/defi/) 也很有帮助。
 
 ## 最大可提取价值提取 {#mev-extraction}
 

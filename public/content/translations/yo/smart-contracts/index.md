@@ -69,7 +69,7 @@ Wọ́n lè ṣe àwọn ìṣirò, ṣẹ̀dá owó, fi dátà pamọ́, ṣẹ
 - [Stablecoins](/stablecoins/)
 - [Ṣíṣẹ̀dá àti pínpín àwọn ohun-ìní dígítà aláìlẹ́gbẹ́](/nft/)
 - [Àwọn pàṣípààrọ̀ owó gbangba àìfọwọ́yí](/get-eth/#dex)
-- [Eré ìdárayá aláìlákóso](/dapps/?category=gaming#explore)
+- [Eré ìdárayá aláìlákóso](/apps/?category=gaming#explore)
 - [Ètò ìmúlò ìbánigbófò tó ń sanwó làìfọwọ́yí](https://etherisc.com/)
 - [Ìdiwọ̀n tó jẹ́ kí ènìyàn ṣẹ̀dá àwọn owó àdáni tó ṣe é lò lórí gbogbo ẹ̀rọ](/developers/docs/standards/tokens/)
 

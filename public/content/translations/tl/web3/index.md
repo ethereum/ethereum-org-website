@@ -139,7 +139,7 @@ Nasa simula pa lang tayo ng paggawa ng mas magandang Web sa tulong ng Web3, pero
 
 - [Kumuha ng wallet](/wallets/)
 - [Maghanap ng komunidad](/community/)
-- [Siyasatin ang mga Web3 application](/dapps/)
+- [Siyasatin ang mga Web3 application](/apps/)
 - [Join a DAO](/dao/)
 - [Gumawa sa Web3](/developers/)
 

@@ -44,7 +44,7 @@ Terdapat pelbagai pihak berkepentingan dalam [komuniti Ethereum](/community/), s
 
 - **Pemegang Ether**: mereka ini memegang sembarangan jumlah ETH. [Lagi tentang ETH](/eth/).
 - **Permohonan Pengguna**: mereka ini berinteraksi dengan aplikasi pada blok rantai Ethereum.
-- **Permohonan/Pemaju Alat**: mereka ini menulis aplikasi yang dijalankan di blok rantai Ethereum (contohnya DeFi, NFT, dll.) atau membina alat untuk berinteraksi dengan Ethereum (contohnya dompet, suite ujian, dll.). [Lagi tentang dapp](/dapps/).
+- **Permohonan/Pemaju Alat**: mereka ini menulis aplikasi yang dijalankan di blok rantai Ethereum (contohnya DeFi, NFT, dll.) atau membina alat untuk berinteraksi dengan Ethereum (contohnya dompet, suite ujian, dll.). [Lagi tentang dapp](/apps/).
 - **Penggendali Nod**: mereka ini menjalankan nod yang menyebarkan blok dan transaksi, menolak sebarang transaksi yang tidak sah atau menyekat yang hadir. [Lagi tentang nod](/developers/docs/nodes-and-clients/).
 - **Penulis EIP **: mereka ini mencadangkan perubahan kepada protokol Ethereum, dalam bentuk Cadangan Penambahbaikan Ethereum (EIP). [Lagi tentang EIP](/eips/).
 - **Validators**: mereka ini menjalankan nod yang boleh menambah blok baru ke blok rantai Ethereum.

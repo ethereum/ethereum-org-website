@@ -88,7 +88,7 @@
   "dag-term": "DAG",
   "dag-definition": "DAG significa Directed Acyclic Graph (Grafo Acíclico Direcionado). É uma estrutura de dados composta de nós e links entre os nós. Antes da Fusão, o Ethereum usava um DAG em seu algoritmo de <a href=\"/glossary/#pow\">prova de trabalho</a>, <a href=\"/glossary/#ethash\">Ethash</a>, mas não é mais usado na <a href=\"/glossary/#pos\">prova de participação</a>.",
   "dapp-term": "Dapp",
-  "dapp-definition": "Um dApp é um aplicativo descentralizado que roda em uma rede blockchain, oferecendo serviços sem o controle de autoridade central. <a href=\"/dapps/\">Mais sobre aplicativos descentralizados</a>.<br />Um dapp possui, no mínimo, um contrato inteligente conectado a uma interface web. Além disso, muitos dapps incluem uma solução de armazenamento descentralizado e/ou um protocolo ou plataforma de mensageria.",
+  "dapp-definition": "Um dApp é um aplicativo descentralizado que roda em uma rede blockchain, oferecendo serviços sem o controle de autoridade central. <a href=\"/apps/\">Mais sobre aplicativos descentralizados</a>.<br />Um dapp possui, no mínimo, um contrato inteligente conectado a uma interface web. Além disso, muitos dapps incluem uma solução de armazenamento descentralizado e/ou um protocolo ou plataforma de mensageria.",
   "data-availability-term": "Disponibilidade de dados",
   "data-availability-definition": "Qualquer nó pode verificar de forma independente as transações em uma blockchain para manter a transparência e a confiança no sistema.",
   "decentralization-term": "Descentralização",

@@ -132,9 +132,9 @@ export const useNavigation = () => {
               href: "/get-eth/",
             },
             {
-              label: t("decentralized-applications-dapps"),
-              description: t("nav-dapps-description"),
-              href: "/dapps/",
+              label: t("application-explorer"),
+              description: t("nav-apps-description"),
+              href: "/apps/",
             },
             {
               label: t("nav-guides-label"),

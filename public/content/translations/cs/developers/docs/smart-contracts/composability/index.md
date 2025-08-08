@@ -29,7 +29,7 @@ Chytré kontrakty na Ethereu jsou jako veřejná API, takže s nimi může kdoko
 
 ### Kratší vývojový cyklus {#shorter-development-cycle}
 
-Složitelnost zmenšuje množství práce, kterou musí vývojáři při vytváření [dappek](/dapps/#what-are-dapps) udělat. [Jak říká Naval Ravikant](https://twitter.com/naval/status/1444366754650656770): „Open source znamená, že každý problém musí být vyřešen pouze jednou.“
+Složitelnost zmenšuje množství práce, kterou musí vývojáři při vytváření [dappek](/apps/#what-are-dapps) udělat. [Jak říká Naval Ravikant](https://twitter.com/naval/status/1444366754650656770): „Open source znamená, že každý problém musí být vyřešen pouze jednou.“
 
 Pokud existuje chytrý kontrakt, který řeší jeden problém, mohou ho ostatní vývojáři znovu použít, takže nemusí řešit stejný problém znovu. Tímto způsobem mohou vzít existující softwarové knihovny a přidat k nim další funkce, když vyvíjejí novou dappku.
 

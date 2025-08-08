@@ -60,7 +60,7 @@ Je adres zal hetzelfde zijn in alle Ethereum-projecten. Je hoeft je voor geen en
 ![Selecteren uit een lijst met portemonnees met behulp waarvan verbinding gemaakt kan worden](./connect2.png)
 
 5. Bevestig het handtekeningverzoek in je portemonnee om de verbinding tot stand te brengen. **Het ondertekenen van dit bericht zou geen ETH mogen kosten**.
-6. Dat is alles! Begin met het gebruiken van de app. Je kunt een aantal interessante projecten vinden op onze [dApps-pagina](/dapps/#explore). <br />
+6. Dat is alles! Begin met het gebruiken van de app. Je kunt een aantal interessante projecten vinden op onze [dApps-pagina](/apps/#explore). <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Wilt u hier meer over leren?</div>

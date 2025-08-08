@@ -96,7 +96,7 @@ const LetUseSomeApps = ({
             projects available you.
           </p>
           <div className="hidden lg:flex">
-            <Link href="/dapps" className="font-bold no-underline">
+            <Link href="/apps" className="font-bold no-underline">
               Explore more
             </Link>
           </div>
@@ -148,7 +148,7 @@ const LetUseSomeApps = ({
         </div>
         <div className="mb-4 flex justify-center lg:hidden">
           <Link
-            href="/dapps"
+            href="/apps"
             className="font-bold no-underline"
             onClick={() => {
               trackCustomEvent({

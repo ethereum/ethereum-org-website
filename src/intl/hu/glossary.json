@@ -88,7 +88,7 @@
   "dag-term": "DAG",
   "dag-definition": "A DAG az irányított aciklikus gráf (Directed Acyclic Graph) rövidítése. Ez egy olyan adatstruktúra, amely csomópontokból és az azok közötti kapcsolatokból áll össze. A Beolvadás előtt az Ethereum ilyet használt a <a href=\"/glossary/#pow\">proof-of-work</a> algoritmusban (ez volt az <a href=\"/glossary/#ethash\">Ethash</a>), de ez többé már nem szükséges a <a href=\"/glossary/#pos\">proof-of-stake</a> mechanizmusnál.",
   "dapp-term": "Dapp",
-  "dapp-definition": "A dApp egy decentralizált alkalmazás, amely blokklánc-hálózaton fut, és központi felügyeleti jogosultság nélkül kínál szolgáltatásokat. <a href=\"/dapps/\">További információk a decentralizált alkalmazásokról</a>.<br />A dapp legalább egy, webes felülethez kapcsolt okosszerződéssel rendelkezik. Ezen kívül sok dapp tartalmaz decentralizált tárolást és/vagy üzenetprotokollt és platformot.",
+  "dapp-definition": "A dApp egy decentralizált alkalmazás, amely blokklánc-hálózaton fut, és központi felügyeleti jogosultság nélkül kínál szolgáltatásokat. <a href=\"/apps/\">További információk a decentralizált alkalmazásokról</a>.<br />A dapp legalább egy, webes felülethez kapcsolt okosszerződéssel rendelkezik. Ezen kívül sok dapp tartalmaz decentralizált tárolást és/vagy üzenetprotokollt és platformot.",
   "data-availability-term": "Adatelérhetőség",
   "data-availability-definition": "Bármely csomópont függetlenül tudja ellenőrizni a tranzakciókat a blokkláncon az átláthatóság és a rendszerbe vetett bizalom megőrzése érdekében.",
   "decentralization-term": "Decentralizáció",
