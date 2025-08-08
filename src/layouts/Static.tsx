@@ -110,7 +110,6 @@ export const StaticLayout = ({
             <HubHero
               heroImg={GuideHeroImage}
               header={frontmatter.title}
-              title={""}
               description={frontmatter.description}
             />
           ) : (

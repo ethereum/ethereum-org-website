@@ -73,7 +73,7 @@ export const UpgradeLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: { src: frontmatter.image, width: 5750, height: 4332 },
     description: (
       <>
         <div>
