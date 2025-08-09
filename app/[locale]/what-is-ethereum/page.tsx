@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react"
+import { Castle, ChevronDown, LockKeyhole, Shield } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
@@ -12,6 +12,7 @@ import Link from "@/components/ui/Link"
 import { ListItem, OrderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
@@ -23,6 +24,19 @@ import networksBanner from "@/public/images/heroes/learn-hub-hero.png"
 import etherBanner from "@/public/images/impact_transparent.png"
 import whenWhoBanner from "@/public/images/translatathon/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
+
+const IconBox = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "grid size-20 place-items-center rounded-2xl border p-6 shadow-window-box [&_svg]:size-8",
+      className
+    )}
+    {...props}
+  />
+)
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -198,57 +212,74 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </div>
 
             <div data-label="TODO-what-is-table">
-              <div className="border-b pb-8">
-                <h3 className="mb-2 text-2xl">Censorship resistant</h3>
-                <div className="space-y-6">
-                  <p className="text-body-medium">
-                    While traditional apps and financial services rely on banks
-                    or corporations that can decide to block access or freeze
-                    accounts, dapps on Ethereum are censorship resistant.
-                  </p>
-                  <p className="text-body-medium">
-                    This is because ethereum&apos;s network of nodes record
-                    every single transaction without discrimination—and this
-                    rule is embedded in the code.
-                  </p>
+              <div className="flex flex-col gap-4 border-b pb-8 lg:flex-row">
+                <IconBox>
+                  <Shield className="text-accent-a" />
+                </IconBox>
+                <div>
+                  <h3 className="mb-2 text-2xl">Censorship resistant</h3>
+                  <div className="space-y-6">
+                    <p className="text-body-medium">
+                      While traditional apps and financial services rely on
+                      banks or corporations that can decide to block access or
+                      freeze accounts, dapps on Ethereum are censorship
+                      resistant.
+                    </p>
+                    <p className="text-body-medium">
+                      This is because ethereum&apos;s network of nodes record
+                      every single transaction without discrimination—and this
+                      rule is embedded in the code.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="border-b py-8">
-                <h3 className="mb-2 text-2xl">Highly secure</h3>
-                <div className="space-y-6">
-                  <p className="text-body-medium">
-                    While many apps today are hosted on cloud providers like AWS
-                    and can be vulnerable to takedowns and attacks, dapps on
-                    Ethereum are secured by the network itself. Every node
-                    stores and syncs the entire state of Ethereum, including all
-                    contracts.
-                  </p>
-                  <p className="text-body-medium">
-                    If someone tried to change a contract, the network would
-                    reject it since it wouldn’t match their records. To take
-                    down a single app, attackers need to take over the entire
-                    network, which would costs billions and be extremely hard to
-                    coordinate.
-                  </p>
+              <div className="flex flex-col gap-4 border-b py-8 lg:flex-row">
+                <IconBox>
+                  <LockKeyhole className="text-accent-b" />
+                </IconBox>
+                <div>
+                  <h3 className="mb-2 text-2xl">Highly secure</h3>
+                  <div className="space-y-6">
+                    <p className="text-body-medium">
+                      While many apps today are hosted on cloud providers like
+                      AWS and can be vulnerable to takedowns and attacks, dapps
+                      on Ethereum are secured by the network itself. Every node
+                      stores and syncs the entire state of Ethereum, including
+                      all contracts.
+                    </p>
+                    <p className="text-body-medium">
+                      If someone tried to change a contract, the network would
+                      reject it since it wouldn’t match their records. To take
+                      down a single app, attackers need to take over the entire
+                      network, which would costs billions and be extremely hard
+                      to coordinate.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="pt-8">
-                <h3 className="mb-2 text-2xl">Durable and reliable</h3>
-                <div className="space-y-6">
-                  <p className="text-body-medium">
-                    Downtime on cloud hosting platforms can take apps offline,
-                    but Ethereum&apos;s design ensures <a>perfect uptime</a>.
-                    The network will keep running even if some nodes go offline
-                    due to software bugs, government crackdowns, natural
-                    disaster, or war.
-                  </p>
-                  <p className="text-body-medium">
-                    Millions of people use thousands of dapps on Ethereum every
-                    day. While high demand can lead to elevated transaction
-                    fees, it reflects the strength of a network that prioritizes
-                    security, decentralization, and the guarantee that it&apos;s
-                    always available when you need it.
-                  </p>
+              <div className="flex flex-col gap-4 pt-8 lg:flex-row">
+                <IconBox>
+                  <Castle className="text-accent-c" />
+                </IconBox>
+                <div>
+                  <h3 className="mb-2 text-2xl">Durable and reliable</h3>
+                  <div className="space-y-6">
+                    <p className="text-body-medium">
+                      Downtime on cloud hosting platforms can take apps offline,
+                      but Ethereum&apos;s design ensures <a>perfect uptime</a>.
+                      The network will keep running even if some nodes go
+                      offline due to software bugs, government crackdowns,
+                      natural disaster, or war.
+                    </p>
+                    <p className="text-body-medium">
+                      Millions of people use thousands of dapps on Ethereum
+                      every day. While high demand can lead to elevated
+                      transaction fees, it reflects the strength of a network
+                      that prioritizes security, decentralization, and the
+                      guarantee that it&apos;s always available when you need
+                      it.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
