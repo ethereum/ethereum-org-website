@@ -23,7 +23,7 @@ Banyak jaringan media sosial terdesentralisasi ada sebagai alternatif untuk laya
 
 ### Bagaimana Jejaring Media Sosial Terdesentralisasi Bekerja? {#decentralized-social-networks-overview}
 
-Jaringan media sosial terdesentralisasi adalah kelas dari [aplikasi terdesentralisasi (dapps)](/dapps/)—aplikasi yang ditenagai oleh [kontrak pintar](/glossary/#smart-contract) yang dideploy di rantai blok. Kode kontrak berfungsi sebagai layanan sistem pendukung jaringan untuk aplikasi-aplikasi ini dan mendefinisikan logika bisnis.
+Jaringan media sosial terdesentralisasi adalah kelas dari [aplikasi terdesentralisasi (dapps)](/apps/)—aplikasi yang ditenagai oleh [kontrak pintar](/glossary/#smart-contract) yang dideploy di rantai blok. Kode kontrak berfungsi sebagai layanan sistem pendukung jaringan untuk aplikasi-aplikasi ini dan mendefinisikan logika bisnis.
 
 Platform media sosial tradisional mengandalkan basis data untuk menyimpan informasi pengguna, kode program, dan bentuk data lainnya. Namun, hal ini menyebabkan satu titik kelemahan dan menciptakan risiko yang berbahaya. Sebagai contoh, server Facebook terkenal [tidak aktif selama beberapa jam](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) pada Oktober 2021, yang mengakibatkan pengguna tidak bisa mengakses platform tersebut.
 

@@ -56,7 +56,7 @@ Você talvez seja um artista que deseja compartilhar seu trabalho usando NFTs, s
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Conheça a arte NFT
   </ButtonLink>
 </InfoBanner>

@@ -82,7 +82,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 ## 延伸阅读 {#further-reading}
 
-- [探索去中心化应用程序](/dapps)
+- [探索去中心化应用程序](/apps)
 - [Web 3.0 应用程序架构](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [2021 年去中心化应用程序指南](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [什么是去中心化应用程序？](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_

@@ -12,7 +12,7 @@ A maximálisan kinyerhető értéket először a [proof-of-work (munkaigazolás)
 
 ## Előfeltételek {#prerequisites}
 
-A téma könnyebb megértése érdekében érdemes megismeri a [tranzakciókkal](/developers/docs/transactions/), [blokkokkal](/developers/docs/blocks/), [proof-of-stake-kel](/developers/docs/consensus-mechanisms/pos) és [gázzal](/developers/docs/gas/) foglalkozó témákat. Emellett a [dappok](/dapps/) és a [DeFi](/defi/) ismerete szintén hasznos.
+A téma könnyebb megértése érdekében érdemes megismeri a [tranzakciókkal](/developers/docs/transactions/), [blokkokkal](/developers/docs/blocks/), [proof-of-stake-kel](/developers/docs/consensus-mechanisms/pos) és [gázzal](/developers/docs/gas/) foglalkozó témákat. Emellett a [dappok](/apps/) és a [DeFi](/defi/) ismerete szintén hasznos.
 
 ## MEV kivonása {#mev-extraction}
 

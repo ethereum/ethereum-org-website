@@ -57,7 +57,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Explore NFT art
   </ButtonLink>
 </InfoBanner>

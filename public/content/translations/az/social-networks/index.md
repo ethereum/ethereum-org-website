@@ -21,7 +21,7 @@ Bir çox mərkəzləşdirilməmiş sosial şəbəkələr Facebook, LinkedIn, Twi
 
 ### Mərkəzləşdirilməmiş sosial şəbəkələr necə işləyir? {#decentralized-social-networks-overview}
 
-Mərkəzləşdirilməmiş sosial şəbəkələr [mərkəzləşdirilməmiş tətbiqlər (dapps)](/dapps/) sinfidir — blokçeynində yerləşdirilmiş [ağıllı müqavilələr](/developers/docs/smart-contracts/) tərəfindən dəstəklənən tətbiqlər. Müqavilə kodu bu proqramlar üçün arxa plan kimi xidmət edir və onların biznes məntiqini müəyyənləşdirir.
+Mərkəzləşdirilməmiş sosial şəbəkələr [mərkəzləşdirilməmiş tətbiqlər (dapps)](/apps/) sinfidir — blokçeynində yerləşdirilmiş [ağıllı müqavilələr](/developers/docs/smart-contracts/) tərəfindən dəstəklənən tətbiqlər. Müqavilə kodu bu proqramlar üçün arxa plan kimi xidmət edir və onların biznes məntiqini müəyyənləşdirir.
 
 Ənənəvi sosial media platformaları istifadəçi məlumatlarını, proqram kodunu və digər məlumat formalarını saxlamaq üçün verilənlər bazasına əsaslanır. Lakin bu, uğursuzluq nöqtələri və əhəmiyyətli risk yaradır. Məsələn, Facebook serverləri keçən il [saatlarla oflayn oldu](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact), istifadəçiləri platformadan kənar aldı.
 

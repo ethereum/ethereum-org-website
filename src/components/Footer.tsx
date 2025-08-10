@@ -115,8 +115,8 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("get-eth"),
         },
         {
-          href: "/dapps/",
-          text: t("decentralized-applications-dapps"),
+          href: "/apps/",
+          text: t("application-explorer"),
         },
         {
           href: "/stablecoins/",

@@ -2,21 +2,14 @@
 
 import { useState } from "react"
 
+import { Story } from "@/lib/types"
+
 import Twitter from "@/components/icons/twitter.svg"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
 import { useTranslation } from "@/hooks/useTranslation"
-
-type Story = {
-  name: string
-  storyEnglish: string
-  storyOriginal: string | null
-  twitter?: string
-  country: string
-  date: string
-}
 
 type StoriesProps = {
   stories: Story[]
