@@ -1,4 +1,12 @@
-import { Castle, ChevronDown, LockKeyhole, Shield } from "lucide-react"
+import {
+  Castle,
+  ChevronDown,
+  Landmark,
+  LockKeyhole,
+  Shield,
+  SquareCode,
+  User,
+} from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
@@ -8,8 +16,9 @@ import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
 import MainArticle from "@/components/MainArticle"
+import { CardTitle } from "@/components/ui/card"
 import Link from "@/components/ui/Link"
-import { ListItem, OrderedList } from "@/components/ui/list"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -37,6 +46,36 @@ const IconBox = ({
     )}
     {...props}
   />
+)
+
+const HighlightStack = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "divide-y [&>div:first-child]:pt-0 [&>div:last-child]:pb-0 [&>div]:py-8",
+      className
+    )}
+    {...props}
+  />
+)
+
+const HighlightCard = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn("flex flex-col gap-4 pb-8 lg:flex-row", className)}
+    {...props}
+  />
+)
+
+const HighlightCardContent = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div className={cn("space-y-6 text-body-medium", className)} {...props} />
 )
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
@@ -214,67 +253,67 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
             </div>
 
-            <div data-label="TODO-what-is-table">
-              <div className="flex flex-col gap-4 border-b pb-8 lg:flex-row">
+            <HighlightStack data-label="ethereum-network-table">
+              <HighlightCard>
                 <IconBox>
                   <Shield className="text-accent-a" />
                 </IconBox>
                 <div>
-                  <h3 className="mb-2 text-2xl">Censorship resistant</h3>
-                  <div className="space-y-6">
-                    <p className="text-body-medium">
+                  <CardTitle className="mb-2">Censorship resistant</CardTitle>
+                  <HighlightCardContent>
+                    <p>
                       While traditional apps and financial services rely on
                       banks or corporations that can decide to block access or
                       freeze accounts, dapps on Ethereum are censorship
                       resistant.
                     </p>
-                    <p className="text-body-medium">
+                    <p>
                       This is because ethereum&apos;s network of nodes record
                       every single transaction without discrimination—and this
                       rule is embedded in the code.
                     </p>
-                  </div>
+                  </HighlightCardContent>
                 </div>
-              </div>
-              <div className="flex flex-col gap-4 border-b py-8 lg:flex-row">
+              </HighlightCard>
+              <HighlightCard>
                 <IconBox>
                   <LockKeyhole className="text-accent-b" />
                 </IconBox>
                 <div>
-                  <h3 className="mb-2 text-2xl">Highly secure</h3>
-                  <div className="space-y-6">
-                    <p className="text-body-medium">
+                  <CardTitle className="mb-2">Highly secure</CardTitle>
+                  <HighlightCardContent>
+                    <p>
                       While many apps today are hosted on cloud providers like
                       AWS and can be vulnerable to takedowns and attacks, dapps
                       on Ethereum are secured by the network itself. Every node
                       stores and syncs the entire state of Ethereum, including
                       all contracts.
                     </p>
-                    <p className="text-body-medium">
+                    <p>
                       If someone tried to change a contract, the network would
                       reject it since it wouldn&apos;t match their records. To
                       take down a single app, attackers need to take over the
                       entire network, which would costs billions and be
                       extremely hard to coordinate.
                     </p>
-                  </div>
+                  </HighlightCardContent>
                 </div>
-              </div>
-              <div className="flex flex-col gap-4 pt-8 lg:flex-row">
+              </HighlightCard>
+              <HighlightCard>
                 <IconBox>
                   <Castle className="text-accent-c" />
                 </IconBox>
                 <div>
-                  <h3 className="mb-2 text-2xl">Durable and reliable</h3>
-                  <div className="space-y-6">
-                    <p className="text-body-medium">
+                  <CardTitle className="mb-2">Durable and reliable</CardTitle>
+                  <HighlightCardContent>
+                    <p>
                       Downtime on cloud hosting platforms can take apps offline,
                       but Ethereum&apos;s design ensures <a>perfect uptime</a>.
                       The network will keep running even if some nodes go
                       offline due to software bugs, government crackdowns,
                       natural disaster, or war.
                     </p>
-                    <p className="text-body-medium">
+                    <p>
                       Millions of people use thousands of dapps on Ethereum
                       every day. While high demand can lead to elevated
                       transaction fees, it reflects the strength of a network
@@ -282,10 +321,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                       guarantee that it&apos;s always available when you need
                       it.
                     </p>
-                  </div>
+                  </HighlightCardContent>
                 </div>
-              </div>
-            </div>
+              </HighlightCard>
+            </HighlightStack>
 
             <div data-label="layer-2-callout">
               <h3 className="mb-5 text-xl">Ethereum extensions (Layer 2)</h3>
@@ -424,7 +463,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <p className="text-lg font-bold">
                 When you send $10 in stablecoins to a friend on Ethereum:
               </p>
-              <OrderedList className="[&>li]:mb-0">
+              <OrderedList className="[&>li]:mb-0.5">
                 <ListItem>
                   You open your wallet, add the account address and the amount,
                   then click send.
@@ -517,6 +556,153 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <h3 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[4].title}
             </h3>
+            <div className="space-y-6">
+              <p>
+                People use Ethereum to do things that weren&apos;t possible
+                before.
+              </p>
+              <p>
+                Farmers in Kenya can receive{" "}
+                <a>automated insurance on their crops</a>
+                without applying to a bank. Businesses like{" "}
+                <strong>Visa</strong> can launch{" "}
+                <a>new payment systems that works globally</a> from day one.
+                Global organizations like the <strong>UN</strong> can deliver{" "}
+                <a>aid to refugees</a> saving millions in bank fees.
+              </p>
+              <p>
+                These dapps and assets run on Ethereum using open-source code
+                and can&apos;t be restricted, censored or turned off.
+              </p>
+              <p>Here&apos;s how different groups are using it today:</p>
+            </div>
+
+            <HighlightStack data-label="what-is-table">
+              <HighlightCard>
+                <IconBox>
+                  <User className="text-accent-a" />
+                </IconBox>
+                <div>
+                  <CardTitle className="mb-2">Consumers</CardTitle>
+                  <HighlightCardContent>
+                    <p>
+                      Millions of people already use dapps on Ethereum to move
+                      money, trade, and own digital assets every day. Unlike
+                      traditional apps, there&apos;s no need to register with
+                      your name, wait for a bank to approve you, or hand over
+                      your personal data.{" "}
+                    </p>
+                    <p>
+                      With just a wallet and an internet connection you can:
+                    </p>
+                    <UnorderedList className="[&>li]:mb-0.5">
+                      <ListItem>
+                        Access financial services without a bank account or
+                        credit history
+                      </ListItem>
+                      <ListItem>
+                        Own digital collectibles, art, and assets that
+                        can&apos;t be copied or confiscated
+                      </ListItem>
+                      <ListItem>
+                        Sign into dapps using your wallet, not your email — no
+                        passwords, no personal information necessary
+                      </ListItem>
+                      <ListItem>
+                        Participate in global communities where you can vote,
+                        contribute, and earn borderlessly{" "}
+                      </ListItem>
+                    </UnorderedList>
+                  </HighlightCardContent>
+                </div>
+              </HighlightCard>
+              <HighlightCard>
+                <IconBox>
+                  <SquareCode className="text-accent-b" />
+                </IconBox>
+                <div>
+                  <CardTitle className="mb-2">
+                    Businesses & developers
+                  </CardTitle>
+                  <HighlightCardContent>
+                    <UnorderedList className="[&>li]:mb-0.5">
+                      <ListItem>
+                        Launch dapps with built-in global payments system from
+                        day one
+                      </ListItem>
+                      <ListItem>
+                        Deploy tamper-proof contracts that{" "}
+                        <strong>automatically enforce agreements</strong>
+                      </ListItem>
+                      <ListItem>
+                        Create financial products that anyone can build on and
+                        drive value to{" "}
+                      </ListItem>
+                    </UnorderedList>
+                    <p>
+                      For example,{" "}
+                      <a>
+                        PayPal launched its own stablecoin, PYUSD, on Ethereum
+                      </a>
+                      . This is a sign that even the world&apos;s largest
+                      payments companies see the benefit of Ethereum&apos;s open
+                      and programmable nature.
+                    </p>
+                  </HighlightCardContent>
+                </div>
+              </HighlightCard>
+              <HighlightCard>
+                <IconBox>
+                  <Landmark className="text-accent-c" />
+                </IconBox>
+                <div>
+                  <CardTitle className="mb-2">Governments</CardTitle>
+                  <HighlightCardContent>
+                    <p>
+                      Governments are also starting to explore what Ethereum
+                      makes possible.
+                    </p>
+                    <UnorderedList className="[&>li]:mb-0.5">
+                      <ListItem>
+                        <strong>Distribute public funds</strong> and benefits
+                        directly to citizens with full transparency
+                      </ListItem>
+                      <ListItem>
+                        <strong>Issue digital IDs</strong> or records that are
+                        verifiable and portable across borders
+                      </ListItem>
+                      <ListItem>
+                        Build{" "}
+                        <strong>
+                          tamper-proof public infrastructure for voting
+                        </strong>
+                        , land titles, and registries
+                      </ListItem>
+                    </UnorderedList>
+                    <p>
+                      In another case, Ukraine&apos;s Ministry of Digital
+                      Transformation{" "}
+                      <a>used Ethereum to distribute wartime aid</a>.
+                    </p>
+                    <p>
+                      Funds were sent directly to citizens and NGOs using open
+                      smart contracts, providing transparency, speed, and
+                      accountability during a crisis.
+                    </p>
+                  </HighlightCardContent>
+                </div>
+              </HighlightCard>
+            </HighlightStack>
+
+            <Link
+              href="/learn/" // TODO: Confirm links
+              className="group block no-underline"
+            >
+              <span className={twFlipForRtl}>→</span>{" "}
+              <span className="group-hover:underline">
+                Learn more about what Ethereum is used for
+              </span>
+            </Link>
           </Section>
 
           <Section id={getId(tocItems[5].url)} className="space-y-14">
