@@ -18,7 +18,7 @@ description: 使用 Crowdin 翻譯 ethereum.org 的說明
 
 你需要登入 Crowdin 帳戶，如果你還沒有則請註冊帳戶。 只需要電子郵件帳戶和密碼便可註冊。
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   參與專案
 </ButtonLink>
 

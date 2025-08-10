@@ -1,5 +1,4 @@
 import { HTMLAttributes } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
@@ -25,6 +24,8 @@ import { List, ListItem } from "@/components/ui/list"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
 import { ContentLayout } from "../ContentLayout"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1 className="md:text-5xl" {...props} />
@@ -73,7 +74,14 @@ export const stakingComponents = {
 }
 
 type StakingLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+  Pick<
+    MdPageContent,
+    | "slug"
+    | "tocItems"
+    | "contentNotTranslated"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: StakingFrontmatter
   }
 
@@ -83,6 +91,8 @@ export const StakingLayout = ({
   slug,
   tocItems,
   contentNotTranslated,
+  contributors,
+  lastEditLocaleTimestamp,
 }: StakingLayoutProps) => {
   const { t } = useTranslation("page-staking")
 
@@ -163,6 +173,8 @@ export const StakingLayout = ({
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}

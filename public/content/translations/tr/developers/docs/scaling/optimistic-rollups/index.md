@@ -253,17 +253,11 @@ Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hak
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### İyimser toplamaları kullanın {#use-optimistic-rollups}
-
-Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok İyimser toplama uygulaması mevcuttur:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## İyimser toplamalara dair daha fazlası
 
 - [İyimser toplamalar nasıl çalışır? (Tam klavuz)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Blokzincir Toplaması nedir? Teknik Giriş](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Temel Arbitrum Rehberi](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Optimism'in Toplaması aslında nasıl çalışıyor?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Temel Arbitrum Rehberi](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Optimism'in Toplaması aslında nasıl çalışıyor?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [İyimser Sanal Makine nedir?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

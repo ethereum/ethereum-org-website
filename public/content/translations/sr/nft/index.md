@@ -1,15 +1,15 @@
 ---
 title: Nezamenjivi tokeni (NFT)
-description: Pregled NFT-ova na Etherium-u
+description: Pregled NFT-ova na Ethereum-u
 lang: sr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Logo Eth-a prikazan pomoću holograma.
-summaryPoint1: Način da se bilo šta jedinstveno prikaže kao sredstvo zasnovano na Etherium-u.
+summaryPoint1: Način da se bilo šta jedinstveno prikaže kao sredstvo zasnovano na Ethereum-u.
 summaryPoint2: NFT-ovi daju više moći kreatorima sadržaja nego ikada ranije.
-summaryPoint3: Pokreću ih pametni ugovori na Etherium-ovom lancu blokova.
+summaryPoint3: Pokreću ih pametni ugovori na Ethereum-ovom lancu blokova.
 ---
 
 ## Šta su NFT-ovi? {#what-are-nfts}

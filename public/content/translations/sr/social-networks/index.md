@@ -41,7 +41,7 @@ Mnoge društvene mreže zasnovane na lancu blokova imaju svoje tokene kojima vr�
 
 3. Decentralizovane društvene mreže eliminišu posrednika. **Tvorci sadržaja imaju direktno vlasništvo nad svojim sadržajem** i mogu direktno da komuniciraju sa pratiocima, obožavateljima, kupcima i drugim akterima, bez ičega između njih, osim pametnog ugovora.
 
-4. Kao što decentralizovane aplikacije koji funkcionišu na Etherum mreži, koju održavaja globalna mreža povezanih korisnika, decentralizovane društvene mreže su **manje podložne prekidima i ispadima servera**.
+4. Kao što decentralizovane aplikacije koji funkcionišu na Ethereum mreži, koju održavaja globalna mreža povezanih korisnika, decentralizovane društvene mreže su **manje podložne prekidima i ispadima servera**.
 
 5. Decentralizovane društvene platforme nude **poboljšani okvir za zaradu** za tvorce sadržaja pomoću [nezamenjivih tokena (NFT-ova)](/glossary/#nft), kriptouplata u aplikacijama i sl.
 

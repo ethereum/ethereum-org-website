@@ -8,10 +8,10 @@ alt: "Ethereum yol haritası"
 summaryPoints:
 buttons:
   - 
-    label: Sonraki yükseltmeler
+    content: Sonraki yükseltmeler
     toId: hangi-degişiklikler-geliyor
   - 
-    label: Geçmiş yükseltmeler
+    content: Geçmiş yükseltmeler
     href: /history/
     variant: ana hat
 ---

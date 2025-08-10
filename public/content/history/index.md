@@ -29,12 +29,12 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 
 | Upgrade Name | Devcon Year | Devcon Number | Upgrade Date |
 | ------------ | ----------- | ------------- | ------------ |
-| Berlin       | 2015        | 0             | Apr 15, 2021 |
-| London       | 2016        | I             | Aug 5, 2021  |
-| Shanghai     | 2017        | II            | Apr 12, 2023 |
-| **Cancun**   | 2018        | III           | Mar 13, 2024 |
-| _Prague_     | 2019        | IV            | TBD          |
-| _Osaka_      | 2020        | V             | TBD          |
+| Berlin       | 2014        | 0             | Apr 15, 2021 |
+| London       | 2015        | I             | Aug 5, 2021  |
+| Shanghai     | 2016        | II            | Apr 12, 2023 |
+| Cancun       | 2017        | III           | Mar 13, 2024 |
+| **Prague**   | 2018        | IV            | TBD - Next   |
+| _Osaka_      | 2019        | V             | TBD          |
 | _Bogota_     | 2022        | VI            | TBD          |
 | _Bangkok_    | 2024        | VII           | TBD          |
 
@@ -42,29 +42,81 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 
 Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the **consensus layer** are named after celestial stars beginning with letters that proceed in alphabetical order:
 
-| Upgrade Name                                                | Upgrade Date |
-| ----------------------------------------------------------- | ------------ |
-| Beacon Chain genesis                                        | Dec 1, 2020  |
-| [Altair](https://en.wikipedia.org/wiki/Altair)              | Oct 27, 2021 |
-| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)        | Sep 6, 2022  |
-| [Capella](https://en.wikipedia.org/wiki/Capella)            | Apr 12, 2023 |
-| [**Deneb**](https://en.wikipedia.org/wiki/Deneb)            | Mar 13, 2024 |
-| [_Electra_](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD          |
+| Upgrade Name                                                  | Upgrade Date |
+| ------------------------------------------------------------- | ------------ |
+| Beacon Chain genesis                                          | Dec 1, 2020  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)                | Oct 27, 2021 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)          | Sep 6, 2022  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)              | Apr 12, 2023 |
+| [Deneb](https://en.wikipedia.org/wiki/Deneb)                  | Mar 13, 2024 |
+| [**Electra**](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD - Next   |
+| [_Fulu_](<https://en.wikipedia.org/wiki/Fulu_(star)>)         | TBD          |
 
 **Combined naming**
 
-The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ upgrade, which may be referred to as "**Dencun**."
+The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ (**Dencun**), and the _Prague-Electra_ (**Pectra**) upgrades.
 
 | Execution Upgrade | Consensus Upgrade | Short Name |
 | ----------------- | ----------------- | ---------- |
 | Shanghai          | Capella           | "Shapella" |
 | Cancun            | Deneb             | "Dencun"   |
+| Prague            | Electra           | "Pectra"   |
+| Osaka             | Fulu              | "Fusaka"   |
 
 </ExpandableCard>
 
 Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); and [EIP-1559](#london)
 
 Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
+
+<Divider />
+
+## 2025 {#2025}
+
+### Prague-Electra ("Pectra") {#pectra}
+
+<NetworkUpgradeSummary name="pectra" />
+
+The Prague-Electra ("Pectra") upgrade included several improvements to the Ethereum protocol aimed at enhancing the experience for all users, layer 2 networks, stakers and node operators.
+
+Staking got an upgrade with compounding validator accounts, and improved control over staked funds using the execution withdrawal address. EIP-7251 increased the max effective balance for a single validator to 2048, improving capital efficiency for stakers. EIP-7002 enabled an execution account to securely trigger validator actions, including exiting, or withdrawing portions of the funds, improving the experience for ETH stakers, while helping strengthen accountability for node operators.
+
+Other parts of the upgrade focused on improving the experience for regular users. EIP-7702 brought the ability for a regular non-smart-contract account ([EOA](/glossary/#eoa)) to execute code similar to a smart contract. This unlocked unbounded new functionality for traditional Ethereum accounts, such as transaction batching, gas sponsorship, alternative authentication, programmable spending controls, account recovery mechanisms and more.
+
+<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+
+Better user experience:
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Set EOA account code</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Blob throughput increase</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Increase calldata cost</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Add blob schedule to EL config files</em></li>
+</ul>
+
+Better staking experience:
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Increase the <code>MAX_EFFECTIVE_BALANCE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Execution layer triggerable exits</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>General purpose execution layer requests</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Supply validator deposits on chain</em></li>
+</ul>
+
+Protocol efficiency and security improvements:
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Precompile for BLS12-381 curve operations</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Save historical block hashes in state</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Move committee index outside Attestation</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Pectra.wtf](https://pectra.wtf)
+- [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Prague-Electra ("Pectra") FAQ](/roadmap/pectra/)
 
 <Divider />
 
@@ -102,7 +154,7 @@ Notably this includes EIP-4844, known as **Proto-Danksharding**, which significa
 
 The Deneb upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards improving scalability. This upgrade comes in tandem with the Cancun execution upgrades to enable Proto-Danksharding (EIP-4844), along with other improvements to the Beacon Chain.
 
-Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdrawal their funds at any time, without needing to ask permission from anyone.
+Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdraw their funds at any time, without needing to ask permission from anyone.
 
 EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate that validators can join the network to eight (8) per epoch. Since ETH issuance is proportional to total ETH staked, limiting the number of validators joining caps the _growth rate_ of newly issued ETH, while also reducing hardware requirements for node operators, helping decentralization.
 
@@ -426,7 +478,7 @@ The Constantinople fork:
 <ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain on-chain actions.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain onchain actions.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>allows you to interact with addresses that have yet to be created.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduces the <code>EXTCODEHASH</code> instruction to retrieve the hash of another contract's code.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake and reduces block reward from 3 to 2 ETH.</em></li>
@@ -529,7 +581,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 #### Summary {#dao-fork-summary}
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/learn/understanding-the-dao-attack/) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/learn/understanding-the-dao-attack/) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
 
 This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 

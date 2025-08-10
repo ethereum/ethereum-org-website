@@ -6,9 +6,9 @@ lang: pt-br
 
 Para que um aplicativo web interaja com a cadeia de blocos Ethereum (ou seja, leia os dados da blockchain e/ou envie transações para a rede), ele deve se conectar a um nó Ethereum.
 
-Para esse propósito, cada cliente Ethereum implementa a especificação [JSON-RPC](/developers/docs/apis/json-rpc/), então há um conjunto uniforme de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) com os quais os aplicativos podem conta.
+Para esse propósito, cada cliente Ethereum implementa a especificação [JSON-RPC](/developers/docs/apis/json-rpc/), para que haja um conjunto uniforme de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) com os quais os aplicativos podem conta.
 
-Se você quiser usar JavaScript para se conectar a um nó Ethereum, é possível usar o JavaScript vanilla, mas existem várias bibliotecas convenientes dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, desenvolvedores podem escrever métodos intuitivos, one-line para inicializar solicitações JSON RPC (sob o capô) que interagem com Ethereum.
+Se você quiser usar JavaScript para se conectar a um nó Ethereum, é possível usar o JavaScript vanilla, mas existem várias bibliotecas convenientes dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, os desenvolvedores podem escrever intuitivamente métodos on-line para iniciar requisições JSON RPC (por debaixo dos panos) que interajam com a Ethereum.
 
 Observe que, desde [A Fusão](/roadmap/merge/) (The Merge), duas partes conectadas do software Ethereum — um cliente de execução e um cliente de consenso — são necessárias para executar um nó. Certifique-se de que seu nó inclui tanto o cliente de execução quanto o consensual. Se o seu nó não estiver na sua máquina local (por exemplo, seu nó está sendo executado em uma instância da AWS) atualize os endereços IP no tutorial adequadamente. Para obter mais informações, veja nossa página no [executando um nó](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -29,12 +29,12 @@ Usando provedores, essas bibliotecas permitem que você se conecte à Ethereum e
 **Exemplo de Ethers**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// Um BrowserProvider envolve um provedor Web3 padrão, que é
+// o que o MetaMask injeta como window.ethereum em cada página
+const provider = new ethers.BrowserProvider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// O plugin MetaMask também permite assinar transações para
+// enviar ether e pagar para alterar o estado dentro da blockchain.
 // Para isso, precisamos do signatário da conta...
 const signer = provider.getSigner()
 ```
@@ -47,7 +47,7 @@ var web3 = new Web3("http://localhost:8545")
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 // mudar provedor
-web3.etProvider("ws://localhost:8546")
+web3. etProvider("ws://localhost:8546")
 // ou
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
@@ -80,29 +80,29 @@ Veja alguns exemplos de Ethers
 // Cria uma instância de carteira de um mnemonic...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...ou de uma chave privada
+// ...ou a partir de uma chave privada
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Endereço como uma Promise para Signer API
+// O endereço como uma Promise conforme a API Signer
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Um endereço da carteira também está disponível de forma síncrona
+// O endereço de uma Wallet também está disponível de forma síncrona
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// Componentes internos criptográficos
+// Os componentes criptográficos internos
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// O mnemônico da carteira
+// A frase mnemônica da wallet
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,8 +110,8 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Nota: Uma carteira criada com chave privada não possui
-//       um mnemônico (a derivação previne isso)
+// Nota: Uma wallet criada com uma chave privada não
+//       possui uma frase mnemônica (a derivação a impede)
 walletPrivateKey.mnemonic
 // null
 
@@ -128,7 +128,8 @@ tx = {
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// O método connect retorna uma nova instância da carteira conectada a um provedor
+// O método connect retorna uma nova instância da
+// Wallet conectada a um provedor
 wallet = walletMnemonic.connect(provider)
 
 // Consultando a rede
@@ -280,11 +281,11 @@ ethers.utils.formatEther(balance)
 
 ## Leitura adicional {#further-reading}
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 
-- [Nós e clientes](/developers/docs/nodes-and-clients/)
+- [ Nós e clientes](/developers/docs/nodes-and-clients/)
 - [Estruturas de desenvolvimento](/developers/docs/frameworks/)
 
 ## Tutoriais relacionados {#related-tutorials}

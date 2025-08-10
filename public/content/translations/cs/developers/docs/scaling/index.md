@@ -100,13 +100,13 @@ _Upozornění: Ve videu je pojem „Vrstva 2“ používán k označení všech 
 
 ## Další informace {#further-reading}
 
-- [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)– _Vitalik Buterin_
+- [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) – _Vitalik Buterin_
 - [Aktuální analytika škálovacích řešení vrstvy 2 pro Ethereum](https://www.l2beat.com/)
 - [Hodnocení škálovacích řešení vrstvy 2 pro Ethereum: Porovnávací rámec](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Neúplný průvodce rollupy](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-powered ZK-Rollups: Světoví šampioni](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistické rollupy vs ZK Rollupy](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Zero-Knowledge Blockchain Scalability](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Proč jsou rollupy + data shards jediným udržitelným řešením vysoké škálovatelnosti](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Jaké vrstvy 3 dávají smysl?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Dostupnost dat: Jak se rollupy přestaly bát a začaly milovat Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)

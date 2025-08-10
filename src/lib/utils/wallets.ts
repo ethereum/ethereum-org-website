@@ -3,6 +3,7 @@ import { shuffle, union } from "lodash"
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { capitalize } from "@/lib/utils/string"
 
+import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import walletsData from "@/data/wallets/wallet-data"
 
 import {
@@ -27,6 +28,10 @@ export const getNonSupportedLocaleWallets = (locale: string) =>
       (wallet) => !wallet.languages_supported.includes(locale as Lang)
     )
   )
+
+export const getNewToCryptoWallets = () => {
+  return walletsData.filter((wallet) => newToCrypto.includes(wallet.name))
+}
 
 // Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
 export const getWalletPersonas = (wallet: WalletData) => {
@@ -194,4 +199,17 @@ export const getLanguageCountWalletsData = (locale: string) => {
   )
   languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
   return languageCountWalletsData
+}
+
+export const getFilteredWalletsCount = (
+  wallets: WalletData[],
+  filters: WalletFilter
+) => {
+  return wallets.filter((wallet) => {
+    const activeFilters = Object.entries(filters).filter(
+      ([, value]) => value === true
+    )
+
+    return activeFilters.every(([feature]) => wallet[feature] === true)
+  }).length
 }

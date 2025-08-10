@@ -320,11 +320,11 @@ lang: en
 
 ## O {#section-o}
 
-<GlossaryDefinition term="off-chain" />
+<GlossaryDefinition term="offchain" />
 
 <GlossaryDefinition term="ommer" />
 
-<GlossaryDefinition term="on-chain" />
+<GlossaryDefinition term="onchain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -473,6 +473,8 @@ lang: en
 <GlossaryDefinition term="web3" />
 
 <GlossaryDefinition term="wei" />
+
+<GlossaryDefinition term="wrapped-token" />
 
 <Divider />
 

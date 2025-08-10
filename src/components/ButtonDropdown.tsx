@@ -1,5 +1,7 @@
+"use client"
+
 import React, { useState } from "react"
-import { MdMenu } from "react-icons/md"
+import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -57,7 +59,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
           variant="outline"
           className={cn("flex justify-between", className)}
         >
-          <MdMenu />
+          <Menu />
           <span className="flex-1 text-center">{selectedItem}</span>
         </Button>
       </DropdownMenuTrigger>
@@ -72,7 +74,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
             return (
               <DropdownMenuItem
                 key={item.text}
-                className="justify-center"
+                className="justify-center text-center"
                 onClick={() => handleClick(item, idx)}
                 asChild
               >
@@ -89,7 +91,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
           return (
             <DropdownMenuItem
               key={item.text}
-              className="justify-center"
+              className="justify-center text-center"
               onClick={() => handleClick(item, idx)}
             >
               <span>{text}</span>

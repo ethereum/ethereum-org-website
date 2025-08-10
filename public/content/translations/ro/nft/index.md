@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Sigla Eth-ului afișată printr-o hologramă.
 summaryPoint1: O manieră de reprezenta ceva unic ca un activ bazat pe Ethereum.
-summaryPoint2: NTF-urile oferă putere mai multă creatorilor de conținut decât oricând.
+summaryPoint2: NFT-urile oferă putere mai multă creatorilor de conținut decât oricând.
 summaryPoint3: Sunt acționate de contractele inteligente pe blockchain-ul Ethereum.
 ---
 
@@ -136,11 +136,11 @@ Să luăm ca exemplu un bilet la un eveniment sportiv. Tot aşa cum organizatoru
 
 Unele NFT-uri vor plăti în mod automat redevențe creatorilor lor atunci când sunt vândute. Conceptul este încă în curs de dezvoltare, însă este unul dintre cele mai puternice. De exemplu, proprietarii originali ai [EulerBeats Originals](https://eulerbeats.com/) câștigă o redevență de 8% la fiecare vânzare a unui NFT. Iar o serie de platforme, cum ar fi [Foundation](https://foundation.app) și [Zora](https://zora.co/), oferă redevențe pentru artiștii lor.
 
-Aceasta se petrece complet automat, deci creatorii nu au decât să stea liniștiți și să câştige redevențe în momentul în care opera lor este vândută de la o persoană la alta. În momentul de față, calculul redevențelor se face de manieră foarte manuală și nu are precizia necesară – mulți creatori nu sunt plătiți așa cum merită. Atunci când NTF-ul dvs. este programat pentru redevențe, nu veți pierde niciodată nimic.
+Aceasta se petrece complet automat, deci creatorii nu au decât să stea liniștiți și să câştige redevențe în momentul în care opera lor este vândută de la o persoană la alta. În momentul de față, calculul redevențelor se face de manieră foarte manuală și nu are precizia necesară – mulți creatori nu sunt plătiți așa cum merită. Atunci când NFT-ul dvs. este programat pentru redevențe, nu veți pierde niciodată nimic.
 
 ## La ce se utilizează NFT-urile? {#nft-use-cases}
 
-Uitaţi câteva informații suplimentare despre unele cazuri de utilizare și viziuni mai bine dezvoltate pentru utilizarea NTF-urilor pe Ethereum.
+Uitaţi câteva informații suplimentare despre unele cazuri de utilizare și viziuni mai bine dezvoltate pentru utilizarea NFT-urilor pe Ethereum.
 
 - [Conținut digital](#nfts-for-creators)
 - [Articole de joc](#nft-gaming)
@@ -158,7 +158,7 @@ Atunci când un artist publică o lucrare pe o rețea socială, aceasta câștig
 
 NFT-urile acționează o nouă economie, în care creatorii nu cedează proprietatea asupra conținutului lor platformelor care le publică acel conținut. Dreptul de proprietate este incorporat în conținutul însuși.
 
-Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar atunci când noul proprietar ar revinde NTF-urile, creatorul original poate primi în mod automat redevențe. Garanția acestui lucru este asigurată prin faptul că, la orice vânzare a sa, adresa creatorului este integrată în metadatele tokenului – iar metadatele nu pot fi modificate.
+Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar atunci când noul proprietar ar revinde NFT-urile, creatorul original poate primi în mod automat redevențe. Garanția acestui lucru este asigurată prin faptul că, la orice vânzare a sa, adresa creatorului este integrată în metadatele tokenului – iar metadatele nu pot fi modificate.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
@@ -356,7 +356,7 @@ Procesul a început deja. [Lanțul Beacon](/roadmap/beacon-chain/), prima actual
 
 ## Construiți cu NFT-uri {#build-with-nfts}
 
-Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscut sub numele de [ERC-721](/developers/docs/standards/tokens/erc-721/). Totuși, există și alte standarde pe care ați putea dori să le analizați. Standardul [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite tokenurile semi-fungibile, care sunt deosebit de utile în lumea jocurilor. Mai recent, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a fost propus pentru a crește mult eficiența emiterii NFT-urilor. Acest standard vă permite să creați cât de multe tokenuri doriți într-o singură tranzacție!
+Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscut sub numele de [ERC-721](/developers/docs/standards/tokens/erc-721/). Totuși, există și alte standarde pe care ați putea dori să le analizați. Standardul [ERC-1155](https://medium.com/enjin-coin/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite tokenurile semi-fungibile, care sunt deosebit de utile în lumea jocurilor. Mai recent, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a fost propus pentru a crește mult eficiența emiterii NFT-urilor. Acest standard vă permite să creați cât de multe tokenuri doriți într-o singură tranzacție!
 
 ## Referințe suplimentare {#further-reading}
 

@@ -26,6 +26,7 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Nyílt forráskódú eszközök {#open-source-tools}
 
@@ -213,7 +214,7 @@ A validátorok felelnek a blokkok előterjesztéséért és tanúsításáért a
 
 ### Tanúsítások {#attestations}
 
-A tanúsítások „igen” szavazatok arra, hogy a blokkot a lánchoz adják. Az adataik kapcsolódnak a tanúsítások nyilvántartásához és a tanúsító validátorokhoz.
+A tanúsítások "igen" szavazatok arra, hogy a blokkot a lánchoz adják. Az adataik kapcsolódnak a tanúsítások nyilvántartásához és a tanúsító validátorokhoz.
 
 - Slot – a slot, amelyben a tanúsítás történt.
 - Bizottságindex – a bizottság indexe az adott slotban.
@@ -237,12 +238,12 @@ A konszenzusréteg felső szintű adatai a következők:
 
 ## Blokk felfedezők {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – egy blokkfelfedező, amelyben adatokat kérhet le az Ethereum-főhálózatról és a Goerli tesztelőhálózatról.
+- [Etherscan](https://etherscan.io/) – egy blokkfelfedező, amelyben adatokat kérhet le az Ethereum-főhálózatról és a Sepolia tesztelőhálózatról.
 - [3xpl](https://3xpl.com/ethereum) - reklámmentes nyílt forráskódú Ethereum felfedező, melyből le lehet tölteni az adatokat
-- [Beaconcha.in](https://beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Goerli teszthálózatra
+- [Beaconcha.in](https://beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Sepolia teszthálózatra
 - [Blockchair](https://blockchair.com/ethereum) – a legdiszkrétebb Ethereum-felfedező. Alkalmas (memóriakészlet) adatok szűrésére és válogatására is
 - [Etherchain](https://www.etherchain.org/) – egy Ethereum-főhálózati blokkfelfedező
-- [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, amely az Ethereum-főhálózaton és a Kovan tesztelőhálózaton található tokenekre fókuszál
+- [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, amely az Ethereum-főhálózaton és a Sepolia tesztelőhálózaton található tokenekre fókuszál
 - [Rantom](https://rantom.app/) – egy felhasználóbarát, nyílt forráskódú DeFi- és NFT-tranzakciómegtekintő a részletesebb betekintéshez
 - [Ethernow](https://www.ethernow.xyz/) – egy valós idejű tranzakciókereső, amely lehetővé teszi az Ethereum főhálózat lánc előtti rétegének megtekintését
 

@@ -2,12 +2,12 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import allQuizzesData from "@/data/quizzes"
 
-import { getTranslation } from "@/storybook-utils"
-
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizProgressBar } from "../QuizWidget/QuizProgressBar"
 
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / ProgressBar",
@@ -16,14 +16,18 @@ const meta = {
     questions: layer2Questions,
   },
   decorators: [
-    (Story, { args }) => (
-      <QuizContent
-        title={getTranslation(allQuizzesData[LAYER_2_QUIZ_KEY].title)}
-        answerStatus={args.answerStatus}
-      >
-        <Story />
-      </QuizContent>
-    ),
+    (Story, { args }) => {
+      const { t } = useTranslation()
+
+      return (
+        <QuizContent
+          title={t(allQuizzesData[LAYER_2_QUIZ_KEY].title)}
+          answerStatus={args.answerStatus}
+        >
+          <Story />
+        </QuizContent>
+      )
+    },
   ],
 } satisfies Meta<typeof QuizProgressBar>
 

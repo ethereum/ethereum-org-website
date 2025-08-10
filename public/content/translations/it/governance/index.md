@@ -48,7 +48,7 @@ Ci sono diversi stakeholder nella [ community Ethereum](/community/), ognuno dei
 - **Gestori di nodi**: queste persone eseguono nodi che propagano blocchi e transazioni, rifiutando eventuali transazioni o blocchi invalidi che intercettano. [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/).
 - **Autori EIP**: queste persone propongono modifiche al protocollo Ethereum, sotto forma di Ethereum Improvement Proposal (EIP). [Maggiori informazioni sulle EIP](/eips/).
 - **Validatori**: queste persone eseguono nodi che possono aggiungere nuovi blocchi alla blockchain Ethereum.
-- **Sviluppatori del protocollo** (o "Core Developer" ): queste persone mantengono le varie implementazioni di Ethereum (ad esempio go-ethereum, Nethermind, Besu ed Erigon al livello di esecuzione o Prysm, Lighthouse, Nimbus, Teku e Lodestar al livello di consenso). [Maggiori informazioni sui client di Ethereum](/developers/docs/nodes-and-clients/).
+- **Sviluppatori del protocollo** (o "Sviluppatori core"): coloro che mantengono le varie implementazioni di Ethereum (ad es. go-ethereum, Nethermind, Besu, Erigon, Reth al livello di esecuzione, o Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine al livello di consenso). [Maggiori informazioni sui client di Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: chiunque può far parte di più gruppi (ad esempio uno sviluppatore di protocollo può sostenere un EIP, essere validatore sulla beacon chain e usare applicazioni DeFi). Tuttavia, per chiarezza concettuale risulta più facile distinguerli._
 
@@ -118,7 +118,7 @@ In genere le controversie sono gestite mediante discussioni approfondite nei for
 
 Le diramazioni si verificano quando occorre eseguire aggiornamenti tecnici o modifiche importanti alla rete, tali da cambiare le "regole" del protocollo. I [client di Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software e implementare le regole della nuova diramazione.
 
-La diramazione DAO arrivò in risposta all'[attacco alla DAO del 2016](https://www.coindesk.com/understanding-dao-hack-journalists), durante il quale un contratto [DAO](/glossary/#dao) non sicuro fu svuotato di oltre 3,6 milioni di ETH in una sola volta. La diramazione ha spostato i fondi dal contratto lacunoso a uno nuovo, consentendo a chiunque avesse perso i fondi di hackerare per recuperarli.
+La diramazione DAO arrivò in risposta all'[attacco alla DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), durante il quale un contratto [DAO](/glossary/#dao) non sicuro fu svuotato di oltre 3,6 milioni di ETH in una sola volta. La diramazione ha spostato i fondi dal contratto lacunoso a uno nuovo, consentendo a chiunque avesse perso i fondi di hackerare per recuperarli.
 
 Questo corso d'azione fu votato dalla community di Ethereum. Ogni titolare di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisione di creare la diramazione ottenne oltre l'85% dei voti.
 

@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
@@ -29,19 +31,19 @@ const buttonVariants = cva(
     variants: {
       variant: {
         solid: cn(
-          "text-white bg-primary-action !border-transparent",
+          "text-white bg-primary-action border-transparent",
           "hover:!text-white hover:bg-primary-action-hover", // Hover
           "active:bg-primary-action-hover", // Active
           "disabled:bg-disabled disabled:text-background" // Disabled
         ),
         outline: "", // Base styling
         ghost: "border-transparent hover:shadow-none",
-        link: "border-transparent hover:shadow-none underline py-0 px-1 active:text-primary",
+        link: "border-transparent hover:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
       },
       size: {
-        lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg focus-visible:rounded-lg",
-        md: "min-h-10.5 px-4 py-2 [&>svg]:text-2xl",
-        sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:text-md",
+        lg: "text-lg py-3 px-8 [&>svg]:size-6 rounded-lg focus-visible:rounded-lg",
+        md: "min-h-10.5 px-4 py-2 [&>svg]:size-6",
+        sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:size-4",
       },
     },
     defaultVariants: {
@@ -103,7 +105,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      toId && scrollIntoView(toId)
+      toId && scrollIntoView("#" + toId)
       customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)
@@ -126,8 +128,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = LinkProps &
+type ButtonLinkProps = Omit<LinkProps, "href"> &
   Pick<ButtonProps, "size" | "variant" | "isSecondary"> & {
+    href: string
     buttonProps?: Omit<ButtonProps, "size" | "variant">
     customEventOptions?: MatomoEventOptions
   }
@@ -163,7 +166,10 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       >
         <BaseLink
           ref={ref}
-          className={cn("no-underline hover:no-underline", className)}
+          className={cn(
+            "no-underline hover:no-underline [&_[data-label='arrow']]:ms-0",
+            className
+          )}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}

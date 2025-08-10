@@ -34,7 +34,7 @@ A teszthálózathoz tartozó ETH-nak elvileg nincs valós értéke. Ugyanakkor a
 
 #### Melyik teszthálózatot használja?
 
-A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntartanak a Sepolia és a Goerli. Sepolia egy hálózat a szerződés- és alkalmazásfejlesztők számára, ahol az alkalmazásaikat tesztelhetik. A Goerli-hálózat a protokollfejlesztőknek biztosít teret frissítéseik teszteléséhez, illetve a letétbe helyezőknek a validátorok futtatásához.
+A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntartanak a Sepolia és a Hoodi. Sepolia egy hálózat a szerződés- és alkalmazásfejlesztők számára, ahol az alkalmazásaikat tesztelhetik. A Hoodi-hálózat a protokollfejlesztőknek biztosít teret frissítéseik teszteléséhez, illetve a letétbe helyezőknek a validátorok futtatásához.
 
 #### Sepolia {#sepolia}
 
@@ -60,14 +60,12 @@ A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntart
 - [Coinbase Wallet csap | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia csap](https://sepoliafaucet.com/)
 - [Infura Sepolia csap](https://www.infura.io/faucet)
-- [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum-ökoszisztéma csap](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(hosszútávú támogatás)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Megjegyzés: [a Goerli teszthálózat lezárásra kerül](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) és a [Holesovice](https://github.com/eth-clients/holesovice) veszi át a helyét 2023-ban. Kérjük, hogy vigye át az alkalmazásait a Sepolia hálózatra._
-
-A Goerli egy olyan teszthálózat, ahol a validálást és a letétbe helyezést lehet tesztelni. A Goerli hálózat minden olyan felhasználók számára elérhető, aki teszthálózati validátort szeretne futtatni. Ezt használhatják azok a letétesek is, akik tesztelni akarják a protokollfrissítéseket, mielőtt azok a főhálózatra kerülnének.
+A Hoodi egy olyan teszthálózat, ahol a validálást és a letétbe helyezést lehet tesztelni. A Hoodi hálózat minden olyan felhasználók számára elérhető, aki teszthálózati validátort szeretne futtatni. Ezt használhatják azok a letétesek is, akik tesztelni akarják a protokollfrissítéseket, mielőtt azok a főhálózatra kerülnének.
 
 - Nyitott validátorszett, a letétesek tesztelhetik a hálózati frissítéseket
 - Sok státusz elérhető, ezért alkalmas az okosszerződések komplex interakcióit letesztelni
@@ -75,52 +73,48 @@ A Goerli egy olyan teszthálózat, ahol a validálást és a letétbe helyezést
 
 ##### Erőforrások
 
-- [Honlap](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Honlap](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Csapok
 
-- [QuickNode Goerli csap](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW csap](https://goerli-faucet.pk910.de/)
-- [Paradigm csap](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli csap](https://goerlifaucet.com/)
-- [All That Node Goerli csap](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet csap | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli csap](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi csap](https://hoodi.ethpandaops.io/)
 
-Ha szeretne egy validátort indítani a Goerli teszthálózaton, akkor használja az ethstaker [olcsó goerli validátor launchpad-et](https://holesky.launchpad.ethstaker.cc/en/).
+Ha szeretne egy validátort indítani a Hoodi teszthálózaton, akkor használja az [„olcsó Hoodi validátor” indítópultot](https://hoodi.launchpad.ethereum.org/hu/).
 
 ### Második blokkláncréteg (L2) teszthálózatok {#layer-2-testnets}
 
 [A második blokkláncréteg (L2)](/layer-2/) az Ethereum skálázási megoldásait takarja. Az L2 egy elkülönült blokklánc, ami kiterjeszti az Ethereumot, örökölve annak biztonsági garanciáit. Az L2 teszthálózatok szorosan kapcsolódnak a nyilvános Ethereum teszthálózatokhoz.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Teszthálózat az [Arbitrum-hoz](https://arbitrum.io/).
 
 ##### Csapok
 
 - [Chainlink csap](https://faucets.chain.link/)
+- [Alchemy csap](https://sepoliafaucet.com/)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Teszthálózat az [Optimism-hoz](https://www.optimism.io/).
 
 ##### Csapok
 
 - [Paradigm csap](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet csap | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Coinbase Wallet csap | Optimism Sepolia](https://coinbase.com/faucets/optimism-sepolia-faucet)
+- [Alchemy csap](https://sepoliafaucet.com/)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Teszthálózat a [Starknethez](https://www.starknet.io).
 
 ##### Csapok
 
-- [Starknet csap](https://faucet.goerli.starknet.io)
+- [Starknet csap](https://faucet.sepolia.starknet.io)
+- [Alchemy csap](https://sepoliafaucet.com/)
 
 ## Privát hálózatok {#private-networks}
 

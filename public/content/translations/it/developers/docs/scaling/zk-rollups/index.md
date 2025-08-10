@@ -222,12 +222,6 @@ Guarda Finematics spiegare i rollup ZK:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### Utilizzo dei rollup ZK {#use-zk-rollups}
-
-Esistono molteplici implementazioni dei rollup ZK che puoi integrare nelle tue dapp:
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## Chi sta lavorando a una zkEVM? {#zkevm-projects}
 
 I progetti che stanno lavorando alle zkEVM includono:

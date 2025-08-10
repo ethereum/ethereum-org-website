@@ -1,88 +1,54 @@
-import React from "react"
+import { type HTMLAttributes } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { MdArrowDownward } from "react-icons/md"
-import { Box, Grid, GridProps, Icon, useColorModeValue } from "@chakra-ui/react"
+import { ArrowDown } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
+import { cn } from "@/lib/utils/cn"
+
 import { EthGlyphIcon } from "../../icons"
 
-type HomeScreenProps = GridProps & SimulatorNavProps
+type HomeScreenProps = HTMLAttributes<HTMLDivElement> & SimulatorNavProps
 
 export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
-  const gridShadow = useColorModeValue(
-    "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
-    "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"
-  )
-
   const { step } = nav
   const ICON_COUNT = 8
-  const sharedIconStyles = {
-    w: "full",
-    aspectRatio: 1,
-    borderRadius: "xl",
-    placeItems: "center",
-    transition:
-      "background-color 2000ms ease-in-out, border 200ms ease-in--out",
-    border: "2px solid transparent",
-  } as const
+  const sharedIconClasses =
+    "w-full aspect-square rounded-xl place-items-center duration-200 transition-[border,background-color] border-2 border-transparent"
   return (
-    <Grid
-      px={6}
-      py={8}
-      w="full"
-      gap={5}
-      templateColumns="repeat(4, 1fr)"
-      {...props}
-    >
+    <div className="grid w-full grid-cols-4 gap-5 px-6 py-8" {...props}>
       {Array(ICON_COUNT)
         .fill(0)
         .map((_, i) => (
-          <Box key={i} {...sharedIconStyles} bg="body.light" />
+          <div key={i} className={cn("bg-body-light", sharedIconClasses)} />
         ))}
       <AnimatePresence>
         {step === 1 ? (
-          <Grid
-            as={motion.button}
+          <motion.button
+            className={cn(
+              "hover:outline-primary-hover, grid border-body bg-body shadow-md duration-300 hover:outline hover:outline-2 hover:outline-offset-2",
+              sharedIconClasses
+            )}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            {...sharedIconStyles}
             onClick={nav.progressStepper}
-            transitionDuration="0.3s"
-            bg="body.base"
-            borderColor="body.base"
-            boxShadow={gridShadow}
-            _hover={{
-              outline: "2px solid var(--eth-colors-primary-hover)",
-              outlineOffset: "2px",
-            }}
           >
-            <Icon
-              as={EthGlyphIcon}
-              color="background.base"
-              fontSize={{ base: "2xl", sm: "3xl" }}
-            />
-          </Grid>
+            <EthGlyphIcon className="size-[1em] text-2xl text-background sm:text-3xl" />
+          </motion.button>
         ) : (
-          <Grid
-            as={motion.div}
+          <motion.div
+            className={cn(
+              sharedIconClasses,
+              "grid border-dashed border-disabled bg-background duration-200"
+            )}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transitionDuration="0.2s"
-            {...sharedIconStyles}
-            bg="background.base"
-            borderStyle="dashed"
-            borderColor="disabled"
           >
-            <Icon
-              as={MdArrowDownward}
-              color="disabled"
-              fontSize={{ base: "2xl", sm: "3xl" }}
-            />
-          </Grid>
+            <ArrowDown className="!size-[1em] !text-2xl !text-disabled sm:!text-3xl" />
+          </motion.div>
         )}
       </AnimatePresence>
-    </Grid>
+    </div>
   )
 }

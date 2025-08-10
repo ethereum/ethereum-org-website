@@ -132,6 +132,14 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Estensione del codice VS](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
+**Veramo**: **_Framework open source, modulare e agnostico che semplifica la creazione di identità decentralizzate e credenziali verificabili per gli sviluppatori di applicazioni decentralizzate nelle proprie applicazioni._**
+
+- [Home page](https://veramo.io/)
+- [Documentazione](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [Pacchetto NPM](https://www.npmjs.com/package/@veramo/core)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

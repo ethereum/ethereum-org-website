@@ -168,7 +168,7 @@ ETHを売却(課税対象)することなく、必要な資金を借り入れる
 
 従来の金融の世界で上記の例を実行するには、莫大な資金が必要になります。 これらのお金儲けの戦略は、既存の富を持っている人にしかアクセスできません。 フラッシュローンは、お金を持っていることが必ずしもお金を稼ぐための前提条件ではないという未来の一例です。
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   フラッシュローンの詳細
 </ButtonLink>
 
@@ -355,3 +355,7 @@ PoolTogetherのような損失のない宝くじは、楽しく革新的な新�
 
 - [DeFi Pulse Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

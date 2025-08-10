@@ -123,7 +123,7 @@ Tehnička barijera za ulazak u korišćenje Web3 trenutno je previsoka. Korisnic
 
 Web3 uvodi nove paradigme koje zahtevaju učenje različitih mentalnih modela u poređenju sa onima koji se koriste za Web2.0. Slična edukativna inicijativa dogodila se dok je Web1.0 sticao popularnost krajem 1990-ih; zagovornici svetske mreže koristili su brojne obrazovne tehnike kako bi obrazovali javnost, od jednostavnih metafora (informacijski autoput, pretraživači, surfovanje mrežom) do [televizijskih emisija](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 nije težak, ali je drugačiji. Obrazovne inicijative koje informišu korisnike Web2 o ovim Web3 paradigmama ključne su za njegov uspeh.
 
-Ethereum.org doprinosi obrazovanju o platformi Web3 kroz [program prevođenja](/contributing/translation-program/), koji ima za cilj prevođenje važnog Etherum sadržaja na što više jezika.
+Ethereum.org doprinosi obrazovanju o platformi Web3 kroz [program prevođenja](/contributing/translation-program/), koji ima za cilj prevođenje važnog Ethereum sadržaja na što više jezika.
 
 ### Centralizovana infrastruktura {#centralized-infrastructure}
 
@@ -147,11 +147,11 @@ Tek smo na početku stvaranja boljeg veba sa Web3, ali kako nastavljamo da unapr
 
 Web3 nije rigidno definisan. Različiti članovi zajednice imaju različite poglede na to. Here are a few of them:
 
-- [Šta je Web3? Objašnjenje decentralizovanog interneta budućnosti](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Šta je Web3? Objašnjenje decentralizovanog interneta budućnosti](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Razumevanje platforme Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Džoš Stark_
 - [Zašto je Web3 važan](https://future.a16z.com/why-web3-matters/) – _Kris Dikson_
 - [Zašto je decentralizacija važna](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Kris Dikson_
 - [Web3 pejzaž](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Rasprava o platformi Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Peki Makkormik_
+- [Rasprava o platformi Web3](https://www.notboring.co/p/the-web3-debate) – _Peki Makkormik_
 
 <QuizWidget quizKey="web3" />

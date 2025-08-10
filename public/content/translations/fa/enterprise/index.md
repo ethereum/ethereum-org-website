@@ -79,7 +79,7 @@ lang: fa
 - [اتریوم ادز](https://ethereumads.com/) - _به اپراتورهای وب‌سایت اجازه می‌دهد فضای تبلیغاتی را بفروشند و از طریق اتریوم پول دریافت کنند_
 - [hCaptcha](https://www.hcaptcha.com/) - _سیستم CAPTCHA پیشگیری از ربات که به اپراتورهای وبسایت برای کارهای انجام شده توسط کاربران برای برچسب زدن داده‌ها برای یادگیری ماشین پرداخت می‌کند. اکنون توسط Cloudflare مستقر شده است_
 - [Opera MiniPay](https://www.opera.com/products/minipay) - _پرداخت‌های موبایلی را برای مردم آفریقا از طریق کیف پول غیرسرپرستی در دسترس‌تر و ایمن‌تر می‌کند و از شماره تلفن‌ها برای تراکنش آسان_ استفاده می‌کند
-- [Roxpay ](https://www.roxpay.ch/) - _صورت‌حساب و دارایی پرداخت به ازای استفاده را خودکار می‌کند_
+- [Roxpay](https://www.roxpay.ch/) - _صورت‌حساب و دارایی پرداخت به ازای استفاده را خودکار می‌کند_
 - [SAP مرکز ارز دیجیتال](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _پرداخت‌های بین المللی با استیبل کوین_
 - [Toku](https://www.toku.com/) - _دستمزد، مدیریت کمک هزینه توکنی، رعایت مالیات، استخدام محلی، مزایا و & راه‌حل‌های منابع انسانی توزیع شده_
 - [Xerof](https://www.xerof.com/) - _پرداخت‌های سریع و ارزان بین‌المللی (برون مرزی) B2B را تسهیل می‌کند_
@@ -116,7 +116,7 @@ lang: fa
 ### ثبت داده‌ها {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _خبرگزاری ایتالیایی با اخبار جعلی مبارزه می‌کند و خوانندگان را قادر می‌سازد تا منشأ اخبار را با ضبط آن‌ها در شبکه اصلی تأیید کنند_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _منشأ و تاریخچه تعمیر را در اتریوم ثبت می‌کند_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _منشأ و تاریخچه تعمیر را در اتریوم ثبت می‌کند_
 - [BRØK](https://www.xn--brk-1na.no/) - _پلتفرم جداول کپ برای شرکت‌های ثبت نشده در بورس عمومی توسط دولت نروژ ارائه شده است _
 - [گواهی](https://certifaction.com/) - _امضاهای الکترونیکی معتبر قانونی با حریم خصوصی-by-design_
 - [EthSign](https://ethsign.xyz/) - _اسناد الکترونیکی امضا شده را در بلاک‌چین اتریوم ثبت می‌کند_

@@ -8,10 +8,10 @@ alt: "Peta Perjalanan Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Peningkatan lebih lanjut
+    content: Peningkatan lebih lanjut
     toId: perubahan-apa-yang-akan-terjadi
   - 
-    label: Peningkatan sebelumnya
+    content: Peningkatan sebelumnya
     href: /history/
     variant: ikhtisar
 ---

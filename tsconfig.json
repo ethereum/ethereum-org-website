@@ -18,8 +18,14 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
-      "@/storybook-utils": ["./.storybook/utils.ts"]
-    }
+      "@/storybook-utils": ["./.storybook/utils.ts"],
+      "@/storybook/*": ["./.storybook/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "./src/**/*",
@@ -28,7 +34,8 @@
     "**/*.tsx",
     ".storybook/**/*",
     "tailwind/ui",
-    "trigger.config.ts"
+    "trigger.config.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", "./public", "./src/intl"]
 }

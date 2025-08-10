@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 当前网络 ID 的完整列表可在 [chainlist.org](https://chainlist.org) 获得。 下面是部分常见网络 ID：
 
 - `1`：以太坊主网
-- `5`：Goerli 测试网
 - `11155111`：Sepolia 测试网
+- `17000`：Hoodi 测试网
 
 **示例**
 
@@ -385,6 +385,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 ### eth_coinbase {#eth_coinbase}
 
 返回客户端的 coinbase 地址。
+
+> **注意：**该方法已于 **v1.14.0** 版本被弃用，并不再受支持。 试图使用该方法会触发“Method not supported（不支持该方法）”错误。
 
 **参数**
 
@@ -1649,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 这将在 `http://localhost:8545` 上启动超文本传输协议远程过程调用接口。
 
-我们可以通过使用 [curl](https://curl.se) 检索 Coinbase 地址和余额来验证接口是否正在运行。 请注意，这些示例中的数据在你的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
+我们可以使用 [curl](https://curl.se) 检索 coinbase 地址（获取帐户数组的第一个地址）和余额来验证接口是否正常运行。 请注意，这些示例中的数据在你的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545

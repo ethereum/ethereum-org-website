@@ -1,14 +1,11 @@
-import { StarConfettiIcon } from "@/components/icons/quiz/StarConfettiIcon"
+import * as React from "react"
 
-import { cn } from "@/lib/utils/cn"
+import { StarConfettiIcon } from "../../icons/quiz"
 
-export const QuizConfetti = () => {
-  const commonClasses = "h-[119px] absolute top-0"
-  return (
-    <>
-      <StarConfettiIcon className={cn(commonClasses, "left-0")} />
-
-      <StarConfettiIcon className={cn(commonClasses, "right-0 -scale-x-100")} />
-    </>
-  )
-}
+export const QuizConfetti = () => (
+  <div className="relative h-full w-full">
+    {/* Use left/right (not start/end) to keep SVG orientation correct for placement */}
+    <StarConfettiIcon className="absolute left-0 max-w-44" />
+    <StarConfettiIcon className="absolute right-0 max-w-44 -scale-x-100" />
+  </div>
+)

@@ -118,7 +118,7 @@ Zasadniczo, nieporozumienia są rozwiązywane za pomocą długich dyskusji na fo
 
 Forki następują, wtedy kiedy należy dokonać ważnych aktualizacji technicznych lub zmian w sieci i zmienić „zasady” protokołu. [Klienci Ethereum](/developers/docs/nodes-and-clients/) muszą zaktualizować swoje oprogramowanie, aby wdrożyć nowe zasady forków.
 
-Fork DAO był odpowiedzią na [atak DAO z 2016 r.](https://www.coindesk.com/understanding-dao-hack-journalists), w którym niezabezpieczony kontrakt [DAO](/glossary/#dao) został pozbawiony z ponad 3,6 miliona ETH w wyniku włamania. Fork przeniósł środki z wadliwego kontraktu do nowego kontraktu, umożliwiając każdemu, kto stracił środki w wyniku włamania, ich odzyskanie.
+Fork DAO był odpowiedzią na [atak DAO z 2016 r.](https://www.coindesk.com/learn/understanding-the-dao-attack), w którym niezabezpieczony kontrakt [DAO](/glossary/#dao) został pozbawiony z ponad 3,6 miliona ETH w wyniku włamania. Fork przeniósł środki z wadliwego kontraktu do nowego kontraktu, umożliwiając każdemu, kto stracił środki w wyniku włamania, ich odzyskanie.
 
 Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Decyzja o forku osiągnęła ponad 85% głosów.
 

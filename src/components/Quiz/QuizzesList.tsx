@@ -1,11 +1,13 @@
 import React from "react"
-import { Heading, OrderedList, Stack, Text } from "@chakra-ui/react"
 
 import type { QuizKey, QuizzesSection, UserStats } from "@/lib/types"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import allQuizzesData from "@/data/quizzes"
+
+import { Stack } from "../ui/flex"
+import { OrderedList } from "../ui/list"
 
 import QuizItem from "./QuizItem"
 
@@ -26,17 +28,13 @@ const QuizzesList = ({
   quizHandler,
   modalHandler,
 }: QuizzesListProps) => (
-  <Stack spacing="8" px={{ base: "8", lg: 0 }} pt="12">
-    <Stack spacing="8">
-      <Heading size="xl">{headingId}</Heading>
-      <Text>{descriptionId}</Text>
+  <Stack className="gap-8 pt-12 max-lg:px-8">
+    <Stack className="gap-8">
+      <h2>{headingId}</h2>
+      <p>{descriptionId}</p>
     </Stack>
 
-    <OrderedList
-      m={0}
-      listStyleType="none"
-      sx={{ counterReset: "list-counter" }}
-    >
+    <OrderedList className="m-0 list-none [counter-reset:_list-counter]">
       {content.map((listItem) => {
         const handleStart = () => {
           quizHandler(listItem.id)

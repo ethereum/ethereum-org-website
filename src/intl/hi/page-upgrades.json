@@ -4,10 +4,20 @@
   "page-upgrades-beacon-date": "शिप कर दिया गया!",
   "page-upgrades-merge-date": "सितंबर 2022",
   "page-upgrades-shards-date": "~2023",
-  "page-upgrades-pbs": "Not imminent - expect 2024/25",
+  "page-upgrades-pbs": "आसन्न नहीं - उम्मीद 2024/25",
   "page-upgrades-post-merge-banner-tutorial-ood": "मर्ज के बाद यह ट्यूटोरियल पुराना हो गया है और शायद काम न करे। अगर आप योगदान देना चाहते हैं, तो कृपया PR बढ़ाएँ।",
   "page-upgrades-upgrades-guide": "एथेरियम अपग्रेड के लिए मार्गदर्शिका",
   "page-upgrades-upgrades-docking": "मर्ज",
   "page-upgrades-shard-title": "शार्डिंग",
-  "page-upgrades-upgrades-beacon-chain": "बीकन चेन"
+  "page-upgrades-upgrades-beacon-chain": "बीकन चेन",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
+  "consensus-beaconcha-in-desc": "ओपन सोर्स बीकन चेन एक्सप्लोरर",
+  "consensus-beaconscan-desc": "बीकन चेन एक्सप्लोरर - कंसेंसस लेयर का इथरस्कैन",
+  "consensus-become-staker": "स्टेकर बनें",
+  "consensus-become-staker-desc": "स्टेकिंग चालू है! अगर आप नेटवर्क को सुरक्षित रखने में मदद के लिए अपने ETH पर स्टेक लगाना चाहते हैं, तो सुनिश्चित करें कि आप जोखिमों से अवगत हैं।",
+  "consensus-explore": "डेटा को एक्सप्लोर करें",
+  "consensus-run-beacon-chain": "कंसेंसस क्लाइंट चलाएँ",
+  "consensus-run-beacon-chain-desc": "एथेरियम को ज़्यादा से ज़्यादा क्लाइंट चलाने की ज़रूरत होती है। इस एथेरियम सार्वजनिक हित में मदद करें!",
+  "read-more": "और पढ़ें"
 }

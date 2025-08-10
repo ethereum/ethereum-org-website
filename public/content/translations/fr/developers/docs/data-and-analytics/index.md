@@ -34,7 +34,7 @@ En utilisant [GraphQL](https://graphql.org/), les développeurs peuvent interrog
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) prétraite les données de la blockchain en tables de base de données relationnelles (PostgreSQL et DatabricksSQL), permet aux utilisateurs d'interroger les données de la blockchain en utilisant SQL et de construire des tableaux de bord basés sur les résultats des requêtes. Les données sur la chaîne sont réparties en 4 tables brutes : `blocs`, `transactions`, (événement) `logs` et (appel) `traces`. Les contrats et protocoles populaires ont été décodés et chacun a son propre ensemble de tables d'événements et d'appels. Ces tables d'événements et d'appels sont traitées et organisées en tables d'abstraction par le type de protocoles, par exemple, dex, prêt, stablecoins, etc.
+[Dune Analytics](https://dune.com/) prétraite les données de la blockchain en tables de base de données relationnelles (DuneSQL), permet aux utilisateurs d'interroger les données de la blockchain en utilisant SQL et de construire des tableaux de bord basés sur les résultats des requêtes. Les données sur la chaîne sont réparties en 4 tables brutes : `blocs`, `transactions`, (événement) `logs` et (appel) `traces`. Les contrats et protocoles populaires ont été décodés et chacun a son propre ensemble de tables d'événements et d'appels. Ces tables d'événements et d'appels sont traitées et organisées en tables d'abstraction par le type de protocoles, par exemple, dex, prêt, stablecoins, etc.
 
 ## Réseau SubQuery {#subquery-network}
 
@@ -47,7 +47,7 @@ Pour commencer, consultez le [guide de démarrage rapide Ethereum](https://acade
 
 ## Complément d'information {#further-reading}
 
-- [Présentation du réseau Graph](https://thegraph.com/docs/en/about/network/)
+- [Présentation du réseau Graph](https://thegraph.com/docs/en/about/)
 - [Bac à sable de requêtes Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Examples de code d'APIs sur EtherScan](https://etherscan.io/apis#contracts)
 - [Explorateur de Beacon Chain](https://beaconcha.in)

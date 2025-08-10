@@ -10,7 +10,7 @@ If there is a lot of traffic on Ethereum, it can become expensive. One solution 
 
 **Prerequisite:** 
 
-- have a crypto wallet, you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-create-an-ethereum-account/)
+- have a crypto wallet, you can follow this tutorial: [How to create an Ethereum account](/guides/how-to-create-an-ethereum-account/)
 - add funds to your wallet
 
 ## 1. Determine which layer 2 network you want to use

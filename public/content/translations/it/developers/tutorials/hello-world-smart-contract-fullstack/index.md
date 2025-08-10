@@ -48,7 +48,7 @@ Fa i clic su **Crea app**. La tua app apparirà nella tabella sottostante.
 
 Per inviare e ricevere transazioni, hai bisogno di un account di Ethereum. Useremo MetaMask, un portafoglio virtuale nel browser che permette agli utenti di gestire l'indirizzo del proprio conto di Ethereum.
 
-Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra (così da non avere a che fare con denaro reale).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra (così da non avere a che fare con denaro reale).
 
 ### Fase 4: aggiungi ether da un Faucet {#step-4-add-ether-from-a-faucet}
 
@@ -260,7 +260,7 @@ Nella cartella del tuo progetto digita:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Fase 13: aggiorna hardhat.config.js {#step-13-update-hardhat.configjs}
+### Fase 13: aggiorna hardhat.config.js {#step-13-update-hardhat-configjs}
 
 Finora abbiamo aggiunto diverse dipendenze e plugin, ora dobbiamo aggiornare `hardhat.config.js` in modo che il nostro progetto li riconosca tutti.
 
@@ -709,7 +709,7 @@ Congratulazioni! Il codice del tuo contratto intelligente è su Etherscan!
 
 
 
-### Dai un'occhiata al tuo contratto intelligente su Etherescan! {#check-out-your-smart-contract-on-etherscan}
+### Dai un'occhiata al tuo contratto intelligente su Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
 Quando vai al link fornito nel tuo terminale, dovresti essere in grado di vedere il codice e l'ABI del tuo contratto intelligente pubblicati su Etherscan!
 
@@ -1249,7 +1249,7 @@ Se vuoi capire di più su come funzionano le transazioni su Ethereum, dai un'occ
 
 #### Scarica MetaMask {#download-metamask}
 
-Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando crei un conto, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra \(così da non avere a che fare con denaro reale\).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download). Quando crei un conto, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra \(così da non avere a che fare con denaro reale\).
 
 
 
@@ -1317,7 +1317,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1423,7 +1423,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1493,7 +1493,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -1505,7 +1505,7 @@ function addWalletListener() {
 
 Scommetto che a questo punto non hai bisogno del nostro aiuto per capire cosa succede qui, ma per completezza di informazioni, vediamo di analizzare velocemente la situazione:
 
-- Per prima cosa, la nostra funzione verifica se `window.ethereum` è abilitata \(cioè se MetaMask è installato\). 
+- Per prima cosa, la nostra funzione verifica se `window.ethereum` è abilitata \(cioè se MetaMask è installato\).
     - Se non lo è, impostiamo semplicemente la nostra variabile di stato `status`a una stringa JSX che richiede all'utente di installare MetaMask.
   - Se è abilitato, configuriamo l'ascoltatore `window.ethereum.on("accountsChanged")` alla riga 3, affinché ascolti i cambiamenti di stato nel portafoglio di MetaMask, tra cui, quando l'utente connette un ulteriore conto alla dapp, cambia conto, o ne disconnette uno. Se è connesso almeno un conto, la variabile di stato `walletAddress` è aggiornata come primo conto nell'insieme `accounts`, restituito dall'ascoltatore. Altrimenti, `walletAddress` è impostato come una stringa vuota.
 

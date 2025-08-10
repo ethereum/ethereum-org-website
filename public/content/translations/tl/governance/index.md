@@ -48,7 +48,7 @@ May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may pape
 - **Mga Node Operator**: nagpapatakbo ang mga taong ito ng mga node na nagpaparami ng mga block at transaksyon, at hindi tinatanggap ng mga ito ang anumang hindi valid na transaksyon o block na matutuklasan ng mga ito. [Iba pang detalye tungkol sa mga node](/developers/docs/nodes-and-clients/).
 - **Mga EIP Author**: nagmumungkahi ang mga taong ito ng mga pagbabago sa Ethereum protocol, sa pamamagitan ng mga Ethereum Improvement Proposal (EIP). [Iba pang detalye tungkol sa EIPs](/eips/).
 - **Mga Validator**: nagpapatakbo ang mga taong ito ng mga node na makakapagdagdag ng mga bagong block sa Ethereum blockchain.
-- **Mga Developer ng Protokol** (kilala rin bilang "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [Iba pang detalye tungkol sa mga kliyente ng Ethereum ](/developers/docs/nodes-and-clients/).
+- **Mga Developer ng Protokol** (kilala rin bilang "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [Iba pang detalye tungkol sa mga kliyente ng Ethereum](/developers/docs/nodes-and-clients/).
 
 _Tandaan: maaaring hindi lang sa isa sa mga grupong ito napapabilang ang sinumang indibidwal (hal. maaaring magtaguyod ng EIP, at magpatakbo ng beacon chain validator, at gumamit ng mga DeFi application ang isang developer ng protokol). Para malinaw itong maunawaan, pinakamadali kung pag-iiba-ibahin ang mga ito._
 
@@ -104,7 +104,7 @@ Walang tiyak na estratehiya sa kung paano pangasiwaan ang mga pinagtatalunang pr
 
 Inaasahang hihingi ang mga EIP Champion ng feedback mula sa lahat ng nauugnay na stakeholder. Kung magiging champion ka ng pinagtatalunang EIP, dapat mong subukang tugunan ang mga pagtutol para magkaroon ng kasunduan ang iyong EIP. Dahil sa laki at pagkakaiba-iba ng komunidad ng Ethereum, walang nag-iisang pamantayan (hal., coin vote) na magagamit para sukatin ang kasunduan ng komunidad, at inaasahang makakaangkop ang mga EIP Champion sa mga sitwasyong nauugnay sa kanilang proposal.
 
-Bukod pa sa seguridad ng Ethereum network, dati pa man ay lubha nang pinapahalagahan ng mga Developer ng Protokol sa pinapahalagahan ng mga Developer ng Application/Tooling at mga user ng Application, lalo na't ang paggamit at pag-develop nila sa Ethreum ang dahilan kung bakit naeengganyo sa ecosystem ang iba pang stakeholder. Bukod pa rito, kailangang ipatupad ang mga EIP sa lahat ng pagpapatupad ng kliyente, na pinapamahalaan ng iba't ibang pangkat. Bilang bahagi ng prosesong ito, karaniwan na kailangang hikayatin ang maraming pangkat ng mga Developer ng Protokol na mahalaga ang isang partikular na pagbabago at tinutulungan nito ang mga end user o may nilulutas itong problema sa seguridad.
+Bukod pa sa seguridad ng Ethereum network, dati pa man ay lubha nang pinapahalagahan ng mga Developer ng Protokol sa pinapahalagahan ng mga Developer ng Application/Tooling at mga user ng Application, lalo na't ang paggamit at pag-develop nila sa Ethereum ang dahilan kung bakit naeengganyo sa ecosystem ang iba pang stakeholder. Bukod pa rito, kailangang ipatupad ang mga EIP sa lahat ng pagpapatupad ng kliyente, na pinapamahalaan ng iba't ibang pangkat. Bilang bahagi ng prosesong ito, karaniwan na kailangang hikayatin ang maraming pangkat ng mga Developer ng Protokol na mahalaga ang isang partikular na pagbabago at tinutulungan nito ang mga end user o may nilulutas itong problema sa seguridad.
 
 <Divider />
 
@@ -118,7 +118,7 @@ Karaniwang inaayos ang mga hindi pagkakaunawaan sa mahabang usapan sa mga pampub
 
 Nangyayari ang mga fork kapag may mga pangunahing teknikal na pag-upgrade o pagbabago at babaguhin nito ang "mga panuntunan" ng protocol. Dapat i-update ng [mga Ethereum client](/developers/docs/nodes-and-clients/) ang kanilang software upang ipatupad ang mga panuntunan para sa fork.
 
-Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/understanding-dao-hack-journalists) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
+Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
 
 Pinagbotohan ng komunidad ng Ethereum ang pagkilos na ito. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Ang desisyong mag-fork ay umabot ng mahigit 85% ng mga boto.
 
@@ -152,7 +152,7 @@ Sa proseso ng pamamahala ng Ethereum, madalas na ipinagpapalit ang bilis at kahu
 
 Bagama't palaging ganap na open source ang pagtutukoy at mga pagpapatupad ng pagbabago, hindi ginamit ang mga pormal na prosesong ginagamit para magmungkahi ng mga update. Dahil dito, mas mabilis na natukoy at napagkasunduan ng mga mananaliksik at tagapagpatupad ang mga pagbabago.
 
-Noong magsama ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/history/#paris). Ang proposal na [EIP-3675 ](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
+Noong magsama ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/history/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
 
 <ButtonLink href="/roadmap/merge/">
   Iba pang detalye tungkol sa The Merge

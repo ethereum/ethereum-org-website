@@ -1,5 +1,5 @@
 name: Suggest quiz
-description: Add, update, delete questions for a quiz on ethereum.osg
+description: Add, update, delete questions for a quiz on ethereum.org
 title: Add/Update/Delete quiz question
 labels: ["feature ✨", "quiz 📚"]
 body:
