@@ -294,7 +294,7 @@ const RoadmapPage = () => {
                     One way to think about Ethereum development is by analogy to
                     biological evolution. A network that is able to adapt to new
                     challenges and maintain fitness is more likely to succeed
-                    that one that is resistant to change, although as the
+                    than one that is resistant to change, although as the
                     network becomes more and more performant, scalable and
                     secure fewer changes to the protocol will be required.
                   </p>

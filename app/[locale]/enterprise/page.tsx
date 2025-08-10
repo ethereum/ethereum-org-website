@@ -39,6 +39,7 @@ import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
+import Link from "@/components/ui/Link"
 import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
@@ -48,8 +49,14 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import CasesColumn from "./_components/CasesColumn"
+import EnterpriseContactForm from "./_components/ContactForm/lazy"
 import FeatureCard from "./_components/FeatureCard"
-import { ENTERPRISE_MAILTO } from "./constants"
+import {
+  ENTERPRISE_EMAIL,
+  ENTERPRISE_MAILTO,
+  MAX_EMAIL_LENGTH,
+  MAX_MESSAGE_LENGTH,
+} from "./constants"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -59,6 +66,8 @@ import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
+
+const GET_IN_TOUCH_ID = "get-in-touch"
 
 const FeaturesSwiper = dynamic(() => import("./_components/FeaturesSwiper"), {
   ssr: false,
@@ -118,7 +127,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
     },
     {
       label: "Upgrades",
-      state: { value: "15" }, // TODO: Calculate from upgrades list
+      state: { value: "16" }, // TODO: Calculate from upgrades list
     },
     {
       label: "Downtime",
@@ -291,7 +300,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
         buttons={[
           {
             content: t("page-enterprise-hero-cta"),
-            href: ENTERPRISE_MAILTO,
+            href: `#${GET_IN_TOUCH_ID}`,
             matomo: {
               eventCategory: "enterprise",
               eventAction: "CTA",
@@ -480,8 +489,8 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
         </section>
 
         <section
-          id="team"
-          className="flex w-full flex-col items-center gap-y-12 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 py-10 md:py-12"
+          id={GET_IN_TOUCH_ID}
+          className="flex w-full flex-col items-center gap-y-12 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-4 py-10 md:py-12"
         >
           <div className="flex flex-col items-center gap-2">
             <EthGlyph className="size-14" />
@@ -492,16 +501,48 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
           <p className="max-w-prose px-6 text-center md:px-8">
             {t("page-enterprise-team-description")}
           </p>
-          <ButtonLink
-            href={ENTERPRISE_MAILTO}
-            customEventOptions={{
-              eventCategory: "enterprise",
-              eventAction: "CTA",
-              eventName: "bottom_mail",
+          <EnterpriseContactForm
+            strings={{
+              error: {
+                domain: t.rich("page-enterprise-team-form-error-domain", {
+                  a: (chunks) => <Link href="/discord/">{chunks}</Link>,
+                }),
+                emailInvalid: t(
+                  "page-enterprise-team-form-error-email-invalid"
+                ),
+                emailTooLong: t(
+                  "page-enterprise-team-form-error-email-too-long",
+                  {
+                    length: MAX_EMAIL_LENGTH,
+                  }
+                ),
+                general: t.rich("page-enterprise-team-form-error-general", {
+                  a: () => (
+                    <Link href={ENTERPRISE_MAILTO}>{ENTERPRISE_EMAIL}</Link>
+                  ),
+                }),
+                messageTooLong: t(
+                  "page-enterprise-team-form-error-message-too-long",
+                  {
+                    length: MAX_MESSAGE_LENGTH,
+                  }
+                ),
+                required: t("page-enterprise-team-form-error-required"),
+              },
+              placeholder: {
+                input: t("page-enterprise-team-form-placeholder-input"),
+                textarea: t("page-enterprise-team-form-placeholder-textarea"),
+              },
+              button: {
+                label: t("page-enterprise-hero-cta"),
+                loading: t("page-enterprise-team-form-button-loading"),
+              },
+              success: {
+                heading: t("page-enterprise-team-form-success-heading"),
+                message: t("page-enterprise-team-form-success-message"),
+              },
             }}
-          >
-            {t("page-enterprise-hero-cta")}
-          </ButtonLink>
+          />
         </section>
       </MainArticle>
     </div>
