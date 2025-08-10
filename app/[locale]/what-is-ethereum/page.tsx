@@ -367,9 +367,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 sizes="224px"
                 className="mx//-auto w-56"
               />
-              <h3 className="flex-1 text-3xl font-black lg:text-5xl">
+              <h2 className="flex-1 text-3xl font-black lg:text-5xl">
                 {tocItems[2].title}
-              </h3>
+              </h2>
             </div>
 
             <div className="space-y-6">
@@ -432,9 +432,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 sizes="288px"
                 className="mx-auto w-full max-w-72"
               />
-              <h3 className="flex-1 text-3xl font-black lg:text-5xl">
+              <h2 className="flex-1 text-3xl font-black lg:text-5xl">
                 {tocItems[3].title}
-              </h3>
+              </h2>
             </div>
 
             <div className="space-y-6">
@@ -553,9 +553,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               sizes="320px"
               className="mx-auto w-80 -scale-x-100"
             />
-            <h3 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+            <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[4].title}
-            </h3>
+            </h2>
             <div className="space-y-6">
               <p>
                 People use Ethereum to do things that weren&apos;t possible
@@ -590,7 +590,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                       money, trade, and own digital assets every day. Unlike
                       traditional apps, there&apos;s no need to register with
                       your name, wait for a bank to approve you, or hand over
-                      your personal data.{" "}
+                      your personal data.
                     </p>
                     <p>
                       With just a wallet and an internet connection you can:
@@ -610,7 +610,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                       </ListItem>
                       <ListItem>
                         Participate in global communities where you can vote,
-                        contribute, and earn borderlessly{" "}
+                        contribute, and earn borderlessly
                       </ListItem>
                     </UnorderedList>
                   </HighlightCardContent>
@@ -711,15 +711,130 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               alt=""
               sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
-            <h3 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
-              {tocItems[5].title}
-            </h3>
+            <div>
+              <h2 className="mb-2 flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+                {tocItems[5].title}
+              </h2>
+              <div className="space-y-6">
+                <p>
+                  Getting started with Ethereum is easier than you might think.
+                </p>
+                <p>
+                  You don&apos;t need permission. You don&apos;t need a bank or
+                  even an ID document. All you need to get started is a device
+                  and an internet connection.
+                </p>
+              </div>
+            </div>
+            <div className="py-4 font-bold italic">TODO: StartCards</div>
           </Section>
 
-          <Section id={getId(tocItems[6].url)} className="space-y-14">
-            <h3 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+          <Section
+            id={getId(tocItems[6].url)}
+            className="space-y-//TODO-remove-14"
+          >
+            <h2 className="mb-4 flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[6].title}
-            </h3>
+            </h2>
+
+            <div className="space-y-6">
+              <p>
+                Bitcoin and Ethereum are the two biggest cryptocurrencies in the
+                world.
+              </p>
+
+              <p>
+                They both let you send money without a bank, both run on
+                blockchain technology, and both are open to anyone. But
+                that&apos;s where the similarities end.
+              </p>
+
+              <div>
+                <h3 className="mb-1 mt-12 text-xl">
+                  Bitcoin is like digital gold.
+                </h3>
+                <p>
+                  It has a fixed supply of 21 million coins, a narrow focus on
+                  peer-to-peer payments, and a basic scripting language that
+                  limits what you can build with it. This simplicity is by
+                  design since Bitcoin prioritizes predictability, durability,
+                  and long-term security over flexibility.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-1 mt-12 text-xl">
+                  Ethereum takes a broader approach.
+                </h3>
+                <p>
+                  It&apos;s not just money, it&apos;s programmable
+                  infrastructure. Instead of just sending and receiving value,
+                  Ethereum lets developers build entire applications.
+                  You&apos;ve already seen this in action: from lending markets
+                  and stablecoins to collectibles, social media, and real-time
+                  payments — all powered by smart contracts and secured by ETH.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-1 mt-12 text-xl">
+                  The way the networks reach consensus is also different.
+                </h3>
+                <div className="space-y-6">
+                  <p>
+                    Bitcoin uses miners to secure the network. These are
+                    powerful computers that compete to solve complex puzzle, and
+                    the winner gets to add the next block of transactions to the
+                    chain and claim bitcoins as a reward. This process is called
+                    mining and it uses large amounts of electricity.
+                  </p>
+                  <p>
+                    Ethereum used to work like this too. But in 2022, it
+                    transitioned from Proof of Work to Proof of Stake. Today,
+                    transactions are confirmed by validators who lock up ETH as
+                    collateral. Honest validators earn ETH rewards while any
+                    dishonest ones lose part of their stake. This shift made
+                    Ethereum over 99.988% more energy efficient without
+                    sacrificing security or decentralization.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="mb-1 mt-12 text-xl">
+                  There&apos;s also a difference in how supply is handled.
+                </h3>
+                <div className="space-y-6">
+                  <p>
+                    Bitcoin has a fixed supply. There will only ever be 21
+                    million coins. Ethereum, on the other hand, has a dynamic
+                    supply. New ETH is issued to reward validators, while a
+                    portion is burned with every transaction. This means
+                    <strong>
+                      Ethereum can&apos;t just “print infinite ETH.”
+                    </strong>
+                  </p>
+                  <p>
+                    The issuance rate is limited by how much ETH is staked. As
+                    more ETH is staked, individual rewards decrease, creating a
+                    natural balance. This design ensures a sustainable security
+                    budget well into the future, without relying solely on
+                    transaction fees.
+                  </p>
+                  <p>
+                    In short, Bitcoin is a tool for sending value. Ethereum is a
+                    platform for building it.
+                  </p>
+                </div>
+              </div>
+
+              <Link href="#TODO-get-link" className="group block no-underline">
+                <span className={twFlipForRtl}>→</span>{" "}
+                <span className="group-hover:underline">
+                  Learn more about the difference between Ethereum and Bitcoin
+                </span>
+              </Link>
+            </div>
           </Section>
 
           <Section id={getId(tocItems[7].url)} className="space-y-14">
@@ -729,15 +844,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               sizes="176px"
               className="mx-auto w-44"
             />
-            <h3 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+            <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[7].title}
-            </h3>
+            </h2>
           </Section>
 
           <Section id={getId(tocItems[8].url)} className="space-y-14">
-            <h3 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+            <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[8].title}
-            </h3>
+            </h2>
           </Section>
         </div>
       </div>
