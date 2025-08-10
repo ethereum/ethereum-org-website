@@ -14,6 +14,7 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
@@ -40,7 +41,7 @@ const IconBox = ({
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-
+  const { twFlipForRtl } = getDirection(locale)
   // const t = await getTranslations({
   //   locale,
   //   namespace: "page-what-is-ethereum",
@@ -178,7 +179,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </Section>
 
-          <Section id={getId(tocItems[1].url)} className="space-y-14">
+          <Section className="-scroll-mt-80 space-y-14">
             <Image
               src={networksBanner}
               alt="Illustration of futuristic Ethereum community center"
@@ -186,7 +187,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             />
 
             <div className="space-y-6">
-              <h2>{tocItems[1].title}</h2>
+              <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
+                {tocItems[1].title}
+              </h2>
 
               <p>
                 You can think of the ethereum network as{" "}
@@ -249,10 +252,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     </p>
                     <p className="text-body-medium">
                       If someone tried to change a contract, the network would
-                      reject it since it wouldn’t match their records. To take
-                      down a single app, attackers need to take over the entire
-                      network, which would costs billions and be extremely hard
-                      to coordinate.
+                      reject it since it wouldn&apos;t match their records. To
+                      take down a single app, attackers need to take over the
+                      entire network, which would costs billions and be
+                      extremely hard to coordinate.
                     </p>
                   </div>
                 </div>
@@ -303,8 +306,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </div>
             </div>
 
-            <Link href="/layer-2/networks/" className="block">
-              → Learn more about the Ethereum network
+            <Link
+              href="/layer-2/networks/"
+              className="group block no-underline"
+            >
+              <span className={twFlipForRtl}>→</span>{" "}
+              <span className="group-hover:underline">
+                Learn more about the Ethereum network
+              </span>
             </Link>
           </Section>
 
@@ -312,33 +321,189 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             id={getId(tocItems[2].url)}
             className="space-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 lg:p-12"
           >
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
+            <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
               <Image
                 src={etherBanner}
                 alt="Open hands holding ether glyph"
                 sizes="224px"
-                className="mx-auto w-56"
+                className="mx//-auto w-56"
               />
               <h3 className="flex-1 text-3xl font-black lg:text-5xl">
                 {tocItems[2].title}
               </h3>
             </div>
+
+            <div className="space-y-6">
+              <p>Ether (ETH) is the native cryptocurrency of Ethereum.</p>
+              <p>
+                It&apos;s a new kind of{" "}
+                <strong>
+                  digital money you can send to anyone, anywhere in the world in
+                  seconds
+                </strong>{" "}
+                for as little as a few cents. But ETH is about more than just
+                payments. It plays a vital role in keeping the Ethereum network
+                running.
+              </p>
+              <p>
+                When you use Ethereum to send money, collect art or build a new
+                dapp, you pay a small <strong>transaction fee</strong> (or gas
+                fee) <strong>in ETH</strong>. This fee helps prevent spam and
+                rewards the people called validators who process transactions.
+              </p>
+              <p>
+                These{" "}
+                <strong>validators help secure the ethereum network</strong>{" "}
+                through a system called staking. By locking up their ETH
+                they&apos;re eligible to process transactions. In return, they
+                earn ETH as a reward. This gives Ethereum its own
+                self-sustaining economy, powered by users rather than companies.
+              </p>
+              <p>
+                Unlike many traditional currencies,{" "}
+                <strong>ETH can become more scarce over time</strong>. Every
+                time someone uses Ethereum, a small portion of ETH is burned,
+                which permanently removes it from the supply. On busy days, more
+                ETH is burned than created, making ETH deflationary and
+                increasing its value over time. The more Ethereum is used, the
+                more ETH is burned.
+              </p>
+              <p>
+                Because of this, many people see ETH as an investment and choose
+                to hold, stake or lend it to grow their savings.
+              </p>
+            </div>
+
+            <Link href="/eth/" className="group block no-underline">
+              <span className={twFlipForRtl}>→</span>{" "}
+              <span className="group-hover:underline">
+                Learn more about ether (ETH)
+              </span>
+            </Link>
           </Section>
 
           <Section
             id={getId(tocItems[3].url)}
             className="space-y-8 rounded-4xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 lg:p-12"
           >
-            <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center">
+            <div className="flex flex-col gap-4 lg:items-center xl:flex-row-reverse">
               <Image
                 src={howBanner}
                 alt="Man repairing computer"
                 sizes="288px"
-                className="mx-auto w-72"
+                className="mx-auto w-full max-w-72"
               />
               <h3 className="flex-1 text-3xl font-black lg:text-5xl">
                 {tocItems[3].title}
               </h3>
+            </div>
+
+            <div className="space-y-6">
+              <p>
+                When Ethereum launched in 2015, it used a system called Proof of
+                Work.
+              </p>
+              <p>
+                This mechanism pioneered by Bitcoin, is how all computers agreed
+                on who owns what. Computers would use a lot of energy trying to
+                solve a complex mathematical puzzle. The winner would get to
+                propose a block of incoming transactions and earn new ETH.
+              </p>
+              <p>
+                In 2022, Ethereum upgraded to a new system called{" "}
+                <strong>Proof of Stake</strong>{" "}
+                <a>that&apos;s 99% more energy efficient</a>. Instead of
+                mathematical puzzles, validators lock their ETH as a security
+                deposit to earn the right to process transactions.
+              </p>
+              <p>
+                If they do it correctly, they earn ETH. If they cheat, they lose
+                some of their stake.
+              </p>
+              <p>Here&apos;s an example:</p>
+              <p className="text-lg font-bold">
+                When you send $10 in stablecoins to a friend on Ethereum:
+              </p>
+              <OrderedList className="[&>li]:mb-0">
+                <ListItem>
+                  You open your wallet, add the account address and the amount,
+                  then click send.
+                </ListItem>
+                <ListItem>
+                  Your wallet signs the payment and broadcasts it to the
+                  network.
+                </ListItem>
+                <ListItem>
+                  The payment waits in the public queue (mempool) until a block
+                  proposer picks it.
+                </ListItem>
+                <ListItem>
+                  The block proposer adds it to the next block of transactions,
+                  broadcasts it, and earns a fee.
+                </ListItem>
+                <ListItem>
+                  The stablecoin contract moves $10 from you to your friend, and
+                  both wallets update.
+                </ListItem>
+                <ListItem>
+                  A global network of validators double-check and attest to the
+                  validity of the changes.
+                </ListItem>
+              </OrderedList>
+              <p className="text-lg font-bold">
+                When you mint a $5 collectible on Ethereum:
+              </p>
+              <OrderedList className="[&>li]:mb-0">
+                <ListItem>
+                  You connect your wallet to the dapp and choose the item to
+                  mint.
+                </ListItem>
+                <ListItem>
+                  You confirm the purchase; the wallet signs and broadcasts the
+                  transaction.
+                </ListItem>
+                <ListItem>
+                  The mint request joins the mempool and is added to a block by
+                  a validator.
+                </ListItem>
+                <ListItem>
+                  The NFT smart contract records your wallet as the new owner.
+                </ListItem>
+                <ListItem>
+                  Your new collectible appears in your wallet a few seconds
+                  later.
+                </ListItem>
+              </OrderedList>
+              <p>
+                This is all possible thanks to the power of smart contracts;
+                open-source programs that live on Ethereum and run 24/7, 365
+                accessible to anyone, anywhere.
+              </p>
+              <p>
+                <span className="font-bold">
+                  Every transaction, update, and action is synced across
+                  thousands of independent nodes.
+                </span>{" "}
+                This gives Ethereum its reliability, transparency, and
+                censorship resistance.
+              </p>
+              <div>
+                <Link href="/learn/" className="group block no-underline">
+                  <span className={twFlipForRtl}>→</span>{" "}
+                  <span className="group-hover:underline">
+                    Learn more about how Ethereum works
+                  </span>
+                </Link>
+                <Link
+                  href="/developers/docs/"
+                  className="group block no-underline"
+                >
+                  <span className={twFlipForRtl}>→</span>{" "}
+                  <span className="group-hover:underline">
+                    Read developer docs for a technical overview of Ethereum
+                  </span>
+                </Link>
+              </div>
             </div>
           </Section>
 
