@@ -27,6 +27,7 @@ import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
+import contributionBanner from "@/public/images/doge-computer.png"
 import whatBanner from "@/public/images/eth.png"
 import howBanner from "@/public/images/hackathon_transparent.png"
 import startBanner from "@/public/images/heroes/guides-hub-hero.jpg"
@@ -844,9 +845,125 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               sizes="176px"
               className="mx-auto w-44"
             />
-            <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
-              {tocItems[7].title}
-            </h2>
+
+            <div className="space-y-4">
+              <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+                {tocItems[7].title}
+              </h2>
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <p>
+                    From the start, Ethereum was designed to run by its
+                    community.
+                  </p>
+                  <p>
+                    In 2013, Vitalik Buterin published a white paper proposing a
+                    new kind of blockchain for money and apps anyone could use.
+                    The idea quickly gained traction.
+                  </p>
+                  <p>
+                    By 2014, co-founders like Gavin Wood and Joseph Lubin joined
+                    the effort, and the team raised funds through one of the
+                    earliest crypto crowdfunding campaigns.
+                  </p>
+                  <p>Ethereum officially launched in July 2015.</p>
+                </div>
+                <div className="space-y-6">
+                  <h3 className="text-xl">Key moments in Ethereum’s history</h3>
+                  <OrderedList className="m-0 list-none [&>li]:mb-0">
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2013:</span>{" "}
+                      19-year-old Vitalik Buterin publishes the Ethereum
+                      whitepaper
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2014:</span>{" "}
+                      The Ethereum Foundation forms and launches a crowdfunding
+                      campaign
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2015:</span>{" "}
+                      Developers launch the Ethereum network with the Frontier
+                      release
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2016:</span>{" "}
+                      Smart contract exploit drains $60M (3.6M ETH) from The DAO
+                      prompting a chain fork
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2020:</span>{" "}
+                      Beacon Chain launch starts the move to Proof-of-Stake
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2021:</span>{" "}
+                      “London” upgrade starts burning gas fees via EIP-1559
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2022:</span>{" "}
+                      “The Merge” replaces mining with staking, cutting energy
+                      use by 99%
+                    </ListItem>
+                    <ListItem>
+                      <span className="font-bold text-body-medium">2025:</span>{" "}
+                      “Pectra” upgrade improves smart wallet support and L2
+                      compatibility
+                    </ListItem>
+                  </OrderedList>
+                  <p>Today, no single person or company runs Ethereum.</p>
+                </div>
+                <Image
+                  src={contributionBanner}
+                  alt="Doge smiling at the computer"
+                  sizes="208px"
+                  className="mx-auto w-52"
+                />
+                <div className="space-y-6">
+                  <h3 className="text-xl">
+                    The network is maintained by a broad group of contributors:
+                  </h3>
+                  <UnorderedList className="[&>li]:mb-0">
+                    <ListItem>
+                      Developers who write and propose upgrades
+                    </ListItem>
+                    <ListItem>
+                      Node operators contributing to distributed physical
+                      infrastructure
+                    </ListItem>
+                    <ListItem>Stakers who validate transactions</ListItem>
+                    <ListItem>
+                      Community members who build the tools and culture
+                    </ListItem>
+                    <ListItem>
+                      <strong>You</strong> by using the network
+                    </ListItem>
+                  </UnorderedList>
+                  <p>
+                    <span className="font-bold">
+                      There’s no CEO, board, or central authority.
+                    </span>{" "}
+                    The Ethereum Foundation still helps fund research and
+                    development, but the ecosystem runs on open participation.
+                  </p>
+                  <p>
+                    Changes are proposed through{" "}
+                    <a>Ethereum Improvement Proposals (EIPs)</a>, discussed
+                    publicly, and only adopted{" "}
+                    <a>if the wider community supports them</a>.
+                  </p>
+                  <p>
+                    This makes Ethereum slower to change than a startup, but
+                    also much harder to shut down or take over.
+                  </p>
+                </div>
+                <Link href="/history/" className="group block no-underline">
+                  <span className={twFlipForRtl}>→</span>{" "}
+                  <span className="group-hover:underline">
+                    Learn more about Ethereum&apos;s history
+                  </span>
+                </Link>
+              </div>
+            </div>
           </Section>
 
           <Section id={getId(tocItems[8].url)} className="space-y-14">
