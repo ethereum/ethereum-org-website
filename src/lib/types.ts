@@ -1206,3 +1206,12 @@ export type TimeLeftLabels = Record<
   "days" | "hours" | "minutes" | "seconds",
   TimeLeftLabel
 >
+
+export type Story = {
+  name: string
+  storyEnglish: string
+  storyOriginal: string | null
+  twitter: string | null
+  country: string | null
+  date: string
+}

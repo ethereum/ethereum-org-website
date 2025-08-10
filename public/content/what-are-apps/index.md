@@ -46,7 +46,9 @@ Apps are powered by smart contracts — bits of code that live on the Ethereum b
 | **Can it be censored?** | Yes | No |
 | **Who owns your data?** | Usually not you | You own your data |
 
-<div class="w-full md:w-1/2 mx-auto md:mx-0">
+<WhatAreAppsStories />
+
+<div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./developers-eth-blocks.png)
 
