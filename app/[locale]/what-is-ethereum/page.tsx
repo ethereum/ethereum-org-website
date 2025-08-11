@@ -7,17 +7,19 @@ import {
   SquareCode,
   User,
 } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
+import DocLink from "@/components/DocLink"
+import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
 import MainArticle from "@/components/MainArticle"
 import { CardTitle } from "@/components/ui/card"
-import Link from "@/components/ui/Link"
+import Link, { LinkProps } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -79,9 +81,24 @@ const HighlightCardContent = ({
   <div className={cn("space-y-6 text-body-medium", className)} {...props} />
 )
 
+const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
+  const locale = await getLocale()
+  const { twFlipForRtl } = getDirection(locale as Lang)
+  return (
+    <Link
+      href={href}
+      className={cn("group block w-fit no-underline", className)}
+    >
+      <span data-label="link-arrow" className={twFlipForRtl}>
+        →
+      </span>
+      &nbsp;
+      <span className="group-hover:underline">{children}</span>
+    </Link>
+  )
+}
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-  const { twFlipForRtl } = getDirection(locale)
   // const t = await getTranslations({
   //   locale,
   //   namespace: "page-what-is-ethereum",
@@ -136,10 +153,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     return parts.length > 1 ? parts[1] : ""
   }
   return (
-    <MainArticle className="mx-0 my-auto flex w-full flex-col items-center gap-0">
+    <div>
       <ContentHero {...heroProps} />
 
-      <div className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
+      <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <div
           data-label="extras"
           className="mb-8 space-y-4 lg:col-start-1 lg:row-start-1 lg:mb-10"
@@ -346,15 +363,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </div>
             </div>
 
-            <Link
-              href="/layer-2/networks/"
-              className="group block no-underline"
-            >
-              <span className={twFlipForRtl}>→</span>{" "}
-              <span className="group-hover:underline">
-                Learn more about the Ethereum network
-              </span>
-            </Link>
+            <LinkWithArrow href="/layer-2/networks/">
+              Learn more about the Ethereum network
+            </LinkWithArrow>
           </Section>
 
           <Section
@@ -414,12 +425,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
             </div>
 
-            <Link href="/eth/" className="group block no-underline">
-              <span className={twFlipForRtl}>→</span>{" "}
-              <span className="group-hover:underline">
-                Learn more about ether (ETH)
-              </span>
-            </Link>
+            <LinkWithArrow href="/eth/">
+              Learn more about ether (ETH)
+            </LinkWithArrow>
           </Section>
 
           <Section
@@ -440,8 +448,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
             <div className="space-y-6">
               <p>
-                When Ethereum launched in 2015, it used a system called Proof of
-                Work.
+                When Ethereum launched in 2015, it used a system called proof of
+                work.
               </p>
               <p>
                 This mechanism pioneered by Bitcoin, is how all computers agreed
@@ -451,7 +459,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>
                 In 2022, Ethereum upgraded to a new system called{" "}
-                <strong>Proof of Stake</strong>{" "}
+                <strong>proof of stake</strong>{" "}
                 <a>that&apos;s 99% more energy efficient</a>. Instead of
                 mathematical puzzles, validators lock their ETH as a security
                 deposit to earn the right to process transactions.
@@ -528,21 +536,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 censorship resistance.
               </p>
               <div>
-                <Link href="/learn/" className="group block no-underline">
-                  <span className={twFlipForRtl}>→</span>{" "}
-                  <span className="group-hover:underline">
-                    Learn more about how Ethereum works
-                  </span>
-                </Link>
-                <Link
-                  href="/developers/docs/"
-                  className="group block no-underline"
-                >
-                  <span className={twFlipForRtl}>→</span>{" "}
-                  <span className="group-hover:underline">
-                    Read developer docs for a technical overview of Ethereum
-                  </span>
-                </Link>
+                <LinkWithArrow href="/learn/">
+                  Learn more about how Ethereum works
+                </LinkWithArrow>
+                <LinkWithArrow href="/developers/docs/">
+                  Read developer docs for a technical overview of Ethereum
+                </LinkWithArrow>
               </div>
             </div>
           </Section>
@@ -576,7 +575,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>Here&apos;s how different groups are using it today:</p>
             </div>
-
             <HighlightStack data-label="what-is-table">
               <HighlightCard>
                 <IconBox>
@@ -694,15 +692,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </HighlightCard>
             </HighlightStack>
 
-            <Link
-              href="/learn/" // TODO: Confirm links
-              className="group block no-underline"
-            >
-              <span className={twFlipForRtl}>→</span>{" "}
-              <span className="group-hover:underline">
-                Learn more about what Ethereum is used for
-              </span>
-            </Link>
+            {/* // TODO: Confirm links */}
+            <LinkWithArrow href="/learn/">
+              Learn more about what Ethereum is used for
+            </LinkWithArrow>
           </Section>
 
           <Section id={getId(tocItems[5].url)} className="space-y-14">
@@ -787,7 +780,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </p>
                   <p>
                     Ethereum used to work like this too. But in 2022, it
-                    transitioned from Proof of Work to Proof of Stake. Today,
+                    transitioned from proof of work to proof of stake. Today,
                     transactions are confirmed by validators who lock up ETH as
                     collateral. Honest validators earn ETH rewards while any
                     dishonest ones lose part of their stake. This shift made
@@ -806,7 +799,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     Bitcoin has a fixed supply. There will only ever be 21
                     million coins. Ethereum, on the other hand, has a dynamic
                     supply. New ETH is issued to reward validators, while a
-                    portion is burned with every transaction. This means
+                    portion is burned with every transaction. This means{" "}
                     <strong>
                       Ethereum can&apos;t just “print infinite ETH.”
                     </strong>
@@ -825,12 +818,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </div>
               </div>
 
-              <Link href="#TODO-get-link" className="group block no-underline">
-                <span className={twFlipForRtl}>→</span>{" "}
-                <span className="group-hover:underline">
-                  Learn more about the difference between Ethereum and Bitcoin
-                </span>
-              </Link>
+              <LinkWithArrow href="#TODO-get-link">
+                Learn more about the difference between Ethereum and Bitcoin
+              </LinkWithArrow>
             </div>
           </Section>
 
@@ -865,7 +855,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <p>Ethereum officially launched in July 2015.</p>
                 </div>
                 <div className="space-y-6">
-                  <h3 className="text-xl">Key moments in Ethereum’s history</h3>
+                  <h3 className="text-xl">
+                    Key moments in Ethereum&apos;s history
+                  </h3>
                   <OrderedList className="m-0 list-none [&>li]:mb-0">
                     <ListItem>
                       <span className="font-bold text-body-medium">2013:</span>{" "}
@@ -879,8 +871,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2015:</span>{" "}
-                      Developers launch the Ethereum network with the Frontier
-                      release
+                      Developers launch the Ethereum network with the{" "}
+                      <em>Frontier</em> release
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2016:</span>{" "}
@@ -893,17 +885,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2021:</span>{" "}
-                      “London” upgrade starts burning gas fees via EIP-1559
+                      <em>London</em> upgrade starts burning gas fees via
+                      EIP-1559
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2022:</span>{" "}
-                      “The Merge” replaces mining with staking, cutting energy
-                      use by 99%
+                      <em>The Merge</em> replaces mining with staking, cutting
+                      energy use by 99%
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2025:</span>{" "}
-                      “Pectra” upgrade improves smart wallet support and L2
-                      compatibility
+                      <em>Pectra</em> upgrade improves smart wallet support and
+                      L2 compatibility
                     </ListItem>
                   </OrderedList>
                   <p>Today, no single person or company runs Ethereum.</p>
@@ -936,7 +929,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </UnorderedList>
                   <p>
                     <span className="font-bold">
-                      There’s no CEO, board, or central authority.
+                      There&apos;s no CEO, board, or central authority.
                     </span>{" "}
                     The Ethereum Foundation still helps fund research and
                     development, but the ecosystem runs on open participation.
@@ -952,24 +945,96 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     also much harder to shut down or take over.
                   </p>
                 </div>
-                <Link href="/history/" className="group block no-underline">
-                  <span className={twFlipForRtl}>→</span>{" "}
-                  <span className="group-hover:underline">
-                    Learn more about Ethereum&apos;s history
-                  </span>
-                </Link>
+                <LinkWithArrow href="/history/">
+                  Learn more about Ethereum&apos;s history
+                </LinkWithArrow>
               </div>
             </div>
           </Section>
 
-          <Section id={getId(tocItems[8].url)} className="space-y-14">
+          <Section id={getId(tocItems[8].url)} className="space-y-4">
             <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[8].title}
             </h2>
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <p>
+                  Ethereum doesn&apos;t follow a fixed roadmap. It follows a
+                  shared vision.
+                </p>
+                <p>
+                  Network upgrades are made as EIP proposals and developed in
+                  public by contributors around the world. There&apos;s no
+                  central team deciding what happens, just people building what
+                  they believe is useful based on users&apos; needs.
+                </p>
+                <p>
+                  <a>Pectra is the most recent upgrade</a> launched in May 2025.
+                  This upgrade improved wallet features, gave stakers more
+                  flexibility, and made it easier for dapps to run on L2s. The
+                  goal was to improve usability without compromising on security
+                  or decentralization.
+                </p>
+
+                <p className="font-bold">
+                  <Link href="#">Looking ahead</Link>, Ethereum&apos;s
+                  priorities include:
+                </p>
+
+                <UnorderedList className="[&>li]:mb-0">
+                  <ListItem>
+                    Making the core protocol and its L2s faster and cheaper for
+                    everyone
+                  </ListItem>
+                  <ListItem>
+                    Improving the experience for users and developers
+                  </ListItem>
+                </UnorderedList>
+
+                <p>
+                  These priorities will helps ensure Ethereum is secure,
+                  scalable and user friendly as more people rely on the network
+                  everyday.
+                </p>
+                <p>
+                  If you want to steer the direction for Ethereum,{" "}
+                  <a>get involved</a>. You don&apos;t need permission, just the
+                  desire to make a difference in this new digital economy.
+                </p>
+              </div>
+
+              <LinkWithArrow href="/roadmap/">
+                See an overview of the Ethereum roadmap
+              </LinkWithArrow>
+            </div>
           </Section>
+
+          <Section id="further-readon" className="space-y-8">
+            <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              Read next
+            </h2>
+            <UnorderedList className="ms-0 list-none">
+              <ListItem>
+                <DocLink href="/wallets/">What are wallets?</DocLink>
+              </ListItem>
+              <ListItem>
+                <DocLink href="/eth/">What is ether (ETH)?</DocLink>
+              </ListItem>
+              <ListItem>
+                <DocLink href="/web3/">What is web3?</DocLink>
+              </ListItem>
+              <ListItem>
+                <DocLink href="/layer-2/networks/">
+                  Learn more about the Ethereum network
+                </DocLink>
+              </ListItem>
+            </UnorderedList>
+          </Section>
+
+          <FeedbackCard />
         </div>
-      </div>
-    </MainArticle>
+      </MainArticle>
+    </div>
   )
 }
 
