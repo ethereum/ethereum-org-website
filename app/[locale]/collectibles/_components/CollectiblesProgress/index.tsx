@@ -37,7 +37,7 @@ const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
     <>
       {contributorSinceYear < Infinity && (
         <p className="text-body-medium">
-          Contributing since:{" "}
+          {t("page-collectibles-contributing-since")}:{" "}
           {new Intl.DateTimeFormat(locale, {
             year: "numeric",
           }).format(new Date().setFullYear(contributorSinceYear))}
