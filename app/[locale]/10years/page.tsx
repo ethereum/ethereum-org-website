@@ -49,8 +49,6 @@ import {
   isAddressFiltered,
   type TorchHolder,
 } from "@/lib/torch"
-
-import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
 // In seconds
