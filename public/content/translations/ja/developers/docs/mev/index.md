@@ -12,7 +12,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-[トランザクション](/developers/docs/transactions/) 、[ブロック](/developers/docs/blocks/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)、および[ガス](/developers/docs/gas/)について理解している必要があります。 また、[分散アプリケーション（Dapp）](/dapps/)や[分散型金融（DeFi）](/defi/)の知識も有用です。
+[トランザクション](/developers/docs/transactions/) 、[ブロック](/developers/docs/blocks/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)、および[ガス](/developers/docs/gas/)について理解している必要があります。 また、[分散アプリケーション（Dapp）](/apps/)や[分散型金融（DeFi）](/defi/)の知識も有用です。
 
 ## MEVの抽出 {#mev-extraction}
 

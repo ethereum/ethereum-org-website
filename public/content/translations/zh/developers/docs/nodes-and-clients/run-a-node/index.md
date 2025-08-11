@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### 共识客户端
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)（不提供预构建的二进制文件，仅提供 Docker 映像或使用源代码进行构建）
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（不提供预构建的二进制文件，仅提供 Docker 映像或使用源代码进行构建）
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu 还带有一个启动器选项，它会询问一系列问题并生成配置
 besu --Xlauncher
 ```
 
-[Besu 相关文档](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)包含更多选项和配置详细信息。
+[Besu 相关文档](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含更多选项和配置详细信息。
 
 ##### 运行 Erigon
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 运行 Nethermind
 
-Nethermind 提供各种[安装选项](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
+Nethermind 提供各种[安装选项](https://docs.nethermind.io/get-started/installing-nethermind)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
 
@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-查看[配置 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多关于默认数据目录的信息。 [Reth 的相关文档](https://reth.rs/run/mainnet.html)包含更多选项和配置详情。
+查看[配置 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多有关默认数据目录的信息。 [Reth 的相关文档](https://reth.rs/run/mainnet.html)包含更多选项和配置详情。
 
 #### 启动共识客户端 {#starting-the-consensus-client}
 

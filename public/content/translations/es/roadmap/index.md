@@ -8,10 +8,10 @@ alt: "Hoja de ruta de Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Actualizaciones futuras
+    content: Actualizaciones futuras
     toId: '¿Qué cambios están pendientes?'
   - 
-    label: Actualizaciones anteriores
+    content: Actualizaciones anteriores
     href: /history/
     variant: borrador
 ---
@@ -109,6 +109,7 @@ El sharding está dividiendo la cadena de bloques de Ethereum para que los subco
 
 ## ¿Busca actualizaciones técnicas específicas? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra): La bifurcación dura Praga/Electra aporta un nuevo enfoque a la abstracción de cuentas y mejora la escalabilidad, entre otras cosas.
 - [Danksharding](/roadmap/danksharding): Danksharding hace que las acumulaciones de capa 2 sean mucho más baratas para los usuarios al añadir «masas» de datos a los bloques de Ethereum.
 - [Retiradas de participación](/staking/withdrawals): la actualización de Shanghai/Capella posibilitó las retiradas de participación en Ethereum, lo que permitió a las personas desbloquear su ETH en participación.
 - [Finalidad de una sola ranura](/roadmap/single-slot-finality): en lugar de esperar quince minutos, los bloques podrían proponerse y finalizarse en la misma ranura. Esto resulta más práctico para las aplicaciones y mucho más difícil de atacar.

@@ -5,7 +5,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 })
 
-const { i18n } = require("./next-i18next.config")
+const createNextIntlPlugin = require("next-intl/plugin")
+
+const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
@@ -51,18 +53,72 @@ module.exports = (phase, { defaultConfig }) => {
           issuer: fileLoaderRule.issuer,
           resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
           use: ["@svgr/webpack"],
+        },
+        {
+          test: /\.md$/,
+          use: ["raw-loader"],
         }
       )
 
       // Modify the file loader rule to ignore *.svg, since we have it handled now.
       fileLoaderRule.exclude = /\.svg$/i
 
+      config.module.rules.push({
+        test: /\.(mp3)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "static/media/[name][ext]",
+        },
+      })
+
+      // WalletConnect related packages are not needed for the bundle
+      // https://docs.reown.com/appkit/next/core/installation#extra-configuration
+      config.externals.push("pino-pretty", "lokijs", "encoding")
+
       return config
     },
-    i18n,
     trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "crowdin-static.downloads.crowdin.com",
+        },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "coin-images.coingecko.com",
+        },
+        {
+          protocol: "https",
+          hostname: "i.imgur.com",
+        },
+        {
+          protocol: "https",
+          hostname: "imgur.com",
+        },
+        {
+          protocol: "https",
+          hostname: "unavatar.io",
+        },
+      ],
+    },
+    async headers() {
+      return [
+        {
+          source: "/(.*)", // Apply to all routes
+          headers: [
+            {
+              key: "X-Frame-Options",
+              value: "DENY",
+            },
+          ],
+        },
+      ]
     },
   }
 
@@ -83,14 +139,24 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-gnu",
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
-            "public/**/*.png",
-            "public/**/*.gif",
             "src/data",
+            "public/**/*.jpg",
+            "public/**/*.png",
+            "public/**/*.webp",
+            "public/**/*.svg",
+            "public/**/*.gif",
+            "public/**/*.json",
+            "public/**/*.txt",
+            "public/**/*.xml",
+            "public/**/*.pdf",
+            "public/fonts",
+            "public/images",
+            "public/content",
           ],
         },
       },
     }
   }
 
-  return withBundleAnalyzer(nextConfig)
+  return withBundleAnalyzer(withNextIntl(nextConfig))
 }

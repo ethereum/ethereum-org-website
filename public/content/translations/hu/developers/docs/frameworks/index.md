@@ -132,6 +132,14 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
+**Veramo -** **_Egy nyílt forráskódú, moduláris és agnosztikus keretrendszer, amely megkönnyíti a decentralizált alkalmazások fejlesztői számára a decentralizált identitások és ellenőrizhető hitelesítő adatok beépítését az alkalmazásaikba._**
+
+- [Honlap](https://veramo.io/)
+- [Dokumentáció](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM-csomag](https://www.npmjs.com/package/@veramo/core)
+
 ## További olvasnivaló {#further-reading}
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

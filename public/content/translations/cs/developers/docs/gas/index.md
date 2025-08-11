@@ -1,5 +1,6 @@
 ---
 title: Palivo a poplatky
+metaTitle: "Palivo a poplatky na Ethereu: technický přehled"
 description:
 lang: cs
 ---
@@ -105,7 +106,7 @@ Ačkoliv transakce obsahuje limit, palivo nevyužité během transakce se vrací
 
 Limit paliva označuje maximální množství paliva, které jste ochotni za transakci utratit. Složitější transakce zahrnující [chytré kontrakty](/developers/docs/smart-contracts/) potřebují více výpočetního výkonu, a proto vyžadují vyšší limit paliva než jednoduchá platba. Standardní převod ETH vyžaduje limit paliva 21 000 jednotek.
 
-Např. pokud nastavíte limit paliva na 50 000 pro jednoduchý převod ETH, EVM spotřebuje 21 000 a zbývajících 29 000 se vám vrátí. Pokud však nastavíte příliš nízký limit, např. 20 000 pro jednoduchý převod ETH, EVM spotřebuje vašich 20 000 jednotek paliva při pokusu o provedení transakce, ale nedokončí ji. EVM poté jakékoli změny smaže, ale protože validátor už udělal práci za 20 000 jednotek paliva, je toto palivo spotřebováno.
+Např. pokud nastavíte limit paliva na 50 000 pro jednoduchý převod ETH, EVM spotřebuje 21 000 a zbývajících 29 000 se vám vrátí. Pokud však zadáte příliš málo paliva, například limit paliva 20 000 pro jednoduchý převod ETH, transakce ve fázi validace selže. Bude odmítnuta před zařazením do bloku a nebude spotřebováno žádné palivo. Na druhou stranu, pokud transakci během provádění dojde palivo (např. chytrý kontrakt spotřebuje v polovině provádění veškeré palivo), EVM vrátí všechny změny, ale veškeré poskytnuté palivo bude stále spotřebováno na provedenou práci.
 
 ## Proč mohou být poplatky za palivo tak vysoké? {#why-can-gas-fees-get-so-high}
 
@@ -122,6 +123,7 @@ Primární iniciativou ke snížení palivových nákladů a zlepšení uživate
 Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za nižší ceny, můžete využít několik různých nástrojů, např.:
 
 - [Etherscan](https://etherscan.io/gastracker) – _odhad ceny paliva za transakci_
+- [ETH tracker paliva](https://www.ethgastracker.com/) _Monitorujte a sledujte ceny paliva na Ethereu a vrstvě 2, abyste snížili transakční poplatky a ušetřili peníze_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) – _rozšíření pro prohlížeč Chrome odhadující poplatky za palivo, které podporuje jak typ 0 legacy transakce, tak typ 2 transakce EIP-1559_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) – _kalkulačka poplatků za palivo v místní měně pro různé typy transakcí na hlavní síti, Arbitru a Polygonu_
 
@@ -137,3 +139,4 @@ Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za 
 - [Strategie optimalizace paliva pro vývojáře](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Dokumentace EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)
 - [Zdroje k EIP-1559 od Tima Beika](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559: Oddělování mechanismů od memů](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

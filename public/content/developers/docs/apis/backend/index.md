@@ -55,6 +55,9 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Etherscan - Block Explorer and Transaction APIs**
 - [Documentation](https://docs.etherscan.io/)
 
+**Blockscout - Open Source Block Explorer**
+- [Documentation](https://docs.blockscout.com/)
+
 **GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -144,7 +147,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Chainstack -** **_Elastic and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
-- [Documentation](https://docs.chainbase.com/docs)
+- [Documentation](https://docs.chainstack.com/)
 - [Ethereum API reference](https://docs.chainstack.com/reference/ethereum-getting-started)
 
 **Coinbase Cloud Node -** **_Blockchain Infrastructure API._**

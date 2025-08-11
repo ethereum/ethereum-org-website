@@ -19,13 +19,13 @@ hideEditButton: true
 
 **Dị ka blockchains ndị ọzọ, Ethereum nwere ego nwaafo cryptocurrency ana akpọ ether (ETH).** ETH bụ ego dijitalụ. Ọ bụrụ na ị nụrụ maka [Bitcoin](http://bitcoin.org/) ETH nwere otutu otu njiri mara ya. Ọ bụ dijitalụ kpamkpam, enwere ike iziga onye ọ bụla nọ n'ụwa n'otu ntabi anya. Mbunye ihe nke ETH enweghi ndi goomenti maọbụ ụlọ ọrụ ọ bụla na achịkwa ya, ahazighariri ya, ma o di ụkọ. Ndị mmadụ n’ụwa niile na eji ETH akwu ugwo, dị ka ụlọ ahịa bara uru, ma ọ bụ dịka ihe eji ebiri ego.
 
-mana dika blockchain ndi ozo, Ethereum na emenwu karia. Ethereum bu ihe aga ahaziwu n'ihu, nka a putara na ndị meputara ya ga eji nwu ya [ruo ngwaoru komputa ọhụru di iche](/dapps/) were ngwaoru komputa aruru na ethereum.
+mana dika blockchain ndi ozo, Ethereum na emenwu karia. Ethereum bu ihe aga ahaziwu n'ihu, nka a putara na ndị meputara ya ga eji nwu ya [ruo ngwaoru komputa ọhụru di iche](/apps/) were ngwaoru komputa aruru na ethereum.
 
 Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na teknụzụ blockchain. Enwere ike itukwasi ha obi, nke a putara na ozigbo "enyefere" ha na Ethereum, ha ga na aru oru dika ihe ahaziri n'ihu oge niile. Ha na achikotawu akụ dijitalụ iji meputa ngwa ego komputa ohuru di iche. Enwere ike ihazighari ha, nke a putara na 'onweghi otu ihe maobu mmadu na achikota ya.
 
 **Ugbu a, otutu puku ndi mmeputa n' ụwa niile na-aru ngwa komputa na Ethereum, na aruputa ụdị ngwa komputa ọhụrụ, otutu nke i nwere ike eji taa:**
 
-- [**Akpa ego Cryptocurrency**](/ig/use/#3-what-is-a-wallet-and-which-one-should-i-use/) nke ga ekwe ka ikwuo ugwo di onu ala ozugbo na ETH maọbụ akụnuba ndị ọzọ
+- [**Akpa ego Cryptocurrency**](/use/#3-what-is-a-wallet-and-which-one-should-i-use/) nke ga ekwe ka ikwuo ugwo di onu ala ozugbo na ETH maọbụ akụnuba ndị ọzọ
 - **Ngwa ego komputa** nke ga ekwe ka ibiri, binye maọbụ tinye akunuba dijitalụ gị
 - **Ahia ahazighariri**, nke a ga - ekwe ka ịre ahia akunuba dijitalụ gi, maobu ahia "amụma" banyere ihe ndị mere n' ụwa n'ezie
 - **Egwuregwu** ebe ị ga enwe akunuba ihe egwuregwu n'ime, ma nwekwaa ike enweta ego ahuru anya
@@ -39,9 +39,9 @@ Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na 
 
 **I maghi ebe iga aga ozo?**
 
-- I chọrọ ịmalite i di na-iji Ethereum? [ethereum.org/ig/use/](/ig/use/)
-- Inu oku n'obi ịmatakwu banyere Ethereum na teknụzụ ya? [ethereum.org/ig/learn](/ig/learn/)
-- I bu onye mmeputa nwere mmasị ịru na ethereum? [ethereum.org/ig/developers](/ig/developers/)
+- I chọrọ ịmalite i di na-iji Ethereum? [ethereum.org/ig/use/](/use/)
+- Inu oku n'obi ịmatakwu banyere Ethereum na teknụzụ ya? [ethereum.org/ig/learn](/learn/)
+- I bu onye mmeputa nwere mmasị ịru na ethereum? [ethereum.org/ig/developers](/developers/)
 
 **I na-achọ inwetakwu mmalite ego oru banyere Ethereum?**
 

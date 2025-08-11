@@ -8,10 +8,10 @@ alt: "Ethereum-Roadmap"
 summaryPoints:
 buttons:
   - 
-    label: Weitere Upgrades
+    content: Weitere Upgrades
     toId: welche-veränderungen-kommen-werden
   - 
-    label: Bisherige Upgrades
+    content: Bisherige Upgrades
     href: /history/
     variant: Übersicht
 ---

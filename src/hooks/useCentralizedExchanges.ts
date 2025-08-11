@@ -1,7 +1,6 @@
 import { useState } from "react"
-import shuffle from "lodash/shuffle"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { shuffle } from "lodash"
+import { useLocale } from "next-intl"
 
 // TODO: Remove unused?
 // import argent from "@/public/images/wallets/argent.png"
@@ -14,10 +13,12 @@ import { useTranslation } from "next-i18next"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
+import { getCountryCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import binance from "@/public/images/exchanges/binance.png"
 import bitbuy from "@/public/images/exchanges/bitbuy.png"
 import bitfinex from "@/public/images/exchanges/bitfinex.png"
@@ -118,7 +119,25 @@ const exchanges: ExchangeDetails = {
     name: "Binance US",
     url: "https://www.binance.us/",
     image: binance,
-    usaExceptions: ["HI", "ID", "NY", "TX", "VT"],
+    // Updated Dec 4th 2024 https://support.binance.us/hc/en-us/articles/360046786914-List-of-supported-states-and-regions
+    usaExceptions: [
+      "AK", // Alaska
+      "AS", // American Samoa
+      "CT", // Connecticut
+      "GA", // Georgia
+      "GU", // Guam
+      "ME", // Maine
+      "MP", // Northern Mariana Islands
+      "NY", // New York
+      "NC", // North Carolina
+      "ND", // North Dakota
+      "OH", // Ohio
+      "OR", // Oregon
+      "TX", // Texas
+      "VI", // U.S. Virgin Islands
+      "VT", // Vermont
+      "WA", // Washington
+    ],
   },
   bitbuy: {
     name: "Bitbuy",
@@ -285,7 +304,7 @@ const exchanges: ExchangeDetails = {
 }
 
 export const useCentralizedExchanges = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-get-eth")
   const [selectedCountry, setSelectedCountry] =
     useState<ExchangeByCountryOption | null>()
@@ -296,11 +315,18 @@ export const useCentralizedExchanges = () => {
   const selectOptions: ExchangeByCountryOption[] = Object.entries(
     exchangeData as ExchangeData
   )
-    .map(([country, exchanges]) => ({
-      value: country,
-      label: country,
-      exchanges,
-    }))
+    .map(([countryCode, exchanges]) => {
+      const countryName =
+        countryCode.length === 2
+          ? getCountryCodeName(countryCode, locale)
+          : t(`common:region-${countryCode.toLowerCase()}`)
+
+      return {
+        value: countryName,
+        label: countryName,
+        exchanges,
+      }
+    })
     .sort((a, b) => a.value.localeCompare(b.value))
 
   const handleSelectChange: SelectOnChange<ExchangeByCountryOption> = (

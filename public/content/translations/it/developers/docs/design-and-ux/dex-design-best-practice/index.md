@@ -5,7 +5,7 @@ lang: it
 ---
 
 Dal lancio di Uniswap nel 2018, sono state lanciate centinaia di borse decentralizzate in decine di catene differenti.
-Molte di queste hanno introdotto nuovi elementi o aggiunto il proprio tocco, ma l'interfaccia è rimasta più o meno la stessa.
+Molte di queste hanno introdotto nuovi elementi o aggiunto i propri tocchi, ma l'interfaccia è rimasta per lo più la stessa.
 
 Una delle ragioni è la [Legge di Jakob](https://lawsofux.com/jakobs-law/):
 
@@ -180,7 +180,7 @@ La legge della prossimità dice che gli elementi vicini sono percepiti come corr
 
 In definitiva ci sono pro e contro in entrambe le opzioni, ma è interessante come il trend sembri andare verso il token sulla destra.
 
-# Comportamento del pulsante {#button-behavior}
+## Comportamento del pulsante {#button-behavior}
 
 Non inserire un pulsante separato per Approva. Inoltre, non prevedere clic separati per Approva. L'utente vuole Scambiare, quindi basta indicare "scambia" sul pulsante e avviare l'approvazione come primo passaggio. Una finestra modale può mostrare il progresso con uno stepper o con una semplice notifica che dica "tx 1 di 2 - approvazione in corso".
 
@@ -188,7 +188,7 @@ Non inserire un pulsante separato per Approva. Inoltre, non prevedere clic separ
 
 ![Una UI con un pulsante che indica approva](./15.png)
 
-## Pulsanti come aiuto contestuale {#button-as-contextual-help}
+### Pulsanti come aiuto contestuale {#button-as-contextual-help}
 
 Il pulsante può svolgere il doppio compito di avviso!
 
@@ -206,7 +206,7 @@ Il pulsante può anche venire **mappato all'azione** che deve essere eseguita. P
 
 ![Messaggio di errore visualizzato nella CTA principale](./17.png)
 
-## Costruisci la tua con questo file di Figma {#build-your-own-with-this-figma-file}
+### Costruisci la tua con questo file di Figma {#build-your-own-with-this-figma-file}
 
 Grazie al duro lavoro di vari protocolli, la progettazione delle DEX è migliorata parecchio. Sappiamo di quali informazioni ha bisogno l'utente, come dobbiamo visualizzarle e come far andare più liscio possibile il flusso.
 Speriamo che questo articolo ti abbia dato una solida panoramica dei principi UX.

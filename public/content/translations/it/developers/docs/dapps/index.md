@@ -82,7 +82,7 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 
 ## Letture consigliate {#further-reading}
 
-- [Esplora le dapp](/dapps)
+- [Esplora le dapp](/apps)
 - [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Una guida del 2021 alle applicazioni decentralizzate](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [Cosa sono le App Decentralizzate?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_

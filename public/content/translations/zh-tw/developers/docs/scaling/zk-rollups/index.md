@@ -222,12 +222,6 @@ ZK-STARK 對於量子電腦也是安全的，而 ZK-SNARK 中使用的橢圓曲�
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### 使用零知識證明卷軸 {#use-zk-rollups}
-
-零知識證明卷軸存在多種實作，可供你整合到去中心化應用程式：
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## 零知識以太坊虛擬機上有哪些項目？ {#zkevm-projects}
 
 零知識以太坊虛擬機上運作的專案包括：

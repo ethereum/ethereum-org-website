@@ -47,7 +47,7 @@ Một trong những cách hay nhất để nhìn nhận tiềm năng của tài 
 | Các thị trường luôn luôn mở cửa.                                                                                              | Các thị trường có thể đóng cửa vì nhân viên cần thời gian nghỉ ngơi.                                                                                           |
 | Được xây dựng trên sự minh bạch – bất kì ai cũng có thể nhìn vào dữ liệu sản phẩm và tìm hiểu xem hệ thống hoạt động thế nào. | Các định chế tài chính là những cuốn sách đóng kín: bạn không thể yêu cầu xem lịch sử cho vay của họ hay sổ sách liệt kê những tài sản họ quản lý v.v. và v.v. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Khám phá các ứng dụng tài chính phi tập trung
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Khái niệm này nghe khá kì lạ... "tại sao mà tôi lại muốn lập t
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Khám phá những ứng dụng tài chính phi tập trung mà chúng tôi gợi ý nếu bạn là một người dùng mới của Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/?category=finance#explore">
     Khám phá các ứng dụng tài chính phi tập trung
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Có một lựa chọn thay thế mang tính phi tập trung cho hầu hết cá
 
 Là một chuỗi khối, Ethereum được thiết kế để gửi đi các giao dịch một cách an toàn và mang tính toàn cầu. Giống như Bitcoin, Ethereum biến việc việc gửi tiền trên khắp thế giới trở nên dễ dàng như gửi một cái email. Chỉ cần nhập vào [địa chỉ ENS](/glossary/#ens) của người nhận (ví dụ: bob.eth) hoặc địa chỉ tài khoản của họ trong ví của bạn và khoản thanh toán mà bạn gửi sẽ đi thẳng đến người nhận, thông thường chỉ mất vài phút. Để gửi hoặc nhận tiền, bạn sẽ cần một [ví điện tử](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các ứng dụng thanh toán
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Bạn có thể vay tiền từ những nhà cung cấp phi tập trung dưới 
 - Ngang hàng (peer-to-peer), có nghĩa rằng một người đi vay sẽ vay trực tiếp từ một người cho vay nhất định.
 - Theo quỹ (pool-based), trong đó những người cho vay sẽ đưa tiền vào một quỹ chung rồi từ đó người đi vay có thể nhận tiền.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các dapp cho vay
 </ButtonLink>
 
@@ -168,7 +168,7 @@ Nếu nguồn cung của sàn giao dịch B sụt giảm bất ngờ và ngườ
 
 Để có thể thực hiện ví dụ trên trong thế giới tài chính truyền thống, bạn sẽ cần một lượng tiền khổng lồ. Những chiến lược kiếm tiền kiểu này chỉ những người sở hữu sẵn tài sản mới có thể tiếp cận được. Các khoản vay nóng là ví dụ về một tương lai nơi mà việc có tiền không nhất thiết phải là một điều kiện tiên quyết cho việc kiếm tiền.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Đọc thêm về các khoản vay nóng
 </ButtonLink>
 
@@ -185,7 +185,7 @@ Bạn có thể thu lãi suất trên tiền mã hóa của mình bằng cách c
 - Số aDai của bạn sẽ tăng theo lãi suất và bạn có thế thấy số dư của mình tăng lên trong ví. Tùy vào [APR](/glossary/#apr), tại thời điểm cho vay, số dư trong ví của bạn có thể lên tới 100.1234 ETH chỉ sau vài ngày hay thậm chí là vài giờ cho vay!
 - Bạn có thể rút ra một khoản Dai bằng với số dư aDai của bạn ở bất kì thời điểm nào.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các ứng dụng phi tập trung về cho vay
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Có hàng ngàn loại tokens trên Ethereum. Các sàn giao dịch phi tập tr
 
 Ví dụ, nếu bạn muốn tham gia vào xổ số không mất PoolTogether (đề cập ở trên), bạn sẽ cần một loại token như Dai hay USDC. Các DEX này cho phép bạn hoán đổi ETH của mình cho các mã thông báo đó và ngược lại khi bạn hoàn tất.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các sàn giao dịch token
 </ButtonLink>
 
@@ -225,7 +225,7 @@ Có những lựa chọn nâng cao cho các tay buôn (traders) thích có sự 
 
 Khi bạn dùng một sàn giao dịch tập trung, bạn phải kí gửi tài sản của mình trước khi giao dịch và tin tưởng rằng họ sẽ chăm sóc nó. Trong khi tài sản của bạn đang được kí gửi, chúng phải đối diện với nhiều rủi ro mất mát vì các sàn giao dịch tập trung là mục tiêu hấp dẫn đối với các hacker.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các dapp mua bán
 </ButtonLink>
 
@@ -237,7 +237,7 @@ Có những sản phẩm quản lý quỹ tài sản trên Ethereum cố gắng 
 
 Một ví dụ hay là [Quỹ đầu tư chỉ số DeFi Pulse (DPI)](https://defipulse.com/blog/defi-pulse-index/). Đây là một quỹ đầu tư tự động tái cân bằng để đảm bảo rằng danh mục đầu tư của bạn luôn bao gồm những token tài chính DeFi có vốn hóa thị trường lớn nhất. Bạn không bao giờ phải quản lý bất cứ chi tiết nào liên quan đến danh mục đầu tư của bạn và bạn có thể rút vốn bất cứ khi nào bạn thích.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các ứng dụng phi tập trung về đầu tư
 </ButtonLink>
 
@@ -251,7 +251,7 @@ Ethereum là một nền tảng lý tưởng cho việc gọi vốn từ cộng 
 - Ethereum hoàn toàn minh bạch nên những người kêu gọi vốn có thể chứng minh bao nhiêu tiền đã được quyên góp. Bạn thậm chí còn có thể truy vết xem các khoản vốn được dùng như thế nào theo thời gian.
 - Những người kêu gọi vốn có thể thiết lập những khoản bồi hoàn tự động nếu, lấy ví dụ như, một hạn mốc thời gian bị vượt quá hay một số tiền quyên góp tối thiểu không đạt được.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các dapp gọi vốn cộng đồng
 </ButtonLink>
 
@@ -280,7 +280,7 @@ Bảo hiểm phi tập trung nhắm đến mục tiêu làm cho bảo hiểm tr�
 
 Những sản phẩm trên Ethereum, giống như bất kì một phần mềm nào, có thể chịu thiệt hại do những lỗ hổng và bị lợi dụng. Vì vậy, ở thời điểm hiện tại, rất nhiều sản phẩm bảo hiểm trên nền tảng tập trung vào việc bảo vệ người dùng của chúng khỏi bị mất tiền. Tuy nhiên, có những dự án đang bắt đầu xây dựng các gói bảo hiểm cho mọi thứ mà cuộc sống có thể giáng lên đầu chúng ta. Một ví dụ hay về những nỗ lực này là sản phẩm bảo hiểm nông sản của Etherisc với mục tiêu [bảo vệ những nông dân nhỏ lẻ ở Kenya khỏi hạn hán và lũ lụt](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Bảo hiểm phi tập trung có thể cung cấp những gói bảo hiểm rẻ hơn cho những người nông dân thường không có khả năng chi trả cho bảo hiểm truyền thống.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các dapp bảo hiểm
 </ButtonLink>
 
@@ -290,7 +290,7 @@ Những sản phẩm trên Ethereum, giống như bất kì một phần mềm n
 
 Với quá nhiều thứ đang diễn ra, bạn sẽ cần có một cách để theo dõi tất cả các khoản đầu tư, cho vay và mua bán của mình. Có một loạt các sản phẩm cho phép bạn điều phối tất cả các hoạt động tài chính phi tập trung của mình từ một nơi duy nhất. Đây là lợi thế của cấu trúc mở của tài chính phi tập trung. Các nhóm có thể xây dựng những giao diện mà bạn không chỉ có thể thấy số dư của mình trên khắp các sản phẩm mà còn có thể sử dụng tính năng của chúng. Bạn có thể sẽ thấy điều này là hữu ích sau khi bạn khám phá thêm về DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Xem các ứng dụng quản lý danh mục đầu tư
 </ButtonLink>
 
@@ -322,7 +322,7 @@ Bạn có thể nghĩ về DeFi theo từng lớp:
 1. Chuỗi khốiChuỗi khối – Ethereum chứa đựng lịch sử giao dịch và tình trạng hiện thời của các tài khoản.
 2. Các tài sản - [ETH](/eth/) và những loại tokens (tiền tệ) khác.
 3. Các giao thức – [hợp đồng thông minh](/glossary/#smart-contract) nhằm cung cấp tính năng, ví dụ như một dịch vụ cho phép việc cho vay tài sản một cách phi tập trung.
-4. [Các ứng dụng](/dapps/) – những sản phẩm chúng ta dùng để quản lý và tiếp cận các giao thức.
+4. [Các ứng dụng](/apps/) – những sản phẩm chúng ta dùng để quản lý và tiếp cận các giao thức.
 
 Ghi chú: đa số các DeFi sử dụng [tiêu chuẩn ERC-20](/glossary/#erc-20). Các ứng dụng DeFi sử dụng 1 phương thức bọc để tạo ra token được gắn với Ether ETH được gọi là Wrapped Ether (WETH). [Hãy tìm hiểu thêm về Eth bọc](/wrapped-eth).
 

@@ -4,7 +4,7 @@ lang: en
 template: translatathon
 ---
 
-The Ethereum.org Translation Competition, also referred to as the “Translatathon”, is an experimental initiative by the ethereum.org team to incentivise and reward contributions to the ethereum.org Translation Program.
+The Ethereum.org Translation Competition, also referred to as the “Translatathon”, is an experimental initiative by the ethereum.org team to incentivise and reward contributions to the ethereum.org translation program.
 
 ## Modification and Termination.
 

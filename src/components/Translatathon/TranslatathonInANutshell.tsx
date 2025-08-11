@@ -1,9 +1,7 @@
-import { Flex, Heading, Text } from "@chakra-ui/react"
-
-import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
-
-import Link from "../Link"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
+import Link from "@/components/ui/Link"
 
 import dogeImage from "@/public/images/doge-computer.png"
 import futureImage from "@/public/images/future_transparent.png"
@@ -11,105 +9,75 @@ import settlementImage from "@/public/images/translatathon/settlement.png"
 
 export const TranslatathonInANutshell = () => {
   return (
-    <Flex
-      direction="column"
-      py={16}
-      px={8}
-      bgGradient="linear-gradient(
-        49.21deg,
-        rgba(127, 127, 213, 0.2) 19.87%,
-        rgba(134, 168, 231, 0.2) 58.46%,
-        rgba(145, 234, 228, 0.2) 97.05%
-      )"
-    >
-      <Flex m="auto">
-        <Heading as="h2" fontSize="3xl" mb={8}>
-          Translatathon essentials
-        </Heading>
+    <Flex className="flex-col bg-gradient-to-r from-[#7f7fd5]/20 via-[#86a8e7]/20 to-[#91eae4]/20 px-8 py-16">
+      <Flex className="m-auto">
+        <h2 className="mb-8 text-3xl">Translatathon essentials</h2>
       </Flex>
-      <Flex
-        w="full"
-        direction={{ base: "column", md: "row" }}
-        align="flex-start"
-        p={8}
-        gap={8}
-      >
-        <Flex w="full" direction="column" gap={2} alignSelf="center">
-          <Heading as="h3" fontSize="2xl">
-            Earn points
-          </Heading>
-          <Text>
+
+      <Flex className="w-full flex-col items-center gap-8 p-8 md:flex-row">
+        <Flex className="w-full flex-col gap-2 self-center">
+          <h3 className="text-2xl">Earn points</h3>
+          <p>
             Translate ethereum.org and ecosystem content to earn points and
-            compete with other participants. 1 translated word = 1 point
-          </Text>
+            compete against other participants. 1 translated word = 1 point
+          </p>
         </Flex>
-        <Flex w="full" justifyContent="center">
+        <Flex className="w-full justify-center">
           <Image
             src={settlementImage}
             alt=""
-            w="327"
+            width={327}
+            className="w-[327px]"
             style={{ objectFit: "contain" }}
           />
         </Flex>
       </Flex>
-      <Flex
-        w="full"
-        direction={{ base: "column-reverse", md: "row" }}
-        align="flex-start"
-        p={8}
-        gap={8}
-      >
-        <Flex w="full" justifyContent="center">
+
+      <Flex className="w-full flex-col-reverse items-start gap-8 p-8 md:flex-row">
+        <Flex className="w-full justify-center">
           <Image
             src={futureImage}
             alt=""
-            w="327"
+            width={327}
+            className="w-[327px]"
             style={{ objectFit: "contain" }}
           />
         </Flex>
-        <Flex w="full" direction="column" gap={2} alignSelf="center">
-          <Heading as="h3" fontSize="2xl">
-            Human translations only
-          </Heading>
-          <Text>
-            Using machine translation is forbidden! All translations will be
-            reviewed and evaluated, and participants using machine translation
-            will be automatically disqualified and not be eligible to claim
-            prizes (see{" "}
+        <Flex className="w-full flex-col gap-2 self-center">
+          <h3 className="text-2xl">Human translations only</h3>
+          <p>
+            Using AI or machine translation is forbidden! All translations will
+            be reviewed and evaluated, and participants using machine
+            translation will not be eligible to claim prizes (see{" "}
             <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
               terms and conditions
             </Link>
             )
-          </Text>
+          </p>
         </Flex>
       </Flex>
-      <Flex
-        w="full"
-        direction={{ base: "column", md: "row" }}
-        align="flex-start"
-        p={8}
-        gap={8}
-      >
-        <Flex w="full" direction="column" gap={2} alignSelf="center">
-          <Heading as="h3" fontSize="2xl">
-            Focus on untranslated lines only
-          </Heading>
-          <Text>
+
+      <Flex className="w-full flex-col items-start gap-8 p-8 md:flex-row">
+        <Flex className="w-full flex-col gap-2 self-center">
+          <h3 className="text-2xl">Focus on untranslated lines only</h3>
+          <p>
             Translate strings that do not have any suggested translations yet.
             Do not translate strings that have already been translated and
             approved
-          </Text>
+          </p>
         </Flex>
-        <Flex w="full" justifyContent="center">
+        <Flex className="w-full justify-center">
           <Image
             src={dogeImage}
             alt=""
-            w="327"
+            width={327}
+            className="w-[327px]"
             style={{ objectFit: "contain" }}
           />
         </Flex>
       </Flex>
-      <Flex width="full" justifyContent="center">
+
+      <Flex className="w-full justify-center">
         <ButtonLink href="/contributing/translation-program/translatathon/details">
           Details and rules
         </ButtonLink>

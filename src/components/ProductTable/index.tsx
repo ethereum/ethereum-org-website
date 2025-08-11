@@ -6,77 +6,100 @@ import {
   useMemo,
   useState,
 } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useSearchParams } from "next/navigation"
 import { ColumnDef } from "@tanstack/react-table"
 
-import type {
-  FilterOption,
-  ProductTableColumnDefs,
-  ProductTableRow,
-  TPresetFilters,
-} from "@/lib/types"
+import type { FilterOption, TPresetFilters } from "@/lib/types"
 
 import Table from "@/components/DataTable"
 import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
-import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface ProductTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+interface ProductTableProps<T> {
+  columns: ColumnDef<T>[]
+  data: T[]
   allDataLength: number
   filters: FilterOption[]
   presetFilters: TPresetFilters
+  presetFiltersCounts?: number[]
   resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
-  subComponent?: FC<TData>
+  subComponent?: FC<T>
   noResultsComponent?: React.FC
   mobileFiltersLabel: string
+  matomoEventCategory: string
+  meta?: Record<string, string | number | boolean>
 }
 
-const ProductTable = ({
+const ProductTable = <T,>({
   columns,
   data,
   allDataLength,
   filters,
   presetFilters,
+  presetFiltersCounts,
   resetFilters,
   setFilters,
   subComponent,
   noResultsComponent,
   mobileFiltersLabel,
-}: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
-  const router = useRouter()
-  const { t } = useTranslation("table")
+  matomoEventCategory,
+  meta,
+}: ProductTableProps<T>) => {
+  const searchParams = useSearchParams()
+
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
+  const parseQueryParams = (queryValue: unknown) => {
+    // Handle boolean values
+    if (queryValue === "true") return true
+    if (queryValue === "false") return false
+
+    // Handle array values
+    if (
+      typeof queryValue === "string" &&
+      queryValue.startsWith("[") &&
+      queryValue.endsWith("]")
+    ) {
+      try {
+        return JSON.parse(decodeURIComponent(queryValue))
+      } catch {
+        return undefined
+      }
+    }
+
+    return undefined
+  }
+
   // Update filters based on router query
   useEffect(() => {
-    if (Object.keys(router.query).length > 0) {
+    const query = Object.fromEntries(searchParams?.entries() ?? [])
+
+    if (Object.keys(query).length > 0) {
       const updatedFilters = filters.map((filter) => ({
         ...filter,
         items: filter.items.map((item) => ({
           ...item,
-          inputState: Object.keys(router.query).includes(item.filterKey)
-            ? true
-            : item.inputState,
+          inputState:
+            parseQueryParams(query[item.filterKey]) || item.inputState,
           options: item.options.map((option) => ({
             ...option,
-            inputState: Object.keys(router.query).includes(option.filterKey)
-              ? true
-              : option.inputState,
+            inputState:
+              parseQueryParams(query[option.filterKey]) || option.inputState,
           })),
         })),
       }))
       setFilters(updatedFilters)
-      router.replace(router.pathname, undefined, { shallow: true })
+
+      // TODO: Fix this, removed to avoid infinite re-renders
+      // router.replace(pathname, undefined, { shallow: true })
     }
-  }, [router])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
@@ -222,6 +245,17 @@ const ProductTable = ({
               ).length
             )
           }
+          if (Array.isArray(item.inputState) && item.inputState.length > 0) {
+            return itemCount + 1
+          }
+
+          if (
+            typeof item.inputState === "string" &&
+            item.filterKey !== "languages"
+          ) {
+            return itemCount + 1
+          }
+
           return (
             itemCount +
             (typeof item.inputState === "boolean" && item.inputState ? 1 : 0)
@@ -238,6 +272,7 @@ const ProductTable = ({
           presets={presetFilters}
           activePresets={activePresets}
           handleSelectPreset={handleSelectPreset}
+          presetFiltersCounts={presetFiltersCounts}
         />
       ) : (
         <></>
@@ -249,6 +284,7 @@ const ProductTable = ({
               filters={filters}
               setFilters={setFilters}
               presets={presetFilters}
+              presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
               handleSelectPreset={handleSelectPreset}
               dataCount={data.length}
@@ -268,40 +304,17 @@ const ProductTable = ({
             />
           </div>
           <div className="flex-1">
-            <div className="sticky top-[76px] z-10 flex flex-row items-center justify-between border-b border-b-primary bg-body-inverse px-2 py-2">
-              <Button
-                variant="ghost"
-                className="block p-0 lg:hidden"
-                onClick={() => {
-                  trackCustomEvent({
-                    eventCategory: "MobileFilterToggle",
-                    eventAction: "Tap MobileFilterToggle - sticky",
-                    eventName: "show mobile filters true",
-                  })
-                  setMobileFiltersOpen(true)
-                }}
-              >
-                <p className="text-md">
-                  {`${t("table-filters")} (${activeFiltersCount})`}
-                </p>
-              </Button>
-              <p>
-                {t("table-showing")}{" "}
-                {data.length === allDataLength ? (
-                  <b>{data.length}</b>
-                ) : (
-                  <b>
-                    {data.length}/{allDataLength}
-                  </b>
-                )}
-              </p>
-            </div>
             <Table
               variant="product"
               columns={columns}
               data={data}
               subComponent={subComponent}
               noResultsComponent={noResultsComponent}
+              allDataLength={allDataLength}
+              setMobileFiltersOpen={setMobileFiltersOpen}
+              activeFiltersCount={activeFiltersCount}
+              meta={meta}
+              matomoEventCategory={matomoEventCategory}
             />
           </div>
         </div>

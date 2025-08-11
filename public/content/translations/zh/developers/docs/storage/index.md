@@ -88,7 +88,6 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 
 不使用身份验证的去中心化工具：
 
-- Züs（实现非 KYC 版本）
 - Skynet
 - Arweave
 - Filecoin
@@ -145,7 +144,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - [相关文档](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs - _Züs 是一个基于权益证明的去中心化存储平台，具有区块分片和 blobber。_**
+**Züs - _Züs 是一个具有分片和 blobber 的权益证明去中心化存储平台。_**
 
 - [zus.network](https://zus.network/)
 - [相关文档](https://0chaindocs.gitbook.io/zus-docs)

@@ -44,7 +44,7 @@ Il existe plusieurs clients légers en développement, notamment des clients lé
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client) : client léger de consensus en TypeScript
 - [Helios](https://github.com/a16z/helios) : client léger combinant les tâches d'exécution et de consensus en Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light) : mode léger pour le client d'exécution (en développement) en Go
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light) : mode léger pour le client d'exécution (en développement) en Go
 - [Nimbus](https://nimbus.guide/el-light-client.html) : client léger de consensus en Nim
 
 À notre connaissance, aucun de ces clients n'est encore considéré comme prêt pour être utilisé.

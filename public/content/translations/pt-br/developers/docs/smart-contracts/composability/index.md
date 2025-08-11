@@ -7,7 +7,7 @@ incomplete: true
 
 ## Uma breve introdução {#a-brief-introduction}
 
-Os contratos inteligentes são públicos na Ethereum e podem ser considerados como APIs abertas. Você não precisa escrever o seu próprio contrato inteligente para se tornar um desenvolvedor dapp, você só precisa saber como interagir com eles. Por exemplo, você pode usar os contratos inteligentes existentes do [Uniswap](https://uniswap.exchange/swap), uma troca descentralizada, para lidar com toda a lógica de troca de token em seu aplicativo - você não precisa começar do zero. Confira alguns de seus contratos [v2](https://github. com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github. com/Uniswap/uniswap-v3-core/tree/main/contracts).
+Os contratos inteligentes são públicos na Ethereum e podem ser considerados como APIs abertas. Você não precisa escrever o seu próprio contrato inteligente para se tornar um desenvolvedor dapp, você só precisa saber como interagir com eles. Por exemplo, você pode usar os contratos inteligentes existentes do [Uniswap](https://uniswap.exchange/swap), uma troca descentralizada, para lidar com toda a lógica de troca de token em seu aplicativo - você não precisa começar do zero. Confira alguns de seus contratos [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
 
 ## O que é composabilidade? {#what-is-composability}
 
@@ -29,7 +29,7 @@ Os contratos inteligentes Ethereum são como APIs públicas, para que qualquer p
 
 ### Ciclo de desenvolvimento curto {#shorter-development-cycle}
 
-A composabilidade reduz o trabalho que os desenvolvedores têm de fazer ao criar [dapps](/dapps/#what-are-dapps). [Como Naval Ravikant coloca:](https://twitter.com/naval/status/1444366754650656770) "O código aberto significa que todo problema deve ser resolvido uma vez."
+A composabilidade reduz o trabalho que os desenvolvedores têm de fazer ao criar [dapps](/apps/#what-are-dapps). [Como Naval Ravikant coloca:](https://twitter.com/naval/status/1444366754650656770) "O código aberto significa que todo problema deve ser resolvido uma vez."
 
 Se houver um contrato inteligente que resolva um problema, outros desenvolvedores podem reutilizá-lo, para que não precisem resolver o mesmo problema. Dessa forma, os desenvolvedores podem usar bibliotecas de software existentes e adicionar funcionalidades extras para criar novos dapps.
 

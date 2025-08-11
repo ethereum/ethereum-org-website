@@ -4,16 +4,14 @@ import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
-import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
 import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
 import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonCalendar"
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
 import TranslatathonPrizes from "@/components/Translatathon/TranslatathonPrizes"
-import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
 import { Flex } from "@/components/ui/flex"
 
 import { ContentLayout } from "../ContentLayout"
@@ -75,8 +73,7 @@ const EmojiCard = ({ emoji, title, description }) => (
     emoji={emoji}
     title={title}
     description={description}
-    flex="1 1 30%"
-    p={6}
+    className="flex-[1_1_30%] p-6"
   />
 )
 
@@ -90,10 +87,8 @@ export const translatathonComponents = {
   DatesAndTimeline,
   EmojiCard,
   HowDoesItWorkColumn,
-  LocalCommunitiesList,
   StepByStepInstructions,
   TranslatathonCalendar,
-  TranslationHubCallout,
   TranslatathonInANutshell,
   TranslatathonPrizes,
   TwoColumnContent,
@@ -101,7 +96,10 @@ export const translatathonComponents = {
 }
 
 type TranslatathonLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems"> & {
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "contributors" | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: SharedFrontmatter
   }
 
@@ -110,6 +108,8 @@ export const TranslatathonLayout = ({
   frontmatter,
   slug,
   tocItems,
+  contributors,
+  lastEditLocaleTimestamp,
 }: TranslatathonLayoutProps) => {
   const dropdownLinks: ButtonDropdownList = {
     text: "Translatathon menu",
@@ -142,15 +142,6 @@ export const TranslatathonLayout = ({
           eventName: "translatathon terms and conditions",
         },
       },
-      {
-        text: "Translatathon Hubs",
-        href: "/contributing/translation-program/translatathon/translatathon-hubs",
-        matomo: {
-          eventCategory: "translatathon menu",
-          eventAction: "click",
-          eventName: "translatathon hubs",
-        },
-      },
     ],
   }
 
@@ -163,8 +154,8 @@ export const TranslatathonLayout = ({
       <>
         <p>Welcome to the ethereum.org Translatathon!</p>
         <p>
-          The translatathon is a competitive hackathon-style event where you can
-          compete for prizes by translating ethereum.org content into different
+          The translatathon is a translation competition where you can compete
+          for prizes by translating ethereum.org content into different
           languages.
         </p>
       </>
@@ -182,6 +173,8 @@ export const TranslatathonLayout = ({
       dir="ltr"
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}

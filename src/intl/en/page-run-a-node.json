@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "An Ethereum wallet allows you to take full custody and control of your digital assets by holding the private keys to your addresses, but those keys don't tell you the current state of the blockchain, such as your wallet balance.",
   "page-run-a-node-sovereignty-2": "By default, Ethereum wallets typically reach out to a 3rd-party node, such as Infura or Alchemy, when looking up your balances. Running your own node allows you to have your own copy of the Ethereum blockchain.",
   "page-run-a-node-title": "Run a node",
+  "page-run-a-node-meta-title": "How to Run an Ethereum Node",
   "page-run-a-node-voice-your-choice-title": "Voice your choice",
   "page-run-a-node-voice-your-choice-preview": "Don't give up control in the event of a fork.",
   "page-run-a-node-voice-your-choice-1": "In the event of a chain fork, where two chains emerge with two different sets of rules, running your own node guarantees your ability to choose which set of rules you support. It's up to you to upgrade to new rules and support proposed changes, or not.",

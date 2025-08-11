@@ -41,14 +41,8 @@ Urmăriți cum explică Finematics rollup-urile optimistic:
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utilizarea rollup-urilor Optimistic {#use-optimistic-rollups}
-
-Există mai multe implementări ale rollup-urilor Optimistic pe care le puteți integra în aplicațiile dvs. descentralizate:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 **Optimistic rollups reading**
 
-- [Ghidul esențial pentru Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Cum funcționează cu adevărat Rollup-ul Optimistic?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Ghidul esențial pentru Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Cum funcționează cu adevărat Rollup-ul Optimistic?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

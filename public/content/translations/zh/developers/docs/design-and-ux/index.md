@@ -23,20 +23,22 @@ lang: zh
 
 | 关注领域                                                  | 姓名                                                                                                                                                              |
 |:----------------------------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Badge colorScheme="green">加密货币入门</Badge>             | [CRADL：加密货币中的用户体验](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                        |
-| <Badge colorScheme="green">加密货币入门</Badge>             | [CRADL：加密货币入门](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                            |
-| <Badge colorScheme="green">加密货币入门</Badge>             | [比特币用户体验报告](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                               |
-| <Badge colorScheme="green">加密货币入门</Badge>             | [ConSensys：2023 年全球 Web3 认知度状况](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                         |
-| <Badge colorScheme="green">加密货币入门</Badge>             | [NEAR：加速采用之路](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                           |
-| <Badge colorScheme="purple">权益质押</Badge>              | [质押：主要趋势、要点与预测 - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)                |
-| <Badge colorScheme="purple">权益质押</Badge>              | [多重应用程序质押](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
-| <Badge colorScheme="red">去中心化自治组织</Badge>             | [2022 年去中心化自治组织研究更新：去中心化自治组织构建者需要什么？](https://blog.aragon.org/2022-dao-research-update/)                                                                        |
-| <Badge colorScheme="pink">去中心化金融</Badge>              | [2024 年去中心化金融状况](https://stateofdefi.org/)（调查进行中）                                                                                                               |
-| <Badge colorScheme="pink">去中心化金融</Badge>              | [保险池](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
-| <Badge colorScheme="pink">去中心化金融</Badge>              | [ConSensys：2022 年去中心化金融用户研究报告](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                      |
-| <Badge colorScheme="gray">元宇宙</Badge>                 | [元宇宙：用户研究报告](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                               |
-| <Badge colorScheme="gray">元宇宙</Badge>                 | [野外冒险：对元宇宙用户的研究](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube)（27 分钟视频）                           |
-| <Badge colorScheme="blue">Ethereum.org 用户体验数据</Badge> | [可用性与用户满意度调查仪表板 - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                                 |
+| <Tag variant="solid" status="success">加密货币入门</Tag>             | [WalletConnect Pulse 2024：加密货币消费者的情绪及使用情况](https://walletconnect.com/pulse-2024-crypto-consumer-report)                                                         |
+| <Tag variant="solid" status="success">加密货币入门</Tag>             | [CRADL：加密货币中的用户体验](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                        |
+| <Tag variant="solid" status="success">加密货币入门</Tag>             | [CRADL：加密货币入门](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                            |
+| <Tag variant="solid" status="success">加密货币入门</Tag>             | [比特币用户体验报告](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                               |
+| <Tag variant="solid" status="success">加密货币入门</Tag>             | [ConSensys：2023 年全球 Web3 认知度状况](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                         |
+| <Tag variant="solid" status="success">加密货币入门</Tag>             | [NEAR：加速采用之路](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                           |
+| <Tag status="tag">权益质押</Tag>              | [OpenUX：Rocket Pool 节点运营商的用户体验](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                       |
+| <Tag status="tag">权益质押</Tag>              | [质押：主要趋势、要点与预测 - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)                |
+| <Tag status="tag">权益质押</Tag>              | [多重应用程序质押](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
+| <Tag variant="solid" status="error">去中心化自治组织</Tag>             | [2022 年去中心化自治组织研究更新：去中心化自治组织构建者需要什么？](https://blog.aragon.org/2022-dao-research-update/)                                                                        |
+| <Tag status="error">去中心化金融</Tag>              | [2024 年去中心化金融状况](https://stateofdefi.org/)（调查进行中）                                                                                                               |
+| <Tag status="error">去中心化金融</Tag>              | [保险池](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
+| <Tag status="error">去中心化金融</Tag>              | [ConSensys：2022 年去中心化金融用户研究报告](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                      |
+| <Tag variant="solid">元宇宙</Tag>                 | [元宇宙：用户研究报告](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                               |
+| <Tag variant="solid">元宇宙</Tag>                 | [野外冒险：对元宇宙用户的研究](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube)（27 分钟视频）                           |
+| <Tag variant="solid" status="tag">Ethereum.org 用户体验数据</Tag> | [可用性与用户满意度调查仪表板 - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                                 |
 
 ## Web3 相关设计 {#design-for-web3}
 
@@ -47,6 +49,11 @@ lang: zh
 - [W3design.io](https://w3design.io/) - 生态系统中不同项目的精选用户界面流程库
 - [Neueux](https://neueux.com/apps) - 具有多种过滤选项的用户界面流程库
 - [Web3 的可用性危机：你需要知道的一切！](https://www.youtube.com/watch?v=oBSXT_6YDzg) - 关于以开发者为中心的项目建设中漏洞的小组讨论（34 分钟视频）
+
+## 入门指南 {#getting-started}
+
+- [Web3 启发法](/developers/docs/design-and-ux/heuristics-for-web3/) - Web3 界面设计的 7 个启发法
+- [去中心化交易所 (DEX) 设计最佳实践](/developers/docs/design-and-ux/dex-design-best-practice/) - 去中心化交易所设计指南
 
 ## Web3 设计案例研究 {#design-case-studies}
 

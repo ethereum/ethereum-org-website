@@ -1,5 +1,6 @@
 ---
 title: Jetons non fongibles (NFT)
+metaTitle: Que sont les NFT ? | Avantages et utilisation
 description: Un aperçu des NFT sur Ethereum
 lang: fr
 template: use-cases
@@ -56,7 +57,7 @@ Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explorez, achetez ou créez vos propres collections NFT...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Explorez les cartes NFT
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +76,7 @@ Ce site web dispose également d'un nom de domaine alternatif NFT, **ethereum.et
 
 ## Comment fonctionnent les NFT ? {#how-nfts-work}
 
-Les NFT, comme tous les objets numériques de la blockchain Ethereum, sont créés par un programme informatique spécial basé sur Ethereum appelé "contrat intelligent". Ces contrats suivent certaines règles, comme les normes [ERC-721](/glossary/#erc-721) ou [ERC-1155](/glossary/#erc-1155), qui déterminent ce que le contrat peut faire.
+Les NFT, comme tous les objets numériques de la blockchain Ethereum, sont créés par un programme informatique spécial basé sur Ethereum appelé « contrat intelligent ». Ces contrats suivent certaines règles, comme les normes [ERC-721](/glossary/#erc-721) ou [ERC-1155](/glossary/#erc-1155), qui déterminent ce que le contrat peut faire.
 
 Le contrat intelligent NFT peut accomplir quelques tâches essentielles :
 

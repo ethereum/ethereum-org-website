@@ -1,5 +1,6 @@
 ---
 title: Token non fungibili (NFT)
+metaTitle: Cosa sono i NFT? | Benefici e utilizzi
 description: Una panoramica dei NFT su Ethereum
 lang: it
 template: use-cases
@@ -20,7 +21,7 @@ L'unicità di ciascun NFT consente la tokenizzazione di oggetti come oggetti d'a
 
 <YouTube id="Xdkkux6OxfM" />
 
-## L'Internet delle risorse {#internet-of-assets}
+## L'internet degli asset {#internet-of-assets}
 
 Gli NFT ed Ethereum risolvono alcuni dei problemi esistenti oggi in internet. Man mano che tutto diventa più digitale, aumenta l'esigenza di replicare le proprietà degli oggetti fisici, come la scarsità, l'unicità e la prova di proprietà in modo da non essere controllate da un'organizzazione centrale. Per esempio, con gli NFT, puoi possedere un file musicale mp3 in tutte le app basate su Ethereum e non essere vincolato da una specifica azienda per app di musica come Spotify o Apple Music. Puoi possedere del materiale sui social media che puoi vendere o scambiare, ma ** che non può venirti requisito arbitrariamente** dal provider di una piattaforma.
 
@@ -56,7 +57,7 @@ Magari sei un artista che vuole condividere il proprio lavoro utilizzando gli NF
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Esplora, acquista o crea opere d'arte/oggetti da collezione NFT...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Esplora l'arte NFT
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +76,7 @@ Questo sito web ha un nome di dominio alternativo alimentato da NFT, **ethereum.
 
 ## Come funzionano gli NFT? {#how-nfts-work}
 
-Gli NFT, come ogni elemento digitale sulla blockchain di Ethereum, sono creati attraverso uno speciale programma basato su Ethereum chiamato contratto intelligente. Questi contratti seguono determinate regole, come gli standard [ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), che determinano cosa può fare il contratto.
+Gli NFT, come ogni elemento digitale sulla blockchain di Ethereum, sono creati attraverso uno speciale programma basato su Ethereum chiamato "contratto intelligente". Questi contratti seguono determinate regole, come gli standard [ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), che determinano cosa può fare il contratto.
 
 Il contratto intelligente degli NFT può fare alcune cose essenziali:
 

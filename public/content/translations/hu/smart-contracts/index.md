@@ -69,7 +69,7 @@ Többek között képesek számításokat végezni, valutát létrehozni, adatot
 - [Stablecoin-ok](/stablecoins/)
 - [Egyedi digitális eszközök létrehozása és szétosztása](/nft/)
 - [Automatikus, nyílt valutaátváltás](/get-eth/#dex)
-- [Decentralizált játékok](/dapps/?category=gaming#explore)
+- [Decentralizált játékok](/apps/?category=gaming#explore)
 - [Biztosítási szerződés, mely automatikus kifizetést alkalmaz](https://etherisc.com/)
 - [Szabvány, melyet alapul véve az emberek egyéni, interoperábilis valutákat hoznak létre](/developers/docs/standards/tokens/)
 

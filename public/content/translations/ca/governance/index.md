@@ -44,7 +44,7 @@ Hi ha diversos tipus de tenidors a la [comunitat Ethereum](/community/) i cadasc
 
 - **Tenidors d'Ether**: gent que posseeix una quantitat arbitrària d'ETH. [Més informació sobre ETH](/eth/).
 - **Usuaris d'aplicacions**: gent que interactua amb les aplicacions a la cadena de blocs d'Ethereum.
-- **Desenvolpadors d'aplicacions/eines**: gent que escriu aplicacions executades a la cadena de blocs d'Ethereum (p. ex. DeFi, NFT, etc.) o fabrica eines per interactuar amb Ethereum (p. ex. carteres, conjunts de proves, etc.). [Més informació sobre dapps](/dapps/).
+- **Desenvolpadors d'aplicacions/eines**: gent que escriu aplicacions executades a la cadena de blocs d'Ethereum (p. ex. DeFi, NFT, etc.) o fabrica eines per interactuar amb Ethereum (p. ex. carteres, conjunts de proves, etc.). [Més informació sobre dapps](/apps/).
 - **Operadors de nodes**: gent que executa nodes que propaguen blocs i transaccions i refusa qualsevol transacció o bloc invàlids amb què es trobin. [Més informació sobre els nodes](/developers/docs/nodes-and-clients/).
 - **Autors d'EIP**: gent que proposa canvis al protocol Ethereum en forma de Propostes de Millora d'Ethereum («Ethereum Improvement Proposals» o EIP en anglès). [Més informació sobre les EIP](/eips/).
 - **Miners/validadors**: gent que executa nodes que poden afegir nous blocs a la cadena de blocs d'Ethereum.
@@ -118,7 +118,7 @@ Per norma general, els desacords s'aborden en llargues discussions en fòrums p�
 
 Les bifurcacions es donen quan s'han de fer importants millores tècniques o modificacions a la xarxa i canvien les «normes» del protocol. [Els clients Ethereum](/developers/docs/nodes-and-clients/) han d'actualitzar el software per a implementar les noves normes de la bifurcació.
 
-La bifurcació d'una DAO va ser la resposta a [l'atac d'una DAO el 2016](https://www.coindesk.com/understanding-dao-hack-journalists), on un contracte insegur d'una [DAO](/glossary/#dao) va patir un drenatge de més de 3,6 milions d'ETH en un hack. La bifurcació va moure els fons del contracte defectuós al nou contracte i va permetre recuperar els fons a qui n'hagués perdut a causa del pirateig.
+La bifurcació d'una DAO va ser la resposta a [l'atac d'una DAO el 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), on un contracte insegur d'una [DAO](/glossary/#dao) va patir un drenatge de més de 3,6 milions d'ETH en un hack. La bifurcació va moure els fons del contracte defectuós al nou contracte i va permetre recuperar els fons a qui n'hagués perdut a causa del pirateig.
 
 La comunitat d'Ethereum va votar a favor d'aquest pla d'acció. Qualsevol titular d'ETH va poder votar mitjançant una transacció a [una plataforma de votació](http://v1.carbonvote.com/). La decisió de bifurcar va assolir el 85% dels vots.
 

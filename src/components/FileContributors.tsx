@@ -1,127 +1,157 @@
-import { useState } from "react"
-import {
-  Avatar,
-  Flex,
-  FlexProps,
-  ListItem,
-  UnorderedList,
-  VStack,
-} from "@chakra-ui/react"
+"use client"
+
+import { BaseHTMLAttributes, useState } from "react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
-import { Button } from "@/components/Buttons"
-import InlineLink from "@/components/Link"
-import Modal from "@/components/Modal"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
+import { Button } from "@/components/ui/buttons/Button"
+import { Center, Flex } from "@/components/ui/flex"
+import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { Avatar } from "./ui/avatar"
+import Modal from "./ui/dialog-modal"
+import { LinkBox, LinkOverlay } from "./ui/link-box"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
-    {children}
-  </UnorderedList>
+  <ScrollArea className="h-64 w-full">
+    <UnorderedList className="m-0">{children}</UnorderedList>
+  </ScrollArea>
 )
+
+const ContributorAvatar = ({
+  contributor,
+  label,
+  className,
+}: ContributorProps & { label?: string; className?: string }) => (
+  <Avatar
+    src={contributor.avatar_url}
+    name={contributor.login}
+    href={
+      contributor.html_url.includes("crowdin.com")
+        ? contributor.html_url
+        : "https://github.com/" + contributor.login
+    }
+    // `size-10` is not part of the "size" variants
+    className={cn("size-10", className)}
+    label={label}
+  />
+)
+
+const ContributorAvatarGroup = ({
+  contributors,
+}: {
+  contributors: FileContributor[]
+}) => {
+  if (!contributors.length) return null
+
+  const maxVisibleAvatars = contributors.length >= 3 ? 3 : contributors.length
+  const remainingCount = contributors.length > 3 ? contributors.length - 3 : 0
+
+  return (
+    <Flex className="items-center">
+      {contributors.slice(0, maxVisibleAvatars).map((contributor, index) => (
+        <div
+          key={contributor.login}
+          className="pointer-events-none -me-3 flex"
+          style={{ zIndex: maxVisibleAvatars - index }}
+        >
+          <ContributorAvatar contributor={contributor} />
+        </div>
+      ))}
+      {remainingCount > 0 && (
+        <Center className="-me-2 size-10 rounded-full bg-primary ps-1 text-sm text-body-inverse">
+          +{remainingCount}
+        </Center>
+      )}
+    </Flex>
+  )
+}
 
 type ContributorProps = { contributor: FileContributor }
 const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem p={2} display="flex" alignItems="center">
-    <Avatar
-      height="40px"
-      width="40px"
-      src={contributor.avatar_url}
-      name={contributor.login}
-      me={2}
+  <ListItem className="flex items-center p-2">
+    <ContributorAvatar
+      contributor={contributor}
+      label={"@" + contributor.login}
     />
-    <InlineLink href={"https://github.com/" + contributor.login}>
-      @{contributor.login}
-    </InlineLink>
+    {contributor.html_url.includes("crowdin.com") && (
+      <p className="ms-5 text-body-medium">
+        <Translation id="translator" />
+      </p>
+    )}
   </ListItem>
 )
 
+type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 export type FileContributorsProps = FlexProps & {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  className?: string
 }
 
 const FileContributors = ({
   contributors,
   lastEditLocaleTimestamp,
+  className,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
-
-  const lastContributor: FileContributor = contributors.length
-    ? contributors[0]
-    : ({
-        avatar_url: "",
-        login: "",
-        html_url: "",
-        date: Date.now().toString(),
-      } as FileContributor)
+  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
 
   return (
     <>
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        size={{ base: "full", md: "xl" }}
+        open={isModalOpen}
+        onOpenChange={(open) => setModalOpen(open)}
+        size={modalSize}
         title={<Translation id="contributors" />}
       >
-        <Translation id="contributors-thanks" />
-        <ContributorList>
-          {contributors.map((contributor) => (
-            <Contributor contributor={contributor} key={contributor.login} />
-          ))}
-        </ContributorList>
+        <div className="space-y-4">
+          <p>
+            <Translation id="contributors-thanks" />
+          </p>
+          <ContributorList>
+            {contributors.map((contributor) => (
+              <Contributor contributor={contributor} key={contributor.login} />
+            ))}
+          </ContributorList>
+        </div>
       </Modal>
 
       <Flex
-        direction={{
-          base: "column",
-          md: "row",
-        }}
-        p={{ base: 0, md: 2 }}
+        className={cn("flex-col p-0 md:flex-row md:p-2", className)}
         {...props}
       >
-        <Flex me={4} alignItems="center" flex="1" hideBelow="md">
-          <Avatar
-            height="40px"
-            width="40px"
-            src={lastContributor.avatar_url}
-            name={lastContributor.login}
-            me={2}
-          />
-
-          <Text m={0} color="text200">
-            <Translation id="last-edit" />:{" "}
-            <InlineLink href={"https://github.com/" + lastContributor.login}>
-              @{lastContributor.login}
-            </InlineLink>
-            , {lastEditLocaleTimestamp}
-          </Text>
+        <Flex className="my-4 me-4 flex-1 flex-col items-start lg:mb-0">
+          <p className="mb-2 text-body-medium">
+            <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
+          </p>
+          <LinkBox className="flex">
+            <ContributorAvatarGroup contributors={contributors} />
+            <LinkOverlay asChild>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  setModalOpen(true)
+                  trackCustomEvent({
+                    eventCategory: "see contributors",
+                    eventAction: "click",
+                    eventName: "click",
+                  })
+                }}
+              >
+                <Translation id="see-contributors" />
+              </Button>
+            </LinkOverlay>
+          </LinkBox>
         </Flex>
-
-        <VStack align="stretch" justifyContent="space-between" spacing={2}>
-          <Button
-            variant="outline"
-            bg="background.base"
-            border={0}
-            mb={{ base: 4, md: 0 }}
-            onClick={() => {
-              setModalOpen(true)
-              trackCustomEvent({
-                eventCategory: "see contributors",
-                eventAction: "click",
-                eventName: "click",
-              })
-            }}
-            w={{ base: "full", md: "inherit" }}
-          >
-            <Translation id="see-contributors" />
-          </Button>
-        </VStack>
       </Flex>
     </>
   )

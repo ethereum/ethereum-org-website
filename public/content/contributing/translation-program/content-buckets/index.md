@@ -29,7 +29,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 3) Exploring {#exploring}
 
 - [Non-fungible tokens (NFT)](/nft/)
-- [Dapps](/dapps/)
+- [Dapps](/apps/)
 - [Stablecoins](/stablecoins/)
 - Template usecase
 
@@ -101,7 +101,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Account abstraction](/roadmap/account-abstraction/)
 - [Verkle trees](/roadmap/verkle-trees/)
 - [Statelessness, state expiry and history expiry](/roadmap/statelessness/)
-- [How The Merge impacted ETH supply](/roadmap/merge/issuance/)
 
 ## 10) Community pages {#community-pages}
 
@@ -255,7 +254,6 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [About ethereum.org](/about/)
 - [Enterprise Ethereum](/enterprise/)
-- [Private Ethereum](/enterprise/private-ethereum/)
 - [Brand assets](/assets/)
 - [About the Ethereum Foundation](/foundation/)
 - [Bug bounty program](/bug-bounty/)

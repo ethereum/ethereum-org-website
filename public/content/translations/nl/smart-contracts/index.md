@@ -26,7 +26,7 @@ Alice en Bob houden een fietsrace. Laten we zeggen dat Alice $ 10 wed dat ze de 
 
 Dit dwaze voorbeeld illustreert het probleem van een niet-slimme overeenkomst. Zelfs als aan de voorwaarden van de overeenkomst wordt voldaan (d.w.z. je bent de winnaar van de race), moet je nog steeds een ander persoon vertrouwen om de overeenkomst uit te voeren (d.w.z. de uitbetaling van de weddenschap).
 
-## Een digitale automaat {#vending-machine}
+## Een digitale verkoopautomaat {#vending-machine}
 
 Een eenvoudige metafoor voor een slim contract is een verkoopautomaat die op ongeveer dezelfde manier werkt als een slim contract: specifieke inputs garanderen een vooraf bepaalde output.
 
@@ -69,7 +69,7 @@ Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, [NFT's](/gl
 - [Stablecoins](/stablecoins/)
 - [Creëren en distribueren van unieke digitale activa](/nft/)
 - [Een automatische, open wisselkoers](/get-eth/#dex)
-- [Gedecentraliseerde gaming](/dapps/?category=gaming#explore)
+- [Gedecentraliseerde gaming](/apps/?category=gaming#explore)
 - [Een verzekeringsbeleid dat automatisch uitbetaalt](https://etherisc.com/)
 - [Een standaard waarmee mensen aangepaste, interoperabele valuta's kunnen maken](/developers/docs/standards/tokens/)
 

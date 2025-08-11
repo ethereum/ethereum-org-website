@@ -12,7 +12,7 @@ Maksimum çıkarılabilir değer, ilk olarak [iş ispatı](/developers/docs/cons
 
 ## Ön koşullar {#prerequisites}
 
-[İşlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos) ve [gaz](/developers/docs/gas/) hakkında bilgi sahibi olduğunuzdan emin olun. [Merkeziyetsiz uygulamalar](/dapps/) ve [DeFi](/defi/) ile aşina olmak da faydalı olabilir.
+[İşlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos) ve [gaz](/developers/docs/gas/) hakkında bilgi sahibi olduğunuzdan emin olun. [Merkeziyetsiz uygulamalar](/apps/) ve [DeFi](/defi/) ile aşina olmak da faydalı olabilir.
 
 ## MEV çıkarma {#mev-extraction}
 

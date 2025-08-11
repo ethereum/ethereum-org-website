@@ -37,7 +37,7 @@ An incomplete list of key problems in science and how decentralized science can 
 | **New models for publishing** can be developed that use Web3 primitives for trust, transparency and universal access. | You publish through established pathways frequently acknowledged as **inefficient, biased and exploitative**.      |
 | You can **earn tokens and reputation for peer-reviewing** work.                                                       | Your **peer-review work is unpaid**, benefiting for-profit publishers.                                             |
 | **You own the intellectual property (IP)** you generate and distribute it according to transparent terms.             | **Your home institution owns the IP** you generate. Access to the IP is not transparent.                           |
-| **Sharing all of the research**, including the data from unsuccessful efforts, by having all steps on-chain.          | **Publication bias** means that researchers are more likely to share experiments that had successful results.      |
+| **Sharing all of the research**, including the data from unsuccessful efforts, by having all steps onchain.          | **Publication bias** means that researchers are more likely to share experiments that had successful results.      |
 
 ## Ethereum and DeSci {#ethereum-and-desci}
 
@@ -76,7 +76,7 @@ Intellectual property (IP) is a big problem in traditional science: from being s
 
 In the same way that NFTs can pass revenue for future transactions back to the original creator, you can establish transparent value attribution chains to reward researchers, governing bodies (like DAOs), or even the subjects whose data is collected.
 
-[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/glossary/#defi) financialization (from fractionalization to lending pools and value appraisal). It also allows natively on-chain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly on-chain.
+[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/glossary/#defi) financialization (from fractionalization to lending pools and value appraisal). It also allows natively onchain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly onchain.
 The advent of non-transferable ["soulbound" tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) may also play an important role in DeSci by allowing individuals to prove their experience and credentials linked to their Ethereum address.
 
 ### Data storage, access and architecture {#data-storage}
@@ -97,7 +97,7 @@ Explore projects and join the DeSci community.
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
+- [dClimate API: query climate data collected by a decentralized community](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/)
@@ -119,7 +119,7 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guide to DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Decentralized science resources](https://www.vincentweisser.com/decentralized-science)
+- [Decentralized science resources](https://www.vincentweisser.com/desci)
 - [Molecule’s Biopharma IP-NFTs - A Technical Description](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -127,7 +127,7 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

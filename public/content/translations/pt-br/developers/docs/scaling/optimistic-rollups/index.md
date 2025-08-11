@@ -253,17 +253,11 @@ Você é o tipo de pessoa que aprende mais com recursos visuais? Assista aos Fin
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Usar optimistic rollups {#use-optimistic-rollups}
-
-Há múltiplas implementações de optimistic rollups que você pode integrar aos seus dapps:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Leitura adicional sobre optimistic rollups
 
 - [Como funcionam os optimistic rollups (o guia completo)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [O que é uma Blockchain Rollup? Uma introdução técnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [O guia essencial do Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Como o optimistic rollup realmente funciona?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [O guia essencial do Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Como o optimistic rollup realmente funciona?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM: aprofundamento](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [O que é a máquina virtual otimista?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

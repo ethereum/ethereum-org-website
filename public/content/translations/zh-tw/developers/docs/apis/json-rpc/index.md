@@ -95,7 +95,7 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 
 ## Gossip、State、History {#gossip-state-history}
 
-少數重要的 JSON-RPC 方法需要來自以太坊網路的資料，這些資料分屬於三個種類：<0>Gossip、State 和 History</0>。 利用這些章節中的連結移動至每個方法，或利用目錄探索完整的方法清單。
+少數重要的 JSON-RPC 方法需要來自以太坊網路的資料，這些資料分屬於三個種類：_Gossip、State 和 History_。 利用這些章節中的連結移動至每個方法，或利用目錄探索完整的方法清單。
 
 ### Gossip 方法 {#gossip-methods}
 
@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 目前網路 ID 的完整清單可在 [chainlist.org](https://chainlist.org) 上找到。 一些常用的如下：
 
 - `1`：以太坊主網
-- `5`：Goerli 測試網
 - `11155111`：Sepolia 測試網
+- `17000`：Hoodi 測試網
 
 **範例**
 
@@ -385,6 +385,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 ### eth_coinbase {#eth_coinbase}
 
 傳回用戶端的 coinbase 地址。
+
+> **注意：**此方法已於 **v1.14.0** 棄用並不再支援。 嘗試採用此方法將會出現「不支援此方法」的錯誤。
 
 **參數**
 
@@ -1026,7 +1028,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 **參數**
 
-請參閱 <0>eth_call</0> 參數，但所有屬性都是可選的。 假如沒有明確說明燃料限制，Geth 將使用來自待處理區塊的區塊燃料限制作為上限。 因此，當燃料量高於待處理區塊燃料限制時，傳回的預估值可能不足以執行呼叫或交易。
+請參閱 [eth_call](#eth_call) 參數，但所有屬性都是可選的。 假如沒有明確說明燃料限制，Geth 將使用來自待處理區塊的區塊燃料限制作為上限。 因此，當燃料量高於待處理區塊燃料限制時，傳回的預估值可能不足以執行呼叫或交易。
 
 **傳回**
 
@@ -1649,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 這將在 `http://localhost:8545` 上啟動 HTTP 遠端程序呼叫介面。
 
-我們可以使用 [curl](https://curl.se) 擷取 Coinbase 地址和餘額來驗證介面正在執行。 請注意，這些範例中的資料與你的本地節點有所不同。 如果你想嘗試這些命令，請將第二個 curl 請求中的請求參數替換為第一個請求返回的結果。
+我們可以透過使用 [ curl](https://curl.se) 取得 Coinbase 地址（獲取帳戶陣列中的第一個地址）和餘額，驗證介面是否正在執行。 請注意，這些範例中的資料與你的本地節點有所不同。 如果你想嘗試這些命令，請將第二個 curl 請求中的請求參數替換為第一個請求返回的結果。
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
@@ -1769,3 +1771,4 @@ web3.sha3("Print(uint256)")
 - [Javascript 應用程式介面](/developers/docs/apis/javascript/)
 - [後端應用程式介面](/developers/docs/apis/backend/)
 - [執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)
+

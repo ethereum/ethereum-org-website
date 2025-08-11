@@ -203,4 +203,4 @@ Staking Launchpad یک برنامه منبع‌باز است که به شما ک
   - [گام‌به‌گام: نحوه‌ی پیوستن به شبکه‌ی آزمایشی اتریوم 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _بوتا_
 - [نکات پیشگیری از برخورد شدید Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _راول جردن 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

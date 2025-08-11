@@ -116,7 +116,7 @@ Il modo migliore per gestire i collegamenti è copiarli direttamente dal testo d
 
 ![Esempio di link.png](./example-of-link.png)
 
-I link appaiono nel testo di partenza anche sotto forma di tag (cioè <0> </0>). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
+I link appaiono nel testo di partenza anche sotto forma di tag (cioè `<0> </0>`). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
 
 È molto importante copiare i link dal testo di partenza senza modificarne l'ordine.
 
@@ -154,7 +154,7 @@ nonce - _Testo non traducibile_
 
 Il testo di partenza contiene anche tag abbreviati, contenenti solo numeri, il che significa che la loro funzione non è immediatamente ovvia. Puoi passare su questi tag per vedere esattamente quale scopo assolvono.
 
-Nell'esempio seguente, passando con il mouse sul <0> tag puoi vedere che rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
+Nell'esempio seguente, passando con il mouse sul `<0>` tag puoi vedere che rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
 
 ![Esempio di tag ambigui.png](./example-of-ambiguous-tags.png)
 

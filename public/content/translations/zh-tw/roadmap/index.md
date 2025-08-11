@@ -8,10 +8,10 @@ alt: "以太坊開發藍圖"
 summaryPoints:
 buttons:
   - 
-    label: 更多升級
+    content: 更多升級
     toId: 即將發生的變化
   - 
-    label: 過往的升級
+    content: 過往的升級
     href: /history/
     variant: 概述
 ---

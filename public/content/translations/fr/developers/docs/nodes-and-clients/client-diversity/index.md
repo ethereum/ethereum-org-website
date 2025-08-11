@@ -31,7 +31,7 @@ La diversité des clients offre également une résilience aux attaques. Par exe
 
 Un bug dans un client de consensus avec plus de 33 % des nœuds Ethereum pourrait empêcher la finalisation couche de consensus, de sorte que les utilisateurs ne pourraient pas avoir confiance dans le fait que les transactions ne seraient pas annulées ou modifiées à un moment donné. Cela serait problématique pour de nombreuses applications basées sur Ethereum, en particulier pour la DeFi.
 
-<Emoji text="🚨" me="1rem" /> Pire encore, un bogue critique dans un client avec une majorité des deux tiers pourrait causer <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">le fractionnement et la finalisation incorrecte de la chaîne</a>, entraînant le blocage d'un grand nombre de validateurs sur une chaîne invalide. S'ils souhaitent rejoindre la bonne chaîne, ces validateurs sont confrontés à un délestage ou à un retrait volontaire et à une réactivation lente et coûteuse. La magnitude d'un délestage est proportionnelle au nombre de nœuds impliqués avec une majorité des deux tiers sanctionnée au maximum (32 ETH).
+<Emoji text="🚨" className="me-4" /> Pire encore, un bogue critique dans un client avec une majorité des deux tiers pourrait causer <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">le fractionnement et la finalisation incorrecte de la chaîne</a>, entraînant le blocage d'un grand nombre de validateurs sur une chaîne invalide. S'ils souhaitent rejoindre la bonne chaîne, ces validateurs sont confrontés à un délestage ou à un retrait volontaire et à une réactivation lente et coûteuse. La magnitude d'un délestage est proportionnelle au nombre de nœuds impliqués avec une majorité des deux tiers sanctionnée au maximum (32 ETH).
 
 Bien que ces scénarios soient peu probables, l’écosystème Ethereum peut atténuer leurs risques en éliminant la distribution des clients sur les nœuds actifs. Idéalement, aucun client de consensus ne devrait pouvoir atteindre 33 % du total des nœuds.
 
@@ -78,6 +78,8 @@ Pour résoudre le problème de la diversité des clients, il ne suffit pas que l
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
+
+[Grandine](https://docs.grandine.io/)
 
 Les utilisateurs techniques peuvent aider à accélérer ce processus en rédigeant plus de tutoriels et de documentation pour les clients minoritaires et ainsi encourager leurs pairs à migrer loin des clients dominants. Des guides pour basculer vers un client de consensus minoritaire sont disponibles sur [clientdiversity.org](https://clientdiversity.org/).
 

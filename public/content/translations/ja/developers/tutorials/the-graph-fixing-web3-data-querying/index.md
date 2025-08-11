@@ -91,7 +91,7 @@ GameContract.events.BetPlaced({
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-2つの画像は、GraphQLの本質をほぼ捉えています。 右のクエリーでは、必要なデータを正確に定義できるので、1回のリクエストで必要なものだけを取得できます。 GraphQLサーバーは必要とされるすべてのデータの取得を処理できるので、フロントエンドのコンシューマ側にとっては極めて使いやすいツールとなっています。 ご興味があれば、サーバーが具体的にどのようにクエリを処理するかについて[わかりやすい説明](https://www.apollographql.com/blog/graphql-explained-5844742f195e/)をご覧ください。
+2つの画像は、GraphQLの本質をほぼ捉えています。 右のクエリーでは、必要なデータを正確に定義できるので、1回のリクエストで必要なものだけを取得できます。 GraphQLサーバーは必要とされるすべてのデータの取得を処理できるので、フロントエンドのコンシューマ側にとっては極めて使いやすいツールとなっています。 ご興味があれば、サーバーが具体的にどのようにクエリを処理するかについて[わかりやすい説明](https://www.apollographql.com/blog/graphql-explained)をご覧ください。
 
 この知識をもとに、ブロックチェーン空間とThe Graphの世界に入って行きましょう。
 
@@ -120,7 +120,7 @@ GameContract.events.BetPlaced({
 - 関数呼び出しやブロックなど、その他に何をリッスンするか
 - 呼び出されるマッピング関数 (後述の`mapping.ts`を参照)
 
-マニフェストには複数のコントラクトとハンドラを定義できます。 典型的な設定では、TruffleまたはHardhatプロジェクト内にサブグラフフォルダと独自のリポジトリがあります。 それにより、簡単にアプリケーションバイナリインターフェース(ABI)を参照することができます。
+マニフェストには複数のコントラクトとハンドラを定義できます。 典型的な設定では、またはHardhatプロジェクト内にサブグラフフォルダと独自のリポジトリがあります。 それにより、簡単にアプリケーションバイナリインターフェース(ABI)を参照することができます。
 
 便利さの観点から、Mustacheのようなテンプレートツールを使用することもできます。 `subgraph.template.yaml`を作成し、最新のデプロイメントに基づいたアドレスを挿入します。 より高度な設定例については、[Aaveサブグラフリポジトリ](https://github.com/aave/aave-protocol/tree/master/thegraph)の例をご覧ください。
 
@@ -196,7 +196,7 @@ The Graphのマッピングファイルは、受信したイベントをエン�
 
 最後に、すべてのデータでPlayerエンティティを更新します。 配列を直接プッシュすることはできませんが、ここに示すように更新する必要があります。 betを参照するためにidを使用します。 エンティティを保存するには、`.save()`が最後に必要です。
 
-ドキュメント全文については、こちらをご覧ください。https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings マッピングファイルにログの出力を追加できます。詳細は[こちら](https://thegraph.com/docs/assemblyscript-api#api-reference)をご覧ください。
+ドキュメント全文については、こちらをご覧ください。https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings マッピングファイルにログの出力を追加できます。詳細は[こちら](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference)をご覧ください。
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
