@@ -54,7 +54,6 @@ import {
   isAddressFiltered,
   type TorchHolder,
 } from "@/lib/torch"
-import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -439,21 +438,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <I18nProvider locale={locale} messages={messages}>
           <Stories stories={stories} />
         </I18nProvider>
-      </div>
-
-      <div className="w-full gap-8 px-8 py-8 pt-32">
-        <div className="flex flex-col items-center gap-4 rounded-2xl bg-ten-year-gradient p-8">
-          <Image
-            src={TenYearLogo}
-            alt="10 year anniversary logo"
-            className="mb-8 max-h-80 object-contain sm:mb-12"
-          />
-          <h3>{t("page-10-year-ideas-title")}</h3>
-          <p>{t("page-10-year-ideas-description")}</p>
-          <ButtonLink href="mailto:10years@ethereum.org">
-            {t("page-10-year-ideas-cta")}
-          </ButtonLink>
-        </div>
       </div>
     </MainArticle>
   )
