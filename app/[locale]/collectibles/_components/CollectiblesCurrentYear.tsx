@@ -20,7 +20,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
-import Link, { LinkProps } from "@/components/ui/Link"
+import Link, { ExternalLinkIcon, LinkProps } from "@/components/ui/Link"
 import {
   ListItem,
   ListProps,
@@ -509,7 +509,12 @@ const CollectiblesCurrentYear = ({
 
         <div className="mt-4 grid grid-cols-[repeat(auto-fill,_minmax(180px,_1fr))] gap-2">
           {socialBadges.map((badge) => (
-            <Link key={badge.id} href={badge.link} hideArrow className="group">
+            <Link
+              key={badge.id}
+              href={badge.link}
+              hideArrow
+              className="group no-underline hover:underline"
+            >
               <div className="flex w-full flex-col items-center gap-4 rounded-xl p-4 text-center text-sm">
                 <Image
                   src={badge.image}
@@ -527,6 +532,7 @@ const CollectiblesCurrentYear = ({
                     .replace(/ - ethereum.org community/, "")
                     .replace(/^ethereum.org /, "")
                     .trim()}
+                  <ExternalLinkIcon />
                 </div>
               </div>
             </Link>

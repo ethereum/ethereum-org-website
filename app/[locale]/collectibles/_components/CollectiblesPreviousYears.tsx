@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl"
 
 import IdAnchor from "@/components/IdAnchor"
 import { Image } from "@/components/Image"
-import Link from "@/components/ui/Link"
+import Link, { ExternalLinkIcon } from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
 import type { Badge } from "../types"
@@ -86,7 +86,7 @@ const CollectiblesPreviousYears = ({
                     <Link
                       key={badge.id}
                       href={badge.link}
-                      className="group flex flex-col items-center gap-3 rounded-xl p-2 text-center"
+                      className="group flex flex-col items-center gap-3 rounded-xl p-2 text-center no-underline hover:underline"
                       hideArrow
                     >
                       <Image
@@ -99,6 +99,7 @@ const CollectiblesPreviousYears = ({
                       />
                       <div className="text-xs text-primary md:text-sm">
                         {label}
+                        <ExternalLinkIcon />
                       </div>
                     </Link>
                   )
