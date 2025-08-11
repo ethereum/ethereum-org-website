@@ -20,11 +20,11 @@ Onchain data can help us understand Ethereum, the network, and as an economy for
 
 A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](/developers/docs/accounts/)).
 
-Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/). Block explorers are a portal to Ethereum’s data. They display, in real-time, data on blocks, transactions, miners, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
+Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/) or [Blockscout](https://eth.blockscout.com/). Block explorers are a portal to Ethereum's data. They display, in real-time, data on blocks, transactions, miners, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
 
 However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://duneanalytics.com/) provides this capability to anyone with some knowledge of SQL.
 
-For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae).
+For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
 One thing to note is that all accounts, including the EF’s, have a public address that can be used to send and receive transactions.
 
@@ -64,7 +64,7 @@ This will yield the same information as provided on Etherscan's transaction page
 
 ![](./etherscan_view.png)
 
-[EF's contract page on Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
+[EF's contract page on Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 

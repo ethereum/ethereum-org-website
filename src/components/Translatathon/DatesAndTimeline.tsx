@@ -21,30 +21,30 @@ export const dates = [
     link: APPLICATION_URL,
     linkText: "Apply",
   },
-  {
-    title: "Workshops",
-    description:
-      "Join our Discord to participate in onboarding calls and workshops and learn all about the Translatathon",
-    startDate: new Date("2024-08-05T12:00:00Z"),
-    endDate: new Date("2024-08-08T12:00:00Z"),
-    link: "/discord/",
-    linkText: "Prepare",
-  },
+  // {
+  //   title: "Workshops",
+  //   description:
+  //     "Join our Discord to participate in onboarding calls and workshops and learn all about the Translatathon",
+  //   startDate: new Date("2025-08-15T12:00:00"),
+  //   endDate: new Date("2025-08-22T12:00:00"),
+  //   link: "/discord/",
+  //   linkText: "Join our Discord",
+  // },
   {
     title: "Translatathon",
     description:
-      "The translation period - translate as much or as little as you want",
-    startDate: new Date("2024-08-09T12:00:00Z"),
-    endDate: new Date("2024-08-18T12:00:00Z"),
+      "Collect points for any translations you add during the translation period",
+    startDate: new Date("2025-08-25T00:00:00"),
+    endDate: new Date("2025-08-31T23:59:59"),
     link: CROWDIN_PROJECT_URL,
     linkText: "Translate",
   },
   {
     title: "Evaluation period",
     description:
-      "Each translation will be evaluated by professional reviewers to verify translations were not done with AI tools and meet the minimum quality threshold",
-    startDate: new Date("2024-08-19T12:00:00Z"),
-    endDate: new Date("2024-08-28T12:00:00Z"),
+      "Each translation will be evaluated by professional reviewers to make sure no AI tools were used and they meet the minimum quality threshold",
+    startDate: new Date("2025-09-01T00:00:00"),
+    endDate: new Date("2025-09-22T23:59:59"),
     link: null,
     linkText: null,
   },
@@ -52,7 +52,7 @@ export const dates = [
     title: "Results announcement",
     description:
       "We will announce the results and winners on the ethereum.org community Call",
-    startDate: new Date("2024-08-29T12:00:00Z"),
+    startDate: new Date("2025-09-25T00:00:00"),
     endDate: null,
     link: null,
     linkText: null,
@@ -124,6 +124,7 @@ export const DatesAndTimeline = () => {
           </Flex>
         )
       })}
+      <p className="mt-8 italic">Note: All dates are in UTC</p>
     </Flex>
   )
 }
