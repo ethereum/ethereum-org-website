@@ -366,9 +366,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 src={etherBanner}
                 alt="Open hands holding ether glyph"
                 sizes="224px"
-                className="mx//-auto w-56"
+                className="w-56"
               />
-              <h2 className="flex-1 text-3xl font-black lg:text-5xl">
+              <h2 className="w-full text-3xl font-black lg:text-5xl">
                 {tocItems[2].title}
               </h2>
             </div>
@@ -426,14 +426,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             id={getId(tocItems[3].url)}
             className="space-y-8 rounded-4xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 lg:p-12"
           >
-            <div className="flex flex-col gap-4 lg:items-center xl:flex-row-reverse">
+            <div className="flex flex-col items-center gap-4 xl:flex-row-reverse">
               <Image
                 src={howBanner}
                 alt="Man repairing computer"
                 sizes="288px"
-                className="mx-auto w-full max-w-72"
+                className="w-full max-w-72"
               />
-              <h2 className="flex-1 text-3xl font-black lg:text-5xl">
+              <h2 className="w-full text-3xl font-black lg:text-5xl">
                 {tocItems[3].title}
               </h2>
             </div>
@@ -554,7 +554,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               sizes="320px"
               className="mx-auto w-80 -scale-x-100"
             />
-            <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+            <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[4].title}
             </h2>
             <div className="space-y-6">
@@ -564,9 +564,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>
                 Farmers in Kenya can receive{" "}
-                <a>automated insurance on their crops</a>
-                without applying to a bank. Businesses like{" "}
-                <strong>Visa</strong> can launch{" "}
+                <a>automated insurance on their crops</a> without applying to a
+                bank. Businesses like <strong>Visa</strong> can launch{" "}
                 <a>new payment systems that works globally</a> from day one.
                 Global organizations like the <strong>UN</strong> can deliver{" "}
                 <a>aid to refugees</a> saving millions in bank fees.
@@ -713,7 +712,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div>
-              <h2 className="mb-2 flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="mb-2 w-full text-3xl/snug font-bold lg:text-4xl/tight">
                 {tocItems[5].title}
               </h2>
               <div className="space-y-6">
@@ -730,11 +729,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div className="py-4 font-bold italic">TODO: StartCards</div>
           </Section>
 
-          <Section
-            id={getId(tocItems[6].url)}
-            className="space-y-//TODO-remove-14"
-          >
-            <h2 className="mb-4 flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+          <Section id={getId(tocItems[6].url)}>
+            <h2 className="mb-4 w-full text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[6].title}
             </h2>
 
@@ -847,7 +843,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             />
 
             <div className="space-y-4">
-              <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
                 {tocItems[7].title}
               </h2>
               <div className="space-y-8">
@@ -967,7 +963,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Section>
 
           <Section id={getId(tocItems[8].url)} className="space-y-14">
-            <h2 className="flex-1 text-3xl/snug font-bold lg:text-4xl/tight">
+            <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
               {tocItems[8].title}
             </h2>
           </Section>
