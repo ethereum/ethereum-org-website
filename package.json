@@ -32,7 +32,8 @@
   "dependencies": {
     "@aws-sdk/client-ses": "^3.859.0",
     "@crowdin/crowdin-api-client": "^1.25.0",
-    "@docsearch/react": "^3.5.2",
+    "@docsearch/css": "^3.9.0",
+    "@docsearch/react": "^3.9.0",
     "@hookform/resolvers": "^3.8.0",
     "@next/bundle-analyzer": "^14.2.5",
     "@radix-ui/react-accordion": "^1.2.0",
@@ -60,6 +61,7 @@
     "@types/canvas-confetti": "^1.9.0",
     "@types/three": "^0.177.0",
     "@wagmi/core": "^2.17.3",
+    "algoliasearch": "^5.35.0",
     "canvas-confetti": "^1.9.3",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",
