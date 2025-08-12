@@ -173,7 +173,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div
           className={cn(
             "row-start-1 lg:col-start-2 lg:row-span-2",
-            "[&_a]:leading-base [&_a]:!text-primary [&_li]:mb-0 [&_li]:text-primary [&_ul]:list-decimal [&_ul]:border-s-0 [&_ul]:text-base",
+            "[&_a]:leading-base [&_a]:!text-primary [&_li]:text-primary [&_ul]:list-decimal [&_ul]:border-s-0 [&_ul]:text-base",
+            "[&_li>a]:inline [&_li]:list-item [&_ul]:list-inside [&_ul]:ps-0",
             "[&_[data-label='marker']]:!hidden [&_li:has([data-state-active='false'])]:me-4 [&_li:has([data-state-active='true'])]:font-bold", // me-4 added to prevent layout shift when active turns bold
             // `aside` targets desktop version
             "[&_aside]:sticky [&_aside]:top-[7.25rem]",
