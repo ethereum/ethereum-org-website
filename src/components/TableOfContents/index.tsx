@@ -81,7 +81,9 @@ const TableOfContents = ({
           {t("edit-page")}
         </ButtonLink>
       )}
-      <div className="uppercase text-body-medium">{t("on-this-page")}</div>
+      <div data-label="label" className="uppercase text-body-medium">
+        {t("on-this-page")}
+      </div>
       <ul className="m-0 mb-2 mt-2 list-none gap-2 border-s border-s-body-medium ps-4 pt-0 text-sm">
         <ItemsList
           items={items}
