@@ -204,6 +204,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/start/")) {
+    primaryNamespace = "page-start"
     requiredNamespaces = [...requiredNamespaces]
   }
 
