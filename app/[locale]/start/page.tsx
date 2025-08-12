@@ -38,24 +38,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   }))
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
-        <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
-          <Image
-            src={HeroImage}
-            alt={t("page-start-hero-alt")}
-            sizes="(max-width: 1504px) 100vw, 1504px"
-            className="h-full w-full object-cover"
-            priority
-          />
+    <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
+      <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
+        <Image
+          src={HeroImage}
+          alt={t("page-start-hero-alt")}
+          sizes="(max-width: 1504px) 100vw, 1504px"
+          className="h-full w-full object-cover"
+          priority
+        />
+      </div>
+
+      <div className="mb-36 flex flex-col gap-12 overflow-x-hidden px-8">
+        <div className="mx-auto flex max-w-[1000px] flex-col items-center gap-4 text-center">
+          <h1>{t("page-start-title")}</h1>
+          <p>{t("page-start-subtitle")}</p>
         </div>
 
-        <div className="mb-36 flex flex-col gap-12 overflow-x-hidden px-8">
-          <div className="mx-auto flex max-w-[1000px] flex-col items-center gap-4 text-center">
-            <h1>{t("page-start-title")}</h1>
-            <p>{t("page-start-subtitle")}</p>
-          </div>
-
+        <I18nProvider locale={locale} messages={messages}>
           <div id="start-with-ethereum-flow" className="flex flex-col gap-12">
             <StartWithEthereumFlow
               locale={locale}
@@ -75,9 +75,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <Image src={ManDogeImage} alt={t("page-start-man-doge-alt")} />
             </div>
           </div>
-        </div>
-      </MainArticle>
-    </I18nProvider>
+        </I18nProvider>
+      </div>
+    </MainArticle>
   )
 }
 
