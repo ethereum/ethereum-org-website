@@ -20,6 +20,8 @@
 
 /use /en/apps/ 301!
 
+/dapps /en/apps/ 301!
+
 /beginners /en/what-is-ethereum/ 301!
 
 /eth2/ /en/roadmap/ 301!
@@ -157,6 +159,8 @@
 /*/about/product-designer /:splat/about/#open-jobs 301!
 
 /*/use /:splat/apps/ 301!
+
+/*/dapps /:splat/apps/ 301!
 
 /*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!
 
