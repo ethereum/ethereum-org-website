@@ -18,7 +18,8 @@ import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import { CardTitle } from "@/components/ui/card"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import Link, { LinkProps } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -720,7 +721,142 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </p>
               </div>
             </div>
-            <div className="py-4 font-bold italic">TODO: StartCards</div>
+
+            <Card className="overflow-hidden rounded-2xl border">
+              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
+                <User className="size-8 text-accent-a" />
+                <h3 className="text-2xl">For individuals</h3>
+              </CardTitle>
+              <CardContent className="space-y-12 p-8">
+                <div className="space-y-6">
+                  <p>
+                    <span className="font-bold">
+                      The first step is downloading a wallet.
+                    </span>
+                    Think of it like an app that acts as both your account and
+                    your internet browser for Ethereum. It manages your crypto,
+                    lets you sign in to dapps, as well as send and receive
+                    digital assets like tokens and NFTs.{" "}
+                  </p>
+
+                  <p>
+                    Popular wallets like <a>Zerion</a>, <a>Rainbow</a>, and{" "}
+                    <a>Coinbase Wallet</a> are free and easy to use. Once your
+                    wallet is set up, you can:
+                  </p>
+
+                  <UnorderedList className="[&>li]:mb-0">
+                    <ListItem>
+                      Buy a small amount of ETH on an exchange or directly
+                      inside some wallets
+                    </ListItem>
+                    <ListItem>
+                      Use that ETH to pay for transactions like sending tokens
+                      or collecting NFTs
+                    </ListItem>
+                    <ListItem>
+                      Explore dapps like <a>Zora</a>, <a>Uniswap</a>, or{" "}
+                      <a>Warpcast</a> — no new logins or approvals needed
+                    </ListItem>
+                  </UnorderedList>
+
+                  <p>
+                    These priorities will helps ensure Ethereum is secure,
+                    scalable and user friendly as more people rely on the
+                    network everyday.
+                  </p>
+                  <p>
+                    These dapps run in your browser and work with your wallet
+                    instantly. You can start using Ethereum in minutes.{" "}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <ButtonLink href="/start/">Start here</ButtonLink>
+                  <ButtonLink href="/apps/" variant="outline">
+                    See apps
+                  </ButtonLink>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden rounded-2xl border">
+              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
+                <SquareCode className="size-8 text-accent-b" />
+                <h3 className="text-2xl">For developers</h3>
+              </CardTitle>
+              <CardContent className="space-y-12 p-8">
+                <div className="space-y-6">
+                  <p>
+                    Ethereum is a playground for developers. You can start
+                    building without permission, approvals, or even real money.
+                  </p>
+                  <p>
+                    The <a>Ethereum Developer Docs</a> walk you through
+                    everything from writing your first smart contract to
+                    deploying on test networks like Sepolia.
+                  </p>
+                  <p>
+                    You can build full-stack dapps with tools like{" "}
+                    <a>Hardhat</a>, <a>Foundry</a>, and <a>Ethers.js</a>, or
+                    experiment with low-code platforms like <a>thirdweb</a> or{" "}
+                    <a>Moralis</a>.
+                  </p>
+                  <p>
+                    Everything is open-source and composable, so you can remix
+                    and build on what’s already out there without asking for
+                    permission.
+                  </p>
+                </div>
+                <ButtonLink href="/start/">
+                  Start building on Ethereum
+                </ButtonLink>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden rounded-2xl border">
+              <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
+                <Landmark className="size-8 text-accent-c" />
+                <h3 className="text-2xl">Use Ethereum in business</h3>
+              </CardTitle>
+              <CardContent className="space-y-12 p-8">
+                <div className="space-y-6">
+                  <p>
+                    Enterprises are already using Ethereum to power new
+                    infrastructure.
+                  </p>
+                  <p>
+                    Many enterprises are starting with L2 networks like Optimism
+                    and Base to support high-volume use cases. These networks
+                    offer lower fees, faster speeds while still benefiting from
+                    Ethereum’s security and removing counterparty risk.
+                  </p>
+                  <p>
+                    You can:
+                    <UnorderedList className="[&>li]:mb-0">
+                      <ListItem>
+                        Launch modular loyalty programs that boost retention and
+                        cut third-party costs
+                      </ListItem>
+                      <ListItem>
+                        Tokenize assets like tickets, coupons, or certificates
+                        to reduce fraud and resale risk
+                      </ListItem>
+                      <ListItem>
+                        Enable instant global payments to lower transaction fees
+                        and unlock new markets
+                      </ListItem>
+                    </UnorderedList>
+                  </p>
+                  <p>
+                    For example, in 2025, <a>Shopify launched on Base</a> to
+                    allow consumers to spend stablecoins with millions of
+                    merchants around the globe.
+                  </p>
+                </div>
+                <ButtonLink href="/start/">Use Ethereum in business</ButtonLink>
+              </CardContent>
+            </Card>
           </Section>
 
           <Section id={getId(tocItems[6].url)}>
