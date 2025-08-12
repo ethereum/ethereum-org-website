@@ -189,3 +189,7 @@
 /tds /trillion-dollar-security 301!
 
 /*/tds /:splat/trillion-dollar-security 301!
+
+/10-years /10years 301!
+
+/*/10-years /:splat/10years 301!

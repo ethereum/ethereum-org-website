@@ -11,20 +11,21 @@ import {
 
 const instructions = [
   {
-    title: "Read the rules and FAQs",
-    description: "Get familiar with the rules, prizes and translation process",
+    title: "Read the rules and details",
+    description:
+      "Get familiar with the rules, translation process and what to translate",
     ctaLink: "/contributing/translation-program/translatathon/details/",
     ctaLabel: "Learn",
   },
   {
     title: "Submit your application",
     description:
-      "Everyone needs to fill out the application form before the translation period starts!",
+      "All participants need to fill out the application form before the translation period starts!",
     ctaLink: APPLICATION_URL,
     ctaLabel: "Apply",
   },
   {
-    title: "Register on Crowdin (translation platform)",
+    title: "Register on Crowdin",
     description:
       "Join the ethereum.org project and familiarize yourself with Crowdin, where all the translations will take place",
     ctaLink: CROWDIN_PROJECT_URL,
@@ -33,12 +34,12 @@ const instructions = [
   {
     title: "Join our Discord",
     description:
-      "Attend the onboarding calls and workshops, stay up to date with the latest news or ask questions",
+      "Keep up with the latest updates, attend the onboarding calls or ask questions",
     ctaLink: "/discord/",
     ctaLabel: "Join",
   },
   {
-    title: "Translate! August 9th to August 18th",
+    title: "Translate! August 25th to August 31st",
     description:
       "Translate content to earn points. Each word you translate counts towards your final score",
     ctaLink: CROWDIN_PROJECT_URL,
@@ -47,15 +48,16 @@ const instructions = [
   {
     title: "Wait for evaluations",
     description:
-      "All translations will be evaluated for quality and machine translations will be rejected",
+      "All translations will be evaluated for quality and AI or machine translations will be rejected",
     ctaLink: null,
   },
   {
     title: "Claim your prizes",
     description: (
       <>
-        Results will be announced on <strong>August 29th</strong>. Eligible
-        participants will receive an email with prize claim instructions.
+        Results will be announced on <strong>September 25th</strong>. Eligible
+        participants will receive an email with instructions on how to prize
+        claim their prizes.
       </>
     ),
     ctaLink: null,

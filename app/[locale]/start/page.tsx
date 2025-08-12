@@ -45,7 +45,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div id="start-with-ethereum-flow" className="flex flex-col gap-12">
-          <StartWithEthereumFlow locale={locale} newToCryptoWallets={wallets} />
+          <StartWithEthereumFlow newToCryptoWallets={wallets} />
         </div>
 
         <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
