@@ -98,12 +98,16 @@ const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
     </Link>
   )
 }
+
+const Strong = (chunks) => <strong>{chunks}</strong>
+const Emphasis = (chunks) => <em>{chunks}</em>
+
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-  // const t = await getTranslations({
-  //   locale,
-  //   namespace: "page-what-is-ethereum",
-  // })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-what-is-ethereum",
+  })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
@@ -114,21 +118,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     )
 
   const tocItems: ToCItem[] = [
-    { title: "What is Ethereum?", url: "#ethereum" },
-    { title: "What is the Ethereum network?", url: "#network" },
-    { title: "What is ether (ETH)?", url: "#ether" },
-    { title: "How does Ethereum work?", url: "#how" },
-    { title: "What is Ethereum used for?", url: "#what" },
-    { title: "How to start using Ethereum", url: "#start" },
+    { title: t("page-what-is-ethereum-toc-ethereum"), url: "#ethereum" },
+    { title: t("page-what-is-ethereum-toc-network"), url: "#network" },
+    { title: t("page-what-is-ethereum-toc-ether"), url: "#ether" },
+    { title: t("page-what-is-ethereum-toc-how"), url: "#how" },
+    { title: t("page-what-is-ethereum-toc-what"), url: "#what" },
+    { title: t("page-what-is-ethereum-toc-start"), url: "#start" },
     {
-      title: "What's the difference between Ethereum and Bitcoin?",
+      title: t("page-what-is-ethereum-toc-bitcoin"),
       url: "#bitcoin",
     },
     {
-      title: "When did Ethereum launch, who founded it and who runs it now?",
+      title: t("page-what-is-ethereum-toc-when-who"),
       url: "#when-who",
     },
-    { title: "What is the Ethereum roadmap for 2025?", url: "#roadmap" },
+    { title: t("page-what-is-ethereum-toc-roadmap"), url: "#roadmap" },
   ]
 
   const heroProps: ContentHeroProps = {
@@ -137,14 +141,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     title: tocItems[0].title,
     description: (
       <>
-        <p>
-          Ethereum is a decentralized blockchain network and software
-          development platform, powered by the cryptocurrency ether (ETH).
-        </p>
-        <p>
-          It&apos;s home to thousands of cryptocurrencies and applications
-          across DeFi, NFTs, gaming, decentralized social media and stablecoins.
-        </p>
+        <p>{t("page-what-is-ethereum-hero-description-1")}</p>
+        <p>{t("page-what-is-ethereum-hero-description-2")}</p>
       </>
     ),
   }
@@ -196,52 +194,48 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         >
           <Section id={getId(tocItems[0].url)} className="space-y-6">
             <p>
-              Ethereum is an open, public blockchain{" "}
-              <strong>launched in July 2015</strong> by a software developer
-              called Vitalik Buterin and a small team of co-founders.
+              {t.rich("page-what-is-ethereum-ethereum-intro-1", {
+                strong: Strong,
+              })}
             </p>
             <p>
-              The idea behind Ethereum was simple. While Bitcoin let you send
-              and receive digital cash, Ethereum would build on this with
-              open-source programs called <a>smart contracts</a>.
+              {t.rich("page-what-is-ethereum-ethereum-intro-2", {
+                a: (chunks) => <Link href="/smart-contracts/">{chunks}</Link>,
+              })}
             </p>
             <p>
-              <strong>Smart contracts</strong> let anyone create their own
-              digital assets and decentralized applications (dapps) that run
-              24/7, globally. And unlike banks, corporations or other
-              institutions, smart contracts are available to anyone with an
-              internet connection.
+              {t.rich("page-what-is-ethereum-ethereum-intro-3", {
+                strong: Strong,
+              })}
             </p>
             <p>
-              Since 2015, Ethereum has grown into a thriving ecosystem of
-              digital assets like <strong>stablecoins</strong>, non-fungible
-              tokens (<strong>NFTs</strong>), and governance tokens, as well as
-              a sprawling world of dapps for decentralized finance (
-              <strong>DeFi</strong>), art and collectibles, gaming and
-              decentralized social media.
+              {t.rich("page-what-is-ethereum-ethereum-intro-4", {
+                strong: Strong,
+              })}
             </p>
             <p>
-              Collectively, this ecosystem is called &quot;<strong>web3</strong>
-              &quot;, representing the third phase of the{" "}
-              <strong>internet centered around ownership</strong>.
+              {t.rich("page-what-is-ethereum-ethereum-intro-5", {
+                strong: Strong,
+              })}
             </p>
             <p>
-              Today, Ethereum is used by <a>millions of people</a> around the
-              world <a>holding billions of dollars</a> in assets who send and
-              receive <a>trillions of dollars</a> every year — all without a
-              bank.
+              {t.rich("page-what-is-ethereum-ethereum-intro-6", {
+                a: (chunks) => <Link href="#millions">{chunks}</Link>,
+                p: (chunks) => <Link href="#billions">{chunks}</Link>,
+                span: (chunks) => <Link href="#trillions">{chunks}</Link>,
+              })}
             </p>
             <p>
-              At the heart of all this is Ethereum&apos;s native cryptocurrency{" "}
-              <strong>ether (ETH)</strong>, a new kind of digital money used to
-              power the whole network.
+              {t.rich("page-what-is-ethereum-ethereum-intro-7", {
+                strong: Strong,
+              })}
             </p>
           </Section>
 
           <Section className="-scroll-mt-80 space-y-14">
             <Image
               src={networksBanner}
-              alt="Illustration of futuristic Ethereum community center"
+              alt={t("page-what-is-ethereum-banner-networks-alt")}
               sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
 
@@ -251,25 +245,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </h2>
 
               <p>
-                You can think of the ethereum network as{" "}
-                <strong>
-                  a global digital infrastructure that anyone can use
-                </strong>{" "}
-                but nobody can abuse.
+                {t.rich("page-what-is-ethereum-network-intro-1", {
+                  strong: Strong,
+                })}
               </p>
 
               <p>
-                The network is made up of{" "}
-                <strong>thousands of independent computers</strong>
-                around the world called nodes. These nodes, run by regular
-                people, work together to provide financial services and digital
-                applications to anyone, anywhere.
+                {t.rich("page-what-is-ethereum-network-intro-2", {
+                  strong: Strong,
+                })}
               </p>
 
               <p>
-                The Ethereum network has <strong>3 key advantages</strong> over
-                traditional networks owned by institutions. These are censorship
-                resistance, enhanced security and improved reliability.
+                {t.rich("page-what-is-ethereum-network-intro-3", {
+                  strong: Strong,
+                })}
               </p>
             </div>
 
@@ -279,18 +269,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <Shield className="text-accent-a" />
                 </IconBox>
                 <div>
-                  <CardTitle className="mb-2">Censorship resistant</CardTitle>
+                  <CardTitle className="mb-2">
+                    {t("page-what-is-ethereum-network-censorship-title")}
+                  </CardTitle>
                   <HighlightCardContent>
                     <p>
-                      While traditional apps and financial services rely on
-                      banks or corporations that can decide to block access or
-                      freeze accounts, dapps on Ethereum are censorship
-                      resistant.
+                      {t("page-what-is-ethereum-network-censorship-desc-1")}
                     </p>
                     <p>
-                      This is because ethereum&apos;s network of nodes record
-                      every single transaction without discrimination—and this
-                      rule is embedded in the code.
+                      {t("page-what-is-ethereum-network-censorship-desc-2")}
                     </p>
                   </HighlightCardContent>
                 </div>
@@ -300,22 +287,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <LockKeyhole className="text-accent-b" />
                 </IconBox>
                 <div>
-                  <CardTitle className="mb-2">Highly secure</CardTitle>
+                  <CardTitle className="mb-2">
+                    {t("page-what-is-ethereum-network-security-title")}
+                  </CardTitle>
                   <HighlightCardContent>
-                    <p>
-                      While many apps today are hosted on cloud providers like
-                      AWS and can be vulnerable to takedowns and attacks, dapps
-                      on Ethereum are secured by the network itself. Every node
-                      stores and syncs the entire state of Ethereum, including
-                      all contracts.
-                    </p>
-                    <p>
-                      If someone tried to change a contract, the network would
-                      reject it since it wouldn&apos;t match their records. To
-                      take down a single app, attackers need to take over the
-                      entire network, which would costs billions and be
-                      extremely hard to coordinate.
-                    </p>
+                    <p>{t("page-what-is-ethereum-network-security-desc-1")}</p>
+                    <p>{t("page-what-is-ethereum-network-security-desc-2")}</p>
                   </HighlightCardContent>
                 </div>
               </HighlightCard>
@@ -324,22 +301,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <Castle className="text-accent-c" />
                 </IconBox>
                 <div>
-                  <CardTitle className="mb-2">Durable and reliable</CardTitle>
+                  <CardTitle className="mb-2">
+                    {t("page-what-is-ethereum-network-reliability-title")}
+                  </CardTitle>
                   <HighlightCardContent>
                     <p>
-                      Downtime on cloud hosting platforms can take apps offline,
-                      but Ethereum&apos;s design ensures <a>perfect uptime</a>.
-                      The network will keep running even if some nodes go
-                      offline due to software bugs, government crackdowns,
-                      natural disaster, or war.
+                      {t.rich(
+                        "page-what-is-ethereum-network-reliability-desc-1",
+                        {
+                          a: (chunks) => <Link href="#">{chunks}</Link>,
+                        }
+                      )}
                     </p>
                     <p>
-                      Millions of people use thousands of dapps on Ethereum
-                      every day. While high demand can lead to elevated
-                      transaction fees, it reflects the strength of a network
-                      that prioritizes security, decentralization, and the
-                      guarantee that it&apos;s always available when you need
-                      it.
+                      {t("page-what-is-ethereum-network-reliability-desc-2")}
                     </p>
                   </HighlightCardContent>
                 </div>
@@ -347,26 +322,34 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </HighlightStack>
 
             <div data-label="layer-2-callout">
-              <h3 className="mb-5 text-xl">Ethereum extensions (Layer 2)</h3>
+              <h3 className="mb-5 text-xl">
+                {t("page-what-is-ethereum-network-layer2-title")}
+              </h3>
 
               <div className="space-y-6">
-                <p>
-                  Different teams have created Layer 2 (L2) networks that run on
-                  top of Ethereum to increase Ethereum&apos;s capacity. L2s act
-                  like express lanes, making transactions faster and cheaper —
-                  sometimes costing less than a cent on average.
-                </p>
+                <p>{t("page-what-is-ethereum-network-layer2-desc-1")}</p>
 
                 <p>
-                  Some of the most popular L2s including Optimism, Arbitrum,
-                  ZKSync, and Base now process millions of transactions worth
-                  billions of dollars each year.
+                  {t.rich("page-what-is-ethereum-network-layer2-desc-2", {
+                    a: (chunks) => (
+                      <Link href="https://www.optimism.io/">{chunks}</Link>
+                    ),
+                    p: (chunks) => (
+                      <Link href="https://arbitrum.io/">{chunks}</Link>
+                    ),
+                    span: (chunks) => (
+                      <Link href="https://www.zksync.io/">{chunks}</Link>
+                    ),
+                    div: (chunks) => (
+                      <Link href="https://www.base.org/">{chunks}</Link>
+                    ),
+                  })}
                 </p>
               </div>
             </div>
 
             <LinkWithArrow href="/layer-2/networks/">
-              Learn more about the Ethereum network
+              {t("page-what-is-ethereum-network-learn-more")}
             </LinkWithArrow>
           </Section>
 
@@ -377,7 +360,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
               <Image
                 src={etherBanner}
-                alt="Open hands holding ether glyph"
+                alt={t("page-what-is-ethereum-banner-ether-alt")}
                 sizes="224px"
                 className="w-56"
               />
@@ -387,48 +370,32 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </div>
 
             <div className="space-y-6">
-              <p>Ether (ETH) is the native cryptocurrency of Ethereum.</p>
+              <p>{t("page-what-is-ethereum-ether-intro-1")}</p>
               <p>
-                It&apos;s a new kind of{" "}
-                <strong>
-                  digital money you can send to anyone, anywhere in the world in
-                  seconds
-                </strong>{" "}
-                for as little as a few cents. But ETH is about more than just
-                payments. It plays a vital role in keeping the Ethereum network
-                running.
+                {t.rich("page-what-is-ethereum-ether-intro-2", {
+                  strong: Strong,
+                })}
               </p>
               <p>
-                When you use Ethereum to send money, collect art or build a new
-                dapp, you pay a small <strong>transaction fee</strong> (or gas
-                fee) <strong>in ETH</strong>. This fee helps prevent spam and
-                rewards the people called validators who process transactions.
+                {t.rich("page-what-is-ethereum-ether-intro-3", {
+                  strong: Strong,
+                })}
               </p>
               <p>
-                These{" "}
-                <strong>validators help secure the ethereum network</strong>{" "}
-                through a system called staking. By locking up their ETH
-                they&apos;re eligible to process transactions. In return, they
-                earn ETH as a reward. This gives Ethereum its own
-                self-sustaining economy, powered by users rather than companies.
+                {t.rich("page-what-is-ethereum-ether-intro-4", {
+                  strong: Strong,
+                })}
               </p>
               <p>
-                Unlike many traditional currencies,{" "}
-                <strong>ETH can become more scarce over time</strong>. Every
-                time someone uses Ethereum, a small portion of ETH is burned,
-                which permanently removes it from the supply. On busy days, more
-                ETH is burned than created, making ETH deflationary and
-                increasing its value over time. The more Ethereum is used, the
-                more ETH is burned.
+                {t.rich("page-what-is-ethereum-ether-intro-5", {
+                  strong: Strong,
+                })}
               </p>
-              <p>
-                Because of this, many people see ETH as an investment and choose
-                to hold, stake or lend it to grow their savings.
-              </p>
+              <p>{t("page-what-is-ethereum-ether-intro-6")}</p>
             </div>
 
             <LinkWithArrow href="/eth/">
-              Learn more about ether (ETH)
+              {t("page-what-is-ethereum-ether-learn-more")}
             </LinkWithArrow>
           </Section>
 
@@ -439,7 +406,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div className="flex flex-col items-center gap-4 xl:flex-row-reverse">
               <Image
                 src={howBanner}
-                alt="Man repairing computer"
+                alt={t("page-what-is-ethereum-banner-how-alt")}
                 sizes="288px"
                 className="w-full max-w-72"
               />
@@ -450,99 +417,76 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
             <div className="space-y-6">
               <p>
-                When Ethereum launched in 2015, it used a system called proof of
-                work.
+                {t.rich("page-what-is-ethereum-how-intro-1", {
+                  strong: Strong,
+                })}
               </p>
+              <p>{t("page-what-is-ethereum-how-intro-2")}</p>
               <p>
-                This mechanism pioneered by Bitcoin, is how all computers agreed
-                on who owns what. Computers would use a lot of energy trying to
-                solve a complex mathematical puzzle. The winner would get to
-                propose a block of incoming transactions and earn new ETH.
+                {t.rich("page-what-is-ethereum-how-intro-3", {
+                  strong: Strong,
+                  a: (chunks) => (
+                    <Link href="/energy-consumption/">{chunks}</Link>
+                  ),
+                })}
               </p>
-              <p>
-                In 2022, Ethereum upgraded to a new system called{" "}
-                <strong>proof of stake</strong>{" "}
-                <a>that&apos;s 99% more energy efficient</a>. Instead of
-                mathematical puzzles, validators lock their ETH as a security
-                deposit to earn the right to process transactions.
-              </p>
-              <p>
-                If they do it correctly, they earn ETH. If they cheat, they lose
-                some of their stake.
-              </p>
-              <p>Here&apos;s an example:</p>
+              <p>{t("page-what-is-ethereum-how-intro-4")}</p>
+              <p>{t("page-what-is-ethereum-how-intro-5")}</p>
               <p className="text-lg font-bold">
-                When you send $10 in stablecoins to a friend on Ethereum:
+                {t("page-what-is-ethereum-how-example-1-title")}
               </p>
               <OrderedList className="[&>li]:mb-0.5">
                 <ListItem>
-                  You open your wallet, add the account address and the amount,
-                  then click send.
+                  {t("page-what-is-ethereum-how-example-1-step-1")}
                 </ListItem>
                 <ListItem>
-                  Your wallet signs the payment and broadcasts it to the
-                  network.
+                  {t("page-what-is-ethereum-how-example-1-step-2")}
                 </ListItem>
                 <ListItem>
-                  The payment waits in the public queue (mempool) until a block
-                  proposer picks it.
+                  {t("page-what-is-ethereum-how-example-1-step-3")}
                 </ListItem>
                 <ListItem>
-                  The block proposer adds it to the next block of transactions,
-                  broadcasts it, and earns a fee.
+                  {t("page-what-is-ethereum-how-example-1-step-4")}
                 </ListItem>
                 <ListItem>
-                  The stablecoin contract moves $10 from you to your friend, and
-                  both wallets update.
+                  {t("page-what-is-ethereum-how-example-1-step-5")}
                 </ListItem>
                 <ListItem>
-                  A global network of validators double-check and attest to the
-                  validity of the changes.
+                  {t("page-what-is-ethereum-how-example-1-step-6")}
                 </ListItem>
               </OrderedList>
               <p className="text-lg font-bold">
-                When you mint a $5 collectible on Ethereum:
+                {t("page-what-is-ethereum-how-example-2-title")}
               </p>
               <OrderedList className="[&>li]:mb-0">
                 <ListItem>
-                  You connect your wallet to the dapp and choose the item to
-                  mint.
+                  {t("page-what-is-ethereum-how-example-2-step-1")}
                 </ListItem>
                 <ListItem>
-                  You confirm the purchase; the wallet signs and broadcasts the
-                  transaction.
+                  {t("page-what-is-ethereum-how-example-2-step-2")}
                 </ListItem>
                 <ListItem>
-                  The mint request joins the mempool and is added to a block by
-                  a validator.
+                  {t("page-what-is-ethereum-how-example-2-step-3")}
                 </ListItem>
                 <ListItem>
-                  The NFT smart contract records your wallet as the new owner.
+                  {t("page-what-is-ethereum-how-example-2-step-4")}
                 </ListItem>
                 <ListItem>
-                  Your new collectible appears in your wallet a few seconds
-                  later.
+                  {t("page-what-is-ethereum-how-example-2-step-5")}
                 </ListItem>
               </OrderedList>
+              <p>{t("page-what-is-ethereum-how-outro-1")}</p>
               <p>
-                This is all possible thanks to the power of smart contracts;
-                open-source programs that live on Ethereum and run 24/7, 365
-                accessible to anyone, anywhere.
-              </p>
-              <p>
-                <span className="font-bold">
-                  Every transaction, update, and action is synced across
-                  thousands of independent nodes.
-                </span>{" "}
-                This gives Ethereum its reliability, transparency, and
-                censorship resistance.
+                {t.rich("page-what-is-ethereum-how-outro-2", {
+                  span: (chunks) => <span className="font-bold">{chunks}</span>,
+                })}
               </p>
               <div>
                 <LinkWithArrow href="/learn/">
-                  Learn more about how Ethereum works
+                  {t("page-what-is-ethereum-how-learn-more-1")}
                 </LinkWithArrow>
                 <LinkWithArrow href="/developers/docs/">
-                  Read developer docs for a technical overview of Ethereum
+                  {t("page-what-is-ethereum-how-learn-more-2")}
                 </LinkWithArrow>
               </div>
             </div>
@@ -551,7 +495,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <Section id={getId(tocItems[4].url)} className="space-y-14">
             <Image
               src={whatBanner}
-              alt=""
+              alt={t("page-what-is-ethereum-banner-what-alt")}
               sizes="320px"
               className="mx-auto w-80 -scale-x-100"
             />
@@ -559,23 +503,29 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               {tocItems[4].title}
             </h2>
             <div className="space-y-6">
+              <p>{t("page-what-is-ethereum-what-intro-1")}</p>
               <p>
-                People use Ethereum to do things that weren&apos;t possible
-                before.
+                {t.rich("page-what-is-ethereum-what-intro-2", {
+                  strong: Strong,
+                  a: (chunks) => (
+                    <Link href="https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc">
+                      {chunks}
+                    </Link>
+                  ),
+                  p: (chunks) => (
+                    <Link href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.19881.html">
+                      {chunks}
+                    </Link>
+                  ),
+                  span: (chunks) => (
+                    <Link href="https://www.wfp.org/building-blocks">
+                      {chunks}
+                    </Link>
+                  ),
+                })}
               </p>
-              <p>
-                Farmers in Kenya can receive{" "}
-                <a>automated insurance on their crops</a> without applying to a
-                bank. Businesses like <strong>Visa</strong> can launch{" "}
-                <a>new payment systems that works globally</a> from day one.
-                Global organizations like the <strong>UN</strong> can deliver{" "}
-                <a>aid to refugees</a> saving millions in bank fees.
-              </p>
-              <p>
-                These dapps and assets run on Ethereum using open-source code
-                and can&apos;t be restricted, censored or turned off.
-              </p>
-              <p>Here&apos;s how different groups are using it today:</p>
+              <p>{t("page-what-is-ethereum-what-intro-3")}</p>
+              <p>{t("page-what-is-ethereum-what-intro-4")}</p>
             </div>
             <HighlightStack data-label="what-is-table">
               <HighlightCard>
@@ -583,34 +533,39 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <User className="text-accent-a" />
                 </IconBox>
                 <div>
-                  <CardTitle className="mb-2">Consumers</CardTitle>
+                  <CardTitle className="mb-2">
+                    {t("page-what-is-ethereum-what-consumers-title")}
+                  </CardTitle>
                   <HighlightCardContent>
-                    <p>
-                      Millions of people already use dapps on Ethereum to move
-                      money, trade, and own digital assets every day. Unlike
-                      traditional apps, there&apos;s no need to register with
-                      your name, wait for a bank to approve you, or hand over
-                      your personal data.
-                    </p>
-                    <p>
-                      With just a wallet and an internet connection you can:
-                    </p>
+                    <p>{t("page-what-is-ethereum-what-consumers-desc-1")}</p>
+                    <p>{t("page-what-is-ethereum-what-consumers-desc-2")}</p>
                     <UnorderedList className="[&>li]:mb-0.5">
                       <ListItem>
-                        Access financial services without a bank account or
-                        credit history
+                        {t.rich(
+                          "page-what-is-ethereum-what-consumers-benefit-1",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                       <ListItem>
-                        Own digital collectibles, art, and assets that
-                        can&apos;t be copied or confiscated
+                        {t.rich(
+                          "page-what-is-ethereum-what-consumers-benefit-2",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                       <ListItem>
-                        Sign into dapps using your wallet, not your email — no
-                        passwords, no personal information necessary
+                        {t.rich(
+                          "page-what-is-ethereum-what-consumers-benefit-3",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                       <ListItem>
-                        Participate in global communities where you can vote,
-                        contribute, and earn borderlessly
+                        {t("page-what-is-ethereum-what-consumers-benefit-4")}
                       </ListItem>
                     </UnorderedList>
                   </HighlightCardContent>
@@ -622,31 +577,33 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </IconBox>
                 <div>
                   <CardTitle className="mb-2">
-                    Businesses & developers
+                    {t("page-what-is-ethereum-what-businesses-title")}
                   </CardTitle>
                   <HighlightCardContent>
                     <UnorderedList className="[&>li]:mb-0.5">
                       <ListItem>
-                        Launch dapps with built-in global payments system from
-                        day one
+                        {t("page-what-is-ethereum-what-businesses-benefit-1")}
                       </ListItem>
                       <ListItem>
-                        Deploy tamper-proof contracts that{" "}
-                        <strong>automatically enforce agreements</strong>
+                        {t.rich(
+                          "page-what-is-ethereum-what-businesses-benefit-2",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                       <ListItem>
-                        Create financial products that anyone can build on and
-                        drive value to{" "}
+                        {t("page-what-is-ethereum-what-businesses-benefit-3")}
                       </ListItem>
                     </UnorderedList>
                     <p>
-                      For example,{" "}
-                      <a>
-                        PayPal launched its own stablecoin, PYUSD, on Ethereum
-                      </a>
-                      . This is a sign that even the world&apos;s largest
-                      payments companies see the benefit of Ethereum&apos;s open
-                      and programmable nature.
+                      {t.rich("page-what-is-ethereum-what-businesses-example", {
+                        a: (chunks) => (
+                          <Link href="https://newsroom.paypal-corp.com/2023-08-07-PayPal-Launches-U-S-Dollar-Stablecoin">
+                            {chunks}
+                          </Link>
+                        ),
+                      })}
                     </p>
                   </HighlightCardContent>
                 </div>
@@ -656,54 +613,66 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <Landmark className="text-accent-c" />
                 </IconBox>
                 <div>
-                  <CardTitle className="mb-2">Governments</CardTitle>
+                  <CardTitle className="mb-2">
+                    {t("page-what-is-ethereum-what-governments-title")}
+                  </CardTitle>
                   <HighlightCardContent>
-                    <p>
-                      Governments are also starting to explore what Ethereum
-                      makes possible.
-                    </p>
+                    <p>{t("page-what-is-ethereum-what-governments-intro")}</p>
                     <UnorderedList className="[&>li]:mb-0.5">
                       <ListItem>
-                        <strong>Distribute public funds</strong> and benefits
-                        directly to citizens with full transparency
+                        {t.rich(
+                          "page-what-is-ethereum-what-governments-benefit-1",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                       <ListItem>
-                        <strong>Issue digital IDs</strong> or records that are
-                        verifiable and portable across borders
+                        {t.rich(
+                          "page-what-is-ethereum-what-governments-benefit-2",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                       <ListItem>
-                        Build{" "}
-                        <strong>
-                          tamper-proof public infrastructure for voting
-                        </strong>
-                        , land titles, and registries
+                        {t.rich(
+                          "page-what-is-ethereum-what-governments-benefit-3",
+                          {
+                            strong: Strong,
+                          }
+                        )}
                       </ListItem>
                     </UnorderedList>
                     <p>
-                      In another case, Ukraine&apos;s Ministry of Digital
-                      Transformation{" "}
-                      <a>used Ethereum to distribute wartime aid</a>.
+                      {t.rich(
+                        "page-what-is-ethereum-what-governments-example-1",
+                        {
+                          a: (chunks) => (
+                            <Link href="https://www.weforum.org/stories/2023/03/the-role-cryptocurrency-crypto-huge-in-ukraine-war-russia/">
+                              {chunks}
+                            </Link>
+                          ),
+                        }
+                      )}
                     </p>
                     <p>
-                      Funds were sent directly to citizens and NGOs using open
-                      smart contracts, providing transparency, speed, and
-                      accountability during a crisis.
+                      {t("page-what-is-ethereum-what-governments-example-2")}
                     </p>
                   </HighlightCardContent>
                 </div>
               </HighlightCard>
             </HighlightStack>
 
-            {/* // TODO: Confirm links */}
             <LinkWithArrow href="/learn/">
-              Learn more about what Ethereum is used for
+              {t("page-what-is-ethereum-what-learn-more")}
             </LinkWithArrow>
           </Section>
 
           <Section id={getId(tocItems[5].url)} className="space-y-14">
             <Image
               src={startBanner}
-              alt=""
+              alt={t("page-what-is-ethereum-banner-start-alt")}
               sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div>
@@ -711,70 +680,79 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 {tocItems[5].title}
               </h2>
               <div className="space-y-6">
-                <p>
-                  Getting started with Ethereum is easier than you might think.
-                </p>
-                <p>
-                  You don&apos;t need permission. You don&apos;t need a bank or
-                  even an ID document. All you need to get started is a device
-                  and an internet connection.
-                </p>
+                <p>{t("page-what-is-ethereum-start-intro-1")}</p>
+                <p>{t("page-what-is-ethereum-start-intro-2")}</p>
               </div>
             </div>
 
             <Card className="overflow-hidden rounded-2xl border">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                 <User className="size-8 text-accent-a" />
-                <h3 className="text-2xl">For individuals</h3>
+                <h3 className="text-2xl">
+                  {t("page-what-is-ethereum-start-individuals-title")}
+                </h3>
               </CardTitle>
               <CardContent className="space-y-12 p-8">
                 <div className="space-y-6">
                   <p>
                     <span className="font-bold">
-                      The first step is downloading a wallet.
+                      {t("page-what-is-ethereum-start-individuals-desc-1")}
                     </span>
-                    Think of it like an app that acts as both your account and
-                    your internet browser for Ethereum. It manages your crypto,
-                    lets you sign in to dapps, as well as send and receive
-                    digital assets like tokens and NFTs.{" "}
                   </p>
 
                   <p>
-                    Popular wallets like <a>Zerion</a>, <a>Rainbow</a>, and{" "}
-                    <a>Coinbase Wallet</a> are free and easy to use. Once your
-                    wallet is set up, you can:
+                    {t.rich("page-what-is-ethereum-start-individuals-desc-3", {
+                      a: (chunks) => (
+                        <Link href="https://zerion.io/">{chunks}</Link>
+                      ),
+                      p: (chunks) => (
+                        <Link href="https://rainbow.me/">{chunks}</Link>
+                      ),
+                      span: (chunks) => (
+                        <Link href="https://www.coinbase.com/wallet">
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
                   </p>
 
                   <UnorderedList className="[&>li]:mb-0">
                     <ListItem>
-                      Buy a small amount of ETH on an exchange or directly
-                      inside some wallets
+                      {t("page-what-is-ethereum-start-individuals-step-1")}
                     </ListItem>
                     <ListItem>
-                      Use that ETH to pay for transactions like sending tokens
-                      or collecting NFTs
+                      {t("page-what-is-ethereum-start-individuals-step-2")}
                     </ListItem>
                     <ListItem>
-                      Explore dapps like <a>Zora</a>, <a>Uniswap</a>, or{" "}
-                      <a>Warpcast</a> — no new logins or approvals needed
+                      {t.rich(
+                        "page-what-is-ethereum-start-individuals-step-3",
+                        {
+                          a: (chunks) => (
+                            <Link href="https://zora.co/">{chunks}</Link>
+                          ),
+                          p: (chunks) => (
+                            <Link href="https://app.uniswap.org/">
+                              {chunks}
+                            </Link>
+                          ),
+                          span: (chunks) => (
+                            <Link href="https://farcaster.xyz/">{chunks}</Link>
+                          ),
+                        }
+                      )}
                     </ListItem>
                   </UnorderedList>
 
-                  <p>
-                    These priorities will helps ensure Ethereum is secure,
-                    scalable and user friendly as more people rely on the
-                    network everyday.
-                  </p>
-                  <p>
-                    These dapps run in your browser and work with your wallet
-                    instantly. You can start using Ethereum in minutes.{" "}
-                  </p>
+                  <p>{t("page-what-is-ethereum-start-individuals-desc-4")}</p>
+                  <p>{t("page-what-is-ethereum-start-individuals-desc-5")}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
-                  <ButtonLink href="/start/">Start here</ButtonLink>
+                  <ButtonLink href="/start/">
+                    {t("page-what-is-ethereum-start-individuals-cta-1")}
+                  </ButtonLink>
                   <ButtonLink href="/apps/" variant="outline">
-                    See apps
+                    {t("page-what-is-ethereum-start-individuals-cta-2")}
                   </ButtonLink>
                 </div>
               </CardContent>
@@ -783,33 +761,43 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Card className="overflow-hidden rounded-2xl border">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                 <SquareCode className="size-8 text-accent-b" />
-                <h3 className="text-2xl">For developers</h3>
+                <h3 className="text-2xl">
+                  {t("page-what-is-ethereum-start-developers-title")}
+                </h3>
               </CardTitle>
               <CardContent className="space-y-12 p-8">
                 <div className="space-y-6">
+                  <p>{t("page-what-is-ethereum-start-developers-desc-1")}</p>
                   <p>
-                    Ethereum is a playground for developers. You can start
-                    building without permission, approvals, or even real money.
+                    {t.rich("page-what-is-ethereum-start-developers-desc-2", {
+                      a: (chunks) => (
+                        <Link href="/developers/docs/">{chunks}</Link>
+                      ),
+                    })}
                   </p>
                   <p>
-                    The <a>Ethereum Developer Docs</a> walk you through
-                    everything from writing your first smart contract to
-                    deploying on test networks like Sepolia.
+                    {t.rich("page-what-is-ethereum-start-developers-desc-3", {
+                      a: (chunks) => (
+                        <Link href="https://hardhat.org/">{chunks}</Link>
+                      ),
+                      p: (chunks) => (
+                        <Link href="https://getfoundry.sh/">{chunks}</Link>
+                      ),
+                      span: (chunks) => (
+                        <Link href="https://docs.ethers.org/">{chunks}</Link>
+                      ),
+                      div: (chunks) => (
+                        <Link href="https://thirdweb.com/">{chunks}</Link>
+                      ),
+                      aside: (chunks) => (
+                        <Link href="https://moralis.com/">{chunks}</Link>
+                      ),
+                    })}
                   </p>
-                  <p>
-                    You can build full-stack dapps with tools like{" "}
-                    <a>Hardhat</a>, <a>Foundry</a>, and <a>Ethers.js</a>, or
-                    experiment with low-code platforms like <a>thirdweb</a> or{" "}
-                    <a>Moralis</a>.
-                  </p>
-                  <p>
-                    Everything is open-source and composable, so you can remix
-                    and build on what’s already out there without asking for
-                    permission.
-                  </p>
+                  <p>{t("page-what-is-ethereum-start-developers-desc-4")}</p>
                 </div>
                 <ButtonLink href="/start/">
-                  Start building on Ethereum
+                  {t("page-what-is-ethereum-start-developers-cta")}
                 </ButtonLink>
               </CardContent>
             </Card>
@@ -817,44 +805,41 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Card className="overflow-hidden rounded-2xl border">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                 <Landmark className="size-8 text-accent-c" />
-                <h3 className="text-2xl">Use Ethereum in business</h3>
+                <h3 className="text-2xl">
+                  {t("page-what-is-ethereum-start-business-title")}
+                </h3>
               </CardTitle>
               <CardContent className="space-y-12 p-8">
                 <div className="space-y-6">
+                  <p>{t("page-what-is-ethereum-start-business-desc-1")}</p>
+                  <p>{t("page-what-is-ethereum-start-business-desc-2")} </p>
                   <p>
-                    Enterprises are already using Ethereum to power new
-                    infrastructure.
-                  </p>
-                  <p>
-                    Many enterprises are starting with L2 networks like Optimism
-                    and Base to support high-volume use cases. These networks
-                    offer lower fees, faster speeds while still benefiting from
-                    Ethereum’s security and removing counterparty risk.
-                  </p>
-                  <p>
-                    You can:
+                    {t("page-what-is-ethereum-start-business-desc-3")}
                     <UnorderedList className="[&>li]:mb-0">
                       <ListItem>
-                        Launch modular loyalty programs that boost retention and
-                        cut third-party costs
+                        {t("page-what-is-ethereum-start-business-benefit-1")}
                       </ListItem>
                       <ListItem>
-                        Tokenize assets like tickets, coupons, or certificates
-                        to reduce fraud and resale risk
+                        {t("page-what-is-ethereum-start-business-benefit-2")}
                       </ListItem>
                       <ListItem>
-                        Enable instant global payments to lower transaction fees
-                        and unlock new markets
+                        {t("page-what-is-ethereum-start-business-benefit-3")}
                       </ListItem>
                     </UnorderedList>
                   </p>
                   <p>
-                    For example, in 2025, <a>Shopify launched on Base</a> to
-                    allow consumers to spend stablecoins with millions of
-                    merchants around the globe.
+                    {t.rich("page-what-is-ethereum-start-business-example", {
+                      a: (chunks) => (
+                        <Link href="https://www.shopify.com/news/stablecoins-on-shopify">
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
                   </p>
                 </div>
-                <ButtonLink href="/start/">Use Ethereum in business</ButtonLink>
+                <ButtonLink href="/start/">
+                  {t("page-what-is-ethereum-start-business-cta")}
+                </ButtonLink>
               </CardContent>
             </Card>
           </Section>
@@ -865,98 +850,64 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </h2>
 
             <div className="space-y-6">
-              <p>
-                Bitcoin and Ethereum are the two biggest cryptocurrencies in the
-                world.
-              </p>
+              <p>{t("page-what-is-ethereum-bitcoin-intro-1")}</p>
 
               <p>
-                They both let you send money without a bank, both run on
-                blockchain technology, and both are open to anyone. But
-                that&apos;s where the similarities end.
+                {t.rich("page-what-is-ethereum-bitcoin-intro-2", {
+                  strong: Strong,
+                })}
               </p>
 
               <div>
                 <h3 className="mb-1 mt-12 text-xl">
-                  Bitcoin is like digital gold.
+                  {t("page-what-is-ethereum-bitcoin-comparison-1-title")}
                 </h3>
-                <p>
-                  It has a fixed supply of 21 million coins, a narrow focus on
-                  peer-to-peer payments, and a basic scripting language that
-                  limits what you can build with it. This simplicity is by
-                  design since Bitcoin prioritizes predictability, durability,
-                  and long-term security over flexibility.
-                </p>
+                <p>{t("page-what-is-ethereum-bitcoin-comparison-1-desc")}</p>
               </div>
 
               <div>
                 <h3 className="mb-1 mt-12 text-xl">
-                  Ethereum takes a broader approach.
+                  {t("page-what-is-ethereum-bitcoin-comparison-2-title")}
                 </h3>
-                <p>
-                  It&apos;s not just money, it&apos;s programmable
-                  infrastructure. Instead of just sending and receiving value,
-                  Ethereum lets developers build entire applications.
-                  You&apos;ve already seen this in action: from lending markets
-                  and stablecoins to collectibles, social media, and real-time
-                  payments — all powered by smart contracts and secured by ETH.
-                </p>
+                <p>{t("page-what-is-ethereum-bitcoin-comparison-2-desc")}</p>
               </div>
 
               <div>
                 <h3 className="mb-1 mt-12 text-xl">
-                  The way the networks reach consensus is also different.
+                  {t("page-what-is-ethereum-bitcoin-comparison-3-title")}
                 </h3>
                 <div className="space-y-6">
                   <p>
-                    Bitcoin uses miners to secure the network. These are
-                    powerful computers that compete to solve complex puzzle, and
-                    the winner gets to add the next block of transactions to the
-                    chain and claim bitcoins as a reward. This process is called
-                    mining and it uses large amounts of electricity.
+                    {t("page-what-is-ethereum-bitcoin-comparison-3-desc-1")}
                   </p>
                   <p>
-                    Ethereum used to work like this too. But in 2022, it
-                    transitioned from proof of work to proof of stake. Today,
-                    transactions are confirmed by validators who lock up ETH as
-                    collateral. Honest validators earn ETH rewards while any
-                    dishonest ones lose part of their stake. This shift made
-                    Ethereum over 99.988% more energy efficient without
-                    sacrificing security or decentralization.
+                    {t("page-what-is-ethereum-bitcoin-comparison-3-desc-2")}
                   </p>
                 </div>
               </div>
 
               <div>
                 <h3 className="mb-1 mt-12 text-xl">
-                  There&apos;s also a difference in how supply is handled.
+                  {t("page-what-is-ethereum-bitcoin-comparison-4-title")}
                 </h3>
                 <div className="space-y-6">
                   <p>
-                    Bitcoin has a fixed supply. There will only ever be 21
-                    million coins. Ethereum, on the other hand, has a dynamic
-                    supply. New ETH is issued to reward validators, while a
-                    portion is burned with every transaction. This means{" "}
-                    <strong>
-                      Ethereum can&apos;t just “print infinite ETH.”
-                    </strong>
+                    {t.rich(
+                      "page-what-is-ethereum-bitcoin-comparison-4-desc-1",
+                      { strong: Strong }
+                    )}
                   </p>
                   <p>
-                    The issuance rate is limited by how much ETH is staked. As
-                    more ETH is staked, individual rewards decrease, creating a
-                    natural balance. This design ensures a sustainable security
-                    budget well into the future, without relying solely on
-                    transaction fees.
+                    {t("page-what-is-ethereum-bitcoin-comparison-4-desc-2")}
                   </p>
                   <p>
-                    In short, Bitcoin is a tool for sending value. Ethereum is a
-                    platform for building it.
+                    {t("page-what-is-ethereum-bitcoin-comparison-4-desc-3")}
                   </p>
                 </div>
               </div>
 
               <LinkWithArrow href="#TODO-get-link">
-                Learn more about the difference between Ethereum and Bitcoin
+                {t("page-what-is-ethereum-bitcoin-learn-more")}
               </LinkWithArrow>
             </div>
           </Section>
@@ -964,7 +915,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <Section id={getId(tocItems[7].url)} className="space-y-14">
             <Image
               src={whenWhoBanner}
-              alt=""
+              alt={t("page-what-is-ethereum-banner-when-who-alt")}
               sizes="176px"
               className="mx-auto w-44"
             />
@@ -975,115 +926,108 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </h2>
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <p>
-                    From the start, Ethereum was designed to run by its
-                    community.
-                  </p>
-                  <p>
-                    In 2013, Vitalik Buterin published a white paper proposing a
-                    new kind of blockchain for money and apps anyone could use.
-                    The idea quickly gained traction.
-                  </p>
-                  <p>
-                    By 2014, co-founders like Gavin Wood and Joseph Lubin joined
-                    the effort, and the team raised funds through one of the
-                    earliest crypto crowdfunding campaigns.
-                  </p>
-                  <p>Ethereum officially launched in July 2015.</p>
+                  <p>{t("page-what-is-ethereum-when-who-intro-1")}</p>
+                  <p>{t("page-what-is-ethereum-when-who-intro-2")}</p>
+                  <p>{t("page-what-is-ethereum-when-who-intro-3")}</p>
+                  <p>{t("page-what-is-ethereum-when-who-intro-4")}</p>
                 </div>
                 <div className="space-y-6">
                   <h3 className="text-xl">
-                    Key moments in Ethereum&apos;s history
+                    {t("page-what-is-ethereum-when-who-history-title")}
                   </h3>
                   <OrderedList className="m-0 list-none [&>li]:mb-0">
                     <ListItem>
                       <span className="font-bold text-body-medium">2013:</span>{" "}
-                      19-year-old Vitalik Buterin publishes the Ethereum
-                      whitepaper
+                      {t("page-what-is-ethereum-when-who-history-2013")}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2014:</span>{" "}
-                      The Ethereum Foundation forms and launches a crowdfunding
-                      campaign
+                      {t("page-what-is-ethereum-when-who-history-2014")}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2015:</span>{" "}
-                      Developers launch the Ethereum network with the{" "}
-                      <em>Frontier</em> release
+                      {t.rich("page-what-is-ethereum-when-who-history-2015", {
+                        em: Emphasis,
+                      })}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2016:</span>{" "}
-                      Smart contract exploit drains $60M (3.6M ETH) from The DAO
-                      prompting a chain fork
+                      {t("page-what-is-ethereum-when-who-history-2016")}{" "}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2020:</span>{" "}
-                      Beacon Chain launch starts the move to Proof-of-Stake
+                      {t("page-what-is-ethereum-when-who-history-2020")}{" "}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2021:</span>{" "}
-                      <em>London</em> upgrade starts burning gas fees via
-                      EIP-1559
+                      {t.rich("page-what-is-ethereum-when-who-history-2021", {
+                        em: Emphasis,
+                      })}{" "}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2022:</span>{" "}
-                      <em>The Merge</em> replaces mining with staking, cutting
-                      energy use by 99%
+                      {t.rich("page-what-is-ethereum-when-who-history-2022", {
+                        em: Emphasis,
+                      })}{" "}
                     </ListItem>
                     <ListItem>
                       <span className="font-bold text-body-medium">2025:</span>{" "}
-                      <em>Pectra</em> upgrade improves smart wallet support and
-                      L2 compatibility
+                      {t.rich("page-what-is-ethereum-when-who-history-2025", {
+                        em: Emphasis,
+                      })}{" "}
                     </ListItem>
                   </OrderedList>
-                  <p>Today, no single person or company runs Ethereum.</p>
+                  <p>{t("page-what-is-ethereum-when-who-governance-1")}</p>
                 </div>
                 <Image
                   src={contributionBanner}
-                  alt="Doge smiling at the computer"
+                  alt={t("page-what-is-ethereum-banner-contributing-alt")}
                   sizes="208px"
                   className="mx-auto w-52"
                 />
                 <div className="space-y-6">
                   <h3 className="text-xl">
-                    The network is maintained by a broad group of contributors:
+                    {t("page-what-is-ethereum-when-who-contributors-title")}
                   </h3>
                   <UnorderedList className="[&>li]:mb-0">
                     <ListItem>
-                      Developers who write and propose upgrades
+                      {t("page-what-is-ethereum-when-who-contributors-1")}
                     </ListItem>
                     <ListItem>
-                      Node operators contributing to distributed physical
-                      infrastructure
-                    </ListItem>
-                    <ListItem>Stakers who validate transactions</ListItem>
-                    <ListItem>
-                      Community members who build the tools and culture
+                      {t("page-what-is-ethereum-when-who-contributors-2")}
                     </ListItem>
                     <ListItem>
-                      <strong>You</strong> by using the network
+                      {" "}
+                      {t("page-what-is-ethereum-when-who-contributors-3")}
+                    </ListItem>
+                    <ListItem>
+                      {t("page-what-is-ethereum-when-who-contributors-4")}
+                    </ListItem>
+                    <ListItem>
+                      {t.rich("page-what-is-ethereum-when-who-contributors-5", {
+                        strong: Strong,
+                      })}
                     </ListItem>
                   </UnorderedList>
                   <p>
-                    <span className="font-bold">
-                      There&apos;s no CEO, board, or central authority.
-                    </span>{" "}
-                    The Ethereum Foundation still helps fund research and
-                    development, but the ecosystem runs on open participation.
+                    {t.rich("page-what-is-ethereum-when-who-governance-2", {
+                      strong: Strong,
+                    })}
                   </p>
                   <p>
-                    Changes are proposed through{" "}
-                    <a>Ethereum Improvement Proposals (EIPs)</a>, discussed
-                    publicly, and only adopted{" "}
-                    <a>if the wider community supports them</a>.
+                    {t.rich("page-what-is-ethereum-when-who-governance-3", {
+                      a: (chunks) => (
+                        <Link href="https://eips.ethereum.org/">{chunks}</Link>
+                      ),
+                      p: (chunks) => (
+                        <Link href="/governance/#formal-process">{chunks}</Link>
+                      ),
+                    })}
                   </p>
-                  <p>
-                    This makes Ethereum slower to change than a startup, but
-                    also much harder to shut down or take over.
-                  </p>
+                  <p>{t("page-what-is-ethereum-when-who-governance-4")}</p>
                 </div>
                 <LinkWithArrow href="/history/">
-                  Learn more about Ethereum&apos;s history
+                  {t("page-what-is-ethereum-when-who-learn-more")}
                 </LinkWithArrow>
               </div>
             </div>
@@ -1095,74 +1039,71 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </h2>
             <div className="space-y-8">
               <div className="space-y-6">
+                <p>{t("page-what-is-ethereum-roadmap-intro-1")}</p>
+                <p>{t("page-what-is-ethereum-roadmap-intro-2")} </p>
                 <p>
-                  Ethereum doesn&apos;t follow a fixed roadmap. It follows a
-                  shared vision.
+                  {t.rich("page-what-is-ethereum-roadmap-intro-3", {
+                    a: (chunks) => (
+                      <Link href="/roadmap/pectra/">{chunks}</Link>
+                    ),
+                  })}
                 </p>
                 <p>
-                  Network upgrades are made as EIP proposals and developed in
-                  public by contributors around the world. There&apos;s no
-                  central team deciding what happens, just people building what
-                  they believe is useful based on users&apos; needs.
-                </p>
-                <p>
-                  <a>Pectra is the most recent upgrade</a> launched in May 2025.
-                  This upgrade improved wallet features, gave stakers more
-                  flexibility, and made it easier for dapps to run on L2s. The
-                  goal was to improve usability without compromising on security
-                  or decentralization.
-                </p>
-
-                <p className="font-bold">
-                  <Link href="#">Looking ahead</Link>, Ethereum&apos;s
-                  priorities include:
+                  {t.rich("page-what-is-ethereum-roadmap-priorities-intro", {
+                    a: (chunks) => (
+                      <Link href="https://blog.ethereum.org/2025/04/28/next-chapter">
+                        {chunks}
+                      </Link>
+                    ),
+                  })}
                 </p>
 
                 <UnorderedList className="[&>li]:mb-0">
                   <ListItem>
-                    Making the core protocol and its L2s faster and cheaper for
-                    everyone
+                    {t("page-what-is-ethereum-roadmap-priority-1")}
                   </ListItem>
                   <ListItem>
-                    Improving the experience for users and developers
+                    {t("page-what-is-ethereum-roadmap-priority-2")}
                   </ListItem>
                 </UnorderedList>
 
+                <p>{t("page-what-is-ethereum-roadmap-outro-1")}</p>
                 <p>
-                  These priorities will helps ensure Ethereum is secure,
-                  scalable and user friendly as more people rely on the network
-                  everyday.
-                </p>
-                <p>
-                  If you want to steer the direction for Ethereum,{" "}
-                  <a>get involved</a>. You don&apos;t need permission, just the
-                  desire to make a difference in this new digital economy.
+                  {t.rich("page-what-is-ethereum-roadmap-outro-2", {
+                    a: (chunks) => <Link href="/community/">{chunks}</Link>,
+                  })}
                 </p>
               </div>
 
               <LinkWithArrow href="/roadmap/">
-                See an overview of the Ethereum roadmap
+                {t("page-what-is-ethereum-roadmap-learn-more")}
               </LinkWithArrow>
             </div>
           </Section>
 
           <Section id="further-readon" className="space-y-8">
             <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
-              Read next
+              {t("page-what-is-ethereum-further-reading-title")}
             </h2>
             <UnorderedList className="ms-0 list-none">
               <ListItem>
-                <DocLink href="/wallets/">What are wallets?</DocLink>
+                <DocLink href="/wallets/">
+                  {t("page-what-is-ethereum-further-reading-wallets")}
+                </DocLink>
               </ListItem>
               <ListItem>
-                <DocLink href="/eth/">What is ether (ETH)?</DocLink>
+                <DocLink href="/eth/">
+                  {t("page-what-is-ethereum-further-reading-eth")}
+                </DocLink>
               </ListItem>
               <ListItem>
-                <DocLink href="/web3/">What is web3?</DocLink>
+                <DocLink href="/web3/">
+                  {t("page-what-is-ethereum-further-reading-web3")}
+                </DocLink>
               </ListItem>
               <ListItem>
                 <DocLink href="/layer-2/networks/">
-                  Learn more about the Ethereum network
+                  {t("page-what-is-ethereum-further-reading-networks")}
                 </DocLink>
               </ListItem>
             </UnorderedList>
