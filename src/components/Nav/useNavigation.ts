@@ -403,6 +403,11 @@ export const useNavigation = () => {
               href: "/contributing/translation-program/",
             },
             {
+              label: t("nav-collectibles-label"),
+              description: t("nav-collectibles-description"),
+              href: "/collectibles/",
+            },
+            {
               label: t("about-ethereum-org"),
               description: t("nav-about-description"),
               href: "/about/",
