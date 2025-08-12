@@ -1,6 +1,5 @@
 import {
   Castle,
-  ChevronDown,
   Landmark,
   LockKeyhole,
   Shield,
@@ -18,6 +17,7 @@ import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
 import MainArticle from "@/components/MainArticle"
+import TableOfContents from "@/components/TableOfContents"
 import { CardTitle } from "@/components/ui/card"
 import Link, { LinkProps } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
@@ -171,21 +171,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div
-          data-label="TODO-toc"
-          className="mb-16 h-fit shrink-0 space-y-2.5 rounded-lg border bg-accent-a/10 px-3 py-2 max-lg:text-center lg:sticky lg:top-[7.25rem] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:min-w-80 lg:max-w-72 lg:p-8 lg:text-body-medium"
+          className={cn(
+            "row-start-1 lg:col-start-2 lg:row-span-2",
+            "[&_a]:leading-base [&_a]:!text-primary [&_li]:mb-0 [&_li]:text-primary [&_ul]:list-decimal [&_ul]:border-s-0 [&_ul]:text-base",
+            "[&_[data-label='marker']]:!hidden [&_li:has([data-state-active='false'])]:me-4 [&_li:has([data-state-active='true'])]:font-bold", // me-4 added to prevent layout shift when active turns bold
+            // `aside` targets desktop version
+            "[&_aside]:sticky [&_aside]:top-[7.25rem]",
+            "[&_aside]:h-fit [&_aside]:shrink-0 [&_aside]:gap-0 [&_aside]:space-y-2.5 [&_aside]:rounded-2xl [&_aside]:bg-accent-a/10 [&_aside]:px-3 [&_aside]:py-2",
+            "[&_aside]:min-w-80 [&_aside]:max-w-72 [&_aside]:p-8 [&_aside]:pe-4 [&_aside]:text-body-medium", // [&_aside]:pe-4 reduced to account for above me-4 on inactive items
+            "[&_[data-label='label']]:font-bold [&_[data-label='label']]:normal-case [&_aside_[data-label='label']]:text-lg",
+            // `button` targets mobile version
+            "[&_button>span]:flex-none [&_button]:mb-16 [&_button]:justify-center [&_button]:rounded-lg [&_button]:border-border [&_button]:bg-accent-a/10 [&_button]:text-lg [&_button]:font-bold"
+          )}
         >
-          <div className="flex items-center">
-            <span className="font-bold lg:text-lg">On this page</span>
-            <span className="lg:hidden"> (TODO)</span>
-            <ChevronDown className="inline lg:hidden" />
-          </div>
-          <OrderedList className="max-lg:hidden">
-            {tocItems.map(({ title, url }) => (
-              <Link key={url} href={url} className="leading-base no-underline">
-                <ListItem>{title}</ListItem>
-              </Link>
-            ))}
-          </OrderedList>
+          <TableOfContents items={tocItems} isMobile className="lg:hidden" />
+          <TableOfContents items={tocItems} className="max-lg:hidden" />
         </div>
 
         <div
