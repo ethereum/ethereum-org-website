@@ -32,11 +32,11 @@ Ag dul ar ais chuig ár sampla níos luaithe, is é an t-aon fhianaise atá uait
 
 Is minic a bhíonn íocaíochtaí le cárta creidmheasa le feiceáil ag an iomad páirtí, lena n-áirítear an soláthraí íocaíochtaí, bainc agus páirtithe leasmhara eile (m.sh., údaráis rialtais). Cé go bhfuil buntáistí ag faireachas airgeadais chun gníomhaíocht mhídhleathach a shainaithint, baineann sé an bonn de phríobháideachas na ngnáthshaoránach freisin.
 
-Bhí sé mar aidhm ag cripte-airgeadraí bealach a sholáthar d'úsáideoirí chun idirbhearta príobháideacha, piaraí le piaraí a dhéanamh. Ach tá formhór na n-idirbheart criptea-airgeadraí le feiceáil go hoscailte ar bhlocshlabhra poiblí. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
+Bhí sé mar aidhm ag cripte-airgeadraí bealach a sholáthar d'úsáideoirí chun idirbhearta príobháideacha, piaraí le piaraí a dhéanamh. Ach tá formhór na n-idirbheart criptea-airgeadraí le feiceáil go hoscailte ar bhlocshlabhra poiblí. Is minic a bhíonn féiniúlachtaí úsáideora bréige agus nasctar iad go toiliúil le féiniúlachtaí fíorshaol (m.sh. trí sheoltaí ETH a chur san áireamh ar phróifílí Twitter nó GitHub) nó is féidir iad a nascadh le féiniúlachtaí sa saol fíor ag baint úsáide as anailís bhunúsach ar shonraí agus as slabhra.
 
 Tá “boinn phríobháideachais” ar leith ann atá deartha le haghaidh idirbhearta go hiomlán gan ainm. Trí bhlocshlabhraí atá dírithe ar phríobháideacht, mar shampla Zcash agus Monero, tugtar cosaint do shonraí idirbhirt, lena n-áirítear seoltaí seoltóra/glacadóir, cineál sócmhainne, cainníocht agus amlíne an idirbhirt.
 
-Tríd an teicneolaíocht nial-eolais a bhácáil isteach sa phrótacal, ceadaíonn líonraí [blocshlabhra](/glossary/#blockchain) atá dírithe ar phríobháideachas [nóid](/glossary/#node) chun idirbhearta a bhailíochtú gan gá rochtain a fháil ar shonraí idirbhirt. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) is an example of a proposed design that will enable native private transfers of value on the Ethereum blockchain. Such proposals are, however, difficult to implement due to a mixture of security, regulatory, and UX concerns.
+Tríd an teicneolaíocht eolais ar bhonn nialasach a ghlacadh isteach sa phrótacal, ceadaíonn líonraí [blocshlabhra](/glossary/#blockchain) atá dírithe ar phríobháideachas [nóid](/glossary/#node) chun idirbhearta a bhailíochtú gan gá rochtain a fháil ar shonraí idirbhirt. Is sampla é [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) de dhearadh atá beartaithe a chumasóidh aistrithe príobháideacha dúchasacha de luach ar blocshlabhra Ethereum. Tá sé deacair, áfach, moltaí den sórt sin a chur chun feidhme mar gheall ar mheascán d’ábhair imní maidir le slándáil, rialú agus UX.
 
 **Tá cruthúnais nial-eolais á gcur i bhfeidhm freisin maidir le hidirbhearta ar bhlocshlabhraí poiblí a anaithnidiú**. Sampla is ea Tornado Cash, seirbhís dhíláraithe, neamhchoinneálach trína ligtear d’úsáideoirí idirbhearta príobháideacha a dhéanamh ar Ethereum. Úsáideann Tornado Cash cruthúnais nial-eolais chun sonraí idirbhirt a cheilt agus chun príobháideacht airgeadais a ráthú. Ar an drochuair, toisc gur uirlisí príobháideachais “diúltaithe” iad seo tá baint acu le gníomhaíocht aindleathach. Chun é seo a shárú, caithfidh príobháideacht a bheith ina réamhshocrú ar bhlocshlabhra poiblí ar deireadh.
 
@@ -58,9 +58,9 @@ Feidhm eile de theicneolaíocht nial-eolais is ea ríomh infhíoraithe chun dear
 
 Tá ríomh infhíoraithe **ríthábhachtach chun luasanna próiseála ar bhlocshlabhraí a fheabhsú** gan slándáil a laghdú. Chun é seo a thuiscint ní mór fios a bheith agat faoi na difríochtaí i réitigh mholta le haghaidh scálú Ethereum.
 
-[Onchain scaling solutions](/developers/docs/scaling/#onchain-scaling), such as sharding, require extensive modification of the blockchain’s base layer. Mar sin féin, tá an cur chuige seo an-chasta agus is féidir le hearráidí sa chur i bhfeidhm an bonn a bhaint de mhúnla slándála Ethereum.
+Éilíonn [ Réitigh scálaithe ar slabhra](/developers/docs/scaling/#onchain-scaling), amhail bearradh, modhnú fairsing ar bhunchiseal an blocshlabhra. Mar sin féin, tá an cur chuige seo an-chasta agus is féidir le hearráidí sa chur i bhfeidhm an bonn a bhaint de mhúnla slándála Ethereum.
 
-[Offchain scaling solutions](/developers/docs/scaling/#offchain-scaling) don’t require redesigning the core Ethereum protocol. Ina áit sin bíonn siad ag brath ar mhúnla ríomha seachfhoinsithe chun tréchur a fheabhsú ar bhunchiseal Ethereum.
+[ Maidir le réitigh scálaithe as slabhra,](/developers/docs/scaling/#offchain-scaling) ní gá an croíphrótacal Ethereum a athdhearadh. Ina áit sin bíonn siad ag brath ar mhúnla ríomha seachfhoinsithe chun tréchur a fheabhsú ar bhunchiseal Ethereum.
 
 Seo mar a oibríonn sé sin go praiticiúil:
 
@@ -68,17 +68,17 @@ Seo mar a oibríonn sé sin go praiticiúil:
 
 - Tar éis idirbhearta a phróiseáil, cuireann an slabhra eile na torthaí ar ais le cur i bhfeidhm ar staid Ethereum.
 
-Is é an buntáiste atá leis seo ná nach gcaithfidh Ethereum aon fhorghníomhú a dhéanamh agus ní gá dó ach torthaí ó ríomh foinsithe allamuigh a chur i bhfeidhm ar a stát. This reduces network congestion and also improves transaction speeds (offchain protocols optimize for faster execution).
+Is é an buntáiste atá leis seo ná nach gcaithfidh Ethereum aon fhorghníomhú a dhéanamh agus ní gá dó ach torthaí ó ríomh foinsithe allamuigh a chur i bhfeidhm ar a stát. Laghdaíonn sé seo brú tráchta líonra agus feabhsaítear luasanna idirbhirt freisin (bíonn prótacail as slabhra optamaithe le go gcuirfear i gcrích iad níos tapúla).
 
-The chain needs a way to validate offchain transactions without re-executing them, or else the value of offchain execution is lost.
+Teastaíonn bealach ón slabhra chun idirbhearta as slabhra a bhailíochtú gan iad a ath-fhorghníomhú, nó caillfear luach an fhorghníomhaithe as slabhra.
 
-Seo an áit a dtagann ríomh infhíoraithe i bhfeidhm. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of offchain execution. Cinntíonn an cruthúnas seo (ar a dtugtar [cruthúnas bailíochta](/glossary/#validity-proof)) go bhfuil idirbheart bailí, rud a ligeann d'Ethereum an toradh a chur i bhfeidhm ina stát - gan fanacht le haon duine a dhíospóid.
+Seo an áit a dtagann ríomh infhíoraithe i bhfeidhm. Nuair a dhéanann nód idirbheart lasmuigh de Ethereum, cuireann sé cruthúnas eolais ar bhonn nailasach isteach chun cruinneas forghníomhaithe as slabhra a chruthú. Cinntíonn an cruthúnas seo (ar a dtugtar [cruthúnas bailíochta](/glossary/#validity-proof)) go bhfuil idirbheart bailí, rud a ligeann d'Ethereum an toradh a chur i bhfeidhm ina stát - gan fanacht le haon duine a dhíospóid.
 
-[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two offchain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions offchain and submit proofs for verification on Ethereum. Is féidir na torthaí sin a chur i bhfeidhm láithreach tar éis an cruthúnas a fhíorú, rud a ligeann d'Ethereum níos mó idirbheart a phróiseáil gan ríomh a mhéadú ar an mbonnchiseal.
+Dhá réiteach scálaithe as slabhra is ea [rollta eolais ar bhonn nialasach](/developers/docs/scaling/zk-rollups) agus [validiums](/developers/docs/scaling/validium/)a úsáideann cruthúnais bhailíochta chun inscálaitheacht shlán a sholáthar. Déanann na prótacail seo na mílte idirbheart a fhorghníomhú as slabhra agus cuireann siad isteach cruthúnais le fíorú ar Ethereum. Is féidir na torthaí sin a chur i bhfeidhm láithreach tar éis an cruthúnas a fhíorú, rud a ligeann d'Ethereum níos mó idirbheart a phróiseáil gan ríomh a mhéadú ar an mbonnchiseal.
 
-### Reducing bribery and collusion in onchain voting {#secure-blockchain-voting}
+### Breabaireacht agus claonpháirteachas sa vótáil ar slabhra a laghdú {#secure-blockchain-voting}
 
-Tá go leor tréithe fabhracha ag scéimeanna vótála blocshlabhra: tá siad in-iniúchta go hiomlán, slán i gcoinne ionsaithe, frithsheasmhach do chinsireacht, agus saor ó shrianta geografacha. But even onchain voting schemes aren't immune to the problem of **collusion**.
+Tá go leor tréithe fabhracha ag scéimeanna vótála blocshlabhra: tá siad in-iniúchta go hiomlán, slán i gcoinne ionsaithe, frithsheasmhach do chinsireacht, agus saor ó shrianta geografacha. Ach níl fiú scéimeanna vótála ar slabhra díolmhaithe ó fhadhb an **chlaonpháirteachais**.
 
 Agus é sainmhínithe mar “comhordú chun iomaíocht oscailte a theorannú trí mheabhlaireacht, calaois a dhéanamh agus daoine eile a chur amú,” d’fhéadfadh claonpháirteachas a bheith i bhfoirm gníomhaí mailíseach a imríonn tionchar ar vótáil trí bhreabanna a thairiscint. Mar shampla, seans go bhfaighidh Alice breab ó Bob chun vótáil ar son `rogha B` ar bhallóid fiú más fearr léi `rogha A`.
 
@@ -86,13 +86,13 @@ Cuireann breabaireacht agus claonpháirteachas teorainn le héifeachtacht aon ph
 
 Mar shampla, braitheann [meicníochtaí cuardratacha cistiúcháin](https://www.radicalxchange.org/concepts/plural-funding/) ar thabhartais chun tosaíocht a thomhas do roghanna áirithe i measc tionscadal leasa phoiblí éagsúla. Áirítear gach deonachán mar "vóta" do thionscadal ar leith, agus is iad na tionscadail a fhaigheann níos mó vótaí a thugtar níos mó cistí dóibh ón linn meaitseála.
 
-Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. Ar an mbealach seo cuirtear stop le maoiniú cuadratach a bheith ina mhodh éifeachtach chun cistí a leithdháileadh bunaithe ar roghanna comhiomlánaithe an phobail.
+Má úsáidtear vótáil ar shlabhra, is féidir cistiú cearnach a dhéanamh soghabhálach don chlaonpháirteachas: bíonn idirbhearta blocshlabhra poiblí, mar sin is féidir le breabairí gníomhaíocht ar slabhra an duine ar tugadh breab dó a fheiceáil chun féachaint ar conas a “vótáil" siad. Ar an mbealach seo cuirtear stop le maoiniú cuadratach a bheith ina mhodh éifeachtach chun cistí a leithdháileadh bunaithe ar roghanna comhiomlánaithe an phobail.
 
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. Is sraith de chonarthaí cliste agus scripteanna é MACI a ligeann do riarthóir lárnach (ar a dtugtar "comhordaitheoir") vótaí agus torthaí a chomhiomlánú _gan_ sonraí a nochtadh faoin gcaoi ar vótáil gach duine. Mar sin féin, is féidir a fhíorú go fóill gur comhairíodh na vótaí i gceart, nó a dheimhniú gur ghlac duine ar leith páirt sa bhabhta vótála.
+Ar an dea-uair, tá réitigh níos nuaí cosúil le MACI (Bonneagar Frith-Cholaiteachta Íosta) ag baint úsáide as cruthúnais nialaischun vótáil ar slabhra (m. sh., meicníochtaí cistiúcháin cearnacha) a dhéanamh in aghaidh breabaireachta agus claonpháirteachais. Is sraith de chonarthaí cliste agus scripteanna é MACI a ligeann do riarthóir lárnach (ar a dtugtar "comhordaitheoir") vótaí agus torthaí a chomhiomlánú _gan_ sonraí a nochtadh faoin gcaoi ar vótáil gach duine. Mar sin féin, is féidir a fhíorú go fóill gur comhairíodh na vótaí i gceart, nó a dheimhniú gur ghlac duine ar leith páirt sa bhabhta vótála.
 
 #### Conas a oibríonn MACI le cruthúnais nial-eolais? {#how-maci-works-with-zk-proofs}
 
-Ag an tús, úsáideann ​​an comhordaitheoir an conradh MACI ar Ethereum, agus ina dhiaidh sin is féidir le húsáideoirí clárú le haghaidh vótála (trína eochair phoiblí a chlárú sa chonradh cliste). Chaith úsáideoirí vótaí trí theachtaireachtaí criptithe lena n-eochair phoiblí a sheoladh chuig an gconradh cliste (ní mór vóta bailí a shíniú leis an eochair phoiblí is déanaí a bhaineann le céannacht an úsáideora, i measc critéar eile). Afterward, the coordinator processes all messages once the voting period ends, tallies the votes, and verifies the results onchain.
+Ag an tús, úsáideann ​​an comhordaitheoir an conradh MACI ar Ethereum, agus ina dhiaidh sin is féidir le húsáideoirí clárú le haghaidh vótála (trína eochair phoiblí a chlárú sa chonradh cliste). Chaith úsáideoirí vótaí trí theachtaireachtaí criptithe lena n-eochair phoiblí a sheoladh chuig an gconradh cliste (ní mór vóta bailí a shíniú leis an eochair phoiblí is déanaí a bhaineann le céannacht an úsáideora, i measc critéar eile). Ina dhiaidh sin, próiseálann an comhordaitheoir gach teachtaireacht a luaithe a chríochnaíonn an tréimhse vótála, suimíonn sé na vótaí, agus fíoraíonn sé na torthaí ar shlabhra.
 
 In MACI, baintear úsáid as cruthúnais nial-eolais chun beachtas na ríomha a chinntiú trína dhéanamh dodhéanta don chomhordaitheoir vótaí agus torthaí scóir a phróiseáil go mícheart. Baintear é seo amach trína cheangal ar an gcomhordaitheoir cruthúnais ZK-SNARK a ghiniúint lena bhfíorófar a) gur próiseáladh gach teachtaireacht i gceart b) go gcomhfhreagraíonn an toradh deiridh do shuim na vótaí _bailí_ go léir.
 
@@ -104,11 +104,11 @@ Mar sin, fiú gan miondealú ar na vótaí in aghaidh an úsáideora a roinnt (m
 - Seolann Alice go rúnda idirbheart criptithe chun an eochair phoiblí a bhaineann lena haitheantas a athrú.
 - Seolann Alice teachtaireacht eile (criptithe) chuig an gconradh cliste ag vótáil do `rogha A` ag baint úsáide as an eochair phoiblí nua.
 - Taispeánann Alice idirbheart do Bob a thaispeánann gur vótáil sí ar son `rogha B` (atá neamhbhailí toisc nach bhfuil baint ag an eochair phoiblí le céannacht Alice sa chóras a thuilleadh)
-- Agus teachtaireachtaí á bpróiseáil aige, ní dhéanann an comhordaitheoir vóta Alice ar son `rogha B` agus ní chomhaireamh ach an vóta do `rogha A`. Hence, Bob's attempt to collude with Alice and manipulate the onchain vote fails.
+- Agus teachtaireachtaí á bpróiseáil aige, ní dhéanann an comhordaitheoir vóta Alice ar son `rogha B` agus ní chomhaireamh ach an vóta do `rogha A`. Mar sin, teipeann ar iarracht Bob dul i ngleic le Alice agus an vóta ar slabhra a ionramháil.
 
 Éilíonn úsáid MACI _muinín_ a bheith agat sa chomhordaitheoir nach gcomhoibreoidh sé le daoine a thugann luachmhaireacht nó nach ndéanfaidh sé féin iarracht lucht vótála a bhréagnú. Is féidir leis an gcomhordaitheoir teachtaireachtaí úsáideora a dhíchriptiú (riachtanach chun an cruthúnas a chruthú), ionas gur féidir leo a fhíorú go cruinn conas a vótáil gach duine.
 
-But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of onchain voting. Míníonn sé seo an tóir atá air i measc feidhmchlár ar mhaoiniú cuadratach (m.sh., [clr.fund](https://clr.fund/#/about/maci)) a bhíonn ag brath go mór ar ionracas roghanna vótála gach duine.
+Ach i gcásanna ina bhfanann an comhordaitheoir macánta, is uirlis chumhachtach é MACI chun dosháraitheacht na vótála ar slabhra a ráthú. Míníonn sé seo an tóir atá air i measc feidhmchlár ar mhaoiniú cuadratach (m.sh., [clr.fund](https://clr.fund/#/about/maci)) a bhíonn ag brath go mór ar ionracas roghanna vótála gach duine.
 
 [Foghlaim tuilleadh faoi MACI](https://privacy-scaling-explorations.github.io/maci/).
 
@@ -211,4 +211,4 @@ Meastar go bhfuil ZK-STARK díolmhaithe ó bhagairt na ríomhaireachta chandamac
 - [ZK-STARKanna — Cruthaigh Muinín Infhíoraithe, fiú i gcoinne Ríomhaireachtaí Cúantamacha](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [ Tuairim gharbh ar conas is féidir zk-SNARKanna](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Cén fáth a n-athrófar céannacht féincheannasach le Cruthúnais Nial-Eolais (ZKPanna)](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 Explained: Enabling Private Transfers On Ethereum With ZK Proofs](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 Mínithe: Aistrithe Príobháideacha a Chumasú ar Ethereum Le Cruthúnas ZK](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) - _Emmanuel Awos_
