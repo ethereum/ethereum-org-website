@@ -220,9 +220,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
             <p>
               {t.rich("page-what-is-ethereum-ethereum-intro-6", {
-                a: (chunks) => <Link href="#millions">{chunks}</Link>,
-                p: (chunks) => <Link href="#billions">{chunks}</Link>,
-                span: (chunks) => <Link href="#trillions">{chunks}</Link>,
+                a: (chunks) => (
+                  <Link href="https://tokenterminal.com/explorer/projects/ethereum/metrics/all">
+                    {chunks}
+                  </Link>
+                ),
+                p: (chunks) => (
+                  <Link href="https://defillama.com/chain/ethereum">
+                    {chunks}
+                  </Link>
+                ),
+                span: (chunks) => (
+                  <Link href="https://www.gate.com/post/status/11248290">
+                    {chunks}
+                  </Link>
+                ),
               })}
             </p>
             <p>
