@@ -39,42 +39,38 @@ const RoadmapPage = () => {
 
   const changesComingItems = [
     {
-      title: "Cheaper transactions",
+      title: t("page-roadmap-cheaper-transactions-title"),
       icon: <CheaperTransactionsIcon className="h-auto w-12" />,
-      description:
-        "Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems.",
+      description: t("page-roadmap-cheaper-transactions-description"),
       button: {
-        label: "More on reducing fees",
+        label: t("page-roadmap-cheaper-transactions-button"),
         href: "/roadmap/scaling",
       },
     },
     {
-      title: "Extra security",
+      title: t("page-roadmap-extra-security-title"),
       icon: <ExtraSecurityIcon className="h-auto w-12" />,
-      description:
-        "Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future.",
+      description: t("page-roadmap-extra-security-description"),
       button: {
-        label: "More on security",
+        label: t("page-roadmap-extra-security-button"),
         href: "/roadmap/security",
       },
     },
     {
-      title: "Better user experience",
+      title: t("page-roadmap-better-user-experience-title"),
       icon: <BetterUserExperienceIcon className="h-auto w-12" />,
-      description:
-        "More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer.",
+      description: t("page-roadmap-better-user-experience-description"),
       button: {
-        label: "More on user experience",
+        label: t("page-roadmap-better-user-experience-button"),
         href: "/roadmap/user-experience",
       },
     },
     {
-      title: "Future-proofing",
+      title: t("page-roadmap-future-proofing-title"),
       icon: <FutureProofingIcon className="h-auto w-12" />,
-      description:
-        "Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations.",
+      description: t("page-roadmap-future-proofing-description"),
       button: {
-        label: "More on future-proofing",
+        label: t("page-roadmap-future-proofing-button"),
         href: "/roadmap/future-proofing",
       },
     },
@@ -83,30 +79,26 @@ const RoadmapPage = () => {
   const technicalUpgradesItems = [
     {
       icon: <DankshardingIcon className="size-7" />,
-      title: "Danksharding",
-      description:
-        "Danksharding makes L2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.",
+      title: t("page-roadmap-danksharding-title"),
+      description: t("page-roadmap-danksharding-description"),
       href: "/roadmap/danksharding",
     },
     {
       icon: <SingleSlotFinalityIcon className="size-7" />,
-      title: "Single slot finality",
-      description:
-        "Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and difficult to attack.",
+      title: t("page-roadmap-single-slot-finality-title"),
+      description: t("page-roadmap-single-slot-finality-description"),
       href: "/roadmap/single-slot-finality",
     },
     {
       icon: <AccountAbstractionIcon className="size-7" />,
-      title: "Account abstraction",
-      description:
-        "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
+      title: t("page-roadmap-account-abstraction-title"),
+      description: t("page-roadmap-account-abstraction-description"),
       href: "/roadmap/account-abstraction",
     },
     {
       icon: <StatelessnessIcon className="size-7" />,
-      title: "Statelessness",
-      description:
-        "Stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.",
+      title: t("page-roadmap-statelessness-title"),
+      description: t("page-roadmap-statelessness-description"),
       href: "/roadmap/statelessness",
     },
   ]
@@ -115,9 +107,7 @@ const RoadmapPage = () => {
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <BannerNotification shouldShow>
-        <p>
-          Ethereum&apos;s development is community-driven and subject to change.
-        </p>
+        <p>{t("page-roadmap-banner-notification")}</p>
       </BannerNotification>
       <div className="flex flex-col gap-16">
         <HubHero {...heroContent} />
@@ -127,12 +117,9 @@ const RoadmapPage = () => {
         </div>
 
         <div className="flex w-full flex-col gap-8 px-8 py-4">
-          <h2 className="m-0">What changes are coming to Ethereum?</h2>
+          <h2 className="m-0">{t("page-roadmap-changes-coming-title")}</h2>
           <p className="max-w-screen-md text-lg">
-            Ethereum is already a powerful platform, but it is still being
-            improved. An ambitious set of improvements will upgrade Ethereum
-            from its current form into a fully scaled, maximally resilient
-            platform.
+            {t("page-roadmap-changes-coming-description")}
           </p>
           <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
             {changesComingItems.map((item) => (
@@ -157,53 +144,39 @@ const RoadmapPage = () => {
 
         <div className="flex flex-col-reverse gap-12 px-8 py-4 md:w-full md:flex-row">
           <div className="max-w-screen-md flex-1">
-            <h2 className="mb-8">Why does Ethereum need a roadmap?</h2>
-            <p className="mb-10">
-              Ethereum gets regular upgrades that enhance its scalability,
-              security, or sustainability. One of Ethereum&apos;s core strengths
-              is adapting as new ideas emerge from research and development.
-              Adaptability gives Ethereum the flexibility to tackle emerging
-              challenges and keep up with the most advanced technological
-              breakthroughs.
-            </p>
-            <h3 className="mb-6">How the roadmap is defined</h3>
+            <h2 className="mb-8">{t("page-roadmap-why-need-title")}</h2>
+            <p className="mb-10">{t("page-roadmap-why-need-description")}</p>
+            <h3 className="mb-6">{t("page-roadmap-how-defined-title")}</h3>
+            <p className="mb-6">{t("page-roadmap-how-defined-p1")}</p>
             <p className="mb-6">
-              The roadmap is mostly the result of years of work by researchers
-              and developers - because the protocol is very technical - but any
-              motivated person can participate.
-            </p>
-            <p className="mb-6">
-              Ideas usually start off as discussions on a forum such as{" "}
-              <Link href="https://ethresear.ch">ethresear.ch</Link>,{" "}
-              <Link href="https://ethereum-magicians.org">
-                Ethereum Magicians
-              </Link>{" "}
-              or the Eth R&D discord server. They may be responses to new
-              vulnerabilities that are discovered, suggestions from
-              organizations working in the application layer (such as dapps and
-              exchanges) or from known frictions for end users (such as costs or
-              transaction speeds).
+              {t.rich("page-roadmap-how-defined-p2", {
+                ethresearch: (chunks) => (
+                  <Link href="https://ethresear.ch">{chunks}</Link>
+                ),
+                "ethereum-magicians": (chunks) => (
+                  <Link href="https://ethereum-magicians.org">{chunks}</Link>
+                ),
+              })}
             </p>
             <p className="mb-6">
-              When these ideas mature, they can be proposed as{" "}
-              <Link href="https://eips.ethereum.org">
-                Ethereum Improvement Proposals
-              </Link>
-              . This is all done in public so that anyone from the community can
-              weigh in at any time.
+              {t.rich("page-roadmap-how-defined-p3", {
+                eips: (chunks) => (
+                  <Link href="https://eips.ethereum.org">{chunks}</Link>
+                ),
+              })}
             </p>
             <ButtonLink
               href="/governance"
               variant="outline"
               className="w-full md:w-auto"
             >
-              More on Ethereum governance
+              {t("page-roadmap-governance-button")}
             </ButtonLink>
           </div>
           <div className="relative min-h-[272px] w-full flex-shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
             <Image
               src={communityHeroImg}
-              alt="Ethereum roadmap"
+              alt={t("page-roadmap-hero-alt")}
               className="absolute inset-0 h-full w-full object-cover"
               fill
             />
@@ -212,7 +185,7 @@ const RoadmapPage = () => {
 
         <div className="flex w-full flex-col gap-8 px-8">
           <h2 className="text-center">
-            What technical upgrades are coming to Ethereum?
+            {t("page-roadmap-technical-upgrades-title")}
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {technicalUpgradesItems.map((item) => (
@@ -233,7 +206,7 @@ const RoadmapPage = () => {
                     href={item.href}
                     className="hover:text-primary-hover"
                   >
-                    Learn more
+                    {t("page-roadmap-learn-more")}
                   </InlineLink>
                 </LinkOverlay>
               </LinkBox>
@@ -245,98 +218,68 @@ const RoadmapPage = () => {
           <div className="top-24 flex h-fit flex-1 items-start lg:sticky">
             <Image
               src={ethBlocksImage}
-              alt="Ethereum blocks"
+              alt={t("page-roadmap-blocks-alt")}
               className="object-contain"
             />
           </div>
           <div className="flex flex-1 flex-col gap-8">
-            <h2>What is the timeline for these upgrades?</h2>
+            <h2>{t("page-roadmap-timeline-title")}</h2>
             <div>
               <ExpandableCard
-                title="Will Ethereum's roadmap change over time?"
+                title={t("page-roadmap-faq-1-title")}
                 className="mb-0"
               >
                 <div className="flex flex-col gap-4">
                   <p>
-                    <strong>Yes—almost definitely.</strong> The roadmap is the
-                    current plan for upgrading Ethereum, covering both near-term
-                    and future plans. We expect the roadmap to change as new
-                    information and technology become available.
+                    <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
+                    {t("page-roadmap-faq-1-p1-continued")}
                   </p>
+                  <p>{t("page-roadmap-faq-1-p2")}</p>
+                </div>
+              </ExpandableCard>
+              <ExpandableCard
+                title={t("page-roadmap-faq-2-title")}
+                className="mb-0"
+              >
+                <div className="flex flex-col gap-4">
                   <p>
-                    Think of Ethereum&apos;s roadmap as a set of intentions for
-                    improving Ethereum; it is the core researchers&apos; and
-                    developers&apos; best hypothesis of Ethereum&apos;s most
-                    optimal path forward.
+                    {t("page-roadmap-faq-2-p1")}{" "}
+                    <strong>{t("page-roadmap-faq-2-p1-strong")}</strong>{" "}
+                    {t("page-roadmap-faq-2-p1-continued")}
+                  </p>
+                  <p>{t("page-roadmap-faq-2-p2")}</p>
+                </div>
+              </ExpandableCard>
+              <ExpandableCard
+                title={t("page-roadmap-faq-3-title")}
+                className="mb-0"
+              >
+                <div className="flex flex-col gap-4">
+                  <p>
+                    {t.rich("page-roadmap-faq-3-p1", {
+                      emphasis: (chunks) => <i>{chunks}</i>,
+                      strong: (chunks) => <strong>{chunks}</strong>,
+                      node: (chunks) => (
+                        <Link href="/glossary/#node">{chunks}</Link>
+                      ),
+                    })}
                   </p>
                 </div>
               </ExpandableCard>
               <ExpandableCard
-                title="When will the roadmap be finished?"
+                title={t("page-roadmap-faq-4-title")}
                 className="mb-0"
               >
                 <div className="flex flex-col gap-4">
                   <p>
-                    Some upgrades are lower priority and likely not to be
-                    implemented for the next 5-10 years (e.g. quantum
-                    resistance).{" "}
-                    <strong>
-                      Giving precise timing of each upgrade is complicated
-                    </strong>{" "}
-                    to predict as many roadmap items are worked on in parallel
-                    and developed at different speeds. The urgency of an upgrade
-                    can also change over time depending on external factors
-                    (e.g. a sudden leap in the performance and availability of
-                    quantum computers may make quantum-resistant cryptography
-                    more urgent).
-                  </p>
-                  <p>
-                    One way to think about Ethereum development is by analogy to
-                    biological evolution. A network that is able to adapt to new
-                    challenges and maintain fitness is more likely to succeed
-                    than one that is resistant to change, although as the
-                    network becomes more and more performant, scalable and
-                    secure fewer changes to the protocol will be required.
-                  </p>
-                </div>
-              </ExpandableCard>
-              <ExpandableCard
-                title="Do I have to do anything to prepare for these upgrades?"
-                className="mb-0"
-              >
-                <div className="flex flex-col gap-4">
-                  <p>
-                    Upgrades tend not to impact end-users except by providing
-                    better user-experiences and a more secure protocol and
-                    perhaps more <i>options</i> for how to interact with
-                    Ethereum.{" "}
-                    <strong>
-                      Regular users are not required to actively participate in
-                      an upgrade, nor are they required to do anything** to
-                      secure their assets.
-                    </strong>{" "}
-                    <Link href="/glossary/#node">Node</Link> operators will need
-                    to update their clients to prepare for an upgrade. Some
-                    upgrades may lead to changes for application developers. For
-                    example, history expiry upgrades may lead application
-                    developers to grab historical data from new sources.
-                  </p>
-                </div>
-              </ExpandableCard>
-              <ExpandableCard title="What about sharding?" className="mb-0">
-                <div className="flex flex-col gap-4">
-                  <p>
-                    Sharding is splitting up the Ethereum blockchain so that
-                    subsets of{" "}
-                    <Link href="/glossary/#validator">validators</Link> are only
-                    responsible for a fraction of the total data. This was
-                    originally intended to be the way for Ethereum to scale.
-                    However, <Link href="/glossary/#layer-2">layer 2</Link>{" "}
-                    rollups have developed much faster than expected and have
-                    provided a lot of scaling already, and will provide much
-                    more after Proto-Danksharding is implemented. This means
-                    &quot;shard chains&quot; are no longer needed and have been
-                    dropped from the roadmap.
+                    {t.rich("page-roadmap-faq-4-p1", {
+                      validators: (chunks) => (
+                        <Link href="/glossary/#validator">{chunks}</Link>
+                      ),
+                      layer2: (chunks) => (
+                        <Link href="/glossary/#layer-2">{chunks}</Link>
+                      ),
+                    })}
                   </p>
                 </div>
               </ExpandableCard>

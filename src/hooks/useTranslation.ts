@@ -35,6 +35,10 @@ export function useTranslation(namespaces?: string[] | string) {
         ? namespaces[0]
         : namespaces || DEFAULT_NAMESPACE
 
+      if (values) {
+        return t(`${namespace}.${fullKey}`, values)
+      }
+
       return t.raw(`${namespace}.${fullKey}`)
     } catch (error) {
       // Suppress errors by default, enable if needed to debug
@@ -43,10 +47,43 @@ export function useTranslation(namespaces?: string[] | string) {
     }
   }
 
-  // keep the original methods
+  // keep the original methods with namespace handling
   customT.raw = t.raw
-  customT.rich = t.rich
-  customT.markup = t.markup
+
+  customT.rich = (fullKey: string, values?: unknown) => {
+    try {
+      if (fullKey.includes(":")) {
+        const [namespace, key] = fullKey.split(":")
+        return t.rich(`${namespace}.${key}`, values)
+      }
+
+      const namespace = Array.isArray(namespaces)
+        ? namespaces[0]
+        : namespaces || DEFAULT_NAMESPACE
+
+      return t.rich(`${namespace}.${fullKey}`, values)
+    } catch (error) {
+      return fullKey
+    }
+  }
+
+  customT.markup = (fullKey: string, values?: unknown) => {
+    try {
+      if (fullKey.includes(":")) {
+        const [namespace, key] = fullKey.split(":")
+        return t.markup(`${namespace}.${key}`, values)
+      }
+
+      const namespace = Array.isArray(namespaces)
+        ? namespaces[0]
+        : namespaces || DEFAULT_NAMESPACE
+
+      return t.markup(`${namespace}.${fullKey}`, values)
+    } catch (error) {
+      return fullKey
+    }
+  }
+
   customT.has = t.has
 
   return { t: customT }
