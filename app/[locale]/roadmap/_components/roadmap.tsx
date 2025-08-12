@@ -1,3 +1,5 @@
+import htmr from "htmr"
+
 import BannerNotification from "@/components/Banners/BannerNotification"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -16,7 +18,6 @@ import {
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
@@ -148,23 +149,8 @@ const RoadmapPage = () => {
             <p className="mb-10">{t("page-roadmap-why-need-description")}</p>
             <h3 className="mb-6">{t("page-roadmap-how-defined-title")}</h3>
             <p className="mb-6">{t("page-roadmap-how-defined-p1")}</p>
-            <p className="mb-6">
-              {t.rich("page-roadmap-how-defined-p2", {
-                ethresearch: (chunks) => (
-                  <Link href="https://ethresear.ch">{chunks}</Link>
-                ),
-                "ethereum-magicians": (chunks) => (
-                  <Link href="https://ethereum-magicians.org">{chunks}</Link>
-                ),
-              })}
-            </p>
-            <p className="mb-6">
-              {t.rich("page-roadmap-how-defined-p3", {
-                eips: (chunks) => (
-                  <Link href="https://eips.ethereum.org">{chunks}</Link>
-                ),
-              })}
-            </p>
+            <p className="mb-6">{htmr(t("page-roadmap-how-defined-p2"))}</p>
+            <p className="mb-6">{htmr(t("page-roadmap-how-defined-p3"))}</p>
             <ButtonLink
               href="/governance"
               variant="outline"
@@ -255,15 +241,7 @@ const RoadmapPage = () => {
                 className="mb-0"
               >
                 <div className="flex flex-col gap-4">
-                  <p>
-                    {t.rich("page-roadmap-faq-3-p1", {
-                      emphasis: (chunks) => <i>{chunks}</i>,
-                      strong: (chunks) => <strong>{chunks}</strong>,
-                      node: (chunks) => (
-                        <Link href="/glossary/#node">{chunks}</Link>
-                      ),
-                    })}
-                  </p>
+                  <p>{htmr(t("page-roadmap-faq-3-p1"))}</p>
                 </div>
               </ExpandableCard>
               <ExpandableCard
@@ -271,16 +249,7 @@ const RoadmapPage = () => {
                 className="mb-0"
               >
                 <div className="flex flex-col gap-4">
-                  <p>
-                    {t.rich("page-roadmap-faq-4-p1", {
-                      validators: (chunks) => (
-                        <Link href="/glossary/#validator">{chunks}</Link>
-                      ),
-                      layer2: (chunks) => (
-                        <Link href="/glossary/#layer-2">{chunks}</Link>
-                      ),
-                    })}
-                  </p>
+                  <p>{htmr(t("page-roadmap-faq-4-p1"))}</p>
                 </div>
               </ExpandableCard>
             </div>
