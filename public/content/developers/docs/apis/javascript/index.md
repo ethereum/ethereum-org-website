@@ -267,6 +267,11 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**Drift -** **_TypeScript meta-library with built-in caching, hooks, and test mocks._**
+
+- [Documentation](https://delvtech.github.io/drift)
+- [GitHub](https://github.com/delvtech/drift)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
