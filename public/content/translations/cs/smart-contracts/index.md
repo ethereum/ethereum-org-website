@@ -69,7 +69,7 @@ Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glos
 - [Stablecoiny](/stablecoins/)
 - [Vytváření a distribuce jedinečných digitálních majetků](/nft/)
 - [Automatická otevřená směnárna](/get-eth/#dex)
-- [Decentralizované počítačové hry](/dapps/?category=gaming#explore)
+- [Decentralizované počítačové hry](/apps/?category=gaming#explore)
 - [Pojistná smlouva, která automaticky vyplatí plnění](https://etherisc.com/)
 - [Standard, který umožňuje vytvářet interoperabilní měny dle konkrétních požadavků](/developers/docs/standards/tokens/)
 

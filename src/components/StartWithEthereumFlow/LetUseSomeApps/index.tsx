@@ -97,7 +97,7 @@ const LetUseSomeApps = ({
           <h2 className="text-3xl font-bold">{t("page-start-apps-title")}</h2>
           <p>{t("page-start-apps-description")}</p>
           <div className="hidden lg:flex">
-            <Link href="/dapps" className="font-bold no-underline">
+            <Link href="/apps" className="font-bold no-underline">
               {t("page-start-apps-explore-more")}
             </Link>
           </div>
@@ -149,7 +149,7 @@ const LetUseSomeApps = ({
         </div>
         <div className="mb-4 flex justify-center lg:hidden">
           <Link
-            href="/dapps"
+            href="/apps"
             className="font-bold no-underline"
             onClick={() => {
               trackCustomEvent({

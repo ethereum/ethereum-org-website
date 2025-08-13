@@ -88,7 +88,7 @@
   "dag-term": "DAG",
   "dag-definition": "DAG, Yönlendirilmiş Döngüsel Grafik anlamına gelir. Düğümler ve aralarındaki bağlantılardan oluşan bir veri yapısıdır. Birleşim'den önce, Ethereum <a href=\"/glossary/#pow\">iş ispatı</a> algoritması <a href=\"/glossary/#ethash\">Ethash</a>'te bir DAG kullanmıştır, ancak <a href=\"/glossary/#pos\">hisse ispatında</a> artık kullanılmamaktadır.",
   "dapp-term": "Merkeziyetsiz uygulama",
-  "dapp-definition": "Bir merkeziyetsiz uygulama, merkezi otorite olmaksızın çeşitli hizmetler sunan merkeziyetsiz bir uygulamadır ve blokzincir üzerinde çalışır. <a href=\"/dapps/\">Merkeziyetsiz uygulamalar hakkında daha fazla bilgi</a>.<br />Merkeziyetsiz uygulama, asgari olarak bir arayüze bağlı olan bir akıllı sözleşme içerir. Bunun dışında birçok merkeziyetsiz uygulama, merkeziyetsiz depolama ve/veya mesajlaşma protokolü ve platform da içerir.",
+  "dapp-definition": "Bir merkeziyetsiz uygulama, merkezi otorite olmaksızın çeşitli hizmetler sunan merkeziyetsiz bir uygulamadır ve blokzincir üzerinde çalışır. <a href=\"/apps/\">Merkeziyetsiz uygulamalar hakkında daha fazla bilgi</a>.<br />Merkeziyetsiz uygulama, asgari olarak bir arayüze bağlı olan bir akıllı sözleşme içerir. Bunun dışında birçok merkeziyetsiz uygulama, merkeziyetsiz depolama ve/veya mesajlaşma protokolü ve platform da içerir.",
   "data-availability-term": "Veri kullanılabilirliği",
   "data-availability-definition": "Herhangi bir düğüm, şeffaflığı ve güveni korumak için bir blokzincirdeki işlemleri bağımsız olarak doğrulayabilir.",
   "decentralization-term": "Merkeziyetsizlik",

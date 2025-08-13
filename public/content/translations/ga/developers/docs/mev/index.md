@@ -12,7 +12,7 @@ Cuireadh uasluach inbhainte i bhfeidhm ar dtús i gcomhthéacs [cruthúnas-oibre
 
 ## Réamhriachtanais {#prerequisites}
 
-Bí cinnte go bhfuil tú eolach ar [idirbhearta](/developers/docs/transactions/), [bhloic](/developers/docs/blocks/), [cruthúnas-geallta](/developers/docs/consensus-mechanisms/pos) agus [gás](/developers/docs/gas/). Tá cur amach ar [dapps](/dapps/) agus [DeFi](/defi/) cabhrach freisin.
+Bí cinnte go bhfuil tú eolach ar [idirbhearta](/developers/docs/transactions/), [bhloic](/developers/docs/blocks/), [cruthúnas-geallta](/developers/docs/consensus-mechanisms/pos) agus [gás](/developers/docs/gas/). Tá cur amach ar [dapps](/apps/) agus [DeFi](/defi/) cabhrach freisin.
 
 ## Eastóscadh MEV {#mev-extraction}
 

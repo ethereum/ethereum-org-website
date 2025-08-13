@@ -16,17 +16,17 @@ const appList: Array<App> = [
   {
     name: "Gitcoin",
     url: "https://gitcoin.co",
-    description: "page-dapps-dapp-description-gitcoin",
+    description: "page-apps-dapp-description-gitcoin",
   },
   {
     name: "Cent",
     url: "https://beta.cent.co",
-    description: "page-dapps-dapp-description-cent",
+    description: "page-apps-dapp-description-cent",
   },
   {
     name: "Gods Unchained",
     url: "https://godsunchained.com/",
-    description: "page-dapps-dapp-description-gods-unchained",
+    description: "page-apps-dapp-description-gods-unchained",
   },
   {
     name: "DAI",
@@ -36,17 +36,17 @@ const appList: Array<App> = [
   {
     name: "Decentraland",
     url: "https://decentraland.org/",
-    description: "page-dapps-dapp-description-decentraland",
+    description: "page-apps-dapp-description-decentraland",
   },
   {
     name: "Augur",
     url: "https://www.augur.net/",
-    description: "page-dapps-dapp-description-augur",
+    description: "page-apps-dapp-description-augur",
   },
   {
     name: "Ethereum Name Service",
     url: "http://ens.domains/",
-    description: "page-dapps-dapp-description-ens",
+    description: "page-apps-dapp-description-ens",
   },
 ]
 

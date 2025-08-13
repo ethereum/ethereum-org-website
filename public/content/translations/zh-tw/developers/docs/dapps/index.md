@@ -82,7 +82,7 @@ lang: zh-tw
 
 ## 衍生閱讀 {#further-reading}
 
-- [探索去中心化應用程式](/dapps)
+- [探索去中心化應用程式](/apps)
 - [Web 3.0 應用程式的架構](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [-2021 版去中心化應用程式指南](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [去中心化應用程式為何?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
