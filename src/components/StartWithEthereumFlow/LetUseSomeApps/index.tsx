@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
@@ -18,17 +20,19 @@ const LetUseSomeApps = ({
   stepIndex: number
   totalSteps: number
 }) => {
+  const t = useTranslations("page-start")
+
   const dappsList = [
     {
       name: "Warpcast",
-      description: "The social and community platform of crypto.",
+      description: t("page-start-apps-warpcast-description"),
       tag: (
         <Tag
           status="tag"
           size="small"
           className="bg-[#FFE3D3] font-bold text-black"
         >
-          SOCIALS
+          {t("page-start-apps-socials-tag")}
         </Tag>
       ),
       url: "https://warpcast.com/",
@@ -36,14 +40,14 @@ const LetUseSomeApps = ({
     },
     {
       name: "Aave",
-      description: "Lend your tokens to earn interest and withdraw any time.",
+      description: t("page-start-apps-aave-description"),
       tag: (
         <Tag
           status="tag"
           size="small"
           className="bg-[#E1FEFA] font-bold text-black"
         >
-          FINANCE
+          {t("page-start-apps-finance-tag")}
         </Tag>
       ),
       url: "https://aave.com/",
@@ -51,14 +55,14 @@ const LetUseSomeApps = ({
     },
     {
       name: "Uniswap",
-      description: "Swap your tokens for different ones globally.",
+      description: t("page-start-apps-uniswap-description"),
       tag: (
         <Tag
           status="tag"
           size="small"
           className="bg-[#E1FEFA] font-bold text-black"
         >
-          FINANCE
+          {t("page-start-apps-finance-tag")}
         </Tag>
       ),
       url: "https://app.uniswap.org/",
@@ -66,14 +70,14 @@ const LetUseSomeApps = ({
     },
     {
       name: "OpenSea",
-      description: "Buy, sell, discover, and trade limited-edition goods.",
+      description: t("page-start-apps-opensea-description"),
       tag: (
         <Tag
           status="tag"
           size="small"
           className="bg-[#D1D1FF] font-bold text-black"
         >
-          COLLECTIBLES
+          {t("page-start-apps-collectibles-tag")}
         </Tag>
       ),
       url: "https://opensea.io/",
@@ -90,14 +94,11 @@ const LetUseSomeApps = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">Let Use Some Apps</h2>
-          <p>
-            Its time to go onchain and benefit from the wide ecosystem of
-            projects available you.
-          </p>
+          <h2 className="text-3xl font-bold">{t("page-start-apps-title")}</h2>
+          <p>{t("page-start-apps-description")}</p>
           <div className="hidden lg:flex">
             <Link href="/apps" className="font-bold no-underline">
-              Explore more
+              {t("page-start-apps-explore-more")}
             </Link>
           </div>
         </div>
@@ -140,7 +141,7 @@ const LetUseSomeApps = ({
                   size="sm"
                   className="w-full group-hover:!text-primary-hover group-hover:shadow-[4px_4px_theme('colors.primary.low-contrast')] sm:w-auto"
                 >
-                  Go
+                  {t("page-start-apps-go")}
                 </ButtonLink>
               </div>
             </LinkBox>
