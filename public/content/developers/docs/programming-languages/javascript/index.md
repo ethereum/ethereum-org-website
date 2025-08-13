@@ -21,6 +21,7 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 - [Web3.js](https://web3js.readthedocs.io)
 - [Ethers.js](https://ethers.org) – _includes Ethereum wallet implementation and utilities in JavaScript and TypeScript._
 - [viem](https://viem.sh) – _a TypeScript Interface for Ethereum that provides low-level stateless primitives for interacting with Ethereum._
+- [Drift](https://delvtech.github.io/drift) – _a TypeScript meta-library with built-in caching, hooks, and test mocks for effortless Ethereum development across web3 libraries._
 
 ### Smart contracts {#smart-contracts}
 
