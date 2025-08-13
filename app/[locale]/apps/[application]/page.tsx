@@ -108,6 +108,7 @@ const Page = async ({
   const relatedApps = getRelatedApps()
 
   const getTimeAgo = (dateString: string) => {
+    if (!dateString || !isValidDate(dateString)) return "—"
     const date = new Date(dateString)
     const now = new Date()
     const diffInMs = now.getTime() - date.getTime()
