@@ -1,15 +1,10 @@
 import blockies from "ethereum-blockies-base64"
-import { unstable_cache as cache } from "next/cache"
 import { type Address, isAddress } from "viem"
 import { getPublicClient } from "@wagmi/core"
 
-import Torch from "@/data/Torch.json"
 import torchTransferEvents from "@/data/torchTransferEvents.json"
 
 import { config } from "./config"
-
-const TORCH_CONTRACT_ADDRESS = Torch.address as Address
-const TORCH_ABI = Torch.abi
 
 // Addresses to filter from the UI (show as "Unknown Holder")
 const FILTERED_ADDRESSES: string[] = [
@@ -88,26 +83,6 @@ export const getHolderEvents = async (
     }
   })
 }
-
-export const getCurrentHolder = (holderEvents: TorchHolderEvent[]) => {
-  return holderEvents[holderEvents.length - 1]
-}
-
-export const isTorchBurned = cache(
-  async () => {
-    const publicClient = getPublicClient(config)
-
-    const isBurned = (await publicClient.readContract({
-      address: TORCH_CONTRACT_ADDRESS,
-      abi: TORCH_ABI,
-      functionName: "isBurned",
-    })) as boolean
-
-    return isBurned
-  },
-  ["torch-burned-status"],
-  { revalidate: 86400 }
-)
 
 export const getBlockieImage = (address: Address) => {
   return blockies(address)

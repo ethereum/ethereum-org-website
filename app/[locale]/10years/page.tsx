@@ -27,33 +27,29 @@ import torchHoldersData from "@/data/torchHolders.json"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import Curved10YearsText from "./_components/10y.svg"
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
-import CountDown from "./_components/CountDown/lazy"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
-import NFTMintCardWrapper from "./_components/NFTMintCardWrapper"
+import NFTMintCard from "./_components/NFTMintCard"
 import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
   getInnovationCards,
-  getTimeUnitTranslations,
   parseStoryDates,
 } from "./_components/utils"
-import { shouldShowNFTMintCard } from "./_components/utils/nftMintDate"
 
 import { routing } from "@/i18n/routing"
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import {
-  getCurrentHolder,
   getHolderEvents,
   getTransferEvents,
   isAddressFiltered,
   type TorchHolder,
 } from "@/lib/torch"
+import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -89,7 +85,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-10-year-anniversary",
   })
 
-  const timeLeftLabels = await getTimeUnitTranslations()
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
@@ -115,27 +110,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     (holder) => !isAddressFiltered(holder.address)
   )
 
-  const currentHolder = getCurrentHolder(torchHolders)
-  const showNFTMint = shouldShowNFTMintCard()
-
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <TenYearHero locale={locale} />
 
-      {!showNFTMint && (
-        <div className="w-full px-8 py-12">
-          <CountDown
-            dateTime="2025-07-30T15:26:13Z"
-            timeLeftLabels={timeLeftLabels}
-            expiredLabel={t("page-10-year-countdown-expired")}
-          />
-        </div>
-      )}
-
       <div
         className={cn(
-          "mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-4 py-4 md:flex-row md:py-8",
-          showNFTMint && "max-w-none"
+          "mt-16 flex w-full flex-col gap-32 px-4 py-4 md:flex-row md:py-8"
         )}
       >
         <div className="flex flex-1 flex-col gap-5">
@@ -151,7 +132,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
         <div className="flex flex-1 flex-row items-center justify-center">
-          <NFTMintCardWrapper locale={locale} />
+          <NFTMintCard />
         </div>
       </div>
 
@@ -297,7 +278,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <TorchHistorySwiper
           holders={torchHolders}
-          currentHolderAddress={currentHolder?.address || null}
+          currentHolderAddress={null}
         />
 
         <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">

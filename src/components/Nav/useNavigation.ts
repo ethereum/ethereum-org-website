@@ -132,9 +132,9 @@ export const useNavigation = () => {
               href: "/get-eth/",
             },
             {
-              label: t("decentralized-applications-dapps"),
-              description: t("nav-dapps-description"),
-              href: "/dapps/",
+              label: t("application-explorer"),
+              description: t("nav-apps-description"),
+              href: "/apps/",
             },
             {
               label: t("nav-guides-label"),
@@ -401,6 +401,11 @@ export const useNavigation = () => {
               label: t("translation-program"),
               description: t("nav-translation-program-description"),
               href: "/contributing/translation-program/",
+            },
+            {
+              label: t("nav-collectibles-label"),
+              description: t("nav-collectibles-description"),
+              href: "/collectibles/",
             },
             {
               label: t("about-ethereum-org"),

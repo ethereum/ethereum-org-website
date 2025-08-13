@@ -601,7 +601,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
               testKey="StablecoinApps"
               variants={[
                 <div key="two-buttons" className="flex flex-wrap gap-4">
-                  <ButtonLink href="/dapps/">
+                  <ButtonLink href="/apps/">
                     {t("page-stablecoins-explore-dapps")}
                   </ButtonLink>
                   <ButtonLink
@@ -614,7 +614,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
                   </ButtonLink>
                 </div>,
                 <div key="single-button" className="flex flex-wrap gap-4">
-                  <ButtonLink href="/dapps/">
+                  <ButtonLink href="/apps/">
                     {t("page-stablecoins-explore-apps")}
                   </ButtonLink>
                 </div>,
@@ -739,7 +739,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             )}
           >
             <ProductList
-              actionLabel={t("page-dapps-ready-button")}
+              actionLabel={t("page-apps-ready-button")}
               category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />

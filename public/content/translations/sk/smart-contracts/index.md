@@ -69,7 +69,7 @@ Môžu vykonávať výpočty, vytvárať menu, ukladať dáta, mintovať [NFT](/
 - [Kryptomeny Stablecoin](/stablecoins/)
 - [Vytváranie a distribúcia jedinečných digitálnych aktív](/nft/)
 - [Automatická otvorená zmenáreň](/get-eth/#dex)
-- [Decentralizované hry](/dapps/?category=gaming#explore)
+- [Decentralizované hry](/apps/?category=gaming#explore)
 - [Poistná zmluva, ktorá automaticky vyplatí plnenie](https://etherisc.com/)
 - [Štandard, ktorý umožňuje vytvárať interoperabilné meny podľa konkrétnych požiadaviek](/developers/docs/standards/tokens/)
 
