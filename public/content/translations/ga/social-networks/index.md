@@ -23,7 +23,7 @@ Tá go leor líonraí sóisialta díláraithe ann mar roghanna eile seachas seir
 
 ### Conas a oibríonn líonraí sóisialta díláraithe? {#decentralized-social-networks-overview}
 
-Is éard atá i líonraí sóisialta díláraithe ná aicme [feidhmchlár díláraithe (daipeanna nó dapps)](/dapps/) — feidhmchláir arna gcumhachtú ag [conarthaí cliste](/glossary/#smart-contract) in úsáid ar an mblocshlabhra. Feidhmíonn an cód conartha mar a bheadh inneall ann do na haipeanna seo agus sainmhíníonn sé a loighic ghnó.
+Is éard atá i líonraí sóisialta díláraithe ná aicme [feidhmchlár díláraithe (daipeanna nó dapps)](/apps/) — feidhmchláir arna gcumhachtú ag [conarthaí cliste](/glossary/#smart-contract) in úsáid ar an mblocshlabhra. Feidhmíonn an cód conartha mar a bheadh inneall ann do na haipeanna seo agus sainmhíníonn sé a loighic ghnó.
 
 Bíonn ardáin meán sóisialta traidisiúnta ag brath ar bhunachair sonraí chun faisnéis úsáideora, cód cláir agus cineálacha eile sonraí a stóráil. Ach leis sin cruthaítear pointí aonair teipe agus tugtar isteach riosca suntasach. Mar shampla, d'imigh freastalaithe Facebook go mícháiliúil [as líne ar feadh uaireanta an chloig](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) i mí Dheireadh Fómhair 2021, agus le linn an ama sin gearradh ceangal na n-úsáideoirí ón ardán.
 

@@ -139,7 +139,7 @@ Biz hali Web3 bilan yaxshiroq Web yaratishning boshidamiz, lekin uni qo‘llab-q
 
 - [Hamyonni oling](/wallets/)
 - [Hamjamiyat toping](/community/)
-- [Web3 ilovalari bilan tanishing](/dapps/)
+- [Web3 ilovalari bilan tanishing](/apps/)
 - [Join a DAO](/dao/)
 - [Web3 da qurish](/developers/)
 

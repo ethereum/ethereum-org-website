@@ -154,8 +154,8 @@ export const TranslatathonLayout = ({
       <>
         <p>Welcome to the ethereum.org Translatathon!</p>
         <p>
-          The translatathon is a translation competition where you can
-          compete for prizes by translating ethereum.org content into different
+          The translatathon is a translation competition where you can compete
+          for prizes by translating ethereum.org content into different
           languages.
         </p>
       </>
