@@ -7,6 +7,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const createNextIntlPlugin = require("next-intl/plugin")
 
+const { withSentryConfig } = require("@sentry/nextjs")
+
 const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
@@ -160,3 +162,12 @@ module.exports = (phase, { defaultConfig }) => {
 
   return withBundleAnalyzer(withNextIntl(nextConfig))
 }
+
+module.exports = withSentryConfig(module.exports, {
+  org: "ethereumorg-ow",
+  project: "ethorg",
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  disableLogger: true,
+  automaticVercelMonitors: true,
+})
