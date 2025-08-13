@@ -171,7 +171,7 @@ module.exports = (phase, { defaultConfig }) => {
 module.exports = withSentryConfig(module.exports, {
   org: "ethereumorg-ow",
   project: "ethorg",
-  silent: !process.env.CI,
+  silent: true,
   widenClientFileUpload: true,
   disableLogger: true,
   automaticVercelMonitors: true,
