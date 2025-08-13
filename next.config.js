@@ -30,6 +30,11 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
+    env: {
+      // Context is used to determine the environment for Sentry
+      // ref. https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
+      NEXT_PUBLIC_CONTEXT: process.env.CONTEXT,
+    },
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
