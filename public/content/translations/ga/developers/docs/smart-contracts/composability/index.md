@@ -29,7 +29,7 @@ Tá conarthaí cliste Ethereum cosúil le API poiblí, ionas gur féidir le duin
 
 ### Timthriall forbartha níos giorra {#shorter-development-cycle}
 
-Laghdaíonn in-chumthacht an obair atá le déanamh ag forbróirí agus [dapps](/dapps/#what-are-dapps) á gcruthú. [Mar a deir Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Ciallaíonn foinse oscailte go gcaithfear gach fadhb a réiteach uair amháin."
+Laghdaíonn in-chumthacht an obair atá le déanamh ag forbróirí agus [dapps](/apps/#what-are-dapps) á gcruthú. [Mar a deir Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Ciallaíonn foinse oscailte go gcaithfear gach fadhb a réiteach uair amháin."
 
 Má tá conradh cliste ann a réitíonn fadhb amháin, is féidir le forbróirí eile é a athúsáid, ionas nach mbeidh orthu an fhadhb chéanna a réiteach. Ar an mbealach seo, is féidir le forbróirí leabharlanna bogearraí atá ann cheana féin a ghlacadh agus feidhmiúlacht bhreise a chur leis chun dapps nua a chruthú.
 

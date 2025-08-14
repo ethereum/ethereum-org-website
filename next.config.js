@@ -95,6 +95,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
         {
           protocol: "https",
+          hostname: "i.imgur.com",
+        },
+        {
+          protocol: "https",
           hostname: "cdn.galxe.com",
         },
         {

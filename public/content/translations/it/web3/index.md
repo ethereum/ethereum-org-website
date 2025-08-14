@@ -143,7 +143,7 @@ Siamo solo all'inizio della creazione di un Web migliore con Web3, ma mentre con
 
 - [Ottieni un portafoglio](/wallets/)
 - [Trova una community](/community/)
-- [Esplora le applicazioni Web3](/dapps/)
+- [Esplora le applicazioni Web3](/apps/)
 - [Partecipa a una DAO](/dao/)
 - [Crea sul Web3](/developers/)
 

@@ -47,7 +47,7 @@ Akawai bunkasar arzikin kiropto da ke can waje, inda za ku iya ba da rance, aro,
 | Koyaushe kasuwan na a buɗe.                                                                      | Kasuwanin na rufewa ne don ma'aikatan na bukatar hutu.                                                                                     |
 | Ana gina shi ne akan gaskiya - kowa na iya ganin bayanan kaya da kuma duba yadda tsarin ke aiki. | Jami'o'in kuɗaɗe suna nan kamar rufaffen takarda ne: kuna iya tambayan su tarihin bashi, bayanan kadarorin da aka sarrafa, dama sauran su. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Gano manhajojin DeFi
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Wannan kun ji shi wani iri... ''Mesa zan so na tsara kuɗina''? Koda yake, wanna
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gano shawarwari na amfani da DeFi don gwadawa idan ku sabbi ne a Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/?category=finance#explore">
     Gano manhajojin DeFi
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Akwai hanyoyi da dama na madadin mafi yawan ayyukan hada-hadar kuɗi. Amma Ether
 
 A matsayin blockchain, Ethereum an tsara shi ne don aika kuɗaɗe a gabaɗaya hanya cike da aminci. Kamar Bitcoin, Ethereum na aika kuɗi a ko'ina a cikin duniya cikin sauƙi kamar dai aika imel. Kawai ku higar da mai karɓa [sunan ENS](/glossary/#ens) ( kamar bob.eth) ko kuma adireshin asusu daga walet ɗinku kuma kuɗin zai tasi kai tsaye zuwa gare su a cikin mintoci (kamar yadda aka saba). Don aika ko karbar kuɗi, za ku buƙaci [walet](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Dubi dapps na biyan kuɗi
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Aron kuɗi daga masu samar da kuɗi na ko'ina na zuwa ne a hanyoyi guda biyu man
 - Mutum-zuwa-mutum, na nufin aron kuɗi kai tsaye daga masu bayar da bashi na musamman.
 - Daga cikin haɗaka inda masu bayar da kuɗi ke samar da kuɗaɗen (ruwa) zuwa haɗaka inda masu karɓar bashi za su iya ara daga wurin.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Dubi aron dapps
 </ButtonLink>
 
@@ -185,7 +185,7 @@ Kuna iya samu riba da kiriptonku ta wurin ba da rance kuma ku gani yadda kuɗin 
 - aDai zai ƙaru ne bisa ga kuɗin ruwa da kuma ganin ragowar kuɗinku na ƙaruwa a walet. Dangane da shi[ APR](/glossary/#apr), ragowar kuɗin walet ɗinku zai zama kamar 100.1234 bayan ƴan wasu kwanaki ko kuma awanni!
 - Kuna iya cire adadin luɗi na Dai da ya zo daidai da ragowar kuɗin aDai a kowane lokaci.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Duba rancen dapps
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Akwai dubban kuɗaɗe a Ethereum. Musanyar ko'ina (DEXs) na baku damar kasuwanci
 
 Alal misali, idan kuna son ku yi amfani da cacar da ba a hasara na PoolTogether (da aka kwatanta a sama), kuna buƙatar kuɗi kamar Dai ko USDC. Waɗannan DEXs ɗin na baku damar sauya ETH ɗinku zuwa waɗannan kuɗaɗen kuma ku sake mayarwa idan kuka gama.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Dubi musayar kuɗi
 </ButtonLink>
 
@@ -225,7 +225,7 @@ Akwai ƙarin zaɓuɓɓukan ci-gaba don yan kasuwa waɗanda suke son ɗan ƙarami
 
 Lokacin da kuke amfani da musayar waje dole ne ku saka kadararku kafin cinikin kuma ku amince da su don kula da su. Yayin da ake ajiyar kadarorin ku, suna cikin haɗari saboda kasuwancin da aka keɓance ta zama manufa mai kyau ga masu satar bayanai.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Duba ciniki dapps
 </ButtonLink>
 
@@ -237,7 +237,7 @@ Akwai samfuran sarrafa kuɗi akan Ethereum waɗanda za suyi ƙoƙarin haɓaka fa
 
 Kyakkyawan misali shine [DeFi Pulse Index asusu (DPI)](https://defipulse.com/blog/defi-pulse-index/). Wannan asusu ne wanda ke sake daidaitawa ta atomatik don tabbatar da fayil ɗin ku koyaushe yana haɗe da manyan kuɗin DeFi ta hanyar babban kasuwa. Ba za ku taɓa sarrafa kowane bayanan ba kuma kuna iya janyewa daga asusun a duk lokacin da kuke so.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Duba zuba jari dapps
 </ButtonLink>
 
@@ -251,7 +251,7 @@ Ethereum shine kyakkyawan dandamali don tara kuɗi:
 - A bayyane yake don haka masu tara kuɗi za su iya tabbatar da adadin kuɗin da aka tara. Kuna iya gano yadda ake kashe kuɗi daga baya a hanya.
 - Masu tara kuɗi na iya saita maida kuɗi atomatik idan, alal misali, akwai takamaiman lokacin ƙarshe da ƙaramin adadin da bai cika ba.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Dubi taron haɗa kuɗin dapps
 </ButtonLink>
 
@@ -280,7 +280,7 @@ Inshorar da aka raba ta da nufin sanya inshora ya zama mai rahusa, da sauri don 
 
 Kayayyakin Ethereum, kamar kowace manhaja, na iya shan wahala daga matsaloli da amfani. Don haka a yanzu yawancin samfuran inshora a sararin wuri suna mayar da hankali kan kare masu asusu da su daga asarar kuɗi. Koyaya, akwai ayyukan da suka fara inganta ɗaukar hoto don duk abin da rayuwa za ta iya jefa mana. Kyakkyawan misali na wannan shine rufe Amfanin gona na Etherisc wanda ke nufin [kare kananan manoma a Kenya daga fari da ambaliya](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Inshorar da ba ta da tushe na iya ba da fa'ida mai rahusa ga manoma waɗanda galibi ana farashi daga inshorar cikin gida.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Duba inshora dapps
 </ButtonLink>
 
@@ -290,7 +290,7 @@ Kayayyakin Ethereum, kamar kowace manhaja, na iya shan wahala daga matsaloli da 
 
 Tare da ci gaba mai yawa, za ku buƙaci hanyar da za ku ci gaba da lura da duk jarin ku, lamuni, da kasuwancin ku. Akwai ɗimbin samfuran da ke ba ku damar daidaita duk ayyukan DeFi ɗinku daga wuri ɗaya. Wannan shine kyawun ginin gine-ginen DeFi. Ƙungiyoyi za su iya gina musaya inda ba za ku na iya ganin ma'aunan ku kawai a cikin samfuran ba, kuna iya amfani da fasalin su ma. Kuna iya samun wannan ya zama mai amfani kamar yadda kuke bincika ƙari cikin DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Duba fayil na dapps
 </ButtonLink>
 
@@ -322,7 +322,7 @@ Kuna iya tunanin DeFi a cikin wurare:
 1. Blockchain - Ethereum tarihin hada-hadar kuɗi ne da matsayin asusun.
 2. Kadarorin – [ETH](/eth/) da sauran kuɗaɗe (kuɗi).
 3. Ka'idojin - [smart-contracts](/glossary/#smart-contract)waɗanda ke ba da ayyuka, alal misali, sabis ɗin da ke ba da izinin rarraba rancen kadarorin.
-4. [Aika da su](/dapps/) - samfuran da muke amfani da su don sarrafawa da samun damar ƙa'idodin.
+4. [Aika da su](/apps/) - samfuran da muke amfani da su don sarrafawa da samun damar ƙa'idodin.
 
 Bayanan kula: yawancin DeFi suna amfani da [ERC-20 misali](/glossary/#erc-20). Amfani a cikin DeFi suna amfani da nannaɗuwa don ETH da ake kira Wrapped Ether (WETH). [Ƙara koyo game da nannaɗe ether](/wrapped-eth).
 

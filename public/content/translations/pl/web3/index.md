@@ -139,7 +139,7 @@ Jesteśmy dopiero na początku tworzenia lepszej sieci z Web3, ale ponieważ nad
 
 - [Wybierz portfel](/wallets/)
 - [Znajdź społeczność](/community/)
-- [Odkryj aplikacje Web3](/dapps/)
+- [Odkryj aplikacje Web3](/apps/)
 - [Dołącz do DAO](/dao/)
 - [Buduj na Web3](/developers/)
 

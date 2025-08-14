@@ -411,7 +411,7 @@ const WalletsPage = ({
             className="min-h-full flex-1 basis-[424px]"
           >
             <div>
-              <ButtonLink href="/dapps/">
+              <ButtonLink href="/apps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
             </div>
