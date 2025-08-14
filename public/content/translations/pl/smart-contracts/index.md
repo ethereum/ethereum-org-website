@@ -69,7 +69,7 @@ Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać [NFT
 - [Stablecoiny](/stablecoins/)
 - [Tworzenie i dystrybucja unikalnych zasobów cyfrowych](/nft/)
 - [Automatyczna otwarta wymiana walut](/get-eth/#dex)
-- [Zdecentralizowane gry](/dapps/?category=gaming#explore)
+- [Zdecentralizowane gry](/apps/?category=gaming#explore)
 - [Polisa ubezpieczeniowa automatycznie wypłacająca odszkodowanie](https://etherisc.com/)
 - [Standard umożliwiający tworzenie niestandardowych, interoperacyjnych walut](/developers/docs/standards/tokens/)
 

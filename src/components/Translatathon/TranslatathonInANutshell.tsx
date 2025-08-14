@@ -46,9 +46,9 @@ export const TranslatathonInANutshell = () => {
         <Flex className="w-full flex-col gap-2 self-center">
           <h3 className="text-2xl">Human translations only</h3>
           <p>
-            Using AI or machine translation is forbidden! All translations will be
-            reviewed and evaluated, and participants using machine translation
-            will not be eligible to claim prizes (see{" "}
+            Using AI or machine translation is forbidden! All translations will
+            be reviewed and evaluated, and participants using machine
+            translation will not be eligible to claim prizes (see{" "}
             <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
               terms and conditions
             </Link>

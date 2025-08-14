@@ -12,7 +12,6 @@ import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
@@ -79,7 +78,6 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
-import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
@@ -196,7 +194,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       label: t("page-index-cta-dapps-label"),
       description: t("page-index-cta-dapps-description"),
-      href: "/dapps/",
+      href: "/apps/",
       Svg: TryAppsIcon,
       className: cn(
         "text-accent-c hover:text-accent-c-hover",
@@ -429,14 +427,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <BannerNotification shouldShow={locale === DEFAULT_LOCALE}>
-        <p>
-          10 years of Ethereum! -{" "}
-          <Link href="/10years/" className="text-white">
-            Join us to celebrate 10 years of Ethereum!
-          </Link>
-        </p>
-      </BannerNotification>
       <HomeHero heroImg={Hero} className="w-full" locale={locale} />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -808,13 +798,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </WindowBox>
             </div>
           </SectionContent>
-        </Section>
-
-        <Section
-          id="10-year-anniversary"
-          className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
-        >
-          <TenYearHomeBanner />
         </Section>
 
         {/* Recent posts */}
