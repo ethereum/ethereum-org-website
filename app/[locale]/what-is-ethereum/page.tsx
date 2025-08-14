@@ -677,9 +677,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </HighlightCard>
             </HighlightStack>
 
-            <LinkWithArrow href="/learn/">
+            {/* // TODO: Re-enable when page ready */}
+            {/* <LinkWithArrow href="/todo-add-path-when-ready/">
               {t("page-what-is-ethereum-what-learn-more")}
-            </LinkWithArrow>
+            </LinkWithArrow> */}
           </Section>
 
           <Section id={getId(tocItems[5].url)} className="space-y-14">
@@ -919,9 +920,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </div>
               </div>
 
-              <LinkWithArrow href="#TODO-get-link">
+              {/* // TODO: Re-enable when page ready */}
+              {/* <LinkWithArrow href="#TODO-get-link">
                 {t("page-what-is-ethereum-bitcoin-learn-more")}
-              </LinkWithArrow>
+              </LinkWithArrow> */}
             </div>
           </Section>
 
