@@ -56,8 +56,8 @@ const instructions = [
     description: (
       <>
         Results will be announced on <strong>September 25th</strong>. Eligible
-        participants will receive an email with instructions on how to prize
-        claim their prizes.
+        participants will receive an email with instructions on how to claim
+        their prizes.
       </>
     ),
     ctaLink: null,
