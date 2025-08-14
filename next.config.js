@@ -7,6 +7,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const createNextIntlPlugin = require("next-intl/plugin")
 
+const { withSentryConfig } = require("@sentry/nextjs")
+
 const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
@@ -28,6 +30,11 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
+    env: {
+      // Context is used to determine the environment for Sentry
+      // ref. https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
+      NEXT_PUBLIC_CONTEXT: process.env.CONTEXT,
+    },
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
@@ -143,6 +150,12 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-gnu",
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
+            "node_modules/@sentry/cli/**/*",
+            "node_modules/sharp/**/*",
+            "node_modules/three/**/*",
+            "node_modules/canvas/**/*",
+            "node_modules/@playwright/**/*",
+            "node_modules/chromium-bidi/**/*",
             "src/data",
             "public/**/*.jpg",
             "public/**/*.png",
@@ -164,3 +177,12 @@ module.exports = (phase, { defaultConfig }) => {
 
   return withBundleAnalyzer(withNextIntl(nextConfig))
 }
+
+module.exports = withSentryConfig(module.exports, {
+  org: "ethereumorg-ow",
+  project: "ethorg",
+  silent: true,
+  widenClientFileUpload: true,
+  disableLogger: true,
+  automaticVercelMonitors: true,
+})
