@@ -19,6 +19,7 @@ const Link = ({
 
   return (
     <BaseLink
+      data-state-active={isActive}
       href={url}
       className={cn(
         "group relative inline-block w-full py-0.5 text-body-medium no-underline lg:w-auto",
@@ -26,6 +27,7 @@ const Link = ({
       )}
     >
       <div
+        data-label="marker"
         className={cn(
           "absolute top-1/2 -mt-1 hidden h-2 w-2 rounded-full border border-primary-hover bg-background group-hover:inline-block",
           isActive && "inline-block"
