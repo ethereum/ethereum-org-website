@@ -147,7 +147,6 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
           ))}
         </Accordion>
       </WindowBox>
-      {isModalOpen && (
         <CodeModal
           isOpen={isModalOpen}
           setIsOpen={setModalOpen}
@@ -166,7 +165,6 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
             </Codeblock>
           )}
         </CodeModal>
-      )}
     </div>
   )
 }
