@@ -29,6 +29,7 @@ import RockXGlyphIcon from "./rock-x-glyph.svg"
 import RocketPoolGlyphIcon from "./rocket-pool-glyph.svg"
 import SelfCustodyIcon from "./self-custody.svg"
 import SenseiNodeGlyphIcon from "./sensei-node-glyph.svg"
+import SerenitaGlyphIcon from "./serenita-glyph.svg"
 import SquidGlyphIcon from "./squid-glyph.svg"
 import StafiGlyphIcon from "./stafi-glyph.svg"
 import StakefishGlyphIcon from "./stakefish-glyph.svg"
@@ -77,6 +78,7 @@ export {
   RockXGlyphIcon,
   SelfCustodyIcon,
   SenseiNodeGlyphIcon,
+  SerenitaGlyphIcon,
   SquidGlyphIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
