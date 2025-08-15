@@ -89,7 +89,7 @@ export const DatesAndTimeline = () => {
             <Flex className="flex flex-col gap-6">
               <Flex
                 className={cn(
-                  "flex h-8 items-center rounded-full px-4",
+                  "flex min-h-8 w-fit items-center rounded-full px-4 py-2 text-center",
                   isLive && "text-body-inverse",
                   isLive ? "bg-primary" : "bg-primary-low-contrast"
                 )}
