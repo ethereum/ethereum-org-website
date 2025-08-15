@@ -39,7 +39,6 @@ export const PaperformModal = ({
             className="h-full w-full border-0"
             title="Translatathon Application Form"
             loading="lazy"
-            allow="camera; microphone; fullscreen; payment"
           />
         </div>
       </DialogContent>
