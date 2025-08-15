@@ -12,7 +12,7 @@ Maximal extractable value was first applied in the context of [proof-of-work](/d
 
 ## Prerequisites {#prerequisites}
 
-Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos) and [gas](/developers/docs/gas/). Familiarity with [dapps](/dapps/) and [DeFi](/defi/) is helpful as well.
+Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos) and [gas](/developers/docs/gas/). Familiarity with [dapps](/apps/) and [DeFi](/defi/) is helpful as well.
 
 ## MEV extraction {#mev-extraction}
 
@@ -26,7 +26,7 @@ With that, for some highly competitive MEV opportunities, such as [DEX arbitrage
 
 This dynamic has made being good at "gas golfing" — programming transactions so that they use the least amount of gas — a competitive advantage, because it allows searchers to set a higher gas price while keeping their total gas fees constant (since gas fees = gas price \* gas used).
 
-A few well-known gas golf techniques include: using addresses that start with a long string of zeroes (e.g. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306)) since they take less space (and hence gas) to store; and leaving small [ERC-20](/developers/docs/standards/tokens/erc-20/) token balances in contracts, since it costs more gas to initialize a storage slot (the case if the balance is 0) than to update a storage slot. Finding more techniques to reduce gas usage is an active area of research among searchers.
+A few well-known gas golf techniques include: using addresses that start with a long string of zeroes (e.g. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://eth.blockscout.com/address/0x0000000000C521824EaFf97Eac7B73B084ef9306)) since they take less space (and hence gas) to store; and leaving small [ERC-20](/developers/docs/standards/tokens/erc-20/) token balances in contracts, since it costs more gas to initialize a storage slot (the case if the balance is 0) than to update a storage slot. Finding more techniques to reduce gas usage is an active area of research among searchers.
 
 ### Generalized frontrunners {#mev-extraction-generalized-frontrunners}
 
@@ -46,7 +46,7 @@ MEV emerges on the blockchain in a few ways.
 
 It works like this: if two DEXes are offering a token at two different prices, someone can buy the token on the lower-priced DEX and sell it on the higher-priced DEX in a single, atomic transaction. Thanks to the mechanics of the blockchain, this is true, riskless arbitrage.
 
-[Here's an example](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4) of a profitable arbitrage transaction where a searcher turned 1,000 ETH into 1,045 ETH by taking advantage of different pricing of the ETH/DAI pair on Uniswap vs. Sushiswap.
+[Here's an example](https://eth.blockscout.com/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4) of a profitable arbitrage transaction where a searcher turned 1,000 ETH into 1,045 ETH by taking advantage of different pricing of the ETH/DAI pair on Uniswap vs. Sushiswap.
 
 ### Liquidations {#mev-examples-liquidations}
 
@@ -78,7 +78,7 @@ However, since NFT transactions happen on the same blockchain shared by all othe
 
 For example, if there's a popular NFT drop and a searcher wants a certain NFT or set of NFTs, they can program a transaction such that they are the first in line to buy the NFT, or they can buy the entire set of NFTs in a single transaction. Or if an NFT is [mistakenly listed at a low price](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), a searcher can frontrun other purchasers and snap it up for cheap.
 
-One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) every single Cryptopunk at the price floor. A blockchain researcher [explained on Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) how the buyer worked with an MEV provider to keep their purchase secret.
+One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://eth.blockscout.com/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5?tab=txs) every single Cryptopunk at the price floor. A blockchain researcher [explained on Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) how the buyer worked with an MEV provider to keep their purchase secret.
 
 ### The long tail {#mev-examples-long-tail}
 

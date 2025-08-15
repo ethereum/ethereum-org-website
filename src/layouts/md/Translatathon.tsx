@@ -152,10 +152,10 @@ export const TranslatathonLayout = ({
     blurDataURL: "",
     description: (
       <>
-        <p>Welcome to the ethereum.org Translatathon!</p>
+        <p>Welcome to the Translatathon!</p>
         <p>
-          The translatathon is a translation competition where you can
-          compete for prizes by translating ethereum.org content into different
+          A translation competition where you can compete for prizes
+          by translating ethereum.org and other content into different
           languages.
         </p>
       </>

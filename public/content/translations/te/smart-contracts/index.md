@@ -70,7 +70,7 @@ Szabo ఒక డిజిటల్ మార్కెట్‌ప్లేస్
 - [స్టేబుల్‌కాయిన్‌లు](/stablecoins/)
 - [ఏకైక డిజిటల్ ఆస్తులను సృష్టించడం మరియు పంపిణీ చేయడం](/nft/)
 - [ఆటోమేటిక్, ఓపెన్ కరెన్సీ మార్పిడి](/get-eth/#dex)
-- [Decentralized gaming](/dapps/?category=gaming#explore)
+- [Decentralized gaming](/apps/?category=gaming#explore)
 - [ఆటోమేటిక్‌గా చెల్లించే బీమా పాలసీ](https://etherisc.com/)
 - [వ్యక్తులు అనుకూలీకరించిన, ఇంటర్‌ఆపరబుల్ కరెన్సీలను సృష్టించడానికి అనుమతించే ప్రమాణం](/developers/docs/standards/tokens/)
 

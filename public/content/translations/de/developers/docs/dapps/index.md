@@ -82,7 +82,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Entdecken Sie dApps](/dapps)
+- [Entdecken Sie dApps](/apps)
 - [Die Architektur einer Web 3.0-Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
 - [Ein Leitfaden für dezentrale Anwendungen aus dem Jahr 2021](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) – _LimeChain_
 - [Was sind dezentrale Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) – _Gemini_

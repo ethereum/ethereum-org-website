@@ -106,6 +106,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
+- [Ethereum Job Board](https://www.ethereumjobboard.com/)
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)

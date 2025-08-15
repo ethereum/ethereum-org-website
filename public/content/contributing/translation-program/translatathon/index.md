@@ -27,7 +27,7 @@ template: translatathon
 We believe that Ethereum content and onboarding resources should be accessible to everyone, regardless of the language they speak.
 To move closer to this goal, the ethereum.org translation program is an initiative to translate the website into as many languages as possible. 
 
-As part of the translation program, we are organizing the 3rd edition of the Translatathon in order to incentivize translation contributions in less-active languages, increase the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
+As part of the translation program, we are organizing the 3rd edition of the Translatathon, our translation contest that aims to incentivize translation contributions in less-active languages, increase the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
 
 If you are a native speaker of a language other than English and want to help make Ethereum content more accessible while competing for prizes, read on to learn more!
 

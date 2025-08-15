@@ -68,6 +68,8 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
+[Reth](https://reth.rs/)
+
 ### Consensus clients {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)

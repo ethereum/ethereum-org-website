@@ -12,7 +12,8 @@ import {
 const instructions = [
   {
     title: "Read the rules and details",
-    description: "Get familiar with the rules, translation process and what to translate",
+    description:
+      "Get familiar with the rules, translation process and what to translate",
     ctaLink: "/contributing/translation-program/translatathon/details/",
     ctaLabel: "Learn",
   },
@@ -55,7 +56,8 @@ const instructions = [
     description: (
       <>
         Results will be announced on <strong>September 25th</strong>. Eligible
-        participants will receive an email with instructions on how to prize claim their prizes.
+        participants will receive an email with instructions on how to claim
+        their prizes.
       </>
     ),
     ctaLink: null,

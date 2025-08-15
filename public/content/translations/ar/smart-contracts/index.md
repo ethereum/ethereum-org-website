@@ -69,7 +69,7 @@ lang: ar
 - [عملات ثابتة](/stablecoins/)
 - [إنشاء أصول رقمية فريدة وتوزيعها](/nft/)
 - [منصة تبادل عملات مفتوحة ومؤتمتة](/get-eth/#dex)
-- [ألعاب الفيديو اللامركزية](/dapps/?category=gaming#explore)
+- [ألعاب الفيديو اللامركزية](/apps/?category=gaming#explore)
 - [بوليصة تأمين تقوم بالسداد تلقائيًا](https://etherisc.com/)
 - [معيار قياسي يتيح للأشخاص إنشاء عملات مخصصة وقابلة للتشغيل المتبادل](/developers/docs/standards/tokens/)
 
