@@ -139,12 +139,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <div className="w-full px-4 py-8 md:px-8">
         <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
           <div className="flex flex-col gap-4 text-center">
-            <h2 className="text-4xl font-black">Join the livestream</h2>
+            <h2 className="text-4xl font-black">
+              {t("page-10-year-livestream-title")}
+            </h2>
           </div>
           <YouTube
             className="w-full max-w-none"
             id="igPIMF1p5Bo"
-            title="Livestream 10 years of Ethereum"
+            title={t("page-10-year-livestream-video-title")}
             poster="maxresdefault"
           />
         </div>
@@ -284,37 +286,27 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
           <div className="flex flex-1 flex-col gap-8">
             <p>
-              To commemorate this historic milestone, we&apos;re introducing the{" "}
-              <strong>Ethereum Torch NFT</strong> a NFT that embodies the spirit
-              of decentralization and community that has defined Ethereum&apos;s
-              first decade.
+              <Translation
+                id="page-10-year-torch-nft-intro"
+                ns="page-10-year-anniversary"
+              />
             </p>
 
-            <p>
-              Like a ceremonial flame that travels from community to community,
-              the Ethereum Torch will journey across the global Ethereum
-              ecosystem. This special NFT will be passed from wallet to wallet
-              among carefully selected community members, developers, and
-              builders who have shaped Ethereum&apos;s story over the past 10
-              years.
-            </p>
+            <p>{t("page-10-year-torch-nft-description")}</p>
           </div>
           <div className="flex flex-1 flex-col gap-8">
             <div>
-              <h3 className="text-lg font-bold">One-of-a-kind:</h3>
-              <p>
-                Only one Ethereum Torch NFT exists, making each holder a
-                temporary guardian of Ethereum&apos;s legacy
-              </p>
+              <h3 className="text-lg font-bold">
+                {t("page-10-year-torch-one-of-kind-title")}
+              </h3>
+              <p>{t("page-10-year-torch-one-of-kind-description")}</p>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold">Time-limited custody:</h3>
-              <p>
-                Each holder keeps the torch for 24hours before passing it to the
-                next guardian. On July 30 this NFT wil be burned to celebrate
-                the anniversary.
-              </p>
+              <h3 className="text-lg font-bold">
+                {t("page-10-year-torch-time-limited-title")}
+              </h3>
+              <p>{t("page-10-year-torch-time-limited-description")}</p>
             </div>
           </div>
         </div>

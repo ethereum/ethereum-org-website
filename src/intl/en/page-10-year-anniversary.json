@@ -112,5 +112,18 @@
   "page-10-year-torch-no-history": "No transfer history available",
   "page-10-year-torch-from": "From",
   "page-10-year-torch-to": "To",
-  "page-10-year-torch-view-tx": "View Transaction"
+  "page-10-year-torch-view-tx": "View Transaction",
+  "page-10-year-livestream-title": "Join the livestream",
+  "page-10-year-livestream-video-title": "Livestream 10 years of Ethereum",
+  "page-10-year-torch-nft-intro": "To commemorate this historic milestone, we're introducing the **Ethereum Torch NFT** a NFT that embodies the spirit of decentralization and community that has defined Ethereum's first decade.",
+  "page-10-year-torch-nft-description": "Like a ceremonial flame that travels from community to community, the Ethereum Torch will journey across the global Ethereum ecosystem. This special NFT will be passed from wallet to wallet among carefully selected community members, developers, and builders who have shaped Ethereum's story over the past 10 years.",
+  "page-10-year-torch-one-of-kind-title": "One-of-a-kind:",
+  "page-10-year-torch-one-of-kind-description": "Only one Ethereum Torch NFT exists, making each holder a temporary guardian of Ethereum's legacy",
+  "page-10-year-torch-time-limited-title": "Time-limited custody:",
+  "page-10-year-torch-time-limited-description": "Each holder keeps the torch for 24hours before passing it to the next guardian. On July 30 this NFT wil be burned to celebrate the anniversary.",
+  "page-10-year-mint-card-title": "Mint the moment",
+  "page-10-year-mint-card-description": "Celebrate a decade of decentralization with a free, limited-time 10th anniversary NFT. Mint yours before time runs out.",
+  "page-10-year-mint-card-ended-title": "The claim period has ended",
+  "page-10-year-mint-card-ended-description": "Thank you all for joining the celebration",
+  "page-10-year-video-aria-label": "10th anniversary video"
 }
