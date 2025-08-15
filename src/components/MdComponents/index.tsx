@@ -179,9 +179,9 @@ export const reactComponents = {
 /**
  * All base markdown components as default export
  */
-const MdComponents = {
+const mdComponents = {
   ...htmlElements,
   ...reactComponents,
 }
 
-export default MdComponents
+export default mdComponents
