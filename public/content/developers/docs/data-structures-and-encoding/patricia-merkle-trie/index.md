@@ -186,7 +186,7 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-When one node is referenced inside another node, what is included is `H(rlp.encode(node))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
+When one node is referenced inside another node, what is included is `keccak256(rlp.encode(node))`, if `len(rlp.encode(node)) >= 32` else `node` where `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
 
 Note that when updating a trie, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 
