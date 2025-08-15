@@ -221,17 +221,17 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
             <p>
               {t.rich("page-what-is-ethereum-ethereum-intro-6", {
-                a: (chunks) => (
+                millions: (chunks) => (
                   <Link href="https://tokenterminal.com/explorer/projects/ethereum/metrics/all">
                     {chunks}
                   </Link>
                 ),
-                p: (chunks) => (
+                billions: (chunks) => (
                   <Link href="https://defillama.com/chain/ethereum">
                     {chunks}
                   </Link>
                 ),
-                span: (chunks) => (
+                trillions: (chunks) => (
                   <Link href="https://www.gate.com/post/status/11248290">
                     {chunks}
                   </Link>
@@ -344,16 +344,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
                 <p>
                   {t.rich("page-what-is-ethereum-network-layer2-desc-2", {
-                    a: (chunks) => (
+                    optimism: (chunks) => (
                       <Link href="https://www.optimism.io/">{chunks}</Link>
                     ),
-                    p: (chunks) => (
+                    arbitrum: (chunks) => (
                       <Link href="https://arbitrum.io/">{chunks}</Link>
                     ),
-                    span: (chunks) => (
+                    zksync: (chunks) => (
                       <Link href="https://www.zksync.io/">{chunks}</Link>
                     ),
-                    div: (chunks) => (
+                    base: (chunks) => (
                       <Link href="https://www.base.org/">{chunks}</Link>
                     ),
                   })}
@@ -491,7 +491,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <p>{t("page-what-is-ethereum-how-outro-1")}</p>
               <p>
                 {t.rich("page-what-is-ethereum-how-outro-2", {
-                  span: (chunks) => <span className="font-bold">{chunks}</span>,
+                  strong: Strong,
                 })}
               </p>
               <div>
@@ -520,17 +520,17 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <p>
                 {t.rich("page-what-is-ethereum-what-intro-2", {
                   strong: Strong,
-                  a: (chunks) => (
+                  insurance: (chunks) => (
                     <Link href="https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc">
                       {chunks}
                     </Link>
                   ),
-                  p: (chunks) => (
+                  payment: (chunks) => (
                     <Link href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.19881.html">
                       {chunks}
                     </Link>
                   ),
-                  span: (chunks) => (
+                  aid: (chunks) => (
                     <Link href="https://www.wfp.org/building-blocks">
                       {chunks}
                     </Link>
@@ -716,13 +716,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
                   <p>
                     {t.rich("page-what-is-ethereum-start-individuals-desc-3", {
-                      a: (chunks) => (
+                      zerion: (chunks) => (
                         <Link href="https://zerion.io/">{chunks}</Link>
                       ),
-                      p: (chunks) => (
+                      rainbow: (chunks) => (
                         <Link href="https://rainbow.me/">{chunks}</Link>
                       ),
-                      span: (chunks) => (
+                      coinbase: (chunks) => (
                         <Link href="https://www.coinbase.com/wallet">
                           {chunks}
                         </Link>
@@ -741,15 +741,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                       {t.rich(
                         "page-what-is-ethereum-start-individuals-step-3",
                         {
-                          a: (chunks) => (
+                          zora: (chunks) => (
                             <Link href="https://zora.co/">{chunks}</Link>
                           ),
-                          p: (chunks) => (
+                          uniswap: (chunks) => (
                             <Link href="https://app.uniswap.org/">
                               {chunks}
                             </Link>
                           ),
-                          span: (chunks) => (
+                          farcaster: (chunks) => (
                             <Link href="https://farcaster.xyz/">{chunks}</Link>
                           ),
                         }
@@ -791,19 +791,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </p>
                   <p>
                     {t.rich("page-what-is-ethereum-start-developers-desc-3", {
-                      a: (chunks) => (
+                      hardhat: (chunks) => (
                         <Link href="https://hardhat.org/">{chunks}</Link>
                       ),
-                      p: (chunks) => (
+                      foundry: (chunks) => (
                         <Link href="https://getfoundry.sh/">{chunks}</Link>
                       ),
-                      span: (chunks) => (
+                      ethers: (chunks) => (
                         <Link href="https://docs.ethers.org/">{chunks}</Link>
                       ),
-                      div: (chunks) => (
+                      thirdweb: (chunks) => (
                         <Link href="https://thirdweb.com/">{chunks}</Link>
                       ),
-                      aside: (chunks) => (
+                      moralis: (chunks) => (
                         <Link href="https://moralis.com/">{chunks}</Link>
                       ),
                     })}
@@ -1031,10 +1031,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </p>
                   <p>
                     {t.rich("page-what-is-ethereum-when-who-governance-3", {
-                      a: (chunks) => (
+                      eips: (chunks) => (
                         <Link href="https://eips.ethereum.org/">{chunks}</Link>
                       ),
-                      p: (chunks) => (
+                      governance: (chunks) => (
                         <Link href="/governance/#formal-process">{chunks}</Link>
                       ),
                     })}
