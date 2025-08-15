@@ -116,7 +116,7 @@ La meilleure façon de gérer les liens est de les copier directement à partir 
 
 ![Exemple de lien.png](./example-of-link.png)
 
-Les liens apparaissent également dans le texte source sous la forme de balises (c'est-à-dire `<0> </0>`). Si vous survolez la balise, l'éditeur affichera son véritable contenu. Parfois, ces balises désigneront des liens.
+Les liens apparaissent également dans le texte source sous la forme de balises (c'est-à-dire \<0> \</0>). Si vous survolez la balise, l'éditeur affichera son véritable contenu. Parfois, ces balises désigneront des liens.
 
 Il est très important de copier les liens depuis le texte source et de ne pas modifier l'ordre des balises.
 
@@ -154,7 +154,7 @@ nonce - _Texte non traduisible_
 
 Le texte source contient aussi des balises raccourcies. Elles contiennent uniquement des chiffres et leur fonction n'est donc pas directement identifiable. Vous pouvez survoler ces balises pour voir exactement ce à quoi elles servent.
 
-Dans l'exemple ci-dessous, vous pouvez voir que survoler la balise `<0>` nous permet de savoir qu'elle désigne en fait une balise `<code>` et qu'elle contient un extrait de code. Le contenu de ces balises ne doit donc pas être traduit.
+Dans l'exemple ci-dessous, vous pouvez voir que survoler la balise \<0> nous permet de savoir qu'elle désigne en fait une balise `<code>` et qu'elle contient un extrait de code. Le contenu de ces balises ne doit donc pas être traduit.
 
 ![Exemple de balises ambiguës.png](./example-of-ambiguous-tags.png)
 
