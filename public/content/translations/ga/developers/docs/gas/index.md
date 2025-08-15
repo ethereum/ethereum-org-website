@@ -106,7 +106,7 @@ Cé go bhfuil teorainn san áireamh in idirbheart, cuirtear aon ghás nach n-ús
 
 Tagraíonn an teorainn gháis don mhéid uasta gáis atá tú sásta a thomhailt ar idirbheart. Tá níos mó oibre ríomhaireachta ag teastáil le haghaidh idirbhearta níos casta a bhaineann le [conarthaí cliste](/developers/docs/smart-contracts/), mar sin teastaíonn teorainn gháis níos airde uathu ná íocaíocht shimplí. Éilíonn aistriú caighdeánach ETH teorainn gháis de 21,000 aonad gáis.
 
-Mar shampla, má chuireann tú teorainn gháis de 50,000 ar aistriú ETH simplí, ídíonn an EVM 21,000, agus gheobhaidh tú an 29,000 eile ar ais. However, if you specify too little gas, for example, a gas limit of 20,000 for a simple ETH transfer, the transaction will fail during the validation phase. It will be rejected before being included in a block, and no gas will be consumed. On the other hand, if a transaction runs out of gas during execution (e.g., a smart contract uses up all the gas halfway), the EVM will revert any changes, but all the gas provided will still be consumed for the work performed.
+Mar shampla, má chuireann tú teorainn gháis de 50,000 ar aistriú ETH simplí, ídíonn an EVM 21,000, agus gheobhaidh tú an 29,000 eile ar ais. Mar sin féin, má shonraíonn tú ró-bheagán gáis, mar shampla, teorainn gháis 20,000 le haghaidh aistriú ETH simplí, teipfidh an t-idirbheart le linn na céime bailíochtaithe. Diúltófar é sula n-áireofar é i mbloc, agus ní dhéanfar aon ghás a chaitheamh. Ar an láimh eile, má ritheann idirbheart as gás le linn a fhorghníomhaithe (m.sh., úsáideann conradh cliste an gás go léir leath bealaigh), déanfaidh an EVM aon athruithe a chur ar ais, ach déanfar an gás go léir a soláthraíodh a chaitheamh fós don obair a dhéantar.
 
 ## Cén fáth gur féidir le táillí gáis a bheith chomh hard sin? {#why-can-gas-fees-get-so-high}
 
@@ -139,4 +139,4 @@ Más mian leat monatóireacht a dhéanamh ar phraghsanna gáis, ionas gur féidi
 - [Straitéisí Optamaithe Gáis d'Fhorbróirí](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 doiciméad](https://eips.ethereum.org/EIPS/eip-1559).
 - [Acmhainní EIP-1559 Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Separating Mechanisms From Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Meicníochtaí a Scaradh ó Méimeanna](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
