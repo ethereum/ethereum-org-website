@@ -63,6 +63,13 @@ These programs focus on funding projects that benefit the broader community, pub
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
 
 
+## Project Specific {#project-specific}
+
+Grant programs specific to particular blockchain projects and ecosystems:
+
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
+- [Aztec Grants Program](https://aztec.network/grants) — Noir language and the [Aztec](https://aztec.network/) network
+
 ## Work in Ethereum {#work-in-ethereum}
 
 Not ready to start your own project? There are hundreds of companies actively looking for passionate individuals to work in and contribute to the Ethereum ecosystem. Looking for more information? [Check out Ethereum related jobs](/community/get-involved/#ethereum-jobs)
