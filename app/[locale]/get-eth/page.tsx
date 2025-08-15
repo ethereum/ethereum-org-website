@@ -398,7 +398,7 @@ export default async function Page({
           imageWidth={600}
         >
           <div>
-            <ButtonLink href="/dapps/">
+            <ButtonLink href="/apps/">
               {t("page-get-eth-checkout-dapps-btn")}
             </ButtonLink>
           </div>

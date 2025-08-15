@@ -23,7 +23,7 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 ### 去中心化的社交网络是如何工作的？ {#decentralized-social-networks-overview}
 
-去中心化社交网络是一类[去中心化应用程序 (dapp)](/dapps/) — 由部署在区块链上的[智能合约](/glossary/#smart-contract)驱动的应用程序。 合约代码充当这些应用程序的后端并定义它们的业务逻辑。
+去中心化社交网络是一类[去中心化应用程序 (dapp)](/apps/) — 由部署在区块链上的[智能合约](/glossary/#smart-contract)驱动的应用程序。 合约代码充当这些应用程序的后端并定义它们的业务逻辑。
 
 传统社交媒体平台依靠数据库来存储用户信息、程序代码和其他形式的数据。 但这会产生单点故障并带来重大风险。 例如，2021 年 10 月，Facebook 的服务器[离线了数个小时](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact)，切断了用户与平台的连接，这件事引起了极差的反响。
 

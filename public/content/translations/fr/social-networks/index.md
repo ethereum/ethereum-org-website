@@ -23,7 +23,7 @@ De nombreux réseaux sociaux décentralisés existent comme alternatives aux ser
 
 ### Comment fonctionnent les réseaux sociaux décentralisés ? {#decentralized-social-networks-overview}
 
-Les réseaux sociaux décentralisés sont une classe d'applications [décentralisées (DApps)](/dapps/)— des applications gérées par des [contrats intelligents](/glossary/#smart-contract) déployés sur la blockchain. Le code du contrat sert de backend pour ces applications et définit leur logique commerciale.
+Les réseaux sociaux décentralisés sont une classe d'applications [décentralisées (DApps)](/apps/)— des applications gérées par des [contrats intelligents](/glossary/#smart-contract) déployés sur la blockchain. Le code du contrat sert de backend pour ces applications et définit leur logique commerciale.
 
 Les plateformes de réseaux sociaux traditionnels se fondent sur des bases de données pour stocker des informations sur l’utilisateur, le code du programme et d’autres formes de données. Mais cela crée des points de vulnérabilité et comporte des risques significatifs. Par exemple, les serveurs de Facebook sont tristement célèbres pour [être devenus inaccessibles pendant des heures](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) en octobre 2021, coupant les utilisateurs de la plateforme.
 

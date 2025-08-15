@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import { Wallet } from "@/lib/types"
 
@@ -23,6 +24,7 @@ const DownloadAWallet = ({
   newToCryptoWallets: Wallet[]
 }) => {
   const [hasWallet, setHasWallet] = useState(false)
+  const t = useTranslations("page-start")
 
   return (
     <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-24">
@@ -33,11 +35,10 @@ const DownloadAWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">Download a wallet</h2>
-          <p>
-            Wallet is an app that allows you to receive, send cryptocurrencies
-            and manage your Ethereum account.
-          </p>
+          <h2 className="text-3xl font-bold">
+            {t("page-start-download-wallet-title")}
+          </h2>
+          <p>{t("page-start-download-wallet-description")}</p>
         </div>
         <div className="hidden flex-col gap-8 lg:flex">
           <div
@@ -52,7 +53,7 @@ const DownloadAWallet = ({
             }}
           >
             <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
-            <p>I have a wallet.</p>
+            <p>{t("page-start-download-wallet-checkbox")}</p>
           </div>
           <Button
             disabled={!hasWallet}
@@ -66,7 +67,7 @@ const DownloadAWallet = ({
               })
             }}
           >
-            Continue
+            {t("page-start-download-wallet-continue")}
           </Button>
         </div>
       </div>
@@ -110,7 +111,7 @@ const DownloadAWallet = ({
                 </div>
 
                 <ButtonLink href={wallet.url} variant="outline" size="sm">
-                  Get wallet
+                  {t("page-start-download-wallet-get-wallet")}
                 </ButtonLink>
               </div>
             </LinkBox>
@@ -129,7 +130,7 @@ const DownloadAWallet = ({
             }}
           >
             <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
-            <p>I have a wallet.</p>
+            <p>{t("page-start-download-wallet-checkbox")}</p>
           </div>
           <Button
             disabled={!hasWallet}
@@ -143,7 +144,7 @@ const DownloadAWallet = ({
               })
             }}
           >
-            Continue
+            {t("page-start-download-wallet-continue")}
           </Button>
         </div>
       </div>

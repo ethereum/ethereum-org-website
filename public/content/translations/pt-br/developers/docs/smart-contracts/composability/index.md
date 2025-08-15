@@ -29,7 +29,7 @@ Os contratos inteligentes Ethereum são como APIs públicas, para que qualquer p
 
 ### Ciclo de desenvolvimento curto {#shorter-development-cycle}
 
-A composabilidade reduz o trabalho que os desenvolvedores têm de fazer ao criar [dapps](/dapps/#what-are-dapps). [Como Naval Ravikant coloca:](https://twitter.com/naval/status/1444366754650656770) "O código aberto significa que todo problema deve ser resolvido uma vez."
+A composabilidade reduz o trabalho que os desenvolvedores têm de fazer ao criar [dapps](/apps/#what-are-dapps). [Como Naval Ravikant coloca:](https://twitter.com/naval/status/1444366754650656770) "O código aberto significa que todo problema deve ser resolvido uma vez."
 
 Se houver um contrato inteligente que resolva um problema, outros desenvolvedores podem reutilizá-lo, para que não precisem resolver o mesmo problema. Dessa forma, os desenvolvedores podem usar bibliotecas de software existentes e adicionar funcionalidades extras para criar novos dapps.
 

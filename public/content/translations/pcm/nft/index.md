@@ -56,7 +56,7 @@ E fit bi say yu bi artist wey wont shia dem work wey dey yus NFTs, witout luzin 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Eksplore, buy abi kreate yor own NFT art/kolectibols...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Make yu eksplore NFT art
   </ButtonLink>
 </InfoBanner>

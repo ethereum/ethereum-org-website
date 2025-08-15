@@ -1,5 +1,5 @@
 ---
-title: Intro to ether
+title: Technical intro to ether
 description: A developer's introduction to the ether cryptocurrency.
 lang: en
 ---

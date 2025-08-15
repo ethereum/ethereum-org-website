@@ -32,7 +32,7 @@
   "dao-term": "Decentralizált autonóm szervezet (DAO)",
   "dao-definition": "A DAO egy olyan digitális szervezet, amelyet blokkláncra kódolt szabályok szerint működtetnek, ahol a döntéseket a tagok szavazatai alapján hozzák meg, nem egy központi hatóság teszi. <a href=\"/dao/\">Bővebben a decentralizált autonóm szervezetekről (DAO)</a>.",
   "dapp-term": "Dapp",
-  "dapp-definition": "A dApp egy decentralizált alkalmazás, amely egy blokklánc-hálózaton fut, és központi ellenőrző hatóság nélkül nyújt szolgáltatásokat. <a href=\"/dapps/\">Bővebben a decentralizált alkalmazásokról</a>.",
+  "dapp-definition": "A dApp egy decentralizált alkalmazás, amely egy blokklánc-hálózaton fut, és központi ellenőrző hatóság nélkül nyújt szolgáltatásokat. <a href=\"/apps/\">Bővebben a decentralizált alkalmazásokról</a>.",
   "data-availability-term": "Adatelérhetőség",
   "data-availability-definition": "Bármely csomópont függetlenül tudja ellenőrizni a tranzakciókat a blokkláncon az átláthatóság és a rendszerbe vetett bizalom megőrzése érdekében.",
   "defi-term": "DeFi",

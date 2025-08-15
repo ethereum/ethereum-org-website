@@ -82,7 +82,7 @@ lang: ru
 
 ## Дополнительные ресурсы {#further-reading}
 
-- [Просмотреть децентрализованные приложения](/dapps)
+- [Просмотреть децентрализованные приложения](/apps)
 - [Архитектура приложения Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) — _Прити Касиредди_
 - [Руководство 2021 года по децентрализованным приложениям](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) — _LimeChain_
 - [Что такое децентрализованные приложения?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) — _Gemini_

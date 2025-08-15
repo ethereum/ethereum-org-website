@@ -65,7 +65,7 @@ lang: mr
 - [स्टेबलकॉइन्स](/stablecoins/)
 - [अद्वितीय डिजिटल मालमत्ता तयार करणे आणि वितरित करणे](/nft/)
 - [एक स्वयंचलित, खुले चलन विनिमय](/get-eth/#dex)
-- [विकेंद्रित गेमिंग](/dapps/?category=gaming#explore)
+- [विकेंद्रित गेमिंग](/apps/?category=gaming#explore)
 - [विमा पॉलिसी जी आपोआप भरली जाते](https://etherisc.com/)
 - [एक मानक जे लोकांना सानुकूलित, इंटरऑपरेबल चलने तयार करू देते](/developers/docs/standards/tokens/)
 

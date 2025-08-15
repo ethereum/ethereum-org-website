@@ -19,7 +19,7 @@ Norite susipažinti su Ethereum? Esate tinkamoje vietoje. Pradėkime nuo bendro 
 
 **Kaip ir kitos blokų grandinės, Ethereum turi integruotą kriptovaliutą pavadinimu Ether (ETH).** ETH yra skaitmeniniai pinigai. Jei girdėjote apie [bitkoiną](http://bitcoin.org/), tai ETH turi daug tokių pačių savybių. ETH yra visiškai skaitmeninė valiuta ir gali būti akimirksniu nusiųsta bet kam visame pasaulyje. Išleidžiamo šios kriptovaliutos kiekio nereguliuoja nei nacionalinės vyriausybės, nei įmonės - šis procesas yra decentralizuotas ir vyksta retai. Žmonės visame pasaulyje ETH naudoja mokėjimams, kaip investiciją arba kaip užstatą.
 
-**Bet skirtingai nei kitos blokų grandinės, Ethereum yra daug vertingesnė.** Ethereum galima programuoti, todėl kūrėjai gali ją naudoti [kurdami naujo tipo programas](/dapps/).
+**Bet skirtingai nei kitos blokų grandinės, Ethereum yra daug vertingesnė.** Ethereum galima programuoti, todėl kūrėjai gali ją naudoti [kurdami naujo tipo programas](/apps/).
 
 Šios decentralizuotos programėlės (arba "dAppsai" ; angl. "dApps" - decentralized applications), įgyja visus kriptovaliutų ir blokų grandinės technologijos privalumus. Jų veikimu galima pasitikėti, nes kartą "įkėlus" dAppsą į Ethereum, jis visada veiks tiksliai taip, kaip suprogramuotas. dAppsai gali valdyti skaitmeninį (dar vadinamą "tokenizuotą") turtą, atverdami galimybes kurti naujo tipo finansų programas. Ethereum dAppsai gali būti ir decentralizuoti. Tai reiškia, kad joks subjektas ar asmuo jų negalės valdyti.
 
@@ -39,6 +39,6 @@ Norite susipažinti su Ethereum? Esate tinkamoje vietoje. Pradėkime nuo bendro 
 
 **Neapsisprendžiate, ką daryti toliau?**
 
-- Norite pradėti naudotis Ethereum? [ethereum.org/dapps](/dapps/)
+- Norite pradėti naudotis Ethereum? [ethereum.org/dapps](/apps/)
 - Smalsu sužinoti daugiau apie Ethereum ir jo technologiją? [ethereum.org/learn](/learn/)
 - Esate programuotojas, norintis kurti Ethereum tinkle? [ethereum.org/developers](/developers/)

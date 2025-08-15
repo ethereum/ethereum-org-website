@@ -23,7 +23,7 @@ Mnoge decentralizovane društvene mreže postoje kao alternativa već postojeći
 
 ### Kako decentralizovane društvene mreže funkcionišu? {#decentralized-social-networks-overview}
 
-Decentralizovane društvene mreže su vrsta [decentralizovanih aplikacija (dapps)](/dapps/) – aplikacija napravljenih pomoću [pametnih ugovora](/glossary/#smart-contract) implementiranih na lancu blokova. Kod ugovora služi kao bekend za ove aplikacije i definiše njihovu biznis logiku.
+Decentralizovane društvene mreže su vrsta [decentralizovanih aplikacija (dapps)](/apps/) – aplikacija napravljenih pomoću [pametnih ugovora](/glossary/#smart-contract) implementiranih na lancu blokova. Kod ugovora služi kao bekend za ove aplikacije i definiše njihovu biznis logiku.
 
 Tradicionalne društvene mreže se oslanjaju na baze podatake koje skladište informacije o korisniku, kod i ostale podatke. Ali ono stvara slabe tačke i ogroman rizik. Na primer, Facebook-ovi serveri su neslavno[prestali da rade na nekoliko sati](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) u oktobru 2021. i tek tako, korisnici nisu imali pristup platformi.
 

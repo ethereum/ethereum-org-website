@@ -47,7 +47,7 @@ Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unaw
 | Ang mga market ay palaging bukas.                                                                                               | Nagsasara ang mga market dahil kailangang magpahinga ng mga empleyado.                                                                                                             |
 | Transparency ang pundasyon nito – puwedeng tingnan ng kahit sino ang data ng produkto at suriin kung paano gumagana ang system. | Ang mga pinansyal na institusyon ay parang mga saradong libro: hindi mo maaaring tingnan ang kanilang kasaysayan ng pautang, record ng mga pinapamahalaan nilang asset, at iba pa. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Siyasatin ang mga DeFi app
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? G
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Siyasatin ang aming mga rekomendasyon para sa mga DeFi application na dapat subukan kung bago ka sa Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/?category=finance#explore">
     Siyasatin ang mga DeFi app
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ May decentralized na alternatibo sa karamihan sa mga serbisyong pinansyal. Nguni
 
 Bilang isang blockchain, ang Ethereum ay idinisenyo para magpadala ng mga transaksyon sa ligtas at pandaigdigang paraan. Tulad ng Bitcoin, pinapadali ng Ethereum ang pagpapadala ng pera sa iba't ibang bahagi ng mundo, na parang nagpapadala lang ng email. Ilagay lang ang [ENS name](/glossary/#ens) (tulad ng bob.eth) ng recipient mo o ang kanyang account address mula sa iyong wallet at sa loob ng ilang minuto (karaniwan), direkta na niyang matatanggap ang bayad mo. Upang magpadala o tumanggap ng mga pagbabayad, kakailanganin mo ng [wallet](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang dapps para sa pagbabayad
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Ang paghiram ng pera mula sa mga decentralized provider ay may dalawang pangunah
 - Kasama sa kasama na nangangahulugang direktang hihiram ang borrower sa isang partikular na lender.
 - Pool-based kung saan nagbibigay ng pondo (liquidity) ang mga lender sa isang pool na mahihiraman ng mga borrower.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang mga dapps para sa panghihiram
 </ButtonLink>
 
@@ -185,7 +185,7 @@ Maaari kang kumita ng interes sa iyong crypto sa pamamagitan ng pagpapautang nit
 - Ang iyong aDai ay tataas batay sa interes at makikita mo ang paglaki ng iyong balanse sa iyong wallet. Depende sa [APR](/glossary/#apr), maaaring maging 100.1234 ang balanse ng iyong wallet pagkatapos ng ilang araw o kahit ilang oras lang!
 - Maaari kang mag-withdraw ng regular na Dai na katumbas ng iyong balanse sa aDai anumang oras.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang mga decentralized application (dapps) para sa pagpapautang
 </ButtonLink>
 
@@ -213,7 +213,7 @@ May libo-libong token sa Ethereum. Sa tulong ng mga decentralized exchange (DEX)
 
 Halimbawa, kung nais mong gamitin ang no-loss lottery na PoolTogether (na inilalarawan sa itaas), kakailanganin mo ng token tulad ng Dai o USDC. Ang mga DEX na ito ay nagbibigay-daan sa iyo na i-swap ang iyong ETH sa mga token na iyon at i-swap ito ulit kapag tapos ka na.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang mga token exchange
 </ButtonLink>
 
@@ -225,7 +225,7 @@ Mayroong mga mas advanced na opsyon para sa mga trader na gusto ng kaunti pang k
 
 Kapag gumagamit ka ng centralized exchange, dapat mong ideposito ang mga asset mo bago mag-trade at dapat mong ipaubaya sa kanila ang mga ito. Habang nakadeposito ang iyong mga asset, nanganganib ang mga ito dahil mainit sa mata ng mga hacker ang mga centralized exchange.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang mga decentralized application (dapps) para sa trading
 </ButtonLink>
 
@@ -237,7 +237,7 @@ May mga produkto para sa pamamahala ng pondo sa Ethereum na susubukang palaguin 
 
 Isang magandang halimbawa ang [ DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ito ay isang pondo na awtomatiko na muling gawing balanse upang tiyaking palaging makikita sa portfolio mo ang mga nangungunang DeFi token ayon sa market capitalization. Hindi mo kailangang pamahalaan ang alinman sa mga detalye at puwede kang mag-withdraw sa pondo kung kailan mo gusto.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang mga decentralized application (dapps) para sa investment
 </ButtonLink>
 
@@ -251,7 +251,7 @@ Magandang platform ang Ethereum para sa crowdfunding:
 - Transparent ito kaya maipapakita ng mga fundraiser kung magkano na ang naipong pera. At malalaman mo kung saan napupunta o nagagastos ang lahat ng ito.
 - Maaaring mag-set up ang mga fundraiser ng mga awtomatikong refund kung, halimbawa, may tiyak na takdang oras at minimum na halaga na hindi natugunan.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang mga decentralized application (dapps) para sa crowdfunding
 </ButtonLink>
 
@@ -280,7 +280,7 @@ Ang decentralized insurance ay may layuning gawing mas abot-kaya, mas pabilisin 
 
 Ang mga produkto ng Ethereum, gaya ng anumang software, ay puwedeng magkaroon ng mga bug at puwedeng abusuhin. Kaya sa ngayon, maraming produkto ng insurance ang nakatuon sa pagprotekta sa mga user laban sa pagkawala ng pondo. Gayunpaman, may mga proyekto na nagsisimulang bumuo ng coverage para sa lahat ng puwede nating harapin sa buhay. Isang magandang halimbawa nito ay ang Crop cover ng Etherisc na may layuning [ protektahan ang maliliit na magsasaka sa Kenya laban sa tagtuyot at pagbaha](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Ang decentralized insurance ay maaaring magbigay ng mas abot-kayang presyo para sa mga magsasaka na kadalasang hindi kayang magbayad para sa tradisyonal na insurance.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang decentralized application (dapps) para sa insurance
 </ButtonLink>
 
@@ -290,7 +290,7 @@ Ang mga produkto ng Ethereum, gaya ng anumang software, ay puwedeng magkaroon ng
 
 Sa dami ng mga nangyayari, kakailanganin mo ng paraan upang subaybayan ang lahat ng iyong mga investment, loan, at trade. May iba't ibang produkto na nagbibigay-daan sa iyong i-coordinate ang lahat ng iyong aktibidad sa DeFi mula sa isang lugar. Ito ang kagandahan ng open architecture ng DeFi. Ang mga team ay maaaring bumuo ng mga interface kung saan hindi mo lang makikita ang iyong mga balanse sa iba't ibang produkto, maaari mo ring gamitin ang kanilang mga feature. Maaaring maging kapaki-pakinabang ito para sa iyo habang tinitingnan mo ang iba pang bahagi ng DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/?category=finance#explore">
   Tingnan ang decentralized application (dapps) para sa portfolio
 </ButtonLink>
 
@@ -322,7 +322,7 @@ Maaaring isipin na may mga layer ang DeFi:
 1. Ang blockchain – na Ethereum ay naglalaman ng kasaysayan ng mga transaksyon at kalagayan ng mga account.
 2. Ang mga asset –[ ETH](/eth/)at iba pang token (mga currency).
 3. Ang mga protokol – [mga smart-contract](/glossary/#smart-contract) na nagbibigay ng kakayahan, halimbawa, sa isang serbisyong nagpapahintulot ng decentralized na pagpapautang ng mga asset.
-4. [Ang mga application](/dapps/) – ang mga produkto na ginagamit natin para pamahalaan at i-access ang mga protokol.
+4. [Ang mga application](/apps/) – ang mga produkto na ginagamit natin para pamahalaan at i-access ang mga protokol.
 
 Tandaan: karamihan ng DeFi ay gumagamit ng [ERC-20 standard](/glossary/#erc-20). Ang mga application sa DeFi ay gumagamit ng wrapper para sa ETH na tinatawag na Wrapped Ether (WETH). [Alamin pa ang tungkol sa wrapped ether](/wrapped-eth).
 

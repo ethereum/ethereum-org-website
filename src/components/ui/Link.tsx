@@ -16,6 +16,19 @@ import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { Link as I18nLink } from "@/i18n/routing"
 import { usePathname } from "@/i18n/routing"
 
+export const ExternalLinkIcon = () => {
+  const { twFlipForRtl } = useRtlFlip()
+  return (
+    <ExternalLink
+      data-label="arrow"
+      className={cn(
+        "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
+        twFlipForRtl
+      )}
+    />
+  )
+}
+
 type BaseProps = {
   hideArrow?: boolean
   isPartiallyActive?: boolean
@@ -53,8 +66,6 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   ref
 ) {
   const pathname = usePathname()
-  const { twFlipForRtl } = useRtlFlip()
-
   if (!href) {
     // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
@@ -116,15 +127,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         <VisuallyHidden>
           {isMailto ? "opens email client" : "opens in a new tab"}
         </VisuallyHidden>
-        {!hideArrow && !isMailto && (
-          <ExternalLink
-            data-label="arrow"
-            className={cn(
-              "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
-              twFlipForRtl
-            )}
-          />
-        )}
+        {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
   }

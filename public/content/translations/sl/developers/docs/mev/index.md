@@ -12,7 +12,7 @@ Ta koncept se je prvič pojavil v kontekstu [dokaza o delu](/developers/docs/con
 
 ## Predpogoji {#prerequisites}
 
-Prepričajte se, da ste seznanjeni s [transakcijami](/developers/docs/transactions/), [bloki](/developers/docs/blocks/), [gorivom](/developers/docs/gas/) in [rudarjenjem](/developers/docs/consensus-mechanisms/pow/mining/). Seznanjenost z [dappi](/dapps/) in [DeFi](/defi/) je prav tako v pomoč.
+Prepričajte se, da ste seznanjeni s [transakcijami](/developers/docs/transactions/), [bloki](/developers/docs/blocks/), [gorivom](/developers/docs/gas/) in [rudarjenjem](/developers/docs/consensus-mechanisms/pow/mining/). Seznanjenost z [dappi](/apps/) in [DeFi](/defi/) je prav tako v pomoč.
 
 ## Ekstrakcija MEV {#mev-extraction}
 

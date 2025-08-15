@@ -19,7 +19,7 @@ Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým 
 
 **Rovnako ako iné blockchainy, má aj Ethereum svoju vlastnú kryptomenu nazývanú ether (ETH).** ETH je digitálnou menou. Ak ste už počuli o [ bitcoine](http://bitcoin.org/), vedzte, že ETH má mnoho rovnakých funkcií. Je plne digitálna a je možné ju okamžite poslať komukoľvek na svete. ETH nie je pod kontrolou žiadnej vlády ani korporácie – je decentralizovaná a je nedostatkovou komoditou. Ľudia na celom svete ju používajú na uskutočňovanie platieb, investície alebo ako zábezpeku.
 
-**Ethereum však dokáže oveľa viac ako iné blockchainy.** Ethereum je programovateľný, čo znamená, že vývojárom umožňuje [vytvárať nové druhy aplikácií](/dapps/).
+**Ethereum však dokáže oveľa viac ako iné blockchainy.** Ethereum je programovateľný, čo znamená, že vývojárom umožňuje [vytvárať nové druhy aplikácií](/apps/).
 
 Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že sú technologicky postavené na kryptomenách a blockchaine. Vďaka tomu môžu byť dôveryhodné, čo znamená, že akonáhle budú „uploadnuté“ do Etherea, budú vždy pracovať presne tak, ako boli naprogramované. Môžu tiež slúžiť na kontrolu digitálnych aktív a vytváranie nových druhov finančných aplikácií. Môžu byť decentralizované, čo znamená, že ich neriadi žiadna entita alebo osoba.
 
@@ -39,7 +39,7 @@ Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že s
 
 **Kam ďalej?**
 
-- Chcete začať používať Ethereum? [ethereum.org/sk/dapps](/dapps/)
+- Chcete začať používať Ethereum? [ethereum.org/sk/dapps](/apps/)
 - Chcete sa dozvedieť o Ethereu a jeho technológii viac? [ethereum.org/sk/learn](/learn/)
 - Ste vývojárom a chcete programovať na Ethereu? [ethereum.org/sk/developers](/developers/)
 

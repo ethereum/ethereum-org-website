@@ -82,7 +82,7 @@ Chytrý kontrakt je kód, který žije v blockchainu Etherea a běží přesně 
 
 ## Další informace {#further-reading}
 
-- [Prozkoumat dappky](/dapps)
+- [Prozkoumat dappky](/apps)
 - [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
 - [A 2021 guide to decentralized applications](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) – _LimeChain_
 - [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) – _Gemini_

@@ -143,7 +143,7 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 
 - [Tárca szerzése](/wallets/)
 - [Találjon egy közösséget](/community/)
-- [Fedezze fel a Web3-alkalmazásokat](/dapps/)
+- [Fedezze fel a Web3-alkalmazásokat](/apps/)
 - [DAO-hoz csatlakozás](/dao/)
 - [Építsen a Web3-ra](/developers/)
 

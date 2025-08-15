@@ -12,7 +12,7 @@ lang: fa
 
 ## پیش‌نیازها {#prerequisites}
 
-مطمئن شوید که با مفاهیم زیر آشنا هستید.[تراکنش‌ها](/developers/docs/transactions/)، [بلاک‌ها](/developers/docs/blocks/)، [اثبات سهام](/developers/docs/consensus-mechanisms/pos) و [گاز](/developers/docs/gas/). آشنایی با [اپلیکیشن‌های غیرمتمرکز](/dapps/) و [امور مالی غیرمتمرکز](/defi/) نیز می‌تواند مفید باشد.
+مطمئن شوید که با مفاهیم زیر آشنا هستید.[تراکنش‌ها](/developers/docs/transactions/)، [بلاک‌ها](/developers/docs/blocks/)، [اثبات سهام](/developers/docs/consensus-mechanisms/pos) و [گاز](/developers/docs/gas/). آشنایی با [اپلیکیشن‌های غیرمتمرکز](/apps/) و [امور مالی غیرمتمرکز](/defi/) نیز می‌تواند مفید باشد.
 
 ## استخراج حداکثر ارزش قابل استخراج {#mev-extraction}
 

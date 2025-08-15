@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Tim Beiko",
+    "twitterURL": "https://x.com/TimBeiko",
+    "twitterHandle": "@TimBeiko",
+    "app1Name": "Matcha",
+    "app2Name": "Farcaster",
+    "app3Name": "Mirror"
+  },
+  {
+    "name": "Trent Van Epps",
+    "twitterURL": "https://x.com/trent_vanepps",
+    "twitterHandle": "@trent_vanepps",
+    "app1Name": "zkp2p",
+    "app2Name": null,
+    "app3Name": null
+  },
+  {
+    "name": "Jason Chaskin",
+    "twitterURL": "https://x.com/jchaskin22",
+    "twitterHandle": "@jchaskin",
+    "app1Name": "Aave",
+    "app2Name": "Farcaster",
+    "app3Name": "Fileverse"
+  }
+]

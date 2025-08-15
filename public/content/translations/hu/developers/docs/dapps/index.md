@@ -82,7 +82,7 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 
 ## További olvasnivaló {#further-reading}
 
-- [Fedezze fel a dappokat](/dapps)
+- [Fedezze fel a dappokat](/apps)
 - [A web 3.0 alkalmazások architektúrája](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
 - [Egy 2021-es útmutató a decentralizált alkalmazásokról](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) – _LimeChain_
 - [Mik azok decentralizált alkalmazások?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) – _Gemini_

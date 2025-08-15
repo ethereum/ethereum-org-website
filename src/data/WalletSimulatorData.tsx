@@ -426,7 +426,7 @@ export const walletOnboardingSimData: SimulatorData = {
                   </Link>
                 </ListItem>
                 <ListItem>
-                  <Link href="/dapps/">
+                  <Link href="/apps/">
                     Check out some beginner friendly apps
                   </Link>
                 </ListItem>

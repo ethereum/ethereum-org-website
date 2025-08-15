@@ -49,7 +49,7 @@ const config: StorybookConfig = {
 
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@/storybook/*": path.resolve(__dirname, "./.storybook/"),
+        "@/storybook/*": path.resolve(process.cwd(), ".storybook"),
       }
     }
 

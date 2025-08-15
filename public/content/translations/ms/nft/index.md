@@ -56,7 +56,7 @@ Mungkin anda seorang artis yang ingin berkongsi hasil kerja menggunakan NFT, tan
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Teroka, beli atau cipta seni/koleksi NFT anda sendiri...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/?category=collectibles#explore">
     Terokai seni NFT
   </ButtonLink>
 </InfoBanner>

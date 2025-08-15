@@ -23,7 +23,7 @@ Mnoho decentralizovaných sociálnych sietí existuje ako alternatíva k zaveden
 
 ### Ako fungujú decentralizované sociálne siete? {#decentralized-social-networks-overview}
 
-Decentralizované sociálne siete sú triedou [decentralizovaných aplikácií (dapps)](/dapps/) – aplikácií založených na [smart kontraktoch](/glossary/#smart-contract) nasadených na blockchaine. Kód kontraktu slúži ako backend pre tieto aplikácie a definuje ich obchodnú logiku.
+Decentralizované sociálne siete sú triedou [decentralizovaných aplikácií (dapps)](/apps/) – aplikácií založených na [smart kontraktoch](/glossary/#smart-contract) nasadených na blockchaine. Kód kontraktu slúži ako backend pre tieto aplikácie a definuje ich obchodnú logiku.
 
 Tradičné platformy sociálnych médií sa spoliehajú na databázy na ukladanie informácií o používateľoch, programového kódu a iných foriem údajov. To však vytvára jednotlivé body zlyhania a predstavuje značné riziko. Servery Facebooku napríklad v októbri 2021 neslávne [vypadli na niekoľko hodín](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact), čím používateľov odrezali od platformy.
 

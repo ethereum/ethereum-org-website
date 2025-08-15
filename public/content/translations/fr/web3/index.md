@@ -143,7 +143,7 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 - [Obtenir un portefeuille](/wallets/)
 - [Trouver une communauté](/community/)
-- [Explorer des applications Web3](/dapps/)
+- [Explorer des applications Web3](/apps/)
 - [Rejoindre une DAO](/dao/)
 - [Construire sur le Web3](/developers/)
 

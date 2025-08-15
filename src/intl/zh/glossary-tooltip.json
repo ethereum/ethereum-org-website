@@ -32,7 +32,7 @@
   "dao-term": "去中心化自治组织 (DAO)",
   "dao-definition": "去中心化自治组织是按区块链上编码的规则运行的数字组织，决策由成员投票做出，而不是由中央机构决定。<a href=\"/dao/\">了解有关去中心化自治组织 (DAO) 的更多信息</a>。",
   "dapp-term": "去中心化应用程序",
-  "dapp-definition": "dApp 是在区块链网络上运行的去中心化应用程序，无需通过中央控制机构即可提供服务。<a href=\"/dapps/\">了解有关去中心化应用程序的更多信息</a>。",
+  "dapp-definition": "dApp 是在区块链网络上运行的去中心化应用程序，无需通过中央控制机构即可提供服务。<a href=\"/apps/\">了解有关去中心化应用程序的更多信息</a>。",
   "data-availability-term": "数据可用性",
   "data-availability-definition": "为了维护系统的透明与信任，任何节点都可以单独地验证区块链上的交易。",
   "defi-term": "去中心化金融",
