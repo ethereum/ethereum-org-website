@@ -12,6 +12,6 @@ Second, they're transparent. Anyone can verify what a smart contract will do bef
 
 Third, Smart contracts also protect your privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
 
-Smart contracts are already being used in many exciting ways such as: Stablecoins, creating and distrubting unique digital assets, decentralized exchanges, gaming, insurance, and much more.
+Smart contracts are already being used in many exciting ways such as: Stablecoins, creating and distributing unique digital assets, decentralized exchanges, gaming, insurance, and much more.
 
 In essence, smart contracts are revolutionizing how we think about agreements and automation in the digital age. They're making transactions more efficient, transparent, and trustworthy - all without requiring intermediaries.
