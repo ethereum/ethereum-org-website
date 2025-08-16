@@ -41,7 +41,7 @@ lang: zh-tw
 
 - [權益證明簡介](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG 說明](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG 說明](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper 論文](https://arxiv.org/abs/2003.03052)
 
 #### 近期研究 {#recent-research}
