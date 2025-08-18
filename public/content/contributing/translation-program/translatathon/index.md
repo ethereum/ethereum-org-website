@@ -73,5 +73,6 @@ For more details, [see the full Terms & conditions](/contributing/translation-pr
 
 <StepByStepInstructions />
 
+<TranslatathonCalendar />
 
 <ApplyNow />
