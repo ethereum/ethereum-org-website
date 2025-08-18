@@ -105,7 +105,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/energy-consumption/")) {
-    primaryNamespace = "page-what-is-ethereum"
+    primaryNamespace = "page-energy-consumption"
     requiredNamespaces = [...requiredNamespaces, "page-about"]
   }
 

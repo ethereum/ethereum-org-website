@@ -467,7 +467,7 @@ export type CommonHeroProps<
   /**
    * The primary title of the page
    */
-  title: string
+  title?: string
   /**
    * A tag name for the page
    */

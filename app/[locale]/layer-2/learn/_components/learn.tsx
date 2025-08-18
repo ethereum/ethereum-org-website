@@ -15,6 +15,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import Callout2Image from "@/public/images/layer-2/learn-hero.png"
+import heroImg from "@/public/images/layer-2/learn-hero.png"
 import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/images/layer-2/rollup-2.png"
 import ZKRollupImage from "@/public/images/layer-2/zk_rollup.png"
@@ -31,8 +32,7 @@ const Layer2Learn = ({
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: { slug: pathname, startDepth: 1 },
-    heroImg: "/images/layer-2/learn-hero.png",
-    blurDataURL: "/images/layer-2/learn-hero.png",
+    heroImg,
     title: t("page-layer-2-learn-title"),
     description: t("page-layer-2-learn-description"),
     buttons: [
