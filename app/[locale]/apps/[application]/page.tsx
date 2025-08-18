@@ -275,7 +275,7 @@ const Page = async ({
             {nextApp && (
               <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
                 <div className="mr-2 flex flex-col text-right">
-                  <p className="text-sm text-gray-500 text-nowrap">See next</p>
+                  <p className="text-nowrap text-sm text-gray-500">See next</p>
                   <p className="text-primary group-hover:text-primary-hover">
                     {nextApp.name}
                   </p>

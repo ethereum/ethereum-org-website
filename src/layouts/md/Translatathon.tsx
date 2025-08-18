@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
@@ -6,8 +8,8 @@ import Card from "@/components/Card"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
-import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
+import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
 import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
 import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonCalendar"
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
@@ -162,22 +164,25 @@ export const TranslatathonLayout = ({
     ),
     buttons: [
       {
-        content: "Apply to translate",
-        href: APPLICATION_URL,
+        content: (
+          <PaperformCallToAction content="Apply to translate" variant="solid" />
+        ) as ReactNode,
       },
     ],
   } satisfies ContentHeroProps
 
   return (
-    <ContentLayout
-      dir="ltr"
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
-      contributors={contributors}
-      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-      heroSection={<ContentHero {...heroProps} />}
-    >
-      {children}
-    </ContentLayout>
+    <>
+      <ContentLayout
+        dir="ltr"
+        tocItems={tocItems}
+        dropdownLinks={dropdownLinks}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        heroSection={<ContentHero {...heroProps} />}
+      >
+        {children}
+      </ContentLayout>
+    </>
   )
 }

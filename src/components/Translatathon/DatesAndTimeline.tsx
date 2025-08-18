@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -10,6 +10,7 @@ import {
   APPLICATION_START_DATE,
   APPLICATION_URL,
 } from "./constants"
+import PaperformModal from "./PaperformModal"
 
 export const dates = [
   {
@@ -105,19 +106,31 @@ export const DatesAndTimeline = () => {
               </Flex>
               {date.link && (
                 <Flex>
-                  <ButtonLink
-                    href={date.link}
-                    className={cn(
-                      "mt-2",
-                      date.link === APPLICATION_URL && !isLive
-                        ? "pointer-events-none text-disabled"
-                        : ""
-                    )}
-                    variant="outline"
-                    aria-disabled={date.link === APPLICATION_URL && !isLive}
-                  >
-                    {date.linkText}
-                  </ButtonLink>
+                  {date.link === APPLICATION_URL ? (
+                    <PaperformModal
+                      trigger={
+                        <Button
+                          className={cn(
+                            "mt-2",
+                            !isLive ? "pointer-events-none text-disabled" : ""
+                          )}
+                          variant="outline"
+                          disabled={!isLive}
+                        >
+                          {date.linkText}
+                        </Button>
+                      }
+                      title="Apply to Translate"
+                    />
+                  ) : (
+                    <ButtonLink
+                      href={date.link}
+                      className="mt-2"
+                      variant="outline"
+                    >
+                      {date.linkText}
+                    </ButtonLink>
+                  )}
                 </Flex>
               )}
             </Flex>
