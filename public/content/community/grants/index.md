@@ -32,6 +32,8 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
+- [Aztec Grants Program](https://aztec.network/grants) — Noir language and the [Aztec](https://aztec.network/) network
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
@@ -62,13 +64,6 @@ These programs focus on funding projects that benefit the broader community, pub
 - [Artizen](https://artizen.fund/) - _Helping creators match fund new projects at the frontier of art, science, technology and culture_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
 
-
-## Project Specific {#project-specific}
-
-Grant programs specific to particular blockchain projects and ecosystems:
-
-- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
-- [Aztec Grants Program](https://aztec.network/grants) — Noir language and the [Aztec](https://aztec.network/) network
 
 ## Work in Ethereum {#work-in-ethereum}
 
