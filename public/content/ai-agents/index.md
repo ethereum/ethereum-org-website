@@ -19,7 +19,7 @@ buttons:
     isSecondary: false
 ---
 
-Imagine navigating Ethereum with an AI assistant that studies on-chain market trends 24/7, answers questions, and even executes transactions on your behalf. Welcome to the world of AI Agents—intelligent systems designed to simplify your digital life.
+Imagine navigating Ethereum with an AI assistant that studies onchain market trends 24/7, answers questions, and even executes transactions on your behalf. Welcome to the world of AI Agents—intelligent systems designed to simplify your digital life.
 
 On Ethereum, we’re seeing innovations of AI agents ranging from virtual influencers and autonomous content creators to real-time market analysis platforms, empowering users by delivering insights, entertainment, and operational efficiency.
 
@@ -35,7 +35,7 @@ In contrast, Ethereum's decentralized ecosystem offers several key advantages:
 
 - <strong>Transparent data:</strong> Access to real-time blockchain information.
 - <strong>True asset ownership:</strong> Digital assets are fully owned by AI agents.
-- <strong>Robust on-chain functionality:</strong> Enables AI Agents to execute transactions, interact with smart contracts, provide liquidity, and collaborate across protocols.
+- <strong>Robust onchain functionality:</strong> Enables AI Agents to execute transactions, interact with smart contracts, provide liquidity, and collaborate across protocols.
 
 These factors transform AI agents from simple bots into dynamic, self-improving systems that offer significant value across multiple sectors:
 
@@ -57,7 +57,7 @@ We're beginning to explore the full potential of AI agents, and projects are alr
 
 ## Agent-controlled wallets {#agent-controlled-wallets}
 
-Agents like Luna or AIXBT control their own on-chain wallet ([AIXBT's wallet](https://clusters.xyz/aixbt), [Luna's wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
+Agents like Luna or AIXBT control their own onchain wallet ([AIXBT's wallet](https://clusters.xyz/aixbt), [Luna's wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
 
 During Luna's X social campaign #LunaMuralChallenge, Luna selected and rewarded the winners via her Base wallet — marking <strong>the first instance of an AI hiring humans for crypto reward</strong>.
 

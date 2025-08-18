@@ -54,7 +54,7 @@ Resources for those building products and seeking investment beyond just grants:
 
 ### Public goods and impact {#public-goods-and-impact}
 
-These programs focus on funding projects that benefit the broader community, public goods, and impact initiatives. These include grant providers, as well as donation platforms utilizing on-chain funding allocation mechanisms including [quadratic funding](/defi/#quadratic-funding):
+These programs focus on funding projects that benefit the broader community, public goods, and impact initiatives. These include grant providers, as well as donation platforms utilizing onchain funding allocation mechanisms including [quadratic funding](/defi/#quadratic-funding):
 
 - [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grants utilizes multiple capital allocation mechanisms to fund open source projects and public goods in the Ethereum ecosystem_
 - [Octant](https://octant.app/home) - _Public goods funding ecosystem that balances the common good and individual financial empowerment_

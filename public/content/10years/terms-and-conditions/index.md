@@ -56,7 +56,7 @@ Any dispute, controversy, or claim arising out of or relating to this Agreement,
 
 ## 8. Miscellaneous {#miscellaneous}
 
-1. **Entire Agreement**. This Agreement constitutes the entire agreement between You and EF with respect to the NFT and supersedes all prior understandings.  
+1. **Entire Agreement**. This Agreement constitutes the entire agreement between You and EF with respect to the NFT and supersede all prior understandings.  
      
 2. **Severability**. If any provision is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.  
      
