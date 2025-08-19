@@ -61,11 +61,9 @@ Participants translating any of the eligible projects will earn an equal amounts
 
 Here is a list of all the eligible projects that are part of the 2025 Translatathon:
 
-Ethereum.org
-- https://crowdin.com/project/ethereum-org
+- [Ethereum.org](https://crowdin.com/project/ethereum-org)
 
-Ethereum.org developer tutorials
-- https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97
+- [Ethereum.org developer tutorials](https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97)
 
 More eligible projects will be added soon.
 
