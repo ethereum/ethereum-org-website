@@ -22,7 +22,7 @@ template: translatathon
   />
 </CardContainer>
 
-## Introduction
+## Introduction {#introduction}
 
 We believe that Ethereum content and onboarding resources should be accessible to everyone, regardless of the language they speak.
 To move closer to this goal, the ethereum.org translation program is an initiative to translate the website into as many languages as possible. 
@@ -33,7 +33,7 @@ If you are a native speaker of a language other than English and want to help ma
 
 [Learn more about the ethereum.org translation program](/contributing/translation-program/)
 
-## Timeline
+## Timeline {#timeline}
 
 Here are the important dates for the 2025 Translatathon:
 
@@ -41,7 +41,7 @@ Here are the important dates for the 2025 Translatathon:
 
 <TranslatathonInANutshell />
 
-## Participate
+## Participate {#participate}
 
 ![Image of community and globe](./participate.png)
 
@@ -69,11 +69,11 @@ Here are the important dates for the 2025 Translatathon:
 
 For more details, [see the full Terms & conditions](/contributing/translation-program/translatathon/terms-and-conditions)
 
-### Step by step instructions
+### Step by step instructions {#step-by-step-instructions}
 
 <StepByStepInstructions />
 
-## Prizes
+## Prizes {#prizes}
 
 | Placement         | Prize amount |
 |-------------------|--------------|
