@@ -56,5 +56,16 @@
   "page-apps-suggest-an-app-button": "Suggest an app",
   "page-apps-filter-by": "Filter by",
   "page-apps-filter-all": "All",
-  "page-apps-showing": "Showing"
+  "page-apps-showing": "Showing",
+  "page-apps-visit-app": "Visit {appName}",
+  "page-apps-see-next": "See next",
+  "page-apps-info-title": "Info",
+  "page-apps-info-founded": "Founded",
+  "page-apps-info-creator": "Creator",
+  "page-apps-info-last-updated": "Last updated",
+  "page-apps-gallery-title": "Gallery",
+  "page-apps-more-apps-like-this": "More apps like this",
+  "page-apps-today": "Today",
+  "page-apps-one-day-ago": "1 day ago",
+  "page-apps-days-ago": "{days} days ago"
 }
