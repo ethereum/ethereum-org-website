@@ -1,5 +1,3 @@
-import { ReactNode } from "react"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
@@ -156,18 +154,17 @@ export const TranslatathonLayout = ({
       <>
         <p>Welcome to the Translatathon!</p>
         <p>
-          A translation competition where you can compete for prizes
-          by translating ethereum.org and other content into different
-          languages.
+          A translation competition where you can compete for prizes by
+          translating ethereum.org and other content into different languages.
         </p>
       </>
     ),
     buttons: [
-      {
-        content: (
-          <PaperformCallToAction content="Apply to translate" variant="solid" />
-        ) as ReactNode,
-      },
+      <PaperformCallToAction
+        key="apply"
+        content="Apply to translate"
+        variant="solid"
+      />,
     ],
   } satisfies ContentHeroProps
 
