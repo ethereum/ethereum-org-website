@@ -11,9 +11,12 @@ import {
   MOBILE_LANGUAGE_BUTTON_NAME,
 } from "@/lib/constants"
 
+import { useIsClient } from "@/hooks/useIsClient"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
 
 const LanguageMorpher = () => {
+  const isClient = useIsClient()
+
   const handleMobileClick = () => {
     ;(document.getElementById(HAMBURGER_BUTTON_ID) as HTMLButtonElement).click()
     setTimeout(
@@ -36,10 +39,14 @@ const LanguageMorpher = () => {
 
   const [isLarge] = useMediaQuery([`(min-width: ${screens.md})`])
 
+  // Use fallback value during SSR to prevent hydration mismatch
+  // Default to false (mobile) during SSR, then use actual value on client
+  const isLargeScreen = isClient ? isLarge : false
+
   return (
     <Button
       className="mx-auto w-fit text-md text-primary no-underline"
-      onClick={isLarge ? handleDesktopClick : handleMobileClick}
+      onClick={isLargeScreen ? handleDesktopClick : handleMobileClick}
       variant="ghost"
     >
       <Morpher

@@ -16,6 +16,7 @@ import { useNavigation } from "../useNavigation"
 import { useThemeToggle } from "../useThemeToggle"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { useIsClient } from "@/hooks/useIsClient"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const LazyButton = dynamic(
@@ -86,9 +87,14 @@ const ClientSideNav = () => {
   const { toggleColorMode, ThemeIcon, themeIconAriaLabel } = useThemeToggle()
 
   const languagePickerRef = useRef<HTMLButtonElement>(null)
+  const isClient = useIsClient()
 
   // avoid rendering/adding desktop Menu version to DOM on mobile
-  const desktopScreen = useBreakpointValue({ base: false, md: true })
+  const desktopScreenValue = useBreakpointValue({ base: false, md: true })
+
+  // Use fallback value during SSR to prevent hydration mismatch
+  // Default to false (mobile) during SSR, then use actual value on client
+  const desktopScreen = isClient ? desktopScreenValue : false
 
   return (
     <>
