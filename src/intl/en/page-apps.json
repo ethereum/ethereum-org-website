@@ -53,5 +53,8 @@
   "page-apps-see-all": "See all",
   "page-apps-suggest-an-app-title": "Suggest an app",
   "page-apps-suggest-an-app-description": "We're always looking for new apps to add to our list. If you know of an app that you think should be on the list, please let us know.",
-  "page-apps-suggest-an-app-button": "Suggest an app"
+  "page-apps-suggest-an-app-button": "Suggest an app",
+  "page-apps-filter-by": "Filter by",
+  "page-apps-filter-all": "All",
+  "page-apps-showing": "Showing"
 }
