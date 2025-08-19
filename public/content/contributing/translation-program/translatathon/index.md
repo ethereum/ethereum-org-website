@@ -22,18 +22,18 @@ template: translatathon
   />
 </CardContainer>
 
-## Introduction
+## Introduction {#introduction}
 
 We believe that Ethereum content and onboarding resources should be accessible to everyone, regardless of the language they speak.
 To move closer to this goal, the ethereum.org translation program is an initiative to translate the website into as many languages as possible. 
 
-As part of the translation program, we are organizing the 3rd edition of the Translatathon in order to incentivize translation contributions in less-active languages, increase the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
+As part of the translation program, we are organizing the 3rd edition of the Translatathon, our translation contest that aims to incentivize translation contributions in less-active languages, increase the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
 
 If you are a native speaker of a language other than English and want to help make Ethereum content more accessible while competing for prizes, read on to learn more!
 
 [Learn more about the ethereum.org translation program](/contributing/translation-program/)
 
-## Timeline
+## Timeline {#timeline}
 
 Here are the important dates for the 2025 Translatathon:
 
@@ -41,7 +41,7 @@ Here are the important dates for the 2025 Translatathon:
 
 <TranslatathonInANutshell />
 
-## Participate
+## Participate {#participate}
 
 ![Image of community and globe](./participate.png)
 
@@ -69,9 +69,32 @@ Here are the important dates for the 2025 Translatathon:
 
 For more details, [see the full Terms & conditions](/contributing/translation-program/translatathon/terms-and-conditions)
 
-### Step by step instructions
+### Step by step instructions {#step-by-step-instructions}
 
 <StepByStepInstructions />
 
+## Prizes {#prizes}
+
+| Placement         | Prize amount |
+|-------------------|--------------|
+| 1st place         | $4000        |
+| 2nd place         | $2500        |
+| 3rd place         | $1500        |
+| 4th place         | $1100        |
+| 5th place         | $1000        |
+| 6th place         | $600         |
+| 7th place         | $550         |
+| 8th place         | $500         |
+| 9th place         | $450         |
+| 10th place        | $400         |
+| 11th - 20th place | $240         |
+
+Plus additional prize tiers for **top 50, top 100, top 150**, and participatory prizes for all other eligible participants.
+
+The remaining prizes will be distributed dynamically based on the total number of eligible participants.
+
+All prizes will be paid out in ETH.
+
+<TranslatathonCalendar />
 
 <ApplyNow />
