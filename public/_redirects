@@ -161,7 +161,7 @@
 /*/use /:splat/apps/ 301!
 
 # Exception: don't redirect developers/docs/dapps paths
-/*/developers/docs/dapps* 200!
+/*/developers/docs/dapps* /:splat/developers/docs/dapps:splat 200!
 
 /*/dapps /:splat/apps/ 301!
 
