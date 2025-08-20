@@ -4,7 +4,8 @@ import { EthHomeIcon } from "@/components/icons"
 
 import { BaseLink } from "../ui/Link"
 
-import ClientSideNav from "./Client"
+import { DesktopNav } from "./DesktopNav"
+import { MobileNav } from "./MobileNav"
 
 const Nav = async () => {
   const locale = await getLocale()
@@ -25,7 +26,8 @@ const Nav = async () => {
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
-        <ClientSideNav />
+        <DesktopNav className="hidden md:flex" />
+        <MobileNav className="flex md:hidden" />
       </div>
     </nav>
   )

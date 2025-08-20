@@ -11,7 +11,8 @@ import {
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonProps } from "../../ui/buttons/Button"
-import type { NavSections } from "../types"
+import { useNavigation } from "../useNavigation"
+import { useThemeToggle } from "../useThemeToggle"
 
 import HamburgerButton from "./HamburgerButton"
 import MenuBody from "./MenuBody"
@@ -20,20 +21,12 @@ import MenuHeader from "./MenuHeader"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 
-type MobileNavMenuProps = ButtonProps & {
-  toggleColorMode: () => void
-  toggleSearch: () => void
-  linkSections: NavSections
-}
+type MobileMenuProps = ButtonProps
 
-const MobileNavMenu = ({
-  toggleColorMode,
-  toggleSearch,
-  linkSections,
-  className,
-  ...props
-}: MobileNavMenuProps) => {
+const MobileMenu = ({ className, ...props }: MobileMenuProps) => {
   const { isOpen, onToggle } = useDisclosure()
+  const { linkSections } = useNavigation()
+  const { toggleColorMode } = useThemeToggle()
 
   // DRAWER MENU
   return (
@@ -60,7 +53,7 @@ const MobileNavMenu = ({
         <SheetFooter className="h-[108px] justify-center border-t border-body-light px-4 py-0">
           <MenuFooter
             onToggle={onToggle}
-            toggleSearch={toggleSearch}
+            toggleSearch={() => {}}
             toggleColorMode={toggleColorMode}
           />
         </SheetFooter>
@@ -69,4 +62,4 @@ const MobileNavMenu = ({
   )
 }
 
-export default MobileNavMenu
+export default MobileMenu

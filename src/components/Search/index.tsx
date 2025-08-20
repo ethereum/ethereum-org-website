@@ -10,16 +10,15 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
+import SearchButton from "./SearchButton"
+import SearchInputButton from "./SearchInputButton"
+
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
-type Props = {
-  children: (props: ReturnType<typeof useDisclosure>) => React.ReactNode
-}
-
-const Search = ({ children }: Props) => {
+const Search = () => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
 
@@ -50,7 +49,12 @@ const Search = ({ children }: Props) => {
 
   return (
     <>
-      {children({ ...disclosure, onOpen: handleOpen })}
+      <SearchButton
+        onClick={handleOpen}
+        data-testid="search-button"
+        className="xl:hidden"
+      />
+      <SearchInputButton className="max-xl:hidden" onClick={handleOpen} />
       <Portal.Root>
         {isOpen && (
           <SearchModal
