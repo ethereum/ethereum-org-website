@@ -1,43 +1,30 @@
-"use client"
-
-import { Languages, Moon, Search, Sun } from "lucide-react"
+import { Languages, Search as SearchIcon } from "lucide-react"
 
 import LanguagePicker from "@/components/LanguagePicker"
+import Search from "@/components/Search"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
-import { useThemeToggle } from "../useThemeToggle"
-
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
+import ThemeToggleButton from "./ThemeToggleButton"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const MenuFooter = () => {
   const { t } = useTranslation("common")
-  const ThemeIcon = useColorModeValue(Moon, Sun)
-  const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
-  const { toggleColorMode } = useThemeToggle()
 
   return (
     <div className="grid w-full grid-cols-3 items-center justify-center">
-      <FooterButton
-        icon={Search}
-        onClick={() => {
-          // Workaround to ensure the input for the search modal can have focus
-          // onToggle()
-          // toggleSearch()
-        }}
-      >
-        <FooterItemText>{t("search")}</FooterItemText>
-      </FooterButton>
+      <Search asChild>
+        <FooterButton icon={SearchIcon}>
+          <FooterItemText>{t("search")}</FooterItemText>
+        </FooterButton>
+      </Search>
 
-      <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
-        <FooterItemText>{t(themeLabelKey)}</FooterItemText>
-      </FooterButton>
+      <ThemeToggleButton />
 
-      <LanguagePicker dialog handleClose={() => {}}>
+      <LanguagePicker dialog>
         <FooterButton icon={Languages} name={MOBILE_LANGUAGE_BUTTON_NAME}>
           <FooterItemText>{t("languages")}</FooterItemText>
         </FooterButton>
