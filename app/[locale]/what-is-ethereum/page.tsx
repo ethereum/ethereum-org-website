@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   Castle,
   Landmark,
   LockKeyhole,
@@ -90,9 +91,7 @@ const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
       href={href}
       className={cn("group block w-fit no-underline", className)}
     >
-      <span data-label="link-arrow" className={twFlipForRtl}>
-        →
-      </span>
+      <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
       &nbsp;
       <span className="group-hover:underline">{children}</span>
     </Link>
@@ -189,10 +188,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <TableOfContents items={tocItems} className="max-lg:hidden" />
         </div>
 
-        <div
-          data-label="content"
-          className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2"
-        >
+        <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">
           <Section id={getId(tocItems[0].url)} className="space-y-6">
             <p>
               {t.rich("page-what-is-ethereum-ethereum-intro-1", {
