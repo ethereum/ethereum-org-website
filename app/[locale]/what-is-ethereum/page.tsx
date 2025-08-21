@@ -16,6 +16,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import { Image } from "@/components/Image"
+import { Emphasis, Strong } from "@/components/IntlStringElements"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
@@ -97,9 +98,6 @@ const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
     </Link>
   )
 }
-
-const Strong = (chunks) => <strong>{chunks}</strong>
-const Emphasis = (chunks) => <em>{chunks}</em>
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
