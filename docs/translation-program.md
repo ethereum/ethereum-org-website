@@ -4,4 +4,4 @@ _The Translation Program is an initiative to translate ethereum.org into differe
 
 If you are looking to get involved as a translator, you can [join our project in Crowdin](https://crowdin.com/project/ethereum-org/) and start translating the website into your language immediately.
 
-To get more information about the program, learn how to use Crowdin, check on the progress or find some useful tools for translators, please visit the [Translation Program page](https://ethereum.org/en/contributing/translation-program/).
+To get more information about the program, learn how to use Crowdin, check on the progress or find some useful tools for translators, please visit the [Translation Program page](/contributing/translation-program/).
