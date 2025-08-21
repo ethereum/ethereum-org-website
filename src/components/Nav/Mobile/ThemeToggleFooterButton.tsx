@@ -10,7 +10,7 @@ import FooterItemText from "./FooterItemText"
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
 
-const ThemeToggleButton = () => {
+const ThemeToggleFooterButton = () => {
   const { t } = useTranslation("common")
   const ThemeIcon = useColorModeValue(Moon, Sun)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
@@ -23,4 +23,4 @@ const ThemeToggleButton = () => {
   )
 }
 
-export default ThemeToggleButton
+export default ThemeToggleFooterButton

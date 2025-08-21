@@ -8,16 +8,15 @@ import { filterRealLocales } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import { localeToDisplayInfo } from "./localeToDisplayInfo"
-
 import { useDisclosure } from "@/hooks/useDisclosure"
-import { useTranslation } from "@/hooks/useTranslation"
 
 // Move locales computation outside component to make it stable
 const FILTERED_LOCALES = filterRealLocales(LOCALES_CODES)
 
-export const useLanguagePicker = (handleClose?: () => void) => {
-  const { t } = useTranslation("common")
+export const useLanguagePicker = (
+  languages: LocaleDisplayInfo[],
+  handleClose?: () => void
+) => {
   const locale = useLocale()
 
   // Get the preferred language for the users browser
@@ -36,14 +35,12 @@ export const useLanguagePicker = (handleClose?: () => void) => {
     [navLang]
   )
 
-  const languages = useMemo<LocaleDisplayInfo[]>(() => {
-    // Early return if no locales
-    if (!FILTERED_LOCALES?.length) return []
-
-    return (FILTERED_LOCALES as Lang[])
-      .map((localeOption) => {
-        const displayInfo = localeToDisplayInfo(localeOption, locale as Lang, t)
-        const isBrowserDefault = intlLocalePreference === localeOption
+  // Sort languages client-side to prioritize browser preference
+  const sortedLanguages = useMemo<LocaleDisplayInfo[]>(() => {
+    return [...languages]
+      .map((displayInfo) => {
+        const isBrowserDefault =
+          intlLocalePreference === displayInfo.localeOption
         return { ...displayInfo, isBrowserDefault }
       })
       .sort((a, b) => {
@@ -53,9 +50,9 @@ export const useLanguagePicker = (handleClose?: () => void) => {
         // Otherwise, sort alphabetically by source name using localeCompare
         return a.sourceName.localeCompare(b.sourceName, locale)
       })
-  }, [intlLocalePreference, locale, t])
+  }, [languages, intlLocalePreference, locale])
 
-  const intlLanguagePreference = languages.find(
+  const intlLanguagePreference = sortedLanguages.find(
     (lang) => lang.localeOption === intlLocalePreference
   )
 
@@ -93,7 +90,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
 
   return {
     disclosure: { isOpen, setValue, onOpen, onClose },
-    languages,
+    languages: sortedLanguages,
     intlLanguagePreference,
   }
 }

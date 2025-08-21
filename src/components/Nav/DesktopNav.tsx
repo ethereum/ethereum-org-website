@@ -1,7 +1,5 @@
-"use client"
-
 import { Languages } from "lucide-react"
-import { useLocale } from "next-intl"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -12,14 +10,12 @@ import Search from "../Search"
 import { Button } from "../ui/buttons/Button"
 
 import Menu from "./Menu"
-import { useThemeToggle } from "./useThemeToggle"
+import { ThemeToggleButton } from "./ThemeToggleButton"
 
-import { useTranslation } from "@/hooks/useTranslation"
+export const DesktopNav = async ({ className }: { className?: string }) => {
+  const t = await getTranslations({ namespace: "common" })
 
-export const DesktopNav = ({ className }: { className?: string }) => {
-  const { t } = useTranslation()
-  const { toggleColorMode, ThemeIcon, themeIconAriaLabel } = useThemeToggle()
-  const locale = useLocale()
+  const locale = await getLocale()
 
   return (
     <div
@@ -30,15 +26,7 @@ export const DesktopNav = ({ className }: { className?: string }) => {
       <div className="flex items-center">
         <Search />
 
-        <Button
-          aria-label={themeIconAriaLabel}
-          variant="ghost"
-          isSecondary
-          className="group animate-fade-in px-2 max-md:hidden xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
-          onClick={toggleColorMode}
-        >
-          <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
-        </Button>
+        <ThemeToggleButton />
 
         <LanguagePicker className="max-md:hidden">
           <Button
@@ -49,7 +37,7 @@ export const DesktopNav = ({ className }: { className?: string }) => {
             <Languages className="align-middle text-2xl" />
             &nbsp;
             <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
-            {locale!.toUpperCase()}
+            {locale.toUpperCase()}
           </Button>
         </LanguagePicker>
       </div>

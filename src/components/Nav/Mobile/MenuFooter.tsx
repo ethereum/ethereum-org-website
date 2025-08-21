@@ -1,4 +1,5 @@
 import { Languages, Search as SearchIcon } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 
 import LanguagePicker from "@/components/LanguagePicker"
 import Search from "@/components/Search"
@@ -7,12 +8,10 @@ import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
-import ThemeToggleButton from "./ThemeToggleButton"
+import ThemeToggleFooterButton from "./ThemeToggleFooterButton"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
-const MenuFooter = () => {
-  const { t } = useTranslation("common")
+const MenuFooter = async () => {
+  const t = await getTranslations({ namespace: "common" })
 
   return (
     <div className="grid w-full grid-cols-3 items-center justify-center">
@@ -22,7 +21,7 @@ const MenuFooter = () => {
         </FooterButton>
       </Search>
 
-      <ThemeToggleButton />
+      <ThemeToggleFooterButton />
 
       <LanguagePicker dialog>
         <FooterButton icon={Languages} name={MOBILE_LANGUAGE_BUTTON_NAME}>
