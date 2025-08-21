@@ -98,6 +98,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
         {
           protocol: "https",
+          hostname: "github.com",
+        },
+        {
+          protocol: "https",
           hostname: "coin-images.coingecko.com",
         },
         {
