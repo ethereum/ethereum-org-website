@@ -12,7 +12,7 @@ We aim to have every new PR reviewed with change requests, merged, or closed wit
 
 ### Translations
 
-Translation pull requests are considered high-priority. These are when the translated and reviewed files from our translation management platform are submitted as a pull request. They are important to our core value of bringing Ethereum education to as many languages as possible. They also are the accumulation of months of work by translators and reviewers, and any delay to this already long process is undesirable.
+Translation pull requests are considered high-priority. These are when the translated and reviewed files from our translation management platform are submitted as a pull request. They are important to our core value of bringing Ethereum education to as many languages as possible. They are also the accumulation of months of work by translators and reviewers, and any delay to this already long process is undesirable.
 
 **Timeline:** PRs should be merged within 4 days of opening (by the next release).
 

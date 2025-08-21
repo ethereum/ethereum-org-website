@@ -1,9 +1,10 @@
 import Callout from "@/components/Callout"
 
-import { ButtonLink } from "../ui/buttons/Button"
+import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
 
-import { APPLICATION_END_DATE, APPLICATION_URL } from "./constants"
+import { APPLICATION_END_DATE } from "./constants"
+import PaperformModal from "./PaperformModal"
 
 import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.png"
 
@@ -23,7 +24,10 @@ export const ApplyNow = () => {
           className="flex-1 basis-[416px] items-center text-center"
         >
           <Flex className="m-auto">
-            <ButtonLink href={APPLICATION_URL}>Apply now</ButtonLink>
+            <PaperformModal
+              trigger={<Button>Apply now</Button>}
+              title="Apply to Translate"
+            />
           </Flex>
         </Callout>
       </div>
