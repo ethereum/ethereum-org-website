@@ -1,14 +1,12 @@
 "use client"
 
 import { memo } from "react"
-import { ChevronLeft } from "lucide-react"
 import { useParams } from "next/navigation"
 import { useLocale } from "next-intl"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Button } from "@/components/ui/buttons/Button"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -41,10 +39,6 @@ const MobileLanguagePicker = memo(
     const { languages: sortedLanguages, intlLanguagePreference } =
       useLanguagePicker(languages)
 
-    const handleBackClick = () => {
-      setCurrentView("menu")
-    }
-
     const handleMenuItemSelect = (currentValue: string) => {
       push(
         // @ts-expect-error -- TypeScript will validate that only known `params`
@@ -69,19 +63,6 @@ const MobileLanguagePicker = memo(
 
     return (
       <div className="flex h-full flex-col">
-        {/* Back navigation */}
-        <div className="border-b border-body-light p-4">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleBackClick}
-            className="flex items-center gap-2 p-0 text-body"
-          >
-            <ChevronLeft className="h-4 w-4" />
-            Back
-          </Button>
-        </div>
-
         {/* Language picker menu */}
         <div className="flex-1 overflow-auto">
           <LanguagePickerMenu
