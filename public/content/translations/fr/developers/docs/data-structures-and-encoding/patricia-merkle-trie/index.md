@@ -199,7 +199,7 @@ L'en-tête d'un bloc comporte trois racines issues de trois de ces arbres.
 
 ### Arbre d'état {#state-trie}
 
-Il n'existe qu'un seul arbre d'état global, qui est mis à jour à chaque fois qu'un client traite un bloc. Dans celui-ci, un `path` est toujours : `keccak256(ethereumAddress)` et une `value` est toujours : `rlp(ethereumAccount)`. Plus précisément, un `account` ethereum est un tableau de 4 éléments de `[nonce,balance,storageRoot,codeHash]`. À ce stade, il convient de noter que ce `storageRoot` est la racine d'un autre arbre Patricia :
+Il n'existe qu'un seul arbre d'état global, qui est mis à jour à chaque fois qu'un client traite un bloc. Dans celui-ci, un `path` est toujours : `keccak256(ethereumAddress)` et une `value` est toujours : `rlp(ethereumAccount)`. Plus précisément, un `account` Ethereum est un tableau de 4 éléments de `[nonce,balance,storageRoot,codeHash]`. À ce stade, il convient de noter que ce `storageRoot` est la racine d'un autre arbre Patricia :
 
 ### Arbre de stockage {#storage-trie}
 

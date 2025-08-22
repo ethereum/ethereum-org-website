@@ -68,7 +68,7 @@ Ar ethereum.org, úsáidtear **NFTanna chun a léiriú gur chuir daoine go mór*
 
 ![ethereum.org POAP](./poap.png)
 
-Tá ainm fearainn eile ar an láithreán gréasáin seo freisin arna chumhachtú ag NFTanna, **ethereum.eth**. Tá ár seoladh `.org` á bhainistiú go lárnach ag soláthraí córais ainmneacha fearainn (DNS), ach tá ethereum `.eth` cláraithe ar Ethereum trí Sheirbhís Ainmneacha Ethereum (ENS). Agus tá sé faoinár n-úinéireachtsan agus á bhainistiú againne. [Seiceáil ár dtaifead ENS](https://app.ens.domains/name/ethereum.eth)
+Tá ainm fearainn eile ar an láithreán gréasáin seo freisin arna chumhachtú ag NFTanna, **ethereum.eth**. Tá ár seoladh `.org` á bhainistiú go lárnach ag soláthraí córais ainmneacha fearainn (DNS), ach tá Ethereum `.eth` cláraithe ar Ethereum trí Sheirbhís Ainmneacha Ethereum (ENS). Agus tá sé faoinár n-úinéireachtsan agus á bhainistiú againne. [Seiceáil ár dtaifead ENS](https://app.ens.domains/name/ethereum.eth)
 
 [Tuilleadh faoi ENS](https://app.ens.domains)
 

@@ -199,7 +199,7 @@ A Merkle-Patricia trie is deterministic and cryptographically verifiable: The on
 
 ### Κατάσταση Trie {#state-trie}
 
-Υπάρχει ένα παγκόσμιο trie κατάστασης και ενημερώνεται κάθε φορά που ένας πελάτης επεξεργάζεται ένα μπλοκ. Σε αυτό, μια `path` είναι πάντα: `keccak256(ethereumAddress)` και μια `τιμή` είναι πάντα: `rlp(ethereumAccount)`. Πιο συγκεκριμένα, ένας `account` ethereum είναι ένας πίνακας 4 στοιχείων από `[nonce,balance,storageRoot,codeHash]`. Σε αυτό το σημείο, αξίζει να σημειωθεί ότι αυτό το `storageRoot` είναι η ρίζα ενός άλλου trie πατρίσια:
+Υπάρχει ένα παγκόσμιο trie κατάστασης και ενημερώνεται κάθε φορά που ένας πελάτης επεξεργάζεται ένα μπλοκ. Σε αυτό, μια `path` είναι πάντα: `keccak256(ethereumAddress)` και μια `τιμή` είναι πάντα: `rlp(ethereumAccount)`. Πιο συγκεκριμένα, ένας `account` Ethereum είναι ένας πίνακας 4 στοιχείων από `[nonce,balance,storageRoot,codeHash]`. Σε αυτό το σημείο, αξίζει να σημειωθεί ότι αυτό το `storageRoot` είναι η ρίζα ενός άλλου trie πατρίσια:
 
 ### Αποθηκευτικός χώρος «Trie» {#storage-trie}
 

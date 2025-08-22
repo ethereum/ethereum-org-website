@@ -38,7 +38,7 @@ Kami menganggap berikut ini adalah solusi lapisan ke-2:
 - Rollup optimistic
 - Rollup tanpa pengetahuan
 
-_Kami tidak menganggap solusi pengukuran lain yang tidak menggunakan ethereum untuk ketersediaan atau keamanan data sebagai lapisan ke-2._
+_Kami tidak menganggap solusi pengukuran lain yang tidak menggunakan Ethereum untuk ketersediaan atau keamanan data sebagai lapisan ke-2._
 
 **Ethereum untuk ketersediaan data**
 

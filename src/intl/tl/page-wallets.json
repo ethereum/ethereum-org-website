@@ -3,7 +3,7 @@
   "page-wallets-accounts-addresses-desc": "Mahalaga na maintindihan ang pagkakaiba sa mga importanteng termino.",
   "page-wallets-accounts-ethereum-addresses": "<b>Mayroong address ang isang Ethereum account</b>, katulad ng inbox ay mayroong email address. Ito ay ginagamit upang matukoy ang iyong mga digital na asset.",
   "page-wallets-alt": "Larawan ng isang robot na may katawang gawa sa vault, na kumakatawan sa Ethereum wallet",
-  "page-wallets-ethereum-account": "<b>Isang pares ng susi ang ethereum account</b>. Ang <a href=\"/glossary/#public-key\">isang susi</a> ay ginagamit upang lumikha ng address na maaari mong ibahagi ng malaya, at ang <a href=\"/glossary/#private-key\">ibang susi</a> ay dapat mong itago dahil ito ay ginagamit upang lagdaan ang mga bagay. Ang mga susi na ito ang magpapahintulot sa iyo na magkaroon ng mga asset at gumawa ng mga transaksyon.",
+  "page-wallets-ethereum-account": "<b>Isang pares ng susi ang Ethereum account</b>. Ang <a href=\"/glossary/#public-key\">isang susi</a> ay ginagamit upang lumikha ng address na maaari mong ibahagi ng malaya, at ang <a href=\"/glossary/#private-key\">ibang susi</a> ay dapat mong itago dahil ito ay ginagamit upang lagdaan ang mga bagay. Ang mga susi na ito ang magpapahintulot sa iyo na magkaroon ng mga asset at gumawa ng mga transaksyon.",
   "page-wallets-blog": "Blog ng coinbase",
   "page-wallets-bookmarking": "I-bookmark ang iyong wallet",
   "page-wallets-bookmarking-desc": "Kung gumagamit ka ng web wallet, i-bookmark ang site upang protektahan ang iyong sarili laban sa mga phishing scam.",

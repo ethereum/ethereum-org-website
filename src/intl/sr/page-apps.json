@@ -197,7 +197,7 @@
   "page-apps-golem-logo-alt": "Golem logo",
   "page-apps-graph-logo-alt": "Graph logo",
   "page-apps-radicle-logo-alt": "Logo kompanije Radicle",
-  "page-apps-hero-header": "Alati i usluge na ethereum pogon",
+  "page-apps-hero-header": "Alati i usluge na Ethereum pogon",
   "page-apps-hero-subtitle": "Dapp-ovi su sve veći pokret aplikacija koje koriste Ethereum da poremete poslovne modele ili izmisle nove.",
   "page-apps-how-dapps-work-p1": "Decentralizovane aplikacije imaju svoj pozadinski kod (pametne ugovore) koji se pokreće na decentralizovanoj mreži, a ne na centralizovanom serveru. Koriste Ethereum <a href=\"/glossary/#blockchain\">lanac blokova</a> za skladištenje podataka i pametne ugovore za logiku aplikacija.",
   "page-apps-how-dapps-work-p2": "Pametan ugovor je poput skupa pravila koja žive na lancu da bi svi mogli da vide i rade tačno prema tim pravilima. Zamislite automat: ako ga nabavite sa dovoljno sredstava i pravim izborom, dobićete željeni predmet. I poput automata, pametni ugovori mogu držati sredstva slična vašem Ethereum računu. Ovo omogućava kodu da posreduje u sporazumima i transakcijama.",
