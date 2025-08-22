@@ -6,9 +6,10 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { SheetContent, SheetFooter, SheetHeader } from "@/components/ui/sheet"
 
-import MenuFooterClient from "./MenuFooterClient"
+import MobileLanguagePicker from "../../LanguagePicker/Mobile"
+
+import MenuFooter from "./MenuFooter"
 import MenuHeader from "./MenuHeader"
-import MobileLanguagePicker from "./MobileLanguagePicker"
 
 type MobileMenuView = "menu" | "language-picker"
 
@@ -29,12 +30,12 @@ export const useMobileMenu = () => {
   return context
 }
 
-type MobileMenuContentProps = {
+type MenuSwitcherProps = {
   menuBody: React.ReactNode
   languages: LocaleDisplayInfo[]
 }
 
-const MobileMenuContent = ({ menuBody, languages }: MobileMenuContentProps) => {
+const MenuSwitcher = ({ menuBody, languages }: MenuSwitcherProps) => {
   const [currentView, setCurrentView] = useState<MobileMenuView>("menu")
 
   return (
@@ -57,7 +58,7 @@ const MobileMenuContent = ({ menuBody, languages }: MobileMenuContentProps) => {
         {/* FOOTER ELEMENTS: SEARCH, LIGHT/DARK, LANGUAGES */}
         {currentView === "menu" && (
           <SheetFooter className="h-[108px] justify-center border-t border-body-light px-4 py-0">
-            <MenuFooterClient />
+            <MenuFooter />
           </SheetFooter>
         )}
       </SheetContent>
@@ -65,4 +66,4 @@ const MobileMenuContent = ({ menuBody, languages }: MobileMenuContentProps) => {
   )
 }
 
-export default MobileMenuContent
+export default MenuSwitcher

@@ -6,7 +6,7 @@ import { ButtonProps } from "../../ui/buttons/Button"
 
 import HamburgerButton from "./HamburgerButton"
 import MenuBody from "./MenuBody"
-import MobileMenuContent from "./MobileMenuContent"
+import MenuSwitcher from "./MenuSwitcher"
 
 import { getLanguagesDisplayInfo } from "@/lib/nav/links"
 
@@ -25,7 +25,7 @@ const MobileMenu = async ({ className, ...props }: MobileMenuProps) => {
           {...props}
         />
       </SheetTrigger>
-      <MobileMenuContent menuBody={<MenuBody />} languages={languages} />
+      <MenuSwitcher menuBody={<MenuBody />} languages={languages} />
     </Sheet>
   )
 }

@@ -1,4 +1,4 @@
-import ClientLanguagePicker from "./ClientLanguagePicker"
+import DesktopLanguagePicker from "./Desktop"
 
 import { getLanguagesDisplayInfo } from "@/lib/nav/links"
 
@@ -13,19 +13,17 @@ const LanguagePicker = async ({
   children,
   handleClose,
   className,
-  dialog,
 }: LanguagePickerProps) => {
   const languages = await getLanguagesDisplayInfo()
 
   return (
-    <ClientLanguagePicker
+    <DesktopLanguagePicker
       languages={languages}
       handleClose={handleClose}
       className={className}
-      dialog={dialog}
     >
       {children}
-    </ClientLanguagePicker>
+    </DesktopLanguagePicker>
   )
 }
 

@@ -11,11 +11,11 @@ import type { Level } from "../types"
 import ExpandIcon from "./ExpandIcon"
 import LvlAccordion from "./LvlAccordion"
 import {
+  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "./MenuAccordion"
-import { TrackingAccordion } from "./TrackingAccordion"
 
 import { getNavigation } from "@/lib/nav/links"
 
@@ -25,7 +25,7 @@ const MenuBody = async () => {
 
   return (
     <nav className="p-0">
-      <TrackingAccordion locale={locale as Lang}>
+      <Accordion locale={locale as Lang}>
         {SECTION_LABELS.map((key) => {
           const { label, items } = linkSections[key]
 
@@ -57,7 +57,7 @@ const MenuBody = async () => {
             </AccordionItem>
           )
         })}
-      </TrackingAccordion>
+      </Accordion>
     </nav>
   )
 }

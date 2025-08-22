@@ -1,6 +1,6 @@
 import { SheetClose, SheetTitle } from "@/components/ui/sheet"
 
-import { useMobileMenu } from "./MobileMenuContent"
+import { useMobileMenu } from "./MenuSwitcher"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
