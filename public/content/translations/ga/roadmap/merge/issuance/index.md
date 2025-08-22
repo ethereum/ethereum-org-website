@@ -94,7 +94,7 @@ Glanlaghdú ar eisiúint bhliantúil ETH: <strong>~88.7%</strong> ((4.61% - 0.52
 Is é an fórsa contrártha le heisiúint ETH an ráta ag a dhóitear ETH. Chun idirbheart a fhorghníomhú ar Ethereum, ní mór táille íosta (ar a dtugtar "bonn-táille") a íoc, a luainíonn go leanúnach (bloc-go-bloc) ag brath ar ghníomhaíocht líonra. Íoctar an táille in ETH agus _éilítear_ chun go measfar an t-idirbheart a bheith bailí. Déantar _an táille seo a dhó_ le linn an phróisis idirbhirt, rud a bhaintear as cúrsaíocht í.
 
 <InfoBanner>
-Chuaigh dó táillí beo le <a href="/history/#london">uasghrádú Londain</a> i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
+Chuaigh dó táillí beo le [uasghrádú Londain](/history/#london) i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
 </InfoBanner>
 
 Anuas ar an dó táillí arna chur i bhfeidhm ag uasghrádú Londain, is féidir le bailíochtaithe pionóis a thabhú as a bheith as líne, nó níos measa fós, is féidir iad a ghearradh as rialacha sonracha a sháraíonn slándáil líonra a bhagairt. Is é an toradh a bhíonn ar na pionóis seo ná laghdú ETH ó iarmhéid an bhailíochtóra sin, nach dtugtar luach saothair díreach dó chuig aon chuntas eile, rud a dhónn é/a bhaineann as cúrsaíocht é.

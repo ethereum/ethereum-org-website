@@ -24,7 +24,7 @@ Você pode encontrar alguns guias e ferramentas úteis para tradutores do ethere
 
 ## Comunidades {#communities}
 
-- [Grupos de tradução do Discord para idiomas específicos](/discord/) _: iniciativa que conecta tradutores do ethereum.org a Grupos de Tradução_
+- [Grupos de tradução do Discord para idiomas específicos](https://discord.gg/ethereum-org) _: iniciativa que conecta tradutores do ethereum.org a Grupos de Tradução_
 - [Grupo de tradutores de chinês](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _: página de noções para facilitar a coordenação entre tradutores de chinês_
 
 ## Últimas atualizações {#latest-updates}
@@ -38,7 +38,7 @@ Para se manter atualizado sobre os avanços mais recentes do Programa de Traduç
 
 ## Horários de trabalho para tradutores {#office-hours}
 
-Temos horários de plantão para tradutores na segunda quarta-feira de cada mês. Eles são mantidos no canal de voz #horários de plantão no [Discord do ethereum.org](/discord/), no qual você também pode encontrar os horários exatos e detalhes adicionais.
+Temos horários de plantão para tradutores na segunda quarta-feira de cada mês. Eles são mantidos no canal de voz #horários de plantão no [Discord do ethereum.org](https://discord.gg/ethereum-org), no qual você também pode encontrar os horários exatos e detalhes adicionais.
 
 O horário de plantão permite que nossos tradutores façam perguntas sobre o processo de tradução, forneçam comentários sobre o programa, compartilhem suas ideias ou simplesmente conversem com a equipe principal do ethereum.org. Por último, queremos usar essas chamadas para comunicar desenvolvimentos recentes no Programa de Tradução e compartilhar dicas importantes e instruções com nossos colaboradores.
 

@@ -5,6 +5,7 @@ import { Folder } from "lucide-react"
 import { AppCategory, AppData } from "@/lib/types"
 
 import { Button } from "@/components/ui/buttons/Button"
+import { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
   Swiper,
@@ -91,48 +92,48 @@ const TopApps = ({ appsData }: TopAppsProps) => {
           <SwiperSlide key={category}>
             <div className="flex flex-col rounded-xl border">
               <LinkBox className="rounded-t-xl border-b p-4 hover:bg-background-highlight">
-                <LinkOverlay
-                  href={`/apps/categories/${slugify(category)}`}
-                  className="text-body no-underline"
-                  onClick={() =>
-                    trackCustomEvent({
+                <LinkOverlay asChild>
+                  <BaseLink
+                    href={`/apps/categories/${slugify(category)}`}
+                    className="text-body no-underline"
+                    customEventOptions={{
                       eventCategory: "apps",
                       eventAction: "categories",
                       eventName: `topapps_category_name_${category}`,
-                    })
-                  }
-                >
-                  <div className="flex flex-row items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <div className="rounded-lg border p-2">
-                        {(() => {
-                          // Find the category data by matching the name
-                          const categoryData = Object.values(
-                            appsCategories
-                          ).find((cat) => cat.name === category)
-                          const CategoryIcon = categoryData?.icon
-                          return CategoryIcon ? (
-                            <CategoryIcon className="h-6 w-6" />
-                          ) : (
-                            <Folder className="h-6 w-6" />
-                          )
-                        })()}
+                    }}
+                  >
+                    <div className="flex flex-row items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <div className="rounded-lg border p-2">
+                          {(() => {
+                            // Find the category data by matching the name
+                            const categoryData = Object.values(
+                              appsCategories
+                            ).find((cat) => cat.name === category)
+                            const CategoryIcon = categoryData?.icon
+                            return CategoryIcon ? (
+                              <CategoryIcon className="h-6 w-6" />
+                            ) : (
+                              <Folder className="h-6 w-6" />
+                            )
+                          })()}
+                        </div>
+                        <p className="text-lg font-bold text-body no-underline group-hover:text-primary">
+                          {category}
+                        </p>
                       </div>
-                      <p className="text-lg font-bold text-body no-underline group-hover:text-primary">
-                        {category}
-                      </p>
+                      <div>
+                        <Button
+                          variant="outline"
+                          isSecondary
+                          size="sm"
+                          className="w-fit"
+                        >
+                          <p className="text-sm">See all</p>
+                        </Button>
+                      </div>
                     </div>
-                    <div>
-                      <Button
-                        variant="outline"
-                        isSecondary
-                        size="sm"
-                        className="w-fit"
-                      >
-                        <p className="text-sm">See all</p>
-                      </Button>
-                    </div>
-                  </div>
+                  </BaseLink>
                 </LinkOverlay>
               </LinkBox>
               <div className="flex flex-col">
