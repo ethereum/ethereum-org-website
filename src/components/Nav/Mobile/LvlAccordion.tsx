@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { useLocale } from "next-intl"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -24,7 +26,6 @@ type LvlAccordionProps = {
   lvl: Level
   items: NavItem[]
   activeSection: NavSectionKey
-  onToggle: () => void
 }
 
 const subtextColorPerLevel = {
@@ -41,12 +42,7 @@ const backgroundColorPerLevel = {
   4: "bg-background-high",
 }
 
-const LvlAccordion = ({
-  lvl,
-  items,
-  activeSection,
-  onToggle,
-}: LvlAccordionProps) => {
+const LvlAccordion = ({ lvl, items, activeSection }: LvlAccordionProps) => {
   const pathname = usePathname()
   const locale = useLocale()
   const [value, setValue] = useState("")
@@ -91,7 +87,7 @@ const LvlAccordion = ({
                         eventAction: `Menu: ${locale} - ${activeSection}`,
                         eventName: action.href!,
                       })
-                      onToggle()
+                      // onToggle()
                     }}
                   >
                     <div>
@@ -141,7 +137,7 @@ const LvlAccordion = ({
                 })
               }}
             >
-              <ExpandIcon isOpen={isExpanded} />
+              <ExpandIcon />
               <div>
                 <p className="flex-1 text-md font-bold leading-tight text-body">
                   {label}
@@ -164,7 +160,7 @@ const LvlAccordion = ({
                 lvl={(lvl + 1) as Level}
                 items={action.items}
                 activeSection={activeSection}
-                onToggle={onToggle}
+                // onToggle={onToggle}
               />
             </AccordionContent>
           </AccordionItem>

@@ -1,52 +1,43 @@
-import { Languages, Moon, Search, Sun } from "lucide-react"
+"use client"
 
-import LanguagePicker from "@/components/LanguagePicker"
+import { Languages, Search as SearchIcon } from "lucide-react"
+
+import Search from "@/components/Search"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
+import { useMobileMenu } from "./MenuSwitcher"
+import ThemeToggleFooterButton from "./ThemeToggleFooterButton"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
 
-type MenuFooterProps = {
-  onToggle: () => void
-  toggleColorMode: () => void
-  toggleSearch: () => void
-}
-
-const MenuFooter = ({
-  onToggle,
-  toggleColorMode,
-  toggleSearch,
-}: MenuFooterProps) => {
+const MenuFooter = () => {
   const { t } = useTranslation("common")
-  const ThemeIcon = useColorModeValue(Moon, Sun)
-  const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
+  const { setCurrentView } = useMobileMenu()
+
+  const handleLanguageClick = () => {
+    setCurrentView("language-picker")
+  }
 
   return (
     <div className="grid w-full grid-cols-3 items-center justify-center">
-      <FooterButton
-        icon={Search}
-        onClick={() => {
-          // Workaround to ensure the input for the search modal can have focus
-          onToggle()
-          toggleSearch()
-        }}
-      >
-        <FooterItemText>{t("search")}</FooterItemText>
-      </FooterButton>
-
-      <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
-        <FooterItemText>{t(themeLabelKey)}</FooterItemText>
-      </FooterButton>
-
-      <LanguagePicker dialog handleClose={onToggle}>
-        <FooterButton icon={Languages} name={MOBILE_LANGUAGE_BUTTON_NAME}>
-          <FooterItemText>{t("languages")}</FooterItemText>
+      <Search asChild>
+        <FooterButton icon={SearchIcon}>
+          <FooterItemText>{t("search")}</FooterItemText>
         </FooterButton>
-      </LanguagePicker>
+      </Search>
+
+      <ThemeToggleFooterButton />
+
+      <FooterButton
+        icon={Languages}
+        name={MOBILE_LANGUAGE_BUTTON_NAME}
+        onClick={handleLanguageClick}
+      >
+        <FooterItemText>{t("languages")}</FooterItemText>
+      </FooterButton>
     </div>
   )
 }

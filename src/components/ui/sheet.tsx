@@ -65,7 +65,7 @@ const SheetContent = React.forwardRef<
   SheetContentProps
 >(({ side = "right", className, ...props }, ref) => (
   <SheetPortal>
-    <SheetOverlay />
+    {/* <SheetOverlay /> - Disabled for performance reasons. See https://github.com/radix-ui/primitives/issues/1634 for details on floating element performance issues */}
     <SheetPrimitive.Content
       ref={ref}
       className={cn(sheetVariants({ side }), className)}

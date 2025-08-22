@@ -8,21 +8,22 @@ import { filterRealLocales } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import { localeToDisplayInfo } from "./localeToDisplayInfo"
-
 import { useDisclosure } from "@/hooks/useDisclosure"
-import { useTranslation } from "@/hooks/useTranslation"
 
-export const useLanguagePicker = (handleClose?: () => void) => {
-  const { t } = useTranslation("common")
+// Move locales computation outside component to make it stable
+const FILTERED_LOCALES = filterRealLocales(LOCALES_CODES)
+
+export const useLanguagePicker = (
+  languages: LocaleDisplayInfo[],
+  handleClose?: () => void
+) => {
   const locale = useLocale()
 
   // Get the preferred language for the users browser
   const [navLang] = typeof navigator !== "undefined" ? navigator.languages : []
-  const locales = useMemo(() => filterRealLocales(LOCALES_CODES), [])
   const intlLocalePreference = useMemo(
     () =>
-      locales?.reduce((acc, cur) => {
+      FILTERED_LOCALES?.reduce((acc, cur) => {
         if (cur.toLowerCase() === navLang.toLowerCase()) return cur
         if (
           navLang.toLowerCase().startsWith(cur.toLowerCase()) &&
@@ -31,32 +32,27 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           return cur
         return acc
       }, "") as Lang,
-    [navLang, locales]
+    [navLang]
   )
 
-  const languages = useMemo<LocaleDisplayInfo[]>(
-    () =>
-      (locales as Lang[])
-        ?.map((localeOption) => {
-          const displayInfo = localeToDisplayInfo(
-            localeOption,
-            locale as Lang,
-            t
-          )
-          const isBrowserDefault = intlLocalePreference === localeOption
-          return { ...displayInfo, isBrowserDefault }
-        })
-        .sort((a, b) => {
-          // Always put the browser's preferred language first
-          if (a.localeOption === intlLocalePreference) return -1
-          if (b.localeOption === intlLocalePreference) return 1
-          // Otherwise, sort alphabetically by source name using localeCompare
-          return a.sourceName.localeCompare(b.sourceName, locale)
-        }) || [],
-    [intlLocalePreference, locale, locales, t]
-  )
+  // Sort languages client-side to prioritize browser preference
+  const sortedLanguages = useMemo<LocaleDisplayInfo[]>(() => {
+    return [...languages]
+      .map((displayInfo) => {
+        const isBrowserDefault =
+          intlLocalePreference === displayInfo.localeOption
+        return { ...displayInfo, isBrowserDefault }
+      })
+      .sort((a, b) => {
+        // Always put the browser's preferred language first
+        if (a.localeOption === intlLocalePreference) return -1
+        if (b.localeOption === intlLocalePreference) return 1
+        // Otherwise, sort alphabetically by source name using localeCompare
+        return a.sourceName.localeCompare(b.sourceName, locale)
+      })
+  }, [languages, intlLocalePreference, locale])
 
-  const intlLanguagePreference = languages.find(
+  const intlLanguagePreference = sortedLanguages.find(
     (lang) => lang.localeOption === intlLocalePreference
   )
 
@@ -94,7 +90,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
 
   return {
     disclosure: { isOpen, setValue, onOpen, onClose },
-    languages,
+    languages: sortedLanguages,
     intlLanguagePreference,
   }
 }
