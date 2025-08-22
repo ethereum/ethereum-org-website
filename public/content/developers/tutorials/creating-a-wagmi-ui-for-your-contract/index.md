@@ -580,3 +580,6 @@ Of course, you don't really care about providing a user interface for `Greeter`.
 1. You can [add Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
 
 Now go and make your contracts usable for the wide world.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+
