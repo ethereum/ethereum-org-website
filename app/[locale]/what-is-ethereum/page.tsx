@@ -166,24 +166,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <ListenToPlayer slug="what-is-ethereum" />
         </div>
 
-        <div
-          className={cn(
-            "row-start-1 lg:col-start-2 lg:row-span-2",
-            "[&_a]:leading-base [&_ul]:list-decimal [&_ul]:border-s-0 [&_ul]:text-base",
-            "[&_li>a]:inline [&_li]:list-item [&_ul]:list-inside [&_ul]:ps-0",
-            "[&_li:hover]:text-primary-hover [&_li:hover_[data-label='label']]:text-primary-hover",
-            "[&_[data-label='marker']]:!hidden [&_li:has([data-state-active='true'])]:text-primary",
-            // `aside` targets desktop version
-            "[&_aside]:sticky [&_aside]:top-[7.25rem]",
-            "[&_aside]:h-fit [&_aside]:shrink-0 [&_aside]:gap-0 [&_aside]:space-y-2.5 [&_aside]:rounded-2xl [&_aside]:bg-accent-a/10 [&_aside]:px-3 [&_aside]:py-2",
-            "[&_aside]:min-w-80 [&_aside]:max-w-72 [&_aside]:p-8 [&_aside]:text-body-medium",
-            "[&_[data-label='label']]:font-bold [&_[data-label='label']]:normal-case [&_aside_[data-label='label']]:text-lg",
-            // `button` targets mobile version
-            "[&_button>span]:flex-none [&_button]:mb-16 [&_button]:justify-center [&_button]:rounded-lg [&_button]:border-border [&_button]:bg-accent-a/10 [&_button]:text-lg [&_button]:font-bold"
-          )}
-        >
-          <TableOfContents items={tocItems} isMobile className="lg:hidden" />
-          <TableOfContents items={tocItems} className="max-lg:hidden" />
+        <div className="row-start-1 lg:col-start-2 lg:row-span-2">
+          <TableOfContents variant="beginner" items={tocItems} isMobile />
+          <TableOfContents variant="beginner" items={tocItems} />
         </div>
 
         <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">

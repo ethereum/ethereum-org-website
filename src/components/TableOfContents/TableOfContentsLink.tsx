@@ -1,19 +1,37 @@
+import { cva, type VariantProps } from "class-variance-authority"
+
 import type { ToCItem } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
 import { BaseLink } from "../ui/Link"
 
+const variants = cva(
+  "group relative inline-block w-full py-0.5 text-body-medium no-underline lg:w-auto",
+  {
+    variants: {
+      variant: {
+        default: "",
+        beginner: "[&_[data-label='marker']]:!hidden inline leading-base",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
 export type TableOfContentsLinkProps = {
   depth: number
   item: ToCItem
   activeHash?: string
-}
+} & VariantProps<typeof variants>
 
 const Link = ({
   depth,
   item: { title, url },
   activeHash,
+  variant,
 }: TableOfContentsLinkProps) => {
   const isActive = activeHash === url
 
@@ -21,10 +39,10 @@ const Link = ({
     <BaseLink
       data-state-active={isActive}
       href={url}
-      className={cn(
-        "group relative inline-block w-full py-0.5 text-body-medium no-underline lg:w-auto",
-        isActive && "visited text-primary"
-      )}
+      className={variants({
+        variant,
+        className: isActive && "visited text-primary",
+      })}
     >
       <div
         data-label="marker"
