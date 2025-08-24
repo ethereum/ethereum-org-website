@@ -11,7 +11,7 @@ import TableOfContents, {
 } from "@/components/TableOfContents"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
-  Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown" | "maxDepth"> & {
+  Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {
     children: React.ReactNode
     tocItems: TableOfContentsProps["items"]
     heroSection: React.ReactNode
@@ -23,7 +23,6 @@ export const ContentLayout = ({
   children,
   dropdownLinks,
   tocItems,
-  maxDepth,
   showDropdown = true,
   heroSection,
   contributors,
@@ -38,8 +37,9 @@ export const ContentLayout = ({
         <TableOfContents
           items={tocItems}
           dropdownLinks={dropdownLinks}
-          maxDepth={maxDepth}
+          maxDepth={0}
           showDropdown={showDropdown}
+          variant="left"
         />
         <ContentContainer>
           {children}

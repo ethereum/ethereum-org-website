@@ -20,16 +20,16 @@ import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 
 const variants = cva(
-  "sticky top-28 flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
+  "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
   {
     variants: {
       variant: {
-        docs: "top-20 min-w-48 max-w-[25%] p-4 pe-0 gap-4",
+        docs: "top-19 min-w-48 max-w-[25%] p-4 pe-0 gap-4",
         beginner: cn(
-          "min-w-80 max-w-72 lg:p-8 px-3 py-2",
+          "top-28 min-w-80 max-w-72 lg:p-8 px-3 py-2",
           "shrink-0 gap-y-2.5 rounded-2xl bg-accent-a/10 text-body-medium"
         ),
-        left: "me-16 ms-8 basis-[400px] [&_ul]:leading-relaxed",
+        left: "top-28 me-16 ms-8 basis-[400px] [&_ul]:leading-relaxed",
       },
     },
     defaultVariants: {
@@ -54,7 +54,7 @@ const labelVariants = cva("font-bold", {
 const listVariants = cva("mx-0 gap-2 py-0", {
   variants: {
     variant: {
-      docs: "list-none border-s border-s-body-medium ps-4 my-2",
+      docs: "list-none border-s border-s-body-medium ps-4 my-2 text-sm",
       beginner: "list-decimal border-s-0 text-base list-inside ps-0 my-2",
       left: "list-none my-0",
     },
@@ -129,7 +129,7 @@ const TableOfContents = ({
         </ButtonLink>
       )}
       {variant === "left" && showDropdown && dropdownLinks && (
-        <div className="relative mb-8 flex items-end justify-end">
+        <div className="relative mb-8 flex w-full items-end justify-end">
           <ButtonDropdown
             list={dropdownLinks}
             className="w-full min-w-[240px]"

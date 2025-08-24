@@ -11,7 +11,7 @@ const variants = cva(
   {
     variants: {
       variant: {
-        docs: "",
+        docs: "py-0.5",
         beginner: "[&_[data-label='marker']]:!hidden inline leading-base",
         left: "",
       },
