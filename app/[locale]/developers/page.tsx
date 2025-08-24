@@ -177,7 +177,7 @@ const DevelopersPage = async ({
           variants={[
             <Fragment key="empty" />,
             <Section
-              key="without-metrics"
+              key="why?-without-metrics"
               id="why"
               className={cn(
                 "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
@@ -195,7 +195,7 @@ const DevelopersPage = async ({
               <WhyGrid />
             </Section>,
             <Section
-              key="with-metrics"
+              key="why?-with-metrics"
               id="why"
               className={cn(
                 "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
@@ -214,7 +214,7 @@ const DevelopersPage = async ({
                     value="$93 - 169K"
                     sourceName="Glassdoor"
                     sourceUrl="https://www.glassdoor.com/Salaries/developer-salary-SRCH_KO0%2C9.htm"
-                    lastUpdated="2025-08-23T00:00:00Z"
+                    lastUpdated="2025-04-10T12:00:00Z"
                   >
                     Avg developer salary
                   </BigNumber>
@@ -223,7 +223,7 @@ const DevelopersPage = async ({
                     value="$80 - 255K"
                     sourceName="Web3 Jobs"
                     sourceUrl="https://web3.career/web3-salaries/united-states"
-                    lastUpdated="2025-04-10T12:00:00Z"
+                    lastUpdated="2025-08-01T12:00:00Z"
                   >
                     Avg salary in blockchain industry
                   </BigNumber>
