@@ -13,13 +13,13 @@ import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import LeftNavBar from "@/components/LeftNavBar"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
+import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import {
   ButtonLink,
@@ -251,11 +251,10 @@ const StakingPage = ({
         <StakingStatsBox data={data} />
       </HeroStatsWrapper>
       <Page>
-        <LeftNavBar
+        <TableOfContents
+          items={tocArray}
+          variant="left"
           dropdownLinks={dropdownLinks}
-          tocItems={tocArray}
-          // TODO: Remove bang after this component is migrated to Tailwind
-          className="max-lg:!hidden"
         />
         <ContentContainer>
           <Flex className="mt-16 flex-col gap-16 lg:mt-0">

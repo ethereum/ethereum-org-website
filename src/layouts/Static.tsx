@@ -132,9 +132,9 @@ export const StaticLayout = ({
             <TableOfContents
               className="relative"
               items={tocItems}
-              isMobile
               maxDepth={frontmatter.sidebarDepth || 2}
               hideEditButton={!!frontmatter.hideEditButton}
+              isMobile
             />
             {children}
 

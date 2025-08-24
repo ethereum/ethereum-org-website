@@ -4,16 +4,30 @@ import type { ToCItem } from "@/lib/types"
 
 import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
 
-const variants = cva("mb-2 last:mb-0", {
+const itemVariants = cva("last:mb-0", {
   variants: {
     variant: {
-      default: "",
+      docs: "mb-2",
       beginner:
         "[&:has([data-state-active='true'])]:text-primary hover:text-primary-hover list-item",
+      left: "mb-4 list-none text-xl",
     },
   },
   defaultVariants: {
-    variant: "default",
+    variant: "docs",
+  },
+})
+
+const listVariants = cva("", {
+  variants: {
+    variant: {
+      docs: "m-0 mt-2 list-none gap-2 ps-2 text-sm",
+      beginner: "",
+      left: "",
+    },
+  },
+  defaultVariants: {
+    variant: "docs",
   },
 })
 
@@ -22,7 +36,7 @@ export type ItemsListProps = {
   depth: number
   maxDepth: number
   activeHash?: string
-} & VariantProps<typeof variants>
+} & VariantProps<typeof itemVariants>
 
 const ItemsList = ({
   items,
@@ -39,7 +53,7 @@ const ItemsList = ({
       {items.map((item, index) => {
         const { title, items } = item
         return (
-          <li key={index} className={variants({ variant })} {...rest}>
+          <li key={index} className={itemVariants({ variant })} {...rest}>
             <ToCLink
               variant={variant}
               depth={depth}
@@ -47,7 +61,7 @@ const ItemsList = ({
               activeHash={activeHash}
             />
             {items && (
-              <ul key={title} className="m-0 mt-2 list-none gap-2 ps-2 text-sm">
+              <ul key={title} className={listVariants({ variant })}>
                 <ItemsList
                   items={items}
                   depth={depth + 1}
