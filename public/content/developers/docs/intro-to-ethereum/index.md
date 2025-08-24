@@ -1,5 +1,5 @@
 ---
-title: Intro to Ethereum
+title: Technical intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 ---

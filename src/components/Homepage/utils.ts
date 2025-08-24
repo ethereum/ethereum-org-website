@@ -131,7 +131,7 @@ export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
       className: cn(colorOptions["accent-b"], getPosition(2)),
     },
     {
-      ...getCopy("dapps", "/dapps/"),
+      ...getCopy("dapps", "/apps/"),
       imgSrc: ManBabyWomanImage,
       imgWidth: 324,
       className: cn(colorOptions["accent-a"], getPosition(3)),

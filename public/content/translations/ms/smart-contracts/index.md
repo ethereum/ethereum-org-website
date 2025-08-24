@@ -69,7 +69,7 @@ Mereka boleh melakukan pengiraan, mencipta mata wang, menyimpan data, mencetak [
 - [Syiling Stabil](/stablecoins/)
 - [Mencipta dan mengedarkan aset digital yang unik](/nft/)
 - [Pertukaran mata wang automatik dan terbuka](/get-eth/#dex)
-- [Permainan ternyahpusat](/dapps/?category=gaming#explore)
+- [Permainan ternyahpusat](/apps/?category=gaming#explore)
 - [Polisi insurans yang membayar secara automatik](https://etherisc.com/)
 - [Piawaian yang membolehkan orang ramai mencipta mata wang tersuai dan boleh dikendalikan](/developers/docs/standards/tokens/)
 

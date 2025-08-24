@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "10.9.0",
+  "version": "10.10.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -30,6 +30,7 @@
     "test:e2e:report": "playwright show-report tests/e2e/__report__"
   },
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.859.0",
     "@crowdin/crowdin-api-client": "^1.25.0",
     "@docsearch/react": "^3.5.2",
     "@hookform/resolvers": "^3.8.0",
@@ -53,6 +54,7 @@
     "@radix-ui/react-tooltip": "^1.1.2",
     "@radix-ui/react-visually-hidden": "^1.1.0",
     "@rainbow-me/rainbowkit": "^2.2.3",
+    "@sentry/nextjs": "^10.5.0",
     "@socialgouv/matomo-next": "^1.8.0",
     "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-table": "^8.19.3",
@@ -91,7 +93,7 @@
     "reading-time": "^1.5.0",
     "recharts": "^2.13.3",
     "remark-gfm": "^4.0.1",
-    "sharp": "0.32.6",
+    "sharp": "0.34.3",
     "swiper": "^11.2.8",
     "tailwind-merge": "^2.3.0",
     "tailwind-variants": "^0.2.1",
@@ -106,7 +108,7 @@
   "devDependencies": {
     "@chromatic-com/playwright": "^0.12.4",
     "@chromatic-com/storybook": "1.5.0",
-    "@netlify/plugin-nextjs": "^5.10.0",
+    "@netlify/plugin-nextjs": "^5.12.0",
     "@playwright/test": "^1.52.0",
     "@storybook/addon-essentials": "8.6.14",
     "@storybook/addon-interactions": "8.6.14",

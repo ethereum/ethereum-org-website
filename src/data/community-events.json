@@ -1,12 +1,12 @@
 [
   {
-    "title": "NapulETH",
-    "startDate": "2025-07-17",
-    "endDate": "2025-07-19",
-    "href": "https://napuleth.org/",
-    "location": "Naples, ITA",
-    "description": "NapulETH - Biggest Web3 Event In Southern Italy",
-    "imageUrl": "https://cdn.moongate.id/events/59f82809-1766-4dd4-a641-7bf10bb007df/featured-image-1732163941338.svg"
+    "title": "ETHNigeria 2025",
+    "startDate": "2025-08-08",
+    "endDate": "2025-08-09",
+    "href": "https://ethereumnigeria.org",
+    "location": "Lagos, Nigeria",
+    "description": "",
+    "imageUrl": ""
   },
   {
     "title": "Pragma New York",
@@ -81,6 +81,24 @@
     "location": "Warsaw, POL",
     "description": "EthWarsaw 2025",
     "imageUrl": "https://cdn.prod.website-files.com/649014d99c5194ad73558cd3/649af7b1f1fdaa7868890166_ThumbnailPicture.png"
+  },
+  {
+    "title": "Ethereum Brasil",
+    "startDate": "2025-09-10",
+    "endDate": "2025-09-11",
+    "href": "https://www.ethereumbrasil.com/ethbrasil25",
+    "location": "São Paulo, MorumBIS Stadium",
+    "description": "Growing &amp; supporting the Web3 builder community in Brazil.",
+    "imageUrl": "http://static1.squarespace.com/static/627921e48d48986f142cbeb0/t/683e314da0a66461ec03ea42/1743427289450/ethereu+brasil+logo+w+BG.png?format=1500w"
+  },
+  {
+    "title": "EDCON",
+    "startDate": "2025-09-16",
+    "endDate": "2025-09-19",
+    "href": "https://edcon.io/en/",
+    "location": "Osaka,Japan",
+    "description": "Join the global Ethereum community at EDCON 2025 in Osaka, Japan, from August - September . Explore the latest in Ethereum technology through workshops, keynotes, and networking opportunities. Don’t miss this premier global Ethereum event!",
+    "imageUrl": "https://ueth.s3.us-west-2.amazonaws.com/edcon/2025/metadata/index.png"
   },
   {
     "title": "Pragma New Delhi",
