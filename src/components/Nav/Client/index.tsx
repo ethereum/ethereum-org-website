@@ -94,7 +94,7 @@ const ClientSideNav = () => {
 
   // Use fallback value during SSR to prevent hydration mismatch
   // Default to false (mobile) during SSR, then use actual value on client
-  const desktopScreen = isClient ? desktopScreenValue : false
+  const desktopScreen = isClient && desktopScreenValue
 
   return (
     <>
