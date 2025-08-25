@@ -47,7 +47,7 @@ DeFi potensialını görməyin ən yaxşı yollarından biri bu gün mövcud ola
 | Bazarlar həmişə açıqdır.                                                                                           | İşçilərin fasilələrə ehtiyacı olduğu üçün bazarlar bağlanır.                                                                           |
 | Sistem şəffaflıq üzərində qurulub – hər kəs məhsulun məlumatlarına baxa və sistemin necə işlədiyini yoxlaya bilər. | Maliyyə qurumları qapalı qutulardır: siz onların kredit tarixçəsini, idarə olunan aktivlərinin qeydini və s. yoxlaya bilməzsiniz.      |
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   DeFi tətbiqlərini kəşf edin
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Bu qəribə səslənir... "Mən niyə pulumu proqramlaşdırmaq istəyim"? Bunun
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ethereum-da yenisinizsə, sınamaq məqsədilə DeFi tətbiqləri üçün təkliflərimizi araşdırın.</div>
-  <ButtonLink href="/apps/?category=finance">
+  <ButtonLink href="/apps/categories/defi">
     DeFi tətbiqlərini kəşf edin
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Bu qəribə səslənir... "Mən niyə pulumu proqramlaşdırmaq istəyim"? Bunun
 
 Blokçeyn olaraq, Ethereum əməliyyatları təhlükəsiz və qlobal şəkildə göndərmək üçün nəzərdə tutulmuşdur. Bitcoin kimi, Ethereum da bütün dünyaya pul göndərməyi e-poçt göndərmək qədər asanlaşdırır. Sadəcə cüzdanınızda alıcınızın [ENS adını](/nft/#nft-domains) (məsələn, bob.eth) və ya hesab ünvanını daxil edin və ödənişiniz dəqiqələr ərzində birbaşa ona keçəcək (adətən). Ödənişləri göndərmək və ya qəbul etmək üçün sizə [cüzdan](/wallets/) lazımdır.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Ödəniş tətbiqlərinə baxın
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Mərkəzləşdirilməmiş provayderlərdən borc pul götürmək iki əsas növd
 - Peer-to-peer, yəni borcalanın müəyyən bir borc verəndən birbaşa borc alması.
 - Pool-based, yəni kreditorların borcalanların borc ala biləcəyi hovuza vəsait (likvidlik) təmin etməsi.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Borc almaq üçün tətbiqlərə baxın
 </ButtonLink>
 
@@ -183,7 +183,7 @@ Kriptovalyutanızı borc verməklə faiz qazana və vəsaitlərinizin real vaxtd
 - Sizin aDai faiz dərəcələrinə əsasən artacaq və siz cüzdanınızda balansınızın artdığını görə bilərsiniz. APR-dən asılı olaraq, cüzdan balansınız bir neçə gün və ya hətta saatdan sonra 100.1234 kimi bir rəqəm oxuyacaq!
 - İstənilən vaxt aDai balansınıza bərabər olan adi Dai məbləğini çıxara bilərsiniz.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Borc vermək üçün tətbiqlərə baxın
 </ButtonLink>
 
@@ -211,7 +211,7 @@ Ethereum-da minlərlə token var. Mərkəzləşdirilməmiş birjalar (DEXs) ist�
 
 Məsələn, PoolTogether (yuxarıda təsvir edilmişdir) itkisiz lotereyasından istifadə etmək istəyirsinizsə, sizə Dai və ya USDC kimi token lazımdır. Bu DEX-lər sizə ETH-ni həmin tokenlərlə dəyişdirməyə və işiniz bitdikdə yenidən geri qaytarmağa imkan verir.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Token mübadiləsinə baxın
 </ButtonLink>
 
@@ -223,7 +223,7 @@ Bir az daha çox nəzarəti sevən treyderlər üçün daha qabaqcıl alternativ
 
 Mərkəzləşdirilmiş birjadan istifadə edərkən, ticarətdən əvvəl aktivlərinizi depozitə qoymalı və onların güvəndə olduğuna etibar etməlisiniz. Aktivləriniz depozitə qoyulsa da, onlar risk altındadır, çünki mərkəzləşdirilmiş mübadilələr hakerlər üçün cəlbedici hədəflərdir.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Ticarət tətbiqlərinə baxın
 </ButtonLink>
 
@@ -235,7 +235,7 @@ Ethereum-da seçdiyiniz strategiya əsasında portfelinizi böyütməyə çalı�
 
 Yaxşı nümunə [DeFi Pulse İndeks fondudur (DPI)](https://defipulse.com/blog/defi-pulse-index/). Bu, portfelinizin həmişə [bazar kapitallaşmasına görə ən yaxşı DeFi tokenlərini](https://www.coingecko.com/en/defi) ehtiva etməsini təmin etmək üçün avtomatik yenidən balanslaşdıran fonddur. Heç vaxt heç bir detalı idarə etməli deyilsiniz və istədiyiniz zaman fonddan çıxa bilərsiniz.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   İnvestisiya tətbiqlərinə baxın
 </ButtonLink>
 
@@ -249,7 +249,7 @@ Ethereum kraudfandinq üçün ideal platformadır:
 - O, şəffafdır ki, fandreyzerlər nə qədər pul yığıldığını sübut edə bilsinlər. Siz hətta sonradan vəsaitlərin necə xərcləndiyini izləyə bilərsiniz.
 - Məsələn, müəyyən bir son tarix və minimum məbləğ yerinə yetirilmədikdə, vəsait toplayanlar avtomatik geri qaytarma ala bilər.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Kraudfandinq tətbiqlərinə baxın
 </ButtonLink>
 
@@ -276,7 +276,7 @@ Mərkəzləşdirilməmiş sığorta sığortanı daha ucuz, daha sürətli ödə
 
 Ethereum məhsulları, hər hansı bir proqram kimi, səhvlərdən və istismarlarla üzləşə bilər. Beləliklə, hazırda bir çox sığorta məhsulları istifadəçilərini vəsait itkisindən qorumağa yönəlib. Bununla belə, qarşılaşacağımız hər hansı bir problem üçün həll yaratmağa başlayan layihələr var. Buna ən yaxşı nümunə [Keniyada kiçik fermerləri quraqlıq və daşqınlardan qorumaq məqsədi daşıyan Etherisc's Crop məhsuludur](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Mərkəzləşdirilməmiş sığorta, fermerlər üçün ənənəvi sığortadan daha ucuz sığorta təmin edə bilər.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Sığorta tətbiqlərinə baxın
 </ButtonLink>
 
@@ -286,7 +286,7 @@ Ethereum məhsulları, hər hansı bir proqram kimi, səhvlərdən və istismarl
 
 Baş verən bir çox şeylə birlikdə bütün investisiyalarınızı, kreditlərinizi və ticarətlərinizi izləmək üçün bir yola ehtiyacınız olacaq. Bütün DeFi fəaliyyətinizi bir yerdən əlaqələndirməyə imkan verən bir sıra məhsullar var. Bu, DeFi-nin açıq arxitekturasının gözəlliyidir. Komandalar interfeyslər yarada bilər ki, burada siz sadəcə məhsullar arasında balanslarınızdan deyil, həm də onların xüsusiyyətlərindən də istifadə edə bilərsiniz. DeFi-ni daha çox araşdırdığınız zaman bunun da faydasını görə bilərsiniz.
 
-<ButtonLink href="/apps/?category=finance">
+<ButtonLink href="/apps/categories/defi">
   Portfolio tətbiqlərinə baxın
 </ButtonLink>
 

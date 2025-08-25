@@ -1,6 +1,6 @@
 ---
 title: Smart contract composability
-description:
+description: Learn how smart contracts can be combined like Lego blocks to build complex dapps by reusing existing components.
 lang: en
 incomplete: true
 ---

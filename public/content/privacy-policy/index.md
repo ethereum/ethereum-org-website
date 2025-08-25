@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+description: Learn how ethereum.org collects, processes, and protects your personal data in accordance with privacy regulations.
 lang: en
 hideEditButton: true
 ---

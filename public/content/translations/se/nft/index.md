@@ -168,7 +168,7 @@ När de säljer sitt innehåll går pengarna direkt till dem. Om den nya ägaren
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Utforska, köp eller skapa din egen NFT-konst/dina egna NFT-samlarföremål ...</div>
-  <ButtonLink href="/apps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Utforska NFT-konst
   </ButtonLink>
 </InfoBanner>
@@ -201,7 +201,7 @@ Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Kolla in Ethereum-spel, som drivs med hjälp av NFT:er ...</div>
-  <ButtonLink href="/apps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Utforska NFT-spel
   </ButtonLink>
 </InfoBanner>

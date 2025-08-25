@@ -69,7 +69,7 @@ Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [N
 - [Stablecoins](/stablecoins/)
 - [Einzigartige digitale Vermögenswerte erstellen und verteilen](/nft/)
 - [Ein automatischer, offener Währungsumtausch](/get-eth/#dex)
-- [Dezentralisiertes Gaming](/apps/?category=gaming#explore)
+- [Dezentralisiertes Gaming](/apps/categories/gaming)
 - [Eine Versicherungspolice mit automatisierter Auszahlung](https://etherisc.com/)
 - [Ein Standard, der es Menschen ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)
 

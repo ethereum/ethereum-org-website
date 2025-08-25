@@ -56,7 +56,7 @@ Možno ste umelec, ktorý chce zverejniť svoju prácu pomocou NFT bez toho, aby
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Preskúmajte, kúpte alebo si vytvorte vlastné NFT umenie/zberateľské predmety…</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Preskúmať NFT umenie
   </ButtonLink>
 </InfoBanner>

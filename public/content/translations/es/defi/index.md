@@ -48,7 +48,7 @@ Una de las mejores maneras de determinar el potencial de las DeFi es entender lo
 | Los mercados siempre están abiertos.                                                                                                  | Los mercados cierran debido a que los empleados necesitan descanso.                                                                                      |
 | Construido sobre la transparencia: cualquier persona puede mirar los datos del producto e inspeccionar el funcionamiento del sistema. | Las instituciones financieras son como libros cerrados: no puede preguntar por el historial de préstamos, el registro de sus activos administrados, etc. |
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Explorar las aplicaciones DeFi
 </ButtonLink>
 
@@ -66,7 +66,7 @@ Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embarg
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
-  <ButtonLink href="/apps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Explorar las aplicaciones DeFi
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ Existe una alternativa descentralizada para la mayoría de servicios financieros
 
 Como cadena de bloques, Ethereum está diseñado para realizar transacciones de una manera segura y con un alcance global. Al igual que Bitcoin, Ethereum hace que enviar dinero alrededor del mundo sea tan fácil como enviar un correo electrónico. Solo se necesita ingresar el [nombre ENS](/glossary/#ens) del beneficiario (p. ej., bob.eth) o la dirección de cuenta usando su billetera y este recibirá directamente el pago en cuestión de minutos (por lo general). Para enviar o recibir pagos, necesitará tener una [cartera](/wallets/).
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de pagos
 </ButtonLink>
 
@@ -124,7 +124,7 @@ Los préstamos de dinero de proveedores descentralizados se llevan a cabo de dos
 - Entre pares (también conocido como P2P), en que un prestatario tomará prestado directamente de un prestamista específico.
 - En función de las reservas (o «pools»), cuando los prestamistas proporcionan reservas (liquidez) a una reserva de la que los prestatarios pueden pedir préstamos.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de préstamos
 </ButtonLink>
 
@@ -186,7 +186,7 @@ Puede ganar un interés en criptomonedas al prestar dinero: verá cómo aumentan
 - Sus tókenes aDai crecerán en base al tipo de interés y podrá ver cómo aumenta el valor total de su cartera. Dependiendo del [APR](/glossary/#apr), ¡el saldo de su billetera será algo así como 100.1234 al cabo de unos días o incluso unas horas!
 - Puede retirar una cantidad de Dai que sea igual a sus fondos de aDai siempre que quiera.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de préstamos
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Hay miles de tókenes en Ethereum. Los intercambios descentralizados (DEX) le pe
 
 Por ejemplo, si quiere usar la lotería sin pérdidas PoolTogether (explicada arriba) necesitará un token como Dai o USDC. Estos DEX le permiten cambiar sus ETH por tókenes y viceversa cuando haya acabado.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver intercambios de tókenes
 </ButtonLink>
 
@@ -226,7 +226,7 @@ Hay más opciones avanzadas para los inversores que quieren tener más control. 
 
 Cuando usa un intercambio centralizado, tiene que depositar sus activos antes de la operación y confiar en ellos. A pesar de que sus activos sí son depositados, están en riesgo, ya que los intercambios descentralizados son objetivos atractivos para los hackers.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de transacciones
 </ButtonLink>
 
@@ -238,7 +238,7 @@ Hay productos de gestión de fondos en Ethereum que tratarán de hacer crecer su
 
 Un buen ejemplo es el [fondo DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Este es un fondo que se reequilibra automáticamente para asegurar que su portafolio siempre incluya los mejores tókenes DeFi por capitalización de mercado. Nunca tendrá que gestionar ninguno de los detalles y puede retirar del fondo cuando usted quiera.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de inversión
 </ButtonLink>
 
@@ -252,7 +252,7 @@ Ethereum es una plataforma ideal para la recaudación de fondos:
 - Es transparente, por lo que los recaudadores pueden demostrar cuánto dinero se ha recaudado. Incluso puede rastrear cómo se están usando los fondos.
 - Los recaudadores pueden configurar reembolsos automáticos si, por ejemplo, hay una fecha límite y una cantidad mínima a la que no se ha llegado.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de recaudación de fondos
 </ButtonLink>
 
@@ -281,7 +281,7 @@ El aseguramiento descentralizado tiene como objetivo hacer que el aseguramiento 
 
 Los productos de Ethereum —al igual que el software— pueden sufrir virus y aprovechamiento. Ahora mismo hay muchos productos de seguros enfocándose en proteger a sus usuarios de pérdidas de fondos. Sin embargo, existen proyectos que empiezan a crear cobertura para todo lo que la vida nos depare. Un buen ejemplo es la cobertura de Etherisc Crop, que pretende [proteger a los pequeños agricultores en Kenia contra las sequías y las inundaciones](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). El aseguramiento descentralizado ofrece una cobertura más barata para los granjeros a los que se les cobra con precios fuera del de los seguros tradicionales.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de aseguramiento
 </ButtonLink>
 
@@ -291,7 +291,7 @@ Los productos de Ethereum —al igual que el software— pueden sufrir virus y a
 
 Con tantas cosas en marcha, necesitará una forma de realizar un seguimiento de todas sus inversiones, préstamos y operaciones. Existen una gran cantidad de productos que le permiten coordinar toda su actividad de DeFi (Finanzas Descentralizadas) desde un solo lugar. Esta es la belleza de la arquitectura abierta de DeFi. Los equipos pueden crear interfaces en las que no solo puede ver sus saldos entre productos, sino que también puede usar sus funciones. Le resultará más útil a medida que explora más sobre DeFi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ver DApps de portafolios
 </ButtonLink>
 

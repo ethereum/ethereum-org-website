@@ -68,7 +68,7 @@ O modelo padrão atual para o financiamento da ciência é que indivíduos ou gr
 
 Os estudos demonstraram que os painéis de avaliação das subvenções não selecionam corretamente as propostas de elevada qualidade, uma vez que as mesmas propostas apresentadas a diferentes painéis têm resultados muito distintos. À medida que o financiamento se tornou mais escasso, concentrou-se num grupo mais pequeno de investigadores seniores com projetos intelectualmente mais conservadores. O efeito criou um cenário de financiamento hipercompetitivo, consolidando incentivos perversos e sufocando a inovação.
 
-A Web3 tem o potencial de romper com este modelo de financiamento obsoleto, experimentando diferentes modelos de incentivo desenvolvidos pelas DAOs e pela Web3 em geral. [Financiamento retroativo de bens públicos](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [financiamento quadrático](https://papers.ssrn. com/sol3/papers.cfm?abstract_id=2003531), [governança DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) e [estruturas de incentivo tokenizadas](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) são algumas das Ferramentas Web3 que podem revolucionar o financiamento da ciência.
+A Web3 tem o potencial de romper com este modelo de financiamento obsoleto, experimentando diferentes modelos de incentivo desenvolvidos pelas DAOs e pela Web3 em geral. [Financiamento retroativo de bens públicos](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [financiamento quadrático](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [governança DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) e [estruturas de incentivo tokenizadas](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) são algumas das Ferramentas Web3 que podem revolucionar o financiamento da ciência.
 
 ### Propriedade intelectual e desenvolvimento {#ip-ownership}
 
@@ -126,7 +126,7 @@ Aceitamos sugestões para novos projetos a serem incluídos na lista - consulte 
 - [DeSci: O Futuro da Investigação por Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financiamento da ciência (Epílogo: DeSci e novos primitivos criptográficos) por Nadia](https://nadia.xyz/science-funding)
 - [A descentralização está a desestabilizar o desenvolvimento de medicamentos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [O que é o DeSci - Ciência Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [O que é o DeSci - Ciência Descentralizada?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vídeos {#videos}
 

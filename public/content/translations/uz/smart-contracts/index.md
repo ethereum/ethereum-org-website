@@ -69,7 +69,7 @@ Ular hisob-kitoblarni amalga oshirishi, valyuta yaratishi, ma’lumotlarni saqla
 - [Stablecoins](/stablecoins/)
 - [Noyob raqamli aktivlarni yaratish va tarqatish](/nft/)
 - [Avtomatik, ochiq valyuta ayirboshlash](/get-eth/#dex)
-- [Markazlashmagan o‘yin](/apps/?category=gaming#explore)
+- [Markazlashmagan o‘yin](/apps/categories/gaming)
 - [Avtomatik ravishda to‘lanadigan sug‘urta polisi](https://etherisc.com/)
 - [Odamlarga moslangan, o‘zaro moslashuvchan valyutalarni yaratish imkonini beruvchi standart](/developers/docs/standards/tokens/)
 

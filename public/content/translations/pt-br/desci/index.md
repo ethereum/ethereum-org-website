@@ -126,7 +126,7 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [DeSci: O futuro da pesquisa por Samuel Azinhoso](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financiamento de ciência (Epílogo: DeSci e novas criptoprimitivas) por Nadia](https://nadia.xyz/science-funding)
 - [A descentralização está perturbando o desenvolvimento de medicamentos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [O que é DeSci – Ciência Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [O que é DeSci – Ciência Descentralizada?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vídeos {#videos}
 

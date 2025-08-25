@@ -69,7 +69,7 @@ Dem fit pafom komputashons, kreate kurrensy, store data, mint [NFTs](/glossary/#
 - [Stabolcoins](/stablecoins/)
 - [To dey kreate and dey distribute unik dijital assets](/nft/)
 - [One automatik, open kurensy ekshanj](/get-eth/#dex)
-- [Decentralized gaming](/apps/?category=gaming#explore)
+- [Decentralized gaming](/apps/categories/gaming)
 - [Insurans policy wey go dey pay out automatikaly](https://etherisc.com/)
 - [One standard wey dey allow pipol kreate kustomized, interopabol kurensis](/developers/docs/standards/tokens/)
 

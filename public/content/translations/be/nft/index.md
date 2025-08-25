@@ -56,7 +56,7 @@ NFT выкарыстоўваюцца для многіх рэчаў, у тым �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Шукайце, купляйце або стварайце ўласныя творы мастацтва NFT ці прадметы калекцыяніравання...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Даведайцеся пра мастацтва NFT
   </ButtonLink>
 </InfoBanner>

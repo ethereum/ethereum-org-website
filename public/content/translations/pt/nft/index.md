@@ -56,7 +56,7 @@ Talvez seja um artista que queira partilhar o seu trabalho usando NFT, sem perde
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explore, compre ou crie a sua própria arte/colecionáveis NFT...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Explore arte NFT
   </ButtonLink>
 </InfoBanner>

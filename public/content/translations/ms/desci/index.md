@@ -126,7 +126,7 @@ Kami mengalu-alukan cadangan untuk projek baharu untuk disenaraikan - sila lihat
 - [DeSci: Masa Depan Penyelidikan oleh Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Pembiayaan Sains (Epilog: DeSci dan primitif kripto baharu) oleh Nadia](https://nadia.xyz/science-funding)
 - [Keteragihan Mengganggu Perkembangan Ubatan](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Apakah DeSci – Sains Teragih?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Apakah DeSci – Sains Teragih?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Video {#videos}
 

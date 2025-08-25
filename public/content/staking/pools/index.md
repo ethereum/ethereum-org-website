@@ -1,6 +1,6 @@
 ---
 title: Pooled staking
-description: An overview of how to get started with pooled ETH staking
+description: Learn about staking pools
 lang: en
 template: staking
 emoji: ":money_with_wings:"

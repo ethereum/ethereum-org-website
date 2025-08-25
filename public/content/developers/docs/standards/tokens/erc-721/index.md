@@ -1,6 +1,6 @@
 ---
 title: ERC-721 Non-Fungible Token Standard
-description:
+description: Learn about ERC-721, the standard for non-fungible tokens (NFTs) that represent unique digital assets on Ethereum.
 lang: en
 ---
 

@@ -69,7 +69,7 @@ lang: ko
 - [스테이블코인](/stablecoins/)
 - [고유한 디지털 자산 생성 및 배포](/nft/)
 - [자동 개방형 환전소](/get-eth/#dex)
-- [탈중앙화 게임](/apps/?category=gaming#explore)
+- [탈중앙화 게임](/apps/categories/gaming)
 - [자동으로 지급되는 보험](https://etherisc.com/)
 - [사용자가 상호 운용 가능한 맞춤형 통화를 만들 수 있게 하는 표준](/developers/docs/standards/tokens/)
 

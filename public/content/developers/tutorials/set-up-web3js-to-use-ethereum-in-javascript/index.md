@@ -1,6 +1,6 @@
 ---
 title: Set up web3.js to use the Ethereum blockchain in JavaScript
-description: How to use a smart contract to interact with a token using the Solidity language
+description: Learn how to set up and configure web3.js library to interact with the Ethereum blockchain from JavaScript applications.
 author: "jdourlens"
 tags: ["web3.js", "javascript"]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
 title: Online communities
-description: A listing of the grant programs throughout the Ethereum ecosystem.
+description: Discover online forums, chat rooms, and social media communities where Ethereum enthusiasts gather to discuss and collaborate.
 lang: en
 ---
 

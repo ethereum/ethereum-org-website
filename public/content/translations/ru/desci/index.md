@@ -126,7 +126,7 @@ Web3 обладает потенциалом, который позволит р
 - [DeSci: будущее исследований с Сэмюэлом Акиношо](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Финансирование науки (эпилог: DeSci и новые криптопримитивности). Автор: Надия](https://nadia.xyz/science-funding)
 - [Децентрализация подрывает устоявшуюся систему разработки лекарственных средств](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Что такое децентрализованная наука (DeSci)?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Что такое децентрализованная наука (DeSci)?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Видео {#videos}
 

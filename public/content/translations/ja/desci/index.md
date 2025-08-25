@@ -126,7 +126,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [DeSci: Samuel Akinoshoによる研究の未来](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [サイエンスファンディング(エピローグ: DeSciと新しい暗号プリミティブ) by Nadia](https://nadia.xyz/science-funding)
 - [分散化は薬物開発を妨害する](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [DeSci - 分散型科学とは何か？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [DeSci - 分散型科学とは何か？](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 動画 {#videos}
 
