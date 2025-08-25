@@ -25,7 +25,7 @@ To preserve the transaction history, blocks are strictly ordered (every new bloc
 
 Once a block is put together by a randomly selected validator on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and a new validator is selected to create the next block. The exact block-assembly process and commitment/consensus process is currently specified by Ethereum’s “proof-of-stake” protocol.
 
-## Proof-of-stake protocol {#proof-of-work-protocol}
+## Proof-of-stake protocol {#proof-of-stake-protocol}
 
 Proof-of-stake means the following:
 
