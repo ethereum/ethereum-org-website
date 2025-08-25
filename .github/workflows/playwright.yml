@@ -10,7 +10,7 @@ jobs:
     env:
       CI: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Wait for Netlify Deploy
         id: netlify_deploy
@@ -51,7 +51,7 @@ jobs:
     needs: playwright
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v4
