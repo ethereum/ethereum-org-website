@@ -1,8 +1,12 @@
+import { Fragment } from "react"
+import { Check } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
+import BigNumber from "@/components/BigNumber"
 import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
@@ -61,6 +65,56 @@ const Scroller = ({
   )
 }
 
+const WhyGrid = () => {
+  const items = [
+    {
+      heading: "Money you can program",
+      description:
+        "Write code that defines how value moves, when, and to whom. No banks, no intermediaries, just logic you define.",
+    },
+    {
+      heading: "Future-proof skills",
+      description:
+        "Learn the building blocks of the next internet. The tech might evolve, but the principles of web3 are here to stay.",
+    },
+    {
+      heading: "Censorship resistance",
+      description:
+        "Build projects and commerce that can't be silenced by governments, corporations, or algorithms. If it matters, it stays online.",
+    },
+    {
+      heading: "Digital sovereignty",
+      description:
+        "Own your identity, assets, and creations online without relying on platforms that can delete you.",
+    },
+  ]
+
+  return (
+    <div
+      className={cn(
+        "rounded-4xl border border-accent-c/20",
+        "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
+        "bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+      )}
+    >
+      {items.map(({ heading, description }) => (
+        <div className="flex gap-1.5" key={heading}>
+          <div className="my-1 grid h-fit place-items-center rounded-full bg-success/20 p-1">
+            <Check
+              className="size-3 stroke-[4] text-success"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+            />
+          </div>
+          <div className="space-y-1">
+            <h3 className="text-lg">{heading}</h3>
+            <p className="text-body-medium">{description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 const DevelopersPage = async ({
   params,
 }: {
@@ -117,6 +171,68 @@ const DevelopersPage = async ({
             <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
           </div>
         </Section>
+
+        <ABTestWrapper
+          testKey="2025-08-why-dev"
+          variants={[
+            <Fragment key="empty" />,
+            <Section
+              key="why-without-metrics"
+              id="why"
+              className={cn(
+                "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
+                "-mx-8 w-screen max-w-screen-2xl items-center bg-background-highlight px-8 py-10 md:py-20"
+              )}
+            >
+              <div className="space-y-4">
+                <h2>Create the internet you want to live in</h2>
+                <p>
+                  Ethereum is where you turn ideas into un-censorable systems
+                  that run anywhere, forever. Build apps, money, and communities
+                  that answer to no one but their users.
+                </p>
+              </div>
+              <WhyGrid />
+            </Section>,
+            <Section
+              key="why-with-metrics"
+              id="why"
+              className={cn(
+                "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
+                "-mx-8 w-screen max-w-screen-2xl items-center bg-background-highlight px-8 py-10 md:py-20"
+              )}
+            >
+              <div className="space-y-4">
+                <h2>Get paid well. Stay remote. Build the future.</h2>
+                <p>
+                  Over half of blockchain careers are remote-first with some
+                  estimates putting the number as high as 70%.
+                </p>
+                <div className="flex flex-wrap gap-x-6 md:gap-x-8">
+                  <BigNumber
+                    variant="light"
+                    value="$93 - 169K"
+                    sourceName="Glassdoor"
+                    sourceUrl="https://www.glassdoor.com/Salaries/developer-salary-SRCH_KO0%2C9.htm"
+                    lastUpdated="2025-04-10T12:00:00Z"
+                  >
+                    Avg developer salary
+                  </BigNumber>
+                  <BigNumber
+                    variant="light"
+                    value="$80 - 255K"
+                    sourceName="Web3 Jobs"
+                    sourceUrl="https://web3.career/web3-salaries/united-states"
+                    lastUpdated="2025-08-01T12:00:00Z"
+                  >
+                    Avg salary in blockchain industry
+                  </BigNumber>
+                </div>
+              </div>
+              <WhyGrid />
+            </Section>,
+          ]}
+        />
 
         <Section
           id="resources"
