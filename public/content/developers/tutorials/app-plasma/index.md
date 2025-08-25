@@ -19,7 +19,7 @@ WRITE MORE HERE
 
 ### Zero-knowledge proofs
 
-At a very basic level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between *Data<sub>public</sub>* and *Data<sub>private</sub>. The verifier knows *P* and *Data<sub>public</sub>*.
+At a very basic level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between *Data<sub>public</sub>* and *Data<sub>private</sub>. The verifier knows *Relationship* and *Data<sub>public</sub>*.
 
 To preserve privacy, we need the state (the accounts and their balances) and the transaction to both be private. But to ensure integrity, we need the [cryptographic hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of states and transactions to be public.
 
