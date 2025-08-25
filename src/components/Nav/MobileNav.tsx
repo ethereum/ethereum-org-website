@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils/cn"
 
 import Search from "../Search"
 
-import MobileMenu from "./Mobile"
+import MobileMenu from "./MobileMenu"
 
-export const MobileNav = ({ className }: { className?: string }) => {
+const MobileNav = ({ className }: { className?: string }) => {
   return (
     <div className={cn("flex items-center", className)}>
       <Search />
@@ -12,3 +12,5 @@ export const MobileNav = ({ className }: { className?: string }) => {
     </div>
   )
 }
+
+export default MobileNav

@@ -12,7 +12,7 @@ import { Button } from "../ui/buttons/Button"
 import Menu from "./Menu"
 import { ThemeToggleButton } from "./ThemeToggleButton"
 
-export const DesktopNav = async ({ className }: { className?: string }) => {
+const DesktopNav = async ({ className }: { className?: string }) => {
   const t = await getTranslations({ namespace: "common" })
 
   const locale = await getLocale()
@@ -44,3 +44,5 @@ export const DesktopNav = async ({ className }: { className?: string }) => {
     </div>
   )
 }
+
+export default DesktopNav

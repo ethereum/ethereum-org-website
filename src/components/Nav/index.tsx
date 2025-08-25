@@ -1,11 +1,16 @@
+import dynamic from "next/dynamic"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
 
 import { BaseLink } from "../ui/Link"
 
-import { DesktopNav } from "./DesktopNav"
-import { MobileNav } from "./MobileNav"
+const DesktopNav = dynamic(() => import("./DesktopNav"), {
+  ssr: false,
+})
+const MobileNav = dynamic(() => import("./MobileNav"), {
+  ssr: false,
+})
 
 const Nav = async () => {
   const locale = await getLocale()

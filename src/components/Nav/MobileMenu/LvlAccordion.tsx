@@ -1,11 +1,10 @@
-"use client"
-
-import { useState } from "react"
-import { useLocale } from "next-intl"
+import { getLocale } from "next-intl/server"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
+import { Lang } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
+// import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
 import { Button } from "../../ui/buttons/Button"
@@ -19,8 +18,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./MenuAccordion"
-
-import { usePathname } from "@/i18n/routing"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -42,17 +39,29 @@ const backgroundColorPerLevel = {
   4: "bg-background-high",
 }
 
-const LvlAccordion = ({ lvl, items, activeSection }: LvlAccordionProps) => {
-  const pathname = usePathname()
-  const locale = useLocale()
-  const [value, setValue] = useState("")
+const LvlAccordion = async (props: LvlAccordionProps) => {
+  const locale = await getLocale()
 
   return (
-    <Accordion type="single" collapsible value={value} onValueChange={setValue}>
+    <Accordion locale={locale as Lang}>
+      <LvlAccordionItems {...props} />
+    </Accordion>
+  )
+}
+const LvlAccordionItems = async ({
+  lvl,
+  items,
+  activeSection,
+}: LvlAccordionProps) => {
+  // const locale = await getLocale()
+  // TODO: get pathname from the current page
+  const pathname = "/"
+
+  return (
+    <>
       {items.map(({ label, description, ...action }) => {
         const isLink = "href" in action
         const isActivePage = isLink && cleanPath(pathname) === action.href
-        const isExpanded = value === label
 
         const nestedAccordionSpacingMap = {
           2: "ps-8",
@@ -81,14 +90,13 @@ const LvlAccordion = ({ lvl, items, activeSection }: LvlAccordionProps) => {
                 >
                   <BaseLink
                     href={action.href}
-                    onClick={() => {
-                      trackCustomEvent({
-                        eventCategory: "Mobile navigation menu",
-                        eventAction: `Menu: ${locale} - ${activeSection}`,
-                        eventName: action.href!,
-                      })
-                      // onToggle()
-                    }}
+                    // onClick={() => {
+                    //   trackCustomEvent({
+                    //     eventCategory: "Mobile navigation menu",
+                    //     eventAction: `Menu: ${locale} - ${activeSection}`,
+                    //     eventName: action.href!,
+                    //   })
+                    // }}
                   >
                     <div>
                       <p
@@ -127,15 +135,15 @@ const LvlAccordion = ({ lvl, items, activeSection }: LvlAccordionProps) => {
             <AccordionTrigger
               heading={`h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"}
               className={cn("text-body", nestedAccordionSpacingMap[lvl])}
-              onClick={() => {
-                trackCustomEvent({
-                  eventCategory: "Mobile navigation menu",
-                  eventAction: `Level ${lvl - 1} section changed`,
-                  eventName: `${
-                    isExpanded ? "Close" : "Open"
-                  } section: ${label} - ${description.slice(0, 16)}...`,
-                })
-              }}
+              // onClick={() => {
+              //   trackCustomEvent({
+              //     eventCategory: "Mobile navigation menu",
+              //     eventAction: `Level ${lvl - 1} section changed`,
+              //     eventName: `${
+              //       isExpanded ? "Close" : "Open"
+              //     } section: ${label} - ${description.slice(0, 16)}...`,
+              //   })
+              // }}
             >
               <ExpandIcon />
               <div>
@@ -160,13 +168,12 @@ const LvlAccordion = ({ lvl, items, activeSection }: LvlAccordionProps) => {
                 lvl={(lvl + 1) as Level}
                 items={action.items}
                 activeSection={activeSection}
-                // onToggle={onToggle}
               />
             </AccordionContent>
           </AccordionItem>
         )
       })}
-    </Accordion>
+    </>
   )
 }
 

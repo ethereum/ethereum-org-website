@@ -4,8 +4,6 @@ import { useParams } from "next/navigation"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
-import { useMobileMenu } from "../Nav/Mobile/MenuSwitcher"
-
 import LanguagePickerFooter from "./LanguagePickerFooter"
 import LanguagePickerMenu from "./LanguagePickerMenu"
 import { useLanguagePicker } from "./useLanguagePicker"
@@ -17,7 +15,6 @@ type MobileLanguagePickerProps = {
 }
 
 const MobileLanguagePicker = ({ languages }: MobileLanguagePickerProps) => {
-  const { setCurrentView } = useMobileMenu()
   const pathname = usePathname()
   const { push } = useRouter()
   const params = useParams()
@@ -34,8 +31,6 @@ const MobileLanguagePicker = ({ languages }: MobileLanguagePickerProps) => {
         locale: currentValue,
       }
     )
-    // Close the sheet by going back to menu view
-    setCurrentView("menu")
   }
 
   const handleNoResultsClose = () => {
