@@ -56,7 +56,7 @@ If you want to raise a flag on a particular string that needs attention, feel fr
 
 ## What is Translation Memory (TM)? {#translation-memory}
 
-Translation Memory (TM) is a feature of Crowdin that stores all the previously translated strings across [ethereum.org](http://ethereum.org/). When a string is translated, it is automatically saved into our project TM. This could be a useful tool to help you save your time!
+Translation Memory (TM) is a feature of Crowdin that stores all the previously translated strings across [ethereum.org](/). When a string is translated, it is automatically saved into our project TM. This could be a useful tool to help you save your time!
 
 - Look at the "TM and MT Suggestions" section and you will see how other translators translated the same or similar string. If you find a suggestion with a high matching rate, feel free to refer to the translation by clicking it.
 - If there is nothing on the list, you can search the TM for previously made translations and reuse them for consistency.
