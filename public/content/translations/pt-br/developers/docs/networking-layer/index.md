@@ -75,9 +75,9 @@ Junto com as mensagens de saudação, o protocolo de transmissão também pode e
 
 Uma vez que os pares estão conectados e uma sessão RLPx foi iniciada, o protocolo de transmissão define como os pares se comunicam. Inicialmente, o protocolo de transmissão definiu três tarefas principais: sincronização de cadeia, propagação de bloco e troca de transação. No entanto, uma vez que o Ethereum mudou para a prova de participação, a propagação do bloco e a sincronização da cadeia tornaram-se parte da camada de consenso. A troca de transações ainda é da responsabilidade dos clientes de execução. A troca de transações refere-se à troca de transações pendentes entre nós para que os construtores de blocos possam selecionar algumas delas para inclusão no próximo bloco. Informações detalhadas sobre essas tarefas estão disponíveis [aqui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Os clientes que oferecem suporte a esses subprotocolos os expõem por meio do [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### les (subprotocolo ethereum leve) {#les}
+#### les (subprotocolo Ethereum leve) {#les}
 
-Este é um protocolo mínimo para sincronizar clientes leves. Esse protocolo raramente é usado porque são necessários nós completos para fornecer dados a clientes leves sem serem incentivados. O comportamento padrão dos clientes de execução é não transmitir dados de clientes leves sobre subprotocolos ethereum leve (les). Mais informações estão disponíveis nas [especificações](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
+Este é um protocolo mínimo para sincronizar clientes leves. Esse protocolo raramente é usado porque são necessários nós completos para fornecer dados a clientes leves sem serem incentivados. O comportamento padrão dos clientes de execução é não transmitir dados de clientes leves sobre subprotocolos Ethereum leve (les). Mais informações estão disponíveis nas [especificações](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 
 #### Captura {#snap}
 

@@ -57,7 +57,7 @@ Identitas yang terdesentralisasi memiliki berbagai pontesi yang dapat dimanfaatk
 
 Identitas terdesentralisasi dapat membantu menggantikan login berdasarkan kata sandi menjadi autentikasi terdesentralisasi. Penyedia layanan dapat menerbitkan pengesahan pada pengguna, yang dapat disimpan dalam dompet Ethereum. Sebuah contoh pengesahan adalah [NFT](/glossary/#nft) menyetujui akses kepemilikan pada komunitas daring.
 
-Sebuah fungsi [Sign-in dengan Ethereum](https://login.xyz/) akan memungkinkan server untuk mengonfirmasi akun ethereum pengguna dan mencocokkan pengesahan yang dibutuhkan dari alamat akun mereka. Ini dimaksudkan bahwa pengguna dapat mengakses banyak platform dan situs web tanpa harus mengingat kata sandi yang panjang dan meningkatkan pengalaman daring pada para pengguna.
+Sebuah fungsi [Sign-in dengan Ethereum](https://login.xyz/) akan memungkinkan server untuk mengonfirmasi akun Ethereum pengguna dan mencocokkan pengesahan yang dibutuhkan dari alamat akun mereka. Ini dimaksudkan bahwa pengguna dapat mengakses banyak platform dan situs web tanpa harus mengingat kata sandi yang panjang dan meningkatkan pengalaman daring pada para pengguna.
 
 ### 2. Autentikasi KYC {#kyc-authentication}
 

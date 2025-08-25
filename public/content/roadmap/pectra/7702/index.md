@@ -8,7 +8,7 @@ lang: en
 
 ## Abstract {#abstract}
 
-EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
+EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy Ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
 
 This new transaction type introduces an authorization list. Each authorization tuple in the list is defined as
 

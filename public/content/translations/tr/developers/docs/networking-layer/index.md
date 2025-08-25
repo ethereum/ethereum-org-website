@@ -75,7 +75,7 @@ Merhaba mesajları ile birlikte, kablo protokolü ayrıca bir eşe bağlantını
 
 Eşler bağlandığında ve bir RLPx oturumu başlatıldığında, kablo protokolü eşlerin nasıl iletişim kurduğunu tanımlar. Kablo protokolü başlangıçta üç ana görevi tanımlıyordu: zincir senkronizasyonu, blok yayılımı ve işlem değişimi. Bununla birlikte, Ethereum hisse ispatına geçiş yaptıktan sonra blok yayılımı ve zincir senkronizasyonu, fikir birliği katmanının bir parçası haline geldi. İşlem borsası, hala yürütüm istemcilerinin faaliyet alanındadır. İşlem takası, blok geliştiricilerin bir sonraki bloğa dahil etmek üzere bazılarını seçebilmeleri için düğümler arasında bekleyen işlemlerin takas edilmesini ifade eder. Bu görevlerle ilgili ayrıntılı bilgilere [buradan](https://github.com/ethereum/devp2p/blob/master/caps/eth.md) ulaşabilirsiniz. Bu alt protokolleri destekleyen istemciler, bunları [JSON-RPC](/developers/docs/apis/json-rpc/) aracılığıyla kullanıma sunar.
 
-#### les (hafif ethereum alt protokolü) {#les}
+#### les (hafif Ethereum alt protokolü) {#les}
 
 Bu, hafif istemcileri senkronize etmek için minimum bir protokoldür. Geleneksel olarak bu protokol nadiren kullanılmıştır, çünkü tam düğümlerin hafif istemcilere teşvik olmadan veri sunması gerekir. Yürütme istemcilerinin varsayılan davranışı, hafif istemci verilerini les üzerinden sunmamaktır. Daha fazla bilgi les [spesifikasyonu](https://github.com/ethereum/devp2p/blob/master/caps/les.md)nda mevcuttur.
 

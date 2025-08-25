@@ -125,7 +125,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Step 6: Update the `.env` file {#update-env}
 
-Now, in order to create and send transactions to the Ethereum chain, we’ll use your public ethereum account address to get the account nonce (will explain below).
+Now, in order to create and send transactions to the Ethereum chain, we’ll use your public Ethereum account address to get the account nonce (will explain below).
 
 Add your public key to your `.env` file — if you completed part 1 of the tutorial, our `.env` file should now look like this:
 

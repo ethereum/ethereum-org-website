@@ -19,7 +19,7 @@ Ethereum.org topluluğu şunlar için çabalar:
 - erişilebilir
 - topluluk odaklı
 - ethereum'un temelindeki teknolojiye ve kullanım durumuna odaklanır
-- ethereum konseptlerine ve tasarım ilkelerine odaklanır
+- Ethereum konseptlerine ve tasarım ilkelerine odaklanır
 
 ## Biz ne değiliz {#what-we-are-not}
 

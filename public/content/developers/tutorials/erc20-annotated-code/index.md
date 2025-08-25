@@ -354,7 +354,7 @@ As the name suggests, this variable keeps track of the total supply of tokens.
 These three variables are used to improve readability. The first two are self-explanatory, but `_decimals`
 isn't.
 
-On one hand, ethereum does not have floating point or fractional variables. On the other hand,
+On one hand, Ethereum does not have floating point or fractional variables. On the other hand,
 humans like being able to divide tokens. One reason people settled on gold for currency was that
 it was hard to make change when somebody wanted to buy a duck's worth of cow.
 
