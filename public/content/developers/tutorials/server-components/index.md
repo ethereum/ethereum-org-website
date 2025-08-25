@@ -288,3 +288,5 @@ These are packages that are required at runtime, when running `dist/app.js`.
 The centralized server we created here does its job, which is to act as an agent for a user. Anybody else who wants the dapp to continue functioning and is willing to spend the gas can run a new instance of the server with their own address. 
 
 However, this only works when the centralized server's actions can be easily verified. If the centralized server has any secret state information, or runs difficult calculations, it is a centralized entity that you need trust to use the application, which is exactly what blockchains try to avoid. In a future article I plan to show how to use [zero-knowledge proofs](/zero-knowledge-proofs) to get around this problem.
+
+[See here for more of my work](https://cryptodocguy.pro/).
