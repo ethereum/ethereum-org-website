@@ -1,7 +1,6 @@
 "use client"
 
 import { useRef } from "react"
-import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
 import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
 import * as Portal from "@radix-ui/react-portal"
@@ -10,10 +9,10 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
+import SearchModal from "./SearchModal"
+
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useTranslation } from "@/hooks/useTranslation"
-
-const SearchModal = dynamic(() => import("./SearchModal"))
 
 type Props = {
   children: (props: ReturnType<typeof useDisclosure>) => React.ReactNode
