@@ -133,7 +133,6 @@ ETH'nizi daha ucuza gönderebilmeniz için gaz fiyatlarını takip etmek istiyor
 
 - [Ethereum Gazı Açıklaması](https://defiprime.com/gas)
 - [Akıllı Sözleşmelerinizin gaz tüketimini azaltmak](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Hisse İspatına karşı İş İspatı](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Geliştiriciler İçin Gaz Optimizasyonu](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 dokümanları](https://eips.ethereum.org/EIPS/eip-1559).
 - [Tim Beiko'nun EIP-1559 Kaynakları](https://hackmd.io/@timbeiko/1559-resources).

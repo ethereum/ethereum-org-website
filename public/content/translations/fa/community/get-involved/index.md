@@ -112,7 +112,6 @@ lang: fa
 - [Web3 Army](https://web3army.xyz/)
 - [فرصت‌های شغلی Crypto Valley](https://cryptovalley.jobs/)
 - [فرصت‌های شغلی اتریوم](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## پیوستن به DAO {#decentralized-autonomous-organizations-daos}
 
@@ -123,7 +122,6 @@ lang: fa
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *جامعه‌ی هنری*
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *مرکز پرورش DAO*
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*

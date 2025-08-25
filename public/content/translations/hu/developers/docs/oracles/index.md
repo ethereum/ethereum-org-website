@@ -362,7 +362,7 @@ Az eredeti megközelítés az álvéletlenszerű kriptográfiai függvények has
 
 Lehetséges a véletlen értéket a láncon kívül generálni és a láncon belül elküldeni, de ez nagy bizalmi követelményeket támaszt a felhasználókkal szemben. Azt kell hinniük, hogy az érték valóban kiszámíthatatlan mechanizmusok révén jött létre, és nem változott meg az átadás során.
 
-A láncon kívüli számításhoz tervezett orákulumok úgy oldják meg ezt a problémát, hogy biztonságosan generálnak véletlenszerű eredményeket, amelyeket a folyamat kiszámíthatatlanságát igazoló kriptográfiai bizonyítékokkal együtt továbbítanak a láncon belülre. Ilyen például a [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Igazolható véletlenfüggvény/Verifiable Random Function), amely egy bizonyíthatóan igazságos és hamisításbiztos véletlenszám-generátor (RNG), hogy a kiszámíthatatlan eredményekre támaszkodó alkalmazásokhoz megbízható okosszerződéseket lehessen létrehozni. Egy másik példa az [API3 QRNG](https://docs.api3.org/explore/qrng/), amely a kvantum véletlenszám-generálást (QRNG) szolgálja ki, egy kvantumjelenségeken alapuló, Web3 RNG nyilvános módszert, amelyet az Ausztrál Nemzeti Egyetem (ANU) által elérhető.
+A láncon kívüli számításhoz tervezett orákulumok úgy oldják meg ezt a problémát, hogy biztonságosan generálnak véletlenszerű eredményeket, amelyeket a folyamat kiszámíthatatlanságát igazoló kriptográfiai bizonyítékokkal együtt továbbítanak a láncon belülre. Ilyen például a [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Igazolható véletlenfüggvény/Verifiable Random Function), amely egy bizonyíthatóan igazságos és hamisításbiztos véletlenszám-generátor (RNG), hogy a kiszámíthatatlan eredményekre támaszkodó alkalmazásokhoz megbízható okosszerződéseket lehessen létrehozni.
 
 ### Az események eredményeinek elérése {#getting-outcomes-for-events}
 
@@ -400,8 +400,6 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 
 **[Band Protocol](https://bandprotocol.com/)** – _A Band Protocol egy láncokon átívelő adatorákulum-platform, amely valós adatokat és API-okat aggregál és kapcsol össze okosszerződésekkel._
 
-**[Paralink](https://paralink.network/)** – _A Paralink nyílt forráskódú és decentralizált orákulumplatformot biztosít az Ethereumon és más népszerű blokkláncokon futó okosszerződésekhez._
-
 **[Pyth Network](https://pyth.network/)** – _A Pyth hálózat egy olyan pénzügyi orákulumhálózat, amely első kézből szerez információt, és folyamatosan valós adatokat tesz közzé a láncon belül egy hamisításnak ellenálló, decentralizált és önfenntartó környezetben._
 
 **[API3 DAO](https://www.api3.org/)** – _Az API3 DAO olyan, első féltől származó orákulummegoldásokat kínál, amelyek nagyobb forrásátláthatóságot, biztonságot és skálázhatóságot biztosítanak egy decentralizált megoldásában az okosszerződések számára._
@@ -417,7 +415,6 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 - [Decentralizált orákulumok: részletes áttekintés](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Blokkláncorákulum bevezetése az Ethereumon](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Az okosszerződések miért nem tudnak API-hívásokat kezdeményezni?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) – _StackExchange_
-- [Miért van szükség decentralizált orákulumokra](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) – _Bankless_
 - [Tehát Ön egy ár-orákulumot szeretne használni](https://samczsun.com/so-you-want-to-use-a-price-oracle/) – _samczsun_
 
 **Videók**

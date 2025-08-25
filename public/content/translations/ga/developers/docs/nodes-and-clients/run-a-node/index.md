@@ -52,7 +52,7 @@ Tá buntáistí éagsúla ag an dá rogha mar atá achoimrithe thuas. Má tá r�
 
 #### Crua-earraí {#hardware}
 
-Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/networkType/Hosting) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
+Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/network-types) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
 
 Is féidir le cliaint Ethereum rith ar do ríomhaire, ríomhaire glúine, freastalaí, nó fiú ríomhaire aonchláir. Cé gur féidir cliaint a reáchtáil ar do ríomhaire pearsanta, má tá meaisín tiomnaithe díreach do do nód féadann sé a fheidhmíocht agus a shlándáil a fheabhsú go suntasach agus an tionchar ar do phríomh-ríomhaire a íoslaghdú.
 

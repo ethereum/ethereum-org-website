@@ -8,7 +8,7 @@ lang: fa
    Ethash الگوریتم استخراج اثبات کار اتریوم بود. اثبات کار اکنون **به طور کامل خاموش شده** و اتریوم اکنون با استفاده از [اثبات سهام](/developers/docs/consensus-mechanisms/pos/) امن شده است. درباره‌ [ادغام](/roadmap/merge/) و [اثبات سهام](/developers/docs/consensus-mechanisms/pos/) و [سهام گذاری](/staking/) بیشتر بخوانید. این صفحه صرفاً برای علاقه‌مندان به تاریخ است!  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) نسخه اصلاح شده الگوریتم [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) است. اثبات کار Ethash نیازمند [حافظه سخت](https://wikipedia.org/wiki/Memory-hard_function) است که تصور می‌شد این الگوریتم را در برابر دستگاه‌های ASIC مقاوم می‌کند. در نهایت، دستگاه‌های Ethash ASIC توسعه یافتند، اما تا زمانی که اثبات کار خاموش شد، استخراج با GPU همچنان یک گزینه قابل اجرا بود. Ethash هنوز برای استخراج سکه های دیگر در سایر شبکه های اثبات کار غیر اتریوم استفاده می شود.
+Ethash نسخه اصلاح شده الگوریتم [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) است. اثبات کار Ethash نیازمند [حافظه سخت](https://wikipedia.org/wiki/Memory-hard_function) است که تصور می‌شد این الگوریتم را در برابر دستگاه‌های ASIC مقاوم می‌کند. در نهایت، دستگاه‌های Ethash ASIC توسعه یافتند، اما تا زمانی که اثبات کار خاموش شد، استخراج با GPU همچنان یک گزینه قابل اجرا بود. Ethash هنوز برای استخراج سکه های دیگر در سایر شبکه های اثبات کار غیر اتریوم استفاده می شود.
 
 ## Ethash چگونه کار می کند؟ {#how-does-ethash-work}
 

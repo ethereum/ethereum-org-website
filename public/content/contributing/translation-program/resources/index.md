@@ -17,8 +17,6 @@ You can find some useful guides and tools for ethereum.org translators, as well 
 
 ## Tools {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
-  _– useful for finding and checking the standard translations of technical terms_
 - [Linguee](https://www.linguee.com/)
   _– search engine for translations and dictionary that enables searching by word or phrase_
 - [Proz term search](https://www.proz.com/search/)

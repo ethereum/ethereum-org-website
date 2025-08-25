@@ -133,7 +133,6 @@ lang: fa
 
 - [توضیحی درباره‌ی گاز اتریوم](https://defiprime.com/gas)
 - [کاهش مصرف گاز قراردادهای هوشمندتان](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [اثبات سهام در مقابل اثبات کار](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [استراتژی های بهینه‌سازی گاز برای توسعه دهندگان](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [اسناد EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 - [منابع تیم بیکو درباره EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
