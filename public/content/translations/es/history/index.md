@@ -13,7 +13,7 @@ Una cronología que incluye todos los principales hitos, bifurcaciones y actuali
 
 Las bifurcaciones se producen cuando es necesario realizar actualizaciones o cambios técnicos importantes en la red; suelen provenir de las [propuestas de mejora de Ethereum (o EIP)](/eips/) y cambian las «reglas» del protocolo.
 
-Cuando se precisan actualizaciones en un software tradicional y controlado centralmente, la empresa publica una nueva versión para el usuario final. Las cadenas de bloque funcionan de manera diferente porque no hay propiedad central. Los <a href="/developers/docs/nodes-and-clients/">clientes de Ethereum</a> deben actualizar su software para implementar las nuevas reglas establecidas en la bifurcación. Además de creadores de bloques (los mineros en el mundo de las pruebas de trabajo y los validadores en el universo de las pruebas de participación) y los nodos, deben crearse bloques y validarlos con respecto a las reglas nuevas. <a href="/developers/docs/consensus-mechanisms/">Más información sobre los mecanismos de consenso</a>
+Cuando se precisan actualizaciones en un software tradicional y controlado centralmente, la empresa publica una nueva versión para el usuario final. Las cadenas de bloque funcionan de manera diferente porque no hay propiedad central. Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) deben actualizar su software para implementar las nuevas reglas establecidas en la bifurcación. Además de creadores de bloques (los mineros en el mundo de las pruebas de trabajo y los validadores en el universo de las pruebas de participación) y los nodos, deben crearse bloques y validarlos con respecto a las reglas nuevas. [Más información sobre los mecanismos de consenso](/developers/docs/consensus-mechanisms/)
 
 Estos cambios en las normas pueden crear una división temporal en la red. Los bloques nuevos podrían producirse de acuerdo con las reglas nuevas o con las antiguas. Normalmente las bifurcaciones se acuerdan con antelación para que los clientes adopten los cambios a la vez. Además, de este modo las bifurcaciones actualizadas se convertirán en la cadena principal. Sin embargo, en casos excepcionales, los desacuerdos con respecto a las bifurcaciones pueden provocar que la red permanezca dividida. La más notable es la creación de Ethereum Classic con la [bifurcación DAO] (#dao-fork).
 
@@ -70,7 +70,7 @@ La actualizacion también proporciona la funcionalidad de barrido automático de
 
 #### Resumen {#paris-summary}
 
-El paso de la cadena de bloque de la prueba de trabajo a la [dificultad total terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000 originó La Fusión. Esto ocurrió en el bloque 15537393 el 15 de septiembre de 2022, y dio comienzo a la actualización Paris en el siguiente bloque. Paris supuso la transición denominada [La Fusión](/roadmap/merge/): cuya característica principal consistió en pasar del [algoritmo de minería y lógica de consenso asociada de la](/developers/docs/consensus-mechanisms/pow) prueba de trabajo [a la prueba de participación](/developers/docs/consensus-mechanisms/pos). Paris fue en sí una actualización a los [clientes de ejecución](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix, en la capa de consenso) que les permitió recibir instrucciones de sus <a href="/developers/docs/nodes-and-clients/#consensus-clients">clientes de consenso conectados</a>. Esto requirió que se activara un nuevo conjunto de métodos internos de API, conocido colectivamente como [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Esta fue probablemente la actualización más significativa en la historia de Ethereum desde [Homestead](#homestead)!
+El paso de la cadena de bloque de la prueba de trabajo a la [dificultad total terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000 originó La Fusión. Esto ocurrió en el bloque 15537393 el 15 de septiembre de 2022, y dio comienzo a la actualización Paris en el siguiente bloque. Paris supuso la transición denominada [La Fusión](/roadmap/merge/): cuya característica principal consistió en pasar del [algoritmo de minería y lógica de consenso asociada de la](/developers/docs/consensus-mechanisms/pow) prueba de trabajo [a la prueba de participación](/developers/docs/consensus-mechanisms/pos). Paris fue en sí una actualización a los [clientes de ejecución](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix, en la capa de consenso) que les permitió recibir instrucciones de sus [clientes de consenso conectados](/developers/docs/nodes-and-clients/#consensus-clients). Esto requirió que se activara un nuevo conjunto de métodos internos de API, conocido colectivamente como [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Esta fue probablemente la actualización más significativa en la historia de Ethereum desde [Homestead](#homestead)!
 
 - [Lea la especificación de actualización Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -285,10 +285,10 @@ La bifurcación de Istanbul:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a>: <em>permite a Ethereum funcionar con una moneda que mantiene la privacidad como Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a>: <em>una criptografía más barata para mejorar los costes del <a href="/glossary/#gas">gas</a> gas.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a>: <em>protege a Ethereum contra ataques de repetición al añadir <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a>: <em>una criptografía más barata para mejorar los costes del [gas](/glossary/#gas) gas.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a>: <em>protege a Ethereum contra ataques de repetición al añadir <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a>: <em>optimiza los precios del gas para el código de operación en función del consumo.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a>: <em>reduce el coste de CallData para permitir más datos en bloques, lo que es productivo para la <a href="/developers/docs/scaling/#layer-2-scaling">escalabilidad de capa 2</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a>: <em>reduce el coste de CallData para permitir más datos en bloques, lo que es productivo para la [escalabilidad de capa 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a>: <em>otras modificaciones del precio del gas del código de operación</em></li>
 </ul>
 
@@ -345,13 +345,13 @@ La bifurcación de Bizantium:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a>: <em>añade el código de operación<code>REVERT</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a>: <em>campo de estado añadido a los recibos de la transacción para indicar el éxito o el fracaso.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a>: <em>añade curva elíptica y multiplicación escalar para permitir <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a>: <em>añade curva elíptica y multiplicación escalar para permitir <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a>: <em>añade curva elíptica y multiplicación escalar para permitir [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a>: <em>añade curva elíptica y multiplicación escalar para permitir [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a>: <em>permite la verificación de firmas RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a>: <em>añade soporte para valores de retorno de longitud variable.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>agrega el código <code>STATICALL</code> , permitiendo llamadas no cambiantes de estado a otros contratos.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a>: <em>cambia la fórmula de ajuste de dificultad.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a>: <em>retrasa <a href="/glossary/#difficulty-bomb">la bomba de dificultad</a> 1 año y reduce la recompensa de bloques de 5 a 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a>: <em>retrasa [la bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa de bloques de 5 a 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

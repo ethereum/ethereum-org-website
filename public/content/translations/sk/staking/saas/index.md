@@ -86,7 +86,7 @@ Používaním poskytovateľa SaaS zverujete prevádzku svojho uzla niekomu iném
 
 Po dokončení procesu slashing/opustenia budú tieto prostriedky prevedené na adresu pre výber pridelenú validátorovi. To si vyžaduje poskytnutie adresy pre výber. Tá môže byť poskytnutá pri počiatočnom vklade. Ak nie, na podpísanie správy deklarujúcu adresu pre výber bude potrebné použiť kľúče validátora pre výber. Ak nebola zadaná žiadna adresa pre výber, prostriedky zostanú uzamknuté, kým ju nezadáte.
 
-Obráťte sa na jednotlivého poskytovateľa SaaS pre ďalšie podrobnosti o akýchkoľvek zárukách alebo možnostiach poistenia a pre pokyny, ako zadať adresu pre výber. Pokiaľ chcete mať nastavenie validátora pod plnou kontrolou, prečítajte si <a href="/staking/solo/">ďalšie informácie o tom, ako sólo stakovať ETH</a>.
+Obráťte sa na jednotlivého poskytovateľa SaaS pre ďalšie podrobnosti o akýchkoľvek zárukách alebo možnostiach poistenia a pre pokyny, ako zadať adresu pre výber. Pokiaľ chcete mať nastavenie validátora pod plnou kontrolou, prečítajte si [ďalšie informácie o tom, ako sólo stakovať ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Ďalšie zdroje informácií {#further-reading}

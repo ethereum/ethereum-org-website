@@ -20,7 +20,7 @@ Az ethereum.org fordítási program nyitott és bárki közreműködhet!
 4. A gépi fordítás nem elfogadható.
 5. Minden fordítást átnéznek, mielőtt a honlapra felkerül, így a lefordított anyag bizonyos késéssel válik elérhetővé.
 
-_Csatlakozzon az [ethereum.org Discord](/discord/)-csatornájához, hogy megvitassa a fordítással kapcsolatos dolgokat, kérdezzen, visszajelzést adjon, megossza az ötleteit vagy csatlakozzon a fordítói csoporthoz._
+_Csatlakozzon az [ethereum.org Discord](https://discord.gg/ethereum-org)-csatornájához, hogy megvitassa a fordítással kapcsolatos dolgokat, kérdezzen, visszajelzést adjon, megossza az ötleteit vagy csatlakozzon a fordítói csoporthoz._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Kezdjen bele a fordításba

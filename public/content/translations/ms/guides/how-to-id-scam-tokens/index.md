@@ -19,7 +19,7 @@ Untuk mengilustrasikan maksud token penipuan, dan cara mengenal pastinya, kita a
 title="Apakah itu ARB?"
 contentPreview=''>
 
-Arbitrum ialah sebuah organisasi yang membangunkan dan mengurus <a href="/developers/docs/scaling/optimistic-rollups/">gulungan optimistik</a>. Pada awalnya, Arbitrum diorganisasikan sebagai syarikat bertujuan untung, tetapi kemudiannya mengambil langkah-langkah untuk mendesentralisasi. Sebagai sebahagian daripada proses itu, mereka mengeluarkan <a href="/dao/#token-based-membership">token tadbir urus</a> yang boleh diniagakan.
+Arbitrum ialah sebuah organisasi yang membangunkan dan mengurus [gulungan optimistik](/developers/docs/scaling/optimistic-rollups/). Pada awalnya, Arbitrum diorganisasikan sebagai syarikat bertujuan untung, tetapi kemudiannya mengambil langkah-langkah untuk mendesentralisasi. Sebagai sebahagian daripada proses itu, mereka mengeluarkan [token tadbir urus](/dao/#token-based-membership) yang boleh diniagakan.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Tujuan utama Ethereum ialah desentralisasi. Ini bermakna tiada pihak berkuasa pu
 title="What are smart contracts?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Kontrak pintar</a> ialah program yang berjalan selain blok rantai Ethereum. Setiap token ERC-20, sebagai contoh, dilaksanakan sebagai kontrak pintar.
+[Kontrak pintar](/developers/docs/smart-contracts/) ialah program yang berjalan selain blok rantai Ethereum. Setiap token ERC-20, sebagai contoh, dilaksanakan sebagai kontrak pintar.
 
 </ExpandableCard>
 

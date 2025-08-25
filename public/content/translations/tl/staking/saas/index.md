@@ -86,7 +86,7 @@ Sa pamamagitan ng paggamit ng SaaS provider, ipinagkakatiwala mo ang operasyon n
 
 Kapag natapos na ang proseso ng slashing/pag-alis, ililipat ang pondong ito sa withdrawal address na nakatalaga sa validator. Para gumana ito, kailangang magbigay ng withdrawal address. Maaaring naibigay na ito sa inisyal na deposito. Kung hindi, kakailanganing gamitin ang mga withdrawal key ng validator para mag-sign ng mensaheng nagdedeklara ng withdrawal address. Kung walang ibinigay na withdrawal address, hindi makukuha ang pondo hangga't hindi ito naibibigay.
 
-Makipag-ugnayan sa indibidwal na SaaS provider para sa iba pang detalye tungkol sa anumang guarantee o opsyon sa insurance, at para sa mga tagubilin sa kung paano magbigay ng withdrawal address. Kung gusto mong ikaw lang ang nagkokontrol ng iyong validator setup, <a href="/staking/solo/">magbasa pa tungkol sa kung paano i-solo stake ang iyong ETH</a>.
+Makipag-ugnayan sa indibidwal na SaaS provider para sa iba pang detalye tungkol sa anumang guarantee o opsyon sa insurance, at para sa mga tagubilin sa kung paano magbigay ng withdrawal address. Kung gusto mong ikaw lang ang nagkokontrol ng iyong validator setup, [magbasa pa tungkol sa kung paano i-solo stake ang iyong ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Karagdagang pagbabasa {#further-reading}

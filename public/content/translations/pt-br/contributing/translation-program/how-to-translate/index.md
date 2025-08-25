@@ -34,7 +34,7 @@ Escolha o idioma para o qual deseja traduzir para ver a lista de arquivos dispon
 
 O conteúdo do site é dividido em vários documentos e grupos de conteúdo. Você pode verificar o progresso de cada documento à direita. Se o progresso da tradução estiver abaixo de 100%, contribua!
 
-Não vê seu idioma na lista? [Abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou faça uma pergunta no [Discord](/discord/)
+Não vê seu idioma na lista? [Abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou faça uma pergunta no [Discord](https://discord.gg/ethereum-org)
 
 ![Arquivos traduzidos e não traduzidos no Crowdin](./crowdin-files.png)
 
@@ -82,7 +82,7 @@ Quando tiver concluído a tradução (ou seja, todos os arquivos de um grupo de 
 
 ### Entre em contato conosco {#get-in-touch}
 
-Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord no ethereum.org](/discord/)
+Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord no ethereum.org](https://discord.gg/ethereum-org)
 
 Você também pode entrar em contato conosco por meio do e-mail translations@ethereum.org
 

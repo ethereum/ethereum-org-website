@@ -70,7 +70,7 @@ Die Roadmap ist vor allem das Ergebnis jahrelanger Arbeit von Forschern und Entw
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Was war ETH2?</h4>
 
-  <p>Der Begriff „Eth2“ ​​wurde vor der Umstellung auf <a href="/glossary/#pos">Proof-of-Stake</a> häufig verwendet, um die Zukunft von Ethereum zu beschreiben. Er wurde jedoch <strong>zugunsten einer präziseren Terminologie schrittweise abgeschafft</strong>. Ursprünglich wurde der Begriff verwendet, um das Ethereum-Netzwerk vor der Umstellung auf Proof-of-Stake vom Netzwerk danach zu unterscheiden. Manchmal bezog er sich auch auf die verschiedenen Ethereum-Clients (<a href="/glossary/#execution-client">Ausführungsclients</a> wurden manchmal als ETH1-Clients und <a href="/glossary/#consensus-client">Konsensclients</a> manchmal als ETH2-Clients bezeichnet).</p>
+  <p>Der Begriff „Eth2“ ​​wurde vor der Umstellung auf [Proof-of-Stake](/glossary/#pos) häufig verwendet, um die Zukunft von Ethereum zu beschreiben. Er wurde jedoch <strong>zugunsten einer präziseren Terminologie schrittweise abgeschafft</strong>. Ursprünglich wurde der Begriff verwendet, um das Ethereum-Netzwerk vor der Umstellung auf Proof-of-Stake vom Netzwerk danach zu unterscheiden. Manchmal bezog er sich auch auf die verschiedenen Ethereum-Clients ([Ausführungsclients](/glossary/#execution-client) wurden manchmal als ETH1-Clients und [Konsensclients](/glossary/#consensus-client) manchmal als ETH2-Clients bezeichnet).</p>
 
 </InfoBanner>
 

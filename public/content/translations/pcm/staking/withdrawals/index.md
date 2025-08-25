@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-If yu dey part of one <a href="/staking/pools/">staking pool</a> abi dey hold staking tokens, go shek wit yor provida for more details on hau dem dey handol staking witdrawals as ish savis dey operate difrent.
+If yu dey part of one [staking pool](/staking/pools/) abi dey hold staking tokens, go shek wit yor provida for more details on hau dem dey handol staking witdrawals as ish savis dey operate difrent.
 
-In general, users suppose dey free to take dem ETH wey dem stake normal, abi dey shanj wey staking provida dey yus. If one partikular pool dey gettoo big, dem fit komot, ridim, and re-stake funds wit one <a href="https://rated.network/">provida wey smoll pass</a>. Abi, if yu don gada enuf ETH wey yu fit <a href="/staking/solo/">stake from home</a>.
+In general, users suppose dey free to take dem ETH wey dem stake normal, abi dey shanj wey staking provida dey yus. If one partikular pool dey gettoo big, dem fit komot, ridim, and re-stake funds wit one <a href="https://rated.network/">provida wey smoll pass</a>. Abi, if yu don gada enuf ETH wey yu fit [stake from home](/staking/solo/).
 
 </ExpandableCard>
 

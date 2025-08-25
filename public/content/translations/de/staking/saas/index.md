@@ -86,7 +86,7 @@ Durch die Nutzung eines SaaS-Anbieters vertrauen Sie den Betrieb Ihrer Nodes jem
 
 Nach Abschluss des Slashing-/Austrittsprozesses werden diese Mittel an die dem Validator zugewiesene Auszahlungsadresse übertragen. Dies erfordert die Angabe einer Auszahlungsadresse zur Aktivierung. Diese Adresse kann bei der anfänglichen Einzahlung angegeben worden sein. Falls nicht, müssen die Auszahlungsschlüssel des Validators verwendet werden, um eine Nachricht zu unterschreiben, die eine Auszahlungsadresse angibt. Wenn keine Auszahlungsadresse angegeben wurde, bleibt das Guthaben bis zur Angabe gesperrt.
 
-Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie es vorziehen, die volle Kontrolle über Ihre Validator-Konfiguration zu haben, <a href="/staking/solo/">erfahren Sie mehr darüber, wie Sie Ihre ETH alleine einsetzen können</a>.
+Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie es vorziehen, die volle Kontrolle über Ihre Validator-Konfiguration zu haben, [erfahren Sie mehr darüber, wie Sie Ihre ETH alleine einsetzen können](/staking/solo/).
 </ExpandableCard>
 
 ## Weiterführende Informationen {#further-reading}

@@ -38,7 +38,7 @@ Spajanje je predstavljalo službeni prijelaz na Beacon Chain kao procesor proizv
 Spajanjem nisu izgubljeni povijesni podaci. Kako se glavna mreža objedinila s Beacon Chainom, tako je migrirana i cjelokupna povijest transakcija Ethereuma.
 
 <InfoBanner>
-Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o <a href="/roadmap/merge/issuance/">izdavanju Ethera prije i nakon Spajanja</a>.
+Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o [izdavanju Ethera prije i nakon Spajanja](/roadmap/merge/issuance/).
 </InfoBanner>
 
 ### Korisnici i vlasnici {#users-holders}

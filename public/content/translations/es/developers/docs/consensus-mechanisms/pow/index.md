@@ -7,7 +7,7 @@ lang: es
 La red Ethereum comenzó utilizando un mecanismo de consenso que implica una**[prueba de trabajo (o PoW, por sus siglas en inglés)](/developers/docs/consensus-mechanisms/pow)**. Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la cadena de bloques de Ethereum y prevenir ciertos tipos de ataques económicos. Sin embargo, Ethereum se desconectó de la prueba de trabajo en 2022 y empezó a usar la [prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar.
 
 <InfoBanner emoji=":wave:">
-    La prueba de trabajo ha quedado obsoleta. Ethereum ya no utiliza la prueba de trabajo como parte de su mecanismo de consenso. En su lugar, utiliza la prueba de participación. Descubra más cosas sobre la <a href="/developers/docs/consensus-mechanisms/pos/">prueba de participación</a> y la <a href="/staking/">participación</a>.
+    La prueba de trabajo ha quedado obsoleta. Ethereum ya no utiliza la prueba de trabajo como parte de su mecanismo de consenso. En su lugar, utiliza la prueba de participación. Descubra más cosas sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) y la [participación](/staking/).
 </InfoBanner>
 
 ## Requisitos previos {#prerequisites}

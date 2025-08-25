@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ha Ön <a href="/staking/pools/">letéti alapokat</a> vagy letéti tokeneket használ, ellenőrizze a szolgáltatójával, hogy hogyan kezelik a letétvisszavonást, mivel minden szolgáltatás másképp működik.
+Ha Ön [letéti alapokat](/staking/pools/) vagy letéti tokeneket használ, ellenőrizze a szolgáltatójával, hogy hogyan kezelik a letétvisszavonást, mivel minden szolgáltatás másképp működik.
 
-Általánosságban a felhasználók szabadon visszavehetik a letétbe helyezett ETH-t vagy lecserélhetik a letéti szolgáltatójukat. Ha egy adott letéti alap túl nagy méretű lesz, akkor a pénzeszközöket ki lehet venni belőle és újra le lehet kötni egy <a href="https://rated.network/">kisebb szolgáltatóval</a>. Ha pedig elég ETH gyűlt össze, akkor Ön<a href="/staking/solo/">otthonról is végezhet letétbe helyezést</a>.
+Általánosságban a felhasználók szabadon visszavehetik a letétbe helyezett ETH-t vagy lecserélhetik a letéti szolgáltatójukat. Ha egy adott letéti alap túl nagy méretű lesz, akkor a pénzeszközöket ki lehet venni belőle és újra le lehet kötni egy <a href="https://rated.network/">kisebb szolgáltatóval</a>. Ha pedig elég ETH gyűlt össze, akkor Ön[otthonról is végezhet letétbe helyezést](/staking/solo/).
 
 </ExpandableCard>
 

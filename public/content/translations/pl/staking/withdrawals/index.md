@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jeśli jesteś częścią <a href="/staking/pools/">puli stakingowej</a> lub posiadasz tokeny stakingowe, powinieneś skontaktować się ze swoim dostawcą, aby uzyskać więcej informacji na temat sposobu obsługi wypłat ze stakingu, ponieważ każda usługa działa inaczej.
+Jeśli jesteś częścią [puli stakingowej](/staking/pools/) lub posiadasz tokeny stakingowe, powinieneś skontaktować się ze swoim dostawcą, aby uzyskać więcej informacji na temat sposobu obsługi wypłat ze stakingu, ponieważ każda usługa działa inaczej.
 
-Ogólnie rzecz biorąc, użytkownicy powinni mieć możliwość odzyskania swoich bazowych stakowanych ETH lub zmiany dostawcy stakingu, z którego korzystają. Jeśli dana pula staje się zbyt duża, środki mogą zostać wycofane, wypłacone i ponownie zestakowane u <a href="https://rated.network/">mniejszego dostawcy</a>. Lub, jeśli zgromadziłeś wystarczającą ilość ETH, możesz <a href="/staking/solo/">stakować z domu</a>.
+Ogólnie rzecz biorąc, użytkownicy powinni mieć możliwość odzyskania swoich bazowych stakowanych ETH lub zmiany dostawcy stakingu, z którego korzystają. Jeśli dana pula staje się zbyt duża, środki mogą zostać wycofane, wypłacone i ponownie zestakowane u <a href="https://rated.network/">mniejszego dostawcy</a>. Lub, jeśli zgromadziłeś wystarczającą ilość ETH, możesz [stakować z domu](/staking/solo/).
 
 </ExpandableCard>
 

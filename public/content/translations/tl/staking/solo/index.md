@@ -55,7 +55,7 @@ Ito rin ay nangangailangan ng napaka-basic na hardware setup, at pag-unawa sa mi
 <ExpandableCard title="Secure na pamamahala ng mga key" eventCategory="SoloStaking" eventName="clicked secure key management">
 Tulad kung paano sine-secure ng mga pribadong key ang iyong Ethereum address, kakailanganin mong gumawa ng mga key na para mismo sa iyong validator. Dapat mong maunawaan kung paano panatilihing ligtas at secure ang anumang seed phrase o pribadong key.{' '}
 
-<a href="/security/">Seguridad at pag-iwas sa scam ng Ethereum</a>
+[Seguridad at pag-iwas sa scam ng Ethereum](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Ang <em>validator</em> ay isang virtual entity sa Ethereum at nakikilahok sa con
 <ExpandableCard title="Maaari ba akong mag-deposit ng higit sa 32 ETH?">
 Ang bawat key-pair na nauugnay sa isang validator ay nangangailangan ng eksaktong 32 ETH para ma-activate. Ang pagdedeposito ng mas maraming ETH sa isang set ng mga key ay hindi nagpapalaki sa posibildad na makakuha ng mga reward, dahil limitado ang bawat validator sa <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">epektibong balanse</a> na 32 ETH. Ibig sabihin nito, isinasagawa ang staking nang kada 32 ETH, kung saan may sariling set ng mga key at balanse ang bawat isa.
 
-Huwag magdeposito ng mahigit 32 ETH para sa isang validator. Hindi nito mapaparami ang iyong mga reward. Kung mayroon nang itinakdang withdrawal address para sa validator, ang sobrang pondo na higit sa 32 ETH ay awtomatikong iwi-withdraw sa address na ito sa susunod na <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
+Huwag magdeposito ng mahigit 32 ETH para sa isang validator. Hindi nito mapaparami ang iyong mga reward. Kung mayroon nang itinakdang withdrawal address para sa validator, ang sobrang pondo na higit sa 32 ETH ay awtomatikong iwi-withdraw sa address na ito sa susunod na [validator sweep](/staking/withdrawals/#validator-sweeping).
 
-If home staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
+If home staking seems too demanding for you, consider using a [staking-as-a-service](/staking/saas/) provider, or if you're working with less than 32 ETH, check out the [staking pools](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Maaari ba akong ma-slash kung ako ay mag-offline? (tldr: No.)">

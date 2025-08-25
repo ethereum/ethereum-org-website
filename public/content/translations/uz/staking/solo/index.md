@@ -55,7 +55,7 @@ Shuningdek, u juda oddiy apparat sozlamasini va minimal tavsiya etilgan xususiya
 <ExpandableCard title="Xavfsiz kalit boshqaruvi" eventCategory="SoloStaking" eventName="clicked secure key management">
 Shaxsiy kalitlar Ethereum manzilingizni qanday himoya qilgani kabi, siz kalitlarni validatoringiz uchun maxsus yaratishingiz kerak bo‘ladi. Har qanday kalit so‘z yoki maxfiy kalitlarni qanday qilib xavfsiz va xavfsiz saqlashni bilishingiz kerak.{' '}
 
-<a href="/security/">Ethereum xavfsizligi va firibgarlikning oldini olish</a>
+[Ethereum xavfsizligi va firibgarlikning oldini olish](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Bular garovga qo‘yishning eng keng tarqalgan savollaridan bir nechtasi bo‘li
 <ExpandableCard title="32 ETHdan ortiq depozit qo‘yishim mumkinmi?">
 Validator bilan aloqador har bir kalit-juftligi faollashtirilishi uchun aynan 32 ETH talab qilinadi. Bitta kalitlar to‘plamiga depozit qilingan ko‘proq ETH mukofot salohiyatini oshirmaydi, chunki har bir validator 32 ETH <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">samarali balansi</a> bilan cheklangan. Bu shuni anglatadiki, staking 32 ETH inkrementlarida amalga oshiriladi, ularning har biri o‘z kalitlari to‘plami va muvozanatiga ega.
 
-Bitta validator uchun 32 ETH dan ortiq depozit qo‘ymang. Bu mukofotlaringizni oshirmaydi. Agar validator uchun yechib olish manzili belgilangan bo‘lsa, keyingi <a href="/staking/withdrawals/#validator-sweeping">validator surish</a> paytida 32 ETH dan ortiq ortiqcha mablag‘lar ushbu manzilga avtomatik yechib olinadi.
+Bitta validator uchun 32 ETH dan ortiq depozit qo‘ymang. Bu mukofotlaringizni oshirmaydi. Agar validator uchun yechib olish manzili belgilangan bo‘lsa, keyingi [validator surish](/staking/withdrawals/#validator-sweeping) paytida 32 ETH dan ortiq ortiqcha mablag‘lar ushbu manzilga avtomatik yechib olinadi.
 
-Agar uyda pul tikish sizga juda qiyin tuyulsa, <a href="/staking/saas/">xizmat sifatida staking</a> provayderidan foydalaning yoki agar 32 ETH dan kam pul tikayotgan bo‘lsangiz, <a href="/staking/pools/">staking hovuzlarini</a> tekshiring.
+Agar uyda pul tikish sizga juda qiyin tuyulsa, [xizmat sifatida staking](/staking/saas/) provayderidan foydalaning yoki agar 32 ETH dan kam pul tikayotgan bo‘lsangiz, [staking hovuzlarini](/staking/pools/) tekshiring.
 </ExpandableCard>
 
 <ExpandableCard title="Agar oflayn bo‘lsam, meni slashing qilishadimi? (tldr: Yoʻq.)">

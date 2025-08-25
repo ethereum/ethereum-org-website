@@ -24,7 +24,7 @@ description: 對 ethereum.org 譯者有用的資源
 
 ## 社群 {#communities}
 
-- [特定語言的 Discord 翻譯群組](/discord/) _ — 把 ethereum.org 譯者連結到翻譯群組的計劃_
+- [特定語言的 Discord 翻譯群組](https://discord.gg/ethereum-org) _ — 把 ethereum.org 譯者連結到翻譯群組的計劃_
 - [中文譯者的群組](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)_ — 為了讓中國譯者之間更輕鬆地進行協調的概念頁面_
 
 ## 最近更新 {#latest-updates}
@@ -38,7 +38,7 @@ description: 對 ethereum.org 譯者有用的資源
 
 ## 譯者辦公時間 {#office-hours}
 
-我們在每月的第二個星期三會定期舉辦「譯者辦公時間」活動。 這會在 [ethereum.org Discord](/discord/) 的語音頻道 #office-hours 舉辦，你也可以在此確認舉辦的確切時間以及進一步的細節資訊。
+我們在每月的第二個星期三會定期舉辦「譯者辦公時間」活動。 這會在 [ethereum.org Discord](https://discord.gg/ethereum-org) 的語音頻道 #office-hours 舉辦，你也可以在此確認舉辦的確切時間以及進一步的細節資訊。
 
 在「譯者辦公時間」活動中，我們的譯者可以詢問有關翻譯過程的問題、提供有關專案的意見回饋、分享想法，或只是與 ethereum.org 核心團隊聊天。 最後，我們想利用這些通話溝通一下翻譯計劃近期的發展，與我們的貢獻者分享關鍵的翻譯小提示和說明。
 

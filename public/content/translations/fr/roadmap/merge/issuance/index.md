@@ -94,7 +94,7 @@ Réduction nette de l'émission annuelle d'ETH : <strong>~88,7 %</strong> ((4,61
 La force opposée à l'émission d'ETH est le taux auquel l'ETH est brûlé. Pour qu'une transaction soit exécutée sur Ethereum, des frais minimum (appelés « frais de base ») doivent être payés, qui fluctuent continuellement (de bloc à bloc) en fonction de l'activité du réseau. Les frais sont payés en ETH et sont _nécessaires_ pour que la transaction soit considérée comme valide. Ces frais sont _brûlés_ pendant le processus de transaction, les retirant ainsi de la circulation.
 
 <InfoBanner>
-La combustion des frais a été mise en place avec <a href="/history/#london">la mise à jour London</a> en août 2021 et est restée inchangée depuis la Fusion.
+La combustion des frais a été mise en place avec [la mise à jour London](/history/#london) en août 2021 et est restée inchangée depuis la Fusion.
 </InfoBanner>
 
 En plus de la combustion des frais mise en œuvre par la mise à niveau London, les validateurs peuvent également subir des pénalités s'ils sont hors ligne, ou pire, ils peuvent être sanctionnés pour avoir enfreint des règles spécifiques qui menacent la sécurité du réseau. Ces pénalités entraînent une réduction d'ETH du solde du validateur, qui n'est alors pas directement donné à un autre compte, ce qui équivaut à le brûler/le retirer de la circulation.

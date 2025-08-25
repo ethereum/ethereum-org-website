@@ -70,7 +70,7 @@ Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneli
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Apa itu ETH2?</h4>
 
-  <p>Istilah 'Eth2' sering digunakan untuk menggambarkan masa depan Ethereum sebelum peralihan ke <a href="/glossary/#pos">bukti taruhan</a>, tetapi istilah ini telah <strong>diabaikan demi terminologi yang lebih tepat.</strong> Awalnya digunakan untuk membedakan jaringan Ethereum sebelum peralihan ke bukti taruhan dan jaringan setelahnya, atau kadang-kadang merujuk pada klien Ethereum yang berbeda (<a href="/glossary/#execution-client">klien eksekusi</a> kadang disebut sebagai klien ETH1 dan <a href="/glossary/#consensus-client">klien konsensus</a> kadang disebut sebagai klien ETH2).</p>
+  <p>Istilah 'Eth2' sering digunakan untuk menggambarkan masa depan Ethereum sebelum peralihan ke [bukti taruhan](/glossary/#pos), tetapi istilah ini telah <strong>diabaikan demi terminologi yang lebih tepat.</strong> Awalnya digunakan untuk membedakan jaringan Ethereum sebelum peralihan ke bukti taruhan dan jaringan setelahnya, atau kadang-kadang merujuk pada klien Ethereum yang berbeda ([klien eksekusi](/glossary/#execution-client) kadang disebut sebagai klien ETH1 dan [klien konsensus](/glossary/#consensus-client) kadang disebut sebagai klien ETH2).</p>
 
 </InfoBanner>
 

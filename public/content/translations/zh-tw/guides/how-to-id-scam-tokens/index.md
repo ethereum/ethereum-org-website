@@ -19,7 +19,7 @@ lang: zh-tw
 title="什麼是 ARB?"
 contentPreview=''>
 
-Arbitrum 是一個開發並管理<a href="/developers/docs/scaling/optimistic-rollups/">樂觀卷軸</a>的機構。 成立之初，Aubitrum 是一間營利公司，而後採取了去中心化的措施。 在此過程中，他們發行了一種可交易的<a href="/dao/#token-based-membership">管理代幣</a>。
+Arbitrum 是一個開發並管理[樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)的機構。 成立之初，Aubitrum 是一間營利公司，而後採取了去中心化的措施。 在此過程中，他們發行了一種可交易的[管理代幣](/dao/#token-based-membership)。
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ contentPreview=''>
 title="什麼是智慧型合約？"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">智慧型合約</a>是在以太坊區塊鏈上運行的程式。 例如，每個 ERC-20 代幣都以智慧型合約的形式實施。
+[智慧型合約](/developers/docs/smart-contracts/)是在以太坊區塊鏈上運行的程式。 例如，每個 ERC-20 代幣都以智慧型合約的形式實施。
 
 </ExpandableCard>
 

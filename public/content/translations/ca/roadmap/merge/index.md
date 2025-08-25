@@ -12,7 +12,7 @@ summaryPoint4: En el passat ens hi referíem com "l'acoblament."
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Aquesta actualització representa el canvi oficial al consens de la prova de participació. D'aquesta manera s'elimina la necessitat de la mineria, que consumeix molta energia, i en el seu lloc s'assegura la xarxa utilitzant ether estacat. Un pas realment exitant és assolir <a href="/roadmap/vision/">Ethereum vision</a> - més escalabilitat, seguretat, i sostenibilitat.
+  Aquesta actualització representa el canvi oficial al consens de la prova de participació. D'aquesta manera s'elimina la necessitat de la mineria, que consumeix molta energia, i en el seu lloc s'assegura la xarxa utilitzant ether estacat. Un pas realment exitant és assolir [Ethereum vision](/roadmap/vision/) - més escalabilitat, seguretat, i sostenibilitat.
 </UpgradeStatus>
 
 ## Què és la fusió? {#what-is-the-docking}

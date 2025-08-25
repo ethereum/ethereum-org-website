@@ -11,9 +11,9 @@ sidebarDepth: 1
 
 <ExpandableCard title="Τι είναι οι ενσωματώσεις;" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Οι ενσωματώσεις πραγματοποιούνται όταν απαιτούνται σημαντικές τεχνικές αλλαγές ή αναβαθμίσεις στο δίκτυο - συνήθως προέρχονται από τις προτάσεις βελτίωσης <a href="/eips/">Ethereum Improvement Proposals (EIPs)</a> και τροποποιούν τους «κανόνες» του πρωτοκόλλου.
+Οι ενσωματώσεις πραγματοποιούνται όταν απαιτούνται σημαντικές τεχνικές αλλαγές ή αναβαθμίσεις στο δίκτυο - συνήθως προέρχονται από τις προτάσεις βελτίωσης [Ethereum Improvement Proposals (EIPs)](/eips/) και τροποποιούν τους «κανόνες» του πρωτοκόλλου.
 
-Όταν απαιτούνται αναβαθμίσεις στο παραδοσιακό, κεντρικά ελεγχόμενο λογισμικό, η εταιρεία θα δημοσιεύσει απλώς μια νέα έκδοση για τον τελικό χρήστη. Οι κρυπτοαλυσίδες λειτουργούν διαφορετικά καθώς δεν υπάρχει κεντρική ιδιοκτησία. Οι <a href="/developers/docs/nodes-and-clients/">Πελάτες Ethereum</a> πρέπει να ενημερώσουν το λογισμικό τους για να εφαρμόσουν τους νέους κανόνες της αναβάθμισης. Επιπλέον, οι δημιουργοί των μπλοκ (οι κρυπτορύχοι που λειτουργούν με την απόδειξη εργασίας, καθώς και οι επαληθευτές με χρήση της απόδειξης συμμετοχής) και οι κόμβοι θα πρέπει να δημιουργήσουν νέα μπλοκ και να επικυρώσουν με βάση τους νέους κανόνες. <a href="/developers/docs/consensus-mechanisms/">Περισσότερα για τους μηχανισμούς συναίνεσης</a>
+Όταν απαιτούνται αναβαθμίσεις στο παραδοσιακό, κεντρικά ελεγχόμενο λογισμικό, η εταιρεία θα δημοσιεύσει απλώς μια νέα έκδοση για τον τελικό χρήστη. Οι κρυπτοαλυσίδες λειτουργούν διαφορετικά καθώς δεν υπάρχει κεντρική ιδιοκτησία. Οι [Πελάτες Ethereum](/developers/docs/nodes-and-clients/) πρέπει να ενημερώσουν το λογισμικό τους για να εφαρμόσουν τους νέους κανόνες της αναβάθμισης. Επιπλέον, οι δημιουργοί των μπλοκ (οι κρυπτορύχοι που λειτουργούν με την απόδειξη εργασίας, καθώς και οι επαληθευτές με χρήση της απόδειξης συμμετοχής) και οι κόμβοι θα πρέπει να δημιουργήσουν νέα μπλοκ και να επικυρώσουν με βάση τους νέους κανόνες. [Περισσότερα για τους μηχανισμούς συναίνεσης](/developers/docs/consensus-mechanisms/)
 
 Αυτές οι αλλαγές κανόνων μπορεί να δημιουργήσουν ένα προσωρινό διαχωρισμό στο δίκτυο. Τα νέα μπλοκ θα μπορούσαν να παραχθούν σύμφωνα με τους νέους κανόνες ή τους παλιούς. Οι αναβαθμίσεις καθορίζονται έγκαιρα, έτσι ώστε οι εφαρμογές πελάτη να μπορέσουν να υιοθετήσουν και να εφαρμόσουν τις αλλαγές κατά την ενημέρωση, ώστε και η ενσωμάτωση με τις αναβαθμίσεις να καταστεί ως η νέα κύρια αλυσίδα. Ωστόσο, σε σπάνιες περιπτώσεις, κάποιες διαφωνίες σχετικά με τις αναβαθμίσεις μπορούν να προκαλέσουν μόνιμο διαχωρισμό του δικτύου, όπως τη δημιουργία του Ethereum Classic με την <a href="#dao-fork">προσθήκη DAO</a>.
 
@@ -448,10 +448,10 @@ sidebarDepth: 1
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>επιτρέπει στο Ethereum να λειτουργεί με κρυπτονόμισμα διατήρησης της ιδιωτικότητας όπως το Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>φθηνότερη κρυπτογραφία για τη βελτίωση <a href="/glossary/#gas">του κόστους κρατήσεων</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>προστατεύει το Ethereum από επιθέσεις επανάληψης, προσθέτοντας <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>φθηνότερη κρυπτογραφία για τη βελτίωση [του κόστους κρατήσεων](/glossary/#gas).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>προστατεύει το Ethereum από επιθέσεις επανάληψης, προσθέτοντας <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>βελτιστοποίηση των τιμών κρατήσεων opcode με βάση την κατανάλωση.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>μειώνει το κόστος των CallData για να επιτρέψει περισσότερα δεδομένα σε μπλοκ. Χρήσιμο για την <a href="/developers/docs/scaling/#layer-2-scaling">κλιμάκωση Layer 2</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>μειώνει το κόστος των CallData για να επιτρέψει περισσότερα δεδομένα σε μπλοκ. Χρήσιμο για την [κλιμάκωση Layer 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>λοιπές εναλλακτικές τιμών κρατήσεων opcode.</em></li>
 </ul>
 
@@ -509,13 +509,13 @@ sidebarDepth: 1
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>προσθήκη <code>REVERT</code> opcode.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>προστέθηκε το πεδίο κατάστασης στις αποδείξεις συναλλαγής για να εμφανίζει την επιτυχία ή αποτυχία.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>προσθέτει ελλειπτική καμπύλη και πολλαπλασιασμό βαθμιδωτού ρυθμού για να επιτρέψει το <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>προσθέτει ελλειπτική καμπύλη και πολλαπλασιασμό βαθμιδωτού ρυθμού για να επιτρέψει το <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>προσθέτει ελλειπτική καμπύλη και πολλαπλασιασμό βαθμιδωτού ρυθμού για να επιτρέψει το [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>προσθέτει ελλειπτική καμπύλη και πολλαπλασιασμό βαθμιδωτού ρυθμού για να επιτρέψει το [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>επιτρέπει την επαλήθευση υπογραφής RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>προσθέτει υποστήριξη για τιμές επιστροφής μεταβλητού μήκους.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>προσθέτει <code>STATICCALL</code> opcode, επιτρέποντας κλήσεις που δεν αλλάζουν κατάσταση σε άλλα συμβόλαια.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>αλλάζει τον τύπο προσαρμογής της δυσκολίας.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>καθυστερεί την <a href="/glossary/#difficulty-bomb">βόμβας δυσκολίας</a> κατά 1 χρόνο και μειώνει την ανταμοιβή μπλοκ από 5 σε 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>καθυστερεί την [βόμβας δυσκολίας](/glossary/#difficulty-bomb) κατά 1 χρόνο και μειώνει την ανταμοιβή μπλοκ από 5 σε 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

@@ -86,7 +86,7 @@ Používáním poskytovatele SaaS svěřujete provoz svého uzlu někomu jinému
 
 Po dokončení procesu trestání/opuštění budou tyto prostředky převedeny na adresu pro výběr přidělenou validátoru. To vyžaduje poskytnutí adresy pro výběr. To může být poskytnuto při počátečním vkladu. Pokud ne, bude nutné použít klíče pro výběr validátoru k podepsání zprávy deklarující adresu pro výběr. Pokud nebyla zadána žádná adresa pro výběr, prostředky zůstanou uzamčeny, dokud je nezadáte.
 
-Obraťte se na jednotlivého poskytovatele SaaS pro další podrobnosti o jakýchkoli zárukách nebo možnostech pojištění a pro pokyny, jak zadat adresu pro výběr. Pokud chcete mít nastavení validátoru pod plnou kontrolou, <a href="/staking/solo/">přečtěte si další informace o tom, jak samostatně vložit ETH</a>.
+Obraťte se na jednotlivého poskytovatele SaaS pro další podrobnosti o jakýchkoli zárukách nebo možnostech pojištění a pro pokyny, jak zadat adresu pro výběr. Pokud chcete mít nastavení validátoru pod plnou kontrolou, [přečtěte si další informace o tom, jak samostatně vložit ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Další četba {#further-reading}

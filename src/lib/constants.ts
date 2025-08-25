@@ -27,7 +27,7 @@ export const LOCALES_CODES = BUILD_LOCALES
 // Site urls
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
-export const DISCORD_PATH = "/discord/"
+export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`

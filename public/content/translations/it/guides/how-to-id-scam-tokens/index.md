@@ -19,7 +19,7 @@ Per illustrare cosa sono i token truffa e come identificarli, analizzeremo un es
 title="Cosa è ARB?"
 contentPreview=''>
 
-Arbitrum è un'organizzazione che sviluppa e gestisce <a href="/developers/docs/scaling/optimistic-rollups/">rollup ottimistici</a>. Inizialmente Arbitrum era organizzata come società a scopo di lucro, ma poi ha preso provvedimenti per decentralizzarsi. Nell'ambito di questo processo, hanno emesso un <a href="/dao/#token-based-membership">token di governance</a> negoziabile.
+Arbitrum è un'organizzazione che sviluppa e gestisce [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/). Inizialmente Arbitrum era organizzata come società a scopo di lucro, ma poi ha preso provvedimenti per decentralizzarsi. Nell'ambito di questo processo, hanno emesso un [token di governance](/dao/#token-based-membership) negoziabile.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Lo scopo di Ethereum è la decentralizzazione. Ciò significa che non esiste un'
 title="Cosa sono i contratti intelligenti?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">I contratti intelligenti</a> sono i programmi che vengono eseguiti sulla blockchain di Ethereum. Ogni token ERC-20, ad esempio, è implementato come un contratto intelligente.
+[I contratti intelligenti](/developers/docs/smart-contracts/) sono i programmi che vengono eseguiti sulla blockchain di Ethereum. Ogni token ERC-20, ad esempio, è implementato come un contratto intelligente.
 
 </ExpandableCard>
 

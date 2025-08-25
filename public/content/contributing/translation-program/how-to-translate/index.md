@@ -35,7 +35,7 @@ Open the language you want to translate into to see the list of files, available
 
 The website content is divided into a number of documents and content buckets. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
 
-Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) or ask in our [Discord](/discord/)
+Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) or ask in our [Discord](https://discord.gg/ethereum-org)
 
 ![Translated and untranslated files in Crowdin](./crowdin-files.png)
 
@@ -84,7 +84,7 @@ Once you've completed the translation (i.e. all files for a content bucket displ
 
 ### Get in touch {#get-in-touch}
 
-Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](/discord/)
+Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/ethereum-org)
 
 You can also reach out to us at translations@ethereum.org
 

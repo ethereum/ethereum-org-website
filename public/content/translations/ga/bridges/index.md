@@ -60,7 +60,7 @@ Má tá ETH agat ar Ethereum Mainnet agus ba mhaith leat alt L1 a iniúchadh chu
 Deirimis gur mhaith leat Bitcoin dúchais (BTC) a bheith agat, ach níl cistí agat ach ar Ethereum Mainnet. Chun nochtadh do BTC a fháil ar Ethereum, is féidir leat Bitcoin Fillte (WBTC) a cheannach. Mar sin féin, is comhartha [ERC-20](/glossary/#erc-20) é WBTC ó dhúchas do líonra Ethereum, rud a chiallaíonn gur leagan Ethereum de Bitcoin é agus ní an tsócmhainn bhunaidh ar bhlocshlabhra Bitcoin. Chun BTC dúchais a bheith agat, bheadh ​​ort do shócmhainní a aistriú ó Ethereum go Bitcoin trí dhroichead a úsáid. Leis sin déanfar droichead do do chuid WBTC agus déanfar é a thiontú ina BTC dúchais. Mar mhalairt air sin, b'fhéidir gur leat BTC agus gur mhaith leat é a úsáid i bprótacail Ethereum [DeFi](/glossary/#defi). Bheadh ​​gá leis an mbealach eile a nascadh, ó BTC go WBTC ar féidir a úsáid ansin mar shócmhainn ar Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  Is féidir leat gach rud thuas a dhéanamh freisin trí úsáid a bhaint as <a href="/get-eth/">malartán láraithe</a>. Mar sin féin, mura bhfuil do chistí ar mhalartú cheana féin, bheadh ​​ilchéimeanna i gceist leis, agus is dócha go mbeadh tú níos fearr as droichead a úsáid.
+  Is féidir leat gach rud thuas a dhéanamh freisin trí úsáid a bhaint as [malartán láraithe](/get-eth/). Mar sin féin, mura bhfuil do chistí ar mhalartú cheana féin, bheadh ​​ilchéimeanna i gceist leis, agus is dócha go mbeadh tú níos fearr as droichead a úsáid.
 </InfoBanner>
 
 <Divider />

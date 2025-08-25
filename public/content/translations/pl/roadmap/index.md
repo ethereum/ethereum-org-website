@@ -70,7 +70,7 @@ Plan działania jest głównie wynikiem wielu lat pracy badaczy i programistów 
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Czym było ETH2?</h4>
 
-  <p>Termin „Eth2” był powszechnie używany do opisywania przyszłości Ethereum przed przejściem na <a href="/glossary/#pos">proof-of-stake</a>, ale został <strong>wycofany na rzecz precyzyjniejszej terminologii.</strong> Pierwotnie był używany w celu rozróżnienia sieci Ethereum przed przejściem na proof-of-stake i po, lub czasami w odniesieniu do różnych klientów Ethereum (<a href="/glossary/#execution-client">klienci wykonawczy</a> byli czasami określani jako klienci ETH1, a <a href="/glossary/#consensus-client">klienci konsensusu</a> byli czasami określani jako klienci ETH2).</p>
+  <p>Termin „Eth2” był powszechnie używany do opisywania przyszłości Ethereum przed przejściem na [proof-of-stake](/glossary/#pos), ale został <strong>wycofany na rzecz precyzyjniejszej terminologii.</strong> Pierwotnie był używany w celu rozróżnienia sieci Ethereum przed przejściem na proof-of-stake i po, lub czasami w odniesieniu do różnych klientów Ethereum ([klienci wykonawczy](/glossary/#execution-client) byli czasami określani jako klienci ETH1, a [klienci konsensusu](/glossary/#consensus-client) byli czasami określani jako klienci ETH2).</p>
 
 </InfoBanner>
 

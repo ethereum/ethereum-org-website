@@ -86,7 +86,7 @@ Nipa lilo olupese SaaS, o n gbe iṣẹ ti nodu rẹ fun ẹlomiran. Eyi wa pẹ
 
 Lẹhin ipari ti gige/ilana jijade, awọn owo wọnyi ni yoo je gbigbe si adirẹsi yiyọ owo kuro ti a yan fun olufowosi naa. Eyi nilo pipese adirẹsi yiyọ owo kuro lati mu ṣiṣẹ. Eyi ti le je ipese ni afipamo owo akọkọ. Bi ko ba ri be, wa nilo lati lo awọn kokoro yiyọ owo kuro olufowosi lati buwolu ifiranṣẹ kan ti yoo safihan adirẹsi yiyọ owo kuro kan. Ti o ko ba pese adirẹsi yiyọ owo kuro, awọn owo yoo wa ni titiipa titi digba ti o ba pese re.
 
-Kan si olupese SaaS kọọkan fun awọn alaye diẹ sii lori eyikeyii awọn asayan idaniloju tabi ibanigbofo, ati fun awọn ilana lori bi o ṣe le pese adirẹsi yiyọ owo kuro. Ti o ba fẹ lati wa ni iṣakoso ni kikun ti iṣeto olufọwọsi rẹ, <a href="/staking/solo/">kọ ẹkọ diẹ sii nipa bi o ṣe le dase idokowo ETH re</a>.
+Kan si olupese SaaS kọọkan fun awọn alaye diẹ sii lori eyikeyii awọn asayan idaniloju tabi ibanigbofo, ati fun awọn ilana lori bi o ṣe le pese adirẹsi yiyọ owo kuro. Ti o ba fẹ lati wa ni iṣakoso ni kikun ti iṣeto olufọwọsi rẹ, [kọ ẹkọ diẹ sii nipa bi o ṣe le dase idokowo ETH re](/staking/solo/).
 </ExpandableCard>
 
 ## Kíkà síwájú síi {#further-reading}

@@ -20,7 +20,7 @@ ethereum.org 翻譯計劃是開放的，所有人都可以參與其中！
 4. 機器翻譯將無法通過審核。
 5. 所有翻譯在加進網站前都會經過審核，所以你的翻譯上線前會有短暫的延遲。
 
-_加入 [ethereum.org Discord](/discord/) 合作翻譯、提出問題、分享回饋和想法，或加入翻譯小組。_
+_加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 合作翻譯、提出問題、分享回饋和想法，或加入翻譯小組。_
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   開始翻譯

@@ -86,7 +86,7 @@ Usando un fornitore di Saas, affidi l'operazione del tuo nodo a qualcun altro. Q
 
 Fino al completamento del procedimento di taglio/uscita, questi fondi saranno trasferiti all'indirizzo di prelievo assegnato al validatore. Ciò richiede di fornire un indirizzo di prelievo, per poter essere abilitato. Questo potrebbe essere stato fornito al deposito iniziale. Altrimenti, le chiavi di prelievo del validatore dovranno essere usate per firmare un messaggio che dichiari un indirizzo di prelievo. Se non è stato fornito alcun indirizzo di prelievo, i fondi resteranno bloccati finché non sarà fornito.
 
-Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzione di garanzia o assicurazione e per le istruzioni su come fornire un indirizzo di prelievo. Se preferisci avere il pieno controllo della configurazione del tuo validatore, <a href="/staking/solo/">scopri di più su come fare staking in solo dei tuoi ETH</a>.
+Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzione di garanzia o assicurazione e per le istruzioni su come fornire un indirizzo di prelievo. Se preferisci avere il pieno controllo della configurazione del tuo validatore, [scopri di più su come fare staking in solo dei tuoi ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}

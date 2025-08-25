@@ -86,7 +86,7 @@ Ao recorrer a um fornecedor de SaaS, está a confiar o controlo do seu nó a out
 
 Após a conclusão do processo de corte/saída, estes fundos serão transferidos para o endereço de saque atribuído ao validador. Para o efeito, é necessário fornecer um endereço de saque. Este pode ter sido fornecido aquando do depósito inicial. Caso contrário, as chaves de saque do validador terão de ser utilizadas para assinar uma mensagem que declare um endereço de saque. Se não tiver sido fornecido um endereço de saque, os fundos permanecerão bloqueados até que seja fornecido um endereço.
 
-Contacte o seu fornecedor SaaS para obter mais informações sobre quaisquer garantias ou opções de seguro e para obter instruções sobre como fornecer um endereço de saque. Se preferir ter o controlo total da configuração do seu validador, <a href="/staking/solo/">saiba sobre como fazer um stake individual do seu ETH</a>.
+Contacte o seu fornecedor SaaS para obter mais informações sobre quaisquer garantias ou opções de seguro e para obter instruções sobre como fornecer um endereço de saque. Se preferir ter o controlo total da configuração do seu validador, [saiba sobre como fazer um stake individual do seu ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Leitura adicional {#further-reading}

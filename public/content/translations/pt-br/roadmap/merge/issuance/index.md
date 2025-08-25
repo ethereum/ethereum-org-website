@@ -94,7 +94,7 @@ Redução líquida na emissão anual de ETH: <strong>~88,7%</strong> (4,61% - 0,
 A força oposta à emissão de ETH é a taxa em que o ETH é queimado. Para uma transação executar no Ethereum, a taxa mínima (conhecida como “taxa base”) deve ser paga, a qual flutua continuamente (bloco a bloco) dependendo da atividade da rede. A taxa é paga no ETH e é _necessária_ para que a transação seja considerada válida. Essa taxa é _queimada_ durante o processo de transação, removendo-a de circulação.
 
 <InfoBanner>
-A queima de taxas foi lançada com <a href="/history/#london">a atualização London</a> em agosto de 2021 e permanece inalterada desde o The Merge.
+A queima de taxas foi lançada com [a atualização London](/history/#london) em agosto de 2021 e permanece inalterada desde o The Merge.
 </InfoBanner>
 
 Além da queima de taxas implementada pela atualização London, os validadores também podem incorrer em penalidades por estarem offline ou, pior ainda, eles podem ser removidos por quebrar regras específicas que ameaçam a segurança da rede. Essas penalidades resultam na redução de ETH do saldo do validador, que não é recompensado diretamente para nenhuma outra conta, efetivamente queimando/retirando-o de circulação.

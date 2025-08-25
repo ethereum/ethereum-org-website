@@ -19,7 +19,7 @@ Dolandırıcılık token'larının ne olduğunu örnekleyebilmek ve bunları tes
 title="ARB nedir?"
 contentPreview=''>
 
-Arbitrum <a href="/developers/docs/scaling/optimistic-rollups/">optimistik toplamalar</a> geliştiren ve yöneten bir organizasyondur. Başlangıçta, Arbitrum kâr amaçlı bir şirket olarak organize edilmiştir, ancak sonrasında merkeziyetsizleşme adımları atmıştır. Bu sürecin bir parçası olarak, takas edilebilir bir <a href="/dao/#token-based-membership">yönetişim token'ı</a> bastılar.
+Arbitrum [optimistik toplamalar](/developers/docs/scaling/optimistic-rollups/) geliştiren ve yöneten bir organizasyondur. Başlangıçta, Arbitrum kâr amaçlı bir şirket olarak organize edilmiştir, ancak sonrasında merkeziyetsizleşme adımları atmıştır. Bu sürecin bir parçası olarak, takas edilebilir bir [yönetişim token'ı](/dao/#token-based-membership) bastılar.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Ethereum'un tüm meselesi merkeziyetsizliktir. Bu varlıklarınıza el koyabilec
 title="Akıllı sözleşmeler nedir?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Akıllı sözleşmeler</a> Ethereum blok zincir üzerinde çalışan programlardır. Örnek olarak, her ERC-20 token'ı bir akıllı sözleşme olarak uygulanmıştır.
+[Akıllı sözleşmeler](/developers/docs/smart-contracts/) Ethereum blok zincir üzerinde çalışan programlardır. Örnek olarak, her ERC-20 token'ı bir akıllı sözleşme olarak uygulanmıştır.
 
 </ExpandableCard>
 

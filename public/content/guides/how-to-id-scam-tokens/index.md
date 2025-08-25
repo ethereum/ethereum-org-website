@@ -19,7 +19,7 @@ To illustrate what scam tokens are, and how to identify them, we are going to lo
 title="What is ARB?"
 contentPreview=''>
 
-Arbitrum is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially, Arbitrum was organized as a for-profit company, but then took steps to decentralize. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
+Arbitrum is an organization that develops and manages [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Initially, Arbitrum was organized as a for-profit company, but then took steps to decentralize. As part of that process, they issued a tradeable [governance token](/dao/#token-based-membership).
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ The whole point of Ethereum is decentralization. This means that there is no cen
 title="What are smart contracts?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Smart contracts</a> are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
+[Smart contracts](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
 
 </ExpandableCard>
 

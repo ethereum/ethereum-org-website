@@ -11,9 +11,9 @@ Un viaggio nel tempo per illustrare tutte le principali pietre miliari, diramazi
 
 <ExpandableCard title="Cosa sono le diramazioni?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Le diramazioni si verificano quando è necessario apportare importanti aggiornamenti tecnici o modifiche alla rete; in genere derivano da <a href="/eips/">proposte di miglioramento di Ethereum (EIP)</a> e cambiano le "regole" del protocollo.
+Le diramazioni si verificano quando è necessario apportare importanti aggiornamenti tecnici o modifiche alla rete; in genere derivano da [proposte di miglioramento di Ethereum (EIP)](/eips/) e cambiano le "regole" del protocollo.
 
-Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I <a href="/developers/docs/nodes-and-clients/">client di Ethereum</a> devono aggiornare il proprio software e implementare le regole della nuova diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. <a href="/developers/docs/consensus-mechanisms/">Maggiori informazioni sui meccanismi di consenso</a>
+Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client di Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software e implementare le regole della nuova diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Maggiori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
 Queste modifiche alle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la <a href="#dao-fork">diramazione DAO</a>.
 
@@ -397,10 +397,10 @@ La diramazione Instanbul:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>consente a Ethereum di lavorare con valute di preservazione dell'anonimato, come Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>crittografia più economica per migliorare i costi del <a href="/glossary/#gas">carburante</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protegge Ethereum dagli attacchi di riproduzione, aggiungendo l'<a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a> <code>CHAINID</code>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>crittografia più economica per migliorare i costi del [carburante](/glossary/#gas).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protegge Ethereum dagli attacchi di riproduzione, aggiungendo l'[opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine) <code>CHAINID</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>ottimizzazione dei prezzi del carburante dell'opcode basata sul consumo.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>riduce il costo di CallData per consentire più dati nei blocchi, buono per il <a href="/developers/docs/scaling/#layer-2-scaling">ridimensionamento del Livello 2</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>riduce il costo di CallData per consentire più dati nei blocchi, buono per il [ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>altre alterazioni del prezzo del carburante dell'opcode.</em></li>
 </ul>
 
@@ -458,13 +458,13 @@ La diramazione Byzantium:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>aggiunge l'opcode <code>REVERT</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>campo di stato aggiunto alle ricevute di transazione per indicare successo o fallimento.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>aggiunge la curva ellittica e la moltiplicazione scalare per consentire i <a href="/developers/docs/scaling/zk-rollups/">ZK-SNARK</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>aggiunge la curva ellittica e la moltiplicazione scalare per consentire i <a href="/developers/docs/scaling/zk-rollups/">ZK-SNARK</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>aggiunge la curva ellittica e la moltiplicazione scalare per consentire i [ZK-SNARK](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>aggiunge la curva ellittica e la moltiplicazione scalare per consentire i [ZK-SNARK](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>consente la verifica della firma RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>aggiunge il supporto per i valori restituiti di lunghezza variabile.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>aggiunge l'opcode <code>STATICCALL</code>, consentendo chiamate che non modificano lo stato ad altri contratti.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>modifica la formula di regolazione della difficoltà.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>ritarda la <a href="/glossary/#difficulty-bomb">bomba di difficoltà</a> di 1 anno e riduce la ricompensa del blocco da 5 a 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>ritarda la [bomba di difficoltà](/glossary/#difficulty-bomb) di 1 anno e riduce la ricompensa del blocco da 5 a 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

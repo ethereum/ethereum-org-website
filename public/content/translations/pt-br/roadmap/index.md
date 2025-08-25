@@ -70,7 +70,7 @@ O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisad
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>O que era ETH2?</h4>
 
-  <p>O termo 'Eth2' era comumente usado para descrever o futuro do Ethereum antes da mudança para <a href="/glossary/#pos">prova de participação</a>, mas foi <strong>eliminado em favor de uma terminologia mais precisa.</strong> Originalmente, era usado para diferenciar a rede Ethereum antes da mudança para prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os <a href="/glossary/#execution-client">clientes de execução</a> e os <a href="/glossary/#consensus-client">clientes de consenso</a> eram respectivamente chamados de clientes ETH1 e ETH2).</p>
+  <p>O termo 'Eth2' era comumente usado para descrever o futuro do Ethereum antes da mudança para [prova de participação](/glossary/#pos), mas foi <strong>eliminado em favor de uma terminologia mais precisa.</strong> Originalmente, era usado para diferenciar a rede Ethereum antes da mudança para prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os [clientes de execução](/glossary/#execution-client) e os [clientes de consenso](/glossary/#consensus-client) eram respectivamente chamados de clientes ETH1 e ETH2).</p>
 
 </InfoBanner>
 

@@ -11,9 +11,9 @@ Amlíne de na mórspriocanna, forcanna, agus nuashonruithe ar blocshlabhra Ether
 
 <ExpandableCard title="Cad is forcanna ann?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Is éard is foirc ann ná nuair is gá uasghráduithe nó athruithe móra teicniúla a dhéanamh ar an líonra – go hiondúil eascraíonn siad ó <a href="/eips/">Moltaí Feabhsúcháin Ethereum (EIPs)</a> agus athraíonn siad "rialacha" an phrótacail.
+Is éard is foirc ann ná nuair is gá uasghráduithe nó athruithe móra teicniúla a dhéanamh ar an líonra – go hiondúil eascraíonn siad ó [Moltaí Feabhsúcháin Ethereum (EIPs)](/eips/) agus athraíonn siad "rialacha" an phrótacail.
 
-Nuair a bhíonn gá le huasghráduithe ar bhogearraí traidisiúnta atá rialaithe go lárnach, foilseoidh an comhlacht leagan nua don úsáideoir deiridh. Oibríonn Blocshlabhraí ar bhealach difriúil toisc nach bhfuil aon úinéireacht lárnach ann. Ní mór do <a href="/developers/docs/nodes-and-clients/">chliaint Ethereum</a> a mbogearraí a nuashonrú chun na rialacha foirc nua a chur i bhfeidhm. Ní mór do chruthaitheoirí bloc Plus (mianadóirí i ndomhan cruthúnas-oibre, bailíochtóirí i ndomhan cruthúnas-gealláil) agus nóid bloic a chruthú agus bailíochtú a dhéanamh i gcoinne na rialacha nua. <a href="/developers/docs/consensus-mechanisms/">Tuilleadh faoi mheicníochtaí comhthola</a>
+Nuair a bhíonn gá le huasghráduithe ar bhogearraí traidisiúnta atá rialaithe go lárnach, foilseoidh an comhlacht leagan nua don úsáideoir deiridh. Oibríonn Blocshlabhraí ar bhealach difriúil toisc nach bhfuil aon úinéireacht lárnach ann. Ní mór do [chliaint Ethereum](/developers/docs/nodes-and-clients/) a mbogearraí a nuashonrú chun na rialacha foirc nua a chur i bhfeidhm. Ní mór do chruthaitheoirí bloc Plus (mianadóirí i ndomhan cruthúnas-oibre, bailíochtóirí i ndomhan cruthúnas-gealláil) agus nóid bloic a chruthú agus bailíochtú a dhéanamh i gcoinne na rialacha nua. [Tuilleadh faoi mheicníochtaí comhthola](/developers/docs/consensus-mechanisms/)
 
 Féadfaidh na hathruithe rialacha seo scoilt shealadach a chruthú sa líonra. D’fhéadfaí bloic nua a tháirgeadh de réir na rialacha nua nó na seanchinn. Is gnách go n-aontaítear foirc roimh an am ionas go nglacfaidh na cliaint leis na hathruithe d'aon ghuth agus go dtiocfaidh an forc leis na huasghráduithe ar an bpríomhshlabhra. I gcásanna neamhchoitianta, áfach, d’fhéadfadh easaontais faoi fhoirc a bheith ina gcúis le scoilt bhuan sa líonra – go háirithe cruthú Ethereum Classic leis an <a href="#dao-fork"> bhforc DAO</a>.
 
@@ -449,10 +449,10 @@ An forc Iostanbúl:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> - <em> lig do Ethereum oibriú le hairgeadra caomhnaithe príobháideachta cosúil le Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cripteagrafaíocht níos saoire chun costais <a href="/glossary/#gas">gáis</a> a fheabhsú.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> - <em>cosnaíonn sé Ethereum ar ionsaithe athimeartha trí <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opemcode</a> a chur leis.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cripteagrafaíocht níos saoire chun costais [gáis](/glossary/#gas) a fheabhsú.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> - <em>cosnaíonn sé Ethereum ar ionsaithe athimeartha trí <code>CHAINID</code> [opemcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine) a chur leis.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>praghsanna gáis opcode a bharrfheabhsú bunaithe ar thomhaltas.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>laghdaíonn costas CallData chun tuilleadh sonraí a cheadú i mbloic – maith do <a href="/developers/docs/scaling/#layer-2-scaling">Sraith 2</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>laghdaíonn costas CallData chun tuilleadh sonraí a cheadú i mbloic – maith do [Sraith 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>athruithe eile ar phraghas an gháis opcode.</em></li>
 </ul>
 
@@ -510,13 +510,13 @@ An forc Byzantium:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> - <em>Cuireann <code>REVERT</code> opcode leis.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>réimse stádais curtha le hadmhálacha idirbheart chun rath nó teip a léiriú.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – cuireann <em>cuar éilipseach agus iolrú scálach le ligean do <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – cuireann <em>cuar éilipseach agus iolrú scálach leis chun <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a> a cheadú.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – cuireann <em>cuar éilipseach agus iolrú scálach le ligean do [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – cuireann <em>cuar éilipseach agus iolrú scálach leis chun [ZK-Snarks](/developers/docs/scaling/zk-rollups/) a cheadú.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> - <em>cumasaíonn sé fíorú sínithe RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> - <em>Cuireann sé tacaíocht le haghaidh luachanna aischuir faid athraitheach.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> - cuireann <em>chód opcode leis an <code>STATICCALL</code>, rud a cheadaíonn glaonna nach n-athraíonn an stát ar chonarthaí eile.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> - <em>athraíonn an fhoirmle coigeartaithe deacrachta.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>moilleanna <a href="/glossary/#difficulty-bomb">buama deacrachta</a> faoi 1 bhliain agus laghdaítear luach saothair bloc ó 5 go 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>moilleanna [buama deacrachta](/glossary/#difficulty-bomb) faoi 1 bhliain agus laghdaítear luach saothair bloc ó 5 go 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

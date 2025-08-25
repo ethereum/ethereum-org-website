@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Agar siz <a href="/staking/pools/">steyking puli</a>ning a’zosi bo‘lsangiz yoki steyking tokenlariga ega bo‘lsangiz, steyking yechib olish jarayoni haqida batafsilroq ma’lumot olish uchun o‘z xizmat ko‘rsatuvchingizga murojaat qilishingiz lozim, chunki har bir xizmat turlicha ishlaydi.
+Agar siz [steyking puli](/staking/pools/)ning a’zosi bo‘lsangiz yoki steyking tokenlariga ega bo‘lsangiz, steyking yechib olish jarayoni haqida batafsilroq ma’lumot olish uchun o‘z xizmat ko‘rsatuvchingizga murojaat qilishingiz lozim, chunki har bir xizmat turlicha ishlaydi.
 
-Umuman olganda, foydalanuvchilar o‘zlarining asosiy garovga qo‘yilgan ETHlarini qaytarib olish yoki foydalanayotgan steyking provayderni o‘zgartirish imkoniyatiga ega bo‘lishlari kerak. Agar ma’lum bir fond juda katta bo‘lib ketayotgan bo‘lsa, mablag‘larni chiqarib olish, qaytarib olish va <a href="https://rated.network/">kichikroq provayderga</a> qayta kiritish mumkin. Yoki, agar yetarli miqdorda ETH to‘plagan bo‘lsangiz, <a href="/staking/solo/">uydan turib steyking qilishingiz</a> mumkin.
+Umuman olganda, foydalanuvchilar o‘zlarining asosiy garovga qo‘yilgan ETHlarini qaytarib olish yoki foydalanayotgan steyking provayderni o‘zgartirish imkoniyatiga ega bo‘lishlari kerak. Agar ma’lum bir fond juda katta bo‘lib ketayotgan bo‘lsa, mablag‘larni chiqarib olish, qaytarib olish va <a href="https://rated.network/">kichikroq provayderga</a> qayta kiritish mumkin. Yoki, agar yetarli miqdorda ETH to‘plagan bo‘lsangiz, [uydan turib steyking qilishingiz](/staking/solo/) mumkin.
 
 </ExpandableCard>
 

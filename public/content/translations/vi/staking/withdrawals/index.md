@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Nếu bạn đang tham gia một <a href="/staking/pools/">nhóm đặt cọc</a> hoặc nắm giữ token góp cổ phần, bạn nên liên hệ với nhà cung cấp dịch vụ của mình để biết thêm chi tiết về cách thức xử lý rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
+Nếu bạn đang tham gia một [nhóm đặt cọc](/staking/pools/) hoặc nắm giữ token góp cổ phần, bạn nên liên hệ với nhà cung cấp dịch vụ của mình để biết thêm chi tiết về cách thức xử lý rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
 
-Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc nếu bạn đã tích lũy đủ ETH, bạn có thể <a href="/staking/solo/">tự đặt cọc tại nhà</a>.
+Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc nếu bạn đã tích lũy đủ ETH, bạn có thể [tự đặt cọc tại nhà](/staking/solo/).
 
 </ExpandableCard>
 

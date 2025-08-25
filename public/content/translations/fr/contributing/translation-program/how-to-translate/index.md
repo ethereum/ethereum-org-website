@@ -34,7 +34,7 @@ Ouvrez la langue dans laquelle vous souhaitez traduire pour voir la liste des fi
 
 Le contenu du site web est divisé en un certain nombre de documents et d'ensembles de contenus. Vous pouvez vérifier la progression de chaque document sur la droite. Si la progression de la traduction est inférieure à 100 %, n'hésitez pas à y contribuer !
 
-Votre langage n'est pas répertorié ici ? [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou demandez de l'aide sur notre [Discord](/discord/)
+Votre langage n'est pas répertorié ici ? [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou demandez de l'aide sur notre [Discord](https://discord.gg/ethereum-org)
 
 ![Fichiers traduits et non traduits sur Crowdin](./crowdin-files.png)
 
@@ -82,7 +82,7 @@ Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichie
 
 ### Nous contacter {#get-in-touch}
 
-Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](/discord/)
+Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](https://discord.gg/ethereum-org)
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 

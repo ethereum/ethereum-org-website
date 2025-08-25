@@ -20,7 +20,7 @@ O Programa de Tradução do ethereum.org está aberto e qualquer um pode contrib
 4. As traduções automáticas não serão aprovadas.
 5. Todas as traduções são revisadas antes de serem adicionadas ao site, por isso, haverá um pequeno atraso antes que suas traduções sejam publicadas.
 
-_Junte-se ao [ethereum.org Discord](/discord/) para colaborar com traduções, fazer perguntas, compartilhar comentários e ideias ou juntar-se a um grupo de tradução._
+_Junte-se ao [ethereum.org Discord](https://discord.gg/ethereum-org) para colaborar com traduções, fazer perguntas, compartilhar comentários e ideias ou juntar-se a um grupo de tradução._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Comece a traduzir

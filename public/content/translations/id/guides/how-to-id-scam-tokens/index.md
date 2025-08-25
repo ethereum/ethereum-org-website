@@ -19,7 +19,7 @@ Untuk mengilustrasikan apa itu token palsu, dan bagaimana mengidentifikasinya, k
 title="Apa itu ARB?"
 contentPreview=''>
 
-Arbitrum adalah organisasi yang mengembangkan dan mengelola <a href="/developers/docs/scaling/optimistic-rollups/">rollup optimistis</a>. Pada awalnya, Arbitrum diorganisir sebagai perusahaan berorientasi keuntungan, namun kemudian mengambil langkah-langkah untuk mendesentralisasikan. Sebagai bagian dari proses tersebut, mereka menerbitkan <a href="/dao/#token-based-membership">token tata kelola</a> yang dapat diperdagangkan.
+Arbitrum adalah organisasi yang mengembangkan dan mengelola [rollup optimistis](/developers/docs/scaling/optimistic-rollups/). Pada awalnya, Arbitrum diorganisir sebagai perusahaan berorientasi keuntungan, namun kemudian mengambil langkah-langkah untuk mendesentralisasikan. Sebagai bagian dari proses tersebut, mereka menerbitkan [token tata kelola](/dao/#token-based-membership) yang dapat diperdagangkan.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Inti dari Ethereum adalah desentralisasi. Ini berarti tidak ada otoritas pusat y
 title="Apa itu kontrak pintar?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Kontrak pintar</a> adalah program-program yang berjalan di atas rantai blok Ethereum. Setiap token ERC-20, misalnya, diimplementasikan sebagai kontrak pintar.
+[Kontrak pintar](/developers/docs/smart-contracts/) adalah program-program yang berjalan di atas rantai blok Ethereum. Setiap token ERC-20, misalnya, diimplementasikan sebagai kontrak pintar.
 
 </ExpandableCard>
 

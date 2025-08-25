@@ -20,7 +20,7 @@ Překladatelský program ethereum.org je otevřený a každý může přispět!
 4. Strojové překlady nebudou schváleny.
 5. Všechny překlady jsou před přidáním na web přezkoumány, takže před zveřejněním vašich překladů může dojít ke krátkému zpoždění.
 
-_Připojte se k [Discordu ethereum.org](/discord/), kde můžete spolupracovat na překladech, klást otázky, sdílet zpětnou vazbu a nápady nebo se připojit ke skupině překladatelů._
+_Připojte se k [Discordu ethereum.org](https://discord.gg/ethereum-org), kde můžete spolupracovat na překladech, klást otázky, sdílet zpětnou vazbu a nápady nebo se připojit ke skupině překladatelů._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Začněte překládat

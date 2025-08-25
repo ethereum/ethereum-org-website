@@ -35,7 +35,7 @@ Przejście na proof-of-stake sprawiło, że sieć Ethereum stała się znacznie 
 Stosowanie proof-of-stake jako mechanizmu konsensusu jest fundamentalnym elementem [bezpiecznego, przyjaznego dla środowiska i skalowalnego Ethereum, które mamy teraz](/roadmap/vision/).
 
 <InfoBanner emoji=":money_bag:">
-  Jeśli chcesz zostać walidatorem i pomóc w zabezpieczaniu Ethereum, <a href="/staking/">dowiedz się więcej o stakingu</a>.
+  Jeśli chcesz zostać walidatorem i pomóc w zabezpieczaniu Ethereum, [dowiedz się więcej o stakingu](/staking/).
 </InfoBanner>
 
 ### Przygotowanie do shardingu {#setting-up-for-sharding}

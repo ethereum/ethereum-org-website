@@ -86,7 +86,7 @@ Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi simpul Anda kepada 
 
 Setelah selesai proses pemotongan hadiah/keluar, dana tersebut akan ditransfer ke alamat penarikan yang ditetapkan untuk validator tersebut. Ini memerlukan menyediakan alamat penarikan untuk diaktifkan. Alamat penarikan mungkin telah disediakan saat deposit awal. Jika tidak, kunci penarikan validator harus digunakan untuk menandatangani pesan yang menyatakan alamat penarikan. Jika tidak ada alamat penarikan yang disediakan, dana akan tetap terkunci sampai alamat penarikan diberikan.
 
-Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika Anda lebih suka memiliki kendali penuh atas pengaturan validator Anda, <a href="/staking/solo/">pelajari lebih lanjut tentang cara melakukan taruhan solo untuk ETH</a>.
+Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika Anda lebih suka memiliki kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut tentang cara melakukan taruhan solo untuk ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}

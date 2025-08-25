@@ -7,7 +7,7 @@ lang: ga
 Thosaigh líonra Ethereum trí leas a bhaint as meicníocht chomhdhearcaidh a raibh **[Cruthúnas-oibre (PoW)](/developers/docs/consensus-mechanisms/pow)** i gceist leis. Cheadaigh sé seo do nóid líonra Ethereum aontú ar staid na faisnéise go léir a taifeadadh ar an mblocshlabhra Ethereum agus chuir sé cosc ​​ar chineálacha áirithe ionsaithe eacnamaíocha. Ach mhúch Ethereum cruthúnas-oibre in 2022 agus thosaigh sé ag úsáid [cruthúnas-gill](/developers/docs/consensus-mechanisms/pos) ina ionad sin.
 
 <InfoBanner emoji=":wave:">
-    Tá an cruthúnas-oibre imithe i léig anois. Ní úsáideann Ethereum cruthúnas-oibre a thuilleadh mar chuid dá mheicníocht chomhdhearcaidh. Ina áit sin, úsáideann sé cruthúnas-gill. Léigh tuilleadh ar <a href="/developers/docs/consensus-mechanisms/pos/">cruthúnas-gill</a> agus <a href="/staking/">geallchur</a>.
+    Tá an cruthúnas-oibre imithe i léig anois. Ní úsáideann Ethereum cruthúnas-oibre a thuilleadh mar chuid dá mheicníocht chomhdhearcaidh. Ina áit sin, úsáideann sé cruthúnas-gill. Léigh tuilleadh ar [cruthúnas-gill](/developers/docs/consensus-mechanisms/pos/) agus [geallchur](/staking/).
 </InfoBanner>
 
 ## Réamhriachtanais {#prerequisites}

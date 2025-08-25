@@ -35,7 +35,7 @@ La transizione al proof of stake ha reso Ethereum significativamente più sicura
 E l'utilizzo del proof of stake come meccanismo di consenso è un componente fondamentale per [l'Ethereum sicuro, ecosostenibile e scalabile che conosciamo ora](/roadmap/vision/).
 
 <InfoBanner emoji=":money_bag:">
-  Se sei interessato a diventare un validatore e contribuire a proteggere Ethereum, <a href="/staking/">scopri di più sullo staking</a>.
+  Se sei interessato a diventare un validatore e contribuire a proteggere Ethereum, [scopri di più sullo staking](/staking/).
 </InfoBanner>
 
 ### Prepararsi allo sharding {#setting-up-for-sharding}

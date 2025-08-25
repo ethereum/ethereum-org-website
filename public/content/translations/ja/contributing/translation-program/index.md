@@ -20,7 +20,7 @@ ethereum.org翻訳プログラムはオープンで、誰でも貢献できま�
 4. 機械翻訳は承認されません。
 5. すべての翻訳は、サイトに追加される前にレビューされるため、翻訳が掲載されるまで若干のライムラグがあります。
 
-_[ethereum.orgのDiscord](/discord/)に参加すると、翻訳でのコラボレーション、質問、フィードバックやアイデアの共有、または翻訳グループへの参加ができます。_
+_[ethereum.orgのDiscord](https://discord.gg/ethereum-org)に参加すると、翻訳でのコラボレーション、質問、フィードバックやアイデアの共有、または翻訳グループへの参加ができます。_
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   翻訳を始める

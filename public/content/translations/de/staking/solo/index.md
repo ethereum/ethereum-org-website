@@ -55,7 +55,7 @@ Es erfordert auch eine sehr einfache Hardware-Konfiguration und ein gewisses Ver
 <ExpandableCard title="Sichere Schlüsselverwaltung" eventCategory="SoloStaking" eventName="clicked secure key management">
 Genauso wie private Schlüssel Ihre Ethereum-Adresse sichern, müssen Sie Schlüssel speziell für Ihren Validator generieren. Sie müssen sich informieren, wie Sie Seed-Phrasen oder private Schlüssel sicher aufbewahren.{' '}
 
-<a href="/security/">Ethereum-Sicherheit und Betrugsprävention</a>
+[Ethereum-Sicherheit und Betrugsprävention](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Wartung" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Ein <em>Validator</em> ist eine virtuelle Einheit, die auf Ethereum existiert un
 <ExpandableCard title="Kann ich mehr als 32 ETH einzahlen?">
 Jedes Schlüsselpaar, das einem Validator zugeordnet ist, erfordert genau 32 ETH, um aktiviert zu werden. Mehr ETH, die in einen einzigen Schlüsselsatz eingezahlt werden, erhöhen das Belohnungspotenzial nicht, da jeder Validator auf ein <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effektives Guthaben von 32 ETH</a> begrenzt ist. Dies bedeutet, dass das Staking in Schritten von 32 ETH erfolgt, von denen jeder seinen eigenen Schlüsselsatz und sein eigenes Guthaben hat.
 
-Zahlen Sie nicht mehr als 32 ETH für einen einzelnen Validator ein. Sie wird Ihre Belohnungen nicht erhöhen. Wenn eine Auszahlungsadresse für den Validator festgelegt wurde, werden überschüssige Gelder über 32 ETH während des nächsten <a href="/staking/withdrawals/#validator-sweeping">Validator-Sweeps</a> automatisch an diese Adresse überwiesen.
+Zahlen Sie nicht mehr als 32 ETH für einen einzelnen Validator ein. Sie wird Ihre Belohnungen nicht erhöhen. Wenn eine Auszahlungsadresse für den Validator festgelegt wurde, werden überschüssige Gelder über 32 ETH während des nächsten [Validator-Sweeps](/staking/withdrawals/#validator-sweeping) automatisch an diese Adresse überwiesen.
 
-Wenn Ihnen Solo-Staking zu anspruchsvoll erscheint, ziehen Sie die Nutzung eines <a href="/staking/saas/">Staking-as-a-Service</a>-Anbieters in Betracht, oder wenn Sie mit weniger als 32 ETH arbeiten, schauen Sie sich die <a href="/staking/pools/">Staking-Pools</a> an.
+Wenn Ihnen Solo-Staking zu anspruchsvoll erscheint, ziehen Sie die Nutzung eines [Staking-as-a-Service](/staking/saas/)-Anbieters in Betracht, oder wenn Sie mit weniger als 32 ETH arbeiten, schauen Sie sich die [Staking-Pools](/staking/pools/) an.
 </ExpandableCard>
 
 <ExpandableCard title="Werde ich geslashed, wenn ich offline gehe? (tldr: Nein.)">

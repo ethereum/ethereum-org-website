@@ -55,7 +55,7 @@ Hakanan yana buƙatar saitin kayan aiki na asali, da wasu fahimtar ƙayyadaddun 
 <ExpandableCard title="Amintaccen sarrafa mabuɗi" eventCategory="SoloStaking" eventName="clicked secure key management">
 Kamar yadda maɓallin sirri suna tsare adireshin Ethereum, kuna buƙatar samar da mabuɗi na musamman don mai tabbatar da ku. Dole ne ku fahimci yadda ake kiyaye kowace Jimlar kalmomi ko maɓallin sirri lafiya da tsaro.{' '}
 
-<a href="/security/">Tsaron Ethereum da rigakafin zamba</a>
+[Tsaron Ethereum da rigakafin zamba](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Kula" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Wani <em>Mai tantancewa</em> wata halitta kama-da-wane akan Ethereum kuma tana s
 <ExpandableCard title="Zan iya saka fiye da ETH 32?">
 Kowane maɓalli-biyu masu alaƙa da mai tantancewa na buƙatar daidai 32 ETH don kunnawa. ETH da aka kara ajiye zuwa saita maɓalli guda ɗaya baya ƙara samun kyauta, kamar yadda kowane mai tantancewa yana takaita ga <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">daidaitawa mai inganci</a> na 32 ETH. Wannan na nufin cewa ana yin saka hannun jari a cikin karin 32 ETH, kowanne yana da nasa seti maɓalli da daidaitawa.
 
-Kada ku sa fiye da ETH 32 don mai tantancewa guda ɗaya. Ba zai ƙara muku kyauta ba. Idan an saita adireshin cirewa don tantancewa, za a cire kuɗaɗen da suka wuce 32 ETH kai tsaye zuwa wannan adireshin a lokacin na gaba <a href="/staking/withdrawals/#validator-sweeping">share mai tantancewa</a>.
+Kada ku sa fiye da ETH 32 don mai tantancewa guda ɗaya. Ba zai ƙara muku kyauta ba. Idan an saita adireshin cirewa don tantancewa, za a cire kuɗaɗen da suka wuce 32 ETH kai tsaye zuwa wannan adireshin a lokacin na gaba [share mai tantancewa](/staking/withdrawals/#validator-sweeping).
 
-Idan saka hannun jari na gida ya zo muku kamar da buƙatu, ku yi la'akarin yin amfani da <a href="/staking/saas/">saka-kuɗi-a-matsayin-sabis</a> mai samarwa, orko idan kuna aiki da ETH kasa da 32, ku duba shi<a href="/staking/pools/">tafkin saka kuɗi</a>.
+Idan saka hannun jari na gida ya zo muku kamar da buƙatu, ku yi la'akarin yin amfani da [saka-kuɗi-a-matsayin-sabis](/staking/saas/) mai samarwa, orko idan kuna aiki da ETH kasa da 32, ku duba shi[tafkin saka kuɗi](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Shin za a hukunta ni idan ban hau kan intanet ba? (tldr: Lamba.)">

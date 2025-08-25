@@ -86,7 +86,7 @@ Usando um provedor SaaS, você está confiando a operação do seu nó a um terc
 
 Após a conclusão do processo de remoção/saída, esses fundos serão transferidos para o endereço de saque atribuído ao validador. Para isso, é necessário habilitar um endereço de saque. Ela pode ter sido fornecida no depósito inicial. Caso contrário, será necessário usar as chaves de saque do validador para assinar uma mensagem declarando um endereço de saque. Os fundos permanecerão bloqueados até um endereço de saque ser fornecido.
 
-Entre em contato com o provedor de SaaS para obter mais detalhes sobre quaisquer garantias ou opções de seguro e instruções sobre como fornecer um endereço de saque. Se você preferir estar no controle total da sua configuração do validador, <a href="/staking/solo/">saiba mais sobre como fazer staking individual de seu ETH</a>.
+Entre em contato com o provedor de SaaS para obter mais detalhes sobre quaisquer garantias ou opções de seguro e instruções sobre como fornecer um endereço de saque. Se você preferir estar no controle total da sua configuração do validador, [saiba mais sobre como fazer staking individual de seu ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Leitura adicional {#further-reading}

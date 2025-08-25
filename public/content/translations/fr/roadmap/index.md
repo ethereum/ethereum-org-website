@@ -70,7 +70,7 @@ La feuille de route est principalement le résultat d'années de travail des che
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Que fut l'ETH2 ?</h4>
 
-  <p>Le terme « Eth2 » était couramment utilisé pour décrire l'avenir d'Ethereum avant le passage à la <a href="/glossary/#pos">preuve d'enjeu</a>, mais il a été <strong>supprimé en faveur d'une terminologie plus précise.</strong> Il était à l'origine utilisé pour différencier le réseau Ethereum avant le passage à la preuve d'enjeu et le réseau après, ou parfois pour se référer aux différents clients Ethereum (les <a href="/glossary/#execution-client">clients d'exécution</a> étaient parfois appelés clients ETH1 et les <a href="/glossary/#consensus-client">clients de consensus</a> étaient parfois appelés clients ETH2).</p>
+  <p>Le terme « Eth2 » était couramment utilisé pour décrire l'avenir d'Ethereum avant le passage à la [preuve d'enjeu](/glossary/#pos), mais il a été <strong>supprimé en faveur d'une terminologie plus précise.</strong> Il était à l'origine utilisé pour différencier le réseau Ethereum avant le passage à la preuve d'enjeu et le réseau après, ou parfois pour se référer aux différents clients Ethereum (les [clients d'exécution](/glossary/#execution-client) étaient parfois appelés clients ETH1 et les [clients de consensus](/glossary/#consensus-client) étaient parfois appelés clients ETH2).</p>
 
 </InfoBanner>
 

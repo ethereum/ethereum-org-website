@@ -31,7 +31,7 @@ const RoadmapPage = () => {
 
   const heroContent: HubHeroProps = {
     title: "",
-    header: t("page-roadmap-meta-title"),
+    header: t("page-roadmap-title"),
     description: t("page-roadmap-meta-description"),
     heroImg: roadmapHeroImg,
   }

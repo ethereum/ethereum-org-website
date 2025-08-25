@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ti o ba jẹ ara ti <a href="/staking/pools/">akojopo idokowo</a> kan tabi mu awọn token idokowo dani, o yẹ ki o ṣayẹwo pẹlu olupese rẹ fun awọn alaye diẹ sii nipa bi a ṣe n ṣakoso awọn yiyọkuro idokowo, nitori iṣẹ kọọkan n ṣiṣẹ ni ona otooto.
+Ti o ba jẹ ara ti [akojopo idokowo](/staking/pools/) kan tabi mu awọn token idokowo dani, o yẹ ki o ṣayẹwo pẹlu olupese rẹ fun awọn alaye diẹ sii nipa bi a ṣe n ṣakoso awọn yiyọkuro idokowo, nitori iṣẹ kọọkan n ṣiṣẹ ni ona otooto.
 
-Ni gbogbogbo, awọn olumulo yẹ ki o ni ominira lati gba ETH ti wọn fi dokowo pada, tabi yi olupese idokowo ti wọn yoo lo pada. Ti akojopo idokowo kan pato ba n tobi ju, a le gba awọn owo jade, rà pada, ati tun idokowo ṣe pẹlu <a href="https://rated.network/">olupese ti o kere ju</a>. Tabi, ti o ba ti ko ETH jo to o le ṣe <a href="/staking/solo/">idokowo lati ile</a>.
+Ni gbogbogbo, awọn olumulo yẹ ki o ni ominira lati gba ETH ti wọn fi dokowo pada, tabi yi olupese idokowo ti wọn yoo lo pada. Ti akojopo idokowo kan pato ba n tobi ju, a le gba awọn owo jade, rà pada, ati tun idokowo ṣe pẹlu <a href="https://rated.network/">olupese ti o kere ju</a>. Tabi, ti o ba ti ko ETH jo to o le ṣe [idokowo lati ile](/staking/solo/).
 
 </ExpandableCard>
 

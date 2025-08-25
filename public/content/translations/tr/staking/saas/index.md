@@ -86,7 +86,7 @@ Bir SaaS sağlayıcısı kullanarak, düğümünüzün çalışmasını başka b
 
 Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya atanmış olan para çekme adresine transfer edilecektir. Bu, aktif hale getirilmek için bir para çekme adresinin sağlanmasını gerektirir. Bu ilk yatırımda sağlanabilir. Eğer sağlanmadıysa, doğrulayıcı para çekme anahtarları çekim adresini belirten bir mesajı imzalamak için kullanılmalıdır. Eğer herhangi bir para çekme adresi sağlanmadıysa, sağlanana kadar fonlar kilitli kalacaktır.
 
-Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl para çekme adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, <a href="/staking/solo/">ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin</a>.
+Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl para çekme adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, [ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin](/staking/solo/).
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}

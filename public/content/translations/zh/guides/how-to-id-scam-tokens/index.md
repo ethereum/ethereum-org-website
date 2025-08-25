@@ -19,7 +19,7 @@ lang: zh
 title="什么是 ARB？"
 contentPreview=''>
 
-Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollup/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
+Arbitrum 是一个开发和管理 [乐观卷叠](/developers/docs/scaling/optimistic-rollup/) 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的[治理代币](/dao/#token-based-membership)。
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ contentPreview=''>
 title="什么是智能合约？"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">智能合约</a>是在以太坊区块链上运行的程序。 例如，每个 ERC-20 代币都是以智能合约的形式实现的。
+[智能合约](/developers/docs/smart-contracts/)是在以太坊区块链上运行的程序。 例如，每个 ERC-20 代币都是以智能合约的形式实现的。
 
 </ExpandableCard>
 

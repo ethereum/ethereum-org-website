@@ -70,7 +70,7 @@ Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mi
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Mi volt az ETH2?</h4>
 
-  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a <a href="/glossary/#pos">proof-of-stake</a> mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a <a href="/glossary/#execution-client">végrehajtási kliensek</a> néha ETH1-kliensként, a <a href="/glossary/#consensus-client">konszenzuskliensek</a> pedig ETH2-kliensként jelentek meg).</p>
+  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a [proof-of-stake](/glossary/#pos) mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a [végrehajtási kliensek](/glossary/#execution-client) néha ETH1-kliensként, a [konszenzuskliensek](/glossary/#consensus-client) pedig ETH2-kliensként jelentek meg).</p>
 
 </InfoBanner>
 

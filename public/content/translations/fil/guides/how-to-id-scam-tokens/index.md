@@ -19,7 +19,7 @@ Upang ipakita kung ano ang mga scam token, at kung paano matukoy ang mga ito, ti
 title="Ano ang ARB?"
 contentPreview=''>
 
-Ang Arbitrum ay isang organisasyon na nagde-develop at namamahala ng <a href="/developers/docs/scaling/optimistic-rollups/">mga optimistic rollup</a>. Sa simula, ang Arbitrum ay itinatag bilang isang for-profit na kumpanya, ngunit kumilos ito para mag-decentralize. Bilang bahagi ng prosesong iyon, naglabas ito ng tradeable na <a href="/dao/#token-based-membership">governance token</a>.
+Ang Arbitrum ay isang organisasyon na nagde-develop at namamahala ng [mga optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Sa simula, ang Arbitrum ay itinatag bilang isang for-profit na kumpanya, ngunit kumilos ito para mag-decentralize. Bilang bahagi ng prosesong iyon, naglabas ito ng tradeable na [governance token](/dao/#token-based-membership).
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Ang layunin talaga ng Ethereum ay decentralization. Ibig sabihin nito, walang ce
 title="Ano ang mga matalinong kontrata?"
 contentPreview=''>
 
-Ang <a href="/developers/docs/smart-contracts/">mga smart contract</a> ang mga program na tumatakbo sa Ethereum blockchain. Halimbawa, ang bawat ERC-20 token ay ipinapatupad bilang isang smart contract.
+Ang [mga smart contract](/developers/docs/smart-contracts/) ang mga program na tumatakbo sa Ethereum blockchain. Halimbawa, ang bawat ERC-20 token ay ipinapatupad bilang isang smart contract.
 
 </ExpandableCard>
 

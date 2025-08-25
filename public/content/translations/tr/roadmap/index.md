@@ -70,7 +70,7 @@ Yol haritası çoğunlukla, araştırmacı ve geliştirmecilerin yıllar süren 
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>ETH2 neydi?</h4>
 
-  <p>"Eth2" terimi, Ethereum <a href="/glossary/#pos">hisse ispatı</a>na geçmeden önce gelecekteki Ethereum'u tanımlamak için yaygın olarak kullanılırdı ancak bu terim <strong>kaldırılarak yerine daha kesin bir terminoloji getirildi</strong>. Başlangıçta Ethereum ağı hisse ispatına geçmeden önce ve sonrasındaki ağı ayırt etmek için veya bazen farklı Ethereum istemcilerine atıfta bulunmak için kullanıldı (<a href="/glossary/#execution-client">yürütüm istemcileri</a> bazen ETH1 istemcileri olarak adlandırıldı ve <a href="/glossary/#consensus-client">fikir birliği istemcileri</a> bazen ETH2 istemcileri olarak adlandırıldı).</p>
+  <p>"Eth2" terimi, Ethereum [hisse ispatı](/glossary/#pos)na geçmeden önce gelecekteki Ethereum'u tanımlamak için yaygın olarak kullanılırdı ancak bu terim <strong>kaldırılarak yerine daha kesin bir terminoloji getirildi</strong>. Başlangıçta Ethereum ağı hisse ispatına geçmeden önce ve sonrasındaki ağı ayırt etmek için veya bazen farklı Ethereum istemcilerine atıfta bulunmak için kullanıldı ([yürütüm istemcileri](/glossary/#execution-client) bazen ETH1 istemcileri olarak adlandırıldı ve [fikir birliği istemcileri](/glossary/#consensus-client) bazen ETH2 istemcileri olarak adlandırıldı).</p>
 
 </InfoBanner>
 

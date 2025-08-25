@@ -86,7 +86,7 @@ Trí úsáid a bhaint as soláthraí SaaS, tá oibriú do nóid á chur ar ionta
 
 Ar chríochnú an phróisis slaiseála/scoir, aistreofar na cistí sin chuig an seoladh aistarraingthe a shanntar don bhailitheoir. Éilíonn sé seo seoladh aistarraingthe a sholáthar chun é a chumasú. Seans gur soláthraíodh é seo ar an éarlais tosaigh. Mura soláthraíodh, beidh gá na heochracha aistarraingthe bailíochtóra a úsáid chun teachtaireacht a shíniú ag dearbhú seoladh aistarraingthe. Mura gcuirtear seoladh aistarraingthe ar fáil, fanfaidh cistí faoi ghlas go dtí go gcuirfear ar fáil é.
 
-Déan teagmháil le soláthraí aonair SaaS le haghaidh tuilleadh sonraí ar aon ráthaíochtaí nó roghanna árachais, agus le haghaidh treoracha ar conas seoladh aistarraingthe a sholáthar. Más fearr leat smacht iomlán a bheith agat ar do shocrú bailíochtóra, <a href="/staking/solo/">foghlaim tuilleadh faoi conas geall aonair a dhéanamh ar do ETH </a>.
+Déan teagmháil le soláthraí aonair SaaS le haghaidh tuilleadh sonraí ar aon ráthaíochtaí nó roghanna árachais, agus le haghaidh treoracha ar conas seoladh aistarraingthe a sholáthar. Más fearr leat smacht iomlán a bheith agat ar do shocrú bailíochtóra, [foghlaim tuilleadh faoi conas geall aonair a dhéanamh ar do ETH ](/staking/solo/).
 </ExpandableCard>
 
 ## Tuilleadh léitheoireachta {#further-reading}

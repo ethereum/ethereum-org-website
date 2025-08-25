@@ -94,7 +94,7 @@ Pengurangan bersih dalam penerbitan ETH tahunan: <strong>~88,7%</strong> ((4,61%
 Kekuatan berlawanan dengan penerbitan ETH adalah tingkat pembakaran ETH. Untuk sebuah transaksi dieksekusi di Ethereum, biaya minimum (dikenal sebagai "biaya dasar") harus dibayarkan, yang terus berfluktuasi (dari blok ke blok) tergantung pada aktivitas jaringan. Biaya tersebut dibayarkan dalam bentuk ETH dan _wajib_ agar transaksi dianggap sah. Biaya ini akan _dibakar_ selama proses transaksi, mengeluarkannya dari sirkulasi.
 
 <InfoBanner>
-Pembakaran biaya diaktifkan dengan <a href="/history/#london">peningkatan London</a> pada Agustus 2021, dan tetap tidak berubah sejak Terjadinya Penggabungan.
+Pembakaran biaya diaktifkan dengan [peningkatan London](/history/#london) pada Agustus 2021, dan tetap tidak berubah sejak Terjadinya Penggabungan.
 </InfoBanner>
 
 Selain pembakaran biaya yang diimplementasikan oleh peningkatan London, validator juga dapat dikenakan denda karena tidak aktif, atau bahkan lebih buruk lagi, mereka dapat dipotong karena melanggar aturan tertentu yang mengancam keamanan jaringan. Penalti ini mengakibatkan pengurangan ETH dari saldo validator tersebut, yang tidak langsung diberikan sebagai imbalan kepada akun lain, secara efektif dibakar/mengeluarkannya dari sirkulasi.

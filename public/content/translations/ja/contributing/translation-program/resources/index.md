@@ -24,7 +24,7 @@ ethereum.org翻訳者向けの有用なガイド、ツール、翻訳コミュ�
 
 ## コミュニティ {#communities}
 
-- [言語別のDiscord翻訳グループ](/discord/) _– ethereum.orgの翻訳者を翻訳グループにつなげる取り組み_
+- [言語別のDiscord翻訳グループ](https://discord.gg/ethereum-org) _– ethereum.orgの翻訳者を翻訳グループにつなげる取り組み_
 - [中国語翻訳者グループ](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– 中国語翻訳者間の調整を容易にするノーションページ_
 
 ## 最新情報 {#latest-updates}
@@ -38,7 +38,7 @@ ethereum.org翻訳者向けの有用なガイド、ツール、翻訳コミュ�
 
 ## 翻訳者のためのオフィスアワー {#office-hours}
 
-毎月第2水曜日に翻訳者のためのオフィスアワーを設けています。 これらは、[ethereum.org Discord](/discord/) の#office-hours ボイスチャンネルで行われ、ここで正確な時間や追加の詳細を確認できます。
+毎月第2水曜日に翻訳者のためのオフィスアワーを設けています。 これらは、[ethereum.org Discord](https://discord.gg/ethereum-org) の#office-hours ボイスチャンネルで行われ、ここで正確な時間や追加の詳細を確認できます。
 
 オフィスアワーには、翻訳者が翻訳プロセスについて質問したり、プログラムについてフィードバックをしたり、アイデアを共有したり、ethereum.orgのコアチームとチャットしたりすることができます。 最終的に、この会話を通じて、翻訳プログラムの最新動向を伝えて、重要なヒントや指示を貢献者の皆様と共有したいと考えています。
 

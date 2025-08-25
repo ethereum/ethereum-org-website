@@ -86,7 +86,7 @@ Korzystając z usług dostawcy SaaS, powierzasz obsługę swojego węzła komuś
 
 Po zakończeniu procesu cięcia/wyjścia środki te zostaną przelane na adres wypłaty przypisany do walidatora. Wymaga to podania adresu wypłaty w celu włączenia. Mogło to zostać dostarczone przy pierwszej wpłacie. Jeśli nie, klucze wypłaty walidatora będą musiały zostać użyte do podpisania wiadomości deklarującej adres wypłaty. Jeśli nie podano adresu wypłaty, środki pozostaną zablokowane do czasu jego podania.
 
-Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji na temat wszelkich gwarancji lub opcji ubezpieczenia, a także instrukcjami dotyczącymi sposobu podania adresu wypłaty. Jeśli wolisz mieć pełną kontrolę nad konfiguracją walidatora, <a href="/staking/solo/">dowiedz się więcej o solo stakingu ETH</a>.
+Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji na temat wszelkich gwarancji lub opcji ubezpieczenia, a także instrukcjami dotyczącymi sposobu podania adresu wypłaty. Jeśli wolisz mieć pełną kontrolę nad konfiguracją walidatora, [dowiedz się więcej o solo stakingu ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Dodatkowo przeczytaj {#further-reading}

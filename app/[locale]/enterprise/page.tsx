@@ -505,7 +505,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             strings={{
               error: {
                 domain: t.rich("page-enterprise-team-form-error-domain", {
-                  a: (chunks) => <Link href="/discord/">{chunks}</Link>,
+                  a: (chunks) => (
+                    <Link href="https://discord.gg/ethereum-org">{chunks}</Link>
+                  ),
                 }),
                 emailInvalid: t(
                   "page-enterprise-team-form-error-email-invalid"

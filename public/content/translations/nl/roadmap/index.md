@@ -70,7 +70,7 @@ De roadmap is vooral het resultaat van jarenlang werk door onderzoekers en ontwi
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Wat was ETH2?</h4>
 
-  <p>De term 'Eth2' werd vaak gebruikt om de toekomst van Ethereum te beschrijven vóór de overgang naar <a href="/glossary/#pos">proof-of-stake</a>, maar het werd <strong>uitgefaseerd ten gunste van een preciezere terminologie.</strong> Het werd oorspronkelijk gebruikt om een onderscheid te maken tussen het Ethereum-netwerk vóór de overgang naar proof-of-stake en het netwerk erna, of soms om te verwijzen naar de verschillende Ethereum-clients, (<a href="/glossary/#execution-client">uitvoeringsclients</a> werden soms aangeduid als ETH1-clients en <a href="/glossary/#consensus-client">consensusclients</a> werden soms aangeduid als ETH2-clients).</p>
+  <p>De term 'Eth2' werd vaak gebruikt om de toekomst van Ethereum te beschrijven vóór de overgang naar [proof-of-stake](/glossary/#pos), maar het werd <strong>uitgefaseerd ten gunste van een preciezere terminologie.</strong> Het werd oorspronkelijk gebruikt om een onderscheid te maken tussen het Ethereum-netwerk vóór de overgang naar proof-of-stake en het netwerk erna, of soms om te verwijzen naar de verschillende Ethereum-clients, ([uitvoeringsclients](/glossary/#execution-client) werden soms aangeduid als ETH1-clients en [consensusclients](/glossary/#consensus-client) werden soms aangeduid als ETH2-clients).</p>
 
 </InfoBanner>
 

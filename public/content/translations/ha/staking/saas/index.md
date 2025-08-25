@@ -86,7 +86,7 @@ Ta hanyar amfani da masu tanadar da SaaS, kuna Amince da ayyuka cibiyar ku ma wa
 
 Bayan an kammala da sara/tsarin fita, wadannan kudi za a tura su zuwa adireshin cirewa da aka sanya wa mai tabbatarwar. Wannan na buƙatar samar da adireshin cirewa don samun dama. Ana iya bayar da wannan tun ajiyar farko. Idan ba haka ba, za a buƙaci amfani da maɓallan cire kudi na mai tabbatarwa don sa hannu a saƙon da ke bayyana adireshin cire kuɗi. Idan ba a bayar da adireshin cire kuɗi ba, kuɗaɗen za su kasance a kulle har sai an bayar da su.
 
-Tuntuɓi mai tanadar da sabis na SaaS don ƙarin cikakkun bayanai game da duk wani garanti ko zaɓuɓɓukan inshora, da kuma umarni a kan yadda za a samar da adireshin cire kudi. Idan kun fi so ku kasance masu cikakken iko na saitin mai tabbatarwa ku, <a href="/staking/solo/">koyi ƙarin bayyani game da yadda za ku saka hannun jarin ETH ɗinku</a>.
+Tuntuɓi mai tanadar da sabis na SaaS don ƙarin cikakkun bayanai game da duk wani garanti ko zaɓuɓɓukan inshora, da kuma umarni a kan yadda za a samar da adireshin cire kudi. Idan kun fi so ku kasance masu cikakken iko na saitin mai tabbatarwa ku, [koyi ƙarin bayyani game da yadda za ku saka hannun jarin ETH ɗinku](/staking/solo/).
 </ExpandableCard>
 
 ## Karatu na gaba {#further-reading}

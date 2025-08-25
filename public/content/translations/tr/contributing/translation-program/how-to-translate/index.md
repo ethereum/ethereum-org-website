@@ -34,7 +34,7 @@ Crowdin'e giriş yaptıktan sonra bir proje açıklaması ile kullanılabilir t�
 
 Web site içeriği, çok sayıda belge ve içerik gruplarına bölünmüştür. Her belgenin ilerleme durumunu sağ taraftan kontrol edebilirsiniz; çevirinin ilerleme durumu %100'ün altındaysa lütfen katkıda bulunun!
 
-Dilinizi listede göremiyor musunuz? [Bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord'da](/discord/) sorun
+Dilinizi listede göremiyor musunuz? [Bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord'da](https://discord.gg/ethereum-org) sorun
 
 ![Crowdin'de çevrilmiş ve çevrilmemiş dosyalar](./crowdin-files.png)
 
@@ -82,7 +82,7 @@ Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciy
 
 ### İletişime geçin {#get-in-touch}
 
-Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](/discord/) #translations kanalına yazın
+Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalına yazın
 
 Bize translations@ethereum.org adresinden de ulaşabilirsiniz
 

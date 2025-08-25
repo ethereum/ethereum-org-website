@@ -141,7 +141,7 @@ Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficu
 
 Fork Istanbul:
 
-- Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Zoptymalizował koszt [gazu](/glossary/#gas) w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Poprawa odporności na ataki typu „denial-of-service”.
 - Poprawił działanie rozwiązań [skalowania warstwy 2](/developers/docs/scaling/#rollups) opartych na SNARKs i STARKs.
 - Umożliwił współpracę Ethereum i Zcash.
@@ -171,7 +171,7 @@ Fork Istanbul:
 Fork Constantinople:
 
 - Zapewnił, że blockchain nie został zamrożony przed [wdrożeniem proof-of-stake](#beacon-chain-genesis).
-- Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Zoptymalizował koszt [gazu](/glossary/#gas) w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Dodał możliwość interakcji z adresami, które nie zostały jeszcze utworzone.
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)

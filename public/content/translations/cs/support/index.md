@@ -20,7 +20,7 @@ Pochopení decentralizované povahy Etherea je zásadní, protože **každý, kd
   Osvojte si základy Etherea
 </DocLink>
 
-Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu ethereum.org](/discord/) a my se vám pokusíme pomoci.
+Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu ethereum.org](https://discord.gg/ethereum-org) a my se vám pokusíme pomoci.
 
 ## Často kladené dotazy {#faq}
 

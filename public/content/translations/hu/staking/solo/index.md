@@ -55,7 +55,7 @@ Alapvető hardverösszeállításra, illetve a javasolt minimális specifikáci�
 <ExpandableCard title="Biztonságos kulcskezelés" eventCategory="SoloStaking" eventName="clicked secure key management">
 Ahogy a privát kulcs biztosítja az Ethereum-címet, úgy a validátorhoz is létre kell hozni kulcsokat. Tudnia kell, hogyan tartsa a kulcsmondatokat vagy privát kulcsokat biztos helyen.{' '}
 
-<a href="/security/">Ethereum biztonság és csalásmegelőzés</a>
+[Ethereum biztonság és csalásmegelőzés](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Karbantartás" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ A <em>validátor</em> egy virtuális entitás, ami az Ethereumon működik és a
 <ExpandableCard title="Letétbe helyezhetek több mint 32 ETH-t?">
 A validátorhoz tartozó kulcspár pontosan 32 ETH összeget igényel ahhoz, hogy aktívvá váljon. Ha a kulcsokhoz több ETH kerül letétbe, az nem növeli meg a jutalmak lehetőségét, mert a validátor <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">érvényes egyenlege</a> 32 ETH. Tehát a letétbe helyezés 32 ETH összegenként történik, melyekhez saját kulcs és egyenleg tartozik.
 
-Egy validátorhoz ne kössön le többet, mint 32 ETH. Ez nem hoz több nyereséget. A <a href="/staking/withdrawals/#validator-sweeping">validátor-ellenőrzés</a> során a 32 ETH feletti rész automatikusan átkerül a visszavonási címre, ha az be van állítva a validátorhoz.
+Egy validátorhoz ne kössön le többet, mint 32 ETH. Ez nem hoz több nyereséget. A [validátor-ellenőrzés](/staking/withdrawals/#validator-sweeping) során a 32 ETH feletti rész automatikusan átkerül a visszavonási címre, ha az be van állítva a validátorhoz.
 
-Ha az egyéni letétbe helyezés túl nagy erőfeszítést igényelne Öntől, akkor nézze meg a <a href="/staking/saas/">letétbe helyezés, mint szolgáltatás</a> opcióit, vagy ha kevesebb mint 32 ETH összegről van szó, akkor fontolja meg a <a href="/staking/pools/">letéti alapok</a> szolgáltatást.
+Ha az egyéni letétbe helyezés túl nagy erőfeszítést igényelne Öntől, akkor nézze meg a [letétbe helyezés, mint szolgáltatás](/staking/saas/) opcióit, vagy ha kevesebb mint 32 ETH összegről van szó, akkor fontolja meg a [letéti alapok](/staking/pools/) szolgáltatást.
 </ExpandableCard>
 
 <ExpandableCard title="Súlyos büntetéssel és kizárással jár, ha offline a validátorom? (Röviden: nem.)">

@@ -11,9 +11,9 @@ Linimasa semua tonggak sejarah, fork, dan pembaruan utama dalam blockchain Ether
 
 <ExpandableCard title="Apa itu fork?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Garpu terjadi ketika ada perubahan atau peningkatan teknis yang signifikan yang perlu dilakukan pada jaringan - biasanya berasal dari <a href="/eips/">Proposal Peningkatan Ethereum (EIP)</a> dan mengubah "aturan" protokol.
+Garpu terjadi ketika ada perubahan atau peningkatan teknis yang signifikan yang perlu dilakukan pada jaringan - biasanya berasal dari [Proposal Peningkatan Ethereum (EIP)](/eips/) dan mengubah "aturan" protokol.
 
-Ketika peningkatan diperlukan dalam perangkat lunak tradisonal yang dikontrol secara terpusat, perusahaan hanya akan menerbitkan versi terbarunya bagi pengguna akhir. Blockchain bekerja dengan cara yang berbeda karena tidak ada kepemilikan terpusat. <a href="/developers/docs/nodes-and-clients/">Klien Ethereum</a> harus memperbarui perangkat lunak mereka untuk mengimplementasikan aturan fork yang baru. Pembuat blok plus (penambang di dunia bukti kerja, validator di dunia bukti taruhan) dan node harus membuat blok dan memvalidasi aturan baru. <a href="/developers/docs/consensus-mechanisms/">Lebih lanjut tentang mekanisme konsensus</a>
+Ketika peningkatan diperlukan dalam perangkat lunak tradisonal yang dikontrol secara terpusat, perusahaan hanya akan menerbitkan versi terbarunya bagi pengguna akhir. Blockchain bekerja dengan cara yang berbeda karena tidak ada kepemilikan terpusat. [Klien Ethereum](/developers/docs/nodes-and-clients/) harus memperbarui perangkat lunak mereka untuk mengimplementasikan aturan fork yang baru. Pembuat blok plus (penambang di dunia bukti kerja, validator di dunia bukti taruhan) dan node harus membuat blok dan memvalidasi aturan baru. [Lebih lanjut tentang mekanisme konsensus](/developers/docs/consensus-mechanisms/)
 
 Aturan-aturan ini dapat mengubah pemisahan sementara di jarinagn ini. Blok baru dapat dibuat berdasarkan peraturan baru atau lama. Fork biasanya disepakati sebelumnya sehingga klien mengadopsi perubahan secara bersamaan dan fork dengan peningkatan menjadi rantai utama. Namun, dalam kasus yang jarang terjadi, perselisihan mengenai garpu dapat menyebabkan jaringan terbagi secara permanen - yang paling terkenal adalah terciptanya Ethereum Classic dengan <a href="#dao-fork">fork DAO</a>.
 
@@ -285,10 +285,10 @@ Garpu Istanbul:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>memungkinkan Ethereum bekerja dengan mata uang yang menjaga privasi seperti Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>kriptografi yang lebih murah untuk meningkatkan kinerja biaya <a href="/glossary/#gas">gas</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>melindungi Ethereum dari serangan ulang dengan menambahkan <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>kriptografi yang lebih murah untuk meningkatkan kinerja biaya [gas](/glossary/#gas).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>melindungi Ethereum dari serangan ulang dengan menambahkan <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>mengoptimalkan harga gas opcode berdasarkan konsumsi.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>mengurangi biaya CallData untuk memungkinkan lebih banyak data dalam blok – baik untuk <a href="/developers/docs/scaling/#layer-2-scaling">Penskalaan Lapisan ke-2</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>mengurangi biaya CallData untuk memungkinkan lebih banyak data dalam blok – baik untuk [Penskalaan Lapisan ke-2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>penyesuaian harga gas opcode lainnya.</em></li>
 </ul>
 
@@ -345,13 +345,13 @@ Fork Byzantium:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>menambahkan opcode <code>REVERT</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>Bidang status ditambahkan ke tanda terima transaksi untuk menunjukkan keberhasilan atau kegagalan.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>menambahkan kurva elips dan perkalian skalar untuk memungkinkan <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>menambahkan kurva elips dan perkalian skalar untuk memungkinkan <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>menambahkan kurva elips dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>menambahkan kurva elips dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>memungkinkan verifikasi tanda tangan RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>menambahkan dukungan untuk nilai pengembalian panjang variabel.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>menambahkan <code>STATICCALL</code> opcode, mengizinkan panggilan yang tidak mengubah status ke kontrak lain.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>mengubah formula penyesuaian tingkat kesulitan.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>penundaan <a href="/glossary/#difficulty-bomb">bom tingkat kesulitan</a> selama 1 tahun dan mengurangi hadiah blok dari 5 menjadi 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>penundaan [bom tingkat kesulitan](/glossary/#difficulty-bomb) selama 1 tahun dan mengurangi hadiah blok dari 5 menjadi 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

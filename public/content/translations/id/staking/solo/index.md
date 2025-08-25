@@ -56,7 +56,7 @@ Ini juga memerlukan pengaturan perangkat keras yang sangat dasar, dan pemahaman 
 <ExpandableCard title="Manajemen kunci Aman" eventCategory="SoloStaking" eventName="clicked secure key management">
 Sama seperti kunci pribadi yang mengamankan alamat Ethereum Anda, Anda perlu menghasilkan kunci-kunci khusus untuk validator Anda. Anda harus memahami bagaimana cara menjaga frasa benih atau kunci pribadi tetap aman dan terlindungi.{' '}
 
-<a href="/security/">Keamanan Ethereum dan pencegahan penipuan</a>
+[Keamanan Ethereum dan pencegahan penipuan](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Pemeliharaan" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -137,9 +137,9 @@ Seorang <em>validator</em> adalah entitas virtual yang ada di Ethereum dan berpa
 <ExpandableCard title="Dapatkah saya melakukan deposit lebih dari 32 ETH?">
 Setiap pasangan kunci yang terkait dengan validator memerlukan persis 32 ETH untuk diaktifkan. Penambahan ETH lebih banyak ke satu set kunci tidak meningkatkan potensi imbalankarena setiap validator dibatasi oleh <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efektif</a> 32 ETH. Ini berarti bahwa penaruhan dilakukan dalam penambahan 32 ETH, masing-masing dengan set kunci dan saldo yang terpisah.
 
-Jangan meletakkan lebih dari 32 ETH untuk satu validator. Ini tidak akan meningkatkan imbalan Anda. Jika alamat penarikan telah diatur untuk validator, dana yang berlebihan di atas 32 ETH akan secara otomatis ditarik ke alamat ini selama <a href="/staking/withdrawals/#validator-sweeping">pembersihan validator</a> berikutnya.
+Jangan meletakkan lebih dari 32 ETH untuk satu validator. Ini tidak akan meningkatkan imbalan Anda. Jika alamat penarikan telah diatur untuk validator, dana yang berlebihan di atas 32 ETH akan secara otomatis ditarik ke alamat ini selama [pembersihan validator](/staking/withdrawals/#validator-sweeping) berikutnya.
 
-Jika penaruhan solo terlalu menantang bagi Anda, pertimbangkan untuk menggunakan penyedia <a href="/staking/saas/">staking-as-a-service</a>, atau jika Anda memiliki kurang dari 32 ETH, lihatlah <a href="/staking/pools/">pool penaruhan</a>.
+Jika penaruhan solo terlalu menantang bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/), atau jika Anda memiliki kurang dari 32 ETH, lihatlah [pool penaruhan](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Apakah saya akan mengalami pemotongan jika saya offline? (tptb: Tidak.)">

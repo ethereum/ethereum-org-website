@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Idan kana cikin <a href="/staking/pools/"> staking pool</a> ko rike kuɗin ajiyan, zaku iya dubawa da abin dubawa zan samun karin bayanai akan yanda ake cire kudade da rikes u, tunda ko wani aiki ana yinshi ne daban-daban.
+Idan kana cikin [ staking pool](/staking/pools/) ko rike kuɗin ajiyan, zaku iya dubawa da abin dubawa zan samun karin bayanai akan yanda ake cire kudade da rikes u, tunda ko wani aiki ana yinshi ne daban-daban.
 
-A gabaɗaya, masu amfani su saki jiki wajen dawowa abinda suka ajiye ETH, ko canzawa abinda aka ajiye da samar da amfani. Idan muhimman abu ya sami mafi babba, kudin zai iya fita, dawawo, da sake ajiyewa a <a href="https://rated.network/"> ƙaramin mai samarwa </a>. Ko, idan ka haɗa wadataccen ETH zaka iya <a href="/staking/solo/"> ajiye shi daga gida</a>.
+A gabaɗaya, masu amfani su saki jiki wajen dawowa abinda suka ajiye ETH, ko canzawa abinda aka ajiye da samar da amfani. Idan muhimman abu ya sami mafi babba, kudin zai iya fita, dawawo, da sake ajiyewa a <a href="https://rated.network/"> ƙaramin mai samarwa </a>. Ko, idan ka haɗa wadataccen ETH zaka iya [ ajiye shi daga gida](/staking/solo/).
 
 </ExpandableCard>
 

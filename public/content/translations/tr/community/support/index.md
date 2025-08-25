@@ -20,7 +20,7 @@ Ethereum'un merkeziyetsiz yapısını anlamak çok önemlidir çünkü Ethereum 
   Ethereum'un temellerini öğrenin
 </DocLink>
 
-Resmi desteğin olmamasına rağmen, Ethereum ekosistemindeki birçok grup, topluluk ve proje yardımcı olmaktan mutluluk duyar ve bu sayfada birçok faydalı bilgi ve kaynak bulabilirsiniz. Başka sorularınız mı var? [ethereum.org Discord](/discord/)'una katılın, yardım etmeye çalışacağız.
+Resmi desteğin olmamasına rağmen, Ethereum ekosistemindeki birçok grup, topluluk ve proje yardımcı olmaktan mutluluk duyar ve bu sayfada birçok faydalı bilgi ve kaynak bulabilirsiniz. Başka sorularınız mı var? [ethereum.org Discord](https://discord.gg/ethereum-org)'una katılın, yardım etmeye çalışacağız.
 
 ## Sıkça sorulan sorular {#faq}
 

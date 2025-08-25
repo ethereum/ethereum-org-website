@@ -86,7 +86,7 @@ Bằng cách sử dụng nhà cung cấp SaaS, bạn đang ủy thác việc v�
 
 Sau khi hoàn thành quá trình cắt giảm/thoát, số tiền này sẽ được chuyển đến địa chỉ rút tiền được gán cho nút xác thực. Để kích hoạt tính năng này, bạn cần cung cấp địa chỉ rút tiền. Bạn có thể đã cung cấp địa chỉ này khi đặt cọc ban đầu. Nếu chưa, bạn cần sử dụng khóa rút tiền nút xác thực để ký một tin nhắn xác định địa chỉ rút tiền. Nếu không cung cấp địa chỉ rút tiền, số tiền sẽ vẫn bị khóa cho đến khi bạn thực hiện thao tác này.
 
-Vui lòng liên hệ với nhà cung cấp dịch vụ SaaS để biết thêm chi tiết về chính sách bảo lãnh hoặc tùy chọn bảo hiểm, cũng như cách thức cung cấp địa chỉ rút tiền. Nếu bạn muốn có toàn quyền kiểm soát thiết lập nút xác thực của mình, <a href="/staking/solo/">hãy tìm hiểu thêm về cách đặt cọc ETH một mình</a>.
+Vui lòng liên hệ với nhà cung cấp dịch vụ SaaS để biết thêm chi tiết về chính sách bảo lãnh hoặc tùy chọn bảo hiểm, cũng như cách thức cung cấp địa chỉ rút tiền. Nếu bạn muốn có toàn quyền kiểm soát thiết lập nút xác thực của mình, [hãy tìm hiểu thêm về cách đặt cọc ETH một mình](/staking/solo/).
 </ExpandableCard>
 
 ## Đọc thêm {#further-reading}
