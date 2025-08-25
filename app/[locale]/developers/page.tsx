@@ -177,7 +177,7 @@ const DevelopersPage = async ({
           variants={[
             <Fragment key="empty" />,
             <Section
-              key="why?-without-metrics"
+              key="why-without-metrics"
               id="why"
               className={cn(
                 "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
@@ -195,7 +195,7 @@ const DevelopersPage = async ({
               <WhyGrid />
             </Section>,
             <Section
-              key="why?-with-metrics"
+              key="why-with-metrics"
               id="why"
               className={cn(
                 "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
