@@ -33,7 +33,7 @@ Ethereum apps can do stuff that just isn’t possible with traditional apps. Lik
 
 There are apps for everything: gaming, finance, work, messaging, storage and more. With most apps you aren’t subjected to ads or limited by restricted access.
 
-All you need is an Ethereum wallet and a little ETH to start using any ethereum app.
+All you need is an Ethereum wallet and a little ETH to start using any Ethereum app.
 
 ## How does it work {#how-does-it-work}
 
