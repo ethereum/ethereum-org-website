@@ -1,7 +1,7 @@
 ---
 title: Gas and fees
 metaTitle: "Ethereum gas and fees: technical overview"
-description:
+description: Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.
 lang: en
 ---
 

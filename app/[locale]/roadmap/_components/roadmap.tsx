@@ -17,9 +17,8 @@ import {
 } from "@/components/icons/roadmap"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import SubpageCard from "@/components/SubpageCard"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import InlineLink from "@/components/ui/Link"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import ReleaseCarousel from "./ReleaseCarousel"
 
@@ -175,27 +174,14 @@ const RoadmapPage = () => {
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {technicalUpgradesItems.map((item) => (
-              <LinkBox
+              <SubpageCard
                 key={item.title}
-                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg"
-              >
-                <div className="mb-3 flex gap-4">
-                  <div className="text-primary">{item.icon}</div>
-                  <h3 className="text-xl">{item.title}</h3>
-                </div>
-                <p className="m-0 p-0 pb-3 text-body-medium">
-                  {item.description}
-                </p>
-
-                <LinkOverlay href={item.href} asChild>
-                  <InlineLink
-                    href={item.href}
-                    className="hover:text-primary-hover"
-                  >
-                    {t("page-roadmap-learn-more")}
-                  </InlineLink>
-                </LinkOverlay>
-              </LinkBox>
+                title={item.title}
+                description={item.description}
+                icon={item.icon}
+                href={item.href}
+                inlineLink={{ text: t("page-roadmap-learn-more") }}
+              />
             ))}
           </div>
         </div>

@@ -384,7 +384,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API ](https://eth2docs.vercel.app/).
+Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API](https://eth2docs.vercel.app/).
 
 ### Bailíochtóirí a chur leis {#adding-validators}
 

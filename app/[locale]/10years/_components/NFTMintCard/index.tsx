@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -10,6 +12,8 @@ interface NFTMintCardProps {
 }
 
 const NFTMintCard = ({ className }: NFTMintCardProps) => {
+  const t = useTranslations("page-10-year-anniversary")
+
   return (
     <Card
       className={cn(
@@ -25,7 +29,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
               <video
                 className="pointer-events-none h-full w-full select-none rounded-full object-cover"
                 src="/videos/10y-video.mp4"
-                aria-label="10th anniversary video"
+                aria-label={t("page-10-year-video-aria-label")}
                 autoPlay
                 loop
                 muted
@@ -46,13 +50,14 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
           />
         </div>
 
-        <CardTitle className="text-center">Mint the moment</CardTitle>
+        <CardTitle className="text-center">
+          {t("page-10-year-mint-card-title")}
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="space-y-6 p-6 text-center">
         <p className="text-body-medium">
-          Celebrate a decade of decentralization with a free, limited-time 10th
-          anniversary NFT. Mint yours before time runs out.
+          {t("page-10-year-mint-card-description")}
         </p>
 
         <Alert
@@ -61,10 +66,10 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
         >
           <AlertContent>
             <AlertTitle className="!text-primary">
-              The claim period has ended
+              {t("page-10-year-mint-card-ended-title")}
             </AlertTitle>
             <p className="text-primary">
-              Thank you all for joining the celebration
+              {t("page-10-year-mint-card-ended-description")}
             </p>
           </AlertContent>
         </Alert>

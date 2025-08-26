@@ -47,7 +47,7 @@ One of di ogbonge ways to see di potenshia of DeFi na to ondastand di palava wey
 | Di markets dey always open.                                                                       | Markets dey klose bikos dem workas nid brakes.                                                                           |
 | Dem built am on transparensy - anyone fit look one product data and sheck hau di system dey work. | Finanshia institushons na klose books: yu fit ask to see dem loan tory, one rekod of di assets wey dem manaj, and so on. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Make yu eksplore Defi apps
 </ButtonLink>
 
@@ -65,7 +65,7 @@ E dey sound odd... "why i go wan program mai monie"? As e dey, dis pass just one
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Make yu eksplore awa suggeshons for DeFi aplikashons to try out if yu dey new to Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Make yu eksplore Defi apps
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ One disentralized opshon dey to most finanshia savis. But ethereum dey also krea
 
 As one blockchain, dem don disign Ethereum to dey send trasakshon wey dey sekure in a global way. Laik Bitcoin, Ethereum dey make yu send monie around di world as izy as to dey send one email. Make yu just enta [ENS name](/glossary/#ens)(laik bob.eth) of pesin yu wan send monie to abi dem akant address from yor wallet and yor payment go go direct to dem in minutes. To send abi risiv payments, yu go nid [wallet](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See payment dapps
 </ButtonLink>
 
@@ -123,7 +123,7 @@ To dey borrow money from disentralized providas fit kome in two ogbonge types.
 - Peer to peer wey mean say one borrowa go borrow from one spesifik lenda.
 - Do one wey base on pool wia lendas dey provide funds (liquidity) to one pool wey borrowas fit borrow from.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Make yu see dapps wey dey borrow
 </ButtonLink>
 
@@ -185,7 +185,7 @@ Yu fit earn interest on yur crypto by lendin am and yu dey see yur funds grow in
 - Yur aDai go inkrease base on di interest rates and yu fit see yur balans as im dey grow for yur wallet. E dipend on di [APR](/glossary/#apr), but yur wallet balans go show somtin laik 100.1234 afta one few days abi even hawas!
 - Yu fit witdraw one amount of regular Dai wey dey di same tu yur aDai balans at any taim.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See lending dapps
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Plenti tokens on Ethereum. Disentralized ekshanjis (DEXs) dey allow yu trade dif
 
 For eksampol, if yu wan yus di no-loss lottery PoolTogeda (wey dem deskribe above), yu go nid token laik Dai abi USDC. Dis DEXs dey allow yu to swap yor ETH for doz tokens and back again wen yu don finish.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See token ekshanjis
 </ButtonLink>
 
@@ -225,7 +225,7 @@ Plenti opshons wey don advans for tradas wey laik to littol more kontrol. Limit 
 
 Wen yu see one sentralized ekshanj yu nid to deposit yor assets bifor di trade and trust dem to look afta dem. As dem don deposit yur assets, dem dey at risk as sentralized ekshanjis na atractive targets for hackers.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See trading dapps
 </ButtonLink>
 
@@ -237,7 +237,7 @@ Fund manajment products dey on Ethereum wey go try to grow yor portfolio base on
 
 One gud eksampol na di [DeFi Pulse Index fund(DPI)](https://defipulse.com/blog/defi-pulse-index/). Dis na fund we dey rebalans automatikaly to make sure sey yur portfolio dey always inklude di top DeFi tokens by market kapitalizashon. Yu neva nid to manaj any of di details and yu fit witdraw from di fund weneva yu laik.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See investments dapps
 </ButtonLink>
 
@@ -251,7 +251,7 @@ Ethereum na ideal platform for crowdfunding:
 - Im dey transparent so pipol wey dey raise funds fit pruf hau much monie dem don raise. You fit even trace hau funds dem don spend later down di line.
 - Pipol wey dey raise funds fit set up automatik refunds if, for eksampol, one spesifik deadline and minimum amount wey dem neva meet.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See crowdfunding dapps
 </ButtonLink>
 
@@ -280,7 +280,7 @@ Disentralized insurans wey aim to make insurans sheap pass, fasta to pay out and
 
 Ethereum products, like any softwia, fit suffa from bugs and exploits. So rite nau, plenti of insurans products in di space fokus on protectin dem users against loss of funds. Anyhau e bi, projects don start to dey build out koveraj for efritin wey life throw at us. One gud eksampol of dis na Etherisc's Crop kover wey dey aim to [protect smollholda farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Disentralized insurans fit provide sheapa kover for farmers wey somtaims don price out tradishonal insurans.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See insurans dapps
 </ButtonLink>
 
@@ -290,7 +290,7 @@ Ethereum products, like any softwia, fit suffa from bugs and exploits. So rite n
 
 Wit plenti tins wey dey hapun, yu go nid one way to kip track of all yur investments, loans, and trades. one host of products dey wey allow yu koordinate all yur DeFi aktivity from one place. Dis na di beauty of DeFi's open architekshure. Teams fit build out intafaces wia yu fit just see yor balans akross products, yu fit yus dia features too. You fit find dis yusful as yu explore more of DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See portfolio dapps
 </ButtonLink>
 
@@ -322,7 +322,7 @@ Yu fit tink of DeFi in layers:
 1. Di blockchain - Ethereum dey contain di transakshon history and state of akant.
 2. Di assets - [ETH](/eth/)and di oda tokens (currencies).
 3. Di protokols - [smart kontracts](/glossary/#smart-contract) wey dey provide di functionality, for eksampol, one savis wey dey allow for disentralized lending of assets.
-4. [Di aplikashons](/dapps/) - di products wi dey manaj and take enta di protokols.
+4. [Di aplikashons](/apps/) - di products wi dey manaj and take enta di protokols.
 
 Note: na majority of DeFi dey yus di [ERC-20 standard](/glossary/#erc-20). Aplikashons wey dey DeFi dey yus one wrapper for ETH wey dem dey koll Wrapped Ether (WETH). [Make yu learn more abou wrapped ether](/wrapped-eth).
 
