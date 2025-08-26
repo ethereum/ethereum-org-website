@@ -8,6 +8,7 @@ import {
   APPLICATION_START_DATE,
   APPLICATION_URL,
 } from "./constants"
+import PaperformModal from "./PaperformModal"
 
 const instructions = [
   {
@@ -56,8 +57,8 @@ const instructions = [
     description: (
       <>
         Results will be announced on <strong>September 25th</strong>. Eligible
-        participants will receive an email with instructions on how to prize
-        claim their prizes.
+        participants will receive an email with instructions on how to claim
+        their prizes.
       </>
     ),
     ctaLink: null,
@@ -95,6 +96,13 @@ export const StepByStepInstructions = () => {
                   <Button variant="outline" disabled>
                     {instruction.ctaLabel}
                   </Button>
+                ) : instruction.ctaLink === APPLICATION_URL ? (
+                  <PaperformModal
+                    trigger={
+                      <Button variant="outline">{instruction.ctaLabel}</Button>
+                    }
+                    title="Apply to Translate"
+                  />
                 ) : (
                   <ButtonLink href={instruction.ctaLink} variant="outline">
                     {instruction.ctaLabel}

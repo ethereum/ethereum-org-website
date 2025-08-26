@@ -26,7 +26,7 @@ Before creating experiments, ensure you have proper **Goals** configured in Mato
 
 This step is important for measuring experiment effectiveness and should be done by the design/product team before technical implementation.
 
-### 2. Create Experiment in Matomo
+### 2. Create an Experiment in Matomo
 
 1. Go to your Matomo dashboard → **A/B Tests** → **Manage A/B tests**
 2. Click **Create new A/B test**

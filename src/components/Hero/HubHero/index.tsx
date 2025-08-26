@@ -1,3 +1,5 @@
+import { ReactElement } from "react"
+
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
@@ -74,6 +76,13 @@ const HubHero = ({
         >
           {buttons?.map((button, idx) => {
             if (!button) return
+
+            // If it's a React element, render it directly
+            if (typeof button === "object" && "type" in button) {
+              return <div key={idx}>{button as ReactElement}</div>
+            }
+
+            // Otherwise, render as button props
             return <CallToAction key={idx} index={idx} {...button} />
           })}
         </Stack>
