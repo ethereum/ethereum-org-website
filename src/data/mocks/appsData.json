@@ -44,6 +44,44 @@
       "ready": "true"
     },
     {
+      "name": "Alchemix",
+      "url": "https://alchemix.fi/",
+      "description": "Alchemix loans automatically pay themselves off with the yield generated from your deposits of ETH or stablecoins. Unlock the potential of your assets with secure and stress-free borrowing",
+      "image": "https://i.imgur.com/Hwgx9GR.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "Linea"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/2UrdPcS.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/AlchemixFi",
+      "github": "https://github.com/alchemix-finance",
+      "discord": "https://discord.gg/XpZD7NJD",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Alchemix",
+      "parentCompanyURL": "https://alchemix.fi/",
+      "openSource": true,
+      "contractAddress": "https://github.com/alchemix-finance/deployments",
+      "dateOfLaunch": "06/27/2022",
+      "lastUpdated": "8/01/2025",
+      "ready": "true"
+    },
+    {
       "name": "Sky/Maker - USDS",
       "url": "https://sky.money/",
       "description": "Sky.money is a non-custodial gateway to the decentralized Sky Protocol, which centers around the USDS stablecoin.",
