@@ -160,6 +160,9 @@
 
 /*/use /:splat/apps/ 301!
 
+# Exception: don't redirect developers/docs/dapps paths
+/*/developers/docs/dapps* /:splat/developers/docs/dapps:splat 200!
+
 /*/dapps /:splat/apps/ 301!
 
 /*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!

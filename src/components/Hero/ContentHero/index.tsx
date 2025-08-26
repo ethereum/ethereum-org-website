@@ -1,3 +1,5 @@
+import type { ReactElement } from "react"
+
 import type { CommonHeroProps } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -43,11 +45,19 @@ const ContentHero = (props: ContentHeroProps) => {
             <div className="flex flex-col gap-4 md:flex-row">
               {buttons.map((button, idx) => {
                 if (!button) return
+                // If it's a React element, render it directly
+                if (typeof button === "object" && "type" in button) {
+                  return <div key={idx}>{button as ReactElement}</div>
+                }
+                // Otherwise, render as button props
                 return <CallToAction key={idx} index={idx} {...button} />
               })}
             </div>
           )}
         </div>
+        {/* TODO:
+         * Add conditional Big Stat box here
+         */}
       </div>
     </div>
   )

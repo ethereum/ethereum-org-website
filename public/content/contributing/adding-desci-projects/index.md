@@ -1,6 +1,6 @@
 ---
 title: Adding DeSci projects
-description: The policy we use when adding a links to projects on the DeSci page on ethereum.org
+description: The policy we use when adding a link to projects on the DeSci page on ethereum.org
 lang: en
 ---
 
