@@ -23,7 +23,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
@@ -255,16 +254,14 @@ const Page = async ({
                           <p className="text-primary group-hover:text-primary-hover">
                             {nextApp.name}
                           </p>
-                          <LinkOverlay asChild>
-                            <BaseLink
-                              href={`/apps/${slugify(nextApp.name)}`}
-                              customEventOptions={{
-                                eventCategory: "detail",
-                                eventAction: `app name ${app.name}`,
-                                eventName: "see_next",
-                              }}
-                            />
-                          </LinkOverlay>
+                          <LinkOverlay
+                            href={`/apps/${slugify(nextApp.name)}`}
+                            customEventOptions={{
+                              eventCategory: "detail",
+                              eventAction: `app name ${app.name}`,
+                              eventName: "see_next",
+                            }}
+                          />
                         </div>
                         <div className="flex gap-2">
                           <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
@@ -282,16 +279,14 @@ const Page = async ({
                   <p className="text-primary group-hover:text-primary-hover">
                     {nextApp.name}
                   </p>
-                  <LinkOverlay asChild>
-                    <BaseLink
-                      href={`/apps/${slugify(nextApp.name)}`}
-                      customEventOptions={{
-                        eventCategory: "detail",
-                        eventAction: `app name ${app.name}`,
-                        eventName: "see_next",
-                      }}
-                    />
-                  </LinkOverlay>
+                  <LinkOverlay
+                    href={`/apps/${slugify(nextApp.name)}`}
+                    customEventOptions={{
+                      eventCategory: "detail",
+                      eventAction: `app name ${app.name}`,
+                      eventName: "see_next",
+                    }}
+                  />
                 </div>
                 <div className="flex gap-2">
                   <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />

@@ -1,7 +1,6 @@
 import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
-import { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 import TruncatedText from "@/components/ui/TruncatedText"
@@ -97,18 +96,16 @@ const AppCard = ({
         hoverClassName || "hover:bg-background-highlight"
       )}
     >
-      <LinkOverlay asChild>
-        <BaseLink
-          href={`/apps/${slugify(app.name)}`}
-          className="no-underline"
-          customEventOptions={{
-            eventCategory: matomoCategory,
-            eventAction: `${matomoAction}`,
-            eventName: `app name ${app.name}`,
-          }}
-        >
-          {cardContent}
-        </BaseLink>
+      <LinkOverlay
+        href={`/apps/${slugify(app.name)}`}
+        className="no-underline"
+        customEventOptions={{
+          eventCategory: matomoCategory,
+          eventAction: `${matomoAction}`,
+          eventName: `app name ${app.name}`,
+        }}
+      >
+        {cardContent}
       </LinkOverlay>
     </LinkBox>
   )
