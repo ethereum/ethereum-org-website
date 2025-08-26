@@ -13,82 +13,67 @@ import { slugify } from "@/lib/utils/url"
 
 export const appsCategories: AppCategories = {
   [AppCategoryEnum.DEFI]: {
-    name: "DeFi",
+    name: "page-apps-category-defi-name",
     icon: DeFiIcon,
     slug: slugify(AppCategoryEnum.DEFI),
-    description:
-      "DeFi is a category of decentralized applications that allow users to lend, borrow, trade, and earn interest on their crypto assets.",
-    metaTitle: "List of ethereum DeFi apps — Lending, Borrowing & Yield",
-    metaDescription:
-      "Explore top DeFi apps on Ethereum for lending, borrowing, stablecoin issuance, credit and on-chain DEX trading.",
+    description: "page-apps-category-defi-description",
+    metaTitle: "page-apps-category-defi-meta-title",
+    metaDescription: "page-apps-category-defi-meta-description",
   },
   [AppCategoryEnum.COLLECTIBLE]: {
-    name: "Collectibles",
+    name: "page-apps-category-collectibles-name",
     icon: CollectiblesIcon,
     slug: slugify(AppCategoryEnum.COLLECTIBLE),
-    description:
-      "Collectibles are digital assets that are unique and cannot be replicated.",
-    metaTitle: "List of best NFT apps on ethereum",
-    metaDescription:
-      "Explore top NFT apps for buying collectibles, trading gaming skins, and discovering new digital assets across leading Ethereum marketplaces.",
+    description: "page-apps-category-collectibles-description",
+    metaTitle: "page-apps-category-collectibles-meta-title",
+    metaDescription: "page-apps-category-collectibles-meta-description",
   },
   [AppCategoryEnum.SOCIAL]: {
-    name: "Social",
+    name: "page-apps-category-social-name",
     icon: SocialIcon,
     slug: slugify(AppCategoryEnum.SOCIAL),
-    description:
-      "Social is a category of decentralized applications that allow users to connect with others and share content.",
-    metaTitle: "Social apps on ethereum: farcaster, zora and more",
-    metaDescription: "Explore best messaging and social apps on ethereum.",
+    description: "page-apps-category-social-description",
+    metaTitle: "page-apps-category-social-meta-title",
+    metaDescription: "page-apps-category-social-meta-description",
   },
   [AppCategoryEnum.GAMING]: {
-    name: "Gaming",
+    name: "page-apps-category-gaming-name",
     icon: GamingIcon,
     slug: slugify(AppCategoryEnum.GAMING),
-    description:
-      "Gaming is a category of decentralized applications that allow users to play games and earn rewards.",
-    metaTitle: "List of crypto and NFT games on ethereum",
-    metaDescription:
-      "Discover the best blockchain games that are fun to play. MMORPG, card games, AI gaming, RPG, casual games",
+    description: "page-apps-category-gaming-description",
+    metaTitle: "page-apps-category-gaming-meta-title",
+    metaDescription: "page-apps-category-gaming-meta-description",
   },
   [AppCategoryEnum.BRIDGE]: {
-    name: "Bridge",
+    name: "page-apps-category-bridge-name",
     icon: BridgeIcon,
     slug: slugify(AppCategoryEnum.BRIDGE),
-    description:
-      "Bridge is a category of decentralized applications that allow users to bridge their assets between different networks.",
-    metaTitle: "List of ethereum bridges to different networks",
-    metaDescription:
-      "Discover the best crypto bridge app to move your assets between different networks and layer 2s.",
+    description: "page-apps-category-bridge-description",
+    metaTitle: "page-apps-category-bridge-meta-title",
+    metaDescription: "page-apps-category-bridge-meta-description",
   },
   [AppCategoryEnum.PRODUCTIVITY]: {
-    name: "Productivity",
+    name: "page-apps-category-productivity-name",
     icon: ProductivityIcon,
     slug: slugify(AppCategoryEnum.PRODUCTIVITY),
-    description:
-      "Productivity is a category of decentralized applications that allow users to be productive.",
-    metaTitle: "Productivity and decentralized identity apps",
-    metaDescription:
-      "Explore top Ethereum apps for decentralized identity, storage, DNS, and video computing. Boost your on-chain productivity with trusted infrastructure tools.",
+    description: "page-apps-category-productivity-description",
+    metaTitle: "page-apps-category-productivity-meta-title",
+    metaDescription: "page-apps-category-productivity-meta-description",
   },
   [AppCategoryEnum.PRIVACY]: {
-    name: "Privacy",
+    name: "page-apps-category-privacy-name",
     icon: PrivacyIcon,
     slug: slugify(AppCategoryEnum.PRIVACY),
-    description:
-      "Privacy is a category of decentralized applications that allow users to be private.",
-    metaTitle: "Ethereum privacy apps: tornado cash and others",
-    metaDescription:
-      "Explore Ethereum privacy apps like Tornado Cash and others that protect user anonymity, enable private transactions, and enhance on-chain confidentiality.",
+    description: "page-apps-category-privacy-description",
+    metaTitle: "page-apps-category-privacy-meta-title",
+    metaDescription: "page-apps-category-privacy-meta-description",
   },
   [AppCategoryEnum.GOVERNANCE_DAO]: {
-    name: "DAO",
+    name: "page-apps-category-dao-name",
     icon: GovernanceIcon,
     slug: slugify(AppCategoryEnum.GOVERNANCE_DAO),
-    description:
-      "DAO is a category of decentralized applications that allow users to govern and create decentralized autonomous organizations.",
-    metaTitle: "List of DAO tools on ethereum",
-    metaDescription:
-      "Discover top DAO tools on Ethereum for governance, treasury management, voting, and contributor coordination. Launch, manage, and grow your decentralized organization.",
+    description: "page-apps-category-dao-description",
+    metaTitle: "page-apps-category-dao-meta-title",
+    metaDescription: "page-apps-category-dao-meta-description",
   },
 }

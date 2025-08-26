@@ -23,11 +23,14 @@ import AppCard from "./AppCard"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
+import useTranslation from "@/hooks/useTranslation"
+
 interface TopAppsProps {
   appsData: Record<AppCategory, AppData[]>
 }
 
 const TopApps = ({ appsData }: TopAppsProps) => {
+  const { t } = useTranslation("page-apps")
   const isClient = useIsClient()
   const cardStyling = useBreakpointValue({
     base: {
@@ -119,7 +122,7 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                         })()}
                       </div>
                       <p className="text-lg font-bold text-body no-underline group-hover:text-primary">
-                        {category}
+                        {t(appsCategories[category].name)}
                       </p>
                     </div>
                     <div>
@@ -129,7 +132,7 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                         size="sm"
                         className="w-fit"
                       >
-                        <p className="text-sm">See all</p>
+                        <p className="text-sm">{t("page-apps-see-all")}</p>
                       </Button>
                     </div>
                   </div>

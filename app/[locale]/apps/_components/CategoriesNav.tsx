@@ -1,12 +1,22 @@
+import { getTranslations } from "next-intl/server"
+
 import TabNav from "@/components/ui/TabNav"
+
+import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
+const CategoriesNav = async ({
+  activeCategory = "",
+}: {
+  activeCategory: string
+}) => {
+  const t = await getTranslations("page-apps")
+
   const items = Object.values(appsCategories).map(
     ({ name, icon: Icon, slug }) => ({
-      key: name,
-      label: name,
+      key: slug,
+      label: t(name),
       href: `/apps/categories/${slug}`,
       icon: <Icon className="h-4 w-4" />,
     })
@@ -15,7 +25,7 @@ const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
   return (
     <TabNav
       items={items}
-      activeKey={activeCategory}
+      activeKey={slugify(activeCategory)}
       customEventOptions={{
         eventCategory: "categories_page",
         eventAction: "navigation",
