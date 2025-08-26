@@ -14,7 +14,7 @@ Portal Ağı, hafif düğümler için veriye erişilebilirlik problemini, gerekl
 
 ## Portal Ağına neden ihtiyacımız var? {#why-do-we-need-portal-network}
 
-Ethereum düğümleri, Ethereum blokzincirlerinde kendi tam veya kısmi kopyalarını saklar. Bu yerel kopya, işlemleri doğrulamak ve düğümün doğru zinciri izlediğinden emin olmak için kullanılır. Yerel olarak depolanan bu veriler, herhangi başka bir oluşuma güvenmeye ihtiyaç duymadan, düğümlerin gelen verilerin doğruluğunu ve geçerliliğini bağımsız olarak doğrulamasına imkan tanır.
+Ethereum düğümleri, ethereum blokzincirlerinde kendi tam veya kısmi kopyalarını saklar. Bu yerel kopya, işlemleri doğrulamak ve düğümün doğru zinciri izlediğinden emin olmak için kullanılır. Yerel olarak depolanan bu veriler, herhangi başka bir oluşuma güvenmeye ihtiyaç duymadan, düğümlerin gelen verilerin doğruluğunu ve geçerliliğini bağımsız olarak doğrulamasına imkan tanır.
 
 Blokzincirin bu yerel kopyası ve ilişkili durum ve makbuz verileri, düğümün sabit diskinde çok fazla yer kaplar. Örneğin bir fikir birliği istemcisiyle eşleştirilmiş [Geth](https://geth.ethereum.org) kullanan bir düğümü çalıştırmak için 2 TB'lık bir sabit disk tavsiye edilir. Geth, yalnızca görece yeni bir blok seti üzerinden zincir verilerini depolayan anlık senkronizasyonu kullanarak genellikle yaklaşık 650 GB disk alanı kaplar ancak bu alan haftada yaklaşık 14 GB artar (düğümü periyodik olarak 650 GB'a indirebilirsiniz).
 

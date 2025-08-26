@@ -28,7 +28,7 @@ Chiunque è libero di suggerire un progetto da aggiungere all'elenco nella pagin
 - **Disponibile in più lingue**: il tuo progetto è tradotto in più lingue, consentendo agli utenti di tutto il mondo di accedervi.
 - **Risorse didattiche**: il tuo prodotto dovrebbe avere un'esperienza di adesione ben progettata per aiutare a istruire gli utenti. In alternativa, dovrebbe offrire contenuti di supporto come articoli o video.
 - **Controlli di terze parti**: il tuo prodotto è stato controllato professionalmente da una terza parte affidabile per verificare la presenza di vulnerabilità.
-- **Punto di contatto**: un punto di contatto per il progetto (un rappresentante di una DAO o comunità) ci aiuterà molto a ottenere informazioni accurate, quando sono apportate delle modifiche. Questo continuerà ad aggiornare Ethereum in modo gestibile, raccogliendo le informazioni future.
+- **Punto di contatto**: un punto di contatto per il progetto (un rappresentante di una DAO o comunità) ci aiuterà molto a ottenere informazioni accurate, quando sono apportate delle modifiche. Questo continuerà ad aggiornare ethereum in modo gestibile, raccogliendo le informazioni future.
 
 ## Manutenzione {#maintenance}
 

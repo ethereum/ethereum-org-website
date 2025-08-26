@@ -177,7 +177,7 @@ main();
 **Veriler hakkında bir not** Ethereum'da gönderilebilecek iki ana işlem türü vardır.
 
 - Bakiye transferi: Eth'i bir adresten diğerine gönderin. Herhangi bir veri alanı gerekli değildir, ancak işleminizin yanında ek bilgiler göndermek isterseniz, bu bilgileri bu alana HEX formatında ekleyebilirsiniz.
-  - Örneğin, değişmez bir zaman damgası vermek için bir IPFS belgesinin hash değerini Ethereum zincirine yazmak istediğimizi varsayalım. Veri alanımız daha sonra veri gibi görünmelidir: `web3.utils.toHex(‘IPFS hash‘)`. Artık herkes zinciri sorgulayabilir ve bu belgenin ne zaman eklendiğini görebilir.
+  - Örneğin, değişmez bir zaman damgası vermek için bir IPFS belgesinin hash değerini ethereum zincirine yazmak istediğimizi varsayalım. Veri alanımız daha sonra veri gibi görünmelidir: `web3.utils.toHex(‘IPFS hash‘)`. Artık herkes zinciri sorgulayabilir ve bu belgenin ne zaman eklendiğini görebilir.
 - Akıllı sözleşme işlemi: Zincirde bazı akıllı sözleşme kodlarını yürütün. Bu durumda veri alanı, herhangi bir parametrenin yanında yürütmek istediğiniz akıllı fonksiyonu içermelidir.
   - Pratik bir örnek için, şu [Merhaba Dünya Öğreticindeki](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction) 8. Adıma bakın.
 

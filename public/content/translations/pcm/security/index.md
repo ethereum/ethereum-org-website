@@ -36,7 +36,7 @@ If yu nor ondastand di way crypto dey wok yu go foll for one shance. For eksampo
 Di private key to yor wallet na one password to yor Ethereum wallet. Na di only tin wey dey stop someone wey sabi yor wallet address to drain all yor assets komot from yor akant!
 
 <DocLink href="/wallets/">
-  Wetin bi Ethereum wallet?
+  Wetin bi ethereum wallet?
 </DocLink>
 
 #### Make yu nor take skreenshot of yor seed fraiz/private keys {#screenshot-private-keys}

@@ -75,7 +75,7 @@ Outre les messages de bienvenue, le protocole filaire peut également envoyer un
 
 Une fois que les pairs sont connectés et qu'une session RLPx est entamée, le protocole filaire définit la façon dont les pairs communiquent. Initialement, le protocole filaire définissait trois tâches principales : synchronisation de chaînes, propagation de blocs et échange de transactions. Cependant, depuis qu'Ethereum est passé à la preuve d'enjeu, la propagation des blocs et la synchronisation des chaînes sont devenues partie intégrante de la couche de consensus. L'échange de transactions est toujours à la charge des clients d'exécution. L'échange de transactions fait référence à l'échange de transactions en attente entre les nœuds afin que les constructeurs de blocs puissent sélectionner certaines d'entre elles pour les inclure dans le bloc suivant. Des informations plus détaillées sur ces tâches sont disponibles [ici](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Les clients qui prennent en charge ces sous-protocoles les affichent via [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### Les (sous-protocole Ethereum léger) {#les}
+#### Les (sous-protocole ethereum léger) {#les}
 
 Il s'agit d'un protocole minimal destiné à synchroniser les clients légers. Jusqu'à présent, ce protocole a rarement été utilisé, dans la mesure où les nœuds complets sont contraints de servir des données à des clients légers sans être incités à le faire. Le comportement par défaut des clients d'exécution n'est pas de servir des données clientes légères via les. D'autres informations sont disponibles dans les [spécifications](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 

@@ -75,7 +75,7 @@ Insieme ai messaggi di saluto, il protocollo via cavo può anche inviare un mess
 
 Una volta che i pari sono connessi e che una sessione RLPx è stata avviata, il protocollo via cavo definisce come comunicano i pari. Inizialmente, il protocollo via cavo definiva tre mansioni principali: la sincronizzazione della catena, la propagazione del blocco e lo scambio di transazioni. Tuttavia, una volta che Ethereum è passato al proof-of-stake, la propagazione dei blocchi e la sincronizzazione della catena sono divenuti parte del livello di consenso. Lo scambio di transazioni è ancora di competenza dei client d'esecuzione. Lo scambio di transazioni si riferisce allo scambio di transazioni in sospeso tra nodi in modo che i costruttori di blocchi possano selezionarne alcune per includerle nel blocco successivo. Le informazioni dettagliate su queste attività sono disponibili [qui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). I client che supportano questi protocolli secondari, li espongono tramite [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### les (light Ethereum subprotocol) {#les}
+#### les (light ethereum subprotocol) {#les}
 
 Si tratta di un protocollo minimale per sincronizzare i client leggeri. Tradizionalmente, questo protocollo è stato raramente usato perché i nodi completi devono servire i dati ai client leggeri senza esser incentivati. Il comportamento predefinito dei client d'esecuzione prevede di non servire i dati al client leggero tramite les. Maggiori informazioni sono disponibili nelle [specifiche](https://github.com/ethereum/devp2p/blob/master/caps/les.md) di les.
 

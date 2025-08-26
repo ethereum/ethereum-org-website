@@ -41,7 +41,7 @@ Ethereum, popüler Raspberry Pi Linux OS "Raspbian" kullanılarak çalıştırı
 
 ## Yürütüm ve fikir birliği istemcileriyle ilgili not {#note-on-execution-and-consensus-clients}
 
-Ethereum on Arm görüntüsü, hizmet olarak önceden oluşturulmuş yürütüm ve fikir birliği istemcileri içerir. Bir Ethereum düğümü senkronize olmak ve çalışmak için iki istemciye de ihtiyaç duyar. Görüntüyü yükleyip depolamanız ve ardından hizmetleri başlatmanız yeterlidir. Bu görüntüye, aşağıdaki yürütüm istemcileri:
+Ethereum on Arm görüntüsü, hizmet olarak önceden oluşturulmuş yürütüm ve fikir birliği istemcileri içerir. Bir ethereum düğümü senkronize olmak ve çalışmak için iki istemciye de ihtiyaç duyar. Görüntüyü yükleyip depolamanız ve ardından hizmetleri başlatmanız yeterlidir. Bu görüntüye, aşağıdaki yürütüm istemcileri:
 
 - Geth
 - Nethermind

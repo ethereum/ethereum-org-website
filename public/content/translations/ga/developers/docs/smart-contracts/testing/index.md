@@ -303,6 +303,6 @@ Is é an difríocht mhór ná go bhfuil cláir deolchaire fabhtanna oscailte don
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [Treoir dhomhain maidir le conarthaí cliste Ethereum a thástáil](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
-- [Conas conarthaí cliste Ethereum a thástáil](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
+- [Conas conarthaí cliste ethereum a thástáil](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [Treoir tástála aonaid MolochDAO d’fhorbróirí](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [Conas conarthaí cliste cosúil le rockstar a thástáil](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)

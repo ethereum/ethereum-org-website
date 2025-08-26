@@ -297,7 +297,7 @@ Como el nombre sugiere, esta variable mantiene un seguimiento del suministro tot
 
 Estas tres variables se utilizan para mejorar la legibilidad. Las dos primeras son autoexplicativas, pero `_decimals` no lo es.
 
-Por un lado, Ethereum no tiene variables de punto flotante o fraccionales. Por otro lado, a los humanos les gusta poder dividir tókenes. Una de las razones por las que la gente se decantó por el oro como moneda fue que era difícil hacer intercambios cuando alguien quería comprar «gato por liebre».
+Por un lado, ethereum no tiene variables de punto flotante o fraccionales. Por otro lado, a los humanos les gusta poder dividir tókenes. Una de las razones por las que la gente se decantó por el oro como moneda fue que era difícil hacer intercambios cuando alguien quería comprar «gato por liebre».
 
 La solución es llevar un registro de enteros, pero cuenta en lugar del token real un token fraccional que es cercano a no valer nada. En el caso del ether, el token fraccional se llama wei, y 10^18 wei es igual a un ETH. Al cierre de este artículo, 10.000.000.000.000 wei es aproximadamente un centavo de dólar estadounidense o euro.
 

@@ -72,7 +72,7 @@ E dey sound odd... "why i go wan program mai monie"? As e dey, dis pass just one
 
 ## Wetin yu fit do wit DeFi? {#defi-use-cases}
 
-One disentralized opshon dey to most finanshia savis. But Ethereum dey also kreate oportunitis for finanshia products wey dey new. Dis na list wey dey grow efriday.
+One disentralized opshon dey to most finanshia savis. But ethereum dey also kreate oportunitis for finanshia products wey dey new. Dis na list wey dey grow efriday.
 
 - [Send monie around di globe](#send-money)
 - [Stream monie around di globe](#stream-money)

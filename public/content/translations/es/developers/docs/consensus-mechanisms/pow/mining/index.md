@@ -18,7 +18,7 @@ La minería es el proceso de crear un bloque de transacciones que se añadirán 
 
 La palabra minería tiene su origen en el contexto de la analogía del oro para las criptomonedas. El oro o los metales preciosos son escasos, así como los tókenes digitales, y la única forma de aumentar el volumen total en un sistema de prueba de trabajo es a través de la minería. En la prueba de trabajo de Ethereum, el único modo de emisión era a través de la minería. Sin embargo, a diferencia del oro o los metales preciosos, la minería de Ethereum también fue la manera de proteger la red mediante la creación, comprobación, publicación y propagación de bloques en la cadena de bloques.
 
-Minar Ethereum = Proteger la red
+Minar ethereum = Proteger la red
 
 La minería es el alma de la prueba de trabajo. Los mineros de Ethereum (es decir, los ordenadores que ejecutan el software) utilizan su tiempo y su potencia informática para procesar transacciones y producir bloques antes de pasar a la prueba de participación.
 

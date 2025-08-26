@@ -49,7 +49,7 @@ Lilo awọn eto ipamọ alailakoso bi [InterPlanetary File System (IPFS)](https:
 
 7. Awọn nẹtiwọọki awujọ alailakoso gbekele ibi ipamọ alailakoso, kii ṣe awọn apoti data to lakoso, eyiti o dara julọ fun aabo data olumulo.
 
-## Awọn nẹtiwọki awujọ alailakoso lori Ethereum {#ethereum-social-networks}
+## Awọn nẹtiwọki awujọ alailakoso lori ethereum {#ethereum-social-networks}
 
 Nẹtiwọọki Ethereum ti di ohun elo ti won fẹ julọ fun awọn olupilẹṣẹ ti won n ṣẹda ikanni ajolo alailakoso nitori okiki ti awọn token rẹ ati ipilẹ olumulo nla rẹ. Eyi ni diẹ ninu awọn apẹẹrẹ ti awọn nẹtiwọọki awujọ to da lori Ethereum:
 

@@ -4,7 +4,7 @@ description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıll�
 lang: tr
 ---
 
-Ethereum Sanal Makinesi (EVM), tüm Ethereum düğümlerinde kodu sürekli ve güvenli bir şekilde çalıştıran merkeziyetsiz bir sanal ortamdır. Düğümler, [işlemler](/developers/docs/evm/opcodes/) için gereken bilişim eforunu ölçmek amacıyla "[gaz](/gas/)" kullanarak akıllı sözleşmeleri yürütmek için EVM'yi çalıştırır, böylece kaynaklar verimli şekilde paylaştırılır ve ağ güvenliği sağlanır.
+Ethereum Sanal Makinesi (EVM), tüm ethereum düğümlerinde kodu sürekli ve güvenli bir şekilde çalıştıran merkeziyetsiz bir sanal ortamdır. Düğümler, [işlemler](/developers/docs/evm/opcodes/) için gereken bilişim eforunu ölçmek amacıyla "[gaz](/gas/)" kullanarak akıllı sözleşmeleri yürütmek için EVM'yi çalıştırır, böylece kaynaklar verimli şekilde paylaştırılır ve ağ güvenliği sağlanır.
 
 ## Ön koşullar {#prerequisites}
 

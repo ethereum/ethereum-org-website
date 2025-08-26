@@ -5,7 +5,7 @@ lang: tr
 sidebarDepth: 2
 ---
 
-Bir arşiv düğümü, tüm geçmiş durumların arşivini oluşturacak şekilde inşa edilmiş bir Ethereum istemcisi örneğidir. Berlirli kullanım durumlarında kullanışlı bir araçtır, ancak çalıştırmak tam bir düğümü çalıştırmaktan daha zor olabilir.
+Bir arşiv düğümü, tüm geçmiş durumların arşivini oluşturacak şekilde inşa edilmiş bir ethereum istemcisi örneğidir. Berlirli kullanım durumlarında kullanışlı bir araçtır, ancak çalıştırmak tam bir düğümü çalıştırmaktan daha zor olabilir.
 
 ## Ön koşullar {#prerequisites}
 
