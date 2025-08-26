@@ -48,7 +48,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 | The markets are always open.                                                                       | Markets close because employees need breaks.                                                                                   |
 | It's built on transparency – anyone can look at a product's data and inspect how the system works. | Financial institutions are closed books: you can't ask to see their loan history, a record of their managed assets, and so on. |
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Explore DeFi apps
 </ButtonLink>
 
@@ -66,7 +66,7 @@ This sounds odd... "why would I want to program my money"? However, this is more
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore our suggestions for DeFi applications to try out if you're new to Ethereum.</div>
-  <ButtonLink href="/apps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Explore DeFi apps
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 
 As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/glossary/#ens) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/).
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See payment dapps
 </ButtonLink>
 
@@ -124,7 +124,7 @@ Borrowing money from decentralized providers comes in two main varieties.
 - Peer-to-peer, meaning a borrower will borrow directly from a specific lender.
 - Pool-based where lenders provide funds (liquidity) to a pool that borrowers can borrow from.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See borrowing dapps
 </ButtonLink>
 
@@ -186,7 +186,7 @@ You can earn interest on your crypto by lending it and see your funds grow in re
 - Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days or even hours!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See lending dapps
 </ButtonLink>
 
@@ -214,7 +214,7 @@ There are thousands of tokens on Ethereum. Decentralized exchanges (DEXs) let yo
 
 For example, if you want to use the no-loss lottery PoolTogether (described above), you'll need a token like Dai or USDC. These DEXs allow you to swap your ETH for those tokens and back again when you're finished.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See token exchanges
 </ButtonLink>
 
@@ -226,7 +226,7 @@ There are more advanced options for traders who like a little more control. Limi
 
 When you use a centralized exchange you have to deposit your assets before the trade and trust them to look after them. While your assets are deposited, they're at risk as centralized exchanges are attractive targets for hackers.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See trading dapps
 </ButtonLink>
 
@@ -238,7 +238,7 @@ There are fund management products on Ethereum that will try to grow your portfo
 
 A good example is the [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). This is a fund that rebalances automatically to ensure your portfolio always includes the top DeFi tokens by market capitalization. You never have to manage any of the details and you can withdraw from the fund whenever you like.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See investment dapps
 </ButtonLink>
 
@@ -252,7 +252,7 @@ Ethereum is an ideal platform for crowdfunding:
 - It's transparent so fundraisers can prove how much money has been raised. You can even trace how funds are being spent later down the line.
 - Fundraisers can set up automatic refunds if, for example, there is a specific deadline and minimum amount that isn't met.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See crowdfunding dapps
 </ButtonLink>
 
@@ -281,7 +281,7 @@ Decentralized insurance aims to make insurance cheaper, faster to pay out, and m
 
 Ethereum products, like any software, can suffer from bugs and exploits. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However, there are projects starting to build out coverage for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallholder farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for farmers who are often priced out of traditional insurance.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See insurance dapps
 </ButtonLink>
 
@@ -291,7 +291,7 @@ Ethereum products, like any software, can suffer from bugs and exploits. So righ
 
 With so much going on, you'll need a way to keep track of all your investments, loans, and trades. There are a host of products that let you coordinate all your DeFi activity from one place. This is the beauty of DeFi's open architecture. Teams can build out interfaces where you can't just see your balances across products, you can use their features too. You might find this useful as you explore more of DeFi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   See portfolio dapps
 </ButtonLink>
 

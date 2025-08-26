@@ -47,7 +47,7 @@ Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unaw
 | Palaging bukas ang mga merkado.                                                                                                     | Nagsasara ang mga merkado dahil kailangang magpahinga ng mga empleyado.                                                                                                  |
 | Nakabatay ito sa pagiging malinaw—sinuman ay maaaring tingnan ang data ng isang produkto at suriin kung paano gumagana ang sistema. | Ang mga pinansyal na institusyon ay mga pribado: hindi mo maaaring tingnan ang kanilang kasaysayan ng pautang, rekord ng kanilang mga pinapamahalaanng asset, at iba pa. |
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   I-explore ang mga DeFi app
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Medyo kakaiba itong pakinggan... "bakit ko gugustuhing iprograma ang pera ko"? N
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tuklasin ang aming mga mungkahi para sa mga application ng DeFi na maaari mong subukan kung bago ka sa Ethereum.</div>
-  <ButtonLink href="/apps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     I-explore ang mga DeFi app
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Mayroong desentralisadong alternatibo para sa karamihan ng mga serbisyong pinans
 
 Bilang blockchain, ang Ethereum ay idinisenyo para magpadala ng mga transaksyon sa ligtas at pandaigdigang paraan. Tulad ng Bitcoin, pinapadali ng Ethereum ang pagpapadala ng pera sa buong mundo, na parang nagpapadala lang ng email. Ilagay lamang ang [pangalan ng ENS](/glossary/#ens) ng iyong tatanggap (tulad ng bob.eth) o ang kanilang address ng account mula sa iyong wallet at ang iyong bayad ay direktang mapupunta sa kanila sa loob ng ilang minuto (karaniwan). Upang magpadala o tumanggap ng mga pagbabayad, kakailanganin mo ng [wallet](/wallets/).
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang mga dapps ng pagbabayad
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Ang paghiram ng pera mula sa mga desentralisadong provider ay may dalawang pangu
 - Peer-to-peer, na nangangahulugang ang nanghihiram ay direktang manghihiram mula sa isang tiyak na nagpapahiram.
 - Pool-based kung saan ang mga nagpapahiram ay nagbibigay ng pondo (liquidity) sa isang sama-sama na maaaring pautangin ng mga nanghihiram.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang mga dapp para sa paghiram
 </ButtonLink>
 
@@ -185,7 +185,7 @@ Maaari kang kumita ng interes sa iyong crypto sa pamamagitan ng pagpapahiram nit
 - Ang iyong aDai ay tataas batay sa interes at makikita mo ang paglaki ng iyong balanse sa iyong wallet. Depende sa [APR](/glossary/#apr), ang balanse ng iyong wallet ay magpapakita ng 100.1234 matapos ang ilang araw o kahit oras!
 - Maaari kang mag-withdraw ng regular na Dai na katumbas ng iyong balanse sa aDai anumang oras.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang pagpapahiram ng mga dapp
 </ButtonLink>
 
@@ -213,7 +213,7 @@ May libu-libong mga token sa Ethereum. Ang mga decentralized exchange (DEX) ay n
 
 Halimbawa, kung nais mong gamitin ang walang talong lottery na PoolTogether (na inilalarawan sa itaas), kakailanganin mo ng token tulad ng Dai o USDC. Pinapahintulutan ka ng mga DEX na ito na i-swap ang iyong ETH sa mga token na iyon at i-swap ito ulit kapag tapos ka na.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang palitan ng mga token
 </ButtonLink>
 
@@ -225,7 +225,7 @@ Mayroong mga mas masulong na opsyon para sa mga trader na gusto ng kaunti pang k
 
 Kapag gumagamit ka ng sentralisadong palitan, dapat mong ideposito ang mga asset mo bago mag-trade at dapat mong ipagkatiwala sa kanila ang mga ito. Habang nakadeposito ang iyong mga asset, nanganganib ang mga ito dahil mainit sa mata ng mga hacker ang mga sentralisadong palitan.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang desentralisadong mga dapp
 </ButtonLink>
 
@@ -237,7 +237,7 @@ May mga produkto sa pamamahala ng pondo sa Ethereum na susubukang palaguin ang i
 
 Ang magandang halimbawa ay ang [ pondo sa DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ito ay pondo na awtomatikong muling nagbabalanse upang matiyak na ang iyong portfolio ay laging naglalaman ng mga nangungunang token ng token batay sa kapitalisasyon ng merkado. Hindi mo kailangang pamahalaan ang alinman sa mga detalye at maaari kang umalis sa pondo kung kailan mo gusto.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang mga pamumuhunan sa mga dapp
 </ButtonLink>
 
@@ -251,7 +251,7 @@ Magandang platform ang Ethereum para sa crowdfunding:
 - Malinaw ito kaya maipapakita ng mga fundraiser kung magkano na ang naipon na pera. Maaari mo ring subaybayan kung paano ginagastos ang mga pondo sa kalaunan.
 - Maaaring mag-set up ang mga fundraiser ng mga awtomatikong refund kung, halimbawa, may tiyak na deadline at minimum na halaga na hindi natugunan.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang crowdfunding nga mga dapp
 </ButtonLink>
 
@@ -280,7 +280,7 @@ Ang decentralized insurance ay may layuning gawing mas abot-kaya, mas pabilisin 
 
 Ang mga produkto ng Ethereum, gaya ng anumang software, ay puwedeng magkaroon ng mga bug at puwedeng abusuhin. Kaya sa ngayon, maraming produkto ng insurance ang nakatuon sa pagprotekta sa mga user laban sa pagkawala ng pondo. Gayunpaman, may mga proyekto na nagsisimulang bumuo ng coverage para sa lahat ng puwede nating harapin sa buhay. Isang magandang halimbawa nito ay ang Crop cover ng Etherisc na may layuning [ protektahan ang maliliit na magsasaka sa Kenya laban sa tagtuyot at pagbaha](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Ang decentralized insurance ay maaaring magbigay ng mas abot-kayang presyo para sa mga magsasaka na kadalasang hindi kayang magbayad para sa tradisyonal na insurance.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang decentralized application (dapps) para sa insurance
 </ButtonLink>
 
@@ -290,7 +290,7 @@ Ang mga produkto ng Ethereum, gaya ng anumang software, ay puwedeng magkaroon ng
 
 Sa dami ng mga nangyayari, kakailanganin mo ng paraan upang subaybayan ang lahat ng iyong mga investment, loan, at trade. May iba't ibang produkto na nagbibigay-daan sa iyong i-coordinate ang lahat ng iyong aktibidad sa DeFi mula sa isang lugar. Ito ang kagandahan ng open architecture ng DeFi. Ang mga team ay maaaring bumuo ng mga interface kung saan hindi mo lang makikita ang iyong mga balanse sa iba't ibang produkto, maaari mo ring gamitin ang kanilang mga feature. Maaaring maging kapaki-pakinabang ito para sa iyo habang tinitingnan mo ang iba pang bahagi ng DeFi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Tingnan ang decentralized application (dapps) para sa portfolio
 </ButtonLink>
 
