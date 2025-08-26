@@ -2039,6 +2039,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://abel.fr"><img src="https://avatars.githubusercontent.com/u/5216201?v=4?s=100" width="100px;" alt="Abel Derderian"/><br /><sub><b>Abel Derderian</b></sub></a><br /><a href="#maintenance-abeldotam" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/haouvw"><img src="https://avatars.githubusercontent.com/u/171421479?v=4?s=100" width="100px;" alt="haouvw"/><br /><sub><b>haouvw</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahaouvw" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
