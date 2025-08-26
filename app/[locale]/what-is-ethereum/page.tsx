@@ -789,7 +789,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </p>
                   <p>{t("page-what-is-ethereum-start-developers-desc-4")}</p>
                 </div>
-                <ButtonLink href="/start/">
+                <ButtonLink href="/developers/">
                   {t("page-what-is-ethereum-start-developers-cta")}
                 </ButtonLink>
               </CardContent>
@@ -830,7 +830,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     })}
                   </p>
                 </div>
-                <ButtonLink href="/start/">
+                <ButtonLink href="/enterprise/">
                   {t("page-what-is-ethereum-start-business-cta")}
                 </ButtonLink>
               </CardContent>
