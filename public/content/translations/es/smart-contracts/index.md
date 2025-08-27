@@ -70,7 +70,7 @@ Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossa
 - [Monedas estables](/stablecoins/)
 - [Crear y distribuir activos digitales únicos](/nft/)
 - [Un cambio de divisas automático y abierto](/get-eth/#dex)
-- [Juegos descentralizados](/apps/?category=gaming#explore)
+- [Juegos descentralizados](/apps/categories/gaming)
 - [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
 - [Un estándar que permite a las personas crear divisas interoperables y personalizadas](/developers/docs/standards/tokens/)
 

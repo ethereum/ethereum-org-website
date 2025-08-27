@@ -126,7 +126,7 @@ Tumatanggap kami ng mga mungkahi para sa mga bagong proyekto na ililista - tingn
 - [DeSci: Ang Kinabukasan ng Pananaliksik ni Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Pondo para sa Siyensiya (Epilogo: DeSci at bagong crypto primitives) ni Nadia](https://nadia.xyz/science-funding)
 - [Binabago ng Desentralisasyon ang Pag-develop ng Gamot](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

@@ -36,7 +36,7 @@ const instructions = [
     title: "Join our Discord",
     description:
       "Keep up with the latest updates, attend the onboarding calls or ask questions",
-    ctaLink: "/discord/",
+    ctaLink: "https://discord.gg/ethereum-org/",
     ctaLabel: "Join",
   },
   {

@@ -16,7 +16,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 - [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
 - Use kebab casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
-  - If capitalization styling required, it is preferable to style with CSS
+  - If capitalization styling is required, it is preferable to style with CSS
     - Do this:
       ```
         JSON `"page-warning": "Be very careful"`

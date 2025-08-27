@@ -70,7 +70,7 @@ Tá an treochlár mar thoradh den chuid is mó ar bhlianta oibre ag taighdeoirí
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Cad ab ea ETH2?</h4>
 
-  <p>Baineadh úsáid go coitianta as an téarma 'Eth2' chun cur síos a dhéanamh ar thodhchaí Ethereum roimh an aistriú go <a href="/glossary/#pos">cruthúnas-gheallta</a> ach cuireadh deireadh leis <strong>i bhfabhar téarmaíocht níos cruinne.</strong> Úsáideadh é ar dtús chun idirdhealú a dhéanamh ar líonra Ethereum roimh an aistriú go cruthúnais-gheallta agus an líonra tar éis sin, nó uaireanta chun tagairt a dhéanamh do na cliaint Ethereum éagsúla (<a href="/glossary/#execution-client">cuireadh cliaint fhorghníomhaithe</a> orthu uaireanta mar chliaint ETH1 agus tagraíodh do <a href="/glossary/#consensus-client">chliaint chomhaontaithe</a> uaireanta mar chliaint ETH2).</p>
+  <p>Baineadh úsáid go coitianta as an téarma 'Eth2' chun cur síos a dhéanamh ar thodhchaí Ethereum roimh an aistriú go [cruthúnas-gheallta](/glossary/#pos) ach cuireadh deireadh leis <strong>i bhfabhar téarmaíocht níos cruinne.</strong> Úsáideadh é ar dtús chun idirdhealú a dhéanamh ar líonra Ethereum roimh an aistriú go cruthúnais-gheallta agus an líonra tar éis sin, nó uaireanta chun tagairt a dhéanamh do na cliaint Ethereum éagsúla ([cuireadh cliaint fhorghníomhaithe](/glossary/#execution-client) orthu uaireanta mar chliaint ETH1 agus tagraíodh do [chliaint chomhaontaithe](/glossary/#consensus-client) uaireanta mar chliaint ETH2).</p>
 
 </InfoBanner>
 

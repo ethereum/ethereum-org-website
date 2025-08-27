@@ -55,7 +55,7 @@ Teastaíonn leibhéal réasúnta compoird le socrú nód agus tú ag obair le r�
 <ExpandableCard title="Bainistíocht eochair shlán" eventCategory="SoloStaking" eventName="clicked secure key management">
 Díreach mar a shlánaíonn eochracha príobháideacha do sheoladh Ethereum, beidh ort eochracha a ghiniúint go sonrach le haghaidh do bhailíochtóir. Caithfidh tú a thuiscint conas aon frásaí síl nó eochracha príobháideacha a choinneáil slán sábháilte.{' '}
 
-<a href="/security/">Slándáil Ethereum agus cosc ​​ar chamscéimeanna</a>
+[Slándáil Ethereum agus cosc ​​ar chamscéimeanna](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Cothabháil" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Is aonán fíorúil é <em>bailíochtóir</em> a chónaíonn ar Ethereum agus a 
 <ExpandableCard title="An féidir liom níos mó ná 32 ETH a thaisceadh?">
 Teastaíonn 32 ETH go díreach le gach péire eochrach a bhaineann le bailíochtóir a ghníomhachtú. Nuair a chuirtear níor mó ETH i dtaisce le sraith amháin eochracha ní mhéadaíonn sé an cumas luaíochta, toisc go bhfuil gach bailíochtóir teoranta do <a href="https://www.attestant.io/posts/understanding-validator- effective-balance/">éifeachtach iarmhéid</a> 32 ETH. Ciallaíonn sé seo go ndéantar an tslat tomhais in incrimintí 32 ETH, agus a sraith eochracha agus cothromaíocht féin ag gach ceann acu.
 
-Ná cuir níos mó ná 32 ETH i dtaisce le haghaidh bailíochtóir amháin. Ní mhéadóidh sé do luaíocht. Má tá seoladh aistarraingthe socraithe don bhailíochtóir, déanfar cistí barrachais os cionn 32 ETH a aistarraingt go huathoibríoch chuig an seoladh seo le linn an chéad <a href="/staking/withdrawals/#validator-sweeping">scuabadh bailíochtóra</a>.
+Ná cuir níos mó ná 32 ETH i dtaisce le haghaidh bailíochtóir amháin. Ní mhéadóidh sé do luaíocht. Má tá seoladh aistarraingthe socraithe don bhailíochtóir, déanfar cistí barrachais os cionn 32 ETH a aistarraingt go huathoibríoch chuig an seoladh seo le linn an chéad [scuabadh bailíochtóra](/staking/withdrawals/#validator-sweeping).
 
-Má tá cuma ró-éilitheach ort ar an ngeallchur baile, smaoinigh ar sholáthraí <a href="/staking/saas/">geall-mar-sheirbhís</a> a úsáid, nó má tá tú ag obair le níos lú ná 32 ETH, seiceáil amach na <a href="/staking/pools/">linnte geallchuir</a>.
+Má tá cuma ró-éilitheach ort ar an ngeallchur baile, smaoinigh ar sholáthraí [geall-mar-sheirbhís](/staking/saas/) a úsáid, nó má tá tú ag obair le níos lú ná 32 ETH, seiceáil amach na [linnte geallchuir](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="An ndéanfar slaiseáil orm má théim as líne? (tldr: Ní dhéanfar.)">

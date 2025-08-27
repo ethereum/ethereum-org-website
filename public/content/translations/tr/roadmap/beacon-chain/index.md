@@ -35,7 +35,7 @@ Hisse ispatına geçiş Ethereum'u, iş ispatına kıyasla, çok daha güvenli v
 Ve hisse ispatını mutabakat mekanizması olarak kullanmak, [ şuan sahip olduğumuz güvenli, çevre dostu ve ölçeklenebillir Ethereum](/roadmap/vision/) için temel bir bileşendir.
 
 <InfoBanner emoji=":money_bag:">
-  Eğer doğrulayıcı olmakla ve Ethereum'un güvenliğini sağlamaya yardımcı olmakla ilgileniyorsanız, <a href="/staking/">hisseleme ile ilgili daha fazla şey öğrenin</a>.
+  Eğer doğrulayıcı olmakla ve Ethereum'un güvenliğini sağlamaya yardımcı olmakla ilgileniyorsanız, [hisseleme ile ilgili daha fazla şey öğrenin](/staking/).
 </InfoBanner>
 
 ### Parçalama için ayarlamalar {#setting-up-for-sharding}

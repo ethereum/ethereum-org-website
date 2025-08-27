@@ -56,7 +56,7 @@ Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kont
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     NFT eserlerini keşfedin
   </ButtonLink>
 </InfoBanner>
