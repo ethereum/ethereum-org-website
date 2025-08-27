@@ -119,10 +119,26 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
         <MainArticle className="relative flex-[1_1_992px] px-8 pb-8">
           <div className="flex flex-col gap-4">
             <h2 id="leaderboard">Leaderboard</h2>
+            <p>
+              The leaderboard shows all translations submitted by Translatathon
+              participants across all eligible projects during the translation
+              period. It is updated once daily and may not reflect the real-time
+              scores.
+            </p>
+            <p>
+              None of the scores below are final and do not include any bonus
+              points, potential disqualifications, or other adjustments.
+            </p>
+            <p>
+              Final scores will be announced after all the evaluations are
+              completed!
+            </p>
             {translatathonTranslators.length > 0 ? (
               <Leaderboard translators={translatathonTranslators} />
             ) : (
-              <div className="text-center text-body-medium">No data available</div>
+              <div className="text-center text-body-medium">
+                No data available
+              </div>
             )}
           </div>
           <div id="apply-now">
