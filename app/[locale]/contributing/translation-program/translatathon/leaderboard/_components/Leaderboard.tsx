@@ -3,11 +3,20 @@
 import { useState } from "react"
 
 import Emoji from "@/components/Emoji"
+import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
-const AvatarWithFallback = ({ username }: { username: string }) => {
+const AvatarWithFallback = ({
+  username,
+  avatarUrl,
+}: {
+  username: string
+  avatarUrl: string
+}) => {
+  const [imageError, setImageError] = useState(false)
+
   // Generate consistent avatar colors using design system colors
   const avatarColors = [
     "bg-primary",
@@ -33,14 +42,28 @@ const AvatarWithFallback = ({ username }: { username: string }) => {
   const avatarColorClass = avatarColors[Math.abs(hash) % avatarColors.length]
   const initials = username.slice(0, 1).toUpperCase()
 
+  if (imageError || !avatarUrl) {
+    return (
+      <div
+        className={cn(
+          "me-4 hidden h-[30px] w-[30px] items-center justify-center rounded-full text-sm font-semibold text-white sm:flex sm:h-10 sm:w-10",
+          avatarColorClass
+        )}
+      >
+        {initials}
+      </div>
+    )
+  }
+
   return (
-    <div
-      className={cn(
-        "me-4 hidden h-[30px] w-[30px] items-center justify-center rounded-full text-sm font-semibold text-white sm:flex sm:h-10 sm:w-10",
-        avatarColorClass
-      )}
-    >
-      {initials}
+    <div className="relative me-4 hidden h-[30px] w-[30px] sm:block sm:h-10 sm:w-10">
+      <Image
+        fill
+        className="rounded-full object-cover"
+        src={avatarUrl}
+        alt={username}
+        onError={() => setImageError(true)}
+      />
     </div>
   )
 }
@@ -68,7 +91,15 @@ export const Leaderboard = ({ translators }) => {
         </div>
       </div>
       {translators.slice(0, filterAmount).map((translator, index) => {
-        const { username, totalCosts } = translator
+        const { username, avatarUrl, totalCosts } = translator
+
+        const transformedAvatarUrl = avatarUrl
+          ? avatarUrl.replace(
+              "https://crowdin-static.downloads.crowdin.com",
+              "https://crowdin-static.cf-downloads.crowdin.com"
+            )
+          : avatarUrl
+
         let emoji: string | null = null
         if (index === 0) {
           emoji = ":trophy:"
@@ -91,7 +122,10 @@ export const Leaderboard = ({ translators }) => {
                 )}
               </div>
               <div className="me-8 flex flex-row items-center break-words">
-                <AvatarWithFallback username={username} />
+                <AvatarWithFallback
+                  username={username}
+                  avatarUrl={transformedAvatarUrl}
+                />
                 <div className="max-w-[100px] sm:max-w-none">{username}</div>
               </div>
             </div>
