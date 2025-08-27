@@ -12,6 +12,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import { Leaderboard } from "./_components/Leaderboard"
+
 import { fetchTranslatathonTranslators } from "@/lib/api/fetchTranslatathonTranslators"
 
 // 24 hours
@@ -118,13 +120,7 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
           <div className="flex flex-col gap-4">
             <h2 id="leaderboard">Leaderboard</h2>
             {translatathonTranslators.length > 0 ? (
-              <div>
-                {translatathonTranslators.map((translator) => (
-                  <div key={translator.username}>
-                    <p>{translator.username}</p>
-                  </div>
-                ))}
-              </div>
+              <Leaderboard translators={translatathonTranslators} />
             ) : (
               <div className="text-center text-gray-500">No data available</div>
             )}
