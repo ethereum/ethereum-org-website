@@ -11267,7 +11267,7 @@
       "login": "konopkja",
       "name": "Jakub",
       "avatar_url": "https://avatars.githubusercontent.com/u/100724231?v=4",
-      "profile": "http://ethereum.org",
+      "profile": "https://ethereum.org",
       "contributions": [
         "doc",
         "content",
@@ -13114,6 +13114,15 @@
       "profile": "http://abel.fr",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "haouvw",
+      "name": "haouvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/171421479?v=4",
+      "profile": "https://github.com/haouvw",
+      "contributions": [
+        "bug"
       ]
     }
   ],

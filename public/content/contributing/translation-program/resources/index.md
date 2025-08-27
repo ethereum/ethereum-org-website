@@ -28,7 +28,7 @@ You can find some useful guides and tools for ethereum.org translators, as well 
 
 ## Communities {#communities}
 
-- [Language-specific Discord translation groups](/discord/)
+- [Language-specific Discord translation groups](https://discord.gg/ethereum-org)
   _– an initiative to connect ethereum.org translators to Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
@@ -44,7 +44,7 @@ To keep up-to-date with the latest Translation Program progress, you can follow 
 
 ## Office hours for translators {#office-hours}
 
-We have office hours for translators on the second Wednesday of every month. These are held in the #office-hours voice channel on the [ethereum.org Discord](/discord/), where you can also find the exact times and additional details.
+We have office hours for translators on the second Wednesday of every month. These are held in the #office-hours voice channel on the [ethereum.org Discord](https://discord.gg/ethereum-org), where you can also find the exact times and additional details.
 
 Office hours allow our translators to ask questions about the translation process, provide feedback on the program, share their ideas, or just chat with the core ethereum.org team.
 Finally, we want to use these calls to communicate recent developments with the Translation Program and share key tips and instructions with our contributors.

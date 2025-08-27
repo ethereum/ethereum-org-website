@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Se você faz parte de uma <a href="/staking/pools/">participação combinada</a> (participação em pool) ou mantém tokens participados, deve solicitar ao seu provedor mais detalhes sobre o processamento de saques de participação, pois cada serviço funciona de maneira diferente.
+Se você faz parte de uma [participação combinada](/staking/pools/) (participação em pool) ou mantém tokens participados, deve solicitar ao seu provedor mais detalhes sobre o processamento de saques de participação, pois cada serviço funciona de maneira diferente.
 
-Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer <a href="/staking/solo/">stake em casa</a>.
+Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer [stake em casa](/staking/solo/).
 
 </ExpandableCard>
 

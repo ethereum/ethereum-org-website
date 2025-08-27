@@ -10,6 +10,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
+import heroImg from "@/public/images/layer-2/learn-hero.png"
 import Callout1Image from "@/public/images/man-and-dog-playing.png"
 
 const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
@@ -18,8 +19,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: { slug: pathname, startDepth: 1 },
-    heroImg: "/images/layer-2/learn-hero.png",
-    blurDataURL: "/images/layer-2/learn-hero.png",
+    heroImg,
     title: t("common:nav-networks-explore-networks-label"),
     description: t("page-layer-2-networks-hero-description"),
   }

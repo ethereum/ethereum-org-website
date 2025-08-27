@@ -69,7 +69,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
       dir={dir}
     >
       <div className="flex flex-col gap-4">
-        <h4 className="mb-2">{getTitle(feedbackSubmitted)}</h4>
+        <h2 className="mb-2">{getTitle(feedbackSubmitted)}</h2>
         {feedbackSubmitted && (
           <p>
             {t("feedback-widget-thank-you-subtitle")}{" "}

@@ -24,7 +24,7 @@ Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org
 
 ## Communities {#communities}
 
-- [Sprachenspezifische Discord-Übersetzungsgruppen](/discord/) _ – eine Initiative zur Verbindung von ethereum.org-Übersetzern mit Übersetzungsgruppen_
+- [Sprachenspezifische Discord-Übersetzungsgruppen](https://discord.gg/ethereum-org) _ – eine Initiative zur Verbindung von ethereum.org-Übersetzern mit Übersetzungsgruppen_
 - [Chinesische Übersetzergruppe](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _ – Begriffsseite für die einfachere Koordination zwischen den chinesischen Übersetzern_
 
 ## Letzte Aktualisierungen {#latest-updates}
@@ -38,7 +38,7 @@ Damit Sie beim aktuellen Fortschritt des Übersetzungsprogramms auf dem Laufende
 
 ## Sprechstunde für Übersetzerinnen und Übersetzer {#office-hours}
 
-Jeden zweiten Mittwoch im Monat haben wir Sprechstunde für Übersetzer. Diese finden im Sprachkanal #office-hours auf dem [ethereum.org-Discord](/discord/) statt, wo Sie auch die genauen Zeiten und weitere Details finden.
+Jeden zweiten Mittwoch im Monat haben wir Sprechstunde für Übersetzer. Diese finden im Sprachkanal #office-hours auf dem [ethereum.org-Discord](https://discord.gg/ethereum-org) statt, wo Sie auch die genauen Zeiten und weitere Details finden.
 
 Während der Geschäftszeiten haben unsere Übersetzer die Möglichkeit, Fragen zum Übersetzungsprozess zu stellen, Feedback zum Programm zu geben, ihre Ideen mitzuteilen oder einfach mit dem ethereum.org-Kernteam zu plaudern. Schließlich wollen wir diese Zusammentreffen nutzen, um die neuesten Entwicklungen im Übersetzungsprogramm mitzuteilen und wichtige Tipps und Anleitungen an unsere Mitwirkenden weiterzugeben.
 

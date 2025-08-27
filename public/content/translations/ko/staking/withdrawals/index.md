@@ -159,9 +159,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-<a href="/staking/pools/">스테이킹 풀</a>에 속해 있거나 스테이킹 토큰을 갖고 있는 경우, 스테이킹 출금 처리 방법에 대한 자세한 사항은 제공업체에 문의해야 합니다. 각 서비스마다 운영 방식은 다를 수 있습니다.
+[스테이킹 풀](/staking/pools/)에 속해 있거나 스테이킹 토큰을 갖고 있는 경우, 스테이킹 출금 처리 방법에 대한 자세한 사항은 제공업체에 문의해야 합니다. 각 서비스마다 운영 방식은 다를 수 있습니다.
 
-일반적으로 사용자는 기본 스테이킹 ETH를 자유롭게 회수하거나, 사용하는 스테이킹 제공 업체를 변경할 수 있습니다. 특정 풀이 너무 커지면 자금은 인출 또는 상환되거나 <a href="https://rated.network/">소규모 공급 업체</a>로 다시 스테이킹할 수 있습니다. 또는 ETH가 충분한 경우 <a href="/staking/solo/">홈에서 스테이킹</a>할 수도 있습니다.
+일반적으로 사용자는 기본 스테이킹 ETH를 자유롭게 회수하거나, 사용하는 스테이킹 제공 업체를 변경할 수 있습니다. 특정 풀이 너무 커지면 자금은 인출 또는 상환되거나 <a href="https://rated.network/">소규모 공급 업체</a>로 다시 스테이킹할 수 있습니다. 또는 ETH가 충분한 경우 [홈에서 스테이킹](/staking/solo/)할 수도 있습니다.
 
 </ExpandableCard>
 

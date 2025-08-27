@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ak ste súčasťou <a href="/staking/pools/">stakovacie poolu</a> alebo držíte stakovacie tokeny, mali by ste sa u svojho poskytovateľa informovať o tom, ako sa nakladá s výbermi stakovanej sumy, pretože každá služba funguje inak.
+Ak ste súčasťou [stakovacie poolu](/staking/pools/) alebo držíte stakovacie tokeny, mali by ste sa u svojho poskytovateľa informovať o tom, ako sa nakladá s výbermi stakovanej sumy, pretože každá služba funguje inak.
 
-Vo všeobecnosti by používatelia mali mať možnosť získať späť svoje základné stakované ETH alebo zmeniť poskytovateľa stakovania, ktorého využívajú. Ak je konkrétny pool príliš veľký, je možné prostriedky opustiť, uplatniť a znovu stakovať u menšieho <a href="https://rated.network/">poskytovateľa</a>. Alebo, ak ste nazhromaždili dostatok ETH, môžete <a href="/staking/solo/">stakovať ako jednotlivec</a>.
+Vo všeobecnosti by používatelia mali mať možnosť získať späť svoje základné stakované ETH alebo zmeniť poskytovateľa stakovania, ktorého využívajú. Ak je konkrétny pool príliš veľký, je možné prostriedky opustiť, uplatniť a znovu stakovať u menšieho <a href="https://rated.network/">poskytovateľa</a>. Alebo, ak ste nazhromaždili dostatok ETH, môžete [stakovať ako jednotlivec](/staking/solo/).
 
 </ExpandableCard>
 

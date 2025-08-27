@@ -1,6 +1,5 @@
 "use client"
 
-// TODO: Extract intl strings
 // TODO: Fix RTL compatibility; currently forced to LTR flow
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { useLocale } from "next-intl"
@@ -19,10 +18,15 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { formatDate } from "@/lib/utils/date"
 
-import { Release, releasesData } from "@/data/roadmap/releases"
+import { getReleasesData, Release } from "@/data/roadmap/releases"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const ReleaseCarousel = () => {
   const locale = useLocale()
+  const { t } = useTranslation("page-roadmap")
+
+  const releasesData = useMemo(() => getReleasesData(t), [t])
 
   const [api1, setApi1] = useState<CarouselApi>()
   const [api2, setApi2] = useState<CarouselApi>()
@@ -49,7 +53,7 @@ const ReleaseCarousel = () => {
 
     // If no upcoming releases, start at the last production release
     return productionReleases.length - 1
-  }, [])
+  }, [releasesData])
 
   const [currentIndex, setCurrentIndex] = useState(startIndex)
 
@@ -125,7 +129,9 @@ const ReleaseCarousel = () => {
                                 currentIndex !== index && "hidden"
                               )}
                             >
-                              <p className="text-sm font-bold">In production</p>
+                              <p className="text-sm font-bold">
+                                {t("page-roadmap-release-status-prod")}
+                              </p>
                             </div>
                           )}
                           {status === "soon" && (
@@ -136,7 +142,7 @@ const ReleaseCarousel = () => {
                               )}
                             >
                               <p className="text-sm font-bold text-black">
-                                Coming soon
+                                {t("page-roadmap-release-status-soon")}
                               </p>
                             </div>
                           )}
@@ -148,7 +154,7 @@ const ReleaseCarousel = () => {
                               )}
                             >
                               <p className="text-sm font-bold">
-                                In development
+                                {t("page-roadmap-release-status-dev")}
                               </p>
                             </div>
                           )}
@@ -243,17 +249,19 @@ const ReleaseCarousel = () => {
 
                         <div>
                           <p className="mb-3 text-xl font-bold">
-                            Main features
+                            {t("page-roadmap-release-main-features")}
                           </p>
                           <div className="flex flex-col gap-4">
-                            {release.content}
+                            {typeof release.content === "function"
+                              ? release.content(t)
+                              : release.content}
                           </div>
                         </div>
                         <ButtonLink
                           href={release.href}
                           className="w-full lg:w-fit"
                         >
-                          Learn more
+                          {t("page-roadmap-release-learn-more")}
                         </ButtonLink>
                       </div>
                     </div>

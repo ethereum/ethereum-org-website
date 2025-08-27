@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jika Anda merupakan bagian dari <a href="/staking/pools/">pool penaruhan</a> atau memegang token penaruhan, Anda harus bertanya kepada penyedia Anda detail lebih lanjut tentang bagaimana penarikan penaruhan ditangani, karena setiap layanan beroperasi secara berbeda.
+Jika Anda merupakan bagian dari [pool penaruhan](/staking/pools/) atau memegang token penaruhan, Anda harus bertanya kepada penyedia Anda detail lebih lanjut tentang bagaimana penarikan penaruhan ditangani, karena setiap layanan beroperasi secara berbeda.
 
-Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan <a href="/staking/solo/">penaruhan dari beranda</a>.
+Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan [penaruhan dari beranda](/staking/solo/).
 
 </ExpandableCard>
 

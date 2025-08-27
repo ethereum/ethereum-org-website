@@ -16,7 +16,10 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import AppCard from "./AppCard"
 
+import useTranslation from "@/hooks/useTranslation"
+
 const AppsTable = ({ apps }: { apps: AppData[] }) => {
+  const { t } = useTranslation("page-apps")
   const [filterBy, setFilterBy] = useState("All")
 
   const subCategories = useMemo(
@@ -41,7 +44,7 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
     <div className="flex flex-col gap-7">
       <div className="flex flex-row items-end justify-between border-b pb-2 sm:items-center">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
-          <p className="whitespace-nowrap">Filter by</p>
+          <p className="whitespace-nowrap">{t("page-apps-filter-by")}</p>
           <Select
             value={filterBy}
             onValueChange={(value) => {
@@ -61,7 +64,7 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
                 value="All"
                 className="cursor-pointer hover:bg-primary-low-contrast"
               >
-                All
+                {t("page-apps-filter-all")}
               </SelectItem>
               {subCategories.map((subCategory) => (
                 <SelectItem
@@ -77,7 +80,7 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
         </div>
         <div>
           <p className="text-body-medium">
-            Showing{" "}
+            {t("page-apps-showing")}{" "}
             <span className="text-body">
               (
               {filteredApps.length === apps.length
