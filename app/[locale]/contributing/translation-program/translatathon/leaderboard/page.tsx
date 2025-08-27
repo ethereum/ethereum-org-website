@@ -122,7 +122,7 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
             {translatathonTranslators.length > 0 ? (
               <Leaderboard translators={translatathonTranslators} />
             ) : (
-              <div className="text-center text-gray-500">No data available</div>
+              <div className="text-center text-body-medium">No data available</div>
             )}
           </div>
           <div id="apply-now">
