@@ -1,4 +1,4 @@
-import htmr from "htmr"
+"use client"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -18,7 +18,9 @@ import {
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
+import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 
 import ReleaseCarousel from "./ReleaseCarousel"
 
@@ -148,8 +150,12 @@ const RoadmapPage = () => {
             <p className="mb-10">{t("page-roadmap-why-need-description")}</p>
             <h3 className="mb-6">{t("page-roadmap-how-defined-title")}</h3>
             <p className="mb-6">{t("page-roadmap-how-defined-p1")}</p>
-            <p className="mb-6">{htmr(t("page-roadmap-how-defined-p2"))}</p>
-            <p className="mb-6">{htmr(t("page-roadmap-how-defined-p3"))}</p>
+            <p className="mb-6">
+              <Translation id="page-roadmap:page-roadmap-how-defined-p2" />
+            </p>
+            <p className="mb-6">
+              <Translation id="page-roadmap:page-roadmap-how-defined-p3" />
+            </p>
             <ButtonLink
               href="/governance"
               variant="outline"
@@ -227,7 +233,12 @@ const RoadmapPage = () => {
                 className="mb-0"
               >
                 <div className="flex flex-col gap-4">
-                  <p>{htmr(t("page-roadmap-faq-3-p1"))}</p>
+                  <p>
+                    <Translation
+                      id="page-roadmap:page-roadmap-faq-3-p1"
+                      transform={{ a: Link }}
+                    />
+                  </p>
                 </div>
               </ExpandableCard>
               <ExpandableCard
@@ -235,7 +246,12 @@ const RoadmapPage = () => {
                 className="mb-0"
               >
                 <div className="flex flex-col gap-4">
-                  <p>{htmr(t("page-roadmap-faq-4-p1"))}</p>
+                  <p>
+                    <Translation
+                      id="page-roadmap:page-roadmap-faq-4-p1"
+                      transform={{ a: Link }}
+                    />
+                  </p>
                 </div>
               </ExpandableCard>
             </div>
