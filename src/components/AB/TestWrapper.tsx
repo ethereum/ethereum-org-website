@@ -16,15 +16,18 @@ type ABTestWrapperProps = {
   testKey: string
   variants: ABTestVariants
   fallback?: ReactNode
+  enableAllLocales?: boolean
 }
 
 const ABTestWrapper = async ({
   testKey,
   variants,
   fallback,
+  enableAllLocales,
 }: ABTestWrapperProps) => {
   const locale = await getLocale()
-  if (locale !== DEFAULT_LOCALE) return <>{fallback || variants[0]}</>
+  if (locale !== DEFAULT_LOCALE && !enableAllLocales)
+    return <>{fallback || variants[0]}</>
 
   try {
     // Get deterministic assignment
