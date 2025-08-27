@@ -142,3 +142,4 @@ Yes, the Fusaka upgrade requires updates to both [execution clients and consensu
 - [Forkcast: Fusaka](https://forkcast.org/upgrade/fusaka)
 - [Fusaka Meta EIP](https://eips.ethereum.org/EIPS/eip-7607)
 - [Bankless: What Fusaka & Pectra will bring Ethereum](https://www.bankless.com/read/what-fusaka-pectra-will-bring-ethereum)
+- [Bankless: Ethereum's Next Upgrades: Fusaka, Glamsterdam & Beyond with Preston Van Loon](https://x.com/BanklessHQ/status/1956017743289020633?t=502)
