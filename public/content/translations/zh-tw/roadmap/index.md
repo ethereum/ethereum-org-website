@@ -70,7 +70,7 @@ buttons:
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>什麼是以太坊 2？</h4>
 
-  <p>在過渡到<a href="/glossary/#pos">權益證明</a>之前，「以太坊 2.0」一詞通常用於描述以太坊的未來，但現在<strong>已被逐步淘汰，取而代之的是更精確的術語</strong>。它最初用來區分過渡到權益證明之前和之後的以太坊網路，有時也指不同的以太坊用戶端（<a href="/glossary/#execution-client">執行用戶端</a>有時稱為以太坊 1.0 用戶端，<a href="/glossary/#consensus-client">共識用戶端</a>有時稱為以太坊 2.0 用戶端）。</p>
+  <p>在過渡到[權益證明](/glossary/#pos)之前，「以太坊 2.0」一詞通常用於描述以太坊的未來，但現在<strong>已被逐步淘汰，取而代之的是更精確的術語</strong>。它最初用來區分過渡到權益證明之前和之後的以太坊網路，有時也指不同的以太坊用戶端（[執行用戶端](/glossary/#execution-client)有時稱為以太坊 1.0 用戶端，[共識用戶端](/glossary/#consensus-client)有時稱為以太坊 2.0 用戶端）。</p>
 
 </InfoBanner>
 

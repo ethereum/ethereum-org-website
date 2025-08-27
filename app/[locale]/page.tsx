@@ -381,7 +381,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       Svg: Discord,
       label: "Discord",
-      href: "/discord/",
+      href: "https://discord.gg/ethereum-org",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index-join-action-discord-description"),
       eventName: "Discord",
@@ -718,7 +718,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
               <div className="flex gap-3">
                 <ButtonLink
-                  href="/discord/"
+                  href="https://discord.gg/ethereum-org"
                   size="lg"
                   variant="outline"
                   isSecondary

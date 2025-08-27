@@ -20,7 +20,7 @@ Ezt azért is fontos megérteni, mert **bárki jelentkezik Önnél, mint hivatal
   Ismerje meg az Ethereum alapjait
 </DocLink>
 
-Amellett, hogy nincs hivatalos ügyfélszolgálat, számtalan csoport, közösség és projekt szeretne Önnek segíteni, illetve rengeteg hasznos információ és forrás áll rendelkezésre ezeken az oldalakon. További kérdése van? Csatlakozzon az [ethereum.org Discord](/discord/) csatornához, és megpróbálunk segíteni.
+Amellett, hogy nincs hivatalos ügyfélszolgálat, számtalan csoport, közösség és projekt szeretne Önnek segíteni, illetve rengeteg hasznos információ és forrás áll rendelkezésre ezeken az oldalakon. További kérdése van? Csatlakozzon az [ethereum.org Discord](https://discord.gg/ethereum-org) csatornához, és megpróbálunk segíteni.
 
 ## Gyakran ismételt kérdések {#faq}
 
