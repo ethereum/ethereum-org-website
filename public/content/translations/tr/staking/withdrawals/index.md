@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Eğer bir <a href="/staking/pools/">paydaşlık havuzunun</a> parçasıysanız veya hisseleme token'ları tutuyorsanız, her bir servis farklı çalıştığı için hisseleme çekimlerinin nasıl yapıldığıyla ilgili daha fazla detay için sağlayıcınıza danışın.
+Eğer bir [paydaşlık havuzunun](/staking/pools/) parçasıysanız veya hisseleme token'ları tutuyorsanız, her bir servis farklı çalıştığı için hisseleme çekimlerinin nasıl yapıldığıyla ilgili daha fazla detay için sağlayıcınıza danışın.
 
-Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya kullandıkları hisseleme sağlayıcısını değiştirmekte özgürdür. Eğer spesifik bir havuz çok büyük hale geliyorsa fonlar çıkartılabilir, alınabilir ve <a href="https://rated.network/">daha küçük bir sağlayıcı</a> ile yeniden hisselenebilir. Ya da yeterince ETH biriktirdiyseniz <a href="/staking/solo/">evden hisseleyebilirsiniz</a>.
+Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya kullandıkları hisseleme sağlayıcısını değiştirmekte özgürdür. Eğer spesifik bir havuz çok büyük hale geliyorsa fonlar çıkartılabilir, alınabilir ve <a href="https://rated.network/">daha küçük bir sağlayıcı</a> ile yeniden hisselenebilir. Ya da yeterince ETH biriktirdiyseniz [evden hisseleyebilirsiniz](/staking/solo/).
 
 </ExpandableCard>
 

@@ -73,9 +73,9 @@ When apps are all built on Ethereum, they are all compatible. A token for one ap
 </ExpandableCard>
 
 <ExpandableCard title="Do I buy coins on a dapp?" visible>
-  <p>Some applications do let you trade or buy crypto tokens, but not all apps are for that. If you are looking to buy your first tokens visit <a href="/get-eth">Get ETH</a>.</p>
+  <p>Some applications do let you trade or buy crypto tokens, but not all apps are for that. If you are looking to buy your first tokens visit [Get ETH](/get-eth).</p>
 </ExpandableCard>
 
 <ExpandableCard title="What is the best crypto wallet?" visible>
-  <p>Crypto wallet lets you hold your tokens and manage your Ethereum account. There many great wallets, each serving a different purpose. To find out which wallet is best for you, visit our <a href="/wallets/find-wallet">list of wallets</a>.</p>
+  <p>Crypto wallet lets you hold your tokens and manage your Ethereum account. There many great wallets, each serving a different purpose. To find out which wallet is best for you, visit our [list of wallets](/wallets/find-wallet).</p>
 </ExpandableCard>
