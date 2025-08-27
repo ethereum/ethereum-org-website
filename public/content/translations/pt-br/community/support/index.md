@@ -20,7 +20,7 @@ Compreender a natureza descentralizada do Ethereum é vital porque qualquer pess
   Aprenda os conceitos básicos do Ethereum
 </DocLink>
 
-Apesar da falta de suporte oficial, muitos grupos, comunidades e projetos em todo o ecossistema Ethereum estão felizes em ajudar, e você pode encontrar muitas informações e recursos úteis nesta página. Ainda tem dúvidas? Junte-se ao [Discord ethereum.org](/discord/) e tentaremos ajudar.
+Apesar da falta de suporte oficial, muitos grupos, comunidades e projetos em todo o ecossistema Ethereum estão felizes em ajudar, e você pode encontrar muitas informações e recursos úteis nesta página. Ainda tem dúvidas? Junte-se ao [Discord ethereum.org](https://discord.gg/ethereum-org) e tentaremos ajudar.
 
 ## Suporte a carteiras {#wallet-support}
 

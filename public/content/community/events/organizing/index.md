@@ -140,7 +140,7 @@ Promoting your event effectively is key to attracting the right audience and bui
 
 X.com will be the backbone of your social media promotion. Try to be active and consistent with posting there, but also engage in different conversations, both with your personal account and with the account of your organization.
 
-Although LinkedIn doesn’t sound like a most obvious choice for promotion, you can reach out to a completely different audience there, or even some sponsors.
+Although LinkedIn doesn’t sound like the most obvious choice for promotion, you can reach out to a completely different audience there, or even some sponsors.
 
 #### Partnerships with other Ethereum communities {#partnerships-with-other-ethereum-communities}
 

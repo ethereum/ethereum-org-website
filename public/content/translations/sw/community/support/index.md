@@ -20,7 +20,7 @@ Ufahamu wa asili ya ugatuzi wa Ethereum ni muhimu kwa kila mmoja maana yeyote an
   Jifunze mambo ya msingi ya Ethereum
 </DocLink>
 
-Licha ya upungufu wa uungaji mkono, makundi mengi, jumuiya na mirandi ndani ya ikolojia ya Ethereum wanafurahi kuunga mkono, na unaweza kupata taarifa muhimu na vyanzo kwenye ukurasa huu. Bado unamswali? Jiunge na [Discord ya ethereum.org](/discord/), na tutajaribu kukusaidia.
+Licha ya upungufu wa uungaji mkono, makundi mengi, jumuiya na mirandi ndani ya ikolojia ya Ethereum wanafurahi kuunga mkono, na unaweza kupata taarifa muhimu na vyanzo kwenye ukurasa huu. Bado unamswali? Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org), na tutajaribu kukusaidia.
 
 ## Huduma za pochi {#wallet-support}
 

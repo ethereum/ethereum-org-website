@@ -2923,44 +2923,6 @@
       "ready": "true"
     },
     {
-      "name": "Pirate Nation",
-      "url": "https://piratenation.game/",
-      "description": "Pirate Nation is a new type of game, filled with high seas adventure, treasure, fun, and unexpected surprises. Players collect and send pirates on adventures where they collect materials for crafting, treasures, and pirate gold! Pirates gain experience and can level up from their many adventures.",
-      "image": "https://i.imgur.com/STvJczx.png",
-      "category": "Gaming",
-      "subCategory": [
-        "RPG",
-        "retro gaming"
-      ],
-      "networks": [
-        "Arbitrum One"
-      ],
-      "screenshots": [
-        "https://i.imgur.com/OgvQVcV.jpeg"
-      ],
-      "bannerImage": "https://i.imgur.com/H1gUp2B.png",
-      "platforms": [
-        "Browser"
-      ],
-      "twitter": "https://twitter.com/piratenation",
-      "github": "",
-      "discord": "https://discord.com/invite/piratenation",
-      "kpiUrl": "",
-      "sortingWeight": 0,
-      "discover": true,
-      "highlight": true,
-      "languages": [
-        "English"
-      ],
-      "parentCompany": "Pirate Nation",
-      "parentCompanyURL": "https://piratenation.game",
-      "openSource": false,
-      "contractAddress": "https://docs.piratenation.game/important/contracts",
-      "dateOfLaunch": "12/2/2022",
-      "lastUpdated": "7/14/2025",
-      "ready": "true"
-    },
-    {
       "name": "Remix",
       "url": "https://remix.gg/",
       "description": "Remix is a platform combining AI and mobile gaming, designed to offer on-chain, AI-powered games.",

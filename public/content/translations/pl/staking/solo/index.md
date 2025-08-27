@@ -55,7 +55,7 @@ Wymaga również bardzo podstawowej konfiguracji sprzętu i pewnego zrozumienia 
 <ExpandableCard title="Bezpieczne zarządzanie kluczem" eventCategory="SoloStaking" eventName="clicked secure key management">
 Podobnie jak w przypadku kluczy prywatnych zabezpieczających adres Ethereum, konieczne będzie wygenerowanie kluczy specjalnie dla walidatora. Musisz wiedzieć, jak bezpiecznie przechowywać wszelkie frazy odzyskiwania lub klucze prywatne.{' '}
 
-<a href="/security/">Bezpieczeństwo Ethereum i zapobieganie oszustwom</a>
+[Bezpieczeństwo Ethereum i zapobieganie oszustwom](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Oto kilka najczęściej zadawanych pytań dotyczących stakingu, o których wart
 <ExpandableCard title="Czy mogę zdeponować więcej niż 32 ETH?">
 Każda para kluczy powiązana z walidatorem wymaga dokładnie 32 ETH do aktywacji. Więcej ETH zdeponowanych w jednym zestawie kluczy nie zwiększa potencjału nagród, ponieważ każdy walidator jest ograniczony do <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">efektywnego salda</a> 32 ETH. Oznacza to, że staking odbywa się w przyrostach 32 ETH, każdy z własnym zestawem kluczy i saldem.
 
-Nie należy deponować więcej niż 32 ETH dla jednego walidatora. Nie zwiększy to twoich nagród. Jeśli dla walidatora ustawiono adres wypłaty, nadwyżka środków powyżej 32 ETH zostanie automatycznie wypłacona na ten adres podczas następnego <a href="/staking/withdrawals/#validator-sweeping">przeniesienia walidatora</a>.
+Nie należy deponować więcej niż 32 ETH dla jednego walidatora. Nie zwiększy to twoich nagród. Jeśli dla walidatora ustawiono adres wypłaty, nadwyżka środków powyżej 32 ETH zostanie automatycznie wypłacona na ten adres podczas następnego [przeniesienia walidatora](/staking/withdrawals/#validator-sweeping).
 
-Jeśli solo staking wydaje ci się zbyt wymagający, rozważ skorzystanie z <a href="/staking/saas/">usług stakingowych</a> lub jeśli masz mniej niż 32 ETH, sprawdź <a href="/staking/pools/">stakowanie w puli</a>.
+Jeśli solo staking wydaje ci się zbyt wymagający, rozważ skorzystanie z [usług stakingowych](/staking/saas/) lub jeśli masz mniej niż 32 ETH, sprawdź [stakowanie w puli](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Czy zostanę odcięty, jeśli przejdę w tryb offline? (tldr: Nie.)">

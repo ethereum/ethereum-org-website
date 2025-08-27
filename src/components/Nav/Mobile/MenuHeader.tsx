@@ -10,7 +10,9 @@ const MenuHeader = () => {
       <SheetTitle className="p-0 text-md uppercase text-body-medium">
         {t("site-title")}
       </SheetTitle>
-      <SheetClose className="w-fit text-md">{t("close")}</SheetClose>
+      <SheetClose className="w-fit text-md" data-testid="mobile-menu-close">
+        {t("close")}
+      </SheetClose>
     </div>
   )
 }
