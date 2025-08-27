@@ -4,6 +4,7 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { slugify } from "@/lib/utils/url"
 import { cleanPath } from "@/lib/utils/url"
 
 import { Button } from "../../ui/buttons/Button"
@@ -131,6 +132,7 @@ const LvlAccordion = ({
             <AccordionTrigger
               heading={`h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"}
               className={cn("text-body", nestedAccordionSpacingMap[lvl])}
+              data-testid={`accordion-toggle-${slugify(label)}`}
               onClick={() => {
                 trackCustomEvent({
                   eventCategory: "Mobile navigation menu",
