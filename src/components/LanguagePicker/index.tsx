@@ -174,6 +174,7 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
 
       <CommandInput
         placeholder={t("page-languages-filter-placeholder")}
+        data-testid="language-filter-input"
         className="h-9"
         kbdShortcut="\"
       />
@@ -188,6 +189,7 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
               key={"item-" + displayInfo.localeOption}
               displayInfo={displayInfo}
               onSelect={onSelect}
+              data-testid={`language-option-${displayInfo.localeOption}`}
             />
           ))}
         </CommandGroup>
