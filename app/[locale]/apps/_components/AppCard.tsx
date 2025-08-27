@@ -99,7 +99,7 @@ const AppCard = ({
       <LinkOverlay
         href={`/apps/${slugify(app.name)}`}
         className="no-underline"
-        matomoEvent={{
+        customEventOptions={{
           eventCategory: matomoCategory,
           eventAction: `${matomoAction}`,
           eventName: `app name ${app.name}`,

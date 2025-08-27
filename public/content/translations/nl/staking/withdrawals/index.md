@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Als je deel uitmaakt van een <a href="/staking/pools/">staking-pool</a> of staking-tokens bezit, dient je bij je provider navraag te doen naar de manier waarop staking-opnames worden afgehandeld. Elke service werkt namelijk anders.
+Als je deel uitmaakt van een [staking-pool](/staking/pools/) of staking-tokens bezit, dient je bij je provider navraag te doen naar de manier waarop staking-opnames worden afgehandeld. Elke service werkt namelijk anders.
 
-Over het algemeen moeten gebruikers de vrijheid hebben om hun onderliggende gestakete ETH terug te vorderen, of om te veranderen van staking-provider. Als een bepaalde pool te groot wordt, kun je het geld eruit halen, inwisselen en opnieuw staken bij een <a href="https://rated.network/">kleinere aanbieder</a>. Of als je genoeg ETH hebt verzameld, kun je <a href="/staking/solo/">vanuit huis staken</a>.
+Over het algemeen moeten gebruikers de vrijheid hebben om hun onderliggende gestakete ETH terug te vorderen, of om te veranderen van staking-provider. Als een bepaalde pool te groot wordt, kun je het geld eruit halen, inwisselen en opnieuw staken bij een <a href="https://rated.network/">kleinere aanbieder</a>. Of als je genoeg ETH hebt verzameld, kun je [vanuit huis staken](/staking/solo/).
 
 </ExpandableCard>
 

@@ -55,7 +55,7 @@ Vyžaduje také velmi základní nastavení hardwaru a určité porozumění min
 <ExpandableCard title="Bezpečná správa klíčů" eventCategory="SoloStaking" eventName="clicked secure key management">
 Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset vygenerovat klíče speciálně pro váš validátor. Musíte rozumět tomu, jak uchovat všechny počáteční fráze nebo privátní klíče v bezpečí.{' '}
 
-<a href="/security/">Zabezpečení Etherea a prevence podvodů</a>
+[Zabezpečení Etherea a prevence podvodů](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Údržba" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Toto je několik nejčastějších otázek týkajících se vkládání, které 
 <ExpandableCard title="Mohu vložit více než 32 ETH?">
 Každý pár klíčů spojený s validátorem vyžaduje k aktivaci přesně 32 ETH. Více ETH uložených na jednu sadu klíčů nezvyšuje potenciál odměn, protože každý validátor je omezen na <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">efektivní zůstatek</a> 32 ETH. To znamená, že vytyčování se provádí ve 32 krocích ETH, z nichž každý má svou vlastní sadu klíčů a zůstatek.
 
-Nevkládejte více než 32 ETH na jeden validátor. Nezvýší to vaše odměny. Pokud byla pro validátor nastavena adresa pro výběr, přebytečné prostředky nad 32 ETH budou automaticky vybrány na tuto adresu během příští <a href="/staking/withdrawals/#validator-sweeping">kontroly validátoru</a>.
+Nevkládejte více než 32 ETH na jeden validátor. Nezvýší to vaše odměny. Pokud byla pro validátor nastavena adresa pro výběr, přebytečné prostředky nad 32 ETH budou automaticky vybrány na tuto adresu během příští [kontroly validátoru](/staking/withdrawals/#validator-sweeping).
 
-Pokud se vám uzamčení z domova zdá příliš náročné, zvažte použití poskytovatele typu <a href="/staking/saas/">uzamčení-jako-služba</a>, nebo pokud pracujete s méně než 32 ETH, koukněte se na <a href="/staking/pools/">vkladové fondy</a>.
+Pokud se vám uzamčení z domova zdá příliš náročné, zvažte použití poskytovatele typu [uzamčení-jako-služba](/staking/saas/), nebo pokud pracujete s méně než 32 ETH, koukněte se na [vkladové fondy](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Budu potrestán, když přejdu offline? (ve zkratce: Ne.)">

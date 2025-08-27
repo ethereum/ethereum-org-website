@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Si forma parte de alguna <a href="/staking/pools/">reserva de participación</a> o tiene tókenes de participación, debería consultarle a su proveedor los detalles de retiradas de participación, pues cada servicio opera de forma distinta.
+Si forma parte de alguna [reserva de participación](/staking/pools/) o tiene tókenes de participación, debería consultarle a su proveedor los detalles de retiradas de participación, pues cada servicio opera de forma distinta.
 
-En general, los usuarios deberían tener la libertad de reclamar sus ETH apostados subyacentes, o cambiar de proveedor de apuestas. Si un grupo en particular se está volviendo demasiado grande, los fondos se pueden cerrar y canjear, y volver a apostarlos con un <a href="https://rated.network/">proveedor más pequeño</a>. O, si ha acumulado suficientes ETH podría <a href="/staking/solo/">apostar desde casa</a>.
+En general, los usuarios deberían tener la libertad de reclamar sus ETH apostados subyacentes, o cambiar de proveedor de apuestas. Si un grupo en particular se está volviendo demasiado grande, los fondos se pueden cerrar y canjear, y volver a apostarlos con un <a href="https://rated.network/">proveedor más pequeño</a>. O, si ha acumulado suficientes ETH podría [apostar desde casa](/staking/solo/).
 
 </ExpandableCard>
 

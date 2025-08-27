@@ -48,7 +48,7 @@ Salah satu cara terbaik untuk melihat potensi DeFi adalah dengan memahami permas
 | Pasar selalu terbuka.                                                                                        | Pasar tutup karena para karyawan perlu istirahat.                                                                                                       |
 | Dibangun di atas prinsip transparansi – siapa pun dapat melihat data produk dan memeriksa cara kerja sistem. | Lembaga keuangan adalah buku tertutup: Anda tidak dapat meminta untuk melihat riwayat pinjaman mereka, catatan aset yang mereka kelola, dan sebagainya. |
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Jelajahi aplikasi DeFi
 </ButtonLink>
 
@@ -66,7 +66,7 @@ Ini terdengar aneh... "mengapa saya ingin memrogram uang saya"? Namun, ini lebih
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Jelajahi saran kami untuk aplikasi DeFi yang dapat dicoba jika Anda baru mengenal Ethereum.</div>
-  <ButtonLink href="/apps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Jelajahi aplikasi DeFi
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ Ada sebuah alternatif terdesentralisasi untuk kebanyakan layanan keuangan. Tetap
 
 Sebagai sebuah blockchain, Ethereum dirancang untuk mengirim transaksi dalam cara yang aman dan global. Seperti Bitcoin, Ethereum membuat pengiriman uang ke seluruh dunia semudah mengirimkan email. Cukup masukkan [nama ENS](/glossary/#ens) penerima Anda (seperti bob.eth) atau alamat akun mereka dari dompet Anda dan pembayaran Anda akan berpindah langsung ke mereka dalam hitungan menit (biasanya). Untuk mengirim atau menerima pembayaran, Anda akan memerlukan sebuah [dompet](/wallets/).
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp pembayaran
 </ButtonLink>
 
@@ -124,7 +124,7 @@ Layanan meminjam uang dari para penyedia terdesentralisasi hadir dalam dua varia
 - Peer-to-peer, yang berarti peminjam akan meminjam secara langsung dari pemberi pinjaman tertentu.
 - Berbasis pool di mana para pemberi pinjaman menyediakan dana (likuiditas) ke sebuah pool yang darinya para peminjam dapat memperoleh pinjaman.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp peminjaman
 </ButtonLink>
 
@@ -186,7 +186,7 @@ Anda dapat menghasilkan bunga pada kripto Anda dengan meminjamkannya dan melihat
 - aDai Anda akan bertambah sesuai dengan tingkat bunga dan Anda dapat melihat saldo bertambah di dompet. Tergantung pada [APR](/glossary/#apr), saldo dompet Anda akan membaca sesuatu seperti 100,1234 setelah beberapa hari atau bahkan beberapa jam!
 - Anda dapat menarik sejumlah Dai reguler yang setara dengan salso aDai Anda kapan saja.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp pemberi pinjaman
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Ada ribuan token di Ethereum. Decentralized exchange (DEX) memungkinkan Anda mem
 
 Misalnya, jika Anda ingin menggunakan lotre anti kerugian PoolTogether (yang dideskripsikan di atas), Anda akan memerlukan token seperti Dai atau USDC. DEX ini memungkinkan Anda menukar ETH dengan token tersebut dan menukarkannya kembali bila sudah selesai.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat penukaran token
 </ButtonLink>
 
@@ -226,7 +226,7 @@ Ada lebih banyak opsi tingkat lanjut bagi para pedagang yang menginginkan sediki
 
 Ketika Anda menggunakan bursa terpusat, Anda harus mendepositokan aset Anda sebelum perdagangannya dilakukan dan mempercayakan mereka untuk mengelolanya. Ketika aset Anda didepositokan, aset ini berisiko karena bursa terpusat adalah sasaran yang empuk bagi para peretas.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp perdagangan
 </ButtonLink>
 
@@ -238,7 +238,7 @@ Ada produk manajemen dana di Ethereum yang akan mencoba mengembangkan portofolio
 
 Sebuah contoh yang baik untuk ini adalah [dana DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ini adalah dana yang menyeimbangkan kembali secara otomatis untuk memastikan portofolio Anda selalu menyertakan token DeFi teratas berdasarkan kapitalisasi pasar. Anda tidak perlu mengelola detail apa pun dan Anda dapat menarik dananya kapan pun Anda menginginkannya.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp investasi
 </ButtonLink>
 
@@ -252,7 +252,7 @@ Ethereum merupakan platform yang ideal untuk penggalangan dana:
 - Bersifat transparan sehingga penggalang dana dapat membuktikan berapa banyak uang yang telah dikumpulkan. Anda bahkan dapat melacak berapa banyak dana yang dipakai nantinya.
 - Penggalang dana dapat menyiapkan pengembalian dana secara otomatis, misalnya, ada tenggat waktu tertentu dan jumlah minimum yang tidak dicapai.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp penggalangan dana
 </ButtonLink>
 
@@ -281,7 +281,7 @@ Asuransi terdesentralisasi bertujuan untuk membuat asuransi lebih murah, lebih c
 
 Produk Ethereum, seperti perangkat lunak mana pun, dapat mengalami masalah karena bug dan eksploitasi. Jadi saat ini, banyak produk asuransi yang ada berfokus untuk melindungi penggunanya dari kerugian dana. Namun, ada proyek-proyek yang mulai membangun cakupan untuk segala hal yang dapat terjadi dalam kehidupan kita. Contoh yang bagus untuk ini adalah jaminan Etherisc Crop yang bertujuan [melindungi para petani kecil di Kenya terhadap bencana kekeringan dan banjir](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Asuransi terdesentralisasi dapat menyediakan jaminan yang murah bagi para petani yang sering ditolak oleh asuransi tradisional.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp asuransi
 </ButtonLink>
 
@@ -291,7 +291,7 @@ Produk Ethereum, seperti perangkat lunak mana pun, dapat mengalami masalah karen
 
 Dengan begitu banyak hal yang terjadi, Anda akan memerlukan cara untuk tetap melacak semua investasi, pinjaman, dan perdagangan Anda. Ada sebuah host produk yang memungkinkan Anda mengkoordinir semua aktivitas DeFi dari satu tempat. Inilah keindahan dari arsitektur terbuka DeFi. Tim dapat menysusun antarmuka di mana Anda tidak hanya dapat melihat saldo di seluruh produk, Anda juga dapat menggunakan fiturnya. Anda mungkin menemukan manfaatnya saat menjelajahi lebih lanjut tentang DeFi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapp portofolio
 </ButtonLink>
 

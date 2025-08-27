@@ -97,13 +97,11 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                 <LinkOverlay
                   href={`/apps/categories/${slugify(category)}`}
                   className="text-body no-underline"
-                  onClick={() =>
-                    trackCustomEvent({
-                      eventCategory: "apps",
-                      eventAction: "categories",
-                      eventName: `topapps_category_name_${category}`,
-                    })
-                  }
+                  customEventOptions={{
+                    eventCategory: "apps",
+                    eventAction: "categories",
+                    eventName: `topapps_category_name_${category}`,
+                  }}
                 >
                   <div className="flex flex-row items-center justify-between gap-2">
                     <div className="flex items-center gap-2">

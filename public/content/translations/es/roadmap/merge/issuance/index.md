@@ -94,7 +94,7 @@ Reducción neta de la emisión anual de ETH: <strong>~88,7%</strong> ((4,61% - 0
 La fuerza opuesta a la emisión de ETH es la tasa a la cual se quema ETH. Para que se ejecute una transacción en Ethereum, se debe pagar una comisión mínima (conocida como «tarifa de base»), que fluctúa constantemente (bloque-a-bloque) dependiendo de la actividad de la red. La tarifa se debe pagar en ETH y se _requiere_ para que se considere una transacción válida. La tarifa se _quema_ durante el proceso de la transacción, eliminándola de la circulación.
 
 <InfoBanner>
-La quema de la comisión empezó con <a href="/history/#london">la actualización London</a> en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
+La quema de la comisión empezó con [la actualización London](/history/#london) en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
 </InfoBanner>
 
 Además de la tarifa implementada en la actualización London, los validadores también pueden incurrir en penalizaciones por estar fuera de línea, o peor aún, se les puede recortar por romper las reglas específicas que amenazan la seguridad de la red. Estas penalizaciones ocasionan una reducción de ETH del saldo de los validadores, que no recompensa directamente ninguna otra cuenta, quemándolos/eliminándolos efectivamente de circulación.

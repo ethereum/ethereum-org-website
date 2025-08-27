@@ -55,7 +55,7 @@ Também requer uma configuração de hardware muito básica e alguma compreensã
 <ExpandableCard title="Gerenciamento seguro de chaves" eventCategory="SoloStaking" eventName="clicked secure key management">
 Assim como as chaves privadas protegem seu endereço Ethereum, você precisará gerar chaves especificamente para seu validador. Você precisa compreender como manter qualquer frase semente ou chave privada protegida e segura.{' '}
 
-<a href="/security/">Segurança Ethereum e prevenção à fraude</a>
+[Segurança Ethereum e prevenção à fraude](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Manutenção" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Um <em>validador</em> é uma entidade virtual que vive no Ethereum e participa n
 <ExpandableCard title="Posso depositar mais de 32 ETH?">
 Cada par de chaves associado a um validador requer exatamente 32 ETH para ser ativado. Mais ETH depositado em um único conjunto de chaves não aumenta o potencial de recompensas, pois cada validador está limitado a um <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efetivo</a> de 32 ETH. Isso significa que o staking é feito em 32 incrementos de ETH, cada um com seu próprio conjunto de chaves e saldo.
 
-Não deposite mais de 32 ETH para um único validador. Isso não aumentará suas recompensas. Se um endereço de saque tiver sido definido para o validador, os fundos excedentes acima de 32 ETH serão automaticamente sacados para esse endereço durante a próxima <a href="/staking/withdrawals/#validator-sweeping">varredura do validador</a>.
+Não deposite mais de 32 ETH para um único validador. Isso não aumentará suas recompensas. Se um endereço de saque tiver sido definido para o validador, os fundos excedentes acima de 32 ETH serão automaticamente sacados para esse endereço durante a próxima [varredura do validador](/staking/withdrawals/#validator-sweeping).
 
-Se o staking individual demandar muito de você, considere usar um provedor de <a href="/staking/saas/">staking-as-a-service</a> (staking como um serviço) ou, se estiver trabalhando com menos de 32 ETH, verifique as <a href="/staking/pools/">staking pools</a> (pools de staking).
+Se o staking individual demandar muito de você, considere usar um provedor de [staking-as-a-service](/staking/saas/) (staking como um serviço) ou, se estiver trabalhando com menos de 32 ETH, verifique as [staking pools](/staking/pools/) (pools de staking).
 </ExpandableCard>
 
 <ExpandableCard title="Serei cortado se ficar off-line? (Para resumir: Não.)">

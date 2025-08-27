@@ -90,11 +90,15 @@ module.exports = (phase, { defaultConfig }) => {
       remotePatterns: [
         {
           protocol: "https",
-          hostname: "crowdin-static.downloads.crowdin.com",
+          hostname: "crowdin-static.cf-downloads.crowdin.com",
         },
         {
           protocol: "https",
           hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "github.com",
         },
         {
           protocol: "https",
