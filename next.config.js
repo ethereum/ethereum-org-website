@@ -137,11 +137,19 @@ module.exports = (phase, { defaultConfig }) => {
     },
   }
 
+  nextConfig = {
+    ...nextConfig,
+    experimental: {
+      ...experimental,
+      instrumentationHook: true,
+    },
+  }
+
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     nextConfig = {
       ...nextConfig,
       experimental: {
-        ...experimental,
+        ...nextConfig.experimental,
         outputFileTracingExcludes: {
           "*": [
             /**
