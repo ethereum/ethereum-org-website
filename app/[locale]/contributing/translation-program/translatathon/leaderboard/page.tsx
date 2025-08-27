@@ -15,6 +15,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import { Leaderboard } from "./_components/Leaderboard"
 
 import { fetchTranslatathonTranslators } from "@/lib/api/fetchTranslatathonTranslators"
+import heroImg from "@/public/images/heroes/translatathon-hero.png"
 
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
@@ -37,8 +38,7 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
       slug: "/contributing/translation-program/translatathon/leaderboard",
       startDepth: 1,
     },
-    heroImg: "/images/heroes/translatathon-hero.svg",
-    blurDataURL: "",
+    heroImg: heroImg,
     description: (
       <>
         <p>Leaderboard for the 2025 Ethereum.org Translatathon</p>
@@ -98,7 +98,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
   return (
     <>
-      <ContentHero {...heroProps} />
+      <div className="relative mt-4">
+        <ContentHero {...heroProps} />
+      </div>
 
       <div className="mx-auto mb-16 flex w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0">
         <LeftNavBar
