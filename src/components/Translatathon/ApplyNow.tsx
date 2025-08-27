@@ -1,4 +1,4 @@
-import Callout from "@/components/Callout"
+import CalloutSSR from "@/components/CalloutSSR"
 
 import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
@@ -6,21 +6,24 @@ import { Flex } from "../ui/flex"
 import { APPLICATION_END_DATE } from "./constants"
 import PaperformModal from "./PaperformModal"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.png"
 
 // TODO: Confirm deadline for applying
 
 export const ApplyNow = () => {
+  const { t } = useTranslation("page-translatathon")
+
   const dateToday = new Date()
   const deadline = new Date(APPLICATION_END_DATE)
 
   if (dateToday < deadline) {
     return (
       <div className="pt-12">
-        <Callout
+        <CalloutSSR
           image={DolphinImage}
-          titleKey="page-translatathon:translatathon-apply-now"
-          descriptionKey="page-translatathon:translatathon-apply-now-desc"
+          title={t("translatathon-apply-now")}
+          description={t("translatathon-apply-now-desc")}
           className="flex-1 basis-[416px] items-center text-center"
         >
           <Flex className="m-auto">
@@ -29,7 +32,7 @@ export const ApplyNow = () => {
               title="Apply to Translate"
             />
           </Flex>
-        </Callout>
+        </CalloutSSR>
       </div>
     )
   } else {
