@@ -189,7 +189,7 @@ export const releasesData: Release[] = [
         </ul>
       </div>
     ),
-    href: "https://eips.ethereum.org/EIPS/eip-7607",
+    href: "/roadmap/fusaka",
   },
   {
     image: GuidesHubHeroImage,
