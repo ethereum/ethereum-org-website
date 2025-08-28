@@ -265,7 +265,7 @@ const Page = async ({
                           </p>
                           <LinkOverlay
                             href={`/apps/${slugify(nextApp.name)}`}
-                            customEventOptions={{
+                            matomoEvent={{
                               eventCategory: "detail",
                               eventAction: `app name ${app.name}`,
                               eventName: "see_next",
