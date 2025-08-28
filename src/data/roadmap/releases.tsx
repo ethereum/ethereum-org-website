@@ -179,13 +179,18 @@ export const releasesData: Release[] = [
             decentralization
           </li>
         </ul>
-        <p className="font-bold">Potential Additional Features</p>
+        <p className="font-bold">Blob Parameter Only (BPO) Forks</p>
         <ul>
-          <li>Support for secure enclaves on mobile devices to improve UX</li>
-          <li>Blob fee market improvements</li>
+          <li>Allows flexible blob count increases between major upgrades</li>
           <li>
-            Further improvements to validator efficiency and network performance
+            Enables faster adaptation to L2 scaling needs without waiting for
+            coordinated hard forks
           </li>
+        </ul>
+        <p className="font-bold">Gas Limit & DoS Hardening</p>
+        <ul>
+          <li>Transaction gas limit cap of 16.7M gas per transaction</li>
+          <li>Default gas limit increase to ~60M (from current 45M)</li>
         </ul>
       </div>
     ),
