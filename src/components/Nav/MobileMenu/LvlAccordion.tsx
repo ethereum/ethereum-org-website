@@ -1,7 +1,8 @@
-import { getLocale } from "next-intl/server"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-
-import { Lang } from "@/lib/types"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 
 import { cn } from "@/lib/utils/cn"
 // import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -12,12 +13,6 @@ import { BaseLink } from "../../ui/Link"
 import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./MenuAccordion"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -39,14 +34,16 @@ const backgroundColorPerLevel = {
   4: "bg-background-high",
 }
 
-const LvlAccordion = async (props: LvlAccordionProps) => {
-  const locale = await getLocale()
+const nestedAccordionSpacingMap = {
+  2: "ps-8",
+  3: "ps-12",
+  4: "ps-16",
+  5: "ps-20",
+  6: "ps-24",
+}
 
-  return (
-    <Accordion locale={locale as Lang}>
-      <LvlAccordionItems {...props} />
-    </Accordion>
-  )
+const LvlAccordion = async (props: LvlAccordionProps) => {
+  return <LvlAccordionItems {...props} />
 }
 const LvlAccordionItems = async ({
   lvl,
@@ -63,22 +60,13 @@ const LvlAccordionItems = async ({
         const isLink = "href" in action
         const isActivePage = isLink && cleanPath(pathname) === action.href
 
-        const nestedAccordionSpacingMap = {
-          2: "ps-8",
-          3: "ps-12",
-          4: "ps-16",
-          5: "ps-20",
-          6: "ps-24",
-        }
-
         if (isLink)
           return (
-            <AccordionItem
+            <div
               key={label}
-              value={label}
               className="border-t border-body-light last:border-b"
             >
-              <AccordionPrimitive.Trigger asChild>
+              <p>
                 {/* TODO: replace this with ButtonLink when is implemented */}
                 <Button
                   className={cn(
@@ -122,19 +110,22 @@ const LvlAccordionItems = async ({
                     </div>
                   </BaseLink>
                 </Button>
-              </AccordionPrimitive.Trigger>
-            </AccordionItem>
+              </p>
+            </div>
           )
 
         return (
-          <AccordionItem
+          <Collapsible
             key={label}
-            value={label}
             className="border-t border-body-light last:border-b"
           >
-            <AccordionTrigger
-              heading={`h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"}
-              className={cn("text-body", nestedAccordionSpacingMap[lvl])}
+            <CollapsibleTrigger
+              className={cn(
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
+                "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
+                "text-body",
+                nestedAccordionSpacingMap[lvl]
+              )}
               // onClick={() => {
               //   trackCustomEvent({
               //     eventCategory: "Mobile navigation menu",
@@ -159,18 +150,22 @@ const LvlAccordionItems = async ({
                   {description}
                 </p>
               </div>
-            </AccordionTrigger>
+            </CollapsibleTrigger>
 
-            <AccordionContent
-              className={cn("mt-0 p-0", backgroundColorPerLevel[lvl])}
+            <CollapsibleContent
+              className={cn(
+                "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+                "mt-0 p-0",
+                backgroundColorPerLevel[lvl]
+              )}
             >
               <LvlAccordion
                 lvl={(lvl + 1) as Level}
                 items={action.items}
                 activeSection={activeSection}
               />
-            </AccordionContent>
-          </AccordionItem>
+            </CollapsibleContent>
+          </Collapsible>
         )
       })}
     </>

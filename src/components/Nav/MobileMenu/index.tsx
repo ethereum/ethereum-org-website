@@ -7,13 +7,12 @@ import { Lang } from "@/lib/types"
 import MobileLanguagePicker from "@/components/LanguagePicker/Mobile"
 import ExpandIcon from "@/components/Nav/MobileMenu/ExpandIcon"
 import LvlAccordion from "@/components/Nav/MobileMenu/LvlAccordion"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/Nav/MobileMenu/MenuAccordion"
 import Search from "@/components/Search"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import {
   Sheet,
   SheetContent,
@@ -113,30 +112,37 @@ async function NavigationContent() {
 
   return (
     <nav className="p-0">
-      <Accordion locale={locale as Lang}>
-        {SECTION_LABELS.map((key) => {
-          const { label, items } = linkSections[key]
+      {SECTION_LABELS.map((key) => {
+        const { label, items } = linkSections[key]
 
-          return (
-            <AccordionItem
-              key={key}
-              value={key}
-              className="group/accordion-item border-b border-body-light first:border-t"
+        return (
+          <Collapsible
+            key={key}
+            className="border-b border-body-light first:border-t"
+          >
+            <CollapsibleTrigger
+              className={cn(
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
+                "text-body"
+              )}
             >
-              <AccordionTrigger className="text-body">
-                <ExpandIcon />
-                <span className="flex-1 text-start text-lg font-bold leading-none">
-                  {label}
-                </span>
-              </AccordionTrigger>
+              <ExpandIcon />
+              <span className="flex-1 text-start text-lg font-bold leading-none">
+                {label}
+              </span>
+            </CollapsibleTrigger>
 
-              <AccordionContent className="mt-0 bg-background-low p-0">
-                <LvlAccordion lvl={2} items={items} activeSection={key} />
-              </AccordionContent>
-            </AccordionItem>
-          )
-        })}
-      </Accordion>
+            <CollapsibleContent
+              className={cn(
+                "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+                "mt-0 bg-background-low p-0"
+              )}
+            >
+              <LvlAccordion lvl={2} items={items} activeSection={key} />
+            </CollapsibleContent>
+          </Collapsible>
+        )
+      })}
     </nav>
   )
 }
