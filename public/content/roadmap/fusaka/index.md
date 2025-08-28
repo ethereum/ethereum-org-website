@@ -6,7 +6,7 @@ lang: en
 
 # Fusaka {#fusaka}
 
-The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every Ethereum user and developer. The name consists of execution layer upgrade Osaka and consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that push Ethereum scaling, security and user experience to the future. 
+The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every Ethereum user and developer. The name consists of the execution layer upgrade Osaka and the consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that pushes Ethereum scaling, security and user experience to the future. 
 
 This upgrade is planned for Q4 2025.
 
