@@ -24,11 +24,11 @@ Specification: https://eips.ethereum.org/EIPS/eip-7594
 
 Resources: https://youtu.be/bONWd1x2TjQ?t=328 (dapplion on PeerDAS)
 
-This is the *headliner* of the Fusaka fork, the main feature added in this upgrade. L2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for L2s. Pre-Fusaka, every full node has to store every **byte of those blobs to ensure that the data exists. As blob throughput rises, having to download all of this data would be untenably resource-intensive.
+This is the *headliner* of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
 
-With [Data Availability Sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to download all of the blob data, each node will sample just a portion. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data,  Any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10²⁰ to one in 10²⁴).
+With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node will be responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data,  any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10²⁰ to one in 10²⁴).
 
-This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for L2s.
+This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for layer 2s.
 
 In-depth: https://eprint.iacr.org/2024/1362.pdf
 
@@ -36,13 +36,13 @@ In-depth: https://eprint.iacr.org/2024/1362.pdf
 
 Specification: https://eips.ethereum.org/EIPS/eip-7892
 
-L2s scale Ethereum - as their networks grow, they need to post more data to Ethereum. This means that Ethereum will need to increase the number of blobs available to them as time goes on. Although PeerDAS enables scaling blob data, it needs to be done in gradually and safely. 
+Layer 2s scale Ethereum - as their networks grow, they need to post more data to Ethereum. This means that Ethereum will need to increase the number of blobs available to them as time goes on. Although PeerDAS enables scaling blob data, it needs to be done gradually and safely. 
 
 Because Ethereum is code running on thousands of independent nodes that require agreement on same rules, we cannot simply introduces changes like increasing blob count the way you deploy a website update. Any rule change must be a coordinated upgrade where every node, client and validator software upgrades before the same predetermined block.
 
-These coordinated upgrades generally include a lot of changes, require a lot of testing, and that takes time. In order to adapt faster to changing L2 blob needs, BPO-only forks introduce a mechanism to increase blobs without having to wait on that upgrade schedule.
+These coordinated upgrades generally include a lot of changes, require a lot of testing, and that takes time. In order to adapt faster to changing layer 2 blob needs, blob paramter only forks introduce a mechanism to increase blobs without having to wait on that upgrade schedule.
 
-BPO-only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These BPO-only forks can be configured at any time.
+Blob parameter only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These blob parameter only forks can be configured at any time.
 
 #### Blob base-fee bounded by execution costs {#blob-base-fee-bounded-by-execution-costs}
 
@@ -50,12 +50,12 @@ Specification: https://eips.ethereum.org/EIPS/eip-7918
 
 Storybook explainer: https://notes.ethereum.org/@anderselowsson/AIG
 
-L2s pay two bills when they post data: the blob fee and the execution gas needed to verify those blobs. If execution gas dominates, the blob fee auction can spiral down to 1 wei and stop being a price signal.
+Layer 2s pay two bills when they post data: the blob fee and the execution gas needed to verify those blobs. If execution gas dominates, the blob fee auction can spiral down to 1 wei and stop being a price signal.
 
 EIP-7918 pins a proportional reserve price under every blob. When the reserve is higher than the nominal blob base fee, the fee adjustment algorithm treats the block as over target and stops pushing the fee down and allows it increase normally. As a result:
 
 - the blob fee market always reacts to congestion
-- L2s pay at least a meaningful slice of the compute they force on nodes
+- layer 2s pay at least a meaningful slice of the compute they force on nodes
 - base-fee spikes on the EL can no longer strand the blob fee at 1 wei
 
 ### Gas limits, fees & DoS hardening {#gas-limits-fees-and-dos-hardening}
@@ -94,13 +94,13 @@ By better matching costs to actual processing time, MODEXP can no longer cause a
 
 Specification: https://eips.ethereum.org/EIPS/eip-7934
 
-Ethereum adds a hard cap on the [RLP](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp/)-encoded execution block size: 10 MiB total, with a 2 MiB safety margin reserved for beacon-block framing. Practically, clients define `MAX_BLOCK_SIZE = 10,485,760` bytes and `SAFETY_MARGIN = 2,097,152` bytes, and reject any execution block whose RLP payload exceeds `MAX_RLP_BLOCK_SIZE = MAX_BLOCK_SIZE − SAFETY_MARGIN`. The goal is to bound worst-case propagation/validation time and align with CL gossip behavior (blocks over ~10 MiB aren’t propagated), reducing reorg/DoS risk without changing gas accounting.
+Ethereum adds a hard cap on the [RLP](/developers/docs/data-structures-and-encoding/rlp/)-encoded execution block size: 10 MiB total, with a 2 MiB safety margin reserved for beacon-block framing. Practically, clients define `MAX_BLOCK_SIZE = 10,485,760` bytes and `SAFETY_MARGIN = 2,097,152` bytes, and reject any execution block whose RLP payload exceeds `MAX_RLP_BLOCK_SIZE = MAX_BLOCK_SIZE − SAFETY_MARGIN`. The goal is to bound worst-case propagation/validation time and align with CL gossip behavior (blocks over ~10 MiB aren’t propagated), reducing reorg/DoS risk without changing gas accounting.
 
 #### Set default gas limit to XX million {#set-default-gas-limit-to-xx-million}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7935
 
-Prior to raising the gas limit from 30M to 36M in Feb 2025 (and subsequently to 45M), this value hadn’t changed since the Merge (Sep 2022). This EIP aims to make consistent scaling a priority.
+Prior to raising the gas limit from 30M to 36M in February 2025 (and subsequently to 45M), this value hadn’t changed since the Merge (September 2022). This EIP aims to make consistent scaling a priority.
 
 EIP-7935 coordinates EL client teams to raise the default gas-limit above today’s 45M for Fusaka. It’s an Informational EIP, but it explicitly asks clients to test higher limits on devnets, converge on a safe value, and ship that number in their Fusaka releases.
 
