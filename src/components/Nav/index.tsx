@@ -1,16 +1,13 @@
-import dynamic from "next/dynamic"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
 
+import ClientOnly from "../ClientOnly"
 import { BaseLink } from "../ui/Link"
 
-const DesktopNav = dynamic(() => import("./DesktopNav"), {
-  ssr: false,
-})
-const MobileNav = dynamic(() => import("./MobileNav"), {
-  ssr: false,
-})
+import DesktopNav from "./DesktopNav"
+import { DesktopNavLoading, MobileNavLoading } from "./loading"
+import MobileNav from "./MobileNav"
 
 const Nav = async () => {
   const locale = await getLocale()
@@ -31,8 +28,12 @@ const Nav = async () => {
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
-        <DesktopNav className="hidden md:flex" />
-        <MobileNav className="flex md:hidden" />
+        <ClientOnly fallback={<DesktopNavLoading />}>
+          <DesktopNav className="hidden md:flex" />
+        </ClientOnly>
+        <ClientOnly fallback={<MobileNavLoading />}>
+          <MobileNav className="flex md:hidden" />
+        </ClientOnly>
       </div>
     </nav>
   )
