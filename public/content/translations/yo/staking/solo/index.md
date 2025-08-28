@@ -55,7 +55,7 @@ O tun nilo eto ohun elo ti ipilẹ pupọ, ati oye ti awọn eya ero ti won daba
 <ExpandableCard title="Iṣakoso kokoro aabo" eventCategory="SoloStaking" eventName="clicked secure key management">
 Gẹgẹ bi bawo ni awọn kokoro ikọkọ ṣe n daabo bo adirẹsi Ethereum rẹ, iwọ yoo nilo lati pilese awọn kokoro ni pato fun olufowosi rẹ. O gbọdọ loye bi o ṣe le tọju eyikeyi awọn ọrọ irugbin tabi daboo bo awọn kokoro ikoko ati aabo.{' '}
 
-<a href="/security/">Idena jibiti ati aabo Ethereum</a>
+[Idena jibiti ati aabo Ethereum](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Itoju" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Iwọnyi jẹ diẹ ninu awọn ibeere ti o wọpọ julọ nipa idokowo ti o se
 <ExpandableCard title="Ṣe mo le fi diẹ sii ju 32 ETH?">
 Kokoro onibeji kọọkan to ni nkan ṣe pẹlu olufọwọsi kan nilo 32ETH ni gerege lati le sise. Diẹ sii ETH ti o fi si awon kokoro onibeji kan ko ni se alekun ere, gege bi olufowosi kan ni opin si <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">iyoku owo to se deedee</a> 32 ETH. Eyi tumọ si pe idokowo je sise ninu awon alekun 32 ETH, okookan pelu awon kokoro onibeji re at iye owo to ku.
 
-Maṣe fipamo ju 32 ETH lo fun olufowosi kan. Ki yio mu awọn ere rẹ pọ si. Ti o ba ti ṣeto adiresi yiyọ owo kuro fun olufowosi naa, awọn owo ti o pọ ju 32 ETH lo ni yoo je yiyọkuro laifọwọyi si adirẹsi yii lakoko<a href="/staking/withdrawals/#validator-sweeping">ayewo olufowosi</a>to tẹle.
+Maṣe fipamo ju 32 ETH lo fun olufowosi kan. Ki yio mu awọn ere rẹ pọ si. Ti o ba ti ṣeto adiresi yiyọ owo kuro fun olufowosi naa, awọn owo ti o pọ ju 32 ETH lo ni yoo je yiyọkuro laifọwọyi si adirẹsi yii lakoko[ayewo olufowosi](/staking/withdrawals/#validator-sweeping)to tẹle.
 
-If home staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
+If home staking seems too demanding for you, consider using a [staking-as-a-service](/staking/saas/) provider, or if you're working with less than 32 ETH, check out the [staking pools](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Ṣe won a ge mi ti mo ba kuro lori ayelujara? (tldr: Bẹẹkọ.)">

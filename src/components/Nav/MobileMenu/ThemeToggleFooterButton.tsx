@@ -17,7 +17,11 @@ const ThemeToggleFooterButton = () => {
   const { toggleColorMode } = useThemeToggle()
 
   return (
-    <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
+    <FooterButton
+      icon={ThemeIcon}
+      onClick={toggleColorMode}
+      data-testid="mobile-menu-theme-toggle"
+    >
       <FooterItemText>{t(themeLabelKey)}</FooterItemText>
     </FooterButton>
   )

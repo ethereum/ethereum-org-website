@@ -57,7 +57,7 @@ Mungkin Anda adalah seorang seniman yang ingin berbagi karya mereka menggunakan 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Jelajahi, beli, atau buat karya seni/barang koleksi NFT Anda sendiri...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Jelajahi karya seni NFT
   </ButtonLink>
 </InfoBanner>

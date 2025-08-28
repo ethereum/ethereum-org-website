@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Má tá tú mar chuid de <a href="/staking/pools/">linn geallchuir</a> nó má tá comharthaí geallta agat, ba cheart duit seiceáil le do sholáthraí le haghaidh tuilleadh sonraí faoin gcaoi a láimhseáiltear aistarraingtí geallchuir, toisc go n-oibríonn gach seirbhís ar bhealach difriúil.
+Má tá tú mar chuid de [linn geallchuir](/staking/pools/) nó má tá comharthaí geallta agat, ba cheart duit seiceáil le do sholáthraí le haghaidh tuilleadh sonraí faoin gcaoi a láimhseáiltear aistarraingtí geallchuir, toisc go n-oibríonn gach seirbhís ar bhealach difriúil.
 
-Go ginearálta, ba cheart go mbeadh cead ag úsáideoirí a ETH bunaidh atá geallta a éileamh ar ais, nó an soláthraí geallchuir a úsáideann siad a athrú. Má tá comhthiomsú ar leith ag dul i méid ró-mhór, is féidir cistí a fhágáil, a fhuascailt agus a chur i ngeall arís le <a href="https://rated.network/">soláthraí níos lú</a>. Nó, má tá go leor ETH carntha agat d’fhéadfá <a href="/staking/solo/">geallchur a dhéanamh ón mbaile</a>.
+Go ginearálta, ba cheart go mbeadh cead ag úsáideoirí a ETH bunaidh atá geallta a éileamh ar ais, nó an soláthraí geallchuir a úsáideann siad a athrú. Má tá comhthiomsú ar leith ag dul i méid ró-mhór, is féidir cistí a fhágáil, a fhuascailt agus a chur i ngeall arís le <a href="https://rated.network/">soláthraí níos lú</a>. Nó, má tá go leor ETH carntha agat d’fhéadfá [geallchur a dhéanamh ón mbaile](/staking/solo/).
 
 </ExpandableCard>
 

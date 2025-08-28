@@ -58,6 +58,7 @@ const LanguagePickerMenu = ({
         placeholder={t("page-languages-filter-placeholder")}
         className="h-9"
         kbdShortcut="\"
+        data-testid="language-filter-input"
       />
 
       <CommandList className="max-h-full">
@@ -70,6 +71,7 @@ const LanguagePickerMenu = ({
               key={"item-" + displayInfo.localeOption}
               displayInfo={displayInfo}
               onSelect={onSelect}
+              data-testid={`language-option-${displayInfo.localeOption}`}
             />
           ))}
         </CommandGroup>

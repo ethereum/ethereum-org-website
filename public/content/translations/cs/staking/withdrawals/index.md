@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Pokud jste součástí <a href="/staking/pools/">vkladového fondu</a> nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
+Pokud jste součástí [vkladového fondu](/staking/pools/) nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
 
-Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete <a href="/staking/solo/">vložit z domova</a>.
+Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [vložit z domova](/staking/solo/).
 
 </ExpandableCard>
 

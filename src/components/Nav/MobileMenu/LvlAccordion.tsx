@@ -6,6 +6,7 @@ import {
 import { SheetDismiss } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
+import { slugify } from "@/lib/utils/url"
 
 import { Button } from "../../ui/buttons/Button"
 import { BaseLink } from "../../ui/Link"
@@ -121,6 +122,7 @@ const LvlAccordionItems = async ({
             closeEventName={`Close section: ${label} - ${description.slice(0, 16)}...`}
           >
             <CollapsibleTrigger
+              data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
                 "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
                 "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",

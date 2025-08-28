@@ -11,7 +11,7 @@ The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought chang
 This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
 <InfoBanner>
-Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about <a href="/roadmap/">the protocol roadmap</a> and <a href="/history/">previous upgrades</a>.
+Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
 </InfoBanner>
 
 ## Improvements in Pectra {#new-improvements}
@@ -44,7 +44,7 @@ Currently, network targets an average 3 blobs per block with a maximum of 6 blob
 
 ### Increase calldata cost {#7623}
 
-Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using [calldata](/docs/data-availability/blockchain-data-storage-strategies/#calldata) to store their data in Ethereum. Both blobs and calldata affect Ethereum's bandwidth usage. While most blocks only use a minimal amount of calldata, data-heavy blocks that also contain many blobs can be harmful to Ethereum's p2p network. 
+Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using [calldata](/developers/docs/data-availability/blockchain-data-storage-strategies/#calldata) to store their data in Ethereum. Both blobs and calldata affect Ethereum's bandwidth usage. While most blocks only use a minimal amount of calldata, data-heavy blocks that also contain many blobs can be harmful to Ethereum's p2p network. 
 
 To address this, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) increases calldata pricing, but only for data-heavy transactions. This bounds the worst-case block size, provides an incentive for L2s to only use blobs and leaves over 99% of transactions unaffected.
 

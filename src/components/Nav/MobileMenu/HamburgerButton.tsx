@@ -33,6 +33,7 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
       <Button
         ref={ref}
         id={HAMBURGER_BUTTON_ID}
+        data-testid="mobile-menu-hamburger"
         aria-label={t("aria-toggle-menu-button")}
         className={cn("px-2 py-0 text-body", className)}
         variant="ghost"

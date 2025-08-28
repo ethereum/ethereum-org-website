@@ -56,7 +56,7 @@ Wenn Sie eine bestimmte Zeichenfolge markieren möchten, die Aufmerksamkeit erfo
 
 ## Was ist Translation Memory (TM)? {#translation-memory}
 
-Translation Memory (TM) ist eine Funktion von Crowdin, die alle zuvor übersetzten Zeichenketten in [ethereum.org](http://ethereum.org/) speichert. Wenn eine Zeichenkette übersetzt wird, wird sie automatisch in unserem Projekt-TM gespeichert. Das ist ein nützliches Werkzeug, mit dem sich beim Übersetzen Zeit sparen lässt.
+Translation Memory (TM) ist eine Funktion von Crowdin, die alle zuvor übersetzten Zeichenketten in [ethereum.org](https://ethereum.org/) speichert. Wenn eine Zeichenkette übersetzt wird, wird sie automatisch in unserem Projekt-TM gespeichert. Das ist ein nützliches Werkzeug, mit dem sich beim Übersetzen Zeit sparen lässt.
 
 - Im Abschnitt "TM and MT Suggestions" (TM und maschinell übersetzte Vorschläge) können Sie sehen, wie andere Übersetzer den gleichen oder einen ähnlichen Satz übersetzt haben. Wenn Sie einen Vorschlag mit einer hohen Übereinstimmungsrate finden, können Sie diese Übersetzung verwenden, indem Sie darauf klicken.
 - Wenn die Liste keine Einträge zeigt, können Sie den Übersetzungsspeicher nach bereits erstellten Übersetzungen durchsuchen und sie wiederverwenden, um Einheitlichkeit zu gewährleisten.

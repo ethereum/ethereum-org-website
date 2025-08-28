@@ -5,7 +5,7 @@ lang: ga
 ---
 
 <InfoBanner emoji=":wave:">
-   Ba é Ethash algartam mianadóireachta cruthúnas-oibre Ethereum. Tá cruthúnas-de-oibre **múchta go hiomlán** anois agus tá Ethereum daingnithe anois ag baint úsáide as <a href="/developers/docs/consensus-mechanisms/pos/">cruthúnas-de-gealláil</a> ina ionad sin. Léigh tuilleadh ar <a href="/roadmap/merge/">An Cumasc</a>, <a href="/developers/docs/consensus-mechanisms/pos/">cruthúnas-gill</a> agus <a href="/staking/">geallchur</a>. Leathanach le spéis stairiúil é seo!  
+   Ba é Ethash algartam mianadóireachta cruthúnas-oibre Ethereum. Tá cruthúnas-de-oibre **múchta go hiomlán** anois agus tá Ethereum daingnithe anois ag baint úsáide as [cruthúnas-de-gealláil](/developers/docs/consensus-mechanisms/pos/) ina ionad sin. Léigh tuilleadh ar [An Cumasc](/roadmap/merge/), [cruthúnas-gill](/developers/docs/consensus-mechanisms/pos/) agus [geallchur](/staking/). Leathanach le spéis stairiúil é seo!  
 </InfoBanner>
 
 Is leagan modhnaithe é [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) den algartam [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Tá [cruthú cuimhne](https://wikipedia.org/wiki/Memory-hard_function) ar cruthúnas-oibre Ethash, rud a measadh a fhágann go bhfuil an algartam frithsheasmhach in ASIC. Forbraíodh ASICanna Ethash sa deireadh ach bhí mianadóireacht GPU fós ina rogha inmharthana go dtí gur múchadh cruthúnas-oibre. Úsáidtear Ethash fós do mhianadóireacht bonn ar líonraí eile nach bhfuil ar chruthúnas-oibre Ethereum.

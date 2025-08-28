@@ -16,6 +16,7 @@ import { Flex } from "@/components/ui/flex"
 
 import { ContentLayout } from "../ContentLayout"
 
+import heroImg from "@/public/images/heroes/translatathon-hero.png"
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
 import HowDoesItWorkImage from "@/public/images/translatathon/round-table.png"
 import robotImage from "@/public/images/wallet.png"
@@ -125,6 +126,15 @@ export const TranslatathonLayout = ({
         },
       },
       {
+        text: "Leaderboard",
+        href: "/contributing/translation-program/translatathon/leaderboard",
+        matomo: {
+          eventCategory: "translatathon menu",
+          eventAction: "click",
+          eventName: "translatathon leaderboard",
+        },
+      },
+      {
         text: "Details and submission criteria",
         href: "/contributing/translation-program/translatathon/details",
         matomo: {
@@ -148,8 +158,7 @@ export const TranslatathonLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: "/images/heroes/translatathon-hero.svg",
-    blurDataURL: "",
+    heroImg,
     description: (
       <>
         <p>Welcome to the Translatathon!</p>

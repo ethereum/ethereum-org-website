@@ -23,6 +23,7 @@ import {
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { slugify } from "@/lib/utils/url"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME, SECTION_LABELS } from "@/lib/constants"
 
@@ -80,7 +81,10 @@ export default async function MobileMenu({
             <TabsList className="grid h-auto w-full grid-cols-3">
               <div className="flex flex-col items-center gap-1 py-2">
                 <Search asChild>
-                  <FooterButton icon={SearchIcon}>
+                  <FooterButton
+                    icon={SearchIcon}
+                    data-testid="mobile-menu-search-button"
+                  >
                     <FooterItemText>{t("search")}</FooterItemText>
                   </FooterButton>
                 </Search>
@@ -93,6 +97,7 @@ export default async function MobileMenu({
                   <FooterButton
                     icon={Languages}
                     name={MOBILE_LANGUAGE_BUTTON_NAME}
+                    data-testid="mobile-menu-language-picker"
                   >
                     <FooterItemText>{t("languages")}</FooterItemText>
                   </FooterButton>
@@ -121,6 +126,7 @@ async function NavigationContent() {
             className="border-b border-body-light first:border-t"
           >
             <CollapsibleTrigger
+              data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
                 "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
                 "text-body"
