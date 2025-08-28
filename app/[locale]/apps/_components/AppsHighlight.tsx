@@ -23,7 +23,7 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
       <LinkOverlay
         href={`/apps/${slugify(app.name)}`}
         className="no-underline"
-        customEventOptions={{
+        matomoEvent={{
           eventCategory: matomoCategory,
           eventAction: "highlights",
           eventName: `app name ${app.name}`,

@@ -97,7 +97,7 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                 <LinkOverlay
                   href={`/apps/categories/${slugify(category)}`}
                   className="text-body no-underline"
-                  customEventOptions={{
+                  matomoEvent={{
                     eventCategory: "apps",
                     eventAction: "categories",
                     eventName: `topapps_category_name_${category}`,
