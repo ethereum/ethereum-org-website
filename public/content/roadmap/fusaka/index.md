@@ -14,11 +14,11 @@ This upgrade is planned for Q4 2025.
 The Fusaka upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
 </InfoBanner>
 
-## Improvements in Fusaka {#new-improvements}
+## Improvements in Fusaka {#improvements-in-fusaka}
 
-### Data availability & L2 scaling {#da-scaling}
+### Data availability & L2 scaling {#data-availability-and-l2-scaling}
 
-#### PeerDAS {#7594}
+#### PeerDAS {#peerdas}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7594
 
@@ -32,7 +32,7 @@ This keeps hardware and bandwidth requirements for nodes tenable while enabling 
 
 In-depth: https://eprint.iacr.org/2024/1362.pdf
 
-#### Blob parameter only forks
+#### Blob parameter only forks {#blob-parameter-only-forks}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7892
 
@@ -44,7 +44,7 @@ These coordinated upgrades generally include a lot of changes, require a lot of 
 
 BPO-only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These BPO-only forks can be configured at any time.
 
-#### Blob base-fee bounded by execution costs
+#### Blob base-fee bounded by execution costs {#blob-base-fee-bounded-by-execution-costs}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7918
 
@@ -58,15 +58,15 @@ EIP-7918 pins a proportional reserve price under every blob. When the reserve is
 - L2s pay at least a meaningful slice of the compute they force on nodes
 - base-fee spikes on the EL can no longer strand the blob fee at 1 wei
 
-### Gas limits, fees & DoS hardening
+### Gas limits, fees & DoS hardening {#gas-limits-fees-and-dos-hardening}
 
-#### Set upper bounds for MODEXP
+#### Set upper bounds for MODEXP {#set-upper-bounds-for-modexp}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7823
 
 Until now, the MODEXP precompile accepted numbers of virtually any size. That made it hard to test, easy to abuse, and risky for client stability. EIP-7823 puts a clear limit in place: each input number can be at most 8192 bits (1024 bytes) long. Anything bigger is rejected, the transaction’s gas is burned, and no state changes occur. It very comfortably covers real-world needs while removing the extreme cases that complicated gas limit planning and security reviews. This change provides more security and DoS protection without affecting user or developer experience.
 
-#### Transaction Gas Limit Cap
+#### Transaction Gas Limit Cap {#transaction-gas-limit-cap}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7825
 
@@ -74,7 +74,7 @@ EIP-[7825](https://eips.ethereum.org/EIPS/eip-7825) adds a cap of 16,777,216 (2^
 
 Why exactly 2^24 gas? It’s comfortably smaller than today’s gas limit, is large enough for real contract deployments & heavy precompiles, and a power of 2 makes it easy to implement across clients. This new maximum transaction size is a similar to pre-Pectra average block size, making it a reasonable limit for any operation on Ethereum.  
 
-#### MODEXP Gas Cost Increase
+#### MODEXP Gas Cost Increase {#modexp-gas-cost-increase}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7883
 
@@ -90,13 +90,13 @@ EIP‑7883 changes the pricing to match real computational costs by:
 
 By better matching costs to actual processing time, MODEXP can no longer cause a block to take too long to validate. This change is one of several aimed at making it safe to increase Ethereum’s block gas limit in the future.
 
-#### RLP Execution Block Size Limit
+#### RLP Execution Block Size Limit {#rlp-execution-block-size-limit}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7934
 
 Ethereum adds a hard cap on the [RLP](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp/)-encoded execution block size: 10 MiB total, with a 2 MiB safety margin reserved for beacon-block framing. Practically, clients define `MAX_BLOCK_SIZE = 10,485,760` bytes and `SAFETY_MARGIN = 2,097,152` bytes, and reject any execution block whose RLP payload exceeds `MAX_RLP_BLOCK_SIZE = MAX_BLOCK_SIZE − SAFETY_MARGIN`. The goal is to bound worst-case propagation/validation time and align with CL gossip behavior (blocks over ~10 MiB aren’t propagated), reducing reorg/DoS risk without changing gas accounting.
 
-#### Set default gas limit to XX million
+#### Set default gas limit to XX million {#set-default-gas-limit-to-xx-million}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7935
 
@@ -106,9 +106,9 @@ EIP-7935 coordinates EL client teams to raise the default gas-limit above today�
 
 Devnet planning targets ~60M stress (full blocks with synthetic load) and iterative bumps; research says worst-case block-size pathologies shouldn’t bind below ~150M. Rollout should be paired with the transaction gas-limit cap (EIP-7825) so no single transaction can dominate as limits rise.
 
-### Preconfirmation support
+### Preconfirmation support {#preconfirmation-support}
 
-#### Deterministic proposer lookahead
+#### Deterministic proposer lookahead {#deterministic-proposer-lookahead}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7917
 
@@ -116,20 +116,20 @@ With EIP-7917, Beacon Chain will become aware of upcoming block proposers for th
 
 This feature benefits client implementations and security of the network as it prevents edge cases where validators could manipulate the proposer schedule. The lookahead also allows for less complexity of the implementation.
 
-### Opcodes & precompiles (developer goodies)
+### Opcodes & precompiles (developer goodies) {#opcodes-and-precomliles}
 
-#### Count leading zeros (CLZ) opcode
+#### Count leading zeros (CLZ) opcode {#count-leading-zeros-opcode}
 
 Specification: https://eips.ethereum.org/EIPS/eip-7939
 
 EIP-7939 adds a small EVM instruction, CLZ (“count leading zeros”). Given a 256-bit value, it returns how many zero bits are at the front — and returns 256 if the value is entirely zero. This is a common feature in many instruction set architectures as it enables more efficient arithmetic operations. In practice this collapses today’s hand-rolled bit scans into one step, so finding the first set bit, scanning bytes, or parsing bitfields becomes simpler and cheaper. The opcode is low, fixed-cost and has been benchmarked to be on par with a basic add, which trims bytecode and saves gas for the same work.
 
 
-## Does this upgrade affect all Ethereum nodes and validators? {#client-impact}
+## Does this upgrade affect all Ethereum nodes and validators? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 
 Yes, the Fusaka upgrade requires updates to both [execution clients and consensus clients](/developers/docs/nodes-and-clients/). All main Ethereum clients will release versions supporting the hard fork marked as high priority. You can keep up with when these releases will be available in client Github repos, their [Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), or by subscribing to the Ethereum blog for protocol updates. To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details.
 
-## How can ETH be converted after the hard fork? {#scam-alert}
+## How can ETH be converted after the hard fork? {#how-can-eth-be-converted-after-the-hardfork}
 
 - **No Action Required for Your ETH**: Following the Ethereum Fusaka upgrade, there is no need to convert or upgrade your ETH. Your account balances will remain the same, and the ETH you currently hold will remain accessible in its existing form after the hard fork.
 - **Beware of Scams!** <Emoji text="⚠️" /> **anyone instructing you to "upgrade" your ETH is trying to scam you.** There is nothing you need to do in relation to this upgrade. Your assets will stay completely unaffected. Remember, staying informed is the best defense against scams.
