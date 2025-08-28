@@ -1,17 +1,12 @@
 "use client"
 
 import { PropsWithChildren, useCallback } from "react"
-import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
+
+import { Collapsible } from "@/components/ui/collapsible"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-const Collapsible = CollapsiblePrimitive.Root
-
-const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
-
-const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
-
-type CollapsibleTrackedProps = PropsWithChildren<{
+type TrackedCollapsibleProps = PropsWithChildren<{
   className?: string
   eventCategory: string
   eventAction: string
@@ -19,14 +14,14 @@ type CollapsibleTrackedProps = PropsWithChildren<{
   closeEventName: string
 }>
 
-const CollapsibleTracked = ({
+export default function TrackedCollapsible({
   className,
   children,
   eventCategory,
   eventAction,
   openEventName,
   closeEventName,
-}: CollapsibleTrackedProps) => {
+}: TrackedCollapsibleProps) {
   const handleOpenChange = useCallback(
     (open: boolean) => {
       trackCustomEvent({
@@ -43,11 +38,4 @@ const CollapsibleTracked = ({
       {children}
     </Collapsible>
   )
-}
-
-export {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTracked,
-  CollapsibleTrigger,
 }

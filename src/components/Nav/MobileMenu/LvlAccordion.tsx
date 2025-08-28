@@ -1,12 +1,11 @@
 import {
-  Collapsible,
   CollapsibleContent,
+  CollapsibleTracked,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 
 import { cn } from "@/lib/utils/cn"
 
-// import { trackCustomEvent } from "@/lib/utils/matomo"
 import { Button } from "../../ui/buttons/Button"
 import { BaseLink } from "../../ui/Link"
 import type { Level, NavItem, NavSectionKey } from "../types"
@@ -17,6 +16,7 @@ type LvlAccordionProps = {
   lvl: Level
   items: NavItem[]
   activeSection: NavSectionKey
+  locale: string
 }
 
 const subtextColorPerLevel = {
@@ -48,6 +48,7 @@ const LvlAccordionItems = async ({
   lvl,
   items,
   activeSection,
+  locale,
 }: LvlAccordionProps) => {
   return (
     <>
@@ -75,13 +76,11 @@ const LvlAccordionItems = async ({
                     isPartiallyActive={false}
                     activeClassName="is-active"
                     className="group/lnk block"
-                    // onClick={() => {
-                    //   trackCustomEvent({
-                    //     eventCategory: "Mobile navigation menu",
-                    //     eventAction: `Menu: ${locale} - ${activeSection}`,
-                    //     eventName: action.href!,
-                    //   })
-                    // }}
+                    customEventOptions={{
+                      eventCategory: "Mobile navigation menu",
+                      eventAction: `Menu: ${locale} - ${activeSection}`,
+                      eventName: action.href!,
+                    }}
                   >
                     <div>
                       <p
@@ -110,9 +109,13 @@ const LvlAccordionItems = async ({
           )
 
         return (
-          <Collapsible
+          <CollapsibleTracked
             key={label}
             className="border-t border-body-light last:border-b"
+            eventCategory="Mobile navigation menu"
+            eventAction={`Level ${lvl - 1} section changed`}
+            openEventName={`Open section: ${label} - ${description.slice(0, 16)}...`}
+            closeEventName={`Close section: ${label} - ${description.slice(0, 16)}...`}
           >
             <CollapsibleTrigger
               className={cn(
@@ -121,15 +124,6 @@ const LvlAccordionItems = async ({
                 "text-body",
                 nestedAccordionSpacingMap[lvl]
               )}
-              // onClick={() => {
-              //   trackCustomEvent({
-              //     eventCategory: "Mobile navigation menu",
-              //     eventAction: `Level ${lvl - 1} section changed`,
-              //     eventName: `${
-              //       isExpanded ? "Close" : "Open"
-              //     } section: ${label} - ${description.slice(0, 16)}...`,
-              //   })
-              // }}
             >
               <ExpandIcon />
               <div>
@@ -158,9 +152,10 @@ const LvlAccordionItems = async ({
                 lvl={(lvl + 1) as Level}
                 items={action.items}
                 activeSection={activeSection}
+                locale={locale}
               />
             </CollapsibleContent>
-          </Collapsible>
+          </CollapsibleTracked>
         )
       })}
     </>

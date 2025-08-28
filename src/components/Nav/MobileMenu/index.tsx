@@ -138,7 +138,12 @@ async function NavigationContent() {
                 "mt-0 bg-background-low p-0"
               )}
             >
-              <LvlAccordion lvl={2} items={items} activeSection={key} />
+              <LvlAccordion
+                lvl={2}
+                items={items}
+                activeSection={key}
+                locale={locale}
+              />
             </CollapsibleContent>
           </Collapsible>
         )
