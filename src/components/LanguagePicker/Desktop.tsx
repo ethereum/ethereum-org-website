@@ -8,8 +8,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
-import LanguagePickerFooter from "./LanguagePickerFooter"
-import LanguagePickerMenu from "./LanguagePickerMenu"
+import LanguagePickerBody from "./LanguagePickerBody"
 import { useLanguagePicker } from "./useLanguagePicker"
 
 import { useEventListener } from "@/hooks/useEventListener"
@@ -80,18 +79,15 @@ const DesktopLanguagePicker = ({
           className
         )}
       >
-        <LanguagePickerMenu
+        <LanguagePickerBody
           languages={sortedLanguages}
           onSelect={handleMenuItemSelect}
-          onClose={() =>
+          onNoResultsClose={() =>
             onClose({
               eventAction: "Translation program link (no results)",
               eventName: "/contributing/translation-program",
             })
           }
-        />
-
-        <LanguagePickerFooter
           intlLanguagePreference={intlLanguagePreference}
           onTranslationProgramClick={handleBaseLinkClose}
         />

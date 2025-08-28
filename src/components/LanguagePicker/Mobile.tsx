@@ -4,8 +4,7 @@ import { useParams } from "next/navigation"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
-import LanguagePickerFooter from "./LanguagePickerFooter"
-import LanguagePickerMenu from "./LanguagePickerMenu"
+import LanguagePickerBody from "./LanguagePickerBody"
 import { useLanguagePicker } from "./useLanguagePicker"
 
 import { usePathname, useRouter } from "@/i18n/routing"
@@ -18,8 +17,12 @@ const MobileLanguagePicker = ({ languages }: MobileLanguagePickerProps) => {
   const pathname = usePathname()
   const { push } = useRouter()
   const params = useParams()
-  const { languages: sortedLanguages, intlLanguagePreference } =
-    useLanguagePicker(languages)
+  const {
+    disclosure,
+    languages: sortedLanguages,
+    intlLanguagePreference,
+  } = useLanguagePicker(languages)
+  const { onClose } = disclosure
 
   const handleMenuItemSelect = (currentValue: string) => {
     push(
@@ -33,30 +36,29 @@ const MobileLanguagePicker = ({ languages }: MobileLanguagePickerProps) => {
     )
   }
 
-  const handleNoResultsClose = () => {
-    // Navigate to translation program or handle as needed
-  }
+  const handleNoResultsClose = () =>
+    onClose({
+      eventAction: "Translation program link (no results)",
+      eventName: "/contributing/translation-program",
+    })
 
-  const handleTranslationProgramClick = () => {
-    // Navigate to translation program
-  }
+  const handleTranslationProgramClick = () =>
+    onClose({
+      eventAction: "Translation program link (menu footer)",
+      eventName: "/contributing/translation-program",
+    })
 
   return (
     <div className="flex h-full flex-col">
-      {/* Language picker menu */}
       <div className="flex-1 overflow-auto">
-        <LanguagePickerMenu
+        <LanguagePickerBody
           languages={sortedLanguages}
           onSelect={handleMenuItemSelect}
-          onClose={handleNoResultsClose}
+          onNoResultsClose={handleNoResultsClose}
+          intlLanguagePreference={intlLanguagePreference}
+          onTranslationProgramClick={handleTranslationProgramClick}
         />
       </div>
-
-      {/* Footer */}
-      <LanguagePickerFooter
-        intlLanguagePreference={intlLanguagePreference}
-        onTranslationProgramClick={handleTranslationProgramClick}
-      />
     </div>
   )
 }
