@@ -32,7 +32,7 @@ const DialogContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <DialogPortal>
-    {/* <DialogOverlay /> - Disabled for performance reasons. See https://github.com/radix-ui/primitives/issues/1634 for details on floating element performance issues */}
+    <DialogOverlay />
     <DialogPrimitive.Content
       ref={ref}
       className={cn(

@@ -54,8 +54,8 @@ export default async function MobileMenu({
         />
       </SheetTrigger>
       <SheetContent
-        forceMount
         side="left"
+        hideOverlay
         className="flex flex-col"
         aria-describedby=""
       >

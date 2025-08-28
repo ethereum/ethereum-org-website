@@ -58,14 +58,16 @@ const sheetVariants = cva(
 
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
+    VariantProps<typeof sheetVariants> {
+  hideOverlay?: boolean
+}
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, ...props }, ref) => (
+>(({ side = "right", hideOverlay = false, className, ...props }, ref) => (
   <SheetPortal>
-    {/* <SheetOverlay /> - Disabled for performance reasons. See https://github.com/radix-ui/primitives/issues/1634 for details on floating element performance issues */}
+    {!hideOverlay && <SheetOverlay />}
     <SheetPrimitive.Content
       ref={ref}
       className={cn(sheetVariants({ side }), className)}
