@@ -3,6 +3,7 @@ import {
   CollapsibleTracked,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
+import { SheetDismiss } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -63,47 +64,49 @@ const LvlAccordionItems = async ({
             >
               <p>
                 {/* TODO: replace this with ButtonLink when is implemented */}
-                <Button
-                  className={cn(
-                    "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
-                    nestedAccordionSpacingMap[lvl + 2]
-                  )}
-                  variant="ghost"
-                  asChild
-                >
-                  <BaseLink
-                    href={action.href}
-                    isPartiallyActive={false}
-                    activeClassName="is-active"
-                    className="group/lnk block"
-                    customEventOptions={{
-                      eventCategory: "Mobile navigation menu",
-                      eventAction: `Menu: ${locale} - ${activeSection}`,
-                      eventName: action.href!,
-                    }}
+                <SheetDismiss asChild>
+                  <Button
+                    className={cn(
+                      "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
+                      nestedAccordionSpacingMap[lvl + 2]
+                    )}
+                    variant="ghost"
+                    asChild
                   >
-                    <div>
-                      <p
-                        className={cn(
-                          "text-md font-bold",
-                          "text-body",
-                          "group-[.is-active]/lnk:text-primary-high-contrast"
-                        )}
-                      >
-                        {label}
-                      </p>
-                      <p
-                        className={cn(
-                          "text-sm font-normal",
-                          subtextColorPerLevel[lvl],
-                          "group-[.is-active]/lnk:text-primary-high-contrast"
-                        )}
-                      >
-                        {description}
-                      </p>
-                    </div>
-                  </BaseLink>
-                </Button>
+                    <BaseLink
+                      href={action.href}
+                      isPartiallyActive={false}
+                      activeClassName="is-active"
+                      className="group/lnk block"
+                      customEventOptions={{
+                        eventCategory: "Mobile navigation menu",
+                        eventAction: `Menu: ${locale} - ${activeSection}`,
+                        eventName: action.href!,
+                      }}
+                    >
+                      <div>
+                        <p
+                          className={cn(
+                            "text-md font-bold",
+                            "text-body",
+                            "group-[.is-active]/lnk:text-primary-high-contrast"
+                          )}
+                        >
+                          {label}
+                        </p>
+                        <p
+                          className={cn(
+                            "text-sm font-normal",
+                            subtextColorPerLevel[lvl],
+                            "group-[.is-active]/lnk:text-primary-high-contrast"
+                          )}
+                        >
+                          {description}
+                        </p>
+                      </div>
+                    </BaseLink>
+                  </Button>
+                </SheetDismiss>
               </p>
             </div>
           )

@@ -22,6 +22,12 @@ const SheetClose = React.forwardRef<
 ))
 SheetClose.displayName = SheetPrimitive.Close.displayName
 
+const SheetDismiss = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Close>
+>(({ ...props }, ref) => <SheetPrimitive.Close ref={ref} asChild {...props} />)
+SheetDismiss.displayName = SheetPrimitive.Close.displayName
+
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
@@ -137,6 +143,7 @@ export {
   SheetClose,
   SheetContent,
   SheetDescription,
+  SheetDismiss,
   SheetFooter,
   SheetHeader,
   SheetOverlay,
