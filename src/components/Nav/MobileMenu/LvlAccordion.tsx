@@ -5,9 +5,8 @@ import {
 } from "@/components/ui/collapsible"
 
 import { cn } from "@/lib/utils/cn"
-// import { trackCustomEvent } from "@/lib/utils/matomo"
-import { cleanPath } from "@/lib/utils/url"
 
+// import { trackCustomEvent } from "@/lib/utils/matomo"
 import { Button } from "../../ui/buttons/Button"
 import { BaseLink } from "../../ui/Link"
 import type { Level, NavItem, NavSectionKey } from "../types"
@@ -50,15 +49,10 @@ const LvlAccordionItems = async ({
   items,
   activeSection,
 }: LvlAccordionProps) => {
-  // const locale = await getLocale()
-  // TODO: get pathname from the current page
-  const pathname = "/"
-
   return (
     <>
       {items.map(({ label, description, ...action }) => {
         const isLink = "href" in action
-        const isActivePage = isLink && cleanPath(pathname) === action.href
 
         if (isLink)
           return (
@@ -78,6 +72,9 @@ const LvlAccordionItems = async ({
                 >
                   <BaseLink
                     href={action.href}
+                    isPartiallyActive={false}
+                    activeClassName="is-active"
+                    className="group/lnk block"
                     // onClick={() => {
                     //   trackCustomEvent({
                     //     eventCategory: "Mobile navigation menu",
@@ -90,9 +87,8 @@ const LvlAccordionItems = async ({
                       <p
                         className={cn(
                           "text-md font-bold",
-                          isActivePage
-                            ? "text-primary-high-contrast"
-                            : "text-body"
+                          "text-body",
+                          "group-[.is-active]/lnk:text-primary-high-contrast"
                         )}
                       >
                         {label}
@@ -100,9 +96,8 @@ const LvlAccordionItems = async ({
                       <p
                         className={cn(
                           "text-sm font-normal",
-                          isActivePage
-                            ? "text-primary-high-contrast"
-                            : subtextColorPerLevel[lvl]
+                          subtextColorPerLevel[lvl],
+                          "group-[.is-active]/lnk:text-primary-high-contrast"
                         )}
                       >
                         {description}
