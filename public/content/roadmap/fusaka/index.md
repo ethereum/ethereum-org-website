@@ -38,11 +38,11 @@ Specification: https://eips.ethereum.org/EIPS/eip-7892
 
 L2s scale Ethereum - as their networks grow, they need to post more data to Ethereum. This means that Ethereum will need to increase the number of blobs available to them as time goes on. Although PeerDAS enables scaling blob data, it needs to be done in gradually and safely. 
 
-Because Ethereum is code running on thousands of independent nodes that requirement agreement on the rules, you can’t just make changes like blob increases the way you deploy a website update. Any rule change must be a coordinated upgrade where every validator software upgrades at the same predetermined block.
+Because Ethereum is code running on thousands of independent nodes that require agreement on same rules, we cannot simply introduces changes like increasing blob count the way you deploy a website update. Any rule change must be a coordinated upgrade where every node, client and validator software upgrades before the same predetermined block.
 
 These coordinated upgrades generally include a lot of changes, require a lot of testing, and that takes time. In order to adapt faster to changing L2 blob needs, BPO-only forks introduce a mechanism to increase blobs without having to wait on that upgrade schedule.
 
-BPO-only forks can be set by clients. Between major ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These BPO-only forks can be configured at any time.
+BPO-only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These BPO-only forks can be configured at any time.
 
 #### Blob base-fee bounded by execution costs
 
@@ -112,7 +112,7 @@ Devnet planning targets ~60M stress (full blocks with synthetic load) and iterat
 
 Specification: https://eips.ethereum.org/EIPS/eip-7917
 
-With EIP-7917, Beacon Chain will become aware of upcoming block proposers for next epoch. Having a deterministic view on which validators will be propose future blocks can enable [preconfirmations](https://ethresear.ch/t/based-preconfirmations/17353) - a commitment with upcoming proposer that guarantees the user transaction will be included in their block without waiting for the actual block. 
+With EIP-7917, Beacon Chain will become aware of upcoming block proposers for the next epoch. Having a deterministic view on which validators will be proposing future blocks can enable [preconfirmations](https://ethresear.ch/t/based-preconfirmations/17353) - a commitment with the upcoming proposer that guarantees the user transaction will be included in their block without waiting for the actual block. 
 
 This feature benefits client implementations and security of the network as it prevents edge cases where validators could manipulate the proposer schedule. The lookahead also allows for less complexity of the implementation.
 
