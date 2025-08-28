@@ -14,12 +14,12 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import {
-  Sheet,
   SheetContent,
   SheetFooter,
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { SheetCloseOnNavigate } from "@/components/ui/sheet-close-on-navigate"
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
@@ -46,7 +46,7 @@ export default async function MobileMenu({
   const t = await getTranslations({ namespace: "common" })
 
   return (
-    <Sheet>
+    <SheetCloseOnNavigate>
       <SheetTrigger className={className} asChild>
         <HamburgerButton
           className={cn("-me-2", className)}
@@ -107,7 +107,7 @@ export default async function MobileMenu({
           </SheetFooter>
         </Tabs>
       </SheetContent>
-    </Sheet>
+    </SheetCloseOnNavigate>
   )
 }
 
