@@ -26,6 +26,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Ethseer](https://ethseer.io)
+- [TraceHawk](https://www.tracehawk.io)
 
 ## Open source tools {#open-source-tools}
 
@@ -244,6 +245,7 @@ The consensus layer top-level data includes the following:
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
 - [Ethernow](https://www.ethernow.xyz/) - a real-time transaction explorer that enables you to see the Ethereum Mainnet pre-chain layer
+-  [TraceHawk](https://www.tracehawk.io) - TraceHawk is a white-labeled blockchain explorer designed based on requirements of EVM chains, Appchains, and L2/L3 rollups
 
 ## Further reading {#further-reading}
 
