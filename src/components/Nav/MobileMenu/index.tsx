@@ -2,6 +2,8 @@ import { Languages, SearchIcon } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 import { Trigger as TabsTrigger } from "@radix-ui/react-tabs"
 
+import type { Lang } from "@/lib/types"
+
 import LanguagePicker from "@/components/LanguagePicker"
 import ExpandIcon from "@/components/Nav/MobileMenu/ExpandIcon"
 import LvlAccordion from "@/components/Nav/MobileMenu/LvlAccordion"
@@ -21,6 +23,7 @@ import { SheetCloseOnNavigate } from "@/components/ui/sheet-close-on-navigate"
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME, SECTION_LABELS } from "@/lib/constants"
@@ -42,6 +45,10 @@ export default async function MobileMenu({
   ...props
 }: MobileMenuProps) {
   const t = await getTranslations({ namespace: "common" })
+  const locale = await getLocale()
+  const isRtl = isLangRightToLeft(locale as Lang)
+  const side = isRtl ? "right" : "left"
+  const dir = isRtl ? "rtl" : "ltr"
 
   return (
     <SheetCloseOnNavigate>
@@ -53,7 +60,7 @@ export default async function MobileMenu({
         />
       </SheetTrigger>
       <SheetContent
-        side="left"
+        side={side}
         hideOverlay
         className="flex flex-col"
         aria-describedby=""
@@ -63,6 +70,7 @@ export default async function MobileMenu({
         </SheetHeader>
 
         <Tabs
+          dir={dir}
           defaultValue="navigation"
           className="flex min-h-0 flex-1 flex-col"
         >
