@@ -113,7 +113,6 @@ Pro více informací si přečtěte [Vyper rationale](https://vyper.readthedocs.
 - [Tahák](https://reference.auditless.com/cheatsheet)
 - [Frameworky a nástroje pro vývoj smart kontraktů v jazyce Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk – naučte se zabezpečit a hackovat smart kontrakty v jazyce Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples – příklady zranitelnosti ve Vyper](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub pro vývojáře](https://github.com/zcor/vyper-dev)
 - [Příklady nejlepších chytrých kontraktů na Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Úžasné Vyperem kurátorované zdroje](https://github.com/spadebuilders/awesome-vyper)
@@ -227,7 +226,6 @@ Pokud jste v Ethereum nováčkem a ještě jste neprogramovali v jazycích pro s
 
 - [Dokumentace Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Dokumentace Yul+](https://github.com/fuellabs/yulp)
-- [Playground Yul+](https://yulp.fuel.sh/)
 - [Úvodní příspěvek Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Ukázkový kontrakt {#example-contract-2}
@@ -322,5 +320,5 @@ Pro srovnání základní syntaxe, životního cyklu kontraktů, rozhraní, oper
 
 ## Další čtení {#further-reading}
 
-- [Knihovna Solidity kontraktů od OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Knihovna Solidity kontraktů od OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

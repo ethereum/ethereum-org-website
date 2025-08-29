@@ -17,7 +17,6 @@ Tercüme toplulukları ve güncellemelerinin yanı sıra, ethereum.org tercüman
 
 ## Araçlar {#tools}
 
-- [Microsoft Dil Portalı](https://www.microsoft.com/en-us/language) _– teknik terimlerin standart çevirilerini bulmak ve kontrol etmek için kullanışlıdır_
 - [Linguee](https://www.linguee.com/) _– kelime veya kelime öbeği ile arama yapmayı sağlayan çeviriler ve sözlükler için arama motoru_
 - [Proz terim arama](https://www.proz.com/search/) _– özel terimler için çeviri sözlükleri ve sözlükler veritabanı_
 - [Eurotermbank](https://www.eurotermbank.com/) _– 42 dilde Avrupa terminolojisi koleksiyonları_

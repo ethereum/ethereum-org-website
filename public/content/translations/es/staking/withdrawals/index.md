@@ -212,7 +212,6 @@ No. Una vez que un validador ha salido y su saldo total se ha retirado, cualquie
 
 - [Retiradas en la plataforma de lanzamiento de participaciones](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: La cadena de baliza impulsa las retiradas como operaciones](https://eips.ethereum.org/EIPS/eip-4895)
-- [ Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Retirada de ETH apostados (Prueba) con Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: La cadena de baliza impulsa retiradas como operaciones con Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Entender el saldo efectivo del validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)

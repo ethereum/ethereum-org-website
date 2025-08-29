@@ -17,7 +17,7 @@ Biasanya standar diperkenalkan sebagai [Proposal Peningkatan Ethereum](/eips/) (
 - [Ruang diskusi EIP](https://ethereum-magicians.org/c/eips)
 - [Pengantar tentang Tata Kelola Ethereum](/governance/)
 - [Gambaran Umum Tata Kelola Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 Maret 2019 - Boris Mann_
-- [Tata Kelola Pengembangan Protokol Ethereum dan Koordinasi Peningkatan Jaringan](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Maret 2020 - Hudson Jameson_
+- [Tata Kelola Pengembangan Protokol Ethereum dan Koordinasi Peningkatan Jaringan](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Maret 2020 - Hudson Jameson_
 - [Daftar Putar semua Rapat Pengembang Inti Ethereum](https://www.youtube.com/@EthereumProtocol) _(Daftar Putar YouTube)_
 
 ## Tipe standar {#types-of-standards}

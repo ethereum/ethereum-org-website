@@ -362,7 +362,7 @@ Orijinal yaklaşım, `blockhash` gibi sözde rastgele kriptografik fonksiyonlar�
 
 Rastgele değeri zincir dışında oluşturup zincir üstünde göndermek mümkündür, fakat bunu yapmak kullanıcılara yüksek güven gereklilikleri de yükler. Değerin tahmin edilemeyecek mekanizmalarla gerçekten oluşturulduğuna ve geçiş sırasında değiştirilmediğine inanmak zorundadırlar.
 
-Zincir dışında bilgi işlem için tasarlanmış kâhinler bu sorunu, sürecin tahmin edilemezliğini tasdik eden kriptografik kanıtlarla birlikte zincir üstünde yayımladıkları zincir dışı rastgele sonuçları güvenli bir şekilde oluşturarak çözerler. Bunun bir örneği, tahmin edilemez sonuçlara dayanan uygulamalar için güvenilir akıllı sözleşmeler oluşturmak açısından kullanışlı, kanıtlanabilir şekilde adil ve kurcalanamaz bir rastgele sayı oluşturucusu (RNG) olan [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)'dir (Onaylanabilir Rastgele Fonksiyon). Bir diğer örnek ise, Quantum rastgele sayı oluşturucusu (QRNG) görevi gören [API3 QRNG](https://docs.api3.org/explore/qrng/)'dir. Kuantum fenomeni bazlı herkese açık bir Web3 RNG yöntemidir ve Avustralya Ulusal Üniversitesi'nin (ANU) izniyle hizmet vermektedir.
+Zincir dışında bilgi işlem için tasarlanmış kâhinler bu sorunu, sürecin tahmin edilemezliğini tasdik eden kriptografik kanıtlarla birlikte zincir üstünde yayımladıkları zincir dışı rastgele sonuçları güvenli bir şekilde oluşturarak çözerler. Bunun bir örneği, tahmin edilemez sonuçlara dayanan uygulamalar için güvenilir akıllı sözleşmeler oluşturmak açısından kullanışlı, kanıtlanabilir şekilde adil ve kurcalanamaz bir rastgele sayı oluşturucusu (RNG) olan [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)'dir (Onaylanabilir Rastgele Fonksiyon).
 
 ### Olaylar için sonuçlar alma {#getting-outcomes-for-events}
 
@@ -398,8 +398,6 @@ Ethereum merkeziyetsiz uygulamanıza entegre edebileceğiniz birden fazla kâhin
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol, gerçek dünya verilerini ve API'leri toplayan ve akıllı sözleşmelere bağlayan zincirler arası bir veri kâhin platformudur._
 
-**[Paralink](https://paralink.network/)** - _Paralink, Ethereum ve diğer popüler blok zincirlerinde çalışan akıllı sözleşmeler için açık kaynaklı ve merkezi olmayan bir kâhin platformu sağlar._
-
 **[Pyth Network](https://pyth.network/)** - _Pyth ağı, kurcalanmaya-dayanıklı, merkeziyetsiz ve kendini sürdürebilir bir ortamda zincir üstünde sürekli gerçek hayat verileri yayımlamak üzere tasarlanmış finansal bir birinci taraf bir kâhin ağıdır._
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO, akıllı sözleşmeler için merkezi olmayan bir çözümde daha fazla kaynak şeffaflığı, güvenlik ve ölçeklenebilirlik sağlayan birinci taraf kâhin çözümleri sunar._
@@ -415,7 +413,6 @@ Ethereum merkeziyetsiz uygulamanıza entegre edebileceğiniz birden fazla kâhin
 - [Merkezi Olmayan Kâhinler: kapsamlı bir genel bakış](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Ethereum'da Blokzincir Kâhini Uygulaması](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Akıllı sözleşmeler neden API çağrıları yapamıyor?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [Merkezi olmayan kâhinlere neden ihtiyaç duyarız?](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [Demek bir fiyat kâhini kullanmak istiyorsunuz](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Videolar**

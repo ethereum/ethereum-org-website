@@ -70,7 +70,6 @@ lang: fa
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Open Source Web3Design](https://www.web3designers.org/)
 
 ## سیستم طراحی {#design-systems}
 

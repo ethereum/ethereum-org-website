@@ -156,19 +156,6 @@ sidebarDepth: 2
     - 按小時付費定價
     - 全年無休直接支援
 
-- [**DataHub**](https://datahub.figment.io)
-  - [文件](https://docs.figment.io/)
-  - 功能
-    - 免費方案 3,000,000 次請求/月
-    - RPC 及 WSS 末端
-    - 專用之全及歸檔節點
-    - 自動擴容（批量折扣）
-    - 免費歸檔資料
-    - 服務分析
-    - 控制面板
-    - 全年無休直接支援
-    - 可用加密貨幣付款（企業）
-
 - [**DRPC**](https://drpc.org/)
   - [文件](https://docs.drpc.org/)
   - 功能

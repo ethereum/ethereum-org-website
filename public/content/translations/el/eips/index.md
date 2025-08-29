@@ -74,6 +74,6 @@ lang: el
 
 <cite class="citation">
 
-Το περιεχόμενο της σελίδας παρέχεται εν μέρει από το [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) από τον Hudson Jameson
+Το περιεχόμενο της σελίδας παρέχεται εν μέρει από το [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) από τον Hudson Jameson
 
 </cite>

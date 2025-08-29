@@ -95,7 +95,6 @@ Foghlaim faoi thionscadail agus bí páirteach i bpobal DeSci.
 - [Molecule: Tabhair maoiniú do thionscadail taighde agus faigh maoiniú dóibh](https://www.molecule.xyz/)
 - [VitaDAO: maoiniú a fháil trí chomhaontuithe taighde urraithe do thaighde fad saoil](https://www.vitadao.com/)
 - [ResearchHub: postáil toradh eolaíoch agus gabháil do chomhrá le piaraí](https://www.researchhub.com/)
-- [LabDAO: filleadh próitéine in silico](https://alphafodl.vercel.app/)
 - [dClimate API: fiosraigh sonraí aeráide arna mbailiú ag pobal díláraithe](https://api.dclimate.net/)
 - [Fondúireacht DeSci: Tógálaí uirlisí foilsitheoireachta DeSci](https://descifoundation.org/)
 - [DeSci.World: ionad ilfhreastail d’úsáideoirí le féachaint ar an eolaíocht dhíláraithe, agus le dul i ngleic leí](https://desci.world)

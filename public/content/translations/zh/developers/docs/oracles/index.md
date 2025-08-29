@@ -362,7 +362,7 @@ contract PriceConsumerV3 {
 
 可以在链下生成随机值并发送到链上，但这样做对用户有很高的信任要求。 他们必须相信值确实是通过不可预测的机制产生的，并且未在传输过程中遭到改动。
 
-为链下计算设计的预言机解决了这一问题，它们安全地生成链下随机结果并连同证实该过程不可预测性的加密证明一起在链上广播。 [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)（可验证随机函数）便是一个示例，它是一个可证明公平且防篡改的随机数生成器 (RNG)，用于为依靠不可预测结果的应用程序构建可靠的智能合约。 另一个示例是 [API3 QRNG](https://docs.api3.org/explore/qrng/)，它提供量子随机数生成器 (QRNG)，是基于量子现象的 Web3 量子随机数生成的公共方法，由澳大利亚国立大学 (ANU) 提供。
+为链下计算设计的预言机解决了这一问题，它们安全地生成链下随机结果并连同证实该过程不可预测性的加密证明一起在链上广播。 [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)（可验证随机函数）便是一个示例，它是一个可证明公平且防篡改的随机数生成器 (RNG)，用于为依靠不可预测结果的应用程序构建可靠的智能合约。
 
 ### 获取事件结果 {#getting-outcomes-for-events}
 
@@ -398,8 +398,6 @@ Chainlink 的 [Keeper 网络](https://chain.link/keepers)提供智能合约方�
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol 是一个跨链数据预言机平台，它将真实数据和应用程序接口聚合并连接到智能合约。_
 
-**[Paralink](https://paralink.network/)** - _Paralink 为运行在以太坊和其他热门区块链上的智能合约提供一个开源的去中心化预言机平台。_
-
 **[Pyth 网络](https://pyth.network/)** - _Pyth 网络是第一方金融预言机网络，旨在在防篡改、去中心化和自我可持续的环境中在链上发布连续的真实数据。_
 
 **[API3 去中心化自治组织](https://www.api3.org/)** - _API3 去中心化自治组织提供第一方预言机解决方案，在智能合约的去中心化解决方案中实现更高的来源透明度、安全性和可扩展性_。
@@ -415,7 +413,6 @@ Chainlink 的 [Keeper 网络](https://chain.link/keepers)提供智能合约方�
 - [去中心化预言机：综述](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [在以太坊实现区块链预言机](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [为什么智能合约无法调用应用程序接口？](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [我们为什么需要去中心化预言机](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [那么，你想要使用价格预言机](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **视频**

@@ -127,8 +127,8 @@ lang: el
 - [Το Τρίλημμα της Διαλειτουργικότητας](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 01 Οκτ 2021 του Arjun Bhuptani
 - [Συστάδες: Πώς οι Αξιόπιστες & Ελάχιστης Εμπιστοσύνης Γέφυρες Διαμορφώνουν το Τοπίο Πολλαπλών Αλυσίδων](https://blog.celestia.org/clusters/) - 04 Οκτ 2021 του Mustafa Al-Bassam
 - [LI.FI: Με τις Γέφυρες, η Εμπιστοσύνη Είναι Ένα Φάσμα](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 Απρ 2022 - Arjun Chand
-- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Ιουνίου 2024 του Alex Hook
-- [Εκμετάλλευση κοινής ασφάλειας για ασφαλή διαλειτουργικότητα μεταξύ των αλυσίδων: Επιτροπές πολιτειών Lagrange και πέρα](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Ιουνίου 2024 - Emmanuel Awosika
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Ιουνίου 2024 του Alex Hook
+- [Εκμετάλλευση κοινής ασφάλειας για ασφαλή διαλειτουργικότητα μεταξύ των αλυσίδων: Επιτροπές πολιτειών Lagrange και πέρα](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Ιουνίου 2024 - Emmanuel Awosika
 
 Επιπλέον, ακολουθούν ορισμένες παρουσιάσεις του [James Prestwich](https://twitter.com/_prestwich) που μπορούν να βοηθήσουν στην ανάπτυξη μιας καλύτερης κατανόησης των γεφυρών:
 

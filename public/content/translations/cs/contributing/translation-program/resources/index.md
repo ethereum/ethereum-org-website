@@ -17,7 +17,6 @@ Níže najdete několik užitečných průvodců a nástrojů pro překladatele 
 
 ## Nástroje {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– užitečné pro vyhledání a kontrolu standardních překladů technických termínů_
 - [Linguee](https://www.linguee.com/) _– vyhledávač překladů a slovník, který umožňuje vyhledávání podle slov nebo frází_
 - [Proz term search](https://www.proz.com/search/) _– databáze překladových slovníků a glosářů pro odborné termíny_
 - [Eurotermbank](https://www.eurotermbank.com/) _– sbírky evropské terminologie ve 42 jazycích_

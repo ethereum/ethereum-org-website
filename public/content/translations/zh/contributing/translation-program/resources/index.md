@@ -17,7 +17,6 @@ description: 对 ethereum.org 翻译人员有用的资源
 
 ## 工具 {#tools}
 
-- [Microsoft 语言门户](https://www.microsoft.com/en-us/language) _- 对于查找和核对技术术语的标准翻译非常有用_
 - [Linguee](https://www.linguee.com/) _– 翻译和字典搜索引擎，可按词或短语搜索_
 - [Proz 术语搜索](https://www.proz.com/search/) _– 专业术语的翻译字典和词汇表数据库_
 - [Eurotermbank](https://www.eurotermbank.com/) _ – 42 种语言的欧洲术语集_

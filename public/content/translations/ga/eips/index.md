@@ -74,6 +74,6 @@ Is féidir le duine ar bith EIP a chruthú. Sula gcuirtear togra isteach, ní m�
 
 <cite class="citation">
 
-Ábhar leathanaigh arna sholáthar go páirteach ó [Phrótacal Ethereum, Rialachas Forbartha agus Comhordú Uasghrádaithe Líonra](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) le Hudson Jameson
+Ábhar leathanaigh arna sholáthar go páirteach ó [Phrótacal Ethereum, Rialachas Forbartha agus Comhordú Uasghrádaithe Líonra](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) le Hudson Jameson
 
 </cite>

@@ -300,7 +300,6 @@ Več o aplikacijah Chainlink lahko izveste z branjem [razvijalskega bloga Chainl
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
-- [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
 ### Razvijte orakeljsko pametno pogodbo {#build-an-oracle-smart-contract}
@@ -430,7 +429,6 @@ _Želeli bi si več dokumentacije o ustvarjanju orakeljskih pametnih pogodb. Če
 - [Decentralizirani oraklji: podroben pregled](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Implementacija oraklja blokovne verige na Ethereumu](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Zakaj pametne pogodbe ne morejo izvrševati klicev API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) – _StackExchange_
-- [Zakaj potrebujemo decentralizirane oraklje](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) – _Bankless_
 - [Torej, želite uporabljati cenovni orakelj](https://samczsun.com/so-you-want-to-use-a-price-oracle/) – _samczsun_
 
 **Videoposnetki**

@@ -88,6 +88,6 @@ Você pode ver nossos princípios de design em ação [em nosso site](/).
 
 **Compartilhe seus comentários sobre este documento!** Um de nossos princípios propostos é a “**Melhoria Colaborativa**”, ou seja, queremos o site seja o produto de muitos colaboradores. Portanto, no espírito desse princípio, queremos compartilhar esses princípios de design com a comunidade Ethereum.
 
-Embora esses princípios estejam focados no site ethereum.org, esperamos que muitos deles representem os valores do ecossistema Ethereum em geral (por exemplo, você pode ver a influência doo [princípios do Whitepape Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Talvez você até queira incorporar alguns deles em seu próprio projeto!
+Embora esses princípios estejam focados no site ethereum.org, esperamos que muitos deles representem os valores do ecossistema Ethereum em geral. Talvez você até queira incorporar alguns deles em seu próprio projeto!
 
 Dê sua opinião no [servidor Discord](https://discord.gg/ethereum-org) ou [criando um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

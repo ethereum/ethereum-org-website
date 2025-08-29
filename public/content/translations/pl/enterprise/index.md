@@ -62,7 +62,6 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 ### Narzędzia i biblioteki {#tooling-and-libraries}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
-- [Epirus](https://www.web3labs.com/epirus) _platforma do tworzenia, wdrażania i monitorowania aplikacji blockchain przez Web3 Labs_
 - [Ernst & „Nightfall” firmy Young](https://github.com/EYBlockchain/nightfall) _zestaw narzędzi do prywatnych transakcji_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _aplikacja do podpisywania transakcji do użytku z dostawcą web3_
 - [Tenderly](https://tenderly.co/) _platforma danych zapewniająca analizy w czasie rzeczywistym, alerty i monitorowanie z obsługą sieci prywatnych._

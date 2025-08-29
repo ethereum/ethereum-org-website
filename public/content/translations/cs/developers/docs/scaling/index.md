@@ -106,7 +106,6 @@ _Upozornění: Ve videu je pojem „Vrstva 2“ používán k označení všech 
 - [Neúplný průvodce rollupy](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-powered ZK-Rollups: Světoví šampioni](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistické rollupy vs ZK Rollupy](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Zero-Knowledge Blockchain Scalability](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Proč jsou rollupy + data shards jediným udržitelným řešením vysoké škálovatelnosti](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Jaké vrstvy 3 dávají smysl?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Dostupnost dat: Jak se rollupy přestaly bát a začaly milovat Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)

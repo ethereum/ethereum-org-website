@@ -24,7 +24,7 @@ Vous pouvez écrire une logique de configuration de test complexe à chaque fois
 
 ## Exemple : ERC20 privé {#example-private-erc20}
 
-Notre exemple est celui d'un contrat ERC-20 ayant une durée de vie privée initiale. Le propriétaire peut gérer les utilisateurs privés et seuls ces derniers seront autorisés à recevoir des jetons au début. Une fois un certain temps écoulé, tout le monde sera autorisé à utiliser les jetons. Si vous êtes curieux, sachez que nous utilisons le crochet [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) des nouveaux contrats OpenZeppelin v3.
+Notre exemple est celui d'un contrat ERC-20 ayant une durée de vie privée initiale. Le propriétaire peut gérer les utilisateurs privés et seuls ces derniers seront autorisés à recevoir des jetons au début. Une fois un certain temps écoulé, tout le monde sera autorisé à utiliser les jetons. Si vous êtes curieux, sachez que nous utilisons le crochet [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) des nouveaux contrats OpenZeppelin v3.
 
 ```solidity
 pragma solidity ^0.6.0;

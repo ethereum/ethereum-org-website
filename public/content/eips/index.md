@@ -74,6 +74,6 @@ Anyone can create an EIP. Before submitting a proposal, one must read [EIP-1](ht
 
 <cite class="citation">
 
-Page content provided in part from [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) by Hudson Jameson
+Page content provided in part from [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) by Hudson Jameson
 
 </cite>

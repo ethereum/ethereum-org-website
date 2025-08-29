@@ -383,7 +383,7 @@ No obstante, hay varias desviaciones de esos supuestos en la realidad:
 3. La distribución de potencia de minado puede acabar siendo radicalmente desigualitaria en la práctica.
 4. Los especuladores, enemigos políticos y dementes, cuya función de utilidad incluye causar daño a la red, existen y pueden establecer hábilmente contratos cuyo coste es mucho menor que el coste pagado por otros nodos de verificación.
 
-(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
+(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ El concepto de una función de transición de estado arbitraria implementada por
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ y agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn, sobre propiedad inteligente en Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [RLP en Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Árboles de Merkle y Patricia en Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [RLP en Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Árboles de Merkle y Patricia en Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd sobre los árboles de suma Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Para consultar el historial del informe, ver [este enlace](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Para consultar el historial del informe, ver [este enlace](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, al igual que muchos proyectos de software de código abierto impulsados por la comunidad, ha evolucionado desde su concepción inicial. Para aprender sobre los últimos desarrollos de Ethereum, y cómo se hacen los cambios en el protocolo, recomendamos [esta guía](/learn/)._

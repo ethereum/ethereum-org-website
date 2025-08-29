@@ -63,7 +63,6 @@ Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je použí
 ### Ochrana soukromí {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Více informací [zde](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Více informací [zde](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
 - [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Více informací [zde](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Bezpečnost {#security}
@@ -82,7 +81,6 @@ Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je použí
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (kanál Besu)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (kanál Burrow)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Kanál Quorum Slack](http://bit.ly/quorum-slack)

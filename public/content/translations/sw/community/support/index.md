@@ -40,7 +40,6 @@ Ujenzi unaweza kua mgumu. Haya ni majukwaa yaliojikita kwenye uendelezaji ukiwa 
 
 - [Discord ya CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange ya Ethereum](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Chuo cha Web3](https://www.web3.university/)
 
 Unaweza kupata nyarak na miongozo ya usanidi kwenye kipengele cha [vyanzo vya msanidi programu wa Ethereum](/developers/).

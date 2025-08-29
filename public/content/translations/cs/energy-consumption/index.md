@@ -68,7 +68,7 @@ Nativní platformy pro financování veřejných statků fungujících na princi
 ## Další informace {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Zpráva Bílého domu o blockchainech důkazu prací](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Zpráva Bílého domu o blockchainech důkazu prací](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emise Etherea: Souhrnný odhad](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

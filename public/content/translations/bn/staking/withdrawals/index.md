@@ -212,7 +212,6 @@ eventName="read more">
 
 - [স্টেকিং লঞ্চপ্যাড উত্তোলোন](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: অপারেশন হিসাবে বিকন চেইন পুশ উত্তোলন](https://eips.ethereum.org/EIPS/eip-4895)
-- [ইথেরিয়াম ক্যাট হার্ডারস - সাংহাই](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Hsiao-Wei Wang-এর সাথে স্টেকড ETH উত্তোলন (পরীক্ষা)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: অ্যালেক্স স্টোক্সের সাথে অপারেশন হিসাবে বিকন চেইন পুশ উত্তোলন](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [ভ্যালিডেটরের কার্যকরী ব্যালেন্স বোঝা](https://www.attestant.io/posts/understanding-validator-effective-balance/)

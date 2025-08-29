@@ -49,8 +49,6 @@ Verkle 樹是 `(key,value)` 對，其中鍵是 32 字節位元組要素，由 31
 
 沃克爾樹測試網已經啟動並運行，但用戶端仍需要進行大量更新以支援沃克爾樹。 將合約部署至測試網或是運行測試網用戶端有助加快進度。
 
-[探索 Verkle Gen Devnet 6 測試網](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [觀看 Guillaume Ballet 解釋 Condrieu Verkle 測試網](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（請注意，Condrieu 為工作量證明測試網，目前已被 Verkle Gen Devnet 6 測試網取代）。
 
 ## 了解更多 {#further-reading}

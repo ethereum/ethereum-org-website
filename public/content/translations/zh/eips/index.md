@@ -74,6 +74,6 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 <cite class="citation">
 
-网页内容部分来自 Hudson Jameson [以太坊协议开发治理和网络升级协调] (https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)
+网页内容部分来自 Hudson Jameson [以太坊协议开发治理和网络升级协调] (https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)
 
 </cite>

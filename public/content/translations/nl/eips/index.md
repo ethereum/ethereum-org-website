@@ -74,6 +74,6 @@ Iedereen kan een EIP aanmaken. Voordat er een voorstel kan worden ingediend, moe
 
 <cite class="citation">
 
-Pagina-inhoud deels geleverd via [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) van Hudson Jameson
+Pagina-inhoud deels geleverd via [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) van Hudson Jameson
 
 </cite>

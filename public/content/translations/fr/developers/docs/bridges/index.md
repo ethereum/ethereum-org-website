@@ -127,8 +127,8 @@ Pour surveiller l'activité des contrats dans les chaînes, les développeurs pe
 - [Le Trilemme d'interopérabilité](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1er octobre 2021 – Arjun Bhuptani
 - [Clusters : comment les ponts de confiance et les ponts à confiance minimisée façonnent le paysage multi-chaîne](https://blog.celestia.org/clusters/) – 4 octobre 2021 – Mustafa Al-Bassam
 - [LI.FI : Avec les ponts, la confiance est un spectre](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) – 28 avril 2022 – Arjun Chand
-- [L'état des solutions d'interopérabilité des rollups](https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 juin 2024 – Alex Hook
-- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : comités d'état Lagrange et au-delà](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 juin 2024 – Emmanuel Awosika
+- [L'état des solutions d'interopérabilité des rollups](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 juin 2024 – Alex Hook
+- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : comités d'état Lagrange et au-delà](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 juin 2024 – Emmanuel Awosika
 
 En outre, voici quelques présentations perspicaces de [James Prestwich](https://twitter.com/_prestwich) qui peuvent aider à développer une compréhension plus approfondie des ponts :
 

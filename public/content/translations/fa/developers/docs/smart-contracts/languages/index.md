@@ -113,7 +113,6 @@ contract Coin {
 - [برگه ی تقلب](https://reference.auditless.com/cheatsheet)
 - [چارچوب ها و ابزارهای توسعه قرارداد هوشمند برای Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - یاد بگیرید که قراردادهای هوشمند Vyper را ایمن و هک کنید](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - نمونه های آسیب پذیری Vyper](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub برای توسعه](https://github.com/zcor/vyper-dev)
 - [نمونه‌های مهم قرارداد هوشمند Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [منابع عالی Vyper سرپرستی شده](https://github.com/spadebuilders/awesome-vyper)
@@ -227,7 +226,6 @@ def endAuction():
 
 - [مستندات Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [مستندات +Yul](https://github.com/fuellabs/yulp)
-- [زمین بازی +Yul](https://yulp.fuel.sh/)
 - [پست معرفی +Yul](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### قرارداد نمونه {#example-contract-2}
@@ -322,5 +320,5 @@ contract GuestBook:
 
 ## اطلاعات بیشتر {#further-reading}
 
-- [کتابخانه قراردادهای Solidity از OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [کتابخانه قراردادهای Solidity از OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity با مثال](https://solidity-by-example.org)

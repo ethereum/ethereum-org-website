@@ -224,7 +224,7 @@ Die Wirtschaftsforschung rund um Ethereum verfolgt im Großen und Ganzen zwei An
 
 #### Hintergrundlektüre {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ETHconomics-Workshop bei Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Aktuelle Forschung {#recent-research-9}
@@ -307,7 +307,7 @@ Es werden mehr Tools für die Datenanalyse benötigt. Außerdem braucht es Dashb
 
 #### Aktuelle Forschung {#recent-research-14}
 
-- [Datenanalyse von Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Datenanalyse von Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Apps und Tools {#apps-and-tooling}
 

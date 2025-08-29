@@ -113,7 +113,6 @@ For more informashon, [read di Vyper rashonale](https://vyper.readthedocs.io/en/
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Smart kontract divelopment frameworks and tools for Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - learn hau yu fit sekure and hack Vyper smart kontracts](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperEksampols - Vyper vulnerability eksampols](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub for divelopment](https://github.com/zcor/vyper-dev)
 - [Vyper hits smart kontracts eksampols wey great pass](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Awesome Vyper don kurate risorsis](https://github.com/spadebuilders/awesome-vyper)
@@ -227,7 +226,6 @@ If yu dey new to Ethereum and neva do any coding wit smart kontract languajis ye
 
 - [Yul Dokumentashon](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Dokumentashon](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Intro Post](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Kontract Eksampol {#example-contract-2}
@@ -322,5 +320,5 @@ If yu wan kompia basik syntax, di kontract lifecycle, intafaces, operators, data
 
 ## Further reading {#further-reading}
 
-- [Solidity Kontracts Library, na OpenZeppelin write am](https://docs.openzeppelin.com/contracts)
+- [Solidity Kontracts Library, na OpenZeppelin write am](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Eksampol](https://solidity-by-example.org)

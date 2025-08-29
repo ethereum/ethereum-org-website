@@ -117,7 +117,6 @@ Pe măsură ce DeFi se dezvoltă și cresc în popularitate, MEV ar putea în cu
 ## Resurse conexe {#related-resources}
 
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Tablou de bord și explorator de tranzacții live pentru tranzacțiile MEV_
 
 ## Referințe suplimentare {#further-reading}
 

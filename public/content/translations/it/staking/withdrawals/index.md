@@ -212,7 +212,6 @@ No. Una volta che un validatore è uscito e che il suo intero saldo è stato pre
 
 - [Prelievi del Launchpad di Staking](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: La Beacon Chain spinge i prelievi come operazioni](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Prelievo di ETH in staking (testing) con Potuz e Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Prelievi push della Beacon Chain come operazioni, con Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Informazioni sul saldo effettivo del validatore](https://www.attestant.io/posts/understanding-validator-effective-balance/)

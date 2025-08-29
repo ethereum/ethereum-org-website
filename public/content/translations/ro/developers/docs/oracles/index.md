@@ -300,7 +300,6 @@ Puteți afla mai multe despre aplicațiile Chainlink consultând [blogul dezvolt
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
-- [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
 ### Construiește un contract inteligent oracol {#build-an-oracle-smart-contract}
@@ -429,7 +428,6 @@ _Ne-ar plăcea să mai avem documentație privind crearea unui contract intelige
 - [Oracole descentralizate: o prezentare cuprinzătoare](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Implementarea unui blockchain oracol pe Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [De ce contractele inteligente nu pot face apeluri API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) – _StackExchange_
-- [De ce avem nevoie de oracole descentralizate](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) – _Bankless_
 - [Deci doriți să folosiți un oracol de prețuri](https://samczsun.com/so-you-want-to-use-a-price-oracle/) – _samczsun_
 
 **Videoclipuri**

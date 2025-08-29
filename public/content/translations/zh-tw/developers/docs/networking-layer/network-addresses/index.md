@@ -36,5 +36,4 @@ Enode 使得以太坊節點可以用統一資源定位器地址格式識別。 �
 ## 衍生閱讀 {#further-reading}
 
 - [EIP-778：以太坊節點紀錄 (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [以太坊中的網路地址](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
 - [LibP2P：Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

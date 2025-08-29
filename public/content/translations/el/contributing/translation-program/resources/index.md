@@ -17,7 +17,6 @@ description: Χρήσιμοι πόροι για μεταφραστές του et
 
 ## Εργαλεία {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– χρήσιμο για την εύρεση και έλεγχο τυπικών μεταφράσεων των τεχνικών όρων_
 - [Linguee](https://www.linguee.com/) _– μηχανή αναζήτησης για μεταφράσεις και λεξικό που επιτρέπει την αναζήτηση λέξεων ή φράσεων_
 - [Proz term search](https://www.proz.com/search/) _– βάση δεδομένων λεξικών μετάφρασης και γλωσσάρι εξειδικευμένων όρων_
 - [Eurotermbank](https://www.eurotermbank.com/) _– συλλογές ευρωπαϊκής ορολογίας για 42 γλώσσες_

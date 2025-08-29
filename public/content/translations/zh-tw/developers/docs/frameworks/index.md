@@ -63,7 +63,7 @@ lang: zh-tw
 **Tenderly -** **_Web3 開發平台，使區塊鏈開發者能夠建立、測試、除錯、監控和操作智慧型合約並改進去中心化應用程式使用者體驗。_**
 
 - [網站](https://tenderly.co/)
-- [文件](https://docs.tenderly.co/ethereum-development-practices)
+- [文件](https://docs.tenderly.co/)
 
 **The Graph****_高效率查詢區塊鏈資料的圖表。_**
 

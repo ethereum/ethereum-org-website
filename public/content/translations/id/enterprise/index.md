@@ -63,7 +63,6 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 ### Peralatan dan pustaka {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Platform Analisis Data Ethereum_
-- [Epirus](https://www.web3labs.com/epirus) _sebuah platform untuk mengembangkan, menggunakan, dan mengawasi aplikasi blockchain oleh Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _sebuah kotak peralatan untuk transaksi privat_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _sebuah aplikasi penandatanganan transaksi untuk digunakan dengan penyedia web3_
 - [Tenderly](https://tenderly.co/) _sebuah Platform Data yang menyediakan analitik, peringatan, dan pengawasan dalam waktu sebenarnya dengan dukungan untuk jaringan privat._

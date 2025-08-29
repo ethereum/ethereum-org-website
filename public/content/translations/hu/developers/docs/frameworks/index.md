@@ -63,7 +63,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 **Tenderly -** **_Web3 fejlesztői platform, amely lehetővé teszi a blokklánc-fejlesztőknek, hogy okosszerződéseket építsenek, teszteljenek, debuggoljanak, felügyeljenek és üzemeltessenek, illetve fejlesszék a dapp UX-t._**
 
 - [Honlap](https://tenderly.co/)
-- [Dokumentáció](https://docs.tenderly.co/ethereum-development-practices)
+- [Dokumentáció](https://docs.tenderly.co/)
 
 **The Graph -** **_Blokkláncadatok hatékony lekérdezése a The Graph segítségével._**
 

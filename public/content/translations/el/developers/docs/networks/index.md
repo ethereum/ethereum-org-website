@@ -75,7 +75,6 @@ lang: el
 - [Συγχρονισμός σημείου αναφοράς](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
-- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 

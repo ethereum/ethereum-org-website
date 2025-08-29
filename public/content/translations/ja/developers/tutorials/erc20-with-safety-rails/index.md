@@ -132,8 +132,8 @@ ERC20トークンの`_beforeTokenTransfer`の定義を[オーバーライド](ht
 
 OpenZeppelinでは、管理者アクセスを可能にする次の2つのメカニズムを提供しています。
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable)コントラクトでは、所有者は1人です。 `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)のある関数は、その所有者のみしか呼び出せません。 所有者は、所有権を他の人に譲渡することも、完全に放棄することもできます。 通常、それ以外のアカウントの権限は変わりません。
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control)コントラクトでは、[ロールベースのアクセス制御 (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)機能があります。
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable)コントラクトでは、所有者は1人です。 `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)のある関数は、その所有者のみしか呼び出せません。 所有者は、所有権を他の人に譲渡することも、完全に放棄することもできます。 通常、それ以外のアカウントの権限は変わりません。
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control)コントラクトでは、[ロールベースのアクセス制御 (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)機能があります。
 
 この記事では、簡潔にするために`Ownable`を使っています。
 

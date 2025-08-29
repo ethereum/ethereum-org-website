@@ -216,7 +216,6 @@ Glac páirt in eagraíochtaí gairmiúla pobal-tiomáinte nó bí páirteach i n
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Foinse Oscailte Web3Design](https://www.web3designers.org/)
 
 ## Córais Dearaidh agus acmhainní dearaidh eile {#design-systems-and-resources}
 

@@ -133,7 +133,6 @@ Wenn Sie die Gaspreise überwachen möchten, damit Sie Ihre ETH günstiger versc
 
 - [Ethereum Gas erklärt](https://defiprime.com/gas)
 - [Den Gasverbrauch von Smart Contracts reduzieren](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Proof-of-Stake und Proof-of-Work im Vergleich](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategien für Programmierer zur Optimierung des Gasverbrauchs](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Spezifikationen zu EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 - [Tim Beikos EIP-1559-Ressourcen](https://hackmd.io/@timbeiko/1559-resources).

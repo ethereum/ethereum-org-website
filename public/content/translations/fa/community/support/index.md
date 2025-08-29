@@ -41,7 +41,6 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 - [دانشگاه شیمی](https://university.alchemy.com/#starter_code)
 - [دیسکورد CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [StackExchange اتریوم](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [دانشگاه Web3](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

@@ -133,7 +133,6 @@ lang: ru
 
 - [Объяснение газа в Ethereum](https://defiprime.com/gas)
 - [Снижение потребления газа в ваших умных контрактах](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Доказательство владения и доказательство работы](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Стратегии оптимизации газа для разработчиков](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Документация EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)
 - [Ресурсы по EIP-1559 от Тима Бейко](https://hackmd.io/@timbeiko/1559-resources)

@@ -156,19 +156,6 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Tarification à l'heure
     - Assistance directe 24h/24 et 7j/7
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Docs](https://docs.figment.io/)
-  - Fonctionnalités
-    - Option multi-niveaux avec 3 000 000 de requêtes/mois
-    - Points de terminaison WSS et RPC
-    - Nœuds dédiés complets et archivés
-    - Mise à l'échelle automatique (remises sur le volume)
-    - Données d'archivage gratuites
-    - Analyse des services
-    - Tableau de bord
-    - Assistance directe 24h/24 et 7j/7
-    - Payer en cryptomonnaie (entreprise)
-
 - [**DRPC**](https://drpc.org/)
   - [Documentation](https://docs.drpc.org/)
   - Fonctionnalités

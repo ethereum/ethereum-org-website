@@ -216,7 +216,7 @@ Les types d'attaque ci-dessus couvrent les problèmes de codage de contrats inte
 
 Complément d'information:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - Une explication très lisible des vulnérabilités les plus importantes, avec un exemple de code pour la plupart.
+- [Consensys Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) - Une explication très lisible des vulnérabilités les plus importantes, avec un exemple de code pour la plupart.
 - [Registre SWC](https://swcregistry.io/docs/SWC-128) - Liste conservée des CWE qui s'appliquent à Ethereum et aux contrats intelligents
 
 ## Outils de sécurité {#security-tools}

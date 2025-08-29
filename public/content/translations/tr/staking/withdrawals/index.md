@@ -212,7 +212,6 @@ Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu 
 
 - [Hisseleme Başlama Noktası Para Çekme İşlemleri](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: İşlem olarak işaret zinciri para çekme işlemleri](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Kedi Çobanları - Şangay](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz ve Hsiao-Wei Wang ile Kilitli ETH Çekimi (Test)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Operasyon olarak Alex Stokes ile işaret zincirinde zorla para çekme işlemleri](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Doğrulayıcının Geçerli Bakiyesini Anlamak](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -223,7 +223,7 @@ Mais sobre [como projetar sistemas de governança seguros](https://blog.openzepp
 
 Os desenvolvedores de software tradicionais estão familiarizados com o princípio KISS (“Não complique, estúpido!”), o qual aconselha a não introdução complexidade desnecessária na concepção de software. Isso segue o pensamento de longa data, de que “sistemas complexos falham de maneiras complexas” e são mais suscetíveis a erros dispendiosos.
 
-Não complicar é de particular importância ao escrever contratos inteligentes, visto que os contratos inteligentes estão potencialmente controlando grandes quantidades de valor. Uma dica para descomplicar ao escrever contratos inteligentes é reutilizar bibliotecas existentes, como [Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), sempre que possível. Como essas bibliotecas foram extensivamente auditadas e testadas pelos desenvolvedores, usá-las reduz as chances de introduzir bugs ao escrever novas funcionalidades do zero.
+Não complicar é de particular importância ao escrever contratos inteligentes, visto que os contratos inteligentes estão potencialmente controlando grandes quantidades de valor. Uma dica para descomplicar ao escrever contratos inteligentes é reutilizar bibliotecas existentes, como [Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), sempre que possível. Como essas bibliotecas foram extensivamente auditadas e testadas pelos desenvolvedores, usá-las reduz as chances de introduzir bugs ao escrever novas funcionalidades do zero.
 
 Outro conselho comum é escrever funções pequenas e manter contratos modulares, dividindo a lógica do negócio por vários contratos. Não só escrever um código simples reduz a superfície de ataque em um contrato inteligente, também facilita argumentar sobre a exatidão do sistema por inteiro e detectar possíveis erros de concepção mais cedo.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Você também pode usar um sistema de [receber pagamentos](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment), que exige que os usuários retirem fundos dos contratos inteligentes, em vez de um sistema de "envio de pagamentos" que envia fundos para contas. Isso elimina a possibilidade de acionar código inadvertidamente em endereços desconhecidos (e também pode impedir determinados ataques de negação de serviço).
+Você também pode usar um sistema de [receber pagamentos](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), que exige que os usuários retirem fundos dos contratos inteligentes, em vez de um sistema de "envio de pagamentos" que envia fundos para contas. Isso elimina a possibilidade de acionar código inadvertidamente em endereços desconhecidos (e também pode impedir determinados ataques de negação de serviço).
 
 #### Overflows e underflows em inteiro {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Se você planeja consultar um oráculo on-chain sobre preços de ativos, conside
 
 ### Ferramentas para monitorar contratos inteligentes {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
-
 - **[Alerta leve e em tempo real](https://tenderly.co/alerting/)** - _Uma ferramenta para receber notificações em tempo real quando eventos incomuns ou inesperados acontecem em seus contratos inteligentes ou carteiras._
 
 ### Ferramentas para administração segura de contratos inteligentes {#smart-contract-administration-tools}
 
-- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, melhorias e pausas._
-
 - **[Safe](https://safe.global/)** - _Carteira de contrato inteligente em execução na Ethereum, que requer um número mínimo de pessoas para aprovar uma transação antes que ela possa ocorrer (M-de-N)._
 
-- **[Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** - _Bibliotecas de contrato para implementação de funcionalidades administrativas, incluindo propriedade de contratos, atualizações, controles de acesso, governança, pausabilidade e muito mais._
+- **[Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** - _Bibliotecas de contrato para implementação de funcionalidades administrativas, incluindo propriedade de contratos, atualizações, controles de acesso, governança, pausabilidade e muito mais._
 
 ### Serviços de auditoria de contrato inteligente {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ Se você planeja consultar um oráculo on-chain sobre preços de ativos, conside
 
 ### Publicações de vulnerabilidades e exploits conhecidos em contratos inteligentes {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Ataques Conhecidos em Contrato Inteligente](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Explicação fácil das vulnerabilidades de contrato mais significativas, com código de exemplo para a maioria dos casos._
+- **[ConsenSys: Ataques Conhecidos em Contrato Inteligente](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Explicação fácil das vulnerabilidades de contrato mais significativas, com código de exemplo para a maioria dos casos._
 
 - **[Registro SWC](https://swcregistry.io/)** - _Lista selecionada de Enumerações de Vulnerabilidades Comuns (Common Weakness Enumeration, CWE) que se aplicam a contratos inteligentes da Ethereum._
 

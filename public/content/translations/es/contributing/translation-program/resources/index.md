@@ -17,7 +17,6 @@ Puede encontrar algunas guías y herramientas útiles para los traductores de et
 
 ## Herramientas {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _— útil para encontrar y comprobar las traducciones estándar de los términos técnicos_
 - [Linguee](https://www.linguee.com/) _— buscador de traducciones y conceptos usando palabras o enunciados_
 - [Búsqueda de términos en Proz](https://www.proz.com/search/) _: base de datos de diccionarios de traducciones y glosarios de términos específicos._
 - [Eurotermbank](https://www.eurotermbank.com/) _: extensa base de datos terminológica europea en 42 idiomas_.

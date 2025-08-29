@@ -74,6 +74,6 @@ Bárki létrehozhat EIP-t. A javaslat beküldése előtt el kell olvasni az [EIP
 
 <cite class="citation">
 
-Az oldal tartalmát részben az [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) szolgáltatta Hudson Jameson által
+Az oldal tartalmát részben az [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) szolgáltatta Hudson Jameson által
 
 </cite>

@@ -99,7 +99,7 @@ De nombreuses solutions de transition adoptent des modèles entre ces deux extr�
 
 L'utilisation des ponts vous permet de déplacer vos fonds entre différentes blockchains. Voici quelques ressources pour vous aider à trouver et utiliser des ponts :
 
-- **[Liste des ponts L2BEAT](https://l2beat.com/bridges/summary)&[Analyse des risques L2BEAT des ponts](https://l2beat.com/bridges/risk)** : Une liste complète de divers ponts, incluant des détails sur leur part de marché, le type de pont et les chaînes de destination. L2BEAT propose également une analyse des risques des ponts, aidant les utilisateurs à prendre des décisions éclairées lors de la sélection d'un pont.
+- **[Liste des ponts L2BEAT](https://l2beat.com/bridges/summary)&[Analyse des risques L2BEAT des ponts](https://l2beat.com/bridges/summary)** : Une liste complète de divers ponts, incluant des détails sur leur part de marché, le type de pont et les chaînes de destination. L2BEAT propose également une analyse des risques des ponts, aidant les utilisateurs à prendre des décisions éclairées lors de la sélection d'un pont.
 - **[Liste des ponts de DefiLlama](https://defillama.com/bridges/Ethereum)** : Un résumé des volumes des ponts sur les réseaux Ethereum.
 
 <Divider />
@@ -134,6 +134,6 @@ Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum,
 - [EIP-5164: Exécution Cross-Chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 juin 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 juillet 2022 - Bartek Kiepuszewski_
 - [Pourquoi l'avenir sera multi-chaînes, mais ne sera pas cross-chaînes."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 janvier 2022 - Vitalik Buterin_
-- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : Comités d'état Lagrange et au-delà](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 juin 2024 - Emmanuel Awosika_
-- [L'état des solutions d'interopérabilité des rollups](https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 juin 2024 - Alex Hook_
+- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : Comités d'état Lagrange et au-delà](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 juin 2024 - Emmanuel Awosika_
+- [L'état des solutions d'interopérabilité des rollups](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 juin 2024 - Alex Hook_
 

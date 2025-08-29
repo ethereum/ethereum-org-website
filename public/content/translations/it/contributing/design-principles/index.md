@@ -88,6 +88,6 @@ Puoi vedere i nostri principi di progettazione in azione [sul nostro sito](/).
 
 **Condividi il tuo feedback su questo documento!** Uno dei nostri principi proposti è il “**Miglioramento Collaborativo**”, il che significa che vogliamo che il sito web sia il prodotto di molti collaboratori. Quindi, nello spirito di tale principio, vogliamo condividere tali principi di progettazione con la community di Ethereum.
 
-Sebbene questi principi siano incentrati sul sito web ethereum.org, speriamo che molti di essi siano rappresentativi dei valori dell'ecosistema Ethereum in generale (ad esempio, puoi vedere l'influenza dei [principi del Whitepaper di Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Potresti persino decidere di incorporare alcuni di essi nel tuo progetto!
+Sebbene questi principi siano incentrati sul sito web ethereum.org, speriamo che molti di essi siano rappresentativi dei valori dell'ecosistema Ethereum in generale. Potresti persino decidere di incorporare alcuni di essi nel tuo progetto!
 
 Facci sapere che ne pensi sul [server Discord](https://discord.gg/ethereum-org) o [creando un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

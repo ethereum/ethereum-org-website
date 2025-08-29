@@ -50,7 +50,6 @@ Learn how to use [ethers-kt](https://github.com/Kr1ptal/ethers-kt), an async, hi
 
 ## Java projects and tools {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon) (Ethereum Client)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Library for Interacting with Ethereum Clients)](https://github.com/web3j/web3j)
 - [ethers-kt (Async, high-performance Kotlin/Java/Android library for EVM-based blockchains.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu HL chat](https://chat.hyperledger.org/channel/besu)

@@ -224,7 +224,7 @@ Ekonomický výzkum v oblasti Etherea se obecně řídí dvěma přístupy: ově
 
 #### Základní podklady {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Workshop ETHconomics na Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Nedávný výzkum {#recent-research-9}
@@ -307,7 +307,7 @@ Je potřeba vytvořit více nástrojů pro analýzu dat a ovládacích panelů, 
 
 #### Nedávný výzkum {#recent-research-14}
 
-- [Datová analýza Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Datová analýza Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Aplikace a nástroje {#apps-and-tooling}
 

@@ -223,7 +223,7 @@ Többet megtudhat a [biztonságos kormányzási rendszerek tervezéséről](http
 
 A hagyományos szoftverfejlesztők elve az, hogy a lehető legegyszerűbb legyen a kód (KISS-elv), és így nem vezetnek be fölösleges bonyolításokat a tervben. Ennek alapja az az elgondolás, hogy az „összetett rendszerek összetett módokon vallhatnak kudarcot”, és sokkal hajlamosabbak a költséges hibákra.
 
-A minél egyszerűbb megközelítés kiemelten fontos az okosszerződések írásánál is, mivel ezek nagy értékeket is kontrollálhatnak. Ennek eléréséhez érdemes létező könyvtárakat használni, mint amilyen az [OpenZeppelin szerződések](https://docs.openzeppelin.com/contracts/4.x/), amikor ez lehetséges. Mivel ezeket a könyvtárakat a fejlesztők már alaposan tesztelték, auditálták, így kisebb a hiba valószínűsége, mintha a nulláról kell megírni egy új funkcionalitást.
+A minél egyszerűbb megközelítés kiemelten fontos az okosszerződések írásánál is, mivel ezek nagy értékeket is kontrollálhatnak. Ennek eléréséhez érdemes létező könyvtárakat használni, mint amilyen az [OpenZeppelin szerződések](https://docs.openzeppelin.com/contracts/5.x/), amikor ez lehetséges. Mivel ezeket a könyvtárakat a fejlesztők már alaposan tesztelték, auditálták, így kisebb a hiba valószínűsége, mintha a nulláról kell megírni egy új funkcionalitást.
 
 Másik követendő tanács az, hogy rövid függvényeket kell írni és a szerződést modulárisan kell felállítani, az üzleti logikát több szerződés között felosztva. Az egyszerű kódok írása kevesebb teret ad a támadásra, emellett a teljes rendszer helyességét is jobban lehet igazolni, és a lehetséges tervezési hibák is korán kiderülhetnek.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Továbbá a [„fizetéskérés”](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) rendszere is használható, amelynél a felhasználó vesz ki pénzt az okosszerződésből ahelyett, hogy a szerződés „fizetésküldést” végezne a számlák felé. Így nem lehet véletlenül elindítani egy kódot ismeretlen címeken (és bizonyos szolgálatmegtagadási támadásokat is ki tud védeni).
+Továbbá a [„fizetéskérés”](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) rendszere is használható, amelynél a felhasználó vesz ki pénzt az okosszerződésből ahelyett, hogy a szerződés „fizetésküldést” végezne a számlák felé. Így nem lehet véletlenül elindítani egy kódot ismeretlen címeken (és bizonyos szolgálatmegtagadási támadásokat is ki tud védeni).
 
 #### Egész szám túlfolyása lefelé vagy felfelé {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 ### Eszközök az okosszerződések felügyeletére {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _Egy eszköz az okosszerződés automatikus felügyeletére, valamint az eseményekre, függvényekre és tranzakcióparaméterekre való válaszadásra._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** – _Egy eszköz, amellyel valós idejű értesítést kaphat, amikor az okosszerződésén vagy tárcáján szokatlan vagy váratlan események történnek._
 
 ### Eszközök az okosszerződések biztonságos adminisztrálásához {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _Interfész az okosszerződések adminisztrációjának kezeléséhez, beleértve a hozzáférés-kezelést, frissítéseket és leállítást is._
-
 - **[Safe](https://safe.global/)** – _Egy okosszerződéses tárca az Ethereumon, amelynél adott számú embernek jóvá kell hagynia a tranzakciót, mielőtt az megtörténhetne (N számú tagból M-nek)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** – _Szerződéskönyvtárak az adminisztrációs jellemzők bevezetésére, beleértve a szerződés tulajdonlását, frissítéseket, hozzáférés-kezelést, irányítást, leállíthatóság és még sok mást._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** – _Szerződéskönyvtárak az adminisztrációs jellemzők bevezetésére, beleértve a szerződés tulajdonlását, frissítéseket, hozzáférés-kezelést, irányítást, leállíthatóság és még sok mást._
 
 ### Okosszerződés auditálására kínált szolgáltatások {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 ### Publikációk az okosszerződések ismert sebezhetőségeiről és azok kihasználásáról {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[Consensys: az okosszerződéseket ért ismert támadások](https://consensys.github.io/smart-contract-best-practices/attacks/)** – _Egyszerűen megfogalmazott magyarázat a legkomolyabb sérülékenységekről a szerződésekben, a legtöbb esetben mintakódokkal együtt._
+- **[Consensys: az okosszerződéseket ért ismert támadások](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** – _Egyszerűen megfogalmazott magyarázat a legkomolyabb sérülékenységekről a szerződésekben, a legtöbb esetben mintakódokkal együtt._
 
 - **[SWC Registry](https://swcregistry.io/)** – _A Közös gyengeségek felsorolásának (CWE) gondozott listája, amelyen az Ethereum okosszerződésekre vonatkozó tételek szerepelnek._
 

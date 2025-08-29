@@ -224,7 +224,7 @@ lang: el
 
 #### Απαιτούμενες γνώσεις {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Ομάδα εργασίας οικονομικών ETH στο Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Πρόσφατη έρευνα {#recent-research-9}
@@ -307,7 +307,7 @@ lang: el
 
 #### Πρόσφατη έρευνα {#recent-research-14}
 
-- [Ανάλυση δεδομένων ομάδας Robust Incentives](https://ethereum.github.io/rig/)
+- [Ανάλυση δεδομένων ομάδας Robust Incentives](https://rig.ethereum.org/)
 
 ## Εφαρμογές και εργαλεία {#apps-and-tooling}
 

@@ -51,7 +51,7 @@ yarn react-app:start
 
 ### ethers.js {#ethersjs}
 
-虽然 [Web3](https://docs.web3js.org/) 仍被广泛使用，但 [ethers.js](https://docs.ethers.io/) 作为一种替代方案，在过去一年中获得了更多的关注，并且已集成到 _create-eth-app_ 中。 你可以使用这个操作，将它更改为 Web3，或者考虑升级为 [ethers.js v5](https://docs-beta.ethers.io/)，该版本即将完成测试阶段。
+虽然 [Web3](https://docs.web3js.org/) 仍被广泛使用，但 [ethers.js](https://docs.ethers.io/) 作为一种替代方案，在过去一年中获得了更多的关注，并且已集成到 _create-eth-app_ 中。 你可以使用这个操作，将它更改为 Web3，或者考虑升级为 [ethers.js v5](https://docs.ethers.org/v5/)，该版本即将完成测试阶段。
 
 ### 图表 {#the-graph}
 

@@ -110,7 +110,6 @@ contract Coin {
 - [懶人包](https://reference.auditless.com/cheatsheet)
 - [Vyper 的智慧型合約開發框架與工具](/developers/docs/programming-languages/python/)
 - [VyperPunk：瞭解如何保障與駭客攻擊 Vyper 智慧型合約](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples：Vyper 漏洞範例](https://www.vyperexamples.com/reentrancy)
 - [支援開發的 Vyper Hub](https://github.com/zcor/vyper-dev)
 - [Vyper 最熱門的智慧型合約範例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [出色的 Vyper 精選資源](https://github.com/spadebuilders/awesome-vyper)
@@ -224,7 +223,6 @@ def endAuction():
 
 - [Yul 文件](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ 文件](https://github.com/fuellabs/yulp)
-- [Yul+ 訓練場](https://yulp.fuel.sh/)
 - [Yul+ 介紹文章](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### 合約範例 {#example-contract-2}
@@ -319,5 +317,5 @@ contract GuestBook:
 
 ## 衍生閱讀 {#further-reading}
 
-- [OpenZeppelin 的 Solidity 合約資料庫](https://docs.openzeppelin.com/contracts)
+- [OpenZeppelin 的 Solidity 合約資料庫](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity 範例](https://solidity-by-example.org)

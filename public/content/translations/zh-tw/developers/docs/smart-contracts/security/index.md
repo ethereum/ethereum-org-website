@@ -223,7 +223,7 @@ contract EmergencyStop {
 
 傳統的軟體開發者都熟悉 KISS (「保持簡約」)，也就是不要在軟體中引進不必要複雜設計的原則。 這是因為長期以來，人們都認為「複雜系統會發生複雜的故障」，且更容易造成代價高昂的錯誤。
 
-編寫智慧型合約尤其注重簡約，因為智慧型合約可能控制龐大資金。 保持簡約的秘訣：編寫智慧型合約時盡可能重複使用既有庫，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)。 因為這些庫已經通過開發者廣泛審核和測試，使用時可以降低從零開始開發新功能出現漏洞的幾率。
+編寫智慧型合約尤其注重簡約，因為智慧型合約可能控制龐大資金。 保持簡約的秘訣：編寫智慧型合約時盡可能重複使用既有庫，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)。 因為這些庫已經通過開發者廣泛審核和測試，使用時可以降低從零開始開發新功能出現漏洞的幾率。
 
 另一個建議是編寫小型函數，並將商業邏輯拆分成多個合約，確立模組化合約。 編寫較簡單的程式碼不只能縮小智慧型合約中的受攻擊面，也使判斷整個系統的正確性更簡單，亦能提早偵測可能的設計錯誤。
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
+你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
 
 #### 整數下溢與上溢 {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ contract Attack {
 
 ### 監視智慧型合約的工具 {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一個自動監控和回應智慧型合約事件、函式和交易參數的工具。_
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)**：_當智慧型合約或錢包出現不尋常的和意外事件時，可以獲得即時通知的工具。_
 
 ### 智慧型合約的安全管理工具 {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _管理智慧型合約運作，包括存取控制、升級和暫停的介面。_
-
 - **[Safe](https://safe.global/)** - _在以太坊上執行、需要達到最低核准人數（N 人中的M 人），才能執行交易的智慧型合約數位錢包。_
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _執行合約所有權、升級、存取控制、治理、暫停等管理功能的合約庫。_
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _執行合約所有權、升級、存取控制、治理、暫停等管理功能的合約庫。_
 
 ### 智慧型合約審核服務 {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ contract Attack {
 
 ### 已知的智慧型合約漏洞和弱點出版品 {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys：已知的智慧型合約攻擊](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _以適合初學者的方式解說最重大的合約漏洞，大部分案例會附上範例程式碼。_
+- **[ConsenSys：已知的智慧型合約攻擊](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _以適合初學者的方式解說最重大的合約漏洞，大部分案例會附上範例程式碼。_
 
 - **[SWC Registry](https://swcregistry.io/)** - _適用於以太坊智慧型合約的通用弱點列表 (CWE) 精選清單。_
 

@@ -88,6 +88,6 @@ Naše principy designu můžete vidět v praxi [na celém našem webu](/).
 
 **Podělte se o své připomínky k tomuto dokumentu!** Jedním z našich navrhovaných principů je „**Společné zlepšování**“, což znamená, že chceme, aby webové stránky byly výsledkem práce mnoha přispěvatelů. V duchu tohoto principu se proto chceme o tyto principy podělit s komunitou Etherea.
 
-Ačkoli jsou tyto principy zaměřeny na web ethereum.org, doufáme, že mnoho z nich reprezentují hodnoty ekosystému Etherea jako celku (např. můžete vidět vliv [principů Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Možná byste některé z nich dokonce chtěli začlenit do svého vlastního projektu!
+Ačkoli jsou tyto principy zaměřeny na web ethereum.org, doufáme, že mnoho z nich reprezentují hodnoty ekosystému Etherea jako celku. Možná byste některé z nich dokonce chtěli začlenit do svého vlastního projektu!
 
 Dejte nám vědět své názory na [Discord serveru](https://discord.gg/ethereum-org) nebo [vytvořením problému](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

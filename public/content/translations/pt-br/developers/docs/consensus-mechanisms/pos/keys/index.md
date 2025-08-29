@@ -96,5 +96,5 @@ Cada galho é separado por uma `/`, então `m/2` significa iniciar com a chave m
 
 - [Postagem no blog da Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Geração de chave EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
-- [EIP-7002: Saídas acionadas pela camada de execução](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [EIP-7002: Saídas acionadas pela camada de execução](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Gerenciamento de chaves em escala](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

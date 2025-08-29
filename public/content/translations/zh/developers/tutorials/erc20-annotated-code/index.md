@@ -511,7 +511,7 @@ contract ERC20 is Context, IERC20 {
 
 将许可额度从一个非零值设定为另一个非零值是有危险的， 因为你只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
 
-之后有了一些变化，Bill 的价格提高到了十个代币。 Alice 仍然想要购买服务，就发送了一笔交易，将 Bill 的许可额度设置为 10。 当 Bill 在交易池中看到这个新的交易时， 他就会发送一笔交易，以花费 Alice 的五个代币，并且设定高得多的 燃料价格，这样就会更快挖矿。 这样的话，Bill 可以先花五个代币，然后 当 Alice 的新许可额度放款后，他就可以再花费十个代币，这样总共花费了 15 个代币， 超过了 Alice 本欲授权的金额。 这种技术叫做 [抢先交易](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+之后有了一些变化，Bill 的价格提高到了十个代币。 Alice 仍然想要购买服务，就发送了一笔交易，将 Bill 的许可额度设置为 10。 当 Bill 在交易池中看到这个新的交易时， 他就会发送一笔交易，以花费 Alice 的五个代币，并且设定高得多的 燃料价格，这样就会更快挖矿。 这样的话，Bill 可以先花五个代币，然后 当 Alice 的新许可额度放款后，他就可以再花费十个代币，这样总共花费了 15 个代币， 超过了 Alice 本欲授权的金额。 这种技术叫做 [抢先交易](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice 的交易         | Alice 的随机数 | Bill 的交易                      | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
 | ----------------- | ---------- | ----------------------------- | --------- | ---------- | -------------------- |

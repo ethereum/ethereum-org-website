@@ -212,7 +212,6 @@ eventName="read more">
 
 - [质押启动板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：信标链提款推送操作](https://eips.ethereum.org/EIPS/eip-4895)
-- [以太坊牧猫人组织 - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94：质押以太币提取（测试）与 Potuz 和王筱维](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68：与 Alex Stokes 讨论 EIP-4895：信标链推送提款操作](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [了解验证者有效余额](https://www.attestant.io/posts/understanding-validator-effective-balance/)

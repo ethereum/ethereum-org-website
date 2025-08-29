@@ -17,7 +17,7 @@ De ghnáth tugtar isteach caighdeáin mar [Tograí Feabhsúcháin Ethereum](/eip
 - [Bord plé an EIP](https://ethereum-magicians.org/c/eips)
 - [Réamhrá ar Rialachas Ethereum](/governance/)
 - [Forbhreathnú ar Rialachas Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _ 31 Márta, 2019 - Boris Mann_
-- [Prótacal Ethereum, Rialachas Forbartha agus Comhordú Uasghrádaithe Líonra](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _ 23 Márta, 2020 - Hudson Jameson_
+- [Prótacal Ethereum, Rialachas Forbartha agus Comhordú Uasghrádaithe Líonra](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _ 23 Márta, 2020 - Hudson Jameson_
 - [Seinnliosta de Chruinnithe Core Dev Ethereum go léir](https://www.youtube.com/@EthereumProtocol) _(Seinnliosta YouTube)_
 
 ## Cineálacha caighdeán {#types-of-standards}

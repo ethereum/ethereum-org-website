@@ -51,7 +51,7 @@ _create-eth-app_ secara khusus memanfaatkan [efek kaitan](https://reactjs.org/do
 
 ### ethers.js {#ethersjs}
 
-Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs-beta.ethers.io/) yang hampir keluar dari versi beta.
+Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs.ethers.org/v5/) yang hampir keluar dari versi beta.
 
 ### The Graph {#the-graph}
 

@@ -200,7 +200,6 @@ Untuk membuka kunci dan menerima kembali keseluruhan baki anda, anda juga mesti 
 - [Membantu Kepelbagaian Pelanggan](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Kepelbagaian pelanggan pada lapisan persetujuan Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Cara: Beli Perkakasan Pengesah Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Langkah demi Langkah: Cara menyertai Testnet Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Petua Pencegahan Pemotongan Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

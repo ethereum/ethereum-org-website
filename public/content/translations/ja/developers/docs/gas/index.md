@@ -133,7 +133,6 @@ ETHをより安く送れるようにガス代を節約したい場合は、次�
 
 - [イーサリアムガスの説明](https://defiprime.com/gas)
 - [スマートコントラクトのガス消費量の削減](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [プルーフ・オブ・ステークとプルーフ・オブ・ワークの比較](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [デベロッパーのためのガス最適化戦略](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559のドキュメント](https://eips.ethereum.org/EIPS/eip-1559)
 - [Tim BeikoによるEIP-1559のリソース](https://hackmd.io/@timbeiko/1559-resources)

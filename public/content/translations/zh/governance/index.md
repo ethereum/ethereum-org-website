@@ -180,5 +180,5 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 - [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/)- _Hudson Jameson_
 - [治理，第 2 部分：财阀统治仍非好事](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [超越代币投票的治理方式](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [了解区块链治理](https://research.2077.xyz/understanding-blockchain-governance) - _2077 研究_
+- [了解区块链治理](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 研究_
 - [以太坊治理机制](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

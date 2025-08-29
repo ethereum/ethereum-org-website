@@ -113,7 +113,6 @@ contract Coin {
 - [Φύλλο σημειώσεων](https://reference.auditless.com/cheatsheet)
 - [Πλαίσια και εργαλεία ανάπτυξης έξυπνων συμβολαίων για Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - μάθετε να ασφαλίζετε και να χακάρετε τα έξυπνα συμβόλαια Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - παραδείγματα ευπάθειας Vyper](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub για ανάπτυξη](https://github.com/zcor/vyper-dev)
 - [Παραδείγματα μεγαλύτερων επιτυχιών των έξυπνων συμβολαίων Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Καταπληκτικοί πόροι επιμελημένοι από τη Vyper](https://github.com/spadebuilders/awesome-vyper)
@@ -227,7 +226,6 @@ def endAuction():
 
 - [Τεκμηρίωση Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Τεκμηρίωση Yul+](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Εισαγωγικό κείμενο](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Παράδειγμα συμβολαίου {#example-contract-2}
@@ -322,5 +320,5 @@ contract GuestBook:
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
-- [Βιβλιοθήκη Συμβολαίων Solidity του OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Βιβλιοθήκη Συμβολαίων Solidity του OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Παραδείγματα με Solidity](https://solidity-by-example.org)

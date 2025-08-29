@@ -62,7 +62,6 @@ lang: bn
 ### গোপনীয়তা {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _আরো তথ্য [এখানে](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _আরো তথ্য এখানে_
 - [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _আরো তথ্য_
 - [এখানে](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)
 
@@ -82,7 +81,6 @@ lang: bn
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu channel)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow channel)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)

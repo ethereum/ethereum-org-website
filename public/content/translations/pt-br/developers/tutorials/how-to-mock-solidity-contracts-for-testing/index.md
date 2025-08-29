@@ -24,7 +24,7 @@ Você poderia escrever uma lógica de configuração de testes complexa toda vez
 
 ## Exemplo: ERC20 Privado {#example-private-erc20}
 
-Usamos um exemplo de contrato ERC-20 que tem um tempo privado inicial. O proprietário pode gerenciar usuários privados e apenas esses terão permissão para receber tokens no início. Uma vez que um certo tempo tenha passado, todos poderão utilizar os tokens. Se você estiver curioso, estamos usando o hook (código modificado) [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) dos novos contratos OpenZeppelin v3.
+Usamos um exemplo de contrato ERC-20 que tem um tempo privado inicial. O proprietário pode gerenciar usuários privados e apenas esses terão permissão para receber tokens no início. Uma vez que um certo tempo tenha passado, todos poderão utilizar os tokens. Se você estiver curioso, estamos usando o hook (código modificado) [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) dos novos contratos OpenZeppelin v3.
 
 ```solidity
 pragma solidity ^0.6.0;

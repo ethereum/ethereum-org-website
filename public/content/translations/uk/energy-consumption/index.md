@@ -66,7 +66,7 @@ Ethereum — це зелений блокчейн. Механізм консен
 ## Довідкові джерела {#further-reading}
 
 - [Індекс стійкості мережі Cambridge Blockchain](https://ccaf.io/cbnsi/ethereum)
-- [Звіт Білого дому про блокчейни з доказом роботи](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Звіт Білого дому про блокчейни з доказом роботи](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Викиди Ethereum: висхідна оцінка](https://kylemcdonald.github.io/ethereum-emissions/), _Кайл Макдональд_
 - [Індекс енергоспоживання Ethereum](https://digiconomist.net/ethereum-energy-consumption/), _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/), _[@InsideTheSim](https://twitter.com/InsideTheSim)_

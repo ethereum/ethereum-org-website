@@ -43,7 +43,6 @@ Néhány konszenzusos kliens rendelkezik olyan beépített eszközökkel, amelly
 
 - [Helyi teszthálózat a Lodestarhoz](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Helyi teszthálózat a Lighthouse-hoz](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Helyi teszthálózat a Nimbushoz](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Nyilvános Ethereum-tesztláncok {#public-beacon-testchains}
 

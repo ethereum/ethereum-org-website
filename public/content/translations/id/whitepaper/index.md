@@ -383,7 +383,7 @@ Namun demikian, ada beberapa penyimpangan penting dari asumsi-asumsi tersebut pa
 3. Distribusi kekuasaan menambang dapat berakhir dengan ketidakadilan dalam praktiknya.
 4. Spekulan, musuh politik, dan orang gila yang memiliki fungsi utilitas untuk merusak jaringan memang ada, dan mereka dapat dengan cerdik membuat kontrak yang biayanya jauh lebih rendah daripada biaya yang dibayarkan oleh simpul-simpul pemverifikasi lainnya.
 
-(1) membuat penambang cenderung memasukkan transaksi yang lebih sedikit, dan (2) meningkatkan `NC`; karena itu, setidaknya, kedua efek tersebut secara terpisah saling membatalkan satu sama lain.<sup>[Bagaimana?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) dan (4) adalah masalah utama; untuk menanganinya kita hanya perlu membentuk modal mengambang: tidak ada blok yang bisa memiliki operasi lebih dari `BLK_LIMIT_FACTOR` kali yang adalah rata- rata pergerakan eksponensial jangka panjang. Secara rinci:
+(1) membuat penambang cenderung memasukkan transaksi yang lebih sedikit, dan (2) meningkatkan `NC`; karena itu, setidaknya, kedua efek tersebut secara terpisah saling membatalkan satu sama lain.<sup>[Bagaimana?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) dan (4) adalah masalah utama; untuk menanganinya kita hanya perlu membentuk modal mengambang: tidak ada blok yang bisa memiliki operasi lebih dari `BLK_LIMIT_FACTOR` kali yang adalah rata- rata pergerakan eksponensial jangka panjang. Secara rinci:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ Konsep dari fungsi transisi keadaan sembarang yang diimplementasikan oleh protok
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ dan Agen Otonom, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn tentang Properti Pintar pada Festival Turing](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [RLP Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Pohon Merkle Patricia Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [RLP Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Pohon Merkle Patricia Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd tentang pohon jumlah Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Untuk riwayat kertas putih, lihat [wiki ini](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Untuk riwayat kertas putih, lihat [wiki ini](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, seperti kebanyakan proyek perangkat lunak sumber terbuka yang digerakkan oleh komunitas, telah berkembang sejak peluncuran pertamanya. Untuk mempelajari tentang pengembangan Ethereum terkini, dan bagaimana perubahan protokol dibuat, kami menyarankan [panduan ini](/learn/)._

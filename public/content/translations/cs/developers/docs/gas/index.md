@@ -135,8 +135,7 @@ Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za 
 
 - [Vysvětlení paliva na Ethereu](https://defiprime.com/gas)
 - [Snížení spotřeby paliva ve vašich chytrých kontraktech](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Důkaz podílem versus důkaz prací](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategie optimalizace paliva pro vývojáře](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Dokumentace EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)
 - [Zdroje k EIP-1559 od Tima Beika](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Oddělování mechanismů od memů](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Oddělování mechanismů od memů](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

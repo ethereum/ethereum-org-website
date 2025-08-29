@@ -88,6 +88,6 @@ Sie können unsere Designgrundsätze in Aktion sehen, und zwar [überall auf uns
 
 **Teilen Sie uns Ihr Feedback zu diesem Dokument mit.** Einer unserer Grundsätze ist "**Gemeinsame Verbesserung**" und das bedeutet, dass die Website ein Produkt aus der Beteiligung vieler Mitwirkenden ist. Daher möchen wir diese Designgrundsätze mit der Ethereum-Community teilen.
 
-Obwohl diese Grundsätze auf die ethereum.org-Website ausgerichtet sind, hoffen wir, dass große Teile davon repräsentativ für die Werte des Ethereum-Ökosystems insgesamt stehen (z. B. lassen sich Einflüsse aus den [Grundsätzen des Ethereum-Whitepapers](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy) erkennen). Vielleicht möchten Sie sogar einige davon für Ihr eigenes Projekt berücksichtigen.
+Obwohl diese Grundsätze auf die ethereum.org-Website ausgerichtet sind, hoffen wir, dass große Teile davon repräsentativ für die Werte des Ethereum-Ökosystems insgesamt stehen. Vielleicht möchten Sie sogar einige davon für Ihr eigenes Projekt berücksichtigen.
 
 Teilen Sie uns Ihre Gedanken mit auf unserem [Discord-Server](https://discord.gg/ethereum-org) oder indem Sie [ein Thema erstellen](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

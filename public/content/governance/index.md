@@ -180,5 +180,5 @@ Governance in Ethereum isn’t rigidly defined. Various community participants h
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Moving beyond coin voting governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [Understanding Blockchain Governance](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [Understanding Blockchain Governance](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [The Ethereum Government](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

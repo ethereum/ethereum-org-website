@@ -218,7 +218,6 @@ Dacă nu aţi mai folosit Ethereum și încă nu ați scris coduri cu limbaje de
 
 - [Documentație Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Documentație Yul+](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Postarea de introducere despre Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Exemplu de contract {#example-contract-2}
@@ -313,5 +312,5 @@ Pentru a vedea comparații ale sintaxei de bază, ciclul de viață al contractu
 
 ## Referințe suplimentare {#further-reading}
 
-- [Biblioteca de contracte Solidity creată de OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Biblioteca de contracte Solidity creată de OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity prin exemple](https://solidity-by-example.org)

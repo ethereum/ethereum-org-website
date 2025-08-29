@@ -88,6 +88,6 @@ description: Ethereum.org 设计和内容决策背后的原则
 
 **分享你对本文档的反馈！**我们提出的原则之一是"**协作改进**"，这意味着我们希望网站是众多贡献者的产物。 因此，本着这一原则，我们希望与以太坊社区分享这些设计原则。
 
-虽然这些原则主要体现在 ethereum.org 网站上，但我们希望其中许多原则能够代表以太坊生态系统的整体价值（例如，你可以看到[以太坊原则白皮书](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)的影响）。 也许你甚至想将其中一些原则运用到你自己的项目中！
+虽然这些原则主要体现在 ethereum.org 网站上，但我们希望其中许多原则能够代表以太坊生态系统的整体价值。 也许你甚至想将其中一些原则运用到你自己的项目中！
 
 你可以通过 [Discord 服务器](https://discord.gg/ethereum-org)或[创建一个问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)让我们知道你的想法。

@@ -133,7 +133,6 @@ Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, pue
 
 - [Explicación sobre el gas de Ethereum](https://defiprime.com/gas)
 - [Reducir el consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Documentacion sobre EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 - [Recursos Tim Beiko's EIP-1559](https://hackmd.io/@timbeiko/1559-resources).

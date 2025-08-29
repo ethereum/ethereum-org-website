@@ -224,7 +224,7 @@ lang: ja
 
 #### バックグラウンドリーディング {#background-reading-9}
 
-- [ロバストインセンティブグループ](https://ethereum.github.io/rig/)
+- [ロバストインセンティブグループ](https://rig.ethereum.org/)
 - [DevconnectでのETHconomicsワークショップ at Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### 最近の研究 {#recent-research-9}
@@ -307,7 +307,7 @@ lang: ja
 
 #### 最近の研究 {#recent-research-14}
 
-- [ロバストインセンティブグループのデータ分析](https://ethereum.github.io/rig/)
+- [ロバストインセンティブグループのデータ分析](https://rig.ethereum.org/)
 
 ## アプリケーションとツール {#apps-and-tooling}
 

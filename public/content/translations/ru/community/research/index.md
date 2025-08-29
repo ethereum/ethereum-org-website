@@ -224,7 +224,7 @@ lang: ru
 
 #### Дополнительные материалы {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Секция ETHconomics на Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Недавние исследования {#recent-research-9}
@@ -307,7 +307,7 @@ lang: ru
 
 #### Недавние исследования {#recent-research-14}
 
-- [Анализ данных от Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Анализ данных от Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Приложения и инструменты {#apps-and-tooling}
 

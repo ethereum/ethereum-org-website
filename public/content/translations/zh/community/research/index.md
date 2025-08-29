@@ -224,7 +224,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 #### 背景阅读 {#background-reading-9}
 
-- [稳健激励小组](https://ethereum.github.io/rig/)
+- [稳健激励小组](https://rig.ethereum.org/)
 - [Devconnect 上的 ETHconomics 研讨会](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### 近期的研究 {#recent-research-9}
@@ -307,7 +307,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 #### 近期的研究 {#recent-research-14}
 
-- [稳健激励小组数据分析](https://ethereum.github.io/rig/)
+- [稳健激励小组数据分析](https://rig.ethereum.org/)
 
 ## 应用程序与工具 {#apps-and-tooling}
 

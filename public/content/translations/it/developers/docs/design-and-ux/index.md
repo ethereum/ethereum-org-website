@@ -77,7 +77,6 @@ Partecipate ad organizzazioni professionali guidate dalla community o unitevi a 
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Progettazione Web3 open source](https://www.web3designers.org/)
 
 ## Sistemi di progettazione {#design-systems}
 

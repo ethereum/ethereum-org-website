@@ -224,7 +224,7 @@ Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach:
 
 #### Podstawowe informacje {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Warsztaty ETHconomics na Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Ostatnie badania {#recent-research-9}
@@ -307,7 +307,7 @@ Istnieje zapotrzebowanie na więcej narzędzi do analizy danych i pulpitów nawi
 
 #### Ostatnie badania {#recent-research-14}
 
-- [Analiza danych Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Analiza danych Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Aplikacje i narzędzia {#apps-and-tooling}
 

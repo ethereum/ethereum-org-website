@@ -216,7 +216,7 @@ Powyższe rodzaje ataków obejmują problemy z kodowaniem inteligentnych kontrak
 
 Dalsza lektura:
 
-- [Consensys Smart Contract — znane ataki](https://consensys.github.io/smart-contract-best-practices/attacks/) — bardzo czytelne wyjaśnienie najważniejszych luk, z przykładowym kodem dla większości.
+- [Consensys Smart Contract — znane ataki](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) — bardzo czytelne wyjaśnienie najważniejszych luk, z przykładowym kodem dla większości.
 - [Rejestr SWC](https://swcregistry.io/docs/SWC-128) — wyselekcjonowana lista CWE, które mają zastosowanie do Ethereum i inteligentnych kontraktów
 
 ## Narzędzia bezpieczeństwa {#security-tools}

@@ -211,7 +211,6 @@ Tidak. Sebaik sahaja pengesah telah keluar dan baki penuhnya telah dikeluarkan, 
 
 - [Pengeluaran Pad Pelancaran Pertaruhan](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Rantai Beacon menolak pengeluaran sebagai operasi](https://eips.ethereum.org/EIPS/eip-4895)
-- [Pengembala Kucing Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pengeluaran ETH dipertaruhkan (Pengujian) dengan Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Rantai Beacon menolak pengeluaran sebagai operasi dengan Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Memahami Baki Berkesan Pengesah](https://www.attestant.io/posts/understanding-validator-effective-balance/)

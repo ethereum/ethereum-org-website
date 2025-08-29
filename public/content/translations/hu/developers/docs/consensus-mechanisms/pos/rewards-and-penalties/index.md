@@ -84,7 +84,6 @@ A konszenzusmechanizmus jutalom-, büntetés- és súlyos büntetési konstrukci
 - [Ösztönzők az Ethereum hibrid Casper-protokolljában](https://arxiv.org/pdf/1903.04205.pdf)
 - [Vitalik jegyzetekkel ellátott specifikációja](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Eth2 – a súlyos büntetés elkerülésének módjai](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
-- [EIP-7251 magyarázata: A validátorok maximális effektív egyenlegének növelése](https://research.2077.xyz/eip-7251_Increase_MAX_EFFECTIVE_BALANCE)
 - [Súlyos büntetés és kizárás elemzése az EIP-7251 kapcsán](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Források_

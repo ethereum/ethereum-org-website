@@ -163,4 +163,4 @@ Soláthraíonn tionscadail iolracha feidhmiúcháin validium agus toilithe is f�
 - [ZK-rollups vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Toiliú agus an speictream Infhaighteachta Sonraí atá ag Teacht Chun Cinn](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
 - [Uas-scáluithe, Validiums, agus Toilithe: Foghlaim Faoi na Réitigh Scálú Ethereum is Teo](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
-- [An Treoir Phraiticiúil maidir le hUas-Scáluithe Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [An Treoir Phraiticiúil maidir le hUas-Scáluithe Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

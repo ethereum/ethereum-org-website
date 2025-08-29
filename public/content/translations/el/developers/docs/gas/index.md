@@ -135,8 +135,7 @@ lang: el
 
 - [Επεξήγηση του gas στο Ethereum](https://defiprime.com/gas)
 - [Μείωση της κατανάλωσης gas των έξυπνων συμβολαίων σας](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Απόδειξη Συμμετοχής ή Απόδειξης Εργασίας](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Στρατηγικές βελτιστοποίησης gas για Προγραμματιστές](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Έγγραφα EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 - [Πόροι EIP-1559 του Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Διαχωρίζοντας Μηχανισμούς από Μιμίδια](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Διαχωρίζοντας Μηχανισμούς από Μιμίδια](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

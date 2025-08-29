@@ -156,19 +156,6 @@ sidebarDepth: 2
     - 按小时计费定价
     - 全天候直接支持
 
-- [**DataHub**](https://datahub.figment.io)
-  - [文档](https://docs.figment.io/)
-  - 特性
-    - 每月 3 百万个请求的免费套餐选项
-    - RPC 、 HTTPS 和 WSS 端点
-    - 专用全节点和归档节点
-    - 自动扩容（容量折扣）
-    - 免费归档数据
-    - 服务分析
-    - 仪表板
-    - 全天候直接支持
-    - 加密货币支付（企业）
-
 - [**DRPC**](https://drpc.org/)
   - [相关文档](https://docs.drpc.org/)
   - 特性

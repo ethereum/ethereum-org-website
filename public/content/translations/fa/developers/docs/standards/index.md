@@ -17,7 +17,7 @@ incomplete: true
 - [صفحه گفتگوی EIP](https://ethereum-magicians.org/c/eips)
 - [مقدمه‌ای بر حاکمیت اتریوم](/governance/)
 - [مروری بر حاکمیت اتریوم](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
-- [هماهنگ‌سازی پروتکل توسعه پروتکل و ارتقا شبکه](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 مارس 2020 - هودسون جیمزسون_
+- [هماهنگ‌سازی پروتکل توسعه پروتکل و ارتقا شبکه](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 مارس 2020 - هودسون جیمزسون_
 - [فهرست پخش تمامی جلسات توسعه هسته اتریوم](https://www.youtube.com/@EthereumProtocol) _(فهرست پخش در یوتیوب)_
 
 ## انواع استانداردها {#types-of-standards}

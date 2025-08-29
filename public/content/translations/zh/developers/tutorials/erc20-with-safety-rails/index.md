@@ -132,8 +132,8 @@ Open Zeppelin ERC-20 合约包含[一个钩子（`_beforeTokenTransfer`](https:/
 
 OpenZeppelin 提供两种机制来实现管理访问：
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) 合约只有一个所有者。 具有 `onlyOwner`[ 修改器](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)的函数只能由该所有者调用。 所有者可以将所有权转让给其他人或完全放弃。 所有其他帐户的权利通常是相同的。
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) 合约具有[基于角色的访问控制 (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)。
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) 合约只有一个所有者。 具有 `onlyOwner`[ 修改器](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)的函数只能由该所有者调用。 所有者可以将所有权转让给其他人或完全放弃。 所有其他帐户的权利通常是相同的。
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) 合约具有[基于角色的访问控制 (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)。
 
 为简单起见，本文将使用 `Ownable`。
 

@@ -36,5 +36,4 @@ Enode 使用 URL 地址格式来识别以太坊节点。 十六进制节点 ID �
 ## 延伸阅读 {#further-reading}
 
 - [EIP-778：以太坊节点记录 (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [以太坊中的网络地址](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
 - [LibP2P：Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

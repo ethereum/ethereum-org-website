@@ -43,7 +43,6 @@ Alcuni client del consenso sono dotati di strumenti integrati per avviare Beacon
 
 - [Testnet locale usando Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Testnet locale usando Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Testnet locale usando Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Catene di prova pubbliche di Ethereum {#public-beacon-testchains}
 

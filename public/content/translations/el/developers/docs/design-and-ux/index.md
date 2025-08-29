@@ -216,7 +216,6 @@ lang: el
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Web3Design ανοιχτού κώδικα](https://www.web3designers.org/)
 
 ## Συστήματα σχεδίασης και άλλοι πόροι σχεδιασμού {#design-systems-and-resources}
 

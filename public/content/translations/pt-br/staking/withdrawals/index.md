@@ -212,7 +212,6 @@ Não. Uma vez que um validador tenha saído e seu saldo completo tenha sido saca
 
 - [Saques da plataforma de staking](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Saques por push da Beacon chain como operações](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Saque de ETH em skate (teste) com Potus e Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain envia as retiradas como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Compreendendo como o Saldo Efetivo do Validador funciona](https://www.attestant.io/posts/understanding-validator-effective-balance/)

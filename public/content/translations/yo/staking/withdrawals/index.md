@@ -212,7 +212,6 @@ Rara. Ni kete ti olufọwọsi kan ba ti jade ati pe o ti yọ owo to ku re kuro
 
 - [Àwọn yiyọkúrò Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Eip-4895: Beacon chain push withdrawals as operations](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

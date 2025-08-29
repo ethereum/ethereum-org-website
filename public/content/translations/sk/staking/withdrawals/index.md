@@ -212,7 +212,6 @@ Nie. Hneď ako validátor skončí a vyberie sa jeho celý zostatok, všetky dod
 
 - [Výbery zo Staking Launchpadu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: nútené výbery beacon chainu výberu ako operácia](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: výber stakovaných ETH (testovanie) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: nútené výbery beacon chainu ako operácia s Alexom Stokesom](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumenie efektívnemu zostatku validátora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

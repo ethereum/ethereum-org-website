@@ -212,7 +212,6 @@ eventName="read more">
 
 - [स्टेकिंग लांच पैड निकासी](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: संचालन के रूप में बीकन चेन पुश निकासी](https://eips.ethereum.org/EIPS/eip-4895)
-- [इथेरियम जटिलताएं - शंघाई](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: पोटुज़ और हसियाओ-वेई वांग के साथ स्टेक ETH निकासी (परीक्षण)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: एलेक्स स्टोक्स के साथ संचालन के रूप में बीकन चेन पुश निकासी](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [सत्यापनकर्ता प्रभावी शेष को समझना](https://www.attestant.io/posts/understanding-validator-effective-balance/)

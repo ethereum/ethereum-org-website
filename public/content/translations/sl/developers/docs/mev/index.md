@@ -117,7 +117,6 @@ Medtem ko DeFi raste in pridobiva na popularnosti, bo MEV kmalu lahko konkretno 
 ## Povezani viri {#related-resources}
 
 - [Flash roboti GitHub](https://github.com/flashbots/pm)
-- [MEV-raziskovanje](https://explore.flashbots.net/) _Nadzorna plošča in raziskovalec za transakcije MEV_
 
 ## Nadaljnje branje {#further-reading}
 

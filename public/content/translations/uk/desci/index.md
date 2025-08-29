@@ -95,7 +95,6 @@ Web3 має потенціал розірвати цю несправну мод
 - [Molecule: фінансуйте й отримуйте фінансування для своїх дослідницьких проєктів](https://www.molecule.xyz/)
 - [VitaDAO: отримуйте фінансування через угоди про спонсорські дослідження в галузі довголіття](https://www.vitadao.com/)
 - [ResearchHub: публікуйте наукові результати та беріть участь у розмовах із колегами](https://www.researchhub.com/)
-- [LabDAO: складіть білок in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: запитуйте кліматичні дані, зібрані децентралізованою спільнотою](https://www.dclimate.net/)
 - [DeSci Foundation: конструктор інструментів публікації DeSci](https://descifoundation.org/)
 - [DeSci.World: єдиний майданчик для перегляду та взаємодії з децентралізованою наукою](https://desci.world)

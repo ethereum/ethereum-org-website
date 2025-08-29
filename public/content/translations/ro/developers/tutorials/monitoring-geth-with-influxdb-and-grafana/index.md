@@ -29,7 +29,7 @@ Un client Ethereum colectează numeroase date care se pot citi sub forma unei ba
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-De asemenea, există [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), o opțiune preconfigurată cu InfluxDB și Grafana. Se poate configura cu ușurință folosind docker și [Ethbian OS](https://ethbian.org/index.html) pentru RPi 4.
+De asemenea, există [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), o opțiune preconfigurată cu InfluxDB și Grafana.
 
 În acest tutorial vă vom configura clientul Geth pentru a împinge date către InfluxDB, care va crea cu ele o bază de date, apoi Grafana pentru a crea o vizualizare grafică a acestora. Dacă executați manual acest proces, vă va ajuta să îl înțelegeți mai bine, să îl modificați și să îl implementați în diferite medii.
 

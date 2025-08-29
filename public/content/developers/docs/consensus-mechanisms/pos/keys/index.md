@@ -96,5 +96,5 @@ Each branch is separated by a `/` so `m/2` means start with the master key and f
 
 - [Ethereum Foundation blog post by Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 key generation](https://eips.ethereum.org/EIPS/eip-2333)
-- [EIP-7002: Execution Layer Triggered Exits](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [EIP-7002: Execution Layer Triggered Exits](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Key management at scale](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

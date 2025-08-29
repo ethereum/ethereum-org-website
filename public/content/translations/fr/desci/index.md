@@ -95,7 +95,6 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [Molecule : Financer et recevoir des fonds pour vos projets de recherche](https://www.molecule.xyz/)
 - [VitaDAO : recevoir des fonds par le biais d'accords de recherche sponsorisés en vue de recherches sur la longévité](https://www.vitadao.com/)
 - [Research Hub : publier un résultat scientifique et participer à une conversation avec des pairs](https://www.researchhub.com/)
-- [LabDAO : plier une protéine in-silico](https://alphafodl.vercel.app/)
 - [dClimate API : envoyer des requêtes concernant les données climatiques recueillies par une communauté décentralisée](https://www.dclimate.net/)
 - [DeSci Foundation : fabricant d'outils de publication DeSci](https://descifoundation.org/)
 - [DeSci.World : guichet unique grâce auquel les utilisateurs peuvent avoir une visibilité, échanger avec la science décentralisée](https://desci.world)

@@ -548,17 +548,6 @@ export const getResources = async ({
         },
       ],
     },
-    {
-      title: t("page-resources-mempool-title"),
-      items: [
-        {
-          title: "Ethereum Mempool Dashboard",
-          description: t("page-resources-mempool-mempool-description"),
-          href: "https://mempool.pics",
-          imgSrc: IconEthGlyphBlueCircle,
-        },
-      ],
-    },
   ]
 
   const resources = [

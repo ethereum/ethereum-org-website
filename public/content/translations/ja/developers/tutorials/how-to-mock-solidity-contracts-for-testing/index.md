@@ -24,7 +24,7 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 ## 例：プライベートのERC-20コントラクト {#example-private-erc20}
 
-ここでは、当初にプライベート期間が設定された ERC-20 コントラクトを使って説明します。 トークン所有者はプライベートユーザーを管理でき、当初トークンを受け取ることができるのはプライベートユーザーのみになります。 設定した時間が経過した後は、すべてのユーザーがトークンを使用できるようになります。 参考までに、この例では新しいOpenZeppelinコントラクトv3に含まれている[`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks)フックを使用しています。
+ここでは、当初にプライベート期間が設定された ERC-20 コントラクトを使って説明します。 トークン所有者はプライベートユーザーを管理でき、当初トークンを受け取ることができるのはプライベートユーザーのみになります。 設定した時間が経過した後は、すべてのユーザーがトークンを使用できるようになります。 参考までに、この例では新しいOpenZeppelinコントラクトv3に含まれている[`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks)フックを使用しています。
 
 ```solidity
 pragma solidity ^0.6.0;

@@ -40,7 +40,6 @@ Membangun dapat bisa saja sulit. Berikut adalah beberapa lingkungan yang berfoku
 
 - [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Universitas Web3](https://www.web3.university/)
 
 Anda juga dapat menemukan dokumentasi dan panduan pengembangan di bagian [Sumber pengembang Ethereum](/developers/) kami.

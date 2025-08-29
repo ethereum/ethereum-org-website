@@ -95,7 +95,6 @@ Terokai projek dan sertai komuni DeSci.
 - [Molekul: Membiayai dan mendapatkan pembiayaan untuk projek penyelidikan anda](https://www.molecule.xyz/)
 - [VitaDAO: menerima pembiayaan melalui perjanjian penyelidikan yang ditaja untuk penyelidikan jangka hayat](https://www.vitadao.com/)
 - [ResearchHub: siarkan hasil saintifik dan libatkan diri dalam perbualan dengan rakan sebaya](https://www.researchhub.com/)
-- [LabDAO: lipat protein dalam-siliko](https://alphafodl.vercel.app/)
 - [dClimate API: data iklim pertanyaan yang dikumpul oleh komuniti teragih](https://www.dclimate.net/)
 - [Yayasan DeSci: pembina alat penerbitan DeSci](https://descifoundation.org/)
 - [DeSci.World: kedai sehenti untuk pengguna melihat, melibatkan diri dengan sains teragih](https://desci.world)

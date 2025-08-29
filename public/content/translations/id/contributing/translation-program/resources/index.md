@@ -17,7 +17,6 @@ Anda dapat menemukan beberapa panduan dan perangkat yang berguna untuk penerjema
 
 ## Perangkat {#tools}
 
-- [Portal Bahasa Microsoft](https://www.microsoft.com/en-us/language) _– berguna untuk menemukan dan memeriksa terjemahan standar istilah_
 - [Linguee](https://www.linguee.com/) _– mesin pencarian khusus terjemahan dan kamus yang memungkinkan pencarian berdasarkan kata atau frasa_
 - [Pencarian istilah Proz](https://www.proz.com/search/) _– basis data kamus terjemahan dan glosarium untuk istilah khusus_
 - [Eurotermbank](https://www.eurotermbank.com/) _– koleksi terminologi Eropa dalam 42 bahasa_

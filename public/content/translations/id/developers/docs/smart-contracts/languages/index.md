@@ -111,7 +111,6 @@ Untuk informasi selengkapnya, [baca prinsip Vyper](https://vyper.readthedocs.io/
 - [Lembar Kecurangan](https://reference.auditless.com/cheatsheet)
 - [Kerangka kerja dan alat pengembangan kontrak pintar untuk Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - belajar mengamankan dan meretas kontrak pintar Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Contoh kerentanan Vyper](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub untuk pengembangan](https://github.com/zcor/vyper-dev)
 - [Contoh kontrak pintar terbaik Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Sumber daya pilihan Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
@@ -225,7 +224,6 @@ Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean apa pun de
 
 - [Dokumentasi Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Dokumentasi Yul+](https://github.com/fuellabs/yulp)
-- [Playground Yul+](https://yulp.fuel.sh/)
 - [Postingan Pengantar Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Contoh kontrak {#example-contract-2}
@@ -320,5 +318,5 @@ Untuk perbandingan sintaksis dasar, siklus hidup kontrak, antarmuka, operator, s
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Pustaka Kontrak Solidity oleh OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Pustaka Kontrak Solidity oleh OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Contoh Solidity](https://solidity-by-example.org)

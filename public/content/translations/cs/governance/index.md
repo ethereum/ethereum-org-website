@@ -180,5 +180,5 @@ Správa Etherea není pevně definována. Různí členové komunity mají na ř
 - [Kdo je Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Řízení, část 2: Plutokracie je furt špatná](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Nahrazení mincemi hlasované řízení](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [Pochopení řízení blockchainu](https://research.2077.xyz/understanding-blockchain-governance) – _2077 Research_
+- [Pochopení řízení blockchainu](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) – _2077 Research_
 - [Vláda Etherea](https://www.galaxy.com/insights/research/ethereum-governance/) – _Christine Kim_

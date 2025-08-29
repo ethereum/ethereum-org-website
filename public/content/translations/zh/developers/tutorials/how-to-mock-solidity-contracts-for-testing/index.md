@@ -24,7 +24,7 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 ## 示例：私密 ERC20 合约 {#example-private-erc20}
 
-本文使用一个在开始时提供私密时间的示例 ERC-20 合约。 合约所有者可以管理私密用户，而且只有这些用户才能在开始时接收代币。 经过特定一段时间后，所有人就都可以使用代币了。 如果你感到好奇，我们使用新 OpenZeppelin 合约（第三版）中的 [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) 钩子进一步阐释。
+本文使用一个在开始时提供私密时间的示例 ERC-20 合约。 合约所有者可以管理私密用户，而且只有这些用户才能在开始时接收代币。 经过特定一段时间后，所有人就都可以使用代币了。 如果你感到好奇，我们使用新 OpenZeppelin 合约（第三版）中的 [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) 钩子进一步阐释。
 
 ```solidity
 pragma solidity ^0.6.0;

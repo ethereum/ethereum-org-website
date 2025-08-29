@@ -212,7 +212,6 @@ Nem. Miután egy validátor kilépett, és a teljes egyenlegét kivette, az adot
 
 - [Staking Launchpad visszavonások](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-lánc operációs műveletként intézi a visszavonásokat](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: A letétbe helyezett ETH visszavonása (tesztelés) – Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon lánc operációs műveletként intézi a visszavonásokat – Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [A validátor valós egyenlegének megértése](https://www.attestant.io/posts/understanding-validator-effective-balance/)

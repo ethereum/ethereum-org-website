@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### 硬件 {#hardware}
 
-不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/networkType/Hosting)来看，在云端运行大部分节点可能引发单点故障。
+不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/network-types)来看，在云端运行大部分节点可能引发单点故障。
 
 以太坊客户端可以在你的计算机、笔记本电脑、服务器甚至单板计算机上运行。 虽然可以在你的个人计算机上运行客户端，但为你的节点配备一台专用机器可以显著提高其性能和安全性，同时最大限度地减少对你的主计算机的影响。
 
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/get-started/running-node/)。
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
 

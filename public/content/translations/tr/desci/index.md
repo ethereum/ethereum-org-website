@@ -95,7 +95,6 @@ DeSci topluluğuna katılın ve gelişmelerden haberdar olun!
 - [Molecule: Araştırma projeleriniz için fon sağlayın ve fon alın](https://www.molecule.xyz/)
 - [VitaDAO: Uzun ömürlü araştırmalar için sponsorlu araştırma anlaşmalı yoluyla fon alın](https://www.vitadao.com/)
 - [ResearchHub: Bilimsel bir sonuç yayınlayın ve taraflarla iletişime geçin](https://www.researchhub.com/)
-- [LabDAO: in-silico proteinini katlayın](https://alphafodl.vercel.app/)
 - [dClimate API: Merkeziyetsiz bir topluluk tarafından toplanmış iklim verilerini sorgulayın](https://www.dclimate.net/)
 - [DeSci Vakfı: DeSci yayınlama aracı oluşturucu](https://descifoundation.org/)
 - [DeSci.Dünyası: Kullanıcıların merkeziyetsiz bilimi görüntülemesi ve etkileşim kurması için tek adres](https://desci.world)

@@ -212,7 +212,6 @@ Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben 
 
 - [Startplattform für Staking-Auszahlungen](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-Kette implementiert Abhebungen als Operationen](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Auszahlung von gestaktem ETH (Testing) mit Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Auszahlungen per Beacon Chain Push als Operationen mit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Verständnis der effektiven Bilanz des Validators](https://www.attestant.io/posts/understanding-validator-effective-balance/)

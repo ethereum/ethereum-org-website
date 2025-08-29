@@ -399,8 +399,6 @@ Existem vários aplicativos de oráculos que você pode integrar no seu dapp Eth
 
 **[Band Protocol](https://bandprotocol.com/)**: _Band Protocol é uma plataforma de dados de oráculos cross-chain que agrega e conecta dados do mundo real e APIs a contratos inteligentes._
 
-**[Paralink](https://paralink.network/)** — _ o Paralink fornece uma plataforma de código aberto e descentralizada de oráculos para contratos inteligentes em execução no Ethereum e em outras blockchains populares._
-
 **[Rede Pyth](https://pyth.network/)** — _A rede Pyth é uma rede de oráculos financeiros internos projetada para publicar dados contínuos do mundo real em cadeia em um ambiente autossustentável, descentralizado e inviolável._
 
 ## Leitura Adicional {#further-reading}
@@ -412,7 +410,6 @@ Existem vários aplicativos de oráculos que você pode integrar no seu dapp Eth
 - [Oráculos descentralizados: um panorama abrangente](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Como implementar um oráculo blockchain no Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Por que os contratos inteligentes não podem fazer chamadas à API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
-- [Por qu precisamos de oráculos descentralizados](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
 - [Você quer usar um oráculo para preços](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
 
 **Vídeos**

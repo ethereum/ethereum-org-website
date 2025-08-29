@@ -212,7 +212,6 @@ eventName="read more">
 
 - [Вывод средств с панели запуска стейкинга](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: вывод средств в сети Beacon в виде операций](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders — об обновлении Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: вывод ETH из стейкинга (тестирование), Potuz и Сяо-Вэй Ван](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: вывод средств в сети Beacon как операция (Алекс Стокс)](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Понимание эффективного баланса валидатора](https://www.attestant.io/posts/understanding-validator-effective-balance/)

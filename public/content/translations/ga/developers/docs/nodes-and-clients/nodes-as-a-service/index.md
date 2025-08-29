@@ -156,19 +156,6 @@ Seo liosta de chuid de na soláthraithe nód Ethereum is mó tóir, ná bíodh l
     - Praghsanna íoc in aghaidh na huaire
     - Tacaíocht dhíreach 24/7
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Doiciméid](https://docs.figment.io/)
-  - Gnéithe
-    - Rogha sraithe saor in aisce le 3,000,000 iarratas / sa mhí
-    - Críochphointí RPC agus WSS
-    - Nóid iomlána agus chartlainne tiomnaithe
-    - Uathscálú (Lascaine Imleabhar)
-    - Sonraí cartlainne saor in aisce
-    - Anailísíocht Seirbhíse
-    - Deais
-    - Tacaíocht dhíreach 24/7
-    - Íoc i gCriptea-airgeadra (Fiontar)
-
 - [**DRPC**](https://drpc.org/)
   - [Doiciméid](https://docs.drpc.org/)
   - Gnéithe

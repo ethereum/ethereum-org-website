@@ -216,7 +216,6 @@ Participez à des organisations professionnelles communautaires ou rejoignez des
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Open Source Web3Design](https://www.web3designers.org/)
 
 ## Systèmes de design et autres ressources de conception {#design-systems-and-resources}
 

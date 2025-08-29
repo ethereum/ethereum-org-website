@@ -114,7 +114,6 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 - [Web3 Army](https://web3army.xyz/)
 - [Jobs im Crypto Valley](https://cryptovalley.jobs/)
 - [Arbeitsplätze bei Ethereum](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Einer DAO beitreten {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Web3-Entwicklungskollektiv aus Freiberuflern, das als DAO arbeitet_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gemeinschaftsverwaltung von DAOHaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Rechtstechnik_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) – _Kunstgemeinschaft_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _Venture für vorinstallierte Kryptoprojekte_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG-Spielmechanismen für das echte Leben_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digi-physische Modemarken_

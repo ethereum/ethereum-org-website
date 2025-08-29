@@ -43,7 +43,6 @@ Hardhat 網路內建了 Hardhat，這是一個專業以太坊開發環境。
 
 - [使用 Lodestar 的本地測試網](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lighthouse 的本地測試網](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [使用 Nimbus 的本地測試網](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公共以太坊測試鏈 {#public-beacon-testchains}
 

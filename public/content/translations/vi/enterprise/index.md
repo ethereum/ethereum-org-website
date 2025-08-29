@@ -63,7 +63,6 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 ### Bảo mật {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Chi tiết [tại đây](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Chi tiết [tại đây](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
 - [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Chi tiết [tại đây](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Bảo mật {#security}
@@ -82,7 +81,6 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 - [Đàm luận về Infura](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat ̣̣̣(Kênh Besu)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Kênh Burrow)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Kênh Quorum Slack](http://bit.ly/quorum-slack)

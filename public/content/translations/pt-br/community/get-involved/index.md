@@ -112,7 +112,6 @@ O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com im
 - [Web3 Army](https://web3army.xyz/)
 - [Empregos na Crypto Valley](https://cryptovalley.jobs/)
 - [Trabalhe para a Ethereum](https://startup.jobs/ethereum-jobs)
-- [CriptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Participe de uma DAO {#decentralized-autonomous-organizations-daos}
 
@@ -123,7 +122,6 @@ O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com im
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Grupo de freelancers de desenvolvimento Web3 trabalhando como DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _Governaça comunitária da DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Engenharia jurídica_
-- [Machi X](https://machix.com) [@MachiXOficial](https://twitter.com/MachiXOfficial) – _Comunidade artística_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) – _Incubadora de DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _Venture para projetos cripto pré-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _Mecânica de jogos para a vida real MMORPG_

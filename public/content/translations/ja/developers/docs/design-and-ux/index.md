@@ -70,7 +70,6 @@ lang: ja
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [オープンソースWeb3デザイン](https://www.web3designers.org/)
 
 ## デザインシステム {#design-systems}
 

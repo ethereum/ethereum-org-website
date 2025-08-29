@@ -133,7 +133,6 @@ Jeśli chcesz monitorować ceny gazu, aby taniej wysłać swoje ETH, możesz sko
 
 - [Objaśnienia dotyczące gazu Ethereum](https://defiprime.com/gas)
 - [Zmniejszanie zużycia gazu przez Twój inteligentny kontrakt](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Proof-of-stake kontra proof-of-work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategie optymalizacji gazu dla deweloperów](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Dokumenty EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)
 - [Zasoby EIP-1559 Tima Beiko](https://hackmd.io/@timbeiko/1559-resources)

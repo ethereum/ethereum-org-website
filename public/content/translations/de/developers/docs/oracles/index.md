@@ -300,7 +300,6 @@ Sie können mehr über die Anwendungen von Chainlink erfahren, indem Sie den [Ch
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
-- [Paralink](https://paralink.network/)
 - [Dos.Netzwerk](https://dos.network/)
 
 ### Erstellen Sie einen Oracle-Smart-Contract {#build-an-oracle-smart-contract}
@@ -430,7 +429,6 @@ _Wir würden gerne mehr Dokumentation über die Erstellung eines Oracle-Smart-Co
 - [Dezentralisierte Oracle: Ein umfassender Überblick](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) - _Julien Thevenard_
 - [Implementieren eines Blockchain-Oracles auf Ethereum](https://medium.com/@pedrodc/implementieren-ein-blockchain-orakel-auf-ethereum-cedc7e26b49e) - _Pedro Costa_
 - [Warum können Smart Contracts keine API-Aufrufe tätigen?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
-- [Warum wir dezentralisierte Oracles brauchen](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Banklos_
 - [Sie wollen also ein Preis-Oracle benutzen](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
 
 **Videos**

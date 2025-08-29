@@ -216,7 +216,7 @@ A fenti támadástípusok az okosszerződések kódjához (újbóli belépés) �
 
 További olvasnivaló:
 
-- [Consensys Okosszerződés Ismet Támadások](https://consensys.github.io/smart-contract-best-practices/attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
+- [Consensys Okosszerződés Ismet Támadások](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - A CWE válogatott listája, mely az Ethereumra és az okosszerződésekre is érvényes
 
 ## Biztonsági eszközök {#security-tools}

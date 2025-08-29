@@ -95,7 +95,6 @@ Web3 این پتانسیل را دارد که با آزمایش مدل‌های 
 - [Molecule: برای پروژه های تحقیقاتی خود بودجه و بودجه دریافت کنید](https://www.molecule.xyz/)
 - [VitaDAO: دریافت بودجه از طریق توافقنامه های تحقیقاتی حمایت شده برای تحقیقات طول عمر](https://www.vitadao.com/)
 - [ResearchHub: یک نتیجه علمی را ارسال کنید و با همتایان خود گفتگو کنید](https://www.researchhub.com/)
-- [LabDAO: یک پروتئین را در سیلیکو تا کنید](https://alphafodl.vercel.app/)
 - [dClimate API: داده‌های آب و هوایی را که توسط یک جامعه غیرمتمرکز جمع‌آوری شده است، جستجو کنید](https://www.dclimate.net/)
 - [DeSci Foundation: سازنده ابزار انتشارات DeSci](https://descifoundation.org/)
 - [DeSci.World: فروشگاه تک مرحله ای برای مشاهده کاربران، درگیر شدن با علم غیرمتمرکز](https://desci.world)

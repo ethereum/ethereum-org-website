@@ -106,7 +106,6 @@ _Upoštevajte, da razlaga v videu izraz "plast 2" uporablja za naslavljanje vseh
 - [Nepopoln vodnik po zvitkih](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [ZK-zvitki, ki jih poganja Ethereum: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistični zvitki proti ZK-zvitkom](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Razširljivost blokovne verige brez znanja](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Zakaj so zvitki + podatkovni drobci edina primerna rešitev za visoko razširljivost](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 
 _Poznate vir iz skupnosti, ki vam je pomagal? Uredite to stran in ga dodajte!_

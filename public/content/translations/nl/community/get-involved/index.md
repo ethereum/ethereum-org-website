@@ -100,7 +100,6 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 - [Web3 Army](https://web3army.xyz/)
 - [Banen bij Crypto Valley](https://cryptovalley.jobs/)
 - [Ethereum-banen](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Neem deel aan een DAO {#decentralized-autonomous-organizations-daos}
 
@@ -111,7 +110,6 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3-ontwikkelingscollectief dat werkt als een DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gemeenschapsbestuur van DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Juridische engineering_
-- [Machi X](https://machix.com) [@MachiXOfficiële](https://twitter.com/MachiXOfficial) - _Kunstgemeenschap_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO-incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Onderneming voor pre-seed cryptoprojecten_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG-spelmechanismen voor het echte leven_

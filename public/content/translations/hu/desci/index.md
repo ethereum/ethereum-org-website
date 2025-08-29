@@ -95,7 +95,6 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [Molecule: Finanszírozás biztosítása és elnyerése a kutatási projektjére](https://www.molecule.xyz/)
 - [VitaDAO: hosszútávú kutatások finanszírozása a szponzorált kutatási megállapodások alapján](https://www.vitadao.com/)
 - [ResearchHub: tudományos eredmények publikálása és azok megvitatása munkatársaival](https://www.researchhub.com/)
-- [LabDAO: fehérjék számítógépes szimulációja](https://alphafodl.vercel.app/)
 - [dClimate API: keresés a decentralizált közösség által gyűjtött klímaadatokban](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci publikációs eszközfejlesztés](https://descifoundation.org/)
 - [DeSci.World: itt minden megtudható a decentralizált tudományról](https://desci.world)

@@ -66,6 +66,6 @@ Oricine poate crea un EIP. Înainte de a trimite o propunere, trebuie să citeș
 
 <cite class="citation">
 
-Conținutul paginii furnizat parțial din [Guvernarea Dezvoltării Protocolului Ethereum și Coordonarea Actualizării Rețelei] (https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) de Hudson Jameson
+Conținutul paginii furnizat parțial din [Guvernarea Dezvoltării Protocolului Ethereum și Coordonarea Actualizării Rețelei] (https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) de Hudson Jameson
 
 </cite>

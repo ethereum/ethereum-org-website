@@ -362,7 +362,7 @@ contract PriceConsumerV3 {
 
 ランダムな値をオフチェーンで生成した上でオンチェーンに送信することは可能ですが、このアプローチではユーザーに対する信頼性の要件が高くなります。 ユーザーは、生成された値が本当に予測不可能なメカニズムによって生成され、転送に伴う改変が生じていないことを信じなければならないためです。
 
-オフチェーンでの計算を念頭に置いて設計されたオラクルでは、オフチェーンでランダムな値をセキュアに生成した上で、生成プロセスの予測不可能性を確証する暗号化された証明と共にオンチェーンでブロードキャストすることで、この問題を解決します。 このようなアプローチの例としては、[Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) （検証可能なランダム関数）があります。これは、証明可能な形で、公平かつ操作不可の乱数を生成する機能（RNG）であり、予測不可能な計算値を必要とする用途を持つ信頼性が高いスマートコントラクトを開発する上で有益です。 例をもう一つあげると、 [API3 QRNG](https://docs.api3.org/explore/qrng/)が量子乱数生成器 (QRNG) を提供しています。これは、量子現象に基づくWeb3 RNGの公開メソッドであり、オーストラリア国立大学 (ANU) の好意により提供されています。
+オフチェーンでの計算を念頭に置いて設計されたオラクルでは、オフチェーンでランダムな値をセキュアに生成した上で、生成プロセスの予測不可能性を確証する暗号化された証明と共にオンチェーンでブロードキャストすることで、この問題を解決します。 このようなアプローチの例としては、[Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) （検証可能なランダム関数）があります。これは、証明可能な形で、公平かつ操作不可の乱数を生成する機能（RNG）であり、予測不可能な計算値を必要とする用途を持つ信頼性が高いスマートコントラクトを開発する上で有益です。
 
 ### イベントの結果を取得する {#getting-outcomes-for-events}
 
@@ -398,8 +398,6 @@ Chainlinkの[Keeper Network](https://chain.link/keepers)では、スマートコ
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocolは、現実世界のデータを集約し、各種APIとスマートコントラクトを接続するための、クロスチェーンデータを対象とするオラクルプラットフォームです。_
 
-**[Paralink](https://paralink.network/)** - _Paralinkは、イーサリアムおよびその他のメジャーなブロックチェーン上で実行されるスマートコントラクトを対象とする、オープンソースで分散化されたオラクルプラットフォームです。_
-
 **[Pyth Network](https://pyth.network/)** - _Pyth Networkは、改ざん不可、分散化、および自己持続可能な特徴を持つ環境において、現実世界のデータを継続的にオンチェーンで公開するために設計された、ファーストパーティの金融オラクルネットワークです。_
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAOでは、ファーストパーティのオラクルソリューションを提供しています。スマートコントラクトの分散型ソリューションにより、ソースの透明性、セキュリティ、スケーラビリティを向上させることができます。_
@@ -415,7 +413,6 @@ Chainlinkの[Keeper Network](https://chain.link/keepers)では、スマートコ
 - [分散型オラクル：包括的な概要](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _ジュリアン・テヴェナード作成。_
 - [イーサリアムにおける ブロックチェーン・オラクルの実装](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _ペドロ・コスタ作成。_
 - [スマートコントラクトがAPIコールを行えないのはなぜか？](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [分散型のオラクルが必要な理由](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [価格オラクルを使用したい場合の検討事項](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **ビデオ**

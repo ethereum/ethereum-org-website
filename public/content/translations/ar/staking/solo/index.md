@@ -199,5 +199,4 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 - [تقديم المساعدة بخصوص تنوع العملاء](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [تنوع العملاء في طبقة إجماع الآراء الخاصة بإيثريوم](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [كيفية: التسوق لشراء أجهزة برنامج مدقق إيثريوم](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [بتعليمات مفصلة: كيفية الانضمام إلى شبكة تجريب إيثريوم 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [نصائح لتفادي التعرض للشطب من Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_

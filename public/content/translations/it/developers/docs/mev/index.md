@@ -204,7 +204,6 @@ Alcuni progetti, come MEV Boost, utilizzano l'API Builder come parte di una stru
 
 - [Documentazione dei Flashbot](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Pannello di controllo ed esploratore live delle transazioni per transazioni MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Tracker con statistiche in tempo reale per relay e costruttori di blocchi di MEV Boost_
 
 ## Letture consigliate {#further-reading}

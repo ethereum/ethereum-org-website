@@ -216,7 +216,7 @@ I tipi di attacco illustrati sopra coprono i problemi del codice di Smart Contra
 
 Letture consigliate:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
+- [Consensys Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Elenco curato di CWE che si applicano a Ethereum e Smart Contract
 
 ## Strumenti per la sicurezza {#security-tools}

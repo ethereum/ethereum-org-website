@@ -200,7 +200,6 @@ Para desbloquear e receber todo o seu saldo de volta, você deve concluir o proc
 - [Ajudando a diversidade dos clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidade de clientes na camada de consenso do Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Como comprar o hardware validador do Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Passo a passo: Como ingressar na rede de testes da Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Dicas de prevenção de cortes Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
 
 <QuizWidget quizKey="staking-solo" />

@@ -22,12 +22,6 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 
 ## Dostępne frameworki {#available-frameworks}
 
-**Epirus —** **_platforma do tworzenia, wdrażania i monitorowania aplikacji blockchain na JVM_**
-
-- [Strona główna](https://www.web3labs.com/epirus)
-- [Dokumentacja](https://docs.epirus.io)
-- [GitHub](https://github.com/epirus-io/epirus-cli)
-
 **Hardhat —** **_środowisko programistyczne Ethereum dla profesjonalistów_**
 
 - [hardhat.org](https://hardhat.org)

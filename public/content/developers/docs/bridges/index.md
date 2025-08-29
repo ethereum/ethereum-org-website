@@ -127,8 +127,8 @@ To monitor contract activity across chains, developers can use subgraphs and dev
 - [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - Oct 1, 2021 – Arjun Bhuptani
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - Oct 4, 2021 – Mustafa Al-Bassam
 - [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - Apr 28, 2022 – Arjun Chand
-- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - June 20, 2024 – Alex Hook
-- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - June 12, 2024 – Emmanuel Awosika
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - June 20, 2024 – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - June 12, 2024 – Emmanuel Awosika
 
 Additionally, here are some insightful presentations by [James Prestwich](https://twitter.com/_prestwich) that can help develop a deeper understanding of bridges:
 

@@ -199,5 +199,4 @@ summaryPoints:
 - [ক্লায়েন্ট বৈচিত্র্যকে সাহায্য করা](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [ইথেরিয়ামের কনসেনসাস লেয়ারে ক্লায়েন্ট বৈচিত্র্য](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [কিভাবে: ইথেরিয়াম ভ্যালিডেটর হার্ডওয়্যারের জন্য কেনাকাটা করবেন](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [ধাপে ধাপে: কিভাবে ইথেরিয়াম 2.0 টেস্টনেটে যোগদান করবেন](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Eth2 স্ল্যাশিং প্রতিরোধ টিপস](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_

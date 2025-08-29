@@ -132,8 +132,8 @@ Parfois, il est utile d'avoir un administrateur qui peut annuler des erreurs. Po
 
 OpenZeppelin fournit deux mécanismes pour activer l'accès administratif :
 
-- Les contrats [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) ont un seul propriétaire. Les fonctions ayant le [modificateur](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` ne peuvent être appelées que par ce propriétaire. Les propriétaires peuvent transférer la propriété à quelqu'un d'autre ou y renoncer complètement. Les droits de tous les autres comptes sont généralement identiques.
-- Les contrats [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) ont [un contrôle d'accès basé sur les rôles (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
+- Les contrats [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) ont un seul propriétaire. Les fonctions ayant le [modificateur](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` ne peuvent être appelées que par ce propriétaire. Les propriétaires peuvent transférer la propriété à quelqu'un d'autre ou y renoncer complètement. Les droits de tous les autres comptes sont généralement identiques.
+- Les contrats [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) ont [un contrôle d'accès basé sur les rôles (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Pour simplifier, dans cet article, nous utilisons `Ownable`.
 

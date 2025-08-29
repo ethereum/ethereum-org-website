@@ -204,7 +204,6 @@ MEV Boost gibi bazı projeler, genelleştirilmiş öncü/sandviç saldırıları
 
 - [Flashbot belgeleri](https://docs.flashbots.net/)
 - [Flashbotlar GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _MEV işlemleri için gösterge paneli ve canlı işlem gezgini_
 - [mevboost.org](https://www.mevboost.org/)-_ MEV-Boost röle ve blok inşacıları için gerçek zamanlı istatistiklere sahip izleyici_
 
 ## Daha fazla bilgi {#further-reading}

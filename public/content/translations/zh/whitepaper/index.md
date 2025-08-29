@@ -383,7 +383,7 @@ def register(name, value):
 3. 实际中挖矿能力的分配最终可能极端不平等。
 4. 热衷于破坏网络的投机者、政敌和疯子确实存在，他们可以巧妙地设置合约，使得他们的成本远低于其他验证节点支付的成本。
 
-(1) 让矿工趋向于收录更少的交易，并且 (2) 增加 `NC`；因此，这两种作用会相互抵消 一部分 。<sup>[如何抵消？](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) 和 (4) 是主要问题，为了解决它们，我们简单地制订了一个 浮动上限：没有区块能够包含比 `BLK_LIMIT_FACTOR` 乘以长期指数移动平均值更多的操作数。 具体如下：
+(1) 让矿工趋向于收录更少的交易，并且 (2) 增加 `NC`；因此，这两种作用会相互抵消 一部分 。<sup>[如何抵消？](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) 和 (4) 是主要问题，为了解决它们，我们简单地制订了一个 浮动上限：没有区块能够包含比 `BLK_LIMIT_FACTOR` 乘以长期指数移动平均值更多的操作数。 具体如下：
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit * (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _尽管采用了线性发行方式，然而和比特币一样，以太币的长�
 16. [GHOST 协议](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 和自治代理，Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn 在图灵节上谈论智能资产](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [以太坊递归长度前缀编码 (RLP)](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [以太坊默克尔帕特里夏树](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [以太坊递归长度前缀编码 (RLP)](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [以太坊默克尔帕特里夏树](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 论默克尔求和树](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_有关本白皮书的历史，请参阅[此维基文章](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
+_有关本白皮书的历史，请参阅[此维基文章](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
 
 _和众多社区驱动的开源软件项目一样，以太坊自启动以来一直不断发展。 若想了解以太坊的最新进展以及如何更改以太坊协议，我们推荐你阅读[本指南](/learn/)。_

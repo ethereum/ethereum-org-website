@@ -114,7 +114,6 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 - [Offres Web3 Army](https://web3army.xyz/)
 - [Offres Crypto Valley Jobs](https://cryptovalley.jobs/)
 - [Jobs Ethereum](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Rejoindre une organisation autonome décentralisée (DAO) {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ Les « DAO » sont des organisations autonomes décentralisées. Ces groupes t
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *Collectif de développement Web3 indépendant travaillant en tant que DAO*
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *Gouvernance communautaire de DAOhaus*
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *Ingénierie juridique*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *Communauté artistique*
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *Venture pour des projets de crypto pré-amorçage*
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *Mécaniques de jeu MMORPG pour la vraie vie*
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *Marques de vêtements digiphysiques*

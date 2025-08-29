@@ -29,7 +29,7 @@ published: 2021-01-13
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-さらに、[Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter)がありますが、これはInfluxDBおよびGrafana上ですでに設定済みのオプションです。 DockerならびにRPi 4向けの[Ethbian OS](https://ethbian.org/index.html)を使用すれば、簡単に設定することができます。
+さらに、[Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter)がありますが、これはInfluxDBおよびGrafana上ですでに設定済みのオプションです。
 
 このチュートリアルでは、InfluxDBにデータをプッシュするように Gethクライアントを設定し、さらに、Grafanaがこのデータをグラフ化するように設定します。 この設定を手動で行うことで、設定プロセスについての理解を深めることができ、設定を変更したり、異なる環境でデプロイする方法を学ぶことができます。
 

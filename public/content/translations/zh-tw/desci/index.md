@@ -95,7 +95,6 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [Molecule：資助你的研究計畫或為其募資](https://www.molecule.xyz/)
 - [VitaDAO：藉由受贊助的長壽研究協議獲得資金](https://www.vitadao.com/)
 - [ResearchHub：發布科學成果並與同行交流](https://www.researchhub.com/)
-- [LabDAO：在電腦中折疊蛋白質](https://alphafodl.vercel.app/)
 - [dClimate API：查詢去中心化社群收集的氣候數據](https://www.dclimate.net/)
 - [DeSci Foundation：去中心化科研發表工具生成器](https://descifoundation.org/)
 - [DeSci.World：供使用者查看、參與去中心化科研的單一窗口](https://desci.world)

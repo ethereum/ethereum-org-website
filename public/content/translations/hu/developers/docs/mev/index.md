@@ -204,7 +204,6 @@ Egyes projektek, mint például a MEV Boost, az építő API-t egy olyan átfog�
 
 - [Flashbots-dokumentáció](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) – _Dashboard és tranzakciófelfedező a MEV tranzakciókhoz_
 - [mevboost.org](https://www.mevboost.org/) – _Tracker valós idejű statisztikákkal a MEV-Boost közvetítőkhöz és blokképítőkhöz_
 
 ## További olvasnivaló {#further-reading}

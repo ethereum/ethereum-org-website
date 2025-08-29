@@ -36,5 +36,4 @@ Les registres de Nœuds Ethereum (ENRs en anglais) sont un format standardisé p
 ## Complément d'information {#further-reading}
 
 - [EIP-778 : enregistrements de nœuds Ethereum (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [Adresses réseau dans Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
 - [LibP2P : Multiaddr-Enode-ENE ?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

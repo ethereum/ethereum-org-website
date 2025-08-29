@@ -45,7 +45,6 @@ Pelajari cara menggunakan [Web3J](https://github.com/web3j/web3j) dan Hyperledge
 
 ## Proyek dan peralatan untuk Java {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon) (Klien Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Pustaka untuk berinteraksi dengan Klien Ethereum)](https://github.com/web3j/web3j)
 - [Eventeum (Pendengar Kejadian)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (Peralatan Pengembangan IPFS)](https://github.com/ConsenSys/mahuta)
@@ -56,4 +55,3 @@ Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developer
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Obrolan HL Besu](https://chat.hyperledger.org/channel/besu)

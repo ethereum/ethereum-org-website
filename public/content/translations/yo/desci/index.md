@@ -95,7 +95,6 @@ Awọn ojutu data Web3 to rorun ṣe atilẹyin awọn oju iṣẹlẹ loke ati 
 - [Molecule: Ṣe inawo ati gba owo fun awọn iṣẹ akanṣe iwadi rẹ](https://www.molecule.xyz/)
 - [VitaDAO: gba igbeowosile nipasẹ awọn adehun iwadii onigbọwọ fun iwadii igba pipe](https://www.vitadao.com/)
 - [ResearchHub: firanṣẹ abajade ijinle sayensi kan ki o ṣe ibaraẹnisọrọ pẹlu awọn ẹlẹgbẹ](https://www.researchhub.com/)
-- [LabDAO: ka puroteni sinu silico](https://alphafodl.vercel.app/)
 - [dClimate API: data ibeere oju-ọjọ ti a gba nipasẹ agbegbe alailakoso](https://www.dclimate.net/)
 - [Ajo DeSci: Ohun elo kiko irinse atejade DeSci](https://descifoundation.org/)
 - [Aye DeSci: Ile itaja kan fun awon olumulo lati wo, ni ibasepo pelu sayensi alailakoso](https://desci.world)

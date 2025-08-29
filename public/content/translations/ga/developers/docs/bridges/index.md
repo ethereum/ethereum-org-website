@@ -127,8 +127,8 @@ Chun monatóireacht a dhéanamh ar ghníomhaíocht conartha thar slabhraí, is f
 - [An Trilemma Idir-inoibritheachta](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 Deireadh Fómhair, 2021 - Arjun Bhuptani
 - [Braislí: Cé chomh Iontaofa & Droichid Íoslaghdaithe a Mhúnann an Tírdhreach Ilshlabhra](https://blog.celestia.org/clusters/) - 4 Deireadh Fómhair, 2021 - Mustafa Al-Bassam
 - [LI.FI: Le Droichid, is Speictream é Iontaobhas](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 Aibreán, 2022 - Arjun Chand
-- [Staid na Réitigh Idir-inoibritheachta Rollup](https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Meitheamh, 2024 - Alex Hook
-- [ Leas a bhaint as Slándáil Roinnte Chun Idir-inoibritheacht Thrasshlabhra Slán: Coistí Stáit Lagrange Agus Thall](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Meitheamh, 2024 - Emmanuel Awosika
+- [Staid na Réitigh Idir-inoibritheachta Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Meitheamh, 2024 - Alex Hook
+- [ Leas a bhaint as Slándáil Roinnte Chun Idir-inoibritheacht Thrasshlabhra Slán: Coistí Stáit Lagrange Agus Thall](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Meitheamh, 2024 - Emmanuel Awosika
 
 Ina theannta sin, seo roinnt cur i láthair léargasach ó [James Prestwich](https://twitter.com/_prestwich) ar féidir leo cabhrú le tuiscint níos doimhne ar dhroichid a fhorbairt:
 

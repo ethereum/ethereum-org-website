@@ -63,7 +63,6 @@ Viešiesiems ir privatiems Ethereum tinklams gali prireikti specifinių savybių
 ### Privatumas {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Daugiau informacijos [here](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Daugiau informacijos [here](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
 - [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Daugiau informacijos [here](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Saugumas {#security}
@@ -82,7 +81,6 @@ Viešiesiems ir privatiems Ethereum tinklams gali prireikti specifinių savybių
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu kanalas)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow kanalas)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack kanalas](http://bit.ly/quorum-slack)

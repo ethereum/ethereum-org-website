@@ -216,7 +216,6 @@ Vegyen részt a szakmai közösség által irányított szervezetekben, vagy csa
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Nyílt forráskódú Web3Design](https://www.web3designers.org/)
 
 ## Dizájnrendszerek és más dizájnforrások {#design-systems-and-resources}
 

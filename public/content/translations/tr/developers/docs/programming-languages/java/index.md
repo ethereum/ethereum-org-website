@@ -50,7 +50,6 @@ EVM tabanlı blokzincirlerle etkileşim için asenkron, yüksek performanslı bi
 
 ## Java projeleri ve araçları {#java-projects-and-tools}
 
-- [Hyperledger Besu (Panteon) (Ethereum İstemcisi)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Ethereum İstemcileriyle Etkileşim Kütüphanesi)](https://github.com/web3j/web3j)
 - [ethers-kt (Async, EVM tabanlı blokzincirler için yüksek performanslı Kotlin/Java/Android kütüphanesi.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Olay Dinleyici)](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/devel
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu HL sohbeti](https://chat.hyperledger.org/channel/besu)

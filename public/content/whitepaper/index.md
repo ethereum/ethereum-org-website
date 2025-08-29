@@ -386,7 +386,7 @@ However, there are several important deviations from those assumptions in realit
 (1) provides a tendency for the miner to include fewer transactions, and
 (2) increases `NC`; hence, these two effects at least partially
 cancel each other
-out.<sup>[How?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup>
+out.<sup>[How?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup>
 (3) and (4) are the major issue; to solve them we simply institute a
 floating cap: no block can have more operations than
 `BLK_LIMIT_FACTOR` times the long-term exponential moving average.
@@ -515,10 +515,10 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn on Smart Property at Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Ethereum Merkle Patricia trees](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd on Merkle sum trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_For history of the whitepaper, see [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_For history of the whitepaper, see [this wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._

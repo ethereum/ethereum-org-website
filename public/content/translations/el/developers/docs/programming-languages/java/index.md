@@ -50,7 +50,6 @@ incomplete: true
 
 ## Έργα και εργαλεία της Java {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon) (εφαρμογή πελάτη Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Βιβλιοθήκη αλληλεπίδρασης με εφαρμογές Ethereum)](https://github.com/web3j/web3j)
 - [ethers-kt (Async, βιβλιοθήκη υψηλών επιδόσεων Kotlin/Java/Android για κρυπτοαλυσίδες EVM).](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (παρακολούθηση συμβάντων)](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ incomplete: true
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Συνομιλία Besu HL](https://chat.hyperledger.org/channel/besu)

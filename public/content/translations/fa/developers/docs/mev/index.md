@@ -204,7 +204,6 @@ MEV Boost همان حراج Flashbots اصلی را حفظ می کند، الب�
 
 - [اسناد Flashbotها](https://docs.flashbots.net/)
 - [گیت‌هاب Flashbotها](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _داشبورد و کاوشگر تراکنش زنده برای تراکنش‌های MEV_
 - [mevboost.org](https://www.mevboost.org/) - _ردیاب با آمار بی‌درنگ برای رله‌های MEV-Boost و سازندگان بلوک_
 
 ## بیشتر بخوانید {#further-reading}

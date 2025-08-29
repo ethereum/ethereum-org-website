@@ -61,6 +61,6 @@ Pia tazama:
 
 <cite class="citation">
 
-Maudhui ya ukurasa yaliyotolewa kwa sehemu kutoka [Utawala wa Maendeleo ya Itifaki ya Ethereum na Uratibu wa Uboreshaji wa Mtandao](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) ulioandikwa na Hudson Jameson
+Maudhui ya ukurasa yaliyotolewa kwa sehemu kutoka [Utawala wa Maendeleo ya Itifaki ya Ethereum na Uratibu wa Uboreshaji wa Mtandao](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) ulioandikwa na Hudson Jameson
 
 </cite>

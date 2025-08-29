@@ -51,7 +51,7 @@ _Create-eth-app_ en concreto hace uso del nuevo [efecto «hooks»](https://react
 
 ### ethers.js {#ethersjs}
 
-A pesar de que [Web3](https://docs.web3js.org/) es todavia la opcion más usada, [ethers.js](https://docs.ethers.io/) ha ido ganando terreno como alternativa en el último año y viene integrada en _create-eth-app_. Puede trabajar en ella, cambiarse a Web3 o tal vez plantearse el actualizar a [ethers.js v5](https://docs-beta.ethers.io/) que casi ha dejado de estar en beta.
+A pesar de que [Web3](https://docs.web3js.org/) es todavia la opcion más usada, [ethers.js](https://docs.ethers.io/) ha ido ganando terreno como alternativa en el último año y viene integrada en _create-eth-app_. Puede trabajar en ella, cambiarse a Web3 o tal vez plantearse el actualizar a [ethers.js v5](https://docs.ethers.org/v5/) que casi ha dejado de estar en beta.
 
 ### The Graph {#the-graph}
 

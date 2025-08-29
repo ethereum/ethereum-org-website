@@ -74,6 +74,6 @@ Herkes bir EIP oluşturabilir. Bir öneri kaydetmeden önce kişi, EIP sürecini
 
 <cite class="citation">
 
-Sayfa içeriğinin bir kısmı Hudson Jameson'ın [Ethereum Protokol Geliştirme Yönetimi ve Ağ Yükseltme Koordinasyonu](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) gönderisinden sağlanmıştır
+Sayfa içeriğinin bir kısmı Hudson Jameson'ın [Ethereum Protokol Geliştirme Yönetimi ve Ağ Yükseltme Koordinasyonu](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) gönderisinden sağlanmıştır
 
 </cite>

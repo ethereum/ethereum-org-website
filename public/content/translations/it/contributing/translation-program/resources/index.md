@@ -17,7 +17,6 @@ Puoi trovare utili guide e strumenti per i traduttori di ethereum.org, nonché l
 
 ## Strumenti {#tools}
 
-- [Portale linguistico di Microsoft](https://www.microsoft.com/en-us/language): _utile per trovare e controllare le traduzioni standard dei termini tecnici_
 - [Linguee](https://www.linguee.com/): _motore di ricerca per traduzioni e dizionario che consente di cercare per parola o per frase_
 - [Ricerca di termini di Proz](https://www.proz.com/search/): _database di dizionari e glossari di traduzione per termini specializzati_
 - [Eurotermbank](https://www.eurotermbank.com/): _raccolte di terminologie europee in 42 lingue_

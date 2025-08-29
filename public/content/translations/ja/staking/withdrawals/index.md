@@ -212,7 +212,6 @@ eventName="read more">
 
 - [Staking Launchpad 「Withdrawals」](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: ビーコンチェーンプッシュ引き出しの実装](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Hsiao-Wei WangによるステークしたETHの引き出し(テスト)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: Alex Stokesによるビーコンチェーンプッシュ引き出しの実装の解説](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [バリデーターの有効残高について理解する](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -223,7 +223,7 @@ Meer over [het ontwerpen van veilige bestuurssystemen](https://blog.openzeppelin
 
 Traditionele software-ontwikkelaars zijn bekend met het KISS-principe (“keep it simple, stupid”), dat adviseert om geen onnodige complexiteit te introduceren in het ontwerp van software. Dit sluit aan bij de lang gekoesterde gedachte dat “complexe systemen op complexe manieren defect raken” en vatbaarder zijn voor kostbare fouten.
 
-Dingen eenvoudig houden is van bijzonder belang bij het schrijven van smart contracts, aangezien smart contracts potentieel grote hoeveelheden waarde controleren. Een tip om alles eenvoudig te houden bij het schrijven van smart contracts, is het waar mogelijk hergebruiken van bestaande bibliotheken, zoals [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/). Omdat deze bibliotheken uitgebreid zijn gecontroleerd en getest door ontwikkelaars, verkleint het gebruik ervan de kans op het introduceren van bugs door nieuwe functionaliteit vanaf nul te schrijven.
+Dingen eenvoudig houden is van bijzonder belang bij het schrijven van smart contracts, aangezien smart contracts potentieel grote hoeveelheden waarde controleren. Een tip om alles eenvoudig te houden bij het schrijven van smart contracts, is het waar mogelijk hergebruiken van bestaande bibliotheken, zoals [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/). Omdat deze bibliotheken uitgebreid zijn gecontroleerd en getest door ontwikkelaars, verkleint het gebruik ervan de kans op het introduceren van bugs door nieuwe functionaliteit vanaf nul te schrijven.
 
 Een ander veelgebruikt advies is om kleine functies te schrijven en contracten modulair te houden door bedrijfslogica te verdelen over verschillende contracten. Niet alleen verkleint het schrijven van eenvoudigere code het aanvalsoppervlak in een smart contract, het maakt het ook eenvoudiger om te redeneren over de correctheid van het totale systeem en mogelijke ontwerpfouten vroegtijdig op te sporen.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-U kunt ook een [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment)-systeem gebruiken waarbij gebruikers middelen moeten opnemen van de smart contracts, in plaats van een "push payments"-systeem dat middelen naar accounts stuurt. Dit voorkomt de mogelijkheid om onbedoeld code op onbekende adressen te activeren (en kan ook bepaalde denial-of-service-aanvallen voorkomen).
+U kunt ook een [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)-systeem gebruiken waarbij gebruikers middelen moeten opnemen van de smart contracts, in plaats van een "push payments"-systeem dat middelen naar accounts stuurt. Dit voorkomt de mogelijkheid om onbedoeld code op onbekende adressen te activeren (en kan ook bepaalde denial-of-service-aanvallen voorkomen).
 
 #### Integer underflows en overflows {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 ### Tools voor het monitoren van smart contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Een tool voor het automatisch monitoren van en reageren op evenementen, functies en transactieparameters op uw smart contracts._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Een tool voor het ontvangen van realtime meldingen wanneer ongebruikelijke of onverwachte evenementen plaatsvinden op uw smart contracts of wallets._
 
 ### Tools voor veilig beheer van smart contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface voor smart contractbeheer, met toegangscontroles, upgrades en pauzeren._
-
 - **[Safe](https://safe.global/)** - _Smart contract-wallet die werken op Ethereum en waarbij een minimaal aantal mensen nodig is om een transactie goed te keuren voordat deze kan plaatsvinden (M-van-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contractbibliotheken voor het implementeren van administratieve functies, waaronder contracteigendom, upgrades, toegangscontroles, bestuur, pauzeerbaarheid en meer._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Contractbibliotheken voor het implementeren van administratieve functies, waaronder contracteigendom, upgrades, toegangscontroles, bestuur, pauzeerbaarheid en meer._
 
 ### Auditingservices voor smart contracts {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 ### Publicaties van bekende kwetsbaarheden in en uitbuitingen van smart contracts {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Beginnersvriendelijke toelichting op de belangrijkste contractkwetsbaarheden, met voorbeeldcode voor de meeste situaties._
+- **[ConsenSys: Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Beginnersvriendelijke toelichting op de belangrijkste contractkwetsbaarheden, met voorbeeldcode voor de meeste situaties._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Samengestelde lijst van Common Weakness Enumeration (CWE)-items die van toepassing zijn op smart contracts van Ethereum._
 

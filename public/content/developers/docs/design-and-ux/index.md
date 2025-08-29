@@ -72,7 +72,6 @@ Get involved in professional community-driven organizations or join design group
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Open Source Web3Design](https://www.web3designers.org/)
 
 ## Design Systems and other design resources {#design-systems-and-resources}
 

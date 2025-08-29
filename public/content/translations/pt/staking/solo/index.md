@@ -200,7 +200,6 @@ Para desbloquear e receber a totalidade do seu balanço, deve também concluir o
 - [Ajuda à diversidade dos clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidade de clientes na camada de consenso do Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Como: Adquirir hardware para validador Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Passo a passo: Como aderir ao Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Dicas de prevenção de corte de Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />
