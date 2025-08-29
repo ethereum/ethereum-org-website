@@ -4,7 +4,7 @@ description: Introduction to how Ethereum nodes are organized.
 lang: en
 ---
 
-An Ethereum node is composed of two clients: an [execution client](/developers/docs/nodes-and-clients/#execution-clients) and a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients). For a node to propose a new block, it must also run a [validator client](#validators).
+An Ethereum node is composed of two clients: an [execution client](/developers/docs/nodes-and-clients/#execution-clients) and a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients). For a node to propose a new block, it must also run both clients.
 
 When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/pow/), an execution client was enough to run a full Ethereum node. However, since implementing [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), the execution client must be used alongside another piece of software called a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients).
 
