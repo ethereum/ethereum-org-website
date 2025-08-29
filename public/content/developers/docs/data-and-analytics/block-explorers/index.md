@@ -21,7 +21,6 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
@@ -243,7 +242,6 @@ The consensus layer top-level data includes the following:
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
-- [Ethernow](https://www.ethernow.xyz/) - a real-time transaction explorer that enables you to see the Ethereum Mainnet pre-chain layer
 
 ## Further reading {#further-reading}
 
