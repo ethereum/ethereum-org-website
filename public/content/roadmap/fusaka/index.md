@@ -40,7 +40,7 @@ Layer 2s scale Ethereum - as their networks grow, they need to post more data to
 
 Because Ethereum is code running on thousands of independent nodes that require agreement on same rules, we cannot simply introduces changes like increasing blob count the way you deploy a website update. Any rule change must be a coordinated upgrade where every node, client and validator software upgrades before the same predetermined block.
 
-These coordinated upgrades generally include a lot of changes, require a lot of testing, and that takes time. In order to adapt faster to changing layer 2 blob needs, blob paramter only forks introduce a mechanism to increase blobs without having to wait on that upgrade schedule.
+These coordinated upgrades generally include a lot of changes, require a lot of testing, and that takes time. In order to adapt faster to changing layer 2 blob needs, blob parameter only forks introduce a mechanism to increase blobs without having to wait on that upgrade schedule.
 
 Blob parameter only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These blob parameter only forks can be configured at any time.
 
