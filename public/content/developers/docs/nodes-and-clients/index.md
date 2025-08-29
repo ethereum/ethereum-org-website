@@ -214,7 +214,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 
 Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
-More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
+More information can be found on the [Lodestar website](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
