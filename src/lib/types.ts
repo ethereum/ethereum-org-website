@@ -1216,3 +1216,10 @@ export type Story = {
   country: string | null
   date: string
 }
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
+}

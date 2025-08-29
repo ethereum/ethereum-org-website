@@ -3,6 +3,8 @@
 import { ReactNode } from "react"
 import { motion } from "framer-motion"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -22,10 +24,7 @@ interface TabNavProps {
   showActiveBackground?: boolean
   useMotion?: boolean
   motionLayoutId?: string
-  customEventOptions?: {
-    eventCategory: string
-    eventAction: string
-  }
+  customEventOptions?: Pick<MatomoEventOptions, "eventCategory" | "eventAction">
 }
 
 const TabNav = ({

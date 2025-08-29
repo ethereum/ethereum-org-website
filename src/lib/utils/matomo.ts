@@ -1,15 +1,10 @@
 import { push } from "@socialgouv/matomo-next"
 
+import type { MatomoEventOptions } from "../types"
+
 import { IS_PROD } from "./env"
 
 export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
-
-export interface MatomoEventOptions {
-  eventCategory: string
-  eventAction: string
-  eventName: string
-  eventValue?: string
-}
 
 export const trackCustomEvent = ({
   eventCategory,
