@@ -73,6 +73,8 @@ Here is a list of all the eligible projects that are part of the 2025 Translatat
 
 - [Remix LearnEth](https://crowdin.com/project/remix-learneth)
 
+- [web3.py](https://crowdin.com/project/web3py)
+
 ## Evaluation process {#evaluation-process}
 
 All translations will be subject to QA and feedback, where professional linguists will evaluate submissions based on quality and accuracy.

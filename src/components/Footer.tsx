@@ -323,6 +323,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           variant="outline"
           isSecondary
           onClick={() => scrollIntoView("body")}
+          data-testid="footer-go-to-top"
         >
           <ChevronUp /> <Translation id="go-to-top" />
         </Button>

@@ -126,6 +126,15 @@ export const TranslatathonLayout = ({
         },
       },
       {
+        text: "Leaderboard",
+        href: "/contributing/translation-program/translatathon/leaderboard",
+        matomo: {
+          eventCategory: "translatathon menu",
+          eventAction: "click",
+          eventName: "translatathon leaderboard",
+        },
+      },
+      {
         text: "Details and submission criteria",
         href: "/contributing/translation-program/translatathon/details",
         matomo: {
