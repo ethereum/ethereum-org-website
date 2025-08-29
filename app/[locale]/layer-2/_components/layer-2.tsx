@@ -14,7 +14,7 @@ import InlineLink from "@/components/ui/Link"
 import { Rollups } from "@/data/networks/networks"
 
 import useTranslation from "@/hooks/useTranslation"
-import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import HeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
 import ExploreImage from "@/public/images/layer-2/learn-hero.png"
