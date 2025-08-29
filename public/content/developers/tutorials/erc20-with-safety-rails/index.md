@@ -210,3 +210,5 @@ This is a cleanup function, so presumably we don't want to leave any tokens. Ins
 ## Conclusion {#conclusion}
 
 This is not a perfect solution - there is no perfect solution for the "user made a mistake" problem. However, using these kinds of checks can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.
+
+[See here for more of my work](https://cryptodocguy.pro/).

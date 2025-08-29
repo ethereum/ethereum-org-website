@@ -1969,3 +1969,5 @@ This function transfers ether to an account. Any call to a different contract ca
 This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own use cases.
 
 Now go and write something useful and amaze us.
+
+[See here for more of my work](https://cryptodocguy.pro/).

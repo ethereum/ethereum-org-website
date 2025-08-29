@@ -710,3 +710,6 @@ For review, here are some of the most important ideas in this contract:
 - Past events are visible only outside the blockchain. Code running inside the blockchain cannot view them.
 
 Now go and implement secure Vyper contracts.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

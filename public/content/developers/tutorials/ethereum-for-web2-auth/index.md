@@ -883,3 +883,5 @@ There may be a solution using [multi-party computation (MPC)](https://en.wikiped
 
 Adoption of a log on standard, such as Ethereum signatures, faces a chicken and egg problem. Service providers want to appeal to the broadest possible market. Users want to be able to access services without having to worry about supporting their log on standard.
 Creating adapters, such as an Ethereum IdP, can help us get over this hurdle.
+
+[See here for more of my work](https://cryptodocguy.pro/).

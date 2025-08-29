@@ -69,3 +69,5 @@ Additionally, some packages have a problem with IPFS, so if your web site is ver
 ## Conclusion {#conclusion}
 
 Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.
+
+[See here for more of my work](https://cryptodocguy.pro/).

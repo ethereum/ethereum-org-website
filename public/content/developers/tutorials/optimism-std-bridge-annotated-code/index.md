@@ -1353,3 +1353,5 @@ These bridges typically work by having assets on L1, which they provide immediat
 When the bridge (or the people running it) anticipates being short on L1 assets it transfers sufficient assets from L2. As these are very big withdrawals, the withdrawal cost is amortized over a large amount and is a much smaller percentage.
 
 Hopefully this article helped you understand more about how layer 2 works, and how to write Solidity code that is clear and secure.
+
+[See here for more of my work](https://cryptodocguy.pro/).
