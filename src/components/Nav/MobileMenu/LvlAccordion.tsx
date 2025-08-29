@@ -62,49 +62,45 @@ const LvlAccordionItems = async ({
               key={label}
               className="border-t border-body-light last:border-b"
             >
-              <p>
-                <Button
-                  className={cn(
-                    "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
-                    nestedAccordionSpacingMap[lvl + 2]
-                  )}
-                  variant="ghost"
-                  asChild
+              <Button
+                className={cn(
+                  "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
+                  nestedAccordionSpacingMap[lvl + 2]
+                )}
+                variant="ghost"
+                asChild
+              >
+                <BaseLink
+                  href={action.href}
+                  isPartiallyActive={false}
+                  activeClassName="is-active"
+                  className="group/lnk block"
+                  customEventOptions={{
+                    eventCategory: "Mobile navigation menu",
+                    eventAction: `Menu: ${locale} - ${activeSection}`,
+                    eventName: action.href!,
+                  }}
                 >
-                  <BaseLink
-                    href={action.href}
-                    isPartiallyActive={false}
-                    activeClassName="is-active"
-                    className="group/lnk block"
-                    customEventOptions={{
-                      eventCategory: "Mobile navigation menu",
-                      eventAction: `Menu: ${locale} - ${activeSection}`,
-                      eventName: action.href!,
-                    }}
+                  <p
+                    className={cn(
+                      "text-md font-bold",
+                      "text-body",
+                      "group-[.is-active]/lnk:text-primary-high-contrast"
+                    )}
                   >
-                    <div>
-                      <p
-                        className={cn(
-                          "text-md font-bold",
-                          "text-body",
-                          "group-[.is-active]/lnk:text-primary-high-contrast"
-                        )}
-                      >
-                        {label}
-                      </p>
-                      <p
-                        className={cn(
-                          "text-sm font-normal",
-                          subtextColorPerLevel[lvl],
-                          "group-[.is-active]/lnk:text-primary-high-contrast"
-                        )}
-                      >
-                        {description}
-                      </p>
-                    </div>
-                  </BaseLink>
-                </Button>
-              </p>
+                    {label}
+                  </p>
+                  <p
+                    className={cn(
+                      "text-sm font-normal",
+                      subtextColorPerLevel[lvl],
+                      "group-[.is-active]/lnk:text-primary-high-contrast"
+                    )}
+                  >
+                    {description}
+                  </p>
+                </BaseLink>
+              </Button>
             </div>
           )
 
