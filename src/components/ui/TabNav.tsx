@@ -36,16 +36,17 @@ const TabNav = ({
   useMotion = false,
   motionLayoutId = "active-section-highlight",
   customEventOptions,
-}: TabNavProps) => {
-  return (
-    <div className="flex w-full justify-center">
-      <nav
-        className={cn(
-          "flex w-full max-w-fit gap-1 overflow-x-auto rounded-2xl bg-background p-0.5 shadow md:border md:shadow-lg lg:w-auto",
-          className
-        )}
-      >
-        {items.map((item) => (
+}: TabNavProps) => (
+  <div className="flex w-full justify-center">
+    <nav
+      className={cn(
+        "flex w-full max-w-fit gap-1 overflow-x-auto rounded-2xl bg-background p-0.5 shadow md:border md:shadow-lg lg:w-auto",
+        className
+      )}
+    >
+      {items.map((item) => {
+        const isActive = activeKey.toLowerCase() === item.key.toLowerCase()
+        return (
           <ButtonLink
             key={item.key}
             href={item.href}
@@ -53,7 +54,7 @@ const TabNav = ({
             isSecondary
             className={cn(
               "relative flex-shrink-0 text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
-              activeKey === item.key && "!text-primary",
+              isActive && "!text-primary",
               itemClassName
             )}
             customEventOptions={
@@ -66,7 +67,7 @@ const TabNav = ({
             }
           >
             {showActiveBackground &&
-              activeKey === item.key &&
+              isActive &&
               (useMotion ? (
                 <motion.div
                   layoutId={motionLayoutId}
@@ -78,10 +79,10 @@ const TabNav = ({
             {item.icon && <span className="relative z-10">{item.icon}</span>}
             <span className="relative z-10">{item.label}</span>
           </ButtonLink>
-        ))}
-      </nav>
-    </div>
-  )
-}
+        )
+      })}
+    </nav>
+  </div>
+)
 
 export default TabNav
