@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
 
@@ -10,8 +10,7 @@ import { DesktopNavLoading, MobileNavLoading } from "./loading"
 import MobileNav from "./MobileNav"
 
 const Nav = async () => {
-  const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations({ namespace: "common" })
 
   return (
     <nav

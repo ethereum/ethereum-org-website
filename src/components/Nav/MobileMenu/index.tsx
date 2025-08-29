@@ -2,8 +2,6 @@ import { Languages, SearchIcon } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 import { Trigger as TabsTrigger } from "@radix-ui/react-tabs"
 
-import { Lang } from "@/lib/types"
-
 import LanguagePicker from "@/components/LanguagePicker"
 import ExpandIcon from "@/components/Nav/MobileMenu/ExpandIcon"
 import LvlAccordion from "@/components/Nav/MobileMenu/LvlAccordion"
@@ -117,7 +115,7 @@ export default async function MobileMenu({
 
 async function NavigationContent({ className }: { className?: string }) {
   const locale = await getLocale()
-  const linkSections = await getNavigation(locale as Lang)
+  const linkSections = await getNavigation()
 
   return (
     <nav className={cn("p-0", className)}>

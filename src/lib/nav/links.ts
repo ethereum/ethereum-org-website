@@ -32,9 +32,8 @@ export const getLanguagesDisplayInfo = async (): Promise<
   })
 }
 
-export const getNavigation = async (locale: Lang) => {
+export const getNavigation = async () => {
   const t = await getTranslations({
-    locale,
     namespace: "common",
   })
 
