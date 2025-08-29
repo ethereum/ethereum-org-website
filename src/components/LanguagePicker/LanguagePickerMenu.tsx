@@ -14,12 +14,14 @@ import NoResultsCallout from "./NoResultsCallout"
 import { useTranslation } from "@/hooks/useTranslation"
 
 type LanguagePickerMenuProps = {
+  className?: string
   languages: LocaleDisplayInfo[]
   onClose: () => void
   onSelect: (value: string) => void
 }
 
 const LanguagePickerMenu = ({
+  className,
   languages,
   onClose,
   onSelect,
@@ -28,7 +30,7 @@ const LanguagePickerMenu = ({
 
   return (
     <Command
-      className="max-h-[calc(100vh-12rem)] gap-2 p-4"
+      className={className}
       filter={(value: string, search: string) => {
         const item = languages.find((name) => name.localeOption === value)
 

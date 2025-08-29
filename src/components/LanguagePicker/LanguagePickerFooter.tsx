@@ -21,7 +21,7 @@ const LanguagePickerFooter = ({
   const locale = useLocale()
   return (
     <div className="sticky bottom-0 flex border-t-2 border-primary bg-primary-low-contrast p-0 pb-1 pt-1">
-      <div className="flex w-full max-w-sm items-center justify-between px-4">
+      <div className="flex w-full items-center justify-between px-4">
         <div className="flex min-w-0 flex-col items-start">
           {locale === DEFAULT_LOCALE ? (
             <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold text-body">

@@ -4,7 +4,7 @@ import { Trigger as TabsTrigger } from "@radix-ui/react-tabs"
 
 import { Lang } from "@/lib/types"
 
-import MobileLanguagePicker from "@/components/LanguagePicker/Mobile"
+import LanguagePicker from "@/components/LanguagePicker"
 import ExpandIcon from "@/components/Nav/MobileMenu/ExpandIcon"
 import LvlAccordion from "@/components/Nav/MobileMenu/LvlAccordion"
 import Search from "@/components/Search"
@@ -66,18 +66,22 @@ export default async function MobileMenu({
 
         <Tabs
           defaultValue="navigation"
-          className="flex flex-1 flex-col overflow-auto"
+          className="flex min-h-0 flex-1 flex-col"
         >
-          <div className="flex-1 overflow-auto">
-            <TabsContent value="navigation" className="mt-0 border-none p-0">
-              <NavigationContent />
-            </TabsContent>
-            <TabsContent value="languages" className="mt-0 border-none p-0">
-              <LanguageContent />
-            </TabsContent>
-          </div>
+          <TabsContent
+            value="navigation"
+            className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
+          >
+            <NavigationContent className="flex-1 overflow-y-auto" />
+          </TabsContent>
+          <TabsContent
+            value="languages"
+            className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
+          >
+            <LanguageContent className="flex min-h-0 flex-1 flex-col" />
+          </TabsContent>
 
-          <SheetFooter className="h-[108px] justify-center border-t border-body-light px-4 py-0">
+          <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
             <TabsList className="grid h-auto w-full grid-cols-3">
               <div className="flex flex-col items-center gap-1 py-2">
                 <Search asChild>
@@ -111,12 +115,12 @@ export default async function MobileMenu({
   )
 }
 
-async function NavigationContent() {
+async function NavigationContent({ className }: { className?: string }) {
   const locale = await getLocale()
   const linkSections = await getNavigation(locale as Lang)
 
   return (
-    <nav className="p-0">
+    <nav className={cn("p-0", className)}>
       {SECTION_LABELS.map((key) => {
         const { label, items } = linkSections[key]
 
@@ -158,12 +162,8 @@ async function NavigationContent() {
   )
 }
 
-async function LanguageContent() {
+async function LanguageContent({ className }: { className?: string }) {
   const languages = await getLanguagesDisplayInfo()
 
-  return (
-    <div className="h-full">
-      <MobileLanguagePicker languages={languages} />
-    </div>
-  )
+  return <LanguagePicker className={className} languages={languages} />
 }

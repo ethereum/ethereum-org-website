@@ -5,15 +5,18 @@ import { cn } from "@/lib/utils/cn"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
-import LanguagePicker from "../LanguagePicker"
+import DesktopLanguagePicker from "../LanguagePicker/Desktop"
 import Search from "../Search"
 import { Button } from "../ui/buttons/Button"
 
 import Menu from "./Menu"
 import { ThemeToggleButton } from "./ThemeToggleButton"
 
+import { getLanguagesDisplayInfo } from "@/lib/nav/links"
+
 const DesktopNav = async ({ className }: { className?: string }) => {
   const t = await getTranslations({ namespace: "common" })
+  const languages = await getLanguagesDisplayInfo()
 
   const locale = await getLocale()
 
@@ -28,7 +31,7 @@ const DesktopNav = async ({ className }: { className?: string }) => {
 
         <ThemeToggleButton />
 
-        <LanguagePicker className="max-md:hidden">
+        <DesktopLanguagePicker languages={languages} className="max-md:hidden">
           <Button
             name={DESKTOP_LANGUAGE_BUTTON_NAME}
             variant="ghost"
@@ -39,7 +42,7 @@ const DesktopNav = async ({ className }: { className?: string }) => {
             <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
             {locale.toUpperCase()}
           </Button>
-        </LanguagePicker>
+        </DesktopLanguagePicker>
       </div>
     </div>
   )
