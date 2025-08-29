@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { useParams, usePathname, useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
@@ -11,6 +11,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import LanguagePickerFooter from "./LanguagePickerFooter"
 import LanguagePickerMenu from "./LanguagePickerMenu"
 import { useLanguagePicker } from "./useLanguagePicker"
+
+import { usePathname, useRouter } from "@/i18n/routing"
 
 type LanguagePickerProps = {
   className?: string
@@ -50,6 +52,7 @@ const LanguagePicker = ({
   }, [])
 
   const handleMenuItemSelect = (currentValue: string) => {
+    console.log("handleMenuItemSelect", currentValue)
     onSelect?.(currentValue)
 
     push(
