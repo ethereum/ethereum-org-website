@@ -46,7 +46,7 @@ export default async function LocaleLayout({
   // Enable static rendering
   setRequestLocale(locale)
 
-  const allMessages = await getMessages({ locale })
+  const allMessages = await getMessages()
   const messages = pick(allMessages, "common")
 
   const lastDeployDate = getLastDeployDate()
