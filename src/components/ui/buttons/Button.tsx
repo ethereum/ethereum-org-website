@@ -4,8 +4,10 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { BaseLink, type LinkProps } from "../Link"

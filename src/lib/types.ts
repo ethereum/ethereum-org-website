@@ -1216,3 +1216,17 @@ export type Story = {
   country: string | null
   date: string
 }
+
+export type SectionNavDetails = {
+  key: string
+  label: string
+  href?: string
+  icon?: React.ReactNode
+}
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
+}
