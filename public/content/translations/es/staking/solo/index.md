@@ -1,6 +1,6 @@
 ---
-title: Participación individual de su ETH
-description: Una visión general de cómo empezar a postar su ETH individualmente
+title: Participe desde casa con sus ETH
+description: Un resumen de cómo empezar con la partición desde casa de sus ETH
 lang: es
 template: staking
 emoji: ":money_with_wings:"
@@ -13,31 +13,31 @@ summaryPoints:
   - Desconfíe y no deje nunca de controlar las claves de sus fondos
 ---
 
-## ¿Qué es staking individual? {#what-is-solo-staking}
+## ¿Qué es la participación desde casa? {#what-is-solo-staking}
 
-Participación individual es el acto de [ ejecutar un nodo Ethereum](/run-a-node/) conectado a Internet y depositar 32 ETH para activar un [validador](#faq), abriendo la posibilidad de participar directamente en el consenso de la red.
+La participación desde casa es el acto de [ejecutar un nodo de Ethereum](/run-a-node/) conectado a Internet y depositar 32 ETH para activar un [validador](#faq), permitiéndole participar directamente en el consenso de la red.
 
-**El staking individual aumenta la descentralización de la red Ethereum**, haciendo que sea más resistente a la censura y robusta contra ataques. Puede que otros métodos de participación no ayuden a la red de la misma manera. La participación en solitario es la mejor opción de participación para asegurar Ethereum.
+**La participación desde casa incrementa la descentralización de la red de Ethereum**, haciendo que la red sea más resistente a la censura y logrando robustez contra ataques. Puede que otros métodos de participación no ayuden a la red de la misma manera. La participación desde casa es la mejor forma de participación para asegurar Ethereum.
 
 Un nodo Ethereum consiste tanto en un cliente de capa de ejecución (EL), como en un cliente de capa de consenso (CL). Estos clientes son programas que funcionan estrechamente entre sí, en conjunto con un par de claves de validación, para verificar transacciones y bloques, certificar el encabezado corecto de la cadena, resumir verificaciones, y proponer bloques.
 
-Los participantes individuales conlleva la responsabilidad de operar el hardware necesario para ejecutar dichos clientes. Es muy recomendable utilizar una máquina específicamente dedicada a esto, que usted opere desde su hogar, algo que es extremadamente beneficioso para la salud de la red.
+Los participantes desde casa son responsables de operar el hardware necesario para ejecutar estos clientes. Es muy recomendable utilizar una máquina específicamente dedicada a esto, que usted opere desde su hogar, algo que es extremadamente beneficioso para la salud de la red.
 
-El participante individual recibe las recompensas directamente desde el protocolo por mantener su validador funcionando correctamente y en línea.
+Un participante desde casa recibe las recompensas directamente desde el protocolo por mantener su validador funcionando correctamente y en línea.
 
-## ¿Por qué debería participar de forma individual? {#why-stake-solo}
+## ¿Por qué participar desde casa? {#why-stake-solo}
 
-La participación en solitario conlleva más responsabilidad, pero proporciona el máximo control posible sobre los fondos y la configuración para realizarla.
+Participar desde casa conlleva más responsabilidad, pero proporciona el máximo control posible sobre los fondos y la configuración de los validadores.
 
 <CardGrid>
   <Card title="Gane ETH recién salidos" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Control completo" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Seguridad de la red" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Seguridad de la red" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Consideraciones antes de hacer una participación individual {#considerations-before-staking-solo}
+## Consideraciones antes de participar desde casa {#considerations-before-staking-solo}
 
-Por mucho que deseemos que la participación individual fuera accesible y libre de riesgos para todos, esta no es la realidad. Hay algunas consideraciones prácticas y serias que debemos tener en cuenta antes de elegir la participación individual de su ETH.
+Por mucho que busquemos que participar desde casa sea accesible y libre de riesgos para todos, esta no es la realidad. Hay algunas consideraciones prácticas y serias que debemos tener en cuenta antes de elegir participar desde casa con sus ETH.
 
 <InfoGrid>
 <ExpandableCard title="Lectura obligatoria" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -55,7 +55,7 @@ También requiere una configuración de hardware muy básica, y cierta comprensi
 <ExpandableCard title="Gestión segura de claves" eventCategory="SoloStaking" eventName="clicked secure key management">
 De la misma manera que las claves privadas protegen su dirección de Ethereum, necesitará generar claves específicamente para su validador. Debe entender cómo proteger cualquier frase semilla o clave secreta de forma efectiva.{' '}
 
-<a href="/security/">Seguridad y prevención de estafa Ethereum</a>
+[Seguridad y prevención de estafa Ethereum](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Mantenimiento" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -93,7 +93,7 @@ El Lanzador de participaciones es una aplicación de código abierto que le ayud
 
 ## Qué considerar respecto a las herramientas de configuración de nodos y clientes {#node-tool-considerations}
 
-Cada vez hay más herramientas y servicios para ayudarle a que usted haga una participación individual de su ETH, pero cada uno de ellos conlleva diferentes riesgos y beneficios.
+Existe un número cada vez mayor de herramientas y servicios para ayudarle a participar desde casa con sus ETH, pero cada una comporta diferentes riesgos y beneficios.
 
 Los indicadores de atributos a continuación indican las fortalezas o debilidades que puede tener cada herramienta de participación. Utilice esta sección como referencia sobre cómo definimos estos atributos, mientras está eligiendo las herramientas que le ayudarán con su experiencia de participación.
 
@@ -119,7 +119,7 @@ Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de 
 
 ¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
-## Explorar guías de participación individual {#staking-guides}
+## Explorar guías de participación desde casa {#staking-guides}
 
 <StakingGuides />
 
@@ -136,9 +136,9 @@ Un <em>validador</em> es una entidad virtual que vive en Ethereum y participa en
 <ExpandableCard title="¿Puedo depositar más de 32 ETH?">
 Cada par de claves asociadas a un validador requieren exactamente 32 ETH para ser activadas. Más ETH depositado en un solo par de claves no incrementa el potencial de recompensas, ya que cada validador está limitado a un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efectivo</a> de 32 ETH. Esto significa que la participación se realiza en incrementos de 32 ETH, cada uno con su propio conjunto de claves y saldo.
 
-No deposite más de 32 ETH para un solo validador. No aumentará sus recompensas. Si se ha establecido una dirección de retirada para el validador, cualquier exceso de fondos superior a 32 ETH se retirará automáticamente a esta dirección durante el próximo <a href="/staking/withdrawals/#validator-sweeping">barrido del validador</a>.
+No deposite más de 32 ETH para un solo validador. No aumentará sus recompensas. Si se ha establecido una dirección de retirada para el validador, cualquier exceso de fondos superior a 32 ETH se retirará automáticamente a esta dirección durante el próximo [barrido del validador](/staking/withdrawals/#validator-sweeping).
 
-Si la participación individual le parece demasiado exigente, plantéese el usar un proveedor de <a href="/staking/saas/">participación como servicio</a>, o si está trabajando con menos de 32 ETH, plantéese los <a href="/staking/pools/">grupos de participación</a>.
+Si participar desde casa le parece demasiado exigente, considere utilizar un proveedor de [staking-as-a-service](/staking/saas/) o si busca participar con menos de 32 ETH investigue [grupos de participación](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="¿Sufriré «recortes» si me desconecto? (En una palabra: No.)">

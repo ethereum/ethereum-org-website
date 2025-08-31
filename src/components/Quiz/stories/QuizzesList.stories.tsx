@@ -5,9 +5,9 @@ import type { CompletedQuizzes } from "@/lib/types"
 
 import { ethereumBasicsQuizzes } from "@/data/quizzes"
 
-import { getTranslation } from "@/storybook-utils"
-
 import QuizzesListComponent from "../QuizzesList"
+
+import useTranslation from "@/hooks/useTranslation"
 
 /**
  * This story also renders the `QuizItem` component.
@@ -20,8 +20,8 @@ const meta = {
   component: QuizzesListComponent,
   args: {
     content: ethereumBasicsQuizzes,
-    headingId: getTranslation("basics", "learn-quizzes"),
-    descriptionId: getTranslation("basics-description", "learn-quizzes"),
+    headingId: "basics",
+    descriptionId: "basics-description",
     userStats: {
       score: 0,
       average: [],
@@ -35,7 +35,16 @@ const meta = {
 export default meta
 
 export const Default: StoryObj<typeof meta> = {
-  render: (args) => <QuizzesListComponent {...args} />,
+  render: (args) => {
+    const { t } = useTranslation("learn-quizzes")
+    return (
+      <QuizzesListComponent
+        {...args}
+        headingId={t(args.headingId)}
+        descriptionId={t(args.descriptionId)}
+      />
+    )
+  },
 }
 
 export const OneCompletedQuiz: StoryObj<typeof meta> = {
@@ -50,5 +59,14 @@ export const OneCompletedQuiz: StoryObj<typeof meta> = {
       },
     },
   },
-  render: (args) => <QuizzesListComponent {...args} />,
+  render: (args) => {
+    const { t } = useTranslation("learn-quizzes")
+    return (
+      <QuizzesListComponent
+        {...args}
+        headingId={t(args.headingId)}
+        descriptionId={t(args.descriptionId)}
+      />
+    )
+  },
 }

@@ -5,7 +5,7 @@ lang: es
 ---
 
 <InfoBanner emoji=":wave:">
-   Ethash era el algoritmo de minería de prueba de trabajo de Ethereum. La prueba de trabajo ahora se ha **desactivado por completo** y Ethereum ahora está protegido utilizando la <a href="/developers/docs/consensus-mechanisms/pos/">prueba de participación</a> en su lugar. Descubra más en <a href="/roadmap/merge/">La Fusión</a>, <a href="/developers/docs/consensus-mechanisms/pos/">prueba de participación (PoS)</a> y la <a href="/staking/">participación</a>. ¡Esta página es de interés histórico!  
+   Ethash era el algoritmo de minería de prueba de trabajo de Ethereum. La prueba de trabajo ahora se ha **desactivado por completo** y Ethereum ahora está protegido utilizando la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) en su lugar. Descubra más en [La Fusión](/roadmap/merge/), [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/) y la [participación](/staking/). ¡Esta página es de interés histórico!  
 </InfoBanner>
 
 [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) es una versión modificada del algoritmo [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). La prueba de trabajo de Ethash es de [memoria dura](https://wikipedia.org/wiki/Memory-hard_function), lo que se pensaba que hacía que el algoritmo fuera resistente a ASIC. Finalmente se desarrollaron los ASIC de Ethash, pero la minería de GPU seguía siendo una opción viable hasta que se desactivó la prueba de trabajo. Ethash todavía se utiliza para minar otras monedas en otras redes de prueba de trabajo que no son de Ethereum.

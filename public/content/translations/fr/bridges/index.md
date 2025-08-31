@@ -24,7 +24,7 @@ Mais, que feriez-vous si vous vouliez faire le même échange pour utiliser une 
 
 Toutes les blockchains ont leurs limites. Pour qu'Ethereum puisse évoluer et répondre à la demande, il a fallu procéder à des [rollups](/glossary/#rollups). Alternativement, des L1 comme Solana ou Avalanche sont conçues différemment pour permettre un débit plus élevé mais au prix de la décentralisation.
 
-Toutes les blockchains se développent néanmoins dans des environnements isolés et ont cependant des règles et des mécanismes de [consensus](/glossary/#consensus) différents. Cela signifie qu'elles ne peuvent pas communiquer de manière native et que les jetons ne peuvent pas circuler librement entre les blockchains.
+Cependant, toutes les blockchains se développent dans des environnements isolés et possèdent des règles et des mécanismes de [consensus](/glossary/#consensus) différents. Cela signifie qu'elles ne peuvent pas communiquer de manière native et que les jetons ne peuvent pas circuler librement entre les blockchains.
 
 Les ponts existent pour connecter les blockchains, permettant le transfert d'informations et de jetons entre elles.
 
@@ -60,12 +60,12 @@ Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explor
 Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez des fonds que sur le réseau principal Ethereum. Pour vous exposer aux BTC sur Ethereum, vous pouvez acheter des Wrapped Bitcoin (WBTC). Cependant, le WBTC est un jeton [ERC-20](/glossary/#erc-20) natif du réseau Ethereum, ce qui signifie qu'il s'agit d'une version Ethereum de Bitcoin et non de l'actif original sur la blockchain Bitcoin. Pour posséder des BTC natifs, vous devez basculer vos actifs d'Ethereum à Bitcoin en utilisant un pont. Cela permettra de relier votre WBTC et de le convertir en BTC natif. Alternativement, vous pouvez également posséder des BTC et vouloir les utiliser dans les protocoles [DeFi](/glossary/#defi) d'Ethereum. Pour cela, il faudrait faire le pont dans l'autre sens, de BTC à WBTC, qui peut ensuite être utilisé comme actif sur Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  Vous pouvez également faire tout ce qui précède en utilisant un <a href="/get-eth/">échange centralisé</a>. Cependant, à moins que vos fonds ne soient déjà mêlés à un échange, cela impliquerait plusieurs étapes et il serait probablement préférable d'utiliser un pont.
+  Vous pouvez également faire tout ce qui précède en utilisant un [échange centralisé](/get-eth/). Cependant, à moins que vos fonds ne soient déjà mêlés à un échange, cela impliquerait plusieurs étapes et il serait probablement préférable d'utiliser un pont.
 </InfoBanner>
 
 <Divider />
 
-## Type de pont {#types-of-bridge}
+## Types de ponts {#types-of-bridge}
 
 Les ponts présentent de nombreux types de conceptions et de subtilités. En général, les ponts se divisent en deux catégories : les ponts sans risque et les ponts risqués.
 
@@ -131,7 +131,9 @@ Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum,
 <Divider />
 
 ## En savoir plus {#further-reading}
+- [EIP-5164: Exécution Cross-Chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 juin 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 juillet 2022 - Bartek Kiepuszewski_
+- [Pourquoi l'avenir sera multi-chaînes, mais ne sera pas cross-chaînes."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 janvier 2022 - Vitalik Buterin_
+- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : Comités d'état Lagrange et au-delà](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 juin 2024 - Emmanuel Awosika_
+- [L'état des solutions d'interopérabilité des rollups](https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 juin 2024 - Alex Hook_
 
-- [EIP-5164 : Exécution en chaines croisées](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 juin 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 juillet 2022 - Bartek Kiepuszewski_
-- ["Pourquoi le futur sera multi-chaîne, mais ne sera pas celui des chaînes croisées.](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 janvier 2022 - Vitalik Buterin_

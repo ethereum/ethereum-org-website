@@ -25,7 +25,7 @@ Gli staker domestici sono responsabili di utilizzare l'hardware necessario a ese
 
 Uno staker domestico riceve ricompense direttamente dal protocollo per mantenere il proprio validatore correttamente in funzione e online.
 
-## Perché fare staking domestico? {#why-stake-solo}
+## Perché fare staking da casa? {#why-stake-solo}
 
 Lo staking domestico richiede maggiori responsabilità, ma fornisce il massimo controllo sui propri fondi e sulla propria configurazione di staking.
 
@@ -55,7 +55,7 @@ Richiede anche una configurazione hardware molto basilare e una minima comprensi
 <ExpandableCard title="Gestione sicura delle chiavi" eventCategory="SoloStaking" eventName="clicked secure key management">
 Proprio come le chiavi private proteggono il tuo indirizzo di Ethereum, dovrai generare delle chiavi specificamente per il tuo validatore. Devi comprendere come mantenere al sicuro qualsiasi frase di seed o chiave privata.{' '}
 
-<a href="/security/">Sicurezza di Ethereum e prevenzione delle truffe</a>
+[Sicurezza di Ethereum e prevenzione delle truffe](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Un <em>validatore</em> è un'entità virtuale che risiede su Ethereum e partecip
 <ExpandableCard title="Posso depositare più di 32 ETH?">
 Ogni coppia di chiavi associata ad un validatore richiede esattamente 32 ETH per esser attivata. Maggiori ETH depositati in una singola serie di chiavi non aumentano le potenziali ricompense, poiché ogni validatore è limitato a un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo effettivo</a> di 32 ETH. Questo significa che lo staking è effettuato in incrementi di 32 ETH, ognuno con la propria serie di chiavi e il proprio saldo.
 
-Non depositare più di 32 ETH per un singolo validatore. Non incrementerà le tue ricompense. Se un indirizzo di prelievo è stato impostato per il validatore, i fondi in eccesso oltre i 32 ETH saranno prelevati automaticamente a tale indirizzo durante la successiva <a href="/staking/withdrawals/#validator-sweeping">pulizia dei validatori</a>.
+Non depositare più di 32 ETH per un singolo validatore. Non incrementerà le tue ricompense. Se un indirizzo di prelievo è stato impostato per il validatore, i fondi in eccesso oltre i 32 ETH saranno prelevati automaticamente a tale indirizzo durante la successiva [pulizia dei validatori](/staking/withdrawals/#validator-sweeping).
 
-Se lo staking domestico sembra troppo impegnativo per te, prendi in considerazione di utilizzare un fornitore di <a href="/staking/saas/">staking come servizio</a> o, se hai meno di 32 ETH, dai un'occhiata ai <a href="/staking/pools/">pool di staking</a>.
+Se lo staking domestico sembra troppo impegnativo per te, prendi in considerazione di utilizzare un fornitore di [staking come servizio](/staking/saas/) o, se hai meno di 32 ETH, dai un'occhiata ai [pool di staking](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Sarà tagliato se resto offline? (tldr: No.)">

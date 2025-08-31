@@ -56,7 +56,7 @@ Ha egy adott sztring kapcsán jelezni szeretne valamit, írjon kommentet.
 
 ## Mi az a fordítói memória (TM)? {#translation-memory}
 
-A fordítói memória (TM) egy Crowdin funkció, mely eltárolja a korábban fordított [ethereum.org](http://ethereum.org/) sztringeket. A sztring fordításkor automatikusan bekerül a projekt TM-jébe. Ez egy hasznos eszköz lehet, mellyel időt spórolhat!
+A fordítói memória (TM) egy Crowdin funkció, mely eltárolja a korábban fordított [ethereum.org](https://ethereum.org/) sztringeket. A sztring fordításkor automatikusan bekerül a projekt TM-jébe. Ez egy hasznos eszköz lehet, mellyel időt spórolhat!
 
 - Tekintse meg a „TM- és MT-javaslatokat”, és láthatja, hogy mások hogyan fordították az adott vagy hasonló kifejezést. Ha talál egy nagy mértékben illeszkedő megoldást, akkor úgy használhatja fel azt, hogy rákattint.
 - Ha a lista üres, akkor kereshet a TM-ben korábbi fordításokat, hogy konzisztensen legyenek adott kifejezések használva.

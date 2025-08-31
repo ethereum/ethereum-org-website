@@ -96,7 +96,7 @@ Explore projetos e junte-se à comunidade DeSci.
 - [Virotada: receba financiamento por meio de acordos de pesquisa patrocinados para pesquisas sobre longevidade](https://www.vitadao.com/)
 - [ResearchHub: publique um resultado científico e converse com colegas](https://www.researchhub.com/)
 - [LabDAO: dobre uma proteína in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://api.dclimate.net/)
+- [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://www.dclimate.net/)
 - [DeSci Foundation: construtor de ferramentas de publicação DeSci](https://descifoundation.org/)
 - [DeSci.World: balcão único para os usuários visualizarem e interagirem com a ciência descentralizada](https://desci.world)
 - [OceanDAO: financiamento governado pela DAO para ciência relacionada a dados](https://oceanprotocol.com/)
@@ -118,7 +118,7 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [Um guia sobre biotecnologia descentralizada por Jocelynn Pearl para o futuro a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [O caso da DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guia para a DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Recursos científicos descentralizados](https://www.vincentweisser.com/decentralized-science)
+- [Recursos científicos descentralizados](https://www.vincentweisser.com/desci)
 - [IP-NFTs Bio-Farmacêuticas da Molecule — Uma descrição técnica](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Construindo sistemas de ciência sem confiança, de Jon Arrastar](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas — DeSci: O Futuro da ciência descentralizada (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +126,7 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [DeSci: O futuro da pesquisa por Samuel Azinhoso](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financiamento de ciência (Epílogo: DeSci e novas criptoprimitivas) por Nadia](https://nadia.xyz/science-funding)
 - [A descentralização está perturbando o desenvolvimento de medicamentos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [O que é DeSci – Ciência Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [O que é DeSci – Ciência Descentralizada?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vídeos {#videos}
 

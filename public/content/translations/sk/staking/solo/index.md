@@ -55,7 +55,7 @@ Vyžaduje si tiež veľmi základné znalosti nastavenia hardvéru a určité po
 <ExpandableCard title="Bezpečná správa kľúčov" eventCategory="SoloStaking" eventName="clicked secure key management">
 Rovnako ako súkromné ​​kľúče zaisťujú vašu adresu Ethereum, budete musieť vygenerovať kľúče špeciálne pre validátora. Musíte rozumieť tomu, ako uchovať všetky počiatočné frázy alebo súkromné ​​kľúče v bezpečí.{' '}
 
-<a href="/security/">Zabezpečenie Etherea a prevencia podvodov</a>
+[Zabezpečenie Etherea a prevencia podvodov](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Toto je niekoľko najčastejších otázok týkajúcich sa stakovania, o ktorýc
 <ExpandableCard title="Môžem vložiť viac ako 32 ETH?">
 Každý pár kľúčov spojený s validátorom a vyžaduje na aktiváciu presne 32 ETH. Viac ETH uložených na jednu sadu kľúčov nezvyšuje potenciál odmien, pretože každý validátor je obmedzený na <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">efektívny zostatok</a> 32 ETH. To znamená, že stakovanie je hotový pri sade 32 ETH, z ktorých každá má svoju vlastnú sadu kľúčov a zostatok.
 
-Nevkladajte viac ako 32 ETH na jeden validátor. Nezvýši to vaše odmeny. Ak bola pre validátor nastavená adresa pre výber, prebytočné prostriedky nad 32 ETH budú automaticky vybrané na túto adresu počas nasledujúcej <a href="/staking/withdrawals/#validator-sweeping">kontroly validátora</a>.
+Nevkladajte viac ako 32 ETH na jeden validátor. Nezvýši to vaše odmeny. Ak bola pre validátor nastavená adresa pre výber, prebytočné prostriedky nad 32 ETH budú automaticky vybrané na túto adresu počas nasledujúcej [kontroly validátora](/staking/withdrawals/#validator-sweeping).
 
-Pokiaľ sa vám sólo stakovanie zdá príliš náročné, zvážte použitie poskytovateľa <a href="/staking/saas/">stakovanie ako služba</a>, alebo ak pracujete s menej ako 32 ETH, vyskúšajte <a href="/staking/pools/">stakovacie pooly</a>.
+Pokiaľ sa vám sólo stakovanie zdá príliš náročné, zvážte použitie poskytovateľa [stakovanie ako služba](/staking/saas/), alebo ak pracujete s menej ako 32 ETH, vyskúšajte [stakovacie pooly](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Budem potrestaný, keď prejdem offline? (v skratke: nie.)">
@@ -146,7 +146,7 @@ Prechod do režimu offline v čase, keď sa sieť správne dokončuje, NEBUDE ma
 
 Všimnite si, že sankcie za nečinnosť sú úmerné tomu, koľko validátorov je súčasne offline. V prípadoch, keď je veľká časť siete offline naraz, budú postihy pre každý z týchto validátorov vyššie, než keď je jeden validátor nedostupný.
 
-V extrémnych prípadoch, ak sa sieť prestane dokončovať v dôsledku toho, že viac ako tretina validátorov je offline, títo používatelia utrpia takzvaný <em>kvadratický únik nečinnosti</em>, čo je exponenciálny odliv ETH z účtov offline validátora. To umožňuje, aby sa sieť časom samoopravila spotrebovaním ETH neaktívnych validátorov, pokiaľ ich zostatok nebude 16 EHT, pričom následne budú automaticky vyradené z fondu validátorov. Zostávajúci online validátori budú nakoniec opäť zahŕňať viac ako 2/3 siete, čím uspokoja nadpolovičnú väčšinu potrebnú na opätovné dokončenie reťazca.
+V extrémnych prípadoch, ak sa sieť prestane dokončovať v dôsledku toho, že viac ako tretina validátorov je offline, títo používatelia utrpia takzvaný <em>kvadratický únik nečinnosti</em>, čo je exponenciálny odliv ETH z účtov offline validátora. To umožňuje, aby sa sieť časom samoopravila spotrebovaním ETH neaktívnych validátorov, pokiaľ ich zostatok nebude 16 ETH, pričom následne budú automaticky vyradené z fondu validátorov. Zostávajúci online validátori budú nakoniec opäť zahŕňať viac ako 2/3 siete, čím uspokoja nadpolovičnú väčšinu potrebnú na opätovné dokončenie reťazca.
 </ExpandableCard>
 
 <ExpandableCard title="Ako zaistím, že nebudem potrestaný?">

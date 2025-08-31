@@ -59,13 +59,13 @@ Hâlâ çoğunlukla [Web3](https://docs.web3js.org/) kullanılıyor olsa da, [et
 
 Genellikle akıllı sözleşmenizden doğrudan veri alırsınız. En son işlemin gerçekleştiği zamanı okumak mı istiyorsunuz? Sadece Ethereum düğümünden merkeziyetsiz uygulamanıza veriyi getiren `MyContract.methods.latestTradeTime().call()`'u çağırın. Peki ya yüzlerce farklı veri noktasına ihtiyacınız varsa? Bu, düğüme yüzlerce veri alınmasına yol açar ve bu alımların her biri bir [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) gerektirerek merkeziyetsiz uygulamanızı yavaş ve verimsiz hâle getirir. Bir geçici çözüm, sözleşmenizin içinde aynı anda birden çok veri döndüren bir alıcı çağrı işlevi olabilir. Ancak bu her zaman ideal değildir.
 
-Tarihsel verilerle de ilgileniyor olabilirsiniz. Yalnızca son işlem zamanını değil, kendi yaptığınız tüm işlemlerin zamanlarını da bilmek istiyorsunuz. _create-eth-app_ alt grafik paketini kullanın, [belgeleri](https://thegraph.com/docs/define-a-subgraph) okuyun ve kendi sözleşmelerinize uyarlayın. Popüler akıllı sözleşmeler arıyorsanız, zaten bir alt grafik bile olabilir. [Alt grafik gezgini](https://thegraph.com/explorer/)'ne bir göz atın.
+Tarihsel verilerle de ilgileniyor olabilirsiniz. Yalnızca son işlem zamanını değil, kendi yaptığınız tüm işlemlerin zamanlarını da bilmek istiyorsunuz. _create-eth-app_ alt grafik paketini kullanın, [belgeleri](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) okuyun ve kendi sözleşmelerinize uyarlayın. Popüler akıllı sözleşmeler arıyorsanız, zaten bir alt grafik bile olabilir. [Alt grafik gezgini](https://thegraph.com/explorer/)'ne bir göz atın.
 
 Bir alt grafiğiniz olduğunda, ihtiyacınız olan geçmiş veriler de dahil olmak üzere tüm önemli blok zinciri verilerini alan merkeziyetsiz uygulamanıza basit bir sorgu yazmanıza olanak tanır, yalnızca tek bir getirme gerekir.
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) entegrasyonu sayesinde grafiği React merkeziyetsiz uygulamanıza kolayca entegre edebilirsiniz. Özellikle [React hooks ve Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) kullanılırken, verileri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir:
+[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) entegrasyonu sayesinde grafiği React merkeziyetsiz uygulamanıza kolayca entegre edebilirsiniz. Özellikle [React hooks ve Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) kullanılırken, verileri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

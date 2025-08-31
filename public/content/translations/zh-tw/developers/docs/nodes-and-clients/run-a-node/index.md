@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### 共識客戶
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)（並未提供預先建置的二進位檔案，只有一個 Docker 映像檔，或者自行編譯原始碼）
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（並未提供預先建置的二進位檔案，只有一個 Docker 映像檔，或者自行編譯原始碼）
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu 還有個啟動器選項，會詢問一系列問題並產生設定檔案。
 besu --Xlauncher
 ```
 
-[Besu 的文件](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)包含了額外的選項及設定細節。
+[Besu 的文件](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含了額外的選項及設定細節。
 
 ##### 運行 Erigon
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 運行 Nethermind
 
-Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
+Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/get-started/installing-nethermind)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 執行用戶端會啟用它的核心功能、選擇端點並開始尋找對等用戶端。 成功發現對等用戶端後，用戶端開始同步。 執行用戶端會等待來自共識用戶端的連接。 在用戶端成功與目前狀態同步以後，目前的區塊鏈資料就可以使用。
 
@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-請參閱[設定 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以瞭解有關預設資料目錄的更多資訊。 [Besu 文件](https://reth.rs/run/mainnet.html)包含了額外的選項及設定細節。
+查看[設定 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多有關預設資料目錄的資訊。 [Besu 文件](https://reth.rs/run/mainnet.html)包含了額外的選項及設定細節。
 
 #### 啟動共識用戶端 {#starting-the-consensus-client}
 

@@ -12,7 +12,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-确保你已熟悉[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)、[权益证明](/developers/docs/consensus-mechanisms/pos)和[燃料](/developers/docs/gas/)。 熟悉 [dapps](/dapps/) 和 [DeFi](/defi/) 也很有帮助。
+确保你已熟悉[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)、[权益证明](/developers/docs/consensus-mechanisms/pos)和[燃料](/developers/docs/gas/)。 熟悉 [dapps](/apps/) 和 [DeFi](/defi/) 也很有帮助。
 
 ## 最大可提取价值提取 {#mev-extraction}
 
@@ -136,7 +136,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 许可内存池还会增加上一节中描述的中心化风险。 运行多个验证者的大型池可能会受益于为交易者和用户提供交易隐私，增加其最大可提取价值收入。
 
-在合并后的以太坊中解决这些与最大可提取价值相关的问题是一个核心研究领域。 迄今为止，为了减少最大可提取价值 (MEV) 在合并后对以太坊的去中心化和安全造成的负面影响，提出了两种解决方案：[**提议者—构建者分离 (PBS)**](/roadmap/pbs/)和[**构建者应用程序接口 (API)**](https://github.com/ethereum/builder-specs)。
+在合并后的以太坊中解决这些与最大可提取价值相关的问题是一个核心研究领域。 迄今为止，为了减少最大可提取价值 (MEV) 在合并后对以太坊的去中心化和安全造成的负面影响，提出了两种解决方案：[**提议者—构建者分离 (PBS) **](/roadmap/pbs/)和[**构建者应用程序接口 (API)**](https://github.com/ethereum/builder-specs)。
 
 ### 提议者-构建者分离 {#proposer-builder-separation}
 

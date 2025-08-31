@@ -64,6 +64,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Integrated testnet faucet access
     - Active Discord builder community with 18k users
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Docs](https://docs.allnodes.com/)
+  - Features
+    - No rate limits with PublicNode token created on the Allnodes portfolio page.
+    - Privacy focused free rpc endpoints (100+ blockchains) on [PublicNode](https://www.publicnode.com)
+    - Dedicated nodes without rate limits for 90+ blockchains
+    - Dedicated archive nodes for 30+ blockchains
+    - Available in 3 regions (US, EU, Asia)
+    - Snapshots for 100+ blockchains on [PublicNode](https://www.publicnode.com/snapshots)
+    - 24/7 technical support with 99.90%-99.98% uptime SLA (depends on plan).
+    - Pay-per-hour pricing
+    - Pay with Credit Card, PayPal or Crypto
+
 - [**All That Node**](https://allthatnode.com/)
   - [Docs](https://docs.allthatnode.com/)
   - Features
@@ -264,7 +277,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Direct, technical support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Docs](https://docs.nodereal.io/docs/introduction)
   - Features
     - Reliable, fast and scalable RPC API services
     - Enhanced API for web3 developers

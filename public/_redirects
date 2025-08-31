@@ -18,7 +18,9 @@
 
 /search /en/ 301!
 
-/use /en/dapps/ 301!
+/use /en/apps/ 301!
+
+/dapps /en/apps/ 301!
 
 /beginners /en/what-is-ethereum/ 301!
 
@@ -156,7 +158,12 @@
 
 /*/about/product-designer /:splat/about/#open-jobs 301!
 
-/*/use /:splat/dapps/ 301!
+/*/use /:splat/apps/ 301!
+
+# Exception: don't redirect developers/docs/dapps paths
+/*/developers/docs/dapps* /:splat/developers/docs/dapps:splat 200!
+
+/*/dapps /:splat/apps/ 301!
 
 /*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!
 
@@ -174,6 +181,18 @@
 
 /*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
 
-/*/deprecated-software /:splat/dapps/ 301!
+/*/deprecated-software /:splat/apps/ 301!
 
 /*/enterprise/private-ethereum/ /:splat/enterprise/ 301!
+
+/dashboards /en/resources 301!
+
+/*/dashboards /:splat/resources 301!
+
+/tds /trillion-dollar-security 301!
+
+/*/tds /:splat/trillion-dollar-security 301!
+
+/10-years /10years 301!
+
+/*/10-years /:splat/10years 301!

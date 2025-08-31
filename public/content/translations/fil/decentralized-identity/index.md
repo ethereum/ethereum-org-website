@@ -160,7 +160,7 @@ Maraming malalaking proyekto ang gumagamit ng Ethereum bilang pundasyon para sa 
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Isang decentralized ledger/protocol para sa paggawa ng mga on-chain o off-chain na attestation tungkol sa anumang bagay._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Ang Proof of Humanity (o PoH) ay isang social identity verification system na ginawa sa Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _ Isang decentralized at open-source na social identity network na naglalayong baguhin ang pag-verify ng identity sa pamamagitan ng paggawa at pagsusuri ng isang social graph._
-- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Isang decentralized digital identity aggregator._
+- **[Proof-of-personhood Passport](https://passport.human.tech/)** - _Isang decentralized digital identity aggregator._
 
 ## Karagdagang pagbabasa {#further-reading}
 

@@ -1,11 +1,12 @@
 import { StaticImageData } from "next/image"
-import { useTranslation } from "next-i18next"
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 import { ButtonLink } from "./ui/buttons/Button"
 import InlineLink from "./ui/Link"
 import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type Layer2ProductCardProps = {
   children?: React.ReactNode

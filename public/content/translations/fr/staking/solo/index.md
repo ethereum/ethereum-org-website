@@ -25,7 +25,7 @@ Les validateurs à domicile sont responsables du fonctionnement du matériel né
 
 Un validateur à domicile reçoit des récompenses directement du protocole pour le maintien de son validateur en bon état de fonctionnement et en ligne.
 
-## Pourquoi miser à domicile ? {#why-stake-solo}
+## Pourquoi effectuer des mises en jeu depuis chez soi ? {#why-stake-solo}
 
 La mise en jeu à domicile demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 
@@ -55,7 +55,7 @@ Il faut également faire un petit peu de configuration matérielle et posséder 
 <ExpandableCard title="Gestion des clés sécurisée" eventCategory="SoloStaking" eventName="clicked secure key management">
 Tout comme la façon dont les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiques pour votre validateur. Vous devez comprendre comment conserver toutes vos phrases de récupération ou vos clés privées en sécurité.{' '}
 
-<a href="/security/">Sécurité d'Ethereum et prévention des escroqueries</a>
+[Sécurité d'Ethereum et prévention des escroqueries](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Un validateur est une entité virtuelle existant sur Ethereum et participant au 
 <ExpandableCard title="Puis-je déposer plus de 32 ETH ?">
 Chaque paire de clés associée à un validateur nécessite exactement 32 ETH pour être activée. Déposer plus d'ETH sur un même ensemble de clés n'augmente pas le potentiel de récompense, car chaque validateur est limité à un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">solde effectif</a> de 32 ETH. Cela signifie que la mise en jeu se fait par tranches de 32 ETH, chacune avec son propre jeu de clés et son propre solde.
 
-Ne déposez pas plus de 32 ETH pour un seul validateur. Cela n'augmentera pas vos récompenses. Si une adresse de retrait a été définie pour le validateur, Les fonds excédentaires de 32 ETH seront automatiquement retirés à cette adresse lors du prochain <a href="/staking/withdrawals/#validator-sweeping">balayage de validateur</a>.
+Ne déposez pas plus de 32 ETH pour un seul validateur. Cela n'augmentera pas vos récompenses. Si une adresse de retrait a été définie pour le validateur, Les fonds excédentaires de 32 ETH seront automatiquement retirés à cette adresse lors du prochain [balayage de validateur](/staking/withdrawals/#validator-sweeping).
 
-Si la mise en jeu à domicile vous semble trop exigeante, envisagez d'utiliser un fournisseur <a href="/staking/saas/">de mise en jeu en tant que service</a>, ou si vous possédez moins de 32 ETH, consultez <a href="/staking/pools/">les groupes d'enjeu</a>.
+Si la mise en jeu à domicile vous semble trop exigeante, envisagez d'utiliser un fournisseur [de mise en jeu en tant que service](/staking/saas/), ou si vous possédez moins de 32 ETH, consultez [les groupes d'enjeu](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Vais-je être sanctionné si je me déconnecte ? (tdlr : Non.)">

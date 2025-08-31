@@ -1,8 +1,8 @@
-import { RiInformationLine } from "react-icons/ri"
-import { Box, Center } from "@chakra-ui/react"
+import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Translation from "../Translation"
+import { Center } from "../ui/flex"
 import InlineLink from "../ui/Link"
 
 // TODO: remove `index` when we delete the old tooltip
@@ -21,9 +21,9 @@ const meta = {
   args: {
     content: <TooltipContent />,
     children: (
-      <Box as="span" data-testid="tooltip-icon">
-        <RiInformationLine />
-      </Box>
+      <span data-testid="tooltip-icon">
+        <Info className="size-4" />
+      </span>
     ),
   },
   argTypes: {
@@ -45,7 +45,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Center boxSize="md">
+      <Center className="size-128">
         <Story />
       </Center>
     ),

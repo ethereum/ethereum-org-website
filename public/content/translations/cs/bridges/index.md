@@ -49,7 +49,7 @@ Představte si, že máte ETH na hlavní síti Ethereum, ale chtěli byste plati
 
 ### Dappky na jiných blockchainech {#dapps-other-chains}
 
-Pokud jste používali Aave na hlavní síti Ethereum k poskytování půjček v USDT, ale úroková sazba pro půjčování USDT pomocí Aave na Polygonu je vyšší.
+Pokud jste používali Aave na hlavní síti Etherea k poskytování půjček v USDT, ale úroková sazba pro půjčování USDT pomocí Aave na Polygonu je vyšší.
 
 ### Prozkoumávání blockchainových ekosystémů {#explore-ecosystems}
 
@@ -60,7 +60,7 @@ Máte-li ETH na hlavní síti Ethereum a chcete prozkoumat alternativní L1 bloc
 Představte si, že si chcete koupit Bitcoin (BTC), ale máte peníze pouze na hlavní síti Ethereum. Abyste získali BTC zastoupený na Ethereu, můžete si koupit Wrapped Bitcoin (WBTC). WBTC je ale token [ERC-20](/glossary/#erc-20) nativní pro síť Ethereum, což znamená, že jde o verzi Bitcoinu na Ethereu a nikoli o BTC na blockchainu Bitcoin. Abyste mohli vlastnit původní BTC, musíte svá aktiva převést z Etherea na Bitcoin pomocí přemostění. Tímto způsobem převedete svůj WBTC na BTC. Alternativně můžete vlastnit BTC a chtít jej použít v protokolech [DeFi](/glossary/#defi) na Ethereu. To by vyžadovalo přemostění opačným směrem, tedy z BTC na WBTC, který lze pak použít jako aktivum na Ethereu.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  Všechny tyto operace můžete provést také prostřednictvím <a href="/get-eth/">centralizované burzy</a>. Ale pokud vaše prostředky ještě na burze nejsou, zahruje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
+  Všechny tyto operace můžete provést také prostřednictvím [centralizované burzy](/get-eth/). Ale pokud vaše prostředky ještě na burze nejsou, zahruje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
 </InfoBanner>
 
 <Divider />
@@ -131,7 +131,9 @@ Přemostění jsou klíčová pro vstup uživatelů do 2. vrstev Etherea, stejn�
 <Divider />
 
 ## Další četba {#further-reading}
+- [EIP-5164: Meziblockchainová exekuce](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) – _18. června 2022 – Brendan Asselstine_
+- [Rizika přemostění vrstev 2](https://gov.l2beat.com/t/l2bridge-risk-framework/31) – _5. července 2022 – Bartek Kiepuszewski_
+- [Proč je budoucnost multiblockchainová, ale ne meziblockchainová](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) – _8. ledna 2022 – Vitalik Buterin_
+- [Využití sdíleného zabezpečení pro bezpečnou interoperabilitu mezi blockchainy: Lagrangovy stavové výbory a další](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – _ 12. června 2024 – Emmanuel Awosika_
+- [Stav řešení interoperability rollupů](https://research.2077.xyz/the-state-of-rollup-interoperability) – _20. června 2024 – Alex Hook_
 
-- [EIP-5164: Meziblockchainová exekuce](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18. června 2022 - Brendan Asselstine_
-- [Rizika přemostění 2. vrstev](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5. července 2022 - Bartek Kiepuszewski_
-- [Proč je budoucnost multiblockchainová, ale ne meziblockchainová](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8. ledna 2022 - Vitalik Buterin_

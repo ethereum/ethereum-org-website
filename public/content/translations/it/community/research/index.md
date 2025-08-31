@@ -111,7 +111,7 @@ Attualmente esistono diversi protocolli di Livello 2 che ridimensionano Ethereum
 #### Ricerca recente {#recent-research-2}
 
 - [Ordinamento equo di Arbitrum per i sequenziatori](https://eprint.iacr.org/2021/1465)
-- [Livello 2 su ethresear.ch](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Livello 2](https://ethresear.ch/c/layer-2/32)
 - [Tabella di marcia incentrata sui rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ I portafogli di Ethereum possono essere estensioni del browser, applicazioni des
 
 - [Introduzione ai portafogli elettronici](/wallets/)
 - [Introduzione alla sicurezza dei portafogli](/security/)
-- [Sicurezza su ethresear.ch](https://ethresear.ch/tag/security)
+- [Ethresear.ch Sicurezza](https://ethresear.ch/tag/security)
 - [Astrazione del conto EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Astrazione del conto EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -364,7 +364,7 @@ Gli oracoli importano dati off-chain sulla blockchain in modo decentralizzato e 
 
 - [Introduzione agli oracoli](/developers/docs/oracles/)
 
-#### Ricerca recente {#recent-research-18}
+#### Ricerche recenti {#recent-research-18}
 
 - [Sondaggio sugli oracoli delle blockchain](https://arxiv.org/pdf/2004.07140.pdf)
 - [White paper di Chainlink](https://chain.link/whitepaper)
@@ -377,11 +377,11 @@ Gli attacchi su Ethereum generalmente sfruttano le vulnerabilità di singole app
 
 - [Rapporto sull'exploit "wormhole"](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Elenco degli hack post-mortem dei contratti Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Ultime notizie su Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Ultime notizie su Rekt](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Ricerca recente {#recent-research-19}
 
-- [Applicazioni su ethresear.ch](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Applicazioni](https://ethresear.ch/c/applications/18)
 
 ### Stack tecnologico {#technology-stack}
 

@@ -60,7 +60,7 @@ Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L
 Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red principal de Ethereum. Para obtener exposición a BTC en Ethereum, puede comprar Wrapped Bitcoin (WBTC). Sin embargo, WBTC es un token [ERC-20](/glossary/#erc-20) nativo de la red de Ethereum, lo que significa que es una versión de Ethereum de Bitcoin y no el activo original en la cadena de bloques de Bitcoin. Para tener BTC nativo, usted tendría que trasladar sus activos de Ethereum a Bitcoin usando un puente. Esto trasladará entre redes su WBTC y lo convertirá en BTC nativo. De forma alternativa, podría tener BTC y querer usarlo en protocolos [DeFi](/glossary/#defi) de Ethereum. Esto requeriría un puente pero al revés, desde el BTC hasta WBTC, que luego puede ser utilizado como un activo en Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  También puede hacer todo lo anterior usando un <a href="/get-eth/">exchange centralizado</a>. Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
+  También puede hacer todo lo anterior usando un [exchange centralizado](/get-eth/). Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
 </InfoBanner>
 
 <Divider />
@@ -92,6 +92,15 @@ Un punto de control manual es similar a un modelo de confianza, ya que depende d
 La autofacturación, o auto check-in, es similar a un modelo que no precisa confianza, ya que elimina el papel del operador y utiliza la tecnología para ejecutar las operaciones. Los usuarios siempre mantienen el control de sus datos y no tienen que confiar su información privada a terceros.
 
 Muchas soluciones de puente adoptan modelos entre estos dos extremos con diferentes niveles de no necesidad de confianza en el proceso.
+
+<Divider />
+
+## Usar puentes {#use-bridge}
+
+Usar puentes le permite mover sus activos a través de diferentes cadenas de bloques. He aquí algunos recursos que le pueden ayudar a encontrar y usar puentes:
+
+- **[Resumen de los puentes L2BEAT ](https://l2beat.com/bridges/summary) & [Análisis de riesgo de puentes L2BEAT](https://l2beat.com/bridges/risk)**: Un resumen que comprende varios puentes, incluyendo detalles sobre la cuota de mercado, el tipo de puente y las cadenas de destino. L2BEAT también tiene análisis de riesgo de puentes, ayudando a los usuarios a tomar decisiones informadas a lo largo del proceso de elección de un puente.
+- **[Resumen de los puentes DefiLlama](https://defillama.com/bridges/Ethereum)**: Un resumen de los volúmenes de puentes a lo largo de la red de Ethereum.
 
 <Divider />
 

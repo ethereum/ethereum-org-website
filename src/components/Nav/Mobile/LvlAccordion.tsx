@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { slugify } from "@/lib/utils/url"
 import { cleanPath } from "@/lib/utils/url"
 
 import { Button } from "../../ui/buttons/Button"
@@ -17,6 +18,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./MenuAccordion"
+
+import { usePathname } from "@/i18n/routing"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -45,14 +48,15 @@ const LvlAccordion = ({
   activeSection,
   onToggle,
 }: LvlAccordionProps) => {
-  const { asPath, locale } = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
   const [value, setValue] = useState("")
 
   return (
     <Accordion type="single" collapsible value={value} onValueChange={setValue}>
       {items.map(({ label, description, ...action }) => {
         const isLink = "href" in action
-        const isActivePage = isLink && cleanPath(asPath) === action.href
+        const isActivePage = isLink && cleanPath(pathname) === action.href
         const isExpanded = value === label
 
         const nestedAccordionSpacingMap = {
@@ -128,6 +132,7 @@ const LvlAccordion = ({
             <AccordionTrigger
               heading={`h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"}
               className={cn("text-body", nestedAccordionSpacingMap[lvl])}
+              data-testid={`accordion-toggle-${slugify(label)}`}
               onClick={() => {
                 trackCustomEvent({
                   eventCategory: "Mobile navigation menu",

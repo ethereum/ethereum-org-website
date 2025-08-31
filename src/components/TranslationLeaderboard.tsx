@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import reverse from "lodash/reverse"
-import sortBy from "lodash/sortBy"
-import { useTranslation } from "next-i18next"
+import { reverse, sortBy } from "lodash"
 
 import type { CostLeaderboardData } from "@/lib/types"
 
@@ -12,6 +10,68 @@ import { cn } from "@/lib/utils/cn"
 
 import Emoji from "./Emoji"
 import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
+
+const AvatarWithFallback = ({
+  username,
+  avatarUrl,
+}: {
+  username: string
+  avatarUrl: string
+}) => {
+  const [imageError, setImageError] = useState(false)
+
+  // Generate consistent avatar colors using design system colors
+  const avatarColors = [
+    "bg-primary",
+    "bg-accent-a",
+    "bg-accent-b",
+    "bg-accent-c",
+    "bg-blue-600",
+    "bg-purple-600",
+    "bg-pink-600",
+    "bg-teal-600",
+    "bg-blue-500",
+    "bg-purple-500",
+    "bg-pink-500",
+    "bg-teal-500",
+  ]
+
+  // Simple hash function for consistent color selection
+  const hash = username.split("").reduce((a, b) => {
+    a = (a << 5) - a + b.charCodeAt(0)
+    return a & a
+  }, 0)
+
+  const avatarColorClass = avatarColors[Math.abs(hash) % avatarColors.length]
+  const initials = username.slice(0, 1).toUpperCase()
+
+  if (imageError || !avatarUrl) {
+    return (
+      <div
+        className={cn(
+          "me-4 hidden h-[30px] w-[30px] items-center justify-center rounded-full text-sm font-semibold text-white sm:flex sm:h-10 sm:w-10",
+          avatarColorClass
+        )}
+      >
+        {initials}
+      </div>
+    )
+  }
+
+  return (
+    <div className="relative me-4 hidden h-[30px] w-[30px] sm:block sm:h-10 sm:w-10">
+      <Image
+        fill
+        className="rounded-full object-cover"
+        src={avatarUrl}
+        alt={username}
+        onError={() => setImageError(true)}
+      />
+    </div>
+  )
+}
 
 const RadioCard = ({ value, children, checked, onChange }) => {
   return (
@@ -117,6 +177,13 @@ const TranslationLeaderboard = ({
           .map((item: CostLeaderboardData, idx: number) => {
             const { username, avatarUrl, totalCosts, langs } = item
 
+            const transformedAvatarUrl = avatarUrl
+              ? avatarUrl.replace(
+                  "https://crowdin-static.downloads.crowdin.com",
+                  "https://crowdin-static.cf-downloads.crowdin.com"
+                )
+              : avatarUrl
+
             let emoji: string | null = null
             if (idx === 0) {
               emoji = ":trophy:"
@@ -139,14 +206,10 @@ const TranslationLeaderboard = ({
                     )}
                   </div>
                   <Flex className="me-8 flex-row items-center break-words">
-                    <div className="relative me-4 hidden h-[30px] w-[30px] sm:block sm:h-10 sm:w-10">
-                      <Image
-                        fill
-                        className="rounded-full object-cover"
-                        src={avatarUrl}
-                        alt={username}
-                      />
-                    </div>
+                    <AvatarWithFallback
+                      username={username}
+                      avatarUrl={transformedAvatarUrl}
+                    />
                     <div className="max-w-[100px] sm:max-w-none">
                       {username}
                       <span className="block text-sm opacity-60">

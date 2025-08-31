@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何保护好助记词或私钥的安全。{' '}
 
-<a href="/security/">以太坊的安全性和防范欺诈</a>
+[以太坊的安全性和防范欺诈](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 <ExpandableCard title="我能存入超过 32 个以太币吗？">
 每个与验证者相关的密钥对都需要正好 32 个以太币才能激活。 将更多以太币存入一对密钥并不能增加可能获得的奖励，因为每个验证者的<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有效余额</a>被限制为 32 个以太币。 这意味着质押时需要以 32 个以太币为单位递增，每个验证者都有自己的一套密钥和余额。
 
-不要为一个验证者存入超过 32 以太币的资金。 这样做不会增加你的奖励。 如果为验证者设置了提款地址，超过 32 个以太币多余资金将在下一次<a href="/staking/withdrawals/#validator-sweeping">验证者扫描</a>时自动提取到该地址。
+不要为一个验证者存入超过 32 以太币的资金。 这样做不会增加你的奖励。 如果为验证者设置了提款地址，超过 32 个以太币多余资金将在下一次[验证者扫描](/staking/withdrawals/#validator-sweeping)时自动提取到该地址。
 
-如果单独质押对你来说要求太高，可以考虑使用<a href="/staking/saas/">质押即服务</a>提供商，或者如果你的资金少于 32 个以太币，则可以考虑<a href="/staking/pools/">质押池</a>。
+如果单独质押对你来说要求太高，可以考虑使用[质押即服务](/staking/saas/)提供商，或者如果你的资金少于 32 个以太币，则可以考虑[质押池](/staking/pools/)。
 </ExpandableCard>
 
 <ExpandableCard title="如果我离线了会被罚没吗？ （简单地说：不会）">
@@ -203,4 +203,4 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 - [加入以太坊 2.0 测试网的详细步骤](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 防止罚没小技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

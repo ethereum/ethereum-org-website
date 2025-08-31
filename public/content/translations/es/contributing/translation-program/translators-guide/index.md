@@ -116,7 +116,7 @@ La mejor manera de conservar los enlaces intactos es copiarlos directamente desd
 
 ![Ejemplo de link.png](./example-of-link.png)
 
-Los enlaces también aparecen en el texto de origen en forma de etiquetas (es decir, <0> </0>). Si pasa el cursor sobre la etiqueta, el editor mostrará su contenido completo (a veces estas etiquetas representan enlaces).
+Los enlaces también aparecen en el texto de origen en forma de etiquetas (es decir, `<0> </0>`). Si pasa el cursor sobre la etiqueta, el editor mostrará su contenido completo (a veces estas etiquetas representan enlaces).
 
 Es muy importante copiar los enlaces del texto original y no cambiar su orden.
 
@@ -154,7 +154,7 @@ nonce - _Texto no traducible_
 
 El texto original también contiene etiquetas acortadas, que solo contienen números, lo que significa que su función no es inmediatamente obvia. Puede pasar el cursor sobre estas etiquetas para ver qué función tienen exactamente.
 
-En el ejemplo de abajo, al pasar el cursor por la <0> etiqueta se muestra lo que representa `<code>` y contiene un fragmento de código, por lo tanto el contenido dentro de estas etiquetas no debe traducirse.
+En el ejemplo de abajo, puede verlo al pasar el cursor por la `<0>` etiqueta se muestra lo que representa `<code>` y contiene un fragmento de código, por lo tanto el contenido dentro de estas etiquetas no debe traducirse.
 
 ![Ejemplo de tags.png ambiguo](./example-of-ambiguous-tags.png)
 

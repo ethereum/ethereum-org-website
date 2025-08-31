@@ -12,7 +12,7 @@ summaryPoint4: Potser, això, ho coneixeu com la "Fase 0" dels mapes tècnics.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-    La cadena de balisa es va posar en marxa l'1 de desembre del 2020 al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">exploreu les dades</a>. Si voleu ajudar a validar la cadena, podeu <a href="/staking/">"apostar" els vostres ETH</a>.
+    La cadena de balisa es va posar en marxa l'1 de desembre del 2020 al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">exploreu les dades</a>. Si voleu ajudar a validar la cadena, podeu ["apostar" els vostres ETH](/staking/).
 </UpgradeStatus>
 
 ## Què fa la cadena de balisa? {#what-does-the-beacon-chain-do}
@@ -30,7 +30,7 @@ La cadena de balisa introduirà la [prova de participació](/developers/docs/con
 Apostar i convertir-se en validador és més senzill que [minar](/developers/docs/consensus-mechanisms/pow/mining/) (la manera actual de mantenir la xarxa segura). I s'espera que això contribueixi a fer Ethereum més segur a llarg termini. Com més gent participi a la xarxa, més descentralitzada i segura serà davant dels atacs.
 
 <InfoBanner emoji=":money_bag:">
-Si us interessa ser validador i contribuir a protegir la cadena de balisa, <a href="/staking/">aquí podeu aprendre més sobre les apostes</a>.
+Si us interessa ser validador i contribuir a protegir la cadena de balisa, [aquí podeu aprendre més sobre les apostes](/staking/).
 </InfoBanner>
 
 Això és un canvi important per una altra millora:[les cadenes de fragments](/roadmap/danksharding/).

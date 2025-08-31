@@ -12,7 +12,7 @@ La valeur extractible maximale a été appliquée pour la première fois dans le
 
 ## Prérequis {#prerequisites}
 
-Assurez-vous d'être à l'aise avec les concepts de [transactions](/developers/docs/transactions/), [blocs](/developers/docs/blocks/), [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) ainsi que [de gaz](/developers/docs/gas/). Se familiariser avec les [applications décentralisées (dApps)](/dapps/) et la [finance décentralisée (DeFi)](/defi/) peut également être utile.
+Assurez-vous d'être à l'aise avec les concepts de [transactions](/developers/docs/transactions/), [blocs](/developers/docs/blocks/), [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) ainsi que [de gaz](/developers/docs/gas/). Se familiariser avec les [applications décentralisées (dApps)](/apps/) et la [finance décentralisée (DeFi)](/defi/) peut également être utile.
 
 ## Extraction MEV {#mev-extraction}
 
@@ -108,7 +108,7 @@ Cette possibilité de réorganisation de la blockchain a été [précédemment r
 
 ## État de la MEV {#state-of-mev}
 
-L’extraction MEV a été organisée au début de 2021, ce qui a entraîné des prix de gaz extrêmement élevés au cours des premiers mois de l’année. L'émergence du relais MEV de Flashbots a réduit l'efficacité des favoris généralisés et en prenant les enchères sur les prix du gaz hors chaîne, a permis la baisse des prix de gaz pour les utilisateurs ordinaires.
+L’extraction MEV a été organisée au début de 2021, ce qui a entraîné des prix de gaz extrêmement élevés au cours des premiers mois de l’année. L'émergence du relais MEV de Flashbots a réduit l'efficacité des favoris généralisés et a déplacé les enchères de prix du gaz hors de la chaîne, ce qui a fait baisser les prix du gaz pour les utilisateurs ordinaires.
 
 Bien que de nombreux chercheurs gagnent encore beaucoup d'argent avec la MEV, au fur et à mesure que les opportunités deviennent plus connues et que de plus en plus de chercheurs se font concurrence pour la même opportunité, les validateurs capteront de plus en plus le revenu total de la MEV (parce que le même type de ventes aux enchères de gaz, tel que décrit à l'origine ci-dessus, se produit également dans les Flashbots, bien que de manière privée, et les validateurs capteront le revenu des gaz qui en résulte). MEV n'est pas non plus l'apanage d'Ethereum et à mesure que les possibilités deviennent plus compétitives sur Ethereum, les chercheurs se déplacent vers des blockchains alternatifs comme Binance Smart Chain, où des possibilités MEV similaires à celles sur Ethereum existent mais avec moins de concurrence.
 
@@ -130,7 +130,7 @@ Avec moins de ressources à leur disposition, il se peut que les stakers solos n
 
 ### Mempools autorisés {#permissioned-mempools}
 
-En réponse aux attaques de type « sandwiching » et « frontrunning », les commerçants peuvent commencer à effectuer des transactions hors chaîne avec des validateurs pour assurer la confidentialité des transactions. Au lieu d'envoyer une transaction MEV potentielle au mempool public, le trader l'envoie directement au validateur, qui l'inclut dans un bloc et partage les bénéfices avec le trader.
+En réponse aux attaques de type « sandwiching » et « frontrunning », les traders peuvent commencer à effectuer des transactions hors chaîne avec des validateurs pour assurer la confidentialité des transactions. Au lieu d'envoyer une transaction MEV potentielle au mempool public, le trader l'envoie directement au validateur, qui l'inclut dans un bloc et partage les bénéfices avec le trader.
 
 Les « dark pools » sont une version plus large de cet arrangement et fonctionnent comme des mempools à accès limité et autorisés, ouverts aux utilisateurs prêts à payer certains frais. Cette tendance diminuerait l'absence de permission et de confiance d'Ethereum et transformerait potentiellement la blockchain en un mécanisme « pay-to-play » qui favorise le plus offrant.
 
@@ -156,7 +156,7 @@ La séparation entre le proposant et le constructeur dans le protocole réduit l
 
 Cela n'exclut pas totalement les validateurs des revenus liés à la MEV, car les constructeurs doivent faire des offres élevées pour que leurs blocs soient acceptés par les validateurs. Néanmoins, les validateurs n'étant plus directement axés sur l'optimisation des revenus de la MEV, la menace des attaques de type « time-bandit » diminue.
 
-La séparation proposant-constructeur réduit également les risques de centralisation de la MEV. Par exemple, l'utilisation d'un schéma commit-reveal évite aux constructeurs de devoir faire confiance aux validateurs pour ne pas voler l'opportunité MEV ou l'exposer aux autres constructeurs. Cela réduit la barrière qui empêche les stakers solitaires de bénéficier de la MEV, sinon les constructeurs auraient tendance à favoriser les grands pools ayant une réputation hors chaîne et à conclure des accords hors chaîne avec eux.
+La séparation proposant-constructeur réduit également les risques de centralisation de la MEV. Par exemple, l'utilisation d'un schéma commit-reveal évite aux constructeurs de devoir faire confiance aux validateurs pour ne pas voler l'opportunité MEV ou l'exposer aux autres constructeurs. Cela abaisse la barrière pour les validateurs solitaires qui souhaitent bénéficier de la MEV, sans quoi les constructeurs auraient tendance à favoriser les grands pools ayant une réputation hors chaîne et à conclure des accords hors chaîne avec eux.
 
 De même, les validateurs n'ont pas à faire confiance aux constructeurs pour qu'ils ne retiennent pas les corps de blocs ou ne publient pas de blocs invalides, car le paiement est inconditionnel. Les frais du validateur sont toujours traités même si le bloc proposé est indisponible ou déclaré invalide par d'autres validateurs. Dans ce dernier cas, le bloc est tout simplement rejeté, ce qui oblige le créateur du bloc à perdre tous les frais de transaction et les revenus de la MEV.
 

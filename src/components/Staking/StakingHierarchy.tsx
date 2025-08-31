@@ -1,6 +1,4 @@
 import React, { HTMLAttributes } from "react"
-import { useTranslation } from "next-i18next"
-import { IconBase } from "react-icons"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -17,6 +15,8 @@ import {
 import Translation from "../Translation"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Center, Flex, VStack } from "../ui/flex"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type SectionGridProps = ChildOnlyProp
 
@@ -80,7 +80,10 @@ const Pill = ({
   </p>
 )
 
-type GlyphProps = { glyphIcon: typeof IconBase; className?: string }
+type GlyphProps = {
+  glyphIcon: React.FC<React.SVGProps<SVGElement>>
+  className?: string
+}
 const Glyph = ({ glyphIcon: GlyphIcon, className }: GlyphProps) => (
   <Center className="area-content md:area-glyph">
     <GlyphIcon

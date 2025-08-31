@@ -1,8 +1,9 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { slugify } from "@/lib/utils/url"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
@@ -23,7 +24,7 @@ type MenuBodyProps = {
 }
 
 const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const [value, setValue] = useState("")
 
   return (
@@ -46,6 +47,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
             >
               <AccordionTrigger
                 className="text-body"
+                data-testid={`menu-section-toggle-${slugify(label)}`}
                 onClick={() => {
                   trackCustomEvent({
                     eventCategory: "Mobile navigation menu",

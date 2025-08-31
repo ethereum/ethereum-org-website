@@ -4,7 +4,7 @@ description: Přehled sítí Etherea a návod, kde získat ether (ETH) testovac�
 lang: cs
 ---
 
-Sítě Etherea jsou skupiny propojených počítačů, které komunikují pomocí protokolu Ethereum. Existuje pouze jedna hlavní síť Etherea, ale nezávislé sítě, které dodržují stejná pravidla protokolu, mohou být vytvořeny pro testovací a vývojové účely. Existuje mnoho nezávislých „sítí“, které dodržují protokol, aniž by mezi sebou komunikovaly. Můžete si dokonce spustit vlastní síť na svém počítači k testování chytrých kontraktů a web3 aplikací.
+Sítě Etherea jsou skupiny propojených počítačů, které komunikují pomocí protokolu Ethereum. Existuje pouze jedna hlavní síť Etherea, ale nezávislé sítě, které dodržují stejná pravidla protokolu, mohou být vytvořeny pro testovací a vývojové účely. Existuje mnoho nezávislých "sítí", které dodržují protokol, aniž by mezi sebou komunikovaly. Můžete si dokonce spustit vlastní síť na svém počítači k testování chytrých kontraktů a web3 aplikací.
 
 Váš účet na Ethereu bude fungovat na různých sítích, ale zůstatek na účtu a historie transakcí se nepřenesou z hlavní sítě Etherea. Pro testovací účely je užitečné vědět, které sítě jsou k dispozici a jak získat ETH testovací sítě, abyste mohli experimentovat. Obecně platí, že z bezpečnostních důvodů se nedoporučuje používat účty z hlavní sítě na testovacích sítích nebo naopak.
 
@@ -34,7 +34,7 @@ ETH na testovacích sítích nemá mít žádnou skutečnou hodnotu. Přesto vzn
 
 #### Kterou testovací síť bych měl/a použít?
 
-Dvě veřejné testovací sítě, které aktuálně udržují vývojáři klientů, jsou Sepolia a Goerli. Sepolia je síť pro vývojáře kontraktů a aplikací, kteří je chtějí otestovat. Síť Goerli umožňuje vývojářům protokolu testovat vylepšení sítě a také umožňuje uzamykatelům zkoušet provozování validátorů.
+Dvě veřejné testovací sítě, které aktuálně udržují vývojáři klientů, jsou Sepolia a Hoodi. Sepolia je síť pro vývojáře kontraktů a aplikací, kteří je chtějí otestovat. Síť Hoodi umožňuje vývojářům protokolu testovat vylepšení sítě a také umožňuje uzamykatelům zkoušet provozování validátorů.
 
 #### Sepolia {#sepolia}
 
@@ -60,14 +60,12 @@ Dvě veřejné testovací sítě, které aktuálně udržují vývojáři klient
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(dlouhodobá podpora)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Poznámka: [Testovací síť Goerli je zastaralá](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) a v roce 2023 bude nahrazena testovací sítí [Holesovice](https://github.com/eth-clients/holesovice). Zvažte přesun aplikací na testovací síť Sepolia._
-
-Goerli je testovací síť pro testování validace a uzamčení. Síť Goerli je otevřená uživatelům, kteří chtějí provozovat validátor na testovací síti. Uzamykatelé, kteří chtějí testovat vylepšení protokolu před jejich nasazením na hlavní síť, by proto měli používat Goerli.
+Hoodi je testovací síť pro testování validace a uzamčení. Síť Hoodi je otevřená uživatelům, kteří chtějí provozovat validátor na testovací síti. Uzamykatelé, kteří chtějí testovat vylepšení protokolu před jejich nasazením na hlavní síť, by proto měli používat Hoodi.
 
 - Otevřená sada validátorů, uzamykatelé mohou testovat vylepšení sítě
 - Obsáhlý stav, užitečné pro testování složitých interakcí chytrých kontraktů
@@ -75,56 +73,50 @@ Goerli je testovací síť pro testování validace a uzamčení. Síť Goerli j
 
 ##### Zdroje
 
-- [Web](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Web](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucety
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-Ke spuštění validátoru na testovací síti Holesky použijte [„laciný Holesky validátor“ launchpad](https://holesky.launchpad.ethstaker.cc/en/) od ethstaker.
+Ke spuštění validátoru na testovací síti Hoodi použijte [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Testovací sítě druhé vrstvy {#layer-2-testnets}
 
 [Druhá vrstva (L2)](/layer-2/) je souhrnný termín pro popis specifických sad škálovacích řešení Etherea. Druhá vrstva je samostatný blockchain, který rozšiřuje Ethereum a dědí jeho bezpečnostní záruky. Testovací sítě druhé vrstvy jsou obvykle úzce spojeny s veřejnými testovacími sítěmi Etherea.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Testovací síť pro [Arbitrum](https://arbitrum.io/).
 
 ##### Faucety
 
-- [Chainlink faucet](https://faucets.chain.link/)
+- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Testovací síť pro [Optimism](https://www.optimism.io/).
 
 ##### Faucety
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Testovací síť pro [Starknet](https://www.starknet.io).
 
 ##### Faucety
 
-- [Starknet faucet](https://faucet.goerli.starknet.io)
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Privátní sítě {#private-networks}
 
-Síť Etherea je privátní, pokud její uzly nejsou připojeny k veřejné síti (tj. hlavní nebo testovací síť). V tomto kontextu znamená „privátní“ pouze vyhrazená nebo izolovaná, spíše než chráněná nebo bezpečná.
+Síť Etherea je privátní, pokud její uzly nejsou připojeny k veřejné síti (tj. hlavní nebo testovací síť). V tomto kontextu znamená "privátní" pouze vyhrazená nebo izolovaná, spíše než chráněná nebo bezpečná.
 
 ### Vývojové sítě {#development-networks}
 

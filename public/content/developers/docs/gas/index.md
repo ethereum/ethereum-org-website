@@ -1,7 +1,7 @@
 ---
 title: Gas and fees
 metaTitle: "Ethereum gas and fees: technical overview"
-description:
+description: Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.
 lang: en
 ---
 
@@ -125,6 +125,7 @@ Layer 2 scaling is a primary initiative to greatly improve gas costs, user exper
 If you want to monitor gas prices, so you can send your ETH for less, you can use many different tools such as:
 
 - [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Open source transaction gas price estimator_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitor and track the Ethereum, and L2 gas prices to reduce transaction fees and save money_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
@@ -140,4 +141,5 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Gas Optimization Strategies for Developers](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 docs](https://eips.ethereum.org/EIPS/eip-1559).
-- [Tim Beiko's EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
+- [Tim Beiko's EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559: Separating Mechanisms From Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

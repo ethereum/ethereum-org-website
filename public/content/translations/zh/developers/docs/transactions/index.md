@@ -22,7 +22,7 @@ lang: zh
 
 所提交的交易包括下列信息：
 
-- `from` - 发送者的地址，该地址将签署交易。 这将是一个外部帐户，因为合约帐户不能发送交易。
+- `from` - 发送者的地址，该地址将签署交易。 这将是一个外部帐户，因为合约帐户无法发送交易
 - `to` — 接收地址（如果是外部帐户，交易将传输值。 如果是合约帐户，交易将执行合约代码）
 - `signature` – 发送者的标识符。 当发送者的私钥签署交易并确保发送者已授权此交易时，生成此签名。
 - `nonce` - 一个有序递增的计数器，表示来自帐户的交易数量
@@ -162,7 +162,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 任何涉及智能合约的交易都需要燃料。
 
-智能合约还可以包含被称为 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函数，这不会改变合约的状态。 像这样，从外部帐户调用这些函数不需要任何燃料。 这种情况下的 RPC 底层调用为 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)。
+智能合约还可以包含被称为 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函数，这不会改变合约的状态。 像这样，从外部帐户调用这些函数不需要任何燃料。 此场景的底层远程过程调用 (RPC) 为 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)。
 
 不同于使用 `eth_call` 进行访问，`view` 或 `pure` 函数通常也在内部（即从合约自身或其他合约）调用并消耗燃料。
 

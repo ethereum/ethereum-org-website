@@ -11,7 +11,7 @@ Puoi trovare utili guide e strumenti per i traduttori di ethereum.org, nonché l
 ## Guide {#guides}
 
 - [Guida allo stile di traduzione](/contributing/translation-program/translators-guide/): _istruzioni e consigli per i traduttori di ethereum.org_
-- [FAQ sulle traduzioni](/contributing/translation-program/faq/) _– domande e risposte frequenti sul programma di traduzione di ethereum.org_
+- [FAQ sulle traduzioni](/contributing/translation-program/faq/) _– domande e risposte frequenti sul Programma di traduzione di ethereum.org_
 - [Guida all'editor online di Crowdin](https://support.crowdin.com/online-editor/) _– una guida approfondita all'uso dell'editor online di Crowdin e di alcune funzionalità avanzate di Crowdin_
 - [Categorie di contenuti](/contributing/translation-program/content-buckets/) _– quali pagine sono incluse in ogni categoria di contenuti di ethereum.org_
 
@@ -24,7 +24,7 @@ Puoi trovare utili guide e strumenti per i traduttori di ethereum.org, nonché l
 
 ## Community {#communities}
 
-- [Gruppi di traduzione Discord specifici per lingua](/discord/): _un'iniziativa per connettere i traduttori di ethereum.org in gruppi di traduzione_
+- [Gruppi di traduzione Discord specifici per lingua](https://discord.gg/ethereum-org): _un'iniziativa per connettere i traduttori di ethereum.org in gruppi di traduzione_
 - [Gruppo di traduttori di cinese](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171): _pagina di nozioni per una più facile coordinazione tra i traduttori di lingua cinese_
 
 ## Ultimi aggiornamenti {#latest-updates}
@@ -38,7 +38,7 @@ Per mantenerti aggiornato sui più recenti progressi del programma di traduzione
 
 ## Orario d'ufficio per traduttori {#office-hours}
 
-Abbiamo previsto un orario d'ufficio per i traduttori ogni secondo mercoledì del mese. Questi si svolgono nel canale vocale #office-hours sul [Discord di ethereum.org](/discord/), dove potrai anche trovare gli orari esatti e dettagli aggiuntivi.
+Abbiamo previsto un orario d'ufficio per i traduttori ogni secondo mercoledì del mese. Questi si svolgono nel canale vocale #office-hours sul [Discord di ethereum.org](https://discord.gg/ethereum-org), dove potrai anche trovare gli orari esatti e dettagli aggiuntivi.
 
 Lo scopo degli orari d'ufficio è quello di consentire ai nostri traduttori di fare domande sul processo di traduzione, fornire suggerimenti sul programma, condividere le loro idee, o semplicemente chattare con noi. Infine, vogliamo utilizzare queste chiamate per comunicare gli sviluppi recenti del programma di traduzione e condividere consigli fondamentali e istruzioni con i nostri collaboratori.
 

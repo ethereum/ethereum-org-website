@@ -20,7 +20,7 @@ Ufahamu wa asili ya ugatuzi wa Ethereum ni muhimu kwa kila mmoja maana yeyote an
   Jifunze mambo ya msingi ya Ethereum
 </DocLink>
 
-Licha ya upungufu wa uungaji mkono, makundi mengi, jumuiya na mirandi ndani ya ikolojia ya Ethereum wanafurahi kuunga mkono, na unaweza kupata taarifa muhimu na vyanzo kwenye ukurasa huu. Bado unamswali? Jiunge na [Discord ya ethereum.org](/discord/), na tutajaribu kukusaidia.
+Licha ya upungufu wa uungaji mkono, makundi mengi, jumuiya na mirandi ndani ya ikolojia ya Ethereum wanafurahi kuunga mkono, na unaweza kupata taarifa muhimu na vyanzo kwenye ukurasa huu. Bado unamswali? Jiunge na [Discord ya ethereum.org](https://discord.gg/ethereum-org), na tutajaribu kukusaidia.
 
 ## Huduma za pochi {#wallet-support}
 
@@ -30,7 +30,7 @@ Je unapata shida na pochi yako? Pochi nyingi zina timu inayojiyuma inayoweza kuk
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Hii sio orodha kamili. Unahitaji msaada kupata huduma juu ya pochi maalum? Jiunge na [ discord ya etehreum.org](https://discord.gg/ethereum-org) na tutajaribu kusaidia._
+_Hii sio orodha kamili. Unahitaji msaada kupata huduma juu ya pochi maalum? Jiunge na [ discord ya ethereum.org](https://discord.gg/ethereum-org) na tutajaribu kusaidia._
 
 Unatafuta pochi ya Ethereum? [Chunguza orodha yetu yote ya Ethereum](/wallets/find-wallet/).
 

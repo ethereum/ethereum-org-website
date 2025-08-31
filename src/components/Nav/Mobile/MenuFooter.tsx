@@ -1,6 +1,4 @@
-import { useTranslation } from "next-i18next"
-import { BsTranslate } from "react-icons/bs"
-import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
+import { Languages, Moon, Search, Sun } from "lucide-react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 
@@ -10,6 +8,7 @@ import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type MenuFooterProps = {
   onToggle: () => void
@@ -23,13 +22,14 @@ const MenuFooter = ({
   toggleSearch,
 }: MenuFooterProps) => {
   const { t } = useTranslation("common")
-  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const ThemeIcon = useColorModeValue(Moon, Sun)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
 
   return (
     <div className="grid w-full grid-cols-3 items-center justify-center">
       <FooterButton
-        icon={MdSearch}
+        icon={Search}
+        data-testid="mobile-menu-search-button"
         onClick={() => {
           // Workaround to ensure the input for the search modal can have focus
           onToggle()
@@ -39,12 +39,20 @@ const MenuFooter = ({
         <FooterItemText>{t("search")}</FooterItemText>
       </FooterButton>
 
-      <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
+      <FooterButton
+        icon={ThemeIcon}
+        data-testid="mobile-menu-theme-toggle"
+        onClick={toggleColorMode}
+      >
         <FooterItemText>{t(themeLabelKey)}</FooterItemText>
       </FooterButton>
 
       <LanguagePicker dialog handleClose={onToggle}>
-        <FooterButton icon={BsTranslate} name={MOBILE_LANGUAGE_BUTTON_NAME}>
+        <FooterButton
+          icon={Languages}
+          data-testid="mobile-menu-language-picker"
+          name={MOBILE_LANGUAGE_BUTTON_NAME}
+        >
           <FooterItemText>{t("languages")}</FooterItemText>
         </FooterButton>
       </LanguagePicker>

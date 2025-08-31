@@ -11,11 +11,54 @@ sidebarDepth: 1
 
 <ExpandableCard title="什么是分叉？" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-分叉是需要对网络进行重大技术升级或更改时的变化 – 它们通常源自<a href="/eips/">以太坊改进建议 (EIP)</a> 并更改了以太坊协议的“规则”。
+分叉是指需要对网络进行重大技术升级或更改之时 – 它们通常源自[以太坊改进提案 (EIP)](/eips/) 并更改了以太坊协议的“规则”。
 
-当传统的中心化软件需要升级时，公司会为终端用户发布新版本。 因为没有中心化所有权，区块链以不同的方式运作。 <a href="/developers/docs/nodes-and-clients/">以太坊客户端</a>必须更新他们的软件以执行新的分叉规则。 直链区块创造者（POW 中的矿工，POS 中的验证者）和节点必须创造区块和按照新规则进行验证。 <a href="/developers/docs/consensus-mechanisms/">关于共识机制的更多信息</a>
+当传统的中心化软件需要升级时，公司会为终端用户发布新版本。 因为没有中心化所有权，区块链以不同的方式运作。 [以太坊客户端](/developers/docs/nodes-and-clients/)必须更新他们的软件以执行新的分叉规则。 直链区块创造者（POW 中的矿工，POS 中的验证者）和节点必须创造区块和按照新规则进行验证。 [关于共识机制的更多信息](/developers/docs/consensus-mechanisms/)
 
-这些规则更改可能会在网络中造成暂时的分叉。 新区块的产生，可以来自新规则，也可以来自旧规则。 分叉通常提前商定，以便让客户端能够采用 Unison 的升级，升级后的分叉链成为主链。 然而，在极少数情况下，对分叉的不同意见可能导致网络永久硬分叉 – 最为著名的是 <a href="#dao-fork">DAO 分叉</a> 产生了 Ethereum Classic。
+这些规则更改可能会在网络中造成暂时的分叉。 新区块的产生，可以来自新规则，也可以来自旧规则。 分叉通常提前商定，以便让客户端能够采用 Unison 的升级，升级后的分叉链成为主链。 然而，在极少数情况下，对分叉的不同意见可能导致网络永久硬分叉 – 最为著名的是 <a href="#dao-fork">DAO 分叉</a> 产生了以太坊经典这一平台。
+
+</ExpandableCard>
+
+<ExpandableCard title="为什么一些升级有多种叫法？" contentPreview="Upgrades names follow a pattern">
+
+以太坊的基础软件由两部分组成，称为 [执行层] (/glossary/#execution-layer) 和 [共识层](/glossary/#consensus-layer)。
+
+**执行层升级命名**
+
+从 2021 年开始，**执行层**的升级按时间顺序，以 [上一届以太坊开发者大会（Devcon）举办地点] (https://devcon.org/en/past-events/) 所在城市来命名：
+
+| 升级名称 | 测试版年份 | 测试版编号 | 升级日期 |
+| ------------ | ----------- | ------------- | ------------ |
+| Berlin       | 2015 年        | 0             | 2021 年 4 月 15 日 |
+| London       | 2016 年        | I             | 2021 年 8 月 5 日  |
+| Shangha     | 2017 年        | II            | 2023 年 4 月 12 日 |
+| **Cancun**   | 2018 年        | III           | 2024 年 3 月 13 日 |
+| _Prague_     | 2019 年        | IV            | 待定          |
+| _Osaka_      | 2020 年        | V             | 待定          |
+| _Bogota_     | 2022 年        | VI            | 待定          |
+| _Bangkok_    | 2024 年        | VII           | 待定          |
+
+**共识层升级命名**
+
+从 [信标链] (/glossary/#beacon-chain) 启动开始，**共识层**的升级按字母顺序，以天体恒星来命名：
+
+| 升级名称                                                | 升级日期 |
+| ----------------------------------------------------------- | ------------ |
+| 信标链创世块                                        | 2020 年 12 月 1 日  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)              | 2021 年 10 月 27 日 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)        | 2022 年 9 月 6 日  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)            | 2023 年 4 月 12 日 |
+| [**Deneb**](https://en.wikipedia.org/wiki/Deneb)            | 2024 年 3 月 13 日 |
+| [_Electra_](<https:>) | 待定          |
+
+**结合命名**
+
+执行层和共识层升级一开始于不同的时间段推出，然而在 2022 年的 [合并] (/roadmap/merge/) 以后，便开始同时部署。 因此，出现了一些非正式术语，即使用合并术语来简化这些升级的称呼。 这种方法始于常常被称为“**Shapella**”的 _Shanghai-Capella_ 升级，之后继续用于可能被称为“**Dencun**”的 _Cancun-Deneb_ 升级。
+
+| 执行层升级 | 共识层升级 | 简称 |
+| ----------------- | ----------------- | ---------- |
+| Shanghai          | Capella           | |“Shapella” |
+| Cancun            | Deneb             | “Dencun”   |
 
 </ExpandableCard>
 
@@ -25,33 +68,88 @@ sidebarDepth: 1
 
 <Divider />
 
+## 2024 年 {#2024}
+
+### Cancun-Deneb（“Dencun”）升级 {#dencun}
+
+<NetworkUpgradeSummary name="dencun" />
+
+#### Cancun 升级摘要 {#cancun-summary}
+
+Cancun 升级包含了一系列对以太坊_执行层_的改进，旨在提高可扩展性，与 Deneb 共识层升级同时进行。
+
+值得注意的是，该升级包含了 EIP-4844，也称为 **Proto-Danksharding**，它显著降低了二层网络卷叠的数据存储成本。 这是通过引入数据 “二进制大对象” 来实现的，使得卷叠可以在短时间内将数据发布到主网。 这显著降低了二层网络卷叠用户的交易费。
+
+<ExpandableCard title="以太坊改进提案 - Cancun 升级" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>瞬态存储操作码</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>以太坊虚拟机中的信标区块根</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>分片二进制大对象交易 (Proto-Danksharding)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - 内存复制指令</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> 仅能在同一交易中</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> 操作码</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [二层网络卷叠](/layer-2/)
+- [Proto-Danksharding](/roadmap/scaling/#proto-danksharding)
+- [Danksharding](/roadmap/danksharding/)
+- [阅读 Cancun 升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+
+#### Deneb 升级摘要 {#deneb-summary}
+
+Deneb 升级包含了一系列对以太坊_共识层_的改进，旨在提高可扩展性。 此次升级与 Cancun 执行层升级同时进行，以启用 Proto-Danksharding (EIP-4844)，并对信标链进行了其他改进。
+
+预生成的已签名“自愿退出信息”不再过期，因此赋予用户更多控制权，使他们可以将资金委托给第三方节点运营商进行质押。 使用这种已签名的退出信息，质押者可以委托节点运营，同时保持随时安全退出并提取资金的能力，无需向任何人请求许可。
+
+EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最多八 (8) 个，从而加强了以太币的发行控制。 由于以太币的发行量与质押的以太币总量成正比，限制加入的验证者数量可以控制新发行以太币的_增长率_，同时还降低了节点运营商的硬件需求，有助于去中心化。
+
+<ExpandableCard title="以太坊改进提案 - Deneb 升级" contentPreview="Official improvements included in this upgrade">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>以太坊虚拟机中的信标区块根</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>分片二进制大对象交易</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7044">EIP-7044</a> - <em>永久有效的签名自愿退出</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>增加最长证明纳入时隙</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>增加最大时段流动限制</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [阅读 Deneb 升级规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Cancun-Deneb（“Dencun”）升级常见问题](/roadmap/dencun/)
+
+<Divider />
+
 ## 2023 年 {#2023}
 
-### 上海嘉佩乐 (“Shapella”) {#shapella}
+### Shanghai-Capella（“Shapella”）升级 {#shapella}
 
 <NetworkUpgradeSummary name="shapella" />
 
-#### 上海总结 {#shanghai-summary}
+#### Shanghai 升级摘要 {#shanghai-summary}
 
 上海升级将质押提款引入执行层。 上海升级与卡佩拉升级同时进行，使区块能够接受提款操作，因此质押人可以将以太币从信标链提取到执行层。
 
 <ExpandableCard title="以太坊改进提案 - 上海升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>启动 <code>COINBASE</code> address warm</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>启动 <code>COINBASE</code> 地址预热</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> – <em>新 <code>PUSH0</code> 指令</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> – <em>限制和计量 initcode</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>信标链的提款推送操作</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>弃用 <code>ELFDESTRUCT</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>弃用 <code>SELFDESTRUCT</code></em></li>
 </ul>
 
 </ExpandableCard>
 
 - [阅读上海升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
-#### 卡佩拉总结 {#capella-summary}
+#### Capella 升级摘要 {#capella-summary}
 
-卡佩拉升级是共识层（信标链）的第三次重大升级，实现了质押提款。 卡佩拉与上海同步升级执行层并启用了质押提款功能。
+卡佩拉升级是共识层（信标链）的第三次重大升级，实现了质押提款。 卡佩拉升级与执行层升级上海升级同时进行，启用了质押提款功能。
 
 这次共识层升级让未提供初始存款提款凭证的质押人能够提供提款凭证，从而实现提款。
 
@@ -68,7 +166,7 @@ sidebarDepth: 1
 
 <NetworkUpgradeSummary name="paris" />
 
-#### 摘要 {#paris-summary}
+#### 概览 {#paris-summary}
 
 巴黎升级是由于工作量证明区块链超过了[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000 而触发的。 这发生在 2022 年 9 月 15 日区块 15537393 上，并在下一个区块处触发了巴黎升级。 巴黎升级就是[合并](/roadmap/merge/)过渡，以太坊的主要功能结束了[工作量证明](/developers/docs/consensus-mechanisms/pow)挖矿算法及相关共识逻辑并启动了[权益证明](/developers/docs/consensus-mechanisms/pos)。 巴黎升级本身是对[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)的升级（相当于共识层上的 Bellatrix 升级），让执行客户端能够从与其连接的[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)接受指令。 这需要激活一组新的内部应用程序接口方法，统称为[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。 该升级可能是自[家园](#homestead)以来以太坊历史上最重要的升级！
 
@@ -77,7 +175,7 @@ sidebarDepth: 1
 <ExpandableCard title="以太坊改进提案 - 巴黎升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>升级权益证明共识</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>升级为权益证明共识</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>使用 PREVRANDAO 取代 DIFFICULTY 操作码</em></li>
 </ul>
 
@@ -150,7 +248,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 - [阅读天鹰座升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} className="me-2" />有趣的事实！ {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} classname="me-2" />有趣的事实！ {#altair-fun-fact}
 
 天鹰座升级是第一个有确切发布时间的重大网络升级。 之前的每一次升级均基于一个已经在工作量证明链上申报过的区块编号，而该链上的区块时间各不相同。 信标链不需要解析工作量证明，而是在一个基于时间、由 32 个 12 秒“时隙”组成的时段系统上运作。在这个系统上，验证者可以提出区块。 这就是为什么我们能准确知晓达到时段 74,240 以及天鹰座升级启动的时间！
 
@@ -166,6 +264,20 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 伦敦升级引入了 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，对交易费市场进行了改革，同时还对燃料费的退款处理方式和[冰河世纪](/glossary/#ice-age)日程进行了修改。
 
+#### 什么是 London 升级 / EIP-1559？ {#eip-1559}
+
+在 London 升级之前，以太坊有固定大小的区块。 在网络需求高峰期，这些区块满负荷运行。 因此，用户常常不得不等到需求量降低后才能将交易添加到区块中，这导致用户体验变差。 London 升级为以太坊引入了大小可变的区块。
+
+以太坊网络交易费的计算方式在 2021 年 8 月的 [London 升级](/history/#london)后发生了改变。 在 London 伦敦升级前，费用的计算没有区分 `base` 费用和 `priority` 费用，如下所示：
+
+假设 Alice 需要向 Bob 支付 1 个以太币。 在交易中，燃料限制为 21,000 单位，燃料的价格是 200 gwei。
+
+总费用为：`Gas units (limit) * Gas price per unit`，即 `21,000 * 200 = 4,200,000 gwei` 或 0.0042 个以太币。
+
+在 London 升级中实施的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 使交易费机制变得更加复杂，但提高了燃料费的可预测性，使交易费市场更加高效。 用户可以在提交交易时设定 `maxFeePerGas`（对应于他们愿意为执行交易支付多少费用）。他们清楚支付金额不会超过燃料的市场价格 (`baseFeePerGas`)，并且多支付的金额将在减去小费后退还。
+
+这个视频对 EIP-1559 及其带来的好处进行了解释说明：[EIP-1559 说明](https://www.youtube.com/watch?v=MGemhK9t44Q)
+
 - [你是去中心化应用程序的开发者吗？ 请务必升级你的程序库和工具。](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [请阅读以太坊牧猫人组织的解释说明](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
@@ -175,7 +287,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>改善交易费市场</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> – <em>从一个区块返回 <code>BASEFEE</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>减少用于 EVM 运营的燃料退款</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>减少用于以太坊虚拟机运行的燃料退款</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>防止部署以 <code>0xEF</code> 开头的合约</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>将冰河世纪推迟到 2021 年 12 月启动</em></li>
 </ul>
@@ -198,9 +310,9 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ExpandableCard title="以太坊改进提案 - 柏林升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>降低了 ModExp 燃料成本</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>降低了模幂运算的燃料费用</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a> – <em>可以更容易地支持多种交易类型</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>提高状态访问操作码的燃料成本</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>提高状态访问操作码的燃料费用</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>增加了可选访问列表</em></li>
 </ul>
 
@@ -256,7 +368,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ExpandableCard title="以太坊改进提案 - 缪尔冰川升级" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>将难度炸弹再延迟 4,000,000 个区块，大约是 611 天</em>。</li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>将难度炸弹再推迟 4,000,000 个区块，大约是 611 天</em>。</li>
 </ul>
 
 </ExpandableCard>
@@ -285,10 +397,10 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>允许以太坊与 Zcash 等受隐私保护的数字货币一起使用。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>以更低廉的加密技术改善<a href="/glossary/#gas">燃料</a>成本。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>通过添加 <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">操作码</a>，保护以太坊免受重放攻击。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>以更低廉的加密技术降低[燃料](/glossary/#gas)费用。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>通过添加 <code>CHAINID</code> [操作码](/developers/docs/ethereum-stack/#ethereum-virtual-machine)，保护以太坊免受重放攻击。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>优化基于消耗量的操作码燃料价格。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，从而允许更多数据储放入区块中 – 这对 <a href="/developers/docs/scaling/#layer-2-scaling"> 二层扩容</a>很有帮助。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，从而允许更多数据储放入区块中 – 这对 [ 二层网络扩容](/developers/docs/scaling/#layer-2-scaling)很有帮助。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>其他操作码的燃料价格变更。</em></li>
 </ul>
 
@@ -304,6 +416,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 君士坦丁堡分叉：
 
+- 将区块[挖矿](/developers/docs/consensus-mechanisms/pow/mining/)奖励从 3 个以太币减少到 2 个。
 - 确保在[实现权益证明](#beacon-chain-genesis)之前，区块链不会冻结。
 - 优化了[以太坊虚拟机](/developers/docs/ethereum-stack/#ethereum-virtual-machine)中特定操作的[燃料](/glossary/#gas)成本。
 - 添加了与尚未创建的地址进行交互的能力。
@@ -313,10 +426,10 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ExpandableCard title="以太坊改进提案 - 君士坦丁堡分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>优化某些链上操作的成本。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>优化某些链上操作的费用。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>允许你与尚未创建的地址互动。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>优化某些链上操作的成本。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>确保在实现权益证明之前，区块链不会冻结。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> — <em>引入 <code>EXTCODEHASH</code> 指令来获取其他合约代码的哈希值。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>确保区块链不会在权益证明之前冻结，并将区块奖励从 3 个以太币减少到2 个以太币。</em></li>
 </ul>
 
 </ExpandableCard>
@@ -345,13 +458,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>添加 <code>REVERT</code> 操作码。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>在交易收据中添加状态字段，以指示成功或失败。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>增加了椭圆曲线和标量乘法以允许 <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>增加了椭圆曲线和标量乘法以允许 <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>增加了椭圆曲线和标量乘法以允许 [ZK-Snarks](/developers/docs/scaling/zk-rollups/)。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>增加了椭圆曲线和标量乘法以允许[零知识简洁非交互式知识论证](/developers/docs/scaling/zk-rollups/)。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>启用 RSA 签名验证。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>添加了对可变长度返回值的支持。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>添加 <code>STATICCALL</code> 操作码，允许对其他合约进行非状态改变调用。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>更改难度调整公式。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>将<a href="/glossary/#difficulty-bomb">难度炸弹</a>推迟 1 年启动，并将区块奖励从 5 个以太币减少到 3 个以太币。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>将[难度炸弹](/glossary/#difficulty-bomb)推迟 1 年，并将区块奖励从 5 以太币减少到 3 以太币。</em></li>
 </ul>
 
 </ExpandableCard>
@@ -364,7 +477,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### 摘要 {#spurious-dragon-summary}
+#### 概览 {#spurious-dragon-summary}
 
 伪龙分叉是对拒绝服务 (DoS) 网络攻击（2016 年 9 月/10 月）的第二个响应，包括：
 
@@ -377,7 +490,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ExpandableCard title="以太坊改进提案 - 伪龙分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>防止在一条以太坊链上的交易被重复广播到另一条链，例如测试网交易在主以太坊链上重放。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>防止在一条以太坊链上的交易被重复广播到另一条链，例如测试网交易在以太坊主链上重放。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>调整 <code>EXP</code> 操作码的价格 – 使通过计算成本高昂的合约操作来降低网络速度变得更加困难。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>允许删除通过 DOS 攻击产生的空帐户。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>将区块链上合约可达到的最大代码大小改为 24576 字节。</em></li>
@@ -416,9 +529,9 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#dao-fork-summary}
 
-去中心化自治组织分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/learn/understanding-the-dao-attack/)，当时一个不安全的[去中心化自治组织](/glossary/#dao)合约被黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
+去中心化自治组织分叉是为了回应 [2016 年去中心化自治组织遭受攻击的事件](https://www.coindesk.com/learn/understanding-the-dao-attack/)。当时，一份不安全的[去中心化自治组织](/glossary/#dao)合约导致黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
 
-此操作是由以太坊社区投票决定的。 所有以太币持有者都能通过[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上的交易进行投票。 分叉的决定获得了 85% 以上的投票。
+此操作是由以太坊社区投票决定的。 任何以太币持有人都能够通过在[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上交易来进行投票。 分叉的决定获得了 85% 以上的投票。
 
 一些矿工拒绝分叉，因为那次 DAO 事件并不是协议中的缺陷。 他们之后组建了[以太坊经典](https://ethereumclassic.org/)。
 
