@@ -574,5 +574,11 @@
     "emoji": ":belgium:",
     "location": "Belgium",
     "link": "https://lu.ma/ethbelgium"
-  }   
+  },
+  {
+  "title": "ETHBhopal",
+  "emoji": ":india:",
+  "location": "Bhopal",
+  "link": "https://x.com/ETHBhopal"
+}
 ]
