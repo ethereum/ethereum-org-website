@@ -16,4 +16,3 @@ jobs:
           config-name: release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-[![Release Drafter](https://github.com/lygg6699/ethereum-org-website/actions/workflows/release-drafter.yml/badge.svg?branch=dev)](https://github.com/lygg6699/ethereum-org-website/actions/workflows/release-drafter.yml)
