@@ -8,6 +8,10 @@
     "path": "/roadmap/index.md"
   },
   {
+    "id": 13426,
+    "path": "/roadmap/fusaka/index.md"
+  },
+  {
     "id": 6161,
     "path": "/community/events/index.md"
   },
@@ -280,6 +284,10 @@
     "path": "/community/research/index.md"
   },
   {
+    "id": 13436,
+    "path": "/community/events/organizing/index.md"
+  },
+  {
     "id": 2926,
     "path": "/roadmap/merge/index.md"
   },
@@ -340,6 +348,10 @@
     "path": "/contributing/design/index.md"
   },
   {
+    "id": 13440,
+    "path": "/contributing/translation-program/playbook/index.md"
+  },
+  {
     "id": 6568,
     "path": "/developers/docs/networking-layer/index.md"
   },
@@ -397,7 +409,7 @@
   },
   {
     "id": 12754,
-    "path": "/index.md"
+    "path": "/what-are-apps/index.md"
   },
   {
     "id": 2962,
