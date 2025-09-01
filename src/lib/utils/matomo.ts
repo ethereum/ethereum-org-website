@@ -12,9 +12,8 @@ export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
  * but we want to track them as /en paths for analytics consistency.
  */
 export const normalizePathForMatomo = (pathname: string): string => {
-  // If already has a locale prefix (like /es/, /fr/), keep it as is
-  const hasLocalePrefix = LOCALES_CODES.some(
-    (locale) => locale !== DEFAULT_LOCALE && pathname.startsWith(`/${locale}/`)
+  const hasLocalePrefix = LOCALES_CODES.some((locale) =>
+    pathname.startsWith(`/${locale}/`)
   )
 
   if (hasLocalePrefix) {
@@ -22,7 +21,7 @@ export const normalizePathForMatomo = (pathname: string): string => {
   }
 
   // For paths without locale prefix (English content), add /en prefix
-  return pathname === "/" ? "/en" : `/en${pathname}`
+  return `/${DEFAULT_LOCALE}${pathname}`
 }
 
 export interface MatomoEventOptions {

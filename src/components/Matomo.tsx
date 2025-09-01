@@ -44,7 +44,7 @@ export default function Matomo() {
     const normalizedPreviousPath = normalizePathForMatomo(previousPath)
     const normalizedPathname = normalizePathForMatomo(pathname)
 
-    push(["setReferrerUrl", `${normalizedPreviousPath}`])
+    push(["setReferrerUrl", normalizedPreviousPath])
     push(["setCustomUrl", normalizedPathname])
     push(["deleteCustomVariables", "page"])
     setPreviousPath(pathname)
