@@ -52,7 +52,6 @@ const LanguagePicker = ({
   }, [])
 
   const handleMenuItemSelect = (currentValue: string) => {
-    console.log("handleMenuItemSelect", currentValue)
     onSelect?.(currentValue)
 
     push(

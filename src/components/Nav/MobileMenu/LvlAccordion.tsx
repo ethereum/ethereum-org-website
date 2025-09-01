@@ -42,10 +42,7 @@ const nestedAccordionSpacingMap = {
   6: "ps-24",
 }
 
-const LvlAccordion = async (props: LvlAccordionProps) => {
-  return <LvlAccordionItems {...props} />
-}
-const LvlAccordionItems = async ({
+const LvlAccordion = async ({
   lvl,
   items,
   activeSection,
