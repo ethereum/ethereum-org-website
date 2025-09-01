@@ -93,8 +93,8 @@ _We're also investigating options for voting so the community can indicate their
 
 ## Add your product {#add-your-product}
 
-If you want to add a dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
+If you want to add a dapp to ethereum.org and it meets the criteria, please let us know.
 
 <ButtonLink href="https://submitapp.paperform.co/">
-  Create an issue
+  Suggest an app
 </ButtonLink>
