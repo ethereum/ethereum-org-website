@@ -95,6 +95,6 @@ _We're also investigating options for voting so the community can indicate their
 
 If you want to add a dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://submitapp.paperform.co/">
   Create an issue
 </ButtonLink>
