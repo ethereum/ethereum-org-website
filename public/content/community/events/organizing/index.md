@@ -82,7 +82,7 @@ Another important step before starting to build a program or reaching out to spo
 
 ### How to assemble a team {#how-to-assemble-a-team}
 
-Choose people who share your vision and complement your skills. Some teams work as collectives, while others have defined roles — find what works best for you. Regular communication and clear expectations are essential. Although it's tempting to rely on communication platforms for event planning, we suggest picking a task management platform (such as Notion, Basecamp, Trello, Asana, or even the good old Google Sheets) for organizing and tracking what needs to be done. It’s crucial to have a well-functioning and well–organized team.
+Choose people who share your vision and complement your skills. Some teams work as collectives, while others have defined roles — find what works best for you. Regular communication and clear expectations are essential. Although it's tempting to rely on communication platforms for event planning, we suggest picking a task management platform (such as Notion, Basecamp, Trello, Asana, or even the good old Google Sheets) for organizing and tracking what needs to be done. It’s crucial to have a well-functioning and well-organized team.
 
 Different Ethereum organizer teams have different roles in their teams, but they all have in common people who are working on logistics, budgeting, marketing, program, design, and partnerships.
 

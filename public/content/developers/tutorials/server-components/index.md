@@ -271,7 +271,7 @@ There are multiple types of JavaScript node applications. The `module` type lets
   },
 ```
 
-These are packages that are only required for development. Here we need `typescript` and the because we are using it with Node.js, we are also getting the types for node variables and objects, such as `process`. [The `^<version>` notation](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) means that version or a higher version that doesn't have breaking changes. See [here](https://semver.org) for more information about the meaning of version numbers.
+These are packages that are only required for development. Here we need `typescript` and because we are using it with Node.js, we are also getting the types for node variables and objects, such as `process`. [The `^<version>` notation](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) means that version or a higher version that doesn't have breaking changes. See [here](https://semver.org) for more information about the meaning of version numbers.
 
 ```json
   "dependencies": {
