@@ -1,4 +1,4 @@
-import { Languages, SearchIcon } from "lucide-react"
+import { Languages, Menu } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 import { Trigger as TabsTrigger } from "@radix-ui/react-tabs"
 
@@ -7,7 +7,6 @@ import type { Lang } from "@/lib/types"
 import LanguagePicker from "@/components/LanguagePicker"
 import ExpandIcon from "@/components/Nav/MobileMenu/ExpandIcon"
 import LvlAccordion from "@/components/Nav/MobileMenu/LvlAccordion"
-import Search from "@/components/Search"
 import {
   Collapsible,
   CollapsibleContent,
@@ -90,19 +89,6 @@ export default async function MobileMenu({
           <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
             <TabsList className="grid h-auto w-full grid-cols-3">
               <div className="flex flex-col items-center gap-1 py-2">
-                <Search asChild>
-                  <FooterButton
-                    icon={SearchIcon}
-                    data-testid="mobile-menu-search-button"
-                  >
-                    <FooterItemText>{t("search")}</FooterItemText>
-                  </FooterButton>
-                </Search>
-              </div>
-              <div className="flex flex-col items-center gap-1 py-2">
-                <ThemeToggleFooterButton />
-              </div>
-              <div className="flex flex-col items-center gap-1 py-2">
                 <TabsTrigger value="languages" asChild>
                   <FooterButton
                     icon={Languages}
@@ -110,6 +96,19 @@ export default async function MobileMenu({
                     data-testid="mobile-menu-language-picker"
                   >
                     <FooterItemText>{t("languages")}</FooterItemText>
+                  </FooterButton>
+                </TabsTrigger>
+              </div>
+              <div className="flex flex-col items-center gap-1 py-2">
+                <ThemeToggleFooterButton />
+              </div>
+              <div className="flex flex-col items-center gap-1 py-2">
+                <TabsTrigger value="navigation" asChild>
+                  <FooterButton
+                    icon={Menu}
+                    data-testid="mobile-menu-navigation-picker"
+                  >
+                    <FooterItemText>{t("menu")}</FooterItemText>
                   </FooterButton>
                 </TabsTrigger>
               </div>
