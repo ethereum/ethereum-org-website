@@ -29,7 +29,7 @@ Ethereum applications have their logic running on the Ethereum blockchain instea
 
 ## Why does this matter {#why-does-this-matter}
 
-Ethereum apps can do stuff that just isn’t possible with traditional apps. Like lend money to a complete stranger with a guarantee that you’ll get your money back, plus interest. Without paying a “trustworthy” intermediary, like a lawyer, to handle the transaction. 
+Ethereum apps can do stuff that just isn’t possible with traditional apps. Like lend money to a complete stranger with a guarantee that you’ll get your money back, plus interest. Without paying a “trustworthy” intermediary, like a lawyer, to handle the transaction.
 
 There are apps for everything: gaming, finance, work, messaging, storage and more. With most apps you aren’t subjected to ads or limited by restricted access.
 
@@ -73,7 +73,7 @@ When apps are all built on Ethereum, they are all compatible. A token for one ap
 </ExpandableCard>
 
 <ExpandableCard title="Do I buy coins on a dapp?" visible>
-  <p>Some applications do let you trade or buy crypto tokens, but not all apps are for that. If you are looking to buy your first tokens visit [Get ETH](/get-eth).</p>
+  <p>Some applications do let you trade or buy crypto tokens, but not all apps are for that. If you are looking to buy your first tokens, visit [Get ETH](/get-eth).</p>
 </ExpandableCard>
 
 <ExpandableCard title="What is the best crypto wallet?" visible>

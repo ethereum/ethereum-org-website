@@ -304,7 +304,7 @@ If you have a Discord server or Telegram channel, it is easy to use that for out
 
 Platforms like Twitter can also be helpful for onboarding new community members and publicly acknowledging your contributors.
 
-The Linux Foundation has created an extensive report on the [2020 FOSS open-source contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
+The Linux Foundation has created an extensive report on the [2020 FOSS contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
 
 ## Conclusion {#conclusion}
 
