@@ -2,7 +2,6 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 
-import { localeToDisplayInfo } from "@/components/LanguagePicker/localeToDisplayInfo"
 import type { NavSections } from "@/components/Nav/types"
 
 import { filterRealLocales } from "@/lib/utils/translations"
@@ -10,6 +9,7 @@ import { filterRealLocales } from "@/lib/utils/translations"
 import { LOCALES_CODES } from "@/lib/constants"
 
 import { buildNavigation } from "@/lib/nav/buildNavigation"
+import { localeToDisplayInfo } from "@/lib/nav/localeToDisplayInfo"
 
 // Pre-filtered locales for server use
 const FILTERED_LOCALES = filterRealLocales(LOCALES_CODES)
