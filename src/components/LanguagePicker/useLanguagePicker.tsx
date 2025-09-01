@@ -1,9 +1,9 @@
 import { useMemo } from "react"
 import { useLocale } from "next-intl"
 
-import type { Lang, LocaleDisplayInfo } from "@/lib/types"
+import type { Lang, LocaleDisplayInfo, MatomoEventOptions } from "@/lib/types"
 
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { filterRealLocales } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
