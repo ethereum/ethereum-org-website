@@ -371,85 +371,86 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         description="A dedicated hub for entrepreneurs to access programs, mentorship, and visibility across the Ethereum ecosystem, giving founders the support they need at every stage."
       />
       <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
-        <Section id="apply" className="space-y-6">
-          <div className="space-y-5">
+        <Section id="apply" className="space-y-12">
+          <div className="space-y-4">
             <h2>Apply for support</h2>
             <p>
               Choose your path and get routed to the most relevant next step.
             </p>
-            <Tabs defaultValue={supportTabs[0].key}>
-              <TabsList>
-                {supportTabs.map(({ key, label, icon }) => (
-                  <TabsTrigger
-                    key={key}
-                    value={key}
-                    // TODO: Add tracking to triggers
-                    // customEventOptions={{
-                    //   eventCategory: "founders_support",
-                    //   eventAction: "apply_for_support_section",
-                    // }}
-                  >
-                    {icon}&nbsp;{label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
-                <TabsContent key={key} value={key} className="border-0 p-0">
-                  <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-4">
-                    {entities.map(
-                      ({
-                        name,
-                        Logo,
-                        tags,
-                        description,
-                        highlights,
-                        href,
-                        ctaLabel,
-                      }) => (
-                        <Card
-                          key={name}
-                          className="space-between flex h-full flex-col gap-y-4 rounded-2xl bg-background-highlight p-8 max-md:px-4"
-                        >
-                          <h3 className="sr-only">{name}</h3>
-                          <div className="space-y-4">
-                            <Logo className="mb-8" />
-                            <div className="flex flex-wrap gap-x-1 gap-y-2">
-                              {tags.map((tag) => (
-                                <Tag
-                                  key={tag}
-                                  className={supportTags[tag].className}
-                                >
-                                  {supportTags[tag].label}
-                                </Tag>
-                              ))}
-                            </div>
-                            <p>{description}</p>
-                            {highlights.map((highlight) => (
-                              <div
-                                key={highlight}
-                                className="flex items-center gap-4"
+          </div>
+
+          <Tabs defaultValue={supportTabs[0].key}>
+            <TabsList>
+              {supportTabs.map(({ key, label, icon }) => (
+                <TabsTrigger
+                  key={key}
+                  value={key}
+                  // TODO: Add tracking to triggers
+                  // customEventOptions={{
+                  //   eventCategory: "founders_support",
+                  //   eventAction: "apply_for_support_section",
+                  // }}
+                >
+                  {icon}&nbsp;{label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
+              <TabsContent key={key} value={key} className="mt-12 border-0 p-0">
+                <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-4">
+                  {entities.map(
+                    ({
+                      name,
+                      Logo,
+                      tags,
+                      description,
+                      highlights,
+                      href,
+                      ctaLabel,
+                    }) => (
+                      <Card
+                        key={name}
+                        className="space-between flex h-full flex-col gap-y-4 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                      >
+                        <h3 className="sr-only">{name}</h3>
+                        <div className="space-y-4">
+                          <Logo className="mb-8" />
+                          <div className="flex flex-wrap gap-x-1 gap-y-2">
+                            {tags.map((tag) => (
+                              <Tag
+                                key={tag}
+                                className={supportTags[tag].className}
                               >
-                                <CheckCircle />
-                                <p>{highlight}</p>
-                              </div>
+                                {supportTags[tag].label}
+                              </Tag>
                             ))}
                           </div>
-                          <ButtonLink
-                            href={href}
-                            variant="outline"
-                            className="mt-auto"
-                          >
-                            {/* // TODO: Add proper fallback */}
-                            {ctaLabel || categoryCtaLabel || "Go"}
-                          </ButtonLink>
-                        </Card>
-                      )
-                    )}
-                  </div>
-                </TabsContent>
-              ))}
-            </Tabs>
-          </div>
+                          <p>{description}</p>
+                          {highlights.map((highlight) => (
+                            <div
+                              key={highlight}
+                              className="flex items-center gap-2"
+                            >
+                              <CheckCircle />
+                              <p>{highlight}</p>
+                            </div>
+                          ))}
+                        </div>
+                        <ButtonLink
+                          href={href}
+                          variant="outline"
+                          className="mt-auto"
+                        >
+                          {/* // TODO: Add proper fallback */}
+                          {ctaLabel || categoryCtaLabel || "Go"}
+                        </ButtonLink>
+                      </Card>
+                    )
+                  )}
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </Section>
         <Section
           id="succeed"
