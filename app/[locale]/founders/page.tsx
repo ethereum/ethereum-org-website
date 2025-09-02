@@ -1,9 +1,8 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 
-import type { Lang, SectionNavDetails, StatsBoxMetric } from "@/lib/types"
+import type { Lang, SectionNavDetails } from "@/lib/types"
 
-import ActivityStats from "@/components/ActivityStats"
 import FloatingNav, { StickyContainer } from "@/components/FloatingNav"
 import ContentHero from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
@@ -256,11 +255,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const metrics: StatsBoxMetric[] = [
-    { label: "Fundraisings", state: { value: "23" } },
-    { label: "GTM strategies", state: { value: "32" } },
-    { label: "Projects", state: { value: "34" } },
-  ]
+  // TODO: Re-enable metrics when ready
+  // const metrics: StatsBoxMetric[] = [
+  //   { label: "Fundraisings", state: { value: "23" } },
+  //   { label: "GTM strategies", state: { value: "32" } },
+  //   { label: "Projects", state: { value: "34" } },
+  // ]
 
   const stories: {
     name: string
@@ -354,18 +354,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               You don&apos;t have to build alone, this ecosystem has your back.
             </p>
           </div>
-          <ActivityStats
+          {/* // TODO: Re-enable metrics when ready */}
+          {/* <ActivityStats
             data-label="signalling-metrics"
             metrics={metrics}
             className={cn(
               "text-nowrap max-sm:gap-10 max-sm:px-4",
               "flex w-fit max-w-xl shrink-0 flex-wrap gap-16 text-center text-body-medium",
-              "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0 [&_[data-label='value']]:!text-4xl",
+              "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0",
               "[&_[data-label='big-number']:nth-of-type(1)_[data-label='value']]:text-accent-a",
               "[&_[data-label='big-number']:nth-of-type(2)_[data-label='value']]:text-accent-b",
               "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c"
             )}
-          />
+          /> */}
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {stories.map(({ name, affiliation, content, className }) => (
