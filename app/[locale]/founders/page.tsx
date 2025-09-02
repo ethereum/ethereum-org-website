@@ -3,12 +3,14 @@ import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 
 import type { Lang, SectionNavDetails } from "@/lib/types"
 
-import FloatingNav, { StickyContainer } from "@/components/FloatingNav"
 import ContentHero from "@/components/Hero/ContentHero"
+import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -89,16 +91,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   }
 
   type SupportSection = Omit<Required<SectionNavDetails>, "href"> & {
-    items: SupportEntity[]
+    entities: SupportEntity[]
     categoryCtaLabel?: string
   }
 
-  const supportSection: SupportSection[] = [
+  const supportTabs: SupportSection[] = [
     {
       key: "funding",
       label: "Funding",
       icon: <Banknote />,
-      items: [
+      entities: [
         {
           name: "Optimism Atlas",
           Logo: Optimism,
@@ -174,7 +176,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       key: "accelerators-growth",
       label: "Accelerators & Growth",
       icon: <ChartNoAxesCombined />,
-      items: [
+      entities: [
         {
           name: "Kernel",
           Logo: Kernel,
@@ -215,7 +217,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       key: "partnerships-integrations",
       label: "Partnerships & Integrations",
       icon: <Handshake />,
-      items: [
+      entities: [
         {
           name: "Unichain",
           Logo: Unichain,
@@ -341,6 +343,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       ),
     },
   ]
+
   return (
     <div>
       <ContentHero
@@ -356,19 +359,78 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p>
               Choose your path and get routed to the most relevant next step.
             </p>
-            <StickyContainer>
-              <FloatingNav
-                sections={supportSection.map(({ key, label, icon }) => ({
-                  key,
-                  label,
-                  icon,
-                }))}
-                customEventOptions={{
-                  eventCategory: "founders_support",
-                  eventAction: "apply_for_support_section",
-                }}
-              />
-            </StickyContainer>
+            <Tabs defaultValue={supportTabs[0].key}>
+              <TabsList>
+                {supportTabs.map(({ key, label, icon }) => (
+                  <TabsTrigger
+                    key={key}
+                    value={key}
+                    // TODO: Add tracking to triggers
+                    // customEventOptions={{
+                    //   eventCategory: "founders_support",
+                    //   eventAction: "apply_for_support_section",
+                    // }}
+                  >
+                    {icon}&nbsp;{label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
+                <TabsContent key={key} value={key} className="border-0 p-0">
+                  <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-4">
+                    {entities.map(
+                      ({
+                        name,
+                        Logo,
+                        tags,
+                        description,
+                        highlights,
+                        href,
+                        ctaLabel,
+                      }) => (
+                        <Card
+                          key={name}
+                          className="space-between flex h-full flex-col gap-y-4 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                        >
+                          <h3 className="sr-only">{name}</h3>
+                          <div className="space-y-4">
+                            <Logo className="mb-8" />
+                            <div className="flex flex-wrap gap-x-1 gap-y-2">
+                              {tags.map((tag) => (
+                                <Tag
+                                  key={tag}
+                                  className={supportTags[tag].className}
+                                >
+                                  {supportTags[tag].label}
+                                </Tag>
+                              ))}
+                            </div>
+                            <p>{description}</p>
+                            {highlights.map((highlight) => (
+                              <div
+                                key={highlight}
+                                className="flex items-center gap-4"
+                              >
+                                <CheckCircle />
+                                <p>{highlight}</p>
+                              </div>
+                            ))}
+                          </div>
+                          <ButtonLink
+                            href={href}
+                            variant="outline"
+                            className="mt-auto"
+                          >
+                            {/* // TODO: Add proper fallback */}
+                            {ctaLabel || categoryCtaLabel || "Go"}
+                          </ButtonLink>
+                        </Card>
+                      )
+                    )}
+                  </div>
+                </TabsContent>
+              ))}
+            </Tabs>
           </div>
         </Section>
         <Section
