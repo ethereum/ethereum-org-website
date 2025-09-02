@@ -410,11 +410,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     }) => (
                       <Card
                         key={name}
-                        className="space-between flex h-full flex-col gap-y-4 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                        className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
                       >
                         <h3 className="sr-only">{name}</h3>
+                        <Logo />
                         <div className="space-y-4">
-                          <Logo className="mb-8" />
                           <div className="flex flex-wrap gap-x-1 gap-y-2">
                             {tags.map((tag) => (
                               <Tag
@@ -436,11 +436,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                             </div>
                           ))}
                         </div>
-                        <ButtonLink
-                          href={href}
-                          variant="outline"
-                          className="mt-auto"
-                        >
+                        <ButtonLink href={href} variant="outline">
                           {/* // TODO: Add proper fallback */}
                           {ctaLabel || categoryCtaLabel || "Go"}
                         </ButtonLink>
