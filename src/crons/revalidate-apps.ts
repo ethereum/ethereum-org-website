@@ -2,11 +2,20 @@ import { schedules } from "@trigger.dev/sdk/v3"
 
 import { slugify } from "@/lib/utils/url"
 
-import { appsCategories } from "@/data/apps/categories"
-
 import { revalidatePaths } from "./utils"
 
 import { fetchApps } from "@/lib/api/fetchApps"
+
+const categoriesSlugs = [
+  "defi",
+  "collectibles",
+  "social",
+  "gaming",
+  "bridge",
+  "productivity",
+  "privacy",
+  "dao",
+]
 
 export const revalidateAppsPages = schedules.task({
   id: "revalidate-apps-pages",
@@ -17,8 +26,8 @@ export const revalidateAppsPages = schedules.task({
     const paths = ["/apps", "/apps/"]
 
     // Add category paths
-    Object.values(appsCategories).forEach((category) => {
-      paths.push(`/apps/categories/${category.slug}`)
+    categoriesSlugs.forEach((category) => {
+      paths.push(`/apps/categories/${category}`)
     })
 
     // Fetch apps data and add individual app paths
