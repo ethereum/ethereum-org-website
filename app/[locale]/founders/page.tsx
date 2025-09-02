@@ -36,17 +36,44 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const supportTags = {
     // TODO: intl label setup, i.e. t("page-founders-support-tag-active")
-    active: { label: "Active", className: "bg-" },
-    grantProgram: { label: "Grant Program", className: "bg-" },
-    auditGrants: { label: "Audit Grants", className: "bg-" },
-    publicGoods: { label: "Public Goods", className: "bg-" },
-    toolingInfra: { label: "Tooling & Infra", className: "bg-" },
-    events: { label: "Events", className: "bg-" },
-    fundraising: { label: "Fundraising", className: "bg-" },
-    ecosystemEvents: { label: "Ecosystem Events", className: "bg-" },
-    accelerator: { label: "Accelerator", className: "bg-" },
-    mentorship: { label: "Mentorship", className: "bg-" },
-    networking: { label: "Networking", className: "bg-" },
+    active: { label: "Active", className: "bg-green-100 text-green-600" },
+    grantProgram: {
+      label: "Grant Program",
+      className: "bg-blue-100 text-blue-600",
+    },
+    auditGrants: {
+      label: "Audit Grants",
+      className: "bg-purple-100 text-purple-600",
+    },
+    publicGoods: {
+      label: "Public Goods",
+      className: "bg-orange-100 text-orange-600",
+    },
+    toolingInfra: {
+      label: "Tooling & Infra",
+      className: "bg-pink-100 text-pink-600",
+    },
+    events: { label: "Events", className: "bg-yellow-100 text-yellow-600" },
+    fundraising: {
+      label: "Fundraising",
+      className: "bg-yellow-100 text-yellow-600",
+    },
+    ecosystemEvents: {
+      label: "Ecosystem Events",
+      className: "bg-pink-100 text-pink-600",
+    },
+    accelerator: {
+      label: "Accelerator",
+      className: "bg-orange-100 text-orange-600",
+    },
+    mentorship: {
+      label: "Mentorship",
+      className: "bg-purple-100 text-purple-600",
+    },
+    networking: {
+      label: "Networking",
+      className: "bg-blue-100 text-blue-600",
+    },
   } as const satisfies Record<string, { label: string; className: string }>
 
   type SupportTag = keyof typeof supportTags
