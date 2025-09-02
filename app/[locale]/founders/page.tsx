@@ -37,44 +37,62 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   console.log("TODO: setup intl", locale)
 
   const supportTags = {
-    // TODO: intl label setup, i.e. t("page-founders-support-tag-active")
-    active: { label: "Active", className: "bg-green-100 text-green-600" },
+    active: {
+      // TODO: intl label setup, i.e. t("page-founders-support-tag-active")
+      label: "Active",
+      // TODO: extract color variants to ui/tag component
+      className:
+        "bg-green-100 dark:bg-green-700/50 text-green-700 dark:text-green-100",
+    },
     grantProgram: {
       label: "Grant Program",
-      className: "bg-blue-100 text-blue-600",
+      className:
+        "bg-blue-100 dark:bg-blue-600/50 text-blue-600 dark:text-blue-100",
     },
     auditGrants: {
       label: "Audit Grants",
-      className: "bg-purple-100 text-purple-600",
+      className:
+        "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
     },
     publicGoods: {
       label: "Public Goods",
-      className: "bg-orange-100 text-orange-600",
+      className:
+        "bg-orange-100 dark:bg-orange-700/50 text-orange-700 dark:text-orange-100",
     },
     toolingInfra: {
       label: "Tooling & Infra",
-      className: "bg-pink-100 text-pink-600",
+      className:
+        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
     },
-    events: { label: "Events", className: "bg-yellow-100 text-yellow-600" },
+    events: {
+      label: "Events",
+      className:
+        "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
+    },
     fundraising: {
       label: "Fundraising",
-      className: "bg-yellow-100 text-yellow-600",
+      className:
+        "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
     },
     ecosystemEvents: {
       label: "Ecosystem Events",
-      className: "bg-pink-100 text-pink-600",
+      className:
+        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100 tracking-1",
     },
     accelerator: {
       label: "Accelerator",
-      className: "bg-orange-100 text-orange-600",
+      className:
+        "bg-orange-100 dark:bg-orange-700/50 text-orange-700 dark:text-orange-100",
     },
     mentorship: {
       label: "Mentorship",
-      className: "bg-purple-100 text-purple-600",
+      className:
+        "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
     },
     networking: {
       label: "Networking",
-      className: "bg-blue-100 text-blue-600",
+      className:
+        "bg-blue-100 dark:bg-blue-600/50 text-blue-600 dark:text-blue-100",
     },
   } as const satisfies Record<string, { label: string; className: string }>
 
