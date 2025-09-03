@@ -218,7 +218,6 @@ eventName="read more">
 
 - [스테이킹 런치패드 출금](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: 작업으로 비콘 체인 푸시 출금](https://eips.ethereum.org/EIPS/eip-4895)
-- [이더리움 고양이 양치기 - 상하이](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: 포투즈 및 시아오 웨이 왕과 스테이킹한 ETH 출금(테스트)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: 알렉스 스톡스와 함께 작업으로 비콘 체인 푸시 출금](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [검증자의 유효한 잔액 이해](https://www.attestant.io/posts/understanding-validator-effective-balance/)

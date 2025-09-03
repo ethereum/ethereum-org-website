@@ -200,7 +200,6 @@ Don buɗewa da kuma karɓar gabaɗayan ragowar ƙuɗinku dole ne ku kammala aiki
 - [Taimakawa Bambance-Bambancen Abokin Ciniki](https://www.attestant.io/posts/helping-client-diversity/)- _Jim McDonald 2022_
 - [Bambance-bambancen abokin ciniki akan mataki yarjejeniya na Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)- _jmcook.eth 2022_
 - [Yadda Ake: Siyayya Don kayan aiki na mai tantancewa na Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Mataki ta Mataki: Yadda ake shiga Ethereum 2.0 Hanyar sadarwa na gwaji](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Shawarwarin Rigakafi Hukunci a Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
 
 <QuizWidget quizKey="staking-solo" />

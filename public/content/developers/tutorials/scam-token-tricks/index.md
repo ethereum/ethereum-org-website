@@ -49,7 +49,7 @@ abstract contract Ownable is Context {
 }
 ```
 
-The [`ARB` token contract](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) does not have a privileged address directly. However, it does not need one. It sits behind a [`proxy`](https://docs.openzeppelin.com/contracts/4.x/api/proxy) at [address `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). That contract has a privileged address (see the fourth file, `ERC1967Upgrade.sol`) that be used for upgrades.
+The [`ARB` token contract](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) does not have a privileged address directly. However, it does not need one. It sits behind a [`proxy`](https://docs.openzeppelin.com/contracts/5.x/api/proxy) at [address `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). That contract has a privileged address (see the fourth file, `ERC1967Upgrade.sol`) that be used for upgrades.
 
 ```solidity
     /**

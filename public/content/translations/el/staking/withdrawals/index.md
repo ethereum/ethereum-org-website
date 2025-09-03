@@ -212,7 +212,6 @@ eventName="read more">
 
 - [Αναλήψεις πλατφόρμας εκκίνησης αποθήκευσης κεφαλαίου](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Αναλήψεις ως λειτουργία στην Κύρια Αλυσίδα](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Απόληψη αποθηκευμένου κεφαλαίου ETH (δοκιμή) με την Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Αναλήψεις Κύριας Αλυσίδας ως λειτουργίες με τον Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Κατανοώντας το ενεργό υπόλοιπο του επαληθευτή](https://www.attestant.io/posts/understanding-validator-effective-balance/)

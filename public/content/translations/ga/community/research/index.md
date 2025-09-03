@@ -224,7 +224,7 @@ Leanann taighde eacnamaíoch in Ethereum dhá chur chuige den chuid is mó: slá
 
 #### Léamh cúlra {#background-reading-9}
 
-- [Grúpa Dreasachtaí Láidre](https://ethereum.github.io/rig/)
+- [Grúpa Dreasachtaí Láidre](https://rig.ethereum.org/)
 - [ceardlann ETHconomics ag Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Taighde le déanaí {#recent-research-9}
@@ -307,7 +307,7 @@ Tá gá le níos mó uirlisí anailíse sonraí agus deaise a thugann faisnéis 
 
 #### Taighde le déanaí {#recent-research-14}
 
-- [Anailís Sonraí Grúpa Dreasachtaí Láidre](https://ethereum.github.io/rig/)
+- [Anailís Sonraí Grúpa Dreasachtaí Láidre](https://rig.ethereum.org/)
 
 ## Aipeanna agus uirlisí {#apps-and-tooling}
 

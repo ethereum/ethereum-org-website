@@ -212,7 +212,6 @@ Hindi. Kapag umalis na ang isang validator at na-wtihdraw na ang kumpletong bala
 
 - [Mga Pag-withdraw sa Staking sa Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mga Beacon chain push withdrawal bilang mga operasyon](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pag-withdraw sa Staked ETH (Testing) kasama sina Potuz at Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals bilang mga operasyon kasama si Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Pag-unawa sa Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

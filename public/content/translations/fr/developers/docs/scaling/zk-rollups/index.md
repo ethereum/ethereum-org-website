@@ -245,7 +245,7 @@ Les projets fonctionnant sur les zkEVM comprennent :
 
 - [Qu'est-ce que les Rollups Zero Knowledge ?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Qu'est-ce que les rollups zero-knowledge ?](https://alchemy.com/blog/zero-knowledge-rollups)
-- [Guide pratique des rollups Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Guide pratique des rollups Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [Qu'est-ce qu'un zkEVM ?](https://www.alchemy.com/overviews/zkevm)
 - [Types de ZK-EVM : Équivalent Ethereum, équivalent EVM, Type 1, Type 4, et autres termes tendance en crypto](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)

@@ -212,7 +212,6 @@ Non. Une fois qu'un validateur est sorti et que son solde total a été retiré,
 
 - [Retraits de la plateforme de lancement de la mise en jeu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895 : la chaîne phare signale les retraits comme des opérations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94 : Retrait de l'ETH misé (Testing) avec Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68 : EIP-4895 : Retraits de la chaîne de balises en tant qu'opérations avec Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Comprendre le Solde Effectif du Validateur](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -211,7 +211,6 @@ eventName="read more">
 
 - [منصة تشغيل عمليات سحب المراهنة](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: إجراءات السحب المدفوعة من سلسلة المنارة كعمليات](https://eips.ethereum.org/EIPS/eip-4895)
-- [رعاة القطط في إيثريوم - شانغاهاي](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: سحب عملة ETH التي تمت مراهنتها (تجريبي) مع Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: إجراءات السحب المدفوعة من سلسلة المنارة كعمليات مع Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [فهم الرصيد الساري لبرنامج المدقق](https://www.attestant.io/posts/understanding-validator-effective-balance/)

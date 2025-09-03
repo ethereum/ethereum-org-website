@@ -204,7 +204,6 @@ lang: el
 
 - [Έγγραφα Flashbots](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _Πίνακας εργαλείων και live εξερευνητής συναλλαγών για συναλλαγές MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Παρακολούθηση με στατιστικά σε πραγματικό χρόνο για relays MEV-Boost και κατασκευαστές μπλοκ_
 
 ## Περισσότερες πληροφορίες {#further-reading}

@@ -17,7 +17,6 @@ Alább láthatja a hasznos útmutatókat és eszközöket az ethereum.org fordí
 
 ## Eszközök {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– megtalálhatja a technikai kifejezésekhez tartozó sztenderd fordításokat_
 - [Linguee](https://www.linguee.com/) _– fordításokhoz keresőmotor és szótár, mely szavak vagy kifejezések alapján is használható_
 - [Proz term search](https://www.proz.com/search/) _– adatbázis, melyben fordítói szótárak és speciális kifejezések szószedetei találhatók_
 - [Eurotermbank](https://www.eurotermbank.com/) _– európai kifejezések gyűjteménye 42 nyelven_

@@ -200,7 +200,6 @@ Chun d'iarmhéid iomlán a dhíghlasáil agus a fháil ar ais ní mór duit an p
 - [ Ag Cabhrú le hÉagsúlacht Cliant](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Éagsúlacht cliant ar chiseal chomhthola Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Conas: Déan siopadóireacht le haghaidh Crua-earraí Bailíochtóra Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Céim ar Chéim: Conas dul isteach i Testnet Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Eth2 Leideanna um Chosc ar Shlaiseáil](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
 
 <QuizWidget quizKey="staking-solo" />

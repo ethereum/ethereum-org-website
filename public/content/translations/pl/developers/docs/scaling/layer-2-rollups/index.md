@@ -118,7 +118,6 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 ## Dalsza lektura {#further-reading}
 
 - [Niekompletny przewodnik po pakietach zbiorczych](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
-- [Zero-Knowledge Blockchain Scalability](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
 **Pakiety zbiorcze ZK**
 
