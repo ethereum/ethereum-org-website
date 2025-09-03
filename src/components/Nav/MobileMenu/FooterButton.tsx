@@ -11,7 +11,7 @@ const FooterButton = forwardRef<HTMLButtonElement, FooterButtonProps>(
   ({ icon: Icon, children, ...props }, ref) => (
     <Button
       ref={ref}
-      className="flex h-fit flex-col items-center px-1 text-body"
+      className="flex h-fit flex-col items-center px-1 text-body data-[state=active]:text-primary-hover"
       variant="ghost"
       {...props}
     >
