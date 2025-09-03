@@ -474,7 +474,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           className="flex flex-col items-center gap-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-8 py-20 dark:from-accent-a/10 dark:to-accent-a/20"
         >
           <h2 className="sr-only">{t("page-founders-get-in-touch-h2")}</h2>
-          <EFFounderSuccess />
+          <EFFounderSuccess className="!max-w-md" />
           <p className="max-w-screen-md text-center">
             {t("page-founders-get-in-touch-p1")}
           </p>
