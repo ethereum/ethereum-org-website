@@ -97,6 +97,11 @@ export const useNavigation = () => {
               description: t("nav-security-description"),
               href: "/security/",
             },
+            {
+              label: t("ethereum-privacy"),
+              description: t("nav-privacy-description"),
+              href: "/privacy/",
+            },
           ],
         },
         {
