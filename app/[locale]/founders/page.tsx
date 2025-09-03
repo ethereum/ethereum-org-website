@@ -413,7 +413,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
                       >
                         <h3 className="sr-only">{name}</h3>
-                        <Logo />
+                        <Logo className="my-auto" />
                         <div className="space-y-4">
                           <div className="flex flex-wrap gap-x-1 gap-y-2">
                             {tags.map((tag) => (
@@ -533,8 +533,9 @@ export async function generateMetadata({
   return await getMetadata({
     locale,
     slug: ["founders"],
-    title: "Founders", // TODO
-    description: "Some meta description", // TODO
+    title: "Founders support",
+    description:
+      "Empowering founders on Ethereum with programs, mentorship, and resources. Discover how the Ethereum ecosystem supports entrepreneurs from idea to growth.",
     image: "/images/upgrades/merge.png",
   })
 }
