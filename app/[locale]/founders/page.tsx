@@ -1,5 +1,6 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, SectionNavDetails } from "@/lib/types"
 
@@ -34,63 +35,62 @@ import heroImg from "@/public/images/upgrades/merge.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-  console.log("TODO: setup intl", locale)
+  const t = await getTranslations({ locale, namespace: "page-founders" })
 
   const supportTags = {
     active: {
-      // TODO: intl label setup, i.e. t("page-founders-support-tag-active")
-      label: "Active",
+      label: t("page-founders-support-tag-active"),
       // TODO: extract color variants to ui/tag component
       className:
         "bg-green-100 dark:bg-green-700/50 text-green-700 dark:text-green-100",
     },
     grantProgram: {
-      label: "Grant Program",
+      label: t("page-founders-support-tag-grant-program"),
       className:
         "bg-blue-100 dark:bg-blue-600/50 text-blue-600 dark:text-blue-100",
     },
     auditGrants: {
-      label: "Audit Grants",
+      label: t("page-founders-support-tag-audit-grants"),
       className:
         "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
     },
     publicGoods: {
-      label: "Public Goods",
+      label: t("page-founders-support-tag-public-goods"),
       className:
         "bg-orange-100 dark:bg-orange-700/50 text-orange-700 dark:text-orange-100",
     },
     toolingInfra: {
-      label: "Tooling & Infra",
+      label: t("page-founders-support-tag-tooling-infra"),
       className:
         "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
     },
     events: {
-      label: "Events",
+      label: t("page-founders-support-tag-events"),
       className:
         "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
     },
     fundraising: {
-      label: "Fundraising",
+      label: t("page-founders-support-tag-fundraising"),
       className:
         "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
     },
     ecosystemEvents: {
-      label: "Ecosystem Events",
+      label: t("page-founders-support-tag-ecosystem-events"),
       className:
         "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100 tracking-1",
     },
     accelerator: {
-      label: "Accelerator",
+      label: t("page-founders-support-tag-accelerator"),
       className:
         "bg-orange-100 dark:bg-orange-700/50 text-orange-700 dark:text-orange-100",
     },
     mentorship: {
-      label: "Mentorship",
+      label: t("page-founders-support-tag-mentorship"),
       className:
         "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
     },
     networking: {
-      label: "Networking",
+      label: t("page-founders-support-tag-networking"),
       className:
         "bg-blue-100 dark:bg-blue-600/50 text-blue-600 dark:text-blue-100",
     },
@@ -116,16 +116,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const supportTabs: SupportSection[] = [
     {
       key: "funding",
-      label: "Funding",
+      label: t("page-founders-funding-label"),
       icon: <Banknote />,
       entities: [
         {
           name: "Optimism Atlas",
           Logo: Optimism,
           tags: ["active", "grantProgram", "auditGrants", "publicGoods"],
-          description:
-            "Support for individual builders and teams making onchain apps, tooling, and infrastructure to advance the Superchain.",
-          highlights: ["19 chains eligible", "700+ projects supported"],
+          description: t("page-founders-funding-optimism-description"),
+          highlights: [
+            t("page-founders-funding-optimism-highlight-1"),
+            t("page-founders-funding-optimism-highlight-2"),
+          ],
           href: "https://atlas.optimism.io/",
         },
         // {
@@ -140,9 +142,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           name: "Base",
           Logo: Base,
           tags: ["active", "grantProgram", "toolingInfra"],
-          description:
-            "Builder Grants are ongoing experiments to recognize Base builders.",
-          highlights: ["1-5 ETH grants"],
+          description: t("page-founders-funding-base-description"),
+          highlights: [t("page-founders-funding-base-highlight-1")],
           href: "https://paragraph.com/@grants.base.eth/calling-based-builders",
         },
         {
@@ -155,53 +156,51 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             "toolingInfra",
             "events",
           ],
-          description:
-            "Allocating resources to critical projects, to be a valued voice within the Ethereum ecosystem, and to advocate for Ethereum to the outside world.",
-          highlights: ["2,000+ projects supported"],
+          description: t("page-founders-funding-esp-description"),
+          highlights: [t("page-founders-funding-esp-highlight-1")],
           href: "https://esp.ethereum.foundation/",
         },
         {
           name: "Arbitrum",
           Logo: Arbitrum,
           tags: ["active", "grantProgram", "auditGrants", "toolingInfra"],
-          description:
-            "The mission is to empower developers and entrepreneurs to build impactful DApps that leverage the capabilities of the Arbitrum network",
-          highlights: ["300+ projects supported"],
+          description: t("page-founders-funding-arbitrum-description"),
+          highlights: [t("page-founders-funding-arbitrum-highlight-1")],
           href: "https://arbitrum.foundation/grants",
         },
         {
           name: "Unichain",
           Logo: Unichain,
           tags: ["active", "grantProgram", "auditGrants", "toolingInfra"],
-          description:
-            "A series of programs and resources designed to support Unichain’s emergent developer community",
-          highlights: ["Novel DeFi mechanisms"],
+          description: t("page-founders-funding-unichain-description"),
+          highlights: [t("page-founders-funding-unichain-highlight-1")],
           href: "https://uniswapfoundation.mirror.xyz/CR1Boh_s3T7FDGwn2TQyyHYNMO_wp4jJDdtKR4U4CgE",
         },
         {
           name: "Polygon",
           Logo: Polygon,
           tags: ["active", "grantProgram", "toolingInfra"],
-          description:
-            "A community grants program to support builders, teams, and creators committed to the growth of Polygon",
-          highlights: ["Building or migrating to Polygon"],
+          description: t("page-founders-funding-polygon-description"),
+          highlights: [t("page-founders-funding-polygon-highlight-1")],
           href: "https://polygon.technology/grants",
         },
       ],
-      categoryCtaLabel: "Get funded",
+      categoryCtaLabel: t("page-founders-funding-cta"),
     },
     {
       key: "accelerators-growth",
-      label: "Accelerators & Growth",
+      label: t("page-founders-accelerators-growth-label"),
       icon: <ChartNoAxesCombined />,
       entities: [
         {
           name: "Kernel",
           Logo: Kernel,
           tags: ["active", "mentorship", "networking"],
-          description:
-            "Kernel is about slowly building, through repeated interactions with peers.",
-          highlights: ["2,200+ fellows", "150+ active projects"],
+          description: t("page-founders-accelerators-kernel-description"),
+          highlights: [
+            t("page-founders-accelerators-kernel-highlight-1"),
+            t("page-founders-accelerators-kernel-highlight-2"),
+          ],
           href: "https://www.kernel.community/",
         },
         {
@@ -214,80 +213,77 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             "mentorship",
             "fundraising",
           ],
-          description:
-            "Alliance is the leading crypto accelerator & founder community. Now accepting AI startups.",
-          highlights: ["$500K Funding"],
+          description: t("page-founders-accelerators-alliance-description"),
+          highlights: [t("page-founders-accelerators-alliance-highlight-1")],
           href: "https://alliance.xyz/",
         },
         {
           name: "Base",
           Logo: Base,
           tags: ["accelerator", "mentorship", "networking"],
-          description:
-            "Base Batches is a global program for builders creating the next wave of onchain apps",
-          highlights: ["Up to $1M funding"],
+          description: t("page-founders-accelerators-base-description"),
+          highlights: [t("page-founders-accelerators-base-highlight-1")],
           href: "https://www.basebatches.xyz/",
         },
       ],
-      categoryCtaLabel: "Explore",
+      categoryCtaLabel: t("page-founders-accelerators-growth-cta"),
     },
     {
       key: "partnerships-integrations",
-      label: "Partnerships & Integrations",
+      label: t("page-founders-partnerships-label"),
       icon: <Handshake />,
       entities: [
         {
           name: "Unichain",
           Logo: Unichain,
           tags: ["active", "auditGrants"],
-          description:
-            "A series of programs and resources designed to support Unichain’s emergent developer community",
-          highlights: ["Novel DeFi mechanisms"],
+          description: t("page-founders-partnerships-unichain-description"),
+          highlights: [t("page-founders-partnerships-unichain-highlight-1")],
           href: "https://www.uniswapfoundation.org/grants",
-          ctaLabel: "Visit Unichain",
+          ctaLabel: t("page-founders-partnerships-unichain-cta"),
         },
         {
           name: "ENS Builder Grants",
           Logo: EnsBuilderGrants,
           tags: ["active", "publicGoods", "fundraising"],
-          description:
-            "The program aims to empower projects that have demonstrated exceptional usefulness and impact for developers and users alike.",
+          description: t("page-founders-partnerships-ens-description"),
           highlights: [
-            "Small grants up to 2 ETH",
-            "Large grants up to 50k USDC",
+            t("page-founders-partnerships-ens-highlight-1"),
+            t("page-founders-partnerships-ens-highlight-2"),
           ],
           href: "https://builder.ensgrants.xyz/",
-          ctaLabel: "Visit ENS",
+          ctaLabel: t("page-founders-partnerships-ens-cta"),
         },
         {
           name: "Protocol Guild",
           Logo: ProtogolGuild,
           tags: ["active", "fundraising"],
-          description:
-            "Independent funding organization for Ethereum core developers. We proactively fund maintainers doing work the ecosystem depends on.",
-          highlights: ["$28M raised to core devs"],
-          href: "$28M raised to core devs",
-          ctaLabel: "Visit PG",
+          description: t(
+            "page-founders-partnerships-protocol-guild-description"
+          ),
+          highlights: [
+            t("page-founders-partnerships-protocol-guild-highlight-1"),
+          ],
+          href: "https://www.protocolguild.org/",
+          ctaLabel: t("page-founders-partnerships-protocol-guild-cta"),
         },
         {
           name: "Devconnect",
           Logo: Devconnect,
           tags: ["ecosystemEvents"],
-          description:
-            "Devconnect ARG is the Ethereum World's Fair: A showcase of apps and an event to connect, build, and accelerate Ethereum adoption.",
+          description: t("page-founders-partnerships-devconnect-description"),
           highlights: [],
           href: "https://devconnect.org/",
-          ctaLabel: "Visit Devconnect",
+          ctaLabel: t("page-founders-partnerships-devconnect-cta"),
         },
         {
           name: "ETHGlobal",
           Logo: EthGlobal,
           tags: ["ecosystemEvents"],
-          description:
-            "Global events that foster a world-class ecosystem of Ethereum developers and entrepreneurs.",
+          description: t("page-founders-partnerships-ethglobal-description"),
           highlights: [],
           href: "https://ethglobal.com/",
-          ctaLabel: "Visit ETHGlobal",
+          ctaLabel: t("page-founders-partnerships-ethglobal-cta"),
         },
         // {
         //   name: "Base",
@@ -319,15 +315,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       name: "Fahim",
       affiliation: "Optimism",
       className: "[&_[data-label='avatar']]:bg-accent-a",
-      content: (
-        <p>
-          The Founder Success team is a huge asset to the Ethereum ecosystem.
-          They truly care about helping teams win, and their hands-on support
-          and genuine commitment to helping teams like Optimism is clear to see.
-          I&apos;m excited to continue collaborating with them and strengthening
-          our ecosystem together.
-        </p>
-      ),
+      content: <p>{t("page-founders-story-fahim-p1")}</p>,
     },
     {
       name: "Kedian",
@@ -335,16 +323,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       className: "[&_[data-label='avatar']]:bg-accent-b",
       content: (
         <>
-          <p>
-            Our contact at the EF has been instrumental in guiding us, not only
-            by sharing valuable insights on our upcoming feature but also by
-            introducing us to key L2s in the Ethereum ecosystem.
-          </p>
-          <p>
-            Thanks to their feedback on our GTM strategy, we accelerated
-            decision-making, reduced time spent on research, and focused
-            directly on execution.
-          </p>
+          <p>{t("page-founders-story-kedian-p1")}</p>
+          <p>{t("page-founders-story-kedian-p2")}</p>
         </>
       ),
     },
@@ -352,13 +332,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       name: "Dith",
       affiliation: "Gigaverse",
       className: "[&_[data-label='avatar']]:bg-accent-c",
-      content: (
-        <p>
-          EF Founder Support was excellent, they were a great impartial thought
-          partner & advisor to us as we completed our first fund raise. I have
-          no hesitation recommending other EVM founders to engage them.
-        </p>
-      ),
+      content: <p>{t("page-founders-story-dith-p1")}</p>,
     },
   ]
 
@@ -367,16 +341,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <ContentHero
         breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
         heroImg={heroImg}
-        title="Empowering Founders on Ethereum"
-        description="A dedicated hub for entrepreneurs to access programs, mentorship, and visibility across the Ethereum ecosystem, giving founders the support they need at every stage."
+        title={t("page-founders-title")}
+        description={t("page-founders-description")}
       />
       <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
         <Section id="apply" className="space-y-12">
           <div className="space-y-4">
-            <h2>Apply for support</h2>
-            <p>
-              Choose your path and get routed to the most relevant next step.
-            </p>
+            <h2>{t("page-founders-apply-h2")}</h2>
+            <p>{t("page-founders-apply-p1")}</p>
           </div>
 
           <Tabs defaultValue={supportTabs[0].key}>
@@ -437,8 +409,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           ))}
                         </div>
                         <ButtonLink href={href} variant="outline">
-                          {/* // TODO: Add proper fallback */}
-                          {ctaLabel || categoryCtaLabel || "Go"}
+                          {ctaLabel || categoryCtaLabel}
                         </ButtonLink>
                       </Card>
                     )
@@ -453,10 +424,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           className="flex w-full flex-col items-center gap-y-14 rounded-t-4xl bg-radial-b px-4 py-20 md:rounded-t-[4rem] md:px-24"
         >
           <div className="space-y-2 px-4 text-center">
-            <h2 className="text-4xl md:text-5xl">How others succeeded</h2>
-            <p className="">
-              You don&apos;t have to build alone, this ecosystem has your back.
-            </p>
+            <h2 className="text-4xl md:text-5xl">
+              {t("page-founders-succeed-h2")}
+            </h2>
+            <p className="">{t("page-founders-succeed-p1")}</p>
           </div>
           {/* // TODO: Re-enable metrics when ready */}
           {/* <ActivityStats
@@ -502,15 +473,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           id="get-in-touch"
           className="flex flex-col items-center gap-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-8 py-20 dark:from-accent-a/10 dark:to-accent-a/20"
         >
-          <h2 className="sr-only">Ethereum Foundation Founder Success Team</h2>
+          <h2 className="sr-only">{t("page-founders-get-in-touch-h2")}</h2>
           <EFFounderSuccess />
           <p className="max-w-screen-md text-center">
-            Founder Success is for builders with bold ideas, entrepreneurs who
-            see Ethereum as the foundation for products, communities, and
-            businesses that can shape the future.
+            {t("page-founders-get-in-touch-p1")}
           </p>
           <ButtonLink href="https://efdn.notion.site/255d989555418113975ff62641d9c814">
-            Request support
+            {t("page-founders-get-in-touch-cta")}
           </ButtonLink>
         </Section>
       </MainArticle>
@@ -525,17 +494,16 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  // const t = await getTranslations({
-  //   locale,
-  //   namespace: "page-founders",
-  // })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-founders",
+  })
 
   return await getMetadata({
     locale,
     slug: ["founders"],
-    title: "Founders support",
-    description:
-      "Empowering founders on Ethereum with programs, mentorship, and resources. Discover how the Ethereum ecosystem supports entrepreneurs from idea to growth.",
+    title: t("page-founders-metadata-title"),
+    description: t("page-founders-metadata-description"),
     image: "/images/upgrades/merge.png",
   })
 }
