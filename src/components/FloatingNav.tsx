@@ -43,7 +43,7 @@ const FloatingNav = ({
     <TabNav
       items={items}
       activeKey={activeKey}
-      className="mx-4 max-w-full bg-background p-2 md:max-w-[calc(100%-2rem)] md:p-0.5"
+      className="mx-4 max-w-full bg-background p-0.5 md:max-w-[calc(100%-2rem)]"
       useMotion
       motionLayoutId="active-section-highlight"
       customEventOptions={customEventOptions}
