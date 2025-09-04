@@ -26,10 +26,77 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-contributing-translation-program-contributors",
+  })
+
+  // JSON-LD structured data for the translation contributors page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/contributing/translation-program/contributors/`,
+    name: t("page-contributing-translation-program-contributors-meta-title"),
+    description: t(
+      "page-contributing-translation-program-contributors-meta-description"
+    ),
+    url: `https://ethereum.org/${locale}/contributing/translation-program/contributors/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Contributing",
+          item: `https://ethereum.org/${locale}/contributing/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Translation Program",
+          item: `https://ethereum.org/${locale}/contributing/translation-program/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: t(
+            "page-contributing-translation-program-contributors-meta-title"
+          ),
+          item: `https://ethereum.org/${locale}/contributing/translation-program/contributors/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+  }
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <Contributors />
-    </I18nProvider>
+    <>
+      <script
+        id="jsonld-webpage-translation-contributors"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <Contributors />
+      </I18nProvider>
+    </>
   )
 }
 
