@@ -459,3 +459,5 @@ Another possible way to identify scam tokens is to see if they have any suspicio
 Automated detection of ERC-20 scams suffers from [false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), because a scam can use a perfectly normal ERC-20 token contract that just doesn't represent anything real. So you should always attempt to _get the token address from a trusted source_.
 
 Automated detection can help in certain cases, such as DeFi pieces, where there are many tokens and they need to be handled automatically. But as always [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp), do your own research, and encourage your users to do likewise.
+
+[See here for more of my work](https://cryptodocguy.pro/).
