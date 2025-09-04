@@ -108,7 +108,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     description: string
     highlights: string[] // w/ CheckCircle
     href: string
-    ctaLabel?: string
+    ctaLabel?: React.ReactNode
   }
 
   type SupportSection = Omit<Required<SectionNavDetails>, "href"> & {
@@ -132,6 +132,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             t("page-founders-funding-optimism-highlight-2"),
           ],
           href: "https://atlas.optimism.io/",
+          ctaLabel: t.rich("page-founders-cta-visit-name", {
+            name: "Optimism",
+          }),
         },
         // {
         //   name: "Gitcoin",
@@ -140,6 +143,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         //   description: "A quarterly initiative that empowers people and collectives in web3 to allocate funding toward projects and causes they believe in.",
         //   highlights: ["3,700+ projects supported"],
         //   href: "https://www.gitcoin.co/program",
+        //   ctaLabel: t.rich("page-founders-cta-visit-name", { name: "Gitcoin" }),
         // },
         {
           name: "Base",
@@ -148,6 +152,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-funding-base-description"),
           highlights: [t("page-founders-funding-base-highlight-1")],
           href: "https://paragraph.com/@grants.base.eth/calling-based-builders",
+          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "Base" }),
         },
         {
           name: "Ecosystem Support Program",
@@ -162,6 +167,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-funding-esp-description"),
           highlights: [t("page-founders-funding-esp-highlight-1")],
           href: "https://esp.ethereum.foundation/",
+          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "ESP" }),
         },
         {
           name: "Arbitrum",
@@ -170,6 +176,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-funding-arbitrum-description"),
           highlights: [t("page-founders-funding-arbitrum-highlight-1")],
           href: "https://arbitrum.foundation/grants",
+          ctaLabel: t.rich("page-founders-cta-visit-name", {
+            name: "Arbitrum",
+          }),
         },
         {
           name: "Unichain",
@@ -178,6 +187,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-funding-unichain-description"),
           highlights: [t("page-founders-funding-unichain-highlight-1")],
           href: "https://uniswapfoundation.mirror.xyz/CR1Boh_s3T7FDGwn2TQyyHYNMO_wp4jJDdtKR4U4CgE",
+          ctaLabel: t.rich("page-founders-cta-visit-name", {
+            name: "Unichain",
+          }),
         },
         {
           name: "Polygon",
@@ -186,9 +198,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-funding-polygon-description"),
           highlights: [t("page-founders-funding-polygon-highlight-1")],
           href: "https://polygon.technology/grants",
+          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "Polygon" }),
         },
       ],
-      categoryCtaLabel: t("page-founders-funding-cta"),
     },
     {
       key: "accelerators-growth",
@@ -205,6 +217,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             t("page-founders-accelerators-kernel-highlight-2"),
           ],
           href: "https://www.kernel.community/",
+          ctaLabel: t.rich("page-founders-cta-explore-name", {
+            name: "Kernel",
+          }),
         },
         {
           name: "Alliance",
@@ -219,6 +234,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-accelerators-alliance-description"),
           highlights: [t("page-founders-accelerators-alliance-highlight-1")],
           href: "https://alliance.xyz/",
+          ctaLabel: t.rich("page-founders-cta-explore-name", {
+            name: "Alliance",
+          }),
         },
         {
           name: "Base",
@@ -227,9 +245,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-accelerators-base-description"),
           highlights: [t("page-founders-accelerators-base-highlight-1")],
           href: "https://www.basebatches.xyz/",
+          ctaLabel: t.rich("page-founders-cta-explore-name", { name: "Base" }),
         },
       ],
-      categoryCtaLabel: t("page-founders-accelerators-growth-cta"),
     },
     {
       key: "partnerships-integrations",
@@ -243,7 +261,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-partnerships-unichain-description"),
           highlights: [t("page-founders-partnerships-unichain-highlight-1")],
           href: "https://www.uniswapfoundation.org/grants",
-          ctaLabel: t("page-founders-partnerships-unichain-cta"),
+          ctaLabel: t.rich("page-founders-cta-visit-name", {
+            name: "Unichain",
+          }),
         },
         {
           name: "ENS Builder Grants",
@@ -255,7 +275,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             t("page-founders-partnerships-ens-highlight-2"),
           ],
           href: "https://builder.ensgrants.xyz/",
-          ctaLabel: t("page-founders-partnerships-ens-cta"),
+          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "ENS" }),
         },
         {
           name: "Protocol Guild",
@@ -268,7 +288,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             t("page-founders-partnerships-protocol-guild-highlight-1"),
           ],
           href: "https://www.protocolguild.org/",
-          ctaLabel: t("page-founders-partnerships-protocol-guild-cta"),
+          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "PG" }),
         },
         {
           name: "Devconnect",
@@ -277,7 +297,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-partnerships-devconnect-description"),
           highlights: [],
           href: "https://devconnect.org/",
-          ctaLabel: t("page-founders-partnerships-devconnect-cta"),
+          ctaLabel: t.rich("page-founders-cta-visit-name", {
+            name: "Devconnect",
+          }),
         },
         {
           name: "ETHGlobal",
@@ -286,7 +308,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           description: t("page-founders-partnerships-ethglobal-description"),
           highlights: [],
           href: "https://ethglobal.com/",
-          ctaLabel: t("page-founders-partnerships-ethglobal-cta"),
+          ctaLabel: t.rich("page-founders-cta-visit-name", {
+            name: "ETHGlobal",
+          }),
         },
         {
           name: "Ethereum Foundation Founder Support",
