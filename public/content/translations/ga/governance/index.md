@@ -180,5 +180,5 @@ Níl an rialachas in Ethereum sainmhínithe go docht. Tá dearcthaí éagsúla a
 - [Cad is croífhorbróir Ethereum ann?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Rialachas, Cuid 2: Tá an plútacratachas fós go dona](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Ag bogadh níos faide ná rialachas vótála boinn](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin _
-- [Rialachas Blocshlabhra a Thuiscint](https://research.2077.xyz/understanding-blockchain-governance) - _Taighde 2077_
+- [Rialachas Blocshlabhra a Thuiscint](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _Taighde 2077_
 - [Rialtas Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

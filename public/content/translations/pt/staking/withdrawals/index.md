@@ -212,7 +212,6 @@ Não. Após a saída de um validador e o levantamento integral do seu saldo, qua
 
 - [Levantamentos do Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Levantamentos forçados da Beacon chain como operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Xangai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Levantamento de ETH em staking (teste) com Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Levantamentos forçados da Beacon como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Compreender o saldo efetivo do validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)

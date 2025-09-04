@@ -114,7 +114,6 @@ lang: zh-tw
 - [Web3 Army](https://web3army.xyz/)
 - [加密谷工作](https://cryptovalley.jobs/)
 - [以太坊工作](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## 加入去中心化自治組織 (DAO) {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ lang: zh-tw
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _由一些協助開發 Web3 的自由工作者所組成的去中心化自治組織_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 的社群管理體系_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律建設_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _藝術群體_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _投資 pre-seed 輪加密貨幣專案的風投基金_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _現實生活的 MMORPG 遊戲機制_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _數字物理衣物品牌_

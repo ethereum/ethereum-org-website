@@ -245,7 +245,7 @@ I measc na dtionscadal atá ag obair ar zkEVMs tá:
 
 - [Cad is Uas-scálú Dífhianaise ann?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Cad iad uas-scáluithe dífhianaise?](https://alchemy.com/blog/zero-knowledge-rollups)
-- [Treoir Phraiticiúil Maidir le hUas-scáluithe Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Treoir Phraiticiúil Maidir le hUas-scáluithe Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [Cad is zkEVM ann?](https://www.alchemy.com/overviews/zkevm)
 - [Cineálacha ZK-EVM: Ethereum-coibhéis, EVM-coibhéiseach, Cineál 1, Cineál 4, agus dordfhocail criptea eile](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)

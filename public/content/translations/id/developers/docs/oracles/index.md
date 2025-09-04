@@ -300,7 +300,6 @@ Anda dapat mempelajari lebih lanjut tentang penerapan Chainlink dengan membaca [
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Dapat dibuktikan](https://provable.xyz/)
-- [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
 ### Membuat sebuah oracle kontrak pintar {#build-an-oracle-smart-contract}
@@ -430,7 +429,6 @@ _Kami ingin lebih banyak dokumentasi tentang pembuatan sebuah oracle kontrak pin
 - [Oracle Terdesentralisasi: gambaran umum lengkap](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Mengimplementasikan Oracle Blockchain di Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Mengapa kontrak pintar tidak bisa melakukan pemanggilan API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
-- [Mengapa kita memerlukan oracle terdesentralisasi](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
 - [Jadi, Anda ingin menggunakan oracle harga](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
 
 **Video**

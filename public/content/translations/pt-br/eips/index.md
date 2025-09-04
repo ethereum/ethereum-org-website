@@ -74,6 +74,6 @@ Qualquer pessoa pode criar uma EIP. Antes de enviar uma proposta, é necessário
 
 <cite class="citation">
 
-Conteúdo da página retirado parcialmente do artigo [Coordenação do upgrade da rede e governança do desenvolvimento do protocolo Ethereum (em inglês)](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) por Hudson Jameson
+Conteúdo da página retirado parcialmente do artigo [Coordenação do upgrade da rede e governança do desenvolvimento do protocolo Ethereum (em inglês)](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) por Hudson Jameson
 
 </cite>

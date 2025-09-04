@@ -17,7 +17,6 @@ description: 對 ethereum.org 譯者有用的資源
 
 ## 工具 {#tools}
 
-- [微軟語言入口網站](https://www.microsoft.com/en-us/language)_ — 在尋找和檢查技術術語的標準翻譯時很有用處_
 - [Linguee](https://www.linguee.com/)。 _ — 翻譯和字典搜尋引擎，可按詞或短語進行搜尋_
 - [Proz 術語搜尋](https://www.proz.com/search/) _ — 特殊術語的翻譯字典和詞彙表資料庫_
 - [Eurotermbank](https://www.eurotermbank.com/)_ — 42 種語言的歐洲術語集_

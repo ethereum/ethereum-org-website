@@ -43,7 +43,6 @@ Einige Konsensclients verfügen über integrierte Tools, um lokale Beacon Chains
 
 - [Lokales Testnetz unter Verwendung von Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lokales Testnetz unter Verwendung von Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Lokales Testnetz unter Verwendung von Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Öffentliche Ethereum Test-Chains {#public-beacon-testchains}
 

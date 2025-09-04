@@ -180,5 +180,5 @@ _Σημείωση: Οποιοσδήποτε μπορεί να ανήκει σε 
 - [Τι είναι ένας βασικός προγραμματιστής Ethereum](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Διακυβέρνηση, Τμήμα 2: Η πλουτοκρατία είναι ακόμα κακή](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Προχωρώντας πέρα από τη διακυβέρνηση ψηφοφορίας νομισμάτων](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [Κατανόηση της διακυβέρνησης κρυπτοαλυσίδας](https://research.2077.xyz/understanding-blockchain-governance) - _Έρευνα 2077_
+- [Κατανόηση της διακυβέρνησης κρυπτοαλυσίδας](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _Έρευνα 2077_
 - [Η διακυβέρνηση Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_
