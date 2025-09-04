@@ -112,7 +112,7 @@ const StackContainer = ({
   />
 )
 
-const LearningToolsPage = () => {
+const LearningToolsPage = ({ locale }) => {
   const { t } = useTranslation(["page-developers-learning-tools"])
 
   const randomizedSandboxes: Array<LearningTool> = shuffle([
@@ -398,74 +398,138 @@ const LearningToolsPage = () => {
     },
   ]
 
-  return (
-    <Page>
-      <MainArticle className="w-full">
-        <div className="w-full">
-          <Header>
-            <H1>
-              <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
-            </H1>
-            <Subtitle>
-              <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
-            </Subtitle>
-          </Header>
-        </div>
-        <StackContainer>
-          <SubtitleTwo>
-            <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
-          </SubtitleTwo>
-          <p>
-            <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
-          </p>
-          <LearningToolsCardGrid category={randomizedSandboxes} />
-          <InfoBanner emoji=":point_up:" shouldCenter>
-            <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-          </InfoBanner>
-        </StackContainer>
-        <StackContainer>
-          <SubtitleTwo>
-            <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
-          </SubtitleTwo>
-          <p>
-            <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
-          </p>
-          <LearningToolsCardGrid category={games} />
-        </StackContainer>
-        <StackContainer>
-          <SubtitleTwo>
-            <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
-          </SubtitleTwo>
-          <p>
-            <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
-          </p>
-          <LearningToolsCardGrid category={bootcamps} />
-        </StackContainer>
-        <ContentBox>
-          <CalloutBanner
-            className="mx-4 mb-40 mt-24"
-            image={EnterpriseEth}
-            alt="Enterprise ETH"
-            titleKey={
-              "page-developers-learning-tools:page-learning-tools-documentation"
-            }
-            descriptionKey={
-              "page-developers-learning-tools:page-learning-tools-documentation-desc"
-            }
-          >
-            <div>
-              <ButtonLink href="/developers/docs/">
-                <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
-              </ButtonLink>
-            </div>
-          </CalloutBanner>
-        </ContentBox>
+  // Combine all tools for JSON-LD
+  const allTools = [
+    ...randomizedSandboxes.map((tool) => ({
+      ...tool,
+      category: "DeveloperApplication",
+    })),
+    ...games.map((tool) => ({ ...tool, category: "GameApplication" })),
+    ...bootcamps.map((tool) => ({
+      ...tool,
+      category: "EducationalApplication",
+    })),
+  ]
 
-        <ContentBox>
-          <FeedbackCard />
-        </ContentBox>
-      </MainArticle>
-    </Page>
+  const learningToolsCollectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: t("page-learning-tools-meta-title"),
+    description: t("page-learning-tools-meta-desc"),
+    url: `https://ethereum.org/${locale}/developers/learning-tools/`,
+    numberOfItems: allTools.length,
+    itemListElement: allTools.map((tool, index) => ({
+      "@type": "SoftwareApplication",
+      position: index + 1,
+      name: tool.name,
+      description: tool.description,
+      url: tool.url,
+      applicationCategory: tool.category,
+      operatingSystem: "Web Browser",
+      isAccessibleForFree: true,
+      keywords: tool.subjects?.join(", ") || "",
+      about:
+        tool.subjects?.map((subject) => ({
+          "@type": "Thing",
+          name: subject,
+        })) || [],
+      author: {
+        "@type": "Organization",
+        name: tool.name.includes("Remix")
+          ? "Remix"
+          : tool.name.includes("ConsenSys")
+            ? "ConsenSys"
+            : tool.name.includes("Alchemy")
+              ? "Alchemy"
+              : tool.name.includes("OpenZeppelin")
+                ? "OpenZeppelin"
+                : "Community",
+      },
+    })),
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+    },
+  }
+
+  return (
+    <>
+      <script
+        id="jsonld-tools-learning-tools"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(learningToolsCollectionJsonLd),
+        }}
+      />
+      <Page>
+        <MainArticle className="w-full">
+          <div className="w-full">
+            <Header>
+              <H1>
+                <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
+              </H1>
+              <Subtitle>
+                <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
+              </Subtitle>
+            </Header>
+          </div>
+          <StackContainer>
+            <SubtitleTwo>
+              <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
+            </SubtitleTwo>
+            <p>
+              <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
+            </p>
+            <LearningToolsCardGrid category={randomizedSandboxes} />
+            <InfoBanner emoji=":point_up:" shouldCenter>
+              <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
+            </InfoBanner>
+          </StackContainer>
+          <StackContainer>
+            <SubtitleTwo>
+              <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
+            </SubtitleTwo>
+            <p>
+              <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
+            </p>
+            <LearningToolsCardGrid category={games} />
+          </StackContainer>
+          <StackContainer>
+            <SubtitleTwo>
+              <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
+            </SubtitleTwo>
+            <p>
+              <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
+            </p>
+            <LearningToolsCardGrid category={bootcamps} />
+          </StackContainer>
+          <ContentBox>
+            <CalloutBanner
+              className="mx-4 mb-40 mt-24"
+              image={EnterpriseEth}
+              alt="Enterprise ETH"
+              titleKey={
+                "page-developers-learning-tools:page-learning-tools-documentation"
+              }
+              descriptionKey={
+                "page-developers-learning-tools:page-learning-tools-documentation-desc"
+              }
+            >
+              <div>
+                <ButtonLink href="/developers/docs/">
+                  <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
+                </ButtonLink>
+              </div>
+            </CalloutBanner>
+          </ContentBox>
+
+          <ContentBox>
+            <FeedbackCard />
+          </ContentBox>
+        </MainArticle>
+      </Page>
+    </>
   )
 }
 
