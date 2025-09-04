@@ -425,12 +425,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
                       >
                         <h3 className="sr-only">{name}</h3>
-                        <Logo
-                          className={cn(
-                            "my-auto",
-                            href.includes(GetInTouchId) && "[&_*]:!fill-body"
-                          )}
-                        />
+                        <Logo className="my-auto h-9 [&_*]:!fill-body" />
                         <div className="space-y-4">
                           {!!tags.length && (
                             <div className="flex flex-wrap gap-x-1 gap-y-2">
