@@ -33,6 +33,8 @@ import Unichain from "./logos/unichain.svg"
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
+const GetInTouchId = "get-in-touch"
+
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-founders" })
@@ -102,6 +104,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     name: string // sr-only h3
     Logo: React.FC<React.SVGProps<SVGElement>>
     tags: SupportTag[]
+    subtitle?: string
     description: string
     highlights: string[] // w/ CheckCircle
     href: string
@@ -285,6 +288,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           href: "https://ethglobal.com/",
           ctaLabel: t("page-founders-partnerships-ethglobal-cta"),
         },
+        {
+          name: "Ethereum Foundation Founder Support",
+          Logo: EFFounderSuccess,
+          tags: [],
+          subtitle: t("page-founders-partnerships-ef-founder-support-subtitle"),
+          description: t(
+            "page-founders-partnerships-ef-founder-support-description"
+          ),
+          highlights: [],
+          href: `#${GetInTouchId}`,
+          ctaLabel: t("page-founders-partnerships-ef-founder-support-cta"),
+        },
         // {
         //   name: "Base",
         //   Logo: Base,
@@ -375,6 +390,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                       name,
                       Logo,
                       tags,
+                      subtitle,
                       description,
                       highlights,
                       href,
@@ -385,18 +401,26 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
                       >
                         <h3 className="sr-only">{name}</h3>
-                        <Logo className="my-auto" />
+                        <Logo
+                          className={cn(
+                            "my-auto",
+                            href.includes(GetInTouchId) && "[&_*]:!fill-body"
+                          )}
+                        />
                         <div className="space-y-4">
-                          <div className="flex flex-wrap gap-x-1 gap-y-2">
-                            {tags.map((tag) => (
-                              <Tag
-                                key={tag}
-                                className={supportTags[tag].className}
-                              >
-                                {supportTags[tag].label}
-                              </Tag>
-                            ))}
-                          </div>
+                          {!!tags.length && (
+                            <div className="flex flex-wrap gap-x-1 gap-y-2">
+                              {tags.map((tag) => (
+                                <Tag
+                                  key={tag}
+                                  className={supportTags[tag].className}
+                                >
+                                  {supportTags[tag].label}
+                                </Tag>
+                              ))}
+                            </div>
+                          )}
+                          {subtitle && <p className="font-bold">{subtitle}</p>}
                           <p>{description}</p>
                           {highlights.map((highlight) => (
                             <div
@@ -470,7 +494,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </Section>
         <Section
-          id="get-in-touch"
+          id={GetInTouchId}
           className="flex flex-col items-center gap-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-8 py-20 dark:from-accent-a/10 dark:to-accent-a/20"
         >
           <h2 className="sr-only">{t("page-founders-get-in-touch-h2")}</h2>
