@@ -26,6 +26,7 @@ import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 const Layer2Learn = ({
   contributors,
   lastEditLocaleTimestamp,
+  locale,
 }: PageWithContributorsProps) => {
   const { t } = useTranslation("page-layer-2-learn")
   const pathname = usePathname()
@@ -94,244 +95,327 @@ const Layer2Learn = ({
     },
   ]
 
+  // JSON-LD structured data for the Layer 2 Learn page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/layer-2/learn/`,
+    name: t("page-layer-2-learn-meta-title"),
+    description: t("page-layer-2-learn-description"),
+    url: `https://ethereum.org/${locale}/layer-2/learn/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Layer 2",
+          item: `https://ethereum.org/${locale}/layer-2/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: t("page-layer-2-learn-meta-title"),
+          item: `https://ethereum.org/${locale}/layer-2/learn/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+  }
+
+  // JSON-LD for the article content about learning Layer 2
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t("page-layer-2-learn-title"),
+    description: t("page-layer-2-learn-description"),
+    image: "https://ethereum.org/images/layer-2/learn-hero.png",
+    author: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+    dateModified: lastEditLocaleTimestamp,
+  }
+
   return (
-    <MainArticle className="relative flex flex-col">
-      <ContentHero {...heroProps} />
+    <>
+      <script
+        id="jsonld-webpage-layer2-learn"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
 
-      <div
-        id="what-is-layer-2"
-        className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row"
-      >
-        <div className="flex w-full flex-col gap-4 md:w-[70%]">
-          <h2>{t("page-layer-2-learn-what-is-layer-2-title")}</h2>
-          <p>
-            <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-2-1" />
-          </p>
-          <p>
-            <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-2-2" />
-          </p>
-        </div>
-        <div className="w-full md:w-[30%]">
-          <Image
-            src={WhatIsEthereumImage}
-            alt="What is Ethereum"
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </div>
+      <script
+        id="jsonld-article-layer2-learn"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd),
+        }}
+      />
 
-      <div
-        id="what-is-layer-1"
-        className="flex w-full flex-col gap-4 bg-body-light px-8 py-9"
-      >
-        <h2>{t("page-layer-2-learn-what-is-layer-1-title")}</h2>
-        <div className="flex flex-col justify-between gap-16 md:flex-row">
-          <div className="flex w-full flex-col justify-between gap-4 md:w-[50%]">
+      <MainArticle className="relative flex flex-col">
+        <ContentHero {...heroProps} />
+
+        <div
+          id="what-is-layer-2"
+          className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row"
+        >
+          <div className="flex w-full flex-col gap-4 md:w-[70%]">
+            <h2>{t("page-layer-2-learn-what-is-layer-2-title")}</h2>
             <p>
-              <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-1-1" />
+              <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-2-1" />
             </p>
             <p>
-              <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-1-2" />
+              <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-2-2" />
             </p>
           </div>
+          <div className="w-full md:w-[30%]">
+            <Image
+              src={WhatIsEthereumImage}
+              alt="What is Ethereum"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div
+          id="what-is-layer-1"
+          className="flex w-full flex-col gap-4 bg-body-light px-8 py-9"
+        >
+          <h2>{t("page-layer-2-learn-what-is-layer-1-title")}</h2>
+          <div className="flex flex-col justify-between gap-16 md:flex-row">
+            <div className="flex w-full flex-col justify-between gap-4 md:w-[50%]">
+              <p>
+                <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-1-1" />
+              </p>
+              <p>
+                <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-1-2" />
+              </p>
+            </div>
+            <div className="flex w-full flex-col gap-4 md:w-[50%]">
+              <p>
+                <strong>{t("page-layer-2-learn-layer-1-list-title")}</strong>
+              </p>
+              <ol className="list-none space-y-2 pl-0 [counter-reset:item]">
+                <li className="flex items-center space-x-3">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                  <span>
+                    <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-1" />
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                  <span>
+                    <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-2" />
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                  <span>
+                    <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-3" />
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                  <span>
+                    <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-4" />
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="why-do-we-need-layer-2"
+          className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
+        >
+          <div className="w-full items-center justify-center md:w-[50%]">
+            <Image src={DAOImage} alt="" />
+          </div>
+
           <div className="flex w-full flex-col gap-4 md:w-[50%]">
+            <h2>{t("page-layer-2-learn-why-do-we-need-layer-2-title")}</h2>
+            <p>{t("page-layer-2-learn-why-do-we-need-layer-2-1")}</p>
+            <p>{t("page-layer-2-learn-why-do-we-need-layer-2-2")}</p>
+            <h3>
+              {t("page-layer-2-learn-why-do-we-need-layer-2-scalability")}
+            </h3>
             <p>
-              <strong>{t("page-layer-2-learn-layer-1-list-title")}</strong>
+              <Translation id="page-layer-2-learn:page-layer-2-learn-why-do-we-need-layer-2-scalability-1" />
             </p>
-            <ol className="list-none space-y-2 pl-0 [counter-reset:item]">
-              <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
-                <span>
-                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-1" />
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
-                <span>
-                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-2" />
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
-                <span>
-                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-3" />
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
-                <span>
-                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-4" />
-                </span>
-              </li>
-            </ol>
+            <p>
+              {t("page-layer-2-learn-why-do-we-need-layer-2-scalability-2")}
+            </p>
           </div>
         </div>
-      </div>
 
-      <div
-        id="why-do-we-need-layer-2"
-        className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
-      >
-        <div className="w-full items-center justify-center md:w-[50%]">
-          <Image src={DAOImage} alt="" />
+        <div id="layer-2-cards" className="w-full px-8 py-9">
+          <div className="flex flex-col gap-9 md:flex-row">
+            {layer2Cards.map((card, idx) => {
+              return (
+                <div key={idx} className="flex flex-1">
+                  <Card
+                    description={card.description}
+                    title={card.title}
+                    emoji={card.emoji}
+                    className="flex flex-1 flex-col"
+                  />
+                </div>
+              )
+            })}
+          </div>
         </div>
 
-        <div className="flex w-full flex-col gap-4 md:w-[50%]">
-          <h2>{t("page-layer-2-learn-why-do-we-need-layer-2-title")}</h2>
-          <p>{t("page-layer-2-learn-why-do-we-need-layer-2-1")}</p>
-          <p>{t("page-layer-2-learn-why-do-we-need-layer-2-2")}</p>
-          <h3>{t("page-layer-2-learn-why-do-we-need-layer-2-scalability")}</h3>
-          <p>
-            <Translation id="page-layer-2-learn:page-layer-2-learn-why-do-we-need-layer-2-scalability-1" />
-          </p>
-          <p>{t("page-layer-2-learn-why-do-we-need-layer-2-scalability-2")}</p>
+        <div
+          id="how-does-layer-2-work"
+          className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
+        >
+          <div className="flex w-full flex-col gap-4 md:w-[50%]">
+            <h2>{t("page-layer-2-learn-how-does-layer-2-work-title")}</h2>
+            <p>{t("page-layer-2-learn-how-does-layer-2-work-1")}</p>
+            <p>{t("page-layer-2-learn-how-does-layer-2-work-2")}</p>
+            <h3>
+              {t("page-layer-2-learn-how-does-layer-2-work-rollups-title")}
+            </h3>
+            <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-1")}</p>
+            <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-2")}</p>
+          </div>
+          <div className="flex w-full md:w-[50%]">
+            <Image src={RollupImage} alt={""} className="object-contain" />
+          </div>
         </div>
-      </div>
 
-      <div id="layer-2-cards" className="w-full px-8 py-9">
-        <div className="flex flex-col gap-9 md:flex-row">
-          {layer2Cards.map((card, idx) => {
+        <div
+          id="rollup-cards"
+          className="flex w-full flex-col gap-8 px-8 py-9 md:flex-row"
+        >
+          {rollupCards.map((card, idx) => {
             return (
-              <div key={idx} className="flex flex-1">
-                <Card
-                  description={card.description}
-                  title={card.title}
-                  emoji={card.emoji}
-                  className="flex flex-1 flex-col"
-                />
+              <div
+                key={idx}
+                className="flex w-full flex-col gap-4 rounded-sm border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
+              >
+                <Image src={card.image} alt={""} />
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <a href={card.childLink}>{card.childSentence}</a>
               </div>
             )
           })}
         </div>
-      </div>
 
-      <div
-        id="how-does-layer-2-work"
-        className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
-      >
-        <div className="flex w-full flex-col gap-4 md:w-[50%]">
-          <h2>{t("page-layer-2-learn-how-does-layer-2-work-title")}</h2>
-          <p>{t("page-layer-2-learn-how-does-layer-2-work-1")}</p>
-          <p>{t("page-layer-2-learn-how-does-layer-2-work-2")}</p>
-          <h3>{t("page-layer-2-learn-how-does-layer-2-work-rollups-title")}</h3>
-          <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-1")}</p>
-          <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-2")}</p>
-        </div>
-        <div className="flex w-full md:w-[50%]">
-          <Image src={RollupImage} alt={""} className="object-contain" />
-        </div>
-      </div>
-
-      <div
-        id="rollup-cards"
-        className="flex w-full flex-col gap-8 px-8 py-9 md:flex-row"
-      >
-        {rollupCards.map((card, idx) => {
-          return (
-            <div
-              key={idx}
-              className="flex w-full flex-col gap-4 rounded-sm border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
-            >
-              <Image src={card.image} alt={""} />
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-              <a href={card.childLink}>{card.childSentence}</a>
+        <div id="dyor-risks" className="w-full px-8 py-9">
+          <div className="flex flex-col gap-8 bg-orange-100 px-12 py-12 text-gray-900">
+            <h2>{t("page-layer-2-learn-dyor-title")}</h2>
+            <div className="flex flex-col gap-4">
+              <p>
+                <Translation id="page-layer-2-learn:page-layer-2-learn-dyor-1" />
+              </p>
+              <p>{t("page-layer-2-learn-dyor-2")}</p>
             </div>
-          )
-        })}
-      </div>
-
-      <div id="dyor-risks" className="w-full px-8 py-9">
-        <div className="flex flex-col gap-8 bg-orange-100 px-12 py-12 text-gray-900">
-          <h2>{t("page-layer-2-learn-dyor-title")}</h2>
-          <div className="flex flex-col gap-4">
-            <p>
-              <Translation id="page-layer-2-learn:page-layer-2-learn-dyor-1" />
-            </p>
-            <p>{t("page-layer-2-learn-dyor-2")}</p>
-          </div>
-          <div>
-            <ButtonLink
-              href="https://l2beat.com"
-              customEventOptions={{
-                eventCategory: "l2_learn",
-                eventAction: "button_click",
-                eventName: "l2beat_link",
-              }}
-            >
-              {t("page-layer-2-learn-dyor-link")}
-            </ButtonLink>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="a-not-on-alt-l1s"
-        className="flex w-full flex-col gap-8 px-8 py-9"
-      >
-        <h2>{t("page-layer-2-learn-note-on-alt-l1-title")}</h2>
-        <div className="flex flex-col gap-8 md:flex-row">
-          <div>
-            <p>{t("page-layer-2-learn-note-on-alt-l1-1")}</p>
-          </div>
-          <div>
-            <p>
-              <Translation id="page-layer-2-learn:page-layer-2-learn-note-on-alt-l1-2" />
-            </p>
-          </div>
-        </div>
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
-      </div>
-
-      <div id="callout-cards" className="px-8 py-9">
-        <div className="flex w-full flex-col lg:flex-row">
-          <CalloutSSR
-            image={Callout1Image}
-            title={t("page-layer-2-learn-callout-1-title")}
-            description={t("page-layer-2-learn-callout-1-description")}
-          >
             <div>
               <ButtonLink
-                href="/layer-2"
+                href="https://l2beat.com"
                 customEventOptions={{
                   eventCategory: "l2_learn",
                   eventAction: "button_click",
-                  eventName: "learn_more",
+                  eventName: "l2beat_link",
                 }}
               >
-                {t("page-layer-2-learn-learn-more")}
+                {t("page-layer-2-learn-dyor-link")}
               </ButtonLink>
             </div>
-          </CalloutSSR>
-          <CalloutSSR
-            image={Callout2Image}
-            title={t("page-layer-2-learn-callout-2-title")}
-            description={t("page-layer-2-learn-callout-2-description")}
-          >
-            <div>
-              <ButtonLink
-                href="/layer-2/networks"
-                customEventOptions={{
-                  eventCategory: "l2_learn",
-                  eventAction: "button_click",
-                  eventName: "explore_networks",
-                }}
-              >
-                {t("page-layer-2-learn-explore-networks")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
+          </div>
         </div>
-      </div>
 
-      <div id="quiz" className="px-8 py-9">
-        <StandaloneQuizWidget quizKey="layer-2" />
-      </div>
-    </MainArticle>
+        <div
+          id="a-not-on-alt-l1s"
+          className="flex w-full flex-col gap-8 px-8 py-9"
+        >
+          <h2>{t("page-layer-2-learn-note-on-alt-l1-title")}</h2>
+          <div className="flex flex-col gap-8 md:flex-row">
+            <div>
+              <p>{t("page-layer-2-learn-note-on-alt-l1-1")}</p>
+            </div>
+            <div>
+              <p>
+                <Translation id="page-layer-2-learn:page-layer-2-learn-note-on-alt-l1-2" />
+              </p>
+            </div>
+          </div>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
+        </div>
+
+        <div id="callout-cards" className="px-8 py-9">
+          <div className="flex w-full flex-col lg:flex-row">
+            <CalloutSSR
+              image={Callout1Image}
+              title={t("page-layer-2-learn-callout-1-title")}
+              description={t("page-layer-2-learn-callout-1-description")}
+            >
+              <div>
+                <ButtonLink
+                  href="/layer-2"
+                  customEventOptions={{
+                    eventCategory: "l2_learn",
+                    eventAction: "button_click",
+                    eventName: "learn_more",
+                  }}
+                >
+                  {t("page-layer-2-learn-learn-more")}
+                </ButtonLink>
+              </div>
+            </CalloutSSR>
+            <CalloutSSR
+              image={Callout2Image}
+              title={t("page-layer-2-learn-callout-2-title")}
+              description={t("page-layer-2-learn-callout-2-description")}
+            >
+              <div>
+                <ButtonLink
+                  href="/layer-2/networks"
+                  customEventOptions={{
+                    eventCategory: "l2_learn",
+                    eventAction: "button_click",
+                    eventName: "explore_networks",
+                  }}
+                >
+                  {t("page-layer-2-learn-explore-networks")}
+                </ButtonLink>
+              </div>
+            </CalloutSSR>
+          </div>
+        </div>
+
+        <div id="quiz" className="px-8 py-9">
+          <StandaloneQuizWidget quizKey="layer-2" />
+        </div>
+      </MainArticle>
+    </>
   )
 }
 
