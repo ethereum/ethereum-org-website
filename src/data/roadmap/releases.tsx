@@ -151,15 +151,22 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
           <li>{t("page-roadmap-fusaka-peerdas-item-1")}</li>
           <li>{t("page-roadmap-fusaka-peerdas-item-2")}</li>
         </ul>
-        <p className="font-bold">{t("page-roadmap-fusaka-additional-title")}</p>
+        <p className="font-bold">Blob Parameter Only (BPO) Forks</p>
         <ul>
-          <li>{t("page-roadmap-fusaka-additional-item-1")}</li>
-          <li>{t("page-roadmap-fusaka-additional-item-2")}</li>
-          <li>{t("page-roadmap-fusaka-additional-item-3")}</li>
+          <li>Allows flexible blob count increases between major upgrades</li>
+          <li>
+            Enables faster adaptation to L2 scaling needs without waiting for
+            coordinated hard forks
+          </li>
+        </ul>
+        <p className="font-bold">Gas Limit & DoS Hardening</p>
+        <ul>
+          <li>Transaction gas limit cap of 16.7M gas per transaction</li>
+          <li>Default gas limit increase to ~60M (from current 45M)</li>
         </ul>
       </div>
     ),
-    href: "https://eips.ethereum.org/EIPS/eip-7607",
+    href: "/roadmap/fusaka",
   },
   {
     image: GuidesHubHeroImage,

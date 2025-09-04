@@ -127,8 +127,8 @@ A láncok szerződéses tevékenységének nyomon követéséhez a fejlesztők a
 - [Az interoperabilitási trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) – 2021. október 1. – Arjun Bhuptani
 - [Clusters: Hogyan alakítják a bizalomigénytől mentes és a minimális bizalomigényű hidak a többláncos képet?](https://blog.celestia.org/clusters/) – 2021. október 4. – Mustafa Al-Bassam
 - [LI.FI: A hidaknál a bizalomigény széles tartománya van jelen](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) – 2022. április 28. – Arjun Chand
-- [Az összevont tranzakciók interoperabilitási megoldásainak státusza](https://research.2077.xyz/the-state-of-rollup-interoperability) – 2024. június 20. – Alex Hook
-- [A közös biztonság kihasználása a biztonságos láncközi interoperabilitás érdekében: Lagrange státuszbizottságok és további megoldások](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – 2024. június 12. – Emmanuel Awosika
+- [Az összevont tranzakciók interoperabilitási megoldásainak státusza](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) – 2024. június 20. – Alex Hook
+- [A közös biztonság kihasználása a biztonságos láncközi interoperabilitás érdekében: Lagrange státuszbizottságok és további megoldások](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – 2024. június 12. – Emmanuel Awosika
 
 Ezen kívül [James Prestwich](https://twitter.com/_prestwich) tanulságos előadásai segíthetnek a hidak mélyebb megértésében:
 

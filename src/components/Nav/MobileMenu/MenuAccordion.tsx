@@ -1,8 +1,54 @@
+"use client"
+
+import { useState } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
-import { cn } from "@/lib/utils/cn"
+import { Lang } from "@/lib/types"
 
-import { Accordion, AccordionContent, AccordionItem } from "../../ui/accordion"
+import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import {
+  Accordion as BaseAccordion,
+  AccordionContent,
+  AccordionItem,
+} from "../../ui/accordion"
+
+type AccordionProps = {
+  locale: Lang
+  children: React.ReactNode
+}
+
+const Accordion = ({ locale, children }: AccordionProps) => {
+  const [currentValue, setCurrentValue] = useState<string | undefined>(
+    undefined
+  )
+
+  const handleValueChange = (value: string | undefined) => {
+    const isExpanded = currentValue === value
+
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Section changed",
+      eventName: `${
+        isExpanded ? "Close" : "Open"
+      } section: ${locale} - ${value || currentValue}`,
+    })
+
+    setCurrentValue(value)
+  }
+
+  return (
+    <BaseAccordion
+      type="single"
+      collapsible
+      value={currentValue}
+      onValueChange={handleValueChange}
+    >
+      {children}
+    </BaseAccordion>
+  )
+}
 
 type AccordionTriggerProps = {
   heading?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"

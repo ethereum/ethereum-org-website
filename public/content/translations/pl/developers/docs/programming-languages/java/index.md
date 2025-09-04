@@ -45,7 +45,6 @@ Dowiedz się, jak korzystać z [Web3J](https://github.com/web3j/web3j) i Hyperle
 
 ## Projekty i narzędzia Java {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon) (klient Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Biblioteka do interakcji z klientami Ethereum)](https://github.com/web3j/web3j)
 - [Eventeum (obserwator zdarzeń)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (narzędzia deweloperskie IPFS)](https://github.com/ConsenSys/mahuta)
@@ -56,4 +55,3 @@ Szukasz więcej materiałów? Sprawdź na stronie [ethereum.org/developers.](/de
 
 - [Budowniczowie IO](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Czat Besu HL](https://chat.hyperledger.org/channel/besu)

@@ -17,7 +17,7 @@ Po navadi so standardi predstavljeni kot [predlogi za izboljšanje Ethereuma](/e
 - [Klepetalnica za EIP](https://ethereum-magicians.org/c/eips)
 - [Uvod v Ethereumovo upravljanje](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31. marec 2019 – Boris Mann_
-- [Koordinacija upravljanja razvoja Ethereum protokola in nadgradenj omrežja](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23. marec 2020 - Hudson Jameson_
+- [Koordinacija upravljanja razvoja Ethereum protokola in nadgradenj omrežja](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23. marec 2020 - Hudson Jameson_
 - [Seznam predvajanja vseh srečanj razvijalcev za Ethereum Core](https://www.youtube.com/@EthereumProtocol) _(seznam predvajanja za YouTube)_
 
 ## Vrste standardov {#types-of-standards}

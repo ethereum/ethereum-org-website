@@ -61,7 +61,6 @@ Geliştirme zor olabilir. İşte size yardımcı olmaktan mutluluk duyan deneyim
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs Discord'u](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

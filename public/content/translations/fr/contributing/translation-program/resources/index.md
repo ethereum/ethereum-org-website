@@ -17,7 +17,6 @@ Vous pouvez trouver ci-dessous des guides et des outils utiles pour les traducte
 
 ## Outils {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– utile pour trouver et vérifier les traductions des termes techniques_
 - [Linguee](https://www.linguee.com/) _– moteur de recherche de traductions et dictionnaire qui permet la recherche par mot ou phrase_
 - [Recherche de terme Proz](https://www.proz.com/search/) _– base de données de dictionnaires de traduction et de glossaires pour des termes spécialisés_
 - [Eurotermbank](https://www.eurotermbank.com/) _– collections de terminologie européenne en 42 langues_

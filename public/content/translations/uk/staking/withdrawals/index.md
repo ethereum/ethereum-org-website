@@ -211,7 +211,6 @@ eventName="read more">
 
 - [Виведення на стартовій платформі стейкінгу](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Протокол ланцюжка Beacon здійснює виведення як операції](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders — Шанхай](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Виведення ETH під час стейкінгу (тестування) із Potuz і Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: зняття коштів за допомогою маякового ланцюжка як операції з Алексом Стоуксом](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Розуміння ефективного балансу валідатора](https://www.attestant.io/posts/understanding-validator-effective-balance/)

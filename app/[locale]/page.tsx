@@ -157,6 +157,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
+
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)

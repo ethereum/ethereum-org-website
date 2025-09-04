@@ -63,7 +63,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 **Tenderly -** **_Blok zincir geliştiricilerinin akıllı sözleşmeler oluşturmasını, test etmesini, hata ayıklamasını, izlemesini ve çalıştırmasını ve dapp UX'i geliştirmesini sağlayan Web3 geliştirme platformu._**
 
 - [Web sitesi](https://tenderly.co/)
-- [Dokümanlar](https://docs.tenderly.co/ethereum-development-practices)
+- [Dokümanlar](https://docs.tenderly.co/)
 
 **The Graph -** **_Blokzincir verilerini verimli şekilde sorgulamaya yarayan The Graph_**
 

@@ -215,7 +215,7 @@ contract NoLongerAVictim {
 
 延伸阅读:
 
-- [共识智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要弱点的可读解释，有很多样本代码。
+- [共识智能合约已知攻击](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) - 对最重要弱点的可读解释，有很多样本代码。
 - [SWC 注册](https://swcregistry.io/docs/SWC-128) - 适用于以太坊和智能合约的 CWE 的管理列表
 
 ## 安全工具 {#security-tools}

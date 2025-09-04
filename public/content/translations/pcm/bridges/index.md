@@ -99,7 +99,7 @@ Plenti solushons wey dey bridge dey adopt model bitwin dis two oposite ends wit 
 
 To dey yus bridges dey allow yu muv yor assets akross difren blockchains. Here na some risorsis wey fit helep yu find and yus bridges:
 
-- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/risk)**: One ogbonge summary of difren bridges, wey inklude ditails on market shia, bridge type, and destinashon chains. L2BEAT also get one risk analysis for bridges, as im dey helep users make koret disishons wen dem dey selet one bridge.
+- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/summary)**: One ogbonge summary of difren bridges, wey inklude ditails on market shia, bridge type, and destinashon chains. L2BEAT also get one risk analysis for bridges, as im dey helep users make koret disishons wen dem dey selet one bridge.
 - **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: One summary of bridge volumes akross Ethereum netwoks.
 
 <Divider />
