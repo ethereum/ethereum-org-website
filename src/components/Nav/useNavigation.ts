@@ -39,7 +39,7 @@ export const useNavigation = () => {
     "build/home": CodeSquareIcon,
     "build/get-started": FlagIcon,
     "build/docs": JournalCodeIcon,
-    "build/enterprise": BuildingsIcon,
+    "build/business": BuildingsIcon,
     "participate/community-hub": UsersFourLight,
     "participate/events": MegaphoneIcon,
     "participate/ethereum-org": EthereumIcon,

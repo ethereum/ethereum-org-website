@@ -1,5 +1,4 @@
 import { Fragment } from "react"
-import { Check } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
@@ -10,6 +9,7 @@ import BigNumber from "@/components/BigNumber"
 import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
+import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -99,13 +99,7 @@ const WhyGrid = () => {
     >
       {items.map(({ heading, description }) => (
         <div className="flex gap-1.5" key={heading}>
-          <div className="my-1 grid h-fit place-items-center rounded-full bg-success/20 p-1">
-            <Check
-              className="size-3 stroke-[4] text-success"
-              strokeLinecap="square"
-              strokeLinejoin="miter"
-            />
-          </div>
+          <CheckCircle />
           <div className="space-y-1">
             <h3 className="text-lg">{heading}</h3>
             <p className="text-body-medium">{description}</p>

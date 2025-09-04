@@ -332,10 +332,21 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           ],
         },
         {
-          id: "build/enterprise",
-          label: t("enterprise"),
-          description: t("nav-mainnet-description"),
-          href: "/enterprise/",
+          id: "build/business",
+          label: t("business"),
+          description: t("nav-business-description"),
+          items: [
+            {
+              label: t("enterprise"),
+              description: t("nav-enterprise-description"),
+              href: "/enterprise/",
+            },
+            {
+              label: t("founders"),
+              description: t("nav-founders-description"),
+              href: "/founders/",
+            },
+          ],
         },
       ],
     },
