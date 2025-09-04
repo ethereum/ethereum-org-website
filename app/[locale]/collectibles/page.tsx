@@ -58,76 +58,172 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/collectibles/")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
+  // JSON-LD structured data for the collectibles page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/collectibles/`,
+    name: t("page-collectibles-hero-header"),
+    description: t("page-collectibles-hero-description"),
+    url: `https://ethereum.org/${locale}/collectibles/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: t("page-collectibles-hero-header"),
+          item: `https://ethereum.org/${locale}/collectibles/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+  }
+
+  const collectiblesCollectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: t("page-collectibles-hero-header"),
+    description: t("page-collectibles-hero-description"),
+    url: `https://ethereum.org/${locale}/collectibles/`,
+    numberOfItems: stats.collectiblesCount || badges.length,
+    itemListElement: badges.slice(0, 10).map((badge, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: badge.name || `Badge ${index + 1}`,
+      description: badge.description || "Ethereum community badge",
+      url: badge.link || `${COLLECTIBLES_BASE_URL}/badge/${badge.id}`,
+      image: badge.image,
+    })),
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+    },
+    additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "Total Collectors",
+        value: stats.uniqueAddressesCount || 0,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Total Minted",
+        value: stats.collectorsCount || 0,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Unique Badges",
+        value: stats.collectiblesCount || badges.length,
+      },
+    ],
+  }
+
   return (
-    <I18nProvider locale={locale} messages={pickedMessages}>
-      <MainArticle className="space-y-12 pb-24 md:space-y-20">
-        <HubHero
-          heroImg={communityHeroImg}
-          title={t("page-collectibles-hero-title")}
-          header={t("page-collectibles-hero-header")}
-          description={t("page-collectibles-hero-description")}
-        />
-        <Section
-          id="stats"
-          className="flex flex-col gap-x-6 gap-y-4 px-4 xl:flex-row xl:px-12"
-        >
-          <div className="flex-[2] space-y-4 rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
-            <h2 className="text-3xl md:text-4xl">
-              {t("page-collectibles-improve-title")}
-            </h2>
-            <p>
-              {t.rich("page-collectibles-improve-desc-1", {
-                strong: (chunks) => <span className="font-bold">{chunks}</span>,
-              })}
-            </p>
-            <p>
-              {t.rich("page-collectibles-improve-desc-2", {
-                strong: (chunks) => <span className="font-bold">{chunks}</span>,
-                a: (chunks) => (
-                  <Link href="https://x.com/Xeift1/status/1896200245949968828">
-                    {chunks}
-                  </Link>
-                ),
-              })}
-            </p>
-          </div>
+    <>
+      <script
+        id="jsonld-webpage-collectibles"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
+      <script
+        id="jsonld-collectibles-collection"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectiblesCollectionJsonLd),
+        }}
+      />
+      <I18nProvider locale={locale} messages={pickedMessages}>
+        <MainArticle className="space-y-12 pb-24 md:space-y-20">
+          <HubHero
+            heroImg={communityHeroImg}
+            title={t("page-collectibles-hero-title")}
+            header={t("page-collectibles-hero-header")}
+            description={t("page-collectibles-hero-description")}
+          />
+          <Section
+            id="stats"
+            className="flex flex-col gap-x-6 gap-y-4 px-4 xl:flex-row xl:px-12"
+          >
+            <div className="flex-[2] space-y-4 rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
+              <h2 className="text-3xl md:text-4xl">
+                {t("page-collectibles-improve-title")}
+              </h2>
+              <p>
+                {t.rich("page-collectibles-improve-desc-1", {
+                  strong: (chunks) => (
+                    <span className="font-bold">{chunks}</span>
+                  ),
+                })}
+              </p>
+              <p>
+                {t.rich("page-collectibles-improve-desc-2", {
+                  strong: (chunks) => (
+                    <span className="font-bold">{chunks}</span>
+                  ),
+                  a: (chunks) => (
+                    <Link href="https://x.com/Xeift1/status/1896200245949968828">
+                      {chunks}
+                    </Link>
+                  ),
+                })}
+              </p>
+            </div>
 
-          <div className="grid min-w-fit grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
-            {/* Minted */}
-            <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
-              <div className="text-4xl font-bold md:text-6xl">
-                {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
+            <div className="grid min-w-fit grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
+              {/* Minted */}
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
+                <div className="text-4xl font-bold md:text-6xl">
+                  {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
+                </div>
+                <div className="text-center font-bold">
+                  {t("page-collectibles-stats-minted")}
+                </div>
               </div>
-              <div className="text-center font-bold">
-                {t("page-collectibles-stats-minted")}
+              {/* Collectors */}
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
+                <div className="text-4xl font-bold md:text-6xl">
+                  {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
+                </div>
+                <div className="text-center font-bold">
+                  {t("page-collectibles-stats-collectors")}
+                </div>
+              </div>
+              {/* Unique Badges */}
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
+                <div className="text-4xl font-bold md:text-6xl">
+                  {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
+                </div>
+                <div className="text-center font-bold">
+                  {t("page-collectibles-stats-unique-badges")}
+                </div>
               </div>
             </div>
-            {/* Collectors */}
-            <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
-              <div className="text-4xl font-bold md:text-6xl">
-                {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
-              </div>
-              <div className="text-center font-bold">
-                {t("page-collectibles-stats-collectors")}
-              </div>
-            </div>
-            {/* Unique Badges */}
-            <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
-              <div className="text-4xl font-bold md:text-6xl">
-                {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
-              </div>
-              <div className="text-center font-bold">
-                {t("page-collectibles-stats-unique-badges")}
-              </div>
-            </div>
-          </div>
-        </Section>
+          </Section>
 
-        <Section id="main" className="px-4 xl:px-12">
-          <CollectiblesPage badges={badges} />
-        </Section>
-      </MainArticle>
-    </I18nProvider>
+          <Section id="main" className="px-4 xl:px-12">
+            <CollectiblesPage badges={badges} />
+          </Section>
+        </MainArticle>
+      </I18nProvider>
+    </>
   )
 }
 
