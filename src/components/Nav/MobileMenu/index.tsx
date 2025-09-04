@@ -1,6 +1,6 @@
 import { Languages, Menu } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
-import { Trigger as TabsTrigger } from "@radix-ui/react-tabs"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import type { Lang } from "@/lib/types"
 
@@ -19,7 +19,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { SheetCloseOnNavigate } from "@/components/ui/sheet-close-on-navigate"
-import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -68,28 +67,28 @@ export default async function MobileMenu({
           <MenuHeader />
         </SheetHeader>
 
-        <Tabs
+        <TabsPrimitive.Root
           dir={dir}
           defaultValue="navigation"
           className="flex min-h-0 flex-1 flex-col"
         >
-          <TabsContent
+          <TabsPrimitive.Content
             value="navigation"
             className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
           >
             <NavigationContent className="flex-1 overflow-y-auto" />
-          </TabsContent>
-          <TabsContent
+          </TabsPrimitive.Content>
+          <TabsPrimitive.Content
             value="languages"
             className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
           >
             <LanguageContent className="flex min-h-0 flex-1 flex-col" />
-          </TabsContent>
+          </TabsPrimitive.Content>
 
           <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
-            <TabsList className="grid h-auto w-full grid-cols-3">
+            <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
               <div className="flex flex-col items-center gap-1 py-2">
-                <TabsTrigger value="languages" asChild>
+                <TabsPrimitive.Trigger value="languages" asChild>
                   <FooterButton
                     icon={Languages}
                     name={MOBILE_LANGUAGE_BUTTON_NAME}
@@ -97,24 +96,24 @@ export default async function MobileMenu({
                   >
                     <FooterItemText>{t("languages")}</FooterItemText>
                   </FooterButton>
-                </TabsTrigger>
+                </TabsPrimitive.Trigger>
               </div>
               <div className="flex flex-col items-center gap-1 py-2">
                 <ThemeToggleFooterButton />
               </div>
               <div className="flex flex-col items-center gap-1 py-2">
-                <TabsTrigger value="navigation" asChild>
+                <TabsPrimitive.Trigger value="navigation" asChild>
                   <FooterButton
                     icon={Menu}
                     data-testid="mobile-menu-navigation-picker"
                   >
                     <FooterItemText>{t("menu")}</FooterItemText>
                   </FooterButton>
-                </TabsTrigger>
+                </TabsPrimitive.Trigger>
               </div>
-            </TabsList>
+            </TabsPrimitive.List>
           </SheetFooter>
-        </Tabs>
+        </TabsPrimitive.Root>
       </SheetContent>
     </SheetCloseOnNavigate>
   )
