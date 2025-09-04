@@ -33,13 +33,61 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       commitHistoryCache
     )
 
+  const t = await getTranslations({ locale, namespace: "page-bug-bounty" })
+
+  // JSON-LD structured data for the bug bounty page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/bug-bounty/`,
+    name: t("page-upgrades-bug-bounty-meta-title"),
+    description: t("page-upgrades-bug-bounty-meta-description"),
+    url: `https://ethereum.org/${locale}/bug-bounty/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: t("page-upgrades-bug-bounty-meta-title"),
+          item: `https://ethereum.org/${locale}/bug-bounty/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+  }
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <BugBountiesPage
-        contributors={contributors}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+    <>
+      <script
+        id="jsonld-webpage-bugbounty"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
       />
-    </I18nProvider>
+      <I18nProvider locale={locale} messages={messages}>
+        <BugBountiesPage
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
+      </I18nProvider>
+    </>
   )
 }
 
