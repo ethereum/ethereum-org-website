@@ -21,7 +21,7 @@ Is é an chéad chéim chun do nód a shníomh ná do chur chuige a roghnú. Bun
 
 Tabharfaidh an leathanach seo treoir duit trí na cinntí seo agus cabhróidh sé leat teacht ar an mbealach is oiriúnaí chun d'ásc Ethereum a rith.
 
-Chun rogha a dhéanamh ó fheidhmiúcháin cliant, féach ar na [cliaint reatha](/developers/docs/nodes-and-clients/#execution-clients) atá ar fáil, [cliaint chomhdhearcaidh](/developers/docs/nodes-and-clients/#consensus-clients) agus foghlaim faoi [éagsúlacht cliant](/developers/docs/nodes-and-clients/client-diversity).
+Chun rogha a dhéanamh ó fheidhmiúcháin cliant, féach ar na [cliaint reatha](/developers/docs/nodes-and-clients/#execution-clients) atá ar fáil, <[cliaint chomhdhearcaidh](/developers/docs/nodes-and-clients/#consensus-clients) agus foghlaim faoi [éagsúlacht cliant](/developers/docs/nodes-and-clients/client-diversity).
 
 Déan cinneadh cé acu ar cheart duit na bogearraí a rith ar do [crua-earraí nó sa scamall](#local-vs-cloud), le haird ar [riachtanais na gcliant](#requirements).
 
@@ -471,7 +471,7 @@ Mar chuid de do mhonatóireacht, déan cinnte súil a choinneáil ar fheidhmíoc
 - [Anailís ar na riachtanais chrua-earraí le bheith ina nód iomlán bailíochtaithe Ethereum ](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Meán Fómhair 2018_
 - [Rith Nóid Iomlána Ethereum: Treoir do Dhaoine ar Bheagán Spreagadh ](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Samhain 2019_
 - [Rith Nód Hyperledger Besu ar an Ethereum Mainnet: Sochair, Riachtanais, agus Socrú](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Bealtaine 2020_
-- [Cliant Nethermind Ethereum a Imscaradh le Cruach Monatóireachta](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Lúil 2020_
+- [Cliant Nethermind Ethereum a Imscaradh le Cruach Monatóireachta](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) <em x-id =="4">– Nethermind.eth, 8 Lúil 2020</em>
 
 ## Ábhair ghaolmhara {#related-topics}
 
