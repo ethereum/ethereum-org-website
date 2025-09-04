@@ -927,3 +927,5 @@ For review, here are some of the most important ideas in this contract (in my op
 
 Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is
 made more secure, go and write your own secure contracts and applications.
+
+[See here for more of my work](https://cryptodocguy.pro/).

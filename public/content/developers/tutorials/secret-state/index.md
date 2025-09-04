@@ -723,6 +723,8 @@ So, now you know how to write a game with a server that stores secret state that
 
 - _Some centralization acceptable_: Zero-knowledge proofs can verify integrity, that an entity is not faking the results. What they can't do is ensure that the entity will still be available and answer messages. In situations where availability also needs to be decentralized, zero-knowledge proofs are not a sufficient solution, and you need [multi-party computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
 
+[See here for more of my work](https://cryptodocguy.pro/).
+
 ### Acknowledgements {#acknowledgements}
 
 - Alvaro Alonso read a draft of this article and cleared up some of my misunderstandings about Zokrates.
