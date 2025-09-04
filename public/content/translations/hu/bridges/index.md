@@ -99,7 +99,7 @@ Számos hidat biztosító megoldás e két modell közötti módszert alakít ki
 
 A hidak segítségével a felhasználók különböző blokkláncok között tudnak eszközöket mozgatni. Íme néhány forrás, amelyek hasznosak lehetnek a hidak megtalálásához és használatához:
 
-- **[L2BEAT hidakról szóló összefoglaló](https://l2beat.com/bridges/summary) & [L2BEAT hidak kockázati elemzése](https://l2beat.com/bridges/risk)**: Egy átfogó tanulmány a különféle hidakról, beleértve azok piaci részesedését, típusát és azokat a blokkláncokat, melyekkel összeköttetést biztosítanak. Az L2BEAT kockázati elemzést is készített a hidakról, hogy a felhasználók megfelelően tudjanak választani azok közül.
+- **[L2BEAT hidakról szóló összefoglaló](https://l2beat.com/bridges/summary) & [L2BEAT hidak kockázati elemzése](https://l2beat.com/bridges/summary)**: Egy átfogó tanulmány a különféle hidakról, beleértve azok piaci részesedését, típusát és azokat a blokkláncokat, melyekkel összeköttetést biztosítanak. Az L2BEAT kockázati elemzést is készített a hidakról, hogy a felhasználók megfelelően tudjanak választani azok közül.
 - **[DefiLlama hidakról szóló összefoglaló](https://defillama.com/bridges/Ethereum)**: Az Ethereum hálózatok közötti hidak forgalmi adatainak összefoglalója.
 
 <Divider />
@@ -134,6 +134,6 @@ A hidak elengedhetetlenek az Ethereum L2 használatához, illetve ha a felhaszn�
 - [EIP-5164: Láncok közötti műveletek végrehajtása](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) – _2022. június 18. – Brendan Asselstine_
 - [L2 hidak kockázati keretrendszere](https://gov.l2beat.com/t/l2bridge-risk-framework/31) – _2022. július 5. – Bartek Kiepuszewski_
 - [Miért inkább többláncú a jövő, mintsem láncok közötti](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) – _2022. január 8. – Vitalik Buterin_
-- [A közös biztonság kihasználása a biztonságos láncközi interoperabilitás érdekében: Lagrange státuszbizottságok és további megoldások](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – _2024. június 12. – Emmanuel Awosika_
-- [Az összevont tranzakciók interoperabilitási megoldásainak státusza](https://research.2077.xyz/the-state-of-rollup-interoperability) – _2024. június 20. – Alex Hook_
+- [A közös biztonság kihasználása a biztonságos láncközi interoperabilitás érdekében: Lagrange státuszbizottságok és további megoldások](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – _2024. június 12. – Emmanuel Awosika_
+- [Az összevont tranzakciók interoperabilitási megoldásainak státusza](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) – _2024. június 20. – Alex Hook_
 

@@ -41,7 +41,6 @@ Desevolver um dapp pode ser difícil. Aqui estão alguns espaços voltados ao de
 - [Universidade Alchemy](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Stackexchange do Ethereum](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Universidade Web3](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

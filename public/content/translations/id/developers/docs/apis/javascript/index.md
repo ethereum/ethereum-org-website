@@ -257,11 +257,6 @@ ethers.utils.formatEther(balance)
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** **_Alternatif Typescript untuk Web3.js._**
-
-- [Dokumentasi](https://0x.org/docs/web3-wrapper#introduction)
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
-
 **Alchemyweb3 -** **_Wrapper Web3.js dengan percobaan ulang otomatis dan api yang ditingkatkan._**
 
 - [Dokumentasi](https://docs.alchemy.com/reference/api-overview)

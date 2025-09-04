@@ -200,7 +200,6 @@ Ak chcete odomknúť a získať späť celý zostatok, musíte tiež dokončiť 
 - [Pomáhame rozmanitosti klientov](https://www.attestant.io/posts/helping-client-diversity/) – _Jim McDonald 2022_
 - [Klientska diverzita na konsenzuálnej vrstve Etherea](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022_
 - [Ako na to: nakupovať hardvér validátora Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
-- [Krok za krokom: ako sa pripojiť k testovacej sieti Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _Butta_
 - [Tipy na prevenciu trestu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

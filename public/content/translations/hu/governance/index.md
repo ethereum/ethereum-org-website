@@ -180,5 +180,5 @@ Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség kül�
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
 - [Irányítás, 2. rész: A plutokrácia még mindig rossz](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Túl az érmealapú szavazásra épülő irányításon](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
-- [A blokklánc irányítás megértése](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [A blokklánc irányítás megértése](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [Az Ethereum irányítása](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

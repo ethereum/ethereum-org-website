@@ -212,7 +212,6 @@ No. Wons one validator don komot and don witdraw en full balans, any funds wey d
 
 - [To Dey Stake Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operashons](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) wit Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push witdrawals as operashons wit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [To dey ondastand Validator Effective Balans](https://www.attestant.io/posts/understanding-validator-effective-balance/)

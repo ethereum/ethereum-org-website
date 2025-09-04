@@ -28,10 +28,8 @@ import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import LearnWeb3Image from "@/public/images/dev-tools/learnweb3.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
-import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
-import PlatziImage from "@/public/images/dev-tools/platzi.png"
 import QuestbookImage from "@/public/images/dev-tools/questbook.png"
 import RemixImage from "@/public/images/dev-tools/remix.png"
 import ReplitImage from "@/public/images/dev-tools/replit.png"
@@ -316,33 +314,6 @@ const LearningToolsPage = ({ locale }) => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "NFT School",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-nftschool-description"
-      ),
-      url: "https://nftschool.dev/",
-      image: NFTSchoolImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
-      ),
-      background: "#111f29",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "Platzi",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-platzi-description"
-      ),
-      url: "https://platzi.com/escuela/escuela-blockchain/",
-      image: PlatziImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-platzi-logo-alt"
-      ),
-      background: "#121f3d",
-      subjects: ["Solidity", "web3"],
-      locales: ["es"],
     },
     {
       name: "Speed Run Ethereum",

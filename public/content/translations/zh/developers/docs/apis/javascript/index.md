@@ -259,11 +259,6 @@ ethers.utils.formatEther(balance)
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** **_可替代 Web3.js 的 Typescript。_**
-
-- [相关文档](https://0x.org/docs/web3-wrapper#introduction)
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
-
 **Alchemyweb3 -** **_Web3.js 的包装器，带自动重试和增强的应用程序接口。_**
 
 - [相关文档](https://docs.alchemy.com/reference/api-overview)

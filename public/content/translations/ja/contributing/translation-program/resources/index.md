@@ -17,7 +17,6 @@ ethereum.org翻訳者向けの有用なガイド、ツール、翻訳コミュ�
 
 ## ツール {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– 技術用語の標準的な訳語を検索・確認するのに便利なポータル_
 - [Linguee](https://www.linguee.com/) _– 単語やフレーズでの検索が可能な翻訳・辞書検索エンジン_
 - [Proz term search](https://www.proz.com/search/) _– 専門用語の翻訳辞書・用語集のデータベース_
 - [Eurotermbank](https://www.eurotermbank.com/) _– 42言語の欧州用語集_

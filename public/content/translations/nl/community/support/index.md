@@ -40,7 +40,6 @@ Bouwen kan moeilijk zijn. Hier zijn enkele ontwikkelingsgerichte ruimtes met erv
 
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 
 U kunt ook documentatie en ontwikkelgidsen vinden in onze sectie met [bronnen voor Ethereum-ontwikkelaars](/developers/).
