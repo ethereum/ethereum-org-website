@@ -437,7 +437,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                               {tags.map((tag) => (
                                 <Tag
                                   key={tag}
-                                  className={supportTags[tag].className}
+                                  className={cn(
+                                    "!min-h-0 !py-1",
+                                    supportTags[tag].className
+                                  )}
                                 >
                                   {supportTags[tag].label}
                                 </Tag>
