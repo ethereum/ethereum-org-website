@@ -212,7 +212,6 @@ Nie. Po wyjściu walidatora i wypłaceniu jego pełnego salda wszelkie dodatkowe
 
 - [Wypłaty Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Wypłaty z łańcucha śledzącego jako operacje](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders — Szanghaj](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Wypłata zestakowanego ETH (testowanie) z Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Wypłaty push łańcucha śledzącego jako operacje z Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Zrozumienie efektywnego bilansu walidatora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

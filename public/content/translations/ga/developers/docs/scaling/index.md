@@ -109,7 +109,7 @@ _Tabhair faoi deara go n-úsáideann an míniú san fhíseán an téarma "Ciseal
 - [Inscálaitheacht Bhlocshlabhra Dhífhianaise](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Cén fáth gurb é rollups + scearda sonraí an t-aon réiteach inbhuanaithe le haghaidh inscálaitheacht ard](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Cén cineál Sraith 3 a bhfuil ciall leis?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Infhaighteacht Sonraí Nó: Mar a fhoghlaim Rolluithe Suas Conas Gan a Bheith Buartha agus Grá a Thabhairt do Ethereum](https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
-- [An Treoir Phraiticiúil maidir le hUas-Scáluithe Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Infhaighteacht Sonraí Nó: Mar a fhoghlaim Rolluithe Suas Conas Gan a Bheith Buartha agus Grá a Thabhairt do Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
+- [An Treoir Phraiticiúil maidir le hUas-Scáluithe Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
 _Ar eolas agat ar acmhainn pobail a chabhraigh leat? Cuir an leathanach seo in eagar agus cuir leis!_

@@ -8,7 +8,7 @@ lang: tr
    Ethash, Ethereum'un iş ispatı madencilik algoritmasıydı. İş ispatı tamamen durdurulmuş ve Ethereum, [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ile güvence altına alınmıştır. [Birleşim](/roadmap/merge/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos/)ve [hisseleme](/staking/) hakkında daha fazla bilgi edinin. Bu sayfa sadece tarihsel ilgi içindir!  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash), [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash iş ispatı[bellek zor](https://wikipedia.org/wiki/Memory-hard_function) bir işlemdir, bunun algoritmayı ASIC dirençli hale getirdiği düşünülür. Sonunda Ethash ASICleri geliştirildi fakat GPU madenciliği iş ispatı durdurulana kadar hâlâ geçerli bir seçenekti. Ethash, Ethereum olmayan iş ispatı ağlarında hâlâ diğer paraların madenciliğini yapmak için kullanılmaktadır.
+Ethash, [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash iş ispatı[bellek zor](https://wikipedia.org/wiki/Memory-hard_function) bir işlemdir, bunun algoritmayı ASIC dirençli hale getirdiği düşünülür. Sonunda Ethash ASICleri geliştirildi fakat GPU madenciliği iş ispatı durdurulana kadar hâlâ geçerli bir seçenekti. Ethash, Ethereum olmayan iş ispatı ağlarında hâlâ diğer paraların madenciliğini yapmak için kullanılmaktadır.
 
 ## Ethash nasıl çalışır? {#how-does-ethash-work}
 

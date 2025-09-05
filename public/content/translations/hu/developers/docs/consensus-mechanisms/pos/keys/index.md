@@ -96,5 +96,5 @@ Az egyes ágakat `/` választja el egymástól, így `m/2` azt jelenti, hogy a m
 
 - [Ethereum Alapítvány blogbejegyzés Carl Beekhuizentől](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 kulcsgenerálás](https://eips.ethereum.org/EIPS/eip-2333)
-- [EIP-7002: A végrehajtási réteg által indított kilépések](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [EIP-7002: A végrehajtási réteg által indított kilépések](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Kulcskezelés méretarányosan](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

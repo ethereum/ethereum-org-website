@@ -77,7 +77,6 @@ lang: zh
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [开源 Web3 设计](https://www.web3designers.org/)
 
 ## 设计体系 {#design-systems}
 

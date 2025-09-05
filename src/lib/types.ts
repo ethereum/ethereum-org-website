@@ -294,6 +294,8 @@ export type LocaleDisplayInfo = {
   englishName: string
   approvalProgress: number
   wordsApproved: number
+  progress: string
+  words: string
   isBrowserDefault?: boolean
 }
 

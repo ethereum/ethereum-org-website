@@ -17,7 +17,6 @@ Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org
 
 ## Tools {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _ – nützlich um Standardübersetzungen für technische Begriffe zu finden und zu überprüfen_
 - [Linguee](https://www.linguee.com/) _ – Suchmaschine für Übersetzungen und ein Wörterbuch, in dem Sie nach Wörtern und auch nach Phrasen suchen können_
 - [Proz-Begriffssuche](https://www.proz.com/search/) _ – Datenbank für Übersetzungen, Wörterbücher und Glossare für Fachbegriffe_
 - [Eurotermbank](https://www.eurotermbank.com/) _ – Sammlungen von Terminologie zu europäischen Themen in 42 Sprachen_

@@ -63,7 +63,6 @@ sidebarDepth: 1
 ### 개인정보 보호 {#privacy}
 
 - [Ernst & Young의 'Nightfall'](https://github.com/EYBlockchain/nightfall) *[여기](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)*에서 자세한 정보 확인
-- [Pegasys의 Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) *[여기](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*에서 자세한 정보 확인
 - [Quorum의 Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) *[여기](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*에서 자세한 정보 확인
 
 ### 보안 {#security}
@@ -82,7 +81,6 @@ sidebarDepth: 1
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat(Besu 채널)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat(Burrow 채널)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack 채널](http://bit.ly/quorum-slack)

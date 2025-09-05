@@ -131,8 +131,8 @@ Sometimes it is useful to have an administrator that can undo mistakes. To reduc
 
 OpenZeppelin provides two mechanisms to enable administrative access:
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) contracts have a single owner. Functions that have the `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) can only be called by that owner. Owners can transfer ownership to somebody else or renounce it completely. The rights of all other accounts are typically identical.
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) contracts have a single owner. Functions that have the `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) can only be called by that owner. Owners can transfer ownership to somebody else or renounce it completely. The rights of all other accounts are typically identical.
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 For the sake of simplicity, in this article we use `Ownable`.
 
@@ -210,3 +210,5 @@ This is a cleanup function, so presumably we don't want to leave any tokens. Ins
 ## Conclusion {#conclusion}
 
 This is not a perfect solution - there is no perfect solution for the "user made a mistake" problem. However, using these kinds of checks can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.
+
+[See here for more of my work](https://cryptodocguy.pro/).

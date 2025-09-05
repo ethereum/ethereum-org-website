@@ -223,7 +223,7 @@ Vous trouverez plus d'informations sur [la conception de systèmes de gouvernanc
 
 Les développeurs de logiciels traditionnels sont familiers avec le principe KISS (« keep it simple, stupid ») qui recommande de ne pas introduire de complexité inutile dans la conception de logiciels. Cela fait suite à la pensée de longue date selon laquelle « les systèmes complexes échouent de manière complexe » et sont plus susceptibles d’être confrontés à des erreurs coûteuses.
 
-Garder les choses simples est particulièrement important lors de la rédaction de contrats intelligents, étant donné que les contrats intelligents contrôlent potentiellement de grandes quantités de valeur. Une astuce pour atteindre la simplicité lors de l'écriture de contrats intelligents est de réutiliser des bibliothèques existantes, telles que les [contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), lorsque cela est possible. Parce que ces bibliothèques ont été largement vérifiées et testées par les développeurs, leur utilisation réduit les chances d'introduire des bogues en écrivant de nouvelles fonctionnalités à partir de zéro.
+Garder les choses simples est particulièrement important lors de la rédaction de contrats intelligents, étant donné que les contrats intelligents contrôlent potentiellement de grandes quantités de valeur. Une astuce pour atteindre la simplicité lors de l'écriture de contrats intelligents est de réutiliser des bibliothèques existantes, telles que les [contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), lorsque cela est possible. Parce que ces bibliothèques ont été largement vérifiées et testées par les développeurs, leur utilisation réduit les chances d'introduire des bogues en écrivant de nouvelles fonctionnalités à partir de zéro.
 
 Un autre conseil commun est d'écrire de petites fonctions et de garder les contrats modulaires en divisant la logique commerciale entre plusieurs contrats. Non seulement l'écriture de code plus simple réduit la surface d'attaque dans un contrat intelligent, mais il est également plus facile de raisonner sur la justesse du système global et de détecter les éventuelles erreurs de conception plus tôt.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Vous pouvez également utiliser un système de [« pull payments »](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) qui demande aux utilisateurs de retirer des fonds des contrats intelligents, au lieu d'un système de paiement « push payments » qui envoie des fonds à des comptes. Cela élimine la possibilité de déclencher par inadvertance du code à des adresses inconnues (et peut également prévenir certaines attaques par déni de service).
+Vous pouvez également utiliser un système de [« pull payments »](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) qui demande aux utilisateurs de retirer des fonds des contrats intelligents, au lieu d'un système de paiement « push payments » qui envoie des fonds à des comptes. Cela élimine la possibilité de déclencher par inadvertance du code à des adresses inconnues (et peut également prévenir certaines attaques par déni de service).
 
 #### Soupassements et dépassements d'entier {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Si vous comptez interroger un oracle sur la chaîne sur le prix des actifs, pens
 
 ### Outils de surveillance des contrats intelligents {#smart-contract-monitoring-tools}
 
-- **[Sentinelles de défenseur OpenZeppelin](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Un outil pour surveiller et répondre automatiquement aux événements, fonctions et paramètres de transaction sur vos contrats intelligents._
-
 - **[Alerte en temps réel Tenderly](https://tenderly.co/alerting/)** - _Un outil pour recevoir des notifications en temps réel lorsque des événements inhabituels ou inattendus se produisent sur vos contrats intelligents ou portefeuilles._
 
 ### Outils pour une administration sécurisée des contrats intelligents {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface pour gérer l'administration des contrats intelligents, y compris les contrôles d'accès, les mises à jour et la pause._
-
 - **[Safe](https://safe.global/)** - _Portefeuille à contrat intelligent fonctionnant sur Ethereum qui exige qu'un nombre minimum de personnes approuvent une transaction avant qu'elle ne puisse avoir lieu (M-of-N)._
 
-- **[Contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** - _Bibliothèques de contrats pour l'implémentation de fonctions administratives, y compris la propriété contractuelle, les mises à niveau, les contrôles d'accès, la gouvernance, les possibilités de pause, et plus encore._
+- **[Contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** - _Bibliothèques de contrats pour l'implémentation de fonctions administratives, y compris la propriété contractuelle, les mises à niveau, les contrôles d'accès, la gouvernance, les possibilités de pause, et plus encore._
 
 ### Services d'audit pour contrat intelligent {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ Si vous comptez interroger un oracle sur la chaîne sur le prix des actifs, pens
 
 ### Publications de vulnérabilités connues de contrats intelligents et d'exploitations {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys : Attaques connues sur les contrats intelligents](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Explication conviviale pour le débutant des vulnérabilités contractuelles les plus significatives, avec le code d'échantillon pour la plupart des cas._
+- **[ConsenSys : Attaques connues sur les contrats intelligents](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Explication conviviale pour le débutant des vulnérabilités contractuelles les plus significatives, avec le code d'échantillon pour la plupart des cas._
 
 - **[Registre SWC](https://swcregistry.io/)** - _Liste organisée d'éléments d'énumération des faiblesses communes (« Common Weakness Enumeration », dit CWE) qui s'appliquent aux contrats intelligents Ethereum._
 

@@ -41,7 +41,6 @@ _Це не вичерпний список. Потрібна допомога в
 - [Університет Alchemy](https://university.alchemy.com/#starter_code)
 - [CryptoDevs на платформі Discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Університет Web3](https://www.web3.university/)
 
 Ви також можете знайти документацію та посібники з розробки в нашому розділі [Ресурси для розробників Ethereum](/developers/).

@@ -220,7 +220,7 @@ lang: fa
 
 #### پیشینه مطالعاتی {#background-reading-9}
 
-- [گروه مشوق‌های بزرگ](https://ethereum.github.io/rig/)
+- [گروه مشوق‌های بزرگ](https://rig.ethereum.org/)
 - [کارگاه ETHconomics در Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### جدیدترین تحقیقات {#recent-research-9}
@@ -303,7 +303,7 @@ lang: fa
 
 #### جدیدترین تحقیقات {#recent-research-14}
 
-- [تجزیه و تحلیل داده‌های گروه مشوق‌های بزرگ](https://ethereum.github.io/rig/)
+- [تجزیه و تحلیل داده‌های گروه مشوق‌های بزرگ](https://rig.ethereum.org/)
 
 ## اپلیکیشن‌ها و ابزارسازی {#apps-and-tooling}
 

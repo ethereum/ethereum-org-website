@@ -212,7 +212,6 @@ eventName="read more">
 
 - [質押啟動面板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：將提款作為操作推送至信標鏈。](https://eips.ethereum.org/EIPS/eip-4895)
-- [以太坊牧貓人組織 - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94：與 Potuz 和 Hsiao-Wei Wang 討論質押以太幣提款（測試中）](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68：EIP-4895：信標鏈推動提款操作，由 Alex Stokes 主講](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [了解驗證者有效餘額](https://www.attestant.io/posts/understanding-validator-effective-balance/)
