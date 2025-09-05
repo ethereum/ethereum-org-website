@@ -196,7 +196,7 @@ Tá go leor cliant comhdhearcaidh (cliaint 'Eth2' mar a tugadh orthu roimhe seo)
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Pyrmont, Sepolia agus níos mó          |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Holesky, Seplia agus níos mó                    |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Holesky, Seplia agus níos mó                    |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Téigh      | Linux, Windows, macOS | Beacon Slabhra, Gnosis, Holesky, Pyrmont, Seplia agus níos mó |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Téigh      | Linux, Windows, macOS | Beacon Slabhra, Gnosis, Holesky, Pyrmont, Seplia agus níos mó |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Slabhra, Gnosis, Holesky, Seplia agus níos mó          |
 | [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Seplia agus níos mó                    |
 
@@ -222,7 +222,7 @@ Foghlaim tuilleadh in [doiciméid Nimbus](https://nimbus.guide/)
 
 Is cliant comhdhearcaidh foinse oscailte lán-tréithe é Prysm atá scríofa in Go faoin gceadúnas GPL-3.0. Tá UI roghnach webapp aige agus tugann sé tosaíocht d’eispéireas úsáideora, do dhoiciméadú agus do chumraíocht d’úsáideoirí geall sa bhaile agus d’úsáideoirí institiúideacha.
 
-Tabhair cuairt ar [Prysm docs](https://docs.prylabs.network/docs/getting-started/) chun tuilleadh a fhoghlaim.
+Tabhair cuairt ar [Prysm docs](https://prysm.offchainlabs.com/docs/) chun tuilleadh a fhoghlaim.
 
 ### Teku {#teku}
 

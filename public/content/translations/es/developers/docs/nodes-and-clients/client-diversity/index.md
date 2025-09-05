@@ -77,7 +77,7 @@ Para abordar la diversidad de clientes y escoger un cliente minoritario no solo 
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 Los usuarios técnicos pueden acelerar este proceso con tutoriales y documentación relacionada a clientes minoritarios, invitando a otros operadores de nodos a migrar alejándose de los clientes dominantes. Las guías para migrar a un cliente de consenso minoritario están disponibles en [clientdiversity.org](https://clientdiversity.org/).
 

@@ -196,7 +196,7 @@ EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多�
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Holesky、Pyrmont、Sepolia 等        |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Pyrmont、Sepolia 等 |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Pyrmont、Sepolia 等 |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Sepolia 等         |
 | [Grandine](https://docs.grandine.io/)                         | Rust语言     | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
 
@@ -222,7 +222,7 @@ Nimbus 是一种共识客户端实现，它用 Nim 语言编写，并依照 Apac
 
 Prysm 是一种功能齐全的开源共识客户端，它用 Go 语言编写，并依照 GPL-3.0 获得许可。 它具有可选的 Web 应用程序用户界面，并将单独质押人和机构用户的用户体验、相关文档和可配置性放在首位。
 
-访问 [Prysm 相关文档](https://docs.prylabs.network/docs/getting-started/)以了解更多信息。
+访问 [Prysm 相关文档](https://prysm.offchainlabs.com/docs/)以了解更多信息。
 
 ### Teku {#teku}
 

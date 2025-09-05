@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Εκτέλεση Prysm
 
-Το Prysm διαθέτει σενάριο που επιτρέπει την εύκολη αυτόματη εγκατάσταση. Λεπτομέρειες μπορείτε να βρείτε στο αρχείο του [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
+Το Prysm διαθέτει σενάριο που επιτρέπει την εύκολη αυτόματη εγκατάσταση. Λεπτομέρειες μπορείτε να βρείτε στο αρχείο του [Prysm docs](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \

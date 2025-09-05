@@ -249,7 +249,7 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
 | [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Lanţul Beacon, Goerli, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Goerli, Pyrmont |
+| [Prysm](https://prysm.offchainlabs.com/docs/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

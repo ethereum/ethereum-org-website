@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Ag rith Prysm
 
-Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \

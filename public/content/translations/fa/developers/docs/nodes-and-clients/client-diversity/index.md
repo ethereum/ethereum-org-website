@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 کاربران فنی می‌توانند با نوشتن آموزش‌ها و مستندات بیشتر برای کلاینت‌های اقلیت و تشویق همتایان گره‌گردان خود به مهاجرت کردن دور از کلاینت‌های غالب، به تسریع این فرایند کمک کنند. راهنماهای تغییر به کلاینت اجماع اقلیت در [clientdiversity.org](https://clientdiversity.org/) موجود است.
 

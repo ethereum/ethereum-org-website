@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### 运行 Prysm
 
-Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://docs.prylabs.network/docs/install/install-with-script)中找到。
+Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)中找到。
 
 ```sh
 ./prysm.sh beacon-chain \

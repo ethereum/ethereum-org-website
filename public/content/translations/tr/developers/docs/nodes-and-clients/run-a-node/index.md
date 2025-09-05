@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Prysm'i Çalıştırmak
 
-Prysm kolay otomatik kurulum sağlayan bir betikle gelir. Detaylar [Prysm dokümanlarında](https://docs.prylabs.network/docs/install/install-with-script) bulunabilir.
+Prysm kolay otomatik kurulum sağlayan bir betikle gelir. Detaylar [Prysm dokümanlarında](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) bulunabilir.
 
 ```sh
 ./prysm.sh beacon-chain \

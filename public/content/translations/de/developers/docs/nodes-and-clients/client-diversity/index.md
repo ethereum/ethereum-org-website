@@ -77,7 +77,7 @@ Um die Client-Vielfalt zu verbessern, müssen nicht nur einzelne Nutzer Minderhe
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 Technisch versierte Nutzer können dazu beitragen, diesen Prozess zu beschleunigen, indem sie mehr Anleitungen und Dokumentationen für Minderheitenclients schreiben und ihre Kollegen, die Knoten betreiben, ermutigen, von den dominanten Clients wegzugehen. Anleitungen für den Wechsel zu einem Minderheitskonsensclient finden Sie auf [clientdiversity.org](https://clientdiversity.org/).
 

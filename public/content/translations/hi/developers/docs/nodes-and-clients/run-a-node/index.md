@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### प्रिज़्म चलाना
 
-Prysm स्क्रिप्ट के साथ आता है जो आसान स्वचालित स्थापना की अनुमति देता है। विवरण [प्रिज़्म डॉक्स](https://docs.prylabs.network/docs/install/install-with-script) में पाए जा सकते हैं।
+Prysm स्क्रिप्ट के साथ आता है जो आसान स्वचालित स्थापना की अनुमति देता है। विवरण [प्रिज़्म डॉक्स](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) में पाए जा सकते हैं।
 
 ```sh
 ./prysm.sh beacon-chain \

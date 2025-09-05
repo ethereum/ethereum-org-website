@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### اجرای Prysm
 
-Prysm همراه با اسکریپت است که امکان نصب خودکار آسان را فراهم می کند. جزئیات را می توان در [اسناد Prysm](https://docs.prylabs.network/docs/install/install-with-script) پیدا کرد.
+Prysm همراه با اسکریپت است که امکان نصب خودکار آسان را فراهم می کند. جزئیات را می توان در [اسناد Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) پیدا کرد.
 
 ```sh
 ./prysm.sh beacon-chain \

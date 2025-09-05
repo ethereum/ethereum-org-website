@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### A Prysm futtatása
 
-A Prysm egy szkripttel együtt elérhető, amely egyszerű, automatikus telepítést tesz lehetővé. A részleteket a [Prysm dokumentációban](https://docs.prylabs.network/docs/install/install-with-script) találja.
+A Prysm egy szkripttel együtt elérhető, amely egyszerű, automatikus telepítést tesz lehetővé. A részleteket a [Prysm dokumentációban](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) találja.
 
 ```sh
 ./prysm.sh beacon-chain \

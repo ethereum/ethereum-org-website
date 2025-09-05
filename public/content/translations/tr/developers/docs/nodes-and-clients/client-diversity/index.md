@@ -77,7 +77,7 @@ Fikir birliği katmanı için güncel istemci çeşitliliği verileri artık [cl
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 Teknik kullanıcılar azınlık istemcileri için daha fazla öğretici ve doküman yazarak ve düğüm yöneten yakınlarını baskın istemcilerden ayrılmaya yönlendirerek bu süreci hızlandırmaya yardımcı olabilirler. Bir azınlık fikir birliği katmanına geçiş için kılavuzlar [clientdiversity.org](https://clientdiversity.org/) adresinde mevcuttur.
 

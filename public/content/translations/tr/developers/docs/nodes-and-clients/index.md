@@ -195,7 +195,7 @@ EthereumJS Yürütüm İstemcisi (EthereumJS), TypeScript'te yazılmıştır ve 
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten ve daha fazlası |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | İşaret Zinciri, Goerli, Sepolia, Ropsten ve daha fazlası                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | İşaret Zinciri, Goerli, Sepolia, Ropsten ve daha fazlası                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Başla      | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten ve daha fazlası |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Başla      | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten ve daha fazlası |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Goerli, Sepolia, Ropsten ve daha fazlası          |
 
 ### Lighthouse {#lighthouse}
@@ -220,7 +220,7 @@ Nimbus, Nim ile yazılmış olan, Apache-2.0 lisansı altında bir fikir birliğ
 
 Prysm, Go ile yazılmış, GPL-3.0 lisansının altında tam teşekküllü açık kaynak bir fikir birliği istemcisidir. İsteğe bağlı bir web uygulaması arayüzüne sahiptir ve kullanıcı deneyimine, dokümanlara ve hem evdeki hisseleme hem de kurumsal kullanıcılar için yapılandırılabilirliğe öncelik verir.
 
-Daha fazlasını öğrenmek için [Prysm dokümanlarını](https://docs.prylabs.network/docs/getting-started/) ziyaret edin.
+Daha fazlasını öğrenmek için [Prysm dokümanlarını](https://prysm.offchainlabs.com/docs/) ziyaret edin.
 
 ### Teku {#teku}
 
