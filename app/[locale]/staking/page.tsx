@@ -87,6 +87,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         data={data}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
       />
     </I18nProvider>
   )
