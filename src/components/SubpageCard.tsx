@@ -1,10 +1,11 @@
 import { ReactNode } from "react"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions } from "@/lib/utils/matomo"
 
 interface InlineLinkData {
   text: string

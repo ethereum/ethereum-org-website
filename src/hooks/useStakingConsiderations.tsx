@@ -1,6 +1,6 @@
 import { ElementType, useState } from "react"
 
-import type { StakingPage } from "@/lib/types"
+import type { MatomoEventOptions, StakingPage } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import {
@@ -16,8 +16,6 @@ import {
   TrustlessIcon,
 } from "@/components/icons/staking"
 import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
-
-import { MatomoEventOptions } from "@/lib/utils/matomo"
 
 import { useTranslation } from "@/hooks/useTranslation"
 

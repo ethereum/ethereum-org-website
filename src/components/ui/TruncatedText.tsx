@@ -2,9 +2,11 @@
 
 import { useState } from "react"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { Button } from "@/components/ui/buttons/Button"
 
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface TruncatedTextProps {
   text: string

@@ -4,10 +4,12 @@ import { ExternalLink } from "lucide-react"
 import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { BaseLink } from "./ui/Link"

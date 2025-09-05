@@ -1,9 +1,10 @@
 import type { ReactNode } from "react"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { Image, type ImageProps } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions } from "@/lib/utils/matomo"
 
 import {
   Button,

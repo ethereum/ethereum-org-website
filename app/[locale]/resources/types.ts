@@ -1,5 +1,7 @@
 import type { StaticImageData } from "next/image"
 
+import type { SectionNavDetails } from "@/lib/types"
+
 export type Item = {
   title: string
   description: string
@@ -15,9 +17,6 @@ export type DashboardBox = {
   className?: string
 }
 
-export type DashboardSection = {
-  key: string
-  title: string
+export type DashboardSection = SectionNavDetails & {
   boxes: DashboardBox[]
-  icon?: React.ReactNode
 }

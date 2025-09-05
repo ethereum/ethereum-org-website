@@ -1,5 +1,7 @@
 import { push } from "@socialgouv/matomo-next"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { IS_PROD } from "./env"
@@ -22,13 +24,6 @@ export const normalizePathForMatomo = (pathname: string): string => {
 
   // For paths without locale prefix (English content), add /en prefix
   return `/${DEFAULT_LOCALE}${pathname}`
-}
-
-export interface MatomoEventOptions {
-  eventCategory: string
-  eventAction: string
-  eventName: string
-  eventValue?: string
 }
 
 export const trackCustomEvent = ({
