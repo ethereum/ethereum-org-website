@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
-import FloatingNav, { StickyContainer } from "@/components/FloatingNav"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
@@ -13,6 +12,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -75,16 +75,17 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       />
 
       <Stack className="gap-4 px-2 py-6 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
-        <StickyContainer className="top-6 flex flex-col items-center gap-3 text-center md:top-6 md:px-2">
-          <div className="my-2 text-body-medium">
+        <StickyContainer className="top-[26px] space-y-5">
+          <div className="my-2 text-center text-body-medium">
             {t("page-resources-whats-on-this-page")}
           </div>
-          <FloatingNav
+          <TabNav
             sections={resourceSections}
             customEventOptions={{
               eventCategory: EVENT_CATEGORY,
               eventAction: "whats_on_this_page",
             }}
+            useMotion
           />
         </StickyContainer>
         <Stack className="gap-11 pt-12 md:gap-16 lg:gap-24">

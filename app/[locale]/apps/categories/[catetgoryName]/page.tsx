@@ -8,7 +8,6 @@ import {
 
 import { AppCategoryEnum, type SectionNavDetails } from "@/lib/types"
 
-import FloatingNav, { StickyContainer } from "@/components/FloatingNav"
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -20,6 +19,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -121,17 +121,14 @@ const Page = async ({
           title={t(category.name)}
           subtitle={t(category.description)}
         />
-
-        <StickyContainer className="flex flex-col gap-4 px-4 md:px-8">
-          <FloatingNav
-            sections={navSections}
-            activeSection={categoryEnum}
-            customEventOptions={{
-              eventCategory: "categories_page",
-              eventAction: "navigation",
-            }}
-          />
-        </StickyContainer>
+        <TabNav
+          sections={navSections}
+          activeSection={categoryEnum}
+          customEventOptions={{
+            eventCategory: "categories_page",
+            eventAction: "navigation",
+          }}
+        />
 
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col px-4 md:px-8">
