@@ -96,7 +96,9 @@ const Page = async ({
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
+                  <BreadcrumbLink href="/apps" className="uppercase">
+                    {t("page-apps-all-apps")}
+                  </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
                   /
