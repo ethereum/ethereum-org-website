@@ -22,7 +22,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <RoadmapPage />
+      <RoadmapPage locale={locale} />
     </I18nProvider>
   )
 }

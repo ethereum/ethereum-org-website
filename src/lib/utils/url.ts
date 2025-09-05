@@ -75,3 +75,12 @@ export const slugify = (text: string): string => {
       .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
   )
 }
+
+export const normalizeUrlForJsonLd = (
+  locale: string,
+  pathWithoutLocale: string
+): string => {
+  const path = join(locale === DEFAULT_LOCALE ? "" : locale, pathWithoutLocale)
+  const url = new URL(path, SITE_URL)
+  return url.toString()
+}

@@ -26,10 +26,68 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-learning-tools",
+  })
+
+  // JSON-LD structured data for the developers learning tools page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/developers/learning-tools/`,
+    name: t("page-learning-tools-meta-title"),
+    description: t("page-learning-tools-meta-desc"),
+    url: `https://ethereum.org/${locale}/developers/learning-tools/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Developers",
+          item: `https://ethereum.org/${locale}/developers/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: t("page-learning-tools-meta-title"),
+          item: `https://ethereum.org/${locale}/developers/learning-tools/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+  }
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <LearningTools />
-    </I18nProvider>
+    <>
+      <script
+        id="jsonld-webpage-learning-tools"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
+
+      <I18nProvider locale={locale} messages={messages}>
+        <LearningTools locale={locale} />
+      </I18nProvider>
+    </>
   )
 }
 

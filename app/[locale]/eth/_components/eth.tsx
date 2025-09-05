@@ -172,9 +172,82 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
 const EthPage = ({
   contributors,
   lastEditLocaleTimestamp,
+  locale,
 }: PageWithContributorsProps) => {
   const { t } = useTranslation("page-eth")
   const pathname = usePathname()
+
+  // JSON-LD structured data for the Ether/ETH page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/eth/`,
+    name: t("page-eth-whats-eth"),
+    description: t("page-eth-is-money"),
+    url: `https://ethereum.org/${locale}/eth/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: t("page-eth-whats-eth"),
+          item: `https://ethereum.org/${locale}/eth/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+  }
+
+  // JSON-LD for the article content about Ether
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t("page-eth-whats-eth"),
+    description: t("page-eth-is-money"),
+    image: "https://ethereum.org/images/eth.png",
+    author: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+    dateModified: lastEditLocaleTimestamp,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://ethereum.org/${locale}/eth/`,
+    },
+    about: {
+      "@type": "DigitalCurrency",
+      name: "Ether",
+      alternateName: ["ETH", "Ethereum"],
+      symbol: "ETH",
+      blockchain: "Ethereum",
+    },
+  }
 
   const tokens = [
     {
@@ -269,197 +342,215 @@ const EthPage = ({
   ]
 
   return (
-    <Page>
-      <Content>
-        <HeroContainer>
-          <Header>
-            <Title>{t("page-eth-whats-eth")}</Title>
-            <Slogan>{t("page-eth-currency-for-future")}</Slogan>
-            <Subtitle>{t("page-eth-is-money")}</Subtitle>
-            <SubtitleTwo>{t("page-eth-currency-for-apps")}</SubtitleTwo>
-            <EthPriceCard className="mb-8" />
-            <ButtonLink href="/get-eth/">
-              {t("page-eth-button-buy-eth")}
-            </ButtonLink>
-          </Header>
-          <Hero>
-            <Image
-              src={eth}
-              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-              sizes="(max-width: 768px) 100vw, 800px"
-              alt={t("page-eth-whats-eth-hero-alt")}
-              priority
-            />
-          </Hero>
-        </HeroContainer>
-      </Content>
-      <GrayContainer>
+    <>
+      <script
+        id="jsonld-webpage-eth"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
+
+      <script
+        id="jsonld-article-eth"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd),
+        }}
+      />
+
+      <Page>
         <Content>
-          <div className="mb-8">
-            <ListenToPlayer slug={pathname} />
-          </div>
-          <Intro>
-            <Text>{t("page-eth-description")} </Text>
-          </Intro>
-          <CardContainer className="mb-8">
-            {benefits.map((benefits, idx) => (
-              <StyledCard
+          <HeroContainer>
+            <Header>
+              <Title>{t("page-eth-whats-eth")}</Title>
+              <Slogan>{t("page-eth-currency-for-future")}</Slogan>
+              <Subtitle>{t("page-eth-is-money")}</Subtitle>
+              <SubtitleTwo>{t("page-eth-currency-for-apps")}</SubtitleTwo>
+              <EthPriceCard className="mb-8" />
+              <ButtonLink href="/get-eth/">
+                {t("page-eth-button-buy-eth")}
+              </ButtonLink>
+            </Header>
+            <Hero>
+              <Image
+                src={eth}
+                // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+                sizes="(max-width: 768px) 100vw, 800px"
+                alt={t("page-eth-whats-eth-hero-alt")}
+                priority
+              />
+            </Hero>
+          </HeroContainer>
+        </Content>
+        <GrayContainer>
+          <Content>
+            <div className="mb-8">
+              <ListenToPlayer slug={pathname} />
+            </div>
+            <Intro>
+              <Text>{t("page-eth-description")} </Text>
+            </Intro>
+            <CardContainer className="mb-8">
+              {benefits.map((benefits, idx) => (
+                <StyledCard
+                  key={idx}
+                  emoji={benefits.emoji}
+                  title={benefits.title}
+                  description={benefits.description}
+                />
+              ))}
+            </CardContainer>
+            <InfoBanner emoji=":wave:" shouldCenter>
+              <b>{t("page-eth-buy-some")}</b>{" "}
+              <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
+              <InlineLink href="/what-is-ethereum/">
+                {t("page-eth-more-on-ethereum-link")}
+              </InlineLink>
+              {t("page-eth-period")}
+            </InfoBanner>
+          </Content>
+        </GrayContainer>
+        <Content>
+          <CentralColumn>
+            <H2>{t("page-eth-whats-unique")}</H2>
+            <Text>{t("page-eth-whats-unique-desc")}</Text>
+            <EthVideo />
+            <div>
+              <H4>{t("page-eth-fuels")}</H4>
+              <Text>{t("page-eth-fuels-desc")}</Text>
+              <Text>{t("page-eth-fuels-desc-2")}</Text>
+              <Text>
+                <Translation id="page-eth:page-eth-fuels-desc-3" />{" "}
+                <b>{t("page-eth-powers-ethereum")}</b>
+                {t("page-eth-period")}
+              </Text>
+              <Text>
+                {t("page-eth-fuels-staking")}{" "}
+                <InlineLink href="/staking/">
+                  {t("page-eth-fuels-more-staking")}
+                </InlineLink>
+              </Text>
+            </div>
+            <CentralActionCard
+              href="/what-is-ethereum/"
+              title={t("page-eth-whats-ethereum")}
+              description={t("page-eth-whats-ethereum-desc")}
+              image={ethereum}
+            />
+            <TextDivider />
+            <div>
+              <H4>{t("page-eth-underpins")}</H4>
+              <Text>
+                <Translation id="page-eth:page-eth-underpins-desc" />
+              </Text>
+              <Text>{t("page-eth-underpins-desc-2")}</Text>
+              <CentralActionCard
+                href="/defi/"
+                title={t("page-eth-whats-defi")}
+                description={t("page-eth-whats-defi-description")}
+                image={defi}
+              />
+              <InfoBanner isWarning>
+                <Translation id="page-eth:page-eth-weth" />
+              </InfoBanner>
+            </div>
+            <TextDivider />
+            <div>
+              <H4>{t("page-eth-uses")}</H4>
+              <Text>{t("page-eth-uses-desc")}</Text>
+              <Text>{t("page-eth-uses-desc-2")} </Text>
+              <UnorderedList>
+                <ListItem>
+                  <InlineLink href="https://sablier.com">
+                    {t("page-eth-stream-link")}
+                  </InlineLink>{" "}
+                  – {t("page-eth-uses-desc-3")}
+                </ListItem>
+                <ListItem>
+                  <InlineLink href="/get-eth/#dex">
+                    {t("page-eth-trade-link-2")}
+                  </InlineLink>{" "}
+                  – {t("page-eth-uses-desc-4")}
+                </ListItem>
+                <ListItem>
+                  <InlineLink href="https://app.compound.finance/">
+                    {t("page-eth-earn-interest-link")}
+                  </InlineLink>{" "}
+                  – {t("page-eth-uses-desc-5")}
+                </ListItem>
+                <ListItem>
+                  <InlineLink href="/stablecoins/">
+                    {t("page-eth-stablecoins-link")}
+                  </InlineLink>{" "}
+                  – {t("page-eth-uses-desc-6")}
+                </ListItem>
+              </UnorderedList>
+            </div>
+            <Divider />
+          </CentralColumn>
+          <CalloutBanner
+            className="mx-0 my-20"
+            titleKey={"page-eth:page-eth-where-to-buy"}
+            descriptionKey={"page-eth:page-eth-where-to-buy-desc"}
+            image={ethCat}
+            alt={t("page-eth-cat-img-alt")}
+            imageWidth={300}
+          >
+            <div>
+              <ButtonLink href="/get-eth/">
+                {t("page-eth-get-eth-btn")}
+              </ButtonLink>
+            </div>
+          </CalloutBanner>
+        </Content>
+
+        <TwoColumnContent>
+          <LeftColumn>
+            <H3>{t("page-eth-has-value")}</H3>
+            <Text>{t("page-eth-has-value-desc")}</Text>
+            <Text>{t("page-eth-has-value-desc-2")}</Text>
+            <Text>{t("page-eth-has-value-desc-3")}</Text>
+            <Text>{t("page-eth-has-value-desc-4")}</Text>
+            <Text>{t("page-eth-has-value-desc-5")}</Text>
+          </LeftColumn>
+          <RightColumn>
+            <CardList items={cardListContent} />
+          </RightColumn>
+        </TwoColumnContent>
+        <TwoColumnContent className="items-start" id="tokens">
+          <LeftColumn>
+            <H3>{t("page-eth-not-only-crypto")}</H3>
+            <Text>{t("page-eth-not-only-crypto-desc")} </Text>
+            <Text>{t("page-eth-not-only-crypto-desc-2")}</Text>
+            <H4>{t("page-eth-more-on-tokens")}</H4>
+            <CardList items={tokenLinks} />
+          </LeftColumn>
+          <RightColumn>
+            <H3>{t("page-eth-popular-tokens")}</H3>
+            {tokens.map((token, idx) => (
+              <TokenCard
                 key={idx}
-                emoji={benefits.emoji}
-                title={benefits.title}
-                description={benefits.description}
+                emoji={token.emoji}
+                title={token.title}
+                description={token.description}
               />
             ))}
-          </CardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter>
-            <b>{t("page-eth-buy-some")}</b>{" "}
-            <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
-            <InlineLink href="/what-is-ethereum/">
-              {t("page-eth-more-on-ethereum-link")}
-            </InlineLink>
-            {t("page-eth-period")}
-          </InfoBanner>
+          </RightColumn>
+        </TwoColumnContent>
+        <Content>
+          <StandaloneQuizWidget quizKey="what-is-ether" />
         </Content>
-      </GrayContainer>
-      <Content>
-        <CentralColumn>
-          <H2>{t("page-eth-whats-unique")}</H2>
-          <Text>{t("page-eth-whats-unique-desc")}</Text>
-          <EthVideo />
-          <div>
-            <H4>{t("page-eth-fuels")}</H4>
-            <Text>{t("page-eth-fuels-desc")}</Text>
-            <Text>{t("page-eth-fuels-desc-2")}</Text>
-            <Text>
-              <Translation id="page-eth:page-eth-fuels-desc-3" />{" "}
-              <b>{t("page-eth-powers-ethereum")}</b>
-              {t("page-eth-period")}
-            </Text>
-            <Text>
-              {t("page-eth-fuels-staking")}{" "}
-              <InlineLink href="/staking/">
-                {t("page-eth-fuels-more-staking")}
-              </InlineLink>
-            </Text>
-          </div>
-          <CentralActionCard
-            href="/what-is-ethereum/"
-            title={t("page-eth-whats-ethereum")}
-            description={t("page-eth-whats-ethereum-desc")}
-            image={ethereum}
+        <Content>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-          <TextDivider />
-          <div>
-            <H4>{t("page-eth-underpins")}</H4>
-            <Text>
-              <Translation id="page-eth:page-eth-underpins-desc" />
-            </Text>
-            <Text>{t("page-eth-underpins-desc-2")}</Text>
-            <CentralActionCard
-              href="/defi/"
-              title={t("page-eth-whats-defi")}
-              description={t("page-eth-whats-defi-description")}
-              image={defi}
-            />
-            <InfoBanner isWarning>
-              <Translation id="page-eth:page-eth-weth" />
-            </InfoBanner>
-          </div>
-          <TextDivider />
-          <div>
-            <H4>{t("page-eth-uses")}</H4>
-            <Text>{t("page-eth-uses-desc")}</Text>
-            <Text>{t("page-eth-uses-desc-2")} </Text>
-            <UnorderedList>
-              <ListItem>
-                <InlineLink href="https://sablier.com">
-                  {t("page-eth-stream-link")}
-                </InlineLink>{" "}
-                – {t("page-eth-uses-desc-3")}
-              </ListItem>
-              <ListItem>
-                <InlineLink href="/get-eth/#dex">
-                  {t("page-eth-trade-link-2")}
-                </InlineLink>{" "}
-                – {t("page-eth-uses-desc-4")}
-              </ListItem>
-              <ListItem>
-                <InlineLink href="https://app.compound.finance/">
-                  {t("page-eth-earn-interest-link")}
-                </InlineLink>{" "}
-                – {t("page-eth-uses-desc-5")}
-              </ListItem>
-              <ListItem>
-                <InlineLink href="/stablecoins/">
-                  {t("page-eth-stablecoins-link")}
-                </InlineLink>{" "}
-                – {t("page-eth-uses-desc-6")}
-              </ListItem>
-            </UnorderedList>
-          </div>
-          <Divider />
-        </CentralColumn>
-        <CalloutBanner
-          className="mx-0 my-20"
-          titleKey={"page-eth:page-eth-where-to-buy"}
-          descriptionKey={"page-eth:page-eth-where-to-buy-desc"}
-          image={ethCat}
-          alt={t("page-eth-cat-img-alt")}
-          imageWidth={300}
-        >
-          <div>
-            <ButtonLink href="/get-eth/">
-              {t("page-eth-get-eth-btn")}
-            </ButtonLink>
-          </div>
-        </CalloutBanner>
-      </Content>
-
-      <TwoColumnContent>
-        <LeftColumn>
-          <H3>{t("page-eth-has-value")}</H3>
-          <Text>{t("page-eth-has-value-desc")}</Text>
-          <Text>{t("page-eth-has-value-desc-2")}</Text>
-          <Text>{t("page-eth-has-value-desc-3")}</Text>
-          <Text>{t("page-eth-has-value-desc-4")}</Text>
-          <Text>{t("page-eth-has-value-desc-5")}</Text>
-        </LeftColumn>
-        <RightColumn>
-          <CardList items={cardListContent} />
-        </RightColumn>
-      </TwoColumnContent>
-      <TwoColumnContent className="items-start" id="tokens">
-        <LeftColumn>
-          <H3>{t("page-eth-not-only-crypto")}</H3>
-          <Text>{t("page-eth-not-only-crypto-desc")} </Text>
-          <Text>{t("page-eth-not-only-crypto-desc-2")}</Text>
-          <H4>{t("page-eth-more-on-tokens")}</H4>
-          <CardList items={tokenLinks} />
-        </LeftColumn>
-        <RightColumn>
-          <H3>{t("page-eth-popular-tokens")}</H3>
-          {tokens.map((token, idx) => (
-            <TokenCard
-              key={idx}
-              emoji={token.emoji}
-              title={token.title}
-              description={token.description}
-            />
-          ))}
-        </RightColumn>
-      </TwoColumnContent>
-      <Content>
-        <StandaloneQuizWidget quizKey="what-is-ether" />
-      </Content>
-      <Content>
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
-        <FeedbackCard />
-      </Content>
-    </Page>
+          <FeedbackCard />
+        </Content>
+      </Page>
+    </>
   )
 }
 

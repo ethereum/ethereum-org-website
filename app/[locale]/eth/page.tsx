@@ -38,6 +38,7 @@ export default async function Page({
       <EthPage
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
       />
     </I18nProvider>
   )

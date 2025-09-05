@@ -29,7 +29,7 @@ import ethBlocksImage from "@/public/images/developers-eth-blocks.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
-const RoadmapPage = () => {
+const RoadmapPage = ({ locale }) => {
   const { t } = useTranslation("page-roadmap")
 
   const heroContent: HubHeroProps = {
@@ -37,6 +37,110 @@ const RoadmapPage = () => {
     header: t("page-roadmap-title"),
     description: t("page-roadmap-meta-description"),
     heroImg: roadmapHeroImg,
+  }
+
+  // JSON-LD structured data for the Roadmap page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/roadmap/`,
+    name: t("page-roadmap-meta-title"),
+    description: t("page-roadmap-meta-description"),
+    url: `https://ethereum.org/${locale}/roadmap/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: t("page-roadmap-meta-title"),
+          item: `https://ethereum.org/${locale}/roadmap/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+  }
+
+  // JSON-LD for the roadmap article content
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t("page-roadmap-title"),
+    description: t("page-roadmap-meta-description"),
+    image: "https://ethereum.org/images/heroes/roadmap-hub-hero.jpg",
+    author: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+    },
+    about: {
+      "@type": "Thing",
+      name: "Ethereum Roadmap",
+      description:
+        "The future development and upgrade path of the Ethereum blockchain",
+    },
+  }
+
+  // JSON-LD for the FAQ section
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: t("page-roadmap-faq-1-title"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${t("page-roadmap-faq-1-p1")} ${t("page-roadmap-faq-1-p1-continued")} ${t("page-roadmap-faq-1-p2")}`.replace(
+            /<[^>]*>/g,
+            ""
+          ),
+        },
+      },
+      {
+        "@type": "Question",
+        name: t("page-roadmap-faq-2-title"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${t("page-roadmap-faq-2-p1")} ${t("page-roadmap-faq-2-p1-strong")} ${t("page-roadmap-faq-2-p1-continued")} ${t("page-roadmap-faq-2-p2")}`.replace(
+            /<[^>]*>/g,
+            ""
+          ),
+        },
+      },
+      {
+        "@type": "Question",
+        name: t("page-roadmap-faq-3-title"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t("page-roadmap-faq-3-p1").replace(/<[^>]*>/g, ""),
+        },
+      },
+      {
+        "@type": "Question",
+        name: t("page-roadmap-faq-4-title"),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t("page-roadmap-faq-4-p1").replace(/<[^>]*>/g, ""),
+        },
+      },
+    ],
   }
 
   const changesComingItems = [
@@ -107,160 +211,186 @@ const RoadmapPage = () => {
 
   // TODO: MATOMO EVENTS
   return (
-    <MainArticle className="mx-auto flex w-full flex-col items-center">
-      <BannerNotification shouldShow>
-        <p>{t("page-roadmap-banner-notification")}</p>
-      </BannerNotification>
-      <div className="flex flex-col gap-16">
-        <HubHero {...heroContent} />
+    <>
+      <script
+        id="jsonld-webpage-roadmap"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
 
-        <div className="py-4">
-          <ReleaseCarousel />
-        </div>
+      <script
+        id="jsonld-article-roadmap"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd),
+        }}
+      />
 
-        <div className="flex w-full flex-col gap-8 px-8 py-4">
-          <h2 className="m-0">{t("page-roadmap-changes-coming-title")}</h2>
-          <p className="max-w-screen-md text-lg">
-            {t("page-roadmap-changes-coming-description")}
-          </p>
-          <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {changesComingItems.map((item) => (
-              <div
-                key={item.title}
-                className="bg-roadmap-card-gradient flex flex-col gap-4 rounded-3xl border p-6"
-              >
-                <div className="flex flex-row items-center justify-between gap-4">
-                  <h3 className="m-0">{item.title}</h3>
-                  <div className="flex h-12 w-12 items-center justify-center">
-                    {item.icon}
+      <script
+        id="jsonld-faq-roadmap"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd),
+        }}
+      />
+
+      <MainArticle className="mx-auto flex w-full flex-col items-center">
+        <BannerNotification shouldShow>
+          <p>{t("page-roadmap-banner-notification")}</p>
+        </BannerNotification>
+        <div className="flex flex-col gap-16">
+          <HubHero {...heroContent} />
+
+          <div className="py-4">
+            <ReleaseCarousel />
+          </div>
+
+          <div className="flex w-full flex-col gap-8 px-8 py-4">
+            <h2 className="m-0">{t("page-roadmap-changes-coming-title")}</h2>
+            <p className="max-w-screen-md text-lg">
+              {t("page-roadmap-changes-coming-description")}
+            </p>
+            <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {changesComingItems.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-roadmap-card-gradient flex flex-col gap-4 rounded-3xl border p-6"
+                >
+                  <div className="flex flex-row items-center justify-between gap-4">
+                    <h3 className="m-0">{item.title}</h3>
+                    <div className="flex h-12 w-12 items-center justify-center">
+                      {item.icon}
+                    </div>
                   </div>
+                  <p className="flex-grow">{item.description}</p>
+                  <ButtonLink href={item.button.href} variant="outline">
+                    {item.button.label}
+                  </ButtonLink>
                 </div>
-                <p className="flex-grow">{item.description}</p>
-                <ButtonLink href={item.button.href} variant="outline">
-                  {item.button.label}
-                </ButtonLink>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col-reverse gap-12 px-8 py-4 md:w-full md:flex-row">
-          <div className="max-w-screen-md flex-1">
-            <h2 className="mb-8">{t("page-roadmap-why-need-title")}</h2>
-            <p className="mb-10">{t("page-roadmap-why-need-description")}</p>
-            <h3 className="mb-6">{t("page-roadmap-how-defined-title")}</h3>
-            <p className="mb-6">{t("page-roadmap-how-defined-p1")}</p>
-            <p className="mb-6">
-              <Translation id="page-roadmap:page-roadmap-how-defined-p2" />
-            </p>
-            <p className="mb-6">
-              <Translation id="page-roadmap:page-roadmap-how-defined-p3" />
-            </p>
-            <ButtonLink
-              href="/governance"
-              variant="outline"
-              className="w-full md:w-auto"
-            >
-              {t("page-roadmap-governance-button")}
-            </ButtonLink>
-          </div>
-          <div className="relative min-h-[272px] w-full flex-shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
-            <Image
-              src={communityHeroImg}
-              alt={t("page-roadmap-hero-alt")}
-              className="absolute inset-0 h-full w-full object-cover"
-              fill
-            />
-          </div>
-        </div>
-
-        <div className="flex w-full flex-col gap-8 px-8">
-          <h2 className="text-center">
-            {t("page-roadmap-technical-upgrades-title")}
-          </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {technicalUpgradesItems.map((item) => (
-              <SubpageCard
-                key={item.title}
-                title={item.title}
-                description={item.description}
-                icon={item.icon}
-                href={item.href}
-                inlineLink={{ text: t("page-roadmap-learn-more") }}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-8 px-8 lg:flex-row">
-          <div className="top-24 flex h-fit flex-1 items-start lg:sticky">
-            <Image
-              src={ethBlocksImage}
-              alt={t("page-roadmap-blocks-alt")}
-              className="object-contain"
-            />
-          </div>
-          <div className="flex flex-1 flex-col gap-8">
-            <h2>{t("page-roadmap-timeline-title")}</h2>
-            <div>
-              <ExpandableCard
-                title={t("page-roadmap-faq-1-title")}
-                className="mb-0"
-              >
-                <div className="flex flex-col gap-4">
-                  <p>
-                    <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
-                    {t("page-roadmap-faq-1-p1-continued")}
-                  </p>
-                  <p>{t("page-roadmap-faq-1-p2")}</p>
-                </div>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("page-roadmap-faq-2-title")}
-                className="mb-0"
-              >
-                <div className="flex flex-col gap-4">
-                  <p>
-                    {t("page-roadmap-faq-2-p1")}{" "}
-                    <strong>{t("page-roadmap-faq-2-p1-strong")}</strong>{" "}
-                    {t("page-roadmap-faq-2-p1-continued")}
-                  </p>
-                  <p>{t("page-roadmap-faq-2-p2")}</p>
-                </div>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("page-roadmap-faq-3-title")}
-                className="mb-0"
-              >
-                <div className="flex flex-col gap-4">
-                  <p>
-                    <Translation
-                      id="page-roadmap:page-roadmap-faq-3-p1"
-                      transform={{ a: Link }}
-                    />
-                  </p>
-                </div>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("page-roadmap-faq-4-title")}
-                className="mb-0"
-              >
-                <div className="flex flex-col gap-4">
-                  <p>
-                    <Translation
-                      id="page-roadmap:page-roadmap-faq-4-p1"
-                      transform={{ a: Link }}
-                    />
-                  </p>
-                </div>
-              </ExpandableCard>
+              ))}
             </div>
           </div>
-        </div>
 
-        <FeedbackCard />
-      </div>
-    </MainArticle>
+          <div className="flex flex-col-reverse gap-12 px-8 py-4 md:w-full md:flex-row">
+            <div className="max-w-screen-md flex-1">
+              <h2 className="mb-8">{t("page-roadmap-why-need-title")}</h2>
+              <p className="mb-10">{t("page-roadmap-why-need-description")}</p>
+              <h3 className="mb-6">{t("page-roadmap-how-defined-title")}</h3>
+              <p className="mb-6">{t("page-roadmap-how-defined-p1")}</p>
+              <p className="mb-6">
+                <Translation id="page-roadmap:page-roadmap-how-defined-p2" />
+              </p>
+              <p className="mb-6">
+                <Translation id="page-roadmap:page-roadmap-how-defined-p3" />
+              </p>
+              <ButtonLink
+                href="/governance"
+                variant="outline"
+                className="w-full md:w-auto"
+              >
+                {t("page-roadmap-governance-button")}
+              </ButtonLink>
+            </div>
+            <div className="relative min-h-[272px] w-full flex-shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
+              <Image
+                src={communityHeroImg}
+                alt={t("page-roadmap-hero-alt")}
+                className="absolute inset-0 h-full w-full object-cover"
+                fill
+              />
+            </div>
+          </div>
+
+          <div className="flex w-full flex-col gap-8 px-8">
+            <h2 className="text-center">
+              {t("page-roadmap-technical-upgrades-title")}
+            </h2>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {technicalUpgradesItems.map((item) => (
+                <SubpageCard
+                  key={item.title}
+                  title={item.title}
+                  description={item.description}
+                  icon={item.icon}
+                  href={item.href}
+                  inlineLink={{ text: t("page-roadmap-learn-more") }}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-8 px-8 lg:flex-row">
+            <div className="top-24 flex h-fit flex-1 items-start lg:sticky">
+              <Image
+                src={ethBlocksImage}
+                alt={t("page-roadmap-blocks-alt")}
+                className="object-contain"
+              />
+            </div>
+            <div className="flex flex-1 flex-col gap-8">
+              <h2>{t("page-roadmap-timeline-title")}</h2>
+              <div>
+                <ExpandableCard
+                  title={t("page-roadmap-faq-1-title")}
+                  className="mb-0"
+                >
+                  <div className="flex flex-col gap-4">
+                    <p>
+                      <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
+                      {t("page-roadmap-faq-1-p1-continued")}
+                    </p>
+                    <p>{t("page-roadmap-faq-1-p2")}</p>
+                  </div>
+                </ExpandableCard>
+                <ExpandableCard
+                  title={t("page-roadmap-faq-2-title")}
+                  className="mb-0"
+                >
+                  <div className="flex flex-col gap-4">
+                    <p>
+                      {t("page-roadmap-faq-2-p1")}{" "}
+                      <strong>{t("page-roadmap-faq-2-p1-strong")}</strong>{" "}
+                      {t("page-roadmap-faq-2-p1-continued")}
+                    </p>
+                    <p>{t("page-roadmap-faq-2-p2")}</p>
+                  </div>
+                </ExpandableCard>
+                <ExpandableCard
+                  title={t("page-roadmap-faq-3-title")}
+                  className="mb-0"
+                >
+                  <div className="flex flex-col gap-4">
+                    <p>
+                      <Translation
+                        id="page-roadmap:page-roadmap-faq-3-p1"
+                        transform={{ a: Link }}
+                      />
+                    </p>
+                  </div>
+                </ExpandableCard>
+                <ExpandableCard
+                  title={t("page-roadmap-faq-4-title")}
+                  className="mb-0"
+                >
+                  <div className="flex flex-col gap-4">
+                    <p>
+                      <Translation
+                        id="page-roadmap:page-roadmap-faq-4-p1"
+                        transform={{ a: Link }}
+                      />
+                    </p>
+                  </div>
+                </ExpandableCard>
+              </div>
+            </div>
+          </div>
+
+          <FeedbackCard />
+        </div>
+      </MainArticle>
+    </>
   )
 }
 

@@ -88,54 +88,132 @@ const Page = async ({
     categoryEnum as AppCategoryEnum
   )
 
+  // Get apps for this category
+  const categoryApps = appsData[categoryEnum] || []
+
+  // JSON-LD structured data for the apps category page
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
+    name: t(category.metaTitle),
+    description: t(category.metaDescription),
+    url: `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
+    inLanguage: locale,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `https://ethereum.org/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Apps",
+          item: `https://ethereum.org/${locale}/apps/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: t(category.name),
+          item: `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+  }
+
+  const categoryAppsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: t(category.name),
+    description: t(category.description),
+    url: `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
+    numberOfItems: categoryApps.length,
+    itemListElement: categoryApps.slice(0, 10).map((app, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: app.name,
+      description: app.description,
+      url: app.url,
+    })),
+  }
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <div className="flex flex-col gap-12">
-        <SimpleHero
-          breadcrumbs={
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                  /
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbPage>
-                    {t(category.name).toUpperCase()}
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          }
-          title={t(category.name)}
-          subtitle={t(category.description)}
-        />
+    <>
+      <script
+        id="jsonld-webpage-category"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageJsonLd),
+        }}
+      />
+      <script
+        id="jsonld-apps-category"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(categoryAppsJsonLd),
+        }}
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <div className="flex flex-col gap-12">
+          <SimpleHero
+            breadcrumbs={
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                    /
+                  </BreadcrumbSeparator>
+                  <BreadcrumbItem>
+                    <BreadcrumbPage>
+                      {t(category.name).toUpperCase()}
+                    </BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            }
+            title={t(category.name)}
+            subtitle={t(category.description)}
+          />
 
-        <div className="flex flex-col gap-4 px-4 md:px-8">
-          <CategoriesNav activeCategory={categoryEnum} />
+          <div className="flex flex-col gap-4 px-4 md:px-8">
+            <CategoriesNav activeCategory={categoryEnum} />
+          </div>
+
+          <MainArticle className="flex flex-col gap-32 py-10">
+            <div className="flex flex-col px-4 md:px-8">
+              <h2>{t("page-apps-highlights-title")}</h2>
+              <AppsHighlight
+                apps={highlightedApps}
+                matomoCategory={`category_page`}
+              />
+            </div>
+
+            <div className="flex flex-col px-4 md:px-8">
+              <AppsTable apps={appsData[categoryEnum]} />
+            </div>
+
+            <div className="flex flex-col px-4 md:px-8">
+              <SuggestAnApp />
+            </div>
+          </MainArticle>
         </div>
-
-        <MainArticle className="flex flex-col gap-32 py-10">
-          <div className="flex flex-col px-4 md:px-8">
-            <h2>{t("page-apps-highlights-title")}</h2>
-            <AppsHighlight
-              apps={highlightedApps}
-              matomoCategory={`category_page`}
-            />
-          </div>
-
-          <div className="flex flex-col px-4 md:px-8">
-            <AppsTable apps={appsData[categoryEnum]} />
-          </div>
-
-          <div className="flex flex-col px-4 md:px-8">
-            <SuggestAnApp />
-          </div>
-        </MainArticle>
-      </div>
-    </I18nProvider>
+      </I18nProvider>
+    </>
   )
 }
 
