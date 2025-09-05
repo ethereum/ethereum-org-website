@@ -48,6 +48,7 @@
     "author": "Cyfrin Updraft",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
+      "updraft",
       "solidity",
       "smart contracts",
       "video",
@@ -65,7 +66,7 @@
     "url": "https://updraft.cyfrin.io/courses/foundry",
     "title": "Foundry Fundamentals",
     "description": "This course will level up your Solidity development skills with Foundry. The Foundry Fundamentals course teaches advanced web3 development concepts and tools. Expand your knowledge of Solidity, ERC-20s, DeFi, and Ethereum. Master Foundry Forge and Anvil while learning about Chainlink blockchain oracles, smart contract testing, and local network deployment.",
-    "author": "Patrick Collins",
+    "author": "Cyfrin Updraft",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
       "updraft",
@@ -148,7 +149,7 @@
     "url": "https://updraft.cyfrin.io/courses/solidity",
     "title": "Solidity Smart Contract Development",
     "description": "This course will give you a full introduction to Solidity Programming, your gateway to web3 development in Ethereum compatible ecosystems. You'll learn all the core concepts to start building Solidity smart contracts. Including: ERC-20, oracles, inheritance, memeory, storage, mapping, functions, Chainlink, ZKsync, and more! This Solidity programming course has already helped thousands of developers kickstart their blockchain careers.",
-    "author": "Patrick Collins",
+    "author": "Cyfrin Updraft",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
       "updraft",
