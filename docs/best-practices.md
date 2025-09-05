@@ -156,7 +156,7 @@ Use [the Chakra default breakpoints](https://www.chakra-ui.com/docs/theming/cust
 > transition out of the codebase as we adopt the DS colors.
 
 - [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
-- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by X. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```tsx
 // Example of emoji use
