@@ -38,6 +38,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <WalletsPage
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
       />
     </I18nProvider>
   )
