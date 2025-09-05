@@ -810,6 +810,41 @@
         "eventAction": "Clicked",
         "eventName": "Clicked ConsensysStaking go to link"
       }
+    },
+    {
+      "name": "Serenita",
+      "imageName": "Serenita",
+      "hue": 231,
+      "launchDate": "2023-11-28",
+      "url": "https://serenita.io",
+      "audits": [
+        {
+          "name": "Smart contract audits",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 5,
+      "monthlyFeeUnit": "%",
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 0,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://x.com/SerenitaIO"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Serenita go to link"
+      }
     }
   ],
   "pools": [
