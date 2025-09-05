@@ -144,9 +144,9 @@ export const DocsLayout = ({
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
-            isMobile
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
+            isMobile
           />
           <div className="prose prose-lg max-w-none break-words">
             {children}
