@@ -1,263 +1,392 @@
-# Ethereum.org
+# Ethereum.org Documentation
 
-> The official Ethereum website providing comprehensive education, resources, and community information about Ethereum - the decentralized world computer that enables smart contracts and decentralized applications.
+> Ethereum.org is the official documentation and learning resource for Ethereum. It provides comprehensive guides, tutorials, and reference materials for developers, users, and community members to understand and interact with the Ethereum blockchain.
 
-Ethereum.org is the primary educational hub for Ethereum, offering beginner-friendly explanations alongside advanced technical documentation. The site covers everything from basic concepts like "What is Ethereum?" to detailed developer guides, staking information, and the latest protocol research.
+## Overview
 
-## Learn
+Ethereum.org contains these primary sections:
 
-### Basics
-- [What is Ethereum?](https://ethereum.org/what-is-ethereum/): Introduction to Ethereum and its core concepts
-- [What is Ether (ETH)?](https://ethereum.org/eth/): Understanding Ethereum's native cryptocurrency
-- [Ethereum Wallets](https://ethereum.org/wallets/): Guide to storing and managing ETH and tokens
-- [What is Web3?](https://ethereum.org/content/web3/index.md): Understanding the decentralized web
-- [Smart Contracts](https://ethereum.org/content/smart-contracts/index.md): Introduction to programmable contracts
+- [About](https://ethereum.org/content/about/index.md): Core information about Ethereum and the website
+- [AI Agents](https://ethereum.org/content/ai-agents/index.md): Resources on AI agents in the Ethereum ecosystem  
+- [Bridges](https://ethereum.org/content/bridges/index.md): Cross-chain bridging documentation and guides
+- [Community](https://ethereum.org/content/community/get-involved/index.md): Community resources, events, and involvement opportunities
+- [Contributing](https://ethereum.org/content/contributing/index.md): Guidelines and resources for contributing to Ethereum.org
+- [DeFi](https://ethereum.org/content/defi/index.md): Decentralized Finance resources and guides
+- [Developers](https://ethereum.org/content/developers/docs/index.md): Comprehensive developer documentation and tutorials
+- [Staking](https://ethereum.org/content/staking/solo/index.md): Everything about Ethereum staking
 
-### Advanced Topics
-- [Gas and Fees](https://ethereum.org/gas/): Understanding transaction costs
-- [Bridges](https://ethereum.org/content/bridges/index.md): Moving assets between blockchains
-- [Zero Knowledge Proofs](https://ethereum.org/content/zero-knowledge-proofs/index.md): Privacy and scaling technology
-- [Run a Node](https://ethereum.org/run-a-node/): Operating Ethereum infrastructure
-- [Ethereum Security](https://ethereum.org/content/security/index.md): Protecting yourself in the ecosystem
+## Core Resources
 
-### Educational Resources
-- [Quizzes](https://ethereum.org/quizzes/): Test your Ethereum knowledge
-- [Glossary](https://ethereum.org/glossary/): Definitions of key terms
+### About Ethereum
 
-## Use
+### 10years
 
-### Getting Started
-- [Start with Crypto](https://ethereum.org/start/): Complete beginner's guide
-- [Find a Wallet](https://ethereum.org/wallets/find-wallet/): Wallet selection tool
-- [Get ETH](https://ethereum.org/get-eth/): How to acquire Ethereum
-- [Decentralized Apps (DApps)](https://ethereum.org/dapps/): Applications built on Ethereum
-
-### Practical Guides
-- [Guides Overview](https://ethereum.org/content/guides/index.md): Complete guide collection
-- [How to Create an Ethereum Account](https://ethereum.org/content/guides/how-to-create-an-ethereum-account/index.md)
-- [How to Use a Wallet](https://ethereum.org/content/guides/how-to-use-a-wallet/index.md): Managing your crypto wallet
-- [How to Swap Tokens](https://ethereum.org/content/guides/how-to-swap-tokens/index.md): Exchanging tokens on decentralized exchanges
-- [How to Use a Bridge](https://ethereum.org/content/guides/how-to-use-a-bridge/index.md): Moving assets between blockchains
-- [How to Revoke Token Access](https://ethereum.org/content/guides/how-to-revoke-token-access/index.md): Managing token permissions
-
-### Use Cases
-- [Stablecoins](https://ethereum.org/stablecoins/): Dollar-pegged cryptocurrencies
-- [NFTs](https://ethereum.org/content/nft/index.md): Non-fungible tokens and digital ownership
-- [DeFi](https://ethereum.org/content/defi/index.md): Decentralized finance applications
-- [Payments](https://ethereum.org/content/payments/index.md): Using ETH for transactions
-- [DAOs](https://ethereum.org/content/dao/index.md): Decentralized autonomous organizations
-
-### Emerging Applications
-- [Decentralized Identity](https://ethereum.org/content/decentralized-identity/index.md): Self-sovereign identity
-- [Decentralized Social Networks](https://ethereum.org/content/social-networks/index.md): Web3 social platforms
-- [Decentralized Science (DeSci)](https://ethereum.org/content/desci/index.md): Research and collaboration
-- [Regenerative Finance (ReFi)](https://ethereum.org/content/refi/index.md): Sustainable finance
-- [AI Agents](https://ethereum.org/content/ai-agents/index.md): Autonomous AI on blockchain
-- [Prediction Markets](https://ethereum.org/content/prediction-markets/index.md): Forecasting platforms
-- [Real World Assets](https://ethereum.org/content/real-world-assets/index.md): Tokenizing physical assets
-
-### Staking
-- [Staking Overview](https://ethereum.org/staking/): Earning rewards by validating
-- [Solo Staking](https://ethereum.org/content/staking/solo/index.md): Run your own validator for maximum rewards and control
-- [Staking as a Service](https://ethereum.org/content/staking/saas/index.md): Managed staking solutions with professional operators
-- [Pooled Staking](https://ethereum.org/content/staking/pools/index.md): Stake with others to meet 32 ETH requirement
-
-### Layer 2 Networks
-- [Layer 2 Introduction](https://ethereum.org/layer-2/): Scaling solutions overview
-- [Explore Networks](https://ethereum.org/layer-2/networks/): Available L2 options
-- [Learn about L2](https://ethereum.org/layer-2/learn/): Technical deep dive
-
-## Build
-
-### Developer Hub
-- [Developer Home](https://ethereum.org/developers/): Central hub for builders
-- [Developer Documentation](https://ethereum.org/developers/docs/): Technical documentation
-- [Tutorials](https://ethereum.org/developers/tutorials/): Step-by-step guides
-- [Learning Tools](https://ethereum.org/developers/learning-tools/): Interactive education
-- [Local Development](https://ethereum.org/developers/local-environment/): Setup guides
-- [Community Grants](https://ethereum.org/content/community/grants/index.md): Funding opportunities for developers
-
-### Documentation
-- [Developer Documentation](https://ethereum.org/content/developers/docs/index.md): Complete technical reference
-
-#### Foundational Topics
-- [Intro to Ethereum](https://ethereum.org/content/developers/docs/intro-to-ethereum/index.md): Developer-focused introduction
-- [Intro to Ether](https://ethereum.org/content/developers/docs/intro-to-ether/index.md): Understanding ETH as a developer
-- [Intro to DApps](https://ethereum.org/content/developers/docs/dapps/index.md): Decentralized applications
-- [Web2 vs Web3](https://ethereum.org/content/developers/docs/web2-vs-web3/index.md): Comparing paradigms
-- [Accounts](https://ethereum.org/content/developers/docs/accounts/index.md): Externally owned and contract accounts
-- [Transactions](https://ethereum.org/content/developers/docs/transactions/index.md): State changes and execution
-- [Blocks](https://ethereum.org/content/developers/docs/blocks/index.md): Transaction batching and ordering
-- [Ethereum Virtual Machine (EVM)](https://ethereum.org/content/developers/docs/evm/index.md): The execution environment
-  - [EVM Opcodes](https://ethereum.org/content/developers/docs/evm/opcodes/index.md): Low-level instructions
-- [Gas and Fees](https://ethereum.org/content/developers/docs/gas/index.md): Transaction costs and optimization
-- [Nodes and Clients](https://ethereum.org/content/developers/docs/nodes-and-clients/index.md): Network infrastructure
-  - [Running a Node](https://ethereum.org/content/developers/docs/nodes-and-clients/run-a-node/index.md): Setting up infrastructure
-  - [Client Diversity](https://ethereum.org/content/developers/docs/nodes-and-clients/client-diversity/index.md): Network resilience
-  - [Nodes as a Service](https://ethereum.org/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md): Managed node providers
-  - [Node Architecture](https://ethereum.org/content/developers/docs/nodes-and-clients/node-architecture/index.md): System design
-  - [Light Clients](https://ethereum.org/content/developers/docs/nodes-and-clients/light-clients/index.md): Lightweight verification
-  - [Archive Nodes](https://ethereum.org/content/developers/docs/nodes-and-clients/archive-nodes/index.md): Full historical data
-  - [Bootnodes](https://ethereum.org/content/developers/docs/nodes-and-clients/bootnodes/index.md): Network discovery
-- [Networks](https://ethereum.org/content/developers/docs/networks/index.md): Mainnet, testnets, and local networks
-- [Consensus Mechanisms](https://ethereum.org/content/developers/docs/consensus-mechanisms/index.md): Network agreement
-  - [Proof of Stake](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/index.md): Current consensus mechanism
-    - [Gasper](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/gasper/index.md): Ethereum's consensus protocol
-    - [Weak Subjectivity](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md): Security assumptions
-    - [Attestations](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attestations/index.md): Validator voting mechanism
-    - [Rewards and Penalties](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md): Validator incentives
-    - [Attack and Defense](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md): Security considerations
-    - [Keys](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/keys/index.md): Validator key management
-    - [PoS vs PoW](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md): Consensus comparison
-    - [Block Proposal](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/block-proposal/index.md): Block creation process
-    - [PoS FAQs](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/faqs/index.md): Frequently asked questions
-  - [Proof of Work](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/index.md): Historical consensus mechanism
-    - [Mining](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/index.md): Block production process
-      - [Mining Algorithms](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md): Cryptographic algorithms
-        - [Dagger-Hashimoto](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md): Original algorithm
-        - [Ethash](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md): Production algorithm
-  - [Proof of Authority](https://ethereum.org/content/developers/docs/consensus-mechanisms/poa/index.md): Permissioned consensus
-
-#### Ethereum Stack
-- [Ethereum Stack Overview](https://ethereum.org/content/developers/docs/ethereum-stack/index.md): Technology layers
-- [Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/index.md): Self-executing programs
-  - [Smart Contract Languages](https://ethereum.org/content/developers/docs/smart-contracts/languages/index.md): Solidity, Vyper, and others
-  - [Smart Contract Anatomy](https://ethereum.org/content/developers/docs/smart-contracts/anatomy/index.md): Structure and components
-  - [Smart Contract Libraries](https://ethereum.org/content/developers/docs/smart-contracts/libraries/index.md): Reusable code
-  - [Testing Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/testing/index.md): Verification strategies
-  - [Compiling Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/compiling/index.md): Build process
-  - [Deploying Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/deploying/index.md): Deployment strategies
-  - [Verifying Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/verifying/index.md): Source code verification
-  - [Upgrading Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/upgrading/index.md): Contract upgrade patterns
-  - [Smart Contract Security](https://ethereum.org/content/developers/docs/smart-contracts/security/index.md): Security best practices
-  - [Formal Verification](https://ethereum.org/content/developers/docs/smart-contracts/formal-verification/index.md): Mathematical proof methods
-  - [Composability](https://ethereum.org/content/developers/docs/smart-contracts/composability/index.md): Contract interaction patterns
-- [Development Networks](https://ethereum.org/content/developers/docs/development-networks/index.md): Local and test environments
-- [Development Frameworks](https://ethereum.org/content/developers/docs/frameworks/index.md): Hardhat, Truffle, and others
-- [Ethereum Client APIs](https://ethereum.org/developers/docs/apis/): Interacting with Ethereum
-  - [JavaScript APIs](https://ethereum.org/content/developers/docs/apis/javascript/index.md): Web3.js and ethers.js
-  - [Backend APIs](https://ethereum.org/content/developers/docs/apis/backend/index.md): Server-side integration
-  - [JSON-RPC](https://ethereum.org/content/developers/docs/apis/json-rpc/index.md): Protocol specification
-- [Data and Analytics](https://ethereum.org/content/developers/docs/data-and-analytics/index.md): Blockchain data access
-  - [Block Explorers](https://ethereum.org/content/developers/docs/data-and-analytics/block-explorers/index.md): Data visualization tools
-- [Storage](https://ethereum.org/content/developers/docs/storage/index.md): Data persistence strategies
-- [IDEs](https://ethereum.org/content/developers/docs/ides/index.md): Development environments
-- [Programming Languages](https://ethereum.org/content/developers/docs/programming-languages/index.md): Language-specific resources
-  - [Dart](https://ethereum.org/content/developers/docs/programming-languages/dart/index.md): Flutter and mobile development
-  - [Delphi](https://ethereum.org/content/developers/docs/programming-languages/delphi/index.md): Object Pascal programming
-  - [.NET](https://ethereum.org/content/developers/docs/programming-languages/dot-net/index.md): Microsoft .NET framework
-  - [Elixir](https://ethereum.org/content/developers/docs/programming-languages/elixir/index.md): Functional programming language
-  - [Go](https://ethereum.org/content/developers/docs/programming-languages/golang/index.md): Google's programming language
-  - [Java](https://ethereum.org/content/developers/docs/programming-languages/java/index.md): Enterprise application development
-  - [JavaScript](https://ethereum.org/content/developers/docs/programming-languages/javascript/index.md): Web3 development
-  - [Python](https://ethereum.org/content/developers/docs/programming-languages/python/index.md): Backend development
-  - [Ruby](https://ethereum.org/content/developers/docs/programming-languages/ruby/index.md): Web application development
-  - [Rust](https://ethereum.org/content/developers/docs/programming-languages/rust/index.md): Systems programming
-
-#### Advanced Topics
-- [Bridges](https://ethereum.org/content/developers/docs/bridges/index.md): Cross-chain interoperability
-- [Standards](https://ethereum.org/content/developers/docs/standards/index.md): Ethereum Request for Comments (ERCs)
-  - [Token Standards](https://ethereum.org/content/developers/docs/standards/tokens/index.md): Ethereum token specifications
-    - [ERC-20](https://ethereum.org/content/developers/docs/standards/tokens/erc-20/index.md): Fungible token standard
-    - [ERC-721](https://ethereum.org/content/developers/docs/standards/tokens/erc-721/index.md): Non-fungible token standard
-    - [ERC-1155](https://ethereum.org/content/developers/docs/standards/tokens/erc-1155/index.md): Multi-token standard
-- [MEV](https://ethereum.org/content/developers/docs/mev/index.md): Maximal Extractable Value
-- [Oracles](https://ethereum.org/content/developers/docs/oracles/index.md): External data integration
-- [Scaling](https://ethereum.org/content/developers/docs/scaling/index.md): Layer 2 solutions
-  - [Optimistic Rollups](https://ethereum.org/content/developers/docs/scaling/optimistic-rollups/index.md): Fraud proof scaling
-  - [ZK Rollups](https://ethereum.org/content/developers/docs/scaling/zk-rollups/index.md): Zero-knowledge scaling
-  - [State Channels](https://ethereum.org/content/developers/docs/scaling/state-channels/index.md): Off-chain computation
-  - [Sidechains](https://ethereum.org/content/developers/docs/scaling/sidechains/index.md): Independent blockchains
-  - [Plasma](https://ethereum.org/content/developers/docs/scaling/plasma/index.md): Child chain scaling solution
-  - [Validium](https://ethereum.org/content/developers/docs/scaling/validium/index.md): Off-chain data availability
-- [Data Availability](https://ethereum.org/content/developers/docs/data-availability/index.md): Data accessibility solutions
-  - [Blockchain Data Storage Strategies](https://ethereum.org/content/developers/docs/data-availability/blockchain-data-storage-strategies/index.md): Storage optimization methods
-- [Networking Layer](https://ethereum.org/content/developers/docs/networking-layer/index.md): P2P networking
-  - [Network Addresses](https://ethereum.org/content/developers/docs/networking-layer/network-addresses/index.md): Node identification
-  - [Portal Network](https://ethereum.org/content/developers/docs/networking-layer/portal-network/index.md): Light client networking
-- [Data Structures and Encoding](https://ethereum.org/content/developers/docs/data-structures-and-encoding/index.md): Low-level data formats
-  - [Patricia Merkle Trie](https://ethereum.org/content/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md): Ethereum's data structure
-  - [RLP](https://ethereum.org/content/developers/docs/data-structures-and-encoding/rlp/index.md): Recursive Length Prefix encoding
-  - [SSZ](https://ethereum.org/content/developers/docs/data-structures-and-encoding/ssz/index.md): Simple Serialize format
-  - [Web3 Secret Storage](https://ethereum.org/content/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md): Key storage specification
-
-#### Design Fundamentals
-- [Design and UX](https://ethereum.org/content/developers/docs/design-and-ux/index.md): User experience for Web3
-  - [Heuristics for Web3](https://ethereum.org/content/developers/docs/design-and-ux/heuristics-for-web3/index.md): UX design principles
-  - [DEX Design Best Practices](https://ethereum.org/content/developers/docs/design-and-ux/dex-design-best-practice/index.md): Decentralized exchange UX
-
-### Enterprise
-- [Enterprise Ethereum](https://ethereum.org/enterprise/): Business adoption and use cases
-
-## Participate
-
-### Community
-- [Community Hub](https://ethereum.org/community/): Get involved with Ethereum
-- [Ethereum Online](https://ethereum.org/content/community/online/index.md): Virtual communities and platforms
-- [Ethereum Events](https://ethereum.org/content/community/events/index.md): Meetups and conferences worldwide
-- [Community Grants](https://ethereum.org/content/community/grants/index.md): Funding opportunities for ecosystem projects
-- [Bug Bounty Program](https://ethereum.org/bug-bounty/): Security vulnerability rewards
-- [Code of Conduct](https://ethereum.org/content/community/code-of-conduct/index.md): Community guidelines and expectations
-- [Open Research](https://ethereum.org/content/community/research/index.md): Academic research and collaboration
-
-### Contributing
-- [Contributing Guide](https://ethereum.org/content/contributing/index.md): How to contribute to ethereum.org
-- [Translation Program](https://ethereum.org/content/contributing/translation-program/index.md): Localization efforts and language support
-- [Content Resources](https://ethereum.org/content/contributing/content-resources/index.md): Writing guidelines and standards
-- [Design Contributions](https://ethereum.org/content/contributing/design/index.md): Design resources and style guides
+- [10years > Terms And Conditions](https://ethereum.org/content/10years/terms-and-conditions/index.md)
 
 ### About
-- [About Ethereum.org](https://ethereum.org/content/about/index.md): Mission, vision, and team
-- [Ethereum Foundation](https://ethereum.org/content/foundation/index.md): Supporting organization and governance
-- [Ethereum Brand Assets](https://ethereum.org/assets/): Official logos and branding guidelines
 
-### External Resources
-- [Ethereum Foundation Blog](https://blog.ethereum.org/): Official announcements and updates
-- [Ethereum Support Program (ESP)](https://esp.ethereum.foundation): Funding for ecosystem projects
-- [Devcon](https://devcon.org/): Annual Ethereum developer conference
+- [About](https://ethereum.org/content/about/index.md)
 
-## Research
+### Ai agents
 
-### Foundational Documents
-- [Ethereum Whitepaper](https://ethereum.org/content/whitepaper/index.md): Original vision document by Vitalik Buterin
-- [Ethereum Improvement Proposals (EIPs)](https://ethereum.org/content/eips/index.md): Protocol upgrade specifications
-- [Ethereum History](https://ethereum.org/content/history/index.md): Timeline and key milestones
+- [Ai Agents](https://ethereum.org/content/ai-agents/index.md)
 
-### Protocol Development
-- [Ethereum Roadmap](https://ethereum.org/roadmap/): Future development plans and priorities
-- [Roadmap Security](https://ethereum.org/content/roadmap/security/index.md): Security improvements and cryptographic advances
-- [Roadmap Scaling](https://ethereum.org/content/roadmap/scaling/index.md): Scalability solutions and layer 2 integration
-- [Roadmap User Experience](https://ethereum.org/content/roadmap/user-experience/index.md): UX improvements and account abstraction
-- [Roadmap Future-Proofing](https://ethereum.org/content/roadmap/future-proofing/index.md): Long-term sustainability and quantum resistance
+### Bridges
 
-### Research Areas
-- [Open Research](https://ethereum.org/content/community/research/index.md): Academic research and collaboration opportunities
-- [Governance](https://ethereum.org/content/governance/index.md): Protocol governance and decision-making processes
-- [Energy Consumption](https://ethereum.org/content/energy-consumption/index.md): Environmental impact and sustainability
-- [Trillion Dollar Security](https://ethereum.org/trillion-dollar-security/): Ethereum security analysis and economics
+- [Bridges](https://ethereum.org/content/bridges/index.md)
 
-## Key Resources
+### Community
 
-### Official Documentation
-- [Developer Documentation](https://ethereum.org/content/developers/docs/index.md): Complete technical reference
-- [Ethereum Improvement Proposals](https://ethereum.org/content/eips/index.md): Protocol specifications
-- [Ethereum Whitepaper](https://ethereum.org/content/whitepaper/index.md): Original design document
+- [Community > Code Of Conduct](https://ethereum.org/content/community/code-of-conduct/index.md)
+- [Community > Events](https://ethereum.org/content/community/events/index.md)
+- [Community > Events > Organizing](https://ethereum.org/content/community/events/organizing/index.md)
+- [Community > Get Involved](https://ethereum.org/content/community/get-involved/index.md)
+- [Community > Grants](https://ethereum.org/content/community/grants/index.md)
+- [Community > Language Resources](https://ethereum.org/content/community/language-resources/index.md)
+- [Community > Online](https://ethereum.org/content/community/online/index.md)
+- [Community > Research](https://ethereum.org/content/community/research/index.md)
+- [Community > Support](https://ethereum.org/content/community/support/index.md)
 
-### Tools and Services
-- [Wallet Finder](https://ethereum.org/wallets/find-wallet/): Wallet recommendation tool
-- [DApp Browser](https://ethereum.org/dapps/): Decentralized application directory
-- [Node Setup Guides](https://ethereum.org/run-a-node/): Infrastructure guides
-- [Get ETH](https://ethereum.org/get-eth/): Acquisition methods
+### Contributing
 
-### Educational Content
-- [Beginner's Guide](https://ethereum.org/what-is-ethereum/): Start here for basics
-- [Interactive Tutorials](https://ethereum.org/developers/tutorials/): Hands-on learning
-- [Quiz Platform](https://ethereum.org/quizzes/): Knowledge assessment
-- [Glossary](https://ethereum.org/glossary/): Comprehensive definitions
+- [Contributing > Adding Desci Projects](https://ethereum.org/content/contributing/adding-desci-projects/index.md)
+- [Contributing > Adding Developer Tools](https://ethereum.org/content/contributing/adding-developer-tools/index.md)
+- [Contributing > Adding Exchanges](https://ethereum.org/content/contributing/adding-exchanges/index.md)
+- [Contributing > Adding Glossary Terms](https://ethereum.org/content/contributing/adding-glossary-terms/index.md)
+- [Contributing > Adding Layer 2s](https://ethereum.org/content/contributing/adding-layer-2s/index.md)
+- [Contributing > Adding Products](https://ethereum.org/content/contributing/adding-products/index.md)
+- [Contributing > Adding Resources](https://ethereum.org/content/contributing/adding-resources/index.md)
+- [Contributing > Adding Staking Products](https://ethereum.org/content/contributing/adding-staking-products/index.md)
+- [Contributing > Adding Wallets](https://ethereum.org/content/contributing/adding-wallets/index.md)
+- [Contributing > Content Resources](https://ethereum.org/content/contributing/content-resources/index.md)
+- [Contributing > Design Principles](https://ethereum.org/content/contributing/design-principles/index.md)
+- [Contributing > Design > Adding Design Resources](https://ethereum.org/content/contributing/design/adding-design-resources/index.md)
+- [Contributing > Design](https://ethereum.org/content/contributing/design/index.md)
+- [Contributing](https://ethereum.org/content/contributing/index.md)
+- [Contributing > Quizzes](https://ethereum.org/content/contributing/quizzes/index.md)
+- [Contributing > Style Guide > Content Standardization](https://ethereum.org/content/contributing/style-guide/content-standardization/index.md)
+- [Contributing > Style Guide](https://ethereum.org/content/contributing/style-guide/index.md)
+- [Contributing > Translation Program > Content Buckets](https://ethereum.org/content/contributing/translation-program/content-buckets/index.md)
+- [Contributing > Translation Program > Faq](https://ethereum.org/content/contributing/translation-program/faq/index.md)
+- [Contributing > Translation Program > How To Translate](https://ethereum.org/content/contributing/translation-program/how-to-translate/index.md)
+- [Contributing > Translation Program](https://ethereum.org/content/contributing/translation-program/index.md)
+- [Contributing > Translation Program > Mission And Vision](https://ethereum.org/content/contributing/translation-program/mission-and-vision/index.md)
+- [Contributing > Translation Program > Playbook](https://ethereum.org/content/contributing/translation-program/playbook/index.md)
+- [Contributing > Translation Program > Resources](https://ethereum.org/content/contributing/translation-program/resources/index.md)
+- [Contributing > Translation Program > Translatathon > Details](https://ethereum.org/content/contributing/translation-program/translatathon/details/index.md)
+- [Contributing > Translation Program > Translatathon](https://ethereum.org/content/contributing/translation-program/translatathon/index.md)
+- [Contributing > Translation Program > Translatathon > Terms And Conditions](https://ethereum.org/content/contributing/translation-program/translatathon/terms-and-conditions/index.md)
+- [Contributing > Translation Program > Translatathon > Translatathon Hubs](https://ethereum.org/content/contributing/translation-program/translatathon/translatathon-hubs/index.md)
+- [Contributing > Translation Program > Translators Guide](https://ethereum.org/content/contributing/translation-program/translators-guide/index.md)
 
-## Legal and Policies
+### Cookie policy
 
-### Terms and Policies
-- [Privacy Policy](https://ethereum.org/content/privacy-policy/index.md): Data protection and privacy practices
-- [Terms of Use](https://ethereum.org/content/terms-of-use/index.md): Website usage terms and conditions
-- [Cookie Policy](https://ethereum.org/content/cookie-policy/index.md): Information about cookie usage and tracking
+- [Cookie Policy](https://ethereum.org/content/cookie-policy/index.md)
+
+### Dao
+
+- [Dao](https://ethereum.org/content/dao/index.md)
+
+### Decentralized identity
+
+- [Decentralized Identity](https://ethereum.org/content/decentralized-identity/index.md)
+
+### Defi
+
+- [Defi](https://ethereum.org/content/defi/index.md)
+
+### Desci
+
+- [Desci](https://ethereum.org/content/desci/index.md)
+
+### Developers
+
+- [Developers > Docs > Accounts](https://ethereum.org/content/developers/docs/accounts/index.md)
+- [Developers > Docs > Apis > Backend](https://ethereum.org/content/developers/docs/apis/backend/index.md)
+- [Developers > Docs > Apis > Javascript](https://ethereum.org/content/developers/docs/apis/javascript/index.md)
+- [Developers > Docs > Apis > Json Rpc](https://ethereum.org/content/developers/docs/apis/json-rpc/index.md)
+- [Developers > Docs > Blocks](https://ethereum.org/content/developers/docs/blocks/index.md)
+- [Developers > Docs > Bridges](https://ethereum.org/content/developers/docs/bridges/index.md)
+- [Developers > Docs > Consensus Mechanisms](https://ethereum.org/content/developers/docs/consensus-mechanisms/index.md)
+- [Developers > Docs > Consensus Mechanisms > Poa](https://ethereum.org/content/developers/docs/consensus-mechanisms/poa/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Attack And Defense](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Attestations](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attestations/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Block Proposal](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/block-proposal/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Faqs](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/faqs/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Gasper](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/gasper/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Keys](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/keys/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Pos Vs Pow](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Rewards And Penalties](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pos > Weak Subjectivity](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pow](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pow > Mining](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pow > Mining > Mining Algorithms > Dagger Hashimoto](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pow > Mining > Mining Algorithms > Ethash](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md)
+- [Developers > Docs > Consensus Mechanisms > Pow > Mining > Mining Algorithms](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md)
+- [Developers > Docs > Dapps](https://ethereum.org/content/developers/docs/dapps/index.md)
+- [Developers > Docs > Data And Analytics > Block Explorers](https://ethereum.org/content/developers/docs/data-and-analytics/block-explorers/index.md)
+- [Developers > Docs > Data And Analytics](https://ethereum.org/content/developers/docs/data-and-analytics/index.md)
+- [Developers > Docs > Data Availability > Blockchain Data Storage Strategies](https://ethereum.org/content/developers/docs/data-availability/blockchain-data-storage-strategies/index.md)
+- [Developers > Docs > Data Availability](https://ethereum.org/content/developers/docs/data-availability/index.md)
+- [Developers > Docs > Data Structures And Encoding](https://ethereum.org/content/developers/docs/data-structures-and-encoding/index.md)
+- [Developers > Docs > Data Structures And Encoding > Patricia Merkle Trie](https://ethereum.org/content/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md)
+- [Developers > Docs > Data Structures And Encoding > Rlp](https://ethereum.org/content/developers/docs/data-structures-and-encoding/rlp/index.md)
+- [Developers > Docs > Data Structures And Encoding > Ssz](https://ethereum.org/content/developers/docs/data-structures-and-encoding/ssz/index.md)
+- [Developers > Docs > Data Structures And Encoding > Web3 Secret Storage](https://ethereum.org/content/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md)
+- [Developers > Docs > Design And Ux > Dex Design Best Practice](https://ethereum.org/content/developers/docs/design-and-ux/dex-design-best-practice/index.md)
+- [Developers > Docs > Design And Ux > Heuristics For Web3](https://ethereum.org/content/developers/docs/design-and-ux/heuristics-for-web3/index.md)
+- [Developers > Docs > Design And Ux](https://ethereum.org/content/developers/docs/design-and-ux/index.md)
+- [Developers > Docs > Development Networks](https://ethereum.org/content/developers/docs/development-networks/index.md)
+- [Developers > Docs > Ethereum Stack](https://ethereum.org/content/developers/docs/ethereum-stack/index.md)
+- [Developers > Docs > Evm](https://ethereum.org/content/developers/docs/evm/index.md)
+- [Developers > Docs > Evm > Opcodes](https://ethereum.org/content/developers/docs/evm/opcodes/index.md)
+- [Developers > Docs > Frameworks](https://ethereum.org/content/developers/docs/frameworks/index.md)
+- [Developers > Docs > Gas](https://ethereum.org/content/developers/docs/gas/index.md)
+- [Developers > Docs > Ides](https://ethereum.org/content/developers/docs/ides/index.md)
+- [Developers > Docs](https://ethereum.org/content/developers/docs/index.md)
+- [Developers > Docs > Intro To Ether](https://ethereum.org/content/developers/docs/intro-to-ether/index.md)
+- [Developers > Docs > Intro To Ethereum](https://ethereum.org/content/developers/docs/intro-to-ethereum/index.md)
+- [Developers > Docs > Mev](https://ethereum.org/content/developers/docs/mev/index.md)
+- [Developers > Docs > Networking Layer](https://ethereum.org/content/developers/docs/networking-layer/index.md)
+- [Developers > Docs > Networking Layer > Network Addresses](https://ethereum.org/content/developers/docs/networking-layer/network-addresses/index.md)
+- [Developers > Docs > Networking Layer > Portal Network](https://ethereum.org/content/developers/docs/networking-layer/portal-network/index.md)
+- [Developers > Docs > Networks](https://ethereum.org/content/developers/docs/networks/index.md)
+- [Developers > Docs > Nodes And Clients > Archive Nodes](https://ethereum.org/content/developers/docs/nodes-and-clients/archive-nodes/index.md)
+- [Developers > Docs > Nodes And Clients > Bootnodes](https://ethereum.org/content/developers/docs/nodes-and-clients/bootnodes/index.md)
+- [Developers > Docs > Nodes And Clients > Client Diversity](https://ethereum.org/content/developers/docs/nodes-and-clients/client-diversity/index.md)
+- [Developers > Docs > Nodes And Clients](https://ethereum.org/content/developers/docs/nodes-and-clients/index.md)
+- [Developers > Docs > Nodes And Clients > Light Clients](https://ethereum.org/content/developers/docs/nodes-and-clients/light-clients/index.md)
+- [Developers > Docs > Nodes And Clients > Node Architecture](https://ethereum.org/content/developers/docs/nodes-and-clients/node-architecture/index.md)
+- [Developers > Docs > Nodes And Clients > Nodes As A Service](https://ethereum.org/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md)
+- [Developers > Docs > Nodes And Clients > Run A Node](https://ethereum.org/content/developers/docs/nodes-and-clients/run-a-node/index.md)
+- [Developers > Docs > Oracles](https://ethereum.org/content/developers/docs/oracles/index.md)
+- [Developers > Docs > Programming Languages > Dart](https://ethereum.org/content/developers/docs/programming-languages/dart/index.md)
+- [Developers > Docs > Programming Languages > Delphi](https://ethereum.org/content/developers/docs/programming-languages/delphi/index.md)
+- [Developers > Docs > Programming Languages > Dot Net](https://ethereum.org/content/developers/docs/programming-languages/dot-net/index.md)
+- [Developers > Docs > Programming Languages > Elixir](https://ethereum.org/content/developers/docs/programming-languages/elixir/index.md)
+- [Developers > Docs > Programming Languages > Golang](https://ethereum.org/content/developers/docs/programming-languages/golang/index.md)
+- [Developers > Docs > Programming Languages](https://ethereum.org/content/developers/docs/programming-languages/index.md)
+- [Developers > Docs > Programming Languages > Java](https://ethereum.org/content/developers/docs/programming-languages/java/index.md)
+- [Developers > Docs > Programming Languages > Javascript](https://ethereum.org/content/developers/docs/programming-languages/javascript/index.md)
+- [Developers > Docs > Programming Languages > Python](https://ethereum.org/content/developers/docs/programming-languages/python/index.md)
+- [Developers > Docs > Programming Languages > Ruby](https://ethereum.org/content/developers/docs/programming-languages/ruby/index.md)
+- [Developers > Docs > Programming Languages > Rust](https://ethereum.org/content/developers/docs/programming-languages/rust/index.md)
+- [Developers > Docs > Scaling](https://ethereum.org/content/developers/docs/scaling/index.md)
+- [Developers > Docs > Scaling > Optimistic Rollups](https://ethereum.org/content/developers/docs/scaling/optimistic-rollups/index.md)
+- [Developers > Docs > Scaling > Plasma](https://ethereum.org/content/developers/docs/scaling/plasma/index.md)
+- [Developers > Docs > Scaling > Sidechains](https://ethereum.org/content/developers/docs/scaling/sidechains/index.md)
+- [Developers > Docs > Scaling > State Channels](https://ethereum.org/content/developers/docs/scaling/state-channels/index.md)
+- [Developers > Docs > Scaling > Validium](https://ethereum.org/content/developers/docs/scaling/validium/index.md)
+- [Developers > Docs > Scaling > Zk Rollups](https://ethereum.org/content/developers/docs/scaling/zk-rollups/index.md)
+- [Developers > Docs > Smart Contracts > Anatomy](https://ethereum.org/content/developers/docs/smart-contracts/anatomy/index.md)
+- [Developers > Docs > Smart Contracts > Compiling](https://ethereum.org/content/developers/docs/smart-contracts/compiling/index.md)
+- [Developers > Docs > Smart Contracts > Composability](https://ethereum.org/content/developers/docs/smart-contracts/composability/index.md)
+- [Developers > Docs > Smart Contracts > Deploying](https://ethereum.org/content/developers/docs/smart-contracts/deploying/index.md)
+- [Developers > Docs > Smart Contracts > Formal Verification](https://ethereum.org/content/developers/docs/smart-contracts/formal-verification/index.md)
+- [Developers > Docs > Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/index.md)
+- [Developers > Docs > Smart Contracts > Languages](https://ethereum.org/content/developers/docs/smart-contracts/languages/index.md)
+- [Developers > Docs > Smart Contracts > Libraries](https://ethereum.org/content/developers/docs/smart-contracts/libraries/index.md)
+- [Developers > Docs > Smart Contracts > Security](https://ethereum.org/content/developers/docs/smart-contracts/security/index.md)
+- [Developers > Docs > Smart Contracts > Testing](https://ethereum.org/content/developers/docs/smart-contracts/testing/index.md)
+- [Developers > Docs > Smart Contracts > Upgrading](https://ethereum.org/content/developers/docs/smart-contracts/upgrading/index.md)
+- [Developers > Docs > Smart Contracts > Verifying](https://ethereum.org/content/developers/docs/smart-contracts/verifying/index.md)
+- [Developers > Docs > Standards](https://ethereum.org/content/developers/docs/standards/index.md)
+- [Developers > Docs > Standards > Tokens > Erc 1155](https://ethereum.org/content/developers/docs/standards/tokens/erc-1155/index.md)
+- [Developers > Docs > Standards > Tokens > Erc 20](https://ethereum.org/content/developers/docs/standards/tokens/erc-20/index.md)
+- [Developers > Docs > Standards > Tokens > Erc 223](https://ethereum.org/content/developers/docs/standards/tokens/erc-223/index.md)
+- [Developers > Docs > Standards > Tokens > Erc 4626](https://ethereum.org/content/developers/docs/standards/tokens/erc-4626/index.md)
+- [Developers > Docs > Standards > Tokens > Erc 721](https://ethereum.org/content/developers/docs/standards/tokens/erc-721/index.md)
+- [Developers > Docs > Standards > Tokens > Erc 777](https://ethereum.org/content/developers/docs/standards/tokens/erc-777/index.md)
+- [Developers > Docs > Standards > Tokens](https://ethereum.org/content/developers/docs/standards/tokens/index.md)
+- [Developers > Docs > Storage](https://ethereum.org/content/developers/docs/storage/index.md)
+- [Developers > Docs > Transactions](https://ethereum.org/content/developers/docs/transactions/index.md)
+- [Developers > Docs > Web2 Vs Web3](https://ethereum.org/content/developers/docs/web2-vs-web3/index.md)
+- [Developers > Tutorials > A Developers Guide To Ethereum Part One](https://ethereum.org/content/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md)
+- [Developers > Tutorials > All You Can Cache](https://ethereum.org/content/developers/tutorials/all-you-can-cache/index.md)
+- [Developers > Tutorials > Calling A Smart Contract From Javascript](https://ethereum.org/content/developers/tutorials/calling-a-smart-contract-from-javascript/index.md)
+- [Developers > Tutorials > Creating A Wagmi Ui For Your Contract](https://ethereum.org/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md)
+- [Developers > Tutorials > Deploying Your First Smart Contract](https://ethereum.org/content/developers/tutorials/deploying-your-first-smart-contract/index.md)
+- [Developers > Tutorials > Develop And Test Dapps With A Multi Client Local Eth Testnet](https://ethereum.org/content/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md)
+- [Developers > Tutorials > Downsizing Contracts To Fight The Contract Size Limit](https://ethereum.org/content/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md)
+- [Developers > Tutorials > Eip 1271 Smart Contract Signatures](https://ethereum.org/content/developers/tutorials/eip-1271-smart-contract-signatures/index.md)
+- [Developers > Tutorials > Erc 721 Vyper Annotated Code](https://ethereum.org/content/developers/tutorials/erc-721-vyper-annotated-code/index.md)
+- [Developers > Tutorials > Erc20 Annotated Code](https://ethereum.org/content/developers/tutorials/erc20-annotated-code/index.md)
+- [Developers > Tutorials > Erc20 With Safety Rails](https://ethereum.org/content/developers/tutorials/erc20-with-safety-rails/index.md)
+- [Developers > Tutorials > Ethereum For Web2 Auth](https://ethereum.org/content/developers/tutorials/ethereum-for-web2-auth/index.md)
+- [Developers > Tutorials > Getting Started With Ethereum Development Using Alchemy](https://ethereum.org/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md)
+- [Developers > Tutorials > Guide To Smart Contract Security Tools](https://ethereum.org/content/developers/tutorials/guide-to-smart-contract-security-tools/index.md)
+- [Developers > Tutorials > Hello World Smart Contract Fullstack](https://ethereum.org/content/developers/tutorials/hello-world-smart-contract-fullstack/index.md)
+- [Developers > Tutorials > Hello World Smart Contract](https://ethereum.org/content/developers/tutorials/hello-world-smart-contract/index.md)
+- [Developers > Tutorials > How To Implement An Erc721 Market](https://ethereum.org/content/developers/tutorials/how-to-implement-an-erc721-market/index.md)
+- [Developers > Tutorials > How To Mint An Nft](https://ethereum.org/content/developers/tutorials/how-to-mint-an-nft/index.md)
+- [Developers > Tutorials > How To Mock Solidity Contracts For Testing](https://ethereum.org/content/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md)
+- [Developers > Tutorials > How To Use Echidna To Test Smart Contracts](https://ethereum.org/content/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md)
+- [Developers > Tutorials > How To Use Manticore To Find Smart Contract Bugs](https://ethereum.org/content/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md)
+- [Developers > Tutorials > How To Use Slither To Find Smart Contract Bugs](https://ethereum.org/content/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md)
+- [Developers > Tutorials > How To Use Tellor As Your Oracle](https://ethereum.org/content/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md)
+- [Developers > Tutorials > How To View Nft In Metamask](https://ethereum.org/content/developers/tutorials/how-to-view-nft-in-metamask/index.md)
+- [Developers > Tutorials > How To Write And Deploy An Nft](https://ethereum.org/content/developers/tutorials/how-to-write-and-deploy-an-nft/index.md)
+- [Developers > Tutorials > Interact With Other Contracts From Solidity](https://ethereum.org/content/developers/tutorials/interact-with-other-contracts-from-solidity/index.md)
+- [Developers > Tutorials > Ipfs Decentralized Ui](https://ethereum.org/content/developers/tutorials/ipfs-decentralized-ui/index.md)
+- [Developers > Tutorials > Kickstart Your Dapp Frontend Development With Create Eth App](https://ethereum.org/content/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md)
+- [Developers > Tutorials > Learn Foundational Ethereum Topics With Sql](https://ethereum.org/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md)
+- [Developers > Tutorials > Logging Events Smart Contracts](https://ethereum.org/content/developers/tutorials/logging-events-smart-contracts/index.md)
+- [Developers > Tutorials > Merkle Proofs For Offline Data Integrity](https://ethereum.org/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md)
+- [Developers > Tutorials > Monitoring Geth With Influxdb And Grafana](https://ethereum.org/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md)
+- [Developers > Tutorials > Nft Minter](https://ethereum.org/content/developers/tutorials/nft-minter/index.md)
+- [Developers > Tutorials > Optimism Std Bridge Annotated Code](https://ethereum.org/content/developers/tutorials/optimism-std-bridge-annotated-code/index.md)
+- [Developers > Tutorials > Reverse Engineering A Contract](https://ethereum.org/content/developers/tutorials/reverse-engineering-a-contract/index.md)
+- [Developers > Tutorials > Run Node Raspberry Pi](https://ethereum.org/content/developers/tutorials/run-node-raspberry-pi/index.md)
+- [Developers > Tutorials > Scam Token Tricks](https://ethereum.org/content/developers/tutorials/scam-token-tricks/index.md)
+- [Developers > Tutorials > Secret State](https://ethereum.org/content/developers/tutorials/secret-state/index.md)
+- [Developers > Tutorials > Secure Development Workflow](https://ethereum.org/content/developers/tutorials/secure-development-workflow/index.md)
+- [Developers > Tutorials > Send Token Ethersjs](https://ethereum.org/content/developers/tutorials/send-token-ethersjs/index.md)
+- [Developers > Tutorials > Sending Transactions Using Web3 And Alchemy](https://ethereum.org/content/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md)
+- [Developers > Tutorials > Server Components](https://ethereum.org/content/developers/tutorials/server-components/index.md)
+- [Developers > Tutorials > Set Up Web3js To Use Ethereum In Javascript](https://ethereum.org/content/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md)
+- [Developers > Tutorials > Short Abi](https://ethereum.org/content/developers/tutorials/short-abi/index.md)
+- [Developers > Tutorials > Smart Contract Security Guidelines](https://ethereum.org/content/developers/tutorials/smart-contract-security-guidelines/index.md)
+- [Developers > Tutorials > Testing Erc 20 Tokens With Waffle](https://ethereum.org/content/developers/tutorials/testing-erc-20-tokens-with-waffle/index.md)
+- [Developers > Tutorials > The Graph Fixing Web3 Data Querying](https://ethereum.org/content/developers/tutorials/the-graph-fixing-web3-data-querying/index.md)
+- [Developers > Tutorials > Token Integration Checklist](https://ethereum.org/content/developers/tutorials/token-integration-checklist/index.md)
+- [Developers > Tutorials > Transfers And Approval Of Erc 20 Tokens From A Solidity Smart Contract](https://ethereum.org/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md)
+- [Developers > Tutorials > Understand The Erc 20 Token Smart Contract](https://ethereum.org/content/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md)
+- [Developers > Tutorials > Uniswap V2 Annotated Code](https://ethereum.org/content/developers/tutorials/uniswap-v2-annotated-code/index.md)
+- [Developers > Tutorials > Using Websockets](https://ethereum.org/content/developers/tutorials/using-websockets/index.md)
+- [Developers > Tutorials > Waffle Dynamic Mocking And Testing Calls](https://ethereum.org/content/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md)
+- [Developers > Tutorials > Waffle Say Hello World With Hardhat And Ethers](https://ethereum.org/content/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md)
+- [Developers > Tutorials > Waffle Test Simple Smart Contract](https://ethereum.org/content/developers/tutorials/waffle-test-simple-smart-contract/index.md)
+- [Developers > Tutorials > Yellow Paper Evm](https://ethereum.org/content/developers/tutorials/yellow-paper-evm/index.md)
+
+### Eips
+
+- [Eips](https://ethereum.org/content/eips/index.md)
+
+### Energy consumption
+
+- [Energy Consumption](https://ethereum.org/content/energy-consumption/index.md)
+
+### Enterprise
+
+- [Enterprise > Use Cases](https://ethereum.org/content/enterprise/use-cases/index.md)
+
+### Eth
+
+- [Eth > Supply](https://ethereum.org/content/eth/supply/index.md)
+
+### Foundation
+
+- [Foundation](https://ethereum.org/content/foundation/index.md)
+
+### Glossary
+
+- [Glossary](https://ethereum.org/content/glossary/index.md)
+
+### Governance
+
+- [Governance](https://ethereum.org/content/governance/index.md)
+
+### Guides
+
+- [Guides > How To Create An Ethereum Account](https://ethereum.org/content/guides/how-to-create-an-ethereum-account/index.md)
+- [Guides > How To Id Scam Tokens](https://ethereum.org/content/guides/how-to-id-scam-tokens/index.md)
+- [Guides > How To Revoke Token Access](https://ethereum.org/content/guides/how-to-revoke-token-access/index.md)
+- [Guides > How To Swap Tokens](https://ethereum.org/content/guides/how-to-swap-tokens/index.md)
+- [Guides > How To Use A Bridge](https://ethereum.org/content/guides/how-to-use-a-bridge/index.md)
+- [Guides > How To Use A Wallet](https://ethereum.org/content/guides/how-to-use-a-wallet/index.md)
+- [Guides](https://ethereum.org/content/guides/index.md)
+
+### History
+
+- [History](https://ethereum.org/content/history/index.md)
+
+### Nft
+
+- [Nft](https://ethereum.org/content/nft/index.md)
+
+### Payments
+
+- [Payments](https://ethereum.org/content/payments/index.md)
+
+### Prediction markets
+
+- [Prediction Markets](https://ethereum.org/content/prediction-markets/index.md)
+
+### Privacy policy
+
+- [Privacy Policy](https://ethereum.org/content/privacy-policy/index.md)
+
+### Real world assets
+
+- [Real World Assets](https://ethereum.org/content/real-world-assets/index.md)
+
+### Refi
+
+- [Refi](https://ethereum.org/content/refi/index.md)
+
+### Roadmap
+
+- [Roadmap > Account Abstraction](https://ethereum.org/content/roadmap/account-abstraction/index.md)
+- [Roadmap > Beacon Chain](https://ethereum.org/content/roadmap/beacon-chain/index.md)
+- [Roadmap > Danksharding](https://ethereum.org/content/roadmap/danksharding/index.md)
+- [Roadmap > Dencun](https://ethereum.org/content/roadmap/dencun/index.md)
+- [Roadmap > Future Proofing](https://ethereum.org/content/roadmap/future-proofing/index.md)
+- [Roadmap > Merge](https://ethereum.org/content/roadmap/merge/index.md)
+- [Roadmap > Merge > Issuance](https://ethereum.org/content/roadmap/merge/issuance/index.md)
+- [Roadmap > Pbs](https://ethereum.org/content/roadmap/pbs/index.md)
+- [Roadmap > Pectra > 7702](https://ethereum.org/content/roadmap/pectra/7702/index.md)
+- [Roadmap > Pectra](https://ethereum.org/content/roadmap/pectra/index.md)
+- [Roadmap > Pectra > Maxeb](https://ethereum.org/content/roadmap/pectra/maxeb/index.md)
+- [Roadmap > Scaling](https://ethereum.org/content/roadmap/scaling/index.md)
+- [Roadmap > Secret Leader Election](https://ethereum.org/content/roadmap/secret-leader-election/index.md)
+- [Roadmap > Security](https://ethereum.org/content/roadmap/security/index.md)
+- [Roadmap > Single Slot Finality](https://ethereum.org/content/roadmap/single-slot-finality/index.md)
+- [Roadmap > Statelessness](https://ethereum.org/content/roadmap/statelessness/index.md)
+- [Roadmap > User Experience](https://ethereum.org/content/roadmap/user-experience/index.md)
+- [Roadmap > Verkle Trees](https://ethereum.org/content/roadmap/verkle-trees/index.md)
+
+### Security
+
+- [Security](https://ethereum.org/content/security/index.md)
+
+### Smart contracts
+
+- [Smart Contracts](https://ethereum.org/content/smart-contracts/index.md)
+
+### Social networks
+
+- [Social Networks](https://ethereum.org/content/social-networks/index.md)
+
+### Staking
+
+- [Staking > Dvt](https://ethereum.org/content/staking/dvt/index.md)
+- [Staking > Pools](https://ethereum.org/content/staking/pools/index.md)
+- [Staking > Saas](https://ethereum.org/content/staking/saas/index.md)
+- [Staking > Solo](https://ethereum.org/content/staking/solo/index.md)
+- [Staking > Withdrawals](https://ethereum.org/content/staking/withdrawals/index.md)
+
+### Terms of use
+
+- [Terms Of Use](https://ethereum.org/content/terms-of-use/index.md)
+
+### Web3
+
+- [Web3](https://ethereum.org/content/web3/index.md)
+
+### Whitepaper
+
+- [Whitepaper](https://ethereum.org/content/whitepaper/index.md)
+
+### Wrapped eth
+
+- [Wrapped Eth](https://ethereum.org/content/wrapped-eth/index.md)
+
+### Zero knowledge proofs
+
+- [Zero Knowledge Proofs](https://ethereum.org/content/zero-knowledge-proofs/index.md)
+
+---
+
+This document was rendered at 2025-08-04T10:40:27.725Z.
+For the latest version of this document, see [https://ethereum.org/llms.txt](https://ethereum.org/llms.txt).
