@@ -62,33 +62,27 @@
     "publishDate": "12/13/2023"
   },
   {
-    "url": "https://youtu.be/umepbfKp5rI",
-    "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
-    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
+    "url": "https://updraft.cyfrin.io/courses/foundry",
+    "title": "Foundry Fundamentals",
+    "description": "This course will level up your Solidity development skills with Foundry. The Foundry Fundamentals course teaches advanced web3 development concepts and tools. Expand your knowledge of Solidity, ERC-20s, DeFi, and Ethereum. Master Foundry Forge and Anvil while learning about Chainlink blockchain oracles, smart contract testing, and local network deployment.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
+      "updraft",
       "solidity",
       "smart contracts",
       "video",
       "oracles",
-      "NFT",
-      "ERC-20",
       "foundry",
-      "mocking",
       "testing",
-      "defi",
       "openzeppelin",
-      "slither",
       "storage",
-      "alchemy",
-      "block explorer",
-      "fuzzing"
+      "alchemy"
     ],
-    "skillLevel": "beginner",
-    "timeToRead": "504",
+    "skillLevel": "intermediate",
+    "timeToRead": "600",
     "lang": "en",
-    "publishDate": "06/07/2023"
+    "publishDate": "02/28/2024"
   },
   {
     "url": "https://patrickalphac.medium.com/fuzz-invariant-tests-the-new-bare-minimum-for-smart-contract-security-87ebe150e88c",
@@ -151,39 +145,23 @@
     "publishDate": "05/01/2022"
   },
   {
-    "url": "https://www.youtube.com/watch?v=gyMwXuJrbJQ",
-    "title": "Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript ",
-    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, full-stack Web3 dapps, DeFi, JavaScript, TypeScript, Chainlink, Ethereum, upgradable smart contracts, DAOs, the graph, Moralis, Aave, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
+    "url": "https://updraft.cyfrin.io/courses/solidity",
+    "title": "Solidity Smart Contract Development",
+    "description": "This course will give you a full introduction to Solidity Programming, your gateway to web3 development in Ethereum compatible ecosystems. You'll learn all the core concepts to start building Solidity smart contracts. Including: ERC-20, oracles, inheritance, memeory, storage, mapping, functions, Chainlink, ZKsync, and more! This Solidity programming course has already helped thousands of developers kickstart their blockchain careers.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
+      "updraft",
       "solidity",
-      "hardhat",
-      "ethers.js",
       "smart contracts",
-      "react",
-      "nextjs",
       "video",
-      "oracles",
-      "NFT",
-      "ERC-20",
-      "javascript",
-      "mocking",
       "testing",
-      "defi",
-      "openzeppelin",
-      "slither",
-      "storage",
-      "moralis",
-      "alchemy",
-      "the graph",
-      "pinata",
-      "block explorer"
+      "storage"
     ],
     "skillLevel": "beginner",
-    "timeToRead": "1920",
+    "timeToRead": "300",
     "lang": "en",
-    "publishDate": "05/26/2022"
+    "publishDate": "02/28/2024"
   },
   {
     "url": "https://www.youtube.com/watch?v=M576WGiDBdQ",
