@@ -95,6 +95,6 @@ _Kami juga memeriksa opsi untuk pengambilan suara sehingga komunitas dapat menun
 
 Jika Anda ingin menambahkan dapp ke ethereum.org dan itu memenuhi kriteria, buatlah sebuah isu di GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://submitapp.paperform.co/">
   Buat isu
 </ButtonLink>

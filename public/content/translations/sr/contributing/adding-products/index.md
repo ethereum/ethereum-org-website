@@ -95,6 +95,6 @@ _Takođe, istražujemo opcije za glasanje tako da zajednica može da izrazi svoj
 
 Ukoliko želite da dodate decentralizovanu aplikaciju na ethereum.org i ona ispunjava kriterijume, kreirajte upit na GitHub-u.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://submitapp.paperform.co/">
   Kreirajte upit
 </ButtonLink>

@@ -95,6 +95,6 @@ _Megvizsgáljuk a szavazási lehetőségeket is, hogy a közösség jelezhesse p
 
 Ha egy dappot szeretne hozzáadni az ethereum.org-hoz, és az megfelel a feltételeknek, hozzon létre egy issue-t a GitHubon.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://submitapp.paperform.co/">
   Issue létrehozása
 </ButtonLink>
