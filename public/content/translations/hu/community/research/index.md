@@ -224,7 +224,7 @@ Az Ethereumban a gazdasági kutatás nagyjából két megközelítés mentén za
 
 #### Háttérolvasmányok {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ETHconomics workshop a Devconnect-en](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Jelenlegi kutatás {#recent-research-9}
@@ -307,7 +307,7 @@ Több adatelemzési eszközre és irányítópultra van szükség, hogy részlet
 
 #### Jelenlegi kutatás {#recent-research-14}
 
-- [Robust Incentives Group adatelemzése](https://ethereum.github.io/rig/)
+- [Robust Incentives Group adatelemzése](https://rig.ethereum.org/)
 
 ## Alkalmazások és eszközök {#apps-and-tooling}
 

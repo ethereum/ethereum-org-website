@@ -212,7 +212,6 @@ Không. Sau khi nút xác thực đã thoát và rút toàn bộ số dư, bất
 
 - [Rút tiền trên Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Chuỗi Beacon đẩy các lệnh rút tiền dưới dạng thao tác](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Thượng Hải](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Rút ETH đã góp (Thử nghiệm) với Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Các lệnh rút tiền đẩy của Chuỗi Beacon dưới dạng thao tác với Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Giải thích về số dư hiệu quả của nút xác thực](https://www.attestant.io/posts/understanding-validator-effective-balance/)

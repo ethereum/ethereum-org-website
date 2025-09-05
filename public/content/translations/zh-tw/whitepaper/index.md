@@ -383,7 +383,7 @@ def register(name, value):
 3. 實際上挖礦能力的分配最終可能極度不平等。
 4. 想破壞網路的投機者、政敵和瘋子確實存在，他們可以巧妙地設定合約，讓他們的成本遠低於其他驗證節點支付的成本。
 
-(1) 讓礦工傾向於添加較少的交易，並且 (2) 增加 `NC`；因此這兩種作用會互相 抵銷一部分。 <sup>[如何抵銷？](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) 和 (4) 是主要問題，為了解決它們，我們簡單地制訂了一個浮動上限： 沒有區塊能夠包含比 `BLK_LIMIT_FACTOR` 乘以長期指數移動平均值更多的操作數。 具體來說：
+(1) 讓礦工傾向於添加較少的交易，並且 (2) 增加 `NC`；因此這兩種作用會互相 抵銷一部分。 <sup>[如何抵銷？](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) 和 (4) 是主要問題，為了解決它們，我們簡單地制訂了一個浮動上限： 沒有區塊能夠包含比 `BLK_LIMIT_FACTOR` 乘以長期指數移動平均值更多的操作數。 具體來說：
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _除了線性的貨幣發行方式外，與比特幣相似，以太幣的長期�
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 及自治代理，Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn 在圖靈節談論智慧型資產](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [以太坊遞迴長度前綴](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [以太坊默克爾帕特里夏樹](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [以太坊遞迴長度前綴](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [以太坊默克爾帕特里夏樹](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 談論默克爾求和樹](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_有關白皮書的歷史記錄，請參閱[此維基](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
+_有關白皮書的歷史記錄，請參閱[此維基](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
 
 _與許多社群驅動的開源軟體專案一樣，以太坊自最初誕生以來一直在不斷發展。 來學習更多最新以太坊發展及多年來之網路協議變動, 我們推薦你詳閱此[指南簡介](/learn/)._

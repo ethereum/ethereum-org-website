@@ -103,7 +103,6 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 
 **Orodja**
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– uporaben za iskanje in preverjanje standardnih prevodov tehničnih izrazov_
 - [Linguee](https://www.linguee.com/)_ – iskalnik za prevode in slovar, ki omogoča iskanje po besedah ali frazah_
 - [Proz term search](https://www.proz.com/search/)_ – podatkovna baza prevajalskih slovarjev za specializirane izraze_
 - [Eurotermbank](https://www.eurotermbank.com/)_ – zbirke evropske terminologije v 42-ih jezikih_

@@ -75,7 +75,6 @@ Hoodi is a testnet for testing validating and staking. The Hoodi network is open
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
-- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 

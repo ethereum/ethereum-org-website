@@ -117,7 +117,6 @@ Mit dem Wachstum und der zunehmenden Beliebtheit von DeFi könnte MEV schon bald
 ## Zugehörige Ressourcen {#related-resources}
 
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dashboard und Live-Transaktions-Explorer für MEV-Transaktionen_
 
 ## Weiterführende Informationen {#further-reading}
 

@@ -212,7 +212,6 @@ Yo'q. Validator chiqib ketgandan so‘ng va uning to‘liq balansi yechib olinga
 
 - [Steykingli ishga tushirish platformasidan mablag‘larni yechib olish](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mayoq zanjiri pul yechib olishlarini operatsiya sifatida amalga oshirish](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum mushuk boshqaruvchilari - Shanxay](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Syao-Vey Vang bilan ETH steyking yechib olishi (sinash) Syao-Vey Vang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Aleks Stoks bilan mayoq zanjiri chiqarish operatsiyalarini pul yechish sifatida amalga oshirish](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Validatorning samarali balansini tushunish](https://www.attestant.io/posts/understanding-validator-effective-balance/)

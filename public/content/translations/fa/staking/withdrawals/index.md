@@ -212,7 +212,6 @@ eventName="read more">
 
 - [برداشت‌های سکوی پرتاب سهامگذاری](https://launchpad.ethereum.org/withdrawals)
 - [پروتکل EIP-4895: برداشت‌های زنجیره بیکن به‌عنوان عملیات‌ها](https://eips.ethereum.org/EIPS/eip-4895)
-- [تیم ویراستاران اتریوم - شانگهای](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP شماره 94: برداشت اتر سهامگذاری شده (آزمایشی) با Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP شماره 68: پیشنهاد شماره 4895: زنجیره بیکن برداشت‌ها را به‌عنوان عملیات با Alex Stokes مخابره می‌کند](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [آشنایی با موجودی مؤثر اعتبارسنج](https://www.attestant.io/posts/understanding-validator-effective-balance/)
