@@ -4,19 +4,23 @@ import {
   SetStateAction,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react"
 import { useSearchParams } from "next/navigation"
 import { ColumnDef } from "@tanstack/react-table"
+import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
-import type { FilterOption, TPresetFilters } from "@/lib/types"
+import type { FilterOption, TPresetFilters, Wallet } from "@/lib/types"
 
-import Table from "@/components/DataTable"
+// import Table from "@/components/DataTable"
 import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import WalletInfo from "../FindWalletProductTable/WalletInfo"
 
 interface ProductTableProps<T> {
   columns: ColumnDef<T>[]
@@ -185,50 +189,50 @@ const ProductTable = <T,>({
   }
 
   // Update activePresets based on current filters
-  useEffect(() => {
-    const currentFilters = {}
+  // useEffect(() => {
+  //   const currentFilters = {}
 
-    filters.forEach((filter) => {
-      filter.items.forEach((item) => {
-        if (item.inputState === true) {
-          currentFilters[item.filterKey] = item.inputState
-        }
+  //   filters.forEach((filter) => {
+  //     filter.items.forEach((item) => {
+  //       if (item.inputState === true) {
+  //         currentFilters[item.filterKey] = item.inputState
+  //       }
 
-        if (item.options && item.options.length > 0) {
-          item.options.forEach((option) => {
-            if (option.inputState === true) {
-              currentFilters[option.filterKey] = option.inputState
-            }
-          })
-        }
-      })
-    })
+  //       if (item.options && item.options.length > 0) {
+  //         item.options.forEach((option) => {
+  //           if (option.inputState === true) {
+  //             currentFilters[option.filterKey] = option.inputState
+  //           }
+  //         })
+  //       }
+  //     })
+  //   })
 
-    const presetsToApply = presetFilters.reduce<number[]>(
-      (acc, preset, idx) => {
-        const presetFilters = preset.presetFilters
-        const activePresetKeys = Object.keys(presetFilters).filter(
-          (key) => presetFilters[key]
-        )
-        const allItemsInCurrentFilters = activePresetKeys.every(
-          (key) => currentFilters[key] !== undefined
-        )
+  //   const presetsToApply = presetFilters.reduce<number[]>(
+  //     (acc, preset, idx) => {
+  //       const presetFilters = preset.presetFilters
+  //       const activePresetKeys = Object.keys(presetFilters).filter(
+  //         (key) => presetFilters[key]
+  //       )
+  //       const allItemsInCurrentFilters = activePresetKeys.every(
+  //         (key) => currentFilters[key] !== undefined
+  //       )
 
-        if (allItemsInCurrentFilters) {
-          acc.push(idx)
-        }
-        return acc
-      },
-      []
-    )
+  //       if (allItemsInCurrentFilters) {
+  //         acc.push(idx)
+  //       }
+  //       return acc
+  //     },
+  //     []
+  //   )
 
-    setActivePresets((prevActivePresets) => {
-      const newActivePresets = [
-        ...new Set([...prevActivePresets, ...presetsToApply]),
-      ]
-      return newActivePresets.filter((idx) => presetsToApply.includes(idx))
-    })
-  }, [filters, presetFilters])
+  //   setActivePresets((prevActivePresets) => {
+  //     const newActivePresets = [
+  //       ...new Set([...prevActivePresets, ...presetsToApply]),
+  //     ]
+  //     return newActivePresets.filter((idx) => presetsToApply.includes(idx))
+  //   })
+  // }, [filters, presetFilters])
 
   // Count active filters
   const activeFiltersCount = useMemo(() => {
@@ -265,6 +269,15 @@ const ProductTable = <T,>({
     }, 0)
   }, [filters])
 
+  const parentRef = useRef<HTMLDivElement>(null)
+
+  const virtualizer = useWindowVirtualizer({
+    count: data.length,
+    estimateSize: () => 250,
+    overscan: 5,
+    scrollMargin: parentRef.current?.offsetTop ?? 0,
+  })
+
   return (
     <div>
       {presetFilters.length ? (
@@ -296,15 +309,15 @@ const ProductTable = <T,>({
             />
           </div>
           <div className="hidden lg:block">
-            <Filters
+            {/* <Filters
               filters={filters}
               setFilters={setFilters}
               resetFilters={resetFilters}
               activeFiltersCount={activeFiltersCount}
-            />
+            /> */}
           </div>
           <div className="flex-1">
-            <Table
+            {/* <Table
               variant="product"
               columns={columns}
               data={data}
@@ -315,7 +328,36 @@ const ProductTable = <T,>({
               activeFiltersCount={activeFiltersCount}
               meta={meta}
               matomoEventCategory={matomoEventCategory}
-            />
+            /> */}
+
+            <div
+              ref={parentRef}
+              className="relative flex w-full flex-col gap-4"
+              style={{
+                height: `${virtualizer.getTotalSize()}px`,
+              }}
+            >
+              {virtualizer.getVirtualItems().map((item) => (
+                <div
+                  key={item.name}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: `${item.size}px`,
+                    transform: `translateY(${
+                      item.start - virtualizer.options.scrollMargin
+                    }px)`,
+                  }}
+                >
+                  <WalletInfo
+                    wallet={data[item.index] as Wallet}
+                    isExpanded={false}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

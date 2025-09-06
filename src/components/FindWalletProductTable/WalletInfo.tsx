@@ -1,6 +1,7 @@
+import { memo, useMemo } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
-import { ChainName, Wallet } from "@/lib/types"
+import type { ChainName, Wallet } from "@/lib/types"
 
 import { ChainImages } from "@/components/ChainImages"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
@@ -21,17 +22,23 @@ interface WalletInfoProps {
 
 const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const walletPersonas = getWalletPersonas(wallet)
-  const deviceLabels: Array<string> = []
 
-  wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
-  wallet.android && deviceLabels.push(t("page-find-wallet-android"))
-  wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
-  wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
-  wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
-  wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
-  wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
-  wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
+  const walletPersonas = useMemo(() => {
+    return getWalletPersonas(wallet)
+  }, [wallet])
+
+  const deviceLabels: Array<string> = useMemo(() => {
+    const labels: Array<string> = []
+    if (wallet.ios) labels.push(t("page-find-wallet-iOS"))
+    if (wallet.android) labels.push(t("page-find-wallet-android"))
+    if (wallet.linux) labels.push(t("page-find-wallet-linux"))
+    if (wallet.windows) labels.push(t("page-find-wallet-windows"))
+    if (wallet.macOS) labels.push(t("page-find-wallet-macOS"))
+    if (wallet.chromium) labels.push(t("page-find-wallet-chromium"))
+    if (wallet.firefox) labels.push(t("page-find-wallet-firefox"))
+    if (wallet.hardware) labels.push(t("page-find-wallet-hardware"))
+    return labels
+  }, [wallet])
 
   return (
     <div className="flex flex-col gap-4">
@@ -54,12 +61,12 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                   ))}
                 </div>
               )}
-              <ChainImages
+              {/* <ChainImages
                 chains={wallet.supported_chains as ChainName[]}
                 className={`ml-2 mt-1 ${
                   walletPersonas.length === 0 ? "mb-4" : ""
                 }`}
-              />
+              /> */}
             </div>
           </div>
           <div className="flex flex-col gap-4 lg:hidden">
@@ -82,10 +89,10 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                 </div>
               )}
             </div>
-            <ChainImages
+            {/* <ChainImages
               chains={wallet.supported_chains as ChainName[]}
               className={`ml-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
-            />
+            /> */}
           </div>
           <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 lg:block">
@@ -150,4 +157,4 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
   )
 }
 
-export default WalletInfo
+export default memo(WalletInfo)

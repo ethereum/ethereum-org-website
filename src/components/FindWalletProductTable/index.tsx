@@ -24,7 +24,6 @@ import WalletSubComponent from "./WalletSubComponent"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
-  console.log({ wallets })
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
