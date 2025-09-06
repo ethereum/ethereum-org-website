@@ -8,7 +8,7 @@ lang: en
 
 Privacy is not only essential for personal safety, it's a cornerstone of freedom and a key [guarantor for decentralization](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Privacy gives people the ability to express themselves, transact with others, and organize communities freely. But like all blockchains, Ethereum's public ledger makes privacy challenging.
 
-Ethereum is transparent by design. Every onchain action is visible to anyone who looks. While Ethereum offers pseudonymity by linking your activity to a [public key](https://ethereum.org/en/decentralized-identity/#public-key-cryptography) instead of a real-world identity, patterns of activity could be analyzed to reveal sensitive information and identify users.
+Ethereum is transparent by design. Every onchain action is visible to anyone who looks. While Ethereum offers pseudonymity by linking your activity to a [public key](/decentralized-identity/#public-key-cryptography) instead of a real-world identity, patterns of activity could be analyzed to reveal sensitive information and identify users.
 
 Building privacy-preserving tools into Ethereum can help people, organizations, and institutions interact securely while limiting unnecessary exposure. This makes the ecosystem safer and more practical for a wider range of use cases.
 
@@ -84,7 +84,7 @@ Some projects exploring privacy for proving include [Client Side Proving](https:
 
 **Verifiable Delegation**: Assigning a task—like generating a proof—to another party (e.g. a mobile wallet using a server for heavy cryptography) while still being able to verify it was done correctly
 
-**[Zero-Knowledge Proofs](https://ethereum.org/en/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKPs)**: Cryptographic protocols that let someone prove information is true without revealing the underlying data
+**[Zero-Knowledge Proofs](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKPs)**: Cryptographic protocols that let someone prove information is true without revealing the underlying data
 
 **ZK Rollup**: A scalability system that batches transactions off-chain and submit a validity proof onchain—not private by default, but they enable efficient privacy systems (like shielded pools) by reducing costs
 
@@ -94,4 +94,4 @@ Some projects exploring privacy for proving include [Client Side Proving](https:
 - [Web3PrivacyNow](https://web3privacy.info/), a network of people, projects, and aligned organizations who protect and advance human rights online
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), an Ethereum wallet rating site aiming to provide a comprehensive list of wallets, their functionality, practices, and support for certain standards.
 - [Zk-kit](https://zkkit.pse.dev/): A set of libraries (algorithms, utility functions, and data structures) that can be reused in different projects and zero-knowledge protocols.
-- [Privacy Apps](https://ethereum.org/en/apps/categories/privacy/) - Discover a list of curated Privacy applications that run on Ethereum.
+- [Privacy Apps](/apps/categories/privacy/) - Discover a list of curated Privacy applications that run on Ethereum.

@@ -501,7 +501,7 @@ export { chains }
 
 ### Adding another blockchain {#add-blockchain}
 
-These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
+These days there are a lot of [L2 scaling solution](/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
 1. Import the `defineChain` type from viem.
 

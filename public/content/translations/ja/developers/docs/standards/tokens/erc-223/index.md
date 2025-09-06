@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract` がERC-223トークンを受け取ると、そのコントラクトはトークントランザクションの `_data` パラメータにエンコードされた関数を実行します。これはイーサのトランザクションが関数呼び出しをトランザクションの `data` としてエンコードするのと同じです。 詳細については [dataフィールド](https://ethereum.org/en/developers/docs/transactions/#the-data-field) を参照してください。
+`RecipientContract` がERC-223トークンを受け取ると、そのコントラクトはトークントランザクションの `_data` パラメータにエンコードされた関数を実行します。これはイーサのトランザクションが関数呼び出しをトランザクションの `data` としてエンコードするのと同じです。 詳細については [dataフィールド](/developers/docs/transactions/#the-data-field) を参照してください。
 
 上記の例では、ERC-223トークンは `transfer(address,uin256,bytes calldata _data)` 関数を使用して `RecipientContract` のアドレスに転送される必要があります。 dataパラメータが `0xc2985578` （ `foo()` 関数のシグネチャ）である場合、トークンデポジットが完了した後にfoo()関数が呼び出され、Foo()イベントが発行されます。
 
