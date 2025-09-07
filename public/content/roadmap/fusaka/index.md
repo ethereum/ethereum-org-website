@@ -4,7 +4,7 @@ description: Learn about the Fusaka protocol upgrade
 lang: en
 ---
 
-# Fusaka {#fusaka}
+# Fusaka {#fusaka} 🦓
 
 The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every Ethereum user and developer. The name consists of the execution layer upgrade Osaka and the consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that pushes Ethereum scaling, security and user experience to the future. 
 
@@ -124,6 +124,17 @@ Specification: https://eips.ethereum.org/EIPS/eip-7939
 
 EIP-7939 adds a small EVM instruction, CLZ (“count leading zeros”). Given a 256-bit value, it returns how many zero bits are at the front — and returns 256 if the value is entirely zero. This is a common feature in many instruction set architectures as it enables more efficient arithmetic operations. In practice this collapses today’s hand-rolled bit scans into one step, so finding the first set bit, scanning bytes, or parsing bitfields becomes simpler and cheaper. The opcode is low, fixed-cost and has been benchmarked to be on par with a basic add, which trims bytecode and saves gas for the same work.
 
+### **Precompile for secp256r1 Curve Support**
+
+Specification: https://eips.ethereum.org/EIPS/eip-7951
+
+Introduces a built-in, passkey-style secp256r1 (P-256) signature checker at the fixed address 0x100 using the same call format already adopted by many L2s and fixing edge cases, so contracts written for those environments work on L1 without changes.
+
+For users, this unlocks device-native signing and passkeys. Wallets can tap into Apple Secure Enclave, Android Keystore, HSMs, and FIDO2/WebAuthn directly - no seed phrase, smoother onboarding, and multi-factor flows that feel like modern apps. This results in better UX, fewer recovery horror stories, and AA patterns that match what billions of devices do already.
+
+For developers, it takes a 160-byte input and returns a 32-byte output, making it easy to port existing libraries and L2 contracts. Under the hood, it includes point-at-infinity and modular-comparison checks to eliminate tricky edge cases without breaking valid callers.
+
+More here: https://www.alchemy.com/blog/what-is-rip-7212 *[Note that EIP-7951 superseded RIP-7212]*
 
 ## Does this upgrade affect all Ethereum nodes and validators? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 
