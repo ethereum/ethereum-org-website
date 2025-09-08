@@ -65,31 +65,31 @@
     "location": "Bogotá",
     "link": "https://www.meetup.com/ethereum-bogota"
   },
-    {
+  {
     "title": "Ethereum Eje Cafetero",
     "emoji": ":colombia:",
     "location": "Armenia, Pereira, Manizales",
     "link": "https://www.meetup.com/ethereum-eje-cafetero"
   },
-    {
+  {
     "title": "Ethereum Medellin",
     "emoji": ":colombia:",
     "location": "Medellín",
     "link": "https://www.meetup.com/ethereum-medellin"
   },
-    {
+  {
     "title": "Ethereum Caribe",
     "emoji": ":colombia:",
     "location": "Barranquilla",
     "link": "https://www.meetup.com/ethereum-caribe"
   },
-    {
+  {
     "title": "Ethereum Cali",
     "emoji": ":colombia:",
     "location": "Cali",
     "link": "https://www.meetup.com/ethereumcali"
   },
-    {
+  {
     "title": "Ethereum Arauca",
     "emoji": ":colombia:",
     "location": "Saravena",
@@ -568,7 +568,7 @@
     "emoji": ":brazil:",
     "location": "São Paulo",
     "link": "https://lu.ma/user/erc55"
-  },      
+  },
   {
     "title": "ETHBelgium ",
     "emoji": ":belgium:",
@@ -576,9 +576,9 @@
     "link": "https://lu.ma/ethbelgium"
   },
   {
-  "title": "ETHBhopal",
-  "emoji": ":india:",
-  "location": "Bhopal",
-  "link": "https://x.com/ETHBhopal"
-}
+    "title": "ETHBhopal",
+    "emoji": ":india:",
+    "location": "Bhopal",
+    "link": "https://x.com/ETHBhopal"
+  }
 ]
