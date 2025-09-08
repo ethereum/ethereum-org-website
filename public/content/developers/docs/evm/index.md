@@ -56,7 +56,7 @@ _Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
 
-Over Ethereum's nine year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
+Over Ethereum's ten year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
 
 [Ethereum execution clients](/developers/docs/nodes-and-clients/#execution-clients) include an EVM implementation. Additionally, there are multiple standalone implementations, including:
 

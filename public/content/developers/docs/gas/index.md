@@ -46,7 +46,7 @@ The total fee would now be equal to:
 
 where the `base fee` is a value set by the protocol and the `priority fee` is a value set by the user as a tip to the validator.
 
-i.e. `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
+i.e., `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
 When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account. Taylor will be credited 1.0000 ETH. The validator receives the tip of 0.000042 ETH. The `base fee` of 0.00021 ETH is burned.
 
@@ -89,7 +89,9 @@ To execute a transaction on the network, users can specify a maximum limit they 
 
 ### Block size {#block-size}
 
-Each block has a target size of 15 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target. [More on blocks](/developers/docs/blocks/).
+Each block has a target size of 15 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target.
+
+[More on blocks](/developers/docs/blocks/).
 
 ### Calculating gas fees in practice {#calculating-fees-in-practice}
 
@@ -99,7 +101,7 @@ You can explicitly state how much you are willing to pay to get your transaction
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to avoid accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
-Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e. `max fee - (base fee + tip)` is returned).
+Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e., `max fee - (base fee + tip)` is returned).
 
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
@@ -118,7 +120,9 @@ High gas fees are due to the popularity of Ethereum. If there's too much demand,
 
 The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
-Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
+Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. 
+
+[More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
 ## Monitoring gas fees {#monitoring-gas-fees}
 
