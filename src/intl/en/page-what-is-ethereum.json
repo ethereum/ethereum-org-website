@@ -155,7 +155,7 @@
   "page-what-is-ethereum-when-who-learn-more": "Learn more about Ethereum's history",
   "page-what-is-ethereum-roadmap-title": "What is the Ethereum roadmap for 2025?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum doesn't follow a fixed roadmap. It follows a shared vision.",
-  "page-what-is-ethereum-roadmap-intro-2": "Network upgrades are made as Ethereum Improvement Proposals and developed in public by contributors around the world. There's no central team deciding what happens, just people building what they believe is useful based on users' needs.",
+  "page-what-is-ethereum-roadmap-intro-2": "Network upgrades are made as EIPs and developed in public by contributors around the world. There's no central team deciding what happens, just people building what they believe is useful based on users' needs.",
   "page-what-is-ethereum-roadmap-intro-3": "Pectra is the most recent upgrade launched in May 2025. This upgrade improved wallet features, gave stakers more flexibility, and made it easier for dapps to run on L2s. The goal was to improve usability without compromising on security or decentralization.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Looking ahead</a>, Ethereum's priorities include:",
   "page-what-is-ethereum-roadmap-priority-1": "Making the core protocol and its L2s faster and cheaper for everyone",
