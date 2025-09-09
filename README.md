@@ -2042,6 +2042,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/haouvw"><img src="https://avatars.githubusercontent.com/u/171421479?v=4?s=100" width="100px;" alt="haouvw"/><br /><sub><b>haouvw</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahaouvw" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://kalidou.dev"><img src="https://avatars.githubusercontent.com/u/20865711?v=4?s=100" width="100px;" alt="Kalidou Diagne"/><br /><sub><b>Kalidou Diagne</b></sub></a><br /><a href="#content-kalidiagne" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://chainide.com"><img src="https://avatars.githubusercontent.com/u/203082506?v=4?s=100" width="100px;" alt="Bob"/><br /><sub><b>Bob</b></sub></a><br /><a href="#content-chainide-agent-bob" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://smithii.io"><img src="https://avatars.githubusercontent.com/u/131685800?v=4?s=100" width="100px;" alt="Jorge Rodriguez"/><br /><sub><b>Jorge Rodriguez</b></sub></a><br /><a href="#ideas-Jorgerl02" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
