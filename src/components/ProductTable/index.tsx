@@ -25,7 +25,7 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible"
 
-interface ProductTableProps<T> {
+interface ProductTableProps<T extends { id: string }> {
   data: T[]
   filters: FilterOption[]
   filterFn: (data: T[], filters: FilterOption[]) => T[]
@@ -36,23 +36,21 @@ interface ProductTableProps<T> {
     filters: FilterOption[],
     listIdx: number
   ) => React.ReactNode
-  noResultsComponent?: React.FC
+  noResultsComponent?: (resetFilters: () => void) => React.ReactNode
   mobileFiltersLabel: string
   matomoEventCategory: string
-  meta?: Record<string, string | number | boolean>
 }
 
-const ProductTable = <T,>({
+const ProductTable = <T extends { id: string }>({
   data,
   filters: initialFilters,
   filterFn,
   presetFilters,
   onResetFilters,
   subComponent,
-  // noResultsComponent,
+  noResultsComponent,
   mobileFiltersLabel,
-  // matomoEventCategory,
-  // meta,
+  matomoEventCategory,
 }: ProductTableProps<T>) => {
   const searchParams = useSearchParams()
 
@@ -313,6 +311,30 @@ const ProductTable = <T,>({
     scrollMargin: parentOffsetRef.current,
   })
 
+  const previousExpandedRef = useRef<Record<string, boolean>>({})
+
+  const handleExpandedChange = useCallback(
+    (open: boolean, item: T) => {
+      if (!open) return
+
+      const expandedOnce = previousExpandedRef.current[item.id]
+
+      if (!expandedOnce) {
+        trackCustomEvent({
+          eventCategory: matomoEventCategory,
+          eventAction: "expanded",
+          eventName: item.id,
+        })
+      }
+
+      previousExpandedRef.current = {
+        ...previousExpandedRef.current,
+        [item.id]: true,
+      }
+    },
+    [matomoEventCategory]
+  )
+
   return (
     <div>
       {presetFilters.length ? (
@@ -352,18 +374,6 @@ const ProductTable = <T,>({
             /> */}
           </div>
           <div className="flex-1">
-            {/* <Table
-              variant="product"
-              columns={columns}
-              data={data}
-              subComponent={subComponent}
-              noResultsComponent={noResultsComponent}
-              allDataLength={allDataLength}
-              setMobileFiltersOpen={setMobileFiltersOpen}
-              activeFiltersCount={activeFiltersCount}
-              meta={meta}
-              matomoEventCategory={matomoEventCategory}
-            /> */}
             <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
               <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
                 <p className="text-body-medium">
@@ -372,6 +382,10 @@ const ProductTable = <T,>({
                 </p>
               </div>
             </div>
+
+            {filteredData.length === 0 &&
+              noResultsComponent &&
+              noResultsComponent(resetFilters)}
 
             <div
               ref={parentRef}
@@ -392,10 +406,11 @@ const ProductTable = <T,>({
                     style={{
                       transform: `translateY(${virtualItem.start - virtualizer.options.scrollMargin}px)`,
                     }}
+                    onOpenChange={(open) => handleExpandedChange(open, item)}
                   >
                     <CollapsibleTrigger asChild>
                       <div className="p-4">
-                        <WalletInfo wallet={item as Wallet} />
+                        <WalletInfo wallet={item as unknown as Wallet} />
                       </div>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="border-t p-4">

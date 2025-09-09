@@ -32,7 +32,7 @@ function getActiveFilterKeys(filters: FilterOption[]): string[] {
   return keys
 }
 
-const filterFn = (data: Wallet[], filters: FilterOption[]) => {
+const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
   let selectedLanguage: string = ""
   let selectedLayer2: ChainName[] = []
 
@@ -63,7 +63,9 @@ const filterFn = (data: Wallet[], filters: FilterOption[]) => {
     })
 }
 
-const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
+type WalletRow = Wallet & { id: string }
+
+const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
@@ -82,7 +84,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   }
 
   return (
-    <ProductTable<Wallet>
+    <ProductTable<WalletRow>
       data={wallets}
       matomoEventCategory="find-wallet"
       filters={walletFilterOptions}
@@ -96,7 +98,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
           listIdx={listIdx}
         />
       )}
-      noResultsComponent={() => (
+      noResultsComponent={(resetFilters) => (
         <FindWalletsNoResults resetFilters={resetFilters} />
       )}
       mobileFiltersLabel={t("page-find-wallet-see-wallets")}
