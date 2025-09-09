@@ -44,7 +44,7 @@ Er zijn verschillende belanghebbenden in de [Ethereum-gemeenschap](/community/),
 
 - **Ether-houders**: deze mensen hebben een willekeurige hoeveelheid ETH. [Meer over ETH](/eth/).
 - **Applicatie-gebruikers**: deze mensen communiceren met applicaties op de Ethereum-blockchain.
-- **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/dapps/).
+- **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/apps/).
 - **Nodebeheerders**: deze mensen voeren nodes uit die blokken en transacties propageren, waarbij ze elke ongeldige transactie of blok die ze tegenkomen verwerpen. [Meer over nodes](/developers/docs/nodes-and-clients/).
 - **EIP-auteurs**: deze mensen stellen wijzigingen voor aan het Ethereum-protocol, in de vorm van Ethereum-verbeteringsvoorstellen (EIPs). [Meer over EIPs](/eips/).
 - **Validators**: deze mensen draaien nodes die nieuwe blokken kunnen toevoegen aan de Ethereum-blockchain.
@@ -118,7 +118,7 @@ Over het algemeen worden meningsverschillen behandeld met langdurige discussies 
 
 Forks zijn de momenten waarop grote technische verbeteringen of veranderingen in het netwerk moeten worden aangebracht en de "regels" van het protocol moeten worden gewijzigd. [Ethereum-clients](/developers/docs/nodes-and-clients/) moeten hun software bijwerken om de nieuwe fork-regels te implementeren.
 
-De DAO-fork was een reactie op de [DAO-aanval van 2016](https://www.coindesk.com/understanding-dao-hack-journalists) waarbij een onveilig [DAO](/glossary/#dao)-contract meer dan dan 3,6 miljoen ETH verloor in een hack. De fork verplaatste de fondsen van het foutieve contract naar een nieuw contract, waardoor iedereen die in de hack geld had verloren dit kon terugvorderen.
+De DAO-fork was een reactie op de [DAO-aanval van 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) waarbij een onveilig [DAO](/glossary/#dao)-contract meer dan dan 3,6 miljoen ETH verloor in een hack. De fork verplaatste de fondsen van het foutieve contract naar een nieuw contract, waardoor iedereen die in de hack geld had verloren dit kon terugvorderen.
 
 Deze handelswijze werd via een stemming door de Ethereum-gemeenschap goedgekeurd. Elke ETH-houder kon stemmen via een transactie op [een stemplatform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Het besluit om te forken behaalde meer dan 85 procent van de stemmen.
 

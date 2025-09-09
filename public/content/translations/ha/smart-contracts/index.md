@@ -69,7 +69,7 @@ Suna iya shigarwa, ƙirƙirar kuɗi, adana bayanai, mint [NFTs](/glossary/#nft),
 - [Stablecoins](/stablecoins/)
 - [Ƙirƙira da rarraba kadarorin dijital na musamman](/nft/)
 - [Canza kuɗi atomatik, buɗewa](/get-eth/#dex)
-- [Wasanni masu cin gashin kansu](/dapps/?category=gaming#explore)
+- [Wasanni masu cin gashin kansu](/apps/categories/gaming)
 - [Manufar inshora wanda ke biya ta atomatik](https://etherisc.com/)
 - [Ma'auni wanda ke barin mutane su ƙirƙiri na musamman, kuɗi masu aiki da juna](/developers/docs/standards/tokens/)
 

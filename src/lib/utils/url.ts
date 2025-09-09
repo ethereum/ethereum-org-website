@@ -10,9 +10,11 @@ import {
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
 
+export const isMailto = (href: string): boolean => href.includes("mailto:")
+
 export const isExternal = (href: string): boolean =>
   href.includes("http") ||
-  href.includes("mailto:") ||
+  isMailto(href) ||
   href.includes("ipfs") ||
   isDiscordInvite(href)
 
@@ -48,9 +50,28 @@ export const addSlashes = (href: string): string => {
 }
 
 export const getFullUrl = (locale: string | undefined, path: string) =>
-  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+  DEFAULT_LOCALE === locale || !locale
+    ? addSlashes(new URL(path, SITE_URL).href)
+    : addSlashes(new URL(join(locale, path), SITE_URL).href)
 
 // Remove trailing slash from slug and add leading slash
 export const normalizeSlug = (slug: string) => {
   return `/${slug.replace(/^\/+|\/+$/g, "")}`
+}
+
+/**
+ * Converts a string to a URL-friendly slug
+ * @param text - The text to convert (e.g., "Governance/DAO", "Bridge Aave 1", "Hello world")
+ * @returns URL slug (e.g., "governance-dao", "bridge-aave-1", "hello-world")
+ */
+export const slugify = (text: string): string => {
+  return encodeURIComponent(
+    text
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "") // Remove special characters except spaces and hyphens
+      .replace(/\s+/g, "-") // Replace spaces with hyphens
+      .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+      .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
+  )
 }

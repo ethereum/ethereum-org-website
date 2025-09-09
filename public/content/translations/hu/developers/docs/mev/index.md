@@ -12,7 +12,7 @@ A maximálisan kinyerhető értéket először a [proof-of-work (munkaigazolás)
 
 ## Előfeltételek {#prerequisites}
 
-A téma könnyebb megértése érdekében érdemes megismeri a [tranzakciókkal](/developers/docs/transactions/), [blokkokkal](/developers/docs/blocks/), [proof-of-stake-kel](/developers/docs/consensus-mechanisms/pos) és [gázzal](/developers/docs/gas/) foglalkozó témákat. Emellett a [dappok](/dapps/) és a [DeFi](/defi/) ismerete szintén hasznos.
+A téma könnyebb megértése érdekében érdemes megismeri a [tranzakciókkal](/developers/docs/transactions/), [blokkokkal](/developers/docs/blocks/), [proof-of-stake-kel](/developers/docs/consensus-mechanisms/pos) és [gázzal](/developers/docs/gas/) foglalkozó témákat. Emellett a [dappok](/apps/) és a [DeFi](/defi/) ismerete szintén hasznos.
 
 ## MEV kivonása {#mev-extraction}
 
@@ -204,7 +204,6 @@ Egyes projektek, mint például a MEV Boost, az építő API-t egy olyan átfog�
 
 - [Flashbots-dokumentáció](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) – _Dashboard és tranzakciófelfedező a MEV tranzakciókhoz_
 - [mevboost.org](https://www.mevboost.org/) – _Tracker valós idejű statisztikákkal a MEV-Boost közvetítőkhöz és blokképítőkhöz_
 
 ## További olvasnivaló {#further-reading}

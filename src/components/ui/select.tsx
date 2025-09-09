@@ -1,6 +1,5 @@
 import * as React from "react"
-import { IoChevronDown, IoChevronUp } from "react-icons/io5"
-import { MdCheck } from "react-icons/md"
+import { Check, ChevronDown, ChevronUp } from "lucide-react"
 import * as SelectPrimitive from "@radix-ui/react-select"
 
 import { cn } from "@/lib/utils/cn"
@@ -25,7 +24,7 @@ const SelectTrigger = React.forwardRef<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <IoChevronDown className="h-4 w-4 stroke-body opacity-50" />
+      <ChevronDown className="h-4 w-4 stroke-body text-md opacity-50" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -43,7 +42,7 @@ const SelectScrollUpButton = React.forwardRef<
     )}
     {...props}
   >
-    <IoChevronUp className="h-4 w-4" />
+    <ChevronUp className="h-4 w-4 text-md" />
   </SelectPrimitive.ScrollUpButton>
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
@@ -60,7 +59,7 @@ const SelectScrollDownButton = React.forwardRef<
     )}
     {...props}
   >
-    <IoChevronDown className="h-4 w-4" />
+    <ChevronDown className="h-4 w-4 text-md" />
   </SelectPrimitive.ScrollDownButton>
 ))
 SelectScrollDownButton.displayName =
@@ -124,7 +123,7 @@ const SelectItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <MdCheck className="h-4 w-4" />
+        <Check className="text-md" />
       </SelectPrimitive.ItemIndicator>
     </span>
 

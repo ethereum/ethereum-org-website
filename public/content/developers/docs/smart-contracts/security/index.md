@@ -8,7 +8,7 @@ Smart contracts are extremely flexible, and capable of controlling large amounts
 
 Public blockchains, like Ethereum, further complicate the issue of securing smart contracts. Deployed contract code _usually_ cannot be changed to patch security flaws, while assets stolen from smart contracts are extremely difficult to track and mostly irrecoverable due to immutability.
 
-Although figures vary, it is estimated that the total amount of value stolen or lost due to security defects in smart contracts is easily over $1 billion. This includes high-profile incidents, such as the [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH stolen, worth over $1B in today’s prices), [Parity multi-sig wallet hack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30M lost to hackers), and the [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (over $300M in ETH locked forever).
+Although figures vary, it is estimated that the total amount of value stolen or lost due to security defects in smart contracts is easily over $1 billion. This includes high-profile incidents, such as the [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH stolen, worth over $1B in today’s prices), [Parity multi-sig wallet hack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30M lost to hackers), and the [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (over $300M in ETH locked forever).
 
 The aforementioned issues make it imperative for developers to invest effort in building secure, robust, and resilient smart contracts. Smart contract security is serious business, and one that every developer will do well to learn. This guide will cover security considerations for Ethereum developers and explore resources for improving smart contract security.
 
@@ -223,7 +223,7 @@ More on [designing secure governance systems](https://blog.openzeppelin.com/smar
 
 Traditional software developers are familiar with the KISS (“keep it simple, stupid”) principle, which advises against introducing unnecessary complexity into software design. This follows the long-held thinking that “complex systems fail in complex ways” and are more susceptible to costly errors.
 
-Keeping things simple is of particular importance when writing smart contracts, given that smart contracts are potentially controlling large amounts of value. A tip for achieving simplicity when writing smart contracts is to reuse existing libraries, such as [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), where possible. Because these libraries have been extensively audited and tested by developers, using them reduces the chances of introducing bugs by writing new functionality from scratch.
+Keeping things simple is of particular importance when writing smart contracts, given that smart contracts are potentially controlling large amounts of value. A tip for achieving simplicity when writing smart contracts is to reuse existing libraries, such as [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), where possible. Because these libraries have been extensively audited and tested by developers, using them reduces the chances of introducing bugs by writing new functionality from scratch.
 
 Another common advice is to write small functions and keep contracts modular by splitting business logic across multiple contracts. Not only does writing simpler code reduce the attack surface in a smart contract, it also makes it easier to reason about the correctness of the overall system and detect possible design errors early.
 
@@ -304,7 +304,7 @@ There’s nothing wrong here, except that `Attacker` has another function that c
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show.
+The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show.
 
 ##### How to prevent reentrancy attacks
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-You can also use a [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
+You can also use a [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
 
 #### Integer underflows and overflows {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 ### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
 
 ### Tools for secure administration of smart contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
-
 - **[Safe](https://safe.global/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - **[Hacken](https://hacken.io)** - _Web3 cybersecurity auditor bringing the 360-degree approach to blockchain security._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
 
@@ -515,7 +511,7 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
 - **[Oxorio](https://oxor.io/)** - _Smart contract audits and blockchain security services with expertise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
 
@@ -528,14 +524,14 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 - **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 
 - **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
-  
+
 -  **[Sherlock](https://www.sherlock.xyz/)** - _Underwriter in Web3 for smart contract security, with payouts for auditors managed via smart contracts to secure that relevant bugs are paid fairly._
-  
+
 -  **[CodeHawks](https://www.codehawks.com/)** - _Competitive bug bounty platform where auditors take part in security contests and challenges, and (soon) in their own private audits._
 
 ### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Beginner-friendly explanation of the most significant contract vulnerabilities, with sample code for most cases._
+- **[ConsenSys: Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Beginner-friendly explanation of the most significant contract vulnerabilities, with sample code for most cases._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Curated list of Common Weakness Enumeration (CWE) items that apply to Ethereum smart contracts._
 

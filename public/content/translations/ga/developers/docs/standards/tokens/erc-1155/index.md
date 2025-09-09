@@ -141,6 +141,6 @@ _Nóta_: Tá gach feidhm bhaisc lena n-áirítear an crúca ann freisin mar leag
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [EIP-1155: Caighdeán Ilchomhartha](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155: Doiciméid Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155: Doiciméid Openzeppelin](https://docs.openzeppelin.com/contracts/5.x/erc1155)
 - [ERC-1155: GitHub Stóras](https://github.com/enjin/erc-1155)
 - [Ailceimic NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -19,7 +19,7 @@ Pour illustrer ce que sont les jetons frauduleux et comment les identifier, nous
 title="Qu'est-ce que ARB?"
 contentPreview=''>
 
-Arbitrum est une organisation qui développe et gère des <a href="/developers/docs/scaling/optimistic-rollups/">rollups optimistiques</a>. Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, un <a href="/dao/#token-based-membership">jeton de gouvernance</a> échangeable a été créé.
+Arbitrum est une organisation qui développe et gère des [rollups optimistiques](/developers/docs/scaling/optimistic-rollups/). Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, un [jeton de gouvernance](/dao/#token-based-membership) échangeable a été créé.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ L'objectif d'Ethereum est la décentralisation. Cela signifie qu'il n'y a pas d'
 title="Qu'est-ce qu'un contrat intelligent ?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Les contrats intelligents</a> sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.
+[Les contrats intelligents](/developers/docs/smart-contracts/) sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.
 
 </ExpandableCard>
 

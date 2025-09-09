@@ -74,6 +74,6 @@ lang: zh-tw
 
 <cite class="citation">
 
-頁面內容部分來自 Hudson Jameson 的 [以太坊協定開發治理和網路升級協調](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)
+頁面內容部分來自 Hudson Jameson 的 [以太坊協定開發治理和網路升級協調](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)
 
 </cite>

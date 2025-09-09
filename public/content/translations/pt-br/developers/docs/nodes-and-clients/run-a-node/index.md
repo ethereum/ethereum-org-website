@@ -52,7 +52,7 @@ Ambas as opções têm vantagens e desvantagens, as quais foram resumidas acima.
 
 #### Hardware {#hardware}
 
-No entanto, uma rede descentralizada que resiste à censura não deve depender de provedores na nuvem. Em vez disso, executar seu nó em seu próprio hardware local é mais saudável para o ecossistema. As [estimativas](https://www.ethernodes.org/networkType/Hosting) mostram uma grande parte dos nós executados na nuvem, o que pode se tornar um único ponto de falha.
+No entanto, uma rede descentralizada que resiste à censura não deve depender de provedores na nuvem. Em vez disso, executar seu nó em seu próprio hardware local é mais saudável para o ecossistema. As [estimativas](https://www.ethernodes.org/network-types) mostram uma grande parte dos nós executados na nuvem, o que pode se tornar um único ponto de falha.
 
 Os clientes Ethereum podem ser executados no seu computador, laptop, servidor ou até mesmo em um computador de placa única. Enquanto for possível executar clientes em seu computador pessoal, ter um computador dedicado apenas para seu nó poderá melhorar significativamente seu desempenho e segurança, ao mesmo tempo que minimiza o impacto em seu computador principal.
 
@@ -162,7 +162,7 @@ Também é relevante observar que a diversidade de clientes é um [problema na c
 ##### Clientes de consenso
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (não fornece um binário pré-compilado, apenas uma imagem do Docker ou para ser compilado a partir da fonte)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (não fornece um binário pré-compilado, apenas uma imagem do Docker ou para ser compilado a partir da fonte)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ O Besu também vem com uma opção de inicializador, que fará uma série de per
 besu --Xlauncher
 ```
 
-A [documentação do Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contém opções adicionais e detalhes de configuração.
+A [documentação do Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contém opções adicionais e detalhes de configuração.
 
 ##### Executando o Erigon
 
@@ -288,7 +288,7 @@ Confira a [documentação para todas as opções de configuração](https://geth
 
 ##### Executando o Nethermind
 
-O Nethermind oferece várias [opções de instalação](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). O pacote vem com vários binários, incluindo um Inicializador com configuração guiada, que ajudará você a criar a configuração interativamente. Como alternativa, você encontrará o Executor, que é o executável em si, que simplesmente pode ser executado com os sinalizadores de configuração. O RPC-JSON é habilitado por padrão.
+O Nethermind oferece várias [opções de instalação](https://docs.nethermind.io/get-started/installing-nethermind). O pacote vem com vários binários, incluindo um Inicializador com configuração guiada, que ajudará você a criar a configuração interativamente. Como alternativa, você encontrará o Executor, que é o executável em si, que simplesmente pode ser executado com os sinalizadores de configuração. O RPC-JSON é habilitado por padrão.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Os documentos do Nethermind oferecem um [guia completo](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sobre como executar o Nethermind com o cliente de consenso.
+Os documentos do Nethermind oferecem um [guia completo](https://docs.nethermind.io/get-started/running-node/) sobre como executar o Nethermind com o cliente de consenso.
 
 Um cliente de execução iniciará suas funções principais, pontos de extremidade escolhidos e começará a procurar por pares. Após conseguir descobrir os pares, o cliente inicia a sincronização. O cliente de execução aguardará uma conexão do cliente de consenso. Os dados atuais da cadeia de blocos estarão disponíveis assim que o cliente for sincronizado com sucesso com o estado atual.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Executando o Prysm
 
-O Prysm vem com um script que permite uma instalação automática fácil. Os detalhes podem ser encontrados na [documentação do Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+O Prysm vem com um script que permite uma instalação automática fácil. Os detalhes podem ser encontrados na [documentação do Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \

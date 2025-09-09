@@ -16,6 +16,22 @@ Les coffres de rendement ERC-4626 réduiront l'effort d'intégration et ouvriron
 
 Le jeton ERC-4626 est décrit dans les détails dans [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
+**Extension de coffre-fort asynchrone (ERC-7540)**
+
+L'ERC-4626 est optimisé pour les dépôts et les rachats atomiques jusqu'à une certaine limite. Si la limite est atteinte, aucun nouveau dépôt ni rachat ne peut être soumis. Cette limitation ne fonctionne pas correctement pour les systèmes de contrats intelligents dont les actions asynchrones ou les retards sont une condition préalable à l'interface avec le coffre-fort (par exemple, les protocoles d'actifs du monde réel, les protocoles de prêts sous-collatéralisés, les protocoles de prêts entre chaînes, les jetons de mise en jeu liquides, ou les modules de sécurité d'assurance).
+
+L'ERC-7540 étend l'utilité des coffre-forts ERC-4626 pour les cas d'utilisation asynchrones. L'interface de coffre-fort existante (`deposit`/`withdraw`/`mint`/`redeem`) est pleinement utilisée pour réclamer les demandes asynchrones.
+
+L'extension ERC-7540 est décrite en détail dans [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+
+**Extension du coffre-fort multi-actifs (ERC-75757)**
+
+Parmi les cas d'utilisation qui ne sont pas pris en charge par l'ERC-4626, on trouve les coffres-forts qui possèdent plusieurs actifs ou points d'entrée, tels que les jetons de fournisseurs de liquidités (LP). Ces derniers sont généralement difficiles à manipuler ou non conformes en raison de l'exigence de l'ERC-4626 d'être lui-même un ERC-20.
+
+L'ERC-7575 ajoute la prise en charge des coffre-forts comportant plusieurs actifs en externalisant l'implémentation du jeton ERC-20 à partir de l'implémentation de l'ERC-4626.
+
+L'extension ERC-7575 est décrite en détail dans [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
+
 ## Pré-requis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les normes des jetons](/developers/docs/standards/tokens/) et [ERC-20](/developers/docs/standards/tokens/erc-20/).
@@ -176,7 +192,7 @@ Renvoie le nombre total d'actions détenues par l'`owner`.
 
 #### Événement de dépôt
 
-**DOIT** être déclenché lorsque des jetons sont déposés dans le coffre via les méthodes [`mint`](#mint) et [`deposit`](#deposit)
+**DOIT** être émis lorsque des jetons sont déposés dans le coffre-fort via les méthodes [`mint`](#mint) et [`deposit`](#deposit).
 
 ```solidity
 event Deposit(

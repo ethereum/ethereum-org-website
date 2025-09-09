@@ -16,7 +16,7 @@ const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
   ssr: false,
 })
 
-export const BaseLayout = ({
+export const BaseLayout = async ({
   children,
   // contentIsOutdated,
   // contentNotTranslated,

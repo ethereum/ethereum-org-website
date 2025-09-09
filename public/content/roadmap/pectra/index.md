@@ -1,15 +1,17 @@
 ---
-title: Pectra
-description: Learn about Pectra - the next Ethereum protocol upgrade
+title: Prague-Electra (Pectra)
+description: Learn about the Pectra protocol upgrade
 lang: en
 ---
 
 # Pectra {#pectra}
 
-Pectra is an upcoming Ethereum protocol upgrade that brings new functionality and changes to the Ethereum network. Following [Dencun](/roadmap/dencun/), this is another major upgrade to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to Ethereum users, developers and validators.
+The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to Ethereum users, developers and validators.
+
+This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
 <InfoBanner>
-Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about <a href="/roadmap/">the protocol roadmap</a> and <a href="/history/">previous upgrades</a>.
+Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
 </InfoBanner>
 
 ## Improvements in Pectra {#new-improvements}
@@ -42,7 +44,7 @@ Currently, network targets an average 3 blobs per block with a maximum of 6 blob
 
 ### Increase calldata cost {#7623}
 
-Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using [calldata](/docs/data-availability/blockchain-data-storage-strategies/#calldata) to store their data in Ethereum. Both blobs and calldata affect Ethereum's bandwidth usage. While most blocks only use a minimal amount of calldata, data-heavy blocks that also contain many blobs can be harmful to Ethereum's p2p network. 
+Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using [calldata](/developers/docs/data-availability/blockchain-data-storage-strategies/#calldata) to store their data in Ethereum. Both blobs and calldata affect Ethereum's bandwidth usage. While most blocks only use a minimal amount of calldata, data-heavy blocks that also contain many blobs can be harmful to Ethereum's p2p network. 
 
 To address this, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) increases calldata pricing, but only for data-heavy transactions. This bounds the worst-case block size, provides an incentive for L2s to only use blobs and leaves over 99% of transactions unaffected.
 

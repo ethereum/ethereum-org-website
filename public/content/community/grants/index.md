@@ -10,6 +10,11 @@ The programs listed below offer a variety of funding grants for projects working
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Founders, need help accelerating your business? [Head over to Founders Support](/founders/)</div>
+</Alert>
+
 ## Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
 
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
@@ -26,15 +31,14 @@ These resources compile and organize various grant opportunities across the Ethe
 These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
 
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
-- [Find Blockchain Grants](https://findblockchaingrants.com/) - _Searchable database of blockchain grants_
-- [Grantr](https://grantr.app/) - _Platform for discovering and applying to Web3 grants_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
 
 ### For developers and builders {#for-developers-and-builders}
 
-- [Web3 Grants](https://www.notion.so/Web3-Grants-dae38f9b5f524d36a15aaee1b6fa3089) - _Notion database of Web3 grant opportunities_
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
+- [Aztec Grants Program](https://aztec.network/grants) — Noir language and the [Aztec](https://aztec.network/) network
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
@@ -54,7 +58,6 @@ Resources for those building products and seeking investment beyond just grants:
 
 - [Web3Native](https://www.web3native.co/) - _Directory of Web3 grants, investors, and accelerator programs_
 - [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
-- [Pentacle Grants](https://pentacle.xyz/grants) - _Grant opportunities in the Web3 space_
 
 ### Public goods and impact {#public-goods-and-impact}
 
@@ -65,11 +68,6 @@ These programs focus on funding projects that benefit the broader community, pub
 - [Giveth](https://giveth.io/) - _Crypto donation platform enabling direct donations from for-good projects with zero added fees_
 - [Artizen](https://artizen.fund/) - _Helping creators match fund new projects at the frontier of art, science, technology and culture_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
-
-### Additional resources {#additional-resources}
-
-- [Web3 Summits Grants](https://www.web3summits.io/grants) - _Grant opportunities from Web3 Summits_
-- [Anke's Directory](https://docs.google.com/spreadsheets/d/1IdCCG-U7cGsih_nCNt7Yo4wXstZdCip1UKWbCK0qCZk/edit#gid=938115517) - _Web3 grant program directory_
 
 ## Work in Ethereum {#work-in-ethereum}
 

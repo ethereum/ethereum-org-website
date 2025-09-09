@@ -189,8 +189,8 @@
       }
     ]
   },
-  "central & south ameirca": {
-    "label": "Central & South Ameirca",
+  "central & south america": {
+    "label": "Central & South America",
     "events": [
       {
         "host": "Nodo Serrano",
@@ -201,7 +201,7 @@
         "city": "Tandil",
         "country": "Argentina",
         "region": "Central & South America",
-        "continent": "Central & South Ameirca",
+        "continent": "Central & South America",
         "lat": "-37.3288",
         "lng": "-59.1367",
         "readyToShow": "TRUE",
@@ -216,7 +216,7 @@
         "city": "Monterrey",
         "country": "Mexico",
         "region": "Central & South America",
-        "continent": "Central & South Ameirca",
+        "continent": "Central & South America",
         "lat": "25.6866",
         "lng": "-100.3161",
         "readyToShow": "TRUE",
@@ -231,7 +231,7 @@
         "city": "Cochabamba",
         "country": "Bolivia",
         "region": "Central & South America",
-        "continent": "Central & South Ameirca",
+        "continent": "Central & South America",
         "lat": "-17.382",
         "lng": "-66.1596",
         "readyToShow": "TRUE",
@@ -246,7 +246,7 @@
         "city": "Florianópolis",
         "country": "Brazil",
         "region": "Central & South America",
-        "continent": "Central & South Ameirca",
+        "continent": "Central & South America",
         "lat": "-27.5969",
         "lng": "-48.5468",
         "readyToShow": "TRUE",

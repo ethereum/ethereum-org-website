@@ -20,7 +20,7 @@ The ethereum.org Translation Program is open and anyone can contribute!
 4. Machine translations will not be approved.
 5. All translations are reviewed before being added to the site, so there will be a short delay before your translations go live.
 
-_Join the [ethereum.org Discord](/discord/) to collaborate on translations, ask questions, share feedback and ideas, or join a translation group._
+_Join the [ethereum.org Discord](https://discord.gg/ethereum-org) to collaborate on translations, ask questions, share feedback and ideas, or join a translation group._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Start translating

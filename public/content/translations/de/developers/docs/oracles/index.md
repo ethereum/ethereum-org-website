@@ -27,6 +27,7 @@ Viele Entwickler sehen Smart Contracts als Code, der an bestimmten Adressen auf 
 Die Nutzung von Smart Contracts zur Durchsetzung von Vereinbarungen ist jedoch nicht trivial, da Ethereum deterministisch ist. Ein [deterministisches System](https://en.wikipedia.org/wiki/Deterministic_algorithm) liefert bei gleichem Anfangszustand und gleicher Eingabe immer das gleiche Ergebnis – es gibt keine Zufälligkeit oder Variation im Prozess der Berechnung von Ausgaben aus Eingaben.
 
 Um deterministische Ausführung zu gewährleisten, beschränken Blockchains die Nodes darauf, Konsens nur auf Basis von Onchain-Daten über einfache Ja/Nein-Fragen zu erzielen. Beispiele:
+
 - "Hat der Kontoinhaber (identifiziert durch einen Public Key) diese Transaktion mit dem zugehörigen Private Key signiert?"
 - "Hat dieses Konto genügend Guthaben für die Transaktion?"
 - "Ist diese Transaktion im Kontext dieses Smart Contracts gültig?"
@@ -44,6 +45,7 @@ Im Wesentlichen überbrückt ein Blockchain-Oracle die Informationslücke zwisch
 ## Das Oracle-Problem {#the-oracle-problem}
 
 Oracles lösen ein wichtiges Problem, bringen aber auch neue Herausforderungen mit sich, z. B.:
+
 - Wie kann man sicherstellen, dass die eingefügten Informationen aus der richtigen Quelle stammen und nicht manipuliert wurden?
 - Wie kann man gewährleisten, dass diese Daten immer verfügbar und regelmäßig aktualisiert werden?
 
@@ -60,6 +62,7 @@ Verschiedene Oracles bieten unterschiedliche Lösungen für das Oracle-Problem, 
 ### Nutzer (Users) {#users}
 
 Nutzer sind Entitäten (z. B. Smart Contracts), die externe Informationen benötigen, um bestimmte Aktionen auszuführen. Der grundlegende Ablauf eines Oracle-Services beginnt damit, dass der Nutzer eine Datenanfrage an den Oracle-Contract sendet. Datenanfragen beantworten meist folgende Fragen:
+
 1. Welche Quellen können Offchain-Nodes für die angeforderten Informationen konsultieren?
 2. Wie verarbeiten Reporter die Informationen aus den Datenquellen und extrahieren relevante Datenpunkte?
 3. Wie viele Oracle-Nodes können an der Datenbeschaffung teilnehmen?
@@ -268,7 +271,7 @@ Staking/Abstimmung schützt dezentralisierte Oracles auch vor [Sybil-Angriffen](
 
 ##### Schelling-Punkt-Mechanismen
 
-Der [Schelling-Punkt](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) ist ein spieltheoretisches Konzept, das davon ausgeht, dass mehrere Entitäten in Abwesenheit jeglicher Kommunikation immer zu einer gemeinsamen Lösung eines Problems tendieren. Schelling-Punkt-Mechanismen werden häufig in dezentralisierten Oracle-Netzwerken verwendet, um Nodes zu ermöglichen, einen Konsens über Antworten auf Datenanfragen zu erreichen.
+Der [Schelling-Punkt](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) ist ein spieltheoretisches Konzept, das davon ausgeht, dass mehrere Entitäten in Abwesenheit jeglicher Kommunikation immer zu einer gemeinsamen Lösung eines Problems tendieren. Schelling-Punkt-Mechanismen werden häufig in dezentralisierten Oracle-Netzwerken verwendet, um Nodes zu ermöglichen, einen Konsens über Antworten auf Datenanfragen zu erreichen.
 
 Eine frühe Idee dafür war [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), ein vorgeschlagener Datenfeed, bei dem Teilnehmer Antworten auf "skalare" Fragen (Fragen, deren Antworten durch Größe beschrieben werden, z.B. "Was ist der Preis von ETH?") zusammen mit einer Einlage einreichen. Benutzer, die Werte zwischen dem 25. und 75. [Perzentil](https://en.wikipedia.org/wiki/Percentile) liefern, werden belohnt, während diejenigen, deren Werte stark vom Medianwert abweichen, bestraft werden.
 
@@ -398,24 +401,27 @@ Im Ethereum-Ökosystem stehen verschiedene Oracle-Dienste zur Integration zur Ve
 
 **[Supra](https://supra.com/)** - Ein vertikal integriertes Toolkit von Cross-Chain-Lösungen, das alle Blockchains, öffentliche (L1s und L2s) oder private (Unternehmen), miteinander verbindet und dezentralisierte Oracle-Preis-Feeds bereitstellt, die für Onchain- und Offchain-Anwendungsfälle verwendet werden können.
 
-## Weiterführende Literatur {#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 **Artikel**
-- [Was ist ein Blockchain-Oracle?](https://chain.link/education/blockchain-oracles) — Chainlink
-- [Was ist ein Blockchain-Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — Patrick Collins
-- [Dezentralisierte Oracles: Ein umfassender Überblick](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — Julien Thevenard
-- [Implementierung eines Blockchain-Oracles auf Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – Pedro Costa
-- [Warum können Contracts keine API-Aufrufe tätigen?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — StackExchange
-- [Warum wir dezentralisierte Oracles brauchen](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — Bankless
-- [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — samczsun
+
+- [Was ist ein Blockchain-Oracle?](https://chain.link/education/blockchain-oracles) - _Chainlink_
+- [Was ist ein Blockchain-Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
+- [Dezentralisierte Oracle: Ein umfassender Überblick](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) - _Julien Thevenard_
+- [Implementieren eines Blockchain-Oracles auf Ethereum](https://medium.com/@pedrodc/implementieren-ein-blockchain-orakel-auf-ethereum-cedc7e26b49e) - _Pedro Costa_
+- [Warum können Smart Contracts keine API-Aufrufe tätigen?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
+- [Sie wollen also ein Preis-Oracle benutzen](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
 
 **Videos**
+
 - [Oracles und die Erweiterung der Blockchain-Nützlichkeit](https://youtu.be/BVUZpWa8vpw) — Real Vision Finance
 - [Der Unterschied zwischen First-Party- und Third-Party-Oracles](https://blockchainoraclesummit.io/first-party-vs-third-party-oracles/) - Blockchain Oracle Summit
 
 **Tutorials**
+
 - [Wie man den aktuellen Ethereum-Preis in Solidity abruft](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — Chainlink
 - [Oracle-Daten konsumieren](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — Chronicle
 
 **Beispielprojekte**
+
 - [Chainlink Ethereum Full-Stack-Starter-Projekt](https://github.com/hackbg/chainlink-fullstack) — HackBG

@@ -114,7 +114,6 @@ lang: ru
 - [Web3 Army](https://web3army.xyz/)
 - [Вакансии на Crypto Valley](https://cryptovalley.jobs/)
 - [Вакансии Ethereum](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Присоединитесь к DAO {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ DAO — децентрализованные автономные организ
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _коллектив разработчиков-фрилансеров Web3, работающий как децентрализованная автономная организация (DAO)_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _управление сообщества DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) — _инжиниринг в сфере юридических вопросов_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) — _арт-сообщество_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) — _венчурный капитал для предварительного этапа криптовалютных проектов_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) — _механика игр MMORPG для реальной жизни_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) — _бренды цифро-физических вещей_

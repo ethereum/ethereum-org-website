@@ -40,7 +40,7 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
-const meta {
+const meta = {
   title: "ComponentA",
   component: ComponentA
 } satisfies Meta<typeof ComponentA>
@@ -71,7 +71,7 @@ import Button from "."
 
 type ButtonType = typeof Button
 
-const meta {
+const meta = {
   title: "Atoms / Form / Button",
   component: Button
 } satisfies Meta<ButtonType>

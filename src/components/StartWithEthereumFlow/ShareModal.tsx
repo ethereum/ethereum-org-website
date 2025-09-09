@@ -1,7 +1,10 @@
-import { useState } from "react"
-import { FaLink, FaXTwitter } from "react-icons/fa6"
-import { MdCheck } from "react-icons/md"
+"use client"
 
+import { useState } from "react"
+import { Check, Link } from "lucide-react"
+import { useTranslations } from "next-intl"
+
+import Twitter from "@/components/icons/twitter.svg"
 import { Button } from "@/components/ui/buttons/Button"
 import {
   Dialog,
@@ -14,10 +17,9 @@ import {
 
 import { useClipboard } from "@/hooks/useClipboard"
 
-export const shareOnTwitter = (): void => {
-  const url = "https://ethereum.org/start"
+export const shareOnTwitter = (tweetText: string): void => {
   const hashtags = ["ethereum", "web3", "startwithethereum"]
-  const tweet = `${encodeURI(`I connected to ethereum on ethereum.org! Try it yourself at ${url}`)}`
+  const tweet = encodeURI(tweetText)
 
   window.open(
     `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
@@ -27,18 +29,25 @@ export const shareOnTwitter = (): void => {
 const ShareModal = () => {
   const [isOpen, setIsOpen] = useState(false)
   const { onCopy, hasCopied } = useClipboard()
+  const t = useTranslations("page-start")
+
+  const handleTwitterShare = () => {
+    const url = "https://ethereum.org/start"
+    const tweetText = t("page-start-share-modal-tweet-text", { url })
+    shareOnTwitter(tweetText)
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger>
-        <Button>Share this page</Button>
+        <Button>{t("page-start-share-modal-trigger")}</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Share this page</DialogTitle>
+          <DialogTitle>{t("page-start-share-modal-title")}</DialogTitle>
         </DialogHeader>
         <DialogDescription>
-          Share this page with your friends and family.
+          {t("page-start-share-modal-description")}
         </DialogDescription>
         <div className="flex flex-row justify-center">
           <Button
@@ -48,23 +57,23 @@ const ShareModal = () => {
           >
             {hasCopied ? (
               <>
-                <MdCheck />
-                <p className="text-sm">Copied!</p>
+                <Check />
+                <p className="text-sm">{t("page-start-share-modal-copied")}</p>
               </>
             ) : (
               <>
-                <FaLink />
-                <p className="text-sm">Share</p>
+                <Link />
+                <p className="text-sm">{t("page-start-share-modal-share")}</p>
               </>
             )}
           </Button>
           <Button
             variant="ghost"
             className="flex flex-col hover:bg-background-highlight"
-            onClick={() => shareOnTwitter()}
+            onClick={handleTwitterShare}
           >
-            <FaXTwitter />
-            <p className="text-sm">Twitter</p>
+            <Twitter />
+            <p className="text-sm">{t("page-start-share-modal-twitter")}</p>
           </Button>
         </div>
       </DialogContent>

@@ -4,6 +4,9 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { init, push } from "@socialgouv/matomo-next"
 
+import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
+import { normalizePathForMatomo } from "@/lib/utils/matomo"
+
 export default function Matomo() {
   const pathname = usePathname()
 
@@ -11,12 +14,16 @@ export default function Matomo() {
   const [previousPath, setPreviousPath] = useState("")
 
   useEffect(() => {
-    if (!process.env.IS_PREVIEW_DEPLOY && !inited) {
+    if (!IS_PREVIEW_DEPLOY && !inited) {
       init({
         url: process.env.NEXT_PUBLIC_MATOMO_URL!,
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
       })
 
+      console.log(
+        "[Matomo] initialized with URL:",
+        process.env.NEXT_PUBLIC_MATOMO_URL
+      )
       setInited(true)
     }
   }, [inited])
@@ -34,8 +41,11 @@ export default function Matomo() {
       return setPreviousPath(pathname)
     }
 
-    push(["setReferrerUrl", `${previousPath}`])
-    push(["setCustomUrl", pathname])
+    const normalizedPreviousPath = normalizePathForMatomo(previousPath)
+    const normalizedPathname = normalizePathForMatomo(pathname)
+
+    push(["setReferrerUrl", normalizedPreviousPath])
+    push(["setCustomUrl", normalizedPathname])
     push(["deleteCustomVariables", "page"])
     setPreviousPath(pathname)
     // In order to ensure that the page title had been updated,

@@ -38,6 +38,20 @@ export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)
 }
 
+/**
+ * Convert language codes to full language names using the i18n config
+ * @param languageCodes Array of language codes (e.g., ['en', 'es', 'fr'])
+ * @returns Array of full language names (e.g., ['English', 'Spanish', 'French'])
+ */
+export const formatLanguageNames = (languageCodes: string[]): string[] => {
+  return languageCodes
+    .map((code) => {
+      const langConfig = i18nConfig.find((lang) => lang.code === code)
+      return langConfig?.name || code
+    })
+    .filter(Boolean)
+}
+
 export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
@@ -67,6 +81,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path === "/") {
     primaryNamespace = "page-index"
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
+  }
+
+  if (path === "/collectibles/") {
+    primaryNamespace = "page-collectibles"
   }
 
   if (path === "/contributing/translation-program/acknowledgements/") {
@@ -81,12 +100,12 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-community"
   }
 
-  if (path.startsWith("/dapps/")) {
-    primaryNamespace = "page-dapps"
+  if (path.startsWith("/apps/")) {
+    primaryNamespace = "page-apps"
   }
 
   if (path.startsWith("/energy-consumption/")) {
-    primaryNamespace = "page-what-is-ethereum"
+    primaryNamespace = "page-energy-consumption"
     requiredNamespaces = [...requiredNamespaces, "page-about"]
   }
 
@@ -199,6 +218,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/start/")) {
+    primaryNamespace = "page-start"
     requiredNamespaces = [...requiredNamespaces]
   }
 
@@ -212,7 +232,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   // Glossary tooltips
   if (
-    path.startsWith("/dapps/") ||
+    path.startsWith("/apps/") ||
     path.startsWith("/layer-2/") ||
     path.startsWith("/layer-2/learn/") ||
     path.startsWith("/get-eth/") ||
@@ -230,22 +250,23 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
+    path.startsWith("/defi/") ||
     path.startsWith("/eth/") ||
+    path.startsWith("/gas/") ||
     path.startsWith("/layer-2/") ||
     path.startsWith("/layer-2/learn/") ||
     path.startsWith("/nft/") ||
+    path.startsWith("/quizzes/") ||
     path.startsWith("/roadmap/merge/") ||
     path.startsWith("/roadmap/scaling/") ||
     path.startsWith("/run-a-node/") ||
     path.startsWith("/security/") ||
+    path.startsWith("/smart-contracts/") ||
+    path.startsWith("/stablecoins/") ||
     path.startsWith("/staking/solo/") ||
     path.startsWith("/wallets/") ||
     path.startsWith("/web3/") ||
-    path.startsWith("/what-is-ethereum/") ||
-    path.startsWith("/quizzes/") ||
-    path.startsWith("/stablecoins/") ||
-    path.startsWith("/defi/") ||
-    path.startsWith("/gas/")
+    path.startsWith("/what-is-ethereum/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

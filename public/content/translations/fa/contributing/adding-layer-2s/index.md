@@ -92,6 +92,6 @@ _ما راه حل‌های مقیاس پذیر دیگری را که از اتر�
 
 اگر می‌خواهید یک لایه 2 را به ethereum.org اضافه نمائید، یک مسئله در وبسایت گیت‌هاب ایجاد کنید.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   یک مسئله ایجاد کنید
 </ButtonLink>

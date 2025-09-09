@@ -101,7 +101,7 @@ Is cur chuige eile é clár deolchairí fabht a bhunú chun athbhreithnithe cód
 
 Nuair a úsáidtear i gceart iad, tugann deolchairí fabhtanna dreasacht do bhaill an phobail haiceála chun do chód a iniúchadh le haghaidh lochtanna criticiúla. Sampla ón bhfíorshaol is ea an “fabht airgid gan teorainn” a ligfeadh d’ionsaitheoir méid neamhtheoranta éitear a chruthú ar [Soirbhíochas](https://www.optimism.io/), prótacal [Ciseal 2](/layer-2/) a ritheann ar Ethereum. Ar ámharaí an tsaoil, d’aimsigh haiceálaí bán [an locht](https://www.saurik.com/optimism.html) agus chuir sé in iúl don fhoireann é, [agus thuill sé íocaíocht mhór ar a shon](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
-Straitéis úsáideach is ea íocaíocht amach clár deolchaire fabhtanna a shocrú i gcomhréir le méid na gcistí atá i gceist. Déantar cur síos air mar [deolchaire fabht scálaithe](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) dreasachtaí airgeadais do dhaoine aonair chun leochaileachtaí a nochtadh go freagrach in ionad iad a shaothrú.
+Straitéis úsáideach is ea íocaíocht amach clár deolchaire fabhtanna a shocrú i gcomhréir le méid na gcistí atá i gceist. Déantar cur síos air mar “[deolchaire fabht scálaithe](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) dreasachtaí airgeadais do dhaoine aonair chun leochaileachtaí a nochtadh go freagrach in ionad iad a shaothrú.
 
 ### 5. Lean na cleachtais is fearr le linn forbairt conarthaí cliste {#follow-smart-contract-development-best-practices}
 
@@ -223,7 +223,7 @@ Tuilleadh faoi [córais shlána rialachais a dhearadh](https://blog.openzeppelin
 
 Tá aithne ag forbróirí bogearraí traidisiúnta ar an bprionsabal KISS ("coimeád simplí é, a dhúramáin") é, mar a moltar gan castacht neamhriachtanach a thabhairt isteach i ndearadh bogearraí. Leanann sé seo an smaoineamh fadtréimhseach go “dteipeann ar chórais chasta ar bhealaí casta” agus go bhfuil siad níos mó i mbaol ó earráidí costasacha.
 
-Tá tábhacht ar leith ag baint le rudaí a choinneáil simplí agus conarthaí cliste á scríobh, ós rud é go bhféadfadh conarthaí cliste méideanna móra luacha a rialú. Leid chun simplíocht a bhaint amach agus conarthaí cliste á scríobh ná leabharlanna atá ann cheana a athúsáid, ar nós [Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), nuair is féidir. Toisc go ndearna forbróirí iniúchadh agus tástáil fhairsing ar na leabharlanna seo, laghdaítear an seans go dtabharfar isteach fabhtanna trí fheidhmiúlacht nua a scríobh ón tús.
+Tá tábhacht ar leith ag baint le rudaí a choinneáil simplí agus conarthaí cliste á scríobh, ós rud é go bhféadfadh conarthaí cliste méideanna móra luacha a rialú. Leid chun simplíocht a bhaint amach agus conarthaí cliste á scríobh ná leabharlanna atá ann cheana a athúsáid, ar nós [Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), nuair is féidir. Toisc go ndearna forbróirí iniúchadh agus tástáil fhairsing ar na leabharlanna seo, laghdaítear an seans go dtabharfar isteach fabhtanna trí fheidhmiúlacht nua a scríobh ón tús.
 
 Comhairle choitianta eile is ea feidhmeanna beaga a scríobh agus conarthaí modúlacha a choinneáil trí loighic ghnó a roinnt thar chonarthaí iolracha. Ní hamháin go laghdaítear an dromchla ionsaí i gconradh cliste nuair a scríobhtar cód níos simplí, déanann sé níos éasca freisin réasúnú a dhéanamh faoi chruinneas an chórais iomláin agus earráidí dearaidh féideartha a bhrath go luath.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Is féidir leat córas [tarraingt íocaíochtaí](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) a úsáid freisin a éilíonn ar úsáideoirí cistí a aistarraingt ó na conarthaí cliste, in ionad córas "brú-íocaíochtaí" a sheolann cistí chuig cuntais. Cuireann sé seo deireadh leis an bhféidearthacht cód a spreagadh gan chuimhneamh ag seoltaí anaithnide (agus féadann sé ionsaithe áirithe diúltú seirbhíse a chosc freisin).
+Is féidir leat córas [tarraingt íocaíochtaí](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) a úsáid freisin a éilíonn ar úsáideoirí cistí a aistarraingt ó na conarthaí cliste, in ionad córas "brú-íocaíochtaí" a sheolann cistí chuig cuntais. Cuireann sé seo deireadh leis an bhféidearthacht cód a spreagadh gan chuimhneamh ag seoltaí anaithnide (agus féadann sé ionsaithe áirithe diúltú seirbhíse a chosc freisin).
 
 #### Gannsreabhadh agus róshreabhadh slánuimhreacha {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 ### Uirlisí chun monatóireacht a dhéanamh ar chonarthaí cliste {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uirlis chun monatóireacht a dhéanamh go huathoibríoch ar imeachtaí, feidhmeanna agus paraiméadair idirbheartaíochta ar do chonarthaí cliste agus chun freagairt dóibh._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Uirlis chun fógraí fíor-ama a fháil nuair a tharlaíonn imeachtaí neamhghnácha nó gan choinne ar do chonarthaí nó ar do sparáin chliste._
 
 ### Uirlisí le haghaidh riarachán slán chonarthaí cliste {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Comhéadan chun riarachán cliste conartha a bhainistiú, lena n-áirítear rialuithe rochtana, uasghráduithe agus cur ar sos._
-
 - **[Safe](https://safe.global/)** - _ Sparán conartha cliste ag rith ar Ethereum a éilíonn líon íosta daoine chun idirbheart a cheadú sular féidir leis tarlú (M-de-N)._
 
-- **[Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** - _Leabharlanna conartha chun gnéithe riaracháin a chur i bhfeidhm, lena n-áirítear úinéireacht conartha, uasghráduithe, rialuithe rochtana, rialachas, sos-ábaltacht, agus go leor eile._
+- **[Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** - _Leabharlanna conartha chun gnéithe riaracháin a chur i bhfeidhm, lena n-áirítear úinéireacht conartha, uasghráduithe, rialuithe rochtana, rialachas, sos-ábaltacht, agus go leor eile._
 
 ### Seirbhísí cliste iniúchta conartha {#smart-contract-auditing-services}
 
@@ -501,7 +497,7 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 - **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _ Cuideachta conartha cliste slándála a sholáthraíonn iniúchtaí slándála ar chórais dáilte._
 
-- **[Fíorú Am Reatha](https://runtimeverification.com/)** - _Cuideachta slándála a dhéanann sainchúram de shamhaltú foirmiúil agus fíorú conarthaí cliste._
+- **[Fíorú Am Reatha](https://runtimeverification.com/)** - _ Cuideachta slándála a dhéanann sainchúram de shamhaltú foirmiúil agus fíorú conarthaí cliste._
 
 - **[Hacken](https://hacken.io)** - _ Iniúchóir cibearshlándála Web3 le cur chuige 360-céim maidir le slándáil blocshlabhra. _
 
@@ -535,7 +531,7 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 ### Foilseacháin ar leochaileachtaí agus ar shaothair conartha cliste aitheanta {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Ionsaithe Aitheanta ar Chonarthaí Cliste](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Míniú sothuigthe do thosaitheoirí ar na leochaileachtaí conartha is suntasaí, le cód samplach d'fhormhór na gcásanna._
+- **[ConsenSys: Ionsaithe Aitheanta ar Chonarthaí Cliste](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Míniú sothuigthe do thosaitheoirí ar na leochaileachtaí conartha is suntasaí, le cód samplach d'fhormhór na gcásanna._
 
 - **[Clárlann SWC](https://swcregistry.io/)** - _Liosta coimeádta de Mhíreanna Áirimh Laige Coitianta (CWE) a bhaineann le conarthaí cliste Ethereum._
 

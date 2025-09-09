@@ -18,7 +18,7 @@ Comece lendo sobre a missão e os valores da ethereum.org no nosso [código de c
 - Assista ou participe das [reuniões do núcleo de desenvolvedores](https://www.youtube.com/@EthereumProtocol)
 - [Lista de desejos do Programa de apoio ao ecossistema](https://esp.ethereum.foundation/wishlist/): ferramentas, documentação e áreas de infraestrutura onde o Programa de suporte ao ecossistema do Ethereum está ativamente buscando aplicativos
 - [Web3Bridge](https://www.web3bridge.com/): participe da promissora comunidade da web3 em sua iniciativa de identificar, treinar e oferecer suporte a centenas de desenvolvedores e membros da comunidade em toda a África
-- Junte-se ao [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+- Junte-se ao [Discord Ethereum Cat Herders](https://discord.gg/Nz6rtfJ8Cu)
 
 ## Pesquisadores e acadêmicos <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -32,7 +32,7 @@ Você tem formação em matemática, criptografia ou economia? Talvez tenha inte
   - Saiba como se tornar um [editor de EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Você pode fazer a revisão por pares de EIPs agora mesmo! Consulte os [PRs abertos com a tag `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Envie feedback técnico por meio do link `discussion-to`.
   - Participe da [governança de EIP](https://github.com/ethereum-cat-herders/EIPIP)
-    - Junte-se ao [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+    - Junte-se ao [Discord Ethereum Cat Herders](https://discord.gg/Nz6rtfJ8Cu)
   - [Mais sobre EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/): uma série de pesquisas com recompensas de alto valor. Você pode ganhar >US$ 100.000
 - [Ethresear.ch](https://ethresear.ch): fórum principal de pesquisa do Ethereum e o fórum mais influente do mundo sobre criptoeconomia
@@ -112,7 +112,6 @@ O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com im
 - [Web3 Army](https://web3army.xyz/)
 - [Empregos na Crypto Valley](https://cryptovalley.jobs/)
 - [Trabalhe para a Ethereum](https://startup.jobs/ethereum-jobs)
-- [CriptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Participe de uma DAO {#decentralized-autonomous-organizations-daos}
 
@@ -123,7 +122,6 @@ O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com im
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Grupo de freelancers de desenvolvimento Web3 trabalhando como DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _Governaça comunitária da DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Engenharia jurídica_
-- [Machi X](https://machix.com) [@MachiXOficial](https://twitter.com/MachiXOfficial) – _Comunidade artística_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) – _Incubadora de DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _Venture para projetos cripto pré-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _Mecânica de jogos para a vida real MMORPG_

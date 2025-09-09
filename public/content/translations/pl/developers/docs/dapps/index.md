@@ -82,7 +82,7 @@ Inteligentny kontrakt to kod, który znajduje się na blockchainie Ethereum i dz
 
 ## Dodatkowo przeczytaj {#further-reading}
 
-- [Przeglądaj zdecentralizowane aplikacje](/dapps)
+- [Przeglądaj zdecentralizowane aplikacje](/apps)
 - [Architektura aplikacji Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) — _Preethi Kasireddy_
 - [Przewodnik z 2021 r. po zdecentralizowanych aplikacjach](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) — _LimeChain_
 - [Czym są zdecentralizowane aplikacje?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) — _Gemini_

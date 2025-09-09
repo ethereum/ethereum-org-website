@@ -1,6 +1,6 @@
 "use client"
-
 import React, { useState } from "react"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 import Highlight, {
   defaultProps,
   Language,
@@ -10,7 +10,6 @@ import Prism from "prism-react-renderer/prism"
 
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import CopyToClipboard from "@/components/CopyToClipboard"
-import Emoji from "@/components/Emoji"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -304,16 +303,13 @@ const Codeblock = ({
                         <TopBarItem>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" className="text-md" />{" "}
                               {t("copy")}
+                              <Clipboard className="mb-1 ms-1 inline-block size-[1em]" />
                             </>
                           ) : (
                             <>
-                              <Emoji
-                                text=":white_check_mark:"
-                                className="text-md"
-                              />{" "}
                               {t("copied")}
+                              <ClipboardCheck className="mb-1 ms-1 inline-block size-[1em]" />
                             </>
                           )}
                         </TopBarItem>

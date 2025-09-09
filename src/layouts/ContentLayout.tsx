@@ -10,6 +10,7 @@ import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<LeftNavBarProps, "dropdownLinks" | "tocItems" | "maxDepth"> & {
+    showDropdown?: boolean
     children: React.ReactNode
     heroSection: React.ReactNode
     contributors: FileContributor[]
@@ -21,6 +22,7 @@ export const ContentLayout = ({
   dropdownLinks,
   tocItems,
   maxDepth,
+  showDropdown = true,
   heroSection,
   contributors,
   lastEditLocaleTimestamp,
@@ -36,6 +38,7 @@ export const ContentLayout = ({
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
           maxDepth={maxDepth}
+          showDropdown={showDropdown}
         />
 
         <ContentContainer>
@@ -48,7 +51,9 @@ export const ContentLayout = ({
           />
           <FeedbackCard />
         </ContentContainer>
-        {dropdownLinks && <MobileButtonDropdown list={dropdownLinks} />}
+        {showDropdown && dropdownLinks && (
+          <MobileButtonDropdown list={dropdownLinks} />
+        )}
       </Page>
     </div>
   )

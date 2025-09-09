@@ -28,7 +28,7 @@ Numeroase proiecte oferă implementări de lanțuri paralele pe care le puteți 
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [Lanțul Gnosis (fost xDai)](https://www.xdaichain.com/)
+- [Lanțul Gnosis (fost xDai)](https://www.gnosis.io/)
 
 ## Referințe suplimentare {#further-reading}
 

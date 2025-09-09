@@ -1,6 +1,6 @@
 ---
 title: Transfers and approval of ERC-20 tokens from a solidity smart contract
-description: How to use a smart contract to interact with a token using the Solidity language
+description: Build a DEX smart contract that handles ERC-20 token transfers and approvals using Solidity.
 author: "jdourlens"
 tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: intermediate

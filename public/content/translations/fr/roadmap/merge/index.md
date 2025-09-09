@@ -38,7 +38,7 @@ La Fusion représente le passage officiel à l'utilisation de la Chaîne phare c
 Aucun historique n'a été perdu dans la Fusion. Au fur et à mesure que le réseau principal a fusionné avec la Chaîne phare, il a également fusionné la totalité de l'historique transactionnel d'Ethereum.
 
 <InfoBanner>
-Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est émis. En savoir plus sur l'émission d'<a href="/roadmap/merge/issuance/">éthers avant et après la Fusion</a>.
+Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est émis. En savoir plus sur l'émission d'[éthers avant et après la Fusion](/roadmap/merge/issuance/).
 </InfoBanner>
 
 ### Utilisateurs et détenteurs {#users-holders}
@@ -130,7 +130,7 @@ L’exécution d’un nœud non producteur de blocs est possible pour toute pers
 
 La possibilité pour quiconque de pouvoir exécuter son propre noeud est <em>absolument essentielle</em> afin de maintenir la décentralisation du réseau Ethereum.
 
-<a href="/run-a-node/">En savoir plus sur l'exécution de son propre nœud</a>
+[En savoir plus sur l'exécution de son propre nœud](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Les frais de gaz sont le produit des demandes envoyées au réseau par rapport à sa capacité. La Fusion a rendu obsolète l'utilisation de la preuve de travail pour une transition vers le consensus par la preuve d'enjeu, mais elle n'a pas modifié de manière significative les paramètres qui influencent directement la capacité ou le débit du réseau.
 
-Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route axée sur les rollups</a>, les efforts sont concentrés sur la mise à l'échelle de l'activité des utilisateurs sur la <a href="/layer-2/">couche 2</a>, tout en activant le réseau principal de couche 1 en tant que couche de règlement décentralisée, sécurisée et optimisée pour le stockage de données cumulatives afin de rendre les transactions rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est une étape préalable essentielle afin de réaliser cela. <a href="/developers/docs/gas/">Plus d'infos sur le gaz et les frais</a>
+Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route axée sur les rollups</a>, les efforts sont concentrés sur la mise à l'échelle de l'activité des utilisateurs sur la [couche 2](/layer-2/), tout en activant le réseau principal de couche 1 en tant que couche de règlement décentralisée, sécurisée et optimisée pour le stockage de données cumulatives afin de rendre les transactions rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est une étape préalable essentielle afin de réaliser cela. [Plus d'infos sur le gaz et les frais](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +163,7 @@ Initialement après La Fusion, les stakers ne pouvaient accéder qu'à des frais
 
 Depuis la mise à niveau du réseau Shanghai/Capella, les validateurs peuvent maintenant désigner <em>une adresse de retrait</em> pour commencer à recevoir des paiements automatiques de tout solde excédentaire de mise en jeu (plus de 32 ETH à partir de récompenses de protocole). Cette mise à jour a également permis à un validateur de déverrouiller et de récupérer tout son solde en quittant le réseau.
 
-<a href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</a>
+[En savoir plus sur les retraits de mise en jeu](/staking/withdrawals/)
 
 </ExpandableCard>
 
