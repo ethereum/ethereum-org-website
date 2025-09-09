@@ -294,6 +294,8 @@ export type LocaleDisplayInfo = {
   englishName: string
   approvalProgress: number
   wordsApproved: number
+  progress: string
+  words: string
   isBrowserDefault?: boolean
 }
 
@@ -462,12 +464,13 @@ export type CommonHeroProps<
    * given page from the hero.
    *
    * The hero can render no buttons or up to and no more than two.
+   * Can accept either button prop objects or React elements directly.
    */
-  buttons?: [HeroButtonProps, HeroButtonProps?]
+  buttons?: [HeroButtonProps | ReactElement, (HeroButtonProps | ReactElement)?]
   /**
    * The primary title of the page
    */
-  title: string
+  title?: string
   /**
    * A tag name for the page
    */
@@ -563,20 +566,35 @@ export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   activeAddresses: Record<string, number | undefined>
 }
 
-export type MetricName =
+export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
   | "totalValueLocked"
   | GrowThePieMetricKey
 
-export type AllMetricData = Record<MetricName, MetricReturnData>
+export type AllHomepageActivityData = Record<
+  HomepageActivityMetric,
+  MetricReturnData
+>
+
+export type EnterpriseActivityMetric =
+  | "txCount"
+  | "txCostsMedianUsd"
+  | "stablecoinMarketCap"
+  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
+  | "totalEthStaked"
+
+export type AllEnterpriseActivityData = Record<
+  EnterpriseActivityMetric,
+  MetricReturnData
+>
 
 export type StatsBoxMetric = {
   label: string
   description?: string
   state: StatsBoxState
-  apiUrl: string
-  apiProvider: string
+  apiUrl?: string
+  apiProvider?: string
 }
 
 export type SimulatorNavProps = {
@@ -594,6 +612,8 @@ export type CommunityConference = {
   startDate: string
   endDate: string
   imageUrl: string
+  hackathon?: boolean
+  formattedDate?: string
 }
 
 // Chains
@@ -940,7 +960,11 @@ export type AtomEntry = {
   title: AtomElement[]
   updated: string[]
   content?: AtomElement[]
-  link?: AtomElement[]
+  link?: Array<{
+    $: {
+      href: string
+    }
+  }>
   summary?: AtomElement[]
 }
 
@@ -1027,4 +1051,177 @@ export interface ITutorial {
   published?: string | null
   lang: string
   isExternal: boolean
+}
+
+export enum AppCategoryEnum {
+  DEFI = "DeFi",
+  COLLECTIBLE = "Collectibles",
+  SOCIAL = "Social",
+  GAMING = "Gaming",
+  BRIDGE = "Bridge",
+  PRODUCTIVITY = "Productivity",
+  PRIVACY = "Privacy",
+  GOVERNANCE_DAO = "DAO",
+}
+
+export type AppCategory = `${AppCategoryEnum}`
+
+export type AppCategoryData = {
+  name: string
+  slug: string
+  description: string
+  icon: React.ComponentType<{ className?: string }>
+  metaTitle: string
+  metaDescription: string
+}
+
+export type AppCategories = Record<AppCategoryEnum, AppCategoryData>
+
+export type App = {
+  name: string
+  url: string
+  description: string
+  image: string
+  category: AppCategoryEnum
+  subCategory: string[]
+  networks: (ChainName | NonEVMChainName)[]
+  screenshots: string[]
+  bannerImage: string
+  platforms: string[]
+  twitter: string
+  github: string
+  discord: string
+  kpiUrl: string
+  sortingWeight: number
+  discover: boolean
+  highlight: boolean
+  languages: Lang[]
+  parentCompany: string
+  parentCompanyURL: string
+  openSource: boolean
+  contractAddress: string
+  dateOfLaunch: string
+  lastUpdated: string
+  ready: string
+}
+
+export type DefiApp = App & {
+  category: AppCategoryEnum.DEFI
+  subCategory: Array<
+    "Lending" | "Liquid staking" | "DEX" | "Insurance" | "Prediction" | "RWA"
+  >
+}
+
+export type CollectibleApp = App & {
+  category: AppCategoryEnum.COLLECTIBLE
+  subCategory: Array<
+    "IP" | "Art" | "Gaming" | "Media" | "Membership" | "Market"
+  >
+}
+
+export type SocialApp = App & {
+  category: AppCategoryEnum.SOCIAL
+  subCategory: Array<
+    "Social network" | "Video" | "Messaging" | "Identity" | "Metaverse"
+  >
+}
+
+export type GamingApp = App & {
+  category: AppCategoryEnum.GAMING
+  subCategory: Array<
+    | "RPG"
+    | "Strategy"
+    | "Card & deck building"
+    | "MMORPG"
+    | "Metaverse"
+    | "Simulation and management"
+    | "Sports and fantasy"
+  >
+}
+
+export type BridgeApp = App & {
+  category: AppCategoryEnum.BRIDGE
+  subCategory: Array<
+    | "Native"
+    | "Validator or oracle"
+    | "Generalized message passing"
+    | "Liquidity network"
+  >
+}
+
+export type ProductivityApp = App & {
+  category: AppCategoryEnum.PRODUCTIVITY
+  subCategory: Array<"Lending"> // Placeholder - update when you have the actual subcategories
+}
+
+export type PrivacyApp = App & {
+  category: AppCategoryEnum.PRIVACY
+  subCategory: Array<"Pools" | "Payments" | "RPC">
+}
+
+export type GovernanceDaoApp = App & {
+  category: AppCategoryEnum.GOVERNANCE_DAO
+  subCategory: Array<"Governance" | "Delegation">
+}
+
+export type AppData =
+  | DefiApp
+  | CollectibleApp
+  | SocialApp
+  | GamingApp
+  | BridgeApp
+  | ProductivityApp
+  | PrivacyApp
+  | GovernanceDaoApp
+
+export type CommunityPick = {
+  name: string
+  twitterURL: string
+  twitterHandle: string
+  app1Name: string | null
+  app2Name: string | null
+  app3Name: string | null
+}
+
+type ValuesItem = {
+  label: string
+  content: string[]
+}
+
+export type ValuesPairing = {
+  legacy: ValuesItem
+  ethereum: ValuesItem
+}
+
+export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+
+export type PageParams = {
+  locale: string
+}
+
+export type SlugPageParams = PageParams & {
+  slug: string[]
+}
+
+export type TimeLeftLabel = { singular: string; plural: string }
+
+export type TimeLeftLabels = Record<
+  "days" | "hours" | "minutes" | "seconds",
+  TimeLeftLabel
+>
+
+export type Story = {
+  name: string
+  storyEnglish: string
+  storyOriginal: string | null
+  twitter: string | null
+  country: string | null
+  date: string
+}
+
+export type SectionNavDetails = {
+  key: string
+  label: string
+  href?: string
+  icon?: React.ReactNode
 }

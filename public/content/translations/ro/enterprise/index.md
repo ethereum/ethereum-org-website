@@ -63,7 +63,6 @@ Diverse organizații au depus eforturi comune pentru a creşte uşurinţa de uti
 ### Instrumente și biblioteci {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Platformă pentru analiza datelor din Ethereum_
-- [Epirus](https://www.web3labs.com/epirus) _o platformă pentru dezvoltarea, implementarea și monitorizarea aplicațiilor blockchain de către Web3 Labs_
 - [Ernst & Young's „Nightfall”](https://github.com/EYBlockchain/nightfall) _un set de instrumente pentru tranzacții private_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _o aplicație de semnare a tranzacțiilor de utilizat cu un furnizor web3_
 - [Tenderly](https://tenderly.co/) _o platformă de date care oferă analize, alerte și monitorizare în timp real, ce acceptă rețelele private._
@@ -91,7 +90,7 @@ Câteva exemple de soluții de Nivelul 2 care sunt pregătite pentru producție 
 - Plasma (date în afara lanțului, dovezi de fraudă)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Canale de stare
   - [Connext](https://connext.network/)
@@ -117,7 +116,7 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 
 ### Finanțe {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emiterea și decontarea obligațiunilor_
+- [Santander Bank](https://www.coindesk.com/markets/2019/09/12/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emiterea și decontarea obligațiunilor_
 - [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _emisiune de obligațiuni_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _oferirea de obligațiuni și tokenizarea pentru mărcile FAT_
 - [Sila](https://silamoney.com/) _infrastructura de plăți bancare și ACH ca serviciu_
@@ -131,7 +130,7 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _detaliile împrumuturilor finalizate sunt codificate prin funcții hash și înregistrate pe Mainnet_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _cea mai mare agenție de știri din Italia combate știrile false și le permite cititorilor să verifice originea știrilor înregistrându-le pe Mainnet_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _înregistrează comunicate de presă pe Ethereum pentru a asigura responsabilizarea corporativă și încrederea_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _înregistrează proveniența și istoricul reparațiilor ceasurilor pe Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) _înregistrează proveniența și istoricul reparațiilor ceasurilor pe Ethereum_
 - [EthSign](https://ethsign.xyz/) _records signed electronic documents on the Ethereum blockchain_
 
 ### Lanțul de aprovizionare {#supply-chain}
@@ -141,7 +140,7 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 - [ShipChain](https://shipchain.io) _lanț paralel public al lui Ethereum și sistem de întreprinderi pentru vizibilitatea și încrederea lanțului de aprovizionare, în special pentru logistica multi-modală_
 - [Follow Our Fibre](https://www.followourfibre.com) _trasabilitatea lanțului de aprovizionare cu viscoză_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _permite companiilor să se angajeze într-un flux de lucru de achiziții publice prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua partenerilor dvs. de afaceri de încredere_
-- [Treum](https://treum.io/) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
 
 ### Acreditări și certificări {#credentials}

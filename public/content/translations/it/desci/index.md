@@ -95,8 +95,7 @@ Esplora i progetti e unisciti alla community della DeSci.
 - [Molecule: finanzia e ricevi finanziamenti per i tuoi progetti di ricerca](https://www.molecule.xyz/)
 - [VitaDAO: ricevi finanziamenti tramite accordi di ricerca sponsorizzati per la ricerca sulla longevità](https://www.vitadao.com/)
 - [ResearchHub: pubblica un risultato scientifico e conversa con i colleghi](https://www.researchhub.com/)
-- [LabDAO: piega una proteina in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: interroga i dati climatici raccolti da una community decentralizzata](https://api.dclimate.net/)
+- [dClimate API: interroga i dati climatici raccolti da una community decentralizzata](https://www.dclimate.net/)
 - [DeSci Foundation: sviluppatore di strumenti di pubblicazione della DeSci](https://descifoundation.org/)
 - [DeSci.World: negozio unico per gli utenti per visualizzare e impegnarsi con progetti di scienza decentralizzata](https://desci.world)
 - [OceanDAO: finanziamenti governati dalla DAO per la scienza relativa ai dati](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Accogliamo suggerimenti per nuovi progetti da elencare: per iniziare, ti preghia
 - [Una guida alle biotecnologie decentralizzate di Jocelynn Pearl, per il futuro a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Il caso della DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guida alla DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Risorse scientifiche decentralizzate](https://www.vincentweisser.com/decentralized-science)
+- [Risorse scientifiche decentralizzate](https://www.vincentweisser.com/desci)
 - [IP-NFT nella Biofarmaceutica di Molecule: una descrizione tecnica](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Creare sistemi scientifici attendibili, di Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Il Futuro della Scienza Decentralizzata (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ Accogliamo suggerimenti per nuovi progetti da elencare: per iniziare, ti preghia
 - [DeSci: Il Futuro della Ricerca, di Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Finanziamento Scientifico (Epilogo: DeSci e nuovi cripto-primitivi), di Nadia](https://nadia.xyz/science-funding)
 - [La Decentralizzazione sta Sconvolgendo lo Sviluppo Farmaceutico](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Cos'è la DeSci, o Scienza Decentralizzata?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Cos'è la DeSci, o Scienza Decentralizzata?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Video {#videos}
 

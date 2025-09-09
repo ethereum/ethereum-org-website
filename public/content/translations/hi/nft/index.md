@@ -56,7 +56,7 @@ NFT का इस्तेमाल कई चीजों के लिए क�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>एक्सप्लोर करें, खरीदे या अपनी स्वयं की NFT कला/संग्रहण करने लायक वस्तुएं बनाएं...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     NFT कला को एक्सप्लोर करें
   </ButtonLink>
 </InfoBanner>

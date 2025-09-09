@@ -41,6 +41,7 @@ export interface StaticFrontmatter extends SharedFrontmatter {
  * deprecate @/lib/util/getSummaryPoints.ts
  */
 export interface SummaryPointsNumbered {
+  summary?: string
   summaryPoint1?: string
   summaryPoint2?: string
   summaryPoint3?: string
@@ -71,6 +72,7 @@ export interface UseCasesFrontmatter
     SummaryPointsNumbered,
     ImageInfo {
   emoji: string
+  showDropdown?: boolean
 }
 
 export interface StakingFrontmatter
@@ -174,6 +176,6 @@ export interface CodeExample {
   alt?: string
   id?: number
   codeLanguage: string
-  code: string
+  codeUrl: string
   eventName: string
 }

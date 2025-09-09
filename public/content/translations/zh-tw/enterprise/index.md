@@ -116,7 +116,7 @@ lang: zh-tw
 ### 數據公證 {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _義大利通訊社，它打擊假新聞並使讀者能夠透過將新聞報導記錄在主網上來驗證新聞報導的來源_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _在以太坊上記錄手錶的出處和維修歷史_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _在以太坊上記錄手錶的出處和維修歷史_
 - [BRØK](https://www.xn--brk-1na.no/) - _挪威政府為公眾非上市公司提供的股權結構表平台_
 - [Certifaction](https://certifaction.com/) - _具有隱私設計的合法有效電子簽名_
 - [EthSign](https://ethsign.xyz/) - _在以太坊區塊鏈上記錄簽名的電子文檔_

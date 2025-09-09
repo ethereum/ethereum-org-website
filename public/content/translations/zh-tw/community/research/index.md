@@ -224,7 +224,7 @@ lang: zh-tw
 
 #### 背景介紹讀物 {#background-reading-9}
 
-- [穩健激勵群組](https://ethereum.github.io/rig/)
+- [穩健激勵群組](https://rig.ethereum.org/)
 - [Devconnect 上的 ETHconomics 研討會](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### 近期研究 {#recent-research-9}
@@ -307,7 +307,7 @@ lang: zh-tw
 
 #### 近期研究 {#recent-research-14}
 
-- [穩健激勵群組資料分析](https://ethereum.github.io/rig/)
+- [穩健激勵群組資料分析](https://rig.ethereum.org/)
 
 ## 應用程式和工具 {#apps-and-tooling}
 

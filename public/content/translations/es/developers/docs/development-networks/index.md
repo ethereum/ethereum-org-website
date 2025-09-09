@@ -41,9 +41,8 @@ La red de tipo Hardhat viene integrada con Hardhat, que es un entorno de desarro
 
 Algunos clientes de consenso tienen herramientas integradas para implementar cadenas de baliza locales con fines de prueba. Las instrucciones para Lighthouse, Nimbus y Lodestar están disponibles:
 
-- [Red de prueba local con Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Red de prueba local con Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Red de prueba local con Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Red de prueba local con Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Cadenas de prueba públicas de Ethereum {#public-beacon-testchains}
 

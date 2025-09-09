@@ -42,7 +42,7 @@ const RoadmapActionCard = ({
       <Flex className="flex-1 flex-col justify-between gap-4 p-6">
         <h3 className="text-2xl">{title}</h3>
         <p className="flex-1">{description}</p>
-        <LinkOverlay asChild>
+        <LinkOverlay href={href} className="no-underline">
           <ButtonLink href={href}>{buttonText}</ButtonLink>
         </LinkOverlay>
       </Flex>

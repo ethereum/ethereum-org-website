@@ -143,7 +143,7 @@ Kami baru berada pada permulaan untuk menciptakan Web yang lebih baik dengan Web
 
 - [Dapatkan dompet](/wallets/)
 - [Mencari komunitas](/community/)
-- [Menjelajahi aplikasi-aplikasi Web3](/dapps/)
+- [Menjelajahi aplikasi-aplikasi Web3](/apps/)
 - [Bergabung dengan DAO](/dao/)
 - [Bangun di Web3](/developers/)
 
@@ -151,11 +151,11 @@ Kami baru berada pada permulaan untuk menciptakan Web yang lebih baik dengan Web
 
 Web3 tidak didefinisikan secara kaku. Berbagai peserta komunitas memiliki sudut pandang yang berbeda mengenai ini. Berikut adalah beberapa di antaranya:
 
-- [Apa itu Web3? Penjelasan Masa Depan Internet yang Terdesentralisasi](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Apa itu Web3? Penjelasan Masa Depan Internet yang Terdesentralisasi](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Memahami Pengertian Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Mengapa Web3 Penting](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Mengapa Desentralisasi Penting](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Lanskap Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Debat Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Debat Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

@@ -70,7 +70,7 @@ La feuille de route est principalement le résultat d'années de travail des che
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Que fut l'ETH2 ?</h4>
 
-  <p>Le terme « Eth2 » était couramment utilisé pour décrire l'avenir d'Ethereum avant le passage à la <a href="/glossary/#pos">preuve d'enjeu</a>, mais il a été <strong>supprimé en faveur d'une terminologie plus précise.</strong> Il était à l'origine utilisé pour différencier le réseau Ethereum avant le passage à la preuve d'enjeu et le réseau après, ou parfois pour se référer aux différents clients Ethereum (les <a href="/glossary/#execution-client">clients d'exécution</a> étaient parfois appelés clients ETH1 et les <a href="/glossary/#consensus-client">clients de consensus</a> étaient parfois appelés clients ETH2).</p>
+  <p>Le terme « Eth2 » était couramment utilisé pour décrire l'avenir d'Ethereum avant le passage à la [preuve d'enjeu](/glossary/#pos), mais il a été <strong>supprimé en faveur d'une terminologie plus précise.</strong> Il était à l'origine utilisé pour différencier le réseau Ethereum avant le passage à la preuve d'enjeu et le réseau après, ou parfois pour se référer aux différents clients Ethereum (les [clients d'exécution](/glossary/#execution-client) étaient parfois appelés clients ETH1 et les [clients de consensus](/glossary/#consensus-client) étaient parfois appelés clients ETH2).</p>
 
 </InfoBanner>
 
@@ -109,6 +109,7 @@ La fragmentation est la division de la blockchain Ethereum afin que des sous-ens
 
 ## Vous recherchez des mises à niveau techniques spécifiques ? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) – La fourche majeure Prague/Electra qui introduit une nouvelle approche de l’abstraction de compte, améliore l'évolutivité et bien plus encore.
 - [Danksharding](/roadmap/danksharding) - Le Danksharding rend les rollups de couche 2 bien plus abordables pour les utilisateurs en ajoutant des « blob » de données aux blocs d'Ethereum.
 - [Retraits de Staking](/staking/withdrawals) - La mise à niveau Shanghai/Capella a activé les retraits de staking sur Ethereum, permettant aux gens de déverrouiller leurs ETH mis en jeu.
 - [Finalité à un seul créneau](/roadmap/single-slot-finality) - Au lieu d'attendre pendant 15 minutes, les blocks pourraient être proposés et finalisés dans le même créneau. Ceci est plus pratique pour les applications et bien plus difficilement attaquable.

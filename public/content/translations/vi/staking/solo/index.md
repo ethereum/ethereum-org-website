@@ -55,7 +55,7 @@ Ngoài ra, bạn cần hiểu về cấu hình phần cứng cơ bản và thôn
 <ExpandableCard title="Quản lý khóa bảo mật" eventCategory="SoloStaking" eventName="clicked secure key management">
 Giống như khóa riêng bảo mật địa chỉ Ethereum của bạn, bạn sẽ cần tạo các khóa riêng biệt cho nút xác thực. Bạn phải hiểu cách giữ an toàn vào bảo mật các cụm từ khởi tạo hoặc khóa riêng.{' '}
 
-<a href="/security/">Bảo mật Ethereum và ngăn chặn lừa đảo</a>
+[Bảo mật Ethereum và ngăn chặn lừa đảo](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn t
 <ExpandableCard title="Tôi có thể đặt cọc nhiều hơn 32 ETH không?">
 Mỗi cặp khóa liên kết với một nút xác thực yêu cầu chính xác 32 ETH để kích hoạt. Thêm ETH vào cùng một bộ khóa sẽ không làm tăng tiềm năng nhận thưởng vì mỗi nút xác thực chỉ được giới hạn ở <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">số dư hiệu quả</a> là 32 ETH. Điều này có nghĩa là đặt cọc theo các mức tăng 32 ETH, mỗi mức có bộ khóa và số dư riêng.
 
-Không đặt cọc quá 32 ETH cho một nút xác thực đơn lẻ. Hành động đó sẽ không làm tăng phần thưởng của bạn. Nếu địa chỉ rút tiền đã được thiết lập cho nút xác thực, số dư vượt quá 32 ETH sẽ tự động được rút về địa chỉ này trong <a href="/staking/withdrawals/#validator-sweeping">lần quét nút xác thực</a> tiếp theo.
+Không đặt cọc quá 32 ETH cho một nút xác thực đơn lẻ. Hành động đó sẽ không làm tăng phần thưởng của bạn. Nếu địa chỉ rút tiền đã được thiết lập cho nút xác thực, số dư vượt quá 32 ETH sẽ tự động được rút về địa chỉ này trong [lần quét nút xác thực](/staking/withdrawals/#validator-sweeping) tiếp theo.
 
-Nếu góp cổ phần một mình quá phức tạp, bạn có thể cân nhắc sử dụng một nhà cung cấp <a href="/staking/saas/">góp cổ phần dưới dạng dịch vụ</a>, hoặc tham gia các <a href="/staking/pools/">nhóm góp cổ phần</a> nếu số ETH của bạn dưới 32.
+Nếu góp cổ phần một mình quá phức tạp, bạn có thể cân nhắc sử dụng một nhà cung cấp [góp cổ phần dưới dạng dịch vụ](/staking/saas/), hoặc tham gia các [nhóm góp cổ phần](/staking/pools/) nếu số ETH của bạn dưới 32.
 </ExpandableCard>
 
 <ExpandableCard title="Tôi có bị cắt giảm không nếu tôi ngoại tuyến? (tóm lại là: Không.)">
@@ -200,7 +200,6 @@ Sau khi thiết lập thông tin xác thực rút tiền, các khoản thanh to�
 - [Hỗ trợ đa dạng máy khách](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Đa dạng máy khách trên lớp đồng thuận của Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Cách: mua phần cứng nút xác thực của Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Hướng Dẫn Từng Bước: Cách tham gia Testnet Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Các mẹo ngăn bị cắt giảm Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

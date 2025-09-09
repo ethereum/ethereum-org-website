@@ -13,21 +13,21 @@ L'objectif principal de l'évolutivité est d'augmenter la vitesse des transacti
 
 Bien que la vitesse et le débit soient importants, il est essentiel que les solutions de mise à l'échelle permettent d'atteindre ces objectifs en restant décentralisées et sécurisées. Le maintien d'une faible barrière d'entrée pour les opérateurs de nœuds est essentiel pour empêcher une progression vers une puissance informatique centralisée et peu sûre.
 
-Conceptuellement, nous catégorisons d'abord la mise à l'échelle de la chaîne puis celle hors de la chaîne.
+D'un point de vue conceptuel, nous définissons la mise à l'échelle comme une mise à l'échelle sur la chaîne ou comme une mise à l'échelle hors chaîne.
 
 ## Prérequis {#prerequisites}
 
 Vous devez avoir une bonne compréhension de tous les sujets fondamentaux. La mise en œuvre de solutions de mise à l'échelle est délicate car la technologie est moins éprouvée et continue d'être étudiée et développée.
 
-## Mise à l’échelle de la chaîne {#on-chain-scaling}
+## Mise à l'échelle sur la chaîne {#onchain-scaling}
 
-La mise à l’échelle en chaîne nécessite des modifications du protocole Ethereum (couche 1 [Réseau principal](/glossary/#mainnet)). Pendant longtemps, on s'attendait à ce que la fragmentation de la blockchain soit mise à l'échelle d'Ethereum. Cela impliquait de scinder la blockchain en morceaux discrets (fragments) pour être vérifiés par des sous-ensembles de validateurs. Cependant, la mise à l'échelle par rollups de couche 2 a pris le relais comme technique principale de mise à l'échelle. Ceci est supporté par l'ajout d'une nouvelle forme de données moins chère reliée à des blocs Ethereum qui est spécialement conçue pour rendre les rollups bon marché pour les utilisateurs.
+La mise à l'échelle sur la chaîne nécessite des modifications du protocole Ethereum ([Réseau principal](/glossary/#mainnet) de couche 1). Pendant longtemps, on s'attendait à ce que la fragmentation de la blockchain soit mise à l'échelle d'Ethereum. Cela impliquait de scinder la blockchain en morceaux discrets (fragments) pour être vérifiés par des sous-ensembles de validateurs. Cependant, la mise à l'échelle par rollups de couche 2 a pris le relais comme technique principale de mise à l'échelle. Ceci est supporté par l'ajout d'une nouvelle forme de données moins chère reliée à des blocs Ethereum qui est spécialement conçue pour rendre les rollups bon marché pour les utilisateurs.
 
 ### Fragmentation {#sharding}
 
 La fragmentation est le processus de division d'une base de données. Les sous-ensembles de validateurs seraient responsables des fragments individuels plutôt que de garder la trace de tout le système Ethereum. La fragmentation était sur la feuille de route [Ethereum](/roadmap/) depuis longtemps, et était autrefois destinée à être expédiée avant la fusion pour la preuve d'enjeu. Cependant, le développement rapide des [rollups de couche 2](#layer-2-scaling) et l'invention de [Danksharding](/roadmap/danksharding) (ajout de blobs de données rollup à des blocs Ethereum qui peuvent être vérifiés très efficacement par les validateurs) a conduit la communauté Ethereum à privilégier une mise à l'échelle centrée sur le rollup au lieu de la mise à l'échelle par fragmentation. Cela permettra également de simplifier la logique de consensus d'Ethereum.
 
-## Mise à l'echelle hors de la chaîne {#off-chain-scaling}
+## Mise à l'échelle hors chaîne {#offchain-scaling}
 
 Les solutions hors chaîne sont implémentées séparément du réseau principal de couche 1 - elles ne nécessitent aucune modification du protocole Ethereum existant. Certaines solutions, connues sous le nom de solutions de « couche 2 », tirent leur sécurité directement du consensus Ethereum de la couche 1, telles que [des rollups optimistes](/developers/docs/scaling/optimistic-rollups/), [des rollups zk](/developers/docs/scaling/zk-rollups/) ou [des canaux d'état](/developers/docs/scaling/state-channels/). D’autres solutions impliquent la création de nouvelles chaînes sous diverses formes qui tirent leur sécurité séparément du réseau principal, telles que des [chaînes latérales](#sidechains), [validiums](#validium), ou [ chaînes Plasma](#plasma). Ces solutions communiquent avec le réseau principal, mais tirent leur sécurité différemment pour atteindre une variété d’objectifs.
 
@@ -37,7 +37,7 @@ Cette catégorie de solutions hors chaîne tire sa sécurité du réseau princip
 
 La couche 2 est un terme collectif désignant les solutions conçues pour aider à faire évoluer votre application en gérant les transactions en dehors du réseau principal Ethereum (couche 1) tout en tirant parti du modèle robuste de sécurité décentralisé du réseau principal. La vitesse des transactions est réduite lorsque le réseau est occupé, ce qui rend l’expérience utilisateur médiocre pour certains types de dApps. Et plus le réseau est fréquenté, plus le prix du gaz augmente, car les expéditeurs de transactions cherchent à surenchérir. Cela peut rendre l'utilisation d'Ethereum très onéreuse.
 
-La plupart des solutions de la couche 2 sont centrées autour d'un serveur ou d'un groupe de serveurs, chacun pouvant être appelé nœud, validateur, opérateur, séquenceur, producteur de blocs ou un terme similaire. Selon l’implémentation, ces nœuds de couche 2 peuvent être gérés par les individus, les entreprises ou les entités qui les utilisent, ou par un opérateur tiers, ou par un large groupe de personnes (similaire au réseau principal). D’une manière générale, les transactions sont soumises à ces nœuds de couche 2 au lieu d’être soumises directement à la couche 1 (réseau principal). Pour certaines solutions, l’instance de couche 2 les regroupe ensuite en groupes avant de les ancrer à la couche 1, après quoi elles sont sécurisées par la couche 1 et ne peuvent pas être modifiées. La façon détaillée dont cela se réalise varie considérablement entre les différentes technologies et implémentations de la couche 2.
+La plupart des solutions de la couche 2 sont centrées autour d'un serveur ou d'un groupe de serveurs, chacun pouvant être appelé nœud, validateur, opérateur, séquenceur, producteur de blocs ou un terme similaire. Selon l’implémentation, ces nœuds de couche 2 peuvent être gérés par les individus, les entreprises ou les entités qui les utilisent, ou par un opérateur tiers, ou par un large groupe de personnes (similaire au réseau principal). D’une manière générale, les transactions sont soumises à ces nœuds de couche 2 au lieu d’être soumises directement à la couche 1 (réseau principal). Certaines solutions sont ensuite regroupées par l'instance de la couche 2 avant d'être ancrées à la couche 1, après quoi elles sont sécurisées par la couche 1 et ne peuvent plus être modifiées. La façon détaillée dont cela se réalise varie considérablement entre les différentes technologies et implémentations de la couche 2.
 
 Une instance spécifique de couche 2 peut être soit ouverte et partagée par de nombreuses applications, soit déployée par un seul projet et uniquement dédiée à la prise en charge de leur application.
 
@@ -57,11 +57,11 @@ Les rollups exécutent des transactions en dehors de la couche 1, puis les donn�
 Il existe deux types de rollups avec différents modèles de sécurité :
 
 - **Rollups optimistes** : suppose que les transactions sont valides par défaut et n’exécute que le calcul, via une [**preuve de fraude**](/glossary/#fraud-proof), en cas de contestation. [Plus d'infos sur les rollups optimistes](/developers/docs/scaling/optimistic-rollups/).
-- **Rollups ZK** : exécute le calcul hors chaîne et soumet une [**preuve de validité**](/glossary/#validity-proof) à la chaîne. [Plus d'infos sur les rollups ZK](/developers/docs/scaling/zk-rollups/).
+- **Rollups Zero-Knowledge (ZK)** : exécute le calcul hors chaîne et soumet une [**preuve de validité**](/glossary/#validity-proof) sur la chaîne. [Plus d'infos sur les rollups ZK](/developers/docs/scaling/zk-rollups/).
 
 #### Canaux d'état {#channels}
 
-Les canaux d'état utilisent des contrats multisig pour permettre aux participants d’effectuer des transactions rapidement et librement hors chaîne, puis de régler la finalisation sur le réseau principal. Cela minimise la congestion du réseau, les frais et les retards. Il existe actuellement deux types de canaux : les canaux d'état et les canaux de paiement.
+Les canaux d'état utilisent des contrats multisig pour permettre aux participants d’effectuer des transactions rapidement et librement hors chaîne, puis de régler la finalité sur le réseau principal. Cela minimise la congestion du réseau, les frais et les retards. Il existe actuellement deux types de canaux : les canaux d'état et les canaux de paiement.
 
 En savoir plus sur les [canaux d'état](/developers/docs/scaling/state-channels/).
 
@@ -94,7 +94,7 @@ En savoir plus sur [Validium](/developers/docs/scaling/validium/).
 
 <YouTube id="BgCgauWVTs0" />
 
-_Notez que l’explication dans la vidéo utilise le terme « Couche 2 » pour désigner toutes les solutions de mise à l'échelle hors chaîne, tandis que nous différencions la « couche 2 » en tant que solution hors chaîne qui tire sa sécurité du consensus du réseau principal de couche 1._
+_Notez que l’explication dans la vidéo utilise le terme « Couche 2 » pour désigner toutes les solutions de mise à l'échelle hors chaîne, tandis que nous différencions la « couche 2 » comme une solution hors chaîne qui tire sa sécurité du consensus du réseau principal de couche 1._
 
 <YouTube id="7pWxCklcNsU" />
 
@@ -106,9 +106,9 @@ _Notez que l’explication dans la vidéo utilise le terme « Couche 2 » pour
 - [Un guide incomplet pour les rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollups ZK alimentés par Ethereum : Wolrd Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollups optimisés vs Rollups ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Pourquoi les rollups + les data shards sont les seules solutions durables pour une grande évolutivité](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Quels types de couches 3 ont un sens ?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Disponibilité des données ou : Comment les Rollups ont appris à ne plus s'inquiéter et à aimer Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
+- [Disponibilité des données ou : Comment les Rollups ont appris à ne plus s'inquiéter et à aimer Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
+- [Guide Pratique des Rollups Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

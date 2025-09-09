@@ -12,7 +12,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-[トランザクション](/developers/docs/transactions/) 、[ブロック](/developers/docs/blocks/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)、および[ガス](/developers/docs/gas/)について理解している必要があります。 また、[分散アプリケーション（Dapp）](/dapps/)や[分散型金融（DeFi）](/defi/)の知識も有用です。
+[トランザクション](/developers/docs/transactions/) 、[ブロック](/developers/docs/blocks/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)、および[ガス](/developers/docs/gas/)について理解している必要があります。 また、[分散アプリケーション（Dapp）](/apps/)や[分散型金融（DeFi）](/defi/)の知識も有用です。
 
 ## MEVの抽出 {#mev-extraction}
 
@@ -204,7 +204,6 @@ MEV Boostをはじめとするいくつかのプロジェクトでは、フロ�
 
 - [フラッシュボット関連文書](https://docs.flashbots.net/)
 - [フラッシュボットのGitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _MEVのトランザクションを対象とするダッシュボードおよび同時検索プログラム_
 - [mevboost.org](https://www.mevboost.org/) - _MEV-Boostリレーとブロックビルダーに関するリアルタイムの統計を提供するトラッカー_
 
 ## 参考文献 {#further-reading}

@@ -14,27 +14,19 @@ const TXCOUNT = "txcount"
 const ACTIVE_ADDRESSES = "aa_last7d"
 
 export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
-  const url = "https://api.growthepie.xyz/v1/fundamentals.json"
+  const url = "https://api.growthepie.com/v1/fundamentals_7d.json"
 
-  const response = await fetch(url, { cache: "no-store" })
+  const response = await fetch(url)
   if (!response.ok) {
     console.log(response.status, response.statusText)
     throw new Error("Failed to fetch growthepie data")
   }
   const data: DataItem[] = await response.json()
 
-  // Get the date 7 days ago
-  const sevenDaysAgo = new Date()
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
-
-  // Filter data to only include the last 7 days and the metrics we need
-  const filteredData = data.filter((item) => {
-    const itemDate = new Date(item.date)
-    return (
-      itemDate >= sevenDaysAgo &&
-      [TXCOSTS_MEDIAN_USD, TXCOUNT, ACTIVE_ADDRESSES].includes(item.metric_key)
-    )
-  })
+  // Filter data to only include the metrics we need
+  const filteredData = data.filter((item) =>
+    [TXCOSTS_MEDIAN_USD, TXCOUNT, ACTIVE_ADDRESSES].includes(item.metric_key)
+  )
 
   const mostRecentDate = filteredData.reduce((latest, item) => {
     const itemDate = new Date(item.date)

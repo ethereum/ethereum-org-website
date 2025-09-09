@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -7,7 +7,10 @@ import {
 
 import { Lang } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
+import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
 import I18nProvider from "@/components/I18nProvider"
+import MainArticle from "@/components/MainArticle"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -17,10 +20,12 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-import FindWalletPage from "./_components/find-wallet"
-
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
 
   setRequestLocale(locale)
 
@@ -45,7 +50,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <FindWalletPage wallets={wallets} />
+      <MainArticle className="relative flex flex-col">
+        <div className="flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2">
+          <Breadcrumbs slug="wallets/find-wallet" />
+          <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
+            {t("page-find-wallet-title")}
+          </h1>
+          <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
+            {t("page-find-wallet-description")}
+          </p>
+        </div>
+
+        <FindWalletProductTable wallets={wallets} />
+      </MainArticle>
     </I18nProvider>
   )
 }

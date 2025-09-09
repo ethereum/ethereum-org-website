@@ -195,7 +195,7 @@ Reth آماده تولید است و برای استفاده در محیط‌ه�
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | لینوکس، ویندوز، مک‌اواس | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten، و غیره         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | لینوکس، ویندوز، مک‌اواس | Beacon Chain, Goerli, Sepolia, Ropsten، و غیره                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | لینوکس، ویندوز، مک‌اواس | Beacon Chain, Goerli, Sepolia, Ropsten، و غیره                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | لینوکس، ویندوز، مک‌اواس | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten، و غیره |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | لینوکس، ویندوز، مک‌اواس | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten، و غیره |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | جاوا       | لینوکس، ویندوز، مک‌اواس | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten، و غیره          |
 
 ### Lighthouse {#lighthouse}
@@ -220,7 +220,7 @@ Nimbus یک زیرساخت کلاینت اجماع است که با زبان Nim
 
 Prysm یک کلاینت اجماع با امکانات کامل و منبع باز است که با زبان Go تحت مجوز GPL-3.0 نوشته شده است. دارای یک رابط کاربری وب اپلیکیشن اختیاری است و تجربه کاربر، اسناد و قابلیت پیکربندی را هم برای کاربران شرکتی و هم برای کاربران سازمانی در اولویت قرار می دهد.
 
-برای اطلاعات بیشتر به [اسناد Prysm](https://docs.prylabs.network/docs/getting-started/) مراجعه کنید.
+برای اطلاعات بیشتر به [اسناد Prysm](https://prysm.offchainlabs.com/docs/) مراجعه کنید.
 
 ### Teku {#teku}
 

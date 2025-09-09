@@ -23,7 +23,7 @@ Maraming desentralisadong social network ang nagsisilbing mga alternatibo sa mga
 
 ### Paano gumagana ang mga desentralisadong social network? {#decentralized-social-networks-overview}
 
-Ang mga desentralisadong social network ay uri ng [mga decentralized application (dapps)](/dapps/) — mga application na pinapagana ng [mga smart contract](/glossary/#smart-contract) na dineploy sa blockchain. Ang contract code ay nagsisilbing backend para sa mga app na ito at nagtatakda ng business logic ng mga ito.
+Ang mga desentralisadong social network ay uri ng [mga decentralized application (dapps)](/apps/) — mga application na pinapagana ng [mga smart contract](/glossary/#smart-contract) na dineploy sa blockchain. Ang contract code ay nagsisilbing backend para sa mga app na ito at nagtatakda ng business logic ng mga ito.
 
 Umaasa ang mga tradisyonal na social media platform sa mga database upang mag-imbak ng impormasyon ng user, program code, at iba pang uri ng data. Ngunit gumagawa ito ng minsanang punto ng pagkasira at nagdudulot ng matinding panganib. Halimbawa, ang mga server ng Facebook ay napag-alaman na [ilang oras na naging offline](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact), noong Oktubre 2021 na naging sanhi upang hindi magamit ng mga user ang platform.
 
