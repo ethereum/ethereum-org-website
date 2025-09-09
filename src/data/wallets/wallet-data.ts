@@ -10,6 +10,7 @@ import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
+import BurnerImage from "@/public/images/wallets/burner.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import Coin98Image from "@/public/images/wallets/coin98.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
@@ -2483,6 +2484,52 @@ export const walletsData: WalletData[] = [
       "World Chain",
       "Arbitrum One",
     ],
+  },
+  {
+    last_updated: "2025-05-19",
+    name: "Burner",
+    image: BurnerImage,
+    twBackgroundColor: "bg-[#ffffff]",
+    twGradiantBrandColor: "from-[#ffffff]",
+    url: "https://www.burner.pro/eth",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/useburner",
+    discord: "",
+    reddit: "https://www.reddit.com/r/BurnerWallet/",
+    telegram: "https://t.me/useburner",
+    ios: true,
+    android: true,
+    linux: true,
+    windows: true,
+    macOS: true,
+    firefox: true,
+    chromium: true,
+    hardware: true,
+    open_source: false,
+    repo_url: "https://github.com/arx-research",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: false,
+    ens_support: true,
+    erc_20_support: false,
+    buy_crypto: true,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation:
+      "https://help.burner.pro/en/collections/10242509-getting-started",
+    documentation: "https://help.burner.pro/en",
+    supported_chains: ["Ethereum Mainnet", "Base"],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
