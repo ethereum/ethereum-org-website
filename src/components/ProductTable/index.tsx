@@ -1,4 +1,11 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react"
 import { useSearchParams } from "next/navigation"
 import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
@@ -11,6 +18,11 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import WalletInfo from "../FindWalletProductTable/WalletInfo"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "../ui/collapsible"
 
 interface ProductTableProps<T> {
   data: T[]
@@ -37,7 +49,7 @@ const ProductTable = <T,>({
   filterFn,
   presetFilters,
   onResetFilters,
-  // subComponent,
+  subComponent,
   // noResultsComponent,
   mobileFiltersLabel,
   // matomoEventCategory,
@@ -289,11 +301,17 @@ const ProductTable = <T,>({
 
   const parentRef = useRef<HTMLDivElement>(null)
 
+  const parentOffsetRef = useRef(0)
+
+  useLayoutEffect(() => {
+    parentOffsetRef.current = parentRef.current?.offsetTop ?? 0
+  }, [])
+
   const virtualizer = useWindowVirtualizer({
     count: filteredData.length,
     estimateSize: () => 250,
     overscan: 5,
-    scrollMargin: parentRef.current?.offsetTop ?? 0,
+    scrollMargin: parentOffsetRef.current,
   })
 
   return (
@@ -350,36 +368,35 @@ const ProductTable = <T,>({
 
             <div
               ref={parentRef}
-              className="relative flex w-full flex-col gap-4"
+              className="relative"
               style={{
                 height: `${virtualizer.getTotalSize()}px`,
               }}
             >
-              {/* {data.map((item) => (
-                <div key={(item as Wallet).name}>
-                  <WalletInfo wallet={item as Wallet} isExpanded={false} />
-                </div>
-              ))} */}
-              {virtualizer.getVirtualItems().map((item) => (
-                <div
-                  key={item.key}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: `${item.size}px`,
-                    transform: `translateY(${
-                      item.start - virtualizer.options.scrollMargin
-                    }px)`,
-                  }}
-                >
-                  <WalletInfo
-                    wallet={filteredData[item.index] as Wallet}
-                    isExpanded={false}
-                  />
-                </div>
-              ))}
+              {virtualizer.getVirtualItems().map((virtualItem) => {
+                const item = filteredData[virtualItem.index]
+
+                return (
+                  <Collapsible
+                    key={virtualItem.key}
+                    data-index={virtualItem.index}
+                    ref={virtualizer.measureElement}
+                    className="group/collapsible absolute left-0 top-0 flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
+                    style={{
+                      transform: `translateY(${virtualItem.start - virtualizer.options.scrollMargin}px)`,
+                    }}
+                  >
+                    <CollapsibleTrigger asChild>
+                      <div className="p-4">
+                        <WalletInfo wallet={item as Wallet} />
+                      </div>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="border-t p-4">
+                      {subComponent?.(item as T, filters, virtualItem.index)}
+                    </CollapsibleContent>
+                  </Collapsible>
+                )
+              })}
             </div>
           </div>
         </div>

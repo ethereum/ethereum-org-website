@@ -19,10 +19,9 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 interface WalletInfoProps {
   wallet: Wallet
-  isExpanded: boolean
 }
 
-const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
+const WalletInfo = ({ wallet }: WalletInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   const walletPersonas = useMemo(() => {
@@ -121,7 +120,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 lg:block">
               <div
-                className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
+                className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
               />
             </div>
             <div
@@ -149,18 +148,15 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
         </div>
         <div>
           <button className="text-primary">
-            {isExpanded ? (
-              <ChevronUp className="text-2xl" />
-            ) : (
-              <ChevronDown className="text-2xl" />
-            )}
+            <ChevronUp className="text-2xl group-data-[state=closed]/collapsible:hidden" />
+            <ChevronDown className="text-2xl group-data-[state=open]/collapsible:hidden" />
           </button>
         </div>
       </div>
       <div className="flex flex-row gap-4">
         <div className="relative hidden w-14 lg:block">
           <div
-            className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
+            className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
           />
         </div>
         <div className="flex flex-1">
@@ -173,6 +169,10 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               eventCategory: "WalletExternalLinkList",
               eventAction: "Tap main button",
               eventName: `${wallet.name}`,
+            }}
+            onClick={(e) => {
+              // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+              e.stopPropagation()
             }}
           >
             {t("page-find-wallet-visit-website")}
