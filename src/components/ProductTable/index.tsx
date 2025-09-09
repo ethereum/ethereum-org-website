@@ -1,33 +1,30 @@
-import {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useMemo,
-  useState,
-} from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import { ColumnDef } from "@tanstack/react-table"
+import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
-import type { FilterOption, TPresetFilters } from "@/lib/types"
+import type { FilterOption, TPresetFilters, Wallet } from "@/lib/types"
 
-import Table from "@/components/DataTable"
-import Filters from "@/components/ProductTable/Filters"
+// import Table from "@/components/DataTable"
+// import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import WalletInfo from "../FindWalletProductTable/WalletInfo"
+
 interface ProductTableProps<T> {
-  columns: ColumnDef<T>[]
   data: T[]
   allDataLength: number
   filters: FilterOption[]
+  filterFn: (data: T[], filters: FilterOption[]) => T[]
   presetFilters: TPresetFilters
-  presetFiltersCounts?: number[]
   resetFilters: () => void
-  setFilters: Dispatch<SetStateAction<FilterOption[]>>
-  subComponent?: FC<T>
+  subComponent?: (
+    item: T,
+    filters: FilterOption[],
+    listIdx: number
+  ) => React.ReactNode
   noResultsComponent?: React.FC
   mobileFiltersLabel: string
   matomoEventCategory: string
@@ -35,24 +32,27 @@ interface ProductTableProps<T> {
 }
 
 const ProductTable = <T,>({
-  columns,
   data,
-  allDataLength,
-  filters,
+  // allDataLength,
+  filters: initialFilters,
+  filterFn,
   presetFilters,
-  presetFiltersCounts,
   resetFilters,
-  setFilters,
-  subComponent,
-  noResultsComponent,
+  // subComponent,
+  // noResultsComponent,
   mobileFiltersLabel,
-  matomoEventCategory,
-  meta,
+  // matomoEventCategory,
+  // meta,
 }: ProductTableProps<T>) => {
   const searchParams = useSearchParams()
 
+  const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+  const filteredData = useMemo(() => {
+    return filterFn(data, filters)
+  }, [data, filters, filterFn])
 
   const parseQueryParams = (queryValue: unknown) => {
     // Handle boolean values
@@ -265,6 +265,27 @@ const ProductTable = <T,>({
     }, 0)
   }, [filters])
 
+  const presetFiltersCounts = useMemo(() => {
+    return presetFilters.map((persona) => {
+      const activeFilters = Object.entries(persona.presetFilters).filter(
+        ([, value]) => value === true
+      )
+
+      return data.filter((item) => {
+        return activeFilters.every(([feature]) => item[feature] === true)
+      }).length
+    })
+  }, [data, presetFilters])
+
+  const parentRef = useRef<HTMLDivElement>(null)
+
+  const virtualizer = useWindowVirtualizer({
+    count: filteredData.length,
+    estimateSize: () => 250,
+    overscan: 5,
+    scrollMargin: parentRef.current?.offsetTop ?? 0,
+  })
+
   return (
     <div>
       {presetFilters.length ? (
@@ -287,7 +308,7 @@ const ProductTable = <T,>({
               presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
               handleSelectPreset={handleSelectPreset}
-              dataCount={data.length}
+              dataCount={filteredData.length}
               activeFiltersCount={activeFiltersCount}
               mobileFiltersOpen={mobileFiltersOpen}
               setMobileFiltersOpen={setMobileFiltersOpen}
@@ -296,15 +317,15 @@ const ProductTable = <T,>({
             />
           </div>
           <div className="hidden lg:block">
-            <Filters
+            {/* <Filters
               filters={filters}
               setFilters={setFilters}
               resetFilters={resetFilters}
               activeFiltersCount={activeFiltersCount}
-            />
+            /> */}
           </div>
           <div className="flex-1">
-            <Table
+            {/* <Table
               variant="product"
               columns={columns}
               data={data}
@@ -315,7 +336,41 @@ const ProductTable = <T,>({
               activeFiltersCount={activeFiltersCount}
               meta={meta}
               matomoEventCategory={matomoEventCategory}
-            />
+            /> */}
+
+            <div
+              ref={parentRef}
+              className="relative flex w-full flex-col gap-4"
+              style={{
+                height: `${virtualizer.getTotalSize()}px`,
+              }}
+            >
+              {/* {data.map((item) => (
+                <div key={(item as Wallet).name}>
+                  <WalletInfo wallet={item as Wallet} isExpanded={false} />
+                </div>
+              ))} */}
+              {virtualizer.getVirtualItems().map((item) => (
+                <div
+                  key={item.key}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: `${item.size}px`,
+                    transform: `translateY(${
+                      item.start - virtualizer.options.scrollMargin
+                    }px)`,
+                  }}
+                >
+                  <WalletInfo
+                    wallet={filteredData[item.index] as Wallet}
+                    isExpanded={false}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
