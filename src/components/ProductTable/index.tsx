@@ -100,6 +100,7 @@ const ProductTable = <T,>({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams])
 
+  // Reset filters
   const resetFilters = useCallback(() => {
     setFilters(initialFilters)
     onResetFilters?.()
@@ -189,50 +190,55 @@ const ProductTable = <T,>({
   }
 
   // Update activePresets based on current filters
-  useEffect(() => {
-    const currentFilters = {}
+  const updateFilters = useCallback(
+    (filters: FilterOption[]) => {
+      const currentFilters = {}
 
-    filters.forEach((filter) => {
-      filter.items.forEach((item) => {
-        if (item.inputState === true) {
-          currentFilters[item.filterKey] = item.inputState
-        }
+      filters.forEach((filter) => {
+        filter.items.forEach((item) => {
+          if (item.inputState === true) {
+            currentFilters[item.filterKey] = item.inputState
+          }
 
-        if (item.options && item.options.length > 0) {
-          item.options.forEach((option) => {
-            if (option.inputState === true) {
-              currentFilters[option.filterKey] = option.inputState
-            }
-          })
-        }
+          if (item.options && item.options.length > 0) {
+            item.options.forEach((option) => {
+              if (option.inputState === true) {
+                currentFilters[option.filterKey] = option.inputState
+              }
+            })
+          }
+        })
       })
-    })
 
-    const presetsToApply = presetFilters.reduce<number[]>(
-      (acc, preset, idx) => {
-        const presetFilters = preset.presetFilters
-        const activePresetKeys = Object.keys(presetFilters).filter(
-          (key) => presetFilters[key]
-        )
-        const allItemsInCurrentFilters = activePresetKeys.every(
-          (key) => currentFilters[key] !== undefined
-        )
+      const presetsToApply = presetFilters.reduce<number[]>(
+        (acc, preset, idx) => {
+          const presetFilters = preset.presetFilters
+          const activePresetKeys = Object.keys(presetFilters).filter(
+            (key) => presetFilters[key]
+          )
+          const allItemsInCurrentFilters = activePresetKeys.every(
+            (key) => currentFilters[key] !== undefined
+          )
 
-        if (allItemsInCurrentFilters) {
-          acc.push(idx)
-        }
-        return acc
-      },
-      []
-    )
+          if (allItemsInCurrentFilters) {
+            acc.push(idx)
+          }
+          return acc
+        },
+        []
+      )
 
-    setActivePresets((prevActivePresets) => {
-      const newActivePresets = [
-        ...new Set([...prevActivePresets, ...presetsToApply]),
-      ]
-      return newActivePresets.filter((idx) => presetsToApply.includes(idx))
-    })
-  }, [filters, presetFilters])
+      setFilters(filters)
+
+      setActivePresets((prevActivePresets) => {
+        const newActivePresets = [
+          ...new Set([...prevActivePresets, ...presetsToApply]),
+        ]
+        return newActivePresets.filter((idx) => presetsToApply.includes(idx))
+      })
+    },
+    [presetFilters, setFilters, setActivePresets]
+  )
 
   // Count active filters
   const activeFiltersCount = useMemo(() => {
@@ -275,11 +281,11 @@ const ProductTable = <T,>({
         ([, value]) => value === true
       )
 
-      return data.filter((item) => {
+      return filteredData.filter((item) => {
         return activeFilters.every(([feature]) => item[feature] === true)
       }).length
     })
-  }, [data, presetFilters])
+  }, [filteredData, presetFilters])
 
   const parentRef = useRef<HTMLDivElement>(null)
 
@@ -307,7 +313,7 @@ const ProductTable = <T,>({
           <div className="block lg:hidden">
             <MobileFilters
               filters={filters}
-              setFilters={setFilters}
+              setFilters={updateFilters}
               presets={presetFilters}
               presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
@@ -323,7 +329,7 @@ const ProductTable = <T,>({
           <div className="hidden lg:block">
             <Filters
               filters={filters}
-              setFilters={setFilters}
+              setFilters={updateFilters}
               resetFilters={resetFilters}
               activeFiltersCount={activeFiltersCount}
             />

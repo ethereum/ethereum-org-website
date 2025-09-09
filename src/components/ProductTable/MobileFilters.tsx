@@ -21,7 +21,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 interface MobileFiltersProps {
   filters: FilterOption[]
-  setFilters: React.Dispatch<React.SetStateAction<FilterOption[]>>
+  setFilters: (filters: FilterOption[]) => void
   presets: TPresetFilters
   presetFiltersCounts?: number[]
   activePresets: number[]
