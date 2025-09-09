@@ -2,23 +2,22 @@ import { getTranslations } from "next-intl/server"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-interface TenYearJsonLdProps {
-  locale: string
-}
+import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function TenYearJsonLD({ locale }: TenYearJsonLdProps) {
+export default async function TenYearJsonLD({ locale }: { locale: string }) {
   const t = await getTranslations({
-    locale,
     namespace: "page-10-year-anniversary",
   })
+
+  const url = normalizeUrlForJsonLd(locale, "/10years/")
 
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/10years/`,
+    "@id": url,
     name: t("page-10-year-anniversary-meta-title"),
     description: t("page-10-year-anniversary-meta-description"),
-    url: `https://ethereum.org/${locale}/10years/`,
+    url: url,
     inLanguage: locale,
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -27,19 +26,19 @@ export default async function TenYearJsonLD({ locale }: TenYearJsonLdProps) {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: `https://ethereum.org/${locale}/`,
+          item: normalizeUrlForJsonLd(locale, "/"),
         },
         {
           "@type": "ListItem",
           position: 2,
           name: t("page-10-year-anniversary-meta-title"),
-          item: `https://ethereum.org/${locale}/10years/`,
+          item: url,
         },
       ],
     },
     publisher: {
       "@type": "Organization",
-      name: "Ethereum Foundation",
+      name: "ethereum.org",
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
@@ -50,21 +49,21 @@ export default async function TenYearJsonLD({ locale }: TenYearJsonLdProps) {
     },
     mainEntity: {
       "@type": "Event",
-      "@id": `https://ethereum.org/${locale}/10years/#ethereum-10-year-anniversary`,
+      "@id": `${url}#ethereum-10-year-anniversary`,
     },
   }
 
   const eventJsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "@id": `https://ethereum.org/${locale}/10years/#ethereum-10-year-anniversary`,
+    "@id": `${url}#ethereum-10-year-anniversary`,
     name: t("page-10-year-anniversary-meta-title"),
     description: t("page-10-year-anniversary-meta-description"),
     startDate: "2024-07-30",
     endDate: "2024-07-30",
     eventStatus: "https://schema.org/EventCompleted",
     eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
-    url: `https://ethereum.org/${locale}/10years/`,
+    url: url,
     organizer: {
       "@type": "Organization",
       name: "Ethereum Foundation",
@@ -72,7 +71,7 @@ export default async function TenYearJsonLD({ locale }: TenYearJsonLdProps) {
     },
     location: {
       "@type": "VirtualLocation",
-      url: `https://ethereum.org/${locale}/10years/`,
+      url: url,
     },
     image: {
       "@type": "ImageObject",

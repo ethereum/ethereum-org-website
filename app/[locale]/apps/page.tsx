@@ -25,6 +25,7 @@ import AppsHighlight from "./_components/AppsHighlight"
 import CommunityPicks from "./_components/CommunityPicks"
 import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
+import AppsJsonLD from "./page-jsonld"
 
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchCommunityPicks } from "@/lib/api/fetchCommunityPicks"
@@ -61,75 +62,9 @@ const Page = async ({ params }: { params: { locale: string } }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // JSON-LD structured data for the apps page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/apps/`,
-    name: t("page-apps-meta-title"),
-    description: t("page-apps-meta-description"),
-    url: `https://ethereum.org/${locale}/apps/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-apps-meta-title"),
-          item: `https://ethereum.org/${locale}/apps/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const appCategoriesJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-apps-categories-title"),
-    description: t("page-apps-meta-description"),
-    url: `https://ethereum.org/${locale}/apps/`,
-    numberOfItems: Object.keys(appsCategories).length,
-    itemListElement: Object.values(appsCategories).map((category, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: t(category.name),
-      description: t(category.description),
-      url: `https://ethereum.org/${locale}/apps/categories/${category.slug}`,
-    })),
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-apps"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-categories-apps"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(appCategoriesJsonLd),
-        }}
-      />
+      <AppsJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
         <SimpleHero
           breadcrumbs={<Breadcrumbs slug={"/apps"} />}

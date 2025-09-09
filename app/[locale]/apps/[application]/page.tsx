@@ -46,6 +46,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import AppCard from "../_components/AppCard"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
+import AppsAppJsonLD from "./page-jsonld"
 
 import { fetchApps } from "@/lib/api/fetchApps"
 
@@ -127,86 +128,9 @@ const Page = async ({
     return t("page-apps-days-ago", { days: diffInDays })
   }
 
-  // JSON-LD structured data for the individual app page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/apps/${application}/`,
-    name: `Ethereum Apps - ${app.name}`,
-    description: app.description,
-    url: `https://ethereum.org/${locale}/apps/${application}/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Apps",
-          item: `https://ethereum.org/${locale}/apps/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: app.name,
-          item: `https://ethereum.org/${locale}/apps/${application}/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const softwareApplicationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: app.name,
-    description: app.description,
-    url: app.url,
-    image: app.image,
-    applicationCategory: app.category,
-    applicationSubCategory: app.subCategory.join(", "),
-    operatingSystem: "Web Browser",
-    author: {
-      "@type": "Organization",
-      name: app.parentCompany,
-    },
-    datePublished: app.dateOfLaunch,
-    dateModified: app.lastUpdated,
-    inLanguage: app.languages,
-    screenshot: app.screenshots.slice(0, 5),
-    sameAs: [app.twitter, app.github, app.discord].filter(Boolean),
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-app"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-software-app"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(softwareApplicationJsonLd),
-        }}
-      />
+      <AppsAppJsonLD locale={locale} app={app} />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex flex-col gap-10 py-10">
           <div className="flex flex-col gap-10 px-4 md:px-10">

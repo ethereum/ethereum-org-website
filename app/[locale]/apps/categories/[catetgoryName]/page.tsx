@@ -34,6 +34,8 @@ import AppsTable from "../../_components/AppsTable"
 import CategoriesNav from "../../_components/CategoriesNav"
 import SuggestAnApp from "../../_components/SuggestAnApp"
 
+import AppsCategoryJsonLD from "./page-jsonld"
+
 import { fetchApps } from "@/lib/api/fetchApps"
 
 const VALID_CATEGORIES = Object.values(AppCategoryEnum)
@@ -88,83 +90,13 @@ const Page = async ({
     categoryEnum as AppCategoryEnum
   )
 
-  // Get apps for this category
-  const categoryApps = appsData[categoryEnum] || []
-
-  // JSON-LD structured data for the apps category page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
-    name: t(category.metaTitle),
-    description: t(category.metaDescription),
-    url: `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Apps",
-          item: `https://ethereum.org/${locale}/apps/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t(category.name),
-          item: `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const categoryAppsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t(category.name),
-    description: t(category.description),
-    url: `https://ethereum.org/${locale}/apps/categories/${normalizedSlug}/`,
-    numberOfItems: categoryApps.length,
-    itemListElement: categoryApps.slice(0, 10).map((app, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: app.name,
-      description: app.description,
-      url: app.url,
-    })),
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-category"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-apps-category"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(categoryAppsJsonLd),
-        }}
+      <AppsCategoryJsonLD
+        locale={locale}
+        categoryName={categoryEnum}
+        category={category}
+        appsData={appsData}
       />
       <I18nProvider locale={locale} messages={messages}>
         <div className="flex flex-col gap-12">
