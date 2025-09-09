@@ -11,7 +11,7 @@ Ethereum'un veri yapısı PATRICIA'nın (Alfasayısal Kodlanmış Bilgileri Alma
 
 Merkle-Patricia trie, kesin ve kriptografik olarak doğrulanabilirdir: Bir durum kökü üretmenin tek yolu, onu durumun her bir parçasından hesaplamaktır ve aynı olan iki durum, kök karması ve ona yol açan karmalar karşılaştırılarak kolayca kanıtlanabilir (_bir Merkle ispatı_). Tam tersinden bakacak olursak, aynı kök karmasına sahip iki farklı durum oluşturmak mümkün değildir ve farklı değerlere sahip durumları değiştirme girişimi farklı bir durum kök karmasına yol açar. Teorik olarak bu yapı, eklemeler, aramalar ve silmeler için `O(log(n))` verimliliğinin "kutsal kasesini" sağlar.
 
-Ethereum, yakın gelecekte olası protokol geliştirmeleri açısından birçok fırsat yaratacak olan [Verkle Ağacı](https://ethereum.org/en/roadmap/verkle-trees) yapısına geçmeyi düşünüyor.
+Ethereum, yakın gelecekte olası protokol geliştirmeleri açısından birçok fırsat yaratacak olan [Verkle Ağacı](/roadmap/verkle-trees) yapısına geçmeyi düşünüyor.
 
 ## Ön koşullar {#prerequisites}
 

@@ -56,7 +56,7 @@ Separar as chaves de validação das chaves da conta Ethereum permite que vário
 
 ![esquema da chave de validação](validator-key-schematic.png)
 
-**Nota**: Sair das funções de staking e sacar o saldo de um validador atualmente requer a assinatura de uma [mensagem de saída voluntária (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) com a chave do validador. No entanto, o [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) é uma proposta que permitirá que um usuário acione a saída de um validador e saque seu saldo assinando mensagens de saída com a chave de saque no futuro. Isso reduzirá as suposições de confiança ao permitir que os participantes que delegam ETH a [provedores de staking como serviço](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) mantenham o controle de seus fundos.
+**Nota**: Sair das funções de staking e sacar o saldo de um validador atualmente requer a assinatura de uma [mensagem de saída voluntária (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) com a chave do validador. No entanto, o [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) é uma proposta que permitirá que um usuário acione a saída de um validador e saque seu saldo assinando mensagens de saída com a chave de saque no futuro. Isso reduzirá as suposições de confiança ao permitir que os participantes que delegam ETH a [provedores de staking como serviço](/staking/saas/#what-is-staking-as-a-service) mantenham o controle de seus fundos.
 
 ## Obtendo chaves de uma frase semente {#deriving-keys-from-seed}
 
