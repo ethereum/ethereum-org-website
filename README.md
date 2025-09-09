@@ -2046,6 +2046,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://formal.land/"><img src="https://avatars.githubusercontent.com/u/316665?v=4?s=100" width="100px;" alt="Guillaume Claret"/><br /><sub><b>Guillaume Claret</b></sub></a><br /><a href="#maintenance-clarus" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eeemmmmmm"><img src="https://avatars.githubusercontent.com/u/155267286?v=4?s=100" width="100px;" alt="emmmm"/><br /><sub><b>emmmm</b></sub></a><br /><a href="#maintenance-eeemmmmmm" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vibhorkashyap"><img src="https://avatars.githubusercontent.com/u/1714110?v=4?s=100" width="100px;" alt="Vibhor Kashyap"/><br /><sub><b>Vibhor Kashyap</b></sub></a><br /><a href="#maintenance-vibhorkashyap" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
