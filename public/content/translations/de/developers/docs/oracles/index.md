@@ -4,8 +4,6 @@ description: Oracles helfen dabei, Daten aus der realen Welt in Ihre Ethereum-An
 lang: de
 ---
 
-# Oracles
-
 Oracles sind Anwendungen, die Datenfeeds bereitstellen und Offchain-Datenquellen für die Blockchain und Smart Contracts verfügbar machen. Das ist notwendig, weil Ethereum-basierte Smart Contracts standardmäßig keinen Zugriff auf Informationen außerhalb des Blockchain-Netzwerks haben.
 
 Indem Smart Contracts die Möglichkeit erhalten, mit Offchain-Daten zu arbeiten, wird der Nutzen und Wert dezentraler Anwendungen erheblich gesteigert. Beispielsweise verlassen sich Onchain-Vorhersagemärkte auf Oracles, um Informationen über Ereignisse zu liefern, die zur Validierung von Nutzerprognosen verwendet werden. Wenn Alice zum Beispiel 20 ETH darauf wettet, wer der nächste US-Präsident wird, benötigt die Vorhersagemarkt-dApp ein Oracle, um das Wahlergebnis zu bestätigen und zu bestimmen, ob Alice eine Auszahlung erhält.
