@@ -95,7 +95,6 @@ Tingnan ang mga proyekto at sumali sa komunidad ng DeSci.
 - [Molecule: Maglaan at makakuha ng pondo para sa iyong mga proyektong pananaliksik](https://www.molecule.xyz/)
 - [VitaDAO: makatanggap ng pondo sa pamamagitan ng mga sponsored na research agreement para sa longevity research](https://www.vitadao.com/)
 - [ResearchHub: mag-post ng resulta ng siyentipikong pag-aaral at makipag-usap sa mga kapwa mananaliksik](https://www.researchhub.com/)
-- [LabDAO: mag-fold ng protein in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: mag-query ng data ng klima na kinolekta ng desentralisadong komunidad](https://www.dclimate.net/)
 - [DeSci Foundation: builder ng tool sa paglalathala ng DeSc](https://descifoundation.org/)
 - [DeSci.World: one-stop shop para tingnan at mag-engage ang mga user sa decentralized science](https://desci.world)
@@ -126,7 +125,7 @@ Tumatanggap kami ng mga mungkahi para sa mga bagong proyekto na ililista - tingn
 - [DeSci: Ang Kinabukasan ng Pananaliksik ni Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Pondo para sa Siyensiya (Epilogo: DeSci at bagong crypto primitives) ni Nadia](https://nadia.xyz/science-funding)
 - [Binabago ng Desentralisasyon ang Pag-develop ng Gamot](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

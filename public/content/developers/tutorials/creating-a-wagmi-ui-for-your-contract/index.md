@@ -501,7 +501,7 @@ export { chains }
 
 ### Adding another blockchain {#add-blockchain}
 
-These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
+These days there are a lot of [L2 scaling solution](/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
 1. Import the `defineChain` type from viem.
 
@@ -580,3 +580,6 @@ Of course, you don't really care about providing a user interface for `Greeter`.
 1. You can [add Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
 
 Now go and make your contracts usable for the wide world.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

@@ -11267,7 +11267,7 @@
       "login": "konopkja",
       "name": "Jakub",
       "avatar_url": "https://avatars.githubusercontent.com/u/100724231?v=4",
-      "profile": "http://ethereum.org",
+      "profile": "https://ethereum.org",
       "contributions": [
         "doc",
         "content",
@@ -13112,6 +13112,60 @@
       "name": "Abel Derderian",
       "avatar_url": "https://avatars.githubusercontent.com/u/5216201?v=4",
       "profile": "http://abel.fr",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "haouvw",
+      "name": "haouvw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/171421479?v=4",
+      "profile": "https://github.com/haouvw",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "kalidiagne",
+      "name": "Kalidou Diagne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20865711?v=4",
+      "profile": "https://kalidou.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chainide-agent-bob",
+      "name": "Bob",
+      "avatar_url": "https://avatars.githubusercontent.com/u/203082506?v=4",
+      "profile": "https://chainide.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Jorgerl02",
+      "name": "Jorge Rodriguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131685800?v=4",
+      "profile": "https://smithii.io",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "clarus",
+      "name": "Guillaume Claret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/316665?v=4",
+      "profile": "https://formal.land/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "eeemmmmmm",
+      "name": "emmmm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155267286?v=4",
+      "profile": "https://github.com/eeemmmmmm",
       "contributions": [
         "maintenance"
       ]

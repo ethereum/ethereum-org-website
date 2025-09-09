@@ -70,7 +70,6 @@ Profesyonel, topluluk destekli organizasyonlara veya tasarım gruplarına katıl
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Açık Kaynaklı Web3Design](https://www.web3designers.org/)
 
 ## Tasarım Sistemleri {#design-systems}
 

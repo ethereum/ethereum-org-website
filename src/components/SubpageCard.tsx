@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
@@ -44,16 +44,19 @@ const SubpageCard = ({
       <p className="m-0 p-0 text-body-medium">{description}</p>
 
       {inlineLink ? (
-        <LinkOverlay href={href} asChild matomoEvent={matomoEvent}>
+        <LinkOverlay asChild>
           <InlineLink
             href={href}
             className={cn("hover:text-primary-hover", inlineLink.className)}
+            customEventOptions={matomoEvent}
           >
             {inlineLink.text}
           </InlineLink>
         </LinkOverlay>
       ) : (
-        <LinkOverlay href={href} />
+        <LinkOverlay asChild>
+          <BaseLink href={href} customEventOptions={matomoEvent} />
+        </LinkOverlay>
       )}
     </LinkBox>
   )

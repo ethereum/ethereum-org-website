@@ -95,7 +95,6 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [Molecule：資助你的研究計畫或為其募資](https://www.molecule.xyz/)
 - [VitaDAO：藉由受贊助的長壽研究協議獲得資金](https://www.vitadao.com/)
 - [ResearchHub：發布科學成果並與同行交流](https://www.researchhub.com/)
-- [LabDAO：在電腦中折疊蛋白質](https://alphafodl.vercel.app/)
 - [dClimate API：查詢去中心化社群收集的氣候數據](https://www.dclimate.net/)
 - [DeSci Foundation：去中心化科研發表工具生成器](https://descifoundation.org/)
 - [DeSci.World：供使用者查看、參與去中心化科研的單一窗口](https://desci.world)
@@ -126,7 +125,7 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [去中心化科研：研究領域的未來　作者：Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [科研融資（跋：去中心化科研與全新加密原語） 作者：Nadia](https://nadia.xyz/science-funding)
 - [去中心化風潮正在擾亂藥物研發](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [什麼是 DeSci — 去中心化科研？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [什麼是 DeSci — 去中心化科研？](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 影片 {#videos}
 

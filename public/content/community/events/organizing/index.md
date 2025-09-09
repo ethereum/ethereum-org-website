@@ -16,8 +16,8 @@ A successful Ethereum conference is built on an active and engaged community. If
 **Your first steps should be:**
 
 - Explore local startups and companies — having strong, active companies in your city or country is often the most critical prerequisite for building a community.
-- Check if there are already some meetups — ethereum.org [events page](https://ethereum.org/en/community/events/)
-- [The ethereum.org website](https://ethereum.org/en/community/events/) and ethereum.org Discord — to check if there are local Ethereum events, developers, and contributors.
+- Check if there are already some meetups — ethereum.org [events page](https://ethereum.org/community/events/)
+- [The ethereum.org website](https://ethereum.org/community/events/) and ethereum.org Discord — to check if there are local Ethereum events, developers, and contributors.
 - Luma and Meetup.com — to see if there are Ethereum-related events or broader web3 events happening in your area.
 - X — Try to find local advocates or influencers in the space.
 
@@ -82,7 +82,7 @@ Another important step before starting to build a program or reaching out to spo
 
 ### How to assemble a team {#how-to-assemble-a-team}
 
-Choose people who share your vision and complement your skills. Some teams work as collectives, while others have defined roles — find what works best for you. Regular communication and clear expectations are essential. Although it's tempting to rely on communication platforms for event planning, we suggest picking a task management platform (such as Notion, Basecamp, Trello, Asana, or even the good old Google Sheets) for organizing and tracking what needs to be done. It’s crucial to have a well-functioning and well–organized team.
+Choose people who share your vision and complement your skills. Some teams work as collectives, while others have defined roles — find what works best for you. Regular communication and clear expectations are essential. Although it's tempting to rely on communication platforms for event planning, we suggest picking a task management platform (such as Notion, Basecamp, Trello, Asana, or even the good old Google Sheets) for organizing and tracking what needs to be done. It’s crucial to have a well-functioning and well-organized team.
 
 Different Ethereum organizer teams have different roles in their teams, but they all have in common people who are working on logistics, budgeting, marketing, program, design, and partnerships.
 
@@ -114,7 +114,7 @@ Once you’ve tapped into local support, expand your outreach to global players 
 
 #### Alternative forms of funding your event {#alternative-forms-of-funding-your-event}
 
-Grants are another potential funding source that many organizers overlook. Programs like the Ethereum Foundation’s [Ecosystem Support Program](https://esp.ethereum.foundation/) (ESP) and [other grant initiatives](https://ethereum.org/en/community/grants/#ethereum-grants) exist to support community-driven events.
+Grants are another potential funding source that many organizers overlook. Programs like the Ethereum Foundation’s [Ecosystem Support Program](https://esp.ethereum.foundation/) (ESP) and [other grant initiatives](https://ethereum.org/community/grants/#ethereum-grants) exist to support community-driven events.
 
 Beyond financial sponsorships, consider in-kind partnerships, especially for food and beverages. Brands that align with the local culture or tech community can be great partners for your event. Coffee brands, beverage companies, or even local pizzerias might be willing to provide products in exchange for visibility at the event. These collaborations can help reduce costs while enhancing the attendee experience.
 

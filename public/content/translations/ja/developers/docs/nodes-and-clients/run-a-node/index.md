@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### ハードウェア {#hardware}
 
-しかし、検閲耐性を備えた分散型ネットワークは、クラウドプロバイダーに依存すべきではありません。 クラウドではなく、ローカルハードウェア上でノードを実行することが、エコシステムにとってより健全です。 [推計](https://www.ethernodes.org/networkType/Hosting)によると、クラウド上で動作するノードの割合が多く、単一障害点となる可能性があります。
+しかし、検閲耐性を備えた分散型ネットワークは、クラウドプロバイダーに依存すべきではありません。 クラウドではなく、ローカルハードウェア上でノードを実行することが、エコシステムにとってより健全です。 [推計](https://www.ethernodes.org/network-types)によると、クラウド上で動作するノードの割合が多く、単一障害点となる可能性があります。
 
 イーサリアムクライアントは、デスクトップパソコン、ノートパソコン、サーバ、あるいはシングルボードコンピュータ上で動作させることができます。 パーソナルコンピュータでクライアントを実行することも可能ですが、ノード専用マシンを用意することで、プライマリコンピュータへの影響を最小限に抑えながら、パフォーマンスとセキュリティを大幅に向上させることができます。
 
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermindのドキュメントは、Nethermindとコンセンサスクライアントの実行方法をすべて網羅した[完全ガイド](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)です。
+Nethermindのドキュメントは、Nethermindとコンセンサスクライアントの実行方法をすべて網羅した[完全ガイド](https://docs.nethermind.io/get-started/running-node/)です。
 
 実行クライアントは、コア機能と選択したエンドポイントを起動し、ピアを探し始めます。 ピアが見つかったら、同期を開始します。 また、コンセンサスクライアントからの接続を待ちます。 クライアントが正常に現在の状態に同期されると、現在のブロックチェーンデータが利用できるようになります。
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Prysmの実行
 
-Prysmには、簡単に自動インストールできるスクリプトがあります。 詳細については、[Prysmドキュメント](https://docs.prylabs.network/docs/install/install-with-script)を参照してください。
+Prysmには、簡単に自動インストールできるスクリプトがあります。 詳細については、[Prysmドキュメント](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)を参照してください。
 
 ```sh
 ./prysm.sh beacon-chain \

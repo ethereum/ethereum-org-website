@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="إدارة المفاتيح بطريقة آمنة" eventCategory="SoloStaking" eventName="clicked secure key management">
 وكما هو الحال في طريقة تأمين المفاتيح الخاصة لعنوان Ethereum الخاص بك، فإنك ستحتاج إلى إنشاء مفاتيح خصوصًا لبرنامج المدقق الخاص بك. يجب أن تعرف كيفية الحفاظ على سلامة وأمان أي عبارات أصل أو مفاتيح خاصة.{' '}
 
-<a href="/security/">أمان إيثريوم ومنع الاحتيال</a>
+[أمان إيثريوم ومنع الاحتيال](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 <ExpandableCard title=" هل يمكنني إيداع أكثر من 32 ETH؟">
 يلزم وجود 32 ETH بالضبط لتفعيل كل زوج من المفاتيح المقترنة ببرنامج مدقق واحد. إن إيداع المزيد من عملات ETH في مجموعة واحدة من المفاتيح لا يزيد من المكافآت المحتملة، حيث يقتصر كل برنامج مدقق على <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">رصيد فعال</a> يبلغ قدره 32 ETH. هذا يعني أن المراهنة تتم بزيادات تبلغ 32 ETH، لكل منها مجموعة المفاتيح والرصيد الخاصان بها.
 
-لا تجرِ عملية إيداع بأكثر من 32 ETH لبرنامج مدقق واحد. إذ لن يزيد ذلك من مكافآتك. في حال تعيين عنوان سحب لبرنامج المدقق، سيتم سحب أي أموال تزيد على 32 ETH تلقائيًّا إلى هذا العنوان أثناء <a href="/staking/withdrawals/#validator-sweeping">عملية التحقق من برنامج المدقق</a> المقبلة.
+لا تجرِ عملية إيداع بأكثر من 32 ETH لبرنامج مدقق واحد. إذ لن يزيد ذلك من مكافآتك. في حال تعيين عنوان سحب لبرنامج المدقق، سيتم سحب أي أموال تزيد على 32 ETH تلقائيًّا إلى هذا العنوان أثناء [عملية التحقق من برنامج المدقق](/staking/withdrawals/#validator-sweeping) المقبلة.
 
-إذا كانت المراهنة الفردية تتطلب منك بذل الكثير من الجهد، ففكر في استخدام مزود خدمة <a href="/staking/saas/">المراهنة كخدمة</a>، أو إذا كنت تعمل بأقل من 32 ETH، فتحقّق من <a href="/staking/pools/">تجمعات الرهان</a>.
+إذا كانت المراهنة الفردية تتطلب منك بذل الكثير من الجهد، ففكر في استخدام مزود خدمة [المراهنة كخدمة](/staking/saas/)، أو إذا كنت تعمل بأقل من 32 ETH، فتحقّق من [تجمعات الرهان](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="هل سأتعرض للشطب في حال عدم الاتصال بالإنترنت؟ (الجواب المختصر: لا)">
@@ -199,5 +199,4 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 - [تقديم المساعدة بخصوص تنوع العملاء](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [تنوع العملاء في طبقة إجماع الآراء الخاصة بإيثريوم](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [كيفية: التسوق لشراء أجهزة برنامج مدقق إيثريوم](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [بتعليمات مفصلة: كيفية الانضمام إلى شبكة تجريب إيثريوم 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [نصائح لتفادي التعرض للشطب من Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_

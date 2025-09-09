@@ -383,7 +383,7 @@ Walau bagaimanapun, terdapat beberapa penyimpangan penting daripada andaian itu 
 3. Pengagihan kuasa perlombongan boleh berakhir secara radikal dan tidak adil dalam amalan.
 4. Spekulator, musuh politik dan orang gila yang fungsi utiliti termasuk menyebabkan kemudaratan kepada rangkaian memang wujud, dan mereka dengan bijak boleh menyediakan kontrak yang kos mereka jauh lebih rendah daripada kos yang dibayar oleh nod pengesahan lain.
 
-(1) menyediakan kecenderungan bagi pelombong untuk memasukkan transaksi yang lebih sedikit, dan (2) meningkatkan `NC`; oleh itu, sekurang-kurangnya sebahagian daripada kedua-dua kesan ini membatalkan satu sama lain.<sup>[Bagaimana?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) dan (4) ialah isu utama; untuk menyelesaikannya kita hanya memulakan had terapung: tiada blok boleh mempunyai lebih banyak operasi daripada `BLK_LIMIT_FACTOR` kali ganda purata bergerak eksponen jangka panjang. Secara khusus:
+(1) menyediakan kecenderungan bagi pelombong untuk memasukkan transaksi yang lebih sedikit, dan (2) meningkatkan `NC`; oleh itu, sekurang-kurangnya sebahagian daripada kedua-dua kesan ini membatalkan satu sama lain.<sup>[Bagaimana?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) dan (4) ialah isu utama; untuk menyelesaikannya kita hanya memulakan had terapung: tiada blok boleh mempunyai lebih banyak operasi daripada `BLK_LIMIT_FACTOR` kali ganda purata bergerak eksponen jangka panjang. Secara khusus:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ Konsep fungsi peralihan keadaan sewenang-wenang seperti yang dilaksanakan oleh p
 16. [HANTU](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ dan Agen Autonomi, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn di Smart Property di Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Pokok Ethereum Merkle Patricia](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Pokok Ethereum Merkle Patricia](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd pada pokok Merkle sum](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Untuk sejarah kertas putih, lihat [wiki ini](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Untuk sejarah kertas putih, lihat [wiki ini](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, seperti banyak projek perisian sumber terbuka yang didorong oleh masyarakat, telah berkembang sejak penubuhan awal. Untuk mengetahui tentang perkembangan terkini Ethereum, dan cara perubahan pada protokol dibuat, kami mengesyorkan [panduan ini](/learn/)._

@@ -115,7 +115,6 @@ Seiring pertumbuhan dan peningkatan kepopuleran DeFi, MEV mungkin akan segera me
 ## Sumber daya terkait {#related-resources}
 
 - [GitHub Flashbot](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dasbor dan penjelajah transaksi langsung untuk transaksi MEV_
 
 ## Bacaan lebih lanjut {#further-reading}
 
