@@ -2,7 +2,6 @@
 
 import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
 
-// import { useWalletColumns } from "@/components/FindWalletProductTable/hooks/useWalletColumns"
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
 import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hooks/useWalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
@@ -71,7 +70,6 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
 
   // Reset filters
   const resetFilters = () => {
-    // setFilters(walletFilterOptions)
     trackCustomEvent({
       eventCategory: "WalletFilterSidebar",
       eventAction: "Reset button",
@@ -91,7 +89,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       filters={walletFilterOptions}
       filterFn={filterFn}
       presetFilters={walletPersonas}
-      resetFilters={resetFilters}
+      onResetFilters={resetFilters}
       subComponent={(wallet, filters, listIdx) => (
         <WalletSubComponent
           wallet={wallet}

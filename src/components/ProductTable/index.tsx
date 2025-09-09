@@ -1,11 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
 import type { FilterOption, TPresetFilters, Wallet } from "@/lib/types"
 
-// import Table from "@/components/DataTable"
-// import Filters from "@/components/ProductTable/Filters"
+import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
@@ -19,7 +18,7 @@ interface ProductTableProps<T> {
   filters: FilterOption[]
   filterFn: (data: T[], filters: FilterOption[]) => T[]
   presetFilters: TPresetFilters
-  resetFilters: () => void
+  onResetFilters?: () => void
   subComponent?: (
     item: T,
     filters: FilterOption[],
@@ -37,7 +36,7 @@ const ProductTable = <T,>({
   filters: initialFilters,
   filterFn,
   presetFilters,
-  resetFilters,
+  onResetFilters,
   // subComponent,
   // noResultsComponent,
   mobileFiltersLabel,
@@ -100,6 +99,11 @@ const ProductTable = <T,>({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams])
+
+  const resetFilters = useCallback(() => {
+    setFilters(initialFilters)
+    onResetFilters?.()
+  }, [initialFilters, onResetFilters])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
@@ -317,12 +321,12 @@ const ProductTable = <T,>({
             />
           </div>
           <div className="hidden lg:block">
-            {/* <Filters
+            <Filters
               filters={filters}
               setFilters={setFilters}
               resetFilters={resetFilters}
               activeFiltersCount={activeFiltersCount}
-            /> */}
+            />
           </div>
           <div className="flex-1">
             {/* <Table
