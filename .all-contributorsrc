@@ -13142,6 +13142,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Jorgerl02",
+      "name": "Jorge Rodriguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131685800?v=4",
+      "profile": "https://smithii.io",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
