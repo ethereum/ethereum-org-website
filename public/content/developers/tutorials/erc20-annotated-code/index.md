@@ -601,7 +601,7 @@ in the transaction pool he sends a transaction that spends Alice's five tokens a
 higher gas price so it will be mined faster. That way Bill can spend first five tokens and then,
 once Alice's new allowance is mined, spend ten more for a total price of fifteen tokens, more than
 Alice meant to authorize. This technique is called
-[front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+[front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice Transaction | Alice Nonce | Bill Transaction              | Bill Nonce | Bill's Allowance | Bill Total Income from Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
@@ -927,3 +927,5 @@ For review, here are some of the most important ideas in this contract (in my op
 
 Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is
 made more secure, go and write your own secure contracts and applications.
+
+[See here for more of my work](https://cryptodocguy.pro/).

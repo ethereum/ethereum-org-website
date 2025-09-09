@@ -223,7 +223,7 @@ Více o [návrhu systémů bezpečného řízení](https://blog.openzeppelin.com
 
 Vývojáři tradičních softwarů znají princip KISS („Keep It Simple, Stupid“), který doporučuje zbytečně softwarový design nekomplikovat. Tento princip vychází z myšlenky, že „komplexní systémy selhávají složitým způsobem“ a jsou náchylnější k nákladným chybám.
 
-Udržování jednoduchosti je zvláště důležité při psaní smart kontraktů, vzhledem k tomu, že smart kontrakty potenciálně spravují velké objemy aktiv. Tipem pro docílení jednoduchosti při psaní smart kontraktů je opětovné použití stávajících knihoven, jako je [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), kdekoliv je to možné. Protože tyto knihovny byly důkladně auditovány a testovány vývojáři, jejich použití snižuje pravděpodobnost chyb při psaní nové funkcionality od začátku.
+Udržování jednoduchosti je zvláště důležité při psaní smart kontraktů, vzhledem k tomu, že smart kontrakty potenciálně spravují velké objemy aktiv. Tipem pro docílení jednoduchosti při psaní smart kontraktů je opětovné použití stávajících knihoven, jako je [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), kdekoliv je to možné. Protože tyto knihovny byly důkladně auditovány a testovány vývojáři, jejich použití snižuje pravděpodobnost chyb při psaní nové funkcionality od začátku.
 
 Dalším běžným doporučením je psát malé funkce a udržovat smart kontrakty modulární rozdělením obchodní logiky mezi více kontraktů. Nejenže psaní jednoduššího kódu snižuje možnosti útoku na váš smart kontrakt, ale také usnadňuje ověřování správnosti celého systému a včasné odhalení možných návrhových chyb.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Můžete také použít systém [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment), který vyžaduje, aby sami uživatelé vybrali prostředky ze smart kontraktů, namísto systému „push payments“, který prostředky na účty odesílá sám. Tím se eliminuje možnost neúmyslného spuštění kódu na neznámých adresách (a může také zabránit určitým útokům typu denial-of-service).
+Můžete také použít systém [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), který vyžaduje, aby sami uživatelé vybrali prostředky ze smart kontraktů, namísto systému „push payments“, který prostředky na účty odesílá sám. Tím se eliminuje možnost neúmyslného spuštění kódu na neznámých adresách (a může také zabránit určitým útokům typu denial-of-service).
 
 #### Přetečení a podtečení celých čísel {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 ### Nástroje pro monitorování smart kontraktů {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _nástroj pro automatické sledování a reagování na události, funkce a parametry transakcí ve vašich smart kontraktech._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** – _nástroj pro získávání oznámení v reálném čase, když dojde k neobvyklým nebo neočekávaným událostem ve vašich smart kontraktech nebo peněženkách._
 
 ### Nástroje pro bezpečnou správu smart kontraktů {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _rozhraní pro správu smart kontraktů, včetně řízení přístupu, aktualizací a pozastavení._
-
 - **[Safe](https://safe.global/)** – _peněženka se smart kontraktem běžící na platformě Ethereum, která vyžaduje, aby transakci schválil minimální počet lidí (M-z-N)._
 
-- **[Kontrakty OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** – _knihovny kontraktů pro implementaci funkcí správy, včetně vlastnictví kontraktů, upgradů, řízení přístupu, správy, možnosti pozastavení a více._
+- **[Kontrakty OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** – _knihovny kontraktů pro implementaci funkcí správy, včetně vlastnictví kontraktů, upgradů, řízení přístupu, správy, možnosti pozastavení a více._
 
 ### Služby auditu smart kontraktů {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 ### Publikace známých zranitelností a zneužití smart kontraktů {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Známé útoky na smart kontrakty](https://consensys.github.io/smart-contract-best-practices/attacks/)** – _vysvětlení pro začátečníky nejvýznamnějších zranitelností smluv s ukázkovým kódem pro většinu případů._
+- **[ConsenSys: Známé útoky na smart kontrakty](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** – _vysvětlení pro začátečníky nejvýznamnějších zranitelností smluv s ukázkovým kódem pro většinu případů._
 
 - **[Registr SWC](https://swcregistry.io/)** – _souborný seznam položek Common Weakness Enumeration (CWE, enumerací častých slabin), které se vztahují na smart kontrakty Etherea._
 

@@ -51,7 +51,7 @@ yarn react-app:start
 
 ### ethers.js {#ethersjs}
 
-大部分のユーザーは現在でも[Web3.js](https://docs.web3js.org/)を使用していますが、昨年は[ethers.js](https://docs.ethers.io/)をWeb3.jsの代替として利用するユーザーが増加したため、_create-eth-app_にはethers.jsが統合されています。 このライブラリで作業してもよいですし、Web3に切り替えてもよいです。あるいは、もうすくベータが外れる[ethers.js v5](https://docs-beta.ethers.io/)にアップグレードするのもよいでしょう。
+大部分のユーザーは現在でも[Web3.js](https://docs.web3js.org/)を使用していますが、昨年は[ethers.js](https://docs.ethers.io/)をWeb3.jsの代替として利用するユーザーが増加したため、_create-eth-app_にはethers.jsが統合されています。 このライブラリで作業してもよいですし、Web3に切り替えてもよいです。あるいは、もうすくベータが外れる[ethers.js v5](https://docs.ethers.org/v5/)にアップグレードするのもよいでしょう。
 
 ### The Graph {#the-graph}
 

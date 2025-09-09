@@ -52,7 +52,7 @@ Ambas opciones tienen diferentes ventajas, resumidas arriba. Si está buscando u
 
 #### Hardware {#hardware}
 
-Sin embargo, una red descentralizada, resistente a la censura, no debería depender de proveedores en la nube. En su lugar, ejecutar su nodo en su propio hardware local es más saludable para el ecosistema. [Las estimaciones](https://www.ethernodes.org/networkType/Hosting) muestran un gran porcentaje de nodos ejecutados en la nube, lo que podría convertirse en un único punto de error.
+Sin embargo, una red descentralizada, resistente a la censura, no debería depender de proveedores en la nube. En su lugar, ejecutar su nodo en su propio hardware local es más saludable para el ecosistema. [Las estimaciones](https://www.ethernodes.org/network-types) muestran un gran porcentaje de nodos ejecutados en la nube, lo que podría convertirse en un único punto de error.
 
 Los clientes de Ethereum pueden ejecutarse en su ordenador, portátil, servidor o incluso en un ordenador de una sola placa. Si bien es posible ejecutar clientes en su ordenador personal, tener una máquina específica solo para su nodo puede mejorar significativamente su rendimiento y seguridad al tiempo que minimiza el impacto en su ordenador principal.
 
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Los documentos sobre Nethermind ofrecen una [guía completa](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) sobre cómo ejecutar Nethermind con el cliente de consenso.
+Los documentos sobre Nethermind ofrecen una [guía completa](https://docs.nethermind.io/get-started/running-node/) sobre cómo ejecutar Nethermind con el cliente de consenso.
 
 Un cliente de ejecución iniciará sus funciones básicas, las terminales elegidas seleccionados y comenzará a buscar pares. Al encontrar pares correctamente, el cliente inicia la sincronización. El cliente de ejecución esperará una conexión desde el cliente de consenso. Los datos actuales de la cadena de bloques estarán disponibles una vez que el cliente se sincronice correctamente al estado actual.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Cómo ejecutar Prysm
 
-Prysm viene con un script que permite una fácil instalación automática. Los detalles pueden encontrarse en el [manual de Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm viene con un script que permite una fácil instalación automática. Los detalles pueden encontrarse en el [manual de Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \

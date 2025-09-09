@@ -11,7 +11,7 @@ Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because
 
 A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Conversely, there is no way to create two different states with the same root hash, and any attempt to modify state with different values will result in a different state root hash. Theoretically, this structure provides the 'holy grail' of `O(log(n))` efficiency for inserts, lookups and deletes.
 
-In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
+In the near future, Ethereum plans to migrate to a [Verkle Tree](/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
 
 ## Prerequisites {#prerequisites}
 

@@ -195,7 +195,7 @@ EthereumJS実行クライアント(EthereumJS)は、TypeScriptで書かれ、い
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | ビーコンチェーン、Goerli、Pyrmont、Sepolia、Ropstenなど        |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | ビーコンチェーン、Goerli、Sepolia、Ropstenなど                |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | ビーコンチェーン、Goerli、Sepolia、Ropstenなど                |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Goerli、Pyrmont、Sepolia、Ropstenなど |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Goerli、Pyrmont、Sepolia、Ropstenなど |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Goerli、Sepolia、Ropstenなど         |
 
 ### Lighthouse {#lighthouse}
@@ -220,7 +220,7 @@ Nimbusは、Apache-2.0ライセンスの下、Nimで書かれたコンセンサ�
 
 Prysmは、GPL-3.0ライセンスの下、Goで書かれたフル機能のオープンソースのコンセンサスクライアントです。 オプションのWebアプリのUIを備え、自宅でステーキングするユーザーと機関ユーザーの両方に向けて、ユーザーエクスペリエンス、ドキュメント、設定可能性を優先しているのが特徴です。
 
-詳しくは、[Prysmのドキュメント](https://docs.prylabs.network/docs/getting-started/)をご覧ください。
+詳しくは、[Prysmのドキュメント](https://prysm.offchainlabs.com/docs/)をご覧ください。
 
 ### Teku {#teku}
 

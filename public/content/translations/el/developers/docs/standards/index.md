@@ -17,7 +17,7 @@ incomplete: true
 - [Φόρουμ συζητήσεων EIP](https://ethereum-magicians.org/c/eips)
 - [Εισαγωγή στη διακυβέρνηση του Ethereum](/governance/)
 - [Επισκόπηση διακυβέρνησης Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 Μαρτίου 2019 - Boris Mann_
-- [Συντονισμός Αναπτυξιακής Διακυβέρνησης Πρωτοκόλλου του Ethereum](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Μαρτίου 2020 - Hudson Jameson_
+- [Συντονισμός Αναπτυξιακής Διακυβέρνησης Πρωτοκόλλου του Ethereum](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Μαρτίου 2020 - Hudson Jameson_
 - [Λίστα αναπαραγωγής συναντήσεων των Ethereum Core Dev](https://www.youtube.com/@EthereumProtocol) _(Λίστα στο YouTube)_
 
 ## Τύποι προτύπων {#types-of-standards}

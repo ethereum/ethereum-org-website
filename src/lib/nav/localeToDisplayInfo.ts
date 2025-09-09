@@ -13,6 +13,20 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 const progressData = progressDataJson satisfies ProjectProgressData[]
 
+const getProgressInfo = (
+  locale: Lang,
+  approvalProgress: number,
+  wordsApproved: number
+) => {
+  const percentage = new Intl.NumberFormat(locale, {
+    style: "percent",
+  }).format(approvalProgress / 100)
+  const progress =
+    approvalProgress === 0 ? "<" + percentage.replace("0", "1") : percentage
+  const words = new Intl.NumberFormat(locale).format(wordsApproved)
+  return { progress, words }
+}
+
 export const localeToDisplayInfo = (
   localeOption: Lang,
   sourceLocale: Lang,
@@ -87,9 +101,17 @@ export const localeToDisplayInfo = (
       ? totalWords || 0
       : dataItem?.words.approved || 0
 
+  const { progress, words } = getProgressInfo(
+    localeOption,
+    approvalProgress,
+    wordsApproved
+  )
+
   return {
     ...returnData,
     approvalProgress,
     wordsApproved,
+    progress,
+    words,
   } as LocaleDisplayInfo
 }

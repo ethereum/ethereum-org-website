@@ -50,7 +50,6 @@ Ismerje meg az [ethers-kt](https://github.com/Kr1ptal/ethers-kt) használatát, 
 
 ## Java-projektek és -eszközök {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon) (Ethereum kliens)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (könyvtár az Ethereum kliensekkel való interakcióhoz)](https://github.com/web3j/web3j)
 - [ethers-kt (aszinkron, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ Több anyagra lenne szüksége? Tekintsd meg az [ethereum.org/developers](/devel
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu HL chat](https://chat.hyperledger.org/channel/besu)
