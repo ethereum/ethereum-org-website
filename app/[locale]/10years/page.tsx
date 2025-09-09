@@ -39,6 +39,7 @@ import {
   getInnovationCards,
   parseStoryDates,
 } from "./_components/utils"
+import TenYearJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
@@ -110,110 +111,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     (holder) => !isAddressFiltered(holder.address)
   )
 
-  // Separate JSON-LD structured data blocks for better Google parsing
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/10years/`,
-    name: t("page-10-year-anniversary-meta-title"),
-    description: t("page-10-year-anniversary-meta-description"),
-    url: `https://ethereum.org/${locale}/10years/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-10-year-anniversary-meta-title"),
-          item: `https://ethereum.org/${locale}/10years/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const eventJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: "Ethereum 10th Anniversary",
-    description: t("page-10-year-hero-description"),
-    startDate: "2025-07-30T15:00:00Z",
-    endDate: "2025-07-30T15:26:13Z",
-    eventStatus: "https://schema.org/EventScheduled",
-    organizer: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-    location: {
-      "@type": "VirtualLocation",
-      name: "Online",
-      url: `https://ethereum.org/${locale}/10years/`,
-    },
-    image: ["https://ethereum.org/images/10-year-anniversary/10-year-og.png"],
-    url: `https://ethereum.org/${locale}/10years/`,
-  }
-
-  const videoJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    name: t("page-10-year-livestream-video-title"),
-    description: t("page-10-year-livestream-title"),
-    embedUrl: "https://www.youtube.com/embed/igPIMF1p5Bo",
-    contentUrl: "https://www.youtube.com/watch?v=igPIMF1p5Bo",
-    thumbnailUrl:
-      "https://ethereum.org/images/10-year-anniversary/10-year-og.png",
-    uploadDate: "2025-07-30T15:26:13Z",
-    duration: "PT1H30M",
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-event"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(eventJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-video"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(videoJsonLd),
-        }}
-      />
+      <TenYearJsonLD locale={locale} />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <TenYearHero locale={locale} />
 
