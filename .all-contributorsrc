@@ -13133,6 +13133,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "chainide-agent-bob",
+      "name": "Bob",
+      "avatar_url": "https://avatars.githubusercontent.com/u/203082506?v=4",
+      "profile": "https://chainide.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
