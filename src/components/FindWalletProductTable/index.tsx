@@ -84,7 +84,6 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   return (
     <ProductTable<Wallet>
       data={wallets}
-      allDataLength={wallets.length}
       matomoEventCategory="find-wallet"
       filters={walletFilterOptions}
       filterFn={filterFn}

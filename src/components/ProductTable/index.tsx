@@ -11,13 +11,14 @@ import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
 import type { FilterOption, TPresetFilters, Wallet } from "@/lib/types"
 
-import Filters from "@/components/ProductTable/Filters"
+// import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import WalletInfo from "../FindWalletProductTable/WalletInfo"
+import Translation from "../Translation"
 import {
   Collapsible,
   CollapsibleContent,
@@ -26,7 +27,6 @@ import {
 
 interface ProductTableProps<T> {
   data: T[]
-  allDataLength: number
   filters: FilterOption[]
   filterFn: (data: T[], filters: FilterOption[]) => T[]
   presetFilters: TPresetFilters
@@ -44,7 +44,6 @@ interface ProductTableProps<T> {
 
 const ProductTable = <T,>({
   data,
-  // allDataLength,
   filters: initialFilters,
   filterFn,
   presetFilters,
@@ -345,12 +344,12 @@ const ProductTable = <T,>({
             />
           </div>
           <div className="hidden lg:block">
-            <Filters
+            {/* <Filters
               filters={filters}
               setFilters={updateFilters}
               resetFilters={resetFilters}
               activeFiltersCount={activeFiltersCount}
-            />
+            /> */}
           </div>
           <div className="flex-1">
             {/* <Table
@@ -365,6 +364,14 @@ const ProductTable = <T,>({
               meta={meta}
               matomoEventCategory={matomoEventCategory}
             /> */}
+            <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
+              <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
+                <p className="text-body-medium">
+                  <Translation id="page-wallets-find-wallet:page-find-wallet-showing-all-wallets" />{" "}
+                  <span className="text-body">({filteredData.length})</span>
+                </p>
+              </div>
+            </div>
 
             <div
               ref={parentRef}
