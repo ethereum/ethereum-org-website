@@ -13151,6 +13151,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "clarus",
+      "name": "Guillaume Claret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/316665?v=4",
+      "profile": "https://formal.land/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
