@@ -40,7 +40,7 @@ lang: bn
 - [Blockapps](https://blockapps.net/)_এন্টারপ্রাইজ ইথেরিয়াম প্রোটোকলের বাস্তবায়ন, টুলিং এবং APIs যেগুলি STRATO প্ল্যাটফর্ম গঠন করে_
 - [Clearmatics](https://www.clearmatics.com/about)_প্রোটোকল এবং পিয়ার-টু-পিয়ার প্ল্যাটফর্ম আর্কিটেকচার, ব্লকচেইন R&D কোম্পানি।_
 - [PegaSys Plus](https://pegasys.tech/enterprise/)_ HF বেসু-র মতো একই বৈশিষ্ট্য এবং কার্যকারিতা, অতিরিক্ত এন্টারপ্রাইজ ফোকাসড বেনিফিট প্রদান করে_
-- [Quorum](https://www.goquorum.com/) _একটি ওপেন সোর্স ব্লকচেইন প্ল্যাটফর্ম যা এন্টারপ্রাইজের প্রয়োজনগুলিকে সমর্থন করার জন্য সর্বজনীন ইথেরিয়াম সম্প্রদায়ের উদ্ভাবনকে উন্নয়নের সাথে সংযুক্ত করে।_
+- [Quorum](https://docs.goquorum.consensys.io/) _একটি ওপেন সোর্স ব্লকচেইন প্ল্যাটফর্ম যা এন্টারপ্রাইজের প্রয়োজনগুলিকে সমর্থন করার জন্য সর্বজনীন ইথেরিয়াম সম্প্রদায়ের উদ্ভাবনকে উন্নয়নের সাথে সংযুক্ত করে।_
 
 ## প্রোটোকল এবং পরিকাঠামো {#protocol-and-infrastructure}
 
@@ -62,8 +62,7 @@ lang: bn
 ### গোপনীয়তা {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _আরো তথ্য [এখানে](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _আরো তথ্য এখানে_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _আরো তথ্য_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _আরো তথ্য_
 - [এখানে](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)
 
 ### নিরাপত্তা {#security}
@@ -74,7 +73,7 @@ lang: bn
 ### টুলিং {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _ইথেরিয়াম ডেটা অ্যানালিটিক্স প্ল্যাটফর্ম_
-- [Treum](https://treum.io/) _ব্লকচেইন প্রযুক্তি ব্যবহার করে সাপ্লাই চেইনের ক্ষেত্রে স্বচ্ছতা, ট্রেসেবিলিটি এবং ব্যবসায়যোগ্যতা নিয়ে আসে_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _ব্লকচেইন প্রযুক্তি ব্যবহার করে সাপ্লাই চেইনের ক্ষেত্রে স্বচ্ছতা, ট্রেসেবিলিটি এবং ব্যবসায়যোগ্যতা নিয়ে আসে_
 
 ## এন্টারপ্রাইজ ডেভেলপার সম্প্রদায় {#enterprise-developer-community}
 
@@ -82,7 +81,6 @@ lang: bn
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu channel)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow channel)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)

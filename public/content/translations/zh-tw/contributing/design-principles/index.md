@@ -88,6 +88,6 @@ description: ethereum.org 設計與內容決策背後的原則
 
 **分享你對本文檔的意見回饋！**我們提出的原則之一是「**協作改進**」，這意味着我們希望網站是衆多貢獻者的産物。 因此，基於這一原則，我們希望與以太坊社群分享這些設計原則。
 
-雖然這些原則主要體現在 ethereum.org 網站上，但我們希望其中許多原則能夠代表以太坊生態系統的整體價值（例如，你可以看到[以太坊白皮書的原則](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)的影響）。 也許你甚至想將其中一些原則運用到你自己的專案中！
+雖然這些原則主要體現在 ethereum.org 網站上，但我們希望其中許多原則能夠代表以太坊生態系統的整體價值。 也許你甚至想將其中一些原則運用到你自己的專案中！
 
 請透過 [Discord 伺服器](https://discord.gg/ethereum-org)或[建立一個議題](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)來讓我們知道你的想法。

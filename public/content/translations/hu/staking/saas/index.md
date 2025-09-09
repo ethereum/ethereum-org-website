@@ -86,7 +86,7 @@ Az SaaS-szolgáltatóval a felhasználó másra bízza a csomópontok üzemeltet
 
 A büntetés végrehajtása után a megmaradt pénzeszközök a validátor visszavonási címére kerülnek. Ehhez szükség van egy visszavonási címre. Előfordulhat, hogy ezt a letétbe helyezéskor már megadta. Ha nem, akkor a validátor-visszavonási kulcsokkal lehet aláírni egy üzenetet, amely közli a visszavonási címet. A pénzeszközök zárolva maradnak addig, amíg a visszavonási cím nem elérhető.
 
-Kérdezze meg az SaaS-szolgáltatóját a lehetséges garanciákról vagy biztosításokról, illetve arról, hogyan lehet a visszavonási címet megadni. Ha Ön szeretné teljes mértékben kontrollálni a validátor-beállításokat, akkor <a href="/staking/solo/">ismerje meg az önálló letétbe helyezést</a>.
+Kérdezze meg az SaaS-szolgáltatóját a lehetséges garanciákról vagy biztosításokról, illetve arról, hogyan lehet a visszavonási címet megadni. Ha Ön szeretné teljes mértékben kontrollálni a validátor-beállításokat, akkor [ismerje meg az önálló letétbe helyezést](/staking/solo/).
 </ExpandableCard>
 
 ## További olvasnivaló {#further-reading}

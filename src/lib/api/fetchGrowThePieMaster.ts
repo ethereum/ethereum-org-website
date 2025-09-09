@@ -5,7 +5,7 @@ interface Chain {
 }
 
 export const fetchGrowThePieMaster = async () => {
-  const response = await fetch("https://api.growthepie.xyz/v1/master.json")
+  const response = await fetch("https://api.growthepie.com/v1/master.json")
   if (!response.ok) {
     throw new Error(
       `growthepie Master API responded with ${response.status}: ${response.statusText}`

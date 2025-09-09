@@ -129,59 +129,74 @@ Note: The signing is done by the withdrawal address, not the validator key.
 
 Validators with **Type 1** credentials get automatic, gasless sweeps of their excess balance (anything over 32 ETH) to their withdrawal address. Because **Type 2** allows a validator to compound balances in 1 ETH increments, it will not automatically sweep balances until it reaches 2048 ETH. Partial withdrawals on **Type 2** validators must be manually triggered and will cost gas.
 
-## FAQ {#FAQ}
+## Consolidation tooling {#consolidation-tooling}
 
-### **Does opting-in change my proposal luck or rewards?**
+There are several tools available to manage consolidations. The official tool, created by the Ethereum Foundation, is the [Launchpad](https://launchpad.ethereum.org/en/validator-actions). There are also third-party tools created by entities from the staking community that may offer features not provided by the Launchpad. While the tools here are not audited or endorsed by the Ethereum Foundation, the following are open source tools by known members of the community.
+
+| Tool | Website | Open source | Creator | Audited | Interface | Notable features |
+| --- | --- | --- | --- | --- | --- | --- |
+| Pectra Staking Manager | pectrastaking.com | Yes, Apache 2.0 | [Pier Two](https://piertwo.com/) | No | Web UI | Wallet Connect, works with SAFE |
+| Pectra Validator Ops CLI Tool | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract) | Yes, MIT | [Luganodes](https://www.luganodes.com/) | Yes, Quantstamp [May 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Command line | Batching, for many validators at once |
+| Ethereal | [GitHub](https://github.com/wealdtech/ethereal) | Yes, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | No | Command line | Full feature set for validator and node management |
+| Siren | [GitHub](https://github.com/sigp/siren) | Yes, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/) | No | Some command line, but primarily web UI | Only works if you're using the Lighthouse consensus client |
+
+## FAQ {#faq}
+
+### Does opting-in change my proposal luck or rewards? {#change-luck-or-rewards}
 
 No. Opting in does not decrease your change of proposal - your duties and proposal selection remain the same. For example, if you have two 32 ETH validators vs one 64 ETH validator, you will have the same total chances of being selected to propose a block and earn rewards.
 
-### **Does opting in change my slashing risk?**
+### Does opting in change my slashing risk? {#change-slashing-risk}
 
 For smaller or unprofessional operators, the short answer is no. The longer answer is that, for professional operators running many validators per node with fast alerting, consolidating into fewer validators may reduce their ability to react to a slashing and prevent cascade events. The initial slashing *penalty* for all validators has been dramatically reduced from 1 ETH (per 32 ETH) to 0.0078125 ETH (per 32 ETH) to offset this risk.
 
-### **Do I have to exit my validator to convert?**
+### Do I have to exit my validator to convert? {#exit-validator}
 
 No. You can convert in place without exiting.
 
-### How long will it take to convert / consolidate?
+### How long will it take to convert / consolidate? {#how-long}
 
 A minimum of 27.3 hours but consolidations are also subject to a queue. This queue is independent of the deposit and withdrawal queues and is not affected by them.
 
-### Can I keep my validator index?
+### Can I keep my validator index? {#keep-validator-index}
 
 Yes. In-place conversion keeps the same validator index. If you consolidate multiple validators, you'll only be able to keep the index of the *target validator*.
 
-### Will I miss attestations?
+### Will I miss attestations? {#miss-attestations}
 
 During a consolidation into another validator, the source validator is exited and there is a ~27 hour waiting period before the balance is active on the target validator. This period **does not affect performance metrics**.
 
-### Will I incur penalties?
+### Will I incur penalties? {#incur-penalties}
 
 No. As long as your validator is online, you will not incur penalties.
 
-### Do the withdrawal addresses of the validators being consolidated have to match?
+### Do the withdrawal addresses of the validators being consolidated have to match? {#withdrawal-addresses-match}
 
 No. But the *source* must authorize the request from its own address.
 
-### Will my rewards compound after converting?
+### Will my rewards compound after converting? {#rewards-compound}
 
 Yes. With **Type 2** credentials, rewards above 32 ETH are automatically restaked — but not instantly. Because of a small buffer (called [*hysteresis*](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), your balance needs to reach **about 1.25 ETH more** before the extra is restaked. So instead of compounding at 33.0 ETH, it happens at 33.25 (effective balance = 33 ETH), then 34.25 (effective balance = 34 ETH), and so on.
 
-### Can I still get automatic sweeps after converting?
+### Can I still get automatic sweeps after converting? {#automatic-sweep}
 
 Automatic sweeps will only happen with excess balances over 2048. For all other partial withdrawals, you'll need to manually trigger them.
 
-### Can I change my mind and go back from Type 2 to Type 1?
+### Can I change my mind and go back from Type 2 to Type 1? {#go-back-to-type1}
 
 No. Converting to **Type 2** is irreversible.
 
-### My validator is offline or below 32 ETH - can I still convert it?
+### If I want to consolidate multiple validators, do I have convert each one to Type 2 first? {#consolidate-multiple-validators}
+
+Nope! Convert one validator to Type 2 then use that as the target. All other validators consolidated into that Type 2 target can be Type 1 or Type 2
+
+### My validator is offline or below 32 ETH - can I still convert it? {#offline-or-below-32eth}
 
 Yes. As long as it's active (not exited) and you can sign with its withdrawal address, you can convert it.
 
 ## Resources {#resources}
 
-- [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): This is the ‘truest' version that you should rely on. When in doubt, read the specs
+- [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): This is the 'truest' version that you should rely on. When in doubt, read the specs
 - Not everybody is comfortable wading through code, so [this maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) can help interpret the specs. *Disclaimer: The specs, not the AI, should be relied on as truth, as the AI may misinterpret information or hallucinate answers*
 - [pectrified.com](https://pectrified.com/): View the state of consolidations, deposits, and queue waiting times
 - [Ethereal](https://github.com/wealdtech/ethereal): Community-created CLI tool for managing common validator tasks

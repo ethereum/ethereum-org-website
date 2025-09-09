@@ -8,7 +8,7 @@ Smart kontrakty jsou velmi flexibilní a schopné ovládat velké množství hod
 
 Veřejné blockchainy, jako je Ethereum, dále komplikují otázku zabezpečení smart kontraktů. Nasazený kód kontraktu _obvykle_ není možné změnit, aby se opravily bezpečnostní chyby, a majetek odcizený ze smart kontraktů je kvůli nezměnitelnosti extrémně obtížné sledovat a prakticky nemožné získat zpět.
 
-I když se údaje liší, odhaduje se, že celková hodnota odcizených nebo ztracených prostředků z důvodu bezpečnostních chyb ve smart kontraktech dnes přesahuje 1 miliardu dolarů. To zahrnuje incidenty s vysokým profilem, jako je [hack DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (ukradeno 3,6 milionu ETH, což v dnešní ceně představuje více než 1 miliardu dolarů), [hack multi-sig peněženky Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (škoda ve výši 30 milionů dolarů kvůli hackerům) a [problém se zmrazením peněženek Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (přes 300 milionů dolarů v ETH zůstalo zamčeno navždy).
+I když se údaje liší, odhaduje se, že celková hodnota odcizených nebo ztracených prostředků z důvodu bezpečnostních chyb ve smart kontraktech dnes přesahuje 1 miliardu dolarů. To zahrnuje incidenty s vysokým profilem, jako je [hack DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (ukradeno 3,6 milionu ETH, což v dnešní ceně představuje více než 1 miliardu dolarů), [hack multi-sig peněženky Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (škoda ve výši 30 milionů dolarů kvůli hackerům) a [problém se zmrazením peněženek Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (přes 300 milionů dolarů v ETH zůstalo zamčeno navždy).
 
 Výše zmíněné problémy ukazují na důležitost zajištění bezpečnosti smart kontraktů a dělají z ní nezbytnost, do které by měli vývojáři investovat úsilí. Zabezpečení smart kontraktů je vážnou záležitostí, kterou by se měl každý vývojář naučit. Tento průvodce pokrývá bezpečnostní aspekty pro vývojáře Etherea a poskytuje zdroje pro zvýšení bezpečnosti smart kontraktů.
 
@@ -223,7 +223,7 @@ Více o [návrhu systémů bezpečného řízení](https://blog.openzeppelin.com
 
 Vývojáři tradičních softwarů znají princip KISS („Keep It Simple, Stupid“), který doporučuje zbytečně softwarový design nekomplikovat. Tento princip vychází z myšlenky, že „komplexní systémy selhávají složitým způsobem“ a jsou náchylnější k nákladným chybám.
 
-Udržování jednoduchosti je zvláště důležité při psaní smart kontraktů, vzhledem k tomu, že smart kontrakty potenciálně spravují velké objemy aktiv. Tipem pro docílení jednoduchosti při psaní smart kontraktů je opětovné použití stávajících knihoven, jako je [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), kdekoliv je to možné. Protože tyto knihovny byly důkladně auditovány a testovány vývojáři, jejich použití snižuje pravděpodobnost chyb při psaní nové funkcionality od začátku.
+Udržování jednoduchosti je zvláště důležité při psaní smart kontraktů, vzhledem k tomu, že smart kontrakty potenciálně spravují velké objemy aktiv. Tipem pro docílení jednoduchosti při psaní smart kontraktů je opětovné použití stávajících knihoven, jako je [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), kdekoliv je to možné. Protože tyto knihovny byly důkladně auditovány a testovány vývojáři, jejich použití snižuje pravděpodobnost chyb při psaní nové funkcionality od začátku.
 
 Dalším běžným doporučením je psát malé funkce a udržovat smart kontrakty modulární rozdělením obchodní logiky mezi více kontraktů. Nejenže psaní jednoduššího kódu snižuje možnosti útoku na váš smart kontrakt, ale také usnadňuje ověřování správnosti celého systému a včasné odhalení možných návrhových chyb.
 
@@ -304,7 +304,7 @@ Na první pohled není na tomto kontraktu nic špatného, až na to, že kontrak
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Výsledkem je, že následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát, protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provedení funkce. Tento druh útoku může být použit k vybrání prostředků smart kontraktu, jako se to stalo při [DAO hacku v roce 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Útoky opětovným vstupem (reentrancy) jsou stále kritickým problémem smart kontraktů, jak ukazují [veřejné seznamy exploitů reentrancy útoků](https://github.com/pcaversaccio/reentrancy-attacks).
+Výsledkem je, že následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát, protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provedení funkce. Tento druh útoku může být použit k vybrání prostředků smart kontraktu, jako se to stalo při [DAO hacku v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Útoky opětovným vstupem (reentrancy) jsou stále kritickým problémem smart kontraktů, jak ukazují [veřejné seznamy exploitů reentrancy útoků](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Jak zabránit útokům opětovným vstupem
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Můžete také použít systém [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment), který vyžaduje, aby sami uživatelé vybrali prostředky ze smart kontraktů, namísto systému „push payments“, který prostředky na účty odesílá sám. Tím se eliminuje možnost neúmyslného spuštění kódu na neznámých adresách (a může také zabránit určitým útokům typu denial-of-service).
+Můžete také použít systém [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), který vyžaduje, aby sami uživatelé vybrali prostředky ze smart kontraktů, namísto systému „push payments“, který prostředky na účty odesílá sám. Tím se eliminuje možnost neúmyslného spuštění kódu na neznámých adresách (a může také zabránit určitým útokům typu denial-of-service).
 
 #### Přetečení a podtečení celých čísel {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 ### Nástroje pro monitorování smart kontraktů {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _nástroj pro automatické sledování a reagování na události, funkce a parametry transakcí ve vašich smart kontraktech._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** – _nástroj pro získávání oznámení v reálném čase, když dojde k neobvyklým nebo neočekávaným událostem ve vašich smart kontraktech nebo peněženkách._
 
 ### Nástroje pro bezpečnou správu smart kontraktů {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _rozhraní pro správu smart kontraktů, včetně řízení přístupu, aktualizací a pozastavení._
-
 - **[Safe](https://safe.global/)** – _peněženka se smart kontraktem běžící na platformě Ethereum, která vyžaduje, aby transakci schválil minimální počet lidí (M-z-N)._
 
-- **[Kontrakty OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** – _knihovny kontraktů pro implementaci funkcí správy, včetně vlastnictví kontraktů, upgradů, řízení přístupu, správy, možnosti pozastavení a více._
+- **[Kontrakty OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** – _knihovny kontraktů pro implementaci funkcí správy, včetně vlastnictví kontraktů, upgradů, řízení přístupu, správy, možnosti pozastavení a více._
 
 ### Služby auditu smart kontraktů {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 - **[Hacken](https://hacken.io)** – _Web3 auditor kybernetické bezpečnosti přinášející 360stupňový přístup k bezpečnosti blockchainu._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _služby auditu Solidity a Cairo, které zajišťují integritu smart kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _služby auditu Solidity a Cairo, které zajišťují integritu smart kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
 
 - **[HashEx](https://hashex.org/)** – _HashEx se zaměřuje na audit blockchainu a smart kontraktů s cílem zajistit bezpečnost kryptoměn a poskytuje služby, jako je vývoj smart kontraktů, penetrační testování a poradenství v oblasti blockchainu._
 
@@ -515,7 +511,7 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 - **[Cyfrin](https://cyfrin.io)** – _bezpečnostní Web3 společnost, inkubátor krypto bezpečnosti prostřednictvím produktů a služeb auditu smart kontraktů._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 bezpečnostní firma nabízející bezpečnostní audity pro blockchainové systémy prostřednictvím týmu zkušených auditorů a nejlepších nástrojů ve své třídě._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3 bezpečnostní firma nabízející bezpečnostní audity pro blockchainové systémy prostřednictvím týmu zkušených auditorů a nejlepších nástrojů ve své třídě._
 
 - **[Oxorio](https://oxor.io/)** – _audity smart kontraktů a bezpečnostní služby blockchainu s odbornými znalostmi v oblasti EVM, Solidity, ZK, technologií napříč blockchainy pro krypto firmy a projekty DeFi._
 
@@ -535,7 +531,7 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 ### Publikace známých zranitelností a zneužití smart kontraktů {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Známé útoky na smart kontrakty](https://consensys.github.io/smart-contract-best-practices/attacks/)** – _vysvětlení pro začátečníky nejvýznamnějších zranitelností smluv s ukázkovým kódem pro většinu případů._
+- **[ConsenSys: Známé útoky na smart kontrakty](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** – _vysvětlení pro začátečníky nejvýznamnějších zranitelností smluv s ukázkovým kódem pro většinu případů._
 
 - **[Registr SWC](https://swcregistry.io/)** – _souborný seznam položek Common Weakness Enumeration (CWE, enumerací častých slabin), které se vztahují na smart kontrakty Etherea._
 

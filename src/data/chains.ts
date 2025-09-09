@@ -330,17 +330,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Fraxtal",
-    infoURL: "https://mainnet.frax.com",
-    chainId: 252,
-    nativeCurrency: {
-      name: "Frax Ether",
-      symbol: "frxETH",
-      decimals: 18,
-    },
-    chain: "FRAX",
-  },
-  {
     name: "Swan Chain Mainnet",
     infoURL: "https://swanchain.io/",
     chainId: 254,
@@ -1452,6 +1441,17 @@ const chains = [
     chain: "Liveplex OracleEVM Network",
   },
   {
+    name: "Reddio",
+    infoURL: "https://www.reddio.com",
+    chainId: 50342,
+    nativeCurrency: {
+      name: "Reddio",
+      symbol: "RDO",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "BirdLayer",
     infoURL: "https://www.dodochain.com",
     chainId: 53456,
@@ -1683,17 +1683,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Plume (Legacy)",
-    infoURL: "https://plumenetwork.xyz/",
-    chainId: 98865,
-    nativeCurrency: {
-      name: "Plume Ether",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    chain: "PLUME Legacy",
-  },
-  {
     name: "re.al",
     infoURL: "https://re.al",
     chainId: 111188,
@@ -1913,6 +1902,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Zether",
+  },
+  {
+    name: "katana",
+    infoURL: "https://katana.network",
+    chainId: 747474,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "katana",
   },
   {
     name: "zkLink Nova Mainnet",

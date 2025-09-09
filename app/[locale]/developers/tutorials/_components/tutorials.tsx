@@ -8,19 +8,16 @@ import React, {
   useMemo,
   useState,
 } from "react"
+import { ExternalLink } from "lucide-react"
 import { useLocale } from "next-intl"
-import { FaGithub } from "react-icons/fa"
 
 import { ITutorial, Lang } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
-import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
-import { Button, ButtonLink } from "@/components/ui/buttons/Button"
-import Modal from "@/components/ui/dialog-modal"
+import { Button } from "@/components/ui/buttons/Button"
 import { Flex, FlexProps } from "@/components/ui/flex"
 import { Tag, TagButton } from "@/components/ui/tag"
 
@@ -35,12 +32,6 @@ import {
 import externalTutorials from "@/data/externalTutorials.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { useBreakpointValue } from "@/hooks/useBreakpointValue"
-
-type LinkFlexProps = FlexProps & {
-  href: string
-}
 
 const FilterTag = forwardRef<
   HTMLButtonElement,
@@ -66,6 +57,10 @@ const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadElement>) => (
   <p className={cn("mb-6", className)} {...props} />
 )
 
+type LinkFlexProps = FlexProps & {
+  href: string
+}
+
 const LinkFlex = ({ href, children, ...props }: LinkFlexProps) => {
   return (
     <Flex asChild {...props}>
@@ -85,15 +80,11 @@ const published = (locale: string, published: string) => {
   ) : null
 }
 
-type TutorialPageProps = {
+type TutorialsListProps = {
   internalTutorials: ITutorial[]
-  contentNotTranslated: boolean
 }
 
-const TutorialPage = ({
-  internalTutorials,
-  contentNotTranslated,
-}: TutorialPageProps) => {
+const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   const locale = useLocale()
   const effectiveLocale = internalTutorials.length > 0 ? locale : DEFAULT_LOCALE
   const filteredTutorialsByLang = useMemo(
@@ -111,7 +102,6 @@ const TutorialPage = ({
     [filteredTutorialsByLang]
   )
 
-  const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
   )
@@ -152,66 +142,8 @@ const TutorialPage = ({
     setSelectedTags([...tempSelectedTags])
   }
 
-  const dir = contentNotTranslated ? "ltr" : "unset"
-
-  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
   return (
-    <MainArticle
-      className={`mx-auto my-0 mt-16 flex w-full flex-col items-center ${dir}`}
-    >
-      <h1 className="no-italic mb-4 text-center font-monospace text-[2rem] font-semibold uppercase leading-[1.4] max-sm:mx-4 max-sm:mt-4 sm:mb-[1.625rem]">
-        <Translation id="page-developers-tutorials:page-tutorial-title" />
-      </h1>
-      <Text className="mb-4 text-center leading-xs text-body-medium">
-        <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
-      </Text>
-
-      <Modal
-        open={isModalOpen}
-        onOpenChange={(open) => setModalOpen(open)}
-        size={modalSize}
-        contentProps={{ dir }}
-        title={
-          <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
-        }
-      >
-        <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />
-        </Text>
-        <Flex className="flex-col gap-2 md:flex-row">
-          <Flex className="w-full flex-col justify-between rounded-sm border border-border p-4">
-            <b>
-              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue" />
-            </b>
-            <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue-desc" />
-            </Text>
-            <ButtonLink
-              variant="outline"
-              href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
-            >
-              <FaGithub />
-              <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
-            </ButtonLink>
-          </Flex>
-        </Flex>
-      </Modal>
-
-      <Button
-        className="px-3 py-2 text-body"
-        variant="outline"
-        onClick={() => {
-          setModalOpen(true)
-          trackCustomEvent({
-            eventCategory: "tutorials tags",
-            eventAction: "click",
-            eventName: "submit",
-          })
-        }}
-      >
-        <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
-      </Button>
-
+    <>
       <div className="my-8 w-full shadow-table-box md:w-2/3">
         <Flex className="m-8 flex-col justify-center border-b border-border px-0 pb-4 pt-4 md:pb-8">
           <Flex className="mb-4 max-w-full flex-wrap items-center gap-2">
@@ -267,13 +199,11 @@ const TutorialPage = ({
               href={tutorial.href ?? undefined}
             >
               <Flex className="mb-8 flex-col items-start justify-between gap-y-4 md:-mb-4 md:flex-row">
-                <Text
-                  className={cn(
-                    "relative me-0 text-2xl font-semibold text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24",
-                    tutorial.isExternal ? "after:inline-block" : "after:hidden"
-                  )}
-                >
+                <Text className="relative me-0 text-2xl font-semibold text-body md:me-24">
                   {tutorial.title}
+                  {tutorial.isExternal && (
+                    <ExternalLink className="mb-[0.25em] ms-[0.25em] inline-block size-[0.875em]" />
+                  )}
                 </Text>
                 <Tag variant="outline">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
@@ -312,9 +242,8 @@ const TutorialPage = ({
           )
         })}
       </div>
-      <FeedbackCard />
-    </MainArticle>
+    </>
   )
 }
 
-export default TutorialPage
+export default TutorialsList

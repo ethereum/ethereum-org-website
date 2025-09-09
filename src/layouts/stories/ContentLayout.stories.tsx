@@ -62,6 +62,21 @@ export const ContentLayout: StoryObj<typeof meta> = {
       ],
     },
     maxDepth: 2,
+    contributors: [
+      {
+        login: "samajammin",
+        avatar_url: "https://avatars.githubusercontent.com/u/8097623?v=4",
+        html_url: "https://github.com/samajammin",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+      {
+        login: "samajammin",
+        avatar_url: "https://avatars.githubusercontent.com/u/8097623?v=4",
+        html_url: "https://github.com/samajammin",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+    ],
+    lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (
       <Center className="h-[400px] border-2 border-dashed border-primary">
         Hero section

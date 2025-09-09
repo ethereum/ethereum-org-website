@@ -16,7 +16,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 - [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
 - Use kebab casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
-  - If capitalization styling required, it is preferable to style with CSS
+  - If capitalization styling is required, it is preferable to style with CSS
     - Do this:
       ```
         JSON `"page-warning": "Be very careful"`
@@ -166,16 +166,73 @@ import Emoji from "./Emoji"
 ;<Emoji text=":star:" fontSize="xl" /> // the base fontSize is `md`
 ```
 
-- **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  with [Chakra UI Icon component](https://www.chakra-ui.com/docs/components/concepts/overview)
+## Icons: Lucide
+
+We use [Lucide](https://lucide.dev/icons/) for icons, imported via the [lucide-react](https://www.npmjs.com/package/lucide-react) package.
+
+Lucide icons by default use strokes only, with default 2px stroke width, rounded line-caps and line-joins, and follow `currentColor`.
+
+### Basic Usage
 
 ```tsx
-import { Icon } from "@chakra-ui/react"
-import { BsQuestionSquareFill } from "react-icons/bs"
-
-// wrap your imported icon with the `Icon` component from Chakra UI
-;<Icon as={BsQuestionSquareFill} />
+import { Heart } from "lucide-react"
+;<Heart />
 ```
+
+### Sizing
+
+Use tailwind classes to size icons:
+
+- **Static**: example: `size-6` (24px), `size-4` (16px), etc.
+- **Mirror `fontSize`**: `size-[1em]`, `size-[0.875em]` to match surrounding text
+- **Custom (avoid)**: `size-[50px]` for specific dimensions
+
+```tsx
+<Heart className="size-6" />
+```
+
+### Coloring
+
+- **Stroke color**: Follows `currentColor`, use `text-*` classes (e.g., `text-primary`, `text-accent-a`)
+- **Fill**: Avoid using in most cases to maintain consistent theming
+
+```tsx
+<Heart className="text-primary" />
+```
+
+### Stroke Properties
+
+- **`strokeWidth`**: example: `stroke-[3]` (use Tailwind classes),
+- **`strokeLinecap`/`strokeLinejoin`**: Use props directly on the icon component
+
+  ```tsx
+  import { Check } from "lucide-react"
+  ;<Check
+    className="stroke-[4.5]"
+    strokeLinecap="square"
+    strokeLinejoin="miter"
+  />
+  ```
+
+  Options:
+  - `strokeLinecap`: `butt`, `round`, `square`
+  - `strokeLinejoin`: `round`, `bevel`, `miter`, `
+
+### Background Circles
+
+Wrap icon in a div for circular backgrounds, and color using background:
+
+```tsx
+<div className="bg-primary/10 grid size-10 place-items-center rounded-full">
+  <Heart className="text-primary size-5" />
+</div>
+```
+
+### Repository Preferences
+
+1. **Preferred**: Lucide out-of-box with color styling
+2. **Acceptable**: Lucide with stroke property adjustments
+3. **Last resort**: Custom `.svg` imports
 
 ## Using custom `Image` component
 

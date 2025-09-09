@@ -134,8 +134,8 @@ Hataları geri alabilen bir yöneticiye sahip olmak bazen faydalı olabilir. Kö
 
 OpenZeppelin, yönetici erişimini etkinleştirmek için iki çeşit mekanizma sunar:
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) sözleşmelerinin sadece bir sahibi vardır. `OnlyOwner`[ özelliğine](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) sahip işlevler yalnızca o sahip tarafından çağrılabilir. Sahipler bu sahipliği bir başkasına devredebilir ya da tamamen sahiplikten feragat edebilir. Tüm diğer hesapların hakları ise genelde aynıdır.
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) sözleşmelerinde [rol tabanlı erişim kontrolü (RBAC) bulunur](https://en.wikipedia.org/wiki/Role-based_access_control).
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) sözleşmelerinin sadece bir sahibi vardır. `OnlyOwner`[ özelliğine](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) sahip işlevler yalnızca o sahip tarafından çağrılabilir. Sahipler bu sahipliği bir başkasına devredebilir ya da tamamen sahiplikten feragat edebilir. Tüm diğer hesapların hakları ise genelde aynıdır.
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) sözleşmelerinde [rol tabanlı erişim kontrolü (RBAC) bulunur](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Basit olması için biz bu makalede `Ownable`'ı kullanacağız.
 

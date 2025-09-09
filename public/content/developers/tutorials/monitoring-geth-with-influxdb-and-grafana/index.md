@@ -1,6 +1,6 @@
 ---
 title: Monitoring Geth with InfluxDB and Grafana
-description:
+description: Set up monitoring for your Geth node using InfluxDB and Grafana to track performance and identify issues.
 author: "Mario Havel"
 tags: ["clients", "nodes"]
 skill: intermediate
@@ -27,7 +27,7 @@ An Ethereum client collects lots of data which can be read in the form of a chro
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-There's also [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), an option preconfigured with InfluxDB and Grafana. You can set it up easily using docker and [Ethbian OS](https://ethbian.org/index.html) for RPi 4.
+There's also [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), an option preconfigured with InfluxDB and Grafana.
 
 In this tutorial, we'll set up your Geth client to push data to InfluxDB to create a database and Grafana to create a graph visualisation of the data. Doing it manually will help you understand the process better, alter it, and deploy in different environments.
 

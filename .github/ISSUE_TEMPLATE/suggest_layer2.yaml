@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a layer 2, make sure you've read [our listing policy](https://ethereum.org/en/contributing/adding-layer-2s/).
+        Before suggesting a layer 2, make sure you've read [our listing policy](https://ethereum.org/contributing/adding-layer-2s/).
   - type: markdown
     attributes:
       value: |

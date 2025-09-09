@@ -74,7 +74,14 @@ export const stakingComponents = {
 }
 
 type StakingLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+  Pick<
+    MdPageContent,
+    | "slug"
+    | "tocItems"
+    | "contentNotTranslated"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: StakingFrontmatter
   }
 
@@ -84,6 +91,8 @@ export const StakingLayout = ({
   slug,
   tocItems,
   contentNotTranslated,
+  contributors,
+  lastEditLocaleTimestamp,
 }: StakingLayoutProps) => {
   const { t } = useTranslation("page-staking")
 
@@ -144,7 +153,7 @@ export const StakingLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: { src: frontmatter.image, width: 800, height: 605 },
     description: (
       <>
         <div>
@@ -164,6 +173,8 @@ export const StakingLayout = ({
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}

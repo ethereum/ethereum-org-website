@@ -29,7 +29,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 3) Exploring {#exploring}
 
 - [Non-fungible tokens (NFT)](/nft/)
-- [Dapps](/dapps/)
+- [Dapps](/apps/)
 - [Stablecoins](/stablecoins/)
 - Template usecase
 
@@ -59,7 +59,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Staking as a service](/staking/saas/)
 - [Staking deposit contract](/staking/deposit-contract/)
 - [Staking withdrawals](/staking/withdrawals/)
-- [Distributed validator technology](/dvt/)
+- [Distributed validator technology](/staking/dvt/)
 
 ## 7) Learn pages {#learn-pages}
 
@@ -326,7 +326,6 @@ Below is a breakdown of the website pages each content bucket contains.
 
 ## 28) Developer tutorials 4 {#tutorials-4}
 
-- [Create and deploy a DeFi app](/developers/tutorials/create-and-deploy-a-defi-app/)
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/)
 - [How to implement an ERC-721 market](/developers/tutorials/how-to-implement-an-erc721-market/)
 - [How to set up Tellor as your oracle](/developers/tutorials/how-to-use-tellor-as-your-oracle/)

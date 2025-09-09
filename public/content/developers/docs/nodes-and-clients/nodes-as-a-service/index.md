@@ -64,6 +64,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Integrated testnet faucet access
     - Active Discord builder community with 18k users
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Docs](https://docs.allnodes.com/)
+  - Features
+    - No rate limits with PublicNode token created on the Allnodes portfolio page.
+    - Privacy focused free rpc endpoints (100+ blockchains) on [PublicNode](https://www.publicnode.com)
+    - Dedicated nodes without rate limits for 90+ blockchains
+    - Dedicated archive nodes for 30+ blockchains
+    - Available in 3 regions (US, EU, Asia)
+    - Snapshots for 100+ blockchains on [PublicNode](https://www.publicnode.com/snapshots)
+    - 24/7 technical support with 99.90%-99.98% uptime SLA (depends on plan).
+    - Pay-per-hour pricing
+    - Pay with Credit Card, PayPal or Crypto
+
 - [**All That Node**](https://allthatnode.com/)
   - [Docs](https://docs.allthatnode.com/)
   - Features
@@ -155,19 +168,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Bring your cloud
     - Pay-per-hour pricing
     - Direct 24/7 support
-
-- [**DataHub**](https://datahub.figment.io)
-  - [Docs](https://docs.figment.io/)
-  - Features
-    - Free tier option with 3,000,000 reqs/month
-    - RPC and WSS endpoints
-    - Dedicated full and archive nodes
-    - Auto-Scaling (Volume Discounts)
-    - Free archival data
-    - Service Analytics
-    - Dashboard
-    - Direct 24/7 Support
-    - Pay in Crypto (Enterprise)
 
 - [**DRPC**](https://drpc.org/)
   - [Docs](https://docs.drpc.org/)
@@ -264,7 +264,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Direct, technical support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Docs](https://docs.nodereal.io/docs/introduction)
   - Features
     - Reliable, fast and scalable RPC API services
     - Enhanced API for web3 developers

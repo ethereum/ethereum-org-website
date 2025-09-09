@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### हार्डवेयर {#hardware}
 
-हालांकि, सेंसरशिप-रेजिस्टेंट और विकेन्द्रीकृत नेटवर्क को क्लाउड प्रोवाइडर्स पर निर्भर नहीं होना चाहिए। इसके बजाय, अपने नोड को अपने स्वयं के स्थानीय हार्डवेयर पर चलाना इकोसिस्टम के लिए स्वस्थ है। [अनुमान](https://www.ethernodes.org/networkType/Hosting) दर्शाते हैं कि नोड्स का एक बड़ा हिस्सा क्लाउड पर चलता है, जो एकल विफलता बिंदु बन सकता है।
+हालांकि, सेंसरशिप-रेजिस्टेंट और विकेन्द्रीकृत नेटवर्क को क्लाउड प्रोवाइडर्स पर निर्भर नहीं होना चाहिए। इसके बजाय, अपने नोड को अपने स्वयं के स्थानीय हार्डवेयर पर चलाना इकोसिस्टम के लिए स्वस्थ है। [अनुमान](https://www.ethernodes.org/network-types) दर्शाते हैं कि नोड्स का एक बड़ा हिस्सा क्लाउड पर चलता है, जो एकल विफलता बिंदु बन सकता है।
 
 एथेरियम क्लाइंट्स आपके कंप्यूटर, लैपटॉप, सर्वर, या यहां तक कि एक सिंगल-बोर्ड कंप्यूटर पर चल सकते हैं। हालांकि पर्सनल कंप्यूटर पर क्लाइंट्स चलाना संभव है, एक विशेष मशीन का होना आपके नोड की परफ़ॉर्मेंस और सुरक्षा को काफी हद तक बढ़ा सकता है, जबकि आपके मुख्य कंप्यूटर पर प्रभाव को कम करता है।
 
@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### सहमति ग्राहक
 
 - [लाइटहाउस](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (एक पहले से तैयार बाइनरी, केवल एक डॉकर इमेज प्रदान नहीं करता है या उसे स्रोत से बनाया जा सकता है)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (एक पहले से तैयार बाइनरी, केवल एक डॉकर इमेज प्रदान नहीं करता है या उसे स्रोत से बनाया जा सकता है)
 - [निम्बस](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [प्रिज़्म](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [टेकु](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu में एक लॉन्चर विकल्प भी आता ह
 besu --Xlauncher
 ```
 
-[Besu का प्रलेखन](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) अतिरिक्त विकल्प और कॉन्फ़िगरेशन विवरण शामिल करता है।
+[Besu का प्रलेखन](https://besu.hyperledger.org/public-networks/get-started/start-node/) अतिरिक्त विकल्प और कॉन्फ़िगरेशन विवरण शामिल करता है।
 
 ##### Erigon चलाना
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermind चलाना
 
-Nethermind विभिन्न [इंस्टॉलेशन विकल्प](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) प्रदान करता है। पैकेज में विभिन्न बाइनरी आते हैं, जिसमें एक निर्देशित सेटअप के साथ एक लॉन्चर शामिल है, जो आपको कॉन्फ़िगरेशन को इंटरैक्टिव रूप से बनाने में मदद करेगा। वैकल्पिक रूप से, आप रनर पा सकते हैं जो स्वयं एक्जीक्यूटेबल है और आप इसे कॉन्फ़िग ध्वजों के साथ चला सकते हैं। JSON-RPC डिफ़ॉल्ट रूप से सक्षम है।
+Nethermind विभिन्न [इंस्टॉलेशन विकल्प](https://docs.nethermind.io/get-started/installing-nethermind) प्रदान करता है। पैकेज में विभिन्न बाइनरी आते हैं, जिसमें एक निर्देशित सेटअप के साथ एक लॉन्चर शामिल है, जो आपको कॉन्फ़िगरेशन को इंटरैक्टिव रूप से बनाने में मदद करेगा। वैकल्पिक रूप से, आप रनर पा सकते हैं जो स्वयं एक्जीक्यूटेबल है और आप इसे कॉन्फ़िग ध्वजों के साथ चला सकते हैं। JSON-RPC डिफ़ॉल्ट रूप से सक्षम है।
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind दस्तावेज़, सहमति क्लाइंट के साथ Nethermind चलाने पर एक [पूर्ण मार्गदर्शिका](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) प्रदान करते हैं।
+Nethermind दस्तावेज़, सहमति क्लाइंट के साथ Nethermind चलाने पर एक [पूर्ण मार्गदर्शिका](https://docs.nethermind.io/get-started/running-node/) प्रदान करते हैं।
 
 एक निष्पादन क्लाइंट अपने मुख्य कार्यों, चुने गए एंडपॉइंट्स को आरंभ करेगा और पीयर्स की खोज शुरू करेगा। पीयर्स की सफलतापूर्वक खोज के बाद, क्लाइंट सिंक्रनाइज़ेशन शुरू करता है। निष्पादन क्लाइंट, सहमति क्लाइंट से कनेक्शन की प्रतीक्षा करेगा। वर्तमान ब्लॉकचेन डेटा तब उपलब्ध होगा जब क्लाइंट वर्तमान स्थिति के साथ सफलतापूर्वक सिंक हो जाएगा।
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### प्रिज़्म चलाना
 
-Prysm स्क्रिप्ट के साथ आता है जो आसान स्वचालित स्थापना की अनुमति देता है। विवरण [प्रिज़्म डॉक्स](https://docs.prylabs.network/docs/install/install-with-script) में पाए जा सकते हैं।
+Prysm स्क्रिप्ट के साथ आता है जो आसान स्वचालित स्थापना की अनुमति देता है। विवरण [प्रिज़्म डॉक्स](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) में पाए जा सकते हैं।
 
 ```sh
 ./prysm.sh beacon-chain \

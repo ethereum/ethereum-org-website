@@ -1,4 +1,6 @@
-import { MdInfoOutline } from "react-icons/md"
+import { Info } from "lucide-react"
+
+import { ExtendedRollup } from "@/lib/types"
 
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
 import Tooltip from "@/components/Tooltip"
@@ -21,7 +23,11 @@ const formatNumber = (num: number): string => {
   return num.toString()
 }
 
-const NetworkSubComponent = ({ network }) => {
+type NetworkSubComponentProps = {
+  network: ExtendedRollup
+}
+
+const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
   const { t } = useTranslation("page-layer-2-networks")
 
   return (
@@ -32,7 +38,7 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-age")}{" "}
+                  {t("page-layer-2-networks-age")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -42,7 +48,7 @@ const NetworkSubComponent = ({ network }) => {
                         <p>{t("page-layer-2-networks-show-how-long")}</p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
@@ -55,11 +61,12 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "age",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
                 <p>
                   {(() => {
+                    if (!network.launchDate) return "-"
                     const launch = new Date(network.launchDate)
                     const today = new Date()
                     const yearDiff = today.getFullYear() - launch.getFullYear()
@@ -77,7 +84,7 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-wallet-support")}{" "}
+                  {t("page-layer-2-networks-wallet-support")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -95,7 +102,7 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "wallet_support",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -112,7 +119,7 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-active-address")}{" "}
+                  {t("page-layer-2-networks-active-address")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -124,7 +131,7 @@ const NetworkSubComponent = ({ network }) => {
                         </p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
@@ -137,16 +144,20 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "active_addresses",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
-              <p>{formatNumber(network.activeAddresses)}</p>
+              <p>
+                {network.activeAddresses
+                  ? formatNumber(network.activeAddresses)
+                  : "-"}
+              </p>
             </div>
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-fee-token")}{" "}
+                  {t("page-layer-2-networks-fee-token")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -160,7 +171,7 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "fee_token",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -171,7 +182,7 @@ const NetworkSubComponent = ({ network }) => {
         <div className="flex-1 gap-2">
           <div>
             <p className="text-xs font-bold text-body-medium">
-              {t("page-layer-2-networks-network-usage")}{" "}
+              {t("page-layer-2-networks-network-usage")}&nbsp;
               <Tooltip
                 content={
                   <div className="flex flex-col gap-2">
@@ -181,7 +192,7 @@ const NetworkSubComponent = ({ network }) => {
                     <p>{t("page-layer-2-networks-network-usage-overview")}</p>
                     <p>
                       {t("page-layer-2-networks-data-from")}{" "}
-                      <InlineLink href="https://growthepie.xyz">
+                      <InlineLink href="https://growthepie.com">
                         growthepie
                       </InlineLink>
                       {t("page-layer-2-networks-period")}
@@ -189,7 +200,7 @@ const NetworkSubComponent = ({ network }) => {
                   </div>
                 }
               >
-                <MdInfoOutline className="translate-y-0.5" />
+                <Info className="size-[0.875em] translate-y-0.5" />
               </Tooltip>
             </p>
             <div className="w-full">

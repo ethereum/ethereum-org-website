@@ -1,5 +1,5 @@
 ---
-title: Intro to ether
+title: Technical intro to ether
 description: A developer's introduction to the ether cryptocurrency.
 lang: en
 ---
@@ -38,7 +38,7 @@ Ether is minted as a reward for each block proposed and at every epoch checkpoin
 
 As well as creating ether through block rewards, ether can be destroyed through a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
 
-Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
+Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://eth.blockscout.com/block/22580057) can burn more ether than they mint, effectively offsetting ether issuance.
 
 Burning the base fee hinders a block producer's ability to manipulate transactions. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users offchain, leading to a more opaque and complex transaction fee market.
 
@@ -67,7 +67,7 @@ When the recipient address is a [smart contract](/developers/docs/smart-contract
 
 Users can query the ether balance of any [account](/developers/docs/accounts/) by inspecting the account's `balance` field, which shows ether holdings denominated in wei.
 
-[Etherscan](https://etherscan.io) is a popular tool to inspect address balances via a web-based application. For example, [this Etherscan page](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) shows the balance for the Ethereum Foundation. Account balances can also be queried using wallets or directly by making requests to nodes.
+[Etherscan](https://etherscan.io) and [Blockscout](https://eth.blockscout.com) are popular tools to inspect address balances via web-based applications. For example, [this Blockscout page](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) shows the balance for the Ethereum Foundation. Account balances can also be queried using wallets or directly by making requests to nodes.
 
 ## Further reading {#further-reading}
 

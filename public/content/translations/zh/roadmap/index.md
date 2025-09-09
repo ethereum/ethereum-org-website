@@ -70,7 +70,7 @@ buttons:
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>ETH2 是什么？</h4>
 
-  <p>在以太坊过渡到<a href="/glossary/#pos">权益证明</a>之前，“Eth2”（以太坊 2）一词通常用于描述以太坊的未来，但它已<strong>被逐步淘汰，取而代之的是更准确的术语</strong>。该术语最初被用于区分过渡到权益证明之前和之后的以太坊网络，有时也用于指代不同的以太坊客户端（<a href="/glossary/#execution-client">执行客户端</a>有时称为以太坊 1 客户端，而<a href="/glossary/#consensus-client">共识客户端</a>有时称为以太坊 2 客户端）。</p>
+  <p>在以太坊过渡到[权益证明](/glossary/#pos)之前，“Eth2”（以太坊 2）一词通常用于描述以太坊的未来，但它已<strong>被逐步淘汰，取而代之的是更准确的术语</strong>。该术语最初被用于区分过渡到权益证明之前和之后的以太坊网络，有时也用于指代不同的以太坊客户端（[执行客户端](/glossary/#execution-client)有时称为以太坊 1 客户端，而[共识客户端](/glossary/#consensus-client)有时称为以太坊 2 客户端）。</p>
 
 </InfoBanner>
 
@@ -109,6 +109,7 @@ buttons:
 
 ## 正在寻求特定技术升级？ {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) - Prague/Electra 硬分叉带来帐户抽象的新途径，提升可扩展性以及更多功能。
 - [Danksharding](/roadmap/danksharding) - Danksharding 通过向以太坊区块添加二进制大对象数据，为用户大大降低二层网络卷叠成本。
 - [质押提款](/staking/withdrawals) - 上海/卡佩拉升级启用了以太坊质押提款，允许用户解锁质押的以太币。
 - [单时隙最终确定性](/roadmap/single-slot-finality) - 让区块可以在同一时隙内提出和最终确定，无需等待 15 分钟。 这提高了应用程序的便利性，大大增加了攻击难度。

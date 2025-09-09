@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -43,7 +43,7 @@ export async function generateMetadata({
   return await getMetadata({
     locale,
     slug: ["quizzes"],
-    title: t("common.quizzes-title"),
+    title: `${t("common.quizzes-title")} | ethereum.org`,
     description: t("learn-quizzes.quizzes-subtitle"),
     image: "/images/heroes/quizzes-hub-hero.png",
   })

@@ -91,7 +91,7 @@ APPLY({ Alice: $50, Bob: $50 },"send $70 from Alice to Bob") = ERROR
 
 本质上，区块中的每笔交易都必须提供一个有效的状态转换，从交易执行前的规范状态转换到某个新状态。 注意，状态并未编码到区块。它纯粹只是校验节点记住的抽象概念，只能被任意区块从创世状态开始，按顺序加上每一个区块的每一笔交易，（安全地）计算出当前状态。 另外，需要注意矿工将交易收录进区块的顺序。如果一个区块中有A、B两笔交易，B花费的是A创建的UTXO，如果A在B之前，这个区块是有效的，否则，这个区块无效。
 
-“工作量证明”是出现在上表而其他系统没有的验证条件。 具体验证方法为，对每个区块进行两次SHA256哈希处理，得到一个256位的数值，该数值必须小于不断动态调整的目标数值，本文写作时目标数值大约是2<sup>187</sup>。 工作量证明的目的是使创建区块有算力困难，从而阻止女巫攻击者恶意重新生成区块链。 因为SHA256是完全不可预测的伪随机函数，创建有效区块的唯一方法就是简单地不断试错，不断地增加随机数的数值，查看新的哈希数是否小于目标值。
+“工作量证明”是出现在上表而其他系统没有的验证条件。 具体验证方法为，对每个区块进行两次SHA256哈希处理，得到一个256位的数值，该数值必须小于不断动态调整的目标数值，本文写作时目标数值大约是2<sup>187</sup>。 工作量证明的目的是使创建区块有算力困难，从而阻止女巫攻击者恶意重新生成区块链。 因为 SHA256 被设计为完全不可预测的伪随机函数，所以创建有效区块的唯一方法就是反复试验，反复增加随机数并查看新哈希值是否匹配。
 
 当前的目标数值是\~2<sup>187</sup>，网络必须平均尝试 \~2<sup>69</sup>次才能生成有效的区块。一般而言，比特币网络每隔2016个区块重新设定目标数值，从而保证网络中的节点平均每十分钟生成一个区块。 为了对矿工的计算工作进行激励，每一个成功生成区块的矿工有权在区块中包含一笔凭空发给他们自己12.5 BTC的交易。 另外，如果交易的输入额大于输出，差额部分就作为“交易费”付给矿工。 顺便提一下，这也是比特币发行的唯一机制，创世状态中并没有比特币。
 
@@ -383,7 +383,7 @@ def register(name, value):
 3. 实际中挖矿能力的分配最终可能极端不平等。
 4. 热衷于破坏网络的投机者、政敌和疯子确实存在，他们可以巧妙地设置合约，使得他们的成本远低于其他验证节点支付的成本。
 
-(1) 让矿工趋向于收录更少的交易，并且 (2) 增加 `NC`；因此，这两种作用会相互抵消 一部分 。<sup>[如何抵消？](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) 和 (4) 是主要问题，为了解决它们，我们简单地制订了一个 浮动上限：没有区块能够包含比 `BLK_LIMIT_FACTOR` 乘以长期指数移动平均值更多的操作数。 具体如下：
+(1) 让矿工趋向于收录更少的交易，并且 (2) 增加 `NC`；因此，这两种作用会相互抵消 一部分 。<sup>[如何抵消？](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) 和 (4) 是主要问题，为了解决它们，我们简单地制订了一个 浮动上限：没有区块能够包含比 `BLK_LIMIT_FACTOR` 乘以长期指数移动平均值更多的操作数。 具体如下：
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit * (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _尽管采用了线性发行方式，然而和比特币一样，以太币的长�
 16. [GHOST 协议](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 和自治代理，Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn 在图灵节上谈论智能资产](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [以太坊递归长度前缀编码 (RLP)](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [以太坊默克尔帕特里夏树](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [以太坊递归长度前缀编码 (RLP)](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [以太坊默克尔帕特里夏树](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 论默克尔求和树](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_有关本白皮书的历史，请参阅[此维基文章](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
+_有关本白皮书的历史，请参阅[此维基文章](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
 
 _和众多社区驱动的开源软件项目一样，以太坊自启动以来一直不断发展。 若想了解以太坊的最新进展以及如何更改以太坊协议，我们推荐你阅读[本指南](/learn/)。_
