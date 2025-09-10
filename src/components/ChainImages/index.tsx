@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 import { ChainName } from "@/lib/types"
 
 import { Image } from "@/components/Image"
@@ -11,7 +13,7 @@ interface ChainImagesProps {
   className?: string
 }
 
-export const ChainImages = ({
+const ChainImages = ({
   chains,
   size = 24,
   className = "",
@@ -48,3 +50,5 @@ export const ChainImages = ({
     </div>
   )
 }
+
+export default memo(ChainImages)
