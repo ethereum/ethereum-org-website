@@ -1,29 +1,15 @@
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
-import type { FilterOption, TPresetFilters, Wallet } from "@/lib/types"
+import type { FilterOption, TPresetFilters } from "@/lib/types"
 
 // import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import WalletInfo from "../FindWalletProductTable/WalletInfo"
 import Translation from "../Translation"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "../ui/collapsible"
+
+import List from "./List"
 
 interface ProductTableProps<T extends { id: string }> {
   data: T[]
@@ -75,6 +61,27 @@ const getActiveFiltersCount = (filters: FilterOption[]) => {
   }, 0)
 }
 
+const parseQueryParams = (queryValue: unknown) => {
+  // Handle boolean values
+  if (queryValue === "true") return true
+  if (queryValue === "false") return false
+
+  // Handle array values
+  if (
+    typeof queryValue === "string" &&
+    queryValue.startsWith("[") &&
+    queryValue.endsWith("]")
+  ) {
+    try {
+      return JSON.parse(decodeURIComponent(queryValue))
+    } catch {
+      return undefined
+    }
+  }
+
+  return undefined
+}
+
 const ProductTable = <T extends { id: string }>({
   data,
   filters: initialFilters,
@@ -90,31 +97,6 @@ const ProductTable = <T extends { id: string }>({
 
   const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-
-  const filteredData = useMemo(() => {
-    return filterFn(data, filters)
-  }, [data, filters, filterFn])
-
-  const parseQueryParams = (queryValue: unknown) => {
-    // Handle boolean values
-    if (queryValue === "true") return true
-    if (queryValue === "false") return false
-
-    // Handle array values
-    if (
-      typeof queryValue === "string" &&
-      queryValue.startsWith("[") &&
-      queryValue.endsWith("]")
-    ) {
-      try {
-        return JSON.parse(decodeURIComponent(queryValue))
-      } catch {
-        return undefined
-      }
-    }
-
-    return undefined
-  }
 
   // Update filters based on router query
   useEffect(() => {
@@ -142,12 +124,6 @@ const ProductTable = <T extends { id: string }>({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams])
 
-  // Reset filters
-  const resetFilters = useCallback(() => {
-    setFilters(initialFilters)
-    onResetFilters?.()
-  }, [initialFilters, onResetFilters])
-
   const updateFilters = useCallback(
     (filters: FilterOption | FilterOption[]) => {
       setFilters((prevFilters) => {
@@ -165,6 +141,16 @@ const ProductTable = <T extends { id: string }>({
     []
   )
 
+  const resetFilters = useCallback(() => {
+    setFilters(initialFilters)
+    onResetFilters?.()
+  }, [initialFilters, onResetFilters])
+
+  // Calculated data
+  const filteredData = useMemo(() => {
+    return filterFn(data, filters)
+  }, [data, filters, filterFn])
+
   const presetFiltersCounts = useMemo(() => {
     return presetFilters.map((persona) => {
       const activeFilters = Object.entries(persona.presetFilters).filter(
@@ -176,45 +162,6 @@ const ProductTable = <T extends { id: string }>({
       }).length
     })
   }, [filteredData, presetFilters])
-
-  const parentRef = useRef<HTMLDivElement>(null)
-
-  const parentOffsetRef = useRef(0)
-
-  useLayoutEffect(() => {
-    parentOffsetRef.current = parentRef.current?.offsetTop ?? 0
-  }, [])
-
-  const virtualizer = useWindowVirtualizer({
-    count: filteredData.length,
-    estimateSize: () => 250,
-    overscan: 5,
-    scrollMargin: parentOffsetRef.current,
-  })
-
-  const previousExpandedRef = useRef<Record<string, boolean>>({})
-
-  const handleExpandedChange = useCallback(
-    (open: boolean, item: T) => {
-      if (!open) return
-
-      const expandedOnce = previousExpandedRef.current[item.id]
-
-      if (!expandedOnce) {
-        trackCustomEvent({
-          eventCategory: matomoEventCategory,
-          eventAction: "expanded",
-          eventName: item.id,
-        })
-      }
-
-      previousExpandedRef.current = {
-        ...previousExpandedRef.current,
-        [item.id]: true,
-      }
-    },
-    [matomoEventCategory]
-  )
 
   const activeFiltersCount = useMemo(
     () => getActiveFiltersCount(filters),
@@ -271,39 +218,12 @@ const ProductTable = <T extends { id: string }>({
               noResultsComponent &&
               noResultsComponent(resetFilters)}
 
-            <div
-              ref={parentRef}
-              className="relative"
-              style={{
-                height: `${virtualizer.getTotalSize()}px`,
-              }}
-            >
-              {virtualizer.getVirtualItems().map((virtualItem) => {
-                const item = filteredData[virtualItem.index]
-
-                return (
-                  <Collapsible
-                    key={virtualItem.key}
-                    data-index={virtualItem.index}
-                    ref={virtualizer.measureElement}
-                    className="group/collapsible absolute left-0 top-0 flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
-                    style={{
-                      transform: `translateY(${virtualItem.start - virtualizer.options.scrollMargin}px)`,
-                    }}
-                    onOpenChange={(open) => handleExpandedChange(open, item)}
-                  >
-                    <CollapsibleTrigger asChild>
-                      <div className="p-4">
-                        <WalletInfo wallet={item as unknown as Wallet} />
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="border-t p-4">
-                      {subComponent?.(item as T, filters, virtualItem.index)}
-                    </CollapsibleContent>
-                  </Collapsible>
-                )
-              })}
-            </div>
+            <List
+              data={filteredData}
+              subComponent={subComponent}
+              filters={filters}
+              matomoEventCategory={matomoEventCategory}
+            />
           </div>
         </div>
       </div>
