@@ -19,7 +19,7 @@ lang: ja
 title="ARBとは"
 contentPreview=''>
 
-Arbitrumは、<a href="/developers/docs/scaling/optimistic-rollups/">オプティミスティック・ロールアップ</a>の開発および管理を行う組織です。 当初、営利企業として立ち上げられたArbitrumは、その後、分散型組織に切り替わりました。 同プロセスにおいて、Arbitrumは、取引可能な<a href="/dao/#token-based-membership">ガバナンストークン</a>を発行しました。
+Arbitrumは、[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)の開発および管理を行う組織です。 当初、営利企業として立ち上げられたArbitrumは、その後、分散型組織に切り替わりました。 同プロセスにおいて、Arbitrumは、取引可能な[ガバナンストークン](/dao/#token-based-membership)を発行しました。
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ contentPreview=''>
 title="スマートコントラクトとは"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">スマートコントラクト</a>とは、イーサリアムブロックチェーン上で実行可能なプログラムです。 例えば、すべてのERC-20トークンは、スマートコントラクトとして実装できます。
+[スマートコントラクト](/developers/docs/smart-contracts/)とは、イーサリアムブロックチェーン上で実行可能なプログラムです。 例えば、すべてのERC-20トークンは、スマートコントラクトとして実装できます。
 
 </ExpandableCard>
 

@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### 硬體 {#hardware}
 
-然而，抗審查的去中心化網路不應依賴雲端提供者。 因而，在自己的本機硬體上運行自己的節點對生態系統來說更健全。 [預估](https://www.ethernodes.org/networkType/Hosting)顯示大部分節點在雲端上運行，這可能造成單點故障。
+然而，抗審查的去中心化網路不應依賴雲端提供者。 因而，在自己的本機硬體上運行自己的節點對生態系統來說更健全。 [預估](https://www.ethernodes.org/network-types)顯示大部分節點在雲端上運行，這可能造成單點故障。
 
 以太坊用戶端可以在自己的電腦、筆記型電腦、伺服器，或甚至是單板電腦上運行。 當在你的個人電腦上運行用戶端成為可能時，弄台專門運行節點的機器可以大幅提高效能和安全性，同時將最大程度上減小對你主要電腦的影響。
 
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/get-started/running-node/)。
 
 執行用戶端會啟用它的核心功能、選擇端點並開始尋找對等用戶端。 成功發現對等用戶端後，用戶端開始同步。 執行用戶端會等待來自共識用戶端的連接。 在用戶端成功與目前狀態同步以後，目前的區塊鏈資料就可以使用。
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### 運行 Prysm
 
-Prysm 有可以輕鬆自動安裝的腳本。 詳情請見 [Prysm 文檔](https://docs.prylabs.network/docs/install/install-with-script)。
+Prysm 有可以輕鬆自動安裝的腳本。 詳情請見 [Prysm 文檔](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)。
 
 ```sh
 ./prysm.sh beacon-chain \

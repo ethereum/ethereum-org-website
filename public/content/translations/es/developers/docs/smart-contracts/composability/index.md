@@ -29,7 +29,7 @@ Los contratos inteligentes de Ethereum son como API públicas, por lo que cualqu
 
 ### Ciclo de desarrollo más corto {#shorter-development-cycle}
 
-La componibilidad reduce el trabajo que los desarrolladores tienen que hacer al crear [dapps](/dapps/#what-are-dapps). [Como indica Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Código abierto significa que cada problema tiene que resolverse una vez."
+La componibilidad reduce el trabajo que los desarrolladores tienen que hacer al crear [dapps](/apps/#what-are-dapps). [Como indica Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Código abierto significa que cada problema tiene que resolverse una vez."
 
 Si hay un contrato inteligente que resuelve un problema, otros desarrolladores pueden reutilizarlo, por lo que no tienen que resolver el mismo problema. De esta manera, los desarrolladores pueden usar las bibliotecas de software ya existentes y añadir funcionalidad adicional para crear nuevas dapps.
 

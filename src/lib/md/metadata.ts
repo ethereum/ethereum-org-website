@@ -21,6 +21,9 @@ export const getMdMetadata = async ({
   })
 
   const title = frontmatter.metaTitle ?? frontmatter.title
+  const pageTitle = title.includes("ethereum.org")
+    ? title
+    : `${title} | ethereum.org`
   const description = frontmatter.description
   const image = frontmatter.image
   const author = frontmatter.author
@@ -28,7 +31,7 @@ export const getMdMetadata = async ({
   return await getMetadata({
     locale,
     slug: slugArray,
-    title,
+    title: pageTitle,
     description,
     image,
     author,

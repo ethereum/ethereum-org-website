@@ -148,6 +148,6 @@ From facilitating rapid disaster relief to empowering global workers, Ethereum p
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Time to get your own Ethereum account.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Get started
+    Get started!
   </ButtonLink>
 </InfoBanner>

@@ -28,7 +28,7 @@ const EventCard: React.FC<EventCardProps> = ({
   const locale = useLocale()
   const { t } = useTranslation("page-community")
 
-  const formatedDate = new Intl.DateTimeFormat(locale, {
+  const formattedDate = new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "short",
   }).formatRange(
@@ -41,7 +41,7 @@ const EventCard: React.FC<EventCardProps> = ({
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
         <CalendarDays className="me-2 size-6 text-2xl text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
-          {formatedDate}
+          {formattedDate}
         </span>
       </CardHeader>
       <div className="flex items-center justify-center">
@@ -52,7 +52,7 @@ const EventCard: React.FC<EventCardProps> = ({
             className="max-h-[224px] w-full object-cover xl:h-[124px]"
           />
         ) : (
-          <Image src={EventFallback} alt="" />
+          <Image src={EventFallback} alt="" sizes="276px" />
         )}
       </div>
       <CardContent className="flex-grow p-4">

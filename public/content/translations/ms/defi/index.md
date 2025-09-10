@@ -47,7 +47,7 @@ Salah satu cara terbaik untuk melihat potensi DeFi ialah memahami masalah yang w
 | Pasaran sentiasa terbuka.                                                                                | Pasaran ditutup kerana pekerja memerlukan rehat.                                                                                                    |
 | Ia dibina atas ketelusan – sesiapa sahaja boleh melihat data produk dan memeriksa cara sistem berfungsi. | Institusi kewangan adalah buku tertutup: anda tidak boleh meminta untuk melihat sejarah pinjaman mereka, rekod aset terurus mereka, dan sebagainya. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Teroka apl DeFi
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Ini kedengaran aneh... "mengapa saya mahu memprogramkan wang saya"? Walau bagaim
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Terokai cadangan kami untuk aplikasi DeFi untuk dicuba jika anda baru menggunakan Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Teroka apl DeFi
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Terdapat alternatif teragih kepada kebanyakan perkhidmatan kewangan. Tetapi Ethe
 
 Sebagai blok rantai, Ethereum direka untuk menghantar transaksi dengan cara yang selamat dan global. Seperti Bitcoin, Ethereum menjadikan penghantaran wang ke seluruh dunia semudah menghantar e-mel. Hanya masukkan [nama ENS](/glossary/#ens) penerima anda (seperti bob.eth) atau alamat akaun mereka daripada dompet anda dan bayaran anda akan dihantar terus kepada mereka dalam beberapa minit (biasanya). Untuk menghantar atau menerima pembayaran, anda memerlukan [dompet](/wallet/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps pembayaran
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Meminjam wang daripada pembekal teragih datang dalam dua jenis utama.
 - Rakan setara, bermakna peminjam akan meminjam terus daripada pemberi pinjaman tertentu.
 - Berasaskan kumpulan di mana pemberi pinjaman menyediakan dana (kecairan) kepada kumpulan yang boleh dipinjam oleh peminjam.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps pinjaman
 </ButtonLink>
 
@@ -139,7 +139,7 @@ Ini membolehkan anda meminjam wang tanpa semakan kredit atau menyerahkan makluma
 
 #### Akses kepada dana global {#access-global-funds}
 
-Apabila anda menggunakan pemberi pinjaman teragih, anda mempunyai akses kepada dana yang didepositkan dari seluruh dunia, bukan hanya dana dalam jagaan bank atau institusi pilihan anda. Ini menjadikan pinjaman lebih mudah diakses dan manjadikan kadar faedah lebih baik.
+Apabila anda menggunakan pemberi pinjaman teragih, anda mempunyai akses kepada dana yang didepositkan dari seluruh dunia, bukan hanya dana dalam jagaan bank atau institusi pilihan anda. Ini menjadikan pinjaman lebih mudah diakses dan menjadikan kadar faedah lebih baik.
 
 #### Kecekapan cukai {#tax-efficiencies}
 
@@ -185,7 +185,7 @@ Anda boleh memperoleh faedah ke atas kripto anda dengan meminjamkannya dan melih
 - aDai anda akan meningkat berdasarkan kadar faedah dan anda boleh melihat baki anda berkembang dalam dompet anda. Bergantung pada [APR](/glossary/#apr), baki dompet anda akan membaca kira-kira 100.1234 selepas beberapa hari atau jam!
 - Anda boleh mengeluarkan jumlah Dai biasa yang sama dengan baki aDai anda pada bila-bila masa.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat pinjaman dapps
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Terdapat beribu-ribu token di Ethereum. Bursa teragihi (DEX) membolehkan anda be
 
 Contohnya, jika anda ingin menggunakan loteri tanpa kerugian PoolTogether (diterangkan di atas), anda memerlukan token seperti Dai atau USDC. DEX ini membolehkan anda menukar ETH anda dengan token tersebut dan kembali semula apabila anda selesai.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat bursa token
 </ButtonLink>
 
@@ -225,7 +225,7 @@ Terdapat pilihan yang lebih maju untuk pedagang yang sukakan lebih kawalan. Had 
 
 Apabila anda menggunakan pertukaran terpusat, anda perlu mendepositkan aset anda sebelum perdagangan dan mempercayai mereka untuk menjaganya. Walaupun aset anda didepositkan, ia berisiko kerana pertukaran terpusat adalah sasaran yang menarik untuk penggodam.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps perdagangan
 </ButtonLink>
 
@@ -237,7 +237,7 @@ Terdapat produk pengurusan dana di Ethereum yang akan cuba mengembangkan portfol
 
 Contoh yang baik ialah [dana DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ini ialah dana yang mengimbangi semula secara automatik untuk memastikan portfolio anda sentiasa termasuk token DeFi teratas mengikut permodalan pasaran. Anda tidak perlu mengurus sebarang butiran dan anda boleh mengeluarkan dana pada bila-bila masa yang anda suka.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps pelaburan
 </ButtonLink>
 
@@ -245,13 +245,13 @@ Contoh yang baik ialah [dana DeFi Pulse Index (DPI)](https://defipulse.com/blog/
 
 ### Biayai idea anda {#crowdfunding}
 
-Ethereum ialah platform yang cermerlang untuk pendanaan awam:
+Ethereum ialah platform yang cemerlang untuk pendanaan awam:
 
 - Pembiaya yang berpotensi boleh datang dari mana-mana sahaja – Ethereum dan tokennya terbuka kepada sesiapa sahaja, di mana-mana sahaja di dunia.
 - Ia telus supaya pengumpul dana dapat membuktikan jumlah wang yang telah dikumpulkan. Anda juga boleh menjejaki cara dana dibelanjakan kemudiannya.
 - Pengumpul dana boleh menyediakan bayaran balik automatik jika, sebagai contoh, terdapat tarikh akhir tertentu dan jumlah minimum yang tidak dipenuhi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps pendanaan awam
 </ButtonLink>
 
@@ -280,7 +280,7 @@ Insurans teragih bertujuan untuk menjadikan insurans lebih murah, lebih cepat un
 
 Produk Ethereum, seperti mana-mana perisian, boleh mengalami pepijat dan eksploitasi. Jadi sekarang ini banyak produk insurans dalam ruang menumpukan pada melindungi pengguna mereka daripada kehilangan dana. Walau bagaimanapun, terdapat projek yang mula membina liputan untuk semua yang boleh dilemparkan oleh kehidupan kepada kita. Contoh yang baik tentang ini ialah perlindungan Tanaman Etherisc yang bertujuan untuk [melindungi petani kecil di Kenya daripada kemarau dan banjir](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Insurans teragih boleh menyediakan perlindungan yang lebih murah untuk petani yang selalunya diberikan harga berdasarkan insurans tradisional.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps insurans
 </ButtonLink>
 
@@ -290,7 +290,7 @@ Produk Ethereum, seperti mana-mana perisian, boleh mengalami pepijat dan eksploi
 
 Dengan begitu banyak perkara yang berlaku, anda memerlukan cara untuk menjejaki semua pelaburan, pinjaman dan perdagangan anda. Terdapat pelbagai produk yang membolehkan anda menyelaraskan semua aktiviti DeFi anda dari satu tempat. Inilah keindahan seni bina terbuka DeFi. Pasukan boleh membina antara muka di mana anda bukan sahaja boleh melihat baki anda merentas produk, anda juga boleh menggunakan ciri mereka. Anda mungkin mendapati ini berguna semasa anda meneroka lebih banyak tentang DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Lihat dapps portfolio
 </ButtonLink>
 
@@ -322,7 +322,7 @@ Anda boleh memikirkan DeFi dalam lapisan:
 1. Blok rantai – Ethereum mengandungi sejarah transaksi dan keadaan akaun.
 2. Aset – [ETH](/eth/) dan token lain (mata wang).
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan kefungsian, contohnya, perkhidmatan yang membenarkan peminjaman aset teragih.
-4. [Aplikasi](/dapps/) – produk yang kami gunakan untuk mengurus dan mengakses protokol.
+4. [Aplikasi](/apps/) – produk yang kami gunakan untuk mengurus dan mengakses protokol.
 
 Nota: kebanyakan DeFi menggunakan [standard ERC-20](/glossary/#erc-20). Aplikasi dalam DeFi menggunakan pelindung untuk ETH yang dipanggil Ether Terlindung (WETH). [Ketahui lebih lanjut tentang eter yang dibalut](/wrapped-eth).
 

@@ -384,7 +384,7 @@ const GasPage = ({
             }
           >
             <div>
-              <ButtonLink href="/dapps/">
+              <ButtonLink href="/apps/">
                 {t("page-community:page-community-explore-dapps")}
               </ButtonLink>
             </div>

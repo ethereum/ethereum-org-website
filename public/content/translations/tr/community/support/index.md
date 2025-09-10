@@ -20,7 +20,7 @@ Ethereum'un merkeziyetsiz yapısını anlamak çok önemlidir çünkü Ethereum 
   Ethereum'un temellerini öğrenin
 </DocLink>
 
-Resmi desteğin olmamasına rağmen, Ethereum ekosistemindeki birçok grup, topluluk ve proje yardımcı olmaktan mutluluk duyar ve bu sayfada birçok faydalı bilgi ve kaynak bulabilirsiniz. Başka sorularınız mı var? [ethereum.org Discord](/discord/)'una katılın, yardım etmeye çalışacağız.
+Resmi desteğin olmamasına rağmen, Ethereum ekosistemindeki birçok grup, topluluk ve proje yardımcı olmaktan mutluluk duyar ve bu sayfada birçok faydalı bilgi ve kaynak bulabilirsiniz. Başka sorularınız mı var? [ethereum.org Discord](https://discord.gg/ethereum-org)'una katılın, yardım etmeye çalışacağız.
 
 ## Sıkça sorulan sorular {#faq}
 
@@ -61,7 +61,6 @@ Geliştirme zor olabilir. İşte size yardımcı olmaktan mutluluk duyan deneyim
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs Discord'u](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

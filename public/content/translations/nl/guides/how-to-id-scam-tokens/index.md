@@ -19,7 +19,7 @@ Om te illustreren wat scam-tokens zijn en hoe je ze kunt herkennen, gaan we kijk
 title="Wat is ARB?"
 contentPreview=''>
 
-Arbitrum is een organisatie die <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a> ontwikkelt en beheert. In eerste instantie werd Arbitrum georganiseerd als een bedrijf met winstoogmerk, maar daarna nam het stappen om te decentraliseren. Als onderdeel van dat proces gaven ze een verhandelbaar <a href="/dao/#token-based-membership">bestuurstoken</a> uit.
+Arbitrum is een organisatie die [optimistic rollups](/developers/docs/scaling/optimistic-rollups/) ontwikkelt en beheert. In eerste instantie werd Arbitrum georganiseerd als een bedrijf met winstoogmerk, maar daarna nam het stappen om te decentraliseren. Als onderdeel van dat proces gaven ze een verhandelbaar [bestuurstoken](/dao/#token-based-membership) uit.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Het hele punt van Ethereum is decentralisatie. Dit betekent dat er geen centrale
 title="Wat zijn smart contracts?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Slimme contracten</a> zijn de programma's die boven op de Ethereum-blockchain draaien. Elk ERC-20 token is bijvoorbeeld geïmplementeerd als een slim contract.
+[Slimme contracten](/developers/docs/smart-contracts/) zijn de programma's die boven op de Ethereum-blockchain draaien. Elk ERC-20 token is bijvoorbeeld geïmplementeerd als een slim contract.
 
 </ExpandableCard>
 

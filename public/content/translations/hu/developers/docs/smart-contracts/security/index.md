@@ -8,7 +8,7 @@ Az okosszerződések rendkívüli módon rugalmasak és képesek nagy mennyiség
 
 A nyilvános blokkláncok, mint az Ethereum, tovább bonyolítják az okosszerződések biztosításának problémáját. A telepített szerződéskód _általában_ nem módosítható, hogy ezzel a biztonsági kockázatokat elkerüljék, eközben az okosszerződésekből ellopott eszközöket rendkívül nehéz lekövetni és a legtöbb esetben visszaszerezhetetlenek a megváltoztathatatlanság miatt.
 
-Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az okosszerződésből ellopott vagy onnan elvesztett értékek teljes összege könnyen meghaladhatja az 1 milliárd dollárt is. Ez magába foglal olyan nagy horderejű incidenseket is, mint amilyen a [DAO-hackelés volt](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millió ETH-t loptak, ami meghaladja az 1 milliárd dollárt mai áron), [Parity több aláírásos tárca hackelését](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 millió USD-t veszett el), és a [Parity befagyasztott tárcaproblémát](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 millió USD-nyi ETH örökre elérhetetlenné vált).
+Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az okosszerződésből ellopott vagy onnan elvesztett értékek teljes összege könnyen meghaladhatja az 1 milliárd dollárt is. Ez magába foglal olyan nagy horderejű incidenseket is, mint amilyen a [DAO-hackelés volt](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millió ETH-t loptak, ami meghaladja az 1 milliárd dollárt mai áron), [Parity több aláírásos tárca hackelését](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (30 millió USD-t veszett el), és a [Parity befagyasztott tárcaproblémát](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 millió USD-nyi ETH örökre elérhetetlenné vált).
 
 Ezek az esetek kötelezővé teszik a fejlesztők számára, hogy folyamatosan azon dolgozzanak, hogy az okosszerződések biztonságosak, robusztusak és ellenállók legyenek. Az okosszerződésbiztonság komoly téma, melyet minden fejlesztőnek a maga érdekében meg kell ismerni. Ez az útmutató lefedi azokat a biztonsági megfontolásokat, amelyek az Ethereum-fejlesztőknek fontosak, és forrásokat tár fel az okosszerződésbiztonság továbbfejlesztésére.
 
@@ -223,7 +223,7 @@ Többet megtudhat a [biztonságos kormányzási rendszerek tervezéséről](http
 
 A hagyományos szoftverfejlesztők elve az, hogy a lehető legegyszerűbb legyen a kód (KISS-elv), és így nem vezetnek be fölösleges bonyolításokat a tervben. Ennek alapja az az elgondolás, hogy az „összetett rendszerek összetett módokon vallhatnak kudarcot”, és sokkal hajlamosabbak a költséges hibákra.
 
-A minél egyszerűbb megközelítés kiemelten fontos az okosszerződések írásánál is, mivel ezek nagy értékeket is kontrollálhatnak. Ennek eléréséhez érdemes létező könyvtárakat használni, mint amilyen az [OpenZeppelin szerződések](https://docs.openzeppelin.com/contracts/4.x/), amikor ez lehetséges. Mivel ezeket a könyvtárakat a fejlesztők már alaposan tesztelték, auditálták, így kisebb a hiba valószínűsége, mintha a nulláról kell megírni egy új funkcionalitást.
+A minél egyszerűbb megközelítés kiemelten fontos az okosszerződések írásánál is, mivel ezek nagy értékeket is kontrollálhatnak. Ennek eléréséhez érdemes létező könyvtárakat használni, mint amilyen az [OpenZeppelin szerződések](https://docs.openzeppelin.com/contracts/5.x/), amikor ez lehetséges. Mivel ezeket a könyvtárakat a fejlesztők már alaposan tesztelték, auditálták, így kisebb a hiba valószínűsége, mintha a nulláról kell megírni egy új funkcionalitást.
 
 Másik követendő tanács az, hogy rövid függvényeket kell írni és a szerződést modulárisan kell felállítani, az üzleti logikát több szerződés között felosztva. Az egyszerű kódok írása kevesebb teret ad a támadásra, emellett a teljes rendszer helyességét is jobban lehet igazolni, és a lehetséges tervezési hibák is korán kiderülhetnek.
 
@@ -304,7 +304,7 @@ Ebben még nincs semmi rossz, viszont a `attacker` (támadó) szerződésben van
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/understanding-the-dao-attack) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
+Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
 
 ##### Hogyan lehet megakadályozni egy újrabelépéses támadást
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Továbbá a [„fizetéskérés”](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) rendszere is használható, amelynél a felhasználó vesz ki pénzt az okosszerződésből ahelyett, hogy a szerződés „fizetésküldést” végezne a számlák felé. Így nem lehet véletlenül elindítani egy kódot ismeretlen címeken (és bizonyos szolgálatmegtagadási támadásokat is ki tud védeni).
+Továbbá a [„fizetéskérés”](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) rendszere is használható, amelynél a felhasználó vesz ki pénzt az okosszerződésből ahelyett, hogy a szerződés „fizetésküldést” végezne a számlák felé. Így nem lehet véletlenül elindítani egy kódot ismeretlen címeken (és bizonyos szolgálatmegtagadási támadásokat is ki tud védeni).
 
 #### Egész szám túlfolyása lefelé vagy felfelé {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 ### Eszközök az okosszerződések felügyeletére {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _Egy eszköz az okosszerződés automatikus felügyeletére, valamint az eseményekre, függvényekre és tranzakcióparaméterekre való válaszadásra._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** – _Egy eszköz, amellyel valós idejű értesítést kaphat, amikor az okosszerződésén vagy tárcáján szokatlan vagy váratlan események történnek._
 
 ### Eszközök az okosszerződések biztonságos adminisztrálásához {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _Interfész az okosszerződések adminisztrációjának kezeléséhez, beleértve a hozzáférés-kezelést, frissítéseket és leállítást is._
-
 - **[Safe](https://safe.global/)** – _Egy okosszerződéses tárca az Ethereumon, amelynél adott számú embernek jóvá kell hagynia a tranzakciót, mielőtt az megtörténhetne (N számú tagból M-nek)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** – _Szerződéskönyvtárak az adminisztrációs jellemzők bevezetésére, beleértve a szerződés tulajdonlását, frissítéseket, hozzáférés-kezelést, irányítást, leállíthatóság és még sok mást._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** – _Szerződéskönyvtárak az adminisztrációs jellemzők bevezetésére, beleértve a szerződés tulajdonlását, frissítéseket, hozzáférés-kezelést, irányítást, leállíthatóság és még sok mást._
 
 ### Okosszerződés auditálására kínált szolgáltatások {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Hacken](https://hacken.io)** – _Web3 kiberbiztonsági auditor, amely 360 fokos megközelítést alkalmaz a blokkláncbiztonságban._
 
-- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
+- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
 
 - **[HashEx](https://hashex.org/)** – _A HashEx a blokkláncok és okosszerződések auditálásra szakosodott a kriptovaluták biztonságának biztosítása céljából, illetve olyan szolgáltatásokat nyújt, mint az okosszerződés-fejlesztés, sérülékenység-vizsgálat, blokklánctanácsadás._
 
@@ -515,7 +511,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3 biztonsági erőmű, elősegíti kriptobiztonságot termékeken és okosszerződés-ellenőrzési szolgáltatásokon keresztül._
 
-- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
 
 - **[Oxorio](https://oxor.io/)** - _Okosszerződés-auditok és blokkláncbiztonsági szolgáltatások, szakértelem az EVM, Solidity, ZK, kriptocégek láncok közötti technológiái és DeFi projektek területén._
 
@@ -535,7 +531,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 ### Publikációk az okosszerződések ismert sebezhetőségeiről és azok kihasználásáról {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[Consensys: az okosszerződéseket ért ismert támadások](https://consensys.github.io/smart-contract-best-practices/attacks/)** – _Egyszerűen megfogalmazott magyarázat a legkomolyabb sérülékenységekről a szerződésekben, a legtöbb esetben mintakódokkal együtt._
+- **[Consensys: az okosszerződéseket ért ismert támadások](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** – _Egyszerűen megfogalmazott magyarázat a legkomolyabb sérülékenységekről a szerződésekben, a legtöbb esetben mintakódokkal együtt._
 
 - **[SWC Registry](https://swcregistry.io/)** – _A Közös gyengeségek felsorolásának (CWE) gondozott listája, amelyen az Ethereum okosszerződésekre vonatkozó tételek szerepelnek._
 

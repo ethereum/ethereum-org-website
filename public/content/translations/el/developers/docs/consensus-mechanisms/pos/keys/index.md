@@ -56,7 +56,7 @@ lang: el
 
 ![σχήμα κλειδιού επικυρωτή](validator-key-schematic.png)
 
-**Σημείωση**: Η έξοδος από τα καθήκοντα δέσμευσης κεφαλαίου και η απόσυρση του υπολοίπου ενός επικυρωτή προϋποθέτει προς το παρόν την υπογραφή ενός [μηνύματος εθελοντικής εξόδου (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) με το κλειδί επικύρωσης. Ωστόσο, το [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) είναι μια πρόταση που θα επιτρέψει σε έναν χρήστη να ενεργοποιήσει την έξοδο ενός εργαλείου επικύρωσης και να αποσύρει το υπόλοιπό του υπογράφοντας μηνύματα εξόδου με το κλειδί ανάληψης στο μέλλον. Αυτό θα μειώσει τις υποθέσεις εμπιστοσύνης επιτρέποντας στους συμμετέχοντες που εκχωρούν ETH στους [παρόχους δέσμευσης κεφαλαίου ως υπηρεσία](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) να διατηρήσουν τον έλεγχο των κεφαλαίων τους.
+**Σημείωση**: Η έξοδος από τα καθήκοντα δέσμευσης κεφαλαίου και η απόσυρση του υπολοίπου ενός επικυρωτή προϋποθέτει προς το παρόν την υπογραφή ενός [μηνύματος εθελοντικής εξόδου (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) με το κλειδί επικύρωσης. Ωστόσο, το [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) είναι μια πρόταση που θα επιτρέψει σε έναν χρήστη να ενεργοποιήσει την έξοδο ενός εργαλείου επικύρωσης και να αποσύρει το υπόλοιπό του υπογράφοντας μηνύματα εξόδου με το κλειδί ανάληψης στο μέλλον. Αυτό θα μειώσει τις υποθέσεις εμπιστοσύνης επιτρέποντας στους συμμετέχοντες που εκχωρούν ETH στους [παρόχους δέσμευσης κεφαλαίου ως υπηρεσία](/staking/saas/#what-is-staking-as-a-service) να διατηρήσουν τον έλεγχο των κεφαλαίων τους.
 
 ## Παράγωγη Κλειδιών από Μυστική Φράση {#deriving-keys-from-seed}
 
@@ -96,5 +96,5 @@ master_key / purpose / coin_type / account / change / address_index
 
 - [Άρθρο του Ethereum Foundation από τον Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Δημιουργία κλειδιού EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
-- [EIP-7002: Execution Layer Triggered Exits](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [EIP-7002: Execution Layer Triggered Exits](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
 - [Διαχείριση κλειδιών στην κλιμάκωση](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

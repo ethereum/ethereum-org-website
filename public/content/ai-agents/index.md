@@ -1,7 +1,7 @@
 ---
 title: AI agents
-metaTitle: AI agents | AI agents on ethereum
-description: An overview of AI agents on ethereum
+metaTitle: AI agents | AI agents on Ethereum
+description: An overview of AI agents on Ethereum
 lang: en
 template: use-cases
 emoji: ":robot:"

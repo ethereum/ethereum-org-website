@@ -53,7 +53,7 @@ Both options have different advantages summed up above. If you are looking for a
 
 #### Hardware {#hardware}
 
-However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/networkType/Hosting) show a large share of nodes run on the cloud, which could become a single point of failure.
+However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/network-types) show a large share of nodes run on the cloud, which could become a single point of failure.
 
 Ethereum clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
@@ -129,6 +129,7 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 Below are a few projects which can help you install and control clients just with a few clicks:
 
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Quickest and easiest way to setup a full node. One-liner setup tool and node management TUI. Free. Open source. Public goods for Ethereum by solo stakers. ARM64 and AMD64 support.
 - [eth-docker](https://eth-docker.net/) - Automated setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
@@ -297,7 +298,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind docs offer a [complete guide](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
+Nethermind docs offer a [complete guide](https://docs.nethermind.io/get-started/running-node/) on running Nethermind with consensus client.
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
@@ -367,7 +368,7 @@ nimbus_beacon_node \
 
 ##### Running Prysm
 
-Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -467,8 +468,9 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 ## Further reading {#further-reading}
 
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
-- [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
+- [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated often_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
+- [Sample AWS Blockchain Node Runner app for Ethereum Nodes](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, updated often_
 - [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _July 2022_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_

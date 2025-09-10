@@ -5,12 +5,12 @@ import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
-import ArgentImage from "@/public/images/wallets/argent.png"
 import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
+import BurnerImage from "@/public/images/wallets/burner.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import Coin98Image from "@/public/images/wallets/coin98.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
@@ -25,7 +25,6 @@ import FrameImage from "@/public/images/wallets/frame.png"
 import GemWalletImage from "@/public/images/wallets/gemwallet.png"
 import GridPlusImage from "@/public/images/wallets/gridplus.png"
 import imTokenImage from "@/public/images/wallets/imtoken.png"
-import InfinityWalletImage from "@/public/images/wallets/infinity_wallet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
 import LoopringImage from "@/public/images/wallets/loopring.png"
@@ -36,6 +35,7 @@ import PhantomImage from "@/public/images/wallets/phantom.png"
 import PillarImage from "@/public/images/wallets/pillar.png"
 import RabbyWalletImage from "@/public/images/wallets/rabbywallet.png"
 import RainbowImage from "@/public/images/wallets/rainbow.png"
+import ReadyImage from "@/public/images/wallets/ready.png"
 import SafeImage from "@/public/images/wallets/safe.png"
 import ShapeShiftImage from "@/public/images/wallets/shapeshift.png"
 import TahoImage from "@/public/images/wallets/taho.png"
@@ -149,15 +149,15 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-03-07",
-    name: "Argent",
-    image: ArgentImage,
+    last_updated: "2025-07-15",
+    name: "Ready Wallet",
+    image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
-    url: "https://www.argent.xyz/",
+    url: "https://www.ready.co/",
     active_development_team: true,
     languages_supported: ["en"],
-    twitter: "https://twitter.com/argenthq",
+    twitter: "https://x.com/ready_co",
     discord: "https://discord.com/invite/GWSyrHg",
     reddit: "",
     telegram: "",
@@ -169,12 +169,12 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/argentlabs/argent-x",
+    open_source: false,
+    repo_url: "",
     non_custodial: true,
     security_audit: [
       "https://github.com/argentlabs/argent-contracts/tree/develop/audit",
-      "https://www.argent.xyz/argent-bug-bounty/",
+      "https://www.ready.co/ready-bug-bounty",
     ],
     scam_protection: true,
     hardware_support: true,
@@ -191,8 +191,8 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
-    onboard_documentation: "https://www.argent.xyz/learn/",
-    documentation: "",
+    onboard_documentation: "https://www.ready.co/learn",
+    documentation: "https://docs.ready.co/",
     supported_chains: ["Starknet"],
   },
   {
@@ -541,7 +541,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-30",
+    last_updated: "2025-07-16",
     name: "Ambire",
     image: AmbireImage,
     twBackgroundColor: "bg-[#aa6aff]",
@@ -553,21 +553,21 @@ export const walletsData: WalletData[] = [
     discord: "https://discord.com/invite/ambire",
     reddit: "",
     telegram: "https://t.me/AmbireOfficial",
-    ios: true,
-    android: true,
+    ios: false,
+    android: false,
     linux: false,
     windows: false,
     macOS: false,
     firefox: false,
-    chromium: false,
+    chromium: true,
     hardware: false,
     open_source: true,
-    repo_url: "https://github.com/ambireTech/wallet",
+    repo_url: "https://github.com/AmbireTech/extension",
     non_custodial: true,
     security_audit: ["https://github.com/ambireTech/wallet#audits"],
     scam_protection: true,
     hardware_support: true,
-    rpc_importing: false,
+    rpc_importing: true,
     nft_support: true,
     connect_to_dapps: true,
     staking: true,
@@ -576,10 +576,10 @@ export const walletsData: WalletData[] = [
     gas_fee_customization: true,
     ens_support: true,
     erc_20_support: true,
-    buy_crypto: true,
-    withdraw_crypto: true,
-    multisig: true,
-    social_recovery: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
@@ -1327,56 +1327,6 @@ export const walletsData: WalletData[] = [
       "OP Mainnet",
       "Arbitrum One",
       "Starknet",
-    ],
-  },
-  {
-    last_updated: "2024-08-16",
-    name: "Infinity Wallet",
-    image: InfinityWalletImage,
-    twBackgroundColor: "bg-[#ffffff]",
-    twGradiantBrandColor: "from-[#ffffff]",
-    url: "https://infinitywallet.io/",
-    active_development_team: true,
-    languages_supported: ["en", "es"],
-    twitter: "https://twitter.com/InfinityWallet",
-    discord: "https://discordapp.com/invite/SgNjKzF",
-    reddit: "",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: true,
-    windows: true,
-    macOS: true,
-    firefox: false,
-    chromium: false,
-    hardware: false,
-    open_source: false,
-    repo_url: "",
-    non_custodial: true,
-    security_audit: [""],
-    scam_protection: true,
-    hardware_support: false,
-    rpc_importing: false,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: true,
-    multichain: true,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: true,
-    withdraw_crypto: true,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation: "",
-    documentation: "https://docs.infinitywallet.io/",
-    supported_chains: [
-      "Ethereum Mainnet",
-      "Arbitrum One",
-      "OP Mainnet",
-      "Base",
     ],
   },
   {
@@ -2534,6 +2484,52 @@ export const walletsData: WalletData[] = [
       "World Chain",
       "Arbitrum One",
     ],
+  },
+  {
+    last_updated: "2025-05-19",
+    name: "Burner",
+    image: BurnerImage,
+    twBackgroundColor: "bg-[#ffffff]",
+    twGradiantBrandColor: "from-[#ffffff]",
+    url: "https://www.burner.pro/eth",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/useburner",
+    discord: "",
+    reddit: "https://www.reddit.com/r/BurnerWallet/",
+    telegram: "https://t.me/useburner",
+    ios: true,
+    android: true,
+    linux: true,
+    windows: true,
+    macOS: true,
+    firefox: true,
+    chromium: true,
+    hardware: true,
+    open_source: false,
+    repo_url: "https://github.com/arx-research",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: false,
+    ens_support: true,
+    erc_20_support: false,
+    buy_crypto: true,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation:
+      "https://help.burner.pro/en/collections/10242509-getting-started",
+    documentation: "https://help.burner.pro/en",
+    supported_chains: ["Ethereum Mainnet", "Base"],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 

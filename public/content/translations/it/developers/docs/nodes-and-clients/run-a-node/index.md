@@ -52,7 +52,7 @@ Le due opzioni presentano vantaggi differenti, sopra riassunti. Se cerchi una so
 
 #### Hardware {#hardware}
 
-Tuttavia, una rete decentralizzata e resistente alla censura non dovrebbe affidarsi ai fornitori cloud. Invece, eseguire il tuo nodo sul tuo hardware locale è più sano per l'ecosistema. Le [stime](https://www.ethernodes.org/networkType/Hosting) mostrano una grande quantità di nodi eseguiti sul cloud, che potrebbero diventare un punto di errore unico.
+Tuttavia, una rete decentralizzata e resistente alla censura non dovrebbe affidarsi ai fornitori cloud. Invece, eseguire il tuo nodo sul tuo hardware locale è più sano per l'ecosistema. Le [stime](https://www.ethernodes.org/network-types) mostrano una grande quantità di nodi eseguiti sul cloud, che potrebbero diventare un punto di errore unico.
 
 I client di Ethereum possono essere eseguiti sul tuo computer, laptop, server, o persino su un computer a scheda singola. Benché eseguire i client sul tuo computer fisso sia possibile, avere una macchina dedicata solo per il tuo nodo può migliorarne significativamente le prestazioni e la sicurezza, minimizzando l'impatto sul tuo computer principale.
 
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-La documentazione di Nethermind offre una [guida completa](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) all'esecuzione di Nethermind con il client di consenso.
+La documentazione di Nethermind offre una [guida completa](https://docs.nethermind.io/get-started/running-node/) all'esecuzione di Nethermind con il client di consenso.
 
 Il client di esecuzione avvierà le sue funzioni principali, gli endpoint scelti e inizierà a cercare i pari. Dopo aver scoperto correttamente i pari, il client avvia la sincronizzazione. Il client di esecuzione attenderà una connessione dal client di consenso. I dati correnti della blockchain saranno disponibili una volta che il client è sincronizzato correttamente allo stato corrente.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Eseguire Prysm
 
-Prysm è dotato di uno script che consente una facile installazione automatica. I dettagli sono riportati nella [documentazione di Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm è dotato di uno script che consente una facile installazione automatica. I dettagli sono riportati nella [documentazione di Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \

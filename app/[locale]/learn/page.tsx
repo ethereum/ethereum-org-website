@@ -415,7 +415,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     <CardImage>
                       <ImageHeight200 src={developersEthBlocks} alt="" />
                     </CardImage>
-                    <ButtonLink href="/dapps/">
+                    <ButtonLink href="/what-are-apps/">
                       {t("dapp-card-button")}
                     </ButtonLink>
                   </>
@@ -690,6 +690,15 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                       {t("bankless-title")}
                     </InlineLink>{" "}
                     <i>{t("bankless-description")}</i>
+                  </ListItem>
+                </UnorderedList>
+                <H3>{t("about-ethereum-video-series")}</H3>
+                <UnorderedList>
+                  <ListItem>
+                    <InlineLink href="https://www.youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5">
+                      {t("ethereum-basics-title")}
+                    </InlineLink>{" "}
+                    <i>{t("ethereum-basics-description")}</i>
                   </ListItem>
                 </UnorderedList>
               </Stack>

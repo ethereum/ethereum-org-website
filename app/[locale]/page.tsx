@@ -8,12 +8,10 @@ import type {
   CommunityBlog,
   ValuesPairing,
 } from "@/lib/types"
-import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
@@ -35,6 +33,7 @@ import Twitter from "@/components/icons/twitter.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
+import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
@@ -67,7 +66,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
-import CreateWalletContent from "@/data/CreateWallet"
 
 import {
   ATTESTANT_BLOG,
@@ -81,12 +79,8 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
-import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
-import { getActivity } from "./utils"
+import { getActivity, getUpcomingEvents } from "./utils"
 
-import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
-import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
-import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
@@ -163,6 +157,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
+
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
@@ -201,7 +196,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       label: t("page-index-cta-dapps-label"),
       description: t("page-index-cta-dapps-description"),
-      href: "/dapps/",
+      href: "/apps/",
       Svg: TryAppsIcon,
       className: cn(
         "text-accent-c hover:text-accent-c-hover",
@@ -341,28 +336,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       title: t("page-index-developers-code-example-title-0"),
       description: t("page-index-developers-code-example-description-0"),
       codeLanguage: "language-solidity",
-      code: SimpleWalletContent,
+      codeUrl: "/code-examples/SimpleWallet.sol",
       eventName: "bank",
     },
     {
       title: t("page-index-developers-code-example-title-1"),
       description: t("page-index-developers-code-example-description-1"),
       codeLanguage: "language-solidity",
-      code: SimpleTokenContent,
+      codeUrl: "/code-examples/SimpleToken.sol",
       eventName: "token",
     },
     {
       title: t("page-index-developers-code-example-title-2"),
       description: t("page-index-developers-code-example-description-2"),
       codeLanguage: "language-javascript",
-      code: CreateWalletContent,
+      codeUrl: "/code-examples/CreateWallet.js",
       eventName: "wallet",
     },
     {
       title: t("page-index-developers-code-example-title-3"),
       description: t("page-index-developers-code-example-description-3"),
       codeLanguage: "language-solidity",
-      code: SimpleDomainRegistryContent,
+      codeUrl: "/code-examples/SimpleDomainRegistry.sol",
       eventName: "dns",
     },
   ]
@@ -387,7 +382,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       Svg: Discord,
       label: "Discord",
-      href: "/discord/",
+      href: "https://discord.gg/ethereum-org",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index-join-action-discord-description"),
       eventName: "Discord",
@@ -402,18 +397,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const upcomingEvents = events
-    .filter((event) => {
-      const isValid = isValidDate(event.endDate)
-      const beginningOfEndDate = new Date(event.endDate).getTime()
-      const endOfEndDate = beginningOfEndDate + 24 * 60 * 60 * 1000
-      const isUpcoming = endOfEndDate >= new Date().getTime()
-      return isValid && isUpcoming
-    })
-    .sort(
-      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-    )
-    .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
+  const allUpcomingEvents = getUpcomingEvents(events, locale)
+  const upcomingEvents = allUpcomingEvents.slice(0, 3)
 
   const metricResults: AllHomepageActivityData = {
     ethPrice,
@@ -444,14 +429,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <BannerNotification shouldShow={locale === DEFAULT_LOCALE}>
-        <p>
-          10 years of Ethereum! -{" "}
-          <Link href="/10years/" className="text-white">
-            Join us to celebrate 10 years of Ethereum!
-          </Link>
-        </p>
-      </BannerNotification>
       <HomeHero heroImg={Hero} className="w-full" locale={locale} />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -649,14 +626,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </SectionContent>
 
           {/* dynamic / lazy loaded */}
-          <ValuesMarquee
-            pairings={valuesPairings}
-            eventCategory={eventCategory}
-            categoryLabels={{
-              ethereum: tCommon("ethereum"),
-              legacy: t("page-index-values-legacy"),
-            }}
-          />
+          <IntersectionObserverReveal rootMargin="-50% 0px 0px 0px">
+            <ValuesMarquee
+              pairings={valuesPairings}
+              eventCategory={eventCategory}
+              categoryLabels={{
+                ethereum: tCommon("ethereum"),
+                legacy: t("page-index-values-legacy"),
+              }}
+            />
+          </IntersectionObserverReveal>
         </Section>
 
         {/* Builders - Blockchain's biggest builder community */}
@@ -740,7 +719,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
               <div className="flex gap-3">
                 <ButtonLink
-                  href="/discord/"
+                  href="https://discord.gg/ethereum-org"
                   size="lg"
                   variant="outline"
                   isSecondary
@@ -825,13 +804,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </SectionContent>
         </Section>
 
-        <Section
-          id="10-year-anniversary"
-          className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
-        >
-          <TenYearHomeBanner locale={locale} />
-        </Section>
-
         {/* Recent posts */}
         <Section id="recent">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
@@ -906,9 +878,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           className="max-w-full object-cover object-center"
                         />
                       ) : (
-                        <Image src={EventFallback} alt="" />
+                        <Image src={EventFallback} alt="" sizes="276px" />
                       )}
-                      <Image src={EventFallback} alt="" />
+                      <Image src={EventFallback} alt="" sizes="276px" />
                     </CardBanner>
                     <CardContent>
                       <CardTitle>{title}</CardTitle>

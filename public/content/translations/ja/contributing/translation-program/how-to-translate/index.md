@@ -34,7 +34,7 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 ウェブサイトのコンテンツは、多数のドキュメントとコンテンツバケットに分割されています。 各ドキュメントの進捗状況は右側で確認できます。翻訳の進捗が100％未満の場合は、ぜひご協力ください!
 
-あなたの言語が表示されてない場合は、 [イシューを作成する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)か、[Discord](/discord/) で問い合わせてください。
+あなたの言語が表示されてない場合は、 [イシューを作成する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)か、[Discord](https://discord.gg/ethereum-org) で問い合わせてください。
 
 ![Crowdinにある翻訳されたファイルと未翻訳のファイル](./crowdin-files.png)
 
@@ -82,7 +82,7 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 ### お問い合わせ {#get-in-touch}
 
-何かご質問がある場合や、 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.orgのDiscordサーバー](/discord/)の#translationチャネルに投稿してください。
+何かご質問がある場合や、 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.orgのDiscordサーバー](https://discord.gg/ethereum-org)の#translationチャネルに投稿してください。
 
 または、translations@ethereum.orgまでご連絡ください
 
