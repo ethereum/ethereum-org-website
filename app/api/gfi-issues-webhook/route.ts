@@ -14,7 +14,6 @@ const LABELS_TO_EMOJI = {
 const GFI_LABEL = "good first issue"
 
 export async function POST(req: Request) {
-
   const { action, label, issue } = await req.json()
 
   if (action !== "labeled") {
