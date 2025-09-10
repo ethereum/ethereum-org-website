@@ -57,6 +57,7 @@ import {
   MAX_EMAIL_LENGTH,
   MAX_MESSAGE_LENGTH,
 } from "./constants"
+import EnterprisePageJsonLD from "./page-jsonld"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -238,43 +239,6 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
     },
   ]
 
-  // JSON-LD structured data for the enterprise page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/enterprise/`,
-    name: t("page-enterprise-hero-title"),
-    description: t("page-enterprise-metadata-description"),
-    url: `https://ethereum.org/${locale}/enterprise/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-enterprise-hero-breadcrumb"),
-          item: `https://ethereum.org/${locale}/enterprise/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
   const players: EcosystemPlayer[] = [
     { name: "Adidas", Logo: Adidas, className: "scale-105 origin-bottom" },
     { name: "Azure", Logo: Azure, className: "-translate-y-1" },
@@ -329,13 +293,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
   return (
     <>
-      <script
-        id="jsonld-webpage-enterprise"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
+      <EnterprisePageJsonLD locale={locale} />
       <div className="mb-12 space-y-12 md:mb-20 md:space-y-20">
         <HubHero
           header={t("page-enterprise-hero-title")}

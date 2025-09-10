@@ -43,6 +43,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import GetEthPageJsonLD from "./page-jsonld"
+
 import { routing } from "@/i18n/routing"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
@@ -149,75 +151,11 @@ export default async function Page({
       commitHistoryCache
     )
 
-  // JSON-LD structured data for the get-eth page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/get-eth/`,
-    name: t("page-get-eth-meta-title"),
-    description: t("page-get-eth-meta-desc"),
-    url: `https://ethereum.org/${locale}/get-eth/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-get-eth-meta-title"),
-          item: `https://ethereum.org/${locale}/get-eth/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the article content about getting ETH
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-get-eth-where-to-buy-title"),
-    description: t("page-get-eth-meta-desc"),
-    image: "https://ethereum.org/images/get-eth.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    dateModified: lastEditLocaleTimestamp,
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-get-eth"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-get-eth"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
+      <GetEthPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       />
 
       <MainArticle>

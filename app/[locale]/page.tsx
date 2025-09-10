@@ -79,6 +79,7 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
@@ -427,76 +428,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   })) as CommunityBlog[]
   blogLinks.push(...BLOGS_WITHOUT_FEED)
 
-  // JSON-LD structured data for the homepage
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/`,
-    name: t("page-index-meta-title"),
-    description: t("page-index-meta-description"),
-    url: `https://ethereum.org/${locale}/`,
-    inLanguage: locale,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for ethereum.org as an organization
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://ethereum.org",
-    name: "ethereum.org",
-    legalName: "Ethereum Foundation",
-    url: "https://ethereum.org",
-    logo: "https://ethereum.org/images/ethereum-logo.png",
-    description: t("page-index-meta-description"),
-    sameAs: [
-      "https://github.com/ethereum/ethereum-org-website",
-      "https://discord.gg/ethereum-org",
-      "https://x.com/EthDotOrg",
-    ],
-    mainEntityOfPage: `https://ethereum.org`,
-    foundingDate: "2014",
-    slogan:
-      "Ethereum is the community-run technology powering the cryptocurrency ether and thousands of decentralized applications",
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-homepage"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-organization"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationJsonLd),
-        }}
-      />
+      <IndexPageJsonLD locale={locale} />
 
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
         <HomeHero heroImg={Hero} className="w-full" locale={locale} />

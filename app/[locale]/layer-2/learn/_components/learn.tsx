@@ -12,6 +12,8 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
+import Layer2LearnPageJsonLD from "./page-jsonld"
+
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import Callout2Image from "@/public/images/layer-2/learn-hero.png"
@@ -95,81 +97,11 @@ const Layer2Learn = ({
     },
   ]
 
-  // JSON-LD structured data for the Layer 2 Learn page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/layer-2/learn/`,
-    name: t("page-layer-2-learn-meta-title"),
-    description: t("page-layer-2-learn-description"),
-    url: `https://ethereum.org/${locale}/layer-2/learn/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Layer 2",
-          item: `https://ethereum.org/${locale}/layer-2/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-layer-2-learn-meta-title"),
-          item: `https://ethereum.org/${locale}/layer-2/learn/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the article content about learning Layer 2
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-layer-2-learn-title"),
-    description: t("page-layer-2-learn-description"),
-    image: "https://ethereum.org/images/layer-2/learn-hero.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    dateModified: lastEditLocaleTimestamp,
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-layer2-learn"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-layer2-learn"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
+      <Layer2LearnPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       />
 
       <MainArticle className="relative flex flex-col">

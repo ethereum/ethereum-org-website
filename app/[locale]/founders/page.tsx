@@ -30,6 +30,7 @@ import Optimism from "./logos/optimism.svg"
 import Polygon from "./logos/polygon.svg"
 import ProtogolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
+import FoundersPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
@@ -375,52 +376,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  // JSON-LD structured data for the founders page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/founders/`,
-    name: t("page-founders-metadata-title"),
-    description: t("page-founders-metadata-description"),
-    url: `https://ethereum.org/${locale}/founders/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-founders-metadata-title"),
-          item: `https://ethereum.org/${locale}/founders/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-founders"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
+      <FoundersPageJsonLD locale={locale} />
 
       <div>
         <ContentHero

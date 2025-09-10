@@ -16,6 +16,8 @@ import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getMetadata } from "@/lib/utils/metadata"
 
+import TrillionDollarSecurityPageJsonLD from "./page-jsonld"
+
 import TdsHero from "@/public/images/trillion-dollar-security/hero.png"
 import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
@@ -50,82 +52,9 @@ const TdsPage = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-trillion-dollar-security",
   })
 
-  // JSON-LD structured data for the Trillion-Dollar Security page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/trillion-dollar-security/`,
-    name: t("page-trillion-dollar-security-meta-title"),
-    description: t("page-trillion-dollar-security-meta-description"),
-    url: `https://ethereum.org/${locale}/trillion-dollar-security/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-trillion-dollar-security-meta-title"),
-          item: `https://ethereum.org/${locale}/trillion-dollar-security/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the security report article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-trillion-dollar-security-title"),
-    description: t("page-trillion-dollar-security-meta-description"),
-    image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Security",
-      description:
-        "Comprehensive security analysis of Ethereum's trillion-dollar ecosystem",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-trillion-dollar-security"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-trillion-dollar-security"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
+      <TrillionDollarSecurityPageJsonLD locale={locale} />
       <MainArticle>
         {/* Hero Section */}
         <section className="mb-32 w-full">

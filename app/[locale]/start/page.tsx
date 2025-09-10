@@ -17,6 +17,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
+import StartPageJsonLD from "./page-jsonld"
+
 import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
@@ -37,82 +39,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     supportedLanguages: [],
   }))
 
-  // JSON-LD structured data for the Start page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/start/`,
-    name: t("page-start-meta-title"),
-    description: t("page-start-meta-description"),
-    url: `https://ethereum.org/${locale}/start/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-start-meta-title"),
-          item: `https://ethereum.org/${locale}/start/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the start guide article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-start-title"),
-    description: t("page-start-meta-description"),
-    image: "https://ethereum.org/images/heroes/developers-hub-hero.jpg",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Getting Started with Ethereum",
-      description:
-        "Beginner's guide to getting started with Ethereum, crypto wallets, and web3",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-start"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-start"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
+      <StartPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
         <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
           <Image

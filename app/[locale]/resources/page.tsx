@@ -22,6 +22,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import ResourcesNav from "./_components/ResourcesNav"
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
+import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -47,48 +48,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const resourceSections = await getResources({ txCostsMedianUsd })
 
-  // JSON-LD structured data for the Resources page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/resources/`,
-    name: t("page-resources-meta-title"),
-    description: t("page-resources-meta-description"),
-    url: `https://ethereum.org/${locale}/resources/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-resources-meta-title"),
-          item: `https://ethereum.org/${locale}/resources/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-resources"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
+      <ResourcesPageJsonLD locale={locale} />
+
       <MainArticle className="relative flex flex-col">
         <BannerNotification shouldShow className="text-center max-md:flex-col">
           {t("page-resources-banner-notification-message")}{" "}

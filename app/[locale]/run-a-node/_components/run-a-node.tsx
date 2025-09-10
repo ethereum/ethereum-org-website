@@ -207,7 +207,6 @@ type RunANodeCard = {
 const RunANodePage = ({
   contributors,
   lastEditLocaleTimestamp,
-  locale,
 }: PageWithContributorsProps) => {
   const { t } = useTranslation("page-run-a-node")
   const heroContent = {
@@ -227,65 +226,6 @@ const RunANodePage = ({
         },
       },
     ],
-  }
-
-  // JSON-LD structured data for the Run a Node page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/run-a-node/`,
-    name: t("page-run-a-node-title"),
-    description: t("page-run-a-node-hero-subtitle"),
-    url: `https://ethereum.org/${locale}/run-a-node/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-run-a-node-title"),
-          item: `https://ethereum.org/${locale}/run-a-node/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the run a node article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-run-a-node-title"),
-    description: t("page-run-a-node-hero-subtitle"),
-    image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Running an Ethereum Node",
-      description:
-        "Guide to running your own Ethereum node, benefits, and requirements",
-    },
-    dateModified: lastEditLocaleTimestamp,
   }
 
   const whyRunANodeCards: RunANodeCard[] = [
@@ -356,22 +296,6 @@ const RunANodePage = ({
 
   return (
     <>
-      <script
-        id="jsonld-webpage-run-a-node"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-run-a-node"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
       <GappedPage>
         <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
           <div className="pb-8">

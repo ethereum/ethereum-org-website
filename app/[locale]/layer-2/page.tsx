@@ -19,6 +19,7 @@ import { layer2Data } from "@/data/networks/networks"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
+import Layer2PageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -69,6 +70,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <Layer2PageJsonLD locale={locale} />
       <Layer2Page
         randomL2s={randomL2s}
         userRandomL2s={userRandomL2s}

@@ -27,6 +27,8 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
 
+import EthPageJsonLD from "./page-jsonld"
+
 import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import eth from "@/public/images/eth.png"
@@ -177,78 +179,6 @@ const EthPage = ({
   const { t } = useTranslation("page-eth")
   const pathname = usePathname()
 
-  // JSON-LD structured data for the Ether/ETH page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/eth/`,
-    name: t("page-eth-whats-eth"),
-    description: t("page-eth-is-money"),
-    url: `https://ethereum.org/${locale}/eth/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-eth-whats-eth"),
-          item: `https://ethereum.org/${locale}/eth/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  // JSON-LD for the article content about Ether
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-eth-whats-eth"),
-    description: t("page-eth-is-money"),
-    image: "https://ethereum.org/images/eth.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-    dateModified: lastEditLocaleTimestamp,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://ethereum.org/${locale}/eth/`,
-    },
-    about: {
-      "@type": "DigitalCurrency",
-      name: "Ether",
-      alternateName: ["ETH", "Ethereum"],
-      symbol: "ETH",
-      blockchain: "Ethereum",
-    },
-  }
-
   const tokens = [
     {
       emoji: ":scales:",
@@ -343,20 +273,9 @@ const EthPage = ({
 
   return (
     <>
-      <script
-        id="jsonld-webpage-eth"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-eth"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
+      <EthPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       />
 
       <Page>

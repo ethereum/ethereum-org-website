@@ -20,6 +20,7 @@ import { walletsData } from "@/data/wallets/wallet-data"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
+import Layer2NetworksPageJsonLD from "./page-jsonld"
 
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -120,6 +121,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <Layer2NetworksPageJsonLD
+        locale={locale}
+        layer2Data={layer2DataCompiled}
+      />
       <Layer2Networks {...props} />
     </I18nProvider>
   )

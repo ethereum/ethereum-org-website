@@ -94,7 +94,6 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
 const VisionPage = ({
   contributors,
   lastEditLocaleTimestamp,
-  locale,
 }: PageWithContributorsProps) => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])
   const pathname = usePathname()
@@ -120,89 +119,8 @@ const VisionPage = ({
     alt: t("page-eth-whats-eth-hero-alt"),
   }
 
-  // JSON-LD structured data for the Vision page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/roadmap/vision/`,
-    name: t("page-roadmap-vision-title"),
-    description: t("page-roadmap-vision-subtitle"),
-    url: `https://ethereum.org/${locale}/roadmap/vision/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Roadmap",
-          item: `https://ethereum.org/${locale}/roadmap/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-roadmap-vision-title"),
-          item: `https://ethereum.org/${locale}/roadmap/vision/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the vision article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-roadmap-vision-title"),
-    description: t("page-roadmap-vision-subtitle"),
-    image: "https://ethereum.org/images/upgrades/oldship.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Vision",
-      description:
-        "The vision for Ethereum's future development and capabilities",
-    },
-    dateModified: lastEditLocaleTimestamp,
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-roadmap-vision"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-roadmap-vision"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
       <Page>
         <PageHero content={heroContent} />
         <Divider />

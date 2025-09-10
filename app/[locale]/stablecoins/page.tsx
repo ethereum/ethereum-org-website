@@ -38,6 +38,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { stablecoins } from "./data"
+import StablecoinsPageJsonLD from "./page-jsonld"
 
 import { fetchEthereumStablecoinsData } from "@/lib/api/stablecoinsData"
 import sparkfiImg from "@/public/images/dapps/sparkfi.png"
@@ -420,115 +421,10 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     },
   ]
 
-  // JSON-LD structured data for the Stablecoins page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/stablecoins/`,
-    name: t("page-stablecoins-meta-title"),
-    description: t("page-stablecoins-meta-description"),
-    url: `https://ethereum.org/${locale}/stablecoins/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-stablecoins-meta-title"),
-          item: `https://ethereum.org/${locale}/stablecoins/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the stablecoins article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-stablecoins-title"),
-    description: t("page-stablecoins-meta-description"),
-    image: "https://ethereum.org/images/stablecoins/hero.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Stablecoins",
-      description:
-        "Digital currencies pegged to stable assets like the US dollar",
-    },
-  }
-
-  // JSON-LD for stablecoin types as ItemList
-  const stablecoinTypesJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Types of Stablecoins",
-    description:
-      "Different categories of stablecoins based on their backing mechanisms",
-    numberOfItems: features.length,
-    itemListElement: features.map((feature, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        name: feature.title,
-        description:
-          typeof feature.description === "string"
-            ? feature.description
-            : feature.title,
-        category: "Digital Currency",
-        additionalType: "https://schema.org/FinancialProduct",
-      },
-    })),
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-stablecoins"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-stablecoins"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-itemlist-stablecoins"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(stablecoinTypesJsonLd),
-        }}
-      />
-
       <I18nProvider locale={locale} messages={messages}>
+        <StablecoinsPageJsonLD locale={locale} features={features} />
         <MainArticle className="mx-auto my-0 w-full flex-col items-center">
           <PageHero isReverse content={heroContent} />
           <Divider />

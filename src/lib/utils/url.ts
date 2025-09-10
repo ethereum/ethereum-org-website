@@ -1,5 +1,7 @@
 import { extname, join } from "path"
 
+import { Lang } from "@/lib/types"
+
 import {
   DEFAULT_LOCALE,
   DISCORD_PATH,
@@ -77,9 +79,12 @@ export const slugify = (text: string): string => {
 }
 
 export const normalizeUrlForJsonLd = (
-  locale: string,
+  locale: string | Lang | undefined,
   pathWithoutLocale: string
 ): string => {
+  if (!locale) {
+    return new URL(pathWithoutLocale, SITE_URL).toString()
+  }
   const path = join(locale === DEFAULT_LOCALE ? "" : locale, pathWithoutLocale)
   const url = new URL(path, SITE_URL)
   return url.toString()

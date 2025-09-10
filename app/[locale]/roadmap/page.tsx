@@ -9,6 +9,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import RoadmapPage from "./_components/roadmap"
+import RoadmapPageJsonLD from "./page-jsonld"
 
 import { loadMessages } from "@/i18n/loadMessages"
 
@@ -22,7 +23,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <RoadmapPage locale={locale} />
+      <RoadmapPageJsonLD locale={locale} />
+      <RoadmapPage />
     </I18nProvider>
   )
 }

@@ -24,6 +24,8 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import LearnPageJsonLD from "./page-jsonld"
+
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
 import dogeComputer from "@/public/images/doge-computer.png"
 import enterprise from "@/public/images/enterprise-eth.png"
@@ -176,52 +178,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     ],
   }
 
-  // JSON-LD structured data for the Learn page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/learn/`,
-    name: t("page-learn-meta-title"),
-    description: t("hero-subtitle"),
-    url: `https://ethereum.org/${locale}/learn/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-learn-meta-title"),
-          item: `https://ethereum.org/${locale}/learn/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-learn"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
+      <LearnPageJsonLD locale={locale} />
 
       <div className="relative w-full">
         <HubHero {...heroContent} />

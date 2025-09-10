@@ -13,6 +13,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import QuizzesPage from "./_components/quizzes"
+import QuizzesPageJsonLD from "./page-jsonld"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -26,7 +27,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <QuizzesPage locale={locale} />
+      <QuizzesPageJsonLD locale={locale} />
+      <QuizzesPage />
     </I18nProvider>
   )
 }

@@ -33,7 +33,7 @@ const handleGHAdd = () =>
     eventName: "GH_add",
   })
 
-const QuizzesPage = ({ locale }) => {
+const QuizzesPage = () => {
   const { t } = useTranslation("learn-quizzes")
 
   const [userStats, updateUserStats] = useLocalQuizData()
@@ -50,49 +50,8 @@ const QuizzesPage = ({ locale }) => {
     [onOpen, userStats]
   )
 
-  // JSON-LD structured data for the Quizzes page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/quizzes/`,
-    name: t("common:quizzes-title"),
-    description: t("quizzes-subtitle"),
-    url: `https://ethereum.org/${locale}/quizzes/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("common:quizzes-title"),
-          item: `https://ethereum.org/${locale}/quizzes/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-quizzes"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
       <MainArticle>
         <HubHero
           title={t("common:quizzes-title")}

@@ -29,7 +29,7 @@ import ethBlocksImage from "@/public/images/developers-eth-blocks.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
-const RoadmapPage = ({ locale }) => {
+const RoadmapPage = () => {
   const { t } = useTranslation("page-roadmap")
 
   const heroContent: HubHeroProps = {
@@ -37,110 +37,6 @@ const RoadmapPage = ({ locale }) => {
     header: t("page-roadmap-title"),
     description: t("page-roadmap-meta-description"),
     heroImg: roadmapHeroImg,
-  }
-
-  // JSON-LD structured data for the Roadmap page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/roadmap/`,
-    name: t("page-roadmap-meta-title"),
-    description: t("page-roadmap-meta-description"),
-    url: `https://ethereum.org/${locale}/roadmap/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-roadmap-meta-title"),
-          item: `https://ethereum.org/${locale}/roadmap/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the roadmap article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-roadmap-title"),
-    description: t("page-roadmap-meta-description"),
-    image: "https://ethereum.org/images/heroes/roadmap-hub-hero.jpg",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Roadmap",
-      description:
-        "The future development and upgrade path of the Ethereum blockchain",
-    },
-  }
-
-  // JSON-LD for the FAQ section
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: t("page-roadmap-faq-1-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${t("page-roadmap-faq-1-p1")} ${t("page-roadmap-faq-1-p1-continued")} ${t("page-roadmap-faq-1-p2")}`.replace(
-            /<[^>]*>/g,
-            ""
-          ),
-        },
-      },
-      {
-        "@type": "Question",
-        name: t("page-roadmap-faq-2-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${t("page-roadmap-faq-2-p1")} ${t("page-roadmap-faq-2-p1-strong")} ${t("page-roadmap-faq-2-p1-continued")} ${t("page-roadmap-faq-2-p2")}`.replace(
-            /<[^>]*>/g,
-            ""
-          ),
-        },
-      },
-      {
-        "@type": "Question",
-        name: t("page-roadmap-faq-3-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: t("page-roadmap-faq-3-p1").replace(/<[^>]*>/g, ""),
-        },
-      },
-      {
-        "@type": "Question",
-        name: t("page-roadmap-faq-4-title"),
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: t("page-roadmap-faq-4-p1").replace(/<[^>]*>/g, ""),
-        },
-      },
-    ],
   }
 
   const changesComingItems = [
@@ -212,30 +108,6 @@ const RoadmapPage = ({ locale }) => {
   // TODO: MATOMO EVENTS
   return (
     <>
-      <script
-        id="jsonld-webpage-roadmap"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-roadmap"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-faq-roadmap"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd),
-        }}
-      />
-
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <BannerNotification shouldShow>
           <p>{t("page-roadmap-banner-notification")}</p>

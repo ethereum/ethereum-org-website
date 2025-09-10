@@ -36,6 +36,8 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
+import GasPageJsonLD from "./page-jsonld"
+
 import { useTranslation } from "@/hooks/useTranslation"
 // Static assets
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -88,62 +90,6 @@ const GasPage = ({
 }: PageWithContributorsProps) => {
   const { t } = useTranslation("page-gas")
 
-  // JSON-LD structured data for the gas page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/gas/`,
-    name: t("page-gas-meta-title"),
-    description: t("page-gas-meta-description"),
-    url: `https://ethereum.org/${locale}/gas/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-gas-meta-title"),
-          item: `https://ethereum.org/${locale}/gas/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the article content about gas
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-gas-hero-title"),
-    description: t("page-gas-meta-description"),
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    dateModified: lastEditLocaleTimestamp,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://ethereum.org/${locale}/gas/`,
-    },
-  }
-
   const benefits = [
     {
       emoji: "🪪",
@@ -181,20 +127,9 @@ const GasPage = ({
 
   return (
     <>
-      <script
-        id="jsonld-webpage-gas"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-gas"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
+      <GasPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       />
 
       <Page>
