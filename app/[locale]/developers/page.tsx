@@ -30,6 +30,7 @@ import HackathonSwiper from "./_components/HackathonSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
+import DevelopersPageJsonLD from "./page-jsonld"
 import { getBuilderPaths, getHackathons, getVideoCourses } from "./utils"
 
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
@@ -135,96 +136,13 @@ const DevelopersPage = async ({
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
-  // JSON-LD structured data for the developers page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/developers/`,
-    name: t("page-developer-meta-title"),
-    description: t("page-developers-meta-desc"),
-    url: `https://ethereum.org/${locale}/developers/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: tCommon("developers"),
-          item: `https://ethereum.org/${locale}/developers/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const learningResourcesJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Ethereum Developer Resources",
-    description:
-      "Comprehensive resources for building on Ethereum including tutorials, tools, documentation, and courses",
-    url: `https://ethereum.org/${locale}/developers/`,
-    numberOfItems: paths.length + courses.length + hackathons.length,
-    itemListElement: [
-      ...paths.map((path, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: path.title,
-        description: path.description,
-        url: path.href,
-      })),
-      ...courses.slice(0, 5).map((course, index) => ({
-        "@type": "ListItem",
-        position: paths.length + index + 1,
-        name: course.title,
-        description: course.description,
-        url: course.href,
-      })),
-      ...hackathons.map((hackathon, index) => ({
-        "@type": "ListItem",
-        position: paths.length + courses.length + index + 1,
-        name: hackathon.title,
-        description: hackathon.description,
-        url: hackathon.href,
-      })),
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-developers"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-resources-developers"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(learningResourcesJsonLd),
-        }}
+      <DevelopersPageJsonLD
+        locale={locale}
+        paths={paths}
+        courses={courses}
+        hackathons={hackathons}
       />
       <VStack className="mx-auto my-0 w-full">
         <HubHero

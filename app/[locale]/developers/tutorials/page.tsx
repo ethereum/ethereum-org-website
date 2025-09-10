@@ -18,6 +18,8 @@ import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import TutorialsPageJsonLD from "./page-jsonld"
+
 const TutorialsList = dynamic(() => import("./_components/tutorials"), {
   ssr: false,
   loading: () => (
@@ -65,128 +67,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const internalTutorials = await getTutorialsData(locale)
 
-  // JSON-LD structured data for the developers tutorials page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/developers/tutorials/`,
-    name: t("page-tutorials-meta-title"),
-    description: t("page-tutorials-meta-description"),
-    url: `https://ethereum.org/${locale}/developers/tutorials/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Developers",
-          item: `https://ethereum.org/${locale}/developers/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-tutorial-title"),
-          item: `https://ethereum.org/${locale}/developers/tutorials/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const tutorialCollectionJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-tutorial-title"),
-    description: t("page-tutorials-meta-description"),
-    url: `https://ethereum.org/${locale}/developers/tutorials/`,
-    numberOfItems: internalTutorials.length,
-    itemListElement: internalTutorials.slice(0, 10).map((tutorial, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: tutorial.title,
-      description: tutorial.description,
-      url: tutorial.href,
-    })),
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-  }
-
-  const courseListJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-tutorial-title"),
-    description: t("page-tutorials-meta-description"),
-    url: `https://ethereum.org/${locale}/developers/tutorials/`,
-    numberOfItems: internalTutorials.length,
-    itemListElement: internalTutorials.slice(0, 10).map((tutorial, index) => ({
-      "@type": "Course",
-      name: tutorial.title,
-      description: tutorial.description,
-      url: tutorial.href,
-      provider: {
-        "@type": "Organization",
-        name: "Ethereum Foundation",
-        url: "https://ethereum.org",
-      },
-      courseMode: "online",
-      educationalLevel: "beginner-intermediate",
-      inLanguage: locale,
-      isAccessibleForFree: true,
-      about: [
-        "Ethereum Development",
-        "Smart Contracts",
-        "Blockchain Programming",
-        "Web3",
-      ],
-      position: index + 1,
-    })),
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-tutorials"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-collection-tutorials"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(tutorialCollectionJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-courselist-tutorials"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(courseListJsonLd),
-        }}
+      <TutorialsPageJsonLD
+        locale={locale}
+        internalTutorials={internalTutorials}
       />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle
