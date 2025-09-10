@@ -13178,6 +13178,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "meetrick",
+      "name": "Hwangjae Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19239345?v=4",
+      "profile": "https://github.com/meetrick",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
