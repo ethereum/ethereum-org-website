@@ -92,11 +92,11 @@ export const getAppPageContributorInfo = async (
   const latestCommitDate = getAppPageLastCommitDate(gitHubContributors)
   const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
 
-  if (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) {
-    throw new Error(
-      `No contributors found, path: ${pagePath}, locale: ${locale}`
-    )
-  }
+  // if (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) {
+  //   throw new Error(
+  //     `No contributors found, path: ${pagePath}, locale: ${locale}`
+  //   )
+  // }
 
   return { contributors: uniqueGitHubContributors, lastEditLocaleTimestamp }
 }
