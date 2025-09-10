@@ -56,7 +56,7 @@ Separating the validator keys from the Ethereum account keys enables multiple va
 
 ![validator key schematic](validator-key-schematic.png)
 
-**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds. 
+**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds. 
 
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 

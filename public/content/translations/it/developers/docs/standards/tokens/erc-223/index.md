@@ -178,7 +178,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Quando il `RecipientContract` riceverà un token ERC-223 il contratto eseguirà una funzione codificata come parametro `_data` della transazione del token, in modo identico a come le transazioni di Ether codificano le chiamate di funzioni come transazioni `data`. Leggi [il campo dati](https://ethereum.org/en/developers/docs/transactions/#the-data-field) per maggiori informazioni.
+Quando il `RecipientContract` riceverà un token ERC-223 il contratto eseguirà una funzione codificata come parametro `_data` della transazione del token, in modo identico a come le transazioni di Ether codificano le chiamate di funzioni come transazioni `data`. Leggi [il campo dati](/developers/docs/transactions/#the-data-field) per maggiori informazioni.
 
 Nell'esempio precedente un token ERC-223 deve essere trasferito all'indirizzo del `RecipientContract` con la funzione `transfer(address,uin256,bytes calldata _data)`. Se il parametro dei dati sarà `0xc2985578` (la firma di una funzione `foo()`) allora la funzione foo() sarà invocata dopo che il deposito del token è stato ricevuto e l'evento Foo() è stato attivato.
 

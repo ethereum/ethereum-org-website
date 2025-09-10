@@ -4,9 +4,9 @@ description: Learn about the Fusaka protocol upgrade
 lang: en
 ---
 
-# Fusaka {#fusaka}
+# Fusaka <Emoji text="🦓" /> {#fusaka}
 
-The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every Ethereum user and developer. The name consists of the execution layer upgrade Osaka and the consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that pushes Ethereum scaling, security and user experience to the future. 
+The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every Ethereum user and developer. The name consists of the execution layer upgrade Osaka and the consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that pushes Ethereum scaling, security and user experience to the future.
 
 This upgrade is planned for Q4 2025.
 
@@ -24,9 +24,9 @@ Specification: https://eips.ethereum.org/EIPS/eip-7594
 
 Resources: https://youtu.be/bONWd1x2TjQ?t=328 (dapplion on PeerDAS)
 
-This is the *headliner* of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
+This is the _headliner_ of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
 
-With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node will be responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data,  any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10²⁰ to one in 10²⁴).
+With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node will be responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data, any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10²⁰ to one in 10²⁴).
 
 This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for layer 2s.
 
@@ -36,7 +36,7 @@ In-depth: https://eprint.iacr.org/2024/1362.pdf
 
 Specification: https://eips.ethereum.org/EIPS/eip-7892
 
-Layer 2s scale Ethereum - as their networks grow, they need to post more data to Ethereum. This means that Ethereum will need to increase the number of blobs available to them as time goes on. Although PeerDAS enables scaling blob data, it needs to be done gradually and safely. 
+Layer 2s scale Ethereum - as their networks grow, they need to post more data to Ethereum. This means that Ethereum will need to increase the number of blobs available to them as time goes on. Although PeerDAS enables scaling blob data, it needs to be done gradually and safely.
 
 Because Ethereum is code running on thousands of independent nodes that require agreement on same rules, we cannot simply introduces changes like increasing blob count the way you deploy a website update. Any rule change must be a coordinated upgrade where every node, client and validator software upgrades before the same predetermined block.
 
@@ -72,7 +72,7 @@ Specification: https://eips.ethereum.org/EIPS/eip-7825
 
 EIP-[7825](https://eips.ethereum.org/EIPS/eip-7825) adds a cap of 16,777,216 (2^24) gas per transaction. It’s proactive DoS hardening by bounding the worst-case cost of any single transaction as we raise the block gas limit. It makes validation and propagation easier to model to allow us to tackle scaling via raising the gas limit.
 
-Why exactly 2^24 gas? It’s comfortably smaller than today’s gas limit, is large enough for real contract deployments & heavy precompiles, and a power of 2 makes it easy to implement across clients. This new maximum transaction size is a similar to pre-Pectra average block size, making it a reasonable limit for any operation on Ethereum.  
+Why exactly 2^24 gas? It’s comfortably smaller than today’s gas limit, is large enough for real contract deployments & heavy precompiles, and a power of 2 makes it easy to implement across clients. This new maximum transaction size is a similar to pre-Pectra average block size, making it a reasonable limit for any operation on Ethereum.
 
 #### MODEXP Gas Cost Increase {#modexp-gas-cost-increase}
 
@@ -112,7 +112,7 @@ Devnet planning targets ~60M stress (full blocks with synthetic load) and iterat
 
 Specification: https://eips.ethereum.org/EIPS/eip-7917
 
-With EIP-7917, Beacon Chain will become aware of upcoming block proposers for the next epoch. Having a deterministic view on which validators will be proposing future blocks can enable [preconfirmations](https://ethresear.ch/t/based-preconfirmations/17353) - a commitment with the upcoming proposer that guarantees the user transaction will be included in their block without waiting for the actual block. 
+With EIP-7917, Beacon Chain will become aware of upcoming block proposers for the next epoch. Having a deterministic view on which validators will be proposing future blocks can enable [preconfirmations](https://ethresear.ch/t/based-preconfirmations/17353) - a commitment with the upcoming proposer that guarantees the user transaction will be included in their block without waiting for the actual block.
 
 This feature benefits client implementations and security of the network as it prevents edge cases where validators could manipulate the proposer schedule. The lookahead also allows for less complexity of the implementation.
 
@@ -124,6 +124,17 @@ Specification: https://eips.ethereum.org/EIPS/eip-7939
 
 EIP-7939 adds a small EVM instruction, CLZ (“count leading zeros”). Given a 256-bit value, it returns how many zero bits are at the front — and returns 256 if the value is entirely zero. This is a common feature in many instruction set architectures as it enables more efficient arithmetic operations. In practice this collapses today’s hand-rolled bit scans into one step, so finding the first set bit, scanning bytes, or parsing bitfields becomes simpler and cheaper. The opcode is low, fixed-cost and has been benchmarked to be on par with a basic add, which trims bytecode and saves gas for the same work.
 
+### Precompile for secp256r1 Curve Support {#secp256r1-precompile}
+
+Specification: https://eips.ethereum.org/EIPS/eip-7951
+
+Introduces a built-in, passkey-style secp256r1 (P-256) signature checker at the fixed address `0x100` using the same call format already adopted by many L2s and fixing edge cases, so contracts written for those environments work on L1 without changes.
+
+UX upgrade! For users, this unlocks device-native signing and passkeys. Wallets can tap into Apple Secure Enclave, Android Keystore, hardware security modules (HSMs), and FIDO2/WebAuthn directly - no seed phrase, smoother onboarding, and multi-factor flows that feel like modern apps. This results in better UX, easier recovery, and account abstraction patterns that match what billions of devices do already.
+
+For developers, it takes a 160-byte input and returns a 32-byte output, making it easy to port existing libraries and L2 contracts. Under the hood, it includes point-at-infinity and modular-comparison checks to eliminate tricky edge cases without breaking valid callers.
+
+[More about RIP-7212](https://www.alchemy.com/blog/what-is-rip-7212) _(Note that EIP-7951 superseded RIP-7212)_
 
 ## Does this upgrade affect all Ethereum nodes and validators? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 

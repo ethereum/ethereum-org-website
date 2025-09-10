@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "10.12.0",
+  "version": "10.13.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -76,7 +76,7 @@
     "htmr": "^1.0.2",
     "lodash": "^4.17.21",
     "lucide-react": "^0.516.0",
-    "next": "^14.2.30",
+    "next": "^14.2.32",
     "next-intl": "^3.26.3",
     "next-mdx-remote": "^5.0.0",
     "next-sitemap": "^4.2.3",
