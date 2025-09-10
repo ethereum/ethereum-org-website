@@ -18,6 +18,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/Collectibles/lazy"
 import { COLLECTIBLES_BASE_URL } from "./constants"
+import CollectiblesJsonLD from "./page-jsonld"
 import type { Badge, Stats } from "./types"
 
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
@@ -58,98 +59,9 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/collectibles/")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
-  // JSON-LD structured data for the collectibles page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/collectibles/`,
-    name: t("page-collectibles-hero-header"),
-    description: t("page-collectibles-hero-description"),
-    url: `https://ethereum.org/${locale}/collectibles/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-collectibles-hero-header"),
-          item: `https://ethereum.org/${locale}/collectibles/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
-      },
-    },
-  }
-
-  const collectiblesCollectionJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-collectibles-hero-header"),
-    description: t("page-collectibles-hero-description"),
-    url: `https://ethereum.org/${locale}/collectibles/`,
-    numberOfItems: stats.collectiblesCount || badges.length,
-    itemListElement: badges.slice(0, 10).map((badge, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: badge.name || `Badge ${index + 1}`,
-      description: badge.description || "Ethereum community badge",
-      url: badge.link || `${COLLECTIBLES_BASE_URL}/badge/${badge.id}`,
-      image: badge.image,
-    })),
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-    additionalProperty: [
-      {
-        "@type": "PropertyValue",
-        name: "Total Collectors",
-        value: stats.uniqueAddressesCount || 0,
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Total Minted",
-        value: stats.collectorsCount || 0,
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Unique Badges",
-        value: stats.collectiblesCount || badges.length,
-      },
-    ],
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-collectibles"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-      <script
-        id="jsonld-collectibles-collection"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(collectiblesCollectionJsonLd),
-        }}
-      />
+      <CollectiblesJsonLD locale={locale} badges={badges} stats={stats} />
       <I18nProvider locale={locale} messages={pickedMessages}>
         <MainArticle className="space-y-12 pb-24 md:space-y-20">
           <HubHero
