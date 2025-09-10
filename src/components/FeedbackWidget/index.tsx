@@ -1,4 +1,7 @@
-import { MdClose } from "react-icons/md"
+"use client"
+
+import { useContext } from "react"
+import { X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -12,9 +15,11 @@ import {
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
 
+import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const FeedbackWidget = () => {
+  const { showFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { t } = useTranslation("common")
   const {
     offsetBottom,
@@ -27,6 +32,9 @@ const FeedbackWidget = () => {
     isExpanded,
     isOpen,
   } = useFeedbackWidget()
+
+  if (!showFeedbackWidget) return null
+
   return (
     <>
       <Popover
@@ -58,7 +66,7 @@ const FeedbackWidget = () => {
                 size="sm"
                 ref={cancelRef}
               >
-                <MdClose className="h-fit w-5" />
+                <X className="h-fit w-5" />
               </Button>
             </PopoverClose>
           </div>

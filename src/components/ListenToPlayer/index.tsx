@@ -1,5 +1,8 @@
+"use client"
+
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
+import { useLocale } from "next-intl"
 import { Portal } from "@radix-ui/react-portal"
 
 import PlayerWidget from "@/components/ListenToPlayer/PlayerWidget"
@@ -14,6 +17,7 @@ import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const ListenToPlayer = ({ slug }: { slug: string }) => {
+  const locale = useLocale()
   const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { playlist, index } = getPlaylistBySlug(slug)
 
@@ -84,12 +88,14 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
       }
       audioPlayer.unload()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrackIndex])
 
   useEffect(() => {
     if (sound && autoplay && isPlaying) {
       sound.play()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sound])
 
   useEffect(() => {
@@ -115,6 +121,9 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
       sound.rate(playbackSpeed)
     }
   }, [playbackSpeed, sound])
+
+  // Only show the player if the locale is English and there is a playlist, renders null early
+  if (!playlist.length || index === -1 || locale !== "en") return null
 
   const handlePlayPause = () => {
     if (!sound) return
@@ -205,8 +214,6 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
     })
   }
 
-  if (!playlist.length || index === -1) return null
-
   return (
     <>
       <TopOfPagePlayer
@@ -223,6 +230,7 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
             isExpanded ? "bottom-4" : "bottom-0",
             "fixed left-1/2 right-auto z-10 -translate-x-1/2 sm:left-auto sm:right-5 sm:translate-x-0"
           )}
+          data-testid="player-widget-modal"
         >
           <div className="relative">
             <PlayerWidget

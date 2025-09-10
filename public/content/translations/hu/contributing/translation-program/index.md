@@ -20,7 +20,7 @@ Az ethereum.org fordítási program nyitott és bárki közreműködhet!
 4. A gépi fordítás nem elfogadható.
 5. Minden fordítást átnéznek, mielőtt a honlapra felkerül, így a lefordított anyag bizonyos késéssel válik elérhetővé.
 
-_Csatlakozzon az [ethereum.org Discord](/discord/)-csatornájához, hogy megvitassa a fordítással kapcsolatos dolgokat, kérdezzen, visszajelzést adjon, megossza az ötleteit vagy csatlakozzon a fordítói csoporthoz._
+_Csatlakozzon az [ethereum.org Discord](https://discord.gg/ethereum-org)-csatornájához, hogy megvitassa a fordítással kapcsolatos dolgokat, kérdezzen, visszajelzést adjon, megossza az ötleteit vagy csatlakozzon a fordítói csoporthoz._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Kezdjen bele a fordításba
@@ -36,9 +36,9 @@ Tudjon meg többet az ethereum.org fordítási program [missziójáról és víz
 
 ### Eddigi eredményeink {#our-progress}
 
-- [**Több mint 6000** fordító](/contributing/translation-program/contributors/)
-- **62** nyelv elérhető a honlapon
-- [**3 millió** szó került lefordításra 2023-ban](/contributing/translation-program/acknowledgements/)
+- [**Több mint 6900** fordító](/contributing/translation-program/contributors/)
+- **68** nyelv elérhető a honlapon
+- [**2,89 millió** szó került lefordításra 2024-ben](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

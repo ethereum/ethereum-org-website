@@ -14,7 +14,7 @@ Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-story
 
 ## Spinning up the Storybook server
 
-It's as easy as running `yarn storybook` to boot up a dedicated localhost to see all the components that have stories.
+It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see all the components that have stories.
 
 ## Setting up a component's stories
 
@@ -40,7 +40,7 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
-const meta {
+const meta = {
   title: "ComponentA",
   component: ComponentA
 } satisfies Meta<typeof ComponentA>
@@ -71,7 +71,7 @@ import Button from "."
 
 type ButtonType = typeof Button
 
-const meta {
+const meta = {
   title: "Atoms / Form / Button",
   component: Button
 } satisfies Meta<ButtonType>
@@ -229,4 +229,4 @@ parameters: {
 }
 ```
 
-> 🚨 NOTE: This will be notated ahead of time by the team which stories should not receive snapshots.
+> 🚨 NOTE: This will be noted ahead of time by the team which stories should not receive snapshots.

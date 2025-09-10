@@ -1,4 +1,6 @@
-import { PauseCircleIcon, PlayCircleIcon } from "@/components/icons/listen-to"
+import { CirclePause, CirclePlay } from "lucide-react"
+
+import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -18,28 +20,29 @@ const TopOfPagePlayer = ({
   handlePlayPause,
 }: TopOfPagePlayerProps) => {
   return (
-    <div className="inline-block w-full rounded-lg bg-background-low p-2 hover:bg-background-medium lg:w-auto">
-      <div
-        className="flex cursor-pointer flex-row items-center gap-2 text-primary hover:text-primary-hover"
-        onClick={() => {
-          if (startedPlaying) {
-            trackCustomEvent({
-              eventCategory: "Audio",
-              eventAction: "click",
-              eventName: "start",
-            })
-          }
-          handlePlayPause()
-        }}
-      >
+    <Button
+      variant="ghost"
+      className="inline-block w-full rounded-lg bg-background-low p-2 hover:bg-background-medium lg:w-auto"
+      onClick={() => {
+        if (startedPlaying) {
+          trackCustomEvent({
+            eventCategory: "Audio",
+            eventAction: "click",
+            eventName: "start",
+          })
+        }
+        handlePlayPause()
+      }}
+    >
+      <div className="flex flex-row items-center gap-2 text-primary hover:text-primary-hover">
         {startedPlaying ? (
           isPlaying ? (
-            <PauseCircleIcon className="h-6 w-6 transition-transform" />
+            <CirclePause />
           ) : (
-            <PlayCircleIcon className="h-6 w-6 transition-transform" />
+            <CirclePlay />
           )
         ) : (
-          <PlayCircleIcon className="h-6 w-6 transition-transform" />
+          <CirclePlay />
         )}
         <div className="text-sm text-body-medium">
           {startedPlaying ? (
@@ -52,7 +55,7 @@ const TopOfPagePlayer = ({
           )}
         </div>
       </div>
-    </div>
+    </Button>
   )
 }
 

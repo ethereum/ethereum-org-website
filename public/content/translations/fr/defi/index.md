@@ -1,5 +1,6 @@
 ---
 title: Finance Décentralisée (DeFi)
+metaTitle: Qu'est-ce que DeFi ? | Avantages et utilisation de la finance décentralisée
 description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
@@ -47,7 +48,7 @@ L'une des meilleures façons de voir le potentiel de la DeFi est de comprendre l
 | Les marchés sont toujours ouverts.                                                                                                     | Les marchés ferment parce que les employés ont besoin de pauses.                                                                                            |
 | Il est construit sur la transparence – tout le monde peut regarder les données d'un produit et inspecter le fonctionnement du système. | Les institutions financières sont des livres fermés : vous ne pouvez pas demander à voir leurs antécédents de prêts, un dossier de leurs actifs gérés, etc. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Explorer la DeFi
 </ButtonLink>
 
@@ -65,7 +66,7 @@ Cela semble étrange... « pourquoi je voudrais programmer mon argent » ? Cepen
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorez nos suggestions pour les applications de la DeFi pour essayer si vous êtes nouveau sur Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Explorer la DeFi
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +93,7 @@ Il existe une alternative décentralisée à la plupart des services financiers.
 
 En tant que blockchain, Ethereum est conçu pour envoyer des transactions de manière sécurisée et globale. Tout comme Bitcoin, Ethereum vous permet d'envoyer de l'argent dans le monde entier aussi facilement qu'un un email. Entrez simplement le nom [ENS de votre destinataire](/glossary/#ens) (comme bob. th) ou l'adresse de leur compte à partir de votre portefeuille et votre paiement leur ira directement, en quelques minutes (habituellement). Pour envoyer ou recevoir des paiements, vous aurez besoin d'un [portefeuille](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les applications de paiement
 </ButtonLink>
 
@@ -123,7 +124,7 @@ L'emprunt de l'argent auprès de prestataires décentralisés se compose de deux
 - Pair-à-pair, ce qui signifie qu'un emprunteur empruntera directement auprès d'un prêteur spécifique.
 - Basé sur une pool où les prêteurs fournissent des fonds (liquidités) à une réserve dans laquelle les emprunteurs peuvent emprunter.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les dapp d'emprunt
 </ButtonLink>
 
@@ -168,7 +169,7 @@ Si l'échange B chutait soudainement et que l'utilisateur n'était pas en mesure
 
 Pour pouvoir faire ce qui précède dans le monde de la finance traditionnelle, vous auriez besoin d'une somme d'argent énorme. Ces stratégies pour gagner de l'argent ne sont accessibles qu'à ceux qui possèdent déjà une certaine richesse. Les prêts Flash sont un exemple d'avenir où avoir de l'argent n'est pas nécessairement une condition préalable pour gagner de l'argent.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Plus d'infos sur les prêts Flash
 </ButtonLink>
 
@@ -185,7 +186,7 @@ Vous pouvez gagner de l'intérêt sur votre cryptomonnaie en le prêtant et en v
 - Votre aDai augmentera en fonction des taux d'intérêt et vous pourrez ainsi voir votre solde croître dans votre portefeuille. Dépendant de [l'APR](/glossary/#apr), le solde de votre portefeuille va afficher quelque chose comme 100,1234 après quelques jours ou même quelques heures !
 - Vous pouvez retirer un montant de Dai égal à votre solde aDai à tout moment.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les dApps de prêt
 </ButtonLink>
 
@@ -213,7 +214,7 @@ Il existe des milliers de jetons sur Ethereum. Les échanges décentralisés (DE
 
 Par exemple, si vous voulez vous lancer dans une loterie sans risque (décrite au dessus), vous aurez besoin de jeton comme les Dai ou USDC. Les DEXs vous permettent d'échanger vos ETH avec des tokens, et de les reconvertir en ETH lorsque vous avez terminé.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir échanger des jetons
 </ButtonLink>
 
@@ -225,7 +226,7 @@ Pour les traders qui aiment le contrôle, il existe des options avancées. Les o
 
 Avec le trading centralisé, vous devez déposer vos actifs avant les échanges et faire confiance à un tier pour en prendre soin. Lorsqu'ils sont déposés, vos actifs courent un risque par ce que les centres d'échange sont des cibles très attractives pour les hackers.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir Applications décentralisées (dapps)
 </ButtonLink>
 
@@ -237,7 +238,7 @@ Il existe des outils de gestion de fonds sur Ethereum qui vous permettront de d�
 
 Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fonds qui se rééquilibre automatiquement pour garantir qu'il inclue toujours les jetons DeFi ayant la meilleure capitalisation boursière. Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les applications d'investissement dapps
 </ButtonLink>
 
@@ -251,7 +252,7 @@ Ethereum est une plateforme idéale pour le crowdfunding:
 - La transparence permet à tous les collecteurs de fonds de prouver combien ils ont levé. Vous pouvez aussi tracer l'utilisation des fonds levés.
 - Les collecteurs de fonds peuvent mettre en place des remboursements automatiques. Par exemple si un montant minimum n'est pas atteint à la deadline du projet.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les dapps de crowdfunding
 </ButtonLink>
 
@@ -280,7 +281,7 @@ L'assurance décentralisée vise à rendre l'assurance moins chère, plus rapide
 
 Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs et d'exploits. Actuellement, de nombreux produits d'assurance dans l'espace sont axés sur la protection de leurs utilisateurs contre la perte de fonds. Cependant, il y a des projets qui commencent à construire une couverture pour tous les événements de la vie. Un bon exemple de ceci est la couverture Etherisc's Crop qui vise à [protéger les petits agriculteurs kényans contre les sécheresses et les inondations](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Les assurances décentralisées peuvent offrir une couverture moins chère aux agriculteurs qui n'ont souvent pas les moyens d'accéder aux assurances traditionnelles.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les assurances Dapps
 </ButtonLink>
 
@@ -290,7 +291,7 @@ Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs e
 
 Avec tant de choses en cours, vous aurez besoin d'un moyen de suivre tous vos investissements, vos prêts et vos transactions. Il y a une foule de produits qui vous permettent de coordonner toutes vos activités de DeFi à partir d'un seul endroit. C'est la beauté de l'architecture ouverte de DeFi. Les équipes peuvent construire des interfaces où vous ne pouvez pas simplement voir vos balances entre produits mais également utiliser leurs fonctionnalités. Vous pourriez trouver cela utile en explorant plus à propos de la DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Voir les dApps de portefeuille
 </ButtonLink>
 
@@ -322,9 +323,9 @@ Vous pouvez voir la DeFi comme des couches :
 1. La Blockchain, Ethereum qui trace l'historique des transactions et les états de comptes.
 2. Les actifs [ETH](/eth/) et autres jetons (devises).
 3. Les protocoles, [contrats intelligents](/glossary/#smart-contract) qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
-4. [Les applications](/dapps/) les produits que vous utilisez pour accéder et gérer les protocoles.
+4. [Les applications](/apps/) les produits que vous utilisez pour accéder et gérer les protocoles.
 
-Note : Beaucoup de DeFi utilisent la [norme ERC-20](/glossary/#erc-20). Les applications de la DeFi utilisent un wrapper pour ETH, appelé Wrapped Ether (WETH). [En apprendre plus à propos de l'ether symbolique](/wrapped-eth).
+Note : Beaucoup de DeFi utilisent la [norme ERC-20](/glossary/#erc-20). Les applications de DeFi utilisent un "wrapper" pour l'ETH appelé Wrapped Ether (WETH). [En apprendre plus à propos de l'ether symbolique](/wrapped-eth).
 
 ## Fabriquer une DeFi {#build-defi}
 

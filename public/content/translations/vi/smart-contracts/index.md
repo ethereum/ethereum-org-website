@@ -69,7 +69,7 @@ Hợp động thông mình có thể tính toán, tạo ra các đơn vị tiề
 - [Đồng tiền ổn định](/stablecoins/)
 - [Tạo và phân phối các tài sản kỹ thuật số độc nhất](/nft/)
 - [Trao đổi tiền tệ tự động, mở](/get-eth/#dex)
-- [Trò chơi phi tập trung](/dapps/?category=gaming#explore)
+- [Trò chơi phi tập trung](/apps/categories/gaming)
 - [Một hợp đồng bảo hiểm tự động thanh toán](https://etherisc.com/)
 - [Một tiêu chuẩn cho phép mọi người tạo tiền tệ tùy chỉnh, có khả năng tương tác](/developers/docs/standards/tokens/)
 

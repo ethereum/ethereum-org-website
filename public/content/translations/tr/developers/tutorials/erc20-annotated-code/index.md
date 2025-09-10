@@ -511,7 +511,7 @@ Bu, bir harcama yapanın bir ödenek harcamak için çağırdığı fonksiyondur
 
 Sıfırdan farklı başka bir değere sıfırdan farklı bir ödenek ayarlamak tehlikelidir, çünkü başkalarının değil, yalnızca kendi işlemlerinizin sırasını siz kontrol edersiniz. Saf olan Alice ve dürüst olmayan Bill olmak üzere iki kullanıcınız olduğunu hayal edin. Alice, Bill'den beş token'a mal olduğunu düşündüğü bir hizmet istiyor, bu yüzden Bill'e beş token'lık bir ödenek veriyor.
 
-Sonra bir şeyler değişir ve Bill'in fiyatı on token'a yükselir. Hâlâ hizmeti isteyen Alice, Bill'in ödeneğini 10'a ayarlayan bir işlem gönderir. Bill, işlem havuzunda bu yeni işlemi gördüğü anda, Alice'in beş token'ını harcayan ve çok daha yüksek bir gaz fiyatına sahip olan bir işlem gönderir, böylece işlem daha hızlı kazılır. Bu şekilde Bill, ilk beş token'ı harcayabilir ve ardından, Alice'in yeni ödeneği çıkarıldığında, on beş token'lık toplam fiyat için, Alice'in yetkilendirmek istediğinden daha fazla olacak şekilde on tane daha harcayabilir. Bu tekniğe [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running) denir
+Sonra bir şeyler değişir ve Bill'in fiyatı on token'a yükselir. Hâlâ hizmeti isteyen Alice, Bill'in ödeneğini 10'a ayarlayan bir işlem gönderir. Bill, işlem havuzunda bu yeni işlemi gördüğü anda, Alice'in beş token'ını harcayan ve çok daha yüksek bir gaz fiyatına sahip olan bir işlem gönderir, böylece işlem daha hızlı kazılır. Bu şekilde Bill, ilk beş token'ı harcayabilir ve ardından, Alice'in yeni ödeneği çıkarıldığında, on beş token'lık toplam fiyat için, Alice'in yetkilendirmek istediğinden daha fazla olacak şekilde on tane daha harcayabilir. Bu tekniğe [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running) denir
 
 | Alice'in İşlemi   | Alice'in Nonce Değeri | Bill'in İşlemi                | Bill'in Nonce Değeri | Bill'in Ödeneği | Bill'in Alice'den Toplam Geliri |
 | ----------------- | --------------------- | ----------------------------- | -------------------- | --------------- | ------------------------------- |
@@ -587,7 +587,7 @@ B:
 
 Bunlar asıl işi yapan dört fonksiyondur: `_transfer`, `_mint`, `_burn` ve `_approve`.
 
-#### \_transfer fonksiyonu {#\_transfer}
+#### \_transfer fonksiyonu {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Bunlar aslında aktarımı yapan hatlardır. Aralarında **hiçbir şey** olmad�
 
 Son olarak, bir `Transfer` olayı yayın. Olaylara akıllı sözleşmelerle erişilemez, ancak blok zincirinin dışında çalışan kod, olayları dinleyebilir ve bunlara tepki verebilir. Örneğin bir cüzdan, sahibinin ne zaman daha fazla token aldığını takip edebilir.
 
-#### \_mint ve \_burn fonksiyonları {#\_mint-and-\_burn}
+#### \_mint ve \_burn fonksiyonları {#_mint-and-_burn}
 
 Bu iki fonksiyon (`_mint` and `_burn`) toplam token arzını düzenler. Bunlar dahilidir ve bu sözleşmede onları çağıran bir fonksiyon yoktur, bu nedenle yalnızca sözleşmeden devralırsanız ve hangi koşullar altında yeni token'lar basacağınıza veya mevcut token'ları yakacağınıza karar vermek için kendi mantığınızı eklerseniz kullanışlıdırlar.
 
@@ -706,7 +706,7 @@ Toplam token sayısı değiştiğinde `_totalSupply`'ı güncellediğinizden emi
 
 `_burn` fonksiyonu, diğer yöne gitmesi dışında `_mint` ile hemen hemen aynıdır.
 
-#### \_approve fonksiyonu {#\_approve}
+#### \_approve fonksiyonu {#_approve}
 
 Bu aslında ödenekleri belirten fonksiyondur. Sahibin, kendi mevcut bakiyesinden daha yüksek bir ödenek belirlemesine izin verdiğini unutmayın. Bakiye, ödenek oluşturulduğundaki bakiyeden farklı olabileceği transfer sırasında kontrol edildiği için bu sorun yaratmaz.
 
@@ -784,7 +784,7 @@ Bu fonksiyon, kullanıcı arabirimlerine miktarın nasıl yorumlanacağını sö
 
 Bu, aktarımlar sırasında çağrılacak kanca fonksiyonudur. Bu örnekte kanca fonksiyonu boş ancak ihtiyaç duyarsanız fonksiyon içeriğini doldurabilirsiniz.
 
-# Sonuç {#conclusion}
+## Sonuç {#conclusion}
 
 İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır (bence sizinki muhtemelen değişebilir):
 

@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Siapa pun yang diizinkan untuk mentransfer sebuah token diizinkan untuk membakarnya. Sekalipun pembakaran tampak sama dengan transfer ke alamat kosong, alamat nolnya tidak benar-benar menerima token. Ini memungkinkan kita untuk membebaskan semua penyimpanan yang digunakan untuk token, yang dapat mengurangi biaya gas transaksi.
 
-# Menggunakan Kontrak ini {#using-contract}
+## Menggunakan Kontrak ini {#using-contract}
 
 Berlawanan dengan Solidity, Vyper tidak memiliki warisan. Ini adalah pilihan rancangan yang disengaja untuk membuat kode lebih jelas dan karena itu lebih mudah untuk diamankan. Jadi, untuk membuat kontrak ERC-721 Vyper Anda, Anda mengambil [kontrak ini](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) dan memodifikasinya untuk mengimplementasikan logika bisnis yang Anda inginkan.
 
-# Kesimpulan {#conclusion}
+### Kesimpulan {#conclusion}
 
 Sebagai tinjauan, berikut adalah beberapa dari pokok pikiran terpenting dalam kontrak ini:
 

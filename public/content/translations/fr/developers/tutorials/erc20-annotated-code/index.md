@@ -511,7 +511,7 @@ L'appel à la fonction `a.sub(b, "message")` fait deux choses. Tout d'abord, ell
 
 Il est dangereux d'attribuer à une provision non nulle une autre valeur non nulle parce que vous ne contrôlez que l'ordre de vos propres transactions, pas celles de quelqu'un d'autre. Imaginez que vous ayez deux utilisateurs, Alice qui est naïve et Bill qui est malhonnête. Alice souhaite solliciter un service de la part de Bill qui, selon elle, coûte cinq jetons - donc elle donne à Bill une provision de cinq jetons.
 
-Puis, quelque chose change et le prix de Bill monte à dix jetons. Alice, qui souhaite toujours le service, envoie une transaction qui fixe la provision de Bill à dix. Au moment où Bill voit cette nouvelle transaction dans le pool de transactions, il envoie une transaction qui dépense les cinq jetons d'Alice et a un coût énergétique bien plus élevé, donc elle sera épuisée plus rapidement. De cette façon, Bill peut dépenser les cinq premiers jetons puis, une fois que la nouvelle provision d'Alice est épuisée, en dépenser dix de plus pour un prix total de quinze jetons, plus qu'Alice est censée avoir autorisé. Cette technique est appelée [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+Puis, quelque chose change et le prix de Bill monte à dix jetons. Alice, qui souhaite toujours le service, envoie une transaction qui fixe la provision de Bill à dix. Au moment où Bill voit cette nouvelle transaction dans le pool de transactions, il envoie une transaction qui dépense les cinq jetons d'Alice et a un coût énergétique bien plus élevé, donc elle sera épuisée plus rapidement. De cette façon, Bill peut dépenser les cinq premiers jetons puis, une fois que la nouvelle provision d'Alice est épuisée, en dépenser dix de plus pour un prix total de quinze jetons, plus qu'Alice est censée avoir autorisé. Cette technique est appelée [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Transaction d'Alice | Nonce d'Alice | Transaction de Bill           | Nonce de Bill | Provision de Bill | Total facturé par Bill à Alice |
 | ------------------- | ------------- | ----------------------------- | ------------- | ----------------- | ------------------------------ |
@@ -587,7 +587,7 @@ La fonction `a.add(b)` est un ajout sûr. Dans le cas peu probable où `a`+`b`>=
 
 Voici les quatre fonctions qui font le travail réel : `_transfer`, `_mint`, `_burn`, et `_approve`.
 
-#### La fonction \_transfer {#\_transfer}
+#### La fonction \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Ce sont les lignes qui exécutent réellement le transfert. Notez qu'il n'y a **
 
 Enfin, émettre un événement `Transfert`. Les événements ne sont pas accessibles par les contrats intelligents, mais le code exécuté en dehors de la blockchain peut lire les événements et réagir. Par exemple, un portefeuille peut garder une trace du moment où le propriétaire obtient plus de jetons.
 
-#### La fonction \_mint and \_burn {#\_mint-and-\_burn}
+#### La fonction \_mint and \_burn {#_mint-and-_burn}
 
 Ces deux fonctions (`_mint` et `_burn`) modifient la quantité totale de jetons. Elles sont internes et il n'y a pas de fonction qui les appelle dans ce contrat, ainsi elles ne sont utiles que si vous héritez du contrat et ajoutez votre propre logique pour décider dans quelles conditions générer de nouveaux jetons ou utiliser les jetons existants.
 
@@ -706,7 +706,7 @@ Veillez à mettre à jour `_totalSupply` lorsque le nombre total de jetons chang
 
 La fonction `_burn` est presque identique à `_mint` sauf qu'elle fonctionne en sens inverse.
 
-#### Fonction \_approve {#\_approve}
+#### Fonction \_approve {#_approve}
 
 C'est la fonction qui spécifie les provisions. Notez qu'elle permet à un propriétaire de spécifier une provision supérieure au solde actuel du propriétaire. Cela ne pose pas de problème car le solde est vérifié au moment du transfert dans la mesure où il pourrait être différent du solde existant au moment de la création de la provision.
 
@@ -783,7 +783,7 @@ Cette fonction modifie la variable `_decimals` qui est utilisée pour dicter aux
 
 Il s'agit de la fonction hook à appeler pendant les transferts. Elle est ici vide, mais si vous en avez besoin pour accomplir quelque chose, vous avez juste à la remplacer.
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Pour résumer, voici quelques-unes des idées les plus importantes de ce contrat (selon moi et les vôtres pourraient ne pas être les mêmes) :
 

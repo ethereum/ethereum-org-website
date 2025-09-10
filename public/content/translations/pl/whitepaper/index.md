@@ -31,15 +31,21 @@ Oto wpis na blogu od Vitalika Buterina, założyciela Ethereum, na temat [prehis
 
 Z technicznego punktu widzenia księga kryptowalut takich jak Bitcoin może być uważana za system transformacji stanu, gdzie jest "stan" składający się ze statusu własności wszystkich istniejących bitcoinów i "funkcja transformacji stanu", która przyjmuje stan i transakcję oraz wygeneruje nowy stan, który jest rezultatem. Przykładowo w standardowym systemie bankowym stan jest bilansem, transakcja jest prośbą o przeniesienie $X z A do B, a funkcja przejścia stanu zmniejsza wartość na koncie A o $X i zwiększa wartość na koncie B o $X. Jeśli konto A ma w pierwszej kolejności mniej niż X Usd, to stan funkcja przejścia zwraca błąd. Można zatem formalnie zdefiniować:
 
+```
     ZASTOSUJ(S,TX) —>> S' lub BŁĄD
+```
 
 W systemie bankowym zdefiniowanym powyżej:
 
+```
     Zastosuj ({ Alice: $50, Bob: $50 },"wyślij $20 z Alice do Bob") = { Alice: $30, Bob: $70 }
+```
 
 Ale:
 
+```
     ZASTOSUJ({ Alice: $50, Bob: $50 }:,"wyślij 70 USD od Alicji do Roberta") = BŁĄD
+```
 
 "Stan" w Bitcoinach to kolekcja wszystkich monet (technicznie, "niewykorzystane wyniki transakcji" lub UTXO, które zostały wydobyte i jeszcze nie zostały wydane, z każdym UTXO o nazwie i właścicielu (określonym przez 20-bajtowy adres, który zasadniczo jest publicznym kluczem kryptograficznym<sup>[fn. 1](#notes)</sup>). Transakcja zawiera jedno lub więcej danych wejściowych, przy każdym wejściu zawierającym odniesienie do istniejącego UTXO i podpisu kryptograficznego wygenerowanego przez prywatny klucz powiązany z adresem właściciela, i jedno lub więcej wyjść z każdym wyjściem zawierającym nowe UTXO dodawane do stanu.
 
@@ -132,7 +138,7 @@ Ethereum ma być zaprojektowane zgodnie z następującymi zasadami:
 
 1.  **Prostota**: protokół Ethereum powinien być jak najprostszy. Nawet kosztem mniejszej efektywności przechowywania danych lub czasu <sup>[fd. 3](#notes)</sup> Średni programista powinien być w stanie śledzić i implementować całą specyfikację,<sup>[fn. 4](#notes)</sup> tak, aby w pełni wykorzystać bezprecedensowy potencjał demokratyzacji, który kryptowaluta wnosi i rozwija wizję Ethereum jako protokół, który jest otwarty dla wszystkich. Żadna optymalizacja która zwiększa złożoność nie powinna być uwzględniona, chyba że optymalizacja ta zapewnia znaczną korzyść.
 2.  **Uniwersalność**: zasadnicza część filozofii projektowej Ethereum jest taka, że Ethereum nie posiada "funkcji".<sup>[fn. 5](#notes)</sup> Zamiast tego Ethereum zapewnia wewnętrzny Skrypt Turing-complete język, który programista może użyć do budowy inteligentnej umowy lub typu transakcji, które mogą być zdefiniowane matematycznie. Chcesz wynaleźć własną finansową pochodną? Z Ethereum, możesz. Chcesz stworzyć własną walutę? Skonfiguruj jako kontrakt Ethereum. Chcesz skonfigurować całą skalę Daemona lub Skynet? Być może będziesz potrzebować kilku tysiący powiązanych umów i pamiętaj, aby je nakarmić hojnie, ale nic Cię nie powstrzymuje z Ethereum i Twoimi opuszkami palców.
-3.  **Modularność**: części protokołu Ethereum powinny być zaprojektowane tak, aby były tak modułowe i możliwe do oddzielenia. W trakcie rozwoju, naszym celem jest stworzenie programu, w którym gdybyś miał wykonać małą modyfikację protokołu w jednym miejscu, stos aplikacji nadal funkcjonowałby bez żadnych dalszych modyfikacji. Innowacje takie jak Ethash (patrz [Żółty papier załącznik](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J) lub [artykuł wiki](https://github.com/ethereum/wiki/wiki/Ethash)), zmodyfikowanych drzew Patricia ([Żółty papier](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D), [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)) i RLP ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B) [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)) powinien być i jest wdrożony jako oddzielna, funkcjonalnie wypełniona biblioteka. Jest to takie, że nawet jeśli są używane w Ethereum, nawet jeśli Ethereum nie wymaga pewnych funkcji, takie funkcje są nadal przydatne również w innych protokołach. Rozwój Ethereum powinien być maksymalnie wykonany, aby przynieść korzyści całemu ekosystemowi kryptowalut, a nie tylko samemu.
+3.  **Modularność**: części protokołu Ethereum powinny być zaprojektowane tak, aby były tak modułowe i możliwe do oddzielenia. W trakcie rozwoju, naszym celem jest stworzenie programu, w którym gdybyś miał wykonać małą modyfikację protokołu w jednym miejscu, stos aplikacji nadal funkcjonowałby bez żadnych dalszych modyfikacji. Innowacje takie jak Ethash (patrz [Żółty papier załącznik](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J) lub artykuł wiki), zmodyfikowanych drzew Patricia ([Żółty papier](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D), [wiki](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)) i RLP ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B) [wiki](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)) powinien być i jest wdrożony jako oddzielna, funkcjonalnie wypełniona biblioteka. Jest to takie, że nawet jeśli są używane w Ethereum, nawet jeśli Ethereum nie wymaga pewnych funkcji, takie funkcje są nadal przydatne również w innych protokołach. Rozwój Ethereum powinien być maksymalnie wykonany, aby przynieść korzyści całemu ekosystemowi kryptowalut, a nie tylko samemu.
 4.  **Zdolność**: szczegóły protokołu Ethereum nie są ustawione w kamieniach. Chociaż będziemy bardzo roztropni w zakresie wprowadzania zmian do konstrukcji wysokiego szczebla, na przykład z [odcięciem mapy drogowej](https://ethresear.ch/t/sharding-phase-1-spec/1407/), abstrakcyjnym wykonaniem, przy czym tylko dostępność danych zapisana jest w konsensusie. Testy obliczeniowe później w procesie opracowywania mogą prowadzić do odkrycia, że niektóre modyfikacje, np. do architektury protokołu lub do maszyny wirtualnej Ethereum (EVM) znacząco zwiększą skalowalność lub bezpieczeństwo. Jeśli znajdziemy takie możliwości, wykorzystamy je.
 5.  **Niedyskryminacja** i **niecenzura**: protokół powinien nie próbować aktywnie ograniczać lub zapobiegać określonym kategoriom stosowania. Wszystkie mechanizmy regulacyjne zawarte w protokole powinny być zaprojektowane w taki sposób, aby bezpośrednio regulować szkody i nie próbować sprzeciwiać się określonym niepożądanym aplikacjom. Programista może nawet uruchomić nieskończoną pętlę na szczycie Ethereum tak długo, jak długo będą chciały utrzymać płacenie opłaty transakcyjnej.
 
@@ -368,7 +374,7 @@ Istnieje jednak kilka istotnych odstępstw od tych założeń w rzeczywistości:
 3.  Dystrybucja energii wydobywczeh może w praktyce stać się radykalnie nieegalitarna.
 4.  Spekulanci, wrogowie polityczni i maszyny, których funkcja użyteczności obejmuje wyrządzanie szkód w sieci, już istnieją, i mogą sprytnie tworzyć kontrakty, w których ich koszt jest znacznie niższy niż koszt zapłacony przez inne weryfikujące węzły.
 
-(1) daje górnikowi tendencję do uwzględniania mniejszej liczby transakcji, a (2) wzrasta `NC`; w związku z tym te dwa efekty co najmniej częściowo znoszą się nawzajem <sup>[Jak?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) i (4) są głównymi problemami; aby je rozwiązać, tworzymy zmienną pokrywę: żaden blok nie może mieć więcej operacji niż `BLK_LIMIT_FACTOR` razy długoterminowa wykładnicza średnia ruchoma. Konkretnie:
+(1) daje górnikowi tendencję do uwzględniania mniejszej liczby transakcji, a (2) wzrasta `NC`; w związku z tym te dwa efekty co najmniej częściowo znoszą się nawzajem <sup>[Jak?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) i (4) są głównymi problemami; aby je rozwiązać, tworzymy zmienną pokrywę: żaden blok nie może mieć więcej operacji niż `BLK_LIMIT_FACTOR` razy długoterminowa wykładnicza średnia ruchoma. Konkretnie:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
@@ -492,8 +498,8 @@ Koncepcja arbitralnej funkcji przejściowej państwa wdrożonej przez protokołu
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ i agenci autonomiczni, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn na temat Inteligentnej Własności podczas Festiwalu Turinga](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Drzewa Patricia Merkle w Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Drzewa Patricia Merkle w Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd na temat sumy drzew Merkle](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _Historia białej księgi znajduje się na stronie https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_

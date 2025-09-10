@@ -1,6 +1,8 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { MdChevronRight } from "react-icons/md"
+import { ChevronRight } from "lucide-react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -11,7 +13,6 @@ import { HStack } from "./ui/flex"
 import { BaseLink, LinkProps } from "./ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
-
 export const dropdownIconContainerVariant = {
   open: {
     rotate: 90,
@@ -96,7 +97,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <MdChevronRight className="h-6 w-6 text-body-medium" />
+            <ChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </LinkContainer>
         <motion.div

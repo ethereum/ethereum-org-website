@@ -284,7 +284,7 @@ An early idea for this was [SchellingCoin](https://blog.ethereum.org/2014/03/28/
 
 While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use the schelling-point mechanism to improve accuracy of oracle data. Each Maker Oracle consists of an offchain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an onchain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset.
 
-Other examples of oracles that use Schelling point mechanisms include [Chainlink Offchain Reporting](https://docs.chain.link/docs/offchain-reporting/) and [Witnet](https://witnet.io/). In both systems, responses from oracle nodes in the peer-to-peer network are aggregated into a single aggregate value, such as a mean or median. Nodes are rewarded or punished according to the extent to which their responses align with or deviate from the aggregate value.
+Other examples of oracles that use Schelling point mechanisms include [Chainlink Offchain Reporting](https://docs.chain.link/architecture-overview/off-chain-reporting) and [Witnet](https://witnet.io/). In both systems, responses from oracle nodes in the peer-to-peer network are aggregated into a single aggregate value, such as a mean or median. Nodes are rewarded or punished according to the extent to which their responses align with or deviate from the aggregate value.
 
 Schelling point mechanisms are attractive because they minimize onchain footprint (only one transaction needs to be sent) while guaranteeing decentralization. The latter is possible because nodes must sign off on the list of submitted responses before it is fed into the algorithm that produces the mean/median value.
 
@@ -362,7 +362,7 @@ The original approach was to use pseudorandom cryptographic functions, such as `
 
 It is possible to generate the random value offchain and send it onchain, but doing so imposes high trust requirements on users. They must believe the value was truly generated via unpredictable mechanisms and wasn’t altered in transit.
 
-Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes. Another example is [API3 QRNG](https://docs.api3.org/explore/qrng/) that serves Quantum random number generation (QRNG) is a public method of Web3 RNG based on quantum phenomena, served with the courtesy of the Australian National University (ANU).
+Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes.
 
 ### Getting outcomes for events {#getting-outcomes-for-events}
 
@@ -400,8 +400,6 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts._
 
-**[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
-
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data onchain in a tamper-resistant, decentralized, and self-sustainable environment._
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
@@ -417,7 +415,6 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [Why we need decentralized oracles](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Videos**

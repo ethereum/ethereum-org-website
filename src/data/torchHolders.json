@@ -1,0 +1,62 @@
+[
+  {
+    "address": "0x88C2C3C9E64a1299e6417C24Fa2ae773c6cEa47c",
+    "name": "Joseph Lubin",
+    "role": "Co-founder of Ethereum",
+    "twitter": "https://x.com/ethereumJoseph"
+  },
+  {
+    "address": "0x11adBC1B3fd5cb5F29B0052b4AfFe725645b5e4C",
+    "name": "Audrey Tang",
+    "role": "Cyber Ambassador, 1st Digital Minister of Taiwan (2016-2024)",
+    "twitter": "https://x.com/audreyt"
+  },
+  {
+    "address": "0xcc2047a4108033Cb48727B8C69914F40cC0bBC1B",
+    "name": "Manoj Gorle",
+    "role": "Co-president 0xblocsoc, Undergrad IIT Delhi",
+    "twitter": "https://x.com/manojkgorle"
+  },
+  {
+    "address": "0x5F19021618AF1cEB5De7Ca112B505F51f813aE18",
+    "name": "Roman and Alexey Defense Fund",
+    "role": "",
+    "twitter": ""
+  },
+  {
+    "address": "0x7a16fF8270133F063aAb6C9977183D9e72835428",
+    "name": "Michael Egorov",
+    "role": "Founder of Curve Finance",
+    "twitter": "https://x.com/newmichwill"
+  },
+  {
+    "address": "0x0c004944e16e9065Da1c7dB49F9964E2a3ac8892",
+    "name": "Letícia Pires",
+    "role": "CEO Pomodoki",
+    "twitter": "https://x.com/letispires"
+  },
+  {
+    "address": "0x54bae63e59B422Dd7C047E375f051D60C37cb60F",
+    "name": "Ayodeje Ebunayo",
+    "role": "Founder of Web3Bridge",
+    "twitter": "https://x.com/Ebunayo08"
+  },
+  {
+    "address": "0xA307A15d113D9763C6fc84768AC34909438bB2EE",
+    "name": "Alex Bornyakov",
+    "role": "The Deputy Minister of Digital Transformation of Ukraine",
+    "twitter": "https://x.com/abornyakov"
+  },
+  {
+    "address": "0x648aA14e4424e0825A5cE739C8C68610e143FB79",
+    "name": "Anthony Sassano",
+    "role": "Founder of The Daily Gwei",
+    "twitter": "https://x.com/sassal0x"
+  },
+  {
+    "address": "0x36ACC9E5248f33B030d3eA3465AC1f99E55868Ec",
+    "name": "Candela Fassano",
+    "role": "Builder SEED Latam",
+    "twitter": "https://x.com/candufaz"
+  }
+]

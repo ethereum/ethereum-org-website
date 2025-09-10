@@ -70,7 +70,7 @@ La hoja de ruta es principalmente el resultado de años de trabajo de investigad
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>¿Qué era ETH2?</h4>
 
-  <p>El término "Eth2" se utilizaba comúnmente para referirse al futuro de Ethereum antes del cambio a <a href="/glossary/#pos">prueba de participación</a>, pero <strong>cayó en desuso en favor de una terminología más precisa.</strong> Originalmente, se usaba para diferenciar la red de Ethereum antes del cambio a la prueba de participación y la red luego de realizarse este cambio, o a veces para referirse a los diferentes clientes de ejecución de Ethereum (los <a href="/glossary/#execution-client">clientes de ejecución</a> a veces se denominaban clientes ETH1 y los <a href="/glossary/#consensus-client">clientes de consenso</a> a veces se denominaban clientes ETH2).</p>
+  <p>El término "Eth2" se utilizaba comúnmente para referirse al futuro de Ethereum antes del cambio a [prueba de participación](/glossary/#pos), pero <strong>cayó en desuso en favor de una terminología más precisa.</strong> Originalmente, se usaba para diferenciar la red de Ethereum antes del cambio a la prueba de participación y la red luego de realizarse este cambio, o a veces para referirse a los diferentes clientes de ejecución de Ethereum (los [clientes de ejecución](/glossary/#execution-client) a veces se denominaban clientes ETH1 y los [clientes de consenso](/glossary/#consensus-client) a veces se denominaban clientes ETH2).</p>
 
 </InfoBanner>
 
@@ -109,6 +109,7 @@ El sharding está dividiendo la cadena de bloques de Ethereum para que los subco
 
 ## ¿Busca actualizaciones técnicas específicas? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra): La bifurcación dura Praga/Electra aporta un nuevo enfoque a la abstracción de cuentas y mejora la escalabilidad, entre otras cosas.
 - [Danksharding](/roadmap/danksharding): Danksharding hace que las acumulaciones de capa 2 sean mucho más baratas para los usuarios al añadir «masas» de datos a los bloques de Ethereum.
 - [Retiradas de participación](/staking/withdrawals): la actualización de Shanghai/Capella posibilitó las retiradas de participación en Ethereum, lo que permitió a las personas desbloquear su ETH en participación.
 - [Finalidad de una sola ranura](/roadmap/single-slot-finality): en lugar de esperar quince minutos, los bloques podrían proponerse y finalizarse en la misma ranura. Esto resulta más práctico para las aplicaciones y mucho más difícil de atacar.

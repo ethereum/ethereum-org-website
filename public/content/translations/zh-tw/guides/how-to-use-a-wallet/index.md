@@ -1,5 +1,6 @@
 ---
 title: 如何使用錢包
+metaTitle: 如何使用以太坊錢包 | 逐步教學
 description: 關於如何發送、接收代幣和連接到 web3 專案的指南。
 lang: zh-tw
 ---
@@ -60,7 +61,7 @@ lang: zh-tw
 ![從錢包列表中選擇要連接的錢包](./connect2.png)
 
 5. 在你的錢包中確認並簽名以建立連接。 **簽署此訊息應不會花費任何以太幣**。
-6. 大功告成！ 開始使用應用程式。 你可在我們的[去中心化應用程式頁面](/dapps/#explore)找到許多有趣的專案。 <br />
+6. 大功告成！ 開始使用應用程式。 你可在我們的[去中心化應用程式頁面](/apps/#explore)找到許多有趣的專案。 <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>想要學習更多功能嗎？</div>

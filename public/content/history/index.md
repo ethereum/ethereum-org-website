@@ -11,9 +11,9 @@ A timeline of all the major milestones, forks, and updates to the Ethereum block
 
 <ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Forks are when major technical upgrades or changes need to be made to the network – they typically stem from <a href="/eips/">Ethereum Improvement Proposals (EIPs)</a> and change the "rules" of the protocol.
+Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
 
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. <a href="/developers/docs/nodes-and-clients/">Ethereum clients</a> must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. <a href="/developers/docs/consensus-mechanisms/">More on consensus mechanisms</a>
+When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the <a href="#dao-fork">DAO fork</a>.
 
@@ -73,15 +73,15 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2025 {#2025}
 
-### Prague-Electra ("Pectra", _in progress_) {#pectra}
+### Prague-Electra ("Pectra") {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
 
-The Prague-Electra ("Pectra") upgrade includes several improvements to the Ethereum protocol aimed at enhancing the experience for all users, layer 2 networks, stakers and node operators.
+The Prague-Electra ("Pectra") upgrade included several improvements to the Ethereum protocol aimed at enhancing the experience for all users, layer 2 networks, stakers and node operators.
 
-Staking gets an upgrade with compounding validator accounts, and improved control over staked funds using the execution withdrawal address. EIP-7251 increases the max effective balance for a single validator to 2048, improving capital efficiency for stakers. EIP-7002 allows an execution account to securely trigger validator actions, including exiting, or withdrawing portions of the funds, improving the experience for ETH stakers, while helping strengthen accountability for node operators.
+Staking got an upgrade with compounding validator accounts, and improved control over staked funds using the execution withdrawal address. EIP-7251 increased the max effective balance for a single validator to 2048, improving capital efficiency for stakers. EIP-7002 enabled an execution account to securely trigger validator actions, including exiting, or withdrawing portions of the funds, improving the experience for ETH stakers, while helping strengthen accountability for node operators.
 
-Other parts of the upgrade focus on improving the experience for regular users. EIP-7702 brings the ability for a regular non-smart-contract account ([EOA](/glossary/#eoa)) to execute code similar to a smart contract. This unlocks unbounded new functionality for traditional Ethereum accounts, such as transaction batching, gas sponsorship, alternative authentication, programmable spending controls, account recovery mechanisms and more.
+Other parts of the upgrade focused on improving the experience for regular users. EIP-7702 brought the ability for a regular non-smart-contract account ([EOA](/glossary/#eoa)) to execute code similar to a smart contract. This unlocked unbounded new functionality for traditional Ethereum accounts, such as transaction batching, gas sponsorship, alternative authentication, programmable spending controls, account recovery mechanisms and more.
 
 <ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
 
@@ -449,10 +449,10 @@ The Istanbul fork:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>allow Ethereum to work with privacy-preserving currency like Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cheaper cryptography to improve <a href="/glossary/#gas">gas</a> costs.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protects Ethereum against replay attacks by adding <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cheaper cryptography to improve [gas](/glossary/#gas) costs.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protects Ethereum against replay attacks by adding <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>optimising opcode gas prices based on consumption.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduces the cost of CallData to allow more data in blocks – good for <a href="/developers/docs/scaling/#layer-2-scaling">Layer 2 scaling</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>other opcode gas price alterations.</em></li>
 </ul>
 
@@ -510,13 +510,13 @@ The Byzantium fork:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>adds <code>REVERT</code> opcode.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>status field added to transaction receipts to indicate success or failure.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>adds elliptic curve and scalar multiplication to allow for <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adds elliptic curve and scalar multiplication to allow for <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>enables RSA signature verification.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>adds support for variable length return values.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>adds <code>STATICCALL</code> opcode, allowing non-state-changing calls to other contracts.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>changes difficulty adjustment formula.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>delays <a href="/glossary/#difficulty-bomb">difficulty bomb</a> by 1 year and reduces block reward from 5 to 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>delays [difficulty bomb](/glossary/#difficulty-bomb) by 1 year and reduces block reward from 5 to 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -581,7 +581,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 #### Summary {#dao-fork-summary}
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/learn/understanding-the-dao-attack/) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/learn/understanding-the-dao-attack/) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
 
 This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 

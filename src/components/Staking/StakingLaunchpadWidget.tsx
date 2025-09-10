@@ -1,6 +1,8 @@
-import { useState } from "react"
-import { FaTools } from "react-icons/fa"
+"use client"
 
+import { useState } from "react"
+
+import Tools from "@/components/icons/tools.svg"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
@@ -87,7 +89,7 @@ const StakingLaunchpadWidget = () => {
           variant="outline"
           className="w-full md:w-auto"
         >
-          <FaTools />{" "}
+          <Tools />{" "}
           <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
       </div>

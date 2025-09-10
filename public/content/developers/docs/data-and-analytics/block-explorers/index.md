@@ -25,7 +25,6 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
 
 ## Open source tools {#open-source-tools}
@@ -238,13 +237,12 @@ The consensus layer top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Goerli Testnet
+- [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Testnet
 - [3xpl](https://3xpl.com/ethereum) - an ad-free open-source Ethereum explorer which allows downloading its datasets
-- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Goerli Testnet
+- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Testnet
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
-- [Rantom](https://rantom.app/) - A user-friendly open-source DeFi & NFT transaction viewer for detailed insights
 - [Ethernow](https://www.ethernow.xyz/) - a real-time transaction explorer that enables you to see the Ethereum Mainnet pre-chain layer
 
 ## Further reading {#further-reading}

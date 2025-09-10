@@ -362,7 +362,7 @@ El enfoque original era usar funciones criptográficas pseudoaleatorias, como `b
 
 Es posible generar el valor aleatorio fuera de la cadena y enviarlo por la cadena, pero hacerlo impone altos requisitos de confianza a los usuarios. Deben creer que el valor se generó realmente a través de mecanismos impredecibles y no se alteró en el tránsito.
 
-Los oráculos diseñados para el cálculo fuera de la cadena resuelven este problema generando de forma segura resultados aleatorios fuera de la cadena que se transmiten por la cadena junto con pruebas criptográficas que dan fe de la imprevisibilidad del proceso. Un ejemplo es [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (función aleatoria verificable), que es un generador de números aleatorios (RNG) de equidad demostrable y a prueba de manipulaciones, útil para crear contratos inteligentes fiables para aplicaciones que dependen de resultados impredecibles. Otro ejemplo es [API3 QRNG](https://docs.api3.org/explore/qrng/), que sirve de generación de números aleatorios cuánticos (QRNG); es un método público de RNG en Web3 basado en fenómenos cuánticos, facilitado por cortesía de la Universidad Nacional de Australia (ANU).
+Los oráculos diseñados para el cálculo fuera de la cadena resuelven este problema generando de forma segura resultados aleatorios fuera de la cadena que se transmiten por la cadena junto con pruebas criptográficas que dan fe de la imprevisibilidad del proceso. Un ejemplo es [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (función aleatoria verificable), que es un generador de números aleatorios (RNG) de equidad demostrable y a prueba de manipulaciones, útil para crear contratos inteligentes fiables para aplicaciones que dependen de resultados impredecibles.
 
 ### Obtener resultados para los eventos {#getting-outcomes-for-events}
 
@@ -398,8 +398,6 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 
 **[Band Protocol:](https://bandprotocol.com/)** _el Band Protocol es una plataforma de oráculo de datos multicadena que añade y conecta datos del mundo real y API con contratos inteligentes. _
 
-**[Paralink:](https://paralink.network/)** _Paralink proporciona una plataforma de oráculos de código abierto y descentralizada para contratos inteligentes que se ejecutan en Ethereum y otras cadenas de bloques populares._
-
 **[Pyth Network:](https://pyth.network/)** _la red Pyth es una red de oráculos financieros de primera parte diseñada para publicar datos continuos del mundo real en cadena en un entorno a prueba de manipulación, descentralizado y autosostenible. _
 
 **[DAO API3:](https://www.api3.org/)** _una DAO API3 ofrece soluciones de oráculo de primera parte que ofrecen mayor transparencia, seguridad y escalabilidad de la fuente en una solución descentralizada para contratos inteligentes._
@@ -415,7 +413,6 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 - [Oráculos descentralizados: descripción detallada](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841), _Julien Thevenard_
 - [Implementación de un oráculo de cadena de bloques en Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e), _Pedro Costa_
 - [¿Por qué los contratos inteligentes no pueden hacer llamadas de API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls), _StackExchange_
-- [¿Por qué necesitamos oráculos descentralizados](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles), _Bankless_
 - [Así que quiere usar un oráculo de precios](https://samczsun.com/so-you-want-to-use-a-price-oracle/), _samczsun_
 
 **Vídeos**

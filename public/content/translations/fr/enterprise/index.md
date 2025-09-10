@@ -116,7 +116,7 @@ Voici quelques applications d'entreprises qui ont été construites sur le rése
 ### Notarisation des données {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Une agence de presse italienne combat les fausses informations et permet aux lecteurs de vérifier l'origine des informations en les enregistrant sur le réseau principal_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _Enregistre la provenance et l'historique de réparation des montres sur Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _Enregistre la provenance et l'historique de réparation des montres sur Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/) - _Une plateforme de tables de capitalisation pour les entreprises non cotées en bourse, fournie par le gouvernement norvégien_
 - [Certifaction](https://certifaction.com/) - _eSignatures valides légalement, conçues pour respecter la vie privée_
 - [EthSign](https://ethsign.xyz/) - _Enregistre les documents électroniques signés sur la blockchain Ethereum_

@@ -40,7 +40,7 @@
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 10.4,
+      "minEth": 8,
       "tokens": [
         {
           "name": "Rocket Pool ETH",
@@ -173,7 +173,7 @@
       "platforms": ["Linux"],
       "ui": ["CLI"],
       "socials": {
-        "github": "https://github.com/eth-educators/eth-docker"
+        "github": "https://github.com/ethstaker/eth-docker"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",

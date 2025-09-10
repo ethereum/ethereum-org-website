@@ -92,7 +92,7 @@ In 1977, Wyoming invented the LLC, which protects entrepreneurs and limits their
 
 ### A famous example {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
 
 ## DAO membership {#dao-membership}
 
@@ -126,7 +126,7 @@ _Typically used for decentralized development and governance of protocols and [d
 
 #### A famous example {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance. 
+[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance.
 
 ## Join / start a DAO {#join-start-a-dao}
 

@@ -1,6 +1,8 @@
-import React, { useState } from "react"
+"use client"
+
+import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { MdChevronRight } from "react-icons/md"
+import { ChevronRight } from "lucide-react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -96,7 +98,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <MdChevronRight className="h-6 w-6 text-body-medium" />
+            <ChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </LinkContainer>
         <motion.div
@@ -151,7 +153,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <MdChevronRight className="h-6 w-6 text-body-medium" />
+            <ChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </Center>
       </motion.div>
