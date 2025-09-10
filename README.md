@@ -2051,6 +2051,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/meetrick"><img src="https://avatars.githubusercontent.com/u/19239345?v=4?s=100" width="100px;" alt="Hwangjae Lee"/><br /><sub><b>Hwangjae Lee</b></sub></a><br /><a href="#translation-meetrick" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://shynur.fun"><img src="https://avatars.githubusercontent.com/u/98227472?v=4?s=100" width="100px;" alt="shynur"/><br /><sub><b>shynur</b></sub></a><br /><a href="#translation-shynur" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/David7877"><img src="https://avatars.githubusercontent.com/u/203911861?v=4?s=100" width="100px;" alt="David7877"/><br /><sub><b>David7877</b></sub></a><br /><a href="#tool-David7877" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://eneskeremaydin.com.tr"><img src="https://avatars.githubusercontent.com/u/46195766?v=4?s=100" width="100px;" alt="Enes Kerem AYDIN"/><br /><sub><b>Enes Kerem AYDIN</b></sub></a><br /><a href="#maintenance-EnesKeremAYDIN" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
