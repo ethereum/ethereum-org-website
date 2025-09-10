@@ -110,27 +110,10 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 
 #### Holesky {#holesky}
 
-The Holesky testnet will be [deprecated in September 2025](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky). Staking operators and infrastructure providers should use Hoodi for validator testing instead.
+The Holesky testnet is deprecated as of September 2025. Staking operators and infrastructure providers should use Hoodi for validator testing instead.
 
-##### Resources
-
-- [Website](https://holesky.ethpandaops.io/)
-- [GitHub](https://github.com/eth-clients/holesky)
-- [Otterscan](https://holesky.otterscan.io/)
-- [Etherscan](https://holesky.etherscan.io/)
-- [Blockscout](https://eth-holesky.blockscout.com/)
-
-##### Faucets
-
-- [Alchemy Holesky Faucet](https://www.alchemy.com/faucets/ethereum-holesky)
-- [Chain Platform Holesky Faucet](https://faucet.chainplatform.co/faucets/ethereum-holesovice/)
-- [Chainstack Holesky Faucet](https://faucet.chainstack.com/holesky-testnet-faucet)
-- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
-- [Google Cloud Web3 Holesky Faucet](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
-- [PoW Faucet](https://holesky-faucet.pk910.de/)
-- [QuickNode Holesky Faucet](https://faucet.quicknode.com/ethereum/holesky)
-
-To launch a Validator on Hoodi testnet, use [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
+- [Holesky Testnet Shutdown Announcement](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1-September-2025_
+- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
 
 ### Layer 2 testnets {#layer-2-testnets}
 
