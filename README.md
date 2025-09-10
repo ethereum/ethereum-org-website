@@ -2049,6 +2049,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vibhorkashyap"><img src="https://avatars.githubusercontent.com/u/1714110?v=4?s=100" width="100px;" alt="Vibhor Kashyap"/><br /><sub><b>Vibhor Kashyap</b></sub></a><br /><a href="#maintenance-vibhorkashyap" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/meetrick"><img src="https://avatars.githubusercontent.com/u/19239345?v=4?s=100" width="100px;" alt="Hwangjae Lee"/><br /><sub><b>Hwangjae Lee</b></sub></a><br /><a href="#translation-meetrick" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://shynur.fun"><img src="https://avatars.githubusercontent.com/u/98227472?v=4?s=100" width="100px;" alt="shynur"/><br /><sub><b>shynur</b></sub></a><br /><a href="#translation-shynur" title="Translation">🌍</a></td>
     </tr>
   </tbody>
 </table>
