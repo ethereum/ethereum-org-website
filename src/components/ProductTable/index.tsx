@@ -3,10 +3,13 @@ import { useSearchParams } from "next/navigation"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
 
-// import Filters from "@/components/ProductTable/Filters"
+import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
+import { breakpointAsNumber } from "@/lib/utils/screen"
+
+import MediaQuery from "../MediaQuery"
 import Translation from "../Translation"
 
 import List from "./List"
@@ -196,14 +199,16 @@ const ProductTable = <T extends { id: string }>({
               mobileFiltersLabel={mobileFiltersLabel}
             />
           </div>
-          <div className="hidden lg:block">
-            {/* <Filters
-              filters={filters}
-              setFilters={updateFilters}
-              resetFilters={resetFilters}
-              activeFiltersCount={activeFiltersCount}
-            /> */}
-          </div>
+          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
+            <div className="hidden lg:block">
+              <Filters
+                filters={filters}
+                setFilters={updateFilters}
+                resetFilters={resetFilters}
+                activeFiltersCount={activeFiltersCount}
+              />
+            </div>
+          </MediaQuery>
           <div className="flex-1">
             <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
               <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
