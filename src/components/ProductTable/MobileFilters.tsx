@@ -21,11 +21,9 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 interface MobileFiltersProps {
   filters: FilterOption[]
-  setFilters: (filter: FilterOption, filterIndex: number) => void
+  setFilters: (filters: FilterOption | FilterOption[]) => void
   presets: TPresetFilters
   presetFiltersCounts?: number[]
-  activePresets: number[]
-  handleSelectPreset: (index: number) => void
   dataCount: number
   activeFiltersCount: number
   mobileFiltersOpen: boolean
@@ -39,8 +37,6 @@ const MobileFilters = ({
   setFilters,
   presets,
   presetFiltersCounts,
-  activePresets,
-  handleSelectPreset,
   dataCount,
   activeFiltersCount,
   mobileFiltersOpen,
@@ -90,9 +86,9 @@ const MobileFilters = ({
           <div className="flex-1 overflow-y-auto">
             <PresetFilters
               presets={presets}
+              filters={filters}
               presetFiltersCounts={presetFiltersCounts}
-              activePresets={activePresets}
-              handleSelectPreset={handleSelectPreset}
+              setFilters={setFilters}
               showMobileSidebar={true}
             />
             <Filters

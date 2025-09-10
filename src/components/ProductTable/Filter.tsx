@@ -11,12 +11,12 @@ import {
 interface FilterProps {
   filter: FilterOption
   filterIndex: number
-  onChange: (updatedFilter: FilterOption, filterIndex: number) => void
+  onChange: (updatedFilter: FilterOption) => void
 }
 
 const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
   const handleChange = (
-    filterIndex: number,
+    _: number,
     itemIndex: number,
     newInputState: FilterInputState,
     optionIndex?: number
@@ -57,7 +57,7 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
       items: updatedItems,
     }
 
-    onChange(updatedFilter, filterIndex)
+    onChange(updatedFilter)
   }
 
   if (!filter.showFilterOption) {

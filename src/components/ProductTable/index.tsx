@@ -89,7 +89,6 @@ const ProductTable = <T extends { id: string }>({
   const searchParams = useSearchParams()
 
   const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
-  const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   const filteredData = useMemo(() => {
@@ -149,140 +148,18 @@ const ProductTable = <T extends { id: string }>({
     onResetFilters?.()
   }, [initialFilters, onResetFilters])
 
-  // Update or remove preset filters
-  const handleSelectPreset = (idx: number) => {
-    if (activePresets.includes(idx)) {
-      trackCustomEvent({
-        eventCategory: "UserPersona",
-        eventAction: `${presetFilters[idx].title}`,
-        eventName: `${presetFilters[idx].title} false`,
-      })
-      // Get filters that are true for the preset being removed
-      const presetToRemove = presetFilters[idx].presetFilters
-      const filtersToRemove = Object.keys(presetToRemove).filter(
-        (key) => presetToRemove[key]
-      )
-
-      // Filter out keys that are present in other active presets
-      const finalFiltersToRemove = filtersToRemove.filter((key) => {
-        return !activePresets
-          .filter((preset) => preset !== idx)
-          .some((preset) => presetFilters[preset].presetFilters[key])
-      })
-
-      // Set inputState of filters to false for the filters being removed
-      const updatedFilters = filters.map((filter) => ({
-        ...filter,
-        items: filter.items.map((item) => ({
-          ...item,
-          inputState: finalFiltersToRemove.includes(item.filterKey)
-            ? false
-            : item.inputState,
-          options: item.options.map((option) => ({
-            ...option,
-            inputState: finalFiltersToRemove.includes(option.filterKey)
-              ? false
-              : option.inputState,
-          })),
-        })),
-      }))
-      setFilters(updatedFilters)
-
-      setActivePresets(activePresets.filter((item) => item !== idx))
-    } else {
-      const newActivePresets = activePresets.concat(idx)
-      trackCustomEvent({
-        eventCategory: "UserPersona",
-        eventAction: `${presetFilters[idx].title}`,
-        eventName: `${presetFilters[idx].title} true`,
-      })
-      setActivePresets(newActivePresets)
-
-      // Apply the filters for the selected preset
-      const combinedPresetFilters = newActivePresets.reduce((acc, idx) => {
-        const preset = presetFilters[idx].presetFilters
-        Object.keys(preset).forEach((key) => {
-          acc[key] = acc[key] || preset[key]
-        })
-        return acc
-      }, {})
-
-      const updatedFilters = filters.map((filter) => ({
-        ...filter,
-        items: filter.items.map((item) => ({
-          ...item,
-          // Keep existing inputState if true, otherwise apply preset filter
-          inputState:
-            item.inputState ||
-            (item.ignoreFilterReset
-              ? item.inputState
-              : combinedPresetFilters[item.filterKey] || false),
-          options: item.options.map((option) => ({
-            ...option,
-            // Keep existing inputState if true, otherwise apply preset filter
-            inputState:
-              option.inputState ||
-              (option.ignoreFilterReset
-                ? option.inputState
-                : combinedPresetFilters[option.filterKey] || false),
-          })),
-        })),
-      }))
-      setFilters(updatedFilters)
-    }
-  }
-
-  // Update activePresets based on current filters
   const updateFilters = useCallback(
-    (filter: FilterOption, filterIndex: number) => {
+    (filters: FilterOption | FilterOption[]) => {
       setFilters((prevFilters) => {
-        return prevFilters.map((prevFilter, idx) => {
-          if (idx !== filterIndex) return prevFilter
+        return prevFilters.map((prevFilter) => {
+          const filter = Array.isArray(filters)
+            ? filters.find((f) => f.title === prevFilter.title)
+            : filters.title === prevFilter.title
+              ? filters
+              : prevFilter
+          if (!filter) return prevFilter
           return filter
         })
-      })
-
-      const currentFilters = {}
-
-      filters.forEach((filter) => {
-        filter.items.forEach((item) => {
-          if (item.inputState === true) {
-            currentFilters[item.filterKey] = item.inputState
-          }
-
-          if (item.options && item.options.length > 0) {
-            item.options.forEach((option) => {
-              if (option.inputState === true) {
-                currentFilters[option.filterKey] = option.inputState
-              }
-            })
-          }
-        })
-      })
-
-      const presetsToApply = presetFilters.reduce<number[]>(
-        (acc, preset, idx) => {
-          const presetFilters = preset.presetFilters
-          const activePresetKeys = Object.keys(presetFilters).filter(
-            (key) => presetFilters[key]
-          )
-          const allItemsInCurrentFilters = activePresetKeys.every(
-            (key) => currentFilters[key] !== undefined
-          )
-
-          if (allItemsInCurrentFilters) {
-            acc.push(idx)
-          }
-          return acc
-        },
-        []
-      )
-
-      setActivePresets((prevActivePresets) => {
-        const newActivePresets = [
-          ...new Set([...prevActivePresets, ...presetsToApply]),
-        ]
-        return newActivePresets.filter((idx) => presetsToApply.includes(idx))
       })
     },
     []
@@ -349,8 +226,8 @@ const ProductTable = <T extends { id: string }>({
       {presetFilters.length ? (
         <PresetFilters
           presets={presetFilters}
-          activePresets={activePresets}
-          handleSelectPreset={handleSelectPreset}
+          filters={filters}
+          setFilters={updateFilters}
           presetFiltersCounts={presetFiltersCounts}
         />
       ) : (
@@ -364,8 +241,6 @@ const ProductTable = <T extends { id: string }>({
               setFilters={updateFilters}
               presets={presetFilters}
               presetFiltersCounts={presetFiltersCounts}
-              activePresets={activePresets}
-              handleSelectPreset={handleSelectPreset}
               dataCount={filteredData.length}
               activeFiltersCount={activeFiltersCount}
               mobileFiltersOpen={mobileFiltersOpen}

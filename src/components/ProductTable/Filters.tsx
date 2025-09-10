@@ -12,7 +12,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 interface PresetFiltersProps {
   filters: FilterOption[]
   activeFiltersCount: number
-  setFilters: (filter: FilterOption, filterIndex: number) => void
+  setFilters: (filter: FilterOption) => void
   resetFilters: () => void
 }
 
