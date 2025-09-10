@@ -11,7 +11,7 @@ Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because
 
 A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Conversely, there is no way to create two different states with the same root hash, and any attempt to modify state with different values will result in a different state root hash. Theoretically, this structure provides the 'holy grail' of `O(log(n))` efficiency for inserts, lookups and deletes.
 
-In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
+In the near future, Ethereum plans to migrate to a [Verkle Tree](/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
 
 ## Prerequisites {#prerequisites}
 
@@ -202,7 +202,7 @@ From a block header there are 3 roots from 3 of these tries.
 
 ### State Trie {#state-trie}
 
-There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
+There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an Ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
 
 ### Storage Trie {#storage-trie}
 

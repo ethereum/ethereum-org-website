@@ -100,7 +100,6 @@ L'ecosistema Ethereum té com a missió aportar fons a béns públics i projecte
 Les «DAO» són organitzacions autònomes descentralitzades. Aquests grups aprofiten la tecnologia Ethereum per facilitar l'organització i la col·laboració. Per exemple, per controlar la pertinença, votar les propostes o gestionar els actius grupals. Com que les DAO són encara experimentals, us ofereixen oportunitats de trobar grups amb els quals us pugueu identificar, trobar col·laboradors i augmentar el vostre impacte dins la comunitat Ethereum. [Més informació sobre les DAO](/dao/)
 
 - [LexDAO](https://lexdao.org)[@lex_DAO](https://twitter.com/lex_DAO) - _Enginyeria legal_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Comunitat artística_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubadora DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [ @VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Inversions en projectes criptogràfics prellavor_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mecànica del joc per a la vida real MMORPG_

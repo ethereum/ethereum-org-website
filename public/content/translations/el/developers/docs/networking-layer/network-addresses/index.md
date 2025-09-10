@@ -36,5 +36,4 @@ sidebarDepth: 2
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [EIP-778: Εγγραφές Κόμβων Ethereum (ENRs)](https://eips.ethereum.org/EIPS/eip-778)
-- [Διευθύνσεις δικτύου στο Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
 - [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

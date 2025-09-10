@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting additions, updates, or deletions of quiz content, make sure you've read our [contributing guidelines for quizzes](https://ethereum.org/en/contributing/quizzes/).
+        Before suggesting additions, updates, or deletions of quiz content, make sure you've read our [contributing guidelines for quizzes](https://ethereum.org/contributing/quizzes/).
   - type: input
     id: page
     attributes:

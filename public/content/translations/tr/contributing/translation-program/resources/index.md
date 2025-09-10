@@ -17,14 +17,13 @@ Tercüme toplulukları ve güncellemelerinin yanı sıra, ethereum.org tercüman
 
 ## Araçlar {#tools}
 
-- [Microsoft Dil Portalı](https://www.microsoft.com/en-us/language) _– teknik terimlerin standart çevirilerini bulmak ve kontrol etmek için kullanışlıdır_
 - [Linguee](https://www.linguee.com/) _– kelime veya kelime öbeği ile arama yapmayı sağlayan çeviriler ve sözlükler için arama motoru_
 - [Proz terim arama](https://www.proz.com/search/) _– özel terimler için çeviri sözlükleri ve sözlükler veritabanı_
 - [Eurotermbank](https://www.eurotermbank.com/) _– 42 dilde Avrupa terminolojisi koleksiyonları_
 
 ## Topluluklar {#communities}
 
-- [Dile özgü Discord tercüme grupları](/discord/) _– ethereum.org tercümanlarını Tercüme Gruplarına bağlama amaçlı bir girişim_
+- [Dile özgü Discord tercüme grupları](https://discord.gg/ethereum-org) _– ethereum.org tercümanlarını Tercüme Gruplarına bağlama amaçlı bir girişim_
 - [Çince çevirmenler grubu](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– Çince çevirmenler arasında daha kolay koordinasyon için fikir sayfası_
 
 ## En son güncellemeler {#latest-updates}
@@ -38,7 +37,7 @@ En son Çeviri Programı ilerlemesinden haberdar olmak için [Ethereum Foundatio
 
 ## Çevirmenler için çalışma saatleri {#office-hours}
 
-Çevirmenler için çalışma saatlerimiz, her ayın ikinci Çarşamba günüdür. Bunlar, tam saatleri ve ek ayrıntıları da bulabileceğiniz [ethereum.org Discord](/discord/)'daki #office-hours ses kanalında düzenlenmektedir.
+Çevirmenler için çalışma saatlerimiz, her ayın ikinci Çarşamba günüdür. Bunlar, tam saatleri ve ek ayrıntıları da bulabileceğiniz [ethereum.org Discord](https://discord.gg/ethereum-org)'daki #office-hours ses kanalında düzenlenmektedir.
 
 Ofis saatleri tercümanlarımızın tercüme süreci hakkında soru sormalarına, program hakkında geri dönüş sağlamalarına, fikirlerini paylaşmalarına veya ethereum.org ana ekibiyle mesajlaşmalarına olanak sağlar. Son olarak, bu çağrıları Çeviri Programı ile ilgili son gelişmeleri iletmek ve önemli ipuçlarını ve talimatları katkıda bulunanlarla paylaşmak için kullanmak istiyoruz.
 

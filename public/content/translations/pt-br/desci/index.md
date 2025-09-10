@@ -95,7 +95,6 @@ Explore projetos e junte-se à comunidade DeSci.
 - [Molecule: financie e obtenha financiamento para seus projetos de pesquisa](https://www.molecule.xyz/)
 - [Virotada: receba financiamento por meio de acordos de pesquisa patrocinados para pesquisas sobre longevidade](https://www.vitadao.com/)
 - [ResearchHub: publique um resultado científico e converse com colegas](https://www.researchhub.com/)
-- [LabDAO: dobre uma proteína in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://www.dclimate.net/)
 - [DeSci Foundation: construtor de ferramentas de publicação DeSci](https://descifoundation.org/)
 - [DeSci.World: balcão único para os usuários visualizarem e interagirem com a ciência descentralizada](https://desci.world)
@@ -126,7 +125,7 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [DeSci: O futuro da pesquisa por Samuel Azinhoso](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financiamento de ciência (Epílogo: DeSci e novas criptoprimitivas) por Nadia](https://nadia.xyz/science-funding)
 - [A descentralização está perturbando o desenvolvimento de medicamentos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [O que é DeSci – Ciência Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [O que é DeSci – Ciência Descentralizada?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vídeos {#videos}
 

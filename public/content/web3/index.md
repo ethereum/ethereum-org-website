@@ -145,7 +145,7 @@ We are only at the beginning of creating a better Web with Web3, but as we conti
 
 - [Get a wallet](/wallets/)
 - [Find a community](/community/)
-- [Explore Web3 applications](/dapps/)
+- [Explore Web3 applications](/apps/)
 - [Join a DAO](/dao/)
 - [Build on Web3](/developers/)
 

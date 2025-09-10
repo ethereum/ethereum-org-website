@@ -38,14 +38,14 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         />
         <div
           className={cn(
-            "duration-250 transform transition-all",
+            "transform overflow-hidden transition-all duration-200",
             isExpanded ? "scale-100 opacity-100" : "scale-95 opacity-0"
           )}
         >
           <span
             className={cn(
-              "line-clamp-2 hidden h-full items-center font-bold leading-5 text-white",
-              isExpanded && "lg:flex"
+              "line-clamp-2 h-full items-center whitespace-nowrap font-bold leading-5 text-white",
+              isExpanded ? "lg:flex" : "hidden"
             )}
           >
             {t("feedback-widget-prompt")}

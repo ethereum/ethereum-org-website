@@ -3,9 +3,11 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
+import BigNumber from "@/components/BigNumber"
 import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
+import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -61,6 +63,50 @@ const Scroller = ({
   )
 }
 
+const WhyGrid = () => {
+  const items = [
+    {
+      heading: "Money you can program",
+      description:
+        "Write code that defines how value moves, when, and to whom. No banks, no intermediaries, just logic you define.",
+    },
+    {
+      heading: "Future-proof skills",
+      description:
+        "Learn the building blocks of the next internet. The tech might evolve, but the principles of web3 are here to stay.",
+    },
+    {
+      heading: "Censorship resistance",
+      description:
+        "Build projects and commerce that can't be silenced by governments, corporations, or algorithms. If it matters, it stays online.",
+    },
+    {
+      heading: "Digital sovereignty",
+      description:
+        "Own your identity, assets, and creations online without relying on platforms that can delete you.",
+    },
+  ]
+
+  return (
+    <div
+      className={cn(
+        "rounded-4xl border border-accent-c/20",
+        "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
+        "bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+      )}
+    >
+      {items.map(({ heading, description }) => (
+        <div className="flex gap-1.5" key={heading}>
+          <CheckCircle />
+          <div className="space-y-1">
+            <h3 className="text-lg">{heading}</h3>
+            <p className="text-body-medium">{description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 const DevelopersPage = async ({
   params,
 }: {
@@ -116,6 +162,40 @@ const DevelopersPage = async ({
           <div className="-mx-8 md:hidden">
             <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
           </div>
+        </Section>
+
+        <Section
+          id="why"
+          className={cn(
+            "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
+            "-mx-8 w-screen max-w-screen-2xl items-center bg-background-highlight px-8 py-10 md:py-20"
+          )}
+        >
+          <div className="space-y-4">
+            <h2>{t("page-developers-why-title")}</h2>
+            <p>{t("page-developers-why-subtitle")}</p>
+            <div className="flex flex-wrap gap-x-6 md:gap-x-8">
+              <BigNumber
+                variant="light"
+                value="$93 - 169K"
+                sourceName="Glassdoor"
+                sourceUrl="https://www.glassdoor.com/Salaries/developer-salary-SRCH_KO0%2C9.htm"
+                lastUpdated="2025-04-10T12:00:00Z"
+              >
+                {t("page-developers-why-avg-salary-dev")}
+              </BigNumber>
+              <BigNumber
+                variant="light"
+                value="$80 - 255K"
+                sourceName="Web3 Jobs"
+                sourceUrl="https://web3.career/web3-salaries/united-states"
+                lastUpdated="2025-08-01T12:00:00Z"
+              >
+                {t("page-developers-why-avg-salary-blockchain")}
+              </BigNumber>
+            </div>
+          </div>
+          <WhyGrid />
         </Section>
 
         <Section

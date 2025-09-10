@@ -76,13 +76,37 @@ Hoodi is a testnet for testing validating and staking. The Hoodi network is open
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
-- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 - [PoW Faucet](https://hoodi-faucet.pk910.de/)
+
+#### Ephemery {#ephemery}
+
+Ephemery is a unique kind of testnet that fully resets every month. The execution and consensus state reverts back to genesis every 28 days, which means anything that happens on the testnet is ephemeral. This makes it ideal for a short term testing, fast node bootstrap and 'hello world' kind of applications that don't need permanence. 
+
+- Always fresh state, short term testing of validators and apps
+- Includes only basic set of contracts
+- Open validator set and easy to access large amounts of funds
+- Smallest node requirements and quickest sync, &lt;5GB on average
+
+##### Resources
+
+- [Website](https://ephemery.dev/)
+- [Github]( https://github.com/ephemery-testnet/ephemery-resources)
+- [Community chat](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [Beacon explorer](https://beaconlight.ephemery.dev/)
+- [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Launchpad]( https://launchpad.ephemery.dev/)
+
+#### Faucets
+
+- [Bordel Faucet](https://faucet.bordel.wtf/)
+- [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
 
 #### Holesky {#holesky}
 

@@ -46,7 +46,7 @@ The _create-eth-app_ in particular is making use of the new [hooks effects](http
 
 ### ethers.js {#ethersjs}
 
-While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
+While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs.ethers.org/v5/) which is almost out of beta.
 
 ### The Graph {#the-graph}
 

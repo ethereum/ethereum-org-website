@@ -23,7 +23,7 @@ Veel gedecentraliseerde sociale netwerken bestaan als alternatieven voor populai
 
 ### Hoe werken gedecentraliseerde sociale netwerken? {#decentralized-social-networks-overview}
 
-Gedecentraliseerde sociale netwerken zijn een klasse van [gedecentraliseerde applicaties (dapps)](/dapps/) - applicaties aangedreven door [slimme contracten](/glossary/#smart-contract) geïmplementeerd op de blockchain. De contractcode dient als de backend voor deze apps en definieert hun bedrijfslogica.
+Gedecentraliseerde sociale netwerken zijn een klasse van [gedecentraliseerde applicaties (dapps)](/apps/) - applicaties aangedreven door [slimme contracten](/glossary/#smart-contract) geïmplementeerd op de blockchain. De contractcode dient als de backend voor deze apps en definieert hun bedrijfslogica.
 
 Traditionele sociale mediaplatforms vertrouwen op databases voor het opslaan van gebruikersinformatie, programmacode en andere vormen van gegevens. Dit creëert echter zwakke punten en brengt een aanzienlijk risico met zich mee. Een berucht voorbeeld hiervan was [vorig jaar het uren offline gaan](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) van de servers van Facebook, wat verhinderde dat de gebruikers het platform konden gebruiken.
 

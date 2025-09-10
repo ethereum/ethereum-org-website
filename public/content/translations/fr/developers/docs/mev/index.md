@@ -12,7 +12,7 @@ La valeur extractible maximale a été appliquée pour la première fois dans le
 
 ## Prérequis {#prerequisites}
 
-Assurez-vous d'être à l'aise avec les concepts de [transactions](/developers/docs/transactions/), [blocs](/developers/docs/blocks/), [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) ainsi que [de gaz](/developers/docs/gas/). Se familiariser avec les [applications décentralisées (dApps)](/dapps/) et la [finance décentralisée (DeFi)](/defi/) peut également être utile.
+Assurez-vous d'être à l'aise avec les concepts de [transactions](/developers/docs/transactions/), [blocs](/developers/docs/blocks/), [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) ainsi que [de gaz](/developers/docs/gas/). Se familiariser avec les [applications décentralisées (dApps)](/apps/) et la [finance décentralisée (DeFi)](/defi/) peut également être utile.
 
 ## Extraction MEV {#mev-extraction}
 
@@ -204,7 +204,6 @@ Certains projets, tels que MEV Boost, utilisent l'API pour les builders dans le 
 
 - [Docs Flashbots](https://docs.flashbots.net/)
 - [GitHub Flashbots](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Tableau de bord et explorateur de transactions en direct pour les transactions MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Traqueur en temps réel avec statistiques pour les relais MEV-Boost et les constructeurs de blocs_
 
 ## Complément d'information {#further-reading}

@@ -62,7 +62,6 @@ Ethereum എന്റർപ്രൈസ് സൗഹൃദമാക്കുന�
 ### സ്വകാര്യത {#privacy}
 
 - [ഏണസ്റ്റ് & യങ്ങിന്റെ ‘നൈറ്റ്ഫാൾ’](https://github.com/EYBlockchain/nightfall) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on) _
-- [പെഗാസിസിന്റെ ഓറിയോൺ](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/) _
 - [കോറം ടെസ്സെറ](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works) _
 
 ### സുരക്ഷ {#security}
@@ -81,7 +80,6 @@ Ethereum എന്റർപ്രൈസ് സൗഹൃദമാക്കുന�
 - [ഇൻഫ്യൂറ പ്രഭാഷണം](https://community.infura.io/)
 - [കാലിഡോ ട്വിറ്റർ](https://twitter.com/Kaleido_io)
 - [ഹൈപ്പർലെഡ്ജർ റോക്കറ്റ്ചാറ്റ്](https://chat.hyperledger.org/)
-- [ഹൈപ്പർലെഡ്ജർ റോക്കറ്റ്ചാറ്റ് (ബെസു ചാനൽ)](https://chat.hyperledger.org/channel/besu)
 - [ഹൈപ്പർലെഡ്ജർ റോക്കറ്റ്ചാറ്റ് (ബറോ ചാനൽ)](https://chat.hyperledger.org/channel/burrow)
 - [പെഗാസിസ് ട്വിറ്റർ](https://twitter.com/Kaleido_io)
 - [കോറം സ്ലാക്ക് ചാനൽ](http://bit.ly/quorum-slack)

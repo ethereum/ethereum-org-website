@@ -12,7 +12,7 @@ Maksimum çıkarılabilir değer, ilk olarak [iş ispatı](/developers/docs/cons
 
 ## Ön koşullar {#prerequisites}
 
-[İşlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos) ve [gaz](/developers/docs/gas/) hakkında bilgi sahibi olduğunuzdan emin olun. [Merkeziyetsiz uygulamalar](/dapps/) ve [DeFi](/defi/) ile aşina olmak da faydalı olabilir.
+[İşlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos) ve [gaz](/developers/docs/gas/) hakkında bilgi sahibi olduğunuzdan emin olun. [Merkeziyetsiz uygulamalar](/apps/) ve [DeFi](/defi/) ile aşina olmak da faydalı olabilir.
 
 ## MEV çıkarma {#mev-extraction}
 
@@ -204,7 +204,6 @@ MEV Boost gibi bazı projeler, genelleştirilmiş öncü/sandviç saldırıları
 
 - [Flashbot belgeleri](https://docs.flashbots.net/)
 - [Flashbotlar GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _MEV işlemleri için gösterge paneli ve canlı işlem gezgini_
 - [mevboost.org](https://www.mevboost.org/)-_ MEV-Boost röle ve blok inşacıları için gerçek zamanlı istatistiklere sahip izleyici_
 
 ## Daha fazla bilgi {#further-reading}
