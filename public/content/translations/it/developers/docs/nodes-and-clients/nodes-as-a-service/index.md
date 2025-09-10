@@ -156,19 +156,6 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Tariffe orarie
     - Assistenza diretta 24 ore su 24, 7 giorni su 7
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Documenti](https://docs.figment.io/)
-  - Caratteristiche
-    - Opzione di livello gratuito con 3.000.000 richieste/mese
-    - RPC ed endpoint WSS
-    - Nodi completi e d'archivio dedicati
-    - Ridimensionamento Automatico (sconti per volumi)
-    - Dati di archiviazione gratuiti
-    - Analisi del servizio
-    - Dashboard
-    - Assistenza diretta 24 ore su 24, 7 giorni su 7
-    - Pagamento in criptovalute (Enterprise)
-
 - [**DRPC**](https://drpc.org/)
   - [Documentazione](https://docs.drpc.org/)
   - Caratteristiche

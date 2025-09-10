@@ -45,7 +45,6 @@ Aflaţi cum să utilizaţi [Web3J](https://github.com/web3j/web3j) și Hyperledg
 
 ## Proiecte și instrumente Java {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon) (client Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (bibliotecă de interacțiuni cu clienți Ethereum)](https://github.com/web3j/web3j)
 - [Eventeum (monitorizare de evenimente)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (instrumente de dezvoltare IPFS)](https://github.com/ConsenSys/mahuta)
@@ -56,4 +55,3 @@ Căutaţi şi alte resurse? Accesaţi [ethereum.org/developers.](/developers/)
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Chat Besu HL](https://chat.hyperledger.org/channel/besu)

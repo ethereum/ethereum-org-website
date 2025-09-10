@@ -23,7 +23,7 @@ Viele dezentrale soziale Netzwerke existieren als Alternative zu schon etabliert
 
 ### Wie funktionieren dezentralisierte soziale Netzwerke? {#decentralized-social-networks-overview}
 
-Dezentralisierte soziale Netzwerke sind eine Art von [dezentralisierten Anwendungen (dapps)](/dapps/), die mit [Smart Contracts](/glossary/#smart-contract) betrieben werden und auf der Blockchain laufen. Der Vertragscode dient als Backend für diese Apps und definiert ihre Geschäftslogik.
+Dezentralisierte soziale Netzwerke sind eine Art von [dezentralisierten Anwendungen (dapps)](/apps/), die mit [Smart Contracts](/glossary/#smart-contract) betrieben werden und auf der Blockchain laufen. Der Vertragscode dient als Backend für diese Apps und definiert ihre Geschäftslogik.
 
 Traditionelle Social-Media-Plattformen basieren auf Datenbanken, um Benutzerinformationen, Programm-Code und andere Datenformen zu speichern. Dies jedoch führt zu immensen Risiken, da diese Systeme Einzelfehlerpunkte haben. Zum Beispiel sind Facebooks Server berüchtigt dafür, im Oktober 2021 [stundenlang offline gegangen zu sein](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact), was Nutzer von der Plattform abschnitt.
 

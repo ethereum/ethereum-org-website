@@ -20,7 +20,7 @@ Begrijpen van de gedecentraliseerde aard van Ethereum is van vitaal belang, omda
   Leer de Ethereum-basisprincipes
 </DocLink>
 
-Ondanks het gebrek aan officiële ondersteuning, helpen veel groepen, gemeenschappen en projecten in het Ethereum-ecosysteem, waardoor u veel nuttige informatie en bronnen kunt vinden op deze pagina. Heeft u nog vragen? Neem deel aan de [ethereum.org Discord](/discord/) en we zullen proberen te helpen.
+Ondanks het gebrek aan officiële ondersteuning, helpen veel groepen, gemeenschappen en projecten in het Ethereum-ecosysteem, waardoor u veel nuttige informatie en bronnen kunt vinden op deze pagina. Heeft u nog vragen? Neem deel aan de [ethereum.org Discord](https://discord.gg/ethereum-org) en we zullen proberen te helpen.
 
 ## Ondersteuning voor portemonnee {#wallet-support}
 
@@ -40,7 +40,6 @@ Bouwen kan moeilijk zijn. Hier zijn enkele ontwikkelingsgerichte ruimtes met erv
 
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 
 U kunt ook documentatie en ontwikkelgidsen vinden in onze sectie met [bronnen voor Ethereum-ontwikkelaars](/developers/).

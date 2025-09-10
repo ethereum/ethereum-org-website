@@ -8,7 +8,6 @@ import {
 
 import { Lang } from "@/lib/types"
 
-import ABTestWrapper from "@/components/AB/TestWrapper"
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
@@ -597,29 +596,19 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             imageWidth={600}
             alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
           >
-            <ABTestWrapper
-              testKey="AppTest"
-              variants={[
-                <div key="two-buttons" className="flex flex-wrap gap-4">
-                  <ButtonLink href="/dapps/">
-                    {t("page-stablecoins-explore-dapps")}
-                  </ButtonLink>
-                  <ButtonLink
-                    variant="outline"
-                    href="/defi/"
-                    className="whitespace-normal"
-                    isSecondary
-                  >
-                    {t("page-stablecoins-more-defi-button")}
-                  </ButtonLink>
-                </div>,
-                <div key="single-button" className="flex flex-wrap gap-4">
-                  <ButtonLink href="/dapps/">
-                    {t("page-stablecoins-explore-apps")}
-                  </ButtonLink>
-                </div>,
-              ]}
-            />
+            <div key="two-buttons" className="flex flex-wrap gap-4">
+              <ButtonLink href="/apps/">
+                {t("page-stablecoins-explore-dapps")}
+              </ButtonLink>
+              <ButtonLink
+                variant="outline"
+                href="/defi/"
+                className="whitespace-normal"
+                isSecondary
+              >
+                {t("page-stablecoins-more-defi-button")}
+              </ButtonLink>
+            </div>
           </CalloutBannerSSR>
           <h2>{t("page-stablecoins-save-stablecoins")}</h2>
           <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
@@ -739,7 +728,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             )}
           >
             <ProductList
-              actionLabel={t("page-dapps-ready-button")}
+              actionLabel={t("page-apps-ready-button")}
               category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />

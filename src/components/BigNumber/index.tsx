@@ -1,4 +1,5 @@
 import { type ReactNode } from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 import { Info } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
@@ -15,7 +16,43 @@ type BigNumberProps = {
   sourceUrl?: string
   lastUpdated?: number | string
   className?: string
-}
+} & VariantProps<typeof bigNumberVariants>
+
+const bigNumberVariants = cva("flex shrink-0 flex-col self-stretch py-8", {
+  variants: {
+    variant: {
+      default: "flex-1",
+      light: "",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+const valueVariants = cva("font-bold text-4xl", {
+  variants: {
+    variant: {
+      default: "sm:text-5xl",
+      light: "",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+const childrenVariants = cva("text-sm", {
+  variants: {
+    variant: {
+      default: "",
+      light: "text-body-medium",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
 
 const BigNumber = async ({
   children,
@@ -24,6 +61,7 @@ const BigNumber = async ({
   sourceUrl,
   lastUpdated,
   className,
+  variant,
 }: BigNumberProps) => {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "common" })
@@ -37,17 +75,14 @@ const BigNumber = async ({
   return (
     <div
       data-label="big-number"
-      className={cn(
-        "flex flex-1 shrink-0 flex-col self-stretch py-8",
-        className
-      )}
+      className={cn(bigNumberVariants({ variant }), className)}
     >
       {value ? (
         <>
-          <div data-label="value" className="text-4xl font-bold sm:text-5xl">
+          <div data-label="value" className={valueVariants({ variant })}>
             {value}
           </div>
-          <div className="text-sm">
+          <div className={childrenVariants({ variant })}>
             {children}
             {sourceName && sourceUrl && (
               <>

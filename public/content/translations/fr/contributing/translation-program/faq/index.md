@@ -56,7 +56,7 @@ Si vous voulez signaler une chaîne particulière qui a besoin d'être examinée
 
 ## Qu'est-ce que la mémoire de traduction (TM) ? {#translation-memory}
 
-La mémoire de traduction (TM, de l'anglais Translation Memory) est une fonctionnalité de Crowdin qui stocke toutes les chaînes précédemment traduites sur [ethereum.org](http://ethereum.org/). Lorsqu'une chaîne de caractères est traduite, elle est automatiquement enregistrée dans notre TM du projet. Cela peut être un outil utile pour vous aider à gagner du temps !
+La mémoire de traduction (TM, de l'anglais Translation Memory) est une fonctionnalité de Crowdin qui stocke toutes les chaînes précédemment traduites sur [ethereum.org](https://ethereum.org/). Lorsqu'une chaîne de caractères est traduite, elle est automatiquement enregistrée dans notre TM du projet. Cela peut être un outil utile pour vous aider à gagner du temps !
 
 - Regardez la section « TM and MT Suggestions » (Suggestions de la mémoire de traduction et de traduction automatique) et vous verrez comment les autres traducteurs ont traduit la phrase ou une phrase similaire. Si vous trouvez une suggestion qui correspond, n'hésitez pas à l'utiliser en cliquant dessus.
 - S'il n'y a rien dans la liste, vous pouvez rechercher dans la TM des traductions faites précédemment et les réutiliser pour assurer la cohérence.

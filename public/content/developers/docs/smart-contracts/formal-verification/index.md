@@ -252,10 +252,10 @@ Also, it is not always possible for program verifiers to determine if a property
 - [GitHub](https://github.com/isabelle-prover)
 - [Documentation](https://isabelle.in.tum.de/documentation.html)
 
-**Coq** - _Coq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
+**Rocq** - _Rocq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
 
-- [GitHub](https://github.com/coq/coq)
-- [Documentation](https://coq.github.io/doc/v8.13/refman/index.html)
+- [GitHub](https://github.com/rocq-prover/rocq)
+- [Documentation](https://rocq-prover.org/docs)
 
 ### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 

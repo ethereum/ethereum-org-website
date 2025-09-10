@@ -8,7 +8,7 @@ Smart Contracts sind äußerst flexibel und in der Lage, große Mengen an Werten
 
 Öffentliche Blockchains wie Ethereum erschweren das Problem der Sicherung von Smart Contracts zusätzlich. Der Code des veröffentlichten Vertrags _kann in der Regel _ nicht geändert werden, um Sicherheitslücken zu schließen, während die aus Smart Contracts gestohlenen Vermögenswerte aufgrund der Unveränderlichkeit extrem schwer nachzuverfolgen und meist nicht wiederherzustellen sind.
 
-Obwohl die Zahlen variieren, wird geschätzt, dass der Gesamtbetrag des gestohlenen oder verlorenen Werts aufgrund von Sicherheitsmängeln in Smart Contracts weit über 1 Milliarde US-Dollar beträgt. Dies beinhaltet hochkarätige Vorfälle, wie den [DAO-Hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 Mio. ETH gestohlen, nach heutigen Preisen über 1 Milliarde US-Dollar wert), den [Parity Multi-Sig Wallet-Hack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 Mio. US-Dollar von Hackern verloren) und das [Problem mit den eingefrorenen Parity-Wallets](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (über 300 Mio. US-Dollar in ETH gesperrt).
+Obwohl die Zahlen variieren, wird geschätzt, dass der Gesamtbetrag des gestohlenen oder verlorenen Werts aufgrund von Sicherheitsmängeln in Smart Contracts weit über 1 Milliarde US-Dollar beträgt. Dies beinhaltet hochkarätige Vorfälle, wie den [DAO-Hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 Mio. ETH gestohlen, nach heutigen Preisen über 1 Milliarde US-Dollar wert), den [Parity Multi-Sig Wallet-Hack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (30 Mio. US-Dollar von Hackern verloren) und das [Problem mit den eingefrorenen Parity-Wallets](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (über 300 Mio. US-Dollar in ETH gesperrt).
 
 Die oben genannten Probleme machen es für Entwickler zwingend erforderlich, in die Entwicklung sicherer, robuster und widerstandsfähiger Smart Contracts zu investieren. Die Sicherheit von Smart Contracts ist eine ernste Angelegenheit, die jeder Entwickler lernen sollte. In diesem Ratgeber werden Sicherheitsüberlegungen für Ethereum-Entwickler behandelt und Ressourcen zur Verbesserung der Smart Contract-Sicherheit vorgestellt.
 
@@ -223,7 +223,7 @@ Weitere Informationen zu [der Gestaltung sicherer Governance-Systeme](https://bl
 
 Traditionelle Softwareentwickler sind mit dem KISS-Prinzip („Keep it simple, stupid“) vertraut, das davon abrät, unnötige Komplexität in das Softwaredesign einzubringen. Dies entspricht der seit langem vertretenen Auffassung, dass „komplexe Systeme auf komplexe Weise versagen“ und anfälliger für kostspielige Fehler sind.
 
-Beim Schreiben von Smart Contracts ist es besonders wichtig, die Inhalte einfach zu halten, da Smart Contracts potenziell große Wertbeträge kontrollieren. Ein Tipp zur Vereinfachung beim Schreiben von intelligenten Verträgen ist die Wiederverwendung bestehender Bibliotheken, wie [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), wo immer möglich. Da diese Bibliotheken von den Entwicklern ausgiebig geprüft und getestet wurden, verringert sich durch ihre Verwendung die Wahrscheinlichkeit, dass durch das Schreiben neuer Funktionen von Grund auf Fehler eingeführt werden.
+Beim Schreiben von Smart Contracts ist es besonders wichtig, die Inhalte einfach zu halten, da Smart Contracts potenziell große Wertbeträge kontrollieren. Ein Tipp zur Vereinfachung beim Schreiben von intelligenten Verträgen ist die Wiederverwendung bestehender Bibliotheken, wie [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), wo immer möglich. Da diese Bibliotheken von den Entwicklern ausgiebig geprüft und getestet wurden, verringert sich durch ihre Verwendung die Wahrscheinlichkeit, dass durch das Schreiben neuer Funktionen von Grund auf Fehler eingeführt werden.
 
 Ein weiterer allgemeiner Ratschlag lautet, kleine Funktionen zu schreiben und Verträge modulartig zu halten, indem die Logik auf mehrere Verträge aufgeteilt wird. Das Schreiben von einfacherem Code verringert nicht nur die Angriffsfläche in einem Smart Contract, sondern macht es auch einfacher, Rückschlüsse auf die Korrektheit des Gesamtsystems zu ziehen und mögliche Planungsfehler frühzeitig zu erkennen.
 
@@ -304,7 +304,7 @@ Hier ist nichts verkehrt, außer dass `Attacker` eine weitere Funktion hat, die 
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Da das Guthaben des Aufrufers nicht auf 0 gesetzt wird, bevor die Funktion ausgeführt wurde, können nachfolgende Aufrufe erfolgreich sein und dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann genutzt werden, um einem Smart Contract das Kapital zu entziehen, wie es beim [2016 DAO-Hack](https://www.coindesk.com/learn/understanding-the-dao-attack) geschehen ist. Wiederholungsangriffe sind auch heute noch ein kritisches Thema für Smart Contracts, wie [öffentliche Auflistungen von Reentrancy-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
+Da das Guthaben des Aufrufers nicht auf 0 gesetzt wird, bevor die Funktion ausgeführt wurde, können nachfolgende Aufrufe erfolgreich sein und dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann genutzt werden, um einem Smart Contract das Kapital zu entziehen, wie es beim [2016 DAO-Hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) geschehen ist. Wiederholungsangriffe sind auch heute noch ein kritisches Thema für Smart Contracts, wie [öffentliche Auflistungen von Reentrancy-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
 
 ##### So verhindert man Wiederholungsangriffe
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Sie können auch ein [Pull-Zahlungssystem](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) verwenden, bei dem die Nutzer Geld von den Smart Contracts abheben müssen, anstelle eines „Push-Zahlungssystems“, das Guthaben an Konten sendet. Dies verhindert die Möglichkeit, unbeabsichtigt Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
+Sie können auch ein [Pull-Zahlungssystem](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) verwenden, bei dem die Nutzer Geld von den Smart Contracts abheben müssen, anstelle eines „Push-Zahlungssystems“, das Guthaben an Konten sendet. Dies verhindert die Möglichkeit, unbeabsichtigt Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
 
 #### Integer-Unterläufe und -Überläufe {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 ### Tools für die Überwachung von Smart Contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _ein Tool zur automatischen Überwachung und Reaktion auf Ereignisse, Funktionen und Transaktionsparameter in Ihren Smart Contracts._v
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Ein Tool, um Echtzeit-Benachrichtigungen zu erhalten, wenn ungewöhnliche oder unerwartete Ereignisse auf Ihren Smart Contracts oder Wallets auftreten._
 
 ### Tools für die sichere Verwaltung von Smart Contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _Schnittstelle für die Verwaltung von Smart Contracts, einschließlich Zugriffskontrollen, Upgrades und Pausen._
-
 - **[Safe](https://safe.global/)** - _Smart Contract-Wallet auf Ethereum, die eine Mindestanzahl von Personen benötigt, um eine Transaktion zu genehmigen, bevor sie stattfinden kann (M-of-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Vertragsbibliotheken für die Implementierung von Verwaltungsfunktionen, einschließlich Vertragseigentum, Upgrades, Zugriffskontrollen, Governance, Pausierbarkeit und mehr._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Vertragsbibliotheken für die Implementierung von Verwaltungsfunktionen, einschließlich Vertragseigentum, Upgrades, Zugriffskontrollen, Governance, Pausierbarkeit und mehr._
 
 ### Dienstleistungen zur Prüfung von Smart Contracts {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 - **[Hacken](https://hacken.io)** - _Web3 Cybersicherheitsauditor mit 360-Grad-Ansatz für die Sicherheit der Blockchain._
 
-- **[](https://www.nethermind.io/smart-contract-audits)** - _Solidity und Cairo Audit-Dienste sorgen für Datenintegrität der Smart Contracts und Sicherheit der Nutzer im Ethereum- und Starknet-Ökosystem._
+- **[](https://nethermind.io/smart-contracts-audits)** - _Solidity und Cairo Audit-Dienste sorgen für Datenintegrität der Smart Contracts und Sicherheit der Nutzer im Ethereum- und Starknet-Ökosystem._
 
 - **[HashEx](https://hashex.org/)** - _HashEx konzentriert sich auf die Prüfung von Blockchain und Smart Contracts, um die Sicherheit von Kryptowährungen zu gewährleisten, und bietet Dienstleistungen wie die Entwicklung von Smart Contracts, Penetrationstests und Blockchain-Beratung._
 
@@ -515,7 +511,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3-Sicherheits-Kraftwerk, das Krypto-Sicherheit durch Produkte und Smart-Contract-Audit-Dienste fördert._
 
-- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
 
 - **[Oxorio](https://oxor.io/)** – _Smart-Contract-Audits und Blockchain-Sicherheitsdienste mit Expertise in EVM, Solidity, ZK und Cross-Chain-Technologien für Krypto-Unternehmen und DeFi-Projekte._
 
@@ -535,7 +531,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 ### Veröffentlichungen bekannter Schwachstellen und Exploits von Smart Contracts {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Einsteigerfreundliche Erklärung der wichtigsten Vertragsschwachstellen, mit Beispielcode für die meisten Fälle._
+- **[ConsenSys: Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Einsteigerfreundliche Erklärung der wichtigsten Vertragsschwachstellen, mit Beispielcode für die meisten Fälle._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Ausgewählte Liste von Common Weakness Enumeration (CWE) Elementen, die auf Ethereum Smart Contracts zutreffen._
 

@@ -94,7 +94,7 @@ Netto-Reduktion der jährlichen ETH-Emissionen: <strong>~88.7%</strong> ((4.61% 
 Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrannt wird. Damit eine Transaktion auf Ethereum ausgeführt werden kann, muss eine Mindestgebühr (die so genannte "Grundgebühr") entrichtet werden, die je nach Netzwerkaktivität kontinuierlich (von Block zu Block) schwankt. Die Gebühr wird in ETH bezahlt und ist _erforderlich_, damit die Transaktion als gültig betrachtet wird. Diese Gebühr wird während des Transaktionsprozesses _verbrannt_, wodurch sie aus dem Verkehr gezogen wird.
 
 <InfoBanner>
-Die Verbrennung von Gebühren wurde mit dem <a href="/history/#london">the London Upgrade</a> im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
+Die Verbrennung von Gebühren wurde mit dem [the London Upgrade](/history/#london) im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
 </InfoBanner>
 
 Zusätzlich zu den Gebühren, die durch das London Upgrade verbrannt werden, können Validatoren auch mit Strafen belegt werden, wenn sie offline sind, oder schlimmer noch, ihr Stake kann gekürzt werden, wenn sie gegen bestimmte Regeln verstoßen, die die Netzsicherheit gefährden. Diese Strafen führen zu einer Verringerung des ETH-Guthabens dieses Validators, das nicht auf ein anderes Konto überwiesen wird, sondern effektiv verbrannt/aus dem Verkehr gezogen wird.

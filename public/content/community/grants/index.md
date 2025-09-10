@@ -10,6 +10,11 @@ The programs listed below offer a variety of funding grants for projects working
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Founders, need help accelerating your business? [Head over to Founders Support](/founders/)</div>
+</Alert>
+
 ## Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
 
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
@@ -32,6 +37,8 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
+- [Aztec Grants Program](https://aztec.network/grants) — Noir language and the [Aztec](https://aztec.network/) network
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
@@ -61,7 +68,6 @@ These programs focus on funding projects that benefit the broader community, pub
 - [Giveth](https://giveth.io/) - _Crypto donation platform enabling direct donations from for-good projects with zero added fees_
 - [Artizen](https://artizen.fund/) - _Helping creators match fund new projects at the frontier of art, science, technology and culture_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
-
 
 ## Work in Ethereum {#work-in-ethereum}
 

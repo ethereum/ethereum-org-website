@@ -2,81 +2,65 @@
 
 /*/discord https://discord.gg/ethereum-org 301!
 
-/pdfs/* /en/ 301!
+/pdfs/* / 301!
 
-/brand /en/assets/ 301!
+/brand /assets/ 301!
 
-/ether /en/eth/ 301!
+/ether /eth/ 301!
 
-/token /en/developers/ 301!
+/token /developers/ 301!
 
-/crowdsale /en/developers/ 301!
+/crowdsale /developers/ 301!
 
-/cli /en/developers/ 301!
+/cli /developers/ 301!
 
-/greeter /en/developers/ 301!
+/greeter /developers/ 301!
 
-/search /en/ 301!
+/search / 301!
 
-/use /en/dapps/ 301!
+/use /apps/ 301!
 
-/beginners /en/what-is-ethereum/ 301!
+/dapps /apps/ 301!
 
-/eth2/ /en/roadmap/ 301!
+/beginners /what-is-ethereum/ 301!
 
-/build/ /en/developers/learning-tools/ 301!
+/eth2/ /roadmap/ 301!
 
-/nfts/ /en/nft/ 301!
+/build/ /developers/learning-tools/ 301!
 
-/payments/ /en/payments/ 301!
+/nfts/ /nft/ 301!
 
-/daos/ /en/dao/ 301!
+/payments/ /payments/ 301!
 
-/layer2/ /en/layer-2/ 301!
+/daos/ /dao/ 301!
+
+/layer2/ /layer-2/ 301!
 
 /*/layer2/ /:splat/layer-2/ 301!
 
-/grants/ /en/community/grants/ 301!
+/grants/ /community/grants/ 301!
 
 /no/* /nb/:splat 301!
 
 /ph/* /fil/:splat 301!
 
-/java/ /en/developers/docs/programming-languages/java/ 301!
+/java/ /developers/docs/programming-languages/java/ 301!
 
-/en/java/ /en/developers/docs/programming-languages/java/ 301!
+/python/ /developers/docs/programming-languages/python/ 301!
 
-/python/ /en/developers/docs/programming-languages/python/ 301!
+/javascript/ /developers/docs/programming-languages/javascript/ 301!
 
-/en/python/ /en/developers/docs/programming-languages/python/ 301!
+/golang/ /developers/docs/programming-languages/golang/ 301!
 
-/javascript/ /en/developers/docs/programming-languages/javascript/ 301!
+/rust/ /developers/docs/programming-languages/rust/ 301!
 
-/en/javascript/ /en/developers/docs/programming-languages/javascript/ 301!
+/dot-net/ /developers/docs/programming-languages/dot-net/ 301!
 
-/golang/ /en/developers/docs/programming-languages/golang/ 301!
+/delphi/ /developers/docs/programming-languages/delphi/ 301!
 
-/en/golang/ /en/developers/docs/programming-languages/golang/ 301!
+/dart/ /developers/docs/programming-languages/dart/ 301!
 
-/rust/ /en/developers/docs/programming-languages/rust/ 301!
-
-/en/rust/ /en/developers/docs/programming-languages/rust/ 301!
-
-/dot-net/ /en/developers/docs/programming-languages/dot-net/ 301!
-
-/en/dot-net/ /en/developers/docs/programming-languages/dot-net/ 301!
-
-/delphi/ /en/developers/docs/programming-languages/delphi/ 301!
-
-/en/delphi/ /en/developers/docs/programming-languages/delphi/ 301!
-
-/dart/ /en/developers/docs/programming-languages/dart/ 301!
-
-/en/dart/ /en/developers/docs/programming-languages/dart/ 301!
-
-/developers/docs/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
-
-/en/developers/docs/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
+/developers/docs/mining/ /developers/docs/consensus-mechanisms/pow/mining/ 301!
 
 /*/beginners /:splat/what-is-ethereum/ 301!
 
@@ -106,29 +90,29 @@
 
 /*/upgrades/shard-chains/ /:splat/roadmap/danksharding/ 301!
 
-/upgrades/sharding/ /en/roadmap/danksharding/ 301!
+/upgrades/sharding/ /roadmap/danksharding/ 301!
 
 /*/upgrades/sharding/ /:splat/roadmap/danksharding/ 301!
 
-/upgrades/shard-chains/ /en/roadmap/danksharding/ 301!
+/upgrades/shard-chains/ /roadmap/danksharding/ 301!
 
-/upgrades/merge /en/roadmap/merge/ 301!
+/upgrades/merge /roadmap/merge/ 301!
 
 /*/upgrades/merge /:splat/roadmap/merge/ 301!
 
-/upgrades/merge/issuance /en/roadmap/merge/issuance 301!
+/upgrades/merge/issuance /roadmap/merge/issuance 301!
 
 /*/upgrades/merge/issuance /:splat/roadmap/merge/issuance 301!
 
-/upgrades/beacon-chain /en/roadmap/beacon-chain 301!
+/upgrades/beacon-chain /roadmap/beacon-chain 301!
 
 /*/upgrades/beacon-chain /:splat/roadmap/beacon-chain 301!
 
-/upgrades/vision/ /en/roadmap/vision/ 301!
+/upgrades/vision/ /roadmap/vision/ 301!
 
 /*/upgrades/vision/ /:splat/roadmap/vision/ 301!
 
-/upgrades /en/roadmap 301!
+/upgrades /roadmap 301!
 
 /*/upgrades /:splat/roadmap 301!
 
@@ -156,7 +140,12 @@
 
 /*/about/product-designer /:splat/about/#open-jobs 301!
 
-/*/use /:splat/dapps/ 301!
+/*/use /:splat/apps/ 301!
+
+# Exception: don't redirect developers/docs/dapps paths
+/*/developers/docs/dapps* /:splat/developers/docs/dapps:splat 200!
+
+/*/dapps /:splat/apps/ 301!
 
 /*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!
 
@@ -166,7 +155,7 @@
 
 /*/developers/docs/smart-contracts/upgrading-smart-contracts/ /:splat/developers/docs/smart-contracts/upgrading/ 301!
 
-/staking/withdraws /en/staking/withdrawals/ 301!
+/staking/withdraws /staking/withdrawals/ 301!
 
 /*/writing-cohort https://ethereumwriterscohort.carrd.co/ 301!
 
@@ -174,14 +163,18 @@
 
 /*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
 
-/*/deprecated-software /:splat/dapps/ 301!
+/*/deprecated-software /:splat/apps/ 301!
 
 /*/enterprise/private-ethereum/ /:splat/enterprise/ 301!
 
-/dashboards /en/resources 301!
+/dashboards /resources 301!
 
 /*/dashboards /:splat/resources 301!
 
 /tds /trillion-dollar-security 301!
 
 /*/tds /:splat/trillion-dollar-security 301!
+
+/10-years /10years 301!
+
+/*/10-years /:splat/10years 301!

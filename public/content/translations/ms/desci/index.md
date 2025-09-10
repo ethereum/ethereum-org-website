@@ -95,7 +95,6 @@ Terokai projek dan sertai komuni DeSci.
 - [Molekul: Membiayai dan mendapatkan pembiayaan untuk projek penyelidikan anda](https://www.molecule.xyz/)
 - [VitaDAO: menerima pembiayaan melalui perjanjian penyelidikan yang ditaja untuk penyelidikan jangka hayat](https://www.vitadao.com/)
 - [ResearchHub: siarkan hasil saintifik dan libatkan diri dalam perbualan dengan rakan sebaya](https://www.researchhub.com/)
-- [LabDAO: lipat protein dalam-siliko](https://alphafodl.vercel.app/)
 - [dClimate API: data iklim pertanyaan yang dikumpul oleh komuniti teragih](https://www.dclimate.net/)
 - [Yayasan DeSci: pembina alat penerbitan DeSci](https://descifoundation.org/)
 - [DeSci.World: kedai sehenti untuk pengguna melihat, melibatkan diri dengan sains teragih](https://desci.world)
@@ -126,7 +125,7 @@ Kami mengalu-alukan cadangan untuk projek baharu untuk disenaraikan - sila lihat
 - [DeSci: Masa Depan Penyelidikan oleh Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Pembiayaan Sains (Epilog: DeSci dan primitif kripto baharu) oleh Nadia](https://nadia.xyz/science-funding)
 - [Keteragihan Mengganggu Perkembangan Ubatan](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Apakah DeSci – Sains Teragih?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Apakah DeSci – Sains Teragih?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Video {#videos}
 

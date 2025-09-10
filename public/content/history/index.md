@@ -11,9 +11,9 @@ A timeline of all the major milestones, forks, and updates to the Ethereum block
 
 <ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Forks are when major technical upgrades or changes need to be made to the network – they typically stem from <a href="/eips/">Ethereum Improvement Proposals (EIPs)</a> and change the "rules" of the protocol.
+Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
 
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. <a href="/developers/docs/nodes-and-clients/">Ethereum clients</a> must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. <a href="/developers/docs/consensus-mechanisms/">More on consensus mechanisms</a>
+When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the <a href="#dao-fork">DAO fork</a>.
 
@@ -449,10 +449,10 @@ The Istanbul fork:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>allow Ethereum to work with privacy-preserving currency like Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cheaper cryptography to improve <a href="/glossary/#gas">gas</a> costs.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protects Ethereum against replay attacks by adding <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cheaper cryptography to improve [gas](/glossary/#gas) costs.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protects Ethereum against replay attacks by adding <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>optimising opcode gas prices based on consumption.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduces the cost of CallData to allow more data in blocks – good for <a href="/developers/docs/scaling/#layer-2-scaling">Layer 2 scaling</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>other opcode gas price alterations.</em></li>
 </ul>
 
@@ -510,13 +510,13 @@ The Byzantium fork:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>adds <code>REVERT</code> opcode.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>status field added to transaction receipts to indicate success or failure.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>adds elliptic curve and scalar multiplication to allow for <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adds elliptic curve and scalar multiplication to allow for <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>enables RSA signature verification.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>adds support for variable length return values.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>adds <code>STATICCALL</code> opcode, allowing non-state-changing calls to other contracts.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>changes difficulty adjustment formula.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>delays <a href="/glossary/#difficulty-bomb">difficulty bomb</a> by 1 year and reduces block reward from 5 to 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>delays [difficulty bomb](/glossary/#difficulty-bomb) by 1 year and reduces block reward from 5 to 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>
