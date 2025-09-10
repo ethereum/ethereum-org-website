@@ -21,7 +21,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 interface MobileFiltersProps {
   filters: FilterOption[]
-  setFilters: (filters: FilterOption[]) => void
+  setFilters: (filter: FilterOption, filterIndex: number) => void
   presets: TPresetFilters
   presetFiltersCounts?: number[]
   activePresets: number[]
