@@ -39,7 +39,7 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
     className="m-4 min-w-[280px] max-w-full flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
