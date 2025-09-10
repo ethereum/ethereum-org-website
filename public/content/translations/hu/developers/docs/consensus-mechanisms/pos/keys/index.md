@@ -56,7 +56,7 @@ A validátorkulcsok és az Ethereum-számlakulcsok szétválasztása lehetővé 
 
 ![validátorkulcs ábrája](validator-key-schematic.png)
 
-**Megjegyzés**: A letétbe helyezésből való kilépéshez és a validátor egyenlegének visszavonásához jelenleg egy [önkéntes kilépési üzenet (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) aláírása szükséges a validátorkulccsal. Az [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) azonban egy olyan javaslat, amely lehetővé teszi a felhasználó számára, hogy a jövőben a kilépési üzeneteknek a kivételi kulccsal történő aláírásával elindítsa a validátor kilépését és kivegye az egyenlegét. Ez csökkenti a bizalomigényt, mivel azok a letétesek, akik az ETH-t [letétbe helyezési szolgáltatóknak](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) delegálják, továbbra is ellenőrzésük alatt tarthatják pénzeszközeiket.
+**Megjegyzés**: A letétbe helyezésből való kilépéshez és a validátor egyenlegének visszavonásához jelenleg egy [önkéntes kilépési üzenet (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) aláírása szükséges a validátorkulccsal. Az [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) azonban egy olyan javaslat, amely lehetővé teszi a felhasználó számára, hogy a jövőben a kilépési üzeneteknek a kivételi kulccsal történő aláírásával elindítsa a validátor kilépését és kivegye az egyenlegét. Ez csökkenti a bizalomigényt, mivel azok a letétesek, akik az ETH-t [letétbe helyezési szolgáltatóknak](/staking/saas/#what-is-staking-as-a-service) delegálják, továbbra is ellenőrzésük alatt tarthatják pénzeszközeiket.
 
 ## Kulcsok származtatása egy kulcsmondatból {#deriving-keys-from-seed}
 

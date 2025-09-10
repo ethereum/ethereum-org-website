@@ -76,6 +76,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-security-description"),
               href: "/security/",
             },
+            {
+              label: t("ethereum-privacy"),
+              description: t("nav-privacy-description"),
+              href: "/privacy/",
+            },
           ],
         },
         {

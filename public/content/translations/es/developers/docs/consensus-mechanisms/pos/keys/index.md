@@ -56,7 +56,7 @@ La separación de las claves del validador de las claves de la cuenta de Ethereu
 
 ![esquema de la clave del validador](validator-key-schematic.png)
 
-**Nota**: Salir de las funciones de participación y retirar el balance del validador actualmente requiere firmar un [mensaje de salida voluntaria (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) con la clave de validador. Sin embargo, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) es una propuesta que permitirá a un usuario activar la salida de un validador y retirar su balance firmando mensajes de salida con la clave de retirada en el futuro. Esto reducirá las suposiciones de confianza al permitir que los participantes que delegan ETH a [proveedores de participación como servicio](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) mantengan el control de sus fondos.
+**Nota**: Salir de las funciones de participación y retirar el balance del validador actualmente requiere firmar un [mensaje de salida voluntaria (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) con la clave de validador. Sin embargo, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) es una propuesta que permitirá a un usuario activar la salida de un validador y retirar su balance firmando mensajes de salida con la clave de retirada en el futuro. Esto reducirá las suposiciones de confianza al permitir que los participantes que delegan ETH a [proveedores de participación como servicio](/staking/saas/#what-is-staking-as-a-service) mantengan el control de sus fondos.
 
 ## Derivar claves de una frase semilla {#deriving-keys-from-seed}
 

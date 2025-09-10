@@ -13124,6 +13124,60 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "kalidiagne",
+      "name": "Kalidou Diagne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20865711?v=4",
+      "profile": "https://kalidou.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chainide-agent-bob",
+      "name": "Bob",
+      "avatar_url": "https://avatars.githubusercontent.com/u/203082506?v=4",
+      "profile": "https://chainide.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Jorgerl02",
+      "name": "Jorge Rodriguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131685800?v=4",
+      "profile": "https://smithii.io",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "clarus",
+      "name": "Guillaume Claret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/316665?v=4",
+      "profile": "https://formal.land/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "eeemmmmmm",
+      "name": "emmmm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155267286?v=4",
+      "profile": "https://github.com/eeemmmmmm",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "vibhorkashyap",
+      "name": "Vibhor Kashyap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1714110?v=4",
+      "profile": "https://github.com/vibhorkashyap",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
