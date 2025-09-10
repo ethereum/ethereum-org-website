@@ -41,7 +41,7 @@ Pogosto le izvorni niz morda ne bo dovolj, da bi lahko zagotovili natančen prev
 
 ## Kaj je pomnilnik prevodov (TM)? {#translation-memory}
 
-Pomnilnik prevodov (TM) je funkcija orodja Crowdin, ki shrani vse predhodne prevedene nize na strani [ethereum.org](http://ethereum.org/). Ko je niz preveden, se samodejno shrani v TM našega projekta. To je lahko uporabno orodje, ki vam pomaga prihraniti vaš čas!
+Pomnilnik prevodov (TM) je funkcija orodja Crowdin, ki shrani vse predhodne prevedene nize na strani [ethereum.org](https://ethereum.org/). Ko je niz preveden, se samodejno shrani v TM našega projekta. To je lahko uporabno orodje, ki vam pomaga prihraniti vaš čas!
 
 - Oglejte si sekcijo "TM in MT predlogi" in lahko boste videli, kako so drugi prevajalci prevedli enak ali podoben niz. Če najdete predlog z visokim razmerjem ujemanja, ga s klikom brez težav uporabite za prevod.
 - Če na seznamu ni ničesar, lahko iščete po TM za predhodne prevode in jih ponovno uporabite za ohranjanje konsistentnosti.

@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-当 `RecipientContract` 收到 ERC-223 代币时，合约会执行一个编码为代币交易参数 `_data` 的函数，这与以太币交易将函数调用编码为交易 `data` 相同。 阅读[数据字段](https://ethereum.org/en/developers/docs/transactions/#the-data-field)以获取更多信息。
+当 `RecipientContract` 收到 ERC-223 代币时，合约会执行一个编码为代币交易参数 `_data` 的函数，这与以太币交易将函数调用编码为交易 `data` 相同。 阅读[数据字段](/developers/docs/transactions/#the-data-field)以获取更多信息。
 
 在上述示例中，ERC-223 代币必须通过 `transfer(address,uin256,bytes calldata _data)` 函数转移到 `RecipientContract` 的地址。 如果数据参数将为 `0xc2985578`（`foo()` 函数的签名），那么在收到代币存款之后，将会调用 foo() 函数并触发事件 Foo()。
 

@@ -65,7 +65,7 @@ Es ist erwähnenswert, dass einige ERCs nicht eigenständig sind, sondern Ergän
 Beziehen Sie sich immer auf die Dokumentation der Bibliothek, die Sie einbinden, um genaue Anweisungen zur Einbindung in Ihr Projekt zu bekommen. Viele Solidity-Vertragsbibliotheken werden mit `npm` gepackt, sodass Sie sie einfach `npm install` benutzen können. Die meisten Anwendungen zum [Kompilieren](/developers/docs/smart-contracts/compiling/) von Verträgen prüfen Ihre `node_modules` für Smart-Contract-Bibliotheken, sodass Sie Folgendes tun können:
 
 ```solidity
-// Dadurch wird die @openzeppelin/contracts-Bibliothek von Ihren node_modules geladen
+// Dadurch wird die @openzeppelin/contracts-Bibliothek von Ihren node_modules geladen 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyNFT is ERC721 {
@@ -104,7 +104,7 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 
 **thirdweb Solidity SDK -** **_Bietet die Tools, die zum effizienten Erstellen von benutzerdefinierten Smart Contracts erforderlich sind_**
 
-- [Dokumentation](https://portal.thirdweb.com/contracts/build/overview)
+- [Dokumentation](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Ähnliche Tutorials {#related-tutorials}

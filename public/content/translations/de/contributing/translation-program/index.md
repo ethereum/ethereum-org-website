@@ -20,7 +20,7 @@ Das ethereum.org Übersetzungsprogramm ist offen und jeder kann dazu beitragen!
 4. Maschinelle Übersetzungen werden nicht genehmigt.
 5. Alle Übersetzungen werden überprüft, bevor sie zur Seite hinzugefügt werden. Daher gibt es eine kurze Verzögerung, bevor Ihre Übersetzungen veröffentlicht werden.
 
-_Treten Sie dem [ethereum.org-Discord](/discord/) bei, um an Übersetzungen mitzuarbeiten, Fragen zu stellen, Feedback und Ideen zu teilen oder einer Übersetzungsgruppe beizutreten._
+_Treten Sie dem [ethereum.org-Discord](https://discord.gg/ethereum-org) bei, um an Übersetzungen mitzuarbeiten, Fragen zu stellen, Feedback und Ideen zu teilen oder einer Übersetzungsgruppe beizutreten._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Mit dem Übersetzen beginnen
@@ -32,7 +32,7 @@ Die Ethereum-Community hat das Ziel, global und inklusiv zu sein. Doch ein Groß
 
 Das Übersetzungsprogramm von ethereum.org zielt darauf ab, Ethereum jedermann zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt werden.
 
-Lesen Sie mehr über <a href="/contributing/translation-program/mission-and-vision">Mission und Vision</a> des Übersetzungsprogramms auf ethereum.org.
+Lesen Sie mehr über [Mission und Vision](/contributing/translation-program/mission-and-vision) des Übersetzungsprogramms auf ethereum.org.
 
 ### Unsere bisherigen Fortschritte {#our-progress}
 

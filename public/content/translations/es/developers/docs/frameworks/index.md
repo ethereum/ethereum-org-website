@@ -63,7 +63,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 **Tenderly:** **_Plataforma de desarrollo web3 que permite a los desarrolladores de cadena de bloques crear, probar, depurar, monitorear y operar contratos inteligentes y mejorar la experiencia de usuario de dapps._**
 
 - [Sitio web](https://tenderly.co/)
-- [Documentación](https://docs.tenderly.co/ethereum-development-practices)
+- [Documentación](https://docs.tenderly.co/)
 
 **The Graph:** **_The Graph para consultar datos de la cadena de bloques de manera eficiente._**
 

@@ -15,43 +15,41 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+// Import static torch holders data
+import torchHoldersData from "@/data/torchHolders.json"
+
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import Curved10YearsText from "./_components/10y.svg"
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
-import CountDown from "./_components/CountDown/lazy"
-import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
-import TenYearGlobe from "./_components/TenYearGlobe/lazy"
+import NFTMintCard from "./_components/NFTMintCard"
 import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
   getInnovationCards,
-  getTimeUnitTranslations,
   parseStoryDates,
 } from "./_components/utils"
 
 import { routing } from "@/i18n/routing"
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
-import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import {
-  getCurrentHolder,
   getHolderEvents,
   getTransferEvents,
   isAddressFiltered,
-  isTorchBurned,
+  type TorchHolder,
 } from "@/lib/torch"
-import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -60,7 +58,6 @@ const loadData = dataLoader(
   [
     ["fetched10YearEvents", fetch10YearEvents],
     ["fetched10YearStories", fetch10YearStories],
-    ["fetchedTorchHolders", fetchTorchHolders],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -72,8 +69,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories, allTorchHolders] =
-    await loadData()
+  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+
+  const allTorchHolders: TorchHolder[] = torchHoldersData as TorchHolder[]
 
   const stories = parseStoryDates(fetched10YearStories, locale)
 
@@ -87,12 +85,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-10-year-anniversary",
   })
 
-  const timeLeftLabels = await getTimeUnitTranslations()
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
   // Torch NFT data fetching logic
-  const transferEvents = await getTransferEvents()
+  const transferEvents = getTransferEvents()
 
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
@@ -108,32 +105,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     transferEvents
   )
 
-  let isBurned = false
-  try {
-    isBurned = await isTorchBurned()
-  } catch (error) {
-    console.error("Error fetching torch burned status:", error)
-  }
-
   // Filter out events where the address is in the filtered list
   const torchHolders = torchHoldersEvents.filter(
     (holder) => !isAddressFiltered(holder.address)
   )
 
-  const currentHolder = getCurrentHolder(torchHolders)
-
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <TenYearHero locale={locale} />
 
-      <div className="w-full px-8 py-12">
-        <CountDown
-          timeLeftLabels={timeLeftLabels}
-          expiredLabel={t("page-10-year-countdown-expired")}
-        />
-      </div>
-
-      <div className="mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8">
+      <div
+        className={cn(
+          "mt-16 flex w-full flex-col gap-32 px-4 py-4 md:flex-row md:py-8"
+        )}
+      >
         <div className="flex flex-1 flex-col gap-5">
           <div>
             <h1 className="text-2xl font-bold">
@@ -146,38 +131,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p className="text-lg">{t("page-10-year-hero-tagline")}</p>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-center">
-          <CurrentTorchHolderCard
-            className="w-[420px]"
-            currentHolder={currentHolder}
-            isBurned={isBurned}
-          />
+        <div className="flex flex-1 flex-row items-center justify-center">
+          <NFTMintCard />
         </div>
       </div>
 
       <div className="w-full px-4 py-8 md:px-8">
-        <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
-          <div className="flex max-w-[770px] flex-col gap-4 text-center">
+        <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
+          <div className="flex flex-col gap-4 text-center">
             <h2 className="text-4xl font-black">
-              {t("page-10-year-join-party-title")}
+              {t("page-10-year-livestream-title")}
             </h2>
-            <p className="text-md">
-              {t("page-10-year-join-party-description")}
-            </p>
           </div>
-          <div className="h-[max(fit,260px)] sm:h-[400px] md:h-[500px] lg:h-[600px]">
-            {/* CLIENT SIDE, lazy loaded */}
-            <TenYearGlobe
-              actionLabel={t("page-10-year-globe-go-to-event")}
-              events={Object.values(fetched10YearEvents).flatMap((region) =>
-                region.events.map((event) => ({
-                  ...event,
-                  lat: Number(event.lat),
-                  lng: Number(event.lng),
-                }))
-              )}
-            />
-          </div>
+          <YouTube
+            className="w-full max-w-none"
+            id="igPIMF1p5Bo"
+            title={t("page-10-year-livestream-video-title")}
+            poster="maxresdefault"
+          />
         </div>
       </div>
 
@@ -273,21 +244,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Tabs>
         </div>
       </div>
-      <div className="flex w-full flex-col-reverse gap-8 px-8 py-8 md:flex-row">
-        <div className="flex flex-1 flex-col gap-4 md:gap-8 md:pt-8">
-          <p>{t("page-10-year-events-description-1")}</p>
-          <p>{t("page-10-year-events-description-2")}</p>
-        </div>
-        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
-          <h2 className="text-2xl font-bold">
-            {t("page-10-year-host-event-title")}
-          </h2>
-          <p className="text-md">{t("page-10-year-host-event-description")}</p>
-          <ButtonLink href="https://10yearsofethereum.paperform.co" hideArrow>
-            {t("page-10-year-host-event-cta")}
-          </ButtonLink>
-        </div>
-      </div>
 
       <div
         id="torch-history"
@@ -324,43 +280,33 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <TorchHistorySwiper
           holders={torchHolders}
-          currentHolderAddress={currentHolder?.address || null}
+          currentHolderAddress={null}
         />
 
         <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
           <div className="flex flex-1 flex-col gap-8">
             <p>
-              To commemorate this historic milestone, we&apos;re introducing the{" "}
-              <strong>Ethereum Torch NFT</strong> a NFT that embodies the spirit
-              of decentralization and community that has defined Ethereum&apos;s
-              first decade.
+              <Translation
+                id="page-10-year-torch-nft-intro"
+                ns="page-10-year-anniversary"
+              />
             </p>
 
-            <p>
-              Like a ceremonial flame that travels from community to community,
-              the Ethereum Torch will journey across the global Ethereum
-              ecosystem. This special NFT will be passed from wallet to wallet
-              among carefully selected community members, developers, and
-              builders who have shaped Ethereum&apos;s story over the past 10
-              years.
-            </p>
+            <p>{t("page-10-year-torch-nft-description")}</p>
           </div>
           <div className="flex flex-1 flex-col gap-8">
             <div>
-              <h3 className="text-lg font-bold">One-of-a-kind:</h3>
-              <p>
-                Only one Ethereum Torch NFT exists, making each holder a
-                temporary guardian of Ethereum&apos;s legacy
-              </p>
+              <h3 className="text-lg font-bold">
+                {t("page-10-year-torch-one-of-kind-title")}
+              </h3>
+              <p>{t("page-10-year-torch-one-of-kind-description")}</p>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold">Time-limited custody:</h3>
-              <p>
-                Each holder keeps the torch for 24hours before passing it to the
-                next guardian. On July 30 this NFT wil be burned to celebrate
-                the anniversary.
-              </p>
+              <h3 className="text-lg font-bold">
+                {t("page-10-year-torch-time-limited-title")}
+              </h3>
+              <p>{t("page-10-year-torch-time-limited-description")}</p>
             </div>
           </div>
         </div>
@@ -465,21 +411,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <I18nProvider locale={locale} messages={messages}>
           <Stories stories={stories} />
         </I18nProvider>
-      </div>
-
-      <div className="w-full gap-8 px-8 py-8 pt-32">
-        <div className="flex flex-col items-center gap-4 rounded-2xl bg-ten-year-gradient p-8">
-          <Image
-            src={TenYearLogo}
-            alt="10 year anniversary logo"
-            className="mb-8 max-h-80 object-contain sm:mb-12"
-          />
-          <h3>{t("page-10-year-ideas-title")}</h3>
-          <p>{t("page-10-year-ideas-description")}</p>
-          <ButtonLink href="mailto:10years@ethereum.org">
-            {t("page-10-year-ideas-cta")}
-          </ButtonLink>
-        </div>
       </div>
     </MainArticle>
   )

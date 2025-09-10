@@ -44,7 +44,7 @@ _虽然在协议层面上以太坊的治理在链下进行，但许多基于以�
 
 - **以太币持有者**：这些人拥有任意数量的以太币。 [关于以太币的更多信息](/eth/)。
 - **应用程序用户**：这些人员与以太坊区块链上的应用程序交互。
-- **应用程序/工具开发者**：这些人编写在以太坊区块链上运行的应用程序是（比如去中心化金融、非同质化代币等）或构建以太坊交互的工具（例如钱包、测试套件等）。 [关于去中心化应用程序的更多信息](/dapps/)。
+- **应用程序/工具开发者**：这些人编写在以太坊区块链上运行的应用程序是（比如去中心化金融、非同质化代币等）或构建以太坊交互的工具（例如钱包、测试套件等）。 [关于去中心化应用程序的更多信息](/apps/)。
 - **节点运营商**：这些人运行区块和交易广播节点，拒绝遇到的任何无效交易或区块。 [关于节点的更多信息](/developers/docs/nodes-and-clients/)。
 - **以太坊改进提案作者**：这些人提议修改以太坊协议，具体形式为以太坊改进提案。 [关于以太坊改进提案的更多信息](/eips/)。
 - **验证者**：这些人运行的节点能够将新的区块添加到以太坊区块链上。
@@ -180,5 +180,5 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 - [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/)- _Hudson Jameson_
 - [治理，第 2 部分：财阀统治仍非好事](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [超越代币投票的治理方式](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [了解区块链治理](https://research.2077.xyz/understanding-blockchain-governance) - _2077 研究_
+- [了解区块链治理](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 研究_
 - [以太坊治理机制](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

@@ -1,10 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
-
-import { ButtonLink } from "@/components/ui/buttons/Button"
-
-import { cn } from "@/lib/utils/cn"
+import TabNav from "@/components/ui/TabNav"
 
 import type { DashboardSection } from "../types"
 
@@ -22,35 +18,25 @@ const ResourcesNav = ({
     "0% 0% -70% 0%"
   ).replace(/^#/, "")
 
+  const items = resourceSections.map(({ key, title, icon }) => ({
+    key,
+    label: title,
+    href: `#${key}`,
+    icon: icon ? <span className="text-lg">{icon}</span> : undefined,
+  }))
+
   return (
-    <nav className="z-sticky mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
-      {resourceSections.map(({ key, title, icon }) => (
-        <ButtonLink
-          key={key}
-          href={`#${key}`}
-          variant="ghost"
-          isSecondary
-          className={cn(
-            "relative text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
-            activeSection === key && "!text-primary"
-          )}
-          customEventOptions={{
-            eventCategory,
-            eventAction: "whats_on_this_page",
-            eventName: key,
-          }}
-        >
-          {activeSection === key && (
-            <motion.div
-              layoutId="active-section-highlight"
-              className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast"
-            />
-          )}
-          {icon && <span className="z-10 text-lg">{icon}</span>}
-          <span className="relative z-10">{title}</span>
-        </ButtonLink>
-      ))}
-    </nav>
+    <TabNav
+      items={items}
+      activeKey={activeSection}
+      className="z-sticky mx-4 max-w-full bg-background p-2 md:max-w-[calc(100%-2rem)] md:p-0.5"
+      useMotion
+      motionLayoutId="active-section-highlight"
+      customEventOptions={{
+        eventCategory,
+        eventAction: "whats_on_this_page",
+      }}
+    />
   )
 }
 

@@ -94,7 +94,7 @@ Celková roční míra vydávání: <strong>~0,52 %</strong><br/><br/>
 Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce na Ethereu provedena, musí být zaplacen minimální poplatek (známý jako „základní poplatek“), který se neustále mění (blok od bloku) v závislosti na aktivitě sítě. Poplatek je placen v ETH a je _nezbytný_ pro to, aby byla transakce považována za platnou. Tento poplatek je během transakčního procesu _pálen_, čímž se odstraňuje z oběhu.
 
 <InfoBanner>
-Pálení poplatků bylo spuštěno s <a href="/history/#london">vylepšením London</a> v srpnu 2021 a od Sloučení zůstává beze změn.
+Pálení poplatků bylo spuštěno s [vylepšením London](/history/#london) v srpnu 2021 a od Sloučení zůstává beze změn.
 </InfoBanner>
 
 Kromě pálení poplatků zavedeného s vylepšením London mohou validátoři také dostávat pokuty za to, že jsou offline, nebo hůře, mohou být „potrestáni“ za porušení specifických pravidel, které ohrožuje bezpečnost sítě. Tyto pokuty vedou k odečtení ETH od zůstatku validátora, aniž by byly převedeny jako odměna jinému účtu, čímž se efektivně pálí/odstraňují z oběhu.

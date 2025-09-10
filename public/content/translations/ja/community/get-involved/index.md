@@ -114,7 +114,6 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
 - [イーサリアムの人材募集](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## 分散型自律組織(DAO)への参加 {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスのWeb3開発共同体_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhausのコミュニティガバナンス_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _アート・コミュニティ_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _実際のMMORPGゲームメカニクス_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _デジ・フィジカルのアパレルブランド_
