@@ -1,8 +1,6 @@
 import { expect, takeSnapshot, test } from "@chromatic-com/playwright"
 import { Page } from "@playwright/test"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 import { testData } from "./fixtures/testData"
 import { HomePage } from "./pages/HomePage"
 
@@ -65,7 +63,7 @@ test.describe("Global", () => {
     }
 
     test("switches to Chinese", async ({ page }) => {
-      await expect(page).toHaveURL(`/${DEFAULT_LOCALE}/`)
+      await expect(page).toHaveURL("/")
       await homePage.openLanguagePicker()
       await switchToChinese(page, homePage)
     })
@@ -97,7 +95,7 @@ test.describe("Global", () => {
     }) => {
       await homePage.goto()
 
-      await homePage.assertUrlMatches(`/${DEFAULT_LOCALE}/`)
+      await homePage.assertUrlMatches("/")
 
       await homePage.openLanguagePicker()
       await switchToArabic(page, homePage)

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a dapp, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/).
+        Before suggesting a dapp, make sure you've read [our listing policy](https://www.ethereum.org/contributing/adding-products/).
   - type: markdown
     attributes:
       value: Only continue with the issue if your dapp meets the criteria listed there.
