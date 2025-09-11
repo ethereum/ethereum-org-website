@@ -2055,6 +2055,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hexcow"><img src="https://avatars.githubusercontent.com/u/200669683?v=4?s=100" width="100px;" alt="hexcow"/><br /><sub><b>hexcow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahexcow" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dlr-a"><img src="https://avatars.githubusercontent.com/u/116620647?v=4?s=100" width="100px;" alt="dlr-a"/><br /><sub><b>dlr-a</b></sub></a><br /><a href="#content-dlr-a" title="Content">🖋</a> <a href="#maintenance-dlr-a" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://trocher.ch"><img src="https://avatars.githubusercontent.com/u/43437004?v=4?s=100" width="100px;" alt="trocher"/><br /><sub><b>trocher</b></sub></a><br /><a href="#content-trocher" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
