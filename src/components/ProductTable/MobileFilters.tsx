@@ -9,7 +9,10 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
@@ -83,6 +86,12 @@ const MobileFilters = ({
               </Button>
             </DrawerClose>
           </div>
+          <DrawerHeader className="sr-only">
+            <DrawerTitle>Filters</DrawerTitle>
+            <DrawerDescription>
+              {`${activeFiltersCount} ${t("table-active")}`}
+            </DrawerDescription>
+          </DrawerHeader>
           <div className="flex-1 overflow-y-auto">
             <PresetFilters
               presets={presets}
