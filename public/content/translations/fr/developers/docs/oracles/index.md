@@ -362,7 +362,7 @@ L'approche initiale consistait à utiliser des fonctions cryptographiques pseudo
 
 Il est possible de générer la valeur aléatoire hors chaîne et de l'envoyer sur la chaîne, mais cela impose des exigences de confiance élevées pour les utilisateurs. Ils doivent croire que la valeur a réellement été générée par des mécanismes imprévisibles et qu'elle n'a pas été altérée en cours de route.
 
-Les oracles conçus pour le calcul hors chaîne résolvent ce problème en générant de manière sécurisée des résultats aléatoires hors chaîne qu'ils diffusent sur la chaîne avec des preuves cryptographiques attestant de l'imprévisibilité du processus. Un exemple est le [VRF (Verifiable Random Function) de Chainlink](https://docs.chain.link/docs/chainlink-vrf/), qui est un générateur de nombres aléatoires (RNG) à l'épreuve de la falsification et d'une équité prouvée, utile pour construire des contrats intelligents fiables pour des applications qui reposent sur des résultats imprévisibles. Un autre exemple de programmation quantique est le programme [API3 QRNG](https://docs.api3.org/explore/qrng/) : une méthode de développement quantique en libre accès, dans le Web3, sur des propositions d'algorithmes Quantiques (QRNG) générant des nombres entiers aléatoires, mise à disposition, à titre de courtoisie, par l'Université nationale australienne (ANU).
+Les oracles conçus pour le calcul hors chaîne résolvent ce problème en générant de manière sécurisée des résultats aléatoires hors chaîne qu'ils diffusent sur la chaîne avec des preuves cryptographiques attestant de l'imprévisibilité du processus. Un exemple est le [VRF (Verifiable Random Function) de Chainlink](https://docs.chain.link/docs/chainlink-vrf/), qui est un générateur de nombres aléatoires (RNG) à l'épreuve de la falsification et d'une équité prouvée, utile pour construire des contrats intelligents fiables pour des applications qui reposent sur des résultats imprévisibles.
 
 ### Obtenir des résultats pour les événements {#getting-outcomes-for-events}
 
@@ -400,8 +400,6 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol est une plateforme d'oracle de données inter-chaînes qui agrège et connecte les données du monde réel et les API aux contrats intelligents._
 
-**[Paralink](https://paralink.network/)** - _Paralink fournit une plateforme oracle open source et décentralisée pour les contrats intelligents fonctionnant sur Ethereum et d'autres blockchains populaires._
-
 **[Pyth Network](https://pyth.network/)** - _Pyth network est un réseau d'oracles financiers de premier ordre conçu pour publier des données réelles continues sur la chaîne dans un environnement inviolable, décentralisé et autonome._
 
 **[API3 DAO](https://www.api3.org/)** - _L'API3 DAO permet d'apporter des solutions de service d'oracle de premier plan, et d'optimiser la transparence, la fiabilité, la sécurité et la scalabilité des données, dans une solution décentralisée dédiée aux contrats intelligents._
@@ -417,7 +415,6 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 - [Oracles décentralisés : un aperçu complet](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Implémentation d'un Oracle Blockchain sur Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Pourquoi les contrats intelligents ne peuvent-ils pas faire d'appels d'API ?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [Pourquoi nous avons besoin d'oracles décentralisés](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [Vous voulez donc utiliser un oracle de prix](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Vidéos**

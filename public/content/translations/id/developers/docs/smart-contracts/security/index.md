@@ -220,7 +220,7 @@ Selengkapnya tentang [merancang sistem tata kelola yang aman](https://blog.openz
 
 Pengembang perangkat lunak tradisional akrab dengan prinsip KISS ("usahakan tetap sederhana"), yang menyarankan agar tidak memasukkan kompleksitas yang tidak perlu ke dalam desain perangkat lunak. Hal ini mengikuti pemikiran lama bahwa "sistem kompleks akan gagal dengan cara yang kompleks" dan menjadi lebih rentan terhadap kesalahan yang sangat merugikan.
 
-Menjaga kesederhanaan terutama penting saat menulis kontrak pintar, mengingat bahwa kontrak pintar berpotensi mengontrol jumlah nilai yang besar. Tips untuk mencapai kesederhanaan saat menulis kontrak pintar adalah dengan menggunaan kembali pustaka-pustaka yang sudah ada, seperti [Kontrak OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), jika memungkinkan. Karena berbagai pustaka ini telah melalui audit dan pengujian yang ekstensif oleh para pengembang, penggunaan pustaka ini mengurangi kemungkinan munculnya bug dibandingkan dengan menulis fungsionalitas baru dari awal.
+Menjaga kesederhanaan terutama penting saat menulis kontrak pintar, mengingat bahwa kontrak pintar berpotensi mengontrol jumlah nilai yang besar. Tips untuk mencapai kesederhanaan saat menulis kontrak pintar adalah dengan menggunaan kembali pustaka-pustaka yang sudah ada, seperti [Kontrak OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), jika memungkinkan. Karena berbagai pustaka ini telah melalui audit dan pengujian yang ekstensif oleh para pengembang, penggunaan pustaka ini mengurangi kemungkinan munculnya bug dibandingkan dengan menulis fungsionalitas baru dari awal.
 
 Saran umum lainnya adalah menulis fungsi yang kecil dan menjaga kontrak tetap modular dengan membagi logika bisnis ke dalam beberapa kontrak. Penulisan kode yang lebih sederhana tidak hanya mengurangi permukaan serangan pada kontrak pintar, tetapi juga mempermudah pemahaman tentang ketepatan sistem secara keseluruhan dan mendeteksi kemungkinan kesalahan desain sejak awal.
 
@@ -351,7 +351,7 @@ contract MutexPattern {
 }
 ```
 
-Anda juga dapat menggunakan sistem [pembayaran tarik](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) yang mengharuskan pengguna menarik dana dari kontrak pintar, sebagai pengganti sistem "pembayaran dorong" yang mengirim dana ke akun. Hal ini menghilangkan kemungkinan secara tidak sengaja memicu kode pada alamat yang tidak dikenal (dan juga dapat mencegah beberapa serangan denial-of-service atau penolakan layanan).
+Anda juga dapat menggunakan sistem [pembayaran tarik](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) yang mengharuskan pengguna menarik dana dari kontrak pintar, sebagai pengganti sistem "pembayaran dorong" yang mengirim dana ke akun. Hal ini menghilangkan kemungkinan secara tidak sengaja memicu kode pada alamat yang tidak dikenal (dan juga dapat mencegah beberapa serangan denial-of-service atau penolakan layanan).
 
 #### Underflow dan overflow bilangan bulat {#integer-underflows-and-overflows}
 
@@ -480,7 +480,7 @@ Jika Anda berencana untuk meminta harga aset dari oracle di dalam rantai, pertim
 
 - **[Safe](https://safe.global/)** - _Dompet kontrak pintar yang berjalan di Ethereum dan membutuhkan jumlah orang minimum untuk menyetujui transaksi sebelum transaksi tersebut dapat terjadi (M-dari-N)._
 
-- **[Kontrak OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** - _Pustaka kontrak untuk menerapkan fitur-fitur administratif, termasuk kepemilikan kontrak, peningkatan, kontrol akses, tata kelola, kemampuan jeda, dan lainnya._
+- **[Kontrak OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** - _Pustaka kontrak untuk menerapkan fitur-fitur administratif, termasuk kepemilikan kontrak, peningkatan, kontrol akses, tata kelola, kemampuan jeda, dan lainnya._
 
 ### Layanan audit kontrak pintar {#smart-contract-auditing-services}
 
@@ -516,7 +516,7 @@ Jika Anda berencana untuk meminta harga aset dari oracle di dalam rantai, pertim
 
 ### Publikasi kerentanan dan eksploitasi kontrak pintar yang diketahui {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Serangan Terkenal pada Kontrak Pintar](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Penjelasan yang mudah bagi pemula tentang kerentanan kontrak yang paling signifikan, dengan kode contoh untuk sebagian besar kasus._
+- **[ConsenSys: Serangan Terkenal pada Kontrak Pintar](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Penjelasan yang mudah bagi pemula tentang kerentanan kontrak yang paling signifikan, dengan kode contoh untuk sebagian besar kasus._
 
 - **[Daftar SWC](https://swcregistry.io/)** - _Daftar kurasi Common Weakness Enumeration (CWE) yang berlaku untuk kontrak pintar Ethereum._
 

@@ -34,7 +34,7 @@ description: راهنمای استفاده از Crowdin جهت ترجمه‌ eth
 
 محتوای وب سایت به تعدادی اسناد و سطل محتوا تقسیم می شود. می توانید پیشرفت هر سند را در سمت راست بررسی کنید - اگر پیشرفت ترجمه زیر 100٪ است، لطفا مشارکت کنید!
 
-زبان خود را در فهرست نمی بینید؟ [یک مسئله باز کنید](https://github.com/ethereum/ethereum-org-website/issues/new/choose) یا در [دیسکورد](/discord/) ما بپرسید
+زبان خود را در فهرست نمی بینید؟ [یک مسئله باز کنید](https://github.com/ethereum/ethereum-org-website/issues/new/choose) یا در [دیسکورد](https://discord.gg/ethereum-org) ما بپرسید
 
 ![فایل های ترجمه شده و ترجمه نشده در Crowdin](./crowdin-files.png)
 
@@ -82,7 +82,7 @@ description: راهنمای استفاده از Crowdin جهت ترجمه‌ eth
 
 ### در ارتباط باشید {#get-in-touch}
 
-سؤالی دارید؟ یا می‌خواهید با تیم ما و سایر مترجمان همکاری کنید؟ لطفاً در کانال [سرور دیسکورد ethereum.org](/discord/) ما پست کنید
+سؤالی دارید؟ یا می‌خواهید با تیم ما و سایر مترجمان همکاری کنید؟ لطفاً در کانال [سرور دیسکورد ethereum.org](https://discord.gg/ethereum-org) ما پست کنید
 
 همچنین می‌توانید از طریق translations@ethereum.org با ما در تماس باشید
 

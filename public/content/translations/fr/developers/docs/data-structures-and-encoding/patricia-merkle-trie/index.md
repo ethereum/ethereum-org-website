@@ -11,7 +11,7 @@ La structure de données d'Ethereum est un arbre de Patricia Merkle modifié, no
 
 Un arbre de Patricia Merkle est déterministe et cryptographiquement vérifiable : la seule façon de générer une racine d'état est de la calculer à partir de chaque morceau individuel de l'état, et deux états qui sont identiques peuvent être facilement prouvés en comparant le hash de racine et les hashes qui y ont conduit (_a Merkle proof_). Inversement, il n'est pas possible de créer deux états différents avec le même hachage de racine, et toute tentative de modifier l'état avec différentes valeurs donnera lieu à un hachage de racine d'état différent. Théoriquement, cette structure fournit le sacré Graal de l'efficacité `O(log(n))` pour les inserts, les recherches et les suppressions.
 
-Dans un avenir proche, Ethereum prévoit de migrer vers une structure en [arbre de Verkle](https://ethereum.org/en/roadmap/verkle-trees), ce qui ouvrira de nombreuses possibilités d'amélioration du protocole.
+Dans un avenir proche, Ethereum prévoit de migrer vers une structure en [arbre de Verkle](/roadmap/verkle-trees), ce qui ouvrira de nombreuses possibilités d'amélioration du protocole.
 
 ## Prérequis {#prerequisites}
 

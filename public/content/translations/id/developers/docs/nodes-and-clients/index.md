@@ -247,7 +247,7 @@ Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk men
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Rantai Suar, Goerli                  |
 | [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Rantai Suar, Goerli, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Rantai Suar, Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Goerli, Pyrmont |
+| [Prysm](https://prysm.offchainlabs.com/docs/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Goerli, Pyrmont |
 
 ## Perangkat keras {#hardware}
 

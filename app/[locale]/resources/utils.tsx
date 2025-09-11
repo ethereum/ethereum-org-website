@@ -182,12 +182,6 @@ export const getResources = async ({
           href: "https://www.ethismoney.xyz/",
           imgSrc: IconEthGlyphBlueCircle,
         },
-        {
-          title: "Ethereum Now",
-          description: t("page-resources-eth-asset-ethernow-description"),
-          href: "https://www.ethernow.xyz",
-          imgSrc: IconBlocknative,
-        },
       ],
     },
     {
@@ -545,17 +539,6 @@ export const getResources = async ({
           description: t("page-resources-zk-adoption-l2beat-description"),
           href: "https://l2beat.com/zk-catalog",
           imgSrc: IconL2beat,
-        },
-      ],
-    },
-    {
-      title: t("page-resources-mempool-title"),
-      items: [
-        {
-          title: "Ethereum Mempool Dashboard",
-          description: t("page-resources-mempool-mempool-description"),
-          href: "https://mempool.pics",
-          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },

@@ -11,9 +11,9 @@ sidebarDepth: 1
 
 <ExpandableCard title="什么是分叉？" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-分叉是指需要对网络进行重大技术升级或更改之时 – 它们通常源自<a href="/eips/">以太坊改进提案 (EIP)</a> 并更改了以太坊协议的“规则”。
+分叉是指需要对网络进行重大技术升级或更改之时 – 它们通常源自[以太坊改进提案 (EIP)](/eips/) 并更改了以太坊协议的“规则”。
 
-当传统的中心化软件需要升级时，公司会为终端用户发布新版本。 因为没有中心化所有权，区块链以不同的方式运作。 <a href="/developers/docs/nodes-and-clients/">以太坊客户端</a>必须更新他们的软件以执行新的分叉规则。 直链区块创造者（POW 中的矿工，POS 中的验证者）和节点必须创造区块和按照新规则进行验证。 <a href="/developers/docs/consensus-mechanisms/">关于共识机制的更多信息</a>
+当传统的中心化软件需要升级时，公司会为终端用户发布新版本。 因为没有中心化所有权，区块链以不同的方式运作。 [以太坊客户端](/developers/docs/nodes-and-clients/)必须更新他们的软件以执行新的分叉规则。 直链区块创造者（POW 中的矿工，POS 中的验证者）和节点必须创造区块和按照新规则进行验证。 [关于共识机制的更多信息](/developers/docs/consensus-mechanisms/)
 
 这些规则更改可能会在网络中造成暂时的分叉。 新区块的产生，可以来自新规则，也可以来自旧规则。 分叉通常提前商定，以便让客户端能够采用 Unison 的升级，升级后的分叉链成为主链。 然而，在极少数情况下，对分叉的不同意见可能导致网络永久硬分叉 – 最为著名的是 <a href="#dao-fork">DAO 分叉</a> 产生了以太坊经典这一平台。
 
@@ -397,10 +397,10 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>允许以太坊与 Zcash 等受隐私保护的数字货币一起使用。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>以更低廉的加密技术降低<a href="/glossary/#gas">燃料</a>费用。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>通过添加 <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">操作码</a>，保护以太坊免受重放攻击。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>以更低廉的加密技术降低[燃料](/glossary/#gas)费用。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>通过添加 <code>CHAINID</code> [操作码](/developers/docs/ethereum-stack/#ethereum-virtual-machine)，保护以太坊免受重放攻击。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>优化基于消耗量的操作码燃料价格。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，从而允许更多数据储放入区块中 – 这对 <a href="/developers/docs/scaling/#layer-2-scaling"> 二层网络扩容</a>很有帮助。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，从而允许更多数据储放入区块中 – 这对 [ 二层网络扩容](/developers/docs/scaling/#layer-2-scaling)很有帮助。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>其他操作码的燃料价格变更。</em></li>
 </ul>
 
@@ -458,13 +458,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>添加 <code>REVERT</code> 操作码。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>在交易收据中添加状态字段，以指示成功或失败。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>增加了椭圆曲线和标量乘法以允许 <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>增加了椭圆曲线和标量乘法以允许<a href="/developers/docs/scaling/zk-rollups/">零知识简洁非交互式知识论证</a>。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>增加了椭圆曲线和标量乘法以允许 [ZK-Snarks](/developers/docs/scaling/zk-rollups/)。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>增加了椭圆曲线和标量乘法以允许[零知识简洁非交互式知识论证](/developers/docs/scaling/zk-rollups/)。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>启用 RSA 签名验证。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>添加了对可变长度返回值的支持。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>添加 <code>STATICCALL</code> 操作码，允许对其他合约进行非状态改变调用。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>更改难度调整公式。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>将<a href="/glossary/#difficulty-bomb">难度炸弹</a>推迟 1 年，并将区块奖励从 5 以太币减少到 3 以太币。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>将[难度炸弹](/glossary/#difficulty-bomb)推迟 1 年，并将区块奖励从 5 以太币减少到 3 以太币。</em></li>
 </ul>
 
 </ExpandableCard>

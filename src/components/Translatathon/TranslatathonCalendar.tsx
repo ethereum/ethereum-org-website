@@ -60,7 +60,10 @@ export const TranslatathonCalendar = () => {
           Translatathon, walk through using Crowdin and answer any questions you
           might have.
         </p>
-        <ButtonLink href="/discord/" onClick={() => matomoEvent("discord")}>
+        <ButtonLink
+          href="https://discord.gg/ethereum-org/"
+          onClick={() => matomoEvent("discord")}
+        >
           <Discord className="text-2xl" />
           Join Discord
         </ButtonLink>

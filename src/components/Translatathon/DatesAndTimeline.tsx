@@ -28,7 +28,7 @@ export const dates = [
   //     "Join our Discord to participate in onboarding calls and workshops and learn all about the Translatathon",
   //   startDate: new Date("2025-08-15T12:00:00"),
   //   endDate: new Date("2025-08-22T12:00:00"),
-  //   link: "/discord/",
+  //   link: "https://discord.gg/ethereum-org/",
   //   linkText: "Join our Discord",
   // },
   {

@@ -95,7 +95,6 @@ Pozrite sa na nižšie uvedené projekty a zapojte sa do DeSci komunity.
 - [Molecule: financujte a získajte financovanie pre vaše výskumné projekty](https://www.molecule.xyz/)
 - [VitaDAO: získavajte financovanie prostredníctvom sponzorovaných zmlúv o výskume pre výskum dlhovekosti](https://www.vitadao.com/)
 - [ResearchHub: publikujte vedecké výsledky a zapojte sa do konverzácie s kolegami](https://www.researchhub.com/)
-- [LabDAO: skladajte bielkoviny pomocou simulácie](https://alphafodl.vercel.app/)
 - [dClimate API: vyhľadávanie klimatických dáta zhromaždených decentralizovanou komunitou](https://www.dclimate.net/)
 - [DeSci Foundation: publikačný nástroj v rámci DeSci](https://descifoundation.org/)
 - [DeSci.World: jednotné kontaktné miesto, kde sa používatelia môžu pozrieť a zapájať do DeSci](https://desci.world)

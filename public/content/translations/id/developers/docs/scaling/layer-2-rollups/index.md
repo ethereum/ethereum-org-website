@@ -131,7 +131,6 @@ Solusi hibrida ada dengan menggabungkan bagian terbaik dari berbagai teknologi l
 
 - [Panduan Tidak Lengkap tentang Rollup](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollup Optimistic vs Rollup ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Skalabilitas Blockchain Zero-Knowledge](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Alasan rollup + shard data merupakan satu-satunya solusi berkelanjutan untuk penskalaan tinggi](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Rollup ZK yang digerakkan Ethereum: Yang Terbaik di Kelasnya](https://hackmd.io/@canti/rkUT0BD8K)
 

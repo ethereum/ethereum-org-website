@@ -55,7 +55,7 @@ It also requires very basic hardware setup, and some understanding of minimum re
 <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
 Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.{' '}
 
-<a href="/security/">Ethereum security and scam prevention</a>
+[Ethereum security and scam prevention](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -142,7 +142,7 @@ This buffer prevents also prevents an effective balance from dropping until it h
 
 Each key-pair associated with a validator requires at least 32 ETH to be activated. Any balance above this may be withdrawn to the associated withdrawal address at any time via a transaction signed by this address. Any funds over the maximum effective balance will automatically be withdrawn on a periodic basis.
 
-If home staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
+If home staking seems too demanding for you, consider using a [staking-as-a-service](/staking/saas/) provider, or if you're working with less than 32 ETH, check out the [staking pools](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
@@ -204,7 +204,6 @@ To unlock and receive your entire balance back you must also complete the proces
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

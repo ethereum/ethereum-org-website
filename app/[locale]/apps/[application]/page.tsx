@@ -1,6 +1,10 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { ChainName } from "@/lib/types"
 
@@ -57,6 +61,9 @@ const Page = async ({
 }) => {
   const { locale, application } = await params
   setRequestLocale(locale)
+
+  // Get translations
+  const t = await getTranslations({ locale, namespace: "page-apps" })
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -115,9 +122,9 @@ const Page = async ({
     const diffInMs = now.getTime() - date.getTime()
     const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24))
 
-    if (diffInDays === 0) return "Today"
-    if (diffInDays === 1) return "1 day ago"
-    return `${diffInDays} days ago`
+    if (diffInDays === 0) return t("page-apps-today")
+    if (diffInDays === 1) return t("page-apps-one-day-ago")
+    return t("page-apps-days-ago", { days: diffInDays })
   }
 
   return (
@@ -194,7 +201,7 @@ const Page = async ({
                       eventName: "visit",
                     }}
                   >
-                    Visit {app.name}
+                    {t("page-apps-visit-app", { appName: app.name })}
                   </ButtonLink>
                   <div className="flex flex-row justify-between gap-4">
                     <div className="flex h-fit flex-row flex-wrap gap-4">
@@ -250,7 +257,9 @@ const Page = async ({
                     {nextApp && (
                       <LinkBox className="group flex flex-row items-center rounded-lg hover:bg-background-highlight sm:hidden">
                         <div className="mr-2 flex flex-col text-right">
-                          <p className="text-sm text-gray-500">See next</p>
+                          <p className="text-sm text-gray-500">
+                            {t("page-apps-see-next")}
+                          </p>
                           <p className="text-primary group-hover:text-primary-hover">
                             {nextApp.name}
                           </p>
@@ -275,13 +284,15 @@ const Page = async ({
             {nextApp && (
               <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
                 <div className="mr-2 flex flex-col text-right">
-                  <p className="text-nowrap text-sm text-gray-500">See next</p>
+                  <p className="text-nowrap text-sm text-gray-500">
+                    {t("page-apps-see-next")}
+                  </p>
                   <p className="text-primary group-hover:text-primary-hover">
                     {nextApp.name}
                   </p>
                   <LinkOverlay
                     href={`/apps/${slugify(nextApp.name)}`}
-                    matomoEvent={{
+                    customEventOptions={{
                       eventCategory: "detail",
                       eventAction: `app name ${app.name}`,
                       eventName: "see_next",
@@ -299,25 +310,31 @@ const Page = async ({
         <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
           <p className="max-w-3xl">{app.description}</p>
           <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
-            <h3 className="text-lg">Info</h3>
+            <h3 className="text-lg">{t("page-apps-info-title")}</h3>
             <div>
-              <p className="text-sm text-body-medium">Founded</p>
+              <p className="text-sm text-body-medium">
+                {t("page-apps-info-founded")}
+              </p>
               <p className="text-sm">
                 {new Date(app.dateOfLaunch).getFullYear()}
               </p>
             </div>
             <div>
-              <p className="text-sm text-body-medium">Creator</p>
+              <p className="text-sm text-body-medium">
+                {t("page-apps-info-creator")}
+              </p>
               <p className="text-sm">{app.parentCompany}</p>
             </div>
             <div>
-              <p className="text-sm text-body-medium">Last updated</p>
+              <p className="text-sm text-body-medium">
+                {t("page-apps-info-last-updated")}
+              </p>
               <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
             </div>
           </div>
           {app.screenshots.length > 0 && (
             <div className="flex flex-col gap-4">
-              <h3 className="text-2xl">Gallery</h3>
+              <h3 className="text-2xl">{t("page-apps-gallery-title")}</h3>
               <ScreenshotSwiper
                 screenshots={app.screenshots}
                 appName={app.name}
@@ -329,7 +346,7 @@ const Page = async ({
         {relatedApps.length > 0 && (
           <div className="flex flex-col px-4 py-10 md:px-8">
             <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
-              <h2>More apps like this</h2>
+              <h2>{t("page-apps-more-apps-like-this")}</h2>
               <div className="flex w-full flex-col gap-4 lg:flex-row">
                 {relatedApps.map((relatedApp) => (
                   <div

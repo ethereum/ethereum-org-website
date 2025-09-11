@@ -6,6 +6,7 @@ type ItemsOnly = { items: NavItem[]; href?: never }
 type LinkXorItems = LinkOnly | ItemsOnly
 
 export type NavItem = {
+  id?: string
   label: string
   description: string
   icon?: LucideIcon | FC<SVGProps<SVGElement>>

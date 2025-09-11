@@ -40,7 +40,6 @@ El procès de construcció pot ser difícil. Aquí teniu alguns espais enfocats 
 
 - [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum Stackexchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Universitat Web3](https://www.web3.university/)
 
 També podeu trobar documentació i guies per al desenvolupament en la nostra secció de [recursos per a desenvolupadors d'Ethereum](/developers/).

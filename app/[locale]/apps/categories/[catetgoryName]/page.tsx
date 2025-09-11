@@ -1,6 +1,10 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { AppCategoryEnum } from "@/lib/types"
 
@@ -52,6 +56,8 @@ const Page = async ({
 
   const [appsData] = await loadData()
 
+  const t = await getTranslations({ locale, namespace: "page-apps" })
+
   // Get i18n messages
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
@@ -90,19 +96,23 @@ const Page = async ({
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
+                  <BreadcrumbLink href="/apps" className="uppercase">
+                    {t("page-apps-all-apps")}
+                  </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
-                  <BreadcrumbPage>{category.name.toUpperCase()}</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    {t(category.name).toUpperCase()}
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
           }
-          title={category.name}
-          subtitle={category.description}
+          title={t(category.name)}
+          subtitle={t(category.description)}
         />
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -111,7 +121,7 @@ const Page = async ({
 
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col px-4 md:px-8">
-            <h2>Highlights</h2>
+            <h2>{t("page-apps-highlights-title")}</h2>
             <AppsHighlight
               apps={highlightedApps}
               matomoCategory={`category_page`}
@@ -119,7 +129,7 @@ const Page = async ({
           </div>
 
           <div className="flex flex-col px-4 md:px-8">
-            <AppsTable apps={appsData[category.name]} />
+            <AppsTable apps={appsData[categoryEnum]} />
           </div>
 
           <div className="flex flex-col px-4 md:px-8">
@@ -137,6 +147,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; catetgoryName: string }>
 }) {
   const { locale, catetgoryName } = await params
+  const t = await getTranslations({ locale, namespace: "page-apps" })
 
   // Normalize slug to lowercase
   const normalizedSlug = catetgoryName.toLowerCase()
@@ -156,8 +167,8 @@ export async function generateMetadata({
     notFound()
   }
 
-  const title = category.metaTitle
-  const description = category.metaDescription
+  const title = t(category.metaTitle)
+  const description = t(category.metaDescription)
 
   return await getMetadata({
     locale,

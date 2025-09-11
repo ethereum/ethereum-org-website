@@ -647,5 +647,29 @@
     "timeToRead": "90",
     "lang": "en",
     "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-1-decoding-transactions",
+    "title": "Detect UI Spoofing Attacks: Decoding Ethereum Calldata with Python",
+    "description": "Learn to decode Ethereum calldata to detect malicious transactions before signing.",
+    "author": "Valentina Rivas",
+    "authorGithub": "https://github.com/333cipher",
+    "tags": ["security", "smart contracts", "python", "transactions", "ERC-20"],
+    "skillLevel": "intermediate",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "05/07/2025"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-2-simulating-transactions",
+    "title": "Prevent UI Spoofing: Simulating Ethereum Transactions with Foundry & Python",
+    "description": "Simulate transactions on a local fork to verify on-chain behavior and catch UI spoofing.",
+    "author": "Valentina Rivas",
+    "authorGithub": "https://github.com/333cipher",
+    "tags": ["security", "smart contracts", "foundry", "testing", "python", "ERC-20"],
+    "skillLevel": "advanced",
+    "timeToRead": "50",
+    "lang": "en",
+    "publishDate": "05/09/2025"
   }
 ]

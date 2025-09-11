@@ -113,7 +113,6 @@ contract Coin {
 - [チートシート](https://reference.auditless.com/cheatsheet)
 - [スマートコントラクト開発フレームワークとVyper用ツール](/developers/docs/programming-languages/python/)
 - [VyperPunk - Vyperスマートコントラクトのセキュリティとハッキングを学ぶ](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyperの脆弱性の例](https://www.vyperexamples.com/reentrancy)
 - [開発用Vyper Hub](https://github.com/zcor/vyper-dev)
 - [人気を博しているVyperのスマートコントラクトの例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [素晴らしいVyperの厳選されたリソース](https://github.com/spadebuilders/awesome-vyper)
@@ -227,7 +226,6 @@ def endAuction():
 
 - [Yulのドキュメント](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+のドキュメント](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+の紹介記事](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### コントラクトのコード例 {#example-contract-2}
@@ -322,5 +320,5 @@ contract GuestBook:
 
 ## 参考文献 {#further-reading}
 
-- [OpenZeppelinによるSolidityコントラクトライブラリ](https://docs.openzeppelin.com/contracts)
+- [OpenZeppelinによるSolidityコントラクトライブラリ](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

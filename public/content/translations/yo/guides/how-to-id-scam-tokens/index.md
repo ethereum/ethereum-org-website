@@ -19,7 +19,7 @@ Láti ṣe àpèjúwe àwọn àmì ẹ̀tàn yìí, a yóò wo àpẹrẹ kan: 
 title="Kini ARB?"
 contentPreview=''>
 
-Arbitrum jẹ́ àgbájọ tí ó ń ṣe àgbékalẹ̀ àti ìṣàkóso àwọn ohun èlò <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollup</a>. Ní àkọ́kọ́, wọ́n ṣ'èdá Arbitrum gẹ́gẹ́ bíi ilé iṣé tí kìí ṣe fún èrè, sùgbọ́n lẹ́hìn náà gbé ìgbésẹ láti jẹ́ aláìní ìṣàkóso. Gẹ́gẹ́ bíi ara ètò náà, wọ́n ṣe àgbéjáde <a href="/dao/#token-based-membership">tọ́kẹ̀n ìṣàkóso</a> tí o ṣe ṣòwò.
+Arbitrum jẹ́ àgbájọ tí ó ń ṣe àgbékalẹ̀ àti ìṣàkóso àwọn ohun èlò [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Ní àkọ́kọ́, wọ́n ṣ'èdá Arbitrum gẹ́gẹ́ bíi ilé iṣé tí kìí ṣe fún èrè, sùgbọ́n lẹ́hìn náà gbé ìgbésẹ láti jẹ́ aláìní ìṣàkóso. Gẹ́gẹ́ bíi ara ètò náà, wọ́n ṣe àgbéjáde [tọ́kẹ̀n ìṣàkóso](/dao/#token-based-membership) tí o ṣe ṣòwò.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Gbogbo ohun tí Ethereum wà fún ni aláìní ìṣàkóso. Èyí túmò sí p�
 title="Kini awọn adehun ọlọgbọn?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Àdéhùn ọlọ́gbọ́n</a> jẹ́ àwọn ètò tí ó n ṣiṣẹ́ ní orí ẹ̀rọ Ẹ̀tẹ́ríọ̀mù. Fún àpẹrẹ, gbogbo tọ́kẹ̀n ERC-20 tí a ṣe ní àdéhùn ọlọ́gbọ́n.
+[Àdéhùn ọlọ́gbọ́n](/developers/docs/smart-contracts/) jẹ́ àwọn ètò tí ó n ṣiṣẹ́ ní orí ẹ̀rọ Ẹ̀tẹ́ríọ̀mù. Fún àpẹrẹ, gbogbo tọ́kẹ̀n ERC-20 tí a ṣe ní àdéhùn ọlọ́gbọ́n.
 
 </ExpandableCard>
 
