@@ -13236,6 +13236,15 @@
         "content",
         "maintenance"
       ]
+    },
+    {
+      "login": "trocher",
+      "name": "trocher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43437004?v=4",
+      "profile": "http://trocher.ch",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
