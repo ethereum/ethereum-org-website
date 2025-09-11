@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a resource, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-resources/).
+        Before suggesting a resource, make sure you've read [our listing policy](https://www.ethereum.org/contributing/adding-resources/).
   - type: markdown
     attributes:
       value: Only continue with the issue if your resource meets the criteria listed there.

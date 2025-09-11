@@ -724,6 +724,7 @@ export type WalletData = {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  privacy?: boolean
 }
 
 export type Wallet = WalletData & {
@@ -1217,4 +1218,11 @@ export type Story = {
   twitter: string | null
   country: string | null
   date: string
+}
+
+export type SectionNavDetails = {
+  key: string
+  label: string
+  href?: string
+  icon?: React.ReactNode
 }

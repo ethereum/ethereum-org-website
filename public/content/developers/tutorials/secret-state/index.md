@@ -585,7 +585,7 @@ It still fails, but now it fails without a reason because it happens during the 
 
 ### How can a user verify the zero trust code? {#user-verify-zero-trust}
 
-Smart contracts are relatively easy to verify. Typically, the developer publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](https://ethereum.org/en/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
+Smart contracts are relatively easy to verify. Typically, the developer publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
 
 This is harder with zero-knowledge. The verifier includes some constants and runs some calculations on them. This doesn't tell you what is being proved.
 

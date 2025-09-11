@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        We'll consider [our content resources policy](https://ethereum.org/en/contributing/content-resources/) when reviewing the tutorial, so please take a look there first.
+        We'll consider [our content resources policy](https://ethereum.org/contributing/content-resources/) when reviewing the tutorial, so please take a look there first.
   - type: markdown
     id: tutorial_info
     attributes:
@@ -29,7 +29,7 @@ body:
     id: tutorial_tags
     attributes:
       label: Tutorial tags
-      description: What topics are covered in your tutorial? Check out the current tags on https://ethereum.org/en/developers/tutorials/ but feel free to add new ones
+      description: What topics are covered in your tutorial? Check out the current tags on https://ethereum.org/developers/tutorials/ but feel free to add new ones
     validations:
       required: true
   - type: dropdown

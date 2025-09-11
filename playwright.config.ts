@@ -14,7 +14,7 @@ export default defineConfig<ChromaticConfig>({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 3,
   reporter: [
-    ["html", { outputFolder: "./tests/e2e/__report__" }],
+    ["html", { outputFolder: "./tests/e2e/__report__", open: "never" }],
     ["line"],
     process.env.CI ? ["github"] : ["list"],
   ],
