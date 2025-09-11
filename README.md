@@ -2057,6 +2057,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://trocher.ch"><img src="https://avatars.githubusercontent.com/u/43437004?v=4?s=100" width="100px;" alt="trocher"/><br /><sub><b>trocher</b></sub></a><br /><a href="#content-trocher" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://gists.github.com/ryangoree"><img src="https://avatars.githubusercontent.com/u/3289505?v=4?s=100" width="100px;" alt="Ryan Goree"/><br /><sub><b>Ryan Goree</b></sub></a><br /><a href="#maintenance-ryangoree" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
