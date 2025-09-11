@@ -43,7 +43,6 @@ Certains clients de consensus disposent d'outils intégrés pour faire tourner l
 
 - [Réseau de test local utilisant Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Réseau de test local utilisant Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Réseau de test local utilisant Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Chaînes publiques de test pour Ethereum {#public-beacon-testchains}
 

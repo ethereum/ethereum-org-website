@@ -70,7 +70,6 @@ Involúcrese en organizaciones profesionales impulsadas por la comunidad o únas
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [Web3Design de código abierto](https://www.web3designers.org/)
 
 ## Sistemas de diseño {#design-systems}
 

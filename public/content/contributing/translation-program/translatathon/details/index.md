@@ -12,7 +12,7 @@ Translators collect points by suggesting translations for untranslated strings i
 
 Each participants final score is determined by their position on the leaderboard based on the number of words they have translated during the translation period and any potential bonus points they’ve collected.
 
-### Getting started
+## Getting started {#getting-started}
 
 The translation process takes place in the ethereum.org project in Crowdin and translators suggest their translations for untranslated strings, made up of almost all the content from the ethereum.org website.
 
@@ -51,7 +51,7 @@ The scoring is simple: **1 translated word = 1 point**
 
 In order to receive your final points allocation, your suggested translations will need to pass the evaluation process, where professional reviewers will check each participant's translations to ensure they meet the minimum quality threshold and no machine or AI translations were used in the process.
 
-### Ecosystem content
+## Ecosystem content {#ecosystem-content}
 
 Since the ethereum.org translation program is active all the time, the translation progress in some target languages on the website is significantly higher than others.
 
@@ -61,15 +61,21 @@ Participants translating any of the eligible projects will earn an equal amounts
 
 Here is a list of all the eligible projects that are part of the 2025 Translatathon:
 
-Ethereum.org
-- https://crowdin.com/project/ethereum-org
+- [Ethereum.org](https://crowdin.com/project/ethereum-org)
 
-Ethereum.org developer tutorials
-- https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97
+- [Ethereum.org developer tutorials](https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97)
 
-More eligible projects will be added soon.
+- [EthStaker deposit CLI](https://crowdin.com/project/ethstaker-deposit-cli)
 
-### Evaluation process
+- [Eth Docker docs](https://crowdin.com/project/eth-docker-docs)
+
+- [Remix IDE documentation](https://crowdin.com/project/remix-translation)
+
+- [Remix LearnEth](https://crowdin.com/project/remix-learneth)
+
+- [web3.py](https://crowdin.com/project/web3py)
+
+## Evaluation process {#evaluation-process}
 
 All translations will be subject to QA and feedback, where professional linguists will evaluate submissions based on quality and accuracy.
 

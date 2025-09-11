@@ -156,19 +156,6 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Saat başına ödeme fiyatlandırması
     - Doğrudan 7/24 destek
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Belgeler](https://docs.figment.io/)
-  - Özellikler
-    - 3.000.000 istek/ay ile ücretsiz katman seçeneği
-    - RPC ve WSS uç noktaları
-    - Özel tam düğümler ve arşiv düğümleri
-    - Otomatik Ölçeklendirme (Hacim İndirimleri)
-    - Ücretsiz arşiv verileri
-    - Servis Analizi
-    - Gösterge Paneli
-    - Doğrudan 24/7 Destek
-    - Kripto ile Ödeme (İşletme)
-
 - [**DRPC**](https://drpc.org/)
   - [Belgeler](https://docs.drpc.org/)
   - Özellikler

@@ -94,7 +94,11 @@ export const RoadmapLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: {
+      src: frontmatter.image,
+      width: 1456,
+      height: 816,
+    },
   }
 
   return (
@@ -110,7 +114,6 @@ export const RoadmapLayout = ({
           <HubHero
             heroImg={RoadmapHubHeroImage}
             header={frontmatter.title}
-            title=""
             description={frontmatter.description}
           />
         ) : (

@@ -55,5 +55,8 @@
   "page-enterprise-team-form-success-heading": "Thanks for reaching out!",
   "page-enterprise-team-form-success-message": "We've received your message and someone from our enterprise team will get back to you within a few business days.",
   "page-enterprise-why-description": "Ethereum supports enterprise compliance with transparent, auditable infrastructure that aligns with GDPR and KYC while protecting sensitive data in private or consortium environments.",
-  "page-enterprise-why-header": "Why Ethereum"
+  "page-enterprise-why-header": "Why Ethereum",
+  "page-enterprise-why-metric-years": "Year",
+  "page-enterprise-why-metric-upgrades": "Upgrades",
+  "page-enterprise-why-metric-downtime": "Downtime"
 }

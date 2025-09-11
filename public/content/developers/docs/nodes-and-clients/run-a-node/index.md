@@ -53,7 +53,7 @@ Both options have different advantages summed up above. If you are looking for a
 
 #### Hardware {#hardware}
 
-However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/networkType/Hosting) show a large share of nodes run on the cloud, which could become a single point of failure.
+However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/network-types) show a large share of nodes run on the cloud, which could become a single point of failure.
 
 Ethereum clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
@@ -298,7 +298,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind docs offer a [complete guide](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
+Nethermind docs offer a [complete guide](https://docs.nethermind.io/get-started/running-node/) on running Nethermind with consensus client.
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
@@ -368,7 +368,7 @@ nimbus_beacon_node \
 
 ##### Running Prysm
 
-Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
