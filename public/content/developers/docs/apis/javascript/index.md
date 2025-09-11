@@ -235,7 +235,7 @@ ethers.utils.formatEther(balance)
 ```
 
 - [Web3js utility functions](https://docs.web3js.org/api/web3-utils)
-- [Ethers utility functions](https://docs.ethers.io/v5/api/utils)
+- [Ethers utility functions](https://docs.ethers.org/v6/api/utils/)
 
 ## Available libraries {#available-libraries}
 
@@ -246,7 +246,8 @@ ethers.utils.formatEther(balance)
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
-- [Documentation](https://ethers.org)
+- [Ethers.js home](https://ethers.org/)
+- [Documentation](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
 **The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
@@ -259,7 +260,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemy SDK -** **_Wrapper around Ethers.js with enhanced apis._**
 
-- [Documentation](https://www.alchemy.com/sdk)
+- [Documentation](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
 **viem -** **_TypeScript Interface for Ethereum._**
@@ -269,7 +270,7 @@ ethers.utils.formatEther(balance)
 
 **Drift -** **_TypeScript meta-library with built-in caching, hooks, and test mocks._**
 
-- [Documentation](https://delvtech.github.io/drift)
+- [Documentation](https://delvtech.github.io/drift/)
 - [GitHub](https://github.com/delvtech/drift)
 
 ## Further reading {#further-reading}
