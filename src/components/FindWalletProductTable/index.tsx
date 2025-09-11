@@ -1,12 +1,13 @@
 "use client"
 
-import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
+import { WalletRow } from "@/lib/types"
 
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
 import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hooks/useWalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { filterFn } from "@/lib/utils/wallets"
 
 import List from "../ProductTable/List"
 
@@ -14,58 +15,6 @@ import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
 import { useTranslation } from "@/hooks/useTranslation"
-
-function getActiveFilterKeys(filters: FilterOption[]): string[] {
-  const keys: string[] = []
-  filters.forEach((filter) => {
-    filter.items.forEach((item) => {
-      if (item.inputState === true && item.options.length === 0) {
-        keys.push(item.filterKey)
-      }
-      if (item.options?.length > 0) {
-        item.options.forEach((option) => {
-          if (option.inputState === true) {
-            keys.push(option.filterKey)
-          }
-        })
-      }
-    })
-  })
-  return keys
-}
-
-const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
-  let selectedLanguage: string = ""
-  let selectedLayer2: ChainName[] = []
-
-  const activeFilterKeys = getActiveFilterKeys(filters)
-
-  filters.forEach((filter) => {
-    filter.items.forEach((item) => {
-      if (item.filterKey === "languages") {
-        selectedLanguage = item.inputState as string
-      } else if (item.filterKey === "layer_2_support") {
-        selectedLayer2 = (item.inputState as ChainName[]) || []
-      }
-    })
-  })
-
-  return data
-    .filter((item) => {
-      return item.languages_supported.includes(selectedLanguage as Lang)
-    })
-    .filter((item) => {
-      return (
-        selectedLayer2.length === 0 ||
-        selectedLayer2.every((chain) => item.supported_chains.includes(chain))
-      )
-    })
-    .filter((item) => {
-      return activeFilterKeys.every((key) => item[key])
-    })
-}
-
-type WalletRow = Wallet & { id: string }
 
 const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")

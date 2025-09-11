@@ -64,6 +64,7 @@ const List = <T extends { id: string }>({
 
       if (!open) return
 
+      // the following code is used to track the first time a wallet is expanded
       const expandedOnce = previousExpandedRef.current[item.id]
 
       if (!expandedOnce) {

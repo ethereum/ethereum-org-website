@@ -11,6 +11,8 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import MediaQuery from "../MediaQuery"
 
+import { getActiveFiltersCount, parseQueryParams } from "@/lib/product-table"
+
 interface ProductTableProps<T extends { id: string }> {
   data: T[]
   filters: FilterOption[]
@@ -31,61 +33,6 @@ interface ProductTableProps<T extends { id: string }> {
     resetFilters: () => void
     activeFiltersCount: number
   }) => React.ReactNode | undefined
-}
-
-const getActiveFiltersCount = (filters: FilterOption[]) => {
-  return filters.reduce((count, filter) => {
-    return (
-      count +
-      filter.items.reduce((itemCount, item) => {
-        if (item.options && item.options.length > 0) {
-          return (
-            itemCount +
-            item.options.filter(
-              (option) =>
-                typeof option.inputState === "boolean" && option.inputState
-            ).length
-          )
-        }
-        if (Array.isArray(item.inputState) && item.inputState.length > 0) {
-          return itemCount + 1
-        }
-
-        if (
-          typeof item.inputState === "string" &&
-          item.filterKey !== "languages"
-        ) {
-          return itemCount + 1
-        }
-
-        return (
-          itemCount +
-          (typeof item.inputState === "boolean" && item.inputState ? 1 : 0)
-        )
-      }, 0)
-    )
-  }, 0)
-}
-
-const parseQueryParams = (queryValue: unknown) => {
-  // Handle boolean values
-  if (queryValue === "true") return true
-  if (queryValue === "false") return false
-
-  // Handle array values
-  if (
-    typeof queryValue === "string" &&
-    queryValue.startsWith("[") &&
-    queryValue.endsWith("]")
-  ) {
-    try {
-      return JSON.parse(decodeURIComponent(queryValue))
-    } catch {
-      return undefined
-    }
-  }
-
-  return undefined
 }
 
 const ProductTable = <T extends { id: string }>({

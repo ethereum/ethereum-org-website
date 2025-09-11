@@ -6,6 +6,8 @@ import type { FilterOption, TPresetFilters } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { getActivePresets } from "@/lib/product-table"
+
 export interface PresetFiltersProps {
   presets: TPresetFilters
   filters: FilterOption[]
@@ -46,41 +48,8 @@ const PresetFilters = ({
   presetFiltersCounts,
 }: PresetFiltersProps) => {
   const activePresets = useMemo(() => {
-    const currentFilters = {}
-
-    filters.forEach((filter) => {
-      filter.items.forEach((item) => {
-        if (item.inputState === true) {
-          currentFilters[item.filterKey] = item.inputState
-        }
-
-        if (item.options && item.options.length > 0) {
-          item.options.forEach((option) => {
-            if (option.inputState === true) {
-              currentFilters[option.filterKey] = option.inputState
-            }
-          })
-        }
-      })
-    })
-
-    const presetsToApply = presets.reduce<number[]>((acc, preset, idx) => {
-      const presetFilters = preset.presetFilters
-      const activePresetKeys = Object.keys(presetFilters).filter(
-        (key) => presetFilters[key]
-      )
-      const allItemsInCurrentFilters = activePresetKeys.every(
-        (key) => currentFilters[key] !== undefined
-      )
-
-      if (allItemsInCurrentFilters) {
-        acc.push(idx)
-      }
-      return acc
-    }, [])
-
-    return presetsToApply
-  }, [filters, presets])
+    return getActivePresets(presets, filters)
+  }, [presets, filters])
 
   const handleSelectPreset = useCallback(
     (idx: number) => {
