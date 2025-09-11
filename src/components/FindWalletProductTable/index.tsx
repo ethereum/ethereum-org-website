@@ -8,6 +8,8 @@ import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import List from "../ProductTable/List"
+
 import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
@@ -70,15 +72,6 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
 
-  // Reset filters
-  const resetFilters = () => {
-    trackCustomEvent({
-      eventCategory: "WalletFilterSidebar",
-      eventAction: "Reset button",
-      eventName: "reset_click",
-    })
-  }
-
   if (!Array.isArray(wallets)) {
     return <div>Error loading wallets</div>
   }
@@ -86,23 +79,50 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   return (
     <ProductTable<WalletRow>
       data={wallets}
-      matomoEventCategory="find-wallet"
       filters={walletFilterOptions}
       filterFn={filterFn}
       presetFilters={walletPersonas}
-      onResetFilters={resetFilters}
-      subComponent={(wallet, filters, listIdx) => (
-        <WalletSubComponent
-          wallet={wallet}
-          filters={filters}
-          listIdx={listIdx}
-        />
-      )}
-      noResultsComponent={(resetFilters) => (
-        <FindWalletsNoResults resetFilters={resetFilters} />
-      )}
       mobileFiltersLabel={t("page-find-wallet-see-wallets")}
-    />
+    >
+      {({ filteredData, filters, resetFilters }) => (
+        <>
+          <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
+            <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
+              <p className="text-body-medium">
+                {t("page-find-wallet-showing-all-wallets")}{" "}
+                <span className="text-body">({filteredData.length})</span>
+              </p>
+            </div>
+          </div>
+
+          {filteredData.length === 0 && (
+            <FindWalletsNoResults
+              resetFilters={() => {
+                resetFilters()
+                trackCustomEvent({
+                  eventCategory: "WalletFilterSidebar",
+                  eventAction: "Reset button",
+                  eventName: "reset_click",
+                })
+              }}
+            />
+          )}
+
+          <List
+            data={filteredData}
+            subComponent={(wallet, filters, listIdx) => (
+              <WalletSubComponent
+                wallet={wallet}
+                filters={filters}
+                listIdx={listIdx}
+              />
+            )}
+            filters={filters}
+            matomoEventCategory="find-wallet"
+          />
+        </>
+      )}
+    </ProductTable>
   )
 }
 

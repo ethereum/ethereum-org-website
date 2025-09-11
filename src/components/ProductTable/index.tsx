@@ -10,9 +10,6 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import MediaQuery from "../MediaQuery"
-import Translation from "../Translation"
-
-import List from "./List"
 
 interface ProductTableProps<T extends { id: string }> {
   data: T[]
@@ -20,14 +17,20 @@ interface ProductTableProps<T extends { id: string }> {
   filterFn: (data: T[], filters: FilterOption[]) => T[]
   presetFilters: TPresetFilters
   onResetFilters?: () => void
-  subComponent?: (
-    item: T,
-    filters: FilterOption[],
-    listIdx: number
-  ) => React.ReactNode
-  noResultsComponent?: (resetFilters: () => void) => React.ReactNode
   mobileFiltersLabel: string
-  matomoEventCategory: string
+  children: ({
+    filteredData,
+    filters,
+    setMobileFiltersOpen,
+    resetFilters,
+    activeFiltersCount,
+  }: {
+    filteredData: T[]
+    filters: FilterOption[]
+    setMobileFiltersOpen: (open: boolean) => void
+    resetFilters: () => void
+    activeFiltersCount: number
+  }) => React.ReactNode | undefined
 }
 
 const getActiveFiltersCount = (filters: FilterOption[]) => {
@@ -91,10 +94,8 @@ const ProductTable = <T extends { id: string }>({
   filterFn,
   presetFilters,
   onResetFilters,
-  subComponent,
-  noResultsComponent,
   mobileFiltersLabel,
-  matomoEventCategory,
+  children,
 }: ProductTableProps<T>) => {
   const searchParams = useSearchParams()
 
@@ -210,25 +211,13 @@ const ProductTable = <T extends { id: string }>({
             </div>
           </MediaQuery>
           <div className="flex-1">
-            <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
-              <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
-                <p className="text-body-medium">
-                  <Translation id="page-wallets-find-wallet:page-find-wallet-showing-all-wallets" />{" "}
-                  <span className="text-body">({filteredData.length})</span>
-                </p>
-              </div>
-            </div>
-
-            {filteredData.length === 0 &&
-              noResultsComponent &&
-              noResultsComponent(resetFilters)}
-
-            <List
-              data={filteredData}
-              subComponent={subComponent}
-              filters={filters}
-              matomoEventCategory={matomoEventCategory}
-            />
+            {children({
+              filteredData,
+              filters,
+              setMobileFiltersOpen,
+              resetFilters,
+              activeFiltersCount,
+            })}
           </div>
         </div>
       </div>
