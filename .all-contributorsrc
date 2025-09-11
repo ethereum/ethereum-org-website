@@ -13226,6 +13226,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "dlr-a",
+      "name": "dlr-a",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116620647?v=4",
+      "profile": "https://github.com/dlr-a",
+      "contributions": [
+        "content",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
