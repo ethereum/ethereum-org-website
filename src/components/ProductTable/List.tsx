@@ -49,6 +49,13 @@ const List = <T extends { id: string }>({
 
   const handleExpandedChange = useCallback(
     (open: boolean, item: T) => {
+      // Disable scroll position adjustment during expansion or collapse
+      // ref https://github.com/TanStack/virtual/issues/562#issuecomment-2065858040
+      virtualizer.shouldAdjustScrollPositionOnItemSizeChange = () => false
+      setTimeout(() => {
+        virtualizer.shouldAdjustScrollPositionOnItemSizeChange = undefined
+      }, 0)
+
       if (!open) return
 
       const expandedOnce = previousExpandedRef.current[item.id]
@@ -66,7 +73,7 @@ const List = <T extends { id: string }>({
         [item.id]: true,
       }
     },
-    [matomoEventCategory]
+    [matomoEventCategory, virtualizer]
   )
 
   return (
