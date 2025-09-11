@@ -1,0 +1,13 @@
+{
+  "page-ethereum-vs-bitcoin-title": "Ethereum vs Bitcoin: What is the difference?",
+  "page-ethereum-vs-bitcoin-description-1": "Bitcoin and Ethereum are two of the best-known decentralized blockchain networks, but they serve very different purposes.",
+  "page-ethereum-vs-bitcoin-section-1": "Bitcoin (with a big B) is a blockchain designed for a digital currency called bitcoin (small b). Ethereum is designed to be a decentralized platform for applications and assets, powered by its native cryptocurrency Ether.",
+  "page-ethereum-vs-bitcoin-section-2": "Both use blockchain technology, are open-source, and are maintained by global communities, but their goals and features are distinct. In this guide, we will walk through what each network is, what they have in common, and how they differ across areas like technology, culture, and future outlook.",
+  "page-ethereum-vs-bitcoin-bitcoin-section-title": "Bitcoin - a quick primer",
+  "page-ethereum-vs-bitcoin-bitcoin-section-1": "Bitcoin is a decentralized digital currency network. It was <strong>created in 2009</strong> by an anonymous developer using the name <strong>Satoshi Nakamoto</strong>, shortly after the 2008 financial crisis. The idea was for Bitcoin to be a peer-to-peer electronic cash system.",
+  "page-ethereum-vs-bitcoin-bitcoin-section-2": "Bitcoin allows anyone to <strong>send and receive bitcoins</strong> over the internet <strong>without relying on a central authority</strong> like a bank. All transactions are recorded on a public ledger known as the blockchain.",
+  "page-ethereum-vs-bitcoin-bitcoin-section-3": "Bitcoin introduced a concept known as proof of work to secure its network. In simple terms, computers around the world race to solve cryptographic puzzles that let them validate transactions and add new blocks. These specialized computers are called miners and they are rewarded with new bitcoin.",
+  "page-ethereum-vs-bitcoin-bitcoin-section-4": "<strong>Bitcoin has a fixed supply of 21 million coins</strong>. This design choice is a key reason why Bitcoin is often referred to as digital gold.",
+  "page-ethereum-vs-bitcoin-ethereum-section-title": "Ethereum - a quick primer",
+  "page-ethereum-vs-bitcoin-differences-section-title": "The key differences"
+}
