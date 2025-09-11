@@ -34,16 +34,16 @@ const List = <T extends { id: string }>({
 
   const parentOffsetRef = useRef(0)
 
-  useLayoutEffect(() => {
-    parentOffsetRef.current = parentRef.current?.offsetTop ?? 0
-  }, [])
-
   const virtualizer = useWindowVirtualizer({
     count: data.length,
-    estimateSize: () => 250,
+    estimateSize: () => 300,
     overscan: 5,
     scrollMargin: parentOffsetRef.current,
   })
+
+  useLayoutEffect(() => {
+    parentOffsetRef.current = parentRef.current?.offsetTop ?? 0
+  }, [])
 
   const previousExpandedRef = useRef<Record<string, boolean>>({})
 
@@ -72,7 +72,7 @@ const List = <T extends { id: string }>({
   return (
     <div
       ref={parentRef}
-      className="relative"
+      className="relative [overflow-anchor:none]"
       style={{
         height: `${virtualizer.getTotalSize()}px`,
       }}
