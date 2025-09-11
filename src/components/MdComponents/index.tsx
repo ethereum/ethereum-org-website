@@ -106,7 +106,7 @@ export const Paragraph = (props: ChildOnlyProp) => (
 
 export const Blockquote = (props: ChildOnlyProp) => (
   <blockquote
-    className="mb-4 mt-8 border-l-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
+    className="mb-4 mt-8 border-s-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
     {...props}
   />
 )
