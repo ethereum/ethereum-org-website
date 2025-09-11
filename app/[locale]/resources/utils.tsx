@@ -182,12 +182,6 @@ export const getResources = async ({
           href: "https://www.ethismoney.xyz/",
           imgSrc: IconEthGlyphBlueCircle,
         },
-        {
-          title: "Ethereum Now",
-          description: t("page-resources-eth-asset-ethernow-description"),
-          href: "https://www.ethernow.xyz",
-          imgSrc: IconBlocknative,
-        },
       ],
     },
     {
