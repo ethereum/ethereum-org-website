@@ -12,6 +12,7 @@ import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getMetadata } from "@/lib/utils/metadata"
 
 import DifferencesTable from "./_components/DifferencesTable"
 
@@ -437,6 +438,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       </MainArticle>
     </>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({
+    locale,
+    namespace: "page-ethereum-vs-bitcoin",
+  })
+
+  return await getMetadata({
+    locale,
+    slug: ["ethereum-vs-bitcoin"],
+    title: t("page-ethereum-vs-bitcoin-meta-title"),
+    description: t("page-ethereum-vs-bitcoin-meta-description"),
+    twitterDescription: t("page-ethereum-vs-bitcoin-twitter-meta-description"),
+    image: "/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
+  })
 }
 
 export default Page

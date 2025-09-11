@@ -35,6 +35,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/eth/",
             },
             {
+              label: t("ethereum-vs-bitcoin"),
+              description: t("nav-ethereum-vs-bitcoin-description"),
+              href: "/ethereum-vs-bitcoin/",
+            },
+            {
               label: t("ethereum-wallets"),
               description: t("nav-ethereum-wallets-description"),
               href: "/wallets/",
