@@ -3,6 +3,7 @@ import { getLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
+import DocLink from "@/components/DocLink"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import { Image } from "@/components/Image"
@@ -10,6 +11,7 @@ import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { Card } from "@/components/ui/card"
 import Link, { LinkProps } from "@/components/ui/Link"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -18,6 +20,8 @@ import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import developersHubImg from "@/public/images/heroes/developers-hub-hero.jpg"
+import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
 import manDogPlayingImg from "@/public/images/man-and-dog-playing.png"
 import computerImg from "@/public/images/what-is-ethereum-network/computer_alone.png"
 import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-network.png"
@@ -137,16 +141,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
             <Image src={computerImg} alt="Computer" className="mx-auto" />
             <p>The Ethereum network handles several key tasks, like:</p>
-            <ul>
-              <li>updating user accounts and balances</li>
-              <li>executing smart contracts (programs running dapps)</li>
-              <li>
+            <UnorderedList>
+              <ListItem>updating user accounts and balances</ListItem>
+              <ListItem>
+                executing smart contracts (programs running dapps)
+              </ListItem>
+              <ListItem>
                 tracking ownership of digital assets (like stablecoins and NFTs)
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 processing all transactions that flow through Ethereum every day
-              </li>
-            </ul>
+              </ListItem>
+            </UnorderedList>
             <p>
               Fortunately, you don’t need to understand how the network works to
               use it.
@@ -178,11 +184,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p>
               These qualities enable things that weren’t possible before, like:
             </p>
-            <ul>
-              <li>lending and borrowing without paperwork</li>
-              <li>social media without de-platforming</li>
-              <li>and crowdfunding without middlemen</li>
-            </ul>
+            <UnorderedList>
+              <ListItem>lending and borrowing without paperwork</ListItem>
+              <ListItem>social media without de-platforming</ListItem>
+              <ListItem>and crowdfunding without middlemen</ListItem>
+            </UnorderedList>
             <p>
               At its core, the Ethereum network is a foundation for digital
               ownership and open participation.
@@ -413,6 +419,211 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   Learn how to run a node
                 </LinkWithArrow>
               </div>
+            </div>
+          </Section>
+
+          <Section
+            id={getId(tocItems[3].url)}
+            className="-scroll-mt-80 space-y-14"
+          >
+            <Image
+              src={layer2HubImg}
+              alt="Man and Dog Playing"
+              className="mx-auto"
+            />
+            <div className="space-y-6">
+              <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
+                {tocItems[3].title}
+              </h2>
+              <p>
+                As Ethereum gets more popular, the network gets busier. When
+                demand is high, gas fees go up and transactions take longer. To
+                fix this, developers have built a series of{" "}
+                <strong>companion networks</strong> called Layer 2s.
+              </p>
+              <p>
+                Layer 2s, or L2s for short, are other networks that{" "}
+                <strong>run on top of Ethereum</strong>. They process
+                transactions separately, then send a summary to be stored on
+                Ethereum.
+              </p>
+              <p>
+                You can think of them like express lanes on a highway. Instead
+                of every single transaction going through Ethereum’s mainnet,
+                many of them use these faster, cheaper roads.
+              </p>
+              <p>
+                Some of the most popular L2s include{" "}
+                <strong>Base Chain, Arbitrum, Optimism, zkSync</strong> and{" "}
+                <strong>Starknet</strong>. Each of them work slightly
+                differently, but the idea is the same; scale Ethereum without
+                compromising on security.
+              </p>
+              <p>
+                And it works. A simple ETH transfer on Optimism or zkSync can{" "}
+                <a href="https://l2fees.info/">cost as little as $0.04</a>,
+                compared to $0.3–$1 on Ethereum mainnet. Other transactions like
+                swapping tokens{" "}
+                <a href="https://l2fees.info/">can be as little as $0.20</a>.
+                For users, this means{" "}
+                <strong>faster transactions at a fraction of the price</strong>.
+              </p>
+              <p>
+                As a result, L2s are growing fast. Together, they hold{" "}
+                <a href="https://l2beat.com/scaling/summary">
+                  billions of dollars in digital assets
+                </a>
+                .
+              </p>
+              <p>
+                Since L2s benefit from Ethereum’s security, companies looking to
+                create global payments and applications started building on top
+                of Ethereum.
+              </p>
+              <p>
+                For example, Robinhood recently{" "}
+                <a href="https://newsroom.aboutrobinhood.com/robinhood-launches-stock-tokens-reveals-layer-2-blockchain-and-expands-crypto-suite-in-eu-and-us-with-perpetual-futures-and-staking/">
+                  launched its own L2
+                </a>{" "}
+                to explore faster settlement for stocks. PayPal{" "}
+                <a href="https://www.coindesk.com/tech/2025/07/17/paypal-pyusd-goes-live-on-arbitrum">
+                  moved its stablecoin PYUSD to Ethereum L2 Arbitrum
+                </a>
+                . Shopify now{" "}
+                <a href="https://www.shopify.com/news/stablecoins-on-shopify">
+                  lets merchants accept stablecoin USDC
+                </a>{" "}
+                on Base Chain.
+              </p>
+              <p>
+                For users, moving assets between Ethereum and L2s is
+                straightforward. You can use bridges, built by L2s like{" "}
+                <a href="https://superbridge.app/">Superbridge by Optimism</a>{" "}
+                or{" "}
+                <a href="https://portal.zksync.io/bridge/">Portal by ZKsync</a>{" "}
+                to move ETH and other assets. You can even use third-party tools
+                like <a href="https://hop.exchange/">Hop</a> and{" "}
+                <a href="https://across.to/">Across</a> that are built by
+                independent teams.
+              </p>
+              <LinkWithArrow href="/layer-2/">
+                Learn more about Ethereum Layer 2 networks
+              </LinkWithArrow>
+            </div>
+          </Section>
+
+          <Section
+            id={getId(tocItems[4].url)}
+            className="-scroll-mt-80 space-y-14"
+          >
+            <Image
+              src={layer2LearnHeroImg}
+              alt="Man and Dog Playing"
+              className="mx-auto"
+            />
+            <div className="space-y-6">
+              <h2 id={getId(tocItems[4].url)} className="scroll-mt-28">
+                {tocItems[4].title}
+              </h2>
+              <p>
+                Ethereum is transparent by design. Every action on the network,
+                from sending ETH to running a validator, is recorded on an open,
+                public ledger that anyone can access.
+              </p>
+              <p>This is a sharp contrast to how most systems work today:</p>
+              <UnorderedList>
+                <ListItem>
+                  banks and institutions publish their internal numbers
+                </ListItem>
+                <ListItem>
+                  app usage figures are closely guarded by tech companies
+                </ListItem>
+                <ListItem>
+                  economic data often arrives late and gets revised later
+                </ListItem>
+              </UnorderedList>
+              <p>With Ethereum, you don’t have to trust. You can check.</p>
+              <p>
+                You don’t need to understand any of this to use Ethereum. But if
+                you’re curious about how many transactions were settled in 2024,
+                or how many new Ethereum addresses were created in the last 6
+                months, there are tools that let anyone explore the network in
+                real time.
+              </p>
+              <p>
+                Here are a few of the most useful data sources, and what you
+                might use them for:
+              </p>
+              <UnorderedList>
+                <ListItem>
+                  <a href="https://etherscan.io/">Etherscan</a>: Check
+                  transactions, wallet activity, and smart contracts
+                </ListItem>
+                <ListItem>
+                  <a href="https://beaconcha.in/">beaconcha.in</a>: View
+                  validator stats, staking levels, and network health
+                </ListItem>
+                <ListItem>
+                  <a href="https://ultrasound.money/">ultrasound.money</a>:
+                  Track ETH supply, issuance, and burn in real time
+                </ListItem>
+                <ListItem>
+                  <a href="https://l2fees.info/">l2fees.info</a>: Compare
+                  current transaction costs on Ethereum and L2s
+                </ListItem>
+                <ListItem>
+                  <a href="https://l2beat.com/">L2Beat</a>: See value secured
+                  and security models across all major L2s
+                </ListItem>
+                <ListItem>
+                  <a href="https://growthepie.com/">growthepie</a>: See all
+                  on-chain activity and growth across Ethereum
+                </ListItem>
+                <ListItem>
+                  <a href="https://dune.com/">Dune</a>: Explore custom
+                  dashboards on all digital assets across Ethereum
+                </ListItem>
+                <ListItem>
+                  <a href="https://tokenterminal.com/">Token Terminal</a>:
+                  Compare dapp revenue, usage, and protocol performance
+                </ListItem>
+                <ListItem>
+                  <a href="https://nansen.ai/">Nansen</a>: Follow wallet flows,
+                  stablecoin movements, and smart money trends.
+                </ListItem>
+              </UnorderedList>
+              <p>All of these tools are there if you need them.</p>
+              <p>
+                Whether you’re a developer, researcher, investor, or just
+                someone who wants to check a transaction, Ethereum’s open
+                network gives you the data — live, permissionless, and
+                verifiable.
+              </p>
+              <LinkWithArrow href="/resources/#network">
+                Browse Ethereum Network dashboards and block explorers
+              </LinkWithArrow>
+            </div>
+          </Section>
+
+          <Section className="-scroll-mt-80 space-y-14">
+            <div className="space-y-6">
+              <h2 className="scroll-mt-28">Read next</h2>
+              <UnorderedList className="ms-0 list-none">
+                <ListItem>
+                  <DocLink href="/wallets">What are wallets?</DocLink>
+                </ListItem>
+                <ListItem>
+                  <DocLink href="/eth">What is Ether (ETH)?</DocLink>
+                </ListItem>
+                <ListItem>
+                  <DocLink href="/web3">What is Web3?</DocLink>
+                </ListItem>
+                <ListItem>
+                  <DocLink href="/what-is-ethereum">
+                    Learn more about Ethereum network
+                  </DocLink>
+                </ListItem>
+              </UnorderedList>
             </div>
           </Section>
         </div>
