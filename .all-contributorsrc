@@ -13245,6 +13245,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Daulox92",
+      "name": "CrazyFrog",
+      "avatar_url": "https://avatars.githubusercontent.com/u/188603830?v=4",
+      "profile": "https://github.com/Daulox92",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
