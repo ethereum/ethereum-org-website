@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react"
-import { getLocale } from "next-intl/server"
+import { getLocale, getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
@@ -43,10 +43,13 @@ const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-  // const t = await getTranslations({
-  //   locale,
-  //   namespace: "page-what-is-ethereum-network",
-  // })
+
+  setRequestLocale(locale)
+
+  const t = await getTranslations({
+    locale,
+    namespace: "page-what-is-ethereum-network",
+  })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
@@ -55,6 +58,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       locale as Lang,
       commitHistoryCache
     )
+
+  const heroProps: ContentHeroProps = {
+    breadcrumbs: { slug: "learn/what-is-ethereum-network", startDepth: 1 },
+    heroImg,
+    title: t("page-what-is-ethereum-network-title"),
+    description: (
+      <>
+        <p>{t("page-what-is-ethereum-network-description-1")}</p>
+        <p>{t("page-what-is-ethereum-network-description-2")}</p>
+      </>
+    ),
+  }
 
   const tocItems: ToCItem[] = [
     { title: "What is the Ethereum network", url: "#ethereum-network" },
@@ -75,25 +90,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       url: "#live-network-data",
     },
   ]
-
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "learn/what-is-ethereum-network", startDepth: 1 },
-    heroImg,
-    title: "What is the Ethereum network",
-    description: (
-      <>
-        <p>
-          The Ethereum network is the physical and digital infrastructure that
-          underpins Ethereum.
-        </p>
-        <p>
-          This includes nodes that store data, validators that process
-          transactions, software that executes smart contracts, and Layer 2
-          networks that scale Ethereum beyond the main chain.
-        </p>
-      </>
-    ),
-  }
 
   const getId = (input: string) => {
     const parts = input.split("#")
@@ -639,14 +635,19 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-what-is-ethereum-network",
+  })
+
   return await getMetadata({
     locale,
     slug: ["what-is-ethereum-network"],
-    title: "What is the Ethereum network | ethereum.org",
-    description:
-      "Understand what the Ethereum Network is, staking and security, network fees (aka gas), layer 2 scaling networks and how to explore live network data.",
-    twitterDescription:
-      "Understand what the Ethereum Network is, staking and security, network fees, layer 2 scaling networks and how to explore live network data.",
+    title: t("page-what-is-ethereum-network-meta-title"),
+    description: t("page-what-is-ethereum-network-meta-description"),
+    twitterDescription: t(
+      "page-what-is-ethereum-network-twitter-meta-description"
+    ),
     image: "/images/what-is-ethereum-network.png",
   })
 }
