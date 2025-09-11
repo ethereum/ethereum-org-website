@@ -2057,6 +2057,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://trocher.ch"><img src="https://avatars.githubusercontent.com/u/43437004?v=4?s=100" width="100px;" alt="trocher"/><br /><sub><b>trocher</b></sub></a><br /><a href="#content-trocher" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Daulox92"><img src="https://avatars.githubusercontent.com/u/188603830?v=4?s=100" width="100px;" alt="CrazyFrog"/><br /><sub><b>CrazyFrog</b></sub></a><br /><a href="#maintenance-Daulox92" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
