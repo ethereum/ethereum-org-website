@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import { useCallback } from "react"
 import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
@@ -30,8 +30,9 @@ const List = <T extends { id: string }>({
   matomoEventCategory,
   filters,
 }: ListProps<T>) => {
-  const parentRef = useRef<HTMLDivElement>(null)
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
+  const parentRef = useRef<HTMLDivElement>(null)
   const parentOffsetRef = useRef(0)
 
   const virtualizer = useWindowVirtualizer({
@@ -55,6 +56,11 @@ const List = <T extends { id: string }>({
       setTimeout(() => {
         virtualizer.shouldAdjustScrollPositionOnItemSizeChange = undefined
       }, 0)
+
+      setExpanded((prev) => ({
+        ...prev,
+        [item.id]: open,
+      }))
 
       if (!open) return
 
@@ -92,11 +98,14 @@ const List = <T extends { id: string }>({
             key={virtualItem.key}
             data-index={virtualItem.index}
             ref={virtualizer.measureElement}
+            // the virtualizer will re-render the item and reset the open state
+            // so we need to preserve the open state when the item is unmounted
+            open={expanded[item.id]}
+            onOpenChange={(open) => handleExpandedChange(open, item)}
             className="group/collapsible absolute left-0 top-0 flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
             style={{
               transform: `translateY(${virtualItem.start - virtualizer.options.scrollMargin}px)`,
             }}
-            onOpenChange={(open) => handleExpandedChange(open, item)}
           >
             <CollapsibleTrigger asChild>
               <div className="p-4">
