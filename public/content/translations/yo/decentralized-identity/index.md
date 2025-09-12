@@ -186,6 +186,6 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 ### Àwọn àwùjọ {#communities}
 
 - [Àjọṣe ERC-725 lórí GitHub](https://github.com/erc725alliance) - _ Awọn alatilẹyin ti boṣewa ERC725 fun iṣakoso idanimọ lori blockchain Ethereum_
-- [Ikanni Disikọdu SpruceID](https://discord.com/invite/ZUyG3mSXFD) - _Awujọ fun awọn ololufẹ ati awọn olupilẹṣẹ ti n ṣiṣẹ lori Wiwọle pẹlu Ethereum_
+- [Ikanni Disikọdu EthID](https://discord.com/invite/ZUyG3mSXFD) - _Awujọ fun awọn ololufẹ ati awọn olupilẹṣẹ ti n ṣiṣẹ lori Wiwọle pẹlu Ethereum_
 - [Laabu Veramo](https://discord.gg/sYBUXpACh4) - _Awujọ àwọn olùṣe tí ó ń kópa nínú kíkọ́ àgbékalẹ̀ fún àwọn ìsọfúnni tí a lè ṣàyẹ̀wò fún àwọn ohun èlò_
 - [wait.id](https://discord.com/invite/AW8AgqJthZ) - _ Awujọ àwọn olùdàgbàsókè àti àwọn olùgbèrú tó ń ṣiṣẹ́ lórí àwọn ọ̀ràn lílo ìdánimọ̀ tí kò dáwọ́ lé ní oríṣiríṣi ẹ̀ka-iṣẹ́_

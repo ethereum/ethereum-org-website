@@ -186,6 +186,6 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 ### Społeczności {#communities}
 
 - [Sojusz ERC-725 na GitHub](https://github.com/erc725alliance) — _zwolennicy standardu ERC725 do zarządzania tożsamością w łańcuchu bloków Ethereum._
-- [Serwer Discord SpruceID](https://discord.com/invite/ZUyG3mSXFD) — _społeczność dla entuzjastów i programistów pracujących nad logowaniem za pomocą Ethereum._
+- [Serwer Discord EthID](https://discord.com/invite/ZUyG3mSXFD) — _społeczność dla entuzjastów i programistów pracujących nad logowaniem za pomocą Ethereum._
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _społeczność programistów uczestniczących w budowaniu struktury weryfikowalnych danych dla aplikacji._
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _społeczność deweloperów i twórców pracujących nad przypadkami użycia zdecentralizowanej tożsamości w różnych branżach_

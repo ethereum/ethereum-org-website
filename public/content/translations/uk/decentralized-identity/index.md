@@ -186,6 +186,6 @@ summaryPoint3: Завдяки криптовалюті користувачі з
 ### Спільноти {#communities}
 
 - [Альянс ERC-725 на GitHub](https://github.com/erc725alliance) — _Прихильники стандарту ERC725 для керування ідентифікацією в блокчейні Ethereum_
-- [Сервер Discord SpruceID](https://discord.com/invite/ZUyG3mSXFD) — _Спільнота для ентузіастів і розробників, які працюють над входом за допомогою Ethereum_
+- [Сервер Discord EthID](https://discord.com/invite/ZUyG3mSXFD) — _Спільнота для ентузіастів і розробників, які працюють над входом за допомогою Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _спільнота розробників, які роблять внесок у створення основи для перевірених даних для програм_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Спільнота розробників і будівельників, які працюють над децентралізованими випадками використання ідентичностей у різних галузях_
