@@ -279,6 +279,8 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-based static analysis framework with vulnerability and code quality detectors, printers for extracting useful information from code and support for writing custom submodules._
 
+- **[Slippy](https://github.com/fvictorio/slippy)** - _A simple and powerful linter for Solidity._
+
 #### Dynamic analysis tools {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._

@@ -223,7 +223,7 @@ Weitere Informationen zu [der Gestaltung sicherer Governance-Systeme](https://bl
 
 Traditionelle Softwareentwickler sind mit dem KISS-Prinzip („Keep it simple, stupid“) vertraut, das davon abrät, unnötige Komplexität in das Softwaredesign einzubringen. Dies entspricht der seit langem vertretenen Auffassung, dass „komplexe Systeme auf komplexe Weise versagen“ und anfälliger für kostspielige Fehler sind.
 
-Beim Schreiben von Smart Contracts ist es besonders wichtig, die Inhalte einfach zu halten, da Smart Contracts potenziell große Wertbeträge kontrollieren. Ein Tipp zur Vereinfachung beim Schreiben von intelligenten Verträgen ist die Wiederverwendung bestehender Bibliotheken, wie [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), wo immer möglich. Da diese Bibliotheken von den Entwicklern ausgiebig geprüft und getestet wurden, verringert sich durch ihre Verwendung die Wahrscheinlichkeit, dass durch das Schreiben neuer Funktionen von Grund auf Fehler eingeführt werden.
+Beim Schreiben von Smart Contracts ist es besonders wichtig, die Inhalte einfach zu halten, da Smart Contracts potenziell große Wertbeträge kontrollieren. Ein Tipp zur Vereinfachung beim Schreiben von intelligenten Verträgen ist die Wiederverwendung bestehender Bibliotheken, wie [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), wo immer möglich. Da diese Bibliotheken von den Entwicklern ausgiebig geprüft und getestet wurden, verringert sich durch ihre Verwendung die Wahrscheinlichkeit, dass durch das Schreiben neuer Funktionen von Grund auf Fehler eingeführt werden.
 
 Ein weiterer allgemeiner Ratschlag lautet, kleine Funktionen zu schreiben und Verträge modulartig zu halten, indem die Logik auf mehrere Verträge aufgeteilt wird. Das Schreiben von einfacherem Code verringert nicht nur die Angriffsfläche in einem Smart Contract, sondern macht es auch einfacher, Rückschlüsse auf die Korrektheit des Gesamtsystems zu ziehen und mögliche Planungsfehler frühzeitig zu erkennen.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Sie können auch ein [Pull-Zahlungssystem](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) verwenden, bei dem die Nutzer Geld von den Smart Contracts abheben müssen, anstelle eines „Push-Zahlungssystems“, das Guthaben an Konten sendet. Dies verhindert die Möglichkeit, unbeabsichtigt Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
+Sie können auch ein [Pull-Zahlungssystem](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) verwenden, bei dem die Nutzer Geld von den Smart Contracts abheben müssen, anstelle eines „Push-Zahlungssystems“, das Guthaben an Konten sendet. Dies verhindert die Möglichkeit, unbeabsichtigt Code an unbekannten Adressen auszulösen (und kann auch bestimmte Denial-of-Service-Angriffe verhindern).
 
 #### Integer-Unterläufe und -Überläufe {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 ### Tools für die Überwachung von Smart Contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _ein Tool zur automatischen Überwachung und Reaktion auf Ereignisse, Funktionen und Transaktionsparameter in Ihren Smart Contracts._v
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Ein Tool, um Echtzeit-Benachrichtigungen zu erhalten, wenn ungewöhnliche oder unerwartete Ereignisse auf Ihren Smart Contracts oder Wallets auftreten._
 
 ### Tools für die sichere Verwaltung von Smart Contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _Schnittstelle für die Verwaltung von Smart Contracts, einschließlich Zugriffskontrollen, Upgrades und Pausen._
-
 - **[Safe](https://safe.global/)** - _Smart Contract-Wallet auf Ethereum, die eine Mindestanzahl von Personen benötigt, um eine Transaktion zu genehmigen, bevor sie stattfinden kann (M-of-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Vertragsbibliotheken für die Implementierung von Verwaltungsfunktionen, einschließlich Vertragseigentum, Upgrades, Zugriffskontrollen, Governance, Pausierbarkeit und mehr._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Vertragsbibliotheken für die Implementierung von Verwaltungsfunktionen, einschließlich Vertragseigentum, Upgrades, Zugriffskontrollen, Governance, Pausierbarkeit und mehr._
 
 ### Dienstleistungen zur Prüfung von Smart Contracts {#smart-contract-auditing-services}
 
@@ -535,7 +531,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 ### Veröffentlichungen bekannter Schwachstellen und Exploits von Smart Contracts {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Einsteigerfreundliche Erklärung der wichtigsten Vertragsschwachstellen, mit Beispielcode für die meisten Fälle._
+- **[ConsenSys: Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Einsteigerfreundliche Erklärung der wichtigsten Vertragsschwachstellen, mit Beispielcode für die meisten Fälle._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Ausgewählte Liste von Common Weakness Enumeration (CWE) Elementen, die auf Ethereum Smart Contracts zutreffen._
 

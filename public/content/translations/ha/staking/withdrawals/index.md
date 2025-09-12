@@ -212,7 +212,6 @@ A'a. Da zarar mai tabbatarwa ya fita da sauran kuɗin gabaki ɗaya, duk wani kar
 
 - [Saka Ajiyar Cire Kuɗi na Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain cirewa ne mai turuwa kaman aiki](https://eips.ethereum.org/EIPS/eip-4895)
-- [Etgereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Cire Kuɗin ETH (Gwaji) da potuz & amp; Hsiao- wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain cirewa na turawa kaman aiki da Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Fahimtar Mai Tabbatar da Daidai Ragowar Kuɗi](https://www.attestant.io/posts/understanding-validator-effective-balance/)

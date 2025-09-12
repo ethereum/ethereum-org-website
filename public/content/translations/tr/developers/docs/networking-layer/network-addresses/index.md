@@ -35,4 +35,5 @@ Ethereum Düğüm Kayıtları (ENR'ler), Ethereum'daki ağ adresleri için stand
 
 ## Daha Fazla Okuma {#further-reading}
 
-[EIP-778: Ethereum Düğüm Kayıtları (ENR)](https://eips.ethereum.org/EIPS/eip-778) [Ethereum'daki ağ adresleri](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/) [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [EIP-778: Ethereum Düğüm Kayıtları (ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

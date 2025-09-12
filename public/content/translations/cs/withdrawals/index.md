@@ -212,7 +212,6 @@ Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré doda
 
 - [Výběry z vkladového spouštěcího panelu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Řetězová vazba výběru jako operace](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Šanghaj](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Výběr vložených ETH (testování) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Výběry pomocí řetězové vazby jako operace s Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumění efektivnímu zůstatku validátoru](https://www.attestant.io/posts/understanding-validator-effective-balance/)

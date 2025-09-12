@@ -213,7 +213,6 @@ Nee. Zodra een validator is afgesloten en het volledige saldo is opgenomen, word
 
 - [Staking Launchpad-opnames](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push-opnames als activiteiten](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: opname van gestakete ETH (test) met Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push-opnames als activiteiten met Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Inzicht in effectief saldo van validators](https://www.attestant.io/posts/understanding-validator-effective-balance/)

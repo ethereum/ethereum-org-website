@@ -383,7 +383,7 @@ Sompolinsky氏とZohar氏に説明されているように、GHOSTはどのチ�
 3. マイニングパワーの配分は、実際には非常に不平等になる可能性がある。
 4. ネットワークに害を及ぼすことを企てる投機家、政敵、精神異常者などが存在し、他の検証ノードが支払うコストよりもはるかに低いコストのコントラクトを巧みに設定できる。
 
-(1)は、マイナーがより少ないトランザクションを追加する傾向を生み出し、 (2) `NC`を増やすため、これら2つの効果は少なくとも部分的に相殺されます。<sup>[理由](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3)と(4)は大きな問題であり、解決するため、単純にすべてのブロックが`BLK_LIMIT_FACTOR`に長期指数移動平均を掛けた数よりも多くの操作をブロックに含めることはできないというフローティングキャップを設けます。 具体的には:
+(1)は、マイナーがより少ないトランザクションを追加する傾向を生み出し、 (2) `NC`を増やすため、これら2つの効果は少なくとも部分的に相殺されます。<sup>[理由](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3)と(4)は大きな問題であり、解決するため、単純にすべてのブロックが`BLK_LIMIT_FACTOR`に長期指数移動平均を掛けた数よりも多くの操作をブロックに含めることはできないというフローティングキャップを設けます。 具体的には:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _通貨発行量が直線的であるにもかかわらず、ビットコイン�
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJおよび自律エージェント、Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearnによるチューリングフェスティバルでのスマートプロパテ](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [イーサリアムRLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [イーサリアム・メルクルパトリシアの木](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [イーサリアムRLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [イーサリアム・メルクルパトリシアの木](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Toddによるマークルサムツリー](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_ホワイトペーパーの履歴については、[こちらのwiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)を参照してください。_
+_ホワイトペーパーの履歴については、[こちらのwiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)を参照してください。_
 
 _多くのコミュニティ主導のオープンソースソフトウェアプロジェクトと同様、イーサリアムは開始当初から進化してきました。 イーサリアムの最新の開発や、どのようなプロトコル変更が成されているかについて学ぶには[こちらのガイド](/learn/)をご覧になってください。_

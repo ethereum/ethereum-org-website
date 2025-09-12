@@ -77,7 +77,7 @@ Endereçar a diversidade do cliente requer mais do que usuários individuais par
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 Os usuários técnicos podem ajudar a acelerar esse processo escrevendo mais tutoriais e documentações para clientes minoritários e encorajando seus pares operacionais de nó a migrar para longe dos clientes dominantes. Guias para mudar para um cliente de consenso minoritário estão disponíveis em [clientdiversity.org](https://clientdiversity.org/).
 
