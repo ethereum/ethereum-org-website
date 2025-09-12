@@ -17,6 +17,7 @@ import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
 import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
 import CypherockX1Image from "@/public/images/wallets/cypherockx1.png"
+import EdgeImage from "@/public/images/wallets/edge.png"
 import EnkryptImage from "@/public/images/wallets/enkrypt.png"
 import ExodusImage from "@/public/images/wallets/exodus.png"
 import FamilyImage from "@/public/images/wallets/family.png"
@@ -2530,6 +2531,57 @@ export const walletsData: WalletData[] = [
       "https://help.burner.pro/en/collections/10242509-getting-started",
     documentation: "https://help.burner.pro/en",
     supported_chains: ["Ethereum Mainnet", "Base"],
+  },
+  {
+    last_updated: "2025-09-09",
+    name: "Edge Wallet",
+    image: EdgeImage,
+    twBackgroundColor: "bg-[#1a1a1a]",
+    twGradiantBrandColor: "from-[#1a1a1a]",
+    url: "https://edge.app/",
+    active_development_team: true,
+    languages_supported: ["en", "es", "it", "ru", "pt"],
+    twitter: "https://x.com/edgewallet",
+    discord: "",
+    reddit: "https://www.reddit.com/r/EdgeWallet/",
+    telegram: "",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: true,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/EdgeApp",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: true,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: false,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://edge.app/",
+    documentation: "https://support.edge.app/hc/en-us",
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "Base", 
+      "OP Mainnet",
+      "zkSync Mainnet",
+    ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
