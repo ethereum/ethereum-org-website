@@ -57,7 +57,7 @@ Merkeziyetsiz kimliğin birçok potansiyel kullanım örneği vardır:
 
 Merkeziyetsiz kimlik, şifre bazlı giriş yöntemlerinin merkeziyetsiz doğrulama ile değiştirilmesine yardımcı olabilir. Hizmet sağlayıcılar, kullanıcılara tasdik verebilir, bu tasdikler bir Ethereum cüzdanında saklanabilir. Bir tasdik örneği, sahibinin çevrimiçi topluluğa erişimini sağlayan bir [NFT](/glossary/#nft) olabilir.
 
-[Ethereum ile Oturum Açma](https://login.xyz/) işlevi, sunucuların kullanıcının Ethereum hesabını onaylamasını ve hesap adreslerinden gerekli tasdiği almasına olanak tanır. Bu, kullanıcıların uzun şifreleri ezberlemek zorunda kalmadan platformlara ve web sitelerine erişebileceği ve kullanıcılar için çevrimiçi deneyimi iyileştirebileceği anlamına gelir.
+[Ethereum ile Oturum Açma](https://siwe.xyz/) işlevi, sunucuların kullanıcının Ethereum hesabını onaylamasını ve hesap adreslerinden gerekli tasdiği almasına olanak tanır. Bu, kullanıcıların uzun şifreleri ezberlemek zorunda kalmadan platformlara ve web sitelerine erişebileceği ve kullanıcılar için çevrimiçi deneyimi iyileştirebileceği anlamına gelir.
 
 ### 2. KYC kimlik doğrulaması {#kyc-authentication}
 

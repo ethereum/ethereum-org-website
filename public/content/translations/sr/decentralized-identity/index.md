@@ -57,7 +57,7 @@ Decentralizovani identitet ima mnogo potencijalnih načina primene:
 
 Decentralizovani identitet može zameniti prijavljivanje uz pomoć lozinke sa prijavljivanjem uz pomoć decentralizovane autentifikacije. Pružaoci usluga mogu izdati potvrde korisnicima koje mogu biti čuvane u Ethereum novčaniku. Primer potvrda bi bio [NFT](/glossary/#nft) koji garantuje da korisnik koji ga poseduje ima pristup zajednici na mreži.
 
-[Prijava sa Ethereumom](https://login.xyz/) bi omogućila serverima da potvrde korisnički Ethereum nalog i preuzmu potrebnu potvrdu sa njihove adrese naloga. Ovo znači da korisnici mogu da pristupe platformama i veb-sajtovima bez potrebe da pamte svoje duge šifre i na taj način poboljšava korisničko iskustvo.
+[Prijava sa Ethereumom](https://siwe.xyz/) bi omogućila serverima da potvrde korisnički Ethereum nalog i preuzmu potrebnu potvrdu sa njihove adrese naloga. Ovo znači da korisnici mogu da pristupe platformama i veb-sajtovima bez potrebe da pamte svoje duge šifre i na taj način poboljšava korisničko iskustvo.
 
 ### 2. KYC autentifikacija {#kyc-authentication}
 

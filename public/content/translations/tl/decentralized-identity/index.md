@@ -57,7 +57,7 @@ Maraming posibleng use case ang desentralisadong pagkakakilanlan:
 
 Makakatulong ang desentralisadong pagkakakilanlan na palitan ang mga pag-log in gamit ang password ng desentralisadong authentication. Maaaring magbigay ang mga service provider ng mga attestation sa mga user, na maso-store sa Ethereum wallet. Ang isang halimbawa ng attestation ay isang [NFT](/glossary/#nft) na nagbibigay sa may-ari ng access sa isang online na komunidad.
 
-Ang function na [Mag-sign in gamit ang Ethereum](https://login.xyz/) ay magbibigay-daan sa mga server na kumpirmahin ang Ethereum account ng user at kunin ang kinakailangang attestation mula sa account address niya. Ibig sabihin nito, maa-access ng mga user ang mga platform at website nang hindi kinakailangang tandaan ang mahahabang password at mapapahusay nito ang online experience ng mga user.
+Ang function na [Mag-sign in gamit ang Ethereum](https://siwe.xyz/) ay magbibigay-daan sa mga server na kumpirmahin ang Ethereum account ng user at kunin ang kinakailangang attestation mula sa account address niya. Ibig sabihin nito, maa-access ng mga user ang mga platform at website nang hindi kinakailangang tandaan ang mahahabang password at mapapahusay nito ang online experience ng mga user.
 
 ### 2. KYC authentication {#kyc-authentication}
 

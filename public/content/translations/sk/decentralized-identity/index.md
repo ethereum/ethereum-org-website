@@ -57,7 +57,7 @@ Decentralizovaná identita má mnoho potenciálnych prípadov použitia:
 
 Decentralizovaná identita môže pomôcť nahradiť prihlasovanie na základe hesla decentralizovanou autentifikáciou. Poskytovatelia služieb môžu používateľom vydávať atestácie, ktoré môžu byť uložené v Ethereum peňaženke. Príkladom atestácie môže byť [NFT](/glossary/#nft), ktoré držiteľovi poskytuje prístup do online komunity.
 
-Funkcia [Prihlásenie cez Ethereum](https://login.xyz/) potom umožní serverom potvrdiť používateľský účet Ethereum a získať požadované povolenie z adresy jeho účtu. To znamená, že používatelia môžu pristupovať k platformám a webovým stránkam bez toho, aby si museli pamätať dlhé heslá, čo zlepšuje online zážitok pre používateľov.
+Funkcia [Prihlásenie cez Ethereum](https://siwe.xyz/) potom umožní serverom potvrdiť používateľský účet Ethereum a získať požadované povolenie z adresy jeho účtu. To znamená, že používatelia môžu pristupovať k platformám a webovým stránkam bez toho, aby si museli pamätať dlhé heslá, čo zlepšuje online zážitok pre používateľov.
 
 ### 2. Autentifikácia KYC {#kyc-authentication}
 

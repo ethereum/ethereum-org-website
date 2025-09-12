@@ -57,7 +57,7 @@ A identidade descentralizada tem muitos exemplos potenciais de utilização:
 
 A identidade descentralizada pode ajudar a substituir os logins baseados em palavra-passe por autenticação descentralizada. Os prestadores de serviços podem emitir certificados para os utilizadores, que podem ser armazenados numa carteira Ethereum. Um exemplo de certificado seria um [NFT](/glossary/#nft) que concede ao titular acesso a uma comunidade online.
 
-Uma função [Sign-In com Ethereum](https://login.xyz/) permitiria então aos servidores confirmar a conta Ethereum do utilizador e obter o certificado necessário a partir do endereço da sua conta. Isto significa que os utilizadores podem aceder a plataformas e websites sem terem de memorizar palavras-passe longas e permite melhorar a experiência online dos utilizadores.
+Uma função [Sign-In com Ethereum](https://siwe.xyz/) permitiria então aos servidores confirmar a conta Ethereum do utilizador e obter o certificado necessário a partir do endereço da sua conta. Isto significa que os utilizadores podem aceder a plataformas e websites sem terem de memorizar palavras-passe longas e permite melhorar a experiência online dos utilizadores.
 
 ### 2. Autenticação KYC {#kyc-authentication}
 

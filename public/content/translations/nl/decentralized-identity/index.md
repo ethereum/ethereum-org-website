@@ -57,7 +57,7 @@ Gedecentraliseerde identiteit heeft vele potentiële use-cases:
 
 Gedecentraliseerde identiteit kan wachtwoordgebaseerde logins vervangen door gedecentraliseerde authenticatie. Dienstverleners kunnen attesten uitgeven aan gebruikers, die kunnen worden opgeslagen in een Ethereum-portemonnee. Een voorbeeld hiervan is: een [NFT](/glossary/#nft) die de houder toegang geeft tot een online community.
 
-Een functie [Aanmelden met Ethereum](https://login.xyz/) zou dan de servers in staat stellen om het Ethereum-account van de gebruiker te bevestigen en het vereiste attest op te halen van zijn/haar accountadres. Dit betekent dat gebruikers toegang hebben tot platformen en websites zonder lange wachtwoorden te hoeven onthouden, en het verbetert de online ervaring voor gebruikers.
+Een functie [Aanmelden met Ethereum](https://siwe.xyz/) zou dan de servers in staat stellen om het Ethereum-account van de gebruiker te bevestigen en het vereiste attest op te halen van zijn/haar accountadres. Dit betekent dat gebruikers toegang hebben tot platformen en websites zonder lange wachtwoorden te hoeven onthouden, en het verbetert de online ervaring voor gebruikers.
 
 ### 2. KYC-verificatie {#kyc-authentication}
 

@@ -57,7 +57,7 @@ A decentralizált identitás számtalan esetben alkalmazható:
 
 A decentralizált identitás segíthet, hogy a jelszóalapú bejelentkezésk helyett decentralizált hitelesítés legyen. A szolgáltatók tanúsításokat bocsáthatnak ki a felhasználóknak, amelyet az Ethereum-tárcájukban tárolnak. Például egy olyan tanúsítvány, ami egy [NFT](/glossary/#nft), és hozzáférést biztosít egy online közösséghez.
 
-Az [Ethereumba való bejelentkezés](https://login.xyz/) funkció ekkor lehető tenné a szervereknek, hogy megerősítsék a felhasználó Ethereum-számláját és lekérdezzék az ehhez szükséges tanúsításokat a számlacímükről. Ezáltal a felhasználónak nem kell hosszú jelszavakat megjegyeznie ahhoz, hogy különböző platformokat és weboldalakat érjen el, és így jobb felhasználói élményben lehet része.
+Az [Ethereumba való bejelentkezés](https://siwe.xyz/) funkció ekkor lehető tenné a szervereknek, hogy megerősítsék a felhasználó Ethereum-számláját és lekérdezzék az ehhez szükséges tanúsításokat a számlacímükről. Ezáltal a felhasználónak nem kell hosszú jelszavakat megjegyeznie ahhoz, hogy különböző platformokat és weboldalakat érjen el, és így jobb felhasználói élményben lehet része.
 
 ### 2. Ügyfél-azonosítás (KYC) {#kyc-authentication}
 

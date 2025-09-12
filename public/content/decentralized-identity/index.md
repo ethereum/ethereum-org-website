@@ -57,7 +57,7 @@ Decentralized identity has many potential use-cases:
 
 Decentralized identity can help replace password-based logins with decentralized authentication. Service providers can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/glossary/#nft) granting the holder access to an online community.
 
-A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
+A [Sign-In with Ethereum](https://siwe.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
 
 ### 2. KYC authentication {#kyc-authentication}
 

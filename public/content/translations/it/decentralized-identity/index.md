@@ -57,7 +57,7 @@ L'identità decentralizzata ha molti possibili casi d'uso:
 
 L'identità decentralizzata può contribuire a sostituire gli accessi basati su password con l'autenticazione decentralizzata. I fornitori di servizi possono emettere attestazioni agli utenti, memorizzabili in un portafoglio di Ethereum. Un esempio di attestazione potrebbe essere un [NFT](/glossary/#nft) che concede al titolare l'accesso a una community online.
 
-Una funzionalità "[Accedi con Ethereum](https://login.xyz/)", consentirebbe poi ai server di confermare il conto di Ethereum dell'utente, e di recuperare l'attestazione necessaria dal relativo indirizzo del conto. Ciò significa che gli utenti possono accedere a piattaforme e siti web, senza dover memorizzare lunghe password, migliorando l'esperienza online degli utenti.
+Una funzionalità "[Accedi con Ethereum](https://siwe.xyz/)", consentirebbe poi ai server di confermare il conto di Ethereum dell'utente, e di recuperare l'attestazione necessaria dal relativo indirizzo del conto. Ciò significa che gli utenti possono accedere a piattaforme e siti web, senza dover memorizzare lunghe password, migliorando l'esperienza online degli utenti.
 
 ### 2. Autenticazione KYC {#kyc-authentication}
 

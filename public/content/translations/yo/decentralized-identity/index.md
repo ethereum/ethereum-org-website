@@ -57,7 +57,7 @@ Aṣèdámọ̀ jẹ́ ǹkan ti àlàyé tí ó ṣiṣẹ́ bíi ìtọ́ka sí
 
 Ìdánimò tí kò ní àkóso le ṣe ìrànlọ́wọ́ ìrọ́pò fún àwọn ìgbaniwọlé oní ọ̀rọ̀-aṣínà pẹ̀lú ìfàṣẹsí tí kò ní àkóso. Àwọn Olùpèsè iṣẹ́ le fún àwọn ìjẹ́ẹ̀rísí sí àwọn olùmúlò, èyí tí ó le wà ní ìpamọ́ sínú àpò àpamọ́wọ́ Ẹ̀tẹ́ríọ̀mù. Àpẹrẹ ìjẹ́ẹ̀rísí yóò jẹ́ [NFT](/glossary/#nft) fífún ẹni tí ó ni ààyè sí àgbègbè orí ayélujára.
 
-Iṣẹ́ [ìwọlé pẹ̀lú Ẹ̀tẹ́ríọ̀mù](https://login.xyz/) yóò jẹ́kí àwọn apèsè láti ṣe jẹ́ẹ̀rísí àkọ́ọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù olùmúlò àti mú ẹ̀rí tí ò nílò láti inú àdírẹ́ẹ̀sì àkọ́ọ́lẹ̀ wọn. Èyí túmò sí pé àwọn olùmúlò le wọlé sí àwọn ojú ẹ̀rọ àti àwọn ojú òpó ayélujára láìsí níní láti ṣe àkọ́sórí àwọn ọ̀rọ̀ aṣínà gígùn àti ṣíṣe ìmúdárasí ìrírí orí ayélujára fún àwọn olùmúlò.
+Iṣẹ́ [ìwọlé pẹ̀lú Ẹ̀tẹ́ríọ̀mù](https://siwe.xyz/) yóò jẹ́kí àwọn apèsè láti ṣe jẹ́ẹ̀rísí àkọ́ọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù olùmúlò àti mú ẹ̀rí tí ò nílò láti inú àdírẹ́ẹ̀sì àkọ́ọ́lẹ̀ wọn. Èyí túmò sí pé àwọn olùmúlò le wọlé sí àwọn ojú ẹ̀rọ àti àwọn ojú òpó ayélujára láìsí níní láti ṣe àkọ́sórí àwọn ọ̀rọ̀ aṣínà gígùn àti ṣíṣe ìmúdárasí ìrírí orí ayélujára fún àwọn olùmúlò.
 
 ### 2. Ìfàṣẹsí KYC {#kyc-authentication}
 
