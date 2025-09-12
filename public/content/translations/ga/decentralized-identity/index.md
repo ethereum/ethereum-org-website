@@ -186,6 +186,6 @@ Tá go leor tionscadal uaillmhianach ag baint úsáide as Ethereum mar bhunús l
 ### Pobail {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Tacaitheoirí chaighdeán ERC725 chun aitheantas a bhainistiú ar bhlocshlabhra Ethereum_
-- [freastalaí SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Pobal do dhíograiseoirí agus d'fhorbróirí atá ag obair ar Sínigh isteach le hEthereum_
+- [freastalaí EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Pobal do dhíograiseoirí agus d'fhorbróirí atá ag obair ar Sínigh isteach le hEthereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Pobal forbróirí a chuidíonn le creat a chruthú le haghaidh sonraí infhíoraithe d'fheidhmchláir_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Pobal forbróirí agus tógálaithe atá ag obair ar chásanna úsáide céannachta díláraithe ar fud tionscail éagsúla_

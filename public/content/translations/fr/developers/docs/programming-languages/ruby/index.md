@@ -24,7 +24,6 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 - [Bien comprendre les comptes Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Authentifier les utilisateurs Rails avec MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Connexion avec Ethereum - Bibliothèque Ruby et exemples de Rails](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Comment se connecter au réseau Ethereum en utilisant Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Comment générer une nouvelle adresse Ethereum dans Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

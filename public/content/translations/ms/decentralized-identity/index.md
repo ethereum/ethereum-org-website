@@ -186,6 +186,6 @@ Terdapat banyak projek bercita-cita tinggi menggunakan Ethereum sebagai asas unt
 ### Komuniti {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Penyokong standard ERC725 untuk mengurus identiti pada blok rantai Ethereum_
-- [Pelayan Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Komuniti untuk peminat dan pembangun yang bekerja pada Daftar Masuk dengan Ethereum_
+- [Pelayan Discord SpruceID](https://discord.com/invite/ZUyG3mSXFD) — _Komuniti untuk peminat dan pembangun yang bekerja pada Daftar Masuk dengan Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Komuniti pembangun yang menyumbang untuk membina rangka kerja untuk data yang boleh disahkan untuk aplikasi_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Komuniti pembangun dan pembina yang mengusahakan kes penggunaan identiti teragih merentas pelbagai industri_

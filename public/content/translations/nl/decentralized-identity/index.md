@@ -186,6 +186,6 @@ Er zijn veel ambitieuze projecten die Ethereum als basis voor gedecentraliseerde
 ### Gemeenschappen {#communities}
 
 - [ERC-725-alliantie op GitHub](https://github.com/erc725alliance) — _Voorstanders van de ERC725-standaard voor het beheer van identiteit op de Ethereum-blockchain_
-- [SpruceID Discord-server](https://discord.com/invite/Sf9tSFzrnt) — _Gemeenschap voor enthousiastelingen en ontwikkelaars die werken aan Aanmelden met Ethereum_
+- [EthID Discord-server](https://discord.com/invite/ZUyG3mSXFD) — _Gemeenschap voor enthousiastelingen en ontwikkelaars die werken aan Aanmelden met Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Een gemeenschap van ontwikkelaars die bijdraagt aan het bouwen van een kader om gegevens te verifieren voor applicaties_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) - _Een community van ontwikkelaars en bouwers die werken aan toepassingsscenario's voor gedecentraliseerde identiteiten in verschillende sectoren_

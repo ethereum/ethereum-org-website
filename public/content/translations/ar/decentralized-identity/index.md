@@ -181,5 +181,5 @@ summaryPoint3: بفضل العملات الرقمية، أصبح لدى المس
 ### المجتمعات {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _داعمو معيار ERC725 لإدارة الهوية على سلسلة كتل إثيريوم_
-- [خادم SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _مجتمع للمتحمسين والمبرجمين الذين يعملون على تسجيل الدخول من خلال إثيريوم _
+- [خادم EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _مجتمع للمتحمسين والمبرجمين الذين يعملون على تسجيل الدخول من خلال إثيريوم _
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) - _مجتمع من المبرجمين يساهم في بناء إطار عمل للبيانات القابلة للتحقق منها للتطبيقات_

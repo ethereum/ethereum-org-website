@@ -24,7 +24,6 @@ incomplete: false
 
 - [Επιτέλους κατανόηση των λογαριασμών Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Επιτέλους έλεγχος ταυτότητας χρηστών Rails με MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Είσοδος με το Ethereum - Βιβλιοθήκη Ruby και παραδείγματα Rails](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Πώς να συνδεθείτε στο δίκτυο Ethereum χρησιμοποιώντας τη Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Πώς να δημιουργήσετε μια νέα διεύθυνση Ethereum στη Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

@@ -24,7 +24,6 @@ incomplete: false
 
 - [いよいよイーサリアムアカウントを理解する](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [いよいよMetaMaskを使用してRails Usersを認証する](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [イーサリアムによるサインイン - RubyライブラリとRailsのサンプルリリース](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Rubyを使用してイーサリアムネットワークに接続する方法](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Rubyで新しいイーサリアムアドレスを生成する方法](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

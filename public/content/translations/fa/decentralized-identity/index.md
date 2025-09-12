@@ -186,6 +186,6 @@ summaryPoint3: به لطف رمزنگاری، کاربران اکنون ابزا
 ### جوامع {#communities}
 
 - [اتحاد ERC-725 در GitHub](https://github.com/erc725alliance) — _حامی استاندارد ERC725 برای مدیریت هویت در بلاک چین اتریوم_
-- [سرور SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _انجمن برای علاقه مندان و توسعه دهندگانی که روی ورود به سیستم با اتریوم_کار می کنند
+- [سرور EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _انجمن برای علاقه مندان و توسعه دهندگانی که روی ورود به سیستم با اتریوم_کار می کنند
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _جامعه ای از توسعه دهندگان که در ساخت چارچوبی برای داده های قابل تأیید برای برنامه ها مشارکت دارند_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _جامعه‌ای از توسعه‌دهندگان و سازندگان که بر روی موارد استفاده از هویت غیرمتمرکز در صنایع مختلف کار می‌کنند_

@@ -24,7 +24,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [Az Ethereum-számlák megértése](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Rails-felhasználók hitelesítése a MetaMask használatával](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Bejelentkezés az Ethereummal – Ruby-könyvtár és Rails-példák kiadása](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Hogyan lehet az Ethereum-hálózathoz kapcsolódni a Ruby-val](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Hogyan lehet új Ethereum-címet létrehozni a Ruby-val](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

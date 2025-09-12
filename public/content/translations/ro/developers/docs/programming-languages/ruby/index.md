@@ -24,7 +24,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 - [Finally understanding Ethereum accounts](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Finally Authenticating Rails Users with MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Sign-In with Ethereum - Ruby Library and Rails Examples Release](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [How to connect to the Ethereum network using Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [How to generate a new Ethereum address in Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

@@ -186,6 +186,6 @@ Maraming malalaking proyekto ang gumagamit ng Ethereum bilang pundasyon para sa 
 ### Mga Komunidad {#communities}
 
 - [ERC-725 Alliance sa GitHub](https://github.com/erc725alliance) — _Mga tagasuporta ng pamantayang ERC725 para sa pamamahala ng identity sa Ethereum blockchain_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Komunidad para sa mga tagahanga at developer na nagtatrabaho sa Mag-sign in gamit ang Ethereum_
+- [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) — _Komunidad para sa mga tagahanga at developer na nagtatrabaho sa Mag-sign in gamit ang Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Isang komunidad ng mga developer na tumutulong sa pagbuo ng framework para sa nave-verify na data para sa mga application_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Isang komunidad ng mga developer at builders na nagtutulungan sa mga decentralized identity use cases sa iba't ibang industriya_

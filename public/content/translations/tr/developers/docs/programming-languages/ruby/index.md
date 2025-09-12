@@ -24,7 +24,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 - [Sonunda Ethereum hesaplarını anlamak](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Sonunda MetaMask ile Rails Kullanıcılarının Doğrulanması](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Ethereum ile Oturum Açma - Ruby Kitaplığı ve Rails Örnekleri Sürümü](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Ruby kullanarak Ethereum ağına nasıl bağlanılır](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Ruby'de yeni bir Ethereum adresi nasıl oluşturulur](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

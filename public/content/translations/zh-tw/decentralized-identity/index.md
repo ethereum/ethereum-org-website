@@ -186,6 +186,6 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 ### 社群 {#communities}
 
 - [GitHub 上的 ERC-725 聯盟](https://github.com/erc725alliance) — _在以太坊區塊鏈上管理身分的 ERC725 標準的支持者_
-- [SpruceID Discord 伺服器](https://discord.com/invite/Sf9tSFzrnt) — _研究使用以太坊登錄的愛好者和開發者社群_
+- [EthID Discord 伺服器](https://discord.com/invite/ZUyG3mSXFD) — _研究使用以太坊登錄的愛好者和開發者社群_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _一個開發人員社區，致力於為應用程式構建可驗證資料的框架_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _由開發者和構建者組成的社區，致力於開發各個行業的去中心化身份應用案例_

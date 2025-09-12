@@ -24,7 +24,6 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/lea
 
 - [Comprendere definitivamente i conti di Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Autenticare definitivamente gli utenti di Rails con Metamask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Accesso con Ethereum - Rilascio di esempi di Rail e libreria di Ruby](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Come connettersi alla rete di Ethereum usando Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Come generare un nuovo indirizzo di Ethereum in Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

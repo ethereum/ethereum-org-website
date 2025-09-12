@@ -186,6 +186,6 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluz
 ### Community {#communities}
 
 - [ERC-725 Alliance su GitHub](https://github.com/erc725alliance) — _Sostenitori dello standard ERC-725 per la gestione dell'identità sulla blockchain di Ethereum_
-- [Server Discord di SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Community per appassionati e sviluppatori, al lavoro su "Accedi con Ethereum"_
+- [Server Discord di EthID](https://discord.com/invite/ZUyG3mSXFD) — _Community per appassionati e sviluppatori, al lavoro su "Accedi con Ethereum"_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una community di sviluppatori, che contribuiscono alla creazione di un quadro per i dati verificabili per le applicazioni_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) -- _Una comunità di sviluppatori e costruttori che lavorano a casi d'uso dell'identità decentralizzata che coinvolgono diversi settori_

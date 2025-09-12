@@ -186,6 +186,6 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 ### Közösségek {#communities}
 
 - [ERC-725 szövetség a GitHubon](https://github.com/erc725alliance) — _Az ERC725 szabvány támogatói, mely az Ethereum-blokkláncon való identitáskezelést célozza_
-- [SpruceID Discord-szerver](https://discord.com/invite/Sf9tSFzrnt) — _Rajongók és fejlesztők közössége, akik az Ethereumba való bejelentkezés funkcióján dolgoznak_
+- [EthID Discord-szerver](https://discord.com/invite/ZUyG3mSXFD) — _Rajongók és fejlesztők közössége, akik az Ethereumba való bejelentkezés funkcióján dolgoznak_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Fejlesztői közösség, melynek célja az alkalmazásokhoz szükséges igazolható adatok keretrendszerének kidolgozása_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Fejlesztők és építők közössége, akik a decentralizált identitás számtalan iparágban való felhasználási területeivel foglalkoznak_

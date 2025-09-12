@@ -24,7 +24,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 - [Comprender finalmente las cuentas de Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Autenticar finalmente usuarios de Rails con MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Iniciar sesión con Ethereum: biblioteca de Ruby y ejemplos de Rails](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Cómo conectarse a la red Ethereum usando Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Cómo generar una nueva dirección de Ethereum en Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

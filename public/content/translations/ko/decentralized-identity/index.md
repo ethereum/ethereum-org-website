@@ -181,5 +181,5 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 ### 커뮤니티 {#communities}
 
 - [GitHub의 ERC-725 연합](https://github.com/erc725alliance): *이더리움 블록체인에서 신원 관리를 위한 ERC 725 표준의 지원자*
-- [SpruceID 디스코드 서버](https://discord.com/invite/Sf9tSFzrnt): *이더리움 로그인을 개발 중인 개발자와 매니아의 커뮤니티*
+- [EthID 디스코드 서버](https://discord.com/invite/ZUyG3mSXFD): *이더리움 로그인을 개발 중인 개발자와 매니아의 커뮤니티*
 - [Veramo Labs](https://discord.gg/sYBUXpACh4): *애플리케이션의 검증 가능한 데이터를 위한 프레임워크 개발자의 커뮤니티*

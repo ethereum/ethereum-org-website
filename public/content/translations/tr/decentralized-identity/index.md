@@ -186,6 +186,6 @@ Merkeziyetsiz kimlik çözümlerinin temeli olarak Ethereum'u kullanan çok say�
 ### Topluluklar {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Ethereum blok zincirinde kimlik yönetimi için ERC725 standardının destekçileri_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Ethereum ile oturum açma üzerinde çalışan meraklılar ve geliştiriciler için topluluk_
+- [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) — _Ethereum ile oturum açma üzerinde çalışan meraklılar ve geliştiriciler için topluluk_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Uygulamalar için doğrulanabilir veriler için bir çerçeve oluşturmaya katkıda bulunan bir geliştiriciler topluluğu_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Çeşitli sektörlerde merkezi olmayan kimlik kullanım örnekleri üzerinde çalışan geliştiricilerden ve derleyicilerden oluşan bir topluluk_

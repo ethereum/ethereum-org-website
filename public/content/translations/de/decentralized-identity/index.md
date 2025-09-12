@@ -186,6 +186,6 @@ Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Id
 ### Communities {#communities}
 
 - [ERC-725 Allianz auf GitHub](https://github.com/erc725alliance) — _Unterstützer des ERC725-Standards zur Identitätsverwaltung in der Ethereum-Blockchain_
-- [SpruceID Discord Server](https://discord.com/invite/Sf9tSFzrnt) — _Community für Enthusiasten und Entwickler, die am Anmelden mit Ethereum arbeiten_
+- [EthID Discord Server](https://discord.com/invite/ZUyG3mSXFD) — _Community für Enthusiasten und Entwickler, die am Anmelden mit Ethereum arbeiten_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Eine Community von Entwicklern, die zum Aufbau eines Rahmens für überprüfbare Daten für Anwendungen beitragen_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Eine Gemeinschaft von Entwicklern und Erstellern, die an Anwendungsfällen für dezentrale Identität in verschiedenen Branchen arbeiten_

@@ -24,7 +24,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Finalmente entendendo as contas Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Finalmente autenticando usuários Rails com MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Entrar com Ethereum - Biblioteca Ruby e Exemplos Rails de Lançamento](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Como se conectar à rede Ethereum usando Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Como gerar um novo endereço Ethereum em Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 

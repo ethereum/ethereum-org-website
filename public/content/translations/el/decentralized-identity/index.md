@@ -186,6 +186,6 @@ summaryPoint3: Χάρη στα κρυπτονομίσματα, οι χρήστε
 ### Κοινότητες {#communities}
 
 - [ERC-725 Alliance στο GitHub](https://github.com/erc725alliance) — _Υποστηρικτές του προτύπου ERC725 για τη διαχείριση ταυτότητας στο blockchain Ethereum_
-- [Διακομιστής SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Κοινότητα για λάτρεις και προγραμματιστές που εργάζονται με τον τρόπο Σύνδεσης στο Ethereum_
+- [Διακομιστής EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Κοινότητα για λάτρεις και προγραμματιστές που εργάζονται με τον τρόπο Σύνδεσης στο Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Μια κοινότητα προγραμματιστών που συμβάλλουν στη δημιουργία ενός πλαισίου για επαληθεύσιμα δεδομένα για εφαρμογές_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Μια κοινότητα προγραμματιστών και δημιουργών που εργάζονται σε περιπτώσεις αποκεντρωμένης χρήσης ταυτότητας σε διάφορες βιομηχανίες_

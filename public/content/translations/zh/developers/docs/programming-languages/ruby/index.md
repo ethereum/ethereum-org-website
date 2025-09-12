@@ -24,7 +24,6 @@ incomplete: false
 
 - [终于明白以太坊帐户了](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [使用 MetaMask 对 Rails 用户进行最终身份验证](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Sign-In with Ethereum - Ruby 库与 Rails 示例发布](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [如何使用 Ruby 连接到以太坊网络](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [如何使用 Ruby 生成新的以太坊地址](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
