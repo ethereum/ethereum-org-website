@@ -26,7 +26,8 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is “open source” when it is not, will be removed.
 - **Point of contact** - A point of contact for the wallet will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
 - **EIP-1559 (type 2) transactions** - your wallet must support EIP-1559 (type 2) transactions for transactions on Mainnet Ethereum.
-- **Good user experience** - While UX is subjective, if several core team members test the product and find it difficult to use, we reserve the right to reject the wallet and will instead provide useful suggestions to improve. This is done to protect our user base that is mostly comprised of beginners. 
+- **Good user experience** - While UX is subjective, if several core team members test the product and find it difficult to use, we reserve the right to reject the wallet and will instead provide useful suggestions to improve. This is done to protect our user base that is mostly comprised of beginners.
+- **Ethereum focused** - A wallet must provide a primary Ethereum-focused experience. This means Ethereum (or any L2) is set as the default network, ERC assets are properly supported, and features are aligned with the Ethereum ecosystem (e.g., ENS, staking, rollups). Wallets that prioritize or give preferential treatment to alternative layer 1s will not be listed. 
 
 ### Product removals {#product-removals}
 
