@@ -20,8 +20,7 @@ const variants = cva("flex w-full justify-between lg:hidden", {
   variants: {
     variant: {
       docs: "",
-      beginner:
-        "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
+      card: "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
       left: "",
     },
   },

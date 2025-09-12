@@ -25,7 +25,7 @@ const variants = cva(
     variants: {
       variant: {
         docs: "top-19 min-w-48 max-w-[25%] p-4 pe-0 gap-4",
-        beginner: cn(
+        card: cn(
           "top-28 min-w-80 max-w-72 lg:p-8 px-3 py-2",
           "shrink-0 gap-y-2.5 rounded-2xl bg-accent-a/10 text-body-medium"
         ),
@@ -42,7 +42,7 @@ const labelVariants = cva("font-bold", {
   variants: {
     variant: {
       docs: "uppercase text-body-medium font-normal",
-      beginner: "text-lg text-body-medium",
+      card: "text-lg text-body-medium",
       left: "mb-8 text-3xl leading-xs",
     },
   },
@@ -55,7 +55,7 @@ const listVariants = cva("mx-0 gap-2 py-0", {
   variants: {
     variant: {
       docs: "list-none border-s border-s-body-medium ps-4 my-2 text-sm",
-      beginner: "list-decimal border-s-0 text-base list-inside ps-0 my-2",
+      card: "list-decimal border-s-0 text-base list-inside ps-0 my-2",
       left: "list-none my-0",
     },
   },

@@ -12,7 +12,7 @@ const variants = cva(
     variants: {
       variant: {
         docs: "py-0.5",
-        beginner: "[&_[data-label='marker']]:!hidden inline leading-base",
+        card: "[&_[data-label='marker']]:!hidden inline leading-base",
         left: "",
       },
     },

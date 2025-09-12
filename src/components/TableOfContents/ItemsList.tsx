@@ -8,8 +8,7 @@ const itemVariants = cva("last:mb-0", {
   variants: {
     variant: {
       docs: "mb-2",
-      beginner:
-        "[&:has([data-state-active='true'])]:text-primary hover:text-primary-hover list-item",
+      card: "[&:has([data-state-active='true'])]:text-primary hover:text-primary-hover list-item",
       left: "mb-4 list-none text-xl",
     },
   },
@@ -22,7 +21,7 @@ const listVariants = cva("", {
   variants: {
     variant: {
       docs: "m-0 mt-2 list-none gap-2 ps-2 text-sm",
-      beginner: "",
+      card: "",
       left: "",
     },
   },
