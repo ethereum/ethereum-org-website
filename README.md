@@ -2064,6 +2064,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://zksec.io"><img src="https://avatars.githubusercontent.com/u/185210158?v=4?s=100" width="100px;" alt="Barajeel"/><br /><sub><b>Barajeel</b></sub></a><br /><a href="#maintenance-barajeel" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.heartade.dev"><img src="https://avatars.githubusercontent.com/u/24813078?v=4?s=100" width="100px;" alt="Daniel Soohan Park"/><br /><sub><b>Daniel Soohan Park</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHeartade" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://santamasa.github.io"><img src="https://avatars.githubusercontent.com/u/185351323?v=4?s=100" width="100px;" alt="santamasa"/><br /><sub><b>santamasa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asantamasa" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
