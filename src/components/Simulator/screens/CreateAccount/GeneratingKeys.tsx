@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { PiCheckThin } from "react-icons/pi"
+import { Check } from "lucide-react"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
@@ -54,6 +54,7 @@ export const GeneratingKeys = ({
   return (
     <div className="grid h-full place-items-center bg-background-highlight">
       <Flex className="flex-col items-center gap-4">
+        {/* eslint-disable-next-line no-constant-condition */}
         {loading ? (
           <motion.div
             key="spinner"
@@ -71,10 +72,14 @@ export const GeneratingKeys = ({
             animate={{ scale: 1 }}
             transition={{ type: "spring", delay: 0.25 }}
           >
-            <PiCheckThin className={cn(SPINNER_SIZE, "-rotate-[10deg]")} />
+            <Check
+              className={cn(
+                SPINNER_SIZE,
+                "size-[1em] -rotate-[10deg] stroke-1"
+              )}
+            />
           </motion.div>
         )}
-
         <p className="px-4 text-center md:px-8">
           {loading
             ? "Generating example recovery phrase"

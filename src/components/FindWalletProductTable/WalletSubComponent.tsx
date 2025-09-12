@@ -1,14 +1,15 @@
+import { Globe, Info } from "lucide-react"
 import { useLocale } from "next-intl"
-import { FaDiscord, FaGlobe, FaXTwitter } from "react-icons/fa6"
-import { MdInfoOutline } from "react-icons/md"
 
 import { FilterOption, Lang, WalletData } from "@/lib/types"
 
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
+import Discord from "@/components/icons/discord.svg"
 import {
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
+  GreenCheckProductGlyph,
+  WarningProductGlyph,
 } from "@/components/icons/staking"
+import Twitter from "@/components/icons/twitter.svg"
 import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
@@ -101,9 +102,9 @@ const WalletSubComponent = ({
                         <li key={idx} className="mb-2 flex flex-row gap-2">
                           <span className="translate-y-0.5">
                             {wallet[item.filterKey] ? (
-                              <GreenCheckProductGlyphIcon className="size-4" />
+                              <GreenCheckProductGlyph className="size-4" />
                             ) : (
-                              <WarningProductGlyphIcon className="size-4" />
+                              <WarningProductGlyph className="size-4" />
                             )}
                           </span>
                           <p className={cn("leading-1", featureColor)}>
@@ -117,7 +118,7 @@ const WalletSubComponent = ({
                                   </p>
                                 }
                               >
-                                <MdInfoOutline className="ms-1 translate-y-0.5" />
+                                <Info className="ms-1 size-[0.875em] translate-y-0.5" />
                               </Tooltip>
                             </span>
                           </p>
@@ -144,7 +145,7 @@ const WalletSubComponent = ({
                 eventValue: JSON.stringify(filters),
               }}
             >
-              <FaGlobe className="text-2xl text-primary" />
+              <Globe className="text-2xl text-primary" />
             </SocialLink>
             {wallet.discord && (
               <SocialLink
@@ -157,7 +158,7 @@ const WalletSubComponent = ({
                   eventValue: JSON.stringify(filters),
                 }}
               >
-                <FaDiscord className="text-2xl text-[#7289da]" />
+                <Discord className="text-2xl text-[#7289da]" />
               </SocialLink>
             )}
             {wallet.twitter && (
@@ -171,7 +172,7 @@ const WalletSubComponent = ({
                   eventValue: JSON.stringify(filters),
                 }}
               >
-                <FaXTwitter className="text-2xl text-[#1da1f2]" />
+                <Twitter className="text-2xl text-[#1da1f2]" />
               </SocialLink>
             )}
           </div>

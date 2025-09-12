@@ -26,15 +26,15 @@ Deze programma's ondersteunen het brede Ethereum-ecosysteem door subsidies aan t
 Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zijn op de ontwikkeling en het experimenteren met hun eigen technologie.
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-ecosysteemfonds_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/)-ecosysteemfonds_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/)-gemeenschapssubsidies_
-- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/)-financieringsecosysteem_
+- [Compound Grants Program](https://compoundgrants.questbook.app/) – _[Compound](https://compound.finance/)-financieringsecosysteem_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-financieringsecosysteem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) Grants DAO geleid door werknemers_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)-gemeenschap_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-ecosysteem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)-ontwikkelaarsondersteuning_
-- [Uniswap Grants Program](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_
 
 ## Kwadratische financiering {#quadratic-funding}
 

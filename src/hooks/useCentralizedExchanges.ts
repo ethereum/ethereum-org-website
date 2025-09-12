@@ -1,5 +1,5 @@
 import { useState } from "react"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 import { useLocale } from "next-intl"
 
 // TODO: Remove unused?
@@ -13,6 +13,7 @@ import { useLocale } from "next-intl"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
+import { getCountryCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
@@ -322,11 +323,18 @@ export const useCentralizedExchanges = () => {
   const selectOptions: ExchangeByCountryOption[] = Object.entries(
     exchangeData as ExchangeData
   )
-    .map(([country, exchanges]) => ({
-      value: country,
-      label: country,
-      exchanges,
-    }))
+    .map(([countryCode, exchanges]) => {
+      const countryName =
+        countryCode.length === 2
+          ? getCountryCodeName(countryCode, locale)
+          : t(`common:region-${countryCode.toLowerCase()}`)
+
+      return {
+        value: countryName,
+        label: countryName,
+        exchanges,
+      }
+    })
     .sort((a, b) => a.value.localeCompare(b.value))
 
   const handleSelectChange: SelectOnChange<ExchangeByCountryOption> = (

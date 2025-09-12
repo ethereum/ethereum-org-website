@@ -68,7 +68,7 @@ Reáchtálann ardáin mhaoinithe earraí poiblí dúchasacha Web3 ar nós [Gitco
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [Innéacs Inbhuanaitheachta Líonra Bhlocshlabhra Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Tuarascáil an Tí Bháin ar bhlocshlabhrí cruthúnas-ar-obair](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Tuarascáil an Tí Bháin ar bhlocshlabhrí cruthúnas-ar-obair](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Astaíochtaí Ethereum: Meastachán Bun aníos](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Innéacs Tomhaltas Fuinnimh Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@ InsideTheSim](https://twitter.com/InsideTheSim)_

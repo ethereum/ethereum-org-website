@@ -17,14 +17,13 @@ Vous pouvez trouver ci-dessous des guides et des outils utiles pour les traducte
 
 ## Outils {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– utile pour trouver et vérifier les traductions des termes techniques_
 - [Linguee](https://www.linguee.com/) _– moteur de recherche de traductions et dictionnaire qui permet la recherche par mot ou phrase_
 - [Recherche de terme Proz](https://www.proz.com/search/) _– base de données de dictionnaires de traduction et de glossaires pour des termes spécialisés_
 - [Eurotermbank](https://www.eurotermbank.com/) _– collections de terminologie européenne en 42 langues_
 
 ## Communautés {#communities}
 
-- [Groupes de traduction spécifiques à une langue sur Discord](/discord/) _– une initiative pour connecter les traducteurs ethereum.org à travers des groupes de traduction_
+- [Groupes de traduction spécifiques à une langue sur Discord](https://discord.gg/ethereum-org) _– une initiative pour connecter les traducteurs ethereum.org à travers des groupes de traduction_
 - [Groupe de traducteurs chinois](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– page de notion pour faciliter la coordination entre les traducteurs chinois_
 
 ## Dernières mises à jour {#latest-updates}
@@ -38,7 +37,7 @@ Pour vous tenir au courant des dernières avancées du programme de traduction, 
 
 ## Permanence pour les traducteurs {#office-hours}
 
-Nous assurons des permanences pour les traducteurs le deuxième mercredi du mois. Celles-ci sont tenues dans le canal vocal #office-hours sur l'[ethereum.org Discord](/discord/), où vous pouvez également trouver les heures exactes et les détails supplémentaires.
+Nous assurons des permanences pour les traducteurs le deuxième mercredi du mois. Celles-ci sont tenues dans le canal vocal #office-hours sur l'[ethereum.org Discord](https://discord.gg/ethereum-org), où vous pouvez également trouver les heures exactes et les détails supplémentaires.
 
 Les heures de permanence permettent à nos traducteurs de poser des questions sur le processus de traduction, de faire part de leurs commentaires sur le programme, de partager leurs idées ou simplement de discuter avec l'équipe d'ethereum.org. Enfin, nous voulons utiliser ces appels pour communiquer les développements récents en lien avec le programme de traduction et partager avec nos contributeurs des conseils et des instructions.
 

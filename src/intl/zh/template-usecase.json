@@ -4,6 +4,7 @@
   "template-usecase-dropdown-nft": "非同质化代币 (NFT)",
   "template-usecase-dropdown-dao": "去中心化自治组织 (DAO)",
   "template-usecase-dropdown-payments": "以太坊支付",
+  "template-usecase-dropdown-prediction-markets": "预测市场",
   "template-usecase-dropdown-social-networks": "去中心化社交网络",
   "template-usecase-dropdown-identity": "去中心化身份",
   "template-usecase-dropdown-desci": "去中心化科学 (DeSci)",
@@ -11,5 +12,6 @@
   "template-usecase-dropdown": "以太坊使用案例",
   "template-usecase-banner": "以太坊的用法不断开发和演进。添加任何你认为会使事情变得更清晰或更及时的信息。",
   "template-usecase-edit-link": "编辑页面",
-  "template-usecase-dropdown-aria": "使用案例下拉菜单"
+  "template-usecase-dropdown-aria": "使用案例下拉菜单",
+  "template-usecase-dropdown-rwa": "现实世界资产（RWA）"
 }

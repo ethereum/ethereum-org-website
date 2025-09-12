@@ -56,7 +56,7 @@ Unit tests are useful for checking that functions return expected values and tha
 
 Before writing unit tests, it helps to know what functionalities a smart contract offers and how users will access and use those functions. This is particularly useful for running [happy path tests](https://en.m.wikipedia.org/wiki/Happy_path) that determine if functions in a contract return the correct output for valid user inputs. We'll explain this concept using this (abridged) example of [an auction contract](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
-```
+```solidity
 constructor(
         uint biddingTime,
         address payable beneficiaryAddress
@@ -279,6 +279,8 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-based static analysis framework with vulnerability and code quality detectors, printers for extracting useful information from code and support for writing custom submodules._
 
+- **[Slippy](https://github.com/fvictorio/slippy)** - _A simple and powerful linter for Solidity._
+
 #### Dynamic analysis tools {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
@@ -303,6 +305,6 @@ The major difference is that bug bounty programs are open to the wider developer
 ## Further reading {#further-reading}
 
 - [An in-depth guide to testing Ethereum smart contracts](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
-- [How to test ethereum smart contracts](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
+- [How to test Ethereum smart contracts](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [MolochDAO's unit testing guide for developers](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [How to test smart contracts like a rockstar](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)

@@ -56,7 +56,7 @@ Labda wewe ni msanii amabaye angependa kushiriki kazi yake kupitia NFT bila wewe
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Chunguza, nunu au tengeneza sanaa ya NFT...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Chunguza sanaa ya NFT
   </ButtonLink>
 </InfoBanner>

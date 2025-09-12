@@ -176,11 +176,11 @@ This file contains most of the UI functionality. It includes definitions that wo
 
 ```tsx
 import { useState, ChangeEventHandler } from 'react'
-import {  useNetwork, 
-          useContractRead, 
-          usePrepareContractWrite, 
-          useContractWrite, 
-          useContractEvent 
+import {  useNetwork,
+          useReadContract,
+          usePrepareContractWrite,
+          useContractWrite,
+          useContractEvent
         } from 'wagmi'
 ```
 
@@ -264,17 +264,17 @@ Because this is a hook (`use...`), every time this information changes the compo
 The address of the Greeter contract, which varies by chain (and which is `undefined` if we don't have chain information or we are on a chain without that contract).
 
 ```tsx
-  const readResults = useContractRead({
+  const readResults = useReadContract({
     address: greeterAddr,
     abi: greeterABI,
     functionName: "greet" , // No arguments
-    watch: true    
+    watch: true
   })
 ```
 
-[The `useContractRead` hook](https://wagmi.sh/react/hooks/useContractRead) reads information from a contract. You can see exactly what information it returns expand `readResults` in the UI. In this case we want it to keep looking so we'll be informed when the greeting changes.
+[The `useReadContract` hook](https://wagmi.sh/react/api/hooks/useReadContract) reads information from a contract. You can see exactly what information it returns expand `readResults` in the UI. In this case we want it to keep looking so we'll be informed when the greeting changes.
 
-**Note:** We could listen to [`setGreeting` events](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=logs) to know when the greeting changes and update that way. However, while it may be more efficient, it will not apply in all cases. When the user switches to a different chain the greeting also changes, but that change is not accompanied by an event. We could have one part of the code listening for events and another to identify chain changes, but that would be more complicated than just setting [the `watch` parameter](https://wagmi.sh/react/hooks/useContractRead#watch-optional).
+**Note:** We could listen to [`setGreeting` events](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=logs) to know when the greeting changes and update that way. However, while it may be more efficient, it will not apply in all cases. When the user switches to a different chain the greeting also changes, but that change is not accompanied by an event. We could have one part of the code listening for events and another to identify chain changes, but that would be more complicated than just setting [the `watch` parameter](https://wagmi.sh/react/api/hooks/useReadContract#watch-optional).
 
 ```tsx
   const [ newGreeting, setNewGreeting ] = useState("")
@@ -290,7 +290,7 @@ The `useState` hook returns a list with two values:
 In this case, we are using a state variable for the new greeting the user wants to set.
 
 ```tsx
-  const greetingChange : ChangeEventHandler<HTMLInputElement> = (evt) => 
+  const greetingChange : ChangeEventHandler<HTMLInputElement> = (evt) =>
     setNewGreeting(evt.target.value)
 ```
 
@@ -303,7 +303,7 @@ This is the event handler for when the new greeting input field changes. The typ
     functionName: 'setGreeting',
     args: [ newGreeting ]
   })
-  const workingTx = useContractWrite(preparedTx.config)  
+  const workingTx = useContractWrite(preparedTx.config)
 ```
 
 This is the process to submit a blockchain transaction from the client perspective:
@@ -336,8 +336,8 @@ Now we can finally create the actual HTML to return.
 
 Create a `ShowGreeting` component (explained below), but only if the greeting was read successfully from the blockchain.
 
-```tsx     
-      <input type="text" 
+```tsx
+      <input type="text"
         value={newGreeting}
         onChange={greetingChange}
       />
@@ -481,7 +481,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     publicProvider(),
   ],
-) 
+)
 
 const { connectors } = getDefaultWallets({
   appName: 'My wagmi + RainbowKit App',
@@ -501,7 +501,7 @@ export { chains }
 
 ### Adding another blockchain {#add-blockchain}
 
-These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
+These days there are a lot of [L2 scaling solution](/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
 1. Import the `defineChain` type from viem.
 
@@ -526,7 +526,7 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/en/laye
           http: ['https://rpc.holesky.redstone.xyz'],
           webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
       },
-      public: {  
+      public: {
           http: ['https://rpc.holesky.redstone.xyz'],
           webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
         },
@@ -543,7 +543,7 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/en/laye
     const { chains, publicClient, webSocketPublicClient } = configureChains(
       [ holesky, sepolia, redstoneHolesky ],
       [ publicProvider(), ],
-    ) 
+    )
    ```
 
 1. Ensure that the application knows the address for your contracts on the new network. In this case, we modify `src/components/Greeter.tsx`:
@@ -552,13 +552,13 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/en/laye
     const contractAddrs : AddressPerBlockchainType = {
       // Holesky
       17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-        
+
       // Redstone Holesky
       17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
-        
+
       // Sepolia
       11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
-    }    
+    }
     ```
 
 ## Conclusion {#conclusion}
@@ -580,3 +580,6 @@ Of course, you don't really care about providing a user interface for `Greeter`.
 1. You can [add Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
 
 Now go and make your contracts usable for the wide world.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

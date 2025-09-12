@@ -69,7 +69,7 @@ Maaari silang magsagawa ng mga komputasyon, lumikha ng pera, mag-imbak ng data, 
 - [Stablecoins](/stablecoins/)
 - [Paggawa at pamamahagi ng natatangign mga digital asset](/nft/)
 - [Awtomatiko, bukas na palitan ng pera](/get-eth/#dex)
-- [Decentralized gaming](/dapps/?category=gaming#explore)
+- [Decentralized gaming](/apps/categories/gaming)
 - [Patakaran ng insurance na awtomatikong nagbabayad](https://etherisc.com/)
 - [Isang pamantayan na nagpapahintulot sa mga tao na lumikha ng mga na-customize at interoperable na pera](/developers/docs/standards/tokens/)
 

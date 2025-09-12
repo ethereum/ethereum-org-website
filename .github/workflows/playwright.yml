@@ -1,0 +1,80 @@
+name: E2E tests
+on:
+  push:
+    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
+  pull_request:
+    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Wait for Netlify Deploy
+        id: netlify_deploy
+        uses: pettinarip/wait-for-netlify-action@v1.0.2
+        with:
+          site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
+          max_timeout: 3600
+        env:
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright with all browsers
+        run: npx playwright install --with-deps
+
+      - name: Run E2E Tests on Netlify URL
+        run: pnpm test:e2e
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ steps.netlify_deploy.outputs.url }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: ./tests/e2e/__results__
+          retention-days: 7
+
+  chromatic:
+    name: chromatic
+    needs: playwright
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Download Playwright test results
+        uses: actions/download-artifact@v4
+        with:
+          name: playwright-report
+          path: ./tests/e2e/__results__
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_E2E_TOKEN }}
+          playwright: true
+          exitZeroOnChanges: true
+          storybookBaseDir: .
+        env:
+          CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__

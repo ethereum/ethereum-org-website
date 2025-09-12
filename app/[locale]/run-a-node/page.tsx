@@ -1,14 +1,15 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -24,9 +25,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getAppPageContributorInfo(
+      "run-a-node",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <RunANodePage />
+      <RunANodePage
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+      />
     </I18nProvider>
   )
 }

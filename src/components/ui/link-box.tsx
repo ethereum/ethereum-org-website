@@ -1,7 +1,12 @@
+"use client"
+
 import { type BaseHTMLAttributes, type ElementRef, forwardRef } from "react"
 import { Slot } from "@radix-ui/react-slot"
 
+import { BaseLink } from "@/components/ui/Link"
+
 import { cn } from "@/lib/utils/cn"
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 type LinkBoxElement = ElementRef<"div">
 
@@ -18,15 +23,16 @@ const LinkBox = forwardRef<LinkBoxElement, LinkBoxProps>(
 
 LinkBox.displayName = "LinkBox"
 
-type LinkOverlayElement = ElementRef<"a">
+type LinkOverlayElement = ElementRef<typeof BaseLink>
 
-type LinkOverlayProps = BaseHTMLAttributes<HTMLAnchorElement> & {
+type LinkOverlayProps = React.ComponentProps<typeof BaseLink> & {
   asChild?: boolean
+  matomoEvent?: MatomoEventOptions
 }
 
 const LinkOverlay = forwardRef<LinkOverlayElement, LinkOverlayProps>(
-  ({ asChild, className, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a"
+  ({ asChild, className, matomoEvent, ...props }, ref) => {
+    const Comp = asChild ? Slot : BaseLink
 
     return (
       <Comp
@@ -35,6 +41,7 @@ const LinkOverlay = forwardRef<LinkOverlayElement, LinkOverlayProps>(
           "before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-['']",
           className
         )}
+        onClick={() => matomoEvent && trackCustomEvent(matomoEvent)}
         {...props}
       />
     )

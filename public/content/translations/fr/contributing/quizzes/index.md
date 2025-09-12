@@ -12,7 +12,7 @@ Les questions sont structurées comme suit. La question invite à donner 1 répo
 
 Vous trouverez ici quelques exemples de quiz actuels :
 
-- [Niveau 2](/layer-2)
+- [Couche 2](/layer-2)
 - [NFT](/nft/)
 - [Qu'est-ce qu'Ethereum ?](/what-is-ethereum/)
 - [Qu'est-ce que l'ETH ?](/eth/)

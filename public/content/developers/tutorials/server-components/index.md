@@ -21,7 +21,7 @@ However, there are some cases where an application would benefit from having a s
 
 There are several possible tasks for such a server could fulfill.
 
-- Holder of secret state. In gaming it is often useful not to have all the information that the game knows available to the players. However, *there are no secrets on the blockchain*, any information that is in the blockchain is easy for anybody to figure out. Therefore, if part of the game state is to be kept secret, it has to be stored elsewhere (and possibly have the effects of that state verified using [zero-knowledge proofs](/zero-knowledge-proofs)).
+- Holder of secret state. In gaming it is often useful not to have all the information that the game knows available to the players. However, _there are no secrets on the blockchain_, any information that is in the blockchain is easy for anybody to figure out. Therefore, if part of the game state is to be kept secret, it has to be stored elsewhere (and possibly have the effects of that state verified using [zero-knowledge proofs](/zero-knowledge-proofs)).
 
 - Centralized oracle. If the stakes are sufficiently low, an external server that reads some information online and then posts it to the chain may be good enough to use as an [oracle](/developers/docs/oracles/).
 
@@ -68,37 +68,42 @@ The easiest way to understand how to write a server component is to go over the 
 
 The vast majority of the program is contained in [`src/app.ts`](https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts).
 
-
 ##### Creating the prerequisite objects
 
 ```typescript
-import { createPublicClient, createWalletClient, getContract, http, Address } from 'viem'
+import {
+  createPublicClient,
+  createWalletClient,
+  getContract,
+  http,
+  Address,
+} from "viem"
 ```
 
 These are the [Viem](https://viem.sh/) entities we need, functions and [the `Address` type](https://viem.sh/docs/glossary/types#address). This server is written in [TypeScript](https://www.typescriptlang.org/), which is an extension to JavaScript that makes it [strongly typed](https://en.wikipedia.org/wiki/Strong_and_weak_typing).
 
 ```typescript
-import { privateKeyToAccount } from 'viem/accounts'
+import { privateKeyToAccount } from "viem/accounts"
 ```
 
 [This function](https://viem.sh/docs/accounts/privateKey) lets us generate the wallet information, including address, corresponding to a private key.
 
 ```typescript
-import { holesky } from 'viem/chains'
+import { holesky } from "viem/chains"
 ```
 
 To use a blockchain in Viem you need to import its definition. In this case, we want to connect to the [Holesky](https://github.com/eth-clients/holesky) test blockchain.
 
 ```typescript
 // This is how we add the definitions in .env to process.env.
-import * as dotenv from "dotenv";
+import * as dotenv from "dotenv"
 dotenv.config()
 ```
 
 This is how we read `.env` into the environment. We need it for the private key (see later).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6" 
+const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
 const greeterABI = [
     {
         "inputs": [
@@ -132,12 +137,12 @@ const greeterABI = [
 
 To use a contract we need its address and the [ABI](/glossary/#abi) for it. We provide both here.
 
-In JavaScript (and therefore TypeScript) you can't assign a new value to a constant, but you *can* modify the object that is stored in it. By using the suffix `as const` we are telling TypeScript that the list itself is constant and may not be changed.
+In JavaScript (and therefore TypeScript) you can't assign a new value to a constant, but you _can_ modify the object that is stored in it. By using the suffix `as const` we are telling TypeScript that the list itself is constant and may not be changed.
 
 ```typescript
-const publicClient = createPublicClient({ 
-    chain: holesky, 
-    transport: http(), 
+const publicClient = createPublicClient({
+  chain: holesky,
+  transport: http(),
 })
 ```
 
@@ -147,30 +152,29 @@ Create a Viem [public client](https://viem.sh/docs/clients/public.html). Public 
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-The environment variables are available in [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). However,  TypeScript is strongly typed. An environment variable can be be any string, or empty, so the type for an environment variable is `string | undefined`. However, a key is defined in Viem as `0x${string}` (`0x` followed by a string). Here we tell TypeScript that the `PRIVATE_KEY` environment variable will be of that type. If it isn't, we'll get a runtime error.
+The environment variables are available in [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). However, TypeScript is strongly typed. An environment variable can be be any string, or empty, so the type for an environment variable is `string | undefined`. However, a key is defined in Viem as `0x${string}` (`0x` followed by a string). Here we tell TypeScript that the `PRIVATE_KEY` environment variable will be of that type. If it isn't, we'll get a runtime error.
 
 The [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) function then uses this private key to create a full account object.
 
 ```typescript
-const walletClient = createWalletClient({ 
-    account,
-    chain: holesky, 
-    transport: http(), 
-}) 
+const walletClient = createWalletClient({
+  account,
+  chain: holesky,
+  transport: http(),
+})
 ```
 
 Next, we use the account object to create a [wallet client](https://viem.sh/docs/clients/wallet). This client has a private key and an address, so it can be used to send transactions.
 
 ```typescript
 const greeter = getContract({
-    address: greeterAddress,
-    abi: greeterABI,
-    client: { public: publicClient, wallet: walletClient }
+  address: greeterAddress,
+  abi: greeterABI,
+  client: { public: publicClient, wallet: walletClient },
 })
 ```
 
 Now that we have all the prerequisites, we can finally create a [contract instance](https://viem.sh/docs/contract/getContract). We will use this contract instance to communicate with the onchain contract.
-
 
 ##### Reading from the blockchain
 
@@ -182,8 +186,7 @@ The contract functions that are read only ([`view`](https://www.tutorialspoint.c
 
 JavaScript is single-threaded, so when we fire off a long running process we need to [specify we do it asynchronously](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Calling the blockchain, even for a read only operation, requires a round-trip between the computer and a blockchain node. That is the reason we specify here the code needs to `await` for the result.
 
-If you are interested in how this work you can [read about it here](https://www.w3schools.com/js/js_promise.asp), but in practical terms all you need to know is that you `await` the results if you start an operation that takes a long time, and that any function that does this has to be declared as `async`. 
-
+If you are interested in how this work you can [read about it here](https://www.w3schools.com/js/js_promise.asp), but in practical terms all you need to know is that you `await` the results if you start an operation that takes a long time, and that any function that does this has to be declared as `async`.
 
 ##### Issuing transactions
 
@@ -194,10 +197,10 @@ const setGreeting = async (greeting: string): Promise<any> => {
 This is the function you call to issue a transaction that changes the greeting. As this is a long operation, the function is declared as `async`. Because of the internal implementation, any `async` function needs to return a `Promise` object. In this case, `Promise<any>` means that we don't specify what exactly will be returned in the `Promise`.
 
 ```typescript
-    const txHash = await greeter.write.setGreeting([greeting]);
+const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-The `write` field of the contract instance has all the functions that write to the blockchain state (those that require sending a transaction), such as [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). The parameters, if any, are provided as a list, and the function returns the hash of the transaction. 
+The `write` field of the contract instance has all the functions that write to the blockchain state (those that require sending a transaction), such as [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). The parameters, if any, are provided as a list, and the function returns the hash of the transaction.
 
 ```typescript
     console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
@@ -208,7 +211,6 @@ The `write` field of the contract instance has all the functions that write to t
 
 Report the hash of the transaction (as part of a URL to the block explorer to view it) and return it.
 
-
 ##### Responding to events
 
 ```typescript
@@ -217,7 +219,6 @@ greeter.watchEvent.SetGreeting({
 
 [The `watchEvent` function](https://viem.sh/docs/actions/public/watchEvent) lets you specify that a function is to run when an event is emitted. If you only care about one type of event (in this case, `SetGreeting`), you can use this syntax to limit yourself to that event type.
 
-
 ```typescript
     onLogs: logs => {
 ```
@@ -225,7 +226,9 @@ greeter.watchEvent.SetGreeting({
 The `onLogs` function is called when there are log entries. In Ethereum "log" and "event" are usually interchangeable.
 
 ```typescript
-        console.log(`Address ${logs[0].args.sender} changed the greeting to ${logs[0].args.greeting}`)
+console.log(
+  `Address ${logs[0].args.sender} changed the greeting to ${logs[0].args.greeting}`
+)
 ```
 
 There could be multiple events, but foir simplicity we only care about the first one. `logs[0].args` are the arguments of the event, in this case `sender` and `greeting`.
@@ -233,11 +236,11 @@ There could be multiple events, but foir simplicity we only care about the first
 ```typescript
         if (logs[0].args.sender != account.address)
             setGreeting(`${account.address} insists on it being Hello!`)
-    }    
+    }
 })
 ```
 
-If the sender is *not* this server, use `setGreeting` to change the greeting.
+If the sender is _not_ this server, use `setGreeting` to change the greeting.
 
 #### `package.json` {#package-json}
 
@@ -271,7 +274,7 @@ There are multiple types of JavaScript node applications. The `module` type lets
   },
 ```
 
-These are packages that are only required for development. Here we need `typescript` and the because we are using it with Node.js, we are also getting the types for node variables and objects, such as `process`. [The `^<version>` notation](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) means that version or a higher version that doesn't have breaking changes. See [here](https://semver.org) for more information about the meaning of version numbers.
+These are packages that are only required for development. Here we need `typescript` and because we are using it with Node.js, we are also getting the types for node variables and objects, such as `process`. [The `^<version>` notation](https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004) means that version or a higher version that doesn't have breaking changes. See [here](https://semver.org) for more information about the meaning of version numbers.
 
 ```json
   "dependencies": {
@@ -285,6 +288,8 @@ These are packages that are required at runtime, when running `dist/app.js`.
 
 ## Conclusion {#conclusion}
 
-The centralized server we created here does its job, which is to act as an agent for a user. Anybody else who wants the dapp to continue functioning and is willing to spend the gas can run a new instance of the server with their own address. 
+The centralized server we created here does its job, which is to act as an agent for a user. Anybody else who wants the dapp to continue functioning and is willing to spend the gas can run a new instance of the server with their own address.
 
 However, this only works when the centralized server's actions can be easily verified. If the centralized server has any secret state information, or runs difficult calculations, it is a centralized entity that you need trust to use the application, which is exactly what blockchains try to avoid. In a future article I plan to show how to use [zero-knowledge proofs](/zero-knowledge-proofs) to get around this problem.
+
+[See here for more of my work](https://cryptodocguy.pro/).

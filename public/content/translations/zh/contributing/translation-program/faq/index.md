@@ -56,7 +56,7 @@ ethereum.org 翻译计划是这种做法的延伸，其组织方式考虑到了�
 
 ## 什么是翻译记忆库 (TM)？ {#translation-memory}
 
-翻译记忆库 (TM) 是一项 Crowdin 功能，可存储所有先前已翻译的 [ethereum.org](http://ethereum.org/) 中的语句。 翻译过的语句会自动保存到 TM 中。 这款实用工具可以帮助你节省时间！
+翻译记忆库 (TM) 是一项 Crowdin 功能，可存储所有先前已翻译的 [ethereum.org](https://ethereum.org/) 中的语句。 翻译过的语句会自动保存到 TM 中。 这款实用工具可以帮助你节省时间！
 
 - 请看“TM and MT Suggestions”部分，你会看到其他翻译人员如何翻译相同或类似语句。 如果发现匹配率很高的建议，可以点击以引用该翻译内容。
 - 如果列表中没有任何内容，你可以搜索 TM 中以前做过的翻译并重新使用以保持一致性。

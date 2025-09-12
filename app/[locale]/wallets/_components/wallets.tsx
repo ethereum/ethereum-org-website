@@ -3,10 +3,13 @@
 import { ComponentPropsWithRef } from "react"
 import { useLocale } from "next-intl"
 
+import { PageWithContributorsProps } from "@/lib/types"
+
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
@@ -35,7 +38,10 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   />
 )
 
-const WalletsPage = () => {
+const WalletsPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const pathname = usePathname()
   const locale = useLocale()
   const { t } = useTranslation("page-wallets")
@@ -405,7 +411,7 @@ const WalletsPage = () => {
             className="min-h-full flex-1 basis-[424px]"
           >
             <div>
-              <ButtonLink href="/dapps/">
+              <ButtonLink href="/apps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
             </div>
@@ -418,6 +424,11 @@ const WalletsPage = () => {
       </div>
 
       <div className="w-full px-8 py-4">
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </div>
     </MainArticle>

@@ -247,7 +247,7 @@
   {
     "url": "https://www.youtube.com/watch?v=AhJtmUqhAqg",
     "title": "How to build an on-chain DAO",
-    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
+    "description": "Using Compound and Openzeppelin as a basis, we build a 100% onchain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "typescript", "hardhat", "defi", "dao", "video"],
@@ -259,7 +259,7 @@
   {
     "url": "https://betterprogramming.pub/how-to-code-an-on-chain-dao-e525e13a57be",
     "title": "How to build an on-chain DAO",
-    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
+    "description": "Using Compound and Openzeppelin as a basis, we build a 100% onchain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "typescript", "hardhat", "defi", "dao"],
@@ -334,7 +334,7 @@
   {
     "url": "https://www.youtube.com/watch?v=9oERTH9Bkw0",
     "title": "How to make NFT Art with On-Chain Metadata",
-    "description": "Explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% on-chain.",
+    "description": "Explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% onchain.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
@@ -637,18 +637,6 @@
     "publishDate": "04/24/2024"
   },
   {
-    "url": "https://speedrunethereum.com/challenge/state-channels",
-    "title": "State Channel Application",
-    "description": "Create an app to lock collateral onchain, transact offchain, then finalize onchain.",
-    "author": "Austin Griffith",
-    "authorGithub": "https://github.com/austintgriffith",
-    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "openzeppelin"],
-    "skillLevel": "intermediate",
-    "timeToRead": "60",
-    "lang": "en",
-    "publishDate": "04/24/2024"
-  },
-  {
     "url": "https://github.com/scaffold-eth/se-2-challenges/tree/challenge-6-multisig",
     "title": "Multisig wallet",
     "description": "Deploy a multi-signature wallet where enough signatures are required to execute a transaction",
@@ -659,5 +647,29 @@
     "timeToRead": "90",
     "lang": "en",
     "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-1-decoding-transactions",
+    "title": "Detect UI Spoofing Attacks: Decoding Ethereum Calldata with Python",
+    "description": "Learn to decode Ethereum calldata to detect malicious transactions before signing.",
+    "author": "Valentina Rivas",
+    "authorGithub": "https://github.com/333cipher",
+    "tags": ["security", "smart contracts", "python", "transactions", "ERC-20"],
+    "skillLevel": "intermediate",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "05/07/2025"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-2-simulating-transactions",
+    "title": "Prevent UI Spoofing: Simulating Ethereum Transactions with Foundry & Python",
+    "description": "Simulate transactions on a local fork to verify on-chain behavior and catch UI spoofing.",
+    "author": "Valentina Rivas",
+    "authorGithub": "https://github.com/333cipher",
+    "tags": ["security", "smart contracts", "foundry", "testing", "python", "ERC-20"],
+    "skillLevel": "advanced",
+    "timeToRead": "50",
+    "lang": "en",
+    "publishDate": "05/09/2025"
   }
 ]
