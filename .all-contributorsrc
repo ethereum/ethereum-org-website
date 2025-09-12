@@ -13303,6 +13303,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "santamasa",
+      "name": "santamasa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185351323?v=4",
+      "profile": "http://santamasa.github.io",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
