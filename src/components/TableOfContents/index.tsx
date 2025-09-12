@@ -55,7 +55,7 @@ const listVariants = cva("mx-0 gap-2 py-0", {
   variants: {
     variant: {
       docs: "list-none border-s border-s-body-medium ps-4 my-2 text-sm",
-      card: "list-decimal border-s-0 text-base list-inside ps-0 my-2",
+      card: "list-decimal list-inside ps-0 my-2",
       left: "list-none my-0",
     },
   },
