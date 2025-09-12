@@ -13257,6 +13257,15 @@
         "maintenance",
         "code"
       ]
+    },
+    {
+      "login": "yansq",
+      "name": "Siqi Yan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26108404?v=4",
+      "profile": "https://github.com/yansq",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
