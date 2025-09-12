@@ -39,10 +39,10 @@ incomplete: false
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _イーサリアムアカウント、メッセージ、トランザクションを扱うためのRubyライブラリとRPCクライアント_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _イーサリアムによって使用されるKeccak (SHA3) ハッシュ_
-- [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _イーサリアムによるサインインのRuby実装_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) - _siweローカルサインインのルートを追加するRails gem_
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _カスタムコントローラでRuby on Railsを使用したsiweの例_
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _イーサリアムによるサインイン (siwe) のためのOmniAuthストラテジー_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _イーサリアムによるサインインのRuby実装_
+- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) - _siweローカルサインインのルートを追加するRails gem_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _カスタムコントローラでRuby on Railsを使用したsiweの例_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _イーサリアムによるサインイン (siwe) のためのOmniAuthストラテジー_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _NFT所有権による認証のためのOmniAuthストラテジー_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _MetaMaskをRuby on Railsに接続できるようにする、Railsでのイーサリアムテンプレート_
 
