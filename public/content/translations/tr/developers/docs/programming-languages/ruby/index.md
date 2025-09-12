@@ -40,7 +40,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ethereum hesaplarını, mesajlarını ve işlemlerini işlemek için Ruby kitaplığı ve RPC istemcisi_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _Ethereum tarafından kullanılan Keccak (SHA3) hash değeri_
 - [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Ethereum ile Oturum Açmanın Ruby uygulaması_
-- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) - _SIWE yerel oturum açma rotalarını ekleyen Rails gem_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _SIWE yerel oturum açma rotalarını ekleyen Rails gem_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Özel denetleyiciyle Ruby on Rails kullanan SIWE örneği_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Ethereum ile Oturum Açma (SIWE) için OmniAuth stratejisi_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _NFT sahipliği aracılığıyla kimlik doğrulama için OmniAuth stratejisi_

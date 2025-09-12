@@ -40,7 +40,7 @@ incomplete: false
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby 程式庫與遠端程序呼叫用戶端，用於處理以太坊帳戶、訊息以及交易_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _以太坊使用的 Keccak (SHA3) 雜湊值_
 - [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Sign-In with Ethereum的 Ruby 實作_
-- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) - _添加 SIWE 本地登入路由的 Rails gem_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _添加 SIWE 本地登入路由的 Rails gem_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _使用 Ruby on Rails 的 SIWE 範例（含自訂控製器）_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _面向 Sign In With Ethereum (SIWE) 的 OmniAuth 策略_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _面向通過非同質化代幣所有權進行身份驗證的 OmniAuth 策略_

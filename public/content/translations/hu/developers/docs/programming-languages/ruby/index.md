@@ -40,7 +40,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [eth.rb](https://github.com/q9f/eth.rb) – _Ruby könyvtár és RPC-kliens az Ethereum-számlák, üzenetek és tranzakciók kezelésére_
 - [keccak.rb](https://github.com/q9f/keccak.rb) – _Az Ethereum által használt keccak (SHA3) hash_
 - [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) – _Ruby általi implementáció az Ethereummal való bejelentkezéshez_
-- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) – _SIWE lokális bejelentkezési utakat adó Rails gem_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) – _SIWE lokális bejelentkezési utakat adó Rails gem_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) – _SIWE-példa Ruby használatával a Railsen személyre szabott irányítóval_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) – _OmniAuth-stratégia az Ethereummal (SIWE) való bejelentkezéshez_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) – _OmniAuth stratégia az NFT tulajdonjogon keresztüli hitelesítésre_

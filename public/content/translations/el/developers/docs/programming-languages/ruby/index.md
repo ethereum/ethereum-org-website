@@ -40,7 +40,7 @@ incomplete: false
 - [eth.rb](https://github.com/q9f/eth.rb) - _Βιβλιοθήκη Ruby και πελάτης RPC για διαχείριση λογαριασμών, μηνυμάτων και συναλλαγών Ethereum_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _Ο κατακερματισμός Keccak (SHA3) που χρησιμοποιείται από το Ethereum_
 - [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Εφαρμογή Ruby για σύνδεση με Ethereum_
-- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) - _Χρήσιμο Rails που προσθέτει διαδρομές τοπικής σύνδεσης SIWE_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Χρήσιμο Rails που προσθέτει διαδρομές τοπικής σύνδεσης SIWE_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Παράδειγμα SIWE με Ruby στο Rails με προσαρμοσμένο ελεγκτή_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Στρατηγική OmniAuth για σύνδεση με Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Στρατηγική OmniAuth για έλεγχο ταυτότητας μέσω ιδιοκτησίας NFT_

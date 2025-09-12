@@ -40,7 +40,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [eth.rb](https://github.com/q9f/eth.rb) – _Ruby-Bibliothek und RPC-Client zur Verwaltung von Ethereum-Konten, Nachrichten und Transaktionen_
 - [keccak.rb](https://github.com/q9f/keccak.rb) – _Der von Ethereum verwendete Keccak (SHA3) Hash_
 - [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) – _Ruby-Implementierung der Anmeldung mit Ethereum_
-- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) – _Rails-Gem, das lokale SIWE-Anmelderouten hinzufügt_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) – _Rails-Gem, das lokale SIWE-Anmelderouten hinzufügt_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) – _SIWE-Beispiel mit Ruby on Rails und benutzerdefiniertem Controller_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) – _OmniAuth-Strategie für Anmelden mit Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) – _OmniAuth-Strategie für die Authentifizierung über NFT-Besitz_

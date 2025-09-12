@@ -40,7 +40,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby library and RPC-client to handle Ethereum accounts, messages, and transactions_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _The Keccak (SHA3) hash used by Ethereum_
 - [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Ruby implementation of Sign-In with Ethereum_
-- [siwe_rails](https://github.com/signinwithethereum/siwe_rails) - _Rails gem that adds SIWE local sign in routes_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Rails gem that adds SIWE local sign in routes_
 - [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _SIWE example using Ruby on Rails with custom controller_
 - [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _OmniAuth strategy for Sign In With Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _OmniAuth strategy for authenticating via NFT ownership_

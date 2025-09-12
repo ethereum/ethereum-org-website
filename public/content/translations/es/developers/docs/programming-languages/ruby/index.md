@@ -40,7 +40,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [eth.rb](https://github.com/q9f/eth.rb): _Biblioteca de Ruby y cliente RPC para manejar cuentas de Ethereum, mensajes y transacciones_
 - [keccak.rb](https://github.com/q9f/keccak.rb): _El hash Keccak (SHA3) usado por Ethereum_
 - [siwe-ruby:](https://github.com/signinwithethereum/siwe-ruby) _Implementación de Ruby de acceso con Ethereum_
-- [siwe_rails:](https://github.com/signinwithethereum/siwe_rails) _Rails gem que agrega rutas de inicio de sesión de SIWE_
+- [siwe-rails:](https://github.com/signinwithethereum/siwe-rails) _Rails gem que agrega rutas de inicio de sesión de SIWE_
 - [siwe-rails-examples:](https://github.com/signinwithethereum/siwe-rails-examples) _ejemplos de SIWE usando Ruby on Rails con controlador personalizado_
 - [omniaut-siwe:](https://github.com/signinwithethereum/omniauth-siwe) _Estrategia de OmniAuth para el acceso con Ethereum (SIWE)_
 - [omniauth-mft:](https://github.com/valthon/omniauth-nft) _Estrategia de OmniAuth para la autenticación mediante propiedad de NFT_
