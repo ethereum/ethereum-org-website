@@ -1,79 +1,5 @@
 [
   {
-    "title": "ETHNigeria 2025",
-    "startDate": "2025-08-08",
-    "endDate": "2025-08-09",
-    "href": "https://ethereumnigeria.org",
-    "location": "Lagos, Nigeria",
-    "description": "",
-    "imageUrl": ""
-  },
-  {
-    "title": "Pragma New York",
-    "startDate": "2025-08-14",
-    "endDate": "2025-08-14",
-    "href": "https://ethglobal.com/events/pragma-newyork2025",
-    "location": "New York, NYC, USA",
-    "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png",
-    "hackathon": true
-  },
-  {
-    "title": "SBC (The Science of Blockchain Conference 2025)",
-    "startDate": "2025-08-04",
-    "endDate": "2025-08-06",
-    "href": "https://www.sbc-conference.com/2025/",
-    "location": "Berkeley, USA",
-    "description": "The conference focuses on technical innovations in the blockchain ecosystem, and brings together researchers and practioners working in the space. ",
-    "imageUrl": ""
-  },
-  {
-    "title": "ETHGlobal New York",
-    "startDate": "2025-08-15",
-    "endDate": "2025-08-17",
-    "href": "https://ethglobal.com/events/newyork2025",
-    "location": "New York, NYC, USA",
-    "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png",
-    "hackathon": true
-  },
-  {
-    "title": "ProdFest Jos",
-    "startDate": "2025-08-19",
-    "endDate": "2025-08-23",
-    "href": "https://prodfest.blockfuselabs.com/ ",
-    "location": "Jos, NGA",
-    "description": "Spotlighting the finest of African Innovation at the Web3 Jos Community Conference, Products Showcase and Hackathon",
-    "imageUrl": "https://drive.google.com/file/d/1JZlK8HFj0wB7woBlfvdJJ8_mpQUsGmCA/view?usp=sharing"
-  },
-  {
-    "title": "Web3 Lagos Conference",
-    "startDate": "2025-08-28",
-    "endDate": "2025-08-30",
-    "href": "https://event.web3bridge.com ",
-    "location": "Lagos, NGA",
-    "description": "We are Building a Sustainable web3 community in Africa",
-    "imageUrl": "https://event.web3bridge.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flekki.d4f13308.png&w=1920&q=75"
-  },
-  {
-    "title": "ETHVietnam 2025",
-    "startDate": "2025-08-09",
-    "endDate": "2025-08-10",
-    "href": "https://eth-vietnam.com",
-    "location": "HCMC, VNM",
-    "description": "Vietnam Web3 Hub for Ethereum and Blockchain enthusiasts, designers and developers.",
-    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
-  },
-  {
-    "title": "ETH Enugu '25",
-    "startDate": "2025-08-04",
-    "endDate": "2025-08-16",
-    "href": "https://ethenugu.xyz",
-    "location": "Enugu, NG",
-    "description": "Nigeria&#x27;s first Builder Residency &amp; Pop-up City + South-East Nigeria&#x27;s First Ethereum Conference",
-    "imageUrl": "https://ethenugu.xyz/favicon.ico"
-  },
-  {
     "title": "ETHWarsaw",
     "startDate": "2025-09-04",
     "endDate": "2025-09-07",
@@ -293,5 +219,14 @@
     "location": "Buenos Aires, ARG",
     "description": "A collaborative Ethereum week, built by and for everyone.",
     "imageUrl": "https://devconnect.org/og-argentina.png?reset=1"
+  },
+  {
+    "title": "ETH Riyadh",
+    "startDate": "2025-12-3",
+    "endDate": "2025-12-4",
+    "href": "https://ethriyadh.com/",
+    "location": "Riyadh, KSA",
+    "description": "ETH Riyadh 2025 will reconvene as the Middle East’s premier Web3 summit, uniting global luminaries from the Ethereum and blockchain ecosystems in Riyadh.",
+    "imageUrl": "https://d1u25r3n8sm37o.cloudfront.net/wrold3ai/riyadh2025.jpg"
   }
 ]

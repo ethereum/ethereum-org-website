@@ -122,15 +122,15 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
   const signals: StatsBoxMetric[] = [
     {
-      label: "Years",
+      label: t("page-enterprise-why-metric-years"),
       state: { value: "10" }, // TODO: Calculate to future-proof, avoid hard-coding
     },
     {
-      label: "Upgrades",
+      label: t("page-enterprise-why-metric-upgrades"),
       state: { value: "16" }, // TODO: Calculate from upgrades list
     },
     {
-      label: "Downtime",
+      label: t("page-enterprise-why-metric-downtime"),
       state: { value: "0" },
     },
   ]
@@ -505,7 +505,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             strings={{
               error: {
                 domain: t.rich("page-enterprise-team-form-error-domain", {
-                  a: (chunks) => <Link href="/discord/">{chunks}</Link>,
+                  a: (chunks) => (
+                    <Link href="https://discord.gg/ethereum-org">{chunks}</Link>
+                  ),
                 }),
                 emailInvalid: t(
                   "page-enterprise-team-form-error-email-invalid"

@@ -1,6 +1,9 @@
+import { getLocale } from "next-intl/server"
 import type { ReactNode } from "react"
 
 import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { ClientABTestWrapper } from "./ClientABTestWrapper"
 import { ABTestDebugPanel } from "./TestDebugPanel"
@@ -13,13 +16,19 @@ type ABTestWrapperProps = {
   testKey: string
   variants: ABTestVariants
   fallback?: ReactNode
+  enableAllLocales?: boolean
 }
 
 const ABTestWrapper = async ({
   testKey,
   variants,
   fallback,
+  enableAllLocales,
 }: ABTestWrapperProps) => {
+  const locale = await getLocale()
+  if (locale !== DEFAULT_LOCALE && !enableAllLocales)
+    return <>{fallback || variants[0]}</>
+
   try {
     // Get deterministic assignment
     const assignment = await getABTestAssignment(testKey)

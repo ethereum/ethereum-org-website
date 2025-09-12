@@ -55,7 +55,7 @@ Ia juga memerlukan persediaan perkakasan yang sangat asas, dan beberapa pemahama
 <ExpandableCard title="Pengurusan kunci selamat" eventCategory="SoloStaking" eventName="clicked secure key management">
 Sama seperti cara kunci peribadi melindungi alamat Ethereum anda, anda perlu menjana kunci khusus untuk pengesah anda. Anda mesti memahami cara untuk memastikan sebarang frasa benih atau kunci peribadi selamat dan terjamin.{' '}
 
-<a href="/security/">Keselamatan Ethereum dan pencegahan penipuan</a>
+[Keselamatan Ethereum dan pencegahan penipuan](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Ini adalah beberapa soalan yang paling biasa tentang pertaruhan yang patut diket
 <ExpandableCard title="Bolehkah saya mendepositkan lebih daripada 32 ETH?">
 Setiap pasangan kunci yang dikaitkan dengan pengesah memerlukan tepat 32 ETH untuk diaktifkan. Lebih banyak ETH yang didepositkan pada satu set kunci tidak meningkatkan potensi ganjaran, kerana setiap pengesah dihadkan kepada <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">baki berkesan</a> sebanyak 32 ETH. Ini bermakna pertaruhan dilakukan dalam kenaikan 32 ETH, setiap satu dengan set kunci dan bakinya sendiri.
 
-Jangan mendepositkan lebih daripada 32 ETH untuk pengesah tunggal. Ia tidak akan meningkatkan ganjaran anda. Jika alamat pengeluaran telah ditetapkan untuk pengesah, lebihan dana melebihi 32 ETH akan dikeluarkan secara automatik ke alamat ini semasa <a href="/staking/withdrawals/#validator-sweeping">menyapu pengesah</a> seterusnya.
+Jangan mendepositkan lebih daripada 32 ETH untuk pengesah tunggal. Ia tidak akan meningkatkan ganjaran anda. Jika alamat pengeluaran telah ditetapkan untuk pengesah, lebihan dana melebihi 32 ETH akan dikeluarkan secara automatik ke alamat ini semasa [menyapu pengesah](/staking/withdrawals/#validator-sweeping) seterusnya.
 
-Jika pertaruhan rumah terlalu mendesak untuk anda, pertimbangkan untuk menggunakan pembekal <a href="/staking/saas/">pertaruhan-sebagai-perkhidmatan</a>, atau jika anda berfungsi dengan kurang daripada 32 ETH, lihat <a href="/staking/pools/">himpunan pertaruhan</a>.
+Jika pertaruhan rumah terlalu mendesak untuk anda, pertimbangkan untuk menggunakan pembekal [pertaruhan-sebagai-perkhidmatan](/staking/saas/), atau jika anda berfungsi dengan kurang daripada 32 ETH, lihat [himpunan pertaruhan](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Adakah saya akan dipotong jika saya pergi ke luar talian? (tldr: No.)">
@@ -200,7 +200,6 @@ Untuk membuka kunci dan menerima kembali keseluruhan baki anda, anda juga mesti 
 - [Membantu Kepelbagaian Pelanggan](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Kepelbagaian pelanggan pada lapisan persetujuan Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Cara: Beli Perkakasan Pengesah Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Langkah demi Langkah: Cara menyertai Testnet Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Petua Pencegahan Pemotongan Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

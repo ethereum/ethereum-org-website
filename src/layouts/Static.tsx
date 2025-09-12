@@ -30,6 +30,7 @@ import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
+import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
@@ -58,6 +59,7 @@ export const staticComponents = {
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
+  Alert,
   Callout,
   Contributors,
   EnergyConsumptionChart,

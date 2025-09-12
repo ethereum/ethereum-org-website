@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a staking product or service, make sure you've read [our listing policy](https://ethereum.org/en/contributing/adding-staking-products/).
+        Before suggesting a staking product or service, make sure you've read [our listing policy](https://ethereum.org/contributing/adding-staking-products/).
   - type: markdown
     attributes:
       value: |

@@ -157,6 +157,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
+
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
@@ -381,7 +382,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       Svg: Discord,
       label: "Discord",
-      href: "/discord/",
+      href: "https://discord.gg/ethereum-org",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index-join-action-discord-description"),
       eventName: "Discord",
@@ -718,7 +719,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
               <div className="flex gap-3">
                 <ButtonLink
-                  href="/discord/"
+                  href="https://discord.gg/ethereum-org"
                   size="lg"
                   variant="outline"
                   isSecondary

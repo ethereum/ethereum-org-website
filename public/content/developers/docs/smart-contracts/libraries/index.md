@@ -1,6 +1,6 @@
 ---
 title: Smart contract libraries
-description:
+description: Discover reusable smart contract libraries and building blocks to accelerate your Ethereum development projects.
 lang: en
 ---
 

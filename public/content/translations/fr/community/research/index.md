@@ -224,7 +224,7 @@ La recherche économique sur Ethereum suit globalement deux approches : valider 
 
 #### Lectures de référence {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Atelier ETHconomics à Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Recherche récente {#recent-research-9}
@@ -307,7 +307,7 @@ Il est nécessaire de disposer d'un plus grand nombre d'outils d'analyse de donn
 
 #### Recherche récente {#recent-research-14}
 
-- [Analyse des données par le Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Analyse des données par le Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Applications et outils {#apps-and-tooling}
 

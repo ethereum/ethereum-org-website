@@ -51,7 +51,7 @@
   "page-10-year-countdown-minutes": "minutes",
   "page-10-year-countdown-second": "second",
   "page-10-year-countdown-seconds": "seconds",
-  "page-10-year-banner-header": "10 years of ethereum",
+  "page-10-year-banner-header": "10 years of Ethereum",
   "page-10-year-banner-launch-text": "On July 30, 2015, at 3:44 p.m. UTC, the first block of the Ethereum blockchain came to life.",
   "page-10-year-banner-tagline": "Ten years down, infinity to go! 🚀",
   "page-10-year-banner-cta": "Join the party",
@@ -125,5 +125,6 @@
   "page-10-year-mint-card-description": "Celebrate a decade of decentralization with a free, limited-time 10th anniversary NFT. Mint yours before time runs out.",
   "page-10-year-mint-card-ended-title": "The claim period has ended",
   "page-10-year-mint-card-ended-description": "Thank you all for joining the celebration",
-  "page-10-year-video-aria-label": "10th anniversary video"
+  "page-10-year-video-aria-label": "10th anniversary video",
+  "page-10-year-nft-link-label": "View Ten Years Of Ethereum NFT on OpenSea"
 }

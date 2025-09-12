@@ -49,15 +49,13 @@ summaryPoints:
 
 Υπάρχουν ήδη δοκιμαστικά δίκτυα με δέντρα Verkle σε λειτουργία, αλλά απαιτούνται σημαντικές ενημερώσεις στους πελάτες για να υποστηρίξουν τα δέντρα Verkle. Μπορείτε να βοηθήσετε στην επιτάχυνση της προόδου αναπτύσσοντας συμβάσεις στα δοκιμαστικά δίκτυα ή εκτελώντας εφαρμογές πελάτη σε δίκτυα δοκιμών.
 
-[Εξερευνήστε το δίκτυο δοκιμών Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [Δείτε την παρουσίαση του Guillaume Ballet για το παλαιότερο δίκτυο δοκιμών Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (σημειώστε ότι το Condrieu χρησιμοποιούσε απόδειξη εργασίας και έχει αντικατασταθεί από το Verkle Gen Devnet 6).
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [Verkle Trees για πελάτη χωρίς κατάσταση](https://verkle.info/)
 - [Ο Dankrad Feist εξηγεί τα δέντρα Verkle στο PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Δέντρα Verkle για όλους εμάς τους υπόλοιπους](https://research.2077.xyz/verkle-trees)
+- [Δέντρα Verkle για όλους εμάς τους υπόλοιπους](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [Ανατομία μιας Απόδειξης Verkle](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Ο Guillaume Ballet εξηγεί τα δέντρα Verkle στο ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Πώς τα δέντρα Verkle κάνουν το Ethereum λεπτό και δυνατό» από τον Guillaume Ballet στο Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)

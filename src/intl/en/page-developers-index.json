@@ -124,5 +124,9 @@
   "page-developers-course-advanced-foundry-alt": "Cyfrin Updraft Advanced foundry course banner",
   "page-developers-course-security-title": "Smart contract security",
   "page-developers-course-security-desc": "Start your career as a smart contract security researcher! Learn smart contract auditing and the best practices.",
-  "page-developers-course-security-alt": "Cyfrin Updraft Blockchain basics course banner"
+  "page-developers-course-security-alt": "Cyfrin Updraft Blockchain basics course banner",
+  "page-developers-why-title": "Get paid well. Stay remote. Build the future.",
+  "page-developers-why-subtitle": "Over half of blockchain careers are remote-first with some estimates putting the number as high as 70%.",
+  "page-developers-why-avg-salary-dev": "Avg developer salary",
+  "page-developers-why-avg-salary-blockchain": "Avg salary in blockchain industry"
 }

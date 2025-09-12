@@ -43,7 +43,6 @@ _θα μπορούσατε_ [να εκτελέσετε έναν κόμβο](/dev
 
 - [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας το Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Δημόσιες αλυσίδες δοκιμών Ethereum {#public-beacon-testchains}
 
