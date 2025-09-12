@@ -13294,6 +13294,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Heartade",
+      "name": "Daniel Soohan Park",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24813078?v=4",
+      "profile": "https://blog.heartade.dev",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
