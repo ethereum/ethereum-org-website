@@ -397,7 +397,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </p>
-          <LearningToolsCardGrid category={randomizedSandboxes} />
+          <LearningToolsCardGrid products={randomizedSandboxes} />
           <InfoBanner emoji=":point_up:" shouldCenter>
             <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
           </InfoBanner>
@@ -409,7 +409,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
           </p>
-          <LearningToolsCardGrid category={games} />
+          <LearningToolsCardGrid products={games} />
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>
@@ -418,7 +418,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
           </p>
-          <LearningToolsCardGrid category={bootcamps} />
+          <LearningToolsCardGrid products={bootcamps} />
         </StackContainer>
         <ContentBox>
           <CalloutBanner

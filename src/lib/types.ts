@@ -496,7 +496,7 @@ export interface LearningTool {
 }
 
 export interface LearningToolsCardGridProps {
-  category: Array<LearningTool>
+  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
