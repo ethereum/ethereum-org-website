@@ -1,5 +1,4 @@
 import { BaseHTMLAttributes, ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -14,6 +13,8 @@ import {
 } from "../ui/accordion"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type LeftColumnPanelElement = BaseHTMLAttributes<HTMLDivElement>
 

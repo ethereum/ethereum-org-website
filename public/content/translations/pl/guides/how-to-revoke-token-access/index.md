@@ -20,7 +20,6 @@ Istnieje kilka stron umożliwiających przeglądanie i unieważnianie inteligent
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (wiele sieci)
 - [Revoke](https://revoke.cash/) (wiele sieci)
 - [Unrekt](https://app.unrekt.net/) (wiele sieci)
 - [EverRevoke](https://everrise.com/everrevoke/) (wiele sieci)

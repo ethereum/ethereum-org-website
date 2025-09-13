@@ -237,7 +237,7 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 `besu --sync-mode=FULL`
 
-Как и любую другую конфигурацию, ее можно определить с помощью флага запуска или в файле конфигурации. Другой пример — [Nethermind](https://docs.nethermind.io/nethermind/), который предлагает вам выбрать конфигурацию во время первой инициализации и создает файл конфигурации.
+Как и любую другую конфигурацию, ее можно определить с помощью флага запуска или в файле конфигурации. Другой пример — [Nethermind](https://docs.nethermind.io/), который предлагает вам выбрать конфигурацию во время первой инициализации и создает файл конфигурации.
 
 ## Консенсус-клиенты (ранее — «клиенты Eth2») {#consensus-clients}
 
@@ -249,7 +249,7 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli                  |
 | [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
+| [Prysm](https://prysm.offchainlabs.com/docs/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
 
 ## Аппаратное обеспечение {#hardware}
 

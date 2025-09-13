@@ -38,7 +38,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 历史记录不会在合并中丢失。 随着主网与信标链合并，它还合并以太坊的整个交易历史记录。
 
 <InfoBanner>
-这种向权益证明的过渡改变了以太币的发行方式。 了解有关<a href="/roadmap/merge/issuance/">合并前后以太币发行的更多信息</a>。
+这种向权益证明的过渡改变了以太币的发行方式。 了解有关[合并前后以太币发行的更多信息](/roadmap/merge/issuance/)。
 </InfoBanner>
 
 ### 用户与持有者 {#users-holders}
@@ -92,7 +92,7 @@ title="去中心化应用程序和智能合约开发者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合并导致共识层发生变化，其中还包括以下方面的变化：<
+合并导致共识层发生变化，其中还包括以下方面的变化：
 
 <ul>
   <li>区块结构</li>
@@ -130,7 +130,7 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 
 让任何人都拥有运行自己的节点的能力对于维持以太坊网络的去中心化<em>极其重要</em>。
 
-<a href="/run-a-node/">更多关于运行你自己的节点的信息</a>
+[更多关于运行你自己的节点的信息](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 燃料费用是网络需求受限于网络容量的产物。 合并弃用了工作量证明，过渡到权益证明共识机制，但这并不会明显改变直接影响网络容量和吞吐量的任何参数。
 
-根据<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷叠为中心的路线图</a>，工作重点是扩展用户在<a href="/layer-2/">二层网络</a>的活动，同时使一层主网成为安全的去中心化结算层，针对卷叠数据存储进行优化，帮助迅速降低卷叠交易费用。 转变成权益证明机制是实现这一点的关键先导步骤。 <a href="/developers/docs/gas/">更多关于燃料和费用的信息。</a>
+根据<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷叠为中心的路线图</a>，工作重点是扩展用户在[二层网络](/layer-2/)的活动，同时使一层主网成为安全的去中心化结算层，针对卷叠数据存储进行优化，帮助迅速降低卷叠交易费用。 转变成权益证明机制是实现这一点的关键先导步骤。 [更多关于燃料和费用的信息。](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +163,7 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 
 在上海/卡佩拉网络升级后，质押者现在可以指定一个<em>提款地址</em>，开始接收自动支付的任何超额质押余额（协议奖励中超过 32 以太币的部分）。 这次升级还使验证者可以在退出网络时解锁并收回全部余额。
 
-<a href="/staking/withdrawals/">更多关于质押提款的信息</a>
+[更多关于质押提款的信息](/staking/withdrawals/)
 
 </ExpandableCard>
 

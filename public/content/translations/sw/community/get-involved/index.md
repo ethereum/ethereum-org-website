@@ -104,7 +104,6 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Mfanyakazi huru wa Web3 akiafanya kazi kama DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Utawala wa jumuiya ya DAOhaus_
 - [LexDAO](https://lexdao.org)[@lex_DAO](https://twitter.com/lex_DAO) - _Uhandisi wa kisheria_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Jumuiya ya wasanii_
 - [MetaCartel](https://metacartel.org) [@Metaa_Cartel](https://twitter.com/Meta_Cartel) - _kiota cha DAO_
 - [Ubia wa MetaCartel](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Ubia wa kripto za kabla ya kuanzishwa_
 - [MetaMchezo](https://metagame.wtf) [@MetaShamba](https://twitter.com/MetaFam) - _MMORPG makanika ya Mchezo kwenye maisha halisi_

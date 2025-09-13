@@ -63,7 +63,7 @@ lang: ja
 **Tenderly -** **_ブロックチェーンデベロッパーがスマートコントラクトを構築、テスト、デバッグ、監視、操作し、dApp UXを改善できるWeb3開発プラットフォーム。_**
 
 - [ウェブサイト](https://tenderly.co/)
-- [ドキュメント](https://docs.tenderly.co/ethereum-development-practices)
+- [ドキュメント](https://docs.tenderly.co/)
 
 **The Graph -** **_ブロックチェーンデータのクエリを効率化。_**
 

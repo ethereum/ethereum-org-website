@@ -94,7 +94,7 @@ Net reduction in annual ETH issuance: <strong>~88.7%</strong> ((4.61% - 0.52%) /
 The opposite force to ETH issuance is the rate at which ETH is burned. For a transaction to execute on Ethereum, a minimum fee (known as a "base fee") must be paid, which fluctuates continuously (block-to-block) depending on network activity. The fee is paid in ETH and is _required_ for the transaction to be considered valid. This fee gets _burned_ during the transaction process, removing it from circulation.
 
 <InfoBanner>
-Fee burning went live with <a href="/history/#london">the London upgrade</a> in August 2021, and remains unchanged since The Merge.
+Fee burning went live with [the London upgrade](/history/#london) in August 2021, and remains unchanged since The Merge.
 </InfoBanner>
 
 On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning/removing it from circulation.

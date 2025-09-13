@@ -60,7 +60,7 @@ Ihre Adresse wird auf allen Ethereum Projekten dieselbe sein. Sie brauchen sich 
 ![Wählen Sie aus einer Liste von Wallets zur Verbindung](./connect2.png)
 
 5. Bestätigen Sie die Signaturanfrage in Ihrer Wallet um die Verbindung herzustellen. **Das Signieren der dieser Nachricht benötigt kein zusätzliches ETH**.
-6. Das war's! Beginnen Sie, die App zu benutzen. Einige interessante Projekte finden Sie auf unserer [dApps-Seite](/dapps/#explore). <br />
+6. Das war's! Beginnen Sie, die App zu benutzen. Einige interessante Projekte finden Sie auf unserer [dApps-Seite](/apps/#explore). <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Möchten Sie mehr erfahren?</div>

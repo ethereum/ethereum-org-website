@@ -1,7 +1,5 @@
 import { Children, type ReactElement } from "react"
-import { useTranslation } from "next-i18next"
-import { IoMdCopy } from "react-icons/io"
-import { MdCheck } from "react-icons/md"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import { Button } from "./ui/buttons/Button"
 import {
@@ -13,6 +11,7 @@ import {
 } from "./ui/dialog-modal"
 
 import { useClipboard } from "@/hooks/useClipboard"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
@@ -24,7 +23,7 @@ type CodeModalProps = {
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const { t } = useTranslation()
   const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
-    .children.props.children
+    .children
 
   const { onCopy, hasCopied } = useClipboard()
 
@@ -44,11 +43,13 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         >
           {hasCopied ? (
             <>
-              <MdCheck /> {t("copied")}
+              {t("copied")}
+              <ClipboardCheck className="ms-1" />
             </>
           ) : (
             <>
-              <IoMdCopy /> {t("copy")}
+              {t("copy")}
+              <Clipboard className="ms-1" />
             </>
           )}
         </Button>

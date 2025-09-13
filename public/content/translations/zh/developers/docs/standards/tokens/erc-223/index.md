@@ -126,11 +126,11 @@ contract RecipientContract is IERC223Recipient {
     address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // It is important to understand that within this function
-        // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
-        // _from      is the sender of the token transfer,
-        // _value     is the amount of tokens that was deposited.
+        // 在此函数中理解这一点很重要
+        // msg.sender 是正在被接收的一个代币的地址，
+        // 由于代币合约在大多数情况下不拥有或发送以太币，msg.value 始终为 0，
+        // _from      是代币转账的发送者，
+        // _value     是存入的代币数量。
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-当 `RecipientContract` 收到 ERC-223 代币时，合约会执行一个编码为代币交易参数 `_data` 的函数，这与以太币交易将函数调用编码为交易 `data` 相同。 阅读[数据字段](https://ethereum.org/en/developers/docs/transactions/#the-data-field)以获取更多信息。
+当 `RecipientContract` 收到 ERC-223 代币时，合约会执行一个编码为代币交易参数 `_data` 的函数，这与以太币交易将函数调用编码为交易 `data` 相同。 阅读[数据字段](/developers/docs/transactions/#the-data-field)以获取更多信息。
 
 在上述示例中，ERC-223 代币必须通过 `transfer(address,uin256,bytes calldata _data)` 函数转移到 `RecipientContract` 的地址。 如果数据参数将为 `0xc2985578`（`foo()` 函数的签名），那么在收到代币存款之后，将会调用 foo() 函数并触发事件 Foo()。
 

@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next"
+"use client"
 
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
@@ -13,6 +13,8 @@ import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Flex } from "../ui/flex"
 import InlineLink from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface DataType {
   title: TranslationKey

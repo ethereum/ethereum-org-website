@@ -34,11 +34,11 @@ ETH em redes de teste (testnets) supostamente não tem valor real; entretanto, t
 
 #### Qual rede de testes devo usar?
 
-As duas redes de testes públicas que os desenvolvedores dos clientes estão atualmente mantendo são Sepolia e Goerli. Sepolia é uma rede para desenvolvedores de contrato e aplicativos para testar seus aplicativos. A rede Goerli permite que os desenvolvedores de protocolo testem atualizações de rede e permite que os participantes façam testes usando validadores.
+As duas redes de testes públicas que os desenvolvedores dos clientes estão atualmente mantendo são Sepolia e Hoodi. Sepolia é uma rede para desenvolvedores de contrato e aplicativos para testar seus aplicativos. A rede Hoodi permite que os desenvolvedores de protocolo testem atualizações de rede e permite que os participantes façam testes usando validadores.
 
 #### Sepolia {#sepolia}
 
-****Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
+**Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos**. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
 
 - Conjunto de validadores fechado, controlado pelo cliente & equipes de teste
 - Nova rede de teste, menos aplicativos implantados que outras redes de teste
@@ -60,14 +60,14 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet da Carteira Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Faucet do ecossistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(suporte a longo prazo)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Nota: [a rede de testes Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e será substituída por [Holesovice](https://github.com/eth-clients/holesovice) em 2023. Considere migrar seus aplicativos para a Sepolia._
+_Nota: [a rede de testes Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e foi substituída por Hoodi. Considere migrar seus aplicativos para a Sepolia._
 
-Goerli é a rede de testes usada para testar a validação e staking. A rede Goerli está aberta para usuários que queiram executar um validador na rede de testes. Os participantes que desejam testar atualizações de protocolo antes de serem implantados na rede principal devem, portanto, usar a Goerli.
+Hoodi é a rede de testes usada para testar a validação e staking. A rede Hoodi está aberta para usuários que queiram executar um validador na rede de testes. Os participantes que desejam testar atualizações de protocolo antes de serem implantados na rede principal devem, portanto, usar a Hoodi.
 
 - Conjunto de validadores abertos, com o qual os participantes podem testar atualizações de rede
 - Estado grande, útil para testar interações complexas de contratos inteligentes
@@ -75,52 +75,46 @@ Goerli é a rede de testes usada para testar a validação e staking. A rede Goe
 
 ##### Recursos
 
-- [Site](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Site](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucets
 
-- [Faucet Goerli do QuickNode](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [Faucet de PoW](https://goerli-faucet.pk910.de/)
-- [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Faucet Alchemy Goerli](https://goerlifaucet.com/)
-- [Todas as faucets do nó Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
+- [Faucet Hoodi](https://hoodi.ethpandaops.io/)
 
-Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://holesky.launchpad.ethstaker.cc/en/) do ethstaker.
+Para iniciar um Validador na rede de testes Hoodi, use a [plataforma de lançamento Hoodi](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Redes de testes de camada 2 {#layer-2-testnets}
 
 [Camada 2 (L2)](/layer-2/) é um termo coletivo para descrever um conjunto específico de soluções de escalabilidade do Ethereum. Uma camada 2 é uma cadeia de blocos separada que estende o Ethereum e herda as garantias de segurança do Ethereum. Normalmente, as redes de teste de camada 2 estão fortemente associadas às redes de testes públicas do Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Uma rede de testes para [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Faucet do Chainlink](https://faucets.chain.link/)
+- [Faucet do Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Faucet do Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Uma rede de testes para [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Faucet do Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Faucet do Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Uma rede de teste para [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
-- [Faucet da Starknet](https://faucet.goerli.starknet.io)
+- [Faucet do Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Redes privadas {#private-networks}
 

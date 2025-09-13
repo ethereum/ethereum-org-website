@@ -8,7 +8,7 @@
   "page-staking-deposit-contract-confirm-address": "確認し、アドレスを表示",
   "page-staking-deposit-contract-copied": "コピーされたアドレス",
   "page-staking-deposit-contract-copy": "アドレスをコピーする",
-  "page-staking-deposit-contract-etherscan": "Etherscanでコントラクトを表示",
+  "page-staking-deposit-contract-blockexplorer": "Etherscanでコントラクトを表示",
   "page-staking-deposit-contract-h2": "これはステーキングする場所ではありません",
   "page-staking-deposit-contract-launchpad": "ランチパッドを使用してステークする",
   "page-staking-deposit-contract-launchpad-2": "ランチパッドを使用",

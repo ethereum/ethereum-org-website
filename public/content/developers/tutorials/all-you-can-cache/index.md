@@ -756,7 +756,6 @@ Since we use the low level `<address>.call()` function, we can't use `vm.expectR
 This is the way we verify that code [emits an event correctly](https://book.getfoundry.sh/cheatcodes/expect-emit) in Foundry.
 
 ### The client {#the-client}
-
 One thing you don't get with Solidity tests is JavaScript code you can cut and paste into your own application. To write that code I deployed WORM to [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), [Optimism's](https://www.optimism.io/) new testnet. It is at address [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [You can see JavaScript code for the client here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). To use it:
@@ -862,3 +861,6 @@ The code in this article is a proof of concept, the purpose is to make the idea 
   There are ways to solve this problem, and the related problem of transactions that are in the mempool during the cache reorder, but you must be aware of it.
 
 I demonstrated caching here with Optimism, because I'm an Optimism employee and this is the rollup I know best. But it should work with any rollup that charges a minimal cost for internal processing, so that in comparison writing the transaction data to L1 is the major expense.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

@@ -1,5 +1,4 @@
 import { forwardRef } from "react"
-import { useTranslation } from "next-i18next"
 import type { ButtonHTMLAttributes } from "react"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -7,6 +6,8 @@ import { Button } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 
 import { FeedbackGlyphIcon } from "../icons"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isExpanded: boolean
@@ -33,18 +34,18 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         {...props}
       >
         <FeedbackGlyphIcon
-          className={cn("text-white", !isExpanded && "-mx-1")}
+          className={cn("!h-8 !w-[26px] text-white", !isExpanded && "-mx-1")}
         />
         <div
           className={cn(
-            "duration-250 transform transition-all",
+            "transform overflow-hidden transition-all duration-200",
             isExpanded ? "scale-100 opacity-100" : "scale-95 opacity-0"
           )}
         >
           <span
             className={cn(
-              "line-clamp-2 hidden h-full items-center font-bold text-white",
-              isExpanded && "lg:flex"
+              "line-clamp-2 h-full items-center whitespace-nowrap font-bold leading-5 text-white",
+              isExpanded ? "lg:flex" : "hidden"
             )}
           >
             {t("feedback-widget-prompt")}

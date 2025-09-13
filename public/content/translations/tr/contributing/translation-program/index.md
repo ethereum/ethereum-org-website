@@ -20,7 +20,7 @@ Ethereum.org Çeviri Programı açıktır ve herkes katkı verebilir!
 4. Makine çevirileri onaylanmayacaktır.
 5. Tüm çeviriler siteye eklenmeden önce incelenir, dolayısıyla çevirilerinizi sitede görebilmek için biraz beklemeniz gerekebilir.
 
-_Çeviriler konusunda iş birliği yapmak, sorular sormak, geribildirim ve fikir paylaşmak veya bir tercüme grubuna katılmak için [ethereum.org Discord](/discord/)'una katılın._
+_Çeviriler konusunda iş birliği yapmak, sorular sormak, geribildirim ve fikir paylaşmak veya bir tercüme grubuna katılmak için [ethereum.org Discord](https://discord.gg/ethereum-org)'una katılın._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Çeviriye başlayın
@@ -36,9 +36,9 @@ Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation
 
 ### Şimdiye kadarki ilerleme durumumuz {#our-progress}
 
-- [**6.000'in üzerinde** çevirmen](/contributing/translation-program/contributors/)
-- **62** sitenin yayında olduğu dil sayısı
-- [**3 milyon** 2023'de çevrilen kelime sayısı](/contributing/translation-program/acknowledgements/)
+- [**6.900'ün üzerinde** çevirmen](/contributing/translation-program/contributors/)
+- **68** dilde yayınlanan site içeriği
+- [2024'te **2,89 milyon** kelime çevirisi](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

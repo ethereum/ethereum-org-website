@@ -1,5 +1,6 @@
 ---
 title: Gaz et frais
+metaTitle: "Gaz et frais Ethereum : aperçu technique"
 description:
 lang: fr
 ---
@@ -134,7 +135,6 @@ Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindr
 
 - [Explication du gaz sur Ethereum](https://defiprime.com/gas)
 - [Réduire la consommation de gaz de vos contrats intelligents](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Preuve d'enjeu contre preuve de travail](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Des Stratégies pour Optimiser la Consommation de Gas, pour les Développeurs](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [documentation EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 - [Ressources EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).

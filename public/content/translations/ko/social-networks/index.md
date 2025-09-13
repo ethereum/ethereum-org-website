@@ -21,7 +21,7 @@ summaryPoint3: 토큰과 NFT는 콘텐츠를 통한 수익 창출의 새로운 �
 
 ### 분산형 소셜 네트워크는 어떻게 작동하나요? {#decentralized-social-networks-overview}
 
-분산형 소셜 네트워크는 블록체인 상에 배포된 [스마트 계약](/developers/docs/smart-contracts/) 기반의 애플리케이션인 [탈중앙화 애플리케이션(디앱)](/dapps/)의 일종입니다. 계약 코드는 해당 앱에 대한 백엔드로 제공되며 비즈니스 논리를 정의합니다.
+분산형 소셜 네트워크는 블록체인 상에 배포된 [스마트 계약](/developers/docs/smart-contracts/) 기반의 애플리케이션인 [탈중앙화 애플리케이션(디앱)](/apps/)의 일종입니다. 계약 코드는 해당 앱에 대한 백엔드로 제공되며 비즈니스 논리를 정의합니다.
 
 기존의 소셜 미디어 플랫폼은 사용자의 정보, 프로그램 코드 및 다른 형식의 데이터를 보관하기 위해 데이터베이스를 이용합니다. 하지만 여기에는 한 곳에서 문제가 발생하면 서비스가 중단된다는 심각한 문제가 있습니다. 예를 들어, 작년에 Facebook 서버가 [몇 시간 동안](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) 가동 중지되고 그동안 사용자들이 플랫폼을 이용할 수 없었던 사태가 발생했습니다.
 
@@ -105,7 +105,7 @@ Reddit은 [ERC-20 토큰](/developers/docs/standards/tokens/erc-20/) 기반의
 - [Web3는 탈중앙화, 커뮤니티 기반 소셜 네트워크의 핵심이다](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — *Sumit Ghosh*
 - [블록체인 소셜 미디어의 개요](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — *Gemini Cryptopedia*
 - [블록체인은 어떻게 소셜 미디어의 개인 정보 문제를 어떻게 해결하는가](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — *Prableen Bajpai*
-- [블록체인에 소셜 미디어 네트워크가 다가오고 있다](https://businesstechguides.co/what-are-decentralized-social-networks) — *Emmanuel Awosika*
+- [블록체인에 소셜 미디어 네트워크가 다가오고 있다](https://eawosika.com/what-are-decentralized-social-networks) — *Emmanuel Awosika*
 - [소셜 네트워크를 위한 충분한 탈중앙화](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### 영상 {#videos}

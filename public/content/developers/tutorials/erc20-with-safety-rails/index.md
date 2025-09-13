@@ -47,7 +47,7 @@ Before we can add the safety rail functionality we need an ERC-20 contract. In t
 
 Users sometimes send tokens to the wrong address. While we cannot read their minds to know what they meant to do, there are two error types that happen a lot and are easy to detect:
 
-1. Sending the tokens to the contract's own address. For example, [Optimism's OP token](https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c) managed to accumulate [over 120,000](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042#tokentxns) OP tokens in less than two months. This represents a significant amount of wealth that presumably people just lost.
+1. Sending the tokens to the contract's own address. For example, [Optimism's OP token](https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c) managed to accumulate [over 120,000](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000042) OP tokens in less than two months. This represents a significant amount of wealth that presumably people just lost.
 
 2. Sending the tokens to an empty address, one that doesn't correspond to an [externally owned account](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) or a [smart contract](/developers/docs/smart-contracts). While I don't have statistics on how often this happens, [one incident could have cost 20,000,000 tokens](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
@@ -125,14 +125,14 @@ Sometimes it is useful to have an administrator that can undo mistakes. To reduc
 1. Freezing and unfreezing accounts. This can be useful, for example, when an account might be compromised.
 2. Asset cleanup.
 
-   Sometimes frauds send fraudulent tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). The legitimate ERC-20 contract is [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
+   Sometimes frauds send fraudulent tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimism.blockscout.com/token/0x2348B1a1228DDCd2dB668c3d30207c3E1852fBbe?tab=holders). The legitimate ERC-20 contract is [0x4200....0042](https://optimism.blockscout.com/token/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimism.blockscout.com/token/0x2348B1a1228DDCd2dB668c3d30207c3E1852fBbe).
 
    It is also possible that people send legitimate ERC-20 tokens to our contract by mistake, which is another reason to want to have a way to get them out.
 
 OpenZeppelin provides two mechanisms to enable administrative access:
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) contracts have a single owner. Functions that have the `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) can only be called by that owner. Owners can transfer ownership to somebody else or renounce it completely. The rights of all other accounts are typically identical.
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) contracts have a single owner. Functions that have the `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) can only be called by that owner. Owners can transfer ownership to somebody else or renounce it completely. The rights of all other accounts are typically identical.
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 For the sake of simplicity, in this article we use `Ownable`.
 
@@ -146,7 +146,7 @@ Freezing and thawing contracts requires several changes:
       mapping(address => bool) public frozenAccounts;
   ```
 
-- [Events](https://www.tutorialspoint.com/solidity/solidity_events.htm) to inform anybody interested when an account is frozen or thawed. Technically speaking events are not required for these actions, but it helps offchain code to be able to listen to these events and know what is happening. It's considered good manners for a smart contract to emit them when something that miught be relevant to somebody else happens.
+- [Events](https://www.tutorialspoint.com/solidity/solidity_events.htm) to inform anybody interested when an account is frozen or thawed. Technically speaking events are not required for these actions, but it helps offchain code to be able to listen to these events and know what is happening. It's considered good manners for a smart contract to emit them when something that might be relevant to somebody else happens.
 
   The events are indexed so will be possible to search for all the times an account has been frozen or thawed.
 
@@ -210,3 +210,5 @@ This is a cleanup function, so presumably we don't want to leave any tokens. Ins
 ## Conclusion {#conclusion}
 
 This is not a perfect solution - there is no perfect solution for the "user made a mistake" problem. However, using these kinds of checks can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.
+
+[See here for more of my work](https://cryptodocguy.pro/).

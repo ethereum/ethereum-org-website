@@ -1,17 +1,17 @@
 "use client"
 
-import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
-import { MdInfoOutline } from "react-icons/md"
+import { ChevronDown, ChevronUp, Info } from "lucide-react"
 import { ColumnDef } from "@tanstack/react-table"
 
 import { ExtendedRollup, Lang } from "@/lib/types"
 
 import { TableMeta } from "@/components/DataTable"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMaturityTooltip"
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
+import InlineLink from "@/components/ui/Link"
 import { TableCell, TableHead } from "@/components/ui/table"
 
 import { cn } from "@/lib/utils/cn"
@@ -40,13 +40,15 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             <p className="text-md">{`Filters (${meta.activeFiltersCount})`}</p>
           </Button>
           <p>
-            Networks showing <strong>({table.options.data.length})</strong>
+            <Translation id="page-layer-2-networks:page-layer-2-networks-networks-showing" />{" "}
+            <strong>({table.options.data.length})</strong>
           </p>
         </TableHead>
       )
     },
     cell: ({ table, row }) => {
       const meta = table.options.meta as TableMeta
+
       return (
         <TableCell
           className={cn(
@@ -57,7 +59,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-4">
               <div className="w-[40px] rounded-full">
-                <TwImage
+                <Image
                   src={row.original.logo}
                   alt={row.original.name}
                   className="h-[40px] w-[40px] rounded-full p-1"
@@ -72,17 +74,30 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             <div className="flex flex-row gap-4 lg:hidden">
               <div className="w-[24px]" />
               <div>
-                <p className="text-xs text-body-medium">Avg. transaction fee</p>
+                <p className="text-xs text-body-medium">
+                  <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
+                </p>
                 <p>
-                  $
-                  {row.original.txCosts.toLocaleString(meta.locale as Lang, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 3,
-                  })}
+                  {row.original.txCosts ? (
+                    <>
+                      $
+                      {(row.original.txCosts || 0).toLocaleString(
+                        meta.locale as Lang,
+                        {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 3,
+                        }
+                      )}
+                    </>
+                  ) : (
+                    <p>-</p>
+                  )}
                 </p>
               </div>
               <div>
-                <p className="text-xs text-body-medium">Market share</p>
+                <p className="text-xs text-body-medium">
+                  <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />
+                </p>
                 <p>
                   {new Intl.NumberFormat(meta.locale as Lang, {
                     style: "currency",
@@ -101,9 +116,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             ) : (
               <button className="text-primary">
                 {row.getIsExpanded() ? (
-                  <IoChevronUpSharp size={24} />
+                  <ChevronUp className="text-2xl" />
                 ) : (
-                  <IoChevronDownSharp size={24} />
+                  <ChevronDown className="text-2xl" />
                 )}
               </button>
             )}
@@ -117,27 +132,28 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     header: () => (
       <TableHead className="hidden w-[145px] px-0 text-end lg:table-cell">
         <p className="leading-1 text-xs">
-          Avg. transaction fee{" "}
+          <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
               content={
                 <div className="flex flex-col gap-2">
-                  <p className="text-lg font-bold">Transaction fee</p>
-                  <p>
-                    The average cost of transaction for transfers, swaps,
-                    minting and other activities.
+                  <p className="text-lg font-bold">
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-transaction-fee" />
                   </p>
                   <p>
-                    Data from{" "}
-                    <InlineLink href="https://growthepie.xyz">
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-transaction-fee-description" />
+                  </p>
+                  <p>
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-data-from" />{" "}
+                    <InlineLink href="https://growthepie.com">
                       growthepie
                     </InlineLink>
-                    .
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-period" />
                   </p>
                 </div>
               }
             >
-              <MdInfoOutline className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -153,11 +169,17 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             row.original.canExpand === false && "border-b-4"
           )}
         >
-          $
-          {row.original.txCosts.toLocaleString(meta.locale as Lang, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 3,
-          })}
+          {row.original.txCosts ? (
+            <p>
+              $
+              {row.original.txCosts.toLocaleString(meta.locale as Lang, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 3,
+              })}
+            </p>
+          ) : (
+            <p>-</p>
+          )}
         </TableCell>
       )
     },
@@ -167,21 +189,26 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     header: () => (
       <TableHead className="hidden w-[120px] px-0 text-end lg:table-cell">
         <p className="leading-1 text-xs">
-          Market share{" "}
+          <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
               content={
                 <div className="flex flex-col gap-2">
-                  <p className="text-lg font-bold">Market share</p>
-                  <p>Total value locked in escrow contracts on Ethereum.</p>
+                  <p className="text-lg font-bold">
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />
+                  </p>
                   <p>
-                    Data from{" "}
-                    <InlineLink href="https://l2beat.com">L2BEAT</InlineLink>.
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-market-share-description" />
+                  </p>
+                  <p>
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-data-from" />{" "}
+                    <InlineLink href="https://l2beat.com">L2BEAT</InlineLink>
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-period" />
                   </p>
                 </div>
               }
             >
-              <MdInfoOutline className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -214,24 +241,25 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     header: () => (
       <TableHead className="hidden w-[145px] px-0 text-end lg:table-cell">
         <p className="leading-1 text-xs">
-          Network maturity{" "}
+          <Translation id="page-layer-2-networks:page-layer-2-networks-network-maturity" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
               content={
                 <div className="flex flex-col gap-2">
-                  <p className="text-lg font-bold">Network maturity</p>
-                  <p>
-                    Looks at the development stage, risks associated with using
-                    the network and ecosystem size of the network.
+                  <p className="text-lg font-bold">
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-network-maturity" />
                   </p>
                   <p>
-                    This is a summary metric based on risk analysis done by{" "}
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-network-maturity-description" />
+                  </p>
+                  <p>
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-summary-metric" />{" "}
                     <InlineLink href="https://l2beat.com">L2BEAT</InlineLink>.
                   </p>
                 </div>
               }
             >
-              <MdInfoOutline className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -268,9 +296,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell className={cn("hidden w-12 lg:table-cell")}>
           <button className="text-primary">
             {row.getIsExpanded() ? (
-              <IoChevronUpSharp size={24} />
+              <ChevronUp className="text-2xl" />
             ) : (
-              <IoChevronDownSharp size={24} />
+              <ChevronDown className="text-2xl" />
             )}
           </button>
         </TableCell>

@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import { WalletPersonas } from "@/lib/types"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export const useWalletPersonaPresets = (): WalletPersonas[] => {
   const { t } = useTranslation("page-wallets-find-wallet")

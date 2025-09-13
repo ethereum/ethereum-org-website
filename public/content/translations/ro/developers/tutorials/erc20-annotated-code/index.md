@@ -511,7 +511,7 @@ Funcția de apel `a.sub(b, "message")` face două lucruri. În primul rând, cal
 
 Este periculos să setați o valoare diferită de zero la o altă valoare diferită de zero, deoarece nu controlați decât ordinea propriilor tranzacții, și nu pe cea a celorlalți. Să ne imaginăm că avem doi utilizatori, Alice, care este naivă, și Bill, care este necinstit. Alice vrea ca Bill să-i facă un serviciu despre care crede că valorează cinci tokenuri - de aceea îi dă lui Bill o alocație de cinci tokenuri.
 
-În acel moment intervine ceva și prețul cerut de Bill crește la zece tokenuri. Alice, care vrea serviciul chiar și la acest preț, îi trimite o tranzacție care stabilește alocația lui Bill la zece. Imediat ce Bill vede noua tranzacție în fondul de tranzacții, trimite o tranzacție care cheltuiește cele cinci tokenuri ale lui Alice la un preț mai mare de gaz, pentru a fi minată mai repede. Astfel, Bill poate să cheltuiască primele cinci jetoane, iar odată ce noua alocație a lui Alice este minată, cheltuiește alte zece, pentru un preţ total de cincisprezece jtokenuri, mai mult decât era intenţia lui Alice să autorizeze. This technique is called [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+În acel moment intervine ceva și prețul cerut de Bill crește la zece tokenuri. Alice, care vrea serviciul chiar și la acest preț, îi trimite o tranzacție care stabilește alocația lui Bill la zece. Imediat ce Bill vede noua tranzacție în fondul de tranzacții, trimite o tranzacție care cheltuiește cele cinci tokenuri ale lui Alice la un preț mai mare de gaz, pentru a fi minată mai repede. Astfel, Bill poate să cheltuiască primele cinci jetoane, iar odată ce noua alocație a lui Alice este minată, cheltuiește alte zece, pentru un preţ total de cincisprezece jtokenuri, mai mult decât era intenţia lui Alice să autorizeze. This technique is called [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Tranzacția lui Alice | Nonce-ul lui Alice | Tranzacția lui Bill           | Nonce-ul lui Bill | Alocația lui Bill | Venitul total a lui Bill de la Alice |
 | -------------------- | ------------------ | ----------------------------- | ----------------- | ----------------- | ------------------------------------ |
@@ -587,7 +587,7 @@ Funcția `a.add(b)` este o adunare sigură („safe add”). În cazul improbabi
 
 Există patru funcții care efeectuează cu adevărat munca: `_transfer`, `_mint`, `_burn`, și `_approve`.
 
-#### Funcția \_transfer {#\_transfer}
+#### Funcția \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Acestea sunt liniile care execută practic transferul. Observați că nu există
 
 În cele din urmă, va emite evenimentul `Transfer`. Evenimentele nu sunt accesibile contractelor inteligente, dar codul care rulează în afara blockchain-ului poate să detecteze prin ascultare evenimente și să reacționeze la ele. De exemplu, un portofel poate monitoriza când proprietarul obține mai multe tokenuri.
 
-#### Funcțiile \_mint și \_burn {#\_mint-and-\_burn}
+#### Funcțiile \_mint și \_burn {#_mint-and-_burn}
 
 Cele două funcții (`_mint` și `_burn`) modifică numărul total de tokenuri furnizate. Deoarece acestea sunt interne, nu există nicio funcție care să le apeleze în acest contract, iar ele sunt utile numai dacă moșteniți din contract și adăugați propria logică prin care să decideți în ce condiții să emiteţi noi tokenuri sau să le ardeți pe cele existente.
 
@@ -706,7 +706,7 @@ Aveţi grijă să actualizați `_totalSupply` atunci când se modifică numărul
 
 Funcția `_burn` este identică aproape cu `_mint`, cu excepția faptului că funcționează în sens invers.
 
-#### Funcția \_approve {#\_approve}
+#### Funcția \_approve {#_approve}
 
 Aceasta este funcția care specifică de fapt alocațiile. Rețineți că permite unui proprietar să specifice o alocație mai mare decât soldul curent al proprietarului. Acest lucru este în regulă, deoarece soldul este verificat în momentul transferului, când ar putea fi diferit de cel de la momentul în care a fost creată alocația.
 
@@ -784,7 +784,7 @@ Această funcție modifică variabila `_decimals`, care este utilizată pentru a
 
 Aceasta este funcția „hook” care va fi apelată în timpul transferurilor. It is empty here, but if you need it to do something you just override it.
 
-# Concluzie {#conclusion}
+## Concluzie {#conclusion}
 
 În recapitulare, iată câteva dintre cele mai importante idei din acest contract (după părerea mea - părerea dvs. ar putea să fie diferită):
 

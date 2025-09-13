@@ -68,7 +68,7 @@ Natywne platformy Web3 do finansowania dóbr publicznych, takie jak [Gitcoin](ht
 ## Dalsza lektura {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Raport Białego Domu na temat blockchainów proof-of-work](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Raport Białego Domu na temat blockchainów proof-of-work](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisje Ethereum: wstępne oszacowanie](https://kylemcdonald.github.io/ethereum-emissions/) — _Kyle McDonald_
 - [Indeks zużycia energii Ethereum](https://digiconomist.net/ethereum-energy-consumption/) — _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_

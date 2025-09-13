@@ -55,7 +55,7 @@ Les avantages de cette conception de réseau sont :
 - réduire la dépendance vis-à-vis des fournisseurs centralisés
 - réduire l'utilisation de la bande passante Internet
 - synchronisation minimale ou nulle
-- Accessible aux appareils à ressources limitées (<1 GB RAM, < 100 MB d'espace disque, 1 CPU)
+- Accessible aux appareils à ressources limitées (\<1 GB RAM, \<100 MB d'espace disque, 1 CPU)
 
 Le diagramme ci-dessous montre les fonctions des clients existants qui peuvent être fournies par le Portal Network, permettant aux utilisateurs d'accéder à ces fonctions sur des appareils à très faibles ressources.
 
@@ -82,7 +82,7 @@ Avoir plusieurs implémentations de clients indépendants renforce la résilienc
 
 Si un client rencontre des problèmes ou des vulnérabilités, d'autres clients peuvent continuer à fonctionner normalement, évitant ainsi un unique point de défaillance. De plus, différentes implémentations de clients encouragent l'innovation et la concurrence, stimulant les améliorations et réduisant le risque de monoculture au sein de l'écosystème.
 
-## Complément d'information {#futher-reading}
+## Complément d'information {#further-reading}
 
 - [Le Portal Network (Piper Merriam à Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Le discord du Portal Network](https://discord.gg/CFFnmE7Hbs)
