@@ -2068,6 +2068,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://santamasa.github.io"><img src="https://avatars.githubusercontent.com/u/185351323?v=4?s=100" width="100px;" alt="santamasa"/><br /><sub><b>santamasa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asantamasa" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SamarthJ2004"><img src="https://avatars.githubusercontent.com/u/147060088?v=4?s=100" width="100px;" alt="Samarth Jindal"/><br /><sub><b>Samarth Jindal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SamarthJ2004" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AndrejZelonka"><img src="https://avatars.githubusercontent.com/u/64598949?v=4?s=100" width="100px;" alt="Andrej Želonka"/><br /><sub><b>Andrej Želonka</b></sub></a><br /><a href="#tool-AndrejZelonka" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/maximevtush"><img src="https://avatars.githubusercontent.com/u/154841002?v=4?s=100" width="100px;" alt="Maxim Evtush"/><br /><sub><b>Maxim Evtush</b></sub></a><br /><a href="#maintenance-maximevtush" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
