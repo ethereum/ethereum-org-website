@@ -2066,6 +2066,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://santamasa.github.io"><img src="https://avatars.githubusercontent.com/u/185351323?v=4?s=100" width="100px;" alt="santamasa"/><br /><sub><b>santamasa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asantamasa" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SamarthJ2004"><img src="https://avatars.githubusercontent.com/u/147060088?v=4?s=100" width="100px;" alt="Samarth Jindal"/><br /><sub><b>Samarth Jindal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SamarthJ2004" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
