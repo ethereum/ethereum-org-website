@@ -492,10 +492,11 @@ export interface LearningTool {
   background: string
   subjects: Array<string>
   locales?: Array<Lang>
+  priceType?: string
 }
 
 export interface LearningToolsCardGridProps {
-  category: Array<LearningTool>
+  products: Array<LearningTool>
 }
 
 // Staking stats data fetching

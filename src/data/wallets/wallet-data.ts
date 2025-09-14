@@ -2578,7 +2578,7 @@ export const walletsData: WalletData[] = [
     supported_chains: [
       "Ethereum Mainnet",
       "Arbitrum One",
-      "Base", 
+      "Base",
       "OP Mainnet",
       "zkSync Mainnet",
     ],
