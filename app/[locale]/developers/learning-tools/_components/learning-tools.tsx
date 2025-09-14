@@ -275,7 +275,9 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
-      priceType: "Paid",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-paid"
+      ),
     },
     {
       name: "BloomTech",
@@ -289,7 +291,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
-      priceType: "Paid",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-paid"
+      ),
     },
     {
       name: "Questbook",
@@ -303,7 +307,9 @@ const LearningToolsPage = () => {
       ),
       background: "#141236",
       subjects: ["Solidity", "web3"],
-      priceType: "Free",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Metaschool",
@@ -317,7 +323,9 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
-      priceType: "Free",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Speed Run Ethereum",
@@ -331,7 +339,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
-      priceType: "Free",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Alchemy University",
@@ -345,7 +355,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
-      priceType: "Free",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "LearnWeb3",
@@ -359,7 +371,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
-      priceType: "Free",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Cyfrin Updraft",
@@ -373,7 +387,9 @@ const LearningToolsPage = () => {
       ),
       background: "#000000",
       subjects: ["Solidity", "web3"],
-      priceType: "Free",
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
   ]
 
