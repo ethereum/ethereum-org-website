@@ -511,7 +511,7 @@ La activación de la función `a.sub(b, "message")` hace dos cosas. Primero, cal
 
 Es peligroso establecer una asignación diferente de cero a otro valor distinto de cero, porque solo controla el orden de sus propias transacciones y no las de nadie más. Imagine que tiene dos usuarios: Alice que es ingenua y Bill que es un tramposo. Alice quiere algún servicio de Bill, que piensa que cuesta cinco tókenes, por lo que le da a Bill una asignación de cinco tókenes.
 
-Entonces algo cambia y el precio de Bill sube a diez tókenes. Alice, quien todavía quiere el servicio, envía una transacción que establece la asignación de Bill a diez. En el momento en que Bill ve esta nueva transacción en el fondo de transacciones envía una transacción que gasta los cinco tókenes de Alice y tiene un mayor precio de gas por lo que se minará más rápido. De esa manera Bill puede gastar los primeros cinco tókenes y luego, una vez que se extraiga la nueva asignación de Alice gastará diez más por un precio total de quince tókenes. Más de lo que Alicia quería autorizar. A esta técnica se le llama [anticiparse](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running).
+Entonces algo cambia y el precio de Bill sube a diez tókenes. Alice, quien todavía quiere el servicio, envía una transacción que establece la asignación de Bill a diez. En el momento en que Bill ve esta nueva transacción en el fondo de transacciones envía una transacción que gasta los cinco tókenes de Alice y tiene un mayor precio de gas por lo que se minará más rápido. De esa manera Bill puede gastar los primeros cinco tókenes y luego, una vez que se extraiga la nueva asignación de Alice gastará diez más por un precio total de quince tókenes. Más de lo que Alicia quería autorizar. A esta técnica se le llama [anticiparse](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running).
 
 | Transacción de Alice | Nonce de Alice | Transacción de Bill           | Nonce de Bill | Asignación de Bill | Ingresos totales de Bill procedentes de Alice |
 | -------------------- | -------------- | ----------------------------- | ------------- | ------------------ | --------------------------------------------- |
@@ -587,7 +587,7 @@ La función `a.add(n)` es una adición segura. En el caso poco probable de que `
 
 Estas son las cuatro funciones que hacen el verdadero trabajo: `_transfer`, `_mint`, `_burn` y `_approve`.
 
-#### La función \_transfer {#\_transfer}
+#### La función \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Estas son las líneas que en realidad hacen la transferencia. Note que no hay **
 
 Finalmente, emite un evento `Transfer`. Los eventos no son accesibles por los contratos inteligentes, pero el código en ejecución fuera de la cadena de bloques puede escuchar eventos y reaccionar a ellos. Por ejemplo, una billetera puede mantener un registro de cuando el propietario obtiene más tokens.
 
-#### Las funciones \_mint y \_burn {#\_mint-y-\_burn}
+#### Las funciones \_mint y \_burn {#_mint-y-_burn}
 
 Estas dos funciones (`_mint` y `_burn`) modifican el suministro total de tókenes. Son internas y no hay ninguna función que las invoque en este contrato, entonces sólo son útiles si las hereda desde un contrato y añade su propia lógica para decidir en qué condiciones quiere acuñar nuevos tóekens o quemar los existentes.
 
@@ -706,7 +706,7 @@ Asegúrese de actualizar `_totalSupply` cuando la cantidad total de tókenes cam
 
 La función `_burn` es casi idéntica a `_mint`, excepto que esta va en otra dirección.
 
-#### La función \_approve {#\_approve}
+#### La función \_approve {#_approve}
 
 Esta es la función que actualmente especifica asignaciones. Observe que esta permite especificar una asignación que es mayor al balance actual de la cuenta del propietario. Esto es correcto, porque el saldo se revisa en el momento de la transferencia y puede ser diferente del saldo cuando se creó la asignación.
 
@@ -784,7 +784,7 @@ Esta función modifica la variable `_decimals` que sirve para decirle a las inte
 
 Esta es la función gancho a ser llamada durante las transferencias. Aquí está vacía, pero si necesita hacer algo puede sobrescribirla.
 
-# Conclusión {#conclusion}
+## Conclusión {#conclusion}
 
 Para revisión, he aquí hay algunas de las ideas importantes en este contrato (en mi opinión, porque usted puede pensar de otra manera):
 

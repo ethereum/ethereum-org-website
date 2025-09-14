@@ -37,7 +37,6 @@ A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fo
 **Visual Studio Code -** **_Professzionális keresztplatformos IDE hivatalos Ethereum-támogatással_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Kódminták](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 

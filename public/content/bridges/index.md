@@ -24,7 +24,7 @@ But, what do you do if you want to make a similar exchange to use a different [b
 
 All blockchains have their limitations. For Ethereum to scale and keep up with demand, it has required [rollups](/glossary/#rollups). Alternatively, L1s like Solana and Avalanche are designed differently to enable higher throughput but at the cost of decentralization.
 
-However, all blockchains develop in isolated environments and have different rules and [consensus](/glossary/#consensus) mechanisms. This means they cannot natively communicate, and tokens cannot move freely between blockchains.
+However, all blockchains are developed in isolated environments and have different rules and [consensus](/glossary/#consensus) mechanisms. This means they cannot natively communicate, and tokens cannot move freely between blockchains.
 
 Bridges exist to connect blockchains, allowing the transfer of information and tokens between them.
 
@@ -49,7 +49,7 @@ Let’s say you have ETH on Ethereum Mainnet but want cheaper transaction fees t
 
 ### Dapps on other blockchains {#dapps-other-chains}
 
-If you’ve been using Aave on Ethereum Mainnet to lend USDT but the interest rate for lending USDT using Aave on Polygon is higher.
+If you’ve been using Aave on Ethereum Mainnet to supply USDT but the interest rate you may receive for supplying USDT using Aave on Polygon is higher.
 
 ### Explore blockchain ecosystems {#explore-ecosystems}
 
@@ -60,12 +60,12 @@ If you have ETH on Ethereum Mainnet and you want to explore an alt L1 to try out
 Let’s say you want to own native Bitcoin (BTC), but you only have funds on Ethereum Mainnet. To gain exposure to BTC on Ethereum, you can buy Wrapped Bitcoin (WBTC). However, WBTC is an [ERC-20](/glossary/#erc-20) token native to the Ethereum network, which means it’s an Ethereum version of Bitcoin and not the original asset on the Bitcoin blockchain. To own native BTC, you would have to bridge your assets from Ethereum to Bitcoin using a bridge. This will bridge your WBTC and convert it into native BTC. Alternatively, you might own BTC and want to use it in Ethereum [DeFi](/glossary/#defi) protocols. This would require bridging the other way, from BTC to WBTC which can then be used as an asset on Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  You can also do all of the above using a <a href="/get-eth/">centralized exchange</a>. However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.
+  You can also do all of the above using a [centralized exchange](/get-eth). However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.
 </InfoBanner>
 
 <Divider />
 
-## Types of bridge {#types-of-bridge}
+## Types of bridges {#types-of-bridge}
 
 Bridges have many types of designs and intricacies. Generally, bridges fall into two categories: trusted and trustless bridges.
 
@@ -95,16 +95,16 @@ Many bridging solutions adopt models between these two extremes with varying deg
 
 <Divider />
 
-## Use bridge {#use-bridge}
+## Use bridges {#use-bridge}
 
 Using bridges allows you to move your assets across different blockchains. Here are some resources that can help you find and use bridges:
 
-- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/risk)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
+- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/summary)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
 - **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: A summary of bridge volumes across Ethereum networks.
 
 <Divider />
 
-## Risk using bridges {#bridge-risk}
+## Risk of using bridges {#bridge-risk}
 
 Bridges are in the early stages of development. It is likely that the optimal bridge design has not yet been discovered. Interacting with any type of bridge carries risk:
 
@@ -131,7 +131,9 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 <Divider />
 
 ## Further reading {#further-reading}
+- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _June 18, 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _July 5, 2022 - Bartek Kiepuszewski_
+- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _January 8, 2022 - Vitalik Buterin_
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
 
-- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _June 18, 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _July 5, 2022 - Bartek Kiepuszewski_
-- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _January 8, 2022 - Vitalik Buterin_

@@ -1,9 +1,18 @@
-import pickBy from "lodash/pickBy"
+import { pickBy } from "lodash"
+import type { SVGProps } from "react"
 import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "@storybook/test"
 
-import { viewportModes } from "../../../../.storybook/modes"
+import { viewportModes } from "@/storybook/modes"
+
 import { Explanation as ExplanationComponent } from "../Explanation"
+import SendReceiveIconSvg from "../icons/send-receive.svg"
+
+// Create a wrapper component that matches the expected interface
+const SendReceiveIcon = (props: SVGProps<SVGElement>) => (
+  <SendReceiveIconSvg {...props} />
+)
+SendReceiveIcon.displayName = "SendReceiveIcon"
 
 const meta = {
   title: "Molecules / Display Content / Simulator / Explanation",
@@ -39,7 +48,7 @@ const meta = {
       totalSteps: 3,
       openPath: fn(),
     },
-    nextPathSummary: { Icon: fn(), primaryText: "" },
+    nextPathSummary: { Icon: SendReceiveIcon, primaryText: "" },
     nextPathId: "send-receive",
     finalCtaLink: { href: "#", label: "Next Step", isPrimary: true },
   },

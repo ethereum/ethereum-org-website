@@ -70,7 +70,7 @@ O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisad
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>O que era ETH2?</h4>
 
-  <p>O termo 'Eth2' era comumente usado para descrever o futuro do Ethereum antes da mudança para <a href="/glossary/#pos">prova de participação</a>, mas foi <strong>eliminado em favor de uma terminologia mais precisa.</strong> Originalmente, era usado para diferenciar a rede Ethereum antes da mudança para prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os <a href="/glossary/#execution-client">clientes de execução</a> e os <a href="/glossary/#consensus-client">clientes de consenso</a> eram respectivamente chamados de clientes ETH1 e ETH2).</p>
+  <p>O termo 'Eth2' era comumente usado para descrever o futuro do Ethereum antes da mudança para [prova de participação](/glossary/#pos), mas foi <strong>eliminado em favor de uma terminologia mais precisa.</strong> Originalmente, era usado para diferenciar a rede Ethereum antes da mudança para prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os [clientes de execução](/glossary/#execution-client) e os [clientes de consenso](/glossary/#consensus-client) eram respectivamente chamados de clientes ETH1 e ETH2).</p>
 
 </InfoBanner>
 
@@ -94,7 +94,7 @@ As melhorias normalmente não afetam os usuários finais, exceto ao proporcionar
 
 [Vitalik Buterin propôs uma visão para o planejamento do Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) que foi organizada em diversas categorias vinculadas pelos efeitos na arquitetura do Ethereum. Ela inclui:
 
-- <**A Fusão**: melhorias relacionadas à mudança de [prova de trabalho](/glossary/#pow) para [prova de participação](/glossary/#pos)
+- **A Fusão**: melhorias relacionadas à mudança de [prova de trabalho](/glossary/#pow) para [prova de participação](/glossary/#pos)
 - **The Surge**: melhorias relacionadas ao dimensionamento por meio de [rollups](/glossary/#rollups) e fragmentação de dados
 - **The Scourge**: melhorias relacionadas à resistência à censura, à descentralização e a riscos de protocolo do [MEV](/glossary/#mev)
 - **The Verge**: melhorias relacionadas à verificação de [blocos](/glossary/#block) com mais facilidade
@@ -109,6 +109,7 @@ A fragmentação divide a blockchain do Ethereum de modo que subconjuntos de [va
 
 ## Procurando por melhorias técnicas específicas? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) — Hard fork Praga/Eletra, que traz uma nova abordagem para abstração de contas, melhora a escalabilidade e muito mais.
 - [Danksharding](/roadmap/danksharding) - o Danksharding torna os rollups da camada 2 muito mais baratos para os usuários ao adicionar "blobs" de dados aos blocos Ethereum.
 - [Saques de participação](/staking/withdrawals) - a melhoria Shanghai/Capella habilitou saques de participação no Ethereum, permitindo que as pessoas desbloqueassem seus ETHs participados.
 - [Finalidade de um único espaço](/roadmap/single-slot-finality) - em vez de esperar quinze minutos, os blocos poderiam ser propostos e finalizados no mesmo espaço. Isso é mais conveniente para os aplicativos e muito mais difícil de atacar.

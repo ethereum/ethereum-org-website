@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Se fizer parte de um <a href="/staking/pools/">pool de staking</a> ou detiver tokens em staking, deve consultar o seu fornecedor para obter mais detalhes sobre como os levantamentos de staking são processados, uma vez que cada serviço funciona de forma diferente.
+Se fizer parte de um [pool de staking](/staking/pools/) ou detiver tokens em staking, deve consultar o seu fornecedor para obter mais detalhes sobre como os levantamentos de staking são processados, uma vez que cada serviço funciona de forma diferente.
 
-Regra geral, os utilizadores deverão reclamar livremente os seus ETH em staking ou alterar o fornecedor de staking que utilizam. Se um pool em particular ficar muito grande, é permitida a saída, resgate e reaplicação em staking dos fundos com um <a href="https://rated.network/">fornecedor mais pequeno</a>. Ou, se tiver acumulado ETH suficiente, pode <a href="/staking/solo/">fazer staking em casa</a>.
+Regra geral, os utilizadores deverão reclamar livremente os seus ETH em staking ou alterar o fornecedor de staking que utilizam. Se um pool em particular ficar muito grande, é permitida a saída, resgate e reaplicação em staking dos fundos com um <a href="https://rated.network/">fornecedor mais pequeno</a>. Ou, se tiver acumulado ETH suficiente, pode [fazer staking em casa](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Não. Após a saída de um validador e o levantamento integral do seu saldo, qua
 
 - [Levantamentos do Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Levantamentos forçados da Beacon chain como operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Xangai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Levantamento de ETH em staking (teste) com Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Levantamentos forçados da Beacon como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Compreender o saldo efetivo do validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)

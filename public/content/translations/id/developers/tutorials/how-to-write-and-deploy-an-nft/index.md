@@ -47,7 +47,7 @@ Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat a
 
 Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Jika Anda ingin memahami lebih lanjut tentang cara transaksi di Ethereum bekerja, lihat [halaman ini](/developers/docs/transactions/) dari yayasan Ethereum.
 
-Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download.html). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
+Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
 
 ![Tetapkan Ropsten sebagi jaringan Anda](./metamask-goerli.png)
 
@@ -77,7 +77,7 @@ Sekarang karena kita ada di dalam folder proyek kita, kita akan menggunakan npm 
     npm init
 
 Tidak jadi masalah bagaimana cara Anda menjawab pertanyaan instalasinya, berikut adalah cara kami melakukannya sebagai referensi:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -100,7 +100,7 @@ Tidak jadi masalah bagaimana cara Anda menjawab pertanyaan instalasinya, berikut
       "author": "",
       "license": "ISC"
     }
-
+```
 Setujui package.json, dan kita siap untuk beraksi!
 
 ## Langkah 7: Instal [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -262,6 +262,7 @@ Kita sejauh ini telah menambahkan beberapa dependensi dan plugin, kini kita perl
 
 Perbarui hardhat.config.js Anda agar terlihat seperti ini:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -279,6 +280,7 @@ Perbarui hardhat.config.js Anda agar terlihat seperti ini:
           }
        },
     }
+```
 
 ## Langkah 14: Mengkompilasi kontrak kita {#compile-contract}
 

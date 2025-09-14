@@ -22,7 +22,7 @@ lang: zh-tw
 
 提交的交易包括下列資訊：
 
-- `from` – 發送者（簽署交易者）的地址。 這會是外部帳戶，因為合約帳戶無法發送交易。
+- `from` – 發送者（簽署交易者）的地址。 這將是一個外部擁有的帳戶，因爲合約帳戶無法傳送交易
 - `to` – 接收地址（若為外部帳戶，交易將會轉移金額。 如果為合約帳戶，交易將執行合約程式碼）
 - `signature` – 發送者的識別碼。 當發送者以私密金鑰簽署交易並確認發送者已授權此交易时，就會產生此簽章。
 - `nonce` - 用來表示帳戶中交易編號的按順序遞增計數器
@@ -162,7 +162,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 任何涉及智慧型合約的交易都需要燃料。
 
-智慧型合約也可以包含稱為 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函數，而不會改變合約的狀態。 因此，從外部帳戶調用這些函數不需要任何燃料。 此場景的底層遠端程序調用 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+智慧型合約也可以包含稱為 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函數，而不會改變合約的狀態。 因此，從外部帳戶調用這些函數不需要任何燃料。 此場景的底層遠端程序呼叫為 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)。
 
 與使用 `eth_call` 存取不同，這些 `view` 或 `pure` 函數也通常被內部調用（即從合約本身調用或從另一個合約調用），這會消耗燃料。
 
@@ -198,7 +198,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 - `TransactionType` - 介於 0 和 0x7f 之間的數字，代表總計 128 種可能的交易類型。
 - `TransactionPayload` - 由交易類型定義的任意字節位元組陣列。
 
-根據 `TransactionType` 值，交易可以分類為
+根據 `TransactionType` 值，交易可以分類為：
 
 1. **類型 0（傳統）交易：**自以太坊推出以來使用的原始交易格式。 它們不包括 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 的功能，例如動態燃料費計算或智慧型合約的存取清單。 傳統交易缺少在序列化形式中指示交易類型的特定前綴，在使用[遞迴長度前綴 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 編碼時，該前綴以位元組 `0xf8` 開始。 這些交易的 TransactionType 值為 `0x0`。
 

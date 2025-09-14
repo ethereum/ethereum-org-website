@@ -19,30 +19,39 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [The state of Python in blockchain 2023 report](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 
 ## Beginner articles {#beginner-articles}
 
+- [web3.py Overview](https://web3py.readthedocs.io/en/latest/overview.html)
+- [Ethereum Python Ecosystem Tour](https://snakecharmers.ethereum.org/python-ecosystem/)
 - [A (Python) Developer's Guide to Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
-- [The state of Python in blockchain 2023 report](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [Prize-Worthy: An Ethereum Python Hackathon Guide](https://snakecharmers.ethereum.org/prize-worthy/)
 - [An Introduction to Smart Contracts with Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [Deploy your own ERC20 Token with Python and Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro to Web3.py · Ethereum For Python Developers](https://www.dappuniversity.com/articles/web3-py-intro)
 - [How to call a Smart Contract function using Python and web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## Intermediate articles {#intermediate-articles}
 
+- [Friends of web3.py: Intro to Ape](https://snakecharmers.ethereum.org/intro-to-ape/)
 - [Dapp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Creating a Python Ethereum Interface: Part 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Ethereum Smart Contracts in Python: a comprehensive(ish) guide](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [Using Brownie and Python to deploy Smart Contracts](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [Creating NFTs on OpenSea with Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## Advanced use patterns {#advanced-use-patterns}
 
+- [web3.py Patterns: Real-Time Event Subscriptions](https://snakecharmers.ethereum.org/subscriptions/)
+- [web3.py Patterns: WebSocketProvider](https://snakecharmers.ethereum.org/websocketprovider/)
 - [Compiling, deploying and calling Ethereum smartcontract using Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Analyze Solidity Smart Contracts with Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [Blockchain Fintech Tutorial: Lending and Borrowing With Python](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
+
+## Archived articles
+
+- [Deploy your own ERC20 Token with Python and Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [Using Brownie and Python to deploy Smart Contracts](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
+- [Creating NFTs on OpenSea with Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## Python projects and tools {#python-projects-and-tools}
 
@@ -75,7 +84,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/).
 The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
 
 - [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
-- [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
+- [Curve](https://www.curve.finance/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) uses [Python in managing and deploying their vesting contracts](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/), of Alpha Homora fame, uses [Brownie to test and deploy smart contracts](https://github.com/AlphaFinanceLab/alpha-staking-contract)

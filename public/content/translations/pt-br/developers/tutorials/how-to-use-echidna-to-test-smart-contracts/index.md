@@ -371,7 +371,7 @@ function echidna_assert_after_f() public returns (bool) {
 }
 ```
 
-Entretanto, existem alguns problemas: %{issues}:
+Entretanto, existem alguns problemas: %\{issues}:
 
 - Ele falha se `f` é declarado como `interno` ou `externo`.
 - Não está claro quais argumentos devem ser usados para chamar `f`.

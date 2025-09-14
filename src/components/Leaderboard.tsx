@@ -1,23 +1,20 @@
-import { useTranslation } from "next-i18next"
-import {
-  Box,
-  Flex,
-  LinkBox,
-  LinkOverlay,
-  List,
-  ListItem,
-  useColorModeValue,
-  VisuallyHidden,
-} from "@chakra-ui/react"
+import { ExternalLink } from "lucide-react"
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import Emoji from "@/components/Emoji"
-import { BaseLink } from "@/components/Link"
+
+import { cn } from "@/lib/utils/cn"
 
 import { GITHUB_URL } from "@/lib/constants"
 
 import { Avatar } from "./ui/avatar"
+import { Flex } from "./ui/flex"
+import { LinkBox } from "./ui/link-box"
+import { LinkOverlay } from "./ui/link-box"
+import { List, ListItem } from "./ui/list"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type Person = {
   name: string
@@ -31,29 +28,12 @@ type LeaderboardProps = {
 }
 
 const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
-  const { flipForRtl } = useRtlFlip()
-  const colorModeStyles = useColorModeValue(
-    {
-      listBoxShadow: "tableBox.light",
-      linkBoxShadow: "tableItemBox.light",
-      scoreColor: "blackAlpha.700",
-    },
-    {
-      listBoxShadow: "tableBox.dark",
-      linkBoxShadow: "tableItemBox.dark",
-      scoreColor: "whiteAlpha.600",
-    }
-  )
-
+  const { twFlipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-bug-bounty")
 
   return (
     <List
-      bgColor="background.base"
-      boxShadow={colorModeStyles.listBoxShadow}
-      w="100%"
-      mb={8}
-      ms={0}
+      className="mb-8 ms-0 w-full list-none bg-background shadow-table-box"
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
@@ -73,26 +53,12 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
           }
 
           return (
-            <ListItem key={username} mb={0}>
+            <ListItem className="mb-0" key={username}>
               <LinkBox
+                className="mb-1 flex w-full items-center justify-between p-4 shadow-table-item-box hover:rounded-lg hover:bg-background-highlight hover:no-underline hover:shadow-primary"
                 key={idx}
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                boxShadow={colorModeStyles.linkBoxShadow}
-                mb={0.25}
-                p={4}
-                w="100%"
-                _hover={{
-                  textDecor: "none",
-                  borderRadius: 0.5,
-                  boxShadow: "0 0 1px var(--eth-colors-primary-base)",
-                  background: "tableBackgroundHover",
-                }}
               >
-                <Box me={4} opacity="0.4">
-                  {idx + 1}
-                </Box>
+                <div className="me-4 opacity-40">{idx + 1}</div>
                 <Avatar
                   src={avatarImg}
                   name={avatarAlt}
@@ -101,13 +67,10 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                   // `size-10` is not part of a "size" variant
                   className="me-4 size-10"
                 />
-                <Flex flex="1 1 75%" direction="column" me={8}>
+                <Flex className="me-8 flex-1 basis-3/4 flex-col">
                   <LinkOverlay
-                    as={BaseLink}
+                    className="text-body no-underline"
                     href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
-                    textDecor="none"
-                    color="text"
-                    hideArrow
                   >
                     <VisuallyHidden>{`In place number ${
                       idx + 1
@@ -118,21 +81,12 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                     )}
                   </LinkOverlay>
 
-                  <Box fontSize="sm" color={colorModeStyles.scoreColor}>
+                  <div className="text-sm text-body-medium">
                     {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
-                  </Box>
+                  </div>
                 </Flex>
                 {emoji && <Emoji className="me-8 text-2xl" text={emoji} />}
-                <Box
-                  as="span"
-                  _after={{
-                    content: '"↗"',
-                    ms: 0.5,
-                    me: 1.5,
-                    transform: flipForRtl,
-                    display: "inline-block",
-                  }}
-                />
+                <ExternalLink className={cn("size-[1em]", twFlipForRtl)} />
               </LinkBox>
             </ListItem>
           )

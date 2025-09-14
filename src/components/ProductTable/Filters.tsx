@@ -1,16 +1,16 @@
-import { useTranslation } from "next-i18next"
-import { BsArrowCounterclockwise } from "react-icons/bs"
+import { RotateCcw } from "lucide-react"
 
 import { FilterInputState, FilterOption } from "@/lib/types"
-
-import { Button } from "@/components/ui/buttons/Button"
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/../tailwind/ui/accordion"
+} from "@/components/ui/accordion"
+import { Button } from "@/components/ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface PresetFiltersProps {
   filters: FilterOption[]
@@ -75,8 +75,8 @@ const Filters = ({
   }
 
   return (
-    <div className={`w-full lg:w-80`}>
-      <div className="width-full sticky top-0 z-10 flex flex-row items-center justify-between border-b border-b-primary bg-background px-2 py-1.5 lg:top-[76px] lg:px-6">
+    <div className="w-full lg:w-80" data-testid="filters-container">
+      <div className="width-full sticky top-0 z-10 mb-2 flex flex-row items-center justify-between border-b border-b-background-highlight bg-background px-2 py-1.5 lg:top-[76px] lg:px-6">
         <p className="text-md font-bold">
           {t("table-filters")} ({activeFiltersCount})
         </p>
@@ -85,7 +85,7 @@ const Filters = ({
           className="min-h-0 gap-1 p-0"
           onClick={resetFilters}
         >
-          <BsArrowCounterclockwise size={16} />
+          <RotateCcw className="size-4 text-base" />
           {t("table-reset-filters")}
         </Button>
       </div>

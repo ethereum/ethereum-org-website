@@ -1,0 +1,11 @@
+packages:
+  - "."
+
+onlyBuiltDependencies:
+  - bufferutil
+  - core-js-pure
+  - esbuild
+  - keccak
+  - sharp
+  - unrs-resolver
+  - utf-8-validate

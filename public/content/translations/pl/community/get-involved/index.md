@@ -114,7 +114,6 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 - [Web3 Army](https://web3army.xyz/)
 - [Oferty pracy Crypto Valley](https://cryptovalley.jobs/)
 - [Oferty pracy w Ethereum](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Dołącz do DAO {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _Niezależny kolektyw deweloperski działający jako DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _Społeczne zarządzanie DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) — _Inżynieria prawna_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) — _Społeczność artystyczna_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) — _Przedsięwzięcie dla projektów kryptowalutowych pre-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) — _Mechanika gier MMORPG w prawdziwym życiu_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) — _Cyfrowo-fizyczne marki odzieżowe_

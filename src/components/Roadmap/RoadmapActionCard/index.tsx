@@ -1,5 +1,5 @@
-import { ButtonLink } from "@/components/Buttons"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex } from "@/components/ui/flex"
 import { LinkBox } from "@/components/ui/link-box"
 import { LinkOverlay } from "@/components/ui/link-box"
@@ -37,12 +37,12 @@ const RoadmapActionCard = ({
   return (
     <LinkBox className="flex flex-col border">
       <Center className="h-[260px] bg-gradient-main">
-        <TwImage src={imgSrc} alt={alt} style={{ objectFit: "contain" }} />
+        <Image src={imgSrc} alt={alt} style={{ objectFit: "contain" }} />
       </Center>
       <Flex className="flex-1 flex-col justify-between gap-4 p-6">
         <h3 className="text-2xl">{title}</h3>
         <p className="flex-1">{description}</p>
-        <LinkOverlay asChild>
+        <LinkOverlay href={href} className="no-underline">
           <ButtonLink href={href}>{buttonText}</ButtonLink>
         </LinkOverlay>
       </Flex>

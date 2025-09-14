@@ -8,7 +8,7 @@ Dagger-Hashimoto foi a implementação original de pesquisa e especificação pa
 
 ## Pré-Requisitos {#prerequisites}
 
-Para melhor entender esta página, recomendamos que você leia primeiro o[ consenso de prova de trabalho, ](/developers/docs/consensus-mechanisms/pow)[mineração](/developers/docs/consensus-mechanisms/pow/mining) e [algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Para melhor entender esta página, recomendamos que você leia primeiro o [consenso de prova de trabalho](/developers/docs/consensus-mechanisms/pow), [mineração](/developers/docs/consensus-mechanisms/pow/mining) e [algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 

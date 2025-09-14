@@ -95,8 +95,7 @@ Web3 обладает потенциалом, который позволит р
 - [Molecule: финансируйте и получайте финансирование для своих исследовательских проектов](https://www.molecule.xyz/)
 - [VitaDAO: получайте финансирование через спонсорские соглашения на исследования долголетия](https://www.vitadao.com/)
 - [ResearchHub: публикуйте научные результаты и участвуйте в беседах с коллегами](https://www.researchhub.com/)
-- [LabDAO: складывание белка in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: запрос климатических данных, собранных децентрализованным сообществом](https://api.dclimate.net/)
+- [dClimate API: запрос климатических данных, собранных децентрализованным сообществом](https://www.dclimate.net/)
 - [DeSci Foundation: конструктор инструментов публикации DeSci](https://descifoundation.org/)
 - [DeSci.World: единая пользовательская площадка для просмотра и взаимодействия с децентрализованной наукой](https://desci.world)
 - [OceanDAO: финансирование науки, связанной с данными, под управлением DAO](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Web3 обладает потенциалом, который позволит р
 - [Руководство по децентрализованной биотехнологии от Джоселин Перл для ресурса Future венчурного фонда a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Аргументы в пользу DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Руководство по DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Децентрализованные научные ресурсы](https://www.vincentweisser.com/decentralized-science)
+- [Децентрализованные научные ресурсы](https://www.vincentweisser.com/desci)
 - [IP-NFT от Molecule’s Biopharma — техническое описание](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Создание систем, не требующих доверия, в науке. Автор: Джон Старр](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Пол Калхас — DeSci: будущее децентрализованной науки (подкаст)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ Web3 обладает потенциалом, который позволит р
 - [DeSci: будущее исследований с Сэмюэлом Акиношо](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Финансирование науки (эпилог: DeSci и новые криптопримитивности). Автор: Надия](https://nadia.xyz/science-funding)
 - [Децентрализация подрывает устоявшуюся систему разработки лекарственных средств](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Что такое децентрализованная наука (DeSci)?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Что такое децентрализованная наука (DeSci)?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Видео {#videos}
 

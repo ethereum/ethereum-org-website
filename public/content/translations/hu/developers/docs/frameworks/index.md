@@ -63,7 +63,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 **Tenderly -** **_Web3 fejlesztői platform, amely lehetővé teszi a blokklánc-fejlesztőknek, hogy okosszerződéseket építsenek, teszteljenek, debuggoljanak, felügyeljenek és üzemeltessenek, illetve fejlesszék a dapp UX-t._**
 
 - [Honlap](https://tenderly.co/)
-- [Dokumentáció](https://docs.tenderly.co/ethereum-development-practices)
+- [Dokumentáció](https://docs.tenderly.co/)
 
 **The Graph -** **_Blokkláncadatok hatékony lekérdezése a The Graph segítségével._**
 
@@ -131,6 +131,14 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Dokumentáció](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_Egy nyílt forráskódú, moduláris és agnosztikus keretrendszer, amely megkönnyíti a decentralizált alkalmazások fejlesztői számára a decentralizált identitások és ellenőrizhető hitelesítő adatok beépítését az alkalmazásaikba._**
+
+- [Honlap](https://veramo.io/)
+- [Dokumentáció](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM-csomag](https://www.npmjs.com/package/@veramo/core)
 
 ## További olvasnivaló {#further-reading}
 

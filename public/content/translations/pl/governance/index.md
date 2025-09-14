@@ -44,7 +44,7 @@ W [społeczności Ethereum](/community/) znajdują się różni udziałowcy, a k
 
 - **Posiadaczy etheru**: ludzie ci posiadają dowolną ilość ETH. [Więcej o ETH](/eth/).
 - **Użytkowników aplikacji**: ludzie ci wchodzą w interakcje z aplikacjami znajdującymi się na blockchainie Ethereum.
-- **Deweloperów aplikacji/narzędzi**: ludzie ci piszą aplikacje działające na blockchainie Ethereum (np. DeFi, NFT itp.) lub tworzą narzędzia do interakcji z Ethereum (np. portfele, zestawy testowe itp.). [Więcej o zdecentralizowanych aplikacjach](/dapps/).
+- **Deweloperów aplikacji/narzędzi**: ludzie ci piszą aplikacje działające na blockchainie Ethereum (np. DeFi, NFT itp.) lub tworzą narzędzia do interakcji z Ethereum (np. portfele, zestawy testowe itp.). [Więcej o zdecentralizowanych aplikacjach](/apps/).
 - **Operatorów węzłów**: ci ludzie uruchamiają węzły, które propagują bloki i transakcje, odrzucając wszelkie nieprawidłowe transakcje lub bloki, które napotkają. [Więcej o węzłach](/developers/docs/nodes-and-clients/).
 - **Autorów EIP**: ludzie ci proponują zmiany w protokole Ethereum w formie Propozycji Ulepszeń Ethereum (EIP). [Więcej o EIP](/eips/).
 - **Walidatorów**: ci ludzie uruchamiają węzły, które mogą dodawać nowe bloki do blockchainu Ethereum.
@@ -118,7 +118,7 @@ Zasadniczo, nieporozumienia są rozwiązywane za pomocą długich dyskusji na fo
 
 Forki następują, wtedy kiedy należy dokonać ważnych aktualizacji technicznych lub zmian w sieci i zmienić „zasady” protokołu. [Klienci Ethereum](/developers/docs/nodes-and-clients/) muszą zaktualizować swoje oprogramowanie, aby wdrożyć nowe zasady forków.
 
-Fork DAO był odpowiedzią na [atak DAO z 2016 r.](https://www.coindesk.com/understanding-dao-hack-journalists), w którym niezabezpieczony kontrakt [DAO](/glossary/#dao) został pozbawiony z ponad 3,6 miliona ETH w wyniku włamania. Fork przeniósł środki z wadliwego kontraktu do nowego kontraktu, umożliwiając każdemu, kto stracił środki w wyniku włamania, ich odzyskanie.
+Fork DAO był odpowiedzią na [atak DAO z 2016 r.](https://www.coindesk.com/learn/understanding-the-dao-attack), w którym niezabezpieczony kontrakt [DAO](/glossary/#dao) został pozbawiony z ponad 3,6 miliona ETH w wyniku włamania. Fork przeniósł środki z wadliwego kontraktu do nowego kontraktu, umożliwiając każdemu, kto stracił środki w wyniku włamania, ich odzyskanie.
 
 Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Decyzja o forku osiągnęła ponad 85% głosów.
 

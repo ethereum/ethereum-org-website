@@ -40,7 +40,7 @@
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 10.4,
+      "minEth": 8,
       "tokens": [
         {
           "name": "Rocket Pool ETH",
@@ -173,7 +173,7 @@
       "platforms": ["Linux"],
       "ui": ["CLI"],
       "socials": {
-        "github": "https://github.com/eth-educators/eth-docker"
+        "github": "https://github.com/ethstaker/eth-docker"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
@@ -810,6 +810,65 @@
         "eventAction": "Clicked",
         "eventName": "Clicked ConsensysStaking go to link"
       }
+    },
+    {
+      "name": "Serenita",
+      "imageName": "Serenita",
+      "hue": 231,
+      "launchDate": "2023-11-28",
+      "url": "https://serenita.io",
+      "audits": [
+        {
+          "name": "2023-05-Halborn",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-05-Halborn.pdf"
+        },
+        {
+          "name": "2023-08-Halborn",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-08-Halborn.pdf"
+        },
+        {
+          "name": "2023-08-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-08-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2024-03-Consensys-Diligence",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-03-Consensys-Diligence.pdf"
+        },
+        {
+          "name": "2024-06-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-06-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2024-09-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-09-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2025-09-ABDK",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2025-09-ABDK.pdf"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 5,
+      "monthlyFeeUnit": "%",
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 0,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://x.com/SerenitaIO"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Serenita go to link"
+      }
     }
   ],
   "pools": [
@@ -1123,6 +1182,54 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Bedrock go to link"
+      }
+    },
+    {
+      "name": "Origin Ether",
+      "imageName": "OriginEther",
+      "hue": 211,
+      "launchDate": "2023-05-16",
+      "url": "https://originprotocol.eth.limo/",
+      "audits": [
+        {
+          "name": "OpenZeppelin - Origin SSV Native Staking - June 2024",
+          "url": "https://github.com/OriginProtocol/security/blob/master/audits/OpenZeppelin%20-%20Origin%20SSV%20Native%20Staking%20-%20June%202024.pdf"
+        },
+        {
+          "name": "Audit List",
+          "url": "https://docs.originprotocol.com/security-and-risk/audits"
+        }
+      ],
+      "minEth": 0,
+      "feePercentage": 20,
+      "tokens": [
+        {
+          "name": "Origin Ether",
+          "symbol": "OETH",
+          "address": "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityExecutionClient": 50,
+      "pctMajorityConsensusClient": 50,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "telegram": "https://t.me/originprotocol",
+        "reddit": "https://www.reddit.com/r/originprotocol/",
+        "twitter": "https://twitter.com/OriginProtocol",
+        "discord": "https://discord.com/invite/ogn",
+        "github": "https://github.com/originprotocol",
+        "youtube": "https://www.youtube.com/c/originprotocol",
+        "linkedin": "https://www.linkedin.com/company/originprotocol/"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Origin Ether go to link"
       }
     },
     {

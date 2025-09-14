@@ -167,7 +167,7 @@ Nós temos uma parada excepcional se qualquer destas condições for verdadeira:
 
   A função _W(w,μ)_ é definida mais tarde na equação 150. _W(w,μ)_ é verdade se uma destas condições for verdadeira:
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Estes opcodes mudando o estado, ou criando um novo contrato, armazenando valor, ou destruindo o contrato atual.
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Estes opcodes mudando o estado, ou criando um novo contrato, armazenando valor, ou destruindo o contrato atual.
 
   - **_LOG0≤w ∧ w≤LOG4_** Se nãos formos chamados estaticamente, nós não podemos emitir entradas de log. Os opcodes de log estão todos na faixa entre [`LOG0` (A0)](https://www.evm.codes/#a0) e [`LOG4` (A4)](https://www.evm.codes/#a4). O número depois do opcode de log especifica quantos tópicos a entrada de log contém.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_** Você pode chamar um outro contrato quando você está estático, mas se você o fizer, você não pode transferir ETH para ele.
@@ -228,7 +228,7 @@ O endereço destes saldos que nós precisamos encontrar é _μ<sub>s</sub>[0] mo
 
 Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, isto significa que há informação sobre este endereço. Neste caso, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ é o saldo para aquele endereço. Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, significa que este endereço não está inicializado e que o saldo é zero. Você pode ver a lista de campos de informações de contas na seção 4.1 na página 4.
 
-A segunda equação, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, é relacionada com a diferença no custo entre acesso à warm storage (storage que foi recenteimente acessada e é provável que esteja em cache) e cold storage (storage que não tem sido acessada e provavelmente esteja em uma storage mais lenta, que é mais cara para se recuperar). _A<sub>a</sub>_ é a lista de endereços previamente acessados pela transação, que deveria, portanto ser de acesso mais barato, como definido na seção 6.1 na página 8. Você pode ler mais sobre este assunto em [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+A segunda equação, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, é relacionada com a diferença no custo entre acesso à warm storage (storage que foi recenteimente acessada e é provável que esteja em cache) e cold storage (storage que não tem sido acessada e provavelmente esteja em uma storage mais lenta, que é mais cara para se recuperar). _A<sub>a</sub>_ é a lista de endereços previamente acessados pela transação, que deveria, portanto ser de acesso mais barato, como definido na seção 6.1 na página 8. Você pode ler mais sobre este assunto em [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Valor | Mnemônico | δ  | α  | Descrição                               |
 | -----:| --------- | -- | -- | --------------------------------------- |

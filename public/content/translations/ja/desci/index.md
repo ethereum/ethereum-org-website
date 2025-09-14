@@ -95,8 +95,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [Molecule: 研究プロジェクトのための資金提供と資金獲得](https://www.molecule.xyz/)
 - [VitaDAO: 長寿研究のための研究スポンサー契約を通じた資金獲得](https://www.vitadao.com/)
 - [ResearchHub: 科学的成果を投稿し、仲間と会話する](https://www.researchhub.com/)
-- [LabDAO: コンピュータを用いたタンパク質フォールディング](https://alphafodl.vercel.app/)
-- [dClimate API: 分散型コミュニティに収集された気候データのクエリ](https://api.dclimate.net/)
+- [dClimate API: 分散型コミュニティに収集された気候データのクエリ](https://www.dclimate.net/)
 - [DeSci財団: DeSci出版ツールビルダー](https://descifoundation.org/)
 - [DeSci.World: ユーザーが閲覧して参加できる分散型科学のワンストップショップ](https://desci.world)
 - [OceanDAO: データ関連科学のための、DAOに統制された資金調達](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [Jocelynn Pearlによるa16zの未来のための分散型バイオテックのガイド](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSciのケース](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSciのガイド](https://future.com/what-is-decentralized-science-aka-desci/)
-- [分散型科学のリソース](https://www.vincentweisser.com/decentralized-science)
+- [分散型科学のリソース](https://www.vincentweisser.com/desci)
 - [MoleculeのBiopharma IP-NFTs - 技術説明](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Jon Starrによるトラストレスな科学システムの構築](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlaas - DeSci: 分散型科学の未来(ポッドキャスト)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [DeSci: Samuel Akinoshoによる研究の未来](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [サイエンスファンディング(エピローグ: DeSciと新しい暗号プリミティブ) by Nadia](https://nadia.xyz/science-funding)
 - [分散化は薬物開発を妨害する](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [DeSci - 分散型科学とは何か？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [DeSci - 分散型科学とは何か？](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 動画 {#videos}
 

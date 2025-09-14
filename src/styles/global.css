@@ -5,8 +5,8 @@
 @import "@docsearch/css";
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
-@import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   :root {
@@ -24,8 +24,9 @@
       rgba(58, 142, 137, 0.2) 100%
     );
     --feedback-gradient: var(--gradient-main);
-    --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
-      0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
+    --table-box-shadow:
+      0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03),
+      0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 
     --gradient-banner: radial-gradient(
@@ -43,9 +44,16 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
+    --gradient-staking: linear-gradient(
+      rgba(237, 194, 84, 0.1) 13.39%,
+      rgba(75, 231, 156, 0.1) 44.21%,
+      rgba(231, 202, 200, 0.1) 82.88%
+    );
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
   }
 
-  [data-theme="dark"] {
+  .dark {
     /* Misc semantics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
@@ -62,7 +70,8 @@
       #44404d 52.42%,
       #303038 98.77%
     );
-    --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
+    --table-box-shadow:
+      0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
     --banner-grid-gradient: linear-gradient(
@@ -71,12 +80,18 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
   }
 }
 
 @layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
   body {
-    @apply !bg-background font-body !text-body;
+    @apply bg-background font-body leading-base text-body;
   }
 
   a {
@@ -90,6 +105,16 @@
   h5,
   h6 {
     @apply font-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  section {
+    @apply scroll-mt-20;
   }
 
   h1 {
@@ -152,6 +177,45 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
+  }
+}
+
+@layer components {
+  .staking-grid {
+    grid-template-areas:
+      "ether header glyph"
+      "decorator content content";
+  }
+
+  .staking-grid-stacked {
+    grid-template-areas:
+      "ether"
+      "header"
+      "content";
+  }
+
+  .area-ether {
+    grid-area: ether;
+  }
+
+  .area-header {
+    grid-area: header;
+  }
+
+  .area-content {
+    grid-area: content;
+  }
+
+  .area-glyph {
+    grid-area: glyph;
+  }
+
+  .gold {
+    @apply font-bold text-staking-gold;
+  }
+
+  .dev-ring {
+    @apply ring ring-red-500 sm:ring-orange-500 md:ring-yellow-400 lg:ring-green-500 xl:ring-blue-500 2xl:ring-violet-500;
   }
 }
 

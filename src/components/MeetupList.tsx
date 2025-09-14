@@ -1,6 +1,8 @@
+"use client"
+
 import { useState } from "react"
-import sortBy from "lodash/sortBy"
-import { FaChevronRight } from "react-icons/fa6"
+import { sortBy } from "lodash"
+import { ChevronRight } from "lucide-react"
 
 import Emoji from "@/components/Emoji"
 import InfoBanner from "@/components/InfoBanner"
@@ -11,9 +13,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
 
-import Input from "../../tailwind/ui/Input"
-
 import { Flex } from "./ui/flex"
+import Input from "./ui/input"
 import InlineLink, { BaseLink } from "./ui/Link"
 
 export interface Meetup {
@@ -94,7 +95,7 @@ const MeetupList = () => {
               <p className="mb-0 opacity-60">{meetup.location}</p>
             </Flex>
             <Flex className="items-center">
-              <FaChevronRight className="h-[14px] w-[14px] xl:h-[18px] xl:w-[18px]" />
+              <ChevronRight />
             </Flex>
           </BaseLink>
         ))}

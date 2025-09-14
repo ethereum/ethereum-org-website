@@ -1,33 +1,34 @@
-import { type HTMLAttributes } from "react"
-import { Badge, Box, type BoxProps } from "@chakra-ui/react"
+import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
+import ContributorsQuizBanner from "@/components/Banners/ContributorsQuizBanner"
+import Card from "@/components/Card"
+import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
+import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
 import Contributors from "@/components/Contributors"
-import MarkdownImage from "@/components/MarkdownImage"
+import DocLink from "@/components/DocLink"
+import Emoji from "@/components/Emoji"
+import ExpandableCard from "@/components/ExpandableCard"
+import FeaturedText from "@/components/FeaturedText"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
+import IdAnchor from "@/components/IdAnchor"
+import MarkdownImage from "@/components/Image/MarkdownImage"
+import InfoBanner from "@/components/InfoBanner"
+import IssuesList from "@/components/IssuesList"
+import LocaleDateTime from "@/components/LocaleDateTime"
+import MainArticle from "@/components/MainArticle"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Divider } from "@/components/ui/divider"
+import { Flex } from "@/components/ui/flex"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
+import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
-
-import ContributorsQuizBanner from "../Banners/ContributorsQuizBanner"
-import Card from "../Card"
-import DocLink from "../DocLink"
-import Emoji from "../Emoji"
-import ExpandableCard from "../ExpandableCard"
-import FeaturedText from "../FeaturedText"
-import GlossaryTooltip from "../Glossary/GlossaryTooltip"
-import IdAnchor from "../IdAnchor"
-import InfoBanner from "../InfoBanner"
-import IssuesList from "../IssuesList"
-import LocaleDateTime from "../LocaleDateTime"
-import MainArticle from "../MainArticle"
-import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
-import { ButtonLink } from "../ui/buttons/Button"
-import { Divider } from "../ui/divider"
-import { Flex } from "../ui/flex"
-import { ListItem, OrderedList, UnorderedList } from "../ui/list"
-import { mdxTableComponents } from "../ui/Table"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -110,7 +111,6 @@ export const HR = () => (
 // All base html element components
 export const htmlElements = {
   a: TooltipLink,
-  div: Box,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -146,7 +146,7 @@ export const Title = (props: ChildOnlyProp) => (
   <Heading1 className="mt-4" {...props} />
 )
 
-export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
   )
@@ -154,7 +154,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 
 // All custom React components
 export const reactComponents = {
-  Badge,
+  BrowseApps,
   ButtonLink,
   Card,
   ContentContainer,
@@ -170,7 +170,9 @@ export const reactComponents = {
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  Tag,
   Title,
+  WhatAreAppsStories,
   YouTube,
 }
 

@@ -14,7 +14,7 @@ lang: zh-tw
 
 ## 基本資訊 {#prerequisites}
 
-除了瞭解 JavaScript 之外，瞭解<0>以太坊堆疊</0>和<1>以太坊用戶端</1>可能也會有所幫助。
+除了瞭解 JavaScript 之外，瞭解[以太坊堆疊](/developers/docs/ethereum-stack/)和[以太坊用戶端](/developers/docs/nodes-and-clients/)可能也會有所幫助。
 
 ## 為何使用資料圖書庫 {#why-use-a-library}
 
@@ -258,11 +258,6 @@ ethers.utils.formatEther(balance)
 **light.js ****_針對輕量用戶端最佳化的高階回應式 JS 程式庫。_**
 
 - [Github](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
-
-**Web3-wrapper -** **_可替代 Web3.js 的 Typescript。_**
-
-- [文件](https://0x.org/docs/web3-wrapper#introduction)
-- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
 **Alchemyweb3 -** **_具有自動重試和增強型應用程式介面的 Web3.js 包裝函式。_**
 

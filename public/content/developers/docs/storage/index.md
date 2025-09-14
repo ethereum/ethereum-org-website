@@ -38,12 +38,12 @@ Platforms with blockchain-based persistence:
 
 **Contract-based** persistence has the intuition that data cannot be replicated by every node and stored forever, and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
 
-In most cases, instead of storing all data on-chain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
+In most cases, instead of storing all data onchain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
 
 Platforms with contract-based persistence:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
@@ -126,11 +126,11 @@ Proof-of-stake based:
 - [Documentation](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
+**Sia - _Harnesseses cryptography to create a trustless cloud storage marketplace, allowing buyers and sellers to transact directly._**
 
-- [Skynet.net](https://siasky.net/)
-- [Documentation](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Documentation](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
 

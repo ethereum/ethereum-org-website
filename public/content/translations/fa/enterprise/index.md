@@ -116,7 +116,7 @@ lang: fa
 ### ثبت داده‌ها {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _خبرگزاری ایتالیایی با اخبار جعلی مبارزه می‌کند و خوانندگان را قادر می‌سازد تا منشأ اخبار را با ضبط آن‌ها در شبکه اصلی تأیید کنند_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _منشأ و تاریخچه تعمیر را در اتریوم ثبت می‌کند_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _منشأ و تاریخچه تعمیر را در اتریوم ثبت می‌کند_
 - [BRØK](https://www.xn--brk-1na.no/) - _پلتفرم جداول کپ برای شرکت‌های ثبت نشده در بورس عمومی توسط دولت نروژ ارائه شده است _
 - [گواهی](https://certifaction.com/) - _امضاهای الکترونیکی معتبر قانونی با حریم خصوصی-by-design_
 - [EthSign](https://ethsign.xyz/) - _اسناد الکترونیکی امضا شده را در بلاک‌چین اتریوم ثبت می‌کند_

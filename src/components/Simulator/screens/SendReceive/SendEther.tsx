@@ -1,5 +1,9 @@
 import React from "react"
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
+
+import { Button } from "@/components/ui/buttons/Button"
+import { Flex, HStack } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
@@ -52,27 +56,12 @@ export const SendEther = ({
   }).format(chosenAmount)
 
   return (
-    <Box h="100%">
-      <Box px={6} py={8}>
-        <Text
-          fontSize={{ base: "xl", md: "2xl" }}
-          fontWeight="bold"
-          mb={{ base: 4, md: 6 }}
-        >
-          Send
-        </Text>
-        <Text mb={{ base: 0, md: 6 }}>How much do you want to send?</Text>
-      </Box>
-      <Flex
-        px={6}
-        py={{ base: 4, md: 6 }}
-        borderTop="1px"
-        borderBottom="1px"
-        borderColor="background.highlight"
-        gap={4}
-        color="body.medium"
-        fontSize="xs"
-      >
+    <div className="h-full">
+      <div className="px-6 py-8">
+        <p className="mb-4 text-xl font-bold md:mb-6 md:text-2xl">Send</p>
+        <p className="md:mb-6">How much do you want to send?</p>
+      </div>
+      <Flex className="justify-between gap-4 border-y border-background-highlight px-6 py-4 text-xs text-body-medium md:py-6">
         {/* Left side: Displayed send amount */}
         <NotificationPopover
           title="Example walkthrough"
@@ -80,73 +69,54 @@ export const SendEther = ({
           side="top"
         >
           <Flex
-            alignItems="top"
-            flex={1}
-            fontWeight="bold"
-            color={chosenAmount > 0 ? "body.base" : "disabled"}
+            className={cn(
+              "font-bold",
+              chosenAmount > 0 ? "text-body" : "text-disabled"
+            )}
           >
-            <Text fontSize="6xl" h="full" lineHeight="1em">
+            <p className="h-full text-6xl leading-[1em]">
               {formatChosenAmount}
-            </Text>
+            </p>
           </Flex>
         </NotificationPopover>
         {/* Right side */}
-        <Flex direction="column" alignItems="end">
+        <Flex className="flex-col items-end">
           <NotificationPopover
             side="top"
             title="Example walkthrough"
             content="In this walkthrough you can only send ETH, but in real wallet you can send different tokens as well"
           >
             {/* Token selector pill */}
-            <Flex
-              px={2}
-              py={1}
-              mb={4}
-              borderRadius="full"
-              bg="body.light"
-              alignItems="center"
-            >
-              <Icon as={EthTokenIcon} fontSize="xl" me={1.5} />
-              <Text fontWeight="bold" m={0} color="body.base">
-                ETH
-              </Text>
-            </Flex>
+            <HStack className="mb-4 gap-0 rounded-full bg-body-light px-2 py-1">
+              {/* TODO: remove flags and `size` class when icon is migrated */}
+              <EthTokenIcon className="!me-1.5 !size-[1em] !text-xl" />
+              <p className="m-0 font-bold text-body">ETH</p>
+            </HStack>
           </NotificationPopover>
           {/* Balances */}
-          <Text fontWeight="bold" m={0} lineHeight={1}>
-            Balance: {usdAmount}
-          </Text>
-          <Text m={0}>
+          <p className="font-bold leading-none">Balance: {usdAmount}</p>
+          <p>
             <>{ethAmount} ETH</>
-          </Text>
+          </p>
         </Flex>
       </Flex>
-      <Box bg="background.highlight" h="full">
-        <Flex
-          flexWrap="nowrap"
-          justify="space-between"
-          px={6}
-          py={6}
-          fontWeight="bold"
-          bg="background.highlight"
-          position="relative"
-        >
+      <div className="h-full bg-background-highlight">
+        <Flex className="relative flex-nowrap justify-between bg-background-highlight p-6 font-bold">
           {/* Amount buttons */}
           {AMOUNTS.map((amount, i) => (
             <Button
               key={i}
               onClick={() => handleSelection(amount)}
-              borderRadius="10px"
-              bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
-              fontWeight="bold"
-              textTransform="uppercase"
-              fontSize="sm"
+              className={cn(
+                "rounded-[10px] text-sm font-bold uppercase",
+                amount === chosenAmount ? "bg-primary-hover" : "bg-primary"
+              )}
             >
               {formatButtonLabel(amount)}
             </Button>
           ))}
         </Flex>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }

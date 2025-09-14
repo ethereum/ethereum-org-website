@@ -23,7 +23,7 @@ Per un nodo di Ethereum, il multiaddr contiene l'ID del nodo (un hash della sua 
 
 ## Enode {#enode}
 
-L’enode è un modo per identificare un nodo di Ethereum usando un formato come indirizzo URL. L'ID del nodo esadecimale è codificato nella porzione del nome utente dell'URL, separato dall'host con il simbolo @. Il nome dell'host può essere dato solo come indirizzo IP; non sono consentiti i nomi DNS. La porta nella sezione del nome del host è la porta d'ascolto TCP. Se le porte TCP e UDP (scoperta) sono differenti, la porta UDP è specificata come parametro di interrogazione "discport"
+L’enode è un modo per identificare un nodo di Ethereum usando un formato come indirizzo URL. L'ID del nodo esadecimale è codificato nella porzione del nome utente dell'URL, separato dall'host con il simbolo @. Il nome dell'host può essere dato solo come indirizzo IP; non sono consentiti i nomi DNS. La porta nella sezione del nome del host è la porta d'ascolto TCP. Se le porte TCP e UDP (scoperta) sono differenti, la porta UDP è specificata come parametro di query "discport".
 
 Nel seguente esempio, l'URL del nodo descrive un nodo con indirizzo IP `10.3.58.6`, porta TCP `30303` e porta di scoperta UDP `30301`.
 
@@ -35,4 +35,5 @@ Ethereum Node Records (ENR) è un formato standardizzato per gli indirizzi di re
 
 ## Letture consigliate {#further-reading}
 
-[EIP-778: Ethereum Node Records (ENR)](https://eips.ethereum.org/EIPS/eip-778) [Indirizzi di rete su Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/) [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [EIP-778: i registri dei nodi di Ethereum (Ethereum Node Records, ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

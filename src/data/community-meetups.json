@@ -65,31 +65,31 @@
     "location": "Bogotá",
     "link": "https://www.meetup.com/ethereum-bogota"
   },
-    {
+  {
     "title": "Ethereum Eje Cafetero",
     "emoji": ":colombia:",
     "location": "Armenia, Pereira, Manizales",
     "link": "https://www.meetup.com/ethereum-eje-cafetero"
   },
-    {
+  {
     "title": "Ethereum Medellin",
     "emoji": ":colombia:",
     "location": "Medellín",
     "link": "https://www.meetup.com/ethereum-medellin"
   },
-    {
+  {
     "title": "Ethereum Caribe",
     "emoji": ":colombia:",
     "location": "Barranquilla",
     "link": "https://www.meetup.com/ethereum-caribe"
   },
-    {
+  {
     "title": "Ethereum Cali",
     "emoji": ":colombia:",
     "location": "Cali",
     "link": "https://www.meetup.com/ethereumcali"
   },
-    {
+  {
     "title": "Ethereum Arauca",
     "emoji": ":colombia:",
     "location": "Saravena",
@@ -195,7 +195,7 @@
     "title": "Ethereum Jakarta",
     "emoji": ":indonesia:",
     "location": "Jakarta",
-    "link": "https://www.meetup.com/ethereum-jkt/"
+    "link": "https://ethjkt.com/"
   },
   {
     "title": "Ethereum Italia Hub (Telegram Group)",
@@ -468,16 +468,28 @@
     "link": "https://lu.ma/user/usr-zgxbPuCTyKGBQq6"
   },
   {
-    "title": "BeerFi Prague - Web3 on-chain dev Meetup",
+    "title": "BeerFi Prague - Web3 Builders Meetup",
     "emoji": ":czech_republic:",
     "location": "Prague",
-    "link": "https://www.meetup.com/web3-on-chain-dev-meetup-group/"
+    "link": "https://www.meetup.com/beerfi/"
   },
   {
     "title": "NapulETH Meetup",
     "emoji": ":italy:",
     "location": "Naples",
     "link": "https://www.eventbrite.it/e/863744451907/"
+  },
+  {
+    "title": "Ethereum Venezuela",
+    "emoji": ":venezuela:",
+    "location": "Venezuela",
+    "link": "https://www.meetup.com/ethereumvenezuela/"
+  },
+  {
+    "title": "Ethereum Aragua",
+    "emoji": ":venezuela:",
+    "location": "Aragua",
+    "link": "https://www.aragua.org"
   },
   {
     "title": "Ethereum Minnesota",
@@ -550,5 +562,23 @@
     "emoji": ":romania:",
     "location": "Cluj-Napoca",
     "link": "https://www.meetup.com/ethcluj"
-  }    
+  },
+  {
+    "title": "ERC55",
+    "emoji": ":brazil:",
+    "location": "São Paulo",
+    "link": "https://lu.ma/user/erc55"
+  },
+  {
+    "title": "ETHBelgium ",
+    "emoji": ":belgium:",
+    "location": "Belgium",
+    "link": "https://lu.ma/ethbelgium"
+  },
+  {
+    "title": "ETHBhopal",
+    "emoji": ":india:",
+    "location": "Bhopal",
+    "link": "https://x.com/ETHBhopal"
+  }
 ]
