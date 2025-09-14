@@ -152,9 +152,10 @@ function safe_add(uint x, uint y) returns(uint z){
   require(z>=y);
 
   return z;
+}
 ```
 
-An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
+An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z >= y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
 
 ### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
 
