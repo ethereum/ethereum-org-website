@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react"
-import { getLocale, getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
@@ -11,13 +10,11 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { Card } from "@/components/ui/card"
-import Link, { LinkProps } from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import developersHubImg from "@/public/images/heroes/developers-hub-hero.jpg"
@@ -26,21 +23,6 @@ import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
 import manDogPlayingImg from "@/public/images/man-and-dog-playing.png"
 import computerImg from "@/public/images/what-is-ethereum-network/computer_alone.png"
 import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-network.png"
-
-const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
-  const locale = await getLocale()
-  const { twFlipForRtl } = getDirection(locale as Lang)
-  return (
-    <Link
-      href={href}
-      className={cn("group block w-fit no-underline", className)}
-    >
-      <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
-      &nbsp;
-      <span className="group-hover:underline">{children}</span>
-    </Link>
-  )
-}
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
