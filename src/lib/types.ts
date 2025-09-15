@@ -1229,3 +1229,10 @@ export type SectionNavDetails = {
   href?: string
   icon?: React.ReactNode
 }
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
+}
