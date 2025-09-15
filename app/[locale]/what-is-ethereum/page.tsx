@@ -681,9 +681,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Card className="overflow-hidden rounded-2xl border">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                 <User className="size-8 text-accent-a" />
-                <h3 className="text-2xl">
-                  {t("page-what-is-ethereum-start-individuals-title")}
-                </h3>
+                {t("page-what-is-ethereum-start-individuals-title")}
               </CardTitle>
               <CardContent className="space-y-12 p-8">
                 <div className="space-y-6">
@@ -754,9 +752,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Card className="overflow-hidden rounded-2xl border">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                 <SquareCode className="size-8 text-accent-b" />
-                <h3 className="text-2xl">
-                  {t("page-what-is-ethereum-start-developers-title")}
-                </h3>
+                {t("page-what-is-ethereum-start-developers-title")}
               </CardTitle>
               <CardContent className="space-y-12 p-8">
                 <div className="space-y-6">
@@ -798,9 +794,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Card className="overflow-hidden rounded-2xl border">
               <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                 <Landmark className="size-8 text-accent-c" />
-                <h3 className="text-2xl">
-                  {t("page-what-is-ethereum-start-business-title")}
-                </h3>
+                {t("page-what-is-ethereum-start-business-title")}
               </CardTitle>
               <CardContent className="space-y-12 p-8">
                 <div className="space-y-6">
