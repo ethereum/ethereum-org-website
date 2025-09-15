@@ -79,11 +79,11 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
                 <PersonaTags walletPersonas={walletPersonas} />
 
                 <div
-                  className={`ml-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
+                  className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
                 >
                   <ChainImages
                     chains={wallet.supported_chains as ChainName[]}
-                    className={`ml-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+                    className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
                   />
                 </div>
               </div>
@@ -110,7 +110,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
               </div>
               <ChainImages
                 chains={wallet.supported_chains as ChainName[]}
-                className={`ml-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+                className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
               />
             </div>
           </MediaQuery>

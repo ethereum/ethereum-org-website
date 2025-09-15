@@ -87,7 +87,7 @@ const MobileFilters = ({
             </DrawerClose>
           </div>
           <DrawerHeader className="sr-only">
-            <DrawerTitle>Filters</DrawerTitle>
+            <DrawerTitle>{t("table-filters")}</DrawerTitle>
             <DrawerDescription>
               {`${activeFiltersCount} ${t("table-active")}`}
             </DrawerDescription>

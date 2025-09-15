@@ -1,6 +1,6 @@
 "use client"
 
-import { WalletRow } from "@/lib/types"
+import type { WalletRow } from "@/lib/types"
 
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
 import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hooks/useWalletPersonaPresets"
