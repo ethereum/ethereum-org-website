@@ -13,9 +13,9 @@ import FileContributors from "@/components/FileContributors"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, ImageProps } from "@/components/Image"
-import LeftNavBar from "@/components/LeftNavBar"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
+import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -185,11 +185,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         asChild
       >
         <MainArticle>
-          <LeftNavBar
-            tocItems={tocData}
-            // TODO: Remove `!` flag once this component is migrated to ShadCN
-            className="max-lg:!hidden"
-          />
+          <TableOfContents items={tocData} variant="left" />
 
           <ContentContainer id="content">
             <Section

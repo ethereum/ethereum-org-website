@@ -82,7 +82,7 @@ Another important step before starting to build a program or reaching out to spo
 
 ### How to assemble a team {#how-to-assemble-a-team}
 
-Choose people who share your vision and complement your skills. Some teams work as collectives, while others have defined roles — find what works best for you. Regular communication and clear expectations are essential. Although it's tempting to rely on communication platforms for event planning, we suggest picking a task management platform (such as Notion, Basecamp, Trello, Asana, or even the good old Google Sheets) for organizing and tracking what needs to be done. It’s crucial to have a well-functioning and well–organized team.
+Choose people who share your vision and complement your skills. Some teams work as collectives, while others have defined roles — find what works best for you. Regular communication and clear expectations are essential. Although it's tempting to rely on communication platforms for event planning, we suggest picking a task management platform (such as Notion, Basecamp, Trello, Asana, or even the good old Google Sheets) for organizing and tracking what needs to be done. It’s crucial to have a well-functioning and well-organized team.
 
 Different Ethereum organizer teams have different roles in their teams, but they all have in common people who are working on logistics, budgeting, marketing, program, design, and partnerships.
 
@@ -206,10 +206,6 @@ The key is to keep the momentum alive. Continue engaging with your community, sh
 A big thank you to everyone who contributed to this article by sharing their insights: Slavo Fabisik from ETHBratislava; Lola from ETH Kipu and ETH Latam; Tanja Mladenovic from ETH Belgrade, Juan David from Ethereum Bogota; Monika Zając from ETHWarsaw; Raffaele Orefice from NapulETH; Xiao Wu(Ling) from ETH Riyadh; Marco from urbe.eth; Caolán Walsh from ETH Dublin; Alex Males from ETHCluj; and Stanko Devic from ETH Slovenia.
 
 ## Resources {#resources}
-
-Template:
-
-- [Ethereum event checklist](https://cryptpad.fr/sheet/#/2/sheet/view/yhGnwo2bKxgA13SnkG9tS76+0+MtO0I6ZUFYEYP0J7w/)
 
 Podcast: How to organize and promote an ETH event from A-Z:
 

@@ -475,7 +475,7 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 ### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
 
-- **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
+- **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
 
 ### Tools for secure administration of smart contracts {#smart-contract-administration-tools}
 
@@ -485,7 +485,7 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
-- **[ConsenSys Diligence](https://consensys.net/diligence/)** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
+- **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
 
 - **[CertiK](https://www.certik.com/)** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 

@@ -5,8 +5,10 @@ import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
+import { MatomoEventOptions } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 

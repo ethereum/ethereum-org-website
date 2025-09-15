@@ -61,7 +61,6 @@ export const ContentLayout: StoryObj<typeof meta> = {
         },
       ],
     },
-    maxDepth: 2,
     contributors: [
       {
         login: "samajammin",

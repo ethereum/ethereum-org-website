@@ -15,7 +15,7 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Sleep for 60 minutes
         run: sleep 3600
       - name: Wait for Netlify Deploy
