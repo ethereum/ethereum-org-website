@@ -2070,6 +2070,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AndrejZelonka"><img src="https://avatars.githubusercontent.com/u/64598949?v=4?s=100" width="100px;" alt="Andrej Želonka"/><br /><sub><b>Andrej Želonka</b></sub></a><br /><a href="#tool-AndrejZelonka" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/maximevtush"><img src="https://avatars.githubusercontent.com/u/154841002?v=4?s=100" width="100px;" alt="Maxim Evtush"/><br /><sub><b>Maxim Evtush</b></sub></a><br /><a href="#maintenance-maximevtush" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lipperhey"><img src="https://avatars.githubusercontent.com/u/185240929?v=4?s=100" width="100px;" alt="lipperhey"/><br /><sub><b>lipperhey</b></sub></a><br /><a href="#maintenance-lipperhey" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/zkpepe"><img src="https://avatars.githubusercontent.com/u/202324721?v=4?s=100" width="100px;" alt="zkpepe"/><br /><sub><b>zkpepe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azkpepe" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
