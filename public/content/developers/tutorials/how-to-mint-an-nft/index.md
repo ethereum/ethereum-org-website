@@ -12,7 +12,7 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11 Million
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6 Million
 
-All of them minted their NFTs using Alchemy’s powerful API. In this tutorial, we’ll teach you how to do the same in <10 minutes.
+All of them minted their NFTs using Alchemy’s powerful API. In this tutorial, we’ll teach you how to do the same in \<10 minutes.
 
 “Minting an NFT” is the act of publishing a unique instance of your ERC-721 token on the blockchain. Using our smart contract from [Part 1 of this NFT tutorial series](/developers/tutorials/how-to-write-and-deploy-an-nft/), let’s flex our Web3 skills and mint an NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
 
@@ -109,7 +109,7 @@ Once you’re done editing the JSON file, save it and upload it to Pinata, follo
 
 ## Step 5: Create an instance of your contract {#instance-contract}
 
-Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://sepolia.etherscan.io/) by looking up the address you used to deploy the contract.
+Now, to interact with our contract, we need to create an instance of it in our code. To do so we'll need our contract address which we can get from the deployment or [Blockscout](https://eth-sepolia.blockscout.com/) by looking up the address you used to deploy the contract.
 
 ![View your contract address on Etherscan](./view-contract-etherscan.png)
 
@@ -125,7 +125,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Step 6: Update the `.env` file {#update-env}
 
-Now, in order to create and send transactions to the Ethereum chain, we’ll use your public ethereum account address to get the account nonce (will explain below).
+Now, in order to create and send transactions to the Ethereum chain, we’ll use your public Ethereum account address to get the account nonce (will explain below).
 
 Add your public key to your `.env` file — if you completed part 1 of the tutorial, our `.env` file should now look like this:
 
@@ -316,7 +316,7 @@ Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of second
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Sepolia Etherscan](https://sepolia.etherscan.io/) and search for your transaction hash.
+Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Blockscout](https://eth-sepolia.blockscout.com/) and search for your transaction hash.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_View your NFT transaction hash on Etherscan_
 

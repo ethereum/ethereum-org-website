@@ -1,10 +1,11 @@
 import * as React from "react"
-import { useTranslation } from "next-i18next"
 import { DocSearchButton } from "@docsearch/react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
@@ -14,6 +15,7 @@ const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Button
         ref={ref}
         aria-label={t("aria-toggle-search-button")}
+        data-testid="search-input-button"
         variant="ghost"
         className={cn(
           "group me-3 border border-disabled hover:border-primary-hover",

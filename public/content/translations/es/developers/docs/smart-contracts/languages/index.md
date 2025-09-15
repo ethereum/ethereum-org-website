@@ -11,9 +11,11 @@ Los dos lenguajes más activos y soportados son:
 - Solidity
 - Vyper
 
-Los desarrolladores más experimentados también podrían querer usar Yul, un lenguaje intermedio para la [máquina virtual Ethereum](/developers/docs/evm/), o Yul+, una extensión de Yul.
+Remix IDE proporciona un entorno de desarrollo integral para crear y probar contratos tanto en Solidity como en Vyper. [Pruebe Remix IDE en el navegador](https://remix.ethereum.org) para empezar a programar.
 
-Si es curioso y le gustaría ayudar a testear nuevos lenguajes que aún se encuentran bajo gran desarrollo, puede experimentar con Fe, un lenguaje emergente de contratos inteligentes que aún está en sus inicios.
+Los desarrolladores más experimentados también podrían querer usar Yul, un lenguaje intermedio para la [máquina virtual de Ethereum](/developers/docs/evm/), o Yul+, una extensión de Yul.
+
+Si es curioso y le gustaría ayudar a testear nuevos lenguajes que aún se encuentran en gran desarrollo, puede experimentar con Fe, un lenguaje emergente de contratos inteligentes que aún está en sus inicios.
 
 ## Requisitos previos {#prerequisites}
 
@@ -111,7 +113,6 @@ Para obtener más información, [lea los fundamentos de Vyper](https://vyper.rea
 - [Hoja de trampas](https://reference.auditless.com/cheatsheet)
 - [Marcos para desarrollo de contratos inteligentes y herramientas para Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk: aprenda a asegurar y hackear contratos inteligentes de Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples: ejemplos de vulnerabilidades en Vyper](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub para desarrollo](https://github.com/zcor/vyper-dev)
 - [Ejemplos de grandes éxitos de contratos inteligentes de Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Increíbles recursos seleccionados de Vyper](https://github.com/spadebuilders/awesome-vyper)
@@ -175,11 +176,11 @@ def withdraw():
 
 # Finalizar la subasta y enviar la oferta más alta
 # al beneficiario.
-@external
+@externo
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
-    # into three phases:
+    # Es una buena guía para estructurar funciones que interactúan
+    # con otros contratos (es decir, ellos llaman funciones o envían ether)
+    # en tres frases:
     # 1. condiciones de comprobación
     # 2. realizar acciones (condiciones potencialmente cambiantes)
     # 3. interactuando con otros contratos
@@ -225,7 +226,6 @@ Si es nuevo en Ethereum y aún no ha hecho ninguna codificación con lenguajes d
 
 - [Documentacíon de Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Documentación de Yul+](https://github.com/fuellabs/yulp)
-- [Campo de juego de Yul+](https://yulp.fuel.sh/)
 - [Post de introducción a Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Ejemplo de contrato {#example-contract-2}
@@ -320,5 +320,5 @@ Si desea obtener comparaciones sobre la sintaxis básica, el ciclo de vida de lo
 
 ## Más información {#further-reading}
 
-- [Biblioteca de contratos de Solidity de OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Biblioteca de contratos de Solidity de OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Configure su entorno de desarrollo local",
   "page-local-environment-solidity-template-desc": "Una plantilla de GitHub para una configuración prediseñada para sus contratos inteligentes de Solidity. Incluye una red local de Hardhat, Waffle para pruebas, Ethers para implementación de carteras, y más.",
   "page-local-environment-solidity-template-logo-alt": "Logo de plantilla Solidity",
-  "page-local-environment-waffle-desc": "La biblioteca de pruebas más avanzada para contratos inteligentes. Úsela sola o con Scaffold-eth o Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Logo de Waffle",
-    "page-local-environment-dappbooster-desc": "Un boilerplate moderno de blockchain, diseñado para empezar rápidamente con su próximo proyecto.",
+  "page-local-environment-dappbooster-desc": "Un boilerplate de blockchain moderno, diseñado para empezar rápidamente con su próximo proyecto.",
   "page-local-environment-dappbooster-logo-alt": "Logo de dAppBooster"
 }

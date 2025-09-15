@@ -4,13 +4,8 @@ import plugin from "tailwindcss/plugin"
 import { screens } from "./src/lib/utils/screen"
 
 const config = {
-  // TODO: Move to "class" strategy after removing Chakra
-  darkMode: ["selector", '[data-theme="dark"]'],
-  content: [
-    "./src/**/*.{ts,tsx}",
-    // TODO: remove after migration
-    "./tailwind/**/*.tsx",
-  ],
+  darkMode: ["selector"],
+  content: ["./src/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     extend: {
@@ -19,6 +14,8 @@ const config = {
         heading: "var(--font-inter)",
         body: "var(--font-inter)",
         monospace: "var(--font-mono)",
+        mono: "var(--font-mono)",
+        sans: "var(--font-inter)",
       },
       fontSize: {
         "7xl": ["4rem", "1.1"], // [7xl, 6xs]
@@ -208,14 +205,14 @@ const config = {
         },
 
         staking: {
-          gold: "var(--staking-gold)",
-          "gold-fill": "var(--staking-gold-fill)",
-          green: "var(--staking-green)",
-          "green-fill": "var(--staking-green-fill)",
-          blue: "var(--staking-blue)",
-          "blue-fill": "var(--staking-blue-fill)",
-          red: "var(--staking-red)",
-          "red-fill": "var(--staking-red-fill)",
+          gold: "hsla(var(--staking-gold))",
+          "gold-fill": "hsla(var(--staking-gold-fill))",
+          green: "hsla(var(--staking-green))",
+          "green-fill": "hsla(var(--staking-green-fill))",
+          blue: "hsla(var(--staking-blue))",
+          "blue-fill": "hsla(var(--staking-blue-fill))",
+          red: "hsla(var(--staking-red))",
+          "red-fill": "hsla(var(--staking-red-fill))",
         },
 
         /** @deprecated */
@@ -223,6 +220,7 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content": "var(--hub-hero-content)",
         "search-background": "var(--search-background)",
+        "gradient-step-1": "var(--gradient-step-1)",
       },
 
       backgroundImage: {
@@ -232,7 +230,13 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "radial-b": "var(--radial-b)",
         "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
+        "gradient-staking": "var(--gradient-staking)",
+        "card-gradient": "var(--card-gradient)",
+        "card-gradient-secondary": "var(--card-gradient-secondary)",
+        "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
+        "ten-year-gradient": "var(--ten-year-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -264,6 +268,7 @@ const config = {
           var(--shadow-window-box-1), var(--shadow-window-box-2),
           var(--shadow-window-box-3), var(--shadow-window-box-4),
           var(--shadow-window-box-5)`,
+        widget: "var(--shadow-widget)",
       },
       spacing: {
         7.5: "1.875rem",
@@ -294,12 +299,20 @@ const config = {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        "pulse-light": {
+          "50%": { opacity: "0.2" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 30s linear infinite",
+        "scroll-left-240": "scroll-left 240s linear infinite",
         "spin-30": "spin 60s linear infinite",
         "counter-spin-30": "spin 60s linear infinite reverse",
         "spin-21": "spin 42s linear infinite",
@@ -308,6 +321,8 @@ const config = {
         "counter-spin-18": "spin 36s linear infinite reverse",
         "spin-9": "spin 18s linear infinite",
         "counter-spin-9": "spin 18s linear infinite reverse",
+        "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "fade-in": "fade-in 150ms ease-in-out",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

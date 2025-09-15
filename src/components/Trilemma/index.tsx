@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
-
 import Card from "@/components/Card"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
 
 import { TriangleSVG, TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Trilemma = () => {
   const { t } = useTranslation("page-roadmap-vision")
@@ -35,11 +35,11 @@ const Trilemma = () => {
             {t("page-roadmap-vision-trilemma-modal-tip")}:
           </p>
         </VStack>
-        <Card {...cardDetail} minH="300px" hideBelow="lg" mt="6" />
+        <Card {...cardDetail} className="mt-6 hidden min-h-[300px] lg:block" />
       </Stack>
       <Sheet open={mobileModalOpen} onOpenChange={handleModalClose}>
         <SheetContent side="bottom" className="rounded-t-[16px]">
-          <Card {...cardDetail} background="none" border="none" my="8" />
+          <Card {...cardDetail} className="my-8 border-none bg-transparent" />
           <SheetClose className="absolute right-3 top-5">
             <span className="sr-only">Close</span>
             <svg

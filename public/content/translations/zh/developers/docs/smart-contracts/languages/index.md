@@ -11,6 +11,8 @@ lang: zh
 - Solidity
 - Vyper
 
+Remix 集成开发环境提供了一个全面的开发环境，用于创建和测试用 Solidity 和 Vyper 语言编写的智能合约。 [尝试使用浏览器版本的 Remix 集成开发环境](https://remix.ethereum.org)开始编写代码。
+
 更有经验的开发者也可能想要使用 Yul：一种用于[以太坊虚拟机](/developers/docs/evm/)的中间语言，或者是 Yul+ 语言，这是一种 Yul 扩展。
 
 如果你很好奇，喜欢帮助测试仍在大力发展的新语言，则可以尝试使用 Fe，这是一种新兴的智能合约语言，目前仍处于起步阶段。
@@ -111,7 +113,6 @@ contract Coin {
 - [备忘单](https://reference.auditless.com/cheatsheet)
 - [Vyper 的智能合约开发框架和工具](/developers/docs/programming-languages/python/)
 - [VyperPunk - 学习保护和破解 Vyper 智能合约](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyper 漏洞示例](https://www.vyperexamples.com/reentrancy)
 - [Vyper 开发中心](https://github.com/zcor/vyper-dev)
 - [Vyper 最热门的智能合约示例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [出色的 Vyper 精选资源](https://github.com/spadebuilders/awesome-vyper)
@@ -219,7 +220,6 @@ def endAuction():
 
 - [Yul 相关文档](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ 相关文档](https://github.com/fuellabs/yulp)
-- [Yul+ 实战场](https://yulp.fuel.sh/)
 - [Yul+ 介绍帖子](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### 合约示例 {#example-contract-2}
@@ -314,5 +314,5 @@ contract GuestBook:
 
 ## 延伸阅读 {#further-reading}
 
-- [OpenZeppelin 的 Solidity 合约库](https://docs.openzeppelin.com/contracts)
+- [OpenZeppelin 的 Solidity 合约库](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity 示例](https://solidity-by-example.org)

@@ -1,5 +1,6 @@
-import { useTranslation } from "next-i18next"
-import { MdArrowForward } from "react-icons/md"
+"use client"
+
+import { ArrowRight } from "lucide-react"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -8,10 +9,10 @@ import { Flex } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import { Accordion } from "../../../tailwind/ui/accordion"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import Translation from "../Translation"
+import { Accordion } from "../ui/accordion"
 
 import {
   AccordionCustomItem,
@@ -19,6 +20,8 @@ import {
   RightColumnPanel,
 } from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./useStablecoinAccordion"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SectionTitle = (props: ChildOnlyProp) => (
   <h4 className="mb-8 mt-0 text-start text-xl font-bold" {...props} />
@@ -47,7 +50,7 @@ const StepBox = (
           </LinkOverlay>
           <p className="mb-0">{t(props.descId)}</p>
         </div>
-        <MdArrowForward className="ms-4 min-w-6" />
+        <ArrowRight className="ms-4 min-w-6 text-2xl" />
       </Flex>
     </LinkBox>
   )

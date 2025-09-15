@@ -9,8 +9,8 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        The Ethereum Protocol Attackathon is live on <a href="https://immunefi.com/audit-competition/ethereum-protocol-attackathon/">Immunefi</a> 
-         until the 25th of January, with up to $1,500,000 in rewards!
+        Pectra is now in scope. After the cantina competition until mainnet
+        activation, Pectra issues have a 2x reward multiplier!
       </p>
     </Center>
   </BannerNotification>

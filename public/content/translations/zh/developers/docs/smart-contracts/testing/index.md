@@ -130,7 +130,7 @@ function auctionEnd() external {
 
 ##### 3. 度量代码覆盖率
 
-[代码覆盖率](https://en.m.wikipedia.org/wiki/Code_coverage)是一种测试指标，用于跟踪在测试过程中执行的代码分支、行数和语句数量。 测试应该具有良好的代码覆盖率，否则你可能会遇到“误报”，即合约通过了所有的测试，但代码中仍存在漏洞。 记录高代码覆盖率，可以确保智能合约中的所有语句/函数都经过了足够的正确性测试。
+[代码覆盖率](https://en.m.wikipedia.org/wiki/Code_coverage)是一种测试指标，用于跟踪在测试过程中执行的代码分支、行数和语句数量。 测试应该具有良好的代码覆盖率，以最大程度地减少未经测试漏洞的风险。 如果没有充足的代码覆盖率，你可能会误认为你的合约是安全的，因为所有测试都通过了，而未经测试的代码路径中仍存在漏洞。 记录高代码覆盖率，可以确保智能合约中的所有语句/函数都经过了足够的正确性测试。
 
 ##### 4. 使用完善的测试框架
 
@@ -150,7 +150,7 @@ function auctionEnd() external {
 
 虽然单元测试可以独立调试合约函数，但集成测试会将智能合约的各个组件作为一个整体进行评估。 集成测试可以检测到跨合约调用或同一智能合约中不同函数之间的交互引起的问题。 例如，集成测试可以帮助检查诸如[继承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)和依赖注入等功能是否正常工作。
 
-如果合约采用模块化架构或在执行过程中与其他链上合约进行接口交互，集成测试非常有用。 一种运行集成测试的方法是在特定的高度[让区块链分叉](/glossary/#fork)（使用 [Forge](https://book.getfoundry.sh/forge/fork-testing) 或[安全帽](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)等工具），并模拟你的合约与已部署合约之间的交互。
+如果合约采用模块化架构或在执行过程中与其他链上合约进行接口交互，集成测试将非常有用。 一种运行集成测试的方法是在特定的高度[让区块链分叉](/glossary/#fork)（使用 [Forge](https://book.getfoundry.sh/forge/fork-testing) 或[安全帽](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)等工具），并模拟你的合约与已部署合约之间的交互。
 
 分叉的区块链将与主网的行为类似，其帐户具有关联的状态和余额。 但是它只是一个沙盒式的本地开发环境，举例来说这意味着你不需要真正的以太币进行交易，同时你的更改也不会影响真实的以太坊协议。
 
@@ -213,7 +213,7 @@ function auctionEnd() external {
 
 ### 在测试网上测试合约 {#testing-contracts-on-testnets}
 
-测试网络或测试网的运行方式与以太坊主网完全相同，唯一的区别在于它使用没有现实价值的以太币 (ETH)。 在[测试网](/developers/docs/networks/#ethereum-testnets)上部署你的合约意味着任何人都可以与之交互（例如，通过去中心化应用程序的前端界面），而无需承担资金风险。
+测试网络或测试网的运行方式与以太坊主网完全相同，唯一的区别在于它使用的是没有现实价值的以太币 (ETH)。 在[测试网](/developers/docs/networks/#ethereum-testnets)上部署你的合约意味着任何人都可以与之交互（例如，通过去中心化应用程序的前端界面），而无需承担资金风险。
 
 这种手动测试形式对于从用户角度评估应用程序的端到端流程非常有用。 在这里，测试人员还可以进行试运行，并报告与合约的业务逻辑和整体功能有关的任何问题。
 
@@ -259,7 +259,7 @@ function auctionEnd() external {
 
 - **[Brownie 单元测试框架](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie 采用了 Pytest，这是一个功能丰富的测试框架，让你只需使用最少的代码即可编写小型测试，并能有效地扩展以用于大型项目，而且具有很强的可扩展性。_
 
-- **[Foundry 测试](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry 提供了 Forge，这是一个快速灵活的以太坊测试框架，能够执行简单的单元测试、燃料优化检查和合约模糊测试。_
+- **[Foundry 测试](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry 提供了 Forge，这是一个快速灵活的以太坊测试框架，能够执行简单的单元测试、燃料优化检查和合约模糊测试。_
 
 - **[Hardhat 测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _基于 ethers.js、Mocha 和 Chai 的智能合约测试框架。_
 

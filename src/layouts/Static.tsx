@@ -1,18 +1,21 @@
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
+import EventsOrganizerBanner from "@/components/Banners/EventsOrganizerBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import Logo from "@/components/Logo"
 import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
@@ -25,9 +28,9 @@ import {
 import MeetupList from "@/components/MeetupList"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
-import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
+import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
@@ -56,9 +59,11 @@ export const staticComponents = {
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
+  Alert,
   Callout,
   Contributors,
   EnergyConsumptionChart,
+  EventsOrganizerBanner,
   GlossaryDefinition,
   GlossaryTooltip,
   Link,
@@ -69,12 +74,17 @@ export const staticComponents = {
   SocialListItem,
   TranslationChartImage,
   UpcomingEventsList,
+  ListenToPlayer,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
+    | "slug"
+    | "tocItems"
+    | "lastEditLocaleTimestamp"
+    | "contentNotTranslated"
+    | "contributors"
   > & {
     frontmatter: StaticFrontmatter
   }
@@ -85,14 +95,14 @@ export const StaticLayout = ({
   tocItems,
   lastEditLocaleTimestamp,
   contentNotTranslated,
+  contributors,
 }: StaticLayoutProps) => {
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="w-full">
-      <TranslatathonBanner pathname={asPath} />
       <Flex
         className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
@@ -102,14 +112,13 @@ export const StaticLayout = ({
             <HubHero
               heroImg={GuideHeroImage}
               header={frontmatter.title}
-              title={""}
               description={frontmatter.description}
             />
           ) : (
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!asPath.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
@@ -123,8 +132,7 @@ export const StaticLayout = ({
 
           <MainArticle className="max-w-3xl">
             <TableOfContents
-              position="relative"
-              zIndex={2}
+              className="relative"
               items={tocItems}
               isMobile
               maxDepth={frontmatter.sidebarDepth || 2}
@@ -132,6 +140,11 @@ export const StaticLayout = ({
             />
             {children}
 
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
             <FeedbackCard isArticle />
           </MainArticle>
         </div>

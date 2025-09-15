@@ -38,7 +38,7 @@ A integração representou a mudança oficial para o uso da Beacon Chain como o 
 Nenhuma história foi perdida na Fusão. À medida que a Rede principal se uniu com a Beacon Chain, ela também integrou todo o histórico transacional do Ethereum.
 
 <InfoBanner>
-Essa transição para a prova de participação mudou o modo como o ether é emitido. Saiba mais sobre <a href="/roadmap/merge/issuance/">Emissão de ether antes de depois do The Merge</a>.
+Essa transição para a prova de participação mudou o modo como o ether é emitido. Saiba mais sobre [Emissão de ether antes de depois do The Merge](/roadmap/merge/issuance/).
 </InfoBanner>
 
 ### Usuários e titulares {#users-holders}
@@ -92,7 +92,7 @@ title="Dapp e desenvolvedores de contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:<
+A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:
 
 <ul>
   <li>estrutura de bloco</li>
@@ -130,7 +130,7 @@ Qualquer pessoa pode executar um nó que não produz blocos, em qualquer mecanis
 
 A capacidade de qualquer pessoa de executar seu próprio nó é <em>absolutamente essencial</em> para manter a descentralização da rede Ethereum.
 
-<a href="/run-a-node/">Mais detalhes sobre como executar seu próprio nó</a>
+[Mais detalhes sobre como executar seu próprio nó](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Taxas de gás são um produto da demanda de rede relativa à capacidade da rede. A Fusão depreciou o uso da prova de trabalho, passando para a prova de participação por consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade da rede ou a taxa de transferência.
 
-Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">planejamento centrado em rollup</a>, os esforços se concentram em dimensionar a atividade do usuário na <a href="/layer-2/">camada 2</a> ao habilitar a rede principal da camada 1 como uma camada de estabelecimento descentralizada e segura, otimizada para o armazenamento de dados de rollup para ajudar a fazer com que as transações de rollup sejam exponencialmente mais acessíveis. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. <a href="/developers/docs/gas/">Mais informações sobre gás e taxas.</a>
+Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">planejamento centrado em rollup</a>, os esforços se concentram em dimensionar a atividade do usuário na [camada 2](/layer-2/) ao habilitar a rede principal da camada 1 como uma camada de estabelecimento descentralizada e segura, otimizada para o armazenamento de dados de rollup para ajudar a fazer com que as transações de rollup sejam exponencialmente mais acessíveis. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais informações sobre gás e taxas.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +163,7 @@ Inicialmente, após a Fusão, os participantes podiam acessar apenas as comissõ
 
 Desde a melhoria da rede Shanghai/Capella, os participantes agora podem designar um <em>endereço de saque</em> para começar a receber pagamentos automáticos de qualquer saldo de participação excedente (ETH superior a 32 de recompensas do protocolo). Essa melhoria também permitiu que um validador desbloqueasse e recuperasse todo o saldo ao sair da rede.
 
-<a href="/staking/withdrawals/">Mais sobre saques de participação</a>
+[Mais sobre saques de participação](/staking/withdrawals/)
 
 </ExpandableCard>
 

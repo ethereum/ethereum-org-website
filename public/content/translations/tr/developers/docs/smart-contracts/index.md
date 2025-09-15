@@ -109,3 +109,4 @@ Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyut
 - [Coinbase: Akıllı sözleşme nedir?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Akıllı sözleşme nedir?](https://chain.link/education/smart-contracts)
 - [Video: Basit Anlatım - Akıllı Sözleşmeler](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Web3 öğrenme ve denetim platformu](https://updraft.cyfrin.io)

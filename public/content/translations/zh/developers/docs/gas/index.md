@@ -1,5 +1,6 @@
 ---
 title: 燃料和费用
+metaTitle: "以太坊燃料和费用：技术概览"
 description:
 lang: zh
 ---
@@ -134,7 +135,6 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 
 - [以太坊 Gas 详解](https://defiprime.com/gas)
 - [减少智能合约的燃料消耗](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [权益证明与工作量证明](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [面向开发者的燃料优化策略](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 文档](https://eips.ethereum.org/EIPS/eip-1559)
 - [Tim Beiko 的 EIP-1559 资源](https://hackmd.io/@timbeiko/1559-resources)。

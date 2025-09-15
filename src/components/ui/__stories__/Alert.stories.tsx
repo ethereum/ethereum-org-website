@@ -1,5 +1,5 @@
 import * as React from "react"
-import { MdInfoOutline } from "react-icons/md"
+import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import {
@@ -71,7 +71,7 @@ export const Banner: Story = {
     <div className="mx-8 flex w-full flex-col gap-4">
       {VARIANTS.map((variant) => (
         <Alert key={variant} variant={variant} size="full" {...args}>
-          <MdInfoOutline className="h-6 w-6" />
+          <Info className="text-2xl" />
           <AlertContent>
             <AlertTitle>Banner use case</AlertTitle>
             <AlertDescription>

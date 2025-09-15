@@ -1,19 +1,19 @@
-import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 
 import {
-  CautionProductGlyphIcon,
-  GreenCheckProductGlyphIcon,
-  UnknownProductGlyphIcon,
-  WarningProductGlyphIcon,
+  CautionProductGlyph,
+  GreenCheckProductGlyph,
+  UnknownProductGlyph,
+  WarningProductGlyph,
 } from "@/components/icons/staking"
 import SocialListItem from "@/components/SocialListItem"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
-
-import { cn } from "@/lib/utils/cn"
+import { Tag } from "@/components/ui/tag"
 
 import { FlagType, Product } from "./types"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const getIconFromName = (
   imageName: string
@@ -31,14 +31,14 @@ const Status = ({ status }: { status: FlagType | undefined }) => {
   const styles = "me-2 size-5"
   switch (status) {
     case "green-check":
-      return <GreenCheckProductGlyphIcon className={styles} />
+      return <GreenCheckProductGlyph className={styles} />
     case "caution":
-      return <CautionProductGlyphIcon className={styles} />
+      return <CautionProductGlyph className={styles} />
     case "warning":
     case "false":
-      return <WarningProductGlyphIcon className={styles} />
+      return <WarningProductGlyph className={styles} />
     default:
-      return <UnknownProductGlyphIcon className={styles} />
+      return <UnknownProductGlyph className={styles} />
   }
 }
 
@@ -51,16 +51,9 @@ const StakingBadge = ({
 }) => {
   const uiTypeColor = type === "ui"
   return (
-    <span
-      className={cn(
-        "rounded-full px-2 py-1 text-xs normal-case",
-        uiTypeColor
-          ? "bg-success-light text-success dark:bg-success-dark dark:text-success-light"
-          : "bg-primary-low-contrast text-primary-high-contrast"
-      )}
-    >
+    <Tag variant="solid" status={uiTypeColor ? "success" : "tag"} size="small">
       {children}
-    </span>
+    </Tag>
   )
 }
 
@@ -198,7 +191,7 @@ export const StakingProductCard = ({
           {data.map(({ label, status }, idx) => (
             <li
               key={idx}
-              className={`my-4 me-0 ms-auto flex items-center gap-1 text-md leading-3 ${status === "false" && "text-body-medium"}`}
+              className={`my-4 me-0 ms-auto flex items-center gap-1 text-base/none ${status === "false" && "text-body-medium"}`}
             >
               <Status status={status} />
               {label}

@@ -108,4 +108,4 @@ const VStack = forwardRef<FlexElement, StackProps>(
 
 VStack.displayName = "VStack"
 
-export { Center, Flex, HStack, Stack, VStack }
+export { Center, Flex, type FlexProps, HStack, Stack, VStack }

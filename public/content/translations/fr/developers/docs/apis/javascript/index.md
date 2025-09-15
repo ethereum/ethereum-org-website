@@ -4,7 +4,7 @@ description: Introduction aux bibliothèques clientes JavaScript, qui vous perme
 lang: fr
 ---
 
-Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
+Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud  Ethereum.
 
 À cette fin, chaque client Ethereum met en œuvre la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), de sorte qu'il existe un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
@@ -258,11 +258,6 @@ ethers.utils.formatEther(balance)
 **light.js -** **_Bibliothèque JS réactive de haut niveau optimisée pour les clients légers_**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
-
-**Web3-wrapper -** **_Alternative Typescript à Web3.js._**
-
-- [Documentation](https://0x.org/docs/web3-wrapper#introduction)
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
 **Alchemyweb3 -** **_Enveloppe autour de Web3.js avec nouvelles tentatives automatiques et API améliorées._**
 

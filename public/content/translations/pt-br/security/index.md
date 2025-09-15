@@ -8,6 +8,8 @@ lang: pt-br
 
 O crescente interesse em criptomoedas traz consigo um risco crescente de golpistas e hackers. Este artigo apresenta algumas práticas recomendadas para mitigar esses riscos.
 
+**Lembre-se: Ninguém da ethereum.org jamais entrará em contato com você. Não responda a e-mails que afirmem ser do suporte oficial da Ethereum.**
+
 <Divider />
 
 ## Noções básicas sobre segurança de criptomoedas {#crypto-security}

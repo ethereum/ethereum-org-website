@@ -11,9 +11,9 @@ Ethereum blok zincirindeki tüm önemli dönüm noktalarının, çatalların ve 
 
 <ExpandableCard title="Çatallama nedir?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Çatallanmalar, ağda önemli teknik yükseltmeler veya değişiklikler yapılması gerektiğinde ortaya çıkar: Bunlar, genellikle <a href="/eips/">[Ethereum İyileştirme Önerileri (EIP'ler)]</a>'den kaynaklanır ve protokolün "kurallarını" değiştirir.
+Çatallanmalar, ağda önemli teknik yükseltmeler veya değişiklikler yapılması gerektiğinde ortaya çıkar: Bunlar, genellikle [[Ethereum İyileştirme Önerileri (EIP'ler)]](/eips/)'den kaynaklanır ve protokolün "kurallarını" değiştirir.
 
-Geleneksel, merkezden kontrol edilen yazılımlarda yükseltmelere ihtiyaç duyulduğunda, şirket son kullanıcı için sadece yeni bir versiyon yayınlar. Blok zincirleri farklı çalışır çünkü merkezi bir sahiplik yoktur. <a href="/developers/docs/nodes-and-clients/">Ethereum istemcileri</a> yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir. Ayrıca blok yaratıcıları (iş ispatı dünyasındaki madenciler, hisse ispatı dünyasındaki doğrulayıcılar) ve düğümler, bloklar oluşturmalı ve yeni kurallara göre doğrulama yapmalıdır. <a href="/developers/docs/consensus-mechanisms/">Mutabakat mekanizmaları hakkında daha fazla bilgi</a>
+Geleneksel, merkezden kontrol edilen yazılımlarda yükseltmelere ihtiyaç duyulduğunda, şirket son kullanıcı için sadece yeni bir versiyon yayınlar. Blok zincirleri farklı çalışır çünkü merkezi bir sahiplik yoktur. [Ethereum istemcileri](/developers/docs/nodes-and-clients/) yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir. Ayrıca blok yaratıcıları (iş ispatı dünyasındaki madenciler, hisse ispatı dünyasındaki doğrulayıcılar) ve düğümler, bloklar oluşturmalı ve yeni kurallara göre doğrulama yapmalıdır. [Mutabakat mekanizmaları hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/)
 
 Bu kural değişiklikleri, ağda geçici bir bölünme oluşturabilir. Yeni bloklar yeni ya da eski kurallara göre yaratılabilir. Çatallar genellikle önceden kararlaştırılır, böylece müşteriler değişiklikleri uyum içinde benimser ve yükseltmelerle birlikte çatal ana zincir hâline gelir. Fakat nadir durumlarda çatallanmalar üzerindeki anlaşmazlıklar, ağın geçici olarak ayrılmasına neden olabilir: En bilineni, <a href="#dao-fork">DAO çatallanması</a> ile Ethereum Classic'in yaratılmasıdır.
 
@@ -285,10 +285,10 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>Ethereum'un Zcash gibi gizlilik koruyucu bir para birimiyle çalışmasına olanak verir.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em><a href="/glossary/#gas">gaz</a> maliyetlerini iyileştiren daha ucuz bir kriptografidir.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em><code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">işlem kodu</a> ekleyerek Ethereum'u tekrar saldırılarına karşı korur.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>[gaz](/glossary/#gas) maliyetlerini iyileştiren daha ucuz bir kriptografidir.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em><code>CHAINID</code> [işlem kodu](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ekleyerek Ethereum'u tekrar saldırılarına karşı korur.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>işlem kodu gaz fiyatlarını tüketime daylı olarak iyileştirme.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>bloklarda daha fazla veriye olanak tanımak amacıyla Çağrı Verisi maliyetini azaltır – <a href="/developers/docs/scaling/#layer-2-scaling">Katman 2 ölçeklendirmesi</a> için kullanışlıdır.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>bloklarda daha fazla veriye olanak tanımak amacıyla Çağrı Verisi maliyetini azaltır – [Katman 2 ölçeklendirmesi](/developers/docs/scaling/#layer-2-scaling) için kullanışlıdır.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>diğer işlem 
  kodu gaz ücret değişiklikleri.</em></li>
 </ul>
@@ -306,7 +306,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 Konstantinopolis çatalı:
 
 - [Hisse ispatı uygulanmadan](#beacon-chain-genesis) önce blokzincirin donmamasını sağladı.
-- EVM</'deki belirli işlemlerin [gaz](/glossary/#gas) maliyetini optimize etti bir>.
+- EVM deki belirli işlemlerin [gaz](/glossary/#gas) maliyetini optimize etti bir.
 - Henüz oluşturulmamış adreslerle etkileşim kurma yeteneğini ekledi.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -346,13 +346,13 @@ Bizans çatalı:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em><code>REVERT</code> işlem kodu ekler.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>başarı ya da başarısızlığı bildirmek için işlem makbuzlarına durum alanı eklendi.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em><a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>'ı mümkün kılmak için eliptik eğri ve sayıl çarpım ekler.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em><a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>'ı mümkün kılmak için eliptik eğri ve sayıl çarpım ekler.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>[ZK-Snarks](/developers/docs/scaling/zk-rollups/)'ı mümkün kılmak için eliptik eğri ve sayıl çarpım ekler.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>[ZK-Snarks](/developers/docs/scaling/zk-rollups/)'ı mümkün kılmak için eliptik eğri ve sayıl çarpım ekler.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>RSA imza doğrulasını mümkün kılar.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>değişken uzunlukta geri dönüş değerleri için destek ekler.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>diğer sözleşmelere durum değiştirmeyen çağrıların eklenmesine imkan veren <code>STATICCALL</code> işlem kodunu ekler.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>zorluk ayarlama formülünü değiştirir.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em><a href="/glossary/#difficulty-bomb">bomba değerini</a> 1 yıl geciktirir ve blok ödülünü 5'ten 3 ETH'ye düşürür.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[bomba değerini](/glossary/#difficulty-bomb) 1 yıl geciktirir ve blok ödülünü 5'ten 3 ETH'ye düşürür.</em></li>
 </ul>
 
 </ExpandableCard>

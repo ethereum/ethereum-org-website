@@ -1,12 +1,17 @@
 import { Children, type ReactElement } from "react"
-import { useTranslation } from "next-i18next"
-import { IoMdCopy } from "react-icons/io"
-import { MdCheck } from "react-icons/md"
-import { Modal, ModalBody, ModalContent, ModalOverlay } from "@chakra-ui/react"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import { Button } from "./ui/buttons/Button"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog-modal"
 
 import { useClipboard } from "@/hooks/useClipboard"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
@@ -18,57 +23,38 @@ type CodeModalProps = {
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const { t } = useTranslation()
   const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
-    .children.props.children
+    .children
 
   const { onCopy, hasCopied } = useClipboard()
 
   return (
-    <Modal
-      isOpen={isOpen}
-      scrollBehavior="inside"
-      onClose={() => setIsOpen(false)}
-    >
-      <ModalOverlay hideBelow="md" />
-      <ModalContent
-        hideBelow="md"
-        maxW="100vw"
-        marginTop="auto"
-        marginBottom="0"
-        maxHeight="50%"
-        borderRadius="0"
-        p={{ base: "0", md: "0" }}
-        gap="0"
-      >
-        <div className="flex items-center border-y bg-background px-6 py-3 font-monospace uppercase">
-          <h2 className="text-md font-normal">{title}</h2>
-          <Button
-            variant="ghost"
-            className="ms-auto text-sm"
-            size="sm"
-            isSecondary
-            onClick={() => setIsOpen(false)}
-          >
-            {t("close")}
-          </Button>
-        </div>
-        <ModalBody p="0">{children}</ModalBody>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogContent className="absolute inset-0 mb-0 mt-auto max-h-[50%] max-w-[100vw]">
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+        </DialogHeader>
+        <DialogDescription asChild>
+          <div className="overflow-y-auto">{children}</div>
+        </DialogDescription>
         <Button
           variant="outline"
           onClick={() => onCopy(codeSnippet)}
-          className="absolute right-4 top-20" // Force right, code always LTR
+          className="absolute right-19 top-24" // Force right, code always LTR
         >
           {hasCopied ? (
             <>
-              <MdCheck /> {t("copied")}
+              {t("copied")}
+              <ClipboardCheck className="ms-1" />
             </>
           ) : (
             <>
-              <IoMdCopy /> {t("copy")}
+              {t("copy")}
+              <Clipboard className="ms-1" />
             </>
           )}
         </Button>
-      </ModalContent>
-    </Modal>
+      </DialogContent>
+    </Dialog>
   )
 }
 

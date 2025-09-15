@@ -1,12 +1,10 @@
-import React from "react"
-import { Flex, type FlexProps } from "@chakra-ui/react"
+import type { ChildOnlyProp } from "@/lib/types"
 
-export const Template = (props: FlexProps) => (
+import { Flex } from "../ui/flex"
+
+export const Template = (props: ChildOnlyProp) => (
   <Flex
-    w="full"
-    justify="center"
-    direction={{ base: "column", md: "row" }}
-    gap={{ base: 6, md: 8 }}
+    className="w-full justify-center gap-6 max-md:flex-col md:gap-8"
     {...props}
   />
 )

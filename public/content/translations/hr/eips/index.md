@@ -66,6 +66,6 @@ Svatko može izraditi EIP. Prije nego što pošaljete prijedlog, pročitajte dok
 
 <cite class="citation">
 
-Vlasnik dijela sadržaja stranice [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) je Hudson Jameson
+Vlasnik dijela sadržaja stranice [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) je Hudson Jameson
 
 </cite>

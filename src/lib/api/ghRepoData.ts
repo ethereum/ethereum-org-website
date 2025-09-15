@@ -1,26 +1,13 @@
 import { Framework } from "@/lib/interfaces"
 
 import EthDiamondBlackImage from "@/public/images/assets/eth-diamond-black.png"
-import DappBooster from "@/public/images/dev-tools/dappbooster.png"
-import EpirusImage from "@/public/images/dev-tools/epirus.png"
 import FoundryImage from "@/public/images/dev-tools/foundry.png"
 import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
-import WaffleImage from "@/public/images/dev-tools/waffle.png"
+import DappBooster from "@/public/images/dev-tools/dappbooster.png"
 
 const frameworksList: Array<Framework> = [
-  {
-    id: "waffle",
-    url: "https://getwaffle.io/",
-    githubUrl: "https://github.com/EthWorks/waffle",
-    background: "#ffffff",
-    name: "Waffle",
-    description:
-      "page-developers-local-environment:page-local-environment-waffle-desc",
-    alt: "page-developers-local-environment:page-local-environment-waffle-logo-alt",
-    image: WaffleImage,
-  },
   {
     id: "Kurtosis Ethereum Package",
     url: "https://github.com/kurtosis-tech/ethereum-package",
@@ -53,17 +40,6 @@ const frameworksList: Array<Framework> = [
       "page-developers-local-environment:page-local-environment-brownie-desc",
     alt: "page-developers-local-environment:page-local-environment-brownie-logo-alt",
     image: EthDiamondBlackImage,
-  },
-  {
-    id: "epirus",
-    url: "https://www.web3labs.com/epirus",
-    githubUrl: "https://github.com/web3labs/epirus-free",
-    background: "#ffffff",
-    name: "Epirus",
-    description:
-      "page-developers-local-environment:page-local-environment-epirus-desc",
-    alt: "page-developers-local-environment:page-local-environment-epirus-logo-alt",
-    image: EpirusImage,
   },
   {
     id: "createethapp",
@@ -130,7 +106,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )
@@ -145,7 +121,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )

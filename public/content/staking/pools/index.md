@@ -1,6 +1,6 @@
 ---
 title: Pooled staking
-description: An overview of how to get started with pooled ETH staking
+description: Learn about staking pools
 lang: en
 template: staking
 emoji: ":money_with_wings:"
@@ -17,7 +17,7 @@ summaryPoints:
 
 Staking pools are a collaborative approach to allow many with smaller amounts of ETH to obtain the 32 ETH required to activate a set of validator keys. Pooling functionality is not natively supported within the protocol, so solutions were built out separately to address this need.
 
-Some pools operate using smart contracts, where funds can be deposited to a contract, which trustlessly manages and tracks your stake, and issues you a token that represents this value. Other pools may not involve smart contracts and are instead mediated off-chain.
+Some pools operate using smart contracts, where funds can be deposited to a contract, which trustlessly manages and tracks your stake, and issues you a token that represents this value. Other pools may not involve smart contracts and are instead mediated offchain.
 
 ## Why stake with a pool? {#why-stake-with-a-pool}
 

@@ -8,7 +8,7 @@ lang: zh
 
 公共区块链（比如以太坊）使智能合约的安全性问题变的更加复杂。 已部署的合约代码_通常_无法更改因而不能给安全问题打补丁，并且由于这种不可变性，从智能合约中盗取的资产极难追踪并且绝大多数无法挽回。
 
-虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
+虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
 
 上述几个事件迫使开发者必须付诸努力，构建安全、稳健、恢复力强的智能合约。 智能合约安全性是每个开发者都需要学习和研究的严肃问题。 本指南将介绍针对以太坊开发者的安全性注意事项，并研究增强智能合约安全性的资源。
 
@@ -78,7 +78,7 @@ contract VendingMachine {
 
 遗憾的是，单独使用单元测试对提高智能合约的安全性效果甚微。 单元测试也许可以证明函数对于模拟数据正确执行，但单元测试的有效性受限于编写的测试。 这就意味着很难检测到威胁智能合约安全性的边缘情况和漏洞。
 
-更好的方法是将单元测试与基于属性的测试相结合，后者是通过[静态和动态分析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)进行的。 静态分析依赖于底层的表示（例如[控制流程图](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象语法树](https://deepsource.io/glossary/ast/)）分析可达到的程序状态和执行路径。 相比之下，动态分析技术（例如模糊测试）用随机输入值执行合约代码，以检测违反安全属性的操作。
+更好的方法是将单元测试与基于属性的测试相结合，后者是通过[静态和动态分析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)进行的。 静态分析依赖于底层的表示（例如[控制流程图](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象语法树](https://deepsource.io/glossary/ast/)）分析可达到的程序状态和执行路径。 同时，动态分析技术（[例如智能合约模糊测试](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)）使用随机输入值执行合约代码，以检测违反安全属性的操作。
 
 [形式化验证](/developers/docs/smart-contracts/formal-verification)是另一项验证智能合约安全属性的技术。 与常规测试不同，形式化验证能够确证智能合约中没有错误。 这是通过制定细致描述安全属性的形式化规范并证明智能合约的形式化模型符合这一规范来实现的。
 
@@ -90,7 +90,10 @@ contract VendingMachine {
 
 进行独立代码审核的方式之一是委托执行智能合约审计。 审计员是确保智能合约安全、没有质量缺陷和设计错误的关键所在。
 
-尽管如此，你也不应将审计看作终极方案。 智能合约审计无法发现所有漏洞并且主要是为了额外增加一轮审核，这有助于检测到开发者在最初的开发和测试中遗漏的问题。 你还应遵循[与审计员合作的最佳做法](https://twitter.com/tinchoabbate/status/1400170232904400897)（例如正确记录代码并添加行内注释），让智能合约审计发挥最大作用。
+尽管如此，你也不应将审计看作终极方案。 智能合约审计无法发现所有漏洞并且主要是为了额外增加一轮审核，这有助于检测到开发者在最初的开发和测试中遗漏的问题。 你还应遵循与审计员合作的最佳做法（例如正确记录代码并添加行内注释），让智能合约审计发挥最大作用。
+
+- [智能合约审计提示和技巧](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [充分利用你的审计](https://inference.ag/blog/2023-08-14-tips/) - _推理_
 
 #### 漏洞奖励 {#bug-bounties}
 
@@ -112,7 +115,7 @@ contract VendingMachine {
 
 - 在[开发环境](/developers/docs/frameworks/)下测试、编译、和部署智能合约
 
-- 在如 Mythril 和 Slither 等基本代码分析工具中运行代码。 理想情况下，应在合并每个拉取请求前进行这一操作，并比较输出中的不同之处
+- 通过基本代码分析工具运行代码，例如 [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn) 、Mythril 和 Slither。 理想情况下，应在合并每个拉取请求前进行这一操作，并比较输出中的不同之处
 
 - 确保代码在编译时没有错误，并且 Solidity 编译器没有发出警告
 
@@ -126,7 +129,7 @@ contract VendingMachine {
 
 虽然以太坊智能合约默认是不可变的，但通过使用升级模式可以实现一定程度的可变性。 如果重大缺陷导致合约不可用并且部署新逻辑是最可行的选择，有必要升级合约。
 
-合约升级机制的原理有所不同，但“代理模式”是智能合约升级最常见的方法之一。 代理模式将应用程序的状态和逻辑拆分到_两个_合约中。 第一个合约（称为“代理合约”）存储状态变量（如用户余额），而第二个合约（称为"逻辑合约"）存放执行合约函数的代码。
+合约升级机制的原理有所不同，但“代理模式”是智能合约升级最常见的方法之一。 [代理模式](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern)将应用程序的状态和逻辑划分为_两个_合约。 第一个合约（称为“代理合约”）存储状态变量（如用户余额），而第二个合约（称为"逻辑合约"）存放执行合约函数的代码。
 
 帐户与代理合约互动，代理合约通过[`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries)的低级调用将所有功能调用分发给逻辑合约。 与普通的消息调用不同，`delegatecall()` 确保在逻辑的合约地址上运行的代码是在调用合约的语境下执行。 这意味着逻辑合约将始终写入代理的存储空间（而非自身存储空间），并且 `msg.sender` 和 `msg.value` 的原始值保持不变。
 
@@ -214,13 +217,13 @@ contract EmergencyStop {
 
 防止与链上治理有关的问题的一种方法是[使用时间锁](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/)。 时间锁阻止智能合约执行某些操作，直到经过特定的时间长度。 其他策略包括根据每个代币锁定的时间长短为其分配“投票权重”，或者检测一个地址在历史时期（例如，过去的 2-3 个区块）而不是当前区块的投票权。 这两种方法都减少了快速累积投票权以影响链上投票的可能性。
 
-更多关于[设计安全的治理系统](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)和[去中心化自治组织中的不同投票机制](https://hackernoon.com/governance-is-the-holy-grail-for-daos)的信息。
+在分享的链接中查看更多关于[设计安全的治理系统](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)、[去中心化自治组织中不同的投票机制](https://hackernoon.com/governance-is-the-holy-grail-for-daos)和[利用去中心化金融的常见去中心化自治组织攻击向量](https://dacian.me/dao-governance-defi-attacks)的信息
 
 ### 8. 将代码的复杂性降到最低 {#reduce-code-complexity}
 
 传统的软件开发者熟悉 KISS（“保持简单、保持愚蠢”）原则，该原则建议不要将不必要的复杂性带入到软件设计中。 这与长期以来的见解“复杂的系统有着复杂的失败方式”不谋而合，而且复杂系统更容易出现代价高昂的错误。
 
-编写智能合约时简洁化尤其重要，因为智能合约有可能控制大量的价值。 实现简洁化的一个窍门是，编写智能合约时在允许的情况下重用已存在的库，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)。 因为开发者对这些库已经进行了广泛的审计和测试，使用它们会减少从零开始编写新功能时引入漏洞的几率。
+编写智能合约时简洁化尤其重要，因为智能合约有可能控制大量的价值。 实现简洁化的一个窍门是，编写智能合约时在允许的情况下重用已存在的库，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)。 因为开发者对这些库已经进行了广泛的审计和测试，使用它们会减少从零开始编写新功能时引入漏洞的几率。
 
 另一个常见的建议是通过将业务逻辑拆分到多个合约中，编写小型函数并保持合约模块化。 编写更简单的代码不仅仅会减少智能合约中的攻击面，还让推理整个系统的正确性并及早发现可能的设计错误变得更加容易。
 
@@ -301,7 +304,7 @@ contract Victim {
 - 最后 `Victim` 将第一笔交易（和后续交易）的结果应用于其状态，所以 `Attacker` 的余额被设置为 0
 ```
 
-总结起来就是，由于调用者的余额在函数执行完成之前没有设置为 0，所以后续的调用会成功，让调用者可以多次提取他们的余额。 这种攻击可以用来提空智能合约中的资金，就像 [2016 DAO 黑客攻击](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)中发生情况的那样。 正如[公开的重入攻击列表](https://github.com/pcaversaccio/reentrancy-attacks)所示，当前重入攻击仍是智能合约所面临的一个严重问题。
+总结起来就是，由于调用者的余额在函数执行完成之前没有设置为 0，所以后续的调用会成功，让调用者可以多次提取他们的余额。 这种攻击可以用来提空智能合约中的资金，就像 [2016 DAO 黑客攻击](https://www.coindesk.com/learn/understanding-the-dao-attack)中发生情况的那样。 正如[公开的重入攻击列表](https://github.com/pcaversaccio/reentrancy-attacks)所示，当前重入攻击仍是智能合约所面临的一个严重问题。
 
 ##### 如何防止重入攻击
 
@@ -343,7 +346,7 @@ contract MutexPattern {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
-        bool (success, ) = msg.sender.call{value: _amount}("");
+        (bool success, ) = msg.sender.call{value: _amount}("");
         require(success);
 
         return true;
@@ -351,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-还可以使用[拉取支付](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) 系统，该系统要求用户从智能合约中提取资金，而不是使用将资金发送到帐户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
+还可以使用[拉取支付](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) 系统，该系统要求用户从智能合约中提取资金，而不是使用将资金发送到帐户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
 
 #### 整数下溢和溢出 {#integer-underflows-and-overflows}
 
@@ -436,19 +439,19 @@ contract Attack {
 
 #### 预言机操纵 {#oracle-manipulation}
 
-[预言机](/developers/docs/oracles/)获取链下信息并将这些信息发送到链上供智能合约使用。 通过预言机，你可以设计出和链下系统（资本市场）交互的智能合约，极大地拓展它们的应用。
+[预言机](/developers/docs/oracles/)获取链下信息并将这些信息发送到链上供智能合约使用。 通过预言机，你可以设计出和链下系统（例如资本市场）交互的智能合约，极大地拓展它们的应用。
 
 但如果预言机损坏并向链上发送错误信息，智能合约将基于错误的输入执行，这会造成问题。 这就是“预言机问题”的根源，它涉及确保区块链预言机提供准确、最新、即时的信息。
 
 相关的安全问题就是利用链上预言机（例如去中心化交易所）获取一种资产的现货价格。 [去中心化金融 (DeFi)](/defi/) 行业中的借贷平台经常利用这种方法确定用户抵押品的价值，进而确定他们能借入多少。
 
-去中心化交易所 (DEX) 的价格往往是准确的，很大程度上源于套利者的套利行为帮助市场恢复平价。 然而，去中心化交易所的价格容易受到操纵，尤其当链上预言机根据历史交易模式计算资产价格时（通常是这种情况）。
+去中心化交易所 (DEX) 的价格往往是准确的，很大程度上源于套利者的套利行为帮助市场恢复平价。 然而，这样容易受到操纵，尤其当链上预言机根据历史交易模式计算资产价格时（通常是这种情况）。
 
 例如，攻击者可以在与你的借贷合约交互前，通过获得闪电贷人为拉高资产的现货价格。 在向去中心化交易所 (DEX) 查询资产价格时，将返回一个高于正常水平的值（由于攻击者对大宗“买入订单”影响了资产的需求），这样攻击者就可以借来比原本更多的资金。 这种“闪电贷攻击”一直在利用对去中心化金融应用程序之间的价格预言机的依赖，使许多协议遭受了数百万美元的资金损失。
 
 ##### 如何防止预言机操纵
 
-避免预言机操纵的最低要求是，使用从多种来源查询信息的去中心化预言机网络，以避免单点故障。 在大多数情况下，去中心化预言机有內置的加密经济学激励机制，鼓励预言机节点报告正确的信息，使它们比中心化预言机更安全。
+[避免预言机操纵](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples)的最低要求是使用从多个来源查询信息的去中心化预言机网络，以避免单点故障。 在大多数情况下，去中心化预言机有內置的加密经济学激励机制，鼓励预言机节点报告正确的信息，使它们比中心化预言机更安全。
 
 如果你打算通过查询链上预言机获得资产价格，考虑使用实施了时间加权平均价格 (TWAP) 机制的预言机。 [时间加权平均价格预言机](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles)查询资产在两个不同时间点（可以修改）的价格，并计算出基于所得平均值的现货价格。 选择较长的时间段可以保护协议免受价格操纵，因为最近执行的大宗订单无法影响资产价格。
 
@@ -468,19 +471,17 @@ contract Attack {
 
 - **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码你的 Solidity 合约函数和构造函数参数。_
 
-### 智能合约监测工具 {#smart-contract-monitoring-tools}
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity 静态分析器，遍历抽象语法树 (AST) 来找出可疑漏洞，并以易于使用的 Mardown 格式打印输出问题。_
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一种用于自动监测和响应智能合约中事件、函数和交易参数的工具。_
+### 智能合约监测工具 {#smart-contract-monitoring-tools}_
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _一种在智能合约或钱包发生异常或意外事件时，为你获取实时通知的工具。_
 
 ### 智能合约的安全管理工具 {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _用于智能合约管理的管理界面，包括访问控制、升级和暂停功能。_
-
 - **[Safe](https://safe.global/)** - _在以太坊上运行的智能合约钱包，需要最少人数批准交易后交易才能进行 (M-of-N)。_
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _用于实现管理功能的合约库，包括管理合约所有权、升级、访问限制、治理、可暂停等功能。_
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _用于实现管理功能的合约库，包括管理合约所有权、升级、访问限制、治理、可暂停等功能。_
 
 ### 智能合约审计服务 {#smart-contract-auditing-services}
 
@@ -500,11 +501,21 @@ contract Attack {
 
 - **[Hacken](https://hacken.io)** - _Web3 网络安全审计公司，为区块链安全提供全方位解决方案。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
 
 - **[HashEx](https://hashex.org/)** - _HashEx 专注于区块链和智能合约审计，确保加密货币安全，提供智能合约开发、渗透测试、区块链咨询等服务。_
 
 - **[Code4rena](https://code4rena.com/)** - _竞争性审计平台，激励智能合约安全专家查找漏洞，帮助提高 web3 的安全性。_
+
+- **[CodeHawks](https://codehawks.com/)** - _竞争性审计平台，为安全研究者举行智能合约审计比赛。_
+
+- **[Cyfrin](https://cyfrin.io)** - _Web3 安全发电站，通过产品和智能合约审计服务提高加密货币安全性。_
+
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 安全公司，通过经验丰富的审计员团队和一流的工具，为区块链系统提供安全审计。_
+
+- **[Oxorio](https://oxor.io/)** - _智能合约审计和区块链安全服务，为加密货币公司和去中心化金融项目提供以太坊虚拟机、Solidity、零知识、跨链技术方面的专业知识。_
+
+- **[Inference](https://inference.ag/)** - _安全审计公司，专注于为基于以太坊虚拟机的区块链进行智能合约审计。 多亏他们的审计专家，他们发现了潜在问题并提出了可行的解决方案，在部署之前进行修复_
 
 ### 漏洞奖励平台 {#bug-bounty-platforms}
 
@@ -514,9 +525,13 @@ contract Attack {
 
 - **[HackenProof](https://hackenproof.com/)** - _针对加密项目（去中心化金融、智能合约、钱包、中心化交易所等）的专业级漏洞奖励平台，借助这一平台，安全专家可提供漏洞诊断服务，研究人员会因为提供经过验证的相关漏洞报告获得报酬。_
 
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Web3 中的智能合约安全性承销商，通过智能合约管理审计人员的报酬，以确保相关漏洞得到公平的支付。_
+
+-  **[CodeHawks](https://www.codehawks.com/)** - _竞争性漏洞奖金平台，供审计人员参与安全竞赛和挑战，并且（很快）能够参与他们自己的私人审计。_
+
 ### 已知智能合约漏洞及利用情况的刊物 {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys：已知的智能合约攻击](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _针对最重要的合约漏洞提供适合初学者的解释，多数案例提供了代码示例。_
+- **[ConsenSys：已知的智能合约攻击](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _针对最重要的合约漏洞提供适合初学者的解释，多数案例提供了代码示例。_
 
 - **[SWC 注册表](https://swcregistry.io/)** - _适用于以太坊智能合约的常见缺陷枚举 (CWE) 的精选项目列表。_
 
@@ -530,6 +545,8 @@ contract Attack {
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _基于 Web3 和 Solidity 的实战演练，其中每个等级都是一个需要“攻破”的智能合约。_
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _以奇幻冒险作为背景的智能合约黑客挑战。 成功完成挑战还有机会参与私人漏洞奖金项目。_
+
 ### 确保智能合约安全的最佳做法 {#smart-contract-security-best-practices}
 
 - **[ConsenSys：以太坊智能合约安全最佳实践](https://consensys.github.io/smart-contract-best-practices/)** - _保护以太坊智能合约安全的完整指南列表。_
@@ -542,6 +559,8 @@ contract Attack {
 
 - **[智能合约安全验证标准](https://github.com/securing/SCSVS)** - _旨在确立智能合约安全性标准的第十四部分检查清单，面向开发者、架构师、安全审核者和供应商。_
 
+- **[学习智能合约安全与审计](https://updraft.cyfrin.io/courses/security)**  - _智能合约安全与审计终极课程，专为寻求提升其安全性最佳做法和希望成为安全研究者的智能合约开发者创建。_
+
 ### 智能合约安全性教程 {#tutorials-on-smart-contract-security}
 
 - [如何编写安全的智能合约](/developers/tutorials/secure-development-workflow/)
@@ -553,3 +572,5 @@ contract Attack {
 - [智能合约安全性准则](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [如何安全整合代币合约与任意代币](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft - 智能合约安全与审计完整课程](https://updraft.cyfrin.io/courses/security)

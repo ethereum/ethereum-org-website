@@ -6,9 +6,9 @@ lang: it
 
 I contratti intelligenti sono estremamente flessibili e in grado di gestire grandi quantità di valori e dati, eseguendo allo stesso tempo una logica immutata basata sul codice distribuito sulla blockchain. Questo ha dato vita a un vivace ecosistema di applicazioni senza fiducia e decentralizzate, che offrono molti vantaggi rispetto ai sistemi legacy. I contratti intelligenti rappresentano anche un'opportunità per gli utenti malevoli che provano a speculare sfruttandone le vulnerabilità.
 
-Blochchain pubbliche come Ethereun rendono ancora più complessa la questione della sicurezza dei contratti intelligenti. Una volta distribuito, il codice dei contratti _di solito_ non può essere modificato per correggere falle di sicurezza. In più, le risorse rubate dai contratti intelligenti sono estremamente difficili da tracciare e praticamente irrecuperabili per via della loro immutabilità.
+Blochchain pubbliche come Ethereum rendono ancora più complessa la questione della sicurezza dei contratti intelligenti. Una volta distribuito, il codice dei contratti _di solito_ non può essere modificato per correggere falle di sicurezza. In più, le risorse rubate dai contratti intelligenti sono estremamente difficili da tracciare e praticamente irrecuperabili per via della loro immutabilità.
 
-Anche se i dati possono variare, si stima che l'ammontare totale di valore rubato o perduto a causa di falle di sicurezza nei contratti intelligenti superi facilmente $1 miliardo. In questo sono inclusi incidenti rilievo come la [violazione della DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore superiore a $1 miliardo al prezzo attuale), la [violazione del portafoglio multi-firma di Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30 milioni sottratti dagli hacker), e la questione del [portafoglio Parity congelato](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (più di $300 milioni di ETH bloccati per sempre).
+Anche se i dati possono variare, si stima che l'ammontare totale di valore rubato o perduto a causa di falle di sicurezza nei contratti intelligenti superi facilmente $1 miliardo. In questo sono inclusi incidenti rilievo come la [violazione della DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore superiore a $1 miliardo al prezzo attuale), la [violazione del portafoglio multi-firma di Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30 milioni sottratti dagli hacker), e la questione del [portafoglio Parity congelato](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (più di $300 milioni di ETH bloccati per sempre).
 
 Per via di tutte queste problematiche, è imperativo per gli sviluppatori investire risorse nella costruzione di contratti intelligenti sicuri, robusti e resilienti. La sicurezza dei contratti intelligenti è una questione seria, su cui ogni sviluppatore farebbe bene a informarsi. Questa guida tratterà alcune considerazioni sulla sicurezza rivolte agli sviluppatori Ethereum ed esaminerà le risorse per migliorare la sicurezza dei contratti intelligenti.
 
@@ -78,7 +78,7 @@ Il metodo consueto prevede di scrivere piccole unità di prova utilizzando i dat
 
 Sfortunatamente, gli unit test sono poco efficaci per migliorare la sicurezza del contratto intelligente se utilizzato in isolamento. Uno unit test potrebbe provare che una funzione sia eseguita correttamente per i dati di simulazione, ma gli unit test sono efficaci solo quanto i test scritti. Questo rende difficile rilevare i casi limite non identificati e le vulnerabilità che potrebbero spezzare la sicurezza del tuo contratto intelligente.
 
-Un approccio migliore è combinare gli unit test con i test basati sulle proprietà, eseguiti usando l'[analisi statica e dinamica](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). L'analisi statica si affida alle rappresentazioni di basso livello, come i [grafici del flusso di controllo](https://en.wikipedia.org/wiki/Control-flow_graph) e gli [alberi di sintassi astratta](https://deepsource.io/glossary/ast/) per analizzare gli stati raggiungibili del programma e i percorsi d'esecuzione. Nel mentre, le tecniche di analisi dinamica, come il fuzzing, eseguono il codice del contratto con valori di input casuali per rilevare le operazioni che violano le proprietà di sicurezza.
+Un approccio migliore è combinare gli unit test con i test basati sulle proprietà, eseguiti usando l'[analisi statica e dinamica](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). L'analisi statica si affida alle rappresentazioni di basso livello, come i [grafici del flusso di controllo](https://en.wikipedia.org/wiki/Control-flow_graph) e gli [alberi di sintassi astratta](https://deepsource.io/glossary/ast/) per analizzare gli stati raggiungibili del programma e i percorsi d'esecuzione. Nel mentre, le tecniche di analisi dinamica, come il [fuzzing dei contratti intelligenti](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), eseguono il codice del contratto con valori di input casuali per rilevare le operazioni che violano le proprietà di sicurezza.
 
 La [verifica formale](/developers/docs/smart-contracts/formal-verification) è un'altra tecnica per verificare le proprietà di sicurezza nei contratti intelligenti. A differenza dei test regolari, la verifica formale può dimostrare in modo conclusivo l'assenza di errori in un contratto intelligente. Ciò si ottiene creando una specifica formale che racchiuda le proprietà di sicurezza desiderate e dimostrando che un modello formale dei contratti aderisce a tale specifica.
 
@@ -90,7 +90,10 @@ Dopo aver testato il tuo contratto, è bene richiedere ad altri di verificare il
 
 Commissionare il controllo di un contratto intelligente è un modo di condurre una revisione indipendente del codice. I revisori rivestono un ruolo importante nell'assicurare che i contratti intelligenti siano sicuri e liberi da difetti di qualità ed errori di progettazione.
 
-Detto ciò, dovresti evitare di trattare i controlli come una bacchetta magica. I controlli del contratto intelligente non troveranno ogni bug e sono principalmente progettati per fornire un ulteriore ciclo di revisioni, che possono aiutare a rilevare i problemi non identificati dagli sviluppatori durante lo sviluppo e test iniziali. Inoltre, dovresti seguire le [migliori pratiche per lavorare con i revisori](https://twitter.com/tinchoabbate/status/1400170232904400897), come documentare correttamente il codice e aggiungere commenti inline, per massimizzare i benefici del controllo di un contratto intelligente.
+Detto ciò, dovresti evitare di trattare i controlli come una bacchetta magica. I controlli del contratto intelligente non troveranno ogni bug e sono principalmente progettati per fornire un ulteriore ciclo di revisioni, che possono aiutare a rilevare i problemi non identificati dagli sviluppatori durante lo sviluppo e test iniziali. Inoltre, dovresti seguire le migliori pratiche per lavorare con i revisori, come documentare correttamente il codice e aggiungere commenti inline, per massimizzare i benefici del controllo di un contratto intelligente.
+
+- [Consigli e trucchi di controllo dei contratti intelligenti](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Ottieni il massimo dal tuo controllo](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Caccia ai bug {#bug-bounties}
 
@@ -112,7 +115,7 @@ L'esistenza di controlli e ricompense per la caccia ai bug non è una scusa per 
 
 - Usa un [ambiente di sviluppo](/developers/docs/frameworks/) per testare, compilare e distribuire i contratti intelligenti
 
-- Esegui il tuo codice tramite strumenti di analisi del codice di base, come Mythril e Slither. Idealmente, dovresti farlo prima della fusione di ogni richiesta pull e confrontare le differenze nell'output
+- Esegui il tuo codice tramite strumenti di analisi del codice di base, come [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, dovresti farlo prima della fusione di ogni richiesta pull e confrontare le differenze nell'output
 
 - Assicurati che il tuo codice si compili senza errori e che il compilatore di Solidity non emetta alcun avviso
 
@@ -126,7 +129,7 @@ Progettare controlli di accesso sicuri, implementare modificatori di funzioni e 
 
 Sebbene i contratti intelligenti di Ethereum siano immutabili di default, è possibile ottenere un certo grado di mutabilità utilizzando dei modelli di aggiornamento. Aggiornare i contratti è necessario nel caso in cui un difetto critico renda inutilizzabile il tuo vecchio contratto e distribuire una nuova logica sia l'opzione più fattibile.
 
-I meccanismi di aggiornamento del contratto operano diversamente, ma lo "schema del proxy" è uno degli approcci più popolari per aggiornare i contratti intelligenti. Gli schemi del proxy dividono lo stato e la logica di un'applicazione tra _due_ contratti. Il primo contratto (detto "contratto proxy") archivia le variabili di stato (es., i saldi degli utenti), mentre il secondo (detto "contratto logico") detiene il codice per l'esecuzione delle funzioni del contratto.
+I meccanismi di aggiornamento del contratto operano diversamente, ma lo "schema del proxy" è uno degli approcci più popolari per aggiornare i contratti intelligenti. Gli [schemi del proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) dividono la logica e lo stato di un'applicazione tra _due_ contratti. Il primo contratto (detto "contratto proxy") archivia le variabili di stato (es., i saldi degli utenti), mentre il secondo (detto "contratto logico") detiene il codice per l'esecuzione delle funzioni del contratto.
 
 I conti interagiscono con il contratto proxy, che invia le chiamate di tutte le funzioni al contratto logico utilizzando la chiamata di basso livello [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). A differenza di una normale chiamata di messaggio, `delegatecall()` garantisce che il codice in esecuzione all'indirizzo del contratto logico sia eseguito nel contesto del contratto chiamante. Ciò significa che il contratto logico scriverà sempre sulla memoria del proxy (invece che sulla propria) e che i valori originali di `msg.sender` e `msg.value` sono preservati.
 
@@ -214,13 +217,13 @@ La governance decentralizzata può essere vantaggiosa, specialmente poiché si a
 
 Un modo di prevenire i problemi correlati alla governance sulla catena è [utilizzare un blocco temporale](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un blocco temporale impedisce a un contratto intelligente di eseguire certe azioni finché non passa un dato periodo di tempo. Altre strategie includono l'assegnazione di un "peso di voto" a ogni token a seconda del tempo per cui è stato bloccato, o la misurazione del potere di voto di un indirizzo in un dato periodo storico (ad esempio, 2-3 blocchi nel passato) invece che al blocco corrente. Entrambi i metodi riducono la possibilità di accumulare rapidamente potere di voto per influire sui voti sulla catena.
 
-Maggiori informazioni sulla [progettazione di sistemi di governance sicuri](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) e sui [differenti meccanismi di voto nelle DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
+Maggiori informazioni sulla [progettazione di sistemi di governance sicuri](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), sui [diversi meccanismi di voto nelle DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) e sui [vettori d'attacco comuni alle DAO che sfruttano la DeFi](https://dacian.me/dao-governance-defi-attacks) nei collegamenti condivisi.
 
 ### 8. Riduci al minimo la complessità nel codice {#reduce-code-complexity}
 
 Gli sviluppatori di software tradizionali hanno familiarità con il principio KISS ("keep it simple, stupid", letteralmente "tieniti sul semplice, stupido"), che consiglia di non introdurre complessità non necessarie nella progettazione del software. Questo segue il pensiero di vecchia data che i "sistemi complessi falliscono in modi complessi" e che siano più suscettibili a errori costosi.
 
-Mantenere le cose semplici è di particolare importanza nella scrittura dei contratti intelligenti, dato che i contratti intelligenti potrebbero potenzialmente controllare grandi importi di valore. Un suggerimento per ottenere la semplicità durante la scrittura dei contratti intelligenti è riutilizzare le librerie esistenti, come i [contratti di OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), laddove possibile. Poiché queste librerie sono state controllate e testate ampiamente dagli sviluppatori, utilizzarle riduce le possibilità di introdurre bug rispetto a scrivere nuove funzionalità da zero.
+Mantenere le cose semplici è di particolare importanza nella scrittura dei contratti intelligenti, dato che i contratti intelligenti potrebbero potenzialmente controllare grandi importi di valore. Un suggerimento per ottenere la semplicità durante la scrittura dei contratti intelligenti è riutilizzare le librerie esistenti, come i [contratti di OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), laddove possibile. Poiché queste librerie sono state controllate e testate ampiamente dagli sviluppatori, utilizzarle riduce le possibilità di introdurre bug rispetto a scrivere nuove funzionalità da zero.
 
 Un altro consiglio comune è scrivere piccole funzioni e mantenere i contratti modulari, dividendo la logica commerciale su più contratti. Non solo la scrittura di codice più semplice può ridurre la superficie di attacco in un contratto intelligente, ma rende anche più semplice ragionare della correttezza del sistema complessivo e rilevare precocemente possibili errori di progettazione.
 
@@ -301,7 +304,7 @@ Non c'è nulla di sbagliato qui, tranne il fatto che l'`Attacker` ha un'altra fu
 - `Victim` infine applica i risultati della prima transazione (e delle successive) al proprio stato, così che il saldo di `Attacker` è impostato su 0
 ```
 
-Riepilogando: poiché il saldo del chiamante non è impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo, consentendo al chiamante di prelevare il proprio saldo numerose volte. Questo tipo di attacco è utilizzabile per sottrarre a un contratto intelligente i suoi fondi, come è avvenuto nella [violazione della DAO del 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Gli attacchi di rientranza sono ancora oggi un problema critico per i contratti intelligenti, come mostrato dagli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
+Riepilogando: poiché il saldo del chiamante non è impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo, consentendo al chiamante di prelevare il proprio saldo numerose volte. Questo tipo di attacco è utilizzabile per sottrarre a un contratto intelligente i suoi fondi, come è avvenuto nella [violazione della DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Gli attacchi di rientranza sono ancora oggi un problema critico per i contratti intelligenti, come mostrato dagli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Come prevenire gli attacchi di rientranza
 
@@ -351,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Puoi anche utilizzare un sistema di [pagamenti pull](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment), che richiede agli utenti di prelevare i fondi dai contratti intelligenti, invece di un sistema di "pagamenti push", che invia i fondi ai conti. Ciò rimuove la possibilità di innescare inavvertitamente il codice a indirizzi sconosciuti (e può anche impedire determinati attacchi denial-of-service).
+Puoi anche utilizzare un sistema di [pagamenti pull](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), che richiede agli utenti di prelevare i fondi dai contratti intelligenti, invece di un sistema di "pagamenti push", che invia i fondi ai conti. Ciò rimuove la possibilità di innescare inavvertitamente il codice a indirizzi sconosciuti (e può anche impedire determinati attacchi denial-of-service).
 
 #### Sottoeccedenze e sovraflussi di interi {#integer-underflows-and-overflows}
 
@@ -448,7 +451,7 @@ Ad esempio, un utente malevolo potrebbe pompare artificialmente il prezzo a pron
 
 ##### Come prevenire la manipolazione degli oracoli
 
-Il requisito minimo per evitare la manipolazione degli oracoli è utilizzare una rete di oracoli decentralizzati che richieda le informazioni da fonti multiple per evitare singoli punti di errore. In gran parte dei casi, gli oracoli decentralizzati contengono incentivi criptoeconomici integrati per incoraggiare i nodi dell'oracolo a segnalare le informazioni corrette, rendendoli più sicuri rispetto agli oracoli centralizzati.
+Il requisito minimo per [evitare la manipolazione dell'oracolo](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) è utilizzare una rete di oracoli decentralizzati per richiedere informazioni da più fonti per evitare punti di errore unici. In gran parte dei casi, gli oracoli decentralizzati contengono incentivi criptoeconomici integrati per incoraggiare i nodi dell'oracolo a segnalare le informazioni corrette, rendendoli più sicuri rispetto agli oracoli centralizzati.
 
 Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei beni, valuta di utilizzarne uno che implementi un meccanismo di prezzo medio ponderato per il tempo (TWAP). Un [oracolo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroga il prezzo di un bene in due momenti differenti (che puoi modificare) e calcola il prezzo a pronti a seconda della media ottenuta. La scelta di periodi di tempo più lunghi protegge il tuo protocollo dalla manipolazione dei prezzi poiché i grandi ordini eseguiti di recente non possono influire sui prezzi dei beni.
 
@@ -468,19 +471,17 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[ABI Encoder](https://abi.hashex.org/)**: _un servizio online gratuito per la codifica delle funzioni e degli argomenti del costruttore del tuo contratto in Solidity._
 
-### Strumenti per monitorare i contratti intelligenti {#smart-contract-monitoring-tools}
+- **[Aderyn](https://github.com/Cyfrin/aderyn)**: _analizzatore statico di Solidity che attraversa gli alberi di sintassi astratta (AST) per individuare le vulnerabilità sospette e restituire i problemi in un formato Markdown facilmente fruibile._
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)**: _uno strumento per monitorare automaticamente e rispondere a eventi, funzioni e parametri di transazione sui tuoi contratti intelligenti._
+### Strumenti per monitorare i contratti intelligenti {#smart-contract-monitoring-tools}
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)**: _uno strumento per ricevere notifiche in tempo reale quando si verificano eventi insoliti o imprevisti sui tuoi contratti intelligenti o portafogli._
 
 ### Strumenti per l'amministrazione sicura dei contratti intelligenti {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)**: _interfaccia per gestire l'amministrazione dei contratti intelligenti, inclusi i controlli di accesso, gli aggiornamenti e l'interruzione._
-
 - **[Safe](https://safe.global/)**: _portafoglio del contratto intelligente eseguito su Ethereum, che richiede un numero minimo di persone per approvare una transazione prima che possa verificarsi (M di N)._
 
-- **[Contratti OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)**: _librerie dei contratti per implementare funzionalità amministrative, inclusa la proprietà del contratto, aggiornamenti, controlli di accesso, governance, interruzioni e altro._
+- **[Contratti OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)**: _librerie dei contratti per implementare funzionalità amministrative, inclusa la proprietà del contratto, aggiornamenti, controlli di accesso, governance, interruzioni e altro._
 
 ### Servizi di controllo dei contratti intelligenti {#smart-contract-auditing-services}
 
@@ -500,11 +501,21 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Hacken](https://hacken.io)**: _Controllore della cybersicurezza in Web3 che porta un approccio a 360 gradi alla sicurezza della blockchain._
 
-- **[](https://nethermind.io/smart-contracts-audits)**: _servizi di controllo in Solidity e Carico che garantiscono l'integrità dei contratti intelligenti e la sicurezza degli utenti nell'ecosistema Ethereum e Starknet._
+- **[](https://www.nethermind.io/smart-contract-audits)**: _servizi di controllo in Solidity e Carico che garantiscono l'integrità dei contratti intelligenti e la sicurezza degli utenti nell'ecosistema Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)**: _HashEx è incentrata sul controllo della blockchain e dei controlli intelligenti allo scopo di garantire la sicurezza delle criptovalute, fornendo servizi come lo sviluppo di contratti intelligenti, test di penetrazione o consulenza sulla blockchain._
 
 - **[Code4rena](https://code4rena.com/)**: _piattaforma di controllo competitiva che incentiva gli esperti di sicurezza dei contratti intelligenti a trovare le vulnerabilità e ad aiutare a rendere il Web3 più sicuro._
+
+- **[CodeHawks](https://codehawks.com/)**: _piattaforma di controllo competitiva che ospita competizioni di controllo dei contratti intelligenti per ricercatori della sicurezza._
+
+- **[Cyfrin](https://cyfrin.io)**: _motore di sicurezza per Web3, che incuba la criptosicurezza tramite prodotti e servizi di controllo dei contratti intelligenti._
+
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _studio di sicurezza del Web3 che offre controlli di sicurezza per i sistemi della blockchain tramite un team di revisori esperti e strumenti di prim'ordine._
+
+- **[Oxorio](https://oxor.io/)**: _servizi di controllo dei contratti intelligenti e sicurezza della blockchain con esperienza nell'EVM, in Solidity, tecnologie tra catene per cripto-aziende e progetti di DeFi._
+
+- **[Inference](https://inference.ag/)**: _azienda di controllo della sicurezza, specializzata nel controllo dei contratti intelligenti per le blockchain basate sull'EVM. Grazie ai suoi esperti revisori, identifica le potenziali problematiche e suggerisce le soluzioni attuabili per risoverle prima della distribuzione._
 
 ### Piattaforme di bug bounty {#bug-bounty-platforms}
 
@@ -514,9 +525,13 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[HackenProof](https://hackenproof.com/)**: _piattaforma esperta di bug bounty per progetti di criptovalute (DeFi, contratti intelligenti, portafogli, CEX e altro), in cui dei professionisti della sicurezza forniscono servizi di triage e i ricercatori sono pagati per segnalazioni di bug rilevanti e verificate._
 
+-  **[Sherlock](https://www.sherlock.xyz/)**: _sottoscrittore in Web3 per la sicurezza dei contratti intelligenti, con pagamenti per i revisori gestiti tramite contratti intelligenti per assicurarsi che i bug rilevanti siano pagati equamente._
+
+-  **[CodeHawks](https://www.codehawks.com/)**: _piattaforma competitiva di caccia ai bug in cui i revisori prendono parte a gare e sfide di sicurezza e (presto) ai propri controlli privati._
+
 ### Pubblicazioni di vulnerabilità e sfruttamenti noti dei contratti intelligenti {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: attacchi noti ai contratti intelligenti](https://consensys.github.io/smart-contract-best-practices/attacks/)**: _spiegazione per principianti delle vulnerabilità più significative dei contratti, con esempi di codice per gran parte dei casi._
+- **[ConsenSys: attacchi noti ai contratti intelligenti](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)**: _spiegazione per principianti delle vulnerabilità più significative dei contratti, con esempi di codice per gran parte dei casi._
 
 - **[Registro SWC](https://swcregistry.io/)**: _elenco curato di elementi di enumerazione delle debolezze comuni (CWE) che si applicano ai contratti intelligenti di Ethereum._
 
@@ -530,6 +545,8 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)**: _wargame basato su Web3/Solidity in cui ogni livello è un contratto intelligente da 'violare'._
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)**: _sfida di violazione dei contratti intelligenti, ambientata in un'avventura fantasy. Inoltre, il completamento della sfida fornisce l'accesso a un programma privato di caccia ai bug._
+
 ### Migliori pratiche per proteggere i contratti intelligenti {#smart-contract-security-best-practices}
 
 - **[ConsenSys: migliori pratiche sulla sicurezza dei contratti intelligenti di Ethereum](https://consensys.github.io/smart-contract-best-practices/)**: _elenco completo di linee guida per proteggere i contratti intelligenti di Ethereum._
@@ -542,14 +559,18 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Standard di verifica della sicurezza dei contratti intelligenti](https://github.com/securing/SCSVS)**: _lista di controllo in quattordici parti, creata per standardizzare la sicurezza dei contratti intelligenti per sviluppatori, architetti, revisori di sicurezza e fornitori._
 
+- **[Impara sulla sicurezza e il controllo dei contratti intelligenti](https://updraft.cyfrin.io/courses/security): _corso definitivo sulla sicurezza e il controllo dei contratti intelligenti, creato per gli sviluppatori di contratti intelligenti che desiderano migliorare le proprie migliori pratiche di sicurezza e diventare ricercatori della sicurezza._
+
 ### Tutorial sulla sicurezza dei contratti intelligenti {#tutorials-on-smart-contract-security}
 
 - [Come scrivere contratti intelligenti sicuri](/developers/tutorials/secure-development-workflow/)
 
-- [Come usare Slither per trovare i bug dello Smart Contract](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Come usare Slither per trovare bug nei contratti intelligenti](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [Come usare Manticore per trovare bug nei contratti intelligenti](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
-- [Linee guida di sicurezza per gli Smart Contract](/developers/tutorials/smart-contract-security-guidelines/)
+- [Linee guida di sicurezza per i contratti intelligenti](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Come integrare in sicurezza il tuo contratto dei token con token arbitrari](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft: corso completo sulla sicurezza e il controllo dei contratti intelligenti](https://updraft.cyfrin.io/courses/security)

@@ -88,7 +88,7 @@ En savoir plus sur la [composabilité des contrats intelligents](/developers/doc
 
 Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du "monde réel", dans la mesure où ils ne peuvent pas récupérer de données depuis des sources hors chaîne. Cela signifie qu'ils ne peuvent pas réagir aux événements du monde réel. C'est un choix délibéré. Le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, qui est essentiel en matière de sécurité et de décentralisation.
 
-Il est toutefois important que les applications de la blockchain puissent utiliser des données hors chaîne. Pour ce faire, il est possible d'utiliser [oracles](/developers/docs/oracles/), des outils capables d'ingérer des données hors chaîne et de mettre à la disposition des contrats intelligents.
+Il est toutefois important que les applications de la blockchain puissent utiliser des données hors chaîne. Pour ce faire, il est possible d'utiliser des [oracles](/developers/docs/oracles/), des outils capables d'ingérer des données hors chaîne et de les mettre à la disposition des contrats intelligents.
 
 Une autre limitation des contrats intelligents est la taille maximale des contrats. Un contrat intelligent ne peut pas dépasser 24 Ko, sans quoi il sera à court de gaz. Ceci peut être contourné en utilisant [Le modèle du diamant](https://eips.ethereum.org/EIPS/eip-2535).
 
@@ -109,3 +109,4 @@ Les contrats multisig (signature multiple) sont des comptes de contrats intellig
 - [Coinbase : Qu'est-ce qu'un contrat intelligent ?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink : Qu'est-ce qu'un contrat intelligent ?](https://chain.link/education/smart-contracts)
 - [Vidéo : Expliqués Simplement - Les Contrats Intelligents](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft : plateforme d'apprentissage et d'audit Web3](https://updraft.cyfrin.io)

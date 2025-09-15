@@ -60,7 +60,7 @@ Se você tiver o ETH na Ethereum Mainnet e quiser explorar um alt L1 para experi
 Digamos que você queira possuir Bitcoin nativo (BTC), mas você só tem fundos na rede principal Ethereum. Para ganhar exposição à BTC na Ethereum, você pode comprar Bitcoin Envolvido (WBTC). No entanto, o WBTC é um token [ERC-20](/glossary/#erc-20) nativo da rede Ethereum, o que significa que é uma versão Ethereum do Bitcoin e não o ativo original na blockchain do Bitcoin. Para possuir BTC nativa, você teria que ligar os seus ativos do Ethereum para Bitcoin usando uma ponte. Isso converter suas WBTC em BTC nativa, por meio da ponte. Como alternativa, você pode possuir BTC e querer usá-lo nos protocolos[DeFi](/glossary/#defi) do Ethereum. Isso exigiria fazer uma ponte no caminho inverso, de BTC para WBTC, que logo poderia ser usada como um ativo no Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  Você também pode fazer tudo acima usando uma <a href="/get-eth/">exchange centralizada</a>. No entanto, a menos que seus fundos já estejam em uma exchange (corretora), isso envolveria vários passos, e você provavelmente estaria melhor usando uma ponte.
+  Você também pode fazer tudo acima usando uma [exchange centralizada](/get-eth/). No entanto, a menos que seus fundos já estejam em uma exchange (corretora), isso envolveria vários passos, e você provavelmente estaria melhor usando uma ponte.
 </InfoBanner>
 
 <Divider />
@@ -92,6 +92,15 @@ Um ponto de verificação manual é semelhante a um modelo confiável, pois depe
 O check-in automático é semelhante a um modelo sem confiança, pois remove o papel do operador e usa tecnologia para operar. Os usuários sempre permanecem no controle de seus dados e não precisam confiar suas informações privadas a terceiros.
 
 Muitas soluções de ponte adotam modelos entre esses dois extremos, com graus variados de necessidade mínima de confiança.
+
+<Divider />
+
+## Usando pontes {#use-bridge}
+
+O uso de pontes permite que você mova seus ativos entre diferentes blockchains. Aqui estão alguns recursos que podem ajudar você a encontrar e usar pontes:
+
+- **[Resumo de pontes L2BEAT](https://l2beat.com/bridges/summary) & [Análise de riscos de pontes do L2BEAT](https://l2beat.com/bridges/summary)**: Uma lista completa de diversas pontes, incluindo detalhes sobre participação de mercado, tipo de ponte e blockchains de destino. O L2BEAT também oferece uma análise de riscos para pontes, ajudando os usuários a tomar decisões informadas ao escolher uma ponte.
+- **[Resumo de Pontes da DefiLlama](https://defillama.com/bridges/Ethereum)**: Um resumo dos volumes de pontes nas redes Ethereum.
 
 <Divider />
 

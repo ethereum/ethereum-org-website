@@ -1,6 +1,6 @@
 ---
 title: Akıllı sözleşme dilleri
-description: "İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper."
+description: 'İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper.'
 lang: tr
 ---
 
@@ -10,6 +10,8 @@ En aktif ve sürdürülen iki dil ise şunlardır:
 
 - Solidity
 - Vyper
+
+Remix IDE, hem Solidity hem de Vyper'da sözleşme oluşturmak ve test etmeye yönelik kapsamlı bir geliştirme ortamı sağlar. Kodlamaya başlamak için [Remix IDE'nin tarayıcı içi sürümünü deneyin](https://remix.ethereum.org).
 
 Daha deneyimli geliştiricilerin [Ethereum Sanal Makinesi](/developers/docs/evm/) için orta seviye bir dil olan Yul ya da Yul'un bir eklentisi olan Yul+'ı kullanması uygun olur.
 
@@ -111,7 +113,6 @@ Daha fazla bilgi için [Vyper mantığını okuyun](https://vyper.readthedocs.io
 - [Kopya Kağıdı](https://reference.auditless.com/cheatsheet)
 - [Vyper için akıllı sözleşme geliştirme çerçeveleri ve araçları](/developers/docs/programming-languages/python/)
 - [VyperPunk - Vyper akıllı sözleşmelerini güvenli kılmayı ve hacklemeyi öğrenin](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyper güvenlik açığı örnekleri](https://www.vyperexamples.com/reentrancy)
 - [Geliştirme için Vyper Hub](https://github.com/zcor/vyper-dev)
 - [Vyper en başarılı akıllı sözleşme örnekleri](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Harika Vyper düzenlenmiş kaynakları](https://github.com/spadebuilders/awesome-vyper)
@@ -225,7 +226,6 @@ Eğer Ethereum'da yeniyseniz ve akıllı sözleşme dilleriyle henüz herhangi b
 
 - [Yul Belgeleri](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Belgeleri](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Giriş Gönderisi](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Örnek sözleşme {#example-contract-2}
@@ -320,5 +320,5 @@ Temel söz dizimi, sözleşme yaşam döngüsü, arayüzler, operatörler, veri 
 
 ## Daha fazla bilgi {#further-reading}
 
-- [OpenZeppelin'den Solidity Sözleşmeleri Kütüphanesi](https://docs.openzeppelin.com/contracts)
+- [OpenZeppelin'den Solidity Sözleşmeleri Kütüphanesi](https://docs.openzeppelin.com/contracts/5.x/)
 - [Örnekle Solidity](https://solidity-by-example.org)

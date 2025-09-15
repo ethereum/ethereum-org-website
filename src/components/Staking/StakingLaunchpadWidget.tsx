@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { useTranslation } from "next-i18next"
-import { FaTools } from "react-icons/fa"
+"use client"
 
+import { useState } from "react"
+
+import Tools from "@/components/icons/tools.svg"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
@@ -10,6 +11,8 @@ import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import Select, { type SelectOnChange } from "../Select"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type StakingDataOption = { label: string; value: string }
 
@@ -86,7 +89,7 @@ const StakingLaunchpadWidget = () => {
           variant="outline"
           className="w-full md:w-auto"
         >
-          <FaTools />{" "}
+          <Tools />{" "}
           <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
       </div>

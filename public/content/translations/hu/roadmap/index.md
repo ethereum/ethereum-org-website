@@ -61,7 +61,7 @@ Az Ethereumot folyamatosan fejlesztik, hogy javítsák a skálázhatóságot, a 
 
 <RoadmapImageContent title="Hogyan határozzák meg az ütemtervet">
 
-Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mivel a protokoll maga nagyon technikai, de emellett bárki, aki elég elkötelezett, részt vehet benne. Az ötletek általában beszélgetés formájában kezdődnek a fórumokon, mint amilyen az ethresear.ch (https://ethresear.ch/), az Ethereum Magicians (https://ethereum-magicians.org/) vagy az Eth R&D discord szerver. <0>A teljes hontalanság még a kutatási fázisban van</0>, és valószínűleg több év múlva kerül végrehajtásra. Miután ezeket az ötleteket kellőképpen körüljárták, javaslatot készíthetnek belőlük: [Ethereum-fejlesztési javaslatok (EIP)](https://eips.ethereum.org/). Ez az egész folyamat nyilvános, így a közösség bármelyik tagja mérlegelheti a javaslatokat.
+Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mivel a protokoll maga nagyon technikai, de emellett bárki, aki elég elkötelezett, részt vehet benne. Az ötletek általában beszélgetés formájában kezdődnek a fórumokon, mint amilyen az ethresear.ch (https://ethresear.ch/), az Ethereum Magicians (https://ethereum-magicians.org/) vagy az Eth R&D discord szerver. Ezek lehetnek válaszok az újonnan feltár gyenge pontokra, az alkalmazási rétegen működő szervezetek javaslatai (mint a [dappok](/glossary/#dapp) és tőzsdék), vagy a felhasználók ismert problémái (mint a költségek vagy a tranzakciósebességek). Miután ezeket az ötleteket kellőképpen körüljárták, javaslatot készíthetnek belőlük: [Ethereum-fejlesztési javaslatok (EIP)](https://eips.ethereum.org/). Ez az egész folyamat nyilvános, így a közösség bármelyik tagja mérlegelheti a javaslatokat.
 
 [Bővebben az Ethereum irányításáról](/governance/)
 
@@ -70,7 +70,7 @@ Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mi
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Mi volt az ETH2?</h4>
 
-  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a <a href="/glossary/#pos">proof-of-stake</a> mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a <a href="/glossary/#execution-client">végrehajtási kliensek</a> néha ETH1-kliensként, a <a href="/glossary/#consensus-client">konszenzuskliensek</a> pedig ETH2-kliensként jelentek meg).</p>
+  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a [proof-of-stake](/glossary/#pos) mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a [végrehajtási kliensek](/glossary/#execution-client) néha ETH1-kliensként, a [konszenzuskliensek](/glossary/#consensus-client) pedig ETH2-kliensként jelentek meg).</p>
 
 </InfoBanner>
 

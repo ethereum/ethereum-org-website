@@ -8,7 +8,7 @@ lang: ja
 
 イーサリアムのようなパブリックブロックチェーンは、スマートコントラクトのセキュリティ確保の問題をさらに複雑にします。 デプロイされたコントラクトのコードは_通常_、セキュリティ上の欠陥にパッチを当てるために変更することはできません。一方、スマートコントラクトから盗まれた資産は追跡が非常に難しく、その不変性により、大抵回収できません。
 
-数値は一様ではありませんが、スマートコントラクトのセキュリティ上の欠陥が原因で盗まれたり失われたりした価値の総額は、10億ドルを超えると推定されています。 これには、[The DAOハック](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)(現行価格10億ドル相当以上の360万ETHの盗難)、[パリティ(Parity)マルチシグウォレットハック](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (ハッカーによる3000万ドルの盗難)、[パリティ(Parity)凍結ウォレット問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)(3億ドル以上のETHを永遠にロック)などの有名な事件も含まれています。
+数値は一様ではありませんが、スマートコントラクトのセキュリティ上の欠陥が原因で盗まれたり失われたりした価値の総額は、10億ドルを超えると推定されています。 これには、[The DAOハック](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)(現行価格10億ドル相当以上の360万ETHの盗難)、[パリティ(Parity)マルチシグウォレットハック](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (ハッカーによる3000万ドルの盗難)、[パリティ(Parity)凍結ウォレット問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)(3億ドル以上のETHを永遠にロック)などの有名な事件も含まれています。
 
 前述の問題は、デベロッパーに安全で堅牢な回復力のあるスマートコントラクトの構築に労力を費やすことを不可欠にしました。 スマートコントラクトのセキュリティは深刻な課題であり、全てのデベロッパーが学ぶべきことです。 このガイドでは、イーサリアムデベロッパーのためのセキュリティの考慮事項について説明します。さらに、スマートコントラクトのセキュリティ向上に役立つリソースもご紹介します。
 
@@ -90,7 +90,10 @@ contract VendingMachine {
 
 スマートコントラクトの監査を委託することは、第三者コードレビューを実施する一つの方法です。 監査人は、スマートコントラクトが安全で、品質不良や設計ミスがないようにする重要な役割を担っています。
 
-それでも、監査を特効薬のように受け止めるのは避けるべきです。 スマートコントラクト監査は、すべてのバグを発見できるわけではなく、主に追加のレビューを提供するためのものです。これは、初回の開発とテストでデベロッパーが見逃した問題を検出するのに役立ちます。 スマートコントラクト監査のメリットを最大限に活かすには、コードを適切に文書化し、インラインコメントを追加するなどの[監査人と協業するための最善の方法](https://twitter.com/tinchoabbate/status/1400170232904400897)も実践する必要があります。
+それでも、監査を特効薬のように受け止めるのは避けるべきです。 スマートコントラクト監査は、すべてのバグを発見できるわけではなく、主に追加のレビューを提供するためのものです。これは、初回の開発とテストでデベロッパーが見逃した問題を検出するのに役立ちます。 スマートコントラクト監査のメリットを最大限に活かすには、コードを適切に文書化し、インラインコメントを追加するなどの監査人と協業するための最善の方法も実践する必要があります。
+
+- [スマートコントラクト監査のヒントとコツ](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [監査を最大限に活用する](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### バグ報奨金 {#bug-bounties}
 
@@ -112,7 +115,7 @@ contract VendingMachine {
 
 - スマートコントラクトのテスト、コンパイル、デプロイに[開発環境](/developers/docs/frameworks/)を使用する
 
-- [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
+- [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
 
 - コードがエラーなくコンパイルされ、Solidityコンパイラが警告を発していないことを確認する
 
@@ -214,13 +217,13 @@ contract EmergencyStop {
 
 オンチェーンガバナンスに関連する問題を防ぐ方法の一つとして、[タイムロックの使用](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/)が挙げられます。 タイムロックは、特定の時間が経過するまでスマートコントラクトが特定のアクションを実行できないようにするものです。 その他の戦略としては、各トークンがロックされている期間に応じて「投票の重み」を割り当てることや、現在のブロックの代わりに過去の期間 (例: 2～3ブロック前) でアドレスの投票力を測定することなどがあります。 どちらの方法も、オンチェーンの投票を思い通りに動かす投票力を短期間で獲得する可能性を減らすことができます。
 
-詳細は、[安全なガバナンスシステムの設計](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)と[DAOにおけるさまざまな投票メカニズム](https://hackernoon.com/governance-is-the-holy-grail-for-daos)をご覧ください。
+[安全なガバナンスシステムの設計](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)、[DAOのさまざまな投票メカニズム](https://hackernoon.com/governance-is-the-holy-grail-for-daos)、[DeFiを悪用した一般的なDAOの攻撃ベクトル](https://dacian.me/dao-governance-defi-attacks)の詳細については、共有のリンクをご覧ください。
 
 ### 8. コードの複雑さの最小化 {#reduce-code-complexity}
 
 従来のソフトウェアデベロッパーは、ソフトウェア設計に不必要な複雑さを持ち込まないようにするというKISS (Keep It Simple, Stupid) 原則に慣れ親しんでいます。 これは、「複雑なシステムには複雑な障害が発生する」、さらに複雑さによりコストのかかるエラーが発生しやすいという長年の考え方に従ったものです。
 
-スマートコントラクトが高額の価値を制御する可能性があることを考えると、シンプルさを保ってスマートコントラクトを記述することが特に重要になります。 スマートコントラクトをシンプルに記述するコツは、可能な限り[OpenZeppelinコントラクト](https://docs.openzeppelin.com/contracts/4.x/)のような既存のライブラリを再利用することです。 これらのライブラリは、デベロッパーによって広範な監査とテストが行われているため、新しい機能をゼロから書くことでバグを発生させる可能性を減らすことができます。
+スマートコントラクトが高額の価値を制御する可能性があることを考えると、シンプルさを保ってスマートコントラクトを記述することが特に重要になります。 スマートコントラクトをシンプルに記述するコツは、可能な限り[OpenZeppelinコントラクト](https://docs.openzeppelin.com/contracts/5.x/)のような既存のライブラリを再利用することです。 これらのライブラリは、デベロッパーによって広範な監査とテストが行われているため、新しい機能をゼロから書くことでバグを発生させる可能性を減らすことができます。
 
 別の一般的なアドバイスとしては、小さな関数を記述すること、さらにビジネスロジックを複数のコントラクトに分割してコントラクトをモジュラー型にすることがあります。 よりシンプルなコードを書くことで、スマートコントラクトへの攻撃面を減らすだけでなく、システム全体の正確性を推論しやすくなり、設計エラーの可能性を早期に検出できるようになります。
 
@@ -235,7 +238,7 @@ EVMは同時実行を許可していません。つまり、メッセージ呼�
 誰でもイーサ (Ether) を入出金できるシンプルなスマートコントラクト (「Victim」) を考えてみましょう。
 
 ```solidity
-// This contract is vulnerable. Do not use in production
+// このコントラクトには、脆弱性があります。 プロダクションでは使用しないでください。
 
 contract Victim {
     mapping (address => uint256) public balances;
@@ -301,7 +304,7 @@ contract Victim {
 - 「Victim」は、最終的に最初のトランザクション(および後続のトランザクション)の結果をステート(状態)に適用するので、「Attacker」の残高は0に設定されます。
 ```
 
-要約すると、関数の実行が完了するまで呼び出し元の残高が0にならないため、その後の呼び出しが成功し、呼び出し元が何度も残高を引き出せるようになります。 この種の攻撃は、[2016年のDAOハック](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)で行われたように、スマートコントラクトから資金を流出させるために使用されます。 [再入可能(リエントランシー)エクスプロイトの公開リスト](https://github.com/pcaversaccio/reentrancy-attacks)が示すように、再入可能攻撃は今日でもスマートコントラクトにとって深刻な問題になっています。
+要約すると、関数の実行が完了するまで呼び出し元の残高が0にならないため、その後の呼び出しが成功し、呼び出し元が何度も残高を引き出せるようになります。 この種の攻撃は、[2016年のDAOハック](https://www.coindesk.com/learn/understanding-the-dao-attack)で行われたように、スマートコントラクトから資金を流出させるために使用されます。 [再入可能(リエントランシー)エクスプロイトの公開リスト](https://github.com/pcaversaccio/reentrancy-attacks)が示すように、再入可能攻撃は今日でもスマートコントラクトにとって深刻な問題になっています。
 
 ##### 再入可能 (リエントランシー) 攻撃を防ぐ方法
 
@@ -338,7 +341,7 @@ contract MutexPattern {
         locked = false;
     }
     // This function is protected by a mutex, so reentrant calls from within `msg.sender.call` cannot call `withdraw` again.
-    //  The `return` statement evaluates to `true` but still evaluates the `locked = false` statement in the modifier
+    //  `return`ステートメントは、`true`と評価しますが、まだmodifierのステートメントでは`locked = false`と評価します。
     function withdraw(uint _amount) public payable noReentrancy returns(bool) {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
@@ -351,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-また、アカウントに資金を送る「プッシュ型決済」システムではなく、ユーザーがスマートコントラクトから資金を引き出す必要がある[「プル型決済」](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment)システムを利用することでも防止可能です。 これにより、不明なアドレスで不注意にコードをトリガーする可能性を取り除けます (特定のDoS攻撃も防げます) 。
+また、アカウントに資金を送る「プッシュ型決済」システムではなく、ユーザーがスマートコントラクトから資金を引き出す必要がある[「プル型決済」](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)システムを利用することでも防止可能です。 これにより、不明なアドレスで不注意にコードをトリガーする可能性を取り除けます (特定のDoS攻撃も防げます) 。
 
 #### 整数のアンダーフローとオーバーフロー {#integer-underflows-and-overflows}
 
@@ -414,7 +417,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        if t = current lock time then we need to find x such that
+        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。
         x + t = 2**256 = 0
         so x = -t
         2**256 = type(uint).max + 1
@@ -466,19 +469,17 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _Solidityコントラクトの関数とコンストラクタの引数をエンコードするための無料のオンラインサービス。_
 
-### スマートコントラクト監視ツール {#smart-contract-monitoring-tools}
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity静的アナライザーです。抽象構文木 (AST) を横断し、疑わしい脆弱性を正確に特定し、問題を扱いやすいマークダウン形式で出力します。_
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _スマートコントラクト上のイベント、関数、トランザクションパラメータの自動的な監視と応答を行うツール。_
+### スマートコントラクト監視ツール {#smart-contract-monitoring-tools}
 
 - **[Tenderlyリアルタイムアラート](https://tenderly.co/alerting/)** - _スマートコントラクトやウォレットに異常なイベントや予期せぬイベントが発生した場合に、通知をリアルタイムに受けとるためのツール。_
 
 ### スマートコントラクトのセキュリティ管理ツール {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _アクセス制御、アップグレード、一時停止など、スマートコントラクトの管理を行うためのインターフェイス。_
-
 - **[Safe](https://safe.global/)** - _イーサリアム上で動作し、トランザクションが発生する前に最低人数(N人中のM人)の承認が必要なスマートコントラクトウォレット。_
 
-- **[OpenZeppelinコントラクト](https://docs.openzeppelin.com/contracts/4.x/)** - _コントラクトの所有権、アップグレード、アクセス制御、ガバナンス、一時停止機能など、管理機能を実装するためのコントラクトライブラリ。_
+- **[OpenZeppelinコントラクト](https://docs.openzeppelin.com/contracts/5.x/)** - _コントラクトの所有権、アップグレード、アクセス制御、ガバナンス、一時停止機能など、管理機能を実装するためのコントラクトライブラリ。_
 
 ### スマートコントラクト監査サービス {#smart-contract-auditing-services}
 
@@ -498,7 +499,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Hacken](https://hacken.io)** - _ブロックチェーンセキュリティへの360度アプローチをもたらすサイバーセキュリティ監査人。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
 
 - **[HashEx](https://hashex.org/)** - _HashExは、ブロックチェーンとスマート コントラクトの監査に焦点を当てており、暗号通貨のセキュリティを確保するためのスマートコントラクト開発、侵入テスト、ブロックチェーンコンサルティングなどのサービスを提供。_
 
@@ -506,9 +507,13 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[CodeHawks](https://codehawks.com/)** - _優位性のある監査プラットフォームで、セキュリティリサーチャーのスマートコントラクト監査コンペを主催している。_
 
-- **[Cyfrin](https://www.cyfrin.io/)** - _ブロックチェーンセキュリティおよびweb3の教育企業で、EVMやVYperベースのプロトコルに注力している。_
+- **[Cyfrin](https://cyfrin.io)** - _Web3セキュリティの有力企業であり、製品やスマート コントラクト監査サービスを通じて暗号セキュリティを推進している。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
+
+- **[Oxorio](https://oxor.io/)** - _クリプト会社およびDeFiプロジェクト向けのEVM、Solidity、ゼロ知識、クロスチェーン技術を専門としたスマートコントラクト監査およびブロックチェーンセキュリティサービス。_
+
+- **[Inference](https://inference.ag/)** - _EVMベースのブロックチェーンのスマートコントラクト監査に特化したセキュリティ監査会社。 専門的な監査人が、潜在的な問題を特定し、実行可能なソリューションを提案してデプロイ前に修正することが可能。_
 
 ### バグ報奨プログラムプラットフォーム {#bug-bounty-platforms}
 
@@ -518,9 +523,13 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[HackenProof](https://hackenproof.com/)** - _ 暗号プロジェクト(DeFi、スマート コントラクト、ウォレット、CEXなど)のエキスパートのバグ報奨金プラットフォーム。セキュリティプロフェッショナルはトリアージサービスを提供し、研究者は検証済みの関連バグレポートに対して報酬を獲得。_
 
+-  **[Sherlock](https://www.sherlock.xyz/)** - _スマートコントラクトセキュリティのためのWeb3の引受人。監査人への支払いはスマートコントラクトを介して管理され、バグの関連性に応じて公平に支払われることを保証。_
+
+-  **[CodeHawks](https://www.codehawks.com/)** - _競争力のあるバグ報奨金プラットフォームで、監査人がセキュリティコンテストやチャレンジに参加できる。また、独自のプライベート監査も（間もなく）開催する予定。_
+
 ### 既知のスマートコントラクトの脆弱性とエクスプロイトの公開 {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: スマートコントラクトの既知の攻撃](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _コントラクトの最も重要な脆弱性を、ほとんどのケースでサンプルコード付きで初心者にもわかりやすく解説。_
+- **[ConsenSys: スマートコントラクトの既知の攻撃](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _コントラクトの最も重要な脆弱性を、ほとんどのケースでサンプルコード付きで初心者にもわかりやすく解説。_
 
 - **[SWCレジストリ](https://swcregistry.io/)** - _イーサリアムスマートコントラクトに該当する共通の脆弱性(CWE)項目の厳選リスト。_
 
@@ -534,6 +543,8 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _各レベルでスマートコントラクトのハッキングが必要なWeb3/Solidityベースの机上演習_
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _ファンタジーアドベンチャーを舞台にしたスマートコントラクトハッキングチャレンジ。 チャレンジに成功すれば、非公開のバグ報奨金プログラムにアクセスできる。_
+
 ### スマートコントラクトのセキュリティのベストプラクティス {#smart-contract-security-best-practices}
 
 - **[ConsenSys: イーサリアムスマートコントラクトのセキュリティのベストプラクティス](https://consensys.github.io/smart-contract-best-practices/)** - _イーサリアムスマートコントラクトのセキュリティのガイドラインの包括的リスト。_
@@ -545,6 +556,8 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 - **[Solidityドキュメント: セキュリティ考慮事項](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Solidityで安全なスマートコントラクトを記述するためのガイドライン。_
 
 - **[スマートコントラクトセキュリティ検証スタンダード](https://github.com/securing/SCSVS)** - _デベロッパー、アーキテクト、セキュリティ評価者、ベンダー向けにスマートコントラクトのセキュリティを標準化するために作成された14部構成のチェックリスト。_
+
+- **[スマートコントラクトセキュリティと監査の学習](https://updraft.cyfrin.io/courses/security) - _究極のスマート コントラクトセキュリティと監査コース。セキュリティのベストプラクティスのレベルアップおよびセキュリティ研究者になりたいと考えているスマートコントラクトデベロッパー向け。_
 
 ### スマートコントラクトのセキュリティに関するチュートリアル {#tutorials-on-smart-contract-security}
 

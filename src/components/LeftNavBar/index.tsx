@@ -13,6 +13,7 @@ export type LeftNavBarProps = {
   maxDepth?: number
   tocItems: ToCItem[]
   className?: string
+  showDropdown?: boolean
 }
 
 const LeftNavBar = ({
@@ -20,6 +21,7 @@ const LeftNavBar = ({
   maxDepth = 1,
   tocItems,
   className,
+  showDropdown = true,
   ...props
 }: LeftNavBarProps) => {
   return (
@@ -30,7 +32,7 @@ const LeftNavBar = ({
       )}
       {...props}
     >
-      {dropdownLinks && (
+      {showDropdown && dropdownLinks && (
         <div className="relative mb-8 flex items-end justify-end">
           <ButtonDropdown
             list={dropdownLinks}

@@ -1,31 +1,60 @@
-import { useTranslation } from "next-i18next"
-import { FaGithub } from "react-icons/fa"
-import {
-  Box,
-  BoxProps,
-  calc,
-  Flex,
-  Icon,
-  List,
-  useToken,
-} from "@chakra-ui/react"
+"use client"
+
+import { cva, type VariantProps } from "class-variance-authority"
 
 import type { ToCItem } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
+import Github from "@/components/icons/github.svg"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
-import { outerListProps } from "@/lib/utils/toc"
+import { cn } from "@/lib/utils/cn"
+
+import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
-export type TableOfContentsProps = BoxProps & {
+const variants = cva(
+  "sticky hidden flex-col items-start overflow-y-auto lg:flex",
+  {
+    variants: {
+      variant: {
+        default:
+          "top-19 min-w-48 max-w-[25%] p-4 pe-0 h-[calc(100vh-80px)] gap-4",
+        beginner: cn(
+          "top-[7.25rem] min-w-80 max-w-72 lg:p-8 px-3 py-2",
+          "h-fit shrink-0 space-y-2.5 rounded-2xl bg-accent-a/10 text-body-medium",
+          "[&_ul]:list-decimal [&_ul]:border-s-0 [&_ul]:text-base [&_ul]:list-inside [&_ul]:ps-0"
+        ),
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
+const labelVariants = cva("text-body-medium", {
+  variants: {
+    variant: {
+      default: "uppercase",
+      beginner: "font-bold text-lg",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+export interface TableOfContentsProps extends VariantProps<typeof variants> {
   items: Array<ToCItem>
   maxDepth?: number
   editPath?: string
   hideEditButton?: boolean
   isMobile?: boolean
+  className?: string
 }
 
 const TableOfContents = ({
@@ -34,14 +63,13 @@ const TableOfContents = ({
   editPath,
   hideEditButton = false,
   isMobile = false,
+  className,
+  variant,
   ...rest
 }: TableOfContentsProps) => {
+  const pathname = usePathname()
   const { t } = useTranslation("common")
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const lgBp = useToken("breakpoints", "lg")
-
   const titleIds: Array<string> = []
-
   if (!isMobile) {
     const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
       // Return early if maxDepth hit
@@ -61,47 +89,36 @@ const TableOfContents = ({
     return null
   }
   if (isMobile) {
-    return <Mobile items={items} maxDepth={maxDepth} />
+    return <Mobile variant={variant} items={items} maxDepth={maxDepth} />
   }
 
   return (
-    <Flex
-      direction="column"
-      align="start"
-      gap={4}
-      hideBelow={lgBp}
-      as="aside"
-      position="sticky"
-      top="19" // Account for navbar
-      p={4}
-      pe={0}
-      maxW="25%"
-      minW={48}
-      height={calc.subtract("100vh", "80px")}
-      overflowY="auto"
-      {...rest}
-    >
+    <aside className={variants({ variant, className })} {...rest}>
       {!hideEditButton && editPath && (
         <ButtonLink
-          leftIcon={<Icon as={FaGithub} />}
           href={editPath}
           variant="outline"
+          customEventOptions={{
+            eventCategory: "edit_page",
+            eventAction: "gh_edit_click",
+            eventName: `${pathname}`,
+          }}
         >
+          <Github />
           {t("edit-page")}
         </ButtonLink>
       )}
-      <Box textTransform="uppercase" color="body.medium">
-        {t("on-this-page")}
-      </Box>
-      <List m={0} spacing="2" {...outerListProps}>
+      <div className={labelVariants({ variant })}>{t("on-this-page")}</div>
+      <ul className="m-0 mb-2 mt-2 list-none gap-2 border-s border-s-body-medium ps-4 pt-0 text-sm">
         <ItemsList
           items={items}
           depth={0}
           maxDepth={maxDepth ? maxDepth : 1}
           activeHash={activeHash}
+          variant={variant}
         />
-      </List>
-    </Flex>
+      </ul>
+    </aside>
   )
 }
 

@@ -11,6 +11,8 @@ A két legaktívabb és leginkább karbantartott nyelv:
 - Solidity
 - Vyper
 
+A Remix IDE egy átfogó fejlesztési környezetet nyújt a szerződések létrehozásához és teszteléséhez Solidity és Vyper nyelveken. [Próbálja ki a böngészőben elérhető Remix IDE](https://remix.ethereum.org) használatát a kódoláshoz.
+
 A tapasztaltabb fejlesztők kipróbálhatják a Yul nyelvet, mely egy haladó nyelv az [Ethereum virtuális gépre](/developers/docs/evm/), vagy ennek kiterjesztését, melynek neve Yul+.
 
 Amennyiben Ön kíváncsi típus, és szeret olyan új nyelvek tesztelésében segíteni, amelyek még komoly fejlesztés előtt állnak, akkor fedezze fel a Fe-t, egy kialakulóban lévő okosszerződésnyelvet, amely még gyerekcipőben jár.
@@ -108,10 +110,9 @@ További információkért [tekintse meg a Vyper magyarázatát](https://vyper.r
 - [Még több Vyper példák alapján](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [A Vyper-közösség Discord-csevegése](https://discord.gg/SdvKC79cJk)
-- [Puska](https://reference.auditless.com/cheatsheet)
+- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Okosszerződés-fejlesztési keretrendszerek és eszközök Vyperre](/developers/docs/programming-languages/python/)
 - [VyperPunk – tanulja meg a Vyper okosszerződéseket biztosítását és meghackelését](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples – Példák a Vyper sebezhetőségére](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub fejlesztéshez](https://github.com/zcor/vyper-dev)
 - [Példák a Vyper legjobb okosszerződéseire](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [A Vyper által gondozott kiváló források](https://github.com/spadebuilders/awesome-vyper)
@@ -225,7 +226,6 @@ Ha Önnek új az Ethereum és nem programozott okosszerződésnyelveken, akkor a
 
 - [Yul Dokumentáció](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Dokumentáció](https://github.com/fuellabs/yulp)
-- [Yul+ Játszótér](https://yulp.fuel.sh/)
 - [Yul+ Bevezető poszt](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Példa szerződés {#example-contract-2}
@@ -268,7 +268,7 @@ Ha már nagy tapasztalatra tett szert az okosszerződésekkel kapcsolatban, akko
 - [Fe Discord-csevegés](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### Példaszerződés {#example-contract-3}
+### Példa szerződés {#example-contract-3}
 
 Ez a példa egy egyszerű szerződés Fe nyelven telepítve.
 
@@ -320,5 +320,5 @@ Az alapvető szintaxis, szerződés-életciklus, interfészek, operátorok, adat
 
 ## További olvasnivaló {#further-reading}
 
-- [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts)
-- [Solidity példák alapján](https://solidity-by-example.org)
+- [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts/5.x/)
+- [Solidity egy példa alapján](https://solidity-by-example.org)

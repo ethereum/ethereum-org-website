@@ -2,7 +2,7 @@
 title: IPFS for decentralized user interfaces
 description: This tutorial teaches the reader how to use IPFS to store the user interface for a dapp. Although the application's data and business logic are decentralized, without a censorship resistant user interface users might lose access to it anyway.
 author: Ori Pomerantz
-tags: ["ipfs", "user interface"]
+tags: ["ipfs"]
 skill: beginner
 lang: en
 published: 2024-06-29
@@ -69,3 +69,5 @@ Additionally, some packages have a problem with IPFS, so if your web site is ver
 ## Conclusion {#conclusion}
 
 Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.
+
+[See here for more of my work](https://cryptodocguy.pro/).
