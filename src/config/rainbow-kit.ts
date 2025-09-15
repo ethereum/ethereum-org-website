@@ -9,6 +9,8 @@ import {
   zerionWallet,
 } from "@rainbow-me/rainbowkit/wallets"
 
+import { IS_CI, IS_DEV } from "@/lib/utils/env"
+
 import { mockWallet } from "../../tests/e2e/fixtures/mockWallet"
 
 const walletGroups = [
@@ -25,11 +27,7 @@ const walletGroups = [
   },
 ]
 
-const isLocalhost =
-  typeof window !== "undefined" && window.location.hostname === "localhost"
-
-// Add mock wallet only when running on localhost
-if (isLocalhost) {
+if (IS_DEV || IS_CI) {
   walletGroups.push({
     groupName: "Test",
     wallets: [mockWallet],
@@ -41,5 +39,5 @@ export const rainbowkitConfig = getDefaultConfig({
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
   chains: [mainnet],
   wallets: walletGroups,
-  ssr: isLocalhost,
+  ssr: true,
 })
