@@ -61,7 +61,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     )
 
   const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "learn/what-is-ethereum-network", startDepth: 1 },
+    breadcrumbs: { slug: "learn/what-is-the-ethereum-network", startDepth: 1 },
     heroImg,
     title: t("page-what-is-ethereum-network-title"),
     description: (

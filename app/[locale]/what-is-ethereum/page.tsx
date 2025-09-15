@@ -340,7 +340,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </div>
             </div>
 
-            <LinkWithArrow href="/layer-2/networks/">
+            <LinkWithArrow href="/what-is-the-ethereum-network/">
               {t("page-what-is-ethereum-network-learn-more")}
             </LinkWithArrow>
           </Section>
