@@ -95,7 +95,6 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Molecule: Παρέχετε και λάβετε χρηματοδότηση για τα ερευνητικά σας έργα.](https://www.molecule.xyz/)
 - [VitaDAO: Λάβετε χρηματοδότηση μέσω συμφωνιών έρευνας με χορηγία για έρευνα μακροζωίας.](https://www.vitadao.com/)
 - [ResearchHub: Δημοσιεύστε μια επιστημονική έρευνα και συμμετάσχετε σε μια συζήτηση.](https://www.researchhub.com/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: Αναζήτηση δεδομένων για το κλίμα που συλλέγονται από μια αποκεντρωμένη κοινότητα.](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci δημιουργία εργαλείου δημοσίευσης.](https://descifoundation.org/)
 - [DeSci.World: Σύντομη αγορά για να δουν οι χρήστες και να ασχοληθούν με την αποκεντρωμένη επιστήμη.](https://desci.world)

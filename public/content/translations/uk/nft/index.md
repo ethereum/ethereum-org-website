@@ -56,7 +56,7 @@ NFT використовується для багатьох речей, зок�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Досліджуйте, купуйте й створюйте власні токени NFT на твори мистецтва та колекційні предмети.</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Ознайомитися з мистецтвом NFT
   </ButtonLink>
 </InfoBanner>

@@ -56,7 +56,7 @@ Pokud chcete upozornit na určitý řetězec, který vyžaduje pozornost, může
 
 ## Co je překladová paměť (PP)? {#translation-memory}
 
-Překladová paměť (PP) je funkce Crowdinu, která ukládá všechny dříve přeložené řetězce na [ethereum.org](http://ethereum.org/). Když je řetězec přeložen, automaticky se uloží do PP našeho projektu. Může to být užitečný nástroj, který vám pomůže ušetřit čas!
+Překladová paměť (PP) je funkce Crowdinu, která ukládá všechny dříve přeložené řetězce na [ethereum.org](https://ethereum.org/). Když je řetězec přeložen, automaticky se uloží do PP našeho projektu. Může to být užitečný nástroj, který vám pomůže ušetřit čas!
 
 - Podívejte se do sekce „Návrhy PP a SP“ a uvidíte, jak stejný nebo podobný řetězec přeložili jiní překladatelé. Pokud naleznete návrh s vysokou mírou shody, neváhejte na překlad odkázat kliknutím.
 - Pokud v seznamu nic není, můžete v PP vyhledat dříve vytvořené překlady a znovu je použít pro zajištění konzistence.

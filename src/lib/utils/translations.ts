@@ -38,6 +38,20 @@ export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)
 }
 
+/**
+ * Convert language codes to full language names using the i18n config
+ * @param languageCodes Array of language codes (e.g., ['en', 'es', 'fr'])
+ * @returns Array of full language names (e.g., ['English', 'Spanish', 'French'])
+ */
+export const formatLanguageNames = (languageCodes: string[]): string[] => {
+  return languageCodes
+    .map((code) => {
+      const langConfig = i18nConfig.find((lang) => lang.code === code)
+      return langConfig?.name || code
+    })
+    .filter(Boolean)
+}
+
 export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
@@ -70,6 +84,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
+  if (path === "/collectibles/") {
+    primaryNamespace = "page-collectibles"
+  }
+
   if (path === "/contributing/translation-program/acknowledgements/") {
     primaryNamespace = "page-contributing-translation-program-acknowledgements"
   }
@@ -82,12 +100,12 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-community"
   }
 
-  if (path.startsWith("/dapps/")) {
-    primaryNamespace = "page-dapps"
+  if (path.startsWith("/apps/")) {
+    primaryNamespace = "page-apps"
   }
 
   if (path.startsWith("/energy-consumption/")) {
-    primaryNamespace = "page-what-is-ethereum"
+    primaryNamespace = "page-energy-consumption"
     requiredNamespaces = [...requiredNamespaces, "page-about"]
   }
 
@@ -200,6 +218,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/start/")) {
+    primaryNamespace = "page-start"
     requiredNamespaces = [...requiredNamespaces]
   }
 
@@ -213,7 +232,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   // Glossary tooltips
   if (
-    path.startsWith("/dapps/") ||
+    path.startsWith("/apps/") ||
     path.startsWith("/layer-2/") ||
     path.startsWith("/layer-2/learn/") ||
     path.startsWith("/get-eth/") ||

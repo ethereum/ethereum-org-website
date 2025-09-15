@@ -20,7 +20,7 @@ Understanding the decentralized nature of Ethereum is vital because **anyone cla
   Learn Ethereum fundamentals
 </DocLink>
 
-Despite the lack of official support, many groups, communities, and projects across the Ethereum ecosystem are happy to help, and you can find a lot of useful information and resources on this page. Still have questions? Join the [ethereum.org Discord](/discord/), and we'll try to help.
+Despite the lack of official support, many groups, communities, and projects across the Ethereum ecosystem are happy to help, and you can find a lot of useful information and resources on this page. Still have questions? Join the [ethereum.org Discord](https://discord.gg/ethereum-org), and we'll try to help.
 
 ## Frequently asked questions {#faq}
 
@@ -57,7 +57,6 @@ Building can be hard. Here are some development focused spaces with experienced 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

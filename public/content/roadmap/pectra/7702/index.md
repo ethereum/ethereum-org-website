@@ -8,7 +8,7 @@ lang: en
 
 ## Abstract {#abstract}
 
-EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
+EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy Ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
 
 This new transaction type introduces an authorization list. Each authorization tuple in the list is defined as
 
@@ -29,7 +29,7 @@ The private key of the EOA retains full control over the account after the deleg
 
 **Account Abstraction**: A delegation contract should align with Ethereum’s broader account abstraction (AA) standards to maximize compatibility. In particular, it should ideally be ERC-4337 compliant or compatible.
 
-**Permissionless and Censorship-Resistant Design**: Ethereum values permissionless participation. A delegation contract MUST NOT hard-code or rely on any single “trusted” relayer or service. This would brick the account if the relayer goes offline. Features like batching (e.g. approve+transferFrom) can by used by the EOA itself without a relayer. For application developers that want to use advanced features enabled by 7702 (Gas Abstraction, Privacy-Preserving Withdrawals) you’ll need a relayer. While there are different relayer architectures, our recommendation is to use [4337 bundlers](https://www.erc4337.io/bundlers) pointing at least [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) because:
+**Permissionless and Censorship-Resistant Design**: Ethereum values permissionless participation. A delegation contract MUST NOT hard-code or rely on any single “trusted” relayer or service. This would brick the account if the relayer goes offline. Features like batching (e.g. approve+transferFrom) can be used by the EOA itself without a relayer. For application developers that want to use advanced features enabled by 7702 (Gas Abstraction, Privacy-Preserving Withdrawals) you’ll need a relayer. While there are different relayer architectures, our recommendation is to use [4337 bundlers](https://www.erc4337.io/bundlers) pointing at least [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) because:
 
 - They provide standardized interfaces for relaying
 - Include built-in paymaster systems

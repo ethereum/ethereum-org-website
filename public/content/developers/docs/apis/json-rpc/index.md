@@ -651,7 +651,7 @@ Calculating the correct position depends on the storage to retrieve. Consider th
 contract Storage {
     uint pos0;
     mapping(address => uint) pos1;
-    function Storage() {
+    constructor() {
         pos0 = 1234;
         pos1[msg.sender] = 5678;
     }
@@ -1148,13 +1148,13 @@ params: [
 - `number`: `QUANTITY` - the block number. `null` when its pending block.
 - `hash`: `DATA`, 32 Bytes - hash of the block. `null` when its pending block.
 - `parentHash`: `DATA`, 32 Bytes - hash of the parent block.
-- `nonce`: `DATA`, 8 Bytes - hash of the generated proof-of-work. `null` when its pending block.
+- `nonce`: `DATA`, 8 Bytes - hash of the generated proof-of-work. `null` when its pending block, `0x0` for proof-of-stake blocks (since The Merge)
 - `sha3Uncles`: `DATA`, 32 Bytes - SHA3 of the uncles data in the block.
 - `logsBloom`: `DATA`, 256 Bytes - the bloom filter for the logs of the block. `null` when its pending block.
 - `transactionsRoot`: `DATA`, 32 Bytes - the root of the transaction trie of the block.
 - `stateRoot`: `DATA`, 32 Bytes - the root of the final state trie of the block.
 - `receiptsRoot`: `DATA`, 32 Bytes - the root of the receipts trie of the block.
-- `miner`: `DATA`, 20 Bytes - the address of the beneficiary to whom the mining rewards were given.
+- `miner`: `DATA`, 20 Bytes - the address of the beneficiary to whom the block rewards were given.
 - `difficulty`: `QUANTITY` - integer of the difficulty for this block.
 - `totalDifficulty`: `QUANTITY` - integer of the total difficulty of the chain until this block.
 - `extraData`: `DATA` - the "extra data" field of this block.

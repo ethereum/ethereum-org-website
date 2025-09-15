@@ -95,7 +95,6 @@ Web3 обладает потенциалом, который позволит р
 - [Molecule: финансируйте и получайте финансирование для своих исследовательских проектов](https://www.molecule.xyz/)
 - [VitaDAO: получайте финансирование через спонсорские соглашения на исследования долголетия](https://www.vitadao.com/)
 - [ResearchHub: публикуйте научные результаты и участвуйте в беседах с коллегами](https://www.researchhub.com/)
-- [LabDAO: складывание белка in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: запрос климатических данных, собранных децентрализованным сообществом](https://www.dclimate.net/)
 - [DeSci Foundation: конструктор инструментов публикации DeSci](https://descifoundation.org/)
 - [DeSci.World: единая пользовательская площадка для просмотра и взаимодействия с децентрализованной наукой](https://desci.world)
@@ -126,7 +125,7 @@ Web3 обладает потенциалом, который позволит р
 - [DeSci: будущее исследований с Сэмюэлом Акиношо](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Финансирование науки (эпилог: DeSci и новые криптопримитивности). Автор: Надия](https://nadia.xyz/science-funding)
 - [Децентрализация подрывает устоявшуюся систему разработки лекарственных средств](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Что такое децентрализованная наука (DeSci)?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Что такое децентрализованная наука (DeSci)?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Видео {#videos}
 

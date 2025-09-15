@@ -57,7 +57,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Εξερευνήστε, αγοράστε ή δημιουργήστε το δικό σας NFT τέχνη/συλλεκτικά...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Εξερευνήστε NFT τέχνης
   </ButtonLink>
 </InfoBanner>

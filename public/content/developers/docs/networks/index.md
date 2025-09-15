@@ -50,14 +50,15 @@ The two public testnets that client developers are currently maintaining are Sep
 
 ##### Faucets
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
+- [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Alchemy Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
-- [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
-- [Google Cloud Web3 Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+- [Infura Sepolia Faucet](https://www.infura.io/faucet)
+- [PoW Faucet](https://sepolia-faucet.pk910.de/)
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
@@ -75,35 +76,44 @@ Hoodi is a testnet for testing validating and staking. The Hoodi network is open
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
-- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 
+- [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
-- [PoW faucet](https://hoodi-faucet.pk910.de/)
+- [PoW Faucet](https://hoodi-faucet.pk910.de/)
 
-#### Holesky {#holesky}
+#### Ephemery {#ephemery}
 
-The Holesky testnet will be [deprecated in September 2025](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky). Staking operators and infrastructure providers should use Hoodi for validator testing instead.
+Ephemery is a unique kind of testnet that fully resets every month. The execution and consensus state reverts back to genesis every 28 days, which means anything that happens on the testnet is ephemeral. This makes it ideal for a short term testing, fast node bootstrap and 'hello world' kind of applications that don't need permanence.
+
+- Always fresh state, short term testing of validators and apps
+- Includes only basic set of contracts
+- Open validator set and easy to access large amounts of funds
+- Smallest node requirements and quickest sync, &lt;5GB on average
 
 ##### Resources
 
-- [Website](https://holesky.ethpandaops.io/)
-- [GitHub](https://github.com/eth-clients/holesky)
-- [Otterscan](https://holesky.otterscan.io/)
-- [Etherscan](https://holesky.etherscan.io/)
-- [Blockscout](https://eth-holesky.blockscout.com/)
+- [Website](https://ephemery.dev/)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [Community chat](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [Beacon explorer](https://beaconlight.ephemery.dev/)
+- [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Launchpad](https://launchpad.ephemery.dev/)
 
-##### Faucets
+#### Faucets
 
-- [QuickNode Holesky Faucet](https://faucet.quicknode.com/ethereum/holesky)
-- [PoW faucet](https://holesky-faucet.pk910.de/)
-- [Alchemy Holesky Faucet](https://www.alchemy.com/faucets/ethereum-holesky)
-- [Chainstack Holesky faucet](https://faucet.chainstack.com/holesky-testnet-faucet)
-- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
-- [Google Cloud Web3 Holesky faucet](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
+- [Bordel Faucet](https://faucet.bordel.wtf/)
+- [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
 
-To launch a Validator on Hoodi testnet, use [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
+#### Holesky {#holesky}
+
+The Holesky testnet is deprecated as of September 2025. Staking operators and infrastructure providers should use Hoodi for validator testing instead.
+
+- [Holesky Testnet Shutdown Announcement](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1-September-2025_
+- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
 
 ### Layer 2 testnets {#layer-2-testnets}
 
@@ -120,11 +130,9 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
-- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
-- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
 
@@ -137,9 +145,9 @@ A testnet for [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
-- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
-- [Testnet faucets](https://docs.optimism.io/builders/tools/build/faucets)
+- [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
+- [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
@@ -151,9 +159,9 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
-- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
-- [Starknet faucet](https://starknet-faucet.vercel.app/)
-- [Blast Starknet Sepolia faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
+- [Alchemy Faucet](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Blast Starknet Sepolia Faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
+- [Starknet Faucet](https://starknet-faucet.vercel.app/)
 
 ## Private networks {#private-networks}
 

@@ -12,7 +12,6 @@ import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
@@ -34,6 +33,7 @@ import Twitter from "@/components/icons/twitter.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
+import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
@@ -79,7 +79,6 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
-import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
@@ -158,6 +157,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
+
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
@@ -196,7 +196,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       label: t("page-index-cta-dapps-label"),
       description: t("page-index-cta-dapps-description"),
-      href: "/dapps/",
+      href: "/apps/",
       Svg: TryAppsIcon,
       className: cn(
         "text-accent-c hover:text-accent-c-hover",
@@ -382,7 +382,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       Svg: Discord,
       label: "Discord",
-      href: "/discord/",
+      href: "https://discord.gg/ethereum-org",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index-join-action-discord-description"),
       eventName: "Discord",
@@ -429,14 +429,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <BannerNotification shouldShow={locale === DEFAULT_LOCALE}>
-        <p>
-          10 years of Ethereum! -{" "}
-          <Link href="/10years/" className="text-white">
-            Join us to celebrate 10 years of Ethereum!
-          </Link>
-        </p>
-      </BannerNotification>
       <HomeHero heroImg={Hero} className="w-full" locale={locale} />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -634,14 +626,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </SectionContent>
 
           {/* dynamic / lazy loaded */}
-          <ValuesMarquee
-            pairings={valuesPairings}
-            eventCategory={eventCategory}
-            categoryLabels={{
-              ethereum: tCommon("ethereum"),
-              legacy: t("page-index-values-legacy"),
-            }}
-          />
+          <IntersectionObserverReveal rootMargin="-50% 0px 0px 0px">
+            <ValuesMarquee
+              pairings={valuesPairings}
+              eventCategory={eventCategory}
+              categoryLabels={{
+                ethereum: tCommon("ethereum"),
+                legacy: t("page-index-values-legacy"),
+              }}
+            />
+          </IntersectionObserverReveal>
         </Section>
 
         {/* Builders - Blockchain's biggest builder community */}
@@ -725,7 +719,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
               <div className="flex gap-3">
                 <ButtonLink
-                  href="/discord/"
+                  href="https://discord.gg/ethereum-org"
                   size="lg"
                   variant="outline"
                   isSecondary
@@ -808,13 +802,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </WindowBox>
             </div>
           </SectionContent>
-        </Section>
-
-        <Section
-          id="10-year-anniversary"
-          className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
-        >
-          <TenYearHomeBanner />
         </Section>
 
         {/* Recent posts */}

@@ -147,7 +147,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Chainstack -** **_Elastic and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
-- [Documentation](https://docs.chainbase.com/docs)
+- [Documentation](https://docs.chainstack.com/)
 - [Ethereum API reference](https://docs.chainstack.com/reference/ethereum-getting-started)
 
 **Coinbase Cloud Node -** **_Blockchain Infrastructure API._**

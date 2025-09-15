@@ -170,8 +170,10 @@ export const UseCasesLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
-    description: (
+    heroImg: { src: frontmatter.image, width: 760, height: 450 },
+    description: frontmatter.summary ? (
+      <p className="text-lg">{frontmatter.summary}</p>
+    ) : (
       <div>
         <List>
           {summaryPoints.map((point, idx) => (
@@ -201,6 +203,7 @@ export const UseCasesLayout = ({
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<ContentHero {...heroProps} />}
+        showDropdown={frontmatter.showDropdown ?? true}
       >
         {children}
       </ContentLayout>

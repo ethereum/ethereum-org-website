@@ -43,7 +43,6 @@ Algunos clientes de consenso tienen herramientas integradas para implementar cad
 
 - [Red de prueba local con Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Red de prueba local con Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Red de prueba local con Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Cadenas de prueba públicas de Ethereum {#public-beacon-testchains}
 

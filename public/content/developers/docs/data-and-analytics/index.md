@@ -20,7 +20,7 @@ In terms of architectural fundamentals, understanding what an [API](https://www.
 
 Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, validators, accounts, and other onchain activity.
 
-Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) provides execution and consensus data for every 12s slot.
+Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) and [Blockscout](https://eth.blockscout.com) provide execution and consensus data for every 12s slot.
 
 ## The Graph {#the-graph}
 
@@ -54,20 +54,17 @@ To get started, visit the [documentation](https://docs.sqd.dev/) or see [EVM exa
 
 To start, visit the [Ethereum quick start guide](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) to start indexing Ethereum blockchain data in minutes in a local Docker environment for testing before going live on a [SubQuery's managed service](https://managedservice.subquery.network/) or on [SubQuery's decentralised network](https://app.subquery.network/dashboard).
 
-## Ethernow - Mempool Data Program {#ethernow}
-
-[Blocknative](https://www.blocknative.com/) provides open access to its Ethereum historical [mempool data archive](https://www.ethernow.xyz/mempool-data-archive). This enables researchers and community good projects to explore the pre-chain layer of Ethereum Mainnet. The data set is actively maintained and represents the most comprehensive historical record of mempool transaction events within the Ethereum ecosystem. Learn more at [Ethernow](https://www.ethernow.xyz/).
-
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum Virtual Machine) chains. EQL's ultimate goal is to support complex relational queries on EVM chain first-class citizens (blocks, accounts, and transactions) while providing developers and researchers with an ergonomic syntax for everyday use. With EQL, developers can fetch blockchain data using familiar SQL-like syntax and eliminate the need for complex boilerplate code. EQL supports standard blockchain data requests (e.g., retrieving an account's nonce and balance on Ethereum or fetching the current block size and timestamp) and is continually adding support for more complex requests and featuresets.
 
 ## Further Reading {#further-reading}
 
-- [Exploring Crypto Data I: Data Flow Architectures](https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Exploring Crypto Data I: Data Flow Architectures](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Network Overview](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
+- [API documentation on Blockscout](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
 - [Dune Basics](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)

@@ -115,8 +115,8 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("get-eth"),
         },
         {
-          href: "/dapps/",
-          text: t("decentralized-applications-dapps"),
+          href: "/apps/",
+          text: t("application-explorer"),
         },
         {
           href: "/stablecoins/",
@@ -187,6 +187,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         {
           href: "/enterprise/",
           text: t("enterprise-mainnet"),
+        },
+        {
+          href: "/founders/",
+          text: t("founders"),
         },
       ],
     },
@@ -323,6 +327,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           variant="outline"
           isSecondary
           onClick={() => scrollIntoView("body")}
+          data-testid="footer-go-to-top"
         >
           <ChevronUp /> <Translation id="go-to-top" />
         </Button>

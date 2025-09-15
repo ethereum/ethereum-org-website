@@ -56,7 +56,7 @@ Until now, the conversation around client diversity has focused mainly on the co
 
 ## Use a minority client {#use-minority-client}
 
-Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
+Addressing client diversity requires more than individual users to choose minority clients - it requires validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
 ### Execution clients {#execution-clients}
 
@@ -68,6 +68,8 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
+[Reth](https://reth.rs/)
+
 ### Consensus clients {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
@@ -78,7 +80,7 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 [Grandine](https://docs.grandine.io/)
 
