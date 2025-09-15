@@ -101,7 +101,6 @@ export const RoadmapLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
-      maxDepth={frontmatter.sidebarDepth}
       contributors={contributors}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={

@@ -167,8 +167,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div className="row-start-1 lg:col-start-2 lg:row-span-2">
-          <TableOfContents variant="beginner" items={tocItems} isMobile />
-          <TableOfContents variant="beginner" items={tocItems} />
+          <TableOfContents variant="card" items={tocItems} isMobile />
+          <TableOfContents variant="card" items={tocItems} />
         </div>
 
         <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">

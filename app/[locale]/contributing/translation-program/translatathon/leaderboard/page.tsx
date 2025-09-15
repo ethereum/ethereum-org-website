@@ -2,12 +2,14 @@ import { setRequestLocale } from "next-intl/server"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
-import LeftNavBar from "@/components/LeftNavBar"
 import MainArticle from "@/components/MainArticle"
+import TableOfContents from "@/components/TableOfContents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { APPLICATION_END_DATE } from "@/components/Translatathon/constants"
 import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { isDateReached } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -96,6 +98,20 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
     ],
   }
 
+  const tocItems = [
+    {
+      title: "Leaderboard",
+      url: "#leaderboard",
+    },
+  ]
+
+  if (isDateReached(APPLICATION_END_DATE)) {
+    tocItems.push({
+      title: "Apply now",
+      url: "#apply-now",
+    })
+  }
+
   return (
     <>
       <div className="relative mt-4">
@@ -103,20 +119,10 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
       </div>
 
       <div className="mx-auto mb-16 flex w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0">
-        <LeftNavBar
-          className="max-lg:hidden"
+        <TableOfContents
           dropdownLinks={dropdownLinks}
-          tocItems={[
-            {
-              title: "Leaderboard",
-              url: "#leaderboard",
-            },
-            {
-              title: "Apply now",
-              url: "#apply-now",
-            },
-          ]}
-          maxDepth={0}
+          items={tocItems}
+          variant="left"
         />
         <MainArticle className="relative flex-[1_1_992px] px-8 pb-8">
           <div className="flex flex-col gap-4">
@@ -143,9 +149,11 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
               </div>
             )}
           </div>
-          <div id="apply-now">
-            <ApplyNow />
-          </div>
+          {isDateReached(APPLICATION_END_DATE) && (
+            <div id="apply-now">
+              <ApplyNow />
+            </div>
+          )}
         </MainArticle>
       </div>
     </>
