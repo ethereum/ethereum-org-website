@@ -899,10 +899,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </div>
               </div>
 
-              {/* // TODO: Re-enable when page ready */}
-              {/* <LinkWithArrow href="#TODO-get-link">
+              <LinkWithArrow href="/ethereum-vs-bitcoin/">
                 {t("page-what-is-ethereum-bitcoin-learn-more")}
-              </LinkWithArrow> */}
+              </LinkWithArrow>
             </div>
           </Section>
 
