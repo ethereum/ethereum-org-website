@@ -2071,6 +2071,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/maximevtush"><img src="https://avatars.githubusercontent.com/u/154841002?v=4?s=100" width="100px;" alt="Maxim Evtush"/><br /><sub><b>Maxim Evtush</b></sub></a><br /><a href="#maintenance-maximevtush" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lipperhey"><img src="https://avatars.githubusercontent.com/u/185240929?v=4?s=100" width="100px;" alt="lipperhey"/><br /><sub><b>lipperhey</b></sub></a><br /><a href="#maintenance-lipperhey" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/zkpepe"><img src="https://avatars.githubusercontent.com/u/202324721?v=4?s=100" width="100px;" alt="zkpepe"/><br /><sub><b>zkpepe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azkpepe" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nijr"><img src="https://avatars.githubusercontent.com/u/200988320?v=4?s=100" width="100px;" alt="nijr"/><br /><sub><b>nijr</b></sub></a><br /><a href="#maintenance-nijr" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
