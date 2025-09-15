@@ -13360,6 +13360,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "nijr",
+      "name": "nijr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200988320?v=4",
+      "profile": "https://github.com/nijr",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
