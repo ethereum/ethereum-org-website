@@ -159,7 +159,6 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for onchain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
 - **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Open standard for authentication with Ethereum accounts._
-- **[Ethereum Follow Protocol (EFP)](https://efp.app/)** - _An onchain social graph protocol for Ethereum accounts that complements ENS and SIWE._
 - **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
