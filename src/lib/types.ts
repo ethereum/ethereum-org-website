@@ -732,6 +732,8 @@ export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
 
+export type WalletRow = Wallet & { id: string }
+
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
 export interface WalletFilterData {
