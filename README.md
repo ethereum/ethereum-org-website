@@ -2073,6 +2073,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/zkpepe"><img src="https://avatars.githubusercontent.com/u/202324721?v=4?s=100" width="100px;" alt="zkpepe"/><br /><sub><b>zkpepe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azkpepe" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nijr"><img src="https://avatars.githubusercontent.com/u/200988320?v=4?s=100" width="100px;" alt="nijr"/><br /><sub><b>nijr</b></sub></a><br /><a href="#maintenance-nijr" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fredrik0x"><img src="https://avatars.githubusercontent.com/u/84518844?v=4?s=100" width="100px;" alt="Fredrik"/><br /><sub><b>Fredrik</b></sub></a><br /><a href="#maintenance-fredrik0x" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
