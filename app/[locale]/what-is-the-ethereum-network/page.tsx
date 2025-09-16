@@ -16,6 +16,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { screens } from "@/lib/utils/screen"
 
 import developersHubImg from "@/public/images/heroes/developers-hub-hero.png"
 import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.png"
@@ -28,7 +29,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
   const t = await getTranslations({
-    namespace: "page-what-is-ethereum-network",
+    namespace: "page-what-is-the-ethereum-network",
   })
 
   const commitHistoryCache: CommitHistory = {}
@@ -112,7 +113,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 strong: Strong,
               })}
             </p>
-            <Image src={computerImg} alt="Computer" className="mx-auto" />
+            <Image
+              src={computerImg}
+              alt="Computer"
+              className="mx-auto"
+              sizes="301px"
+            />
             <p>{t("page-what-is-ethereum-network-section-description-4")}</p>
             <UnorderedList>
               <ListItem>
@@ -170,6 +176,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={developersHubImg}
               alt="Developers Hub"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
@@ -256,6 +263,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={manDogPlayingImg}
               alt="Man and Dog Playing"
               className="mx-auto"
+              sizes="(max-width: 461px) 100vw, 461px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -308,7 +316,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         {chunks}
                       </a>
                     ),
-                    staked_ether: (chunks) => (
+                    stakedEther: (chunks) => (
                       <a href="https://beaconcha.in/charts/staked_ether">
                         {chunks}
                       </a>
@@ -370,8 +378,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           >
             <Image
               src={layer2HubImg}
-              alt="Man and Dog Playing"
+              alt="Layer 2 Hub"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -487,8 +496,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           >
             <Image
               src={layer2LearnHeroImg}
-              alt="Man and Dog Playing"
+              alt="Layer 2 Learn Hero"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[4].url)} className="scroll-mt-28">
@@ -690,7 +700,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale,
-    namespace: "page-what-is-ethereum-network",
+    namespace: "page-what-is-the-ethereum-network",
   })
 
   return await getMetadata({
