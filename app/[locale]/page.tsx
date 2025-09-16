@@ -16,6 +16,7 @@ import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
+import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
@@ -91,11 +92,6 @@ import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
-import BuildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
-import ActivityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
-import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
-import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
-import Hero from "@/public/images/home/hero.png"
 
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
@@ -431,9 +427,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   return (
     <>
       <IndexPageJsonLD locale={locale} />
-
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <HomeHero heroImg={Hero} className="w-full" locale={locale} />
+        <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
             {subHeroCTAs.map(
@@ -516,7 +511,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           {/* Activity - The strongest ecosystem */}
           <Section id="activity" variant="responsiveFlex">
             <SectionBanner>
-              <Image src={ActivityImage} alt="" />
+              <HomepageSectionImage sectionId="activity" alt="" />
             </SectionBanner>
 
             <SectionContent>
@@ -565,7 +560,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             className="md:flex-row-reverse"
           >
             <SectionBanner>
-              <Image src={LearnImage} alt="" />
+              <HomepageSectionImage sectionId="learn" alt="" />
             </SectionBanner>
 
             <SectionContent>
@@ -648,7 +643,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           {/* Builders - Blockchain's biggest builder community */}
           <Section id="builders" variant="responsiveFlex">
             <SectionBanner className="relative">
-              <Image src={BuildersImage} alt="" />
+              <HomepageSectionImage sectionId="builders" alt="" />
             </SectionBanner>
 
             <SectionContent>
@@ -701,7 +696,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             className="md:flex-row-reverse"
           >
             <SectionBanner>
-              <Image src={CommunityImage} alt="" />
+              <HomepageSectionImage sectionId="community" alt="" />
             </SectionBanner>
 
             <SectionContent>

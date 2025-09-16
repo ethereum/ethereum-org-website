@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { Lang } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -12,6 +12,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -20,7 +21,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { GITHUB_REPO_URL } from "@/lib/constants"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import ResourcesNav from "./_components/ResourcesNav"
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
@@ -79,59 +79,59 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         />
 
         <Stack className="gap-4 px-2 py-6 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
-          <div className="sticky top-5 z-docked flex flex-col items-center gap-3 text-center md:top-6 md:px-2">
-            <div className="my-2 text-body-medium">
+          <StickyContainer className="top-[26px] space-y-5">
+            <div className="my-2 text-center text-body-medium">
               {t("page-resources-whats-on-this-page")}
             </div>
-            <ResourcesNav
-              resourceSections={resourceSections}
-              eventCategory={EVENT_CATEGORY}
+            <TabNav
+              sections={resourceSections}
+              customEventOptions={{
+                eventCategory: EVENT_CATEGORY,
+                eventAction: "whats_on_this_page",
+              }}
+              useMotion
             />
-          </div>
+          </StickyContainer>
           <Stack className="gap-11 pt-12 md:gap-16 lg:gap-24">
-            {resourceSections.map(
-              ({ key, icon, title: sectionTitle, boxes }) => (
-                <Stack key={key} asChild>
-                  <section id={key} className="scroll-mt-40 gap-8 md:gap-6">
-                    <div className="group flex w-full items-center gap-4 border-b bg-transparent px-2 py-4">
-                      <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl [&_svg]:shrink-0">
-                        {icon || <StackIcon />}
-                      </div>
-                      <h2 className="flex-1 text-start font-black">
-                        {sectionTitle}
-                      </h2>
+            {resourceSections.map(({ key, icon, label, boxes }) => (
+              <Stack key={key} asChild>
+                <section id={key} className="!scroll-mt-40 gap-8 md:gap-6">
+                  <div className="group flex w-full items-center gap-4 border-b bg-transparent px-2 py-4">
+                    <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl [&_svg]:shrink-0">
+                      {icon || <StackIcon />}
                     </div>
-                    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
-                      {boxes.map(({ title, metric, items, className }) => (
-                        <div
-                          className={cn(
-                            "overflow-hidden rounded-2xl border shadow-lg",
-                            className
-                          )}
-                          key={title}
-                        >
-                          <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
-                            {title}
-                          </div>
-                          <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
-                            {metric && metric}
-                            <ResourcesContainer>
-                              {items.map(({ className, ...item }) => (
-                                <ResourceItem
-                                  item={item}
-                                  key={item.title}
-                                  className={className}
-                                />
-                              ))}
-                            </ResourcesContainer>
-                          </div>
+                    <h2 className="flex-1 text-start font-black">{label}</h2>
+                  </div>
+                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
+                    {boxes.map(({ title, metric, items, className }) => (
+                      <div
+                        className={cn(
+                          "overflow-hidden rounded-2xl border shadow-lg",
+                          className
+                        )}
+                        key={title}
+                      >
+                        <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
+                          {title}
                         </div>
-                      ))}
-                    </div>
-                  </section>
-                </Stack>
-              )
-            )}
+                        <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                          {metric && metric}
+                          <ResourcesContainer>
+                            {items.map(({ className, ...item }) => (
+                              <ResourceItem
+                                item={item}
+                                key={item.title}
+                                className={className}
+                              />
+                            ))}
+                          </ResourcesContainer>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </Stack>
+            ))}
           </Stack>
 
           <VStack className="gap-4 py-16">

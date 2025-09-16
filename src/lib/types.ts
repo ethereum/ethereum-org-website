@@ -492,10 +492,11 @@ export interface LearningTool {
   background: string
   subjects: Array<string>
   locales?: Array<Lang>
+  priceType?: string
 }
 
 export interface LearningToolsCardGridProps {
-  category: Array<LearningTool>
+  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
@@ -724,11 +725,14 @@ export type WalletData = {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  privacy?: boolean
 }
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
+
+export type WalletRow = Wallet & { id: string }
 
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
@@ -1225,4 +1229,11 @@ export type SectionNavDetails = {
   label: string
   href?: string
   icon?: React.ReactNode
+}
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
 }

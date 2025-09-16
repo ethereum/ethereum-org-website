@@ -175,8 +175,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
 
           <div className="row-start-1 lg:col-start-2 lg:row-span-2">
-            <TableOfContents variant="beginner" items={tocItems} isMobile />
-            <TableOfContents variant="beginner" items={tocItems} />
+            <TableOfContents variant="card" items={tocItems} isMobile />
+            <TableOfContents variant="card" items={tocItems} />
           </div>
 
           <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">
@@ -673,8 +673,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
               {/* // TODO: Re-enable when page ready */}
               {/* <LinkWithArrow href="/todo-add-path-when-ready/">
-              {t("page-what-is-ethereum-what-learn-more")}
-            </LinkWithArrow> */}
+                {t("page-what-is-ethereum-what-learn-more")}
+              </LinkWithArrow> */}
             </Section>
 
             <Section id={getId(tocItems[5].url)} className="space-y-14">
@@ -696,9 +696,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <Card className="overflow-hidden rounded-2xl border">
                 <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                   <User className="size-8 text-accent-a" />
-                  <h3 className="text-2xl">
-                    {t("page-what-is-ethereum-start-individuals-title")}
-                  </h3>
+                  {t("page-what-is-ethereum-start-individuals-title")}
                 </CardTitle>
                 <CardContent className="space-y-12 p-8">
                   <div className="space-y-6">
@@ -774,9 +772,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <Card className="overflow-hidden rounded-2xl border">
                 <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                   <SquareCode className="size-8 text-accent-b" />
-                  <h3 className="text-2xl">
-                    {t("page-what-is-ethereum-start-developers-title")}
-                  </h3>
+                  {t("page-what-is-ethereum-start-developers-title")}
                 </CardTitle>
                 <CardContent className="space-y-12 p-8">
                   <div className="space-y-6">
@@ -818,9 +814,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <Card className="overflow-hidden rounded-2xl border">
                 <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
                   <Landmark className="size-8 text-accent-c" />
-                  <h3 className="text-2xl">
-                    {t("page-what-is-ethereum-start-business-title")}
-                  </h3>
+                  {t("page-what-is-ethereum-start-business-title")}
                 </CardTitle>
                 <CardContent className="space-y-12 p-8">
                   <div className="space-y-6">
@@ -921,8 +915,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
                 {/* // TODO: Re-enable when page ready */}
                 {/* <LinkWithArrow href="#TODO-get-link">
-                {t("page-what-is-ethereum-bitcoin-learn-more")}
-              </LinkWithArrow> */}
+                  {t("page-what-is-ethereum-bitcoin-learn-more")}
+                </LinkWithArrow> */}
               </div>
             </Section>
 

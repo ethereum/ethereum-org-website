@@ -56,7 +56,7 @@ Unit tests are useful for checking that functions return expected values and tha
 
 Before writing unit tests, it helps to know what functionalities a smart contract offers and how users will access and use those functions. This is particularly useful for running [happy path tests](https://en.m.wikipedia.org/wiki/Happy_path) that determine if functions in a contract return the correct output for valid user inputs. We'll explain this concept using this (abridged) example of [an auction contract](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
-```
+```solidity
 constructor(
         uint biddingTime,
         address payable beneficiaryAddress

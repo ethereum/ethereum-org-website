@@ -136,6 +136,11 @@ const walletFilterData: { [key: string]: WalletFilterData } = {
     description: "page-find-wallet-social-recovery-desc",
     filterKey: "social_recovery",
   },
+  privacy: {
+    title: "page-find-wallet-privacy",
+    description: "page-find-wallet-privacy-desc",
+    filterKey: "privacy",
+  },
 }
 
 export default walletFilterData

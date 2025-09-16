@@ -8,7 +8,7 @@ import {
 
 import { ChainName } from "@/lib/types"
 
-import { ChainImages } from "@/components/ChainImages"
+import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
 import Discord from "@/components/icons/discord.svg"

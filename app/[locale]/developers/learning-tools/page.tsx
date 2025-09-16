@@ -32,7 +32,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <LearningToolsJsonLD locale={locale} />
 
       <I18nProvider locale={locale} messages={messages}>
-        <LearningTools locale={locale} />
+        <LearningTools />
       </I18nProvider>
     </>
   )

@@ -37,6 +37,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const wallets = walletsData.map((wallet) => ({
     ...wallet,
+    id: wallet.name,
     supportedLanguages: getSupportedLanguages(
       wallet.languages_supported,
       locale!

@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { AppCategoryEnum } from "@/lib/types"
+import { AppCategoryEnum, type SectionNavDetails } from "@/lib/types"
 
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -19,6 +19,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -31,7 +32,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AppsHighlight from "../../_components/AppsHighlight"
 import AppsTable from "../../_components/AppsTable"
-import CategoriesNav from "../../_components/CategoriesNav"
 import SuggestAnApp from "../../_components/SuggestAnApp"
 
 import AppsCategoryJsonLD from "./page-jsonld"
@@ -90,6 +90,15 @@ const Page = async ({
     categoryEnum as AppCategoryEnum
   )
 
+  const navSections: SectionNavDetails[] = Object.values(appsCategories).map(
+    ({ name, icon: Icon, slug }) => ({
+      key: slug,
+      label: t(name),
+      href: `/apps/categories/${slug}`,
+      icon: (<Icon className="h-4 w-4" />) as React.ReactElement,
+    })
+  )
+
   return (
     <>
       <AppsCategoryJsonLD
@@ -105,7 +114,9 @@ const Page = async ({
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
+                    <BreadcrumbLink href="/apps" className="uppercase">
+                      {t("page-apps-all-apps")}
+                    </BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
                     /
@@ -121,10 +132,14 @@ const Page = async ({
             title={t(category.name)}
             subtitle={t(category.description)}
           />
-
-          <div className="flex flex-col gap-4 px-4 md:px-8">
-            <CategoriesNav activeCategory={categoryEnum} />
-          </div>
+          <TabNav
+            sections={navSections}
+            activeSection={categoryEnum}
+            customEventOptions={{
+              eventCategory: "categories_page",
+              eventAction: "navigation",
+            }}
+          />
 
           <MainArticle className="flex flex-col gap-32 py-10">
             <div className="flex flex-col px-4 md:px-8">

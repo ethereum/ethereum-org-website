@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 import { ChainName } from "@/lib/types"
 
 import { Image } from "@/components/Image"
@@ -11,7 +13,7 @@ interface ChainImagesProps {
   className?: string
 }
 
-export const ChainImages = ({
+const ChainImages = ({
   chains,
   size = 24,
   className = "",
@@ -29,12 +31,18 @@ export const ChainImages = ({
           (network) => network.chainName === chain
         )
         return (
-          <div key={chain} className="overflow-hidden rounded-full">
+          <div
+            key={chain}
+            className="inline-flex items-center justify-center overflow-hidden rounded-full leading-none"
+            style={{
+              height: `${size}px`,
+            }}
+          >
             <Tooltip content={chainData?.name || ""}>
               <Image
                 src={chainData?.logo || ""}
                 alt={`${chain} blockchain network`}
-                className="rounded-full"
+                className="block rounded-full"
                 style={{
                   objectFit: "contain",
                   width: `${size}px`,
@@ -48,3 +56,5 @@ export const ChainImages = ({
     </div>
   )
 }
+
+export default memo(ChainImages)

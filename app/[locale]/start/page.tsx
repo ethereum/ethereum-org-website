@@ -19,7 +19,7 @@ import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
 import StartPageJsonLD from "./page-jsonld"
 
-import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
@@ -97,7 +97,7 @@ export async function generateMetadata({
     slug: ["start"],
     title: t("page-start-meta-title"),
     description: t("page-start-meta-description"),
-    image: "/images/heroes/developers-hub-hero.jpg",
+    image: "/images/heroes/developers-hub-hero.png",
   })
 }
 
