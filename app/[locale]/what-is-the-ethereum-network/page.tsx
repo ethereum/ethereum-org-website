@@ -1,7 +1,8 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
+import CommentCard from "@/components/CommentCard"
 import DocLink from "@/components/DocLink"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -9,7 +10,6 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import { Card } from "@/components/ui/card"
 import { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -17,8 +17,8 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import developersHubImg from "@/public/images/heroes/developers-hub-hero.jpg"
-import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import developersHubImg from "@/public/images/heroes/developers-hub-hero.png"
+import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.png"
 import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
 import manDogPlayingImg from "@/public/images/man-and-dog-playing.png"
 import computerImg from "@/public/images/what-is-ethereum-network/computer_alone.png"
@@ -27,10 +27,7 @@ import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-n
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations({
-    locale,
     namespace: "page-what-is-ethereum-network",
   })
 
@@ -189,29 +186,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   }
                 )}
               </p>
-              <Card className="mx-auto h-fit max-w-[400px] space-y-1 rounded-2xl border bg-background-highlight p-6 [&_[data-label='avatar']]:bg-accent-c">
-                <div className="space-y-6">
-                  <p>
-                    {t(
-                      "page-what-is-ethereum-network-gas-section-description-3"
-                    )}
-                  </p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <div
-                    data-label="avatar"
-                    className="grid size-8 place-items-center rounded-full text-body-inverse"
-                  >
-                    T
-                  </div>
-                  <div>
-                    <p className="font-bold">Tim Beiko</p>
-                    <p className="text-sm text-body-medium">
-                      Protocol Coordination, Ethereum Foundation
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              <CommentCard
+                description={t(
+                  "page-what-is-ethereum-network-gas-section-description-3"
+                )}
+                name="Tim Beiko"
+                title="Protocol Coordination, Ethereum Foundation"
+              />
               <p>
                 {t.rich(
                   "page-what-is-ethereum-network-gas-section-description-4",
@@ -311,29 +292,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   }
                 )}
               </p>
-              <Card className="mx-auto h-fit max-w-[400px] space-y-1 rounded-2xl border bg-background-highlight p-6 [&_[data-label='avatar']]:bg-accent-c">
-                <div className="space-y-6">
-                  <p>
-                    {t(
-                      "page-what-is-ethereum-network-staking-section-description-6"
-                    )}
-                  </p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <div
-                    data-label="avatar"
-                    className="grid size-8 place-items-center rounded-full text-body-inverse"
-                  >
-                    B
-                  </div>
-                  <div>
-                    <p className="font-bold">Barnabé Monnot</p>
-                    <p className="text-sm text-body-medium">
-                      Protocol Architecture, Ethereum Foundation
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              <CommentCard
+                description={t(
+                  "page-what-is-ethereum-network-staking-section-description-6"
+                )}
+                name="Barnabé Monnot"
+                title="Protocol Architecture, Ethereum Foundation"
+              />
               <p>
                 {t.rich(
                   "page-what-is-ethereum-network-staking-section-description-7",
