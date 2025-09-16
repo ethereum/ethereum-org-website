@@ -20,6 +20,13 @@ export default async function Layer2NetworksPageJsonLD({ locale, layer2Data }) {
     description: t("page-layer-2-networks-hero-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -44,6 +51,15 @@ export default async function Layer2NetworksPageJsonLD({ locale, layer2Data }) {
       ],
     },
     publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+    reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",

@@ -28,6 +28,13 @@ export default async function EthPageJsonLD({
     description: t("page-eth-is-money"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -54,6 +61,15 @@ export default async function EthPageJsonLD({
         url: "https://ethereum.org/favicon-32x32.png",
       },
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   // JSON-LD for the article content about Ether
@@ -63,11 +79,13 @@ export default async function EthPageJsonLD({
     headline: t("page-eth-whats-eth"),
     description: t("page-eth-is-money"),
     image: "https://ethereum.org/images/eth.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",
@@ -81,6 +99,15 @@ export default async function EthPageJsonLD({
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
     about: {
       "@type": "DigitalCurrency",

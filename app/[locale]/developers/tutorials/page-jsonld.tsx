@@ -26,6 +26,13 @@ export default async function TutorialsPageJsonLD({
     description: t("page-tutorials-meta-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -58,6 +65,15 @@ export default async function TutorialsPageJsonLD({
         url: "https://ethereum.org/favicon-32x32.png",
       },
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   const tutorialCollectionJsonLd = {
@@ -78,6 +94,15 @@ export default async function TutorialsPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
   }
 
@@ -114,6 +139,15 @@ export default async function TutorialsPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
   }
 

@@ -28,6 +28,13 @@ export default async function RoadmapVisionPageJsonLD({
     description: t("page-roadmap-vision-subtitle"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -56,6 +63,15 @@ export default async function RoadmapVisionPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   // JSON-LD for the vision article content
@@ -65,15 +81,26 @@ export default async function RoadmapVisionPageJsonLD({
     headline: t("page-roadmap-vision-title"),
     description: t("page-roadmap-vision-subtitle"),
     image: "https://ethereum.org/images/upgrades/oldship.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
     about: {
       "@type": "Thing",

@@ -19,6 +19,13 @@ export default async function TenYearJsonLD({ locale }: { locale: string }) {
     description: t("page-10-year-anniversary-meta-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -45,6 +52,15 @@ export default async function TenYearJsonLD({ locale }: { locale: string }) {
         url: "https://ethereum.org/assets/eth-logo.png",
         width: "256",
         height: "417",
+      },
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
       },
     },
     mainEntity: {
@@ -94,6 +110,15 @@ export default async function TenYearJsonLD({ locale }: { locale: string }) {
       "@type": "Organization",
       name: "Ethereum Foundation",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
   }
 

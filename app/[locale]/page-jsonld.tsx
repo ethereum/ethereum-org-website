@@ -26,6 +26,13 @@ export default async function IndexPageJsonLD({
     description: t("page-index-meta-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     isPartOf: {
       "@type": "WebSite",
       name: "ethereum.org",
@@ -46,6 +53,15 @@ export default async function IndexPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
   }
 

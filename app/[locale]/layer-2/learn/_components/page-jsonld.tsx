@@ -28,6 +28,13 @@ export default async function Layer2LearnPageJsonLD({
     description: t("page-layer-2-learn-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -56,6 +63,15 @@ export default async function Layer2LearnPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   // JSON-LD for the article content about learning Layer 2
@@ -65,15 +81,26 @@ export default async function Layer2LearnPageJsonLD({
     headline: t("page-layer-2-learn-title"),
     description: t("page-layer-2-learn-description"),
     image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
     dateModified: lastEditLocaleTimestamp,
   }

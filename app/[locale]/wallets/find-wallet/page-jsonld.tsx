@@ -28,6 +28,13 @@ export default async function FindWalletPageJsonLD({
     description: t("page-find-wallet-meta-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -56,6 +63,15 @@ export default async function FindWalletPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   // JSON-LD for the wallet finder article content
@@ -65,15 +81,26 @@ export default async function FindWalletPageJsonLD({
     headline: t("page-find-wallet-title"),
     description: t("page-find-wallet-meta-description"),
     image: "https://ethereum.org/images/wallets/wallet-hero.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
     about: {
       "@type": "Thing",

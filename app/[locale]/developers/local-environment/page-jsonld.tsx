@@ -28,6 +28,13 @@ export default async function LocalEnvironmentJsonLD({
     description: t("page-local-environment-setup-meta-desc"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -60,6 +67,15 @@ export default async function LocalEnvironmentJsonLD({
         url: "https://ethereum.org/favicon-32x32.png",
       },
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   const developmentFrameworksJsonLd = {
@@ -78,10 +94,12 @@ export default async function LocalEnvironmentJsonLD({
       url: framework.url,
       applicationCategory: "DeveloperApplication",
       operatingSystem: ["Windows", "macOS", "Linux"],
-      author: {
-        "@type": "Organization",
-        name: framework.githubUrl || "Community",
-      },
+      author: [
+        {
+          "@type": "Organization",
+          name: framework.githubUrl || "Community",
+        },
+      ],
       downloadUrl: framework.url,
       sameAs: framework.githubUrl,
     })),
@@ -89,6 +107,15 @@ export default async function LocalEnvironmentJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
   }
 

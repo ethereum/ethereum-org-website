@@ -22,6 +22,13 @@ export default async function AppsAppJsonLD({
     description: app.description,
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -54,6 +61,15 @@ export default async function AppsAppJsonLD({
         url: "https://ethereum.org/favicon-32x32.png",
       },
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   const softwareApplicationJsonLd = {
@@ -66,10 +82,12 @@ export default async function AppsAppJsonLD({
     applicationCategory: app.category,
     applicationSubCategory: app.subCategory.join(", "),
     operatingSystem: "Web Browser",
-    author: {
-      "@type": "Organization",
-      name: app.parentCompany,
-    },
+    author: [
+      {
+        "@type": "Organization",
+        name: app.parentCompany,
+      },
+    ],
     datePublished: app.dateOfLaunch,
     dateModified: app.lastUpdated,
     inLanguage: app.languages,

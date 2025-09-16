@@ -26,6 +26,13 @@ export default async function TrillionDollarSecurityPageJsonLD({
     description: t("page-trillion-dollar-security-meta-description"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -48,6 +55,15 @@ export default async function TrillionDollarSecurityPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
   }
 
   // JSON-LD for the security report article content
@@ -57,15 +73,26 @@ export default async function TrillionDollarSecurityPageJsonLD({
     headline: t("page-trillion-dollar-security-title"),
     description: t("page-trillion-dollar-security-meta-description"),
     image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
     },
     about: {
       "@type": "Thing",

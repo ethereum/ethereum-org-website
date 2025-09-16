@@ -20,6 +20,13 @@ export default async function LearnPageJsonLD({ locale }) {
     description: t("hero-subtitle"),
     url: url,
     inLanguage: locale,
+    author: [
+      {
+        "@type": "Organization",
+        name: "ethereum.org",
+        url: "https://ethereum.org",
+      },
+    ],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -38,6 +45,15 @@ export default async function LearnPageJsonLD({ locale }) {
       ],
     },
     publisher: {
+      "@type": "Organization",
+      name: "ethereum.org",
+      url: "https://ethereum.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ethereum.org/favicon-32x32.png",
+      },
+    },
+    reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
