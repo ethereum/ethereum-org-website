@@ -32,6 +32,7 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
 
 ### For developers and builders {#for-developers-and-builders}
 
