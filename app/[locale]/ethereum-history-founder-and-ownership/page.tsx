@@ -2,13 +2,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
+import CommentCard from "@/components/CommentCard"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 // import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import { Card } from "@/components/ui/card"
 // import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
@@ -142,31 +142,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-4"
                 )}
               </p>
-              <Card className="mx-auto h-fit max-w-[400px] space-y-1 rounded-2xl border bg-background-highlight p-6 [&_[data-label='avatar']]:bg-accent-c">
-                <div className="space-y-6">
-                  <p>
-                    {t(
-                      "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-5"
-                    )}
-                  </p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <div
-                    data-label="avatar"
-                    className="grid size-8 place-items-center rounded-full text-body-inverse"
-                  >
-                    V
-                  </div>
-                  <div>
-                    <p className="font-bold">Vitalik Buterin</p>
-                    <p className="text-sm text-body-medium">
-                      {t(
-                        "page-ethereum-history-founder-and-ownership-Founder of Ethereum"
-                      )}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              <CommentCard
+                description={t(
+                  "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-5"
+                )}
+                name="Vitalik Buterin"
+                title={t(
+                  "page-ethereum-history-founder-and-ownership-Founder of Ethereum"
+                )}
+              />
             </div>
           </Section>
         </div>
