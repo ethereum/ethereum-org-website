@@ -39,6 +39,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <RunANodePageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
       <RunANodePage
         contributors={contributors}

@@ -5,13 +5,14 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
@@ -51,9 +52,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "wallets/find-wallet",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <FindWalletPageJsonLD locale={locale} wallets={wallets} />
+      <FindWalletPageJsonLD
+        locale={locale}
+        wallets={wallets}
+        contributors={contributors}
+      />
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="relative flex flex-col">

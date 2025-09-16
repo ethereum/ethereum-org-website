@@ -8,12 +8,19 @@ export default async function WalletsPageJsonLD({
   locale,
   types,
   lastEditLocaleTimestamp,
+  contributors,
 }) {
   const t = await getTranslations({
     namespace: "page-find-wallet",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/wallets/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Wallets page
   const webPageJsonLd = {
@@ -24,6 +31,7 @@ export default async function WalletsPageJsonLD({
     description: t("page-wallets-meta-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -78,6 +86,7 @@ export default async function WalletsPageJsonLD({
         url: "https://ethereum.org",
       },
     ],
+    contributor: contributorList,
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",

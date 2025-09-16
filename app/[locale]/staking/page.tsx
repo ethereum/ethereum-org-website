@@ -87,6 +87,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <StakingPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
       <StakingPage
         data={data}

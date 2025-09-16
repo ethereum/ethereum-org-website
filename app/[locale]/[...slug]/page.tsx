@@ -84,7 +84,12 @@ export default async function Page({
 
   return (
     <>
-      <SlugJsonLD locale={locale} slug={slug} frontmatter={frontmatter} />
+      <SlugJsonLD
+        locale={locale}
+        slug={slug}
+        frontmatter={frontmatter}
+        contributors={contributors}
+      />
       <I18nProvider locale={locale} messages={messages}>
         <Layout
           slug={slug}

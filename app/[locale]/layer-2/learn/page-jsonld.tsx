@@ -1,33 +1,42 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function GasPageJsonLD({
+export default async function Layer2LearnPageJsonLD({
   locale,
   lastEditLocaleTimestamp,
+  contributors,
 }: {
   locale: Lang | undefined
   lastEditLocaleTimestamp: string
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
-    namespace: "page-gas",
+    namespace: "page-layer-2-learn",
   })
 
-  const url = normalizeUrlForJsonLd(locale, `/gas/`)
+  const url = normalizeUrlForJsonLd(locale, `/layer-2/learn/`)
 
-  // JSON-LD structured data for the gas page
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
+
+  // JSON-LD structured data for the Layer 2 Learn page
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": url,
-    name: t("page-gas-meta-title"),
-    description: t("page-gas-meta-description"),
+    name: t("page-layer-2-learn-meta-title"),
+    description: t("page-layer-2-learn-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -47,8 +56,14 @@ export default async function GasPageJsonLD({
         {
           "@type": "ListItem",
           position: 2,
-          name: t("page-gas-meta-title"),
-          item: normalizeUrlForJsonLd(locale, "/gas/"),
+          name: "Layer 2",
+          item: normalizeUrlForJsonLd(locale, "/layer-2/"),
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: t("page-layer-2-learn-meta-title"),
+          item: url,
         },
       ],
     },
@@ -68,12 +83,13 @@ export default async function GasPageJsonLD({
     },
   }
 
-  // JSON-LD for the article content about gas
+  // JSON-LD for the article content about learning Layer 2
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: t("page-gas-hero-title"),
-    description: t("page-gas-meta-description"),
+    headline: t("page-layer-2-learn-title"),
+    description: t("page-layer-2-learn-description"),
+    image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
     author: [
       {
         "@type": "Organization",
@@ -86,6 +102,7 @@ export default async function GasPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    contributor: contributorList,
     reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",
@@ -96,10 +113,6 @@ export default async function GasPageJsonLD({
       },
     },
     dateModified: lastEditLocaleTimestamp,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
-    },
   }
 
   return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />

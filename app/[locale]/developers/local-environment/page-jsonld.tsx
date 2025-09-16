@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
@@ -9,15 +10,23 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 export default async function LocalEnvironmentJsonLD({
   locale,
   frameworksListData,
+  contributors,
 }: {
   locale: string
   frameworksListData: Framework[]
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-developers-local-environment",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/developers/local-environment/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the developers local environment page
   const webPageJsonLd = {
@@ -28,6 +37,7 @@ export default async function LocalEnvironmentJsonLD({
     description: t("page-local-environment-setup-meta-desc"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

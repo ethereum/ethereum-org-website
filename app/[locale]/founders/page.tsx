@@ -2,7 +2,7 @@ import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { Lang, SectionNavDetails } from "@/lib/types"
+import type { CommitHistory, Lang, SectionNavDetails } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -14,6 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import Alliance from "./logos/alliance.svg"
@@ -376,9 +377,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "founders",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <FoundersPageJsonLD locale={locale} />
+      <FoundersPageJsonLD locale={locale} contributors={contributors} />
 
       <div>
         <ContentHero

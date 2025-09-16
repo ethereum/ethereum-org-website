@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { AppCategoryData, AppData } from "@/lib/types"
+import { AppCategoryData, AppData, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -11,17 +11,25 @@ export default async function AppsCategoryJsonLD({
   categoryName,
   category,
   appsData,
+  contributors,
 }: {
   locale: string
   categoryName: string
   category: AppCategoryData
   appsData: Record<string, AppData[]>
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({ namespace: "page-apps" })
 
   const url = normalizeUrlForJsonLd(locale, `/apps/categories/${categoryName}`)
   // Get apps for this category
   const categoryApps = appsData[categoryName] || []
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the apps category page
   const webPageJsonLd = {
@@ -32,6 +40,7 @@ export default async function AppsCategoryJsonLD({
     description: t(category.metaDescription),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

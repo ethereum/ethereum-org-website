@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -13,6 +13,7 @@ import MainArticle from "@/components/MainArticle"
 import StartWithEthereumFlow from "@/components/StartWithEthereumFlow"
 import ShareModal from "@/components/StartWithEthereumFlow/ShareModal"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getNewToCryptoWallets } from "@/lib/utils/wallets"
@@ -39,9 +40,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     supportedLanguages: [],
   }))
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "start",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <StartPageJsonLD locale={locale} />
+      <StartPageJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
         <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
           <Image

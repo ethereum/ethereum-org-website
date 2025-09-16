@@ -4,12 +4,22 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function Layer2NetworksPageJsonLD({ locale, layer2Data }) {
+export default async function Layer2NetworksPageJsonLD({
+  locale,
+  layer2Data,
+  contributors,
+}) {
   const t = await getTranslations({
     namespace: "page-layer-2-networks",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/layer-2/networks/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Layer 2 Networks page
   const webPageJsonLd = {
@@ -20,6 +30,7 @@ export default async function Layer2NetworksPageJsonLD({ locale, layer2Data }) {
     description: t("page-layer-2-networks-hero-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang, WalletData } from "@/lib/types"
+import { FileContributor, Lang, WalletData } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -9,15 +9,23 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 export default async function FindWalletPageJsonLD({
   locale,
   wallets,
+  contributors,
 }: {
   locale: Lang | undefined
   wallets: WalletData[]
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-find-wallet",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/wallets/find-wallet/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Find Wallet page
   const webPageJsonLd = {
@@ -28,6 +36,7 @@ export default async function FindWalletPageJsonLD({
     description: t("page-find-wallet-meta-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -93,6 +102,7 @@ export default async function FindWalletPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    contributor: contributorList,
     reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",

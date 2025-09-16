@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { Lang } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -15,6 +15,7 @@ import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -48,9 +49,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const resourceSections = await getResources({ txCostsMedianUsd })
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "resources",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <ResourcesPageJsonLD locale={locale} />
+      <ResourcesPageJsonLD locale={locale} contributors={contributors} />
 
       <MainArticle className="relative flex flex-col">
         <BannerNotification shouldShow className="text-center max-md:flex-col">

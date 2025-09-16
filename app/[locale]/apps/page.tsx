@@ -5,6 +5,8 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import type { CommitHistory, Lang } from "@/lib/types"
+
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -12,6 +14,7 @@ import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
 import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -62,9 +65,16 @@ const Page = async ({ params }: { params: { locale: string } }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "apps",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <AppsJsonLD locale={locale} />
+      <AppsJsonLD locale={locale} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
         <SimpleHero
           breadcrumbs={<Breadcrumbs slug={"/apps"} />}

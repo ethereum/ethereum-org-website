@@ -207,6 +207,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         locale={locale}
         types={types}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <PageHero content={heroContent} isReverse />

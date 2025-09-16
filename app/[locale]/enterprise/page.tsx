@@ -2,7 +2,7 @@ import { Check } from "lucide-react"
 import dynamic from "next/dynamic"
 import { getTranslations } from "next-intl/server"
 
-import type { Lang, StatsBoxMetric } from "@/lib/types"
+import type { CommitHistory, Lang, StatsBoxMetric } from "@/lib/types"
 
 import ActivityStats from "@/components/ActivityStats"
 import { HubHero } from "@/components/Hero"
@@ -43,6 +43,7 @@ import Link from "@/components/ui/Link"
 import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -291,9 +292,16 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
     { name: "World Food Programme", Logo: WFP },
   ]
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "enterprise",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <EnterprisePageJsonLD locale={locale} />
+      <EnterprisePageJsonLD locale={locale} contributors={contributors} />
       <div className="mb-12 space-y-12 md:mb-20 md:space-y-20">
         <HubHero
           header={t("page-enterprise-hero-title")}

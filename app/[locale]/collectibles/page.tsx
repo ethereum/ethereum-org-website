@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -13,6 +13,7 @@ import MainArticle from "@/components/MainArticle"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -59,9 +60,21 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/collectibles/")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "collectibles",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <CollectiblesJsonLD locale={locale} badges={badges} stats={stats} />
+      <CollectiblesJsonLD
+        locale={locale}
+        badges={badges}
+        stats={stats}
+        contributors={contributors}
+      />
       <I18nProvider locale={locale} messages={pickedMessages}>
         <MainArticle className="space-y-12 pb-24 md:space-y-20">
           <HubHero

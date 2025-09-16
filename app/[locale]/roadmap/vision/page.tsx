@@ -39,6 +39,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <RoadmapVisionPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
       <VisionPage
         contributors={contributors}

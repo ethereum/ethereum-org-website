@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -9,15 +9,23 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 export default async function RunANodePageJsonLD({
   locale,
   lastEditLocaleTimestamp,
+  contributors,
 }: {
   locale: Lang | undefined
   lastEditLocaleTimestamp: string
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-run-a-node",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/run-a-node/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Run a Node page
   const webPageJsonLd = {
@@ -28,6 +36,7 @@ export default async function RunANodePageJsonLD({
     description: t("page-run-a-node-hero-subtitle"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -82,6 +91,7 @@ export default async function RunANodePageJsonLD({
         url: "https://ethereum.org",
       },
     ],
+    contributor: contributorList,
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",

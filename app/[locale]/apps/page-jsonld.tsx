@@ -1,15 +1,29 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-export default async function AppsJsonLD({ locale }: { locale: string }) {
+export default async function AppsJsonLD({
+  locale,
+  contributors,
+}: {
+  locale: string
+  contributors: FileContributor[]
+}) {
   const t = await getTranslations({ namespace: "page-apps" })
 
   const url = normalizeUrlForJsonLd(locale, "/apps/")
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the apps page
   const webPageJsonLd = {
@@ -20,6 +34,7 @@ export default async function AppsJsonLD({ locale }: { locale: string }) {
     description: t("page-apps-meta-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   return (
     <>
-      <BugBountyJsonLD locale={locale} />
+      <BugBountyJsonLD locale={locale} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
         <BugBountiesPage
           contributors={contributors}

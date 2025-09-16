@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -31,6 +31,7 @@ import InlineLink from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -421,10 +422,21 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     },
   ]
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "stablecoins",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
       <I18nProvider locale={locale} messages={messages}>
-        <StablecoinsPageJsonLD locale={locale} features={features} />
+        <StablecoinsPageJsonLD
+          locale={locale}
+          features={features}
+          contributors={contributors}
+        />
         <MainArticle className="mx-auto my-0 w-full flex-col items-center">
           <PageHero isReverse content={heroContent} />
           <Divider />

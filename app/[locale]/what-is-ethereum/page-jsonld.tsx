@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -9,15 +9,23 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 export default async function WhatIsEthereumPageJsonLD({
   locale,
   lastEditLocaleTimestamp,
+  contributors,
 }: {
   locale: Lang | undefined
   lastEditLocaleTimestamp: string
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-what-is-ethereum",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/what-is-ethereum/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the What is Ethereum page
   const webPageJsonLd = {
@@ -28,6 +36,7 @@ export default async function WhatIsEthereumPageJsonLD({
     description: t("page-what-is-ethereum-meta-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -93,6 +102,7 @@ export default async function WhatIsEthereumPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    contributor: contributorList,
     reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",

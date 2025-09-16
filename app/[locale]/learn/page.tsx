@@ -180,7 +180,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   return (
     <>
-      <LearnPageJsonLD locale={locale} />
+      <LearnPageJsonLD locale={locale} contributors={contributors} />
 
       <div className="relative w-full">
         <HubHero {...heroContent} />

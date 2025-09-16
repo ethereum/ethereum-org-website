@@ -6,7 +6,12 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { AppCategoryEnum, type SectionNavDetails } from "@/lib/types"
+import {
+  AppCategoryEnum,
+  CommitHistory,
+  Lang,
+  type SectionNavDetails,
+} from "@/lib/types"
 
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -22,6 +27,7 @@ import {
 import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -99,6 +105,13 @@ const Page = async ({
     })
   )
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "apps/categories/[catetgoryName]",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
       <AppsCategoryJsonLD
@@ -106,6 +119,7 @@ const Page = async ({
         categoryName={categoryEnum}
         category={category}
         appsData={appsData}
+        contributors={contributors}
       />
       <I18nProvider locale={locale} messages={messages}>
         <div className="flex flex-col gap-12">

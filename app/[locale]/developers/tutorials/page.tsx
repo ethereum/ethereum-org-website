@@ -6,13 +6,14 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Skeleton, SkeletonCardContent } from "@/components/ui/skeleton"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -67,11 +68,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const internalTutorials = await getTutorialsData(locale)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "developers/tutorials",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
       <TutorialsPageJsonLD
         locale={locale}
         internalTutorials={internalTutorials}
+        contributors={contributors}
       />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle

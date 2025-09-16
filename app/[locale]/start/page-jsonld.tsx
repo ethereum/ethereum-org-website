@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -8,14 +8,22 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function StartPageJsonLD({
   locale,
+  contributors,
 }: {
   locale: Lang | undefined
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-start",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/start/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Start page
   const webPageJsonLd = {
@@ -26,6 +34,7 @@ export default async function StartPageJsonLD({
     description: t("page-start-meta-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -85,6 +94,7 @@ export default async function StartPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
+    contributor: contributorList,
     reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",

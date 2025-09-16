@@ -1,19 +1,29 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function LearningToolsJsonLD({
   locale,
+  contributors,
 }: {
   locale: string
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-developers-learning-tools",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/developers/learning-tools/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the developers learning tools page
   const webPageJsonLd = {
@@ -24,6 +34,7 @@ export default async function LearningToolsJsonLD({
     description: t("page-learning-tools-meta-desc"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

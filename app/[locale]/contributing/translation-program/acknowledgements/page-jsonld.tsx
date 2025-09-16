@@ -1,13 +1,17 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function AcknowledgementsJsonLD({
   locale,
+  contributors,
 }: {
   locale: string
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-contributing-translation-program-acknowledgements",
@@ -17,6 +21,12 @@ export default async function AcknowledgementsJsonLD({
     locale,
     `/contributing/translation-program/acknowledgements/`
   )
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the translation acknowledgements page
   const webPageJsonLd = {
@@ -31,6 +41,7 @@ export default async function AcknowledgementsJsonLD({
     ),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

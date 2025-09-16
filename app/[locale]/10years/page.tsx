@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { Lang } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
@@ -18,6 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -111,9 +112,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     (holder) => !isAddressFiltered(holder.address)
   )
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "10years",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <TenYearJsonLD locale={locale} />
+      <TenYearJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <TenYearHero locale={locale} />
 

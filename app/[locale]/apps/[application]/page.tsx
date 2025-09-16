@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { ChainName } from "@/lib/types"
+import { ChainName, CommitHistory, Lang } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
@@ -31,6 +31,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -128,9 +129,16 @@ const Page = async ({
     return t("page-apps-days-ago", { days: diffInDays })
   }
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "apps/[application]",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <AppsAppJsonLD locale={locale} app={app} />
+      <AppsAppJsonLD locale={locale} app={app} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex flex-col gap-10 py-10">
           <div className="flex flex-col gap-10 px-4 md:px-10">

@@ -156,6 +156,7 @@ export default async function Page({
       <GetEthPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
 
       <MainArticle>

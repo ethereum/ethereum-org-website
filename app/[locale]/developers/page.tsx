@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { Lang } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -18,6 +18,7 @@ import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
@@ -134,6 +135,13 @@ const DevelopersPage = async ({
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "developers",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
       <DevelopersPageJsonLD
@@ -141,6 +149,7 @@ const DevelopersPage = async ({
         paths={paths}
         courses={courses}
         hackathons={hackathons}
+        contributors={contributors}
       />
       <VStack className="mx-auto my-0 w-full">
         <HubHero

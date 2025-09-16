@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import TrillionDollarSecurityPageJsonLD from "./page-jsonld"
@@ -52,9 +53,19 @@ const TdsPage = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-trillion-dollar-security",
   })
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "trillion-dollar-security",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
-      <TrillionDollarSecurityPageJsonLD locale={locale} />
+      <TrillionDollarSecurityPageJsonLD
+        locale={locale}
+        contributors={contributors}
+      />
       <MainArticle>
         {/* Hero Section */}
         <section className="mb-32 w-full">

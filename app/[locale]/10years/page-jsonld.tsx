@@ -1,15 +1,29 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function TenYearJsonLD({ locale }: { locale: string }) {
+export default async function TenYearJsonLD({
+  locale,
+  contributors,
+}: {
+  locale: string
+  contributors: FileContributor[]
+}) {
   const t = await getTranslations({
     namespace: "page-10-year-anniversary",
   })
 
   const url = normalizeUrlForJsonLd(locale, "/10years/")
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   const webPageJsonLd = {
     "@context": "https://schema.org",
@@ -26,6 +40,7 @@ export default async function TenYearJsonLD({ locale }: { locale: string }) {
         url: "https://ethereum.org",
       },
     ],
+    contributor: contributorList,
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [

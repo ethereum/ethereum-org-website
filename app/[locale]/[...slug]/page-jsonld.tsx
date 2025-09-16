@@ -1,4 +1,4 @@
-import { Frontmatter } from "@/lib/types"
+import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -8,10 +8,12 @@ export default async function SlugJsonLD({
   locale,
   slug,
   frontmatter,
+  contributors,
 }: {
   locale: string
   slug: string
   frontmatter: Frontmatter
+  contributors: FileContributor[]
 }) {
   const url = normalizeUrlForJsonLd(locale, `/${slug}`)
 
@@ -39,6 +41,13 @@ export default async function SlugJsonLD({
     })
   })
 
+  // Map contributors to schema.org format
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
+
   // JSON-LD structured data for the slug page
   const webPageJsonLd = {
     "@context": "https://schema.org",
@@ -55,6 +64,7 @@ export default async function SlugJsonLD({
         url: "https://ethereum.org",
       },
     ],
+    contributor: contributorList,
     isPartOf: {
       "@type": "WebSite",
       name: "ethereum.org",
@@ -96,6 +106,7 @@ export default async function SlugJsonLD({
         url: "https://ethereum.org",
       },
     ],
+    contributor: contributorList,
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",

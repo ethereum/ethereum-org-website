@@ -4,12 +4,18 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function LearnPageJsonLD({ locale }) {
+export default async function LearnPageJsonLD({ locale, contributors }) {
   const t = await getTranslations({
     namespace: "page-learn",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/learn/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Learn page
   const webPageJsonLd = {
@@ -20,6 +26,7 @@ export default async function LearnPageJsonLD({ locale }) {
     description: t("hero-subtitle"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

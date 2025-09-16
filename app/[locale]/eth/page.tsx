@@ -39,6 +39,7 @@ export default async function Page({
       <EthPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
 
       <I18nProvider locale={locale} messages={pickedMessages}>

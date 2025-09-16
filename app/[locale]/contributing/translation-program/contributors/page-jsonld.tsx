@@ -1,17 +1,27 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function ContributorsJsonLD({
   locale,
+  contributors,
 }: {
+  contributors: FileContributor[]
   locale: string
 }) {
   const t = await getTranslations({
     namespace: "page-contributing-translation-program-contributors",
   })
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   const url = normalizeUrlForJsonLd(
     locale,
@@ -29,6 +39,7 @@ export default async function ContributorsJsonLD({
     ),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

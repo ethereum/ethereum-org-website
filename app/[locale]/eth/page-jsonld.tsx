@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -9,15 +9,23 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 export default async function EthPageJsonLD({
   locale,
   lastEditLocaleTimestamp,
+  contributors,
 }: {
   locale: Lang | undefined
   lastEditLocaleTimestamp: string
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({
     namespace: "page-eth",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/eth/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Ether/ETH page
   const webPageJsonLd = {
@@ -28,6 +36,7 @@ export default async function EthPageJsonLD({
     description: t("page-eth-is-money"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -79,6 +88,7 @@ export default async function EthPageJsonLD({
     headline: t("page-eth-whats-eth"),
     description: t("page-eth-is-money"),
     image: "https://ethereum.org/images/eth.png",
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

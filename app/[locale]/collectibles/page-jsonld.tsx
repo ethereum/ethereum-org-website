@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server"
 
+import { FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
@@ -11,14 +13,22 @@ export default async function CollectiblesJsonLD({
   locale,
   badges,
   stats,
+  contributors,
 }: {
   locale: string
   badges: Badge[]
   stats: Stats
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({ namespace: "page-collectibles" })
 
   const url = normalizeUrlForJsonLd(locale, `/collectibles/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the collectibles page
   const webPageJsonLd = {
@@ -29,6 +39,7 @@ export default async function CollectiblesJsonLD({
     description: t("page-collectibles-hero-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

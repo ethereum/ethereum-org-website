@@ -1,4 +1,4 @@
-import { AppData } from "@/lib/types"
+import { AppData, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -7,11 +7,19 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 export default async function AppsAppJsonLD({
   locale,
   app,
+  contributors,
 }: {
   locale: string
   app: AppData
+  contributors: FileContributor[]
 }) {
   const url = normalizeUrlForJsonLd(locale, `/apps/${app.name}`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the individual app page
   const webPageJsonLd = {
@@ -22,6 +30,7 @@ export default async function AppsAppJsonLD({
     description: app.description,
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",

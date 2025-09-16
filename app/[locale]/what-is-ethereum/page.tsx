@@ -155,6 +155,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <WhatIsEthereumPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
 
       <div>

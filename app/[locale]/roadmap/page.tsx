@@ -1,10 +1,11 @@
 import { pick } from "lodash"
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -21,9 +22,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/roadmap")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "roadmap",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <RoadmapPageJsonLD locale={locale} />
+      <RoadmapPageJsonLD locale={locale} contributors={contributors} />
       <RoadmapPage />
     </I18nProvider>
   )

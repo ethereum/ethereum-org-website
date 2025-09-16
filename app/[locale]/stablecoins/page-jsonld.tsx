@@ -4,12 +4,22 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function StablecoinsPageJsonLD({ locale, features }) {
+export default async function StablecoinsPageJsonLD({
+  locale,
+  features,
+  contributors,
+}) {
   const t = await getTranslations({
     namespace: "page-stablecoins",
   })
 
   const url = normalizeUrlForJsonLd(locale, `/stablecoins/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the Stablecoins page
   const webPageJsonLd = {
@@ -20,6 +30,7 @@ export default async function StablecoinsPageJsonLD({ locale, features }) {
     description: t("page-stablecoins-meta-description"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -74,6 +85,7 @@ export default async function StablecoinsPageJsonLD({ locale, features }) {
         url: "https://ethereum.org",
       },
     ],
+    contributor: contributorList,
     publisher: {
       "@type": "Organization",
       name: "ethereum.org",

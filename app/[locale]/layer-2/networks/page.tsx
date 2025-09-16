@@ -5,10 +5,11 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
@@ -119,11 +120,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   }
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "layer-2/networks",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
       <Layer2NetworksPageJsonLD
         locale={locale}
         layer2Data={layer2DataCompiled}
+        contributors={contributors}
       />
       <Layer2Networks {...props} />
     </I18nProvider>

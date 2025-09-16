@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { CommunityConference } from "@/lib/types"
+import { CommunityConference, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -13,15 +13,23 @@ export default async function DevelopersPageJsonLD({
   paths,
   courses,
   hackathons,
+  contributors,
 }: {
   locale: string
   paths: DevelopersPath[]
   courses: VideoCourse[]
   hackathons: CommunityConference[]
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations({ namespace: "page-developers-index" })
 
   const url = normalizeUrlForJsonLd(locale, `/developers/`)
+
+  const contributorList = contributors.map((contributor) => ({
+    "@type": "Person",
+    name: contributor.login,
+    url: contributor.html_url,
+  }))
 
   // JSON-LD structured data for the developers page
   const webPageJsonLd = {
@@ -32,6 +40,7 @@ export default async function DevelopersPageJsonLD({
     description: t("page-developers-meta-desc"),
     url: url,
     inLanguage: locale,
+    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
