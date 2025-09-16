@@ -182,12 +182,6 @@ export const getResources = async ({
           href: "https://www.ethismoney.xyz/",
           imgSrc: IconEthGlyphBlueCircle,
         },
-        {
-          title: "Ethereum Now",
-          description: t("page-resources-eth-asset-ethernow-description"),
-          href: "https://www.ethernow.xyz",
-          imgSrc: IconBlocknative,
-        },
       ],
     },
     {
@@ -553,31 +547,31 @@ export const getResources = async ({
   const resources = [
     {
       key: "network",
-      title: t("page-resources-network-title"),
+      label: t("page-resources-network-title"),
       icon: <SectionIconEthGlyph />,
       boxes: networkBoxes,
     },
     {
       key: "using",
-      title: t("page-resources-using-title"),
+      label: t("page-resources-using-title"),
       icon: <SectionIconEthWallet />,
       boxes: usingBoxes,
     },
     {
       key: "scaling",
-      title: t("page-resources-scaling-title"),
+      label: t("page-resources-scaling-title"),
       icon: <SectionIconArrowsFullscreen />,
       boxes: scalingBoxes,
     },
     {
       key: "resilience",
-      title: t("page-resources-resilience-title"),
+      label: t("page-resources-resilience-title"),
       icon: <SectionIconHeartPulse />,
       boxes: resilienceBoxes,
     },
     {
       key: "privacy-security",
-      title: t("page-resources-privacy-security-title"),
+      label: t("page-resources-privacy-security-title"),
       icon: <SectionIconPrivacy />,
       boxes: privacySecurityBoxes,
     },

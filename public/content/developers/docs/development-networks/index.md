@@ -35,7 +35,7 @@ A local Ethereum network designed for development. It allows you to deploy your 
 Hardhat Network comes built-in with Hardhat, an Ethereum development environment for professionals.
 
 - [Website](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Local Beacon Chains {#local-beacon-chains}
 
