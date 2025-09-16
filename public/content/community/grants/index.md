@@ -35,7 +35,6 @@ These projects have created their own grants for projects aimed at developing an
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/) community_
 - [Arbitrum Grants](https://arbitrum.foundation/grants) – Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
-- [Aztec Grants Program](https://aztec.network/grants) – Noir language and the [Aztec](https://aztec.network/) network
 
 ## Quadratic funding {#quadratic-funding}
 
