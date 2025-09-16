@@ -1,5 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react"
-import { useCallback } from "react"
+import { useCallback, useLayoutEffect, useRef, useState } from "react"
 import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
 import type { FilterOption, Wallet } from "@/lib/types"
@@ -101,7 +100,7 @@ const List = <T extends { id: string }>({
             ref={virtualizer.measureElement}
             // the virtualizer will re-render the item and reset the open state
             // so we need to preserve the open state when the item is unmounted
-            open={expanded[item.id]}
+            open={!!expanded[item.id]}
             onOpenChange={(open) => handleExpandedChange(open, item)}
             className="group/collapsible absolute left-0 top-0 flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
             style={{
