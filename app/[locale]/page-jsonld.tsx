@@ -56,7 +56,7 @@ export default async function IndexPageJsonLD({
     "@id": "https://ethereum.org",
     name: "ethereum.org",
     url: "https://ethereum.org",
-    logo: "https://ethereum.org/images/ethereum-logo.png",
+    logo: "https://ethereum.org/images/eth-org-logo.png",
     description: t("page-index-meta-description"),
     sameAs: [
       "https://github.com/ethereum/ethereum-org-website",
