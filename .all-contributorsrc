@@ -13379,6 +13379,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "wdpatti",
+      "name": "Will Patti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79338554?v=4",
+      "profile": "https://github.com/wdpatti",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
