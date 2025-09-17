@@ -443,6 +443,17 @@ const BugBountiesPage = ({
           <Text>
             <Translation id="page-bug-bounty:page-upgrades-bug-bounty-validity-desc" />
           </Text>
+          <H2>{t("page-upgrades-bug-bounty-severity-definitions")}</H2>
+          <div>
+            <H4>{t("page-upgrades-bug-bounty-severity-critical")}</H4>
+            <Text>{t("page-upgrades-bug-bounty-severity-critical-desc")}</Text>
+            <H4>{t("page-upgrades-bug-bounty-severity-high")}</H4>
+            <Text>{t("page-upgrades-bug-bounty-severity-high-desc")}</Text>
+            <H4>{t("page-upgrades-bug-bounty-severity-medium")}</H4>
+            <Text>{t("page-upgrades-bug-bounty-severity-medium-desc")}</Text>
+            <H4>{t("page-upgrades-bug-bounty-severity-low")}</H4>
+            <Text>{t("page-upgrades-bug-bounty-severity-low-desc")}</Text>
+          </div>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"

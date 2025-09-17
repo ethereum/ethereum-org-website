@@ -36,7 +36,7 @@
   "page-upgrades-bug-bounty-meta-description": "An overview of the Ethereum bug bounty program: how to get involved and reward information.",
   "page-upgrades-bug-bounty-meta-title": "Ethereum Bug Bounty Program",
   "page-upgrades-bug-bounty-not-included": "Out of scope",
-  "page-upgrades-bug-bounty-not-included-desc": "Only the targets listed under in-scope are part of the Bug Bounty Program. This means that for example our infrastructure; such as webpages, dns, email etc, are not part of the bounty-scope. ERC20 contract bugs are typically not included in the bounty scope. However, we can help reach out to affected parties, such as authors or exchanges in such cases. ENS is maintained by the ENS foundation, and is not part of the bounty scope. Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API, is out of scope of the bug bounty program.",
+  "page-upgrades-bug-bounty-not-included-desc": "Only the targets listed under in-scope are part of the Bug Bounty Program. This means that for example our infrastructure; such as webpages, dns, email etc, are not part of the bounty-scope. ERC20 contract bugs are typically not included in the bounty scope. However, we can help reach out to affected parties, such as authors or exchanges in such cases. ENS is maintained by the ENS foundation, and is not part of the bounty scope. Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API, is out of scope of the bug bounty program. Additionally, the following are out of scope: Typographical errors, Tests, High-effort (sustained, CPU or bandwidth intensive, and/or requires more than 1 packet or on-chain transaction) single-peer DoS attacks, Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)",
   "page-upgrades-bug-bounty-owasp": "View OWASP method",
   "page-upgrades-bug-bounty-points": "The EF will also provide rewards based on:",
   "page-upgrades-bug-bounty-points-error": "Error loading data... please refresh.",
@@ -58,7 +58,7 @@
   "page-upgrades-bug-bounty-execution-specs": "Execution Layer Specifications",
   "page-upgrades-bug-bounty-specs-docs": "Specification documents",
   "page-upgrades-bug-bounty-submit": "Submit a bug",
-  "page-upgrades-bug-bounty-submit-desc": "For each valid bug you find you’ll earn rewards. The quantity of rewards awarded will vary depending on Severity. The severity is calculated according to the OWASP risk rating model based on Impact on the Ethereum Network and Likelihood.",
+  "page-upgrades-bug-bounty-submit-desc": "For each valid bug you find you'll earn rewards. The quantity of rewards awarded will vary depending on Severity. Severity is measured by the finding's impact on the entire Ethereum network. We often base our impact a client will have on the network on <a href=\"https://clientdiversity.org/\" target=\"_blank\" rel=\"noreferrer\">https://clientdiversity.org/</a>. The severity is calculated according to the OWASP risk rating model based on Impact on the Ethereum Network and Likelihood.",
   "page-upgrades-bug-bounty-subtitle": "Earn up to 250,000 USD and a place on the leaderboard by finding protocol, client and language compiler bugs affecting the Ethereum network.",
   "page-upgrades-bug-bounty-title": "Open for submissions",
   "page-upgrades-bug-bounty-title-1": "Beacon Chain",
@@ -134,5 +134,14 @@
   "bug-bounty-faq-q8-title": "Do you have a PGP key?",
   "bug-bounty-faq-q8-contentPreview": "Yes. Expand for details.",
   "bug-bounty-faq-q8-content-1": "Please use <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>",
-  "bug-bounty-faq-q8-PGP-key": "PGP Key"
+  "bug-bounty-faq-q8-PGP-key": "PGP Key",
+  "page-upgrades-bug-bounty-severity-definitions": "Severity Definitions",
+  "page-upgrades-bug-bounty-severity-critical": "Critical Severity",
+  "page-upgrades-bug-bounty-severity-critical-desc": "Vulnerabilities that allow an attacker to slash more than 50% of validators, exploit an EIP/specification or client bug to easily create an infinite amount of ETH which is finalized by the network, steal ETH from all EOAs, burn ETH from all EOAs, or take down the entire network by sending a single malicious on-chain transaction that ends up crashing all clients.",
+  "page-upgrades-bug-bounty-severity-high": "High Severity",
+  "page-upgrades-bug-bounty-severity-high-desc": "Vulnerabilities that allow an attacker to slash more than 33% of validators, trivially cause network splits affecting more than 33% of the network, or being able to bring down more than 33% of the network by sending a single network packet or an on-chain transaction.",
+  "page-upgrades-bug-bounty-severity-medium": "Medium Severity",
+  "page-upgrades-bug-bounty-severity-medium-desc": "Vulnerabilities that allow an attacker to slash more than 1% of validators, trivially cause network splits affecting more than 5% of the network, or being able to bring down more than 5% of the network by sending a single network packet or an on-chain transaction.",
+  "page-upgrades-bug-bounty-severity-low": "Low Severity",
+  "page-upgrades-bug-bounty-severity-low-desc": "Vulnerabilities that allow an attacker to slash more than 0.01% of validators, trivially cause network splits affecting at least 0.01% of the network, or being able to bring down more than 0.01% of the network by sending a single network packet or an on-chain transaction."
 }
