@@ -310,7 +310,7 @@ This is the HTML (more accurately, [JSX](https://react.dev/learn/writing-markup-
 
 [This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero knowledge code.
 
-```noir
+```rust
 use std::hash::pedersen_hash;
 use dep::ecrecover;
 use keccak256::keccak256;
