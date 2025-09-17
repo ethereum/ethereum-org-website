@@ -1,5 +1,7 @@
 import { setRequestLocale } from "next-intl/server"
 
+import { CommitHistory, Lang } from "@/lib/types"
+
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
@@ -8,6 +10,7 @@ import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_END_DATE } from "@/components/Translatathon/constants"
 import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isDateReached } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -15,6 +18,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { Leaderboard } from "./_components/Leaderboard"
+import TranslatathonLeaderboardJsonLD from "./page-jsonld"
 
 import { fetchTranslatathonTranslators } from "@/lib/api/fetchTranslatathonTranslators"
 import heroImg from "@/public/images/heroes/translatathon-hero.png"
@@ -112,8 +116,19 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
     })
   }
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "contributing/translation-program/translatathon/leaderboard",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
+      <TranslatathonLeaderboardJsonLD
+        locale={locale}
+        contributors={contributors}
+      />
       <div className="relative mt-4">
         <ContentHero {...heroProps} />
       </div>
