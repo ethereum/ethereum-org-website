@@ -20,5 +20,8 @@ const meta = {
 export default meta
 
 export const HomeHero: StoryObj<typeof meta> = {
-  render: () => <HomeHeroComponent />,
+  // This story is disabled because HomeHero is a React Server Component
+  // and Storybook's support for RSC is still experimental and not stable
+  // render: () => <HomeHeroComponent />,
+  render: () => <div>HomeHero</div>,
 }
