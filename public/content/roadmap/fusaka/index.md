@@ -18,7 +18,7 @@ The Fusaka upgrade is only a single step in Ethereum's long-term development goa
 
 ### Scale blobs {#scale-blobs}
 
-#### PeerDAS {#peerdas}
+#### [PeerDAS](https://ethereum.org/en/roadmap/fusaka/peerdas) {#peerdas}
 
 This is the _headliner_ of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
 
@@ -28,6 +28,7 @@ This keeps hardware and bandwidth requirements for nodes tenable while enabling 
 
 **Resources**:
 - [EIP-7594 technical specification](https://eips.ethereum.org/EIPS/eip-7594)
+- [Main PeerDAS explainer page](https://ethereum.org/en/roadmap/fusaka/peerdas)
 - [dapplion on PeerDAS](https://youtu.be/bONWd1x2TjQ?t=328)
 - [Academic: A Documentation of Ethereum’s PeerDAS](https://eprint.iacr.org/2024/1362.pdf)
 
