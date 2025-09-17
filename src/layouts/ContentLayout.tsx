@@ -4,14 +4,16 @@ import { FileContributor } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import LeftNavBar, { LeftNavBarProps } from "@/components/LeftNavBar"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
+import TableOfContents, {
+  type TableOfContentsProps,
+} from "@/components/TableOfContents"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
-  Pick<LeftNavBarProps, "dropdownLinks" | "tocItems" | "maxDepth"> & {
-    showDropdown?: boolean
+  Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {
     children: React.ReactNode
+    tocItems: TableOfContentsProps["items"]
     heroSection: React.ReactNode
     contributors: FileContributor[]
     lastEditLocaleTimestamp: string
@@ -21,7 +23,6 @@ export const ContentLayout = ({
   children,
   dropdownLinks,
   tocItems,
-  maxDepth,
   showDropdown = true,
   heroSection,
   contributors,
@@ -33,14 +34,13 @@ export const ContentLayout = ({
       {heroSection}
 
       <Page>
-        <LeftNavBar
-          className="max-lg:hidden"
+        <TableOfContents
+          items={tocItems}
           dropdownLinks={dropdownLinks}
-          tocItems={tocItems}
-          maxDepth={maxDepth}
+          maxDepth={0}
           showDropdown={showDropdown}
+          variant="left"
         />
-
         <ContentContainer>
           {children}
 

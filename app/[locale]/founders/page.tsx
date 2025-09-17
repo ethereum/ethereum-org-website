@@ -2,7 +2,7 @@ import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { Lang, SectionNavDetails } from "@/lib/types"
+import type { CommitHistory, Lang, SectionNavDetails } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -14,6 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import Alliance from "./logos/alliance.svg"
@@ -30,6 +31,7 @@ import Optimism from "./logos/optimism.svg"
 import Polygon from "./logos/polygon.svg"
 import ProtogolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
+import FoundersPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
@@ -375,108 +377,124 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  return (
-    <div>
-      <ContentHero
-        breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
-        heroImg={heroImg}
-        title={t("page-founders-title")}
-        description={t("page-founders-description")}
-      />
-      <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
-        <Section id="apply" className="space-y-12">
-          <div className="space-y-4">
-            <h2>{t("page-founders-apply-h2")}</h2>
-            <p>{t("page-founders-apply-p1")}</p>
-          </div>
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "founders",
+    locale as Lang,
+    commitHistoryCache
+  )
 
-          <Tabs defaultValue={supportTabs[0].key}>
-            <TabsList>
-              {supportTabs.map(({ key, label, icon }) => (
-                <TabsTrigger
+  return (
+    <>
+      <FoundersPageJsonLD locale={locale} contributors={contributors} />
+
+      <div>
+        <ContentHero
+          breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
+          heroImg={heroImg}
+          title={t("page-founders-title")}
+          description={t("page-founders-description")}
+        />
+        <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
+          <Section id="apply" className="space-y-12">
+            <div className="space-y-4">
+              <h2>{t("page-founders-apply-h2")}</h2>
+              <p>{t("page-founders-apply-p1")}</p>
+            </div>
+
+            <Tabs defaultValue={supportTabs[0].key}>
+              <TabsList>
+                {supportTabs.map(({ key, label, icon }) => (
+                  <TabsTrigger
+                    key={key}
+                    value={key}
+                    // TODO: Add tracking to triggers
+                    // customEventOptions={{
+                    //   eventCategory: "founders_support",
+                    //   eventAction: "apply_for_support_section",
+                    // }}
+                  >
+                    {icon}&nbsp;{label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
+                <TabsContent
                   key={key}
                   value={key}
-                  // TODO: Add tracking to triggers
-                  // customEventOptions={{
-                  //   eventCategory: "founders_support",
-                  //   eventAction: "apply_for_support_section",
-                  // }}
+                  className="mt-12 border-0 p-0"
                 >
-                  {icon}&nbsp;{label}
-                </TabsTrigger>
+                  <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-4">
+                    {entities.map(
+                      ({
+                        name,
+                        Logo,
+                        tags,
+                        subtitle,
+                        description,
+                        highlights,
+                        href,
+                        ctaLabel,
+                      }) => (
+                        <Card
+                          key={name}
+                          className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                        >
+                          <h3 className="sr-only">{name}</h3>
+                          <Logo className="my-auto max-h-9 max-w-full [&_*]:!fill-body" />
+                          <div className="space-y-4">
+                            {!!tags.length && (
+                              <div className="flex flex-wrap gap-x-1 gap-y-2">
+                                {tags.map((tag) => (
+                                  <Tag
+                                    key={tag}
+                                    className={cn(
+                                      "!min-h-0 !py-1",
+                                      supportTags[tag].className
+                                    )}
+                                  >
+                                    {supportTags[tag].label}
+                                  </Tag>
+                                ))}
+                              </div>
+                            )}
+                            {subtitle && (
+                              <p className="font-bold">{subtitle}</p>
+                            )}
+                            <p>{description}</p>
+                            {highlights.map((highlight) => (
+                              <div
+                                key={highlight}
+                                className="flex items-center gap-2"
+                              >
+                                <CheckCircle />
+                                <p>{highlight}</p>
+                              </div>
+                            ))}
+                          </div>
+                          <ButtonLink href={href} variant="outline">
+                            {ctaLabel || categoryCtaLabel}
+                          </ButtonLink>
+                        </Card>
+                      )
+                    )}
+                  </div>
+                </TabsContent>
               ))}
-            </TabsList>
-            {supportTabs.map(({ key, entities, categoryCtaLabel }) => (
-              <TabsContent key={key} value={key} className="mt-12 border-0 p-0">
-                <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-4">
-                  {entities.map(
-                    ({
-                      name,
-                      Logo,
-                      tags,
-                      subtitle,
-                      description,
-                      highlights,
-                      href,
-                      ctaLabel,
-                    }) => (
-                      <Card
-                        key={name}
-                        className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
-                      >
-                        <h3 className="sr-only">{name}</h3>
-                        <Logo className="my-auto max-h-9 max-w-full [&_*]:!fill-body" />
-                        <div className="space-y-4">
-                          {!!tags.length && (
-                            <div className="flex flex-wrap gap-x-1 gap-y-2">
-                              {tags.map((tag) => (
-                                <Tag
-                                  key={tag}
-                                  className={cn(
-                                    "!min-h-0 !py-1",
-                                    supportTags[tag].className
-                                  )}
-                                >
-                                  {supportTags[tag].label}
-                                </Tag>
-                              ))}
-                            </div>
-                          )}
-                          {subtitle && <p className="font-bold">{subtitle}</p>}
-                          <p>{description}</p>
-                          {highlights.map((highlight) => (
-                            <div
-                              key={highlight}
-                              className="flex items-center gap-2"
-                            >
-                              <CheckCircle />
-                              <p>{highlight}</p>
-                            </div>
-                          ))}
-                        </div>
-                        <ButtonLink href={href} variant="outline">
-                          {ctaLabel || categoryCtaLabel}
-                        </ButtonLink>
-                      </Card>
-                    )
-                  )}
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </Section>
-        <Section
-          id="succeed"
-          className="flex w-full flex-col items-center gap-y-14 rounded-t-4xl bg-radial-b px-4 py-20 md:rounded-t-[4rem] md:px-24"
-        >
-          <div className="space-y-2 px-4 text-center">
-            <h2 className="text-4xl md:text-5xl">
-              {t("page-founders-succeed-h2")}
-            </h2>
-            <p className="">{t("page-founders-succeed-p1")}</p>
-          </div>
-          {/* // TODO: Re-enable metrics when ready */}
-          {/* <ActivityStats
+            </Tabs>
+          </Section>
+          <Section
+            id="succeed"
+            className="flex w-full flex-col items-center gap-y-14 rounded-t-4xl bg-radial-b px-4 py-20 md:rounded-t-[4rem] md:px-24"
+          >
+            <div className="space-y-2 px-4 text-center">
+              <h2 className="text-4xl md:text-5xl">
+                {t("page-founders-succeed-h2")}
+              </h2>
+              <p className="">{t("page-founders-succeed-p1")}</p>
+            </div>
+            {/* // TODO: Re-enable metrics when ready */}
+            {/* <ActivityStats
             data-label="signalling-metrics"
             metrics={metrics}
             className={cn(
@@ -489,47 +507,48 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             )}
           /> */}
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {stories.map(({ name, affiliation, content, className }) => (
-              <Card
-                key={name}
-                className={cn(
-                  "h-fit space-y-1 rounded-2xl border bg-background p-6",
-                  className
-                )}
-              >
-                <div className="space-y-6">{content}</div>
-                <div className="flex items-center gap-x-2">
-                  <div
-                    data-label="avatar"
-                    className="grid size-8 place-items-center rounded-full text-body-inverse"
-                  >
-                    {name[0].toUpperCase()}
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              {stories.map(({ name, affiliation, content, className }) => (
+                <Card
+                  key={name}
+                  className={cn(
+                    "h-fit space-y-1 rounded-2xl border bg-background p-6",
+                    className
+                  )}
+                >
+                  <div className="space-y-6">{content}</div>
+                  <div className="flex items-center gap-x-2">
+                    <div
+                      data-label="avatar"
+                      className="grid size-8 place-items-center rounded-full text-body-inverse"
+                    >
+                      {name[0].toUpperCase()}
+                    </div>
+                    <div>
+                      <p className="font-bold">{name}</p>
+                      <p className="text-sm text-body-medium">{affiliation}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-bold">{name}</p>
-                    <p className="text-sm text-body-medium">{affiliation}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Section>
-        <Section
-          id={GetInTouchId}
-          className="flex flex-col items-center gap-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-8 py-20 dark:from-accent-a/10 dark:to-accent-a/20"
-        >
-          <h2 className="sr-only">{t("page-founders-get-in-touch-h2")}</h2>
-          <EFFounderSuccess className="!max-w-md" />
-          <p className="max-w-screen-md text-center">
-            {t("page-founders-get-in-touch-p1")}
-          </p>
-          <ButtonLink href="https://efdn.notion.site/255d989555418113975ff62641d9c814">
-            {t("page-founders-get-in-touch-cta")}
-          </ButtonLink>
-        </Section>
-      </MainArticle>
-    </div>
+                </Card>
+              ))}
+            </div>
+          </Section>
+          <Section
+            id={GetInTouchId}
+            className="flex flex-col items-center gap-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-8 py-20 dark:from-accent-a/10 dark:to-accent-a/20"
+          >
+            <h2 className="sr-only">{t("page-founders-get-in-touch-h2")}</h2>
+            <EFFounderSuccess className="!max-w-md" />
+            <p className="max-w-screen-md text-center">
+              {t("page-founders-get-in-touch-p1")}
+            </p>
+            <ButtonLink href="https://efdn.notion.site/255d989555418113975ff62641d9c814">
+              {t("page-founders-get-in-touch-cta")}
+            </ButtonLink>
+          </Section>
+        </MainArticle>
+      </div>
+    </>
   )
 }
 

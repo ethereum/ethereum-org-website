@@ -2,7 +2,7 @@
   "page-learning-tools-bloomtech-description": "The BloomTech Web3 course will teach you the skills employers look for in engineers.",
   "page-learning-tools-bloomtech-logo-alt": "BloomTech logo",
   "page-learning-tools-bootcamps": "Developer bootcamps",
-  "page-learning-tools-bootcamps-desc": "Paid online courses to get you up to speed, fast.",
+  "page-learning-tools-bootcamps-desc": "Free or paid online courses to get you up to speed, fast.",
   "page-learning-tools-browse-docs": "Browse docs",
   "page-learning-tools-capture-the-ether-description": "Capture the Ether is a game in which you hack Ethereum smart contracts to learn about security.",
   "page-learning-tools-capture-the-ether-logo-alt": "Capture the Ether logo",
@@ -58,5 +58,7 @@
   "page-learning-tools-learnweb3-logo-alt": "LearnWeb3 logo",
   "page-learning-tools-cyfrin-updraft-description": "Learn smart contract development for all skill levels and security audits.",
   "page-learning-tools-cyfrin-updraft-logo-alt": "Cyfrin Updraft logo",
+  "page-learning-tools-price-free": "Free",
+  "page-learning-tools-price-paid": "Paid",
   "alt-eth-blocks": "Illustration of blocks being organized like an ETH symbol"
 }
