@@ -1,5 +1,7 @@
 import CalloutSSR from "@/components/CalloutSSR"
 
+import { isDateReached } from "@/lib/utils/date"
+
 import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
 
@@ -14,10 +16,7 @@ import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.pn
 export const ApplyNow = () => {
   const { t } = useTranslation("page-translatathon")
 
-  const dateToday = new Date()
-  const deadline = new Date(APPLICATION_END_DATE)
-
-  if (dateToday < deadline) {
+  if (isDateReached(APPLICATION_END_DATE)) {
     return (
       <div className="pt-12">
         <CalloutSSR

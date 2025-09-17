@@ -275,6 +275,9 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-paid"
+      ),
     },
     {
       name: "BloomTech",
@@ -288,6 +291,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-paid"
+      ),
     },
     {
       name: "Questbook",
@@ -301,6 +307,9 @@ const LearningToolsPage = () => {
       ),
       background: "#141236",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Metaschool",
@@ -314,6 +323,9 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Speed Run Ethereum",
@@ -327,6 +339,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Alchemy University",
@@ -340,6 +355,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "LearnWeb3",
@@ -353,6 +371,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Cyfrin Updraft",
@@ -366,6 +387,9 @@ const LearningToolsPage = () => {
       ),
       background: "#000000",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
   ]
 
@@ -389,7 +413,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </p>
-          <LearningToolsCardGrid category={randomizedSandboxes} />
+          <LearningToolsCardGrid products={randomizedSandboxes} />
           <InfoBanner emoji=":point_up:" shouldCenter>
             <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
           </InfoBanner>
@@ -401,7 +425,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
           </p>
-          <LearningToolsCardGrid category={games} />
+          <LearningToolsCardGrid products={games} />
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>
@@ -410,7 +434,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
           </p>
-          <LearningToolsCardGrid category={bootcamps} />
+          <LearningToolsCardGrid products={bootcamps} />
         </StackContainer>
         <ContentBox>
           <CalloutBanner

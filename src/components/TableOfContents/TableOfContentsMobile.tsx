@@ -19,13 +19,13 @@ import { useTranslation } from "@/hooks/useTranslation"
 const variants = cva("flex w-full justify-between lg:hidden", {
   variants: {
     variant: {
-      default: "",
-      beginner:
-        "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
+      docs: "",
+      card: "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
+      left: "",
     },
   },
   defaultVariants: {
-    variant: "default",
+    variant: "docs",
   },
 })
 

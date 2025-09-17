@@ -14,6 +14,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import VisionPage from "./_components/vision"
+import RoadmapVisionPageJsonLD from "./page-jsonld"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -35,9 +36,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <RoadmapVisionPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
       <VisionPage
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
       />
     </I18nProvider>
   )

@@ -411,7 +411,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Articles**
 
 - [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) — _Chainlink_
-- [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
+- [What is a Blockchain Oracle?](https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
@@ -420,7 +420,6 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Videos**
 
 - [Oracles and the Expansion of Blockchain Utility](https://youtu.be/BVUZpWa8vpw) — _Real Vision Finance_
-- [The differences between first party and third party oracles](https://blockchainoraclesummit.io/first-party-vs-third-party-oracles/) - _Blockchain Oracle Summit_
 
 **Tutorials**
 

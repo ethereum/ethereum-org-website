@@ -199,7 +199,6 @@ export const UseCasesLayout = ({
       <ContentLayout
         tocItems={tocItems}
         dropdownLinks={dropdownLinks}
-        maxDepth={frontmatter.sidebarDepth}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<ContentHero {...heroProps} />}

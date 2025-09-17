@@ -95,6 +95,6 @@ _我們也在研究投票的可能性，讓社群可以表明偏好，並突顯�
 
 如果你想將去中心化應用程式新增至 ethereum.org 並且該應用程式符合標準，請在 GitHub 上建立一個議題。
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://submitapp.paperform.co/">
   創建一個議題
 </ButtonLink>
