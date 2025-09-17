@@ -33,7 +33,7 @@ export default async function GetEthPageJsonLD({
     "@type": "WebPage",
     "@id": url,
     name: t("page-get-eth-meta-title"),
-    description: t("page-get-eth-meta-desc"),
+    description: t("page-get-eth-meta-description"),
     url: url,
     inLanguage: locale,
     contributor: contributorList,
@@ -82,7 +82,7 @@ export default async function GetEthPageJsonLD({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: t("page-get-eth-where-to-buy-title"),
-    description: t("page-get-eth-meta-desc"),
+    description: t("page-get-eth-meta-description"),
     image: "https://ethereum.org/images/get-eth.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
     contributor: contributorList,
     author: [

@@ -443,6 +443,6 @@ export async function generateMetadata({
     locale,
     slug: ["get-eth"],
     title: t("page-get-eth-meta-title"),
-    description: t("page-get-eth-meta-desc"),
+    description: t("page-get-eth-meta-description"),
   })
 }
