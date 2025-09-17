@@ -63,7 +63,7 @@ export default async function BugBountyJsonLD({
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
+        url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
     reviewedBy: {
@@ -72,7 +72,7 @@ export default async function BugBountyJsonLD({
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
+        url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
   }

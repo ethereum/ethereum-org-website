@@ -75,7 +75,7 @@ export default async function TenYearJsonLD({
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
+        url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
     mainEntity: {
@@ -132,7 +132,7 @@ export default async function TenYearJsonLD({
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
+        url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
   }

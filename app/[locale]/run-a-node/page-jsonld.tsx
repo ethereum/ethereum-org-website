@@ -72,7 +72,7 @@ export default async function RunANodePageJsonLD({
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
+        url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
   }
@@ -103,7 +103,7 @@ export default async function RunANodePageJsonLD({
       url: "https://ethereum.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ethereum.org/favicon-32x32.png",
+        url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
     about: {
