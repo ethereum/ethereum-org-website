@@ -22,11 +22,26 @@ This is not a production-ready system, but a teaching tool. As such, it is writt
 
 - Memory storage. On a production system we need to write all the account balances to disk to preserve them in case of a restart. Here it's OK if the information is simply lost.
 
+- Transfers only. A production system would require a way to deposit assets into the bank and to withdraw them back. But the purpose here is just to illustrate the concept, so this bank is limited to transfers.
+
 ### Zero-knowledge proofs
 
-At a very basic level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between some public data,*Data<sub>public</sub>*, and *Data<sub>private</sub>. The verifier knows *Relationship* and *Data<sub>public</sub>*.
+At a very basic level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between some public data, *Data<sub>public</sub>*, and *Data<sub>private</sub>*. The verifier knows *Relationship* and *Data<sub>public</sub>*.
 
-To preserve privacy, we need the state and the transaction to both be private. But to ensure integrity, we need the [cryptographic hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of states and transactions to be public.
+To preserve privacy, we need the states and the transactions to be private. But to ensure integrity, we need the [cryptographic hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of states to be public. To prove to people who submit transactions that those transactions really happened, we need to also post transaction hashes.
+
+In most cases, *Data<sub>private</sub>* is the input to the zero knowledge proof program, and *Data<sub>public</sub>* is the output.
+
+These fields in *Data<sub>private</sub>*:
+
+- *State<sub>n</sub>*, the old state
+- *State<sub>n+1</sub>*, the new state
+- *Transaction*, a transaction that changes from the old state to the new one. This transaction needs to include these fields:
+  - *Destination address* that receives the transfer
+  - *Amount* being transferred
+  - *Nonce* to ensure each transaction can only be processed once.
+  The source address does not need to be in the transaction, because it can be recovered from the signature.
+- *Signature*, a signature that is authorized to perform the transaction. In our case, the only address authorized to perform a transaction is the source address. Because of the way our zero-knowledge system works, in addition to the Ethereum signature we also need the account's public key.
 
 These are the fields in *Data<sub>public</sub>*:
 
@@ -34,29 +49,25 @@ These are the fields in *Data<sub>public</sub>*:
 - *Hash(State<sub>n+1</sub>)* the hash of the new state
 - *Hash(Transaction)* the hash of the transaction that changes the state from *State<sub>n</sub>* to *State<sub>n+1</sub>*.
 
-And these fields in *Data<sub>private</sub>*:
-
-- *State<sub>n</sub>*, the old state
-- *State<sub>n+1</sub>*, the new state
-- *Transaction*, a transaction that changes from the old state to the new one.
-
 The relationship checks several conditions:
 
 - The public hashes are indeed the correct hashes for the private fields.
 - The transaction, when applied to the old state, results in the new state.
-- The transaction includes a valid signature, authorized to perform the action of the transactions.
+- The signature comes from the transaction's source address.
 
 Because of the properties of cryptographic hash functions, proving these conditions is enough to ensure integrity. 
+
+### Data structures
+
+The main data structure is the state held by the server. For every account, the server keeps track of the account balance and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), used to prevent [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Components
 
 This system requires two components: One is a *server* that receives transactions, processes them, and posts hashes to the chain along with the zero knowledge proofs. The second is a *smart contract* that stores the hashes and verifies the zero knowledge proofs to ensure state transitions are legitimate.
 
-### Data and control flows
+### Data and control flow
 
-These are the ways that the various components communicate on this system.
-
-#### Transfers
+These is the ways that the various components communicate to transfer from one account to another.
 
 1. A web browser submits a signed transaction asking for a transfer from the signer's account to a different account.
 
@@ -68,29 +79,311 @@ These are the ways that the various components communicate on this system.
 
 4. The server calculates a zero-knowledge proof that the state change is a valid one.
 
-5. The server submits a transaction that includes:
-   - The old state hash
+5. The server submits to Ethereum a transaction that includes:
    - The new state hash
    - The transaction hash (so the trasaction sender can know it has been processed)
    - The zero knowledge proof that proves the transition to the new state is valid
 
 6. The smart contract verifies the zero knowledge proof.
 
-7. If the zero knowledge proof checks out, the smart contract performs several actions:
+7. If the zero knowledge proof checks out, the smart contract performs these actions:
    - Update the current state hash to the new state hash
-   - Emit a log entry 
+   - Emit a log entry with the new state hash and the transaction hash
 
-#### Deposits
+### Tools
 
-#### Withdrawals
+For the client-side code we are going to use [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) and [Wagmi](https://wagmi.sh/). These are industry standard tools, if you are not familiar with them, you can use [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+
+The majority of the server is written in JavaScript using [Node](https://nodejs.org/en). The zero-knowledge part is written in [Noir](https://noir-lang.org/).
+
+The blockchain we use is `anvil`, a local testing blockchain which is part of [Foundry](https://getfoundry.sh/introduction/installation).
 
 ## Implementation
 
-### Zero knowledge flows
+Because this is a complex system, we'll implement it in stages.
 
-### Server-side and client-side code
+### Stage 1 - Manual zero knowledge
 
-### Smart contracts
+For the first stage, we'll sign a transaction in the browser and then manually provide the information to the zero-knowledge proof. The zero-knowledge code expects to get that information in `server/noir/Prover.toml` (documented [here](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
+
+To see it in action:
+
+1. Make sure you have [Node](https://nodejs.org/en/download) and [Noir](https://noir-lang.org/install) installed. Preferably, install them on a UNIX system such MacOS, Linux, or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+
+2. Download the stage 1 code and start the web server to serve the client code.
+
+   ```sh
+   git clone https://github.com/qbzzt/250911-zk-bank.git -b 01-manual-zk
+   cd 250911-zk-bank
+   cd client
+   npm install
+   npm run dev
+   ```
+
+   The reason you need a web server here is that to prevent certain types of fraud many wallets (such as MetaMask) don't accept files 
+
+3. Open a browser with a wallet.
+
+4. In the wallet enter a new pass phrase. Note that this will delete your existing pass phrase, so *make sure you have a backup*. 
+
+   The passphrase is `test test test test test test test test test test test junk`, the default testing pass phrase for anvil.
+
+5. Browse to [the client-side code](http://localhost:5173/).
+
+6. Connect to a wallet and select your destination account and amount.
+
+7. Click **Sign** and sign the transaction.
+
+8. Under the **Prover.toml** heading you'll find text. Replace `server/noir/Prover.toml` with that text.
+
+9. Execute the zero knowledge proof.
+
+   ```sh
+   cd ../server/noir
+   nargo execute
+   ```
+
+   The output should be similar to
+
+   ```
+   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+   [zkBank] Circuit witness successfully solved
+   [zkBank] Witness saved to target/zkBank.gz
+   [zkBank] Circuit output: Vec([Field(5873071459087041890842521225112488559115105462524655074522108820585084475437), Field(11581062510966044975749814014940525872232248132681539344842393839078106142331), Vec([Field(69), Field(12), Field(249), Field(218), Field(110), Field(24), Field(13), Field(97), Field(89), Field(41), Field(5), Field(84), Field(174), Field(61), Field(135), Field(135), Field(109), Field(139), Field(197), Field(161), Field(91), Field(144), Field(55), Field(229), Field(47), Field(181), Field(155), Field(107), Field(152), Field(114), Field(42), Field(133)])])
+   ```
+
+#### `server/noir/Prover.toml`
+
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) shows the information format expected by Noir.
+
+```toml
+message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
+```
+
+The message is in text format, which makes it easy for the user to understand (necessary when signing) and for the Noir code to parse. The amount is quoted in finneys to enable fractional transfers on one hand, and be easily readable on the other. The last number is the [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
+
+The string is 100 characters long. Zero knowledge proofs don't handle variable size data very well, so it's often necessary to pad data.
+
+```toml
+pubKeyX=["0x83",..."0x75"]
+pubKeyY=["0x35",..."0xa5"]
+signature=["0xb1",...,"0x0d"]
+```
+
+These three parameters are fixed-size byte arrays.
+
+```toml
+[[accounts]]
+address="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+balance=100_000
+nonce=0
+
+[[accounts]]
+address="0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+balance=100_000
+nonce=0
+```
+
+This is the way to specify an array of structures. For each entry, we specify the address, balance (in milliETH a.ka. [Finney](https://cryptovalleyjournal.com/glossary/finney/)), and next nonce value.
+
+#### `client/src/Transfer.tsx`
+
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) implements the client-side processing and generates the `server/noir/Prover.toml` file with te parameters. 
+
+Here is the explanation of the more interesting parts.
+
+```tsx
+export default attrs =>  {
+```
+
+This function creates the `Transfer` React component which other files can import.
+
+```tsx
+  const accounts = [
+    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+  ]
+```
+
+The account addresses. There are the addresses created by the `test ... test junk` pass phrase. If you want to use your own addresses, just modify this definition.
+
+```tsx
+  const account = useAccount()
+  const wallet = createWalletClient({
+    transport: custom(window.ethereum!)
+  })
+```
+
+These [Wagmi hooks](https://wagmi.sh/react/api/hooks) let us access the [viem](https://viem.sh/) library and the wallet.
+
+```tsx
+  const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
+```
+
+This is the message, padded with spaces. Every time one of the [`useState`](https://react.dev/reference/react/useState) variables changes, the component is redrawn and `message` is updated.
+
+```tsx
+  const sign = async () => {
+```
+
+This function is called when the user clicks the **Sign** button. The message is updated automatically, but the signature requires user approval in the wallet, and we don't want to ask for that except as needed.
+
+```tsx
+    const signature = await wallet.signMessage({
+        account: fromAccount,
+        message,
+    })
+```
+
+Ask thr wallet to [sign the message](https://viem.sh/docs/accounts/local/signMessage). 
+
+```tsx
+    const hash = hashMessage(message)
+```
+
+Get the message hash. It is useful to provide it to the user for debugging (of the Noir code). 
+
+```tsx
+    const pubKey = await recoverPublicKey({
+        hash,
+        signature
+    })
+```
+
+[Get the public key](https://viem.sh/docs/utilities/recoverPublicKey). This is required for the [Noir `ecrecover`](https://github.com/colinnielsen/ecrecover-noir) function.
+
+```tsx
+    setSignature(signature)
+    setHash(hash)
+    setPubKey(pubKey)
+```
+
+Set the state variables. Doing this redraws the component (after the `sign` function exits) and shows the user the updated values.
+
+```tsx
+    let proverToml = `
+```
+
+The text for `Prover.toml`. 
+
+```tsx
+message="${message}"
+
+pubKeyX=${hexToArray(pubKey.slice(4,4+2*32))}
+pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
+```
+
+Viem provides us the public key as a 65-byte hexadecimal string. The first byte is `0x04`, a version marker. This is followed by 32 bytes for the `x` of the public key and then 32 bytes for the `y` of the public key.
+
+However, Noir expects to get this information as two byte arrays, one for `x` and one for `y`. It is easier to parse it here on the client rather than as part of the zero-knowledge proof.
+
+Note that this is good practice in zero-knowledge in general. Code inside a zero-knowledge proof is expensive, so any processing that can be done outside of the zero-knowledge proof *should* be done outside the zero-knowledge proof.
+
+```tsx
+signature=${hexToArray(signature.slice(2,-2))}
+```
+
+The signature is also provided as a 65 byte hexadecimal string. However, the last byte is only necessary to recover the public key. As the public key is already going to be provided to the Noir code, we don't need it to verify the signature, and the Noir code does not require it.
+
+```tsx
+${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
+`
+```
+
+Provide the accounts.
+
+```tsx
+    setProverToml(proverToml)
+  }
+
+  return (
+    <>
+        <h2>Transfer</h2>
+        <table border="true">
+            <tr>
+                <th>From (your address)</th>
+                <td>{fromAccount}</td>
+            </tr>
+            <tr>
+                <th>To</th>
+                <td>
+                    <select onChange={event => setToAccount(event.target.value)}
+                        value={toAccount}
+                        >
+                        {
+                            accounts.map(
+                                account => (
+                                    <option value={account} key={account}
+                                        disabled={account == fromAccount}
+                                    >{account}</option>
+                                )
+                            )
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>
+                    <input type="range" min="0" max="2" step="0.1" value={ethAmount} 
+                        onChange={event => setEthAmount(event.target.value)}
+                    />
+                    {ethAmount} ETH
+                </td>
+            </tr>
+        </table>
+
+        <h3>Presignature values</h3>
+        <table border="true">
+            <tr>
+                <th>Message to sign</th>
+                <td><pre>{message}</pre></td>
+            </tr>
+            <tr>
+                <th>Message hash</th>
+                <td>{hashMessage(message)}</td>
+            </tr>
+            <tr>
+                <th>Message length</th>
+                <td>{message.length}</td>
+            </tr>
+        </table>
+
+        <p/>
+
+        <button onClick={sign}>Sign</button>
+
+        <h3>Signature values</h3>
+        <table border="true">
+            <tr>
+                <th>Signature</th>
+                <td>{signature}</td>
+            </tr>
+            <tr>
+                <th>Message hash</th>
+                <td>{hash}</td>
+            </tr>
+            <tr>
+                <th>Public key</th>
+                <td>{pubKey}</td>
+            </tr>
+        </table>
+
+        <h3>Prover.toml</h3>
+        <pre>{proverToml}</pre>
+
+    </>
+  )
+
+}
+
+// export default Transfer
+
+```
+
 
 ## Abuses by the centralized component
 
