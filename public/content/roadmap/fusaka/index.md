@@ -46,7 +46,7 @@ When blobs were first added to the network in the Dencun upgrade, the target was
 [ IMAGE HERE, ETH.ORG TEAM PLEASE HELP ATTACH: https://drive.google.com/file/d/1U24kK-XbZ_l6UWwDO_2-0Mxn4kSkEwVe/view?usp=sharing ]
 Graph source: https://dune.com/hildobby/blobs
 
-**Resources**: [Technical specification](https://eips.ethereum.org/EIPS/eip-7892)
+**Resources**: [EIP-7892 technical specification](https://eips.ethereum.org/EIPS/eip-7892)
 
 #### Blob base-fee bounded by execution costs {#blob-base-fee-bounded-by-execution-costs}
 
