@@ -6,7 +6,12 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { AppCategoryEnum, type SectionNavDetails } from "@/lib/types"
+import {
+  AppCategoryEnum,
+  CommitHistory,
+  Lang,
+  type SectionNavDetails,
+} from "@/lib/types"
 
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -22,6 +27,7 @@ import {
 import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -33,6 +39,8 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import AppsHighlight from "../../_components/AppsHighlight"
 import AppsTable from "../../_components/AppsTable"
 import SuggestAnApp from "../../_components/SuggestAnApp"
+
+import AppsCategoryJsonLD from "./page-jsonld"
 
 import { fetchApps } from "@/lib/api/fetchApps"
 
@@ -97,60 +105,76 @@ const Page = async ({
     })
   )
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "apps/categories/[catetgoryName]",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <div className="flex flex-col gap-12">
-        <SimpleHero
-          breadcrumbs={
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/apps" className="uppercase">
-                    {t("page-apps-all-apps")}
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                  /
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbPage>
-                    {t(category.name).toUpperCase()}
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          }
-          title={t(category.name)}
-          subtitle={t(category.description)}
-        />
-        <TabNav
-          sections={navSections}
-          activeSection={categoryEnum}
-          customEventOptions={{
-            eventCategory: "categories_page",
-            eventAction: "navigation",
-          }}
-        />
+    <>
+      <AppsCategoryJsonLD
+        locale={locale}
+        categoryName={categoryEnum}
+        category={category}
+        appsData={appsData}
+        contributors={contributors}
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <div className="flex flex-col gap-12">
+          <SimpleHero
+            breadcrumbs={
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href="/apps" className="uppercase">
+                      {t("page-apps-all-apps")}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                    /
+                  </BreadcrumbSeparator>
+                  <BreadcrumbItem>
+                    <BreadcrumbPage>
+                      {t(category.name).toUpperCase()}
+                    </BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            }
+            title={t(category.name)}
+            subtitle={t(category.description)}
+          />
+          <TabNav
+            sections={navSections}
+            activeSection={categoryEnum}
+            customEventOptions={{
+              eventCategory: "categories_page",
+              eventAction: "navigation",
+            }}
+          />
 
-        <MainArticle className="flex flex-col gap-32 py-10">
-          <div className="flex flex-col px-4 md:px-8">
-            <h2>{t("page-apps-highlights-title")}</h2>
-            <AppsHighlight
-              apps={highlightedApps}
-              matomoCategory={`category_page`}
-            />
-          </div>
+          <MainArticle className="flex flex-col gap-32 py-10">
+            <div className="flex flex-col px-4 md:px-8">
+              <h2>{t("page-apps-highlights-title")}</h2>
+              <AppsHighlight
+                apps={highlightedApps}
+                matomoCategory={`category_page`}
+              />
+            </div>
 
-          <div className="flex flex-col px-4 md:px-8">
-            <AppsTable apps={appsData[categoryEnum]} />
-          </div>
+            <div className="flex flex-col px-4 md:px-8">
+              <AppsTable apps={appsData[categoryEnum]} />
+            </div>
 
-          <div className="flex flex-col px-4 md:px-8">
-            <SuggestAnApp />
-          </div>
-        </MainArticle>
-      </div>
-    </I18nProvider>
+            <div className="flex flex-col px-4 md:px-8">
+              <SuggestAnApp />
+            </div>
+          </MainArticle>
+        </div>
+      </I18nProvider>
+    </>
   )
 }
 
