@@ -1,11 +1,9 @@
-import { useRouter } from "next/router"
+import { MDXRemoteProps } from "next-mdx-remote"
 import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
@@ -24,23 +22,18 @@ import {
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
-import { mdxTableComponents } from "@/components/ui/table"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1
-    className="font-monospace uppercase max-lg:text-[1.75rem]"
-    {...props}
-  />
+  <MdHeading1 className="max-lg:text-[1.75rem]" {...props} />
 )
 
 const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading2
-    className="mt-12 scroll-mt-40 font-monospace uppercase max-md:text-2xl"
-    {...props}
-  />
+  <MdHeading2 className="mt-12 scroll-mt-40 max-md:text-2xl" {...props} />
 )
 
 const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -68,6 +61,12 @@ const KBD = (props: HTMLAttributes<HTMLElement>) => (
   />
 )
 
+const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
+
 export const tutorialsComponents = {
   a: TooltipLink,
   h1: Heading1,
@@ -76,9 +75,8 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  pre: Codeblock,
+  pre: Pre,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   CallToContribute,
   Card,
@@ -86,9 +84,13 @@ export const tutorialsComponents = {
   EnvWarningBanner,
   InfoBanner,
   YouTube,
-}
+} as MDXRemoteProps["components"]
+
 type TutorialLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
+  Pick<
+    MdPageContent,
+    "tocItems" | "contributors" | "contentNotTranslated" | "slug"
+  > &
   Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
@@ -96,6 +98,7 @@ type TutorialLayoutProps = ChildOnlyProp &
 
 export const TutorialLayout = ({
   children,
+  slug,
   frontmatter,
   tocItems,
   timeToRead,
@@ -103,8 +106,7 @@ export const TutorialLayout = ({
   contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">
@@ -123,6 +125,7 @@ export const TutorialLayout = ({
         />
         {children}
         <FileContributors
+          className="my-10 border-t"
           contributors={contributors}
           lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         />

@@ -1,6 +1,7 @@
+"use client"
+
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -10,7 +11,9 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
-import InlineLink from "../Link"
+import InlineLink from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type NetworkUpgradeSummaryProps = {
   name: string
@@ -18,7 +21,7 @@ type NetworkUpgradeSummaryProps = {
 
 const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
   const { t } = useTranslation("page-history")
 
@@ -70,7 +73,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       {blockNumber &&
         blockTypeTranslation(
           "page-history:page-history-block-number",
-          "https://etherscan.io/block/",
+          "https://eth.blockscout.com/block/",
           blockNumber
         )}
       {epochNumber &&

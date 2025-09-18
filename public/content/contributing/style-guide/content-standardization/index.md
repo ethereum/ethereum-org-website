@@ -184,7 +184,7 @@ Read more about [smart contracts](/docs/developers/smart-contracts/)
 <!-- Bad -->
 
 Read more about [smart contracts](/en/docs/developers/smart-contracts)
-Read more about [smart contracts](https://ethereum.org/en/docs/developers/smart-contracts)
+Read more about [smart contracts](/docs/developers/smart-contracts)
 ```
 
 Please also add a trailing slash to all links. This keeps links consistent and avoids redirects, which hurts site performance.
@@ -269,4 +269,16 @@ When citing articles from a specific author or organization, use the article's n
 
 - [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [ConsenSys on The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _ConsenSys_
+```
+
+### Onchain and offchain {#onchain-offchain}
+
+Similar to "online" or "offline", the terms "onchain" and "offchain" should be written as one word, without a space or hyphenation.
+
+```md
+<--- Good --->
+Discussion was held in an offchain forum, and the vote was performed onchain.
+
+<--- Bad--->
+Discussion was held in an off-chain forum, and the vote was performed on-chain.
 ```

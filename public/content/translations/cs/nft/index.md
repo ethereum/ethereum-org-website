@@ -1,5 +1,6 @@
 ---
 title: Nezaměnitelné tokeny (NFT)
+metaTitle: Co jsou NFTéčka? | Výhody a využití
 description: Přehled NFT na Ethereu
 lang: cs
 template: use-cases
@@ -56,7 +57,7 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Prozkoumat NFT umění
   </ButtonLink>
 </InfoBanner>

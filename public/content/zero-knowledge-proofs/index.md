@@ -32,7 +32,7 @@ Going back to our earlier example, the only evidence you need to prove your citi
 
 Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
 
-Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
+Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
 
 There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 
@@ -46,6 +46,12 @@ Current identity management systems put personal information at risk. Zero-knowl
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
 
+### Proof of Humanity {#proof-of-humanity}
+
+One of the most widely used examples of zero-knowledge proofs in action today is the [World ID protocol](https://world.org/blog/world/world-id-faqs), which can be thought of as “a global digital passport for the age of AI.” It allows people to prove they are unique individuals without revealing personal information. This is achieved through a device called the Orb, which scans a person's iris and generates an iris code. The iris code is checked and verified to confirm the person is a biologically unique human being. After verification, an identity commitment generated on the user’s device (and not linked to or derived from the biometric data) is added to a secure list on the blockchain. Then, whenever the user wants to prove they’re a verified human – whether to sign in, vote, or take other actions – they can generate a zero-knowledge proof that confirms their membership in the list. The beauty of using a zero-knowledge proof is that only one statement is revealed: this person is unique. Everything else stays private.
+
+World ID relies on the [Semaphore protocol](https://docs.semaphore.pse.dev/) developed by the [PSE team](https://pse.dev/) at the Ethereum Foundation. Semaphore is designed to be a lightweight yet powerful way to generate and verify zero-knowledge proofs. It lets users prove they're part of a group (in this case, verified humans) without showing which member of the group they are. Semaphore is also highly flexible, allowing groups to be created based on a wide range of criteria such as identity verification, participation in events, or ownership of credentials.
+
 ### Authentication {#authentication}
 
 Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
@@ -58,9 +64,9 @@ Verifiable computation is another application of zero-knowledge technology for i
 
 Verifiable computation is **critical to improving processing speeds on blockchains** without reducing security. Understanding this requires knowing the differences in proposed solutions for scaling Ethereum.
 
-[On-chain scaling solutions](/developers/docs/scaling/#on-chain-scaling), such as sharding, require extensive modification of the blockchain’s base layer. However, this approach is highly complex and errors in implementation can undermine Ethereum’s security model.
+[Onchain scaling solutions](/developers/docs/scaling/#onchain-scaling), such as sharding, require extensive modification of the blockchain’s base layer. However, this approach is highly complex and errors in implementation can undermine Ethereum’s security model.
 
-[Off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) don’t require redesigning the core Ethereum protocol. Instead they rely on an outsourced computation model to improve throughput on Ethereum’s base layer.
+[Offchain scaling solutions](/developers/docs/scaling/#offchain-scaling) don’t require redesigning the core Ethereum protocol. Instead they rely on an outsourced computation model to improve throughput on Ethereum’s base layer.
 
 Here’s how that works in practice:
 
@@ -68,31 +74,31 @@ Here’s how that works in practice:
 
 - After processing transactions, the other chain returns the results to be applied to Ethereum’s state.
 
-The benefit here is that Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (off-chain protocols optimize for faster execution).
+The benefit here is that Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (offchain protocols optimize for faster execution).
 
-The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost.
+The chain needs a way to validate offchain transactions without re-executing them, or else the value of offchain execution is lost.
 
-This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
+This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of offchain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
 
-[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
+[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two offchain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions offchain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
 
-### Reducing bribery and collusion in on-chain voting {#secure-blockchain-voting}
+### Reducing bribery and collusion in onchain voting {#secure-blockchain-voting}
 
-Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion**.
+Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even onchain voting schemes aren't immune to the problem of **collusion**.
 
 Defined as “coordinating to limit open competition by deceiving, defrauding, and misleading others,” collusion may take the form of a malicious actor influencing voting by offering bribes. For example, Alice might receive a bribe from Bob to vote for `option B` on a ballot even if she prefers `option A`.
 
 Bribery and collusion limit the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted). This can have significant consequences, especially where the votes are responsible for allocating scarce resources.
 
-For example, [quadratic funding mechanisms](https://www.radicalxchange.org/concepts/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
+For example, [quadratic funding mechanisms](https://www.radicalxchange.org/wiki/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
 
-Using on-chain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s on-chain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
+Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
 
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make on-chain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
 
 #### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
 
-At the start, the coordinator deploys the MACI contract on Ethereum, after which users can sign up for voting (by registering their public key in the smart contract). Users cast votes by sending messages encrypted with their public key to the smart contract (a valid vote must be signed with the most recent public key associated with the user's identity, among other criteria). Afterward, the coordinator processes all messages once the voting period ends, tallies the votes, and verifies the results on-chain.
+At the start, the coordinator deploys the MACI contract on Ethereum, after which users can sign up for voting (by registering their public key in the smart contract). Users cast votes by sending messages encrypted with their public key to the smart contract (a valid vote must be signed with the most recent public key associated with the user's identity, among other criteria). Afterward, the coordinator processes all messages once the voting period ends, tallies the votes, and verifies the results onchain.
 
 In MACI, zero-knowledge proofs are used to ensure correctness of computation by making it impossible for the coordinator to incorrectly process votes and tally results. This is achieved by requiring the coordinator to generate ZK-SNARK proofs verifying that a) all messages were processed correctly b) the final result corresponds to the sum of all _valid_ votes.
 
@@ -104,11 +110,11 @@ Thus, even without sharing a breakdown of votes per user (as is usually the case
 - Alice secretly sends an encrypted transaction to change the public key associated with her identity.
 - Alice sends another (encrypted) message to the smart contract voting for `option A` using the new public key.
 - Alice shows Bob a transaction which shows she voted for `option B` (which is invalid since the public key is no longer associated with Alice's identity in the system)
-- While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the on-chain vote fails.
+- While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the onchain vote fails.
 
 Using MACI _does_ require trusting the coordinator not to collude with bribers or attempt to bribe voters themselves. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted.
 
-But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of on-chain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
+But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of onchain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 
 [Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
 
@@ -212,3 +218,4 @@ ZK-STARK is considered immune to the threat of quantum computing, as it only rel
 - [An approximate introduction to how zk-SNARKs are possible](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Why Zero Knowledge Proofs (ZKPs) is a Game Changer for Self-Sovereign Identity](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 Explained: Enabling Private Transfers On Ethereum With ZK Proofs](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [ZK Card Game: game to learn ZK fundamentals and real-life use cases](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

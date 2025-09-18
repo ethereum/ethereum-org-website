@@ -1,6 +1,6 @@
 ---
 title: Merkle proofs for offline data integrity
-description: Ensuring data integrity on chain for data that is stored, mostly, off chain
+description: Ensuring data integrity onchain for data that is stored, mostly, offchain
 author: Ori Pomerantz
 tags: ["storage"]
 skill: advanced
@@ -24,13 +24,13 @@ In this article you learn **how** to ensure data integrity without storing the d
 
 ## How does it work? {#how-does-it-work}
 
-In theory we could just store the hash of the data on chain, and send all the data in transactions that require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive for many uses, even without the added cost of hashing the data.
+In theory we could just store the hash of the data onchain, and send all the data in transactions that require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive for many uses, even without the added cost of hashing the data.
 
 The solution is to repeatedly hash different subsets of the data, so for the data that you don't need to send you can just send a hash. You do this using a Merkle tree, a tree data structure where each node is a hash of the nodes below it:
 
 ![Merkle Tree](tree.png)
 
-The root hash is the only part that needs to be stored on chain. To prove a certain value, you provide all the hashes that need to be combined with it to obtain the root. For example, to prove `C` you provide `D`, `H(A-B)`, and `H(E-H)`.
+The root hash is the only part that needs to be stored onchain. To prove a certain value, you provide all the hashes that need to be combined with it to obtain the root. For example, to prove `C` you provide `D`, `H(A-B)`, and `H(E-H)`.
 
 ![Proof of the value of C](proof-c.png)
 
@@ -38,9 +38,9 @@ The root hash is the only part that needs to be stored on chain. To prove a cert
 
 [The sample code is provided here](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Off-chain code {#off-chain-code}
+### Offchain code {#offchain-code}
 
-In this article we use JavaScript for the off-chain computations. Most decentralized applications have their off-chain component in JavaScript.
+In this article we use JavaScript for the offchain computations. Most decentralized applications have their offchain component in JavaScript.
 
 #### Creating the Merkle root {#creating-the-merkle-root}
 
@@ -62,7 +62,7 @@ const dataArray = [
 ]
 ```
 
-Encoding each entry into a single 256-bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [You can read JSON on chain](https://github.com/chrisdotn/jsmnSol), it's just a bad idea if avoidable.
+Encoding each entry into a single 256-bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [You can read JSON onchain](https://github.com/chrisdotn/jsmnSol), it's just a bad idea if avoidable.
 
 ```javascript
 // The array of hash values, as BigInts
@@ -85,7 +85,7 @@ The ethers hash function expects to get a JavaScript string with a hexadecimal n
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
-This function is symmetrical (hash of a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). This means that when we check the Merkle proof we don't need to worry about whether to put the value from the proof before or after the calculated value. Merkle proof checking is done on chain, so the less we need to do there the better.
+This function is symmetrical (hash of a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). This means that when we check the Merkle proof we don't need to worry about whether to put the value from the proof before or after the calculated value. Merkle proof checking is done onchain, so the less we need to do there the better.
 
 Warning:
 Cryptography is harder than it looks.
@@ -172,9 +172,9 @@ We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next o
 }   // getMerkleProof
 ```
 
-### On-chain code {#on-chain-code}
+### Onchain code {#onchain-code}
 
-Finally we have the code that checks the proof. The on-chain code is written in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
+Finally we have the code that checks the proof. The onchain code is written in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
 
 ```solidity
 //SPDX-License-Identifier: Public Domain
@@ -241,10 +241,12 @@ In mathematical notation Merkle proof verification looks like this: `H(proof_n, 
 
 Merkle proofs don't work well with [rollups](/developers/docs/scaling/#rollups). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
 
-Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated on chain to begin with, rather than provided in a transaction) and still have most of the gas left over.
+Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated onchain to begin with, rather than provided in a transaction) and still have most of the gas left over.
 
 ## Conclusion {#conclusion}
 
 In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
 
 Note that while Merkle proofs preserve _integrity_, they do not preserve _availability_. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as IPFS.
+
+[See here for more of my work](https://cryptodocguy.pro/).

@@ -1,5 +1,6 @@
 ---
 title: Jetons non fongibles (NFT)
+metaTitle: Que sont les NFT ? | Avantages et utilisation
 description: Un aperçu des NFT sur Ethereum
 lang: fr
 template: use-cases
@@ -56,7 +57,7 @@ Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explorez, achetez ou créez vos propres collections NFT...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Explorez les cartes NFT
   </ButtonLink>
 </InfoBanner>

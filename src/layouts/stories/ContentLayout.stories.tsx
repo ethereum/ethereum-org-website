@@ -1,7 +1,9 @@
-import { Center } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { Center } from "@/components/ui/flex"
+
+import { langViewportModes } from "@/storybook/modes"
+
 import { ContentLayout as ContentLayoutComponent } from "../ContentLayout"
 
 const meta = {
@@ -29,7 +31,7 @@ export default meta
 export const ContentLayout: StoryObj<typeof meta> = {
   args: {
     children: (
-      <Center h="497px" border="2px dashed" borderColor="primary.base">
+      <Center className="h-[497px] border-2 border-dashed border-primary">
         Content Here
       </Center>
     ),
@@ -59,9 +61,23 @@ export const ContentLayout: StoryObj<typeof meta> = {
         },
       ],
     },
-    maxDepth: 2,
+    contributors: [
+      {
+        login: "samajammin",
+        avatar_url: "https://avatars.githubusercontent.com/u/8097623?v=4",
+        html_url: "https://github.com/samajammin",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+      {
+        login: "samajammin",
+        avatar_url: "https://avatars.githubusercontent.com/u/8097623?v=4",
+        html_url: "https://github.com/samajammin",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+    ],
+    lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (
-      <Center h="400px" border="2px dashed" borderColor="primary.base">
+      <Center className="h-[400px] border-2 border-dashed border-primary">
         Hero section
       </Center>
     ),

@@ -162,7 +162,6 @@ Dacă doriți să monitorizați prețurile gazului ca să vă puteți trimite ET
 
 - [Gazul Ethereum explicat](https://defiprime.com/gas)
 - [Reducerea consumului de gaz al contractelor dvs. inteligente](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Dovada-mizei comparativ cu dovada-muncii](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
 ## Subiecte corelate {#related-topics}
 

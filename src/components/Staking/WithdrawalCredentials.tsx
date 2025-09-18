@@ -1,5 +1,6 @@
+"use client"
+
 import { ChangeEvent, FC, useMemo, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
@@ -12,6 +13,8 @@ import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
 import Input from "../ui/input"
 import { Spinner } from "../ui/spinner"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface Validator {
   validatorIndex: number
@@ -94,7 +97,7 @@ const WithdrawalCredentials: FC = () => {
             <strong>
               <Translation
                 id="page-staking:comp-withdrawal-credentials-upgraded-1"
-                options={{ validatorIndex: validator.validatorIndex }}
+                values={{ validatorIndex: validator.validatorIndex }}
               />{" "}
             </strong>
             {t("comp-withdrawal-credentials-upgraded-2")}{" "}

@@ -52,7 +52,7 @@ Ethereum istemcileri, tüketici sınıfı bilgisayarlarda çalışabilirler ve m
 
 #### Donanım {#hardware}
 
-Ancak sansüre dirençli bir merkeziyetsiz ağ, bulut sağlayıcılarına bağımlı olmamalıdır. Bunun yerine, düğümünüzü kendi yerel donanımınızda çalıştırmanız ekosistem için daha faydalıdır. [Tahminler](https://www.ethernodes.org/networkType/Hosting), düğümlerin büyük bir kısmının bulutta çalıştığını gösteriyor ve bu da tek hata noktası yaratabilir.
+Ancak sansüre dirençli bir merkeziyetsiz ağ, bulut sağlayıcılarına bağımlı olmamalıdır. Bunun yerine, düğümünüzü kendi yerel donanımınızda çalıştırmanız ekosistem için daha faydalıdır. [Tahminler](https://www.ethernodes.org/network-types), düğümlerin büyük bir kısmının bulutta çalıştığını gösteriyor ve bu da tek hata noktası yaratabilir.
 
 Ethereum istemcileri bilgisayarınızda, dizüstü bilgisayarınızda, sunucunuzda ve hatta tek kartlı bir bilgisayarda bile çalışabilir. İstemcileri kendi bilgisayarınızda çalıştırmak mümkün olsa da sadece düğümünüz için bir makineye sahip olmak, birincil bilgisayarınızın üzerindeki etkiyi azaltırken düğümün performansını ve güvenliğini de önemli ölçüde iyileştirebilir.
 
@@ -162,7 +162,7 @@ Ayrıca istemci çeşitliliğinin [yürütüm katmanında bir sorun](/developers
 ##### Mutabakat istemcileri
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Önceden inşa edilmiş bir kütüphane sağlamaz, ya kaynağından derlenir ya da bir Docker görüntüsü)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Önceden inşa edilmiş bir kütüphane sağlamaz, ya kaynağından derlenir ya da bir Docker görüntüsü)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu aynı zamanda birtakım sorular soran ve yapılandırma dosyasını oluştu
 besu --Xlauncher
 ```
 
-[Besu'nun dokümanlarını](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) daha fazla seçenek ve yapılandırma detayları içerir.
+[Besu'nun dokümanlarını](https://besu.hyperledger.org/public-networks/get-started/start-node/) daha fazla seçenek ve yapılandırma detayları içerir.
 
 ##### Erigon'u Çalıştırmak
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermind'ı Çalıştırmak
 
-Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
+Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/get-started/installing-nethermind) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind dokümanları Nethermind'ı bir fikir birliği istemcisi ile çalıştırmak üzerine [tam bir kılavuz](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sunar.
+Nethermind dokümanları Nethermind'ı bir fikir birliği istemcisi ile çalıştırmak üzerine [tam bir kılavuz](https://docs.nethermind.io/get-started/running-node/) sunar.
 
 Bir yürütüm istemcisi çekirdek fonksiyonlarını ve seçili uç noktalarını başlatacak ve eşleri aramaya başlayacaktır. İstemci, eşlerini başarılı bir şekilde bulduktan sonra senkronizasyonu başlatır. Yürütüm istemcisi fikir birliği istemcisinden bir bağlantı bekleyecektir. İstemci mevcut duruma başarılı şekilde senkronize edildiğinde mevcut blok zincir verisi mevcut olacaktır.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Prysm'i Çalıştırmak
 
-Prysm kolay otomatik kurulum sağlayan bir betikle gelir. Detaylar [Prysm dokümanlarında](https://docs.prylabs.network/docs/install/install-with-script) bulunabilir.
+Prysm kolay otomatik kurulum sağlayan bir betikle gelir. Detaylar [Prysm dokümanlarında](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) bulunabilir.
 
 ```sh
 ./prysm.sh beacon-chain \

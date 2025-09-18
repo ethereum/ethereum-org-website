@@ -21,7 +21,7 @@ However, the technique explained here should work just as well for other rollups
 ### Terminology {#terminology}
 
 When discussing rollups, the term 'layer 1' (L1) is used for Mainnet, the production Ethereum network.
-The term 'layer 2' (L2) is used for the rollup or any other system that relies on L1 for security but does most of its processing off-chain.
+The term 'layer 2' (L2) is used for the rollup or any other system that relies on L1 for security but does most of its processing offchain.
 
 ## How can we further reduce the cost of L2 transactions? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
@@ -196,7 +196,7 @@ In the case of `CalldataInterpreter`, _any_ call gets here because there are no 
 Read the first byte of the calldata, which tells us the function.
 There are two reasons why a function would not be available here:
 
-1. Functions that are `pure` or `view` don't change the state and don't cost gas (when called off-chain).
+1. Functions that are `pure` or `view` don't change the state and don't cost gas (when called offchain).
    It makes no sense to try to reduce their gas cost.
 2. Functions that rely on [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    The value of `msg.sender` is going to be `CalldataInterpreter`'s address, not the caller.
@@ -580,3 +580,6 @@ Both [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-tran
 However, as infrastructure providers looking for generic solutions, our abilities are limited.
 As the dapp developer, you have application-specific knowledge, which lets you optimize your calldata much better than we could in a generic solution.
 Hopefully, this article helps you find the ideal solution for your needs.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

@@ -26,6 +26,7 @@ Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Si
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Open-Source-Werkzeuge {#open-source-tools}
 
@@ -54,7 +55,7 @@ Neue Blöcke werden alle 12 Sekunden zu Ethereum hinzugefügt (es sei denn, ein 
 - Gaslimit - Die Gaslimits, die von den Transaktionen im Block gesetzt wurden
 - Grundgebühr pro Gas - Der Mindestmultiplikator, der erforderlich ist, damit eine Transaktion in einen Block aufgenommen werden kann
 - Verbrannte Gebühren - Wie viel ETH in einem Block verbrannt wird
-- Extradaten – alle zusätzlichen Daten, die der Ersteller im Block eingefügt hat
+- Extradaten - alle zusätzlichen Daten, die der Ersteller im Block eingefügt hat
 
 **Erweiterte Daten**
 
@@ -116,7 +117,7 @@ Smart-Contract-Konten verfügen über die gleichen Daten wie ein Benutzerkonto, 
 - Vertragsersteller - Die Adresse, die den Vertrag im Mainnet bereitgestellt hat
 - Erstellungstransaktion - Die Transaktion, die die Bereitstellung im Mainnet beinhaltete
 - Quellcode - Der Solidity- oder Vyper-Code des Smart Contracts
-- Vertrags-ABI - Die „Application Binary Interface“ - die Aufrufe, die der Vertrag tätigt, und die empfangenen Daten
+- Vertrags-ABI - Die "Application Binary Interface" - die Aufrufe, die der Vertrag tätigt, und die empfangenen Daten
 - Vertragserstellungscode - Der kompilierte Bytecode des Smart Contracts – wird erstellt, wenn Sie einen in Solidity oder Vyper usw. geschriebenen Smart Contract kompilieren
 - Vertragsereignisse - Eine Historie der im Smart Contract aufgerufenen Methoden – im Grunde eine Möglichkeit zu sehen, wie der Vertrag verwendet wird und wie oft
 
@@ -213,7 +214,7 @@ Validatoren sind dafür verantwortlich, Blöcke vorzuschlagen und sie innerhalb 
 
 ### Beglaubigungen {#attestations}
 
-Attestierungen sind „Ja“-Stimmen für die Aufnahme von Blöcken in die Chain. Ihre Daten beziehen sich auf eine Aufzeichnung der Attestierung und der bestätigenden Validatoren.
+Attestierungen sind "Ja"-Stimmen für die Aufnahme von Blöcken in die Chain. Ihre Daten beziehen sich auf eine Aufzeichnung der Attestierung und der bestätigenden Validatoren.
 
 - Slot - Der Slot, in dem die Attestierung stattgefunden hat
 - Komitee-Index - Der Index des Komitees für den gegebenen Slot
@@ -237,13 +238,15 @@ Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
 
 ## Block Explorer {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für Ethereum Mainnet und Goerli Testnetz abrufen können
+- [Etherscan](https://etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für Ethereum Mainnet abrufen können
+- [Etherscan Sepolia](https://sepolia.etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für das Sepolia Testnet abrufen können
+- [Etherscan Hoodi](https://hoodi.etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für das Hoodi Testnet abrufen können
 - [3xpl](https://3xpl.com/ethereum) – ein werbefreier Open-Source-Ethereum-Explorer, der den Download seiner Datensätze erlaubt
-- [Beaconcha.in](https://beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet und Goerli Testnetz
+- [Beaconcha.in](https://beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet
 - [Blockchair](https://blockchair.com/ethereum) – Der privateste Ethereum-Explorer. Auch zum Sortieren und Filtern von (Mempool-) Daten
 - [Etherchain](https://www.etherchain.org/) - Ein Block-Explorer für das Ethereum Mainnet
-- [Ethplorer](https://ethplorer.io/) - ein Block-Explorer mit Fokus auf Token für das Ethereum Mainnet und das Kovan Testnetz
-- [Rantom](https://rantom.app/) - Ein krypto-freundlicher Open-Source-Dienst, der in seine dezentrale Finanzplattform (DeFi)& integriert ist Visualisierung des Transaktionsvolumens von NFTs für einen detaillierten Überblick
+- [Ethplorer](https://ethplorer.io/) - ein Block-Explorer mit Fokus auf Token für das Ethereum Mainnet
+- [Rantom](https://rantom.app/) - Ein benutzerfreundlicher Open-Source-DeFi- und NFT-Transaktions-Viewer für detaillierte Einblicke
 - [Ethernow](https://www.ethernow.xyz/) – ein Echtzeit-Transaktions-Explorer, der es ermöglicht, die Pre-Chain-Ebene des Ethereum-Mainnets einzusehen
 
 ## Weiterführende Informationen {#further-reading}

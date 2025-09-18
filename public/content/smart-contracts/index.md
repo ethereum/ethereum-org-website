@@ -1,11 +1,15 @@
 ---
 title: Smart contracts
-metaTitle: "Smart contracts: What are the and benefits"
+metaTitle: "Smart contracts: What are they and their benefits"
 description: A non-technical introduction to smart contracts
 lang: en
 ---
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
+
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
 Smart contracts are the fundamental building blocks of Ethereum's application layer. They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
 
@@ -70,7 +74,7 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 - [Stablecoins](/stablecoins/)
 - [Creating and distributing unique digital assets](/nft/)
 - [An automatic, open currency exchange](/get-eth/#dex)
-- [Decentralized gaming](/dapps/?category=gaming#explore)
+- [Decentralized gaming](/apps/categories/gaming)
 - [An insurance policy that pays out automatically](https://etherisc.com/)
 - [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)
 
@@ -80,3 +84,7 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 - [Smart contracts for developers](/developers/docs/smart-contracts/)
 - [Learn to write smart-contracts](/developers/learning-tools/)
 - [Mastering Ethereum - What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

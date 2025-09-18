@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### ハードウェア {#hardware}
 
-しかし、検閲耐性を備えた分散型ネットワークは、クラウドプロバイダーに依存すべきではありません。 クラウドではなく、ローカルハードウェア上でノードを実行することが、エコシステムにとってより健全です。 [推計](https://www.ethernodes.org/networkType/Hosting)によると、クラウド上で動作するノードの割合が多く、単一障害点となる可能性があります。
+しかし、検閲耐性を備えた分散型ネットワークは、クラウドプロバイダーに依存すべきではありません。 クラウドではなく、ローカルハードウェア上でノードを実行することが、エコシステムにとってより健全です。 [推計](https://www.ethernodes.org/network-types)によると、クラウド上で動作するノードの割合が多く、単一障害点となる可能性があります。
 
 イーサリアムクライアントは、デスクトップパソコン、ノートパソコン、サーバ、あるいはシングルボードコンピュータ上で動作させることができます。 パーソナルコンピュータでクライアントを実行することも可能ですが、ノード専用マシンを用意することで、プライマリコンピュータへの影響を最小限に抑えながら、パフォーマンスとセキュリティを大幅に向上させることができます。
 
@@ -162,7 +162,7 @@ Raspberry PiのようなARMアーキテクチャのシングルボードコン�
 ##### コンセンサスクライアント
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)(ビルド済みのバイナリを提供していないため、Dockerイメージを使用またはソースからビルド)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)(ビルド済みのバイナリを提供していないため、Dockerイメージを使用またはソースからビルド)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besuには、一連の質問に答えることで設定ファイルを生成で�
 besu --Xlauncher
 ```
 
-[Besuのドキュメント](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)で、追加のオプションと設定の詳細を参照してください。
+[Besuのドキュメント](https://besu.hyperledger.org/public-networks/get-started/start-node/)で、追加のオプションと設定の詳細を参照してください。
 
 ##### Erigonの実行
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermindの実行
 
-Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON-RPCはデフォルトで有効になっています。
+Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/get-started/installing-nethermind)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON-RPCはデフォルトで有効になっています。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermindのドキュメントは、Nethermindとコンセンサスクライアントの実行方法をすべて網羅した[完全ガイド](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)です。
+Nethermindのドキュメントは、Nethermindとコンセンサスクライアントの実行方法をすべて網羅した[完全ガイド](https://docs.nethermind.io/get-started/running-node/)です。
 
 実行クライアントは、コア機能と選択したエンドポイントを起動し、ピアを探し始めます。 ピアが見つかったら、同期を開始します。 また、コンセンサスクライアントからの接続を待ちます。 クライアントが正常に現在の状態に同期されると、現在のブロックチェーンデータが利用できるようになります。
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Prysmの実行
 
-Prysmには、簡単に自動インストールできるスクリプトがあります。 詳細については、[Prysmドキュメント](https://docs.prylabs.network/docs/install/install-with-script)を参照してください。
+Prysmには、簡単に自動インストールできるスクリプトがあります。 詳細については、[Prysmドキュメント](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)を参照してください。
 
 ```sh
 ./prysm.sh beacon-chain \

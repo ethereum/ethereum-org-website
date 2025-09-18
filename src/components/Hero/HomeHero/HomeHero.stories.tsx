@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import HomeHeroComponent from "."
 
@@ -15,21 +15,13 @@ const meta = {
       },
     },
   },
-  argTypes: {
-    heroImg: {
-      table: {
-        disable: true,
-      },
-    },
-  },
 } satisfies Meta<typeof HomeHeroComponent>
 
 export default meta
 
-import homeHeroImg from "@/public/images/home/hero.png"
-
 export const HomeHero: StoryObj<typeof meta> = {
-  args: {
-    heroImg: homeHeroImg,
-  },
+  // This story is disabled because HomeHero is a React Server Component
+  // and Storybook's support for RSC is still experimental and not stable
+  // render: () => <HomeHeroComponent />,
+  render: () => <div>HomeHero</div>,
 }

@@ -56,7 +56,7 @@ Có thể bạn là một nghệ sĩ muốn chia sẻ tác phẩm của mình b�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Khám phá nghệ thuật NFT
   </ButtonLink>
 </InfoBanner>

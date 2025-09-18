@@ -11,9 +11,9 @@ Az Ethereum blokklánc összes fontos mérföldkövének, elágazásának és fr
 
 <ExpandableCard title="Mik azok az elágazások?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Az elágazások a hálózat nagyobb technikai frissítései vagy változtatásai esetében jönnek létre – általában az <a href="/eips/">Ethereum-fejlesztési javaslatokból (EIP)</a> származnak és megváltoztatják a protokoll „szabályait”.
+Az elágazások a hálózat nagyobb technikai frissítései vagy változtatásai esetében jönnek létre – általában az [Ethereum-fejlesztési javaslatokból (EIP)](/eips/) származnak és megváltoztatják a protokoll „szabályait”.
 
-Amikor a hagyományos, központi irányítású szoftverek esetében szükséges egy frissítés, a cég csak kibocsájt egy új verziót a végfelhasználó részére. A blokkláncok máshogy működnek, mivel nincsen központi tulajdonjog. Az <a href="/developers/docs/nodes-and-clients/">Ethereum-klienseknek</a> frissíteni kell a szoftverjét, hogy az új elágazási szabályokat életbe léptessék. Ezenkívül a blokklétrehozóknak (bányászok egy proof-of-work rendszerben, validátorok egy proof-of-stake rendszerben) és a csomópontoknak blokkokat kell létrehozniuk és az új szabályokkal szembemenően kell validálniuk. <a href="/developers/docs/consensus-mechanisms/">Bővebben a konszenzusmechanizmusokról</a>
+Amikor a hagyományos, központi irányítású szoftverek esetében szükséges egy frissítés, a cég csak kibocsájt egy új verziót a végfelhasználó részére. A blokkláncok máshogy működnek, mivel nincsen központi tulajdonjog. Az [Ethereum-klienseknek](/developers/docs/nodes-and-clients/) frissíteni kell a szoftverjét, hogy az új elágazási szabályokat életbe léptessék. Ezenkívül a blokklétrehozóknak (bányászok egy proof-of-work rendszerben, validátorok egy proof-of-stake rendszerben) és a csomópontoknak blokkokat kell létrehozniuk és az új szabályokkal szembemenően kell validálniuk. [Bővebben a konszenzusmechanizmusokról](/developers/docs/consensus-mechanisms/)
 
 Ezek a szabályváltozások létrehozhatnak egy átmeneti szétválást a hálózatban. Új blokkok jöhetnek létre az új szabályok vagy a régiek szerint. Az elágazásokról általában előzetes egyezség születik, így a kliensek együttesen vezetik be a változtatásokat és a változásokkal rendelkező elágazás válik a fő lánccá. Azonban néha előfordul nézeteltérés az elágazásokat illetően, mely a lánc megmaradó kettészakadását eredményezi – a legismertebb ilyen eset az Ethereum Classic létrejötte volt a <a href="#dao-fork">DAO elágazással</a>.
 
@@ -397,10 +397,10 @@ Az Istanbul elágazás:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>az Ethereum együtt tud működni az adatvédelmet megőrző valutával, mint amilyen a Zcash is.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>olcsóbb kriptográfia, hogy javuljon a <a href="/glossary/#gas">gázdíj</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>az Ethereumot védi az újrajátszási támadással szemben a <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opkód</a> bevezetésével.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>olcsóbb kriptográfia, hogy javuljon a [gázdíj](/glossary/#gas).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>az Ethereumot védi az újrajátszási támadással szemben a <code>CHAINID</code> [opkód](/developers/docs/ethereum-stack/#ethereum-virtual-machine) bevezetésével.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>optimalizálja az opkód gázdíjait a fogyasztás alapján.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>a CallData költségének csökkentése, hogy több adat férjen be a blokkokba, ami támogatja az <a href="/developers/docs/scaling/#layer-2-scaling">L2 skálázást</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>a CallData költségének csökkentése, hogy több adat férjen be a blokkokba, ami támogatja az [L2 skálázást](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>az opkód gázdíjának egyéb változtatásai.</em></li>
 </ul>
 
@@ -458,13 +458,13 @@ A Byzantium elágazás:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>a <code>REVERT</code> opkód bevezetése.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>a tranzakció-visszaigazolásba bekerült a státuszmező, hogy mutassa a sikeres vagy sikertelen végrehajtást.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>az elliptikus görbe és a skaláris szorzás bevezetése, hogy támogassa a <a href="/developers/docs/scaling/zk-rollups/">ZK-SNARK-okat</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>az elliptikus görbe és a skaláris szorzás bevezetése, hogy támogassa a <a href="/developers/docs/scaling/zk-rollups/">ZK-SNARK-okat</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>az elliptikus görbe és a skaláris szorzás bevezetése, hogy támogassa a [ZK-SNARK-okat](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>az elliptikus görbe és a skaláris szorzás bevezetése, hogy támogassa a [ZK-SNARK-okat](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>az RSA aláírásellenőrzés lehetővé tétele.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>a változó hosszúságú visszatérési értékek támogatása.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>a <code>STATICCALL</code> opkód bevezetése, hogy állapotot nem befolyásoló hívásokat lehessen indítani más szerződések felé.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>a nehézség beállítási formulájának változtatása.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>a <a href="/glossary/#difficulty-bomb">nehézségi bomba</a> elhalasztása 1 évvel, és a blokkjutalom csökkentése 5 ETH-ről 3-ra.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>a [nehézségi bomba](/glossary/#difficulty-bomb) elhalasztása 1 évvel, és a blokkjutalom csökkentése 5 ETH-ről 3-ra.</em></li>
 </ul>
 
 </ExpandableCard>

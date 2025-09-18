@@ -38,7 +38,7 @@ La Fusión representa la transición oficial al uso de la cadena de baliza como 
 El historial no se ha perdido tras La Fusión. Ya que la red principal se fusionó con la cadena de baliza, también se produjo una fusión de todo el historial de transacciones de Ethereum.
 
 <InfoBanner>
-Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre <a href="/roadmap/merge/issuance/">la emisión de ether antes y después de La Fusión</a>.
+Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre [la emisión de ether antes y después de La Fusión](/roadmap/merge/issuance/).
 </InfoBanner>
 
 ### Usuarios y titulares {#users-holders}
@@ -92,7 +92,7 @@ title="Desarrolladores de DApps y contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusión vino con cambios en el consenso, que también incluye cambios relacionados con:<
+La Fusión vino con cambios en el consenso, que también incluye cambios relacionados con:
 
 <ul>
   <li>estructura de bloque</li>
@@ -130,7 +130,7 @@ Cualquier persona bajo cualquier mecanismo de consenso (prueba de trabajo o prue
 
 La capacidad de cualquier persona tiene de ejecutar su propio nodo es <em>absolutamente esencial</em> para mantener la descentralización de la red Ethereum.
 
-<a href="/run-a-node/">Más información sobre cómo ejecutar su propio nodo.</a>
+[Más información sobre cómo ejecutar su propio nodo.](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Las tarifas de gas son producto de la demanda de la red en relación con la capacidad de la misma. La Fusión dejó obsoleto el uso del mecanismo de prueba de trabajo, permitiendo la transición a la prueba de participación para el consenso, pero no cambió de manera significativa ninguno de los parámetros que influyen de manera directa la capacidad o rendimiento de la red.
 
-Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en las acumulaciones</a>, los esfuerzos se están centrando en escalar la actividad del usuario en la <a href="/layer-2/">capa 2</a>, al tiempo que se le permite la red principal de la capa 1 ser una capa de liquidación descentralizada segura optimizada para el almacenamiento de datos de la acumulación y así ayudar a hacer que las transacciones sean exponencialmente más baratas. La transición a la prueba de participación es un precursor fundamental para conseguirlo. <a href="/developers/docs/gas/">Más información sobre el gas y las tarifas. </a>
+Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en las acumulaciones</a>, los esfuerzos se están centrando en escalar la actividad del usuario en la [capa 2](/layer-2/), al tiempo que se le permite la red principal de la capa 1 ser una capa de liquidación descentralizada segura optimizada para el almacenamiento de datos de la acumulación y así ayudar a hacer que las transacciones sean exponencialmente más baratas. La transición a la prueba de participación es un precursor fundamental para conseguirlo. [Más información sobre el gas y las tarifas. ](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +163,7 @@ Inicialmente, después de La Fusión, los participantes solo podían acceder a l
 
 Desde la mejora de la red Shanghai/Capella, los participantes pueden designar una <em>dirección de retirada</em> para comenzar a recibir pagos automáticos de cualquier saldo en exceso (más de 32 ETH por recompensas del protocolo). Esta actualización también permitió a los validadores desbloquear y reclamar el total de su saldo al salir de la red.
 
-<a href="/staking/withdrawals/">Más información sobre la retirada de participaciones.</a>
+[Más información sobre la retirada de participaciones.](/staking/withdrawals/)
 
 </ExpandableCard>
 

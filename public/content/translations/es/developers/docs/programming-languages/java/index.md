@@ -50,7 +50,6 @@ Aprenda a usar [ethers-kt](https://github.com/Kr1ptal/ethers-kt), una biblioteca
 
 ## Proyectos y herramientas Java {#java-projects-and-tools}
 
-- [Besu de Hiperledger (Pantheon) (cliente de Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (biblioteca para interactuar con los clientes de Ethereum)](https://github.com/web3j/web3j)
 - [ethers-kt (biblioteca Kotlin/Java/Android asíncrona y de alto rendimiento para cadenas de bloques basadas en EVM)](https://github.com/Kr1ptal/ethers-kt)
 - [Evento (Event Listener)](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ Aprenda a usar [ethers-kt](https://github.com/Kr1ptal/ethers-kt), una biblioteca
 
 - [Constructores de E/S](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Chat de Besu HL](https://chat.hyperledger.org/channel/besu)

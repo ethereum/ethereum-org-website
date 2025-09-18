@@ -1,14 +1,14 @@
-import { useTranslation } from "next-i18next"
 import type { SVGTextElementAttributes } from "react"
 
 import Translation from "@/components/Translation"
 
 import { cn } from "@/lib/utils/cn"
 
-import { createIconBase } from "../icons/icon-base"
 import { HStack } from "../ui/flex"
 
-import { Background } from "./Background"
+import Background from "./background.svg"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Text = ({
   className,
@@ -45,17 +45,6 @@ const SvgTextInternal = () => {
   )
 }
 
-const SvgText = createIconBase({
-  displayName: "SvgText",
-  viewBox: "0 0 250 110",
-  version: "1.1",
-  xmlns: "http://www.w3.org/2000/svg",
-  xmlnsXlink: "http://www.w3.org/1999/xlink",
-  "aria-hidden": true,
-  className: "absolute size-full z-[1]",
-  children: <SvgTextInternal />,
-})
-
 const MergeInfographic = () => {
   const { t } = useTranslation()
 
@@ -63,9 +52,7 @@ const MergeInfographic = () => {
     <div
       className="relative isolate aspect-[25/11] w-full"
       role="img"
-      aria-label={t(
-        "page-upgrades-index:page-upgrades-merge-infographic-alt-text"
-      )}
+      aria-label={t("page-upgrades:page-upgrades-merge-infographic-alt-text")}
     >
       <div>
         <HStack
@@ -74,7 +61,16 @@ const MergeInfographic = () => {
         >
           <Translation id="page-upgrades:page-upgrades-merge-infographic-el" />
         </HStack>
-        <SvgText />
+        <svg
+          viewBox="0 0 250 110"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          aria-hidden="true"
+          className="absolute z-[1] size-full"
+        >
+          <SvgTextInternal />
+        </svg>{" "}
         <Background className="absolute z-0 size-full" aria-hidden="true" />
       </div>
     </div>

@@ -23,7 +23,7 @@ Untuk lebih memahami halaman ini, sebaiknya baca terlebih dahulu tentang [standa
 - [Transfer Kelompok](#batch_transfers): Transfer beberapa aset dalam sekali pemanggilan.
 - [Saldo Kelompok](#batch_balance): Dapatkan saldo dari beberapa aset dalam sekali pemanggilan.
 - [Persetujuan Kelompok](#batch_approval): Setujui semua token ke suatu alamat.
-- [Kaitan](#recieve_hook): Terima kaitan token.
+- [Kaitan](#receive_hook): Terima kaitan token.
 - [Dukungan NFT](#nft_support): Jika persediaan hanya berjumlah 1, anggaplah sebagai NFT.
 - [Aturan Transfer Aman](#safe_transfer_rule): Kumpulan aturan untuk transfer yang aman.
 

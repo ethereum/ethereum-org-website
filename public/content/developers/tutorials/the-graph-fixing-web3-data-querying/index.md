@@ -3,15 +3,7 @@ title: "The Graph: Fixing Web3 data querying"
 description: Blockchain is like a database but without SQL. All the data is there, but no way to access it. Let me show you how to fix this with The Graph and GraphQL.
 author: Markus Waas
 lang: en
-tags:
-  [
-    "solidity",
-    "smart contracts",
-    "querying",
-    "the graph",
-    "create-eth-app",
-    "react",
-  ]
+tags: ["solidity", "smart contracts", "querying", "the graph", "react"]
 skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
@@ -91,9 +83,9 @@ First let's talk about GraphQL, originally designed and implemented by Facebook.
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%"/>
+![](./graphql-query.gif)
 
-The two images pretty much capture the essence of GraphQL. With the query on the right we can define exactly what data we want, so there we get everything in one request and nothing more than exactly what we need. A GraphQL server handles the fetching of all data required, so it is incredibly easy for the frontend consumer side to use. [This is a nice explanation](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) of how exactly the server handles a query if you're interested.
+The two images pretty much capture the essence of GraphQL. With the query on the right we can define exactly what data we want, so there we get everything in one request and nothing more than exactly what we need. A GraphQL server handles the fetching of all data required, so it is incredibly easy for the frontend consumer side to use. [This is a nice explanation](https://www.apollographql.com/blog/graphql-explained) of how exactly the server handles a query if you're interested.
 
 Now with that knowledge, let's finally jump into blockchain space and The Graph.
 
@@ -198,7 +190,7 @@ Then we create a new Bet entity. The id for this will be `event.transaction.hash
 
 Lastly we can update the Player entity with all the data. Arrays cannot be pushed to directly, but need to be updated as shown here. We use the id to reference the bet. And `.save()` is required at the end to store an entity.
 
-The full documentation can be seen here: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/assemblyscript-api#api-reference).
+The full documentation can be seen here: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

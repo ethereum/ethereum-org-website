@@ -63,7 +63,7 @@ lang: zh-tw
 **Tenderly -** **_Web3 開發平台，使區塊鏈開發者能夠建立、測試、除錯、監控和操作智慧型合約並改進去中心化應用程式使用者體驗。_**
 
 - [網站](https://tenderly.co/)
-- [文件](https://docs.tenderly.co/ethereum-development-practices)
+- [文件](https://docs.tenderly.co/)
 
 **The Graph****_高效率查詢區塊鏈資料的圖表。_**
 
@@ -131,6 +131,14 @@ lang: zh-tw
 - [文件](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 擴充功能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_開放原始碼、模組化且不受限的框架，讓去中心化應用程式開發者能輕鬆地將去中心化身分和可驗證憑證整合到他們的應用程式中。_**
+
+- [首頁](https://veramo.io/)
+- [文件](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [節點包裹管理器 (NPM) 包裹](https://www.npmjs.com/package/@veramo/core)
 
 ## 了解更多 {#further-reading}
 

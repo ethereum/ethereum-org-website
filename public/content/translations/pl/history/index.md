@@ -141,7 +141,7 @@ Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficu
 
 Fork Istanbul:
 
-- Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Zoptymalizował koszt [gazu](/glossary/#gas) w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Poprawa odporności na ataki typu „denial-of-service”.
 - Poprawił działanie rozwiązań [skalowania warstwy 2](/developers/docs/scaling/#rollups) opartych na SNARKs i STARKs.
 - Umożliwił współpracę Ethereum i Zcash.
@@ -171,7 +171,7 @@ Fork Istanbul:
 Fork Constantinople:
 
 - Zapewnił, że blockchain nie został zamrożony przed [wdrożeniem proof-of-stake](#beacon-chain-genesis).
-- Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Zoptymalizował koszt [gazu](/glossary/#gas) w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Dodał możliwość interakcji z adresami, które nie zostały jeszcze utworzone.
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -274,7 +274,7 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usłu
 
 #### Podsumowanie {#dao-fork-summary}
 
-Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists), który doprowadził do złamania niezabezpieczonego kontraktu [DAO](/glossary/#dao) i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
+Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), który doprowadził do złamania niezabezpieczonego kontraktu [DAO](/glossary/#dao) i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
 
 Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](http://v1.carbonvote.com/). Decyzja o forku została poparta ponad 85% głosów.
 

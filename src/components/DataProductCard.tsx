@@ -1,8 +1,10 @@
 import React from "react"
 import { StaticImageData } from "next/image"
 
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 import InlineLink from "./ui/Link"
 import { LinkBox, LinkOverlay } from "./ui/link-box"
@@ -15,34 +17,39 @@ export interface DataRow {
 
 export type DataProductCardProps = {
   url: string
-  background: string
   image: StaticImageData
   imgWidth: number
   alt?: string
   name: string
   description?: string
   data?: Array<DataRow>
+  className?: string
 }
 
 const DataProductCard = ({
   url,
-  background,
   image,
   imgWidth,
   alt,
   name,
   description,
   data,
+  className,
 }: DataProductCardProps) => {
   return (
-    <LinkBox className="flex flex-col overflow-hidden rounded border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight">
+    <LinkBox
+      className={cn(
+        "flex flex-col overflow-hidden rounded border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight",
+        className
+      )}
+    >
       <Flex
         className={
           "min-h-[200px] items-center justify-center shadow-[rgb(0_0_0/_10%)_0px_-1px_0px_inset]"
         }
-        style={{ background }}
+        data-label="banner"
       >
-        <TwImage
+        <Image
           alt={alt ? alt : `${name} logo`}
           className="max-h-[257px] max-w-[311px] self-center object-cover sm:max-w-[372px]"
           src={image}
@@ -69,7 +76,7 @@ const DataProductCard = ({
               >
                 <Flex className="items-center">
                   {logo && (
-                    <TwImage
+                    <Image
                       className="me-2 min-w-6 object-cover"
                       src={logo}
                       alt=""

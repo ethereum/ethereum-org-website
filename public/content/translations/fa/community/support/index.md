@@ -20,7 +20,7 @@ lang: fa
   اصول اتریوم را بیاموزید
 </DocLink>
 
-علیرغم عدم پشتیبانی رسمی، بسیاری از گروه‌ها، جوامع و پروژه‌ها در سراسر اکوسیستم اتریوم با کمال میل به شما کمک می‌کنند و شما می‌توانید اطلاعات و منابع مفید زیادی را در این صفحه بیابید.  هنوز سؤالی دارید؟ به [دیسکورد ethereum.org](/discord/) بپیوندید، و ما سعی می‌کنیم کمکتان کنیم.
+علیرغم عدم پشتیبانی رسمی، بسیاری از گروه‌ها، جوامع و پروژه‌ها در سراسر اکوسیستم اتریوم با کمال میل به شما کمک می‌کنند و شما می‌توانید اطلاعات و منابع مفید زیادی را در این صفحه بیابید.  هنوز سؤالی دارید؟ به [دیسکورد ethereum.org](https://discord.gg/ethereum-org) بپیوندید، و ما سعی می‌کنیم کمکتان کنیم.
 
 ## پشتیبانی کیف پول {#wallet-support}
 
@@ -41,7 +41,6 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 - [دانشگاه شیمی](https://university.alchemy.com/#starter_code)
 - [دیسکورد CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [StackExchange اتریوم](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [دانشگاه Web3](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

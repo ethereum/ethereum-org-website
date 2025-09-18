@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-如果你參與<a href="/staking/pools/">質押池</a>或持有質押代幣，則應向你的提供商諮詢，了解有關如何處理質押提款的詳細資訊，因為每種服務的運作方式不同。
+如果你參與[質押池](/staking/pools/)或持有質押代幣，則應向你的提供商諮詢，了解有關如何處理質押提款的詳細資訊，因為每種服務的運作方式不同。
 
-一般來說，使用者應該可以自由地收回其質押的以太幣，或者更改他們使用的質押提供商。 如果特定質押池變得過大，則可以退出、贖回資金，並透過<a href="https://rated.network/">較小的提供商</a>重新質押。 或者，如果積累了足夠的以太幣，你可以<a href="/staking/solo/">在家進行質押</a>。
+一般來說，使用者應該可以自由地收回其質押的以太幣，或者更改他們使用的質押提供商。 如果特定質押池變得過大，則可以退出、贖回資金，並透過<a href="https://rated.network/">較小的提供商</a>重新質押。 或者，如果積累了足夠的以太幣，你可以[在家進行質押](/staking/solo/)。
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ eventName="read more">
 
 - [質押啟動面板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：將提款作為操作推送至信標鏈。](https://eips.ethereum.org/EIPS/eip-4895)
-- [以太坊牧貓人組織 - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94：與 Potuz 和 Hsiao-Wei Wang 討論質押以太幣提款（測試中）](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68：EIP-4895：信標鏈推動提款操作，由 Alex Stokes 主講](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [了解驗證者有效餘額](https://www.attestant.io/posts/understanding-validator-effective-balance/)

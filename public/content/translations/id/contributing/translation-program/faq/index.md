@@ -56,7 +56,7 @@ Jika Anda ingin menaikkan bendera pada string tertentu yang memerlukan perhatian
 
 ## Apa itu Memori Terjemahan (TM)? {#translation-memory}
 
-Translation Memory (TM) adalah sebuah fitur Crowdin yang menyimpan semua string yang telah diterjemahkan sebelumnya di [ethereum.org](http://ethereum.org/). Ketika sebuah string diterjemahkan, maka string tersebut akan otomatis disimpan ke dalam TM proyek kami. Ini bisa menjadi alat yang berguna untuk membantu Anda menghemat waktu!
+Translation Memory (TM) adalah sebuah fitur Crowdin yang menyimpan semua string yang telah diterjemahkan sebelumnya di [ethereum.org](https://ethereum.org/). Ketika sebuah string diterjemahkan, maka string tersebut akan otomatis disimpan ke dalam TM proyek kami. Ini bisa menjadi alat yang berguna untuk membantu Anda menghemat waktu!
 
 - Lihat pada bagian "TM and MT Suggestions" dan anda akan melihat bagaimana penerjemah lain menerjemahkan string yang sama atau serupa. Jika Anda menemukan saran dengan tingkat kecocokan yang tinggi, silakan rujuk terjemahan itu dengan mengkliknya.
 - Jika tidak ada apa-apa di dalam daftar, Anda dapat mencari TM untuk melihat terjemahan yang dibuat sebelumnya dan menggunakannya kembali untuk konsistensi.

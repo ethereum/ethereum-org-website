@@ -8,7 +8,7 @@ image: /images/staking/leslie-pool.png
 alt: Leslie na di rhino weh deh swim for di pool.
 sidebarDepth: 2
 summaryPoints:
-  - Stake and earn riwods wit any amount of TEH as yu dey join forces wit odas
+  - Stake and earn riwods wit any amount of ETH as yu dey join forces wit odas
   - Skip di hard part and entrust validator operashon to one third-party
   - Hold to dey stake tokens in yor own wallet
 ---
