@@ -19,6 +19,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
+import SlugJsonLD from "./page-jsonld"
+
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import { getPageData } from "@/lib/md/data"
@@ -81,19 +83,27 @@ export default async function Page({
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <Layout
+    <>
+      <SlugJsonLD
+        locale={locale}
         slug={slug}
         frontmatter={frontmatter}
-        tocItems={tocItems}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        contentNotTranslated={!isTranslated}
         contributors={contributors}
-        timeToRead={Math.round(timeToRead.minutes)}
-      >
-        {content}
-      </Layout>
-    </I18nProvider>
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <Layout
+          slug={slug}
+          frontmatter={frontmatter}
+          tocItems={tocItems}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          contentNotTranslated={!isTranslated}
+          contributors={contributors}
+          timeToRead={Math.round(timeToRead.minutes)}
+        >
+          {content}
+        </Layout>
+      </I18nProvider>
+    </>
   )
 }
 

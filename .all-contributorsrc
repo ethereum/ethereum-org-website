@@ -479,7 +479,8 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/70360?v=4",
       "profile": "https://www.zastrin.com",
       "contributions": [
-        "content"
+        "content",
+        "fundingFinding"
       ]
     },
     {
@@ -13366,6 +13367,51 @@
       "name": "nijr",
       "avatar_url": "https://avatars.githubusercontent.com/u/200988320?v=4",
       "profile": "https://github.com/nijr",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "fredrik0x",
+      "name": "Fredrik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84518844?v=4",
+      "profile": "https://github.com/fredrik0x",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "wdpatti",
+      "name": "Will Patti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79338554?v=4",
+      "profile": "https://github.com/wdpatti",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "hackertron",
+      "name": "jayssj11",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7667514?v=4",
+      "profile": "https://hackertron.github.io/",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "CodeLeom",
+      "name": "Ayodele Aransiola",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36636824?v=4",
+      "profile": "http://leomofthings.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "indmind",
+      "name": "indmind",
+      "avatar_url": "https://avatars.githubusercontent.com/u/197907501?v=4",
+      "profile": "https://github.com/indmind",
       "contributions": [
         "maintenance"
       ]

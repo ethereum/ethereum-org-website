@@ -42,7 +42,7 @@ In most cases, instead of storing all data onchain, the hash of where the data i
 
 Platforms with contract-based persistence:
 
-- [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
+- [Filecoin](https://docs.filecoin.io/basics/what-is-filecoin)
 - [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
@@ -147,7 +147,7 @@ Proof-of-stake based:
 **Züs - _Züs is a proof-of-stake dStorage platform with sharding and blobbers._**
 
 - [zus.network](https://zus.network/)
-- [Documentation](https://0chaindocs.gitbook.io/zus-docs)
+- [Documentation](https://docs.zus.network/zus-docs/)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crust is a dStorage platform on top of the IPFS._**
@@ -159,7 +159,7 @@ Proof-of-stake based:
 **Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
-- [Documentation](https://docs.ethswarm.org/docs/)
+- [Documentation](https://docs.ethswarm.org/)
 - [GitHub](https://github.com/ethersphere/)
 
 **OrbitDB - _A decentralized peer to peer database on top of IPFS._**
@@ -170,14 +170,14 @@ Proof-of-stake based:
 
 **Aleph.im - _Decentralized cloud project (database, file storage, computing and DID). A unique blend of offchain and onchain peer-to-peer technology. IPFS and multi-chain compatibility._**
 
-- [Aleph.im](https://aleph.im/)
-- [Documentation](https://aleph.im/#/developers/)
+- [Aleph.im](https://aleph.cloud/)
+- [Documentation](https://docs.aleph.cloud/)
 - [GitHub](https://github.com/aleph-im/)
 
 **Ceramic - _User-controlled IPFS database storage for data-rich and engaging applications._**
 
 - [Ceramic.network](https://ceramic.network/)
-- [Documentation](https://developers.ceramic.network/learn/welcome/)
+- [Documentation](https://developers.ceramic.network/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
 **Filebase - _S3-compatible decentralized storage and geo-redundant IPFS pinning service. All files uploaded to IPFS through Filebase are automatically pinned to the Filebase infrastructure with 3x replication across the globe._**
@@ -206,7 +206,7 @@ Proof-of-stake based:
 
 ## Further reading {#further-reading}
 
-- [What Is Decentralized Storage?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
+- [What Is Decentralized Storage?](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Busting Five Common Myths about Decentralized Storage](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Know of a community resource that helped you? Edit this page and add it!_

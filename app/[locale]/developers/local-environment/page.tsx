@@ -5,15 +5,17 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import LocalEnvironmentPage from "./_components/local-environment"
+import LocalEnvironmentJsonLD from "./page-jsonld"
 
 import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
 
@@ -35,10 +37,25 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "developers/local-environment",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <LocalEnvironmentPage frameworksList={frameworksListData} />
-    </I18nProvider>
+    <>
+      <LocalEnvironmentJsonLD
+        locale={locale}
+        frameworksListData={frameworksListData}
+        contributors={contributors}
+      />
+
+      <I18nProvider locale={locale} messages={messages}>
+        <LocalEnvironmentPage frameworksList={frameworksListData} />
+      </I18nProvider>
+    </>
   )
 }
 
