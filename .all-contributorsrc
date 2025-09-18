@@ -13415,6 +13415,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "kvbik",
+      "name": "Jakub Vysoký",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45091?v=4",
+      "profile": "https://twitter.com/kvbik",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
