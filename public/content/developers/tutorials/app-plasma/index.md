@@ -308,51 +308,113 @@ This is the HTML (more accurately, [JSX](https://react.dev/learn/writing-markup-
 
 #### `server/noir/src/main.nr`
 
-[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero knowledge code.
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero-knowledge code. 
 
 ```rust
 use std::hash::pedersen_hash;
-use dep::ecrecover;
+```
+
+[Pedersen hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) is provided with the [Noir standard library](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). This hash function is commonly used by zero-knowledge proofs because it is much easier to calculate inside them.
+
+```rust
 use keccak256::keccak256;
+use dep::ecrecover;
+```
 
+These two functions are external libraries, defined in [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). They are exactly what they are named for, a function that calculates the [keccak256 hash](https://emn178.github.io/online-tools/keccak_256.html) and a function that verifies Ethereum signatures and recovers the signer's Ethereum address.
 
-global ACCOUNT_NUMBER: u32 = 5;
+```rust
+global ACCOUNT_NUMBER : u32 = 5;
+```
+
+Noir is inspired by [Rust](https://www.rust-lang.org/). Variables, by default, are constants. This is how we define global constants for the configuration. This is the number of accounts we store. 
+
+Data types named `u<number>` are that number of bits, unsigned. The only supported types are `u8`, `u16`, `u32`, `u64`, and `u128`.
+
+```rust
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
+```
+
+This variable is used for the Pedersen hash of the accounts, as explained below.
+
+```rust
 global MESSAGE_LENGTH : u32 = 100;
+```
+
+As explained above, the message length is fixed. It is specified here.
+
+```rust
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH; 
+```
 
+[EIP-191 signatures](https://eips.ethereum.org/EIPS/eip-191) require a buffer with a 26 byte prefix, followed by the message length in ASCII, and finally the message itself. 
+
+```rust
 struct Account {
     balance: u128,
     address: Field,
     nonce: u32,
 }
+```
 
+The information we store about an account. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) is a number, typically up to 253 bits, that can be used directly in the [arithmetic circuit](https://rareskills.io/post/arithmetic-circuit) that implements the zero-knowledge proof.
+
+Here we use the `Field` to store a 160-bit Ethereum address.
+
+```rust
 struct TransferTxn {
     from: Field,
     to: Field,
     amount: u128,
     nonce: u32
 }
+```
 
+The information we store for a transfer transaction.
 
-
-
+```rust
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
+```
+
+A function definition. The parameter is `Account` information. The result is an array of `Field` variables, whose length is `FLAT_ACCOUNT_FIELDS`
+
+```rust
     let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
     ];
+```
 
+The first value is the array is the acount address. The second includes both the balance and the nonce. The `.into()` calls change a number to the data type it needs to be. `account.nonce` is a `u32` value, but to add it to `account.balance << 32`, a `u128` value, it needs to be a `u128`. That's the first `.into()`. The second one turns the `u128` result into a `Field` so it will fit into the array.
+
+```rust
     flat
 }
+```
+
+In Noir functions can only return a value at the end (there is no early return). To specify the return value, you evaiuate it just before the function's closing bracket (`}`).
 
 
-
+```rust
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
-    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+```
 
+This function turns the accounts array into a `Field` array, which can be used as the input to a Petersen Hash.
+
+```rust
+    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+```
+
+This is the way you specify a variable that is mutable, that is *not* a constant. Variables in Noir need to always have a value, so we initialize it to all zeros.
+
+```rust
     for i in 0..ACCOUNT_NUMBER {
+```
+
+This is a `for` loop. Note that the boundries are constants. Noir loops have to have their boundries known at compile time. The reason is that arithmetic circuits don't support loops. When processing a `for` loop, the compiler simply puts the code inside it multiple times, one for each iteration.
+
+```rust
         let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
@@ -366,7 +428,11 @@ fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT
 fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
     pedersen_hash(flatten_accounts(accounts))
 }
+```
 
+Finally, we got to the function that hashes the accounts array.
+
+```rust
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     let mut account : u32 = ACCOUNT_NUMBER;
 
@@ -381,8 +447,11 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
 
     account
 }
+```
 
+This function finds the account with a specific address. This function would be terribly inefficient in normal code, because it iterates 
 
+```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
     let from = find_account(accounts, txn.from);
     let to = find_account(accounts, txn.to);
