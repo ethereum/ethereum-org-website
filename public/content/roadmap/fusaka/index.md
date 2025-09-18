@@ -26,11 +26,12 @@ With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-c
 
 This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for layer 2s.
 
+[Learn more about PeedDAS](/roadmap/fusaka/peerdas/)
+
 **Resources**:
 - [EIP-7594 technical specification](https://eips.ethereum.org/EIPS/eip-7594)
-- [Main PeerDAS explainer page](https://ethereum.org/en/roadmap/fusaka/peerdas)
-- [dapplion on PeerDAS](https://youtu.be/bONWd1x2TjQ?t=328)
-- [Academic: A Documentation of Ethereum’s PeerDAS](https://eprint.iacr.org/2024/1362.pdf)
+- [PeerDAS, Lion DappLion: Scaling Ethereum Today | ETHSofia 2024](https://youtu.be/bONWd1x2TjQ?t=328)
+- [Academic: A Documentation of Ethereum’s PeerDAS (PDF)](https://eprint.iacr.org/2024/1362.pdf)
 
 #### Blob parameter only forks {#blob-parameter-only-forks}
 
@@ -44,8 +45,9 @@ Blob parameter only forks can be set by clients, similarly to other configuratio
 
 When blobs were first added to the network in the Dencun upgrade, the target was 3 - that was increased to 6 in Pectra and, after Fusaka, that can now be increased at a sustainable rate independently of these major network upgrades.
 
-[ IMAGE HERE, ETH.ORG TEAM PLEASE HELP ATTACH: https://drive.google.com/file/d/1U24kK-XbZ_l6UWwDO_2-0Mxn4kSkEwVe/view?usp=sharing ]
-Graph source: https://dune.com/hildobby/blobs
+![todo: replace this with description of diagram for screen readers](./average-blob-count-per-block.webp)
+
+Graph source: [Ethereum Blobs - @hildobby, Dune Analytics](https://dune.com/hildobby/blobs)
 
 **Resources**: [EIP-7892 technical specification](https://eips.ethereum.org/EIPS/eip-7892)
 
@@ -66,7 +68,7 @@ EIP-7918 pins a proportional reserve price under every blob. When the reserve is
 
 ### Scale L1 {#scale-l1}
 
-#### eth/69 - history expiry and simpler receipts {eth-69}
+#### History expiry and simpler receipts {#history-expiry}
 
 In July 2025, Ethereum execution clients [began to support partial history expiry](https://blog.ethereum.org/2025/07/08/partial-history-exp). This dropped history older than [the Merge](https://ethereum.org/roadmap/merge/) in order to reduce the disk space required by node operators as Ethereum continues to grow.
 
@@ -88,7 +90,7 @@ Why exactly 2^24 gas? It’s comfortably smaller than today’s gas limit, is la
 
 **Resources**: [EIP-7825 technical specification](https://eips.ethereum.org/EIPS/eip-7825)
 
-#### MODEXP Gas Cost Increase {#modexp-gas-cost-increase}
+#### `MODEXP` gas cost increase {#modexp-gas-cost-increase}
 
 MODEXP is a precompile built‑in function that calculates modular exponentiation, a type of large‑number math used in RSA signature verification and proof systems. It allows contracts to run these calculations directly without having to implement them themselves.
 
@@ -119,7 +121,7 @@ and reject any execution block whose RLP payload exceeds
 
 `MAX_RLP_BLOCK_SIZE = MAX_BLOCK_SIZE − SAFETY_MARGIN`
 
-The goal is to bound worst-case propagation/validation time and align with CL gossip behavior, reducing reorg/DoS risk without changing gas accounting.
+The goal is to bound worst-case propagation/validation time and align with consensus layer gossip behavior, reducing reorg/DoS risk without changing gas accounting.
 
 **Resources**: [EIP-7934 technical specification](https://eips.ethereum.org/EIPS/eip-7934)
 
@@ -145,7 +147,7 @@ This feature benefits client implementations and security of the network as it p
 
 #### Count leading zeros (CLZ) opcode {#count-leading-zeros-opcode}
 
-This feature adds a small EVM instruction, CLZ (“count leading zeros”). Most everything in the EVM is represented as a 256-bit value - this new opcode returns how many zero bits are at the front. This is a common feature in many instruction set architectures as it enables more efficient arithmetic operations. In practice this collapses today’s hand-rolled bit scans into one step, so finding the first set bit, scanning bytes, or parsing bitfields becomes simpler and cheaper. The opcode is low, fixed-cost and has been benchmarked to be on par with a basic add, which trims bytecode and saves gas for the same work.
+This feature adds a small EVM instruction, **count leading zeroes (CLZ)**. Most everything in the EVM is represented as a 256-bit value—this new opcode returns how many zero bits are at the front. This is a common feature in many instruction set architectures as it enables more efficient arithmetic operations. In practice this collapses today’s hand-rolled bit scans into one step, so finding the first set bit, scanning bytes, or parsing bitfields becomes simpler and cheaper. The opcode is low, fixed-cost and has been benchmarked to be on par with a basic add, which trims bytecode and saves gas for the same work.
 
 **Resources**: [EIP-7939 technical specification](https://eips.ethereum.org/EIPS/eip-7939)
 
@@ -163,11 +165,11 @@ For developers, it takes a 160-byte input and returns a 32-byte output, making i
 
 ### Meta {#meta}
 
-#### `eth_config` JSON-RPC Method {#eth-config}
+#### `eth_config` JSON-RPC method {#eth-config}
 
 This is a JSON-RPC call that allows you to ask your node what fork settings you're running. It returns three snapshots: `current`, `next`, & `last` so that validators and monitoring tools can verify that clients are lined up for an upcoming fork.
 
-Practically speaking, this is to address a shortcoming discovered when the Pectra fork went live on the Holešky testnet in early 2025 with minor misconfigurations which resulted in a non-finalizing state. This helps testing teams and developers ensure that major forks will behave as expected when moving from devnets to testnets and from testnets to mainnet.
+Practically speaking, this is to address a shortcoming discovered when the Pectra fork went live on the Holesky testnet in early 2025 with minor misconfigurations which resulted in a non-finalizing state. This helps testing teams and developers ensure that major forks will behave as expected when moving from devnets to testnets, and from testnets to Mainnet.
 
 Snapshots include: `chainId`, `forkId`, planned fork activation time, which precompiles are active, precompile addresses, system contract dependencies, and the fork's blob schedule.
 
