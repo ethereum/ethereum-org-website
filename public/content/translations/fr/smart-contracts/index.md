@@ -7,6 +7,10 @@ lang: fr
 
 # Introduction aux contrats intelligents {#introduction-to-smart-contracts}
 
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
+
 Les contrats intelligents sont les éléments fondamentaux de la couche applicative d'Ethereum. Il s'agit de programmes informatiques stockés sur la [blockchain](/glossary/#blockchain) qui suivent la logique « si ceci alors cela » et sont garantis de s'exécuter selon les règles définies par leur code, qui ne peut être modifié une fois créé.
 
 L'expression « contrat intelligent » a été utilisée en premier par Nick Szabo. En 1994, il a écrit [une introduction au concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), et en 1996 il a écrit [une exploration de ce que les contrats intelligents pourraient faire](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
@@ -70,7 +74,7 @@ Ils peuvent effectuer des calculs, produire de la monnaie, stocker des données,
 - [Stablecoins](/stablecoins/)
 - [Création et distribution d'actifs numériques uniques](/nft/)
 - [Plateforme d'échange ouverte et automatisée](/get-eth/#dex)
-- [Jeu décentralisé](/dapps/?category=gaming#explore)
+- [Jeu décentralisé](/apps/categories/gaming)
 - [Police d'assurance qui paie automatiquement](https://etherisc.com/)
 - [Norme qui permet aux gens de créer des devises personnalisées et interopérables](/developers/docs/standards/tokens/)
 

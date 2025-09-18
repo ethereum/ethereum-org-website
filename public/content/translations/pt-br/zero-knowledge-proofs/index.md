@@ -38,7 +38,7 @@ Existem "moedas de privacidade" específicas desenhadas para transações comple
 
 Ao incorporar a tecnologia de conhecimento zero ao protocolo, as redes [blockchain](/glossary/#blockchain) voltadas para a privacidade permitem que os [nós](/glossary/#node) validem as transações sem precisar acessar os dados da transação.
 
-\<0>Provas de conhecimento zero também estão sendo aplicadas para tornar anônimas transações em blockchains públicas\</0>. Um exemplo é o Tornado Cash, um serviço descentralizado e sem custódia que permite aos usuários realizar transações privadas no Ethereum. O Tornado Cash usa provas de conhecimento zero para ofuscar os detalhes das transações e garantir privacidade financeira. Infelizmente, por se tratar de ferramentas de privacidade "opt-in", elas estão associadas a atividades ilícitas. Para superar isso, a privacidade deve se tornar o padrão em blockchains públicas.
+**Provas de conhecimento zero também estão sendo aplicadas para tornar anônimas transações em blockchains públicas**. Um exemplo é o Tornado Cash, um serviço descentralizado e sem custódia que permite aos usuários realizar transações privadas no Ethereum. O Tornado Cash usa provas de conhecimento zero para ofuscar os detalhes das transações e garantir privacidade financeira. Infelizmente, por se tratar de ferramentas de privacidade "opt-in", elas estão associadas a atividades ilícitas. Para superar isso, a privacidade deve se tornar o padrão em blockchains públicas.
 
 ### Proteção de identidade {#identity-protection}
 

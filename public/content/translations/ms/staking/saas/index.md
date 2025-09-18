@@ -86,7 +86,7 @@ Dengan menggunakan pembekal SaaS, anda mempercayakan pengendalian nod anda kepad
 
 Setelah selesai proses pemotongan/keluar, dana ini akan dipindahkan ke alamat pengeluaran yang diberikan kepada pengesah. Ini memerlukan penyediaan alamat pengeluaran untuk didayakan. Ini mungkin telah disediakan pada deposit awal. Jika tidak, kunci pengeluaran pengesah perlu digunakan untuk menandatangani mesej yang mengisytiharkan alamat pengeluaran. Jika tiada alamat pengeluaran telah diberikan, dana akan kekal dikunci sehingga diberikan.
 
-Hubungi pembekal SaaS individu untuk mendapatkan butiran lanjut tentang sebarang jaminan atau pilihan insurans, dan untuk mendapatkan arahan tentang cara memberikan alamat pengeluaran. Jika anda lebih suka mengawal sepenuhnya persediaan pengesah anda, <a href="/staking/solo/">ketahui lebih lanjut tentang cara mempertaruhkan ETH anda secara solo</a>.
+Hubungi pembekal SaaS individu untuk mendapatkan butiran lanjut tentang sebarang jaminan atau pilihan insurans, dan untuk mendapatkan arahan tentang cara memberikan alamat pengeluaran. Jika anda lebih suka mengawal sepenuhnya persediaan pengesah anda, [ketahui lebih lanjut tentang cara mempertaruhkan ETH anda secara solo](/staking/solo/).
 </ExpandableCard>
 
 ## Bacaan lanjut {#further-reading}

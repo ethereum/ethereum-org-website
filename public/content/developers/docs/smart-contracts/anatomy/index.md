@@ -49,14 +49,14 @@ Other types include:
 
 For more explanation, take a look at the docs:
 
-- [See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [See Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [See Vyper types](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [See Solidity types](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Memory {#memory}
 
 Values that are only stored for the lifetime of a contract function's execution are called memory variables. Since these are not stored permanently on the blockchain, they are much cheaper to use.
 
-Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
 
 ### Environment variables {#environment-variables}
 
@@ -123,8 +123,8 @@ def readName() -> string:
 What is considered modifying state:
 
 1. Writing to state variables.
-2. [Emitting events](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
-3. [Creating other contracts](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+2. [Emitting events](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
+3. [Creating other contracts](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
 4. Using `selfdestruct`.
 5. Sending ether via calls.
 6. Calling any function not marked `view` or `pure`.
@@ -643,8 +643,8 @@ contract CryptoPizza is IERC721, ERC165 {
 
 Check out Solidity and Vyper's documentation for a more complete overview of smart contracts:
 
-- [Solidity](https://solidity.readthedocs.io/)
-- [Vyper](https://vyper.readthedocs.io/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
 ## Related topics {#related-topics}
 

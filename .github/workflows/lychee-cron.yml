@@ -1,0 +1,52 @@
+name: Check Links In Public Directory
+
+on:
+  schedule:
+    - cron: "0 0 1 * *" # Monthly run on the 1st day of every month at midnight UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: dev
+
+      - name: Check links in /public
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: |
+            public/
+            --quiet
+            --max-retries 1
+            --accept 200,429,403
+            --exclude-all-private
+            --exclude '^file://'
+            --exclude "ethereum\.org"
+            --include '^https?://'
+            --format detailed
+            './**/*.md'
+        continue-on-error: true
+
+      - name: Provide helpful failure message
+        if: failure()
+        run: |
+          echo "::error::Link check failed! Please review the broken links reported above."
+          echo ""
+          echo "If certain links are valid but fail due to:"
+          echo "- CAPTCHA challenges"
+          echo "- IP blocking"
+          echo "- Authentication requirements"
+          echo "- Rate limiting"
+          echo ""
+          echo "Consider adding them to .lycheeignore to bypass future checks."
+          echo "Format: Add one URL pattern per line"
+          exit 1

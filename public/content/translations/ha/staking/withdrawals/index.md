@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Idan kana cikin <a href="/staking/pools/"> staking pool</a> ko rike kuɗin ajiyan, zaku iya dubawa da abin dubawa zan samun karin bayanai akan yanda ake cire kudade da rikes u, tunda ko wani aiki ana yinshi ne daban-daban.
+Idan kana cikin [ staking pool](/staking/pools/) ko rike kuɗin ajiyan, zaku iya dubawa da abin dubawa zan samun karin bayanai akan yanda ake cire kudade da rikes u, tunda ko wani aiki ana yinshi ne daban-daban.
 
-A gabaɗaya, masu amfani su saki jiki wajen dawowa abinda suka ajiye ETH, ko canzawa abinda aka ajiye da samar da amfani. Idan muhimman abu ya sami mafi babba, kudin zai iya fita, dawawo, da sake ajiyewa a <a href="https://rated.network/"> ƙaramin mai samarwa </a>. Ko, idan ka haɗa wadataccen ETH zaka iya <a href="/staking/solo/"> ajiye shi daga gida</a>.
+A gabaɗaya, masu amfani su saki jiki wajen dawowa abinda suka ajiye ETH, ko canzawa abinda aka ajiye da samar da amfani. Idan muhimman abu ya sami mafi babba, kudin zai iya fita, dawawo, da sake ajiyewa a <a href="https://rated.network/"> ƙaramin mai samarwa </a>. Ko, idan ka haɗa wadataccen ETH zaka iya [ ajiye shi daga gida](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ A'a. Da zarar mai tabbatarwa ya fita da sauran kuɗin gabaki ɗaya, duk wani kar
 
 - [Saka Ajiyar Cire Kuɗi na Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain cirewa ne mai turuwa kaman aiki](https://eips.ethereum.org/EIPS/eip-4895)
-- [Etgereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Cire Kuɗin ETH (Gwaji) da potuz & amp; Hsiao- wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain cirewa na turawa kaman aiki da Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Fahimtar Mai Tabbatar da Daidai Ragowar Kuɗi](https://www.attestant.io/posts/understanding-validator-effective-balance/)

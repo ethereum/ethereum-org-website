@@ -19,7 +19,7 @@ export const TranslatathonInANutshell = () => {
           <h3 className="text-2xl">Earn points</h3>
           <p>
             Translate ethereum.org and ecosystem content to earn points and
-            compete with other participants. 1 translated word = 1 point
+            compete against other participants. 1 translated word = 1 point
           </p>
         </Flex>
         <Flex className="w-full justify-center">
@@ -46,10 +46,9 @@ export const TranslatathonInANutshell = () => {
         <Flex className="w-full flex-col gap-2 self-center">
           <h3 className="text-2xl">Human translations only</h3>
           <p>
-            Using machine translation is forbidden! All translations will be
-            reviewed and evaluated, and participants using machine translation
-            will be automatically disqualified and not be eligible to claim
-            prizes (see{" "}
+            Using AI or machine translation is forbidden! All translations will
+            be reviewed and evaluated, and participants using machine
+            translation will not be eligible to claim prizes (see{" "}
             <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
               terms and conditions
             </Link>

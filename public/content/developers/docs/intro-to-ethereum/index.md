@@ -1,5 +1,5 @@
 ---
-title: Intro to Ethereum
+title: Technical intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 ---
@@ -44,7 +44,7 @@ ETH is also used to provide crypto-economic security to the network in three mai
 
 ## What are smart contracts? {#what-are-smart-contracts}
 
-In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
+In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network "smart contracts".
 
 At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ETH to a specific recipient.
 
@@ -108,6 +108,14 @@ A reusable snippet of code (a program) which a developer publishes into EVM stat
 
 - [Ethereum Whitepaper](/whitepaper/)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** this resource is still valuable but be aware that it predates [The Merge](/roadmap/merge) and therefore still refers to Ethereum's proof-of-work mechanism - Ethereum is actually now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+
+### More of a visual learner? {#visual-learner}
+
+This video series offers a thorough exploration of foundational topics:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Ethereum Basics Playlist](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

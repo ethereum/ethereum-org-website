@@ -34,7 +34,7 @@ lang: fa
 
 #### از کدام شبکه‌ تست باید استفاده کنم؟
 
-دو شبکه تست عمومی که کاربران توسعه‌دهنده در حال حاضر نگهداری میکنند Goerli و Sepolia هستند. Sepolia یک شبکه‌ برای قرارداد‌ و اپلیکیشن است که توسعه‌دهندگان برنامه های خود را روی آن آزمایش می کنند. شبکه‌ Goerli به توسعه‌دهندگان پروتکل اجازه می دهد ارتقا شبکه را آزمایش کنند، و به سهام گذاران اجازه می دهد تا اعتبارسنج های در حال اجرا را تست کنند.
+دو شبکه تست عمومی که کاربران توسعه‌دهنده در حال حاضر نگهداری میکنند Sepolia و Hoodi هستند. Sepolia یک شبکه‌ برای قرارداد‌ و اپلیکیشن است که توسعه‌دهندگان برنامه های خود را روی آن آزمایش می کنند. شبکه‌ Hoodi به توسعه‌دهندگان پروتکل اجازه می دهد ارتقا شبکه را آزمایش کنند، و به سهام گذاران اجازه می دهد تا اعتبارسنج های در حال اجرا را تست کنند.
 
 #### Sepolia {#sepolia}
 
@@ -60,14 +60,12 @@ lang: fa
 - [فاست کیف پول Coinbase‏ | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [فاست Alchemy Sepolia](https://sepoliafaucet.com/)
 - [فاست Infura Sepolia](https://www.infura.io/faucet)
-- [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [فاست اتریوم اکوسیستم](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli_(پشتیبانی طولانی مدت)_ {#goerli}
+#### Hoodi_(پشتیبانی طولانی مدت)_ {#hoodi}
 
-_توجه:[شبکه‌ تست Goerli منسوخ شده است](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) و در 2023 با [Holesovice](https://github.com/eth-clients/holesovice) جایگزین خواهد شد. لطفاً انتقال اپلیکیشن‌های خود را به Sepolia در نظر بگیرید._
-
-Goerli یک شبکه‌ تست برای آزمایش اعتبارسنجی و سهام گذاری است. شبکه‌ Goerli برای کاربرانی که می خواهند اعتبارسنجی یک شبکه‌ تست را اجرا کنند، باز است. سهام گذارانی که می خواهند آپدیت های پروتکل را قبل از پیاده‌سازی بر روی شبکه اصلی آزمایش کنند، پس باید از Goerli استفاده کنند.
+Hoodi یک شبکه‌ تست برای آزمایش اعتبارسنجی و سهام گذاری است. شبکه‌ Hoodi برای کاربرانی که می خواهند اعتبارسنجی یک شبکه‌ تست را اجرا کنند، باز است. سهام گذارانی که می خواهند آپدیت های پروتکل را قبل از پیاده‌سازی بر روی شبکه اصلی آزمایش کنند، پس باید از Hoodi استفاده کنند.
 
 - مجموعه اعتبارسنج باز، سهام گذاران می توانند ارتقا شبکه‌ را تست کنند
 - وضعیت بزرگ داده ای، مفید برای تست تعاملات قرارداد هوشمند پیچیده
@@ -75,52 +73,53 @@ Goerli یک شبکه‌ تست برای آزمایش اعتبارسنجی و س�
 
 ##### منابع
 
-- [وب‌سایت](https://goerli.net/)
-- [گیت‌هاب](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [وب‌سایت](https://hoodi.net/)
+- [گیت‌هاب](https://github.com/eth-clients/hoodi)
+- [Etherscan](https://hoodi.etherscan.io)
+- [Blockscout](https://eth-hoodi.blockscout.com/)
 
 ##### فاست ها
 
-- [فاست QuickNode Goerli](https://faucet.quicknode.com/drip)
+- [فاست QuickNode Hoodi](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
-- [فاست PoW](https://goerli-faucet.pk910.de/)
+- [فاست PoW](https://hoodi-faucet.pk910.de/)
 - [فاست Paradigm](https://faucet.paradigm.xyz/)
-- [فاست Alchemy Goerli](https://goerlifaucet.com/)
-- [فاست All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [فاست کیف پول Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [فاست Chainstack Sepolia](https://faucet.chainstack.com/goerli-faucet)
+- [فاست Alchemy Hoodi](https://hoodifaucet.com/)
+- [فاست All That Node Hoodi](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [فاست کیف پول Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-hoodi-faucet)
+- [فاست Chainstack Sepolia](https://faucet.chainstack.com/hoodi-faucet)
 
-برای راه‌اندازی اعتبارسنج بر روی شبکه تست گورلی (Goerli)، از [سکوی پرتاپ"اعتبار سنج ارزان گورلی"](https://holesky.launchpad.ethstaker.cc/en/) که توسط جامعه Ethstaker ارائه میشود استفاده کنید.
+برای راه‌اندازی اعتبارسنج بر روی شبکه تست Hoodi، از [سکوی پرتاپ"اعتبار سنج ارزان Hoodi"](https://holesky.launchpad.ethstaker.cc/en/) که توسط جامعه Ethstaker ارائه میشود استفاده کنید.
 
 ### شبکه‌های تست لایه 2 {#layer-2-testnets}
 
 [لایه 2 (L2)](/layer-2/) یک اصطلاح جمعی برای توصیف مجموعه خاصی از راه‌حل‌های مقیاس‌پذیری اتریوم است. لایه 2 یک بلاک‌چین جداگانه است که اتریوم را گسترش می‌دهد و تضمین‌های امنیتی اتریوم را به ارث می‌برد. شبکه‌های تست لایه 2 معمولاً محکم به شبکه‌های تست عمومی اتریوم متصل می‌شوند.
 
-#### شبکه تست Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 یک شبکه‌ تست برای [‏Arbitrum](https://arbitrum.io/).
 
 ##### فاست ها
 
-- [فاست Chainlink](https://faucets.chain.link/)
+- [فاست Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [فاست Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 یک شبکه‌ تست برای [Optimism](https://www.optimism.io/).
 
 ##### فاست ها
 
-- [فاست Paradigm](https://faucet.paradigm.xyz/)
-- [فاست کیف پول Coinbase | Sepolia](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [فاست Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [فاست Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 یک شبکه تست برای [‏Starknet‏](https://www.starknet.io).
 
 ##### فاست ها
 
-- [فاست Starknet](https://faucet.goerli.starknet.io)
+- [فاست Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## شبکه‌های خصوصی {#private-networks}
 

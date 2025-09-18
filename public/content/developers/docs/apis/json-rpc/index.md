@@ -26,7 +26,7 @@ An internal API is also used for inter-client communication within a node - that
 
 ## Execution client spec {#spec}
 
-[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/api-documentation/) and includes an Inspector to try out all the available methods.
+[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/) and includes an Inspector to try out all the available methods.
 
 ## Conventions {#conventions}
 
@@ -58,9 +58,9 @@ Here are some examples:
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)
 
-### The default block parameter {#default-block}
+### The block parameter {#block-parameter}
 
-The following methods have an extra default block parameter:
+The following methods have a block parameter:
 
 - [eth_getBalance](#eth_getbalance)
 - [eth_getCode](#eth_getcode)
@@ -68,9 +68,9 @@ The following methods have an extra default block parameter:
 - [eth_getStorageAt](#eth_getstorageat)
 - [eth_call](#eth_call)
 
-When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
+When requests are made that query the state of Ethereum, the provided block parameter determines the height of the block.
 
-The following options are possible for the defaultBlock parameter:
+The following options are possible for the block parameter:
 
 - `HEX String` - an integer block number
 - `String "earliest"` for the earliest/genesis block
@@ -208,8 +208,8 @@ None
 The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
 
 - `1`: Ethereum Mainnet
-- `5`: Goerli testnet
 - `11155111`: Sepolia testnet
+- `560048` : Hoodi Testnet
 
 **Example**
 
@@ -303,6 +303,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 Returns an object with data about the sync status or `false`.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 None
@@ -387,6 +391,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 Returns the client coinbase address.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
+  Try endpoint in playground
+</ButtonLink>
+
 > **Note:** This method has been deprecated as of **v1.14.0** and is no longer supported. Attempting to use this method will result in a "Method not supported" error.
 
 **Parameters**
@@ -414,6 +422,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 
 Returns the chain ID used for signing replay-protected transactions.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 None
@@ -439,13 +451,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 Returns `true` if client is actively mining new blocks. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 None
 
 **Returns**
 
-`Boolean` - returns `true` of the client is mining, otherwise `false`.
+`Boolean` - returns `true` if the client is mining, otherwise `false`.
 
 **Example**
 
@@ -463,6 +479,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 ### eth_hashrate {#eth_hashrate}
 
 Returns the number of hashes per second that the node is mining with. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -489,6 +509,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 Returns an estimate of the current price per gas in wei. For example, the Besu client examines the last 100 blocks and returns the median gas unit price by default.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 None
@@ -513,6 +537,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 ### eth_accounts {#eth_accounts}
 
 Returns a list of addresses owned by client.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -539,6 +567,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 
 Returns the number of most recent block.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 None
@@ -564,10 +596,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 
 Returns the balance of the account of given address.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 20 Bytes - address to check for balance.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -594,11 +630,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 Returns the value from a storage position at a given address.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 20 Bytes - address of the storage.
 2. `QUANTITY` - integer of the position in the storage.
-3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Returns**
 
@@ -611,7 +651,7 @@ Calculating the correct position depends on the storage to retrieve. Consider th
 contract Storage {
     uint pos0;
     mapping(address => uint) pos1;
-    function Storage() {
+    constructor() {
         pos0 = 1234;
         pos1[msg.sender] = 5678;
     }
@@ -662,10 +702,14 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Returns the number of transactions _sent_ from an address.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 20 Bytes - address.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -694,6 +738,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 ### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
 
 Returns the number of transactions in a block from a block matching the given block hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -724,9 +772,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 Returns the number of transactions in a block matching the given block number.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -754,6 +806,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 ### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
 
 Returns the number of uncles in a block from a block matching the given block hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -784,9 +840,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 Returns the number of uncles in a block from a block matching the given block number.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -815,10 +875,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 
 Returns code at a given address.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 20 Bytes - address
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -994,6 +1058,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 Executes a new message call immediately without creating a transaction on the blockchain. Often used for executing read-only smart contract functions, for example the `balanceOf` for an ERC-20 contract.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `Object` - The transaction call object
@@ -1005,7 +1073,7 @@ Executes a new message call immediately without creating a transaction on the bl
 - `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction
 - `input`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Returns**
 
@@ -1027,6 +1095,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 ### eth_estimateGas {#eth_estimategas}
 
 Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1053,6 +1125,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 
 Returns information about a block by hash.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - Hash of a block.
@@ -1072,13 +1148,13 @@ params: [
 - `number`: `QUANTITY` - the block number. `null` when its pending block.
 - `hash`: `DATA`, 32 Bytes - hash of the block. `null` when its pending block.
 - `parentHash`: `DATA`, 32 Bytes - hash of the parent block.
-- `nonce`: `DATA`, 8 Bytes - hash of the generated proof-of-work. `null` when its pending block.
+- `nonce`: `DATA`, 8 Bytes - hash of the generated proof-of-work. `null` when its pending block, `0x0` for proof-of-stake blocks (since The Merge)
 - `sha3Uncles`: `DATA`, 32 Bytes - SHA3 of the uncles data in the block.
 - `logsBloom`: `DATA`, 256 Bytes - the bloom filter for the logs of the block. `null` when its pending block.
 - `transactionsRoot`: `DATA`, 32 Bytes - the root of the transaction trie of the block.
 - `stateRoot`: `DATA`, 32 Bytes - the root of the final state trie of the block.
 - `receiptsRoot`: `DATA`, 32 Bytes - the root of the receipts trie of the block.
-- `miner`: `DATA`, 20 Bytes - the address of the beneficiary to whom the mining rewards were given.
+- `miner`: `DATA`, 20 Bytes - the address of the beneficiary to whom the block rewards were given.
 - `difficulty`: `QUANTITY` - integer of the difficulty for this block.
 - `totalDifficulty`: `QUANTITY` - integer of the total difficulty of the chain until this block.
 - `extraData`: `DATA` - the "extra data" field of this block.
@@ -1130,9 +1206,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 Returns information about a block by block number.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `Boolean` - If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
 
 ```js
@@ -1157,6 +1237,10 @@ Result see [eth_getBlockByHash](#eth_getblockbyhash)
 ### eth_getTransactionByHash {#eth_gettransactionbyhash}
 
 Returns the information about a transaction requested by transaction hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1217,6 +1301,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 
 Returns information about a transaction by block hash and transaction index position.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - hash of a block.
@@ -1245,9 +1333,13 @@ Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 Returns information about a transaction by block number and transaction index position.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - the transaction index position.
 
 ```js
@@ -1341,6 +1433,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 
 Returns information about a uncle of a block by hash and uncle index position.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - The hash of a block.
@@ -1371,9 +1467,13 @@ Result see [eth_getBlockByHash](#eth_getblockbyhash)
 
 Returns information about a uncle of a block by number and uncle index position.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - the uncle's index position.
 
 ```js
@@ -1623,7 +1723,7 @@ Returns an array of all logs matching a given filter object.
 - `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last proposed block, `"safe"` for the latest safe block, `"finalized"` for the latest finalized block, or `"pending"`, `"earliest"` for transactions not yet in a block.
 - `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 - `topics`: `Array of DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-- `blockhash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+- `blockHash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ```js
 params: [

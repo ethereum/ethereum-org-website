@@ -1,9 +1,9 @@
-import merge from "lodash.merge"
+import { merge } from "lodash"
 import { getRequestConfig } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
-import { getMessages } from "./loadMessages"
+import { loadMessages } from "./loadMessages"
 import { routing } from "./routing"
 
 export default getRequestConfig(async ({ requestLocale }) => {
@@ -15,9 +15,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale
   }
 
-  const allLocaleMessages = await getMessages(locale)
-  const allDefaultMessages = await getMessages(routing.defaultLocale)
-  const messages = merge(allDefaultMessages, allLocaleMessages)
+  const allLocaleMessages = await loadMessages(locale)
+  const allDefaultMessages = await loadMessages(routing.defaultLocale)
+  const messages = merge({}, allDefaultMessages, allLocaleMessages)
 
   return {
     locale,

@@ -60,7 +60,7 @@ summaryPoints:
 - [Гийом Балле объясняет деревья Веркла на ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Как деревья Меркла делают Ethereum эффективным и готовым к работе» — Гийом Балле, Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Пайпер Мерриам о клиентах без состояния на ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Данкрад Фиест объясняет, что такое деревья Веркла и клиенты без фиксации состояния, в подкасте Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Данкрад Фиест объясняет, что такое деревья Веркла и клиенты без фиксации состояния, в подкасте Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Виталик Бутерин о деревьях Веркла](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Данкрад Фейст о деревьях Веркла](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Документация EIP деревьев Веркла](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

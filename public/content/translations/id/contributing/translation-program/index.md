@@ -20,7 +20,7 @@ Program penerjemahan ethereum.org bersifat terbuka dan semuanya bisa ikut berkon
 4. Penerjemahan mesin tidak akan disetujui.
 5. Semua terjemahan akan diperiksa sebelum dimasukkan ke dalam situs, sehingga akan ada sedikit penundaan sebelum terjemahan Anda ditampilkan.
 
-_Gabung ke [Discord ethereum.org](/discord/) untuk berkolaborasi pada penerjemahan, menanyakan sesuatu, membagikan umpan balik dan masukan, atau bergabung ke grup penerjemahan._
+_Gabung ke [Discord ethereum.org](https://discord.gg/ethereum-org) untuk berkolaborasi pada penerjemahan, menanyakan sesuatu, membagikan umpan balik dan masukan, atau bergabung ke grup penerjemahan._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Mulai penerjemahan
@@ -36,9 +36,9 @@ Bacaan lanjutan mengenai Program Penerjemahan ethereum.org [visi dan misi](/cont
 
 ### Kemajuan kami sejauh ini {#our-progress}
 
-- [**6.000+** penerjemah](/contributing/translation-program/contributors/)
-- **62** bahasa ada di situs
-- [**3 juta** kata telah diterjemahkan di 2023](/contributing/translation-program/acknowledgements/)
+- [**6.900+** penerjemah](/contributing/translation-program/contributors/)
+- **68** bahasa ada di situs
+- [**2.89 juta** kata telah diterjemahkan di 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

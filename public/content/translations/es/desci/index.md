@@ -76,7 +76,7 @@ La propiedad intelectual (PI) es un gran problema en la ciencia tradicional: des
 
 De la misma manera que los NFT pueden transferir ingresos de vuelta al creador original, puede establecer cadenas transparentes de atribución de valor para recompensar a investigadores, organismos gubernamentales (como DAO), o incluso a los sujetos cuyos datos se recolectan.
 
-Los [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) también pueden servir como una llave para acceder a un repositorio descentralizado de datos de experimentos de investigación y conectarse con la financiación de NFT y [DeFi](/glossary/#defi) (desde el fraccionamiento hasta los pools de préstamos y la valoración). También permite a entidades nativas en cadena como las DAO similares a [VitaDAO](https://www.vitadao.com/) realizar investigaciones directamente en cadena. La llegada de los tokens ["AlmaDestinados" no transferibles](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) también puede desempeñar un papel importante en DeSci al permitir a las personas demostrar su experiencia y credenciales vinculadas a su dirección de Ethereum.
+Los [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) también pueden servir como una llave para acceder a un repositorio descentralizado de datos de experimentos de investigación y conectarse con la financiación de NFT y [DeFi](/glossary/#defi) (desde el fraccionamiento hasta los pools de préstamos y la valoración). También permite a entidades nativas en cadena como las DAO similares a [VitaDAO](https://www.vitadao.com/) realizar investigaciones directamente en cadena. La llegada de los tokens [ "AlmaDestinados" no transferibles](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) también puede desempeñar un papel importante en DeSci al permitir a las personas demostrar su experiencia y credenciales vinculadas a su dirección de Ethereum.
 
 ### Almacenamiento de datos, acceso y arquitectura {#data-storage}
 
@@ -95,8 +95,7 @@ Explore proyectos y únase a la comunidad DeSci.
 - [Molecule: financie y reciba fondos para sus proyectos de investigación](https://www.molecule.xyz/)
 - [VitaDAO: recibe financiación a través de acuerdos de investigación patrocinados para la investigación de la longevidad](https://www.vitadao.com/)
 - [ResearchHub: publique un resultado científico y participe en conversaciones con pares](https://www.researchhub.com/)
-- [LabDAO: pliegue una proteína simulada por ordenador](https://alphafodl.vercel.app/)
-- [dClimate API: consulta datos climáticos recopilados por una comunidad descentralizada](https://api.dclimate.net/)
+- [dClimate API: consulta datos climáticos recopilados por una comunidad descentralizada](https://www.dclimate.net/)
 - [DeSci Foundation: creador de herramientas de publicación DeSci](https://descifoundation.org/)
 - [DeSci.World: ventanilla única para que los usuarios vean e interactúen con la ciencia descentralizada](https://desci.world)
 - [OceanDAO: financiación regida por una DAO para la ciencia relacionada con datos](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Estamos abiertos a recibir sugerencias sobre nuevos proyectos por incluir, por f
 - [Una guía para descentralizar la biotecnología de Jocelynn Pearl para el futuro de 16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [La oportunidad para la DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guía de DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Recursos de ciencia descentralizados](https://www.vincentweisser.com/decentralized-science)
+- [Recursos de ciencia descentralizados](https://www.vincentweisser.com/desci)
 - [Los IP-NFT de la molécula Biopharma: una descripción técnica](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Construyendo sistemas sin confianza de la ciencia por Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: El futuro de la ciencia descentralizada (pódcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

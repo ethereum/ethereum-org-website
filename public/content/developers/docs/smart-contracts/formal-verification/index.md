@@ -152,9 +152,10 @@ function safe_add(uint x, uint y) returns(uint z){
   require(z>=y);
 
   return z;
+}
 ```
 
-An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
+An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z >= y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
 
 ### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
 
@@ -252,10 +253,10 @@ Also, it is not always possible for program verifiers to determine if a property
 - [GitHub](https://github.com/isabelle-prover)
 - [Documentation](https://isabelle.in.tum.de/documentation.html)
 
-**Coq** - _Coq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
+**Rocq** - _Rocq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
 
-- [GitHub](https://github.com/coq/coq)
-- [Documentation](https://coq.github.io/doc/v8.13/refman/index.html)
+- [GitHub](https://github.com/rocq-prover/rocq)
+- [Documentation](https://rocq-prover.org/docs)
 
 ### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 

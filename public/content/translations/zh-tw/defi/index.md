@@ -48,7 +48,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 | 市場永遠開放。                         | 員工需要休息，因此市場會關閉。                       |
 | 奠基於透明的系統──所有人都能查看產品資料及檢查系統運作狀況。 | 金融機構完全是黑箱作業：你不能要求查看他們的放貸記錄、資產管理記錄等資訊。 |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   探索去中心化金融應用程式
 </ButtonLink>
 
@@ -66,7 +66,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     探索去中心化金融應用程式
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 作為一種區塊鏈，以太坊的核心功能是安全地在全球傳送交易。 和比特幣一樣，以太坊可以讓跨境匯款像傳送電子郵件一樣簡單。 只需從錢包輸入收款人的[以太坊名稱服務名稱](/glossary/#ens)（例如 bob.eth）或其帳戶地址，你的款項就會在幾分鐘內直接到達對方的帳戶（通常情況下）。 要收發款項，你需要一個[錢包](/wallets/)。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看支付去中心化應用程式
 </ButtonLink>
 
@@ -124,7 +124,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 - 點對點，即借款者直接向特定貸款者借款。
 - 資金池，即貸款者將資金（流動性）注入資金池，而借款者從資金池借款。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看借款去中心化應用程式
 </ButtonLink>
 
@@ -169,7 +169,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 要在傳統金融體系內完成以上操作，你需要鉅額資金。 這種財產創造策略只有已經擁有財富的人才能操作。 閃電貸的例子告訴我們，未來「有錢」不見得是「賺錢」的先決條件。
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   深入了解閃電貸
 </ButtonLink>
 
@@ -186,7 +186,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 - 你的 aDai 會按利率增加，你可以看到錢包裡的餘額在增長。 視[年利率](/glossary/#apr)而定，你的錢包餘額可能會在幾天，甚至幾小時後變成 100.1234！
 - 你可以隨時提取和你的 aDai 餘額等額的一般 Dai。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看借貸去中心化應用程式
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 例如，如果你想使用無損樂透 PoolTogether（參閱前文），你需要 Dai 或 USDC 這類代幣。 這些去中心化交易所可讓你將以太幣兌換成這些代幣，完成交易後再兌換回來。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看代幣交易所
 </ButtonLink>
 
@@ -226,7 +226,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 使用中央化交易所時，你必須在交易前先存入資產，並相信交易所會妥善看管你的資產。 資產存入交易所后就要承擔風險，因為中央化交易所往往是駭客鎖定的目標。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看交易去中心化應用程式
 </ButtonLink>
 
@@ -238,7 +238,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 [DeFi Pulse 指數基金 (DPI)](https://defipulse.com/blog/defi-pulse-index/) 就是個很好的例子。 此基金會自動再平衡，確保你的投資組合永遠包含市值最高的去中心化金融代幣。 你無需親力親為處理任何細節，而且可以隨時提取資金。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看投資去中心化應用程式
 </ButtonLink>
 
@@ -252,7 +252,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 - 過程完全透明，因此籌資者可以證明已經募集了多少資金。 你甚至可以在經過一段時間後追蹤資金的運用情況。
 - 募資者可以設定自動退款條件，例如在特定截止期限前未達到最低金額時。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看群眾募資去中心化應用程式
 </ButtonLink>
 
@@ -281,7 +281,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 和其他軟體一樣，以太坊產品也可能受到錯誤或入侵的威脅， 因此目前這個領域有許多保險產品將重點放在保護使用者不會損失資金上。 然而，若干專案開始涵蓋生活中可能遇到的各種大小意外保障。 Etherisc 的農作物保險就是個很好的例子，這項產品的目標在於[保護肯亞小農對抗乾旱及洪災](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)。 去中心化保險可以為買不起傳統保險的農民提供更實惠的保障。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看保險去中心化應用程式
 </ButtonLink>
 
@@ -291,7 +291,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 有了這麼多服務，你需要找個方法來追蹤所有投資、貸款和交易。 目前有許多產品可以幫助你集中協調所有去中心化金融活動。 這就是去中心化金融開放架構的魅力所在。 團隊可以建立介面供你檢視各產品的餘額並使用其功能。 深入探索去中心化金融之際，你會發現這種工具極為實用。
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   查看投資組合去中心化應用程式
 </ButtonLink>
 
@@ -323,7 +323,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 1. 區塊鏈：以太坊包含了交易記錄和帳戶狀態。
 2. 資產：[以太幣](/eth/)及其他代幣（貨幣）。
 3. 協定：提供功能的[智慧型合約](/glossary/#smart-contract)，例如實現去中心化資產借貸的服務。
-4. [應用程式](/dapps/)：我們用以管理及存取協定的產品。
+4. [應用程式](/apps/)：我們用以管理及存取協定的產品。
 
 注意：很多去中心化金融使用 [ERC-20 標準](/glossary/#erc-20)。 去中心化金融 (DeFi) 中的應用程式使用一種包裝的以太幣，稱爲包裝以太幣 (WETH)。 [了解更多關於包裝以太幣的資訊](/wrapped-eth)。
 

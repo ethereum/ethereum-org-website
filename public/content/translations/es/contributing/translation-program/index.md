@@ -20,7 +20,7 @@ El programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 4. No se aprobarán las traducciones automáticas.
 5. Todas las traducciones se corrigen antes de añadirlas al sitio web, por lo que habrá un breve retraso antes de que sus traducciones se publiquen.
 
-_Únase a [ethereum.org Discord](/discord/) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
+_Únase a [ethereum.org Discord](https://discord.gg/ethereum-org) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Empezar a traducir
@@ -36,9 +36,9 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 
 ### Nuestra evolución hasta la fecha {#our-progress}
 
-- [**6000+** traductores](/contributing/translation-program/contributors/)
-- **62** idiomas en vivo en el lugar
-- [**3 millones** de palabras traducidas en 2023](/contributing/translation-program/acknowledgements/)
+- [**más de 6.900** traductores](/contributing/translation-program/contributors/)
+- **68** idiomas localizados en el sitio web
+- [**2,89 millones** de palabras traducidas en 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -48,7 +48,7 @@ Miles de miembros de la comunidad traducen ethereum. org y ellos son la pieza cl
 
 #### Certificado {#certificate}
 
-Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de ethereum.org. [Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
+Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de ethereum.org. [ Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OAT {#oats}
 
@@ -56,11 +56,11 @@ Los colaboradores del Programa de Traducción son elegibles para diferentes OAT 
 
 #### Reconocimientos a los traductores {#translator-acknowledgements}
 
-Reconocimientos públicos a nuestros mejores traductores a través de las [Tablas de clasificacion](/contributing/translation-program/acknowledgements/) y una lista[de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
+Reconocimientos públicos a nuestros mejores traductores a través de las [ Tablas de clasificacion ](/contributing/translation-program/acknowledgements/) y una lista[ de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
 
 #### Recompensas {#rewards}
 
-En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [Devcon](https://devcon.org/en/) y [Devconnect](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
+En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [ Devcon ](https://devcon.org/en/) y [ Devconnect ](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
 
 Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores, ¡así que esté al tanto!
 

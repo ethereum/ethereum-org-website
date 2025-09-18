@@ -12,7 +12,7 @@ import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
-  // TODO: LOGOS
+  // TODO: LOGOS, extract intl strings
   const productListSets = {
     "ai-agents": [
       {
@@ -40,7 +40,7 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
             Luna engages with users constantly through own X account and live
             stream. You might receive an X reply if you tag her handle or a
             voice message if you comment on her stream and own her token! Luna
-            controls own on-chain wallet.
+            controls own onchain wallet.
           </p>,
           <div key="luna-button">
             <ButtonLink
@@ -89,8 +89,8 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         contentItems: [
           <p key="botto-description">
             Botto creates art and NFTs, with the community voting on its best
-            work. Users formed a DAO that guides Botto’s artistic evolution while also
-            earning token rewards for participation.
+            work. Users formed a DAO that guides Botto’s artistic evolution
+            while also earning token rewards for participation.
           </p>,
           <div key="botto-button">
             <ButtonLink

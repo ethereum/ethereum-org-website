@@ -106,7 +106,7 @@ Ačkoliv transakce obsahuje limit, palivo nevyužité během transakce se vrací
 
 Limit paliva označuje maximální množství paliva, které jste ochotni za transakci utratit. Složitější transakce zahrnující [chytré kontrakty](/developers/docs/smart-contracts/) potřebují více výpočetního výkonu, a proto vyžadují vyšší limit paliva než jednoduchá platba. Standardní převod ETH vyžaduje limit paliva 21 000 jednotek.
 
-Např. pokud nastavíte limit paliva na 50 000 pro jednoduchý převod ETH, EVM spotřebuje 21 000 a zbývajících 29 000 se vám vrátí. Pokud však nastavíte příliš nízký limit, např. 20 000 pro jednoduchý převod ETH, EVM spotřebuje vašich 20 000 jednotek paliva při pokusu o provedení transakce, ale nedokončí ji. EVM poté jakékoli změny smaže, ale protože validátor už udělal práci za 20 000 jednotek paliva, je toto palivo spotřebováno.
+Např. pokud nastavíte limit paliva na 50 000 pro jednoduchý převod ETH, EVM spotřebuje 21 000 a zbývajících 29 000 se vám vrátí. Pokud však zadáte příliš málo paliva, například limit paliva 20 000 pro jednoduchý převod ETH, transakce ve fázi validace selže. Bude odmítnuta před zařazením do bloku a nebude spotřebováno žádné palivo. Na druhou stranu, pokud transakci během provádění dojde palivo (např. chytrý kontrakt spotřebuje v polovině provádění veškeré palivo), EVM vrátí všechny změny, ale veškeré poskytnuté palivo bude stále spotřebováno na provedenou práci.
 
 ## Proč mohou být poplatky za palivo tak vysoké? {#why-can-gas-fees-get-so-high}
 
@@ -135,7 +135,7 @@ Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za 
 
 - [Vysvětlení paliva na Ethereu](https://defiprime.com/gas)
 - [Snížení spotřeby paliva ve vašich chytrých kontraktech](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Důkaz podílem versus důkaz prací](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategie optimalizace paliva pro vývojáře](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Dokumentace EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)
 - [Zdroje k EIP-1559 od Tima Beika](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559: Oddělování mechanismů od memů](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

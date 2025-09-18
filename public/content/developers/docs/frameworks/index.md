@@ -71,7 +71,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 **Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
 
 - [Website](https://tenderly.co/)
-- [Documentation](https://docs.tenderly.co/ethereum-development-practices)
+- [Documentation](https://docs.tenderly.co/)
 
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 

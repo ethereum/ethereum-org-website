@@ -55,7 +55,7 @@ Het vereist ook een zeer elementaire hardwareinstallatie en enig begrip van de a
 <ExpandableCard title="Veilig sleutelbeheer" eventCategory="SoloStaking" eventName="clicked secure key management">
 Net als de wijze waarop privé-sleutels je Ethereum-adres beveiligen, moet je specifieke sleutels genereren voor je validator. Je moet begrijpen hoe je alle zaadzinnen of privé-sleutels veilig kunt bewaren.{' '}
 
-<a href="/security/">Ethereum-beveiliging en scampreventie</a>
+[Ethereum-beveiliging en scampreventie](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Onderhoud" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Een <em>validator</em> is een virtuele entiteit die op Ethereum bestaat en deeln
 <ExpandableCard title="Kan ik meer dan 32 ETH storten?">
 Voor elk sleutelpaar gekoppeld aan een validator moet precies 32 ETH geactiveerd worden. Meer ETH gestort op een enkele set sleutels verhoogt het beloningspotentieel niet, aangezien elke validator is beperkt tot een <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effectief saldo</a> van 32 ETH. Dit betekent dat staking wordt uitgevoerd in 32 ETH-incrementen, elk met zijn eigen set sleutels en saldo.
 
-Stort niet meer dan 32 ETH voor één enkele validator. Het zal je beloningen niet verhogen. Als er een opnameadres is ingesteld voor de validator, zullen overtollige fondsen boven 32 ETH automatisch worden opgenomen op dit adres tijdens de volgende <a href="/staking/withdrawals/#validator-sweeping">validator-sweep</a>.
+Stort niet meer dan 32 ETH voor één enkele validator. Het zal je beloningen niet verhogen. Als er een opnameadres is ingesteld voor de validator, zullen overtollige fondsen boven 32 ETH automatisch worden opgenomen op dit adres tijdens de volgende [validator-sweep](/staking/withdrawals/#validator-sweeping).
 
-Als solo staking u te veeleisend lijkt, overweeg dan om een <a href="/staking/saas/">staking-as-a-service</a> provider te gebruiken, of als je met minder dan 32 ETH werkt, bekijk dan de <a href="/staking/pools/">staking pools</a>.
+Als solo staking u te veeleisend lijkt, overweeg dan om een [staking-as-a-service](/staking/saas/) provider te gebruiken, of als je met minder dan 32 ETH werkt, bekijk dan de [staking pools](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Word ik geslashed als ik offline ga? (tldr: Nee.)">
@@ -200,7 +200,6 @@ Om je volledige saldo te ontgrendelen en terug te krijgen, moet je ook het proce
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

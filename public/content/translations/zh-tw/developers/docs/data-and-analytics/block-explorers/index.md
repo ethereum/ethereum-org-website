@@ -13,24 +13,24 @@ sidebarDepth: 3
 
 ## 服務 {#services}
 
-- [Etherscan](https://etherscan.io/) -_ 也提供中文、韓文、俄文及日文版_
-- [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Etherscan](https://etherscan.io/) - 可以用來查詢以太坊主網和 Sepolia 測試網上的資料的區塊瀏覽器
+- [3xpl](https://3xpl.com/ethereum) - 無廣告、開源的以太坊區塊瀏覽器，允許下載自己的資料集
+- [Beaconcha.in](https://beaconcha.in/) - 開源的區塊瀏覽器，適用於以太坊主網和 Sepolia 測試網
 - [Blockchair](https://blockchair.com/ethereum) -_也提供西班牙文、法文、義大利文、荷蘭文、葡萄牙文、俄文、中文及波斯文版_
-- [Blockscout](https://eth.blockscout.com/)
+- [Blockscout](https://blockscout.com/) - 專注於以下網路：Gnosis、Optimism、ZKsync 等
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
-- [Etherchain](https://www.etherchain.org/)
+- [Etherchain](https://www.etherchain.org/) - 以太坊主網的區塊瀏覽器
 - [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_ 也提供中文、西班牙文、法文、土耳其文、俄文、韓文及越南文版_
+- [Ethplorer](https://ethplorer.io/) - 專注於代幣和以太坊主網及 Sepolia 網路的區塊瀏覽器
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
+- [Otterscan](https://otterscan.io/) - 開源的區塊瀏覽器替代品，專注於以太坊主網及 Sepolia 網路
 
 ## 開源工具 {#open-source-tools}
 
-- [Otterscan](https://otterscan.io/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## 數據資料 {#data}
@@ -238,12 +238,12 @@ sidebarDepth: 3
 
 ## 區塊瀏覽器 {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - 可用於擷取以太坊主網及 Goerli 測試網資料的區塊瀏覽器
+- [Etherscan](https://etherscan.io/) - 可用於擷取以太坊主網及 Sepolia 測試網資料的區塊瀏覽器
 - [3xpl](https://3xpl.com/ethereum) - 一個允許下載其資料集的無廣告開源以太坊瀏覽器
-- [Beaconcha.in](https://beaconcha.in/) -用於以太坊主網及 Goerli 測試網的開源區塊瀏覽器
-- \<0>Blockchair\</0> -- 最私密的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
+- [Beaconcha.in](https://beaconcha.in/) - 用於以太坊主網及 Sepolia 測試網的開源區塊瀏覽器
+- [Blockchair](https://blockchair.com/ethereum) - 最私密的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
 - [Etherchain](https://www.etherchain.org/) - 以太坊主網的區塊瀏覽器
-- [Ethplorer](https://ethplorer.io/) - 專為以太坊主網及 Kovan 測試網代幣打造的區塊瀏覽器
+- [Ethplorer](https://ethplorer.io/) - 專為以太坊主網及 Sepolia 測試網代幣打造的區塊瀏覽器
 - [Rantom](https://rantom.app/) - 方便使用的開源去中心化金融及非同質化代幣交易檢視器，可提供詳細的訊息
 - [Ethernow](https://www.ethernow.xyz/) - 即時交易瀏覽器，讓你能夠查看以太坊主網鏈前層
 

@@ -11,9 +11,9 @@ Chronologie de tous les jalons, fourches et mises à jour majeures de la blockch
 
 <ExpandableCard title="En quoi consistent les fourches ?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-Les forks existent lorsque des mises à jour ou des changements techniques majeurs doivent être effectués sur le réseau – ils proviennent généralement des <a href="/eips/">Propositions d'amélioration d'Ethereum (EIP)</a> et modifient les « règles » du protocole.
+Les forks existent lorsque des mises à jour ou des changements techniques majeurs doivent être effectués sur le réseau – ils proviennent généralement des [Propositions d'amélioration d'Ethereum (EIP)](/eips/) et modifient les « règles » du protocole.
 
-Lorsque des mises à niveau des logiciels traditionnels contrôlés centralement sont nécessaires, la société publie simplement une nouvelle version pour l'utilisateur final. Les blockchains fonctionnent différemment parce qu'il n'existe pas de propriété centralisée. <a href="/developers/docs/nodes-and-clients/">Les clients Ethereum</a> doivent mettre à jour leur logiciel pour implémenter les nouvelles règles de la fourche. En outre, les créateurs de blocs (les "mineurs" dans l'univers des preuves de travail, les "validateurs" dans celui des preuves d'enjeu) et les nœuds doivent créer des blocs et les valider conformément aux nouvelles règles. <a href="/developers/docs/consensus-mechanisms/">En savoir plus sur les mécanismes de consensus</a>
+Lorsque des mises à niveau des logiciels traditionnels contrôlés centralement sont nécessaires, la société publie simplement une nouvelle version pour l'utilisateur final. Les blockchains fonctionnent différemment parce qu'il n'existe pas de propriété centralisée. [Les clients Ethereum](/developers/docs/nodes-and-clients/) doivent mettre à jour leur logiciel pour implémenter les nouvelles règles de la fourche. En outre, les créateurs de blocs (les "mineurs" dans l'univers des preuves de travail, les "validateurs" dans celui des preuves d'enjeu) et les nœuds doivent créer des blocs et les valider conformément aux nouvelles règles. [En savoir plus sur les mécanismes de consensus](/developers/docs/consensus-mechanisms/)
 
 Ces changements de règles peuvent créer une scission temporaire dans le réseau. De nouveaux blocs peuvent être produits selon les nouvelles règles ou les anciennes. Les fourches font généralement l'objet d'un accord à l'avance afin que les clients adoptent les changements à l'unisson et que la fourche contenant les mises à niveau devienne la chaîne principale. Toutefois, dans de rares cas, les désaccords sur les forks peuvent causer une séparation permanente du réseau – plus particulièrement la création d'Ethereum Classic avec le <a href="#dao-fork">fork DAO</a>.
 
@@ -23,48 +23,100 @@ Ces changements de règles peuvent créer une scission temporaire dans le résea
 
 Le logiciel qui sous-tend Ethereum est composé de deux moitiés, connues sous le nom de [couche d'exécution](/glossary/#execution-layer) et de [couche de consensus](/glossary/#consensus-layer).
 
-**Nom des mises à jour de la couche d'exécution**
+**Nom des mises à niveau de la couche d'exécution**
 
-Depuis 2021, les mises à jour de la **couche d'exécution** sont nommées en fonction du nom de la ville où a eu lieu la [précédente conférence Devcon](https://devcon.org/en/past-events/). Par ordre chronologique :
+Depuis 2021, les mises à niveau de la **couche d'exécution** sont nommées selon les noms de villes ayant accueilli [les précédents Devcon](https://devcon.org/en/past-events/), dans l'ordre chronologique :
 
-| Nom | Année de la Devcon| Numéro de la Devcon | Date de mise à jour |
-| ------------ | ----------- | ------------- | ------------ |
-| Berlin       | 2015        | 0             | 15 Avril 2021 |
-| Londre       | 2016        | I             | 5 Août 2021  |
-| Shanghai     | 2017        | II            | 12 Avril 2023 |
-| **Cancun**   | 2018        | III           | 13 Mars 2024 |
-| _Prague_     | 2019        | IV            | À déterminer          |
-| _Osaka_      | 2020        | V             | À déterminer          |
-| _Bogota_     | 2022        | VI            | À déterminer          |
-| _Bangkok_    | 2024        | VII           | À déterminer          |
+| Nom de la mise à niveau | Année du Devcon | Numéro du Devcon | Date de mise à niveau |
+| ----------------------- | --------------- | ---------------- | --------------------- |
+| Berlin                 | 2014            | 0                | 15 avril 2021         |
+| Londres                 | 2015            | I                | 5 août 2021           |
+| Shanghai               | 2016            | II               | 12 avril 2023         |
+| Cancun                 | 2017            | III              | 13 mars 2024          |
+| **Prague**             | 2018            | IV               | À définir – Prochaine   |
+| _Osaka_                | 2019            | V                | À définir               |
+| _Bogota_               | 2022            | VI               | À définir                |
+| _Bangkok_              | 2024            | VII              | À définir                |
 
-**Nom des mises à jour de la couche de consensus**
+**Nom des mises à niveau de la couche de consensus**
 
-Depuis le lancement de la [chaîne phare](/glossary/#beacon-chain), les mises à jour de la **couche de consensus** sont nommées d'après des étoiles célestes commençant par des lettres qui se suivent dans l'ordre alphabétique :
+Depuis le lancement de la [chaîne phare](/glossary/#beacon-chain), les mises à niveau de la **couche de consensus** sont nommées d'après des étoiles célestes, en suivant l'ordre alphabétique :
 
-| Nom                                             | Date de mise à jour |
-| ----------------------------------------------------------- | ------------ |
-| Beacon Chain genesis                                        | Dec 1, 2020  |
-| [Altaïr](https://fr.wikipedia.org/wiki/Altaïr)              | Oct 27, 2021 |
-| [Bellatrix](https://fr.wikipedia.org/wiki/Gamma_Orionis)        | Sep 6, 2022  |
-| [Capella](https://fr.wikipedia.org/wiki/Capella_(étoile))            | Apr 12, 2023 |
-| [**Deneb**](https://fr.wikipedia.org/wiki/Deneb)            | Mar 13, 2024 |
-| [_Electra_](<https:>) | À déterminer           |
+| Nom de la mise à niveau                                      | Date de mise à niveau |
+| ------------------------------------------------------------ | ---------------------- |
+| Genèse de la Beacon Chain                                    | 1er décembre 2020      |
+| [Altair](https://fr.wikipedia.org/wiki/Altair)               | 27 octobre 2021        |
+| [Bellatrix](https://fr.wikipedia.org/wiki/Bellatrix)         | 6 septembre 2022       |
+| [Capella](https://fr.wikipedia.org/wiki/Capella)             | 12 avril 2023          |
+| [Deneb](https://fr.wikipedia.org/wiki/Deneb)                 | 13 mars 2024           |
+| [**Electra**](<https:>) | À définir - Prochaine|
+| [_Fulu_](<https:>)         | À déterminer           |
 
 **Dénomination combiné**
 
-Initialement, les mises à jour des couches d'exécution et de consensus n'étaient pas déployées simultanément. Mais après [La Fusion](/roadmap/merge/) réalisée en 2022,  elles ont été déployées simultanément. Ainsi, des termes familiers sont apparus pour simplifier les références à ces mises à niveau en utilisant un seul terme conjoint. Cela a commencé avec la mise à niveau _Shanghai-Capella_, communément appelée "**Shapella**", et se poursuit avec la mise à niveau _Cancun-Deneb_, qui peut être appelée "**Dencun**."
+Initialement, les mises à niveau des couches d'exécution et de consensus n'étaient pas déployées simultanément. Mais depuis [La Fusion](/roadmap/merge/) réalisée en 2022,  elles sont déployées simultanément. Ainsi, des termes familiers sont apparus pour simplifier les références à ces mises à niveau en utilisant un seul terme conjoint. Cela a commencé avec la mise à niveau _Shanghai-Capella_, communément appelée "**Shapella**", et se poursuit avec la mise à niveau _Cancun-Deneb_(**Dencun**), puis la mise à niveau Prague-Electra_ (**Pectra**).
 
-| Mise à niveau Exécution | Mise à niveau Consensus | Nom court |
+| Mise à niveau de l'exécution | Mise à niveau du consensus | Nom abrégé |
 | ----------------- | ----------------- | ---------- |
 | Shanghai          | Capella           | "Shapella" |
 | Cancun            | Deneb             | "Dencun"   |
+| Prague            | Electra           | "Pectra"   |
+| Osaka             | Fulu              | "Fusaka"   |
 
 </ExpandableCard>
 
 Passer directement à l'information sur certaines des mises à jour passées particulièrement importantes : [La Chaîne phare](/roadmap/beacon-chain/); [La Fusion](/roadmap/merge/); et [EIP-1559](#london)
 
 Vous cherchez les prochaines mises à jour de protocole ? [Découvrez les mises à jour à venir sur la feuille de route Ethereum](/roadmap/).
+
+<Divider />
+
+## 2025 {#2025}
+
+### Prague-Electra ("Pectra") {#pectra}
+
+<NetworkUpgradeSummary name="pectra" />
+
+La mise à jour Prague-Electra (« Pectra ») a introduit plusieurs améliorations du protocole Ethereum destinés à améliorer l’expérience pour tous les utilisateurs, les réseaux de couche 2, les validateurs (stakers) et les opérateurs de nœuds.
+
+La mise en jeu a été améliorée grâce à l’introduction de comptes de capitalisation de validateurs et à un meilleur contrôle des fonds mis en jeu via l’adresse de retrait d’exécution. L'EIP-7251 a augmenté le solde effectif maximal pour un validateur unique à 2048 ETH, améliorant ainsi l'efficacité du capital pour les validateurs. L'EIP-7002 a permis à un compte d'exécution de déclencher en toute sécurité des actions de validation, comme la sortie ou le retrait partiel des fonds, améliorant l’expérience des validateurs d'ETH tout en renforçant la responsabilité des opérateurs de nœuds.
+
+D'autres aspects de la mise à jour avaient pour objectif d'améliorer l'expérience des utilisateurs réguliers. L’EIP-7702 a introduit la possibilité pour un compte classique ne disposant pas de contrat intelligent ([EOA](/glossary/#eoa)) d’exécuter du code de manière similaire à un contrat intelligent. Cela a débloqué une multitude de nouvelles fonctionnalités pour les comptes Ethereum traditionnels, telles que le regroupement de transactions, le parrainage des frais de gaz, l’authentification alternative, le contrôle programmable des dépenses, des mécanismes de récupération de compte, et bien plus encore.
+
+<ExpandableCard title="EIP de Pectra" contentPreview="Official improvements included in this upgrade.">
+
+Meilleure expérience utilisateur :
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Définir le code du compte EOA</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Augmentation du débit des blobs</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Augmenter le coût du calldata</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Ajouter un programme de blobs aux fichiers de configuration de la couche d'exécution (EL)</em></li>
+</ul>
+
+Meilleure expérience de mise en jeu :
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Augmenter le <code>MAX_EFFECTIVE_BALANCE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Sorties déclenchables au niveau de la couche d'exécution</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> : <em>Demandes de couche d'exécution générales</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Fournir les dépôts de validateurs sur la blockchain</em></li>
+</ul>
+
+Améliorations de l'efficacité et de la sécurité du protocole :
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Précompilation pour les opérations sur la courbe BLS12-381</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Enregistrer les hachages des blocs historiques dans l'état</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> : <em>Déplacer l'index du comité en dehors de l'Attestation</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Pectra.wtf](https://pectra.wtf)
+- [Comment Pectra améliorera l'expérience de mise en jeu](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [Lire les spécifications de la mise à niveau Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [FAQ Prague-Electra ("Pectra")](/roadmap/pectra/)
 
 <Divider />
 
@@ -102,7 +154,7 @@ Cela inclut notamment EIP-4844, connu comme **Proto-Danksharding**, qui réduit 
 
 La mise à niveau Deneb contient un ensemble d'améliorations du _consensus_ d'Ethereum visant à améliorer l'évolutivité. Cette mise à niveau s'accompagne des mises à niveau d'exécution de Cancun pour activer le Proto-Danksharding (EIP-4844), ainsi que d'autres améliorations de la Chaîne phare.
 
-Les "messages de sortie volontaire" n'expirent plus, donnant ainsi plus de contrôle aux utilisateurs mettant en jeu leurs fonds auprès d'un opérateur de nœud tiers. Avec ce message de sortie signé, les validateurs peuvent déléguer les opérations de noeud tout en maintenant leur capacité de retirer en toute sécurité et à tout moment leurs fonds, sans avoir à demander la permission à quiconque.
+Les "messages de sortie volontaire" n'expirent plus, donnant ainsi plus de contrôle aux utilisateurs mettant en jeu leurs fonds auprès d'un opérateur de nœud tiers. Avec ce message de sortie signé, les validateurs peuvent déléguer les opérations de noeud tout en maintenant leur capacité de se retirer en toute sécurité et de retirer leurs fonds à tout moment, sans avoir à demander la permission à quiconque.
 
 EIP-7514 apporte une restriction de la distribution d'ETH en limitant le taux de "churn", afin que les validateurs rejoignent le réseau par groupe de huit (8) maximum pour chaque période. Dans la mesure où la distribution de l'ETH est proportionnelle à la totalité des ETH mis en jeu, limiter le nombre de validateurs bloque la _croissance_ d'ETH nouvellement distribués, tout en réduisant les besoins en matériel informatique pour les opérateurs de noeud, aidant ainsi la décentralisation.
 
@@ -397,10 +449,10 @@ La fourche Istanbul a :
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>permet à Ethereum de travailler avec une devise préservant la vie privée comme Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cryptographie à bas coût pour l'optimisation <a href="/glossary/#gas">des coûts</a> de gas.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protège Ethereum contre les attaques replay en ajoutant le code d'opération <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine"></a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cryptographie à bas coût pour l'optimisation [des coûts](/glossary/#gas) de gas.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protège Ethereum contre les attaques replay en ajoutant le code d'opération <code>CHAINID</code> [](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>l'optimisation des prix du gaz opcode basée sur la consommation.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>réduit le coût de CallData pour permettre plus de données en blocs – bon pour <a href="/developers/docs/scaling/#layer-2-scaling">la mise à l'échelle de la couche 2</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>réduit le coût de CallData pour permettre plus de données en blocs – bon pour [la mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>autres modifications du prix du gaz opcode.</em></li>
 </ul>
 
@@ -426,7 +478,7 @@ La fourche Constantinople a :
 <ExpandableCard title="Les EIP de Constantinople" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>Optimise le coût de certaines actions en chaîne.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>Optimise le coût de certaines actions sur la chaîne.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>vous permet d'interagir avec des adresses qui n'ont pas encore été créées.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduit l'instruction <code>EXTCODEHASH</code> pour récupérer le hachage du code d'un autre contrat.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>s'assure que la blockchain ne gèle pas &#39;avant la preuve d'enjeu et réduit les récompenses de 3 à 2 ETH par bloc.</em></li>
@@ -458,13 +510,13 @@ La fourche Byzantium a :
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>ajoute le code d'opération <code>REVERT</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>intègre la courbe elliptique ainsi que les algorithmes de multiplication scalaire, qui permettent d'utiliser <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>intègre la courbe elliptique ainsi que les algorithmes de multiplication scalaire, qui permettent d'utiliser <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>intègre la courbe elliptique ainsi que les algorithmes de multiplication scalaire, qui permettent d'utiliser [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>intègre la courbe elliptique ainsi que les algorithmes de multiplication scalaire, qui permettent d'utiliser [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>permet la vérification de la signature RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>intègre le support pour les valeurs retournées de longueur variable.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">L'EIP-214</a> – <em>intègre le code d'opération <code>STATICCALL</code>, ce qui permettra aux autres contrats de ne pas changer l'état des Calls.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>change la formule d'ajustement de difficulté.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>retarde <a href="/glossary/#difficulty-bomb">la bombe de difficulté</a> de 1 an et réduit la récompense de bloc de 5 à 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>retarde [la bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense de bloc de 5 à 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

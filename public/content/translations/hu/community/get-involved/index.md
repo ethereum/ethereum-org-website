@@ -1,6 +1,6 @@
 ---
 title: Hogyan lehet részt venni?
-description: Hogyan lehet bekapcsolódni az Ethereum közösségébe.
+description: Hogyan kapcsolódhat be az Ethereum közösségébe?
 lang: hu
 ---
 
@@ -114,7 +114,6 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
 - [Ethereum-álláslehetőségek](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Csatlakozzon egy DAO-hoz {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ A DAO-k decentralizált autonóm szervezetek. Ezek az Ethereum technológiára �
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _egy szabadúszó web3-fejlesztői csapat, amely DAO-ként működik_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _A DAOhaus közösségi irányítása_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Jogi szerepkörök_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Művészeti közösség_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _kockázati tőke a korai fázisban lévő kriptoprojektek számára_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG játékmechanika a való élethez_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digifizikális ruházati márkák_

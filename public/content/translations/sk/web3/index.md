@@ -139,7 +139,7 @@ Sme ešte len na začiatku vytvárania lepšieho webu pomocou Web3, ale vďaka n
 
 - [Získať peňaženku](/wallets/)
 - [Nájdite komunitu](/community/)
-- [Preskúmajte Web3 aplikácie](/dapps/)
+- [Preskúmajte Web3 aplikácie](/apps/)
 - [Join a DAO](/dao/)
 - [Budujte na Web3](/developers/)
 
@@ -147,11 +147,11 @@ Sme ešte len na začiatku vytvárania lepšieho webu pomocou Web3, ale vďaka n
 
 Web3 nie je pevne definovaný. Rôzni účastníci komunity majú na definíciu Web3 rôzne pohľady. Tu je niekoľko z nich:
 
-- [Čo je Web3? Vysvetlenie decentralizovaného internetu budúcnosti](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Čo je Web3? Vysvetlenie decentralizovaného internetu budúcnosti](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Pochopenie Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Prečo na Web3 záleží](https://future.a16z.com/why-web3-matters/) – _Chris Dixon_
 - [Prečo na decentralizácii záleží](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [Web3 ekosystém](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Diskusia o Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Diskusia o Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />
