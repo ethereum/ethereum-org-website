@@ -15,13 +15,14 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import DifferencesTable from "./_components/DifferencesTable"
+import EthereumVsBitcoinPageJsonLD from "./page-jsonld"
 
 import enterpriseEthImg from "@/public/images/enterprise-eth.png"
 import ethdotorgLogoImg from "@/public/images/eth-org-logo.png"
 import heroImg from "@/public/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png"
 import hackathonImg from "@/public/images/hackathon_transparent.png"
 import guidesHubHeroImg from "@/public/images/heroes/guides-hub-hero.jpg"
-import layer2HeroImg from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import layer2HeroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -78,6 +79,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <>
+      <EthereumVsBitcoinPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
+
       <ContentHero {...heroProps} />
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <div
@@ -92,8 +99,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div className="row-start-1 lg:col-start-2 lg:row-span-2">
-          <TableOfContents variant="beginner" items={tocItems} isMobile />
-          <TableOfContents variant="beginner" items={tocItems} />
+          <TableOfContents variant="card" items={tocItems} isMobile />
+          <TableOfContents variant="card" items={tocItems} />
         </div>
 
         <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">
