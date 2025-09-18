@@ -18,6 +18,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
+import WhatIsTheEthereumNetworkPageJsonLD from "./page-jsonld"
+
 import developersHubImg from "@/public/images/heroes/developers-hub-hero.png"
 import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.png"
 import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
@@ -82,7 +84,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <>
+      <WhatIsTheEthereumNetworkPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
       <ContentHero {...heroProps} />
+
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <div
           data-label="extras"
