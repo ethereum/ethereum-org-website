@@ -30,7 +30,7 @@ export class FindWalletPage extends BasePage {
     this.mobileFiltersSubmitButton = page.getByTestId(
       "mobile-filters-submit-button"
     )
-    this.walletRows = page.getByTestId("wallet-list").locator("div")
+    this.walletRows = page.getByTestId("wallet-list").locator(":scope > div")
     this.rowCounter = page.getByText(/Showing all wallets \(\d+\)/i)
   }
 
@@ -75,7 +75,14 @@ export class FindWalletPage extends BasePage {
    * Get the current number of visible wallet rows
    */
   async getVisibleWalletCount() {
-    return await this.walletRows.count()
+    const counterText = await this.rowCounter.textContent()
+    const match = counterText?.match(/\((\d+)\)/)
+    if (!match) {
+      throw new Error(
+        `Could not extract count from row counter: ${counterText}`
+      )
+    }
+    return parseInt(match[1], 10)
   }
 
   /**
@@ -187,7 +194,7 @@ export class FindWalletPage extends BasePage {
    * Verify filtered results contain expected OS options
    */
   async verifyFilteredResults(osOptions: string[]) {
-    const rowCount = await this.getVisibleWalletCount()
+    const rowCount = await this.walletRows.count()
 
     for (let i = 0; i < rowCount; i++) {
       const row = this.walletRows.nth(i)
