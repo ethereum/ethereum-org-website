@@ -95,6 +95,6 @@ _ما همچنین در حال بررسی گزینه‌های رأی‌گیری 
 
 اگر می خواهید یک برنامه غیرمتمرکز به ethereum.org اضافه کنید که معیارها را رعایت می کند، در وبسایت GitHub یک مسئله ایجاد کنید.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://submitapp.paperform.co/">
   یک مسئله ایجاد کنید
 </ButtonLink>

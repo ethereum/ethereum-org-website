@@ -26,7 +26,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 Using providers, these libraries allow you to connect to Ethereum and read its data, whether that's over JSON-RPC, INFURA, Etherscan, Alchemy or MetaMask.
 
-> **Warning:** Web3.js was archived on March 4, 2025. [Read the announcement](https://blog.chainsafe.io/web3-js-sunset/). Consider using alternative libraries like ethers.js or viem for new projects.
+> **Warning:** Web3.js was archived on March 4, 2025. [Read the announcement](https://blog.chainsafe.io/web3-js-sunset/). Consider using alternative libraries like [ethers.js](https://ethers.org) or [viem](https://viem.sh) for new projects.
 
 **Ethers example**
 
@@ -166,7 +166,7 @@ contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
 
-    function Test(uint testInt)  { a = testInt;}
+    constructor(uint testInt)  { a = testInt;}
 
     event Event(uint indexed b, bytes32 c);
 
@@ -235,47 +235,43 @@ ethers.utils.formatEther(balance)
 ```
 
 - [Web3js utility functions](https://docs.web3js.org/api/web3-utils)
-- [Ethers utility functions](https://docs.ethers.io/v5/api/utils/)
+- [Ethers utility functions](https://docs.ethers.org/v6/api/utils/)
 
 ## Available libraries {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
-- [Documentation](https://docs.web3js.org/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [Documentation](https://docs.web3js.org)
+- [GitHub](https://github.com/ethereum/web3.js)
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
-- [Documentation](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [Ethers.js home](https://ethers.org/)
+- [Documentation](https://docs.ethers.io)
+- [GitHub](https://github.com/ethers-io/ethers.js)
 
 **The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
 
-- [The Graph](https://thegraph.com/)
-- [Graph Explorer](https://thegraph.com/explorer/)
-- [Documentation](https://thegraph.com/docs/)
-- [GitHub](https://github.com/graphprotocol/)
+- [The Graph](https://thegraph.com)
+- [Graph Explorer](https://thegraph.com/explorer)
+- [Documentation](https://thegraph.com/docs)
+- [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_A high-level reactive JS library optimized for light clients._**
+**Alchemy SDK -** **_Wrapper around Ethers.js with enhanced apis._**
 
-- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
-
-
-**Alchemyweb3 -** **_Wrapper around Web3.js with automatic retries and enhanced apis._**
-
-- [Documentation](https://docs.alchemy.com/reference/api-overview)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
-
-**Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**
-
-- [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+- [Documentation](https://www.alchemy.com/docs)
+- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
 **viem -** **_TypeScript Interface for Ethereum._**
 
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**Drift -** **_TypeScript meta-library with built-in caching, hooks, and test mocks._**
+
+- [Documentation](https://ryangoree.github.io/drift/)
+- [GitHub](https://github.com/ryangoree/drift/)
 
 ## Further reading {#further-reading}
 

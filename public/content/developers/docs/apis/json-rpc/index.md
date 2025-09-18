@@ -651,7 +651,7 @@ Calculating the correct position depends on the storage to retrieve. Consider th
 contract Storage {
     uint pos0;
     mapping(address => uint) pos1;
-    function Storage() {
+    constructor() {
         pos0 = 1234;
         pos1[msg.sender] = 5678;
     }

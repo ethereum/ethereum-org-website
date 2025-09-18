@@ -71,6 +71,6 @@ Instead of building a custom authentication system or relying on centralized pro
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-- [Composability is Innovation](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)
+- [Composability is Innovation](https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/)
 - [Why Composability Matters For Web3](https://hackernoon.com/why-composability-matters-for-web3)
 - [What is Composability?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)
