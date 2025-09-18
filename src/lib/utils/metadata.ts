@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
+import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -10,11 +11,12 @@ import { routing } from "@/i18n/routing"
  * List of default og images for different sections
  */
 const imageForSlug = [
-  { section: "developers", image: "/images/heroes/developers-hub-hero.jpg" },
+  { section: "developers", image: "/images/heroes/developers-hub-hero.png" },
   { section: "roadmap", image: "/images/heroes/roadmap-hub-hero.jpg" },
   { section: "guides", image: "/images/heroes/guides-hub-hero.jpg" },
   { section: "community", image: "/images/heroes/community-hero.png" },
   { section: "staking", image: "/images/upgrades/upgrade_rhino.png" },
+  { section: "10years", image: "/images/10-year-anniversary/10-year-og.png" },
 ] as const
 
 /**
@@ -71,10 +73,9 @@ export const getMetadata = async ({
       languages: {
         "x-default": xDefault,
         ...Object.fromEntries(
-          routing.locales.map((locale) => [
-            locale,
-            getFullUrl(locale, slugString),
-          ])
+          routing.locales
+            .filter(isLocaleValidISO639_1)
+            .map((locale) => [locale, getFullUrl(locale, slugString)])
         ),
       },
     },

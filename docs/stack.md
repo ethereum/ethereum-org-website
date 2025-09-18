@@ -1,13 +1,13 @@
 # The ethereum.org website stack
 
 - [Node.js](https://nodejs.org/)
-- [Yarn package manager](https://yarnpkg.com/cli/install)
+- [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 - [NextJS](https://nextjs.org/)
   - React framework that provides some goodies out of the box (pages router, SSG, SSR, i18n support, Image component, etc)
   - Configurable in `next.config.js`
   - [NextJS Tutorial](https://nextjs.org/learn)
   - [NextJS Docs](https://nextjs.org/docs)
-- [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
+- [React](https://react.dev/) - A JavaScript library for building component-based user interfaces
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
 - [Chakra UI](https://chakra-ui.com/) - A UI library (Migration in progress)
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./site-search.md).
@@ -25,7 +25,7 @@
 | `/src`                                 | Main source folder for development.                                                                                                                                                                                                                                   |
 | `/public/assets`                       | Image assets.                                                                                                                                                                                                                                                         |
 | `/src/components`                      | React components that do not function as standalone pages.                                                                                                                                                                                                            |
-| `/public/content`                      | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `public/content/about/index.md` <br>The markdown files are parsed by `[...slug].tsx` and rendered using the proper layout in `ContentPage.getLayout` method. |
+| `/public/content`                      | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/about/` is built from `public/content/about/index.md` <br>The markdown files are parsed by `[...slug].tsx` and rendered using the proper layout in `ContentPage.getLayout` method. |
 | `/public/content/developers/docs`      | \*Markdown files in here use the Docs layout: `src/layouts/Docs.tsx`                                                                                                                                                                                                  |
 | `/public/content/developers/tutorials` | \*Markdown files in here use the Tutorial layout: `src/layouts/Tutorial.tsx`                                                                                                                                                                                          |
 | `/src/data`                            | General data files importable by components.                                                                                                                                                                                                                          |

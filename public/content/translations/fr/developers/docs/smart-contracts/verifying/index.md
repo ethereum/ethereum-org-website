@@ -72,11 +72,11 @@ Le processus traditionnel de vérification des contrats peut être complexe. C'e
 
 Bien que principalement connu comme un [explorateur de la blockchain Ethereum](/developers/docs/data-and-analytics/block-explorers/), Etherscan propose également un [service de vérification de source code](https://etherscan.io/verifyContract) pour les développeurs et les utilisateurs de contrats intelligents.
 
-Etherscan vous permet de recompiler le bytecode du contrat à partir de la charge utile des données originales (code source, adresse de la bibliothèque, paramètres du compilateur, adresse du contrat, etc.) Si le bytecode recompilé est identifié comme étant identique au bytecode (et les paramètres du constructeur) du contrat en chaîne, alors [le contrat est vérifié](https://info.etherscan.com/types-of-contract-verification/).
+Etherscan vous permet de recompiler le bytecode du contrat à partir de la charge utile des données originales (code source, adresse de la bibliothèque, paramètres du compilateur, adresse du contrat, etc.) Si le bytecode recompilé est identifié comme étant identique au bytecode (et aux paramètres du constructeur) du contrat en chaîne, alors [le contrat est vérifié](https://info.etherscan.com/types-of-contract-verification/).
 
 Une fois vérifié, le code source de votre contrat reçoit un label « vérifié » et est publié sur Etherscan pour que d'autres puissent l'auditer. Il est également ajouté à la section [Contrats vérifiés](https://etherscan.io/contractsVerified/) - un répertoire de contrats intelligents dont les codes sources ont été vérifiés.
 
-Etherscan est l'outil le plus utilisé pour vérifier les contrats. Cependant, la vérification de contrat d'Etherscan présente un inconvénient : elle ne parvient pas à comparer le **hachage de métadonnées** du bytecode on-chain et du bytecode recompilé. Par conséquent, les correspondances Etherscan sont des correspondances partielles.
+Etherscan est l'outil le plus utilisé pour vérifier les contrats. Cependant, la vérification de contrat d'Etherscan présente un inconvénient : elle ne parvient pas à comparer le **hachage de métadonnées** du bytecode en chaîne et du bytecode recompilé. Par conséquent, les correspondances Etherscan sont des correspondances partielles.
 
 [Plus d'informations sur la vérification des contrats sur Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 

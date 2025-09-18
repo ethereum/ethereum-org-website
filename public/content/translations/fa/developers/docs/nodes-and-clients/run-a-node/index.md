@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### سخت‌افزار {#hardware}
 
-با این حال، یک شبکه‌ی غیرمتمرکز و مقاوم در برابر سانسور نباید بر ارائه‌دهندگان ابری متکی باشد. در عوض، اجرای گره تان بر روی سخت‌افزار محلی خودتان برای اکوسیستم سالم تر است. [تخمین‌ها](https://www.ethernodes.org/networkType/Hosting) سهم بزرگی از گره‌های اجرا شده روی ابر را نشان می‌دهد که می‌تواند به یک نقطه شکست تبدیل شود.
+با این حال، یک شبکه‌ی غیرمتمرکز و مقاوم در برابر سانسور نباید بر ارائه‌دهندگان ابری متکی باشد. در عوض، اجرای گره تان بر روی سخت‌افزار محلی خودتان برای اکوسیستم سالم تر است. [تخمین‌ها](https://www.ethernodes.org/network-types) سهم بزرگی از گره‌های اجرا شده روی ابر را نشان می‌دهد که می‌تواند به یک نقطه شکست تبدیل شود.
 
 کلاینت های اتریوم می توانند بر روی کامپیوتر، لپ تاپ، سرور یا حتی یک کامپیوتر تک برد شما اجرا شوند. در حالی که اجرای کلاینت ها بر روی رایانه شخصی شما امکان‌پذیر است، داشتن یک ماشین اختصاصی فقط برای گره می تواند عملکرد و امنیت آن را به میزان قابل توجهی افزایش دهد و در عین حال تأثیر آن را بر روی رایانه اصلی شما به حداقل برساند.
 
@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### کلاینت‌های اجماع
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (یک باینری از پیش ساخته شده ارائه نمی دهد، فقط یک تصویر داکر یا باید از منبع ساخته شود)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (یک باینری از پیش ساخته شده ارائه نمی دهد، فقط یک تصویر داکر یا باید از منبع ساخته شود)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu همچنین دارای یک گزینه لانچر است که یک سری 
 besu --Xlauncher
 ```
 
-[اسناد Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) حاوی گزینه‌های اضافی و جزئیات پیکربندی است.
+[اسناد Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) حاوی گزینه‌های اضافی و جزئیات پیکربندی است.
 
 ##### اجرای Erigon
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### اجرای Nethermind
 
-Nethermind [گزینه های نصب](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) مختلفی را ارائه می دهد. این بسته با باینری‌های مختلف، از جمله یک لانچر با راه‌اندازی هدایت‌شده ارائه می‌شود که به شما در ایجاد پیکربندی به صورت تعاملی کمک می‌کند. از طرف دیگر، Runner را پیدا می‌کنید که خود فایل اجرایی است و فقط می‌توانید آن را با پرچم‌های پیکربندی اجرا کنید. JSON-RPC به‌صورت پیش‌فرض فعال است.
+Nethermind [گزینه های نصب](https://docs.nethermind.io/get-started/installing-nethermind) مختلفی را ارائه می دهد. این بسته با باینری‌های مختلف، از جمله یک لانچر با راه‌اندازی هدایت‌شده ارائه می‌شود که به شما در ایجاد پیکربندی به صورت تعاملی کمک می‌کند. از طرف دیگر، Runner را پیدا می‌کنید که خود فایل اجرایی است و فقط می‌توانید آن را با پرچم‌های پیکربندی اجرا کنید. JSON-RPC به‌صورت پیش‌فرض فعال است.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-اسناد Nethermind یک [راهنمای کامل](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) در مورد اجرای Nethermind با کلاینت اجماع ارائه می دهد.
+اسناد Nethermind یک [راهنمای کامل](https://docs.nethermind.io/get-started/running-node/) در مورد اجرای Nethermind با کلاینت اجماع ارائه می دهد.
 
 یک کلاینت اجرا، توابع اصلی، نقاط پایانی انتخابی خود را آغاز می کند و شروع به جستجوی همتا می کند. پس از یافتن موفق همتایان، کلاینت شروع به همگام‌سازی می‌کند. کلاینت اجرا منتظر اتصال از سمت کلاینت اجماع خواهد بود. داده‌های کنونی زنجیره‌ی بلوکی زمانی آماده خواهد بود که کلاینت به‌طور موفقیت‌آمیز با وضعیت فعلی همگام‌سازی کرده باشد.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### اجرای Prysm
 
-Prysm همراه با اسکریپت است که امکان نصب خودکار آسان را فراهم می کند. جزئیات را می توان در [اسناد Prysm](https://docs.prylabs.network/docs/install/install-with-script) پیدا کرد.
+Prysm همراه با اسکریپت است که امکان نصب خودکار آسان را فراهم می کند. جزئیات را می توان در [اسناد Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) پیدا کرد.
 
 ```sh
 ./prysm.sh beacon-chain \

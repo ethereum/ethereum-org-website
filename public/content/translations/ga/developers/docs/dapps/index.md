@@ -82,7 +82,7 @@ Is éard atá i gconradh cliste ná cód a chónaíonn ar bhlocshlabhra Ethereum
 
 ## Tuilleadh léitheoireachta {#further-reading}
 
-- [Foghlaim faoi dhaipeanna](/dapps)
+- [Foghlaim faoi dhaipeanna](/apps)
 - [Ailtireacht feidhmchlár Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Treoir 2021 maidir le feidhmchláir dhíláraithe](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _ Slabhra Aoil_
 - [Cad is Aipeanna Díláraithe ann?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_

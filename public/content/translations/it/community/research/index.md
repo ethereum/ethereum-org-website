@@ -224,7 +224,7 @@ La ricerca economica in Ethereum segue in linea di massima due approcci: convali
 
 #### Letture di base {#background-reading-9}
 
-- [Gruppo d'incentivi robusti](https://ethereum.github.io/rig/)
+- [Gruppo d'incentivi robusti](https://rig.ethereum.org/)
 - [Workshop di ETHconomics a Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Ricerca recente {#recent-research-9}
@@ -307,7 +307,7 @@ C'è necessità di un maggior numero di strumenti di analisi dei dati e di panne
 
 #### Ricerca recente {#recent-research-14}
 
-- [Analisi dei dati del gruppo d'incentivi robusti](https://ethereum.github.io/rig/)
+- [Analisi dei dati del gruppo d'incentivi robusti](https://rig.ethereum.org/)
 
 ## Applicazioni e strumenti {#apps-and-tooling}
 

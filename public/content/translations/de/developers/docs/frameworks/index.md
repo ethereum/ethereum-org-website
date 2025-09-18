@@ -63,7 +63,7 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 **Tenderly –** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die dApp-Nutzererfahrung zu verbessern._**
 
 - [Website](https://tenderly.co/)
-- [Dokumentation](https://docs.tenderly.co/ethereum-development-practices)
+- [Dokumentation](https://docs.tenderly.co/)
 
 **The Graph –** **_The Graph für die effiziente Abfrage von Blockchain-Daten._**
 

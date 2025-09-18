@@ -135,8 +135,7 @@ Más mian leat monatóireacht a dhéanamh ar phraghsanna gáis, ionas gur féidi
 
 - [Gás Ethereum Mínithe](https://defiprime.com/gas)
 - [Ídiú gáis do Chonarthaí Cliste a laghdú](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Cruthúnas Geallta in aghaidh Cruthúnas Oibre](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Straitéisí Optamaithe Gáis d'Fhorbróirí](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 doiciméad](https://eips.ethereum.org/EIPS/eip-1559).
 - [Acmhainní EIP-1559 Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Separating Mechanisms From Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Separating Mechanisms From Memes](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

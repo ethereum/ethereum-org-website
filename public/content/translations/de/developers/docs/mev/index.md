@@ -12,7 +12,7 @@ Dieses Konzept wurde erstmals im Rahmen des [Arbeitsnachweis](/developers/docs/c
 
 ## Voraussetzungen {#prerequisites}
 
-Stellen Sie sicher, dass Sie mit [Transaktionen](/developers/docs/transactions/), [Blöcken](/developers/docs/blocks/), [Gas](/developers/docs/gas/) und [Mining](/developers/docs/consensus-mechanisms/pow/mining/) vertraut sind. Eine Vertrautheit mit [dApps](/dapps/) und [DeFi](/defi/) ist ebenfalls hilfreich.
+Stellen Sie sicher, dass Sie mit [Transaktionen](/developers/docs/transactions/), [Blöcken](/developers/docs/blocks/), [Gas](/developers/docs/gas/) und [Mining](/developers/docs/consensus-mechanisms/pow/mining/) vertraut sind. Eine Vertrautheit mit [dApps](/apps/) und [DeFi](/defi/) ist ebenfalls hilfreich.
 
 ## MEV-Extrahierung {#mev-extraction}
 
@@ -117,7 +117,6 @@ Mit dem Wachstum und der zunehmenden Beliebtheit von DeFi könnte MEV schon bald
 ## Zugehörige Ressourcen {#related-resources}
 
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dashboard und Live-Transaktions-Explorer für MEV-Transaktionen_
 
 ## Weiterführende Informationen {#further-reading}
 

@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Wenn Sie Teil eines <a href="/staking/pools/">Staking-Pools</a> sind oder Staking-Token besitzen, sollten Sie sich bei Ihrem Anbieter erkundigen, wie Staking-Auszahlungen gehandhabt werden, da jeder Dienst anders funktioniert.
+Wenn Sie Teil eines [Staking-Pools](/staking/pools/) sind oder Staking-Token besitzen, sollten Sie sich bei Ihrem Anbieter erkundigen, wie Staking-Auszahlungen gehandhabt werden, da jeder Dienst anders funktioniert.
 
-Im Allgemeinen sollten Benutzer in der Lage sein, ihr zugrundeliegendes gestaktes ETH zurückzufordern oder zu ändern, welchen Staking-Anbieter sie nutzen. Wenn ein bestimmter Pool zu groß wird, können Mittel abgezogen, eingelöst und mit einem <a href="https://rated.network/">kleineren Anbieter</a> neu gestaked werden. Oder, wenn Sie genug ETH angesammelt haben, könnten Sie <a href="/staking/solo/">von zu Hause aus staken</a>.
+Im Allgemeinen sollten Benutzer in der Lage sein, ihr zugrundeliegendes gestaktes ETH zurückzufordern oder zu ändern, welchen Staking-Anbieter sie nutzen. Wenn ein bestimmter Pool zu groß wird, können Mittel abgezogen, eingelöst und mit einem <a href="https://rated.network/">kleineren Anbieter</a> neu gestaked werden. Oder, wenn Sie genug ETH angesammelt haben, könnten Sie [von zu Hause aus staken](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben 
 
 - [Startplattform für Staking-Auszahlungen](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-Kette implementiert Abhebungen als Operationen](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Auszahlung von gestaktem ETH (Testing) mit Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Auszahlungen per Beacon Chain Push als Operationen mit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Verständnis der effektiven Bilanz des Validators](https://www.attestant.io/posts/understanding-validator-effective-balance/)
