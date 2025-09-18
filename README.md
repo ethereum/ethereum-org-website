@@ -2076,6 +2076,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/fredrik0x"><img src="https://avatars.githubusercontent.com/u/84518844?v=4?s=100" width="100px;" alt="Fredrik"/><br /><sub><b>Fredrik</b></sub></a><br /><a href="#maintenance-fredrik0x" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/wdpatti"><img src="https://avatars.githubusercontent.com/u/79338554?v=4?s=100" width="100px;" alt="Will Patti"/><br /><sub><b>Will Patti</b></sub></a><br /><a href="#tool-wdpatti" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://hackertron.github.io/"><img src="https://avatars.githubusercontent.com/u/7667514?v=4?s=100" width="100px;" alt="jayssj11"/><br /><sub><b>jayssj11</b></sub></a><br /><a href="#tool-hackertron" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
