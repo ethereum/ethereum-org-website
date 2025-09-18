@@ -2078,6 +2078,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/wdpatti"><img src="https://avatars.githubusercontent.com/u/79338554?v=4?s=100" width="100px;" alt="Will Patti"/><br /><sub><b>Will Patti</b></sub></a><br /><a href="#tool-wdpatti" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://hackertron.github.io/"><img src="https://avatars.githubusercontent.com/u/7667514?v=4?s=100" width="100px;" alt="jayssj11"/><br /><sub><b>jayssj11</b></sub></a><br /><a href="#tool-hackertron" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://leomofthings.com"><img src="https://avatars.githubusercontent.com/u/36636824?v=4?s=100" width="100px;" alt="Ayodele Aransiola"/><br /><sub><b>Ayodele Aransiola</b></sub></a><br /><a href="#content-CodeLeom" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/indmind"><img src="https://avatars.githubusercontent.com/u/197907501?v=4?s=100" width="100px;" alt="indmind"/><br /><sub><b>indmind</b></sub></a><br /><a href="#maintenance-indmind" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
