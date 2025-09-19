@@ -18,7 +18,7 @@ It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook v7, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
+> 🚨 NOTE: This project uses Storybook v8.6+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
