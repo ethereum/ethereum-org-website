@@ -383,7 +383,7 @@ Il existe cependant plusieurs écarts importants par rapport à ces hypothèses 
 3. La répartition de la puissance de minage peut se révéler radicalement inégalitaire dans la pratique.
 4. Les spéculateurs, les ennemis politiques et les fous dont la fonction utilitaire inclut de causer du tort au réseau existent, et ils peuvent habilement configurer des contrats où leur coût est bien inférieur au coût payé par les autres nœuds de vérification.
 
-(1) génère une tendance où le mineur inclut moins de transactions, et (2) augmente le `NC` ; par conséquent, ces deux effets s'annulent au moins partiellement. <sup>[Comment ?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup>. Les points (3) et (4) constituent les problèmes majeurs. Pour les résoudre, nous instituons simplement un plafond flottant : aucun bloc ne peut avoir plus d'opérations que `BLK_LIMIT_FACTOR` fois la moyenne exponentielle variable à long terme. Spécifiquement :
+(1) génère une tendance où le mineur inclut moins de transactions, et (2) augmente le `NC` ; par conséquent, ces deux effets s'annulent au moins partiellement. <sup>[Comment ?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup>. Les points (3) et (4) constituent les problèmes majeurs. Pour les résoudre, nous instituons simplement un plafond flottant : aucun bloc ne peut avoir plus d'opérations que `BLK_LIMIT_FACTOR` fois la moyenne exponentielle variable à long terme. Spécifiquement :
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ Le concept d'une fonction de transition d'état arbitraire telle qu'implémenté
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ et agents autonomes, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn, Smart Property, Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [RLP Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Arbres de Merkle dans Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [RLP Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Arbres de Merkle dans Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd à propos des arbres de Merkle additifs](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Pour en savoir plus sur l'historique du livre blanc, consultez [ce wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Pour en savoir plus sur l'historique du livre blanc, consultez [ce wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Comme de nombreux projets open source communautaires, Ethereum a évolué depuis sa création. Pour plus d'infos sur les derniers développements d'Ethereum et la façon dont les modifications du protocole sont mises en œuvre, nous vous recommandons de lire [ce guide](/learn/)._

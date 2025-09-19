@@ -41,9 +41,8 @@ Hardhat Network beinhaltet Hardhat, eine Ethereum-Entwicklungsumgebung für Prof
 
 Einige Konsensclients verfügen über integrierte Tools, um lokale Beacon Chains zu Testzwecken zu erstellen. Anleitungen für Lighthouse, Nimbus und Lodestar sind verfügbar:
 
-- [Lokales Testnetz unter Verwendung von Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Lokales Testnetz unter Verwendung von Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lokales Testnetz unter Verwendung von Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Lokales Testnetz unter Verwendung von Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Öffentliche Ethereum Test-Chains {#public-beacon-testchains}
 

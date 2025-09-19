@@ -20,7 +20,7 @@ You could write complex test setup logic every time that brings in the contract 
 
 ## Example: Private ERC20 {#example-private-erc20}
 
-We use an example ERC-20 contract that has an initial private time. The owner can manage private users and only those will be allowed to receive tokens at the beginning. Once a certain time has passed, everyone will be allowed to use the tokens. If you are curious, we are using the [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) hook from the new OpenZeppelin contracts v3.
+We use an example ERC-20 contract that has an initial private time. The owner can manage private users and only those will be allowed to receive tokens at the beginning. Once a certain time has passed, everyone will be allowed to use the tokens. If you are curious, we are using the [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) hook from the new OpenZeppelin contracts v3.
 
 ```solidity
 pragma solidity ^0.6.0;

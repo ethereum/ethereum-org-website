@@ -29,7 +29,7 @@ Ethereum akıllı sözleşmeleri, genel API'ler gibidir, bu nedenle herkes sözl
 
 ### Daha kısa geliştirme döngüsü {#shorter-development-cycle}
 
-Birleştirilebilirlik, geliştiricilerin [dapps](/dapps/#what-are-dapps) oluştururken yapması gereken işi azaltır. [Naval Ravikant'ın dediği gibi:](https://twitter.com/naval/status/1444366754650656770) "Açık kaynak, her problemin bir kez çözülmesi gerektiği anlamına gelir."
+Birleştirilebilirlik, geliştiricilerin [dapps](/apps/#what-are-dapps) oluştururken yapması gereken işi azaltır. [Naval Ravikant'ın dediği gibi:](https://twitter.com/naval/status/1444366754650656770) "Açık kaynak, her problemin bir kez çözülmesi gerektiği anlamına gelir."
 
 Bir sorunu çözen akıllı bir sözleşme varsa, diğer geliştiriciler onu yeniden kullanabilir, böylece aynı sorunu çözmeleri gerekmez. Bu şekilde, geliştiriciler mevcut yazılım kitaplıklarını alabilir ve yeni dapp'ler oluşturmak için ekstra işlevsellik ekleyebilir.
 

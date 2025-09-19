@@ -162,7 +162,6 @@ Jika ingin memantau harga gas, sehingga Anda dapat mengirim ETH lebih murah, And
 
 - [Gas Ethereum Dijelaskan](https://defiprime.com/gas)
 - [Mengurangi pemakaian gas Kontrak Pintar Anda](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Bukti Taruhan versus Bukti Kerja](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
 ## Topik terkait {#related-topics}
 

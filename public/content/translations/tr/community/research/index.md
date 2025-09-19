@@ -224,7 +224,7 @@ Ethereum'da ekonomi araştırmaları genel olarak iki yaklaşımı kullanır: ek
 
 #### Arka plan okuması {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Devconnect'te ETHconomics çalıştayı](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Yakın geçmişteki araştırmalar {#recent-research-9}
@@ -307,7 +307,7 @@ Ethereum üzerindeki aktiviteler ve ağın sağlığı hakkında detaylı bilgi 
 
 #### Yakın geçmişteki araştırmalar {#recent-research-14}
 
-- [Robust Incentives Group Veri Analizi](https://ethereum.github.io/rig/)
+- [Robust Incentives Group Veri Analizi](https://rig.ethereum.org/)
 
 ## Uygulamalar ve araçlar {#apps-and-tooling}
 

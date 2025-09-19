@@ -29,7 +29,7 @@ Les contrats intelligents sur Ethereum agissent comme des API publics, ainsi tou
 
 ### Un cycle de développement plus court {#shorter-development-cycle}
 
-La composabilité réduit le travail des développeurs lors de la création de [dapps](/dapps/#what-are-dapps). [Comme le dit Naval Ravikant :](https://twitter.com/naval/status/1444366754650656770) « L'Open Source signifie que tout problème doit être résolu une fois. »
+La composabilité réduit le travail des développeurs lors de la création de [dapps](/apps/#what-are-dapps). [Comme le dit Naval Ravikant :](https://twitter.com/naval/status/1444366754650656770) « L'Open Source signifie que tout problème doit être résolu une fois. »
 
 S'il y a un contrat intelligent qui résout un problème, d'autres développeurs peuvent le réutiliser, de sorte qu'ils n'aient pas à résoudre le même problème. De cette façon, les développeurs peuvent utiliser des bibliothèques logicielles existantes et ajouter des fonctionnalités supplémentaires pour créer de nouvelles DApps.
 

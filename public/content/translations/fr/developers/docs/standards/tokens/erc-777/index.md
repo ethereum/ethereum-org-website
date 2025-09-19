@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton ERC-777
-description: null
+description:
 lang: fr
 ---
 

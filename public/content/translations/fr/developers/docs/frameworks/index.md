@@ -63,7 +63,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 **Probablement -** **_Plateforme de développement Web3 qui permet aux développeurs de blockchain de construire, tester, déboger, surveiller et gérer des contrats intelligents et améliorer la DApp UX._**
 
 - [Site Web](https://tenderly.co/)
-- [Documentation](https://docs.tenderly.co/ethereum-development-practices)
+- [Documentation](https://docs.tenderly.co/)
 
 **The Graph -** **_Le graphique pour interroger efficacement les données de la blockchain._**
 

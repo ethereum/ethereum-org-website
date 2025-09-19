@@ -44,7 +44,7 @@ Az [Ethereum-közösségben](/community/) számos érdekelt fél van, akik szere
 
 - **Ether-használók**: olyan emberek, akik egy tetszőleges összegű ETH-t birtokolnak. [Bővebben az ETH-ről](/eth/).
 - **Az alkalmazások felhasználói**: akik az Ethereum blokkláncán lévő alkalmazásokat használják.
-- **Alkalmazások/eszközök fejlesztői**: akik alkalmazásokat írnak az Ethereum blokkláncra (pl. DeFi, NFT-k stb.), vagy eszközöket építenek, amelyek az Ethereummal lépnek interakcióba (pl. tárcák, tesztcsomagok stb.). [Bővebben a dapp-okról](/dapps/).
+- **Alkalmazások/eszközök fejlesztői**: akik alkalmazásokat írnak az Ethereum blokkláncra (pl. DeFi, NFT-k stb.), vagy eszközöket építenek, amelyek az Ethereummal lépnek interakcióba (pl. tárcák, tesztcsomagok stb.). [Bővebben a dapp-okról](/apps/).
 - **Csomópont-operátorok**: akik csomópontokat működtetnek, amelyek blokkokat és tranzakciókat javasolnak, illetve elutasítják az érvénytelen tranzakciókat vagy blokkokat. [Bővebben a csomópontokról](/developers/docs/nodes-and-clients/).
 - **EIP-szerzők**: ők javasolnak változásokat az Ethereum-protokollt illetően Ethereum fejlesztési javaslatok (EIP) formájában. [Bővebben az EIP-ekről](/eips/).
 - **Validátorok**: ők olyan csomópontokat futtatnak, melyek új blokkokat tudnak adni az Ethereum-blokklánchoz.
@@ -118,7 +118,7 @@ Mivel ennyiféle érdekelt van különböző motivációkkal és hitekkel, ezér
 
 Az elágazások akkor jönnek létre, amikor komoly technikai változások történnek a hálózaton és megváltoztatják a protokoll szabályait. Az [Ethereum-klienseknek](/developers/docs/nodes-and-clients/) frissíteni kell a szoftverjét, hogy az új elágazási szabályokat életbe léptessék.
 
-A DAO-elágazás volt a válasz egy [2016-os DAO-támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sebezhető [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás a pénzeszközöket a hibás szerződésből egy újba tette át, hogy a támadás során károsultak kaphassanak belőle.
+A DAO-elágazás volt a válasz egy [2016-os DAO-támadásra](https://www.coindesk.com/learn/understanding-the-dao-attack), amikor egy sebezhető [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás a pénzeszközöket a hibás szerződésből egy újba tette át, hogy a támadás során károsultak kaphassanak belőle.
 
 Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
 
@@ -180,5 +180,5 @@ Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség kül�
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
 - [Irányítás, 2. rész: A plutokrácia még mindig rossz](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Túl az érmealapú szavazásra épülő irányításon](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
-- [A blokklánc irányítás megértése](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [A blokklánc irányítás megértése](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [Az Ethereum irányítása](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

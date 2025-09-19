@@ -36,10 +36,8 @@ const queryClient = new QueryClient()
 
 const StartWithEthereumFlow = ({
   newToCryptoWallets,
-  locale,
 }: {
   newToCryptoWallets: Wallet[]
-  locale: string
 }) => {
   const swiperRef = useRef<SwiperRef>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -100,7 +98,7 @@ const StartWithEthereumFlow = ({
 
   return (
     <QueryClientProvider client={queryClient}>
-      <WalletProviders locale={locale}>
+      <WalletProviders>
         <SwiperContainer
           ref={containerRef}
           className={cn(

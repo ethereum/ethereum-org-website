@@ -14,6 +14,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import EthPage from "./_components/eth"
+import EthPageJsonLD from "./page-jsonld"
 
 export default async function Page({
   params,
@@ -34,12 +35,21 @@ export default async function Page({
     await getAppPageContributorInfo("eth", locale as Lang, commitHistoryCache)
 
   return (
-    <I18nProvider locale={locale} messages={pickedMessages}>
-      <EthPage
-        contributors={contributors}
+    <>
+      <EthPageJsonLD
+        locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
       />
-    </I18nProvider>
+
+      <I18nProvider locale={locale} messages={pickedMessages}>
+        <EthPage
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          locale={locale}
+        />
+      </I18nProvider>
+    </>
   )
 }
 

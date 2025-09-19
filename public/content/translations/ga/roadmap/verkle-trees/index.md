@@ -49,15 +49,13 @@ Is péirí `(eochair, luach)` iad crainn verkle ina bhfuil na heochracha ina n-e
 
 Tá testnets crann Verkle ar bun cheana féin, ach tá nuashonruithe suntasacha fós le déanamh do chliaint a theastaíonn chun tacú le crainn Verkle. Is féidir leat cabhrú le dul chun cinn a luathú trí chonarthaí a imscaradh chuig na líonraí tástála nó trí líonraí cliaint a rith.
 
-[Déan iniúchadh ar líonra tástála Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [Féach ar Guillaume Ballet ag míniú an tástáil líonra Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (tabhair faoi deara gur cruthúnas-oibre a bhí i ngréasán tástála Condrieu agus go bhfuil testnet Verkle Gen Devnet 6) ina áit anois.
 
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [Verkle Trees le haghaidh Neamhstáit](https://verkle.info/)
 - [Míníonn Dankrad Feist crainn Verkle ar PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Verkle Trees For The Rest Of Us](https://research.2077.xyz/verkle-trees)
+- [Verkle Trees For The Rest Of Us](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [Anatomy of A Verkle Proof](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Míníonn Guillaume Ballet crainn Verkle ag ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Conas a dhéanann crainn Verkle Ethereum caol agus dána" ag Guillaume Ballet ag Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)

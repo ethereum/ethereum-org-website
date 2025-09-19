@@ -1,14 +1,8 @@
+import { slugify } from "@/lib/utils/url"
+
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^}]+?)\}\s*)$/
 const emojiRegEx = /<Emoji [^/]+\/>/g
-
-/**
- * Creates a slug from a string (Hello world => hello-world)
- * @param s Any string
- * @returns Lowercased string with spaces replaced with hyphens (kebab-casing)
- */
-const slugify = (s: string): string =>
-  encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
 /**
  * Parse a heading ID from a heading string. If the heading contains a custom ID,

@@ -1,7 +1,12 @@
 "use client"
 
+import { cva, type VariantProps } from "class-variance-authority"
+
 import type { ToCItem } from "@/lib/types"
 
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "@/components/ButtonDropdown"
 import Github from "@/components/icons/github.svg"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
@@ -12,14 +17,62 @@ import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
-export type TableOfContentsProps = {
+const variants = cva(
+  "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
+  {
+    variants: {
+      variant: {
+        docs: "top-19 min-w-48 max-w-[25%] p-4 pe-0 gap-4",
+        card: cn(
+          "top-28 min-w-80 max-w-72 lg:p-8 px-3 py-2",
+          "shrink-0 gap-y-2.5 rounded-2xl bg-accent-a/10 text-body-medium"
+        ),
+        left: "top-28 me-16 ms-8 basis-[400px] [&_ul]:leading-relaxed",
+      },
+    },
+    defaultVariants: {
+      variant: "docs",
+    },
+  }
+)
+
+const labelVariants = cva("font-bold", {
+  variants: {
+    variant: {
+      docs: "uppercase text-body-medium font-normal",
+      card: "text-lg text-body-medium",
+      left: "mb-8 text-3xl leading-xs",
+    },
+  },
+  defaultVariants: {
+    variant: "docs",
+  },
+})
+
+const listVariants = cva("mx-0 gap-2 py-0", {
+  variants: {
+    variant: {
+      docs: "list-none border-s border-s-body-medium ps-4 my-2 text-sm",
+      card: "list-decimal list-inside ps-0 my-2",
+      left: "list-none my-0",
+    },
+  },
+  defaultVariants: {
+    variant: "docs",
+  },
+})
+
+export interface TableOfContentsProps extends VariantProps<typeof variants> {
   items: Array<ToCItem>
   maxDepth?: number
   editPath?: string
   hideEditButton?: boolean
   isMobile?: boolean
   className?: string
+  dropdownLinks?: ButtonDropdownList
+  showDropdown?: boolean
 }
 
 const TableOfContents = ({
@@ -29,12 +82,14 @@ const TableOfContents = ({
   hideEditButton = false,
   isMobile = false,
   className,
+  variant,
+  dropdownLinks,
+  showDropdown = true,
   ...rest
 }: TableOfContentsProps) => {
+  const pathname = usePathname()
   const { t } = useTranslation("common")
-
   const titleIds: Array<string> = []
-
   if (!isMobile) {
     const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
       // Return early if maxDepth hit
@@ -54,33 +109,44 @@ const TableOfContents = ({
     return null
   }
   if (isMobile) {
-    return <Mobile items={items} maxDepth={maxDepth} />
+    return <Mobile variant={variant} items={items} maxDepth={maxDepth} />
   }
 
   return (
-    <aside
-      className={cn(
-        "sticky top-19 hidden h-[calc(100vh-80px)] min-w-48 max-w-[25%] flex-col items-start gap-4 overflow-y-auto p-4 pe-0 lg:flex",
-        className
-      )}
-      {...rest}
-    >
+    <nav className={variants({ variant, className })} {...rest}>
       {!hideEditButton && editPath && (
-        <ButtonLink href={editPath} variant="outline">
+        <ButtonLink
+          href={editPath}
+          variant="outline"
+          customEventOptions={{
+            eventCategory: "edit_page",
+            eventAction: "gh_edit_click",
+            eventName: `${pathname}`,
+          }}
+        >
           <Github />
           {t("edit-page")}
         </ButtonLink>
       )}
-      <div className="uppercase text-body-medium">{t("on-this-page")}</div>
-      <ul className="m-0 mb-2 mt-2 list-none gap-2 border-s border-s-body-medium ps-4 pt-0 text-sm">
+      {variant === "left" && showDropdown && dropdownLinks && (
+        <div className="relative mb-8 flex w-full items-end justify-end">
+          <ButtonDropdown
+            list={dropdownLinks}
+            className="w-full min-w-[240px]"
+          />
+        </div>
+      )}
+      <div className={labelVariants({ variant })}>{t("on-this-page")}</div>
+      <ul className={listVariants({ variant })}>
         <ItemsList
           items={items}
           depth={0}
-          maxDepth={maxDepth ? maxDepth : 1}
+          maxDepth={maxDepth ?? 1}
           activeHash={activeHash}
+          variant={variant}
         />
       </ul>
-    </aside>
+    </nav>
   )
 }
 

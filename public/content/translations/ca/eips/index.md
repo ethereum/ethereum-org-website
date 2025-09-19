@@ -61,6 +61,6 @@ Mira també:
 
 <cite class="citation">
 
-Contingut de pàgina aportat en part per [Governança del Desenvolupament del Protocol d'Ethereum i Coordinació de Millora de Xarxa](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) per Hudson Jameson
+Contingut de pàgina aportat en part per [Governança del Desenvolupament del Protocol d'Ethereum i Coordinació de Millora de Xarxa](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) per Hudson Jameson
 
 </cite>

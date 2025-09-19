@@ -90,7 +90,7 @@ Defined as “coordinating to limit open competition by deceiving, defrauding, a
 
 Bribery and collusion limit the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted). This can have significant consequences, especially where the votes are responsible for allocating scarce resources.
 
-For example, [quadratic funding mechanisms](https://www.radicalxchange.org/concepts/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
+For example, [quadratic funding mechanisms](https://www.radicalxchange.org/wiki/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
 
 Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
 
@@ -218,3 +218,4 @@ ZK-STARK is considered immune to the threat of quantum computing, as it only rel
 - [An approximate introduction to how zk-SNARKs are possible](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Why Zero Knowledge Proofs (ZKPs) is a Game Changer for Self-Sovereign Identity](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 Explained: Enabling Private Transfers On Ethereum With ZK Proofs](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [ZK Card Game: game to learn ZK fundamentals and real-life use cases](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

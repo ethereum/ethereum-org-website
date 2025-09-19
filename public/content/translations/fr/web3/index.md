@@ -143,7 +143,7 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 - [Obtenir un portefeuille](/wallets/)
 - [Trouver une communauté](/community/)
-- [Explorer des applications Web3](/dapps/)
+- [Explorer des applications Web3](/apps/)
 - [Rejoindre une DAO](/dao/)
 - [Construire sur le Web3](/developers/)
 
@@ -151,11 +151,11 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 Le Web3 n’est pas strictement défini. Plusieurs participants de la Communauté ont des points de vue différents à ce sujet. Voici quelques-uns d'entre eux :
 
-- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Comprendre le Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Importance du Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Pourquoi la décentralisation est importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Panorama du Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

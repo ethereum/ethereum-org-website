@@ -5,14 +5,16 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import LearningTools from "./_components/learning-tools"
+import LearningToolsJsonLD from "./page-jsonld"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -26,10 +28,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "developers/learning-tools",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <LearningTools />
-    </I18nProvider>
+    <>
+      <LearningToolsJsonLD locale={locale} contributors={contributors} />
+
+      <I18nProvider locale={locale} messages={messages}>
+        <LearningTools />
+      </I18nProvider>
+    </>
   )
 }
 
@@ -48,10 +61,8 @@ export async function generateMetadata({
   return await getMetadata({
     locale,
     slug: ["developers", "learning-tools"],
-    title: t("page-developers-learning-tools:page-learning-tools-meta-title"),
-    description: t(
-      "page-developers-learning-tools:page-learning-tools-meta-desc"
-    ),
+    title: t("page-learning-tools-meta-title"),
+    description: t("page-learning-tools-meta-desc"),
   })
 }
 
