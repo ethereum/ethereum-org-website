@@ -182,7 +182,7 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 2. [Ledger Academy - What Is Ethereum Restaking?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Decentralized Ethereum Restaking Protocol Explained](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Don't overload Ethereum's consensus](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)
-6. [https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained?utm_source=chatgpt.com](https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained?utm_source=chatgpt.com)
+5. [Cointelegraph - What is EigenLayer? Ethereum’s restaking protocol explained](https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained)
 7. [https://www.youtube.com/watch?v=-V-fG4J1N_M](https://www.youtube.com/watch?v=-V-fG4J1N_M)
 8. [https://www.youtube.com/watch?v=5r0SooSQFJg](https://www.youtube.com/watch?v=5r0SooSQFJg)
 9. [https://www.stakingrewards.com/asset/ethereum-2-0/analytics](https://www.stakingrewards.com/asset/ethereum-2-0/analytics)
