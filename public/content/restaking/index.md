@@ -80,7 +80,8 @@ There are several entities involved in restaking — each one of them plays an i
 |
 | **Liquid restakers**    | People who stake their ETH via a third-party liquid staking provider, like Lido or Rocket Pool, get Liquid Staking Tokens (LSTs) that represent their staked ETH. They can restake these LSTs to earn restaking rewards while keeping their original ETH staked.                    
 |
-| **Operators**           | Like restakers, operators stake ETH to secure AVSs, but unlike most restakers who are regular people, operators are professional service providers that guarantee things like uptime and performance.                             |
+| **Operators**           | Operators run the AVSs' restaking software, performing the validation tasks each AVS requires. Operators are usually professional service providers that guarantee things like uptime and performance. Like non-operator restakers, operators use staked ETH to secure AVSs, but operators also receive extra rewards in exchange for their work.                            
+|
 | **AVSs**                | These are the decentralized services — like price oracles, token bridges, and data systems — that receive security from restakers and offer token rewards in return.                                                              |
 
 <br/>
