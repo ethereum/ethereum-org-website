@@ -182,8 +182,7 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
     hashB:    [ <00 6f>, hashC ]
-    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
 ```
 
 When one node is referenced inside another node, what is included is `keccak256(rlp.encode(node))`, if `len(rlp.encode(node)) >= 32` else `node` where `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
