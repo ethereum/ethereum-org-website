@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Learn about the Fusaka protocol upgrade
+description: Learn about PeerDAS as part of the Fusaka Ethereum protocol upgrade
 lang: en
 ---
 
