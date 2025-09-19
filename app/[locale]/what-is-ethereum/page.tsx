@@ -9,7 +9,7 @@ import {
 } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -101,7 +101,7 @@ const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
   )
 }
 
-const Page = async ({ params }: { params: { locale: Lang } }) => {
+const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
   const t = await getTranslations({
     locale,

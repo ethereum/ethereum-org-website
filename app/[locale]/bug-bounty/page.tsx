@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, Params } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -16,8 +16,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import BugBountiesPage from "./_components/bug-bounty"
 import BugBountyJsonLD from "./page-jsonld"
 
-export default async function Page({ params }: { params: Promise<Params> }) {
-  const { locale } = await params
+export default async function Page({ params }: { params: PageParams }) {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -50,9 +50,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-bug-bounty" })
 
