@@ -22,7 +22,7 @@ The Fusaka upgrade is only a single step in Ethereum's long-term development goa
 
 Specification: https://eips.ethereum.org/EIPS/eip-7594
 
-Resources: https://youtu.be/bONWd1x2TjQ?t=328 (dapplion on PeerDAS), https://ethereum.org/en/roadmap/fusaka/peerdas
+Resources: [PeerDAS, Lion DappLion: Scaling Ethereum Today | ETHSofia 2024](https://youtu.be/bONWd1x2TjQ?t=328)
 
 This is the _headliner_ of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
 
