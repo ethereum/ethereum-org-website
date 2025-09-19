@@ -766,6 +766,12 @@ We need `txn` to be mutable because we don't read the from address from the tran
 
 ```
 
+### Stage 2 - Adding a server
+
+(remember to create a mechanism to report nonce)
+
+### Stage 3 - Ethereum smart contracts
+
 
 ## Abuses by the centralized component
 
