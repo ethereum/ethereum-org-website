@@ -90,7 +90,7 @@ There are several entities involved in restaking — each one of them plays an i
   <div>
     <strong>Good to know</strong><br />
     Native and liquid restakers often delegate their staked ETH to an operator, instead of running the software to secure AVSs themselves.<br />
-    This way they don’t need to worry about complicated technical requirements from AVSs.
+    This way they don’t need to worry about complicated technical requirements from AVSs, though they receive a lower reward rate than operators.
   </div>
 </InfoBanner>
 
