@@ -75,7 +75,7 @@ There are several entities involved in restaking — each one of them plays an i
 
 | **Term**                | **Description**                                                                                                                                                                                                                   |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Restaking platforms** | A restaking platform is a service that connects AVSs, ETH stakers, and operators. They build decentralized applications for stakers to restake their ETH, and marketplaces where stakers, AVSs and operators can find each other. |
+| **Restaking platforms** | A restaking platform is a service that connects AVSs, ETH stakers, and operators. They build decentralized applications for stakers to restake their ETH, and marketplaces where stakers, AVSs, and operators can find each other. |
 | **Native restakers**    | People who stake their ETH by running their own Ethereum validators can connect their staked ETH to a restaking platform, including EigenLayer and others, to earn restaking rewards on top of ETH validator rewards.                                              
 |
 | **Liquid restakers**    | People who stake their ETH via a third-party liquid staking provider, like Lido or Rocket Pool, get Liquid Staking Tokens (LSTs) that represent their staked ETH. They can restake these LSTs to earn restaking rewards while keeping their original ETH staked.                    
