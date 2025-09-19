@@ -9,7 +9,8 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        The Fusaka Contest is currently running on Sherlock with up to 2M USD in rewards!
+        The Fusaka Contest is currently running on Sherlock with up to 2M USD in
+        rewards!
       </p>
     </Center>
   </BannerNotification>
