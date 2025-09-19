@@ -185,4 +185,4 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 5. [Cointelegraph - What is EigenLayer? Ethereum’s restaking protocol explained](https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained)
 7. [https://www.youtube.com/watch?v=-V-fG4J1N_M](https://www.youtube.com/watch?v=-V-fG4J1N_M)
 8. [https://www.youtube.com/watch?v=5r0SooSQFJg](https://www.youtube.com/watch?v=5r0SooSQFJg)
-9. [https://www.stakingrewards.com/asset/ethereum-2-0/analytics](https://www.stakingrewards.com/asset/ethereum-2-0/analytics)
+8. [The Block - Restaking Data Dash](https://www.theblock.co/data/decentralized-finance/restaking)
