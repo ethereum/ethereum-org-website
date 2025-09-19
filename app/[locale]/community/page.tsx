@@ -34,7 +34,7 @@ export default async function Page({
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: Lang }
+  params: { locale: string }
 }) {
   const { locale } = params
 
