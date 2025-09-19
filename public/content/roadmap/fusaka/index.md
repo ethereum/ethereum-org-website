@@ -30,8 +30,12 @@ With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-c
 
 This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for layer 2s.
 
-Learn more about [PeerDAS in Ethereum.](https://ethereum.org/en/roadmap/fusaka/peerdas) And more in-depth [academic paper](https://eprint.iacr.org/2024/1362.pdf).
+[Learn more about PeerDAS](/roadmap/fusaka/peerdas/)
 
+**Resources**:
+- [EIP-7594 technical specification](https://eips.ethereum.org/EIPS/eip-7594)
+- [DappLion on PeerDAS: Scaling Ethereum Today | ETHSofia 2024](https://youtu.be/bONWd1x2TjQ?t=328)
+- [Academic: A Documentation of Ethereum’s PeerDAS (PDF)](https://eprint.iacr.org/2024/1362.pdf)
 
 #### Blob parameter only forks {#blob-parameter-only-forks}
 
