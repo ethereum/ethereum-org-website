@@ -1,7 +1,7 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ExternalLink, Mail } from "lucide-react"
+import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
@@ -197,6 +197,27 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 })
 BaseLink.displayName = "BaseLink"
 
+const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ children, className, ...props }: LinkProps, ref) => {
+    const { twFlipForRtl } = useRtlFlip()
+    return (
+      <BaseLink
+        className={cn(
+          "group block w-fit no-underline visited:text-primary-visited",
+          className
+        )}
+        ref={ref}
+        {...props}
+      >
+        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
+        &nbsp;
+        <span className="group-hover:underline">{children}</span>
+      </BaseLink>
+    )
+  }
+)
+LinkWithArrow.displayName = "LinkWithArrow"
+
 const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
   (props: LinkProps, ref) => {
     return (
@@ -206,4 +227,5 @@ const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
 )
 InlineLink.displayName = "InlineLink"
 
+export { LinkWithArrow }
 export default InlineLink

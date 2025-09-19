@@ -39,6 +39,7 @@ export const getMetadata = async ({
   slug,
   title,
   description: descriptionProp,
+  twitterDescription,
   image,
   author,
 }: {
@@ -46,6 +47,7 @@ export const getMetadata = async ({
   slug: string[]
   title: string
   description?: string
+  twitterDescription?: string
   image?: string
   author?: string
 }): Promise<Metadata> => {
@@ -94,7 +96,7 @@ export const getMetadata = async ({
     },
     twitter: {
       title,
-      description,
+      description: twitterDescription || description,
       card: "summary_large_image",
       creator: author || siteTitle,
       site: author || siteTitle,
