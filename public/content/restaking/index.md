@@ -178,7 +178,6 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 
 ## Further reading {#further-reading}
 
-1. [https://dune.com/hashed_official/Irt](https://dune.com/hashed_official/Irt)
 2. [https://ethereum.org/en/staking/](https://ethereum.org/en/staking/)
 3. [https://www.ledger.com/academy/what-is-ethereum-restaking?utm_source=chatgpt.com](https://www.ledger.com/academy/what-is-ethereum-restaking?utm_source=chatgpt.com)
 4. [https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained?utm_source=chatgpt.com](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained?utm_source=chatgpt.com)
