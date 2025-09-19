@@ -406,6 +406,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for onchain and offchain use-cases. 
 
+**[Gas Network](https://gas.network/)** - A distributed oracle platform providing real-time gas price data across blockchain. By bringing data from leading gas price data providers onchain, Gas Network is helping to drive interoperability. Gas Network supports data for over 35 chains, including Ethereum Mainnet and many leading L2s.
+
 ## Further reading {#further-reading}
 
 **Articles**
