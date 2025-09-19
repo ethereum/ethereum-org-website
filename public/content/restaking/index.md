@@ -184,5 +184,5 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 4. [Vitalik Buterin - Don't overload Ethereum's consensus](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)
 5. [Cointelegraph - What is EigenLayer? Ethereum’s restaking protocol explained](https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained)
 7. [https://www.youtube.com/watch?v=-V-fG4J1N_M](https://www.youtube.com/watch?v=-V-fG4J1N_M)
-8. [https://www.youtube.com/watch?v=5r0SooSQFJg](https://www.youtube.com/watch?v=5r0SooSQFJg)
+7. [Junion - EigenLayer Explained: What is Restaking?](https://www.youtube.com/watch?v=5r0SooSQFJg)
 8. [The Block - Restaking Data Dash](https://www.theblock.co/data/decentralized-finance/restaking)
