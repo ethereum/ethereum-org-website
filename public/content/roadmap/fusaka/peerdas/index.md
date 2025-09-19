@@ -60,7 +60,7 @@ This allows for a new theoretical scaling limit of 8x the current “everyone do
 
 Once a node successfully reconstructs the original data, it then redistributes the recovered columns back into the network, actively healing any data gaps and enhancing overall system resilience. Nodes connected to validators with a combined balance ≥4096 ETH must be a supernode and therefore must subscribe to all data column subnets and custody all columns. These supernodes will continuously heal data gaps. The probabilistically self-healing nature of the protocol allows for strong availability guarantees while not limiting home operators holding only portions of the data. 
 
-![](subnets.png)
+![Nodes subscribing to columns distributed via subnets](subnets.png)
 
 Data availability can be confirmed by any node holding only small subset of the blob data thanks to the sampling mechanism described above. This availability is enforced: validators must follow new fork-choice rules, meaning they will only accept and vote for blocks after they have verified the availability of the data.
 
@@ -77,3 +77,9 @@ This means that immediately after Fusaka activates and PeerDAS goes live, the nu
 ## Future directions {#future-directions}
 
 PeerDAS is only a step [toward a greater scaling vision of FullDAS](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529), or Danksharding. While PeerDAS uses 1D erasure coding to each blob individually, full Danksharding will use a more complete 2D erasure coding scheme across the entire matrix of blob data. Extending data in two dimensions creates even stronger redundancy properties and more efficient reconstruction and verification. Realizing FullDAS will require substantial network and protocol optimizations, along with additional research.
+
+## Further reading {#further reading}
+
+- [📽️ PeerDAS Peer Data Availability sampling by Francesco D'Amato](https://www.youtube.com/watch?v=WOdpO1tH_Us)
+- [📄 A Documentation of Ethereum’s PeerDAS](https://eprint.iacr.org/2024/1362.pdf)
+- [📄 Proving the Security of PeerDAS without the AGM](https://eprint.iacr.org/2025/1683)
