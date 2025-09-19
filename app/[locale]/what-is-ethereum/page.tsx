@@ -101,8 +101,8 @@ const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
   )
 }
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: { locale: Lang } }) => {
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-what-is-ethereum",
@@ -1152,9 +1152,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,
