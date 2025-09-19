@@ -29,7 +29,7 @@ Restaking is a technology built for [stakers](/staking/) to extend this security
 
 ## What is restaking? {#what-is-restaking}
 
-Restaking is when stakers use their ETH to secure other decentralized services known as “Actively Validated Services” (AVSs). In return, restakers get additional rewards from AVSs on top of their regular staking rewards.
+Restaking is when stakers use their already-staked ETH to secure other decentralized services. In return, restakers can get additional rewards from those other services on top of their regular ETH staking rewards. 
 
 In the same way that many ETH stakers run Ethereum validation software, many restakers run specialized AVS software.
 
