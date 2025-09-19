@@ -68,6 +68,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
             )}
             filters={filters}
             matomoEventCategory="find-wallet"
+            estimateSize={300}
           />
         </>
       )}
