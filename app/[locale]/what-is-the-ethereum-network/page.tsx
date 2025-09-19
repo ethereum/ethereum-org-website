@@ -10,7 +10,7 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import { LinkWithArrow } from "@/components/ui/Link"
+import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -145,7 +145,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p>{t("page-what-is-ethereum-network-section-description-9")}</p>
             <p>
               {t.rich("page-what-is-ethereum-network-section-description-10", {
-                a: (chunks) => <a href="/wallets/">{chunks}</a>,
+                a: (chunks) => <Link href="/wallets/">{chunks}</Link>,
                 strong: Strong,
               })}
             </p>
@@ -229,15 +229,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-gas-section-description-6",
                   {
                     blog: (chunks) => (
-                      <a href="https://blog.ethereum.org/2021/07/15/london-mainnet-announcement">
+                      <Link href="https://blog.ethereum.org/2021/07/15/london-mainnet-announcement">
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                     beaconchain: (chunks) => (
-                      <a href="https://beaconcha.in/burn">{chunks}</a>
+                      <Link href="https://beaconcha.in/burn">{chunks}</Link>
                     ),
                     ultrasound: (chunks) => (
-                      <a href="https://ultrasound.money">{chunks}</a>
+                      <Link href="https://ultrasound.money">{chunks}</Link>
                     ),
                     strong: Strong,
                   }
@@ -320,14 +320,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-staking-section-description-7",
                   {
                     validators: (chunks) => (
-                      <a href="https://beaconcha.in/charts/validators">
+                      <Link href="https://beaconcha.in/charts/validators">
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                     stakedEther: (chunks) => (
-                      <a href="https://beaconcha.in/charts/staked_ether">
+                      <Link href="https://beaconcha.in/charts/staked_ether">
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                     strong: Strong,
                   }
@@ -356,10 +356,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-staking-section-description-11",
                   {
                     lido: (chunks) => (
-                      <a href="https://lido.fi/ethereum">{chunks}</a>
+                      <Link href="https://lido.fi/ethereum">{chunks}</Link>
                     ),
                     rocketpool: (chunks) => (
-                      <a href="https://www.rocketpool.net/">{chunks}</a>
+                      <Link href="https://www.rocketpool.net/">{chunks}</Link>
                     ),
                     strong: Strong,
                   }
@@ -428,7 +428,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-layer-2s-section-description-5",
                   {
                     l2fees: (chunks) => (
-                      <a href="https://l2fees.info/">{chunks}</a>
+                      <Link href="https://l2fees.info/">{chunks}</Link>
                     ),
                     strong: Strong,
                   }
@@ -439,7 +439,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-layer-2s-section-description-6",
                   {
                     l2beat: (chunks) => (
-                      <a href="https://l2beat.com/scaling/summary">{chunks}</a>
+                      <Link href="https://l2beat.com/scaling/summary">
+                        {chunks}
+                      </Link>
                     ),
                   }
                 )}
@@ -454,19 +456,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-layer-2s-section-description-8",
                   {
                     robinhood: (chunks) => (
-                      <a href="https://newsroom.aboutrobinhood.com/robinhood-launches-stock-tokens-reveals-layer-2-blockchain-and-expands-crypto-suite-in-eu-and-us-with-perpetual-futures-and-staking/">
+                      <Link href="https://newsroom.aboutrobinhood.com/robinhood-launches-stock-tokens-reveals-layer-2-blockchain-and-expands-crypto-suite-in-eu-and-us-with-perpetual-futures-and-staking/">
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                     paypal: (chunks) => (
-                      <a href="https://www.coindesk.com/tech/2025/07/17/paypal-pyusd-goes-live-on-arbitrum">
+                      <Link href="https://www.coindesk.com/tech/2025/07/17/paypal-pyusd-goes-live-on-arbitrum">
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                     shopify: (chunks) => (
-                      <a href="https://www.shopify.com/news/stablecoins-on-shopify">
+                      <Link href="https://www.shopify.com/news/stablecoins-on-shopify">
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                   }
                 )}
@@ -476,16 +478,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-layer-2s-section-description-9",
                   {
                     superbridge: (chunks) => (
-                      <a href="https://superbridge.app/">{chunks}</a>
+                      <Link href="https://superbridge.app/">{chunks}</Link>
                     ),
                     portal: (chunks) => (
-                      <a href="https://portal.zksync.io/bridge/">{chunks}</a>
+                      <Link href="https://portal.zksync.io/bridge/">
+                        {chunks}
+                      </Link>
                     ),
                     hop: (chunks) => (
-                      <a href="https://hop.exchange/">{chunks}</a>
+                      <Link href="https://hop.exchange/">{chunks}</Link>
                     ),
                     across: (chunks) => (
-                      <a href="https://across.to/">{chunks}</a>
+                      <Link href="https://across.to/">{chunks}</Link>
                     ),
                   }
                 )}
@@ -560,7 +564,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-9",
                     {
                       etherscan: (chunks) => (
-                        <a href="https://etherscan.io/">{chunks}</a>
+                        <Link href="https://etherscan.io/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -570,7 +574,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-10",
                     {
                       beaconcha: (chunks) => (
-                        <a href="https://beaconcha.in/">{chunks}</a>
+                        <Link href="https://beaconcha.in/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -580,7 +584,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-11",
                     {
                       ultrasound: (chunks) => (
-                        <a href="https://ultrasound.money/">{chunks}</a>
+                        <Link href="https://ultrasound.money/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -590,7 +594,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-12",
                     {
                       l2fees: (chunks) => (
-                        <a href="https://l2fees.info/">{chunks}</a>
+                        <Link href="https://l2fees.info/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -600,7 +604,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-13",
                     {
                       l2beat: (chunks) => (
-                        <a href="https://l2beat.com/">{chunks}</a>
+                        <Link href="https://l2beat.com/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -610,7 +614,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-14",
                     {
                       growthepie: (chunks) => (
-                        <a href="https://growthepie.com/">{chunks}</a>
+                        <Link href="https://growthepie.com/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -620,7 +624,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-15",
                     {
                       dune: (chunks) => (
-                        <a href="https://dune.com/">{chunks}</a>
+                        <Link href="https://dune.com/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -630,7 +634,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-16",
                     {
                       tokenterminal: (chunks) => (
-                        <a href="https://tokenterminal.com/">{chunks}</a>
+                        <Link href="https://tokenterminal.com/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -640,7 +644,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     "page-what-is-ethereum-network-live-network-data-section-description-17",
                     {
                       nansen: (chunks) => (
-                        <a href="https://nansen.ai/">{chunks}</a>
+                        <Link href="https://nansen.ai/">{chunks}</Link>
                       ),
                     }
                   )}
