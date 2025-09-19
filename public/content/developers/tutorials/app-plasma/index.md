@@ -310,20 +310,20 @@ This is the HTML (more accurately, [JSX](https://react.dev/learn/writing-markup-
 
 [This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero-knowledge code. 
 
-```rust
+```
 use std::hash::pedersen_hash;
 ```
 
 [Pedersen hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) is provided with the [Noir standard library](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). This hash function is commonly used by zero-knowledge proofs because it is much easier to calculate inside them.
 
-```rust
+```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
 These two functions are external libraries, defined in [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). They are exactly what they are named for, a function that calculates the [keccak256 hash](https://emn178.github.io/online-tools/keccak_256.html) and a function that verifies Ethereum signatures and recovers the signer's Ethereum address.
 
-```rust
+```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
@@ -331,26 +331,26 @@ Noir is inspired by [Rust](https://www.rust-lang.org/). Variables, by default, a
 
 Data types named `u<number>` are that number of bits, unsigned. The only supported types are `u8`, `u16`, `u32`, `u64`, and `u128`.
 
-```rust
+```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
 ```
 
 This variable is used for the Pedersen hash of the accounts, as explained below.
 
-```rust
+```
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
 As explained above, the message length is fixed. It is specified here.
 
-```rust
+```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH; 
 ```
 
 [EIP-191 signatures](https://eips.ethereum.org/EIPS/eip-191) require a buffer with a 26 byte prefix, followed by the message length in ASCII, and finally the message itself. 
 
-```rust
+```
 struct Account {
     balance: u128,
     address: Field,
@@ -362,7 +362,7 @@ The information we store about an account. [`Field`](https://noir-lang.org/docs/
 
 Here we use the `Field` to store a 160-bit Ethereum address.
 
-```rust
+```
 struct TransferTxn {
     from: Field,
     to: Field,
@@ -373,13 +373,13 @@ struct TransferTxn {
 
 The information we store for a transfer transaction.
 
-```rust
+```
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
 A function definition. The parameter is `Account` information. The result is an array of `Field` variables, whose length is `FLAT_ACCOUNT_FIELDS`
 
-```rust
+```
     let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
@@ -388,7 +388,7 @@ A function definition. The parameter is `Account` information. The result is an 
 
 The first value is the array is the acount address. The second includes both the balance and the nonce. The `.into()` calls change a number to the data type it needs to be. `account.nonce` is a `u32` value, but to add it to `account.balance << 32`, a `u128` value, it needs to be a `u128`. That's the first `.into()`. The second one turns the `u128` result into a `Field` so it will fit into the array.
 
-```rust
+```
     flat
 }
 ```
@@ -396,25 +396,25 @@ The first value is the array is the acount address. The second includes both the
 In Noir functions can only return a value at the end (there is no early return). To specify the return value, you evaiuate it just before the function's closing bracket (`}`).
 
 
-```rust
+```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
 This function turns the accounts array into a `Field` array, which can be used as the input to a Petersen Hash.
 
-```rust
+```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
 This is the way you specify a variable that is mutable, that is *not* a constant. Variables in Noir need to always have a value, so we initialize it to all zeros.
 
-```rust
+```
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-This is a `for` loop. Note that the boundries are constants. Noir loops have to have their boundries known at compile time. The reason is that arithmetic circuits don't support loops. When processing a `for` loop, the compiler simply puts the code inside it multiple times, one for each iteration.
+This is a `for` loop. Note that the boundries are constants. Noir loops have to have their boundries known at compile time. The reason is that arithmetic circuits don't support flpw control. When processing a `for` loop, the compiler simply puts the code inside it multiple times, one for each iteration.
 
-```rust
+```
         let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
@@ -432,7 +432,7 @@ fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
 
 Finally, we got to the function that hashes the accounts array.
 
-```rust
+```
 fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     let mut account : u32 = ACCOUNT_NUMBER;
 
@@ -441,27 +441,54 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
             account = i;
         }
     }
+```
 
-    // Or else account not found, and the transaction is impossible to fulfill
-    assert (account < ACCOUNT_NUMBER);
+This function finds the account with a specific address. This function would be terribly inefficient in normal code, because it iterates over all the accounts, even if it already found the address.
+
+However, in zero-knowledge proofs there is no flow control. If we ever need to check a condition, we have to check it every time.
+
+A similar thing happens with `if` statements. The `if` statement inside the loop above gets translated to these mathematical statements.
+
+*condition<sub>result</sub> = accounts[i].address == address* // one if they are equal, zero otherwise
+
+*account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>*
+
+```rust
+    assert (account < ACCOUNT_NUMBER, f"{address} does not have an account");
 
     account
 }
 ```
 
-This function finds the account with a specific address. This function would be terribly inefficient in normal code, because it iterates 
+The [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) function causes the zero-knowledge proof to crash if the assertion is false. In this case, if we can't find an account with the relevant address. To report the address, we use a [format string](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
+```
+
+This function applies a transfer transaction, and returns the new accounts array.
+
+```rust
     let from = find_account(accounts, txn.from);
     let to = find_account(accounts, txn.to);
 
-    // Or else there isn't enough balance to transfer
-    assert (accounts[from].balance >= txn.amount);
+    let (txnFrom, txnAmount, txnNonce, accountNonce) = 
+        (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
+```
 
-    // Or else this might be a replay attack
-    assert (accounts[from].nonce == txn.nonce);    
+We cannot access structure elements inside a format string in Noir, so we create a usable copy.
 
+```rust
+    assert (accounts[from].balance >= txn.amount, 
+        f"{txnFrom} does not have {txnAmount} finney");
+
+    assert (accounts[from].nonce == txn.nonce,
+        f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");    
+```
+
+These are two conditions that could render a transaction invalid.
+
+```rust
     let mut newAccounts = accounts;
 
     newAccounts[from].balance -= txn.amount;
@@ -470,12 +497,27 @@ fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> 
 
     newAccounts
 }
+```
 
+Create the new accounts array and then return it.
+
+
+```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field 
+```
+
+This function reads the address from the message. 
+
+```rust
 {
     let mut result : Field = 0;
 
     for i in 7..47 {
+```
+
+The address is always 20 bytes (a.k.a. 40 hexadecimal digits) long, and starts at character #7.
+
+```rust
         result *= 0x10;
         if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9
             result += (messageBytes[i]-48).into();
@@ -492,13 +534,22 @@ fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 }
 
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
+```
+
+Read the amount and nonce from the message. 
+
+```rust
 {
     let mut amount : u128 = 0;
+    let mut nonce: u32 = 0;
     let mut stillReadingAmount: bool = true;
     let mut lookingForNonce: bool = false;
     let mut stillReadingNonce: bool = false;
-    let mut nonce: u32 = 0;
+```
 
+In the message, the first number after the address is the amount of Finneys (a.k.a. thousandth of an ETH) to transfer. The second number is the nonce. Any text between them is ignored.
+
+```rust
     for i in 48..MESSAGE_LENGTH {
         if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9
             let digit = (messageBytes[i]-48);
@@ -528,8 +579,12 @@ fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 
     (amount, nonce)
 }
+```
+
+Returning a [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) is the Noir way to return multiple values from a function.
 
 
+```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
 {
     let mut txn: TransferTxn = TransferTxn { from: 0, to: 0, amount:0, nonce:0 };
@@ -542,12 +597,19 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 
     txn
 }
+```
 
+This function actually turns the message into bytes and then turns the amounts into a `TransferTxn`. 
 
-
+```rust
 // The equivalent to Viem's hashMessage
 // https://viem.sh/docs/utilities/hashMessage#hashmessage
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
+```
+
+We were able to use Pedersen Hash for the accounts because they are only hashed inside the zero-knowledge proof. However, here we need to check the signature on the message, which originates from the browser. For that, we need to follow the Ethereum signing format in [EIP 191](https://eips.ethereum.org/EIPS/eip-191). This means we need to create a combined buffer with a standard prefix, the message length in ASCII, and then the message - and use the Ethereum standard, keccak256, to hash it.
+
+```rust
     // ASCII prefix
     let prefix_bytes = [
         0x19, // \x19
@@ -577,7 +639,11 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
         0x3A, // ':'
         0x0A  // '\n'
     ];
+```
 
+To avoid cases where an application asks the user to sign a message that can be used as a transaction or for some other purpose, EIP 191 specifies that all signed messages start with character 0x19 (not a valid ASCII character) followd by `Ethereum Signed Message:` and a newline.
+
+```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
     for i in 0..26 {
         buffer[i] = prefix_bytes[i];
@@ -616,10 +682,18 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
     }
 
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
+```
 
+Handle message lengths up to 999, and fail if it's more than that. I added this code, even though the message length is a constant, because it makes it easier to change it. On a production system you'd probably just assume `MESSAGE_LENGTH` doesn't change for the sake of better performances
+
+```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
 }
+```
 
+Use the Ethereum standard `keccak256` function.
+
+```rust
 fn signatureToAddressAndHash(
         message: str<MESSAGE_LENGTH>, 
         pubKeyX: [u8; 32],
@@ -627,10 +701,24 @@ fn signatureToAddressAndHash(
         signature: [u8; 64]
     ) -> (Field, [u8; 32])
 {
+```
+
+This function verifies the signature, which requires the message hash. It then provides us with the address that signed it, and the messge hash.
+
+
+```rust
     let hash = hashMessage(message);
 
     (
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
+```
+    
+This is similar to [Solidity's `ecrecover`](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), with two important differences:
+
+- If the signature is not valid, the call fails an `assert` and the program is aborted.
+- While the public key can be recovered from the signature and the hash, this is processing that can be done externally and therefore is not worth doing inside the zero-knowledge proof. If somebody tries to cheat us here, the signature verification will fail.
+
+```rust
         hash
     )
 }
@@ -641,40 +729,41 @@ fn main(
         message: str<MESSAGE_LENGTH>, 
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],        
-        signature: [u8; 64],
+        signature: [u8; 64],        
     ) -> pub (
-        Field,  // Hash of new accounts array
         Field,  // Hash of old accounts array
+        Field,  // Hash of new accounts array
         [u8; 32], // Transaction hash (hash of the message)
     )
+```
+
+Finally, we reach the `main` function. We need to prove that we have a transaction that validly change the accounts has from the old value to the new one. We also need to prove that it has this specific transaction hash, so the person who sent it will know their transaction has been processed.
+
+```rust
 {
     let mut txn = readTransferTxn(message);
+```
 
+We need `txn` to be mutable because we don't read the from address from the transaction, we read it from the signature. 
+
+```rust
     let (fromAddress, txnHash) = signatureToAddressAndHash(
         message,
         pubKeyX,
         pubKeyY,
         signature);
 
-    txn.from = fromAddress;
+    txn.from = fromAddress;    
 
     let newAccounts = apply_transfer_txn(accounts, txn);
 
     (
-        hash_accounts(newAccounts),
         hash_accounts(accounts),
+        hash_accounts(newAccounts),        
         txnHash
     )
 }
 
-
-// #[test]
-// fn test_main() {
-//    main(1, 2);
-
-    // Uncomment to make test fail
-    // main(1, 1);
-// }
 ```
 
 
