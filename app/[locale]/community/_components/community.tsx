@@ -160,10 +160,12 @@ const CommunityPage = () => {
     <Page>
       <HubHero {...heroContent} />
       <Divider />
-      <Flex className="-mt-px h-full w-full flex-row-reverse items-center border-b border-b-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:py-0 lg:ps-8 dark:bg-[#293233]">
-        <Content>
-          <Flex className="mb-8 flex-col items-center">
-            <H2>{t("page-community-why-get-involved-title")}</H2>
+      <Flex className="-mt-px w-full flex-row-reverse items-center border-b border-b-border-high-contrast py-8 ps-0 lg:py-0 lg:ps-8">
+        <div className="mb-12 w-full px-8 py-4">
+          <Flex className="flex-col items-center">
+            <H2 className="lg:text-4xl">
+              {t("page-community-why-get-involved-title")}
+            </H2>
           </Flex>
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
@@ -176,7 +178,7 @@ const CommunityPage = () => {
               />
             ))}
           </CardContainer>
-        </Content>
+        </div>
       </Flex>
       <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
         <div className="w-full px-4 py-4 lg:px-8">
@@ -320,7 +322,7 @@ const CommunityPage = () => {
             descriptionKey="page-community:page-community-explore-dapps-description"
           >
             <div>
-              <ButtonLink href="/dapps/">
+              <ButtonLink href="/apps/">
                 {t("page-community-explore-dapps")}
               </ButtonLink>
             </div>

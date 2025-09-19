@@ -1,12 +1,12 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { FaGithub } from "react-icons/fa"
 
 import { QuizKey, QuizStatus } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import Github from "@/components/icons/github.svg"
 import MainArticle from "@/components/MainArticle"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import QuizzesList from "@/components/Quiz/QuizzesList"
@@ -51,73 +51,75 @@ const QuizzesPage = () => {
   )
 
   return (
-    <MainArticle>
-      <HubHero
-        title={t("common:quizzes-title")}
-        description={t("quizzes-subtitle")}
-        header={t("test-your-knowledge")}
-        heroImg={HeroImage}
-      />
-      <QuizzesModal
-        isQuizModalOpen={isOpen}
-        onQuizModalOpenChange={setValue}
-        quizStatus={quizStatus}
-      >
-        <QuizWidget
-          quizKey={currentQuiz}
-          currentHandler={setCurrentQuiz}
-          statusHandler={setQuizStatus}
-          updateUserStats={updateUserStats}
+    <>
+      <MainArticle>
+        <HubHero
+          title={t("common:quizzes-title")}
+          description={t("quizzes-subtitle")}
+          header={t("test-your-knowledge")}
+          heroImg={HeroImage}
         />
-      </QuizzesModal>
-      <div className="mb-12 lg:px-8 lg:py-4">
-        <Flex className="gap-x-20 max-lg:flex-col-reverse">
-          <Stack className="flex-1 gap-10">
-            <div>
-              <QuizzesList
-                content={ethereumBasicsQuizzes}
-                headingId={t("basics")}
-                descriptionId={t("basics-description")}
-                {...commonQuizListProps}
-              />
-              <QuizzesList
-                content={usingEthereumQuizzes}
-                headingId={t("using-ethereum")}
-                descriptionId={t("using-ethereum-description")}
-                {...commonQuizListProps}
+        <QuizzesModal
+          isQuizModalOpen={isOpen}
+          onQuizModalOpenChange={setValue}
+          quizStatus={quizStatus}
+        >
+          <QuizWidget
+            quizKey={currentQuiz}
+            currentHandler={setCurrentQuiz}
+            statusHandler={setQuizStatus}
+            updateUserStats={updateUserStats}
+          />
+        </QuizzesModal>
+        <div className="mb-12 lg:px-8 lg:py-4">
+          <Flex className="gap-x-20 max-lg:flex-col-reverse">
+            <Stack className="flex-1 gap-10">
+              <div>
+                <QuizzesList
+                  content={ethereumBasicsQuizzes}
+                  headingId={t("basics")}
+                  descriptionId={t("basics-description")}
+                  {...commonQuizListProps}
+                />
+                <QuizzesList
+                  content={usingEthereumQuizzes}
+                  headingId={t("using-ethereum")}
+                  descriptionId={t("using-ethereum-description")}
+                  {...commonQuizListProps}
+                />
+              </div>
+              <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
+                <div className="max-xl:text-center">
+                  <p className="font-bold">{t("want-more-quizzes")}</p>
+                  <p>{t("contribute")}</p>
+                </div>
+                <ButtonLink
+                  href="/contributing/quizzes/"
+                  variant="outline"
+                  hideArrow
+                  onClick={handleGHAdd}
+                >
+                  <HStack className="gap-0">
+                    <Github className="me-2 text-2xl text-body" />
+                    {t("add-quiz")}
+                  </HStack>
+                </ButtonLink>
+              </Flex>
+            </Stack>
+            <div className="flex-1">
+              <QuizzesStats
+                averageScoresArray={userStats.average}
+                completedQuizzes={userStats.completed}
+                totalCorrectAnswers={userStats.score}
               />
             </div>
-            <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
-              <div className="max-xl:text-center">
-                <p className="font-bold">{t("want-more-quizzes")}</p>
-                <p>{t("contribute")}</p>
-              </div>
-              <ButtonLink
-                href="/contributing/quizzes/"
-                variant="outline"
-                hideArrow
-                onClick={handleGHAdd}
-              >
-                <HStack className="gap-0">
-                  <FaGithub className="me-2 size-6 text-body" />
-                  {t("add-quiz")}
-                </HStack>
-              </ButtonLink>
-            </Flex>
-          </Stack>
-          <div className="flex-1">
-            <QuizzesStats
-              averageScoresArray={userStats.average}
-              completedQuizzes={userStats.completed}
-              totalCorrectAnswers={userStats.score}
-            />
-          </div>
-        </Flex>
-      </div>
-      <div className="w-full px-8 py-4">
-        <FeedbackCard />
-      </div>
-    </MainArticle>
+          </Flex>
+        </div>
+        <div className="w-full px-8 py-4">
+          <FeedbackCard />
+        </div>
+      </MainArticle>
+    </>
   )
 }
 

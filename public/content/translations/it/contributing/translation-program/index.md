@@ -20,7 +20,7 @@ Il Programma di Traduzione di ethereum.org è aperto e tutti possono contribuire
 4. Le traduzioni automatiche non saranno approvate.
 5. Tutte le traduzioni sono revisionate prima di essere aggiunte al sito, quindi vi sarà un breve ritardo prima che le tue traduzioni siano visibili a tutti.
 
-_Unisciti a [Discord di ethereum.org](/discord/) per collaborare alle traduzioni, fare domande, condividere feedback e idee, o unirsi a un gruppo di traduzione._
+_Unisciti a [Discord di ethereum.org](https://discord.gg/ethereum-org) per collaborare alle traduzioni, fare domande, condividere feedback e idee, o unirsi a un gruppo di traduzione._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Inizia a tradurre
@@ -36,9 +36,9 @@ Leggi di più sulla [missione e visione](/contributing/translation-program/missi
 
 ### I nostri progressi finora {#our-progress}
 
-- [**Oltre 6.000** traduttori](/contributing/translation-program/contributors/)
-- **62** lingue sul sito
-- [**3 milioni** di parole tradotte nel 2023](/contributing/translation-program/acknowledgements/)
+- [**Oltre 6.900** traduttori](/contributing/translation-program/contributors/)
+- **68** lingue sul sito
+- [**2,89 milioni** di parole tradotte nel 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

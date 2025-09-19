@@ -1,16 +1,25 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
+
+import { SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
-import { getPostSlugs } from "@/lib/utils/md"
+import { getLayoutFromSlug } from "@/lib/utils/layout"
+import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
+
+import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
@@ -19,35 +28,18 @@ import { getMdMetadata } from "@/lib/md/metadata"
 
 const loadData = dataLoader([["gfissues", fetchGFIs]])
 
-function getLayoutFromSlug(slug: string) {
-  if (slug.includes("developers/docs")) {
-    return "docs"
-  }
-
-  if (slug.includes("developers/tutorials")) {
-    return "tutorial"
-  }
-
-  return "static"
-}
-
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<SlugPageParams>
 }) {
   const { locale, slug: slugArray } = await params
 
   // Check if this specific path is in our valid paths
   const validPaths = await generateStaticParams()
-  const isValidPath = validPaths.some(
-    (path) =>
-      path.locale === locale && path.slug.join("/") === slugArray.join("/")
-  )
+  const isValidPath = checkPathValidity(validPaths, await params)
 
-  if (!isValidPath) {
-    notFound()
-  }
+  if (!isValidPath) notFound()
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -63,12 +55,14 @@ export default async function Page({
     lastEditLocaleTimestamp,
     isTranslated,
     contributors,
+    timeToRead,
   } = await getPageData({
     locale,
     slug,
     // TODO: Address component typing error here (flip `FC` types to prop object types)
     // @ts-expect-error Incompatible component function signatures
-    components: { ...mdComponents, ...componentsMapping },
+    baseComponents: mdComponents,
+    componentsMapping,
     scope: {
       gfissues,
     },
@@ -89,45 +83,70 @@ export default async function Page({
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <Layout
+    <>
+      <SlugJsonLD
+        locale={locale}
         slug={slug}
         frontmatter={frontmatter}
-        tocItems={tocItems}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        contentNotTranslated={!isTranslated}
         contributors={contributors}
-        // TODO: Remove this once we have a real timeToRead value
-        timeToRead={2}
-      >
-        {content}
-      </Layout>
-    </I18nProvider>
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <Layout
+          slug={slug}
+          frontmatter={frontmatter}
+          tocItems={tocItems}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          contentNotTranslated={!isTranslated}
+          contributors={contributors}
+          timeToRead={Math.round(timeToRead.minutes)}
+        >
+          {content}
+        </Layout>
+      </I18nProvider>
+    </>
   )
 }
 
 export async function generateStaticParams() {
-  const slugs = await getPostSlugs("/")
+  try {
+    const slugs = await getPostSlugs("/")
 
-  return LOCALES_CODES.flatMap((locale) =>
-    slugs.map((slug) => ({
-      slug: slug.split("/").slice(1),
-      locale,
-    }))
-  )
+    return LOCALES_CODES.flatMap((locale) =>
+      slugs.map((slug) => ({
+        slug: slug.split("/").slice(1),
+        locale,
+      }))
+    )
+  } catch (error) {
+    // If content directory doesn't exist (e.g., in Netlify serverless environment),
+    // return empty array to allow ISR to handle all routes dynamically
+    console.warn(
+      "Content directory not found, enabling full dynamic routing:",
+      error
+    )
+    return []
+  }
 }
-
-export const dynamicParams = false
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<SlugPageParams>
 }) {
   const { locale, slug } = await params
 
-  return await getMdMetadata({
-    locale,
-    slug,
-  })
+  try {
+    return await getMdMetadata({
+      locale,
+      slug,
+    })
+  } catch (error) {
+    const t = await getTranslations({ locale, namespace: "common" })
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
+  }
 }

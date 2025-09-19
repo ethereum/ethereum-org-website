@@ -115,7 +115,7 @@ const DataTable = <TData, TValue>({
 
   return (
     <div className="relative">
-      <div className="sticky top-[76px] z-10 w-full border-b border-primary bg-background">
+      <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
         <Table {...props}>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -137,7 +137,7 @@ const DataTable = <TData, TValue>({
       </div>
       <Table {...props}>
         <TableBody
-          className={`duration-25 transition-opacity ${
+          className={`transition-opacity duration-75 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >

@@ -72,7 +72,7 @@ Mar gheall ar uasghrádú Shanghai/Capella bhíothas in ann ETH a bhí i ngeall 
 
 Is é staid chuntas an bhailíochtóra féin a chinneann an bhfuil bailíochtóir áirithe incháilithe le haghaidh aistarraingthe nó nach bhfuil. Níl aon ionchur úsáideora ag teastáil ag aon am ar leith le cinneadh cé acu ar cheart nó nár cheart go dtionscnófaí aistarraingt cuntais – déantar an próiseas iomlán go huathoibríoch trí chiseal comhthola ar lúb leanúnach.
 
-### An bhfuil tú níos mó d’fhoghlaimeoir amhairc? {#visual-learner}
+### An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
 
 Breathnaigh ar an míniú seo ar aistarraingtí geallchuir Ethereum ag Finematics:
 
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Má tá tú mar chuid de <a href="/staking/pools/">linn geallchuir</a> nó má tá comharthaí geallta agat, ba cheart duit seiceáil le do sholáthraí le haghaidh tuilleadh sonraí faoin gcaoi a láimhseáiltear aistarraingtí geallchuir, toisc go n-oibríonn gach seirbhís ar bhealach difriúil.
+Má tá tú mar chuid de [linn geallchuir](/staking/pools/) nó má tá comharthaí geallta agat, ba cheart duit seiceáil le do sholáthraí le haghaidh tuilleadh sonraí faoin gcaoi a láimhseáiltear aistarraingtí geallchuir, toisc go n-oibríonn gach seirbhís ar bhealach difriúil.
 
-Go ginearálta, ba cheart go mbeadh cead ag úsáideoirí a ETH bunaidh atá geallta a éileamh ar ais, nó an soláthraí geallchuir a úsáideann siad a athrú. Má tá comhthiomsú ar leith ag dul i méid ró-mhór, is féidir cistí a fhágáil, a fhuascailt agus a chur i ngeall arís le <a href="https://rated.network/">soláthraí níos lú</a>. Nó, má tá go leor ETH carntha agat d’fhéadfá <a href="/staking/solo/">geallchur a dhéanamh ón mbaile</a>.
+Go ginearálta, ba cheart go mbeadh cead ag úsáideoirí a ETH bunaidh atá geallta a éileamh ar ais, nó an soláthraí geallchuir a úsáideann siad a athrú. Má tá comhthiomsú ar leith ag dul i méid ró-mhór, is féidir cistí a fhágáil, a fhuascailt agus a chur i ngeall arís le <a href="https://rated.network/">soláthraí níos lú</a>. Nó, má tá go leor ETH carntha agat d’fhéadfá [geallchur a dhéanamh ón mbaile](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Ní féidir. A luaithe a bheidh bailíochtóir imithe agus a iarmhéid iomlán a
 
 - [Aistarraingtí ón gCeap Lainseála Geallchuir](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: aistarraingtí brú slabhra beacon mar oibríochtaí](https://eips.ethereum.org/EIPS/eip-4895)
-- [Tréadaithe Cat Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Aistarraingt ETH Geallta (Tástáil) le Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: aistarraingtí brú slabhra Beacon mar oibríochtaí le Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Iarmhéid Éifeachtach an Bhailíochtóra a Thuiscint](https://www.attestant.io/posts/understanding-validator-effective-balance/)

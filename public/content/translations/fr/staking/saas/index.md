@@ -86,7 +86,7 @@ En utilisant un fournisseur SaaS, vous confiez l'exploitation de votre nœud à 
 
 Une fois le processus de coupure ou de sortie terminé, ces fonds seront transférés à l'adresse de retrait assignée au validateur. Cela nécessite de fournir une adresse de retrait à activer. Il se peut que l'adresse de retrait ait été fournie sur dépôt initial. Sinon, les clés de retrait du validateur devront être utilisées pour signer un message indiquant une adresse de retrait. Si aucune adresse de retrait n'a été fournie, les fonds resteront verrouillés jusqu'à ce qu'ils soient fournis.
 
-Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de détails sur n'importe quelles garanties ou options d'assurance ainsi que des instructions sur la façon de fournir une adresse de retrait. Si vous préférez contrôler complètement la configuration de votre validateur, <a href="/staking/solo/">apprenez-en plus sur la façon de miser votre ETH</a> de manière individuelle.
+Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de détails sur n'importe quelles garanties ou options d'assurance ainsi que des instructions sur la façon de fournir une adresse de retrait. Si vous préférez contrôler complètement la configuration de votre validateur, [apprenez-en plus sur la façon de miser votre ETH](/staking/solo/) de manière individuelle.
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}

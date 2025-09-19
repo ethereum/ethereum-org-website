@@ -25,7 +25,7 @@ Uzamykatelé z domova jsou zodpovědní za provoz hardwaru potřebného ke spuš
 
 Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
 
-## Proč stakovat z domova? {#why-stake-solo}
+## Proč uzamykat z domova? {#why-stake-solo}
 
 Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
 
@@ -55,10 +55,10 @@ Vyžaduje také velmi základní nastavení hardwaru a určité porozumění min
 <ExpandableCard title="Bezpečná správa klíčů" eventCategory="SoloStaking" eventName="clicked secure key management">
 Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset vygenerovat klíče speciálně pro váš validátor. Musíte rozumět tomu, jak uchovat všechny počáteční fráze nebo privátní klíče v bezpečí.{' '}
 
-<a href="/security/">Zabezpečení Etherea a prevence podvodů</a>
+[Zabezpečení Etherea a prevence podvodů](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Údržba" eventCategory="SoloStaking" eventName="clicked maintenance">
 Hardware občas selže, dojde k chybě síťových připojení a klientský software občas potřebuje upgrade. Údržba uzlů je nevyhnutelná a občas bude vyžadovat vaši pozornost. Budete si chtít být jisti, že budete informováni o všech očekávaných upgradech sítě nebo jiných důležitých upgradech klientů.
 </ExpandableCard>
 
@@ -136,9 +136,9 @@ Toto je několik nejčastějších otázek týkajících se vkládání, které 
 <ExpandableCard title="Mohu vložit více než 32 ETH?">
 Každý pár klíčů spojený s validátorem vyžaduje k aktivaci přesně 32 ETH. Více ETH uložených na jednu sadu klíčů nezvyšuje potenciál odměn, protože každý validátor je omezen na <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">efektivní zůstatek</a> 32 ETH. To znamená, že vytyčování se provádí ve 32 krocích ETH, z nichž každý má svou vlastní sadu klíčů a zůstatek.
 
-Nevkládejte více než 32 ETH na jeden validátor. Nezvýší to vaše odměny. Pokud byla pro validátor nastavena adresa pro výběr, přebytečné prostředky nad 32 ETH budou automaticky vybrány na tuto adresu během příští <a href="/staking/withdrawals/#validator-sweeping">kontroly validátoru</a>.
+Nevkládejte více než 32 ETH na jeden validátor. Nezvýší to vaše odměny. Pokud byla pro validátor nastavena adresa pro výběr, přebytečné prostředky nad 32 ETH budou automaticky vybrány na tuto adresu během příští [kontroly validátoru](/staking/withdrawals/#validator-sweeping).
 
-Pokud se vám uzamčení z domova zdá příliš náročné, zvažte použití poskytovatele typu <a href="/staking/saas/">uzamčení-jako-služba</a>, nebo pokud pracujete s méně než 32 ETH, koukněte se na <a href="/staking/pools/">vkladové fondy</a>.
+Pokud se vám uzamčení z domova zdá příliš náročné, zvažte použití poskytovatele typu [uzamčení-jako-služba](/staking/saas/), nebo pokud pracujete s méně než 32 ETH, koukněte se na [vkladové fondy](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Budu potrestán, když přejdu offline? (ve zkratce: Ne.)">
@@ -200,7 +200,6 @@ Chcete-li odemknout a získat zpět celý zůstatek, musíte také dokončit pro
 - [Pomáháme rozmanitosti klientů](https://www.attestant.io/posts/helping-client-diversity/) – _Jim McDonald 2022_
 - [Klientská diverzita na konsensuální vrstvě Etherea](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022_
 - [Jak na to: Nakupovat hardware validátoru Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
-- [Krok za krokem: Jak se připojit k testovací síti Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _ Butta_
 - [Tipy pro prevenci trestu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020 _
 
 <QuizWidget quizKey="staking-solo" />

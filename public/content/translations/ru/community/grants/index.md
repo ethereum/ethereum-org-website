@@ -31,7 +31,7 @@ lang: ru
 - [Организация грантов экосистемы Lido (LEGO)](https://lido.fi/lego): _финансовая экосистема [Lido](https://lido.fi/)._
 - [ Программа MetaMask](https://metamaskgrants.org/): _DAO по выдаче грантов под руководством сотрудников [MetaMask](https://metamask.io/)._
 - [Программа грантов SKALE Network](https://skale.space/developers#grants): _экосистема [SKALE Network](https://skale.space/)._
-- [Программа грантов фонда Swarm](https://my.ethswarm.org/grants) — _экосистема [фонда Swarm](https://www.ethswarm.org/)_
+- [Программа грантов фонда Swarm](https://my.ethswarm.org) — _экосистема [фонда Swarm](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/) — _экосистема [Graph](https://thegraph.com/)_
 - [Программа грантов Uniswap](https://www.uniswapfoundation.org/approach) — _сообщество [Uniswap](https://uniswap.org/)_
 

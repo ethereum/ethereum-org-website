@@ -10,7 +10,7 @@ Dalam konteks [bukti kerja](/developers/docs/consensus-mechanisms/pow/), nilai m
 
 ## Prasyarat {#prerequisites}
 
-Pastikan Anda telah mengetahui [transaksi](/developers/docs/transactions/), [blok](/developers/docs/blocks/), [gas](/developers/docs/gas/), dan [penambangan](/developers/docs/consensus-mechanisms/pow/mining/). Pengetahuan tentang [dapp](/dapps/) dan [DeFi](/defi/) juga membantu untuk memahami konsep ini.
+Pastikan Anda telah mengetahui [transaksi](/developers/docs/transactions/), [blok](/developers/docs/blocks/), [gas](/developers/docs/gas/), dan [penambangan](/developers/docs/consensus-mechanisms/pow/mining/). Pengetahuan tentang [dapp](/apps/) dan [DeFi](/defi/) juga membantu untuk memahami konsep ini.
 
 ## Ekstraksi MEV {#mev-extraction}
 
@@ -115,7 +115,6 @@ Seiring pertumbuhan dan peningkatan kepopuleran DeFi, MEV mungkin akan segera me
 ## Sumber daya terkait {#related-resources}
 
 - [GitHub Flashbot](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dasbor dan penjelajah transaksi langsung untuk transaksi MEV_
 
 ## Bacaan lebih lanjut {#further-reading}
 

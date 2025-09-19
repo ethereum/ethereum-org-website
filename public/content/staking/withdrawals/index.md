@@ -13,10 +13,6 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-<UpgradeStatus dateKey="page-staking-withdrawals-when">
-Staking withdrawals were enabled with the Shanghai/Capella upgrade which occurred on April 12, 2023.&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More about Shanghai/Capella</a>
-</UpgradeStatus>
-
 **Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
 **Reward payments of excess balance** over 32 ETH will automatically and regularly be sent to a withdrawal address linked to each validator, once provided by the user. Users can also **exit staking entirely**, unlocking their full validator balance.
@@ -59,9 +55,9 @@ The process of a validator exiting from staking takes variable amounts of time, 
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a>.
 
-## When are staking withdrawals enabled? {#when}
+## When were staking withdrawals enabled? {#when}
 
-Staking withdrawals are live! Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on April 12, 2023.
+Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on** April 12, 2023**.
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
@@ -153,9 +149,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-If you are part of a <a href="/staking/pools/">staking pool</a> or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
+If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
-In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a <a href="https://rated.network/">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.
+In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a <a href="https://rated.network/">smaller provider</a>. Or, if you've accumulated enough ETH you could [stake from home](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +208,6 @@ No. Once a validator has exited and its full balance has been withdrawn, any add
 
 - [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

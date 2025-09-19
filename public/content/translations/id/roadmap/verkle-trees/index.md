@@ -60,7 +60,7 @@ Jaringan percobaan pohon Verkle sudah aktif dan berjalan, tetapi masih ada pemba
 - [Guillaume Ballet menjelaskan pohon verkle di ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Cara pohon Verkle menjadikan Ethereum ramping dan efektif" oleh Guillaume Ballet di Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam tentang klien tanpa keadaan dari ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest menjelaskan pohon Verkle dan kondisi tanpa keadaan di podcast Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest menjelaskan pohon Verkle dan kondisi tanpa keadaan di podcast Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin tentang pohon Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist tentang pohon Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Dokumentasi EIP pohon Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

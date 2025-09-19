@@ -19,7 +19,7 @@ Iji gosi ihe tokin adigboloja bụ, yana otu e si amata ha, anyị ga-eleba anya
 title="Kedu ihe bụ ARB?"
 contentPreview=''>
 
-Arbitrum bụ otu na-etolite ma na-ejikwa <a href="/developers/docs/scaling/optimistic-rollups/">atụmatụ nwere nchekwube</a>. Na mbụ, a haziri Arbitrum dị ka ụlọ ọrụ na-erite uru, mana e mesịa mee ka ọ nọrọ n'etiti. Dịka usoro nke ahụ, ha nyere <a href="/dao/#token-based-membership">tokin gọọmenti nke e nwere ike iregharị</a>.
+Arbitrum bụ otu na-etolite ma na-ejikwa [atụmatụ nwere nchekwube](/developers/docs/scaling/optimistic-rollups/). Na mbụ, a haziri Arbitrum dị ka ụlọ ọrụ na-erite uru, mana e mesịa mee ka ọ nọrọ n'etiti. Dịka usoro nke ahụ, ha nyere [tokin gọọmenti nke e nwere ike iregharị](/dao/#token-based-membership).
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Ihe niile maka Ethereum bụ ọdịịrịonwe. Nke a pụtara na o nweghị ik
 title="What are smart contracts?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Ngwa kọmputa</a> bụ ngwaọrụ kọmputa na-arụ ọrụ na blọkchen Ethereum. A na-emejuputa tokin ERC-20 ọ bụla, iji maa atụ, dị ka nkwekọrịta ngwa kọmputa.
+[Ngwa kọmputa](/developers/docs/smart-contracts/) bụ ngwaọrụ kọmputa na-arụ ọrụ na blọkchen Ethereum. A na-emejuputa tokin ERC-20 ọ bụla, iji maa atụ, dị ka nkwekọrịta ngwa kọmputa.
 
 </ExpandableCard>
 

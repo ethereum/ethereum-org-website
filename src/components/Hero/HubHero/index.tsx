@@ -1,3 +1,5 @@
+import { ReactElement } from "react"
+
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
@@ -6,14 +8,17 @@ import { Stack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 
-export type HubHeroProps = Omit<CommonHeroProps, "breadcrumbs" | "blurDataURL">
-
+export type HubHeroProps = Omit<
+  CommonHeroProps,
+  "breadcrumbs" | "blurDataURL"
+> & { className?: string }
 const HubHero = ({
   heroImg,
   title,
   header,
   description,
   buttons,
+  className,
 }: HubHeroProps) => {
   if (buttons && buttons.length > 2) {
     throw new Error(
@@ -22,7 +27,7 @@ const HubHero = ({
   }
 
   return (
-    <div className="relative">
+    <div className={cn("relative", className)}>
       <Image
         src={heroImg}
         alt=""
@@ -33,6 +38,7 @@ const HubHero = ({
         className="h-[192px] w-screen object-cover md:h-[256px] lg:h-[320px] xl:h-[576px] 2xl:h-[672px]"
       />
       <Stack
+        data-label="hero-content"
         className={cn(
           "gap-4 p-4 lg:p-8",
           "text-center xl:text-start",
@@ -46,7 +52,10 @@ const HubHero = ({
         )}
       >
         {title ? (
-          <h1 className="text-md font-normal uppercase text-body-medium">
+          <h1
+            data-label="breadcrumb"
+            className="text-md font-normal uppercase text-body-medium"
+          >
             {title}
           </h1>
         ) : null}
@@ -67,6 +76,13 @@ const HubHero = ({
         >
           {buttons?.map((button, idx) => {
             if (!button) return
+
+            // If it's a React element, render it directly
+            if (typeof button === "object" && "type" in button) {
+              return <div key={idx}>{button as ReactElement}</div>
+            }
+
+            // Otherwise, render as button props
             return <CallToAction key={idx} index={idx} {...button} />
           })}
         </Stack>

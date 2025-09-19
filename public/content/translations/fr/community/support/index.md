@@ -20,7 +20,7 @@ Comprendre la nature décentralisée d’Ethereum est essentiel car **toute pers
   Apprendre les fondamentaux d'Ethereum
 </DocLink>
 
-Malgré le manque d'assistance officielle, de nombreux groupes, communautés et projets à travers l'écosystème Ethereum sont heureux de vous aider. Vous pouvez trouver beaucoup d'informations et de ressources utiles sur cette page. Vous avez d'autres questions ? Rejoignez le [Discord ethereum.org](/discord/) et nous essaierons de vous aider.
+Malgré le manque d'assistance officielle, de nombreux groupes, communautés et projets à travers l'écosystème Ethereum sont heureux de vous aider. Vous pouvez trouver beaucoup d'informations et de ressources utiles sur cette page. Vous avez d'autres questions ? Rejoignez le [Discord ethereum.org](https://discord.gg/ethereum-org) et nous essaierons de vous aider.
 
 ## Questions fréquemment posées {#faq}
 
@@ -57,7 +57,6 @@ Le développement d'une application décentralisée peut être difficile. Voici 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

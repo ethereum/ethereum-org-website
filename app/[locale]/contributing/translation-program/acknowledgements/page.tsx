@@ -1,31 +1,47 @@
-import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import Acknowledgements from "./_components/acknowledgements"
-
-import { loadMessages } from "@/i18n/loadMessages"
+import AcknowledgementsJsonLD from "./page-jsonld"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/contributing/translation-program/acknowledgements"
   )
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "contributing/translation-program/acknowledgements",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <Acknowledgements />
-    </I18nProvider>
+    <>
+      <AcknowledgementsJsonLD locale={locale} contributors={contributors} />
+      <I18nProvider locale={locale} messages={messages}>
+        <Acknowledgements />
+      </I18nProvider>
+    </>
   )
 }
 

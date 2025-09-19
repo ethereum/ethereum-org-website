@@ -66,6 +66,6 @@ EIP відіграють першочергову роль у фіксуванн
 
 <cite class="citation">
 
-Вміст сторінки, частково взятий з публікації [Керування розробкою протоколу Ethereum і координація оновлення мережі](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) авторства Гадсона Джеймсона
+Вміст сторінки, частково взятий з публікації [Керування розробкою протоколу Ethereum і координація оновлення мережі](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) авторства Гадсона Джеймсона
 
 </cite>

@@ -92,6 +92,6 @@ _データの可用性やセキュリティにイーサリアムを使用しな�
 
 ethereum.orgにレイヤー2の追加をご希望の場合は、GitHubで問題を作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   問題の作成
 </ButtonLink>

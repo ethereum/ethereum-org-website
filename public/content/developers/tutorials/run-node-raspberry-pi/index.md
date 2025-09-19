@@ -1,5 +1,5 @@
 ---
-title: How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card
+title: Run an Ethereum node on Raspeberry Pi 4
 description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node + validator
 author: "EthereumOnArm"
 tags: ["clients", "execution layer", "consensus layer", "nodes"]

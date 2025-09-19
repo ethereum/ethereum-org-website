@@ -66,6 +66,6 @@ Predlog za izboljšanje Ethereuma lahko ustvari kdorkoli. Pred oddajo osnutka pr
 
 <cite class="citation">
 
-Vsebino strani delno zagotavlja [Upravljanje razvoja Ethereum protokola in koordinacija nadgradnje omrežja](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) Hudsona Jamesona
+Vsebino strani delno zagotavlja [Upravljanje razvoja Ethereum protokola in koordinacija nadgradnje omrežja](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) Hudsona Jamesona
 
 </cite>
