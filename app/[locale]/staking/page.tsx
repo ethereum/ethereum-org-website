@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -6,6 +6,7 @@ import {
 } from "next-intl/server"
 
 import {
+  CommitHistory,
   EpochResponse,
   EthStoreResponse,
   Lang,
@@ -14,6 +15,7 @@ import {
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -21,6 +23,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
+import StakingPageJsonLD from "./page-jsonld"
 
 const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
@@ -71,9 +74,27 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getAppPageContributorInfo(
+      "staking",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <StakingPage data={data} />
+      <StakingPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
+      <StakingPage
+        data={data}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
+      />
     </I18nProvider>
   )
 }

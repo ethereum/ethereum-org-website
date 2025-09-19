@@ -1,18 +1,20 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
 
-import { type Params } from "@/lib/types"
+import type { CommitHistory, Lang, Params } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import BugBountiesPage from "./_components/bug-bounty"
+import BugBountyJsonLD from "./page-jsonld"
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
@@ -24,10 +26,24 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/bug-bounty")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getAppPageContributorInfo(
+      "bug-bounty",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <BugBountiesPage />
-    </I18nProvider>
+    <>
+      <BugBountyJsonLD locale={locale} contributors={contributors} />
+      <I18nProvider locale={locale} messages={messages}>
+        <BugBountiesPage
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
+      </I18nProvider>
+    </>
   )
 }
 

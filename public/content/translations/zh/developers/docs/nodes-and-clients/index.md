@@ -191,14 +191,14 @@ EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多�
 
 有多种共识客户端（以前称为“以太坊 2 客户端”）支持[共识升级](/roadmap/beacon-chain/)。 它们负责所有共识相关的逻辑，包括分叉选择算法、处理认证与管理[权益证明](/developers/docs/consensus-mechanisms/pos)奖励及惩罚。
 
-| 客户端                                                           | 语言         | 操作系统：               | 网络                                          |
-| ------------------------------------------------------------- | ---------- | ------------------- | ------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Goerli、Pyrmont、Sepolia、Ropsten 等        |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Sepolia、Ropsten 等         |
-| [Grandine](https://docs.grandine.io/)（测试版）                    | Rust语言     | Linux、Windows、macOS | 信标链、Goerli、Sepolia 等                        |
+| 客户端                                                           | 语言         | 操作系统：               | 网络                                   |
+| ------------------------------------------------------------- | ---------- | ------------------- | ------------------------------------ |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Holesky、Pyrmont、Sepolia 等        |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Pyrmont、Sepolia 等 |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Sepolia 等         |
+| [Grandine](https://docs.grandine.io/)                         | Rust语言     | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
 
 ### Lighthouse {#lighthouse}
 
@@ -222,7 +222,7 @@ Nimbus 是一种共识客户端实现，它用 Nim 语言编写，并依照 Apac
 
 Prysm 是一种功能齐全的开源共识客户端，它用 Go 语言编写，并依照 GPL-3.0 获得许可。 它具有可选的 Web 应用程序用户界面，并将单独质押人和机构用户的用户体验、相关文档和可配置性放在首位。
 
-访问 [Prysm 相关文档](https://docs.prylabs.network/docs/getting-started/)以了解更多信息。
+访问 [Prysm 相关文档](https://prysm.offchainlabs.com/docs/)以了解更多信息。
 
 ### Teku {#teku}
 

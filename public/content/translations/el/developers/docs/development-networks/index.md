@@ -41,17 +41,14 @@ _θα μπορούσατε_ [να εκτελέσετε έναν κόμβο](/dev
 
 Ορισμένοι πελάτες συναίνεσης διαθέτουν ενσωματωμένα εργαλεία για την περιστροφή τοπικών αλυσίδων beacon για δοκιμαστικούς σκοπούς. Οδηγίες για Lighthouse, Nimbus και Lodestar είναι διαθέσιμες:
 
-- [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας το Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Δημόσιες αλυσίδες δοκιμών Ethereum {#public-beacon-testchains}
 
-Υπάρχουν επίσης δύο διατηρούμενες δημόσιες εφαρμογές δοκιμών του Ethereum: το Sepolia και το Hoodi. Το Sepolia είναι το προτεινόμενο τυπικό δίκτυο δοκιμών για την ανάπτυξη εφαρμογών, με ένα κλειστό σύνολο επικυρωτών για γρήγορη συγχρονισμό. Το Hoodi είναι ένα δίκτυο δοκιμών για επικύρωση και αποθήκευση κεφαλαίου, το οποίο χρησιμοποιεί ένα ανοικτό σύνολο επικυρωτών και επιτρέπει δυνητικά σε οποιονδήποτε να επικυρώσει.
+Υπάρχουν επίσης δύο διατηρούμενες δημόσιες εφαρμογές δοκιμών του Ethereum: το Sepolia και το Hoodi. Το προτεινόμενο δίκτυο δοκιμών με μακροπρόθεσμη υποστήριξη είναι το Hoodi, στο οποίο ο καθένας έχει δυνατότητα να επικυρώσει. Το Sepolia χρησιμοποιεί ένα σύνολο επικυρωτών με δικαιώματα, που σημαίνει ότι δεν υπάρχει γενική πρόσβαση σε νέους επικυρωτές σε αυτό το δίκτυο δοκιμών.
 
-- [Πλατφόρμα εκκίνησης αποθήκευσης κεφαλαίου Hoodi](https://hoodi.launchpad.ethereum.org/en/)
-- [Ιστότοπος Sepolia](https://sepolia.dev/)
-- [Ιστότοπος Hoodi](https://hoodi.ethpandaops.io/)
+- [Πλατφόρμα εκκίνησης αποθήκευσης κεφαλαίου Hoodi](https://hoodi.launchpad.ethereum.org/)
 
 ### Πακέτο Kurtosis Ethereum {#kurtosis}
 

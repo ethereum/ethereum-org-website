@@ -20,7 +20,7 @@ El programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 4. No se aprobarán las traducciones automáticas.
 5. Todas las traducciones se corrigen antes de añadirlas al sitio web, por lo que habrá un breve retraso antes de que sus traducciones se publiquen.
 
-_Únase a [ethereum.org Discord](/discord/) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
+_Únase a [ethereum.org Discord](https://discord.gg/ethereum-org) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Empezar a traducir
@@ -36,9 +36,9 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 
 ### Nuestra evolución hasta la fecha {#our-progress}
 
-- [**6000+** traductores](/contributing/translation-program/contributors/)
-- **62** idiomas en vivo en el lugar
-- [**3 millones** de palabras traducidas en 2023](/contributing/translation-program/acknowledgements/)
+- [**más de 6.900** traductores](/contributing/translation-program/contributors/)
+- **68** idiomas localizados en el sitio web
+- [**2,89 millones** de palabras traducidas en 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

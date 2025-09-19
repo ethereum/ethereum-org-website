@@ -46,7 +46,7 @@ The _create-eth-app_ in particular is making use of the new [hooks effects](http
 
 ### ethers.js {#ethersjs}
 
-While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
+While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs.ethers.org/v5/) which is almost out of beta.
 
 ### The Graph {#the-graph}
 
@@ -54,13 +54,13 @@ While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https:/
 
 Usually you would fetch data from your smart contract directly. Want to read the time of the latest trade? Just call `MyContract.methods.latestTradeTime().call()` which fetches the data from an Ethereum node into your dapp. But what if you need hundreds of different data points? That would result in hundreds of data fetches to the node, each time requiring an [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) making your dapp slow and inefficient. One workaround might be a fetcher call function inside your contract that returns multiple data at once. This is not always ideal though.
 
-And then you might be interested in historical data as well. You want to know not only the last trade time, but the times for all trades that you ever did yourself. Use the _create-eth-app_ subgraph package, read the [documentation](https://thegraph.com/docs/define-a-subgraph) and adapt it to your own contracts. If you are looking for popular smart contracts, there may even already be a subgraph. Check out the [subgraph explorer](https://thegraph.com/explorer/).
+And then you might be interested in historical data as well. You want to know not only the last trade time, but the times for all trades that you ever did yourself. Use the _create-eth-app_ subgraph package, read the [documentation](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) and adapt it to your own contracts. If you are looking for popular smart contracts, there may even already be a subgraph. Check out the [subgraph explorer](https://thegraph.com/explorer/).
 
 Once you have a subgraph, it allows you to write one simple query in your dapp that retrieves all the important blockchain data including historical ones that you need, only one fetch required.
 
 ### Apollo {#apollo}
 
-Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), fetching data is as simple as writing a single GraphQl query in your component:
+Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), fetching data is as simple as writing a single GraphQl query in your component:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

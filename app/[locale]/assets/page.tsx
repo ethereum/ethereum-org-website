@@ -1,18 +1,20 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AssetsPage from "./_components/assets"
+import AssetsJsonLD from "./page-jsonld"
 
 export default async function Page({
   params,
@@ -28,10 +30,20 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/assets")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "assets",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <AssetsPage />
-    </I18nProvider>
+    <>
+      <AssetsJsonLD locale={locale} contributors={contributors} />
+      <I18nProvider locale={locale} messages={messages}>
+        <AssetsPage />
+      </I18nProvider>
+    </>
   )
 }
 
@@ -48,6 +60,6 @@ export async function generateMetadata({
     locale,
     slug: ["assets"],
     title: t("page-assets-meta-title"),
-    description: t("page-assets-meta-description"),
+    description: t("page-assets-meta-desc"),
   })
 }

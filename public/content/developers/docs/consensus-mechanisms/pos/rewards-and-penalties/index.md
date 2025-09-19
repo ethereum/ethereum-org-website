@@ -70,7 +70,7 @@ Slashing is a more severe action that results in the forceful removal of a valid
 - By attesting to a block that "surrounds" another one (effectively changing history)
 - By "double voting" by attesting to two candidates for the same block
 
-If these actions are detected, the validator is slashed. This means that 1/32 of their staked ether (up to a maximum of 1 ether) is immediately burned, then a 36 day removal period begins. During this removal period the validator's stake gradually bleeds away. At the mid-point (Day 18) an additional penalty is applied whose magnitude scales with the total staked ether of all slashed validators in the 36 days prior to the slashing event. This means that when more validators are slashed, the magnitude of the slash increases. The maximum slash is the full effective balance of all slashed validators (i.e. if there are lots of validators being slashed they could lose their entire stake). On the other hand, a single, isolated slashing event only burns a small portion of the validator's stake. This midpoint penalty that scales with the number of slashed validators is called the "correlation penalty".
+If these actions are detected, the validator is slashed. This means that 0.0078125 is immediately burned for a 32 ETH validator (scaled linearly with active balance), then a 36 day removal period begins. During this removal period the validator's stake gradually bleeds away. At the mid-point (Day 18) an additional penalty is applied whose magnitude scales with the total staked ether of all slashed validators in the 36 days prior to the slashing event. This means that when more validators are slashed, the magnitude of the slash increases. The maximum slash is the full effective balance of all slashed validators (i.e. if there are lots of validators being slashed they could lose their entire stake). On the other hand, a single, isolated slashing event only burns a small portion of the validator's stake. This midpoint penalty that scales with the number of slashed validators is called the "correlation penalty".
 
 ## Inactivity leak {#inactivity-leak}
 
@@ -84,7 +84,6 @@ The reward, penalty and slashing design of the consensus mechanism encourages in
 - [Incentives in Ethereum's hybrid Casper protocol](https://arxiv.org/pdf/1903.04205.pdf)
 - [Vitalik's annotated spec](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
-- [EIP-7251 Explained: Increasing Maximum Effective Balance For Validators](https://research.2077.xyz/eip-7251_Increase_MAX_EFFECTIVE_BALANCE)
 - [Analysis of slashing penalties under EIP-7251](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Sources_

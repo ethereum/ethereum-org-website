@@ -6,11 +6,11 @@ export const CountdownBanner = () => {
   const [countdown, setCountdown] = useState("")
 
   const translatathonStartDate = useMemo(
-    () => new Date("August 9, 2024 12:00:00 UTC"),
+    () => new Date("August 25, 2025 12:00:00 UTC"),
     []
   )
   const translatathonEndDate = useMemo(
-    () => new Date("August 18, 2024 12:00:00 UTC"),
+    () => new Date("August 31, 2025 12:00:00 UTC"),
     []
   )
 

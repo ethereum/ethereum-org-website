@@ -1,18 +1,20 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CommunityPage from "./_components/community"
+import CommunityJsonLD from "./page-jsonld"
 
 export default async function Page({
   params,
@@ -28,10 +30,20 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "community",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={pickedMessages}>
-      <CommunityPage />
-    </I18nProvider>
+    <>
+      <CommunityJsonLD locale={locale} contributors={contributors} />
+      <I18nProvider locale={locale} messages={pickedMessages}>
+        <CommunityPage />
+      </I18nProvider>
+    </>
   )
 }
 

@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Si forma parte de alguna <a href="/staking/pools/">reserva de participación</a> o tiene tókenes de participación, debería consultarle a su proveedor los detalles de retiradas de participación, pues cada servicio opera de forma distinta.
+Si forma parte de alguna [reserva de participación](/staking/pools/) o tiene tókenes de participación, debería consultarle a su proveedor los detalles de retiradas de participación, pues cada servicio opera de forma distinta.
 
-En general, los usuarios deberían tener la libertad de reclamar sus ETH apostados subyacentes, o cambiar de proveedor de apuestas. Si un grupo en particular se está volviendo demasiado grande, los fondos se pueden cerrar y canjear, y volver a apostarlos con un <a href="https://rated.network/">proveedor más pequeño</a>. O, si ha acumulado suficientes ETH podría <a href="/staking/solo/">apostar desde casa</a>.
+En general, los usuarios deberían tener la libertad de reclamar sus ETH apostados subyacentes, o cambiar de proveedor de apuestas. Si un grupo en particular se está volviendo demasiado grande, los fondos se pueden cerrar y canjear, y volver a apostarlos con un <a href="https://rated.network/">proveedor más pequeño</a>. O, si ha acumulado suficientes ETH podría [apostar desde casa](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ No. Una vez que un validador ha salido y su saldo total se ha retirado, cualquie
 
 - [Retiradas en la plataforma de lanzamiento de participaciones](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: La cadena de baliza impulsa las retiradas como operaciones](https://eips.ethereum.org/EIPS/eip-4895)
-- [ Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Retirada de ETH apostados (Prueba) con Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: La cadena de baliza impulsa retiradas como operaciones con Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Entender el saldo efectivo del validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)

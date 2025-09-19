@@ -397,7 +397,7 @@ sidebarDepth: 1
 
 #### 要約 {#dao-fork-summary}
 
-DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
+DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/learn/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
 
 この行動指針は Ethereum コミュニティの投票で行われました。 ETH 保有者は、 [投票プラットフォーム](http://v1.carbonvote.com/)でトランザクションを通じて投票することができました。 フォークの実行は、投票の 85%以上に支持されました。
 

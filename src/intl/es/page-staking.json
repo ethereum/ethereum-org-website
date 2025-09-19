@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Visite Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Índice del validador",
   "comp-withdrawal-credentials-error": "¡Vaya! Vuelva a comprobar el número de índice del validador e inténtelo de nuevo.",
-  "comp-withdrawal-credentials-upgraded-1": "El índice de validador {{validatorIndex}} está listo para empezar a recibir recompensas!",
+  "comp-withdrawal-credentials-upgraded-1": "El índice de validador {validatorIndex} está listo para comenzar a recibir recompensas",
   "comp-withdrawal-credentials-upgraded-2": "Credenciales de retirada vinculadas a la dirección de ejecución:",
   "comp-withdrawal-credentials-not-upgraded-1": "Este validador necesita una actualización.",
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Este validador de la red de pruebas Holesky necesita ser actualizado.",

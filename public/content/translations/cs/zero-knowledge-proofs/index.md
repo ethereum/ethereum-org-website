@@ -32,11 +32,11 @@ Vraťme se k našemu příkladu: Jediný důkaz, který potřebujete k prokázá
 
 Platby kreditní kartou jsou často viditelné pro více stran, včetně poskytovatele plateb, bank a dalších zainteresovaných stran (např. vládních úřadů). Finanční dohled má sice výhody, například v případě odhalování nezákonné činnosti, ale také narušuje soukromí běžných občanů.
 
-Kryptoměny byly vyvinuty jako nástroj pro uskutečňování soukromých peer-to-peer transakcí. Většina transakcí s kryptoměnami je ale otevřeně viditelná na veřejných blockchainech. Identity uživatelů jsou často pseudonymní a buď záměrně propojeny s identitami v reálném světě (např. zahrnutím ethereovských adres na profily Twitter nebo GitHub), nebo mohou být spojeny s identitami v reálném světě pomocí datové analýzy aktivity uživatele.
+Kryptoměny byly vyvinuty jako nástroj pro uskutečňování soukromých peer-to-peer transakcí. Většina transakcí s kryptoměnami je ale otevřeně viditelná na veřejných blockchainech. Identity uživatelů jsou často pseudonymní a buď záměrně propojeny s identitami v reálném světě (např. zahrnutím ETH adres na profily na Twitteru nebo GitHubu), nebo mohou být spojeny s identitami v reálném světě pomocí datové analýzy aktivity uživatele.
 
 Existují specifické „kryptoměny na ochranu soukromí“ určené pro zcela anonymní transakce. Blockchainy zaměřené na soukromí, jako jsou Zcash a Monero, neuvádí podrobnosti o transakci, včetně adres odesílatele/příjemce, typu finančních prostředků, množství a časové osy transakce.
 
-Díky zahrnutí technologie nulové znalosti umožňují [blockchainové](/glossary/#blockchain) sítě, které se zaměřují na soukromí, [síťovým uzlům](/glossary/#node) ověřovat transakce bez nutnosti přístupu k datům transakcí.
+Díky zahrnutí technologie nulové znalosti umožňují [blockchainové](/glossary/#blockchain) sítě, které se zaměřují na soukromí, [síťovým uzlům](/glossary/#node) ověřovat transakce bez nutnosti přístupu k datům transakcí. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) je příkladem navrženého návrhu, který umožní nativní soukromé převody hodnoty v blockchainu Etherea. Takové návrhy je však obtížné realizovat kvůli kombinaci bezpečnostních, regulačních a uživatelských obav.
 
 **Důkazy s nulovými znalostmi se také používají při anonymizaci transakcí na veřejných blockchainech.** Příkladem je Tornado Cash, decentralizovaná služba bez třetí strany, která uživatelům umožňuje provádět soukromé transakce na Ethereu. Tornado Cash používá důkazy s nulovou znalostí ke skrytí podrobností o transakcích a k zajištění finančního soukromí. Bohužel, protože se jedná o "opt-in" nástroje ochrany osobních údajů, jsou spojovány s nezákonnou činností. Pro vyřešení tohoto problému je třeba, aby se soukromí stalo výchozím nastavením veřejných blockchainů.
 
@@ -58,9 +58,9 @@ Ověřitelný výpočet je další aplikací technologie s nulovou znalostí pro
 
 Ověřitelný výpočet je **zásadní pro zlepšení rychlosti zpracování na blockchain** bez snížení bezpečnosti. Pochopení tohoto principu vyžaduje znalost rozdílů v navrhovaných řešeních pro škálování Etherea.
 
-[Řešení škálování blockchainu](/developers/docs/scaling/#on-chain-scaling), jako je sharding, vyžadují rozsáhlou úpravu základní vrstvy blockchainu. Tento přístup je však velmi složitý a chyby v implementaci mohou podkopat bezpečnostní model Etherea.
+[Řešení škálování blockchainu](/developers/docs/scaling/#onchain-scaling), jako je tříštění, vyžadují rozsáhlou úpravu základní vrstvy blockchainu. Tento přístup je však velmi složitý a chyby v implementaci mohou podkopat bezpečnostní model Etherea.
 
-[Řešení škálování mimo blockchain](/developers/docs/scaling/#off-chain-scaling) nevyžadují přepracování základního protokolu Etherea. Místo toho se spoléhají na outsourcovaný výpočetní model pro zlepšení propustnosti transakcí na základní vrstvě Etherea.
+[Řešení škálování mimo blockchain](/developers/docs/scaling/#offchain-scaling) nevyžadují přepracování základního protokolu Etherea. Místo toho se spoléhají na outsourcovaný výpočetní model pro zlepšení propustnosti transakcí na základní vrstvě Etherea.
 
 V praxi to funguje takto:
 
@@ -70,13 +70,13 @@ V praxi to funguje takto:
 
 Výhodou je, že Ethereum nemusí provádět žádnou exekuci a potřebuje pouze aplikovat výsledky z outsourcovaných výpočtů na svůj stav. To snižuje zahlcení sítě a také zlepšuje rychlost transakcí (protokoly mimo blockchain se optimalizují pro rychlejší exekuci).
 
-Blockchain potřebuje způsob, jak ověřovat transakce externě bez opětovného provádění, jinak dojde ke ztrátě výhody externí exekuce.
+Blockchain potřebuje způsob, jak ověřovat transakce mimo blockchain bez opětovného provádění, jinak dojde ke ztrátě výhody exekuce mimo blockchain.
 
-Zde přichází na řadu ověřitelný výpočet. Když síťový uzel provede transakci mimo Ethereum, předloží důkaz s nulovou znalostí, aby prokázal správnost externí exekuce. Tento důkaz (nazývaný [důkaz platnosti](/glossary/#validity-proof)) zaručuje, že transakce je platná, což umožňuje Ethereu aplikovat výsledek na svůj stav – aniž by čekal, zda tento výsledek někdo zpochybní.
+Zde přichází na řadu ověřitelný výpočet. Když uzel provede transakci mimo Ethereum, předloží důkaz nulové znalosti, aby prokázal správnost exekuce mimo blockchain. Tento důkaz (nazývaný [důkaz platnosti](/glossary/#validity-proof)) zaručuje, že transakce je platná, což umožňuje Ethereu aplikovat výsledek na svůj stav – aniž by čekal, zda tento výsledek někdo zpochybní.
 
 [Rollupy s nulovou znalostí](/developers/docs/scaling/zk-rollups) a [validia](/developers/docs/scaling/validium/) jsou dvě řešení škálování mimo blockchain, která používají důkazy platnosti k zajištění bezpečné škálovatelnosti. Tyto protokoly provádějí tisíce transakcí mimo blockchain a předkládají důkazy k ověření na Ethereu. Tyto výsledky lze použít okamžitě po ověření důkazu, což umožňuje Ethereu zpracovat více transakcí bez zvýšení náročnosti výpočtů na základní vrstvě.
 
-### Snížení úplatkářství a tajných dohod při hlasování {#secure-blockchain-voting}
+### Snížení úplatkářství a tajných dohod při hlasování na blockchainu {#secure-blockchain-voting}
 
 Hlasovací schémata na blockchainu mají spoustu dobrých vlastností: Jsou plně auditovatelná, zabezpečená proti útokům, odolná vůči cenzuře a nemají žádná geografická omezení. Ale nejsou imunní vůči problému **tajné dohody**.
 
@@ -86,13 +86,13 @@ Tajná dohoda, definovaná jako „koordinace za účelem omezení otevřené so
 
 Například [kvadratické mechanismy financování](https://www.radicalxchange.org/concepts/plural-funding/) využívají dary k měření preference veřejně prospěšných projektů. Každý dar se počítá jako „hlas“ pro konkrétní projekt, přičemž projekty, které získají více hlasů, získají více prostředků z odpovídající skupiny.
 
-Díky hlasování na blockchainu je kvadratické financování náchylné k tajným dohodám: Blockchainové transakce jsou veřejné, takže úplatkáři mohou kontrolovat aktivitu úplatníka v řetězci, protože vidí, jak kdo „hlasoval“. Tímto způsobem kvadratické financování přestává být efektivním prostředkem pro alokaci finančních prostředků na základě preferencí komunity.
+Díky hlasování na blockchainu je kvadratické financování náchylné k tajným dohodám: Blockchainové transakce jsou veřejné, takže úplatkáři mohou kontrolovat aktivitu úplatkáře na blockchainu, protože vidí, jak kdo „hlasoval“. Tímto způsobem kvadratické financování přestává být efektivním prostředkem pro alokaci finančních prostředků na základě preferencí komunity.
 
-Novější řešení, jako je MACI (Minimum Anti-Collusion Infrastructure), naštěstí používají důkazy s nulovou znalostí, aby bylo hlasování na blockchainu (např. kvadratické mechanismy financování) odolné vůči úplatkům a tajným dohodám. MACI je sada chytrých kontraktů a skriptů, které umožňují centrálnímu správci (nazývanému „koordinátor“) shromažďovat hlasy a sčítat výsledky, _aniž by odhalovaly_ podrobnosti o tom, jak jednotlivci hlasovali. I tak je možné ověřit, že hlasy byly řádně sečteny, případně potvrdit, že se konkrétní jednotlivec zúčastnil hlasování.
+Novější řešení, jako je MACI (Minimum Anti-Collusion Infrastructure), naštěstí používají důkazy nulové znalosti, aby bylo hlasování na blockchainu (např. kvadratické mechanismy financování) odolné vůči úplatkům a tajným dohodám. MACI je sada chytrých kontraktů a skriptů, které umožňují centrálnímu správci (nazývanému „koordinátor“) shromažďovat hlasy a sčítat výsledky, _aniž by odhalovaly_ podrobnosti o tom, jak jednotlivci hlasovali. I tak je možné ověřit, že hlasy byly řádně sečteny, případně potvrdit, že se konkrétní jednotlivec zúčastnil hlasování.
 
 #### Jak MACI pracuje s důkazy s nulovou znalostí? {#how-maci-works-with-zk-proofs}
 
-Na začátku koordinátor zařadí MACI kontrakt na Ethereum, pté se uživatelé mohou přihlásit k hlasování (registrací svého veřejného klíče do chytrého kontraktu). Uživatelé hlasují zasíláním zpráv zašifrovaných jejich veřejným klíčem do chytrého kontraktu (platný hlas musí být mimo jiné podepsán nejnovějším veřejným klíčem spojeným s identitou uživatele). Poté skončení hlasování koordinátor zpracuje všechny zprávy, sečte hlasy a ověří výsledky na blockchainu.
+Na začátku koordinátor zařadí MACI kontrakt na Ethereum, pté se uživatelé mohou přihlásit k hlasování (registrací svého veřejného klíče do chytrého kontraktu). Uživatelé hlasují zasíláním zpráv zašifrovaných jejich veřejným klíčem do chytrého kontraktu (platný hlas musí být mimo jiné podepsán nejnovějším veřejným klíčem spojeným s identitou uživatele). Poté koordinátor zpracuje všechny zprávy po skončení hlasování, sečte hlasy a ověří výsledky na blockchainu.
 
 V MACI se důkazy s nulovou znalostí používají k zajištění správnosti výpočtu tím, že koordinátorovi znemožní nesprávné zpracování hlasů a sečtení výsledků. Toho je dosaženo tím, že koordinátor musí vygenerovat důkazy ZK-SNARK ověřující, že a) všechny zprávy byly zpracovány správně, b) konečný výsledek odpovídá součtu všech _platných_ hlasů.
 
@@ -104,11 +104,11 @@ MACI tedy i bez sdílení podrobností o hlasech uživatelů (jak je tomu obvykl
 - Alice tajně odešle zašifrovanou transakci, a tím změní veřejný klíč spojený se svou identitou.
 - Alice odešle další (zašifrovanou) zprávu do chytrého kontraktu, čímž hlasuje pro `možnost A` pomocí nového veřejného klíče.
 - Alice ukáže Bobovi transakci, která prokazuje, že hlasovala pro `možnost B` (tato transakce je neplatná, protože veřejný klíč, který pro tento hlas použila, již není spojen s Alicinou identitou v systému)
-- Při zpracovávání zpráv koordinátor přeskočí Alicin hlas pro `možnost B` a započítává pouze hlas pro `možnost A`. Bobův pokus manipulovat s hlasováním pomocí dohody s Alicí selže.
+- Při zpracovávání zpráv koordinátor přeskočí Alicin hlas pro `možnost B` a započítává pouze hlas pro `možnost A`. Proto Bobův pokus manipulovat s hlasováním pomocí tajné dohody s Alicí selže.
 
 Používání MACI _vyžaduje_ víru, že se koordinátor nedomluví s úplatkáři nebo se nepokusí uplatit samotné voliče. Koordinátor může dešifrovat uživatelské zprávy (nezbytné pro vytvoření důkazu), takže pro něj není problém přesně ověřit, jak kdo hlasoval.
 
-Ale v případech, kdy je koordinátor čestný, MACI představuje mocný nástroj pro zaručení poctivosti hlasování v řetězci. To vysvětluje jeho popularitu mezi aplikacemi kvadratického financování (např. [clr.fund](https://clr.fund/#/about/maci)), které do značné míry spoléhají na nedotknutelnost volby každého jednotlivce.
+Ale v případech, kdy je koordinátor čestný, MACI představuje mocný nástroj pro zaručení poctivosti hlasování na blockchainu. To vysvětluje jeho popularitu mezi aplikacemi kvadratického financování (např. [clr.fund](https://clr.fund/#/about/maci)), které do značné míry spoléhají na nedotknutelnost volby každého jednotlivce.
 
 [Zjistěte více o MACI](https://privacy-scaling-explorations.github.io/maci/).
 
@@ -211,4 +211,4 @@ ZK-STARK je považován za imunní vůči hrozbě kvantových počítačů, prot
 - [ZK-STARKs — Vytvořte ověřitelnou důvěru, odolnou dokonce i proti kvantovým počítačům](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Přibližné úvod k tomu, jak fungují zk-SNARKy](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Proč je Zero Knowledge Proof (ZKP) zásadní změnou pro samostatnou identitu](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-
+- [EIP-7503 vysvětleno: Povolení soukromých převodů na Ethereu pomocí důkazů nulové znalosti](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_

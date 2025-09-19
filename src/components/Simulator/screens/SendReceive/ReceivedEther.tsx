@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { MdClose, MdInfo } from "react-icons/md"
+import { Info, X } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -92,12 +92,12 @@ export const ReceivedEther = ({
             exit={{ opacity: 0 }}
             data-testid="received-ether-toast"
           >
-            <MdInfo className="text-xl" />
+            <Info className="text-xl" />
             <p className="m-0 text-xs font-bold">
               You received {displayEth} ETH ({displayUsd})
               {sender ? ` from ${sender}` : ""}!
             </p>
-            <MdClose className="text-xl" onClick={() => setHidden(true)} />
+            <X className="text-xl" onClick={() => setHidden(true)} />
           </motion.div>
         )}
       </AnimatePresence>

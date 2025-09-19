@@ -1,14 +1,15 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
@@ -19,7 +20,9 @@ import { layer2Data } from "@/data/networks/networks"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
+import Layer2PageJsonLD from "./page-jsonld"
 
+import { routing } from "@/i18n/routing"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
@@ -44,14 +47,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const getRandomL2s = () => {
     let randomL2s = layer2Data.filter(
       (network) =>
-        networkMaturity(l2beatData.data.projects[network.l2beatID]) === "robust"
+        networkMaturity(l2beatData.projects[network.l2beatID]) === "robust"
     )
 
     if (randomL2s.length === 0) {
       randomL2s = layer2Data.filter(
         (network) =>
-          networkMaturity(l2beatData.data.projects[network.l2beatID]) ===
-          "maturing"
+          networkMaturity(l2beatData.projects[network.l2beatID]) === "maturing"
       )
     }
 
@@ -67,8 +69,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "layer-2",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <Layer2PageJsonLD locale={locale} contributors={contributors} />
       <Layer2Page
         randomL2s={randomL2s}
         userRandomL2s={userRandomL2s}
@@ -77,6 +87,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       />
     </I18nProvider>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
 }
 
 export async function generateMetadata({

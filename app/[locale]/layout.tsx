@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
@@ -46,7 +46,7 @@ export default async function LocaleLayout({
   // Enable static rendering
   setRequestLocale(locale)
 
-  const allMessages = await getMessages({ locale })
+  const allMessages = await getMessages()
   const messages = pick(allMessages, "common")
 
   const lastDeployDate = getLastDeployDate()

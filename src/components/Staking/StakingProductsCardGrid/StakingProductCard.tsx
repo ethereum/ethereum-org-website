@@ -1,10 +1,10 @@
 import type { ComponentType, ReactNode, SVGProps } from "react"
 
 import {
-  CautionProductGlyphIcon,
-  GreenCheckProductGlyphIcon,
-  UnknownProductGlyphIcon,
-  WarningProductGlyphIcon,
+  CautionProductGlyph,
+  GreenCheckProductGlyph,
+  UnknownProductGlyph,
+  WarningProductGlyph,
 } from "@/components/icons/staking"
 import SocialListItem from "@/components/SocialListItem"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -31,14 +31,14 @@ const Status = ({ status }: { status: FlagType | undefined }) => {
   const styles = "me-2 size-5"
   switch (status) {
     case "green-check":
-      return <GreenCheckProductGlyphIcon className={styles} />
+      return <GreenCheckProductGlyph className={styles} />
     case "caution":
-      return <CautionProductGlyphIcon className={styles} />
+      return <CautionProductGlyph className={styles} />
     case "warning":
     case "false":
-      return <WarningProductGlyphIcon className={styles} />
+      return <WarningProductGlyph className={styles} />
     default:
-      return <UnknownProductGlyphIcon className={styles} />
+      return <UnknownProductGlyph className={styles} />
   }
 }
 
@@ -191,7 +191,7 @@ export const StakingProductCard = ({
           {data.map(({ label, status }, idx) => (
             <li
               key={idx}
-              className={`my-4 me-0 ms-auto flex items-center gap-1 text-md leading-3 ${status === "false" && "text-body-medium"}`}
+              className={`my-4 me-0 ms-auto flex items-center gap-1 text-base/none ${status === "false" && "text-body-medium"}`}
             >
               <Status status={status} />
               {label}

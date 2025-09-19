@@ -6,7 +6,7 @@ lang: hu
 
 Az Ethereum okosszerződések rendkívül flexibilisek, képesek nagy mennyiségű tokent tárolni (néha meghaladja az 1 Mrd. Usd-t) és megváltoztathatatlan logikát futtatni, mely korábban telepített okosszerződés kódon alapszik. Bár ez egy élénk és kreatív ökoszisztémát hozott létre a bizalom nélküli, egymással összekapcsolt okosszerződésekből, ugyanakkor tökéletes ökoszisztéma a profitra törekvő támadók számára is, aki az okosszerződések sebezhető pontjainak és az Ethereum váratlan viselkedésének kihasználásával szeretnének profitra szert tenni. Az okosszerződés kódot _általában_ nem lehet megváltoztatni biztonsági hibák javítása céljából, az okosszerződésekből ellopott vagyont nem lehet visszaszerezni, és a lopott vagyont rendkívül nehéz nyomon követni. Az okosszerződés hibák miatt ellopott vagy elveszett érték teljes összege már könnyedén meghaladja az 1 Mrd. USD-t. A nagyobb okosszerződés hibák között van a:
 
-- [Parity multi-sig hiba #1 - 30 millió USD elveszett](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Parity multi-sig hiba #1 - 30 millió USD elveszett](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Parity multi-sig hiba#2 - 300 millió USD lekötve](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [A TheDAO hack, 3.6M ETH! Több mint 1 Mrd. USD a mai ETH árfolyamon](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -216,7 +216,7 @@ A fenti támadástípusok az okosszerződések kódjához (újbóli belépés) �
 
 További olvasnivaló:
 
-- [Consensys Okosszerződés Ismet Támadások](https://consensys.github.io/smart-contract-best-practices/attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
+- [Consensys Okosszerződés Ismet Támadások](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - A CWE válogatott listája, mely az Ethereumra és az okosszerződésekre is érvényes
 
 ## Biztonsági eszközök {#security-tools}

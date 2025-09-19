@@ -114,7 +114,6 @@ lang: zh
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley 招聘职位](https://cryptovalley.jobs/)
 - [以太坊招聘职位](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## 加入去中心化自治组织 {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ lang: zh
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _以去中心化自治组织形式运行的自由职业者 Web3 开发团队_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 社区治理_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律工程_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _艺术社区_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _为种子阶段前的加密项目提供风险投资_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _面向现实世界的 MMORPG 游戏机制_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _数字化实体服装品牌_

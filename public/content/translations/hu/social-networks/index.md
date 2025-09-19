@@ -23,7 +23,7 @@ Számos decentralizált közösségi hálózat létezik az olyan közösségimé
 
 ### Hogyan működnek a decentralizált közösségi hálózatok? {#decentralized-social-networks-overview}
 
-A decentralizált közösségi hálózatok valójában [decentralizált alkalmazások (dapp)](/dapps/), melyeket a blokkláncon létrehozott [okosszerződések](/glossary/#smart-contract) működtetnek. A szerződés programkódja adja ezen alkalmazások hátterét és meghatározza azok üzleti logikáját.
+A decentralizált közösségi hálózatok valójában [decentralizált alkalmazások (dapp)](/apps/), melyeket a blokkláncon létrehozott [okosszerződések](/glossary/#smart-contract) működtetnek. A szerződés programkódja adja ezen alkalmazások hátterét és meghatározza azok üzleti logikáját.
 
 A hagyományos közösségimédia-platformok adatbázisokon alapulnak, melyek tárolják a felhasználói információkat, a programkódot és egyéb adatokat. Ez azonban bármilyen leállás esetén egy sebezhető pontot jelent és komoly kockázatot hordoz magában. Tavaly például a Facebook szerverei [órákra leálltak](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact), és elvágták a felhasználókat a platformtól.
 

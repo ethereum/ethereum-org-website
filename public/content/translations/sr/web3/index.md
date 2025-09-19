@@ -139,7 +139,7 @@ Tek smo na početku stvaranja boljeg veba sa Web3, ali kako nastavljamo da unapr
 
 - [Nabavite novčanik](/wallets/)
 - [Pronađite zajednicu](/community/)
-- [Istražite Web3 aplikacije](/dapps/)
+- [Istražite Web3 aplikacije](/apps/)
 - [Join a DAO](/dao/)
 - [Gradite na Web3](/developers/)
 
@@ -147,11 +147,11 @@ Tek smo na početku stvaranja boljeg veba sa Web3, ali kako nastavljamo da unapr
 
 Web3 nije rigidno definisan. Različiti članovi zajednice imaju različite poglede na to. Here are a few of them:
 
-- [Šta je Web3? Objašnjenje decentralizovanog interneta budućnosti](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Šta je Web3? Objašnjenje decentralizovanog interneta budućnosti](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Razumevanje platforme Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Džoš Stark_
 - [Zašto je Web3 važan](https://future.a16z.com/why-web3-matters/) – _Kris Dikson_
 - [Zašto je decentralizacija važna](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Kris Dikson_
 - [Web3 pejzaž](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Rasprava o platformi Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Peki Makkormik_
+- [Rasprava o platformi Web3](https://www.notboring.co/p/the-web3-debate) – _Peki Makkormik_
 
 <QuizWidget quizKey="web3" />

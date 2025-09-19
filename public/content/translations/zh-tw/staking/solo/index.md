@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="安全的金鑰管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像以私密金鑰保護以太坊地址一樣，你還需要專門為驗證者生成金鑰。 你必須了解如何確保你的種子助記詞或私密金鑰的安全。{' '}
 
-<a href="/security/">以太坊安全及詐騙預防</a>
+[以太坊安全及詐騙預防](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="維護" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ summaryPoints:
 <ExpandableCard title="我可以存入超過 32 個以太幣嗎？">
 與驗證者相關聯的每組金鑰都需要 32 個以太幣才能啟用。 將更多以太幣存入一組金鑰不會增加潛在的酬勞，因為一個驗證者的<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有效餘額</a>以 32 個以太幣為限。 這意味著質押是以 32 個以太幣為遞增單位，每個單位都有自己的一組金鑰和餘額。
 
-請勿為一個驗證者存入超過 32 個以太幣。 這並不會增加你的酬勞。 如果為驗證者設置了提現地址，超過 32 個以太幣的多餘資金將在下一次<a href="/staking/withdrawals/#validator-sweeping">驗證者掃描</a>時自動提款到該地址。
+請勿為一個驗證者存入超過 32 個以太幣。 這並不會增加你的酬勞。 如果為驗證者設置了提現地址，超過 32 個以太幣的多餘資金將在下一次[驗證者掃描](/staking/withdrawals/#validator-sweeping)時自動提款到該地址。
 
-如果單獨質押對你來說要求太高，可以考慮使用<a href="/staking/saas/">質押即服務</a>提供者，或者如果你持有的以太幣少於 32 個，可以了解下<a href="/staking/pools/">質押池</a>。
+如果單獨質押對你來說要求太高，可以考慮使用[質押即服務](/staking/saas/)提供者，或者如果你持有的以太幣少於 32 個，可以了解下[質押池](/staking/pools/)。
 </ExpandableCard>
 
 <ExpandableCard title="如果離線，會被罰沒嗎？ （簡單的說：不會）">
@@ -200,7 +200,6 @@ summaryPoints:
 - [幫助用戶端多元化](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [以太坊共識層的用戶端多元化](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [如何購買以太坊驗證者硬體](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [按部就班：如何加入以太坊 2.0 測試網](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 罰沒預防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 年_
 
 <QuizWidget quizKey="staking-solo" />
