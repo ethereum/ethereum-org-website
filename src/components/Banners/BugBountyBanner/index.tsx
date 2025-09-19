@@ -9,8 +9,8 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        Pectra is now in scope. After the cantina competition until mainnet
-        activation, Pectra issues have a 2x reward multiplier!
+        The Fusaka Contest is currently running on Sherlock with up to 2M USD in
+        rewards!
       </p>
     </Center>
   </BannerNotification>

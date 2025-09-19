@@ -14,6 +14,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import BugBountiesPage from "./_components/bug-bounty"
+import BugBountyJsonLD from "./page-jsonld"
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
@@ -34,12 +35,15 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     )
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <BugBountiesPage
-        contributors={contributors}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-      />
-    </I18nProvider>
+    <>
+      <BugBountyJsonLD locale={locale} contributors={contributors} />
+      <I18nProvider locale={locale} messages={messages}>
+        <BugBountiesPage
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
+      </I18nProvider>
+    </>
   )
 }
 

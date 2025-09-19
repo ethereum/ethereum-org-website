@@ -57,6 +57,6 @@ Note that these are general patterns that may not hold true in every network. Fu
 - [What is Web3?](/web3/) - _ethereum.org_
 - [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _Feb 6, 2017 - Vitalik Buterin_
-- [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
 - [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _Dec 31, 2019 - Max Mersch and Richard Muirhead_
-- [Why We Need Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _Sep 12, 2018 - Gavin Wood_
+- [Why We Need Web 3.0](https://gavofyork.medium.com/why-we-need-web-3-0-5da4f2bf95ab) _Sep 12, 2018 - Gavin Wood_

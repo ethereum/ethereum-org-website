@@ -1013,6 +1013,7 @@ export type EventCardProps = {
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  locale?: Lang
 }
 
 export type BreakpointKey = keyof typeof screens

@@ -1,3 +1,5 @@
+"use client"
+
 import { Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
