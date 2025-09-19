@@ -56,7 +56,7 @@ incomplete: true
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用 Ethereum 相關程式碼庫的公用程式函數_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _適用於 solc solidity 編譯器（支援 0.5.x）的 Python 包裝函式_
 - [pymaker](https://github.com/makerdao/pymaker) - _用於 Maker 合約的 Python 應用程式介面_
-- [siwe](https://github.com/spruceid/siwe-py) - _用於 Python 的以太坊 (siwe) 登入_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _用於 Python 的以太坊 (siwe) 登入_
 - [用於以太坊整合的 Web3 去中心化金融](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一個預先整合 ERC-20、Uniswap 和其他受歡迎專案的 Python 包_
 - [Wake](https://getwake.io) - _用於合約測試、初略模糊、部署、漏洞掃描和程式碼導航的一體化 Python 框架（語言伺服器 - [Solidity 工具](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)）_
 

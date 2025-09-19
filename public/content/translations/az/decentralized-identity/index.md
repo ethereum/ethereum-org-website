@@ -133,7 +133,7 @@ Mərkəzləşdirilməmiş kimlik bir çox potensial istifadə hallarına malikdi
 
 Mərkəzləşdirilməmiş kimlik parol əsaslı girişləri ilə əvəz etməyə kömək edə bilər [mərkəzləşdirilməmiş autentifikasiya](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/"). Xidmət təminatçıları istifadəçilərə Ethereum cüzdanında saxlanıla bilən sertifikatlar verə bilər. Misal attestasiya sahibinə onlayn icmaya giriş imkanı verən [NFT](/nft/) ola bilər.
 
-[Ethereum ilə daxil olun](https://login.xyz/) funksiyası daha sonra serverlərə istifadəçinin Ethereum hesabını təsdiqləməyə və hesab ünvanından tələb olunan sertifikatı əldə etməyə imkan verəcək. Bu o deməkdir ki, istifadəçilər uzun parolları yadda saxlamadan platformalara və vebsaytlara daxil ola bilər ki, bu da istifadəçilər üçün onlayn təcrübəni yaxşılaşdırır.
+[Ethereum ilə daxil olun](https://siwe.xyz/) funksiyası daha sonra serverlərə istifadəçinin Ethereum hesabını təsdiqləməyə və hesab ünvanından tələb olunan sertifikatı əldə etməyə imkan verəcək. Bu o deməkdir ki, istifadəçilər uzun parolları yadda saxlamadan platformalara və vebsaytlara daxil ola bilər ki, bu da istifadəçilər üçün onlayn təcrübəni yaxşılaşdırır.
 
 ### 2. KYC identifikasiyası {#kyc-authentication}
 
@@ -184,6 +184,6 @@ Ethereum-dan mərkəzləşdirilməmiş kimlik həlləri üçün əsas kimi istif
 ### İcmalar {#communities}
 
 - [GitHub-da ERC-725 Alyansı](https://github.com/erc725alliance) — _Ethereum blokçeynində kimlik idarə etmək üçün ERC725 standartının tərəfdarları_
-- [SpruceID Discord serveri](https://discord.com/invite/Sf9tSFzrnt) — _Ethereum ilə Giriş üzərində işləyən həvəskarlar və tərtibatçılar üçün icma_
+- [EthID Discord serveri](https://discord.com/invite/ZUyG3mSXFD) — _Ethereum ilə Giriş üzərində işləyən həvəskarlar və tərtibatçılar üçün icma_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Tətbiqlər üçün yoxlanıla bilən məlumatlar üzrə çərçivənin qurulmasına töhfə verən tərtibatçılar icması_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Müxtəlif sənayelərdə mərkəzləşdirilməmiş kimlikdən istifadə halları üzərində işləyən tərtibatçılar və inşaatçılar icması_

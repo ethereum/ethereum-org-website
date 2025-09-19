@@ -24,7 +24,6 @@ incomplete: false
 
 - [Επιτέλους κατανόηση των λογαριασμών Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Επιτέλους έλεγχος ταυτότητας χρηστών Rails με MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Είσοδος με το Ethereum - Βιβλιοθήκη Ruby και παραδείγματα Rails](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Πώς να συνδεθείτε στο δίκτυο Ethereum χρησιμοποιώντας τη Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Πώς να δημιουργήσετε μια νέα διεύθυνση Ethereum στη Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -39,10 +38,10 @@ incomplete: false
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Βιβλιοθήκη Ruby και πελάτης RPC για διαχείριση λογαριασμών, μηνυμάτων και συναλλαγών Ethereum_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _Ο κατακερματισμός Keccak (SHA3) που χρησιμοποιείται από το Ethereum_
-- [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Εφαρμογή Ruby για σύνδεση με Ethereum_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) - _Χρήσιμο Rails που προσθέτει διαδρομές τοπικής σύνδεσης SIWE_
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _Παράδειγμα SIWE με Ruby στο Rails με προσαρμοσμένο ελεγκτή_
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _Στρατηγική OmniAuth για σύνδεση με Ethereum (SIWE)_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Εφαρμογή Ruby για σύνδεση με Ethereum_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Χρήσιμο Rails που προσθέτει διαδρομές τοπικής σύνδεσης SIWE_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Παράδειγμα SIWE με Ruby στο Rails με προσαρμοσμένο ελεγκτή_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Στρατηγική OmniAuth για σύνδεση με Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Στρατηγική OmniAuth για έλεγχο ταυτότητας μέσω ιδιοκτησίας NFT_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Πρότυπο Ethereum στο Rails που επιτρέπει σύνδεση του MetaMask στο Ruby με Rails_
 

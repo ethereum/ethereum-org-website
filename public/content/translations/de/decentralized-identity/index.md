@@ -57,7 +57,7 @@ Dezentralisierte Identitäten haben viele potenzielle Nutzungsmöglichkeiten:
 
 Dezentralisierte Identitäten können dazu beitragen, Passwort-basierte Logins durch dezentrale Authentifizierung zu ersetzen. Dienstleister können Attestierungen an Benutzer verteilen, welche in einer Ethereum-Wallet gespeichert werden. Eine Beispielattestierung wäre ein [NFT](/glossary/#nft), welcher dem Inhaber Zugriff auf eine Online-Community gewährt.
 
-Eine [Anmeldung über Ethereum](https://login.xyz/) würde es Servern ermöglichen, das Ethereum-Konto des Benutzers zu bestätigen und die erforderliche Attestierung von seiner Account-Adresse einzuholen. Das bedeutet, dass Benutzer auf Plattformen und Websites zugreifen können, ohne sich lange Passwörter merken und das Online-Erlebnis für Benutzer verbessern zu müssen.
+Eine [Anmeldung über Ethereum](https://siwe.xyz/) würde es Servern ermöglichen, das Ethereum-Konto des Benutzers zu bestätigen und die erforderliche Attestierung von seiner Account-Adresse einzuholen. Das bedeutet, dass Benutzer auf Plattformen und Websites zugreifen können, ohne sich lange Passwörter merken und das Online-Erlebnis für Benutzer verbessern zu müssen.
 
 ### 2. KYC-Authentifizierung {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Id
 ### Communities {#communities}
 
 - [ERC-725 Allianz auf GitHub](https://github.com/erc725alliance) — _Unterstützer des ERC725-Standards zur Identitätsverwaltung in der Ethereum-Blockchain_
-- [SpruceID Discord Server](https://discord.com/invite/Sf9tSFzrnt) — _Community für Enthusiasten und Entwickler, die am Anmelden mit Ethereum arbeiten_
+- [EthID Discord Server](https://discord.com/invite/ZUyG3mSXFD) — _Community für Enthusiasten und Entwickler, die am Anmelden mit Ethereum arbeiten_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Eine Community von Entwicklern, die zum Aufbau eines Rahmens für überprüfbare Daten für Anwendungen beitragen_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Eine Gemeinschaft von Entwicklern und Erstellern, die an Anwendungsfällen für dezentrale Identität in verschiedenen Branchen arbeiten_

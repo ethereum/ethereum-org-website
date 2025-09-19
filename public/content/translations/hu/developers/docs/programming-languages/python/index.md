@@ -56,7 +56,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _használati funkciók Ethereumhoz kapcsolódó kódbázisokkal való munkához_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) – _Python wrapper a solc solidity fordító köré 0.5.x támogatással_
 - [pymaker](https://github.com/makerdao/pymaker) – _Python API Maker szerződésekre_
-- [siwe](https://github.com/spruceid/siwe-py) – _Bejelentkezés az Ethereummal (siwe) Pythonra_
+- [siwe](https://github.com/signinwithethereum/siwe-py) – _Bejelentkezés az Ethereummal (siwe) Pythonra_
 - [Web3 decentralizált pénzügyek (DeFi) Ethereum integrációhoz](https://github.com/tradingstrategy-ai/web3-ethereum-defi) – _Egy Python csomag, mely készen áll az ERC-20, Uniswap és más népszerű projektekkel való integrációra_
 - [Wake](https://getwake.io) - _Minden az egyben Python keretrendszer a szerződéseknek a teszteléshez, fuzzinghoz, telepítéshez, sebezhetőségi vizsgálathoz és kódnavigációhoz (nyelvi szerver - [eszközök a Solidity-hez](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

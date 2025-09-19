@@ -57,7 +57,7 @@ Gedecentraliseerde identiteit heeft vele potentiële use-cases:
 
 Gedecentraliseerde identiteit kan wachtwoordgebaseerde logins vervangen door gedecentraliseerde authenticatie. Dienstverleners kunnen attesten uitgeven aan gebruikers, die kunnen worden opgeslagen in een Ethereum-portemonnee. Een voorbeeld hiervan is: een [NFT](/glossary/#nft) die de houder toegang geeft tot een online community.
 
-Een functie [Aanmelden met Ethereum](https://login.xyz/) zou dan de servers in staat stellen om het Ethereum-account van de gebruiker te bevestigen en het vereiste attest op te halen van zijn/haar accountadres. Dit betekent dat gebruikers toegang hebben tot platformen en websites zonder lange wachtwoorden te hoeven onthouden, en het verbetert de online ervaring voor gebruikers.
+Een functie [Aanmelden met Ethereum](https://siwe.xyz/) zou dan de servers in staat stellen om het Ethereum-account van de gebruiker te bevestigen en het vereiste attest op te halen van zijn/haar accountadres. Dit betekent dat gebruikers toegang hebben tot platformen en websites zonder lange wachtwoorden te hoeven onthouden, en het verbetert de online ervaring voor gebruikers.
 
 ### 2. KYC-verificatie {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Er zijn veel ambitieuze projecten die Ethereum als basis voor gedecentraliseerde
 ### Gemeenschappen {#communities}
 
 - [ERC-725-alliantie op GitHub](https://github.com/erc725alliance) — _Voorstanders van de ERC725-standaard voor het beheer van identiteit op de Ethereum-blockchain_
-- [SpruceID Discord-server](https://discord.com/invite/Sf9tSFzrnt) — _Gemeenschap voor enthousiastelingen en ontwikkelaars die werken aan Aanmelden met Ethereum_
+- [EthID Discord-server](https://discord.com/invite/ZUyG3mSXFD) — _Gemeenschap voor enthousiastelingen en ontwikkelaars die werken aan Aanmelden met Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Een gemeenschap van ontwikkelaars die bijdraagt aan het bouwen van een kader om gegevens te verifieren voor applicaties_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) - _Een community van ontwikkelaars en bouwers die werken aan toepassingsscenario's voor gedecentraliseerde identiteiten in verschillende sectoren_

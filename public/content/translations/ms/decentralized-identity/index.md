@@ -57,7 +57,7 @@ Identiti teragih mempunyai banyak kegunaan berpotensi:
 
 Identiti teragih boleh membantu menggantikan log masuk berasaskan kata laluan dengan pengesahan teragih. Penyedia perkhidmatan boleh mengeluarkan pengesahan kepada pengguna, yang boleh disimpan dalam dompet Ethereum. Contoh pengesahan adalah [NFT](/glossary/#nft) yang memberikan pemegang akses ke komuniti dalam talian.
 
-Fungsi [Daftar Masuk dengan Ethereum](https://login.xyz/) kemudian membolehkan pelayan untuk mengesahkan akaun Ethereum pengguna dan mendapatkan pengesahan yang diperlukan dari alamat akaun mereka. Ini bermakna pengguna boleh mengakses platform dan laman web tanpa perlu menghafal kata laluan panjang dan meningkatkan pengalaman dalam talian untuk pengguna.
+Fungsi [Daftar Masuk dengan Ethereum](https://siwe.xyz/) kemudian membolehkan pelayan untuk mengesahkan akaun Ethereum pengguna dan mendapatkan pengesahan yang diperlukan dari alamat akaun mereka. Ini bermakna pengguna boleh mengakses platform dan laman web tanpa perlu menghafal kata laluan panjang dan meningkatkan pengalaman dalam talian untuk pengguna.
 
 ### 2. Pengesahan KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Terdapat banyak projek bercita-cita tinggi menggunakan Ethereum sebagai asas unt
 ### Komuniti {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Penyokong standard ERC725 untuk mengurus identiti pada blok rantai Ethereum_
-- [Pelayan Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Komuniti untuk peminat dan pembangun yang bekerja pada Daftar Masuk dengan Ethereum_
+- [Pelayan Discord EthID](https://discord.com/invite/ZUyG3mSXFD) — _Komuniti untuk peminat dan pembangun yang bekerja pada Daftar Masuk dengan Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Komuniti pembangun yang menyumbang untuk membina rangka kerja untuk data yang boleh disahkan untuk aplikasi_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Komuniti pembangun dan pembina yang mengusahakan kes penggunaan identiti teragih merentas pelbagai industri_

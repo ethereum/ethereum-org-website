@@ -57,7 +57,7 @@ Aṣèdámọ̀ jẹ́ ǹkan ti àlàyé tí ó ṣiṣẹ́ bíi ìtọ́ka sí
 
 Ìdánimò tí kò ní àkóso le ṣe ìrànlọ́wọ́ ìrọ́pò fún àwọn ìgbaniwọlé oní ọ̀rọ̀-aṣínà pẹ̀lú ìfàṣẹsí tí kò ní àkóso. Àwọn Olùpèsè iṣẹ́ le fún àwọn ìjẹ́ẹ̀rísí sí àwọn olùmúlò, èyí tí ó le wà ní ìpamọ́ sínú àpò àpamọ́wọ́ Ẹ̀tẹ́ríọ̀mù. Àpẹrẹ ìjẹ́ẹ̀rísí yóò jẹ́ [NFT](/glossary/#nft) fífún ẹni tí ó ni ààyè sí àgbègbè orí ayélujára.
 
-Iṣẹ́ [ìwọlé pẹ̀lú Ẹ̀tẹ́ríọ̀mù](https://login.xyz/) yóò jẹ́kí àwọn apèsè láti ṣe jẹ́ẹ̀rísí àkọ́ọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù olùmúlò àti mú ẹ̀rí tí ò nílò láti inú àdírẹ́ẹ̀sì àkọ́ọ́lẹ̀ wọn. Èyí túmò sí pé àwọn olùmúlò le wọlé sí àwọn ojú ẹ̀rọ àti àwọn ojú òpó ayélujára láìsí níní láti ṣe àkọ́sórí àwọn ọ̀rọ̀ aṣínà gígùn àti ṣíṣe ìmúdárasí ìrírí orí ayélujára fún àwọn olùmúlò.
+Iṣẹ́ [ìwọlé pẹ̀lú Ẹ̀tẹ́ríọ̀mù](https://siwe.xyz/) yóò jẹ́kí àwọn apèsè láti ṣe jẹ́ẹ̀rísí àkọ́ọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù olùmúlò àti mú ẹ̀rí tí ò nílò láti inú àdírẹ́ẹ̀sì àkọ́ọ́lẹ̀ wọn. Èyí túmò sí pé àwọn olùmúlò le wọlé sí àwọn ojú ẹ̀rọ àti àwọn ojú òpó ayélujára láìsí níní láti ṣe àkọ́sórí àwọn ọ̀rọ̀ aṣínà gígùn àti ṣíṣe ìmúdárasí ìrírí orí ayélujára fún àwọn olùmúlò.
 
 ### 2. Ìfàṣẹsí KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 ### Àwọn àwùjọ {#communities}
 
 - [Àjọṣe ERC-725 lórí GitHub](https://github.com/erc725alliance) - _ Awọn alatilẹyin ti boṣewa ERC725 fun iṣakoso idanimọ lori blockchain Ethereum_
-- [Ikanni Disikọdu SpruceID](https://discord.com/invite/Sf9tSFzrnt) - _Awujọ fun awọn ololufẹ ati awọn olupilẹṣẹ ti n ṣiṣẹ lori Wiwọle pẹlu Ethereum_
+- [Ikanni Disikọdu EthID](https://discord.com/invite/ZUyG3mSXFD) - _Awujọ fun awọn ololufẹ ati awọn olupilẹṣẹ ti n ṣiṣẹ lori Wiwọle pẹlu Ethereum_
 - [Laabu Veramo](https://discord.gg/sYBUXpACh4) - _Awujọ àwọn olùṣe tí ó ń kópa nínú kíkọ́ àgbékalẹ̀ fún àwọn ìsọfúnni tí a lè ṣàyẹ̀wò fún àwọn ohun èlò_
 - [wait.id](https://discord.com/invite/AW8AgqJthZ) - _ Awujọ àwọn olùdàgbàsókè àti àwọn olùgbèrú tó ń ṣiṣẹ́ lórí àwọn ọ̀ràn lílo ìdánimọ̀ tí kò dáwọ́ lé ní oríṣiríṣi ẹ̀ka-iṣẹ́_

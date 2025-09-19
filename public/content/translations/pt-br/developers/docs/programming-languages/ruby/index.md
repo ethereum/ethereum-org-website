@@ -24,7 +24,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Finalmente entendendo as contas Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Finalmente autenticando usuários Rails com MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Entrar com Ethereum - Biblioteca Ruby e Exemplos Rails de Lançamento](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Como se conectar à rede Ethereum usando Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Como gerar um novo endereço Ethereum em Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -39,10 +38,10 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Biblioteca Ruby e cliente RPC para lidar com contas, mensagens e transações Ethereum_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _O hash Keccak (SHA3) usado pela Ethereum_
-- [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Implementação Ruby de Login com Ethereum_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) - _Gem do Rails que adiciona rotas de login local da SIWE_
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _Exemplo SIWE usando Ruby on Rails com controlador_
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _Estratégia OmniAuth para login com Ethereum (SIWE)_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Implementação Ruby de Login com Ethereum_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _Gem do Rails que adiciona rotas de login local da SIWE_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Exemplo SIWE usando Ruby on Rails com controlador_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Estratégia OmniAuth para login com Ethereum (SIWE)_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _Estratégia OmniAuth para autenticação via propriedade NFT_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Modelo Ethereum on Rails que permite conectar MetaMask para Ruby on Rails_
 

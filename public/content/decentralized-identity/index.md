@@ -57,7 +57,7 @@ Decentralized identity has many potential use-cases:
 
 Decentralized identity can help replace password-based logins with decentralized authentication. Service providers can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/glossary/#nft) granting the holder access to an online community.
 
-A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
+A [Sign-In with Ethereum](https://siwe.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
 
 ### 2. KYC authentication {#kyc-authentication}
 
@@ -158,6 +158,7 @@ Here's an example to show how onchain attestations might work in practice:
 There are many ambitious projects using Ethereum as a foundation for decentralized identity solutions:
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for onchain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
+- **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Open standard for authentication with Ethereum accounts._
 - **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
@@ -186,6 +187,6 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 ### Communities {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community for enthusiasts and developers working on Sign-in with Ethereum_
+- [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) — _Community for enthusiasts and developers working on Sign-in with Ethereum, and Ethereum Follow Protocol_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _A community of developers contributing to building a framework for verifiable data for applications_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _A community of developers and builders working on decentralized identity use cases across various industries_

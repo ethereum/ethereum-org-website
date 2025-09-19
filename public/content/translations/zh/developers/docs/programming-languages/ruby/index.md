@@ -24,7 +24,6 @@ incomplete: false
 
 - [终于明白以太坊帐户了](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [使用 MetaMask 对 Rails 用户进行最终身份验证](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Sign-In with Ethereum - Ruby 库与 Rails 示例发布](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [如何使用 Ruby 连接到以太坊网络](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [如何使用 Ruby 生成新的以太坊地址](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -39,10 +38,10 @@ incomplete: false
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby 库和远程过程调用客户端，用于处理以太坊帐户、消息和交易_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _以太坊使用的 Keccak (SHA3) 哈希_
-- [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _使用 Ruby 实现 Sign-In with Ethereum_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) - _添加 SIWE 本地登录路由的 Rails gem_
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _使用 Ruby on Rails 的 SIWE 示例（含自定义控制器）_
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _面向 Sign In With Ethereum (SIWE) 的 OmniAuth 策略_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _使用 Ruby 实现 Sign-In with Ethereum_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _添加 SIWE 本地登录路由的 Rails gem_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _使用 Ruby on Rails 的 SIWE 示例（含自定义控制器）_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _面向 Sign In With Ethereum (SIWE) 的 OmniAuth 策略_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _面向通过非同质化代币所有权进行身份验证的 OmniAuth 策略_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails 模板，允许连接 MetaMask 到 Ruby on Rails_
 

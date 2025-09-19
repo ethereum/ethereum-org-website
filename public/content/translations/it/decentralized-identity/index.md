@@ -57,7 +57,7 @@ L'identità decentralizzata ha molti possibili casi d'uso:
 
 L'identità decentralizzata può contribuire a sostituire gli accessi basati su password con l'autenticazione decentralizzata. I fornitori di servizi possono emettere attestazioni agli utenti, memorizzabili in un portafoglio di Ethereum. Un esempio di attestazione potrebbe essere un [NFT](/glossary/#nft) che concede al titolare l'accesso a una community online.
 
-Una funzionalità "[Accedi con Ethereum](https://login.xyz/)", consentirebbe poi ai server di confermare il conto di Ethereum dell'utente, e di recuperare l'attestazione necessaria dal relativo indirizzo del conto. Ciò significa che gli utenti possono accedere a piattaforme e siti web, senza dover memorizzare lunghe password, migliorando l'esperienza online degli utenti.
+Una funzionalità "[Accedi con Ethereum](https://siwe.xyz/)", consentirebbe poi ai server di confermare il conto di Ethereum dell'utente, e di recuperare l'attestazione necessaria dal relativo indirizzo del conto. Ciò significa che gli utenti possono accedere a piattaforme e siti web, senza dover memorizzare lunghe password, migliorando l'esperienza online degli utenti.
 
 ### 2. Autenticazione KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluz
 ### Community {#communities}
 
 - [ERC-725 Alliance su GitHub](https://github.com/erc725alliance) — _Sostenitori dello standard ERC-725 per la gestione dell'identità sulla blockchain di Ethereum_
-- [Server Discord di SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Community per appassionati e sviluppatori, al lavoro su "Accedi con Ethereum"_
+- [Server Discord di EthID](https://discord.com/invite/ZUyG3mSXFD) — _Community per appassionati e sviluppatori, al lavoro su "Accedi con Ethereum"_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una community di sviluppatori, che contribuiscono alla creazione di un quadro per i dati verificabili per le applicazioni_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) -- _Una comunità di sviluppatori e costruttori che lavorano a casi d'uso dell'identità decentralizzata che coinvolgono diversi settori_

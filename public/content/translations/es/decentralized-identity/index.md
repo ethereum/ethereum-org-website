@@ -57,7 +57,7 @@ La identidad descentralizada tiene muchos casos potenciales de uso:
 
 La identidad descentralizada puede ayudar a reemplazar los inicios de sesión basados en contraseña con autenticación descentralizada. Los proveedores de servicios pueden emitir certificados a los usuarios, los cuales pueden ser almacenados en una cartera de Ethereum. Un certificado de ejemplo sería un [NFT](/glossary/#nft) que otorga al titular acceso a una comunidad en línea.
 
-Una función [de inicio de sesión con Ethereum](https://login.xyz/) habilitaría entonces a los servidores para confirmar la cuenta de Ethereum del usuario y obtener la verificación necesaria desde la dirección de su cuenta. Esto significa que los usuarios pueden acceder a plataformas y sitios web sin tener que memorizar contraseñas largas y mejorar la experiencia en línea de los usuarios.
+Una función [de inicio de sesión con Ethereum](https://siwe.xyz/) habilitaría entonces a los servidores para confirmar la cuenta de Ethereum del usuario y obtener la verificación necesaria desde la dirección de su cuenta. Esto significa que los usuarios pueden acceder a plataformas y sitios web sin tener que memorizar contraseñas largas y mejorar la experiencia en línea de los usuarios.
 
 ### 2. Autenticación KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 ### Comunidades {#communities}
 
 - [ERC-725 Alianza en GitHub](https://github.com/erc725alliance) — _Partidarios del estándar ERC725 para gestionar la identidad en la cadena de bloques Ethereum_
-- [Servidor SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Comunidad para entusiastas y desarrolladores que trabajan en SpruceID con Ethereum_
+- [Servidor EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Comunidad para entusiastas y desarrolladores que trabajan en Sign-in con Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una comunidad de desarrolladores que contribuyen a la construcción de un marco para datos verificables para aplicaciones_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ): _una comunidad de desarrolladores y constructores que se ocupan de los casos de uso para las identidades descentralizadas en varias industrias._
