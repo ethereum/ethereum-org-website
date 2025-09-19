@@ -7,8 +7,12 @@ import {
 } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
-import type { CommitHistory, Lang } from "@/lib/types"
+import type {
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+  PageParams,
+} from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -95,12 +99,8 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: Lang }>
-}) {
-  const { locale } = await params
+export default async function Page({ params }: { params: PageParams }) {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-get-eth" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
@@ -433,9 +433,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-get-eth" })
 

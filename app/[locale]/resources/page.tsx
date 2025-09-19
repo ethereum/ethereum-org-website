@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -38,8 +38,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
@@ -216,9 +216,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-resources" })
 

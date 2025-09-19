@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -43,8 +43,8 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
   )
 }
 
-const TdsPage = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const TdsPage = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -1094,9 +1094,9 @@ const TdsPage = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

@@ -2,7 +2,12 @@ import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, SectionNavDetails } from "@/lib/types"
+import type {
+  CommitHistory,
+  Lang,
+  PageParams,
+  SectionNavDetails,
+} from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -37,8 +42,8 @@ import heroImg from "@/public/images/upgrades/merge.png"
 
 const GetInTouchId = "get-in-touch"
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-founders" })
 
   const supportTags = {
@@ -555,9 +560,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

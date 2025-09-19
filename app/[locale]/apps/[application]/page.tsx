@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { ChainName, CommitHistory, Lang } from "@/lib/types"
+import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
@@ -59,9 +59,9 @@ const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 const Page = async ({
   params,
 }: {
-  params: { locale: string; application: string }
+  params: PageParams & { application: string }
 }) => {
-  const { locale, application } = await params
+  const { locale, application } = params
   setRequestLocale(locale)
 
   // Get translations
@@ -387,9 +387,9 @@ const Page = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; application: string }>
+  params: { locale: string; application: string }
 }) {
-  const { locale, application } = await params
+  const { locale, application } = params
 
   const [appsData] = await loadData()
 
