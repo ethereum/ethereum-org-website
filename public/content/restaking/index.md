@@ -71,7 +71,7 @@ In this world with restaking, both the AVS and staker benefit from being able to
 
 ## How does restaking work? {#how-does-restaking-work}
 
-There’s several entities involved in restaking and each of them play an important part.
+There are several entities involved in restaking — each one of them plays an important part.
 
 | **Term**                | **Description**                                                                                                                                                                                                                   |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
