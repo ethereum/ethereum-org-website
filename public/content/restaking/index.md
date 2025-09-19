@@ -21,7 +21,7 @@ The Ethereum network secures billions of dollars of value 24/7, 365. How?
 
 People all over the world lock away (or “stake”) [ether (ETH)](/eth/) in smart contracts to run the software that processes Ethereum transactions and secures the Ethereum network. In return, they get rewarded with more ETH.
 
-Restaking is a way for [stakers](/staking/) to extend this security to other Ethereum services. In return, they earn extra rewards, however they’re putting their staked ETH at more risk.
+Restaking is a technology built for [stakers](/staking/) to extend this security to other services, applications, or networks. In return, they earn additional restaking rewards. However, they also put their staked ETH at more risk.
 
 **Restaking explained in 7 minutes**
 
