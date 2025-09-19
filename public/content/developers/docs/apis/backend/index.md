@@ -39,7 +39,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentation](https://docs.blastapi.io)
-- [Discord](https://discord.gg/bwarelabs)
+- [Discord](https://discord.gg/SaRqmRUjjQ)
 
 **BlockPi -** **_Provide more efficient and fast RPC services_**
 
