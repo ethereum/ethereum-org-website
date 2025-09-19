@@ -4,7 +4,7 @@ description: Learn about PeerDAS as part of the Fusaka Ethereum protocol upgrade
 lang: en
 ---
 
-The Ethereum protocol is undergoing its most significant scaling upgrade since the [introduction of blob transactions with EIP-4844](https://ethereum.org/en/roadmap/danksharding/). As part of the [Fusaka](https://ethereum.org/en/roadmap/fusaka) upgrade, PeerDAS introduces a new way of handling blob data, delivering roughly an order-of-magnitude increase in [data availability](https://l2beat.com/glossary#data-availability) (DA) capacity for L2s.
+The Ethereum protocol is undergoing its most significant scaling upgrade since the [introduction of blob transactions with EIP-4844](/roadmap/danksharding/). As part of the [Fusaka upgrade](/roadmap/fusaka/), PeerDAS introduces a new way of handling blob data, delivering roughly an order-of-magnitude increase in **[data availability (DA)](/developers/docs/data-availability/) ** capacity for L2s.
 
 [More on blob scaling roadmap](https://blog.ethereum.org/2025/08/22/protocol-update-002)
 
