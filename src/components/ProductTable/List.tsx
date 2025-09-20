@@ -21,6 +21,7 @@ type ListProps<T extends { id: string }> = {
   ) => React.ReactNode
   matomoEventCategory: string
   filters: FilterOption[]
+  estimateSize: number
 }
 
 const List = <T extends { id: string }>({
@@ -28,6 +29,7 @@ const List = <T extends { id: string }>({
   subComponent,
   matomoEventCategory,
   filters,
+  estimateSize,
 }: ListProps<T>) => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
@@ -36,7 +38,7 @@ const List = <T extends { id: string }>({
 
   const virtualizer = useWindowVirtualizer({
     count: data.length,
-    estimateSize: () => 300,
+    estimateSize: () => estimateSize,
     overscan: 5,
     scrollMargin: parentOffsetRef.current,
   })
@@ -90,6 +92,26 @@ const List = <T extends { id: string }>({
         height: `${virtualizer.getTotalSize()}px`,
       }}
     >
+      <div aria-hidden="true" style={{ position: "absolute", inset: 0 }}>
+        {data.map((item, index) => (
+          <div
+            key={`search-ghost-${item.id}`}
+            style={{
+              position: "absolute",
+              left: 0,
+              width: "100%",
+              // Approximate vertical position using your estimate and scrollMargin
+              transform: `translateY(${estimateSize * index - virtualizer.options.scrollMargin}px)`,
+              opacity: 0,
+              pointerEvents: "none",
+              // Ensure it contributes text for Ctrl+F but avoids layout
+              height: 0,
+            }}
+          >
+            {(item as unknown as Wallet).name}
+          </div>
+        ))}
+      </div>
       {virtualizer.getVirtualItems().map((virtualItem) => {
         const item = data[virtualItem.index]
 
