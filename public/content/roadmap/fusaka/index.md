@@ -33,7 +33,7 @@ This keeps hardware and bandwidth requirements for nodes tenable while enabling 
 - [DappLion on PeerDAS: Scaling Ethereum Today | ETHSofia 2024](https://youtu.be/bONWd1x2TjQ?t=328)
 - [Academic: A Documentation of Ethereum’s PeerDAS (PDF)](https://eprint.iacr.org/2024/1362.pdf)
 
-#### Blob parameter only forks {#blob-parameter-only-forks}
+#### Blob-Parameter-Only forks {#blob-parameter-only-forks}
 
 Layer 2s scale Ethereum - as their networks grow, they need to post more data to Ethereum. This means that Ethereum will need to increase the number of blobs available to them as time goes on. Although PeerDAS enables scaling blob data, it needs to be done gradually and safely.
 
@@ -43,9 +43,9 @@ These coordinated upgrades generally include a lot of changes, require a lot of 
 
 Blob parameter only forks can be set by clients, similarly to other configuration like gas limit. Between major Ethereum upgrades, clients can agree to increase the `target` and `max` blobs to e.g. 9 and 12 and then node operators will update to take part in that tiny fork. These blob parameter only forks can be configured at any time.
 
-When blobs were first added to the network in the Dencun upgrade, the target was 3 - that was increased to 6 in Pectra and, after Fusaka, that can now be increased at a sustainable rate independently of these major network upgrades.
+When blobs were first added to the network in the Dencun upgrade, the target was 3. That was increased to 6 in Pectra and, after Fusaka, that can now be increased at a sustainable rate independently of these major network upgrades.
 
-![todo: replace this with description of diagram for screen readers](./average-blob-count-per-block.webp)
+![Chart showing average blob count per block and increasing targets with upgrades](./average-blob-count-per-block.webp)
 
 Graph source: [Ethereum Blobs - @hildobby, Dune Analytics](https://dune.com/hildobby/blobs)
 
