@@ -102,7 +102,7 @@ export default ComponentName
 
 ## Styling
 
-We use [Tailwind CSS](https://tailwindcss.com/) as our primary styling approach, combined with the [ShadCN/UI](https://ui.shadcn.com/) component library built on [Radix UI](https://www.radix-ui.com/) primitives.
+We use [Tailwind CSS](https://tailwindcss.com/) as our primary styling approach, combined with the [shadcn/ui](https://ui.shadcn.com/) component library built on [Radix UI](https://www.radix-ui.com/) primitives.
 
 ### Styling Approach
 
@@ -129,7 +129,7 @@ Use standard HTML elements with Tailwind classes for layouts:
 
 ### Component Styling
 
-Use ShadCN/UI components for interactive elements:
+Use shadcn/ui components for interactive elements:
 
 ```tsx
 import { Button } from "@/components/ui/button"

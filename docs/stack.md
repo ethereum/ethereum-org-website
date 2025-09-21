@@ -10,7 +10,7 @@
 - [React](https://react.dev/) - A JavaScript library for building component-based user interfaces
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [ShadCN/UI](https://ui.shadcn.com/) - Component library built on Radix UI and Tailwind CSS
+- [shadcn/ui](https://ui.shadcn.com/) - Component library built on Radix UI and Tailwind CSS
 - [Radix UI](https://www.radix-ui.com/) - Accessible component primitives
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./site-search.md).
   - Primary implementation: `/src/components/Search/index.ts`
