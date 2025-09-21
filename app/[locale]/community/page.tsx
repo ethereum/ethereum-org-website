@@ -16,11 +16,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import CommunityPage from "./_components/community"
 import CommunityJsonLD from "./page-jsonld"
 
-export default async function Page({
-  params,
-}: {
-  params: { locale: Lang }
-}) {
+export default async function Page({ params }: { params: { locale: Lang } }) {
   const { locale } = params
 
   setRequestLocale(locale)
