@@ -178,3 +178,7 @@
 /10-years /10years 301!
 
 /*/10-years /:splat/10years 301!
+
+/history /ethereum-forks 301!
+
+/*/history /ethereum-forks 301!
