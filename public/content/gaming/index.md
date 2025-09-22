@@ -6,7 +6,7 @@ image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Game rules and state can be enforced by blockchain, not a studio’s servers
 summaryPoint2: Anyone can build mods, bots, or entirely new games that plug into the same onchain data
-summaryPoint3: Purpose‑built L2s such as Redstone and frameworks like MUD cut costs enough to support real‑time gameplay
+summaryPoint3: Purpose‑built L2s, like Redstone, and frameworks, like MUD, cut costs enough to support real‑time gameplay
 buttons:
   - content: Learn more
     toId: how-gaming-on-ethereum-works
