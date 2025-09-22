@@ -117,5 +117,7 @@
   "page-index-values-open-legacy-label": "폐쇄형",
   "page-index-values-open-legacy-content-0": "기업은 지적 재산을 보호하지만 공유하지 않습니다. 회사 외부의 누구도 일이 어떻게 진행되는지 확인할 수 없으며, 문제를 해결하거나 개선할 수 없습니다. 일반 사용자가 새로운 도구를 만들거나 사용자 정의하는 작업은 어렵습니다.",
   "page-index-values-open-ethereum-label": "개방형",
-  "page-index-values-open-ethereum-content-0": "이더리움은 모든 사람에게 공개적입니다. 누구든지 코드를 확인하고 사용하거나 개선할 수 있으며 모든 사람을 위해 더욱 향상할 수 있습니다."
+  "page-index-values-open-ethereum-content-0": "이더리움은 모든 사람에게 공개적입니다. 누구든지 코드를 확인하고 사용하거나 개선할 수 있으며 모든 사람을 위해 더욱 향상할 수 있습니다.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "올해 가장 큰 이더리움 이벤트에 참여하세요",
+  "page-index-devconnect-banner-get-tickets": "티켓 받기"
 }
