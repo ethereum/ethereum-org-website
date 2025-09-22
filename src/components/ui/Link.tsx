@@ -197,7 +197,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 })
 BaseLink.displayName = "BaseLink"
 
-const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
+export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, className, ...props }: LinkProps, ref) => {
     const { twFlipForRtl } = useRtlFlip()
     return (
@@ -227,5 +227,4 @@ const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
 )
 InlineLink.displayName = "InlineLink"
 
-export { LinkWithArrow }
 export default InlineLink
