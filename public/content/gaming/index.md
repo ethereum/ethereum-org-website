@@ -29,7 +29,7 @@ Entirely onchain games are games where the fundamental mechanics, and often the 
 
 - **Frequent Game Shutdowns:** In 2023 alone, [60+ games were shut down](https://tech4gamers.com/game-studios-shut-down-2023/), and 11 game studios closed entirely, leaving players with nothing to show for their in‑game investments. Onchain games, with their logic and assets on a decentralized network, can persist as long as the blockchain exists, offering a higher degree of permanence.
 - **Frustration Over Locked Assets:** [51% of gamers feel frustrated](https://www.starknet.io/blog/blockchain-gaming/) that they can’t gift or re‑sell in‑game items they buy, and 23% are annoyed by how difficult it is to recover money from in‑game purchases. Players invest significant time and money into acquiring in-game items, only to find they don't truly own them. Ethereum's NFT standard provides verifiable digital ownership, ensuring players control their assets.
-- **High Spending with No Return:** [Gamers spend an average of \$6,425](https://www.starknet.io/blog/blockchain-gaming/) on virtual items over their lifetime, with \$8.74 spent per month or \$104 per year.
+- **High Spending with No Return:** [Gamers spend an average of \$6,425](https://www.starknet.io/blog/blockchain-gaming/) on virtual items over their lifetime, with \$8.74 spent per month or \$104 per year. Onchain ownership transforms that spending from a sunk cost into an investment in a digital asset that can be sold, traded, or gifted, much like a physical collectible. 
 
 ## Popular games built on Ethereum {#popular-games-built-on-ethereum}
 
