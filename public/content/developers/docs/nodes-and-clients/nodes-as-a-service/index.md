@@ -183,7 +183,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - [Public endpoint chainlist](https://drpc.org/chainlist)
     - [Pricing calculator](https://drpc.org/pricing#calculator)
   - NodeCore: open-source stack for organizations wanting full control
-    - On-premise solution—join the waitlist, launching fall 2025
 
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
