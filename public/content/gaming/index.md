@@ -53,7 +53,9 @@ Another example is Galaxy Fight Club. In this game, [players can use different N
 
 ## Scalability & gas fee improvements {#scalability-and-gas-fee-improvements}
 
-As Ethereum has matured, solutions exist to significantly reduce the cost of onchain gaming and enhance performance, making interactive and fast-paced experiences more viable. These advancements are primarily achieved through:
+An old critique of onchain gaming was that blockchains are too complex and slow to provide gamers with the experience they expect. But as Ethereum has matured, solutions to significantly reduce the cost and enhance the performance of onchain gaming have emerged, making interactive and fast-paced experiences viable. 
+
+These advancements are primarily achieved through:
 
 - **Gas-less Transactions:** some platforms and protocols, including those leveraging Immutable X, offer the ability to conduct transactions like trading or minting NFTs without fees for the user, further streamlining the player experience
 - **Scaling Solutions:** Arbitrum, zkSync and Starknet are actively fostering ecosystems for onchain games due to their high throughput and low costs.
