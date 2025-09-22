@@ -83,7 +83,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           </>
         ),
         description:
-          "Gods Unchained is a free-to-play, trading card game where players own their cards as NFTs and battle in strategic matches to earn rewards.",
+          "Gods Unchained is a free-to-play trading card game, where players own their cards as NFTs and battle in strategic matches to earn rewards.",
         image: godsUnchained,
         alt: "Gods Unchained logo",
         contentItems: [
