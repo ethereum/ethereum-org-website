@@ -19,7 +19,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **next-mdx-remote 5.0+** - MDX content processing
 - **Framer Motion 10.13+** - Animations and transitions
 - **Radix UI** - Accessible component primitives
-- **ShadCN/UI** - Component library built on Radix UI
+- **shadcn/ui** - Component library built on Radix UI
 - **Recharts** - Data visualization
 - **Viem/Wagmi** - Ethereum blockchain integration
 
