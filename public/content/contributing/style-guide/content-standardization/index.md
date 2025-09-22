@@ -141,6 +141,8 @@ When using the abbreviated form of zero-knowledge rollup you should shorten zero
 - zK rollup
 - zk rollup
 
+## Writing style guidelines
+
 ### Use active voice {#use-active-voice}
 
 Sentences using active voice are more concise and efficient, making your writing more engaging and easier to comprehend.
@@ -157,7 +159,7 @@ Sentences using active voice are more concise and efficient, making your writing
 
 _This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with any of these._
 
-### Date Format {#date-format}
+### Date format {#date-format}
 
 When including dates in markdown content across Ethereum documentation, it is essential to maintain a consistent and clear presentation. In order to achieve this, we recommend the following guidelines:
 
@@ -174,7 +176,7 @@ By adhering to these guidelines, we create a unified approach to presenting date
 
 ### Linking to internal pages {#internal-links}
 
-When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
+When linking to another page on ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links, and do not include the `https://ethereum.org` domain. This maintains consistent functionality across different language versions of the site.
 
 ```md
 <!-- Good -->
@@ -185,6 +187,7 @@ Read more about [smart contracts](/docs/developers/smart-contracts/)
 
 Read more about [smart contracts](/en/docs/developers/smart-contracts)
 Read more about [smart contracts](/docs/developers/smart-contracts)
+Read more about [smart contracts](https://ethereum.org/docs/developers/smart-contracts)
 ```
 
 Please also add a trailing slash to all links. This keeps links consistent and avoids redirects, which hurts site performance.
