@@ -19,7 +19,7 @@ buttons:
 
 Gaming on Ethereum comes in various forms, from games that integrate blockchain for specific features to those where the entire game world lives onchain. Many games utilize Ethereum to manage in-game assets as NFTs (Non-Fungible Tokens). This allows players to truly own unique digital items, which can be openly traded, sold, or gifted outside the confines of a single game developer's ecosystem. While these assets offer new forms of player agency, the core game logic often remains on centralized servers.
 
-True Onchain Games are games where the fundamental mechanics and often the entire game world are directly governed by smart contracts on the Ethereum blockchain (or its Layer 2s). This ensures unparalleled transparency. No central servers, no intermediaries—just transparent, player‑driven experiences and economy. 
+Entirely onchain games are games where the fundamental mechanics, and often the entire game world, are directly governed by smart contracts on the Ethereum blockchain (or its Layer 2s). This ensures unparalleled transparency. No central servers, no intermediaries—just transparent, player‑driven experiences and economies. 
 
 - Players own their assets as NFTs.
 - Items can be freely traded, gifted, or sold.
