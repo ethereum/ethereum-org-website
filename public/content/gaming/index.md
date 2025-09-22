@@ -59,7 +59,7 @@ These advancements are primarily achieved through:
 
 - **Gas-less Transactions:** some platforms and protocols, including those leveraging Immutable X, offer the ability to conduct transactions like trading or minting NFTs without fees for the user, further streamlining the player experience
 - **Scaling Solutions:** Ethereum L2s like Arbitrum, zkSync and Starknet are actively fostering ecosystems for onchain games due to their high throughput and low costs.
-- **[MUD ecosystem](https://mud.dev/)** optimizes for onchain game development to provide efficient state management for complex game logic.
+- **[MUD ecosystem](https://mud.dev/):** MUD optimizes Ethereum-based application development toolkits for onchain game development, providing more efficient state management for complex game logic.
 
 ## Get started with Ethereum gaming {#get-started-with-ethereum-gaming}
 
