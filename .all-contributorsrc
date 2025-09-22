@@ -13434,6 +13434,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "dRPCMarketing",
+      "name": "dRPC Marketing",
+      "avatar_url": "https://avatars.githubusercontent.com/u/156195424?v=4",
+      "profile": "https://drpc.org",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
