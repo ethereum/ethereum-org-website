@@ -39,7 +39,7 @@ Developers are exploring new ways to make games more engaging and go beyond simp
 
 ## Play-to-earn (P2E) {#play-to-earn-p2e}
 
-With Play‑to‑Earn (P2E) games, you can earn assets with real value. Unlike early P2E models that relied on unsustainable rewards, newer games focus on long‑term value. For example, [Wolf Game](https://gam3s.gg/wolf-game/) combines strategic gameplay with real asset ownership. Players manage virtual sheep and wolves, earning the in‑game currency WOOL, which can be traded or sold.
+With Play‑to‑Earn (P2E) games, you can earn in-game assets with real-world value. Unlike early P2E models that relied on unsustainable rewards, newer games focus on long‑term value. For example, [Wolf Game](https://gam3s.gg/wolf-game/) combines strategic gameplay with real digital asset ownership. Players manage virtual sheep and wolves, earning the in‑game currency WOOL, which can be traded or sold.
 
 <OnchainGamingProductList list="p2e" />
 
