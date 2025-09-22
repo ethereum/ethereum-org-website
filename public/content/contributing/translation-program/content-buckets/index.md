@@ -210,7 +210,7 @@ Below is a breakdown of the website pages each content bucket contains.
 
 ## 19) Additional Learn pages {#learn-pages2}
 
-- [History](/history/)
+- [History](/ethereum-forks/)
 - [Glossary](/glossary/)
 - [Zero-knowledge proofs](/zero-knowledge-proofs/)
 

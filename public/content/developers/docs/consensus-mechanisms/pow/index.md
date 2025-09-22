@@ -56,7 +56,7 @@ To consistently create malicious yet valid blocks, a malicious miner would have 
 
 Proof-of-work was also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
-Since the [Constantinople upgrade](/history/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
+Since the [Constantinople upgrade](/ethereum-forks/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
 
 ## Finality {#finality}
 

@@ -37,7 +37,7 @@ sidebarDepth: 2
 - در اصل، [زردنامه اتریوم](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [مشخصات لایه اجرا](https://github.com/ethereum/execution-specs/)
 - [مشخصات لایه اجماع](https://github.com/ethereum/consensus-specs)
-- [EIPهای](https://eips.ethereum.org/) پیاده‌سازی شده در گستره‌ای از [ارتقاهای شبکه](/history/)
+- [EIPهای](https://eips.ethereum.org/) پیاده‌سازی شده در گستره‌ای از [ارتقاهای شبکه](/ethereum-forks/)
 
 ### ردیابی نودها در شبکه {#network-overview}
 

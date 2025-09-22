@@ -478,7 +478,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-history-label"),
               description: t("nav-history-description"),
-              href: "/history/",
+              href: "/ethereum-forks/",
             },
             {
               label: t("nav-open-research-label"),

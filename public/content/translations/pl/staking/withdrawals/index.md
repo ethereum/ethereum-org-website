@@ -65,7 +65,7 @@ Wypłaty ze stakingu są już dostępne! Funkcja wypłat została włączona w r
 
 Aktualizacja Shanghai/Capella umożliwiła odzyskanie wcześniej zestakowanych ETH na zwykłych kontach Ethereum. Zamknęło to pętlę płynności stakingu i przybliżyło Ethereum o krok na drodze do zbudowania zrównoważonego, skalowalnego i bezpiecznego zdecentralizowanego ekosystemu.
 
-- [Więcej o historii Ethereum](/history/)
+- [Więcej o historii Ethereum](/ethereum-forks/)
 - [Więcej o planie działania Ethereum](/roadmap/)
 
 ## Jak działają wypłaty środków? {#how-do-withdrawals-work}

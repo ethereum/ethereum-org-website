@@ -255,7 +255,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-roadmap-security-label"),
         },
         {
-          href: "/history/",
+          href: "/ethereum-forks/",
           text: t("nav-history-label"),
         },
         {

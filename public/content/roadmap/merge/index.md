@@ -17,7 +17,7 @@ summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 
 ## What was The Merge? {#what-is-the-merge}
 
-The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/history/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
+The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/ethereum-forks/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
 
 <MergeInfographic />
 

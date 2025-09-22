@@ -65,7 +65,7 @@ Les retraits de staking sont disponibles ! La fonction de retrait a été activ�
 
 La mise à niveau Shanghai/Capella a permis de récupérer de l'Ether précédemment mis en jeu vers un compte Ethereum standard. Cela a fermé la boucle de la liquidité mise en jeu, et a fait avancer Ethereum sur son chemin de construction d'un écosystème durable, évolutif, sûr et décentralisé.
 
-- [En savoir plus sur l'histoire d'Ethereum](/history/)
+- [En savoir plus sur l'histoire d'Ethereum](/ethereum-forks/)
 - [En savoir plus sur la feuille de route d'Ethereum](/roadmap/)
 
 ## Comment fonctionnent les paiements de retraits ? {#how-do-withdrawals-work}

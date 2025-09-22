@@ -65,7 +65,7 @@ Cire abinda aka ajiya na yuwuwa yanzu! Cire abinda aka ajiye yana cikin sashin a
 
 Ingantawar Shanghai/Capella yasa ajiyan ETH ta baya ya dawo cikin asusun Ethereum. Wannan ya cike gurbin ajiyar kuɗin liquidity, kuma ya kawo Ethereum kusa da tafiyar wajen gina wayarwa, mizani, kula da wargajewar yanayin muhalli.
 
-- [Ƙarin bayani akan tarihin Ethereum](/history/)
+- [Ƙarin bayani akan tarihin Ethereum](/ethereum-forks/)
 - [Ƙarin bayani akan hanyar taswira na Ethereum](/roadmap/)
 
 ## Ya ake amfani da sarin cire kuɗin? {#how-do-withdrawals-work}
