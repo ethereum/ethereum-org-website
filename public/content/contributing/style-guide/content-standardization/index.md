@@ -141,7 +141,7 @@ When using the abbreviated form of zero-knowledge rollup you should shorten zero
 - zK rollup
 - zk rollup
 
-## Writing style guidelines
+## Writing style guidelines {#writing-style-guidelines}
 
 ### Use active voice {#use-active-voice}
 
@@ -285,3 +285,87 @@ Discussion was held in an offchain forum, and the vote was performed onchain.
 <--- Bad--->
 Discussion was held in an off-chain forum, and the vote was performed on-chain.
 ```
+
+### En dash (–), hyphen (-), and em dash (—): usage guide {#dash-usage-guide}
+
+For further reading, see [Merriam-Webster: How to Use Em Dashes, En Dashes, and Hyphens](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+
+#### Hyphen (-) {#hyphen}
+
+- **Purpose:** Joins words or parts of words.
+- **Use for:** Compound words (well-known), prefixes (re-enter), word breaks at line ends.
+- **Example:** state-of-the-art, self-aware
+- **How to type:**
+  - Mac: `-` key
+  - Windows: `-` key
+  - Linux: `-` key
+
+```md
+<!-- Good -->
+
+state-of-the-art solution
+re-enter your password
+
+<!-- Bad -->
+
+state of the art solution
+reenter your password
+```
+
+#### En dash (–) {#en-dash}
+
+- **Purpose:** Indicates ranges or relationships.
+- **Use for:** Ranges (dates, numbers), connections (geographical, partnerships).
+- **Example:** 2010–2020, New York–London flight
+- **How to type:**
+  - Mac: `Option` + `-`
+  - Windows: `Alt` + `0150`
+  - Linux: `Ctrl` + `Shift` + `u`, then type `2013`, then press `Space` or `Enter`
+
+```md
+<!-- Good -->
+
+The event runs 10–12 June.
+The Paris–Berlin flight was delayed.
+
+<!-- Bad (uses hyphen or spaces instead of en dash; visually may look similar but is incorrect) -->
+
+The event runs 10-12 June.
+The Paris - Berlin flight was delayed.
+```
+
+#### Em dash (—) {#em-dash}
+
+- **Purpose:** Creates a strong break, sets off information, or shows interruption.
+- **Use for:** Parenthetical statements, abrupt changes, emphasis.
+- **Example:** She was late—again.
+- **How to type:**
+  - Mac: `Option` + `Shift` + `-`
+  - Windows: `Alt` + `0151`
+  - Linux: `Ctrl` + `Shift` + `u`, then type `2014`, then press `Space` or `Enter`
+
+```md
+<!-- Good -->
+
+He was sure of one thing—he would not give up.
+The results—despite initial doubts—were impressive.
+
+<!-- Bad -->
+
+He was sure of one thing — he would not give up.
+The results -- despite initial doubts -- were impressive.
+```
+
+#### Spacing {#dash-spacing}
+
+No spaces should appear before or after any dash—hyphen, en dash, or em dash—in standard usage.
+
+#### Quick reference table {#dash-reference-table}
+
+| Mark    | Symbol | Main use            | Example                   |
+| ------- | ------ | ------------------- | ------------------------- |
+| Hyphen  | -      | Compound words      | well-known author         |
+| En dash | –      | Ranges, connections | pages 10–20, Paris–Berlin |
+| Em dash | —      | Breaks, emphasis    | He was late—again.        |
+
+**Tip:** Use each dash for its specific purpose, follow spacing rules, and use the correct input method for clear, professional writing.
