@@ -45,7 +45,7 @@ With Play‑to‑Earn (P2E) games, you can earn in-game assets with real-world v
 
 ## Interoperability & cross‑chain play {#interoperability-and-cross-chain-play}
 
-One of Ethereum's most powerful features for gaming is its native support for interoperability and composability. Unlike walled-garden traditional games, assets and even game logic built on Ethereum can potentially interact across different applications and chains without sacrificing security. While this is still in development, some game networks are already interoperable, where in‑game items (NFTs) can be used across multiple games.
+One of Ethereum's most powerful features for gaming is its native support for interoperability and composability. Traditional games operate in "walled-gardens," locking in-game assets and progress to a single title. In-game assets, and even core game logic, built on Ethereum can potentially interact across different applications and chains—without sacrificing security. While this is still a developing ecosystem, some Ethereum-based game networks are already interoperable and allow in‑game items (NFTs) to be used across multiple games.
 
 For instance, in Illuvium, [players can collect creatures called Illuvials](https://gam3s.gg/news/illuvium-three-web3-games/), which are NFTs. These Illuvials can be used across various games within the Illuvium universe. An Illuvial captured in Illuvium Overworld can also be used in Illuvium Arena for battles.
 
