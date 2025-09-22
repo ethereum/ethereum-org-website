@@ -5,7 +5,7 @@ template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Game rules and state can be enforced by blockchain, not a studio’s servers
-summaryPoint2: Anyone can build mods, bots or entirely new games that plug into the same on‑chain data
+summaryPoint2: Anyone can build mods, bots, or entirely new games that plug into the same onchain data
 summaryPoint3: Purpose‑built L2s such as Redstone and frameworks like MUD cut costs enough to support real‑time gameplay
 buttons:
   - content: Learn more
