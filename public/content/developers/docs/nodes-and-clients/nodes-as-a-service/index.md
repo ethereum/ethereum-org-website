@@ -169,20 +169,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay-per-hour pricing
     - Direct 24/7 support
 
-- [**DRPC**](https://drpc.org/)
-  - [Docs](https://docs.drpc.org/)
-  - Features
-    - Decentralized RPC nodes
-    - 15+ Node providers
-    - Node balancing
-    - Unlimited compute units per month on the free tier
-    - Data verification
-    - Custom endpoints
-    - HTTP and WSS endpoints
-    - Unlimited keys (free and paid tier)
-    - Flexible fallback options
-    - [Public Endpoint](https://eth.drpc.org)
-    - Free shared archive nodes
+- [**dRPC**](https://drpc.org/)
+  - [Docs](https://drpc.org/docs)
+  - NodeCloud: Plug-n-play RPC infra starting at $10 (USD)—full speed, no limits
+  - NodeCloud features:
+    - API support for 185 networks
+    - Distributed pool of 40+ providers
+    - Global coverage with nine (9) geo-clusters
+    - AI-powered load balancing system
+    - Pay-as-you-go flat pricing—no hikes, no expiry, no lock-ins
+    - Unlimited keys, granular key tweaks, team roles, front-end protection
+    - Methods flat rate at 20 compute units (CUs) per method
+    - [Public endpoint chainlist](https://drpc.org/chainlist)
+    - [Pricing calculator](https://drpc.org/pricing#calculator)
+  - NodeCore: open-source stack for organizations wanting full control
 
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
