@@ -966,6 +966,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "matrixport",
+    "coinmate",
   ],
   // Denmark
   DK: [
