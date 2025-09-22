@@ -40,6 +40,13 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/ethereum-vs-bitcoin/",
             },
             {
+              label: t("ethereum-history-founder-and-ownership"),
+              description: t(
+                "nav-ethereum-history-founder-and-ownership-description"
+              ),
+              href: "/ethereum-history-founder-and-ownership/",
+            },
+            {
               label: t("ethereum-wallets"),
               description: t("nav-ethereum-wallets-description"),
               href: "/wallets/",

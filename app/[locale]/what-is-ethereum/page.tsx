@@ -1040,7 +1040,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     </p>
                     <p>{t("page-what-is-ethereum-when-who-governance-4")}</p>
                   </div>
-                  <LinkWithArrow href="/history/">
+                  <LinkWithArrow href="/ethereum-history-founder-and-ownership/">
                     {t("page-what-is-ethereum-when-who-learn-more")}
                   </LinkWithArrow>
                 </div>
