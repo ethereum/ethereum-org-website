@@ -476,7 +476,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             )}
           </div>
 
-          <div className="!-mt-0 w-full">
+          <div className="!mt-0 w-full">
             <ABTestWrapper
               testKey="2025-09-devconnect-banner"
               variants={[

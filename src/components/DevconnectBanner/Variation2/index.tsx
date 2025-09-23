@@ -14,45 +14,32 @@ const DevconnectBannerVariation2 = () => {
       style={{ backgroundImage: `url(${DevconnectBanner.src})` }}
     >
       <div className="mb-4 flex w-full flex-col items-center justify-between gap-2 md:flex-row">
-        <div>
-          <Image
-            src={DevconnectLogo}
-            alt="Devconnect Logo"
-            className="h-[65px] w-auto object-contain"
-          />
-        </div>
-        <div className="text-center">
-          <p className="text-white">
-            <strong>17 - 22 Nov 2025</strong>
-          </p>
-          <p className="text-white">
-            <strong>Buenos Aires, Argentina</strong>
-          </p>
+        <Image
+          src={DevconnectLogo}
+          alt="Devconnect Logo"
+          className="h-[65px] w-auto object-contain"
+          sizes="202px"
+        />
+        <div className="text-center font-bold text-white">
+          <p>17 - 22 Nov 2025</p>
+          <p>Buenos Aires, Argentina</p>
         </div>
       </div>
       <div className="mb-8 max-w-[640px] text-center">
-        <p className="text-3xl text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.65)] md:text-5xl">
-          <strong>
-            {t(
-              "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year"
-            )}
-          </strong>
+        <p className="text-3xl font-bold text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.65)] md:text-5xl">
+          {t(
+            "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year"
+          )}
         </p>
       </div>
-      <div>
-        <ButtonLink
-          href="https://devconnect.org/"
-          size="sm"
-          target="_blank"
-          rel="noopener noreferrer"
-          hideArrow
-          className="rounded-none border-b-2 border-b-[#B2820A] bg-[#F6B40E] text-[2xs] text-black hover:bg-[#B2820A] hover:!text-black md:text-md"
-        >
-          <strong>
-            {t("page-index-devconnect-banner-get-tickets").toUpperCase()}
-          </strong>
-        </ButtonLink>
-      </div>
+      <ButtonLink
+        href="https://devconnect.org/"
+        size="sm"
+        hideArrow
+        className="rounded-none border-b-2 border-b-[#B2820A] bg-[#F6B40E] font-bold uppercase text-[2xs] text-black hover:bg-[#B2820A] hover:!text-black md:text-md"
+      >
+        {t("page-index-devconnect-banner-get-tickets")}
+      </ButtonLink>
     </div>
   )
 }
