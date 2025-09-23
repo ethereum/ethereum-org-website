@@ -2,29 +2,9 @@ import { push } from "@socialgouv/matomo-next"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
-
 import { IS_PROD } from "./env"
 
 export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
-
-/**
- * Normalizes paths to ensure consistent Matomo tracking.
- * With localePrefix: "as-needed", English paths don't have /en prefix,
- * but we want to track them as /en paths for analytics consistency.
- */
-export const normalizePathForMatomo = (pathname: string): string => {
-  const hasLocalePrefix = LOCALES_CODES.some((locale) =>
-    pathname.startsWith(`/${locale}/`)
-  )
-
-  if (hasLocalePrefix) {
-    return pathname
-  }
-
-  // For paths without locale prefix (English content), add /en prefix
-  return `/${DEFAULT_LOCALE}${pathname}`
-}
 
 export const trackCustomEvent = ({
   eventCategory,
@@ -43,9 +23,8 @@ export const trackCustomEvent = ({
 
   // Set custom URL removing any query params or hash fragments
   if (window) {
-    const normalizedPathname = normalizePathForMatomo(window.location.pathname)
-    const normalizedUrl = window.location.origin + normalizedPathname
-    push([`setCustomUrl`, normalizedUrl])
+    const url = window.location.origin + window.location.pathname
+    push([`setCustomUrl`, url])
   }
   push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
 }
