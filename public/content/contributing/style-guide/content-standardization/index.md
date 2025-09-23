@@ -286,7 +286,7 @@ Discussion was held in an offchain forum, and the vote was performed onchain.
 Discussion was held in an off-chain forum, and the vote was performed on-chain.
 ```
 
-### En dash (–), hyphen (-), and em dash (—): usage guide {#dash-usage-guide}
+### Hyphen (-), en dash (–), and em dash (—): usage guide {#dash-usage-guide}
 
 For further reading, see [Merriam-Webster: How to Use Em Dashes, En Dashes, and Hyphens](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
 
