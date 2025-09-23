@@ -2085,6 +2085,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://drpc.org"><img src="https://avatars.githubusercontent.com/u/156195424?v=4?s=100" width="100px;" alt="dRPC Marketing"/><br /><sub><b>dRPC Marketing</b></sub></a><br /><a href="#maintenance-dRPCMarketing" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://efp.app/caveman.eth"><img src="https://avatars.githubusercontent.com/u/24273561?v=4?s=100" width="100px;" alt="caveman.eth"/><br /><sub><b>caveman.eth</b></sub></a><br /><a href="#maintenance-caveman-eth" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pete-vielhaber"><img src="https://avatars.githubusercontent.com/u/178667149?v=4?s=100" width="100px;" alt="Pete"/><br /><sub><b>Pete</b></sub></a><br /><a href="#maintenance-pete-vielhaber" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
