@@ -30,7 +30,7 @@
   "page-ethereum-vs-bitcoin-differences-table-row-2-2": "Not supported",
   "page-ethereum-vs-bitcoin-differences-table-row-2-3": "Core functionality",
   "page-ethereum-vs-bitcoin-differences-table-row-3-1": "Supply",
-  "page-ethereum-vs-bitcoin-differences-table-row-3-2": "Bitcoin is issued every block at a fixed/predetermined rate dictated by the original and unchanged protocol, with an eventual fixed limit of ~21 million.",
+  "page-ethereum-vs-bitcoin-differences-table-row-3-2": "Bitcoin is issued every block at a fixed/predetermined rate dictated by the original and unchanged protocol, with an eventual fixed limit of 21 million.",
   "page-ethereum-vs-bitcoin-differences-table-row-3-3": "Ether is burned every block proportional to activity/demand, and issued every epoch proportional to total ETH staked. No fixed limit, but the rate of issuance is limited by total ETH staked.",
   "page-ethereum-vs-bitcoin-differences-table-row-4-1": "Consensus mechanism",
   "page-ethereum-vs-bitcoin-differences-table-row-4-2": "Proof-of-work",
