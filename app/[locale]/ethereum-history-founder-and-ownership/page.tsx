@@ -172,8 +172,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <UnorderedList>
                 <ListItem>
-                  {t(
-                    "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-vitalik-buterin"
+                  {t.rich(
+                    "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-vitalik-buterin",
+                    {
+                      strong: Strong,
+                    }
                   )}
                 </ListItem>
                 <ListItem>
