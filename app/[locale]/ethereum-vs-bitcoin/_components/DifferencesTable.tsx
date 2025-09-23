@@ -12,7 +12,7 @@ import {
 const DifferencesTable = () => {
   const t = useTranslations("page-ethereum-vs-bitcoin")
   return (
-    <Table>
+    <Table variant="highlight-first-column">
       <TableHeader>
         <TableRow>
           <TableHead>
