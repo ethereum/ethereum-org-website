@@ -11,8 +11,11 @@ import type {
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
+import DevconnectBannerVariation1 from "@/components/DevconnectBanner/Variation1"
+import DevconnectBannerVariation2 from "@/components/DevconnectBanner/Variation2"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -428,6 +431,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
+        <ABTestWrapper
+          testKey="2025-09-devconnect-banner"
+          variants={[<DevconnectBannerVariation1 key="variation-1" />, <></>]}
+        />
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -467,6 +474,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 )
               }
             )}
+          </div>
+
+          <div className="!mt-0 w-full">
+            <ABTestWrapper
+              testKey="2025-09-devconnect-banner"
+              variants={[
+                <></>,
+                <DevconnectBannerVariation2 key="variation-2" />,
+              ]}
+            />
           </div>
 
           {/* Use Cases - A new way to use the internet */}
