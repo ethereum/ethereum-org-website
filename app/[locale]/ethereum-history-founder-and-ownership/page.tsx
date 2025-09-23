@@ -16,6 +16,8 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import EthereumHistoryFounderAndOwnershipPageJsonLD from "./page-jsonld"
+
 import EthereumOrgLogo from "@/public/images/eth-home-icon.png"
 import heroImg from "@/public/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png"
 
@@ -87,6 +89,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <>
+      <EthereumHistoryFounderAndOwnershipPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
+
       <ContentHero {...heroProps} />
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <div
@@ -163,6 +171,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 )}
               </p>
               <UnorderedList>
+                <ListItem>
+                  {t(
+                    "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-vitalik-buterin"
+                  )}
+                </ListItem>
                 <ListItem>
                   {t.rich(
                     "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-gavin-wood",
