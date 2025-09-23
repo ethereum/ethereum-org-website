@@ -2087,6 +2087,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://efp.app/caveman.eth"><img src="https://avatars.githubusercontent.com/u/24273561?v=4?s=100" width="100px;" alt="caveman.eth"/><br /><sub><b>caveman.eth</b></sub></a><br /><a href="#maintenance-caveman-eth" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pete-vielhaber"><img src="https://avatars.githubusercontent.com/u/178667149?v=4?s=100" width="100px;" alt="Pete"/><br /><sub><b>Pete</b></sub></a><br /><a href="#maintenance-pete-vielhaber" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/unhappyben"><img src="https://avatars.githubusercontent.com/u/66370595?v=4?s=100" width="100px;" alt="Ben"/><br /><sub><b>Ben</b></sub></a><br /><a href="#tool-unhappyben" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://sethforprivacy.com"><img src="https://avatars.githubusercontent.com/u/40500387?v=4?s=100" width="100px;" alt="Seth For Privacy"/><br /><sub><b>Seth For Privacy</b></sub></a><br /><a href="#tool-sethforprivacy" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
