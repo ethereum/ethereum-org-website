@@ -105,7 +105,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">
           <Section id={getId(tocItems[0].url)} className="space-y-6">
-            <p>{t("page-ethereum-vs-bitcoin-section-1")}</p>
+            <p>
+              {t.rich("page-ethereum-vs-bitcoin-section-1", {
+                strong: Strong,
+              })}
+            </p>
             <p>{t("page-ethereum-vs-bitcoin-section-2")}</p>
           </Section>
 
@@ -171,11 +175,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-ethereum-section-6", {
-                  "what-is-ethereum": (chunks) => (
-                    <Link href="/what-is-ethereum/">{chunks}</Link>
-                  ),
-                })}
+                <Link href="/what-is-ethereum/">
+                  {t("page-ethereum-vs-bitcoin-ethereum-section-6")}
+                </Link>
               </p>
             </div>
           </Section>
@@ -244,11 +246,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-usecases-and-adoption-5", {
-                  "what-is-ethereum": (chunks) => (
-                    <Link href="/what-is-ethereum/">{chunks}</Link>
-                  ),
-                })}
+                <Link href="/what-is-ethereum/">
+                  {t("page-ethereum-vs-bitcoin-usecases-and-adoption-5")}
+                </Link>
               </p>
             </div>
           </Section>
