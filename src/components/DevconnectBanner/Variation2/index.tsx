@@ -9,10 +9,13 @@ const DevconnectBannerVariation2 = () => {
   const { t } = useTranslation("page-index")
 
   return (
-    <div
-      className="relative flex w-full flex-col items-center justify-center rounded-[30px] bg-cover bg-center p-8"
-      style={{ backgroundImage: `url(${DevconnectBanner.src})` }}
-    >
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-4xl bg-cover bg-center p-8">
+      <Image
+        src={DevconnectBanner}
+        alt=""
+        className="absolute inset-0 -z-10 h-full object-cover"
+        sizes="100vw"
+      />
       <div className="mb-4 flex w-full flex-col items-center justify-between gap-2 md:flex-row">
         <Image
           src={DevconnectLogo}
