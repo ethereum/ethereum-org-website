@@ -13452,6 +13452,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "pete-vielhaber",
+      "name": "Pete",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178667149?v=4",
+      "profile": "https://github.com/pete-vielhaber",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
