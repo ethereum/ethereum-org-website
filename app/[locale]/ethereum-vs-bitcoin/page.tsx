@@ -246,11 +246,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-usecases-and-adoption-5", {
-                  "what-is-ethereum": (chunks) => (
-                    <Link href="/what-is-ethereum/">{chunks}</Link>
-                  ),
-                })}
+                <Link href="/what-is-ethereum/">
+                  {t("page-ethereum-vs-bitcoin-usecases-and-adoption-5")}
+                </Link>
               </p>
             </div>
           </Section>
