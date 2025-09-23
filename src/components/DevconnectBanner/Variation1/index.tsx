@@ -39,7 +39,7 @@ const DevconnectBannerVariation1 = () => {
           href="https://devconnect.org/"
           size="sm"
           hideArrow
-          className="rounded-none border-b-2 border-b-[#215D93] bg-[#74ACDF] uppercase text-2xs text-white hover:bg-[#215D93] md:text-md"
+          className="rounded-none border-b-2 border-b-[#215D93] bg-[#74ACDF] text-2xs uppercase text-white hover:bg-[#215D93] md:text-md"
         >
           {t("page-index-devconnect-banner-get-tickets")}
         </ButtonLink>
