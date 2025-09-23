@@ -8,11 +8,12 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import Link from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { screens } from "@/lib/utils/screen"
 
 import DifferencesTable from "./_components/DifferencesTable"
 import EthereumVsBitcoinPageJsonLD from "./page-jsonld"
@@ -148,6 +149,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={ethdotorgLogoImg}
               alt="ethereum.org Logo"
               className="mx-auto"
+              sizes="281px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -175,9 +177,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                <Link href="/what-is-ethereum/">
+                <LinkWithArrow href="/what-is-ethereum/">
                   {t("page-ethereum-vs-bitcoin-ethereum-section-6")}
-                </Link>
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -220,6 +222,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={layer2HeroImg}
               alt="Layer 2 Hub Hero"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -246,9 +249,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                <Link href="/what-is-ethereum/">
+                <LinkWithArrow href="/what-is-ethereum/">
                   {t("page-ethereum-vs-bitcoin-usecases-and-adoption-5")}
-                </Link>
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -278,6 +281,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={guidesHubHeroImg}
               alt="Guides Hub Hero"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -295,11 +299,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-developer-ecosystem-4", {
-                  developers: (chunks) => (
-                    <Link href="/developers/">{chunks}</Link>
-                  ),
-                })}
+                <LinkWithArrow href="/developers/">
+                  {t("page-ethereum-vs-bitcoin-developer-ecosystem-4")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -321,13 +323,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-security-and-consensus-4", {
-                  "consensus-mechanisms": (chunks) => (
-                    <Link href="/developers/docs/consensus-mechanisms/">
-                      {chunks}
-                    </Link>
-                  ),
-                })}
+                <LinkWithArrow href="/developers/docs/consensus-mechanisms/">
+                  {t("page-ethereum-vs-bitcoin-security-and-consensus-4")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -336,7 +334,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={enterpriseEthImg}
               alt="Enterprise ETH"
-              className="mx-auto max-w-[350px]"
+              className="mx-auto w-[350px] max-w-full"
+              sizes="(max-width: 350px) 100vw, 350px"
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -355,11 +354,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>{t("page-ethereum-vs-bitcoin-underlying-technology-4")}</p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-underlying-technology-5", {
-                  "developers-docs": (chunks) => (
-                    <Link href="/developers/docs/">{chunks}</Link>
-                  ),
-                })}
+                <LinkWithArrow href="/developers/docs/">
+                  {t("page-ethereum-vs-bitcoin-underlying-technology-5")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -392,7 +389,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={hackathonImg}
               alt="Enterprise ETH"
-              className="mx-auto max-w-[350px]"
+              className="mx-auto w-[350px] max-w-full"
+              sizes="(max-width: 350px) 100vw, 350px"
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -411,13 +409,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>{t("page-ethereum-vs-bitcoin-environmental-impact-4")}</p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-environmental-impact-5", {
-                  "energy-consumption": (chunks) => (
-                    <Link href="https://consensys.io/blog/ethereum-blockchain-eliminates-99-99-of-its-carbon-footprint-overnight-after-a-successful-merge-according-to-new-report">
-                      {chunks}
-                    </Link>
-                  ),
-                })}
+                <LinkWithArrow href="https://consensys.io/blog/ethereum-blockchain-eliminates-99-99-of-its-carbon-footprint-overnight-after-a-successful-merge-according-to-new-report">
+                  {t("page-ethereum-vs-bitcoin-environmental-impact-5")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -435,9 +429,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-future-outlook-4", {
-                  roadmap: (chunks) => <Link href="/roadmap/">{chunks}</Link>,
-                })}
+                <LinkWithArrow href="/roadmap/">
+                  {t("page-ethereum-vs-bitcoin-future-outlook-4")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>

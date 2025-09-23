@@ -21,7 +21,11 @@ test.describe("Find Wallet Page", () => {
     const personaCount =
       await findWalletPage.selectPersonaFilter("New to crypto")
 
-    await findWalletPage.verifyPersonaFilterCount(personaCount)
+    // this is a virtualized list, so we can't count the rows,
+    // we need to check that the counter is updated correctly
+    // and the list is at least showing something
+    await findWalletPage.verifyRowCounterEquals(personaCount)
+    await findWalletPage.expectSomeRowsVisible()
   })
 
   test("wallet list items expand correctly", async () => {

@@ -13443,6 +13443,42 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "caveman-eth",
+      "name": "caveman.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24273561?v=4",
+      "profile": "http://efp.app/caveman.eth",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "pete-vielhaber",
+      "name": "Pete",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178667149?v=4",
+      "profile": "https://github.com/pete-vielhaber",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "unhappyben",
+      "name": "Ben",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66370595?v=4",
+      "profile": "https://github.com/unhappyben",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "sethforprivacy",
+      "name": "Seth For Privacy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40500387?v=4",
+      "profile": "http://sethforprivacy.com",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,

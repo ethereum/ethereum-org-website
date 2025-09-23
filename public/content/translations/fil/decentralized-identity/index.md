@@ -133,7 +133,7 @@ Maraming posibleng use case ang decentralized identity:
 
 Makakatulong ang decentralized identity na palitan ang mga pag-log in gamit ang password ng [decentralized authentication](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Maaaring magbigay ang mga service provider ng mga attestation sa mga user, na maso-store sa Ethereum wallet. Ang isang halimbawa ng attestation ay isang [NFT](/nft/) na nagbibigay sa may-ari ng access sa isang online na komunidad.
 
-Ang function na [Mag-sign in gamit ang Ethereum](https://login.xyz/) ay magbibigay-daan sa mga server na kumpirmahin ang Ethereum account ng user at kunin ang kinakailangang attestation mula sa account address niya. Ibig sabihin nito, maa-access ng mga user ang mga platform at website nang hindi kinakailangang tandaan ang mahahabang password at mapapahusay nito ang online experience ng mga user.
+Ang function na [Mag-sign in gamit ang Ethereum](https://siwe.xyz/) ay magbibigay-daan sa mga server na kumpirmahin ang Ethereum account ng user at kunin ang kinakailangang attestation mula sa account address niya. Ibig sabihin nito, maa-access ng mga user ang mga platform at website nang hindi kinakailangang tandaan ang mahahabang password at mapapahusay nito ang online experience ng mga user.
 
 ### 2. KYC authentication {#kyc-authentication}
 
@@ -181,5 +181,5 @@ Maraming malalaking proyekto ang gumagamit ng Ethereum bilang pundasyon para sa 
 ### Mga Komunidad {#communities}
 
 - [ERC-725 Alliance sa GitHub](https://github.com/erc725alliance) — _Mga tagasuporta ng pamantayang ERC725 para sa pamamahala ng identity sa Ethereum blockchain_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Komunidad para sa mga tagahanga at developer na nagtatrabaho sa Mag-sign in gamit ang Ethereum_
+- [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) — _Komunidad para sa mga tagahanga at developer na nagtatrabaho sa Mag-sign in gamit ang Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Isang komunidad ng mga developer na tumutulong sa pagbuo ng framework para sa nave-verify na data para sa mga application_
