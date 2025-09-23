@@ -13,6 +13,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { screens } from "@/lib/utils/screen"
 
 import DifferencesTable from "./_components/DifferencesTable"
 import EthereumVsBitcoinPageJsonLD from "./page-jsonld"
@@ -148,6 +149,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={ethdotorgLogoImg}
               alt="ethereum.org Logo"
               className="mx-auto"
+              sizes="281px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -220,6 +222,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={layer2HeroImg}
               alt="Layer 2 Hub Hero"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -278,6 +281,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={guidesHubHeroImg}
               alt="Guides Hub Hero"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -336,7 +340,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={enterpriseEthImg}
               alt="Enterprise ETH"
-              className="mx-auto max-w-[350px]"
+              className="mx-auto w-[350px] max-w-full"
+              sizes="(max-width: 350px) 100vw, 350px"
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
@@ -392,7 +397,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={hackathonImg}
               alt="Enterprise ETH"
-              className="mx-auto max-w-[350px]"
+              className="mx-auto w-[350px] max-w-full"
+              sizes="(max-width: 350px) 100vw, 350px"
             />
             <div className="space-y-6">
               <h3 className="scroll-mt-28">
