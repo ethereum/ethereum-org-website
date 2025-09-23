@@ -432,5 +432,8 @@
   "withdrawals": "স্টেকিং উইথড্রয়াল",
   "wrapped-ether": "র‍্যাপড ইথার",
   "yes": "হ্যাঁ",
-  "zero-knowledge-proofs": "শূন্য-জ্ঞান প্রমাণ"
+  "zero-knowledge-proofs": "শূন্য-জ্ঞান প্রমাণ",
+  "ethereum-vs-bitcoin": "ইথেরিয়াম বনাম বিটকয়েন",
+  "nav-ethereum-vs-bitcoin-description": "ইথেরিয়াম এবং বিটকয়েনের মধ্যে পার্থক্য বুঝুন"
+
 }
