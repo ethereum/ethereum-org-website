@@ -8,7 +8,7 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
-import Link from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -177,9 +177,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                <Link href="/what-is-ethereum/">
+                <LinkWithArrow href="/what-is-ethereum/">
                   {t("page-ethereum-vs-bitcoin-ethereum-section-6")}
-                </Link>
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -249,9 +249,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                <Link href="/what-is-ethereum/">
+                <LinkWithArrow href="/what-is-ethereum/">
                   {t("page-ethereum-vs-bitcoin-usecases-and-adoption-5")}
-                </Link>
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -299,11 +299,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-developer-ecosystem-4", {
-                  developers: (chunks) => (
-                    <Link href="/developers/">{chunks}</Link>
-                  ),
-                })}
+                <LinkWithArrow href="/developers/">
+                  {t("page-ethereum-vs-bitcoin-developer-ecosystem-4")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -325,13 +323,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-security-and-consensus-4", {
-                  "consensus-mechanisms": (chunks) => (
-                    <Link href="/developers/docs/consensus-mechanisms/">
-                      {chunks}
-                    </Link>
-                  ),
-                })}
+                <LinkWithArrow href="/developers/docs/consensus-mechanisms/">
+                  {t("page-ethereum-vs-bitcoin-security-and-consensus-4")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -360,11 +354,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>{t("page-ethereum-vs-bitcoin-underlying-technology-4")}</p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-underlying-technology-5", {
-                  "developers-docs": (chunks) => (
-                    <Link href="/developers/docs/">{chunks}</Link>
-                  ),
-                })}
+                <LinkWithArrow href="/developers/docs/">
+                  {t("page-ethereum-vs-bitcoin-underlying-technology-5")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -417,13 +409,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>{t("page-ethereum-vs-bitcoin-environmental-impact-4")}</p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-environmental-impact-5", {
-                  "energy-consumption": (chunks) => (
-                    <Link href="https://consensys.io/blog/ethereum-blockchain-eliminates-99-99-of-its-carbon-footprint-overnight-after-a-successful-merge-according-to-new-report">
-                      {chunks}
-                    </Link>
-                  ),
-                })}
+                <LinkWithArrow href="https://consensys.io/blog/ethereum-blockchain-eliminates-99-99-of-its-carbon-footprint-overnight-after-a-successful-merge-according-to-new-report">
+                  {t("page-ethereum-vs-bitcoin-environmental-impact-5")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
@@ -441,9 +429,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 })}
               </p>
               <p>
-                {t.rich("page-ethereum-vs-bitcoin-future-outlook-4", {
-                  roadmap: (chunks) => <Link href="/roadmap/">{chunks}</Link>,
-                })}
+                <LinkWithArrow href="/roadmap/">
+                  {t("page-ethereum-vs-bitcoin-future-outlook-4")}
+                </LinkWithArrow>
               </p>
             </div>
           </Section>
