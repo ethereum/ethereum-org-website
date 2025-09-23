@@ -118,5 +118,7 @@
   "page-index-values-open-legacy-label": "Закрытость от большинства",
   "page-index-values-open-legacy-content-0": "Компании защищают свою интеллектуальную собственность и не делятся ей. Никто извне не может узнать, как они выполняют работу, устраняют проблемы и внедряют улучшения. Людям сложно создавать новые инструменты или настраивать существующие.",
   "page-index-values-open-ethereum-label": "Открытость для всех",
-  "page-index-values-open-ethereum-content-0": "Ethereum открыта для всех. Любой пользователь может просматривать, использовать и обновлять код, делая платформу лучше для всех."
+  "page-index-values-open-ethereum-content-0": "Ethereum открыта для всех. Любой пользователь может просматривать, использовать и обновлять код, делая платформу лучше для всех.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Присоединяйтесь к крупнейшему событию года в сети Ethereum",
+  "page-index-devconnect-banner-get-tickets": "Получить билеты"
 }
