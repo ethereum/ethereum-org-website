@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="सुरक्षित कुंजी प्रबंधन" eventCategory="SoloStaking" eventName="clicked secure key management">
 जैसे निजी कुंजियाँ आपके इथेरियम पते को सुरक्षित करती हैं, आपको विशेष रूप से अपने सत्यापनकर्ता के लिए कुंजियाँ उत्पन्न करने की आवश्यकता होगी। आपको यह समझना चाहिए कि किसी भी बीज वाक्यांशों या निजी कुंजियों को सुरक्षित कैसे रखा जाए।{' '}
 
-<a href="/security/">इथेरियम सुरक्षा और घोटाले की रोकथाम</a>
+[इथेरियम सुरक्षा और घोटाले की रोकथाम](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ summaryPoints:
 <ExpandableCard title="क्या मैं 32 ETH से अधिक जमा कर सकता हूं?">
 सत्यापनकर्ता से जुड़े प्रत्येक कुंजी-जोड़ी को सक्रिय होने के लिए ठीक 32 ETH की आवश्यकता होती है। कुंजियों के एक सेट में जमा अधिक ETH पुरस्कार क्षमता में वृद्धि नहीं करता है, क्योंकि प्रत्येक सत्यापनकर्ता 32 ETH के <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">प्रभावी बैलेंस</a> तक सीमित है। इसका मतलब यह है कि स्टेकिंग 32 ETH वृद्धि में की जाती है, प्रत्येक की कुंजी और बैलेंस का अपना सेट होता है।
 
-एकल सत्यापनकर्ता के लिए 32 ETH से अधिक जमा न करें। यह आपके पुरस्कारों में वृद्धि नहीं करेगा। यदि सत्यापनकर्ता के लिए निकासी पता सेट किया गया है, तो 32 ETH से अतिरिक्त धन अगले <a href="/staking/withdrawals/#validator-sweeping">सत्यापनकर्ता स्वीप</a> के दौरान स्वचालित रूप से इस पते पर वापस ले लिया जाएगा।
+एकल सत्यापनकर्ता के लिए 32 ETH से अधिक जमा न करें। यह आपके पुरस्कारों में वृद्धि नहीं करेगा। यदि सत्यापनकर्ता के लिए निकासी पता सेट किया गया है, तो 32 ETH से अतिरिक्त धन अगले [सत्यापनकर्ता स्वीप](/staking/withdrawals/#validator-sweeping) के दौरान स्वचालित रूप से इस पते पर वापस ले लिया जाएगा।
 
-यदि एकल स्टेकिंग आपके लिए बहुत अधिक मांग वाली लगती है, तो <a href="/staking/saas/">स्टेकिंग-सर्विस</a> प्रदाता का उपयोग करने पर विचार करें, या यदि आप 32 ETH से कम के साथ काम कर रहे हैं, तो <a href="/staking/pools/">स्टेकिंग पूल</a> देखें।
+यदि एकल स्टेकिंग आपके लिए बहुत अधिक मांग वाली लगती है, तो [स्टेकिंग-सर्विस](/staking/saas/) प्रदाता का उपयोग करने पर विचार करें, या यदि आप 32 ETH से कम के साथ काम कर रहे हैं, तो [स्टेकिंग पूल](/staking/pools/) देखें।
 </ExpandableCard>
 
 <ExpandableCard title="अगर मैं ऑफ़लाइन जाता हूं तो क्या मेरी कटौती होगी? (tldr: नंबर)">
@@ -200,7 +200,6 @@ summaryPoints:
 - [क्लाइंट विविधता की मदद करना](https://www.attestant.io/posts/helping-client-diversity/) - _जिम मैकडॉनल्ड 2022_
 - [क्लाइंट विविधता इथेरियम की आम सहमति परत पर](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [कैसे: इथेरियम सत्यापनकर्ता हार्डवेयर के लिए खरीदारी करें](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [चरण दर चरण: इथेरियम 2.0 टेस्टनेट में कैसे शामिल हों](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _बुट्टा_
 - [Eth2 कटौती रोकथाम युक्तियाँ](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _रोल जॉर्डन 2020_
 
 <QuizWidget quizKey="staking-solo" />

@@ -69,7 +69,7 @@ Hesaplamalar gerçekleştirebilir, para birimleri yaratabilir, veri depolayabili
 - [Sabit coinler](/stablecoins/)
 - [Eşsiz dijital varlıkların oluşturulması ve dağıtılması](/nft/)
 - [Otomatik, açık bir para birimi borsası](/get-eth/#dex)
-- [Merkezi olmayan oyun](/apps/?category=gaming#explore)
+- [Merkezi olmayan oyun](/apps/categories/gaming)
 - [Otomatik olarak ödeme yapan bir sigorta poliçesi](https://etherisc.com/)
 - [İnsanların özel, uyumlu para birimleri oluşturmasını sağlayan bir standart](/developers/docs/standards/tokens/)
 

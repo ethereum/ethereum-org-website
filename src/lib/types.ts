@@ -294,6 +294,8 @@ export type LocaleDisplayInfo = {
   englishName: string
   approvalProgress: number
   wordsApproved: number
+  progress: string
+  words: string
   isBrowserDefault?: boolean
 }
 
@@ -468,7 +470,7 @@ export type CommonHeroProps<
   /**
    * The primary title of the page
    */
-  title: string
+  title?: string
   /**
    * A tag name for the page
    */
@@ -490,10 +492,11 @@ export interface LearningTool {
   background: string
   subjects: Array<string>
   locales?: Array<Lang>
+  priceType?: string
 }
 
 export interface LearningToolsCardGridProps {
-  category: Array<LearningTool>
+  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
@@ -722,11 +725,14 @@ export type WalletData = {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  privacy?: boolean
 }
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
+
+export type WalletRow = Wallet & { id: string }
 
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
@@ -1007,6 +1013,7 @@ export type EventCardProps = {
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  locale?: Lang
 }
 
 export type BreakpointKey = keyof typeof screens
@@ -1215,4 +1222,18 @@ export type Story = {
   twitter: string | null
   country: string | null
   date: string
+}
+
+export type SectionNavDetails = {
+  key: string
+  label: string
+  href?: string
+  icon?: React.ReactNode
+}
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
 }

@@ -86,7 +86,7 @@ Pul tikish haqida batafsil SaaS provayderidan foydalangan holda, siz uzelingizni
 
 Kesish/chiqish jarayoni tugagandan so‘ng, ushbu mablag‘lar validatorga tayinlangan yechib olish manziliga o‘tkaziladi. Bu yoqilishi uchun yechib olish manzilini kiritish talab qilinadi. Bu dastlabki depozitda taqdim etilgan bo‘lishi mumkin. Aks holda, yechib olish manzilini e’lon qiluvchi xabarni imzolash uchun validator yechib olish kalitlaridan foydalanish kerak bo‘ladi. Agar yechib olish manzili taqdim etilmagan bo‘lsa, taqdim etilgunga qadar mablag‘lar qulflangan holda qoladi.
 
-Har qanday kafolat yoki sug‘urta variantlari haqida batafsil ma’lumot olish va yechib olish manzilini taqdim etish bo‘yicha ko‘rsatmalar olish uchun SaaS provayderiga murojaat qiling. Agar siz validator sozlamalarini to‘liq nazorat qilishni istasangiz, <a href="/staking/solo/">ETHingizni qanday yakka tartibda qo‘yish haqida batafsil bilib oling</a>.
+Har qanday kafolat yoki sug‘urta variantlari haqida batafsil ma’lumot olish va yechib olish manzilini taqdim etish bo‘yicha ko‘rsatmalar olish uchun SaaS provayderiga murojaat qiling. Agar siz validator sozlamalarini to‘liq nazorat qilishni istasangiz, [ETHingizni qanday yakka tartibda qo‘yish haqida batafsil bilib oling](/staking/solo/).
 </ExpandableCard>
 
 ## Qo'shimcha o'qish {#further-reading}

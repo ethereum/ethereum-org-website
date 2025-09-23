@@ -810,6 +810,65 @@
         "eventAction": "Clicked",
         "eventName": "Clicked ConsensysStaking go to link"
       }
+    },
+    {
+      "name": "Serenita",
+      "imageName": "Serenita",
+      "hue": 231,
+      "launchDate": "2023-11-28",
+      "url": "https://serenita.io",
+      "audits": [
+        {
+          "name": "2023-05-Halborn",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-05-Halborn.pdf"
+        },
+        {
+          "name": "2023-08-Halborn",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-08-Halborn.pdf"
+        },
+        {
+          "name": "2023-08-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-08-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2024-03-Consensys-Diligence",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-03-Consensys-Diligence.pdf"
+        },
+        {
+          "name": "2024-06-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-06-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2024-09-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-09-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2025-09-ABDK",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2025-09-ABDK.pdf"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 5,
+      "monthlyFeeUnit": "%",
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 0,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://x.com/SerenitaIO"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Serenita go to link"
+      }
     }
   ],
   "pools": [

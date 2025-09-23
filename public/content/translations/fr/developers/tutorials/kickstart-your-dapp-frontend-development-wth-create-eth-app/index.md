@@ -51,7 +51,7 @@ _create-react-app_, en particulier, fait usage des nouveaux [effets hooks](https
 
 ### ethers.js {#ethersjs}
 
-Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs-beta.ethers.io/) qui n'est pratiquement plus en version bêta.
+Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs.ethers.org/v5/) qui n'est pratiquement plus en version bêta.
 
 ### Le réseau Graph  {#the-graph}
 

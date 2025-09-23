@@ -1,7 +1,7 @@
 ---
 title: Gas and fees
 metaTitle: "Ethereum gas and fees: technical overview"
-description:
+description: Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.
 lang: en
 ---
 
@@ -142,8 +142,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Gas Optimization Strategies for Developers](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 docs](https://eips.ethereum.org/EIPS/eip-1559).
 - [Tim Beiko's EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Separating Mechanisms From Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Separating Mechanisms From Memes](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

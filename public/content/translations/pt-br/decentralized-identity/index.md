@@ -57,7 +57,7 @@ A identidade descentralizada tem muitos casos de uso em potencial:
 
 A identidade descentralizada pode ajudar a substituir os logins baseados em senha pela autenticação descentralizada. Os provedores de serviços podem emitir atestados aos usuários, aos que podem ser armazenados em uma carteira Ethereum. Um exemplo de atestado seria uma [NFT](/glossary/#nft) concedendo ao titular acesso a uma comunidade on-line.
 
-Uma função [Entrar com Ethereum](https://login.xyz/) permitiria que os servidores confirmassem a conta Ethereum do usuário e buscassem o atestado necessário de seu endereço de conta. Isso significa que os usuários podem acessar plataformas e sites sem precisar memorizar senhas longas e melhorar a experiência on-line dos usuários.
+Uma função [Entrar com Ethereum](https://siwe.xyz/) permitiria que os servidores confirmassem a conta Ethereum do usuário e buscassem o atestado necessário de seu endereço de conta. Isso significa que os usuários podem acessar plataformas e sites sem precisar memorizar senhas longas e melhorar a experiência on-line dos usuários.
 
 ### 2. Autenticação KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Existem muitos projetos ambiciosos usando Ethereum como base para soluções de 
 ### Comunidades {#communities}
 
 - [Aliança ERC-725 no GitHub](https://github.com/erc725alliance) — _Apoiadores do padrão ERC725 para gerenciamento de identidade no blockchain Ethereum_
-- [Servidor do Discord do SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Comunidade para entusiastas e desenvolvedores que trabalham no Entrar com Ethereum_
+- [Servidor do Discord do EthID](https://discord.com/invite/ZUyG3mSXFD) — _Comunidade para entusiastas e desenvolvedores que trabalham no Entrar com Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Uma comunidade de desenvolvedores contribuindo para criar um framework de dados verificáveis para aplicativos_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _ Uma comunidade de desenvolvedores e construtores trabalhando em casos de uso de identidade descentralizada em vários setores_

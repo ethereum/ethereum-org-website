@@ -70,9 +70,9 @@ Addressing client diversity requires more than individual users to choose minori
 
 - [Nimbus](https://nimbus.team/)
 - [Lighthouse](https://github.com/sigp/lighthouse)
-- [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
+- [Teku](https://consensys.io/teku)
 - [Lodestar](https://github.com/ChainSafe/lodestar)
-- [Prysm](https://docs.prylabs.network/docs/getting-started)
+- [Prysm](https://prysm.offchainlabs.com/docs/)
 - [Grandine](https://docs.grandine.io/)
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).

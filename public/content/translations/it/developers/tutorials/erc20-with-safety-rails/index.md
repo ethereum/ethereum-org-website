@@ -132,8 +132,8 @@ Talvolta è utile avere un amministratore che possa annullare gli errori. Per ri
 
 OpenZeppelin fornisce due meccanismi per consentire l'accesso amministrativo:
 
-- I contratti [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) hanno un singolo proprietario. Le funzioni aventi il [modificatore](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` possono essere chiamate soltanto dal proprietario. I proprietari possono trasferire la proprietà a qualcun altro o rinunciarvi completamente. I diritti di tutti gli altri account sono solitamente identici.
-- I contratti [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) hanno il [controllo d'accesso basato sul ruolo (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
+- I contratti [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) hanno un singolo proprietario. Le funzioni aventi il [modificatore](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` possono essere chiamate soltanto dal proprietario. I proprietari possono trasferire la proprietà a qualcun altro o rinunciarvi completamente. I diritti di tutti gli altri account sono solitamente identici.
+- I contratti [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) hanno il [controllo d'accesso basato sul ruolo (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Per semplicità, in questo articolo utilizzeremo `Ownable`.
 

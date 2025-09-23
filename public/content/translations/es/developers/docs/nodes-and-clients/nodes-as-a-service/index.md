@@ -156,19 +156,6 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Precio por hora
     - Soporte directo 24/7
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Documentos](https://docs.figment.io/)
-  - Características
-    - Opción de categoría gratuita con 3.000.000 sol/mes
-    - Puntos de conexión RPC y WSS
-    - Nodos dedicados completos y de archivo
-    - Escalabilidad automática (descuentos por volumen)
-    - Datos de archivo gratuitos
-    - Analíticas de servicio
-    - Panel
-    - Soporte directo 24/7
-    - Pago en criptomonedas (para empresas)
-
 - [**DRPC**](https://drpc.org/)
   - [Documentos](https://docs.drpc.org/)
   - Características
