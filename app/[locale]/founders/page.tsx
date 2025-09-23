@@ -9,6 +9,7 @@ import type {
   SectionNavDetails,
 } from "@/lib/types"
 
+import CommentCard from "@/components/CommentCard"
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
@@ -514,27 +515,16 @@ const Page = async ({ params }: { params: PageParams }) => {
 
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {stories.map(({ name, affiliation, content, className }) => (
-                <Card
+                <CommentCard
                   key={name}
+                  description={content}
+                  name={name}
+                  title={affiliation}
                   className={cn(
                     "h-fit space-y-1 rounded-2xl border bg-background p-6",
                     className
                   )}
-                >
-                  <div className="space-y-6">{content}</div>
-                  <div className="flex items-center gap-x-2">
-                    <div
-                      data-label="avatar"
-                      className="grid size-8 place-items-center rounded-full text-body-inverse"
-                    >
-                      {name[0].toUpperCase()}
-                    </div>
-                    <div>
-                      <p className="font-bold">{name}</p>
-                      <p className="text-sm text-body-medium">{affiliation}</p>
-                    </div>
-                  </div>
-                </Card>
+                />
               ))}
             </div>
           </Section>

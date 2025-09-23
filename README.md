@@ -2082,6 +2082,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/kvbik"><img src="https://avatars.githubusercontent.com/u/45091?v=4?s=100" width="100px;" alt="Jakub Vysoký"/><br /><sub><b>Jakub Vysoký</b></sub></a><br /><a href="#tool-kvbik" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xsenty"><img src="https://avatars.githubusercontent.com/u/201055698?v=4?s=100" width="100px;" alt="0xsenty"/><br /><sub><b>0xsenty</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3A0xsenty" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://drpc.org"><img src="https://avatars.githubusercontent.com/u/156195424?v=4?s=100" width="100px;" alt="dRPC Marketing"/><br /><sub><b>dRPC Marketing</b></sub></a><br /><a href="#maintenance-dRPCMarketing" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
