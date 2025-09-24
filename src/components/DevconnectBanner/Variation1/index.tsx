@@ -29,7 +29,7 @@ const DevconnectBannerVariation1 = () => {
           </div>
         </div>
         <div className="flex-1 text-wrap text-center lg:whitespace-nowrap">
-          <p className="line-clamp-3 text-xs font-extrabold text-black sm:text-sm md:min-w-[300px] md:text-xl">
+          <p className="line-clamp-3 text-xs font-extrabold !leading-4xs text-black sm:text-sm md:min-w-[300px] md:text-xl">
             {t(
               "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year"
             )}
