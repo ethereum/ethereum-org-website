@@ -4,14 +4,13 @@ import { ChainName, NonEVMChainName } from "@/lib/types"
 
 import ArbitrumLogo from "@/public/images/layer-2/arbitrum.jpg"
 import BaseLogo from "@/public/images/layer-2/base.png"
-import BlastImage from "@/public/images/layer-2/blast.png"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
+import InkLogo from "@/public/images/layer-2/ink.png"
 import LineaLogo from "@/public/images/layer-2/linea.png"
-import ModeLogo from "@/public/images/layer-2/mode.png"
 import OptimismLogo from "@/public/images/layer-2/optimism.png"
 import ScrollLogo from "@/public/images/layer-2/scroll.png"
 import StarknetLogo from "@/public/images/layer-2/starknet.png"
-import TaikoLogo from "@/public/images/layer-2/taiko.png"
+import UnichainLogo from "@/public/images/layer-2/unichain.png"
 import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
 export interface Rollup {
@@ -93,22 +92,6 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
-    l2beatID: "blast",
-    growthepieID: "blast",
-    name: "Blast",
-    chainName: "Blast",
-    logo: BlastImage,
-    networkType: "optimistic",
-    description: "page-layer-2-blast-description",
-    website: "https://blast.io/en",
-    applicationsLink: "https://www.ethereum-ecosystem.com/apps?filters=blast",
-    blockExplorerLink: "https://blastscan.io/",
-    bridgeLink: "https://blast.io/en/bridge",
-    l2BeatLink: "https://l2beat.com/scaling/projects/blast",
-    growthepieLink: "https://www.growthepie.com/chains/blast",
-    feeToken: ["ETH"],
-  },
-  {
     l2beatID: "zksync2",
     growthepieID: "zksync_era",
     name: "ZKSync Era",
@@ -173,35 +156,35 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH", "STRK"],
   },
   {
-    l2beatID: "mode",
-    growthepieID: "mode",
-    name: "Mode",
-    chainName: "Mode",
-    logo: ModeLogo,
+    l2beatID: "unichain",
+    growthepieID: "unichain",
+    name: "Unichain",
+    chainName: "Unichain",
+    logo: UnichainLogo,
     networkType: "optimistic",
-    description: "page-layer-2-mode-description",
-    website: "https://mode.network/",
-    applicationsLink: "https://mode.network/ecosystem",
-    blockExplorerLink: "https://explorer.mode.network/",
-    bridgeLink: "https://app.mode.network/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/mode",
-    growthepieLink: "https://www.growthepie.com/chains/mode",
+    description: "page-layer-2-optimism-description",
+    website: "https://www.unichain.org/",
+    applicationsLink: "https://www.unichain.org/explore",
+    blockExplorerLink: "https://uniscan.xyz/",
+    bridgeLink: "https://www.unichain.org/bridge",
+    l2BeatLink: "https://l2beat.com/scaling/projects/unichain",
+    growthepieLink: "https://www.growthepie.com/chains/unichain",
     feeToken: ["ETH"],
   },
   {
-    l2beatID: "taiko",
-    growthepieID: "taiko",
-    name: "Taiko",
-    chainName: "Taiko Alethia",
-    logo: TaikoLogo,
+    l2beatID: "ink",
+    growthepieID: "ink",
+    name: "Ink",
+    chainName: "Ink",
+    logo: InkLogo,
     networkType: "optimistic",
-    description: "page-layer-2-taiko-description",
-    website: "https://taiko.xyz",
-    applicationsLink: "https://taiko.xyz/ecosystem",
-    blockExplorerLink: "https://taikoscan.io/",
-    bridgeLink: "https://bridge.taiko.xyz/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/taiko",
-    growthepieLink: "https://www.growthepie.com/chains/taiko",
+    description: "page-layer-2-optimism-description",
+    website: "https://inkonchain.com/",
+    applicationsLink: "https://inkonchain.com/apps",
+    blockExplorerLink: "https://explorer.inkonchain.com/",
+    bridgeLink: "https://inkonchain.com/bridge",
+    l2BeatLink: "https://l2beat.com/scaling/projects/ink",
+    growthepieLink: "https://www.growthepie.com/chains/ink",
     feeToken: ["ETH"],
   },
 ]
