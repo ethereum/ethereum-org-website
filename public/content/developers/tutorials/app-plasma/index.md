@@ -8,13 +8,13 @@ lang: en
 published: 2025-09-30
 ---
 
-## Introduction
+## Introduction {#introduction}
 
 In contrast to [rollups](/developers/docs/scaling/zk-rollups/), [plasmas](/developers/docs/scaling/plasma) use the Ethereum mainnet for integrity, but not availability. In this article, we write an application that acts like a plasma, with Ethereum guaranteeing integrity (nobody can make unauthorized changes), but not availability (there is a centralized component that can go down and disable the whole system).
 
 The application we write here is a privacy preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private.
 
-## Design
+## Design {#design}
 
 This is not a production-ready system, but a teaching tool. As such, it is written with a number of simplifying assumptions.
 
@@ -24,7 +24,7 @@ This is not a production-ready system, but a teaching tool. As such, it is writt
 
 - Transfers only. A production system would require a way to deposit assets into the bank and to withdraw them back. But the purpose here is just to illustrate the concept, so this bank is limited to transfers.
 
-### Zero-knowledge proofs
+### Zero-knowledge proofs  {#zero-knowledge-proofs}
 
 At a very basic level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between some public data, *Data<sub>public</sub>*, and *Data<sub>private</sub>*. The verifier knows *Relationship* and *Data<sub>public</sub>*.
 
@@ -57,15 +57,15 @@ The relationship checks several conditions:
 
 Because of the properties of cryptographic hash functions, proving these conditions is enough to ensure integrity. 
 
-### Data structures
+### Data structures {#data-structures}
 
 The main data structure is the state held by the server. For every account, the server keeps track of the account balance and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), used to prevent [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
-### Components
+### Components {#components}
 
 This system requires two components: One is a *server* that receives transactions, processes them, and posts hashes to the chain along with the zero knowledge proofs. The second is a *smart contract* that stores the hashes and verifies the zero knowledge proofs to ensure state transitions are legitimate.
 
-### Data and control flow
+### Data and control flow {#flows}
 
 These is the ways that the various components communicate to transfer from one account to another.
 
@@ -90,7 +90,7 @@ These is the ways that the various components communicate to transfer from one a
    - Update the current state hash to the new state hash
    - Emit a log entry with the new state hash and the transaction hash
 
-### Tools
+### Tools {#tools}
 
 For the client-side code we are going to use [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) and [Wagmi](https://wagmi.sh/). These are industry standard tools, if you are not familiar with them, you can use [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
@@ -98,11 +98,11 @@ The majority of the server is written in JavaScript using [Node](https://nodejs.
 
 The blockchain we use is `anvil`, a local testing blockchain which is part of [Foundry](https://getfoundry.sh/introduction/installation).
 
-## Implementation
+## Implementation {#implementation}
 
 Because this is a complex system, we'll implement it in stages.
 
-### Stage 1 - Manual zero knowledge
+### Stage 1 - Manual zero knowledge {#stage-1}
 
 For the first stage, we'll sign a transaction in the browser and then manually provide the information to the zero-knowledge proof. The zero-knowledge code expects to get that information in `server/noir/Prover.toml` (documented [here](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
@@ -424,7 +424,6 @@ This is a `for` loop. Note that the boundries are constants. Noir loops have to 
     flat
 }
 
-
 fn hash_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> Field {
     pedersen_hash(flatten_accounts(accounts))
 }
@@ -723,7 +722,6 @@ This is similar to [Solidity's `ecrecover`](https://docs.soliditylang.org/en/v0.
     )
 }
 
-
 fn main(
         accounts: [Account; ACCOUNT_NUMBER], 
         message: str<MESSAGE_LENGTH>, 
@@ -744,7 +742,7 @@ Finally, we reach the `main` function. We need to prove that we have a transacti
     let mut txn = readTransferTxn(message);
 ```
 
-We need `txn` to be mutable because we don't read the from address from the transaction, we read it from the signature. 
+We need `txn` to be mutable because we don't read the from address from the message, we read it from the signature. 
 
 ```rust
     let (fromAddress, txnHash) = signatureToAddressAndHash(
@@ -763,26 +761,196 @@ We need `txn` to be mutable because we don't read the from address from the tran
         txnHash
     )
 }
-
 ```
 
-### Stage 2 - Adding a server
+### Stage 2 - Adding a server {#stage-2}
 
-(remember to create a mechanism to report nonce)
+In the second stage we add a server that receives and implements transfer transactions from the browser.
 
-### Stage 3 - Ethereum smart contracts
+To see it in action:
+
+1. Stop Vite if it is running.
+
+2. Download the branch with the server and ensure you have all the necessary modules.
+
+   ```sh
+   git checkout 02-add-server
+   cd client
+   npm install
+   cd ../server
+   npm install
+   ```
+
+3. Compile the Noir code (it's the same as the code you used for stage 1).
+
+   ```sh
+   cd noir
+   nargo compile
+   ```
+
+4. Start the server.
+
+   ```sh
+   cd ..
+   npm run start
+   ```
+
+5. In a separate command line window, run Vite to server the browser code.
+
+   ```sh
+   cd 250911-zk-bank/client
+   npm run dev
+   ```
+
+6. Browse to the client code at [http://localhost:5173](http://localhost:5173)
+
+7. Before you can issue a transaction, you need to know the nonce, as well as the amount you can send. To get this information, click **Update account data** and sign the message.
+
+   This leads us to a dillemma. On one hand, we don't want to sign a message that can be used multiple times (this is known as a [replay attack](https://en.wikipedia.org/wiki/Replay_attack)), that is the reason we want a nonce at the first place. However, we don't have a nonce yet. The solution is to choose a nonce that can only be used once, but that we already have on both sides, such as the time.
+
+   The problem with this solution is that the time might not be perfectly synchronized. So instead we sign the a value that changes every minute. This means that our window of vulnerability to replay attacks in at most one minute. Considering that in production the signed request will be protected by TLS, and that the other side of the tunnel, the server, can already disclose the balance and nonce (it has to know them to work), this is an acceptable risk.
+
+8. Once the browser gets back the balance and nonce, it shows the transfer form. Select the destination address and the amount and click **Transfer**. Sign this request.
+
+9. To see the transfer, either **Update account data** or look in the window where you run the server. The server logs the state every time it changes.
+
+    ```
+    ori@CryptoDocGuy:~/noir/250911-zk-bank/server$ npm run start
+
+    > server@1.0.0 start /home/ori/noir/250911-zk-bank/server
+    > node --experimental-json-modules index.mjs
+
+    Listening on port 3000
+    Txn send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 4500 (1)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 10500 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 10000 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 10000 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 10000 (0)
+    Txn send 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC 200 finney (milliEth) 1 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 4300 (2)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 10500 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 10200 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 10000 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 10000 (0)
+    Txn send 0x90F79bf6EB2c4f870365E785982E1f101E93b906 1400 finney (milliEth) 2 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 2900 (3)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 10500 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 10200 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 11400 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 10000 (0)
+    Txn send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 2900 finney (milliEth) 3 processed
+    New state:
+    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has 0 (4)
+    0x70997970C51812dc3A010C7d01b50e0d17dc79C8 has 13400 (0)
+    0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 10200 (0)
+    0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 11400 (0)
+    0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 10000 (0)
+    ```
+
+#### `server/index.mjs`
+
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) contains the server process, and interacts with the Noir code at [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Here is an explanation of the ineresting parts.
+
+```js
+import { Noir } from '@noir-lang/noir_js'
+```
+
+The [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) library interfaces between JavaScript code and Noir code.
+
+```js
+const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
+const noir = new Noir(circuit)
+```
+
+Load the arithmetic circuit, the compiled Noir program we created in the previous stage, and prepare to execute it.
 
 
-## Abuses by the centralized component
+```js
+// We only provide account information in return to a signed request
+const accountInformation = async signature => {
+    const fromAddress = await recoverAddress({
+        hash: hashMessage("Get account data " + Math.floor((new Date().getTime())/60000)),
+        signature
+    })
+```
+
+To provide account information we only need the signature. The reason is we already know what the message is going to be, and therefore the message hash. 
+
+```js
+const processMessage = async (message, signature) => {
+```
+
+Process a message and execute the transaction it encodes.
+
+```js
+    // Get the public key
+    const pubKey = await recoverPublicKey({
+        hash,
+        signature
+    })
+```
+
+Now that we run JavaScript code on the server, we can get the public key there, rather than on the client.
+
+```js
+    let noirResult
+    try {
+        noirResult = await noir.execute({
+            message,
+            signature: signature.slice(2,-2).match(/.{2}/g).map(x => `0x${x}`),
+            pubKeyX,
+            pubKeyY,
+            accounts: Accounts
+        })
+```
+
+`noir.execute` runs the Noir program. The parameters are equivalent to those provided in [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Note that long values are provided as an array of hexadecimal strings (`["0x60", "0xA7"]`), not as a single hexadecimal value (`0x60A7`) the way Viem does it.
+
+```js
+    } catch (err) {
+        console.log(`Noir error: ${err}`)
+        throw Error("Invalid transaction, not processed")
+    }
+```
+
+
+
+```js
+    Accounts[fromAccountNumber].nonce++
+    Accounts[fromAccountNumber].balance -= amount
+    Accounts[toAccountNumber].balance += amount
+```
+
+Apply the transaction. We already did it in the Noir code, but it's easier to do it again here rather than extract the result from there.
+
+```js
+let Accounts = [
+    {
+        address: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        balance: 5000,
+        nonce: 0,
+    },
+```
+
+The initial `Accounts` structure.
+
+### Stage 3 - Ethereum smart contracts  {#stage-3}
+
+
+## Abuses by the centralized component {#abuses}
 
 Integrity is easy, availability hard, confidentiality impossible
 
-### Forced transactions
+### Forced transactions {#forced-txns}
 
-The server can ignore them, but only at the cost of a total block.
+The server can ignore them, but only at the cost of a total block. Except what if that transaction is invalid? Need zero trust "this transaction is invalid" errors.
 
-### Availability bonds
+### Availability bonds {#avail-bonds}
 
-### Correspndent banks
+### Correspondent banks {#correpondent-banks}
 
-## Conclusion
+## Conclusion {#conclusion}
