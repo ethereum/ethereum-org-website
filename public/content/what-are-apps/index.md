@@ -60,13 +60,13 @@ When apps are all built on Ethereum, they are all compatible. A token for one ap
 
 <BrowseApps />
 
-## Further reading
+## Further reading {#further-reading}
 
 - [Ethereum for beginners](/what-is-ethereum)
 - [What is a smart contract?](/developers/docs/smart-contracts/)
 - [Technical dapp documentation](/developers/docs/dapps/)
 
-## Frequently asked questions
+## Frequently asked questions {#frequently-asked-questions}
 
 <ExpandableCard title="What does dapp stand for?" visible>
   <p>Dapp stands for decentralized applications. Those are applications built on blockchain networks like Ethereum. They are called decentralized because underlying network is decentralized.</p>
