@@ -13296,7 +13296,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/185210158?v=4",
       "profile": "https://zksec.io",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "bug"
       ]
     },
     {
@@ -13385,6 +13386,96 @@
       "name": "Will Patti",
       "avatar_url": "https://avatars.githubusercontent.com/u/79338554?v=4",
       "profile": "https://github.com/wdpatti",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "hackertron",
+      "name": "jayssj11",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7667514?v=4",
+      "profile": "https://hackertron.github.io/",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "CodeLeom",
+      "name": "Ayodele Aransiola",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36636824?v=4",
+      "profile": "http://leomofthings.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "indmind",
+      "name": "indmind",
+      "avatar_url": "https://avatars.githubusercontent.com/u/197907501?v=4",
+      "profile": "https://github.com/indmind",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "kvbik",
+      "name": "Jakub Vysoký",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45091?v=4",
+      "profile": "https://twitter.com/kvbik",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "0xsenty",
+      "name": "0xsenty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/201055698?v=4",
+      "profile": "https://github.com/0xsenty",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "dRPCMarketing",
+      "name": "dRPC Marketing",
+      "avatar_url": "https://avatars.githubusercontent.com/u/156195424?v=4",
+      "profile": "https://drpc.org",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "caveman-eth",
+      "name": "caveman.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24273561?v=4",
+      "profile": "http://efp.app/caveman.eth",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "pete-vielhaber",
+      "name": "Pete",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178667149?v=4",
+      "profile": "https://github.com/pete-vielhaber",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "unhappyben",
+      "name": "Ben",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66370595?v=4",
+      "profile": "https://github.com/unhappyben",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "sethforprivacy",
+      "name": "Seth For Privacy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40500387?v=4",
+      "profile": "http://sethforprivacy.com",
       "contributions": [
         "tool"
       ]

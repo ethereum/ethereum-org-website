@@ -102,58 +102,51 @@ export default ComponentName
 
 ## Styling
 
-We use [Chakra UI](https://chakra-ui.com/).
+We use [Tailwind CSS](https://tailwindcss.com/) as our primary styling approach, combined with the [shadcn/ui](https://ui.shadcn.com/) component library built on [Radix UI](https://www.radix-ui.com/) primitives.
 
-`src/@chakra-ui/theme.ts` - Holds all the theme configuration. This is where you can find the colors, fonts, component themes, variants, etc.
+### Styling Approach
 
-- Wrappers or layout divs
+- **Primary**: Tailwind CSS utility classes
+- **Component variants**: Use `class-variance-authority` (cva) for component variants
+- **Dynamic classes**: Use `cn()` utility function (combines clsx + tailwind-merge)
+- **Responsive design**: Mobile-first approach with Tailwind breakpoints (`sm:`, `md:`, `lg:`, `xl:`, `2xl:`)
 
-Use the [native layouts components](https://chakra-ui.com/docs/components/box)
+### Layout Components
 
-```tsx
-<Stack direction='row'>
-```
-
-Center things using the `<Center />` component
-
-```tsx
-<Center h="100px">
-```
-
-- Group buttons using `<ButtonGroup />` or `<Wrap />`
+Use standard HTML elements with Tailwind classes for layouts:
 
 ```tsx
-<ButtonGroup variant='outline' spacing={2}>
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
-</ButtonGroup>
+// Flexbox layouts
+<div className="flex items-center justify-between">
+<div className="flex flex-col gap-4">
 
-// or
-<Wrap spacing={2}>
-  <WrapItem><Button variant="outline">Button 1</Button></WrapItem>
-  <WrapItem><Button variant="outline">Button 2</Button></WrapItem>
-</Wrap>
+// Grid layouts
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+// Centering
+<div className="flex items-center justify-center min-h-screen">
 ```
 
-- Breakpoints
+### Component Styling
 
-Use [the Chakra default breakpoints](https://www.chakra-ui.com/docs/theming/customization/breakpoints).
+Use shadcn/ui components for interactive elements:
 
 ```tsx
-<Container display={{ base: "block", sm: "flex" }} />
+import { Button } from "@/components/ui/button"
+
+<Button variant="outline" size="sm">
+  Click me
+</Button>
 ```
 
-- Theme colors
+### Colors and Theming
+
+Use CSS custom properties defined in the design system:
 
 ```tsx
-<Text color="primary.base" bg="background.base" />
+<div className="bg-primary text-primary-foreground">
+<div className="border border-border bg-background">
 ```
-
-> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/@chakra-ui/semanticTokens.ts)
-
-> Note 2: all the previous colors defined in the old theme `src/theme.ts` were
-> ported into the new theme for compatibility reasons. Those colors will
-> transition out of the codebase as we adopt the DS colors.
 
 - [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
 - **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
@@ -236,7 +229,7 @@ Wrap icon in a div for circular backgrounds, and color using background:
 
 ## Using custom `Image` component
 
-[Next Image](https://nextjs.org/docs/pages/api-reference/components/image) is the component of choice to handle responsive images. However, we use a custom version of this component that is properly optimized with Chakra. This way we can use style props from Chakra but still be able to forward common or Next Image-specific props to the component for correct usage and rendering.
+[Next.js Image](https://nextjs.org/docs/app/api-reference/components/image) is the component of choice to handle responsive images. We use a custom version of this component that integrates with our design system.
 
 ```tsx
 import { Image } from "@/components/Image"

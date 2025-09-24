@@ -25,9 +25,19 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/what-is-ethereum/",
             },
             {
+              label: t("what-is-the-ethereum-network"),
+              description: t("nav-what-is-ethereum-network-description"),
+              href: "/what-is-the-ethereum-network/",
+            },
+            {
               label: t("what-is-ether"),
               description: t("nav-what-is-ether-description"),
               href: "/eth/",
+            },
+            {
+              label: t("ethereum-vs-bitcoin"),
+              description: t("nav-ethereum-vs-bitcoin-description"),
+              href: "/ethereum-vs-bitcoin/",
             },
             {
               label: t("ethereum-wallets"),
