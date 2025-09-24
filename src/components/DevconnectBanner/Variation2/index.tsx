@@ -23,13 +23,15 @@ const DevconnectBannerVariation2 = () => {
           className="h-[65px] w-auto object-contain"
           sizes="202px"
         />
-        <div className="text-center font-bold text-white">
-          <p>17 - 22 Nov 2025</p>
-          <p>Buenos Aires, Argentina</p>
+        <div className="text-center text-white md:text-end">
+          <p>
+            <span className="font-bold">17 - 22 Nov</span> 2025
+          </p>
+          <p className="whitespace-nowrap font-bold">Buenos Aires, Argentina</p>
         </div>
       </div>
-      <div className="mb-8 max-w-[640px] text-center">
-        <p className="text-3xl font-bold text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.65)] md:text-5xl">
+      <div className="mb-8 max-w-[400px] text-center md:max-w-[640px]">
+        <p className="text-3xl font-extrabold text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.65)] md:text-5xl">
           {t(
             "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year"
           )}
@@ -38,8 +40,9 @@ const DevconnectBannerVariation2 = () => {
       <ButtonLink
         href="https://devconnect.org/"
         size="sm"
+        variant="ghost"
         hideArrow
-        className="rounded-none border-b-2 border-b-[#B2820A] bg-[#F6B40E] font-bold uppercase text-[2xs] text-black hover:bg-[#B2820A] hover:!text-black md:text-md"
+        className="min-h-0 whitespace-nowrap rounded-none border-b-2 border-b-[#B2820A] bg-[#F6B40E] px-4 text-md/none font-bold uppercase text-black hover:bg-[#B2820A] hover:!text-black active:text-black"
       >
         {t("page-index-devconnect-banner-get-tickets")}
       </ButtonLink>
