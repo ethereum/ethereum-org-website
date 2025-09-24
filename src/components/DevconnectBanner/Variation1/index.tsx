@@ -12,7 +12,7 @@ const DevconnectBannerVariation1 = () => {
     <div className="relative w-full">
       <Banner className="h-[66px] w-full" />
       <div className="absolute inset-0 flex h-[66px] w-full items-center justify-between gap-4 px-3 md:px-6">
-        <div className="flex flex-col gap-1 md:flex-row md:items-center md:gap-4">
+        <div className="flex flex-1 flex-col gap-1 md:flex-row md:items-center md:gap-4">
           <div className="min-w-[80px]">
             <Image
               src={DevconnectLogo}
@@ -28,22 +28,24 @@ const DevconnectBannerVariation1 = () => {
             <p className="whitespace-nowrap">Buenos Aires, Argentina</p>
           </div>
         </div>
-        <div className="text-wrap text-center">
-          <p className="text-xs font-extrabold text-black sm:text-sm md:text-xl">
+        <div className="flex-1 text-wrap text-center lg:whitespace-nowrap">
+          <p className="line-clamp-3 text-xs font-extrabold text-black sm:text-sm md:min-w-[300px] md:text-xl">
             {t(
               "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year"
             )}
           </p>
         </div>
-        <ButtonLink
-          href="https://devconnect.org/"
-          size="sm"
-          variant="ghost"
-          hideArrow
-          className="min-h-0 whitespace-nowrap rounded-none border-b-2 border-b-[#215D93] bg-[#74ACDF] text-xs/none font-bold uppercase text-white hover:bg-[#215D93] hover:!text-white active:bg-[#215D93] active:!text-white md:text-md/none"
-        >
-          {t("page-index-devconnect-banner-get-tickets")}
-        </ButtonLink>
+        <div className="flex flex-1 justify-end">
+          <ButtonLink
+            href="https://devconnect.org/"
+            size="sm"
+            variant="ghost"
+            hideArrow
+            className="min-h-0 whitespace-nowrap rounded-none border-b-2 border-b-[#215D93] bg-[#74ACDF] text-xs/none font-bold uppercase text-white hover:bg-[#215D93] hover:!text-white active:bg-[#215D93] active:!text-white md:text-md/none"
+          >
+            {t("page-index-devconnect-banner-get-tickets")}
+          </ButtonLink>
+        </div>
       </div>
     </div>
   )
