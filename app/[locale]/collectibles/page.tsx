@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -40,12 +40,8 @@ async function fetchStats() {
   return res.json()
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: Lang }>
-}) {
-  const { locale } = await params
+export default async function Page({ params }: { params: PageParams }) {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-collectibles" })
   setRequestLocale(locale)
 
@@ -155,9 +151,9 @@ export default async function Page({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-collectibles" })
   return await getMetadata({
     locale,

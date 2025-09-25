@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -31,8 +31,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -178,9 +178,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   return await getMetadata({
     locale,

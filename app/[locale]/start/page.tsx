@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -23,8 +23,8 @@ import StartPageJsonLD from "./page-jsonld"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-start" })
 
   setRequestLocale(locale)
@@ -94,9 +94,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-start" })
 

@@ -1,8 +1,8 @@
 import { HTMLAttributes, ReactNode } from "react"
 import { getTranslations } from "next-intl/server"
 
-import type { ChildOnlyProp, ToCItem } from "@/lib/types"
-import type { CommitHistory, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp, PageParams, ToCItem } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
@@ -116,8 +116,8 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <Image className="h-[200px] w-auto" src={src} alt={alt} sizes="250px" />
 )
 
-export default async function Page({ params }: { params: Promise<Params> }) {
-  const { locale } = await params
+export default async function Page({ params }: { params: PageParams }) {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-learn" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
@@ -737,9 +737,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-learn" })
 
