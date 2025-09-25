@@ -917,7 +917,7 @@ Now that we run JavaScript code on the server, we can get the public key there, 
     }
 ```
 
-
+If there is an error, catch it and then relay a simplified version to the client.
 
 ```js
     Accounts[fromAccountNumber].nonce++
