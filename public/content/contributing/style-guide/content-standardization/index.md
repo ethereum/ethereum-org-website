@@ -75,7 +75,7 @@ Smart contract is a common noun and should only be capitalized at the beginning 
 - Smart contract
 - smart contract
 
-** Incorrect usage:**
+**Incorrect usage:**
 
 - Smart Contract
 
