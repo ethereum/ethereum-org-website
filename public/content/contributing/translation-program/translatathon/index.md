@@ -75,23 +75,23 @@ For more details, [see the full Terms & conditions](/contributing/translation-pr
 
 ## Prizes {#prizes}
 
-| Placement         | Prize amount |
-|-------------------|--------------|
-| 1st place         | $4000        |
-| 2nd place         | $2500        |
-| 3rd place         | $1500        |
-| 4th place         | $1100        |
-| 5th place         | $1000        |
-| 6th place         | $600         |
-| 7th place         | $550         |
-| 8th place         | $500         |
-| 9th place         | $450         |
-| 10th place        | $400         |
-| 11th - 20th place | $240         |
-
-Plus additional prize tiers for **top 50, top 100, top 150**, and participatory prizes for all other eligible participants.
-
-The remaining prizes will be distributed dynamically based on the total number of eligible participants.
+| Placement           | Prize amount |
+|---------------------|--------------|
+| 1st place           | $4000        |
+| 2nd place           | $2500        |
+| 3rd place           | $1500        |
+| 4th place           | $1100        |
+| 5th place           | $1000        |
+| 6th place           | $600         |
+| 7th place           | $550         |
+| 8th place           | $500         |
+| 9th place           | $450         |
+| 10th place          | $400         |
+| 11th - 20th place   | $240         |
+| 21st - 50th place   | $120         |
+| 51st - 100th place  | $60          |
+| 101st - 150th place | $40          |
+| Rest                | $20          |
 
 All prizes will be paid out in ETH.
 
