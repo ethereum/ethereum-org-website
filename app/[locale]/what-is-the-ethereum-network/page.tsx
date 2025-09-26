@@ -37,7 +37,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
-      "what-is-ethereum-network",
+      "what-is-the-ethereum-network",
       locale as Lang,
       commitHistoryCache
     )
