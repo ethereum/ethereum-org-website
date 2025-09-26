@@ -168,7 +168,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
-  <ButtonLink href="/dapps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
 </InfoBanner>
@@ -201,7 +201,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
-  <ButtonLink href="/dapps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Tutki NFT-pelejä
   </ButtonLink>
 </InfoBanner>
@@ -248,7 +248,7 @@ Tämä ei ole ollenkaan vaikeaa Ethereumissa, koska molemmissa (NFT ja DeFi) on 
 
 NFT-luojat voivat myös luoda osakkeita NFTlle. Sijoittajat ja fanit voivat hankkia osuuksia yhdestä NFTstä ilman, että heidän tarvitsee ostaa koko kohdetta. Tämä lisää mahdollisuuksia NFT-luojille ja keräilijöille.
 
-- NFTn osuuksia voidaan kaupata vaihtomarkkinoilla [DEXt](/defi/#dex) kuten Uniswap, eikä vain [NFT-markkinoilla](/dapps?category=collectibles). Se merkitsee enemmän ostajia ja myyjiä.
+- NFTn osuuksia voidaan kaupata vaihtomarkkinoilla [DEXt](/defi/#dex) kuten Uniswap, eikä vain [NFT-markkinoilla](/apps?category=collectibles). Se merkitsee enemmän ostajia ja myyjiä.
 - NFTn kokonaishinta voidaan määritellä sen osuuksien perusteella.
 - Sinulla on enemmän mahdollisuuksia omistaa ja hyötyä kohteistä, joista välität. On vaikeampaa hinnoitella NFTsta luopuminen.
 

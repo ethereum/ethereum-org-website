@@ -134,7 +134,6 @@ Ha Ön szeretné felügyelni a gázdíjakat azért, hogy kevesebbet kelljen fize
 
 - [Az Ethereum gázdíjról részletesen](https://defiprime.com/gas)
 - [Csökkentse az okosszerződésének gázfogyasztását](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [A proof-of-stake és a proof-of-work összehasonlítása](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Gázoptimalizáló stratégiák fejlesztők számára](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559-dokumentumok](https://eips.ethereum.org/EIPS/eip-1559).
 - [Tim Beiko EIP-1559 forrásai](https://hackmd.io/@timbeiko/1559-resources).

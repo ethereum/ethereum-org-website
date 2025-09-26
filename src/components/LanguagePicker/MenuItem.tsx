@@ -22,23 +22,12 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
     sourceName,
     targetName,
     approvalProgress,
-    wordsApproved,
+    progress,
+    words,
   } = displayInfo
   const { t } = useTranslation("common")
   const locale = useLocale()
   const isCurrent = localeOption === locale
-
-  const getProgressInfo = (approvalProgress: number, wordsApproved: number) => {
-    const percentage = new Intl.NumberFormat(locale!, {
-      style: "percent",
-    }).format(approvalProgress / 100)
-    const progress =
-      approvalProgress === 0 ? "<" + percentage.replace("0", "1") : percentage
-    const words = new Intl.NumberFormat(locale!).format(wordsApproved)
-    return { progress, words }
-  }
-
-  const { progress, words } = getProgressInfo(approvalProgress, wordsApproved)
 
   return (
     <CommandItem

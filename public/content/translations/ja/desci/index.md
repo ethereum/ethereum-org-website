@@ -95,7 +95,6 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [Molecule: 研究プロジェクトのための資金提供と資金獲得](https://www.molecule.xyz/)
 - [VitaDAO: 長寿研究のための研究スポンサー契約を通じた資金獲得](https://www.vitadao.com/)
 - [ResearchHub: 科学的成果を投稿し、仲間と会話する](https://www.researchhub.com/)
-- [LabDAO: コンピュータを用いたタンパク質フォールディング](https://alphafodl.vercel.app/)
 - [dClimate API: 分散型コミュニティに収集された気候データのクエリ](https://www.dclimate.net/)
 - [DeSci財団: DeSci出版ツールビルダー](https://descifoundation.org/)
 - [DeSci.World: ユーザーが閲覧して参加できる分散型科学のワンストップショップ](https://desci.world)
@@ -126,7 +125,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [DeSci: Samuel Akinoshoによる研究の未来](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [サイエンスファンディング(エピローグ: DeSciと新しい暗号プリミティブ) by Nadia](https://nadia.xyz/science-funding)
 - [分散化は薬物開発を妨害する](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [DeSci - 分散型科学とは何か？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [DeSci - 分散型科学とは何か？](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 動画 {#videos}
 

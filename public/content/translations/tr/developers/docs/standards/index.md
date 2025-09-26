@@ -17,7 +17,7 @@ Genellikle standartlar, bir [standart süreci](https://eips.ethereum.org/EIPS/ei
 - [EIP tartışma panosu](https://ethereum-magicians.org/c/eips)
 - [Ethereum Yönetişimine Giriş](/governance/)
 - [Ethereum Yönetişimine Genel Bakış](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 Mart 2019 - Boris Mann_
-- [Ethereum Protokol Geliştirme Yönetişimi ve Ağ Yükseltme Koordinasyonu](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Mart 2020 - Hudson Jameson_
+- [Ethereum Protokol Geliştirme Yönetişimi ve Ağ Yükseltme Koordinasyonu](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Mart 2020 - Hudson Jameson_
 - [Ethereum Çekirdek Geliştiricilerinin Bütün Toplantılarını İçeren Oynatma Listesi](https://www.youtube.com/@EthereumProtocol) _(YouTube Oynatma Listesi)_
 
 ## Standart türleri {#types-of-standards}

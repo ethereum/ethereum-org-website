@@ -108,9 +108,9 @@ const SwiperNavigation = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >((props, ref) => (
   <SwiperNavContainer ref={ref} {...props}>
-    <SwiperPrevButton />
-    <SwiperPaginationDots />
-    <SwiperNextButton />
+    <SwiperPrevButton data-testid="swiper-prev-button" />
+    <SwiperPaginationDots data-testid="swiper-pagination-dots" />
+    <SwiperNextButton data-testid="swiper-next-button" />
   </SwiperNavContainer>
 ))
 SwiperNavigation.displayName = "SwiperNavigation"

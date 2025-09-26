@@ -24,7 +24,7 @@ Her seferinde sözleşmeyi istenen duruma getiren karmaşık bir test yazabilir 
 
 ## Örnek: Özel ERC20 {#example-private-erc20}
 
-Başlangıç özel zamanı olan örnek bir ERC-20 sözleşmesi kullanıyoruz. Sözleşmenin sahibi özel kullanıcıları yönetebilir ve başlangıçta yalnızca bu kullanıcıların jeton almasına izin verir. Belirli bir zaman geçtikten sonra herkes jetonları kullanabilecektir. Eğer merak ediyorsanız, OpenZeppelin sözleşmeleri v3 dahilindeki [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks)'i kullanıyoruz.
+Başlangıç özel zamanı olan örnek bir ERC-20 sözleşmesi kullanıyoruz. Sözleşmenin sahibi özel kullanıcıları yönetebilir ve başlangıçta yalnızca bu kullanıcıların jeton almasına izin verir. Belirli bir zaman geçtikten sonra herkes jetonları kullanabilecektir. Eğer merak ediyorsanız, OpenZeppelin sözleşmeleri v3 dahilindeki [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks)'i kullanıyoruz.
 
 ```solidity
 pragma solidity ^0.6.0;

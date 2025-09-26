@@ -95,7 +95,6 @@ Web3 डेटा समाधान उपरोक्त परिदृश्
 - [Molecule: फंड करें और अपनी शोध परियोजनाओं के लिए फंड प्राप्त करें](https://www.molecule.xyz/)
 - [VitaDAO: दीर्घायु अनुसंधान के लिए प्रायोजित अनुसंधान समझौतों के माध्यम से धन प्राप्त करें](https://www.vitadao.com/)
 - [ResearchHub: एक वैज्ञानिक परिणाम पोस्ट करें और साथियों के साथ बातचीत में संलग्न हों](https://www.researchhub.com/)
-- [LabDAO: सिलिको में एक प्रोटीन को मोड़ें](https://alphafodl.vercel.app/)
 - [dClimate API: विकेंद्रीकृत समुदाय द्वारा एकत्र किए गए जलवायु डेटा को क्वेरी करें](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci प्रकाशन उपकरण बिल्डर](https://descifoundation.org/)
 - [DeSci.World: उपयोगकर्ताओं को विकेन्द्रीकृत विज्ञान को देखने, संलग्न करने के लिए वन-स्टॉप शॉप](https://desci.world)

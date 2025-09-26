@@ -44,7 +44,7 @@ Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang 
 
 - **Pemegang ether**: orang-orang ini yang memiliki sejumlah ETH arbitrari. [Lebih lanjut tentang ETH](/eth/).
 - **Pengguna Aplikasi**: orang-orang ini berinteraksi dengan aplikasi di blockchain Ethereum.
-- **Pengembang Aplikasi/Peralatan**: orang-orang ini yng menulis aplikasi yang beroperasi di blockchain Ethereum (misalnya DeFi, NFT, dll.) atau menyusun peralatan untuk berinteraksi dengan Ethereum (misalnya dompet, rangkaian uji, dll.). [Lebih lanjut tentang dapp](/dapps/).
+- **Pengembang Aplikasi/Peralatan**: orang-orang ini yng menulis aplikasi yang beroperasi di blockchain Ethereum (misalnya DeFi, NFT, dll.) atau menyusun peralatan untuk berinteraksi dengan Ethereum (misalnya dompet, rangkaian uji, dll.). [Lebih lanjut tentang dapp](/apps/).
 - **Para Operator Node**: orang-orang ini yang menjalankan node yang menyebarkan blok dan transaksi, yang menolak transaksi atau blok tidak validapa pun yang mereka temui. [Lebih lanjut tentang node](/developers/docs/nodes-and-clients/).
 - **Penulis EIP**: orang-orang ini mengusulkan perubahan pada protokol Ethereum, dalam bentuk Proposal Peningkatan Ethereum (EIP). [Selengkapnya tentang EIP](/eips/).
 - **Validator**: orang-orang ini menjalankan simpul yang dapat menambahkan blok baru ke rantai blok Ethereum.

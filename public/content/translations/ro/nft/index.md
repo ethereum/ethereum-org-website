@@ -162,7 +162,7 @@ Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
-  <ButtonLink href="/dapps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Explorați arta NFT
   </ButtonLink>
 </InfoBanner>
@@ -195,7 +195,7 @@ Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cum
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</div>
-  <ButtonLink href="/dapps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Explorați jocurile NFT
   </ButtonLink>
 </InfoBanner>
@@ -242,7 +242,7 @@ Iar această modalitate nu este greu de realizat pe Ethereum, pentru că ambele 
 
 Creatorii de NFT-uri pot de asemenea să creeze „acțiuni” pentru NFT-ul lor. Acest lucru oferă investitorilor și fanilor posibilitatea să dețină o parte dintr-un NFT fără a fi nevoie să îl cumpere în întregime. Acest lucru deschide și mai multe oportunități, atât pentru creatorii de NFT-uri, cât și pentru colecționari.
 
-- NFT-urile fracționate se pot tranzacționa și pe [DEX-uri](/defi/#dex) precum Uniswap, nu doar pe [piețele de NFT-uri](/dapps?category=collectibles). Aceasta înseamnă mai mulți cumpărători și vânzători.
+- NFT-urile fracționate se pot tranzacționa și pe [DEX-uri](/defi/#dex) precum Uniswap, nu doar pe [piețele de NFT-uri](/apps?category=collectibles). Aceasta înseamnă mai mulți cumpărători și vânzători.
 - Prețul global al unui NFT poate fi definit prin prețul fracțiunilor sale.
 - Aveți mai multe posibilități să dețineți și să profitați de obiectele la care țineți. Este mai greu să vi se interzică să dețineți NFT-uri.
 

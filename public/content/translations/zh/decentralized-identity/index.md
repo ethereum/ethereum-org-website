@@ -57,7 +57,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 去中心化身份有助于实现去中心化身份验证替代密码登录。 服务提供商可以向用户发布认证，这些认证可以存储在以太坊钱包中。 身份证明的一个示例是[非同质化代币](/glossary/#nft)，可授予持有者访问在线社区的权限。
 
-然后，[使用以太坊登录](https://login.xyz/)功能将使服务器能够确认用户的以太坊帐户，并从他们的帐户地址获取所需的身份证明。 这意味着用户无需记住冗长的密码即可访问平台和网站，从而改善用户的线上体验。
+然后，[使用以太坊登录](https://siwe.xyz/)功能将使服务器能够确认用户的以太坊帐户，并从他们的帐户地址获取所需的身份证明。 这意味着用户无需记住冗长的密码即可访问平台和网站，从而改善用户的线上体验。
 
 ### 2. “了解你的客户”身份验证 {#kyc-authentication}
 
@@ -186,6 +186,6 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 ### 社区 {#communities}
 
 - [GitHub 上的 ERC-725 联盟](https://github.com/erc725alliance) — _支持 ERC725 标准管理以太坊区块链上的身份_
-- [SpruceID Discord 服务器](https://discord.com/invite/Sf9tSFzrnt) — _使用以太坊登录的爱好者和开发者社区_
+- [EthID Discord 服务器](https://discord.com/invite/ZUyG3mSXFD) — _使用以太坊登录的爱好者和开发者社区_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) - _开发者社区，帮助为应用程序构建可验证数据框架_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _一个由开发者和构建者组成的社区，致力于研究跨各种行业的去中心化身份用例_

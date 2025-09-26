@@ -2,6 +2,8 @@
 
 import type { ReactNode } from "react"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import {
   Button,
   ButtonLink,
@@ -9,7 +11,7 @@ import {
 } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 export type CallToActionProps = Omit<
   ButtonProps,

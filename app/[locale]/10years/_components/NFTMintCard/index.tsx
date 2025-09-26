@@ -1,15 +1,22 @@
+import { useTranslations } from "next-intl"
+
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-curved-heading.svg"
+
+const TORCH_CONTRACT_ADDRESS = "0x26d85a13212433fe6a8381969c2b0db390a0b0ae"
 
 interface NFTMintCardProps {
   className?: string
 }
 
 const NFTMintCard = ({ className }: NFTMintCardProps) => {
+  const t = useTranslations("page-10-year-anniversary")
+
   return (
     <Card
       className={cn(
@@ -25,7 +32,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
               <video
                 className="pointer-events-none h-full w-full select-none rounded-full object-cover"
                 src="/videos/10y-video.mp4"
-                aria-label="10th anniversary video"
+                aria-label={t("page-10-year-video-aria-label")}
                 autoPlay
                 loop
                 muted
@@ -46,13 +53,14 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
           />
         </div>
 
-        <CardTitle className="text-center">Mint the moment</CardTitle>
+        <CardTitle className="text-center">
+          {t("page-10-year-mint-card-title")}
+        </CardTitle>
       </CardHeader>
 
       <CardContent className="space-y-6 p-6 text-center">
         <p className="text-body-medium">
-          Celebrate a decade of decentralization with a free, limited-time 10th
-          anniversary NFT. Mint yours before time runs out.
+          {t("page-10-year-mint-card-description")}
         </p>
 
         <Alert
@@ -61,11 +69,17 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
         >
           <AlertContent>
             <AlertTitle className="!text-primary">
-              The claim period has ended
+              {t("page-10-year-mint-card-ended-title")}
             </AlertTitle>
             <p className="text-primary">
-              Thank you all for joining the celebration
+              {t("page-10-year-mint-card-ended-description")}
             </p>
+            <Link
+              href={`https://opensea.io/item/ethereum/${TORCH_CONTRACT_ADDRESS}`}
+              title={TORCH_CONTRACT_ADDRESS}
+            >
+              {t("page-10-year-nft-link-label")}
+            </Link>
           </AlertContent>
         </Alert>
       </CardContent>

@@ -153,7 +153,7 @@ export const StakingLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: { src: frontmatter.image, width: 800, height: 605 },
     description: (
       <>
         <div>
@@ -172,7 +172,6 @@ export const StakingLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
-      maxDepth={frontmatter.sidebarDepth}
       contributors={contributors}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}

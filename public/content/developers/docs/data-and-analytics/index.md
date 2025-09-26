@@ -54,10 +54,6 @@ To get started, visit the [documentation](https://docs.sqd.dev/) or see [EVM exa
 
 To start, visit the [Ethereum quick start guide](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) to start indexing Ethereum blockchain data in minutes in a local Docker environment for testing before going live on a [SubQuery's managed service](https://managedservice.subquery.network/) or on [SubQuery's decentralised network](https://app.subquery.network/dashboard).
 
-## Ethernow - Mempool Data Program {#ethernow}
-
-[Blocknative](https://www.blocknative.com/) provides open access to its Ethereum historical [mempool data archive](https://www.ethernow.xyz/mempool-data-archive). This enables researchers and community good projects to explore the pre-chain layer of Ethereum Mainnet. The data set is actively maintained and represents the most comprehensive historical record of mempool transaction events within the Ethereum ecosystem. Learn more at [Ethernow](https://www.ethernow.xyz/).
-
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum Virtual Machine) chains. EQL's ultimate goal is to support complex relational queries on EVM chain first-class citizens (blocks, accounts, and transactions) while providing developers and researchers with an ergonomic syntax for everyday use. With EQL, developers can fetch blockchain data using familiar SQL-like syntax and eliminate the need for complex boilerplate code. EQL supports standard blockchain data requests (e.g., retrieving an account's nonce and balance on Ethereum or fetching the current block size and timestamp) and is continually adding support for more complex requests and featuresets.
