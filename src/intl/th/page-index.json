@@ -118,5 +118,7 @@
   "page-index-values-open-legacy-label": "ปิดสำหรับคนส่วนใหญ่",
   "page-index-values-open-legacy-content-0": "บริษัทต่าง ๆ ปกป้องทรัพย์สินทางปัญญาของตนและไม่แชร์ข้อมูลให้ผู้อื่น ไม่มีบุคคลใดภายนอกบริษัทจะเห็นวิธีการทำงาน การแก้ไขปัญหา หรือปรับปรุงสิ่งต่าง ๆ จึงเป็นเรื่องยากที่ผู้คนจะสร้างเครื่องมือใหม่ ๆ หรือปรับแต่งเครื่องมือ",
   "page-index-values-open-ethereum-label": "เปิดให้ทุกคน",
-  "page-index-values-open-ethereum-content-0": "อีเธอเรียมเปิดเผยต่อสาธารณะ ทุกคนสามารถดู ใช้ และปรับปรุงโค้ด เพื่อให้ดีขึ้นสำหรับทุกคน"
+  "page-index-values-open-ethereum-content-0": "อีเธอเรียมเปิดเผยต่อสาธารณะ ทุกคนสามารถดู ใช้ และปรับปรุงโค้ด เพื่อให้ดีขึ้นสำหรับทุกคน",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "เข้าร่วมกิจกรรม Ethereum ที่ใหญ่ที่สุดแห่งปี",
+  "page-index-devconnect-banner-get-tickets": "รับตั๋ว"
 }

@@ -57,7 +57,7 @@ L'identité décentralisée propose de nombreux cas d'utilisation potentiels :
 
 L'identité décentralisée peut aider à remplacer les connexions par mot de passe par une authentification décentralisée. Les fournisseurs de services peuvent délivrer des attestations aux utilisateurs, qui peuvent être stockées dans un portefeuille Ethereum. Un exemple d'attestation serait un [NFT](/glossary/#nft) accordant au titulaire l'accès à une communauté en ligne.
 
-Une fonction de [connexion avec Ethereum](https://login.xyz/) permettrait alors aux serveurs de confirmer le compte Ethereum de l'utilisateur et de récupérer l'attestation requise à partir de l'adresse de son compte. Cela signifie que les utilisateurs peuvent accéder aux plateformes et aux sites web sans avoir à mémoriser de longs mots de passe et améliore l'expérience en ligne des utilisateurs.
+Une fonction de [connexion avec Ethereum](https://siwe.xyz/) permettrait alors aux serveurs de confirmer le compte Ethereum de l'utilisateur et de récupérer l'attestation requise à partir de l'adresse de son compte. Cela signifie que les utilisateurs peuvent accéder aux plateformes et aux sites web sans avoir à mémoriser de longs mots de passe et améliore l'expérience en ligne des utilisateurs.
 
 ### 2. Authentification KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 ### Communautés {#communities}
 
 - [ERC-725 Alliance sur GitHub](https://github.com/erc725alliance) — _Supporters de la norme ERC725 pour la gestion d'identité sur la blockchain Ethereum_
-- [Serveur Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Communauté pour les adeptes et les développeurs travaillant sur la connexion avec Ethereum_
+- [Serveur Discord EthID](https://discord.com/invite/ZUyG3mSXFD) — _Communauté pour les adeptes et les développeurs travaillant sur la connexion avec Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Une communauté de développeurs contribuant à la construction d'un framework de données vérifiables pour les applications_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Une communauté de développeurs et constructeurs travaillant sur des cas d'utilisation d'identité décentralisée dans diverses industries._

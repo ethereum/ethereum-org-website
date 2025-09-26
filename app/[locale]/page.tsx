@@ -11,8 +11,11 @@ import type {
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
+import DevconnectBannerVariation1 from "@/components/DevconnectBanner/Variation1"
+import DevconnectBannerVariation2 from "@/components/DevconnectBanner/Variation2"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -84,6 +87,7 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
+import { getABTestAssignment } from "@/lib/ab-testing/server"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -158,6 +162,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
+
+  const DEVCONNECT_TEST_KEY = "2025-09-devconnect-banner"
+  const devconnectAssignment = await getABTestAssignment(DEVCONNECT_TEST_KEY)
 
   const [
     ethPrice,
@@ -428,6 +435,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
+        <ABTestWrapper
+          testKey={DEVCONNECT_TEST_KEY}
+          variants={[
+            <DevconnectBannerVariation1 key="a-variant-1" />,
+            <Fragment key="a-variant-2" />,
+          ]}
+          serverVariantIndex={devconnectAssignment?.variantIndex}
+          enableAllLocales
+        />
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -467,6 +483,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 )
               }
             )}
+          </div>
+
+          <div className="!mt-0 w-full">
+            <ABTestWrapper
+              testKey={DEVCONNECT_TEST_KEY}
+              variants={[
+                <Fragment key="b-variant-1" />,
+                <DevconnectBannerVariation2 key="b-variant-2" />,
+              ]}
+              serverVariantIndex={devconnectAssignment?.variantIndex}
+              enableAllLocales
+            />
           </div>
 
           {/* Use Cases - A new way to use the internet */}

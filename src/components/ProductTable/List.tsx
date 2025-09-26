@@ -28,6 +28,7 @@ const List = <T extends { id: string }>({
   subComponent,
   matomoEventCategory,
   filters,
+  ...rest
 }: ListProps<T>) => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
@@ -89,6 +90,7 @@ const List = <T extends { id: string }>({
       style={{
         height: `${virtualizer.getTotalSize()}px`,
       }}
+      {...rest}
     >
       {virtualizer.getVirtualItems().map((virtualItem) => {
         const item = data[virtualItem.index]
