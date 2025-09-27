@@ -13489,6 +13489,15 @@
         "content",
         "maintenance"
       ]
+    },
+    {
+      "login": "Bruce-Leung",
+      "name": "Bruce-Leung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105494275?v=4",
+      "profile": "https://github.com/Bruce-Leung",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
