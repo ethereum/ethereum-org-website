@@ -13479,6 +13479,16 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "nixorokish",
+      "name": "nixo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23272494?v=4",
+      "profile": "http://ethereum.org",
+      "contributions": [
+        "content",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
