@@ -1,9 +1,6 @@
 name: E2E tests
 on:
-  push:
-    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
-  pull_request:
-    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
+  workflow_dispatch: # Can be dispatched manually
 jobs:
   playwright:
     runs-on: ubuntu-latest

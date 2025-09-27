@@ -22,13 +22,14 @@ The Fusaka upgrade is only a single step in Ethereum's long-term development goa
 
 This is the _headliner_ of the Fusaka fork, the main feature added in this upgrade. Layer 2s currently post their data to Ethereum in blobs, the ephemeral data type created specifically for layer 2s. Pre-Fusaka, every full node has to store every blob to ensure that the data exists. As blob throughput rises, having to download all of this data becomes untenably resource-intensive.
 
-With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node will be responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data, any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10²⁰ to one in 10²⁴).
+With [data availability sampling](https://notes.ethereum.org/@fradamt/das-fork-choice) , instead of having to store all of the blob data, each node will be responsible for a subset of the blob data. Blobs are uniformly randomly distributed across nodes in the network with each full node holding only 1/8th of the data, therefore enabling theoretical scale up to 8x. To ensure availability of the data, any portion of the data can be reconstructed from any existing 50% of the whole with methods that drive down the probability of wrong or missing data to a cryptographically negligible level (~one in 10<sup>20</sup> to one in 10<sup>24</sup>).
 
 This keeps hardware and bandwidth requirements for nodes tenable while enabling blob scaling resulting in more scale with smaller fees for layer 2s.
 
 [Learn more about PeerDAS](/roadmap/fusaka/peerdas/)
 
 **Resources**:
+
 - [EIP-7594 technical specification](https://eips.ethereum.org/EIPS/eip-7594)
 - [DappLion on PeerDAS: Scaling Ethereum Today | ETHSofia 2024](https://youtu.be/bONWd1x2TjQ?t=328)
 - [Academic: A Documentation of Ethereum’s PeerDAS (PDF)](https://eprint.iacr.org/2024/1362.pdf)
@@ -62,9 +63,9 @@ EIP-7918 pins a proportional reserve price under every blob. When the reserve is
 - base-fee spikes on the EL can no longer strand the blob fee at 1 wei
 
 **Resources**:
+
 - [EIP-7918 technical specification](https://eips.ethereum.org/EIPS/eip-7918)
 - [Storybook explainer](https://notes.ethereum.org/@anderselowsson/AIG)
-
 
 ### Scale L1 {#scale-l1}
 
@@ -108,16 +109,16 @@ By better matching costs to actual processing time, MODEXP can no longer cause a
 
 #### RLP Execution Block Size Limit {#rlp-execution-block-size-limit}
 
-This creates a ceiling on how big a block is allowed to be - this is a limit on what's *sent* over the network and is separate from the gas limit, which limits the *work* inside a block. The block size cap is 10 MiB, with a small allowance (2 MiB) reserved for consensus data so that everything fits and propagates cleanly. If a block shows up bigger than that, the clients reject it.
+This creates a ceiling on how big a block is allowed to be - this is a limit on what's _sent_ over the network and is separate from the gas limit, which limits the _work_ inside a block. The block size cap is 10 MiB, with a small allowance (2 MiB) reserved for consensus data so that everything fits and propagates cleanly. If a block shows up bigger than that, the clients reject it.
 This is needed because very large blocks take longer to spread and verify across the network and can create consensus issues or be abused as a DoS vector. Also, the consensus layer’s gossip already won’t forward blocks over ~10 MiB, so aligning the execution layer to that limit avoids weird “seen by some, dropped by others” situations.
 
 The nitty-gritty: this is a cap on the [RLP](/developers/docs/data-structures-and-encoding/rlp/)-encoded execution block size. 10 MiB total, with a 2 MiB safety margin reserved for beacon-block framing. Practically, clients define
 
-`MAX_BLOCK_SIZE = 10,485,760` bytes and 
+`MAX_BLOCK_SIZE = 10,485,760` bytes and
 
-`SAFETY_MARGIN = 2,097,152` bytes, 
+`SAFETY_MARGIN = 2,097,152` bytes,
 
-and reject any execution block whose RLP payload exceeds 
+and reject any execution block whose RLP payload exceeds
 
 `MAX_RLP_BLOCK_SIZE = MAX_BLOCK_SIZE − SAFETY_MARGIN`
 
@@ -159,7 +160,8 @@ UX upgrade! For users, this unlocks device-native signing and passkeys. Wallets 
 
 For developers, it takes a 160-byte input and returns a 32-byte output, making it easy to port existing libraries and L2 contracts. Under the hood, it includes point-at-infinity and modular-comparison checks to eliminate tricky edge cases without breaking valid callers.
 
-**Resources**: 
+**Resources**:
+
 - [EIP-7951 technical specification](https://eips.ethereum.org/EIPS/eip-7951)
 - [More about RIP-7212](https://www.alchemy.com/blog/what-is-rip-7212) _(Note that EIP-7951 superseded RIP-7212)_
 

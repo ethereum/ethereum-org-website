@@ -87,6 +87,7 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
+import { getABTestAssignment } from "@/lib/ab-testing/server"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -161,6 +162,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
+
+  const DEVCONNECT_TEST_KEY = "2025-09-devconnect-banner"
+  const devconnectAssignment = await getABTestAssignment(DEVCONNECT_TEST_KEY)
 
   const [
     ethPrice,
@@ -432,8 +436,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
         <ABTestWrapper
-          testKey="2025-09-devconnect-banner"
-          variants={[<DevconnectBannerVariation1 key="variation-1" />, <></>]}
+          testKey={DEVCONNECT_TEST_KEY}
+          variants={[
+            <DevconnectBannerVariation1 key="a-variant-1" />,
+            <Fragment key="a-variant-2" />,
+          ]}
+          serverVariantIndex={devconnectAssignment?.variantIndex}
+          enableAllLocales
         />
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
@@ -478,11 +487,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
           <div className="!mt-0 w-full">
             <ABTestWrapper
-              testKey="2025-09-devconnect-banner"
+              testKey={DEVCONNECT_TEST_KEY}
               variants={[
-                <></>,
-                <DevconnectBannerVariation2 key="variation-2" />,
+                <Fragment key="b-variant-1" />,
+                <DevconnectBannerVariation2 key="b-variant-2" />,
               ]}
+              serverVariantIndex={devconnectAssignment?.variantIndex}
+              enableAllLocales
             />
           </div>
 
