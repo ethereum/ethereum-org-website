@@ -41,7 +41,7 @@ Mutabakat araştırması, [Ethereum'un hisse ispatı mekanizması](/developers/d
 
 - [Hisse ispatına giriş](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG makalesi](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG açıklayıcısı](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG açıklayıcısı](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper makalesi](https://arxiv.org/abs/2003.03052)
 
 #### Yakın geçmişteki araştırmalar {#recent-research}
