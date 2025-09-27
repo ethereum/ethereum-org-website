@@ -12,6 +12,7 @@ import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import BurnerImage from "@/public/images/wallets/burner.png"
 import CakeWalletImage from "@/public/images/wallets/cakewallet.png"
+import ClaveWallet from "@/public/images/wallets/clave.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import Coin98Image from "@/public/images/wallets/coin98.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
@@ -2704,6 +2705,50 @@ export const walletsData: WalletData[] = [
       "Linea",
       "Blast",
     ],
+  },
+  {
+    last_updated: "2025-09-24",
+    name: "Clave",
+    image: ClaveWallet,
+    twBackgroundColor: "bg-[#000000]",
+    twGradiantBrandColor: "from-[#000000]",
+    url: "https://www.getclave.com/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/getclave",
+    discord: "https://discord.com/invite/getclave",
+    reddit: "",
+    telegram: "https://t.me/getclave",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: false,
+    repo_url: "https://github.com/getclave",
+    non_custodial: true,
+    security_audit: ["https://github.com/getclave/audits"],
+    scam_protection: true,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: false,
+    connect_to_dapps: false,
+    staking: true,
+    swaps: true,
+    layer_2: true,
+    gas_fee_customization: false,
+    ens_support: true,
+    erc_20_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: true,
+    onboard_documentation: "",
+    documentation: "",
+    supported_chains: ["Arbitrum One", "Base"],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
