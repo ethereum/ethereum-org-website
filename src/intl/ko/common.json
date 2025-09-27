@@ -455,5 +455,8 @@
   "withdrawals": "스테이킹 인출",
   "wrapped-ether": "래핑된 이더",
   "yes": "네",
-  "zero-knowledge-proofs": "영지식 증명"
+  "zero-knowledge-proofs": "영지식 증명",
+  "ethereum-vs-bitcoin": "이더리움 대 비트코인",
+  "nav-ethereum-vs-bitcoin-description": "이더리움과 비트코인의 차이점 이해하기"
+
 }

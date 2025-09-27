@@ -444,5 +444,8 @@
   "withdrawals": "A letétbe helyezés visszavonása",
   "wrapped-ether": "Becsomagolt ether (WETH)",
   "yes": "Igen",
-  "zero-knowledge-proofs": "Felfedés nélküli bizonyítás"
+  "zero-knowledge-proofs": "Felfedés nélküli bizonyítás",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Az Ethereum és a Bitcoin közötti különbségek megértése"
+
 }

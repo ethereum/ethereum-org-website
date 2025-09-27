@@ -431,5 +431,8 @@
   "withdrawals": "Výber stakingu",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Áno",
-  "zero-knowledge-proofs": "Dôkaz nulovou znalosťou"
+  "zero-knowledge-proofs": "Dôkaz nulovou znalosťou",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Pochopte rozdiely medzi Ethereom a Bitcoinom"
+
 }

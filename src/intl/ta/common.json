@@ -430,5 +430,8 @@
   "withdrawals": "ஸ்டேக்கிங் பின்வாங்கல்",
   "wrapped-ether": "மூடப்பட்ட ஈதர்",
   "yes": "ஆம்",
-  "zero-knowledge-proofs": "ஜீரோ-நிரூபன சான்றுகள்"
+  "zero-knowledge-proofs": "ஜீரோ-நிரூபன சான்றுகள்",
+  "ethereum-vs-bitcoin": "எத்தேரியம் மற்றும் பிட்காயின்",
+  "nav-ethereum-vs-bitcoin-description": "எத்தேரியம் மற்றும் பிட்காயின் இடையிலான வேறுபாடுகளைப் புரிந்து கொள்ளுங்கள்"
+
 }

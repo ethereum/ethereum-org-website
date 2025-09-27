@@ -431,5 +431,8 @@
   "withdrawals": "სტეიკინგის გატანა",
   "wrapped-ether": "შეფუთული ეთერი",
   "yes": "კი",
-  "zero-knowledge-proofs": "ნულოვანი ცოდნის მტკიცებულებები"
+  "zero-knowledge-proofs": "ნულოვანი ცოდნის მტკიცებულებები",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "გაიგეთ განსხვავებები Ethereum-სა და Bitcoin-ს შორის"
+
 }

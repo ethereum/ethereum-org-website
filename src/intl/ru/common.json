@@ -444,5 +444,8 @@
   "withdrawals": "Вывод средств, использованных в стейкинге",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Да",
-  "zero-knowledge-proofs": "Доказательства с нулевым разглашением"
+  "zero-knowledge-proofs": "Доказательства с нулевым разглашением",
+  "ethereum-vs-bitcoin": "Эфириум против Биткоина",
+  "nav-ethereum-vs-bitcoin-description": "Понять различия между Эфириумом и Биткоином"
+
 }

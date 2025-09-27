@@ -443,5 +443,8 @@
   "withdrawals": "การถอน Staking",
   "wrapped-ether": "อีเธอร์ห่อหุ้ม",
   "yes": "ใช่",
-  "zero-knowledge-proofs": "การพิสูจน์ความจริงโดยไม่เปิดเผยข้อมูล"
+  "zero-knowledge-proofs": "การพิสูจน์ความจริงโดยไม่เปิดเผยข้อมูล",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "ทำความเข้าใจความแตกต่างระหว่าง Ethereum และ Bitcoin"
+
 }

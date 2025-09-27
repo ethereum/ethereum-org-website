@@ -443,5 +443,8 @@
   "withdrawals": "స్టేకింగ్ విత్‌డ్రాల్స్",
   "wrapped-ether": "చుట్టబడిన ఈథర్",
   "yes": "అవును",
-  "zero-knowledge-proofs": "జీరో-నాలెడ్జ్ రుజువులు"
+  "zero-knowledge-proofs": "జీరో-నాలెడ్జ్ రుజువులు",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum మరియు Bitcoin మధ్య వ్యత్యాసాలను అర్థం చేసుకోండి"
+
 }

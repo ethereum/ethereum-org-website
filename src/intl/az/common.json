@@ -431,5 +431,8 @@
   "withdrawals": "Payın çıxarılması",
   "wrapped-ether": "Tokenləşdirilmiş Ether",
   "yes": "Bəli",
-  "zero-knowledge-proofs": "Sıfır biliklərlə təsdiqləmə"
+  "zero-knowledge-proofs": "Sıfır biliklərlə təsdiqləmə",
+  "ethereum-vs-bitcoin": "Ethereum və Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum və Bitcoin arasındakı fərqləri anlayın"
+
 }

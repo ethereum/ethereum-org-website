@@ -442,5 +442,8 @@
   "withdrawals": "Uondoji wa hisa",
   "wrapped-ether": "Ether iliyofungamanishwa",
   "yes": "Ndiyo",
-  "zero-knowledge-proofs": "Ushahidi usio na utambuzi"
+  "zero-knowledge-proofs": "Ushahidi usio na utambuzi",
+  "ethereum-vs-bitcoin": "Ethereum dhidi ya Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Elewa tofauti kati ya Ethereum na Bitcoin"
+
 }

@@ -485,5 +485,8 @@
   "region-wake-island-usa": "Wake Island (USA)",
   "region-bonaire-netherlands": "Bonaire (Netherlands)",
   "region-saba-netherlands": "Saba (Netherlands)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Understand the differences between Ethereum and Bitcoin"
+
 }

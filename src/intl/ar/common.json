@@ -432,5 +432,8 @@
   "withdrawals": "عمليات سحب تجميد العملات",
   "wrapped-ether": "Wrapped Ether",
   "yes": "نعم",
-  "zero-knowledge-proofs": "براهين المعرفة الصفرية"
+  "zero-knowledge-proofs": "براهين المعرفة الصفرية",
+  "ethereum-vs-bitcoin": "الإيثيريوم مقابل البيتكوين",
+  "nav-ethereum-vs-bitcoin-description": "فهم الاختلافات بين الإيثيريوم والبيتكوين"
+
 }

@@ -431,5 +431,8 @@
   "withdrawals": "Zastavljanje dvigov",
   "wrapped-ether": "Ovit eter",
   "yes": "Da",
-  "zero-knowledge-proofs": "Dokazi brez znanja"
+  "zero-knowledge-proofs": "Dokazi brez znanja",
+  "ethereum-vs-bitcoin": "Ethereum proti Bitcoinu",
+  "nav-ethereum-vs-bitcoin-description": "Razumevanje razlik med Ethereumom in Bitcoinom"
+
 }

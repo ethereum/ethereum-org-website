@@ -431,5 +431,8 @@
   "withdrawals": "സ്റ്റെയ്ക്കിങ് പിൻവലിക്കലുകൾ",
   "wrapped-ether": "സംഗ്രഹിച്ച ഈഥർ",
   "yes": "അതെ",
-  "zero-knowledge-proofs": "പൂജ്യം-അറിവ് പ്രൂഫുകൾ"
+  "zero-knowledge-proofs": "പൂജ്യം-അറിവ് പ്രൂഫുകൾ",
+  "ethereum-vs-bitcoin": "എത്തിറിയം വേഴ്സസ് ബിറ്റ്കോയിൻ",
+  "nav-ethereum-vs-bitcoin-description": "എത്തിറിയവും ബിറ്റ്കോയിനും തമ്മിലുള്ള വ്യത്യാസങ്ങൾ മനസ്സിലാക്കുക"
+
 }

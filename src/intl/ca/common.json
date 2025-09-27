@@ -443,5 +443,8 @@
   "withdrawals": "Retirada d'apilaments",
   "wrapped-ether": "Ether embolicat",
   "yes": "Sí",
-  "zero-knowledge-proofs": "Proves de coneixement zero"
+  "zero-knowledge-proofs": "Proves de coneixement zero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Entendre les diferències entre Ethereum i Bitcoin"
+
 }

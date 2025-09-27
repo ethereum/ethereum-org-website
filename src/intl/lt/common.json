@@ -429,5 +429,8 @@
   "withdrawals": "Palaikymo lėšų atsiėmimas",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Taip",
-  "zero-knowledge-proofs": "Įrodymas be žinių"
+  "zero-knowledge-proofs": "Įrodymas be žinių",
+  "ethereum-vs-bitcoin": "Ethereum ir Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Supraskite skirtumus tarp Ethereum ir Bitcoin"
+
 }

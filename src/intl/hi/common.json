@@ -432,5 +432,8 @@
   "withdrawals": "स्टेकिंग निकालना",
   "wrapped-ether": "लपेटा हुआ ईथर",
   "yes": "हाँ",
-  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाण"
+  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाण",
+  "ethereum-vs-bitcoin": "एथेरियम बनाम बिटकॉइन",
+  "nav-ethereum-vs-bitcoin-description": "एथेरियम और बिटकॉइन के बीच के अंतर को समझें"
+
 }

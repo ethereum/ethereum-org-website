@@ -431,5 +431,8 @@
   "withdrawals": "Staking yechib olish",
   "wrapped-ether": "Oʻralgan Ether",
   "yes": "Ha",
-  "zero-knowledge-proofs": "Nol bilim bilan isbotlashlar"
+  "zero-knowledge-proofs": "Nol bilim bilan isbotlashlar",
+  "ethereum-vs-bitcoin": "Ethereum va Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum va Bitcoin o'rtasidagi farqlarni tushunish"
+
 }

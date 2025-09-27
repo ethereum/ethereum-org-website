@@ -457,5 +457,8 @@
   "withdrawals": "Retraits de la mise en jeu",
   "wrapped-ether": "Ether enveloppé",
   "yes": "Oui",
-  "zero-knowledge-proofs": "Preuves à divulgation nulle de connaissance"
+  "zero-knowledge-proofs": "Preuves à divulgation nulle de connaissance",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Comprendre les différences entre Ethereum et Bitcoin"
+
 }

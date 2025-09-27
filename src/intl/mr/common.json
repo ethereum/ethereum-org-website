@@ -430,5 +430,8 @@
   "withdrawals": "पैसे काढणे स्टिकिंग",
   "wrapped-ether": "गुंडाळलेला इथर",
   "yes": "होय",
-  "zero-knowledge-proofs": "शून्य-ज्ञान पुरावे"
+  "zero-knowledge-proofs": "शून्य-ज्ञान पुरावे",
+  "ethereum-vs-bitcoin": "इथेरियम विरुद्ध बिटकॉइन",
+  "nav-ethereum-vs-bitcoin-description": "इथेरियम आणि बिटकॉइनमधील फरक समजून घ्या"
+
 }

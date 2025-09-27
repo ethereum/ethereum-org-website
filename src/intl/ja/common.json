@@ -444,5 +444,8 @@
   "withdrawals": "ステーキングの引き出し",
   "wrapped-ether": "ラップドイーサ",
   "yes": "はい",
-  "zero-knowledge-proofs": "ゼロ知識証明"
+  "zero-knowledge-proofs": "ゼロ知識証明",
+  "ethereum-vs-bitcoin": "イーサリアム vs ビットコイン",
+  "nav-ethereum-vs-bitcoin-description": "イーサリアムとビットコインの違いを理解する"
+
 }

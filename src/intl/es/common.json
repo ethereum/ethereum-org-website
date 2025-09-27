@@ -444,5 +444,8 @@
   "withdrawals": "Retiradas de participaciones",
   "wrapped-ether": "Wrapped Ether (eter envuelto)",
   "yes": "Sí",
-  "zero-knowledge-proofs": "Pruebas de conocimiento cero"
+  "zero-knowledge-proofs": "Pruebas de conocimiento cero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Entiende las diferencias entre Ethereum y Bitcoin"
+
 }

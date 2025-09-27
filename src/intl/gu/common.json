@@ -428,5 +428,8 @@
   "withdrawals": "સ્ટેકીંગ ઉપાડ",
   "wrapped-ether": "આવરિત ઈથર",
   "yes": "હા",
-  "zero-knowledge-proofs": "શૂન્ય-જાણકારી પુરાવાઓ"
+  "zero-knowledge-proofs": "શૂન્ય-જાણકારી પુરાવાઓ",
+  "ethereum-vs-bitcoin": "Ethereum વિ Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum અને Bitcoin વચ્ચેનો તફાવત સમજો"
+
 }

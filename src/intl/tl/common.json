@@ -429,5 +429,8 @@
   "withdrawals": "Mga pagbawi ng pag-stake",
   "wrapped-ether": "Nakabalot na Ether",
   "yes": "Oo",
-  "zero-knowledge-proofs": "Mga zero-knowledge proof"
+  "zero-knowledge-proofs": "Mga zero-knowledge proof",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Unawain ang mga pagkakaiba sa pagitan ng Ethereum at Bitcoin"
+
 }

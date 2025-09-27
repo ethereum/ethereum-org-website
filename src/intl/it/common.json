@@ -444,5 +444,8 @@
   "withdrawals": "Prelievi di staking",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Sì",
-  "zero-knowledge-proofs": "Dimostrazioni a conoscenza zero"
+  "zero-knowledge-proofs": "Dimostrazioni a conoscenza zero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Comprendi le differenze tra Ethereum e Bitcoin"
+
 }

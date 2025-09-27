@@ -444,5 +444,8 @@
   "withdrawals": "Rút tài sản đặt cược",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Có",
-  "zero-knowledge-proofs": "Bằng chứng không tiết lộ thông tin"
+  "zero-knowledge-proofs": "Bằng chứng không tiết lộ thông tin",
+  "ethereum-vs-bitcoin": "Ethereum và Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Hiểu sự khác biệt giữa Ethereum và Bitcoin"
+
 }
