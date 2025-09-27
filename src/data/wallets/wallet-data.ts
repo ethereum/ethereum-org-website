@@ -2727,7 +2727,7 @@ export const walletsData: WalletData[] = [
     firefox: false,
     chromium: false,
     hardware: false,
-    open_source: true,
+    open_source: false,
     repo_url: "https://github.com/getclave",
     non_custodial: true,
     security_audit: ["https://github.com/getclave/audits"],
