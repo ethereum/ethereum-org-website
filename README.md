@@ -2089,6 +2089,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/unhappyben"><img src="https://avatars.githubusercontent.com/u/66370595?v=4?s=100" width="100px;" alt="Ben"/><br /><sub><b>Ben</b></sub></a><br /><a href="#tool-unhappyben" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://sethforprivacy.com"><img src="https://avatars.githubusercontent.com/u/40500387?v=4?s=100" width="100px;" alt="Seth For Privacy"/><br /><sub><b>Seth For Privacy</b></sub></a><br /><a href="#tool-sethforprivacy" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://ethereum.org"><img src="https://avatars.githubusercontent.com/u/23272494?v=4?s=100" width="100px;" alt="nixo"/><br /><sub><b>nixo</b></sub></a><br /><a href="#content-nixorokish" title="Content">🖋</a> <a href="#maintenance-nixorokish" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bruce-Leung"><img src="https://avatars.githubusercontent.com/u/105494275?v=4?s=100" width="100px;" alt="Bruce-Leung"/><br /><sub><b>Bruce-Leung</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ABruce-Leung" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
