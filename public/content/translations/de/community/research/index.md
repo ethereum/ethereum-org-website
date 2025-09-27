@@ -83,7 +83,7 @@ Ein Ethereum-Knoten wird benötigt, um zwei Arten von Software zu betreiben:
 1. einen Konsens-Client, um die Spitze der Blockchain zu verfolgen, Blöcke zu übermitteln und die Konsenslogik zu verarbeiten
 2. einen Ausführungs-Client, um die virtuelle Ethereum Virtual Machine (EVM) zu unterstützen und Transaktionen sowie Smart Contracts auszuführen
 
-Besuchen Sie die [Knoten- und Clients-Seite](/developers/docs/nodes-and-clients/), um mehr Details zu Knoten und Clients zu erfahren und eine Liste aller aktuellen Client-Implementationen einzusehen. Auf der [Verlaufsseite](/history/) können Sie auch den Verlauf aller Ethereum-Upgrades finden.
+Besuchen Sie die [Knoten- und Clients-Seite](/developers/docs/nodes-and-clients/), um mehr Details zu Knoten und Clients zu erfahren und eine Liste aller aktuellen Client-Implementationen einzusehen. Auf der [Verlaufsseite](/ethereum-forks/) können Sie auch den Verlauf aller Ethereum-Upgrades finden.
 
 ### Ausführungs-Clients {#execution-clients}
 

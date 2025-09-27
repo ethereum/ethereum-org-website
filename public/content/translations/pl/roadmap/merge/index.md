@@ -17,7 +17,7 @@ summaryPoint4: Połączenie zmniejszyło zużycie energii przez Ethereum o okoł
 
 ## Czym było Połączenie? {#what-is-the-merge}
 
-Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej, która istnieje od [genezy](/history/#frontier)) z nową warstwą konsensusu proof-of-stake, łańcuchem śledzącym. Wyeliminowało to potrzebę energochłonnego wydobycia, a zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanych ETH. To był naprawdę ekscytujący krok w realizacji wizji Ethereum — większej skalowalności, bezpieczeństwa i zrównoważenia ekologicznego.
+Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej, która istnieje od [genezy](/ethereum-forks/#frontier)) z nową warstwą konsensusu proof-of-stake, łańcuchem śledzącym. Wyeliminowało to potrzebę energochłonnego wydobycia, a zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanych ETH. To był naprawdę ekscytujący krok w realizacji wizji Ethereum — większej skalowalności, bezpieczeństwa i zrównoważenia ekologicznego.
 
 <MergeInfographic />
 

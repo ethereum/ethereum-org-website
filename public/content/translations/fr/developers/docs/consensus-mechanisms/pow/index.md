@@ -56,7 +56,7 @@ Pour créer de manière constante des blocs malveillants mais valides, un mineur
 
 La preuve de travail était également responsable de l'émission de nouvelles devises dans le système et encourageait les mineurs à y travailler.
 
-Depuis [la mise à jour Constantinople](/history/#constantinople), les mineurs ayant réussi à créer un bloc étaient récompensés par deux ETH fraîchement minés et une partie des frais de transaction. Les blocs Ommer étaient également récompensés par 1,75 ETH. Les blocs Ommer étaient des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur créait le bloc canonique, qui était finalement déterminé par la chaîne construite en premier. Les blocs Ommer apparaissaient généralement en raison de la latence du réseau.
+Depuis [la mise à jour Constantinople](/ethereum-forks/#constantinople), les mineurs ayant réussi à créer un bloc étaient récompensés par deux ETH fraîchement minés et une partie des frais de transaction. Les blocs Ommer étaient également récompensés par 1,75 ETH. Les blocs Ommer étaient des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur créait le bloc canonique, qui était finalement déterminé par la chaîne construite en premier. Les blocs Ommer apparaissaient généralement en raison de la latence du réseau.
 
 ## Finalisation {#finality}
 

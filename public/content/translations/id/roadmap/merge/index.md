@@ -17,7 +17,7 @@ summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,
 
 ## Apa itu Penggabungan? {#what-is-the-merge}
 
-Penggabungan adalah penyatuan lapisan eksekusi asli Ethereum (Jaringan Utama yang telah ada sejak [genesis](/history/#frontier)) dengan lapisan konsensus bukti taruhan baru, Rantai Suar. Ini menghilangkan kebutuhan akan penambangan yang boros energi dan sebagai gantinya memungkinkan jaringan untuk diamankan menggunakan ETH yang dipertaruhkan. Ini adalah langkah yang sangat menarik dalam mewujudkan visi Ethereum - skalabilitas, keamanan, dan keberlanjutan yang lebih baik.
+Penggabungan adalah penyatuan lapisan eksekusi asli Ethereum (Jaringan Utama yang telah ada sejak [genesis](/ethereum-forks/#frontier)) dengan lapisan konsensus bukti taruhan baru, Rantai Suar. Ini menghilangkan kebutuhan akan penambangan yang boros energi dan sebagai gantinya memungkinkan jaringan untuk diamankan menggunakan ETH yang dipertaruhkan. Ini adalah langkah yang sangat menarik dalam mewujudkan visi Ethereum - skalabilitas, keamanan, dan keberlanjutan yang lebih baik.
 
 <MergeInfographic />
 

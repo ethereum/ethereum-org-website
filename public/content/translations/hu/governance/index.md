@@ -152,7 +152,7 @@ Az Ethereum-irányítási folyamat gyakran a gyorsaság és a hatékonyság rov�
 
 Miközben a specifikáció és a fejlesztés teljesen nyitott volt, a hivatalos fejlesztési folyamat nem követte a fenti lépéseket. Így a kutatók és a fejlesztők gyorsabban meg tudtak egyezni a specifikus változtatásokon.
 
-Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/history/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
+Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/ethereum-forks/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
 
 <ButtonLink href="/roadmap/merge/">
   A beolvadásról bővebben

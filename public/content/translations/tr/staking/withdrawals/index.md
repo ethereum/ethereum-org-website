@@ -65,7 +65,7 @@ Hisseleme çekimleri aktif! Para çekebilme işlevi 12 Nisan 2023'te gerçekleş
 
 Şangay/Capella yükseltmesi, daha önceden hisselenmiş ETH'lerin normal Ethereum hesaplarına geri alınabilmesini sağladı. Bu da likidite hisseleme döngüsünü kapattı; Ethereum'u daha sürdürülebilir, ölçeklenebilir ve de merkeziyetsiz ekosistem oluşturma yolculuğuna bir adım daha yaklaştırdı.
 
-- [Ethereum'un tarihçesi hakkında daha fazla bilgi](/history/)
+- [Ethereum'un tarihçesi hakkında daha fazla bilgi](/ethereum-forks/)
 - [Ethereum'un yol haritası hakkında daha fazla bilgi](/roadmap/)
 
 ## Para çekme ödemeleri nasıl çalışır? {#how-do-withdrawals-work}

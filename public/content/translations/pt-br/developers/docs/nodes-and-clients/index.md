@@ -37,7 +37,7 @@ O que essas implementações têm em comum é que todas seguem uma única especi
 - Originalmente, o [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Especificações de execução](https://github.com/ethereum/execution-specs/)
 - [Especificações de consenso](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implementados em várias [atualizações de rede](/history/)
+- [EIPs](https://eips.ethereum.org/) implementados em várias [atualizações de rede](/ethereum-forks/)
 
 ### Rastreamento de nós na rede {#network-overview}
 

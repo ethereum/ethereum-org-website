@@ -56,7 +56,7 @@ Para crear sistemáticamente bloques maliciosos pero que sean válidos, un miner
 
 La prueba de trabajo también es responsable de la generación de nuevas monedas en el sistema e incentivar a que los mineros lleven a cabo el trabajo.
 
-Desde la actualización del [Constantinople](/history/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
+Desde la actualización del [Constantinople](/ethereum-forks/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
 
 ## Finalidad {#finality}
 

@@ -17,7 +17,7 @@ summaryPoint4: A Beolvadás nagyjából 99,95%-kal csökkentette az Ethereum ene
 
 ## Mi volt a beolvadás? {#what-is-the-merge}
 
-A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/history/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
+A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/ethereum-forks/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
 
 <MergeInfographic />
 
