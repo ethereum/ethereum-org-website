@@ -137,6 +137,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 ## Related tools {#related-tools}
 
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
+- [Gas Network](https://gas.network) Onchain Gas Oracles. Support for 35+ chains. 
 
 ## Further reading {#further-reading}
 
