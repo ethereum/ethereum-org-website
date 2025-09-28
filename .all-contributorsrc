@@ -13479,6 +13479,25 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "nixorokish",
+      "name": "nixo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23272494?v=4",
+      "profile": "http://ethereum.org",
+      "contributions": [
+        "content",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Bruce-Leung",
+      "name": "Bruce-Leung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105494275?v=4",
+      "profile": "https://github.com/Bruce-Leung",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
