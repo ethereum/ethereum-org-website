@@ -320,7 +320,7 @@ Ethereum shine cikakken tushen DeFi saboda dalilai da yawa:
 Kuna iya tunanin DeFi a cikin wurare:
 
 1. Blockchain - Ethereum tarihin hada-hadar kuɗi ne da matsayin asusun.
-2. Kadarorin – [ETH](/eth/) da sauran kuɗaɗe (kuɗi).
+2. Kadarorin – [ETH](/what-is-ether/) da sauran kuɗaɗe (kuɗi).
 3. Ka'idojin - [smart-contracts](/glossary/#smart-contract)waɗanda ke ba da ayyuka, alal misali, sabis ɗin da ke ba da izinin rarraba rancen kadarorin.
 4. [Aika da su](/apps/) - samfuran da muke amfani da su don sarrafawa da samun damar ƙa'idodin.
 

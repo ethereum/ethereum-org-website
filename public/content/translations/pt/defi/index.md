@@ -100,7 +100,7 @@ Enquanto blockchain, a Ethereum foi concebida para enviar transações de forma 
 
 Também é possível transmitir dinheiro através da Ethereum. Isto permite-lhe pagar a alguém o seu salário em segundos, dando-lhe acesso ao seu dinheiro sempre que precisar dele. Ou alugue algo instantaneamente, como um cacifo ou uma scooter elétrica.
 
-E se não quiser enviar ou transmitir [ETH](/eth/) devido ao facto de o seu valor poder mudar, existem moedas alternativas na Ethereum: stablecoins.
+E se não quiser enviar ou transmitir [ETH](/what-is-ether/) devido ao facto de o seu valor poder mudar, existem moedas alternativas na Ethereum: stablecoins.
 
 <Divider />
 
@@ -316,7 +316,7 @@ O Ethereum é a base perfeita para a DeFi por diversas razões:
 Pode pensar-se na DeFi por camadas:
 
 1. A blockchain - Ethereum contém o histórico das transações e o estado das contas.
-2. Ativos - [ETH](/eth/) e outros tokens (cripto moedas).
+2. Ativos - [ETH](/what-is-ether/) e outros tokens (cripto moedas).
 3. Os protocolos - [contratos inteligentes](/glossary/#smart-contract) que fornecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
 4. [As aplicações](/apps/) - os produtos que usamos para gerir e aceder aos protocolos.
 

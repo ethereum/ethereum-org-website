@@ -320,7 +320,7 @@ Ang Ethereum ang perpektong pundasyon para sa DeFi dahil sa mga sumusunod:
 Maaaring isipin na may mga layer ang DeFi:
 
 1. Ang blockchain – na Ethereum ay naglalaman ng kasaysayan ng mga transaksyon at kalagayan ng mga account.
-2. Ang mga asset –[ ETH](/eth/)at iba pang token (mga currency).
+2. Ang mga asset –[ ETH](/what-is-ether/)at iba pang token (mga currency).
 3. Ang mga protokol – [mga smart-contract](/glossary/#smart-contract) na nagbibigay ng kakayahan, halimbawa, sa isang serbisyong nagpapahintulot ng decentralized na pagpapautang ng mga asset.
 4. [Ang mga application](/apps/) – ang mga produkto na ginagamit natin para pamahalaan at i-access ang mga protokol.
 

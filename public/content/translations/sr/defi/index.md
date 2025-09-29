@@ -320,7 +320,7 @@ Ethereum je savršena osnova za DeFi zbog mnogobrojnih razloga:
 Možete misliti o decentralizovanim finansijama u nivoima:
 
 1. Lanac blokova — Ethereum sadrži istoriju transakcija i stanja računa.
-2. Sredstva — [ETH](/eth/)i drugi tokeni (valute).
+2. Sredstva — [ETH](/what-is-ether/)i drugi tokeni (valute).
 3. Protokoli — [pametni ugovori](/glossary/#smart-contract)koji pružaju funkcionalnost, na primer uslugu koja omogućava decentralizovano pozajmljivanje sredstava.
 4. [Aplikacije](/apps/) — proizvodi koje koristimo da upravljamo i pristupamo protokolima.
 

@@ -42,7 +42,7 @@ _Walaupun di peringkat protokol Tadbir urus Ethereum di luar rantaian, banyak ke
 
 Terdapat pelbagai pihak berkepentingan dalam [komuniti Ethereum](/community/), setiap daripada mereka memainkan peranan dalam proses tadbir urus. Bermula daripada pihak berkepentingan yang paling jauh daripada protokol dan zum ke dalam, kami mempunyai:
 
-- **Pemegang Ether**: mereka ini memegang sembarangan jumlah ETH. [Lagi tentang ETH](/eth/).
+- **Pemegang Ether**: mereka ini memegang sembarangan jumlah ETH. [Lagi tentang ETH](/what-is-ether/).
 - **Permohonan Pengguna**: mereka ini berinteraksi dengan aplikasi pada blok rantai Ethereum.
 - **Permohonan/Pemaju Alat**: mereka ini menulis aplikasi yang dijalankan di blok rantai Ethereum (contohnya DeFi, NFT, dll.) atau membina alat untuk berinteraksi dengan Ethereum (contohnya dompet, suite ujian, dll.). [Lagi tentang dapp](/apps/).
 - **Penggendali Nod**: mereka ini menjalankan nod yang menyebarkan blok dan transaksi, menolak sebarang transaksi yang tidak sah atau menyekat yang hadir. [Lagi tentang nod](/developers/docs/nodes-and-clients/).

@@ -26,7 +26,7 @@ Ethereum è una rete pubblica, una blockchain e un protocollo open source - cost
 
 Ether (nota anche con il suo simbolo, ETH) è la valuta nativa scambiata su Ethereum. L'Ether serve per pagare le commissioni inerenti all'utilizzo della rete Ethereum (sotto forma di commissioni di transazione). ETH serve anche per proteggere la rete con lo staking. Quando si parla del prezzo di Ethereum, ci si riferisce all'ETH, l'asset.
 
-[Maggiori informazioni su ETH](/eth/)
+[Maggiori informazioni su ETH](/what-is-ether/)
 
 [Maggiori informazioni sullo staking di ETH](/staking/)
 

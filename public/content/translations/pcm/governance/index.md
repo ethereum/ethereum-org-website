@@ -42,7 +42,7 @@ _As yu dey di protokol level Ethereum gofanans na off-chain, plenti yus kases we
 
 Plenti stakeholdas dey for [Ethereum komunity](/community/), wey ish dey play one role in di gofanans process. As im start from di stakeholdas far from di protokol and dey zoom in, wi get:
 
-- **ETher holdas**: dis pipol hold one arbitary amount of ETH. [More tok ETH](/eth/).
+- **ETher holdas**: dis pipol hold one arbitary amount of ETH. [More tok ETH](/what-is-ether/).
 - **Aplikashon Users**: dis pipol dey interact wit aplikashon on di Ethereum blockchain.
 - **Aplikashon/Tooling Divelopas**: dis pipol dey write aplikashons wey dey run ontop di Ethereum blockchain (e.g. DeFi, NFTs, etc.) dem dey also build tooling wey pipol fit yus wit Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/apps/).
 - **Pipol wey dey operate Node**: dis pipol dey run nodes wey dey propagate blocks and transakshons, di node dey also reject any transakshon abi block wey nor koret wey dem kome akross. [More on nodes](/developers/docs/nodes-and-clients/).

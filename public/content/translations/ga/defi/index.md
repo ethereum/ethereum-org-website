@@ -321,7 +321,7 @@ Is é Ethereum an bunús foirfe do DeFi ar roinnt cúiseanna:
 Is féidir leat smaoineamh ar DeFi i gcisil:
 
 1. Tá stair na n-idirbheart agus staid na gcuntas sa bhlocshlabhra - Ethereum.
-2. Na sócmhainní – [ETH](/eth/) agus na comharthaí eile (airgeadraí).
+2. Na sócmhainní – [ETH](/what-is-ether/) agus na comharthaí eile (airgeadraí).
 3. Na prótacail – [conarthaí cliste](/glossary/#smart-contract) trína soláthraítear an fheidhmiúlacht, mar shampla, seirbhís a cheadaíonn iasachtú díláraithe sócmhainní.
 4. [Na feidhmchláir](/apps/) – na táirgí a úsáidimid chun na prótacail a bhainistiú agus a rochtain.
 

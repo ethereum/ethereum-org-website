@@ -320,7 +320,7 @@ Az Ethereum tökéletes alapot biztosít a decentralizált pénzügyek (DeFi) sz
 A DeFi-t a következő rétegek szerint értelmezheti:
 
 1. A blokklánc – az Ethereum tartalmazza az összes tranzakciót és a számlák státuszát.
-2. Az eszközök – [ETH](/eth/) és a többi token (valuták).
+2. Az eszközök – [ETH](/what-is-ether/) és a többi token (valuták).
 3. A protokollok – az [okosszerződések](/glossary/#smart-contract), melyek a műveleteket biztosítják, mint amilyen például egy szolgáltatás az eszközök decentralizált kölcsönadására.
 4. [Az alkalmazások](/apps/) – azok a termékek, melyek révén kezeljük és elérjük a protokollokat.
 
