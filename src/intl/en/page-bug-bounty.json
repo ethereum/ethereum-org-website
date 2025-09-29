@@ -36,7 +36,7 @@
   "page-upgrades-bug-bounty-meta-description": "An overview of the Ethereum bug bounty program: how to get involved and reward information.",
   "page-upgrades-bug-bounty-meta-title": "Ethereum Bug Bounty Program",
   "page-upgrades-bug-bounty-not-included": "Out of scope",
-  "page-upgrades-bug-bounty-not-included-desc": "Only the <a>targets listed under in-scope</a> are part of the Bug Bounty Program. This means that for example our infrastructure; such as webpages, dns, email etc, are not part of the bounty-scope. ERC-20 contract bugs are typically not included in the bounty scope. However, we can help reach out to affected parties, such as authors or exchanges in such cases. ENS is maintained by the ENS foundation, and is not part of the bounty scope. Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API, is out of scope of the bug bounty program.",
+  "page-upgrades-bug-bounty-not-included-desc": "Only the <a>targets listed under in-scope</a> are part of the Bug Bounty Program. Vulnerabilities that do NOT qualify under the program include:",
   "page-upgrades-bug-bounty-owasp": "View OWASP method",
   "page-upgrades-bug-bounty-points": "The EF will also provide rewards based on:",
   "page-upgrades-bug-bounty-points-error": "Error loading data... please refresh.",

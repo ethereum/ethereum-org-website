@@ -471,16 +471,134 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 </div>
               </StyledCard>
             </Flex>
+            <div>
+              <H2 id="qualifications" className="max-w-[100ch]">
+                Vulnerability severity qualifications
+              </H2>
+              <p className="max-w-[100ch]">
+                Severity is assessed based on a discovered vulnerability&apos;s
+                ability to do the following:
+              </p>
+
+              <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-8 xl:grid-cols-4">
+                <div className="space-y-4">
+                  <h3>Low severity</h3>
+                  <ul>
+                    <li>
+                      Slash <strong>&gt;0.01%</strong> of validators
+                    </li>
+                    <li>
+                      Trivially cause network splits affecting at least{" "}
+                      <strong>0.01%</strong> of the network
+                    </li>
+                    <li>
+                      Be able to bring down more than <strong>0.01%</strong> of
+                      the network by sending a single network packet or an
+                      onchain transaction
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3>Medium severity</h3>
+                  <ul>
+                    <li>
+                      Slash <strong>&gt;1%</strong> of validators
+                    </li>
+                    <li>
+                      Trivially cause network splits affecting more than{" "}
+                      <strong>5%</strong> of the network
+                    </li>
+                    <li>
+                      Be able to bring down more than <strong>5%</strong> of the
+                      network by sending a single network packet or an onchain
+                      transaction
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3>High severity</h3>
+                  <ul>
+                    <li>
+                      Slash <strong>&gt;33%</strong> of validators
+                    </li>
+                    <li>
+                      Trivially cause network splits affecting more than{" "}
+                      <strong>33%</strong> of the network
+                    </li>
+                    <li>
+                      Be able to bring down more than <strong>33%</strong> of
+                      the network by sending a single network packet or an
+                      onchain transaction
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3>Critical severity</h3>
+                  <ul>
+                    <li>
+                      Slash <strong>&gt;50%</strong> of validators
+                    </li>
+                    <li>
+                      Exploit an EIP/specification or client bug to easily{" "}
+                      <strong>create an infinite amount of ETH</strong> which is
+                      finalized by the network
+                    </li>
+                    <li>
+                      <strong>Steal ETH</strong> from all EOAs
+                    </li>
+                    <li>
+                      <strong>Burn ETH</strong> from all EOAs
+                    </li>
+                    <li>
+                      <strong>Take down the entire network</strong> by sending a
+                      single malicious onchain transaction that ends up crashing
+                      all clients
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div className="max-w-[100ch] flex-1">
               <H2 id="out-of-scope">
                 {t("page-upgrades-bug-bounty-not-included")}
               </H2>
-              <Text>
+              <p>
                 {t.rich("page-upgrades-bug-bounty-not-included-desc", {
-                  a: (chunks) => (
-                    <InlineLink href="#in-scope">{chunks}</InlineLink>
-                  ),
+                  a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
                 })}
+              </p>
+              <ul className="mt-8 [&>li]:mb-2">
+                <li>
+                  Infrastructure bugs—such as webpages, dns, email, etc.
+                  <sup>*</sup>
+                </li>
+                <li>
+                  ERC-20 contract bugs<sup>*</sup>
+                </li>
+                <li>
+                  Ethereum Naming Service (ENS) bugs (maintained by the ENS
+                  foundation)
+                </li>
+                <li>
+                  Vulnerabilities requiring the user to have publicly exposed an
+                  API, such as JSON-RPC or the Beacon API
+                </li>
+                <li>Typographical errors</li>
+                <li>Tests</li>
+                <li>
+                  High-effort (sustained, CPU or bandwidth intensive, and/or
+                  requires more than 1 packet or onchain transaction)
+                  single-peer DoS attacks
+                </li>
+                <li>
+                  Any publicly known issues (includes forum posts, PRs, github
+                  issues, commits, blog posts, public discord messages, etc.)
+                </li>
+              </ul>
+              <Text>
+                <sup>*</sup>These are typically not included, however, we can
+                help reach out to affected parties, such as authors or exchanges
+                in such cases
               </Text>
             </div>
           </Content>
