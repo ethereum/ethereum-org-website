@@ -2094,6 +2094,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Parizval"><img src="https://avatars.githubusercontent.com/u/48042530?v=4?s=100" width="100px;" alt="Anmol Goyal"/><br /><sub><b>Anmol Goyal</b></sub></a><br /><a href="#tool-Parizval" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://0xulas.eth.limo"><img src="https://avatars.githubusercontent.com/u/58347304?v=4?s=100" width="100px;" alt="Ulaş Erdoğan"/><br /><sub><b>Ulaş Erdoğan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/pulls?q=is%3Apr+reviewed-by%3Aulerdogan" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/guptaharsh13"><img src="https://avatars.githubusercontent.com/u/68965388?v=4?s=100" width="100px;" alt="Harsh Gupta"/><br /><sub><b>Harsh Gupta</b></sub></a><br /><a href="#maintenance-guptaharsh13" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

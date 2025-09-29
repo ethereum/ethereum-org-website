@@ -13516,6 +13516,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "guptaharsh13",
+      "name": "Harsh Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68965388?v=4",
+      "profile": "https://github.com/guptaharsh13",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
