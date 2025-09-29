@@ -14,7 +14,6 @@ jobs:
         if: |
           github.ref_name == 'dev' || github.ref_name == 'staging' || github.ref_name == 'master'
         run: |
-          npm install node-fetch@2
           npx ts-node -O '{ "module": "commonjs" }' src/scripts/get-netlify-branch-deploy.ts
         env:
           NETLIFY_SITE_ID: "e8f2e766-888b-4954-8500-1b647d84db99"

@@ -1,8 +1,5 @@
 // Fetches the latest published Netlify deploy for the current branch and outputs its URL for GitHub Actions
-
 import fs from "fs"
-
-import fetch from "node-fetch"
 
 const siteId = process.env.NETLIFY_SITE_ID
 const branch = process.env.GITHUB_REF_NAME
