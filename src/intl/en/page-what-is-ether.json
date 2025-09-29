@@ -88,7 +88,7 @@
   "page-what-is-ether-what-is-wrapping-eth-description-6": "WETH can be unwrapped back to ETH anytime with minimal fees. Most applications handle the wrapping process seamlessly.",
   "page-what-is-ether-what-is-wrapping-eth-description-7": "Learn more about Wrapped ETH (WETH)",
   "page-what-is-ether-gas-table-transaction-type": "Transaction type",
-  "page-what-is-ether-gas-table-typical-cost-range": "Typical Cost Range",
+  "page-what-is-ether-gas-table-typical-cost-range": "Live cost range",
   "page-what-is-ether-gas-table-estimated-gas-units": "Estimated gas units",
   "page-what-is-ether-gas-table-row-1-1": "ETH transfers",
   "page-what-is-ether-gas-table-row-2-1": "Swapping tokens",
