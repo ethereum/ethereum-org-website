@@ -13,6 +13,8 @@
   "page-upgrades-bug-bounty-misc-bugs-desc-2": "Solidity and Vyper does not hold security guarantees regarding compilation of untrusted input – and we do not issue rewards for crashes of the compiler on maliciously generated data.",
   "page-upgrades-bug-bounty-deposit-bugs": "Deposit Contract bugs",
   "page-upgrades-bug-bounty-deposit-bugs-desc": "The specifications and source code of the Beacon Chain Deposit Contract is part of the bug bounty program.",
+  "page-upgrades-bug-bounty-deposit-contract-specs": "Deposit Contract Specifications",
+  "page-upgrades-bug-bounty-deposit-contract-source": "Deposit Contract Source Code",
   "page-upgrades-bug-bounty-dependency-bugs": "Dependency bugs",
   "page-upgrades-bug-bounty-dependency-bugs-desc": "Certain dependencies are crucial for the Ethereum Network to function, and some of these have been added to the bug bounty program. Currently, the list of dependencies included in the bug bounty program are C-KZG-4844 and Go-KZG-4844.",
   "page-upgrades-bug-bounty-docking": "merge",
@@ -163,7 +165,5 @@
   "page-upgrades-bug-bounty-not-included-li-5": "Typographical errors",
   "page-upgrades-bug-bounty-not-included-li-6": "Tests",
   "page-upgrades-bug-bounty-not-included-li-7": "High-effort (sustained, CPU or bandwidth intensive, and/or requires more than 1 packet or onchain transaction) single-peer DoS attacks",
-  "page-upgrades-bug-bounty-not-included-li-8": "Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)",
-  "page-upgrades-bug-bounty-deposit-contract-specs": "Deposit Contract Specifications",
-  "page-upgrades-bug-bounty-deposit-contract-source": "Deposit Contract Source Code"
+  "page-upgrades-bug-bounty-not-included-li-8": "Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)"
 }
