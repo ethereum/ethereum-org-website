@@ -14,12 +14,14 @@ import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
+import { Strong } from "@/components/IntlStringElements"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
+import Link from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
@@ -338,7 +340,18 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           <Content>
             <div className="max-w-[100ch] flex-1">
               <H2 id="in-scope">{t("page-upgrades-bug-bounty-validity")}</H2>
-              <Text>{t("page-upgrades-bug-bounty-validity-desc")}</Text>
+              <Text>
+                {t.rich("page-upgrades-bug-bounty-validity-desc", {
+                  mailto: (chunks) => (
+                    <Link href="mailto:bounty@ethereum.org">{chunks}</Link>
+                  ),
+                  a: (chunks) => (
+                    <Link href="https://ethereum.org/security_at_ethereum.org.asc">
+                      {chunks}
+                    </Link>
+                  ),
+                })}
+              </Text>
             </div>
             <Flex className="-ml-4 -mr-4 mb-12 mt-8 flex-wrap">
               <StyledCard
@@ -477,7 +490,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             <div className="max-w-[100ch] flex-1">
               <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
               <Text>
-                {t("page-upgrades-bug-bounty-submit-desc")}{" "}
+                {t.rich("page-upgrades-bug-bounty-submit-desc", {
+                  strong: Strong,
+                })}{" "}
                 <InlineLink href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
                   {t("page-upgrades-bug-bounty-owasp")}
                 </InlineLink>
@@ -495,7 +510,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 </span>
                 {t("page-upgrades-bug-bounty-quality-repro-desc")}
               </Text>
-              <Text>{t("page-upgrades-bug-bounty-quality-fix")}</Text>
+              <Text>
+                {t.rich("page-upgrades-bug-bounty-quality-fix", {
+                  strong: Strong,
+                })}
+              </Text>
             </div>
           </Row>
         </Content>
