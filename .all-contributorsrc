@@ -13498,6 +13498,24 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Parizval",
+      "name": "Anmol Goyal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48042530?v=4",
+      "profile": "https://github.com/Parizval",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "ulerdogan",
+      "name": "Ulaş Erdoğan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58347304?v=4",
+      "profile": "http://0xulas.eth.limo",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,

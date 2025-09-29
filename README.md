@@ -2091,6 +2091,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://ethereum.org"><img src="https://avatars.githubusercontent.com/u/23272494?v=4?s=100" width="100px;" alt="nixo"/><br /><sub><b>nixo</b></sub></a><br /><a href="#content-nixorokish" title="Content">🖋</a> <a href="#maintenance-nixorokish" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bruce-Leung"><img src="https://avatars.githubusercontent.com/u/105494275?v=4?s=100" width="100px;" alt="Bruce-Leung"/><br /><sub><b>Bruce-Leung</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ABruce-Leung" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Parizval"><img src="https://avatars.githubusercontent.com/u/48042530?v=4?s=100" width="100px;" alt="Anmol Goyal"/><br /><sub><b>Anmol Goyal</b></sub></a><br /><a href="#tool-Parizval" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://0xulas.eth.limo"><img src="https://avatars.githubusercontent.com/u/58347304?v=4?s=100" width="100px;" alt="Ulaş Erdoğan"/><br /><sub><b>Ulaş Erdoğan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/pulls?q=is%3Apr+reviewed-by%3Aulerdogan" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
   </tbody>
 </table>
 
