@@ -32,7 +32,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("what-is-ether"),
               description: t("nav-what-is-ether-description"),
-              href: "/eth/",
+              href: "/what-is-ether/",
             },
             {
               label: t("ethereum-vs-bitcoin"),
