@@ -141,6 +141,8 @@ When using the abbreviated form of zero-knowledge rollup you should shorten zero
 - zK rollup
 - zk rollup
 
+## Writing style guidelines {#writing-style-guidelines}
+
 ### Use active voice {#use-active-voice}
 
 Sentences using active voice are more concise and efficient, making your writing more engaging and easier to comprehend.
@@ -157,7 +159,7 @@ Sentences using active voice are more concise and efficient, making your writing
 
 _This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with any of these._
 
-### Date Format {#date-format}
+### Date format {#date-format}
 
 When including dates in markdown content across Ethereum documentation, it is essential to maintain a consistent and clear presentation. In order to achieve this, we recommend the following guidelines:
 
@@ -174,7 +176,7 @@ By adhering to these guidelines, we create a unified approach to presenting date
 
 ### Linking to internal pages {#internal-links}
 
-When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
+When linking to another page on ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links, and do not include the `https://ethereum.org` domain. This maintains consistent functionality across different language versions of the site.
 
 ```md
 <!-- Good -->
@@ -185,6 +187,7 @@ Read more about [smart contracts](/docs/developers/smart-contracts/)
 
 Read more about [smart contracts](/en/docs/developers/smart-contracts)
 Read more about [smart contracts](/docs/developers/smart-contracts)
+Read more about [smart contracts](https://ethereum.org/docs/developers/smart-contracts)
 ```
 
 Please also add a trailing slash to all links. This keeps links consistent and avoids redirects, which hurts site performance.
@@ -282,3 +285,87 @@ Discussion was held in an offchain forum, and the vote was performed onchain.
 <--- Bad--->
 Discussion was held in an off-chain forum, and the vote was performed on-chain.
 ```
+
+### Hyphen (-), en dash (–), and em dash (—): usage guide {#dash-usage-guide}
+
+For further reading, see [Merriam-Webster: How to Use Em Dashes, En Dashes, and Hyphens](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+
+#### Hyphen (-) {#hyphen}
+
+- **Purpose:** Joins words or parts of words.
+- **Use for:** Compound words (well-known), prefixes (re-enter), word breaks at line ends.
+- **Example:** state-of-the-art, self-aware
+- **How to type:**
+  - Mac: `-` key
+  - Windows: `-` key
+  - Linux: `-` key
+
+```md
+<!-- Good -->
+
+state-of-the-art solution
+re-enter your password
+
+<!-- Bad -->
+
+state of the art solution
+reenter your password
+```
+
+#### En dash (–) {#en-dash}
+
+- **Purpose:** Indicates ranges or relationships.
+- **Use for:** Ranges (dates, numbers), connections (geographical, partnerships).
+- **Example:** 2010–2020, New York–London flight
+- **How to type:**
+  - Mac: `Option` + `-`
+  - Windows: `Alt` + `0150`
+  - Linux: `Ctrl` + `Shift` + `u`, then type `2013`, then press `Space` or `Enter`
+
+```md
+<!-- Good -->
+
+The event runs 10–12 June.
+The Paris–Berlin flight was delayed.
+
+<!-- Bad (uses hyphen or spaces instead of en dash; visually may look similar but is incorrect) -->
+
+The event runs 10-12 June.
+The Paris - Berlin flight was delayed.
+```
+
+#### Em dash (—) {#em-dash}
+
+- **Purpose:** Creates a strong break, sets off information, or shows interruption.
+- **Use for:** Parenthetical statements, abrupt changes, emphasis.
+- **Example:** She was late—again.
+- **How to type:**
+  - Mac: `Option` + `Shift` + `-`
+  - Windows: `Alt` + `0151`
+  - Linux: `Ctrl` + `Shift` + `u`, then type `2014`, then press `Space` or `Enter`
+
+```md
+<!-- Good -->
+
+He was sure of one thing—he would not give up.
+The results—despite initial doubts—were impressive.
+
+<!-- Bad -->
+
+He was sure of one thing — he would not give up.
+The results -- despite initial doubts -- were impressive.
+```
+
+#### Spacing {#dash-spacing}
+
+No spaces should appear before or after any dash—hyphen, en dash, or em dash—in standard usage.
+
+#### Quick reference table {#dash-reference-table}
+
+| Mark    | Symbol | Main use            | Example                   |
+| ------- | ------ | ------------------- | ------------------------- |
+| Hyphen  | -      | Compound words      | well-known author         |
+| En dash | –      | Ranges, connections | pages 10–20, Paris–Berlin |
+| Em dash | —      | Breaks, emphasis    | He was late—again.        |
+
+**Tip:** Use each dash for its specific purpose, follow spacing rules, and use the correct input method for clear, professional writing.
