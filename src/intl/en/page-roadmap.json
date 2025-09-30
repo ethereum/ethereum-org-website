@@ -96,6 +96,6 @@
   "page-roadmap-fusaka-additional-item-2": "Blob fee market improvements",
   "page-roadmap-fusaka-additional-item-3": "Further improvements to validator efficiency and network performance",
   "page-roadmap-glamsterdam-discussed-title": "Scheduled for Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "enshrined Proposer-Builder Separation",
-  "page-roadmap-glamsterdam-discussed-item-2": "Block-level Access Lists"
+  "page-roadmap-glamsterdam-discussed-item-1": "Enshrined Proposer-Builder Separation (ePBS)",
+  "page-roadmap-glamsterdam-discussed-item-2": "Block-level Access Lists (BALs)"
 }
