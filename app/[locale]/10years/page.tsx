@@ -23,7 +23,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-// Import static torch holders data
+import tenYearEventRegions from "@/data/tenYearEventRegions"
 import torchHoldersData from "@/data/torchHolders.json"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -43,7 +43,6 @@ import {
 import TenYearJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
-import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import {
   getHolderEvents,
@@ -57,10 +56,7 @@ import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-hea
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [
-    ["fetched10YearEvents", fetch10YearEvents],
-    ["fetched10YearStories", fetch10YearStories],
-  ],
+  [["fetched10YearStories", fetch10YearStories]],
   REVALIDATE_TIME * 1000
 )
 
@@ -71,7 +67,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+  const [fetched10YearStories] = await loadData()
 
   const allTorchHolders: TorchHolder[] = torchHoldersData as TorchHolder[]
 
@@ -166,11 +162,11 @@ const Page = async ({ params }: { params: PageParams }) => {
         <div className="w-full px-8 pb-8">
           <div className="w-full">
             <Tabs
-              defaultValue={Object.keys(fetched10YearEvents)[0]}
+              defaultValue={Object.keys(tenYearEventRegions)[0]}
               className="w-full"
             >
               <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
-                {Object.entries(fetched10YearEvents).map(([key, data]) => (
+                {Object.entries(tenYearEventRegions).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
                     value={key}
@@ -181,7 +177,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   </TabsTrigger>
                 ))}
               </TabsList>
-              {Object.entries(fetched10YearEvents).map(([key, data]) => {
+              {Object.entries(tenYearEventRegions).map(([key, data]) => {
                 const events = data.events.sort((a, b) =>
                   a.country.localeCompare(b.country)
                 )
