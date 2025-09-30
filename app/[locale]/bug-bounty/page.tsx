@@ -85,6 +85,10 @@ const StyledCard = ({ children, ...props }) => (
   </Card>
 )
 
+const StrongGreaterThan = (chunks: React.ReactNode) => (
+  <strong>&gt;{chunks}</strong>
+)
+
 type CardDetails = Required<Pick<CardProps, "title" | "link" | "image">> &
   Pick<CardProps, "className">
 
@@ -446,11 +450,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 <div>
                   <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                   <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
-                    Deposit Contract Specifications
+                    {t("page-upgrades-bug-bounty-deposit-contract-specs")}
                   </InlineLink>
                   <br />
                   <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
-                    Deposit Contract Source Code
+                    {t("page-upgrades-bug-bounty-deposit-contract-source")}
                   </InlineLink>
                 </div>
               </StyledCard>
@@ -471,16 +475,152 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 </div>
               </StyledCard>
             </Flex>
+            <div>
+              <H2 id="qualifications" className="max-w-[100ch]">
+                {t("page-upgrades-bug-bounty-severity-qualifications-title")}
+              </H2>
+              <p className="max-w-[100ch]">
+                {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
+              </p>
+
+              <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-8 xl:grid-cols-4">
+                <div className="space-y-4">
+                  <h3>{t("page-upgrades-bug-bounty-severity-low-title")}</h3>
+                  <ul>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-low-li-1", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-low-li-2", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-low-li-3", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3>{t("page-upgrades-bug-bounty-severity-medium-title")}</h3>
+                  <ul>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-medium-li-1", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-medium-li-2", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-medium-li-3", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3>{t("page-upgrades-bug-bounty-severity-high-title")}</h3>
+                  <ul>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-high-li-1", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-high-li-2", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                    <li>
+                      {t.rich("page-upgrades-bug-bounty-severity-high-li-3", {
+                        strong: StrongGreaterThan,
+                      })}
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3>
+                    {t("page-upgrades-bug-bounty-severity-critical-title")}
+                  </h3>
+                  <ul>
+                    <li>
+                      {t.rich(
+                        "page-upgrades-bug-bounty-severity-critical-li-1",
+                        {
+                          strong: StrongGreaterThan,
+                        }
+                      )}
+                    </li>
+                    <li>
+                      {t.rich(
+                        "page-upgrades-bug-bounty-severity-critical-li-2",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </li>
+                    <li>
+                      {t.rich(
+                        "page-upgrades-bug-bounty-severity-critical-li-3",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </li>
+                    <li>
+                      {t.rich(
+                        "page-upgrades-bug-bounty-severity-critical-li-4",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </li>
+                    <li>
+                      {t.rich(
+                        "page-upgrades-bug-bounty-severity-critical-li-5",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div className="max-w-[100ch] flex-1">
               <H2 id="out-of-scope">
                 {t("page-upgrades-bug-bounty-not-included")}
               </H2>
-              <Text>
+              <p>
                 {t.rich("page-upgrades-bug-bounty-not-included-desc", {
-                  a: (chunks) => (
-                    <InlineLink href="#in-scope">{chunks}</InlineLink>
-                  ),
+                  a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
                 })}
+              </p>
+              <ul className="mt-8 [&>li]:mb-2">
+                <li>
+                  {t("page-upgrades-bug-bounty-not-included-li-1")}
+                  <sup>*</sup>
+                </li>
+                <li>
+                  {t("page-upgrades-bug-bounty-not-included-li-2")}
+                  <sup>*</sup>
+                </li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-3")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-4")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-5")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-6")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-7")}</li>
+                <li>{t("page-upgrades-bug-bounty-not-included-li-8")}</li>
+              </ul>
+              <Text>
+                <sup>*</sup>
+                {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
               </Text>
             </div>
           </Content>
