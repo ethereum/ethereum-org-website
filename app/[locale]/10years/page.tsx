@@ -19,14 +19,12 @@ import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
+import tenYearStories from "@/data/tenYearStories"
 import torchHoldersData from "@/data/torchHolders.json"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import { adoptionStyles } from "./_components/data"
@@ -43,7 +41,6 @@ import {
 import TenYearJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
-import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import {
   getHolderEvents,
   getTransferEvents,
@@ -52,14 +49,6 @@ import {
 } from "@/lib/torch"
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [["fetched10YearStories", fetch10YearStories]],
-  REVALIDATE_TIME * 1000
-)
-
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
 
 const Page = async ({ params }: { params: PageParams }) => {
@@ -67,11 +56,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearStories] = await loadData()
-
   const allTorchHolders: TorchHolder[] = torchHoldersData as TorchHolder[]
 
-  const stories = parseStoryDates(fetched10YearStories, locale)
+  const stories = parseStoryDates(tenYearStories, locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
