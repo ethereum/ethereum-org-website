@@ -25,6 +25,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import GasTable from "./_components/GasTable"
+import WhatIsEtherPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/eth.png"
 import ethOrgLogo from "@/public/images/eth-org-logo.png"
@@ -104,11 +105,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
   return (
     <>
-      {/* <WhatIsEtherPageJsonLD
+      <WhatIsEtherPageJsonLD
         locale={locale}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
-      /> */}
+      />
 
       <ContentHero {...heroProps} />
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
