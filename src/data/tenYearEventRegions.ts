@@ -5,17 +5,17 @@ const tenYearEventRegions: Record<
     events: {
       host: string
       eventLink: string
+      city: string
+      country: string
+      countryFlag: string
       pingedForURL?: string
       eventLocation?: string
       address?: string
-      city: string
-      country: string
       region?: string
       continent?: string
-      lat: string
-      lng: string
-      readyToShow: string
-      countryFlag: string
+      lat?: string
+      lng?: string
+      readyToShow?: string
     }[]
   }
 > = {
