@@ -710,25 +710,70 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 title={t("bug-bounty-faq-q1-title")}
                 contentPreview={t("bug-bounty-faq-q1-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q1-content-1")}</Text>
-                <Text>{t("bug-bounty-faq-q1-content-2")}</Text>
-                <Text>{t("bug-bounty-faq-q1-content-3")}</Text>
-                <Text>{t("bug-bounty-faq-q1-content-4")}</Text>
-                <Text>{t("bug-bounty-faq-q1-content-5")}</Text>
-                <Text>{t("bug-bounty-faq-q1-content-6")}</Text>
-                <Text>{t("bug-bounty-faq-q1-content-7")}</Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-1", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-2", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-3", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-4", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-5", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-6", {
+                    b: (chunks) => <b>{chunks}</b>,
+                    code: (chunks) => <code>{chunks}</code>,
+                  })}
+                </Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q1-content-7", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q2-title")}
                 contentPreview={t("bug-bounty-faq-q2-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q2-content-1")}</Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q2-content-1", {
+                    a: (chunks) => (
+                      <Link
+                        href="https://blog.ethereum.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {chunks}
+                      </Link>
+                    ),
+                  })}
+                </Text>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q3-title")}
                 contentPreview={t("bug-bounty-faq-q3-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q3-content-1")}</Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q3-content-1", {
+                    b: (chunks) => <b>{chunks}</b>,
+                  })}
+                </Text>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q4-title")}
@@ -742,7 +787,19 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 title={t("bug-bounty-faq-q5-title")}
                 contentPreview={t("bug-bounty-faq-q5-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q5-content-1")}</Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q5-content-1", {
+                    a: (chunks) => (
+                      <Link
+                        href="mailto:bounty@ethereum.org"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {chunks}
+                      </Link>
+                    ),
+                  })}
+                </Text>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q6-title")}
@@ -761,7 +818,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 title={t("bug-bounty-faq-q8-title")}
                 contentPreview={t("bug-bounty-faq-q8-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q8-content-1")}</Text>
+                <Text>
+                  {t.rich("bug-bounty-faq-q8-content-1", {
+                    code: (chunks) => <code>{chunks}</code>,
+                  })}
+                </Text>
                 <InlineLink href="https://ethereum.org/security_at_ethereum.org.asc">
                   {t("bug-bounty-faq-q8-PGP-key")}
                 </InlineLink>
