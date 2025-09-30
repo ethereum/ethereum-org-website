@@ -119,5 +119,7 @@
   "page-index-values-open-legacy-label": "Closed to most",
   "page-index-values-open-legacy-content-0": "Companies protect their intellectual property and don’t share. No one outside the company can see how things work, fix problems, or make improvements. It's hard for people to create new tools or customize.",
   "page-index-values-open-ethereum-label": "Open to all",
-  "page-index-values-open-ethereum-content-0": "Ethereum is public to all. Anyone can see, use, and improve the code, making it better for everyone."
+  "page-index-values-open-ethereum-content-0": "Ethereum is public to all. Anyone can see, use, and improve the code, making it better for everyone.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Join the biggest Ethereum event of the year",
+  "page-index-devconnect-banner-get-tickets": "Get tickets"
 }

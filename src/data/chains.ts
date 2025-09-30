@@ -1683,6 +1683,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Sova",
+    infoURL: "https://sova.io",
+    chainId: 100021,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "re.al",
     infoURL: "https://re.al",
     chainId: 111188,

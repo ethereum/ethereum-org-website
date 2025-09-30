@@ -17,6 +17,7 @@ type ABTestWrapperProps = {
   variants: ABTestVariants
   fallback?: ReactNode
   enableAllLocales?: boolean
+  serverVariantIndex?: number // Only required if testKey instantiates more than one ABTestWrapper
 }
 
 const ABTestWrapper = async ({
@@ -24,6 +25,7 @@ const ABTestWrapper = async ({
   variants,
   fallback,
   enableAllLocales,
+  serverVariantIndex,
 }: ABTestWrapperProps) => {
   const locale = await getLocale()
   if (locale !== DEFAULT_LOCALE && !enableAllLocales)
@@ -36,7 +38,7 @@ const ABTestWrapper = async ({
     if (!assignment) throw new Error("No AB test assignment found")
 
     // Use assignment's variant index directly
-    const variantIndex = assignment.variantIndex
+    const variantIndex = serverVariantIndex ?? assignment.variantIndex
 
     // Extract labels from React element keys or fall back to defaults
     const availableVariants = variants.map((variant, i) => {
