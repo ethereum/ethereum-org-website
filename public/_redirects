@@ -1,3 +1,7 @@
+/en / 301!
+
+/en/* /:splat 301!
+
 /discord https://discord.gg/ethereum-org 301!
 
 /*/discord https://discord.gg/ethereum-org 301!
