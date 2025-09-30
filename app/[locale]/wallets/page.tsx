@@ -205,7 +205,6 @@ const Page = async ({ params }: { params: PageParams }) => {
     <I18nProvider locale={locale} messages={messages}>
       <WalletsPageJsonLD
         locale={locale}
-        types={types}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />

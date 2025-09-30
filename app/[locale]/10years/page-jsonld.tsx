@@ -84,41 +84,13 @@ export default async function TenYearJsonLD({
     },
   }
 
-  const eventJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "@id": `${url}#ethereum-10-year-anniversary`,
-    name: t("page-10-year-anniversary-meta-title"),
-    description: t("page-10-year-anniversary-meta-description"),
-    startDate: "2024-07-30",
-    endDate: "2024-07-30",
-    eventStatus: "https://schema.org/EventCompleted",
-    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
-    url: url,
-    organizer: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-    location: {
-      "@type": "VirtualLocation",
-      url: url,
-    },
-    image: {
-      "@type": "ImageObject",
-      url: "https://ethereum.org/assets/10-years/10-years-hero.png",
-      width: "1200",
-      height: "630",
-    },
-  }
-
   const videoJsonLd = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: "Ethereum: 10 Years Anniversary",
     description: t("page-10-year-anniversary-meta-description"),
     thumbnailUrl: "https://i.ytimg.com/vi/gjwr-7PgpTC/maxresdefault.jpg",
-    uploadDate: "2024-07-30",
+    uploadDate: "2024-07-30T00:00:00Z",
     duration: "PT5M30S",
     embedUrl: "https://www.youtube.com/embed/gjwr-7PgpTC",
     publisher: {
@@ -137,7 +109,5 @@ export default async function TenYearJsonLD({
     },
   }
 
-  return (
-    <PageJsonLD structuredData={[webPageJsonLd, eventJsonLd, videoJsonLd]} />
-  )
+  return <PageJsonLD structuredData={[webPageJsonLd, videoJsonLd]} />
 }
