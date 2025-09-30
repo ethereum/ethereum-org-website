@@ -13479,6 +13479,61 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "nixorokish",
+      "name": "nixo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23272494?v=4",
+      "profile": "http://ethereum.org",
+      "contributions": [
+        "content",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Bruce-Leung",
+      "name": "Bruce-Leung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105494275?v=4",
+      "profile": "https://github.com/Bruce-Leung",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Parizval",
+      "name": "Anmol Goyal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48042530?v=4",
+      "profile": "https://github.com/Parizval",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "ulerdogan",
+      "name": "Ulaş Erdoğan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58347304?v=4",
+      "profile": "http://0xulas.eth.limo",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "guptaharsh13",
+      "name": "Harsh Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68965388?v=4",
+      "profile": "https://github.com/guptaharsh13",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "gememerald8",
+      "name": "Max Costa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/140106562?v=4",
+      "profile": "https://github.com/gememerald8",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,

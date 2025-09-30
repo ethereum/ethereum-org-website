@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -46,7 +46,7 @@ import etherBanner from "@/public/images/impact_transparent.png"
 import whenWhoBanner from "@/public/images/translatathon/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
 
-const Page = async ({ params }: { params: { locale: Lang } }) => {
+const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
   const t = await getTranslations({
     locale,

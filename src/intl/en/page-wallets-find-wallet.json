@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Import any ERC-20 token to use in the wallet",
   "page-find-wallet-buy-crypto": "Buy crypto",
   "page-find-wallet-buy-crypto-desc": "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
-  "page-find-wallet-sell-for-fiat": "Sell for fiat",
+  "page-find-wallet-sell-for-fiat": "Sell for cash",
   "page-find-wallet-sell-for-fiat-desc": "Sell crypto to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Wallets that require multiple signatures to authorize a transaction",
