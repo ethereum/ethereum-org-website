@@ -1201,7 +1201,7 @@ export type ValuesPairing = {
 export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
 
 export type PageParams = {
-  locale: string
+  locale: Lang
 }
 
 export type SlugPageParams = PageParams & {

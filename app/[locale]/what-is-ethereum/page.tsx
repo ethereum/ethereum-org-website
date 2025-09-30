@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -84,7 +84,7 @@ const HighlightCardContent = ({
   <div className={cn("space-y-6 text-body-medium", className)} {...props} />
 )
 
-const Page = async ({ params }: { params: { locale: Lang } }) => {
+const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
   const t = await getTranslations({
     locale,

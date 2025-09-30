@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
@@ -23,8 +23,8 @@ import {
 
 import FindWalletPageJsonLD from "./page-jsonld"
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-wallets-find-wallet",
@@ -89,9 +89,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

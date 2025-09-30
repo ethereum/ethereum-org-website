@@ -431,5 +431,8 @@
   "withdrawals": "ቀብድ ማውጣት",
   "wrapped-ether": "የታሸገ ኢተር",
   "yes": "አዎ",
-  "zero-knowledge-proofs": "የዜሮ-ዕውቀት ማረጋገጫዎች"
+  "zero-knowledge-proofs": "የዜሮ-ዕውቀት ማረጋገጫዎች",
+  "ethereum-vs-bitcoin": "ኢቴሬም ከ ቢትኮይን",
+  "nav-ethereum-vs-bitcoin-description": "በኢቴሬም እና በቢትኮይን መካከል ያለውን ልዩነት ይረዱ"
+
 }

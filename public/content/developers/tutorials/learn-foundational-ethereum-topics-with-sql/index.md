@@ -12,7 +12,7 @@ sourceUrl: https://paulapivat.com/post/query_ethereum/
 
 Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see onchain data without running a client or node.
 
-This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.xyz/home).
+This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.com/).
 
 Onchain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
 
@@ -22,7 +22,7 @@ A user’s journey on Ethereum starts with initializing a user-controlled accoun
 
 Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/) or [Blockscout](https://eth.blockscout.com/). Block explorers are a portal to Ethereum's data. They display, in real-time, data on blocks, transactions, miners, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
 
-However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://duneanalytics.com/) provides this capability to anyone with some knowledge of SQL.
+However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://dune.com/) provides this capability to anyone with some knowledge of SQL.
 
 For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
@@ -70,7 +70,7 @@ This will yield the same information as provided on Etherscan's transaction page
 
 ![](./dune_view.png)
 
-You can find dashboard [here](https://duneanalytics.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
+You can find dashboard [here](https://dune.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
 ### Breaking Down Transactions {#breaking_down_transactions}
 
@@ -111,7 +111,7 @@ Each block contains a reference to it parent block. This is shown below between 
 
 ![parent_hash](./parent_hash.png)
 
-Here is the [query](https://duneanalytics.com/queries/44856/88292) on Dune Analytics:
+Here is the [query](https://dune.com/queries/44856/88292) on Dune Analytics:
 
 ```sql
 SELECT
@@ -264,6 +264,6 @@ ORDER BY block_time DESC
 
 With this tutorial, we understand foundational Ethereum concepts and how the Ethereum blockchain works by querying and getting a feel for onchain data.
 
-The dashboard that holds all code used in this tutorial can be found [here](https://duneanalytics.com/paulapivat/Learn-Ethereum).
+The dashboard that holds all code used in this tutorial can be found [here](https://dune.com/paulapivat/Learn-Ethereum).
 
 For more use of data to explore web3 [find me on Twitter](https://twitter.com/paulapivat).
