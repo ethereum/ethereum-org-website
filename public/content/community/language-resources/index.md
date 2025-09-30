@@ -52,7 +52,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - free online courses about cryptocurrency and its applications
-- [Ethereum Whitepaper](https://ethereum.org/zh/developers/docs/) - Chinese version of the Ethereum Whitepaper
+- [Ethereum Whitepaper](/zh/whitepaper/) - Chinese version of the Ethereum Whitepaper
 
 **Ethereum ecosystem**
 
