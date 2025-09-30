@@ -149,7 +149,7 @@ Use CSS custom properties defined in the design system:
 ```
 
 - [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
-- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by X (formerly Twitter). These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```tsx
 // Example of emoji use
