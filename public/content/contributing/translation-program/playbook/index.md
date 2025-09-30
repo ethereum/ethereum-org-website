@@ -302,7 +302,7 @@ This could be as simple as adding a banner or pop-up with a CTA to your product 
 
 If you have a Discord server or Telegram channel, it is easy to use that for outreach, communication with your translators, and acknowledging your contributors.
 
-Platforms like X can also be helpful for onboarding new community members and publicly acknowledging your contributors.
+Platforms like X (formerly Twitter) can also be helpful for onboarding new community members and publicly acknowledging your contributors.
 
 The Linux Foundation has created an extensive report on the [2020 FOSS open-source contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
 
