@@ -101,32 +101,5 @@ export default async function TranslatathonLeaderboardJsonLD({
     },
   }
 
-  const competitionJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: "2025 Ethereum.org Translatathon",
-    description:
-      "Translation competition for the Ethereum.org website with participant leaderboard and rankings",
-    url: url,
-    organizer: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    startDate: "2025-08-08T00:00:00",
-    endDate: "2025-08-08T00:00:00",
-    location: {
-      "@type": "VirtualLocation",
-      name: "Online",
-      url: normalizeUrlForJsonLd(
-        locale,
-        "/contributing/translation-program/translatathon/"
-      ),
-    },
-    image: ["https://ethereum.org/images/heroes/translatathon-hero.png"],
-    award: "Recognition and prizes for top translators",
-    eventStatus: "https://schema.org/EventScheduled",
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, competitionJsonLd]} />
+  return <PageJsonLD structuredData={[webPageJsonLd]} />
 }

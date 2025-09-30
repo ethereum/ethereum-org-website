@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { FileContributor, Lang, WalletData } from "@/lib/types"
+import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -8,11 +8,9 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function FindWalletPageJsonLD({
   locale,
-  wallets,
   contributors,
 }: {
   locale: Lang | undefined
-  wallets: WalletData[]
   contributors: FileContributor[]
 }) {
   const t = await getTranslations({
@@ -120,33 +118,5 @@ export default async function FindWalletPageJsonLD({
     },
   }
 
-  // JSON-LD for the wallet directory list
-  const walletDirectoryJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Ethereum Wallet Directory",
-    description:
-      "Comprehensive list of Ethereum wallets with features and comparisons",
-    numberOfItems: wallets.length,
-    itemListElement: wallets.slice(0, 20).map((wallet, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        additionalType: "https://schema.org/SoftwareApplication",
-        name: wallet.name,
-        description: `${wallet.name} Ethereum wallet`,
-        category: "Cryptocurrency Wallet",
-        url: wallet.url,
-        applicationCategory: "Finance",
-        operatingSystem: "Multiple platforms",
-      },
-    })),
-  }
-
-  return (
-    <PageJsonLD
-      structuredData={[webPageJsonLd, articleJsonLd, walletDirectoryJsonLd]}
-    />
-  )
+  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
 }
