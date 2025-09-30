@@ -95,6 +95,7 @@
   "page-roadmap-fusaka-additional-item-1": "Support for secure enclaves on mobile devices to improve UX",
   "page-roadmap-fusaka-additional-item-2": "Blob fee market improvements",
   "page-roadmap-fusaka-additional-item-3": "Further improvements to validator efficiency and network performance",
-  "page-roadmap-glamsterdam-discussed-title": "Discussed for Glamsterdam",
-  "page-roadmap-glamsterdam-discussed-item-1": "Verkle trees"
+  "page-roadmap-glamsterdam-discussed-title": "Scheduled for Glamsterdam",
+  "page-roadmap-glamsterdam-discussed-item-1": "Enshrined Proposer-Builder Separation (ePBS)",
+  "page-roadmap-glamsterdam-discussed-item-2": "Block-level Access Lists (BALs)"
 }
