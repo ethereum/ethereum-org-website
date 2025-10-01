@@ -80,12 +80,6 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 - [Documentación](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-**dAppBooster _- Un boilerplate moderno de blockchain, diseñado para empezar rápidamente con su próximo proyecto._**
-
-- [dAppBooster.dev](https://dappbooster.dev/)
-- [Documentación](https://docs.dappbooster.dev/)
-- [GitHub](https://github.com/bootnodedev/dappbooster/)
-
 ## Más información {#further-reading}
 
 - [Explorar DApps](/apps)

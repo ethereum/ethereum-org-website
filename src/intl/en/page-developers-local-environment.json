@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Here are the tools and frameworks you can use to help you build your Ethereum application.",
   "page-local-environment-setup-title": "Set up your local development environment",
   "page-local-environment-solidity-template-desc": "A GitHub template for a pre-built setup for your Solidity smart contracts. Includes a Hardhat local network, Ethers for wallet implementation, and more.",
-  "page-local-environment-solidity-template-logo-alt": "Solidity template logo",
-  "page-local-environment-dappbooster-desc": "A modern blockchain boilerplate built to quickly get you started with your next project.",
-  "page-local-environment-dappbooster-logo-alt": "dAppBooster logo"
+  "page-local-environment-solidity-template-logo-alt": "Solidity template logo"
 }

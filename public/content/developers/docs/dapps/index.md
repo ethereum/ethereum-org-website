@@ -80,12 +80,6 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 - [Documentation](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-**dAppBooster _- A modern blockchain boilerplate built to quickly get you started with your next project._**
-
-- [dAppBooster.dev](https://dappbooster.dev/)
-- [Documentation](https://docs.dappbooster.dev/)
-- [GitHub](https://github.com/bootnodedev/dappbooster/)
-
 ## Further reading {#further-reading}
 
 - [Explore dapps](/apps)

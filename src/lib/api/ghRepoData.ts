@@ -5,7 +5,6 @@ import FoundryImage from "@/public/images/dev-tools/foundry.png"
 import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
-import DappBooster from "@/public/images/dev-tools/dappbooster.png"
 
 const frameworksList: Array<Framework> = [
   {
@@ -84,17 +83,6 @@ const frameworksList: Array<Framework> = [
       "page-developers-local-environment:page-local-environment-foundry-desc",
     alt: "page-developers-local-environment:page-local-environment-foundry-logo-alt",
     image: FoundryImage,
-  },
-  {
-    id: "dappbooster",
-    url: "https://dappbooster.dev/",
-    githubUrl: "https://github.com/bootnodedev/dappbooster",
-    background: "#ffffff",
-    name: "dAppBooster",
-    description:
-      "page-developers-local-environment:page-local-environment-dappbooster-desc",
-    alt: "page-developers-local-environment:page-local-environment-dappbooster-logo-alt",
-    image: DappBooster,
   },
 ]
 

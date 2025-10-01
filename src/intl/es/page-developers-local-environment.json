@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Aquí están las herramientas y marcos que puede usar para crear su aplicación Ethereum.",
   "page-local-environment-setup-title": "Configure su entorno de desarrollo local",
   "page-local-environment-solidity-template-desc": "Una plantilla de GitHub para una configuración prediseñada para sus contratos inteligentes de Solidity. Incluye una red local de Hardhat, Waffle para pruebas, Ethers para implementación de carteras, y más.",
-  "page-local-environment-solidity-template-logo-alt": "Logo de plantilla Solidity",
-  "page-local-environment-dappbooster-desc": "Un boilerplate de blockchain moderno, diseñado para empezar rápidamente con su próximo proyecto.",
-  "page-local-environment-dappbooster-logo-alt": "Logo de dAppBooster"
+  "page-local-environment-solidity-template-logo-alt": "Logo de plantilla Solidity"
 }
