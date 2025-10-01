@@ -712,38 +712,38 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               >
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-1", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-2", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-3", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-4", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-5", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-6", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                     code: (chunks) => <code>{chunks}</code>,
                   })}
                 </Text>
                 <Text>
                   {t.rich("bug-bounty-faq-q1-content-7", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
               </ExpandableCard>
@@ -754,13 +754,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 <Text>
                   {t.rich("bug-bounty-faq-q2-content-1", {
                     a: (chunks) => (
-                      <Link
-                        href="https://blog.ethereum.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {chunks}
-                      </Link>
+                      <Link href="https://blog.ethereum.org/">{chunks}</Link>
                     ),
                   })}
                 </Text>
@@ -771,7 +765,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               >
                 <Text>
                   {t.rich("bug-bounty-faq-q3-content-1", {
-                    b: (chunks) => <b>{chunks}</b>,
+                    strong: Strong,
                   })}
                 </Text>
               </ExpandableCard>
@@ -790,13 +784,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                 <Text>
                   {t.rich("bug-bounty-faq-q5-content-1", {
                     a: (chunks) => (
-                      <Link
-                        href="mailto:bounty@ethereum.org"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {chunks}
-                      </Link>
+                      <Link href="mailto:bounty@ethereum.org">{chunks}</Link>
                     ),
                   })}
                 </Text>
