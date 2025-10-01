@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { ChainName } from "@/lib/types"
+import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
@@ -31,6 +31,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -46,6 +47,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import AppCard from "../_components/AppCard"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
+import AppsAppJsonLD from "./page-jsonld"
 
 import { fetchApps } from "@/lib/api/fetchApps"
 
@@ -57,9 +59,9 @@ const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 const Page = async ({
   params,
 }: {
-  params: { locale: string; application: string }
+  params: PageParams & { application: string }
 }) => {
-  const { locale, application } = await params
+  const { locale, application } = params
   setRequestLocale(locale)
 
   // Get translations
@@ -127,257 +129,267 @@ const Page = async ({
     return t("page-apps-days-ago", { days: diffInDays })
   }
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "apps/[application]",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <MainArticle className="flex flex-col gap-10 py-10">
-        <div className="flex flex-col gap-10 px-4 md:px-10">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                /
-              </BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <BreadcrumbPage>{app.name}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <div className="flex flex-col items-start justify-between sm:flex-row lg:items-center">
-            <div className="flex w-full flex-col gap-6 lg:flex-row lg:gap-10">
-              <div>
-                <Image
-                  src={app.image}
-                  alt={app.name}
-                  width={124}
-                  height={124}
-                  className="h-16 w-16 rounded-xl object-cover xl:h-[124px] xl:w-[124px]"
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                  <div>
-                    <Tag status={APP_TAG_VARIANTS[app.category]}>
-                      {app.category}
-                    </Tag>
-                  </div>
-                  <h1 className="mt-0 text-xl lg:text-5xl">{app.name}</h1>
-                  <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
-                    <div className="flex flex-row items-center gap-2">
-                      <ChainImages
-                        chains={app.networks as ChainName[]}
-                        className="mt-2"
-                      />
-                      <p className="text-sm text-body-medium">
-                        by {app.parentCompany}
-                      </p>
-                    </div>
-                    <div className="flex flex-row items-center">
-                      <LanguagesIcon className="size-6" />
-                      <p className="text-sm text-body-medium">
-                        {formatStringList(
-                          formatLanguageNames(app.languages),
-                          5
-                        )}{" "}
-                        <SupportedLanguagesTooltip
-                          supportedLanguages={formatLanguageNames(
-                            app.languages
-                          )}
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-4 lg:flex-row">
-                  <ButtonLink
-                    href={app.url}
-                    target="_blank"
-                    hideArrow
-                    className="w-full sm:w-fit"
-                    customEventOptions={{
-                      eventCategory: "detail",
-                      eventAction: `app name ${app.name}`,
-                      eventName: "visit",
-                    }}
-                  >
-                    {t("page-apps-visit-app", { appName: app.name })}
-                  </ButtonLink>
-                  <div className="flex flex-row justify-between gap-4">
-                    <div className="flex h-fit flex-row flex-wrap gap-4">
-                      {app.twitter && (
-                        <ButtonLink
-                          href={app.twitter}
-                          target="_blank"
-                          variant="outline"
-                          isSecondary
-                          hideArrow
-                          customEventOptions={{
-                            eventCategory: "detail",
-                            eventAction: `app name ${app.name}`,
-                            eventName: "twitter",
-                          }}
-                        >
-                          <Twitter />
-                        </ButtonLink>
-                      )}
-                      {app.discord && (
-                        <ButtonLink
-                          href={app.discord}
-                          target="_blank"
-                          variant="outline"
-                          isSecondary
-                          hideArrow
-                          customEventOptions={{
-                            eventCategory: "detail",
-                            eventAction: `app name ${app.name}`,
-                            eventName: "discord",
-                          }}
-                        >
-                          <Discord />
-                        </ButtonLink>
-                      )}
-                      {app.github && (
-                        <ButtonLink
-                          href={app.github}
-                          target="_blank"
-                          variant="outline"
-                          isSecondary
-                          hideArrow
-                          customEventOptions={{
-                            eventCategory: "detail",
-                            eventAction: `app name ${app.name}`,
-                            eventName: "github",
-                          }}
-                        >
-                          <Github />
-                        </ButtonLink>
-                      )}
-                    </div>
-                    {nextApp && (
-                      <LinkBox className="group flex flex-row items-center rounded-lg hover:bg-background-highlight sm:hidden">
-                        <div className="mr-2 flex flex-col text-right">
-                          <p className="text-sm text-gray-500">
-                            {t("page-apps-see-next")}
-                          </p>
-                          <p className="text-primary group-hover:text-primary-hover">
-                            {nextApp.name}
-                          </p>
-                          <LinkOverlay
-                            href={`/apps/${slugify(nextApp.name)}`}
-                            matomoEvent={{
-                              eventCategory: "detail",
-                              eventAction: `app name ${app.name}`,
-                              eventName: "see_next",
-                            }}
-                          />
-                        </div>
-                        <div className="flex gap-2">
-                          <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
-                        </div>
-                      </LinkBox>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {nextApp && (
-              <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
-                <div className="mr-2 flex flex-col text-right">
-                  <p className="text-nowrap text-sm text-gray-500">
-                    {t("page-apps-see-next")}
-                  </p>
-                  <p className="text-primary group-hover:text-primary-hover">
-                    {nextApp.name}
-                  </p>
-                  <LinkOverlay
-                    href={`/apps/${slugify(nextApp.name)}`}
-                    customEventOptions={{
-                      eventCategory: "detail",
-                      eventAction: `app name ${app.name}`,
-                      eventName: "see_next",
-                    }}
+    <>
+      <AppsAppJsonLD locale={locale} app={app} contributors={contributors} />
+      <I18nProvider locale={locale} messages={messages}>
+        <MainArticle className="flex flex-col gap-10 py-10">
+          <div className="flex flex-col gap-10 px-4 md:px-10">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{app.name}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+            <div className="flex flex-col items-start justify-between sm:flex-row lg:items-center">
+              <div className="flex w-full flex-col gap-6 lg:flex-row lg:gap-10">
+                <div>
+                  <Image
+                    src={app.image}
+                    alt={app.name}
+                    width={124}
+                    height={124}
+                    className="h-16 w-16 rounded-xl object-cover xl:h-[124px] xl:w-[124px]"
                   />
                 </div>
-                <div className="flex gap-2">
-                  <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-2">
+                    <div>
+                      <Tag status={APP_TAG_VARIANTS[app.category]}>
+                        {app.category}
+                      </Tag>
+                    </div>
+                    <h1 className="mt-0 text-xl lg:text-5xl">{app.name}</h1>
+                    <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
+                      <div className="flex flex-row items-center gap-2">
+                        <ChainImages
+                          chains={app.networks as ChainName[]}
+                          className="mt-2"
+                        />
+                        <p className="text-sm text-body-medium">
+                          by {app.parentCompany}
+                        </p>
+                      </div>
+                      <div className="flex flex-row items-center">
+                        <LanguagesIcon className="size-6" />
+                        <p className="text-sm text-body-medium">
+                          {formatStringList(
+                            formatLanguageNames(app.languages),
+                            5
+                          )}{" "}
+                          <SupportedLanguagesTooltip
+                            supportedLanguages={formatLanguageNames(
+                              app.languages
+                            )}
+                          />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-4 lg:flex-row">
+                    <ButtonLink
+                      href={app.url}
+                      target="_blank"
+                      hideArrow
+                      className="w-full sm:w-fit"
+                      customEventOptions={{
+                        eventCategory: "detail",
+                        eventAction: `app name ${app.name}`,
+                        eventName: "visit",
+                      }}
+                    >
+                      {t("page-apps-visit-app", { appName: app.name })}
+                    </ButtonLink>
+                    <div className="flex flex-row justify-between gap-4">
+                      <div className="flex h-fit flex-row flex-wrap gap-4">
+                        {app.twitter && (
+                          <ButtonLink
+                            href={app.twitter}
+                            target="_blank"
+                            variant="outline"
+                            isSecondary
+                            hideArrow
+                            customEventOptions={{
+                              eventCategory: "detail",
+                              eventAction: `app name ${app.name}`,
+                              eventName: "twitter",
+                            }}
+                          >
+                            <Twitter />
+                          </ButtonLink>
+                        )}
+                        {app.discord && (
+                          <ButtonLink
+                            href={app.discord}
+                            target="_blank"
+                            variant="outline"
+                            isSecondary
+                            hideArrow
+                            customEventOptions={{
+                              eventCategory: "detail",
+                              eventAction: `app name ${app.name}`,
+                              eventName: "discord",
+                            }}
+                          >
+                            <Discord />
+                          </ButtonLink>
+                        )}
+                        {app.github && (
+                          <ButtonLink
+                            href={app.github}
+                            target="_blank"
+                            variant="outline"
+                            isSecondary
+                            hideArrow
+                            customEventOptions={{
+                              eventCategory: "detail",
+                              eventAction: `app name ${app.name}`,
+                              eventName: "github",
+                            }}
+                          >
+                            <Github />
+                          </ButtonLink>
+                        )}
+                      </div>
+                      {nextApp && (
+                        <LinkBox className="group flex flex-row items-center rounded-lg hover:bg-background-highlight sm:hidden">
+                          <div className="mr-2 flex flex-col text-right">
+                            <p className="text-sm text-gray-500">
+                              {t("page-apps-see-next")}
+                            </p>
+                            <p className="text-primary group-hover:text-primary-hover">
+                              {nextApp.name}
+                            </p>
+                            <LinkOverlay
+                              href={`/apps/${slugify(nextApp.name)}`}
+                              matomoEvent={{
+                                eventCategory: "detail",
+                                eventAction: `app name ${app.name}`,
+                                eventName: "see_next",
+                              }}
+                            />
+                          </div>
+                          <div className="flex gap-2">
+                            <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
+                          </div>
+                        </LinkBox>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </LinkBox>
-            )}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
-          <p className="max-w-3xl">{app.description}</p>
-          <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
-            <h3 className="text-lg">{t("page-apps-info-title")}</h3>
-            <div>
-              <p className="text-sm text-body-medium">
-                {t("page-apps-info-founded")}
-              </p>
-              <p className="text-sm">
-                {new Date(app.dateOfLaunch).getFullYear()}
-              </p>
-            </div>
-            <div>
-              <p className="text-sm text-body-medium">
-                {t("page-apps-info-creator")}
-              </p>
-              <p className="text-sm">{app.parentCompany}</p>
-            </div>
-            <div>
-              <p className="text-sm text-body-medium">
-                {t("page-apps-info-last-updated")}
-              </p>
-              <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
-            </div>
-          </div>
-          {app.screenshots.length > 0 && (
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl">{t("page-apps-gallery-title")}</h3>
-              <ScreenshotSwiper
-                screenshots={app.screenshots}
-                appName={app.name}
-              />
-            </div>
-          )}
-        </div>
-
-        {relatedApps.length > 0 && (
-          <div className="flex flex-col px-4 py-10 md:px-8">
-            <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
-              <h2>{t("page-apps-more-apps-like-this")}</h2>
-              <div className="flex w-full flex-col gap-4 lg:flex-row">
-                {relatedApps.map((relatedApp) => (
-                  <div
-                    key={relatedApp.name}
-                    className="flex-1 lg:w-1/3 lg:flex-none"
-                  >
-                    <AppCard
-                      app={relatedApp}
-                      imageSize={24}
-                      showDescription={true}
-                      hoverClassName="hover:bg-background-highlight/50"
-                      matomoCategory="detail"
-                      matomoAction="more_apps"
+              </div>
+              {nextApp && (
+                <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
+                  <div className="mr-2 flex flex-col text-right">
+                    <p className="text-nowrap text-sm text-gray-500">
+                      {t("page-apps-see-next")}
+                    </p>
+                    <p className="text-primary group-hover:text-primary-hover">
+                      {nextApp.name}
+                    </p>
+                    <LinkOverlay
+                      href={`/apps/${slugify(nextApp.name)}`}
+                      customEventOptions={{
+                        eventCategory: "detail",
+                        eventAction: `app name ${app.name}`,
+                        eventName: "see_next",
+                      }}
                     />
                   </div>
-                ))}
-              </div>
+                  <div className="flex gap-2">
+                    <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
+                  </div>
+                </LinkBox>
+              )}
             </div>
           </div>
-        )}
-      </MainArticle>
-    </I18nProvider>
+
+          <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
+            <p className="max-w-3xl">{app.description}</p>
+            <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
+              <h3 className="text-lg">{t("page-apps-info-title")}</h3>
+              <div>
+                <p className="text-sm text-body-medium">
+                  {t("page-apps-info-founded")}
+                </p>
+                <p className="text-sm">
+                  {new Date(app.dateOfLaunch).getFullYear()}
+                </p>
+              </div>
+              <div>
+                <p className="text-sm text-body-medium">
+                  {t("page-apps-info-creator")}
+                </p>
+                <p className="text-sm">{app.parentCompany}</p>
+              </div>
+              <div>
+                <p className="text-sm text-body-medium">
+                  {t("page-apps-info-last-updated")}
+                </p>
+                <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
+              </div>
+            </div>
+            {app.screenshots.length > 0 && (
+              <div className="flex flex-col gap-4">
+                <h3 className="text-2xl">{t("page-apps-gallery-title")}</h3>
+                <ScreenshotSwiper
+                  screenshots={app.screenshots}
+                  appName={app.name}
+                />
+              </div>
+            )}
+          </div>
+
+          {relatedApps.length > 0 && (
+            <div className="flex flex-col px-4 py-10 md:px-8">
+              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+                <h2>{t("page-apps-more-apps-like-this")}</h2>
+                <div className="flex w-full flex-col gap-4 lg:flex-row">
+                  {relatedApps.map((relatedApp) => (
+                    <div
+                      key={relatedApp.name}
+                      className="flex-1 lg:w-1/3 lg:flex-none"
+                    >
+                      <AppCard
+                        app={relatedApp}
+                        imageSize={24}
+                        showDescription={true}
+                        hoverClassName="hover:bg-background-highlight/50"
+                        matomoCategory="detail"
+                        matomoAction="more_apps"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </MainArticle>
+      </I18nProvider>
+    </>
   )
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; application: string }>
+  params: { locale: string; application: string }
 }) {
-  const { locale, application } = await params
+  const { locale, application } = params
 
   const [appsData] = await loadData()
 

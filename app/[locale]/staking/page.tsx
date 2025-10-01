@@ -10,6 +10,7 @@ import {
   EpochResponse,
   EthStoreResponse,
   Lang,
+  PageParams,
   StakingStatsData,
 } from "@/lib/types"
 
@@ -23,6 +24,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
+import StakingPageJsonLD from "./page-jsonld"
 
 const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
@@ -61,8 +63,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -83,10 +85,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <StakingPageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
       <StakingPage
         data={data}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
       />
     </I18nProvider>
   )
@@ -95,9 +103,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-staking" })
 

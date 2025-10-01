@@ -1013,6 +1013,7 @@ export type EventCardProps = {
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  locale?: Lang
 }
 
 export type BreakpointKey = keyof typeof screens
@@ -1200,7 +1201,7 @@ export type ValuesPairing = {
 export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
 
 export type PageParams = {
-  locale: string
+  locale: Lang
 }
 
 export type SlugPageParams = PageParams & {
@@ -1228,4 +1229,11 @@ export type SectionNavDetails = {
   label: string
   href?: string
   icon?: React.ReactNode
+}
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
 }

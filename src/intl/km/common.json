@@ -430,5 +430,8 @@
   "withdrawals": "ការដកប្រាក់តម្កល់",
   "wrapped-ether": "Wrapped Ether",
   "yes": "បាទ/ចាស",
-  "zero-knowledge-proofs": "ពិធីសារផ្ទៀងផ្ទាត់ Zero-knowledge proofs"
+  "zero-knowledge-proofs": "ពិធីសារផ្ទៀងផ្ទាត់ Zero-knowledge proofs",
+  "ethereum-vs-bitcoin": "Ethereum ទល់នឹង Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "ស្វែងយល់ពីភាពខុសគ្នារវាង Ethereum និង Bitcoin"
+
 }

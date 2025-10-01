@@ -444,5 +444,8 @@
   "withdrawals": "Stake çekimleri",
   "wrapped-ether": "Sarılı Ether",
   "yes": "Evet",
-  "zero-knowledge-proofs": "Sıfır bilgili ispatlar"
+  "zero-knowledge-proofs": "Sıfır bilgili ispatlar",
+  "ethereum-vs-bitcoin": "Ethereum ve Bitcoin Karşılaştırması",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum ve Bitcoin arasındaki farkları anlayın"
+
 }

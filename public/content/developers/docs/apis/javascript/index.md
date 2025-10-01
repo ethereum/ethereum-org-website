@@ -270,8 +270,8 @@ ethers.utils.formatEther(balance)
 
 **Drift -** **_TypeScript meta-library with built-in caching, hooks, and test mocks._**
 
-- [Documentation](https://delvtech.github.io/drift/)
-- [GitHub](https://github.com/delvtech/drift)
+- [Documentation](https://ryangoree.github.io/drift/)
+- [GitHub](https://github.com/ryangoree/drift/)
 
 ## Further reading {#further-reading}
 
