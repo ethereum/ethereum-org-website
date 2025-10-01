@@ -2096,6 +2096,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://0xulas.eth.limo"><img src="https://avatars.githubusercontent.com/u/58347304?v=4?s=100" width="100px;" alt="Ulaş Erdoğan"/><br /><sub><b>Ulaş Erdoğan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/pulls?q=is%3Apr+reviewed-by%3Aulerdogan" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/guptaharsh13"><img src="https://avatars.githubusercontent.com/u/68965388?v=4?s=100" width="100px;" alt="Harsh Gupta"/><br /><sub><b>Harsh Gupta</b></sub></a><br /><a href="#maintenance-guptaharsh13" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gememerald8"><img src="https://avatars.githubusercontent.com/u/140106562?v=4?s=100" width="100px;" alt="Max Costa"/><br /><sub><b>Max Costa</b></sub></a><br /><a href="#maintenance-gememerald8" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://fachidiot.bandcamp.com/"><img src="https://avatars.githubusercontent.com/u/4015436?v=4?s=100" width="100px;" alt="Gabito Esmiapodo"/><br /><sub><b>Gabito Esmiapodo</b></sub></a><br /><a href="#tutorial-gabitoesmiapodo" title="Tutorials">✅</a></td>
     </tr>
   </tbody>
 </table>
