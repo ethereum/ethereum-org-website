@@ -11,9 +11,9 @@ sidebarDepth: 1
 
 <ExpandableCard title="什麼是分叉？" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
-分叉是需要對網路進行重大技術升級或變更的時刻 – 分叉通常源自<a href="/eips/">以太坊改進提案 (EIP)</a> 並變更了以太坊協定的「規則」。
+分叉是需要對網路進行重大技術升級或變更的時刻 – 分叉通常源自[以太坊改進提案 (EIP)](/eips/) 並變更了以太坊協定的「規則」。
 
-需要升級集中控制的傳統軟體時，公司只會為終端使用者發佈一個新版本。 而區塊鏈的運作則有所不同，因其並無所謂的集中所有權。 <a href="/developers/docs/nodes-and-clients/">以太坊用戶端</a>必須升級自己的軟體，以實作新分叉規則。 加上區塊生成者（在工作量證明世界中為礦工，在權益證明世界中為驗證者）和節點必須依據新規則生成區塊並作驗證。 <a href="/developers/docs/consensus-mechanisms/">關於共識機制的更多資訊</a>
+需要升級集中控制的傳統軟體時，公司只會為終端使用者發佈一個新版本。 而區塊鏈的運作則有所不同，因其並無所謂的集中所有權。 [以太坊用戶端](/developers/docs/nodes-and-clients/)必須升級自己的軟體，以實作新分叉規則。 加上區塊生成者（在工作量證明世界中為礦工，在權益證明世界中為驗證者）和節點必須依據新規則生成區塊並作驗證。 [關於共識機制的更多資訊](/developers/docs/consensus-mechanisms/)
 
 這些規則變更可能會在網路中建立臨時分叉。 新區塊可以依據新規則或舊規則產生。 分叉通常會提前商定，以便用戶端能夠一致採用變更，並使升級後的分叉成為主鏈。 然而，在極少數情況下，對分叉的不同意見可能導致網路永久硬分叉 – 最爲著名的是<a href="#dao-fork">去中心化自治組織分叉</a>產生了以太坊經典。
 
@@ -397,10 +397,10 @@ London 升級中的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 實作�
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>允許以太幣與 Zcash 等受隱私保護的數位貨幣一起使用。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>以更低廉的加密技術改善<a href="/glossary/#gas">燃料</a>成本。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>透過新增 <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">操作碼</a>，保護以太坊免受重播攻擊。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>以更低廉的加密技術改善[燃料](/glossary/#gas)成本。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>透過新增 <code>CHAINID</code> [操作碼](/developers/docs/ethereum-stack/#ethereum-virtual-machine)，保護以太坊免受重播攻擊。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>最佳化基於消耗量的操作碼燃料價格。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，從而允許更多資料放入區塊中 – 這對<a href="/developers/docs/scaling/#layer-2-scaling">二層網路擴容</a>很有幫助。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，從而允許更多資料放入區塊中 – 這對[二層網路擴容](/developers/docs/scaling/#layer-2-scaling)很有幫助。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>其他操作碼的燃料價格變更。</em></li>
 </ul>
 
@@ -458,13 +458,13 @@ London 升級中的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 實作�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>新增 <code>REVERT</code> 操作碼。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>在交易收據中新增了狀態欄位，以表示成功或失敗。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>為支援<a href="/developers/docs/scaling/zk-rollups/">零知識簡潔非互動式知識論證</a>新增橢圓曲線和純量乘法。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>為支援[零知識簡潔非互動式知識論證](/developers/docs/scaling/zk-rollups/)新增橢圓曲線和純量乘法。</em></li>
   <li>使基於「簡潔非互動式知識論證」與「可擴容透明知識論證」的二層網路擴容解決方案具有更佳的效能。</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>啟用 RSA 簽名驗證。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>新增對可變長度傳回值的支援。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>新增 <code>STATICCALL</code> 作業碼，能夠呼叫其他合約而不變更狀態。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>變更難度調整公式。</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>將<a href="/glossary/#difficulty-bomb">難度炸彈</a>延遲 1 年，並將區塊獎勵從 5 以太幣減至 3 以太幣。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>將[難度炸彈](/glossary/#difficulty-bomb)延遲 1 年，並將區塊獎勵從 5 以太幣減至 3 以太幣。</em></li>
 </ul>
 
 </ExpandableCard>

@@ -34,7 +34,7 @@ description: 使用 Crowdin 翻译 ethereum.org 的操作指南
 
 网站内容分为多个文档和内容存储桶。 可以在右边查看每个文档的进度 - 如果翻译进度低于 100%，请贡献你的力量！
 
-找不到你的语言？ [创建一个问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)或者在 [Discord](/discord/) 中联系我们。
+找不到你的语言？ [创建一个问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)或者在 [Discord](https://discord.gg/ethereum-org) 中联系我们。
 
 ![Crowdin 中已翻译和未翻译的文件](./crowdin-files.png)
 
@@ -82,7 +82,7 @@ description: 使用 Crowdin 翻译 ethereum.org 的操作指南
 
 ### 联系我们 {#get-in-touch}
 
-还有其他问题吗？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器](/discord/)的 #translations 频道中发帖
+还有其他问题？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器](https://discord.gg/ethereum-org)的 #translations 频道中发帖
 
 也可以通过向 translations@ethereum.org 发送邮件联系我们
 

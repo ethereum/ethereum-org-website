@@ -20,17 +20,17 @@ Ní le haon duine amháin é prótacal Ethereum nó níl sé á rialú ag duine 
 
 ## Rialachas Ethereum {#ethereum-governance}
 
-Is é rialachas Ethereum an próiseas trína ndéantar athruithe prótacail. Tá sé tábhachtach a chur in iúl nach bhfuil baint ag an bpróiseas seo leis an gcaoi a n-úsáideann daoine agus feidhmchláir an prótacal - tá Ethereum gan chead. Anyone from anywhere in the world can participate in onchain activities. Níl aon rialacha leagtha síos maidir le cé hiad atá in ann agus cé hiad nach bhfuil in ann iarratas a dhéanamh nó idirbheart a sheoladh. Mar sin féin, tá próiseas ann chun athruithe a mholadh ar an gcroíphrótacal, a ritheann feidhmchláir dhíláraithe ar a bharr. Ós rud é go bhfuil an oiread sin daoine ag brath ar chobhsaíocht Ethereum, tá tairseach comhordaithe an-ard ann le haghaidh athruithe lárnacha, lena n-áirítear próisis shóisialta agus theicniúla, chun a chinntiú go bhfuil aon athruithe ar Ethereum slán agus go dtacaíonn an pobal go forleathan leo.
+Is é rialachas Ethereum an próiseas trína ndéantar athruithe prótacail. Tá sé tábhachtach a chur in iúl nach bhfuil baint ag an bpróiseas seo leis an gcaoi a n-úsáideann daoine agus feidhmchláir an prótacal - tá Ethereum gan chead. Is féidir le duine ar bith ó áit ar bith ar domhan páirt a ghlacadh i ngníomhaíochtaí ar slabhra. Níl aon rialacha leagtha síos maidir le cé hiad atá in ann agus cé hiad nach bhfuil in ann iarratas a dhéanamh nó idirbheart a sheoladh. Mar sin féin, tá próiseas ann chun athruithe a mholadh ar an gcroíphrótacal, a ritheann feidhmchláir dhíláraithe ar a bharr. Ós rud é go bhfuil an oiread sin daoine ag brath ar chobhsaíocht Ethereum, tá tairseach comhordaithe an-ard ann le haghaidh athruithe lárnacha, lena n-áirítear próisis shóisialta agus theicniúla, chun a chinntiú go bhfuil aon athruithe ar Ethereum slán agus go dtacaíonn an pobal go forleathan leo.
 
-### Onchain vs offchain governance {#onchain-vs-offchain}
+### Rialachas ar slabhra vs as slabhra {#onchain-vs-offchain}
 
-Blockchain technology allows for new governance capabilities, known as onchain governance. Onchain governance is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, and voting happens on the blockchain. With some forms of onchain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes via signing a transaction.
+Ceadaíonn teicneolaíocht Blocshlabhra cumais rialachais nua, ar a dtugtar rialachas ar slabhra. Is éard atá i gceist le rialachas ar slabhra ná nuair a chinntear athruithe prótacail atá beartaithe le vóta páirtithe leasmhara, de ghnáth ag sealbhóirí dearbháin rialachais, agus tarlaíonn vótáil ar an mblocshlabhra. Le roinnt cineálacha rialachais ar slabhra, tá na hathruithe prótacail atá beartaithe scríofa sa chód cheana féin agus cuirtear chun feidhme iad go huathoibríoch má fhormheasann na páirtithe leasmhara na hathruithe trí idirbheart a shíniú.
 
-The opposite approach, offchain governance, is where any protocol change decisions happen through an informal process of social discussion, which, if approved, would be implemented in code.
+Is é an cur chuige contrártha, rialachas eisshlabhra, ná nuair a dhéantar aon chinntí maidir le hathrú prótacail trí phróiseas neamhfhoirmiúil plé sóisialta, a chuirfí chun feidhme sa chód dá gceadófaí é.
 
-**Ethereum governance happens offchain** with a wide variety of stakeholders involved in the process.
+**Tarlaíonn rialachas Ethereum lasmuigh den slabhra** le raon leathan geallsealbhóirí páirteach sa phróiseas.
 
-_Whilst at the protocol level Ethereum governance is offchain, many use cases built on top of Ethereum, such as DAOs, use onchain governance._
+_Cé go bhfuil rialachas Ethereum as slabhra ag leibhéal an phrótacail, úsáideann go leor cásanna úsáide a tógadh ar bharr Ethereum, mar DAO, rialachas ar slabhra._
 
 <ButtonLink href="/dao/">
   Tuilleadh faoi DAO
@@ -44,7 +44,7 @@ Tá geallsealbhóirí éagsúla i [bpobal Ethereum](/community/), agus tá ról 
 
 - ** Sealbhóirí éitir**: tá méid treallach ETH ag na daoine seo. [Tuilleadh faoi ETH](/eth/).
 - **Úsáideoirí Feidhmchláir**: idirghníomhaíonn na daoine seo le feidhmchláir ar bhlocshlabhra Ethereum.
-- **Forbróirí Feidhmchláir/Uirlisí**: scríobhann na daoine seo feidhmchláir a ritheann ar bhlocshlabhra Ethereum (m.sh. DeFi, NFTanna, etc.) nó a thógann uirlisí chun idirghníomhú le hEthereum (m.sh. sparán, tástáil seomraí, etc.). [Tuilleadh faoi dhaipeanna](/dapps/).
+- **Forbróirí Feidhmchláir/Uirlisí**: scríobhann na daoine seo feidhmchláir a ritheann ar bhlocshlabhra Ethereum (m.sh. DeFi, NFTanna, etc.) nó a thógann uirlisí chun idirghníomhú le hEthereum (m.sh. sparán, tástáil seomraí, etc.). [Tuilleadh faoi dhaipeanna](/apps/).
 - **Oibreoirí Nóid**: ritheann na daoine seo nóid a fhorleagann bloic agus idirbhearta, rud a dhiúltaíonn d'aon idirbheart nó bloc neamhbhailí a aimsíonn siad. [Tuilleadh faoi nóid](/developers/docs/nodes-and-clients/).
 - **Údair EIP**: molann na daoine seo athruithe ar phrótacal Ethereum, i bhfoirm Moltaí Feabhsúcháin Ethereum (EIPs). [Tuilleadh faoi EIPeanna](/eips/).
 - **Bailitheoirí**: ritheann na daoine seo nóid ar féidir leo bloic nua a chur le blocshlabhra Ethereum.
@@ -180,5 +180,5 @@ Níl an rialachas in Ethereum sainmhínithe go docht. Tá dearcthaí éagsúla a
 - [Cad is croífhorbróir Ethereum ann?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Rialachas, Cuid 2: Tá an plútacratachas fós go dona](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Ag bogadh níos faide ná rialachas vótála boinn](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin _
-- [Understanding Blockchain Governance](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
-- [The Ethereum Government](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_
+- [Rialachas Blocshlabhra a Thuiscint](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _Taighde 2077_
+- [Rialtas Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

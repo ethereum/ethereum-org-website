@@ -44,7 +44,7 @@ V [komunite Ethereum](/community/) sú rôzne zainteresované strany, z ktorých
 
 - **Držitelia Etheru**: títo ľudia vlastnia ľubovoľné množstvo ETH. [Viac o ETH](/eth/).
 - **Používatelia aplikácií**: títo ľudia interagujú s aplikáciami na Ethereum blockchaine.
-- **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/dapps/).
+- **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/apps/).
 - **Operátori uzlov**: títo ľudia prevádzkujú uzly, ktoré šíria bloky a transakcie a odmietajú akúkoľvek neplatnú transakciu alebo blok, s ktorým sa stretnú. [Viac informácií o uzloch](/developers/docs/nodes-and-clients/).
 - **Autori EIP**: títo ľudia navrhujú zmeny protokolu Ethereum vo forme návrhov na zlepšenie Etherea (EIP). [Viac o EIP](/eips/).
 - **Validátori**: títo ľudia prevádzkujú uzly, ktoré môžu pridávať nové bloky do Ethereum blockchainu.
@@ -118,7 +118,7 @@ Vo všeobecnosti sa nezhody riešia dlhou diskusiou na verejných fórach, aby s
 
 Rozdelenia nastanú vtedy, keď je potrebné vykonať veľké technické vylepšenia alebo zmeny v sieti a zmeniť „pravidlá“ protokolu. [Klienti Etherea](/developers/docs/nodes-and-clients/) musia aktualizovať svoj softvér, aby implementovali nové pravidlá pre rozdelenie.
 
-DAO fork bol reakciou na [útok na DAO v roku 2016](https://www.coindesk.com/understanding-dao-hack-journalists), pri ktorom sa z nezabezpečeného [DAO](/glossary/#dao) kontraktu pri hackovaní vyčerpalo viac ako 3,6 milióna ETH. Fork presunul prostriedky z nezabezpečeného kontraktu do novej zmluvy, ktorá umožnila komukoľvek, kto stratil prostriedky pri hackovaní, získať ich späť.
+DAO fork bol reakciou na [útok na DAO v roku 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), pri ktorom sa z nezabezpečeného [DAO](/glossary/#dao) kontraktu pri hackovaní vyčerpalo viac ako 3,6 milióna ETH. Fork presunul prostriedky z nezabezpečeného kontraktu do novej zmluvy, ktorá umožnila komukoľvek, kto stratil prostriedky pri hackovaní, získať ich späť.
 
 O tomto postupe hlasovala komunita Etherea. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Rozhodnutie o forku (rozdelení) dosiahlo viac ako 85 % hlasov.
 

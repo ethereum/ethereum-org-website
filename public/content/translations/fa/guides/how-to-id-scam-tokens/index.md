@@ -19,7 +19,7 @@ One of the most common uses for Ethereum is for a group to create a tradable tok
 title="ARB چیست؟"
 contentPreview=''>
 
-آربیتروم سازمانی است که <a href="/developers/docs/scaling/optimistic-rollups/">رول آپ های خوشبینانه</a> را توسعه داده و مدیریت می کند. در ابتدا، آربیتروم به عنوان یک شرکت انتفاعی تشکیل شد اما سپس اقداماتی را در جهت غیر متمرکز شدن انجام داد. به عنوان بخشی از آن فرایند، آنها یک <a href="/dao/#token-based-membership">توکن حاکمیت</a> قابل مبادله را صادر کردند.
+آربیتروم سازمانی است که [رول آپ های خوشبینانه](/developers/docs/scaling/optimistic-rollups/) را توسعه داده و مدیریت می کند. در ابتدا، آربیتروم به عنوان یک شرکت انتفاعی تشکیل شد اما سپس اقداماتی را در جهت غیر متمرکز شدن انجام داد. به عنوان بخشی از آن فرایند، آنها یک [توکن حاکمیت](/dao/#token-based-membership) قابل مبادله را صادر کردند.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ contentPreview=''>
 title="قراردادهای هوشمند چه هستند؟"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">قراردادهای هوشمند</a> برنامه‌هایی هستند که بر روی بلاک‌چین اتریوم اجرا می‌شوند. هر توکن ERC-20، برای مثال، به عنوان یک قرارداد هوشمند اجرا می شود.
+[قراردادهای هوشمند](/developers/docs/smart-contracts/) برنامه‌هایی هستند که بر روی بلاک‌چین اتریوم اجرا می‌شوند. هر توکن ERC-20، برای مثال، به عنوان یک قرارداد هوشمند اجرا می شود.
 
 </ExpandableCard>
 

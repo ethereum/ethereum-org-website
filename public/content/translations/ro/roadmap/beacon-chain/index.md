@@ -37,7 +37,7 @@ Mizarea joacă același rol avut înainte de [minare](/developers/docs/consensus
 Tranziția la dovada mizei a făcut ca Ethereum să fie mult mai sigur și mai descentralizat în comparație cu dovada muncii. Cu cât numărul de oameni din rețea este mai mare, cu atât mai descentralizată și mai sigură în caz de atacuri devine aceasta.
 
 <InfoBanner emoji=":money_bag:">
-  Dacă dorești să devii un validator și să contribui la securitatea Ethereum, <a href="/staking/">află mai multe despre mizare</a>.
+  Dacă dorești să devii un validator și să contribui la securitatea Ethereum, [află mai multe despre mizare](/staking/).
 </InfoBanner>
 
 ### Configurarea pentru fragmentare {#setting-up-for-sharding}

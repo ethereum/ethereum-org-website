@@ -86,7 +86,7 @@ Al usar un proveedor SaaS, está confiando la operación de su nodo a otra perso
 
 Al finalizar el proceso de recorte y salida, estos fondos se transferirán a la dirección de retirada asignada al validador. Para habilitar la retirada, es preciso proporcionar una dirección. Puede haberse proporcionado en un depósito inicial. De lo contrario, se tendrán que usar las claves de retirada del validador para firmar un mensaje declarando una dirección de retirada. Si no se ha proporcionado ninguna dirección de retirada, los fondos permanecerán bloqueados hasta que se proporcione.
 
-Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener control total de la configuración de su validador, <a href="/staking/solo/">infórmese sobre cómo apostar sus ETH en solitario</a>.
+Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener control total de la configuración de su validador, [infórmese sobre cómo apostar sus ETH en solitario](/staking/solo/).
 </ExpandableCard>
 
 ## Para profundizar sobre el tema {#further-reading}

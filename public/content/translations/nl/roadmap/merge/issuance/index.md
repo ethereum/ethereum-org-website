@@ -94,7 +94,7 @@ Nettovermindering in jaarlijkse ETH-uitgifte: <strong>~88.7%</strong> ((4.61% - 
 De tegengestelde kracht van ETH-uitgifte is de snelheid waarmee ETH wordt verbrand. Om een transactie op Ethereum uit te voeren, moet een minimale kost (bekend als een "basiskost") worden betaald, die continu fluctueert (van block tot block) afhankelijk van de netwerkactiviteit. Deze kost wordt betaald in ETH en is _vereist_ om de transactie als geldig te beschouwen. Deze kost wordt _verbrand_ tijdens het transactieproces, waardoor het uit circulatie wordt gehaald.
 
 <InfoBanner>
-Kosten verbranden ging live met <a href="/history/#london">de London-upgrade</a> in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
+Kosten verbranden ging live met [de London-upgrade](/history/#london) in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
 </InfoBanner>
 
 Bovenop de verbranding van de kosten die door de London-upgrade zijn geïmplementeerd, kunnen validators ook sancties krijgen als ze offline zijn, of erger nog, ze kunnen worden geslasht voor het overtreden van specifieke regels die de veiligheid van het netwerk in gevaar brengen. Deze sancties leiden tot een vermindering van ETH van het saldo van deze validator, wat niet direct beloond wordt op een ander account, waardoor het effectief wordt verbrand/verwijderd uit de circulatie.

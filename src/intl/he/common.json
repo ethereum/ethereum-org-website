@@ -76,7 +76,6 @@
   "enterprise": "עסק",
   "enterprise-mainnet": "ארגונים - אתריום ברשת הראשית",
   "enterprise-menu": "תפריט מיזם",
-  "enterprise-private": "ארגונים - אתריום פרטי",
   "esp": "תוכנית תמיכה מערכת אקולוגית ",
   "eth-current-price": "מחיר ETH עכשווי (USD)",
   "ethereum": "אתריום",
@@ -228,7 +227,7 @@
   "nav-contribute-description": "אם ברצונך לעזור, הוא ידריך אותך",
   "nav-contribute-label": "תרומה ל-ethereum.org",
   "nav-dao-description": "קהילות בבעלות חברי הקהילות ללא סמכות מרכזית",
-  "nav-dapps-description": "גלה מערכת אקולוגית עשירה של אפליקציות ע\"י שימוש באתריום",
+  "nav-apps-description": "גלה מערכת אקולוגית עשירה של אפליקציות ע\"י שימוש באתריום",
   "nav-defi-description": "חלופה גלובלית ופתוחה לשוק הפיננסי המסורתי",
   "nav-desci-description": "אלטרנטיבה גלובלית ופתוחה למערכת המדעית הנוכחית",
   "nav-desoc-description": "פלטפורמות המבוססות על בלוקצ'יין לאינטראקציה חברתית ויצירת תוכן",
@@ -277,7 +276,7 @@
   "nav-layer-2-description": "עסקאות זולות ומהירות יותר עם אתריום",
   "nav-learn-by-coding-description": "הכלים שעוזרים לך לנסות את אתריום",
   "nav-local-env-description": "בחר והגדר את ערכת פיתוח של אתרריום שלך",
-  "nav-mainnet-description": "אפליקציות עסקיות לעבודה עם בלוקצ'יינים ניתן לבנות ברשת Mainnet הציבורית של אתריום",
+  "nav-enterprise-description": "אפליקציות עסקיות לעבודה עם בלוקצ'יינים ניתן לבנות ברשת Mainnet הציבורית של אתריום",
   "nav-nft-description": "דרך להציג משהו ייחודי בתור נכס המבוסס על אתריום",
   "nav-open-research-description": "אחד היתרונות העיקריים של אתריום הוא הקהילה המחקרית הפעילה",
   "nav-open-research-label": "פתח מחקר",
@@ -321,6 +320,8 @@
   "nav-staking-solo-description": "הפעל חומרה ביתית והוסף באופן אישי לאבטחה ולביזור של רשת Ethereum",
   "nav-staking-solo-label": "הפקד לבד",
   "nav-start-building-description": "מידע שימושי למתחילים",
+  "nav-start-with-crypto-title": "התחילו כאן",
+  "nav-start-with-crypto-description": "הצעדים הראשונים שלכם עם Ethereum",
   "nav-translation-program-description": "מאמץ משותף לתרגם את ethereum.org לכל השפות",
   "nav-tutorials-description": "הרשימה המפוקחת של מדריכי הקהילה",
   "nav-use-cases-description": "גלה רעיונות שימוש באתריום שונים",
@@ -428,5 +429,8 @@
   "withdrawals": "משיכות הימור",
   "wrapped-ether": "אתר עטוף",
   "yes": "כן",
-  "zero-knowledge-proofs": "הוכחות אפס ידע"
+  "zero-knowledge-proofs": "הוכחות אפס ידע",
+  "ethereum-vs-bitcoin": "אתריום מול ביטקוין",
+  "nav-ethereum-vs-bitcoin-description": "הבן את ההבדלים בין אתריום לביטקוין"
+
 }

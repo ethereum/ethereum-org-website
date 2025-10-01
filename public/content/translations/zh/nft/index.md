@@ -57,7 +57,7 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>探索、购买或创建自己的非同质化代币艺术品/收藏品...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     探索非同质化代币艺术品
   </ButtonLink>
 </InfoBanner>

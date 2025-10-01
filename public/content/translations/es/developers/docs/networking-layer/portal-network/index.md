@@ -68,7 +68,7 @@ Los desarrolladores de Portal Network también eligieron el diseño para constru
 Los clientes de Portal Network son:
 
 - [Trin](https://github.com/ethereum/trin): escrito en Rust
-- [Fluffy](https://nimbus.team/docs/fluffy.html): escrito en Nim
+- [Fluffy](https://fluffy.guide): escrito en Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): escrito en Typescript
 - [Shisui](https://github.com/GrapeBaBa/shisui): escrito en Go
 

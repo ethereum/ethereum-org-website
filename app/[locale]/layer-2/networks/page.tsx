@@ -1,10 +1,15 @@
-import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
@@ -16,8 +21,8 @@ import { walletsData } from "@/data/wallets/wallet-data"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
+import Layer2NetworksPageJsonLD from "./page-jsonld"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
@@ -38,8 +43,10 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
+
+  setRequestLocale(locale)
 
   const [
     ethereumMarketcapData,
@@ -54,10 +61,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.data.projects[network.l2beatID].tvs.breakdown.total,
-        networkMaturity: networkMaturity(
-          l2beatData.data.projects[network.l2beatID]
-        ),
+        tvl: l2beatData.projects[network.l2beatID].tvs.breakdown.total,
+        networkMaturity: networkMaturity(l2beatData.projects[network.l2beatID]),
         activeAddresses: growThePieData.activeAddresses[network.growthepieID],
         blockspaceData:
           (growThePieBlockspaceData || {})[network.growthepieID] || null,
@@ -96,7 +101,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     })
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 
@@ -115,8 +120,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   }
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "layer-2/networks",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <Layer2NetworksPageJsonLD
+        locale={locale}
+        layer2Data={layer2DataCompiled}
+        contributors={contributors}
+      />
       <Layer2Networks {...props} />
     </I18nProvider>
   )
@@ -125,9 +142,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

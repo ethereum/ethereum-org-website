@@ -1,5 +1,5 @@
 ---
-title: 在以太坊主网络上的企业
+title: 在以太坊主网上的企业
 description: 有关公共以太坊区块链上的企业应用的指南、文章和工具
 lang: zh
 ---
@@ -116,7 +116,7 @@ lang: zh
 ### 数据公证 {#notarization-of-data}
 
 - [ ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _意大利通讯社打击假新闻，并通过将新闻报道记录在主网上，让读者能够验证新闻报道的来源_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _在以太坊上记录腕表的出处和维修历史_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _在以太坊上记录腕表的出处和维修历史_
 - [BRØK](https://www.xn--brk-1na.no/) - _由挪威政府提供的面向非上市公司的股权结构表平台_
 - [Certifaction](https://certifaction.com/) - _采用隐私设计的合法有效的电子签名_
 - [EthSign](https://ethsign.xyz/) - _在以太坊区块链上记录签名的电子文档_

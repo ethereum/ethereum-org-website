@@ -55,7 +55,7 @@ También requiere una configuración de hardware muy básica, y cierta comprensi
 <ExpandableCard title="Gestión segura de claves" eventCategory="SoloStaking" eventName="clicked secure key management">
 De la misma manera que las claves privadas protegen su dirección de Ethereum, necesitará generar claves específicamente para su validador. Debe entender cómo proteger cualquier frase semilla o clave secreta de forma efectiva.{' '}
 
-<a href="/security/">Seguridad y prevención de estafa Ethereum</a>
+[Seguridad y prevención de estafa Ethereum](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Mantenimiento" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Un <em>validador</em> es una entidad virtual que vive en Ethereum y participa en
 <ExpandableCard title="¿Puedo depositar más de 32 ETH?">
 Cada par de claves asociadas a un validador requieren exactamente 32 ETH para ser activadas. Más ETH depositado en un solo par de claves no incrementa el potencial de recompensas, ya que cada validador está limitado a un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efectivo</a> de 32 ETH. Esto significa que la participación se realiza en incrementos de 32 ETH, cada uno con su propio conjunto de claves y saldo.
 
-No deposite más de 32 ETH para un solo validador. No aumentará sus recompensas. Si se ha establecido una dirección de retirada para el validador, cualquier exceso de fondos superior a 32 ETH se retirará automáticamente a esta dirección durante el próximo <a href="/staking/withdrawals/#validator-sweeping">barrido del validador</a>.
+No deposite más de 32 ETH para un solo validador. No aumentará sus recompensas. Si se ha establecido una dirección de retirada para el validador, cualquier exceso de fondos superior a 32 ETH se retirará automáticamente a esta dirección durante el próximo [barrido del validador](/staking/withdrawals/#validator-sweeping).
 
-Si participar desde casa le parece demasiado exigente, considere utilizar un proveedor de <a href="/staking/saas/">staking-as-a-service</a> o si busca participar con menos de 32 ETH investigue <a href="/staking/pools/">grupos de participación</a>.
+Si participar desde casa le parece demasiado exigente, considere utilizar un proveedor de [staking-as-a-service](/staking/saas/) o si busca participar con menos de 32 ETH investigue [grupos de participación](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="¿Sufriré «recortes» si me desconecto? (En una palabra: No.)">
@@ -200,7 +200,6 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 - [Controbuir a la diversidad de clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Guía: Cómo comprar hardware para un validador de Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Paso a paso: Cómo unirse a la red de prueba de Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Consejos para la prevención de «recortes» de Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raúl Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

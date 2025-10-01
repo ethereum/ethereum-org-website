@@ -121,12 +121,14 @@ Pour surveiller l'activité des contrats dans les chaînes, les développeurs pe
 - [Tenderly](https://tenderly.co/)
 
 ## Complément d'information {#further-reading}
-
 - [Blockchain Bridges](/bridges/) – ethereum.org
-- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) Sep 8, 2021 – Dmitriy Berenzon
-- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) Oct 1, 2021 – Arjun Bhuptani
-- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) Oct 4, 2021 – Mustafa Al-Bassam
-- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) Apr 28, 2022 – Arjun Chand
+- [Cadre d’évaluation des risques des ponts de L2Beat](https://l2beat.com/bridges/summary)
+- [Ponts Blockchain : Construire des réseaux de crypto-réseaux](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 septembre 2021– Dmitriy Berenzon
+- [Le Trilemme d'interopérabilité](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1er octobre 2021 – Arjun Bhuptani
+- [Clusters : comment les ponts de confiance et les ponts à confiance minimisée façonnent le paysage multi-chaîne](https://blog.celestia.org/clusters/) – 4 octobre 2021 – Mustafa Al-Bassam
+- [LI.FI : Avec les ponts, la confiance est un spectre](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) – 28 avril 2022 – Arjun Chand
+- [L'état des solutions d'interopérabilité des rollups](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 juin 2024 – Alex Hook
+- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : comités d'état Lagrange et au-delà](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 juin 2024 – Emmanuel Awosika
 
 En outre, voici quelques présentations perspicaces de [James Prestwich](https://twitter.com/_prestwich) qui peuvent aider à développer une compréhension plus approfondie des ponts :
 

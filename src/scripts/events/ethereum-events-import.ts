@@ -69,6 +69,8 @@ export async function EthereumEventsImport(year: number) {
       start = Date.parse(`${startDate}, ${year} GMT`)
       end = Date.parse(`${endDate}, ${year} GMT`)
       if (Number.isNaN(start) || Number.isNaN(end)) continue
+      // Skip events that have already ended
+      if (end < Date.now()) continue
     } catch (e) {
       console.log("Invalid date", i[0])
       continue

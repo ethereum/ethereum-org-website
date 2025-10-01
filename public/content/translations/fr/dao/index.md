@@ -19,7 +19,7 @@ Une DAO est une organisation collectivement détenue et qui travaille à une mis
 
 Les DAO nous permettent de travailler avec des personnes partageant le même état d'esprit et dans le monde entier, sans pour autant faire confiance à un dirigeant bienveillant pour gérer les fonds ou les opérations. Il n'y a pas de Directeur Général qui puisse dépenser des fonds sur un caprice ou un Chef de la direction financière capable de manipuler les registres. Au lieu de cela, les règles basées sur la blockchain ont été intégrées dans le code et définissent comment fonctionne l'organisation et comment les fonds sont dépensés.
 
-Elles possèdent une trésorerie intégrée à laquelle personne ne peut accéder sans l'accord du groupe. Les décisions sont régies par des propositions et des votes pour s'assurer que tout le monde au sein de l'organisation a une voix et que tout se passe de manière transparente [sur la chaîne](/glossary/#on-chain).
+Elles possèdent une trésorerie intégrée à laquelle personne ne peut accéder sans l'accord du groupe. Les décisions sont régies par des propositions et des votes pour s'assurer que tout le monde au sein de l'organisation puisse s'exprimer et que tout se passe de manière transparente [onchain](/glossary/#onchain).
 
 ## Pourquoi avons-nous besoin des DAO ? {#why-dao}
 
@@ -92,7 +92,7 @@ En 1977, le Wyoming a créé la LLC, qui protège les entrepreneurs et limite le
 
 ### Un exemple célèbre {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
+[CityDAO](https://citizen.citydao.io/) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
 
 ## Adhésion à la DAO {#dao-membership}
 

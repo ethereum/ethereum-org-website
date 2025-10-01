@@ -20,7 +20,7 @@ Ethereum.org 翻译计划是开放的，所有人都可以参与！
 4. 机器翻译将不会被批准。
 5. 所有翻译在添加到网站之前都会经过审核，因此你的翻译在上线之前会有一个短暂的延迟。
 
-_加入 [ethereum.org Discord](/discord/) 合作翻译、提问、分享反馈和想法，或加入翻译组。_
+_加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 合作翻译、提问、分享反馈和想法，或加入翻译组。_
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   开始翻译
@@ -36,9 +36,9 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 ### 我们迄今取得的进展 {#our-progress}
 
-- [**超过 6,000 **位翻译人员](/contributing/translation-program/contributors/)
-- 网站支持 **62** 种语言
-- [2023 年翻译了** 300 万**字](/contributing/translation-program/acknowledgements/)
+- [**超过 6,900 **位翻译人员](/contributing/translation-program/contributors/)
+- 网站支持 **68** 种语言
+- [2024 年翻译了** 289 万**字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

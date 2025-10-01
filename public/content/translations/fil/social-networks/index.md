@@ -21,7 +21,7 @@ Maraming decentralized social network ang nagsisilbing mga alternatibo sa mga ki
 
 ### Paano gumagana ang mga decentralized social network? {#decentralized-social-networks-overview}
 
-Ang mga decentralized social network ay uri ng [mga decentralized application (dapps)](/dapps/) — mga application na pinapagana ng [mga smart contract](/developers/docs/smart-contracts/) na dineploy sa blockchain. Ang contract code ay nagsisilbing backend para sa mga app na ito at nagtatakda ng business logic ng mga ito.
+Ang mga decentralized social network ay uri ng [mga decentralized application (dapps)](/apps/) — mga application na pinapagana ng [mga smart contract](/developers/docs/smart-contracts/) na dineploy sa blockchain. Ang contract code ay nagsisilbing backend para sa mga app na ito at nagtatakda ng business logic ng mga ito.
 
 Umaasa ang mga tradisyonal na social media platform sa mga database upang mag-store ng impormasyon ng user, program code, at iba pang uri ng data. Ngunit gumagawa ito ng single point-of-failure at nagdudulot ng matinding panganib. Halimbawa, [ilang oras na naging offline](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) ang mga server ng Facebook noong nakaraang taon, na naging dahilan upang hindi mapuntahan ng mga user ang platform.
 
@@ -105,7 +105,7 @@ Noong Mayo 2022, [inanunsyo ng Instagram ang suporta para sa NFTs sa Ethereum at
 - [Ang Web3 ang susi mga social network na decentralized at pinapatakbo ng komunidad](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Pangkalahatang-ideya ng Landscape ng Blockchain Social Media](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - "[Paano Malulutas ng Blockchain ang Problema sa Privacy sa Social Media](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_."
-- [Papunta na sa Blockchain ang Mga Social Media Network](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Papunta na sa Blockchain ang Mga Social Media Network](https://eawosika.com/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 - [Sapat na Decentralization para sa Mga Social Network](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Videos {#videos}

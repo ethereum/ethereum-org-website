@@ -30,6 +30,6 @@ Programiści mogą następnie przetwarzać i przekształcać te dane, aby umożl
 
 ## Dalsza lektura {#further-reading}
 
-- [Przegląd Graph Network](https://thegraph.com/docs/network#overview)
+- [Przegląd Graph Network](https://thegraph.com/docs/en/about)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Przykłady kodu API w EtherScan](https://etherscan.io/apis#contracts)

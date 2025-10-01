@@ -171,7 +171,7 @@ Nethermind 也為高級使用者提供[詳細文件](https://docs.nethermind.io)
 
 ### Reth {#reth}
 
-Reth（Rust Etherum 的簡稱）是以太坊全節點的實作，致力於達成使用者友善、高度模組化、快速高效等目標。 Reth 最初由 Paradigm 開發並推動，且使用了 Apache 和 MIT 授權。
+Reth（Rust Ethereum 的簡稱）是以太坊全節點的實作，致力於達成使用者友善、高度模組化、快速高效等目標。 Reth 最初由 Paradigm 開發並推動，且使用了 Apache 和 MIT 授權。
 
 Reth 是生產就緒的執行用戶端，且適用於質押或高正常運作時間的服務等重要任務上。 在一些高效能、高利潤下的使用案例中表現優秀，如遠端程序呼叫、最大可提取價值、索引、模擬和點對點活動等。
 
@@ -196,7 +196,7 @@ EthereumJS 執行用戶端 (EthereumJS) 是以 TypeScript 編寫，並由多個�
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | 信標鏈、Goerli、Pyrmont、Sepolia、Ropsten 等        |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | 開始         | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | 開始         | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS   | 信標鏈、Gnosis、Goerli、Sepolia、Ropsten 等         |
 | [Grandine](https://docs.grandine.io/)（測試版）                    | Rust       | Linux、Windows、macOS   | 信標鏈、Goerli、Sepolia 等                        |
 
@@ -222,7 +222,7 @@ Nimbus 是以 Nim 開發的共識用戶端實作，以 Apache-2.0 授權。 它�
 
 Prysm 是功能完整且開源的共識用戶端，以 Go 語言開發並以 GPL-3.0 授權。 它有可選的網頁應用用戶介面，並將自行質押者及機構使用者的使用者體驗、文檔及設定檔放在第一位。
 
-閱讀 [Prysm 文檔](https://docs.prylabs.network/docs/getting-started/)以獲得更多資訊。
+閱讀 [Prysm 文檔](https://prysm.offchainlabs.com/docs/)以獲得更多資訊。
 
 ### Teku {#teku}
 
