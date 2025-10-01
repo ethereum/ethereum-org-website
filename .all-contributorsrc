@@ -13535,6 +13535,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "gabitoesmiapodo",
+      "name": "Gabito Esmiapodo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4015436?v=4",
+      "profile": "https://fachidiot.bandcamp.com/",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
