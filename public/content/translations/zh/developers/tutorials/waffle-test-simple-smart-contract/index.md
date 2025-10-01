@@ -25,11 +25,11 @@ published: 2021-02-26
 - 你使用过一些包管理器，如 yarn 或 npm
 - 你拥有关于智能合约和 Solidity 的非常基础的知识
 
-# 入门指南 {#getting-started}
+## 入门指南 {#getting-started}
 
 该教程演示了如何使用 yarn 进行测试设置和运行，但如果你更喜欢使用 npm 也没有问题——我将为你提供官方 Waffle [文档](https://ethereum-waffle.readthedocs.io/en/latest/index.html)的参考链接。
 
-## 安装依赖项 {#install-dependencies}
+### 安装依赖项 {#install-dependencies}
 
 将 ethereum-waffle 和 typescript 依赖项[添加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)到你的项目的开发依赖项中。
 
@@ -37,7 +37,7 @@ published: 2021-02-26
 yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
-## 智能合约示例 {#example-smart-contract}
+### 智能合约示例 {#example-smart-contract}
 
 在本教程中，我们将使用一个简单的智能合约示例- EtherSplitter。 它的作用无非是允许任何人发送一些以 wei 为单位的以太币，并平均分配给两个预定义的接收者。 Split 函数需要 wei 的数量是偶数，否则会回滚。 对于两个接收者，它都会执行 wei 转账，然后触发 Transfer 转账事件。
 
@@ -67,7 +67,7 @@ contract EtherSplitter {
 }
 ```
 
-## 编译合约 {#compile-the-contract}
+### 编译合约 {#compile-the-contract}
 
 要[编译](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract)该合约，请将以下条目添加到 package.json 文件中：
 
@@ -90,7 +90,7 @@ contract EtherSplitter {
 
 运行 `yarn build`。 作为结果，将出现 `build` 目录，并包含以 JSON 格式编译的 EtherSplitter 合约。
 
-## 测试设置 {#test-setup}
+### 测试设置 {#test-setup}
 
 使用 Waffle 进行测试需要使用 Chai 匹配器和 Mocha，因此你需要将它们[添加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)到你的项目中。 请更新你的 package.json 文件，在 scripts 部分添加 `test` 条目：
 
@@ -103,7 +103,7 @@ contract EtherSplitter {
 
 如果你想要[执行](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests)你的测试，只需要运行 `yarn test`。
 
-# 测试 {#testing}
+## 测试 {#testing}
 
 现在创建 `test` 目录，并创建一个新文件 `test\EtherSplitter.test.ts`。 复制下面的代码片段，并粘贴到我们的测试文件中。
 
@@ -134,7 +134,7 @@ describe("Ether Splitter", () => {
 
 下一步，我们声明一个名为“splitter”的变量 - 这是我们的模拟 EtherSplitter 合约。 它在每次执行单个测试之前通过 `deployContract` 方法创建。 这个方法模拟了从钱包（作为第一个参数进行传递，在我们的例子中是发送者的钱包）部署合约的过程。 第二个参数是被测试合约的 ABI 和字节码，我们传入了从 `build` 目录中编译的 EtherSplitter 合约的 JSON 文件。 第三个参数是一个数组，包含合约的构造函数参数，在我们的例子中，它是接收者的两个地址。
 
-## changeBalances {#changebalances}
+### changeBalances {#changebalances}
 
 首先，我们将检查 split 方法是否确实更改了接收者钱包的余额。 如果我们从发送者帐户中拆分 50 wei，我们预计两个接收者的余额都会增加 25 wei。 我们将使用 Waffle 的 `changeBalances` 匹配器：
 
@@ -162,7 +162,7 @@ it("Changes account balance", async () => {
 
 接下来，我们将测试是否在每次 wei 转账后触发了 Transfer 转账事件。 我们将转向 Waffle 中的另一个匹配器：
 
-## Emit {#emit}
+### Emit {#emit}
 
 ```ts
 it("Emits event on the transfer to the first receiver", async () => {
@@ -180,7 +180,7 @@ it("Emits event on the transfer to the second receiver", async () => {
 
 `emit` 匹配器允许我们检查合约在调用方法时是否触发了事件。 作为 `emit` 匹配器的参数，我们提供我们预测将触发事件的模拟合约，以及该事件的名称。 在我们的例子中，模拟合约是 `splitter`，事件名称为 `Transfer`。 我们还可以验证事件触发时使用的具体参数值 - 我们向 `withArgs` 匹配器传递的参数数量应该与我们事件声明所期望的参数数量相同。 对于 EtherSplitter 合约，我们需要传递发送者和接收者的地址，以及转移的 wei 数量作为参数。
 
-## revertedWith {#revertedwith}
+### revertedWith {#revertedwith}
 
 作为最后一个例子，我们将检查如果 wei 数量拆分不均匀时是否回滚了交易。 我们将使用 `revertedWith` 匹配器：
 
@@ -194,7 +194,7 @@ it("Reverts when Vei amount uneven", async () => {
 
 如果测试通过，这将确保该交易确实已被回滚。 然而，在 `require` 语句中传递的消息和我们在 `revertedWith` 中期望的消息之间也必须完全匹配。 如果我们回到 EtherSplitter 合约的代码中，在关于 wei 数量的 `require` 语句中，我们提供了这样的信息：“Uneven wei amount not allowed”（不允许 wei 数量不均匀）。 这与我们在测试中期望的消息相匹配。 如果它们不相等，则测试将失败。
 
-# 恭喜你！ {#congratulations}
+## 恭喜你！ {#congratulations}
 
 你已经迈出了使用 Waffle 测试智能合约的第一步！ 你可能对其它的 Waffle 教程感兴趣：
 

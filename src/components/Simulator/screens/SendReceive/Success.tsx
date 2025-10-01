@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { PiCheckThin } from "react-icons/pi"
+import { Check } from "lucide-react"
 
 import { Flex, VStack } from "@/components/ui/flex"
 import { Spinner } from "@/components/ui/spinner"
@@ -102,7 +102,12 @@ export const Success = ({
                   transition={{ type: "spring", delay: 0.25 }}
                   data-testid="success-icon"
                 >
-                  <PiCheckThin className={cn(ICON_SIZE, "-rotate-[10deg]")} />
+                  <Check
+                    className={cn(
+                      ICON_SIZE,
+                      "size-[1em] -rotate-[10deg] stroke-1"
+                    )}
+                  />
                 </motion.div>
               )}
               <p className="px-4 text-center md:px-8">

@@ -13,7 +13,7 @@ Blockchain-Anwendungen helfen Unternehmen:
 - Sie erschaffen neue Geschäftsmodelle und Wertschöpfungsmöglichkeiten.
 - Sie bieten für ihre Organisation einen wettbewerbsorientierten Zukunftsschutz.
 
-Enterprise-Blockchain-Anwendungen können auf dem öffentlichen Ethereum-[Mainnet](/glossary/#mainnet) oder auf privaten Blockchains, die auf der Ethereum-Technologie basieren, aufgebaut werden. Weitere Informationen zu [privaten Enterprise-Ethereum-Ketten](/enterprise/private-ethereum/)
+Enterprise-Blockchain-Anwendungen können auf dem öffentlichen Ethereum-[Mainnet](/glossary/#mainnet) oder auf privaten Blockchains, die auf der Ethereum-Technologie basieren, aufgebaut werden.
 
 ## Öffentliches gegenüber privatem Ethereum {#private-vs-public}
 
@@ -92,7 +92,7 @@ Beispiele für L2-Lösungen, die produktionsbereit sind oder es bald sein werden
 - Plasma (Daten off-chain, Betrugsnachweise)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - State Channels
   - [Connext](https://connext.network/)
@@ -118,7 +118,7 @@ Nachfolgend werden einige der Anwendungen für Unternehmen aufgelistet, die bisl
 
 ### Finanzen {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _Ausgabe und Abwicklung von Anleihen_
+- [Santander Bank](https://www.coindesk.com/markets/2019/09/12/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _Ausgabe und Abwicklung von Anleihen_
 - [Generale Societe](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _Ausgabe von Anleihen_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _Anleiheangebot und Tokenisierung für FAT-Marken_
 - [Sila](https://silamoney.com/) _Bank- und ACH-Zahlungsinfrastruktur-as-a-Service_
@@ -132,7 +132,7 @@ Nachfolgend werden einige der Anwendungen für Unternehmen aufgelistet, die bisl
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _Details von finalisierten Darlehen werden gehasht und im Hauptnetz aufgezeichnet_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Italiens größte Nachrichtenagentur kämpft gegen gefälschte Nachrichten und ermöglicht es Lesern, den Ursprung der Nachrichten zu überprüfen, indem sie im Mainnet aufgezeichnet werden_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _protokolliert Pressemitteilungen auf Ethereum, um die Rechenschaftspflicht und das Vertrauen von Unternehmen zu gewährleisten_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _erfasst den Herkunfts- und Reparaturverlauf von Uhren auf Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) _erfasst den Herkunfts- und Reparaturverlauf von Uhren auf Ethereum_
 - [EthSign](https://ethsign.xyz/)_ erfasst signierte elektronische Dokumente in der Ethereum-Blockchain_
 
 ### Lieferkette {#supply-chain}
@@ -141,7 +141,7 @@ Nachfolgend werden einige der Anwendungen für Unternehmen aufgelistet, die bisl
 - [Minespider](https://www.minespider.com/) _Lieferketten-Tracking_
 - [Folge unseren Fasern](https://www.followourfibre.com) _Viskose-Lieferkettenverfolgbarkeit_
 - [EY OpsChain Netzwerkbeschaffung](https://blockchain.ey.com/products/contract-manager) _bietet einen Beschaffungsworkflow durch die Ausgabe von RFQs, Verträgen, Bestellungen und Rechnungen in Ihrem Netzwerk vertrauenswürdiger Geschäftspartner_
-- [Treum](https://treum.io/) _bringt Transparenz, Rückverfolgbarkeit und Handelbarkeit in Lieferketten mithilfe der Blockchain-Technologie_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _bringt Transparenz, Rückverfolgbarkeit und Handelbarkeit in Lieferketten mithilfe der Blockchain-Technologie_
 - [TradeTrust](https://www.tradetrust.io/) _überprüft elektronische Frachtbriefe (eBLs) für den internationalen Versand_
 
 ### Referenzen und Zertifizierungen {#credentials}

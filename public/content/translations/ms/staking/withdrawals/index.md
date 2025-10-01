@@ -152,9 +152,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jika anda adalah sebahagian daripada <a href="/staking/pools/">himpunan pertaruhan</a> atau memegang token pertaruhan, anda harus menyemak dengan pembekal anda untuk mendapatkan butiran lanjut tentang cara pengeluaran pertaruhan dikendalikan, kerana setiap perkhidmatan beroperasi secara berbeza.
+Jika anda adalah sebahagian daripada [himpunan pertaruhan](/staking/pools/) atau memegang token pertaruhan, anda harus menyemak dengan pembekal anda untuk mendapatkan butiran lanjut tentang cara pengeluaran pertaruhan dikendalikan, kerana setiap perkhidmatan beroperasi secara berbeza.
 
-Secara umum, pengguna harus bebas untuk menuntut semula ETH yang mereka pertaruhkan, atau menukar penyedia pertaruhan yang mereka gunakan. Jika himpunan tertentu menjadi terlalu besar, dana boleh dikeluarkan, ditebus dan dipertaruhkan semula dengan <a href="https://rated.network/">pembekal yang lebih kecil</a>. Atau, jika anda telah mengumpul ETH yang mencukupi, anda boleh membuat <a href="/staking/solo/">pertaruhan dari rumah</a>.
+Secara umum, pengguna harus bebas untuk menuntut semula ETH yang mereka pertaruhkan, atau menukar penyedia pertaruhan yang mereka gunakan. Jika himpunan tertentu menjadi terlalu besar, dana boleh dikeluarkan, ditebus dan dipertaruhkan semula dengan <a href="https://rated.network/">pembekal yang lebih kecil</a>. Atau, jika anda telah mengumpul ETH yang mencukupi, anda boleh membuat [pertaruhan dari rumah](/staking/solo/).
 
 </ExpandableCard>
 
@@ -211,7 +211,6 @@ Tidak. Sebaik sahaja pengesah telah keluar dan baki penuhnya telah dikeluarkan, 
 
 - [Pengeluaran Pad Pelancaran Pertaruhan](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Rantai Beacon menolak pengeluaran sebagai operasi](https://eips.ethereum.org/EIPS/eip-4895)
-- [Pengembala Kucing Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pengeluaran ETH dipertaruhkan (Pengujian) dengan Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Rantai Beacon menolak pengeluaran sebagai operasi dengan Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Memahami Baki Berkesan Pengesah](https://www.attestant.io/posts/understanding-validator-effective-balance/)

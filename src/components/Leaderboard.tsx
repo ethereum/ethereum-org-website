@@ -1,6 +1,9 @@
+import { ExternalLink } from "lucide-react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import Emoji from "@/components/Emoji"
+
+import { cn } from "@/lib/utils/cn"
 
 import { GITHUB_URL } from "@/lib/constants"
 
@@ -83,9 +86,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                   </div>
                 </Flex>
                 {emoji && <Emoji className="me-8 text-2xl" text={emoji} />}
-                <span
-                  className={`after:me-1.5 after:ms-0.5 after:content-['↗'] after:${twFlipForRtl} after:inline-block`}
-                />
+                <ExternalLink className={cn("size-[1em]", twFlipForRtl)} />
               </LinkBox>
             </ListItem>
           )

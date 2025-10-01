@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import isChromatic from "chromatic"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 
 import type {
   AnswerChoice,
@@ -64,6 +64,7 @@ export const useQuizWidget = ({
     setQuizData(quiz)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(initialize, [quizKey])
 
   const currentQuestionIndex = userQuizProgress.length

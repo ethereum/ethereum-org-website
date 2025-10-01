@@ -278,8 +278,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 ```
 
 In contrast to Python, Vyper is a [static typed language](https://wikipedia.org/wiki/Type_system#Static_type_checking).
-You can't declare a variable, or a function parameter, without identifying the [data
-type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256-bit value
+You can't declare a variable, or a function parameter, without identifying the [data type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256-bit value
 (256 bits is the native word size of the [Ethereum Virtual Machine](/developers/docs/evm/)). The output is a boolean
 value. By convention, the names of function parameters start with an underscore (`_`).
 
@@ -689,7 +688,7 @@ Anybody who is allowed to transfer a token is allowed to burn it. While a burn a
 transfer to the zero address, the zero address does not actually receives the token. This allows us to
 free up all the storage that was used for the token, which can reduce the gas cost of the transaction.
 
-# Using this Contract {#using-contract}
+## Using this Contract {#using-contract}
 
 In contrast to Solidity, Vyper does not have inheritance. This is a deliberate design choice to make the
 code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take [this
@@ -711,3 +710,6 @@ For review, here are some of the most important ideas in this contract:
 - Past events are visible only outside the blockchain. Code running inside the blockchain cannot view them.
 
 Now go and implement secure Vyper contracts.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

@@ -4,7 +4,7 @@ description: An explanation of Ethereum accounts – their data structures and t
 lang: en
 ---
 
-An Ethereum account is an entity with an ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
+An Ethereum account is an entity with an ether (ETH) balance that can send messages on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
 ## Prerequisites {#prerequisites}
 
@@ -34,7 +34,7 @@ Both account types have the ability to:
 **Contract**
 
 - Creating a contract has a cost because you're using network storage
-- Can only send transactions in response to receiving a transaction
+- Can only send messages in response to receiving a transaction
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 - Contract accounts don't have private keys. Instead, they are controlled by the logic of the smart contract code
 
@@ -45,7 +45,7 @@ Ethereum accounts have four fields:
 - `nonce` – A counter that indicates the number of transactions sent from an externally-owned account or the number of contracts created by a contract account. Only one transaction with a given nonce can be executed for each account, protecting against replay attacks where signed transactions are repeatedly broadcast and re-executed.
 - `balance` – The number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.
 - `codeHash` – This hash refers to the _code_ of an account on the Ethereum virtual machine (EVM). Contract accounts have code fragments programmed in that can perform different operations. This EVM code gets executed if the account gets a message call. It cannot be changed, unlike the other account fields. All such code fragments are contained in the state database under their corresponding hashes for later retrieval. This hash value is known as a codeHash. For externally owned accounts, the codeHash field is the hash of an empty string.
-- `storageRoot` – Sometimes known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia trie that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.
+- `storageRoot` – Sometimes known as a storage hash. A 256-bit hash of the root node of a [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.
 
 ![A diagram showing the make up of an account](./accounts.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_

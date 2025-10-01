@@ -1,5 +1,5 @@
 import { useState } from "react"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 import { useLocale } from "next-intl"
 
 // TODO: Remove unused?
@@ -13,6 +13,7 @@ import { useLocale } from "next-intl"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
+import { getCountryCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
@@ -29,6 +30,7 @@ import bitvavo from "@/public/images/exchanges/bitvavo.png"
 import bybit from "@/public/images/exchanges/bybit.png"
 import coinbase from "@/public/images/exchanges/coinbase.png"
 import coinmama from "@/public/images/exchanges/coinmama.png"
+import coinmate from "@/public/images/exchanges/coinmate.png"
 import coinspot from "@/public/images/exchanges/coinspot.png"
 import cryptocom from "@/public/images/exchanges/crypto.com.png"
 import easycrypto from "@/public/images/exchanges/easycrypto.png"
@@ -46,6 +48,7 @@ import okx from "@/public/images/exchanges/okx.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
+import zkp2p from "@/public/images/exchanges/zkp2p.png"
 
 type ExchangeKey =
   | "binance"
@@ -60,6 +63,7 @@ type ExchangeKey =
   | "bybit"
   | "coinbase"
   | "coinmama"
+  | "coinmate"
   | "coinspot"
   | "cryptocom"
   | "easycrypto"
@@ -77,6 +81,7 @@ type ExchangeKey =
   | "rain"
   | "shakepay"
   | "wazirx"
+  | "zkp2p"
 
 type ExchangeDetail = {
   name: string
@@ -198,6 +203,12 @@ const exchanges: ExchangeDetails = {
     image: coinmama,
     usaExceptions: ["CT", "FL", "IA", "NY"],
   },
+  coinmate: {
+    name: "Coinmate",
+    url: "https://coinmate.io/en",
+    image: coinmate,
+    usaExceptions: [],
+  },
   coinspot: {
     name: "CoinSpot",
     url: "https://www.coinspot.com.au/",
@@ -300,6 +311,12 @@ const exchanges: ExchangeDetails = {
     image: korbit,
     usaExceptions: [],
   },
+  zkp2p: {
+    name: "ZKP2P",
+    url: "https://zkp2p.xyz",
+    image: zkp2p,
+    usaExceptions: [],
+  },
 }
 
 export const useCentralizedExchanges = () => {
@@ -314,11 +331,18 @@ export const useCentralizedExchanges = () => {
   const selectOptions: ExchangeByCountryOption[] = Object.entries(
     exchangeData as ExchangeData
   )
-    .map(([country, exchanges]) => ({
-      value: country,
-      label: country,
-      exchanges,
-    }))
+    .map(([countryCode, exchanges]) => {
+      const countryName =
+        countryCode.length === 2
+          ? getCountryCodeName(countryCode, locale)
+          : t(`common:region-${countryCode.toLowerCase()}`)
+
+      return {
+        value: countryName,
+        label: countryName,
+        exchanges,
+      }
+    })
     .sort((a, b) => a.value.localeCompare(b.value))
 
   const handleSelectChange: SelectOnChange<ExchangeByCountryOption> = (

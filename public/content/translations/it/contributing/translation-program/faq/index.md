@@ -56,7 +56,7 @@ Se vuoi segnalare un problema su una particolare stringa che richiede attenzione
 
 ## Cos'è la Memoria di traduzione (TM)? {#translation-memory}
 
-La Memoria di traduzione (TM) è una funzionalità di Crowdin che memorizza tutte le stringhe precedentemente tradotte su [ethereum.org](http://ethereum.org/). Quando una stringa viene tradotta, viene automaticamente salvata nella TM del progetto. Può essere uno strumento utile per aiutarti a risparmiare tempo!
+La Memoria di traduzione (TM) è una funzionalità di Crowdin che memorizza tutte le stringhe precedentemente tradotte su [ethereum.org](https://ethereum.org/). Quando una stringa viene tradotta, viene automaticamente salvata nella TM del progetto. Può essere uno strumento utile per aiutarti a risparmiare tempo!
 
 - Guarda la sezione "TM and MT Suggestions" per scoprire come altri traduttori hanno tradotto la stessa stringa o un contenuto simile. Se trovi un suggerimento con una percentuale di corrispondenza elevata, non esitare a sfruttare la traduzione esistente facendovi clic sopra.
 - Se non c'è nulla nella lista, puoi cercare nella TM tra le traduzioni precedenti e riutilizzarle per coerenza.

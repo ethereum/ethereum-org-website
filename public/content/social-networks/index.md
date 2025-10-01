@@ -23,7 +23,7 @@ Many decentralized social networks exist as alternatives to established social m
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
-Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
+Decentralized social networks are a class of [decentralized applications (dapps)](/apps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
 Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) in October 2021, cutting off users from the platform.
 
@@ -65,24 +65,29 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### Farcaster {#farcaster}
+
+[Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
+
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
+- **[Ethereum Follow Protocol](https://efp.app/)** - _Ethereum Follow Protocol is a fully decentralized onchain social graph for Ethereum accounts, advancing the vision of a modular Ethereum identity stack, complementing ENS and SIWE._
+- **[Ethereum Comments Protocol](https://www.ethcomments.xyz/)** - _A new, programmable social content primitive on Ethereum to put your thoughts onchain._
 
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
-[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
+[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also exploring or have experimented with integrating Ethereum into their infrastructure:
 
 ### Reddit {#reddit}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 tokens that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to get exclusive privileges and perks. For this project, Reddit is working with Arbitrum, a [layer 2](/glossary/#layer-2) network designed to scale Ethereum transactions.
-
-The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
-
-Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
+- Reddit previously experimented with **Community Points**, which were ERC-20 tokens users could earn by posting quality content and contributing to specific online communities (subreddits). Users could redeem these tokens within a subreddit for exclusive perks or trade them. For this project, Reddit utilized Arbitrum Nova, a [layer 2](/glossary/#layer-2) network designed to scale Ethereum transactions.
+- The program was notably active in the r/CryptoCurrency subreddit with its "Moons" and the r/FortNiteBR subreddit with its "Bricks". Because these tokens were on the blockchain, they were independent of Reddit once claimed into a user's [wallet](/glossary/#wallet).
+- However, **Reddit [sunsetted the Community Points program](https://www.reddit.com/r/CryptoCurrency/comments/17a33ql/reddit_is_officially_deprecating_community_points/) in late 2023**, citing scalability and resource challenges. While the tokens still exist on the blockchain, Reddit no longer actively supports or integrates them into its platform features.
+- Reddit has also launched a **[collectible avatar program](https://www.reddit.com/r/avatartrading/comments/147qlpb/what_are_reddit_collectible_avatars_rcas/)**, allowing users to purchase unique avatars as NFTs. These avatars can be used as profile pictures and are tradable on the secondary market.
 
 ## Further reading {#further-reading}
 

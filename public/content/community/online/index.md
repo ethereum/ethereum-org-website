@@ -1,6 +1,6 @@
 ---
 title: Online communities
-description: A listing of the grant programs throughout the Ethereum ecosystem.
+description: Discover online forums, chat rooms, and social media communities where Ethereum enthusiasts gather to discuss and collaborate.
 lang: en
 ---
 
@@ -63,7 +63,6 @@ If you believe a community should be added or removed based on these guidelines,
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Main Ethereum account for the community</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Official account of the Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - The portal to Ethereum, built for our growing global community</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">List of influential Ethereum twitter accounts</Link></SocialListItem>
 
 <Divider />
 

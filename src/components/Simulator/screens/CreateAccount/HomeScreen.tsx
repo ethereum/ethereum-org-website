@@ -1,6 +1,6 @@
 import { type HTMLAttributes } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { MdArrowDownward } from "react-icons/md"
+import { ArrowDown } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -45,7 +45,7 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <MdArrowDownward className="!size-[1em] !text-2xl !text-disabled sm:!text-3xl" />
+            <ArrowDown className="!size-[1em] !text-2xl !text-disabled sm:!text-3xl" />
           </motion.div>
         )}
       </AnimatePresence>

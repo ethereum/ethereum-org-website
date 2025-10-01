@@ -37,7 +37,7 @@ Liosta neamhiomlán de na príomhfhadhbanna san eolaíocht agus conas is féidir
 | **Is féidir samhlacha nua foilsitheoireachta** a fhorbairt a úsáideann bunleaganacha Web3 ar mhaithe le muinín, trédhearcacht agus rochtain uilíoch. | Foilsíonn tú trí bhealaí seanbhunaithe ar minic go meastar iad a bheith **neamhéifeachtúil, claonta agus dúshaothraithe**.   |
 | Is féidir leat **comharthaí agus cáil a thuilleamh as obair piar-athbhreithnithe**.                                                                  | Tá **do chuid oibre piarmheasúnaithe neamhíoctha**, rud a théann chun sochair na bhfoilsitheoirí ar bhrabús.                 |
 | **Is leatsa an mhaoin intleachtúil (IP)** a ghineann tú agus dáileann tú í de réir téarmaí trédhearcacha.                                            | **Is le d'institiúid baile an IP** a ghineann tú. Níl rochtain ar an IP trédhearcach.                                        |
-| **Sharing all of the research**, including the data from unsuccessful efforts, by having all steps onchain.                                          | Ciallaíonn **Laofacht Foilsitheoireachta** gur mó an seans go roinnfidh taighdeoirí turgnaimh a raibh torthaí rathúla orthu. |
+| **An taighde ar fad a roinnt**, lena n-áirítear na sonraí ó iarrachtaí nár éirigh leo, trí gach céim ar slabhra a bheith agat.                       | Ciallaíonn **Laofacht Foilsitheoireachta** gur mó an seans go roinnfidh taighdeoirí turgnaimh a raibh torthaí rathúla orthu. |
 
 ## Ethereum agus DeSci {#ethereum-and-desci}
 
@@ -76,7 +76,7 @@ Is fadhb mhór í maoin intleachtúil (IP) san eolaíocht thraidisiúnta: ó bhe
 
 Ar an mbealach céanna inar féidir le NFTanna ioncam ó idirbhearta sa todhchaí a thabhairt ar ais chuig an mbunchruthaitheoir, is féidir slabhraí leithdháilte luacha trédhearcacha a bhunú chun luach saothair a thabhairt do thaighdeoirí, do chomhlachtaí rialaithe (cosúil le DAOanna), nó fiú do na daoine a mbailítear a gcuid sonraí uathu.
 
-Is féidir le [IP-NFTanna](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) feidhmiú mar eochair do stór sonraí díláraithe de na turgnaimh thaighde atá ar siúl, agus plugáil isteach i NFT agus in airgeadú [deFi](/glossary/#defi) (lena n-áirítear codánú, linnte iasachtaithe agus breithmheas luacha). It also allows natively onchain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly onchain. D’fhéadfadh go mbeadh ról tábhachtach ag teacht [ chomharthaí “soulbound”](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) i DeSci freisin trí ligean do dhaoine aonair a gcuid taithí agus dintiúir a chruthú atá nasctha lena seoladh Ethereum.
+Is féidir le [IP-NFTanna](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) feidhmiú mar eochair do stór sonraí díláraithe de na turgnaimh thaighde atá ar siúl, agus plugáil isteach i NFT agus in airgeadú [deFi](/glossary/#defi) (lena n-áirítear codánú, linnte iasachtaithe agus breithmheas luacha). Ligeann sé freisin d’aonáin dhúchasacha ar slabhra ar nós DAOnna mar [VitaDAO](https://www.vitadao.com/) taighde a dhéanamh go díreach ar slabhra. D’fhéadfadh go mbeadh ról tábhachtach ag teacht [ chomharthaí “soulbound”](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) i DeSci freisin trí ligean do dhaoine aonair a gcuid taithí agus dintiúir a chruthú atá nasctha lena seoladh Ethereum.
 
 ### Stóráil sonraí, rochtain agus ailtireacht {#data-storage}
 
@@ -95,7 +95,6 @@ Foghlaim faoi thionscadail agus bí páirteach i bpobal DeSci.
 - [Molecule: Tabhair maoiniú do thionscadail taighde agus faigh maoiniú dóibh](https://www.molecule.xyz/)
 - [VitaDAO: maoiniú a fháil trí chomhaontuithe taighde urraithe do thaighde fad saoil](https://www.vitadao.com/)
 - [ResearchHub: postáil toradh eolaíoch agus gabháil do chomhrá le piaraí](https://www.researchhub.com/)
-- [LabDAO: filleadh próitéine in silico](https://alphafodl.vercel.app/)
 - [dClimate API: fiosraigh sonraí aeráide arna mbailiú ag pobal díláraithe](https://api.dclimate.net/)
 - [Fondúireacht DeSci: Tógálaí uirlisí foilsitheoireachta DeSci](https://descifoundation.org/)
 - [DeSci.World: ionad ilfhreastail d’úsáideoirí le féachaint ar an eolaíocht dhíláraithe, agus le dul i ngleic leí](https://desci.world)
