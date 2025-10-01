@@ -60,7 +60,7 @@ Verkle ağacı test ağları zaten aktif ve çalışıyor, ancak Verkle ağaçla
 - [Guillaume Ballet ETHGlobal'de Verkle ağaçlarını açıklıyor](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Verkle ağaçları Ethereum'u nasıl yalın ve anlamlı kılar", Devcon 6'da Guillaume Ballet](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Durumsuz müşteriler, ETHDenver 2020'den Piper Merriam](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest, Sıfır Bilgi podcast'inde Verkle ağaçlarını ve durumsuzluğu açıklıyor](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest, Sıfır Bilgi podcast'inde Verkle ağaçlarını ve durumsuzluğu açıklıyor](https://zeroknowledge.fm/podcast/202/)
 - [Verkle ağaçları, Vitalik Buterin](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Verkle ağaçları, Dankrad Feist](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Verkle ağacı EIP Belgeleri](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

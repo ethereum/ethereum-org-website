@@ -18,7 +18,7 @@ lang: el
 
 ## Προαπαιτούμενα {#prerequisites}
 
-Πριν καταπιαστείτε με τα πλαίσια, σας συνιστούμε να διαβάσετε πρώτα την εισαγωγή μας στα [dapp](/developers/docs/dapps/) και στο < [Ethereum stack](/developers/docs/ethereum-stack/).
+Πριν καταπιαστείτε με τα πλαίσια, σας συνιστούμε να διαβάσετε πρώτα την εισαγωγή μας στα [dapp](/developers/docs/dapps/) και στο [Ethereum stack](/developers/docs/ethereum-stack/).
 
 ## Διαθέσιμα πλαίσια ανάπτυξης {#available-frameworks}
 
@@ -63,7 +63,7 @@ lang: el
 **Tenderly -** **_Πλατφόρμα ανάπτυξης Web3 που δίνει τη δυνατότητα στους προγραμματιστές του blockchain να κατασκευάζουν, να δοκιμάζουν, να εντοπίζουν σφάλματα, να παρακολουθούν και να λειτουργούν έξυπνα συμβόλαια και να βελτιώνουν το UX των dapp._**
 
 - [Ιστότοπος](https://tenderly.co/)
-- [Τεκμηρίωση](https://docs.tenderly.co/ethereum-development-practices)
+- [Τεκμηρίωση](https://docs.tenderly.co/)
 
 **The Graph -** **_Για την αποτελεσματική αναζήτηση δεδομένων blockchain._**
 

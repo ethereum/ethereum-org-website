@@ -28,8 +28,6 @@
   "page-local-environment-setup-subtitle": "構築を開始する準備ができたら、スタックを選択する時間です。",
   "page-local-environment-setup-subtitle-2": " ここでは、Ethereumアプリケーションの構築に役立つツールとフレームワークを紹介します。",
   "page-local-environment-setup-title": "ローカル開発環境をセットアップする",
-  "page-local-environment-solidity-template-desc": "Solidityスマートコントラクト用のビルド済みセットアップ用のGitHubテンプレート。 Hardhatローカルネットワーク、テストのためのワッフル、財布の実装のためのEtherなどが含まれています。",
-  "page-local-environment-solidity-template-logo-alt": "Solidityテンプレートのロゴ",
-  "page-local-environment-waffle-desc": "スマートコントラクトのための最も高度なテストリブ。単独またはScaffoldethまたはHardhatで使用してください。",
-  "page-local-environment-waffle-logo-alt": "Waffleロゴ"
+  "page-local-environment-solidity-template-desc": "Solidityスマートコントラクト用の事前構築されたセットアップのためのGitHubテンプレート。Hardhatローカルネットワーク、ウォレット実装のためのEthersなどが含まれています。",
+  "page-local-environment-solidity-template-logo-alt": "Solidityテンプレートのロゴ"
 }

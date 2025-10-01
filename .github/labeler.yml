@@ -12,11 +12,11 @@
 "dependencies 📦":
   - package.json
   - yarn.lock
+  - pnpm-lock.yaml
 
 "config ⚙️":
   - i18n.config.json
   - next.config.js
-  - next-i18next.config,js
   - next-sitemap.config.js
   - tsconfig.json
   - .nvmrc

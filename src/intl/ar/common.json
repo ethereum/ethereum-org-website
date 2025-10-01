@@ -76,7 +76,6 @@
   "enterprise": "شركة",
   "enterprise-mainnet": "الشركة - شبكة إيثريوم الرئيسية",
   "enterprise-menu": "قائمة الشركات",
-  "enterprise-private": "الشركة - إيثريوم الخاص",
   "esp": "برنامج دعم النظام البيئي",
   "eth-current-price": "سعر ETH الحالي (بالدولار الأمريكي)",
   "ethereum": "إثيريوم",
@@ -228,7 +227,7 @@
   "nav-contribute-description": "إذا كنت تريد المساعدة، فهذا سيوجهك",
   "nav-contribute-label": "الإسهام في ethereum.org",
   "nav-dao-description": "المجتمعات التي يمتلكها الأعضاء من دون سلطة مركزية",
-  "nav-dapps-description": "استكشف منظومة غنية من التطبيقات باستخدام إيثريوم",
+  "nav-apps-description": "استكشف منظومة غنية من التطبيقات باستخدام إيثريوم",
   "nav-defi-description": "بديل عالمي مفتوح للسوق المالية التقليدية",
   "nav-desci-description": "نظام عالمي ومفتوح بديل للنظام العلمي الحالي",
   "nav-desoc-description": "منصات قائمة على البلوكتشين للتفاعل الاجتماعي وإنشاء المحتوى",
@@ -277,7 +276,7 @@
   "nav-layer-2-description": "معاملات أرخص وأسرع لإيثريوم",
   "nav-learn-by-coding-description": "أدوات ستساعدك على تجربة إيثريوم",
   "nav-local-env-description": "اختر حزمة تطوير إيثريوم الخاصة بك وقم بإعدادها",
-  "nav-mainnet-description": "يمكن بناء تطبيقات بلوكتشين الخاصة بالشركات على شبكة إيثريوم الرئيسية العامة",
+  "nav-enterprise-description": "يمكن بناء تطبيقات بلوكتشين الخاصة بالشركات على شبكة إيثريوم الرئيسية العامة",
   "nav-nft-description": "طريقة لتمثيل أي شيء فريد بوصفه أصلاً مستندًا إلى إيثريوم",
   "nav-open-research-description": "تُعَد إحدى نقاط القوة الأساسية في إيثريوم هي مجتمع البحوث النشط الخاص به",
   "nav-open-research-label": "البحث المفتوح",
@@ -324,6 +323,8 @@
   "nav-staking-solo-description": "يمكنك التشغيل على جهازك المنزلي، وتعزيز أمان ولامركزية شبكة إيثريوم بشكلٍ شخصي",
   "nav-staking-solo-label": "تجميد العملات الفردي",
   "nav-start-building-description": "معلومات مفيدة للمستجدين",
+  "nav-start-with-crypto-title": "ابدأ من هنا",
+  "nav-start-with-crypto-description": "خطواتك الأولى باستخدام إثريوم",
   "nav-translation-program-description": "جهد تعاوني لترجمة موقع ethereum.org إلى جميع اللغات",
   "nav-tutorials-description": "قائمة منسقة من تعليمات الاستخدام المجتمعية",
   "nav-use-cases-description": "اكتشف أفكارًا مختلفة لاستخدام إيثريوم",
@@ -431,5 +432,8 @@
   "withdrawals": "عمليات سحب تجميد العملات",
   "wrapped-ether": "Wrapped Ether",
   "yes": "نعم",
-  "zero-knowledge-proofs": "براهين المعرفة الصفرية"
+  "zero-knowledge-proofs": "براهين المعرفة الصفرية",
+  "ethereum-vs-bitcoin": "الإيثيريوم مقابل البيتكوين",
+  "nav-ethereum-vs-bitcoin-description": "فهم الاختلافات بين الإيثيريوم والبيتكوين"
+
 }

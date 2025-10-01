@@ -76,7 +76,6 @@
   "enterprise": "Müəssisə",
   "enterprise-mainnet": "\tMüəssisə - Ethereum-un Əsas şəbəkəsi",
   "enterprise-menu": "Müəssisə Menyu",
-  "enterprise-private": "\tMüəssisə - Ethereum-un Özəl şəbəkəsi",
   "esp": "Ekosistemə Dəstək Proqramı",
   "eth-current-price": "Cari ETH qiyməti (USD)",
   "ethereum": "Ethereum",
@@ -228,7 +227,7 @@
   "nav-contribute-description": "Kömək etmək istəyirsinizsə, bu sizi yönləndirəcək",
   "nav-contribute-label": "ethereum.org saytına töhfə et",
   "nav-dao-description": "Mərkəzləşdirilmiş rəhbərliyi olmayan üzvlərə məxsus icmalar",
-  "nav-dapps-description": "Ethereum-dan istifadə edərək tətbiqlərin zəngin ekosistemini araşdırın",
+  "nav-apps-description": "Ethereum-dan istifadə edərək tətbiqlərin zəngin ekosistemini araşdırın",
   "nav-defi-description": "Ənənəvi maliyyə bazarının qlobal, açıq alternativi",
   "nav-desci-description": "Mövcud elmi sistemə qlobal, açıq alternativ",
   "nav-desoc-description": "Sosial qarşılıqlı əlaqə və məzmun yaradılması üçün blokçeyn əsaslı platformalar",
@@ -277,7 +276,7 @@
   "nav-layer-2-description": "Ethereum üçün daha ucuz və daha sürətli tranzaksiyalar",
   "nav-learn-by-coding-description": "Ethereum-u sınamanıza kömək edən alətlər",
   "nav-local-env-description": "Ethereum inkişaf platformanızı seçin və quraşdırın",
-  "nav-mainnet-description": "Ethereum-un əsas ictimai şəbəkəsində qurula biləcək olan Müəssisə blokçeyn tətbiqləri",
+  "nav-enterprise-description": "Ethereum-un əsas ictimai şəbəkəsində qurula biləcək olan Müəssisə blokçeyn tətbiqləri",
   "nav-nft-description": "Unikal olan hər bir şeyin Ethereum əsaslı aktiv kimi təqdim edilmə yolu",
   "nav-open-research-description": "Ethereum-un əsas güclü tərəflərindən biri onun fəal tədqiqat icmasıdır",
   "nav-open-research-label": "Açıq araşdırma",
@@ -323,6 +322,8 @@
   "nav-staking-solo-description": "Ev avadanlıqlarını işə salın və Ethereum şəbəkəsinin təhlükəsizliyinə və mərkəzsizləşdirilməsinə şəxsən əlavə edin",
   "nav-staking-solo-label": "Solo payçılıq",
   "nav-start-building-description": "Yeni başlayanlar üçün faydalı məlumat",
+  "nav-start-with-crypto-title": "Buradan başlayın",
+  "nav-start-with-crypto-description": "Ethereum ilə ilk addımlarınız",
   "nav-translation-program-description": "ethereum.org saytının bütün dillərə tərcümə edilməsi üçün birgə səy",
   "nav-tutorials-description": "İcma təlimatlarının seçilmiş siyahısı",
   "nav-use-cases-description": "Ethereum-un istifadəsi üçün fərqli ideyalar kəşf edin",
@@ -430,5 +431,8 @@
   "withdrawals": "Payın çıxarılması",
   "wrapped-ether": "Tokenləşdirilmiş Ether",
   "yes": "Bəli",
-  "zero-knowledge-proofs": "Sıfır biliklərlə təsdiqləmə"
+  "zero-knowledge-proofs": "Sıfır biliklərlə təsdiqləmə",
+  "ethereum-vs-bitcoin": "Ethereum və Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum və Bitcoin arasındakı fərqləri anlayın"
+
 }

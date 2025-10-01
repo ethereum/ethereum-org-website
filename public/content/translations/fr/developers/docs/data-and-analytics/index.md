@@ -47,7 +47,7 @@ Pour commencer, consultez le [guide de démarrage rapide Ethereum](https://acade
 
 ## Complément d'information {#further-reading}
 
-- [Présentation du réseau Graph](https://thegraph.com/docs/en/about/network/)
+- [Présentation du réseau Graph](https://thegraph.com/docs/en/about/)
 - [Bac à sable de requêtes Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Examples de code d'APIs sur EtherScan](https://etherscan.io/apis#contracts)
 - [Explorateur de Beacon Chain](https://beaconcha.in)

@@ -25,11 +25,11 @@ published: 2021-02-26
 - Você tem usado gerenciadores de pacotes como Yarn ou NPM
 - Você possui um conhecimento muito básico de contratos inteligentes e Solidity
 
-# Introdução {#getting-started}
+## Introdução {#getting-started}
 
 O tutorial demonstra a configuração do teste e a execução usando yarn, mas não há problema se você preferir npm - Eu fornecerei referências adequadas a [documentação](https://ethereum-waffle.readthedocs.io/en/latest/index.html) oficial do Waffle.
 
-## Instalando Dependências {#install-dependencies}
+### Instalando Dependências {#install-dependencies}
 
 [Adicione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) as dependências do ethereum-waffle e typescript às dependências de desenvolvimento do seu projeto.
 
@@ -37,7 +37,7 @@ O tutorial demonstra a configuração do teste e a execução usando yarn, mas n
 yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
-## Exemplo de contrato inteligente {#example-smart-contract}
+### Exemplo de contrato inteligente {#example-smart-contract}
 
 Durante o tutorial, nós trabalharemos em um exemplo de contrato inteligente simples - EtherSplitter. Não faz nada de mais, além de permitir que qualquer um envie somas em wei e divida-as igualmente entre dois destinatários predefinidos. A função split exige que a quantidade de wei seja par, caso contrário, ela será anulada. Para ambos os destinatários, ela realiza uma transferência em wei, seguido da emissão do evento Transferir.
 
@@ -67,7 +67,7 @@ contract EtherSplitter {
 }
 ```
 
-## Compilar o contrato {#compile-the-contract}
+### Compilar o contrato {#compile-the-contract}
 
 Para [compilar](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) o contrato, adicione a seguinte entrada ao arquivo package.json:
 
@@ -90,7 +90,7 @@ Em seguida, crie o arquivo de configuração do Waffle, no diretório raiz do pr
 
 Execute `yarn build`. Como resultado, o diretório `build` aparecerá com o contrato compilado, EtherSplitter, no formato JSON.
 
-## Teste de configuração {#test-setup}
+### Teste de configuração {#test-setup}
 
 Testar com Waffle requer usar os matchers (comparadores) Chai e Mocha, então você precisa [adicionar](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) ao seu projeto. Atualize seu arquivo package.json e adicione a entrada `test` na parte de scripts:
 
@@ -103,7 +103,7 @@ Testar com Waffle requer usar os matchers (comparadores) Chai e Mocha, então vo
 
 Se você quiser [executar](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) seus testes, basta executar `yarn test`.
 
-# Testando {#testing}
+## Testando {#testing}
 
 Agora crie o diretório `test` e crie o novo arquivo `test\EtherSplitter.test.ts`. Copie o trecho de código abaixo e cole-o em nosso arquivo de teste.
 
@@ -134,7 +134,7 @@ Algumas palavras antes de começarmos. O `MockProvider` vem com uma versão em m
 
 Em seguida, declaramos uma variável chamada 'splitter' - este é o nosso contrato mock EtherSplitter. Ele é criado antes de cada execução de um único teste pelo método `deployContract`. Este método simula a implantação de um contrato, da carteira passada como primeiro parâmetro (a carteira do remetente em nosso caso). O segundo parâmetro é a ABI e o bytecode do contrato testado — passamos para lá o arquivo json do contrato EtherSplitter compilado no diretório `build`. O terceiro parâmetro é uma matriz com os argumentos do construtor do contrato que, no nosso caso, são os dois endereços dos destinatários.
 
-## changeBalances {#changebalances}
+### changeBalances {#changebalances}
 
 Primeiro, verificaremos se o método split realmente altera os saldos das carteiras dos destinatários. Se dividirmos 50 wei da conta do remetente, nós esperaríamos que os saldos de ambos os destinatários aumentassem em 25 wei. Nós usaremos o matcher `changeBalances` do Waffle:
 
@@ -162,7 +162,7 @@ Observe que, em ambos os casos de `changeBalance` e de `changeBalances`, transmi
 
 A seguir, testaremos se o evento Transfer foi emitido após cada transferência de wei. Vamos passar para outro comparador do Waffle:
 
-## Emit {#emit}
+### Emit {#emit}
 
 ```ts
 it("Emits event on the transfer to the first receiver", async () => {
@@ -180,7 +180,7 @@ it("Emits event on the transfer to the second receiver", async () => {
 
 O matcher `emit` nos permite verificar, se um contrato emitiu um evento ao chamar um método. Como parâmetros para o matcher `emit`, nós fornecemos o mock do contrato, que prevemos para emitir o evento, juntamente com o nome desse evento. Em nosso caso, o contrato simulado é o `splitter` e o nome do evento é `Transfer`. Nós também podemos verificar os valores precisos dos argumentos, com os quais o evento foi emitido - nós passamos tantos argumentos para o matcher `withArgs`, como espera a nossa declaração de evento. No caso do contrato EtherSplitter, passamos os endereços do remetente e do destinatário, juntamente com a quantia de wei transferida.
 
-## revertedWith {#revertedwith}
+### revertedWith {#revertedwith}
 
 Como último exemplo, nós verificaremos se a transação foi revertida, em caso de número desigual de wei. Usaremos o matcher `revertedWith`:
 
@@ -194,7 +194,7 @@ it("Reverts when Vei amount uneven", async () => {
 
 O teste, se aprovado, nos garantirá que a transação foi revertida de fato. No entanto, também deve haver uma correspondência exata entre as mensagens que passamos, na instrução `require` e a mensagem que esperamos em `revertedWith`. Se voltarmos ao código do contrato EtherSplitter, na declaração `require` para a quantidade wei, fornecemos a mensagem: 'Quantidade de wei desigual não permitida'. Isso corresponde à mensagem que esperamos em nosso teste. Se eles não fossem iguais, o teste falharia.
 
-# Parabéns! {#congratulations}
+## Parabéns! {#congratulations}
 
 Você acabou de dar seu primeiro grande passo para testar contratos inteligentes com Waffle! Caso esteja interessado em outros tutoriais do Waffle:
 

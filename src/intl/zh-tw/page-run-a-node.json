@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "以太坊錢包讓你可以持有位址的私密金鑰，取得數位資產的全面監護與控制，但是這些金鑰不會告知你區塊鏈的目前狀態，例如你的錢包餘額。",
   "page-run-a-node-sovereignty-2": "在預設情況下，以太坊錢包在查詢你的餘額時通常會連結第三方節點，例如 Infura 或是 Alchemy。運行你自己的節點讓你有自己的以太坊區塊鏈副本。",
   "page-run-a-node-title": "運行節點",
+  "page-run-a-node-meta-title": "如何運行以太坊節點",
   "page-run-a-node-voice-your-choice-title": "透過投票選擇發聲",
   "page-run-a-node-voice-your-choice-preview": "發生分叉時不要放棄控制。",
   "page-run-a-node-voice-your-choice-1": "如果發生鏈分叉，兩條鏈會出現不同規則設定，運行你自己的節點保證你可以選擇支持的規則設定。更新新規則或提議變更與否都取決於你。",

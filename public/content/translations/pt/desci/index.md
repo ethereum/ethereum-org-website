@@ -68,7 +68,7 @@ O modelo padrão atual para o financiamento da ciência é que indivíduos ou gr
 
 Os estudos demonstraram que os painéis de avaliação das subvenções não selecionam corretamente as propostas de elevada qualidade, uma vez que as mesmas propostas apresentadas a diferentes painéis têm resultados muito distintos. À medida que o financiamento se tornou mais escasso, concentrou-se num grupo mais pequeno de investigadores seniores com projetos intelectualmente mais conservadores. O efeito criou um cenário de financiamento hipercompetitivo, consolidando incentivos perversos e sufocando a inovação.
 
-A Web3 tem o potencial de romper com este modelo de financiamento obsoleto, experimentando diferentes modelos de incentivo desenvolvidos pelas DAOs e pela Web3 em geral. [Financiamento retroativo de bens públicos](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [financiamento quadrático](https://papers.ssrn. com/sol3/papers.cfm?abstract_id=2003531), [governança DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) e [estruturas de incentivo tokenizadas](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) são algumas das Ferramentas Web3 que podem revolucionar o financiamento da ciência.
+A Web3 tem o potencial de romper com este modelo de financiamento obsoleto, experimentando diferentes modelos de incentivo desenvolvidos pelas DAOs e pela Web3 em geral. [Financiamento retroativo de bens públicos](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [financiamento quadrático](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [governança DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) e [estruturas de incentivo tokenizadas](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) são algumas das Ferramentas Web3 que podem revolucionar o financiamento da ciência.
 
 ### Propriedade intelectual e desenvolvimento {#ip-ownership}
 
@@ -95,8 +95,7 @@ Explore projetos e junte-se à comunidade DeSci.
 - [Molecule: Financie e obtenha financiamento para os seus projetos de investigação](https://www.molecule.xyz/)
 - [VitaDAO: receba financiamento através de acordos de investigação patrocinados para a investigação sobre a longevidade](https://www.vitadao.com/)
 - [ResearchHub: publique um resultado científico e participe numa conversa com os seus pares](https://www.researchhub.com/)
-- [LabDAO: dobre uma proteína in-silico](https://alphafodl.vercel.app/)
-- [API dClimate: consulte os dados climáticos recolhidos por uma comunidade descentralizada](https://api.dclimate.net/)
+- [API dClimate: consulte os dados climáticos recolhidos por uma comunidade descentralizada](https://www.dclimate.net/)
 - [Fundação DeSci: Criação de ferramentas de publicação DeSci](https://descifoundation.org/)
 - [DeSci.World: um balcão único para visualização e envolvimento dos utilizadores com a ciência descentralizada](https://desci.world)
 - [OceanDAO: financiamento gerido por uma DAO para a ciência relacionada com os dados](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Aceitamos sugestões para novos projetos a serem incluídos na lista - consulte 
 - [Um guia para a biotecnologia descentralizada por Jocelynn Pearl para a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [O argumento a favor do DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guia do DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Recursos científicos descentralizados](https://www.vincentweisser.com/decentralized-science)
+- [Recursos científicos descentralizados](https://www.vincentweisser.com/desci)
 - [IP-NFTs biofarmacêuticos da Molecule - Uma descrição técnica](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Construir sistemas de ciência isentos de confiança por Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: O futuro da ciência descentralizada (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ Aceitamos sugestões para novos projetos a serem incluídos na lista - consulte 
 - [DeSci: O Futuro da Investigação por Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financiamento da ciência (Epílogo: DeSci e novos primitivos criptográficos) por Nadia](https://nadia.xyz/science-funding)
 - [A descentralização está a desestabilizar o desenvolvimento de medicamentos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [O que é o DeSci - Ciência Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [O que é o DeSci - Ciência Descentralizada?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vídeos {#videos}
 

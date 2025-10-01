@@ -57,7 +57,7 @@ Zdecentralizowana tożsamość ma wiele potencjalnych zastosowań:
 
 Zdecentralizowana tożsamość może pomóc w zastąpieniu logowania opartego na haśle zdecentralizowanym uwierzytelnianiem. Dostawcy usług mogą wydawać użytkownikom poświadczenia, które można przechowywać w portfelu Ethereum. Przykładowym poświadczeniem może być token [NFT](/glossary/#nft) przyznający posiadaczowi dostęp do społeczności internetowej.
 
-Funkcja [logowania z Ethereum](https://login.xyz/) umożliwiłaby wtedy serwerom potwierdzenie konta Ethereum użytkownika i pobranie wymaganego poświadczenia z adresu jego konta. Oznacza to, że użytkownicy mogą uzyskać dostęp do platform i stron internetowych bez konieczności zapamiętywania długich haseł, co znacząco poprawia komfort działania w Internecie.
+Funkcja [logowania z Ethereum](https://siwe.xyz/) umożliwiłaby wtedy serwerom potwierdzenie konta Ethereum użytkownika i pobranie wymaganego poświadczenia z adresu jego konta. Oznacza to, że użytkownicy mogą uzyskać dostęp do platform i stron internetowych bez konieczności zapamiętywania długich haseł, co znacząco poprawia komfort działania w Internecie.
 
 ### 2. Uwierzytelnianie KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 ### Społeczności {#communities}
 
 - [Sojusz ERC-725 na GitHub](https://github.com/erc725alliance) — _zwolennicy standardu ERC725 do zarządzania tożsamością w łańcuchu bloków Ethereum._
-- [Serwer Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _społeczność dla entuzjastów i programistów pracujących nad logowaniem za pomocą Ethereum._
+- [Serwer Discord EthID](https://discord.com/invite/ZUyG3mSXFD) — _społeczność dla entuzjastów i programistów pracujących nad logowaniem za pomocą Ethereum._
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _społeczność programistów uczestniczących w budowaniu struktury weryfikowalnych danych dla aplikacji._
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _społeczność deweloperów i twórców pracujących nad przypadkami użycia zdecentralizowanej tożsamości w różnych branżach_

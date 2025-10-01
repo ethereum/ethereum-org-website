@@ -8,7 +8,7 @@ Smart contracts zijn extreem flexibel en kunnen grote hoeveelheden waarden en ge
 
 Openbare blockchains, zoals Ethereum, maken de beveiliging van smart contracts nog ingewikkelder. Ingezette contractcode kan _gewoonlijk_ niet worden gewijzigd om beveiligingsproblemen op te lossen, terwijl activa die zijn gestolen van smart contracts extreem moeilijk te traceren zijn en meestal niet kunnen worden teruggehaald vanwege de onveranderlijkheid.
 
-Hoewel de cijfers variëren, wordt geschat dat het totale bedrag aan waarde dat gestolen of verloren is gegaan door beveiligingsfouten in smart contracts al gauw meer dan $1 miljard bedraagt. Hieronder vallen ook opvallende incidenten, zoals de [DAO-hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6M ETH gestolen, met een waarde van meer dan 1 miljard dollar in de huidige prijzen), [Parity multisig-wallethack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30M verloren aan hackers), en het [Parity frozen wallet-probleem](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (meer dan $300M in ETH voor altijd vergrendeld).
+Hoewel de cijfers variëren, wordt geschat dat het totale bedrag aan waarde dat gestolen of verloren is gegaan door beveiligingsfouten in smart contracts al gauw meer dan $1 miljard bedraagt. Hieronder vallen ook opvallende incidenten, zoals de [DAO-hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6M ETH gestolen, met een waarde van meer dan 1 miljard dollar in de huidige prijzen), [Parity multisig-wallethack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30M verloren aan hackers), en het [Parity frozen wallet-probleem](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (meer dan $300M in ETH voor altijd vergrendeld).
 
 De bovengenoemde problemen maken het noodzakelijk voor ontwikkelaars om te investeren in het bouwen van veilige, robuuste en veerkrachtige smart contracts. De beveiliging van smart contracts is een serieuze zaak en iedere ontwikkelaar doet er goed aan om dit te leren. Deze gids behandelt de beveiligingsaspecten voor Ethereum-ontwikkelaars en gaat in op bronnen voor het verbeteren van de beveiliging van smart contracts.
 
@@ -115,7 +115,7 @@ Het bestaan van audits en bug bounties is geen excuus voor uw verantwoordelijkhe
 
 - Gebruik een [ontwikkelomgeving](/developers/docs/frameworks/) voor het testen, compileren en implementeren van smart contracts
 
-- Voer uw code uit op standaard codeanalyse-programma's, zoals [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril en Slither. Idealiter zou u dit moeten doen voordat elke pull request wordt samengevoegd en de verschillen in uitvoer vergelijken
+- Voer uw code uit op standaard codeanalyse-programma's, zoals [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril en Slither. Idealiter zou u dit moeten doen voordat elke pull request wordt samengevoegd en de verschillen in uitvoer vergelijken
 
 - Zorg ervoor dat uw code zonder fouten wordt gecompileerd en dat de Solidity-compiler geen waarschuwingen afgeeft
 
@@ -223,7 +223,7 @@ Meer over [het ontwerpen van veilige bestuurssystemen](https://blog.openzeppelin
 
 Traditionele software-ontwikkelaars zijn bekend met het KISS-principe (“keep it simple, stupid”), dat adviseert om geen onnodige complexiteit te introduceren in het ontwerp van software. Dit sluit aan bij de lang gekoesterde gedachte dat “complexe systemen op complexe manieren defect raken” en vatbaarder zijn voor kostbare fouten.
 
-Dingen eenvoudig houden is van bijzonder belang bij het schrijven van smart contracts, aangezien smart contracts potentieel grote hoeveelheden waarde controleren. Een tip om alles eenvoudig te houden bij het schrijven van smart contracts, is het waar mogelijk hergebruiken van bestaande bibliotheken, zoals [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/). Omdat deze bibliotheken uitgebreid zijn gecontroleerd en getest door ontwikkelaars, verkleint het gebruik ervan de kans op het introduceren van bugs door nieuwe functionaliteit vanaf nul te schrijven.
+Dingen eenvoudig houden is van bijzonder belang bij het schrijven van smart contracts, aangezien smart contracts potentieel grote hoeveelheden waarde controleren. Een tip om alles eenvoudig te houden bij het schrijven van smart contracts, is het waar mogelijk hergebruiken van bestaande bibliotheken, zoals [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/). Omdat deze bibliotheken uitgebreid zijn gecontroleerd en getest door ontwikkelaars, verkleint het gebruik ervan de kans op het introduceren van bugs door nieuwe functionaliteit vanaf nul te schrijven.
 
 Een ander veelgebruikt advies is om kleine functies te schrijven en contracten modulair te houden door bedrijfslogica te verdelen over verschillende contracten. Niet alleen verkleint het schrijven van eenvoudigere code het aanvalsoppervlak in een smart contract, het maakt het ook eenvoudiger om te redeneren over de correctheid van het totale systeem en mogelijke ontwerpfouten vroegtijdig op te sporen.
 
@@ -304,7 +304,7 @@ Er is hier niets aan de hand, behalve dat `Attacker` een andere functie heeft di
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-De conclusie is dat omdat het saldo van de oproeper niet op 0 wordt gezet totdat de uitvoering van de functie is voltooid, latere oproepen zullen slagen en de oproeper in staat stellen zijn/haar saldo meerdere keren op te nemen. Dit soort aanval kan gebruikt worden om middelen van een smart contract leeg te halen, zoals gebeurde in de [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy-aanvallen zijn vandaag de dag nog steeds een kritiek probleem voor smart contracts, zoals blijkt uit [openbare lijsten van reentrancy-exploitaties](https://github.com/pcaversaccio/reentrancy-attacks).
+De conclusie is dat omdat het saldo van de oproeper niet op 0 wordt gezet totdat de uitvoering van de functie is voltooid, latere oproepen zullen slagen en de oproeper in staat stellen zijn/haar saldo meerdere keren op te nemen. Dit soort aanval kan gebruikt worden om middelen van een smart contract leeg te halen, zoals gebeurde in de [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy-aanvallen zijn vandaag de dag nog steeds een kritiek probleem voor smart contracts, zoals blijkt uit [openbare lijsten van reentrancy-exploitaties](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Hoe reentrancy-aanvallen voorkomen
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-U kunt ook een [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment)-systeem gebruiken waarbij gebruikers middelen moeten opnemen van de smart contracts, in plaats van een "push payments"-systeem dat middelen naar accounts stuurt. Dit voorkomt de mogelijkheid om onbedoeld code op onbekende adressen te activeren (en kan ook bepaalde denial-of-service-aanvallen voorkomen).
+U kunt ook een [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)-systeem gebruiken waarbij gebruikers middelen moeten opnemen van de smart contracts, in plaats van een "push payments"-systeem dat middelen naar accounts stuurt. Dit voorkomt de mogelijkheid om onbedoeld code op onbekende adressen te activeren (en kan ook bepaalde denial-of-service-aanvallen voorkomen).
 
 #### Integer underflows en overflows {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 ### Tools voor het monitoren van smart contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Een tool voor het automatisch monitoren van en reageren op evenementen, functies en transactieparameters op uw smart contracts._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Een tool voor het ontvangen van realtime meldingen wanneer ongebruikelijke of onverwachte evenementen plaatsvinden op uw smart contracts of wallets._
 
 ### Tools voor veilig beheer van smart contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface voor smart contractbeheer, met toegangscontroles, upgrades en pauzeren._
-
 - **[Safe](https://safe.global/)** - _Smart contract-wallet die werken op Ethereum en waarbij een minimaal aantal mensen nodig is om een transactie goed te keuren voordat deze kan plaatsvinden (M-van-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contractbibliotheken voor het implementeren van administratieve functies, waaronder contracteigendom, upgrades, toegangscontroles, bestuur, pauzeerbaarheid en meer._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Contractbibliotheken voor het implementeren van administratieve functies, waaronder contracteigendom, upgrades, toegangscontroles, bestuur, pauzeerbaarheid en meer._
 
 ### Auditingservices voor smart contracts {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 - **[Hacken](https://hacken.io)** - _Web3-cyberbeveiligingsauditor die een 360-gradenaanpak levert voor blockchainbeveiliging._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity- en Cairo-auditservices, die de integriteit van smart contracts en de beveiliging van gebruikers op Ethereum en Starknet waarborgen._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity- en Cairo-auditservices, die de integriteit van smart contracts en de beveiliging van gebruikers op Ethereum en Starknet waarborgen._
 
 - **[HashEx](https://hashex.org/)** - _HashEx richt zich op blockchain- en smart contract-auditing om de beveiliging van cryptovaluta te garanderen, en levert services zoals smart contract-ontwikkeling, penetratietesten en blockchain-consulting._
 
@@ -515,7 +511,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3-beveiligingskrachtpatser die cryptobeveiliging stimuleert via producten en auditservices voor smart contracts._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3-beveiligingsfirma die beveiligingsaudits aanbiedt voor blockchainsystemen via een team van ervaren auditors en eersteklas tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3-beveiligingsfirma die beveiligingsaudits aanbiedt voor blockchainsystemen via een team van ervaren auditors en eersteklas tools._
 
 - **[Oxorio](https://oxor.io/)** - _Audits van smart contracts en blockchain-beveiligingsservices met expertise in EVM, Solidity, ZK, Cross-chain tech voor cryptofirma's en DeFi-projecten._
 
@@ -535,7 +531,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 ### Publicaties van bekende kwetsbaarheden in en uitbuitingen van smart contracts {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Beginnersvriendelijke toelichting op de belangrijkste contractkwetsbaarheden, met voorbeeldcode voor de meeste situaties._
+- **[ConsenSys: Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Beginnersvriendelijke toelichting op de belangrijkste contractkwetsbaarheden, met voorbeeldcode voor de meeste situaties._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Samengestelde lijst van Common Weakness Enumeration (CWE)-items die van toepassing zijn op smart contracts van Ethereum._
 

@@ -1,6 +1,7 @@
+"use client"
+
 import { type ReactNode, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -13,6 +14,8 @@ import { Button } from "./ui/buttons/Button"
 import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 type FeedbackCardProps = {
   prompt?: string
@@ -23,10 +26,11 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const isTutorial = asPath?.includes("tutorials")
+  const isTutorial = pathname?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
@@ -65,7 +69,9 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
       dir={dir}
     >
       <div className="flex flex-col gap-4">
-        <h4 className="mb-2">{getTitle(feedbackSubmitted)}</h4>
+        <h2 className="mb-2 text-xl lg:text-2xl">
+          {getTitle(feedbackSubmitted)}
+        </h2>
         {feedbackSubmitted && (
           <p>
             {t("feedback-widget-thank-you-subtitle")}{" "}
@@ -76,11 +82,11 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
           {!feedbackSubmitted ? (
             <>
               <Button variant="outline" onClick={() => handleSubmit(true)}>
-                <FeedbackThumbsUpIcon className="h-6 w-6" />
+                <FeedbackThumbsUpIcon className="text-2xl" />
                 {t("yes")}
               </Button>
               <Button variant="outline" onClick={() => handleSubmit(false)}>
-                <FeedbackThumbsUpIcon className="-scale-y-100" />
+                <FeedbackThumbsUpIcon className="-scale-y-100 text-2xl" />
                 {t("no")}
               </Button>
             </>

@@ -111,7 +111,7 @@ lang: zh
 #### 近期的研究 {#recent-research-2}
 
 - [面向排序者的 Arbitrum 公平排序](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch 二层网络](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch 二层网络](https://ethresear.ch/c/layer-2/32)
 - [以卷叠为中心的路线图](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 - [钱包简介](/wallets/)
 - [钱包安全性简介](/security/)
-- [ethresear.ch 安全性](https://ethresear.ch/tag/security)
+- [Ethresear.ch 安全性](https://ethresear.ch/tag/security)
 - [EIP-2938 帐户抽象](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 帐户抽象](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -224,7 +224,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 #### 背景阅读 {#background-reading-9}
 
-- [稳健激励小组](https://ethereum.github.io/rig/)
+- [稳健激励小组](https://rig.ethereum.org/)
 - [Devconnect 上的 ETHconomics 研讨会](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### 近期的研究 {#recent-research-9}
@@ -307,7 +307,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 #### 近期的研究 {#recent-research-14}
 
-- [稳健激励小组数据分析](https://ethereum.github.io/rig/)
+- [稳健激励小组数据分析](https://rig.ethereum.org/)
 
 ## 应用程序与工具 {#apps-and-tooling}
 
@@ -377,11 +377,11 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 - [虫洞攻击报告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [以太坊合约黑客攻击事后分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新闻](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新闻](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期的研究 {#recent-research-19}
 
-- [ethresear.ch 应用程序](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch 应用程序](https://ethresear.ch/c/applications/18)
 
 ### 技术栈 {#technology-stack}
 

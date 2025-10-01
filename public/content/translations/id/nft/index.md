@@ -1,5 +1,6 @@
 ---
 title: Token yang tidak dapat dipertukarkan (NFT)
+metaTitle: Apa itu NFT? | Manfaat dan kegunaannya
 description: Gambaran umum tentang NFT di Ethereum
 lang: id
 template: use-cases
@@ -56,7 +57,7 @@ Mungkin Anda adalah seorang seniman yang ingin berbagi karya mereka menggunakan 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Jelajahi, beli, atau buat karya seni/barang koleksi NFT Anda sendiri...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Jelajahi karya seni NFT
   </ButtonLink>
 </InfoBanner>

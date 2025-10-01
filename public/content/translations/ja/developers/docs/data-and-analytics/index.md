@@ -47,7 +47,7 @@ lang: ja
 
 ## 参考文献 {#further-reading}
 
-- [Graphネットワークの概要](https://thegraph.com/docs/en/about/network/)
+- [Graphネットワークの概要](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [EtherScanのAPIコードの例](https://etherscan.io/apis#contracts)
 - [Beaconcha.inビーコンチェーンエクスプローラー](https://beaconcha.in)

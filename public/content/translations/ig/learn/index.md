@@ -89,7 +89,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   ETH 2.0 (nke a makwaara dị ka “Serenity”) na-ezo aka na nkwalite isi ọzọ nke usoro isi protocol Ethereum. Ọ jikọtara ọtụtụ ndozi na usoro isi Ethereum, ma ọ bụ “Etu otu”.
 
-  - [Otu egwuregwu asato na-agbasa iji wuo Ọgbọ ọzọ nke Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
+  - [Otu egwuregwu asato na-agbasa iji wuo Ọgbọ ọzọ nke Ethereum](https://www.coindesk.com/markets/2018/12/09/8-teams-are-sprinting-to-build-the-next-generation-of-ethereum) _Dec 9, 2018 - Christine Kim_
   - [Okporo uzo eji e scalu Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
   ## ETH 1.x {#execution-layer-upgrades}

@@ -8,7 +8,7 @@ Smart kontracts dey very flexibol, and dem kapabol to dey kontrol big-big amount
 
 Blockchains wey dey publik laik Ethereum, dey make di issues to dey sekure smart kontracts more hard. Dem nor fit shanj kontract code wey dem deploy _ushually_ to patch-patch sekurity wey nor strong, as asset wey dem steal from smart kontracts dey very difikut to track and most taims dem nor fit rikova dem bikos kontract nor dey shanj.
 
-Aldoh numbas dey difren, dem don estimate sey di total amount of value wey dem steal abi don lost bikos of sekurity wey get fault don pass $1 billion. Dis inklude events wey dey very high, laik di [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH wey dem steal, worth pass $1B for today prices), [Parity multi-sig wallet hack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (wey lose $30M to dem hackers), and di [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (ova $300M in ETH wey dey lock foreva).
+Aldoh numbas dey difren, dem don estimate sey di total amount of value wey dem steal abi don lost bikos of sekurity wey get fault don pass $1 billion. Dis inklude events wey dey very high, laik di [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH wey dem steal, worth pass $1B for today prices), [Parity multi-sig wallet hack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (wey lose $30M to dem hackers), and di [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (ova $300M in ETH wey dey lock foreva).
 
 Di issues menshon bifor make am impotant for divelopas to invest effort to dey build sekure, robust, and strong smart kontracts. Smart kontract sekurity na serious biznes, and one wey efri divelopa go do well to learn. Dis guide go kover sekurity konsiderashons for Ethereum divelopas and eksplore risorsis to dey impruf smart kontract sekurity.
 
@@ -115,7 +115,7 @@ Di existens of audits and bug bountis nor dey komot yor responsibility to write 
 
 - Make yu yus [divelopment environment ](/developers/docs/frameworks/)to dey test, kompile, deploy smart kontracts
 
-- Make yu run yor kode thru basik kode analysis tools, laik [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Normal, yu suppose do dis bifor ish pull rikwest join togeda and kompia difrens in output
+- Make yu run yor kode thru basik kode analysis tools, laik [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Normal, yu suppose do dis bifor ish pull rikwest join togeda and kompia difrens in output
 
 - Make sure sey yor kode dey kompile witout errors, and di Solidity kompila nor dey show warnings
 
@@ -223,7 +223,7 @@ More on [ hau to dey disign sekure gofanas systems](https://blog.openzeppelin.co
 
 Tradishonal softwia divelopas sabi di KISS ("kip am simpol, stupid") prinsipol, wey advise make dem nor introdus unnecessary hardnes for softwia disign. Dis dey folow di long-held tinkin wet "komplex systems fail for komplex ways" and dem dey wik to errors wey kost.
 
-To kip tins simpol na of patikular impotans wen yu dey write smart kontracts, given sey smart kontracts dey kontrol big amounts of value. One tip to ashieve simplisity wen yu dey write smart kontracts na to yus libraries wey dey exist again, laik [OpenZeppelin Kontracts](https://docs.openzeppelin.com/contracts/4.x/), wia im posibol. Bikos dem don audit and test dis libraris wella by divelopas, to dey yus dem ridus di shans to dey introdus bugs by writing new funshons from di start.
+To kip tins simpol na of patikular impotans wen yu dey write smart kontracts, given sey smart kontracts dey kontrol big amounts of value. One tip to ashieve simplisity wen yu dey write smart kontracts na to yus libraries wey dey exist again, laik [OpenZeppelin Kontracts](https://docs.openzeppelin.com/contracts/5.x/), wia im posibol. Bikos dem don audit and test dis libraris wella by divelopas, to dey yus dem ridus di shans to dey introdus bugs by writing new funshons from di start.
 
 Anoda komon advice na to write smoll funshons and kip kontracts modular by dividing biznes logik akross plenti kontracts. Not to dey only write kode wey simpol pass dey ridus di attak surface for one smart kontract, im also dey make am izy to rizin about di koretnes of di overall system and detect posibol disign errors early.
 
@@ -304,7 +304,7 @@ Nortin dey wrong here, eksept dat `Attacka` get anoda funshon wey koll`withdraw(
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Di summary bi sey bikos di kolla balans nor dey set to 0 ontil di funshon don run finish, invokashons wey follow go succeed and go allow di kolla to witdraw dia balana plenti taims. Dem fit yus dis kain attak take drain funds from di smart kontract, laik wetin hapun in di [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attaks still dey kritical issue for smart kontracts today as [di publik listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) dey show.
+Di summary bi sey bikos di kolla balans nor dey set to 0 ontil di funshon don run finish, invokashons wey follow go succeed and go allow di kolla to witdraw dia balana plenti taims. Dem fit yus dis kain attak take drain funds from di smart kontract, laik wetin hapun in di [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy attaks still dey kritical issue for smart kontracts today as [di publik listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) dey show.
 
 ##### Hau yu fit privent reentrancy attaks
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Yu fit also yus [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) system wey nid users to witdraw funds from di smart kontracts, insted of "push payments" system wey dey send funds to akants. Dis one dey rimuv di possibility to mistakenly trigga kode for unknown addresses (and e fit also privent satain denial-of-service attaks).
+Yu fit also yus [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) system wey nid users to witdraw funds from di smart kontracts, insted of "push payments" system wey dey send funds to akants. Dis one dey rimuv di possibility to mistakenly trigga kode for unknown addresses (and e fit also privent satain denial-of-service attaks).
 
 #### Integer ondaflows and ovaflows {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 ### Tools to dey yus monitor smart kontracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _ One tool to automatikaly monitor and respond to events, funshons, and transakshon parametas on yor smart kontracts._
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _One tool wey yu fit yus get real-time notifikashons wen unusual abi unexpected events hapun on yor smart kontracts abi wallets._
 
 ### Tools to dey yus sekure administrashon of smart kontracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _ Dis one na Intafase for managing smart kontract administrashon, wey inklude access kontrols, upgrades, and pausing._
-
 - **[Safe](https://safe.global/)** - _ Dis one na smart kontract wallet wey dey run on Ethereum. Im nid minimum numba of pipol to apruf one transakshon bifor im fit hapun (M-of-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _ Kontract libraries wey dem dey yus impliment administrative features, wey inklude kontract ownaship, upgrades, access kontrols, gofanans, pauseability, and more._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _ Kontract libraries wey dem dey yus impliment administrative features, wey inklude kontract ownaship, upgrades, access kontrols, gofanans, pauseability, and more._
 
 ### Smart kontract auditing savis {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 - **[Hacken](https://hacken.io)** - _ Web3 cybersekurity auditor wey dey bring di 360-degree approach to blockchain sekurity._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ Solidity and Cairo auditing savis wey sure sey di intergrity of smart kontracts and di safety of di users akross Ethereum and Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ Solidity and Cairo auditing savis wey sure sey di intergrity of smart kontracts and di safety of di users akross Ethereum and Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx dey fokus on blockchain and di smart kontract auditing to sure sey di sekurity of cryptocurrencies, dey provide savis laik smart kontract divelopment, penetrashon testing, blockchain konsulting._
 
@@ -515,7 +511,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 - **[Cyfrin](https://cyfrin.io)** - _ Web3 sekurity pawahaus, to dey inkubate crypto sekurity thru products and smart kontract auditing savis._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _ Web3 sekurity firm wey dey give sekurity audits for blockchain systems thru one team wey get ekspiriens auditors and best-in-class tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _ Web3 sekurity firm wey dey give sekurity audits for blockchain systems thru one team wey get ekspiriens auditors and best-in-class tools._
 
 - **[Oxorio](https://oxor.io/)** - _ Smart kontract audits and blockchain sekurity savis wit expatise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
 
@@ -535,7 +531,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 ### Publikashons of smart kontract wiknes and exploits wey wi sabi {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Kontract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _ Biginna-friendly eksplanashon of di most signifikant kontract wiknes, wit sampol kode for most kases._
+- **[ConsenSys: Smart Kontract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _ Biginna-friendly eksplanashon of di most signifikant kontract wiknes, wit sampol kode for most kases._
 
 - **[SWC Registry](https://swcregistry.io/)** - _ Curated list of Komon Wiknes Enumerashon (CWE) items wey apply to Ethereum smart kontracts._
 

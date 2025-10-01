@@ -116,7 +116,7 @@ Bağlantılar için yapılacak en iyi şey, üzerlerine tıklayarak veya "Kayna�
 
 ![Link örneği.png](./example-of-link.png)
 
-Bağlantılar, kaynak metinde etiketler biçiminde de görünür (örn. <0> </0>). Etiketin üzerine geldiğinizde, düzenleyici tam içeriğini gösterir: Bazen bu etiketler bağlantıları temsil eder.
+Bağlantılar, kaynak metinde etiketler biçiminde de görünür (örn. \<0> \</0>). Etiketin üzerine geldiğinizde, düzenleyici tam içeriğini gösterir: Bazen bu etiketler bağlantıları temsil eder.
 
 Bağlantıları kaynaktan kopyalamak ve sıralarını değiştirmemek çok önemlidir.
 
@@ -154,7 +154,7 @@ nonce - _Çevrilmemesi gereken metin_
 
 Kaynak metin, yalnızca sayıları içeren kısaltılmış etiketler de içerir; yani, bunların fonksiyonu hemen anlaşılabilir olmayabilir. Tam olarak hangi fonksiyonu yerine getirdiklerini görmek için imleci bu etiketlerin üzerine götürebilirsiniz.
 
-Aşağıdaki örnekte, imleç üzerine götürüldüğünde <0> etiketin `<code>` öğesini temsil ettiğini ve bir kod parçacığı içerdiğini görebilirsiniz; bu nedenle, bu etiketlerin içindeki içerik çevrilmemelidir.
+Aşağıdaki örnekte, imleç üzerine götürüldüğünde \<0> etiketin `<code>` öğesini temsil ettiğini ve bir kod parçacığı içerdiğini görebilirsiniz; bu nedenle, bu etiketlerin içindeki içerik çevrilmemelidir.
 
 ![Belirsiz etiketlerin örneği.png](./example-of-ambiguous-tags.png)
 

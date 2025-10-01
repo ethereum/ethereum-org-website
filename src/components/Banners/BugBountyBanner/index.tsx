@@ -9,11 +9,8 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        The Ethereum Protocol Attackathon is live on{" "}
-        <a href="https://immunefi.com/audit-competition/ethereum-protocol-attackathon/">
-          Immunefi
-        </a>{" "}
-        until the 20th of January, with up to $1,500,000 in rewards!
+        The Fusaka Contest is currently running on Sherlock with up to 2M USD in
+        rewards!
       </p>
     </Center>
   </BannerNotification>

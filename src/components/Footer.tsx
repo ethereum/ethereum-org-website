@@ -1,9 +1,13 @@
-import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
-import { IoChevronUpSharp } from "react-icons/io5"
+"use client"
+
+import { ChevronUp } from "lucide-react"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
+import Discord from "@/components/icons/discord.svg"
+import Farcaster from "@/components/icons/farcaster.svg"
+import Github from "@/components/icons/github.svg"
+import Twitter from "@/components/icons/twitter.svg"
 import Translation from "@/components/Translation"
 
 import { cn } from "@/lib/utils/cn"
@@ -13,19 +17,26 @@ import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 const socialLinks = [
   {
-    icon: FaGithub,
+    icon: Github,
     href: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
   },
   {
-    icon: FaXTwitter,
-    href: "https://twitter.com/ethdotorg",
-    ariaLabel: "Twitter",
+    icon: Farcaster,
+    href: "https://warpcast.com/ethdotorg",
+    ariaLabel: "Farcaster",
   },
   {
-    icon: FaDiscord,
+    icon: Twitter,
+    href: "https://x.com/ethdotorg",
+    ariaLabel: "X",
+  },
+  {
+    icon: Discord,
     href: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
   },
@@ -104,8 +115,8 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("get-eth"),
         },
         {
-          href: "/dapps/",
-          text: t("decentralized-applications-dapps"),
+          href: "/apps/",
+          text: t("application-explorer"),
         },
         {
           href: "/stablecoins/",
@@ -178,8 +189,8 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("enterprise-mainnet"),
         },
         {
-          href: "/enterprise/private-ethereum/",
-          text: t("enterprise-private"),
+          href: "/founders/",
+          text: t("founders"),
         },
       ],
     },
@@ -259,6 +270,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/governance/",
           text: t("ethereum-governance"),
         },
+        {
+          href: "/trillion-dollar-security/",
+          text: t("trillion-dollar-security"),
+        },
       ],
     },
   ]
@@ -311,18 +326,17 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         <Button
           variant="outline"
           isSecondary
-          onClick={() => scrollIntoView("__next")}
+          onClick={() => scrollIntoView("body")}
+          data-testid="footer-go-to-top"
         >
-          <IoChevronUpSharp /> Go to top
+          <ChevronUp /> <Translation id="go-to-top" />
         </Button>
       </div>
 
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
-            <h3 className="my-5 text-sm font-bold">
-              <Translation id={section.title} />
-            </h3>
+            <h3 className="my-5 text-sm font-bold">{section.title}</h3>
             <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">

@@ -34,7 +34,8 @@ export function cacheAsyncFn<T>(
         options?.cacheTimeout && cacheAge > options.cacheTimeout
 
       if (!isCacheExpired) {
-        console.log("Cache hit", key)
+        const quietKeys: string[] = ["gfissues"]
+        !quietKeys.includes(key) && console.log("Cache hit", key)
         return cachedItem.value as T
       }
       console.log("Cache expired", key)
