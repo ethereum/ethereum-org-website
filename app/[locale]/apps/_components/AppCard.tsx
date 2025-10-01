@@ -41,7 +41,7 @@ const AppCard = ({
     >
       <div
         className={cn(
-          "flex overflow-hidden rounded-xl border",
+          "flex overflow-hidden rounded-xl",
           `w-${imageSize} h-${imageSize}`
         )}
       >

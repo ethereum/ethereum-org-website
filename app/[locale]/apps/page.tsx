@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import { AppCategoryEnum, CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
@@ -26,6 +26,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
 import CommunityPicks from "./_components/CommunityPicks"
+import DevconnectBanner from "./_components/DevconnectBanner"
 import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 import AppsJsonLD from "./page-jsonld"
@@ -94,6 +95,10 @@ const Page = async ({ params }: { params: PageParams }) => {
           <div className="flex flex-col gap-8 px-4 md:px-8">
             <h2>{t("page-apps-highlights-title")}</h2>
             <AppsHighlight apps={highlightedApps} matomoCategory="apps" />
+          </div>
+
+          <div className="flex flex-col gap-4 px-4 md:px-8">
+            <DevconnectBanner apps={appsData[AppCategoryEnum.DEFI]} />
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
