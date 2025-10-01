@@ -106,10 +106,10 @@ _Σημειώστε ότι η εξήγηση στο βίντεο χρησιμο�
 - [Ένας ελλιπής οδηγός για τα rollup](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-powered ZK-Rollups: Παγκόσμιοι πρωταθλητές](https://hackmd.io/@canti/rkUT0BD8K)
 - [Πακέτα ενημέρωσης Optimistic ή ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Κλιμάκωση blockchain μηδενικής γνώσης](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Κλιμάκωση blockchain μηδενικής γνώσης](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Γιατί τα rollup και τα τμήματα δεδομένων είναι η μόνη βιώσιμη λύση για υψηλή κλιμάκωση](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Τι είδους επίπεδα 3 έχουν νόημα;](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Διαθεσιμότητα δεδομένων ή: Πώς τα πακέτα ενημέρωσης έμαθαν να σταματούν να ανησυχούν και να αγαπούν το Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
-- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum.](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Διαθεσιμότητα δεδομένων ή: Πώς τα πακέτα ενημέρωσης έμαθαν να σταματούν να ανησυχούν και να αγαπούν το Ethereum](https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
+- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum.](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
 _Γνωρίζετε κάποιο πόρο της κοινότητας που σας βοήθησε; Επεξεργαστείτε αυτή τη σελίδα και προσθέστε το!_

@@ -27,6 +27,6 @@ description: Τα κριτήριά μας για την καταχώριση τ�
 
 Αν θέλετε να προσθέσετε έναν πόρο περιεχομένου στο ethereum.org και πληροί τα κριτήρια, δημιουργήστε ένα ζήτημα στο GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Δημιουργήστε ένα ζήτημα
 </ButtonLink>
