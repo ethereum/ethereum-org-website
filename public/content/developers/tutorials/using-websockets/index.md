@@ -242,4 +242,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Sign up with Alchemy](https://auth.alchemy.com/signup) for free, check out [our documentation](https://www.alchemy.com/docs/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform).
+[Sign up with Alchemy](https://auth.alchemy.com) for free, check out [our documentation](https://www.alchemy.com/docs/), and for the latest news, follow us on [Twitter](https://x.com/AlchemyPlatform).
