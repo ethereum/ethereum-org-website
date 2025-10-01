@@ -57,7 +57,6 @@ Resources for community-driven projects and governance experiments:
 Resources for those building products and seeking investment beyond just grants:
 
 - [Web3Native](https://www.web3native.co/) - _Directory of Web3 grants, investors, and accelerator programs_
-- [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
 
 ### Public goods and impact {#public-goods-and-impact}
 
