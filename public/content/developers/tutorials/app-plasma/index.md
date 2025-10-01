@@ -94,7 +94,11 @@ These is the ways that the various components communicate to transfer from one a
 
 For the client-side code we are going to use [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) and [Wagmi](https://wagmi.sh/). These are industry standard tools, if you are not familiar with them, you can use [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-The majority of the server is written in JavaScript using [Node](https://nodejs.org/en). The zero-knowledge part is written in [Noir](https://noir-lang.org/).
+The majority of the server is written in JavaScript using [Node](https://nodejs.org/en). The zero-knowledge part is written in [Noir](https://noir-lang.org/). We need version `1.0.0-beta.10`, so after you [install Noir as instructed](https://noir-lang.org/docs/getting_started/quick_start), run:
+
+```
+noirup -v 1.0.0-beta.10
+```
 
 The blockchain we use is `anvil`, a local testing blockchain which is part of [Foundry](https://getfoundry.sh/introduction/installation).
 
@@ -124,9 +128,9 @@ To see it in action:
 
 3. Open a browser with a wallet.
 
-4. In the wallet enter a new pass phrase. Note that this will delete your existing pass phrase, so *make sure you have a backup*. 
+4. In the wallet enter a new passphrase. Note that this will delete your existing pass phrase, so *make sure you have a backup*. 
 
-   The passphrase is `test test test test test test test test test test test junk`, the default testing pass phrase for anvil.
+   The passphrase is `test test test test test test test test test test test junk`, the default testing passphrase for anvil.
 
 5. Browse to [the client-side code](http://localhost:5173/).
 
@@ -147,14 +151,18 @@ To see it in action:
 
    ```
    ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
-   [zkBank] Circuit output: Vec([Field(5873071459087041890842521225112488559115105462524655074522108820585084475437), Field(11581062510966044975749814014940525872232248132681539344842393839078106142331), Vec([Field(69), Field(12), Field(249), Field(218), Field(110), Field(24), Field(13), Field(97), Field(89), Field(41), Field(5), Field(84), Field(174), Field(61), Field(135), Field(135), Field(109), Field(139), Field(197), Field(161), Field(91), Field(144), Field(55), Field(229), Field(47), Field(181), Field(155), Field(107), Field(152), Field(114), Field(42), Field(133)])])
+   [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
    ```
+
+10. Compare the last two values to the hash you see on the web browser to see the message is hashed correctly.
 
 #### `server/noir/Prover.toml`
 
 [This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) shows the information format expected by Noir.
+
 
 ```toml
 message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
@@ -698,16 +706,29 @@ fn signatureToAddressAndHash(
         pubKeyX: [u8; 32],
         pubKeyY: [u8; 32],
         signature: [u8; 64]
-    ) -> (Field, [u8; 32])
+    ) -> (Field, Field, Field)   // address, first 16 bytes of hash, last 16 bytes of hash        
 {
 ```
 
-This function verifies the signature, which requires the message hash. It then provides us with the address that signed it, and the messge hash.
+This function verifies the signature, which requires the message hash. It then provides us with the address that signed it, and the messge hash. The message hash is provided in two `Field` values because those are easier to use in the rest of the program than a byte array.
+
+We need to use two `Field` values because field calculations are done [modulu](https://en.wikipedia.org/wiki/Modulo) some big number, but one that is typically less than 256 bits (otherwise it would be hard to do those calculations in the EVM).
 
 
 ```rust
     let hash = hashMessage(message);
 
+    let mut (hash1, hash2) = (0,0);
+
+    for i in 0..16 {
+        hash1 = hash1*256 + hash[31-i].into();
+        hash2 = hash2*256 + hash[15-i].into();
+    }
+```
+
+Specify `hash1` and `hash2` as mutable variables, and write the hash into them byte by byte.
+
+```rust
     (
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
@@ -718,7 +739,8 @@ This is similar to [Solidity's `ecrecover`](https://docs.soliditylang.org/en/v0.
 - While the public key can be recovered from the signature and the hash, this is processing that can be done externally and therefore is not worth doing inside the zero-knowledge proof. If somebody tries to cheat us here, the signature verification will fail.
 
 ```rust
-        hash
+        hash1,
+        hash2
     )
 }
 
@@ -731,7 +753,8 @@ fn main(
     ) -> pub (
         Field,  // Hash of old accounts array
         Field,  // Hash of new accounts array
-        [u8; 32], // Transaction hash (hash of the message)
+        Field,  // First 16 bytes of message hash
+        Field,  // Last 16 bytes of message hash
     )
 ```
 
@@ -745,7 +768,7 @@ Finally, we reach the `main` function. We need to prove that we have a transacti
 We need `txn` to be mutable because we don't read the from address from the message, we read it from the signature. 
 
 ```rust
-    let (fromAddress, txnHash) = signatureToAddressAndHash(
+    let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
         message,
         pubKeyX,
         pubKeyY,
@@ -758,7 +781,8 @@ We need `txn` to be mutable because we don't read the from address from the mess
     (
         hash_accounts(accounts),
         hash_accounts(newAccounts),        
-        txnHash
+        txnHash1,
+        txnHash2
     )
 }
 ```
@@ -940,10 +964,62 @@ The initial `Accounts` structure.
 
 ### Stage 3 - Ethereum smart contracts  {#stage-3}
 
+1. Stop the server and client processes.
+
+2. Download the branch with the smart contracts and ensure you have all the necessary modules.
+
+   ```sh
+   git checkout 03-smart-contracts
+   cd client
+   npm install
+   cd ../server
+   npm install
+   ```
+
+3. Compile the Noir code (it's the same as the code you used for stages 1 and 2).
+
+   ```sh
+   cd noir
+   nargo compile
+   ```
+
+4. Generate the verification key and the solidity verifier, then copy the verifier code to the Solidity project.
+
+   ```sh
+   bb write_vk -b ./target/zkBank.json -o ./target --oracle_hash keccak
+   bb write_solidity_verifier -k ./target/vk -o ./target/Verifier.sol
+   cp target/Verifier.sol ../../smart-contracts/src
+   ```
+
+5. Go to the smart contracts and set the environment variables to use the `anvil` blockchain.
+
+   ```sh
+   cd ../../smart-contracts   
+   export ETH_RPC_URL=http://localhost:8545
+   ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+   ```
+
+6. Deploy `Verifier.sol` and store the address in an environment variable.
+
+   ```sh
+   VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
+   echo $VERIFIER_ADDRESS
+   ```
+
+7. Deploy the `ZkBank` contract.
+
+   ```sh
+   ZKBANK_ADDRESS=`forge create ZkBank --private-key $ETH_PRIVATE_KEY --broadcast --constructor-args $VERIFIER_ADDRESS 0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b | awk '/Deployed to:/ {print $3}'`
+   echo $ZKBANK_ADDRESS
+   ```  
 
 ## Abuses by the centralized component {#abuses}
 
 Integrity is easy, availability hard, confidentiality impossible
+
+### Server can provide false information {#false-info}
+
+Can require a zero knowledge proof of the data
 
 ### Forced transactions {#forced-txns}
 
