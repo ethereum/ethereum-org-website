@@ -41,7 +41,8 @@
       "contractAddress": "https://aave.com/docs/resources/addresses",
       "dateOfLaunch": "9/18/2018",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Sky/Maker - USDS",
@@ -81,7 +82,8 @@
       "contractAddress": "https://developers.sky.money/quick-start/deployments-tracker/",
       "dateOfLaunch": "9/18/2024",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Ethena - USDE",
@@ -124,7 +126,8 @@
       "contractAddress": "https://docs.ethena.fi/api-documentation/overview",
       "dateOfLaunch": "2/19/2024",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Uniswap",
@@ -172,7 +175,8 @@
       "contractAddress": "https://docs.uniswap.org/contracts/v4/deployments",
       "dateOfLaunch": "11/2/2018",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Pendle",
@@ -211,7 +215,8 @@
       "contractAddress": "https://github.com/pendle-finance/pendle-core-v2-public/blob/main/deployments/1-core.json",
       "dateOfLaunch": "6/17/2021",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Spark",
@@ -250,7 +255,8 @@
       "contractAddress": "https://github.com/sparkdotfi/spark-address-registry/tree/master/src",
       "dateOfLaunch": "5/9/2023",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Morpho",
@@ -286,7 +292,8 @@
       "contractAddress": "https://docs.morpho.org/overview/resources/addresses#addresses",
       "dateOfLaunch": "12/20/2022",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Compound",
@@ -325,7 +332,8 @@
       "contractAddress": "https://docs.compound.finance/",
       "dateOfLaunch": "9/27/2018",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Curve",
@@ -362,7 +370,8 @@
       "contractAddress": "https://docs.curve.finance/deployments/amm/",
       "dateOfLaunch": "2/20/2020",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Balancer",
@@ -400,7 +409,8 @@
       "contractAddress": "https://docs.balancer.fi/developer-reference/contracts/deployment-addresses/mainnet.html",
       "dateOfLaunch": "3/31/2020",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Usual ",
@@ -439,7 +449,8 @@
       "contractAddress": "https://tech.usual.money/smart-contracts/contract-deployments",
       "dateOfLaunch": "5/23/2024",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Fluid",
@@ -477,7 +488,8 @@
       "contractAddress": "https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/deployments.md",
       "dateOfLaunch": "10/29/2024",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Frax",
@@ -514,7 +526,8 @@
       "contractAddress": "https://docs.frax.com/protocol/assets/frxusd/addresses",
       "dateOfLaunch": "12/20/2020",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Aerodrome",
@@ -549,7 +562,8 @@
       "contractAddress": "https://aerodrome.finance/security",
       "dateOfLaunch": "8/28/2023",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Moonwell",
@@ -586,7 +600,8 @@
       "contractAddress": "https://docs.moonwell.fi/moonwell/protocol-information/contracts",
       "dateOfLaunch": "8/9/2023",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Franklin Templeton - BENJI",
@@ -623,7 +638,8 @@
       "contractAddress": "https://digitalassets.franklintempleton.com/benji/benji-contracts/",
       "dateOfLaunch": "11/14/2024",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Synthetix",
@@ -659,7 +675,8 @@
       "contractAddress": "https://github.com/Synthetixio/synthetix-deployments",
       "dateOfLaunch": "6/26/2018",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "ZeroLend",
@@ -697,7 +714,8 @@
       "contractAddress": "https://docs.zerolend.xyz/security/deployed-addresses",
       "dateOfLaunch": "1/1/2023",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "SyncSwap",
@@ -735,7 +753,8 @@
       "contractAddress": "https://docs.syncswap.xyz/syncswap/smart-contracts/smart-contracts",
       "dateOfLaunch": "3/4/2023",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Ekubo",
@@ -771,7 +790,8 @@
       "contractAddress": "https://docs.ekubo.org/integration-guides/reference/contract-addresses",
       "dateOfLaunch": "8/26/2023",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Maple",
@@ -807,7 +827,8 @@
       "contractAddress": "https://github.com/maple-labs/address-registry/blob/main/MapleAddressRegistryETH.md",
       "dateOfLaunch": "5/12/2021",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Centrifuge",
@@ -844,7 +865,8 @@
       "contractAddress": "",
       "dateOfLaunch": "5/22/2023",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Goldfinch",
@@ -879,7 +901,8 @@
       "contractAddress": "",
       "dateOfLaunch": "1/31/2021",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Superstate",
@@ -914,7 +937,8 @@
       "contractAddress": "https://docs.superstate.com/introduction-to-superstate/smart-contracts",
       "dateOfLaunch": "1/3/2024",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Ondo",
@@ -950,7 +974,8 @@
       "contractAddress": "https://docs.ondo.finance/addresses",
       "dateOfLaunch": "7/27/2021",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "PayPal - PYUSD",
@@ -990,7 +1015,8 @@
       "contractAddress": "https://etherscan.io/token/0x6c3ea9036406852006290770bedfcaba0e23a0e8",
       "dateOfLaunch": "8/7/2023",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Etherisc",
@@ -1025,7 +1051,8 @@
       "contractAddress": "",
       "dateOfLaunch": "7/28/2016",
       "lastUpdated": "7/28/2016",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Polymarket",
@@ -1060,7 +1087,8 @@
       "contractAddress": "",
       "dateOfLaunch": "6/16/2020",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "1inch",
@@ -1102,7 +1130,8 @@
       "contractAddress": "https://portal.1inch.dev/documentation/contracts/aggregation-protocol/aggregation-introduction",
       "dateOfLaunch": "5/9/2019",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Liquity",
@@ -1140,7 +1169,8 @@
       "contractAddress": "https://discord.com/invite/HFKpCdgQm6",
       "dateOfLaunch": "4/5/2021",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Cowswap",
@@ -1177,7 +1207,8 @@
       "contractAddress": "https://docs.cow.fi/cow-protocol/reference/contracts/core",
       "dateOfLaunch": "4/28/2021",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "PoolTogether",
@@ -1215,7 +1246,8 @@
       "contractAddress": "https://dev.pooltogether.com/protocol/deployments/",
       "dateOfLaunch": "6/24/2019",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Yearn",
@@ -1253,7 +1285,8 @@
       "contractAddress": "https://docs.yearn.fi/developers/addresses/",
       "dateOfLaunch": "7/17/2020",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "True Markets",
@@ -1288,7 +1321,8 @@
       "contractAddress": "",
       "dateOfLaunch": "3/11/2025",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Flaunch",
@@ -1323,7 +1357,8 @@
       "contractAddress": "https://docs.flaunch.gg/developer-resources/contract-addresses",
       "dateOfLaunch": "2/1/2025",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Octant",
@@ -1360,7 +1395,8 @@
       "contractAddress": "https://github.com/golemfoundation/octant/tree/develop/contracts-v1",
       "dateOfLaunch": "8/8/2023",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "SuperFluid",
@@ -1401,7 +1437,8 @@
       "contractAddress": "0x4E583d9390082B65Bef884b629DFA426114CED6d",
       "dateOfLaunch": "",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Splits.org",
@@ -1440,7 +1477,8 @@
       "contractAddress": "",
       "dateOfLaunch": "2/15/2022",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "JuiceboxETH",
@@ -1475,7 +1513,8 @@
       "contractAddress": "https://docs.juicebox.money/v4/addresses/",
       "dateOfLaunch": "7/15/2021",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "zkp2p",
@@ -1510,7 +1549,8 @@
       "contractAddress": "https://docs.zkp2p.xyz/developer/smart-contracts/deployments",
       "dateOfLaunch": "2/3/2025",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Teller",
@@ -1547,7 +1587,8 @@
       "contractAddress": "https://docs.teller.org/v2/resources/deployed-contracts",
       "dateOfLaunch": "1/4/2021",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "EigenCloud",
@@ -1582,7 +1623,8 @@
       "contractAddress": "https://github.com/Layr-Labs/eigenlayer-contracts",
       "dateOfLaunch": "6/14/2023",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "Social": [
@@ -1624,7 +1666,8 @@
       "contractAddress": "0xaD031EeE55f595dF6Dbd61e9ef3B908FaD1B3671",
       "dateOfLaunch": "1/1/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Rodeo",
@@ -1665,7 +1708,8 @@
       "contractAddress": "",
       "dateOfLaunch": "12/24/2024",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Towns",
@@ -1701,7 +1745,8 @@
       "contractAddress": "https://docs.towns.com/towns-smart-contracts/contracts",
       "dateOfLaunch": "2/23/2023",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Farcaster",
@@ -1740,7 +1785,8 @@
       "contractAddress": "https://docs.farcaster.xyz/reference/contracts/deployments",
       "dateOfLaunch": "2/23/2023",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Orb",
@@ -1776,7 +1822,8 @@
       "contractAddress": "",
       "dateOfLaunch": "10/18/2024",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Shibuya Films",
@@ -1811,7 +1858,8 @@
       "contractAddress": "",
       "dateOfLaunch": "2/28/2022",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Hey.xyz",
@@ -1846,7 +1894,8 @@
       "contractAddress": "",
       "dateOfLaunch": "9/29/2023",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Audius",
@@ -1881,7 +1930,8 @@
       "contractAddress": "0x44617F9dCEd9787C3B06a05B35B4C779a2AA1334",
       "dateOfLaunch": "10/23/2020",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Paragraph",
@@ -1919,7 +1969,8 @@
       "contractAddress": "",
       "dateOfLaunch": "10/1/2021",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Ethereum Follow Protocol",
@@ -1958,7 +2009,8 @@
       "contractAddress": "https://docs.efp.app/production/deployments/",
       "dateOfLaunch": "9/24/2024",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "Privacy": [
@@ -2000,7 +2052,8 @@
       "contractAddress": "0xa238cbeb142c10ef7ad8442c6d1f9e89e07e7761",
       "dateOfLaunch": "2/24/2024",
       "lastUpdated": "7/9/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Rarimo",
@@ -2036,7 +2089,8 @@
       "contractAddress": "https://docs.rarimo.com/zk-passport/contracts/#deployments",
       "dateOfLaunch": "4/24/2025",
       "lastUpdated": "7/9/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Privacy Pools",
@@ -2072,7 +2126,8 @@
       "contractAddress": "0xf241d57c6debae225c0f2e6ea1529373c9a9c9fb",
       "dateOfLaunch": "3/31/2025",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Tornado Cash",
@@ -2114,7 +2169,8 @@
       "contractAddress": "https://github.com/tornadocash/docs/blob/b91f1a469ff7c7094e535fd41c4586d1080869c4/general/tornado-cash-smart-contracts.md",
       "dateOfLaunch": "12/17/2019",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "0xbow",
@@ -2149,7 +2205,8 @@
       "contractAddress": "https://docs.privacypools.com/deployments",
       "dateOfLaunch": "3/31/2025",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "Collectibles": [
@@ -2199,7 +2256,8 @@
       "contractAddress": "0xA5409eC958C83C3f309868bABaCA7c86DCB077c1 ",
       "dateOfLaunch": "12/20/2017",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Blur",
@@ -2237,7 +2295,8 @@
       "contractAddress": "https://docs.blur.foundation/contracts",
       "dateOfLaunch": "10/19/2022",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Highlight",
@@ -2277,7 +2336,8 @@
       "contractAddress": "https://support.highlight.xyz/knowledge-base/for-developers/nft-contracts/official-addresses",
       "dateOfLaunch": "7/26/2023",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Manifold",
@@ -2312,7 +2372,8 @@
       "contractAddress": "https://github.com/manifoldxyz/royalty-registry-solidity",
       "dateOfLaunch": "10/1/2021",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Rarible",
@@ -2351,7 +2412,8 @@
       "contractAddress": "https://docs.rarible.org/reference/contract-addresses",
       "dateOfLaunch": "8/17/2020",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Pudgy Penguins",
@@ -2388,7 +2450,8 @@
       "contractAddress": "https://etherscan.io/address/0xBd3531dA5CF5857e7CfAA92426877b022e612cf8",
       "dateOfLaunch": "7/22/2021",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Bored Ape Yacht Club",
@@ -2425,7 +2488,8 @@
       "contractAddress": "https://etherscan.io/address/0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
       "dateOfLaunch": "4/23/2021",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Art Blocks",
@@ -2460,7 +2524,8 @@
       "contractAddress": "https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md",
       "dateOfLaunch": "11/27/2020",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Cool Cats",
@@ -2496,7 +2561,8 @@
       "contractAddress": "https://etherscan.io/address/0x1a92f7381b9f03921564a437210bb9396471050c",
       "dateOfLaunch": "6/9/2021",
       "lastUpdated": "7/4/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Doodles",
@@ -2532,7 +2598,8 @@
       "contractAddress": "https://etherscan.io/address/0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
       "dateOfLaunch": "10/16/2021",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Basepaint",
@@ -2568,7 +2635,8 @@
       "contractAddress": "https://hackmd.io/@uTlMZA23Qz-cK8e7PqQt0A/rkOAbFIhn",
       "dateOfLaunch": "8/8/2023",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Foundation",
@@ -2604,7 +2672,8 @@
       "contractAddress": "https://os.foundation.app/docs/creator-tools/drop",
       "dateOfLaunch": "2/1/2021",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Sandbox",
@@ -2648,7 +2717,8 @@
       "contractAddress": "https://etherscan.io/token/0x3845badade8e6dff049820680d1f14bd3903a5d0",
       "dateOfLaunch": "11/29/2021",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "SuperRare",
@@ -2686,7 +2756,8 @@
       "contractAddress": "",
       "dateOfLaunch": "4/4/2018",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Decentraland",
@@ -2732,7 +2803,8 @@
       "contractAddress": "https://github.com/decentraland/marketplace/tree/master/indexer",
       "dateOfLaunch": "2/20/2020",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Magic Eden",
@@ -2769,7 +2841,8 @@
       "contractAddress": "",
       "dateOfLaunch": "9/17/2021",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Azuki",
@@ -2806,7 +2879,8 @@
       "contractAddress": "https://nfthud.io/collection/azuki",
       "dateOfLaunch": "1/12/2022",
       "lastUpdated": "7/6/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "POAP",
@@ -2846,7 +2920,8 @@
       "contractAddress": "",
       "dateOfLaunch": "1/1/2021",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Courtyard",
@@ -2881,7 +2956,8 @@
       "contractAddress": "https://docs.courtyard.io/courtyard/resources/useful-links#ethereum-mainnet",
       "dateOfLaunch": "5/8/2022",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "Gaming": [
@@ -2920,7 +2996,8 @@
       "contractAddress": "",
       "dateOfLaunch": "6/11/2025",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Remix",
@@ -2960,7 +3037,8 @@
       "contractAddress": "",
       "dateOfLaunch": "4/4/2021",
       "lastUpdated": "2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Illuvium",
@@ -2996,7 +3074,8 @@
       "contractAddress": "",
       "dateOfLaunch": "7/25/2024",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "true"
     },
     {
       "name": "Parallel",
@@ -3032,7 +3111,8 @@
       "contractAddress": "",
       "dateOfLaunch": "4/22/2024",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "DAO": [
@@ -3072,7 +3152,8 @@
       "contractAddress": "",
       "dateOfLaunch": "1/8/2020",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Tally",
@@ -3116,7 +3197,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Hats Protocol",
@@ -3159,7 +3241,8 @@
       "contractAddress": "0x3bc1A0Ad72417f2d411118085256fC53CBdDd137",
       "dateOfLaunch": "6/27/2024",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Aragon",
@@ -3196,7 +3279,8 @@
       "contractAddress": "",
       "dateOfLaunch": "10/30/2018",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "DAOhaus",
@@ -3237,7 +3321,8 @@
       "contractAddress": "https://docs.daohaus.club/contracts",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Event Horizon",
@@ -3278,7 +3363,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Splits",
@@ -3316,7 +3402,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Safe",
@@ -3360,7 +3447,8 @@
       "contractAddress": "",
       "dateOfLaunch": "7/7/2022",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Coordinape",
@@ -3399,7 +3487,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Endaoment",
@@ -3436,7 +3525,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "ResearchHub",
@@ -3472,7 +3562,8 @@
       "contractAddress": "",
       "dateOfLaunch": "2/25/2019",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Prime Intellect",
@@ -3507,7 +3598,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Agora",
@@ -3547,7 +3639,8 @@
       "contractAddress": "",
       "dateOfLaunch": "5/31/2024",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Sablier",
@@ -3590,7 +3683,8 @@
       "contractAddress": "https://github.com/sablier-labs",
       "dateOfLaunch": "12/13/2019",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "Productivity": [
@@ -3630,7 +3724,8 @@
       "contractAddress": "https://docs.ens.domains/learn/deployments",
       "dateOfLaunch": "5/4/2017",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Huddle01",
@@ -3670,7 +3765,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Livepeer",
@@ -3708,7 +3804,8 @@
       "contractAddress": "https://docs.livepeer.org/references/contract-addresses",
       "dateOfLaunch": "4/30/2018",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "ZK / Open Passport",
@@ -3741,7 +3838,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "7/21/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "QuarkID",
@@ -3778,7 +3876,8 @@
       "contractAddress": "",
       "dateOfLaunch": "1/20/2025",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Rotki",
@@ -3820,7 +3919,8 @@
       "contractAddress": "",
       "dateOfLaunch": "10/1/2019",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Fileverse - ddocs",
@@ -3857,7 +3957,8 @@
       "contractAddress": "",
       "dateOfLaunch": "4/7/2024",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Fileverse - dsheets",
@@ -3894,7 +3995,8 @@
       "contractAddress": "",
       "dateOfLaunch": "6/23/2025",
       "lastUpdated": "7/11/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "EAS",
@@ -3934,7 +4036,8 @@
       "contractAddress": "https://github.com/ethereum-attestation-service/eas-contracts",
       "dateOfLaunch": "2/27/2023",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Unlock",
@@ -3982,7 +4085,8 @@
       "contractAddress": "https://docs.unlock-protocol.com/core-protocol/unlock/networks",
       "dateOfLaunch": "3/28/2021",
       "lastUpdated": "7/15/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Human Passport",
@@ -4028,7 +4132,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "6/13/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Sequence",
@@ -4067,7 +4172,8 @@
       "contractAddress": "",
       "dateOfLaunch": "1/20/2021",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Eternal AI",
@@ -4105,7 +4211,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Virtuals",
@@ -4142,7 +4249,8 @@
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ],
   "Bridge": [
@@ -4189,7 +4297,8 @@
       "contractAddress": "",
       "dateOfLaunch": "9/9/2024",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Layerswap",
@@ -4233,7 +4342,8 @@
       "contractAddress": "0x2Fc617E933a52713247CE25730f6695920B3befe",
       "dateOfLaunch": "6/11/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Hop",
@@ -4272,7 +4382,8 @@
       "contractAddress": "0x914f986a44acb623a277d6bd17368171fcbe4273",
       "dateOfLaunch": "7/12/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Stargate",
@@ -4317,7 +4428,8 @@
       "contractAddress": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
       "dateOfLaunch": "3/18/2022",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Across",
@@ -4360,7 +4472,8 @@
       "contractAddress": "0x7355Efc63Ae731f584380a9838292c7046c1e433",
       "dateOfLaunch": "11/8/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Meson",
@@ -4405,7 +4518,8 @@
       "contractAddress": "",
       "dateOfLaunch": "12/1/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "deBridge",
@@ -4444,7 +4558,8 @@
       "contractAddress": "0x43de2d77bf8027e25dbd179b491e8d64f38398aa",
       "dateOfLaunch": "2/17/2022",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Orbiter Finance",
@@ -4490,7 +4605,8 @@
       "contractAddress": "",
       "dateOfLaunch": "12/30/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Celer cBridge",
@@ -4532,7 +4648,8 @@
       "contractAddress": "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820",
       "dateOfLaunch": "6/10/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Synapse",
@@ -4573,7 +4690,8 @@
       "contractAddress": "0x7E7A0e201FD38d3ADAA9523Da6C109a07118C96a",
       "dateOfLaunch": "8/29/2021",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Gas.zip",
@@ -4617,7 +4735,8 @@
       "contractAddress": "0x2a37D63EAdFe4b4682a3c28C1c2cD4F109Cc2762",
       "dateOfLaunch": "8/9/2023",
       "lastUpdated": "7/3/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Staking Launchpad",
@@ -4668,7 +4787,8 @@
       "contractAddress": "0x00000000219ab540356cBB839Cbe05303d7705Fa",
       "dateOfLaunch": "12/1/2020",
       "lastUpdated": "7/7/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     },
     {
       "name": "Bungee",
@@ -4713,7 +4833,8 @@
       "contractAddress": "https://github.com/SocketDotTech/bungee-contracts-public/tree/master/deployments",
       "dateOfLaunch": "10/10/2023",
       "lastUpdated": "7/14/2025",
-      "ready": "true"
+      "ready": "true",
+      "devconnect": "false"
     }
   ]
 }

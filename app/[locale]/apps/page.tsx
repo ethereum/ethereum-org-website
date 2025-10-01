@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { AppCategoryEnum, CommitHistory, Lang, PageParams } from "@/lib/types"
+import { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
@@ -13,7 +13,11 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
+import {
+  getDevconnectApps,
+  getDiscoverApps,
+  getHighlightedApps,
+} from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -58,6 +62,9 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Get 6 random staff pick apps
   const discoverApps = getDiscoverApps(appsData, 6)
 
+  // get devconnect apps
+  const devconnectApps = getDevconnectApps(appsData)
+
   // Get translations
   const t = await getTranslations({ locale, namespace: "page-apps" })
 
@@ -98,7 +105,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
-            <DevconnectBanner apps={appsData[AppCategoryEnum.DEFI]} />
+            <DevconnectBanner apps={devconnectApps} />
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">

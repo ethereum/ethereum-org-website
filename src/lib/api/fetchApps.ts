@@ -101,6 +101,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
             dateOfLaunch: row[22] || "",
             lastUpdated: row[23] || "",
             ready: row[24]?.toLowerCase(),
+            devconnect: row[25]?.toLowerCase(),
           }
 
           return appData as unknown as AppData
