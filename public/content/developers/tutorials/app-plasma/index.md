@@ -1,8 +1,8 @@
 ---
-title: Write your own app-specific zero knowledge plasma
-description: In this tutorial, we build a semi-secret bank for deposits. The bank is a centralized component; it knows the balance of each user. However, this information is not stored onchain. Instead, the bank posts a hash of the state. Every time there is a transaction, the bank posts the new hash, along with a zero-knowledge proof that it has a (signed) transaction that changes the hash state to the new one. After reading this tutorial, you will understand not just how to use zero knowledge proofs, but also why you use them and how to do so securely.
+title: Write your own app-specific zero-knowledge plasma
+description: In this tutorial, we build a semi-secret bank for deposits. The bank is a centralized component; it knows the balance of each user. However, this information is not stored onchain. Instead, the bank posts a hash of the state. Every time there is a transaction, the bank posts the new hash, along with a zero-knowledge proof that it has a signed transaction that changes the hash state to the new one. After reading this tutorial, you will understand not just how to use zero-knowledge proofs, but also why you use them and how to do so securely.
 author: Ori Pomerantz
-tags: ["zero-knowledge", "server", "offchain"]
+tags: ["zero-knowledge", "server", "offchain", "privacy"]
 skill: advanced
 lang: en
 published: 2025-09-30
@@ -124,7 +124,7 @@ To see it in action:
    npm run dev
    ```
 
-   The reason you need a web server here is that to prevent certain types of fraud many wallets (such as MetaMask) don't accept files 
+   The reason you need a web server here is that to prevent certain types of fraud many wallets (such as MetaMask) don't accept files served directly from the disk.
 
 3. Open a browser with a wallet.
 
@@ -1011,22 +1011,234 @@ The initial `Accounts` structure.
    ```sh
    ZKBANK_ADDRESS=`forge create ZkBank --private-key $ETH_PRIVATE_KEY --broadcast --constructor-args $VERIFIER_ADDRESS 0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b | awk '/Deployed to:/ {print $3}'`
    echo $ZKBANK_ADDRESS
-   ```  
+   ```
+
+   The `0x199..67b` value is the Pederson hash of the initial state of `Accounts`. If you modify this initial state in `server/index.mjs`, you can run a transaction to see the initial hash reported by the zero-knowledge proof.
+
+8. Run the server.
+
+   ```sh
+   cd ../server
+   npm run start
+   ```
+
+9. Run the client in a different command-line window.
+
+   ```sh
+   cd client
+   npm run dev
+   ```
+
+10. Run some transactions.
+
+11. To verify that the state changed onchain, restart the server process. See that `ZkBank` no longer accepts transactions, because the original hash value in the transactions differs from the hash value stored onchain.
+
+#### `server/index.mjs`
+
+The changes in this file relate mostly to creating the actual proof and submitting it onchain.
+
+```js
+import { exec } from 'child_process'
+import util from 'util'
+
+const execPromise = util.promisify(exec)
+```
+
+We need to use [the Barretenberg package](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) to create the actual proof to send onchain. We can use this package either by running the command-line interface (`bb`), or using [the JavaScript library, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). The JavaScript library is much slower than running code natively, so we use [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) here to use the command-line.
+
+Note that if you do decide to use `bb.js`, you need to use a version that is compatible with the version of Noir you are using. For the current Noir version at writing (1.0.0-beta.11), this is version 0.87.
+
+```js
+const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+```
+
+The address here is the address you get when you start with a clean `anvil` and go through the directions above.
+
+```js
+const walletClient = createWalletClient({ 
+    chain: anvil, 
+    transport: http(), 
+    account: privateKeyToAccount("0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6")
+})
+```
+
+This private key is one of the default prefunded accounts in `anvil`. 
+
+
+```js
+const generateProof = async (witness, fileID) => {
+```
+
+Generate a proof using the `bb` executable.
+
+```js 
+    const fname = `witness-${fileID}.gz`    
+    await fs.writeFile(fname, witness)
+```
+
+Write the witness to a file
+
+```js
+    await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
+```
+
+Actually create the proof. This step also creates a file with the public variables, but we don't need that. We already got those variables from `noir.execute`.
+
+```js
+    const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
+```
+
+The proof is written as a JSON array of `Field` values, written as hexadecimal. However, we need to send it in the transaction as a single `bytes` value, which Viem represents by a large hexadecimal string. Here we change the format by concatenating all the values, removing all the `0x`'s, and then adding one at the end.
+
+```js
+    await execPromise(`rm -r ${fname} ${fileID}`)
+
+    return proof
+}
+```
+
+Cleanup and return the proof.
+
+
+```js
+const processMessage = async (message, signature) => {
+    .
+    .
+    .
+
+    const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
+```
+
+The public fields needs to be an array of 32 byte values. However, since we needed to divide the transaction hash between two `Field` values, it appears as a 16 byte value. Here we add zeros so Viem will understand it is actually 32 bytes.
+
+```js
+    const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
+```
+
+Each address only uses each nonce once, so we can use a combination of `fromAddress` and `nonce` as a unique identifier for the witness file and the output directory.
+
+```js
+    try { 
+        await zkBank.write.processTransaction([
+            proof, publicFields])
+    } catch (err) {
+        console.log(`Verification error: ${err}`)
+        throw Error("Can't verify the transaction onchain")
+    }
+    .
+    .
+    .
+}
+```
+
+Send the transaction to the chain.
+
+#### `smart-contracts/src/ZkBank.sol`
+
+This is the onchain code that receives the transaction.
+
+```solidity
+// SPDX-License-Identifier: MIT
+
+pragma solidity >=0.8.21;
+
+import {HonkVerifier} from "./Verifier.sol";
+
+contract ZkBank {
+    HonkVerifier immutable myVerifier;
+    bytes32 currentStateHash;
+
+    constructor(address _verifierAddress, bytes32 _initialStateHash) {
+        currentStateHash = _initialStateHash;
+        myVerifier = HonkVerifier(_verifierAddress);
+    }
+```
+
+The onchain code needs to keep track of two variables: the verifier (a separate contract that is created by `nargo`) and the current state hash.
+
+```solidity
+    event TransactionProcessed(
+        bytes32 indexed transactionHash,
+        bytes32 oldStateHash,
+        bytes32 newStateHash
+    );
+```
+
+Every time the state it changed, we emit a `TransactionProcessed` event.
+
+```solidity
+    function processTransaction(
+        bytes calldata _proof, 
+        bytes32[] calldata _publicFields
+    ) public {
+```
+
+This function processes transactions. It gets the proof (as `bytes`) and the public inputs (as a `bytes32` array), in the format that the verifier require (no minimize onchain processing and therefore gas costs).
+
+```solidity
+        require(_publicInputs[0] == currentStateHash, 
+            "Wrong old state hash");
+```
+
+The zero-knowledge proof needs to be that the transaction changes from our current hash to a new one. 
+
+```solidity
+        myVerifier.verify(_proof, _publicFields);
+```
+
+Call the verifier contract to verify the zero-knowledge proof. This step reverts the transaction if the zero-knowledge proof is wrong.
+
+```solidity
+        currentStateHash = _publicFields[1];
+
+        emit TransactionProcessed(
+            _publicFields[2]<<128 | _publicFields[3],
+            _publicFields[0],
+            _publicFields[1]
+        );
+    }
+}
+```
+
+If everything checks out, update the state hash to the new value and emit a `TransactionProcessed` event.
 
 ## Abuses by the centralized component {#abuses}
 
-Integrity is easy, availability hard, confidentiality impossible
+Information security consists of three attributes:
 
-### Server can provide false information {#false-info}
+- *Confidentiality*, users cannot read information they are not authorized to read.
+- *Integrity*, information cannot be changed except by authorized users in an authorized manner.
+- *Availability*, authorized users are able to use the system.
 
-Can require a zero knowledge proof of the data
+On this system integrity is provided through zero-knowledge proofs. Availability is much harder to guarantee, and confidentiality is impossible, because the bank has to know the balance for each account and all the transactions. There is no way to prevent an entity that has information from sharing that information.
+
+It might be possible to create a true confidential bank using [stealth addresses](https://vitalik.eth.limo/general/2023/01/20/stealth.html), but that is beyond the scope of this article.
+
+### False information {#false-info}
+
+One way that the server can violate integrity is to provide false information when [data is requested](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
+
+To solve this, we can write a second Noir program that receives the accounts as a private input, and the address for which information is requested as a public input. The output is the balance and nonce of that address, and the hash of the accounts.
+
+Of course, this proof cannot be verified onchain, because we don't want to post nonces and balances onchain. However, it can be verified by the client code running in the browser.
 
 ### Forced transactions {#forced-txns}
 
-The server can ignore them, but only at the cost of a total block. Except what if that transaction is invalid? Need zero trust "this transaction is invalid" errors.
+The usual mechanism to require availability and prevent censorship on L2s is [forced transactions](https://docs.optimism.io/stack/transactions/forced-transaction). But forced transactions are difficult to combine with zero-knowledge proofs. The server is the only entity that can verify transactions.
 
-### Availability bonds {#avail-bonds}
+We can modify `smart-contracts/src/ZkBank.sol` to accept forced transactions, and not allow the server to change the state until the forced transactions are processed. However, this opens us up to a simple denial of service attack. What if a forced transaction is invalid and therefore impossible to process?
 
-### Correspondent banks {#correpondent-banks}
+The solution is to have a zero-knowledge proof that a forced transaction is invalid. This gives the server three options:
+
+- Process the forced transaction, providing a zero-knowledge proof that it has been processed and the new state hash.
+- Reject the forced transaction, and provide a zero-knowlede proof to the contract that the transaction is invalid (unknown address, bad nonce, or insufficient balance).
+- Ignore the forced transaction. There is no way to force the server to actually process the transaction, but it means the entire system in unavailable.
+
+#### Availability bonds {#avail-bonds}
+
+In a real-life implementation there would probably be some kind of profit motive for keeping the server running. We can strengthen this incentive by having the server post an availability bond, which anybody can burn if a forced transaction is not processed within a certain amount of time.
 
 ## Conclusion {#conclusion}
+
+Plasma type applications require a centralized component as information storage. This opens up possible vulnerabilities, but in return allows us to preserve privacy in ways that are not available on the blockchain itself. With zero-knowledge proofs we can ensure integrity, and possibly make it economically advantageous for whoever is running the centralized component to maintain availability.
+
