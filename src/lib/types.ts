@@ -521,6 +521,7 @@ export type EthStakedResponse = {
 
 export type EpochResponse = Data<{
   validatorscount: number
+  eligibleether: number
 }>
 
 export type StakingStatsData = {
