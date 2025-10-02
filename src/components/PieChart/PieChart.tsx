@@ -21,7 +21,6 @@ import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
-  // ChartTooltipContent,
 } from "@/components/ui/chart";
 
 type PieChartDataPoint = { name: string; value: number };
@@ -63,22 +62,20 @@ const COLORS = [
   "hsla(var(--accent-c-hover))",
 ];
 
-// Generate HSL colors dynamically if we need more than the predefined set
 const generateColor = (index: number): string => {
   if (index < COLORS.length) {
     return COLORS[index];
   }
-  // Generate colors with good contrast using HSL
   const hue = (index * 137.508) % 360;
-  const saturation = 65 + (index % 3) * 10;
-  const lightness = 45 + (index % 2) * 10;
+  const saturation = 70 + (index % 2) * 15;
+  const lightness = 50 + (index % 3) * 8;
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 };
 
 // Utility function to validate and process data
 const processData = (
   data: PieChartDataPoint[],
-  minSlicePercentage: number = 1
+  minSlicePercentage: number = 1,
 ): PieChartDataPoint[] => {
   const nonZeroData = data.filter((item) => item.value > 0);
 
@@ -87,10 +84,10 @@ const processData = (
   if (total === 0) return [];
 
   const mainItems = nonZeroData.filter(
-    (item) => (item.value / total) * 100 >= minSlicePercentage
+    (item) => (item.value / total) * 100 >= minSlicePercentage,
   );
   const smallItems = nonZeroData.filter(
-    (item) => (item.value / total) * 100 < minSlicePercentage
+    (item) => (item.value / total) * 100 < minSlicePercentage,
   );
 
   // Group small items into "Other" if there are any
@@ -103,10 +100,6 @@ const processData = (
   return processedData;
 };
 
-/*
-PieChart component renders a pie chart with the provided data, utilizing a comprehensive color palette,
-responsive design, and improved accessibility features.
-*/
 export function PieChart({
   data,
   title,
@@ -116,7 +109,6 @@ export function PieChart({
   showPercentage = true,
   minSlicePercentage = 0,
 }: PieChartProps) {
-  // Process data to handle edge cases and grouping
   const processedData = processData(data, minSlicePercentage);
 
   if (processedData.length === 0) {
@@ -199,7 +191,7 @@ export function PieChart({
         <ChartContainer config={defaultChartConfig}>
           <ResponsiveContainer width="100%" height={dimensions.height}>
             <RechartsPieChart
-              margin={{ top: 30, right: 0, bottom: 30, left: 0 }}
+              margin={{ top: 0, right: 0, bottom: 0, left: 10 }}
             >
               <ChartTooltip cursor={false} content={customTooltipContent} />
 

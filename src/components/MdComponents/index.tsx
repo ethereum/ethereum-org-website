@@ -3,6 +3,7 @@ import { type ComponentProps, type HTMLAttributes } from "react";
 import type { ChildOnlyProp } from "@/lib/types";
 
 import Contributors from "@/components/Contributors";
+import { PieChart } from "@/components/PieChart/PieChart";
 import TooltipLink from "@/components/TooltipLink";
 import YouTube from "@/components/YouTube";
 
@@ -10,6 +11,7 @@ import { cn } from "@/lib/utils/cn";
 
 import ContributorsQuizBanner from "../Banners/ContributorsQuizBanner";
 import Card from "../Card";
+import ClientDiversityChart from "../ClientDiversityChart";
 import DocLink from "../DocLink";
 import Emoji from "../Emoji";
 import ExpandableCard from "../ExpandableCard";
@@ -21,7 +23,6 @@ import InfoBanner from "../InfoBanner";
 import IssuesList from "../IssuesList";
 import LocaleDateTime from "../LocaleDateTime";
 import MainArticle from "../MainArticle";
-import PieChartContainer from "../PieChart";
 import { StandaloneQuizWidget } from "../Quiz/QuizWidget";
 import { ButtonLink } from "../ui/buttons/Button";
 import { Divider } from "../ui/divider";
@@ -35,7 +36,7 @@ export const commonHeadingAttributes = (className: string, id?: string) => ({
   className: cn(
     "font-bold leading-xs my-8",
     id && "scroll-mt-28 relative group",
-    className
+    className,
   ),
   "data-group": !!id || undefined,
 });
@@ -136,7 +137,7 @@ export const Page = ({
   <Flex
     className={cn(
       "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0",
-      className
+      className,
     )}
     {...props}
   />
@@ -156,6 +157,7 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 export const reactComponents = {
   ButtonLink,
   Card,
+  ClientDiversityChart,
   ContentContainer,
   Contributors,
   ContributorsQuizBanner,
@@ -167,7 +169,7 @@ export const reactComponents = {
   GlossaryTooltip,
   InfoBanner,
   Page,
-  PieChartContainer,
+  PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
   Tag,
