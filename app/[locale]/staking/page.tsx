@@ -31,25 +31,25 @@ const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
   const { href: epoch } = new URL("api/v1/epoch/latest", base)
 
-  // Get total ETH staked and current APR from ethstore endpoint
+  // Get current APR from ethstore endpoint
   const ethStoreResponse = await fetch(ethstore)
   if (!ethStoreResponse.ok)
     throw new Error("Network response from Beaconcha.in ETHSTORE was not ok")
   const ethStoreResponseJson: EthStoreResponse = await ethStoreResponse.json()
   const {
-    data: { apr, effective_balances_sum_wei },
+    data: { apr },
   } = ethStoreResponseJson
-  const totalEffectiveBalance = effective_balances_sum_wei * 1e-18
-  const totalEthStaked = Math.floor(totalEffectiveBalance)
 
-  // Get total active validators from latest epoch endpoint
+  // Get total eligible ETH staked and total active validators from latest epoch endpoint
   const epochResponse = await fetch(epoch)
   if (!epochResponse.ok)
     throw new Error("Network response from Beaconcha.in EPOCH was not ok")
   const epochResponseJson: EpochResponse = await epochResponse.json()
   const {
-    data: { validatorscount },
+    data: { validatorscount, eligibleether: eligibleGwei },
   } = epochResponseJson
+
+  const totalEthStaked = Math.floor(eligibleGwei * 1e-9)
 
   return { totalEthStaked, validatorscount, apr }
 }
