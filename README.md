@@ -2113,3 +2113,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).
 
 [🔼Back to top!](#Table-of-contents)
+> Note: On Ubuntu or Debian you may need to run `sudo apt update && sudo apt install nodejs npm` before running `yarn install`.
