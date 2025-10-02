@@ -90,10 +90,10 @@ import { routing } from "@/i18n/routing"
 import { getABTestAssignment } from "@/lib/ab-testing/server"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+import { fetchEthStakedBeaconchain } from "@/lib/api/fetchEthStakedBeaconchain"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
-import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
@@ -142,7 +142,7 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const loadData = dataLoader(
   [
     ["ethPrice", fetchEthPrice],
-    ["totalEthStaked", fetchTotalEthStaked],
+    ["totalEthStaked", fetchEthStakedBeaconchain],
     ["totalValueLocked", fetchTotalValueLocked],
     ["growThePieData", fetchGrowThePie],
     ["communityEvents", fetchCommunityEvents],
