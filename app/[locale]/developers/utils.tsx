@@ -13,7 +13,7 @@ import cyfrinFoundryAdvancedBanner from "@/public/images/developers/cyfrin-found
 import cyfrinFoundryFundamentalsBanner from "@/public/images/developers/cyfrin-foundry-fundamentals-banner.webp"
 import cyfrinSecurityBanner from "@/public/images/developers/cyfrin-security-banner.webp"
 import cyfrinSolidityBanner from "@/public/images/developers/cyfrin-solidity-banner.webp"
-import speedrunNFT from "@/public/images/developers/speedrun-nft.png"
+import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
 import speedrunStakingApp from "@/public/images/developers/speedrun-staking-app.png"
 import speedrunTokenVendor from "@/public/images/developers/speedrun-token-vendor.png"
 
@@ -30,7 +30,7 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
       imgAlt: t("page-developers-speedrun-nft-alt"),
       title: t("page-developers-speedrun-nft-title"),
       description: t("page-developers-speedrun-nft-desc"),
-      href: "https://speedrunethereum.com/challenge/simple-nft-example",
+      href: "https://speedrunethereum.com/challenge/tokenization",
       button: t("page-developers-start-quest"),
       tag: t("page-developers-speedrun-challenge-0"),
     },
