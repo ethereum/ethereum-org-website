@@ -41,7 +41,7 @@ sidebarDepth: 1
 - [Blockapps](https://blockapps.net/) _ — впровадження протоколу, інструментальних засобів та API Ethereum для корпоративного сектора, що формують платформу STRATO_
 - [Clearmatics](https://www.clearmatics.com/about) _ — протоколи та архітектура однорангових платформ, науково-розробницька компанія блокчейну_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _пропонує ті самі можливості та функції, що й HF Besu, а також надає додаткові переваги для корпоративного сектора_
-- [Quorum](https://www.goquorum.com/) _— платформа блокчейну з відкритим вихідним кодом, яка поєднує інновації відкритої спільноти Ethereum з удосконаленнями для підтримки потреб корпоративного сектора_
+- [Quorum](https://docs.goquorum.consensys.io/) _— платформа блокчейну з відкритим вихідним кодом, яка поєднує інновації відкритої спільноти Ethereum з удосконаленнями для підтримки потреб корпоративного сектора_
 
 ## Протокол та інфраструктура {#protocol-and-infrastructure}
 
@@ -63,8 +63,7 @@ sidebarDepth: 1
 ### Конфіденційність {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Більше інформації можна отримати [тут](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Більше інформації можна отримати [тут](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Більше інформації можна отримати [тут](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Більше інформації можна отримати [тут](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Безпека {#security}
 
@@ -74,7 +73,7 @@ sidebarDepth: 1
 ### Інструменти {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _— платформа для аналізу даних Ethereum_
-- [Treum](https://treum.io/) _забезпечує прозорість, можливості відстеження та реалізації ланцюгів поставок з використанням технології блокчейну_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _забезпечує прозорість, можливості відстеження та реалізації ланцюгів поставок з використанням технології блокчейну_
 
 ## Спільнота розробників для корпоративного сектора {#enterprise-developer-community}
 
@@ -82,7 +81,6 @@ sidebarDepth: 1
 - [Обмін ідеями в Infura](https://community.infura.io/)
 - [Kaleido в Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (канал Besu)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (канал Burrow)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys у Twitter](https://twitter.com/Kaleido_io)
 - [Канал Quorum Slack](http://bit.ly/quorum-slack)

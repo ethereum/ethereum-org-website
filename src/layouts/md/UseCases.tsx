@@ -170,8 +170,10 @@ export const UseCasesLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
-    description: (
+    heroImg: { src: frontmatter.image, width: 760, height: 450 },
+    description: frontmatter.summary ? (
+      <p className="text-lg">{frontmatter.summary}</p>
+    ) : (
       <div>
         <List>
           {summaryPoints.map((point, idx) => (
@@ -188,7 +190,7 @@ export const UseCasesLayout = ({
         <Emoji text=":pencil:" className="me-4 shrink-0 text-2xl" />
         <p>
           {t("template-usecase:template-usecase-banner")}{" "}
-          <InlineLink href={absoluteEditPath}>
+          <InlineLink href={absoluteEditPath} className="text-white">
             {t("template-usecase-edit-link")}
           </InlineLink>
         </p>
@@ -197,10 +199,10 @@ export const UseCasesLayout = ({
       <ContentLayout
         tocItems={tocItems}
         dropdownLinks={dropdownLinks}
-        maxDepth={frontmatter.sidebarDepth}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<ContentHero {...heroProps} />}
+        showDropdown={frontmatter.showDropdown ?? true}
       >
         {children}
       </ContentLayout>

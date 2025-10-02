@@ -116,6 +116,7 @@
   "docs-nav-transactions": "Transactions",
   "docs-nav-transactions-description": "Transfers and other actions that cause Ethereum's state to change",
   "docs-nav-upgrading-smart-contracts": "Upgrading smart contracts",
+  "docs-nav-naming-smart-contracts": "Naming smart contracts",
   "docs-nav-verifying-smart-contracts": "Verifying smart contracts",
   "docs-nav-web2-vs-web3": "Web2 vs Web3",
   "docs-nav-web2-vs-web3-description": "The fundamental differences that blockchain-based applications provide",

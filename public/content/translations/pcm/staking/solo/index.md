@@ -55,7 +55,7 @@ Im also nid very basik hardwia setup, and some kain tins wey yu nid sabi for smo
 <ExpandableCard title="Sikure key manajment" eventCategory="SoloStaking" eventName="clicked secure key management">
 Just laik hau private keys dey sekure yor Ethereum address, yu go nid generate keys only for yor validator. Yu suppose sabi hau to kip any seed fraiz abi private keys safe and sekure.{' '}
 
-<a href="/security/">Ethereum sekurity and skam privenshon</a>
+[Ethereum sekurity and skam privenshon](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ Dis na few of di plenti komon kweshons abou staking wey dem suppose sabi.
 <ExpandableCard title="Shey I fit deposit pass 32 ETH?">
 Ish key-pair wey join wit one validator nid 32 ETH gangan to take aktivate am. More ETH dem deposit to one singol set of keys nor dey inkrease riwods potenshial, as ish validator dey limit to one <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effektive balans</a> of 32 ETH. Dis mean sey dem dey do staking in 32 ETH inkrements, ish one get im own set of keys and im balans.
 
-Make yu nor deposit pass 32 ETH for one singol validator. Im nor go inkrease yor riwods. If dem don set withdrawal address for di validator, money wey pass ova 32 ETH go komot go dis address automatikaly for di next <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
+Make yu nor deposit pass 32 ETH for one singol validator. Im nor go inkrease yor riwods. If dem don set withdrawal address for di validator, money wey pass ova 32 ETH go komot go dis address automatikaly for di next [validator sweep](/staking/withdrawals/#validator-sweeping).
 
-If solo staking wahala kon plenti for yu, make yu konsida to dey yus <a href="/staking/saas/">staking-as-a-savis</a> provida, abi if yu dey work wit wetin smoll pass 32 ETH, make yu sheck out di <a href="/staking/pools/">staking pools</a>.
+If solo staking wahala kon plenti for yu, make yu konsida to dey yus [staking-as-a-savis](/staking/saas/) provida, abi if yu dey work wit wetin smoll pass 32 ETH, make yu sheck out di [staking pools](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Shey dem go slash mi if I go offline? (tldr: No.)">
@@ -200,7 +200,6 @@ To unlock and risiv all yor balans back yu suppose also komplete di process to k
 - [To Dey Helep Klient Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Klient diversity for Ethereum konsensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Hau To: Dey Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Step by Step: Hau to join di EThereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Tips Wey Dey Privent Eth2 Slashing](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

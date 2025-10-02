@@ -63,4 +63,5 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 
 # Storybook
 build-storybook.log
+build-archive.log
 storybook-static

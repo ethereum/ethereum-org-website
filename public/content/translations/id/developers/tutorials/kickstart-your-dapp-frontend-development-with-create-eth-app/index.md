@@ -51,7 +51,7 @@ _create-eth-app_ secara khusus memanfaatkan [efek kaitan](https://reactjs.org/do
 
 ### ethers.js {#ethersjs}
 
-Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs-beta.ethers.io/) yang hampir keluar dari versi beta.
+Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs.ethers.org/v5/) yang hampir keluar dari versi beta.
 
 ### The Graph {#the-graph}
 
@@ -59,13 +59,13 @@ Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digun
 
 Biasanya Anda akan mengambil data dari kontrak pintar Anda secara langsung. Ingin membaca waktu perdagangan terbaru? Cukup panggil `MyContract.methods.latestTradeTime().call()` yang mengambilkan data dari node Ethereum seperti Infura ke dalam Dapp Anda. Tetapi bagaimana jika Anda membutuhkan ratusan titik data yang berbeda? Itu akan menghasilkan ratusan pengambilan data ke node, yang setiap kali pengambilan memerlukan [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) yang membuat Dapp Anda menjadi lambat dan tidak efisien. Satu solusi untuk ini mungkin adalah dengan menggunakan fungsi pemanggilan pengambil di dalam kontrak Anda yang mengembalikan beberapa data sekaligus. Namun, ini tidak selalu merupakan cara yang ideal.
 
-Lalu, Anda juga mungkin tertarik dengan data riwayat. Anda ingin mengetahui tidak hanya waktu perdagangan terakhir, tapi juga waktu dari semua perdagangan yang pernah Anda lakukan sendiri. Gunakan paket subgraph _create-eth-app_, baca [dokumentasi](https://thegraph.com/docs/define-a-subgraph) dan sesuaikan dengan kontrak Anda. Jika Anda berencana menggunakan kontrak pintar populer, mungkin telah ada subgraph di dalamnya. Lihat [penjelajah subgraph](https://thegraph.com/explorer/).
+Lalu, Anda juga mungkin tertarik dengan data riwayat. Anda ingin mengetahui tidak hanya waktu perdagangan terakhir, tapi juga waktu dari semua perdagangan yang pernah Anda lakukan sendiri. Gunakan paket subgraph _create-eth-app_, baca [dokumentasi](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) dan sesuaikan dengan kontrak Anda. Jika Anda berencana menggunakan kontrak pintar populer, mungkin telah ada subgraph di dalamnya. Lihat [penjelajah subgraph](https://thegraph.com/explorer/).
 
 Setelah memiliki subgraph, ini memungkinkan Anda menulis kueri sederhana di Dapp Anda yang mengambil semua data blockchain penting termasuk data riwayat yang Anda perlukan, cukup dengan satu kali pengambilan.
 
 ### Apollo {#apollo}
 
-Berkat integrasi [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), Anda dapat dengan mudah mengintegrasikan graph ke dalam Dapp React Anda. Khususnya ketika menggunakan [kaitan React dan Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), mengambil data menjadi semudah menulis sebuah kueri GraphQl dalam kompenen Anda:
+Berkat integrasi [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), Anda dapat dengan mudah mengintegrasikan graph ke dalam Dapp React Anda. Khususnya ketika menggunakan [kaitan React dan Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), mengambil data menjadi semudah menulis sebuah kueri GraphQl dalam kompenen Anda:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

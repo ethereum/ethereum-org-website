@@ -226,7 +226,7 @@
   "nav-contribute-description": "જો તમે મદદ કરવા માંગતા હોવ, તો આ તમને માર્ગદર્શન આપશે",
   "nav-contribute-label": "Ethereum.org માં યોગદાન આપવું",
   "nav-dao-description": "કેન્દ્રિય સત્તા વગરના સભ્ય-માલિકીના સમુદાયો",
-  "nav-dapps-description": "ઈથિરિયમનો ઉપયોગ કરીને એપ્લિકેશન્સની સમૃદ્ધ ઇકોસિસ્ટમનું અન્વેષણ કરો",
+  "nav-apps-description": "ઈથિરિયમનો ઉપયોગ કરીને એપ્લિકેશન્સની સમૃદ્ધ ઇકોસિસ્ટમનું અન્વેષણ કરો",
   "nav-defi-description": "પરંપરાગત નાણાંકીય બજારનો વૈશ્વિક, ખુલ્લો વિકલ્પ",
   "nav-desci-description": "વર્તમાન વૈજ્ઞાનિક પ્રણાલીનો વૈશ્વિક, ખુલ્લો વિકલ્પ",
   "nav-desoc-description": "સામાજિક ક્રિયાપ્રતિક્રિયા અને સામગ્રી નિર્માણ માટે બ્લોકચેન-આધારિત પ્લેટફોર્મ",
@@ -275,7 +275,7 @@
   "nav-layer-2-description": "ઈથિરિયમ માટે સસ્તા અને ઝડપી વ્યવહારો",
   "nav-learn-by-coding-description": "સાધનો કે જે તમને ઈથિરિયમ સાથે પ્રયોગ કરવામાં મદદ કરે છે",
   "nav-local-env-description": "તમારા ઈથિરિયમ વિકાસ સ્ટેકને પસંદ કરો અને સેટ કરો",
-  "nav-mainnet-description": "એન્ટરપ્રાઇઝ બ્લોકચેન એપ્લિકેશન જાહેર ઈથિરિયમ મેઇનેટ પર બનાવી શકાય છે",
+  "nav-enterprise-description": "એન્ટરપ્રાઇઝ બ્લોકચેન એપ્લિકેશન જાહેર ઈથિરિયમ મેઇનેટ પર બનાવી શકાય છે",
   "nav-nft-description": "ઈથિરિયમ-આધારિત સંપત્તિ તરીકે અનન્ય કંઈપણ રજૂ કરવાની રીત",
   "nav-open-research-description": "ઈથિરિયમની પ્રાથમિક શક્તિઓમાંનો એક તેનો સક્રિય સંશોધન સમુદાય છે",
   "nav-open-research-label": "ખુલ્લું સંશોધન",
@@ -428,5 +428,8 @@
   "withdrawals": "સ્ટેકીંગ ઉપાડ",
   "wrapped-ether": "આવરિત ઈથર",
   "yes": "હા",
-  "zero-knowledge-proofs": "શૂન્ય-જાણકારી પુરાવાઓ"
+  "zero-knowledge-proofs": "શૂન્ય-જાણકારી પુરાવાઓ",
+  "ethereum-vs-bitcoin": "Ethereum વિ Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum અને Bitcoin વચ્ચેનો તફાવત સમજો"
+
 }

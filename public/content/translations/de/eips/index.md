@@ -74,6 +74,6 @@ Jeder kann ein EIP erstellen. Bevor man einen Vorschlag einreicht, muss man [EIP
 
 <cite class="citation">
 
-Seiteninhalte zum Teil von [Governance bei der Ethereum-Protokollentwicklung und Koordinierung von Netzwerk-Upgrades](https://hudsonjameson.com/202020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) Hudson Jameson bereitgestellt
+Seiteninhalte zum Teil von [Governance bei der Ethereum-Protokollentwicklung und Koordinierung von Netzwerk-Upgrades](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) Hudson Jameson bereitgestellt
 
 </cite>

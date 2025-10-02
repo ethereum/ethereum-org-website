@@ -156,19 +156,6 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Valor do pagamento por hora
     - Suporte direto 24/7
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Documentos](https://docs.figment.io/)
-  - Recursos
-    - Opção de camada gratuita com 3.000.000 pedidos/mês
-    - Pontos de extremidade RPC e WSS
-    - Nós dedicados completos e arquivados
-    - Escalonamento automático (Descontos de volume)
-    - Dados de arquivamento grátis
-    - Análise do Serviço
-    - Painel
-    - Suporte Direto 24/7
-    - Pague em criptomoedas (Enterprise)
-
 - [**DRPC**](https://drpc.org/)
   - [Documentação](https://docs.drpc.org/)
   - Recursos
@@ -264,7 +251,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Suporte técnico direto
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Documentação](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Documentação](https://docs.nodereal.io/docs/introduction)
   - Recursos
     - Serviços confiáveis, rápidos e dimensionáveis da API RPC
     - API aprimorada para desenvolvedores Web3

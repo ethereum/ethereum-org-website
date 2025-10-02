@@ -5,10 +5,10 @@ lang: fr
 ---
 
 <InfoBanner emoji=":wave:">
-   Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail est maintenant **arrêtée entièrement** et Ethereum est maintenant sécurisé en utilisant <a href="/developers/docs/consensus-mechanisms/pos/">la preuve d'enjeu</a> à la place. En savoir plus sur <a href="/roadmap/merge/">La Fusion</a>, <a href="/developers/docs/consensus-mechanisms/pos/">la preuve d'enjeu</a> et la <a href="/staking/">mise en jeu</a>. Cette page n'a qu'un intérêt historique !  
+   Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail est maintenant **arrêtée entièrement** et Ethereum est maintenant sécurisé en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) à la place. En savoir plus sur [La Fusion](/roadmap/merge/), [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et la [mise en jeu](/staking/). Cette page n'a qu'un intérêt historique !  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) est une version modifiée de l'algorithme [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). La preuve de travail d'Ethash est une [mémoire solide](https://wikipedia.org/wiki/Memory-hard_function), qui était censée rendre l'algorithme ASIC plus résistant. Les Ethash ASIC ont finalement été développés, mais le minage via GPU restait encore une option viable jusqu’à ce que la preuve de travail soit désactivée. Ethash est toujours utilisé pour miner d'autres jetons sur des réseaux autres qu'Ethereum fonctionnant avec la preuve de travail.
+Ethash est une version modifiée de l'algorithme [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). La preuve de travail d'Ethash est une [mémoire solide](https://wikipedia.org/wiki/Memory-hard_function), qui était censée rendre l'algorithme ASIC plus résistant. Les Ethash ASIC ont finalement été développés, mais le minage via GPU restait encore une option viable jusqu’à ce que la preuve de travail soit désactivée. Ethash est toujours utilisé pour miner d'autres jetons sur des réseaux autres qu'Ethereum fonctionnant avec la preuve de travail.
 
 ## Comment fonctionne Ethash ? {#how-does-ethash-work}
 

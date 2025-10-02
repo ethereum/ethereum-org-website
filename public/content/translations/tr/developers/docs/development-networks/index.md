@@ -41,9 +41,8 @@ Hardhat Network, profesyoneller için bir Ethereum geliştirme ortamı olan Hard
 
 Bazı fikir birliği istemcileri, test amacıyla yerel işaret zincirleri oluşturmak için yerleşik araçlara sahiptir. Lighthouse, Nimbus ve Lodestar için talimatlar mevcuttur:
 
-- [Lodestar kullanan yerel test ağı](https://chainsafe.github.io/lodestar/usage/local/)
+- [Lodestar kullanan yerel test ağı](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lighthouse kullanan yerel test ağı](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Nimbus kullanan yerel test ağı](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Herkese açık Ethereum Test zincileri {#public-beacon-testchains}
 

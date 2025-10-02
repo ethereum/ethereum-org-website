@@ -1,4 +1,4 @@
-import { RiInformationLine } from "react-icons/ri"
+import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Translation from "../Translation"
@@ -22,7 +22,7 @@ const meta = {
     content: <TooltipContent />,
     children: (
       <span data-testid="tooltip-icon">
-        <RiInformationLine />
+        <Info className="size-4" />
       </span>
     ),
   },

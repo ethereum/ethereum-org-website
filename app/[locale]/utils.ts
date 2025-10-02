@@ -5,9 +5,17 @@
 
 import { getTranslations } from "next-intl/server"
 
-import type { AllHomepageActivityData, Lang, StatsBoxMetric } from "@/lib/types"
+import type {
+  AllHomepageActivityData,
+  CommunityConference,
+  Lang,
+  StatsBoxMetric,
+} from "@/lib/types"
 
+import { isValidDate } from "@/lib/utils/date"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 const formatLargeUSD = (value: number, locale: string): string => {
   return new Intl.NumberFormat(locale, {
@@ -110,13 +118,13 @@ export const getActivity = async (
     },
     {
       apiProvider: "growthepie",
-      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
+      apiUrl: "https://www.growthepie.com/fundamentals/transaction-costs",
       label: t("page-index-network-stats-tx-cost-description"),
       state: medianTxCost,
     },
     {
       apiProvider: "growthepie",
-      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
+      apiUrl: "https://www.growthepie.com/fundamentals/transaction-count",
       label: t("page-index-network-stats-tx-day-description"),
       state: txs,
     },
@@ -124,3 +132,38 @@ export const getActivity = async (
 
   return metrics
 }
+
+export const getUpcomingEvents = (
+  events: CommunityConference[],
+  locale = DEFAULT_LOCALE
+): CommunityConference[] =>
+  events
+    .filter((event) => {
+      const isValid = isValidDate(event.endDate)
+      const beginningOfEndDate = new Date(event.endDate).getTime()
+      const endOfEndDate = beginningOfEndDate + 24 * 60 * 60 * 1000
+      const isUpcoming = endOfEndDate >= new Date().getTime()
+      return isValid && isUpcoming
+    })
+    .sort(
+      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
+    )
+    .map(({ startDate, endDate, ...event }) => {
+      const formattedDate =
+        isValidDate(startDate) || isValidDate(endDate)
+          ? new Intl.DateTimeFormat(locale, {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            }).formatRange(
+              new Date(isValidDate(startDate) ? startDate : endDate),
+              new Date(isValidDate(endDate) ? endDate : startDate)
+            )
+          : ""
+      return {
+        ...event,
+        startDate,
+        endDate,
+        formattedDate,
+      }
+    })

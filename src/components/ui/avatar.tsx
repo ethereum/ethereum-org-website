@@ -6,6 +6,8 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Image } from "../Image"
+
 import { Center } from "./flex"
 import { BaseLink, type LinkProps } from "./Link"
 import { LinkBox, LinkOverlay } from "./link-box"
@@ -162,7 +164,19 @@ const Avatar = React.forwardRef<
             <BaseLink {...commonLinkProps}>{label}</BaseLink>
           </LinkOverlay>
           <AvatarBase size={size}>
-            <AvatarImage src={src} />
+            {src ? (
+              <Image
+                className="object-fill"
+                width={128}
+                height={128}
+                sizes="4rem"
+                src={src}
+                alt={name}
+                quality={100}
+              />
+            ) : (
+              <AvatarImage />
+            )}
             <AvatarFallback>{fallbackInitials}</AvatarFallback>
           </AvatarBase>
         </Center>
@@ -173,7 +187,19 @@ const Avatar = React.forwardRef<
   return (
     <AvatarBase ref={ref} size={size} className={className} asChild>
       <BaseLink title={dataTest} {...commonLinkProps}>
-        <AvatarImage src={src} />
+        {src ? (
+          <Image
+            className="object-fill"
+            width={128}
+            height={128}
+            sizes="4rem"
+            src={src}
+            alt={name}
+            quality={100}
+          />
+        ) : (
+          <AvatarImage />
+        )}
         <AvatarFallback>{fallbackInitials}</AvatarFallback>
       </BaseLink>
     </AvatarBase>

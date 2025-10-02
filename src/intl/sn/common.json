@@ -229,7 +229,7 @@
   "nav-contribute-description": "Kana uchida kubatsira, izvi zvinokubetsera",
   "nav-contribute-label": "Kuvewo nechekutaura kana kuita pa ethereum.org",
   "nav-dao-description": "Nharaunda dzinotungamirirwa nevanhu vawo pasina mumwechete ane simba kudarika vamwe",
-  "nav-dapps-description": "Pinda munzvimbo ine maapu emhando yepamusoro uchishandisa Ethereum",
+  "nav-apps-description": "Pinda munzvimbo ine maapu emhando yepamusoro uchishandisa Ethereum",
   "nav-defi-description": "Imwe mikana inoshanda pasi rose yakasiyana nemisika yezvemari yekare",
   "nav-desci-description": "Imwe mikana inoshanda pasi rose yakasiyana nenzira dzesainzi dziriko mazuva ano",
   "nav-desoc-description": "Pekushandisa panounzwa neBlockchain kuitira kutaurirana kwemazuvano uye kugadzira zvingada kuonekwa nevamwe",
@@ -278,7 +278,7 @@
   "nav-history-label": "Nhorrondo yakadzika yeEthereum",
   "nav-learn-by-coding-description": "Maturusi anokubetsera kutamba tamba neEthereum",
   "nav-local-env-description": "Sarudza nekugadzira stack rako rekugadzira nekuvandudza Ethereum yako",
-  "nav-mainnet-description": "Zvekushandisa zveEnterprise blockchain zvinogona kugadzirwa panzvimbo yeruzhinji yeEthereum Mainnet",
+  "nav-enterprise-description": "Zvekushandisa zveEnterprise blockchain zvinogona kugadzirwa panzvimbo yeruzhinji yeEthereum Mainnet",
   "nav-networks-home-description": "Nzira dzine mutengo wakaderera uye unokasira wekutenga nekubhadhara nawo Ethereum",
   "nav-networks-introduction-description": "Ethereum yakura kuita netiweki inopfuura manetiweki ese",
   "nav-networks-explore-networks-label": "Ona manetiweki",
@@ -440,5 +440,8 @@
   "withdrawals": "Kubudisa staking",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Ehe",
-  "zero-knowledge-proofs": "Humbowo usingaburitse ruzivo"
+  "zero-knowledge-proofs": "Humbowo usingaburitse ruzivo",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Nzwisisa kusiyana kuripo pakati peEthereum neBitcoin"
+
 }

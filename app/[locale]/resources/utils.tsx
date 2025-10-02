@@ -96,11 +96,11 @@ export const getResources = async ({
           imgSrc: IconL2beat,
         },
         {
-          title: "Growthepie",
+          title: "growthepie",
           description: t(
             "page-resources-network-layer2-growthepie-description"
           ),
-          href: "https://www.growthepie.xyz/",
+          href: "https://www.growthepie.com/",
           imgSrc: IconGrowthepie,
         },
         {
@@ -181,12 +181,6 @@ export const getResources = async ({
           description: t("page-resources-eth-asset-ethismoney-description"),
           href: "https://www.ethismoney.xyz/",
           imgSrc: IconEthGlyphBlueCircle,
-        },
-        {
-          title: "Ethereum Now",
-          description: t("page-resources-eth-asset-ethernow-description"),
-          href: "https://www.ethernow.xyz",
-          imgSrc: IconBlocknative,
         },
       ],
     },
@@ -548,47 +542,36 @@ export const getResources = async ({
         },
       ],
     },
-    {
-      title: t("page-resources-mempool-title"),
-      items: [
-        {
-          title: "Ethereum Mempool Dashboard",
-          description: t("page-resources-mempool-mempool-description"),
-          href: "https://mempool.pics",
-          imgSrc: IconEthGlyphBlueCircle,
-        },
-      ],
-    },
   ]
 
   const resources = [
     {
       key: "network",
-      title: t("page-resources-network-title"),
+      label: t("page-resources-network-title"),
       icon: <SectionIconEthGlyph />,
       boxes: networkBoxes,
     },
     {
       key: "using",
-      title: t("page-resources-using-title"),
+      label: t("page-resources-using-title"),
       icon: <SectionIconEthWallet />,
       boxes: usingBoxes,
     },
     {
       key: "scaling",
-      title: t("page-resources-scaling-title"),
+      label: t("page-resources-scaling-title"),
       icon: <SectionIconArrowsFullscreen />,
       boxes: scalingBoxes,
     },
     {
       key: "resilience",
-      title: t("page-resources-resilience-title"),
+      label: t("page-resources-resilience-title"),
       icon: <SectionIconHeartPulse />,
       boxes: resilienceBoxes,
     },
     {
       key: "privacy-security",
-      title: t("page-resources-privacy-security-title"),
+      label: t("page-resources-privacy-security-title"),
       icon: <SectionIconPrivacy />,
       boxes: privacySecurityBoxes,
     },

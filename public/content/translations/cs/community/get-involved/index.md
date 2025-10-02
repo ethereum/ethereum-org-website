@@ -114,7 +114,6 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley – pracovní pozice](https://cryptovalley.jobs/)
 - [Ethereum – pracovní pozice](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Připojte se k DAO {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Vývojový Web3 kolektiv na volné noze pracující jako DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _Správa komunity DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Právní inženýrství_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) – _Umělecká komunita_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _Podnik pro pre-seed krypto projekty_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG herní mechanismy pro reálný život_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digifyzické oděvní značky_

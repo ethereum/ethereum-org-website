@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext } from "react"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -66,7 +66,7 @@ const FeedbackWidget = () => {
                 size="sm"
                 ref={cancelRef}
               >
-                <MdClose className="h-fit w-5" />
+                <X className="h-fit w-5" />
               </Button>
             </PopoverClose>
           </div>

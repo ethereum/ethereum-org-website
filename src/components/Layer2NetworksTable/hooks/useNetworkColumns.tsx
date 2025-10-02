@@ -1,7 +1,6 @@
 "use client"
 
-import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
-import { MdInfoOutline } from "react-icons/md"
+import { ChevronDown, ChevronUp, Info } from "lucide-react"
 import { ColumnDef } from "@tanstack/react-table"
 
 import { ExtendedRollup, Lang } from "@/lib/types"
@@ -18,7 +17,7 @@ import { TableCell, TableHead } from "@/components/ui/table"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
+export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
   {
     id: "l2Info",
     header: ({ table }) => {
@@ -117,9 +116,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             ) : (
               <button className="text-primary">
                 {row.getIsExpanded() ? (
-                  <IoChevronUpSharp size={24} />
+                  <ChevronUp className="text-2xl" />
                 ) : (
-                  <IoChevronDownSharp size={24} />
+                  <ChevronDown className="text-2xl" />
                 )}
               </button>
             )}
@@ -146,7 +145,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                   </p>
                   <p>
                     <Translation id="page-layer-2-networks:page-layer-2-networks-data-from" />{" "}
-                    <InlineLink href="https://growthepie.xyz">
+                    <InlineLink href="https://growthepie.com">
                       growthepie
                     </InlineLink>
                     <Translation id="page-layer-2-networks:page-layer-2-networks-period" />
@@ -154,7 +153,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                 </div>
               }
             >
-              <MdInfoOutline className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -209,7 +208,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                 </div>
               }
             >
-              <MdInfoOutline className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -260,7 +259,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                 </div>
               }
             >
-              <MdInfoOutline className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -297,9 +296,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell className={cn("hidden w-12 lg:table-cell")}>
           <button className="text-primary">
             {row.getIsExpanded() ? (
-              <IoChevronUpSharp size={24} />
+              <ChevronUp className="text-2xl" />
             ) : (
-              <IoChevronDownSharp size={24} />
+              <ChevronDown className="text-2xl" />
             )}
           </button>
         </TableCell>

@@ -28,9 +28,9 @@ import {
 import MeetupList from "@/components/MeetupList"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
-import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
+import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
@@ -59,6 +59,7 @@ export const staticComponents = {
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
+  Alert,
   Callout,
   Contributors,
   EnergyConsumptionChart,
@@ -102,7 +103,6 @@ export const StaticLayout = ({
 
   return (
     <div className="w-full">
-      <TranslatathonBanner />
       <Flex
         className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
@@ -112,7 +112,6 @@ export const StaticLayout = ({
             <HubHero
               heroImg={GuideHeroImage}
               header={frontmatter.title}
-              title={""}
               description={frontmatter.description}
             />
           ) : (
@@ -135,9 +134,9 @@ export const StaticLayout = ({
             <TableOfContents
               className="relative"
               items={tocItems}
-              isMobile
               maxDepth={frontmatter.sidebarDepth || 2}
               hideEditButton={!!frontmatter.hideEditButton}
+              isMobile
             />
             {children}
 
