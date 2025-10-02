@@ -64,8 +64,8 @@ import { parseActivity } from "./utils"
 
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+import { fetchEthStakedBeaconchain } from "@/lib/api/fetchEthStakedBeaconchain"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -97,7 +97,7 @@ const loadData = dataLoader(
     ["growThePieData", fetchGrowThePie],
     ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
     ["ethPrice", fetchEthPrice],
-    ["totalEthStaked", fetchTotalEthStaked],
+    ["totalEthStaked", fetchEthStakedBeaconchain],
   ],
   BASE_TIME_UNIT * 1000
 )
