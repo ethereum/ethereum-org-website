@@ -61,7 +61,7 @@ Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade whi
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
-- [More on Ethereum history](/history/)
+- [More on Ethereum history](/ethereum-forks/)
 - [More on the Ethereum roadmap](/roadmap/)
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}

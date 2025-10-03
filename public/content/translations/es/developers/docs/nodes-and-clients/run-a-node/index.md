@@ -444,7 +444,7 @@ Considere la opción de crear un servicio para ejecutar su cliente automáticame
 
 #### Cómo actualizar clientes {#updating-clients}
 
-Debe mantener actualizado el software de su cliente con los últimos parches de seguridad, características y [EIP](/eips/). Especialmente antes de las [bifurcaciones duras](/history/), asegúrese de que está ejecutando la versión de cliente correcta.
+Debe mantener actualizado el software de su cliente con los últimos parches de seguridad, características y [EIP](/eips/). Especialmente antes de las [bifurcaciones duras](/ethereum-forks/), asegúrese de que está ejecutando la versión de cliente correcta.
 
 > Antes de actualizaciones importantes de red, EF sube una publicación en su [blog](https://blog.ethereum.org). Puede [suscribirse a estos anuncios](https://blog.ethereum.org/category/protocol#subscribe) para recibir una notificación a su correo cuando su nodo necesite una actualización.
 

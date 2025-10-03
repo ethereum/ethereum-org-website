@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 元々は[イーサリアムイエローペーパー](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [実行クライアントの仕様](https://github.com/ethereum/execution-specs/)
 - [コンセンサスクライアントの仕様](https://github.com/ethereum/consensus-specs)
-- さまざまな[ネットワーク・アップグレード](/history/)で実装された[EIP](https://eips.ethereum.org/)
+- さまざまな[ネットワーク・アップグレード](/ethereum-forks/)で実装された[EIP](https://eips.ethereum.org/)
 
 ### ネットワークのノードの追跡 {#network-overview}
 

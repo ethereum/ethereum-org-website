@@ -65,7 +65,7 @@ Sau khi một tài khoản được đánh dấu là "có thể rút hoàn toàn
 
 Bản nâng cấp Shanghai/Capella cho phép người dùng lấy lại ETH đã đặt cọc trước đó vào các tài khoản Ethereum thông thường. Điều này giúp hoàn thiện tính thanh khoản của đặt cọc và đưa Ethereum tiến thêm một bước nữa trên hành trình xây dựng một hệ sinh thái phi tập trung bền vững, có khả năng mở rộng và bảo mật.
 
-- [Thông tin thêm về lịch sử của Ethereum](/history/)
+- [Thông tin thêm về lịch sử của Ethereum](/ethereum-forks/)
 - [Thông tin thêm về lộ trình của Ethereum](/roadmap/)
 
 ## Thanh toán rút tiền hoạt động như thế nào? {#how-do-withdrawals-work}

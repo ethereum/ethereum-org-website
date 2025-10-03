@@ -37,7 +37,7 @@ Diese Implementierungen haben gemeinsam, dass sie alle einer einzigen Spezifikat
 - Ursprünglich wurde das [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) erstellt
 - [Ausführungsspezifikationen](https://github.com/ethereum/execution-specs/)
 - [Konsensspezifikationen](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/), die bei verschiedenen [Netzwerk-Upgrades](/history/) implementiert wurden
+- [EIPs](https://eips.ethereum.org/), die bei verschiedenen [Netzwerk-Upgrades](/ethereum-forks/) implementiert wurden
 
 ### Verfolgung von Knoten im Netzwerk {#network-overview}
 

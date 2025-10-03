@@ -152,7 +152,7 @@ Is minic a thrádáiltear luas agus éifeachtúlacht i bpróiseas rialachais Eth
 
 Cé go raibh an tsonraíocht agus na feidhmiúcháin forbartha foinse oscailte i gcónaí, níor úsáideadh na próisis fhoirmiúla a úsáideadh chun nuashonruithe a bhfuil cur síos orthu thuas a mholadh. Cheadaigh sé seo athruithe a shonrú agus a chomhaontú níos tapúla ag taighdeoirí agus feidhmitheoirí.
 
-Nuair a chumaisc an Beacon Chain le ciseal forghníomhaithe Ethereum an 15ú Meán Fómhair, 2022, cuireadh an Cumasc i gcrích mar chuid [d'uasghrádú líonra Pháras](/history/#paris). Athraíodh an togra [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) ó 'Ghlaoch Deireanach' go 'Deiridh', rud a chuir an t-aistriú go cruthúnas-geallchuir.
+Nuair a chumaisc an Beacon Chain le ciseal forghníomhaithe Ethereum an 15ú Meán Fómhair, 2022, cuireadh an Cumasc i gcrích mar chuid [d'uasghrádú líonra Pháras](/ethereum-forks/#paris). Athraíodh an togra [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) ó 'Ghlaoch Deireanach' go 'Deiridh', rud a chuir an t-aistriú go cruthúnas-geallchuir.
 
 <ButtonLink href="/roadmap/merge/">
   Tuilleadh faoin gCumasc

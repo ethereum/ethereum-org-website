@@ -17,7 +17,7 @@ summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,
 
 ## Qu'est-ce que La Fusion ? {#what-is-the-merge}
 
-La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/history/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Elle a également permis d'éliminer la nécessité d'un minage gourmand en énergie et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
+La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/ethereum-forks/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Elle a également permis d'éliminer la nécessité d'un minage gourmand en énergie et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
 
 <MergeInfographic />
 

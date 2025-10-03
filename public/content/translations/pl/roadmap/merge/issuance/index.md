@@ -30,11 +30,11 @@ title="tldr emisji ETH">
 
 ### Emisja warstwy wykonawczej {#el-issuance-pre-merge}
 
-W ramach proof-of-work górnicy wchodzili w interakcję tylko z warstwą wykonawczą i byli nagradzani nagrodami za blok, jeśli byli pierwszymi górnikami, którzy rozwiązali następny blok. Od czasu [aktualizacji Constantinople](/history/#constantinople) w 2019 r. nagroda ta wynosiła 2 ETH za blok. Górnicy byli również nagradzani za publikowanie bloków [ommer](/glossary/#ommer), które były poprawnymi blokami, które nie trafiły do najdłuższego/kanonicznego łańcucha. Nagrody te osiągnęły maksymalną wartość 1,75 ETH za ommer i były _dodatkiem do_ nagrody wydanej z bloku kanonicznego. Proces kopania był ekonomicznie intensywną działalnością, która w przeszłości wymagała wysokiego poziomu emisji ETH do podtrzymania.
+W ramach proof-of-work górnicy wchodzili w interakcję tylko z warstwą wykonawczą i byli nagradzani nagrodami za blok, jeśli byli pierwszymi górnikami, którzy rozwiązali następny blok. Od czasu [aktualizacji Constantinople](/ethereum-forks/#constantinople) w 2019 r. nagroda ta wynosiła 2 ETH za blok. Górnicy byli również nagradzani za publikowanie bloków [ommer](/glossary/#ommer), które były poprawnymi blokami, które nie trafiły do najdłuższego/kanonicznego łańcucha. Nagrody te osiągnęły maksymalną wartość 1,75 ETH za ommer i były _dodatkiem do_ nagrody wydanej z bloku kanonicznego. Proces kopania był ekonomicznie intensywną działalnością, która w przeszłości wymagała wysokiego poziomu emisji ETH do podtrzymania.
 
 ### Emisja warstwy konsensusu {#cl-issuance-pre-merge}
 
-[Łańcuch śledzący](/history/#beacon-chain-genesis) został uruchomiony w 2020 r. Zamiast górników jest on zabezpieczany przez walidatory wykorzystujące proof-of-stake. Łańcuch ten został uruchomiony przez użytkowników Ethereum wpłacających ETH w jedną stronę do inteligentnego kontraktu w sieci głównej (warstwa wykonawcza), którego nasłuchuje łańcuch śledzący, przyznając użytkownikowi taką samą ilość ETH w nowym łańcuchu. Dopóki nie nastąpiło Połączenie, walidatory łańcucha śledzącego nie przetwarzały transakcji i zasadniczo dochodziły do konsensusu na temat stanu samej puli walidatorów.
+[Łańcuch śledzący](/ethereum-forks/#beacon-chain-genesis) został uruchomiony w 2020 r. Zamiast górników jest on zabezpieczany przez walidatory wykorzystujące proof-of-stake. Łańcuch ten został uruchomiony przez użytkowników Ethereum wpłacających ETH w jedną stronę do inteligentnego kontraktu w sieci głównej (warstwa wykonawcza), którego nasłuchuje łańcuch śledzący, przyznając użytkownikowi taką samą ilość ETH w nowym łańcuchu. Dopóki nie nastąpiło Połączenie, walidatory łańcucha śledzącego nie przetwarzały transakcji i zasadniczo dochodziły do konsensusu na temat stanu samej puli walidatorów.
 
 Walidatory w łańcuchu śledzącym są nagradzane ETH za poświadczanie stanu łańcucha i proponowanie bloków. Nagrody (lub kary) są obliczane i rozdzielane w każdej epoce (co 6,4 minuty) na podstawie wydajności walidatora. Nagrody walidatora są **znacznie** niższe niż nagrody za kopanie, które wcześniej były emitowane w ramach proof-of-work (2 ETH co około 13,5 sekundy), ponieważ obsługa węzła walidacyjnego nie jest tak intensywna ekonomicznie, a zatem nie wymaga ani nie gwarantuje tak wysokiej nagrody.
 
@@ -94,7 +94,7 @@ Redukcja netto w rocznej emisji ETH: <strong>około 88,7%</strong> ((4,61% - 0,5
 Siłą przeciwną do emisji ETH jest tempo, w jakim ETH jest spalane. Aby transakcja została wykonana na Ethereum, należy uiścić minimalną opłatę (zwaną „opłatą bazową”), która ciągle się zmienia (blok po bloku) w zależności od aktywności sieci. Opłata jest uiszczana w ETH i jest _wymagana_, aby transakcja została uznana za poprawną. Opłata ta jest _spalana_ podczas procesu transakcji, co skutkuje usunięciem jej z obiegu.
 
 <InfoBanner>
-Spalanie opłat weszło w życie wraz z [aktualizacją London](/history/#london) w sierpniu 2021 i pozostaje niezmienione od czasu Połączenia.
+Spalanie opłat weszło w życie wraz z [aktualizacją London](/ethereum-forks/#london) w sierpniu 2021 i pozostaje niezmienione od czasu Połączenia.
 </InfoBanner>
 
 Oprócz spalania opłat wprowadzonych przez aktualizację London, walidatory mogą również ponosić kary za bycie offline lub, co gorsza, mogą zostać odcięte za złamanie określonych zasad, które zagrażają bezpieczeństwu sieci. Kary te skutkują potrąceniem ETH z salda danego walidatora, które nie jest bezpośrednio przekazywane jako nagroda na żadne inne konto, skutecznie spalając/usuwając je z obiegu.

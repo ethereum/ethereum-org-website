@@ -152,7 +152,7 @@ O processo de governança Ethereum muitas vezes troca velocidade e eficiência p
 
 Embora as implementações de especificação e desenvolvimento sempre tenham sido totalmente de código aberto, os processos formais usados para propor as atualizações descritas acima não foram usados. Isso permitiu que as alterações fossem especificadas e acordadas mais rapidamente por pesquisadores e implementadores.
 
-Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum em 15 de setembro de 2022, a transação foi concluída como parte da [melhoria da rede Paris](/history/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
+Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum em 15 de setembro de 2022, a transação foi concluída como parte da [melhoria da rede Paris](/ethereum-forks/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
 
 <ButtonLink href="/roadmap/merge/">
   Mais sobre a integração

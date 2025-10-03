@@ -152,7 +152,7 @@ Ethereum yönetişim süreci, genellikle açıklık ve kapsayıcılık için hı
 
 Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yukarıda açıklanan güncellemeleri önermek için kullanılan resmi süreçler kullanılmadı. Bu, değişikliklerin araştırmacılar ve uygulayıcılar tarafından daha hızlı belirlenmesine ve üzerinde anlaşmaya varılmasına izin verdi.
 
-İşaret Zinciri 15 Eylül 2022'de Ethereum yürütüm katmanı ile birleştiğinde Birleşim [Paris ağ yükseltmesinin](/history/#paris) bir parçası olarak tamamlanmıştı. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) önerisi 'Son Çağrı' yerine 'Final' olmuştu ve hisse ispatına geçiş tamamlanmıştı.
+İşaret Zinciri 15 Eylül 2022'de Ethereum yürütüm katmanı ile birleştiğinde Birleşim [Paris ağ yükseltmesinin](/ethereum-forks/#paris) bir parçası olarak tamamlanmıştı. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) önerisi 'Son Çağrı' yerine 'Final' olmuştu ve hisse ispatına geçiş tamamlanmıştı.
 
 <ButtonLink href="/roadmap/merge/">
   Birleştirme hakkında ek bilgi

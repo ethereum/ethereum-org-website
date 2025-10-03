@@ -65,7 +65,7 @@ Os levantamentos de staking estão ativos! A funcionalidade de levantamento foi 
 
 A atualização Xangai/Capella permitiu que o ETH previamente em staking fosse reclamado para contas Ethereum comuns. Fecha-se assim o ciclo na liquidez de staking e a Ethereum fica mais perto da construção de um ecossistema sustentável, escalável e descentralizado seguro.
 
-- [Mais na história de Ethereum](/history/)
+- [Mais na história de Ethereum](/ethereum-forks/)
 - [Mais no roteiro da Ethereum](/roadmap/)
 
 ## Como funcionam os pagamentos de levantamentos? {#how-do-withdrawals-work}
