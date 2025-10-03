@@ -1217,9 +1217,7 @@ If everything checks out, update the state hash to the new value and emit a `Tra
 
 ## Abuses by the centralized component {#abuses}
 
-GOON
-
-The server in this application is a centralized component. Centralized components are often a necessary evil. 
+The server in this application is a centralized component. Centralized components are often a necessary evil, but whoever controls them can usually abuse other participants, so it's important to identify exactly what abuses are possible, which ones can be prevented, and which ones can unavoidable.
 
 Information security consists of three attributes:
 
@@ -1227,7 +1225,7 @@ Information security consists of three attributes:
 - *Integrity*, information cannot be changed except by authorized users in an authorized manner.
 - *Availability*, authorized users are able to use the system.
 
-On this system integrity is provided through zero-knowledge proofs. Availability is much harder to guarantee, and confidentiality is impossible, because the bank has to know the balance for each account and all the transactions. There is no way to prevent an entity that has information from sharing that information.
+On this system integrity is provided through zero-knowledge proofs. Availability is much harder to guarantee. Confidentiality is impossible, because the bank has to know the balance for each account and all the transactions. There is no way to prevent an entity that has information from sharing that information.
 
 It might be possible to create a true confidential bank using [stealth addresses](https://vitalik.eth.limo/general/2023/01/20/stealth.html), but that is beyond the scope of this article.
 
@@ -1241,15 +1239,15 @@ Of course, this proof cannot be verified onchain, because we don't want to post 
 
 ### Forced transactions {#forced-txns}
 
-The usual mechanism to require availability and prevent censorship on L2s is [forced transactions](https://docs.optimism.io/stack/transactions/forced-transaction). But forced transactions are difficult to combine with zero-knowledge proofs. The server is the only entity that can verify transactions.
+The usual mechanism to require availability and prevent censorship on L2s is [forced transactions](https://docs.optimism.io/stack/transactions/forced-transaction). But forced transactions are difficult to combine with zero-knowledge proofs. The server is the only entity that can verify transactions and generate such proofs.
 
 We can modify `smart-contracts/src/ZkBank.sol` to accept forced transactions, and not allow the server to change the state until the forced transactions are processed. However, this opens us up to a simple denial of service attack. What if a forced transaction is invalid and therefore impossible to process?
 
 The solution is to have a zero-knowledge proof that a forced transaction is invalid. This gives the server three options:
 
 - Process the forced transaction, providing a zero-knowledge proof that it has been processed and the new state hash.
-- Reject the forced transaction, and provide a zero-knowlede proof to the contract that the transaction is invalid (unknown address, bad nonce, or insufficient balance).
-- Ignore the forced transaction. There is no way to force the server to actually process the transaction, but it means the entire system in unavailable.
+- Reject the forced transaction, and provide a zero-knowlede proof to the contract that the transaction is invalid (bad signature, unknown address, bad nonce, or insufficient balance).
+- Ignore the forced transaction. There is no way to force the server to actually process the transaction, but it means the entire system is frozen.
 
 #### Availability bonds {#avail-bonds}
 
