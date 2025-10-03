@@ -76,7 +76,7 @@ These are the methods by which the various components communicate to transfer da
 1. A web browser submits a signed transaction asking for a transfer from the signer's account to a different account.
 
 2. The server calculates a zero-knowledge proof that the state change is a valid one:
-   - The signature is valid
+   - The signature is valid.
    - The signer has an account in the bank with a sufficient balance.
    - The recipient has an account in the bank.
    - The nonce is correct.
