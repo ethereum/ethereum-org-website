@@ -41,7 +41,7 @@ lang: ja
 
 - [プルーフ・オブ・ステーク入門](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG ペーパー](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG の解説](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG の解説](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper ペーパー](https://arxiv.org/abs/2003.03052)
 
 #### 最近の研究 {#recent-research}
