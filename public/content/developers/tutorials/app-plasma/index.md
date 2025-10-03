@@ -10,43 +10,44 @@ published: 2025-09-30
 
 ## Introduction {#introduction}
 
-In contrast to [rollups](/developers/docs/scaling/zk-rollups/), [plasmas](/developers/docs/scaling/plasma) use the Ethereum mainnet for integrity, but not availability. In this article, we write an application that acts like a plasma, with Ethereum guaranteeing integrity (nobody can make unauthorized changes), but not availability (there is a centralized component that can go down and disable the whole system).
+In contrast to [rollups](/developers/docs/scaling/zk-rollups/), [plasmas](/developers/docs/scaling/plasma) use the Ethereum mainnet for integrity, but not availability. In this article, we describe an application that operates like a plasma, with Ethereum ensuring integrity (no unauthorized changes can be made), but not availability (a centralized component can fail, potentially disabling the entire system).
 
-The application we write here is a privacy preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private.
+The application we write here is a privacy-preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private. To ensure the hashes online are correct, we use zero-knowledge proofs.
 
 ## Design {#design}
 
-This is not a production-ready system, but a teaching tool. As such, it is written with a number of simplifying assumptions.
+### Simplifying assumptions {#simplifying}
+This is not a production-ready system, but a teaching tool. As such, it is written with several simplifying assumptions.
 
-- Fixed account pool. There is a specific number of accounts, which belong to predetermined addresses. This makes for a much simpler system because it is difficult to handle variable size data structures in zero knowledge proofs. For a production-ready system, we can use the [Merkle root](https://ethereum.org/en/developers/tutorials/merkle-proofs-for-offline-data-integrity/) as the state hash and provide Merkle proofs for the balances we need.
+- Fixed account pool. There is a specific number of accounts associated with predetermined addresses. This results in a much simpler system, as it is challenging to handle variable-sized data structures in zero-knowledge proofs. For a production-ready system, we can use the [Merkle root](https://ethereum.org/en/developers/tutorials/merkle-proofs-for-offline-data-integrity/) as the state hash and provide Merkle proofs for the balances we need.
 
-- Memory storage. On a production system we need to write all the account balances to disk to preserve them in case of a restart. Here it's OK if the information is simply lost.
+- Memory storage. On a production system, we need to write all the account balances to disk to preserve them in case of a restart. Here, it's OK if the information is lost.
 
-- Transfers only. A production system would require a way to deposit assets into the bank and to withdraw them back. But the purpose here is just to illustrate the concept, so this bank is limited to transfers.
+- Transfers only. A production system would require a way to deposit assets into the bank and to withdraw them. But the purpose here is to illustrate the concept, so this bank is limited to transfers.
 
 ### Zero-knowledge proofs  {#zero-knowledge-proofs}
 
-At a very basic level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between some public data, *Data<sub>public</sub>*, and *Data<sub>private</sub>*. The verifier knows *Relationship* and *Data<sub>public</sub>*.
+At a fundamental level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between some public data, *Data<sub>public</sub>*, and *Data<sub>private</sub>*. The verifier knows *Relationship* and *Data<sub>public</sub>*.
 
-To preserve privacy, we need the states and the transactions to be private. But to ensure integrity, we need the [cryptographic hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of states to be public. To prove to people who submit transactions that those transactions really happened, we need to also post transaction hashes.
+To preserve privacy, we need the states and the transactions to be private. But to ensure integrity, we need the [cryptographic hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of states to be public. To prove to people who submit transactions that those transactions really happened, we also need to post transaction hashes.
 
-In most cases, *Data<sub>private</sub>* is the input to the zero knowledge proof program, and *Data<sub>public</sub>* is the output.
+In most cases, *Data<sub>private</sub>* is the input to the zero-knowledge proof program, and *Data<sub>public</sub>* is the output.
 
-These fields in *Data<sub>private</sub>*:
+These are the fields in *Data<sub>private</sub>*:
 
-- *State<sub>n</sub>*, the old state
-- *State<sub>n+1</sub>*, the new state
+- *State<sub>old</sub>*, the old state
+- *State<sub>new</sub>*, the new state
 - *Transaction*, a transaction that changes from the old state to the new one. This transaction needs to include these fields:
   - *Destination address* that receives the transfer
   - *Amount* being transferred
   - *Nonce* to ensure each transaction can only be processed once.
   The source address does not need to be in the transaction, because it can be recovered from the signature.
-- *Signature*, a signature that is authorized to perform the transaction. In our case, the only address authorized to perform a transaction is the source address. Because of the way our zero-knowledge system works, in addition to the Ethereum signature we also need the account's public key.
+- *Signature*, a signature that is authorized to perform the transaction. In our case, the only address authorized to perform a transaction is the source address. Due to the way our zero-knowledge system operates, in addition to the Ethereum signature, we also require the account's public key.
 
 These are the fields in *Data<sub>public</sub>*:
 
-- *Hash(State<sub>n</sub>)* the hash of the old state
-- *Hash(State<sub>n+1</sub>)* the hash of the new state
+- *Hash(State<sub>old</sub>)* the hash of the old state
+- *Hash(State<sub>new</sub>)* the hash of the new state
 - *Hash(Transaction)* the hash of the transaction that changes the state from *State<sub>n</sub>* to *State<sub>n+1</sub>*.
 
 The relationship checks several conditions:
@@ -55,19 +56,22 @@ The relationship checks several conditions:
 - The transaction, when applied to the old state, results in the new state.
 - The signature comes from the transaction's source address.
 
-Because of the properties of cryptographic hash functions, proving these conditions is enough to ensure integrity. 
+Due to the properties of cryptographic hash functions, proving these conditions is sufficient to ensure integrity. 
 
 ### Data structures {#data-structures}
 
-The main data structure is the state held by the server. For every account, the server keeps track of the account balance and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), used to prevent [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+The primary data structure is the state held by the server. For every account, the server maintains a record of the account balance and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), which is used to prevent [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Components {#components}
 
-This system requires two components: One is a *server* that receives transactions, processes them, and posts hashes to the chain along with the zero knowledge proofs. The second is a *smart contract* that stores the hashes and verifies the zero knowledge proofs to ensure state transitions are legitimate.
+This system requires three components: 
+- A *client* that submits signed transactions. Like most dapps, this client will run in a browser.
+- A *server* that receives transactions, processes them, and posts hashes to the chain along with the zero-knowledge proofs.
+- A *smart contract* that stores the hashes and verifies the zero-knowledge proofs to ensure state transitions are legitimate.
 
 ### Data and control flow {#flows}
 
-These is the ways that the various components communicate to transfer from one account to another.
+These are the ways that the various components communicate to transfer from one account to another.
 
 1. A web browser submits a signed transaction asking for a transfer from the signer's account to a different account.
 
