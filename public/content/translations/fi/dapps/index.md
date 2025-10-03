@@ -29,4 +29,4 @@ Oletko kiinnostunut lukemaan lisää muista Ethereumilla tehdyistä sovelluksist
 
 Jotkut Ethereumin sovellukset vaativat lompakkoa - [opi lisää Ethereumin lompakoista täältä](/wallets/).
 
-Jotkut Ethereumin sovellukset vaativat ETH - [opi lisää ETH:stä täältä](/eth/).
+Jotkut Ethereumin sovellukset vaativat ETH - [opi lisää ETH:stä täältä](/what-is-ether/).

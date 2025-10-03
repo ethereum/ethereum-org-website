@@ -444,7 +444,7 @@ Fontolja meg, hogy létrehoz egy szolgáltatást, hogy a klienseket automatikusa
 
 #### A kliensek frissítése {#updating-clients}
 
-Tartsa a kliensszoftverét naprakészen a legutóbbi biztonsági javításokkal, funkciókkal és [EIP-ekkel](/eips/). Főleg a [végleges elágazás (hard fork)](/history/) esetén legyen biztos abban, hogy a megfelelő kliensverziót használja.
+Tartsa a kliensszoftverét naprakészen a legutóbbi biztonsági javításokkal, funkciókkal és [EIP-ekkel](/eips/). Főleg a [végleges elágazás (hard fork)](/ethereum-forks/) esetén legyen biztos abban, hogy a megfelelő kliensverziót használja.
 
 > A fontos hálózati frissítések előtt az Ethereum Alapítvány publikál egy cikket a [blogon](https://blog.ethereum.org). Ön is [feliratkozhat ezekre a bejelentésekre](https://blog.ethereum.org/category/protocol#subscribe), hogy e-mailes figyelmeztetést kapjon, amikor a csomópontot frissíteni kell.
 

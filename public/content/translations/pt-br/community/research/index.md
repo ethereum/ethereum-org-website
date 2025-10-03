@@ -83,7 +83,7 @@ Um nó Ethereum é necessário para executar dois softwares:
 1. um cliente de consenso para manter o controle da cabeça do blockchain, blocos de transmissão e para processar a lógica de consenso
 2. um cliente de execução para oferecer suporte à Máquina Virtual do Ethereum e executar transações e contratos inteligentes
 
-Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) para obter mais detalhes sobre nós e clientes e uma lista de todas as implementações atuais de clientes. Um histórico de todas as melhorias do Ethereum também está disponível na [página de histórico](/history/).
+Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) para obter mais detalhes sobre nós e clientes e uma lista de todas as implementações atuais de clientes. Um histórico de todas as melhorias do Ethereum também está disponível na [página de histórico](/ethereum-forks/).
 
 ### Clientes de execução {#execution-clients}
 

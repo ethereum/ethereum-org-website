@@ -20,7 +20,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 2) Essential pages {#essential-pages}
 
 - [What is Ethereum?](/what-is-ethereum/)
-- [What is ether (ETH)?](/eth/)
+- [What is ether (ETH)?](/what-is-ether/)
 - [Get ETH](/get-eth/)
 - [Wallets](/wallets/)
 - [Find wallets](/wallets/find-wallet/)
@@ -210,7 +210,7 @@ Below is a breakdown of the website pages each content bucket contains.
 
 ## 19) Additional Learn pages {#learn-pages2}
 
-- [History](/history/)
+- [History](/ethereum-forks/)
 - [Glossary](/glossary/)
 - [Zero-knowledge proofs](/zero-knowledge-proofs/)
 

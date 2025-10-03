@@ -17,7 +17,7 @@ summaryPoint4: Nach The Merge reduzierte sich Ethereums Energieverbrauch um ~99,
 
 ## Was war die Zusammenführung? {#what-is-the-merge}
 
-Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/history/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
+Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/ethereum-forks/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 
 <MergeInfographic />
 

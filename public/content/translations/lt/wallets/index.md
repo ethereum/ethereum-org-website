@@ -14,7 +14,7 @@ lang: lt
 
 ## Kas yra Ethereum piniginė ir kokią turėčiau naudoti? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Piniginės – tai programos, kuriose lengva saugoti bei siųsti [ETH](/eth/) ir sąveikauti su kitomis [Ethereum sukurtomis programomis](/apps/).
+Piniginės – tai programos, kuriose lengva saugoti bei siųsti [ETH](/what-is-ether/) ir sąveikauti su kitomis [Ethereum sukurtomis programomis](/apps/).
 
 Norite įdiegti piniginę?
 

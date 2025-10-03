@@ -15,7 +15,7 @@ Mevcut testlerin bazı örnekleri burada bulunabilir:
 - [Katman 2](/layer-2)
 - [NFT](/nft/)
 - [Ethereum nedir?](/what-is-ethereum/)
-- [ETH nedir?](/eth/)
+- [ETH nedir?](/what-is-ether/)
 
 ## Öğrenme testi ekleme
 

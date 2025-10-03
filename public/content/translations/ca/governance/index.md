@@ -42,7 +42,7 @@ _Mentre que a nivell del protocol la governança d'Ethereum és fora de cadena, 
 
 Hi ha diversos tipus de tenidors a la [comunitat Ethereum](/community/) i cadascú juga el seu paper en el procés de governança. Començant pels tenidors més allunyats del protocol i apropant la lupa a poc a poc, tenim:
 
-- **Tenidors d'Ether**: gent que posseeix una quantitat arbitrària d'ETH. [Més informació sobre ETH](/eth/).
+- **Tenidors d'Ether**: gent que posseeix una quantitat arbitrària d'ETH. [Més informació sobre ETH](/what-is-ether/).
 - **Usuaris d'aplicacions**: gent que interactua amb les aplicacions a la cadena de blocs d'Ethereum.
 - **Desenvolpadors d'aplicacions/eines**: gent que escriu aplicacions executades a la cadena de blocs d'Ethereum (p. ex. DeFi, NFT, etc.) o fabrica eines per interactuar amb Ethereum (p. ex. carteres, conjunts de proves, etc.). [Més informació sobre dapps](/apps/).
 - **Operadors de nodes**: gent que executa nodes que propaguen blocs i transaccions i refusa qualsevol transacció o bloc invàlids amb què es trobin. [Més informació sobre els nodes](/developers/docs/nodes-and-clients/).

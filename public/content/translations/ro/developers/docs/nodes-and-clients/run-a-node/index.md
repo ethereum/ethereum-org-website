@@ -140,7 +140,7 @@ Consider creating a service to run your client automatically on startup. For exa
 
 #### Actualizarea clientului {#updating-client}
 
-You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
+You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/ethereum-forks/), make sure you are running the correct client version.
 
 #### Rularea de servicii suplimentare {#running-additional-services}
 

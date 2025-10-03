@@ -42,7 +42,7 @@ _A pesar de que siguiendo el protocolo, la gobernanza de Ethereum se desarrolla 
 
 En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple una función en el proceso de gobernanza. Desde los actores más desvinculados del protocolo hasta los que exhiben un mayor nivel de participación, encontramos los siguientes:
 
-- **Tenedores de ether**: personas que tienen una cantidad arbitraria de ETH. [Más información sobre ETH](/eth/).
+- **Tenedores de ether**: personas que tienen una cantidad arbitraria de ETH. [Más información sobre ETH](/what-is-ether/).
 - **Usuarios de aplicaciones**: estas personas interactúan con aplicaciones en la cadena de bloques de Ethereum.
 - **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre DApps](/apps/).
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ El proceso de gobernanza de Ethereum usualmente cambia velocidad y eficiencia po
 
 Si bien la especificación y las implementaciones de desarrollo siempre han sido totalmente de código abierto, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
 
-Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/history/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
+Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/ethereum-forks/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
 <ButtonLink href="/roadmap/merge/">
   Más sobre la fusión

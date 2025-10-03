@@ -100,7 +100,7 @@ Com a cadena de blocs (o «blockchain»), Ethereum està dissenyat per enviar tr
 
 També podeu transferir diners dins d'Ethereum. Això us permet pagar salaris en un segon i donar als treballadors accés als seus diners en qualsevol moment que ho necessitin. O llogar coses en un segon, com un traster o una moto elèctrica.
 
-I si no voleu enviar o transferir [ETH](/eth/) a causa de les grans oscil·lacions de valor que pot patir, hi ha divises alternatives dins d'Ethereum: monedes estables («stablecoins»).
+I si no voleu enviar o transferir [ETH](/what-is-ether/) a causa de les grans oscil·lacions de valor que pot patir, hi ha divises alternatives dins d'Ethereum: monedes estables («stablecoins»).
 
 <Divider />
 
@@ -316,7 +316,7 @@ Ethereum és el fonament perfecte per a les DeFi per diverses raons:
 Podeu pensar en les DeFi com en capes:
 
 1. La cadena de blocs («blockchain»): Ethereum conté l'historial de transaccions i l'estat dels comptes.
-2. Els actius: [ETH](/eth/) i la resta de tókens (divises).
+2. Els actius: [ETH](/what-is-ether/) i la resta de tókens (divises).
 3. Els protocols\_ [contractes intel·ligents](/glossary/#smart-contract) que proporcionen les funcionalitats, per exemple un servei que permeti el préstec d'actius de forma descentralitzada.
 4. [Les aplicacions](/apps/): els productes que fem servir per a gestionar i accedir als protocols.
 

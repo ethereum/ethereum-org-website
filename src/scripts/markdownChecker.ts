@@ -279,7 +279,7 @@ function processMarkdown(path: string, summary: string[]) {
   // TODO: create .env commit warning component for tutorials
   // Ignore tutorials with Javascript and ExpandableCards
   if (
-    !path.includes("/history/") &&
+    !path.includes("/ethereum-forks/") &&
     !path.includes("/whitepaper/") &&
     !path.includes("/roadmap/") &&
     !path.includes("alchemy") &&

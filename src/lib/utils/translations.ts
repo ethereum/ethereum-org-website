@@ -117,7 +117,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
-  if (path.startsWith("/history/")) {
+  if (path.startsWith("/ethereum-forks/")) {
     primaryNamespace = "page-history"
   }
 

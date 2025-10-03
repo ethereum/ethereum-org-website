@@ -42,7 +42,7 @@ _As yu dey di protokol level Ethereum gofanans na off-chain, plenti yus kases we
 
 Plenti stakeholdas dey for [Ethereum komunity](/community/), wey ish dey play one role in di gofanans process. As im start from di stakeholdas far from di protokol and dey zoom in, wi get:
 
-- **ETher holdas**: dis pipol hold one arbitary amount of ETH. [More tok ETH](/eth/).
+- **ETher holdas**: dis pipol hold one arbitary amount of ETH. [More tok ETH](/what-is-ether/).
 - **Aplikashon Users**: dis pipol dey interact wit aplikashon on di Ethereum blockchain.
 - **Aplikashon/Tooling Divelopas**: dis pipol dey write aplikashons wey dey run ontop di Ethereum blockchain (e.g. DeFi, NFTs, etc.) dem dey also build tooling wey pipol fit yus wit Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/apps/).
 - **Pipol wey dey operate Node**: dis pipol dey run nodes wey dey propagate blocks and transakshons, di node dey also reject any transakshon abi block wey nor koret wey dem kome akross. [More on nodes](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ Di Ethereum gofanans process dey somtaims trade off speed and effishiensy for op
 
 As di spesifikashon and divelopment implimentashon na always fully open sorse, dem nor yus di formal process dem yus to propose updates wey dem diskribe above. Na dis one make am posibol for risearchas and implimentas to kwikly agree on shanjis.
 
-Wen Beacon Chain join wit di Ethereum exekushon layer for September 15, 2022 Di Merge komplete as part of di [Paris netwok upgrade](/history/#paris). Di proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) kon shanj name from 'Last Koll' to 'Final', na dis one make di transishon to proof-of-stake komplete.
+Wen Beacon Chain join wit di Ethereum exekushon layer for September 15, 2022 Di Merge komplete as part of di [Paris netwok upgrade](/ethereum-forks/#paris). Di proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) kon shanj name from 'Last Koll' to 'Final', na dis one make di transishon to proof-of-stake komplete.
 
 <ButtonLink href="/roadmap/merge/">
   More on Di Merge

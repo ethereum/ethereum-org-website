@@ -320,7 +320,7 @@ Ethereum jẹ́ ipilẹ tó péye fún DeFi fún ọ̀pọ̀ àwọn ìdí:
 O lè ro DeFi gege bi àwọn ìpele:
 
 1. Blockchain náà – Ethereum ní ìtàn ìdunadura àti ipo àwọn àkanti.
-2. Àwọn ohun-ini – [ETH](/eth/) àti àwọn tokin míìran (àwọn owó).
+2. Àwọn ohun-ini – [ETH](/what-is-ether/) àti àwọn tokin míìran (àwọn owó).
 3. Àwọn ìlànà náà – [àdéhùn ọlọ́gbọ́n](/glossary/#smart-contract) tó pèsè iṣẹ́ ṣíṣe, fún àpẹẹrẹ, iṣẹ́ kan tó fúnni láàyè fún yíyani ní àwọn ohun-ini alàílakoso.
 4. [Àwọn ohun èlò náà](/apps/) – àwọn ọjà tí àwa ń lò láti ṣètò àti wọlé sí àwọn ìlànà náà.
 

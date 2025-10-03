@@ -39,7 +39,7 @@ What these implementations have in common is they all follow a single specificat
 - Originally, the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Execution specs](https://github.com/ethereum/execution-specs/)
 - [Consensus specs](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/history/)
+- [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/ethereum-forks/)
 
 ### Tracking nodes in the network {#network-overview}
 

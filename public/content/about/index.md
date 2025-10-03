@@ -26,7 +26,7 @@ Ethereum is a public network, a blockchain, and an open-source protocol -- opera
 
 Ether (also known by its ticker symbol, ETH) is the native currency transacted on Ethereum. ETH is needed to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
 
-[More about ETH](/eth/)
+[More about ETH](/what-is-ether/)
 
 [More on staking ETH](/staking/)
 

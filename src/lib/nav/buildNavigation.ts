@@ -32,12 +32,19 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("what-is-ether"),
               description: t("nav-what-is-ether-description"),
-              href: "/eth/",
+              href: "/what-is-ether/",
             },
             {
               label: t("ethereum-vs-bitcoin"),
               description: t("nav-ethereum-vs-bitcoin-description"),
               href: "/ethereum-vs-bitcoin/",
+            },
+            {
+              label: t("ethereum-history-founder-and-ownership"),
+              description: t(
+                "nav-ethereum-history-founder-and-ownership-description"
+              ),
+              href: "/ethereum-history-founder-and-ownership/",
             },
             {
               label: t("ethereum-wallets"),
@@ -471,7 +478,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-history-label"),
               description: t("nav-history-description"),
-              href: "/history/",
+              href: "/ethereum-forks/",
             },
             {
               label: t("nav-open-research-label"),

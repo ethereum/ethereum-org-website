@@ -680,7 +680,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </DocLink>
                 </ListItem>
                 <ListItem>
-                  <DocLink href="/eth">
+                  <DocLink href="/what-is-ether">
                     {t("page-what-is-ethereum-network-read-next-item-2")}
                   </DocLink>
                 </ListItem>

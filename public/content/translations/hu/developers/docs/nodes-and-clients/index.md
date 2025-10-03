@@ -37,7 +37,7 @@ Az implementációk közös vonása, hogy egyazon specifikációt követik. Ez a
 - Eredetileg az [Ethereum Sárga Könyvében](https://ethereum.github.io/yellowpaper/paper.pdf), vagyis műszaki alaptanulmányában.
 - [Végrehajtási specifikációk](https://github.com/ethereum/execution-specs/)
 - [Konszenzusspecifikációk](https://github.com/ethereum/consensus-specs)
-- [EIP-ek](https://eips.ethereum.org/), amelyeket a különböző [ hálózatfrissítések](/history/) során vezettek be
+- [EIP-ek](https://eips.ethereum.org/), amelyeket a különböző [ hálózatfrissítések](/ethereum-forks/) során vezettek be
 
 ### Csomópontok követése a hálózatban {#network-overview}
 

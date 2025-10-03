@@ -321,7 +321,7 @@ Ethereum adalah fondasi yang sempurna untuk DeFi dikarenakan beberapa alasan:
 Anda dapat membayangkan tentang DeFi dalam lapisan:
 
 1. Blockchain – Ethereum berisi riwayat transaksi dan state akun.
-2. Aset – [ETH](/eth/) dan token lainnya (mata uang).
+2. Aset – [ETH](/what-is-ether/) dan token lainnya (mata uang).
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya, layanan yang memungkinkan pemberian pinjaman aset yang terdesentralisasi.
 4. [Aplikasi](/apps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 
