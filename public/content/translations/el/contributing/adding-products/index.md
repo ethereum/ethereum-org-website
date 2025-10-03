@@ -95,6 +95,6 @@ _Εξετάζουμε επίσης επιλογές για ψηφοφορία, �
 
 Αν θέλετε να προσθέσετε μια dapp στο ethereum.org και πληροί τα κριτήρια, δημιουργήστε ένα ζήτημα στο GitHub.
 
-<ButtonLink href="https://submitapp.paperform.co/">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Δημιουργήστε ένα ζήτημα
 </ButtonLink>

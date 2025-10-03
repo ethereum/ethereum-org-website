@@ -383,7 +383,7 @@ def register(name, value):
 3. Η κατανομή της ισχύος κρυπτόρυξης μπορεί να καταλήξει να είναι ριζικά άνιση στην πράξη.
 4. Υπάρχουν κερδοσκόποι, πολιτικοί εχθροί και τρελοί, των οποίων η συνάρτηση χρησιμότητας περιλαμβάνει την πρόκληση ζημιών στο δίκτυο και μπορούν να δημιουργήσουν έξυπνα συμβόλαια το κόστος των οποίων είναι πολύ χαμηλότερο από το κόστος που καταβάλλουν άλλοι κόμβοι επαλήθευσης.
 
-(1) συμπεριλαμβάνονται λιγότερες συναλλαγές για τον εξορύκτη και (2) αυξάνει το `NC`. Ως εκ τούτου, αυτές οι δύο επιδράσεις τουλάχιστον εν μέρει ακυρώνουν το ένα το άλλο. <sup>[Πώς;](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> Τα σημεία (3) και (4) αποτελούν το μεγαλύτερο ζήτημα. Για να τα λύσουμε, απλά εφαρμόζουμε ένα κυμαινόμενο όριο: κανένα μπλοκ δεν μπορεί να έχει περισσότερες πράξεις από τον `BLK_LIMIT_FACTOR` επί τον μακροπρόθεσμο εκθετικό κινούμενο μέσο όρο. Συγκεκριμένα:
+(1) συμπεριλαμβάνονται λιγότερες συναλλαγές για τον εξορύκτη και (2) αυξάνει το `NC`. Ως εκ τούτου, αυτές οι δύο επιδράσεις τουλάχιστον εν μέρει ακυρώνουν το ένα το άλλο. <sup>[Πώς;](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> Τα σημεία (3) και (4) αποτελούν το μεγαλύτερο ζήτημα. Για να τα λύσουμε, απλά εφαρμόζουμε ένα κυμαινόμενο όριο: κανένα μπλοκ δεν μπορεί να έχει περισσότερες πράξεις από τον `BLK_LIMIT_FACTOR` επί τον μακροπρόθεσμο εκθετικό κινούμενο μέσο όρο. Συγκεκριμένα:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _Παρά τη γραμμική έκδοση νομίσματος, όπως ακ
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ και Αυτόνομοι Πράκτορες, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Ο Mike Hearn για την Έξυπνη Ιδιοκτησία στο Φεστιβάλ Turing](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Δέντρα Merkle Patricia του Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Δέντρα Merkle Patricia του Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd για τα δυαδικά δέντρα Merkle συνολικά](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Για την ιστορία του Λευκού βιβλίου, δείτε αυτό [το wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Για την ιστορία του Λευκού βιβλίου, δείτε αυτό [το wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Το Ethereum, όπως πολλά έργα λογισμικού ανοιχτού κώδικα που καθοδηγούνται από την κοινότητα, έχει εξελιχθεί από την αρχική του σύλληψη. Για να μάθετε για τις τελευταίες εξελίξεις γύρω απο το Ethereum και πώς γίνονται οι αλλαγές στο πρωτόκολλο, προτείνουμε [αυτόν τον οδηγό](/learn/)._
