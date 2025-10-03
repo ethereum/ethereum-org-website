@@ -92,8 +92,8 @@ These are the methods by which the various components communicate to transfer da
 5. The smart contract verifies the zero-knowledge proof.
 
 6. If the zero-knowledge proof checks out, the smart contract performs these actions:
-   - Update the current state hash to the new state hash
-   - Emit a log entry with the new state hash and the transaction hash
+   - Update the current state hash to the new state hash.
+   - Emit a log entry with the new state hash and the transaction hash.
 
 ### Tools {#tools}
 
