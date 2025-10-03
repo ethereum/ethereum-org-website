@@ -26,7 +26,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Brave Browser](https://basicattentiontoken.org/) - _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
 - [EthereumAds](https://ethereumads.com/) - _lets web site operators sell advertising space and get paid via Ethereum_
 - [hCaptcha](https://www.hcaptcha.com/) - _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
-- [Opera MiniPay](https://www.opera.com/products/minipay) - _makes mobile payments more accessible and secure for people in Africa with a non-custodial wallet and leverages phone numbers for easy transactions_
+- [Opera MiniPay](https://www.minipay.to/) - _makes mobile payments more accessible and secure for people in Africa with a non-custodial wallet and leverages phone numbers for easy transactions_
 - [Roxpay](https://www.roxpay.ch/) - _automates pay-per-use asset invoicing and payments_
 - [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _cross border payments with stablecoins_
 - [Toku](https://www.toku.com/) - _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_
@@ -46,7 +46,7 @@ Here are some of the enterprise applications that have been built on top of the 
 
 ### Asset tokenization {#tokenization}
 
-- [AgroToken](https://agrotoken.io/en/) - _tokenizing and trading agricultural commodities_
+- [JusToken](https://www.justoken.com/) - _tokenizing and trading agricultural commodities_
 - [Bitbond](https://www.bitbond.com/) - _improves the issuance, settlement and custody of financial assets with tokenization_
 - [Blocksquare](https://blocksquare.io/) - _tokenization infrastructure for real estate_
 - [Centrifuge](https://centrifuge.io/) - _tokenized receivables financing, debt, and assets_
@@ -86,7 +86,7 @@ Here are some of the enterprise applications that have been built on top of the 
 
 ### Insurance {#insurance}
 
-- [Arbol](https://www.arbolmarket.com/) - _parmetric insurance to cover weather related risks_
+- [Arbol](https://www.arbol.io/) - _parmetric insurance to cover weather related risks_
 - [Etherisc](https://etherisc.com/) - _decentralized insurance for a variety of risks_
 - [Nayms](https://www.nayms.com/) - _a digital space for the creation of insurance programs, the raising and trading of capital, the writing of risk, and the payment rails for premium and claim transactions, built with AON_
 
@@ -94,7 +94,7 @@ Here are some of the enterprise applications that have been built on top of the 
 
 - [BCdiploma](https://www.bcdiploma.com/) - _digitizes and verifies diplomas, certificates, and micro-credentials_
 - [Bhutan National Digital Identity](https://www.bhutanndi.com/) - \_a foundation for Bhutan’s digital economy, facilitating trusted interactions between individuals and organizations
-- [Hyland Credentials](https://www.hylandcredentials.com) - _digital diplomas and other education credentials, licenses, and certificates_
+- [Hyland Credentials](https://www.hyland.com/en/solutions/products/hyland-credentials) - _digital diplomas and other education credentials, licenses, and certificates_
 - [Palau Digital Residency Program](https://rns.id/) - _offers global citizens the ability to have a legal Palau government-issued ID_
 - [QuarkID](https://quarkid.org/) _is a self-soverign identity protocol for managing essential personal documents such as birth and marriage certificates, academic credentials, and proof of income, developed by the government of Buenos Aires for use in Argentina and other South American countries_
 - [Spherity](https://www.spherity.com/) - _offers digital identity management solutions to establish digital trust in ecosystems, focusing on decentralized identities and verifiable credentials_
@@ -106,7 +106,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Fruitlab](https://fruitlab.com/) - _a platform for gamers to earn from watching, sharing and playing online games_
 - [Lamborghini](https://venturebeat.com/games/lamborghini-and-animocas-motorverse-tap-base-blockchain-for-in-game-assets/) - _creates in-game assets for Animoca’s Web3 racing game Motorverse_
 - [Nike Swoosh](https://www.swoosh.nike/) - _an NFT platform_
-- [Sothbebys Metaverse](https://metaverse.sothebys.com/) - _a digital art NFT marketplace by Sothebys_
+- [Sothbebys Metaverse](https://www.sothebys.com/en/departments/digital-art) - _a digital art NFT marketplace by Sothebys_
 - [Soneium](https://soneium.org/) - \_a Layer 2 by Sony to support Web3 games and NFTs
 
 If you would like to add to this list, please see [instructions for contributing](/contributing/).
@@ -135,7 +135,7 @@ Most new blockchain applications are being built on [Layer 2](/layer-2) chains. 
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) - _scalable API access to the Ethereum and IPFS networks_
 - [Kaleido](https://kaleido.io/) - _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
-- [Moralis](http://moralis.io/) - _enterprise grade APIs and Nodes with a SOC2 type 2 certification_
+- [Moralis](https://moralis.com/) - _enterprise grade APIs and Nodes with a SOC2 type 2 certification_
 - [Nightfall](https://github.com/EYBlockchain/nightfall_3) - _an application for transferring ERC20, ERC721 and ERC1155 applications under Zero Knowledge, using an Optimistic Rollup, from Ernst & Young_
 - [NodeReal](https://nodereal.io/) - _provides scalable blockchain infrastructure and API services provider for the Web3 ecosystem_
 - [QuickNode](https://www.quicknode.com/) - _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
