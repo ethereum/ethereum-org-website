@@ -71,36 +71,37 @@ This system requires three components:
 
 ### Data and control flow {#flows}
 
-These are the ways that the various components communicate to transfer from one account to another.
+These are the methods by which the various components communicate to transfer data from one account to another.
 
 1. A web browser submits a signed transaction asking for a transfer from the signer's account to a different account.
 
-2. The server verifies that the transaction is valid:
+2. The server calculates a zero-knowledge proof that the state change is a valid one:
+   - The signature is valid
    - The signer has an account in the bank with a sufficient balance.
    - The recipient has an account in the bank.
+   - The nonce is correct.
 
 3. The server calculates the new state by subtracting the transferred amount from the signer's balance and adding it to the recipient's balance.
 
-4. The server calculates a zero-knowledge proof that the state change is a valid one.
-
-5. The server submits to Ethereum a transaction that includes:
+4. The server submits to Ethereum a transaction that includes:
+   - The old state hash
    - The new state hash
-   - The transaction hash (so the trasaction sender can know it has been processed)
-   - The zero knowledge proof that proves the transition to the new state is valid
+   - The transaction hash (so the transaction sender can know it has been processed)
+   - The zero-knowledge proof that proves the transition to the new state is valid
 
-6. The smart contract verifies the zero knowledge proof.
+5. The smart contract verifies the zero-knowledge proof.
 
-7. If the zero knowledge proof checks out, the smart contract performs these actions:
+6. If the zero-knowledge proof checks out, the smart contract performs these actions:
    - Update the current state hash to the new state hash
    - Emit a log entry with the new state hash and the transaction hash
 
 ### Tools {#tools}
 
-For the client-side code we are going to use [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) and [Wagmi](https://wagmi.sh/). These are industry standard tools, if you are not familiar with them, you can use [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+For the client-side code, we are going to use [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), and [Wagmi](https://wagmi.sh/). These are industry-standard tools; if you are not familiar with them, you can refer to [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for guidance.
 
 The majority of the server is written in JavaScript using [Node](https://nodejs.org/en). The zero-knowledge part is written in [Noir](https://noir-lang.org/). We need version `1.0.0-beta.10`, so after you [install Noir as instructed](https://noir-lang.org/docs/getting_started/quick_start), run:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
 
@@ -108,9 +109,13 @@ The blockchain we use is `anvil`, a local testing blockchain which is part of [F
 
 ## Implementation {#implementation}
 
-Because this is a complex system, we'll implement it in stages.
+Because this is a complex system, we'll implement it in stages:
 
-### Stage 1 - Manual zero knowledge {#stage-1}
+1. Manual zero-knowledge, where we sign a transaction in the browser and then manually provide it to the Noir zero-knowledge code.
+2. The JavaScript server to relay information between the browser and the Noir code.
+3. The smart contract code.
+
+### Stage 1 - Manual zero-knowledge {#stage-1}
 
 For the first stage, we'll sign a transaction in the browser and then manually provide the information to the zero-knowledge proof. The zero-knowledge code expects to get that information in `server/noir/Prover.toml` (documented [here](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
@@ -128,11 +133,11 @@ To see it in action:
    npm run dev
    ```
 
-   The reason you need a web server here is that to prevent certain types of fraud many wallets (such as MetaMask) don't accept files served directly from the disk.
+   You need a web server, as many wallets (such as MetaMask) don't accept files served directly from the disk. This prevents certain types of fraud.
 
 3. Open a browser with a wallet.
 
-4. In the wallet enter a new passphrase. Note that this will delete your existing pass phrase, so *make sure you have a backup*. 
+4. In the wallet, enter a new passphrase. Note that this will delete your existing passphrase, so *make sure you have a backup*. 
 
    The passphrase is `test test test test test test test test test test test junk`, the default testing passphrase for anvil.
 
@@ -142,16 +147,16 @@ To see it in action:
 
 7. Click **Sign** and sign the transaction.
 
-8. Under the **Prover.toml** heading you'll find text. Replace `server/noir/Prover.toml` with that text.
+8. Under the **Prover.toml** heading, you'll find text. Replace `server/noir/Prover.toml` with that text.
 
-9. Execute the zero knowledge proof.
+9. In a separate command-line window, execute the zero-knowledge proof.
 
    ```sh
-   cd ../server/noir
+   cd server/noir
    nargo execute
    ```
 
-   The output should be similar to
+   The output should be similar to:
 
    ```
    ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
@@ -161,12 +166,11 @@ To see it in action:
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
    ```
 
-10. Compare the last two values to the hash you see on the web browser to see the message is hashed correctly.
+10. Compare the last two values to the hash you see on the web browser to see if the transaction processed is the correct one.
 
 #### `server/noir/Prover.toml`
 
-[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) shows the information format expected by Noir.
-
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) contains the information in the format expected by Noir.
 
 ```toml
 message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
@@ -174,7 +178,7 @@ message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0
 
 The message is in text format, which makes it easy for the user to understand (necessary when signing) and for the Noir code to parse. The amount is quoted in finneys to enable fractional transfers on one hand, and be easily readable on the other. The last number is the [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
-The string is 100 characters long. Zero knowledge proofs don't handle variable size data very well, so it's often necessary to pad data.
+The string is 100 characters long. Zero-knowledge proofs don't handle variable-sized data very well, so it's often necessary to pad data.
 
 ```toml
 pubKeyX=["0x83",..."0x75"]
@@ -196,11 +200,11 @@ balance=100_000
 nonce=0
 ```
 
-This is the way to specify an array of structures. For each entry, we specify the address, balance (in milliETH a.ka. [Finney](https://cryptovalleyjournal.com/glossary/finney/)), and next nonce value.
+This is the way to specify an array of structures. For each entry, we specify the address, balance (in milliETH a.ka. [Finney](https://cryptovalleyjournal.com/glossary/finney/)), and the next nonce value.
 
 #### `client/src/Transfer.tsx`
 
-[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) implements the client-side processing and generates the `server/noir/Prover.toml` file with te parameters. 
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) implements the client-side processing and generates the `server/noir/Prover.toml` file with the parameters. 
 
 Here is the explanation of the more interesting parts.
 
@@ -208,7 +212,7 @@ Here is the explanation of the more interesting parts.
 export default attrs =>  {
 ```
 
-This function creates the `Transfer` React component which other files can import.
+This function creates the `Transfer` React component, which the rest of the application can import.
 
 ```tsx
   const accounts = [
@@ -220,7 +224,7 @@ This function creates the `Transfer` React component which other files can impor
   ]
 ```
 
-The account addresses. There are the addresses created by the `test ... test junk` pass phrase. If you want to use your own addresses, just modify this definition.
+The account addresses. There are the addresses created by the `test ... test junk` pass phrase. If you want to use your own addresses, modify this definition.
 
 ```tsx
   const account = useAccount()
@@ -229,7 +233,7 @@ The account addresses. There are the addresses created by the `test ... test jun
   })
 ```
 
-These [Wagmi hooks](https://wagmi.sh/react/api/hooks) let us access the [viem](https://viem.sh/) library and the wallet.
+These [Wagmi hooks](https://wagmi.sh/react/api/hooks) enable us to access the [Viem](https://viem.sh/) library and the wallet.
 
 ```tsx
   const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
@@ -241,7 +245,7 @@ This is the message, padded with spaces. Every time one of the [`useState`](http
   const sign = async () => {
 ```
 
-This function is called when the user clicks the **Sign** button. The message is updated automatically, but the signature requires user approval in the wallet, and we don't want to ask for that except as needed.
+This function is called when the user clicks the **Sign** button. The message is updated automatically, but the signature requires user approval in the wallet, and we don't want to request it until it is needed.
 
 ```tsx
     const signature = await wallet.signMessage({
@@ -250,13 +254,13 @@ This function is called when the user clicks the **Sign** button. The message is
     })
 ```
 
-Ask thr wallet to [sign the message](https://viem.sh/docs/accounts/local/signMessage). 
+Ask the wallet to [sign the message](https://viem.sh/docs/accounts/local/signMessage). 
 
 ```tsx
     const hash = hashMessage(message)
 ```
 
-Get the message hash. It is useful to provide it to the user for debugging (of the Noir code). 
+Get the message hash.
 
 ```tsx
     const pubKey = await recoverPublicKey({
@@ -273,7 +277,7 @@ Get the message hash. It is useful to provide it to the user for debugging (of t
     setPubKey(pubKey)
 ```
 
-Set the state variables. Doing this redraws the component (after the `sign` function exits) and shows the user the updated values.
+Set the state variables. Doing this redraws the component (after the `sign` function exits), which displays the updated values to the user.
 
 ```tsx
     let proverToml = `
@@ -288,7 +292,7 @@ pubKeyX=${hexToArray(pubKey.slice(4,4+2*32))}
 pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 ```
 
-Viem provides us the public key as a 65-byte hexadecimal string. The first byte is `0x04`, a version marker. This is followed by 32 bytes for the `x` of the public key and then 32 bytes for the `y` of the public key.
+Viem provides us the public key as a 65-byte hexadecimal string. The first byte is `0x04`, which serves as a version marker. This is followed by 32 bytes for the `x` of the public key and then 32 bytes for the `y` of the public key.
 
 However, Noir expects to get this information as two byte arrays, one for `x` and one for `y`. It is easier to parse it here on the client rather than as part of the zero-knowledge proof.
 
@@ -298,7 +302,7 @@ Note that this is good practice in zero-knowledge in general. Code inside a zero
 signature=${hexToArray(signature.slice(2,-2))}
 ```
 
-The signature is also provided as a 65 byte hexadecimal string. However, the last byte is only necessary to recover the public key. As the public key is already going to be provided to the Noir code, we don't need it to verify the signature, and the Noir code does not require it.
+The signature is also provided as a 65-byte hexadecimal string. However, the last byte is only necessary to recover the public key. Since the public key will already be provided to the Noir code, we don't need it to verify the signature, and the Noir code does not require it.
 
 ```tsx
 ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
@@ -320,20 +324,20 @@ This is the HTML (more accurately, [JSX](https://react.dev/learn/writing-markup-
 
 #### `server/noir/src/main.nr`
 
-[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero-knowledge code. 
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the zero-knowledge code that generates the proof. 
 
 ```
 use std::hash::pedersen_hash;
 ```
 
-[Pedersen hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) is provided with the [Noir standard library](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). This hash function is commonly used by zero-knowledge proofs because it is much easier to calculate inside them.
+[Pedersen hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) is provided with the [Noir standard library](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Zero-knowledge proofs commonly use this hash function because it is much easier to calculate inside them.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-These two functions are external libraries, defined in [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). They are exactly what they are named for, a function that calculates the [keccak256 hash](https://emn178.github.io/online-tools/keccak_256.html) and a function that verifies Ethereum signatures and recovers the signer's Ethereum address.
+These two functions are external libraries, defined in [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). They are precisely what they are named for, a function that calculates the [keccak256 hash](https://emn178.github.io/online-tools/keccak_256.html) and a function that verifies Ethereum signatures and recovers the signer's Ethereum address.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
@@ -347,7 +351,7 @@ Data types named `u<number>` are that number of bits, unsigned. The only support
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
 ```
 
-This variable is used for the Pedersen hash of the accounts, as explained below.
+This variable is used for the Pedersen hash of the accounts, as explained in the following section.
 
 ```
 global MESSAGE_LENGTH : u32 = 100;
@@ -360,7 +364,7 @@ global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH; 
 ```
 
-[EIP-191 signatures](https://eips.ethereum.org/EIPS/eip-191) require a buffer with a 26 byte prefix, followed by the message length in ASCII, and finally the message itself. 
+[EIP-191 signatures](https://eips.ethereum.org/EIPS/eip-191) require a buffer with a 26-byte prefix, followed by the message length in ASCII, and finally the message itself. 
 
 ```
 struct Account {
@@ -398,15 +402,14 @@ A function definition. The parameter is `Account` information. The result is an 
     ];
 ```
 
-The first value is the array is the acount address. The second includes both the balance and the nonce. The `.into()` calls change a number to the data type it needs to be. `account.nonce` is a `u32` value, but to add it to `account.balance << 32`, a `u128` value, it needs to be a `u128`. That's the first `.into()`. The second one turns the `u128` result into a `Field` so it will fit into the array.
+The first value in the array is the account address. The second includes both the balance and the nonce. The `.into()` calls changes a variable to the data type it needs to be. `account.nonce` is a `u32` value, but to add it to `account.balance << 32`, a `u128` value, it needs to be a `u128`. That's the first `.into()`. The second one turns the `u128` result into a `Field` so it will fit into the array.
 
 ```
     flat
 }
 ```
 
-In Noir functions can only return a value at the end (there is no early return). To specify the return value, you evaiuate it just before the function's closing bracket (`}`).
-
+In Noir functions can only return a value at the end (there is no early return). To specify the return value, you evaiuate it just before the function's closing bracket.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
@@ -424,7 +427,7 @@ This is the way you specify a variable that is mutable, that is *not* a constant
     for i in 0..ACCOUNT_NUMBER {
 ```
 
-This is a `for` loop. Note that the boundries are constants. Noir loops have to have their boundries known at compile time. The reason is that arithmetic circuits don't support flpw control. When processing a `for` loop, the compiler simply puts the code inside it multiple times, one for each iteration.
+This is a `for` loop. Note that the boundries are constants. Noir loops have to have their boundries known at compile time because arithmetic circuits don't support flpw control. When processing a `for` loop, the compiler simply puts the code inside it multiple times, one for each iteration.
 
 ```
         let fields = flatten_account(accounts[i]);
@@ -454,9 +457,9 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-This function finds the account with a specific address. This function would be terribly inefficient in normal code, because it iterates over all the accounts, even if it already found the address.
+This function finds the account with a specific address. This function would be terribly inefficient in imperative code, because it iterates over all the accounts, even if it has already found the address.
 
-However, in zero-knowledge proofs there is no flow control. If we ever need to check a condition, we have to check it every time.
+However, in zero-knowledge proofs, there is no flow control. If we ever need to check a condition, we must do so every time.
 
 A similar thing happens with `if` statements. The `if` statement inside the loop above gets translated to these mathematical statements.
 
@@ -464,7 +467,7 @@ A similar thing happens with `if` statements. The `if` statement inside the loop
 
 *account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>*
 
-```rust
+```
     assert (account < ACCOUNT_NUMBER, f"{address} does not have an account");
 
     account
@@ -473,13 +476,13 @@ A similar thing happens with `if` statements. The `if` statement inside the loop
 
 The [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) function causes the zero-knowledge proof to crash if the assertion is false. In this case, if we can't find an account with the relevant address. To report the address, we use a [format string](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
-```rust
+```
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
 This function applies a transfer transaction, and returns the new accounts array.
 
-```rust
+```
     let from = find_account(accounts, txn.from);
     let to = find_account(accounts, txn.to);
 
@@ -487,9 +490,9 @@ This function applies a transfer transaction, and returns the new accounts array
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-We cannot access structure elements inside a format string in Noir, so we create a usable copy.
+We cannot access structure elements inside a format string in Noir, so we create normal variables.
 
-```rust
+```
     assert (accounts[from].balance >= txn.amount, 
         f"{txnFrom} does not have {txnAmount} finney");
 
@@ -499,7 +502,7 @@ We cannot access structure elements inside a format string in Noir, so we create
 
 These are two conditions that could render a transaction invalid.
 
-```rust
+```
     let mut newAccounts = accounts;
 
     newAccounts[from].balance -= txn.amount;
@@ -512,23 +515,22 @@ These are two conditions that could render a transaction invalid.
 
 Create the new accounts array and then return it.
 
-
-```rust
+```
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field 
 ```
 
 This function reads the address from the message. 
 
-```rust
+```
 {
     let mut result : Field = 0;
 
     for i in 7..47 {
 ```
 
-The address is always 20 bytes (a.k.a. 40 hexadecimal digits) long, and starts at character #7.
+The address is always 20 bytes (a.k.a. 40 hexadecimal digits) long, and starts at character #7 (after `send 0x`).
 
-```rust
+```
         result *= 0x10;
         if messageBytes[i] >= 48 & messageBytes[i] <= 57 {    // 0-9
             result += (messageBytes[i]-48).into();
@@ -547,11 +549,11 @@ The address is always 20 bytes (a.k.a. 40 hexadecimal digits) long, and starts a
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-Read the amount and nonce from the message. 
+Read the amount and nonce from the message.
 
-```rust
+```
 {
-    let mut amount : u128 = 0;
+    let mut amount: u128 = 0;
     let mut nonce: u32 = 0;
     let mut stillReadingAmount: bool = true;
     let mut lookingForNonce: bool = false;
@@ -595,7 +597,7 @@ In the message, the first number after the address is the amount of Finneys (a.k
 Returning a [tuple](https://noir-lang.org/docs/noir/concepts/data_types/tuples) is the Noir way to return multiple values from a function.
 
 
-```rust
+```
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
 {
     let mut txn: TransferTxn = TransferTxn { from: 0, to: 0, amount:0, nonce:0 };
@@ -612,7 +614,7 @@ fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn
 
 This function actually turns the message into bytes and then turns the amounts into a `TransferTxn`. 
 
-```rust
+```
 // The equivalent to Viem's hashMessage
 // https://viem.sh/docs/utilities/hashMessage#hashmessage
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
@@ -620,7 +622,7 @@ fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 
 We were able to use Pedersen Hash for the accounts because they are only hashed inside the zero-knowledge proof. However, here we need to check the signature on the message, which originates from the browser. For that, we need to follow the Ethereum signing format in [EIP 191](https://eips.ethereum.org/EIPS/eip-191). This means we need to create a combined buffer with a standard prefix, the message length in ASCII, and then the message - and use the Ethereum standard, keccak256, to hash it.
 
-```rust
+```
     // ASCII prefix
     let prefix_bytes = [
         0x19, // \x19
@@ -651,6 +653,8 @@ We were able to use Pedersen Hash for the accounts because they are only hashed 
         0x0A  // '\n'
     ];
 ```
+
+GOON
 
 To avoid cases where an application asks the user to sign a message that can be used as a transaction or for some other purpose, EIP 191 specifies that all signed messages start with character 0x19 (not a valid ASCII character) followd by `Ethereum Signed Message:` and a newline.
 
