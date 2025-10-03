@@ -653,12 +653,9 @@ We were able to use Pedersen Hash for the accounts because they are only hashed 
         0x0A  // '\n'
     ];
 ```
+To avoid cases where an application asks the user to sign a message that can be used as a transaction or for some other purpose, EIP 191 specifies that all signed messages start with character 0x19 (not a valid ASCII character) followed by `Ethereum Signed Message:` and a newline.
 
-GOON
-
-To avoid cases where an application asks the user to sign a message that can be used as a transaction or for some other purpose, EIP 191 specifies that all signed messages start with character 0x19 (not a valid ASCII character) followd by `Ethereum Signed Message:` and a newline.
-
-```rust
+```
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
     for i in 0..26 {
         buffer[i] = prefix_bytes[i];
@@ -699,16 +696,16 @@ To avoid cases where an application asks the user to sign a message that can be 
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Handle message lengths up to 999, and fail if it's more than that. I added this code, even though the message length is a constant, because it makes it easier to change it. On a production system you'd probably just assume `MESSAGE_LENGTH` doesn't change for the sake of better performances
+Handle message lengths of up to 999, and fail if the length exceeds that. I added this code, even though the message length is a constant, because it makes it easier to change it. On a production system, you'd probably just assume `MESSAGE_LENGTH` doesn't change for the sake of better performance.
 
-```rust
+```
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
 }
 ```
 
 Use the Ethereum standard `keccak256` function.
 
-```rust
+```
 fn signatureToAddressAndHash(
         message: str<MESSAGE_LENGTH>, 
         pubKeyX: [u8; 32],
@@ -718,7 +715,7 @@ fn signatureToAddressAndHash(
 {
 ```
 
-This function verifies the signature, which requires the message hash. It then provides us with the address that signed it, and the messge hash. The message hash is provided in two `Field` values because those are easier to use in the rest of the program than a byte array.
+This function verifies the signature, which requires the message hash to be provided. It then provides us with the address that signed it, and the message hash. The message hash is supplied in two `Field` values because those are easier to use in the rest of the program than a byte array.
 
 We need to use two `Field` values because field calculations are done [modulu](https://en.wikipedia.org/wiki/Modulo) some big number, but one that is typically less than 256 bits (otherwise it would be hard to do those calculations in the EVM).
 
@@ -746,7 +743,7 @@ This is similar to [Solidity's `ecrecover`](https://docs.soliditylang.org/en/v0.
 - If the signature is not valid, the call fails an `assert` and the program is aborted.
 - While the public key can be recovered from the signature and the hash, this is processing that can be done externally and therefore is not worth doing inside the zero-knowledge proof. If somebody tries to cheat us here, the signature verification will fail.
 
-```rust
+```
         hash1,
         hash2
     )
@@ -766,7 +763,7 @@ fn main(
     )
 ```
 
-Finally, we reach the `main` function. We need to prove that we have a transaction that validly change the accounts has from the old value to the new one. We also need to prove that it has this specific transaction hash, so the person who sent it will know their transaction has been processed.
+Finally, we reach the `main` function. We need to prove that we have a transaction that validly changes the accounts from the old value to the new one. We also need to prove that it has this specific transaction hash, so the person who sent it will know their transaction has been processed.
 
 ```rust
 {
@@ -775,7 +772,7 @@ Finally, we reach the `main` function. We need to prove that we have a transacti
 
 We need `txn` to be mutable because we don't read the from address from the message, we read it from the signature. 
 
-```rust
+```
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
         message,
         pubKeyX,
@@ -797,13 +794,13 @@ We need `txn` to be mutable because we don't read the from address from the mess
 
 ### Stage 2 - Adding a server {#stage-2}
 
-In the second stage we add a server that receives and implements transfer transactions from the browser.
+In the second stage, we add a server that receives and implements transfer transactions from the browser.
 
 To see it in action:
 
 1. Stop Vite if it is running.
 
-2. Download the branch with the server and ensure you have all the necessary modules.
+2. Download the branch that includes the server and ensure you have all the necessary modules.
 
    ```sh
    git checkout 02-add-server
@@ -827,20 +824,20 @@ To see it in action:
    npm run start
    ```
 
-5. In a separate command line window, run Vite to server the browser code.
+5. In a separate command-line window, run Vite to serve the browser code.
 
    ```sh
    cd 250911-zk-bank/client
    npm run dev
    ```
 
-6. Browse to the client code at [http://localhost:5173](http://localhost:5173)
+6. Browse to the client code at [http://localhost:5173](http://localhost:5173).
 
-7. Before you can issue a transaction, you need to know the nonce, as well as the amount you can send. To get this information, click **Update account data** and sign the message.
+7. Before you can issue a transaction, you need to know the nonce, as well as the amount you can send. To get this information, click **Update account data** and sign the message. The signature ensures that other users will be unable to ask for our nonce and balance.
 
-   This leads us to a dillemma. On one hand, we don't want to sign a message that can be used multiple times (this is known as a [replay attack](https://en.wikipedia.org/wiki/Replay_attack)), that is the reason we want a nonce at the first place. However, we don't have a nonce yet. The solution is to choose a nonce that can only be used once, but that we already have on both sides, such as the time.
+   This leads us to a dilemma. On one hand, we don't want to sign a message that can be used multiple times (that would make us vulnerable to a [replay attack](https://en.wikipedia.org/wiki/Replay_attack)), which is the reason we want a nonce in the first place. However, we don't have a nonce yet. The solution is to choose a nonce that can only be used once, but that we already have on both sides, such as the time.
 
-   The problem with this solution is that the time might not be perfectly synchronized. So instead we sign the a value that changes every minute. This means that our window of vulnerability to replay attacks in at most one minute. Considering that in production the signed request will be protected by TLS, and that the other side of the tunnel, the server, can already disclose the balance and nonce (it has to know them to work), this is an acceptable risk.
+   The problem with this solution is that the time might not be perfectly synchronized. So instead, we sign a value that changes every minute. This means that our window of vulnerability to replay attacks is at most one minute. Considering that in production, the signed request will be protected by TLS, and that the other side of the tunnel, the server, can already disclose the balance and nonce (it needs to know them to function), this is an acceptable risk.
 
 8. Once the browser gets back the balance and nonce, it shows the transfer form. Select the destination address and the amount and click **Transfer**. Sign this request.
 
@@ -885,7 +882,7 @@ To see it in action:
 
 #### `server/index.mjs`
 
-[This file](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) contains the server process, and interacts with the Noir code at [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Here is an explanation of the ineresting parts.
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) contains the server process, and interacts with the Noir code at [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Here is an explanation of the interesting parts.
 
 ```js
 import { Noir } from '@noir-lang/noir_js'
@@ -910,7 +907,7 @@ const accountInformation = async signature => {
     })
 ```
 
-To provide account information we only need the signature. The reason is we already know what the message is going to be, and therefore the message hash. 
+To provide account information, we only need the signature. The reason is that we already know what the message is going to be, and therefore the message hash. 
 
 ```js
 const processMessage = async (message, signature) => {
@@ -940,7 +937,7 @@ Now that we run JavaScript code on the server, we can get the public key there, 
         })
 ```
 
-`noir.execute` runs the Noir program. The parameters are equivalent to those provided in [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Note that long values are provided as an array of hexadecimal strings (`["0x60", "0xA7"]`), not as a single hexadecimal value (`0x60A7`) the way Viem does it.
+`noir.execute` runs the Noir program. The parameters are equivalent to those provided in [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Note that long values are provided as an array of hexadecimal strings (`["0x60", "0xA7"]`), not as a single hexadecimal value (`0x60A7`), the way Viem does it.
 
 ```js
     } catch (err) {
@@ -949,7 +946,7 @@ Now that we run JavaScript code on the server, we can get the public key there, 
     }
 ```
 
-If there is an error, catch it and then relay a simplified version to the client.
+If an error occurs, catch it and then relay a simplified version to the client.
 
 ```js
     Accounts[fromAccountNumber].nonce++
@@ -972,9 +969,17 @@ The initial `Accounts` structure.
 
 ### Stage 3 - Ethereum smart contracts  {#stage-3}
 
+Finally, we want an onchain smart contract to keep track of the state hash, and ensure it is only changed when there is a valid zero-knowledge proof.
+
 1. Stop the server and client processes.
 
-2. Download the branch with the smart contracts and ensure you have all the necessary modules.
+2. Run the `anvil` blockchain on a separate command-line window.
+
+   ```sh
+   anvil
+   ```
+
+3. Download the branch with the smart contracts and ensure you have all the necessary modules.
 
    ```sh
    git checkout 03-smart-contracts
@@ -984,14 +989,14 @@ The initial `Accounts` structure.
    npm install
    ```
 
-3. Compile the Noir code (it's the same as the code you used for stages 1 and 2).
+4. Compile the Noir code (it's the same as the code you used for stages 1 and 2).
 
    ```sh
    cd noir
    nargo compile
    ```
 
-4. Generate the verification key and the solidity verifier, then copy the verifier code to the Solidity project.
+5. Generate the verification key and the solidity verifier, then copy the verifier code to the Foundry project.
 
    ```sh
    bb write_vk -b ./target/zkBank.json -o ./target --oracle_hash keccak
@@ -999,7 +1004,7 @@ The initial `Accounts` structure.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Go to the smart contracts and set the environment variables to use the `anvil` blockchain.
+6. Go to the smart contracts and set the environment variables to use the `anvil` blockchain.
 
    ```sh
    cd ../../smart-contracts   
@@ -1007,14 +1012,14 @@ The initial `Accounts` structure.
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
-6. Deploy `Verifier.sol` and store the address in an environment variable.
+7. Deploy `Verifier.sol` and store the address in an environment variable.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
    echo $VERIFIER_ADDRESS
    ```
 
-7. Deploy the `ZkBank` contract.
+8. Deploy the `ZkBank` contract.
 
    ```sh
    ZKBANK_ADDRESS=`forge create ZkBank --private-key $ETH_PRIVATE_KEY --broadcast --constructor-args $VERIFIER_ADDRESS 0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b | awk '/Deployed to:/ {print $3}'`
@@ -1023,27 +1028,27 @@ The initial `Accounts` structure.
 
    The `0x199..67b` value is the Pederson hash of the initial state of `Accounts`. If you modify this initial state in `server/index.mjs`, you can run a transaction to see the initial hash reported by the zero-knowledge proof.
 
-8. Run the server.
+9. Run the server.
 
    ```sh
    cd ../server
    npm run start
    ```
 
-9. Run the client in a different command-line window.
+10. Run the client in a different command-line window.
 
    ```sh
    cd client
    npm run dev
    ```
 
-10. Run some transactions.
+11. Run some transactions.
 
-11. To verify that the state changed onchain, restart the server process. See that `ZkBank` no longer accepts transactions, because the original hash value in the transactions differs from the hash value stored onchain.
+12. To verify that the state changed onchain, restart the server process. See that `ZkBank` no longer accepts transactions, because the original hash value in the transactions differs from the hash value stored onchain.
 
 #### `server/index.mjs`
 
-The changes in this file relate mostly to creating the actual proof and submitting it onchain.
+The changes in this file relate mostly to creating the proof and submitting it onchain.
 
 ```js
 import { exec } from 'child_process'
@@ -1052,15 +1057,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-We need to use [the Barretenberg package](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) to create the actual proof to send onchain. We can use this package either by running the command-line interface (`bb`), or using [the JavaScript library, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). The JavaScript library is much slower than running code natively, so we use [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) here to use the command-line.
+We need to use [the Barretenberg package](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) to create the actual proof to send onchain. We can use this package either by running the command-line interface (`bb`), or using [the JavaScript library, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). But JavaScript library is much slower than running code natively, so we use [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) here to use the command-line.
 
-Note that if you do decide to use `bb.js`, you need to use a version that is compatible with the version of Noir you are using. For the current Noir version at writing (1.0.0-beta.11), this is version 0.87.
+Note that if you do decide to use `bb.js`, you *must* to use a version that is compatible with the version of Noir you are using. For the current Noir version at writing (1.0.0-beta.11), this is version 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-The address here is the address you get when you start with a clean `anvil` and go through the directions above.
+The address here is the one you obtain when you start with a clean `anvil` and follow the directions above.
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1084,7 +1089,7 @@ Generate a proof using the `bb` executable.
     await fs.writeFile(fname, witness)
 ```
 
-Write the witness to a file
+Write the witness to a file.
 
 ```js
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
@@ -1117,13 +1122,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-The public fields needs to be an array of 32 byte values. However, since we needed to divide the transaction hash between two `Field` values, it appears as a 16 byte value. Here we add zeros so Viem will understand it is actually 32 bytes.
+The public fields value needs to be an array of 32-byte values. However, since we needed to divide the transaction hash between two `Field` values, it appears as a 16-byte value. Here we add zeros so Viem will understand it is actually 32 bytes.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Each address only uses each nonce once, so we can use a combination of `fromAddress` and `nonce` as a unique identifier for the witness file and the output directory.
+Each address uses each nonce once so that we can use a combination of `fromAddress` and `nonce` as a unique identifier for the witness file and the output directory.
 
 ```js
     try { 
@@ -1172,7 +1177,7 @@ The onchain code needs to keep track of two variables: the verifier (a separate 
     );
 ```
 
-Every time the state it changed, we emit a `TransactionProcessed` event.
+Every time the state changes, we emit a `TransactionProcessed` event.
 
 ```solidity
     function processTransaction(
@@ -1181,14 +1186,14 @@ Every time the state it changed, we emit a `TransactionProcessed` event.
     ) public {
 ```
 
-This function processes transactions. It gets the proof (as `bytes`) and the public inputs (as a `bytes32` array), in the format that the verifier require (no minimize onchain processing and therefore gas costs).
+This function processes transactions. It gets the proof (as `bytes`) and the public inputs (as a `bytes32` array), in the format that the verifier requires (to minimize onchain processing and therefore gas costs).
 
 ```solidity
         require(_publicInputs[0] == currentStateHash, 
             "Wrong old state hash");
 ```
 
-The zero-knowledge proof needs to be that the transaction changes from our current hash to a new one. 
+The zero-knowledge proof must demonstrate that the transaction changes from our current hash to a new one. 
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
@@ -1211,6 +1216,10 @@ Call the verifier contract to verify the zero-knowledge proof. This step reverts
 If everything checks out, update the state hash to the new value and emit a `TransactionProcessed` event.
 
 ## Abuses by the centralized component {#abuses}
+
+GOON
+
+The server in this application is a centralized component. Centralized components are often a necessary evil. 
 
 Information security consists of three attributes:
 
