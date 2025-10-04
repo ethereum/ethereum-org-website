@@ -1242,3 +1242,10 @@ In a real-life implementation there would probably be some kind of profit motive
 Plasma type applications require a centralized component as information storage. This opens up possible vulnerabilities, but in return allows us to preserve privacy in ways that are not available on the blockchain itself. With zero-knowledge proofs we can ensure integrity, and possibly make it economically advantageous for whoever is running the centralized component to maintain availability.
 
 [See here for more of my work](https://cryptodocguy.pro/).
+
+## Acknowledgements
+
+- Josh Crites read a draft of this article and helped me with a thorny Noir issue.
+
+Any remaining errors are my responsibility.
+
