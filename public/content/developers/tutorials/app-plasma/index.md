@@ -1,18 +1,18 @@
 ---
-title: Write your own app-specific zero-knowledge plasma
+title: Write an app-specific plasma that preserves privacy
 description: In this tutorial, we build a semi-secret bank for deposits. The bank is a centralized component; it knows the balance of each user. However, this information is not stored onchain. Instead, the bank posts a hash of the state. Every time there is a transaction, the bank posts the new hash, along with a zero-knowledge proof that it has a signed transaction that changes the hash state to the new one. After reading this tutorial, you will understand not just how to use zero-knowledge proofs, but also why you use them and how to do so securely.
 author: Ori Pomerantz
 tags: ["zero-knowledge", "server", "offchain", "privacy"]
 skill: advanced
 lang: en
-published: 2025-09-30
+published: 2025-10-15
 ---
 
 ## Introduction {#introduction}
 
 In contrast to [rollups](/developers/docs/scaling/zk-rollups/), [plasmas](/developers/docs/scaling/plasma) use the Ethereum mainnet for integrity, but not availability. In this article, we write an application that acts like a plasma, with Ethereum guaranteeing integrity (nobody can make unauthorized changes), but not availability (there is a centralized component that can go down and disable the whole system).
 
-The application we write here is a privacy preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private.
+The application we write here is a privacy-preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private.
 
 ## Design {#design}
 
