@@ -45,6 +45,8 @@
 # Limit locales for faster iteration in previews/branch deploys
 [context.deploy-preview.environment]
   NEXT_PUBLIC_BUILD_LOCALES = "en"
+  USE_MOCK_DATA = "false"
 
 [context.branch-deploy.environment]
   NEXT_PUBLIC_BUILD_LOCALES = "en"
+  USE_MOCK_DATA = "false"
