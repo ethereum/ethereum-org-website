@@ -40,3 +40,11 @@
 
 [functions]
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data/mocks/**/*"]
+
+# TODO: Revert before merging to production
+# Limit locales for faster iteration in previews/branch deploys
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_BUILD_LOCALES = "en"
+
+[context.branch-deploy.environment]
+  NEXT_PUBLIC_BUILD_LOCALES = "en"
