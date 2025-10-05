@@ -89,8 +89,8 @@ import { getActivity, getUpcomingEvents } from "./utils"
 import { routing } from "@/i18n/routing"
 import { getABTestAssignment } from "@/lib/ab-testing/server"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchEthStakedBeaconchain } from "@/lib/api/fetchEthStakedBeaconchain"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
@@ -142,7 +142,7 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const loadData = dataLoader(
   [
     ["ethPrice", fetchEthPrice],
-    ["totalEthStaked", fetchEthStakedBeaconchain],
+    ["beaconchainEpoch", fetchBeaconchainEpoch],
     ["totalValueLocked", fetchTotalValueLocked],
     ["growThePieData", fetchGrowThePie],
     ["communityEvents", fetchCommunityEvents],
@@ -168,7 +168,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const [
     ethPrice,
-    totalEthStaked,
+    { totalEthStaked },
     totalValueLocked,
     growThePieData,
     communityEvents,
