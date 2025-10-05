@@ -192,15 +192,15 @@ Yes, the Fusaka upgrade requires updates to both [execution clients and consensu
 
 [More on recognizing and avoiding scams](/security/)
 
-### What's with the zebras? 🦓 {#whats-with-the-zebras}
+### What's with the zebras? <Emoji text="🦓" /> {#whats-with-the-zebras}
 
-A zebra is Fusaka's developer-chosen "mascot" because its stripes reflect PeerDAS’s column-based data-availability sampling, where nodes custody certain column subnets and sample a few other columns from peers each slot to check that blob data is available. 
+A zebra is Fusaka's developer-chosen "mascot" because its stripes reflect PeerDAS’s column-based data-availability sampling, where nodes custody certain column subnets and sample a few other columns from each peers slot to check that blob data is available. 
 
 The Merge in 2022 [used a panda](https://x.com/hwwonx/status/1431970802040127498) as its mascot to signal the joining of the execution & consensus layers. Since then, mascots have been informally chosen for each fork and show up as ASCII art in the client logs at the time of upgrade. It’s just a fun way to celebrate.
 
 ### What improvements are included for L2 Scaling? {#what-improvements-are-included-for-l2-scaling}
 
-[PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) is is the main feature of the fork. It implements Data Availability Sampling (DAS). Instead of every full node needing to download and store all blob data (which becomes unsustainable as L2s grow), PeerDAS allows each node to be responsible for only a subset of the blob data while maintaining its availability and verifiability. This enables blob throughput to scale significantly, leading to even smaller fees for Layer 2s.
+[PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) is is the main feature of the fork. It implements data availability sampling (DAS). Instead of every full node needing to download and store all blob data (which becomes unsustainable as L2s grow), PeerDAS allows each node to be responsible for only a subset of the blob data while maintaining its availability and verifiability. This enables blob throughput to scale significantly, leading to even smaller fees for layer 2s.
 
 [Learn more about PeerDAS](/roadmap/fusaka/peerdas)
 
@@ -212,30 +212,31 @@ Alongside PeerDAS, [a small change](https://eips.ethereum.org/EIPS/eip-7918) tha
 
 This means users and validators don’t need to update their clients for each BPO and only make sure to follow major hardforks like Fusaka. This is same practice as before, no special actions are needed to  It is still recommended to monitor your clients around upgrades and BPOs and keep them update even between major releases as fixes or optimizations might follow the hardfork.   
 
-PeerDAS is a significant change to p2p communication and blob mechanism that needs to be introduced gradually to ensure liveness and performance of the network. Fusaka ships with safe initial blob count but with BPOs, developers created a commitment to each new scale of blob count without any extra overhead on coordination and node users.  
+PeerDAS is a significant change to peer-to-peer (P2P) communication and blob mechanism that needs to be introduced gradually to ensure liveness and performance of the network. Fusaka ships with safe initial blob count but with BPOs, developers created a commitment to each new scale of blob count without any extra overhead on coordination and node users.  
 
-## What is the BPO schedule? {#what-is-the-bpo-schedule}
+### What is the BPO schedule? {#what-is-the-bpo-schedule}
 
 The exact schedule of BPO updates is going to be determined with Fusaka releases. Follow [Protocol announcements](https://blog.ethereum.org/category/protocol) and release notes of your clients.
 
 Example of how it might look like: 
 
-- Before Fusaka: Target 6, Max 9
-- At Fusaka activation: Target 6, Max 9
-- BPO1, few weeks after Fusaka activation:  Target 10, Max 15, increasing by two thirds
-- BPO2, few weeks after BPO1: Target 14, Max 21
+- Before Fusaka: target 6, max 9
+- At Fusaka activation: target 6, max 9
+- BPO1, few weeks after Fusaka activation: target 10, max 15, increasing by two thirds
+- BPO2, few weeks after BPO1: target 14, max 21
 
-### Will this lower fees on Ethereum (Layer 1) {#will-this-lower-gas}
-This upgrade does not lower gas fees on L1, at least not directly. The main focus is more blob space for rollup data, therefore lowering fees on Layer 2. This might have some side effects on L1 fee market but no significant change is expected. 
+### Will this lower fees on Ethereum (layer 1) {#will-this-lower-gas}
+
+This upgrade does not lower gas fees on L1, at least not directly. The main focus is more blob space for rollup data, therefore lowering fees on layer 2. This might have some side effects on L1 fee market but no significant change is expected. 
 
 ### As a staker, what do I need to do for the upgrade? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 
-As with every network upgrade, make sure to update your clients to latest versions marked with Fusaka support. Follow updates in the mailing list and Protocol Announcements on [blog.ethereum.org](https://blog.ethereum.org/category/protocol) to get informed about releases. 
-To validate your setup before Fusaka gets activated on mainnet, you can run a validator on testnets. Fusaka has been [activated sooner on testnets](https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement) giving you more space to make sure everything works and report bugs. Testnet forks are also announced in the mailing list and blog.
+As with every network upgrade, make sure to update your clients to latest versions marked with Fusaka support. Follow updates in the mailing list and [Protocol Announcements on the EF Blog](https://blog.ethereum.org/category/protocol) to get informed about releases. 
+To validate your setup before Fusaka gets activated on Mainnet, you can run a validator on testnets. Fusaka is [activated sooner on testnets](https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement) giving you more space to make sure everything works and report bugs. Testnet forks are also announced in the mailing list and blog.
 
 ### Does "Deterministic Proposer Lookahead" (EIP-7917) affect validators? {#does-7917-affect-validators}
 
-This change doesn’t change how your validator client functions. However, it will provide more insight into the future of your validator duties. Make sure to update your monitoring tooling to keep up with new features. 
+This change doesn’t change how your validator client functions, however, it will provide more insight into the future of your validator duties. Make sure to update your monitoring tooling to keep up with new features. 
 
 ### How does Fusaka affect bandwidth requirements for nodes? {#how-does-fusaka-affect-bandwidth-requirements-for-nodes}
 
@@ -243,29 +244,29 @@ PeerDAS makes a significant change in how nodes transmit blob data. All data is 
 
 ### What EVM changes are implemented? {#what-evm-changes-are-implemented}
 
-Fusaka solidifies EVM with new minor changes and features. 
+Fusaka solidifies the EVM with new minor changes and features. 
 
 - For security while scaling, a maximum size of a single transaction will be [limited to 16.7 million](https://eips.ethereum.org/EIPS/eip-7825) units of gas. 
-- [New opcode CLZ](https://eips.ethereum.org/EIPS/eip-7939), Count Leading Zeros, is added to EVM and will enable smart contract languages to perform certain operations more efficiently.
-- [The cost ModExp precompile will be increased](https://eips.ethereum.org/EIPS/eip-7883), contracts using it will charge more gas for execution.
+- [New opcode count leading zeros (CLZ)](https://eips.ethereum.org/EIPS/eip-7939) is added to the EVM and will enable smart contract languages to perform certain operations more efficiently.
+- [The cost of `ModExp` precompile will be increased](https://eips.ethereum.org/EIPS/eip-7883)—contracts using it will charge more gas for execution.
 
 ### How does new 16M gas limit affects contract developers? {#how-does-new-16m-gas-limit-affects-contract-developers}
 
-Fusaka introduces a limit to [maximum size of a single transaction to 16.7 million](https://eips.ethereum.org/EIPS/eip-7825) (2^24) gas units. This is roughly the size of an average block before which makes it big enough to accommodate even complex transactions that would consume an entire block. This limit creates protection for clients, preventing potential DoS attacks in the future with higher block gas limit. The goal of scaling is to enable more transactions get into the blockchain without a single one consuming all the block. 
+Fusaka introduces a limit to [maximum size of a single transaction to 16.7 million](https://eips.ethereum.org/EIPS/eip-7825) (2^24) gas units. This is roughly the previous size of an average block which makes it big enough to accommodate complex transactions that would consume an entire block. This limit creates protection for clients, preventing potential DoS attacks in the future with higher block gas limit. The goal of scaling is to enable more transactions to get into the blockchain without a single one consuming the whole block. 
 
-Regular user transactions are far from reaching this limit. Certain edge cases like big and complex Defi operations, large smart contract deployements or batch transactions targeting multiple contracts might be affected by this change. These transaction will have to be divided into smaller ones or optimized in another way. Use simulation before submitting transactions that potentially reach the limit.
+Regular user transactions are far from reaching this limit. Certain edge cases like big and complex DeFi operations, large smart contract deployments or batch transactions targeting multiple contracts might be affected by this change. These transaction will have to be divided into smaller ones or optimized in another way. Use simulation before submitting transactions that potentially reach the limit.
 
-RPC method `eth_call` is not limited and will allow simulation of bigger transactions than the actual blockchain limit. The actual limit for RPC methods can be configured by the client operator to ensure prevent abuse. 
+The RPC method `eth_call` is not limited and will allow simulation of bigger transactions than the actual blockchain limit. The actual limit for RPC methods can be configured by the client operator to ensure prevent abuse. 
 
 ### What CLZ means for developers? {#what-clz-means-for-developers}
 
-EVM compilers like Solidity will implement and utilize the new function for counting zeroes under the hood. New contracts might benefit from gas savings if they rely on this sort of operations. Follow releases and feature announcement of the smart contract language for documentation on potential savings. 
+EVM compilers like Solidity will implement and utilize the new function for counting zeros under the hood. New contracts might benefit from gas savings if they rely on this sort of operation. Follow releases and feature announcement of the smart contract language for documentation on potential savings. 
 
 ### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers}
 
-Fusaka has no direct affect that would break any existing contracts or change their behavior. Changes introduced to execution layer are made with backwards compatibility, however, always keep an eye on edge cases and potential impact. 
+Fusaka has no direct affect that would break any existing contracts or change their behavior. Changes introduced to the execution layer are made with backward compatibility, however, always keep an eye on edge cases and potential impact. 
 
-[With the increased cost of ModExp precompil](https://eips.ethereum.org/EIPS/eip-7883), contracts that depend on it will charge more gas for execution. If your contract relies heavily on this and becomes more expensive for users, reconsider how it’s utilized. 
+[With the increased cost of `ModExp` precompile](https://eips.ethereum.org/EIPS/eip-7883), contracts that depend on it will consume more gas for execution. If your contract relies heavily on this and becomes more expensive for users, reconsider how it’s utilized. 
 
 Consider the [new 16.7 million limit](https://eips.ethereum.org/EIPS/eip-7825) if transactions executing your contracts might be reaching similar size. 
 
