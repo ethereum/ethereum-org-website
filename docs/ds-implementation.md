@@ -1,16 +1,22 @@
 # DS implementation guide
 
-This is a reference for implementing the new Design System components and styles defined in a public [Figma file](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System).
+This document serves as a reference for implementing the new Design System (DS) components and styles defined in the public [Figma file](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System).
 
-This is part of our [Design System implementation epic](https://github.com/ethereum/ethereum-org-website/issues/9546). Currently, we are implementing **v1**, check the remaining tasks [here](https://github.com/ethereum/ethereum-org-website/issues/9548).
+This work is part of the [Design System implementation epic](https://github.com/ethereum/ethereum-org-website/issues/9546).
+Currently, we are implementing **v1** — you can track remaining tasks [here](https://github.com/ethereum/ethereum-org-website/issues/9548).
+
+---
 
 ## Basics
 
-* Use the **shadcn/ui** component approach for all base and shared UI elements.
+* Use **shadcn/ui** components and patterns for all base UI elements.
   [shadcn/ui documentation](https://ui.shadcn.com/docs/components)
-* Reference existing base components from `src/components/ui` whenever possible.
-* Use **design tokens** (spacing, sizes, breakpoints, and semantic colors) defined in our DS Figma file and theme configuration.
-* Read the [Best Practices doc](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/best-practices.md) for more examples and implementation details.
+* Follow **Radix UI** principles for accessibility and composability.
+* Reference base components located in `src/components/ui`.
+* Use **Tailwind CSS utility classes** and DS tokens (spacing, colors, breakpoints) as defined in the Figma file.
+* Read the [Best Practices doc](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/best-practices.md) for examples and additional details.
+
+---
 
 **IMPORTANT**
 Follow the new component directory structure:
@@ -24,24 +30,36 @@ src/
 ··········└── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
-## Components creation/modification from the DS
+---
+
+## Component implementation from the DS
 
 If you are implementing:
 
-* **A base component** (a component that already exists in the [shadcn/ui components list](https://ui.shadcn.com/docs/components), for example, Button or Input)
+### 🧩 Base components
 
-  * Do not create a new component file under `/ComponentA/index.tsx` unless you need additional or custom logic.
-  * Update or override styles and tokens in the base `ui` components located under `src/components/ui`.
-  * Create a `.stories.tsx` file under `src/components/BaseStories` for documentation and visual testing.
+*(components that already exist in the [shadcn/ui components list](https://ui.shadcn.com/docs/components), e.g. Button, Input, Alert)*
 
-* **A new custom component** (e.g., `PageHero`)
+* Do **not** create a new component file under `/ComponentA/index.tsx` unless additional or custom logic is required.
+* Extend or style base components in `src/components/ui`.
+* Use Tailwind and `class-variance-authority` (`cva`) for managing variants and states.
+* Create a `.stories.tsx` file under `src/components/BaseStories` for Storybook documentation.
 
-  * Use base components from `src/components/ui` whenever possible.
-  * Avoid re-implementing styles or logic that are already covered by the base `ui` components or design tokens.
+### 🧱 Custom components
+
+*(components not covered by shadcn/ui, e.g. PageHero)*
+
+* Use base `ui` components whenever possible.
+* Keep the structure consistent with the DS and Figma specifications.
+* Avoid re-implementing primitives that already exist in `shadcn/ui` or Radix UI.
+
+---
 
 ## Stories
 
-As defined in the new directory structure, each created or adapted component must have a story attached to it.
+Each created or adapted component must include a corresponding Storybook story.
 
 * Follow the [Storybook integration guide](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/applying-storybook.md)
 * Follow the [proposed Storybook structure](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure)
+
+
