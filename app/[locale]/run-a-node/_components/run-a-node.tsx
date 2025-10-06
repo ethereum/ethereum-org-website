@@ -33,7 +33,6 @@ import InlineLink from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { InfoGrid } from "@/layouts"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -367,16 +366,17 @@ const RunANodePage = ({
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <InfoGrid>
-            {whyRunANodeCards.map(({ Svg, title, preview, body, alt }) => (
+          <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-8">
+            {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}
                 title={title}
-                // TODO: make a11y svgs (using <title>)
-                // @ts-expect-error alt does not exist as a valid prop
-                alt={alt}
                 svg={({ className }) => (
-                  <Svg className={cn("size-16", className)} />
+                  <Svg
+                    className={cn("size-16", className)}
+                    aria-hidden
+                    focusable="false"
+                  />
                 )}
                 key={title}
               >
@@ -385,7 +385,7 @@ const RunANodePage = ({
                 ))}
               </ExpandableCard>
             ))}
-          </InfoGrid>
+          </div>
         </Content>
 
         <Divider />
@@ -411,21 +411,13 @@ const RunANodePage = ({
                 </InlineLink>
               </ColumnFill>
               <ColumnNarrow>
-                <Terminal
-                  // TODO: make a11y svgs (using <title>)
-                  // @ts-expect-error alt does not exist as a valid prop
-                  alt={t("page-run-a-node-glyph-alt-terminal")}
-                />
+                <Terminal aria-hidden focusable="false" />
               </ColumnNarrow>
             </SoftwareHighlight>
 
             <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
               <ColumnNarrow>
-                <Dappnode
-                  // TODO: make a11y svgs (using <title>)
-                  // @ts-expect-error alt does not exist as a valid prop
-                  alt={t("page-run-a-node-glyph-alt-dappnode")}
-                />
+                <Dappnode aria-hidden focusable="false" />
               </ColumnNarrow>
               <ColumnFill>
                 <Text>
@@ -444,11 +436,7 @@ const RunANodePage = ({
                 </Text>
               </ColumnFill>
               <ColumnNarrow>
-                <Dapptap
-                  // TODO: make a11y svgs (using <title>)
-                  // @ts-expect-error alt does not exist as a valid prop
-                  alt={t("page-run-a-node-glyph-alt-phone")}
-                />
+                <Dapptap aria-hidden focusable="false" />
               </ColumnNarrow>
             </SoftwareHighlight>
           </GappedContent>
@@ -522,7 +510,8 @@ const RunANodePage = ({
             <SvgTitle>
               <HardwareGlyphIcon
                 className="size-12"
-                aria-label={t("page-run-a-node-glyph-alt-hardware")}
+                aria-hidden
+                focusable="false"
               />
               <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
             </SvgTitle>
@@ -592,8 +581,9 @@ const RunANodePage = ({
           <BuildContainer>
             <SvgTitle>
               <DownloadGlyphIcon
-                aria-label={t("page-run-a-node-glyph-alt-software")}
                 className="size-12"
+                aria-hidden
+                focusable="false"
               />
               <H3>{t("page-run-a-node-build-your-own-software")}</H3>
             </SvgTitle>
