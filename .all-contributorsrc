@@ -13583,6 +13583,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "jsign",
+      "name": "Ignacio Hagopian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6136245?v=4",
+      "profile": "https://ihagopian.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -2105,6 +2105,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AvulaRamSwaroop"><img src="https://avatars.githubusercontent.com/u/153836110?v=4?s=100" width="100px;" alt="Avula Ram Swaroop"/><br /><sub><b>Avula Ram Swaroop</b></sub></a><br /><a href="#ideas-AvulaRamSwaroop" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/VolodymyrBg"><img src="https://avatars.githubusercontent.com/u/189780094?v=4?s=100" width="100px;" alt="VolodymyrBg"/><br /><sub><b>VolodymyrBg</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AVolodymyrBg" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ihagopian.com"><img src="https://avatars.githubusercontent.com/u/6136245?v=4?s=100" width="100px;" alt="Ignacio Hagopian"/><br /><sub><b>Ignacio Hagopian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jsign" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
