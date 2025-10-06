@@ -320,7 +320,7 @@ Ethereum ialah asas yang sempurna untuk DeFi atas beberapa sebab:
 Anda boleh memikirkan DeFi dalam lapisan:
 
 1. Blok rantai – Ethereum mengandungi sejarah transaksi dan keadaan akaun.
-2. Aset – [ETH](/eth/) dan token lain (mata wang).
+2. Aset – [ETH](/what-is-ether/) dan token lain (mata wang).
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan kefungsian, contohnya, perkhidmatan yang membenarkan peminjaman aset teragih.
 4. [Aplikasi](/apps/) – produk yang kami gunakan untuk mengurus dan mengakses protokol.
 

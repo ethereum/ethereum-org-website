@@ -15,7 +15,7 @@ Alcuni esempi di quiz aggiornati possono essere trovati qui:
 - [Livello 2](/layer-2)
 - [NFT](/nft/)
 - [Cos'è Ethereum?](/what-is-ethereum/)
-- [Cos'è ETH?](/eth/)
+- [Cos'è ETH?](/what-is-ether/)
 
 ## Aggiungere un quiz di apprendimento
 

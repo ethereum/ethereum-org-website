@@ -22,7 +22,7 @@ Deoarece fiecare tranzacție Ethereum necesită resurse de calcul pentru executa
 
 ## Înainte de actualizarea Londra {#pre-london}
 
-Modul de calcul al taxelor de tranzacție în rețeaua Ethereum s-a schimbat odată cu [Actualizarea Londra](/history/#london) din august 2021. Iată o recapitulare a felului în care funcționau lucrurile înainte:
+Modul de calcul al taxelor de tranzacție în rețeaua Ethereum s-a schimbat odată cu [Actualizarea Londra](/ethereum-forks/#london) din august 2021. Iată o recapitulare a felului în care funcționau lucrurile înainte:
 
 Să spunem că Alice trebuia să-i plătească lui Bob 1 ETH. În cadrul tranzacției, limita de gaz este de 21.000 de unități, iar prețul gazului este de 200 gwei.
 
@@ -36,7 +36,7 @@ Acest videoclip oferă o prezentare succintă a gazului și a motivului pentru c
 
 ## După actualizarea Londra {#post-london}
 
-[Actualizarea Londra](/history/#london) a fost implementată pe 5 august 2021 pentru a face tranzacțiile pe Ethereum mai previzibile pentru utilizatori prin revizuirea mecanismului de taxe de tranzacționare pe Ethereum. Beneficiile de ansamblu introduse de această modificare cuprind o estimare mai bună a taxelor de tranzacție, o includere în general mai rapidă a tranzacțiilor și compensarea emiterii de ETH prin arderea unui procent din taxele de tranzacție.
+[Actualizarea Londra](/ethereum-forks/#london) a fost implementată pe 5 august 2021 pentru a face tranzacțiile pe Ethereum mai previzibile pentru utilizatori prin revizuirea mecanismului de taxe de tranzacționare pe Ethereum. Beneficiile de ansamblu introduse de această modificare cuprind o estimare mai bună a taxelor de tranzacție, o includere în general mai rapidă a tranzacțiilor și compensarea emiterii de ETH prin arderea unui procent din taxele de tranzacție.
 
 Începând cu actualizarea Londra a rețelei, fiecare bloc are o taxă de bază, prețul minim pe unitatea de gaz pentru includerea în acest bloc, calculat de rețea în funcţie de cererea de spațiu în bloc. Având în vedere că este arsă taxa de bază a taxei de tranzacție, se preconizează ca utilizatorii să stabilească și un bacșiș („tip”) (taxă de prioritate) în tranzacțiile lor. Bacșișul (tip) compensează miner-ii pentru executarea și propagarea tranzacțiilor utilizatorilor în blocuri și se preconizează ca aceasta să fie stabilită automat de majoritatea portofelelor.
 

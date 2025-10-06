@@ -29,4 +29,4 @@ Chceli by ste spoznať ďalšie aplikácie postavené na Ethereu?
 
 Niektoré aplikácie Etherea vyžadujú peňaženku - [tu sa dozviete viac o peňaženkách Etherea](/wallets/).
 
-Niektoré aplikácie Etherea vyžadujú ETH - [tu sa dozviete viac o ETH](/eth/).
+Niektoré aplikácie Etherea vyžadujú ETH - [tu sa dozviete viac o ETH](/what-is-ether/).

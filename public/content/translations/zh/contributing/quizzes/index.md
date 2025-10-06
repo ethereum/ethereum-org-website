@@ -15,7 +15,7 @@ lang: zh
 - [二层网络](/layer-2)
 - [非同质化代币](/nft/)
 - [什么是以太坊？](/what-is-ethereum/)
-- [以太币是什么？](/eth/)
+- [以太币是什么？](/what-is-ether/)
 
 ## 添加学习测验
 

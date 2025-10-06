@@ -320,7 +320,7 @@ Ethereum je ideálním základem pro DeFi z několika důvodů:
 O DeFi můžete přemýšlet ve vrstvách:
 
 1. Blockchain – Ethereum obsahuje historii transakcí a stavy účtů.
-2. Aktiva – [ETH](/eth/) a ostatní tokeny (měny).
+2. Aktiva – [ETH](/what-is-ether/) a ostatní tokeny (měny).
 3. Protokoly 2 [chytré kontrakty](/glossary/#smart-contract), které poskytují například službu umožňující decentralizované půjčování aktiv.
 4. [Aplikace](/apps/) – produkty, které používáme ke správě a přístupu k protokolům.
 

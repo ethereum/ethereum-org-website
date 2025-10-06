@@ -65,7 +65,7 @@ Live na ang mga pag-withdraw sa staking! Ang functionality ng pag-withdraw ay in
 
 Ang Shanghai/Capella upgrade ang nagbigay-daan para maibalik ang staked ETH sa mga regular na Ethereum account. Sinubaybayan nito ang pag-stake ng liquidity, at inilapit nito ang Ethereum sa layunin nitong bumuo ng sustainable, scalable, at secure na decentralized ecosystem.
 
-- [Iba pang detalye tungkol sa kasaysayan ng Ethereum](/history/)
+- [Iba pang detalye tungkol sa kasaysayan ng Ethereum](/ethereum-forks/)
 - [Iba pang detalye tungkol sa roadmap ng Ethereum](/roadmap/)
 
 ## Paano gumagana ang mga withdrawal payment? {#how-do-withdrawals-work}

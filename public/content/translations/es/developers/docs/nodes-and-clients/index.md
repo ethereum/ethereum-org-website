@@ -37,7 +37,7 @@ Lo que estas implementaciones de clientes tienen en común es que todas siguen u
 - En su origen, el [Protocolo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Especificaciones de ejecución](https://github.com/ethereum/execution-specs/)
 - [Especificaciones de consenso](https://github.com/ethereum/consensus-specs)
-- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/history/)
+- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/ethereum-forks/)
 
 ### Nodos de rastreamiento en la red {#network-overview}
 

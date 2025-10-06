@@ -83,7 +83,7 @@ I client di Ethereum sono implementazioni del protocollo di Ethereum. Lo svilupp
 1. un client di consenso per tenere traccia della testa della blochchain, dei blocchi di gossip e per gestire la logica di consenso
 2. un client di esecuzione per supportare la macchina virtuale di Ethereum ed eseguire le transazioni e i contratti intelligenti
 
-Consulta la [pagina dei nodi e dei client](/developers/docs/nodes-and-clients/) per maggiori dettagli su nodi e client e per un elenco di tutte le implementazioni di client correnti. Puoi anche trovare una cronologia di tutti gli aggiornamenti di Ethereum nella [pagina della cronologia](/history/).
+Consulta la [pagina dei nodi e dei client](/developers/docs/nodes-and-clients/) per maggiori dettagli su nodi e client e per un elenco di tutte le implementazioni di client correnti. Puoi anche trovare una cronologia di tutti gli aggiornamenti di Ethereum nella [pagina della cronologia](/ethereum-forks/).
 
 ### Client di esecuzione {#execution-clients}
 

@@ -6,7 +6,7 @@
 
 /brand /assets/ 301!
 
-/ether /eth/ 301!
+/ether /what-is-ether/ 301!
 
 /token /developers/ 301!
 
@@ -178,3 +178,11 @@
 /10-years /10years 301!
 
 /*/10-years /:splat/10years 301!
+
+/history /ethereum-forks 301!
+
+/*/history /:splat/ethereum-forks 301!
+
+/eth /what-is-ether 301!
+
+/*/eth /:splat/what-is-ether 301!

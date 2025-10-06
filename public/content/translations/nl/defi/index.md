@@ -320,7 +320,7 @@ Ethereum is de perfecte basis voor DeFi om een aantal redenen:
 U kunt DeFi zien als verschillende lagen:
 
 1. De blockchain – Ethereum bevat de transactiegeschiedenis en staat van accounts.
-2. De activa – [ETH](/eth/) en de andere tokens (valuta).
+2. De activa – [ETH](/what-is-ether/) en de andere tokens (valuta).
 3. De protocollen – [slimme contracten](/glossary/#smart-contract) die de functionaliteit leveren, bijvoorbeeld een service die het mogelijk maakt om activa gedecentraliseerd uit te lenen.
 4. [De applicaties](/apps/) – de producten die we gebruiken om de protocollen te beheren en te raadplegen.
 

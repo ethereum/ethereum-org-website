@@ -24,7 +24,7 @@ Ethereum es una red pública, una cadena de bloques y un protocolo de código ab
 
 El ether (también conocido por su indicador ETH) es la moneda nativa que se intercambia en Ethereum. Se necesitan ETH para pagar el uso de la red Ethereum (en forma de comisiones de transacción). El ETH también se utiliza para asegurar la red con participaciones. Cuando la gente habla del precio de Ethereum, se refieren a los activos en ETH.
 
-[Más información acerca de ETH](/eth/)
+[Más información acerca de ETH](/what-is-ether/)
 
 [Más información acerca de la participación de ETH](/staking/)
 

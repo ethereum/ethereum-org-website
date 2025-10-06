@@ -15,7 +15,7 @@ lang: zh-tw
 - [二層網路](/layer-2)
 - [非同質化代幣](/nft/)
 - [什麼是以太坊？](/what-is-ethereum/)
-- [什麼是以太幣？](/eth/)
+- [什麼是以太幣？](/what-is-ether/)
 
 ## 新增學習測驗
 

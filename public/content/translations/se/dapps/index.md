@@ -29,4 +29,4 @@ Intresserad av att titta på fler appar som är byggda på Ethereum?
 
 Vissa Ethereum-appar kräver en plånbok - [lär dig mer om Ethereum-plånböcker här](/wallets/).
 
-Vissa Ethereum-appar kräver ETH - [lär dig mer om ETH här](/eth/).
+Vissa Ethereum-appar kräver ETH - [lär dig mer om ETH här](/what-is-ether/).

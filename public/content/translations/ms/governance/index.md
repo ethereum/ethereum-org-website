@@ -42,7 +42,7 @@ _Walaupun di peringkat protokol Tadbir urus Ethereum di luar rantaian, banyak ke
 
 Terdapat pelbagai pihak berkepentingan dalam [komuniti Ethereum](/community/), setiap daripada mereka memainkan peranan dalam proses tadbir urus. Bermula daripada pihak berkepentingan yang paling jauh daripada protokol dan zum ke dalam, kami mempunyai:
 
-- **Pemegang Ether**: mereka ini memegang sembarangan jumlah ETH. [Lagi tentang ETH](/eth/).
+- **Pemegang Ether**: mereka ini memegang sembarangan jumlah ETH. [Lagi tentang ETH](/what-is-ether/).
 - **Permohonan Pengguna**: mereka ini berinteraksi dengan aplikasi pada blok rantai Ethereum.
 - **Permohonan/Pemaju Alat**: mereka ini menulis aplikasi yang dijalankan di blok rantai Ethereum (contohnya DeFi, NFT, dll.) atau membina alat untuk berinteraksi dengan Ethereum (contohnya dompet, suite ujian, dll.). [Lagi tentang dapp](/apps/).
 - **Penggendali Nod**: mereka ini menjalankan nod yang menyebarkan blok dan transaksi, menolak sebarang transaksi yang tidak sah atau menyekat yang hadir. [Lagi tentang nod](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ Proses tadbir urus Ethereum sering diniagakan daripada kelajuan dan kecekapan un
 
 Walaupun spesifikasi dan pelaksanaan pembangunan sentiasa sumber terbuka sepenuhnya, proses formal yang digunakan untuk mencadangkan kemas kini yang diterangkan di atas tidak digunakan. Ini membolehkan perubahan ditentukan dan dipersetujui dengan lebih cepat oleh penyelidik dan pelaksana.
 
-Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 September 2022, The Merge ini telah lengkap sebagai sebahagian daripada [naik taraf rangkaian Paris](/history/#paris). Cadangan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) telah ditukar daripada 'Panggilan Terakhir' kepada 'Muktamad', melengkapkan peralihan kepada bukti penaruhan.
+Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 September 2022, The Merge ini telah lengkap sebagai sebahagian daripada [naik taraf rangkaian Paris](/ethereum-forks/#paris). Cadangan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) telah ditukar daripada 'Panggilan Terakhir' kepada 'Muktamad', melengkapkan peralihan kepada bukti penaruhan.
 
 <ButtonLink href="/roadmap/merge/">
   Lagi tentang The Merge

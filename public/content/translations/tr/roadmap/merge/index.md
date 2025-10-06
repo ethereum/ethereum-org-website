@@ -17,7 +17,7 @@ summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azal
 
 ## Birleşim neydi? {#what-is-the-merge}
 
-Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/history/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
+Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/ethereum-forks/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 
 <MergeInfographic />
 

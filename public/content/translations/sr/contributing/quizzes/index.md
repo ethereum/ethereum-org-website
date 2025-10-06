@@ -15,7 +15,7 @@ Neke od primera trenutnih kvizova možete pronaći ovde:
 - [Nivo 2](/layer-2)
 - [NFT](/nft/)
 - [Šta je Ethereum?](/what-is-ethereum/)
-- [Šta je ETH?](/eth/)
+- [Šta je ETH?](/what-is-ether/)
 
 ## Dodavanje edukativnog kviza
 

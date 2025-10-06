@@ -320,7 +320,7 @@ Ethereum, birkaç nedenden dolayı DeFi için mükemmel bir temeldir:
 DeFi'yi katmanlar halinde düşünebilirsiniz:
 
 1. Blok zinciri: Ethereum, işlem geçmişini ve hesapların durumunu içerir.
-2. Varlıklar: [ETH](/eth/) ve diğer token'lar (para birimleri).
+2. Varlıklar: [ETH](/what-is-ether/) ve diğer token'lar (para birimleri).
 3. Protokol – [akıllı sözleşmeler](/glossary/#smart-contract) işlevsellik sağlar; örneğin, bu varlıklara merkeziyetsiz borçlanmaya izin veren bir servis sağlar.
 4. [Uygulamalar](/apps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
 
