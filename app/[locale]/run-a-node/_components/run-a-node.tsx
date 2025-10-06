@@ -367,14 +367,16 @@ const RunANodePage = ({
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-8">
-            {whyRunANodeCards.map(({ Svg, title, preview, body, alt }) => (
+            {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}
                 title={title}
                 svg={({ className }) => (
-                  <Svg className={cn("size-16", className)}>
-                    <title>{alt}</title>
-                  </Svg>
+                  <Svg
+                    className={cn("size-16", className)}
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                 )}
                 key={title}
               >
@@ -409,17 +411,13 @@ const RunANodePage = ({
                 </InlineLink>
               </ColumnFill>
               <ColumnNarrow>
-                <Terminal>
-                  <title>{t("page-run-a-node-glyph-alt-terminal")}</title>
-                </Terminal>
+                <Terminal aria-hidden="true" focusable="false" />
               </ColumnNarrow>
             </SoftwareHighlight>
 
             <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
               <ColumnNarrow>
-                <Dappnode>
-                  <title>{t("page-run-a-node-glyph-alt-dappnode")}</title>
-                </Dappnode>{" "}
+                <Dappnode aria-hidden="true" focusable="false" />
               </ColumnNarrow>
               <ColumnFill>
                 <Text>
@@ -438,9 +436,7 @@ const RunANodePage = ({
                 </Text>
               </ColumnFill>
               <ColumnNarrow>
-                <Dapptap>
-                  <title>{t("page-run-a-node-glyph-alt-phone")}</title>
-                </Dapptap>{" "}
+                <Dapptap aria-hidden="true" focusable="false" />
               </ColumnNarrow>
             </SoftwareHighlight>
           </GappedContent>
@@ -514,10 +510,9 @@ const RunANodePage = ({
             <SvgTitle>
               <HardwareGlyphIcon
                 className="size-12"
-                aria-label={t("page-run-a-node-glyph-alt-hardware")}
-              >
-                <title>{t("page-run-a-node-glyph-alt-hardware")}</title>
-              </HardwareGlyphIcon>
+                aria-hidden="true"
+                focusable="false"
+              />
               <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
             </SvgTitle>
 
@@ -586,11 +581,10 @@ const RunANodePage = ({
           <BuildContainer>
             <SvgTitle>
               <DownloadGlyphIcon
-                aria-label={t("page-run-a-node-glyph-alt-software")}
                 className="size-12"
-              >
-                <title>{t("page-run-a-node-glyph-alt-software")}</title>
-              </DownloadGlyphIcon>
+                aria-hidden="true"
+                focusable="false"
+              />
               <H3>{t("page-run-a-node-build-your-own-software")}</H3>
             </SvgTitle>
 
