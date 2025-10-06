@@ -2102,6 +2102,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/khalil7044"><img src="https://avatars.githubusercontent.com/u/127534855?v=4?s=100" width="100px;" alt="khalil7044"/><br /><sub><b>khalil7044</b></sub></a><br /><a href="#infra-khalil7044" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/NikolaiKryshnev"><img src="https://avatars.githubusercontent.com/u/63440682?v=4?s=100" width="100px;" alt="NikolaiKryshnev"/><br /><sub><b>NikolaiKryshnev</b></sub></a><br /><a href="#maintenance-NikolaiKryshnev" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AvulaRamSwaroop"><img src="https://avatars.githubusercontent.com/u/153836110?v=4?s=100" width="100px;" alt="Avula Ram Swaroop"/><br /><sub><b>Avula Ram Swaroop</b></sub></a><br /><a href="#ideas-AvulaRamSwaroop" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
   </tbody>
 </table>
 
