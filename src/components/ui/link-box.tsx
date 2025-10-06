@@ -3,10 +3,12 @@
 import { type BaseHTMLAttributes, type ElementRef, forwardRef } from "react"
 import { Slot } from "@radix-ui/react-slot"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 type LinkBoxElement = ElementRef<"div">
 

@@ -444,5 +444,8 @@
   "withdrawals": "Uzamčení výběrů",
   "wrapped-ether": "Zabalený Ether",
   "yes": "Ano",
-  "zero-knowledge-proofs": "Důkazy s nulovou znalostí"
+  "zero-knowledge-proofs": "Důkazy s nulovou znalostí",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Pochopte rozdíly mezi Ethereem a Bitcoinem"
+
 }

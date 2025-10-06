@@ -431,5 +431,8 @@
   "withdrawals": "Тегления на залози",
   "wrapped-ether": "Опакован Етер",
   "yes": "Да",
-  "zero-knowledge-proofs": "Доказателства за нулево знание"
+  "zero-knowledge-proofs": "Доказателства за нулево знание",
+  "ethereum-vs-bitcoin": "Етереум срещу Биткойн",
+  "nav-ethereum-vs-bitcoin-description": "Разберете разликите между Етереум и Биткойн"
+
 }

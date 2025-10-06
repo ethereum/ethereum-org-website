@@ -57,7 +57,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 去中心化身分可以使用去中心化驗證，有助於替代基於密碼的登入方式。 服務提供商可以向使用者簽發身分證明，這些證明可以儲存在以太坊錢包中。 一個身分證明範例是[非同質化代幣](/glossary/#nft)，可以授予持有者訪問線上社群的權利。
 
-[使用以太坊登入](https://login.xyz/)功能將允許伺服器能夠確認使用者的以太坊帳戶，並從他們的帳戶地址中獲取所需的身分證明。 這意味著使用者無需記住冗長的密碼，就能夠訪問平台和網站，進而改善使用者的線上體驗。
+[使用以太坊登入](https://siwe.xyz/)功能將允許伺服器能夠確認使用者的以太坊帳戶，並從他們的帳戶地址中獲取所需的身分證明。 這意味著使用者無需記住冗長的密碼，就能夠訪問平台和網站，進而改善使用者的線上體驗。
 
 ### 2. 「認識客戶」驗證 {#kyc-authentication}
 
@@ -186,6 +186,6 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 ### 社群 {#communities}
 
 - [GitHub 上的 ERC-725 聯盟](https://github.com/erc725alliance) — _在以太坊區塊鏈上管理身分的 ERC725 標準的支持者_
-- [SpruceID Discord 伺服器](https://discord.com/invite/Sf9tSFzrnt) — _研究使用以太坊登錄的愛好者和開發者社群_
+- [EthID Discord 伺服器](https://discord.com/invite/ZUyG3mSXFD) — _研究使用以太坊登錄的愛好者和開發者社群_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _一個開發人員社區，致力於為應用程式構建可驗證資料的框架_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _由開發者和構建者組成的社區，致力於開發各個行業的去中心化身份應用案例_

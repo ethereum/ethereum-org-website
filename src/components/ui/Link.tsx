@@ -1,12 +1,14 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ExternalLink, Mail } from "lucide-react"
+import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
+import { MatomoEventOptions } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
@@ -194,6 +196,27 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   )
 })
 BaseLink.displayName = "BaseLink"
+
+export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ children, className, ...props }: LinkProps, ref) => {
+    const { twFlipForRtl } = useRtlFlip()
+    return (
+      <BaseLink
+        className={cn(
+          "group block w-fit no-underline visited:text-primary-visited",
+          className
+        )}
+        ref={ref}
+        {...props}
+      >
+        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
+        &nbsp;
+        <span className="group-hover:underline">{children}</span>
+      </BaseLink>
+    )
+  }
+)
+LinkWithArrow.displayName = "LinkWithArrow"
 
 const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
   (props: LinkProps, ref) => {

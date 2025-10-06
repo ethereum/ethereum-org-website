@@ -492,10 +492,11 @@ export interface LearningTool {
   background: string
   subjects: Array<string>
   locales?: Array<Lang>
+  priceType?: string
 }
 
 export interface LearningToolsCardGridProps {
-  category: Array<LearningTool>
+  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
@@ -730,6 +731,8 @@ export type WalletData = {
 export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
+
+export type WalletRow = Wallet & { id: string }
 
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
@@ -1010,6 +1013,7 @@ export type EventCardProps = {
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  locale?: Lang
 }
 
 export type BreakpointKey = keyof typeof screens
@@ -1197,7 +1201,7 @@ export type ValuesPairing = {
 export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
 
 export type PageParams = {
-  locale: string
+  locale: Lang
 }
 
 export type SlugPageParams = PageParams & {
@@ -1225,4 +1229,11 @@ export type SectionNavDetails = {
   label: string
   href?: string
   icon?: React.ReactNode
+}
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
 }

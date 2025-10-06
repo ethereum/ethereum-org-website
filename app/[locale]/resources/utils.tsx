@@ -100,14 +100,8 @@ export const getResources = async ({
           description: t(
             "page-resources-network-layer2-growthepie-description"
           ),
-          href: "https://www.growthepie.com/",
+          href: "https://www.growthepie.com/ethereum-ecosystem/metrics",
           imgSrc: IconGrowthepie,
-        },
-        {
-          title: "L2 Fees",
-          description: t("page-resources-network-layer2-l2fees-description"),
-          href: "https://l2fees.info/",
-          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -547,31 +541,31 @@ export const getResources = async ({
   const resources = [
     {
       key: "network",
-      title: t("page-resources-network-title"),
+      label: t("page-resources-network-title"),
       icon: <SectionIconEthGlyph />,
       boxes: networkBoxes,
     },
     {
       key: "using",
-      title: t("page-resources-using-title"),
+      label: t("page-resources-using-title"),
       icon: <SectionIconEthWallet />,
       boxes: usingBoxes,
     },
     {
       key: "scaling",
-      title: t("page-resources-scaling-title"),
+      label: t("page-resources-scaling-title"),
       icon: <SectionIconArrowsFullscreen />,
       boxes: scalingBoxes,
     },
     {
       key: "resilience",
-      title: t("page-resources-resilience-title"),
+      label: t("page-resources-resilience-title"),
       icon: <SectionIconHeartPulse />,
       boxes: resilienceBoxes,
     },
     {
       key: "privacy-security",
-      title: t("page-resources-privacy-security-title"),
+      label: t("page-resources-privacy-security-title"),
       icon: <SectionIconPrivacy />,
       boxes: privacySecurityBoxes,
     },

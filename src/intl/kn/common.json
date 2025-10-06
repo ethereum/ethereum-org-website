@@ -442,5 +442,8 @@
   "withdrawals": "ಪಣ ಹಿಂತೆಗೆದುಕೊಳ್ಳುವುದು",
   "wrapped-ether": "ವ್ರ್ಯಾಪ್ ಮಾಡಲಾದ ಎಥೆರ್",
   "yes": "ಹೌದು",
-  "zero-knowledge-proofs": "ಶೂನ್ಯ ಜ್ಞಾನ ಪುರಾವೆಗಳು"
+  "zero-knowledge-proofs": "ಶೂನ್ಯ ಜ್ಞಾನ ಪುರಾವೆಗಳು",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum ಮತ್ತು Bitcoin ನಡುವಿನ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ"
+
 }

@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "10.13.0",
+  "version": "10.15.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -59,6 +59,7 @@
     "@socialgouv/matomo-next": "^1.8.0",
     "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-table": "^8.19.3",
+    "@tanstack/react-virtual": "^3.13.12",
     "@types/canvas-confetti": "^1.9.0",
     "@types/three": "^0.177.0",
     "@wagmi/core": "^2.17.3",

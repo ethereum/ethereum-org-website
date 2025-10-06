@@ -444,5 +444,8 @@
   "withdrawals": "Aistarraingtí geallchuir",
   "wrapped-ether": "Éitear fillte",
   "yes": "Tá",
-  "zero-knowledge-proofs": "Cruthúnais nialais-eolais"
+  "zero-knowledge-proofs": "Cruthúnais nialais-eolais",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Tuig na difríochtaí idir Ethereum agus Bitcoin"
+
 }

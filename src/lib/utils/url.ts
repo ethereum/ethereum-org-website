@@ -1,5 +1,7 @@
 import { extname, join } from "path"
 
+import { Lang } from "@/lib/types"
+
 import {
   DEFAULT_LOCALE,
   DISCORD_PATH,
@@ -74,4 +76,16 @@ export const slugify = (text: string): string => {
       .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
       .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
   )
+}
+
+export const normalizeUrlForJsonLd = (
+  locale: string | Lang | undefined,
+  pathWithoutLocale: string
+): string => {
+  if (!locale) {
+    return new URL(pathWithoutLocale, SITE_URL).toString()
+  }
+  const path = join(locale === DEFAULT_LOCALE ? "" : locale, pathWithoutLocale)
+  const url = new URL(path, SITE_URL)
+  return url.toString()
 }
