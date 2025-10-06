@@ -327,7 +327,9 @@ const Page = async ({
                   {t("page-apps-info-founded")}
                 </p>
                 <p className="text-sm">
-                  {new Date(app.dateOfLaunch).getFullYear()}
+                  {app.dateOfLaunch
+                    ? new Date(app.dateOfLaunch).getFullYear()
+                    : "—"}
                 </p>
               </div>
               <div>
