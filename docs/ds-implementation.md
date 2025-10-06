@@ -2,14 +2,15 @@
 
 This is a reference for implementing the new Design System components and styles defined in a public [Figma file](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System).
 
-This is part of our [Design System implementation epic](https://github.com/ethereum/ethereum-org-website/issues/9546). Currently we are implementing the v1, check the remaining tasks [here](https://github.com/ethereum/ethereum-org-website/issues/9548).
+This is part of our [Design System implementation epic](https://github.com/ethereum/ethereum-org-website/issues/9546). Currently, we are implementing **v1**, check the remaining tasks [here](https://github.com/ethereum/ethereum-org-website/issues/9548).
 
 ## Basics
 
-- Use Chakra tokens for spacing, sizes, and breakpoints. [Chakra theme docs](https://chakra-ui.com/docs/components/theme)
-- For colors use the semantic tokens defined in [this file](https://github.com/ethereum/ethereum-org-website/blob/dev/src/%40chakra-ui/semanticTokens.ts). These tokens will match the color variables used in the DS Figma file
-- Use as many Chakra components and utils as possible
-- Read the [Best Practices doc](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/best-practices.md) for more examples and info
+* Use the **shadcn/ui** component approach for all base and shared UI elements.
+  [shadcn/ui documentation](https://ui.shadcn.com/docs/components)
+* Reference existing base components from `src/components/ui` whenever possible.
+* Use **design tokens** (spacing, sizes, breakpoints, and semantic colors) defined in our DS Figma file and theme configuration.
+* Read the [Best Practices doc](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/best-practices.md) for more examples and implementation details.
 
 **IMPORTANT**
 Follow the new component directory structure:
@@ -27,17 +28,20 @@ src/
 
 If you are implementing:
 
-- A base component (a component that already exists in the [Chakra components list](https://v2.chakra-ui.com/docs/components), for example, the button or inputs)
-  - Try to avoid creating a new component file `/ComponentA/index.tsx` if there is no additional or custom logic we need to add to them
-  - Create a theme file to override the default Chakra styles with the DS specs. See examples under the [Chakra theme folder](https://github.com/ethereum/ethereum-org-website/tree/dev/src/%40chakra-ui/components)
-  - Create a `.stories.tsx` file under `src/components/BaseStories`
-- A new custom component (e.g. the PageHero)
-  - Use as many Chakra components as possible
-  - Avoid implementing previous implementation details or styles if Chakra offers a solution for that
+* **A base component** (a component that already exists in the [shadcn/ui components list](https://ui.shadcn.com/docs/components), for example, Button or Input)
+
+  * Do not create a new component file under `/ComponentA/index.tsx` unless you need additional or custom logic.
+  * Update or override styles and tokens in the base `ui` components located under `src/components/ui`.
+  * Create a `.stories.tsx` file under `src/components/BaseStories` for documentation and visual testing.
+
+* **A new custom component** (e.g., `PageHero`)
+
+  * Use base components from `src/components/ui` whenever possible.
+  * Avoid re-implementing styles or logic that are already covered by the base `ui` components or design tokens.
 
 ## Stories
 
 As defined in the new directory structure, each created or adapted component must have a story attached to it.
 
-- Follow the [Applying Storybook documentation](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/applying-storybook.md)
-- Follow the [proposed Storybook structure](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure)
+* Follow the [Storybook integration guide](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/applying-storybook.md)
+* Follow the [proposed Storybook structure](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure)
