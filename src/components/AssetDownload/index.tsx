@@ -1,3 +1,5 @@
+import { extname } from "path"
+
 import { BaseHTMLAttributes } from "react"
 import type { ImageProps, StaticImageData } from "next/image"
 
@@ -39,8 +41,7 @@ const AssetDownload = ({
       eventName: title,
     })
   }
-  const imgSrc =
-    typeof image === "string" ? image : (image as StaticImageData).src
+  const imgSrc = (image as StaticImageData).src
 
   return (
     <Stack
@@ -57,7 +58,7 @@ const AssetDownload = ({
       <Flex className="mt-4 gap-5">
         <ButtonLink href={imgSrc} onClick={matomoHandler} target="_blank">
           {t("page-assets-download-download")} (
-          {imgSrc.split(".").pop()?.toUpperCase()})
+          {extname(imgSrc).slice(1).toUpperCase()})
         </ButtonLink>
         {svgUrl && (
           <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">

@@ -82,7 +82,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   // Get proper download link for internally hosted files (ex: whitepaper.pdf)
   // Opens in separate window.
-  if (isInternalFile && !href.startsWith("/") && pathname) {
+  if (isInternalFile && !href.startsWith("/")) {
     href = "/" + getRelativePath(pathname, href)
   }
 
