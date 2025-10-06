@@ -372,11 +372,10 @@ const RunANodePage = ({
               <ExpandableCard
                 contentPreview={preview}
                 title={title}
-                // TODO: make a11y svgs (using <title>)
-                // @ts-expect-error alt does not exist as a valid prop
-                alt={alt}
                 svg={({ className }) => (
-                  <Svg className={cn("size-16", className)} />
+                  <Svg className={cn("size-16", className)}>
+                    <title>{alt}</title>
+                  </Svg>
                 )}
                 key={title}
               >
@@ -411,21 +410,17 @@ const RunANodePage = ({
                 </InlineLink>
               </ColumnFill>
               <ColumnNarrow>
-                <Terminal
-                  // TODO: make a11y svgs (using <title>)
-                  // @ts-expect-error alt does not exist as a valid prop
-                  alt={t("page-run-a-node-glyph-alt-terminal")}
-                />
+                <Terminal>
+                  <title>{t("page-run-a-node-glyph-alt-terminal")}</title>
+                </Terminal>
               </ColumnNarrow>
             </SoftwareHighlight>
 
             <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
               <ColumnNarrow>
-                <Dappnode
-                  // TODO: make a11y svgs (using <title>)
-                  // @ts-expect-error alt does not exist as a valid prop
-                  alt={t("page-run-a-node-glyph-alt-dappnode")}
-                />
+                <Dappnode>
+                  <title>{t("page-run-a-node-glyph-alt-dappnode")}</title>
+                </Dappnode>{" "}
               </ColumnNarrow>
               <ColumnFill>
                 <Text>
@@ -444,11 +439,9 @@ const RunANodePage = ({
                 </Text>
               </ColumnFill>
               <ColumnNarrow>
-                <Dapptap
-                  // TODO: make a11y svgs (using <title>)
-                  // @ts-expect-error alt does not exist as a valid prop
-                  alt={t("page-run-a-node-glyph-alt-phone")}
-                />
+                <Dapptap>
+                  <title>{t("page-run-a-node-glyph-alt-phone")}</title>
+                </Dapptap>{" "}
               </ColumnNarrow>
             </SoftwareHighlight>
           </GappedContent>
@@ -523,7 +516,9 @@ const RunANodePage = ({
               <HardwareGlyphIcon
                 className="size-12"
                 aria-label={t("page-run-a-node-glyph-alt-hardware")}
-              />
+              >
+                <title>{t("page-run-a-node-glyph-alt-hardware")}</title>
+              </HardwareGlyphIcon>
               <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
             </SvgTitle>
 
@@ -594,7 +589,9 @@ const RunANodePage = ({
               <DownloadGlyphIcon
                 aria-label={t("page-run-a-node-glyph-alt-software")}
                 className="size-12"
-              />
+              >
+                <title>{t("page-run-a-node-glyph-alt-software")}</title>
+              </DownloadGlyphIcon>
               <H3>{t("page-run-a-node-build-your-own-software")}</H3>
             </SvgTitle>
 
