@@ -13545,6 +13545,15 @@
       "contributions": [
         "tutorial"
       ]
+    },
+    {
+      "login": "khalil7044",
+      "name": "khalil7044",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127534855?v=4",
+      "profile": "https://github.com/khalil7044",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
