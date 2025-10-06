@@ -111,7 +111,7 @@ Jelenleg több második blokkláncréteg (L2) protokoll létezik, ami az Ethereu
 #### Jelenlegi kutatás {#recent-research-2}
 
 - [A helyes sorbarendezés a szekvenszereknél az Arbitrumnál](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch L2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch második blokkláncréteg (L2)](https://ethresear.ch/c/layer-2/32)
 - [Rollupra fókuszáló ütemterv](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ Az Ethereum-tárcák lehetnek böngészőkiterjesztések, asztali gépen és mob
 
 - [Bevezetés a tárcákba](/wallets/)
 - [Bevezetés a tárcabiztonságba](/security/)
-- [ethresear.ch biztonság](https://ethresear.ch/tag/security)
+- [Ethresear.ch biztonság](https://ethresear.ch/tag/security)
 - [EIP-2938 Számlaabsztrakció](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Számlaabsztrakció](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -224,7 +224,7 @@ Az Ethereumban a gazdasági kutatás nagyjából két megközelítés mentén za
 
 #### Háttérolvasmányok {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ETHconomics workshop a Devconnect-en](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Jelenlegi kutatás {#recent-research-9}
@@ -307,7 +307,7 @@ Több adatelemzési eszközre és irányítópultra van szükség, hogy részlet
 
 #### Jelenlegi kutatás {#recent-research-14}
 
-- [Robust Incentives Group adatelemzése](https://ethereum.github.io/rig/)
+- [Robust Incentives Group adatelemzése](https://rig.ethereum.org/)
 
 ## Alkalmazások és eszközök {#apps-and-tooling}
 
@@ -358,7 +358,7 @@ Az Ethereum-fejlesztők eszközei gyorsan fejlődnek. Ezen a területen is sok a
 
 ### Orákulumok {#oracles}
 
-Az orákulumok importálják be a láncon kívüli adatokat a blokkláncra egy engedélymentes és decentralizált módon. Mivel ez az adat a láncon belül van, ezért a dappok képesek lekövetni a világ változásait, mint a valódi eszközök árfluktuációja, a láncon kívüli alkalmazások adatai vagy akár az időjárásváltozás.
+Az orákulumok importálják be a láncon kívüli adatokat a blokkláncra egy engedélymentes és decentralizált módon. Mivel ez az adat a láncon belül van, ezért a dappok képesek lekövetni a világ változásait, mint a valódi eszközök árfluktuációja, a láncon kívüli alkalmazások adatai vagy akár az időjárás-változás.
 
 #### Háttérolvasmányok {#background-reading-18}
 
@@ -377,11 +377,11 @@ Az Ethereum elleni támadások általában az egyéni alkalmazások gyenge pontj
 
 - [Féreglyuk-kihasználási jelentés](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Az Ethereum-szerződések meghackelésének vizsgálatai](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt hírek](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt hírek](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Jelenlegi kutatás {#recent-research-19}
 
-- [ethresear.ch alkalmazások](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch alkalmazások](https://ethresear.ch/c/applications/18)
 
 ### Technológiai stack {#technology-stack}
 

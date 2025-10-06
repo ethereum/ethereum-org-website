@@ -1,5 +1,6 @@
 ---
 title: 智慧型合約
+metaTitle: "智慧型合約：簡介與優點"
 description: 智慧型合約的非技術性簡介
 lang: zh-tw
 ---
@@ -69,14 +70,13 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 - [穩定幣](/stablecoins/)
 - [建立和分發唯一的數位資產](/nft/)
 - [自動、開放的貨幣交易所](/get-eth/#dex)
-- [去中心化遊戲](/dapps/?category=gaming#explore)
+- [去中心化遊戲](/apps/categories/gaming)
 - [自動理賠的保單](https://etherisc.com/)
 - [讓人們建立自訂、可互相流通的貨幣的標準](/developers/docs/standards/tokens/)
 
 ## 了解更多 {#further-reading}
 
 - [智慧型合約將如何改變世界](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [智慧型合約：將取代律師的區塊鏈技術](https://blockgeeks.com/guides/smart-contracts/)
 - [適用於開發者的智慧型合約](/developers/docs/smart-contracts/)
 - [學習撰寫智慧型合約](/developers/learning-tools/)
 - [精通以太坊 ─ 智慧型合約是什麼？](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

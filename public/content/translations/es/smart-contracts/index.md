@@ -1,5 +1,6 @@
 ---
 title: Contratos inteligentes
+metaTitle: "Contratos inteligentes: Qué son y sus beneficios"
 description: Una introducción sin tecnicismos a los contratos inteligentes
 lang: es
 ---
@@ -69,14 +70,13 @@ Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossa
 - [Monedas estables](/stablecoins/)
 - [Crear y distribuir activos digitales únicos](/nft/)
 - [Un cambio de divisas automático y abierto](/get-eth/#dex)
-- [Juegos descentralizados](/dapps/?category=gaming#explore)
+- [Juegos descentralizados](/apps/categories/gaming)
 - [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
 - [Un estándar que permite a las personas crear divisas interoperables y personalizadas](/developers/docs/standards/tokens/)
 
 ## Más información {#further-reading}
 
 - [¿Cómo cambiarán el mundo los contratos inteligentes?](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Contratos inteligentes: la tecnología de la cadena de bloques que remplazará a los abogados](https://blockgeeks.com/guides/smart-contracts/)
 - [Contratos inteligentes para desarrolladores](/developers/docs/smart-contracts/)
 - [Aprenda a redactar contratos inteligentes](/developers/learning-tools/)
 - [Dominar Ethereum: ¿Qué es un contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

@@ -8,7 +8,7 @@ lang: zh-tw
 
 公共區塊鏈，例如以太坊，使智慧型合約的安全議題更加複雜。 已部署的合約程式碼_通常_無法變更，以修補安全缺陷；而要追蹤從智慧型合約竊取的資產也十分困難，且因為物件的不可變性，大多無法挽回。
 
-雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
+雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
 
 前面提到的問題，促使開發者將努力打造安全、健全且有韌性的智慧型合約視為當務之急。 我們必須嚴肅看待智慧型合約的安全性，每個開發者都需要好好加以瞭解。 此指南將涵蓋以太坊開發者應有的資安考量，並探索提升智慧型合約安全性的資源。
 
@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - 使用[開發環境](/developers/docs/frameworks/)來測試、編譯、部署智慧型合約
 
-- 透過基本的程式碼分析工具，例如 [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
+- 透過基本的程式碼分析工具，例如 [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
 
 - 確認程式碼編譯沒有錯誤，且 Solidity 編譯器不會傳出警告
 
@@ -223,7 +223,7 @@ contract EmergencyStop {
 
 傳統的軟體開發者都熟悉 KISS (「保持簡約」)，也就是不要在軟體中引進不必要複雜設計的原則。 這是因為長期以來，人們都認為「複雜系統會發生複雜的故障」，且更容易造成代價高昂的錯誤。
 
-編寫智慧型合約尤其注重簡約，因為智慧型合約可能控制龐大資金。 保持簡約的秘訣：編寫智慧型合約時盡可能重複使用既有庫，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)。 因為這些庫已經通過開發者廣泛審核和測試，使用時可以降低從零開始開發新功能出現漏洞的幾率。
+編寫智慧型合約尤其注重簡約，因為智慧型合約可能控制龐大資金。 保持簡約的秘訣：編寫智慧型合約時盡可能重複使用既有庫，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)。 因為這些庫已經通過開發者廣泛審核和測試，使用時可以降低從零開始開發新功能出現漏洞的幾率。
 
 另一個建議是編寫小型函數，並將商業邏輯拆分成多個合約，確立模組化合約。 編寫較簡單的程式碼不只能縮小智慧型合約中的受攻擊面，也使判斷整個系統的正確性更簡單，亦能提早偵測可能的設計錯誤。
 
@@ -304,7 +304,7 @@ contract Victim {
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-總起來說，因為調用者的餘額並非 0，直到函數執行結束前，後續的調用都能成功執行，並允許調用者多次提領餘額。 這類攻擊可以被用於將智慧型合約內的所有資金提領一空，如同 [2016 年的 DAO 駭客攻擊](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)。 就像[重入入侵公開清單](https://github.com/pcaversaccio/reentrancy-attacks)所示，如今重入攻擊仍是智慧型合約面臨的嚴重問題。
+總起來說，因為調用者的餘額並非 0，直到函數執行結束前，後續的調用都能成功執行，並允許調用者多次提領餘額。 這類攻擊可以被用於將智慧型合約內的所有資金提領一空，如同 [2016 年的 DAO 駭客攻擊](https://www.coindesk.com/learn/understanding-the-dao-attack)。 就像[重入入侵公開清單](https://github.com/pcaversaccio/reentrancy-attacks)所示，如今重入攻擊仍是智慧型合約面臨的嚴重問題。
 
 ##### 如何預防重入攻擊
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
+你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
 
 #### 整數下溢與上溢 {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ contract Attack {
 
 ### 監視智慧型合約的工具 {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一個自動監控和回應智慧型合約事件、函式和交易參數的工具。_
-
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)**：_當智慧型合約或錢包出現不尋常的和意外事件時，可以獲得即時通知的工具。_
 
 ### 智慧型合約的安全管理工具 {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _管理智慧型合約運作，包括存取控制、升級和暫停的介面。_
-
 - **[Safe](https://safe.global/)** - _在以太坊上執行、需要達到最低核准人數（N 人中的M 人），才能執行交易的智慧型合約數位錢包。_
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _執行合約所有權、升級、存取控制、治理、暫停等管理功能的合約庫。_
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _執行合約所有權、升級、存取控制、治理、暫停等管理功能的合約庫。_
 
 ### 智慧型合約審核服務 {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ contract Attack {
 
 - **[Hacken](https://hacken.io)** - _為區塊鏈安全採用 360 度全方位方法的 Web3 網路安全審核者。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 稽核服務，確保智慧型合約完整性、以及以太坊及 Starknet 使用者的安全。_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity 和 Cairo 稽核服務，確保智慧型合約完整性、以及以太坊及 Starknet 使用者的安全。_
 
 - **[HashEx](https://hashex.org/)** - _HashEx 專注於區塊鏈和智慧型合約審核，以確保加密貨幣的安全性，提供智慧型合約開發、滲透測試、區塊鏈諮詢等服務。_
 
@@ -515,7 +511,7 @@ contract Attack {
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 安全巨頭，透過產品和智慧型合約審核服務來發展加密安全。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
 
 - **[Oxorio](https://oxor.io/)** - _智慧型合約審核和區塊鏈安全服務，在以太坊虛擬機、Solidity、零知識、加密公司和去中心化金融專案的跨鏈技術方面擁有深厚的專業知識。_
 
@@ -535,7 +531,7 @@ contract Attack {
 
 ### 已知的智慧型合約漏洞和弱點出版品 {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys：已知的智慧型合約攻擊](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _以適合初學者的方式解說最重大的合約漏洞，大部分案例會附上範例程式碼。_
+- **[ConsenSys：已知的智慧型合約攻擊](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _以適合初學者的方式解說最重大的合約漏洞，大部分案例會附上範例程式碼。_
 
 - **[SWC Registry](https://swcregistry.io/)** - _適用於以太坊智慧型合約的通用弱點列表 (CWE) 精選清單。_
 
@@ -563,7 +559,7 @@ contract Attack {
 
 - **[智慧型合約安全性驗證標準](https://github.com/securing/SCSVS)** - _適用於開發者、架構師、安全性審查者和廠商的標準化智慧型合約安全性 14 點檢查清單。_
 
-- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security)** - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
+- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security) - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
 
 ### 關於智慧型合約安全性的使用教學 {#tutorials-on-smart-contract-security}
 

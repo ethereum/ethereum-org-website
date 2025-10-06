@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -12,6 +11,8 @@ import { cn } from "@/lib/utils/cn"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import Emoji from "./Emoji"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type TranslationBannerProps = {
   shouldShow: boolean
@@ -26,7 +27,7 @@ const TranslationBanner = ({
 }: TranslationBannerProps) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
   const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   useEffect(() => {
@@ -88,7 +89,7 @@ const TranslationBanner = ({
           className="absolute end-0 top-0 m-2 hover:text-primary"
           onClick={() => setIsOpen(false)}
         >
-          <MdClose className="h-4 w-4" />
+          <X className="h-4 w-4" />
           <span className="sr-only">Close</span>
         </Button>
       </div>

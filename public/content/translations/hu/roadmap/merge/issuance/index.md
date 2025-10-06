@@ -94,7 +94,7 @@ Az éves ETH kibocsátás nettó csökkenése: <strong>kb. 88,7%</strong> ((4,61
 Az ETH kibocsátással ellenkező erő az a ráta, ahogy az ETH-t elégetik. Az Ethereumon végrehajtandó tranzakcióért fizetni kell egy minimális díjat (alapdíj), amely állandóan változik, blokkról blokkra, a hálózati működés függvényében. Ezt a díjat ETH-ben fizetik, és _elengedhetetlen_ ahhoz, hogy egy tranzakció érvényes legyen. Ezt a díjat _elégetik_ a tranzakció végrehajtása során, így kikerül a körforgásból.
 
 <InfoBanner>
-A díj elégetése a <a href="/history/#london">London-frissítés</a> óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
+A díj elégetése a [London-frissítés](/history/#london) óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
 </InfoBanner>
 
 A bevezetett díj elégetése mellett a validátorok büntetéseket is kaphatnak azért, ha nincsenek online, vagy ami még rosszabb, ha olyan szabályokat hágnak át, amely a hálózat biztonságát veszélyeztetik, akkor az súlyos büntetéssel és kizárással jár. Ezek a büntetések lecsökkentik az ETH-t a validátor számláján, ami utána nem kerül máshova, tehát lényegében kivonják a forgalomból vagy elégetik.

@@ -62,7 +62,7 @@ A camada de execução se preocupa com a execução de transações, com a execu
 #### Leitura de apoio {#background-reading-1}
 
 - [Introdução à EVM](/developers/docs/evm)
-- [Camada de execução Etheresear.ch](https://ethresear.ch/c/execution-layer-research/37)
+- [Camada de execução Ethresear.ch](https://ethresear.ch/c/execution-layer-research/37)
 
 #### Pesquisa recente {#recent-research-1}
 
@@ -220,7 +220,7 @@ De modo geral, a pesquisa de economia no Ethereum segue duas abordagens: validar
 
 #### Leitura de apoio {#background-reading-9}
 
-- [Grupo de incentivos eficientes](https://ethereum.github.io/rig/)
+- [Grupo de incentivos eficientes](https://rig.ethereum.org/)
 - [Workshop sobre ETHconomics no Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Pesquisa recente {#recent-research-9}
@@ -303,7 +303,7 @@ São necessárias mais ferramentas de análise de dados e painéis que ofereçam
 
 #### Pesquisa recente {#recent-research-14}
 
-- [Análise de dados do grupo de incentivos eficientes](https://ethereum.github.io/rig/)
+- [Análise de dados do grupo de incentivos eficientes](https://rig.ethereum.org/)
 
 ## Aplicativos e ferramentas {#apps-and-tooling}
 

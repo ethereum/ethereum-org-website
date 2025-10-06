@@ -56,7 +56,7 @@ Unit tests are useful for checking that functions return expected values and tha
 
 Before writing unit tests, it helps to know what functionalities a smart contract offers and how users will access and use those functions. This is particularly useful for running [happy path tests](https://en.m.wikipedia.org/wiki/Happy_path) that determine if functions in a contract return the correct output for valid user inputs. We'll explain this concept using this (abridged) example of [an auction contract](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
-```
+```solidity
 constructor(
         uint biddingTime,
         address payable beneficiaryAddress
@@ -164,7 +164,7 @@ Property-based testing is the process of checking that a smart contract satisfie
 
 A static analyzer takes as input the source code of a smart contract and outputs results declaring whether a contract satisfies a property or not. Unlike dynamic analysis, static analysis doesn't involve executing a contract to analyze it for correctness. Static analysis instead reasons about all the possible paths that a smart contract could take during execution (i.e., by examining the structure of the source code to determine what it would mean for the contracts operation at runtime).
 
-[Linting](https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important) and [static testing](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) are common methods for running static analysis on contracts. Both require analyzing low-level representations of a contracts execution such as [abstract syntax trees](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) and [control flow graphs](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) output by the compiler.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) and [static testing](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) are common methods for running static analysis on contracts. Both require analyzing low-level representations of a contracts execution such as [abstract syntax trees](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) and [control flow graphs](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) output by the compiler.
 
 In most cases, static analysis is useful for detecting safety issues like use of unsafe constructs, syntax errors, or violations of coding standards in a contracts code. However, static analyzers are known to be generally unsound at detecting deeper vulnerabilities, and may produce excessive false positives.
 
@@ -172,7 +172,7 @@ In most cases, static analysis is useful for detecting safety issues like use of
 
 Dynamic analysis generates symbolic inputs (e.g., in [symbolic execution](https://en.m.wikipedia.org/wiki/Symbolic_execution)) or concrete inputs (e.g., in [fuzzing](https://owasp.org/www-community/Fuzzing)) to a smart contracts functions to see if any execution trace(s) violates specific properties. This form of property-based testing differs from unit tests in that test cases cover multiple scenarios and a program handles the generation of test cases.
 
-[Fuzzing](https://halborn.com/what-is-fuzz-testing-fuzzing/) is an example of a dynamic analysis technique for verifying arbitrary properties in smart contracts. A fuzzer invokes functions in a target contract with random or malformed variations of a defined input value. If the smart contract enters an error state (e.g., one where an assertion fails), the problem is flagged and inputs that drive execution toward the vulnerable path are produced in a report.
+[Fuzzing](https://www.halborn.com/blog/post/what-is-fuzz-testing-fuzzing) is an example of a dynamic analysis technique for verifying arbitrary properties in smart contracts. A fuzzer invokes functions in a target contract with random or malformed variations of a defined input value. If the smart contract enters an error state (e.g., one where an assertion fails), the problem is flagged and inputs that drive execution toward the vulnerable path are produced in a report.
 
 Fuzzing is useful for evaluating a smart contracts input validation mechanism since improper handling of unexpected inputs might result in unintended execution and produce dangerous effects. This form of property-based testing can be ideal for many reasons:
 
@@ -259,7 +259,7 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utilizes Pytest, a feature-rich test framework that lets you write small tests with minimal code, scales well for large projects, and is highly extendable._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry offers Forge, a fast and flexible Ethereum testing framework capable of executing simple unit tests, gas optimization checks, and contract fuzzing._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry offers Forge, a fast and flexible Ethereum testing framework capable of executing simple unit tests, gas optimization checks, and contract fuzzing._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework for testing smart contracts based on ethers.js, Mocha, and Chai._
 
@@ -278,6 +278,8 @@ The major difference is that bug bounty programs are open to the wider developer
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-based static analyzer specifically designed for Web3 smart contract security and development._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-based static analysis framework with vulnerability and code quality detectors, printers for extracting useful information from code and support for writing custom submodules._
+
+- **[Slippy](https://github.com/fvictorio/slippy)** - _A simple and powerful linter for Solidity._
 
 #### Dynamic analysis tools {#dynamic-analysis-tools}
 
@@ -303,6 +305,6 @@ The major difference is that bug bounty programs are open to the wider developer
 ## Further reading {#further-reading}
 
 - [An in-depth guide to testing Ethereum smart contracts](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
-- [How to test ethereum smart contracts](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
+- [How to test Ethereum smart contracts](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
 - [MolochDAO's unit testing guide for developers](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [How to test smart contracts like a rockstar](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)

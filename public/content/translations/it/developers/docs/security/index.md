@@ -6,7 +6,7 @@ lang: it
 
 Gli Smart Contract Ethereum sono estremamente flessibili, in grado di contenere grandi quantità di token (spesso per importi superiori a 1 miliardo di USD) e di eseguire una logica immutabile basata su codice di Smart Contract distribuito precedentemente. Sebbene questa situazione abbia creato un ecosistema vibrante e creativo di Smart Contract affidabili e interconnessi, è anche l'ecosistema perfetto per attrarre malintenzionati che cercano di trarre profitto sfruttando le vulnerabilità degli Smart Contract e il comportamento imprevisto di Ethereum. Il codice degli Smart Contract _di solito_ non può essere modificato per correggere falle di sicurezza, le risorse rubate dagli Smart Contract sono irrecuperabili e anche estremamente difficili da tracciare. L'importo totale del valore rubato o perso a causa di problemi degli Smart Contract si aggira facilmente attorno al miliardo di dollari. Alcuni dei maggiori errori dovuti a errori di codifica degli Smart Contract includono:
 
-- [Problema 1 relativo a multi-sig Parity: persi 30 milioni di dollari](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Problema 1 relativo a multi-sig Parity: persi 30 milioni di dollari](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problema 2 relativo a multi-sig Parity: bloccati 300 milioni di dollari](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [The DAO hack, 3,6 milioni di ETH! Oltre un miliardo di dollari in base al prezzo attuale dell'ETH](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -216,7 +216,7 @@ I tipi di attacco illustrati sopra coprono i problemi del codice di Smart Contra
 
 Letture consigliate:
 
-- [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
+- [Consensys Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Elenco curato di CWE che si applicano a Ethereum e Smart Contract
 
 ## Strumenti per la sicurezza {#security-tools}

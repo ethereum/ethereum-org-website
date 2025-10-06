@@ -1,5 +1,6 @@
 ---
-title: 去中心化自治组织 (DAO)
+title: 什么是去中心化自治组织 (DAO)？
+metaTitle: 什么是去中心化自治组织 (DAO)？ | 去中心化自治组织
 description: 以太坊上的去中心化自治组织简介
 lang: zh
 template: use-cases
@@ -91,7 +92,7 @@ summaryPoint3: 一个为特定事业投入资金的安全场所。
 
 ### 知名案例 {#law-example}
 
-[CityDAO](https://citydao.io) — 依照怀俄明州的去中心化自治组织相关法律，CityDAO 购买了黄石国家公园附近的 40 英亩土地。
+[CityDAO](https://citizen.citydao.io/) — 依照怀俄明州的去中心化自治组织相关法律，CityDAO 购买了黄石国家公园附近的 40 英亩土地。
 
 ## 去中心化自治组织的成员资格 {#dao-membership}
 

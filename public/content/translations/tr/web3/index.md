@@ -6,6 +6,10 @@ lang: tr
 
 # Web3'e Giriş {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Merkezileştirme, milyarlarca insanın World Wide Web'e katılmasına yardımcı oldu ve üzerinde yaşadığı istikrarlı, sağlam altyapıyı yarattı. Aynı zamanda bir avuç merkezi kuruluş World Wibe Web'in büyük bölümünde neye izin verilip verilmemesi gerektiğine tek taraflı olarak karar verebilmelerini sağlayan bir güce sahip oldu.
 
 Web3 bu ikileme bir cevaptır. Büyük teknoloji şirketleri tarafından tekelleştirilen bir Web yerine, Web3 merkeziyetsizliği benimsiyor ve kullanıcıları tarafından inşa ediliyor, işletiliyor ve sahipleniliyor. Web3, gücü şirketlerden ziyade bireylerin eline verir. Web3 hakkında konuşmadan önce buraya nasıl geldiğimizi keşfedelim.
@@ -139,7 +143,7 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 - [Bir cüzdan edinin](/wallets/)
 - [Bir topluluk bulun](/community/)
-- [Web3 uygulamalarını keşfedin](/dapps/)
+- [Web3 uygulamalarını keşfedin](/apps/)
 - [Bir DAO'ya katılın](/dao/)
 - [Web3 üzerinde inşa edin](/developers/)
 
@@ -147,11 +151,11 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 
-- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Web 3'ü Anlamak](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae)–_Josh Stark_
 - [Web3 Neden Önemli?](https://future.a16z.com/why-web3-matters/)—_Chris Dixon_
 - [Merkeziyetsizlik Neden Önemli?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 Manzarası](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

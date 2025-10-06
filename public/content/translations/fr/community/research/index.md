@@ -111,7 +111,7 @@ Il existe aujourd'hui plusieurs protocoles de seconde couche qui permettent de m
 #### Recherche récente {#recent-research-2}
 
 - [Ordre équitable pour les séquenceurs d'Arbitrum](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch Seconde couche](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Couche 2](https://ethresear.ch/c/layer-2/32)
 - [Feuille de route axée sur le rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ Les portefeuilles Ethereum peuvent être des extensions de navigateur, des appli
 
 - [Introduction aux portefeuilles](/wallets/)
 - [Introduction à la sécurité des portefeuilles](/security/)
-- [ethresear.ch Sécurité](https://ethresear.ch/tag/security)
+- [Ethresear.ch Sécurité](https://ethresear.ch/tag/security)
 - [EIP-2938 Abstraction de compte](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Abstraction de compte](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -224,7 +224,7 @@ La recherche économique sur Ethereum suit globalement deux approches : valider 
 
 #### Lectures de référence {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Atelier ETHconomics à Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Recherche récente {#recent-research-9}
@@ -307,7 +307,7 @@ Il est nécessaire de disposer d'un plus grand nombre d'outils d'analyse de donn
 
 #### Recherche récente {#recent-research-14}
 
-- [Analyse des données par le Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Analyse des données par le Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Applications et outils {#apps-and-tooling}
 
@@ -358,7 +358,7 @@ Les outils destinés aux développeurs Ethereum s'améliorent rapidement. Il res
 
 ### Oracles {#oracles}
 
-Les oracles importent des données hors chaîne sur la blockchain de manière décentralisée et sans autorisation. L'obtention de ces données sur la chaîne permet aux DApps d'être réactives aux phénomènes du monde réel, tels que les fluctuations de prix des actifs réels, les événements dans les applications hors chaîne, ou même les changements météorologiques.
+Les oracles importent des données hors chaîne sur la blockchain de manière décentralisée et sans autorisation. L'obtention de ces données sur la chaîne permet aux Dapps d'être réactives aux phénomènes du monde réel, tels que les fluctuations de prix des actifs réels, les événements dans les applications hors chaîne, ou même les changements météorologiques.
 
 #### Lectures de référence {#background-reading-18}
 
@@ -377,11 +377,11 @@ Les piratages sur Ethereum exploitent généralement des vulnérabilités dans d
 
 - [Rapport sur l'attaque de Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Liste des post-mortems des piratages de contrats Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Recherche récente {#recent-research-19}
 
-- [ethresear.ch Applications](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Applications](https://ethresear.ch/c/applications/18)
 
 ### Pile technologique {#technology-stack}
 

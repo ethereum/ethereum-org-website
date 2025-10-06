@@ -48,6 +48,7 @@
     "author": "Cyfrin Updraft",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
+      "updraft",
       "solidity",
       "smart contracts",
       "video",
@@ -62,33 +63,38 @@
     "publishDate": "12/13/2023"
   },
   {
-    "url": "https://youtu.be/umepbfKp5rI",
-    "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
-    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
-    "author": "Patrick Collins",
+    "url": "https://updraft.cyfrin.io/courses/foundry",
+    "title": "Foundry Fundamentals",
+    "description": "This course will level up your Solidity development skills with Foundry. The Foundry Fundamentals course teaches advanced web3 development concepts and tools. Expand your knowledge of Solidity, ERC-20s, DeFi, and Ethereum. Master Foundry Forge and Anvil while learning about Chainlink blockchain oracles, smart contract testing, and local network deployment.",
+    "author": "Cyfrin Updraft",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
+      "updraft",
+      "video",
+      "foundry",
       "solidity",
       "smart contracts",
-      "video",
-      "oracles",
-      "NFT",
-      "ERC-20",
-      "foundry",
-      "mocking",
-      "testing",
-      "defi",
+      "fuzzing",
       "openzeppelin",
-      "slither",
-      "storage",
-      "alchemy",
+      "erc-20",
       "block explorer",
-      "fuzzing"
+      "defi",
+      "testing",
+      "oracles",
+      "storage",
+      "deploying",
+      "evm",
+      "javascript",
+      "layer 2",
+      "mocking",
+      "nodes",
+      "transactions",
+      "alchemy"
     ],
-    "skillLevel": "beginner",
-    "timeToRead": "504",
+    "skillLevel": "intermediate",
+    "timeToRead": "600",
     "lang": "en",
-    "publishDate": "06/07/2023"
+    "publishDate": "02/28/2024"
   },
   {
     "url": "https://patrickalphac.medium.com/fuzz-invariant-tests-the-new-bare-minimum-for-smart-contract-security-87ebe150e88c",
@@ -135,7 +141,7 @@
     "tags": [
       "solidity",
       "remix",
-      "ethersjs",
+      "ethers.js",
       "smart contracts",
       "openzeppelin",
       "alchemy",
@@ -151,39 +157,34 @@
     "publishDate": "05/01/2022"
   },
   {
-    "url": "https://www.youtube.com/watch?v=gyMwXuJrbJQ",
-    "title": "Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript ",
-    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, full-stack Web3 dapps, DeFi, JavaScript, TypeScript, Chainlink, Ethereum, upgradable smart contracts, DAOs, the graph, Moralis, Aave, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
-    "author": "Patrick Collins",
+    "url": "https://updraft.cyfrin.io/courses/solidity",
+    "title": "Solidity Smart Contract Development",
+    "description": "This course will give you a full introduction to Solidity Programming, your gateway to web3 development in Ethereum compatible ecosystems. You'll learn all the core concepts to start building Solidity smart contracts. Including: ERC-20, oracles, inheritance, memeory, storage, mapping, functions, Chainlink, ZKsync, and more! This Solidity programming course has already helped thousands of developers kickstart their blockchain careers.",
+    "author": "Cyfrin Updraft",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
-      "solidity",
-      "hardhat",
-      "ethersjs",
-      "smart contracts",
-      "react",
-      "nextjs",
+      "updraft",
       "video",
+      "evm",
+      "smart contracts",
+      "solidity",
+      "remix",
       "oracles",
-      "NFT",
-      "ERC-20",
-      "javascript",
-      "mocking",
-      "testing",
-      "defi",
-      "openzeppelin",
-      "slither",
       "storage",
-      "moralis",
-      "alchemy",
-      "the graph",
-      "pinata",
-      "block explorer"
+      "deploying",
+      "testing",
+      "offchain",
+      "erc-20",
+      "testing",
+      "ethers.js",
+      "hardhat",
+      "remix",
+      "transactions"
     ],
     "skillLevel": "beginner",
-    "timeToRead": "1920",
+    "timeToRead": "300",
     "lang": "en",
-    "publishDate": "05/26/2022"
+    "publishDate": "02/28/2024"
   },
   {
     "url": "https://www.youtube.com/watch?v=M576WGiDBdQ",
@@ -236,7 +237,7 @@
       "hardhat",
       "nextjs",
       "moralis",
-      "ethersjs",
+      "ethers.js",
       "video"
     ],
     "skillLevel": "beginner",
@@ -247,7 +248,7 @@
   {
     "url": "https://www.youtube.com/watch?v=AhJtmUqhAqg",
     "title": "How to build an on-chain DAO",
-    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
+    "description": "Using Compound and Openzeppelin as a basis, we build a 100% onchain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "typescript", "hardhat", "defi", "dao", "video"],
@@ -259,7 +260,7 @@
   {
     "url": "https://betterprogramming.pub/how-to-code-an-on-chain-dao-e525e13a57be",
     "title": "How to build an on-chain DAO",
-    "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
+    "description": "Using Compound and Openzeppelin as a basis, we build a 100% onchain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "typescript", "hardhat", "defi", "dao"],
@@ -280,8 +281,7 @@
       "hardhat",
       "nextjs",
       "moralis",
-      "web3modal",
-      "ethersjs"
+      "ethers.js"
     ],
     "skillLevel": "beginner",
     "timeToRead": "14",
@@ -335,7 +335,7 @@
   {
     "url": "https://www.youtube.com/watch?v=9oERTH9Bkw0",
     "title": "How to make NFT Art with On-Chain Metadata",
-    "description": "Explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% on-chain.",
+    "description": "Explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% onchain.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
@@ -511,8 +511,7 @@
       "smart contracts",
       "solidity",
       "yul",
-      "storage",
-      "memory"
+      "storage"
     ],
     "skillLevel": "beginner",
     "lang": "en",
@@ -639,18 +638,6 @@
     "publishDate": "04/24/2024"
   },
   {
-    "url": "https://speedrunethereum.com/challenge/state-channels",
-    "title": "State Channel Application",
-    "description": "Create an app to lock collateral onchain, transact offchain, then finalize onchain.",
-    "author": "Austin Griffith",
-    "authorGithub": "https://github.com/austintgriffith",
-    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "openzeppelin"],
-    "skillLevel": "intermediate",
-    "timeToRead": "60",
-    "lang": "en",
-    "publishDate": "04/24/2024"
-  },
-  {
     "url": "https://github.com/scaffold-eth/se-2-challenges/tree/challenge-6-multisig",
     "title": "Multisig wallet",
     "description": "Deploy a multi-signature wallet where enough signatures are required to execute a transaction",
@@ -661,5 +648,53 @@
     "timeToRead": "90",
     "lang": "en",
     "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-1-decoding-transactions",
+    "title": "Detect UI Spoofing Attacks: Decoding Ethereum Calldata with Python",
+    "description": "Learn to decode Ethereum calldata to detect malicious transactions before signing.",
+    "author": "Valentina Rivas",
+    "authorGithub": "https://github.com/333cipher",
+    "tags": ["security", "smart contracts", "python", "transactions", "ERC-20"],
+    "skillLevel": "intermediate",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "05/07/2025"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/secure-dapps-against-ui-spoofing-part-2-simulating-transactions",
+    "title": "Prevent UI Spoofing: Simulating Ethereum Transactions with Foundry & Python",
+    "description": "Simulate transactions on a local fork to verify on-chain behavior and catch UI spoofing.",
+    "author": "Valentina Rivas",
+    "authorGithub": "https://github.com/333cipher",
+    "tags": ["security", "smart contracts", "foundry", "testing", "python", "ERC-20"],
+    "skillLevel": "advanced",
+    "timeToRead": "50",
+    "lang": "en",
+    "publishDate": "05/09/2025"
+  },
+  {
+    "url": "https://docs.dappbooster.dev/recipes/my-first-dapp",
+    "title": "Building your first dApp with dAppBooster",
+    "description": "Getting started with dAppBooster in just a few lines of code.",
+    "author": "BootNode",
+    "authorGithub": "https://github.com/bootnodedev/",
+    "tags": ["dapp", "vite", "typescript", "web3", "react", "frontend", "javascript", "dappbooster", "beginner"],
+    "skillLevel": "beginner",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "06/27/2025"
+  },
+  {
+    "url": "https://docs.dappbooster.dev/recipes/subgraphs",
+    "title": "Using subgraphs with dAppBooster",
+    "description": "This guide will walk you through the use of the subgraphs plugin in dAppBooster.",
+    "author": "BootNode",
+    "authorGithub": "https://github.com/bootnodedev/",
+    "tags": ["subgraph", "dapp", "vite", "typescript", "web3", "react", "wagmi", "frontend", "javascript", "dappbooster"],
+    "skillLevel": "intermediate",
+    "timeToRead": "30",
+    "lang": "en",
+    "publishDate": "05/26/2025"
   }
 ]

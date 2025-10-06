@@ -440,6 +440,8 @@ lang: en
 
 <GlossaryDefinition term="token" />
 
+<GlossaryDefinition term="token-factory" />
+
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
@@ -473,6 +475,8 @@ lang: en
 <GlossaryDefinition term="web3" />
 
 <GlossaryDefinition term="wei" />
+
+<GlossaryDefinition term="wrapped-token" />
 
 <Divider />
 

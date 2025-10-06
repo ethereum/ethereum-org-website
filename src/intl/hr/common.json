@@ -76,7 +76,6 @@
   "enterprise": "Poduzeće",
   "enterprise-mainnet": "Poduzeće – Glavna mreža Ethereuma",
   "enterprise-menu": "Izbornik poduzeća",
-  "enterprise-private": "Poduzeće – Privatni Ethereum",
   "esp": "Program potpore ekosustavu",
   "eth-current-price": "Trenutačna cijena ETH (USD)",
   "ethereum": "Ethereum",
@@ -228,7 +227,7 @@
   "nav-contribute-description": "Ako želite pomoći, ovo će vam pokazati put",
   "nav-contribute-label": "Doprinesite web-mjestu ethereum.org",
   "nav-dao-description": "Zajednice u vlasništvu svojih članova bez centraliziranog nadzornog tijela",
-  "nav-dapps-description": "Istražite bogati ekosustav aplikacija uz Ethereum",
+  "nav-apps-description": "Istražite bogati ekosustav aplikacija uz Ethereum",
   "nav-defi-description": "Globalna, otvorena alternativa tradicionalnom financijskom tržištu",
   "nav-desci-description": "Globalna, otvorena alternativa trenutačnom znanstvenom sustavu",
   "nav-desoc-description": "Platforma temeljena na blokovima lanaca za društvene interakcije i izradu sadržaja",
@@ -277,7 +276,7 @@
   "nav-layer-2-description": "Jeftinije i brže transakcije Ethereuma",
   "nav-learn-by-coding-description": "Alati pomoći u eksperimentiranju s Ethereumom",
   "nav-local-env-description": "Odaberite i postavite svoj stog za razvoj Ethereuma",
-  "nav-mainnet-description": "Poslovne aplikacije za lance blokova mogu se graditi na javnoj glavnoj mreži Ethereuma",
+  "nav-enterprise-description": "Poslovne aplikacije za lance blokova mogu se graditi na javnoj glavnoj mreži Ethereuma",
   "nav-nft-description": "Način prikaza bilo čega jedinstvenog u obliku imovine temeljene na Ethereumu",
   "nav-open-research-description": "Jedna od primarnih prednosti Ethereuma aktivna je istraživačka zajednica",
   "nav-open-research-label": "Otvori istraživanje",
@@ -323,6 +322,8 @@
   "nav-staking-solo-description": "Pokrenite kućni hardver i osobno doprinesite sigurnosti i decentralizaciji Ethereumove mreže",
   "nav-staking-solo-label": "Samostalan staking",
   "nav-start-building-description": "Korisne informacije za početnike",
+  "nav-start-with-crypto-title": "Počnite ovdje",
+  "nav-start-with-crypto-description": "Vaši prvi koraci uz Ethereum",
   "nav-translation-program-description": "Suradnja u prevođenju web-mjesta ethereum.org na sve jezike",
   "nav-tutorials-description": "Odabrani popis praktičnih vodiča zajednice",
   "nav-use-cases-description": "Otkrijte različite ideje kako se koristiti Ethereumom",
@@ -430,5 +431,8 @@
   "withdrawals": "Povlačenje uloga",
   "wrapped-ether": "Zamotan Ether",
   "yes": "Da",
-  "zero-knowledge-proofs": "Dokazi nultog znanja"
+  "zero-knowledge-proofs": "Dokazi nultog znanja",
+  "ethereum-vs-bitcoin": "Ethereum protiv Bitcoina",
+  "nav-ethereum-vs-bitcoin-description": "Razumjeti razlike između Ethereuma i Bitcoina"
+
 }

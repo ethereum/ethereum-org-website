@@ -55,7 +55,7 @@ I vantaggi di questa progettazione della rete sono:
 - Ridurre la dipendenza da fornitori centralizzati
 - Ridurre l'utilizzo della larghezza di banda di Internet
 - Sincronizzazione ridotta o nulla
-- Accessibile a dispositivi con risorse limitate (<1 GB di RAM, <100 MB di spazio su disco, 1 CPU)
+- Accessibile a dispositivi con risorse limitate (\<1 GB di RAM, \<100 MB di spazio su disco, 1 CPU)
 
 Il diagramma seguente mostra le funzioni dei client esistenti che possono essere fornite dalla Rete Portal, consentendo agli utenti di accedere a tali funzioni su dispositivi con risorse molto limitate.
 
