@@ -27,7 +27,7 @@ src/
 
 If you are implementing:
 
-- A base component (a component that already exists in the [Chakra components list](https://chakra-ui.com/docs/components/), for example, the button or inputs)
+- A base component (a component that already exists in the [Chakra components list](https://v2.chakra-ui.com/docs/components), for example, the button or inputs)
   - Try to avoid creating a new component file `/ComponentA/index.tsx` if there is no additional or custom logic we need to add to them
   - Create a theme file to override the default Chakra styles with the DS specs. See examples under the [Chakra theme folder](https://github.com/ethereum/ethereum-org-website/tree/dev/src/%40chakra-ui/components)
   - Create a `.stories.tsx` file under `src/components/BaseStories`
