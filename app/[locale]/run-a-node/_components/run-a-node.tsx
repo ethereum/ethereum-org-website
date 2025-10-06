@@ -374,7 +374,7 @@ const RunANodePage = ({
                 svg={({ className }) => (
                   <Svg
                     className={cn("size-16", className)}
-                    aria-hidden="true"
+                    aria-hidden
                     focusable="false"
                   />
                 )}
@@ -411,13 +411,13 @@ const RunANodePage = ({
                 </InlineLink>
               </ColumnFill>
               <ColumnNarrow>
-                <Terminal aria-hidden="true" focusable="false" />
+                <Terminal aria-hidden focusable="false" />
               </ColumnNarrow>
             </SoftwareHighlight>
 
             <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
               <ColumnNarrow>
-                <Dappnode aria-hidden="true" focusable="false" />
+                <Dappnode aria-hidden focusable="false" />
               </ColumnNarrow>
               <ColumnFill>
                 <Text>
@@ -436,7 +436,7 @@ const RunANodePage = ({
                 </Text>
               </ColumnFill>
               <ColumnNarrow>
-                <Dapptap aria-hidden="true" focusable="false" />
+                <Dapptap aria-hidden focusable="false" />
               </ColumnNarrow>
             </SoftwareHighlight>
           </GappedContent>
@@ -510,7 +510,7 @@ const RunANodePage = ({
             <SvgTitle>
               <HardwareGlyphIcon
                 className="size-12"
-                aria-hidden="true"
+                aria-hidden
                 focusable="false"
               />
               <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
@@ -582,7 +582,7 @@ const RunANodePage = ({
             <SvgTitle>
               <DownloadGlyphIcon
                 className="size-12"
-                aria-hidden="true"
+                aria-hidden
                 focusable="false"
               />
               <H3>{t("page-run-a-node-build-your-own-software")}</H3>
