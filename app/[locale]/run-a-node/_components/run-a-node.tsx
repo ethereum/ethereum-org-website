@@ -33,7 +33,6 @@ import InlineLink from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { InfoGrid } from "@/layouts"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -367,7 +366,7 @@ const RunANodePage = ({
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <InfoGrid>
+          <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-8">
             {whyRunANodeCards.map(({ Svg, title, preview, body, alt }) => (
               <ExpandableCard
                 contentPreview={preview}
@@ -384,7 +383,7 @@ const RunANodePage = ({
                 ))}
               </ExpandableCard>
             ))}
-          </InfoGrid>
+          </div>
         </Content>
 
         <Divider />
