@@ -5,7 +5,7 @@ import AssetDownload from "."
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 
 const meta = {
-  title: "Components/AssetDownload",
+  title: "Molecules / Display Content / AssetDownload",
   component: AssetDownload,
   parameters: {
     layout: "centered",
