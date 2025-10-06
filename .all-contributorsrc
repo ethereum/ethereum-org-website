@@ -13554,6 +13554,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "NikolaiKryshnev",
+      "name": "NikolaiKryshnev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63440682?v=4",
+      "profile": "https://github.com/NikolaiKryshnev",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
