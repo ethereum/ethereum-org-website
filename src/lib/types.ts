@@ -519,10 +519,14 @@ export type EthStakedResponse = {
   }
 }
 
-export type EpochResponse = Data<{
-  validatorscount: number
-  eligibleether: number
-}>
+export type EpochResponse = Data<
+  Record<"eligibleether" | "validatorscount", number>
+>
+
+export type BeaconchainEpochData = Record<
+  "totalEthStaked" | "validatorscount",
+  MetricReturnData
+>
 
 export type StakingStatsData = {
   totalEthStaked: number
