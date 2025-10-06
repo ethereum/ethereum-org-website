@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import AssetDownload from "."
 
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
+import hero from "@/public/images/home/hero.png"
 
 const meta = {
   title: "Molecules / Display Content / AssetDownload",
@@ -21,10 +22,9 @@ export const WithArtist: Story = {
   args: {
     title: "Ethereum hero",
     alt: "Ethereum hero",
-    image: ethDiamondBlack,
+    image: hero,
     artistName: "Liam Cobb",
     artistUrl: "https://liamcobb.com/",
-    svgUrl: "/images/assets/svgs/eth-diamond-black.svg",
   },
 }
 
