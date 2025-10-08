@@ -5,14 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import {
-  CommitHistory,
-  EpochResponse,
-  EthStoreResponse,
-  Lang,
-  PageParams,
-  StakingStatsData,
-} from "@/lib/types"
+import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
