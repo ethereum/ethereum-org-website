@@ -2107,6 +2107,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/VolodymyrBg"><img src="https://avatars.githubusercontent.com/u/189780094?v=4?s=100" width="100px;" alt="VolodymyrBg"/><br /><sub><b>VolodymyrBg</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AVolodymyrBg" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ihagopian.com"><img src="https://avatars.githubusercontent.com/u/6136245?v=4?s=100" width="100px;" alt="Ignacio Hagopian"/><br /><sub><b>Ignacio Hagopian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jsign" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MamunC0der"><img src="https://avatars.githubusercontent.com/u/161350311?v=4?s=100" width="100px;" alt="Coder"/><br /><sub><b>Coder</b></sub></a><br /><a href="#maintenance-MamunC0der" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MOSHKA-GOT"><img src="https://avatars.githubusercontent.com/u/225852520?v=4?s=100" width="100px;" alt="MOSHKA-GOT"/><br /><sub><b>MOSHKA-GOT</b></sub></a><br /><a href="#maintenance-MOSHKA-GOT" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
