@@ -200,17 +200,13 @@ The Merge in 2022 [used a panda](https://x.com/hwwonx/status/1431970802040127498
 
 ### What improvements are included for L2 Scaling? {#what-improvements-are-included-for-l2-scaling}
 
-[PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) is is the main feature of the fork. It implements data availability sampling (DAS). Instead of every full node needing to download and store all blob data (which becomes unsustainable as L2s grow), PeerDAS allows each node to be responsible for only a subset of the blob data while maintaining its availability and verifiability. This enables blob throughput to scale significantly, leading to even smaller fees for layer 2s.
+[PeerDAS](/roadmap/fusaka/peerdas) is the main feature of the fork. It implements data availability sampling (DAS) that unlocks more scalability for rollups, theoretically scaling the blob space up to 8 times the current size. Blob fee market will be also improved to efficiently react to congestion and guarantee L2s pay a meaningful fee for the compute and space that blobs impose on nodes. 
 
-Alongside PeerDAS, [a small change](https://eips.ethereum.org/EIPS/eip-7918) that improves the blob fee market is being introduced. It ensures that the blob fee market reacts efficiently to congestion and doesn't spiral down to 1 wei, guaranteeing L2s pay a meaningful fee for the compute and space that blobs impose on nodes.
+### How are BPO forks different? {#how-are-bpo-forks-different}
 
-### What are Blob Parameter Only forks? {#what-are-blob-parameter-only-forks}
+Blob Only Parameter forks provide a mechanism to continuously increase the blob count (both target and max) after PeerDAS is activated, without having to wait for a full coordinated upgrade. Each increase is hardcoded to be pre-configured in client releases supporting Fusaka. 
 
-[BPOs](https://eips.ethereum.org/EIPS/eip-7892) provide a mechanism to continuously increase the blob count (both target and max) after PeerDAS is activated, without having to wait for a full coordinated upgrade. Each increase is hardcoded to be pre-configured in client releases supporting Fusaka. 
-
-This means users and validators don’t need to update their clients for each BPO and only make sure to follow major hardforks like Fusaka. This is same practice as before, no special actions are needed to  It is still recommended to monitor your clients around upgrades and BPOs and keep them update even between major releases as fixes or optimizations might follow the hardfork.   
-
-PeerDAS is a significant change to peer-to-peer (P2P) communication and blob mechanism that needs to be introduced gradually to ensure liveness and performance of the network. Fusaka ships with safe initial blob count but with BPOs, developers created a commitment to each new scale of blob count without any extra overhead on coordination and node users.  
+As user or a validator, you don’t need to update your clients for each BPO and only make sure to follow major hardforks like Fusaka. This is same practice as before, no special actions are needed to  It is still recommended to monitor your clients around upgrades and BPOs and keep them update even between major releases as fixes or optimizations might follow the hardfork.   
 
 ### What is the BPO schedule? {#what-is-the-bpo-schedule}
 
@@ -236,9 +232,30 @@ To validate your setup before Fusaka gets activated on Mainnet, you can run a va
 
 This change doesn’t change how your validator client functions, however, it will provide more insight into the future of your validator duties. Make sure to update your monitoring tooling to keep up with new features. 
 
-### How does Fusaka affect bandwidth requirements for nodes? {#how-does-fusaka-affect-bandwidth-requirements-for-nodes}
+### How does Fusaka affect bandwidth requirements for nodes and validators? {#how-does-fusaka-affect-bandwidth-requirements-for-nodes-and-validators}
 
-PeerDAS makes a significant change in how nodes transmit blob data. All data is divided into pieces called columns across 128 subnets with nodes subscribing to only some of them. Regular nodes will subscribe to only 16 subnets, providing custody for 1/8 of the full data. This means that with the same amount of blob data, the node bandwidth of downloading them would be smaller by a factor of eight (8). The actual bandwidth requirements will depend on the amount of blobs allowed in the network. At the moment of Fusaka activation the blob target stays the same as before, but with PeerDAS, node operators can see a decrease in their network usage. As BPOs configure higher numbers of blobs in the network, the necessary bandwidth will increase up to values before Fusaka activation. 
+PeerDAS makes a significant change in how nodes transmit blob data. All data is divided into pieces called columns across 128 subnets with nodes subscribing to only some of them. The amount of subnet columns that nodes have to custody depends on their configuration and number of validators connected. The actual bandwidth requirements will depend on the amount of blobs allowed in the network and type of the node. At the moment of Fusaka activation the blob target stays the same as before, but with PeerDAS, node operators can see a decrease in their disk usage of blobs and network traffic. As BPOs configure higher numbers of blobs in the network, the necessary bandwidth will increase with each BPO.
+
+Nodes requirements are still within [recommended margins](https://eips.ethereum.org/EIPS/eip-7870) even after Fusaka BPOs.
+
+#### Full nodes
+
+Regular nodes without any validators will subscribe to only 4 subnets, providing custody for 1/8 of the original data. This means that with the same amount of blob data, the node bandwidth of downloading them would be smaller by a factor of eight (8). The disk usage and download bandwidth of blobs for a normal full node might decrease around 80%, to only few Mb. 
+
+#### Solo stakers
+
+If the node is used for a validator client, it has to custody more columns and therefore process more data. With a validator added, the node subscribes to at least 8 column subnets and therefore processes twice as much data as regular node but still less than before Fusaka. If the validator balance is above 287 ETH, more and more subnets will be subscribed to. 
+
+For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwith will have to be around 5 times higher, at 100Mpbs. 
+
+#### Large validators 
+
+The number of subscribed subnets grows with more balance and validators added to the node. For example, around 800 ETH balance, the node custodies 25 columns and will need around 30% more download bandwidth than before. The necessary upload rises similar to regular nodes and at least 100Mbps is necessary. 
+
+At 4096 ETH, 2 max balance validators, the node becomes 'supernode' which custodies all columns, therefore downloads and stores everything. These nodes actively heal the network by contributing missing data back but also requires much more bandwidth and storage. With the final blob target being 6 times higher than before, super nodes will have to store around 600GB extra blob data and have faster sustained download bandwidth at around 20Mbps. 
+
+[Read more details on expected requirements.](https://ethpandaops.io/posts/fusaka-bandwidth-estimation/#theoretical-requirements)
+
 
 ### What EVM changes are implemented? {#what-evm-changes-are-implemented}
 
