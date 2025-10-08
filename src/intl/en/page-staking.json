@@ -168,7 +168,7 @@
   "page-staking-stats-box-metric-1": "Total ETH staked",
   "page-staking-stats-box-metric-2": "Total validators",
   "page-staking-stats-box-metric-3": "Current APR",
-  "page-staking-stats-box-metric-1-tooltip": "Sum of ETH at stake on the Beacon Chain, not including balances over 32 ETH",
+  "page-staking-stats-box-metric-1-tooltip": "Sum of eligible ETH at stake on the Beacon Chain",
   "page-staking-stats-box-metric-2-tooltip": "Number of validator accounts currently activated on the Beacon Chain",
   "page-staking-stats-box-metric-3-tooltip": "Average annualized financial return per validator over the past 24-hour period",
   "page-staking-section-comparison-subtitle": "There is no one-size-fits-all solution for staking, and each is unique. Here we'll compare some of the risks, rewards and requirements of the different ways you can stake.",
