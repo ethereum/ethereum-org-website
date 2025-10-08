@@ -14,8 +14,8 @@ import cyfrinFoundryFundamentalsBanner from "@/public/images/developers/cyfrin-f
 import cyfrinSecurityBanner from "@/public/images/developers/cyfrin-security-banner.webp"
 import cyfrinSolidityBanner from "@/public/images/developers/cyfrin-solidity-banner.webp"
 import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
-import speedrunStakingApp from "@/public/images/developers/speedrun-staking-app.png"
-import speedrunTokenVendor from "@/public/images/developers/speedrun-token-vendor.png"
+import speedrunDex from "@/public/images/developers/speedrun-dex.png"
+import speedrunStablecoins from "@/public/images/developers/speedrun-stablecoins.png"
 
 export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
   const locale = await getLocale()
@@ -35,22 +35,22 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
       tag: t("page-developers-speedrun-challenge-0"),
     },
     {
-      imgSrc: speedrunStakingApp,
-      imgAlt: t("page-developers-speedrun-staking-alt"),
-      title: t("page-developers-speedrun-staking-title"),
-      description: t("page-developers-speedrun-staking-desc"),
-      href: "https://speedrunethereum.com/challenge/decentralized-staking",
+      imgSrc: speedrunDex,
+      imgAlt: t("page-developers-speedrun-dex-alt"),
+      title: t("page-developers-speedrun-dex-title"),
+      description: t("page-developers-speedrun-dex-desc"),
+      href: "https://speedrunethereum.com/challenge/dex",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-1"),
+      tag: t("page-developers-speedrun-challenge-4"),
     },
     {
-      imgSrc: speedrunTokenVendor,
-      imgAlt: t("page-developers-speedrun-token-alt"),
-      title: t("page-developers-speedrun-token-title"),
-      description: t("page-developers-speedrun-token-desc"),
-      href: "https://speedrunethereum.com/challenge/token-vendor",
+      imgSrc: speedrunStablecoins,
+      imgAlt: t("page-developers-speedrun-stablecoins-alt"),
+      title: t("page-developers-speedrun-stablecoins-title"),
+      description: t("page-developers-speedrun-stablecoins-desc"),
+      href: "https://speedrunethereum.com/challenge/stablecoins",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-2"),
+      tag: t("page-developers-speedrun-challenge-6"),
     },
   ]
 }

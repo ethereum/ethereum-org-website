@@ -626,7 +626,7 @@
     "publishDate": "04/24/2024"
   },
   {
-    "url": "https://speedrunethereum.com/challenge/minimum-viable-exchange",
+    "url": "https://speedrunethereum.com/challenge/dex",
     "title": "Build a DEX",
     "description": "Deploy a decentralized exchange to swap an ERC20 and ETH",
     "author": "Austin Griffith",
