@@ -201,13 +201,11 @@ If a public Ethereum network is like the public internet, a consortium network i
 - [Chainlist](https://chainlist.org/) _list of EVM networks to connect wallets and providers to the appropriate Chain ID and Network ID_
 - [EVM-based Chains](https://github.com/ethereum-lists/chains) _GitHub repo of chain metadata that powers Chainlist_
 
-## Further reading {#further-reading}
-
-### 🚉 Why Are Ethereum Testnets Named After Metro Stations?
+## <Emoji text="🚉" /> Why are Ethereum testnets named after metro stations? {#why-naming}
 
 Many Ethereum testnets are named after real-world metro or train stations. This naming tradition started early and reflects the global cities where contributors have lived or worked. It's symbolic, memorable, and practical just like testnets are isolated from Ethereum mainnet, metro lines run separately from surface traffic.
 
-#### 🚧 Commonly Used and Legacy Testnets
+## <Emoji text="🚧" /> Commonly used and legacy testnets
 
 - **Sepolia** — A metro-linked neighborhood in Athens, Greece. Currently used for smart contract and dApp testing.
 - **Hoodi** — Named after Hoodi metro station in Bengaluru, India. Used for validator and protocol upgrade testing.
@@ -217,7 +215,7 @@ Many Ethereum testnets are named after real-world metro or train stations. This 
 - **Kovan** — Named after a Singapore MRT station. Deprecated.
 - **Morden** — Named after a London Underground station. Ethereum’s first public testnet.
 
-#### 🧪 Other Specialized Testnets
+## <Emoji text="🧪" /> Other specialized testnets
 
 Some testnets were created for short-term or upgrade-specific testing and are not necessarily metro-themed:
 
@@ -226,6 +224,7 @@ Some testnets were created for short-term or upgrade-specific testing and are no
 
 Using metro station names helps developers quickly identify and remember testnets without needing to rely on numeric chain IDs. It also reflects Ethereum’s culture: practical, global, and human-centered.
 
+## Further reading {#further-reading}
 
 - [Proposal: Predictable Ethereum Testnet Lifecycle](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [The Evolution of Ethereum Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
