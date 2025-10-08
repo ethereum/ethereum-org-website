@@ -6,7 +6,6 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function WalletsPageJsonLD({
   locale,
-  types,
   lastEditLocaleTimestamp,
   contributors,
 }) {
@@ -110,31 +109,5 @@ export default async function WalletsPageJsonLD({
     dateModified: lastEditLocaleTimestamp,
   }
 
-  // JSON-LD for the wallet types list
-  const walletTypesJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Ethereum Wallet Types",
-    description: "Different types of Ethereum wallets available",
-    itemListElement: types.map((type, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        additionalType: "https://schema.org/SoftwareApplication",
-        category: "Cryptocurrency Wallet",
-        name: `Ethereum ${type.emoji === ":cd:" ? "Hardware" : type.emoji === ":mobile_phone:" ? "Mobile" : type.emoji === ":desktop_computer:" ? "Desktop" : "Web"} Wallet`,
-        description:
-          typeof type.description === "string"
-            ? type.description
-            : `${type.emoji === ":cd:" ? "Hardware" : type.emoji === ":mobile_phone:" ? "Mobile" : type.emoji === ":desktop_computer:" ? "Desktop" : "Web"} wallet for Ethereum`,
-      },
-    })),
-  }
-
-  return (
-    <PageJsonLD
-      structuredData={[webPageJsonLd, articleJsonLd, walletTypesJsonLd]}
-    />
-  )
+  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
 }

@@ -179,10 +179,11 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
         </p>
         <ul>
           <li>{t("page-roadmap-glamsterdam-discussed-item-1")}</li>
+          <li>{t("page-roadmap-glamsterdam-discussed-item-2")}</li>
         </ul>
       </div>
     ),
-    href: "https://eips.ethereum.org/EIPS/eip-7773",
+    href: "https://forkcast.org/upgrade/glamsterdam/#scheduled-for-inclusion",
   },
 ]
 

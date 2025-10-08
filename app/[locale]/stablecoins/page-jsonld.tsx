@@ -4,11 +4,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function StablecoinsPageJsonLD({
-  locale,
-  features,
-  contributors,
-}) {
+export default async function StablecoinsPageJsonLD({ locale, contributors }) {
   const t = await getTranslations({
     namespace: "page-stablecoins",
   })
@@ -108,33 +104,5 @@ export default async function StablecoinsPageJsonLD({
     },
   }
 
-  // JSON-LD for stablecoin types as ItemList
-  const stablecoinTypesJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Types of Stablecoins",
-    description:
-      "Different categories of stablecoins based on their backing mechanisms",
-    numberOfItems: features.length,
-    itemListElement: features.map((feature, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        name: feature.title,
-        description:
-          typeof feature.description === "string"
-            ? feature.description
-            : feature.title,
-        category: "Digital Currency",
-        additionalType: "https://schema.org/FinancialProduct",
-      },
-    })),
-  }
-
-  return (
-    <PageJsonLD
-      structuredData={[webPageJsonLd, articleJsonLd, stablecoinTypesJsonLd]}
-    />
-  )
+  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
 }

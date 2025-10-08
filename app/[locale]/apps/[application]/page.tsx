@@ -129,6 +129,11 @@ const Page = async ({
     return t("page-apps-days-ago", { days: diffInDays })
   }
 
+  const getDisplayYear = (dateString: string) => {
+    if (!isValidDate(dateString)) return "—"
+    return new Date(app.dateOfLaunch).getFullYear()
+  }
+
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/[application]",
@@ -326,9 +331,7 @@ const Page = async ({
                 <p className="text-sm text-body-medium">
                   {t("page-apps-info-founded")}
                 </p>
-                <p className="text-sm">
-                  {new Date(app.dateOfLaunch).getFullYear()}
-                </p>
+                <p className="text-sm">{getDisplayYear(app.dateOfLaunch)}</p>
               </div>
               <div>
                 <p className="text-sm text-body-medium">

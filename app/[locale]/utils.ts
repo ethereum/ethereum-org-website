@@ -111,8 +111,8 @@ export const getActivity = async (
       state: valueLocked,
     },
     {
-      apiProvider: "Dune Analytics",
-      apiUrl: "https://dune.com/hildobby/eth2-staking",
+      apiProvider: "Beaconcha.in",
+      apiUrl: "https://beaconcha.in",
       label: t("page-index-network-stats-total-eth-staked"),
       state: totalEtherStaked,
     },
