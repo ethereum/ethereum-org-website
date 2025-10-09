@@ -13,9 +13,9 @@ import cyfrinFoundryAdvancedBanner from "@/public/images/developers/cyfrin-found
 import cyfrinFoundryFundamentalsBanner from "@/public/images/developers/cyfrin-foundry-fundamentals-banner.webp"
 import cyfrinSecurityBanner from "@/public/images/developers/cyfrin-security-banner.webp"
 import cyfrinSolidityBanner from "@/public/images/developers/cyfrin-solidity-banner.webp"
-import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
 import speedrunDex from "@/public/images/developers/speedrun-dex.png"
 import speedrunStablecoins from "@/public/images/developers/speedrun-stablecoins.png"
+import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
 
 export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
   const locale = await getLocale()
