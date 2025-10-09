@@ -359,7 +359,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 )}
               </p>
               <div>
-                <LinkWithArrow href="/upgrades/">
+                <LinkWithArrow href="/ethereum-forks/">
                   {t(
                     "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-12"
                   )}
