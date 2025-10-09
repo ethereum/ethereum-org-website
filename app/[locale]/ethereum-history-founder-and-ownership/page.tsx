@@ -188,7 +188,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         <Link href="https://soliditylang.org/">{chunks}</Link>
                       ),
                       ethereumYellowPaper: (chunks) => (
-                        <Link href="https://ethereum.org/en/yellowpaper/">
+                        <Link href="https://ethereum.github.io/yellowpaper/paper.pdf">
                           {chunks}
                         </Link>
                       ),
