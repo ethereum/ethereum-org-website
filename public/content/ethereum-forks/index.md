@@ -1,11 +1,11 @@
 ---
-title: Timeline of all Ethereum Forks (2014 to Present)
+title: Timeline of all Ethereum forks (2014 to present)
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
 sidebarDepth: 1
 ---
 
-# Timeline of all Ethereum Forks (2014 to Present) {#the-history-of-ethereum}
+# Timeline of all Ethereum forks (2014 to present) {#the-history-of-ethereum}
 
 A timeline of all the major milestones, forks, and updates to the Ethereum blockchain.
 
