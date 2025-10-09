@@ -184,6 +184,29 @@ If a public Ethereum network is like the public internet, a consortium network i
 - [Chainlist](https://chainlist.org/) _list of EVM networks to connect wallets and providers to the appropriate Chain ID and Network ID_
 - [EVM-based Chains](https://github.com/ethereum-lists/chains) _GitHub repo of chain metadata that powers Chainlist_
 
+## <Emoji text="🚉" /> Why are Ethereum testnets named after metro stations? {#why-naming}
+
+Many Ethereum testnets are named after real-world metro or train stations. This naming tradition started early and reflects the global cities where contributors have lived or worked. It's symbolic, memorable, and practical just like testnets are isolated from Ethereum mainnet, metro lines run separately from surface traffic.
+
+## <Emoji text="🚧" /> Commonly used and legacy testnets
+
+- **Sepolia** — A metro-linked neighborhood in Athens, Greece. Currently used for smart contract and dApp testing.
+- **Hoodi** — Named after Hoodi metro station in Bengaluru, India. Used for validator and protocol upgrade testing.
+- **Goerli** — Named after Görlitzer Bahnhof in Berlin, Germany. Deprecated in 2024.
+- **Rinkeby** — Named after a Stockholm suburb with a metro station. Deprecated.
+- **Ropsten** — Refers to an area and former ferry/metro terminal in Stockholm. Deprecated post-Merge.
+- **Kovan** — Named after a Singapore MRT station. Deprecated.
+- **Morden** — Named after a London Underground station. Ethereum’s first public testnet.
+
+## <Emoji text="🧪" /> Other specialized testnets
+
+Some testnets were created for short-term or upgrade-specific testing and are not necessarily metro-themed:
+
+- **Holesky** — Named after Holešovice station in Prague. Used for validator testing; deprecated in 2025.
+- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Ephemery**, and **Olympic** — Purpose-built for upgrade simulations like The Merge, Shanghai, or validator experiments. Some names are regional or thematic rather than metro-based.
+
+Using metro station names helps developers quickly identify and remember testnets without needing to rely on numeric chain IDs. It also reflects Ethereum’s culture: practical, global, and human-centered.
+
 ## Further reading {#further-reading}
 
 - [Proposal: Predictable Ethereum Testnet Lifecycle](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
