@@ -8,8 +8,9 @@ import {
 
 import {
   AppCategoryEnum,
-  CommitHistory,
-  Lang,
+  type CommitHistory,
+  type Lang,
+  type PageParams,
   type SectionNavDetails,
 } from "@/lib/types"
 
@@ -57,9 +58,9 @@ const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 const Page = async ({
   params,
 }: {
-  params: { locale: string; catetgoryName: string }
+  params: PageParams & { catetgoryName: string }
 }) => {
-  const { locale, catetgoryName } = await params
+  const { locale, catetgoryName } = params
   setRequestLocale(locale)
 
   const [appsData] = await loadData()
@@ -181,9 +182,9 @@ const Page = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; catetgoryName: string }>
+  params: { locale: string; catetgoryName: string }
 }) {
-  const { locale, catetgoryName } = await params
+  const { locale, catetgoryName } = params
   const t = await getTranslations({ locale, namespace: "page-apps" })
 
   // Normalize slug to lowercase

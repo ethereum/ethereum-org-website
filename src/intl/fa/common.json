@@ -443,5 +443,8 @@
   "withdrawals": "برداشت‌ها از سهام‌گذاری",
   "wrapped-ether": "رپد اتر",
   "yes": "بله",
-  "zero-knowledge-proofs": "اثبات‌های دانش-صفر"
+  "zero-knowledge-proofs": "اثبات‌های دانش-صفر",
+  "ethereum-vs-bitcoin": "اتریوم در مقابل بیت‌کوین",
+  "nav-ethereum-vs-bitcoin-description": "درک تفاوت‌های بین اتریum و بیت‌کوین"
+
 }

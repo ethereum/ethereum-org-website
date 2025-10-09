@@ -352,7 +352,7 @@
   "nav-stake-description": "Earn rewards for securing Ethereum",
   "nav-stake-label": "Stake",
   "nav-staking-home-description": "An overview of different options for staking",
-  "nav-staking-home-label": "Staking home",
+  "nav-staking-home-label": "Staking homepage",
   "nav-staking-pool-description": "Stake and earn rewards with any amount of ETH by joining with others",
   "nav-staking-pool-label": "Pooled staking",
   "nav-staking-saas-description": "Third-party node operators handle the operation of your validator client",
@@ -487,5 +487,8 @@
   "region-wake-island-usa": "Wake Island (USA)",
   "region-bonaire-netherlands": "Bonaire (Netherlands)",
   "region-saba-netherlands": "Saba (Netherlands)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Understand the differences between Ethereum and Bitcoin"
+
 }

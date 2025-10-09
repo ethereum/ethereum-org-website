@@ -431,5 +431,8 @@
   "withdrawals": "Pertaruhan keluaran",
   "wrapped-ether": "Ether Terlindung",
   "yes": "Ya",
-  "zero-knowledge-proofs": "Bukti sifar pengetahuan"
+  "zero-knowledge-proofs": "Bukti sifar pengetahuan",
+  "ethereum-vs-bitcoin": "Ethereum lwn. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Fahami perbezaan antara Ethereum dan Bitcoin"
+
 }

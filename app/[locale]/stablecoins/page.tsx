@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -93,8 +93,8 @@ const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
   REVALIDATE_TIME * 1000
 )
 
-async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
-  const { locale } = await params
+async function Page({ params }: { params: PageParams }) {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
@@ -432,11 +432,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   return (
     <>
       <I18nProvider locale={locale} messages={messages}>
-        <StablecoinsPageJsonLD
-          locale={locale}
-          features={features}
-          contributors={contributors}
-        />
+        <StablecoinsPageJsonLD locale={locale} contributors={contributors} />
         <MainArticle className="mx-auto my-0 w-full flex-col items-center">
           <PageHero isReverse content={heroContent} />
           <Divider />
@@ -775,9 +771,9 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
 

@@ -519,9 +519,14 @@ export type EthStakedResponse = {
   }
 }
 
-export type EpochResponse = Data<{
-  validatorscount: number
-}>
+export type EpochResponse = Data<
+  Record<"eligibleether" | "validatorscount", number>
+>
+
+export type BeaconchainEpochData = Record<
+  "totalEthStaked" | "validatorscount",
+  MetricReturnData
+>
 
 export type StakingStatsData = {
   totalEthStaked: number
@@ -1201,7 +1206,7 @@ export type ValuesPairing = {
 export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
 
 export type PageParams = {
-  locale: string
+  locale: Lang
 }
 
 export type SlugPageParams = PageParams & {
