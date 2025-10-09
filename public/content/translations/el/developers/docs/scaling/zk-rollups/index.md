@@ -245,7 +245,7 @@ lang: el
 
 - [Τι είναι τα Zero-Knowledge Rollup;](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Τι είναι τα zero-knowledge rollup;](https://alchemy.com/blog/zero-knowledge-rollups)
-- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [STARKs ή SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [Τι είναι το zkEVM;](https://www.alchemy.com/overviews/zkevm)
 - [Τύποι ZK-EVM: Ισοδύναμο Ethereum, EVM, τύπος 1, τύπος 4 και άλλες κρυπτογραφικές λέξεις](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)

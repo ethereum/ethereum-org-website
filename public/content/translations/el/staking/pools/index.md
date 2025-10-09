@@ -1,6 +1,6 @@
 ---
 title: Αποθήκευση κεφαλαίου σε δεξαμενή
-description: Μια επισκόπηση πώς να ξεκινήσετε με αποθήκευση ETH σε δεξαμενή
+description: Μάθετε για τις δεξαμενές αποθήκευσης κεφαλαίου
 lang: el
 template: staking
 emoji: ":money_with_wings:"
