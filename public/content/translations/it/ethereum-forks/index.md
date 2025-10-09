@@ -268,7 +268,7 @@ L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS
 
 Prima dell'Aggiornamento di Londra, Ethereum disponeva di blocchi di dimensioni fisse. Nei momenti di elevata domanda di rete, questi blocchi operavano a piena capacità. Di conseguenza, gli utenti devono spesso attendere che la domanda si riduca per essere inclusi in un blocco, il che ha portato a una scadente esperienza degli utenti. L'Aggiornamento di Londra ha introdotto blocchi di dimensioni variabili a Ethereum.
 
-Le modalità di calcolo delle commissioni sulle transazioni sulla rete di Ethereum sono state modificate dall'[Aggiornamento di Londra](/history/#london) di Agosto 2021. Prima dell'aggiornamento di Londra, le commissioni erano calcolate senza separare le commissioni di `base` e `priority`, come segue:
+Le modalità di calcolo delle commissioni sulle transazioni sulla rete di Ethereum sono state modificate dall'[Aggiornamento di Londra](/ethereum-forks/#london) di Agosto 2021. Prima dell'aggiornamento di Londra, le commissioni erano calcolate senza separare le commissioni di `base` e `priority`, come segue:
 
 Diciamo che Alice debba pagare 1 ETH a Bob. Nella transazione, il limite di gas è di 21.000 unità, e il prezzo del gas è di 200 gwei.
 

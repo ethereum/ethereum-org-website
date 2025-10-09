@@ -152,7 +152,7 @@ Di Ethereum gofanans process dey somtaims trade off speed and effishiensy for op
 
 As di spesifikashon and divelopment implimentashon na always fully open sorse, dem nor yus di formal process dem yus to propose updates wey dem diskribe above. Na dis one make am posibol for risearchas and implimentas to kwikly agree on shanjis.
 
-Wen Beacon Chain join wit di Ethereum exekushon layer for September 15, 2022 Di Merge komplete as part of di [Paris netwok upgrade](/history/#paris). Di proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) kon shanj name from 'Last Koll' to 'Final', na dis one make di transishon to proof-of-stake komplete.
+Wen Beacon Chain join wit di Ethereum exekushon layer for September 15, 2022 Di Merge komplete as part of di [Paris netwok upgrade](/ethereum-forks/#paris). Di proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) kon shanj name from 'Last Koll' to 'Final', na dis one make di transishon to proof-of-stake komplete.
 
 <ButtonLink href="/roadmap/merge/">
   More on Di Merge

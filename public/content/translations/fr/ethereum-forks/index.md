@@ -320,7 +320,7 @@ La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/e
 
 Avant la mise à jour de Londres, Ethereum avait des blocs de taille fixe. En période de forte demande du réseau, ces blocs fonctionnaient à pleine capacité. En conséquence, les utilisateurs devaient souvent attendre que la demande diminue pour être inclus dans un bloc, ce qui entraînait une mauvaise expérience utilisateur. La mise à niveau de Londres a permis d'introduire des blocs de taille variable dans Ethereum.
 
-Dans le cadre de la [mise à niveau de Londres](/history/#london) d'août 2021, le mode de calcul des frais de transaction sur le réseau Ethereum a été modifié. Avant la mise à niveau de Londres, les frais étaient calculés sans distinguer les frais de `base` et de `priority`, comme suit :
+Dans le cadre de la [mise à niveau de Londres](/ethereum-forks/#london) d'août 2021, le mode de calcul des frais de transaction sur le réseau Ethereum a été modifié. Avant la mise à niveau de Londres, les frais étaient calculés sans distinguer les frais de `base` et de `priority`, comme suit :
 
 Disons qu'Alice devait payer à Marc la somme d'1 ETH. Dans la transaction, la limite de gaz est de 21 000 unités et le prix du gaz est de 200 gwei.
 

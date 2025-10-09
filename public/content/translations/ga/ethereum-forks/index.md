@@ -320,7 +320,7 @@ Thug uasghrádú Londain isteach [EIP-1559](https://eips.ethereum.org/EIPS/eip-1
 
 Roimh Uasghrádú Londain, bhí bloic de mhéid seasta ag Ethereum. Nuair a bhí éileamh ard ar an líonra, d'oibrigh na bloic seo ag a lánacmhainneacht. Mar thoradh air sin, b'éigean d'úsáideoirí fanacht go minic go laghdófaí an t-éileamh chun iad a áireamh i mbloc, rud a d'eascair droch-eispéireas úsáideora. Thug Uasghrádú Londain bloic de mhéid athraitheach isteach chuig Ethereum.
 
-Athraíodh an bealach a ríomhadh táillí idirbheart ar líonra Ethereum le [Uasghrádú Londain](/history/#london) i mí Lúnasa 2021. Roimh uasghrádú Londain, ríomhadh táillí gan táillí `bonn` agus `priority` a scaradh, mar a leanas:
+Athraíodh an bealach a ríomhadh táillí idirbheart ar líonra Ethereum le [Uasghrádú Londain](/ethereum-forks/#london) i mí Lúnasa 2021. Roimh uasghrádú Londain, ríomhadh táillí gan táillí `bonn` agus `priority` a scaradh, mar a leanas:
 
 Ligean le rá go raibh Alice a íoc Bob 1 ETH. San idirbheart, is é 21,000 aonad an teorainn gháis, agus is é 200 gwei an praghas gáis.
 
