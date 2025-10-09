@@ -238,17 +238,17 @@ PeerDAS makes a significant change in how nodes transmit blob data. All data is 
 
 Nodes requirements are still within [recommended margins](https://eips.ethereum.org/EIPS/eip-7870) even after Fusaka BPOs.
 
-#### Full nodes
+#### Full nodes {#full-nodes}
 
 Regular nodes without any validators will subscribe to only 4 subnets, providing custody for 1/8 of the original data. This means that with the same amount of blob data, the node bandwidth of downloading them would be smaller by a factor of eight (8). The disk usage and download bandwidth of blobs for a normal full node might decrease around 80%, to only few Mb. 
 
-#### Solo stakers
+#### Solo stakers {#solo-stakers}
 
 If the node is used for a validator client, it has to custody more columns and therefore process more data. With a validator added, the node subscribes to at least 8 column subnets and therefore processes twice as much data as regular node but still less than before Fusaka. If the validator balance is above 287 ETH, more and more subnets will be subscribed to. 
 
 For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwith will have to be around 5 times higher, at 100Mpbs. 
 
-#### Large validators 
+#### Large validators {#large-validators}
 
 The number of subscribed subnets grows with more balance and validators added to the node. For example, around 800 ETH balance, the node custodies 25 columns and will need around 30% more download bandwidth than before. The necessary upload rises similar to regular nodes and at least 100Mbps is necessary. 
 
