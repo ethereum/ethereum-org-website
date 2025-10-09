@@ -2,7 +2,12 @@ import { Check } from "lucide-react"
 import dynamic from "next/dynamic"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, StatsBoxMetric } from "@/lib/types"
+import type {
+  CommitHistory,
+  Lang,
+  PageParams,
+  StatsBoxMetric,
+} from "@/lib/types"
 
 import ActivityStats from "@/components/ActivityStats"
 import { HubHero } from "@/components/Hero"
@@ -102,7 +107,7 @@ const loadData = dataLoader(
   BASE_TIME_UNIT * 1000
 )
 
-const Page = async ({ params }: { params: { locale: Lang } }) => {
+const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
@@ -568,9 +573,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
   return await getMetadata({
     locale,

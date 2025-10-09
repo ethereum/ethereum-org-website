@@ -1113,6 +1113,7 @@ export type App = {
   dateOfLaunch: string
   lastUpdated: string
   ready: string
+  devconnect: string
 }
 
 export type DefiApp = App & {
@@ -1206,7 +1207,7 @@ export type ValuesPairing = {
 export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
 
 export type PageParams = {
-  locale: string
+  locale: Lang
 }
 
 export type SlugPageParams = PageParams & {

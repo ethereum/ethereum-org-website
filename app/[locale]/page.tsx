@@ -6,9 +6,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type {
   AllHomepageActivityData,
   CommunityBlog,
+  PageParams,
   ValuesPairing,
 } from "@/lib/types"
-import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
@@ -149,8 +149,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
@@ -980,9 +980,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   try {
     const t = await getTranslations({ locale, namespace: "page-index" })

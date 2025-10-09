@@ -43,8 +43,6 @@ A note on content buckets: we use 'content buckets' within Crowdin to get the hi
 
 We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to ensure the highest impact pages are translated first.
 
-[Learn more about ethereum.org content buckets](/contributing/translation-program/content-buckets/)
-
 ### Translate {#translate}
 
 After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.

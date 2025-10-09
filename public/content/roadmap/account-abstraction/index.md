@@ -58,14 +58,14 @@ EIP-4337 enables native smart contract wallet support without modifying Ethereum
 
 ## Current progress {#current-progress}
 
-As part of Ethereum's Pectra upgrade, EIP-7702 is scheduled for May 7, 2025. EIP-4337 has been widely adopted, [with over 26 million smart accounts deployed and more than 170 million UserOperations processed](https://www.bundlebear.com/overview/all).
+As part of Ethereum's Pectra upgrade, EIP-7702 is scheduled for May 7, 2025. EIP-4337 has been widely adopted, [with over 26 million smart accounts deployed and more than 170 million UserOperations processed](https://www.bundlebear.com/erc4337-overview/all).
 
 ## Further reading {#further-reading}
 
-- [erc4337.io](https://www.erc4337.io/)
+- [erc4337.io](https://docs.erc4337.io/)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-7702 documentation](https://eips.ethereum.org/EIPS/eip-7702)
-- [ERC-4337 adoption dashboard](https://www.bundlebear.com/overview/all)
+- [ERC-4337 adoption dashboard](https://www.bundlebear.com/erc4337-overview/all)
 - [Vitalik's "Road to Account Abstraction"](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
 - [Vitalik's blog on social recovery wallets](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Awesome Account Abstraction](https://github.com/4337Mafia/awesome-account-abstraction)

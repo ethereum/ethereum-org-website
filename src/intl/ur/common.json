@@ -428,5 +428,8 @@
   "withdrawals": "اسٹیکنگ نکلوانا",
   "wrapped-ether": "لپٹا ہوا ایتھر",
   "yes": "جی ہاں",
-  "zero-knowledge-proofs": "بغیر معلومات کے ثبوت"
+  "zero-knowledge-proofs": "بغیر معلومات کے ثبوت",
+  "ethereum-vs-bitcoin": "ایتھریم بمقابلہ بٹ کوائن",
+  "nav-ethereum-vs-bitcoin-description": "ایتھریم اور بٹ کوائن کے درمیان فرق کو سمجھیں"
+
 }
