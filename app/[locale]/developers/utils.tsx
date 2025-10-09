@@ -32,7 +32,7 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
       description: t("page-developers-speedrun-nft-desc"),
       href: "https://speedrunethereum.com/challenge/tokenization",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-0"),
+      tag: t("page-developers-skill-beginner"),
     },
     {
       imgSrc: speedrunDex,
@@ -41,7 +41,7 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
       description: t("page-developers-speedrun-dex-desc"),
       href: "https://speedrunethereum.com/challenge/dex",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-4"),
+      tag: t("page-developers-skill-intermediate"),
     },
     {
       imgSrc: speedrunStablecoins,
@@ -50,7 +50,7 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
       description: t("page-developers-speedrun-stablecoins-desc"),
       href: "https://speedrunethereum.com/challenge/stablecoins",
       button: t("page-developers-start-quest"),
-      tag: t("page-developers-speedrun-challenge-6"),
+      tag: t("page-developers-skill-advanced"),
     },
   ]
 }
