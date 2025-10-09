@@ -15,8 +15,8 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import AppCard from "./AppCard"
 
-import DestinoImage from "@/public/images/devconnect/destino.png"
 import DevconnectBannerImage from "@/public/images/devconnect/devconnect-hero.png"
+import DevconnectLogo from "@/public/images/devconnect/devconnect-logo.png"
 
 const DevconnectBanner = ({ apps }: { apps: AppData[] }) => {
   const cards = apps
@@ -25,10 +25,12 @@ const DevconnectBanner = ({ apps }: { apps: AppData[] }) => {
       <AppCard
         key={index}
         app={app}
-        imageSize={24}
+        imageSize={16}
         showDescription={false}
         matomoCategory="devconnect_apps"
         matomoAction="click"
+        forceLightMode
+        hoverClassName="hover:bg-gray-50"
       />
     ))
 
@@ -41,14 +43,14 @@ const DevconnectBanner = ({ apps }: { apps: AppData[] }) => {
         sizes="100vw"
       />
       <div className="flex w-full flex-col justify-between gap-4 md:flex-row">
-        <div className="flex w-full flex-col items-center justify-between gap-4 md:w-1/3">
+        <div className="flex w-full flex-row items-center justify-between gap-4 md:w-1/3 md:flex-col">
           <Image
-            src={DestinoImage}
-            alt="Destino"
-            className="mx-auto h-auto max-w-[224px] object-contain"
+            src={DevconnectLogo}
+            alt="Devconnect Logo"
+            className="mx-auto h-auto max-w-[224px] object-contain sm:mx-0 md:mx-auto"
             sizes="100vw"
           />
-          <div className="flex flex-col gap-5 rounded-xl bg-white/70 p-2.5 shadow-[0_4px_0_0_rgba(0,0,0,0.35)]">
+          <div className="hidden flex-col gap-5 rounded-xl bg-white p-2.5 shadow-[0_4px_0_0_rgba(0,0,0,0.35)] sm:flex">
             <div>
               <p className="font-bold text-black">17 - 22 Nov 2025</p>
               <p className="font-bold text-black">Buenos Aires, Argentina</p>
@@ -64,10 +66,18 @@ const DevconnectBanner = ({ apps }: { apps: AppData[] }) => {
           </div>
         </div>
         <div className="flex w-full flex-col items-center gap-2 md:w-2/3">
-          <h2 className="text-black">Ethereum world fair</h2>
+          <h2 className="text-black">Ethereum World Fair</h2>
           <p className="text-black">
             Discover some of the apps featuring in Buenos Aires this November.
           </p>
+          <ButtonLink
+            href="https://devconnect.org/"
+            size="md"
+            hideArrow
+            className="min-h-0 whitespace-nowrap rounded-none border-b-2 border-b-[#B2820A] bg-[#F6B40E] px-4 text-md/none font-bold uppercase text-black hover:bg-[#B2820A] hover:!text-black active:text-black sm:hidden"
+          >
+            Get tickets
+          </ButtonLink>
           <div className="relative w-full overflow-hidden">
             <SwiperContainer>
               <Swiper
@@ -96,7 +106,7 @@ const DevconnectBanner = ({ apps }: { apps: AppData[] }) => {
                 {cards.map((card, index) => (
                   <SwiperSlide key={index}>{card}</SwiperSlide>
                 ))}
-                <SwiperNavigation />
+                <SwiperNavigation className="bg-transparent [&_.swiper-pagination-bullet-active]:!bg-purple-500 [&_.swiper-pagination-bullet]:!bg-purple-800" />
               </Swiper>
             </SwiperContainer>
           </div>

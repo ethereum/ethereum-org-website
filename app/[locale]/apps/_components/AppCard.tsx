@@ -19,6 +19,7 @@ interface AppCardProps {
   hoverClassName?: string
   matomoCategory: string
   matomoAction: string
+  forceLightMode?: boolean
 }
 
 const AppCard = ({
@@ -31,6 +32,7 @@ const AppCard = ({
   hoverClassName,
   matomoCategory,
   matomoAction,
+  forceLightMode = false,
 }: AppCardProps) => {
   const cardContent = (
     <div
@@ -38,6 +40,20 @@ const AppCard = ({
         "flex text-body",
         isVertical ? "flex-col gap-3" : "flex-row gap-3"
       )}
+      style={
+        forceLightMode
+          ? ({
+              "--body": "var(--gray-900)",
+              "--body-medium": "var(--gray-500)",
+              "--body-light": "var(--gray-200)",
+              "--background": "var(--white)",
+              "--background-highlight": "var(--gray-50)",
+              "--primary": "var(--purple-600)",
+              "--primary-high-contrast": "var(--purple-800)",
+              "--primary-low-contrast": "var(--purple-100)",
+            } as React.CSSProperties)
+          : undefined
+      }
     >
       <div
         className={cn(
