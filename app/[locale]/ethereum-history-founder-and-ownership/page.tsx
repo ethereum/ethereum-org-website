@@ -353,7 +353,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-11",
                   {
                     genesisBlock: (chunks) => (
-                      <Link href="https://etherscan.io/block/0">{chunks}</Link>
+                      <Link href="https://eth.blockscout.com/block/0">{chunks}</Link>
                     ),
                   }
                 )}
