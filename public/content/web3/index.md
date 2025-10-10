@@ -155,7 +155,7 @@ Web3 isn’t rigidly defined. Various community participants have different pers
 
 - [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
-- [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
+- [Why Web3 Matters](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [The Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
