@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
@@ -19,14 +19,12 @@ import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-// Import static torch holders data
+import tenYearEventRegions from "@/data/tenYearEventRegions"
+import tenYearStories from "@/data/tenYearStories"
 import torchHoldersData from "@/data/torchHolders.json"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import { adoptionStyles } from "./_components/data"
@@ -43,8 +41,6 @@ import {
 import TenYearJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
-import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
-import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import {
   getHolderEvents,
   getTransferEvents,
@@ -53,29 +49,16 @@ import {
 } from "@/lib/torch"
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["fetched10YearEvents", fetch10YearEvents],
-    ["fetched10YearStories", fetch10YearStories],
-  ],
-  REVALIDATE_TIME * 1000
-)
-
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories] = await loadData()
-
   const allTorchHolders: TorchHolder[] = torchHoldersData as TorchHolder[]
 
-  const stories = parseStoryDates(fetched10YearStories, locale)
+  const stories = parseStoryDates(tenYearStories, locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -166,11 +149,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="w-full px-8 pb-8">
           <div className="w-full">
             <Tabs
-              defaultValue={Object.keys(fetched10YearEvents)[0]}
+              defaultValue={Object.keys(tenYearEventRegions)[0]}
               className="w-full"
             >
               <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
-                {Object.entries(fetched10YearEvents).map(([key, data]) => (
+                {Object.entries(tenYearEventRegions).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
                     value={key}
@@ -181,7 +164,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </TabsTrigger>
                 ))}
               </TabsList>
-              {Object.entries(fetched10YearEvents).map(([key, data]) => {
+              {Object.entries(tenYearEventRegions).map(([key, data]) => {
                 const events = data.events.sort((a, b) =>
                   a.country.localeCompare(b.country)
                 )
@@ -437,9 +420,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

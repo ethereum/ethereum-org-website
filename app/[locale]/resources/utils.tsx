@@ -100,14 +100,8 @@ export const getResources = async ({
           description: t(
             "page-resources-network-layer2-growthepie-description"
           ),
-          href: "https://www.growthepie.com/",
+          href: "https://www.growthepie.com/ethereum-ecosystem/metrics",
           imgSrc: IconGrowthepie,
-        },
-        {
-          title: "L2 Fees",
-          description: t("page-resources-network-layer2-l2fees-description"),
-          href: "https://l2fees.info/",
-          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },

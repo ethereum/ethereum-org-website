@@ -449,5 +449,8 @@
   "withdrawals": "Αναλήψεις από αποθηκευμένο κεφάλαιο",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Ναι",
-  "zero-knowledge-proofs": "Απόδειξη μηδενικής γνώσης"
+  "zero-knowledge-proofs": "Απόδειξη μηδενικής γνώσης",
+  "ethereum-vs-bitcoin": "Ethereum έναντι Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Κατανοήστε τις διαφορές μεταξύ Ethereum και Bitcoin"
+
 }

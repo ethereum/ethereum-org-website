@@ -429,5 +429,8 @@
   "withdrawals": "משיכות הימור",
   "wrapped-ether": "אתר עטוף",
   "yes": "כן",
-  "zero-knowledge-proofs": "הוכחות אפס ידע"
+  "zero-knowledge-proofs": "הוכחות אפס ידע",
+  "ethereum-vs-bitcoin": "אתריום מול ביטקוין",
+  "nav-ethereum-vs-bitcoin-description": "הבן את ההבדלים בין אתריום לביטקוין"
+
 }

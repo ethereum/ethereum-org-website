@@ -82,6 +82,7 @@ PeerDAS is only a step [toward a greater scaling vision of FullDAS](https://ethr
 
 ## Further reading {#further-reading}
 
-- [PeerDAS Peer Data Availability sampling by Francesco D'Amato](https://www.youtube.com/watch?v=WOdpO1tH_Us)
+- [PeerDAS: Peer Data Availability sampling by Francesco D'Amato](https://www.youtube.com/watch?v=WOdpO1tH_Us)
 - [A Documentation of Ethereum’s PeerDAS](https://eprint.iacr.org/2024/1362.pdf)
 - [Proving the Security of PeerDAS without the AGM](https://eprint.iacr.org/2025/1683)
+- [Vitalik on PeerDAS, its impact, and testing Fusaka](https://x.com/VitalikButerin/status/1970983281090085200)
