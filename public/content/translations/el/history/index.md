@@ -196,7 +196,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-- [Διαβάστε τις προδιαγραφές αναβάθμισης της Shanghai](https://eips.ethereum.org/EIPS/eip-4895)
+- [Διαβάστε τις προδιαγραφές αναβάθμισης της Shanghai](https://github.com/ethereum/execution-specs/blob/8dbde99b132ff8d8fcc9cfb015a9947ccc8b12d6/network-upgrades/mainnet-upgrades/shanghai.md)
 
 #### Περίληψη Capella {#capella-summary}
 
