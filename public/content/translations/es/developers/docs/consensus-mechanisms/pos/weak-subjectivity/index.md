@@ -34,6 +34,6 @@ Finalmente, se pueden solicitar puntos de control de otros nodos; tal vez otro u
 
 - [Debilidad subjetiva en Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: Cómo aprendí a amar la subjetividad débil](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Subjetividad débil (documentos de Teku)](https://docs.teku.consensys.net/development/Concepts/Weak-Subjectivity/)
+- [Subjetividad débil (documentos de Teku)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [Guía de subjetividad débil, Fase-0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Análisis de la subjetividad débil en Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)
