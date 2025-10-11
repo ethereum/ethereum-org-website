@@ -60,7 +60,7 @@ summaryPoints:
 - [Ο Guillaume Ballet εξηγεί τα δέντρα Verkle στο ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Πώς τα δέντρα Verkle κάνουν το Ethereum λεπτό και δυνατό» από τον Guillaume Ballet στο Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Η Piper Merriam για τους πελάτες χωρίς κατάστασης από το ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Ο Dankrad Fiest εξηγεί τα δέντρα Verkle και τη μη χρήση κατάστασης στο podcast Μηδενικής γνώσης](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Ο Dankrad Fiest εξηγεί τα δέντρα Verkle και τη μη χρήση κατάστασης στο podcast Μηδενικής γνώσης](https://zeroknowledge.fm/podcast/202/)
 - [Ο Vitalik Buterin για τα δέντρα Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Ο Dankrad Feist για τα δέντρα Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Τεκμηρίωση EIP για τα δέντρα Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
