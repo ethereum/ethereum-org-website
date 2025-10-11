@@ -154,7 +154,7 @@ sidebarDepth: 3
 **Matter Labs zkPorter**- _Το zkPorter είναι ένα πρωτόκολλο κλιμάκωσης επιπέδου 2 που αντιμετωπίζει τη διαθεσιμότητα δεδομένων με μια υβριδική προσέγγιση που συνδυάζει τις ιδέες του zkRollup και της θραυσματοποίησης (sharding). Μπορεί να υποστηρίξει αυθαίρετα πολλά τμήματα, το καθένα με τη δική του πολιτική διαθεσιμότητας δεδομένων._
 
 - [Ιστολόγιο](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Τεκμηρίωση](https://docs.zksync.io/zk-stack)
+- [Τεκμηρίωση](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Ιστότοπος](https://zksync.io/)
 
 ## Περισσότερες πληροφορίες {#further-reading}
