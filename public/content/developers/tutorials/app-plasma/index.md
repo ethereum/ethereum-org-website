@@ -14,6 +14,8 @@ In contrast to [rollups](/developers/docs/scaling/zk-rollups/), [plasmas](/devel
 
 The application we write here is a privacy-preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private.
 
+$x+y$
+
 ## Design {#design}
 
 This is not a production-ready system, but a teaching tool. As such, it is written with a number of simplifying assumptions.
@@ -1236,6 +1238,14 @@ The solution is to have a zero-knowledge proof that a forced transaction is inva
 #### Availability bonds {#avail-bonds}
 
 In a real-life implementation there would probably be some kind of profit motive for keeping the server running. We can strengthen this incentive by having the server post an availability bond, which anybody can burn if a forced transaction is not processed within a certain amount of time.
+
+### Bad Noir code {#bad-noir-code}
+
+Normally to get people to trust a smart contract we upload the source code to a [block explorer](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). However, in the case of zero-knowldge proofs that is insufficient. 
+
+`Verifier.sol` contains the verification key, which is a function of the Noir program. However, that key does not tell us what the Noir program was. To actually have a trusted solution, you need to upload the Noir program (and the version that created it). Otherwise, the zero-knowledge proofs might reflect a different program, possibly one with a back door.
+
+Until block explorers start allowing us to upload and verify Noir programs, you should do it yourself (preferably to [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Then sophisticated users will be able to download the source code, compile to for themselves, create `Verifier.sol`, and see that it is identical to the one onchain.
 
 ## Conclusion {#conclusion}
 
