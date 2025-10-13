@@ -116,8 +116,6 @@ Using MACI _does_ require trusting the coordinator not to collude with bribers o
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of onchain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 
-[Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
-
 ## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
 
 A zero-knowledge proof allows you to prove the truth of a statement without sharing the statement’s contents or revealing how you discovered the truth. To make this possible, zero-knowledge protocols rely on algorithms that take some data as input and return ‘true’ or ‘false’ as output.
