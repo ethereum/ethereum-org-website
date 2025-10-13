@@ -56,8 +56,6 @@ interface GasPriceDisplayProps {
 const GasPriceDisplay = ({ className }: GasPriceDisplayProps) => {
   const { error, gasLevel } = useGasPrice()
 
-  const loading = false
-
   const config = getGasLevelConfig(gasLevel)
 
   if (error) {
@@ -77,15 +75,11 @@ const GasPriceDisplay = ({ className }: GasPriceDisplayProps) => {
           <span className="font-medium">Current Network Fee:</span>
         </div>
         <div className="text-right">
-          {loading ? (
-            <div className="h-4 w-16 animate-pulse rounded bg-gray-200" />
-          ) : (
-            <div className="flex items-center gap-1">
-              <span className={cn("font-semibold", config.color)}>
-                {config.label}
-              </span>
-            </div>
-          )}
+          <div className="flex items-center gap-1">
+            <span className={cn("font-semibold", config.color)}>
+              {config.label}
+            </span>
+          </div>
         </div>
       </div>
     </div>
