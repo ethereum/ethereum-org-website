@@ -1,4 +1,4 @@
-# Code of conduct
+# Code of Conduct
 
 ## Mission
 
@@ -23,7 +23,7 @@ The ethereum.org community strives to be:
 - A DEX, CEX or any other form of financial platform
 - A platform that gives financial or legal advice of any kind
 
-## Code of conduct
+## Code of Conduct
 
 ### Pledge
 
