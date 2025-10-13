@@ -64,7 +64,7 @@ const AppCard = ({
         <Image
           src={app.image}
           alt={app.name}
-          className="h-full w-full rounded-xl object-cover"
+          className="h-full w-full rounded-xl object-contain"
           width={imageSize * 16}
           height={imageSize * 16}
         />
