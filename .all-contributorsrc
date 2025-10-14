@@ -12962,7 +12962,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/161903?v=4",
       "profile": "https://github.com/clacladev",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "bug"
       ]
     },
     {
@@ -13591,6 +13592,33 @@
       "profile": "https://ihagopian.com",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "MamunC0der",
+      "name": "Coder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161350311?v=4",
+      "profile": "https://github.com/MamunC0der",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "MOSHKA-GOT",
+      "name": "MOSHKA-GOT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225852520?v=4",
+      "profile": "https://github.com/MOSHKA-GOT",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Pabl0cks",
+      "name": "Pablo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55535804?v=4",
+      "profile": "https://github.com/Pabl0cks",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
