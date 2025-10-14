@@ -3,8 +3,12 @@
 import { type BaseHTMLAttributes, type ElementRef, forwardRef } from "react"
 import { Slot } from "@radix-ui/react-slot"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
+import { BaseLink } from "@/components/ui/Link"
+
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 type LinkBoxElement = ElementRef<"div">
 
@@ -21,16 +25,16 @@ const LinkBox = forwardRef<LinkBoxElement, LinkBoxProps>(
 
 LinkBox.displayName = "LinkBox"
 
-type LinkOverlayElement = ElementRef<"a">
+type LinkOverlayElement = ElementRef<typeof BaseLink>
 
-type LinkOverlayProps = BaseHTMLAttributes<HTMLAnchorElement> & {
+type LinkOverlayProps = React.ComponentProps<typeof BaseLink> & {
   asChild?: boolean
   matomoEvent?: MatomoEventOptions
 }
 
 const LinkOverlay = forwardRef<LinkOverlayElement, LinkOverlayProps>(
   ({ asChild, className, matomoEvent, ...props }, ref) => {
-    const Comp = asChild ? Slot : "a"
+    const Comp = asChild ? Slot : BaseLink
 
     return (
       <Comp

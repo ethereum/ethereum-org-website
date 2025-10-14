@@ -362,7 +362,7 @@ The original approach was to use pseudorandom cryptographic functions, such as `
 
 It is possible to generate the random value offchain and send it onchain, but doing so imposes high trust requirements on users. They must believe the value was truly generated via unpredictable mechanisms and wasn’t altered in transit.
 
-Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes. Another example is [API3 QRNG](https://docs.api3.org/explore/qrng/) that serves Quantum random number generation (QRNG) is a public method of Web3 RNG based on quantum phenomena, served with the courtesy of the Australian National University (ANU).
+Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes.
 
 ### Getting outcomes for events {#getting-outcomes-for-events}
 
@@ -400,8 +400,6 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts._
 
-**[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
-
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data onchain in a tamper-resistant, decentralized, and self-sustainable environment._
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
@@ -413,17 +411,15 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Articles**
 
 - [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) — _Chainlink_
-- [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
+- [What is a Blockchain Oracle?](https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [Why we need decentralized oracles](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Videos**
 
 - [Oracles and the Expansion of Blockchain Utility](https://youtu.be/BVUZpWa8vpw) — _Real Vision Finance_
-- [The differences between first party and third party oracles](https://blockchainoraclesummit.io/first-party-vs-third-party-oracles/) - _Blockchain Oracle Summit_
 
 **Tutorials**
 

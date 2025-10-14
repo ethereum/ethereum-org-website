@@ -132,8 +132,8 @@ Algumas vezes é útil ter um administrador que pode desfazer erros. Para reduzi
 
 OpenZeppelin fornece dois mecanismos para habilitar acesso administrativo:
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) contratos tem um único priprietário. Funções que tem o [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` só podem ser chamadas por este proprietário. Os proprietários podem transferir a propriedade para outra pessoa ou renunciar a ela completamente. Os direitos de todas as outras contas são geralmente idênticas.
-- Os contratos [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) têm [controle de acesso baseado em função (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) contratos tem um único priprietário. Funções que tem o [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` só podem ser chamadas por este proprietário. Os proprietários podem transferir a propriedade para outra pessoa ou renunciar a ela completamente. Os direitos de todas as outras contas são geralmente idênticas.
+- Os contratos [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) têm [controle de acesso baseado em função (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Por simplicidade, neste artigo usamos `Ownable`.
 

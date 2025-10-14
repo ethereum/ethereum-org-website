@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Flex } from "./ui/flex"
 import Emoji from "./Emoji"

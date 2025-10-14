@@ -1,5 +1,7 @@
 import { extname, join } from "path"
 
+import { Lang } from "@/lib/types"
+
 import {
   DEFAULT_LOCALE,
   DISCORD_PATH,
@@ -50,7 +52,9 @@ export const addSlashes = (href: string): string => {
 }
 
 export const getFullUrl = (locale: string | undefined, path: string) =>
-  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+  DEFAULT_LOCALE === locale || !locale
+    ? addSlashes(new URL(path, SITE_URL).href)
+    : addSlashes(new URL(join(locale, path), SITE_URL).href)
 
 // Remove trailing slash from slug and add leading slash
 export const normalizeSlug = (slug: string) => {
@@ -72,4 +76,16 @@ export const slugify = (text: string): string => {
       .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
       .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
   )
+}
+
+export const normalizeUrlForJsonLd = (
+  locale: string | Lang | undefined,
+  pathWithoutLocale: string
+): string => {
+  if (!locale) {
+    return new URL(pathWithoutLocale, SITE_URL).toString()
+  }
+  const path = join(locale === DEFAULT_LOCALE ? "" : locale, pathWithoutLocale)
+  const url = new URL(path, SITE_URL)
+  return url.toString()
 }

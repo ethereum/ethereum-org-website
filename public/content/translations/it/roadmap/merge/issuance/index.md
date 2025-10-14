@@ -94,7 +94,7 @@ Riduzione netta nell'emissione annuale di ETH: <strong>circa 88,7%</strong> ((4,
 La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. Per l'esecuzione di una transazione su Ethereum, dev'essere pagata una commissione minima (nota come "commissione di base"), che fluttua continuamente (da blocco a blocco), a seconda dell'attività di rete. La commissione è pagata in ETH ed è _necessaria_ affinché la transazione sia considerata valida. Questa commissione viene _bruciata_ durante il procedimento della transazione, rimuovendola dalla circolazione.
 
 <InfoBanner>
-La bruciatura delle commissioni è divenuta attiva con l'<a href="/history/#london">aggiornamento di Londra</a> ad agosto 2021 e resta immutata da La Fusione.
+La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/history/#london) ad agosto 2021 e resta immutata da La Fusione.
 </InfoBanner>
 
 Oltre alla bruciatura della commissione, implementata dall'aggiornamento di Londra, i validatori, inoltre, possono incorrere in sanzioni per essere online o, peggio, possono ricevere tagli per l'infrazione di regole specifiche che minacciano la sicurezza della rete. Queste, risultano in una riduzione degli ETH dal saldo di quel validatore, che non è ricompensato direttamente a nessun altro conto, bruciandoli/rimuovendoli effettivamente dalla circolazione.

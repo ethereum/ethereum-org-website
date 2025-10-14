@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Sheapa andi fasta transakshon for Ethereum",
   "nav-learn-by-coding-description": "Tools wey fit helep yu eksperiment wit Ethereum",
   "nav-local-env-description": "Shuse andi set up yor Ethereum divelopment stak",
-  "nav-mainnet-description": "Wi sabi fit build enterprise blokchain aplikashons on di publik Ethereum Mainnet",
+  "nav-enterprise-description": "Wi sabi fit build enterprise blokchain aplikashons on di publik Ethereum Mainnet",
   "nav-nft-description": "Na one way to reprisent anytin wey dey unik as Ethereum-based asset",
   "nav-open-research-description": "One of di primary pawa of Ethereum na im aktive risearsh komunity",
   "nav-open-research-label": "Open risearsh",
@@ -314,7 +314,7 @@
   "nav-stake-description": "Mak yu earn riwods for yu to sikure Ethereum",
   "nav-stake-label": "Stake",
   "nav-staking-home-description": "One ovaview of difrent opshon for stakin",
-  "nav-staking-home-label": "Staking home",
+  "nav-staking-home-label": "Staking homepage",
   "nav-staking-pool-description": "Stake andi earn riwods wit any amount of ETH by to join wit odas",
   "nav-staking-pool-label": "Pooled stakin",
   "nav-staking-saas-description": "Third-party node operators dey run di operashon for yor validator klient",
@@ -431,5 +431,8 @@
   "withdrawals": "To dey stake witdrawals",
   "wrapped-ether": "Ether wey dem wrap",
   "yes": "Na so",
-  "zero-knowledge-proofs": "Zero-knowledge prufs"
+  "zero-knowledge-proofs": "Zero-knowledge prufs",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Understand di difrens between Ethereum and Bitcoin"
+
 }

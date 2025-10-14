@@ -16,7 +16,6 @@ export class FindWalletPage extends BasePage {
   private readonly filtersContainer: Locator
   private readonly mobileFiltersButton: Locator
   private readonly mobileFiltersSubmitButton: Locator
-  private readonly walletTable: Locator
   private readonly walletRows: Locator
   private readonly rowCounter: Locator
 
@@ -31,10 +30,7 @@ export class FindWalletPage extends BasePage {
     this.mobileFiltersSubmitButton = page.getByTestId(
       "mobile-filters-submit-button"
     )
-    this.walletTable = page.locator("table")
-    this.walletRows = page
-      .locator("table tbody tr")
-      .filter({ has: page.locator("td") })
+    this.walletRows = page.getByTestId("wallet-list").locator(":scope > div")
     this.rowCounter = page.getByText(/Showing all wallets \(\d+\)/i)
   }
 
@@ -79,7 +75,14 @@ export class FindWalletPage extends BasePage {
    * Get the current number of visible wallet rows
    */
   async getVisibleWalletCount() {
-    return await this.walletRows.count()
+    const counterText = await this.rowCounter.textContent()
+    const match = counterText?.match(/\((\d+)\)/)
+    if (!match) {
+      throw new Error(
+        `Could not extract count from row counter: ${counterText}`
+      )
+    }
+    return parseInt(match[1], 10)
   }
 
   /**
@@ -191,7 +194,7 @@ export class FindWalletPage extends BasePage {
    * Verify filtered results contain expected OS options
    */
   async verifyFilteredResults(osOptions: string[]) {
-    const rowCount = await this.getVisibleWalletCount()
+    const rowCount = await this.walletRows.count()
 
     for (let i = 0; i < rowCount; i++) {
       const row = this.walletRows.nth(i)
@@ -210,5 +213,22 @@ export class FindWalletPage extends BasePage {
     const counterText = await this.rowCounter.textContent()
 
     expect(counterText).toBe(`Showing all wallets (${actualCount})`)
+  }
+
+  /**
+   * Verify the row counter displays the provided expected count
+   */
+  async verifyRowCounterEquals(expectedCount: number) {
+    const counterText = await this.rowCounter.textContent()
+
+    expect(counterText).toBe(`Showing all wallets (${expectedCount})`)
+  }
+
+  /**
+   * Verify that the list renders at least one wallet row
+   */
+  async expectSomeRowsVisible() {
+    const visibleRows = await this.getVisibleWalletCount()
+    expect(visibleRows).toBeGreaterThan(0)
   }
 }

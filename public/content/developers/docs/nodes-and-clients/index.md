@@ -200,7 +200,7 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Pyrmont, Sepolia, and more         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, and more |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, and more |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Sepolia, and more          |
 | [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
 
@@ -214,7 +214,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 
 Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
-More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
+More information can be found on the [Lodestar website](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
@@ -226,7 +226,7 @@ Learn more in [Nimbus docs](https://nimbus.guide/)
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
-Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn more.
+Visit [Prysm docs](https://prysm.offchainlabs.com/docs/) to learn more.
 
 ### Teku {#teku}
 

@@ -30,7 +30,7 @@ When these headers are rendered, they come with a link icon attached to it that 
 
 Extending the above example, if we wanted to link to the `A subheading` section of the above document (for example living at path `/docs`), you could use the link`/docs#a-subheading` to link directly to that section.
 
-See a live example on ethereum.org: [https://ethereum.org/en/developers/docs/blocks/#block-anatomy](https://ethereum.org/en/developers/docs/blocks/#block-anatomy)
+See a live example on ethereum.org: [https://ethereum.org/developers/docs/blocks/#block-anatomy](https://ethereum.org/developers/docs/blocks/#block-anatomy)
 
 ## When to use custom header IDs
 
@@ -44,7 +44,7 @@ English files are uploaded to Crowdin for translation. Header ID's should be _in
 
 This is to ensure that the translated content can be linked to from other documents and external links, without breaking the path. This is similar to why path and filenames are not translated, but remain in English to simplify linking and referencing.
 
-See a live example on ethereum.org: [https://ethereum.org/es/developers/docs/blocks/#block-anatomy](https://ethereum.org/en/developers/docs/blocks/#block-anatomy)
+See a live example on ethereum.org: [https://ethereum.org/es/developers/docs/blocks/#block-anatomy](https://ethereum.org/developers/docs/blocks/#block-anatomy)
 
 Notice the header ID is still in English (`#block-anatomy`), but links to the Spanish (`/es/`) version of the site, at the correct section.
 

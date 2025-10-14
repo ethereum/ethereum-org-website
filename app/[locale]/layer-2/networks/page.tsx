@@ -5,10 +5,11 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
@@ -20,6 +21,7 @@ import { walletsData } from "@/data/wallets/wallet-data"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
+import Layer2NetworksPageJsonLD from "./page-jsonld"
 
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -41,8 +43,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -118,8 +120,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   }
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "layer-2/networks",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <Layer2NetworksPageJsonLD
+        locale={locale}
+        layer2Data={layer2DataCompiled}
+        contributors={contributors}
+      />
       <Layer2Networks {...props} />
     </I18nProvider>
   )
@@ -128,9 +142,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

@@ -280,7 +280,7 @@
   "nav-history-label": "História técnica do Ethereum",
   "nav-learn-by-coding-description": "Ferramentas que o ajudam a usar Ethereum",
   "nav-local-env-description": "Escolha e configure sua pilha de desenvolvimento Ethereum",
-  "nav-mainnet-description": "É possível criar aplicações blockchain empresariais na rede principal pública do Ethereum",
+  "nav-enterprise-description": "É possível criar aplicações blockchain empresariais na rede principal pública do Ethereum",
   "nav-networks-home-description": "Transações mais rápidas e econômicas para Ethereum",
   "nav-networks-introduction-label": "Introdução",
   "nav-networks-introduction-description": "O Ethereum se expandiu para uma rede de redes",
@@ -444,5 +444,8 @@
   "withdrawals": "Saque de staking",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Sim",
-  "zero-knowledge-proofs": "Prova de conhecimento zero"
+  "zero-knowledge-proofs": "Prova de conhecimento zero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Entenda as diferenças entre Ethereum e Bitcoin"
+
 }

@@ -168,7 +168,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
-  <ButtonLink href="/apps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
 </InfoBanner>
@@ -201,7 +201,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
-  <ButtonLink href="/apps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Tutki NFT-pelejä
   </ButtonLink>
 </InfoBanner>

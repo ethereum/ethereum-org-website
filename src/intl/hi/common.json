@@ -277,7 +277,7 @@
   "nav-layer-2-description": "एथेरियम के लिए सस्ते और तेज़ लेनदेन",
   "nav-learn-by-coding-description": "एथेरियम के साथ प्रयोग करने में आपकी मदद करने वाले उपकरण",
   "nav-local-env-description": "अपना एथेरियम डेवलपमेंट स्टैक चुनें और सेट अप करें",
-  "nav-mainnet-description": "एंटरप्राइज़ ब्लॉकचेन एप्लिकेशन पब्लिक एथेरियम मेननेट पर बनाए जा सकते हैं",
+  "nav-enterprise-description": "एंटरप्राइज़ ब्लॉकचेन एप्लिकेशन पब्लिक एथेरियम मेननेट पर बनाए जा सकते हैं",
   "nav-nft-description": "किसी भी अनोखी चीज़ को एथेरियम-आधारित एसेट के तौर पर पेश करने का तरीका",
   "nav-open-research-description": "एथेरियम की प्रमुख खूबियों में से एक है इसकी एक्टिव रिसर्च कम्युनिटी",
   "nav-open-research-label": "शोध खोलें",
@@ -432,5 +432,8 @@
   "withdrawals": "स्टेकिंग निकालना",
   "wrapped-ether": "लपेटा हुआ ईथर",
   "yes": "हाँ",
-  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाण"
+  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाण",
+  "ethereum-vs-bitcoin": "एथेरियम बनाम बिटकॉइन",
+  "nav-ethereum-vs-bitcoin-description": "एथेरियम और बिटकॉइन के बीच के अंतर को समझें"
+
 }

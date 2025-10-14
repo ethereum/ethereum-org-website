@@ -13,6 +13,7 @@ export const ns = [
   "glossary-tooltip",
   "learn-quizzes",
   "page-about",
+  "page-assets",
   "page-index",
   "page-learn",
   "page-upgrades",

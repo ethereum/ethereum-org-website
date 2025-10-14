@@ -88,6 +88,6 @@ Láthatja a dizájnelveket a gyakorlatban [a honlap egészében](/).
 
 **Ossza meg véleményét erről a dokumentumról!** Az egyik javasolt elvünk az **Együttműködő fejlesztés**, amely szerint ez a honlap számtalan résztvevő közös terméke legyen. Ennek szellemében osztjuk meg a dizájnelveket az Ethereum közösségével.
 
-Miközben ezek az elvek az ethereum.org honlapra fókuszálnak, reméljük, hogy számos elv az Ethereum ökoszisztéma értékeit képviseli (például észrevehető az [az Ethereum fehékönyv elveinek](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy) hatása). Talán Ön is szívesen követné ezeket a saját projektjében!
+Miközben ezek az elvek az ethereum.org honlapra fókuszálnak, reméljük, hogy számos elv az Ethereum ökoszisztéma értékeit képviseli. Talán Ön is szívesen követné ezeket a saját projektjében!
 
 Tudassa velünk gondolatait a [Discord szerveren](https://discord.gg/ethereum-org) vagy azáltal, hogy [létrehoz egy issue-t](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

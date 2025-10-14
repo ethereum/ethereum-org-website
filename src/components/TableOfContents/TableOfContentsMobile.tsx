@@ -1,3 +1,6 @@
+"use client"
+
+import { cva, type VariantProps } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
 
 import type { ToCItem } from "@/lib/types"
@@ -13,12 +16,25 @@ import ItemsListMobile from "./ItemsListMobile"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
+const variants = cva("flex w-full justify-between lg:hidden", {
+  variants: {
+    variant: {
+      docs: "",
+      card: "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
+      left: "",
+    },
+  },
+  defaultVariants: {
+    variant: "docs",
+  },
+})
+
 export type TableOfContentsMobileProps = {
   items?: Array<ToCItem>
   maxDepth?: number
-}
+} & VariantProps<typeof variants>
 
-const Mobile = ({ items, maxDepth }: TableOfContentsMobileProps) => {
+const Mobile = ({ items, maxDepth, variant }: TableOfContentsMobileProps) => {
   const { t } = useTranslation("common")
 
   if (!items) {
@@ -28,11 +44,7 @@ const Mobile = ({ items, maxDepth }: TableOfContentsMobileProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          isSecondary
-          variant="outline"
-          className="flex w-full justify-between lg:hidden"
-        >
+        <Button isSecondary variant="outline" className={variants({ variant })}>
           <span className="flex-1 text-center">{t("on-this-page")}</span>
           <ChevronDown />
         </Button>

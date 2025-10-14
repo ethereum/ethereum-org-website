@@ -5,13 +5,14 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
@@ -20,8 +21,10 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+import FindWalletPageJsonLD from "./page-jsonld"
+
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-wallets-find-wallet",
@@ -35,6 +38,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const wallets = walletsData.map((wallet) => ({
     ...wallet,
+    id: wallet.name,
     supportedLanguages: getSupportedLanguages(
       wallet.languages_supported,
       locale!
@@ -48,31 +52,42 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
-  return (
-    <I18nProvider locale={locale} messages={messages}>
-      <MainArticle className="relative flex flex-col">
-        <div className="flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2">
-          <Breadcrumbs slug="wallets/find-wallet" />
-          <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
-            {t("page-find-wallet-title")}
-          </h1>
-          <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
-            {t("page-find-wallet-description")}
-          </p>
-        </div>
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "wallets/find-wallet",
+    locale as Lang,
+    commitHistoryCache
+  )
 
-        <FindWalletProductTable wallets={wallets} />
-      </MainArticle>
-    </I18nProvider>
+  return (
+    <>
+      <FindWalletPageJsonLD locale={locale} contributors={contributors} />
+
+      <I18nProvider locale={locale} messages={messages}>
+        <MainArticle className="relative flex flex-col">
+          <div className="flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2">
+            <Breadcrumbs slug="wallets/find-wallet" />
+            <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
+              {t("page-find-wallet-title")}
+            </h1>
+            <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
+              {t("page-find-wallet-description")}
+            </p>
+          </div>
+
+          <FindWalletProductTable wallets={wallets} />
+        </MainArticle>
+      </I18nProvider>
+    </>
   )
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

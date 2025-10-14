@@ -224,7 +224,7 @@ Economics research in Ethereum broadly follows two approaches: validate the secu
 
 #### Background reading {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ETHconomics workshop at Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Recent research {#recent-research-9}
@@ -307,7 +307,7 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 #### Recent research {#recent-research-14}
 
-- [Robust Incentives Group Data Analysis](https://ethereum.github.io/rig/)
+- [Robust Incentives Group Data Analysis](https://rig.ethereum.org/)
 
 ## Apps and tooling {#apps-and-tooling}
 
@@ -377,7 +377,7 @@ Hacks on Ethereum generally exploit vulnerabilities in individual applications r
 
 - [Wormhole exploit report](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [List of Ethereum contract hack post-mortems](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Recent research {#recent-research-19}
 

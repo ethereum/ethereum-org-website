@@ -43,7 +43,6 @@ lang: zh
 
 - [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lightthouse 的本地测试网](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [使用 Nimbus 的本地测试网](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公共以太坊测试链 {#public-beacon-testchains}
 

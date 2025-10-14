@@ -53,7 +53,7 @@ Both options have different advantages summed up above. If you are looking for a
 
 #### Hardware {#hardware}
 
-However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/networkType/Hosting) show a large share of nodes run on the cloud, which could become a single point of failure.
+However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/network-types) show a large share of nodes run on the cloud, which could become a single point of failure.
 
 Ethereum clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
@@ -101,7 +101,7 @@ The sync mode and client you choose will affect space requirements, but we've es
 
 - Note: Erigon and Reth do not offer snap sync, but Full Pruning is possible (~2TB for Erigon, ~1.2TB for Reth)
 
-For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+For consensus clients, space requirement also depends on client implementation and enabled features (e.g., validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Plug-and-play solutions {#plug-and-play}
 
@@ -177,7 +177,7 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
-Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on verifying open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
+Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g., [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on verifying open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
 
 Another form of verification is to make sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example:
 
@@ -191,9 +191,9 @@ sha256sum teku-22.6.1.tar.gz
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
-Let's start with options that can significantly influence client performance and data usage. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider are the disk space, and sync time the client will need. Pay attention to the client's docs to determine which sync mode is the default. If that doesn't suit you, pick another one based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks.
+Let's start with options that can significantly influence client performance and data usage. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider are the disk space, and sync time the client will need. Pay attention to the client's docs to determine which sync mode is the default. If that doesn't suit you, pick another one based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, i.e., removing state trie nodes that are unreachable from recent blocks.
 
-Other basic configuration options are, e.g. choosing a network - Mainnet or testnets, enabling HTTP endpoint for RPC or WebSockets, etc. You can find all features and options in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags directly in the CLI or config file. Each client is a bit different; please always refer to its official documentation or help page for details on config options.
+Other basic configuration options are, e.g., choosing a network - Mainnet or testnets, enabling HTTP endpoint for RPC or WebSockets, etc. You can find all features and options in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags directly in the CLI or config file. Each client is a bit different; please always refer to its official documentation or help page for details on config options.
 
 For testing purposes, you might prefer to run a client on one of the testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#execution-clients).
 
@@ -228,11 +228,11 @@ This section will guide you through starting execution clients. It only serves a
 - Specifies network to connect to, Mainnet in our examples
   - You can instead choose [one of testnets](/developers/docs/networks/) for preliminary testing of your setup
 - Defines data directory, where all the data including blockchain will be stored
-  - Make sure to substitute the path with a real one, e.g. pointing to your external drive
+  - Make sure to substitute the path with a real one, e.g., pointing to your external drive
 - Enables interfaces for communicating with the client
   - Including JSON-RPC and Engine API for communication with consensus client
 - Defines path to `jwtsecret` for authenticated API
-  - Make sure to substitute the example path with a real one which can be accessed by clients, e.g. `/tmp/jwtsecret`
+  - Make sure to substitute the example path with a real one which can be accessed by clients, e.g., `/tmp/jwtsecret`
 
 Please keep in mind that this is just a basic example, all other settings will be set to default. Pay attention to the documentation of each client to learn about default values, settings, and features. For more features, for example for running validators, monitoring, etc., please refer to the documentation of the specific client.
 
@@ -298,7 +298,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind docs offer a [complete guide](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
+Nethermind docs offer a [complete guide](https://docs.nethermind.io/get-started/running-node/) on running Nethermind with consensus client.
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
@@ -321,7 +321,7 @@ The consensus client must be started with the right port configuration to establ
 
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
-If you plan to run a validator, make sure to add a configuration flag specifying the Ethereum address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes an Ethereum address as an argument.
+If you plan to run a validator, make sure to add a configuration flag specifying the Ethereum address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g., `--suggested-fee-recipient=0xabcd1`, that takes an Ethereum address as an argument.
 
 When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
@@ -368,7 +368,7 @@ nimbus_beacon_node \
 
 ##### Running Prysm
 
-Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -403,9 +403,9 @@ Look into [staking page](/staking) for an overview about staking options.
 
 Execution clients offer [RPC API endpoints](/developers/docs/apis/json-rpc/) that you can use to submit transactions, interact with or deploy smart contracts on the Ethereum network in various ways:
 
-- Manually calling them with a suitable protocol (e.g. using `curl`)
-- Attaching a provided console (e.g. `geth attach`)
-- Implementing them in applications using web3 libraries, e.g. [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
+- Manually calling them with a suitable protocol (e.g., using `curl`)
+- Attaching a provided console (e.g., `geth attach`)
+- Implementing them in applications using web3 libraries, e.g., [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
 
 Different clients have different implementations of the RPC endpoints. But there is a standard JSON-RPC which you can use with every client. For an overview [read the JSON-RPC docs](/developers/docs/apis/json-rpc/). Applications that need information from the Ethereum network can use this RPC. For example, popular wallet MetaMask lets you [connect to your own RPC endpoint](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) which has strong privacy and security benefits.
 
@@ -443,7 +443,7 @@ _This doesn't apply on consensus layer validator nodes._ Taking your node offlin
 
 #### Creating client services {#creating-client-services}
 
-Consider creating a service to run your clients automatically on startup. For example, on Linux servers, good practice would be to create a service, e.g. with `systemd`, that executes the client with proper config, under a user with limited privileges and automatically restarts.
+Consider creating a service to run your clients automatically on startup. For example, on Linux servers, good practice would be to create a service, e.g., with `systemd`, that executes the client with proper config, under a user with limited privileges and automatically restarts.
 
 #### Updating clients {#updating-clients}
 
