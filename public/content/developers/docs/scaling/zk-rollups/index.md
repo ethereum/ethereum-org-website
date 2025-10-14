@@ -241,7 +241,7 @@ Projects working on zkEVMs include:
 
 - **[Morph](https://www.morphl2.io/)** - _Morph is a hybrid rollup scaling solution that utilizes zk-proof to address the Layer 2 state challenge issue._
 
-- **[Linea](https://www.linea.build/)** - _Linea is an Ethereum-equivalent zkEVM Layer 2 built by Consensys, fully aligned with the Ethereum ecosystem._
+- **[Linea](https://linea.build)** - _Linea is an Ethereum-equivalent zkEVM Layer 2 built by Consensys, fully aligned with the Ethereum ecosystem._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
