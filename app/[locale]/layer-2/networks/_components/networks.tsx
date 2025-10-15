@@ -10,7 +10,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
-import heroImg from "@/public/images/layer-2/learn-hero.png"
+import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 import Callout1Image from "@/public/images/man-and-dog-playing.png"
 
 const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
