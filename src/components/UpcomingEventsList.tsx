@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { groupBy } from "lodash"
 import { useLocale } from "next-intl"
 
 import type { CommunityConference, Lang } from "@/lib/types"
@@ -23,7 +22,15 @@ const UpcomingEventsList = () => {
   const { t } = useTranslation("page-community")
   const monthsPerLoad = 2
 
-  const [monthGroupedEvents, setMonthGroupedEvents] = useState({})
+  type FormattedCommunityEvent = CommunityConference & {
+    date: string
+    formattedDetails: string
+  }
+
+  type MonthGroupedEvents = Record<string, Array<FormattedCommunityEvent>>
+
+  const [monthGroupedEvents, setMonthGroupedEvents] =
+    useState<MonthGroupedEvents>({})
   const [maxRange, setMaxRange] = useState<number>(monthsPerLoad)
 
   // Create Date object from each YYYY-MM-DD JSON date string
@@ -53,31 +60,44 @@ const UpcomingEventsList = () => {
     )
 
     // Add formatted string to display
-    const formattedEvents = orderedEvents.map((event) => {
-      const getDate = (date) =>
-        getLocaleTimestamp(locale! as Lang, dateParse(date).toString(), {})
+    const formattedEvents: Array<FormattedCommunityEvent> = orderedEvents.map(
+      (event) => {
+        const getDate = (date) =>
+          getLocaleTimestamp(locale! as Lang, dateParse(date).toString(), {})
 
-      const dateRange =
-        event.startDate === event.endDate
-          ? getDate(event.startDate)
-          : `${getDate(event.startDate)} - ${getDate(event.endDate)}`
+        const dateRange =
+          event.startDate === event.endDate
+            ? getDate(event.startDate)
+            : `${getDate(event.startDate)} - ${getDate(event.endDate)}`
 
-      const details = `${event.description}`
+        const details = `${event.description}`
 
-      return {
-        ...event,
-        date: dateRange,
-        formattedDetails: details,
+        return {
+          ...event,
+          date: dateRange,
+          formattedDetails: details,
+        }
       }
-    })
-    const groupedEvents = groupBy(formattedEvents, ({ startDate }) => {
-      const start = new Date(startDate.replace(/-/g, "/"))
-      const formatYearMonth = new Intl.DateTimeFormat(locale, {
-        month: "short",
-        year: "numeric",
-      }).format(start)
-      return `${formatYearMonth}`
-    })
+    )
+
+    const groupedEvents = formattedEvents.reduce<MonthGroupedEvents>(
+      (acc, event) => {
+        const start = new Date(event.startDate.replace(/-/g, "/"))
+        const formatYearMonth = new Intl.DateTimeFormat(locale, {
+          month: "short",
+          year: "numeric",
+        }).format(start)
+        const key = `${formatYearMonth}`
+
+        if (!acc[key]) {
+          acc[key] = []
+        }
+
+        acc[key].push(event)
+        return acc
+      },
+      {}
+    )
 
     setMonthGroupedEvents(groupedEvents)
   }, [locale])
