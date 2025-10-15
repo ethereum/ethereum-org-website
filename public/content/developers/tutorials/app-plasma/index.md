@@ -14,8 +14,6 @@ In contrast to [rollups](/developers/docs/scaling/zk-rollups/), [plasmas](/devel
 
 The application we write here is a privacy-preserving bank. Different addresses have accounts with balances, and they can send money (ETH) to other accounts. The bank posts hashes of the state (accounts and their balances) and transactions, but keeps the actual balances offchain where they can stay private.
 
-$x+y$
-
 ## Design {#design}
 
 This is not a production-ready system, but a teaching tool. As such, it is written with a number of simplifying assumptions.
