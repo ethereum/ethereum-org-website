@@ -66,7 +66,7 @@ function get(uint id) returns (address,address) {
 }
 ```
 
-makes a difference of **0.28kb**. Chances are you can find many similar situations in your contracts and those can really add up to significant amounts.
+Makes a difference of **0.28kb**. Chances are you can find many similar situations in your contracts and those can really add up to significant amounts.
 
 ### Shorten error message {#shorten-error-message}
 
@@ -74,7 +74,6 @@ Long revert messages and in particular many different revert messages can bloat 
 
 ```solidity
 require(msg.sender == owner, "Only the owner of this contract can call this function");
-
 ```
 
 ```solidity
@@ -101,7 +100,7 @@ You can also change the optimizer settings. The default value of 200 means that 
 
 ### Avoid passing structs to functions {#avoid-passing-structs-to-functions}
 
-If you are using the [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), it can help to not pass structs to a function. Instead of passing the parameter as a struct...
+If you are using the [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), it can help to not pass structs to a function. Instead of passing the parameter as a struct:
 
 ```solidity
 function get(uint id) returns (address,address) {
@@ -123,7 +122,7 @@ function _get(address addr1, address addr2) private view returns(address,address
 }
 ```
 
-... pass the required parameters directly. In this example we saved another **0.1kb**.
+Pass the required parameters directly. In this example we saved another **0.1kb**.
 
 ### Declare correct visibility for functions and variables {#declare-correct-visibility-for-functions-and-variables}
 
