@@ -2,7 +2,7 @@
 
 import { Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
-import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import Emoji from "../components/Emoji"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
@@ -21,7 +21,6 @@ import {
   CreateAccount,
   SendReceive,
 } from "../components/Simulator/screens"
-import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 import type { SimulatorData } from "../components/Simulator/types"
 
 export const walletOnboardingSimData: SimulatorData = {
@@ -31,169 +30,112 @@ export const walletOnboardingSimData: SimulatorData = {
     Screen: CreateAccount,
     explanations: [
       {
-        header: "Begin your journey by downloading a wallet",
+        header: "🟪 Step 1 · Install a wallet",
         description: (
           <>
-            <p>To get started, you&apos;ll need to download a wallet app.</p>
+            <p>Pick a mobile wallet app to get started.</p>
             <p>
-              Most people use mobile apps, but desktop apps and browser
-              extensions are also available.
-            </p>
-            <p>
-              Let&apos;s set up a mobile wallet. Click &quot;Install a
-              wallet&quot; to get started.
+              Install it on your phone and we will guide you the rest of the
+              way.
             </p>
           </>
         ),
       },
       {
-        header: "Wallets are free apps you can download",
+        header: "🟪 Step 2 · Open your wallet",
         description: (
           <>
             <p>
-              Mobile wallet apps can be downloaded and installed using any app
-              store.
+              Your new wallet is ready to go—no account form or sign-up needed.
             </p>
-            <p>
-              Wallets provide an easy way to create an Ethereum account, and
-              then use Ethereum and its applications.
-            </p>
-            <p>Go ahead and open your new wallet app.</p>
+            <p>Open it so we can set everything up together.</p>
           </>
         ),
       },
       {
-        header: "Creating an account is free, private and easy",
+        header: "🟪 Step 3 · Create your account",
+        description: (
+          <>
+            <p>One tap creates your Ethereum account.</p>
+            <p>No email, approvals, or personal details required.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 4 · See your new account",
+        description: (
+          <>
+            <p>This account belongs to you—and only you.</p>
+            <p>No wallet provider or company can access it.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 5 · Back up your recovery phrase",
+        description: (
+          <>
+            <p>This phrase is the only way to recover your wallet.</p>
+            <p>Do not share it. Do not lose it.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 6 · Save it safely",
+        description: (
+          <>
+            <Stack>
+              <UnorderedList className="ms-0 list-none">
+                <ListItem>
+                  <Emoji text="✅" className="me-2" />
+                  Write the phrase on paper.
+                </ListItem>
+                <ListItem>
+                  <Emoji text="✅" className="me-2" />
+                  Store it somewhere secure—and keep a spare copy.
+                </ListItem>
+                <ListItem>
+                  <Emoji text="❌" className="me-2" />
+                  Do not text it, email it, or keep a screenshot.
+                </ListItem>
+              </UnorderedList>
+            </Stack>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 7 · Confirm your recovery phrase",
         description: (
           <>
             <p>
-              Ethereum accounts are created privately and do not require any
-              forms or approval—no personal identifying information required!
+              Tap the words in the right order to prove you saved the phrase.
             </p>
             <p>
-              Click on &quot;Create account&quot; to generate a new account.
+              This check only happens during setup—you will not do it again.
             </p>
           </>
         ),
       },
       {
-        header:
-          "This is YOUR account, and nobody else's—you control it completely",
+        header: "🟪 Step 8 · You're all set 🎉",
         description: (
           <p>
-            No company, including your wallet provider, has access to your
-            account.
-          </p>
-        ),
-      },
-      {
-        header: "A recovery phrase is used to keep the account safe",
-        description: (
-          <>
-            <p>
-              You and only you control this phrase, so it is critical to take
-              steps to backup and secure it.
-            </p>
-            <p>
-              Read carefully and click &quot;I understand&quot; to see and
-              backup your recovery phrase.
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "Keep your phrase safe!",
-        description: (
-          <>
-            <Stack>
-              <p className="font-bold">Storing small amount of value:</p>
-              <UnorderedList className="leading-1 ms-0 list-none">
-                <ListItem>
-                  <Emoji text="✅" className="me-2" /> Consider saving in a
-                  password manager
-                </ListItem>
-              </UnorderedList>
-            </Stack>
-            <Stack>
-              <p className="font-bold">Storing any significant value:</p>
-              <UnorderedList className="leading-1 ms-0 list-none">
-                <ListItem>
-                  <Emoji text="✅" className="me-2" /> Write your recovery
-                  phrase down
-                </ListItem>
-                <ListItem>
-                  <Emoji text="✅" className="me-2" /> Store it in a safe place
-                  (consider multiple backups)
-                </ListItem>
-                {/* TODO: Add link for seed phrase further reading */}
-                {/* <ListItem>
-                <Emoji text="✅" className="me-2" />{" "}
-                <Link href="#TODO-link-out">
-                Learn more on protecting your recovery phrase
-                </Link>
-                </ListItem> */}
-              </UnorderedList>
-            </Stack>
-            <Stack>
-              <p className="font-bold">Unsafe backup methods:</p>
-              <UnorderedList className="leading-1 ms-0 list-none">
-                <ListItem>
-                  <Emoji text="❌" className="me-2" />
-                  Texting it to a friend (or anyone!)
-                </ListItem>
-                <ListItem>
-                  <Emoji text="❌" className="me-2" />
-                  Taking a picture of the phrase
-                </ListItem>
-                <ListItem>
-                  <Emoji text="❌" className="me-2" />
-                  Saving it in a file on your computer
-                </ListItem>
-              </UnorderedList>
-            </Stack>
-          </>
-        ),
-      },
-      {
-        header: "Repeat phrase to prove you have saved it",
-        description: (
-          <>
-            <p>
-              This is done on initial setup only, but is <strong>not</strong>{" "}
-              required every time.
-            </p>
-            <p>
-              <strong>Keep this private!</strong> Nobody from customer service
-              should <em>ever</em> ask you for this.
-            </p>
-            <p>
-              Click the words in the correct order to prove you&apos;ve backed
-              up your phrase.
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "That's it! Welcome to Ethereum 🎉",
-        description: (
-          <p>
-            In the next lesson we&apos;ll learn how to use your new account to
-            receive and send some funds.
+            Your wallet is ready. Next, we will show you how to send and receive
+            crypto.
           </p>
         ),
       },
     ],
     ctaLabels: [
-      "Install a wallet",
+      "Install wallet",
       "Open wallet",
       "Create account",
       "Next",
       "I understand",
       "Next",
-      "Start using wallet",
+      "Confirm phrase",
     ],
     finalCtaLink: {
-      label: "Download a real wallet",
+      label: "Get a real wallet",
       href: "/wallets/find-wallet/",
     },
     nextPathId: SEND_RECEIVE,
@@ -204,236 +146,151 @@ export const walletOnboardingSimData: SimulatorData = {
     Screen: SendReceive,
     explanations: [
       {
-        header: "Receive digital assets from anywhere",
+        header: "🟪 Step 1 · Receive some tokens",
         description: (
           <>
+            <p>Your wallet can hold ETH, tokens, and NFTs.</p>
             <p>
-              Your wallet helps you manage your funds,{" "}
-              <GlossaryTooltip termKey="nft">NFTs</GlossaryTooltip>,{" "}
-              <GlossaryTooltip termKey="web3">Web3</GlossaryTooltip> identity
-              and more. Here we&apos;ll go over how to receive and send some
-              tokens on Ethereum.
-            </p>
-            <p>
-              Let&apos;s first look at how to receive ether (ETH),
-              Ethereum&apos;s native currency.
-            </p>
-            <p>
-              Click the &quot;Receive&quot; button to see how to receive funds.
+              Tap &quot;Receive&quot; to see how easy it is to accept assets—no
+              cost, no approval needed.
             </p>
           </>
         ),
       },
       {
-        header: "Receiving tokens is as easy as sharing your address",
+        header: "🟪 Step 2 · Share your address",
         description: (
           <>
+            <p>Your wallet address is safe to share.</p>
+            <p>Give it to anyone who wants to send you tokens.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 3 · Now try sending some",
+        description: (
+          <>
+            <p>You just received some ETH. Let&apos;s send a little back.</p>
+            <p>Tap &quot;Send&quot; to give it a try.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 4 · Choose how much to send",
+        description: (
+          <>
+            <p>Pick an amount—five dollars, ten dollars, or more.</p>
+            <p>There is no middleman. It just works.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 5 · Pick who to send it to",
+        description: (
+          <>
+            <p>Enter a wallet address or choose a recent contact.</p>
+            <p>You can save trusted addresses so they are ready next time.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 6 · Confirm and send",
+        description: (
+          <>
+            <p>You will see the fee before you send.</p>
             <p>
-              Your address is a <em>sharable</em> identifier for your
-              account—share this with others to receive tokens.
-            </p>
-            <p>
-              An Ethereum address is like a transparent public dropbox, with
-              your own unique number on it—anyone can see in, or put stuff
-              inside, but only you have the ability to unlock and use its
-              contents.
+              That small fee—called{" "}
+              <GlossaryTooltip termKey="gas">gas</GlossaryTooltip>—pays{" "}
+              <GlossaryTooltip termKey="validator">validators</GlossaryTooltip>{" "}
+              to keep Ethereum running. Think of it like postage that delivers
+              your transaction.
             </p>
           </>
         ),
       },
       {
-        header: "You received ether (ETH)! Now let's send some",
+        header: "🟪 Step 7 · You sent crypto instantly 🎉",
         description: (
-          <>
-            <p>
-              Now you have some ETH to cover network fees, allowing you to
-              submit transactions yourself.
-            </p>
-            <p>
-              Note that you didn&apos;t need to provide any personal
-              information, or have any funds to begin with to start receiving
-              assets to your address—receiving is free. <Emoji text="😁" />
-            </p>
-            <p>
-              Let&apos;s try sending some ETH by clicking the &quot;Send&quot;
-              button.
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "Sending tokens is quick and irreversible",
-        description: (
-          <>
-            <p>
-              Unlike with traditional banking, there are no borders, or third
-              parties intervening and stopping your transactions.
-            </p>
-            <p>
-              Ethereum doesn&apos;t discriminate, and never stops, allowing you
-              full control over your funds—24/7.
-            </p>
-            <p>
-              Select an amount to send then click &quot;Select recipient.&quot;
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "You can save contacts to make it easier",
-        description: (
-          <>
-            <p>
-              To send tokens, you only need to know the recipients Ethereum
-              address.
-            </p>
-            <p>You can send tokens anywhere globally at any time.</p>
-            <p>
-              As you use your wallet, you can save users as contacts for
-              repeated use. Let&apos;s send some funds back to{" "}
-              {CONTACTS[0].name}.
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "You will need small amount of ETH to send tokens (fee)",
-        description: (
-          <>
-            <p>
-              Make sure your account has enough ETH to cover network fees. Fees
-              change based on how many people are using Ethereum.
-            </p>
-            <p>
-              Most wallets will automatically add the suggested fee to the
-              transaction which you can then confirm.
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "Peer-to-peer. Global. Always available. 🎉",
-        description: (
-          <p>
-            Start the next lesson to learn how to use your wallet to log into
-            Web3 applications.
-          </p>
+          <p>No banks. No borders. You are ready for the next lesson.</p>
         ),
       },
     ],
-    ctaLabels: ["", "Share address", "", "Select recipient", "", "Send now"],
+    ctaLabels: [
+      "Receive",
+      "Share address",
+      "Send",
+      "Select recipient",
+      "Review and send",
+      "Send now",
+    ],
     finalCtaLink: {
-      label: "Download a real wallet",
+      label: "Get a real wallet",
       href: "/wallets/find-wallet/",
     },
     nextPathId: CONNECT_WEB3,
   },
   [CONNECT_WEB3]: {
-    title: "Connect to Web3",
+    title: "Connect to Ethereum",
     Icon: ConnectWeb3Icon,
     Screen: ConnectWeb3,
     explanations: [
       {
-        header: "Explore Web3: from NFTs to decentralized finance and identity",
+        header: "🟪 Step 1 · Visit an NFT market",
         description: (
           <>
+            <p>Your wallet unlocks apps like marketplaces, games, and more.</p>
+            <p>Let&apos;s open one and check out the NFT your friend sent.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 2 · Connect wallet",
+        description: (
+          <>
+            <p>No sign-up required.</p>
+            <p>Tap once and your account works across every Ethereum app.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 3 · Authorize the connection",
+        description: (
+          <>
+            <p>Approve the request in your wallet.</p>
+            <p>The app does not see your private information.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 4 · Go to your account",
+        description: (
+          <>
+            <p>You are signed in—no email, no password, just your wallet.</p>
+            <p>Browse around like you would in any other app.</p>
+          </>
+        ),
+      },
+      {
+        header: "🟪 Step 5 · View your NFT",
+        description: (
+          <>
+            <p>There it is.</p>
             <p>
-              Your wallet can be used to connect to all sorts of applications,
-              allowing you to interact with your onchain assets.
-            </p>
-            <p>
-              Your friend just sent an NFT art piece to your address! Let&apos;s
-              go to a new NFT marketplace website to view it.
+              Your wallet shows what lives on the blockchain—it does not store
+              the assets itself.
             </p>
           </>
         ),
       },
       {
-        header: "No need to create a new account for each service",
+        header: "🟪 Step 6 · Get a wallet for real use",
         description: (
           <>
+            <p>You are ready to explore Ethereum apps on your own.</p>
             <p>
-              Your account is universal across all Ethereum and
-              Ethereum-compatible applications.
+              Stay safe, and discover even more experiences in the{" "}
+              <Link href="/apps/">Ethereum apps directory</Link>.
             </p>
-            <p>Assets stored onchain can be accessed from any application.</p>
-          </>
-        ),
-      },
-      {
-        header: "You can have a single login for most Ethereum based projects",
-        description: (
-          <>
-            <p>
-              The same account address will represent your identity on many
-              different Ethereum compatible blockchains such as Arbitrum,
-              Polygon or Optimism.
-            </p>
-            <p>
-              Logins are handled by your wallet—no more creating insecure
-              passwords.
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "Personal identifying information is not shared",
-        description: (
-          <>
-            <p>Your private information stays private.</p>
-            <p>
-              Your personal information, such as email or phone number, is not
-              needed to use Web3 apps—you only need a wallet.
-            </p>
-            <p>
-              Also note there are no associated transaction fees here—signing in
-              using Ethereum is free, fast and easy!
-            </p>
-          </>
-        ),
-      },
-      {
-        header:
-          "No geographical or political discrimination against who can use Ethereum services",
-        description: (
-          <>
-            <p>There&apos;s the NFT you received!</p>
-            <p>
-              Wallets are technically only an interface to show you your balance
-              and to make transactions—
-              <strong>
-                your assets aren&apos;t stored inside the wallet, but on the
-                blockchain.
-              </strong>
-            </p>
-          </>
-        ),
-      },
-      {
-        header: "Start your journey now",
-        description: (
-          <>
-            <p>Great job! You&apos;re ready to start using apps on Ethereum.</p>
-            <Stack>
-              <p className="font-bold">What to do next:</p>
-              <OrderedList>
-                <ListItem>
-                  <Link href="/security/">
-                    Learn about staying safe in Web3
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="/what-is-ethereum/">
-                    Learn more about Ethereum
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="/apps/">
-                    Check out some beginner friendly apps
-                  </Link>
-                </ListItem>
-              </OrderedList>
-            </Stack>
           </>
         ),
       },
@@ -446,7 +303,7 @@ export const walletOnboardingSimData: SimulatorData = {
       "Finished",
     ],
     finalCtaLink: {
-      label: "Get a wallet",
+      label: "Get a real wallet",
       href: "/wallets/find-wallet/",
       isPrimary: true,
     },
