@@ -276,6 +276,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={EthereumOrgLogo}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[123px]"
+              sizes="123px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
