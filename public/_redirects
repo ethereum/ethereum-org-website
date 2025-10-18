@@ -183,4 +183,4 @@
 
 /history /ethereum-forks 301!
 
-/*/history /ethereum-forks 301!
+/*/history /:splat/ethereum-forks 301!
