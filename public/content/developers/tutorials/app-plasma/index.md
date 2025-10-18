@@ -18,7 +18,7 @@ The application we write here is a privacy-preserving bank. Different addresses 
 
 This is not a production-ready system, but a teaching tool. As such, it is written with a number of simplifying assumptions.
 
-- Fixed account pool. There is a specific number of accounts, which belong to predetermined addresses. This makes for a much simpler system because it is difficult to handle variable size data structures in zero-knowledge proofs. For a production-ready system, we can use the [Merkle root](https://ethereum.org/en/developers/tutorials/merkle-proofs-for-offline-data-integrity/) as the state hash and provide Merkle proofs for the balances we need.
+- Fixed account pool. There is a specific number of accounts, which belong to predetermined addresses. This makes for a much simpler system because it is difficult to handle variable size data structures in zero-knowledge proofs. For a production-ready system, we can use the [Merkle root](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) as the state hash and provide Merkle proofs for the balances we need.
 
 - Memory storage. On a production system we need to write all the account balances to disk to preserve them in case of a restart. Here it's OK if the information is simply lost.
 
