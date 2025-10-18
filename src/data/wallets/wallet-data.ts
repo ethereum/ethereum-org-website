@@ -947,7 +947,7 @@ export const walletsData: WalletData[] = [
     url: "https://unstoppable.money/",
     active_development_team: true,
     languages_supported: ["en", "fr", "de", "ko", "ru", "zh", "es", "tr"],
-    twitter: "https://x.com/myetherwallet",
+    twitter: "https://x.com/unstoppablebyhs",
     discord: "https://discord.com/invite/3uECHQ3cEk",
     reddit: "https://www.reddit.com/r/UNSTOPPABLEWallet/",
     telegram: "https://t.me/unstoppable_announcements",
