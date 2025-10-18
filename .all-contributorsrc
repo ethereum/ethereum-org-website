@@ -13620,6 +13620,24 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Inspector-Butters",
+      "name": "Bastin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43618253?v=4",
+      "profile": "https://github.com/Inspector-Butters",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Gwen-M",
+      "name": "Gwen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55929788?v=4",
+      "profile": "https://github.com/Gwen-M",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
