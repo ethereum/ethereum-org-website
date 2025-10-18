@@ -126,7 +126,7 @@ User's funds are at risk if:
 
 One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million USD) was stolen during the hack](https://rekt.news/wormhole-rekt/). Many of the [top hacks in blockchains involved bridges](https://rekt.news/leaderboard/).
 
-Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://debridge.finance/learn/blog/10-strategies-for-cross-chain-security/).
+Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
