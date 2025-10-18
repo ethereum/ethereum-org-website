@@ -2108,6 +2108,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://ihagopian.com"><img src="https://avatars.githubusercontent.com/u/6136245?v=4?s=100" width="100px;" alt="Ignacio Hagopian"/><br /><sub><b>Ignacio Hagopian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jsign" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MamunC0der"><img src="https://avatars.githubusercontent.com/u/161350311?v=4?s=100" width="100px;" alt="Coder"/><br /><sub><b>Coder</b></sub></a><br /><a href="#maintenance-MamunC0der" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MOSHKA-GOT"><img src="https://avatars.githubusercontent.com/u/225852520?v=4?s=100" width="100px;" alt="MOSHKA-GOT"/><br /><sub><b>MOSHKA-GOT</b></sub></a><br /><a href="#maintenance-MOSHKA-GOT" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Pabl0cks"><img src="https://avatars.githubusercontent.com/u/55535804?v=4?s=100" width="100px;" alt="Pablo"/><br /><sub><b>Pablo</b></sub></a><br /><a href="#maintenance-Pabl0cks" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Inspector-Butters"><img src="https://avatars.githubusercontent.com/u/43618253?v=4?s=100" width="100px;" alt="Bastin"/><br /><sub><b>Bastin</b></sub></a><br /><a href="#maintenance-Inspector-Butters" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Gwen-M"><img src="https://avatars.githubusercontent.com/u/55929788?v=4?s=100" width="100px;" alt="Gwen"/><br /><sub><b>Gwen</b></sub></a><br /><a href="#tool-Gwen-M" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>

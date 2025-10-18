@@ -1113,6 +1113,7 @@ export type App = {
   dateOfLaunch: string
   lastUpdated: string
   ready: string
+  devconnect: string
 }
 
 export type DefiApp = App & {

@@ -346,7 +346,7 @@ Install Lodestar software by compiling it or downloading the Docker image. Learn
 
 ```sh
 lodestar beacon \
-    --rootDir="/data/ethereum" \
+    --dataDir="/data/ethereum" \
     --network=mainnet \
     --eth1.enabled=true \
     --execution.urls="http://127.0.0.1:8551" \
