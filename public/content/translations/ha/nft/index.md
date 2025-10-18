@@ -58,7 +58,7 @@ Ta iya yuwa kai mai zane ne mai so ya raba aiyukansa ta hanyar amfani da NFTs, b
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Bincika, siya ko ka kirkira naka NFT zane/tattatarawa...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Faɗaɗa zanen NFT
   </ButtonLink>
 </AlertContent>

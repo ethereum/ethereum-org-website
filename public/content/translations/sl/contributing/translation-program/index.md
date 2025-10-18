@@ -20,7 +20,7 @@ Naš napredek do zdaj:
 <AlertEmoji text=":tada:"/>
 <AlertContent>
 <AlertDescription>
-  Prevzemite svoj POAP žeton! Če ste prevajali ethereum.org v letu 2021, vas čaka edinstven POAP. <a href="/contributing/#poap">Več o POAP-ih</a>
+  Prevzemite svoj POAP žeton! Če ste prevajali ethereum.org v letu 2021, vas čaka edinstven POAP. [Več o POAP-ih](/contributing/#poap)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +104,7 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 <AlertContent>
 <AlertDescription>
   Če nam pomagate pri prevajanju, boste morda našli uporabne informacije v naši prevajalski FAQ sekciji. 
-  <a href="/contributing/translation-program/faq/">Prevajanje ethereum.org FAQ</a>
+  [Prevajanje ethereum.org FAQ](/contributing/translation-program/faq/)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -113,7 +113,6 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 
 **Orodja**
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– uporaben za iskanje in preverjanje standardnih prevodov tehničnih izrazov_
 - [Linguee](https://www.linguee.com/)_ – iskalnik za prevode in slovar, ki omogoča iskanje po besedah ali frazah_
 - [Proz term search](https://www.proz.com/search/)_ – podatkovna baza prevajalskih slovarjev za specializirane izraze_
 - [Eurotermbank](https://www.eurotermbank.com/)_ – zbirke evropske terminologije v 42-ih jezikih_

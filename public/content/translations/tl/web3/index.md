@@ -145,7 +145,7 @@ Nasa simula pa lang tayo ng paggawa ng mas magandang Web sa tulong ng Web3, pero
 
 - [Kumuha ng wallet](/wallets/)
 - [Maghanap ng komunidad](/community/)
-- [Siyasatin ang mga Web3 application](/dapps/)
+- [Siyasatin ang mga Web3 application](/apps/)
 - [Join a DAO](/dao/)
 - [Gumawa sa Web3](/developers/)
 
@@ -153,11 +153,11 @@ Nasa simula pa lang tayo ng paggawa ng mas magandang Web sa tulong ng Web3, pero
 
 Walang malinaw na pagpapakahulugan sa Web3. May iba't ibang pananaw dito ang iba't ibang kalahok ng komunidad. Narito ang ilan sa mga ito:
 
-- [Ano ang Web3? Pagpapaliwanag sa Decentralized Internet ng Hinaharap](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Ano ang Web3? Pagpapaliwanag sa Decentralized Internet ng Hinaharap](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Pagiging Makabulhan ng Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Bakit Mahalaga ang Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Bakit Mahalaga ang Decentralization](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Ang Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Ang Debate tungkol sa Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Ang Debate tungkol sa Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

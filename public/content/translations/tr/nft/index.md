@@ -58,7 +58,7 @@ Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kont
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     NFT eserlerini keşfedin
   </ButtonLink>
 </AlertContent>

@@ -34,7 +34,7 @@ Nyissa meg a nyelvet, amelyre fordítani szeretne, így láthatja a fájlok list
 
 A honlap tartalma fel van osztva dokumentumokra és tartalommappákra. A dokumentumok státuszát láthatja a jobb oldalon - ha a fordítási eredmény kisebb mint 100%, akkor segítsen be!
 
-Nem találja a nyelvet? [Nyisson egy kérést](https://github.com/ethereum/ethereum-org-website/issues/new/choose) vagy kérdezze meg a [Discord](/discord/) csatornán
+Nem találja a nyelvet? [Nyisson egy kérést](https://github.com/ethereum/ethereum-org-website/issues/new/choose) vagy kérdezze meg a [Discord](https://discord.gg/ethereum-org) csatornán
 
 ![A lefordított és még nem fordított fájlok a Crowdin-ban](./crowdin-files.png)
 
@@ -85,7 +85,7 @@ Miután befejezte a fordítást (a tartalommappa összes fájlja 100%-ot mutat),
 
 ### Kapcsolatfevétel {#get-in-touch}
 
-Kérdése van? Vagy szeretne együttműködni a csapatunkkal és más fordítókkal? Írjon nekünk a #translations csatornán az [ethereum.org Discord szerveren](/discord/)
+Kérdése van? Vagy szeretne együttműködni a csapatunkkal és más fordítókkal? Írjon nekünk a #translations csatornán az [ethereum.org Discord szerveren](https://discord.gg/ethereum-org)
 
 Elérhet minket a translations@ethereum.org címen is
 

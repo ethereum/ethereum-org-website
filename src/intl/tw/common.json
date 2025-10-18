@@ -226,7 +226,7 @@
   "nav-contribute-description": "Sɛ wopɛ sɛ woboa a, eyi bɛkyerɛ wo kwan",
   "nav-contribute-label": "Boa na fa bi ka ma ethereum.org hu",
   "nav-dao-description": "Mpɔtam nkorɔfo na wɔwɔ a wonni tumi a ɛwɔ mfinimfini",
-  "nav-dapps-description": "Hwehwɛ abɔde a nkwa wom a ɛyɛ fɛ a ɛwɔ kɔmputa apps a wode Ethereum di dwuma no mu",
+  "nav-apps-description": "Hwehwɛ abɔde a nkwa wom a ɛyɛ fɛ a ɛwɔ kɔmputa apps a wode Ethereum di dwuma no mu",
   "nav-defi-description": "Wiase nyinaa, ɔkwan foforo a wɔabue ano a wɔde besi tetesɛm sikasɛm gua no ananmu",
   "nav-desci-description": "Wiase nyinaa, ɔkwan a wɔabue ano a wɔde besi mprempren nyansahu nhyehyɛe no ananmu",
   "nav-desoc-description": "Blockchain-gyina kwan ma asetenam nkitahodi ne nsɛm mu adebɔ",
@@ -274,7 +274,7 @@
   "nav-layer-2-description": "Nnwuma a ne bo yɛ mmerɛw na ɛyɛ ntɛm ma Ethereum",
   "nav-learn-by-coding-description": "Nnwinnade a ɛboa wo ma wosɔ Ethereum hwɛ",
   "nav-local-env-description": "Paw na hyehyɛ wo Ethereum nkɔso nhyehyɛe",
-  "nav-mainnet-description": "Wobetumi akyekye adwumayɛkuo blockchain dwumadie wɔ dwam Ethereum Mainnet so",
+  "nav-enterprise-description": "Wobetumi akyekye adwumayɛkuo blockchain dwumadie wɔ dwam Ethereum Mainnet so",
   "nav-nft-description": "Ɔkwan a yɛfa so di biribiara gyina hɔ ma ɛyɛ soronko sɛ agyapade a egyina Ethereum so",
   "nav-open-research-description": "Ethereum ahoɔden titiriw biako ne ne nhwehwɛmu kuw a wɔyɛ nnam paa",
   "nav-open-research-label": "Nhwehwɛmu a yɛbue ano",
@@ -320,6 +320,8 @@
   "nav-staking-solo-description": "Fa fie nneɛma yɛ dwuma na w’ankasa fa ka ahobammɔ ne nea wɔdi ahyɛ amansa nsa a ɛwɔ Ethereum ahoma torofo no ho",
   "nav-staking-solo-label": "Ɔbaakofo si awowa",
   "nav-start-building-description": "Nsɛm a mfaso wɔ so ma wɔn a wɔaba foforo",
+  "nav-start-with-crypto-title": "Fi ha hyɛ ase",
+  "nav-start-with-crypto-description": "Wo nan a edi kan wɔ Ethereum so",
   "nav-translation-program-description": "Mmɔdenbɔ a wɔbom yɛ sɛ wɔbɛkyerɛ ethereum.org ase akɔ kasa ahoro nyinaa mu",
   "nav-tutorials-description": "Nhyehyɛe a wɔahyehyɛ a ɛfa mpɔtam nkyerɛkyerɛ ho",
   "nav-use-cases-description": "Hwehwɛ adwene ahorow a ɛfa Ethereum dwumadie ho",
@@ -427,5 +429,8 @@
   "withdrawals": "Yi w'awowa",
   "wrapped-ether": "Ether yɛ abobɔw",
   "yes": "Ampa",
-  "zero-knowledge-proofs": "Nimdeɛ-kaperɛ ho adanse di"
+  "zero-knowledge-proofs": "Nimdeɛ-kaperɛ ho adanse di",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Hu nsonsonoeɛ a ɛwɔ Ethereum ne Bitcoin ntam"
+
 }

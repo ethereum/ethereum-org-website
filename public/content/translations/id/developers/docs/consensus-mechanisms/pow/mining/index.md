@@ -19,7 +19,7 @@ Ethereum, seperti Bitcoin, saat ini menggunakan mekanisme konsensus [proof-of-wo
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Bukti taruhan akan menggantikan penambangan dan bukti kerja dalam satu tahun ke depan. Anda dapat mulai menaruhkan ETH Anda hari ini. <a href="/staking/">Selengkapnya tentang penaruhan</a>    
+   Bukti taruhan akan menggantikan penambangan dan bukti kerja dalam satu tahun ke depan. Anda dapat mulai menaruhkan ETH Anda hari ini. [Selengkapnya tentang penaruhan](/staking/)    
 </AlertDescription>
 </AlertContent>
 </Alert>

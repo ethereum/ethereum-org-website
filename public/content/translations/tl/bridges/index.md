@@ -63,7 +63,7 @@ Sabihin nating gusto mong magkaroon ng orihinal na Bitcoin (BTC), ngunit nasa Et
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang <a href="/get-eth/">sentralisadong palitan</a>. Gayunpaman, maliban kung nasa isang palitan na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
+  Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang [sentralisadong palitan](/get-eth/). Gayunpaman, maliban kung nasa isang palitan na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +104,7 @@ Gumagamit ang maraming bridging solution ng mga modelo sa pagitan ng dalawang ur
 
 Using bridges allows you to move your assets across different blockchains. Here are some resources that can help you find and use bridges:
 
-- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/risk)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
+- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/summary)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
 - **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: A summary of bridge volumes across Ethereum networks.
 
 <Divider />

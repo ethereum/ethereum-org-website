@@ -164,7 +164,7 @@ Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
-  <ButtonLink href="/dapps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Explorați arta NFT
   </ButtonLink>
 </AlertContent>
@@ -200,7 +200,7 @@ Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cum
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</div>
-  <ButtonLink href="/dapps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Explorați jocurile NFT
   </ButtonLink>
 </AlertContent>
@@ -248,7 +248,7 @@ Iar această modalitate nu este greu de realizat pe Ethereum, pentru că ambele 
 
 Creatorii de NFT-uri pot de asemenea să creeze „acțiuni” pentru NFT-ul lor. Acest lucru oferă investitorilor și fanilor posibilitatea să dețină o parte dintr-un NFT fără a fi nevoie să îl cumpere în întregime. Acest lucru deschide și mai multe oportunități, atât pentru creatorii de NFT-uri, cât și pentru colecționari.
 
-- NFT-urile fracționate se pot tranzacționa și pe [DEX-uri](/defi/#dex) precum Uniswap, nu doar pe [piețele de NFT-uri](/dapps?category=collectibles). Aceasta înseamnă mai mulți cumpărători și vânzători.
+- NFT-urile fracționate se pot tranzacționa și pe [DEX-uri](/defi/#dex) precum Uniswap, nu doar pe [piețele de NFT-uri](/apps?category=collectibles). Aceasta înseamnă mai mulți cumpărători și vânzători.
 - Prețul global al unui NFT poate fi definit prin prețul fracțiunilor sale.
 - Aveți mai multe posibilități să dețineți și să profitați de obiectele la care țineți. Este mai greu să vi se interzică să dețineți NFT-uri.
 
@@ -362,7 +362,7 @@ Procesul a început deja. [Lanțul Beacon](/roadmap/beacon-chain/), prima actual
 
 ## Construiți cu NFT-uri {#build-with-nfts}
 
-Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscut sub numele de [ERC-721](/developers/docs/standards/tokens/erc-721/). Totuși, există și alte standarde pe care ați putea dori să le analizați. Standardul [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite tokenurile semi-fungibile, care sunt deosebit de utile în lumea jocurilor. Mai recent, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a fost propus pentru a crește mult eficiența emiterii NFT-urilor. Acest standard vă permite să creați cât de multe tokenuri doriți într-o singură tranzacție!
+Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscut sub numele de [ERC-721](/developers/docs/standards/tokens/erc-721/). Totuși, există și alte standarde pe care ați putea dori să le analizați. Standardul [ERC-1155](https://medium.com/enjin-coin/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite tokenurile semi-fungibile, care sunt deosebit de utile în lumea jocurilor. Mai recent, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a fost propus pentru a crește mult eficiența emiterii NFT-urilor. Acest standard vă permite să creați cât de multe tokenuri doriți într-o singură tranzacție!
 
 ## Referințe suplimentare {#further-reading}
 

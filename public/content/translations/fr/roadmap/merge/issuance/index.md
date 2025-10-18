@@ -104,7 +104,7 @@ La force opposée à l'émission d'ETH est le taux auquel l'ETH est brûlé. Pou
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La combustion des frais a été mise en place avec <a href="/history/#london">la mise à jour London</a> en août 2021 et est restée inchangée depuis la Fusion.
+La combustion des frais a été mise en place avec [la mise à jour London](/history/#london) en août 2021 et est restée inchangée depuis la Fusion.
 </AlertDescription>
 </AlertContent>
 </Alert>

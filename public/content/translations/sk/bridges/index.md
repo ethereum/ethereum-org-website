@@ -63,7 +63,7 @@ Povedzme, že chcete vlastniť natívny bitcoin (BTC), ale máte prostriedky iba
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Všetky vyššie uvedené činnosti môžete vykonať aj pomocou <a href="/get-eth/">centralizovanej výmeny</a>. Zahŕňalo by to viacero krokov a pravdepodobne by bolo lepšie použiť most, ak však vaše prostriedky už nemáte na centralizovanej burze.
+  Všetky vyššie uvedené činnosti môžete vykonať aj pomocou [centralizovanej výmeny](/get-eth/). Zahŕňalo by to viacero krokov a pravdepodobne by bolo lepšie použiť most, ak však vaše prostriedky už nemáte na centralizovanej burze.
 </AlertDescription>
 </AlertContent>
 </Alert>

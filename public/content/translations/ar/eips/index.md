@@ -66,6 +66,6 @@ lang: ar
 
 <cite class="citation">
 
-محتوى الصفحة المقدم جزئيًا من [بروتوكول إثيريوم المتعلق بإدارة التنمية وترقية الشبكة] (https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) من قبل هيدسون جيمسون
+محتوى الصفحة المقدم جزئيًا من [بروتوكول إثيريوم المتعلق بإدارة التنمية وترقية الشبكة] (https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) من قبل هيدسون جيمسون
 
 </cite>

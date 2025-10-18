@@ -63,7 +63,7 @@ Diciamo che vuoi possedere Bitcoin (BTC) nativi, ma hai fondi soltanto sulla Ret
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Inoltre, puoi fare tutto quanto descritto sopra, usando una <a href="/get-eth/">borsa centralizzata</a>. Tuttavia, a meno che i tuoi fondi non siano già su una borsa, comporterebbe diversi passaggi, e sarebbe più conveniente usare un ponte.
+  Inoltre, puoi fare tutto quanto descritto sopra, usando una [borsa centralizzata](/get-eth/). Tuttavia, a meno che i tuoi fondi non siano già su una borsa, comporterebbe diversi passaggi, e sarebbe più conveniente usare un ponte.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +104,7 @@ Molte soluzioni di collegamento adottano modelli tra questi due estremi, con gra
 
 L'utilizzo dei ponti ti consente di spostare le tue risorse tra blockchain differenti. Ecco alcune risorse che possono aiutarti a trovare e utilizzare i ponti:
 
-- **[Riepilogo sui ponti di L2BEAT](https://l2beat.com/bridges/summary) e [Analisi sui rischi dei ponti di L2BEAT](https://l2beat.com/bridges/risk)**: Un riepilogo completo dei vari ponti, che include dettagli sulle quote di mercato, sul tipo di ponte e sulle catene di destinazione. Inoltre L2BEAT dispone di un'analisi sui rischi dei ponti che aiuta gli utenti a prendere decisioni informate durante la selezione di un ponte.
+- **[Riepilogo sui ponti di L2BEAT](https://l2beat.com/bridges/summary) e [Analisi sui rischi dei ponti di L2BEAT](https://l2beat.com/bridges/summary)**: Un riepilogo completo dei vari ponti, che include dettagli sulle quote di mercato, sul tipo di ponte e sulle catene di destinazione. Inoltre L2BEAT dispone di un'analisi sui rischi dei ponti che aiuta gli utenti a prendere decisioni informate durante la selezione di un ponte.
 - **[Riepilogo sui ponti di DefiLlama](https://defillama.com/bridges/Ethereum)**: Un riepilogo sui volumi dei ponti sulle reti di Ethereum.
 
 <Divider />

@@ -58,7 +58,7 @@ Bóyá o jẹ́ oníṣẹ́ ọnà tó fẹ́ pín iṣẹ́ rẹ̀ nípa lílo
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ṣàwárí, rà tàbí ṣẹ̀dá iṣẹ́ ọnà NFT tìrẹ / àwọn ìkójọpọ̀...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Ṣàwárí iṣẹ́ ọnà NFT
   </ButtonLink>
 </AlertContent>

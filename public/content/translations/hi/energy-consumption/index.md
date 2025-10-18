@@ -73,7 +73,7 @@ CCRI का अनुमान है कि मर्ज ने एथेरि
 ## अग्रिम पठन {#further-reading}
 
 - [कैम्ब्रिज ब्लॉकचेन नेटवर्क स्थिरता सूचकांक](https://ccaf.io/cbnsi/ethereum)
-- [प्रूफ-ऑफ-वर्क ब्लॉकचेन पर व्हाइट हाउस की रिपोर्ट](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [प्रूफ-ऑफ-वर्क ब्लॉकचेन पर व्हाइट हाउस की रिपोर्ट](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [इथेरियम इमिशन्स: एक निचले से ऊपर का अनुमान](https://kylemcdonald.github.io/ethereum-emissions/) - _काइल मैकडोनाल्ड_
 - [इथेरियम ऊर्जा खपत सूचकांक](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

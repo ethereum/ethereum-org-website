@@ -34,7 +34,7 @@ Wählen Sie die Sprache, in die Sie übersetzen möchten, um die Liste der Datei
 
 Der Inhalt der Website ist in eine Reihe von Dokumenten und Inhaltsbereichen unterteilt. Sie können den Fortschritt jedes Dokuments auf der rechten Seite überprüfen. Wenn der Übersetzungsfortschritt unter 100 % liegt, können Sie daran mitarbeiten.
 
-Ist Ihre Sprache nicht aufgeführt? [Eröffnen Sie ein Ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) oder fragen Sie in unserem [Discord](/discord/) nach.
+Ist Ihre Sprache nicht aufgeführt? [Eröffnen Sie ein Ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) oder fragen Sie in unserem [Discord](https://discord.gg/ethereum-org) nach.
 
 ![Übersetzte und nicht übersetzte Dateien auf Crowdin](./crowdin-files.png)
 
@@ -85,7 +85,7 @@ Sobald Sie die Übersetzung abgeschlossen haben (d.h. alle Dateien für einen In
 
 ### Kontakt {#get-in-touch}
 
-Haben Sie noch Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Verfassen Sie Ihre Beiträge im Kanal #translations unseres[Discord-Servers von ethereum.org](/discord/)
+Haben Sie noch Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Verfassen Sie Ihre Beiträge im Kanal #translations unseres[Discord-Servers von ethereum.org](https://discord.gg/ethereum-org)
 
 Sie können uns auch unter translations@ethereum.org kontaktieren.
 

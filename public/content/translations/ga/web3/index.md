@@ -149,7 +149,7 @@ Nílimid ach ag an tús le Gréasán níos fearr a chruthú le Web3, ach de réi
 
 - [Faigh sparán](/wallets/)
 - [Aimsigh pobal](/community/)
-- [Foghlaim faoi fheidhmchláir Web3](/dapps/)
+- [Foghlaim faoi fheidhmchláir Web3](/apps/)
 - [Glac páirt in DAO](/dao/)
 - [Tógáil ar Web3](/developers/)
 

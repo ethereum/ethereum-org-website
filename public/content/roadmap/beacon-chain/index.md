@@ -40,7 +40,7 @@ And using proof-of-stake as consensus mechanism is a foundational component for 
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  If you're interested in becoming a validator and helping secure Ethereum, <a href="/staking/">learn more about staking</a>.
+  If you're interested in becoming a validator and helping secure Ethereum, [learn more about staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

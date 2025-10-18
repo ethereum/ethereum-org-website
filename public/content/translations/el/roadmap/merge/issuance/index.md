@@ -104,7 +104,7 @@ title="ETH issuance tldr">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Η καύση των τελών τέθηκε σε λειτουργία με την <a href="/history/#london">αναβάθμιση London</a> τον Αύγουστο του 2021 και παραμένει αμετάβλητη από τη Συγχώνευση.
+Η καύση των τελών τέθηκε σε λειτουργία με την [αναβάθμιση London](/history/#london) τον Αύγουστο του 2021 και παραμένει αμετάβλητη από τη Συγχώνευση.
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -231,7 +231,7 @@
   "nav-contribute-description": "మీరు సహాయం చేయాలనుకుంటే, ఇది మీకు మార్గనిర్దేశం చేస్తుంది",
   "nav-contribute-label": "ethereum.orgకు తోడ్పాటునందిస్తూ..",
   "nav-dao-description": "కేంద్రీకృత అధికారం లేని సభ్య-యాజమాన్య కమ్యూనిటీలు",
-  "nav-dapps-description": "Ethereum ఉపయోగించి యాప్‌ల యొక్క గొప్ప పర్యావరణ వ్యవస్థను అన్వేషించండి",
+  "nav-apps-description": "Ethereum ఉపయోగించి యాప్‌ల యొక్క గొప్ప పర్యావరణ వ్యవస్థను అన్వేషించండి",
   "nav-defi-description": "సంప్రదాయ ఆర్థిక విపణికి ప్రపంచ, బహిరంగ ప్రత్యామ్నాయం|",
   "nav-desci-description": "ప్రస్తుత శాస్త్రీయ వ్యవస్థకు ప్రపంచ, బహిరంగ ప్రత్యామ్నాయం",
   "nav-desoc-description": "సోషల్ ఇంటరాక్షన్ మరియు కంటెంట్ క్రియేషన్ కొరకు బ్లాక్‌చెయిన్ ఆధారిత ప్లాట్‌ఫారమ్‌లు",
@@ -280,7 +280,7 @@
   "nav-history-label": "Ethereum యొక్క సాంకేతిక చరిత్ర",
   "nav-learn-by-coding-description": "Ethereumతో ప్రయోగాలు చేయడానికి మీకు సహాయపడే సాధనాలు",
   "nav-local-env-description": "మీ Ethereum డెవలప్‌మెంట్ స్టేక్ ఎంచుకోండి మరియు సెటప్ చేయండి",
-  "nav-mainnet-description": "ఎంటర్‌ప్రైజ్ బ్లాక్‌చెయిన్ అప్లికేషన్లను పబ్లిక్ Ethereum మెయిన్‌నెట్‌పై నిర్మించవచ్చు.",
+  "nav-enterprise-description": "ఎంటర్‌ప్రైజ్ బ్లాక్‌చెయిన్ అప్లికేషన్లను పబ్లిక్ Ethereum మెయిన్‌నెట్‌పై నిర్మించవచ్చు.",
   "nav-networks-home-description": "Ethereum కోసం చౌకైన మరియు వేగవంతమైన లావాదేవీలు",
   "nav-networks-introduction-description": "Ethereum నెట్‌వర్క్‌ల నెట్‌వర్క్‌గా విస్తరించబడింది",
   "nav-networks-explore-networks-label": "నెట్‌వర్క్‌లను అన్వేషించండి",
@@ -333,6 +333,8 @@
   "nav-staking-solo-description": "హోమ్ హార్డ్‌వేర్ రన్ చేయండి మరియు Ethereum నెట్‌వర్క్ యొక్క భద్రత మరియు వికేంద్రీకరణకు వ్యక్తిగతంగా జోడించండి",
   "nav-staking-solo-label": "సోలోగా స్టేక్ చేయడం",
   "nav-start-building-description": "కొత్తవారికి ఉపయోగకరమైన సమాచారం",
+  "nav-start-with-crypto-title": "ఇక్కడ నుంచి ప్రారంభించండి",
+  "nav-start-with-crypto-description": "Ethereum ఉపయోగించే మీ మొదటి అడుగులు",
   "nav-translation-program-description": "ethereum.orgను అన్ని భాషల్లోకి అనువదించే సమిష్టి కృషి",
   "nav-tutorials-description": "కమ్యూనిటీ ట్యుటోరియల్స్ యొక్క క్యూరేటెడ్ జాబితా",
   "nav-use-cases-description": "Ethereum ఉపయోగం కోసం విభిన్న ఆలోచనలను కనుగొనండి",
@@ -441,5 +443,8 @@
   "withdrawals": "స్టేకింగ్ విత్‌డ్రాల్స్",
   "wrapped-ether": "చుట్టబడిన ఈథర్",
   "yes": "అవును",
-  "zero-knowledge-proofs": "జీరో-నాలెడ్జ్ రుజువులు"
+  "zero-knowledge-proofs": "జీరో-నాలెడ్జ్ రుజువులు",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum మరియు Bitcoin మధ్య వ్యత్యాసాలను అర్థం చేసుకోండి"
+
 }

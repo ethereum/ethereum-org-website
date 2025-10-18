@@ -40,7 +40,7 @@ No history was lost in The Merge. As Mainnet merged with the Beacon Chain, it al
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-This transition to proof-of-stake changed the way ether is issued. Learn more about <a href="/roadmap/merge/issuance/">ether issuance before and after The Merge</a>.
+This transition to proof-of-stake changed the way ether is issued. Learn more about [ether issuance before and after The Merge](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -134,7 +134,7 @@ Running a non-block-producing node is possible for anyone under either consensus
 
 The ability for anyone to run their own node is <em>absolutely essential</em> to maintaining the decentralization of the Ethereum network.
 
-<a href="/run-a-node/">More on running your own node</a>
+[More on running your own node](/run-a-node/)
 
 </ExpandableCard>
 
@@ -144,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecated the use of proof-of-work, transitioning to proof-of-stake for consensus, but did not significantly change any parameters that directly influence network capacity or throughput.
 
-With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at <a href="/layer-2/">layer 2</a>, while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. <a href="/developers/docs/gas/">More on gas and fees.</a>
+With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at [layer 2](/layer-2/), while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. [More on gas and fees.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -167,7 +167,7 @@ Initially after The Merge, stakers could only access fee tips and MEV that were 
 
 Since the Shanghai/Capella network upgrade, stakers can now designate a <em>withdrawal address</em> to start receiving automatic payouts of any excess staking balance (ETH over 32 from protocol rewards). This upgrade also enabled the ability for a validator to unlock and reclaim its entire balance upon exiting from the network.
 
-<a href="/staking/withdrawals/">More on staking withdrawals</a>
+[More on staking withdrawals](/staking/withdrawals/)
 
 </ExpandableCard>
 

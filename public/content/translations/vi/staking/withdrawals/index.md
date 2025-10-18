@@ -163,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Nếu bạn đang tham gia một <a href="/staking/pools/">nhóm đặt cọc</a> hoặc nắm giữ token góp cổ phần, bạn nên liên hệ với nhà cung cấp dịch vụ của mình để biết thêm chi tiết về cách thức xử lý rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
+Nếu bạn đang tham gia một [nhóm đặt cọc](/staking/pools/) hoặc nắm giữ token góp cổ phần, bạn nên liên hệ với nhà cung cấp dịch vụ của mình để biết thêm chi tiết về cách thức xử lý rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
 
-Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc nếu bạn đã tích lũy đủ ETH, bạn có thể <a href="/staking/solo/">tự đặt cọc tại nhà</a>.
+Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc nếu bạn đã tích lũy đủ ETH, bạn có thể [tự đặt cọc tại nhà](/staking/solo/).
 
 </ExpandableCard>
 
@@ -222,7 +222,6 @@ Không. Sau khi nút xác thực đã thoát và rút toàn bộ số dư, bất
 
 - [Rút tiền trên Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Chuỗi Beacon đẩy các lệnh rút tiền dưới dạng thao tác](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Thượng Hải](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Rút ETH đã góp (Thử nghiệm) với Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Các lệnh rút tiền đẩy của Chuỗi Beacon dưới dạng thao tác với Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Giải thích về số dư hiệu quả của nút xác thực](https://www.attestant.io/posts/understanding-validator-effective-balance/)

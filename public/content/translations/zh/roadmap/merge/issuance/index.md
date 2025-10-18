@@ -104,7 +104,7 @@ title="以太币发行内容提要">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-费用销毁在 2021 年 8 月的<a href="/history/#london">伦敦升级</a>后上线，在合并后保持不变。
+费用销毁在 2021 年 8 月的[伦敦升级](/history/#london)后上线，在合并后保持不变。
 </AlertDescription>
 </AlertContent>
 </Alert>

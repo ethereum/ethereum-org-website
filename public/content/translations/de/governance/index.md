@@ -44,7 +44,7 @@ Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community
 
 - **Ether-Halter**: Diese Personen halten eine beliebige Menge an ETH. [Mehr zu ETH](/eth/).
 - **Anwendungsbenutzer**: Diese Personen interagieren mit Anwendungen auf der Ethereum-Blockchain.
-- **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu dApps](/dapps/).
+- **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu dApps](/apps/).
 - **Node-Betreiber**: Diese Personen betreiben Nodes (Knotenpunkte), die Blöcke und Transaktionen propagieren, indem sie ungültige Transaktionen, auf die sie stoßen, ablehnen oder blockieren. [Mehr zu Nodes](/developers/docs/nodes-and-clients/).
 - **EIP-Autoren**: Diese Personen schlagen Änderungen am Ethereum-Protokoll in Form von Ethereum-Verbesserungsvorschlägen (Ethereum Improvement Proposal, EIP) vor. [Mehr zu EIPs](/eips/).
 - **Validatoren**: Diese Personen betreiben Nodes, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.
@@ -118,7 +118,7 @@ In der Regel werden Meinungsverschiedenheiten durch lange Diskussionen in öffen
 
 Von einem Fork spricht man, wenn größere technische Upgrades oder Änderungen am Netzwerk vorgenommen werden müssen und sich die „Regeln“ des Protokolls ändern. [Ethereum-Clients](/developers/docs/nodes-and-clients/) müssen ihre Software aktualisieren, um die neuen Fork-Regeln zu implementieren.
 
-Der DAO-Fork erfolgte als Reaktion auf den [2016 DAO-Angriff](https://www.coindesk.com/understanding-dao-hack-journalists), bei dem einem unsicheren [DAO](/glossary/#dao)-Vertrag über 3,6 Millionen ETH durch einen Hack entzogen wurden. Durch den Fork wurden die Gelder aus dem fehlerhaften Vertrag in einen neuen Vertrag übertragen, so dass jeder, der durch den Hack Geld verloren hatte, dieses zurückerhalten konnte.
+Der DAO-Fork erfolgte als Reaktion auf den [2016 DAO-Angriff](https://www.coindesk.com/learn/understanding-the-dao-attack), bei dem einem unsicheren [DAO](/glossary/#dao)-Vertrag über 3,6 Millionen ETH durch einen Hack entzogen wurden. Durch den Fork wurden die Gelder aus dem fehlerhaften Vertrag in einen neuen Vertrag übertragen, so dass jeder, der durch den Hack Geld verloren hatte, dieses zurückerhalten konnte.
 
 Die Ethereum-Community hatte über diese Vorgehensweise abgestimmt. Jeder ETH-Inhaber konnte über eine Transaktion auf [, einer Abstimmungsplattform,](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) abstimmen. Der Fork wurde mit mehr als 85 % der Stimmen beschlossen.
 

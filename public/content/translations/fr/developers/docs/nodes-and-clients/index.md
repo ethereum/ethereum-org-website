@@ -191,14 +191,14 @@ Pour en savoir plus, lisez sa [documentation](https://github.com/ethereumjs/ethe
 
 De nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') prennent en charge les [mises à niveau du consensus](/roadmap/beacon-chain/). Ils sont responsables de toute la logique liée au consensus, y compris l'algorithme de choix de fourche, le traitement des attestations et la gestion des récompenses et des pénalités de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos).
 
-| Client                                                        | Langage    | Systèmes d'exploitation | Réseaux                                                                 |
-| ------------------------------------------------------------- | ---------- | ----------------------- | ----------------------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS   | Chaîne Phare, Goerli, Pyrmont, Sepolia, Ropsten, et plus encore         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS   | Chaîne Phare, Goerli, Sepolia, Ropsten, et plus encore                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS   | Chaîne Phare, Goerli, Sepolia, Ropsten, et plus encore                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS   | Chaîne Phare, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten, et plus encore |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS   | Chaîne Phare, Gnosis, Goerli, Sepolia, Ropsten, et plus encore          |
-| [Grandine](https://docs.grandine.io/) (beta)                  | Rust       | Linux, Windows, macOS   | Chaîne Phare, Goerli, Sepolia, et plus encore                           |
+| Client                                                        | Langage    | Systèmes d'exploitation | Réseaux                                                         |
+| ------------------------------------------------------------- | ---------- | ----------------------- | --------------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS   | Beacon Chain, Holesky, Pyrmont, Sepolia, et plus encore         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, et plus encore |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Sepolia, et plus encore          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
 
 ### Lighthouse {#lighthouse}
 
@@ -222,7 +222,7 @@ En savoir plus avec la [Documentation de Nimbus](https://nimbus.guide/)
 
 Prysm est un client de consensus open source complet écrit en Go sous la licence GPL-3.0. Il dispose d'une interface utilisateur optionnelle et donne la priorité à l'expérience utilisateur, à la documentation et à la configurabilité, tant pour les utilisateurs particuliers qu'institutionnels.
 
-Consultez [la documentation Prysm](https://docs.prylabs.network/docs/getting-started/) pour en savoir plus.
+Consultez [la documentation Prysm](https://prysm.offchainlabs.com/docs/) pour en savoir plus.
 
 ### Teku {#teku}
 

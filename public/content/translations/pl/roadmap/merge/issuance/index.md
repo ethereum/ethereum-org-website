@@ -104,7 +104,7 @@ Siłą przeciwną do emisji ETH jest tempo, w jakim ETH jest spalane. Aby transa
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Spalanie opłat weszło w życie wraz z <a href="/history/#london">aktualizacją London</a> w sierpniu 2021 i pozostaje niezmienione od czasu Połączenia.
+Spalanie opłat weszło w życie wraz z [aktualizacją London](/history/#london) w sierpniu 2021 i pozostaje niezmienione od czasu Połączenia.
 </AlertDescription>
 </AlertContent>
 </Alert>

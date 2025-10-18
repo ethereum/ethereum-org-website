@@ -40,7 +40,7 @@ Tranziția la dovada mizei a făcut ca Ethereum să fie mult mai sigur și mai d
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Dacă dorești să devii un validator și să contribui la securitatea Ethereum, <a href="/staking/">află mai multe despre mizare</a>.
+  Dacă dorești să devii un validator și să contribui la securitatea Ethereum, [află mai multe despre mizare](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

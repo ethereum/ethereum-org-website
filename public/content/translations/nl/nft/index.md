@@ -58,7 +58,7 @@ Misschien ben je een artiest die zijn werk wil delen via NFT's, zonder de contro
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Verken, koop of maak je eigen NFT-kunst/-verzamelobjecten...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Verken NFT-kunst
   </ButtonLink>
 </AlertContent>

@@ -59,7 +59,7 @@ Tal vez sea usted un artista que quiere compartir su arte a través de los NFT, 
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Explore, compre o cree sus propios NFT de arte/coleccionables...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Explore arte en NFT
   </ButtonLink>
 </AlertContent>

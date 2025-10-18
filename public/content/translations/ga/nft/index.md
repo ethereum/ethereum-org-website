@@ -59,7 +59,7 @@ B’fhéidir gur ealaíontóir thú atá ag iarraidh a gcuid oibre a roinnt le N
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Foghlaim, ceannaigh nó cruthaigh do chuid ealaíne/earraí inbhailithe NFT féin...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Foghlaim faoi ealaín NFT
   </ButtonLink>
 </AlertContent>

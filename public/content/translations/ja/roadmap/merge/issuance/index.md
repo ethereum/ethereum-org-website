@@ -104,7 +104,7 @@ ETHの発行とは逆に、イーサリアムではETHがバーンされるレ�
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-フィーのバーンは、2021年8月の<a href="/history/#london">ロンドンアップグレード</a>から始まり、マージ以降も継続されます。
+フィーのバーンは、2021年8月の[ロンドンアップグレード](/history/#london)から始まり、マージ以降も継続されます。
 </AlertDescription>
 </AlertContent>
 </Alert>

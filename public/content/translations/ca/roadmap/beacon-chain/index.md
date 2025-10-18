@@ -12,7 +12,7 @@ summaryPoint4: Potser, això, ho coneixeu com la "Fase 0" dels mapes tècnics.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-    La cadena de balisa es va posar en marxa l'1 de desembre del 2020 al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">exploreu les dades</a>. Si voleu ajudar a validar la cadena, podeu <a href="/staking/">"apostar" els vostres ETH</a>.
+    La cadena de balisa es va posar en marxa l'1 de desembre del 2020 al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">exploreu les dades</a>. Si voleu ajudar a validar la cadena, podeu ["apostar" els vostres ETH](/staking/).
 </UpgradeStatus>
 
 ## Què fa la cadena de balisa? {#what-does-the-beacon-chain-do}
@@ -33,7 +33,7 @@ Apostar i convertir-se en validador és més senzill que [minar](/developers/doc
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-Si us interessa ser validador i contribuir a protegir la cadena de balisa, <a href="/staking/">aquí podeu aprendre més sobre les apostes</a>.
+Si us interessa ser validador i contribuir a protegir la cadena de balisa, [aquí podeu aprendre més sobre les apostes](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

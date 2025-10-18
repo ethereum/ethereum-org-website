@@ -38,7 +38,7 @@ Agus is comhpháirt bhunúsach do [cruthúnas-gheallta a úsáid mar mheicníoch
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Más spéis leat a bheith i do bhailíochtóir agus cabhrú le Ethereum a shlánú, <a href="/staking/">foghlaim tuilleadh faoi ghealltóireacht</a>.
+  Más spéis leat a bheith i do bhailíochtóir agus cabhrú le Ethereum a shlánú, [foghlaim tuilleadh faoi ghealltóireacht](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

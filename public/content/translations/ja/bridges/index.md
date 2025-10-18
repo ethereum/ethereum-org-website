@@ -63,7 +63,7 @@ USDTを貸し出すのにイーサリアムムメインネットのAaveを使用
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <a href="/get-eth/">中央集権型取引所</a>を使用すると、これらのすべてを行えます。 しかし、取引所に資産がある場合を除いては、複数の手順が必要になるため、ブリッジを使用する方が手間が省けます。
+  [中央集権型取引所](/get-eth/)を使用すると、これらのすべてを行えます。 しかし、取引所に資産がある場合を除いては、複数の手順が必要になるため、ブリッジを使用する方が手間が省けます。
 </AlertDescription>
 </AlertContent>
 </Alert>

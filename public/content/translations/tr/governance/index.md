@@ -44,7 +44,7 @@ _Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi 
 
 - **Ether sahipleri**: Bu kişilerin elinde keyfi miktarda ETH bulunur. [ETH hakkında daha fazla bilgi](/eth/).
 - **Uygulama Kullanıcıları**: Bu kişiler, Ethereum blok zincirindeki uygulamalarla etkileşime girer.
-- **Uygulama/Araç Geliştiricileri**: Bu kişiler Ethereum blok zincirinde çalışan uygulamalar yazarlar (örneğin DeFi, NFT'ler vb.) veya Ethereum ile etkileşime giren araçlar oluştururlar (örneğin cüzdanlar, test paketleri vb.). [Dapp'ler hakkında daha fazla bilgi](/dapps/).
+- **Uygulama/Araç Geliştiricileri**: Bu kişiler Ethereum blok zincirinde çalışan uygulamalar yazarlar (örneğin DeFi, NFT'ler vb.) veya Ethereum ile etkileşime giren araçlar oluştururlar (örneğin cüzdanlar, test paketleri vb.). [Dapp'ler hakkında daha fazla bilgi](/apps/).
 - **Düğüm Operatörleri**: Bu kişiler, blokları ve işlemleri yayan, karşılaştıkları geçersiz işlemleri veya blokları reddeden düğümleri çalıştırır. [Düğümler hakkında daha fazla bilgi](/developers/docs/nodes-and-clients/).
 - **EIP Yazarları**: Bu kişiler, Ethereum İyileştirme Önerileri (EIP'ler) aracılığıyla Ethereum protokolüne değişiklikler yapmayı teklif ederler. [EIP'ler hakkında daha fazla bilgi](/eips/).
 - **Doğrulayıcılar**: Bu kişiler, Ethereum blok zincirine yeni bloklar ekleyebilen düğümler çalıştırırlar.
@@ -118,7 +118,7 @@ Genel olarak anlaşmazlıklar, sorunun kökenini anlamak ve herkesin durumu öl�
 
 Çatallar, ağda büyük teknik yükseltmeler veya değişiklikler yapılması ve protokolün "kurallarının" değiştirilmesi gerekmesidir. [Ethereum istemcileri](/developers/docs/nodes-and-clients/) yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir.
 
-DAO çatalı, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir hackte 3,6 milyon ETH boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/understanding-dao-hack-journalists) yanıt olarak yapıldı. Çatal, fonları hatalı sözleşmeden yeni bir sözleşmeye taşıdı ve hack sırasında fon kaybeden herkesin fonlarını geri almasını sağladı.
+DAO çatalı, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir hackte 3,6 milyon ETH boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack) yanıt olarak yapıldı. Çatal, fonları hatalı sözleşmeden yeni bir sözleşmeye taşıdı ve hack sırasında fon kaybeden herkesin fonlarını geri almasını sağladı.
 
 Bu eylem planı, Ethereum topluluğu tarafından oylandı. Tüm ETH sahipleri, [bir oylama platformunda](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) bir işlem aracılığıyla oy kullanabildi. Çatallanma kararı oyların %85'inden fazlasına ulaştı.
 

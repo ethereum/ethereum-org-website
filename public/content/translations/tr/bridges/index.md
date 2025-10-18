@@ -63,7 +63,7 @@ Diyelim ki yerel zincirde Bitcoin'e (BTC) sahip olmak istiyorsunuz ama sadece Et
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Ayrıca yukarıdaki her şeyi bir <a href="/get-eth/">merkezi borsa</a> aracılığıyla da yapabilirsiniz. Ancak varlıklarınız hali hazırda borsada değilse, birden çok adım gerektirecektir ve köprü kullanmanız daha iyi olacaktır.
+  Ayrıca yukarıdaki her şeyi bir [merkezi borsa](/get-eth/) aracılığıyla da yapabilirsiniz. Ancak varlıklarınız hali hazırda borsada değilse, birden çok adım gerektirecektir ve köprü kullanmanız daha iyi olacaktır.
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -104,7 +104,7 @@ A força oposta à emissão de ETH é a taxa em que o ETH é queimado. Para uma 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-A queima de taxas foi lançada com <a href="/history/#london">a atualização London</a> em agosto de 2021 e permanece inalterada desde o The Merge.
+A queima de taxas foi lançada com [a atualização London](/history/#london) em agosto de 2021 e permanece inalterada desde o The Merge.
 </AlertDescription>
 </AlertContent>
 </Alert>

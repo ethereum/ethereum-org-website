@@ -104,7 +104,7 @@ Is é an fórsa contrártha le heisiúint ETH an ráta ag a dhóitear ETH. Chun 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Chuaigh dó táillí beo le <a href="/history/#london">uasghrádú Londain</a> i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
+Chuaigh dó táillí beo le [uasghrádú Londain](/history/#london) i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
 </AlertDescription>
 </AlertContent>
 </Alert>

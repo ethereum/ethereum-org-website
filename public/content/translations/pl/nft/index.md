@@ -58,7 +58,7 @@ Być może jesteś artystą, który chce udostępniać swoje prace za pomocą NF
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Odkrywaj, kupuj lub twórz swoje własne dzieła sztuki/kolekcje NFT...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Odkryj sztukę NFT
   </ButtonLink>
 </AlertContent>

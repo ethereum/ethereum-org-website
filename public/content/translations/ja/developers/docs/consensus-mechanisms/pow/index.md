@@ -10,7 +10,7 @@ lang: ja
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    現在、プルーフ・オブ・ワークは廃止されています。 イーサリアムの合意メカニズムにはプルーフ・オブ・ワークではなく、 現在はプルーフ・オブ・ステークが採用されています。 詳細については、<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>と<a href="/staking/">ステーキング</a>を参照してください。
+    現在、プルーフ・オブ・ワークは廃止されています。 イーサリアムの合意メカニズムにはプルーフ・オブ・ワークではなく、 現在はプルーフ・オブ・ステークが採用されています。 詳細については、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)と[ステーキング](/staking/)を参照してください。
 </AlertDescription>
 </AlertContent>
 </Alert>

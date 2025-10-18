@@ -40,7 +40,7 @@ Prijelazom na dokaz uloga Ethereum je postao sigurniji i manje centraliziran u o
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Ako želite postati validator i pomoći u zaštiti Ethereuma, <a href="/staking/">ovdje saznajte više o ulaganju</a>.
+  Ako želite postati validator i pomoći u zaštiti Ethereuma, [ovdje saznajte više o ulaganju](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

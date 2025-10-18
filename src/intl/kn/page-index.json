@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ",
   "page-index-cta-get-eth-description": "Ethereum ನ ಕರೆನ್ಸಿ",
   "page-index-cta-get-eth-label": "ETH ಪಡೆಯಿರಿ",
-  "page-index-cta-networks-description": "ಕನಿಷ್ಠ ಶುಲ್ಕವನ್ನು ಆನಂದಿಸಿ",
-  "page-index-cta-networks-label": "ನೆಟ್ವರ್ಕ್ ಆಯ್ಕೆಮಾಡಿ",
   "page-index-cta-wallet-description": "ಖಾತೆಗಳನ್ನು ರಚಿಸಿ ಮತ್ತು ಸ್ವತ್ತುಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
   "page-index-cta-wallet-label": "ವ್ಯಾಲೆಟ್ ಒಂದನ್ನು ಆರಿಸಿ",
+  "page-index-cta-build-apps-description": "ನಿಮ್ಮ ಮೊದಲ ಆಪ್ ರಚಿಸಿ",
+  "page-index-cta-build-apps-label": "ಅಭಿವೃದ್ಧಿ ಪ್ರಾರಂಭಿಸಿ",
   "page-index-description": "ನವೀನ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಬ್ಲಾಕ್‌ಚೈನ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳಿಗೆ ಪ್ರಮುಖ ವೇದಿಕೆ",
   "page-index-developers-code-example-description-0": "ನೀವು ಪ್ರೋಗ್ರಾಮ್ ಮಾಡಿದ ತರ್ಕದಿಂದ ಚಾಲಿತ ಬ್ಯಾಂಕ್ ಅನ್ನು ನಿರ್ಮಿಸಿ",
   "page-index-developers-code-example-description-1": "ಅಪ್ಲಿಕೇಶನ್‌ಗಳಾದ್ಯಂತ ನೀವು ವರ್ಗಾಯಿಸಬಹುದಾದ ಮತ್ತು ಬಳಸಬಹುದಾದ ಟೋಕನ್‌ಗಳನ್ನು ರಚಿಸಿ",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "ಇತ್ತೀಚಿನ ಪೋಸ್ಟ್‌ಗಳು",
   "page-index-posts-subtitle": "ಸಮುದಾಯದಿಂದ ಇತ್ತೀಚಿನ ಬ್ಲಾಗ್ ಪೋಸ್ಟ್‌ಗಳು ಮತ್ತು ನವೀಕರಣಗಳು",
   "page-index-title": "ಇಥಿರಿಯಮ್‌ಗೆ ಸ್ವಾಗತ",
+  "page-index-use-cases-tag": "ಬಳಕೆಯ ಪ್ರಕರಣಗಳು",
   "page-index-values-description": "ಡಿಜಿಟಲ್ ಕ್ರಾಂತಿಯ ಭಾಗವಾಗಿರಿ",
   "page-index-values-header": "ಇಂಟರ್ನೆಟ್ ಬದಲಾಗುತ್ತಿದೆ",
   "page-index-values-legacy": "ಪರಂಪರೆ",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "ಹೆಚ್ಚಿನವರಿಗೆ ಮುಚ್ಚಲಾಗಿದೆ",
   "page-index-values-open-legacy-content-0": "ಕಂಪನಿಗಳು ತಮ್ಮ ಬೌದ್ಧಿಕ ಆಸ್ತಿಯನ್ನು ರಕ್ಷಿಸುತ್ತವೆ ಮತ್ತು ಹಂಚಿಕೊಳ್ಳುವುದಿಲ್ಲ. ಕಂಪನಿಯ ಹೊರಗಿನ ಯಾರೂ ವಿಷಯಗಳು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತವೆ, ಸಮಸ್ಯೆಗಳನ್ನು ಸರಿಪಡಿಸಬಹುದು ಅಥವಾ ಸುಧಾರಣೆಗಳನ್ನು ಮಾಡುವುದನ್ನು ನೋಡಲಾಗುವುದಿಲ್ಲ. ಹೊಸ ಪರಿಕರಗಳನ್ನು ರಚಿಸಲು ಅಥವಾ ಕಸ್ಟಮೈಸ್ ಮಾಡಲು ಜನರಿಗೆ ಕಷ್ಟವಾಗುತ್ತದೆ.",
   "page-index-values-open-ethereum-label": "ಎಲ್ಲರಿಗೂ ಮುಕ್ತವಾಗಿದೆ",
-  "page-index-values-open-ethereum-content-0": "Ethereum ಎಲ್ಲರಿಗೂ ಸಾರ್ವಜನಿಕವಾಗಿದೆ. ಯಾರಾದರೂ ಕೋಡ್ ಅನ್ನು ನೋಡಬಹುದು, ಬಳಸಬಹುದು ಮತ್ತು ಸುಧಾರಿಸಬಹುದು, ಇದು ಎಲ್ಲರಿಗೂ ಉತ್ತಮವಾಗಿದೆ."
+  "page-index-values-open-ethereum-content-0": "Ethereum ಎಲ್ಲರಿಗೂ ಸಾರ್ವಜನಿಕವಾಗಿದೆ. ಯಾರಾದರೂ ಕೋಡ್ ಅನ್ನು ನೋಡಬಹುದು, ಬಳಸಬಹುದು ಮತ್ತು ಸುಧಾರಿಸಬಹುದು, ಇದು ಎಲ್ಲರಿಗೂ ಉತ್ತಮವಾಗಿದೆ.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "ವರ್ಷದ ಅತಿದೊಡ್ಡ Ethereum ಈವೆಂಟ್ಗೆ ಸೇರಿ",
+  "page-index-devconnect-banner-get-tickets": "ಟಿಕೆಟ್ಗಳನ್ನು ಪಡೆಯಿರಿ"
 }

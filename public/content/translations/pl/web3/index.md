@@ -145,7 +145,7 @@ Jesteśmy dopiero na początku tworzenia lepszej sieci z Web3, ale ponieważ nad
 
 - [Wybierz portfel](/wallets/)
 - [Znajdź społeczność](/community/)
-- [Odkryj aplikacje Web3](/dapps/)
+- [Odkryj aplikacje Web3](/apps/)
 - [Dołącz do DAO](/dao/)
 - [Buduj na Web3](/developers/)
 
@@ -153,11 +153,11 @@ Jesteśmy dopiero na początku tworzenia lepszej sieci z Web3, ale ponieważ nad
 
 Web3 nie jest jednoznacznie zdefiniowany. Różni uczestnicy społeczności mają na to różne spojrzenia. Oto kilka z nich:
 
-- [Czym jest Web3? Wyjaśnienie zdecentralizowanego Internetu przyszłości](https://www.freecodecamp.org/news/what-is-web3/) — _Nader Dabit_
+- [Czym jest Web3? Wyjaśnienie zdecentralizowanego Internetu przyszłości](https://www.freecodecamp.org/news/what-is-web3) — _Nader Dabit_
 - [Zrozumieć Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) — _Josh Stark_
 - [Dlaczego Web3 ma znaczenie](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Dlaczego decentralizacja ma znaczenie](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Chris Dixon_
 - [Wygląd Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) — _a16z_
-- [Debata o Web3](https://www.notboring.co/p/the-web3-debate?s=r) — _Packy McCormick_
+- [Debata o Web3](https://www.notboring.co/p/the-web3-debate) — _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

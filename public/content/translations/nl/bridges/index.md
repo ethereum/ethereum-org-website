@@ -63,7 +63,7 @@ Laten we zeggen dat je native Bitcoin (BTC) wilt hebben, maar dat je alleen fond
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Je kunt ook al het bovenstaande doen met behulp van een <a href="/get-eth/">gecentraliseerde exchange</a>. Tenzij je fondsen echter al op een exchange staan, zou dit meerdere stappen vergen, en dus ben je waarschijnlijk beter af met het gebruik van een brug.
+  Je kunt ook al het bovenstaande doen met behulp van een [gecentraliseerde exchange](/get-eth/). Tenzij je fondsen echter al op een exchange staan, zou dit meerdere stappen vergen, en dus ben je waarschijnlijk beter af met het gebruik van een brug.
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -37,11 +37,11 @@
   "page-index-cta-dapps-label": "Vyzkoušejte aplikace",
   "page-index-cta-get-eth-description": "Měna Ethereum",
   "page-index-cta-get-eth-label": "Získat ETH",
-  "page-index-cta-networks-description": "Minimální poplatky",
-  "page-index-cta-networks-label": "Zvolte síť",
   "page-index-cta-wallet-description": "Vytvořte účty a spravujte aktiva",
   "page-index-cta-wallet-label": "Vyberte si peněženku",
   "page-index-description": "Přední platforma pro inovativní aplikace a blockchainové sítě",
+  "page-index-cta-build-apps-description": "Vytvořte svou první aplikaci",
+  "page-index-cta-build-apps-label": "Začněte vyvíjet",
   "page-index-developers-code-example-description-0": "Vytvořte banku založenou na vámi naprogramované logice",
   "page-index-developers-code-example-description-1": "Vytvořte tokeny, které můžete přenášet a používat v různých aplikacích",
   "page-index-developers-code-example-description-2": "K interakci s Ethereem a ostatními aplikacemi používejte existující jazyky",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Nedávné příspěvky",
   "page-index-posts-subtitle": "Poslední blogové příspěvky a aktuální informace z komunity",
   "page-index-title": "Vítejte v Ethereu",
+  "page-index-use-cases-tag": "Případy použití",
   "page-index-values-description": "Staňte se součástí digitální revoluce",
   "page-index-values-header": "Internet se mění",
   "page-index-values-legacy": "Dědictví",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Nepřístupnost pro většinu",
   "page-index-values-open-legacy-content-0": "Společnosti chrání své duševní vlastnictví a nesdílejí je. Nikdo mimo ně nemůže vidět, jak věci fungují, opravovat problémy ani provádět vylepšení. Pro lidi je obtížné vytvářet nové nástroje nebo je přizpůsobovat.",
   "page-index-values-open-ethereum-label": "Otevřenost všem",
-  "page-index-values-open-ethereum-content-0": "Ethereum je otevřené všem. Kdokoli může prohlížet, používat a vylepšovat jeho kód a vylepšovat ho pro každého."
+  "page-index-values-open-ethereum-content-0": "Ethereum je otevřené všem. Kdokoli může prohlížet, používat a vylepšovat jeho kód a vylepšovat ho pro každého.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Připojte se k největší události roku Ethereum",
+  "page-index-devconnect-banner-get-tickets": "Získejte vstupenky"
 }

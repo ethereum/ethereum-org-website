@@ -58,7 +58,7 @@ Možda ste umetnik koji želi da podeli svoj rad koristeći NFT-ove, bez gubljen
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Istražite, kupite ili kreirajte vlastitu NFT umetninu/kolikcionarske predmete...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Istražite umetnite u obliku NFT-ova
   </ButtonLink>
 </AlertContent>

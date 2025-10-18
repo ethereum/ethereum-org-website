@@ -104,7 +104,7 @@ ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzeri
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Ücret yakımı Ağustos 2021'de <a href="/history/#london">London yükseltmesi</a> ile yürürlüğe girmiştir ve Birleşim'den bu yana değişmemiştir.
+Ücret yakımı Ağustos 2021'de [London yükseltmesi](/history/#london) ile yürürlüğe girmiştir ve Birleşim'den bu yana değişmemiştir.
 </AlertDescription>
 </AlertContent>
 </Alert>

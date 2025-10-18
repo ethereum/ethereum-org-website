@@ -1,6 +1,10 @@
 "use client"
 
-import type { StakingPage, TranslationKey } from "@/lib/types"
+import type {
+  MatomoEventOptions,
+  StakingPage,
+  TranslationKey,
+} from "@/lib/types"
 
 import {
   StakingGlyphCloudIcon,
@@ -9,7 +13,7 @@ import {
 } from "@/components/icons/staking"
 
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Flex } from "../ui/flex"
 import InlineLink from "../ui/Link"

@@ -58,7 +58,7 @@ Ehtimol, siz o‘z ijodingizda nazoratni yo‘qotmasdan va daromadingizni vosita
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>NFT san’at asarlari va kolleksiyalarini o‘rganing, sotib oling yoki o‘zingiznikini yarating...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     NFT san’atini o‘rganing
   </ButtonLink>
 </AlertContent>

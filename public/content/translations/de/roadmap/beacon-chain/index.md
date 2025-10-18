@@ -38,7 +38,7 @@ Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegen
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Wenn Sie Interesse daran haben ein Validator zu werden und bei der Sicherung von Ethereum mitwirken wollen können Sie hier mehr über das <a href="/staking/">Staking</a> erfahren.
+  Wenn Sie Interesse daran haben ein Validator zu werden und bei der Sicherung von Ethereum mitwirken wollen können Sie hier mehr über das [Staking](/staking/) erfahren.
 </AlertDescription>
 </AlertContent>
 </Alert>

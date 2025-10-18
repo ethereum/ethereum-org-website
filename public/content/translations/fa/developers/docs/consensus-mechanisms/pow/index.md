@@ -10,7 +10,7 @@ lang: fa
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    در حال حاضر اثبات کار منسوخ شده است. اتریوم دیگر از اثبات کار به عنوان بخشی از مکانیزم اجماع خود استفاده نمی کند. در عوض، از اثبات سهام استفاده می کند. در مورد <a href="/developers/docs/consensus-mechanisms/pos/">اثبات سهام</a> و <a href="/staking/">سهام گذاری</a> بیشتر بخوانید.
+    در حال حاضر اثبات کار منسوخ شده است. اتریوم دیگر از اثبات کار به عنوان بخشی از مکانیزم اجماع خود استفاده نمی کند. در عوض، از اثبات سهام استفاده می کند. در مورد [اثبات سهام](/developers/docs/consensus-mechanisms/pos/) و [سهام گذاری](/staking/) بیشتر بخوانید.
 </AlertDescription>
 </AlertContent>
 </Alert>

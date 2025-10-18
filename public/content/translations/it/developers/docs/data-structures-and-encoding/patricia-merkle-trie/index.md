@@ -11,7 +11,7 @@ La struttura dei dati di Ethereum è un 'Trie di Merkle-Patricia modificato', co
 
 Un trie di Merkle-Patricia è deterministico e verificabile crittograficamente: il solo modo per generare una radice di stato è calcolandola da ogni singola parte dello stato, e due stati identici sono facilmente dimostrabili confrontando l'hash di radice e gli hash che hanno portato a esso (_una prova di Merkle_). Per contro, non esiste alcun modo per creare due stati differenti con lo stesso hash di radice, e qualsiasi tentativo di modificare lo stato con valori differenti risulterà in un hash della radice di stato differente. Teoricamente, questa struttura rappresenta il 'Sacro Graal' dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni.
 
-Nel prossimo futuro, Ethereum prevede di migrare a una struttura ad [Albero di Verkle](https://ethereum.org/en/roadmap/verkle-trees), che aprirà le porte a molte nuove possibilità per le future migliorie al protocollo.
+Nel prossimo futuro, Ethereum prevede di migrare a una struttura ad [Albero di Verkle](/roadmap/verkle-trees), che aprirà le porte a molte nuove possibilità per le future migliorie al protocollo.
 
 ## Prerequisiti {#prerequisites}
 

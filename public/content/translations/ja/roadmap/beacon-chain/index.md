@@ -38,7 +38,7 @@ summaryPoint3: ビーコンチェーンは、コンセンサスロジックと�
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  バリデータになり、イーサリアムの安全性の確保にご興味がある場合は、<a href="/staking/">ステーキングの詳細</a>をご覧ください。
+  バリデータになり、イーサリアムの安全性の確保にご興味がある場合は、[ステーキングの詳細](/staking/)をご覧ください。
 </AlertDescription>
 </AlertContent>
 </Alert>

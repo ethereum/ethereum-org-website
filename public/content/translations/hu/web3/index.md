@@ -149,7 +149,7 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 
 - [Tárca szerzése](/wallets/)
 - [Találjon egy közösséget](/community/)
-- [Fedezze fel a Web3-alkalmazásokat](/dapps/)
+- [Fedezze fel a Web3-alkalmazásokat](/apps/)
 - [DAO-hoz csatlakozás](/dao/)
 - [Építsen a Web3-ra](/developers/)
 
@@ -157,11 +157,11 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 
 A Web3 nincs szigorúan definiálva. A közösségek különböző résztvevői más-más perspektívával bírnak. Néhány ezek közül:
 
-- [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [A Web3 értelmezése](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Miért számít a Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Miért fontos a decentralizáció](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [A Web3 világa](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [A Web3 vita](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [A Web3 vita](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

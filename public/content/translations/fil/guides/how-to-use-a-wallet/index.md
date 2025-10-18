@@ -60,7 +60,7 @@ Hindi magbabago ang iyong address sa lahat ng Ethereum project. Hindi mo kailang
 ![Pagpili mula sa listahan ng mga wallet kung saan kokonekta](./connect2.png)
 
 5. Kumpirmahin ang kahilingan sa signature sa iyong wallet para maitakda ang koneksyon. **Hindi dapat gumastos ng anumang ETH para i-sign ang mensaheng ito**.
-6. Tapos na! Simulan nang gamitin ang app. Makakakita ka ng mga kawili-wiling proyekto sa aming [dApps page](/dapps/#explore). <br />
+6. Tapos na! Simulan nang gamitin ang app. Makakakita ka ng mga kawili-wiling proyekto sa aming [dApps page](/apps/#explore). <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

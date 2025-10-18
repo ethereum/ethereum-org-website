@@ -73,7 +73,7 @@ Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda 
 ## Daha fazla bilgi {#further-reading}
 
 - [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum)
-- [İş ispatı blok zincirleri hakkında Beyaz Saray raporu](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [İş ispatı blok zincirleri hakkında Beyaz Saray raporu](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emisyonları: Baştan Sona Bir Tahmin](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Enerji Tüketim Endeksi](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

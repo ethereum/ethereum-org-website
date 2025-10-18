@@ -145,7 +145,7 @@ Chúng tôi mới chỉ ở giai đoạn đầu tạo ra một trang Web tốt h
 
 - [Chọn ví tiền](/wallets/)
 - [Tìm một cộng đồng](/community/)
-- [Khám phá các ứng dụng Web3](/dapps/)
+- [Khám phá các ứng dụng Web3](/apps/)
 - [Gia nhập một tổ chức tự trị phi tập trung (DAO)](/dao/)
 - [Xây dựng trên Web3](/developers/)
 
@@ -153,11 +153,11 @@ Chúng tôi mới chỉ ở giai đoạn đầu tạo ra một trang Web tốt h
 
 Web3 không được xác định một cách cứng nhắc. Nhiều người tham gia cộng đồng có quan điểm khác nhau về nó. Dưới đây là một số trong những cái nhìn đó:
 
-- [Web3 là gì? Giải thích về Internet phi tập trung của tương lai](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
+- [Web3 là gì? Giải thích về Internet phi tập trung của tương lai](https://www.freecodecamp.org/news/what-is-web3) - _Nader Dabit_
 - [Ý nghĩa của Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) - _Josh Stark_
 - [Tại sao Web3 quan trọng](https://future.a16z.com/why-web3-matters/) - _Chris Dixon_
 - [Tại sao phi tập trung quan trọng](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Thảo luận về web3](https://www.notboring.co/p/the-web3-debate?s=r) - _Packy McCormick_
+- [Thảo luận về web3](https://www.notboring.co/p/the-web3-debate) - _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

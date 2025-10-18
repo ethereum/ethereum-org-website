@@ -104,7 +104,7 @@ ETH जारी करने के विपरीत बल वह दर ह
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-अगस्त 2021 में <a href="/history/#london">द लंदन अपग्रेड</a> के साथ शुल्क बर्निंग लाइव हो गया, और मर्ज के बाद से अपरिवर्तित बना हुआ है।
+अगस्त 2021 में [द लंदन अपग्रेड](/history/#london) के साथ शुल्क बर्निंग लाइव हो गया, और मर्ज के बाद से अपरिवर्तित बना हुआ है।
 </AlertDescription>
 </AlertContent>
 </Alert>

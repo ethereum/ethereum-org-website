@@ -40,7 +40,7 @@ summaryPoint3: قدمت سلسلة المنارة منطق إجماع الآرا
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  إذا كنت مهتمًا بأن تصبح مدققًا وتساعد على تأمين الإثيريوم، <a href="/staking/">فتعلم المزيد عن تجميد العملات</a>.
+  إذا كنت مهتمًا بأن تصبح مدققًا وتساعد على تأمين الإثيريوم، [فتعلم المزيد عن تجميد العملات](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

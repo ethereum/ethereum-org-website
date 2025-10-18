@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "अ‍ॅप्स वापरून पहा",
   "page-index-cta-get-eth-description": "अथेरमचे चलन",
   "page-index-cta-get-eth-label": "ETH मिळवा",
-  "page-index-cta-networks-description": "अगदी किमान शुल्काचा लाभ घ्‍या",
-  "page-index-cta-networks-label": "एक नेटवर्क निवडा",
   "page-index-cta-wallet-description": "खाती तयार करा आणि मालमत्ता व्यवस्थापित करा",
   "page-index-cta-wallet-label": "वॉलेट निवडा",
+  "page-index-cta-build-apps-description": "तुमचा पहिला अ‍ॅप तयार करा",
+  "page-index-cta-build-apps-label": "विकास सुरू करा",
   "page-index-description": "नावीन्यपूर्ण अ‍ॅप्ससाठी आणि ब्लॉकचेन नेटवर्कसाठी अग्रणी प्लॅटफॉर्म",
   "page-index-developers-code-example-description-0": "तुम्ही प्रोग्राम केलेल्या तर्काच्या सामर्थ्‍याने एक बॅंक तयार करा",
   "page-index-developers-code-example-description-1": "तुम्ही अ‍ॅप्लिकेशन्सवर हस्तांतरित करू शकता आणि वापरू शकता अशी टोकन्स तयार करा",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "अलीकडील पोस्ट",
   "page-index-posts-subtitle": "समुदायामधील नवीनतम ब्लॉग पोस्ट्‍स आणि अपडेट्‍स",
   "page-index-title": "Ethereum मध्ये आपले स्वागत आहे",
+  "page-index-use-cases-tag": "प्रकरणे वापरा",
   "page-index-values-description": "डिजिटल क्रांतीमधील भाग व्हा",
   "page-index-values-header": "इंटरनेट बदलत आहे",
   "page-index-values-legacy": "परंपरा",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "जवळजवळ सर्वाधिक",
   "page-index-values-open-legacy-content-0": "कंपन्या त्यांच्या बौद्धिक मालमत्तेचे संरक्षण करतात आणि त्या शेअर करत नाहीत. कार्य कसे चालले आहे हे कंपनीबाहेरील कोणीही पाहू शकत, समस्यांचे निराकरण करू शकत नाही किंवा सुधारणा करू शकत नाही. नवीन साधने तयार करणे किंवा सानुकूलित करणे हे लोकांकरिता अवघड आहे.",
   "page-index-values-open-ethereum-label": "सर्वांसाठी खुले आहे",
-  "page-index-values-open-ethereum-content-0": "अथेरम सर्वांसाठी सार्वजनिक आहे. कोणीही कोड पाहू शकते, वापरू शकते आणि सुधारित करू शकते आणि सर्वांसाठी ते अधिक चांगले बनवू शकते."
+  "page-index-values-open-ethereum-content-0": "अथेरम सर्वांसाठी सार्वजनिक आहे. कोणीही कोड पाहू शकते, वापरू शकते आणि सुधारित करू शकते आणि सर्वांसाठी ते अधिक चांगले बनवू शकते.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "वर्षातील सर्वात मोठ्या Ethereum कार्यक्रमात सामील व्हा",
+  "page-index-devconnect-banner-get-tickets": "तिकिटे मिळवा"
 }

@@ -38,7 +38,7 @@ Dan menggunakan bukti taruhan sebagai mekanisme konsensus adalah komponen dasar 
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Ethereum, <a href="/staking/">pelajari lebih lanjut tentang penaruhan</a>.
+  Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Ethereum, [pelajari lebih lanjut tentang penaruhan](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

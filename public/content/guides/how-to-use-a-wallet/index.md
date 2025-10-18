@@ -61,7 +61,7 @@ Your address will be the same in all Ethereum projects. You do not need to regis
 ![Selecting from a list of wallets to connect with](./connect2.png)
 
 5. Confirm the signature request in your wallet to establish the connection. **Signing this message should not require spending any ETH**.
-6. That's it! Start using the app. You can find some interesting projects on our [dApps page](/dapps/#explore).
+6. That's it! Start using the app. You can find some interesting projects on our [dApps page](/apps/#explore).
    <br />
 
 <Alert variant="update">

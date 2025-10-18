@@ -227,7 +227,7 @@
   "nav-contribute-description": "আপনি সাহায্য করতে চাইলে, এটি আপনাকে গাইড করবে",
   "nav-contribute-label": "ethereum.org -এ অবদান রাখা",
   "nav-dao-description": "সদস্যরাই হলেন কমিউনিটির মালিক এবং এখানে কেন্দ্রীয় কোনও নিয়ন্ত্রণ নেই",
-  "nav-dapps-description": "ইথেরিয়ামের সাহায্যে অ্যাপের এক সমৃদ্ধ ইকোসিস্টেম ঘুরে দেখুন",
+  "nav-apps-description": "ইথেরিয়ামের সাহায্যে অ্যাপের এক সমৃদ্ধ ইকোসিস্টেম ঘুরে দেখুন",
   "nav-defi-description": "চিরাচরিত আর্থিক বাজারের নিরিখে এক বিশ্বব্যাপী, উন্মুক্ত বিকল্প",
   "nav-desci-description": "বর্তমান বৈজ্ঞানিক পদ্ধতির একটি বিশ্বব্যাপী, উন্মুক্ত বিকল্প",
   "nav-desoc-description": "সোশ্যাল ইন্টার‌্যাকশন এবং কন্টেন্ট তৈরির জন্য ব্লকচেইন-ভিত্তিক প্ল্যাটফর্ম",
@@ -276,7 +276,7 @@
   "nav-layer-2-description": "ইথেরিয়ামের জন্য অপেক্ষাকৃত সস্তায় এবং তাড়াতাড়ি ট্রানজ্যাকশন",
   "nav-learn-by-coding-description": "ইথেরিয়ামের সাথে পরীক্ষানীরিক্ষা করার টুলস",
   "nav-local-env-description": "আপনার ইথেরিয়াম ডেভেলপমেন্ট স্ট্যাক বেছে নিন এবং সেট-আপ করুন",
-  "nav-mainnet-description": "এন্টারপ্রাইজ ব্লকচেইন অ্যাপ্লিকেশন পাবলিক ইথেরিয়াম মেইননেটে বানানো সম্ভব",
+  "nav-enterprise-description": "এন্টারপ্রাইজ ব্লকচেইন অ্যাপ্লিকেশন পাবলিক ইথেরিয়াম মেইননেটে বানানো সম্ভব",
   "nav-nft-description": "একটি ইথেরিয়াম-ভিত্তিক সম্পদ হিসেবে অনন্য কিছু উপস্থাপন করার একটি উপায়",
   "nav-open-research-description": "অ্যাক্টিভ রিসার্চ কমিউনিটি হল ইথেরিয়ামের অন্যতম প্রধান শক্তি",
   "nav-open-research-label": "উন্মুক্ত গবেষণা",
@@ -323,6 +323,8 @@
   "nav-staking-solo-description": "হোম হার্ডওয়্যার চালান এবং ব্যক্তিগতভাবে ইথেরিয়াম নেটওয়ার্কের নিরাপত্তা এবং বিকেন্দ্রীকরণ যোগ করুন",
   "nav-staking-solo-label": "স্বতন্ত্র স্টেকিং",
   "nav-start-building-description": "নতুনদের সাহায্যের জন্য তথ্য",
+  "nav-start-with-crypto-title": "এখান থেকে শুরু করুন",
+  "nav-start-with-crypto-description": "Ethereum ব্যবহারের আপনার প্রথম ধাপ",
   "nav-translation-program-description": "ethereum.org ওয়েবসাইটকে সমস্ত ভাষায় অনুবাদ করার জন্য সকলে মিলে করা এক প্রয়াস",
   "nav-tutorials-description": "কমিউনিটির টিউটোরিয়ালের একত্রিত করা তালিকা",
   "nav-use-cases-description": "ইথেরিয়াম ব্যবহারের বিভিন্ন আইডিয়া খুঁজে নিন",
@@ -430,5 +432,8 @@
   "withdrawals": "স্টেকিং উইথড্রয়াল",
   "wrapped-ether": "র‍্যাপড ইথার",
   "yes": "হ্যাঁ",
-  "zero-knowledge-proofs": "শূন্য-জ্ঞান প্রমাণ"
+  "zero-knowledge-proofs": "শূন্য-জ্ঞান প্রমাণ",
+  "ethereum-vs-bitcoin": "ইথেরিয়াম বনাম বিটকয়েন",
+  "nav-ethereum-vs-bitcoin-description": "ইথেরিয়াম এবং বিটকয়েনের মধ্যে পার্থক্য বুঝুন"
+
 }

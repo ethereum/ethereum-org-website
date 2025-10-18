@@ -104,7 +104,7 @@ Kekuatan berlawanan dengan penerbitan ETH adalah tingkat pembakaran ETH. Untuk s
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Pembakaran biaya diaktifkan dengan <a href="/history/#london">peningkatan London</a> pada Agustus 2021, dan tetap tidak berubah sejak Terjadinya Penggabungan.
+Pembakaran biaya diaktifkan dengan [peningkatan London](/history/#london) pada Agustus 2021, dan tetap tidak berubah sejak Terjadinya Penggabungan.
 </AlertDescription>
 </AlertContent>
 </Alert>

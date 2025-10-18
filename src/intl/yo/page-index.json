@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Gbìyànjú àwọn ohun èlò ẹ̀rọ",
   "page-index-cta-get-eth-description": "Owó ti Ethereum",
   "page-index-cta-get-eth-label": "Gba ETH",
-  "page-index-cta-networks-description": "Jẹ ìgbádùn owó péréte",
-  "page-index-cta-networks-label": "Yan nẹ́tíwọọkì kan",
   "page-index-cta-wallet-description": "Ṣẹ̀dá àkántì àti ṣàkóso àwọn ohun-ìní",
   "page-index-cta-wallet-label": "Mú wọ́lẹ́ẹ́tì kan",
+  "page-index-cta-build-apps-description": "Ṣẹda app rẹ̀ àkọ́kọ́́",
+  "page-index-cta-build-apps-label": "Bẹrẹ idagbasoke",
   "page-index-description": "Pẹpẹ asíwájú fún àwọn ohun èlò tuntun àti àwọn nẹ́tíwọọkì blockchain",
   "page-index-developers-code-example-description-0": "Kọ́ bánkì kan tí ó ní agbára nípasẹ̀ ọgbọ́n tí o ti ṣètò",
   "page-index-developers-code-example-description-1": "Ṣẹ̀dá tọ́kẹ̀n tí o lè fi ránṣẹ́ tàbí lò lorí àwọn ohun èlò ẹ̀ro",
@@ -81,6 +81,7 @@
   "page-index-posts-header": "Àwọn àgbéjáde àìpẹ́",
   "page-index-posts-subtitle": "Àwọn àgbéjáde bulọọgi tuntun àti àwọn ìmúdójúìwọ̀n láti àwùjọ náà",
   "page-index-title": "Káàbọ̀ sí Ethereum",
+  "page-index-use-cases-tag": "Àwọn ìṣẹ̀lẹ̀ lílò",
   "page-index-values-description": "Jẹ́ ara ìyípadà dígítà",
   "page-index-values-header": "Íńtánẹ́ẹ̀tì ń yípadà",
   "page-index-values-legacy": "Ogún",
@@ -114,5 +115,7 @@
   "page-index-values-open-legacy-label": "Títìpa fún ọ̀pọ̀lọpọ̀",
   "page-index-values-open-legacy-content-0": "Àwọn ilé-iṣẹ́ máa ń dáàbò bo ohun ìní wọn, wọn kìí sìí pín in fáwọn ẹlòmíràn. Kò sẹ́ni tó wà lóde ilé iṣẹ́ náà tó lè rí bí àwọn nǹkan ṣe ń ṣiṣẹ́, ṣàtúnṣe àwọn ìṣòro, tàbí ṣe àwọn ìlọsíwájú. Ó nira fún àwọn ènìyàn láti ṣẹ̀dá àwọn irinṣẹ́ tuntun tàbí ṣe àdáni.",
   "page-index-values-open-ethereum-label": "Ṣí sí gbogbo ènìyàn",
-  "page-index-values-open-ethereum-content-0": "Ethereum jẹ fún gbogbo ènìyàn. Ẹnikẹ́ni lè ríi, lò ó, kí ó sì mú kóòdù náà sunwọ̀n síi, ṣíṣe é kó dára jùlọ fún gbogbo ènìyàn."
+  "page-index-values-open-ethereum-content-0": "Ethereum jẹ fún gbogbo ènìyàn. Ẹnikẹ́ni lè ríi, lò ó, kí ó sì mú kóòdù náà sunwọ̀n síi, ṣíṣe é kó dára jùlọ fún gbogbo ènìyàn.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Darapọ mọ iṣẹlẹ Ethereum ti o tobi julọ ti ọdun",
+  "page-index-devconnect-banner-get-tickets": "Gba awọn tikẹti"
 }

@@ -104,7 +104,7 @@ Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrann
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Die Verbrennung von Gebühren wurde mit dem <a href="/history/#london">the London Upgrade</a> im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
+Die Verbrennung von Gebühren wurde mit dem [the London Upgrade](/history/#london) im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
 </AlertDescription>
 </AlertContent>
 </Alert>

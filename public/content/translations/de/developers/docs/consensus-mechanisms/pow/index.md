@@ -10,7 +10,7 @@ Das Ethereum-Netzwerk hat zu Beginn einen Konsensmechanismus verwendet, der **[P
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    Proof-of-Work ist inzwischen veraltet. Ethereum verwendet Proof-of-Work nicht mehr als Teil seines Konsensmechanismus. Stattdessen nutzt Ethereum Proof-of-Stake. Lesen Sie mehr über <a href="/developers/docs/consensus-mechanisms/pos/">Proof-of-Stake</a> und <a href="/staking/">Staking</a>.
+    Proof-of-Work ist inzwischen veraltet. Ethereum verwendet Proof-of-Work nicht mehr als Teil seines Konsensmechanismus. Stattdessen nutzt Ethereum Proof-of-Stake. Lesen Sie mehr über [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und [Staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -12,7 +12,7 @@ summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaa
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-    Mnyororo wa Kioleza ulisafirishwa Disemba 1 saa sita mchana wakati wa ulimwengu ulioratibiwa. Kujifunza zaidi, <a href="https://beaconscan.com/">chunguza taarifa</a>. Kama unataka kuhalalisha mnyororo, unaweza <a href="/staking/">kuweka ETH yako kama hisa</a>.
+    Mnyororo wa Kioleza ulisafirishwa Disemba 1 saa sita mchana wakati wa ulimwengu ulioratibiwa. Kujifunza zaidi, <a href="https://beaconscan.com/">chunguza taarifa</a>. Kama unataka kuhalalisha mnyororo, unaweza [kuweka ETH yako kama hisa](/staking/).
 </UpgradeStatus>
 
 ## Myororo wa Kioleza ni nini? {#what-does-the-beacon-chain-do}
@@ -33,7 +33,7 @@ Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/c
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a href="/staking/">jifunze zaidi jinsi ya kuweka hisa</a>.
+Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, [jifunze zaidi jinsi ya kuweka hisa](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -8,12 +8,12 @@ lang: el
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Το Ethash ήταν ο αλγόριθμος κρυπτόρυξης της απόδειξης εργασίας του Ethereum. Η απόδειξη εργασίας έχει τώρα **απενεργοποιηθεί εντελώς** και το Ethereum είναι πλέον ασφαλισμένο χρησιμοποιώντας <a href="/developers/docs/consensus-mechanisms/pos/">απόδειξη συμμετοχής</a>. Διαβάστε περισσότερα για τη <a href="/roadmap/merge/">Συγχώνευση</a>, <a href="/developers/docs/consensus-mechanisms/pos/">την Απόδειξη συμμετοχής</a> και την <a href="/staking/">Αποθήκευση κεφαλαίου</a>. Αυτή η σελίδα είναι για ιστορικό ενδιαφέρον!  
+   Το Ethash ήταν ο αλγόριθμος κρυπτόρυξης της απόδειξης εργασίας του Ethereum. Η απόδειξη εργασίας έχει τώρα **απενεργοποιηθεί εντελώς** και το Ethereum είναι πλέον ασφαλισμένο χρησιμοποιώντας [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos/). Διαβάστε περισσότερα για τη [Συγχώνευση](/roadmap/merge/), [την Απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos/) και την [Αποθήκευση κεφαλαίου](/staking/). Αυτή η σελίδα είναι για ιστορικό ενδιαφέρον!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Το [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) είναι μια τροποποιημένη έκδοση του αλγορίθμου [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Η απόδειξη εργασίας Ethash είναι [δύσκολη στη μνήμη](https://wikipedia.org/wiki/Memory-hard_function), κάτι που πιστεύεται ότι καθιστούσε τον αλγόριθμο ανθεκτικό στα ASIC. Τα ASIC Ethash αναπτύχθηκαν τελικά αλλά η κρυπτόρυξη GPU ήταν ακόμα μια βιώσιμη επιλογή μέχρι να απενεργοποιηθεί η απόδειξη εργασίας. Το Ethash εξακολουθεί να χρησιμοποιείται για την κρυπτόρυξη άλλων νομισμάτων σε άλλα δίκτυα απόδειξης εργασίας που δεν είναι Ethereum.
+Το Ethash είναι μια τροποποιημένη έκδοση του αλγορίθμου [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Η απόδειξη εργασίας Ethash είναι [δύσκολη στη μνήμη](https://wikipedia.org/wiki/Memory-hard_function), κάτι που πιστεύεται ότι καθιστούσε τον αλγόριθμο ανθεκτικό στα ASIC. Τα ASIC Ethash αναπτύχθηκαν τελικά αλλά η κρυπτόρυξη GPU ήταν ακόμα μια βιώσιμη επιλογή μέχρι να απενεργοποιηθεί η απόδειξη εργασίας. Το Ethash εξακολουθεί να χρησιμοποιείται για την κρυπτόρυξη άλλων νομισμάτων σε άλλα δίκτυα απόδειξης εργασίας που δεν είναι Ethereum.
 
 ## Πώς λειτουργεί το Ethash; {#how-does-ethash-work}
 

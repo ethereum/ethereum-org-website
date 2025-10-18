@@ -47,7 +47,7 @@ DeFi jẹ́ àkójọ ọ̀rọ̀ fún àwọn ọja àti iṣẹ́ owó tó j�
 | Àwọn ọjà sii nigba gbogbo.                                                                  | Ọjà máa ń jẹ́ àtìpa torí pé àwọn òṣìṣẹ́ nílò ìsinmi.                                                                                        |
 | Ó je kikọ́ lori àkọyawo – ẹnikẹ́ni lè wo data ọja kan kí ó sì ṣàyẹ̀wò bí ètò náà ṣe ń ṣiṣẹ. | ChatGPT Àwọn ilé-iṣẹ inawo jẹ́ ìwé pipade: o kò lè bẹ̀rẹ̀ láti wo ìtàn àwìn wọn, igbasilẹ ti àwọn ohun-ini iṣakoso won, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ṣàwárí àwọn ohun èlò DeFi
 </ButtonLink>
 
@@ -67,7 +67,7 @@ Eyi dabi ohun àjẹ́jì... "Kilódé tí ma fẹ́ fi ṣètò owó mi"? Sib�
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ṣàwárí àwọn ìmọ̀ràn wa fún àwọn ohun elo DeFi lati gbìyanju e tí o bá jẹ́ tuntun sí Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Ṣàwárí àwọn ohun èlò DeFi
   </ButtonLink>
 </AlertContent>
@@ -95,7 +95,7 @@ Omiiran alailakoso wà fún òpọ̀ àwọn iṣẹ́ ìsúná. Ṣùgbọ́n E
 
 Gẹ́gẹ́ bíi blockchain, Ethereum jẹ́ àpẹrẹ fún fífiranṣẹ àwọn ìdúnàádúrà ní ààbò àti ní ọna àgbáyé. Bí Bitcoin, Ethereum jẹ́ kí fífiranṣẹ owó káàkiri agbaye rọrùn bí fífiranṣẹ ìmẹ́èlì. Kan tẹ olùgbà rẹ síí [orúkọ ENS](/glossary/#ens) (bi bob.eth) tàbí àdírẹ́sì àkántì wọn láti woleeti rẹ, àti sisanwo rẹ yóò lọ tàárà sí wọn ní iṣẹ́jú (nígbà gbogbo). Látì rán tàbí gba àwọn sisanwo, o máa nílò [woleeti](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo owo sisan dapps
 </ButtonLink>
 
@@ -126,7 +126,7 @@ Yà owó láti odo àwọn olupese alailakoso wa ní irú àwọn méjì pàtàk
 - Ẹlẹgbẹ-si-ẹlẹgbẹ, tó túmọ̀ sí pé olùyà owó yoo yà owó taara láti ọdọ́ ayanilowo kan pàtàkì.
 - Àkójọpọ̀-orisun ibi tí àwọn ayanilowo ti pese owó (owó) sí adagun kan tí àwọn oluya owo le ti yà owó.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo dapps yiya ni lowo
 </ButtonLink>
 
@@ -171,7 +171,7 @@ Tí ipese pẹpẹ ìṣòwò B bá ṣubú lójijì, tí ó sì ṣeé ṣe ki 
 
 Láti lè ṣe àpẹẹrẹ tó wà lókè nínú ayé ìṣúná ibile, wa nílò iye owó tó pọ̀ gan-an. Àwọn ilana riri owó yìí jẹ́ wiwọlé sí fun àwọn tó ní òrò tó wà tẹ́lẹ̀. Àwọn owó yíyá ojú ẹsẹ̀ jẹ apẹẹrẹ ti ọjọ iwaju nibiti nini owo kii ṣe pataki ṣaaju fun riri owo.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Díẹ̀ síi lori àwọn owó yíyá ojú ẹsẹ̀
 </ButtonLink>
 
@@ -188,7 +188,7 @@ O lè rí èrè lórí crypto rẹ̀ nípa yíyánilowo rẹ, tí o sì lè rí 
 - aDAI rẹ yoo pọ si to da lori awọn oṣuwọn ele ati pe o le rii iyoku owo rẹ dagba ninu woleeti rẹ. Ti o da lori [APR](/glossary/#apr), iyoku owo ninu woleeti rẹ yoo je nkan bi 100.1234 lẹhin awọn ọjọ diẹ tabi paapaa awon wakati!
 - O le yọ iye Dai deede kan kuro to dọgba si iyoku owo aDai rẹ nigbakugba.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo àwọn ohun elo yiyanilowo dapps
 </ButtonLink>
 
@@ -216,7 +216,7 @@ Awọn tẹ́tẹ́ tí kò le padanu bí PoolTogether jẹ́ igbadun àti ọ̀
 
 Fún àpẹrẹ, tí o bá fẹ́ lo PoolTogether tẹ́tẹ́ tí kòsí ìpàdánù (ta ṣe àlàyé rẹ lókè), iwọ yoo nílò tókìn kan bíi Dai tàbí USDC. Àwọn DEX wọ̀nyí jẹ́ kí o lè paarọ́ ETH rẹ fún àwọn tókìn wọ̀nyẹn àti pada lẹ́yìn tí o bá parí.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo awon paṣipaarọ́ tókìn
 </ButtonLink>
 
@@ -228,7 +228,7 @@ Fún àpẹrẹ, tí o bá fẹ́ lo PoolTogether tẹ́tẹ́ tí kòsí ìpàd
 
 Nígbà tí o bá lo paṣipaarọ́ alakoso, o ní láti fi àwọn ohun-ini rẹ pamọ́ ṣáájú ìṣòwò náà kí o sì gbẹ́kẹ̀lé wọn láti tọ́jú wọn. Lákòókò tí àwọn ohun-ini rẹ bá wà ní ipamọ, wọn wà ninu ewu nitori pé àwọn paṣipaarọ́ alakoso jẹ́ àwọn ibi tó fani mọ́ra fún àwọn olosa.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo àwọn dapps ìṣòwò
 </ButtonLink>
 
@@ -240,7 +240,7 @@ Nígbà tí o bá lo paṣipaarọ́ alakoso, o ní láti fi àwọn ohun-ini r�
 
 Àpẹẹrẹ tí ó dára ni [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Eyi jẹ́ ìṣòwò tí ó ṣe ìbámu àtọkànwá láìsí ìṣàkóso láti jẹ́ kí àpò ìdókòwò rẹ máa ní àwọn tókìn DeFi tó ga jùlọ ní àkọsílẹ̀ ọjà. O kò ní ní láti ṣakoso àwọn ìṣètò kankan, àti pé o lè yọkúrò nínú ìṣòwò náà nígbàkígbà tí o bá fẹ́.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo àwọn ìdoko-owo dapps
 </ButtonLink>
 
@@ -254,7 +254,7 @@ Ethereum jẹ́ pẹpẹ tó péye fún àkójọpọ̀ owó:
 - O jẹ kedere, nítorí náà, àwọn tó ń ṣe ìkówójọ le jẹ́rìí iye owó tí a ti kó jọ. O le paapaa tọpinpin bi a ṣe n na owo naa to ba ya.
 - Awọn akówójọ le ṣeto awọn idapada aifọwọyi ti, fun apẹẹrẹ, akoko ipari kan ba wa ati pe a ko ri iye to kere julọ ninu iseto.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo dapps akówójọ
 </ButtonLink>
 
@@ -283,7 +283,7 @@ Quadratic funding makes sure that the projects that receive the most funding are
 
 Àwọn ọja Ethereum, bíi gbogbo sọ́fitiwia, lè ní àwọn aṣiṣe àti ìlòkúlò. Ní báyìí, púpọ̀ nínú àwọn ọja ìbánigbófò nínú ààyè náà fojúsí ìdáàbòbò fún àwọn olùmúlò lọ́wọ́ sísọ owó wọn nù. Síbẹ̀sibẹ̀, àwọn iṣẹ́ àkànṣe wa tó bẹ̀rẹ̀ láti kọ ààbò fún gbogbo ohun tí ìgbésí-ayé lè ju sí wa. Àpẹẹrẹ tó dára fún eyi ni ààbò Irugbin Etherisc tó ní ero láti[láti dáàbò bo àwọn àgbẹ̀ kéékèèké ní Kenya kúrò lọ́wọ́ ọ̀gbẹlẹ̀ àti omíyalé](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Ìbánigbófò aláìlákóso lè pese ààbò olówó poku fún àwọn agbe, tí wọ́n máa n saba rí ìṣòro nipa pé wọn kò ní owó fún ìbánigbófò tí ìbílẹ̀.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo dapps ìbánigbófò
 </ButtonLink>
 
@@ -293,7 +293,7 @@ Quadratic funding makes sure that the projects that receive the most funding are
 
 Pẹ̀lú púpọ̀ tí ń lọ, iwọ yoo nílò ọ̀nà láti tọpinpin gbogbo àwọn ìdókòwò, owó tí o yá àti àwọn ìṣòwò rẹ. Àwọn ọja púpọ̀ ló wà tí ó ń jẹ́ kí o lè ṣàkóso gbogbo DeFi rẹ láti ibi kan ṣoṣo. Èyí ni ẹ̀wà ìṣètò tí ó ṣí sílẹ̀ ti DeFi. Awọn ẹgbẹ le kọ awọn atọkun jade níbi tí o ti lè rii àwọn owo re yoku lori gbogbo àwọn ọja, àti pé o tún lè lo àwọn ẹya wọn. O lè rí i pé èyí wúlò bí o ṣe ń ṣàwárí DeFi siwaju síi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Wo dapps àpò ìṣòwò
 </ButtonLink>
 
@@ -325,7 +325,7 @@ O lè ro DeFi gege bi àwọn ìpele:
 1. Blockchain náà – Ethereum ní ìtàn ìdunadura àti ipo àwọn àkanti.
 2. Àwọn ohun-ini – [ETH](/eth/) àti àwọn tokin míìran (àwọn owó).
 3. Àwọn ìlànà náà – [àdéhùn ọlọ́gbọ́n](/glossary/#smart-contract) tó pèsè iṣẹ́ ṣíṣe, fún àpẹẹrẹ, iṣẹ́ kan tó fúnni láàyè fún yíyani ní àwọn ohun-ini alàílakoso.
-4. [Àwọn ohun èlò náà](/dapps/) – àwọn ọjà tí àwa ń lò láti ṣètò àti wọlé sí àwọn ìlànà náà.
+4. [Àwọn ohun èlò náà](/apps/) – àwọn ọjà tí àwa ń lò láti ṣètò àti wọlé sí àwọn ìlànà náà.
 
 Àkíyèsí: púpọ̀ nínú DeFi ń lò[ìdiwọ̀n ERC-20](/glossary/#erc-20). Àwọn ohun èlò nínú DeFi máa ń lò ẹ̀yà fún ETH tó ń jẹ́ Ẹ̀yà Ether (WETH). [Kọ díẹ̀ sí nípa ẹ̀yà ether](/wrapped-eth).
 

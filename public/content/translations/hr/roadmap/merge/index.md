@@ -40,7 +40,7 @@ Spajanjem nisu izgubljeni povijesni podaci. Kako se glavna mreža objedinila s B
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o <a href="/roadmap/merge/issuance/">izdavanju Ethera prije i nakon Spajanja</a>.
+Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o [izdavanju Ethera prije i nakon Spajanja](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>

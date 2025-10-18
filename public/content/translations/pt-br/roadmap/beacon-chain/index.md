@@ -38,7 +38,7 @@ E utilizar a prova de participação como mecanismo de consenso é um componente
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Se você estiver interessado em se tornar um validador e ajudar a manter o Ethereum seguro, <a href="/staking/">saiba mais sobre o conceito de participação</a>.
+  Se você estiver interessado em se tornar um validador e ajudar a manter o Ethereum seguro, [saiba mais sobre o conceito de participação](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

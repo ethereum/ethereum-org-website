@@ -63,7 +63,7 @@ _Web 3 已發展成由一層和二層網路擴容解決方案組成的生態系�
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  你也可以使用 <a href="/get-eth/">中央化交易所</a> 完成上述所有操作。 但是，除非你已有資金在交易所內，否則會涉及多個步驟，而你可能會覺得使用跨鏈橋比較好。
+  你也可以使用 [中央化交易所](/get-eth/) 完成上述所有操作。 但是，除非你已有資金在交易所內，否則會涉及多個步驟，而你可能會覺得使用跨鏈橋比較好。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +104,7 @@ _Web 3 已發展成由一層和二層網路擴容解決方案組成的生態系�
 
 使用跨鏈橋能夠讓你在不同的區塊鏈之間轉移資產。 以下是一些可以幫助你找到和使用跨鏈橋的資源：
 
-- **[L2BEAT 跨鏈橋摘要](https://l2beat.com/bridges/summary)和 [L2BEAT 跨鏈橋風險分析](https://l2beat.com/bridges/risk)**：提供各種跨鏈橋的完整摘要，包括市場份額、跨鏈橋類型和目標鏈的細節。 L2BEAT 也提供跨鏈橋風險分析，幫助使用者明智地挑選跨鏈橋。
+- **[L2BEAT 跨鏈橋摘要](https://l2beat.com/bridges/summary)和 [L2BEAT 跨鏈橋風險分析](https://l2beat.com/bridges/summary)**：提供各種跨鏈橋的完整摘要，包括市場份額、跨鏈橋類型和目標鏈的細節。 L2BEAT 也提供跨鏈橋風險分析，幫助使用者明智地挑選跨鏈橋。
 - **[DefiLlama 跨鏈橋摘要](https://defillama.com/bridges/Ethereum)**：提供以太坊網路上各種跨鏈橋的交易量摘要。
 
 <Divider />

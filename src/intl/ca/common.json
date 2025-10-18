@@ -230,7 +230,7 @@
   "nav-contribute-description": "Si voleu ajudar, això us guiarà",
   "nav-contribute-label": "Col·laborar amb ethereum.org",
   "nav-dao-description": "Comunitats de propietat dels membres sense autoritat centralitzada",
-  "nav-dapps-description": "Exploreu un ric ecosistema d'aplicacions usant Ethereum",
+  "nav-apps-description": "Exploreu un ric ecosistema d'aplicacions usant Ethereum",
   "nav-defi-description": "Una alternativa global i oberta al mercat financer tradicional",
   "nav-desci-description": "Una alternativa global i oberta al sistema científic actual",
   "nav-desoc-description": "Plataformes basades en cadenes de blocs per a la interacció social i la creació de contingut",
@@ -279,7 +279,7 @@
   "nav-history-label": "Història tècnica de Ethereum",
   "nav-learn-by-coding-description": "Eines que us ajuden a experimentar amb Ethereum",
   "nav-local-env-description": "Trieu i configureu la vostra pila de desenvolupament Ethereum",
-  "nav-mainnet-description": "Les aplicacions de cadena de blocs empresarials es poden construir en la xarxa Principal pública de Ethereum",
+  "nav-enterprise-description": "Les aplicacions de cadena de blocs empresarials es poden construir en la xarxa Principal pública de Ethereum",
   "nav-networks-home-description": "Transaccions més barates i ràpides per a Ethereum",
   "nav-networks-introduction-label": "Introducció",
   "nav-networks-introduction-description": "Ethereum es va expandir en una xarxa de xarxes",
@@ -333,6 +333,8 @@
   "nav-staking-solo-description": "Executeu el maquinari domèstic i afegiu personalment la seguretat i la descentralització de la xarxa Ethereum",
   "nav-staking-solo-label": "Apilament en solitari",
   "nav-start-building-description": "Informació útil per als nouvinguts",
+  "nav-start-with-crypto-title": "Comença aquí",
+  "nav-start-with-crypto-description": "Els vostres primers passos amb Ethereum",
   "nav-translation-program-description": "Un esforç de col·laboració per a traduir ethereum.org a tots els idiomes",
   "nav-tutorials-description": "Llista verificada de tutorials de la comunitat",
   "nav-use-cases-description": "Descobriu diferents idees per a l'ús de Ethereum",
@@ -441,5 +443,8 @@
   "withdrawals": "Retirada d'apilaments",
   "wrapped-ether": "Ether embolicat",
   "yes": "Sí",
-  "zero-knowledge-proofs": "Proves de coneixement zero"
+  "zero-knowledge-proofs": "Proves de coneixement zero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Entendre les diferències entre Ethereum i Bitcoin"
+
 }

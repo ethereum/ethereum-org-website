@@ -59,7 +59,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Εξερευνήστε, αγοράστε ή δημιουργήστε το δικό σας NFT τέχνη/συλλεκτικά...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Εξερευνήστε NFT τέχνης
   </ButtonLink>
 </AlertContent>

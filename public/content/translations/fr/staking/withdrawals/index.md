@@ -163,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Si vous faites partie d'un <a href="/staking/pools/">groupe d'enjeux</a> ou si vous détenez des jetons de mise en jeu, vous devez vous renseigner auprès de votre fournisseur pour savoir comment les retraits de mise en jeu sont gérés, car chaque service fonctionne différemment.
+Si vous faites partie d'un [groupe d'enjeux](/staking/pools/) ou si vous détenez des jetons de mise en jeu, vous devez vous renseigner auprès de votre fournisseur pour savoir comment les retraits de mise en jeu sont gérés, car chaque service fonctionne différemment.
 
-En général, les utilisateurs sont censés être libres de récupérer leur ETH sous-jacent mis en jeu, ou de changer le fournisseur de mise en jeu qu'ils utilisent. Si un groupe particulier devient trop important, les fonds peuvent être retirés, rachetés, et remisés auprès d'un <a href="https://rated.network/">fournisseur plus petit</a>. Ou, si vous avez accumulé suffisamment d'ETH, vous pouvez <a href="/staking/solo/">miser depuis chez vous</a>.
+En général, les utilisateurs sont censés être libres de récupérer leur ETH sous-jacent mis en jeu, ou de changer le fournisseur de mise en jeu qu'ils utilisent. Si un groupe particulier devient trop important, les fonds peuvent être retirés, rachetés, et remisés auprès d'un <a href="https://rated.network/">fournisseur plus petit</a>. Ou, si vous avez accumulé suffisamment d'ETH, vous pouvez [miser depuis chez vous](/staking/solo/).
 
 </ExpandableCard>
 
@@ -222,7 +222,6 @@ Non. Une fois qu'un validateur est sorti et que son solde total a été retiré,
 
 - [Retraits de la plateforme de lancement de la mise en jeu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895 : la chaîne phare signale les retraits comme des opérations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94 : Retrait de l'ETH misé (Testing) avec Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68 : EIP-4895 : Retraits de la chaîne de balises en tant qu'opérations avec Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Comprendre le Solde Effectif du Validateur](https://www.attestant.io/posts/understanding-validator-effective-balance/)

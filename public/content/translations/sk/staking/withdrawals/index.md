@@ -163,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ak ste súčasťou <a href="/staking/pools/">stakovacie poolu</a> alebo držíte stakovacie tokeny, mali by ste sa u svojho poskytovateľa informovať o tom, ako sa nakladá s výbermi stakovanej sumy, pretože každá služba funguje inak.
+Ak ste súčasťou [stakovacie poolu](/staking/pools/) alebo držíte stakovacie tokeny, mali by ste sa u svojho poskytovateľa informovať o tom, ako sa nakladá s výbermi stakovanej sumy, pretože každá služba funguje inak.
 
-Vo všeobecnosti by používatelia mali mať možnosť získať späť svoje základné stakované ETH alebo zmeniť poskytovateľa stakovania, ktorého využívajú. Ak je konkrétny pool príliš veľký, je možné prostriedky opustiť, uplatniť a znovu stakovať u menšieho <a href="https://rated.network/">poskytovateľa</a>. Alebo, ak ste nazhromaždili dostatok ETH, môžete <a href="/staking/solo/">stakovať ako jednotlivec</a>.
+Vo všeobecnosti by používatelia mali mať možnosť získať späť svoje základné stakované ETH alebo zmeniť poskytovateľa stakovania, ktorého využívajú. Ak je konkrétny pool príliš veľký, je možné prostriedky opustiť, uplatniť a znovu stakovať u menšieho <a href="https://rated.network/">poskytovateľa</a>. Alebo, ak ste nazhromaždili dostatok ETH, môžete [stakovať ako jednotlivec](/staking/solo/).
 
 </ExpandableCard>
 
@@ -222,7 +222,6 @@ Nie. Hneď ako validátor skončí a vyberie sa jeho celý zostatok, všetky dod
 
 - [Výbery zo Staking Launchpadu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: nútené výbery beacon chainu výberu ako operácia](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: výber stakovaných ETH (testovanie) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: nútené výbery beacon chainu ako operácia s Alexom Stokesom](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumenie efektívnemu zostatku validátora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -101,7 +101,7 @@ title="خلاصه‌ای بر صدور اتر">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-سوختن کارمزد در اوت 2021 و با اجرای <a href="/history/#london">ارتقای لندن</a>محقق گردید و از زمان وقوع «ادغام» هم تغییری نکرده است.
+سوختن کارمزد در اوت 2021 و با اجرای [ارتقای لندن](/history/#london)محقق گردید و از زمان وقوع «ادغام» هم تغییری نکرده است.
 </AlertDescription>
 </AlertContent>
 </Alert>

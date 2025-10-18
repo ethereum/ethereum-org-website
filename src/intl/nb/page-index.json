@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Prøv apper",
   "page-index-cta-get-eth-description": "Valutaen til Ethereum",
   "page-index-cta-get-eth-label": "Hent ETH",
-  "page-index-cta-networks-description": "Dra nytte av minimale avgifter",
-  "page-index-cta-networks-label": "Velg et nettverk",
   "page-index-cta-wallet-description": "Opprett kontoer og administer aktiva",
   "page-index-cta-wallet-label": "Velg en lommebok",
+  "page-index-cta-build-apps-description": "Lag Deres første app",
+  "page-index-cta-build-apps-label": "Start utvikling",
   "page-index-description": "Den ledende plattformen for innovative apper og blokkjede-nettverk",
   "page-index-developers-code-example-description-0": "Bygg en bank drevet med logikk du har programmert",
   "page-index-developers-code-example-description-1": "Opprett tokener som du kan overføre og bruke i andre programmer",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Nylige innlegg",
   "page-index-posts-subtitle": "De nyligste blogg-innleggene og oppdateringer fra fellesskapet",
   "page-index-title": "Velkommen til Ethereum",
+  "page-index-use-cases-tag": "Brukstilfeller",
   "page-index-values-description": "Vær en del av den digitale revolusjonen",
   "page-index-values-header": "Internettet er i endring",
   "page-index-values-legacy": "Gammel",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Lukket for de fleste",
   "page-index-values-open-legacy-content-0": "Selskaper beskytter sin immaterielle eiendom og deler ikke. Ingen utenfor selskapet kan se hvordan ting fungerer, fikse problemer eller gjøre forbedringer, som gjør det vanskelig for personer å opprette nye verktøy eller tilpasninger.",
   "page-index-values-open-ethereum-label": "Åpen for alle",
-  "page-index-values-open-ethereum-content-0": "Ethereum er offentlig. Alle kan se, bruke og forbedre koden, noe som gjør Ethereum bedre for alle og enhver."
+  "page-index-values-open-ethereum-content-0": "Ethereum er offentlig. Alle kan se, bruke og forbedre koden, noe som gjør Ethereum bedre for alle og enhver.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Bli med på årets største Ethereum-arrangement",
+  "page-index-devconnect-banner-get-tickets": "Få billetter"
 }

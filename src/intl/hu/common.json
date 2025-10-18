@@ -231,7 +231,7 @@
   "nav-contribute-description": "Ha segíteni szeretne, itt talál útmutatást",
   "nav-contribute-label": "Hozzájárulás az ethereum.org oldalhoz",
   "nav-dao-description": "Tagtulajdonú közösségek központi hatóság nélkül",
-  "nav-dapps-description": "Fedezze fel az appok gazdag ökoszisztémáját az Ethereum segítségével",
+  "nav-apps-description": "Fedezze fel az appok gazdag ökoszisztémáját az Ethereum segítségével",
   "nav-defi-description": "Egy globális és nyitott alternatívája a hagyományos pénzügyi piacnak",
   "nav-desci-description": "Egy globális és nyitott alternatívája a jelenlegi tudományos rendszernek",
   "nav-desoc-description": "Blokkláncalapú platformok közösségi kapcsolódás és tartalomkészítés céljából",
@@ -280,7 +280,7 @@
   "nav-history-label": "Az Ethereum technikai története",
   "nav-learn-by-coding-description": "Eszközök, amelyek segítenek kísérletezni az Ethereummal",
   "nav-local-env-description": "Az Ethereum fejlesztői stack kiválasztása és beállítása",
-  "nav-mainnet-description": "Vállalatiblokklánc-alkalmazások fejleszthetők az Ethereum nyilvános fő hálózatán",
+  "nav-enterprise-description": "Vállalatiblokklánc-alkalmazások fejleszthetők az Ethereum nyilvános fő hálózatán",
   "nav-networks-home-description": "Olcsóbb és gyorsabb tranzakciók az Ethereumon",
   "nav-networks-introduction-label": "Bevezetés",
   "nav-networks-introduction-description": "Az Ethereum a hálózatok hálózatává bővült",
@@ -334,6 +334,8 @@
   "nav-staking-solo-description": "Működtessen az otthonából hardvert és támogassa személyesen az Ethereum hálózatának biztonságát és decentralizálását",
   "nav-staking-solo-label": "Egyéni letétbe helyezés",
   "nav-start-building-description": "Hasznos információk az újoncok számára",
+  "nav-start-with-crypto-title": "Kezdje itt",
+  "nav-start-with-crypto-description": "Első lépései az Ethereummal",
   "nav-translation-program-description": "Közös együttműködés, hogy az ethereum.org weboldalt minden nyelvre lefordítsuk",
   "nav-tutorials-description": "A közösségi útmutatók válogatott listája",
   "nav-use-cases-description": "Különböző ötletek az Ethereum használatához",
@@ -442,5 +444,8 @@
   "withdrawals": "A letétbe helyezés visszavonása",
   "wrapped-ether": "Becsomagolt ether (WETH)",
   "yes": "Igen",
-  "zero-knowledge-proofs": "Felfedés nélküli bizonyítás"
+  "zero-knowledge-proofs": "Felfedés nélküli bizonyítás",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Az Ethereum és a Bitcoin közötti különbségek megértése"
+
 }

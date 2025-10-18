@@ -136,7 +136,7 @@ Doğrulayıcı ile ilişkili her bir anahtar çiftinin etkinleştirilmesi için 
 
 Tek bir doğrulayıcı için 32 ETH'den fazla para yatırmayın. Ödüllerinizi artırmayacaktır. Eğer doğrulayıcı için bir para çekme adresi ayarlanmışsa, bir sonraki doğrulayıcı taraması sırasında 32 ETH'in üzerindeki fonlar otomatik olarak bu adrese yatırılacaktır.
 
-Solo staking sizin için çok zorlu görünüyorsa, bir <a href="/staking/saas/">servis sağlayıcı</a> kullanmayı düşünün veya 32 ETH'den daha azıyla çalışıyorsanız, <a href="/staking/pools/">stake havuzları</a>na göz atın.
+Solo staking sizin için çok zorlu görünüyorsa, bir [servis sağlayıcı](/staking/saas/) kullanmayı düşünün veya 32 ETH'den daha azıyla çalışıyorsanız, [stake havuzları](/staking/pools/)na göz atın.
 </ExpandableCard>
 
 <ExpandableCard title="Eğer çevrimdışı olursam cezalandırılır mıyım? (tldr: Hayır.)">
@@ -198,7 +198,6 @@ Tüm bakiyenizin kilidini kaldırmak ve tamamını almak için aynı zamanda do�
 - [İstemci Çeşitliliğine Yardımcı Olmak](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Ethereum'un konsensüs katmanında müşteri çeşitliliği](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Nasıl Yapılır: Ethereum Doğrulayıcı Donanımı Satın Alımı](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Adım Adım: Ethereum 2.0 Testnet'e nasıl katılınır](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Önleme İpuçları](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

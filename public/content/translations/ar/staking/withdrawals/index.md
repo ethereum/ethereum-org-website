@@ -162,9 +162,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-إذا كنت جزءًا من <a href="/staking/pools/">تجمع الرهان</a> أو تحمل رموز المراهنة المميزة، يجب عليك الرجوع إلى موفر الخدمة الخاص بك للحصول على مزيد من التفاصيل حول كيفية التعامل مع عمليات سحب المراهنة، حيث تعمل كل خدمة بشكل مختلف.
+إذا كنت جزءًا من [تجمع الرهان](/staking/pools/) أو تحمل رموز المراهنة المميزة، يجب عليك الرجوع إلى موفر الخدمة الخاص بك للحصول على مزيد من التفاصيل حول كيفية التعامل مع عمليات سحب المراهنة، حيث تعمل كل خدمة بشكل مختلف.
 
-بشكل عام، يجب أن يتمتع المستخدمون بالحرية في استعادة عملة ETH الأساسية الخاصة بهم التي تمت مراهنتها، أو تغيير موفر خدمة المراهنة الذي يستخدمونه. إذا أصبح عدد مجمع معين كبيرًا جدًّا، فيمكن الخروج من الأموال واستردادها وإعادة رهنها مع <a href="https://rated.network/">موفر خدمة أصغر</a>. أو، إذا جمعت ما يكفي من عملة ETH، فيمكنك <a href="/staking/solo/">المراهنة من المنزل</a>.
+بشكل عام، يجب أن يتمتع المستخدمون بالحرية في استعادة عملة ETH الأساسية الخاصة بهم التي تمت مراهنتها، أو تغيير موفر خدمة المراهنة الذي يستخدمونه. إذا أصبح عدد مجمع معين كبيرًا جدًّا، فيمكن الخروج من الأموال واستردادها وإعادة رهنها مع <a href="https://rated.network/">موفر خدمة أصغر</a>. أو، إذا جمعت ما يكفي من عملة ETH، فيمكنك [المراهنة من المنزل](/staking/solo/).
 
 </ExpandableCard>
 
@@ -221,7 +221,6 @@ eventName="read more">
 
 - [منصة تشغيل عمليات سحب المراهنة](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: إجراءات السحب المدفوعة من سلسلة المنارة كعمليات](https://eips.ethereum.org/EIPS/eip-4895)
-- [رعاة القطط في إيثريوم - شانغاهاي](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: سحب عملة ETH التي تمت مراهنتها (تجريبي) مع Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: إجراءات السحب المدفوعة من سلسلة المنارة كعمليات مع Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [فهم الرصيد الساري لبرنامج المدقق](https://www.attestant.io/posts/understanding-validator-effective-balance/)

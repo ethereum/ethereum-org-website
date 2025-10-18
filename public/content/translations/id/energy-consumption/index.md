@@ -73,7 +73,7 @@ Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co)
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Indeks Keberlanjutan Jaringan Rantai Blok Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Laporan Gedung Putih tentang rantai blok bukti kerja](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Laporan Gedung Putih tentang rantai blok bukti kerja](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisi Ethereum: Perkiraan dari Bawah ke Atas](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Indeks Konsumsi Energi Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

@@ -104,7 +104,7 @@ Az ETH kibocsátással ellenkező erő az a ráta, ahogy az ETH-t elégetik. Az 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-A díj elégetése a <a href="/history/#london">London-frissítés</a> óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
+A díj elégetése a [London-frissítés](/history/#london) óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
 </AlertDescription>
 </AlertContent>
 </Alert>

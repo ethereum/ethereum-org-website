@@ -104,7 +104,7 @@ The opposite force to ETH issuance is the rate at which ETH is burned. For a tra
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Fee burning went live with <a href="/history/#london">the London upgrade</a> in August 2021, and remains unchanged since The Merge.
+Fee burning went live with [the London upgrade](/history/#london) in August 2021, and remains unchanged since The Merge.
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -38,7 +38,7 @@ De plus, l'utilisation de la preuve d'enjeu comme mécanisme de consensus est un
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Si vous souhaitez devenir validateur et aider à sécuriser Ethereum, <a href="/staking/">familiarisez-vous avec le concept de mise en jeu</a>.
+  Si vous souhaitez devenir validateur et aider à sécuriser Ethereum, [familiarisez-vous avec le concept de mise en jeu](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

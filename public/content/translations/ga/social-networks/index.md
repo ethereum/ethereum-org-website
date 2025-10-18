@@ -23,7 +23,7 @@ Tá go leor líonraí sóisialta díláraithe ann mar roghanna eile seachas seir
 
 ### Conas a oibríonn líonraí sóisialta díláraithe? {#decentralized-social-networks-overview}
 
-Is éard atá i líonraí sóisialta díláraithe ná aicme [feidhmchlár díláraithe (daipeanna nó dapps)](/dapps/) — feidhmchláir arna gcumhachtú ag [conarthaí cliste](/glossary/#smart-contract) in úsáid ar an mblocshlabhra. Feidhmíonn an cód conartha mar a bheadh inneall ann do na haipeanna seo agus sainmhíníonn sé a loighic ghnó.
+Is éard atá i líonraí sóisialta díláraithe ná aicme [feidhmchlár díláraithe (daipeanna nó dapps)](/apps/) — feidhmchláir arna gcumhachtú ag [conarthaí cliste](/glossary/#smart-contract) in úsáid ar an mblocshlabhra. Feidhmíonn an cód conartha mar a bheadh inneall ann do na haipeanna seo agus sainmhíníonn sé a loighic ghnó.
 
 Bíonn ardáin meán sóisialta traidisiúnta ag brath ar bhunachair sonraí chun faisnéis úsáideora, cód cláir agus cineálacha eile sonraí a stóráil. Ach leis sin cruthaítear pointí aonair teipe agus tugtar isteach riosca suntasach. Mar shampla, d'imigh freastalaithe Facebook go mícháiliúil [as líne ar feadh uaireanta an chloig](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) i mí Dheireadh Fómhair 2021, agus le linn an ama sin gearradh ceangal na n-úsáideoirí ón ardán.
 
@@ -74,32 +74,30 @@ Tá [MINDS](https://www.minds.com/) ar cheann de na líonraí sóisialta dílár
 
 ## Web2 líonraí sóisialta ar Ethereum {#web2-social-networks-and-ethereum}
 
-Ní hiad [Web3](/glossary/#web3) ardáin shóisialta dhúchasacha iad na cinn amháin atá ag iarraidh teicneolaíocht bhlocshlabhra a ionchorprú sna meáin shóisialta. Tá go leor ardán láraithe ag pleanáil chun Ethereum a chomhtháthú ina mbonneagar:
+Ní hiad [Web3](/glossary/#web3) ardáin shóisialta dhúchasacha iad na cinn amháin atá ag iarraidh teicneolaíocht bhlocshlabhra a ionchorprú sna meáin shóisialta. Tá go leor ardáin láraithe ag fiosrú nó ag déanamh turgnamh le Ethereum a chomhtháthú ina mbonneagar freisin:
 
 ### Reddit {#reddit}
 
-Tá [Pointí Pobail molta ag Reddit](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), is iad sin comharthaí ERC-20 ar féidir le húsáideoirí a thuilleamh trí ábhar ardchaighdeáin a phostáil agus cur le pobail ar líne (subreddits). Is féidir leat na comharthaí seo a fhuascailt laistigh de subreddit chun pribhléidí agus buntáistí eisiacha a fháil. Don tionscadal seo, tá Reddit ag obair le hArbitrum, líonra [chiseal 2](/glossary/#layer-2) atá deartha chun idirbhearta Ethereum a scálú.
-
-Tá an clár beo cheana féin, agus subreddit dar teideal r/CryptoCurrency [ag rith a leagain de Community Points ar a dtugtar "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). De réir na tuairisce oifigiúla, cúitíonn Moons "lucht scríofa postálacha, tráchtairí agus modhnóirí as a gcuid rannchuidithe don subreddit." Toisc go bhfuil na comharthaí seo ar an mblocshlabhra (faigheann úsáideoirí iad i sparáin), tá siad neamhspleách ar Reddit agus ní féidir iad a bhaint.
-
-Chomh maith le Pointí Pobail a úsáid chun gnéithe speisialta a dhíghlasáil, is féidir le húsáideoirí iad a thrádáil freisin le haghaidh fiat ar mhalartáin. Chomh maith leis sin, mar thoradh ar an méid Pointí Comhphobail atá ar úinéireacht ag úsáideoir cinntear a dtionchar ar an bpróiseas cinnteoireachta laistigh den phobal.
+- Rinne Reddit turgnamh roimhe seo le **Pointí Pobail**, ar comharthaí ERC-20 iad a d’fhéadfadh úsáideoirí a thuilleamh trí ábhar ardchaighdeáin a phostáil agus trí rannchuidiú le pobail shonracha ar líne (subreddits). D’fhéadfadh úsáideoirí na comharthaí seo a fhuascailt laistigh de subreddit le haghaidh buntáistí eisiacha nó iad a thrádáil. Don tionscadal seo, bhain Reddit úsáid as Arbitrum Nova, líonra [sraith 2](/glossary/#layer-2) atá deartha chun idirbhearta Ethereum a scála.
+- Bhí an clár gníomhach go háirithe i subreddit r/CryptoCurrency lena "Moons" agus i subreddit r/FortNiteBR lena "Bricks". Ós rud é go raibh na comharthaí seo ar an mblocshlabhra, bhí siad neamhspleách ar Reddit a luaithe a éilíodh iad i [sparán](/glossary/#wallet) úsáideora.
+- Mar sin féin, chuaigh **Reddit [an clár Pointí Comhphobail](https://www.reddit.com/r/CryptoCurrency/comments/17a33ql/reddit_is_officially_deprecating_community_points/) síos go déanach in 2023, **agus dúshláin scálaithe á lua. Cé go bhfuil na comharthaí fós ann ar an mblocshlabhra, ní thacaíonn Reddit go gníomhach leo ná ní chomhtháthaíonn sé iad ina ghnéithe ardáin a thuilleadh.
 
 ## Tuilleadh léitheoireachta {#further-reading}
 
 ### Ailt {#articles}
 
-- [ Na meáin shóisialta a dhílárú: treoir do chruach sóisialta Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
-- [Is iad Líonraí Sóisialta an Chéad Deis Díláraithe Mór Eile](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
-- [Tá geallúint ag Web3 maidir le líonraí díláraithe sóisialta faoi thiomáint phobail](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
-- [Forbhreathnú ar Thírdhreach Blocshlabhra sna Meáin Shóisialta](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
-- [Conas is Féidir le Blocshlabhra Príobháideacht a Réiteach sna Meáin Shóisialta](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) - _Prableen Bajpai_
-- [Dílárú Dóthanach do Líonraí Sóisialta](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
+- [Dílárú na meán sóisialta: treoir don chruach shóisialta web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
+- [Is iad na Líonraí Sóisialta an chéad Deis Mhór Díláraithe eile](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
+- [Tá gealltanas líonraí sóisialta díláraithe, faoi thiomáint ag an bpobal, ag Web3](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+- [Forbhreathnú ar Thírdhreach na Meán Sóisialta Blocshlabhra](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
+- [Conas is Féidir le Blocshlabhra Príobháideacht na Meán Sóisialta a Réiteach](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
+- [Dílárú Leordhóthanach do Líonraí Sóisialta](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Físeáin {#videos}
 
-- [Meáin Shóisialta Díláraithe arna Míniú](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
-- [Tá DeSo Blockchain ag iarraidh na Meáin Shóisialta a Dhílárú](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Teicneolaíocht Bloomberg_
-- [Todhchaí na Meán Sóisialta Díláraithe w/ Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — *ETHGlobal*
+- [Míniú ar na Meáin Shóisialta Díláraithe](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
+- [Ba mhaith le Blocshlabhra DeSo na Meáin Shóisialta a Dhílárú](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Teicneolaíocht Bloomberg_
+- [Todhchaí na Meán Sóisialta Díláraithe le Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
 ### Pobail {#communities}
 

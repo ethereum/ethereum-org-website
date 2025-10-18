@@ -104,7 +104,7 @@ title="Коротко о выпуске ETH">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Сжигание комиссии появилось с обновлением <a href="/history/#london">London</a> в августе 2021 года и остается неизменным после слияния.
+Сжигание комиссии появилось с обновлением [London](/history/#london) в августе 2021 года и остается неизменным после слияния.
 </AlertDescription>
 </AlertContent>
 </Alert>

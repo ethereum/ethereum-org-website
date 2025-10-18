@@ -61,7 +61,7 @@ USDT를 빌려주는 플랫폼으로 이더리움 메인넷의 Aave를 사용하
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  상단의 모든 작업은 <a href="/get-eth/">중앙화 거래소</a>에서도 실행할 수 있습니다. 하지만 자금이 이미 거래소에 등록되어 있지 않으면 여러 단계를 거쳐야 하며, 브리지를 사용하는 것이 더욱 간단합니다.
+  상단의 모든 작업은 [중앙화 거래소](/get-eth/)에서도 실행할 수 있습니다. 하지만 자금이 이미 거래소에 등록되어 있지 않으면 여러 단계를 거쳐야 하며, 브리지를 사용하는 것이 더욱 간단합니다.
 </AlertDescription>
 </AlertContent>
 </Alert>

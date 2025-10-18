@@ -104,7 +104,7 @@ La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. P
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La bruciatura delle commissioni è divenuta attiva con l'<a href="/history/#london">aggiornamento di Londra</a> ad agosto 2021 e resta immutata da La Fusione.
+La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/history/#london) ad agosto 2021 e resta immutata da La Fusione.
 </AlertDescription>
 </AlertContent>
 </Alert>

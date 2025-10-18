@@ -38,7 +38,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  若有興趣成為驗證者或幫助保障以太坊安全，請<a href="/staking/">瞭解有關質押的更多資訊</a>。
+  若有興趣成為驗證者或幫助保障以太坊安全，請[瞭解有關質押的更多資訊](/staking/)。
 </AlertDescription>
 </AlertContent>
 </Alert>

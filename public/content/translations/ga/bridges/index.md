@@ -63,7 +63,7 @@ Deirimis gur mhaith leat Bitcoin dúchais (BTC) a bheith agat, ach níl cistí a
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Is féidir leat gach rud thuas a dhéanamh freisin trí úsáid a bhaint as <a href="/get-eth/">malartán láraithe</a>. Mar sin féin, mura bhfuil do chistí ar mhalartú cheana féin, bheadh ​​ilchéimeanna i gceist leis, agus is dócha go mbeadh tú níos fearr as droichead a úsáid.
+  Is féidir leat gach rud thuas a dhéanamh freisin trí úsáid a bhaint as [malartán láraithe](/get-eth/). Mar sin féin, mura bhfuil do chistí ar mhalartú cheana féin, bheadh ​​ilchéimeanna i gceist leis, agus is dócha go mbeadh tú níos fearr as droichead a úsáid.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +104,7 @@ Glacann go leor réiteach tógála droichid samhlacha idir an dá fhoirceann seo
 
 Trí dhroichid a úsáid is féidir leat do chuid sócmhainní a bhogadh thar bhlocshlabhraí éagsúla. Seo roinnt acmhainní a chabhróidh leat droichid a aimsiú agus a úsáid:
 
-- **[Achoimre ar Dhroichid L2BEAT](https://l2beat.com/bridges/summary) & [Anailís Riosca ar Dhroichid L2BEAT](https://l2beat.com/bridges/risk)**: Achoimre chuimsitheach ar dhroichid éagsúla, lena n-áirítear sonraí ar sciar den mhargadh, cineál droichid, agus slabhraí cinn scríbe. Tá anailís riosca ag L2BEAT freisin maidir le droichid, ag cabhrú le húsáideoirí cinntí eolasacha a dhéanamh agus iad ag roghnú droichead.
+- **[Achoimre ar Dhroichid L2BEAT](https://l2beat.com/bridges/summary) & [Anailís Riosca ar Dhroichid L2BEAT](https://l2beat.com/bridges/summary)**: Achoimre chuimsitheach ar dhroichid éagsúla, lena n-áirítear sonraí ar sciar den mhargadh, cineál droichid, agus slabhraí cinn scríbe. Tá anailís riosca ag L2BEAT freisin maidir le droichid, ag cabhrú le húsáideoirí cinntí eolasacha a dhéanamh agus iad ag roghnú droichead.
 - **[Achoimre ar Dhroichead DefiLlama](https://defillama.com/bridges/Ethereum)**: Achoimre ar mhéideanna droichead thar líonraí Ethereum.
 
 <Divider />
@@ -139,6 +139,6 @@ Tá droichid ríthábhachtach chun úsáideoirí a chur ar bord ar Ethereum L2an
 - [EIP-5164: Forghníomhú Trasshlabhra](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _ 18 Meitheamh, 2022 - Brendan Asselstine_
 - [Creat Riosca L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _ 5 Iúil, 2022 - Bartek Kiepuszewski_
 - [ "Cén fáth go mbeidh an todhchaí ilshlabhra, ach ní bheidh sé tras-shlabhra." ](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _Eanáir 8, 2022 - Vitalik Buterin_
-- [Feabhas a chur ar Shlándáil Roinnte Chun Idir-inoibritheacht Slán Trasshlabhra: Coistí Stáit Lagrange Agus Thall](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _ 12 Meitheamh, 2024 - Emmanuel Awosika_
-- [Staid na Réitigh Idir-inoibritheachta Rolla suas](https://research.2077.xyz/the-state-of-rollup-interoperability) - _ 20 Meitheamh, 2024 - Alex Hook_
+- [Feabhas a chur ar Shlándáil Roinnte Chun Idir-inoibritheacht Slán Trasshlabhra: Coistí Stáit Lagrange Agus Thall](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _ 12 Meitheamh, 2024 - Emmanuel Awosika_
+- [Staid na Réitigh Idir-inoibritheachta Rolla suas](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _ 20 Meitheamh, 2024 - Alex Hook_
 

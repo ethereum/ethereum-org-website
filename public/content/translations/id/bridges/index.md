@@ -63,7 +63,7 @@ Mari kita umpamakan Anda ingin memiliki Bitcoin (BTC) asli, tetapi Anda hanya me
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Anda juga dapat melakukan semua hal di atas menggunakan sebuah <a href="/get-eth/">bursa terpusat</a>. Namun, kecuali jika dana Anda sudah berada di bursa, ini akan melibatkan beberapa langkah, dan kemungkinan lebih baik jika Anda menggunakan jembatan.
+  Anda juga dapat melakukan semua hal di atas menggunakan sebuah [bursa terpusat](/get-eth/). Namun, kecuali jika dana Anda sudah berada di bursa, ini akan melibatkan beberapa langkah, dan kemungkinan lebih baik jika Anda menggunakan jembatan.
 </AlertDescription>
 </AlertContent>
 </Alert>

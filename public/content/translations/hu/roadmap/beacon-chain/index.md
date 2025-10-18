@@ -38,7 +38,7 @@ A proof-of-stake használata, mint konszenzusmechanizmus, egy alapvető komponen
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Ha Ön szeretne validátorrá válni és segítene az Ethereum biztosításában, akkor <a href="/staking/">tudjon meg többet a letétbe helyezésről</a>.
+  Ha Ön szeretne validátorrá válni és segítene az Ethereum biztosításában, akkor [tudjon meg többet a letétbe helyezésről](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -63,7 +63,7 @@ Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Wszystkie powyższe czynności można również wykonać za pomocą <a href="/get-eth/">scentralizowanej giełdy</a>. Jeśli jednak Twoje środki nie znajdują się już na giełdzie, wymagałoby to wielu kroków i prawdopodobnie lepiej byłoby skorzystać z mostu.
+  Wszystkie powyższe czynności można również wykonać za pomocą [scentralizowanej giełdy](/get-eth/). Jeśli jednak Twoje środki nie znajdują się już na giełdzie, wymagałoby to wielu kroków i prawdopodobnie lepiej byłoby skorzystać z mostu.
 </AlertDescription>
 </AlertContent>
 </Alert>

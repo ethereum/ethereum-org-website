@@ -104,7 +104,7 @@ title="以太幣發行量總覽">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-費用銷毀機制在 2021 年 8 月<a href="/history/#london">倫敦升級</a>後上線，自合併以來一直維持不變。
+費用銷毀機制在 2021 年 8 月[倫敦升級](/history/#london)後上線，自合併以來一直維持不變。
 </AlertDescription>
 </AlertContent>
 </Alert>

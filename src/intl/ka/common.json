@@ -227,7 +227,7 @@
   "nav-contribute-description": "თუ დახმარება გჭირდებათ, შეგიძლიათ ამით იხელმძღვანელოთ",
   "nav-contribute-label": "ethereum.org-ის კონტრიბუცია",
   "nav-dao-description": "ცენტრალიზებული ხელმძღვანელობის არმქონე წევრების მფლობელობაში არსებული საზოგადოებები",
-  "nav-dapps-description": "ეთერეუმის გამოყენებით გამოიკვლიეთ აპების მდიდარი ეკოსისტემა",
+  "nav-apps-description": "ეთერეუმის გამოყენებით გამოიკვლიეთ აპების მდიდარი ეკოსისტემა",
   "nav-defi-description": "ტრადიციული ფინანსური ბაზრის გლობალური, ღია ალტერნატივა",
   "nav-desci-description": "მიმდინარე სამეცნიერო სისტემის გლობალური, ღია ალტერნატივა",
   "nav-desoc-description": "ბლოკჩეინზე დაფუძნებული პლატფორმები სოციალური ინტერაქციისა და კონტენტის შექმნისათვის",
@@ -276,7 +276,7 @@
   "nav-layer-2-description": "ეთერეუმის უფრო იაფი და სწრაფი ტრანზაქციები",
   "nav-learn-by-coding-description": "იარაღები, რომლებიც დაგეხმარებათ ეთერეუმით ექსპერიმენტირებისთვის",
   "nav-local-env-description": "აირჩიეთ და მოაწყვეთ თქვენი ეთერეუმის დეველოპმენტის სტეკი",
-  "nav-mainnet-description": "კომპანიის ბლოკჩეინ აპლიკაციების ჩაშენება შესაძლებელია ეთერეუმის საჯარო მეინნეტზე",
+  "nav-enterprise-description": "კომპანიის ბლოკჩეინ აპლიკაციების ჩაშენება შესაძლებელია ეთერეუმის საჯარო მეინნეტზე",
   "nav-nft-description": "საშუალება წარმოაჩინოს რაიმე უნიკალური, როგორც Ethereum-ზე დაფუძნებული აქტივი",
   "nav-open-research-description": "ეთერეუმის ერთ-ერთი უმთავრესი სიძლიერე მისი აქტიური კვლევითი საზოგადოებაა",
   "nav-open-research-label": "ღია კვლევა",
@@ -322,6 +322,8 @@
   "nav-staking-solo-description": "გაუშვით სახლის აპარატურა და პირადად დაამატეთ ეთერეუმ ქსელის უსაფრთხოება და დეცენტრალიზაცია",
   "nav-staking-solo-label": "სოლო სტეიკინგი",
   "nav-start-building-description": "სასარგებლო ინფორმაცია ახალი წევრებისათვის",
+  "nav-start-with-crypto-title": "დაიწყეთ აქ",
+  "nav-start-with-crypto-description": "თქვენი პირველი ნაბიჯები Ethereum-ით",
   "nav-translation-program-description": "ურთიერთთანამშრომლობითი ძალისხმევა ethereum.org-ის ყველა ენაზე გადათარგმნის კუთხით",
   "nav-tutorials-description": "საზოგადოების სასწავლო ვიდეოების კურირებული სია",
   "nav-use-cases-description": "აღმოაჩინეთ ეთერეუმის გამოყენების განსხვავებული იდეები",
@@ -429,5 +431,8 @@
   "withdrawals": "სტეიკინგის გატანა",
   "wrapped-ether": "შეფუთული ეთერი",
   "yes": "კი",
-  "zero-knowledge-proofs": "ნულოვანი ცოდნის მტკიცებულებები"
+  "zero-knowledge-proofs": "ნულოვანი ცოდნის მტკიცებულებები",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "გაიგეთ განსხვავებები Ethereum-სა და Bitcoin-ს შორის"
+
 }

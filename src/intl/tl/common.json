@@ -226,7 +226,7 @@
   "nav-contribute-description": "Kung gusto mong tumulong, gagabayan ka nito",
   "nav-contribute-label": "Nagko-contribute sa ethereum.org",
   "nav-dao-description": "Mga komunidad ng miyembro na walang sentralisadong awtoridad",
-  "nav-dapps-description": "Mag-explore ng mayamang ecosystem ng mga app gamit ang Ethereum",
+  "nav-apps-description": "Mag-explore ng mayamang ecosystem ng mga app gamit ang Ethereum",
   "nav-defi-description": "Isang pandaigdigan at bukas na alternatibo sa tradisyonal na pinansyal na merkado",
   "nav-desci-description": "Isang pandaigdigan at bukas na alternatibo sa kasalukuyang sistemang siyentipiko",
   "nav-desoc-description": "Mga platform na nakabatay sa blockchain para sa pakikipag-ugnayan sa ibang tao at paggawa ng content",
@@ -274,7 +274,7 @@
   "nav-layer-2-description": "Mas mura at mas mabilis na mga transaksyon para sa Ethereum",
   "nav-learn-by-coding-description": "Mga tool na makakatulong sa iyong mag-eksperimento sa Ethereum",
   "nav-local-env-description": "Piliin at i-set up ang iyong Ethereum development stack",
-  "nav-mainnet-description": "Puwedeng buuin ang mga enterprise blockchain application sa pampublikong Ethereum Mainnet",
+  "nav-enterprise-description": "Puwedeng buuin ang mga enterprise blockchain application sa pampublikong Ethereum Mainnet",
   "nav-nft-description": "Isang paraan para katawanin ang kahit anong natatangi bilang Ethereum-based asset",
   "nav-open-research-description": "Ang isa sa mga pangunahing kalakasan ng Ethereum ay ang aktibo nitong komunidad sa pananaliksik",
   "nav-open-research-label": "Bukas na pananaliksik",
@@ -320,6 +320,8 @@
   "nav-staking-solo-description": "Magpatakbo ng home hardware at personal na magdagdag sa seguridad at desentralisasyon ng network ng Ethereum",
   "nav-staking-solo-label": "Pag-stake nang mag-isa",
   "nav-start-building-description": "Kapaki-pakinabang na impormasyon para sa mga baguhan",
+  "nav-start-with-crypto-title": "Simulan dito",
+  "nav-start-with-crypto-description": "Ang iyong unang mga hakbang sa paggamit ng Ethereum",
   "nav-translation-program-description": "Isang sama-samang pagsisikap upang isalin ang ethereum.org sa lahat ng wika",
   "nav-tutorials-description": "Isang piniling listahan ng mga tutorial ng komunidad",
   "nav-use-cases-description": "Tumuklas ng iba't ibang ideya para sa paggamit ng Ethereum",
@@ -427,5 +429,8 @@
   "withdrawals": "Mga pagbawi ng pag-stake",
   "wrapped-ether": "Nakabalot na Ether",
   "yes": "Oo",
-  "zero-knowledge-proofs": "Mga zero-knowledge proof"
+  "zero-knowledge-proofs": "Mga zero-knowledge proof",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Unawain ang mga pagkakaiba sa pagitan ng Ethereum at Bitcoin"
+
 }

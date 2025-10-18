@@ -73,7 +73,7 @@ Piattaforme di finanziamento di beni pubblici web3 native come [Gitcoin](https:/
 ## Letture consigliate {#further-reading}
 
 - [Indice di Sostenibilità delle Reti Blockchain di Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Relazione della Casa Bianca sulle blockchain proof-of-work](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Relazione della Casa Bianca sulle blockchain proof-of-work](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) (Emissioni di Ethereum: Una stima bottom-up) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_ (Indice del consumo energetico di Ethereum)
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

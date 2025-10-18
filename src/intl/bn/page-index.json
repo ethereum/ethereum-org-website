@@ -36,11 +36,11 @@
   "page-index-cta-dapps-label": "অ্যাপগুলি ব্যাবহার করে দেখুন",
   "page-index-cta-get-eth-description": "ইথেরিয়ামের কারেন্সি",
   "page-index-cta-get-eth-label": "ETH নিন",
-  "page-index-cta-networks-description": "ন্যুনতম ফি উপভোগ করুন",
-  "page-index-cta-networks-label": "একটি নেটওয়ার্ক বেছে নিন",
   "page-index-cta-wallet-description": "অ্যাকাউন্ট তৈরি করুন এবং সম্পদ ব্যবস্থাপনা করুন",
   "page-index-cta-wallet-label": "একটি ওয়ালেট বেছে নিন",
   "page-index-description": "উদ্ভাবনী অ্যাপ এবং ব্লকচেইন নেটওয়ার্কগুলির জন্য অগ্রগণ্য প্ল্যাটফর্ম",
+  "page-index-cta-build-apps-description": "আপনার প্রথম অ্যাপ তৈরি করুন",
+  "page-index-cta-build-apps-label": "উন্নয়ন শুরু করুন",
   "page-index-developers-code-example-description-0": "আপনার তৈরি করা প্রোগ্রামের যুক্তি অনুযায়ী চালিত একটি ব্যাংক নির্মাণ করুন",
   "page-index-developers-code-example-description-1": "অ্যাপ্লিকেশনগুলি জুড়ে ট্রান্সফার এবং ব্যবহার করতে পারবেন এমন টোকেনগুলি তৈরি করুন",
   "page-index-developers-code-example-description-2": "ইথেরিয়াম এবং অন্যান্য অ্যাপ্লিকেশনগুলির সাথে পারস্পরিক যোগাযোগ করতে বিদ্যমান ভাষাগুলি ব্যবহার করুন",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "সাম্প্রতিক পোস্টগুলি",
   "page-index-posts-subtitle": "কমিউনিটি থেকে সাম্প্রতিক ব্লগ পোস্ট এবং আপডেটসমুহ",
   "page-index-title": "ইথেরিয়ামের জগতে আপনাকে স্বাগত জানাই",
+  "page-index-use-cases-tag": "ব্যবহার",
   "page-index-values-description": "ডিজিটাল বিপ্লবের অংশ হন",
   "page-index-values-header": "ইন্টারনেট পরিবর্তিত হচ্ছে",
   "page-index-values-legacy": "উত্তরাধিকার",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "বেশিরভাগের কাছে বন্ধ",
   "page-index-values-open-legacy-content-0": "কোম্পানিগুলি তাদের বৌদ্ধিক সম্পত্তি রক্ষা করে এবং তা শেয়ার করে না। কোম্পানির বাইরের কেউ দেখতে কীভাবে জিনিসগুলি চলছে, সমস্যাগুলি সমাধান করা বা উন্নতি করতে পারে না৷ মানুষের পক্ষে নতুন টুলস তৈরি করা বা কাস্টমাইজ করা কঠিন।",
   "page-index-values-open-ethereum-label": "সকলের জন্য উন্মুক্ত",
-  "page-index-values-open-ethereum-content-0": "ইথেরিয়াম সকলের জন্য সর্বজনীন। যে কেউ কোডটি দেখতে, ব্যবহার করতে এবং উন্নত করতে পারে যা এটিকে প্রত্যেকের জন্য আরও ভাল করে তোলে।"
+  "page-index-values-open-ethereum-content-0": "ইথেরিয়াম সকলের জন্য সর্বজনীন। যে কেউ কোডটি দেখতে, ব্যবহার করতে এবং উন্নত করতে পারে যা এটিকে প্রত্যেকের জন্য আরও ভাল করে তোলে।",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "বছরের সবচেয়ে বড় Ethereum ইভেন্টে যোগ দিন",
+  "page-index-devconnect-banner-get-tickets": "টিকেট পান"
 }

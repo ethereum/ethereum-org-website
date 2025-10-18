@@ -38,7 +38,7 @@ Bovendien is proof-of-stake gebruiken als consensusmechanisme een fundamenteel o
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Wilt u een validator worden en de Beacon Chain beveiligen? <a href="/staking/">Ontdek dan hier meer over staking</a>.
+  Wilt u een validator worden en de Beacon Chain beveiligen? [Ontdek dan hier meer over staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

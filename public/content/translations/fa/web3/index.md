@@ -149,7 +149,7 @@ Web3 یک اکوسیستم جوان و در حال تکامل است. گاوین
 
 - [یک کیف پول بگیرید](/wallets/)
 - [افزودن جامعه](/community/)
-- [برنامه‌های وب 3 را کاوش کنید](/dapps/)
+- [برنامه‌های وب 3 را کاوش کنید](/apps/)
 - [پیوستن به یک DAO](/dao/)
 - [ساختن در وب 3](/developers/)
 
@@ -157,11 +157,11 @@ Web3 یک اکوسیستم جوان و در حال تکامل است. گاوین
 
 Web3 تعریف سفت و محکمی ندارد. شرکت‌کنندگان مختلف جامعه، دیدگاه‌های متفاوتی در مورد آن دارند. چند نمونه از آن‌ها در ادامه ذکر شده است:
 
-- [وب 3 چیست؟ توضیح تعامل غیرمتمرکز آینده](https://www.freecodecamp.org/news/what-is-web3/) – _نادر دبیت_
+- [وب 3 چیست؟ توضیح تعامل غیرمتمرکز آینده](https://www.freecodecamp.org/news/what-is-web3) – _نادر دبیت_
 - [درک وب 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ جاش استارک_
 - [چرا وب 3 مهم است](https://future.a16z.com/why-web3-matters/) – _کریس دیکسون_
 - [چرا تمرکززدایی مهم است](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _کریس دیکسون_
 - [فضای وب 3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate?s=r) - _پکی مک‌کورمیک_
+- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate) - _پکی مک‌کورمیک_
 
 <QuizWidget quizKey="web3" />

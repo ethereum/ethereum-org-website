@@ -38,7 +38,7 @@ Použití Důkazu podílem jako mechanismu konsenzu je navíc základním staveb
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Pokud se chcete stát validátorem a pomoci zabezpečit Ethereum, <a href="/staking/">zjistěte více o uzamčení</a>.
+  Pokud se chcete stát validátorem a pomoci zabezpečit Ethereum, [zjistěte více o uzamčení](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

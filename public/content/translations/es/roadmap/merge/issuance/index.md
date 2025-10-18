@@ -104,7 +104,7 @@ La fuerza opuesta a la emisión de ETH es la tasa a la cual se quema ETH. Para q
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La quema de la comisión empezó con <a href="/history/#london">la actualización London</a> en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
+La quema de la comisión empezó con [la actualización London](/history/#london) en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
 </AlertDescription>
 </AlertContent>
 </Alert>

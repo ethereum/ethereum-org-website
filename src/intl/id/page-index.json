@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "Coba aplikasi",
   "page-index-cta-get-eth-description": "Mata uang Ethereum",
   "page-index-cta-get-eth-label": "Dapatkan ETH",
-  "page-index-cta-networks-description": "Nikmati biaya minimal",
-  "page-index-cta-networks-label": "Pilih jaringan",
   "page-index-cta-wallet-description": "Buat akun & kelola aset",
   "page-index-cta-wallet-label": "Tentukan dompet",
+  "page-index-cta-build-apps-description": "Buatlah aplikasi pertama Anda",
+  "page-index-cta-build-apps-label": "Mulai mengembangkan",
   "page-index-description": "Platform terkemuka untuk aplikasi yang inovatif dan jaringan rantai blok",
   "page-index-developers-code-example-description-0": "Bangun bank yang dijalankan dengan logika yang telah Anda programkan",
   "page-index-developers-code-example-description-1": "Buat token yang dapat Anda transfer dan gunakan di seluruh aplikasi",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Postingan terbaru",
   "page-index-posts-subtitle": "Postingan blog dan info terbaru dari komunitas",
   "page-index-title": "Selamat Datang di Ethereum",
+  "page-index-use-cases-tag": "Kasus penggunaan",
   "page-index-values-description": "Menjadi bagian dari revolusi digital",
   "page-index-values-header": "Internet berubah",
   "page-index-values-legacy": "Legacy",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Tertutup bagi kebanyakan orang",
   "page-index-values-open-legacy-content-0": "Perusahaan melindungi kekayaan intelektualnya dan tidak membagikannya. Tak seorang pun di luar perusahaan yang dapat melihat cara kerjanya, memperbaiki masalah, atau melakukan perbaikan. Sulit bagi orang-orang untuk membuat perangkat baru atau menyesuaikannya.",
   "page-index-values-open-ethereum-label": "Terbuka bagi semua orang",
-  "page-index-values-open-ethereum-content-0": "Ethereum bersifat publik bagi semua orang. Siapa pun bisa melihat, menggunakan, dan memperbaiki kodenya, membuatnya semakin baik bagi semua orang."
+  "page-index-values-open-ethereum-content-0": "Ethereum bersifat publik bagi semua orang. Siapa pun bisa melihat, menggunakan, dan memperbaiki kodenya, membuatnya semakin baik bagi semua orang.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Bergabunglah dengan acara Ethereum terbesar tahun ini",
+  "page-index-devconnect-banner-get-tickets": "Dapatkan tiket"
 }

@@ -7,13 +7,19 @@ export const isValidDate = (dateString?: string | number): boolean => {
   return !isNaN(date.getTime())
 }
 
-export const formatDate = (date: string) => {
+export const formatDate = (date: string, locale: string = "en-US") => {
   if (/^\d{4}$/.test(date)) {
     return date
   }
-  return new Date(date).toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString(locale, {
     month: "long",
     day: "numeric",
     year: "numeric",
   })
+}
+
+export const isDateReached = (date: string) => {
+  const today = new Date()
+  const threshold = new Date(date)
+  return threshold >= today
 }

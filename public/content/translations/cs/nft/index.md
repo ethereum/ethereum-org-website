@@ -59,7 +59,7 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Prozkoumat NFT umění
   </ButtonLink>
 </AlertContent>

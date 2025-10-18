@@ -63,7 +63,7 @@ Katakan anda mahu memiliki Bitcoin asli (BTC), tetapi anda hanya mempunyai dana 
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Anda juga boleh melakukan semua perkara di atas menggunakan <a href="/get-eth/">pertukaran terpusat</a>. Namun, melainkan dana anda sudah berada di bursa, ia akan melibatkan beberapa langkah, dan anda mungkin akan lebih baik menggunakan jambatan.
+  Anda juga boleh melakukan semua perkara di atas menggunakan [pertukaran terpusat](/get-eth/). Namun, melainkan dana anda sudah berada di bursa, ia akan melibatkan beberapa langkah, dan anda mungkin akan lebih baik menggunakan jambatan.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +104,7 @@ Banyak penyelesaian jambatan mengguna pakai model antara dua ekstrem ini dengan 
 
 Menggunakan jambatan membolehkan anda mengalihkan aset anda merentasi blok rantai yang berbeza. Berikut ialah beberapa sumber yang boleh membantu anda mencari dan menggunakan jambatan:
 
-- **[Ringkasan Jambatan L2BEAT](https://l2beat.com/bridges/summary) & [Analisis Risiko Jambatan L2BEAT](https://l2beat.com/bridges/risk)**: Ringkasan komprehensif pelbagai jambatan, termasuk butiran mengenai pasaran saham, jenis jambatan dan rantaian destinasi. L2BEAT juga mempunyai analisis risiko untuk jambatan, membantu pengguna membuat keputusan termaklum apabila memilih jambatan.
+- **[Ringkasan Jambatan L2BEAT](https://l2beat.com/bridges/summary) & [Analisis Risiko Jambatan L2BEAT](https://l2beat.com/bridges/summary)**: Ringkasan komprehensif pelbagai jambatan, termasuk butiran mengenai pasaran saham, jenis jambatan dan rantaian destinasi. L2BEAT juga mempunyai analisis risiko untuk jambatan, membantu pengguna membuat keputusan termaklum apabila memilih jambatan.
 - **[Ringkasan Jambatan DefiLlama](https://defillama.com/bridges/Ethereum)**: Ringkasan bilangan jambatan merentas rangkaian Ethereum.
 
 <Divider />

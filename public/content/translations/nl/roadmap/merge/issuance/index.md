@@ -104,7 +104,7 @@ De tegengestelde kracht van ETH-uitgifte is de snelheid waarmee ETH wordt verbra
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Kosten verbranden ging live met <a href="/history/#london">de London-upgrade</a> in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
+Kosten verbranden ging live met [de London-upgrade](/history/#london) in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -73,7 +73,7 @@ lang: el
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [Δείκτης βιωσιμότητας δικτύου κρυπτοαλυσίδας Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Έκθεση του Λευκού Οίκου για κρυπτοαλυσίδες με απόδειξη εργασίας](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Έκθεση του Λευκού Οίκου για κρυπτοαλυσίδες με απόδειξη εργασίας](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Εκπομπές Ethereum: Εκτίμηση από κάτω προς τα πάνω](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Δείκτης κατανάλωσης ενέργειας Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

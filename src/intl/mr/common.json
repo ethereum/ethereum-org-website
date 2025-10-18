@@ -227,7 +227,7 @@
   "nav-contribute-description": "तुम्हाला मदत करायची असल्यास, हे तुम्हाला मार्गदर्शन करेल",
   "nav-contribute-label": "Ethereum.org वर योगदान देत आहे",
   "nav-dao-description": "केंद्रीकृत अधिकाराशिवाय सदस्य-मालकीचे समुदाय",
-  "nav-dapps-description": "इथरियम वापरून ॲप्सची समृद्ध इकोसिस्टम एक्सप्लोर करा",
+  "nav-apps-description": "इथरियम वापरून ॲप्सची समृद्ध इकोसिस्टम एक्सप्लोर करा",
   "nav-defi-description": "पारंपारिक आर्थिक बाजारपेठेसाठी जागतिक, खुला पर्याय",
   "nav-desci-description": "सध्याच्या वैज्ञानिक प्रणालीसाठी जागतिक, खुला पर्याय",
   "nav-desoc-description": "सामाजिक संवाद आणि सामग्री निर्मितीसाठी ब्लॉकचेन-आधारित व्यासपीठ",
@@ -276,7 +276,7 @@
   "nav-layer-2-description": "इथरियमसाठी स्वस्त आणि जलद व्यवहार",
   "nav-learn-by-coding-description": "तुम्हाला इथरियमचा प्रयोग करण्यास मदत करणारी साधने",
   "nav-local-env-description": "तुमचे इथरियम विकास भागभांडवल निवडा आणि सेट करा",
-  "nav-mainnet-description": "सार्वजनिक इथरियम मेननेटवर एंटरप्राइझ ब्लॉकचेन अ‍ॅप्लिकेशन्स तयार केले जाऊ शकतात",
+  "nav-enterprise-description": "सार्वजनिक इथरियम मेननेटवर एंटरप्राइझ ब्लॉकचेन अ‍ॅप्लिकेशन्स तयार केले जाऊ शकतात",
   "nav-nft-description": "Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग",
   "nav-open-research-description": "इथरियमची प्राथमिक ताकद म्हणजे त्याचा सक्रिय संशोधन समुदाय",
   "nav-open-research-label": "संशोधन खोला",
@@ -321,6 +321,8 @@
   "nav-staking-solo-description": "होम हार्डवेअर चालवा आणि वैयक्तिकरित्या इथरियम नेटवर्कची सुरक्षा आणि विकेंद्रीकरण जोडा",
   "nav-staking-solo-label": "सोलो स्टॅकिंग",
   "nav-start-building-description": "नवोदितांसाठी उपयुक्त माहिती",
+  "nav-start-with-crypto-title": "इथून सुरू करा",
+  "nav-start-with-crypto-description": "Ethereum वापरण्याची तुमची पहिली पावले",
   "nav-translation-program-description": "Ethereum.org सर्व भाषांमध्ये अनुवादित करण्याचा एक सहयोगी प्रयत्न",
   "nav-tutorials-description": "सामुदायिक ट्यूटोरियलची क्युरेट केलेली यादी",
   "nav-use-cases-description": "इथरियमच्या वापरासाठी विविध कल्पना शोधा",
@@ -428,5 +430,8 @@
   "withdrawals": "पैसे काढणे स्टिकिंग",
   "wrapped-ether": "गुंडाळलेला इथर",
   "yes": "होय",
-  "zero-knowledge-proofs": "शून्य-ज्ञान पुरावे"
+  "zero-knowledge-proofs": "शून्य-ज्ञान पुरावे",
+  "ethereum-vs-bitcoin": "इथेरियम विरुद्ध बिटकॉइन",
+  "nav-ethereum-vs-bitcoin-description": "इथेरियम आणि बिटकॉइनमधील फरक समजून घ्या"
+
 }

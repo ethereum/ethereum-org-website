@@ -34,7 +34,7 @@ description: 使用 Crowdin 翻譯 ethereum.org 的說明
 
 網站內容分為許多文件和內容門類。 你可以在右邊查看每份文件的進度—如果翻譯進程低過100%，請你不吝作出貢獻吧！
 
-找不到你的語言？ [開啟一個議題](https://github.com/ethereum/ethereum-org-website/issues/new/choose) 或在我們的 [Discord](/discord/) 頻道內提問。
+找不到你的語言？ [開啟一個議題](https://github.com/ethereum/ethereum-org-website/issues/new/choose) 或在我們的 [Discord](https://discord.gg/ethereum-org) 頻道內提問。
 
 ![Crowdin 中已翻譯和未翻譯的檔案](./crowdin-files.png)
 
@@ -85,7 +85,7 @@ description: 使用 Crowdin 翻譯 ethereum.org 的說明
 
 ### 聯絡我們 {#get-in-touch}
 
-還有其他問題嗎？ 或是想要跟我們的團隊和其他譯者合作？ 請在我們的 [ethereum.org Discord 伺服器](/discord/)的 #translations 頻道中發布帖子
+還有其他問題嗎？ 或是想要跟我們的團隊和其他譯者合作？ 請在我們的 [ethereum.org Discord 伺服器](https://discord.gg/ethereum-org)的 #translations 頻道中發布帖子
 
 也可以透過 translations@ethereum.org 聯絡我們
 

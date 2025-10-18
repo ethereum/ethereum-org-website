@@ -58,7 +58,7 @@ E fit bi say yu bi artist wey wont shia dem work wey dey yus NFTs, witout luzin 
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Eksplore, buy abi kreate yor own NFT art/kolectibols...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Make yu eksplore NFT art
   </ButtonLink>
 </AlertContent>

@@ -230,7 +230,7 @@
   "nav-contribute-description": "ನೀವು ಸಹಾಯ ಮಾಡಲು ಬಯಸಿದರೆ, ಇದು ನಿಮಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತದೆ",
   "nav-contribute-label": "Ethereum.org ಗೆ ಕೊಡುಗೆ ನೀಡು",
   "nav-dao-description": "ಕೇಂದ್ರೀಕೃತ ಅಧಿಕಾರವಿಲ್ಲದ ಸದಸ್ಯ-ಮಾಲೀಕತ್ವದ ಸಮುದಾಯಗಳು",
-  "nav-dapps-description": "ಎಥೆರಿಯಮ್ ಬಳಸಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಸಮೃದ್ಧ ಪರಿಸರ ವ್ಯವಸ್ಥೆಯನ್ನು ಅನ್ವೇಷಿಸಿ",
+  "nav-apps-description": "ಎಥೆರಿಯಮ್ ಬಳಸಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಸಮೃದ್ಧ ಪರಿಸರ ವ್ಯವಸ್ಥೆಯನ್ನು ಅನ್ವೇಷಿಸಿ",
   "nav-defi-description": "ಸಾಂಪ್ರದಾಯಿಕ ಹಣಕಾಸು ಮಾರುಕಟ್ಟೆಗೆ ಜಾಗತಿಕ, ಮುಕ್ತ ಪರ್ಯಾಯ",
   "nav-desci-description": "ಪ್ರಸ್ತುತ ವೈಜ್ಞಾನಿಕ ವ್ಯವಸ್ಥೆಗೆ ಜಾಗತಿಕ, ಮುಕ್ತ ಪರ್ಯಾಯ",
   "nav-desoc-description": "ಸಾಮಾಜಿಕ ಸಂವಹನ ಮತ್ತು ವಿಷಯ ಸೃಷ್ಟಿಗಾಗಿ ಬ್ಲಾಕ್‌ಚೈನ್‌ ಆಧಾರಿತ ವೇದಿಕೆಗಳು",
@@ -279,7 +279,7 @@
   "nav-history-label": "ಎಥೆರಿಯಮ್‌ನ ತಾಂತ್ರಿಕ ಇತಿಹಾಸ",
   "nav-learn-by-coding-description": "ಎಥೆರಿಯಮ್‌ನೊಂದಿಗೆ ಪ್ರಯೋಗ ಮಾಡಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುವ ಉಪಕರಣಗಳು",
   "nav-local-env-description": "ನಿಮ್ಮ ಎಥೆರಿಯಮ್ ಅಭಿವೃದ್ಧಿ ಪಣವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ಮತ್ತು ಹೊಂದಿಸಿ",
-  "nav-mainnet-description": "ಉದ್ಯಮದ ಬ್ಲಾಕ್‌ಚೈನ್‌ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸಾರ್ವಜನಿಕ ಎಥೆರಿಯಮ್ ಮೇನ್ನೆಟ್‌ನಲ್ಲಿ ನಿರ್ಮಿಸಬಹುದು",
+  "nav-enterprise-description": "ಉದ್ಯಮದ ಬ್ಲಾಕ್‌ಚೈನ್‌ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸಾರ್ವಜನಿಕ ಎಥೆರಿಯಮ್ ಮೇನ್ನೆಟ್‌ನಲ್ಲಿ ನಿರ್ಮಿಸಬಹುದು",
   "nav-networks-home-description": "ಎಥೆರಿಯಮ್‌ಗೆ ಅಗ್ಗದ ಮತ್ತು ವೇಗದ ವಹಿವಾಟುಗಳು",
   "nav-networks-introduction-description": "ಇಥಿರಿಯಮ್ ಜಾಲಗಳ ಜಾಲ ದಲ್ಲಿಯ ವಿಸ್ತರಗೊಳ್ಳುತ್ತಿದೆ",
   "nav-networks-explore-networks-label": "ಜಾಲಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
@@ -332,6 +332,8 @@
   "nav-staking-solo-description": "ನಿಮ್ಮ ಮನೆಯ ಹಾರ್ಡ್‌ವೇರ್ ಅನ್ನು ಚಲಾಯಿಸಿ ಮತ್ತು ವೈಯಕ್ತಿಕವಾಗಿ ಎಥೆರಿಯಮ್ ನೆಟ್‌ವರ್ಕ್‌ನ ಭದ್ರತೆ ಮತ್ತು ವಿಕೇಂದ್ರೀಕರಣಕ್ಕೆ ಸೇರಿಸಿ",
   "nav-staking-solo-label": "ಏಕವ್ಯಕ್ತಿ ಸ್ಟೇಕಿಂಗ್",
   "nav-start-building-description": "ಹೊಸಬರಿಗೆ ಉಪಯುಕ್ತ ಮಾಹಿತಿ",
+  "nav-start-with-crypto-title": "ಇಲ್ಲಿ ಪ್ರಾರಂಭಿಸಿ",
+  "nav-start-with-crypto-description": "Ethereum ಬಳಸುವ ನಿಮ್ಮ ಪ್ರಥಮ ಹೆಜ್ಜೆಗಳು",
   "nav-translation-program-description": "Ethereum.org ಅನ್ನು ಎಲ್ಲಾ ಭಾಷೆಗಳಿಗೆ ಭಾಷಾಂತರಿಸಲು ಸಹಯೋಗದ ಪ್ರಯತ್ನ",
   "nav-tutorials-description": "ಸಮುದಾಯ ಬೋಧನೆಗಳ ಕ್ಯುರೇಟೆಡ್ ಪಟ್ಟಿ",
   "nav-use-cases-description": "ಎಥೆರಿಯಮ್ ಬಳಕೆಗೆ ವಿವಿಧ ವಿಚಾರಗಳನ್ನು ಕಂಡುಕೊಳ್ಳಿ",
@@ -440,5 +442,8 @@
   "withdrawals": "ಪಣ ಹಿಂತೆಗೆದುಕೊಳ್ಳುವುದು",
   "wrapped-ether": "ವ್ರ್ಯಾಪ್ ಮಾಡಲಾದ ಎಥೆರ್",
   "yes": "ಹೌದು",
-  "zero-knowledge-proofs": "ಶೂನ್ಯ ಜ್ಞಾನ ಪುರಾವೆಗಳು"
+  "zero-knowledge-proofs": "ಶೂನ್ಯ ಜ್ಞಾನ ಪುರಾವೆಗಳು",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum ಮತ್ತು Bitcoin ನಡುವಿನ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ"
+
 }

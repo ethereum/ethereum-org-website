@@ -38,7 +38,7 @@ Stosowanie proof-of-stake jako mechanizmu konsensusu jest fundamentalnym element
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Jeśli chcesz zostać walidatorem i pomóc w zabezpieczaniu Ethereum, <a href="/staking/">dowiedz się więcej o stakingu</a>.
+  Jeśli chcesz zostać walidatorem i pomóc w zabezpieczaniu Ethereum, [dowiedz się więcej o stakingu](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

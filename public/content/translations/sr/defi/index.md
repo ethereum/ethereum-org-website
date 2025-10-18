@@ -47,7 +47,7 @@ Jedan od najboljih načina da se vidi potencijal decentralizovanih finansija jes
 | Tržišta su uvek otvorena.                                                                                        | Tržišta se zatvaraju zato što je zaposlenima potrebna pauza.                                                                                    |
 | Izgrađene su na transparentnosti – svako može da pogleda podatke proizvoda i da istraži kako sistem funkcioniše. | Finansijske institucije su zatvorene knjige: ne možete da tražite da vidite istoriju njihovih pozajmica, podatke o upravljanju sredstvima i sl. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Istražite aplikacije decentralizovanih finansija
 </ButtonLink>
 
@@ -67,7 +67,7 @@ Ovo zvuči čudno… „Zašto bih želeo/la da programiram svoj novac?” Među
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Istražite i isprobajte naše predloge za aplikacije decentralizovanih finansija ako ste novi u mreži Ethereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Istražite aplikacije decentralizovanih finansija
   </ButtonLink>
 </AlertContent>
@@ -95,7 +95,7 @@ Postoji decentralizovana alternativa većini finansijskih usluga. Ali Ethereum t
 
 Kao lanac blokova, Ethereum je projektovan za izvršavanje transakcija na bezbedan način širom sveta. Kao i Bitcoin, i Ethereum čini slanje novca širom sveta jednostavnim kao da šaljete imejl. Samo unesite [ENS ime](/glossary/#ens) primaoca (npr. bob.eth) ili njegovu adresu naloga u svoj novčanik i vaša uplata će se izvršiti u roku od nekoliko minuta (uglavnom). Da biste slali ili primali uplate, potreban vam je [novčanik](/wallets/).
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentralizovane aplikacije za plaćanje
 </ButtonLink>
 
@@ -126,7 +126,7 @@ Pozajmljivanje novca direktno od decentralizovanih pružalaca usluga može se vr
 - Putem mreže peer-to-peer, što znači da zajmoprimac to čini direktno od konkretnog zajmodavca.
 - Iz grupnog fonda pri čemu zajmodavci stavljaju sredstva (likvidnost) u fond iz kojeg zajmoprimci mogu da pozajme.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentalizovane aplikacije za pozajmljivanje
 </ButtonLink>
 
@@ -171,7 +171,7 @@ Ako bi potražnja menjačnice B naglo opala i korisnik ne može da kupi dovoljno
 
 Da biste mogli da izvedete gornji primer u tradicionalnom finansijskom svetu, bila bi vam potrebna ogromna količina novca. Ovakve strategije za pravljenje novca dostupne su samo onima koji već imaju bogatstvo. Brzi zajmovi su primer budućnosti u kojima posedovanje novca nije nužno uslov za zaradu novca.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Više informacija o brzim zajmovima
 </ButtonLink>
 
@@ -188,7 +188,7 @@ Možete da zaradite kamatu na svojoj kripto-imovini tako što je pozajmljujete i
 - Vaš aDai će se povećavati na osnovu kamatnih stopa i možete videti kako raste saldo u vašem novčaniku. U zavisnosti od [GPS-a](/glossary/#apr), vaš bilans novčanika će prikazivati nešto nalik na 100.1234 nakon nekoliko dana ili čak sati!
 - U bilo kom trenutku možete povući određeni iznos običnih Dai-ja koji je jednak vašem saldu aDai-ja.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentralizovane aplikacije za davanje pozajmica
 </ButtonLink>
 
@@ -216,7 +216,7 @@ Postoje na hiljade tokena na mreži Ethereum. Decentralizovane menjačnice (DEX)
 
 Npr. ako želite da koristite lutriju bez gubitka PoolTogether (opisanu iznad), potrebni su vam tokeni kao što su Dai ili USDC. Ove decentralizovane menjačnice (DEX) omogućavaju da menjate ETH za te tokene i obrnuto kada završite sa trgovinom.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte menjačnice tokena
 </ButtonLink>
 
@@ -228,7 +228,7 @@ Postoje napredne opcije za trgovce koji žele malo više kontrole. Ograničene n
 
 Kada koristite centralizovane menjačnice morate da dostavite sredstva pre trgovanja i da verujete menjačnicu da će da vodi računa o njima. Dok su vaša sredstva deponovana, ona su u riziku jer su centralizovane menjačnice atraktivna meta za hakere.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentralizovane aplikacije o trgovanju
 </ButtonLink>
 
@@ -240,7 +240,7 @@ Na Ethereumu postoje proizvodi za upravljanje fondovima koji vam mogu pomoći da
 
 Dobar primer je [DeFi Pulse Index fond (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ovo je fond koji automatski rebalansira kako bi se osiguralo da vaš portfolio uvek uključuje najviše DeFi tokena prema tržišnoj kapitalizaciji. Nikada nećete morati da upravljate detaljima i možete povući sredstva iz fonda kad god poželite.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentralizovane aplikacije za investiranje
 </ButtonLink>
 
@@ -254,7 +254,7 @@ Ethereum je idealna platforma za masovno finansiranje (crowdfunding):
 - Sve je transparentno tako da oni koji podižu sredstva mogu dokazati koliko novca je prikupljeno. Kasnije, možete čak i da pratite kako se sredstva troše.
 - Oni koji skupljaju sredstva mogu da postave automatsko refundiranje ukoliko, na primer, postoji određeni rok ili minimalni iznos nije dostignut.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte aplikacije za masovno finansiranje
 </ButtonLink>
 
@@ -283,7 +283,7 @@ Decentralizovano osiguranje pokušava da učini osiguranje jeftinijim, bržim za
 
 Ethereum proizvodi, kao i bilo koji drugi softver, može imati greške i slabe tačke. Tako da sada, mnogo proizvoda za osiguranje u prostoru se fokusira na zaštitu njihovih korisnika od gubitka sredstava. Ipak, postoje projekti koji počinju razvijati osiguranja za sve što može da nas snađe. Dobar primer toga je Crop osiguranje kompanije Etherisc koje se trudi da [zaštiti male poljoprivrednike u Keniji od suše i poplave](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralizovano osiguranje može pružiti jeftiniju pokrivenost za poljoprivrednike koji često nisu u mogućnosti da priušte tradicionalno osiguranje.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentralizovane aplikacije za osiguranje
 </ButtonLink>
 
@@ -293,7 +293,7 @@ Ethereum proizvodi, kao i bilo koji drugi softver, može imati greške i slabe t
 
 S obzirom na toliko dešavanja trenutno, treba vam način da pratite sve svoje investicije, pozajmice i trgovanja. Postoji niz proizvoda koji vam omogućavaju da koordinišete sve svoje DeFi aktivnosti sa jednog mesta. U ovome je lepota otvorene arhitekture decentralizovanih finansija. Timovi mogu da izgrade interfejse gde, ne samo da možete videti svoj saldo na različitim proizvodima, već možete koristiti i njihove funkcije. Ovo vam možete biti korisno kako budete više istraživali decentralizovane finansije.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Pogledajte decentralizovane aplikacije o portfolijima
 </ButtonLink>
 
@@ -325,7 +325,7 @@ Možete misliti o decentralizovanim finansijama u nivoima:
 1. Lanac blokova — Ethereum sadrži istoriju transakcija i stanja računa.
 2. Sredstva — [ETH](/eth/)i drugi tokeni (valute).
 3. Protokoli — [pametni ugovori](/glossary/#smart-contract)koji pružaju funkcionalnost, na primer uslugu koja omogućava decentralizovano pozajmljivanje sredstava.
-4. [Aplikacije](/dapps/) — proizvodi koje koristimo da upravljamo i pristupamo protokolima.
+4. [Aplikacije](/apps/) — proizvodi koje koristimo da upravljamo i pristupamo protokolima.
 
 Napomena: veliki deo DeFi-a koristi [standard ERC-20](/glossary/#erc-20). Aplikacije u DeFi-u koriste omotač za ETH pod nazivom Omotani ether (WETH). [Saznajte više o omotanom ether-u](/wrapped-eth).
 

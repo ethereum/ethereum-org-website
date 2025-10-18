@@ -63,7 +63,7 @@ Sabihin nating gusto mong magkaroon ng native na Bitcoin (BTC), ngunit nasa Ethe
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang <a href="/get-eth/">centralized exchange</a>. Gayunpaman, maliban kung nasa isang exchange na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
+  Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang [centralized exchange](/get-eth/). Gayunpaman, maliban kung nasa isang exchange na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
 </AlertDescription>
 </AlertContent>
 </Alert>

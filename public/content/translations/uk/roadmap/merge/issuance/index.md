@@ -104,7 +104,7 @@ title="Випуск ETH tldr">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Спалення комісій почалося з <a href="/history/#london">оновлення London</a> у серпні 2021 року й залишається без змін після злиття.
+Спалення комісій почалося з [оновлення London](/history/#london) у серпні 2021 року й залишається без змін після злиття.
 </AlertDescription>
 </AlertContent>
 </Alert>

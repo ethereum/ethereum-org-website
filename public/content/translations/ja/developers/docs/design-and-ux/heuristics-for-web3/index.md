@@ -52,7 +52,7 @@ lang: ja
 
 例: フッターに目立つサイズで監査結果を掲載します。
 
-![Audits refernced in the website footer](./Image2.png)
+![Audits referenced in the website footer](./Image2.png)
 
 ### 3. 最も重要な情報が明確である {#the-most-important-info-is-obvious}
 

@@ -145,7 +145,7 @@ Web3 是一個年輕且不斷發展的生態系統。 Gavin Wood 在 2014 年創
 
 - [取得錢包](/wallets/)
 - [尋找社群](/community/)
-- [探索 Web3 應用程式](/dapps/)
+- [探索 Web3 應用程式](/apps/)
 - [參與 DAO](/dao/)
 - [在 Web3 上構建](/developers/)
 
@@ -153,11 +153,11 @@ Web3 是一個年輕且不斷發展的生態系統。 Gavin Wood 在 2014 年創
 
 Web3 並未嚴格定義。 不同社群參與者對它有不同的看法。 請見：
 
-- [什麼是 Web3？ 明日去中心化網際網路的相關解說](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [什麼是 Web3？ 明日去中心化網際網路的相關解說](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [搞懂 Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [為什麼 Web 3 很重要](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [為什麼去中心化很重要](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web 3 的景況](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web 3 的辯論](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web 3 的辯論](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

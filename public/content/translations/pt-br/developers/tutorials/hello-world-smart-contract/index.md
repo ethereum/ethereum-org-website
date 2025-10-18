@@ -16,14 +16,14 @@ published: 2021-03-31
 Se você é novo no desenvolvimento de blockchain e não sabe por onde começar, ou se apenas deseja entender como implementar ou interagir com contratos inteligentes, este guia é para você. Vamos criar e implantar um contrato inteligente simples na rede de teste Goerli usando uma carteira virtual [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://alchemyapi.io/eth) (não se preocupe se você ainda não entendeu o que isso significa, nós explicaremos).
 
 > **Atenção**
-> 
+>
 > Aviso de descontinuidade
-> 
+>
 > Para este guia inteiro, a rede de teste Goerli está sendo usada para criação e implantação de contratos inteligentes. Entretanto, por favor note que a Ethereum Foundation anunciou que a [Goerli será descontinuada em breve](https://www.alchemy.com/blog/goerli-faucet-deprecation).
-> 
+>
 > Nós recomendamos você usar a [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) e [faucets Sepolia](https://sepoliafaucet.com/) para este tutorial.
 
-Na [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) deste tutorial, veremos como podemos interagir com nosso contrato inteligente, assim que for implantado aqui, e na [parte 3](https://docs.alchemy.com/docs/submitted-your-smart-contract-to-etherscan), abordaremos como publicá-lo no Etherscan.
+Na [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) deste tutorial, veremos como podemos interagir com nosso contrato inteligente, assim que for implantado aqui, e na [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), abordaremos como publicá-lo no Etherscan.
 
 Caso surjam perguntas em qualquer momento, sinta-se à vontade para falar no Discord da [Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -49,7 +49,7 @@ Assim que você criar uma conta na Alchemy, você pode gerar uma chave de API cr
 
 Precisamos de uma conta de Ethereum para enviar e receber transações. Para este tutorial, usaremos uma carteira virtual no navegador, a MetaMask, para gerenciar o endereço da sua conta Ethereum. Mais sobre [transações](/developers/docs/transactions/).
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando você estiver criando uma conta, ou se já tiver uma conta, certifique-se de mudar para a “Rede de teste Goerli”, no canto superior direito (para que não estejamos lidando com dinheiro real).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download). Quando você estiver criando uma conta, ou se já tiver uma conta, certifique-se de mudar para a “Rede de teste Goerli”, no canto superior direito (para que não estejamos lidando com dinheiro real).
 
 ![exemplo metamask ropsten](./metamask-ropsten-example.png)
 
@@ -66,7 +66,7 @@ Para verificar novamente que temos saldo, vamos fazer uma solicitação através
 ```
 
 > **OBSERVAÇÃO:** este resultado é em wei não em ETH. Lembre-se de que "Wei" é a menor unidade de ether. A conversão de wei para ETH é 1 ETH = 10<sup>18</sup> wei. Desta maneira, se convertermos 0x2B5E3AF16B1880000 em decimal obteremos 5\*10¹⁸, o que equivale a 5 ETH.
-> 
+>
 > Ufa! Nosso dinheiro de imitação está todo aí <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Passo 6: Inicialize nosso projeto {#step-6}

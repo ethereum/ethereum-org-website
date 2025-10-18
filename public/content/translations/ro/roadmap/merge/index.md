@@ -40,7 +40,7 @@ Niciun istoric nu a fost pierdut în Fuziune. Când Rețeaua principală a fuzio
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre <a href="/roadmap/merge/issuance/">emiterea de eter înainte și după Fuziune</a>.
+Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre [emiterea de eter înainte și după Fuziune](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>

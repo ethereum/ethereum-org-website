@@ -163,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Kung bahagi ka ng isang <a href="/staking/pools/">staking pool</a> o may hawak kang mga staking token, dapat kang magtanong sa iyong provider ng iba pang detalye tungkol sa kung paano pinapangasiwaan ang mga pag-withdraw sa staking, dahil magkakaiba ang paraan ng pangangasiwa ng bawat serbisyo.
+Kung bahagi ka ng isang [staking pool](/staking/pools/) o may hawak kang mga staking token, dapat kang magtanong sa iyong provider ng iba pang detalye tungkol sa kung paano pinapangasiwaan ang mga pag-withdraw sa staking, dahil magkakaiba ang paraan ng pangangasiwa ng bawat serbisyo.
 
-Sa pangkalahatan, dapat malaya ang mga user na kunin ang kasalukuyan nilang staked ETH, o magpalit ng staking provider na ginagamit nila. Kung masyado nang nagiging malaki ang isang partikular na pool, puwedeng alisin, i-redeem, at i-stake ulit ang pondo sa <a href="https://rated.network/">mas maliit na provider</a>. O, kung nakalikom ka na ng sapat na ETH, maaari kang <a href="/staking/solo/">mag-stake mula sa bahay</a>.
+Sa pangkalahatan, dapat malaya ang mga user na kunin ang kasalukuyan nilang staked ETH, o magpalit ng staking provider na ginagamit nila. Kung masyado nang nagiging malaki ang isang partikular na pool, puwedeng alisin, i-redeem, at i-stake ulit ang pondo sa <a href="https://rated.network/">mas maliit na provider</a>. O, kung nakalikom ka na ng sapat na ETH, maaari kang [mag-stake mula sa bahay](/staking/solo/).
 
 </ExpandableCard>
 
@@ -222,7 +222,6 @@ Hindi. Kapag umalis na ang isang validator at na-wtihdraw na ang kumpletong bala
 
 - [Mga Pag-withdraw sa Staking sa Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mga Beacon chain push withdrawal bilang mga operasyon](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pag-withdraw sa Staked ETH (Testing) kasama sina Potuz at Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals bilang mga operasyon kasama si Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Pag-unawa sa Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

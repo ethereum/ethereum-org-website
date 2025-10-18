@@ -104,7 +104,7 @@ Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Pálení poplatků bylo spuštěno s <a href="/history/#london">vylepšením London</a> v srpnu 2021 a od Sloučení zůstává beze změn.
+Pálení poplatků bylo spuštěno s [vylepšením London](/history/#london) v srpnu 2021 a od Sloučení zůstává beze změn.
 </AlertDescription>
 </AlertContent>
 </Alert>

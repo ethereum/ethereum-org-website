@@ -65,7 +65,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
-- [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (siwe) for Python_
 - [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
 - [Wake](https://getwake.io) - _All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation (language server - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
@@ -84,7 +84,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/).
 The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
 
 - [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
-- [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
+- [Curve](https://www.curve.finance/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) uses [Python in managing and deploying their vesting contracts](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/), of Alpha Homora fame, uses [Brownie to test and deploy smart contracts](https://github.com/AlphaFinanceLab/alpha-staking-contract)

@@ -7,7 +7,7 @@ incomplete: true
 
 ## Condiții prealabile {#prerequisites}
 
-Pentru a înțelege mai bine această pagină, vă recomandăm să citiți mai întâi despre [tranzacții](/developers/docs/transactions/), <a href="/developers/docs/blocks/">blocuri</a> și [dovada-muncii (PoW)](/developers/docs/consensus-mechanisms/pow/).
+Pentru a înțelege mai bine această pagină, vă recomandăm să citiți mai întâi despre [tranzacții](/developers/docs/transactions/), [blocuri](/developers/docs/blocks/) și [dovada-muncii (PoW)](/developers/docs/consensus-mechanisms/pow/).
 
 ## Ce este minarea pe Ethereum? {#what-is-ethereum-mining}
 
@@ -19,7 +19,7 @@ Ethereum, la fel ca Bitcoin, utilizează în prezent un mecanism de consens prin
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Dovada-mizei va înlocui minarea și dovada-muncii în cursul anului viitor. Puteți începe de astăzi să vă mizați ETH-ul. <a href="/staking/">Aflați mai multe despre mizare</a>    
+   Dovada-mizei va înlocui minarea și dovada-muncii în cursul anului viitor. Puteți începe de astăzi să vă mizați ETH-ul. [Aflați mai multe despre mizare](/staking/)    
 </AlertDescription>
 </AlertContent>
 </Alert>

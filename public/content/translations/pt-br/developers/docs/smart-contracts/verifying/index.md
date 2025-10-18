@@ -76,7 +76,7 @@ O Etherscan permite que você recompile o bytecode do contrato a partir do paylo
 
 Uma vez verificado, o código-fonte do seu contrato recebe um rótulo "Verificado" e é publicado no Etherscan, para que outros auditem. Ele também é adicionado à seção [Contratos Verificados](https://etherscan.io/contractsVerified/) - um repositório de contratos inteligentes com códigos-fonte verificados.
 
-Etherscan é a ferramenta mais usada para verificação de contratos. No entanto, a verificação de contrato do Etherscan tem uma desvantagem: ele falha ao comparar o **hash de metadados** do bytecode on-chain e o bytecode recompilado. Portanto, as correspondências no Etherscan são correspondências parciais.
+Etherscan é a ferramenta mais usada para verificação de contratos. No entanto, a verificação de contrato do Etherscan tem uma desvantagem: ele falha ao comparar o **hash de metadados** do bytecode on-chain e do bytecode recompilado. Portanto, as correspondências no Etherscan são correspondências parciais.
 
 [Mais sobre a verificação de contratos no Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 

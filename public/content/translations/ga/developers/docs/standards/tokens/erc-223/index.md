@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Nuair a gheobhaidh an `RecipientContract` chomhartha ERC-223 déanfaidh an conradh feidhm atá ionchódaithe mar pharaiméadar `_data` an idirbhirt chomharthaí, comhionann leis an gcaoi a n-ionchódaíonn idirbhearta éitear glaonna mar `data` idirbhirt. Léigh [an réimse sonraí] (https://ethereum.org/en/developers/docs/transactions/#the-data-field) le haghaidh tuilleadh faisnéise.
+Nuair a gheobhaidh an `RecipientContract` chomhartha ERC-223 déanfaidh an conradh feidhm atá ionchódaithe mar pharaiméadar `_data` an idirbhirt chomharthaí, comhionann leis an gcaoi a n-ionchódaíonn idirbhearta éitear glaonna mar `data` idirbhirt. Léigh [an réimse sonraí] (/developers/docs/transactions/#the-data-field) le haghaidh tuilleadh faisnéise.
 
 Sa sampla thuas ní mór comhartha ERC-223 a aistriú chuig seoladh an `RecipientContract` leis an bhfeidhm `transfer(address,uin256,bytes calldata _data)`. Más é `0xc2985578` (síniú feidhm `foo()`) an paraiméadar sonraí, déanfar an foo feidhme () a agairt tar éis an taisce chomhartha a fháil agus déanfar an t-imeacht Foo() a bhácáil.
 

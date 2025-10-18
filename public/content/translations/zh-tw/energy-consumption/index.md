@@ -73,7 +73,7 @@ lang: zh-tw
 ## 了解更多 {#further-reading}
 
 - [劍橋區塊鏈網路永續性指標](https://ccaf.io/cbnsi/ethereum)
-- [美國白宮對工作量證明區塊鏈所作的調查報告](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [美國白宮對工作量證明區塊鏈所作的調查報告](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [以太坊排放量：由下而上估算](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [以太坊的能耗指標](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

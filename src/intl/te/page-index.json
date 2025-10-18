@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "యాప్‌లను ప్రయత్నించండి",
   "page-index-cta-get-eth-description": "Ethereum యొక్క కరెన్సీ",
   "page-index-cta-get-eth-label": "ETHను పొందండి",
-  "page-index-cta-networks-description": "కనిష్ట రుసుములతో ఆనందించండి",
-  "page-index-cta-networks-label": "ఒక నెట్‌వర్క్‌ను ఎంచుకోండి",
   "page-index-cta-wallet-description": "ఖాతాలను సృష్టించండి & ఆస్తులను నిర్వహించండి",
   "page-index-cta-wallet-label": "వాలెట్‌ను ఎంచుకోండి",
+  "page-index-cta-build-apps-description": "మీ మొదటి యాప్‌ను సృష్టించండి",
+  "page-index-cta-build-apps-label": "అభివృద్ధిని ప్రారంభించండి",
   "page-index-description": "వినూత్న యాప్‌లు మరియు బ్లాక్‌చెయిన్ నెట్‌వర్క్‌ల కోసం ప్రముఖ ప్లాట్‌ఫారమ్",
   "page-index-developers-code-example-description-0": "మీరు ప్రోగ్రామ్ చేసిన లాజిక్‌తో నడిచే బ్యాంక్‌ను మీరు నిర్మించుకోవచ్చు",
   "page-index-developers-code-example-description-1": "మీరు అప్లికేషన్లలో బదిలీ చేయగల మరియు ఉపయోగించగల టోకెన్‌లను సృష్టించండి",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "ఇటీవల పోస్ట్‌లు",
   "page-index-posts-subtitle": "కమ్యూనిటీ నుండి తాజా బ్లాగ్ పోస్ట్‌లు మరియు అప్‌డేట్‌లు",
   "page-index-title": "ఇతీరియముకు స్వాగతం",
+  "page-index-use-cases-tag": "కేసులను ఉపయోగించండి",
   "page-index-values-description": "డిజిటల్ విప్లవంలో భాగం అవ్వండి",
   "page-index-values-header": "ఇంటర్నెట్ మారుతోంది",
   "page-index-values-legacy": "లీగసీ",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "చాలా మందికి మూసివేయబడింది",
   "page-index-values-open-legacy-content-0": "కంపెనీలు తమ మేధో సంపత్తిని రక్షిస్తాయి మరియు భాగస్వామ్యం చేయవు. కంపెనీ వెలుపలి ఎవరూ విషయాలు ఎలా పని చేస్తారో చూడలేరు, సమస్యలను పరిష్కరించలేరు లేదా మెరుగుదలలు చేయలేరు. వ్యక్తులు కొత్త సాధనాలను సృష్టించడం లేదా అనుకూలీకరించడం కష్టం.",
   "page-index-values-open-ethereum-label": "అందరికీ తెరిచి ఉంది",
-  "page-index-values-open-ethereum-content-0": "Ethereum అందరికీ పబ్లిక్. ఎవరైనా కోడ్‌ను చూడగలరు, ఉపయోగించగలరు మరియు మెరుగుపరచగలరు, దీని వలన ప్రతి ఒక్కరికీ ఇది మెరుగ్గా ఉంటుంది."
+  "page-index-values-open-ethereum-content-0": "Ethereum అందరికీ పబ్లిక్. ఎవరైనా కోడ్‌ను చూడగలరు, ఉపయోగించగలరు మరియు మెరుగుపరచగలరు, దీని వలన ప్రతి ఒక్కరికీ ఇది మెరుగ్గా ఉంటుంది.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "సంవత్సరంలో అతిపెద్ద Ethereum ఈవెంట్లో చేరండి",
+  "page-index-devconnect-banner-get-tickets": "టిక్కెట్లను పొందండి"
 }
