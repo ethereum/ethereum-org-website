@@ -49,10 +49,15 @@ buttons:
 
 <PredictionMarketLists />
 
-<InfoBanner isWarning emoji="💡">
+<Alert variant="warning">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertDescription>
   <p className="mt-0"><strong>Пам’ятайте про ризики</strong></p>
   <p className="mt-2">Ставте тільки ті суми, які можете собі дозволити, і пам’ятайте про можливість розвитку залежності від азартних ігор.</p>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Виклики та ризики {#challenges-and-risks}
 

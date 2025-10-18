@@ -10,9 +10,13 @@ The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more ne
 
 This upgrade is planned for Q4 2025.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 The Fusaka upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Improvements in Fusaka {#improvements-in-fusaka}
 
