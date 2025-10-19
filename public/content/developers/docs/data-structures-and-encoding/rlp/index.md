@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Recursive Length Prefix (RLP) serialization is used extensively in Ethereum's execution clients. RLP standardizes the transfer of data between nodes in a space-efficient format. The purpose of RLP is to encode arbitrarily nested arrays of binary data, and RLP is the primary encoding method used to serialize objects in Ethereum's execution layer. The main purpose of RLP is to encode structure; with the exception of positive integers, RLP delegates encoding specific data types (e.g. strings, floats) to higher-order protocols. Positive integers must be represented in big-endian binary form with no leading zeroes (thus making the integer value zero equivalent to the empty byte array). Deserialized positive integers with leading zeroes must be treated as invalid by any higher-order protocol using RLP.
+Recursive Length Prefix (RLP) serialization is used extensively in Ethereum's execution clients. RLP standardizes the transfer of data between nodes in a space-efficient format. The purpose of RLP is to encode arbitrarily nested arrays of binary data, and RLP is the primary encoding method used to serialize objects in Ethereum's execution layer. The main purpose of RLP is to encode structure; with the exception of nonnegative integers, RLP delegates encoding specific data types (e.g. strings, floats) to higher-order protocols. Nonnegative integers must be represented in big-endian binary form with no leading zeroes (thus making the integer value zero equivalent to the empty byte array). Deserialized nonnegative integers with leading zeroes must be treated as invalid by any higher-order protocol using RLP.
 
 More information in [the Ethereum yellow paper (Appendix B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -20,7 +20,7 @@ The RLP encoding function takes in an item. An item is defined as follows：
 
 - a string (i.e. byte array) is an item
 - a list of items is an item
-- a positive integer is an item
+- a nonnegative integer is an item
 
 For example, all of the following are items:
 
@@ -30,11 +30,11 @@ For example, all of the following are items:
 - and a more complex data structures like `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
 - the number `100`
 
-Note that in the context of the rest of this page, 'string' means "a certain number of bytes of binary data"; no special encodings are used, and no knowledge about the content of the strings is implied (except as required by the rule against non-minimal positive integers).
+Note that in the context of the rest of this page, 'string' means "a certain number of bytes of binary data"; no special encodings are used, and no knowledge about the content of the strings is implied (except as required by the rule against non-minimal nonnegative integers).
 
 RLP encoding is defined as follows:
 
-- For a positive integer, it is converted to the shortest byte array whose big-endian interpretation is the integer, and then encoded as a string according to the rules below.
+- For a nonnegative integer, it is converted to the shortest byte array whose big-endian interpretation is the integer, and then encoded as a string according to the rules below.
 - For a single byte whose value is in the `[0x00, 0x7f]` (decimal `[0, 127]`) range, that byte is its own RLP encoding.
 - Otherwise, if a string is 0-55 bytes long, the RLP encoding consists of a single byte with value **0x80** (dec. 128) plus the length of the string followed by the string. The range of the first byte is thus `[0x80, 0xb7]` (dec. `[128, 183]`).
 - If a string is more than 55 bytes long, the RLP encoding consists of a single byte with value **0xb7** (dec. 183) plus the length in bytes of the length of the string in binary form, followed by the length of the string, followed by the string. For example, a 1024 byte long string would be encoded as `\xb9\x04\x00` (dec. `185, 4, 0`) followed by the string. Here, `0xb9` (183 + 2 = 185) as the first byte, followed by the 2 bytes `0x0400` (dec. 1024) that denote the length of the actual string. The range of the first byte is thus `[0xb8, 0xbf]` (dec. `[184, 191]`).
@@ -89,7 +89,7 @@ According to the rules and process of RLP encoding, the input of RLP decode is r
 
 1.  according to the first byte (i.e. prefix) of input data and decoding the data type, the length of the actual data and offset;
 
-2.  according to the type and offset of data, decode the data correspondingly, respecting the minimal encoding rule for positive integers;
+2.  according to the type and offset of data, decode the data correspondingly, respecting the minimal encoding rule for nonnegative integers;
 
 3.  continue to decode the rest of the input;
 
