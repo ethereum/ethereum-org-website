@@ -134,6 +134,7 @@ export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
 export const CANONICAL_STAKING_TESTNET = "Hoodi"
 
 export const TESTNETS = [
+  "hoodi",
   "goerli",
   "holesky",
   "kiln",
