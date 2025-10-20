@@ -8,9 +8,7 @@ import { Center } from "@/components/ui/flex"
 const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
-      <p>
-        Fusaka vulnerabilities are now part of the Bug Bounty Program!
-      </p>
+      <p>Fusaka vulnerabilities are now part of the Bug Bounty Program!</p>
     </Center>
   </BannerNotification>
 )

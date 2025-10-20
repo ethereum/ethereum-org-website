@@ -196,6 +196,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/dao/",
             },
             {
+              label: t("decentralized-social-networks"),
+              description: t("nav-desoc-description"),
+              href: "/social-networks/",
+            },
+            {
               label: t("nav-emerging-label"),
               description: t("nav-emerging-description"),
               items: [
@@ -203,11 +208,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   label: t("decentralized-identity"),
                   description: t("nav-did-description"),
                   href: "/decentralized-identity/",
-                },
-                {
-                  label: t("decentralized-social-networks"),
-                  description: t("nav-desoc-description"),
-                  href: "/social-networks/",
                 },
                 {
                   label: t("decentralized-science"),
@@ -223,6 +223,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   label: t("ai-agents"),
                   description: t("nav-ai-agents-description"),
                   href: "/ai-agents/",
+                },
+                {
+                  label: t("onchain-gaming"),
+                  description: t("nav-gaming-description"),
+                  href: "/gaming/",
                 },
                 {
                   label: t("prediction-markets"),

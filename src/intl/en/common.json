@@ -284,6 +284,7 @@
   "nav-events-online-description": "Hundreds of thousands of Ethereum enthusiasts gather in these online communities",
   "nav-find-wallet-description": "Wallets allow you to use crypto",
   "nav-find-wallet-label": "Choose your wallet",
+  "nav-gaming-description": "Games built on blockchain where assets and gameplay are fully decentralized and transparent.",
   "nav-founders-description": "Empowering founders with programs, mentorship, and resources",
   "nav-gas-fees-description": "How are ETH transaction fees calculated",
   "nav-gas-fees-label": "Gas fees",
@@ -378,6 +379,7 @@
   "nfts": "NFTs",
   "no": "No",
   "on-this-page": "On this page",
+  "onchain-gaming": "Onchain Gaming",
   "open": "Open",
   "open-research": "Open research",
   "page-developers-aria-label": "Developers' Menu",
@@ -488,8 +490,5 @@
   "region-wake-island-usa": "Wake Island (USA)",
   "region-bonaire-netherlands": "Bonaire (Netherlands)",
   "region-saba-netherlands": "Saba (Netherlands)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)",
-  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
-  "nav-ethereum-vs-bitcoin-description": "Understand the differences between Ethereum and Bitcoin"
-
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)"
 }
