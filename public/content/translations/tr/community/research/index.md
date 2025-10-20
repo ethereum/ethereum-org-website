@@ -83,7 +83,7 @@ Ethereum istemcileri Ethereum protokolünün uygulamalarıdır. İstemci gelişt
 1. dedikodu bloklarının, mutabakat mantığının ve blokzincirin başının kaydını tutan bir fikir birliği istemcisi
 2. Ethereum Sanal Makinesi'ni destekleyen ve akıllı sözleşmeler ile işlemleri yürürlüğe sokan bir yürütüm işlemcisi
 
-Düğümler ve istemciler hakkında daha detaylı bilgi ve güncel istemcilerin bir listesi için buraya [düğümler ve istemciler sayfası](/developers/docs/nodes-and-clients/) göz atın. Ayrıca bütün Ethereum güncellemelerinin tarihçesini [tarihçe sayfasında](/history/) bulabilirsiniz.
+Düğümler ve istemciler hakkında daha detaylı bilgi ve güncel istemcilerin bir listesi için buraya [düğümler ve istemciler sayfası](/developers/docs/nodes-and-clients/) göz atın. Ayrıca bütün Ethereum güncellemelerinin tarihçesini [tarihçe sayfasında](/ethereum-forks/) bulabilirsiniz.
 
 ### Yürütüm İstemcileri {#execution-clients}
 

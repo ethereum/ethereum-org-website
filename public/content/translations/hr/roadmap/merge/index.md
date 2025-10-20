@@ -17,7 +17,7 @@ summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno
 
 ## Što je spajanje? {#what-is-the-merge}
 
-Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne mreže koja je postojala još od [geneze](/history/#frontier)) s novim slojem konsenzusa dokaza uloga pod nazivom Beacon Chain. Time se uklanja potreba za energetski intenzivnim rudarenjem i umjesto toga mreža se osigurava korištenjem ulagačkog ETH-a. To je bio dosta značajan korak vizije Ethereuma kao prilagodljivijeg, sigurnijeg i održivijeg.
+Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne mreže koja je postojala još od [geneze](/ethereum-forks/#frontier)) s novim slojem konsenzusa dokaza uloga pod nazivom Beacon Chain. Time se uklanja potreba za energetski intenzivnim rudarenjem i umjesto toga mreža se osigurava korištenjem ulagačkog ETH-a. To je bio dosta značajan korak vizije Ethereuma kao prilagodljivijeg, sigurnijeg i održivijeg.
 
 <MergeInfographic />
 

@@ -11,7 +11,7 @@ The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought chang
 This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
 <InfoBanner>
-Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
+Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
 </InfoBanner>
 
 ## Improvements in Pectra {#new-improvements}

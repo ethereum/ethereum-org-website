@@ -65,7 +65,7 @@ Awon iyọkuro owo idokowo ti wa laaye! Iṣẹ ṣiṣe yiyọ owo kuro ni a mu
 
 Igbesoke Shanghai/Capella jẹ ki ETH idokowo se gba pada si awọn akanti Ethereum deede. Eyi ti pari iyipo lori owo idokowo, o si mu Ethereum sunmọ ni igbesẹ kan lori irin-ajo rẹ si ọna kikọ ayika alailakoso to ni iduroṣinṣin, to ni imu gbooro, to ni aabo.
 
-- [Diẹ sii lori itan Etheuum](/history/)
+- [Diẹ sii lori itan Etheuum](/ethereum-forks/)
 - [Diẹ sii lori ọna afojusun Ethereum](/roadmap/)
 
 ## Bawo ni awọn sisanwo yiyọ owo kuro se n sise? {#how-do-withdrawals-work}

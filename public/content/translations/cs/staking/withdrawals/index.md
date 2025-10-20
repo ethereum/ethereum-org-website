@@ -65,7 +65,7 @@ Výběry vkladů jsou živé! Funkce výběru byla povolena v rámci upgradu Sha
 
 Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžné účty Ethereum. Tím se uzavřela smyčka v nasazování likvidity a Ethereum se o krok přiblížilo na jeho cestě k vybudování udržitelného, ​​škálovatelného a bezpečného decentralizovaného ekosystému.
 
-- [Více o historii Etherea](/history/)
+- [Více o historii Etherea](/ethereum-forks/)
 - [Více o plánu Etherea](/roadmap/)
 
 ## Jak fungují platby za výběr? {#how-do-withdrawals-work}

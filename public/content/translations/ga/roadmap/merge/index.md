@@ -17,7 +17,7 @@ summaryPoint4: Laghdaigh an Cumasc tomhaltas fuinnimh Ethereum faoi ~99.95%.
 
 ## Cad a bhí  i gceist leis An Cumasc? {#what-is-the-merge}
 
-Ba é an Cumasc an ciseal forghníomhaithe bunaidh de Ethereum (an Mainnet atá ann ó [genesis](/history/#frontier)) lena ciseal comhaontaithe cruthúnais-gheallta nua, an Slabhra Beacon. Chuir sé deireadh leis an ngá atá le mianadóireacht dhian ar fhuinneamh agus ina ionad sin chuir sé ar chumas an líonra a dhaingniú le ETH geallta. Ba chéim fíor-spreagúil é chun fís Ethereum a fhíorú - níos mó roinnte, slándála agus inbhuanaitheachta.
+Ba é an Cumasc an ciseal forghníomhaithe bunaidh de Ethereum (an Mainnet atá ann ó [genesis](/ethereum-forks/#frontier)) lena ciseal comhaontaithe cruthúnais-gheallta nua, an Slabhra Beacon. Chuir sé deireadh leis an ngá atá le mianadóireacht dhian ar fhuinneamh agus ina ionad sin chuir sé ar chumas an líonra a dhaingniú le ETH geallta. Ba chéim fíor-spreagúil é chun fís Ethereum a fhíorú - níos mó roinnte, slándála agus inbhuanaitheachta.
 
 <MergeInfographic />
 

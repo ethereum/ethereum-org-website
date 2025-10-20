@@ -65,7 +65,7 @@ Steyking yechib olishlari ishga tushdi! 2023-yil 12-aprelda amalga oshirilgan Sh
 
 Shanghai/Capella yangilanishi avvaldan tiklangan ETHni oddiy Ethereum hisoblariga qaytarib olish imkoniyatini yaratdi. Bu likvidlikni garovga qo‘yish jarayonini to‘liq yopdi va Ethereum barqaror, kengaytiriladigan, xavfsiz markazlashmagan ekotizim yaratish yo‘lidagi maqsadiga yana bir qadam yaqinlashdi.
 
-- [Ethereum tarixi haqida ko‘proq ma’lumot](/history/)
+- [Ethereum tarixi haqida ko‘proq ma’lumot](/ethereum-forks/)
 - [Ethereum yo‘l xaritasi to‘g‘risida ko‘proq ma’lumot](/roadmap/)
 
 ## Pul yechib olish jarayoni qanday amalga oshiriladi? {#how-do-withdrawals-work}

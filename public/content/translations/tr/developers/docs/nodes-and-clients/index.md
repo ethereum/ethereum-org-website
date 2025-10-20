@@ -37,7 +37,7 @@ Tek bir özelliğe uymaları bu uygulamaların ortak noktalarıdır. Özellikler
 - Başlangıçta, [Ethereum Sarı Kağıdı](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Yürütme özellikleri](https://github.com/ethereum/execution-specs/)
 - [Mutabakat özellikleri](https://github.com/ethereum/consensus-specs)
-- Çeşitli [ağ yükseltmelerinde](/history/) uygulanan [EIP'ler](https://eips.ethereum.org/)
+- Çeşitli [ağ yükseltmelerinde](/ethereum-forks/) uygulanan [EIP'ler](https://eips.ethereum.org/)
 
 ### Ağdaki düğümleri izlemek {#network-overview}
 

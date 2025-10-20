@@ -152,7 +152,7 @@ Proses tata kelola Ethereum sering menukarkan kecepatan dan efisiensi untuk kete
 
 Meskipun spesifikasi dan implementasi pengembangan selalu bersifat open source, proses formal yang digunakan untuk mengusulkan pembaruan yang dijelaskan di atas belum digunakan. Ini memungkinkan perubahan untuk ditetapkan dan disetujui lebih cepat oleh para peneliti dan para pengimplementasi.
 
-Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 2022, penggabungan tersebut selesai sebagai bagian dari [Peningkatan jaringan Paris](/history/#paris). Usulan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) diubah dari status 'Last Call' menjadi 'Final', menyelesaikan transisi ke bukti taruhan.
+Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 2022, penggabungan tersebut selesai sebagai bagian dari [Peningkatan jaringan Paris](/ethereum-forks/#paris). Usulan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) diubah dari status 'Last Call' menjadi 'Final', menyelesaikan transisi ke bukti taruhan.
 
 <ButtonLink href="/roadmap/merge/">
   Selengkapnya tentang penggabungan

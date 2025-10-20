@@ -152,7 +152,7 @@ Proces správy Etherea často vymieňa rýchlosť a efektivitu za otvorenosť a 
 
 Zatiaľ čo implementácie špecifikácií a vývoja boli vždy plne open source, formálne procesy používané na navrhovanie aktualizácií opísané vyššie sa nepoužívali. To umožnilo výskumníkom a realizátorom rýchlejšie špecifikovať a odsúhlasiť zmeny.
 
-Keď sa 15. septembra 2022 Beacon Chain zlúčil s realizačnou vrstvou Ethereum, bolo zlúčenie dokončené ako súčasť [zlepšenia siete v Paríži](/history/#paris). Návrh [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) sa zmenil z „Posledná výzva“ na „Konečný“, čím sa dokončil prechod na proof-of-stake.
+Keď sa 15. septembra 2022 Beacon Chain zlúčil s realizačnou vrstvou Ethereum, bolo zlúčenie dokončené ako súčasť [zlepšenia siete v Paríži](/ethereum-forks/#paris). Návrh [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) sa zmenil z „Posledná výzva“ na „Konečný“, čím sa dokončil prechod na proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   Viac o zlúčení

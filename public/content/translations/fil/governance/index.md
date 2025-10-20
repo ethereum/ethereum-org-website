@@ -152,7 +152,7 @@ Sa proseso ng pamamahala ng Ethereum, madalas na ipinagpapalit ang bilis at kahu
 
 Bagama't palaging ganap na open source ang specification at mga pagpapatupad ng developement, hindi ginamit ang mga pormal na prosesong ginagamit para magmungkahi ng mga update. Dahil dito, mas mabilis na natukoy at napagkasunduan ng mga mananaliksik at implementer ang mga pagbabago.
 
-Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/history/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
+Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/ethereum-forks/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
 
 <ButtonLink href="/roadmap/merge/">
   Iba pang detalye tungkol sa The Merge

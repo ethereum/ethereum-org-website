@@ -83,7 +83,7 @@ Az Ethereum-csomópontok két szoftvert futtatnak:
 1. a konszenzuskliens a blokklánc elejét/fejét trekkeli, elterjeszti a blokkokat (pletyka) és kezeli a konszenzus logikáját
 2. a végrehajtási kliens az Ethereum virtuális gépet támogatja, valamint a tranzakciókat és okosszerződéseket futtatja
 
-Bővebb információkért tekintse át a [node-ok és kliensek oldalt](/developers/docs/nodes-and-clients/), ahol a jelenlegi kliensbevezetések listáját is megtalálja. Az Ethereum-fejlesztésekről is találhat információkat az [Ethereum története oldalon](/history/).
+Bővebb információkért tekintse át a [node-ok és kliensek oldalt](/developers/docs/nodes-and-clients/), ahol a jelenlegi kliensbevezetések listáját is megtalálja. Az Ethereum-fejlesztésekről is találhat információkat az [Ethereum története oldalon](/ethereum-forks/).
 
 ### Végrehajtási kliensek {#execution-clients}
 

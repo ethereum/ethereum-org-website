@@ -17,7 +17,7 @@ summaryPoint4: De samenvoeging verminderde het energieverbruik van Ethereum met 
 
 ## Wat is de samenvoeging? {#what-is-the-merge}
 
-De samenvoeging was het bij elkaar brengen van de oorspronkelijke uitvoeringslaag van Ethereum (het hoofdnet dat sinds [het ontstaan](/history/#frontier) bestaat) met de nieuwe proof-of-stake consensuslaag, de Beacon Chain. Het elimineerde de noodzaak voor energie-intensieve mining en maakte het in plaats daarvan mogelijk om het netwerk te beveiligen met behulp van staked ETH. Het was echt een geweldige stap in de realisatie van de Ethereum-visie: meer schaalbaarheid, veiligheid en duurzaamheid.
+De samenvoeging was het bij elkaar brengen van de oorspronkelijke uitvoeringslaag van Ethereum (het hoofdnet dat sinds [het ontstaan](/ethereum-forks/#frontier) bestaat) met de nieuwe proof-of-stake consensuslaag, de Beacon Chain. Het elimineerde de noodzaak voor energie-intensieve mining en maakte het in plaats daarvan mogelijk om het netwerk te beveiligen met behulp van staked ETH. Het was echt een geweldige stap in de realisatie van de Ethereum-visie: meer schaalbaarheid, veiligheid en duurzaamheid.
 
 <MergeInfographic />
 

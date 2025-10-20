@@ -83,7 +83,7 @@ Węzeł Ethereum wymaga uruchomienia dwóch elementów oprogramowania:
 1. klienta konsensusu do śledzenia początku blockchainu, plotkowania bloków i obsługi logiki konsensusu
 2. klienta wykonawczego do obsługi maszyny wirtualnej Ethereum oraz wykonywania transakcji i inteligentnych kontraktów
 
-Więcej szczegółów na temat węzłów i klientów oraz lista wszystkich aktualnych implementacji klientów znajduje się na [strona węzłów i klientów](/developers/docs/nodes-and-clients/). Historię wszystkich uaktualnień Ethereum możesz również znaleźć na [stronie historii](/history/).
+Więcej szczegółów na temat węzłów i klientów oraz lista wszystkich aktualnych implementacji klientów znajduje się na [strona węzłów i klientów](/developers/docs/nodes-and-clients/). Historię wszystkich uaktualnień Ethereum możesz również znaleźć na [stronie historii](/ethereum-forks/).
 
 ### Klienty wykonawcze {#execution-clients}
 

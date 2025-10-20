@@ -56,7 +56,7 @@ Ahhoz, hogy valaki konzisztensen rosszindulatú, de mégis érvényes blokkokat 
 
 A proof-of-work másik feladata az volt, hogy új coinokat bocsásson ki a rendszerbe és ezzel ösztönözze a bányászokat a munka elvégzésére.
 
-A [Constantinople-frissítés](/history/#constantinople) után a bányászok, akik sikeresen létrehoztak egy blokkot, két frissen kibocsátott ETH-t kaptak, valamint a tranzakciós díjak egy része is az övék lett. Az ommer blokkokért is járt 1,75 ETH. Az ommerek olyan érvényes blokkok, melyeket ugyanabban az időben készítenek, mint a kanonikus blokkot, ami végül a lánc folytatása lesz. Ezek általában hálózati késedelemkor fordultak elő.
+A [Constantinople-frissítés](/ethereum-forks/#constantinople) után a bányászok, akik sikeresen létrehoztak egy blokkot, két frissen kibocsátott ETH-t kaptak, valamint a tranzakciós díjak egy része is az övék lett. Az ommer blokkokért is járt 1,75 ETH. Az ommerek olyan érvényes blokkok, melyeket ugyanabban az időben készítenek, mint a kanonikus blokkot, ami végül a lánc folytatása lesz. Ezek általában hálózati késedelemkor fordultak elő.
 
 ## Véglegesség {#finality}
 

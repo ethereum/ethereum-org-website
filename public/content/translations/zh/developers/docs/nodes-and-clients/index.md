@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 最初为[以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [执行规范](https://github.com/ethereum/execution-specs/)
 - [共识规范](https://github.com/ethereum/consensus-specs)
-- 在各种[网络升级](/history/)中实现的[以太坊改进提案](https://eips.ethereum.org/)
+- 在各种[网络升级](/ethereum-forks/)中实现的[以太坊改进提案](https://eips.ethereum.org/)
 
 ### 跟踪网络中的节点 {#network-overview}
 
