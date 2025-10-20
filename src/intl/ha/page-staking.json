@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Oops! sake duba lambar shaidar tsarin mai tantncewarku sai ku sake gwadawa.",
   "comp-withdrawal-credentials-upgraded-1": "Fihirisar mai tantancewa {{validatorIndex}} yana shirin da zai fara karɓar kyauta!",
   "comp-withdrawal-credentials-upgraded-2": "Takardun shaidar cire kuɗi da aka danganta da adireshin farawa:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Wannan {network} na gwajin 'mai tabbatarwa' na buƙatar sabuntawa.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Wannan {network} 'mai tabbatarwa' na buƙatar sabuntawa.",
   "comp-withdrawal-credentials-not-upgraded-2": "Ana iya samun umarni a kan yadda ake sabuntawa yanzu a <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify": "Tantancewa a kan {network}",
   "page-staking-withdrawals-when": "Aikar!",
@@ -139,11 +139,10 @@
   "page-staking-how-solo-works-item-3": "Daidaita shimfiɗar yarjejeniyar abokin ciniki",
   "page-staking-how-solo-works-item-4": "Ƙirƙiri makullan ku kuma ku loda su cikin abokin ciniki mai tantancewa",
   "page-staking-how-solo-works-item-5": "Saka ido da kiyaye node ɗinka",
-  "page-staking-network-testnet": "Gwada {network}",
   "page-staking-launchpad-widget-start": "Fara sa kuɗi akan gwajin {network}",
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-span": "Zabɗ cibiyar sadarwa",
-  "page-staking-launchpad-widget-p1": "Ana sa ran masu tabbatar na Kai za su <strong>gwada saitin su</strong> da kwarewar aiki akan holesky testnet kafin kasada da kuɗi. Ka tuna yana da mahimmanci don zaɓar <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">dan karamin abokin ciniki</a> yayin da yake inganta tsaro na hanyar sadarwa kuma yana iyakance haɗarin ku.",
+  "page-staking-launchpad-widget-p1": "Ana sa ran masu tabbatar na Kai za su <strong>gwada saitin su</strong> da kwarewar aiki akan Hoodi testnet kafin kasada da kuɗi. Ka tuna yana da mahimmanci don zaɓar <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">dan karamin abokin ciniki</a> yayin da yake inganta tsaro na hanyar sadarwa kuma yana iyakance haɗarin ku.",
   "page-staking-launchpad-widget-p2": "Idan kun gamsu da shi, za ku iya saita duk abin da ake buƙata daga layin umarni ta amfani da Staking Launchpad kaɗai.",
   "page-staking-launchpad-widget-p3": "Don sauƙaƙa abubuwa, duba wasu kayan aikin da jagororin da ke kasa waɗanda za su iya taimaka muku da Staking Launchpad don saita abokin ciniki cikin sauki.",
   "page-staking-launchpad-widget-link": "Kayan aikin manhaja da jagora",
@@ -174,7 +173,7 @@
   "page-staking-section-comparison-requirements-title": "Buƙata",
   "page-staking-section-comparison-solo-requirements-li1": "Sai ka saka ETH 32",
   "page-staking-section-comparison-solo-requirements-li2": "Kula da kayan aikin da ke gudanar da duk ɓangaren Ethereum <a href=\"/glossary/#execution-client\">abokin ciniki mai aiwatarwa</a> da <a href=\"/glossary/#consensus-client\">abokin ciniki yarjejeniya</a> yayin da aka haɗa su zuwa intanet",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> zai bi ku ta hanyar tsari da buƙatun na'ura",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> zai bi ku ta hanyar tsari da buƙatun na'ura",
   "page-staking-section-comparison-saas-requirements-li1": "Saka ETH 32 don samar da makullin ku tare da taimako",
   "page-staking-section-comparison-saas-requirements-li2": "Adana mabuɗan sirrinka cikin tsaro",
   "page-staking-section-comparison-saas-requirements-li3": "Za'a kula da sauran, kodayake takamaiman ayyukan za su bambanta",
@@ -220,5 +219,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Yi rajista ga EF Blog</a> don karɓar sanarwar imel don sabbin sanarwa na yarjejeniya.",
   "page-staking-comparison-with-other-options": "Kwatanta da sauran zaɓuɓɓuka",
   "page-staking-any-amount": "Kowane adadi",
-  "page-staking-testnet": "cibiyar gwaji"
+  "page-staking-network-testnet": "gwada {network}"
 }

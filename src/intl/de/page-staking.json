@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Oh! Überprüfen Sie die Validator-Indexnummer und versuchen Sie es noch einmal.",
   "comp-withdrawal-credentials-upgraded-1": "Validator-Index {{validatorIndex}} ist bereit, Belohnungen zu erhalten!",
   "comp-withdrawal-credentials-upgraded-2": "Auszahlungsdaten verknüpft mit der Ausführungsadresse:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Dieser {network}-Testnetz-Validator muss aktualisiert werden.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Dieser {network}-Validator muss aktualisiert werden.",
   "comp-withdrawal-credentials-not-upgraded-2": "Anweisungen zur Aktualisierung finden Sie derzeit unter <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify": "Auf {network} überprüfen",
   "page-staking-withdrawals-when": "Versendet!",
@@ -150,11 +150,10 @@
   "page-staking-how-solo-works-item-3": "Synchronisieren Sie einen Client der Konsensebene",
   "page-staking-how-solo-works-item-4": "Generieren Sie Ihre Schlüssel und laden Sie diesen in Ihren Validator-Client",
   "page-staking-how-solo-works-item-5": "Überwachen und warten Sie Ihren Node",
-  "page-staking-network-testnet": "{network} Testnetz",
-  "page-staking-launchpad-widget-start": "Beginne auf dem {network} Testnetz zu staken",
+  "page-staking-launchpad-widget-start": "Beginne auf dem {network} zu staken",
   "page-staking-launchpad-widget-mainnet-label": "Hauptnetz (Mainnet)",
   "page-staking-launchpad-widget-span": "Netzwerk auswählen",
-  "page-staking-launchpad-widget-p1": "Von Solo-Validatoren wird erwartet, dass sie <strong>ihre Konfiguration</strong> und ihre operativen Fähigkeiten auf dem Holesky-Testnetz überprüfen, bevor Geldmittel riskiert werden. Vergessen Sie nicht, dass es wichtig ist, einen <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">Minderheits-Client</a> auszuwählen, da dies die Netzwerksicherheit erhöht und Ihre Risiken begrenzt.",
+  "page-staking-launchpad-widget-p1": "Von Solo-Validatoren wird erwartet, dass sie <strong>ihre Konfiguration</strong> und ihre operativen Fähigkeiten auf dem Hoodi-Testnetz überprüfen, bevor Geldmittel riskiert werden. Vergessen Sie nicht, dass es wichtig ist, einen <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">Minderheits-Client</a> auszuwählen, da dies die Netzwerksicherheit erhöht und Ihre Risiken begrenzt.",
   "page-staking-launchpad-widget-p2": "Wenn Sie sich damit sicher fühlen, können Sie alles Nötige von der Kommandozeile aus erledigen, indem sie den Staking-Launchpad nutzen.",
   "page-staking-launchpad-widget-p3": "Um die Dinge zu erleichtern, schauen Sie sich einige der Tools und Anleitungen unten an, die Ihnen neben dem Staking-Launchpad helfen können, um Ihre Clients so schnell wie möglich einzurichten.",
   "page-staking-launchpad-widget-link": "Software-Tools und -Anleitungen",
@@ -236,5 +235,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Abonnieren Sie den EF-Blog</a>, um per E-Mail über die neuesten Protokollankündigungen informiert zu werden.",
   "page-staking-comparison-with-other-options": "Vergleiche mit anderen Optionen",
   "page-staking-any-amount": "Jeder Betrag",
-  "page-staking-testnet": "Testnet"
+  "page-staking-network-testnet": "{network} testnet"  
 }

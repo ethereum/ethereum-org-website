@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Ops! Ricontrolla il numero di indice del validatore e riprova.",
   "comp-withdrawal-credentials-upgraded-1": "L'indice del validatore {{validatorIndex}} è pronto per iniziare a ricevere ricompense!",
   "comp-withdrawal-credentials-upgraded-2": "Credenziali di prelievo collegate all'indirizzo di esecuzione:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Questo validatore della rete di prova di {network} deve essere aggiornato.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Questo validatore di {network} deve essere aggiornato.",
   "comp-withdrawal-credentials-not-upgraded-2": "Le istruzioni su come aggiornarlo sono attualmente disponibili sul <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Launchpad di Staking</a>",
   "comp-withdrawal-credentials-verify": "Verifica su {network}",
   "page-staking-withdrawals-when": "Spedita!",
@@ -150,11 +150,10 @@
   "page-staking-how-solo-works-item-3": "Sincronizza un client del livello di consenso",
   "page-staking-how-solo-works-item-4": "Genera le tue chiavi e caricale nel client del tuo validatore",
   "page-staking-how-solo-works-item-5": "Monitora e mantieni il tuo nodo",
-  "page-staking-network-testnet": "Rete di prova di {network}",
-  "page-staking-launchpad-widget-start": "Inizia a mettere in staking sulla rete di prova di {network}",
+  "page-staking-launchpad-widget-start": "Inizia a mettere in staking su {network}",
   "page-staking-launchpad-widget-mainnet-label": "Rete principale",
   "page-staking-launchpad-widget-span": "Scegli la rete",
-  "page-staking-launchpad-widget-p1": "I validatori in solo dovrebbero <strong>testare la propria configurazione</strong> e le proprie abilità operative sulla rete di prova di Hlesky prima di rischiare i fondi. Ricorda che è importante scegliere un <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">client di minoranza</a>, in quanto migliora la sicurezza della rete e limita i tuoi rischi.",
+  "page-staking-launchpad-widget-p1": "I validatori in solo dovrebbero <strong>testare la propria configurazione</strong> e le proprie abilità operative sulla rete di prova di Hoodi prima di rischiare i fondi. Ricorda che è importante scegliere un <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">client di minoranza</a>, in quanto migliora la sicurezza della rete e limita i tuoi rischi.",
   "page-staking-launchpad-widget-p2": "Se ti ci trovi a tuo agio, puoi configurare qualsiasi cosa necessaria dalla riga di comando usando il solo Launchpad di Staking.",
   "page-staking-launchpad-widget-p3": "Per semplificare le cose, dai un'occhiata ad alcuni degli strumenti e delle guide seguenti che possono aiutarti insieme al Launchpad di Staking a configurare con facilità i tuoi client.",
   "page-staking-launchpad-widget-link": "Strumenti e guida del software",
@@ -190,7 +189,7 @@
   "page-staking-section-comparison-requirements-title": "Requisiti",
   "page-staking-section-comparison-solo-requirements-li1": "Devi depositare 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Mantieni hardware che esegua sia un <a href=\"/glossary/#execution-client\">client d'esecuzione</a> che un <a href=\"/glossary/#consensus-client\">client di consenso</a> di Ethereum mentre sei connesso a Internet",
-  "page-staking-section-comparison-solo-requirements-li3": "Il <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Launchpad di Staking</a> ti guiderà nel processo e ai requisiti hardware",
+  "page-staking-section-comparison-solo-requirements-li3": "Il <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Launchpad di Staking</a> ti guiderà nel processo e ai requisiti hardware",
   "page-staking-section-comparison-saas-requirements-li1": "Deposita 32 ETH e genera le tue chiavi con l'assistenza",
   "page-staking-section-comparison-saas-requirements-li2": "Memorizza le tue chiavi in sicurezza",
   "page-staking-section-comparison-saas-requirements-li3": "Il resto è fatto, sebbene i servizi specifici varieranno",
@@ -236,5 +235,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Iscriviti al Blog della EF</a> per ricevere notifiche email per gli annunci più recenti sul protocollo.",
   "page-staking-comparison-with-other-options": "Confronto con altre opzioni",
   "page-staking-any-amount": "Qualsiasi importo",
-  "page-staking-testnet": "rete di prova"
+  "page-staking-network-testnet": "rete di prova di {network}"
 }

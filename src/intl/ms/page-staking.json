@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Aduh! Semak semula nombor indeks pengesah dan cuba lagi.",
   "comp-withdrawal-credentials-upgraded-1": "Indeks pengesah {{validatorIndex}} sedia untuk mula menerima ganjaran!",
   "comp-withdrawal-credentials-upgraded-2": "Bukti kelayakan pengeluaran yang dikaitkan dengan alamat pelaksanaan:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Pengesah rangkaian ujian {network} ini perlu dinaik taraf.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Pengesah {network} ini perlu dinaik taraf.",
   "comp-withdrawal-credentials-not-upgraded-2": "Arahan tentang cara untuk naik taraf boleh didapati pada masa ini di <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\"> Pad Pelancaran Pertaruhan</a>",
   "comp-withdrawal-credentials-verify": "Sahkan pada {network}",
   "page-staking-image-alt": "Imej maskot Badak untuk pad pelancar pertaruhan.",
@@ -142,11 +142,10 @@
   "page-staking-how-solo-works-item-3": "Segerakkan pelanggan lapisan konsensus",
   "page-staking-how-solo-works-item-4": "Hasilkan kunci anda dan muatkannya ke dalam pelanggan pengesah anda",
   "page-staking-how-solo-works-item-5": "Pantau dan kekalkan nod anda",
-  "page-staking-network-testnet": "Rangkaian ujian {network}",
-  "page-staking-launchpad-widget-start": "Mula membuat pertaruhan di rangkaian ujian {network}",
+  "page-staking-launchpad-widget-start": "Mula membuat pertaruhan di {network}",
   "page-staking-launchpad-widget-mainnet-label": "Rangkaian utama",
   "page-staking-launchpad-widget-span": "Pilih rangkaian",
-  "page-staking-launchpad-widget-p1": "Pengesah solo dijangka <strong>menguji persediaan</strong> dan kemahiran operasi mereka pada rangkaian ujian Holesky sebelum mempertaruhkan dana. Beringat, penting untuk memilih <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">pelanggan minoriti</a> kerana ia meningkatkan keselamatan rangkaian dan mengehadkan risiko anda.",
+  "page-staking-launchpad-widget-p1": "Pengesah solo dijangka <strong>menguji persediaan</strong> dan kemahiran operasi mereka pada rangkaian ujian Hoodi sebelum mempertaruhkan dana. Beringat, penting untuk memilih <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">pelanggan minoriti</a> kerana ia meningkatkan keselamatan rangkaian dan mengehadkan risiko anda.",
   "page-staking-launchpad-widget-p2": "Jika anda selesa dengannya, anda boleh menyediakan semua yang diperlukan daripada baris arahan menggunakan Pad Pelancaran Pertaruhan sahaja.",
   "page-staking-launchpad-widget-p3": "Untuk memudahkan urusan, lihat beberapa alatan dan panduan di bawah yang boleh membantu anda bersama Pad Pelancaran Pertaruhan bagi membuat persediaan untuk pelanggan anda dengan mudah.",
   "page-staking-launchpad-widget-link": "Alat dan panduan perisian",
@@ -180,7 +179,7 @@
   "page-staking-section-comparison-requirements-title": "Keperluan",
   "page-staking-section-comparison-solo-requirements-li1": "Anda mesti mendepositkan 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Kekalkan perkakasan yang menjalankan kedua-dua <a href=\"/glossary/#execution-client\">pelanggan pelaksanaan</a> dan <a href=\"/glossary/#consensus-client\">pelanggan konsensus</a> Ethereum semasa disambungkan melalui internet",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Pad Pelancaran Pertaruhan</a> akan membimbing anda melalui proses dan keperluan perkakasan",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Pad Pelancaran Pertaruhan</a> akan membimbing anda melalui proses dan keperluan perkakasan",
   "page-staking-section-comparison-saas-requirements-li1": "Deposit 32 ETH dan jana kunci anda dengan bantuan",
   "page-staking-section-comparison-saas-requirements-li2": "Simpan kunci anda dengan selamat",
   "page-staking-section-comparison-saas-requirements-li3": "Selebihnya diuruskan, walaupun perkhidmatan tertentu akan berbeza-beza",
@@ -226,5 +225,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Langgan Blog EF</a> untuk menerima pemberitahuan e-mel untuk pengumuman protokol terkini.",
   "page-staking-comparison-with-other-options": "Perbandingan dengan pilihan lain",
   "page-staking-any-amount": "Sebarang jumlah",
-  "page-staking-testnet": "rangkaian ujian"
+  "page-staking-network-testnet": "rangkaian ujian {network}"
 }

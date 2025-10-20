@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Ups! Verifique novamente o número do índice do validador e tente novamente.",
   "comp-withdrawal-credentials-upgraded-1": "O índice do validador {{validatorIndex}} está pronto para começar a receber recompensas!",
   "comp-withdrawal-credentials-upgraded-2": "Credenciais de levantamento associadas ao endereço de execução:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Este validador testnet {network} precisa ser atualizado.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Este validador {network} precisa ser atualizado.",
   "comp-withdrawal-credentials-not-upgraded-2": "Instruções sobre como atualizar podem ser encontradas em <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify": "Verificar no {network}",
   "page-staking-withdrawals-when": "Enviado!",
@@ -143,11 +143,10 @@
   "page-staking-how-solo-works-item-3": "Sincronizar um cliente de camada de consenso",
   "page-staking-how-solo-works-item-4": "Gere as suas chaves e carregue-as no seu cliente validador",
   "page-staking-how-solo-works-item-5": "Monitorize e mantenha seu nó",
-  "page-staking-network-testnet": "Testnet {network}",
-  "page-staking-launchpad-widget-start": "Comece a apostar no testnet {network}",
+  "page-staking-launchpad-widget-start": "Comece a apostar no {network}",
   "page-staking-launchpad-widget-mainnet-label": "Rede principal",
   "page-staking-launchpad-widget-span": "Escolha a rede de conexão",
-  "page-staking-launchpad-widget-p1": "Espera-se que os validadores individuais <strong>testem suas habilidades operacionais e de configuração</strong> na testnet Holesky antes de arriscar fundos. Lembre-se de que é importante escolher um <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">cliente minoritário,</a> pois melhora a segurança da rede e limita o seu risco.",
+  "page-staking-launchpad-widget-p1": "Espera-se que os validadores individuais <strong>testem suas habilidades operacionais e de configuração</strong> na testnet Hoodi antes de arriscar fundos. Lembre-se de que é importante escolher um <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">cliente minoritário,</a> pois melhora a segurança da rede e limita o seu risco.",
   "page-staking-launchpad-widget-p2": "Se estiver confortável com isso, pode configurar tudo o que é necessário a partir da linha de comando usando apenas o Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Para facilitar as coisas, confira algumas das ferramentas e guias abaixo que podem ajudá-lo ao lado do Staking Launchpad para configurar os seus clientes com facilidade.",
   "page-staking-launchpad-widget-link": "Guia e ferramentas de software",
@@ -181,7 +180,7 @@
   "page-staking-section-comparison-requirements-title": "Requisitos",
   "page-staking-section-comparison-solo-requirements-li1": "Tem de depositar 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Mantenha o hardware que executa um cliente de <a href=\"/glossary/#execution-client\">execução</a> Ethereum e <a href=\"/glossary/#consensus-client\">consenso</a> enquanto estiver conectado à internet",
-  "page-staking-section-comparison-solo-requirements-li3": "O <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> irá guiá-lo através do processo e dos requisitos de hardware",
+  "page-staking-section-comparison-solo-requirements-li3": "O <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> irá guiá-lo através do processo e dos requisitos de hardware",
   "page-staking-section-comparison-saas-requirements-li1": "Deposite 32 ETH e gere as suas chaves com assistência",
   "page-staking-section-comparison-saas-requirements-li2": "Guarde as suas chaves em segurança",
   "page-staking-section-comparison-saas-requirements-li3": "O resto é tratado, embora os serviços específicos variem",
@@ -227,5 +226,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Subscreva o Blog do EF</a> para receber notificações por e-mail para os anúncios de protocolo mais recentes.",
   "page-staking-comparison-with-other-options": "Comparação com outras opções",
   "page-staking-any-amount": "Qualquer montante",
-  "page-staking-testnet": "testnet"
+  "page-staking-network-testnet": "testnet {network}"
 }

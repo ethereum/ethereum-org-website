@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Opa! Provjerite još jednom broj validatorskog indeksa i pokušajte ponovno.",
   "comp-withdrawal-credentials-upgraded-1": "Validatorski indeks {{validatorIndex}} spreman je primati nagrade!",
   "comp-withdrawal-credentials-upgraded-2": "Vjerodajnice za povlačenje uloga povezane s adresom za izvršenje:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Ovog validatora testne mreže {network} potrebno je ažurirati.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Ovog validatora {network} potrebno je ažurirati.",
   "comp-withdrawal-credentials-not-upgraded-2": "Upute kako nadograditi trenutno se nalaze na <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Ulagačkoj platformi</a>",
   "comp-withdrawal-credentials-verify": "Potvrdi na mreži {network}",
   "page-staking-withdrawals-when": "Otpremljen!",
@@ -142,11 +142,10 @@
   "page-staking-how-solo-works-item-3": "Sinhronizirajte klijent za nivo konsenzusa",
   "page-staking-how-solo-works-item-4": "Generirajte svoje ključeve i učitajte ih u svoj validatorski klijent",
   "page-staking-how-solo-works-item-5": "Pratite i održavajte svoj čvor",
-  "page-staking-network-testnet": "Testna mreža {network}",
-  "page-staking-launchpad-widget-start": "Započnite ulaganje na testnoj mreži {network}",
+  "page-staking-launchpad-widget-start": "Započnite ulaganje na {network}",
   "page-staking-launchpad-widget-mainnet-label": "Glavna mreža",
   "page-staking-launchpad-widget-span": "Odaberite mrežu",
-  "page-staking-launchpad-widget-p1": "Od samostalnih validatora očekuje se da <strong>testiraju svoj sustav</strong> i operativne vještine na testnoj mreži Holesky prije nego što riskiraju svoja sredstva. Zapamtite da je važno odabrati <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">manjinskog klijenta</a> jer se time poboljšava sigurnost mreže i ograničava rizik.",
+  "page-staking-launchpad-widget-p1": "Od samostalnih validatora očekuje se da <strong>testiraju svoj sustav</strong> i operativne vještine na testnoj mreži Hoodi prije nego što riskiraju svoja sredstva. Zapamtite da je važno odabrati <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">manjinskog klijenta</a> jer se time poboljšava sigurnost mreže i ograničava rizik.",
   "page-staking-launchpad-widget-p2": "Ukoliko vam je sve to poznato, možete postaviti sve što vam je potrebno putem sučelja komandnog retka ulagačke platforme.",
   "page-staking-launchpad-widget-p3": "Kako biste si olakšali postupak, pogledajte neke od niže navedenih alata i vodiča koji mogu pomoći da s pomoću Ulagačke platforme (Staking Launchpad) lako postavite klijente.",
   "page-staking-launchpad-widget-link": "Softverski alati i vodič",
@@ -180,7 +179,7 @@
   "page-staking-section-comparison-requirements-title": "Zahtjevi",
   "page-staking-section-comparison-solo-requirements-li1": "Potrebno je deponirati 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Održavanje hardvera povezanog na internet na kojem su pokrenuti <a href=\"/glossary/#execution-client\">klijent za izvršavanje</a> i <a href=\"/glossary/#consensus-client\">konsenzus klijent</a> Ethereuma",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Ulagačka platforma (Staking Launchpad)</a> vodi vasi kroz proces i hardverske zahtjeve korak po korak",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Ulagačka platforma (Staking Launchpad)</a> vodi vasi kroz proces i hardverske zahtjeve korak po korak",
   "page-staking-section-comparison-saas-requirements-li1": "Uložite 32 ETH i izradite vlastite ključeve uz pomoć",
   "page-staking-section-comparison-saas-requirements-li2": "Spremite ključeve na siguran način",
   "page-staking-section-comparison-saas-requirements-li3": "O ostalome ne morate brinuti, iako to ovisi o specifičnim uslugama",
@@ -225,5 +224,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Pretplatite se na EF Blog</a> kako biste primali obavijesti u e-pošti o najnovijim objavama o protokolu.",
   "page-staking-comparison-with-other-options": "Usporedba s drugim mogućnostima",
   "page-staking-any-amount": "Proizvoljan iznos",
-  "page-staking-testnet": "testnet"
+  "page-staking-network-testnet": "testnoj mreži {network}"
 }

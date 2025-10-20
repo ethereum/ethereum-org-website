@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "糟糕！請核查驗證者索引號後再重試。",
   "comp-withdrawal-credentials-upgraded-1": "驗證者索引 {{validatorIndex}} 已準備開始接收酬勞！",
   "comp-withdrawal-credentials-upgraded-2": "鏈接至執行地址的提款憑證：",
-  "comp-withdrawal-credentials-not-upgraded-1": "這個 {network} 測試網驗證者需要升級。",
+  "comp-withdrawal-credentials-not-upgraded-1": "這個 {network} 驗證者需要升級。",
   "comp-withdrawal-credentials-not-upgraded-2": "程式升級說明現已發佈於<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">質押啟動面板</a>",
   "comp-withdrawal-credentials-verify": "在 {network} 上進行驗證",
   "page-staking-withdrawals-when": "已上線！",
@@ -150,11 +150,10 @@
   "page-staking-how-solo-works-item-3": "同步一個共識層用戶端",
   "page-staking-how-solo-works-item-4": "產生你的金鑰並載入到你的驗證者用戶端",
   "page-staking-how-solo-works-item-5": "監控和維護你的節點",
-  "page-staking-network-testnet": "{network} 測試網",
-  "page-staking-launchpad-widget-start": "開始在 {network} 測試網上進行質押",
+  "page-staking-launchpad-widget-start": "開始在 {network} 上進行質押",
   "page-staking-launchpad-widget-mainnet-label": "主網",
   "page-staking-launchpad-widget-span": "選擇網路",
-  "page-staking-launchpad-widget-p1": "單獨驗證者在冒險投入資金之前，應該在 Holesky 測試網上<strong>測試他們的設定</strong>和營運技能。請記得選擇一個<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">非主流用戶端</a>非常重要，因為這樣能夠提升網路的安全性並減少你面臨的風險。",
+  "page-staking-launchpad-widget-p1": "單獨驗證者在冒險投入資金之前，應該在 Hoodi 測試網上<strong>測試他們的設定</strong>和營運技能。請記得選擇一個<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">非主流用戶端</a>非常重要，因為這樣能夠提升網路的安全性並減少你面臨的風險。",
   "page-staking-launchpad-widget-p2": "如果你熟悉相關技能，你可以單獨使用質押啓動面板，透過指令介面來設定所需要的一切。",
   "page-staking-launchpad-widget-p3": "為了讓事情變得更簡單，請查看下面的一些工具和指南，它們可以幫助你使用質押啓動面板來輕鬆設定你的用戶端。",
   "page-staking-launchpad-widget-link": "軟體工具和指南",
@@ -190,7 +189,7 @@
   "page-staking-section-comparison-requirements-title": "要求",
   "page-staking-section-comparison-solo-requirements-li1": "你必須存入 32 個以太幣",
   "page-staking-section-comparison-solo-requirements-li2": "在連接到網際網路時，維護同時執行以太坊<a href=\"/glossary/#execution-client\">執行用戶端</a>和<a href=\"/glossary/#consensus-client\">共識用戶端</a>的硬體設備",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">質押啟動面板</a>將引導你完成整個流程和了解硬體需求",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">質押啟動面板</a>將引導你完成整個流程和了解硬體需求",
   "page-staking-section-comparison-saas-requirements-li1": "存入 32 個以太幣並在幫助下產生你的金鑰",
   "page-staking-section-comparison-saas-requirements-li2": "安全地儲存你的金鑰",
   "page-staking-section-comparison-saas-requirements-li3": "其他服務已妥善處理，但特定服務將有所不同",
@@ -236,5 +235,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">訂閱以太坊基金會部落格</a>，接收最新協議公告的電子郵件通知。",
   "page-staking-comparison-with-other-options": "與其他方案的比較",
   "page-staking-any-amount": "任意數量",
-  "page-staking-testnet": "測試網"
+  "page-staking-network-testnet": "{network} 測試網"
 }

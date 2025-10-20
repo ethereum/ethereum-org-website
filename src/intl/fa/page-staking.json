@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "اوه! شماره شاخص اعتبارسنج را دوباره بررسی و امتحان کنید.",
   "comp-withdrawal-credentials-upgraded-1": "شاخص اعتبارسنج {{validatorIndex}} برای شروع دریافت جوایز آماده است!",
   "comp-withdrawal-credentials-upgraded-2": "اعتبارنامه های برداشت مرتبط با آدرس اجرا:",
-  "comp-withdrawal-credentials-not-upgraded-1": "این اعتبار سنج شبکه تست {network} باید ارتقا یابد.",
+  "comp-withdrawal-credentials-not-upgraded-1": "این اعتبار سنج {network} باید ارتقا یابد.",
   "comp-withdrawal-credentials-not-upgraded-2": "دستورالعمل‌های نحوه ارتقا را می‌توانید در <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">سکوی پرتاب سهام‌گذاری</a> پیدا کنید",
   "comp-withdrawal-credentials-verify": "در {network} تایید کنید",
   "page-staking-withdrawals-when": "اجرا شد!",
@@ -145,11 +145,10 @@
   "page-staking-how-solo-works-item-3": "یک کاربر لایه‌ اجماع را همگام‌سازی کنید",
   "page-staking-how-solo-works-item-4": "کلیدهای خود را تولید کنید و آن‌ها را در کاربر اعتبارسنج خود بارگذاری کنید",
   "page-staking-how-solo-works-item-5": "بر گره‌ خود نظارت کنید و از آن نگهداری کنید",
-  "page-staking-network-testnet": "شبکه تست {network}",
-  "page-staking-launchpad-widget-start": "سهام‌گذاری در شبکه تست {network} را شروع کنید",
+  "page-staking-launchpad-widget-start": "سهام‌گذاری در {network} را شروع کنید",
   "page-staking-launchpad-widget-mainnet-label": "شبکه‌ی اصلی",
   "page-staking-launchpad-widget-span": "انتخاب شبکه",
-  "page-staking-launchpad-widget-p1": "انتظار می‌رود اعتبارسنج‌های انفرادی، تنظیمات و مهارت‌های عملیاتی خود را در شبکه تست Holesky قبل از ریسک کردن وجوه <strong>تست کنند</strong>. به یاد داشته باشید که انتخاب یک <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">مشتری اقلیت</a> مهم است زیرا امنیت شبکه را بهبود می بخشد و ریسک شما را محدود می کند.",
+  "page-staking-launchpad-widget-p1": "انتظار می‌رود اعتبارسنج‌های انفرادی، تنظیمات و مهارت‌های عملیاتی خود را در شبکه تست Hoodi قبل از ریسک کردن وجوه <strong>تست کنند</strong>. به یاد داشته باشید که انتخاب یک <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">مشتری اقلیت</a> مهم است زیرا امنیت شبکه را بهبود می بخشد و ریسک شما را محدود می کند.",
   "page-staking-launchpad-widget-p2": "اگر مشکلی ندارید، می‌توانید همه‌ چیزهای لازم را از طریق خط فرمان و با استفاده از سکوی پرتاب سهام‌گذاری به‌تنهایی تنظیم کنید.",
   "page-staking-launchpad-widget-p3": "برای آسان‌تر کردن امور، برخی از ابزارها و راهنماهای زیر را بررسی کنید که می‌توانند در کنار سکوی پرتاب سهام‌گذاری به شما کمک کنند کاربرهای خود را به‌راحتی راه‌اندازی کنید.",
   "page-staking-launchpad-widget-link": "راهنما و ابزارهای نرم‌افزاری",
@@ -183,7 +182,7 @@
   "page-staking-section-comparison-requirements-title": "الزامات",
   "page-staking-section-comparison-solo-requirements-li1": "شما باید 32 اتر واریز کنید",
   "page-staking-section-comparison-solo-requirements-li2": "نگهداری از سخت‌افزاری که هم <a href=\"/glossary/#execution-client\">کاربر اجرای</a> و هم <a href=\"/glossary/#consensus-client\">کاربر اجماع</a> اتریوم را در حین اتصال به اینترنت اجرا می‌کند",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">پلتفرم سرمایه‌گذاری</a> شما را در آشنایی با فرایند و نیازمندی‌های سخت‌افزاری راهنمایی می‌کند",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">پلتفرم سرمایه‌گذاری</a> شما را در آشنایی با فرایند و نیازمندی‌های سخت‌افزاری راهنمایی می‌کند",
   "page-staking-section-comparison-saas-requirements-li1": "32 اتر را واریز کنید و با کمک راهنما کلیدهای خود را تولید کنید",
   "page-staking-section-comparison-saas-requirements-li2": "کلیدهای خود را به‌طور ایمن ذخیره کنید",
   "page-staking-section-comparison-saas-requirements-li3": "برای سایر موارد نیاز به انجام کاری نیست، گرچه سرویس‌های خاص متفاوت خواهند بود",
@@ -229,5 +228,5 @@
   "subscribe-to-ef-blog": "برای دریافت اعلان‌های ایمیلی درباره آخرین اطلاعیه‌های پروتکل، <a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">در وبلاگ EF مشترک شوید</a>.",
   "page-staking-comparison-with-other-options": "مقایسه با گزینه‌های دیگر",
   "page-staking-any-amount": "هر مقدار",
-  "page-staking-testnet": "شبکه تست"
+  "page-staking-network-testnet": "{network} شبکه تست"
 }

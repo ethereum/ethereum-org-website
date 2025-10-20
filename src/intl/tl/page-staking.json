@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Oops! I-double check ang validator index number at subukan ulit.",
   "comp-withdrawal-credentials-upgraded-1": "Handa nang magsimulang tumanggap ng mga reward ang validator index {{validatorIndex}}!",
   "comp-withdrawal-credentials-upgraded-2": "Mga kredensyal sa pag-withdraw na naka-link sa execution address:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Kailangang i-upgrade ang validator ng {network} testnet na ito.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Kailangang i-upgrade ang validator ng {network} na ito.",
   "comp-withdrawal-credentials-not-upgraded-2": "Kasalukuyang makikita ang mga tagubilin sa kung paano mag-upgrade sa <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify": "I-verify sa {network}",
   "page-staking-image-alt": "Larawan ng Rhino mascot para sa staking launchpad.",
@@ -134,10 +134,9 @@
   "page-staking-how-solo-works-item-3": "Mag-sync ng consensus layer client",
   "page-staking-how-solo-works-item-4": "Gawin ang iyong mga key at ilagay ang mga ito sa iyong validator client",
   "page-staking-how-solo-works-item-5": "Subaybayan at panatilihin ang iyong node",
-  "page-staking-network-testnet": "{network} testnet",
-  "page-staking-launchpad-widget-start": "Magsimulang pumusta sa {network} testnet",
+  "page-staking-launchpad-widget-start": "Magsimulang pumusta sa {network}",
   "page-staking-launchpad-widget-span": "Pumili ng network",
-  "page-staking-launchpad-widget-p1": "Ang mga solo validator ay inaasahang mag-<strong>test ng kanilang setup</strong> at operational skills sa Holesky testnet bago isapanganib ang kanilang pondo. Tandaan, mahalaga na pumili ng <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">minority client</a> dahil pinapahusay nito ang seguridad ng network at binabawasan ang iyong panganib.",
+  "page-staking-launchpad-widget-p1": "Ang mga solo validator ay inaasahang mag-<strong>test ng kanilang setup</strong> at operational skills sa Hoodi testnet bago isapanganib ang kanilang pondo. Tandaan, mahalaga na pumili ng <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">minority client</a> dahil pinapahusay nito ang seguridad ng network at binabawasan ang iyong panganib.",
   "page-staking-launchpad-widget-p2": "Kung kumportable kang gawin ito, puwede mong i-set up ang lahat ng kailangan mula sa command line gamit lang ang Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Upang mas mapadali, tingnan ang ilan sa mga tool at gabay sa ibaba na makakatulong sa iyo, gayundin ang Staking Launchpad para ma-set up ang iyong mga client nang walang kahirap-hirap.",
   "page-staking-launchpad-widget-link": "Mga tool at gabay sa software",
@@ -168,7 +167,7 @@
   "page-staking-section-comparison-requirements-title": "Mga Kahilingan",
   "page-staking-section-comparison-solo-requirements-li1": "Kailangan mong magdeposito ng 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Panatilihin ang hardware na nagpapatakbo ng parehong Ethereum <a href=\"/glossary/#execution-client\">execution client</a> at <a href=\"/glossary/#consensus-client\">consensus client</a> habang konektado sa internet",
-  "page-staking-section-comparison-solo-requirements-li3": "Gagabayan ka ng <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> sa buong proseso at sa mga kinakailangan sa hardware",
+  "page-staking-section-comparison-solo-requirements-li3": "Gagabayan ka ng <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> sa buong proseso at sa mga kinakailangan sa hardware",
   "page-staking-section-comparison-saas-requirements-li1": "Magdeposito ng 32 ETH at may gabay na buuin ang iyong mga key",
   "page-staking-section-comparison-saas-requirements-li2": "I-store nang maayos ang iyong mga key",
   "page-staking-section-comparison-saas-requirements-li3": "Ang natitira ay aasikasuhin, subalit mag-iiba ang mga tiyak na serbisyo",
@@ -214,5 +213,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Mag-subscribe sa EF Blog</a> para makatanggap ng mga email notification para sa mga pinakabagong anunsyo tungkol sa protokol.",
   "page-staking-comparison-with-other-options": "Paghahambing sa ibang mga opsyon",
   "page-staking-any-amount": "Anumang halaga",
-  "page-staking-testnet": "testnet"
+  "page-staking-network-testnet": "{network} testnet"
 }

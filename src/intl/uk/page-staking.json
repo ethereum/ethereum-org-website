@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Сталася помилка! Ще раз перевірте, чи правильно введено індекс валідатора, і спробуйте знову.",
   "comp-withdrawal-credentials-upgraded-1": "Індекс валідатора {{validatorIndex}} готовий до початку отримання винагород!",
   "comp-withdrawal-credentials-upgraded-2": "Облікові дані для виведення коштів, пов’язані з адресою виконання:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Цей валідатор тестової мережі {network} потрібно оновити.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Цей валідатор {network} потрібно оновити.",
   "comp-withdrawal-credentials-not-upgraded-2": "Інструкції з оновлення можна знайти в розділі <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Стартова платформа стейкінгу</a>",
   "comp-withdrawal-credentials-verify": "Перевірте на {network}",
   "page-staking-withdrawals-when": "Уже запущено!",
@@ -150,11 +150,10 @@
   "page-staking-how-solo-works-item-3": "Синхронізуйте клієнт рівня консенсусу.",
   "page-staking-how-solo-works-item-4": "Згенеруйте ключі й завантажте їх у клієнт валідатора.",
   "page-staking-how-solo-works-item-5": "Контролюйте й обслуговуйте свій вузол.",
-  "page-staking-network-testnet": "Тестова мережа {network}",
-  "page-staking-launchpad-widget-start": "Почніть робити ставки в тестовій мережі {network}",
+  "page-staking-launchpad-widget-start": "Почніть робити ставки в {network}",
   "page-staking-launchpad-widget-mainnet-label": "Основна мережа",
   "page-staking-launchpad-widget-span": "Виберіть мережу.",
-  "page-staking-launchpad-widget-p1": "Очікується, що індивідуальні валідатори <strong>перевірять свої налаштування</strong> та навички роботи в тестовій мережі Holesky, перш ніж ризикувати коштами. Пам’ятайте, що важливо вибрати <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">міноритарного клієнта</a>, оскільки це підвищує безпеку мережі та обмежує ваш ризик.",
+  "page-staking-launchpad-widget-p1": "Очікується, що індивідуальні валідатори <strong>перевірять свої налаштування</strong> та навички роботи в тестовій мережі Hoodi, перш ніж ризикувати коштами. Пам’ятайте, що важливо вибрати <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">міноритарного клієнта</a>, оскільки це підвищує безпеку мережі та обмежує ваш ризик.",
   "page-staking-launchpad-widget-p2": "Якщо вам зручно, ви можете налаштувати все необхідне з командного рядка, використовуючи лише стартову платформу стейкінгу.",
   "page-staking-launchpad-widget-p3": "Щоб полегшити роботу, ознайомтеся з наведеними нижче інструментами та посібниками, які допоможуть вам разом зі стартовою платформою стейкінгу легко налаштовувати ваше клієнтське обладнання.",
   "page-staking-launchpad-widget-link": "Програмні інструменти й посібник",
@@ -190,7 +189,7 @@
   "page-staking-section-comparison-requirements-title": "Вимоги",
   "page-staking-section-comparison-solo-requirements-li1": "Ви повинні внести 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Підтримуйте обладнання, на якому працює як <a href=\"/glossary/#execution-client\">клієнт виконання</a> Ethereum, так і <a href=\"/glossary/#consensus-client\">клієнт консенсусу</a>, підключений до інтернету.",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Стартова платформа стейкінгу</a> допоможе вам розібратися з процесом і вимогами до апаратного забезпечення.",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Стартова платформа стейкінгу</a> допоможе вам розібратися з процесом і вимогами до апаратного забезпечення.",
   "page-staking-section-comparison-saas-requirements-li1": "Внесіть 32 ETH і згенеруйте свої ключі за допомогою",
   "page-staking-section-comparison-saas-requirements-li2": "Зберігайте ключі в безпеці.",
   "page-staking-section-comparison-saas-requirements-li3": "Про решту ми подбаємо самі, хоча конкретні послуги різнитимуться.",
@@ -236,5 +235,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Підпишіться на блог EF</a>, щоб отримувати сповіщення електронною поштою про актуальні оголошення протоколу.",
   "page-staking-comparison-with-other-options": "Порівняння з іншими варіантами",
   "page-staking-any-amount": "Будь-яка сума",
-  "page-staking-testnet": "тестова мережа"
+  "page-staking-network-testnet": "тестовій мережі {network}"
 }

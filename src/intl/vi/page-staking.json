@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Rất tiếc! Kiểm tra chỉ số xác thực và thử lại.",
   "comp-withdrawal-credentials-upgraded-1": "Chỉ số xác thực {{validatorIndex}} đã sẵn sàng để bắt đầu nhận thưởng!",
   "comp-withdrawal-credentials-upgraded-2": "Thông tin rút tiền được gắn liền với địa chủ rút:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Trình xác thực mạng thử nghiệm {network} cần được nâng cấp.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Trình xác thực {network} cần được nâng cấp.",
   "comp-withdrawal-credentials-not-upgraded-2": "Hướng dẫn nâng cấp có thể tìm thấy tại <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify": "Xác thực trên {network}",
   "page-staking-image-alt": "Hình ảnh linh vật Tê giác cho cổ phần launchpad.",
@@ -142,11 +142,10 @@
   "page-staking-how-solo-works-item-3": "Đồng bộ mạng lưới khách hàng đồng thuận",
   "page-staking-how-solo-works-item-4": "Tạo khóa của bạn và đưa chúng vào ứng dụng xác thực của bạn",
   "page-staking-how-solo-works-item-5": "Quan sát và duy trì nốt của bạn",
-  "page-staking-network-testnet": "Mạng thử nghiệm {network}",
-  "page-staking-launchpad-widget-start": "Bắt đầu đặt cọc trên mạng thử nghiệm {network}",
+  "page-staking-launchpad-widget-start": "Bắt đầu đặt cọc trên {network}",
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-span": "Chọn mạng",
-  "page-staking-launchpad-widget-p1": "Người tự xác thực cần <strong>kiểm tra thiết lập</strong> và có kỹ năng vận hành trên mạng thử nghiệm Holesky trước khi liều lĩnh đưa tiền vào. Nhớ rằng điều quan trọng là phải chọn <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">ứng dụng thiểu số</a> để tăng tính bảo mật của mạng lưới và hạn chế rủi ro cho bạn.",
+  "page-staking-launchpad-widget-p1": "Người tự xác thực cần <strong>kiểm tra thiết lập</strong> và có kỹ năng vận hành trên mạng thử nghiệm Hoodi trước khi liều lĩnh đưa tiền vào. Nhớ rằng điều quan trọng là phải chọn <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">ứng dụng thiểu số</a> để tăng tính bảo mật của mạng lưới và hạn chế rủi ro cho bạn.",
   "page-staking-launchpad-widget-p2": "Nếu bạn cảm thấy thoải mái, bạn có thể cài đặt mọi thứ cần thiết từ đường dẫn yêu cầu bằng cách sử dụng Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Để dễ dàng hơn, bên cạnh Staking Launchpad kiểm tra một số công cụ và hướng dẫn bên dưới có thể giúp bạn cài đặt ứng dụng dễ dàng.",
   "page-staking-launchpad-widget-link": "Hướng dẫn và công cụ phần mềm",
@@ -180,7 +179,7 @@
   "page-staking-section-comparison-requirements-title": "Các yêu cầu",
   "page-staking-section-comparison-solo-requirements-li1": "Bạn phải gửi vào 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Duy trì phần cứng để vận hành ứng dụng Ethereum và ứng dụng đồng thuận đồng thời kết nối với mạng",
-  "page-staking-section-comparison-solo-requirements-li3": "Staking Launchpad <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\"> sẽ hướng dẫn bạn về quá trình và yêu cầu phần cứng",
+  "page-staking-section-comparison-solo-requirements-li3": "Staking Launchpad <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\"> sẽ hướng dẫn bạn về quá trình và yêu cầu phần cứng",
   "page-staking-section-comparison-saas-requirements-li1": "Nạp 32 ETH và tạo mã khóa cùng với sự hỗ trợ",
   "page-staking-section-comparison-saas-requirements-li2": "Lưu khóa của bạn an toàn",
   "page-staking-section-comparison-saas-requirements-li3": "Phần còn lại là quan sát, mặc dù các chi tiết dịch vụ sẽ khác nhau",
@@ -226,5 +225,5 @@
   "subscribe-to-ef-blog": "Đăng ký Blog EF để nhận email thông báo mới nhất về các giao thức <a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">.",
   "page-staking-comparison-with-other-options": "So sánh với các lựa chọn khác",
   "page-staking-any-amount": "Bất kể số lượng tiền là bao nhiêu",
-  "page-staking-testnet": "mạng thử nghiệm"
+  "page-staking-network-testnet": "mạng thử nghiệm {network}"
 }

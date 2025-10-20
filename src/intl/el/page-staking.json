@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "Ελέγξτε ξανά τον αριθμό ευρετηρίου του επικυρωτή και προσπαθήστε ξανά.",
   "comp-withdrawal-credentials-upgraded-1": "Το ευρετήριο επικυρωτή {validatorIndex} είναι έτοιμο να αρχίσει να λαμβάνει επιβραβεύσεις!",
   "comp-withdrawal-credentials-upgraded-2": "Διαπιστευτήρια ανάληψης που συνδέονται με τη διεύθυνση εκτέλεσης:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Ο επικυρωτής του δικτύου δοκιμών {network} χρειάζεται αναβάθμιση.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Ο επικυρωτής του {network} χρειάζεται αναβάθμιση.",
   "comp-withdrawal-credentials-not-upgraded-2": "Οδηγίες σχετικά με τον τρόπο αναβάθμισης μπορείτε να βρείτε στην <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Πλατφόρμα έναρξης αποθήκευσης κεφαλαίου</a>",
   "comp-withdrawal-credentials-verify": "Επαλήθευση στο {network}",
   "page-staking-withdrawals-when": "Δημοσιεύθηκε!",
@@ -150,11 +150,10 @@
   "page-staking-how-solo-works-item-3": "Συγχρονισμός πελάτη επιπέδου συναίνεσης",
   "page-staking-how-solo-works-item-4": "Δημιουργήστε τα κλειδιά σας και τοποθετήστε τα στον πελάτη επικύρωσης",
   "page-staking-how-solo-works-item-5": "Παρακολουθείτε και συντηρείτε τον κόμβο σας",
-  "page-staking-network-testnet": "Δίκτυο δοκιμών {network}",
-  "page-staking-launchpad-widget-start": "Ξεκινήστε την αποθήκευση κεφαλαίου στο δίκτυο δοκιμών του {network}",
+  "page-staking-launchpad-widget-start": "Ξεκινήστε την αποθήκευση κεφαλαίου στο {network}",
   "page-staking-launchpad-widget-mainnet-label": "Κεντρικό δίκτυο",
   "page-staking-launchpad-widget-span": "Επιλογή δικτύου",
-  "page-staking-launchpad-widget-p1": "Οι μεμονωμένοι χρήστες επικυρωτή αναμένεται να <strong>δοκιμάσουν τις ρυθμίσεις τους</strong> και τις δεξιότητες τους στη λειτουργία της εφαρμογής στο δίκτυο δοκιμών Holesky πριν διακινδυνεύσουν οποιοδήποτε κεφάλαιο. Να θυμάστε είναι σημαντικό να επιλέξετε έναν <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">πελάτη μειοψηφίας</a> καθώς βελτιώνει την ασφάλεια του δικτύου και περιορίζει τον κίνδυνο.",
+  "page-staking-launchpad-widget-p1": "Οι μεμονωμένοι χρήστες επικυρωτή αναμένεται να <strong>δοκιμάσουν τις ρυθμίσεις τους</strong> και τις δεξιότητες τους στη λειτουργία της εφαρμογής στο δίκτυο δοκιμών Hoodi πριν διακινδυνεύσουν οποιοδήποτε κεφάλαιο. Να θυμάστε είναι σημαντικό να επιλέξετε έναν <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">πελάτη μειοψηφίας</a> καθώς βελτιώνει την ασφάλεια του δικτύου και περιορίζει τον κίνδυνο.",
   "page-staking-launchpad-widget-p2": "Εάν αισθάνεστε άνετα με αυτό, μπορείτε να ρυθμίσετε όλα όσα χρειάζεστε από τη γραμμή εντολών χρησιμοποιώντας μόνο την Πλατφόρμα εκκίνησης αποθήκευσης κεφαλαίου.",
   "page-staking-launchpad-widget-p3": "Για να κάνετε τα πράγματα πιο εύκολα, ρίξτε μια ματιά στα παρακάτω εργαλεία και οδηγούς που μπορούν να σας βοηθήσουν μαζί με το την Πλατφόρμα εκκίνησης για αποθήκευση κεφαλαίου, για να ρυθμίσετε εύκολα το λογισμικό πελάτη σας.",
   "page-staking-launchpad-widget-link": "Εργαλεία και οδηγίες λογισμικού",
@@ -190,7 +189,7 @@
   "page-staking-section-comparison-requirements-title": "Προϋποθέσεις",
   "page-staking-section-comparison-solo-requirements-li1": "Πρέπει να καταθέσετε 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Να διατηρείται υλικό για τη λειτουργία του <a href=\"/glossary/#execution-client\">πελάτη εκτέλεσης</a> Ethereum και του <a href=\"/glossary/#consensus-client\">πελάτη συναίνεσης</a> ενώ είστε συνδεδεμένοι στο διαδίκτυο.",
-  "page-staking-section-comparison-solo-requirements-li3": "Η <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Πλατφόρμα εκκίνησης αποθήκευσης κεφαλαίου</a> θα σας καθοδηγήσει σχετικά με τη διαδικασία και τις απαιτήσεις σε υλικό",
+  "page-staking-section-comparison-solo-requirements-li3": "Η <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Πλατφόρμα εκκίνησης αποθήκευσης κεφαλαίου</a> θα σας καθοδηγήσει σχετικά με τη διαδικασία και τις απαιτήσεις σε υλικό",
   "page-staking-section-comparison-saas-requirements-li1": "Καταθέστε 32 ETH και δημιουργήστε τα κλειδιών σας με βοήθεια",
   "page-staking-section-comparison-saas-requirements-li2": "Αποθηκεύστε τα κλειδιά σας με ασφάλεια",
   "page-staking-section-comparison-saas-requirements-li3": "Τα υπόλοιπα αναλαμβάνονται, αν και συγκεκριμένες υπηρεσίες διαφέρουν",
@@ -236,5 +235,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Εγγραφείτε στο ιστολόγιο EF</a> για να λαμβάνετε ειδοποιήσεις μέσω email για τις πιο πρόσφατες ανακοινώσεις πρωτοκόλλου.",
   "page-staking-comparison-with-other-options": "Σύγκριση με άλλες επιλογές",
   "page-staking-any-amount": "Οποιοδήποτε ποσό",
-  "page-staking-testnet": "δίκτυο δοκιμών"
+  "page-staking-network-testnet": "Δίκτυο δοκιμών {network}"
 }

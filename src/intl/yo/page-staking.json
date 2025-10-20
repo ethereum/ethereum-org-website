@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "O tì o! Tún nọ́mbà atọ́ka olùyẹ̀wò wo ní ẹẹkan si kí o sì gbìyànjú lẹ́ẹ̀kan si.",
   "comp-withdrawal-credentials-upgraded-1": "Atọ́ka olùyẹ̀wò {{validatorIndex}} ti ṣe tán láti bẹ̀rẹ̀ sí ní gba èrè!",
   "comp-withdrawal-credentials-upgraded-2": "Àkọsílẹ̀ ìgbà owó wà ní àsópọ̀ pẹ̀lú àdírẹ́sì ìṣiṣẹ́:",
-  "comp-withdrawal-credentials-not-upgraded-1": "Olúfọwọ́sí {network} testnet nílò ìgbégasókè.",
+  "comp-withdrawal-credentials-not-upgraded-1": "Olúfọwọ́sí {network} nílò ìgbégasókè.",
   "comp-withdrawal-credentials-not-upgraded-2": "Àwọn ìlànà lori ìgbésọ́kè wà lọ́wọ́lọ́wọ́ lórí <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Páàdì àfilọ́lẹ̀ ìdókòwò</a>",
   "comp-withdrawal-credentials-verify": "Ṣàrídájú lórí {network}",
   "page-staking-withdrawals-when": "Bawa!",
@@ -137,10 +137,9 @@
   "page-staking-how-solo-works-item-3": "Ṣepọ̀ mọ́ ipele ìpohùnpọ̀ oníbàárà",
   "page-staking-how-solo-works-item-4": "Pilẹ̀ṣẹ̀ àwọn ọ̀rọ̀ ìgbaniwọlé kí o sì fi sí orí oníbàárà olùṣàyẹ̀wò rẹ",
   "page-staking-how-solo-works-item-5": "Ṣàbójútó kí o sì ṣetọ́jú nòódu rẹ",
-  "page-staking-network-testnet": "{network} testnet",
-  "page-staking-launchpad-widget-start": "Bẹ̀rẹ̀ ìdókòwò lórí {network} testnet",
+  "page-staking-launchpad-widget-start": "Bẹ̀rẹ̀ ìdókòwò lórí {network}",
   "page-staking-launchpad-widget-span": "Yan nẹ́tíwọọkì",
-  "page-staking-launchpad-widget-p1": "Olùyẹ̀wò aládaṣe gbọdọ̀ ṣe <strong>àyẹ̀wò ètò-iṣẹ́ wọn</strong> àti ìṣiṣẹ́ si lórí Holesky testnet ṣáájú fífowó si. Rántí pé dandan ni láti mú <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">oníbàárà kékeré</a> nítorí yòó ṣe ààbò nẹ́tíwọọkì tó dájú àti dín ewu rẹ kù.",
+  "page-staking-launchpad-widget-p1": "Olùyẹ̀wò aládaṣe gbọdọ̀ ṣe <strong>àyẹ̀wò ètò-iṣẹ́ wọn</strong> àti ìṣiṣẹ́ si lórí Hoodi testnet ṣáájú fífowó si. Rántí pé dandan ni láti mú <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">oníbàárà kékeré</a> nítorí yòó ṣe ààbò nẹ́tíwọọkì tó dájú àti dín ewu rẹ kù.",
   "page-staking-launchpad-widget-p2": "Tí o ba ní ìfọkàbalẹ lori rẹ, o le ṣe gbogbo ńkan ti o nílo sì ori ila kọmandi pèlú Staking Lauchpad ni kan.",
   "page-staking-launchpad-widget-p3": "Láti mú já geere, ṣàyẹ̀wò àwọn irinṣẹ́ àti ìtọ́sọ́nà tí yóò ṣe ìrànlọ́wọ́ fún ẹ pèlú Staking Launchpad làti ṣàgbékalẹ̀ àwọn oníbàárà rẹ ní ìrọ̀rùn.",
   "page-staking-launchpad-widget-link": "Àwọn irinṣẹ́ sofitiwia àti ìtọ́sọ́nà",
@@ -171,7 +170,7 @@
   "page-staking-section-comparison-requirements-title": "Àwọn ìnílò",
   "page-staking-section-comparison-solo-requirements-li1": "O gbọdọ̀ fi ETH méjìlélọ́gbọ̀n sínú àkántì",
   "page-staking-section-comparison-solo-requirements-li2": "Ṣètọ́jú ẹ̀rọ kọ̀ǹpútà aláfojúrí tó ń ṣiṣẹ́ pọ̀ pẹ̀lú Ethereum <a href=\"/glossary/#execution-client\">oníbàárà iṣẹ́</a> ati <a href=\"/glossary/#consensus-client\">oníbàárà ìfohùnṣọ̀kan</a> nígbà tó sopọ̀ pẹ̀lú àyelujara",
-  "page-staking-section-comparison-solo-requirements-li3": "Àwọn <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> yóò kọ́ ọ nípasẹ̀ ìlànà àti àwọn ìbéèrè irú ohun ẹ̀rọ kọ̀ǹpútà tí o lè lò",
+  "page-staking-section-comparison-solo-requirements-li3": "Àwọn <a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> yóò kọ́ ọ nípasẹ̀ ìlànà àti àwọn ìbéèrè irú ohun ẹ̀rọ kọ̀ǹpútà tí o lè lò",
   "page-staking-section-comparison-saas-requirements-li1": "Fi ETH méjìlélógbọ̀n sílẹ̀ wàà sí ṣẹ̀dá àwọn ọ̀rọ̀ ìgbaniwọlé àṣírí rẹ pẹ̀lú ìrànlọ́wọ́",
   "page-staking-section-comparison-saas-requirements-li2": "Tọ́jú àwọn ọ̀rọ̀ ìgabaniwolé àṣírí dáadáa",
   "page-staking-section-comparison-saas-requirements-li3": "Àwọn tó kù ni a ti bójútó, ṣùgbọ́n àwọn iṣẹ́ pàtàkì yóò yàtọ̀ sí ara wọn",
@@ -217,5 +216,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Darapọ̀ mọ́ búlọ́ọ́gì EF</a> láti gba ímeèlì ìfitónilétí fún àwọn ìkéde ìlànà tuntun.",
   "page-staking-comparison-with-other-options": "Àfiwé pẹ̀lú àwọn àṣàyàn mìíràn",
   "page-staking-any-amount": "Iye kíye",
-  "page-staking-testnet": "testnet"
+  "page-staking-network-testnet": "{network} testnet"
 }

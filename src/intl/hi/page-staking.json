@@ -12,7 +12,7 @@
   "comp-withdrawal-credentials-error": "उफ़! वैलिडेटर सूची संख्या को दोबारा जांचें और फिर से कोशिश करें।",
   "comp-withdrawal-credentials-upgraded-1": "वैलिडेटर इंडेक्स {{validatorIndex}} पुरस्कार प्राप्त करना शुरू करने के लिए तैयार है!",
   "comp-withdrawal-credentials-upgraded-2": "निष्पादन पते से जुड़े निकासी क्रेडेंशियल:",
-  "comp-withdrawal-credentials-not-upgraded-1": "इस {network} टेस्टनेट सत्यापनकर्ता को अपग्रेड करने की आवश्यकता है।",
+  "comp-withdrawal-credentials-not-upgraded-1": "इस {network} सत्यापनकर्ता को अपग्रेड करने की आवश्यकता है।",
   "comp-withdrawal-credentials-not-upgraded-2": "अपग्रेड करने के तरीके के निर्देश वर्तमान में <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">स्टेकिंग लॉन्चपैड</a> पर पाए जा सकते हैं",
   "comp-withdrawal-credentials-verify": "{network} पर सत्यापित करें",
   "page-staking-withdrawals-when": "शिप कर दिया गया!",
@@ -143,11 +143,10 @@
   "page-staking-how-solo-works-item-3": "सहमति परत क्लाइंट को सिंक कीजिये",
   "page-staking-how-solo-works-item-4": "अपनी कुंजी बनाएं और उन्हें अपने सत्यापनकर्ता क्लाइंट में लोड करें",
   "page-staking-how-solo-works-item-5": "अपने नोड की निगरानी और रखरखाव करें",
-  "page-staking-network-testnet": "{network} टेस्टनेट",
-  "page-staking-launchpad-widget-start": "{network} टेस्टनेट पर स्टेक करना शुरू करें",
+  "page-staking-launchpad-widget-start": "{network} पर स्टेक करना शुरू करें",
   "page-staking-launchpad-widget-mainnet-label": "मेननेट",
   "page-staking-launchpad-widget-span": "नेटवर्क चुनें",
-  "page-staking-launchpad-widget-p1": "सोलो सत्यापनकर्ताओं को <strong>अपने सेटअप का परीक्षण</strong> और फंड को जोखिम में डालने से पहले Holesky टेस्टनेट पर परिचालन कौशल का परीक्षण करना चाहिए। याद रखें कि <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">अल्पसंख्यक ग्राहक</a> चुनना महत्वपूर्ण है क्योंकि यह नेटवर्क की सुरक्षा में सुधार करता है और आपके जोखिम को सीमित करता है।",
+  "page-staking-launchpad-widget-p1": "सोलो सत्यापनकर्ताओं को <strong>अपने सेटअप का परीक्षण</strong> और फंड को जोखिम में डालने से पहले Hoodi टेस्टनेट पर परिचालन कौशल का परीक्षण करना चाहिए। याद रखें कि <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">अल्पसंख्यक ग्राहक</a> चुनना महत्वपूर्ण है क्योंकि यह नेटवर्क की सुरक्षा में सुधार करता है और आपके जोखिम को सीमित करता है।",
   "page-staking-launchpad-widget-p2": "अगर आप सहज हैं, तो आप केवल स्टेकिंग लॉन्चपैड का उपयोग करके कमांड लाइन से सभी आवश्यक चीजें सेट-अप कर सकते हैं।",
   "page-staking-launchpad-widget-p3": "चीजों को आसान बनाने के लिए, नीचे दिए गए कुछ टूल और गाइड देखें जो आपके क्लाइंट को आसानी से सेट करने के लिए स्टेकिंग लॉन्चपैड के साथ आपकी मदद कर सकते हैं।",
   "page-staking-launchpad-widget-link": "सॉफ़्टवेयर उपकरण और मार्गदर्शिका",
@@ -181,7 +180,7 @@
   "page-staking-section-comparison-requirements-title": "आवश्यकताएँ",
   "page-staking-section-comparison-solo-requirements-li1": "आपको 32 ETH जमा करना होगा",
   "page-staking-section-comparison-solo-requirements-li2": "हार्डवेयर बनाए रखें जो इंटरनेट से कनेक्ट होने के दौरान एथेरियम <a href=\"/glossary/#execution-client\">निष्पादन ग्राहक</a> और <a href=\"/glossary/#consensus-client\">सर्वसम्मति ग्राहक</a> दोनों चलाता है",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">स्टेकिंग लांच पैड</a> आपको प्रक्रिया और हार्डवेयर आवश्यकताओं के बारे में बताएगा",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://hoodi.launchpad.ethereum.org\" target=\"_blank\">स्टेकिंग लांच पैड</a> आपको प्रक्रिया और हार्डवेयर आवश्यकताओं के बारे में बताएगा",
   "page-staking-section-comparison-saas-requirements-li1": "32 ETH जमा करें और सहायता से अपनी कुंजियाँ जनरेट करें",
   "page-staking-section-comparison-saas-requirements-li2": "अपनी कुंजियां सुरक्षित रूप से संग्रहित करें",
   "page-staking-section-comparison-saas-requirements-li3": "बाकी का ध्यान रखा जाता है, हालाँकि विशिष्ट सेवाएँ अलग-अलग होंगी",
@@ -227,5 +226,5 @@
   "subscribe-to-ef-blog": "नवीनतम प्रोटोकॉल घोषणाओं के लिए <a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">EF ब्लॉग सब्सक्राइब करें</a>, ताकि आप ईमेल सूचनाएं प्राप्त कर सकें।",
   "page-staking-comparison-with-other-options": "अन्य विकल्पों के साथ तुलना",
   "page-staking-any-amount": "कोई भी राशि",
-  "page-staking-testnet": "टेस्टनेट"
+  "page-staking-network-testnet": "{network} टेस्टनेट"
 }
