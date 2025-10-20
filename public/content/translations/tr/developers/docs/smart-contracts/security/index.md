@@ -223,7 +223,7 @@ Zincir üstünde yönetişimle ilgili sorunları önlemenin bir yolu, bir [zaman
 
 Geleneksel yazılım geliştiricileri, yazılım tasarımına gereksiz karmaşıklık eklememeyi tavsiye eden "KISS" ("keep it simple, stupid - basit tut, aptal") prensibini iyi bilir. Bu, uzun süredir kabul gören "karmaşık sistemler karmaşık şekillerde başarısız olur" düşüncesine uygundur ve bu sistemler maliyetli hatalara daha yatkındır.
 
-Akıllı sözleşmeleri yazarken işleri basit tutmak, akıllı sözleşmelerin potansiyel olarak büyük miktarlarda değeri kontrol ettiği göz önüne alındığında özellikle önemlidir. Akıllı sözleşme yazarken basitliği sağlamaya yönelik bir ipucu, mümkün olduğunda [OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/4.x/) gibi mevcut kütüphaneleri yeniden kullanmaktır. Bu kütüphaneler, geliştiriciler tarafından kapsamlı bir şekilde denetlenmiş ve test edilmiş olduğundan bunların kullanılması, yeni işlevselliğin sıfırdan yazılarak hataların eklenmesi olasılığını azaltır.
+Akıllı sözleşmeleri yazarken işleri basit tutmak, akıllı sözleşmelerin potansiyel olarak büyük miktarlarda değeri kontrol ettiği göz önüne alındığında özellikle önemlidir. Akıllı sözleşme yazarken basitliği sağlamaya yönelik bir ipucu, mümkün olduğunda [OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/5.x/) gibi mevcut kütüphaneleri yeniden kullanmaktır. Bu kütüphaneler, geliştiriciler tarafından kapsamlı bir şekilde denetlenmiş ve test edilmiş olduğundan bunların kullanılması, yeni işlevselliğin sıfırdan yazılarak hataların eklenmesi olasılığını azaltır.
 
 Başka yaygın bir tavsiye de küçük fonksiyonlar yazmak ve iş mantığını birden fazla sözleşmeye bölerek sözleşmeleri modüler tutmaktır. Basit kod yazmak, akıllı sözleşmedeki saldırı yüzeyini azaltırken genel sistem doğruluğu hakkında düşünmeyi ve olası tasarım hatalarını erken tespit etmeyi de kolaylaştırır.
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
+Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
 
 #### Tamsayı yetersizlikleri ve taşmaları {#integer-underflows-and-overflows}
 
@@ -474,17 +474,13 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 ### Akıllı sözleşmeleri izlemeye yarayan araçlar {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Akıllı sözleşmelerinizdeki olayları, fonksiyonları ve işlem parametrelerini otomatik olarak izleyip yanıtlamaya yarayan bir araç._
-
 - **[Tenderly Gerçek Zamanlı Uyarı](https://tenderly.co/alerting/)** - _Akıllı sözleşmelerinizde veya cüzdanlarınızda normal olmayan veya beklenmeyen olaylar gerçekleştiğinde gerçek zamanlı bildirimler almaya yarayan bir araç._
 
 ### Akıllı sözleşmelerin güvenli yönetimine yönelik araçlar {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Erişim kontrolleri, yükseltmeler ve duraklatma dahil olmak üzere akıllı sözleşme yönetimine yönelik bir arayüz._
-
 - **[Safe](https://safe.global/)** - _Ethereum üzerinde çalışan ve bir işlemi gerçekleştirmeden önce minimum sayıda kişinin onayının alınmasını gerektiren bir akıllı sözleşme cüzdanı (N'nin M'si)._
 
-- **[OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/4.x/)** - _Sözleşme sahipliği, yükseltmeler, erişim kontrolleri, yönetişim, duraklatabilirlik ve benzeri yönetimsel özellikleri uygulamaya yönelik sözleşme kütüphaneleri._
+- **[OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/5.x/)** - _Sözleşme sahipliği, yükseltmeler, erişim kontrolleri, yönetişim, duraklatabilirlik ve benzeri yönetimsel özellikleri uygulamaya yönelik sözleşme kütüphaneleri._
 
 ### Akıllı sözleşme denetim hizmetleri {#smart-contract-auditing-services}
 
@@ -534,7 +530,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 ### Akıllı sözleşmelerle ilgili bilinen güvenlik açıklarına ve hatalarına ilişkin yayınlar {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Akıllı Sözleşmelere Yönelik Bilinen Saldırılar](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Genellikle örnek kod da içeren, en önemli sözleşme açıklarına ilişkin yeni başlayanlara yönelik açıklamalar._
+- **[ConsenSys: Akıllı Sözleşmelere Yönelik Bilinen Saldırılar](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Genellikle örnek kod da içeren, en önemli sözleşme açıklarına ilişkin yeni başlayanlara yönelik açıklamalar._
 
 - **[SWC Kayıt Defteri](https://swcregistry.io/)** - _Ethereum akıllı sözleşmeleri için geçerli Yaygın Zayıflık Numaralandırması (CWE) maddelerinin birleştirilmiş bir listesi._
 

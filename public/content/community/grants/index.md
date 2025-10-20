@@ -10,6 +10,11 @@ The programs listed below offer a variety of funding grants for projects working
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Founders, need help accelerating your business? [Head over to Founders Support](/founders/)</div>
+</Alert>
+
 ## Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
 
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
@@ -27,11 +32,13 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
 
 ### For developers and builders {#for-developers-and-builders}
 
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
@@ -45,13 +52,6 @@ Resources for community-driven projects and governance experiments:
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 - [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Comprehensive Web3 grants map_
 
-### For entrepreneurs and startups {#for-entrepreneurs-and-startups}
-
-Resources for those building products and seeking investment beyond just grants:
-
-- [Web3Native](https://www.web3native.co/) - _Directory of Web3 grants, investors, and accelerator programs_
-- [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
-
 ### Public goods and impact {#public-goods-and-impact}
 
 These programs focus on funding projects that benefit the broader community, public goods, and impact initiatives. These include grant providers, as well as donation platforms utilizing onchain funding allocation mechanisms including [quadratic funding](/defi/#quadratic-funding):
@@ -61,7 +61,6 @@ These programs focus on funding projects that benefit the broader community, pub
 - [Giveth](https://giveth.io/) - _Crypto donation platform enabling direct donations from for-good projects with zero added fees_
 - [Artizen](https://artizen.fund/) - _Helping creators match fund new projects at the frontier of art, science, technology and culture_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
-
 
 ## Work in Ethereum {#work-in-ethereum}
 

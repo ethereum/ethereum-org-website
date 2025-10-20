@@ -204,7 +204,6 @@ MEV Boost 运行机制与原来的 Flashbots 拍卖相同，但增加了一些�
 
 - [Flashbots 文档](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _用于最大可提取价值交易的仪表板和实时交易浏览器_
 - [mevnot.org](https://www.mevboost.org/) - _可提供 MEV-Boost 中继和区块构建者实时统计数据的追踪器_
 
 ## 延伸阅读 {#further-reading}

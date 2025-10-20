@@ -20,7 +20,7 @@ lang: el
   Μάθετε τις βασικές αρχές του Ethereum
 </DocLink>
 
-Παρά την έλλειψη επίσημης υποστήριξης, πολλές ομάδες, κοινότητες και έργα σε όλο το οικοσύστημα του Ethereum είναι πρόθυμοι να βοηθήσουν και μπορείτε να βρείτε πολλές χρήσιμες πληροφορίες και πόρους σε αυτήν τη σελίδα. Έχετε περισσότερες ερωτήσεις; Εγγραφείτε στο [ethereum.org Discord](/discord/) και θα προσπαθήσουμε να σας βοηθήσουμε.
+Παρά την έλλειψη επίσημης υποστήριξης, πολλές ομάδες, κοινότητες και έργα σε όλο το οικοσύστημα του Ethereum είναι πρόθυμοι να βοηθήσουν και μπορείτε να βρείτε πολλές χρήσιμες πληροφορίες και πόρους σε αυτήν τη σελίδα. Έχετε περισσότερες ερωτήσεις; Εγγραφείτε στο [ethereum.org Discord](https://discord.gg/ethereum-org) και θα προσπαθήσουμε να σας βοηθήσουμε.
 
 ## Συχνές ερωτήσεις {#faq}
 
@@ -57,7 +57,6 @@ lang: el
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

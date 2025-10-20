@@ -276,7 +276,7 @@
   "nav-layer-2-description": "ប្រតិបត្តិការថោកជាង និងលឿនជាងមុនសម្រាប់ Ethereum",
   "nav-learn-by-coding-description": "ឧបករណ៍ដែលជួយអ្នកសាកល្បងជាមួយ Ethereum",
   "nav-local-env-description": "ជ្រើសរើស និងរៀបចំ stack អភិវឌ្ឍន៍ Ethereum របស់អ្នក",
-  "nav-mainnet-description": "កម្មវិធី blockchain សម្រាប់សហគ្រាសអាចត្រូវបានបង្កើតឡើងនៅលើ Ethereum Mainnet សាធារណៈ",
+  "nav-enterprise-description": "កម្មវិធី blockchain សម្រាប់សហគ្រាសអាចត្រូវបានបង្កើតឡើងនៅលើ Ethereum Mainnet សាធារណៈ",
   "nav-nft-description": "មធ្យោបាយដើម្បីតំណាងឱ្យអ្វីដែលប្លែកពីគេជាទ្រព្យសកម្មដែលផ្អែកលើ Ethereum",
   "nav-open-research-description": "ចំណុចខ្លាំងសំខាន់មួយនៃ Ethereum គឺសហគមន៍ស្រាវជ្រាវសកម្មរបស់ខ្លួន",
   "nav-open-research-label": "បើកការស្រាវជ្រាវ",
@@ -430,5 +430,8 @@
   "withdrawals": "ការដកប្រាក់តម្កល់",
   "wrapped-ether": "Wrapped Ether",
   "yes": "បាទ/ចាស",
-  "zero-knowledge-proofs": "ពិធីសារផ្ទៀងផ្ទាត់ Zero-knowledge proofs"
+  "zero-knowledge-proofs": "ពិធីសារផ្ទៀងផ្ទាត់ Zero-knowledge proofs",
+  "ethereum-vs-bitcoin": "Ethereum ទល់នឹង Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "ស្វែងយល់ពីភាពខុសគ្នារវាង Ethereum និង Bitcoin"
+
 }

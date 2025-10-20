@@ -274,7 +274,7 @@
   "nav-layer-2-description": "Mas mura at mas mabilis na mga transaksyon para sa Ethereum",
   "nav-learn-by-coding-description": "Mga tool na makakatulong sa iyong mag-eksperimento sa Ethereum",
   "nav-local-env-description": "Piliin at i-set up ang iyong Ethereum development stack",
-  "nav-mainnet-description": "Puwedeng buuin ang mga enterprise blockchain application sa pampublikong Ethereum Mainnet",
+  "nav-enterprise-description": "Puwedeng buuin ang mga enterprise blockchain application sa pampublikong Ethereum Mainnet",
   "nav-nft-description": "Isang paraan para katawanin ang kahit anong natatangi bilang Ethereum-based asset",
   "nav-open-research-description": "Ang isa sa mga pangunahing kalakasan ng Ethereum ay ang aktibo nitong komunidad sa pananaliksik",
   "nav-open-research-label": "Bukas na pananaliksik",
@@ -429,5 +429,8 @@
   "withdrawals": "Mga pagbawi ng pag-stake",
   "wrapped-ether": "Nakabalot na Ether",
   "yes": "Oo",
-  "zero-knowledge-proofs": "Mga zero-knowledge proof"
+  "zero-knowledge-proofs": "Mga zero-knowledge proof",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Unawain ang mga pagkakaiba sa pagitan ng Ethereum at Bitcoin"
+
 }

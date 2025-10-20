@@ -88,6 +88,6 @@ ethereum.orgでは、本デザイン原則は、ウェブサイトを表現し�
 
 **本ドキュメントに関するフィードバックをお聞かせください。** 私たちが提案する原則の1つは「**コラボレーションによる改善**」で、このウェブサイトが多くの貢献者の成果となることを希望しています。 その精神に則り、本デザイン原則をイーサリアムコミュニティと共有します。
 
-本原則はethereum.orgのウェブサイトに焦点を当てていますが、その多くがイーサリアムエコシステム全体の価値を表すことを望んでいます(例えば、[イーサリアムホワイトペーパーの原則](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)からの影響を参照してください)。 ご自由にこれらの一部を自分のプロジェクトに取り入れてみてください。
+本原則はethereum.orgのウェブサイトに焦点を当てていますが、その多くがイーサリアムエコシステム全体の価値を表すことを望んでいます。 ご自由にこれらの一部を自分のプロジェクトに取り入れてみてください。
 
 [Discordサーバー](https://discord.gg/ethereum-org)か[イシューを作成して](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)ご意見をお聞かせください。

@@ -204,7 +204,6 @@ Spreagfaidh cur i bhfeidhm forleathan an API Tógálaí iomaíocht níos mó i m
 
 - [Doiciméid Flashbots](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _Deais agus taiscéalaí idirbheart beo le haghaidh idirbhearta MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Rianaire le staidreamh fíor-ama le haghaidh athsheachadáin MEV-Boost agus blocthógálaithe_
 
 ## Tuilleadh léitheoireachta {#further-reading}

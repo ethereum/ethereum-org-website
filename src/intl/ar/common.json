@@ -276,7 +276,7 @@
   "nav-layer-2-description": "معاملات أرخص وأسرع لإيثريوم",
   "nav-learn-by-coding-description": "أدوات ستساعدك على تجربة إيثريوم",
   "nav-local-env-description": "اختر حزمة تطوير إيثريوم الخاصة بك وقم بإعدادها",
-  "nav-mainnet-description": "يمكن بناء تطبيقات بلوكتشين الخاصة بالشركات على شبكة إيثريوم الرئيسية العامة",
+  "nav-enterprise-description": "يمكن بناء تطبيقات بلوكتشين الخاصة بالشركات على شبكة إيثريوم الرئيسية العامة",
   "nav-nft-description": "طريقة لتمثيل أي شيء فريد بوصفه أصلاً مستندًا إلى إيثريوم",
   "nav-open-research-description": "تُعَد إحدى نقاط القوة الأساسية في إيثريوم هي مجتمع البحوث النشط الخاص به",
   "nav-open-research-label": "البحث المفتوح",
@@ -432,5 +432,8 @@
   "withdrawals": "عمليات سحب تجميد العملات",
   "wrapped-ether": "Wrapped Ether",
   "yes": "نعم",
-  "zero-knowledge-proofs": "براهين المعرفة الصفرية"
+  "zero-knowledge-proofs": "براهين المعرفة الصفرية",
+  "ethereum-vs-bitcoin": "الإيثيريوم مقابل البيتكوين",
+  "nav-ethereum-vs-bitcoin-description": "فهم الاختلافات بين الإيثيريوم والبيتكوين"
+
 }

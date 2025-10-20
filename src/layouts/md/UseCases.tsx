@@ -170,7 +170,7 @@ export const UseCasesLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: { src: frontmatter.image, width: 760, height: 450 },
     description: frontmatter.summary ? (
       <p className="text-lg">{frontmatter.summary}</p>
     ) : (
@@ -199,7 +199,6 @@ export const UseCasesLayout = ({
       <ContentLayout
         tocItems={tocItems}
         dropdownLinks={dropdownLinks}
-        maxDepth={frontmatter.sidebarDepth}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<ContentHero {...heroProps} />}

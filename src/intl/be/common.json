@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Танныя і хуткія транзакцыі для Ethereum",
   "nav-learn-by-coding-description": "Інструменты, якія дапамагаюць эксперыментаваць з Ethereum",
   "nav-local-env-description": "Выберыце і наладзьце свой стэк распрацоўкі Ethereum",
-  "nav-mainnet-description": "Праграмныя блокчэйн-дадаткі для прадпрыемстваў можна ствараць у агульнадаступнай асноўнай сетцы Ethereum Mainnet",
+  "nav-enterprise-description": "Праграмныя блокчэйн-дадаткі для прадпрыемстваў можна ствараць у агульнадаступнай асноўнай сетцы Ethereum Mainnet",
   "nav-nft-description": "Спосаб прадставіць што-небудзь унікальнае ў якасці актыву на аснове Ethereum",
   "nav-open-research-description": "Адной з галоўных пераваг Ethereum з'яўляецца актыўнае даследчае супольніцтва",
   "nav-open-research-label": "Адкрытае даследаванне",
@@ -431,5 +431,8 @@
   "withdrawals": "Вывад ставак",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Так",
-  "zero-knowledge-proofs": "Доказ з нулявым раскрыццём"
+  "zero-knowledge-proofs": "Доказ з нулявым раскрыццём",
+  "ethereum-vs-bitcoin": "Ethereum супраць Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Зразумейце адрозненні паміж Ethereum і Bitcoin"
+
 }

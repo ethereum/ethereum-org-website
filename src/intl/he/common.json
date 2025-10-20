@@ -276,7 +276,7 @@
   "nav-layer-2-description": "עסקאות זולות ומהירות יותר עם אתריום",
   "nav-learn-by-coding-description": "הכלים שעוזרים לך לנסות את אתריום",
   "nav-local-env-description": "בחר והגדר את ערכת פיתוח של אתרריום שלך",
-  "nav-mainnet-description": "אפליקציות עסקיות לעבודה עם בלוקצ'יינים ניתן לבנות ברשת Mainnet הציבורית של אתריום",
+  "nav-enterprise-description": "אפליקציות עסקיות לעבודה עם בלוקצ'יינים ניתן לבנות ברשת Mainnet הציבורית של אתריום",
   "nav-nft-description": "דרך להציג משהו ייחודי בתור נכס המבוסס על אתריום",
   "nav-open-research-description": "אחד היתרונות העיקריים של אתריום הוא הקהילה המחקרית הפעילה",
   "nav-open-research-label": "פתח מחקר",
@@ -429,5 +429,8 @@
   "withdrawals": "משיכות הימור",
   "wrapped-ether": "אתר עטוף",
   "yes": "כן",
-  "zero-knowledge-proofs": "הוכחות אפס ידע"
+  "zero-knowledge-proofs": "הוכחות אפס ידע",
+  "ethereum-vs-bitcoin": "אתריום מול ביטקוין",
+  "nav-ethereum-vs-bitcoin-description": "הבן את ההבדלים בין אתריום לביטקוין"
+
 }

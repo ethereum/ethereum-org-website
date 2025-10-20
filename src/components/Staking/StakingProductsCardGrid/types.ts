@@ -1,4 +1,4 @@
-import type { MatomoEventOptions } from "@/lib/utils/matomo"
+import type { MatomoEventOptions } from "@/lib/types"
 
 import type stakingProducts from "@/data/staking-products.json"
 

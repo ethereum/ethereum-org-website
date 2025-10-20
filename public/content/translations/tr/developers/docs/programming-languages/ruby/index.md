@@ -24,7 +24,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 - [Sonunda Ethereum hesaplarını anlamak](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Sonunda MetaMask ile Rails Kullanıcılarının Doğrulanması](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Ethereum ile Oturum Açma - Ruby Kitaplığı ve Rails Örnekleri Sürümü](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Ruby kullanarak Ethereum ağına nasıl bağlanılır](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Ruby'de yeni bir Ethereum adresi nasıl oluşturulur](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -39,10 +38,10 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ethereum hesaplarını, mesajlarını ve işlemlerini işlemek için Ruby kitaplığı ve RPC istemcisi_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _Ethereum tarafından kullanılan Keccak (SHA3) hash değeri_
-- [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Ethereum ile Oturum Açmanın Ruby uygulaması_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) - _SIWE yerel oturum açma rotalarını ekleyen Rails gem_
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) - _Özel denetleyiciyle Ruby on Rails kullanan SIWE örneği_
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) - _Ethereum ile Oturum Açma (SIWE) için OmniAuth stratejisi_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) - _Ethereum ile Oturum Açmanın Ruby uygulaması_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) - _SIWE yerel oturum açma rotalarını ekleyen Rails gem_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) - _Özel denetleyiciyle Ruby on Rails kullanan SIWE örneği_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) - _Ethereum ile Oturum Açma (SIWE) için OmniAuth stratejisi_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _NFT sahipliği aracılığıyla kimlik doğrulama için OmniAuth stratejisi_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _MetaMask'i Ruby on Rails'e bağlamayı sağlayan Ethereum on Rails şablonu_
 

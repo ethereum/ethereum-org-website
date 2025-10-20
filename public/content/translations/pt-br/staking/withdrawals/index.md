@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Se você faz parte de uma <a href="/staking/pools/">participação combinada</a> (participação em pool) ou mantém tokens participados, deve solicitar ao seu provedor mais detalhes sobre o processamento de saques de participação, pois cada serviço funciona de maneira diferente.
+Se você faz parte de uma [participação combinada](/staking/pools/) (participação em pool) ou mantém tokens participados, deve solicitar ao seu provedor mais detalhes sobre o processamento de saques de participação, pois cada serviço funciona de maneira diferente.
 
-Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer <a href="/staking/solo/">stake em casa</a>.
+Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer [stake em casa](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Não. Uma vez que um validador tenha saído e seu saldo completo tenha sido saca
 
 - [Saques da plataforma de staking](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Saques por push da Beacon chain como operações](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Saque de ETH em skate (teste) com Potus e Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain envia as retiradas como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Compreendendo como o Saldo Efetivo do Validador funciona](https://www.attestant.io/posts/understanding-validator-effective-balance/)

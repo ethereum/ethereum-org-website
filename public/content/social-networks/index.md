@@ -65,12 +65,18 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### Farcaster {#farcaster}
+
+[Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
+
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
-- **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
+- **[Status.app](https://status.app/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
+- **[Ethereum Follow Protocol](https://efp.app/)** - _Ethereum Follow Protocol is a fully decentralized onchain social graph for Ethereum accounts, advancing the vision of a modular Ethereum identity stack, complementing ENS and SIWE._
+- **[Ethereum Comments Protocol](https://www.ethcomments.xyz/)** - _A new, programmable social content primitive on Ethereum to put your thoughts onchain._
 
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
@@ -81,6 +87,7 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 - Reddit previously experimented with **Community Points**, which were ERC-20 tokens users could earn by posting quality content and contributing to specific online communities (subreddits). Users could redeem these tokens within a subreddit for exclusive perks or trade them. For this project, Reddit utilized Arbitrum Nova, a [layer 2](/glossary/#layer-2) network designed to scale Ethereum transactions.
 - The program was notably active in the r/CryptoCurrency subreddit with its "Moons" and the r/FortNiteBR subreddit with its "Bricks". Because these tokens were on the blockchain, they were independent of Reddit once claimed into a user's [wallet](/glossary/#wallet).
 - However, **Reddit [sunsetted the Community Points program](https://www.reddit.com/r/CryptoCurrency/comments/17a33ql/reddit_is_officially_deprecating_community_points/) in late 2023**, citing scalability and resource challenges. While the tokens still exist on the blockchain, Reddit no longer actively supports or integrates them into its platform features.
+- Reddit has also launched a **[collectible avatar program](https://www.reddit.com/r/avatartrading/comments/147qlpb/what_are_reddit_collectible_avatars_rcas/)**, allowing users to purchase unique avatars as NFTs. These avatars can be used as profile pictures and are tradable on the secondary market.
 
 ## Further reading {#further-reading}
 

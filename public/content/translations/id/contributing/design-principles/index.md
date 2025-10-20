@@ -88,6 +88,6 @@ Anda dapat melihat prinsip desain kami dalam penerapan [di keseluruhan situs kam
 
 **Bagikan umpan balik Anda terhadap dokumen ini!** Salah satu prinsip yang kami ajukan adalah "**Peningkatan Kolaboratif**" yang berarti bahwa kami ingin situs webnya merupakan produk dari banyak kontributor. Jadi, sejalan semangat prinsip tersebut, kami ingin membagikan prinsip desain ini dengan komunitas Ethereum.
 
-Ketika prinsip ini dipusatkan pada situs web ethereum.org, kami berharap bahwa banyak kontennya adalah perwakilan dari nilai ekosistem Ethereum secara keseluruhan (misalnya, Anda dapat melihat pengaruhnya dari [prinsip Laporan Resmi Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Mungkin Anda bahkan dapat menggabungkan beberapa dari prinsip tersebut ke dalam proyek Anda!
+Ketika prinsip ini dipusatkan pada situs web ethereum.org, kami berharap bahwa banyak kontennya adalah perwakilan dari nilai ekosistem Ethereum secara keseluruhan. Mungkin Anda bahkan dapat menggabungkan beberapa dari prinsip tersebut ke dalam proyek Anda!
 
 Beri tahu kami pendapat Anda melalui [server Discord](https://discord.gg/ethereum-org) atau dengan [membuat isu.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)

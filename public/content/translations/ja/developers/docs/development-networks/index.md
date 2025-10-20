@@ -43,7 +43,6 @@ Hardhat Networkには、プロフェッショナルのためのイーサリア�
 
 - [Lodestarを使用したローカルテストネット](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lighthouseを使用したローカルテストネット](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Nimbusを使用したローカルテストネット](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公開イーサリアムテストチェーン {#public-beacon-testchains}
 

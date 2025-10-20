@@ -276,7 +276,7 @@
   "nav-layer-2-description": "ეთერეუმის უფრო იაფი და სწრაფი ტრანზაქციები",
   "nav-learn-by-coding-description": "იარაღები, რომლებიც დაგეხმარებათ ეთერეუმით ექსპერიმენტირებისთვის",
   "nav-local-env-description": "აირჩიეთ და მოაწყვეთ თქვენი ეთერეუმის დეველოპმენტის სტეკი",
-  "nav-mainnet-description": "კომპანიის ბლოკჩეინ აპლიკაციების ჩაშენება შესაძლებელია ეთერეუმის საჯარო მეინნეტზე",
+  "nav-enterprise-description": "კომპანიის ბლოკჩეინ აპლიკაციების ჩაშენება შესაძლებელია ეთერეუმის საჯარო მეინნეტზე",
   "nav-nft-description": "საშუალება წარმოაჩინოს რაიმე უნიკალური, როგორც Ethereum-ზე დაფუძნებული აქტივი",
   "nav-open-research-description": "ეთერეუმის ერთ-ერთი უმთავრესი სიძლიერე მისი აქტიური კვლევითი საზოგადოებაა",
   "nav-open-research-label": "ღია კვლევა",
@@ -431,5 +431,8 @@
   "withdrawals": "სტეიკინგის გატანა",
   "wrapped-ether": "შეფუთული ეთერი",
   "yes": "კი",
-  "zero-knowledge-proofs": "ნულოვანი ცოდნის მტკიცებულებები"
+  "zero-knowledge-proofs": "ნულოვანი ცოდნის მტკიცებულებები",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "გაიგეთ განსხვავებები Ethereum-სა და Bitcoin-ს შორის"
+
 }

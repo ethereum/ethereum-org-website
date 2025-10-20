@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract` bir ERC-223 jetonu aldığında sözleşme, tıpkı Ether işlemlerinin fonksiyon çağrılarını işlem `data` olarak kodlaması gibi jeton işleminin `_data` parametresi olarak kodlanan bir fonksiyonu yürütür. Daha fazla bilgi için [veri alanını](https://ethereum.org/en/developers/docs/transactions/#the-data-field) okuyun.
+`RecipientContract` bir ERC-223 jetonu aldığında sözleşme, tıpkı Ether işlemlerinin fonksiyon çağrılarını işlem `data` olarak kodlaması gibi jeton işleminin `_data` parametresi olarak kodlanan bir fonksiyonu yürütür. Daha fazla bilgi için [veri alanını](/developers/docs/transactions/#the-data-field) okuyun.
 
 Yukarıdaki örnekte, bir ERC-223 jetonunun `transfer(address,uin256,bytes calldata _data)` fonksiyonu ile `RecipientContract` adresine transferi gerekmektedir. Eğer veri parametresi `0xc2985578` (`foo()` fonksiyonunun imzası) ise, jeton depozitosu alındıktan sonra foo() fonksiyonu çağrılır ve Foo() olayı tetiklenir.
 

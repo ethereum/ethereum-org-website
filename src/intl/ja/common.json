@@ -280,7 +280,7 @@
   "nav-history-label": "イーサリアムの技術的な歴史",
   "nav-learn-by-coding-description": "イーサリアムを試してみるのに役立つツール",
   "nav-local-env-description": "イーサリアムの開発スタックを選択してセットアップする",
-  "nav-mainnet-description": "エンタープライズブロックチェーンアプリケーションは、パブリックのイーサリアムメインネット上で構築することができます",
+  "nav-enterprise-description": "エンタープライズブロックチェーンアプリケーションは、パブリックのイーサリアムメインネット上で構築することができます",
   "nav-networks-home-description": "より安く、より速いイーサリアムの取引",
   "nav-networks-introduction-label": "はじめに",
   "nav-networks-introduction-description": "イーサリアムはネットワークのネットワークへと拡大",
@@ -444,5 +444,8 @@
   "withdrawals": "ステーキングの引き出し",
   "wrapped-ether": "ラップドイーサ",
   "yes": "はい",
-  "zero-knowledge-proofs": "ゼロ知識証明"
+  "zero-knowledge-proofs": "ゼロ知識証明",
+  "ethereum-vs-bitcoin": "イーサリアム vs ビットコイン",
+  "nav-ethereum-vs-bitcoin-description": "イーサリアムとビットコインの違いを理解する"
+
 }

@@ -121,6 +121,8 @@
           href: /developers/docs/smart-contracts/compiling/
         - id: docs-nav-deploying-smart-contracts
           href: /developers/docs/smart-contracts/deploying/
+        - id: docs-nav-naming-smart-contracts
+          href: /developers/docs/smart-contracts/naming/
         - id: docs-nav-verifying-smart-contracts
           href: /developers/docs/smart-contracts/verifying/
         - id: docs-nav-upgrading-smart-contracts

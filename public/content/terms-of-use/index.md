@@ -1,5 +1,6 @@
 ---
 title: Terms of Use
+description: Read the terms and conditions governing your use of ethereum.org and related websites operated by the Ethereum Foundation.
 lang: en
 hideEditButton: true
 ---

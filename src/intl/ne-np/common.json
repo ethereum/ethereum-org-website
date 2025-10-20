@@ -274,7 +274,7 @@
   "nav-layer-2-description": "Ethereum को लागि सस्तो र छिटो कारोवारहरू",
   "nav-learn-by-coding-description": "तपाईंलाई Ethereum सँग प्रयोग गर्न मद्दत गर्ने उपकरणहरू",
   "nav-local-env-description": "तपाईंको Ethereum विकास स्ट्याकलाई छान्नुहोस् र सेट अप गर्नुहोस्",
-  "nav-mainnet-description": "व्यापार ब्लकचेन एप्पनहरू सार्वजनिक Ethereum मेइन्नेटमा निर्माण गर्न सकिन्छ",
+  "nav-enterprise-description": "व्यापार ब्लकचेन एप्पनहरू सार्वजनिक Ethereum मेइन्नेटमा निर्माण गर्न सकिन्छ",
   "nav-nft-description": "Ethereum-आधारित सम्पत्तिको रूपमा कुनै पनि अद्वितीय प्रतिनिधित्व गर्ने एउटा तरिका",
   "nav-open-research-description": "Ethereum को एउटा मुख्य शक्ति यसको सक्रिय अनुसन्धान समुदाय हो",
   "nav-open-research-label": "अनुसन्धान खोल्नुहोस्",
@@ -427,5 +427,8 @@
   "withdrawals": "स्टेकिंग निकासी",
   "wrapped-ether": "बेरिएको Ether",
   "yes": "हो",
-  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाणहरू"
+  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाणहरू",
+  "ethereum-vs-bitcoin": "इथेरियम बनाम बिटकोइन",
+  "nav-ethereum-vs-bitcoin-description": "इथेरियम र बिटकोइन बीचको भिन्नताहरू बुझ्नुहोस्"
+
 }

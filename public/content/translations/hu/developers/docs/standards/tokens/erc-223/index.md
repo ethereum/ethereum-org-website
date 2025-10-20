@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Amikor a „RecipientContract” kap egy ERC-223 tokent, a szerződés a token tranzakció „_data” paramétereként kódolt függvényt hajt végre ugyanúgy, ahogy az ether-tranzakciók kódolják a függvényhívásokat a tranzakció „data” paramétereként. Tekintse meg [az adatmezőt](https://ethereum.org/en/developers/docs/transactions/#the-data-field) további információért.
+Amikor a „RecipientContract” kap egy ERC-223 tokent, a szerződés a token tranzakció „_data” paramétereként kódolt függvényt hajt végre ugyanúgy, ahogy az ether-tranzakciók kódolják a függvényhívásokat a tranzakció „data” paramétereként. Tekintse meg [az adatmezőt](/developers/docs/transactions/#the-data-field) további információért.
 
 A fenti példában az ERC-223 tokent a „RecipientContract” címre a „transfer(address,uin256,bytes calldata _data)” függvénnyel kell küldeni. Ha az adatparaméter „0xc2985578” (ami a „foo()” függvény jele), akkor a foo() függvény indul el a token letétbe helyezése után, és a Foo() eseményt adja.
 

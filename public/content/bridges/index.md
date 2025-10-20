@@ -60,7 +60,7 @@ If you have ETH on Ethereum Mainnet and you want to explore an alt L1 to try out
 Let’s say you want to own native Bitcoin (BTC), but you only have funds on Ethereum Mainnet. To gain exposure to BTC on Ethereum, you can buy Wrapped Bitcoin (WBTC). However, WBTC is an [ERC-20](/glossary/#erc-20) token native to the Ethereum network, which means it’s an Ethereum version of Bitcoin and not the original asset on the Bitcoin blockchain. To own native BTC, you would have to bridge your assets from Ethereum to Bitcoin using a bridge. This will bridge your WBTC and convert it into native BTC. Alternatively, you might own BTC and want to use it in Ethereum [DeFi](/glossary/#defi) protocols. This would require bridging the other way, from BTC to WBTC which can then be used as an asset on Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  You can also do all of the above using a <a href="/get-eth/">centralized exchange</a>. However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.
+  You can also do all of the above using a [centralized exchange](/get-eth). However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.
 </InfoBanner>
 
 <Divider />
@@ -99,7 +99,7 @@ Many bridging solutions adopt models between these two extremes with varying deg
 
 Using bridges allows you to move your assets across different blockchains. Here are some resources that can help you find and use bridges:
 
-- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/risk)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
+- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/summary)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
 - **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: A summary of bridge volumes across Ethereum networks.
 
 <Divider />
@@ -126,7 +126,7 @@ User's funds are at risk if:
 
 One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million USD) was stolen during the hack](https://rekt.news/wormhole-rekt/). Many of the [top hacks in blockchains involved bridges](https://rekt.news/leaderboard/).
 
-Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
+Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
@@ -134,6 +134,6 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 - [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _June 18, 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _July 5, 2022 - Bartek Kiepuszewski_
 - ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _January 8, 2022 - Vitalik Buterin_
-- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
-- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
 

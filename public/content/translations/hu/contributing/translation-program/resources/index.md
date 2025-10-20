@@ -17,14 +17,13 @@ Alább láthatja a hasznos útmutatókat és eszközöket az ethereum.org fordí
 
 ## Eszközök {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– megtalálhatja a technikai kifejezésekhez tartozó sztenderd fordításokat_
 - [Linguee](https://www.linguee.com/) _– fordításokhoz keresőmotor és szótár, mely szavak vagy kifejezések alapján is használható_
 - [Proz term search](https://www.proz.com/search/) _– adatbázis, melyben fordítói szótárak és speciális kifejezések szószedetei találhatók_
 - [Eurotermbank](https://www.eurotermbank.com/) _– európai kifejezések gyűjteménye 42 nyelven_
 
 ## Közösségek {#communities}
 
-- [Nyelvspecifikus Discord fordítói csoportok](/discord/) _– az ethereum.org fordítók összekapcsolása fordítói csoportokban_
+- [Nyelvspecifikus Discord fordítói csoportok](https://discord.gg/ethereum-org) _– az ethereum.org fordítók összekapcsolása fordítói csoportokban_
 - [Kínai fordítói csoport](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– Notion oldal a kínai fordítók közötti koordinációhoz_
 
 ## Legfrissebb hírek {#latest-updates}
@@ -38,7 +37,7 @@ A fordítási program legfrissebb híreihez tekintse meg az [Ethereum Alapítvá
 
 ## Fogadóóra a fordítóknak {#office-hours}
 
-Minden hónap második szerdáján tartunk fogadóórát a fordítóknak. Az #office-hours voice channel az [ethereum.org Discord](/discord/) csatornáján található, ahol pontos időpontokat és további részleteket is talál.
+Minden hónap második szerdáján tartunk fogadóórát a fordítóknak. Az #office-hours voice channel az [ethereum.org Discord](https://discord.gg/ethereum-org) csatornáján található, ahol pontos időpontokat és további részleteket is talál.
 
 A fogadóórák során a fordítók kérdezhetnek, visszajelzést adhatnak, megoszthatják elképzeléseiket, és beszélgethetnek az ethereum.org csapatával. Ezeket a megbeszéléseket arra is használjuk, hogy a legújabb dolgokat megosszuk a fordítási program kapcsán, illetve a fontos tippeket és útmutatásokat átadjuk a közreműködőknek.
 

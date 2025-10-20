@@ -1,35 +1,34 @@
 name: E2E tests
 on:
-  push:
-    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
-  pull_request:
-    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
+  workflow_dispatch: # Can be dispatched manually
 jobs:
   playwright:
     runs-on: ubuntu-latest
     env:
       CI: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - name: Wait for Netlify Deploy
-        id: netlify_deploy
-        uses: pettinarip/wait-for-netlify-action@v1.0.2
-        with:
-          site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
-          max_timeout: 3600
-        env:
-          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: lts/*
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Get Netlify Deploy URL for branch
+        id: netlify_deploy
+        if: |
+          github.ref_name == 'dev' || github.ref_name == 'staging' || github.ref_name == 'master'
+        run: |
+          npx ts-node -O '{ "module": "commonjs" }' src/scripts/get-netlify-branch-deploy.ts
+        env:
+          NETLIFY_SITE_ID: "e8f2e766-888b-4954-8500-1b647d84db99"
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
 
       - name: Install Playwright with all browsers
         run: npx playwright install --with-deps
@@ -51,14 +50,14 @@ jobs:
     needs: playwright
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22.12.0
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
 
       - name: Install dependencies
         run: pnpm install
