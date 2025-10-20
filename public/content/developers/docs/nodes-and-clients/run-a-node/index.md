@@ -131,7 +131,7 @@ Below are a few projects which can help you install and control clients just wit
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Quickest and easiest way to setup a full node. One-liner setup tool and node management TUI. Free. Open source. Public goods for Ethereum by solo stakers. ARM64 and AMD64 support.
 - [eth-docker](https://eth-docker.net/) - Automated setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
-- [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
+- [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
 
