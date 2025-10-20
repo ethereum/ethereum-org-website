@@ -8,6 +8,8 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
+
 import { Alert, AlertContent } from "../ui/alert"
 import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
@@ -123,9 +125,13 @@ const WithdrawalCredentials: FC = () => {
       <Alert variant="error">
         <AlertContent className="inline">
           <strong>
-            {validator.isTestnet
-              ? t("comp-withdrawal-credentials-not-upgraded-1-testnet")
-              : t("comp-withdrawal-credentials-not-upgraded-1")}
+            {t("page-staking:comp-withdrawal-credentials-not-upgraded-1", {
+              network: validator.isTestnet
+                ? t("page-staking:page-staking-network-testnet", {
+                    network: CANONICAL_STAKING_TESTNET,
+                  })
+                : "",
+            })}
           </strong>{" "}
           <Translation id="page-staking:comp-withdrawal-credentials-not-upgraded-2" />
         </AlertContent>
@@ -148,7 +154,9 @@ const WithdrawalCredentials: FC = () => {
             onClick={() => checkWithdrawalCredentials()}
             disabled={!inputValue.length}
           >
-            {t("comp-withdrawal-credentials-verify-mainnet")}
+            {t("page-staking:comp-withdrawal-credentials-verify", {
+              network: "Mainnet",
+            })}
             {isLoading.mainnet && <Spinner />}
           </Button>
           <Button
@@ -156,7 +164,9 @@ const WithdrawalCredentials: FC = () => {
             disabled={!inputValue.length}
             variant="outline"
           >
-            {t("comp-withdrawal-credentials-verify-hoodi")}
+            {t("page-staking:comp-withdrawal-credentials-verify", {
+              network: "Hoodi",
+            })}
             {isLoading.testnet && <Spinner />}
           </Button>
         </Flex>
