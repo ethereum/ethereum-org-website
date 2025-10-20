@@ -36,7 +36,7 @@ const WithdrawalCredentials: FC = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
-    const network = isTestnet ? "Hoodi" : "Mainnet"
+    const network = isTestnet ? CANONICAL_STAKING_TESTNET : "Mainnet"
     const networkLowercase = network.toLowerCase()
     trackCustomEvent({
       eventCategory: `Validator index`,
@@ -165,7 +165,7 @@ const WithdrawalCredentials: FC = () => {
             variant="outline"
           >
             {t("page-staking:comp-withdrawal-credentials-verify", {
-              network: "Hoodi",
+              network: CANONICAL_STAKING_TESTNET,
             })}
             {isLoading.testnet && <Spinner />}
           </Button>

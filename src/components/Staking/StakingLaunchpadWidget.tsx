@@ -35,10 +35,10 @@ const StakingLaunchpadWidget = () => {
   }
 
   const data = {
-    testnet: {
-      label: `Hoodi ${t("testnet")}`,
-      url: "https://hoodi.launchpad.ethereum.org",
-    },
+    label: t("page-staking:page-staking-network-testnet", {
+      network: CANONICAL_STAKING_TESTNET,
+    }),
+    url: `https://${CANONICAL_STAKING_TESTNET.toLowerCase()}.launchpad.ethereum.org`,
     mainnet: {
       label: "Mainnet",
       url: "https://launchpad.ethereum.org",
