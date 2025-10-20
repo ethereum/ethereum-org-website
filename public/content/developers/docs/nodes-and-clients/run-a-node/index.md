@@ -395,7 +395,7 @@ A consensus client serves as a Beacon Node for validators to connect. Each conse
 
 Running your own validator allows for [solo staking](/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
-The easiest way to get started with staking and validator key generation is to use the [Holesky Testnet Staking Launchpad](https://holesky.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Holesky](https://notes.ethereum.org/@launchpad/holesky). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
+The easiest way to get started with staking and validator key generation is to use the [Hoodi Testnet Staking Launchpad](https://hoodi.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Hoodi](https://notes.ethereum.org/@launchpad/hoodi). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
 
 Look into [staking page](/staking) for an overview about staking options.
 

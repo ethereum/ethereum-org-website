@@ -34,8 +34,8 @@ const StakingLaunchpadWidget = () => {
 
   const data = {
     testnet: {
-      label: `Holesky ${t("testnet")}`,
-      url: "https://holesky.launchpad.ethereum.org",
+      label: `Hoodi ${t("testnet")}`,
+      url: "https://hoodi.launchpad.ethereum.org",
     },
     mainnet: {
       label: "Mainnet",
