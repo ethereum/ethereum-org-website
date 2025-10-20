@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Kunjungi Landasan Peluncuran Penaruhan",
   "comp-withdrawal-credentials-placeholder": "Indeks validator",
   "comp-withdrawal-credentials-error": "Ups! Periksa kembali nomor indeks validator dan coba lagi.",
-  "comp-withdrawal-credentials-upgraded-1": "Indeks validator {{validatorIndex}} siap menerima imbalan!",
+  "comp-withdrawal-credentials-upgraded-1": "Indeks validator {validatorIndex} siap menerima imbalan!",
   "comp-withdrawal-credentials-upgraded-2": "Kredensial penarikan terhubung ke alamat eksekusi:",
   "comp-withdrawal-credentials-not-upgraded-1": "Validator {network} ini perlu ditingkatkan.",
   "comp-withdrawal-credentials-not-upgraded-2": "Instruksi mengenai cara melakukan peningkatan saat ini dapat ditemukan di <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Landasan Peluncuran Penaruhan</a>",

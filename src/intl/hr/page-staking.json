@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Posjetite Ulagačku platformu",
   "comp-withdrawal-credentials-placeholder": "Validatorski indeks",
   "comp-withdrawal-credentials-error": "Opa! Provjerite još jednom broj validatorskog indeksa i pokušajte ponovno.",
-  "comp-withdrawal-credentials-upgraded-1": "Validatorski indeks {{validatorIndex}} spreman je primati nagrade!",
+  "comp-withdrawal-credentials-upgraded-1": "Validatorski indeks {validatorIndex} spreman je primati nagrade!",
   "comp-withdrawal-credentials-upgraded-2": "Vjerodajnice za povlačenje uloga povezane s adresom za izvršenje:",
   "comp-withdrawal-credentials-not-upgraded-1": "Ovog validatora {network} potrebno je ažurirati.",
   "comp-withdrawal-credentials-not-upgraded-2": "Upute kako nadograditi trenutno se nalaze na <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Ulagačkoj platformi</a>",

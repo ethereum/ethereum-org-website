@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Lawati Pad Pelancar Pertaruhan",
   "comp-withdrawal-credentials-placeholder": "Indeks pengesah",
   "comp-withdrawal-credentials-error": "Aduh! Semak semula nombor indeks pengesah dan cuba lagi.",
-  "comp-withdrawal-credentials-upgraded-1": "Indeks pengesah {{validatorIndex}} sedia untuk mula menerima ganjaran!",
+  "comp-withdrawal-credentials-upgraded-1": "Indeks pengesah {validatorIndex} sedia untuk mula menerima ganjaran!",
   "comp-withdrawal-credentials-upgraded-2": "Bukti kelayakan pengeluaran yang dikaitkan dengan alamat pelaksanaan:",
   "comp-withdrawal-credentials-not-upgraded-1": "Pengesah {network} ini perlu dinaik taraf.",
   "comp-withdrawal-credentials-not-upgraded-2": "Arahan tentang cara untuk naik taraf boleh didapati pada masa ini di <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\"> Pad Pelancaran Pertaruhan</a>",

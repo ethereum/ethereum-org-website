@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "سکوی پرتاب سهام‌گذاری را مشاهده کنید",
   "comp-withdrawal-credentials-placeholder": "شاخص اعتبارسنج",
   "comp-withdrawal-credentials-error": "اوه! شماره شاخص اعتبارسنج را دوباره بررسی و امتحان کنید.",
-  "comp-withdrawal-credentials-upgraded-1": "شاخص اعتبارسنج {{validatorIndex}} برای شروع دریافت جوایز آماده است!",
+  "comp-withdrawal-credentials-upgraded-1": "شاخص اعتبارسنج {validatorIndex} برای شروع دریافت جوایز آماده است!",
   "comp-withdrawal-credentials-upgraded-2": "اعتبارنامه های برداشت مرتبط با آدرس اجرا:",
   "comp-withdrawal-credentials-not-upgraded-1": "این اعتبار سنج {network} باید ارتقا یابد.",
   "comp-withdrawal-credentials-not-upgraded-2": "دستورالعمل‌های نحوه ارتقا را می‌توانید در <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">سکوی پرتاب سهام‌گذاری</a> پیدا کنید",

@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Ziyarci Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Fihirisar mai tantancewa",
   "comp-withdrawal-credentials-error": "Oops! sake duba lambar shaidar tsarin mai tantncewarku sai ku sake gwadawa.",
-  "comp-withdrawal-credentials-upgraded-1": "Fihirisar mai tantancewa {{validatorIndex}} yana shirin da zai fara karɓar kyauta!",
+  "comp-withdrawal-credentials-upgraded-1": "Fihirisar mai tantancewa {validatorIndex} yana shirin da zai fara karɓar kyauta!",
   "comp-withdrawal-credentials-upgraded-2": "Takardun shaidar cire kuɗi da aka danganta da adireshin farawa:",
   "comp-withdrawal-credentials-not-upgraded-1": "Wannan {network} 'mai tabbatarwa' na buƙatar sabuntawa.",
   "comp-withdrawal-credentials-not-upgraded-2": "Ana iya samun umarni a kan yadda ake sabuntawa yanzu a <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",

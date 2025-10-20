@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Bisitahin ang Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Index ng Validator",
   "comp-withdrawal-credentials-error": "Oops! I-double check ang validator index number at subukan ulit.",
-  "comp-withdrawal-credentials-upgraded-1": "Handa nang magsimulang tumanggap ng mga reward ang validator index {{validatorIndex}}!",
+  "comp-withdrawal-credentials-upgraded-1": "Handa nang magsimulang tumanggap ng mga reward ang validator index {validatorIndex}!",
   "comp-withdrawal-credentials-upgraded-2": "Mga kredensyal sa pag-withdraw na naka-link sa execution address:",
   "comp-withdrawal-credentials-not-upgraded-1": "Kailangang i-upgrade ang {network} validator na ito.",
   "comp-withdrawal-credentials-not-upgraded-2": "Kasalukuyang makikita ang mga tagubilin sa kung paano mag-upgrade ng <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",

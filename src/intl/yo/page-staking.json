@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Ṣàbẹ̀wò sí páàdì ìdókòwò",
   "comp-withdrawal-credentials-placeholder": "Atọ́ka olùyẹ̀wò",
   "comp-withdrawal-credentials-error": "O tì o! Tún nọ́mbà atọ́ka olùyẹ̀wò wo ní ẹẹkan si kí o sì gbìyànjú lẹ́ẹ̀kan si.",
-  "comp-withdrawal-credentials-upgraded-1": "Atọ́ka olùyẹ̀wò {{validatorIndex}} ti ṣe tán láti bẹ̀rẹ̀ sí ní gba èrè!",
+  "comp-withdrawal-credentials-upgraded-1": "Atọ́ka olùyẹ̀wò {validatorIndex} ti ṣe tán láti bẹ̀rẹ̀ sí ní gba èrè!",
   "comp-withdrawal-credentials-upgraded-2": "Àkọsílẹ̀ ìgbà owó wà ní àsópọ̀ pẹ̀lú àdírẹ́sì ìṣiṣẹ́:",
   "comp-withdrawal-credentials-not-upgraded-1": "Olúfọwọ́sí {network} nílò ìgbégasókè.",
   "comp-withdrawal-credentials-not-upgraded-2": "Àwọn ìlànà lori ìgbésọ́kè wà lọ́wọ́lọ́wọ́ lórí <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Páàdì àfilọ́lẹ̀ ìdókòwò</a>",

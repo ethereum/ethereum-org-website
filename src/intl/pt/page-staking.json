@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Visite o Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Indíce do validador",
   "comp-withdrawal-credentials-error": "Ups! Verifique novamente o número do índice do validador e tente novamente.",
-  "comp-withdrawal-credentials-upgraded-1": "O índice do validador {{validatorIndex}} está pronto para começar a receber recompensas!",
+  "comp-withdrawal-credentials-upgraded-1": "O índice do validador {validatorIndex} está pronto para começar a receber recompensas!",
   "comp-withdrawal-credentials-upgraded-2": "Credenciais de levantamento associadas ao endereço de execução:",
   "comp-withdrawal-credentials-not-upgraded-1": "Este validador {network} precisa ser atualizado.",
   "comp-withdrawal-credentials-not-upgraded-2": "Instruções sobre como atualizar podem ser encontradas em <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",

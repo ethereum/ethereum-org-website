@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "造訪質押啟動面板",
   "comp-withdrawal-credentials-placeholder": "驗證者索引",
   "comp-withdrawal-credentials-error": "糟糕！請核查驗證者索引號後再重試。",
-  "comp-withdrawal-credentials-upgraded-1": "驗證者索引 {{validatorIndex}} 已準備開始接收酬勞！",
+  "comp-withdrawal-credentials-upgraded-1": "驗證者索引 {validatorIndex} 已準備開始接收酬勞！",
   "comp-withdrawal-credentials-upgraded-2": "鏈接至執行地址的提款憑證：",
   "comp-withdrawal-credentials-not-upgraded-1": "這個 {network} 驗證者需要升級。",
   "comp-withdrawal-credentials-not-upgraded-2": "程式升級說明現已發佈於<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">質押啟動面板</a>",

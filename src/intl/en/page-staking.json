@@ -153,7 +153,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-start": "Start staking on {network}",
   "page-staking-launchpad-widget-span": "Choose network",
-  "page-staking-launchpad-widget-p1": "Solo validators are expected to <strong>test their setup</strong> and operational skills on the testnet before risking funds. Remember it is important to choose a <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">minority client</a> as it improves the security of the network and limits your risk.",
+  "page-staking-launchpad-widget-p1": "Solo validators are expected to <strong>test their setup</strong> and operational skills on the {{network}} testnet before risking funds. Remember it is important to choose a <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">minority client</a> as it improves the security of the network and limits your risk.",
   "page-staking-launchpad-widget-p2": "If you're comfortable with it, you can set up everything needed from the command line using the Staking Launchpad alone.",
   "page-staking-launchpad-widget-p3": "To make things easier, check out some of the tools and guides below that can help you alongside the Staking Launchpad to get your clients set up with ease.",
   "page-staking-launchpad-widget-link": "Software tools and guide",
@@ -205,7 +205,6 @@
   "page-staking-faq-4-question": "Is staking already live?",
   "page-staking-faq-4-answer-p1": "Yes. Staking has been live since December 1, 2020",
   "page-staking-faq-4-answer-p2": "This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards.",
-  "page-staking-faq-4-answer-p3": "The Merge also took place on September 15, 2022, and Ethereum has been fully secured by staked ETH ever since.",
   "page-staking-faq-4-answer-p3": "The Shanghai/Capella upgrade was completed April 12, 2023, enabling staking withdrawals, closing the loop on staking liquidity.",
   "page-staking-faq-5-question": "When can I withdraw my staked ETH?",
   "page-staking-faq-5-answer-p1": "Right now! Stakers are free to withdraw their rewards and/or principle deposit from their validator balance if they choose.",
@@ -236,6 +235,5 @@
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Subscribe to the EF Blog</a> to receive email notifications for the latest protocol announcements.",
   "page-staking-comparison-with-other-options": "Comparison with other options",
   "page-staking-any-amount": "Any amount",
-  "page-staking-network-testnet": "{network} testnet",
-  "page-staking-testnet": "testnet"
+  "page-staking-network-testnet": "{network} testnet"
 }

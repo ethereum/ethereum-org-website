@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "ステーキングローンチパッドへアクセスする",
   "comp-withdrawal-credentials-placeholder": "バリデータインデックス",
   "comp-withdrawal-credentials-error": "バリデータのインデックス番号を再確認して、再試行してください。",
-  "comp-withdrawal-credentials-upgraded-1": "{{validatorIndex}}",
+  "comp-withdrawal-credentials-upgraded-1": "{validatorIndex}",
   "comp-withdrawal-credentials-upgraded-2": "実行アドレスにリンクされている引き出し資格情報:",
   "comp-withdrawal-credentials-not-upgraded-1": "この{network}のバリデータはアップグレードが必要です。",
   "comp-withdrawal-credentials-not-upgraded-2": "アップグレード方法については、 <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> にてご覧いただけます。",

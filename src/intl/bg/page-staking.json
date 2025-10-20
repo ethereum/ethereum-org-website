@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Посетете „Лаунчпад за залагане“",
   "comp-withdrawal-credentials-placeholder": "Индекс на валидатор",
   "comp-withdrawal-credentials-error": "Опа! Проверете повторно индексния номер на валидатор и опитайте отново.",
-  "comp-withdrawal-credentials-upgraded-1": "Индексът на валидатор {{validatorIndex}} е готов да започне да получава награди!",
+  "comp-withdrawal-credentials-upgraded-1": "Индексът на валидатор {validatorIndex} е готов да започне да получава награди!",
   "comp-withdrawal-credentials-upgraded-2": "Идентификационни данни за теглене, свързани с адреса на изпълнение:",
   "comp-withdrawal-credentials-not-upgraded-1": "Този валидатор на {network} трябва да бъде надстроен.",
   "comp-withdrawal-credentials-not-upgraded-2": "Инструкции как да направите ъпгрейд към момента можете да намерите в <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Лаунчпад за залагане</a>",

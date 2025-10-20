@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "स्टेकिंग लॉन्चपैड पर जाएं",
   "comp-withdrawal-credentials-placeholder": "वैलिडेटर सूची",
   "comp-withdrawal-credentials-error": "उफ़! वैलिडेटर सूची संख्या को दोबारा जांचें और फिर से कोशिश करें।",
-  "comp-withdrawal-credentials-upgraded-1": "वैलिडेटर इंडेक्स {{validatorIndex}} पुरस्कार प्राप्त करना शुरू करने के लिए तैयार है!",
+  "comp-withdrawal-credentials-upgraded-1": "वैलिडेटर इंडेक्स {validatorIndex} पुरस्कार प्राप्त करना शुरू करने के लिए तैयार है!",
   "comp-withdrawal-credentials-upgraded-2": "निष्पादन पते से जुड़े निकासी क्रेडेंशियल:",
   "comp-withdrawal-credentials-not-upgraded-1": "इस {network} सत्यापनकर्ता को अपग्रेड करने की आवश्यकता है।",
   "comp-withdrawal-credentials-not-upgraded-2": "अपग्रेड करने के तरीके के निर्देश वर्तमान में <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">स्टेकिंग लॉन्चपैड</a> पर पाए जा सकते हैं",

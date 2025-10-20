@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Перейти к панели запуска стейкинга",
   "comp-withdrawal-credentials-placeholder": "Индекс валидатора",
   "comp-withdrawal-credentials-error": "Ошибка! Внимательно проверьте номер индекса валидатора и попробуйте еще раз.",
-  "comp-withdrawal-credentials-upgraded-1": "Индекс валидатора {{validatorIndex}} готов начать получать вознаграждения!",
+  "comp-withdrawal-credentials-upgraded-1": "Индекс валидатора {validatorIndex} готов начать получать вознаграждения!",
   "comp-withdrawal-credentials-upgraded-2": "Учетные данные для вывода средств, привязанные к адресу исполнения:",
   "comp-withdrawal-credentials-not-upgraded-1": "Этот валидатор в {network} необходимо обновить.",
   "comp-withdrawal-credentials-not-upgraded-2": "Инструкции по обновлению можно найти на <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">панели запуска стейкинга</a>",

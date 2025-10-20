@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Visiteu Plataforma de llançament d'apilament",
   "comp-withdrawal-credentials-placeholder": "Índex Validador",
   "comp-withdrawal-credentials-error": "Vaja! Comprova doblement el número d'índex del validador i torna-ho a provar.",
-  "comp-withdrawal-credentials-upgraded-1": "L'índex del validador {{validatorIndex}} està a punt per començar a rebre recompenses!",
+  "comp-withdrawal-credentials-upgraded-1": "L'índex del validador {validatorIndex} està a punt per començar a rebre recompenses!",
   "comp-withdrawal-credentials-upgraded-2": "Credencials de retirada enllaçades a l'adreça d'execució:",
   "comp-withdrawal-credentials-not-upgraded-1": "Aquest validador de la {network} necessita una actualització.",
   "comp-withdrawal-credentials-not-upgraded-2": "Les instruccions sobre com actualitzar es poden trobar actualment a la <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Plataforma de llançament d'apilament</a>",

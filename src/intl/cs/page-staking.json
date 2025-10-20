@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Navštivte spouštěcí panel uzamčení",
   "comp-withdrawal-credentials-placeholder": "Index validátora",
   "comp-withdrawal-credentials-error": "Jejda! Zkontrolujte číslo indexu validátora a zkuste to znovu.",
-  "comp-withdrawal-credentials-upgraded-1": "Index validátoru {{validatorIndex}} je připraven začít přijímat odměny!",
+  "comp-withdrawal-credentials-upgraded-1": "Index validátoru {validatorIndex} je připraven začít přijímat odměny!",
   "comp-withdrawal-credentials-upgraded-2": "Údaje k výběru spojené s adresou provedení:",
   "comp-withdrawal-credentials-not-upgraded-1": "Tohoto validátora {network} je třeba aktualizovat.",
   "comp-withdrawal-credentials-not-upgraded-2": "Pokyny k aktualizaci v současné době najdete na <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Spouštěcím panelu uzamčení</a>.",

@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Steyking ishga tushirish paneliga kirish",
   "comp-withdrawal-credentials-placeholder": "Validator indeksi",
   "comp-withdrawal-credentials-error": "Validator indeks raqamini ikki marta tekshiring va qayta urining.",
-  "comp-withdrawal-credentials-upgraded-1": "Validator indeksi {{validatorIndex}} mukofot olishni boshlashga tayyor!",
+  "comp-withdrawal-credentials-upgraded-1": "Validator indeksi {validatorIndex} mukofot olishni boshlashga tayyor!",
   "comp-withdrawal-credentials-upgraded-2": "Ijro manzili bilan bog‘langan yechib olish ma’lumotlari:",
   "comp-withdrawal-credentials-not-upgraded-1": "Bu {network} validatorini yangilash zarur.",
   "comp-withdrawal-credentials-not-upgraded-2": "Yangilash bo‘yicha ko‘rsatmalar hozir <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> sahifasida mavjud",

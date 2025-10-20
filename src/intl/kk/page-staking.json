@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Стейкингті іске қосу панеліне өту",
   "comp-withdrawal-credentials-placeholder": "Валидатор индексі",
   "comp-withdrawal-credentials-error": "Қате! Валидатор индексінің нөмірін тағы да тексеріп, іс-әрекетті қайталап көріңіз.",
-  "comp-withdrawal-credentials-upgraded-1": "Валидатор индексі {{validatorIndex}} сыйақы алуға дайын!",
+  "comp-withdrawal-credentials-upgraded-1": "Валидатор индексі {validatorIndex} сыйақы алуға дайын!",
   "comp-withdrawal-credentials-upgraded-2": "Орындау мекенжайына тіркелген қаражатты шығарып алуға арналған аккаунт деректері:",
   "comp-withdrawal-credentials-not-upgraded-1": "{network} бұл валидаторды жаңарту қажет.",
   "comp-withdrawal-credentials-not-upgraded-2": "Жаңарту туралы нұсқауларды  <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Стейкингті іске қосу панелінен</a> тауып алуға болады",

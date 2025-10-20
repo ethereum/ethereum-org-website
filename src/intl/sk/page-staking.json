@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Navštívte Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Index validátora",
   "comp-withdrawal-credentials-error": "Ups! Skontrolujte index validátora a skúste znovu.",
-  "comp-withdrawal-credentials-upgraded-1": "Index validátora {{validatorIndex}} je pripravený na prijímanie odmien!",
+  "comp-withdrawal-credentials-upgraded-1": "Index validátora {validatorIndex} je pripravený na prijímanie odmien!",
   "comp-withdrawal-credentials-upgraded-2": "Poverenia na výber priradené k realizačnej adrese:",
   "comp-withdrawal-credentials-not-upgraded-1": "Tento validátor {network} potrebuje byť aktualizovaný.",
   "comp-withdrawal-credentials-not-upgraded-2": "Inštrukcie, ako aktualizovať sú dostupné v <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Lanchpade</a>",

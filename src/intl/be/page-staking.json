@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Наведайце Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Індэкс валідатара",
   "comp-withdrawal-credentials-error": "Памылка! Праверце нумар індэкса валідатара і паспрабуйце зноў.",
-  "comp-withdrawal-credentials-upgraded-1": "Індэкс валідатара {{validatorIndex}} гатовы пачаць атрымліваць узнагароды!",
+  "comp-withdrawal-credentials-upgraded-1": "Індэкс валідатара {validatorIndex} гатовы пачаць атрымліваць узнагароды!",
   "comp-withdrawal-credentials-upgraded-2": "Уліковыя даныя для вываду сродкаў, прывязаныя да адраса выканання:",
   "comp-withdrawal-credentials-not-upgraded-1": "Гэты валідатар {network} патрабуе абнаўлення.",
   "comp-withdrawal-credentials-not-upgraded-2": "Інструкцыі па абнаўленні можна знайсці на <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",

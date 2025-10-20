@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "تفضل بزيارة منصة التشغيل الخاصة بتجميد العملات",
   "comp-withdrawal-credentials-placeholder": "مؤشر برنامج المدقق",
   "comp-withdrawal-credentials-error": "عذرًا! تحقّق مرة أخرى من رقم مؤشر برنامج المدقق وحاول مرة أخرى.",
-  "comp-withdrawal-credentials-upgraded-1": "مؤشر برنامج المدقق {{validatorIndex}} جاهز للبدء في تلقي المكافآت!",
+  "comp-withdrawal-credentials-upgraded-1": "مؤشر برنامج المدقق {validatorIndex} جاهز للبدء في تلقي المكافآت!",
   "comp-withdrawal-credentials-upgraded-2": "بيانات اعتماد السحب المرتبطة بعناوين التنفيذ:",
   "comp-withdrawal-credentials-not-upgraded-1": "برنامج المدقق {network} هذا بحاجة إلى ترقية.",
   "comp-withdrawal-credentials-not-upgraded-2": "يمكن العثور على التعليمات حول كيفية الترقية حاليًّا في <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">منصة التشغيل الخاصة بتجميد العملات</a>",

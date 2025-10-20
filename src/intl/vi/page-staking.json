@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Truy cập Launchpad Cổ phần",
   "comp-withdrawal-credentials-placeholder": "Chỉ số xác thực",
   "comp-withdrawal-credentials-error": "Rất tiếc! Kiểm tra chỉ số xác thực và thử lại.",
-  "comp-withdrawal-credentials-upgraded-1": "Chỉ số xác thực {{validatorIndex}} đã sẵn sàng để bắt đầu nhận thưởng!",
+  "comp-withdrawal-credentials-upgraded-1": "Chỉ số xác thực {validatorIndex} đã sẵn sàng để bắt đầu nhận thưởng!",
   "comp-withdrawal-credentials-upgraded-2": "Thông tin rút tiền được gắn liền với địa chủ rút:",
   "comp-withdrawal-credentials-not-upgraded-1": "Trình xác thực {network} cần được nâng cấp.",
   "comp-withdrawal-credentials-not-upgraded-2": "Hướng dẫn nâng cấp có thể tìm thấy tại <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",

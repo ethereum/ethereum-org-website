@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Tovább a Staking Launchpad oldalára",
   "comp-withdrawal-credentials-placeholder": "Validátorindex",
   "comp-withdrawal-credentials-error": "Hoppá! Kérjük, ellenőrizze a validátorindex számát, és próbálja újra.",
-  "comp-withdrawal-credentials-upgraded-1": "A validátorindex {{validatorIndex}} készen áll a jutalmak elnyerésére!",
+  "comp-withdrawal-credentials-upgraded-1": "A validátorindex {validatorIndex} készen áll a jutalmak elnyerésére!",
   "comp-withdrawal-credentials-upgraded-2": "A visszavonási adatok a végrehajtási címhez kapcsolódnak:",
   "comp-withdrawal-credentials-not-upgraded-1": "Ezt a {network}-validátort frissíteni kell.",
   "comp-withdrawal-credentials-not-upgraded-2": "A frissítésről szóló útmutatót megtalálja a <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> oldalon",

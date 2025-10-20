@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Make yu visit Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Index for pipol wey dey validate",
   "comp-withdrawal-credentials-error": "Oops! Make yu konfam index numba for pipol wey dey validate and try again.",
-  "comp-withdrawal-credentials-upgraded-1": "Index for pipol wey dey validate {{validatorIndex}} dey ready to dey receive riwods!",
+  "comp-withdrawal-credentials-upgraded-1": "Index for pipol wey dey validate {validatorIndex} dey ready to dey receive riwods!",
   "comp-withdrawal-credentials-upgraded-2": "Witdrawal kredenshials wey dem link to exekushon address:",
   "comp-withdrawal-credentials-not-upgraded-1": "Wi nid to upgrade pipol wey dey validate dis {network}.",
   "comp-withdrawal-credentials-not-upgraded-2": "Wi fit find instrukshons on hau to upgrade at <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Stakinging Launchpad</a>",

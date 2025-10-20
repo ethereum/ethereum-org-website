@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "স্টেকিং লঞ্চপ্যাড দেখুন",
   "comp-withdrawal-credentials-placeholder": "যাচাইকারী সূচক",
   "comp-withdrawal-credentials-error": "ওহ! যাচাইকারী সূচক নম্বরটি দুবার মিলিয়ে দেখুন এবং আবার চেষ্টা করুন।",
-  "comp-withdrawal-credentials-upgraded-1": "ভ্যালিডেটর ইনডেক্স {{validatorIndex}} পুরস্কার পাওয়া শুরু করার জন্য প্রস্তুত!",
+  "comp-withdrawal-credentials-upgraded-1": "ভ্যালিডেটর ইনডেক্স {validatorIndex} পুরস্কার পাওয়া শুরু করার জন্য প্রস্তুত!",
   "comp-withdrawal-credentials-upgraded-2": "প্রত্যাহার শংসাপত্রগুলি সম্পাদন ঠিকানার সাথে সংযুক্ত:",
   "comp-withdrawal-credentials-not-upgraded-1": "এই {network} যাচাইকারীকে আপগ্রেড করতে হবে।",
   "comp-withdrawal-credentials-not-upgraded-2": "কিভাবে আপগ্রেড করতে হয় তার নির্দেশাবলী বর্তমানে <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">স্টেকিং লঞ্চপ্যাড</a>-এ পাওয়া যাবে",

@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Bezoek Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Validator-index",
   "comp-withdrawal-credentials-error": "Oeps! Controleer het indexnummer van de validator en probeer het opnieuw.",
-  "comp-withdrawal-credentials-upgraded-1": "Validator-index {{validatorIndex}} is klaar om beloningen te ontvangen!",
+  "comp-withdrawal-credentials-upgraded-1": "Validator-index {validatorIndex} is klaar om beloningen te ontvangen!",
   "comp-withdrawal-credentials-upgraded-2": "Opnamegegevens gekoppeld aan executie-adres:",
   "comp-withdrawal-credentials-not-upgraded-1": "Deze {network}-validator moet worden geüpgraded.",
   "comp-withdrawal-credentials-not-upgraded-2": "Instructies over hoe te upgraden kun je momenteel vinden op <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
