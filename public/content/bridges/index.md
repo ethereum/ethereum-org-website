@@ -18,7 +18,7 @@ Let's consider an example:
 
 You're from the USA and are planning a trip to Europe. You have USD, but you need EUR to spend. To exchange your USD for EUR you can use a currency exchange for a small fee.
 
-But, what do you do if you want to make a similar exchange to use a different [blockchain](/glossary/#blockchain)? Let's say you want to exchange [ETH](/glossary/#ether) on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for EUR, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
+But, what do you do if you want to make a similar exchange to use a different [blockchain](/glossary/#blockchain)? Let's say you want to exchange [ETH](/glossary/#ether) on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for EUR, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://portal.arbitrum.io/bridge) that can transfer ETH from Mainnet onto Arbitrum.
 
 ## Why do we need bridges? {#why-do-we-need-bridges}
 
