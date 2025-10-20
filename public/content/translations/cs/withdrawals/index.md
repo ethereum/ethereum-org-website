@@ -65,7 +65,7 @@ Výběry vkladů jsou živé! Funkce výběru byla povolena v rámci upgradu Sha
 
 Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžné účty Ethereum. Tím se uzavřela smyčka v nasazování likvidity a Ethereum se o krok přiblížilo na jeho cestě k vybudování udržitelného, ​​škálovatelného a bezpečného decentralizovaného ekosystému.
 
-- [Více o historii Etherea](/history/)
+- [Více o historii Etherea](/ethereum-forks/)
 - [Více o plánu Etherea](/roadmap/)
 
 ## Jak fungují platby za výběr? {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Pokud jste součástí <a href="/staking/pools/">vkladového fondu</a> nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
+Pokud jste součástí [vkladového fondu](/staking/pools/) nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
 
-Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete <a href="/staking/solo/">vložit z domova</a>.
+Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [vložit z domova](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré doda
 
 - [Výběry z vkladového spouštěcího panelu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Řetězová vazba výběru jako operace](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Šanghaj](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Výběr vložených ETH (testování) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Výběry pomocí řetězové vazby jako operace s Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumění efektivnímu zůstatku validátoru](https://www.attestant.io/posts/understanding-validator-effective-balance/)

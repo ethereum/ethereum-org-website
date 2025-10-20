@@ -1,12 +1,14 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ExternalLink, Mail } from "lucide-react"
+import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
+import { MatomoEventOptions } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
@@ -15,6 +17,19 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { Link as I18nLink } from "@/i18n/routing"
 import { usePathname } from "@/i18n/routing"
+
+export const ExternalLinkIcon = () => {
+  const { twFlipForRtl } = useRtlFlip()
+  return (
+    <ExternalLink
+      data-label="arrow"
+      className={cn(
+        "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
+        twFlipForRtl
+      )}
+    />
+  )
+}
 
 type BaseProps = {
   hideArrow?: boolean
@@ -53,8 +68,6 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   ref
 ) {
   const pathname = usePathname()
-  const { twFlipForRtl } = useRtlFlip()
-
   if (!href) {
     // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
@@ -116,15 +129,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         <VisuallyHidden>
           {isMailto ? "opens email client" : "opens in a new tab"}
         </VisuallyHidden>
-        {!hideArrow && !isMailto && (
-          <ExternalLink
-            data-label="arrow"
-            className={cn(
-              "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
-              twFlipForRtl
-            )}
-          />
-        )}
+        {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
   }
@@ -191,6 +196,27 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   )
 })
 BaseLink.displayName = "BaseLink"
+
+export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ children, className, ...props }: LinkProps, ref) => {
+    const { twFlipForRtl } = useRtlFlip()
+    return (
+      <BaseLink
+        className={cn(
+          "group block w-fit no-underline visited:text-primary-visited",
+          className
+        )}
+        ref={ref}
+        {...props}
+      >
+        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
+        &nbsp;
+        <span className="group-hover:underline">{children}</span>
+      </BaseLink>
+    )
+  }
+)
+LinkWithArrow.displayName = "LinkWithArrow"
 
 const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
   (props: LinkProps, ref) => {

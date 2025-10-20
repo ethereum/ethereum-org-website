@@ -65,7 +65,7 @@ Staking witdrawals don dey live! Dem don enabol witdrawal funkshonality as part 
 
 Di Shanghai/Capella upgrade don allow ETH wey dem stake bifor make dem  riklaim am into regular Ethereum akants. Dis don klose di loop on staking liquidity, and don bring Ethereum one step klosa on im joni towods building one sustainabol, kcalabol, sekure disentralized ekosystem.
 
-- [More on Ethereum history](/history/)
+- [More on Ethereum history](/ethereum-forks/)
 - [More on di Ethereum roadmap](/roadmap/)
 
 ## Hau witdrawal payments dey work? {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-If yu dey part of one <a href="/staking/pools/">staking pool</a> abi dey hold staking tokens, go shek wit yor provida for more details on hau dem dey handol staking witdrawals as ish savis dey operate difrent.
+If yu dey part of one [staking pool](/staking/pools/) abi dey hold staking tokens, go shek wit yor provida for more details on hau dem dey handol staking witdrawals as ish savis dey operate difrent.
 
-In general, users suppose dey free to take dem ETH wey dem stake normal, abi dey shanj wey staking provida dey yus. If one partikular pool dey gettoo big, dem fit komot, ridim, and re-stake funds wit one <a href="https://rated.network/">provida wey smoll pass</a>. Abi, if yu don gada enuf ETH wey yu fit <a href="/staking/solo/">stake from home</a>.
+In general, users suppose dey free to take dem ETH wey dem stake normal, abi dey shanj wey staking provida dey yus. If one partikular pool dey gettoo big, dem fit komot, ridim, and re-stake funds wit one <a href="https://rated.network/">provida wey smoll pass</a>. Abi, if yu don gada enuf ETH wey yu fit [stake from home](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ No. Wons one validator don komot and don witdraw en full balans, any funds wey d
 
 - [To Dey Stake Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operashons](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) wit Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push witdrawals as operashons wit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [To dey ondastand Validator Effective Balans](https://www.attestant.io/posts/understanding-validator-effective-balance/)

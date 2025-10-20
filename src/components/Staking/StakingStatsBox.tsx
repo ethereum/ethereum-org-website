@@ -47,7 +47,9 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
 
   // Helper functions
   const formatInteger = (amount: number): string =>
-    new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
+    amount
+      ? new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
+      : "—"
 
   const formatPercentage = (amount: number): string =>
     new Intl.NumberFormat(localeForStatsBoxNumbers, {

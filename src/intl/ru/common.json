@@ -231,7 +231,7 @@
   "nav-contribute-description": "Если вам нужна помощь, вам это пригодится",
   "nav-contribute-label": "Помощь в развитии ethereum.org",
   "nav-dao-description": "Сообщества, принадлежащие своим членам, без централизованного аппарата управления",
-  "nav-dapps-description": "Откройте для себя богатую экосистему приложений с помощью Ethereum",
+  "nav-apps-description": "Откройте для себя богатую экосистему приложений с помощью Ethereum",
   "nav-defi-description": "Глобальная открытая альтернатива традиционному финансовому рынку",
   "nav-desci-description": "Глобальная открытая альтернатива существующей научной системе",
   "nav-desoc-description": "Платформы на основе блокчейна для социального взаимодействия и создания контента",
@@ -280,7 +280,7 @@
   "nav-history-label": "Техническая история Ethereum",
   "nav-learn-by-coding-description": "Инструменты, помогающие экспериментировать с Ethereum",
   "nav-local-env-description": "Выберите и настройте свой стек разработки Ethereum",
-  "nav-mainnet-description": "Блокчейн-приложения для компаний можно создавать на публичной основной сети Ethereum",
+  "nav-enterprise-description": "Блокчейн-приложения для компаний можно создавать на публичной основной сети Ethereum",
   "nav-networks-home-description": "Транзакции Ethereum дешевле и быстрее",
   "nav-networks-introduction-label": "Введение",
   "nav-networks-introduction-description": "Ethereum разросся до сети из сетей",
@@ -444,5 +444,8 @@
   "withdrawals": "Вывод средств, использованных в стейкинге",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Да",
-  "zero-knowledge-proofs": "Доказательства с нулевым разглашением"
+  "zero-knowledge-proofs": "Доказательства с нулевым разглашением",
+  "ethereum-vs-bitcoin": "Эфириум против Биткоина",
+  "nav-ethereum-vs-bitcoin-description": "Понять различия между Эфириумом и Биткоином"
+
 }

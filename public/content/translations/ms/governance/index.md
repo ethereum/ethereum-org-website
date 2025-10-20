@@ -44,7 +44,7 @@ Terdapat pelbagai pihak berkepentingan dalam [komuniti Ethereum](/community/), s
 
 - **Pemegang Ether**: mereka ini memegang sembarangan jumlah ETH. [Lagi tentang ETH](/eth/).
 - **Permohonan Pengguna**: mereka ini berinteraksi dengan aplikasi pada blok rantai Ethereum.
-- **Permohonan/Pemaju Alat**: mereka ini menulis aplikasi yang dijalankan di blok rantai Ethereum (contohnya DeFi, NFT, dll.) atau membina alat untuk berinteraksi dengan Ethereum (contohnya dompet, suite ujian, dll.). [Lagi tentang dapp](/dapps/).
+- **Permohonan/Pemaju Alat**: mereka ini menulis aplikasi yang dijalankan di blok rantai Ethereum (contohnya DeFi, NFT, dll.) atau membina alat untuk berinteraksi dengan Ethereum (contohnya dompet, suite ujian, dll.). [Lagi tentang dapp](/apps/).
 - **Penggendali Nod**: mereka ini menjalankan nod yang menyebarkan blok dan transaksi, menolak sebarang transaksi yang tidak sah atau menyekat yang hadir. [Lagi tentang nod](/developers/docs/nodes-and-clients/).
 - **Penulis EIP **: mereka ini mencadangkan perubahan kepada protokol Ethereum, dalam bentuk Cadangan Penambahbaikan Ethereum (EIP). [Lagi tentang EIP](/eips/).
 - **Validators**: mereka ini menjalankan nod yang boleh menambah blok baru ke blok rantai Ethereum.
@@ -118,7 +118,7 @@ Secara amnya, perselisihan dikendalikan dengan perbincangan lama dalam forum awa
 
 Cabang ialah apabila peningkatan teknikal utama atau perubahan perlu dibuat kepada rangkaian dan menukar "peraturan" protokol. [ Pelanggan Ethereum](/developers/docs/nodes-and-clients/) mesti mengemas kini perisian mereka untuk melaksanakan peraturan cabang baru.
 
-Cabang DAO adalah sebagai tindak balas kepada [serangan DAO tahun 2016](https://www.coindesk.com/understanding-dao-hack-journalists) di mana kontrak [DAO](/glossary/#dao) yang tidak selamat telah disedut lebih daripada 3.6 juta ETH dalam satu serangan penggodaman. Cabang itu memindahkan dana daripada kontrak yang rosak kepada kontrak baru yang membolehkan sesiapa yang kehilangan dana dalam serangan penggodaman untuk mendapatkannya semula.
+Cabang DAO adalah sebagai tindak balas kepada [serangan DAO tahun 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) di mana kontrak [DAO](/glossary/#dao) yang tidak selamat telah disedut lebih daripada 3.6 juta ETH dalam satu serangan penggodaman. Cabang itu memindahkan dana daripada kontrak yang rosak kepada kontrak baru yang membolehkan sesiapa yang kehilangan dana dalam serangan penggodaman untuk mendapatkannya semula.
 
 Tindakan ini telah diundi oleh masyarakat Ethereum. Mana-mana pemegang ETH boleh mengundi melalui transaksi pada [ platform mengundi](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Keputusan untuk mencabang mencapai lebih 85% undi.
 
@@ -152,7 +152,7 @@ Proses tadbir urus Ethereum sering diniagakan daripada kelajuan dan kecekapan un
 
 Walaupun spesifikasi dan pelaksanaan pembangunan sentiasa sumber terbuka sepenuhnya, proses formal yang digunakan untuk mencadangkan kemas kini yang diterangkan di atas tidak digunakan. Ini membolehkan perubahan ditentukan dan dipersetujui dengan lebih cepat oleh penyelidik dan pelaksana.
 
-Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 September 2022, The Merge ini telah lengkap sebagai sebahagian daripada [naik taraf rangkaian Paris](/history/#paris). Cadangan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) telah ditukar daripada 'Panggilan Terakhir' kepada 'Muktamad', melengkapkan peralihan kepada bukti penaruhan.
+Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 September 2022, The Merge ini telah lengkap sebagai sebahagian daripada [naik taraf rangkaian Paris](/ethereum-forks/#paris). Cadangan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) telah ditukar daripada 'Panggilan Terakhir' kepada 'Muktamad', melengkapkan peralihan kepada bukti penaruhan.
 
 <ButtonLink href="/roadmap/merge/">
   Lagi tentang The Merge

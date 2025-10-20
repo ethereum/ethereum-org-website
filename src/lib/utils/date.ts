@@ -17,3 +17,9 @@ export const formatDate = (date: string, locale: string = "en-US") => {
     year: "numeric",
   })
 }
+
+export const isDateReached = (date: string) => {
+  const today = new Date()
+  const threshold = new Date(date)
+  return threshold >= today
+}

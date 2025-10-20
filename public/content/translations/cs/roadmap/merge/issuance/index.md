@@ -30,11 +30,11 @@ title="Vydávání ETH tldr">
 
 ### Vydávání v exekuční vrstvě {#el-issuance-pre-merge}
 
-Za časů důkazu prací komunikovali těžaři pouze s exekuční vrstvou, a pokud byli první, kdo vyřešil další blok, byla jejich práce kompenzována blokovými odměnami. Od [vylepšení Constantinople](/history/#constantinople) v roce 2019 činila tato odměna 2 ETH na blok. Těžaři byli také odměňováni za zveřejňování [ommer](/glossary/#ommer) bloků, což byly platné bloky, které se neobjevily v nejdelším/kanonickém řetězci. Tyto odměny dosahovaly maximálně 1,75 ETH na ommer a těžaři je dostávali _navíc k_ odměně za kanonický blok. Proces těžby byl ekonomicky náročnou aktivitou, která v minulosti navíc vyžadovala vysokou úroveň vydávání ETH za účelem zachování udržitelnosti.
+Za časů důkazu prací komunikovali těžaři pouze s exekuční vrstvou, a pokud byli první, kdo vyřešil další blok, byla jejich práce kompenzována blokovými odměnami. Od [vylepšení Constantinople](/ethereum-forks/#constantinople) v roce 2019 činila tato odměna 2 ETH na blok. Těžaři byli také odměňováni za zveřejňování [ommer](/glossary/#ommer) bloků, což byly platné bloky, které se neobjevily v nejdelším/kanonickém řetězci. Tyto odměny dosahovaly maximálně 1,75 ETH na ommer a těžaři je dostávali _navíc k_ odměně za kanonický blok. Proces těžby byl ekonomicky náročnou aktivitou, která v minulosti navíc vyžadovala vysokou úroveň vydávání ETH za účelem zachování udržitelnosti.
 
 ### Vydávání ve vrstvě konsenzu {#cl-issuance-pre-merge}
 
-[Řetězová vazba](/history/#beacon-chain-genesis) byla spuštěna v roce 2020. Místo těžařů je zabezpečena validátory využívajícími důkaz podílem. Tento řetězec byl inicializován uživateli Etherea, kteří vkládali ETH jednosměrně do chytrého kontraktu na hlavní síti (exekuční vrstva), který Řetězová vazba sledovala a připsala uživateli stejné množství ETH na novém řetězci. Dokud nedošlo ke Sloučení, validátoři Řetězové vazby nezpracovávali transakce a v podstatě dosahovali shody ohledně samotného stavu poolu validátorů.
+[Řetězová vazba](/ethereum-forks/#beacon-chain-genesis) byla spuštěna v roce 2020. Místo těžařů je zabezpečena validátory využívajícími důkaz podílem. Tento řetězec byl inicializován uživateli Etherea, kteří vkládali ETH jednosměrně do chytrého kontraktu na hlavní síti (exekuční vrstva), který Řetězová vazba sledovala a připsala uživateli stejné množství ETH na novém řetězci. Dokud nedošlo ke Sloučení, validátoři Řetězové vazby nezpracovávali transakce a v podstatě dosahovali shody ohledně samotného stavu poolu validátorů.
 
 Validátoři na Řetězové vazbě jsou za potvrzování stavu řetězce a navrhování bloků odměňováni v ETH. Odměny (nebo pokuty) jsou vypočítávány a rozdělovány každou epochu (každých 6,4 minuty) na základě výkonu validátorů. Odměny validátorům jsou **výrazně** menší než odměny za těžbu, které byly dříve vydávány v době důkazu prací (2 ETH každých ~13,5 sekundy), protože provoz validujícího uzlu není tak ekonomicky náročný, a proto nevyžaduje, a tím pádem ani neospravedlňuje, tak vysokou odměnu.
 
@@ -94,7 +94,7 @@ Celková roční míra vydávání: <strong>~0,52 %</strong><br/><br/>
 Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce na Ethereu provedena, musí být zaplacen minimální poplatek (známý jako „základní poplatek“), který se neustále mění (blok od bloku) v závislosti na aktivitě sítě. Poplatek je placen v ETH a je _nezbytný_ pro to, aby byla transakce považována za platnou. Tento poplatek je během transakčního procesu _pálen_, čímž se odstraňuje z oběhu.
 
 <InfoBanner>
-Pálení poplatků bylo spuštěno s <a href="/history/#london">vylepšením London</a> v srpnu 2021 a od Sloučení zůstává beze změn.
+Pálení poplatků bylo spuštěno s [vylepšením London](/ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává beze změn.
 </InfoBanner>
 
 Kromě pálení poplatků zavedeného s vylepšením London mohou validátoři také dostávat pokuty za to, že jsou offline, nebo hůře, mohou být „potrestáni“ za porušení specifických pravidel, které ohrožuje bezpečnost sítě. Tyto pokuty vedou k odečtení ETH od zůstatku validátora, aniž by byly převedeny jako odměna jinému účtu, čímž se efektivně pálí/odstraňují z oběhu.

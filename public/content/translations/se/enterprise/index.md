@@ -40,7 +40,7 @@ Följande projekt tillhandahåller blockchain-tjänster för system för storfö
 - [Blockapps](https://blockapps.net/) _implementering av Enterprise Ethereum-protokollet, verktyg och API:er som bildar STRATO-plattformen_
 - [Clearmatics](https://www.clearmatics.com/about) _protokoll och peer-to-peer-plattformsarkitektur, blockchain R&D företag_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _erbjuder samma funktioner som HF Besu, plus ytterligare företagsfokuserade fördelar_
-- [Quorum](https://www.goquorum.com/) _blockchain-plattform med öppen källkod som kombinerar innovation av den offentliga Ethereum-gemenskapen med förbättringar för att stödja företagens behov_
+- [Quorum](https://docs.goquorum.consensys.io/) _blockchain-plattform med öppen källkod som kombinerar innovation av den offentliga Ethereum-gemenskapen med förbättringar för att stödja företagens behov_
 
 ## Protokoll och infrastruktur {#protocol-and-infrastructure}
 
@@ -62,8 +62,7 @@ Offentliga och privata Ethereum-nätverk kan behöva specifika funktioner som kr
 ### Sekretess {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Mer information finns [här](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Mer information finns [här](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Mer information finns [här](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Mer information finns [här](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Säkerhet {#security}
 
@@ -73,7 +72,7 @@ Offentliga och privata Ethereum-nätverk kan behöva specifika funktioner som kr
 ### Verktyg {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
-- [Treum](https://treum.io/) _ger transparens, spårbarhet och handelsförmåga till försörjningskedjor, med hjälp av blockchain-teknik_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _ger transparens, spårbarhet och handelsförmåga till försörjningskedjor, med hjälp av blockchain-teknik_
 
 ## Enterprise utvecklargemenskap {#enterprise-developer-community}
 
@@ -81,7 +80,6 @@ Offentliga och privata Ethereum-nätverk kan behöva specifika funktioner som kr
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu kanal)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow kanal)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack kanal](http://bit.ly/quorum-slack)

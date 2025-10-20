@@ -9,7 +9,10 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
@@ -21,11 +24,9 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 interface MobileFiltersProps {
   filters: FilterOption[]
-  setFilters: React.Dispatch<React.SetStateAction<FilterOption[]>>
+  setFilters: (filters: FilterOption | FilterOption[]) => void
   presets: TPresetFilters
   presetFiltersCounts?: number[]
-  activePresets: number[]
-  handleSelectPreset: (index: number) => void
   dataCount: number
   activeFiltersCount: number
   mobileFiltersOpen: boolean
@@ -39,8 +40,6 @@ const MobileFilters = ({
   setFilters,
   presets,
   presetFiltersCounts,
-  activePresets,
-  handleSelectPreset,
   dataCount,
   activeFiltersCount,
   mobileFiltersOpen,
@@ -65,7 +64,11 @@ const MobileFilters = ({
         }}
       >
         <DrawerTrigger className="px-4" asChild>
-          <Button variant="outline" className="gap-4 border-0 ps-4">
+          <Button
+            variant="outline"
+            className="gap-4 border-0 ps-4"
+            data-testid="mobile-filters-button"
+          >
             <div className="flex flex-col text-left">
               <p>{t("table-filters")}</p>
               <p className="text-body-medium">{` ${activeFiltersCount} ${t("table-active")}`}</p>
@@ -83,12 +86,18 @@ const MobileFilters = ({
               </Button>
             </DrawerClose>
           </div>
+          <DrawerHeader className="sr-only">
+            <DrawerTitle>{t("table-filters")}</DrawerTitle>
+            <DrawerDescription>
+              {`${activeFiltersCount} ${t("table-active")}`}
+            </DrawerDescription>
+          </DrawerHeader>
           <div className="flex-1 overflow-y-auto">
             <PresetFilters
               presets={presets}
+              filters={filters}
               presetFiltersCounts={presetFiltersCounts}
-              activePresets={activePresets}
-              handleSelectPreset={handleSelectPreset}
+              setFilters={setFilters}
               showMobileSidebar={true}
             />
             <Filters
@@ -111,7 +120,10 @@ const MobileFilters = ({
                 </Button>
               </div>
               <DrawerClose className="text-center" asChild>
-                <Button className="w-full">{`${mobileFiltersLabel} (${dataCount})`}</Button>
+                <Button
+                  className="w-full"
+                  data-testid="mobile-filters-submit-button"
+                >{`${mobileFiltersLabel} (${dataCount})`}</Button>
               </DrawerClose>
             </div>
           </DrawerFooter>

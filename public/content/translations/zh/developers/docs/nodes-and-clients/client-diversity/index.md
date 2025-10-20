@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 [Grandine](https://docs.grandine.io/)
 

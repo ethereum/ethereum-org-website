@@ -585,7 +585,7 @@ It still fails, but now it fails without a reason because it happens during the 
 
 ### How can a user verify the zero trust code? {#user-verify-zero-trust}
 
-Smart contracts are relatively easy to verify. Typically, the developer publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](https://ethereum.org/en/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
+Smart contracts are relatively easy to verify. Typically, the developer publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
 
 This is harder with zero-knowledge. The verifier includes some constants and runs some calculations on them. This doesn't tell you what is being proved.
 
@@ -722,6 +722,8 @@ So, now you know how to write a game with a server that stores secret state that
 - _Long running game_: [As mentioned above](#why-zero-knowledge), in a short game you can just publish the state once the game is over and have everything verified then. But that is not an option when the game takes a long or indefinite time, and the state needs to stay secret.
 
 - _Some centralization acceptable_: Zero-knowledge proofs can verify integrity, that an entity is not faking the results. What they can't do is ensure that the entity will still be available and answer messages. In situations where availability also needs to be decentralized, zero-knowledge proofs are not a sufficient solution, and you need [multi-party computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
+
+[See here for more of my work](https://cryptodocguy.pro/).
 
 ### Acknowledgements {#acknowledgements}
 

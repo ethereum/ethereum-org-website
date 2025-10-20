@@ -65,7 +65,7 @@ _いかなる_資金もバリデータアカウントの残高から移動でき
 
 上海/カペラアップグレードによって、過去にステークされていたETHを一般的なイーサリアムアカウントに回収することが可能になりました。 これにより、流動性をステークするループが閉じられ、イーサリアムは持続可能でスケーラブルかつ安全な分散型エコシステムの構築に向けた旅に一歩近づきました。
 
-- [イーサリアムの歴史についてより詳しく](/history/)
+- [イーサリアムの歴史についてより詳しく](/ethereum-forks/)
 - [イーサリアムのロードマップについてより詳しく](/roadmap/)
 
 ## 引き出しはどのように機能しますか？ {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-もし <a href="/staking/pools/">ステーキングプール</a> に参加しているか、ステーキングトークンを保有している場合は、各サービスによって運用が異なるため、ステーキングの引き出し方法の詳細については、プロバイダーに確認する必要があります
+もし [ステーキングプール](/staking/pools/) に参加しているか、ステーキングトークンを保有している場合は、各サービスによって運用が異なるため、ステーキングの引き出し方法の詳細については、プロバイダーに確認する必要があります
 
-一般的に、ユーザーは自由に元金であるステークされたETHを回収したり、利用するステーキングプロバイダーを変更したりできるはずです。 特定のプールが大きくなりすぎた場合は、撤退および償還し、<a href="https://rated.network/">より小さいプロバイダー</a>で再びステーキングできます。 それとも、もし十分なETHが貯まっているなら <a href="/staking/solo/">自宅のコンピューターでステーク</a>することもできます。
+一般的に、ユーザーは自由に元金であるステークされたETHを回収したり、利用するステーキングプロバイダーを変更したりできるはずです。 特定のプールが大きくなりすぎた場合は、撤退および償還し、<a href="https://rated.network/">より小さいプロバイダー</a>で再びステーキングできます。 それとも、もし十分なETHが貯まっているなら [自宅のコンピューターでステーク](/staking/solo/)することもできます。
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ eventName="read more">
 
 - [Staking Launchpad 「Withdrawals」](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: ビーコンチェーンプッシュ引き出しの実装](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Hsiao-Wei WangによるステークしたETHの引き出し(テスト)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: Alex Stokesによるビーコンチェーンプッシュ引き出しの実装の解説](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [バリデーターの有効残高について理解する](https://www.attestant.io/posts/understanding-validator-effective-balance/)

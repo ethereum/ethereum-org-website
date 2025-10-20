@@ -11,7 +11,7 @@ Az Ethereum adatszerkezete egy „módosított Merkle-Patricia-fa (trie)”, ame
 
 A Merkle-Patricia-fa determinisztikus és kriptográfiailag ellenőrizhető: a státusz gyökerét csak úgy lehet előállítani, ha azt a státusz minden egyes darabjából kiszámítjuk, és két azonos státusz könnyen bizonyítható a gyökér-hash és az ahhoz vezető hash-ek az összehasonlításával (_Merkle-bizonyíték_). Ezzel szemben nem lehet két különböző státuszt létrehozni ugyanazzal a gyökér-hash-értékkel, és minden olyan kísérlet, hogy a státuszt különböző értékekkel módosítsák, más státusz gyökér-hash-t eredményez. Elméletileg ez a struktúra biztosítja a `O(log(n))` hatékonyság „szent grálját” a beleírások, keresések és törlések esetében.
 
-A közeljövőben az Ethereum tervezi, hogy áttér a [Verkle-fastruktúrára](https://ethereum.org/en/roadmap/verkle-trees), amely új lehetőségeket nyit a jövőbeli protokollfejlesztések előtt.
+A közeljövőben az Ethereum tervezi, hogy áttér a [Verkle-fastruktúrára](/roadmap/verkle-trees), amely új lehetőségeket nyit a jövőbeli protokollfejlesztések előtt.
 
 ## Előfeltételek {#prerequisites}
 

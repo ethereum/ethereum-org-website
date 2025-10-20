@@ -23,7 +23,7 @@ type CodeModalProps = {
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const { t } = useTranslation()
   const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
-    .children.props.children
+    .children
 
   const { onCopy, hasCopied } = useClipboard()
 

@@ -18,7 +18,7 @@ It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook v7, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
+> 🚨 NOTE: This project uses Storybook v8.6+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
@@ -40,7 +40,7 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
-const meta {
+const meta = {
   title: "ComponentA",
   component: ComponentA
 } satisfies Meta<typeof ComponentA>
@@ -71,7 +71,7 @@ import Button from "."
 
 type ButtonType = typeof Button
 
-const meta {
+const meta = {
   title: "Atoms / Form / Button",
   component: Button
 } satisfies Meta<ButtonType>

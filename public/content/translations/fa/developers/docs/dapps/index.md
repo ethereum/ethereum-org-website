@@ -82,7 +82,7 @@ lang: fa
 
 ## بیشتر بخوانید {#further-reading}
 
-- [کاوش در برنامه‌های غیرمتمرکز](/dapps)
+- [کاوش در برنامه‌های غیرمتمرکز](/apps)
 - [معماری یک اپلیکیشن Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _پریتی کسیردی_
 - [راهنمای 2021 برای اپلیکیشن‌های غیرمتمرکز](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) -‏ _LimeChain_
 - [اپلیکیشن‌های غیرمتمرکز چه هستند؟](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) -‏ _Gemini_

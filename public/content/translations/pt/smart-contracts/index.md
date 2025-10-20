@@ -65,7 +65,7 @@ Podem efetuar cálculos, criar divisas, armazenar dados, cunhar NFTs, enviar com
 - [Stablecoins](/stablecoins/)
 - [Criar e distribuir ativos digitais únicos](/nft/)
 - [Um câmbio de moeda aberto e automático](/get-eth/#dex)
-- [Jogos descentralizados](/dapps/?category=gaming#explore)
+- [Jogos descentralizados](/apps/categories/gaming)
 - [Uma apólice de seguro que reembolsa automaticamente](https://etherisc.com/)
 - [Uma norma que permite criar divisas personalizadas e interoperáveis](/developers/docs/standards/tokens/)
 

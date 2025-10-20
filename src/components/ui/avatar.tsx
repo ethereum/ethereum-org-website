@@ -167,11 +167,12 @@ const Avatar = React.forwardRef<
             {src ? (
               <Image
                 className="object-fill"
-                width={64}
-                height={64}
+                width={128}
+                height={128}
                 sizes="4rem"
                 src={src}
                 alt={name}
+                quality={100}
               />
             ) : (
               <AvatarImage />
@@ -189,11 +190,12 @@ const Avatar = React.forwardRef<
         {src ? (
           <Image
             className="object-fill"
-            width={64}
-            height={64}
+            width={128}
+            height={128}
             sizes="4rem"
             src={src}
             alt={name}
+            quality={100}
           />
         ) : (
           <AvatarImage />

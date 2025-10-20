@@ -24,7 +24,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [Az Ethereum-számlák megértése](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Rails-felhasználók hitelesítése a MetaMask használatával](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
-- [Bejelentkezés az Ethereummal – Ruby-könyvtár és Rails-példák kiadása](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Hogyan lehet az Ethereum-hálózathoz kapcsolódni a Ruby-val](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Hogyan lehet új Ethereum-címet létrehozni a Ruby-val](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -39,10 +38,10 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [eth.rb](https://github.com/q9f/eth.rb) – _Ruby könyvtár és RPC-kliens az Ethereum-számlák, üzenetek és tranzakciók kezelésére_
 - [keccak.rb](https://github.com/q9f/keccak.rb) – _Az Ethereum által használt keccak (SHA3) hash_
-- [siwe-ruby](https://github.com/spruceid/siwe-ruby) – _Ruby általi implementáció az Ethereummal való bejelentkezéshez_
-- [siwe_rails](https://github.com/spruceid/siwe_rails) – _SIWE lokális bejelentkezési utakat adó Rails gem_
-- [siwe-rails-examples](https://github.com/spruceid/siwe-rails-examples) – _SIWE-példa Ruby használatával a Railsen személyre szabott irányítóval_
-- [omniauth-siwe](https://github.com/spruceid/omniauth-siwe) – _OmniAuth-stratégia az Ethereummal (SIWE) való bejelentkezéshez_
+- [siwe-ruby](https://github.com/signinwithethereum/siwe-ruby) – _Ruby általi implementáció az Ethereummal való bejelentkezéshez_
+- [siwe-rails](https://github.com/signinwithethereum/siwe-rails) – _SIWE lokális bejelentkezési utakat adó Rails gem_
+- [siwe-rails-examples](https://github.com/signinwithethereum/siwe-rails-examples) – _SIWE-példa Ruby használatával a Railsen személyre szabott irányítóval_
+- [omniauth-siwe](https://github.com/signinwithethereum/omniauth-siwe) – _OmniAuth-stratégia az Ethereummal (SIWE) való bejelentkezéshez_
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) – _OmniAuth stratégia az NFT tulajdonjogon keresztüli hitelesítésre_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) – _Ethereum a Rails-en sablon, mellyel a MetaMaskot a Ruby-hoz lehet kapcsolni a Rails-en_
 

@@ -6,17 +6,20 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Skeleton, SkeletonCardContent } from "@/components/ui/skeleton"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import TutorialsPageJsonLD from "./page-jsonld"
 
 const TutorialsList = dynamic(() => import("./_components/tutorials"), {
   ssr: false,
@@ -43,8 +46,8 @@ const TutorialSubmitModal = dynamic(() => import("./_components/modal"), {
   ),
 })
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -65,35 +68,49 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const internalTutorials = await getTutorialsData(locale)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "developers/tutorials",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <MainArticle
-        className="mx-auto my-0 mt-16 flex w-full flex-col items-center"
-        dir={dir}
-      >
-        <h1 className="no-italic mb-4 text-center font-monospace text-[2rem] font-semibold uppercase leading-[1.4] max-sm:mx-4 max-sm:mt-4 sm:mb-[1.625rem]">
-          {t("page-tutorial-title")}
-        </h1>
-        <p className="mb-4 text-center leading-xs text-body-medium">
-          {t("page-tutorial-subtitle")}
-        </p>
+    <>
+      <TutorialsPageJsonLD
+        locale={locale}
+        internalTutorials={internalTutorials}
+        contributors={contributors}
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <MainArticle
+          className="mx-auto my-0 mt-16 flex w-full flex-col items-center"
+          dir={dir}
+        >
+          <h1 className="no-italic mb-4 text-center font-monospace text-[2rem] font-semibold uppercase leading-[1.4] max-sm:mx-4 max-sm:mt-4 sm:mb-[1.625rem]">
+            {t("page-tutorial-title")}
+          </h1>
+          <p className="mb-4 text-center leading-xs text-body-medium">
+            {t("page-tutorial-subtitle")}
+          </p>
 
-        <TutorialSubmitModal dir={dir} />
+          <TutorialSubmitModal dir={dir} />
 
-        <TutorialsList internalTutorials={internalTutorials} />
+          <TutorialsList internalTutorials={internalTutorials} />
 
-        <FeedbackCard />
-      </MainArticle>
-    </I18nProvider>
+          <FeedbackCard />
+        </MainArticle>
+      </I18nProvider>
+    </>
   )
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

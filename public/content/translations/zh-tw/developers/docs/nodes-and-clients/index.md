@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 最初的[以太坊黃皮書](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [執行規範](https://github.com/ethereum/execution-specs/)
 - [共識規範](https://github.com/ethereum/consensus-specs)
-- 各種[網路升級](/history/)中實作的[以太坊改善提議](https://eips.ethereum.org/)
+- 各種[網路升級](/ethereum-forks/)中實作的[以太坊改善提議](https://eips.ethereum.org/)
 
 ### 追蹤網路中的節點 {#network-overview}
 
@@ -196,7 +196,7 @@ EthereumJS 執行用戶端 (EthereumJS) 是以 TypeScript 編寫，並由多個�
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | 信標鏈、Goerli、Pyrmont、Sepolia、Ropsten 等        |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | 開始         | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | 開始         | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS   | 信標鏈、Gnosis、Goerli、Sepolia、Ropsten 等         |
 | [Grandine](https://docs.grandine.io/)（測試版）                    | Rust       | Linux、Windows、macOS   | 信標鏈、Goerli、Sepolia 等                        |
 
@@ -222,7 +222,7 @@ Nimbus 是以 Nim 開發的共識用戶端實作，以 Apache-2.0 授權。 它�
 
 Prysm 是功能完整且開源的共識用戶端，以 Go 語言開發並以 GPL-3.0 授權。 它有可選的網頁應用用戶介面，並將自行質押者及機構使用者的使用者體驗、文檔及設定檔放在第一位。
 
-閱讀 [Prysm 文檔](https://docs.prylabs.network/docs/getting-started/)以獲得更多資訊。
+閱讀 [Prysm 文檔](https://prysm.offchainlabs.com/docs/)以獲得更多資訊。
 
 ### Teku {#teku}
 

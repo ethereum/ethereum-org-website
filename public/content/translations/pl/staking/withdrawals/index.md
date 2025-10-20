@@ -65,7 +65,7 @@ Wypłaty ze stakingu są już dostępne! Funkcja wypłat została włączona w r
 
 Aktualizacja Shanghai/Capella umożliwiła odzyskanie wcześniej zestakowanych ETH na zwykłych kontach Ethereum. Zamknęło to pętlę płynności stakingu i przybliżyło Ethereum o krok na drodze do zbudowania zrównoważonego, skalowalnego i bezpiecznego zdecentralizowanego ekosystemu.
 
-- [Więcej o historii Ethereum](/history/)
+- [Więcej o historii Ethereum](/ethereum-forks/)
 - [Więcej o planie działania Ethereum](/roadmap/)
 
 ## Jak działają wypłaty środków? {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jeśli jesteś częścią <a href="/staking/pools/">puli stakingowej</a> lub posiadasz tokeny stakingowe, powinieneś skontaktować się ze swoim dostawcą, aby uzyskać więcej informacji na temat sposobu obsługi wypłat ze stakingu, ponieważ każda usługa działa inaczej.
+Jeśli jesteś częścią [puli stakingowej](/staking/pools/) lub posiadasz tokeny stakingowe, powinieneś skontaktować się ze swoim dostawcą, aby uzyskać więcej informacji na temat sposobu obsługi wypłat ze stakingu, ponieważ każda usługa działa inaczej.
 
-Ogólnie rzecz biorąc, użytkownicy powinni mieć możliwość odzyskania swoich bazowych stakowanych ETH lub zmiany dostawcy stakingu, z którego korzystają. Jeśli dana pula staje się zbyt duża, środki mogą zostać wycofane, wypłacone i ponownie zestakowane u <a href="https://rated.network/">mniejszego dostawcy</a>. Lub, jeśli zgromadziłeś wystarczającą ilość ETH, możesz <a href="/staking/solo/">stakować z domu</a>.
+Ogólnie rzecz biorąc, użytkownicy powinni mieć możliwość odzyskania swoich bazowych stakowanych ETH lub zmiany dostawcy stakingu, z którego korzystają. Jeśli dana pula staje się zbyt duża, środki mogą zostać wycofane, wypłacone i ponownie zestakowane u <a href="https://rated.network/">mniejszego dostawcy</a>. Lub, jeśli zgromadziłeś wystarczającą ilość ETH, możesz [stakować z domu](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Nie. Po wyjściu walidatora i wypłaceniu jego pełnego salda wszelkie dodatkowe
 
 - [Wypłaty Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Wypłaty z łańcucha śledzącego jako operacje](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders — Szanghaj](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Wypłata zestakowanego ETH (testowanie) z Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Wypłaty push łańcucha śledzącego jako operacje z Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Zrozumienie efektywnego bilansu walidatora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

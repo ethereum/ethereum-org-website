@@ -37,7 +37,7 @@ Az implementációk közös vonása, hogy egyazon specifikációt követik. Ez a
 - Eredetileg az [Ethereum Sárga Könyvében](https://ethereum.github.io/yellowpaper/paper.pdf), vagyis műszaki alaptanulmányában.
 - [Végrehajtási specifikációk](https://github.com/ethereum/execution-specs/)
 - [Konszenzusspecifikációk](https://github.com/ethereum/consensus-specs)
-- [EIP-ek](https://eips.ethereum.org/), amelyeket a különböző [ hálózatfrissítések](/history/) során vezettek be
+- [EIP-ek](https://eips.ethereum.org/), amelyeket a különböző [ hálózatfrissítések](/ethereum-forks/) során vezettek be
 
 ### Csomópontok követése a hálózatban {#network-overview}
 
@@ -196,7 +196,7 @@ Többféle konszenzusos kliens (korábbi nevén „Eth2” kliens) is létezik, 
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon lánc, Holesky, Pyrmont, Sepolia stb.         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon lánc, Holesky, Sepolia stb.                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon lánc, Holesky, Sepolia stb.                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon lánc, Gnosis, Holesky, Pyrmont, Sepolia stb. |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Beacon lánc, Gnosis, Holesky, Pyrmont, Sepolia stb. |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon lánc, Gnosis, Holesky, Sepolia stb.          |
 | [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon lánc, Holesky, Sepolia stb.                  |
 
@@ -222,7 +222,7 @@ További információ a [Nimbus-dokumentációban](https://nimbus.guide/) talál
 
 A Prysm egy teljes körű funkciókat kínáló, nyílt forráskódú konszenzusos kliens, amelyet Go nyelven írtak, és a GPL-3.0 licenc alatt adták ki. Opcionális webalkalmazási felhasználói felületet kínál, előtérbe helyezi a felhasználói élményt, a dokumentációt és a konfigurálhatóságot az otthoni letétbe helyezők és az intézményi felhasználók számára is.
 
-További információkért tekintse meg a [Prysm-dokumentációt](https://docs.prylabs.network/docs/getting-started/).
+További információkért tekintse meg a [Prysm-dokumentációt](https://prysm.offchainlabs.com/docs/).
 
 ### Teku {#teku}
 

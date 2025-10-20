@@ -65,7 +65,7 @@ Penarikan penaruhan sudah aktif! Fungsionalitas penarikan dana diaktifkan sebaga
 
 Peningkatan Shanghai/Capella memungkinkan ETH yang sebelumnya dipertaruhkan untuk diklaim kembali ke akun Ethereum biasa. Hal ini menutup lingkaran pada likuiditas penaruhan, dan membawa Ethereum selangkah lebih dekat dalam perjalanannya untuk membangun ekosistem terdesentralisasi yang berkelanjutan, terukur, dan aman.
 
-- [Lebih lanjut tentang sejarah Ethereum](/history/)
+- [Lebih lanjut tentang sejarah Ethereum](/ethereum-forks/)
 - [Lebih lanjut tentang peta perjalanan Ethereum](/roadmap/)
 
 ## Bagaimana cara kerja pembayaran penarikan dana? {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jika Anda merupakan bagian dari <a href="/staking/pools/">pool penaruhan</a> atau memegang token penaruhan, Anda harus bertanya kepada penyedia Anda detail lebih lanjut tentang bagaimana penarikan penaruhan ditangani, karena setiap layanan beroperasi secara berbeda.
+Jika Anda merupakan bagian dari [pool penaruhan](/staking/pools/) atau memegang token penaruhan, Anda harus bertanya kepada penyedia Anda detail lebih lanjut tentang bagaimana penarikan penaruhan ditangani, karena setiap layanan beroperasi secara berbeda.
 
-Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan <a href="/staking/solo/">penaruhan dari beranda</a>.
+Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan [penaruhan dari beranda](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap dana ta
 
 - [Penarikan Landasan Peluncuran Penaruhan](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Rantai suar mendorong penarikan sebagai operasi](https://eips.ethereum.org/EIPS/eip-4895)
-- [Penggembala Kucing Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Penarikan ETH yang Dipertaruhkan (Pengujian) dengan Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Rantai suar mendorong penarikan sebagai operasi bersama Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Memahami Saldo Efektif Validator](https://www.attestant.io/posts/understanding-validator-effective-balance/)

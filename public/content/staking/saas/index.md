@@ -1,6 +1,6 @@
 ---
 title: Staking as a service
-description: An overview of how to get started with pooled ETH staking
+description: Learn about staking as a service
 lang: en
 template: staking
 emoji: ":money_with_wings:"
@@ -86,7 +86,7 @@ By using an SaaS provider, you are entrusting the operation of your node to some
 
 Upon completion of the slashing/exiting process, these funds will be transferred to the withdrawal address assigned to the validator. This requires providing a withdrawal address to enable. This may have been provided on initial deposit. If not, the validator withdrawal keys will need to be used to sign a message declaring a withdrawal address. If no withdrawal address has been provided, funds will remain locked until provided.
 
-Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo/">learn more about how to solo stake your ETH</a>.
+Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, [learn more about how to solo stake your ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Further reading {#further-reading}

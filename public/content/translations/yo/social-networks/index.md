@@ -23,7 +23,7 @@ Pupọ awọn nẹtiwọọki awujọ alailakoso wa bi awọn omiiran si awọn 
 
 ### Bawo ni awọn nẹtiwọki awujọ alailakoso ṣe n ṣiṣẹ? {#decentralized-social-networks-overview}
 
-Awọn nẹtiwọọki awujọ alailakoso jẹ kilasi ti awọn [ohun elo alailakoso (dapps)](/dapps/)— awọn ohun elo tio ni agbara nipasẹ [awọn adehun ologbon](/glossary/#smart-contract) ti a fi ranṣẹ sori blockchain. Koodu adehun naa ṣiṣẹ bi ẹhin fun awọn ohun elo wọnyi ati ṣalaye ọgbọn iṣowo wọn.
+Awọn nẹtiwọọki awujọ alailakoso jẹ kilasi ti awọn [ohun elo alailakoso (dapps)](/apps/)— awọn ohun elo tio ni agbara nipasẹ [awọn adehun ologbon](/glossary/#smart-contract) ti a fi ranṣẹ sori blockchain. Koodu adehun naa ṣiṣẹ bi ẹhin fun awọn ohun elo wọnyi ati ṣalaye ọgbọn iṣowo wọn.
 
 Awọn pepe ikanni ajolo ibile gbarale awọn apoti data lati tọju alaye olumulo, koodu eto, ati awọn iru data miiran. Ṣugbọn eyi ṣẹda awọn aaye kan-ti-ikuna ati ṣafihan eewu pataki. Fun apẹẹrẹ, awọn olupin Facebook je [aisini ori ayelujara](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) fun awọn wakati ni Oṣu kẹwa ọdun 2021, to si ge awọn olumulo kuro lori pẹpẹ naa.
 
