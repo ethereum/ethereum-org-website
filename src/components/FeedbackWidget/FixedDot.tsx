@@ -44,13 +44,8 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         >
           <span
             className={cn(
-
-              "line-clamp-2 hidden h-full items-center font-bold text-white leading-[1.2rem]",
-              isExpanded && "lg:flex"
-
               "line-clamp-2 h-full items-center whitespace-nowrap font-bold leading-5 text-white",
               isExpanded ? "lg:flex" : "hidden"
-
             )}
           >
             {t("feedback-widget-prompt")}
