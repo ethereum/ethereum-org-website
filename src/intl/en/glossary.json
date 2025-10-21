@@ -134,7 +134,7 @@
   "erc-1155-term": "ERC-1155",
   "erc-1155-definition": "ERC-1155 is a newer type of Ethereum token standard similar to NFT (like unique collectible items) that also allows to create interchangeable items (like currency) within a single smart contract.<br />This makes it easier and more efficient to manage various types of digital assets, especially for applications like video games or digital collections.",
   "erc-20-term": "ERC-20",
-  "erc-20-definition": "ERC-20 is the standard that most tokens on Ethereum network use for their creation.<br />Popular examples are stablecoins like DAI and USDC or exchange tokens like UNI from Uniswap. Akin to any form of alternative moneys that we have in traditional systems… ie. rewards points, credit systems, or even stocks, etc.",
+  "erc-20-definition": "ERC-20 is the standard that most tokens on Ethereum network use for their creation.<br />Popular examples are stablecoins like DAI and USDC or exchange tokens like UNI from Uniswap. Akin to any form of alternative moneys that we have in traditional systems… i.e., rewards points, credit systems, or even stocks, etc.",
   "erc-721-term": "ERC-721",
   "erc-721-definition": "NFTs (non fungible tokens) are created using a standard set of rules referred to as ERC-721.<br />NFT tokens can represent ownership of anything unique, like digital art or collectibles, with each token having its own special characteristics and value. Each NFT is unique and easily distinguishable from any other NFT.",
   "execution-client-term": "Execution client",
