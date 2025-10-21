@@ -73,7 +73,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       {blockNumber &&
         blockTypeTranslation(
           "page-history:page-history-block-number",
-          "https://etherscan.io/block/",
+          "https://eth.blockscout.com/block/",
           blockNumber
         )}
       {epochNumber &&

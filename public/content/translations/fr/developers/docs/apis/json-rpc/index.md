@@ -207,8 +207,8 @@ Aucune
 La liste complète des identifiants de réseau actuels est disponible à l'adresse suivante : [chainlist.org](https://chainlist.org). Quelques spécifications habituelles sont :
 
 - `1`: réseau principal Ethereum
-- `5`: Réseau de test Goerli
 - `11155111`: Réseau de test Sepolia
+- `560048`: Réseau de test Hoodi
 
 **Exemple**
 

@@ -84,6 +84,7 @@ El diseño de recompensa, penalización y recorte del mecanismo de consenso anim
 - [Incentivos en el protocolo híbrido Casper de Ethereum](https://arxiv.org/pdf/1903.04205.pdf)
 - [Especificaciones anotadas de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Consejos para la prevención de recortes en Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [Análisis de las penalizaciones por recortes bajo EIP-7251](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Fuentes_
 

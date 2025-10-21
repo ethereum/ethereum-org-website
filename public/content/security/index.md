@@ -103,7 +103,7 @@ A high-profile version of this occurred in July 2020, when the Twitter accounts 
 
 ### Celebrity giveaway {#celebrity-giveaway}
 
-The celebrity giveaway is another common form the giveaway scam takes. The scammers will take a recorded video interview or conference talk given a celebrity and livestream it on YouTube - making it appear as though the celebrity was giving a live video interview endorsing a cryptocurrency giveaway.
+The celebrity giveaway is another common form the giveaway scam takes. The scammers will take a recorded video interview or conference talk given by a celebrity and livestream it on YouTube - making it appear as though the celebrity was giving a live video interview endorsing a cryptocurrency giveaway.
 
 Vitalik Buterin is used most often in this scam, but many other prominent people involved in crypto are also used (e.g. Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
 
@@ -251,7 +251,7 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
 
 #### Security keys {#security-keys}
 
-A security key is a more advanced and secure type of 2FA. Security keys are physical hardware authentication devices that work like authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+A security key is a more advanced and secure type of 2FA. Security keys are physical hardware authentication devices that work like authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/resources/glossary/fido-u2f/).
 
 Watch more on 2FA:
 

@@ -23,7 +23,7 @@ Many decentralized social networks exist as alternatives to established social m
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
-Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
+Decentralized social networks are a class of [decentralized applications (dapps)](/apps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
 Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) in October 2021, cutting off users from the platform.
 
@@ -65,16 +65,22 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### Farcaster {#farcaster}
+
+[Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
+
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
-- **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
+- **[Status.app](https://status.app/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
+- **[Ethereum Follow Protocol](https://efp.app/)** - _Ethereum Follow Protocol is a fully decentralized onchain social graph for Ethereum accounts, advancing the vision of a modular Ethereum identity stack, complementing ENS and SIWE._
+- **[Ethereum Comments Protocol](https://www.ethcomments.xyz/)** - _A new, programmable social content primitive on Ethereum to put your thoughts onchain._
 
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
-[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
+[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also exploring or have experimented with integrating Ethereum into their infrastructure:
 
 ### Brave Browser {#brave}
 

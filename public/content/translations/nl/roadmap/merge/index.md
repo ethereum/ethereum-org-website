@@ -17,7 +17,7 @@ summaryPoint4: De samenvoeging verminderde het energieverbruik van Ethereum met 
 
 ## Wat is de samenvoeging? {#what-is-the-merge}
 
-De samenvoeging was het bij elkaar brengen van de oorspronkelijke uitvoeringslaag van Ethereum (het hoofdnet dat sinds [het ontstaan](/history/#frontier) bestaat) met de nieuwe proof-of-stake consensuslaag, de Beacon Chain. Het elimineerde de noodzaak voor energie-intensieve mining en maakte het in plaats daarvan mogelijk om het netwerk te beveiligen met behulp van staked ETH. Het was echt een geweldige stap in de realisatie van de Ethereum-visie: meer schaalbaarheid, veiligheid en duurzaamheid.
+De samenvoeging was het bij elkaar brengen van de oorspronkelijke uitvoeringslaag van Ethereum (het hoofdnet dat sinds [het ontstaan](/ethereum-forks/#frontier) bestaat) met de nieuwe proof-of-stake consensuslaag, de Beacon Chain. Het elimineerde de noodzaak voor energie-intensieve mining en maakte het in plaats daarvan mogelijk om het netwerk te beveiligen met behulp van staked ETH. Het was echt een geweldige stap in de realisatie van de Ethereum-visie: meer schaalbaarheid, veiligheid en duurzaamheid.
 
 <MergeInfographic />
 
@@ -38,7 +38,7 @@ De samenvoeging betekende de officiële overstap naar het gebruik van de Beacon 
 Geen enkele geschiedenis ging verloren tijdens de samenvoeging. Toen het hoofdnet fuseerde met de Beacon Chain, werd ook de hele transactiegeschiedenis van Ethereum samengevoegd.
 
 <InfoBanner>
-Deze overgang naar proof-of-stake veranderde de manier waarop ether wordt uitgegeven. Ontdek meer over de <a href="/roadmap/merge/issuance/">ether-uitgifte voor en na de samenvoeging</a>.
+Deze overgang naar proof-of-stake veranderde de manier waarop ether wordt uitgegeven. Ontdek meer over de [ether-uitgifte voor en na de samenvoeging](/roadmap/merge/issuance/).
 </InfoBanner>
 
 ### Gebruikers en houders {#users-holders}
@@ -130,7 +130,7 @@ Het uitvoeren van een node die geen blocks produceert is mogelijk voor iedereen 
 
 De mogelijkheid voor iedereen om zijn/haar eigen node uit te voeren is <em>absoluut essentieel</em> om de decentralisatie van het Ethereum-netwerk te behouden.
 
-<a href="/run-a-node/">Meer over het uitvoeren van uw eigen node</a>
+[Meer over het uitvoeren van uw eigen node](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Gaskosten zijn een product van de netwerkvraag in verhouding tot de capaciteit van het netwerk. De samenvoeging schafte het gebruik van proof-of-work af en schakelde over op proof-of-stake voor consensus, maar veranderde niet significant de parameters die direct van invloed zijn op de netwerkcapaciteit of verwerkingscapaciteit.
 
-Met een <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centrische routekaart</a> zijn de inspanningen gericht op het opschalen van gebruikersactiviteit op <a href="/layer-2/">laag 2</a>, terwijl het hoofdnet op laag 1 wordt gebruikt als een veilige gedecentraliseerde afwikkelingslaag die is geoptimaliseerd voor de opslag van rollup-gegevens om rollup-transacties exponentieel goedkoper te maken. De overgang naar proof-of-stake is een kritieke voorloper om dit te realiseren. <a href="/developers/docs/gas/">Meer over gas en kosten.</a>
+Met een <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centrische routekaart</a> zijn de inspanningen gericht op het opschalen van gebruikersactiviteit op [laag 2](/layer-2/), terwijl het hoofdnet op laag 1 wordt gebruikt als een veilige gedecentraliseerde afwikkelingslaag die is geoptimaliseerd voor de opslag van rollup-gegevens om rollup-transacties exponentieel goedkoper te maken. De overgang naar proof-of-stake is een kritieke voorloper om dit te realiseren. [Meer over gas en kosten.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +163,7 @@ Aanvankelijk hadden stakers na de samenvoeging enkel toegang tot fooien en MEV d
 
 Sinds de Shanghai/Capella-netwerkupgrade kunnen stakers nu een <em>opname-adres</em> invoeren om automatische uitbetalingen van overtollige stakesaldi te ontvangen (ETH hoger dan 32 van protocolbeloningen). Deze upgrade zorgde er ook voor dat een validator zijn/haar volledige saldo kon ontgrendelen en terugvorderen wanneer hij/zij het netwerk verliet.
 
-<a href="/staking/withdrawals/">Meer over staking-opnames</a>
+[Meer over staking-opnames](/staking/withdrawals/)
 
 </ExpandableCard>
 

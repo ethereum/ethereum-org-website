@@ -65,7 +65,7 @@ summaryPoints:
 
 上海/卡佩拉升级后，可以将之前质押的以太币收回到普通以太坊帐户中。 这就结束了质押流动性循环，并使以太坊向着建立一个可持续、可扩展、安全的去中心化生态系统迈进一步。
 
-- [更多关于以太坊历史的信息](/history/)
+- [更多关于以太坊历史的信息](/ethereum-forks/)
 - [更多关于以太坊路线图的信息](/roadmap/)
 
 ## 提款支付是如何运作的？ {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-如果你参加了<a href="/staking/pools/">质押池</a>，或持有质押代币，你应该咨询你的提供商，了解更多关于如何处理质押提款的细节，因为每种服务的运作方式不同。
+如果你参加了[质押池](/staking/pools/)，或持有质押代币，你应该咨询你的提供商，了解更多关于如何处理质押提款的细节，因为每种服务的运作方式不同。
 
-一般来说，用户应该可以随意收回他们的底层质押以太币，或者更换他们使用的质押服务提供商。 如果某个质押池变得过大，可以退出、收回资金，并通过<a href="https://rated.network/">较小的提供商</a>重新质押。 或者，如果你已经积攒了足够多的以太币，你就可以<a href="/staking/solo/">自行质押</a>。
+一般来说，用户应该可以随意收回他们的底层质押以太币，或者更换他们使用的质押服务提供商。 如果某个质押池变得过大，可以退出、收回资金，并通过<a href="https://rated.network/">较小的提供商</a>重新质押。 或者，如果你已经积攒了足够多的以太币，你就可以[自行质押](/staking/solo/)。
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ eventName="read more">
 
 - [质押启动板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：信标链提款推送操作](https://eips.ethereum.org/EIPS/eip-4895)
-- [以太坊牧猫人组织 - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94：质押以太币提取（测试）与 Potuz 和王筱维](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68：与 Alex Stokes 讨论 EIP-4895：信标链推送提款操作](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [了解验证者有效余额](https://www.attestant.io/posts/understanding-validator-effective-balance/)

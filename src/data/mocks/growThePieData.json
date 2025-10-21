@@ -1,6 +1,9 @@
 {
   "txCount": { "value": 20113689, "timestamp": 1732561036299 },
-  "txCostsMedianUsd": { "value": 0.10252370826740381, "timestamp": 1732561036299 },
+  "txCostsMedianUsd": {
+    "value": 0.10252370826740381,
+    "timestamp": 1732561036299
+  },
   "dailyTxCosts": {
     "ethereum": 1.5642321147439395,
     "arbitrum": 0.010201116846622714,
@@ -22,7 +25,9 @@
     "redstone": 0.0018557582938633012,
     "derive": 0.03414083342479006,
     "orderly": 0.0010056552980039267,
-    "worldchain": 0.006684175070209207
+    "worldchain": 0.006684175070209207,
+    "ink": 0.000084959363439004,
+    "unichain": 0.000060453342918528
   },
   "activeAddresses": {
     "mantle": 32493,
@@ -48,6 +53,8 @@
     "zksync_era": 47007,
     "polygon_zkevm": 2708,
     "zora": 18101,
-    "linea": 77067
+    "linea": 77067,
+    "ink": 92296,
+    "unichain": 49158
   }
 }

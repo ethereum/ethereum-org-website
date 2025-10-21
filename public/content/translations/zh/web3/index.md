@@ -6,6 +6,10 @@ lang: zh
 
 # Web3 简介 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 中心化网络已经帮助数十亿人融入了互联网，并在其上创建了稳定、可靠的基础设施。 与此同时，少数中心化巨头几乎垄断了互联网，甚至可以为所欲为。
 
 Web3 是摆脱这一困境的方案。 不同于科技巨头垄断的传统互联网，Web3 采用去中心化，由所有用户构建、运营和拥有。 Web3 将权力赋予个人而非公司。 在我们讨论 Web3 之前，先来看看我们是如何走到这一步的。
@@ -139,7 +143,7 @@ Web3 是一个年轻且不断发展的生态系统。 Gavin Wood 在 2014 年创
 
 - [获取钱包](/wallets/)
 - [寻找社区](/community/)
-- [探索 Web3 应用程序](/dapps/)
+- [探索 Web3 应用程序](/apps/)
 - [加入去中心化自治组织](/dao/)
 - [基于 Web3 构建](/developers/)
 
@@ -147,11 +151,11 @@ Web3 是一个年轻且不断发展的生态系统。 Gavin Wood 在 2014 年创
 
 Web3 没有严格的定义。 不同的社区参与者对其有不同的看法。 例如：
 
-- [什么是 Web3？ 解析未来的去中心化互联网](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [什么是 Web3？ 解析未来的去中心化互联网](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [理解 Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
 - [为什么 Web3 很重要](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [为什么去中心化很重要](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 概况](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 之辩论](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web3 之辩论](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

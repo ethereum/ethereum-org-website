@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Kokeile sovelluksia",
   "page-index-cta-get-eth-description": "Ethereumin valuutta",
   "page-index-cta-get-eth-label": "Hanki Ethereitä",
-  "page-index-cta-networks-description": "Nauti minimaalista kuluista",
-  "page-index-cta-networks-label": "Valitse verkko",
   "page-index-cta-wallet-description": "Luo tilejä ja hallitse resursseja",
   "page-index-cta-wallet-label": "Valitse lompakko",
+  "page-index-cta-build-apps-description": "Luokaa ensimmäinen sovelluksenne",
+  "page-index-cta-build-apps-label": "Aloittakaa kehittäminen",
   "page-index-description": "Innovatiivisten sovellusten ja lohkoketjuverkkojen johtava alusta",
   "page-index-developers-code-example-description-0": "Luo ohjelmoimasi logiikan mukainen pankki",
   "page-index-developers-code-example-description-1": "Voit luoda rahakkeita, joita voi siirtää ja käyttää eri sovellusten välillä",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Viimeaikaiset viestit",
   "page-index-posts-subtitle": "Viimeisimmät blogijulkaisut ja päivitykset yhteisöltä",
   "page-index-title": "Tervetuloa Ethereumiin",
+  "page-index-use-cases-tag": "Käyttötapaukset",
   "page-index-values-description": "Ole osa digitaalista vallankumousta",
   "page-index-values-header": "Internet on muuttumassa",
   "page-index-values-legacy": "Vanha",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Useimmilta suljettu",
   "page-index-values-open-legacy-content-0": "Yritykset suojaavat immateriaaliomaisuutensa, eivätkä ne jaa sitä. Kukaan yrityksen ulkopuolinen ei näe, miten asiat toimivat, eikä voi korjata ongelmia tai tehdä parannuksia. Ihmisten on vaikeaa luoda uusia työkaluja tai tehdä mukautuksia.",
   "page-index-values-open-ethereum-label": "Avoin kaikille",
-  "page-index-values-open-ethereum-content-0": "Ethereum on kaikille julkinen. Kuka tahansa voi nähdä koodin ja käyttää ja parantaa sitä. Siksi on parempi kaikille."
+  "page-index-values-open-ethereum-content-0": "Ethereum on kaikille julkinen. Kuka tahansa voi nähdä koodin ja käyttää ja parantaa sitä. Siksi on parempi kaikille.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Liity vuoden suurimpaan Ethereum-tapahtumaan",
+  "page-index-devconnect-banner-get-tickets": "Hanki liput"
 }

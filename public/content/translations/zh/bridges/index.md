@@ -49,7 +49,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 ### 其他区块链上的去中心化应用程序 {#dapps-other-chains}
 
-如果你一直在以太坊主网上使用 Aave 借出泰达币，但在 Polygon 上使用 Aave 借出泰达币的利率更高。
+如果你一直在以太坊主网上使用 Aave 提供 USDT，但在 Polygon 上使用 Aave 提供 USDT 的利率可能更高。
 
 ### 探索区块链生态系统 {#explore-ecosystems}
 
@@ -60,12 +60,12 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 然而，包装比特币是以太坊网络的原生 [ERC-20](/glossary/#erc-20) 代币，这意味着它是比特币的以太坊版本，而不是比特币区块链上的原始资产。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 或者，你可能拥有比特币，并且想在以太坊的[去中心化金融](/glossary/#defi)协议中使用它。 用于以太坊网络的 DeFi 协议中。
 
 <InfoBanner shouldCenter emoji=":bulb:">
-  你还可以使用<a href="/get-eth/">中心化交易所</a>完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
+  你还可以使用[中心化交易所](/get-eth/)完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
 </InfoBanner>
 
 <Divider />
 
-## 桥梁类型 {#types-of-bridge}
+## 桥的类型 {#types-of-bridge}
 
 桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和去信任桥梁。
 
@@ -99,7 +99,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 使用链桥可以将资产转移到不同区块链。 下面是一些可以帮助你找到并使用链桥的资源：
 
-- **[L2BEAT 链桥摘要](https://l2beat.com/bridges/summary) & [L2BEAT 链桥风险分析](https://l2beat.com/bridges/risk)**：各种链桥的全面汇总，包括有关市场份额、链桥类型和目的地区块链的详细信息。 L2BEAT 还对链桥进行风险分析，帮助用户在选择链桥时做出明智的决策。
+- **[L2BEAT 链桥摘要](https://l2beat.com/bridges/summary) & [L2BEAT 链桥风险分析](https://l2beat.com/bridges/summary)**：各种链桥的全面汇总，包括有关市场份额、链桥类型和目的地区块链的详细信息。 L2BEAT 还对链桥进行风险分析，帮助用户在选择链桥时做出明智的决策。
 - **[DefiLlama 链桥摘要](https://defillama.com/bridges/Ethereum)**：跨以太坊网络的链桥交易量摘要。
 
 <Divider />
@@ -131,7 +131,9 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 <Divider />
 
 ## 延伸阅读 {#further-reading}
+- [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022 年 6 月 18 日 - Brendan Asselstine_
+- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5日 - Bartek Kiepuszewski_
+- [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
+- [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其扩展](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
+- [Rollup 互操作性解决方案的现状](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024 年 6 月 20 日 - Alex Hook_
 
-- [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658)_2022 年 6 月 18 日 - Brendan Asselstine_
-- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5日 - Bartek Kiepuszewski_
-- [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_

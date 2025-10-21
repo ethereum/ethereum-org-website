@@ -105,7 +105,7 @@ Anda dapat mengakses metode kontrak pintar beserta instancenya yang untuknya And
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
   if (err) {
-    console.log("An error occured", err)
+    console.log("An error occurred", err)
     return
   }
   console.log("The balance is: ", res)
@@ -123,7 +123,7 @@ daiToken.methods
   .transfer(receiverAddress, "100000000000000000000")
   .send({ from: senderAddress }, function (err, res) {
     if (err) {
-      console.log("An error occured", err)
+      console.log("An error occurred", err)
       return
     }
     console.log("Hash of the transaction: " + res)

@@ -57,7 +57,7 @@ A decentralizált identitás számtalan esetben alkalmazható:
 
 A decentralizált identitás segíthet, hogy a jelszóalapú bejelentkezésk helyett decentralizált hitelesítés legyen. A szolgáltatók tanúsításokat bocsáthatnak ki a felhasználóknak, amelyet az Ethereum-tárcájukban tárolnak. Például egy olyan tanúsítvány, ami egy [NFT](/glossary/#nft), és hozzáférést biztosít egy online közösséghez.
 
-Az [Ethereumba való bejelentkezés](https://login.xyz/) funkció ekkor lehető tenné a szervereknek, hogy megerősítsék a felhasználó Ethereum-számláját és lekérdezzék az ehhez szükséges tanúsításokat a számlacímükről. Ezáltal a felhasználónak nem kell hosszú jelszavakat megjegyeznie ahhoz, hogy különböző platformokat és weboldalakat érjen el, és így jobb felhasználói élményben lehet része.
+Az [Ethereumba való bejelentkezés](https://siwe.xyz/) funkció ekkor lehető tenné a szervereknek, hogy megerősítsék a felhasználó Ethereum-számláját és lekérdezzék az ehhez szükséges tanúsításokat a számlacímükről. Ezáltal a felhasználónak nem kell hosszú jelszavakat megjegyeznie ahhoz, hogy különböző platformokat és weboldalakat érjen el, és így jobb felhasználói élményben lehet része.
 
 ### 2. Ügyfél-azonosítás (KYC) {#kyc-authentication}
 
@@ -119,9 +119,9 @@ A decentralizált azonosítók elengedhetetlenek abban is, hogy megvédjék a sz
 
 A tanúsítások tárolása és visszakeresése az Ethereumon alapuló, identitáshoz kötődő ökoszisztémában eltérően működik, mint a hagyományos identitáskezelés. Különféle megközelítések léteznek, hogyan állítják ki, tárolják és igazolják a tanúsításokat a decentralizált identitást biztosító rendszerekben:
 
-### Blokkláncon kívüli tanúsítások {#off-chain-attestations}
+### Blokkláncon kívüli tanúsítások {#offchain-attestations}
 
-A blokkláncon való tanúsítástárolással kapcsolatban felmerül az a konszern, hogy olyan információkat tartalmazhat, melyeket az egyének privát módon szeretnének kezelni. Az ilyen tanúsítások tárolása az Ethereum-blokkláncon, annak nyilvános természete miatt nem előnyös.
+A blokkláncon való tanúsítástárolással kapcsolatban felmerül az az aggodalom, hogy olyan információkat tartalmazhat, melyeket az egyének privát módon szeretnének kezelni. Az ilyen tanúsítások tárolása az Ethereum-blokkláncon, annak nyilvános természete miatt nem előnyös.
 
 Erre az a megoldás, hogy a kiállított tanúsításokat a felhasználók láncon kívül tartják digitális tárcákban, de azok alá vannak írva a kiállító decentralizált azonosítójával (DID), mely a láncon belül elérhető. Ezeket a tanúsításokat [JSON Web Tokenként](https://en.wikipedia.org/wiki/JSON_Web_Token) kódolják, és tartalmazzák a kiállító digitális aláírását – így a láncon kívüli azonosítási igényeket könnyedén igazolni tudja.
 
@@ -151,7 +151,7 @@ A következő példa bemutatja, hogyan működik a láncon belüli tanúsítás 
 
 ### Egyénhez kötött tokenek és identitás {#soulbound}
 
-Az [egyénhez kötött tokeneket](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nem átadható NFT-k](/glossary/#nft)) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
+Az [egyénhez kötött tokeneket](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nem átadható NFT-k](/glossary/#nft)) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magában.
 
 ## Használjon decentralizált identitást {#use-decentralized-identity}
 
@@ -186,6 +186,6 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 ### Közösségek {#communities}
 
 - [ERC-725 szövetség a GitHubon](https://github.com/erc725alliance) — _Az ERC725 szabvány támogatói, mely az Ethereum-blokkláncon való identitáskezelést célozza_
-- [SpruceID Discord-szerver](https://discord.com/invite/Sf9tSFzrnt) — _Rajongók és fejlesztők közössége, akik az Ethereumba való bejelentkezés funkcióján dolgoznak_
+- [EthID Discord-szerver](https://discord.com/invite/ZUyG3mSXFD) — _Rajongók és fejlesztők közössége, akik az Ethereumba való bejelentkezés funkcióján dolgoznak_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Fejlesztői közösség, melynek célja az alkalmazásokhoz szükséges igazolható adatok keretrendszerének kidolgozása_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Fejlesztők és építők közössége, akik a decentralizált identitás számtalan iparágban való felhasználási területeivel foglalkoznak_

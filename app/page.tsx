@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 
-import { routing } from "@/i18n/routing"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
-export default function Page() {
-  redirect(routing.defaultLocale)
+export default function RedirectPage() {
+  redirect(DEFAULT_LOCALE)
 }

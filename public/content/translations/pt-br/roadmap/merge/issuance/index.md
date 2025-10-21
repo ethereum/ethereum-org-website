@@ -30,11 +30,11 @@ title="Emissão de ETH tldr">
 
 ### Emissão da camada de execução {#el-issuance-pre-merge}
 
-Na prova de trabalho, os mineradores só interagiam com a camada de execução e recebiam recompensas de bloco se fossem os primeiros mineradores a resolver o bloco seguinte. Desde a [atualização Constantinople](/history/#constantinople) em 2019, essa recompensa era de 2 ETH por bloco. Os mineradores também foram recompensados por publicar blocos [ommer](/glossary/#ommer), que eram blocos válidos que não terminavam na cadeia mais longa/canônica. Essas recompensas foram de no máximo 1,75 ETH por ommer e foram _além da_ recompensa emitida pelo bloco canônico. O processo de mineração era uma atividade economicamente intensiva, que historicamente exigia altos níveis de emissão de ETH para sustentar.
+Na prova de trabalho, os mineradores só interagiam com a camada de execução e recebiam recompensas de bloco se fossem os primeiros mineradores a resolver o bloco seguinte. Desde a [atualização Constantinople](/ethereum-forks/#constantinople) em 2019, essa recompensa era de 2 ETH por bloco. Os mineradores também foram recompensados por publicar blocos [ommer](/glossary/#ommer), que eram blocos válidos que não terminavam na cadeia mais longa/canônica. Essas recompensas foram de no máximo 1,75 ETH por ommer e foram _além da_ recompensa emitida pelo bloco canônico. O processo de mineração era uma atividade economicamente intensiva, que historicamente exigia altos níveis de emissão de ETH para sustentar.
 
 ### Emissão da camada de consenso {#cl-issuance-pre-merge}
 
-A [Beacon Chain](/history/#beacon-chain-genesis) foi lançada em 2020. Em vez de mineradores, ela é protegida por validadores usando a prova de participação. Essa cadeia foi iniciada por usuários do Ethereum depositando ETH, de uma forma em um contrato inteligente na Mainnet (a camada de execução), que a Beacon Chain escuta, creditando ao usuário com uma quantidade igual de ETH na nova cadeia. Até a Fusão ter acontecido, os validadores da Beacon Chain não estavam processando transações e essencialmente estavam chegando a um consenso sobre o estado do próprio pool de validadores.
+A [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) foi lançada em 2020. Em vez de mineradores, ela é protegida por validadores usando a prova de participação. Essa cadeia foi iniciada por usuários do Ethereum depositando ETH, de uma forma em um contrato inteligente na Mainnet (a camada de execução), que a Beacon Chain escuta, creditando ao usuário com uma quantidade igual de ETH na nova cadeia. Até a Fusão ter acontecido, os validadores da Beacon Chain não estavam processando transações e essencialmente estavam chegando a um consenso sobre o estado do próprio pool de validadores.
 
 Os validadores da Beacon Chain são recompensados com ETH, por atestar o estado da cadeia e propor blocos. As recompensas (ou penalidades) são calculadas e distribuídas a cada época (a cada 6,4 minutos) com base no desempenho do validador. As recompensas do validador são **significativamente** menores do que as recompensas de mineração, que foram emitidas anteriormente na prova de trabalho (2 ETH a cada ~13,5 segundos), pois operar um nó de validação não é tão intenso economicamente e, portanto, não requer ou garante uma recompensa tão alta.
 
@@ -94,7 +94,7 @@ Redução líquida na emissão anual de ETH: <strong>~88,7%</strong> (4,61% - 0,
 A força oposta à emissão de ETH é a taxa em que o ETH é queimado. Para uma transação executar no Ethereum, a taxa mínima (conhecida como “taxa base”) deve ser paga, a qual flutua continuamente (bloco a bloco) dependendo da atividade da rede. A taxa é paga no ETH e é _necessária_ para que a transação seja considerada válida. Essa taxa é _queimada_ durante o processo de transação, removendo-a de circulação.
 
 <InfoBanner>
-A queima de taxas foi lançada com <a href="/history/#london">a atualização London</a> em agosto de 2021 e permanece inalterada desde o The Merge.
+A queima de taxas foi lançada com [a atualização London](/ethereum-forks/#london) em agosto de 2021 e permanece inalterada desde o The Merge.
 </InfoBanner>
 
 Além da queima de taxas implementada pela atualização London, os validadores também podem incorrer em penalidades por estarem offline ou, pior ainda, eles podem ser removidos por quebrar regras específicas que ameaçam a segurança da rede. Essas penalidades resultam na redução de ETH do saldo do validador, que não é recompensado diretamente para nenhuma outra conta, efetivamente queimando/retirando-o de circulação.

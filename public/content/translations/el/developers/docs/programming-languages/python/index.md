@@ -19,30 +19,39 @@ incomplete: true
 - [Κατανοώντας τα έξυπνα συμβόλαια](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Συντάξτε το πρώτο σας έξυπνο συμβόλαιο](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Μάθετε ανάπτυξη και μεταγλώττιση με τη Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Η κατάσταση της Python στην κρυπτοαλυσίδα, έκθεση του 2023](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 
 ## Άρθρα για αρχάριους {#beginner-articles}
 
+- [Επισκόπηση web3.py](https://web3py.readthedocs.io/en/latest/overview.html)
+- [Περιήγηση στο οικοσύστημα Ethereum Python](https://snakecharmers.ethereum.org/python-ecosystem/)
 - [Οδηγίες Προγραμματιστή (Python) για το Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
-- [Η κατάσταση της Python στην κρυπτοαλυσίδα, έκθεση του 2023](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [Άξιο βραβείου: Ένας οδηγός για το Ethereum Python Hackathon](https://snakecharmers.ethereum.org/prize-worthy/)
 - [Εισαγωγή στα έξυπνα συμβόλαια με Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [Αναπτύξτε το δικό σας κρυπτονόμισμα ERC20 με Python και Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [Πώς μπορείτε να αναπτύξετε ένα συμβόλαιο Ethereum με το Python Flask;](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Εισαγωγή στο Web3.py · Ethereum για προγραμματιστές Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Πώς να χρησιμοποιήσετε τη λειτουργία έξυπνου συμβολαίου με Python και web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## Άρθρα μεσαίας δυσκολίας {#intermediate-articles}
 
+- [Φίλοι του web3.py: Εισαγωγή στο Ape](https://snakecharmers.ethereum.org/intro-to-ape/)
 - [Ανάπτυξη Dapp για προγραμματιστές Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Δημιουργώντας μια διεπαφή Python στο Ethereum: Μέρος 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Έξυπνα συμβόλαια Ethereum σε Python: ένας περιληπτικός οδηγός](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [Χρήση των Brownie και Python για την ανάπτυξη έξυπνων συμβολαίων](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [Δημιουργία NFTs στο OpenSea με Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## Πρότυπα χρήσης για προχωρημένους {#advanced-use-patterns}
 
+- [Μοτίβα web3.py: Συνδρομές σε συμβάντα σε πραγματικό χρόνο](https://snakecharmers.ethereum.org/subscriptions/)
+- [web3.py Patterns: WebSocketProvider](https://snakecharmers.ethereum.org/websocketprovider/)
 - [Μεταγλώττιση, ανάπτυξη και κλήση έξυπνου συμβολαίου Ethereum χρησιμοποιώντας την Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Αναλύστε τα έξυπνα συμβόλαια με τη Solidity με το Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [Οδηγός Blockchain Fintech: Δάνειο και δανεισμός με Python](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
+
+## Αρχειοθετημένα άρθρα
+
+- [Αναπτύξτε το δικό σας κρυπτονόμισμα ERC20 με Python και Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [Χρήση των Brownie και Python για την ανάπτυξη έξυπνων συμβολαίων](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
+- [Δημιουργία NFTs στο OpenSea με Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## Έργα και εργαλεία της Python {#python-projects-and-tools}
 
@@ -56,7 +65,7 @@ incomplete: true
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _βοηθητικές λειτουργίες για την εργασία με βάσεις κώδικα που σχετίζονται με το Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper γύρω από τον μεταγλωττιστή solidity με υποστήριξη 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _Συμβόλαια Python API για δημιουργούς_
-- [siwe](https://github.com/spruceid/siwe-py) - _Συνδεθείτε στο Ethereum (siwe) για Python_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Συνδεθείτε στο Ethereum (siwe) για Python_
 - [Web3 DeFi για ενσωματώσεις Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Ένα πακέτο Python με έτοιμες ενσωματώσεις για ERC-20, Uniswap και άλλα δημοφιλή έργα_
 - [Wake](https://getwake.io) - _Πλαίσιο Python All-in-one για δοκιμή συμβάσεων, ασάφεια, ανάπτυξη, σάρωση ευπάθειας και πλοήγηση κώδικα (διακομιστής γλώσσας - [Εργαλεία για Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

@@ -68,7 +68,7 @@ lang: fa
 ## بیشتر بخوانید {#further-reading}
 
 - [شاخص پایداری شبکه بلاک‌چین کمبریج](https://ccaf.io/cbnsi/ethereum)
-- [گزارش کاخ سفید درباره اثبات کار بلاک‌چین‌ها](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [گزارش کاخ سفید درباره اثبات کار بلاک‌چین‌ها](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [انتشارات اتریوم: یک برآورد پایین به بالا](https://kylemcdonald.github.io/ethereum-emissions/) - _ کیلی مک دونالد_
 - [شاخص مصرف انرژی اتریوم](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_

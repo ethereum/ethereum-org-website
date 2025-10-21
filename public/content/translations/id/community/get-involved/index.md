@@ -99,7 +99,6 @@ Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak
 "DAOs" adalah organisasi otonom terdesentralisasi. Kelompok ini memanfaatkan teknologi Ethereum untuk memfasilitasi organisasi dan kolaborasi. Sebagai contoh, untuk mengontrol keanggotaan, mengambil suara untuk proposal, atau mengelola aset bersama. Sekalipun masih bersifat eksperimental, DAOs menawarkan peluang bagi Anda untuk menemukan kelompok yang sesuai dengan Anda, menemukan kolaborator, dan memperbesar dampak Anda di komunitas Ethereum. [Selengkapnya tentang DAOs](/dao/)
 
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Rekayasa hukum_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Komunitas seni_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Inkubator DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Usaha patungan untuk proyek kripto pre-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mekanika Permainan MMORPG untuk Kehidupan Nyata_

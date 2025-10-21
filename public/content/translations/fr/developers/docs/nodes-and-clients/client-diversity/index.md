@@ -77,7 +77,7 @@ Pour résoudre le problème de la diversité des clients, il ne suffit pas que l
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
 
 [Grandine](https://docs.grandine.io/)
 

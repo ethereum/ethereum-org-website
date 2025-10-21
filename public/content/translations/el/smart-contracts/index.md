@@ -7,6 +7,10 @@ lang: el
 
 # Εισαγωγή στα έξυπνα συμβόλαια {#introduction-to-smart-contracts}
 
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
+
 Τα έξυπνα συμβόλαια αποτελούν τα θεμελιώδη δομικά στοιχεία του επιπέδου εφαρμογών του Ethereum. Είναι προγράμματα υπολογιστών αποθηκευμένα στην [κρυπτοαλυσίδα](/glossary/#blockchain) τα οποία ακολουθούν τη λογική «αν συμβεί αυτό, τότε αυτό» και έχουν εγγυημένη εκτέλεση σύμφωνα με τους κανόνες που ορίζονται από τον κώδικά της, ο οποίος δεν μπορεί να αλλάξει από τη στιγμή που θα δημιουργηθεί.
 
 Ο Nick Szabo επινόησε τον όρο «έξυπνο συμβόλαιο». Το 1994, έγραψε [μια εισαγωγή σε αυτή την έννοια](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) και το 1996 [μια ερεύνα για το τι θα μπορούσαν να κάνουν τα έξυπνα συμβόλαια](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
@@ -70,7 +74,7 @@ lang: el
 - [Κρυπτονομίσματα σταθερής αξίας](/stablecoins/)
 - [Δημιουργία και διανομή μοναδικών ψηφιακών περιουσιακών στοιχείων](/nft/)
 - [Ένα αυτόματο, ανοικτό ανταλλακτήριο νομισμάτων](/get-eth/#dex)
-- [Αποκεντρωμένα παιχνίδια](/dapps/?category=gaming#explore)
+- [Αποκεντρωμένα παιχνίδια](/apps/categories/gaming)
 - [Μια πολιτική ασφάλισης που πληρώνει αυτόματα](https://etherisc.com/)
 - [Ένα πρότυπο που επιτρέπει στους ανθρώπους να δημιουργήσουν προσαρμοσμένα και διαλειτουργικά νομίσματα](/developers/docs/standards/tokens/)
 
