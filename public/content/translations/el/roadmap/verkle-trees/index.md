@@ -49,20 +49,18 @@ summaryPoints:
 
 Υπάρχουν ήδη δοκιμαστικά δίκτυα με δέντρα Verkle σε λειτουργία, αλλά απαιτούνται σημαντικές ενημερώσεις στους πελάτες για να υποστηρίξουν τα δέντρα Verkle. Μπορείτε να βοηθήσετε στην επιτάχυνση της προόδου αναπτύσσοντας συμβάσεις στα δοκιμαστικά δίκτυα ή εκτελώντας εφαρμογές πελάτη σε δίκτυα δοκιμών.
 
-[Εξερευνήστε το δίκτυο δοκιμών Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [Δείτε την παρουσίαση του Guillaume Ballet για το παλαιότερο δίκτυο δοκιμών Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (σημειώστε ότι το Condrieu χρησιμοποιούσε απόδειξη εργασίας και έχει αντικατασταθεί από το Verkle Gen Devnet 6).
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [Verkle Trees για πελάτη χωρίς κατάσταση](https://verkle.info/)
 - [Ο Dankrad Feist εξηγεί τα δέντρα Verkle στο PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Δέντρα Verkle για όλους εμάς τους υπόλοιπους](https://research.2077.xyz/verkle-trees)
+- [Δέντρα Verkle για όλους εμάς τους υπόλοιπους](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [Ανατομία μιας Απόδειξης Verkle](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Ο Guillaume Ballet εξηγεί τα δέντρα Verkle στο ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Πώς τα δέντρα Verkle κάνουν το Ethereum λεπτό και δυνατό» από τον Guillaume Ballet στο Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Η Piper Merriam για τους πελάτες χωρίς κατάστασης από το ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Ο Dankrad Fiest εξηγεί τα δέντρα Verkle και τη μη χρήση κατάστασης στο podcast Μηδενικής γνώσης](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Ο Dankrad Fiest εξηγεί τα δέντρα Verkle και τη μη χρήση κατάστασης στο podcast Μηδενικής γνώσης](https://zeroknowledge.fm/podcast/202/)
 - [Ο Vitalik Buterin για τα δέντρα Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Ο Dankrad Feist για τα δέντρα Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Τεκμηρίωση EIP για τα δέντρα Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

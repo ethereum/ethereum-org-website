@@ -8,7 +8,7 @@ Os contratos inteligentes são extremamente flexíveis e capazes de controlar gr
 
 Blockchains públicas, como a Ethereum, complicam ainda mais a questão de proteger contratos inteligentes. O código de contrato implantado _geralmente_ não pode ser alterado para corrigir falhas de segurança, enquanto os ativos roubados de contratos inteligentes são extremamente difíceis de rastrear e, em sua maioria, irrecuperáveis devido à imutabilidade.
 
-Embora os números variem, estima-se que o valor total roubado ou perdido devido a defeitos de segurança em contratos inteligentes é facilmente superior a 1 bilhão de dólares. Isso inclui incidentes de alto perfil, como o [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (com 3,6 milhões de ETH roubados, no valor de mais de US$ 1 bilhão de dólares nos preços de hoje), [Hack da carteira múltiplas assinaturas da Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (US$ 30 milhões perdidos para hackers) e o [Caso da carteira congelada da Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mais de US$ 300 milhões em ETH bloqueados para sempre).
+Embora os números variem, estima-se que o valor total roubado ou perdido devido a defeitos de segurança em contratos inteligentes é facilmente superior a 1 bilhão de dólares. Isso inclui incidentes de alto perfil, como o [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (com 3,6 milhões de ETH roubados, no valor de mais de US$ 1 bilhão de dólares nos preços de hoje), [Hack da carteira múltiplas assinaturas da Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (US$ 30 milhões perdidos para hackers) e o [Caso da carteira congelada da Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mais de US$ 300 milhões em ETH bloqueados para sempre).
 
 As questões mencionadas tornam imperativo para os desenvolvedores investirem esforços na construção de contratos inteligentes seguros, sólidos e resistentes. Segurança dos contratos inteligentes é um assunto sério, e todo desenvolvedor deve aprender. Este guia abrangerá considerações de segurança para desenvolvedores de Ethereum e explorará recursos para melhorar a segurança dos contratos inteligentes.
 
@@ -223,7 +223,7 @@ Mais sobre [como projetar sistemas de governança seguros](https://blog.openzepp
 
 Os desenvolvedores de software tradicionais estão familiarizados com o princípio KISS (“Não complique, estúpido!”), o qual aconselha a não introdução complexidade desnecessária na concepção de software. Isso segue o pensamento de longa data, de que “sistemas complexos falham de maneiras complexas” e são mais suscetíveis a erros dispendiosos.
 
-Não complicar é de particular importância ao escrever contratos inteligentes, visto que os contratos inteligentes estão potencialmente controlando grandes quantidades de valor. Uma dica para descomplicar ao escrever contratos inteligentes é reutilizar bibliotecas existentes, como [Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), sempre que possível. Como essas bibliotecas foram extensivamente auditadas e testadas pelos desenvolvedores, usá-las reduz as chances de introduzir bugs ao escrever novas funcionalidades do zero.
+Não complicar é de particular importância ao escrever contratos inteligentes, visto que os contratos inteligentes estão potencialmente controlando grandes quantidades de valor. Uma dica para descomplicar ao escrever contratos inteligentes é reutilizar bibliotecas existentes, como [Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), sempre que possível. Como essas bibliotecas foram extensivamente auditadas e testadas pelos desenvolvedores, usá-las reduz as chances de introduzir bugs ao escrever novas funcionalidades do zero.
 
 Outro conselho comum é escrever funções pequenas e manter contratos modulares, dividindo a lógica do negócio por vários contratos. Não só escrever um código simples reduz a superfície de ataque em um contrato inteligente, também facilita argumentar sobre a exatidão do sistema por inteiro e detectar possíveis erros de concepção mais cedo.
 
@@ -304,7 +304,7 @@ Não há nada de errado aqui, exceto que o `Attacker` tem outra função que cha
 - `Victim` finalmente aplica os resultados da primeira transação (e as subsequentes) ao seu estado, então o saldo do `Attacker` é definido para 0 (zero)
 ```
 
-O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função termine, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador retire seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar um contrato inteligente de seus fundos, como aconteceu no [DAO hack em 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Os ataques de reentrância ainda são um problema crítico para contratos inteligentes hoje, como mostram as[listagens públicas de exploits de reentrância](https://github.com/pcaversaccio/reentrancy-attacks).
+O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função termine, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador retire seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar um contrato inteligente de seus fundos, como aconteceu no [DAO hack em 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Os ataques de reentrância ainda são um problema crítico para contratos inteligentes hoje, como mostram as[listagens públicas de exploits de reentrância](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Como prevenir ataques de reentrância
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Você também pode usar um sistema de [receber pagamentos](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment), que exige que os usuários retirem fundos dos contratos inteligentes, em vez de um sistema de "envio de pagamentos" que envia fundos para contas. Isso elimina a possibilidade de acionar código inadvertidamente em endereços desconhecidos (e também pode impedir determinados ataques de negação de serviço).
+Você também pode usar um sistema de [receber pagamentos](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), que exige que os usuários retirem fundos dos contratos inteligentes, em vez de um sistema de "envio de pagamentos" que envia fundos para contas. Isso elimina a possibilidade de acionar código inadvertidamente em endereços desconhecidos (e também pode impedir determinados ataques de negação de serviço).
 
 #### Overflows e underflows em inteiro {#integer-underflows-and-overflows}
 
@@ -475,17 +475,13 @@ Se você planeja consultar um oráculo on-chain sobre preços de ativos, conside
 
 ### Ferramentas para monitorar contratos inteligentes {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
-
 - **[Alerta leve e em tempo real](https://tenderly.co/alerting/)** - _Uma ferramenta para receber notificações em tempo real quando eventos incomuns ou inesperados acontecem em seus contratos inteligentes ou carteiras._
 
 ### Ferramentas para administração segura de contratos inteligentes {#smart-contract-administration-tools}
 
-- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, melhorias e pausas._
-
 - **[Safe](https://safe.global/)** - _Carteira de contrato inteligente em execução na Ethereum, que requer um número mínimo de pessoas para aprovar uma transação antes que ela possa ocorrer (M-de-N)._
 
-- **[Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** - _Bibliotecas de contrato para implementação de funcionalidades administrativas, incluindo propriedade de contratos, atualizações, controles de acesso, governança, pausabilidade e muito mais._
+- **[Contratos OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** - _Bibliotecas de contrato para implementação de funcionalidades administrativas, incluindo propriedade de contratos, atualizações, controles de acesso, governança, pausabilidade e muito mais._
 
 ### Serviços de auditoria de contrato inteligente {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ Se você planeja consultar um oráculo on-chain sobre preços de ativos, conside
 
 - **[Hacken](https://hacken.io)** - _Auditor de cibersegurança da Web3 que traz a abordagem de 360 graus à segurança da blockchain._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)** – _O HashEx se dedica a blockchain e auditoria de contrato inteligente para garantir a segurança de criptomoedas, fornecendo serviços como desenvolvimento de contrato inteligente, teste de penetração e consultoria em blockchain._
 
@@ -515,7 +511,7 @@ Se você planeja consultar um oráculo on-chain sobre preços de ativos, conside
 
 - **[Cyfrin](https://cyfrin.io)** - _Poderosa empresa de segurança da Web3, desenvolvendo a segurança de criptografia por meio de produtos e serviços de auditoria de contratos inteligentes._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Empresa de segurança Web3 que oferece auditorias de segurança para sistemas de blockchain por meio de uma equipe de auditores experientes e das melhores ferramentas da categoria._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Empresa de segurança Web3 que oferece auditorias de segurança para sistemas de blockchain por meio de uma equipe de auditores experientes e das melhores ferramentas da categoria._
 
 - **[Oxorio](https://oxor.io/)** - _Auditorias de contratos inteligentes e serviços de segurança de blockchain com experiência em EVM, Solidity, ZK, tecnologia cross-chain para empresas de criptografia e projetos DeFi._
 
@@ -535,7 +531,7 @@ Se você planeja consultar um oráculo on-chain sobre preços de ativos, conside
 
 ### Publicações de vulnerabilidades e exploits conhecidos em contratos inteligentes {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Ataques Conhecidos em Contrato Inteligente](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Explicação fácil das vulnerabilidades de contrato mais significativas, com código de exemplo para a maioria dos casos._
+- **[ConsenSys: Ataques Conhecidos em Contrato Inteligente](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Explicação fácil das vulnerabilidades de contrato mais significativas, com código de exemplo para a maioria dos casos._
 
 - **[Registro SWC](https://swcregistry.io/)** - _Lista selecionada de Enumerações de Vulnerabilidades Comuns (Common Weakness Enumeration, CWE) que se aplicam a contratos inteligentes da Ethereum._
 

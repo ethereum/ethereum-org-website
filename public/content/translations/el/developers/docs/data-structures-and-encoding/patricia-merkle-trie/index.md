@@ -11,7 +11,7 @@ sidebarDepth: 2
 
 A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Αντίθετα, δεν υπάρχει τρόπος να δημιουργηθούν δύο διαφορετικές καταστάσεις με το ίδιο hash ρίζας, και οποιαδήποτε προσπάθεια τροποποίησης της κατάστασης με διαφορετικές τιμές θα οδηγήσει σε διαφορετικό hash ρίζας κατάστασης. Θεωρητικά, αυτή η δομή παρέχει το 'ιερό δισκοπότηρο' της απόδοσης `O(log(n))` για εισαγωγές, αναζητήσεις και διαγραφές.
 
-Στο κοντινό μέλλον, το Ethereum σχεδιάζει να μεταφερθεί σε μια δομή [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees), η οποία θα ανοίξει πολλές νέες δυνατότητες για μελλοντικές βελτιώσεις του πρωτοκόλλου.
+Στο κοντινό μέλλον, το Ethereum σχεδιάζει να μεταφερθεί σε μια δομή [Verkle Tree](/roadmap/verkle-trees), η οποία θα ανοίξει πολλές νέες δυνατότητες για μελλοντικές βελτιώσεις του πρωτοκόλλου.
 
 ## Προαπαιτούμενα {#prerequisites}
 

@@ -56,7 +56,7 @@ NFTها کاربرد بسیاری دارند، از جمله:
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>NFT اثر هنری/کالاهای خود را جستجو کنید، بخرید یا بسازید...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     کشف آثار هنری NFT
   </ButtonLink>
 </InfoBanner>

@@ -18,10 +18,8 @@ The only protections are to refrain from using untested new projects, only appro
 
 Several websites let you view and revoke smart contracts connected to your address. Visit the website and connect your wallet:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
 - [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (multiple networks)
 - [Revoke](https://revoke.cash/) (multiple networks)
 - [Unrekt](https://app.unrekt.net/) (multiple networks)
 - [EverRevoke](https://everrise.com/everrevoke/) (multiple networks)

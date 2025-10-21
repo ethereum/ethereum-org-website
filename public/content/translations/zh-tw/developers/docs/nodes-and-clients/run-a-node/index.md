@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### 硬體 {#hardware}
 
-然而，抗審查的去中心化網路不應依賴雲端提供者。 因而，在自己的本機硬體上運行自己的節點對生態系統來說更健全。 [預估](https://www.ethernodes.org/networkType/Hosting)顯示大部分節點在雲端上運行，這可能造成單點故障。
+然而，抗審查的去中心化網路不應依賴雲端提供者。 因而，在自己的本機硬體上運行自己的節點對生態系統來說更健全。 [預估](https://www.ethernodes.org/network-types)顯示大部分節點在雲端上運行，這可能造成單點故障。
 
 以太坊用戶端可以在自己的電腦、筆記型電腦、伺服器，或甚至是單板電腦上運行。 當在你的個人電腦上運行用戶端成為可能時，弄台專門運行節點的機器可以大幅提高效能和安全性，同時將最大程度上減小對你主要電腦的影響。
 
@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### 共識客戶
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)（並未提供預先建置的二進位檔案，只有一個 Docker 映像檔，或者自行編譯原始碼）
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（並未提供預先建置的二進位檔案，只有一個 Docker 映像檔，或者自行編譯原始碼）
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu 還有個啟動器選項，會詢問一系列問題並產生設定檔案。
 besu --Xlauncher
 ```
 
-[Besu 的文件](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)包含了額外的選項及設定細節。
+[Besu 的文件](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含了額外的選項及設定細節。
 
 ##### 運行 Erigon
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 運行 Nethermind
 
-Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
+Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/get-started/installing-nethermind)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/get-started/running-node/)。
 
 執行用戶端會啟用它的核心功能、選擇端點並開始尋找對等用戶端。 成功發現對等用戶端後，用戶端開始同步。 執行用戶端會等待來自共識用戶端的連接。 在用戶端成功與目前狀態同步以後，目前的區塊鏈資料就可以使用。
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### 運行 Prysm
 
-Prysm 有可以輕鬆自動安裝的腳本。 詳情請見 [Prysm 文檔](https://docs.prylabs.network/docs/install/install-with-script)。
+Prysm 有可以輕鬆自動安裝的腳本。 詳情請見 [Prysm 文檔](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)。
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +444,7 @@ _這不適用於共識層驗證者節點。_節點離線將影響所有依賴節
 
 #### 更新用戶端 {#updating-clients}
 
-你需要確保透過安全補丁、功能與[以太坊改善提議](/eips/)讓你的用戶端軟體保持最新。 特別是[硬分叉](/history/)前，請確保你運行的是正確的用戶端版本。
+你需要確保透過安全補丁、功能與[以太坊改善提議](/eips/)讓你的用戶端軟體保持最新。 特別是[硬分叉](/ethereum-forks/)前，請確保你運行的是正確的用戶端版本。
 
 > 在重大的網路更新前，以太坊基金會在它們的[部落格](https://blog.ethereum.org)上發布貼文。 你可以[訂閱這些公告](https://blog.ethereum.org/category/protocol#subscribe)，在你的節點需要更新時，透過電子郵件接收通知。
 

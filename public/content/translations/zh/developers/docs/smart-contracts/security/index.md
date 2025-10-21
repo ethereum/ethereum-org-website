@@ -8,7 +8,7 @@ lang: zh
 
 公共区块链（比如以太坊）使智能合约的安全性问题变的更加复杂。 已部署的合约代码_通常_无法更改因而不能给安全问题打补丁，并且由于这种不可变性，从智能合约中盗取的资产极难追踪并且绝大多数无法挽回。
 
-虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
+虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
 
 上述几个事件迫使开发者必须付诸努力，构建安全、稳健、恢复力强的智能合约。 智能合约安全性是每个开发者都需要学习和研究的严肃问题。 本指南将介绍针对以太坊开发者的安全性注意事项，并研究增强智能合约安全性的资源。
 
@@ -223,7 +223,7 @@ contract EmergencyStop {
 
 传统的软件开发者熟悉 KISS（“保持简单、保持愚蠢”）原则，该原则建议不要将不必要的复杂性带入到软件设计中。 这与长期以来的见解“复杂的系统有着复杂的失败方式”不谋而合，而且复杂系统更容易出现代价高昂的错误。
 
-编写智能合约时简洁化尤其重要，因为智能合约有可能控制大量的价值。 实现简洁化的一个窍门是，编写智能合约时在允许的情况下重用已存在的库，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)。 因为开发者对这些库已经进行了广泛的审计和测试，使用它们会减少从零开始编写新功能时引入漏洞的几率。
+编写智能合约时简洁化尤其重要，因为智能合约有可能控制大量的价值。 实现简洁化的一个窍门是，编写智能合约时在允许的情况下重用已存在的库，例如 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)。 因为开发者对这些库已经进行了广泛的审计和测试，使用它们会减少从零开始编写新功能时引入漏洞的几率。
 
 另一个常见的建议是通过将业务逻辑拆分到多个合约中，编写小型函数并保持合约模块化。 编写更简单的代码不仅仅会减少智能合约中的攻击面，还让推理整个系统的正确性并及早发现可能的设计错误变得更加容易。
 
@@ -304,7 +304,7 @@ contract Victim {
 - 最后 `Victim` 将第一笔交易（和后续交易）的结果应用于其状态，所以 `Attacker` 的余额被设置为 0
 ```
 
-总结起来就是，由于调用者的余额在函数执行完成之前没有设置为 0，所以后续的调用会成功，让调用者可以多次提取他们的余额。 这种攻击可以用来提空智能合约中的资金，就像 [2016 DAO 黑客攻击](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)中发生情况的那样。 正如[公开的重入攻击列表](https://github.com/pcaversaccio/reentrancy-attacks)所示，当前重入攻击仍是智能合约所面临的一个严重问题。
+总结起来就是，由于调用者的余额在函数执行完成之前没有设置为 0，所以后续的调用会成功，让调用者可以多次提取他们的余额。 这种攻击可以用来提空智能合约中的资金，就像 [2016 DAO 黑客攻击](https://www.coindesk.com/learn/understanding-the-dao-attack)中发生情况的那样。 正如[公开的重入攻击列表](https://github.com/pcaversaccio/reentrancy-attacks)所示，当前重入攻击仍是智能合约所面临的一个严重问题。
 
 ##### 如何防止重入攻击
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-还可以使用[拉取支付](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) 系统，该系统要求用户从智能合约中提取资金，而不是使用将资金发送到帐户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
+还可以使用[拉取支付](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) 系统，该系统要求用户从智能合约中提取资金，而不是使用将资金发送到帐户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
 
 #### 整数下溢和溢出 {#integer-underflows-and-overflows}
 
@@ -473,19 +473,15 @@ contract Attack {
 
 - **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity 静态分析器，遍历抽象语法树 (AST) 来找出可疑漏洞，并以易于使用的 Mardown 格式打印输出问题。_
 
-### 智能合约监测工具 {#smart-contract-monitoring-tools}
-
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一种用于自动监测和响应智能合约中事件、函数和交易参数的工具。_
+### 智能合约监测工具 {#smart-contract-monitoring-tools}_
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _一种在智能合约或钱包发生异常或意外事件时，为你获取实时通知的工具。_
 
 ### 智能合约的安全管理工具 {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _用于智能合约管理的管理界面，包括访问控制、升级和暂停功能。_
-
 - **[Safe](https://safe.global/)** - _在以太坊上运行的智能合约钱包，需要最少人数批准交易后交易才能进行 (M-of-N)。_
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _用于实现管理功能的合约库，包括管理合约所有权、升级、访问限制、治理、可暂停等功能。_
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _用于实现管理功能的合约库，包括管理合约所有权、升级、访问限制、治理、可暂停等功能。_
 
 ### 智能合约审计服务 {#smart-contract-auditing-services}
 
@@ -505,7 +501,7 @@ contract Attack {
 
 - **[Hacken](https://hacken.io)** - _Web3 网络安全审计公司，为区块链安全提供全方位解决方案。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
 
 - **[HashEx](https://hashex.org/)** - _HashEx 专注于区块链和智能合约审计，确保加密货币安全，提供智能合约开发、渗透测试、区块链咨询等服务。_
 
@@ -515,7 +511,7 @@ contract Attack {
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 安全发电站，通过产品和智能合约审计服务提高加密货币安全性。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 安全公司，通过经验丰富的审计员团队和一流的工具，为区块链系统提供安全审计。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 安全公司，通过经验丰富的审计员团队和一流的工具，为区块链系统提供安全审计。_
 
 - **[Oxorio](https://oxor.io/)** - _智能合约审计和区块链安全服务，为加密货币公司和去中心化金融项目提供以太坊虚拟机、Solidity、零知识、跨链技术方面的专业知识。_
 
@@ -535,7 +531,7 @@ contract Attack {
 
 ### 已知智能合约漏洞及利用情况的刊物 {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys：已知的智能合约攻击](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _针对最重要的合约漏洞提供适合初学者的解释，多数案例提供了代码示例。_
+- **[ConsenSys：已知的智能合约攻击](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _针对最重要的合约漏洞提供适合初学者的解释，多数案例提供了代码示例。_
 
 - **[SWC 注册表](https://swcregistry.io/)** - _适用于以太坊智能合约的常见缺陷枚举 (CWE) 的精选项目列表。_
 

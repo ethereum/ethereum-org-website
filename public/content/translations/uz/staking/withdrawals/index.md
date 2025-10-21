@@ -65,7 +65,7 @@ Steyking yechib olishlari ishga tushdi! 2023-yil 12-aprelda amalga oshirilgan Sh
 
 Shanghai/Capella yangilanishi avvaldan tiklangan ETHni oddiy Ethereum hisoblariga qaytarib olish imkoniyatini yaratdi. Bu likvidlikni garovga qo‘yish jarayonini to‘liq yopdi va Ethereum barqaror, kengaytiriladigan, xavfsiz markazlashmagan ekotizim yaratish yo‘lidagi maqsadiga yana bir qadam yaqinlashdi.
 
-- [Ethereum tarixi haqida ko‘proq ma’lumot](/history/)
+- [Ethereum tarixi haqida ko‘proq ma’lumot](/ethereum-forks/)
 - [Ethereum yo‘l xaritasi to‘g‘risida ko‘proq ma’lumot](/roadmap/)
 
 ## Pul yechib olish jarayoni qanday amalga oshiriladi? {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Agar siz <a href="/staking/pools/">steyking puli</a>ning a’zosi bo‘lsangiz yoki steyking tokenlariga ega bo‘lsangiz, steyking yechib olish jarayoni haqida batafsilroq ma’lumot olish uchun o‘z xizmat ko‘rsatuvchingizga murojaat qilishingiz lozim, chunki har bir xizmat turlicha ishlaydi.
+Agar siz [steyking puli](/staking/pools/)ning a’zosi bo‘lsangiz yoki steyking tokenlariga ega bo‘lsangiz, steyking yechib olish jarayoni haqida batafsilroq ma’lumot olish uchun o‘z xizmat ko‘rsatuvchingizga murojaat qilishingiz lozim, chunki har bir xizmat turlicha ishlaydi.
 
-Umuman olganda, foydalanuvchilar o‘zlarining asosiy garovga qo‘yilgan ETHlarini qaytarib olish yoki foydalanayotgan steyking provayderni o‘zgartirish imkoniyatiga ega bo‘lishlari kerak. Agar ma’lum bir fond juda katta bo‘lib ketayotgan bo‘lsa, mablag‘larni chiqarib olish, qaytarib olish va <a href="https://rated.network/">kichikroq provayderga</a> qayta kiritish mumkin. Yoki, agar yetarli miqdorda ETH to‘plagan bo‘lsangiz, <a href="/staking/solo/">uydan turib steyking qilishingiz</a> mumkin.
+Umuman olganda, foydalanuvchilar o‘zlarining asosiy garovga qo‘yilgan ETHlarini qaytarib olish yoki foydalanayotgan steyking provayderni o‘zgartirish imkoniyatiga ega bo‘lishlari kerak. Agar ma’lum bir fond juda katta bo‘lib ketayotgan bo‘lsa, mablag‘larni chiqarib olish, qaytarib olish va <a href="https://rated.network/">kichikroq provayderga</a> qayta kiritish mumkin. Yoki, agar yetarli miqdorda ETH to‘plagan bo‘lsangiz, [uydan turib steyking qilishingiz](/staking/solo/) mumkin.
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Yo'q. Validator chiqib ketgandan so‘ng va uning to‘liq balansi yechib olinga
 
 - [Steykingli ishga tushirish platformasidan mablag‘larni yechib olish](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mayoq zanjiri pul yechib olishlarini operatsiya sifatida amalga oshirish](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum mushuk boshqaruvchilari - Shanxay](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Syao-Vey Vang bilan ETH steyking yechib olishi (sinash) Syao-Vey Vang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Aleks Stoks bilan mayoq zanjiri chiqarish operatsiyalarini pul yechish sifatida amalga oshirish](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Validatorning samarali balansini tushunish](https://www.attestant.io/posts/understanding-validator-effective-balance/)

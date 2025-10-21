@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { SlugPageParams } from "@/lib/types"
+import type { SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
@@ -19,6 +19,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
+import SlugJsonLD from "./page-jsonld"
+
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import { getPageData } from "@/lib/md/data"
@@ -26,16 +28,12 @@ import { getMdMetadata } from "@/lib/md/metadata"
 
 const loadData = dataLoader([["gfissues", fetchGFIs]])
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<SlugPageParams>
-}) {
-  const { locale, slug: slugArray } = await params
+export default async function Page({ params }: { params: SlugPageParams }) {
+  const { locale, slug: slugArray } = params
 
   // Check if this specific path is in our valid paths
-  const validPaths = await generateStaticParams()
-  const isValidPath = checkPathValidity(validPaths, await params)
+  const validPaths = (await generateStaticParams()) as SlugPageParams[]
+  const isValidPath = checkPathValidity(validPaths, params)
 
   if (!isValidPath) notFound()
 
@@ -81,19 +79,27 @@ export default async function Page({
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <Layout
+    <>
+      <SlugJsonLD
+        locale={locale}
         slug={slug}
         frontmatter={frontmatter}
-        tocItems={tocItems}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        contentNotTranslated={!isTranslated}
         contributors={contributors}
-        timeToRead={Math.round(timeToRead.minutes)}
-      >
-        {content}
-      </Layout>
-    </I18nProvider>
+      />
+      <I18nProvider locale={locale} messages={messages}>
+        <Layout
+          slug={slug}
+          frontmatter={frontmatter}
+          tocItems={tocItems}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          contentNotTranslated={!isTranslated}
+          contributors={contributors}
+          timeToRead={Math.round(timeToRead.minutes)}
+        >
+          {content}
+        </Layout>
+      </I18nProvider>
+    </>
   )
 }
 
@@ -118,12 +124,8 @@ export async function generateStaticParams() {
   }
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<SlugPageParams>
-}) {
-  const { locale, slug } = await params
+export async function generateMetadata({ params }: { params: SlugPageParams }) {
+  const { locale, slug } = params
 
   try {
     return await getMdMetadata({

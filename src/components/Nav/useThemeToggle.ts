@@ -1,5 +1,5 @@
+import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-import { MdBrightness2, MdWbSunny } from "react-icons/md"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -10,7 +10,7 @@ import useTranslation from "@/hooks/useTranslation"
 export const useThemeToggle = () => {
   const { t } = useTranslation("common")
   const { setTheme, resolvedTheme } = useTheme()
-  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const ThemeIcon = useColorModeValue(Moon, Sun)
 
   const toggleColorMode = () => {
     const targetTheme = resolvedTheme === "dark" ? "light" : "dark"

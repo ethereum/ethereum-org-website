@@ -52,7 +52,7 @@ Tá buntáistí éagsúla ag an dá rogha mar atá achoimrithe thuas. Má tá r�
 
 #### Crua-earraí {#hardware}
 
-Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/networkType/Hosting) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
+Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/network-types) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
 
 Is féidir le cliaint Ethereum rith ar do ríomhaire, ríomhaire glúine, freastalaí, nó fiú ríomhaire aonchláir. Cé gur féidir cliaint a reáchtáil ar do ríomhaire pearsanta, má tá meaisín tiomnaithe díreach do do nód féadann sé a fheidhmíocht agus a shlándáil a fheabhsú go suntasach agus an tionchar ar do phríomh-ríomhaire a íoslaghdú.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Ag rith Prysm
 
-Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -384,7 +384,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API ](https://eth2docs.vercel.app/).
+Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API](https://eth2docs.vercel.app/).
 
 ### Bailíochtóirí a chur leis {#adding-validators}
 
@@ -444,7 +444,7 @@ Smaoinigh ar sheirbhís a chruthú chun do chliaint a rith go huathoibríoch agu
 
 #### Cliaint á nuashonrú {#updating-clients}
 
-Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/history/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
+Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/ethereum-forks/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
 
 > Roimh nuashonruithe líonra tábhachtacha, foilsíonn EF postáil ar a [blog](https://blog.ethereum.org). Is féidir leat [liostáil leis na fógraí seo](https://blog.ethereum.org/category/protocol#subscribe) chun fógra a chur chuig do ríomhphost nuair a bhíonn nuashonrú de dhíth ar do nód.
 

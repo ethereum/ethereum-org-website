@@ -56,7 +56,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Fonctions utilitaires pour travailler avec les bases de code liées à Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python autour du compilateur solc Solidity avec support 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python pour les contrats Maker_
-- [siwe](https://github.com/spruceid/siwe-py) - _Connectez-vous avec Ethereum (siwe) pour Python_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Connectez-vous avec Ethereum (siwe) pour Python_
 - [Intégration Web3 DeFi pour Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un paquet Python avec des intégrations prêtes à l'emploi pour ERC-20, Uniswap et d'autres projets populaires_
 - [Wake](https://getwake.io) - _Cadre Python tout-en-un pour les tests de contrats, le fuzzing, le déploiement, les analyses de vulnérabilités et la navigation dans le code (serveur de langage - [Outils pour Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

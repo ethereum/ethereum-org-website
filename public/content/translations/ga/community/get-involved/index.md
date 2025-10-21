@@ -114,7 +114,6 @@ Tá éiceachóras Ethereum ar mhisean earraí poiblí agus tionscadail a bhfuil 
 - [Arm Web3](https://web3army.xyz/)
 - [Jabanna Crypto Valley](https://cryptovalley.jobs/)
 - [Poist Ethereum](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Glac páirt in DAO {#decentralized-autonomous-organizations-daos}
 
@@ -125,7 +124,6 @@ Is eagraíochtaí uathrialaitheacha díláraithe iad eagraíochtaí "DAO". Úsá
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Comharghnó forbartha saoroibrithe Web3 ag obair mar DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _rialachas pobail DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Innealtóireacht dhlíthiúil_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Pobal ealaíne_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Fiontraíocht do thionscadail criptithe réamh-síolta_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Meicnic Chluichí MMORPG don Saol Fíor_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Brandaí Éadaí Digiteacha-fisiceacha_

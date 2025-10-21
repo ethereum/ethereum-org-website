@@ -44,7 +44,7 @@ Tá geallsealbhóirí éagsúla i [bpobal Ethereum](/community/), agus tá ról 
 
 - ** Sealbhóirí éitir**: tá méid treallach ETH ag na daoine seo. [Tuilleadh faoi ETH](/eth/).
 - **Úsáideoirí Feidhmchláir**: idirghníomhaíonn na daoine seo le feidhmchláir ar bhlocshlabhra Ethereum.
-- **Forbróirí Feidhmchláir/Uirlisí**: scríobhann na daoine seo feidhmchláir a ritheann ar bhlocshlabhra Ethereum (m.sh. DeFi, NFTanna, etc.) nó a thógann uirlisí chun idirghníomhú le hEthereum (m.sh. sparán, tástáil seomraí, etc.). [Tuilleadh faoi dhaipeanna](/dapps/).
+- **Forbróirí Feidhmchláir/Uirlisí**: scríobhann na daoine seo feidhmchláir a ritheann ar bhlocshlabhra Ethereum (m.sh. DeFi, NFTanna, etc.) nó a thógann uirlisí chun idirghníomhú le hEthereum (m.sh. sparán, tástáil seomraí, etc.). [Tuilleadh faoi dhaipeanna](/apps/).
 - **Oibreoirí Nóid**: ritheann na daoine seo nóid a fhorleagann bloic agus idirbhearta, rud a dhiúltaíonn d'aon idirbheart nó bloc neamhbhailí a aimsíonn siad. [Tuilleadh faoi nóid](/developers/docs/nodes-and-clients/).
 - **Údair EIP**: molann na daoine seo athruithe ar phrótacal Ethereum, i bhfoirm Moltaí Feabhsúcháin Ethereum (EIPs). [Tuilleadh faoi EIPeanna](/eips/).
 - **Bailitheoirí**: ritheann na daoine seo nóid ar féidir leo bloic nua a chur le blocshlabhra Ethereum.
@@ -152,7 +152,7 @@ Is minic a thrádáiltear luas agus éifeachtúlacht i bpróiseas rialachais Eth
 
 Cé go raibh an tsonraíocht agus na feidhmiúcháin forbartha foinse oscailte i gcónaí, níor úsáideadh na próisis fhoirmiúla a úsáideadh chun nuashonruithe a bhfuil cur síos orthu thuas a mholadh. Cheadaigh sé seo athruithe a shonrú agus a chomhaontú níos tapúla ag taighdeoirí agus feidhmitheoirí.
 
-Nuair a chumaisc an Beacon Chain le ciseal forghníomhaithe Ethereum an 15ú Meán Fómhair, 2022, cuireadh an Cumasc i gcrích mar chuid [d'uasghrádú líonra Pháras](/history/#paris). Athraíodh an togra [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) ó 'Ghlaoch Deireanach' go 'Deiridh', rud a chuir an t-aistriú go cruthúnas-geallchuir.
+Nuair a chumaisc an Beacon Chain le ciseal forghníomhaithe Ethereum an 15ú Meán Fómhair, 2022, cuireadh an Cumasc i gcrích mar chuid [d'uasghrádú líonra Pháras](/ethereum-forks/#paris). Athraíodh an togra [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) ó 'Ghlaoch Deireanach' go 'Deiridh', rud a chuir an t-aistriú go cruthúnas-geallchuir.
 
 <ButtonLink href="/roadmap/merge/">
   Tuilleadh faoin gCumasc
@@ -180,5 +180,5 @@ Níl an rialachas in Ethereum sainmhínithe go docht. Tá dearcthaí éagsúla a
 - [Cad is croífhorbróir Ethereum ann?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Rialachas, Cuid 2: Tá an plútacratachas fós go dona](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Ag bogadh níos faide ná rialachas vótála boinn](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin _
-- [Rialachas Blocshlabhra a Thuiscint](https://research.2077.xyz/understanding-blockchain-governance) - _Taighde 2077_
+- [Rialachas Blocshlabhra a Thuiscint](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _Taighde 2077_
 - [Rialtas Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

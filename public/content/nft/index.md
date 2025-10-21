@@ -57,7 +57,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Explore NFT art
   </ButtonLink>
 </InfoBanner>
@@ -101,7 +101,7 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 ## Further reading {#further-reading}
 
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
-- [EtherscanNFT tracker](https://etherscan.io/nft-top-contracts)
+- [Etherscan NFT tracker](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT tracker](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)

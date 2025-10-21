@@ -65,7 +65,7 @@ Awon iyọkuro owo idokowo ti wa laaye! Iṣẹ ṣiṣe yiyọ owo kuro ni a mu
 
 Igbesoke Shanghai/Capella jẹ ki ETH idokowo se gba pada si awọn akanti Ethereum deede. Eyi ti pari iyipo lori owo idokowo, o si mu Ethereum sunmọ ni igbesẹ kan lori irin-ajo rẹ si ọna kikọ ayika alailakoso to ni iduroṣinṣin, to ni imu gbooro, to ni aabo.
 
-- [Diẹ sii lori itan Etheuum](/history/)
+- [Diẹ sii lori itan Etheuum](/ethereum-forks/)
 - [Diẹ sii lori ọna afojusun Ethereum](/roadmap/)
 
 ## Bawo ni awọn sisanwo yiyọ owo kuro se n sise? {#how-do-withdrawals-work}
@@ -153,9 +153,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ti o ba jẹ ara ti <a href="/staking/pools/">akojopo idokowo</a> kan tabi mu awọn token idokowo dani, o yẹ ki o ṣayẹwo pẹlu olupese rẹ fun awọn alaye diẹ sii nipa bi a ṣe n ṣakoso awọn yiyọkuro idokowo, nitori iṣẹ kọọkan n ṣiṣẹ ni ona otooto.
+Ti o ba jẹ ara ti [akojopo idokowo](/staking/pools/) kan tabi mu awọn token idokowo dani, o yẹ ki o ṣayẹwo pẹlu olupese rẹ fun awọn alaye diẹ sii nipa bi a ṣe n ṣakoso awọn yiyọkuro idokowo, nitori iṣẹ kọọkan n ṣiṣẹ ni ona otooto.
 
-Ni gbogbogbo, awọn olumulo yẹ ki o ni ominira lati gba ETH ti wọn fi dokowo pada, tabi yi olupese idokowo ti wọn yoo lo pada. Ti akojopo idokowo kan pato ba n tobi ju, a le gba awọn owo jade, rà pada, ati tun idokowo ṣe pẹlu <a href="https://rated.network/">olupese ti o kere ju</a>. Tabi, ti o ba ti ko ETH jo to o le ṣe <a href="/staking/solo/">idokowo lati ile</a>.
+Ni gbogbogbo, awọn olumulo yẹ ki o ni ominira lati gba ETH ti wọn fi dokowo pada, tabi yi olupese idokowo ti wọn yoo lo pada. Ti akojopo idokowo kan pato ba n tobi ju, a le gba awọn owo jade, rà pada, ati tun idokowo ṣe pẹlu <a href="https://rated.network/">olupese ti o kere ju</a>. Tabi, ti o ba ti ko ETH jo to o le ṣe [idokowo lati ile](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +212,6 @@ Rara. Ni kete ti olufọwọsi kan ba ti jade ati pe o ti yọ owo to ku re kuro
 
 - [Àwọn yiyọkúrò Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Eip-4895: Beacon chain push withdrawals as operations](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

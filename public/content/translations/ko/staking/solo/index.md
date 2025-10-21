@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="안전한 키 관리" eventCategory="SoloStaking" eventName="clicked secure key management">
 개인 키가 이더리움 주소를 보호하는 방법처럼 검증자를 위한 특별한 키를 생성해야 합니다. 시드 문구 또는 개인 키를 안전하게 보호하는 방법을 반드시 숙지해야 합니다.{' '}
 
-<a href="/security/">이더리움 보안 및 스캠 예방</a>
+[이더리움 보안 및 스캠 예방](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="유지 보수" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 <ExpandableCard title="32 ETH 이상을 예치할 수 있습니까?">
 검증자와 연계된 각각의 키 쌍이 활성화되려면 정확히 32 ETH가 필요합니다. 검증자마다 32 ETH의 <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">유효 잔고</a> 제한이 있기 때문에 한 개의 키 세트에 ETH를 더 예치해도 보상이 증가하지는 않습니다. 이는 스테이킹은 32 ETH 단위로 이루어지며 각각 고유한 키와 잔고가 있음을 의미합니다.
 
-하나의 검증자에 32 ETH보다 더 많은 금액을 예치하지 마세요. 그렇다고 보상이 증가하지는 않습니다. 검증자용 출금 주소가 설정된 경우 32 ETH를 초과한 자산은 자동으로 다음 <a href="/staking/withdrawals/#validator-sweeping">검증자 정리</a> 중에 이 주소로 자동 출금됩니다.
+하나의 검증자에 32 ETH보다 더 많은 금액을 예치하지 마세요. 그렇다고 보상이 증가하지는 않습니다. 검증자용 출금 주소가 설정된 경우 32 ETH를 초과한 자산은 자동으로 다음 [검증자 정리](/staking/withdrawals/#validator-sweeping) 중에 이 주소로 자동 출금됩니다.
 
-솔로 스테이킹이 너무 부담스럽다면 <a href="/staking/saas/">스테이킹 서비스</a> 제공 업체의 이용을 고려해 보세요. 또는 32 ETH보다 적은 금액을 스테이킹하려면 <a href="/staking/pools/">스테이킹 풀</a>을 확인해 보세요.
+솔로 스테이킹이 너무 부담스럽다면 [스테이킹 서비스](/staking/saas/) 제공 업체의 이용을 고려해 보세요. 또는 32 ETH보다 적은 금액을 스테이킹하려면 [스테이킹 풀](/staking/pools/)을 확인해 보세요.
 </ExpandableCard>
 
 <ExpandableCard title="오프라인이 되는 경우 슬래싱되나요? (답 요약: 아니오)">
@@ -200,7 +200,6 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 - [클라이언트 다양성 개선](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [이더리움 합의 계층에서의 클라이언트 다양성](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [사용법: 이더리움 검증자용 하드웨어 구매하기](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [단계별: 이더리움 2.0 테스트넷에 참여하는 방법](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 슬래싱 방지 팁](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

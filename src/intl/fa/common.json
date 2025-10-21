@@ -230,7 +230,7 @@
   "nav-contribute-description": "اگر می‌خواهید کمک کنید، این شما را راهنمایی می‌کند",
   "nav-contribute-label": "مشارکت در ethereum.org",
   "nav-dao-description": "جوامع تحت مالکیت اعضا بدون مرجع متمرکز",
-  "nav-dapps-description": "با استفاده از اتریوم، در اکوسیستمی غنی از برنامه‌ها کاوش کنید",
+  "nav-apps-description": "با استفاده از اتریوم، در اکوسیستمی غنی از برنامه‌ها کاوش کنید",
   "nav-defi-description": "یک جایگزین جهانی و باز برای بازار مالی سنتی",
   "nav-desci-description": "یک جایگزین جهانی و آزاد برای سیستم علمی فعلی",
   "nav-desoc-description": "پلتفرم‌های مبتنی بر بلاک‌چین برای تعامل اجتماعی و تولید محتوا",
@@ -279,7 +279,7 @@
   "nav-history-label": "تاریخچه فنی اتریوم",
   "nav-learn-by-coding-description": "ابزارهایی که به شما در آزمایش اتریوم کمک می کنند",
   "nav-local-env-description": "سهام توسعه اتریوم خود را انتخاب و راه‌اندازی کنید",
-  "nav-mainnet-description": "برنامه‌های بلاک‌چین سازمانی را می‌توان بر روی شبکه اصلی عمومی اتریوم ایجاد کرد",
+  "nav-enterprise-description": "برنامه‌های بلاک‌چین سازمانی را می‌توان بر روی شبکه اصلی عمومی اتریوم ایجاد کرد",
   "nav-networks-home-description": "تراکنش‌های ارزان‌تر و سریع‌تر برای اتریوم",
   "nav-networks-introduction-label": "مقدمه",
   "nav-networks-introduction-description": "اتریوم به شبکه‌ای متشکل از شبکه‌ها گسترش یافته است",
@@ -443,5 +443,8 @@
   "withdrawals": "برداشت‌ها از سهام‌گذاری",
   "wrapped-ether": "رپد اتر",
   "yes": "بله",
-  "zero-knowledge-proofs": "اثبات‌های دانش-صفر"
+  "zero-knowledge-proofs": "اثبات‌های دانش-صفر",
+  "ethereum-vs-bitcoin": "اتریوم در مقابل بیت‌کوین",
+  "nav-ethereum-vs-bitcoin-description": "درک تفاوت‌های بین اتریum و بیت‌کوین"
+
 }

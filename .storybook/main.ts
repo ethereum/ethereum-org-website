@@ -49,7 +49,7 @@ const config: StorybookConfig = {
 
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@/storybook/*": path.resolve(__dirname, "./.storybook/"),
+        "@/storybook/*": path.resolve(process.cwd(), ".storybook"),
       }
     }
 
@@ -61,6 +61,11 @@ const config: StorybookConfig = {
     if (imageRule) {
       imageRule["exclude"] = /\.svg$/
     }
+    // Configure yaml files to be loaded with yaml-loader
+    config.module.rules.push({
+      test: /\.ya?ml$/,
+      use: "yaml-loader",
+    })
 
     // Configure .svg files to be loaded with @svgr/webpack
     config.module.rules.push({

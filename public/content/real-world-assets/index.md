@@ -25,7 +25,7 @@ Each token can be divided into even smaller fractions. Tether Gold tokens, for i
  
 RWA tokens don’t have any intrinsic value. Rather, they reflect the value of the item that they represent, and so the token’s value changes along with the item’s value.
 
-## What are the benefits of RWAs? {#rwas-benifits}
+## What are the benefits of RWAs? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
   <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>

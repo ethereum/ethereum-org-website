@@ -1,14 +1,19 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
 
+import { breakpointAsNumber } from "@/lib/utils/screen"
+
+import ClientOnly from "../ClientOnly"
+import MediaQuery from "../MediaQuery"
 import { BaseLink } from "../ui/Link"
 
-import ClientSideNav from "./Client"
+import DesktopNav from "./DesktopNav"
+import { DesktopNavLoading, MobileNavLoading } from "./loading"
+import MobileNav from "./MobileNav"
 
 const Nav = async () => {
-  const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations({ namespace: "common" })
 
   return (
     <nav
@@ -19,12 +24,22 @@ const Nav = async () => {
         href="/"
         aria-label={t("home")}
         className="inline-flex items-center no-underline"
+        data-testid="nav-logo"
       >
-        <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
+        <EthHomeIcon className="text-[35px] opacity-85 hover:opacity-100" />
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
-        <ClientSideNav />
+        <ClientOnly fallback={<DesktopNavLoading />}>
+          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.md}px)`]}>
+            <DesktopNav />
+          </MediaQuery>
+        </ClientOnly>
+        <ClientOnly fallback={<MobileNavLoading />}>
+          <MediaQuery queries={[`(max-width: ${breakpointAsNumber.md - 1}px)`]}>
+            <MobileNav />
+          </MediaQuery>
+        </ClientOnly>
       </div>
     </nav>
   )

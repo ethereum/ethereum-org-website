@@ -7,7 +7,7 @@ lang: fr
 Le réseau Ethereum a commencé par utiliser un mécanisme de consensus basé sur la **[Preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow)**. Cela permet à l'ensemble des nœuds du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques. Ethereum a néanmoins abandonné la preuve de travail en 2022 et a commencé à utiliser la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos).
 
 <InfoBanner emoji=":wave:">
-    La preuve de travail est maintenant obsolète. Ethereum n'utilise plus la preuve de travail dans le cadre de son mécanisme de consensus. En lieu et place, Ethereum utilise la preuve d'enjeu. En savoir plus sur la <a href="/developers/docs/consensus-mechanisms/pos/">preuve d'enjeu</a> et le <a href="/staking/">staking</a>.
+    La preuve de travail est maintenant obsolète. Ethereum n'utilise plus la preuve de travail dans le cadre de son mécanisme de consensus. En lieu et place, Ethereum utilise la preuve d'enjeu. En savoir plus sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et le [staking](/staking/).
 </InfoBanner>
 
 ## Prérequis {#prerequisites}
@@ -56,7 +56,7 @@ Pour créer de manière constante des blocs malveillants mais valides, un mineur
 
 La preuve de travail était également responsable de l'émission de nouvelles devises dans le système et encourageait les mineurs à y travailler.
 
-Depuis [la mise à jour Constantinople](/history/#constantinople), les mineurs ayant réussi à créer un bloc étaient récompensés par deux ETH fraîchement minés et une partie des frais de transaction. Les blocs Ommer étaient également récompensés par 1,75 ETH. Les blocs Ommer étaient des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur créait le bloc canonique, qui était finalement déterminé par la chaîne construite en premier. Les blocs Ommer apparaissaient généralement en raison de la latence du réseau.
+Depuis [la mise à jour Constantinople](/ethereum-forks/#constantinople), les mineurs ayant réussi à créer un bloc étaient récompensés par deux ETH fraîchement minés et une partie des frais de transaction. Les blocs Ommer étaient également récompensés par 1,75 ETH. Les blocs Ommer étaient des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur créait le bloc canonique, qui était finalement déterminé par la chaîne construite en premier. Les blocs Ommer apparaissaient généralement en raison de la latence du réseau.
 
 ## Finalisation {#finality}
 

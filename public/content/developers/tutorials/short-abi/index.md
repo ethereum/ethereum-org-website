@@ -580,3 +580,6 @@ Both [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-tran
 However, as infrastructure providers looking for generic solutions, our abilities are limited.
 As the dapp developer, you have application-specific knowledge, which lets you optimize your calldata much better than we could in a generic solution.
 Hopefully, this article helps you find the ideal solution for your needs.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

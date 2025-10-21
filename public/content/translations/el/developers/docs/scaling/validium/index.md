@@ -154,7 +154,7 @@ sidebarDepth: 3
 **Matter Labs zkPorter**- _Το zkPorter είναι ένα πρωτόκολλο κλιμάκωσης επιπέδου 2 που αντιμετωπίζει τη διαθεσιμότητα δεδομένων με μια υβριδική προσέγγιση που συνδυάζει τις ιδέες του zkRollup και της θραυσματοποίησης (sharding). Μπορεί να υποστηρίξει αυθαίρετα πολλά τμήματα, το καθένα με τη δική του πολιτική διαθεσιμότητας δεδομένων._
 
 - [Ιστολόγιο](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Τεκμηρίωση](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [Τεκμηρίωση](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Ιστότοπος](https://zksync.io/)
 
 ## Περισσότερες πληροφορίες {#further-reading}
@@ -163,4 +163,4 @@ sidebarDepth: 3
 - [ZK-rollups ή Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition and the Emerging Data Availability spectrum](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
 - [Πακέτα ενηνέρωσης, Validiums και Volitions: Μάθετε για τις πιο δημοφιλείς λύσεις κλιμάκωσης του Ethereum](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
-- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum.](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum.](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

@@ -57,6 +57,11 @@ const tableVariants = tv({
         th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
         td: "align-middle p-4 [&:has([role=checkbox])]:pr-0",
       },
+      "highlight-first-column": {
+        ...baseStyles,
+        thead: "bg-background-highlight",
+        td: `${baseStyles.td} first:bg-background-highlight first:font-bold`,
+      },
     },
   },
   defaultVariants: {

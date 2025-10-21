@@ -12,7 +12,7 @@ Cuireadh uasluach inbhainte i bhfeidhm ar dtús i gcomhthéacs [cruthúnas-oibre
 
 ## Réamhriachtanais {#prerequisites}
 
-Bí cinnte go bhfuil tú eolach ar [idirbhearta](/developers/docs/transactions/), [bhloic](/developers/docs/blocks/), [cruthúnas-geallta](/developers/docs/consensus-mechanisms/pos) agus [gás](/developers/docs/gas/). Tá cur amach ar [dapps](/dapps/) agus [DeFi](/defi/) cabhrach freisin.
+Bí cinnte go bhfuil tú eolach ar [idirbhearta](/developers/docs/transactions/), [bhloic](/developers/docs/blocks/), [cruthúnas-geallta](/developers/docs/consensus-mechanisms/pos) agus [gás](/developers/docs/gas/). Tá cur amach ar [dapps](/apps/) agus [DeFi](/defi/) cabhrach freisin.
 
 ## Eastóscadh MEV {#mev-extraction}
 
@@ -204,7 +204,6 @@ Spreagfaidh cur i bhfeidhm forleathan an API Tógálaí iomaíocht níos mó i m
 
 - [Doiciméid Flashbots](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _Deais agus taiscéalaí idirbheart beo le haghaidh idirbhearta MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Rianaire le staidreamh fíor-ama le haghaidh athsheachadáin MEV-Boost agus blocthógálaithe_
 
 ## Tuilleadh léitheoireachta {#further-reading}

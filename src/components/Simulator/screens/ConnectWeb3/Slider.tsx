@@ -1,6 +1,6 @@
 import { type ReactNode } from "react"
 import { motion } from "framer-motion"
-import { PiCheckThin } from "react-icons/pi"
+import { Check } from "lucide-react"
 
 import { HStack, VStack } from "@/components/ui/flex"
 
@@ -39,7 +39,7 @@ export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", delay: 0.25 }}
               >
-                <PiCheckThin className="-rotate-[10deg] text-[4.5rem]" />
+                <Check className="size-[4.5rem] -rotate-[10deg] stroke-1" />
               </motion.div>
               <motion.div
                 key="text"
