@@ -118,7 +118,7 @@ Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności,
 
 <ExpandableCard
 title="Błędne przekonanie: „Uruchomienie węzła wymaga stakowania 32 ETH”."
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Są dwa typy węzłów Ethereum: węzły, które mogą proponować bloki, i węzły, które tego nie mogą.
 
