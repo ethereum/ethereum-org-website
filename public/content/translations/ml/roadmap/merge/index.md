@@ -115,7 +115,7 @@ id="developers">
 
 <ExpandableCard
 title="തെറ്റിദ്ധാരണ: &quot;ഒരു നോഡ് പ്രവർത്തിപ്പിക്കുന്നതിന് 32 ETH സ്റ്റെയ്ക്കിങ് ആവശ്യമാണ്.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 രണ്ട് തരം Ethereum നോഡുകൾ ഉണ്ട്: ബ്ലോക്കുകൾ നിർദ്ദേശിക്കാൻ കഴിയുന്ന നോഡുകളും അങ്ങനെയല്ലാത്ത നോഡുകളും.
 
 Ethereum-ലെ ആകെ നോഡുകളുടെ ഒരു ചെറിയ എണ്ണം മാത്രമാണ് ബ്ലോക്കുകൾ നിർദ്ദേശിക്കുന്ന നോഡുകൾ. ഈ വിഭാഗത്തിൽ പ്രൂഫ് ഓഫ് വർക്കിന് (PoW) കീഴിലുള്ള മൈനിംഗ് നോഡുകളും പ്രൂഫ് ഓഫ് സ്റ്റേക്കിന് (PoS) കീഴിലുള്ള വാലിഡേറ്റർ നോഡുകളും ഉൾപ്പെടുന്നു. ഈ വിഭാഗത്തിന് അടുത്ത ബ്ലോക്ക് ഇടയ്‌ക്കിടെ നിർദ്ദേശിക്കാനും പ്രോട്ടോക്കോൾ റിവാർഡുകൾ നേടാനുമുള്ള കഴിവിന് പകരമായി സാമ്പത്തിക റിസോഴ്‌സുകൾ (പ്രൂഫ് ഓഫ് വർക്കിൽ GPU ഹാഷ് പവർ അല്ലെങ്കിൽ പ്രൂഫ് ഓഫ് സ്റ്റേക്കിൽ സ്റ്റേക്ക്ഡ് ETH പോലുള്ളവ) ചുമതപ്പെടുത്തേണ്ടത് ആവശ്യമാണ്.
