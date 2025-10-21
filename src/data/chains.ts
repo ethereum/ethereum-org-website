@@ -1926,17 +1926,6 @@ const chains = [
     chain: "DUSTBOY",
   },
   {
-    name: "Ethereum Hoodi",
-    infoURL: "https://hoodi.ethpandaops.io",
-    chainId: 560048,
-    nativeCurrency: {
-      name: "Hoodi Ether",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    chain: "ETH",
-  },
-  {
     name: "Zether Mainnet",
     infoURL: "https://zether.org",
     chainId: 715131,
