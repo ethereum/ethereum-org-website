@@ -88,7 +88,7 @@ Mar shampla, braitheann [meicníochtaí cuardratacha cistiúcháin](https://www.
 
 Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. Ar an mbealach seo cuirtear stop le maoiniú cuadratach a bheith ina mhodh éifeachtach chun cistí a leithdháileadh bunaithe ar roghanna comhiomlánaithe an phobail.
 
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. Is sraith de chonarthaí cliste agus scripteanna é MACI a ligeann do riarthóir lárnach (ar a dtugtar "comhordaitheoir") vótaí agus torthaí a chomhiomlánú _gan_ sonraí a nochtadh faoin gcaoi ar vótáil gach duine. Mar sin féin, is féidir a fhíorú go fóill gur comhairíodh na vótaí i gceart, nó a dheimhniú gur ghlac duine ar leith páirt sa bhabhta vótála.
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (e.g., quadratic funding mechanisms) resistant to bribery and collusion. Is sraith de chonarthaí cliste agus scripteanna é MACI a ligeann do riarthóir lárnach (ar a dtugtar "comhordaitheoir") vótaí agus torthaí a chomhiomlánú _gan_ sonraí a nochtadh faoin gcaoi ar vótáil gach duine. Mar sin féin, is féidir a fhíorú go fóill gur comhairíodh na vótaí i gceart, nó a dheimhniú gur ghlac duine ar leith páirt sa bhabhta vótála.
 
 #### Conas a oibríonn MACI le cruthúnais nial-eolais? {#how-maci-works-with-zk-proofs}
 
@@ -140,7 +140,7 @@ Sampla maith a léiríonn an chaoi a n-oibríonn cruthúnais idirghníomhacha n�
 
 Cé go raibh an cruthú réabhlóideach, bhí an promhú idirghníomhach teoranta ó thaobh úsáidí de toisc go raibh gá leis an dá pháirtí a bheith ar fáil agus idirghníomhú arís agus arís eile. Fiú dá mbeadh fíoraitheoir cinnte faoi ionracas an phromhadóra, ní bheadh ​​an cruthúnas ar fáil le haghaidh fíorú neamhspleách (chun cruthúnais nua a ríomh bhí gá le sraith nua teachtaireachtaí idir an promhadóir agus an fíoraitheoir).
 
-Chun an fhadhb seo a réiteach, mhol Manuel Blum, Paul Feldman, agus Silvio Micali na chéad [cruthúnais nial-eolais neamh-idirghníomhach](https://dl.acm.org/doi/10.1145/62212.62222) áit a bhfuil eochair roinnte ag an seanfhocal agus ag an bhfíoraitheoir. Ligeann sé seo don chruthaitheoir a gcuid eolais ar roinnt faisnéise a léiriú (i.e. finné) gan an fhaisnéis féin a sholáthar.
+Chun an fhadhb seo a réiteach, mhol Manuel Blum, Paul Feldman, agus Silvio Micali na chéad [cruthúnais nial-eolais neamh-idirghníomhach](https://dl.acm.org/doi/10.1145/62212.62222) áit a bhfuil eochair roinnte ag an seanfhocal agus ag an bhfíoraitheoir. Ligeann sé seo don chruthaitheoir a gcuid eolais ar roinnt faisnéise a léiriú (i.e., finné) gan an fhaisnéis féin a sholáthar.
 
 Murab ionann agus cruthúnais idirghníomhacha, níor theastaigh ach babhta cumarsáide amháin idir rannpháirtithe (promhadóir agus fíoraitheoir) le cruthúnais neamh-idirghníomhacha. Cuireann an promhadóir an fhaisnéis rúnda ar aghaidh chuig algartam speisialta chun cruthúnas nial-eolais a ríomh. Seoltar an cruthúnas seo chuig an bhfíoraitheoir, a sheiceálann go bhfuil an fhaisnéis rúnda ar eolas ag an bpromhadóir trí úsáid a bhaint as algartam eile.
 
