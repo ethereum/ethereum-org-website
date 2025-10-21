@@ -63,7 +63,7 @@ For the props type signature use the naming convention `<ComponentName>Props` to
 
 A positive side-effect to directly annotating the props object is for IDE intellisense where you can view the props when hovering over the component name to see it's signature.
 
-i.e. `const Component: ({ label, title, ...props }: ComponentProps) => React.JSX.Element`
+i.e., `const Component: ({ label, title, ...props }: ComponentProps) => React.JSX.Element`
 
 #### Use the type alias for props type
 
