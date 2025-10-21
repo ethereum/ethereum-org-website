@@ -26,7 +26,7 @@ Tellor is a live and open-sourced oracle ready for implementation. This beginner
 
 ## Overview {#overview}
 
-Tellor is an oracle system where parties can request the value of an offchain data point (e.g. BTC/USD) and reporters compete to add this value to an onchain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB), and a dispute mechanism.
+Tellor is an oracle system where parties can request the value of an offchain data point (e.g., BTC/USD) and reporters compete to add this value to an onchain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB), and a dispute mechanism.
 
 In this tutorial we'll go over:
 
