@@ -13639,6 +13639,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "SupaMega24",
+      "name": "Charles Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138974329?v=4",
+      "profile": "https://charliej.vercel.app/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
