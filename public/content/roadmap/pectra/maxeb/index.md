@@ -12,9 +12,9 @@ lang: en
 
 ### Who is affected? {#who-is-affected}
 
-Anyone who runs a validator - this is likely someone who knows the index (e.g. [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g. Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
+Anyone who runs a validator - this is likely someone who knows the index (e.g., [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g., Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
 
-If you stake using a liquid staking token (e.g. rETH or stETH), no action is required or recommended.
+If you stake using a liquid staking token (e.g., rETH or stETH), no action is required or recommended.
 
 ### What is "maxEB"? {#what-is-maxeb}
 
@@ -101,8 +101,8 @@ The target validator must
 
 The consolidation request will be signed by the withdrawal address associated with the source validator and have:
 
-1. Address of the source validator (e.g. `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`)
-2. Public key of the source validator (e.g. `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`)
+1. Address of the source validator (e.g., `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`)
+2. Public key of the source validator (e.g., `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`)
 3. Public key of that target validator
 
 In a conversion, 2 & 3 will be the same. This operation can be done on [the Launchpad](https://launchpad.ethereum.org/).
