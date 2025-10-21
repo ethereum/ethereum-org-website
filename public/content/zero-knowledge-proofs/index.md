@@ -94,7 +94,7 @@ For example, [quadratic funding mechanisms](https://www.radicalxchange.org/conce
 
 Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
 
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (e.g., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
 
 #### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
 
