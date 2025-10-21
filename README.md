@@ -2120,6 +2120,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dsarfed"><img src="https://avatars.githubusercontent.com/u/186462938?v=4?s=100" width="100px;" alt="0x"/><br /><sub><b>0x</b></sub></a><br /><a href="#maintenance-dsarfed" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lipsyre"><img src="https://avatars.githubusercontent.com/u/196653064?v=4?s=100" width="100px;" alt="Gigabuidl"/><br /><sub><b>Gigabuidl</b></sub></a><br /><a href="#maintenance-lipsyre" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/morph-dev"><img src="https://avatars.githubusercontent.com/u/82043364?v=4?s=100" width="100px;" alt="Milos Stankovic"/><br /><sub><b>Milos Stankovic</b></sub></a><br /><a href="#maintenance-morph-dev" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
