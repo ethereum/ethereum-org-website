@@ -118,7 +118,7 @@ A beolvadás a további méretezhetőségi fejlesztések lehetőségét is megte
 
 <ExpandableCard
 title="Tévhit: „Egy csomópont futtatásához 32 ETH kell.”"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Két típusú Ethereum-csomópont létezik: olyanok, amelyek képesek blokkjavaslatot tenni, és olyanok, amelyek nem.
 

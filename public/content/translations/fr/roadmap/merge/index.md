@@ -118,7 +118,7 @@ La Fusion permet également de préparer le terrain pour d'autres améliorations
 
 <ExpandableCard
 title="Idée reçue : &quot;L'exécution d'un nœud nécessite la mise en jeu de 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Il existe deux types de nœuds sur Ethereum : ceux qui peuvent proposer de nouveaux blocs, et ceux qui ne le peuvent pas.
 

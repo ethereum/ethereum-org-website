@@ -116,7 +116,7 @@ id="developers">
 
 <ExpandableCard
 title="تصور غلط: &quot;اجرای یک گره مستلزم سهام‌گذاری 32 اتر است.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 دو نوع گره اتریوم وجود دارد: گره‌هایی که می‌توانند بلوک‌ها را پیشنهاد کنند و گره‌هایی که نمی‌توانند این کار را انجام دهند.
 

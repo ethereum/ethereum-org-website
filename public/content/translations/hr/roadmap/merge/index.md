@@ -115,7 +115,7 @@ Spajanje je postavilo temelje za nove nadogradnje skalabilnosti koje nisu bile m
 
 <ExpandableCard
 title="Zabluda: „Za pokretanje čvora potreban je ulog od 32 ETH.”"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 Postoje dvije vrste čvorova u Ethereumu: čvorovi koji mogu predložiti blokove i čvorovi koji to ne mogu.
 
 Čvorovi koji mogu predložiti blokove samo su mali dio cjelokupne količine blokova u Ethereumu. Ta kategorija uključuje čvorove za rudarenje po konceptu dokaza rada (proof-of-work – PoW) i čvorove validatora po konceptu dokaza uloga (proof-of-stake – PoS). Ta kategorija zahtijeva predaju ekonomskih resursa (kao GPU hash snaga u dokazu rada ili ulogi ETH-a u dokazu uloga) u zamjenu za mogućnost povremenih prijedloga sljedećeg bloka i zarade nagrada protokola.

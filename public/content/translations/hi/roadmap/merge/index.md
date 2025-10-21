@@ -118,7 +118,7 @@ id="developers">
 
 <ExpandableCard
 title="गलत धारणा: &quot;एक नोड को चलाने के लिए स्टेकिंग 32 ETH की आवश्यकता होती है।&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 एथेरियम नोड्स दो प्रकार के होते हैं: नोड्स जो ब्लॉक को प्रस्ताव दे सकते हैं और ऐसे नोड्स जो नहीं देते हैं।
 

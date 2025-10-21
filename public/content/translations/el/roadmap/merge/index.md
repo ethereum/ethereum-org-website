@@ -118,7 +118,7 @@ id="developers">
 
 <ExpandableCard
 title="Εσφαλμένη αντίληψη: &quot;Η εκτέλεση ενός κόμβου απαιτεί την αποθήκευση 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Υπάρχουν δύο τύποι κόμβων Ethereum: οι κόμβοι που μπορούν να προτείνουν μπλοκ και οι κόμβοι που δεν μπορούν να προτείνουν.
 

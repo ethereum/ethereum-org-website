@@ -118,7 +118,7 @@ La Fusión coloca a Ethereum en una nueva fase de actualizaciones escalables que
 
 <ExpandableCard
 title="Concepto erróneo: &quot;Ejecutar un nodo requiere depositar 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Hay dos tipos de nodos en Ethereum: los que pueden proponer bloques y los que no.
 
