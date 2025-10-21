@@ -49,12 +49,15 @@ I nwere ike ịlele ọganihu nke azụmahịa ahụ n'ihe nchọgharị blọkc
 Ị ga-enweta tokin nke a gbanwere n'akpa ego ịntanetị gị ozugbo e mechara azụmahịa ahụ.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Frequently asked questions
 

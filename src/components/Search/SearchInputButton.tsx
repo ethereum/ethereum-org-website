@@ -15,6 +15,7 @@ const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Button
         ref={ref}
         aria-label={t("aria-toggle-search-button")}
+        data-testid="search-input-button"
         variant="ghost"
         className={cn(
           "group me-3 border border-disabled hover:border-primary-hover",

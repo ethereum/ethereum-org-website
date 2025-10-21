@@ -61,14 +61,19 @@ Zatiaľ čo spotreba energie Etherea je veľmi nízka, na Ethereu sa buduje aj z
 
 Natívne platformy pre financovanie verejných statkov fungujúcich na princípoch Web3, ako je [Gitcoin](https://gitcoin.co) majú aj okruhy zamerané na ochranu klímy, vďaka čomu stimulujú ekologicky uvedomelý rozvoj na aplikačnej vrstve Etherea. Prostredníctvom rozvoja týchto iniciatív (a ďalších, napr. [DeSci](/desci/)), sa Ethereum stáva environmentálne a sociálne pozitívnou technológiou.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Pokiaľ si myslíte, že by táto stránka mohla byť presnejšia, upozornite nás na to alebo použite PR. Štatistiky na tejto stránke sú odhady založené na verejne dostupných dátach – nepredstavujú oficiálne vyhlásenie alebo prísľub tímu ethereum.org alebo nadácie Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Ďalšie zdroje informácií {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Správa Bieleho domu o proof-of-work blockchainoch](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Správa Bieleho domu o proof-of-work blockchainoch](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisie Etherea: súhrnný odhad](https://kylemcdonald.github.io/ethereum-emissions/) – _Kyle McDonald_
 - [Index spotreby energie Ethera](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) – _[@InsideTheSim](https://twitter.com/InsideTheSim)_

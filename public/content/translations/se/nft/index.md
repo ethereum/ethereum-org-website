@@ -58,7 +58,6 @@ NFT-världen är relativt ny. I teorin omfattar NFT allt som är unikt och där 
 - [Andelar i fastigheter](https://realt.co/)
 - [Examensbevis](https://www.degreecert.com/)
 - [Musik royalties via NFTs](https://opulous.org/)
-- [Move 2 Earn](https://yeticoineth.com/about.html)
 - [Digital identitet](https://photochromic.io/)
 
 ### exempel på ethereum.org {#ethereum-org-examples}
@@ -167,12 +166,15 @@ NFT: s driver en ny skaparekonomi där kreatörer inte lämnar över ägandet av
 
 När de säljer sitt innehåll går pengarna direkt till dem. Om den nya ägaren sedan säljer NFT, kan den ursprungliga skaparen till och med automatiskt få royalties. Detta garanteras varje gång den säljs eftersom skaparens adress är en del av pollettens metadata – metadata som inte kan ändras.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Utforska, köp eller skapa din egen NFT-konst/dina egna NFT-samlarföremål ...</div>
-  <ButtonLink href="/dapps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Utforska NFT-konst
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Problemet med att kopiera/klistra in {#nfts-copy-paste}
 
@@ -200,12 +202,15 @@ I slutändan kan de föremål som du svettas för i spelet alltid finnas kvar, �
 
 Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er som representerar virtuella tomter som du kan använda hur du vill.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Kolla in Ethereum-spel, som drivs med hjälp av NFT:er ...</div>
-  <ButtonLink href="/dapps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Utforska NFT-spel
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -249,7 +254,7 @@ Och detta är inte svårt för Ethereum, eftersom båda världarna (NFT och DeFi
 
 NFT-skapare kan också skapa "aktier" för sin NFT:er. Detta ger investerare och fans möjlighet att äga en del av en NFT utan att behöva köpa hela objektet. Detta ger ännu fler möjligheter för både personer som myntar NFT och samlare.
 
-- Fraktionerade NFT:er kan handlas på en [>DEX](/defi/#dex), som Uniswap, inte bara på [NFT-marknadsplatser](/dapps?category=collectibles). Det innebär fler köpare och säljare.
+- Fraktionerade NFT:er kan handlas på en [>DEX](/defi/#dex), som Uniswap, inte bara på [NFT-marknadsplatser](/apps?category=collectibles). Det innebär fler köpare och säljare.
 - En NFT:s totala pris kan definieras med hjälp av priset för varje andel.
 - Du har större möjlighet att äga och göra vinster på saker du bryr dig om. Det är svårare att hamna i situationer där du inte längre har råd om du äger NFT:er.
 

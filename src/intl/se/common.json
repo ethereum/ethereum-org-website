@@ -76,7 +76,6 @@
   "enterprise": "Företag",
   "enterprise-mainnet": "Företag – Mainnet Ethereum",
   "enterprise-menu": "Företagsmeny",
-  "enterprise-private": "Företag – Private Ethereum",
   "esp": "Stödprogram för ekosystemet",
   "eth-current-price": "Nuvarande ETH-pris (USD)",
   "ethereum": "Ethereum",
@@ -228,7 +227,7 @@
   "nav-contribute-description": "Om du vill ha hjälp kommer denna handbok att vägleda dig",
   "nav-contribute-label": "Bidra till ethereum.org",
   "nav-dao-description": "Medlemsägda gemenskaper utan centraliserad ledning",
-  "nav-dapps-description": "Utforska ett rikt ekosystem av appar med Ethereum",
+  "nav-apps-description": "Utforska ett rikt ekosystem av appar med Ethereum",
   "nav-defi-description": "Ett globalt, öppet alternativ till den traditionella finansiella marknaden",
   "nav-desci-description": "Ett globalt, öppet alternativ till det nuvarande vetenskapliga systemet",
   "nav-desoc-description": "Blockkedjebaserade plattformar för social interagering och innehållsskapande",
@@ -277,7 +276,7 @@
   "nav-layer-2-description": "Billigare och snabbare transaktioner för Ethereum",
   "nav-learn-by-coding-description": "Verktyg som hjälper dig att experimentera med Ethereum",
   "nav-local-env-description": "Välj och konfigurera din Ethereum-utvecklingsstack",
-  "nav-mainnet-description": "Enterprise-blockkedjeapplikationer kan byggas på det kollektiva Ethereum-huvudnätverket",
+  "nav-enterprise-description": "Enterprise-blockkedjeapplikationer kan byggas på det kollektiva Ethereum-huvudnätverket",
   "nav-nft-description": "Ett sätt att representera något unikt som en Ethereum-baserad tillgång",
   "nav-open-research-description": "En av de främsta styrkorna med Ethereum är dess aktiva forskningsgemenskap",
   "nav-open-research-label": "Öppen forskning",
@@ -323,6 +322,8 @@
   "nav-staking-solo-description": "Kör hårdvara hemma och bidra personligen till säkerheten och decentraliseringen av Ethereum-nätverket",
   "nav-staking-solo-label": "Soloutsättning",
   "nav-start-building-description": "Användbar information för nybörjare",
+  "nav-start-with-crypto-title": "Börja här",
+  "nav-start-with-crypto-description": "Dina första steg med Ethereum",
   "nav-translation-program-description": "Ett samarbetsprojekt för att översätta ethereum.org till alla språk",
   "nav-tutorials-description": "Kurerad lista över community-guider",
   "nav-use-cases-description": "Upptäck olika idéer för Ethereum-användning",
@@ -430,5 +431,8 @@
   "withdrawals": "Utsättningsuttag",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Ja",
-  "zero-knowledge-proofs": "Nollkunskapsbevis"
+  "zero-knowledge-proofs": "Nollkunskapsbevis",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Förstå skillnaderna mellan Ethereum och Bitcoin"
+
 }

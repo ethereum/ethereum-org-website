@@ -69,11 +69,11 @@ As an anti-censorship mechanism, the validium protocol allows users to withdraw 
 
 After executing a batch of transactions, the operator submits the associated validity proof to the verifier contract and proposes a new state root to the main contract. If the proof is valid, the main contract updates the validium's state and finalizes the results of transactions in the batch.
 
-Unlike a ZK-rollup, block producers on a validium are not required to publish transaction data for transaction batches (only block headers). This makes validium a purely offchain scaling protocol, as opposed to "hybrid" scaling protocols (i.e., [layer 2](/layer-2/)) that publish state data on the main Ethereum chain as `calldata`.
+Unlike a ZK-rollup, block producers on a validium are not required to publish transaction data for transaction batches (only block headers). This makes validium a purely offchain scaling protocol, as opposed to "hybrid" scaling protocols (i.e., [layer 2](/layer-2/)) that publish state data on the main Ethereum chain using blob data, `calldata`, or a combination of both.
 
 ### Data availability {#data-availability}
 
-As mentioned, validiums utilize an offchain data availability model, where operators store all transaction data off Ethereum Mainnet. Validium's low onchain data footprint improves scalability (throughput isn't limited by Ethereum's data processing capacity) and reduces user fees (the cost of publishing `calldata` is lower).
+As mentioned, validiums utilize an offchain data availability model, where operators store all transaction data off Ethereum Mainnet. Validium's low onchain data footprint improves scalability (throughput isn't limited by Ethereum's data processing capacity) and reduces user fees (the cost of publishing data onchain is lower).
 
 Offchain data availability, however, presents a problem: data necessary for creating or verifying Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the onchain contract if operators should act maliciously.
 
@@ -154,7 +154,7 @@ Multiple projects provide implementations of Validium and volitions that you can
 **Matter Labs zkPorter**- _zkPorter is a Layer 2 scaling protocol tackling data availability with a hybrid approach that combines the ideas of zkRollup and sharding. It can support arbitrarily many shards, each with its own data availability policy._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Documentation](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [Documentation](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Website](https://zksync.io/)
 
 ## Further reading {#further-reading}
@@ -163,4 +163,4 @@ Multiple projects provide implementations of Validium and volitions that you can
 - [ZK-rollups vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition and the Emerging Data Availability spectrum](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
 - [Rollups, Validiums, and Volitions: Learn About the Hottest Ethereum Scaling Solutions](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
-- [The Practical Guide to Ethereum Rollups](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [The Practical Guide to Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

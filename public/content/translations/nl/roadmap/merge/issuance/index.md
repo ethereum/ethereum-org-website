@@ -30,11 +30,11 @@ title="ETH-uitgifte tldr">
 
 ### Uitgifte uitvoeringslaag {#el-issuance-pre-merge}
 
-Onder proof-of-work hadden miners alleen interactie met de uitvoeringslaag en werden ze beloond met blockbeloningen als ze de eerste miner waren die de volgende block oploste. Sinds de [Constantinople-upgrade](/history/#constantinople) in 2019 was deze beloning 2 ETH per block. Miners werden ook beloond voor het publiceren van [ommer](/glossary/#ommer)-blocks, wat geldige blocks waren die niet in de langste/canonieke chain terechtkwamen. Deze beloningen waren maximaal 1,75 ETH per ommer en kwamen _bovenop_ de beloning die werd uitgegeven uit de canonieke block. Het miningproces was een economisch intensieve activiteit, waarvoor historisch gezien een hoog niveau van ETH-uitgifte nodig was om in stand te worden gehouden.
+Onder proof-of-work hadden miners alleen interactie met de uitvoeringslaag en werden ze beloond met blockbeloningen als ze de eerste miner waren die de volgende block oploste. Sinds de [Constantinople-upgrade](/ethereum-forks/#constantinople) in 2019 was deze beloning 2 ETH per block. Miners werden ook beloond voor het publiceren van [ommer](/glossary/#ommer)-blocks, wat geldige blocks waren die niet in de langste/canonieke chain terechtkwamen. Deze beloningen waren maximaal 1,75 ETH per ommer en kwamen _bovenop_ de beloning die werd uitgegeven uit de canonieke block. Het miningproces was een economisch intensieve activiteit, waarvoor historisch gezien een hoog niveau van ETH-uitgifte nodig was om in stand te worden gehouden.
 
 ### Uitgifte consensuslaag {#cl-issuance-pre-merge}
 
-De [Beacon Chain](/history/#beacon-chain-genesis) ging live in 2020. In plaats van miners, wordt het beveiligd door validators die proof-of-stake gebruiken. Deze chain werd gebootstrapt door Ethereum-gebruikers die ETH eenmalig storten in een smart contract op het hoofdnet (de uitvoeringslaag), waar de Beacon Chain naar luistert en de gebruiker crediteert met een gelijke hoeveelheid ETH op de nieuwe chain. Totdat de samenvoeging plaatsvond, verwerkten de validators van de Beacon Chain geen transacties en kwamen ze in wezen tot een consensus over de status van de validatorpool zelf.
+De [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) ging live in 2020. In plaats van miners, wordt het beveiligd door validators die proof-of-stake gebruiken. Deze chain werd gebootstrapt door Ethereum-gebruikers die ETH eenmalig storten in een smart contract op het hoofdnet (de uitvoeringslaag), waar de Beacon Chain naar luistert en de gebruiker crediteert met een gelijke hoeveelheid ETH op de nieuwe chain. Totdat de samenvoeging plaatsvond, verwerkten de validators van de Beacon Chain geen transacties en kwamen ze in wezen tot een consensus over de status van de validatorpool zelf.
 
 Validators op de Beacon Chain worden beloond met ETH voor het bevestigen van de status van de chain en het voorstellen van blocks. Beloningen (of sancties) worden berekend en verdeeld bij elke epoch (elke 6,4 minuten) op basis van de prestaties van de validator. Validatorbeloningen bedragen **beduidend** minder dan de miningbeloningen die voorheen werden uitgegeven onder proof-of-work (2 ETH elke ~13,5 seconden), omdat het uitvoeren van een validerende node economisch niet zo intensief is en dus niet zo'n hoge beloning vereist of rechtvaardigt.
 
@@ -54,11 +54,17 @@ Totale ETH-aanvoer: **~120.520.000 ETH** (ten tijde van de samenvoeging in septe
 - Resulteert in **~620.500** uitgegeven ETH in één jaar
 - Resulteerde in een inflatiepercentage van **bijna 0,52%** (620.500 per jaar / 119,3M in totaal)
 
-<InfoBanner>
-<strong>Totaal uitgiftepercentage op jaarbasis (voorafgaand aan de samenvoeging): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88,7%</strong> van die uitgifte ging naar miners op de uitvoeringslaag (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> werd uitgegeven aan stakers op de consensuslaag (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Totaal uitgiftepercentage op jaarbasis (voorafgaand aan de samenvoeging): ~4.61%** (4.09% + 0.52%)
+
+**~88,7%** van die uitgifte ging naar miners op de uitvoeringslaag (4,09 / 4,61 * 100)
+
+**~11,3%** werd uitgegeven aan stakers op de consensuslaag (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Na de samenvoeging (vandaag de dag) {#post-merge}
 
@@ -84,18 +90,27 @@ Naarmate meer validators vertrekken, zal het maximale aantal vertrekkende valida
 - Uitgifte uitvoeringslaag: **0**
 - Uitgifte consensuslaag: hetzelfde als hierboven, **~0,52%** jaarlijkse uitgiftepercentage (met 14 miljoen totaal gestakete ETH)
 
-<InfoBanner>
-Totaal uitgiftepercentage op jaarbasis: <strong>~0.52%</strong><br/><br/>
-Nettovermindering in jaarlijkse ETH-uitgifte: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Totaal uitgiftepercentage op jaarbasis: **~0.52%**
+
+Nettovermindering in jaarlijkse ETH-uitgifte: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />De verbranding {#the-burn}
 
 De tegengestelde kracht van ETH-uitgifte is de snelheid waarmee ETH wordt verbrand. Om een transactie op Ethereum uit te voeren, moet een minimale kost (bekend als een "basiskost") worden betaald, die continu fluctueert (van block tot block) afhankelijk van de netwerkactiviteit. Deze kost wordt betaald in ETH en is _vereist_ om de transactie als geldig te beschouwen. Deze kost wordt _verbrand_ tijdens het transactieproces, waardoor het uit circulatie wordt gehaald.
 
-<InfoBanner>
-Kosten verbranden ging live met <a href="/history/#london">de London-upgrade</a> in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Kosten verbranden ging live met [de London-upgrade](/ethereum-forks/#london) in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Bovenop de verbranding van de kosten die door de London-upgrade zijn geïmplementeerd, kunnen validators ook sancties krijgen als ze offline zijn, of erger nog, ze kunnen worden geslasht voor het overtreden van specifieke regels die de veiligheid van het netwerk in gevaar brengen. Deze sancties leiden tot een vermindering van ETH van het saldo van deze validator, wat niet direct beloond wordt op een ander account, waardoor het effectief wordt verbrand/verwijderd uit de circulatie.
 

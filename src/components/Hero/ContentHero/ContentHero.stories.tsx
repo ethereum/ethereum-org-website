@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
+
+import heroImg from "@/public/images/upgrades/merge.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
@@ -55,9 +57,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/run-a-node/" }}
-        heroImg="/images/upgrades/merge.png"
-        // Can not properly hardcode this URL. So it's left blank
-        blurDataURL=""
+        heroImg={heroImg}
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}

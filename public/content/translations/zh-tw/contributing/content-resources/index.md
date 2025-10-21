@@ -27,6 +27,6 @@ description: 我們在 ethereum.org 上列出內容資源的標準
 
 如果你想將內容資源新增至 ethereum.org 並且它符合標準，請在 GitHub 上建立一個議題。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   創建一個議題
 </ButtonLink>

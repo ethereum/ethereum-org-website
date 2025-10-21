@@ -1,16 +1,19 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals",
-    "prettier",
-    "plugin:storybook/recommended"
-  ],
+  "extends": ["eslint:recommended", "next/core-web-vitals", "prettier"],
   "env": {
-    "es6": true
+    "es6": true,
+    "node": true,
+    "browser": true
   },
   "plugins": ["simple-import-sort", "@typescript-eslint", "unused-imports"],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "simple-import-sort/imports": [
       "error",
@@ -21,7 +24,7 @@
             "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
           ],
           // Packages. `react` related packages come first.
-          // Also, put `react-icons` in sorting order not with `react`
+          // Also, put `react-*` in sorting order not with `react`
           ["^react(?!-.)$", "^\\w", "^@\\w"],
           // From the `types` directory.
           ["^@/lib/types", "^@/lib/interfaces"],
@@ -33,8 +36,8 @@
           ["^@/data"],
           // From the `constants` directory.
           ["^@/lib/constants"],
-          // From the `.storybook/utils` file
-          ["^@/storybook-utils"],
+          // `.storybook` directory and utils files`
+          ["^@/storybook", "^@/storybook-utils"],
           // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
           // Other relative imports. Put same-folder imports and `.` last.
@@ -48,13 +51,6 @@
     ],
     "simple-import-sort/exports": "error",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": [
-      "error",
-      {
-        "fixToUnknown": true
-      }
-    ],
     "unused-imports/no-unused-vars": [
       "error",
       {
@@ -63,6 +59,38 @@
         "varsIgnorePattern": "^_$"
       }
     ],
-    "unused-imports/no-unused-imports-ts": "warn"
-  }
+    "unused-imports/no-unused-imports": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": [
+          "error",
+          {
+            "fixToUnknown": true
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.stories.@(js|jsx|ts|tsx|mdx)"],
+      "extends": ["plugin:storybook/recommended"]
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "dist/",
+    "build/",
+    ".vercel/",
+    ".netlify/",
+    "coverage/",
+    "storybook-static/",
+    "**/*.d.ts",
+    "src/intl/",
+    "public/code-examples/"
+  ]
 }

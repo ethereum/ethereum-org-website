@@ -1,10 +1,12 @@
+"use client"
+
 import type { StakingPage } from "@/lib/types"
 
 import ButtonDropdown from "@/components/ButtonDropdown"
 import {
-  CautionProductGlyphIcon,
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
+  CautionProductGlyph,
+  GreenCheckProductGlyph,
+  WarningProductGlyph,
 } from "@/components/icons/staking"
 import Translation from "@/components/Translation"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -26,14 +28,14 @@ const IndicatorGroup = ({
 }) => {
   const IndicatorIcon = ({ style }) => {
     if (indicatorType === "valid") {
-      return <GreenCheckProductGlyphIcon style={style} />
+      return <GreenCheckProductGlyph style={style} />
     }
 
     if (indicatorType === "caution") {
-      return <CautionProductGlyphIcon style={style} />
+      return <CautionProductGlyph style={style} />
     }
 
-    return <WarningProductGlyphIcon style={style} />
+    return <WarningProductGlyph style={style} />
   }
   return (
     <VStack className="flex-1 gap-2">

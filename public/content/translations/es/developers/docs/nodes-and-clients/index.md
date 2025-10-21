@@ -37,7 +37,7 @@ Lo que estas implementaciones de clientes tienen en común es que todas siguen u
 - En su origen, el [Protocolo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Especificaciones de ejecución](https://github.com/ethereum/execution-specs/)
 - [Especificaciones de consenso](https://github.com/ethereum/consensus-specs)
-- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/history/)
+- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/ethereum-forks/)
 
 ### Nodos de rastreamiento en la red {#network-overview}
 
@@ -195,7 +195,7 @@ Existen múltiples clientes de consenso (antes conocidos como clientes Eth2) que
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 
 ### Lighthouse {#lighthouse}
@@ -220,7 +220,7 @@ Encontrará más información en el [manual de Nimbus](https://nimbus.guide/)
 
 Prysm es un cliente de consenso de código abierto completamente escrito en Go bajo la licencia GPL-3.0. Cuenta con una interfaz de usuario opcional de la aplicación web y prioriza la experiencia del usuario, la documentación y la configurabilidad tanto para usuarios interesados como institucionales.
 
-Visite [documentos de Prysm](https://docs.prylabs.network/docs/getting-started/) para obtener más información.
+Visite [documentos de Prysm](https://prysm.offchainlabs.com/docs/) para obtener más información.
 
 ### Teku {#teku}
 

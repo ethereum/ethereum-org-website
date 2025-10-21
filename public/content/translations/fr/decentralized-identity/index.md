@@ -57,7 +57,7 @@ L'identité décentralisée propose de nombreux cas d'utilisation potentiels :
 
 L'identité décentralisée peut aider à remplacer les connexions par mot de passe par une authentification décentralisée. Les fournisseurs de services peuvent délivrer des attestations aux utilisateurs, qui peuvent être stockées dans un portefeuille Ethereum. Un exemple d'attestation serait un [NFT](/glossary/#nft) accordant au titulaire l'accès à une communauté en ligne.
 
-Une fonction de [connexion avec Ethereum](https://login.xyz/) permettrait alors aux serveurs de confirmer le compte Ethereum de l'utilisateur et de récupérer l'attestation requise à partir de l'adresse de son compte. Cela signifie que les utilisateurs peuvent accéder aux plateformes et aux sites web sans avoir à mémoriser de longs mots de passe et améliore l'expérience en ligne des utilisateurs.
+Une fonction de [connexion avec Ethereum](https://siwe.xyz/) permettrait alors aux serveurs de confirmer le compte Ethereum de l'utilisateur et de récupérer l'attestation requise à partir de l'adresse de son compte. Cela signifie que les utilisateurs peuvent accéder aux plateformes et aux sites web sans avoir à mémoriser de longs mots de passe et améliore l'expérience en ligne des utilisateurs.
 
 ### 2. Authentification KYC {#kyc-authentication}
 
@@ -165,11 +165,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[walt.id](https://walt.id)** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._
 - **[Veramo](https://veramo.io/)** - _Un environnement JavaScript qui permet à chacun d'utiliser facilement des données vérifiables cryptographiquement dans ses applications._
 
-
-
 ## Complément d'information {#further-reading}
-
-
 
 ### Articles {#articles}
 
@@ -179,8 +175,6 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préocupper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introduction à l'Identité Décentralisée](https://walt.id/white-paper/digital-identity)— _Dominik Beron_
 
-
-
 ### Vidéos {#videos}
 
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
@@ -189,11 +183,9 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Présentation EthDenver 2022 par Evin McMullen
 - [Explication des Justificatifs Vérifiables](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Vidéo explicative sur YouTube avec démonstration par Tamino Baumann
 
-
-
 ### Communautés {#communities}
 
 - [ERC-725 Alliance sur GitHub](https://github.com/erc725alliance) — _Supporters de la norme ERC725 pour la gestion d'identité sur la blockchain Ethereum_
-- [Serveur Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Communauté pour les adeptes et les développeurs travaillant sur la connexion avec Ethereum_
+- [Serveur Discord EthID](https://discord.com/invite/ZUyG3mSXFD) — _Communauté pour les adeptes et les développeurs travaillant sur la connexion avec Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Une communauté de développeurs contribuant à la construction d'un framework de données vérifiables pour les applications_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Une communauté de développeurs et constructeurs travaillant sur des cas d'utilisation d'identité décentralisée dans diverses industries._

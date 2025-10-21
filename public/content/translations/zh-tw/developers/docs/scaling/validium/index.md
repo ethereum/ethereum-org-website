@@ -154,7 +154,7 @@ Validium 透過將所有交易資料保存在鏈外，並在轉送狀態更新�
 **Matter Labs zkPorter**- _zkPorter 是一個二層網路擴張協定，它使用一種結合了零知識卷軸與分片理念的混合方法來處理資料可用性。 它可支援任意數量的分片，每個分片都有自己的資料可用性原則。_
 
 - [部落格](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [文件](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [文件](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [網站](https://zksync.io/)
 
 ## 衍生閱讀 {#further-reading}

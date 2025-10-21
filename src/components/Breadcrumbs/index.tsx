@@ -4,6 +4,7 @@ import { useLocale } from "next-intl"
 import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+import { normalizeSlug } from "@/lib/utils/url"
 
 import {
   Breadcrumb,
@@ -16,7 +17,6 @@ import {
 } from "../ui/breadcrumb"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
 
 export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
@@ -28,27 +28,29 @@ type Crumb = {
   text: string
 }
 
+// TODO: update docs after removing pathname and slug logic
+
 // Generate crumbs from slug
-// e.g. "/en/eth2/proof-of-stake/" will generate:
+// e.g. "/eth2/proof-of-stake/" will generate:
 // [
-//   { fullPath: "/en/", text: "HOME" },
-//   { fullPath: "/en/eth2/", text: "ETH2" },
-//   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
+//   { fullPath: "/", text: "HOME" },
+//   { fullPath: "/eth2/", text: "ETH2" },
+//   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
 // `startDepth` will trim breadcrumbs
 // e.g. startDepth=1 will generate:
 // [
-//   { fullPath: "/en/eth2/", text: "ETH2" },
-//   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
+//   { fullPath: "/eth2/", text: "ETH2" },
+//   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
 const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const locale = useLocale()
-  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
+  const normalizedSlug = normalizeSlug(slug)
 
-  const hasHome = pathname !== "/"
-  const slugChunk = slug.split("/")
+  const hasHome = normalizedSlug !== ""
+  const slugChunk = normalizedSlug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 
   const crumbs = [
@@ -62,7 +64,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
         ]
       : []),
     ...sliced.map((path, idx) => ({
-      fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
+      fullPath: "/" + sliced.slice(0, idx + 1).join("/"),
       text: t(path),
     })),
   ]
@@ -73,8 +75,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
     <Breadcrumb {...props} dir={dir}>
       <BreadcrumbList>
         {crumbs.map(({ fullPath, text }) => {
-          const normalizePath = (path) => path.replace(/\/$/, "") // Remove trailing slash
-          const isCurrentPage = normalizePath(slug) === normalizePath(fullPath)
+          const isCurrentPage = normalizedSlug === fullPath
           return (
             <Fragment key={fullPath}>
               <BreadcrumbItem>

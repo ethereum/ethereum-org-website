@@ -3,7 +3,6 @@ import { ReportsModel } from "@crowdin/crowdin-api-client"
 import {
   CROWDIN_PROJECT_ID,
   FIRST_CROWDIN_CONTRIBUTION_DATE,
-  REGULAR_RATES,
 } from "../../../lib/constants"
 import crowdinClient from "../api-client/crowdinClient"
 
@@ -23,24 +22,45 @@ export async function fetchTranslationCostsReport(
 ): Promise<void> {
   const dateTo = getPreviousDayISOString()
 
-  // Todo: Remove ts-ignore when this PR gets merged
   // https://github.com/crowdin/crowdin-api-client-js/pull/282
-  const schema: ReportsModel.TranslationCostSchema = {
+  const schema: ReportsModel.TranslationCostsPostEndingSchema = {
     unit: "words",
     currency: "USD",
-    mode: "simple",
     format: "json",
+    baseRates: {
+      fullTranslation: 0.1,
+      proofread: 0.12,
+    },
+    individualRates: [],
+    netRateSchemes: {
+      tmMatch: [
+        {
+          matchType: "perfect",
+          price: 0.1,
+        },
+      ],
+      mtMatch: [
+        {
+          matchType: "perfect",
+          price: 0.05,
+        },
+      ],
+      suggestionMatch: [
+        {
+          matchType: "perfect",
+          price: 0.08,
+        },
+      ],
+    },
     groupBy: "user",
-    regularRates: REGULAR_RATES,
     dateFrom: FIRST_CROWDIN_CONTRIBUTION_DATE,
     dateTo,
     languageId: crowdinLangCode,
-    // @ts-expect-error Not part of the Crowdin schema type, which is deprecated anyway
     fileIds: [fileId],
   }
 
   const reportRequest: ReportsModel.GenerateReportRequest = {
-    name: "translation-costs",
+    name: "translation-costs-pe",
     schema: schema,
   }
 

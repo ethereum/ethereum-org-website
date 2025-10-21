@@ -24,7 +24,11 @@ export const upgradeComponents = {
 type UpgradeLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
+    | "slug"
+    | "tocItems"
+    | "lastEditLocaleTimestamp"
+    | "contentNotTranslated"
+    | "contributors"
   > & {
     frontmatter: UpgradeFrontmatter
   }
@@ -35,6 +39,7 @@ export const UpgradeLayout = ({
   tocItems,
   lastEditLocaleTimestamp,
   contentNotTranslated,
+  contributors,
 }: UpgradeLayoutProps) => {
   const { t } = useTranslation("page-upgrades")
 
@@ -68,7 +73,7 @@ export const UpgradeLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: { src: frontmatter.image, width: 5750, height: 4332 },
     description: (
       <>
         <div>
@@ -91,6 +96,8 @@ export const UpgradeLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}

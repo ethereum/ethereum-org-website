@@ -1,3 +1,5 @@
+"use client"
+
 import { ChangeEvent, FC, useMemo, useState } from "react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
@@ -5,6 +7,8 @@ import Emoji from "@/components/Emoji"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
 
 import { Alert, AlertContent } from "../ui/alert"
 import { Button } from "../ui/buttons/Button"
@@ -32,7 +36,7 @@ const WithdrawalCredentials: FC = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
-    const network = isTestnet ? "Holesky" : "Mainnet"
+    const network = isTestnet ? CANONICAL_STAKING_TESTNET : "Mainnet"
     const networkLowercase = network.toLowerCase()
     trackCustomEvent({
       eventCategory: `Validator index`,
@@ -121,9 +125,13 @@ const WithdrawalCredentials: FC = () => {
       <Alert variant="error">
         <AlertContent className="inline">
           <strong>
-            {validator.isTestnet
-              ? t("comp-withdrawal-credentials-not-upgraded-1-testnet")
-              : t("comp-withdrawal-credentials-not-upgraded-1")}
+            {t("page-staking:comp-withdrawal-credentials-not-upgraded-1", {
+              network: validator.isTestnet
+                ? t("page-staking:page-staking-network-testnet", {
+                    network: CANONICAL_STAKING_TESTNET,
+                  })
+                : "",
+            })}
           </strong>{" "}
           <Translation id="page-staking:comp-withdrawal-credentials-not-upgraded-2" />
         </AlertContent>
@@ -146,7 +154,9 @@ const WithdrawalCredentials: FC = () => {
             onClick={() => checkWithdrawalCredentials()}
             disabled={!inputValue.length}
           >
-            {t("comp-withdrawal-credentials-verify-mainnet")}
+            {t("page-staking:comp-withdrawal-credentials-verify", {
+              network: "Mainnet",
+            })}
             {isLoading.mainnet && <Spinner />}
           </Button>
           <Button
@@ -154,7 +164,9 @@ const WithdrawalCredentials: FC = () => {
             disabled={!inputValue.length}
             variant="outline"
           >
-            {t("comp-withdrawal-credentials-verify-holesky")}
+            {t("page-staking:comp-withdrawal-credentials-verify", {
+              network: CANONICAL_STAKING_TESTNET,
+            })}
             {isLoading.testnet && <Spinner />}
           </Button>
         </Flex>

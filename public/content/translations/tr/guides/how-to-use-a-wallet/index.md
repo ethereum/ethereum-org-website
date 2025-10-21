@@ -60,14 +60,17 @@ Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek k
 ![Bağlanmak için cüzdan listesinden seçim yapma](./connect2.png)
 
 5. Bağlantıyı kurmak için cüzdanınızdaki imza isteğini kabul edin. **Bu mesajı imzalamak ETH harcamayı gerektirmez**.
-6. Bu kadar! Uygulamayı kullanmaya başlayın. [Merkeziyetsiz uygulamalar sayfamızda](/dapps/#explore) bazı ilgi çekici projeleri bulabilirsiniz. <br />
+6. Bu kadar! Uygulamayı kullanmaya başlayın. [Merkeziyetsiz uygulamalar sayfamızda](/apps/#explore) bazı ilgi çekici projeleri bulabilirsiniz. <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Sıkça sorulan sorular
 

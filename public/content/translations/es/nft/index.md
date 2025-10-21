@@ -1,5 +1,6 @@
 ---
 title: Tókenes no fungibles (NFT)
+metaTitle: '¿Qué son los NFT? | Beneficios y uso'
 description: Una visión general de los NFT en Ethereum
 lang: es
 template: use-cases
@@ -54,12 +55,15 @@ Los NFT se usan para muchas cosas, como por ejemplo:
 
 Tal vez sea usted un artista que quiere compartir su arte a través de los NFT, sin perder el control de su propiedad intelectual ni sacrificar sus ganancias, dándoselas a intermediarios. Puede crear un nuevo contrato que especifique el número de NFT, sus propiedades y añadir un enlace a la obra de arte específica. Como artista, **puede programar las regalías dentro del contrato inteligente** que se le deben pagar (p. ej., transferir el 5 % del precio de venta al propietario del contrato cada vez que un NFT se transfiera). Además, siempre podrá demostrar que creó los NFT, porque es el propietario de la [cartera](/glossary/#wallet) asociada al contrato. Sus compradores pueden comprobar fácilmente que poseen un **NFT auténtico** de su collección, porque su cartera[dirección](/glossary/#address) está asociada a un token en su contrato inteligente. Los pueden usar a través del ecosistema de Ethereum, confiando en su autenticidad.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explore, compre o cree sus propios NFT de arte/coleccionables...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Explore arte en NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 O pongamos, por ejemplo, una entrada a un evento deportivo. Al igual que un **organizador de un evento puede elegir cuántas entradas vender**, el creador de un NFT puede decidir cuántas replicas existen. En algunos casos las copias son idénticas, como 5.000 entradas de admisión general. Algunas veces muchas copias acuñadas son muy similares, pero cada una difiere ligeramente, como una entrada con un asiento asignado. Estas se pueden comprar y vender entre pares directamente, sin tener que pasar por promotores o intermediarios de venta, porque pueden asegurarse de la autenticidad de la entrada revisando la dirección del contrato donde se crearon.
 
@@ -75,7 +79,7 @@ El nombre de dominio alternativo de esta página web también funciona a través
 
 ## ¿Cómo funcionan los NFT? {#how-nfts-work}
 
-Los NFT, como cualquiera de los objetos digitales en la cadena de bloques de Ethereum, se crean a través de un programa informático especial basado en Ethereum llamado «contrato inteligente». Estos contratos siguen ciertas reglas, como los estándares[ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan qué puede hacer un contrato.
+Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado "contrato inteligente". Estos contratos siguen ciertas reglas, como los estándares[ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan qué puede hacer un contrato.
 
 Los contratos inteligentes de NFT pueden hacer algunas cosas importantes:
 

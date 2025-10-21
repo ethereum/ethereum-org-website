@@ -56,7 +56,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Ethereum ile ilgili kod tabanlarıyla çalışmak için yardımcı işlevler_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x desteği ile solc solidity derleyicisine yönelik Python paketleyici_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker sözleşmeleri için Python API_
-- [siwe](https://github.com/spruceid/siwe-py) - _Python için Ethereum (siwe) ile oturum açın_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Python için Ethereum (siwe) ile oturum açın_
 - [Ethereum entegrasyonları için Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, Uniswap ve diğer popüler projeler için hazır entegrasyonlar içeren bir Python paketi_
 - [Wake](https://getwake.io) - _Sözleşme testleri, bulanıklaştırma, dağıtım, güvenlik açığı taraması ve kodda gezinme için hepsi bir arada Python çerçevesi (dil sunucusu - [Solidity Araçları](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

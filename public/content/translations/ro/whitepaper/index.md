@@ -31,15 +31,21 @@ Iată o postare de pe blogul lui Vitalik Buterin, fondatorul Ethereum, despre [P
 
 Din punct de vedere tehnic, registrul unei criptomonede precum Bitcoin poate fi considerat un sistem de tranziție de stare, acolo unde există o „stare” constând din starea de proprietate a tuturor bitcoin-urilor existente și o „funcție de tranziție de stare” care ia o stare și o tranzacție și generează o nouă stare care este rezultatul. Într-un sistem bancar standard, de exemplu, starea este un bilanț, o tranzacție este o cerere să muți $X de la A la B, iar funcția de tranziție a stării reduce valoarea valoarea contului lui A cu $X și crește valoarea contului lui B cu $X. Când contul lui A are mai puțin de $X, în primul rând, starea funcției de tranziție returnează o eroare. Prin urmare, se pot defini formal:
 
+```
     APPLY(S,TX) -> S' sau ERROR
+```
 
 În sistemul bancar definit mai sus:
 
+```
     APPLY({ Alice: $50, Bob: $50 },"trimite $20 de la Alice la Bob") = { Alice: $30, Bob: $70 }
+```
 
 Dar:
 
+```
     APPLY({ Alice: $50, Bob: $50 },"trimite $70 de la Alice la Bob") = ERROR
+```
 
 „Starea” din Bitcoin este colecția tuturor monedelor (din punct de vedere tehnic, „ieșiri de tranzacție necheltuite” sau UTXO) care au fost exploatate dau nu au fost încă cheltuite, fiecare UTXO având o denumire și un proprietar (definit de o adresă de 20 de byți, care este în esență o cheie publică criptografică<sup>[fn. 1](#notes)</sup>). A tranzacția conține una sau mai multe intrări, fiecare intrare conținând o referință la un UTXO existent și la o semnătură criptografică produsă de cheia privată asociată cu adresa proprietarului și una sau mai multe ieșiri, fiecare ieșire conținând un nou UTXO care va fi adăugat la stare.
 
@@ -132,7 +138,7 @@ Designul din spatele Ethereum este destinat să urmeze următoarele principii:
 
 1.  **Simplitate**: protocolul Ethereum ar trebui să fie cât mai simplu posibil, chiar și cu prețul unor stocări de date sau ineficiență de timp.<sup>[fn. 3](#notes)</sup> În mod ideal, un programator mediu ar trebui să poată urmări și implementa întreaga specificație, <sup>[fn. 4](#notes)</sup> astfel încât să realizăm pe deplin potențialul de democratizare fără precedent pe care îl aduce criptomoneda și să promoveze viziunea Ethereum ca protocol deschis tuturor. Orice optimizare care adaugă complexitate nu ar trebui inclusă decât dacă oferă beneficii foarte substanțiale.
 2.  **Universalitatea**: o parte fundamentală a filozofiei de proiectare a Ethereum este că Ethereum nu are „caracteristici”.<sup>[fn. 5](#notes)</sup> În schimb, Ethereum oferă un limbaj de script intern Turing-complet, pe care un programator îl poate folosi pentru a construi orice tip de contract inteligent sau tranzacție care poate fi definit matematic. Dorești să inventezi propriul tău instrument financiar derivat? Cu Ethereum, poți. Vrei să-ți faci propria monedă? Configureaz-o ca un contract Ethereum. Dorești să configurezi un Daemon sau Skynet la scară largă? Este posibil să trebuiască să ai câteva mii de contracte și să te asiguri că le hrănești cu generozitate, pentru a face acest lucru, dar nimic nu te oprește cu Ethereum la îndemână.
-3.  **Modularitate**: părțile protocolului Ethereum ar trebui să fie proiectate astfel încât să fie cât mai modulare și separabile. Pe parcursul dezvoltării, obiectivul nostru este să creăm un program în care, dacă se va face o mică modificare de protocol într-un singur loc, stiva de aplicații ar continua să funcționeze fără alte modificări. Inovații precum Ethash (vezi [Anexa la Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J) sau [articolul wiki](https://github.com/ethereum/wiki/wiki/Ethash)), arborii Patricia modificați ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D), [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)) și RLP ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B), [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)) ar trebui să fie și sunt implementate ca biblioteci separate, complete cu caracteristici. Acest lucru se întâmplă astfel încât, deși sunt utilizate în Ethereum, chiar dacă Ethereum nu necesită anumite caracteristici, astfel de caracteristici sunt încă utilizabile și în alte protocoale. Dezvoltarea Ethereum ar trebui realizată la maximum, astfel încât să beneficieze întregul ecosistem al criptomonedelor, nu doar tu însuți.
+3.  **Modularitate**: părțile protocolului Ethereum ar trebui să fie proiectate astfel încât să fie cât mai modulare și separabile. Pe parcursul dezvoltării, obiectivul nostru este să creăm un program în care, dacă se va face o mică modificare de protocol într-un singur loc, stiva de aplicații ar continua să funcționeze fără alte modificări. Inovații precum Ethash (vezi [Anexa la Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)), arborii Patricia modificați ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D), [wiki](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)) și RLP ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B), [wiki](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)) ar trebui să fie și sunt implementate ca biblioteci separate, complete cu caracteristici. Acest lucru se întâmplă astfel încât, deși sunt utilizate în Ethereum, chiar dacă Ethereum nu necesită anumite caracteristici, astfel de caracteristici sunt încă utilizabile și în alte protocoale. Dezvoltarea Ethereum ar trebui realizată la maximum, astfel încât să beneficieze întregul ecosistem al criptomonedelor, nu doar tu însuți.
 4.  **Agilitate**: detaliile protocolului Ethereum nu sunt bătute în piatră. Deși vom fi extrem de prudenți în ceea ce privește modificările la construcțiile de nivel înalt, de exemplu, cu [foaia de parcurs a fragmentelor](https://ethresear.ch/t/sharding-phase-1-spec/1407/), abstractizarea executării, cu disponibilitatea datelor doar consacrată în consens. Testele de calcul ulterioare în procesul de dezvoltare ne pot determina să descoperim că anumite modificări, de exemplu, la arhitectura protocolului sau la Mașina Virtuală Ethereum (EVM), vor îmbunătăți în mod substanțial scalabilitatea sau securitatea. Dacă se găsesc astfel de oportunități, le vom exploata.
 5.  **Fără discriminare** și **fără cenzură**: protocolul nu ar trebui să încerce să restricționeze în mod activ sau să prevină anumite categorii de utilizare. Toate mecanismele de reglementare din protocol ar trebui să fie concepute pentru a reglementa direct prejudiciul și să nu încerce să se opună unor aplicații nedorite specifice. Un programator poate rula chiar și un script cu buclă infinită în Ethereum atâta timp cât este dispus să plătească în continuare taxa de tranzacție per pas de calcul.
 
@@ -368,7 +374,7 @@ Cu toate acestea, există mai multe abateri importante de la aceste ipoteze în 
 3.  Distribuția energiei miniere poate ajunge radical inegalizată în practică.
 4.  Speculatorii, dușmanii politici și nebunii ale căror funcții de utilitate includ provocarea de daune rețelei există și pot stabili în mod inteligent contracte în care costul lor este mult mai mic decât costul plătit de alte noduri de verificare.
 
-(1) oferă unui miner tendința de a include mai puține tranzacții și (2) crește `NC`; prin urmare, aceste două efecte, cel puțin parțial, se anulează reciproc. <sup>[Cum?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) și (4) sunt problemele majore; pentru a le rezolva, instituim pur și simplu un plafon variabil limitat: niciun bloc nu poate face mai multe operații decât `BLK_LIMIT_FACTOR` înmulțit cu media mișcării exponențiale pe termen lung. Mai precis:
+(1) oferă unui miner tendința de a include mai puține tranzacții și (2) crește `NC`; prin urmare, aceste două efecte, cel puțin parțial, se anulează reciproc. <sup>[Cum?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) și (4) sunt problemele majore; pentru a le rezolva, instituim pur și simplu un plafon variabil limitat: niciun bloc nu poate face mai multe operații decât `BLK_LIMIT_FACTOR` înmulțit cu media mișcării exponențiale pe termen lung. Mai precis:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
@@ -492,8 +498,8 @@ Conceptul unei funcții de tranziție de stare arbitrară așa cum este implemen
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ și agenți autonomi, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn despre Proprietăți Inteligente la Festivalul Turing](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Arbori Merkle Patricia Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Arbori Merkle Patricia Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd despre arborii sumă Merkle](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _Pentru istoricul White Paper, vezi https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_

@@ -10,7 +10,7 @@ Se c'è molto traffico su Ethereum, può diventare costoso. Una soluzione è cre
 
 **Prerequisiti:**
 
-- avere un portafoglio di criptovalute, puoi seguire questo tutorial: [Come "registrare" un conto di Ethereum](/guides/how-to-register-an-ethereum-account/)
+- possedere un portafoglio di criptovalute; a tale scopo puoi seguire questo tutorial: [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/)
 - aggiungere fondi al tuo portafoglio
 
 ## 1. Determina quale rete di livello 2 desideri utilizzare
@@ -52,12 +52,15 @@ Questo procedimento non dovrebbe richiedere più di 10 minuti.
 Puoi utilizzare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC della rete. Una volta che la rete è aggiunta e la transazione è terminata, dovresti visualizzare i token nel tuo portafoglio.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Vuoi scoprire di più?</div>
   <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Domande frequenti
 

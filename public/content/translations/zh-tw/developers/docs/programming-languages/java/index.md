@@ -46,11 +46,10 @@ incomplete: true
 
 ## 進階使用模式 {#advanced-use-patterns}
 
-- [使用 Eventeum 建置 Java 智慧型合約資料快取](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
+- [使用 Eventeum 建置 Java 智慧型合約資料快取](使用 Eventeum 構建Java 智慧型合約數據緩存)
 
 ## Java 專案和工具 {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon)（以太坊用戶端）](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J（用來與以太坊用戶端互動的程式庫）](https://github.com/web3j/web3j)
 - [ethers-kt（適用於基於以太坊虛擬機的區塊鏈的非同步、高效能 Kotlin/Java/Android 程式庫。）](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum（事件偵聽程式）](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ incomplete: true
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu HL 聊天室](https://chat.hyperledger.org/channel/besu)

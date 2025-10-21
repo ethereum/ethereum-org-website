@@ -58,7 +58,7 @@ C'est ce que nous utiliserons dans notre tutoriel.
 
 Bon, maintenant que nous avons clarifié ces points, passons au tutoriel. N'hésitez pas à poser des questions à tout moment sur le [discord](https://discord.gg/gWuC7zB) d'Alchemy !
 
-### 7\. Comment envoyer des transactions sécurisées, optimisées en termes de gaz et privées ? {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. Comment envoyer des transactions sécurisées, optimisées en termes de gaz et privées ? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy propose une suite d'APIs de transaction.](https://docs.alchemy.com/reference/transact-api-quickstart). Vous pouvez les utiliser pour envoyer des transactions renforcées, simuler des transactions avant qu'elles ne se produisent, envoyer des transactions privées et d'autres optimisées en termes de gaz
 - Vous pouvez également utiliser l'[API Notify](https://docs.alchemy.com/docs/alchemy-notify) pour être alerté lorsque votre transaction est retirée du mempool et ajoutée à la chaîne
@@ -118,9 +118,13 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 7\. Créer le fichier `sendTx.js` {#create-sendtx-js}
 

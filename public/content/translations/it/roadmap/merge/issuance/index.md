@@ -30,11 +30,11 @@ title="Tldr sull'emissione di ETH">
 
 ### Emissione del livello d'esecuzione {#el-issuance-pre-merge}
 
-Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/history/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
+Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/ethereum-forks/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
 
 ### Emissione del livello del consenso {#cl-issuance-pre-merge}
 
-La [Beacon Chain](/history/#beacon-chain-genesis) è stata attivata nel 2020. Invece dei miner, è protetta dai validatori, che utilizzano il proof of stake. Questa catena è stata avviata dagli utenti di Ethereum, che depositavano ETH a senso unico in uno smart contract sulla Rete Principale (il livello d'esecuzione), ascoltato dalla Beacon Chain, accreditando l'utente con un importo equivalente di ETH, sulla nuova catena. Fino alla Fusione, i validatori della Beacon Chain non stavano elaborando le transazioni e, fondamentalmente, arrivavano al consenso sullo stato dello stesso gruppo di validatori.
+La [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) è stata attivata nel 2020. Invece dei miner, è protetta dai validatori, che utilizzano il proof of stake. Questa catena è stata avviata dagli utenti di Ethereum, che depositavano ETH a senso unico in uno smart contract sulla Rete Principale (il livello d'esecuzione), ascoltato dalla Beacon Chain, accreditando l'utente con un importo equivalente di ETH, sulla nuova catena. Fino alla Fusione, i validatori della Beacon Chain non stavano elaborando le transazioni e, fondamentalmente, arrivavano al consenso sullo stato dello stesso gruppo di validatori.
 
 I validatori sulla Beacon Chain sono ricompensati con ETH per l'attestazione allo stato della catena e la proposta di blocchi. Le ricompense (o penalità) sono calcolate e distribuite a ogni epoca (ogni 6,4 minuti) a seconda delle prestazioni del validatore. Le ricompense del validatore sono **significativamente** inferiori a quelle di mining, emesse precedentemente sotto il proof-of-work (pari a 2 ETH circa ogni 13,5 secondi), poiché l'operazione di un nodo di convalida non è altrettanto intenso dal punto di vista economico e quindi non richiede né garantisce una ricompensa altrettanto elevata.
 
@@ -54,11 +54,17 @@ Offerta totale di ETH: **circa 120.520.000 ETH** (al momento della Fusione a set
 - Il risultato è **circa 620.500** ETH emessi in un anno
 - Il risultato è un tasso d'inflazione **approssimativamente dello 0,52%** (620.5K l'anno / 119.3M totali)
 
-<InfoBanner>
-<strong>Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>Circa l'88,7%</strong> dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)<br/><br/>
-<strong>Circa l'11,3%</strong> era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%** (4,09% + 0,52%)
+
+**Circa l'88,7%** dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)
+
+**Circa l'11,3%** era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Post-Fusione (oggi) {#post-merge}
 
@@ -84,18 +90,27 @@ All'aumentare del numero di validatori che prelevano, il numero massimo di valid
 - Emissione del livello d'esecuzione: **0**
 - Emissione del livello di consenso: come sopra, tasso di emissione annualizzato **approssimativo dello 0,52%** (con 14 milioni di ETH in staking totali)
 
-<InfoBanner>
-Tasso di emissione annualizzato totale: <strong>circa 0,52%</strong><br/><br/>
-Riduzione netta nell'emissione annuale di ETH: <strong>circa 88,7%</strong> ((4,61%-0,52%) / 4,61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Tasso di emissione annualizzato totale: **circa 0,52%**
+
+Riduzione netta nell'emissione annuale di ETH: **circa 88,7%** ((4,61%-0,52%) / 4,61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />La bruciatura {#the-burn}
 
 La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. Per l'esecuzione di una transazione su Ethereum, dev'essere pagata una commissione minima (nota come "commissione di base"), che fluttua continuamente (da blocco a blocco), a seconda dell'attività di rete. La commissione è pagata in ETH ed è _necessaria_ affinché la transazione sia considerata valida. Questa commissione viene _bruciata_ durante il procedimento della transazione, rimuovendola dalla circolazione.
 
-<InfoBanner>
-La bruciatura delle commissioni è divenuta attiva con l'<a href="/history/#london">aggiornamento di Londra</a> ad agosto 2021 e resta immutata da La Fusione.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/ethereum-forks/#london) ad agosto 2021 e resta immutata da La Fusione.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Oltre alla bruciatura della commissione, implementata dall'aggiornamento di Londra, i validatori, inoltre, possono incorrere in sanzioni per essere online o, peggio, possono ricevere tagli per l'infrazione di regole specifiche che minacciano la sicurezza della rete. Queste, risultano in una riduzione degli ETH dal saldo di quel validatore, che non è ricompensato direttamente a nessun altro conto, bruciandoli/rimuovendoli effettivamente dalla circolazione.
 

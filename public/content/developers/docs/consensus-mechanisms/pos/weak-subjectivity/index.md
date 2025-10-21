@@ -16,7 +16,7 @@ Subjectivity is inherent to proof-of-stake blockchains because selecting the cor
 
 ## Weak subjectivity checkpoints {#ws-checkpoints}
 
-Weak subjectivity is implemented in proof-of-stake Ethereum by using "weak subjectivity checkpoints". These are state roots that all nodes on the network agree belong in the canonical chain. They serve the same "universal truth" purpose to genesis blocks, except that they do not sit at the genesis position in the blockchain. The fork choice algorithm trusts that the blockchain state defined in that checkpoint is correct and that it independently and objectively verifies the chain from that point onwards. The checkpoints act as "revert limits" because blocks located before weak-subjectivity checkpoints cannot be changed. This undermines long-range attacks simply by defining long-range forks to be invalid as part of the mechanism design. Ensuring that the weak subjectivity checkpoints are separated by a smaller distance than the validator withdrawal period ensures that a validator that forks the chain is slashed at least some threshold amount before they can withdraw their stake and that new entrants cannot be tricked onto incorrect forks by validators whose stake has been withdrawn.
+Weak subjectivity is implemented in proof-of-stake Ethereum by using "weak subjectivity checkpoints". These are state roots that all nodes on the network agree belong in the canonical chain. They serve the same "universal truth" purpose as genesis blocks, except that they do not sit at the genesis position in the blockchain. The fork choice algorithm trusts that the blockchain state defined in that checkpoint is correct and that it independently and objectively verifies the chain from that point onwards. The checkpoints act as "revert limits" because blocks located before weak-subjectivity checkpoints cannot be changed. This undermines long-range attacks simply by defining long-range forks to be invalid as part of the mechanism design. Ensuring that the weak subjectivity checkpoints are separated by a smaller distance than the validator withdrawal period ensures that a validator that forks the chain is slashed at least some threshold amount before they can withdraw their stake and that new entrants cannot be tricked onto incorrect forks by validators whose stake has been withdrawn.
 
 ## Difference between weak subjectivity checkpoints and finalized blocks {#difference-between-ws-and-finalized-blocks}
 
@@ -34,6 +34,6 @@ Finally, checkpoints can be requested from other nodes; perhaps another Ethereum
 
 - [Weak subjectivity in Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: How I learned to love weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Weak subjectivity (Teku docs)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
+- [Weak subjectivity (Teku docs)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [Phase-0 Weak subjectivity guide](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Analysis of weak subjectivity in Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

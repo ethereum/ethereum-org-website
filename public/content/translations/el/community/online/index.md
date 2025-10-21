@@ -55,13 +55,14 @@ lang: el
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - συνομιλία για ανάπτυξη με τη solidity (Gitter).</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - συνομιλία για ανάπτυξη με τη solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *- φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Φόρουμ κοινότητας Peera</Link> *- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
 
-## YouTube και Twitter {#youtube-and-twitter}
+## YouTube και X (γνωστό ως Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Μείνετε ενημερωμένοι με ό,τι πιο πρόσφατο από το Ίδρυμα Ethereum.</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Επίσημος λογαριασμός του Ιδρύματος Ethereum.</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Κύριος λογαριασμός Ethereum για την κοινότητα</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Επίσημος λογαριασμός του Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Λίστα με σημαντικούς λογαριασμούς Ethereum twitter.</Link></SocialListItem>
 
 <Divider />

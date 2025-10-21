@@ -6,6 +6,10 @@ lang: el
 
 # Εισαγωγή στο Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Η κεντρική διαχείριση έχει βοηθήσει δισεκατομμύρια ανθρώπους να αποκτήσουν πρόσβαση στον Παγκόσμιο Ιστό, δημιουργώντας μια σταθερή και ισχυρή δομή στην οποία και λειτουργεί. Την ίδια στιγμή, μια μερίδα κεντρικών οργανισμών κατέχουν το μεγαλύτερο τμήμα του Παγκόσμιου Ιστού, αποφασίζοντας μονομερώς τι επιτρέπεται και τι όχι.
 
 Η απάντηση σε αυτό το ζήτημα λέγεται Web3. Αντί για ένα μονοπωλιακό διαδίκτυο των μεγάλων εταιρειών τεχνολογίας, το Web3 αγκαλιάζει την αποκέντρωση, το οποίο έχει δημιουργηθεί, λειτουργεί και ανήκει στους χρήστες του. Το Web3 δίνει την εξουσία στα χέρια των χρηστών και όχι των εταιρειών. Πριν όμως μιλήσουμε για το Web3, ας εξερευνήσουμε πως φτάσαμε ως εδώ.
@@ -61,12 +65,15 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Το Web3 επιτρέπει την άμεση κυριότητα μέσω των [μη εναλλάξιμων κρυπτοπαραστατικών (NFT)](/glossary/#nft). Κανείς, ούτε καν οι δημιουργοί του παιχνιδιού, έχουν τη δυνατότητα να πάρουν αυτά που σας ανήκουν. Αν σταματήσετε να παίζετε, μπορείτε να πουλήσετε ή να ανταλλάξετε τα αντικείμενα εντός του παιχνιδιού, στην ελεύθερη αγορά και να ανακτήσετε την αξία τους.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Μάθετε περισσότερα για τα NFT</div>
   <ButtonLink href="/nft/">
     Περισσότερα για τα NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Αντίσταση στη Λογοκρισία {#censorship-resistance}
 
@@ -86,12 +93,15 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Ωστόσο, αρκετοί ορίζουν πολλές κοινότητες Web3 ως DAO. Όλες αυτές οι κοινότητες έχουν διαφορετικά επίπεδα αποκέντρωσης και αυτοματοποίησης με κώδικα. Επί τους παρόντος, διερευνούμε τι είναι οι DAO και πως μπορούν να εξελιχθούν στο μέλλον.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Μάθετε περισσότερα για τους DAO</div>
   <ButtonLink href="/dao/">
     Περισσότερα για τους DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Ταυτότητα {#identity}
 
@@ -139,7 +149,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 - [Αποκτήστε ένα πορτοφόλι](/wallets/)
 - [Βρείτε μια κοινότητα](/community/)
-- [Εξερευνήστε εφαρμογές Web3](/dapps/)
+- [Εξερευνήστε εφαρμογές Web3](/apps/)
 - [Συμμετέχετε σε ένα DAO](/dao/)
 - [Δημιουργήστε στο Web3](/developers/)
 
@@ -147,11 +157,11 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Το Web3 δεν είναι αυστηρά καθορισμένο. Διάφοροι συμμετέχοντες της κοινότητας έχουν διαφορετικές απόψεις για αυτό. Δείτε παρακάτω μερικές:
 
-- [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
+- [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε](https://www.freecodecamp.org/news/what-is-web3) - _Nader Dabit_
 - [Κατανοώντας το Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) - _Josh Stark_
 - [Γιατί το Web3 έχει σημασία](https://future.a16z.com/why-web3-matters/) - _Chris Dixon_
 - [Γιατί η αποκέντρωσης έχει σημασία](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Το τοπίο του Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _a16z_
-- [Η συζήτηση για το Web3](https://www.notboring.co/p/the-web3-debate?s=r) - _Packy McCormick_
+- [Η συζήτηση για το Web3](https://www.notboring.co/p/the-web3-debate) - _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

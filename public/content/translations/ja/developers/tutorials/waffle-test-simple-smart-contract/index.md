@@ -25,11 +25,11 @@ published: 2021-02-26
 - yarnやnpmなどのパッケージマネージャーを使用したことがある
 - スマートコントラクトおよびSolidityのごく基本的な知識を持っている
 
-# はじめに {#getting-started}
+## はじめに {#getting-started}
 
 このチュートリアルでは、yarnを使ってテストのセットアップおよび実行をしていますが、npmの方が良ければnpmでも問題ありません。公式のWaffleのドキュメントは、[こちら](https://ethereum-waffle.readthedocs.io/en/latest/index.html)になります。
 
-## 依存関係のインストール {#install-dependencies}
+### 依存関係のインストール {#install-dependencies}
 
 プロジェクトに対してethereum-waffleとtypescriptの依存関係を開発環境の依存関係に[追加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)します。
 
@@ -37,7 +37,7 @@ published: 2021-02-26
 yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
-## スマートコントラクトのコード例 {#example-smart-contract}
+### スマートコントラクトのコード例 {#example-smart-contract}
 
 このチュートリアルでは、EtherSplitterというシンプルなスマートコントラクトの例に取り組みます。 このコードでは、誰もがweiを送信でき、それを2つの事前定義された受信者間で均等に分割するだけです。 split関数ではweiの数が偶数でなければなりません。さもないと処理が取り消されます。 両方の受信者に対して、weiの送金を実行し、続いてTransferイベントを発行します。
 
@@ -67,7 +67,7 @@ contract EtherSplitter {
 }
 ```
 
-## コントラクトのコンパイル {#compile-the-contract}
+### コントラクトのコンパイル {#compile-the-contract}
 
 コントラクトを[コンパイル](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract)するのに、package.jsonファイルに次のエントリを追加します。
 
@@ -90,7 +90,7 @@ contract EtherSplitter {
 
 `yarn build`を実行してください。 終了すると、`build`ディレクトリに、JSON形式でコンパイルされたEtherSplitterコントラクトが現れます。
 
-## テストの設定 {#test-setup}
+### テストの設定 {#test-setup}
 
 Waffleでテストするには ChaiマッチャーとMochaが必要になるため、プロジェクトに[追加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)します。 次のようにscriptの場所に`test`エントリを追加してpackage.jsonファイルを更新してください。
 
@@ -103,7 +103,7 @@ Waffleでテストするには ChaiマッチャーとMochaが必要になるた�
 
 テストを[実行](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests)する場合は、 `yarn test`を実行します。
 
-# テストを実行する {#testing}
+## テストを実行する {#testing}
 
 それでは、`test`ディレクトリを作成し、新しいファイル `test\EtherSplitter.test.ts`を作成してください。 以下のスニペットをコピーして、テストファイルに貼り付けてください。
 
@@ -134,7 +134,7 @@ describe("Ether Splitter", () => {
 
 次に、「splitter」という変数を宣言します。これは、 EtherSplitterコントラクトのモックです。 このモックは、単一のテストを実行する前に`deployContract`メソッドによって作成されます。 当該のメソッドは、最初のパラメータとして渡されたウォレット (この場合は送信者のウォレット) からコントラクトのデプロイメントをシミュレートします。 2番目のパラメータは、テストされるコントラクトのABIとバイトコードです。コンパイルされたEtherSplitterコントラクトのjsonファイルを`build`ディレクトから渡します。 3番目のパラメータは、コントラクトのコンストラクタ引数を持つ配列です。この場合、受信者の2つのアドレスです。
 
-## changeBalances {#changebalances}
+### changeBalances {#changebalances}
 
 まず、splitメソッドによって実際に受取人のウォレットの残高が変わるかどうかを確認します。 送信者のアカウントから50weiを分割すると、両方の受信者の残高が25wei増えることが期待されます。 ここで、Waffleの`changeBalances`マッチャーを使います。
 
@@ -162,7 +162,7 @@ it("Changes account balance", async () => {
 
 次では、weiの各転送後にTransferイベントが発行されたかどうかをテストします。 それでは、Waffleの別のマッチャーに移ります。
 
-## Emit {#emit}
+### Emit {#emit}
 
 ```ts
 it("Emits event on the transfer to the first receiver", async () => {
@@ -180,7 +180,7 @@ it("Emits event on the transfer to the second receiver", async () => {
 
 `emit`マッチャーを使うと、メソッドの呼び出し時にコントラクトがイベントを発行したかどうかを確認できます。 `emit`マッチャーへのパラメーターとして、イベントを発行することが予期されるモックコントラクトとそのイベントの名前を渡します。 この場合、モックコントラクトは`splitter`で、イベント名は`Transfer`です。 また、イベントの発行で引数の正確な値を検証することもできます。その場合、イベントの宣言で期待される数の引数を `withArgs`マッチャーに渡します。 EtherSplitterコントラクトの場合では、送金されるwei単位の金額とともに送信者と受信者のアドレスを渡します。
 
-## revertedWith {#revertedwith}
+### revertedWith {#revertedwith}
 
 最後の例として、weiの数が奇数の場合にトランザクションが取り消されるかどうかを確認します。 ここでは、`revertedWith`マッチャーを使います。
 
@@ -194,7 +194,7 @@ it("Reverts when Vei amount uneven", async () => {
 
 このテストをパスすれば、トランザクションが実際に取り消されたことが保証されます。 ただし、`require`ステートメントで渡したメッセージと、`revertedWith`で期待しているメッセージとが完全に一致している必要があります。 EtherSplitterコントラクトのコードに戻った場合、weiの金額の`require`ステートメントで、「偶数でないwei単位の金額は許可されていません」というメッセージが表示されます。 これは、テストで予期されるメッセージと一致します。 それらが等しくなければ、テストは失敗します。
 
-# おめでとうございます！ {#congratulations}
+## おめでとうございます！ {#congratulations}
 
 Waffleでスマートコントラクトをテストするための最初の大きな一歩を踏み出すことができました。 他のWaffleのチュートリアルについては、以下をご参照ください。
 

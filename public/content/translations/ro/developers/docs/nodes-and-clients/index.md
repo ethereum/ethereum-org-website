@@ -237,7 +237,7 @@ Verificați cu atenţie documentația sau pagina de ajutor a clientului pentru a
 
 `besu --sync-mode=FULL`
 
-Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţului de pornire sau în fișierul de configurare. Un alt exemplu este [Nethermind](https://docs.nethermind.io/nethermind/), care vă solicită să alegeți o configurație la prima inițializare și creează un fișier de configurare.
+Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţului de pornire sau în fișierul de configurare. Un alt exemplu este [Nethermind](https://docs.nethermind.io/), care vă solicită să alegeți o configurație la prima inițializare și creează un fișier de configurare.
 
 ## Clienți de consens (anterior clienți „Eth2”) {#consensus-clients}
 
@@ -249,7 +249,7 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
 | [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Lanţul Beacon, Goerli, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Goerli, Pyrmont |
+| [Prysm](https://prysm.offchainlabs.com/docs/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

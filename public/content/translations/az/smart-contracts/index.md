@@ -65,7 +65,7 @@ Onlar hesablamalar həyata keçirə, valyuta yarada, məlumatları saxlaya, NFT-
 - [Stabil koinlər](/stablecoins/)
 - [Unikal rəqəmsal aktivlərin yaradılması və yayılması](/nft/)
 - [Avtomatik, açıq valyuta mübadiləsi](/get-eth/#dex)
-- [Mərkəzləşdirilməmiş oyun](/dapps/?category=gaming)
+- [Mərkəzləşdirilməmiş oyun](/apps/categories/gaming)
 - [Avtomatik ödəniş edən sığorta siyasəti](https://etherisc.com/)
 - [İnsanlara fərdiləşdirilmiş, qarşılıqlı işləyə bilən valyutalar yaratmağa imkan verən standart](/developers/docs/standards/tokens/)
 

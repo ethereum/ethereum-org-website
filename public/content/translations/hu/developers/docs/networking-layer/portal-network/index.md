@@ -55,7 +55,7 @@ Ennek a hálózati dizájnnak az előnyei:
 - csökkenti a központi szolgáltatóktól való függést
 - csökkenti az internet sávszélességi igényt
 - minimális vagy nulla szinkronizálásra van szükség
-- A kevés erőforrással bíró eszközök esetében is működőképes (<1 GB RAM, <100 MB merevlemez, 1 CPU)
+- A kevés erőforrással bíró eszközök esetében is működőképes (\<1 GB RAM, \<100 MB merevlemez, 1 CPU)
 
 Az alábbi ábra a meglévő kliensek azon funkcióit mutatja be, amelyeket a Portal Network biztosíthat, lehetővé téve a felhasználók számára, hogy ezeket a funkciókat nagyon alacsony erőforrásigényű eszközökön is elérjék.
 
@@ -82,7 +82,7 @@ A több független kliensimplementáció növeli az Ethereum-hálózat rugalmass
 
 Ha az egyik kliensnél problémák vagy sebezhetőségek merülnek fel, a többi kliens zavartalanul működhet tovább, megelőzve az egyetlen hibapont kialakulását. Emellett az eltérő klienshasználat elősegíti az innovációt és a versenyt, ösztönzi a fejlesztéseket és csökkenti a monokultúra kockázatát az ökoszisztémán belül.
 
-## További olvasnivaló {#futher-reading}
+## További olvasnivaló {#further-reading}
 
 - [A Portal Network (Piper Merriam előadása a Devconon, Bogotában)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [A Portal Network Discord csatornája](https://discord.gg/CFFnmE7Hbs)

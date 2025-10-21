@@ -95,8 +95,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Molecule：资助和为你的研究项目筹资](https://www.molecule.xyz/)
 - [VitaDAO：通过赞助的研究协议获取资金用于长寿研究](https://www.vitadao.com/)
 - [ResearchHub：发表科学成果及与同行对话](https://www.researchhub.com/)
-- [LabDAO：仿真折叠蛋白质](https://alphafodl.vercel.app/)
-- [dClimate 应用程序接口：查询由去中心化社区收集的气候数据](https://api.dclimate.net/)
+- [dClimate 应用程序接口：查询由去中心化社区收集的气候数据](https://www.dclimate.net/)
 - [去中心化科学基金：去中心化出版工具构建者](https://descifoundation.org/)
 - [DeSci.World：用户浏览和参与去中心化科学的一站式商店](https://desci.world)
 - [OceanDAO：由去中心化自治组织管理的数据相关科学的拨款](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [由 Jocelynn Pearl 为 a16z 自建媒体网站 Future 写的一份去中心化生物技术指南](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [去中心化科学实例](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [去中心化科学指南](https://future.com/what-is-decentralized-science-aka-desci/)
-- [去中心化科学资源](https://www.vincentweisser.com/decentralized-science)
+- [去中心化科学资源](https://www.vincentweisser.com/desci)
 - [Molecule 的生物制药知识产权-非同质化代币 - 技术描述](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Jon Starr 的《构建去信任科学系统》](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - 去中心化科学：去中心化科学的未来（播客）](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Samuel Akinosho 的《去中心化科学：研究的未来》](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Nadia 的《科学基金（结语：去中心化科学和新的加密原语）》](https://nadia.xyz/science-funding)
 - [去中心化正在颠覆药物开发](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [什么是去中心化科学 (DeSci)？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [什么是去中心化科学 (DeSci)？](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 相关视频 {#videos}
 

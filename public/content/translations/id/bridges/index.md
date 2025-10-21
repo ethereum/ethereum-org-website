@@ -59,9 +59,14 @@ Jika Anda memiliki ETH di Jaringan Utama Ethereum dan ingin menjelajahi alternat
 
 Mari kita umpamakan Anda ingin memiliki Bitcoin (BTC) asli, tetapi Anda hanya memiliki dana di Ethereum Jaringan Utama. Untuk mendapatkan paparan terhadap BTC di Ethereum, Anda dapat membeli pembungkus Bitcoin (WBTC). Namun, WBTC adalah token [ERC-20](/glossary/#erc-20) asli dari jaringan Ethereum, yang berarti ini adalah versi Bitcoin di Ethereum dan bukan aset asli di rantai blok Bitcoin. Untuk memiliki BTC asli, Anda harus memindahkan aset Anda dari Ethereum ke Bitcoin menggunakan sebuah jembatan. Ini akan menghubungkan WBTC Anda dan mengonversi menjadi BTC asli. Sebagai alternatif, Anda mungkin memiliki BTC dan ingin menggunakannya dalam protokol [DeFi](/glossary/#defi) di Ethereum. Hal ini akan memerlukan penggunaan jembatan sebaliknya, dari BTC ke WBTC yang kemudian dapat digunakan sebagai aset di Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Anda juga dapat melakukan semua hal di atas menggunakan sebuah <a href="/get-eth/">bursa terpusat</a>. Namun, kecuali jika dana Anda sudah berada di bursa, ini akan melibatkan beberapa langkah, dan kemungkinan lebih baik jika Anda menggunakan jembatan.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Anda juga dapat melakukan semua hal di atas menggunakan sebuah [bursa terpusat](/get-eth/). Namun, kecuali jika dana Anda sudah berada di bursa, ini akan melibatkan beberapa langkah, dan kemungkinan lebih baik jika Anda menggunakan jembatan.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

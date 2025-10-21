@@ -61,9 +61,14 @@ _Totodată, trebuie să luăm în considerare că Ethereum nu se limitează la s
 
 În timp ce consumul de energie al lui Ethereum a fost întotdeauna considerabil, dezvoltatorii au investit mult timp și inteligență în procesul de tranziție de la un proces de validare a blocurilor cu un consum mare de energie la unul eficient energetic. Pentru a cita [Bankless](http://podcast.banklesshq.com/), modalitatea cea mai eficientă de a reduce energia consumată de dovada-muncii este pur și simplu de a o „dezactiva”, abordare pe care Ethereum s-a angajat să o urmeze.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   În cazul în care considerați că aceste statistici sunt incorecte sau precizia lor poate fi ameliorată, vă rugăm să ne semnalați o problemă sau creați un PR. Acestea sunt estimări făcute de echipa ethereum.org, folosind informații accesibile publicului precum și foaia de parcurs actuală a lui Ethereum. Aceste declarații nu reprezintă o promisiune oficială din partea Fundației Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Referințe suplimentare {#further-reading}
 

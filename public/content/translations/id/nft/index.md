@@ -1,5 +1,6 @@
 ---
 title: Token yang tidak dapat dipertukarkan (NFT)
+metaTitle: Apa itu NFT? | Manfaat dan kegunaannya
 description: Gambaran umum tentang NFT di Ethereum
 lang: id
 template: use-cases
@@ -54,12 +55,15 @@ NFT digunakan untuk banyak hal, termasuk:
 
 Mungkin Anda adalah seorang seniman yang ingin berbagi karya mereka menggunakan NFT, tanpa kehilangan kontrol dan mengorbankan keuntungan Anda kepada perantara. Anda dapat membuat kontrak baru dan menentukan jumlah NFT, propertinya, dan tautan ke beberapa karya seni khusus. Sebagai seniman, **Anda dapat memprogramkan royalti yang seharusnya Anda terima ke dalam kontrak pintar** (misalnya, mentransfer 5% dari harga jual kepada pemilik kontrak setiap kali NFT ditransfer). Anda juga selalu dapat membuktikan bahwa Anda membuat NFT tersebut karena Anda memiliki [dompet](/glossary/#wallet) yang menerbitkan kontrak tersebut. Pembeli Anda dapat dengan mudah membuktikan bahwa mereka memiliki **NFT asli** dari koleksi Anda karena [alamat](/glossary/#address) dompet mereka terkait dengan token dalam kontrak pintar Anda. Mereka dapat menggunakannya di seluruh ekosistem Ethereum, dengan keyakinan akan keasliannya.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Jelajahi, beli, atau buat karya seni/barang koleksi NFT Anda sendiri...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Jelajahi karya seni NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Atau pertimbangkan tiket untuk sebuah acara olahraga. Sama halnya seperti **penyelenggara acara dapat memilih berapa banyak tiket yang akan dijual**, kreator NFT dapat memutuskan berapa banyak salinan yang ada. Terkadang ini adalah tiruan yang sama persis, seperti 5000 tiket Masuk Umum. Terkadang ada beberapa dicetak sangat serupa, tetapi masing-masing sedikit berbeda, seperti tiket dengan kursi yang ditentukan. Tiket-tiket ini dapat dibeli dan dijual secara peer-to-peer tanpa membayar petugas tiket, dan pembeli selalu memiliki jaminan keaslian tiket dengan memeriksa alamat kontrak.
 

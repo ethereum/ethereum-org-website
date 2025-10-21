@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import {
   BarElement,
@@ -34,7 +36,7 @@ ChartJS.register(
 )
 
 const EnergyConsumptionChart = () => {
-  const { t } = useTranslation("page-what-is-ethereum")
+  const { t } = useTranslation("page-energy-consumption")
   const locale = useLocale()
   const isClient = useIsClient()
   const isRtl = isLangRightToLeft(locale as Lang)
@@ -245,7 +247,7 @@ const EnergyConsumptionChart = () => {
       </Center>
 
       <p className="text-center font-semibold">
-        {t("page-what-is-ethereum-energy-consumption-chart-legend")}
+        {t("energy-consumption-chart-legend")}
       </p>
     </div>
   )

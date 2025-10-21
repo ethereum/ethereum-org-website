@@ -77,7 +77,9 @@ A kliensdiverzitás eléréséhez nem elég, hogy az egyéni felhasználók kise
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[Prysm](https://prysm.offchainlabs.com/docs/)
+
+[Grandine](https://docs.grandine.io/)
 
 A technikailag képzett felhasználók segíthetik ezt a folyamatot azzal is, hogy több útmutatót és dokumentációt készítenek a kisebbségi kliensekről, és arra bátorítják a társaikat, hogy a domináns kliens helyett mást használjanak. A kisebbségi konszenzusos kliensre való áttérésről itt talál útmutatókat: [clientdiversity.org](https://clientdiversity.org/).
 
