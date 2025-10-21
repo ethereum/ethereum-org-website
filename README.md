@@ -2116,6 +2116,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://charliej.vercel.app/"><img src="https://avatars.githubusercontent.com/u/138974329?v=4?s=100" width="100px;" alt="Charles Jones"/><br /><sub><b>Charles Jones</b></sub></a><br /><a href="#content-SupaMega24" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://nikitakent.com"><img src="https://avatars.githubusercontent.com/u/57263011?v=4?s=100" width="100px;" alt="NikitaKent"/><br /><sub><b>NikitaKent</b></sub></a><br /><a href="#content-nikitakent" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AMelhede"><img src="https://avatars.githubusercontent.com/u/95473109?v=4?s=100" width="100px;" alt="Andreas Melhede"/><br /><sub><b>Andreas Melhede</b></sub></a><br /><a href="#example-AMelhede" title="Examples">💡</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/PAVANTEJ-05"><img src="https://avatars.githubusercontent.com/u/154254031?v=4?s=100" width="100px;" alt="PHOENIX-05"/><br /><sub><b>PHOENIX-05</b></sub></a><br /><a href="#content-PAVANTEJ-05" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
