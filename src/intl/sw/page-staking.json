@@ -14,7 +14,6 @@
   "comp-withdrawal-credentials-upgraded-2": "Hati za uondoaji zilizounganishwa na anwani ya utendaji:",
   "comp-withdrawal-credentials-not-upgraded-1": "Huu {network} unahitajika kuboreshwa.",
   "comp-withdrawal-credentials-not-upgraded-2": "Maelezo ya namna ya kuboresha unaweza kuyapata kupitia <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">",
-  "comp-withdrawal-credentials-verify-holesky": "Thibitisha kwenye {network}",
   "page-staking-withdrawals-when": "Imesafirishwa!",
   "page-staking-image-alt": "Picha ya kifaru wa haiba wa pedi ya uzinduzi ya usimamishaji wa hisa.",
   "page-staking-benefits-1-title": "Pata zawadi",
