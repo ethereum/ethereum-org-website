@@ -172,12 +172,12 @@ Use the "D-Mon-YYYY" format for dates. This format eliminates ambiguity between 
 
 By adhering to these guidelines, we create a unified approach to presenting dates, fostering clarity and comprehension throughout Ethereum documentation.
 
-### Hard stops (i.e., and e.g.,)
-When using abbreviations such as i.e., or e.g., it should include the comma after the period. This usage will allow for consistency and presentation.
+### Hard stops (i.e., and e.g.,) {#hard-stops}
+When using abbreviations such as i.e., or e.g., it should include the comma after the second period. This usage will allow for consistency and presentation across the documentation.
 
 **Examples:**
-- Preferred: i.e., or e.g., the preferred usage
-- Avoid: i.e. or e.g. do not use
+- Preferred: i.e., or e.g.,
+- Avoid: i.e. ie. e.g. or eg.
 
 ### Linking to internal pages {#internal-links}
 
