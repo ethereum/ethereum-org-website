@@ -264,7 +264,7 @@ const RoadmapPage = () => {
                 <div className="flex flex-col gap-4">
                   <p>
                     Some upgrades are lower priority and likely not to be
-                    implemented for the next 5-10 years (e.g. quantum
+                    implemented for the next 5-10 years (e.g., quantum
                     resistance).{" "}
                     <strong>
                       Giving precise timing of each upgrade is complicated
@@ -272,7 +272,7 @@ const RoadmapPage = () => {
                     to predict as many roadmap items are worked on in parallel
                     and developed at different speeds. The urgency of an upgrade
                     can also change over time depending on external factors
-                    (e.g. a sudden leap in the performance and availability of
+                    (e.g., a sudden leap in the performance and availability of
                     quantum computers may make quantum-resistant cryptography
                     more urgent).
                   </p>
