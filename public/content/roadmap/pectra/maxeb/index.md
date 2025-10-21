@@ -139,6 +139,7 @@ There are several tools available to manage consolidations. The official tool, c
 | Pectra Validator Ops CLI Tool | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract) | Yes, MIT | [Luganodes](https://www.luganodes.com/) | Yes, Quantstamp [May 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Command line | Batching, for many validators at once |
 | Ethereal | [GitHub](https://github.com/wealdtech/ethereal) | Yes, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | No | Command line | Full feature set for validator and node management |
 | Siren | [GitHub](https://github.com/sigp/siren) | Yes, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/) | No | Some command line, but primarily web UI | Only works if you're using the Lighthouse consensus client |
+| Consolideth.app | [GitHub](https://github.com/Stakely/consolideth) | Yes, MIT licences | [Stakely](https://stakely.io/) | No | Web UI ,hosted by stakely and ready to be selfhosted freely| Supports major wallet connections including safe with walletconnect |
 
 ## FAQ {#faq}
 
