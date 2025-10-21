@@ -56,7 +56,7 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 
 - nearly instant syncing
 - ability to validate blocks out-of-order
-- nodes able to run with very low hardware requirements (e.g. on phones)
+- nodes able to run with very low hardware requirements (e.g., on phones)
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
