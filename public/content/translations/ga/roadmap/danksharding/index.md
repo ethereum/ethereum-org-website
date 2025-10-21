@@ -53,7 +53,7 @@ When a rollup posts data in a blob, they provide a "commitment" that they post o
 
 <ExpandableCard title="Cén fáth a gcaithfidh sonraí randamacha KZG fanacht faoi rún?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
-Más eol do dhuine na láithreacha randamacha a úsáideadh don tiomantas, is furasta dóibh iltéarmach nua a ghiniúint a oireann do na pointí sonracha sin (i.e. “imbhualadh”). Ciallaíonn sé seo go bhféadfadh siad sonraí a chur leis nó a bhaint den bhlob agus fós cruthúnas bailí a sholáthar. Chun é seo a chosc, in ionad na láithreacha rúnda iarbhír a thabhairt do na cruthaitheoirí, faigheann siad na láithreacha atá imfhillte i "mbosca dubh" cripteagrafach ag baint úsáide as cuair éilipseacha. Déanann siad seo na luachanna a scrobhadh go héifeachtach ar bhealach nach féidir na bunluachanna a aisiompú, ach le roinnt cruthaitheoirí agus fíoraitheoirí ailgéabar cliste fós is féidir leo iltéarmaí a mheas ag na pointí a léiríonn siad.
+Más eol do dhuine na láithreacha randamacha a úsáideadh don tiomantas, is furasta dóibh iltéarmach nua a ghiniúint a oireann do na pointí sonracha sin (i.e., “imbhualadh”). Ciallaíonn sé seo go bhféadfadh siad sonraí a chur leis nó a bhaint den bhlob agus fós cruthúnas bailí a sholáthar. Chun é seo a chosc, in ionad na láithreacha rúnda iarbhír a thabhairt do na cruthaitheoirí, faigheann siad na láithreacha atá imfhillte i "mbosca dubh" cripteagrafach ag baint úsáide as cuair éilipseacha. Déanann siad seo na luachanna a scrobhadh go héifeachtach ar bhealach nach féidir na bunluachanna a aisiompú, ach le roinnt cruthaitheoirí agus fíoraitheoirí ailgéabar cliste fós is féidir leo iltéarmaí a mheas ag na pointí a léiríonn siad.
 
 </ExpandableCard>
 
