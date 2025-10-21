@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### Úsáid 'SHA3' {#sha3}
 
-Tharla forbairt Ethereum ag an am céanna le forbairt an chaighdeáin SHA3, agus rinne an próiseas caighdeáin athrú déanach i stuáil an algartam haise críochnaithe, ionas nach haiseanna Ethereum caighdeánacha sha3 iad "sha3_256" agus "sha3_512", ach malairt ar a dtugtar "Keccak-256" agus "Keccak-512" go minic i gcomhthéacsanna eile. Féach plé, e.g. [anseo](https://eips.ethereum.org/EIPS/eip-1803), [anseo](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), nó [anseo](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Tharla forbairt Ethereum ag an am céanna le forbairt an chaighdeáin SHA3, agus rinne an próiseas caighdeáin athrú déanach i stuáil an algartam haise críochnaithe, ionas nach haiseanna Ethereum caighdeánacha sha3 iad "sha3_256" agus "sha3_512", ach malairt ar a dtugtar "Keccak-256" agus "Keccak-512" go minic i gcomhthéacsanna eile. Féach plé, e.g., [anseo](https://eips.ethereum.org/EIPS/eip-1803), [anseo](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), nó [anseo](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Meabhraigh le do thoil go dtagraítear do haiseanna mar "sha3" san algartam thíos.
 

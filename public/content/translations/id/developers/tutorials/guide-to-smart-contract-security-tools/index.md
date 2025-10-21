@@ -67,7 +67,7 @@ Area luas yang sering kali relevan untuk kontrak pintar mencakup:
 
   - Echidna dan Manticore adalah peralatan yang lebih disarankan untuk menguji spesifikasi mesin state.
 
-- **Access controls.** If your system has privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
+- **Access controls.** If your system has privileged users (e.g., an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
 
   - Slither, Echidna, dan Manticore dapat memeriksa kontrol akses yang benar. Sebagai contoh, Slither dapat memeriksa bahwa hanya fungsi yang masuk dalam daftar putih yang tidak memiliki modifier onlyOwner. Echidna dan Manticore berguna untuk kontrol akses yang lebih kompleks, seperti izin yang diberikan hanya jika kontrak mencapai state yang diberikan.
 

@@ -32,7 +32,7 @@ Ag dul ar ais chuig ár sampla níos luaithe, is é an t-aon fhianaise atá uait
 
 Is minic a bhíonn íocaíochtaí le cárta creidmheasa le feiceáil ag an iomad páirtí, lena n-áirítear an soláthraí íocaíochtaí, bainc agus páirtithe leasmhara eile (m.sh., údaráis rialtais). Cé go bhfuil buntáistí ag faireachas airgeadais chun gníomhaíocht mhídhleathach a shainaithint, baineann sé an bonn de phríobháideachas na ngnáthshaoránach freisin.
 
-Bhí sé mar aidhm ag cripte-airgeadraí bealach a sholáthar d'úsáideoirí chun idirbhearta príobháideacha, piaraí le piaraí a dhéanamh. Ach tá formhór na n-idirbheart criptea-airgeadraí le feiceáil go hoscailte ar bhlocshlabhra poiblí. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
+Bhí sé mar aidhm ag cripte-airgeadraí bealach a sholáthar d'úsáideoirí chun idirbhearta príobháideacha, piaraí le piaraí a dhéanamh. Ach tá formhór na n-idirbheart criptea-airgeadraí le feiceáil go hoscailte ar bhlocshlabhra poiblí. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g., by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
 
 Tá “boinn phríobháideachais” ar leith ann atá deartha le haghaidh idirbhearta go hiomlán gan ainm. Trí bhlocshlabhraí atá dírithe ar phríobháideacht, mar shampla Zcash agus Monero, tugtar cosaint do shonraí idirbhirt, lena n-áirítear seoltaí seoltóra/glacadóir, cineál sócmhainne, cainníocht agus amlíne an idirbhirt.
 
