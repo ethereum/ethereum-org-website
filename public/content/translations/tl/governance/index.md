@@ -48,7 +48,7 @@ May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may pape
 - **Mga Node Operator**: nagpapatakbo ang mga taong ito ng mga node na nagpaparami ng mga block at transaksyon, at hindi tinatanggap ng mga ito ang anumang hindi valid na transaksyon o block na matutuklasan ng mga ito. [Iba pang detalye tungkol sa mga node](/developers/docs/nodes-and-clients/).
 - **Mga EIP Author**: nagmumungkahi ang mga taong ito ng mga pagbabago sa Ethereum protocol, sa pamamagitan ng mga Ethereum Improvement Proposal (EIP). [Iba pang detalye tungkol sa EIPs](/eips/).
 - **Mga Validator**: nagpapatakbo ang mga taong ito ng mga node na makakapagdagdag ng mga bagong block sa Ethereum blockchain.
-- **Mga Developer ng Protokol** (kilala rin bilang "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [Iba pang detalye tungkol sa mga kliyente ng Ethereum](/developers/docs/nodes-and-clients/).
+- **Mga Developer ng Protokol** (kilala rin bilang "Core Developers" ): these people maintain the various Ethereum implementations (e.g., go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [Iba pang detalye tungkol sa mga kliyente ng Ethereum](/developers/docs/nodes-and-clients/).
 
 _Tandaan: maaaring hindi lang sa isa sa mga grupong ito napapabilang ang sinumang indibidwal (hal. maaaring magtaguyod ng EIP, at magpatakbo ng beacon chain validator, at gumamit ng mga DeFi application ang isang developer ng protokol). Para malinaw itong maunawaan, pinakamadali kung pag-iiba-ibahin ang mga ito._
 
