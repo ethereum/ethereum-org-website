@@ -16,7 +16,7 @@ To better understand this page, we recommend you first read up on [transactions]
 
 ## What is Proof-of-work (PoW)? {#what-is-pow}
 
-Nakamoto consensus, which utilizes proof-of-work, is the mechanism that once allowed the decentralized Ethereum network to come to consensus (i.e. all nodes agree) on things like account balances and the order of transactions. This prevented users from "double spending" their coins and ensured that the Ethereum chain was tremendously difficult to attack or manipulate. These security properties now come from proof-of-stake instead using the consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Nakamoto consensus, which utilizes proof-of-work, is the mechanism that once allowed the decentralized Ethereum network to come to consensus (i.e., all nodes agree) on things like account balances and the order of transactions. This prevented users from "double spending" their coins and ensured that the Ethereum chain was tremendously difficult to attack or manipulate. These security properties now come from proof-of-stake instead using the consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Proof-of-work and mining {#pow-and-mining}
 
