@@ -8,7 +8,7 @@ How to prepare your content for translation depends on whether you're working on
 
 **- MDX pages (`public/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place an index markdown file (ie. `index.md`) within the new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place an index markdown file (i.e., `index.md`) within the new folder.
 
 **- React component page**
 
