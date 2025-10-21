@@ -81,7 +81,7 @@ It's also important to note it is unlikely we will see extended spikes of full b
 
 ### Priority fee (tips) {#priority-fee}
 
-The priority fee (tip) incentivizes validators to maximise the number of transactions in a block, constrained only by the block gas limit. Without tips, a rational validator could include fewer - or even zero - transactions without any direct execution-layer or consensus-layer penalty, as staking rewards are independent of how many transactions are in a block. Additionally, tips allow users to outbid others for priority within the same block, effectively signalling urgency. 
+The priority fee (tip) incentivizes validators to maximize the number of transactions in a block, constrained only by the block gas limit. Without tips, a rational validator could include fewer—or even zero—transactions without any direct execution layer or consensus layer penalty, as staking rewards are independent of how many transactions are in a block. Additionally, tips allow users to outbid others for priority within the same block, effectively signalling urgency. 
 
 ### Max fee {#maxfee}
 
