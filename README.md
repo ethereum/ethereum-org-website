@@ -2113,6 +2113,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Gwen-M"><img src="https://avatars.githubusercontent.com/u/55929788?v=4?s=100" width="100px;" alt="Gwen"/><br /><sub><b>Gwen</b></sub></a><br /><a href="#tool-Gwen-M" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://charliej.vercel.app/"><img src="https://avatars.githubusercontent.com/u/138974329?v=4?s=100" width="100px;" alt="Charles Jones"/><br /><sub><b>Charles Jones</b></sub></a><br /><a href="#content-SupaMega24" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
