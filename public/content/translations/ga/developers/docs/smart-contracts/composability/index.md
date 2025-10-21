@@ -43,7 +43,7 @@ Feabhsaíonn idir-inoibritheacht idir comhpháirteanna den éiceachóras Ethereu
 
 Úsáidfimid sampla ó thrádáil arbatráiste chun buntáistí idir-inoibritheachta a léiriú:
 
-Má tá comhartha ag trádáil níos airde ar `mhalartán A` ná ar`mhalartán B`, is féidir leat leas a bhaint as an difríocht praghais chun brabús a dhéanamh. Ní féidir leat é sin a dhéanamh, áfach, ach amháin má tá go leor caipitil agat chun an t-idirbheart a mhaoiniú (i.e. an chomhartha a cheannach ó `mhalartán B` agus é a dhíol ar `mhalartán A`).
+Má tá comhartha ag trádáil níos airde ar `mhalartán A` ná ar`mhalartán B`, is féidir leat leas a bhaint as an difríocht praghais chun brabús a dhéanamh. Ní féidir leat é sin a dhéanamh, áfach, ach amháin má tá go leor caipitil agat chun an t-idirbheart a mhaoiniú (i.e., an chomhartha a cheannach ó `mhalartán B` agus é a dhíol ar `mhalartán A`).
 
 I gcás nach bhfuil go leor airgid agat chun an trádáil a chlúdach, d'fhéadfadh iasacht splaince a bheith oiriúnach. Tá [Iasachtaí splaince](/defi/#flash-loans) thar a bheith teicniúil, ach is é an bun-smaoineamh gur féidir leat sócmhainní a fháil ar iasacht (gan comhthaobhacht) agus iad a thabhairt ar ais laistigh de _idirbheart amháin_.
 
