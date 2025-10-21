@@ -37,9 +37,13 @@ La Fusion représente le passage officiel à l'utilisation de la Chaîne phare c
 
 Aucun historique n'a été perdu dans la Fusion. Au fur et à mesure que le réseau principal a fusionné avec la Chaîne phare, il a également fusionné la totalité de l'historique transactionnel d'Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est émis. En savoir plus sur l'émission d'[éthers avant et après la Fusion](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Utilisateurs et détenteurs {#users-holders}
 

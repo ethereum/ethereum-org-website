@@ -10,9 +10,13 @@ The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought chang
 
 This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Improvements in Pectra {#new-improvements}
 
@@ -84,9 +88,13 @@ The Beacon Chain consensus is based on validators casting their votes for the la
 
 [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) is a simple change that adds a new field to execution layer client configuration. It configures the number of blocks, enabling dynamic setting for target and maximum blob counts per block as well as blob fee adjustment. With directly defined configuration, clients can avoid the complexity of exchanging this information via Engine API.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 To learn more about how Pectra affects you specifically as an Ethereum user, developer or validator, look into <a href="https://epf.wiki/#/wiki/pectra-faq">Pectra FAQ</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Does this upgrade affect all Ethereum nodes and validators? {#client-impact}
 

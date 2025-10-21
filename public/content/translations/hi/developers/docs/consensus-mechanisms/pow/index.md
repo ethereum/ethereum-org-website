@@ -6,9 +6,14 @@ lang: hi
 
 एथेरियम नेटवर्क ने प्रूफ-ऑफ-वर्क मैकेनिज्म का उपयोग करके शुरू किया जिसमें **[प्रूफ-ऑफ-वर्क (PoW) शामिल](/developers/docs/consensus-mechanisms/pow)** था। इसने एथेरियम नेटवर्क के नोड्स को एथेरियम ब्लॉकचेन पर दर्ज सभी सूचनाओं की स्थिति पर सहमत होने की अनुमति दी और कुछ प्रकार के आर्थिक हमलों को रोका। हालाँकि, एथेरियम ने 2022 में प्रूफ-ऑफ-वर्क को बंद कर दिया और इसके बजाय [प्रूफ-ऑफ-स्टेक का उपयोग करना शुरू कर](/developers/docs/consensus-mechanisms/pos) दिया।
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     काम के सबूत को अब अप्रचलित कर दिया गया है। एथेरियम अब अपने कंसेंसस मैकेनिज्म के हिस्से के रूप में प्रूफ-ऑफ-वर्क का उपयोग नहीं करता है। इसके बजाय, यह हिस्सेदारी के सबूत का उपयोग करता है। [हिस्सेदारी के सबूत](/developers/docs/consensus-mechanisms/pos/) और [स्टेकिंग](/staking/) पर और अधिक पढ़ें।
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## आवश्यक शर्तें {#prerequisites}
 

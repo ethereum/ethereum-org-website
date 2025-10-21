@@ -37,9 +37,13 @@ summaryPoint4: Слияние уменьшило потребление энер
 
 Старые данные при слиянии не пострадали. Когда основная сеть слилась с сетью Beacon, также произошло слияние всей истории транзакций Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Этот переход к доказательству владения изменил подход к выпуску эфира. Подробнее о [выпуске эфира до и после слияния](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Пользователи и держатели {#users-holders}
 

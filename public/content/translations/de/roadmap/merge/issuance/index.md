@@ -54,11 +54,17 @@ Gesamt ETH Angebot: **~120,520,000 ETH** (zum Zeitpunkt von The Merge im Septemb
 - Ergibt **~620,500** ETH herausgegeben in einem Jahr
 - Daraus ergibt sich eine Inflationsrate von **ungefähr 0.52%** (620.5K pro Jahr / 119.3M insgesamt)
 
-<InfoBanner>
-<strong>Jährlicher Gesamtausgabesatz (Pre-Merge): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88.7%</strong> der Ausgabe ging an die Miner auf der Ausführungs-Ebene (4.09 / 4.61 * 100)<br/><br/>
-<strong>~11.3%</strong> wurde an Staker auf der Konsensus-Ebene ausgegeben (0.52 / 4.61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Jährlicher Gesamtausgabesatz (Pre-Merge): ~4.61%** (4.09% + 0.52%)
+
+**~88.7%** der Ausgabe ging an die Miner auf der Ausführungs-Ebene (4.09 / 4.61 * 100)
+
+**~11.3%** wurde an Staker auf der Konsensus-Ebene ausgegeben (0.52 / 4.61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Post-Merge (Gegenwart) {#post-merge}
 
@@ -84,18 +90,27 @@ Wenn mehr Validatoren aussteigen, wird die maximale Anzahl der ausscheidenden Va
 - Ausgabe der Ausführungs-Ebene: **0**
 - Ausgabe der Konsensus-Ebene: Wie oben beschrieben, **~0.52%** Jährliche Emissionsrate (mit insgesamt 14 Millionen ETH in Staking)
 
-<InfoBanner>
-Jährlicher Gesamtausgabesatz: <strong>~0.52%</strong><br/><br/>
-Netto-Reduktion der jährlichen ETH-Emissionen: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Jährlicher Gesamtausgabesatz: **~0.52%**
+
+Netto-Reduktion der jährlichen ETH-Emissionen: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />Der Burn {#the-burn}
 
 Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrannt wird. Damit eine Transaktion auf Ethereum ausgeführt werden kann, muss eine Mindestgebühr (die so genannte "Grundgebühr") entrichtet werden, die je nach Netzwerkaktivität kontinuierlich (von Block zu Block) schwankt. Die Gebühr wird in ETH bezahlt und ist _erforderlich_, damit die Transaktion als gültig betrachtet wird. Diese Gebühr wird während des Transaktionsprozesses _verbrannt_, wodurch sie aus dem Verkehr gezogen wird.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Die Verbrennung von Gebühren wurde mit dem [the London Upgrade](/ethereum-forks/#london) im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Zusätzlich zu den Gebühren, die durch das London Upgrade verbrannt werden, können Validatoren auch mit Strafen belegt werden, wenn sie offline sind, oder schlimmer noch, ihr Stake kann gekürzt werden, wenn sie gegen bestimmte Regeln verstoßen, die die Netzsicherheit gefährden. Diese Strafen führen zu einer Verringerung des ETH-Guthabens dieses Validators, das nicht auf ein anderes Konto überwiesen wird, sondern effektiv verbrannt/aus dem Verkehr gezogen wird.
 

@@ -37,9 +37,13 @@ Spojitev je predstavljala uradni premik, kjer se je oddajniška veriga začela u
 
 V spojitvi ni bil izgubljen noben del zgodovine. Ko se je glavno omrežje spojilo z oddajniško verigo, je spojilo tudi celotno Ethereumovo zgodovino transakcij.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Ta prehod na mehanizem dokaza o deležu je spremenil način izdajanja etra. Preberite več o [izdajanju etra pred spojitvijo in po njej](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Uporabniki in imetniki {#users-holders}
 

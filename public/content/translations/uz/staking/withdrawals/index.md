@@ -43,9 +43,14 @@ Shanghai/Capella yangilanishidan oldin siz garovga qo‘yilgan ETHingizdan foyda
 
 Har qanday validator hisobi uchun pul yechib olish manzilini taqdim etish - bu hisob balansidan ETH yechib olishga huquq qozonishidan oldingi majburiy qadamdir.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Har bir validator hisobi uchun faqat bitta yechib olish manzili, bir martalik tayinlanishi mumkin.</strong> Manzil tanlanib, konsensus qatlamiga yuborilgandan so‘ng, uni bekor qilish yoki qayta o‘zgartirish mutlaqo imkonsiz bo‘ladi. Yuborishdan avval taqdim etilgan manzilning to‘g‘riligini va uning egasini ikki marta sinchiklab tekshirib chiqing.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Agar sizning mnemonik/urug‘ iborangiz oflaynda xavfsiz saqlangan va hech qanday tarzda buzilmagan bo‘lsa, <strong>bu ma’lumotni taqdim etmasligingiz hozircha mablag‘laringizga hech qanday xavf tug‘dirmaydi</strong>. Yechib olish uchun kerakli ma’lumotlarni qo‘shmaslik natijasida, yechib olish manzili ko‘rsatilmaguncha, ETH validator hisobida shunchaki qulflangan holda qolaveradi.
 
@@ -82,11 +87,16 @@ Finematics tomonidan taqdim etilgan Ethereum steykingi yechib olish jarayoni haq
 
 Validator keyingi blokni taklif etish uchun rejalashtirilganda, u 16 tagacha muvofiq yechib olishlardan iborat yechib olish navbatini tuzishi shart bo‘ladi. Bu jarayon dastlab validator indeksi 0 dan boshlanib, protokol qoidalariga ko‘ra ushbu hisob uchun mablag‘ yechib olishga huquq bor-yo‘qligi aniqlanadi va agar bunday huquq mavjud bo‘lsa, u navbatga qo‘shiladi. Keyingi blokni taklif etish uchun tanlangan tekshiruvchilar to‘plami, oldingi blok yakunlangan joydan boshlab, belgilangan tartibda cheksiz davom etadi.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Analog soat haqida o‘ylab ko‘ring. Soat mili vaqtni ko‘rsatadi, faqat bir yo‘nalishda aylanadi, hech qanday soatni o‘tkazib yubormaydi va oxirgi raqamga yetgandan so‘ng yana boshiga qaytadi.<br/><br/>
 Endi 1 dan 12 gacha emas, balki soatda 0 dan N gacha raqamlar bor deb tasavvur qiling <em>(konsensus qatlamida hozirga qadar ro‘yxatdan o‘tgan validator hisoblarining umumiy soni, 2023-yil yanvar holatiga ko‘ra 500 000 dan ortiq)</em>.<br/><br/>
 Soat mili chiqarib olishga huquqi bor-yo‘qligini tekshirish kerak bo‘lgan keyingi validatorni ko‘rsatadi. U noldan boshlanib, hech qanday hisobni o‘tkazib yubormasdan to‘liq aylanib chiqadi. Oxirgi tasdiqlovchiga yetib borgandan so‘ng, jarayon yana boshidan qaytadan boshlanadi.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Akkauntdan pul yechish uchun tekshiruv {#checking-an-account-for-withdrawals}
 

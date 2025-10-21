@@ -43,9 +43,14 @@ Antes da atualização de Xangai/Capella, não podia utilizar ou aceder ao seu E
 
 Fornecer um endereço de levantamento é um passo necessário para qualquer conta de validador antes de ser elegível para ter ETH retirado do seu saldo.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>A cada conta de validador só pode ser atribuído um único endereço de levantamento e uma única vez.</strong> Uma vez escolhido e submetido à camada de consenso, o endereço não pode ser revogado ou alterado novamente. Verifique novamente a titularidade e a exatidão do endereço fornecido antes de o enviar.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Não há <strong>qualquer ameaça aos seus fundos entretanto</strong> por não fornecer isto, assumindo que a sua frase mnemónica/semente permaneceu segura offline e não foi comprometida de forma alguma. Se as credenciais de levantamento não forem adicionadas, o ETH ficará simplesmente bloqueado na conta do validador até que um endereço de levantamento seja fornecido.
 
@@ -82,11 +87,16 @@ Consulte esta explicação de levantamento de staking na Ethereum da Finematics:
 
 Se um validador estiver agendado para propor o próximo bloco, é necessário construir uma fila de levantamento composta por um máximo de 16 levantamentos elegíveis. Isto consegue-se começando com um validador de índice 0, determinando se existe um levantamento elegível para esta conta de acordo com as regras do protocolo e adicionando à lista, se existir. O validador definido para propor o bloco seguinte retoma o trabalho no ponto em que foi deixado, fazendo a ordem avançar indefinidamente.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Imagine um relógio analógico. O ponteiro do relógio que aponta para as horas avança numa direção, não salta horas e, eventualmente, volta ao início depois de alcançar o último número.<br/><br/>
 Em vez de 1 a 12, imagine que o relógio tem 0 a N <em>(o número total de contas do validador que foram registadas na camada de consenso, mais de 500 mil em janeiro de 2023).</em><br/><br/>
 O pnteiro do relógio aponta para o próxima validador que tem de ser verificado para levantamentos elegíveis. Começa no 0 e percorre todo o caminho sem saltar quaisquer contas. Ao chegar ao último validador, o ciclo continua desde o início.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Verificar uma conta para levantamentos {#checking-an-account-for-withdrawals}
 

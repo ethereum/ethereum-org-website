@@ -37,9 +37,13 @@ Die Zusammenführung stellte den offiziellen Wechsel zur Verwendung der Beacon C
 
 Keine Historie ging bei der Zusammenführung verloren. Als Mainnet mit der Beacon Chain zusammengeführt wurde, wurde auch die gesamte Transaktionshistorie von Ethereum zusammengeführt.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Der Übergang zu Proof-of-Stake änderte die Art und Weise wie Ether benutzt wird. Erfahren Sie mehr über [Etherausgabe vor und nach der Zusammenführung](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Benutzer und Halter {#users-holders}
 

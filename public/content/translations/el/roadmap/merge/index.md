@@ -37,9 +37,13 @@ summaryPoint4: Η συγχώνευση μείωσε την κατανάλωση 
 
 Δεν χάθηκε κανένα ιστορικό κατά τη Συγχώνευση. Με τη συγχώνευσή του με την Κύρια Αλυσίδα, το Κεντρικό Δίκτυο συγχώνευσε και ολόκληρο το ιστορικό συναλλαγών του Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Αυτή η μετάβαση στην απόδειξη συμμετοχής άλλαξε τον τρόπο με τον οποίο εκδίδονται τα ether. Μάθετε περισσότερα για [την έκδοση ether πριν και μετά τη Συγχώνευση](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Χρήστες και κάτοχοι {#users-holders}
 

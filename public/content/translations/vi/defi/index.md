@@ -63,12 +63,15 @@ Ethereum kế thừa và tiếp tục phát triển từ triết lý của Bitco
 
 Khái niệm này nghe khá kì lạ... "tại sao mà tôi lại muốn lập trình tiền của mình cơ chứ?" Tuy nhiên, điều này có ý nghĩa hơn chỉ đơn thuần là một tính năng mặc định của tokens trên Ethereum. Bất cứ ai cũng có thể lập trình logic vào trong các khoản thanh toán. Nhờ đó, bạn có thể có được khả năng kiểm soát và sự an toàn của Bitcoin cộng với những dịch vụ được cung cấp bởi các định chế tài chính. Điều này cho phép bạn làm những điều với các đồng tiền mã hóa mà bạn không thể làm với Bitcoin như là cho vay và mượn, lên lịch thanh toán, đầu tư vào các quỹ phái sinh và hơn thế nữa.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Khám phá những ứng dụng tài chính phi tập trung mà chúng tôi gợi ý nếu bạn là một người dùng mới của Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Khám phá các ứng dụng tài chính phi tập trung
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Bạn có thể làm gì với DeFi? {#defi-use-cases}
 

@@ -37,9 +37,13 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が99
 
 マージにより、履歴は失われていません。 メインネットがビーコンチェーンにマージされ、イーサリアムのすべてのトランザクション履歴もマージされました。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 このプルーフ・オブ・ステークへの移行により、イーサ(ETH)の発行方法も変わりました。 マージ前後におけるイーサ(ETH)発行の詳細については、[こちら](/roadmap/merge/issuance/)をご覧ください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### ユーザーと所有者 {#users-holders}
 

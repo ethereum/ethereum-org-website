@@ -37,9 +37,13 @@ Sloučení představovalo oficiální přechod na používání Řetězové vazb
 
 Historie nebyla během Sloučení vymazána. Jak se hlavní síť sloučila s Řetězovou vazbou, sloučila se také celá transakční historie Etherea.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Tento přechod na důkaz podílem změnil způsob, jakým je ether vydáván. Přečtěte si další informace na téma [vydávání etheru před Sloučením a po něm](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Uživatelé a držitelé {#users-holders}
 

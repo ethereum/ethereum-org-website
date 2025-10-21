@@ -55,12 +55,15 @@ Seo an chuma ar idirlíon NFTanna a cuireadh i gcomparáid leis an idirlíon a �
 
 B’fhéidir gur ealaíontóir thú atá ag iarraidh a gcuid oibre a roinnt le NFTanna, gan smacht a chailleadh agus do bhrabúis a bhronnadh ar idirghabhálaithe. Is féidir leat conradh nua a chruthú agus líon na NFTanna, a n-airíonna agus nasc le roinnt saothar ealaíne ar leith a shonrú. Mar ealaíontóir, is féidir leat na dleachtanna ar cheart a bheith íoctha leat **a ríomhchlárú isteach sa chonradh cliste** (m.sh. aistrigh 5% den phraghas díola chuig úinéir an chonartha gach uair a aistrítear NFT). Is féidir leat a chruthú i gcónaí gur chruthaigh tú na NFTanna toisc gur leatsa an [sparán](/glossary/#wallet) a bhain feidhm as an gconradh. Is féidir le do cheannaitheoirí a chruthú go héasca go bhfuil **NFT barántúal** acu as do bhailiúchán toisc go bhfuil [seoladh](/glossary/#address) a sparáin bainteach le comhartha i do chonradh cliste. Is féidir leo é a úsáid ar fud éiceachóras Ethereum, agus iad muiníneach as a bharántúlacht.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Foghlaim, ceannaigh nó cruthaigh do chuid ealaíne/earraí inbhailithe NFT féin...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Foghlaim faoi ealaín NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Nó smaoinigh ar thicéad chuig imeacht spóirt. Díreach mar is féidir le **heagraí imeachta a roghnú cé mhéad ticéad a dhíolfaidh sé**, is féidir le cruthaitheoir NFT a chinneadh cé mhéad macasamhail atá ann. Uaireanta is macasamhla cruinne iad seo, amhail 5000 ticéad Iontrála Ginearálta. Uaireanta déantar roinnt díobh a bhualadh atá an-chosúil, ach beagán difriúil óna chéile, mar thicéad le suíochán sannta. Is féidir iad seo a cheannach agus a dhíol idir comhghleacaithe gan íoc as láimhseálaithe ticéad agus dearbhaíonn an ceannaitheoir i gcónaí barántúlacht an ticéid trí sheoladh an chonartha a sheiceáil.
 

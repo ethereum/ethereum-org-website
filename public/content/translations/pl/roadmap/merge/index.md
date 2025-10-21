@@ -37,9 +37,13 @@ Połączenie oznaczało oficjalne przejście na używanie łańcucha śledząceg
 
 Podczas Połączenia nie została utracona żadna historia. Gdy sieć główna połączyła się z łańcuchem śledzącym, połączona została również cała historia transakcyjna Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o [emisji etheru przed i po Połączeniu](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Użytkownicy i posiadacze {#users-holders}
 

@@ -64,12 +64,15 @@ L'Ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas chang
 
 Cela semble étrange... « pourquoi je voudrais programmer mon argent » ? Cependant, il s'agit plutôt d'une fonctionnalité par défaut des jetons sur Ethereum. N'importe qui peut programmer une logique de paiement. Ainsi, vous pouvez obtenir le contrôle et la sécurité de Bitcoin mélangés avec les services fournis par les institutions financières. Cela vous permet de faire des choses avec des cryptomonnaies que vous ne pouvez pas faire avec des Bitcoins comme des prêts et des emprunts, des paiements, des investissements dans des fonds d'indice et plus encore.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explorez nos suggestions pour les applications de la DeFi pour essayer si vous êtes nouveau sur Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorer la DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Que pouvez-vous faire avec la DeFi ? {#defi-use-cases}
 

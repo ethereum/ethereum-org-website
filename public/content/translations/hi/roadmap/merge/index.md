@@ -37,9 +37,13 @@ summaryPoint4: मर्ज ने एथेरियम की ऊर्जा 
 
 मर्ज में कोई इतिहास नहीं खोया था। मेननेट का बीकन चेन के साथ मर्ज होने के बाद, इसने एथेरियम के संपूर्ण लेनदेन के इतिहास को भी मर्ज कर दिया।
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 हिस्सेदारी का सबूत के इस ट्राज़िशन से ईथर जारी करने का तरीका बदल गया। [मर्ज से पहले और बाद में ईथर जारी करने](/roadmap/merge/issuance/) के बारे में ज़्यादा जानें।
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### उपयोगकर्ताओं और धारकों {#users-holders}
 

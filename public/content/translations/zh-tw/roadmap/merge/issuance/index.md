@@ -54,11 +54,17 @@ title="以太幣發行量總覽">
 - 導致每年的以太幣發行量達到**大約 620,500 個**
 - 導致通膨率達到**大約 0.52%**（每年 62.05 萬 / 總計 1.193 億）
 
-<InfoBanner>
-<strong>總年化發行率（合併前）：約 4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>約 88.7%</strong> 發行的以太幣給了執行層上的礦工 (4.09 / 4.61 * 100)<br/><br/>
-<strong>約 11.3%</strong> 發行的以太幣給了共識層上的質押者 (0.52 / 4.61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**總年化發行率（合併前）：約 4.61%** (4.09% + 0.52%)
+
+**約 88.7%** 發行的以太幣給了執行層上的礦工 (4.09 / 4.61 * 100)
+
+**約 11.3%** 發行的以太幣給了共識層上的質押者 (0.52 / 4.61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 合併後（現狀） {#post-merge}
 
@@ -84,18 +90,27 @@ title="以太幣發行量總覽">
 - 執行層發行量：**0**
 - 共識層發行量：同上，年化發行率**約為 0.52%**（質押總量為 1,400 萬個以太幣）
 
-<InfoBanner>
-總年化發行率：<strong>約 0.52%</strong><br/><br/>
-年度以太幣發行量淨減少值：<strong>約 88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+總年化發行率：**約 0.52%**
+
+年度以太幣發行量淨減少值：**約 88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />銷毀 {#the-burn}
 
 與以太幣發行相反的力量是以太幣被銷毀的速度。 對於在以太坊上執行的交易，必須支付最低費用（稱為「基本費用」），具體費用根據網路活動不斷波動（逐區塊）。 此費用使用以太幣支付，且_必須_支付這筆費用，交易才被視為有效。 這筆費用會在交易過程中_銷毀_，從流通中移除。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 費用銷毀機制在 2021 年 8 月[倫敦升級](/ethereum-forks/#london)後上線，自合併以來一直維持不變。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 除了倫敦升級時實作的費用銷毀機制外，驗證者也可能因離線而受到懲處；更糟糕的是，他們可能因為違反威脅網路安全的特定規定而遭罰沒。 這些處罰會導致驗證者餘額中的以太幣減少，減少的金額不會直接獎勵給任何其他帳戶，而是會有效地從流通中銷毀/移除。
 

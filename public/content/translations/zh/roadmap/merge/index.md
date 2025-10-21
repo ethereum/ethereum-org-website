@@ -37,9 +37,13 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 历史记录不会在合并中丢失。 随着主网与信标链合并，它还合并以太坊的整个交易历史记录。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 这种向权益证明的过渡改变了以太币的发行方式。 了解有关[合并前后以太币发行的更多信息](/roadmap/merge/issuance/)。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 用户与持有者 {#users-holders}
 

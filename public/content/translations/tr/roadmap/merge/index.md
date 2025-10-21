@@ -37,9 +37,13 @@ Birleşim blok üretim motoru olarak İşaret Zinciri'ne resmi geçişi temsil e
 
 Birleşim'de herhangi bir geçmiş kaybedilmedi. Ana Ağ İşaret Zinciri ile birleşti, ayrıca Ethereum'un tüm işlemsel geçmişini de birleştirdi.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Hisse ispatına geçiş ether basım şeklini değiştirdi. [Birleşim'den önce ve sonra ether verilmesi](/roadmap/merge/issuance/) hakkında daha fazla bilgi edinin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Kullanıcılar ve sahipler {#users-holders}
 

@@ -37,9 +37,13 @@ La Fusión representa la transición oficial al uso de la cadena de baliza como 
 
 El historial no se ha perdido tras La Fusión. Ya que la red principal se fusionó con la cadena de baliza, también se produjo una fusión de todo el historial de transacciones de Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre [la emisión de ether antes y después de La Fusión](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Usuarios y titulares {#users-holders}
 

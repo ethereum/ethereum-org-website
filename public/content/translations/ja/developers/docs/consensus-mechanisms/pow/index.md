@@ -6,9 +6,14 @@ lang: ja
 
 イーサリアムのネットワークは、**[プルーフ・オブ・ワーク(PoW)](/developers/docs/consensus-mechanisms/pow)**という合意メカニズムを使用して始まりました。 このメカニズムにより、イーサリアムネットワークのノードは、ブロックチェーンに記録されたすべての情報に関してネットワーク全体で合意を取り、特定の種類の経済的な攻撃を防ぎました。 しかしながら、イーサリアムは2022年にプルーフ・オブ・ワーク(PoW)を停止し、これに代わる[プルーフ・オブ・ステーク(PoS)](/developers/docs/consensus-mechanisms/pos)の使用を開始しました。
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     現在、プルーフ・オブ・ワークは廃止されています。 イーサリアムの合意メカニズムにはプルーフ・オブ・ワークではなく、 現在はプルーフ・オブ・ステークが採用されています。 詳細については、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)と[ステーキング](/staking/)を参照してください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 前提条件 {#prerequisites}
 

@@ -37,9 +37,13 @@ La Fusione ha rappresentato il passaggio ufficiale all'uso della Beacon Chain co
 
 Con La Fusione, la cronologia non è andata perduta. Quando la Rete principale si è fusa con la Beacon Chain, ha unito anche l'intera cronologia delle transazioni di Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'ether. Scopri di più sull'[emissione di ether prima e dopo La Fusione](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Utenti e detentori {#users-holders}
 

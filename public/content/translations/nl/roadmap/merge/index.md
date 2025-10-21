@@ -37,9 +37,13 @@ De samenvoeging betekende de officiële overstap naar het gebruik van de Beacon 
 
 Geen enkele geschiedenis ging verloren tijdens de samenvoeging. Toen het hoofdnet fuseerde met de Beacon Chain, werd ook de hele transactiegeschiedenis van Ethereum samengevoegd.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Deze overgang naar proof-of-stake veranderde de manier waarop ether wordt uitgegeven. Ontdek meer over de [ether-uitgifte voor en na de samenvoeging](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Gebruikers en houders {#users-holders}
 

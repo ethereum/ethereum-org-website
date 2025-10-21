@@ -58,12 +58,15 @@ Countries like El Salvador and the Central African Republic have even adopted cr
 
 In countries where their means of payment have been disconnected from the rest of the world, crypto-integrated payment solutions have been a huge relief. Payments of subscriptions for platforms like Netflix, Spotify, and educational courses have now been made easy through crypto payment platforms like Gnosis Pay and Paypal.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Create your Ethereum account with a wallet app today.</div>
   <ButtonLink href="/wallets/find-wallet">
     Get started
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Pay with self-custodial crypto cards {#pay-with-self-custodial-crypto-cards}
 
@@ -177,9 +180,12 @@ While fiat currencies have the advantage of widespread acceptance and stability,
 
 From facilitating rapid disaster relief to empowering global workers, Ethereum payments are writing a new chapter in the long history of money. While challenges remain, the unique advantages offered by this technology make it an attractive option for a wide range of use cases.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Time to get your own Ethereum account.</div>
   <ButtonLink href="/wallets/find-wallet">
     Get started!
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>

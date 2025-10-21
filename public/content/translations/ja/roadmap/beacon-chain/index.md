@@ -34,9 +34,14 @@ summaryPoint3: ビーコンチェーンは、コンセンサスロジックと�
 
 また、コンセンサスメカニズムとしてプルーフ・オブ・ステークを使用することが、[安全で環境にやさしく、スケーラブルな現在のイーサリアム](/roadmap/vision/)を支える基盤となっています。
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<AlertEmoji text=":money_bag:"/>
+<AlertContent>
+<AlertDescription>
   バリデータになり、イーサリアムの安全性の確保にご興味がある場合は、[ステーキングの詳細](/staking/)をご覧ください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### シャーディングの設定 {#setting-up-for-sharding}
 

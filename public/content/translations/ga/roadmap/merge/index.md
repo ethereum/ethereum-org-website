@@ -37,9 +37,13 @@ B'ionann an Cumasc agus an t-athrú oifigiúil go dtí an Slabhra Beacon a úsá
 
 Níor cailleadh aon stair in An Cumasc. De réir mar a chumasc Mainnet leis an Slabhra Beacon, chomhcheangail sé stair idirbheartaíochta iomlán Ethereum freisin.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 D'athraigh an t-aistriú seo go dtí cruthúnas-gheallta n bealach a eisítear éitear. Foghlaim tuilleadh faoi [eisiúint éitear roimh An Cumasc agus ina dhiaidh](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Úsáideoirí agus sealbhóirí {#users-holders}
 
