@@ -118,7 +118,7 @@ id="developers">
 
 <ExpandableCard
 title="Хибне уявлення: «Запуск вузла потребує стейкінгу 32 ETH»."
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Існує два типи вузлів Ethereum: вузли, які можуть пропонувати блоки, і вузли, які цього не можуть.
 
