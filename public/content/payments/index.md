@@ -65,13 +65,13 @@ In countries where their means of payment have been disconnected from the rest o
   </ButtonLink>
 </InfoBanner>
 
-## Pay with Self-Custodial Crypto Cards {#pay-with-self-custodial-crypto-cards}
+## Pay with self-custodial crypto cards {#pay-with-self-custodial-crypto-cards}
 
 Self-custodial crypto cards work like using your own backpack instead of locking your money in someone else’s vault. With a traditional card, a bank or custodian holds your funds and releases them when you spend. With self-custodial cards, you stay in control of your assets the whole time—no middleman—while still being able to tap or swipe to pay for coffee, groceries, or even a flight.
 
 These cards link directly to non-custodial wallets or smart contract accounts, allowing users to spend ETH and stablecoins in everyday settings without giving up ownership. Unlike custodial cards, which require users to deposit funds with a third party, self-custodial cards enable real-world payments such as Visa and Mastercard while preserving onchain control.
 
-### Examples include:
+### Examples {#crypto-cards-examples}
 
 - **MetaMask Card:** Linked to the MetaMask wallet, this Mastercard debit card lets users spend ETH, stablecoins, and other supported tokens. It supports Apple Pay and Google Pay, includes crypto cashback rewards, and offers yield-earning options.
 
@@ -79,24 +79,20 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 
 - **Gnosis Pay:** The first self-custodial Visa card tied to a Gnosis Safe smart account. Users spend crypto directly from their wallet with no gas, FX, or off-ramping fees. Card personalization via Ethereum Name Service (ENS) is also supported.
 
-- **ether.fi Card:** Integrated with ether.fi’s staking protocol, this card lets users spend while their ETH remains staked. Payments are handled via smart contracts, maintaining self-custody even while spending.
+- **Ether.Fi Cash card:** Integrated with ether.fi’s staking protocol, this card lets users spend while their ETH remains staked. Payments are handled via smart contracts, maintaining self-custody even while spending.
 
-### Self-Custodial Crypto Card Comparison
+### Self-custodial crypto card comparison {#crypto-card-custody-comparison}
 
-| **Crypto Card** | **Self-Custodial** | **Non-Custodial** | **Key Notes**                                                |
+| **Crypto card** | **Self-custodial** | **Non-custodial** | **Key notes**                                                |
 | --------------- | :----------------: | :---------------: | ------------------------------------------------------------ |
-| MetaMask Card   |         ✅          |         ✅         | Wallet stays in MetaMask; auto off-ramp at payment.          |
-| Tuyo Card       |         ✅          |         ✅         | Smart wallet converts to USDC; user retains control.         |
-| Gnosis Pay      |         ✅          |         ✅         | Linked to user’s Gnosis Safe; no custody shift during use.   |
-| ether.fi Card   |         ✅          |         ✅         | ETH remains staked; smart contract controls spending access. |
+| MetaMask Card   |         ✅         |        ✅         | Wallet stays in MetaMask; auto off-ramp at payment           |
+| Tuyo Card       |         ✅         |        ✅         | Smart wallet converts to USDC; user retains control          |
+| Gnosis Pay      |         ✅         |        ✅         | Linked to user’s Gnosis Safe; no custody shift during use    |
+| Ether.Fi Cash   |         ✅         |        ✅         | ETH remains staked; smart contract controls spending access. |
 
-<div 
-  class="border text-sm rounded px-4 py-3 my-4"   
->
-  <strong>Note:</strong> "Self-Custodial" refers to user-controlled wallets where the user has full access and control over their funds. 
-  "Non-Custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
-  While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
-</div>
+> **Note:** "Self-custodial" refers to user-controlled wallets where the user has full access and control over their funds.
+> "Non-custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
+> While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
 
 ## Salary Payments {#salary-payments}
 
