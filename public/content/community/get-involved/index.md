@@ -17,7 +17,7 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
 - Watch or participate in the [Consensus and Execution Layer calls](https://www.youtube.com/@EthereumProtocol/streams)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
-- [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
+- [Web3Bridge](https://www.web3bridgeafrica.com) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 - Join the [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)
 - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
@@ -106,6 +106,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
+- [Ethereum Job Board](https://www.ethereumjobboard.com/)
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
@@ -114,7 +115,6 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
 - [Ethereum Jobs](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 
@@ -125,9 +125,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture for pre-seed crypto projects_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG Game Mechanics for Real Life_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_

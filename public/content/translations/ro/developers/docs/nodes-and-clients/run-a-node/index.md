@@ -54,7 +54,9 @@ Cu toate acestea, o rețea rezistentă la cenzură, descentralizată nu ar trebu
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-Verificați [cerinţele de spațiu pe disc ale fiecărui client și mod de sincronizare](/developers/docs/nodes-and-clients/#requirements) minime şi recomandate. Generally, modest computing power should be enough. De obicei problema este reprezentată de viteza unității. During initial sync, Ethereum clients perform a lot of read/write operations. De aceea se recomandă insistent un SSD. S-ar putea ca un client să nu [poată nici măcar să sincronizeze starea curentă pe HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) și să rămână blocat la câteva blocuri în spatele Mainnet-ului. Puteți rula cei mai mulți clienți pe un [computer cu o singură placă pe procesoare cu arhitectură ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/). Pe baza opțiunilor dvs. de software și hardware, timpul pentru sincronizarea inițială și cerințele de stocare pot varia. Aveţi grijă să [verificaţi timpii de sincronizare și cerințele de stocare](/developers/docs/nodes-and-clients/#recommended-specifications). Totodată, verificați că nu aveți o conexiune la internet limitată de un [plafon de lățime de bandă](https://wikipedia.org/wiki/Data_cap). Este recomandat să utilizați o conexiune nelimitată, deoarece sincronizarea inițială și datele difuzate în rețea ar putea depăși limita dvs.
+Verificați [cerinţele de spațiu pe disc ale fiecărui client și mod de sincronizare](/developers/docs/nodes-and-clients/#requirements) minime şi recomandate. Generally, modest computing power should be enough. De obicei problema este reprezentată de viteza unității. During initial sync, Ethereum clients perform a lot of read/write operations. De aceea se recomandă insistent un SSD. S-ar putea ca un client să nu [poată nici măcar să sincronizeze starea curentă pe HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) și să rămână blocat la câteva blocuri în spatele Mainnet-ului. Puteți rula cei mai mulți clienți pe un [computer cu o singură placă pe procesoare cu arhitectură ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/).
+
+This lets you [run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/). Pe baza opțiunilor dvs. de software și hardware, timpul pentru sincronizarea inițială și cerințele de stocare pot varia. Aveţi grijă să [verificaţi timpii de sincronizare și cerințele de stocare](/developers/docs/nodes-and-clients/#recommended-specifications). Totodată, verificați că nu aveți o conexiune la internet limitată de un [plafon de lățime de bandă](https://wikipedia.org/wiki/Data_cap). Este recomandat să utilizați o conexiune nelimitată, deoarece sincronizarea inițială și datele difuzate în rețea ar putea depăși limita dvs.
 
 #### Sistemul de operare {#operating-system}
 
@@ -138,7 +140,7 @@ Consider creating a service to run your client automatically on startup. For exa
 
 #### Actualizarea clientului {#updating-client}
 
-You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
+You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/ethereum-forks/), make sure you are running the correct client version.
 
 #### Rularea de servicii suplimentare {#running-additional-services}
 

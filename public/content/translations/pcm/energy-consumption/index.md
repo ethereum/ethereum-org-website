@@ -61,14 +61,19 @@ As Ethereum energy konsumpshon dey very low, im still get big, growin, and aktiv
 
 Web3 native publik goods wey dey fund platfoms laik [Gitcoin](https://gitcoin.co) dey run klimate rounds so dem go fit promote building on aplikashon layer of Ethereum wey go konsida di environment. Thru di divelopment of dis initiatives ( and odas, laik [DeSci](/desci/)), Ethereum dey turn teknology wey dey good environmentally and socially.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   If yu feel sey dis page fit dey more akurate, abeg try raise issue abi PR. Dem estimate di stats on dis page base on publik data wey dey afailabol - dem nor reprisent offishial statement abi promise from di ethereum.org team, abi di Ethereum Foundashon.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Further reading {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [White House report on proof-of-work blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [White House report on proof-of-work blockchains](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: Estimate wey start from down go up](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

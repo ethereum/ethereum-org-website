@@ -1,3 +1,5 @@
+"use client"
+
 import { StakingProductCard } from "./StakingProductCard"
 import { StakingProductsCategoryKeys } from "./types"
 import { useStakingProductsCardGrid } from "./useStakingProductsCardGrid"

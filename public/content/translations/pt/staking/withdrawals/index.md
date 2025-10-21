@@ -43,9 +43,14 @@ Antes da atualização de Xangai/Capella, não podia utilizar ou aceder ao seu E
 
 Fornecer um endereço de levantamento é um passo necessário para qualquer conta de validador antes de ser elegível para ter ETH retirado do seu saldo.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>A cada conta de validador só pode ser atribuído um único endereço de levantamento e uma única vez.</strong> Uma vez escolhido e submetido à camada de consenso, o endereço não pode ser revogado ou alterado novamente. Verifique novamente a titularidade e a exatidão do endereço fornecido antes de o enviar.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Não há <strong>qualquer ameaça aos seus fundos entretanto</strong> por não fornecer isto, assumindo que a sua frase mnemónica/semente permaneceu segura offline e não foi comprometida de forma alguma. Se as credenciais de levantamento não forem adicionadas, o ETH ficará simplesmente bloqueado na conta do validador até que um endereço de levantamento seja fornecido.
 
@@ -65,7 +70,7 @@ Os levantamentos de staking estão ativos! A funcionalidade de levantamento foi 
 
 A atualização Xangai/Capella permitiu que o ETH previamente em staking fosse reclamado para contas Ethereum comuns. Fecha-se assim o ciclo na liquidez de staking e a Ethereum fica mais perto da construção de um ecossistema sustentável, escalável e descentralizado seguro.
 
-- [Mais na história de Ethereum](/history/)
+- [Mais na história de Ethereum](/ethereum-forks/)
 - [Mais no roteiro da Ethereum](/roadmap/)
 
 ## Como funcionam os pagamentos de levantamentos? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Consulte esta explicação de levantamento de staking na Ethereum da Finematics:
 
 Se um validador estiver agendado para propor o próximo bloco, é necessário construir uma fila de levantamento composta por um máximo de 16 levantamentos elegíveis. Isto consegue-se começando com um validador de índice 0, determinando se existe um levantamento elegível para esta conta de acordo com as regras do protocolo e adicionando à lista, se existir. O validador definido para propor o bloco seguinte retoma o trabalho no ponto em que foi deixado, fazendo a ordem avançar indefinidamente.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Imagine um relógio analógico. O ponteiro do relógio que aponta para as horas avança numa direção, não salta horas e, eventualmente, volta ao início depois de alcançar o último número.<br/><br/>
 Em vez de 1 a 12, imagine que o relógio tem 0 a N <em>(o número total de contas do validador que foram registadas na camada de consenso, mais de 500 mil em janeiro de 2023).</em><br/><br/>
 O pnteiro do relógio aponta para o próxima validador que tem de ser verificado para levantamentos elegíveis. Começa no 0 e percorre todo o caminho sem saltar quaisquer contas. Ao chegar ao último validador, o ciclo continua desde o início.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Verificar uma conta para levantamentos {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Se fizer parte de um <a href="/staking/pools/">pool de staking</a> ou detiver tokens em staking, deve consultar o seu fornecedor para obter mais detalhes sobre como os levantamentos de staking são processados, uma vez que cada serviço funciona de forma diferente.
+Se fizer parte de um [pool de staking](/staking/pools/) ou detiver tokens em staking, deve consultar o seu fornecedor para obter mais detalhes sobre como os levantamentos de staking são processados, uma vez que cada serviço funciona de forma diferente.
 
-Regra geral, os utilizadores deverão reclamar livremente os seus ETH em staking ou alterar o fornecedor de staking que utilizam. Se um pool em particular ficar muito grande, é permitida a saída, resgate e reaplicação em staking dos fundos com um <a href="https://rated.network/">fornecedor mais pequeno</a>. Ou, se tiver acumulado ETH suficiente, pode <a href="/staking/solo/">fazer staking em casa</a>.
+Regra geral, os utilizadores deverão reclamar livremente os seus ETH em staking ou alterar o fornecedor de staking que utilizam. Se um pool em particular ficar muito grande, é permitida a saída, resgate e reaplicação em staking dos fundos com um <a href="https://rated.network/">fornecedor mais pequeno</a>. Ou, se tiver acumulado ETH suficiente, pode [fazer staking em casa](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Não. Após a saída de um validador e o levantamento integral do seu saldo, qua
 
 - [Levantamentos do Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Levantamentos forçados da Beacon chain como operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Xangai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Levantamento de ETH em staking (teste) com Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Levantamentos forçados da Beacon como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Compreender o saldo efetivo do validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)

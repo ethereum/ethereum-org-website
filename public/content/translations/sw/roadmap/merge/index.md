@@ -1,6 +1,6 @@
 ---
 title: Muungano
-description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Etheream utakapoungana na Mnyororo Kioleza ulioratibu mfumo wa uthibitisho-wa-hisa.
+description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Ethereum utakapoungana na Mnyororo Kioleza ulioratibu mfumo wa uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
 image: /images/upgrades/merge.png
@@ -12,7 +12,7 @@ summaryPoint4: Kabla tuliita hii hatua kama "utiaji nanga"
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Sasisho hili linawakilisha mabadiliko rasmi kuwa makubaliano ya uthibitisho-wa-hisa. Hii inaondoa mahitaji ya umeme wenye nguvu wakati wa uchimbaji, na badala yake italinda mtandao kwa kutumia ether iliopo. Hatua ya kusisimua kweli katika kutambua <a href="/roadmap/vision/">maono ya Eth2</a> - inayoweza kubadilika zaidi, yenye usalama na endelevu.
+  Sasisho hili linawakilisha mabadiliko rasmi kuwa makubaliano ya uthibitisho-wa-hisa. Hii inaondoa mahitaji ya umeme wenye nguvu wakati wa uchimbaji, na badala yake italinda mtandao kwa kutumia ether iliopo. Hatua ya kusisimua kweli katika kutambua [maono ya Eth2](/roadmap/vision/) - inayoweza kubadilika zaidi, yenye usalama na endelevu.
 </UpgradeStatus>
 
 ## Muunganisho ni nini? {#what-is-the-docking}

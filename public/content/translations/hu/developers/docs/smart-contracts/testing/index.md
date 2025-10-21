@@ -130,7 +130,7 @@ Sok egységtesztelési keretrendszer lehetővé teszi, hogy állításokat hozzo
 
 ##### 3. Kódlefedettség mérése
 
-A [kódlefedettség](https://en.m.wikipedia.org/wiki/Code_coverage) egy tesztelési metrika, amely a tesztek során végrehajtott ágak, sorok és utasítások számát követi a kódban. A teszteknek jó kódlefedettséggel kell rendelkezniük, különben előfordulhat, hogy „hamis negatív eredményt” kapunk, amikor a szerződés átmegy az összes teszten, de a kódban még vannak sebezhetőségek. A magas kódlefedettség rögzítése biztosítékot ad arra, hogy az okosszerződésben szereplő összes utasítást/függvényt megfelelően tesztelték a helyesség szempontjából.
+A [kódlefedettség](https://en.m.wikipedia.org/wiki/Code_coverage) egy tesztelési metrika, amely a tesztek során végrehajtott ágak, sorok és utasítások számát követi a kódban. A teszteknek jó kódlefedettséggel kell rendelkezniük, hogy minimalizálják a feltáratlan sebezhetőségek kockázatát. Megfelelő kódlefedettség nélkül azt hiheti, hogy a szerződése biztonságos, mert átmegy az összes teszten, de a kódban még vannak sebezhetőségek a nem tesztelt útvonalakon. A magas kódlefedettség rögzítése biztosítékot ad arra, hogy az okosszerződésben szereplő összes utasítást/függvényt megfelelően tesztelték a helyesség szempontjából.
 
 ##### 4. Jól kidolgozott tesztelési keretrendszerek használata
 
@@ -213,7 +213,7 @@ A szerződések futtatása egy helyi blokkláncon hasznos lehet a manuális inte
 
 ### Szerződések tesztelése a teszthálózatokon {#testing-contracts-on-testnets}
 
-A teszthálózat pontosan úgy működik, mint az Ethereum fő hálózat, azzal a különbséggel, hogy a használt ethernek (ETH) nincs valós értéke. Ha a szerződést egy [teszthálózatra](/developers/docs/networks/#ethereum-testnets) telepíti, akkor bárki kapcsolatba léphet azzal (például a dapp felületén keresztül) anélkül, hogy pénzeszközt kockáztatna.
+A teszthálózat pontosan úgy működik, mint az Ethereum fő hálózata, azzal a különbséggel, hogy a használt ethernek (ETH) nincs valós értéke. Ha a szerződést egy [teszthálózatra](/developers/docs/networks/#ethereum-testnets) telepíti, akkor bárki kapcsolatba léphet azzal (például a dapp felületén keresztül) anélkül, hogy pénzeszközt kockáztatna.
 
 A manuális tesztelés ezen formája hasznos az alkalmazás teljes folyamatának kiértékeléséhez a felhasználó szemszögéből. Itt a béta tesztelők próbafuttatásokat is végezhetnek, és jelenthetik a szerződés üzleti logikájával és általános funkcionalitásával kapcsolatos problémákat.
 
@@ -259,7 +259,7 @@ A fő különbség az, hogy a hibavadász-programok nyitottak a szélesebb fejle
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** – _A Brownie a Pytest-et használja, amely egy funkciógazdag tesztelési keretrendszert, és amely lehetővé teszi kis tesztek írását minimális kóddal, jól skálázható nagyobb projektekhez és nagymértékben bővíthető._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _A Foundry a Forge megoldást kínálja, amely egy gyors és rugalmas Ethereum tesztelési keretrendszert, és amely képes egyszerű egységtesztek, gázoptimalizálási ellenőrzések és szerződés fuzzing végrehajtására._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _A Foundry a Forge megoldást kínálja, amely egy gyors és rugalmas Ethereum-tesztelési keretrendszer, és amely képes egyszerű egységtesztek, gázoptimalizálási ellenőrzések és szerződés fuzzing végrehajtására._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** – _Keretrendszer az ethers.js, Mocha és Chai alapú okosszerződések tesztelésére._
 

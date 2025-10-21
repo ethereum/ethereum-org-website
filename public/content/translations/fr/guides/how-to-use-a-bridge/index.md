@@ -10,7 +10,7 @@ Si le trafic sur Ethereum devient trop important, cela peut devenir coûteux. Un
 
 **Prérequis :**
 
-- détenir un portefeuille de cryptomonnaies, vous pouvez suivre ce tutoriel : [Comment : « Enregistrer » un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
+- avoir un portefeuille crypto, vous pouvez suivre ce tutoriel : [Comment créer un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
 - ajouter des fonds à votre portefeuille
 
 ## 1. Déterminez le réseau de seconde couche que vous souhaitez utiliser
@@ -52,12 +52,15 @@ Cette opération ne devrait pas prendre plus de 10 minutes.
 Vous pouvez utiliser chainlist.org pour trouver les détails RPC du réseau. Une fois le réseau ajouté et la transaction terminée, vous devriez voir les jetons dans votre portefeuille.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Questions fréquemment posées
 

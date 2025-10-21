@@ -43,9 +43,14 @@ Vor dem Shanghai/Capella-Upgrade konnten Sie Ihr gestaktes ETH nicht verwenden o
 
 Die Angabe einer Auszahlungsadresse ist ein erforderlicher Schritt für jedes Validator-Konto, bevor es für die Abhebung von ETH aus seinem Guthaben infrage kommt.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Jedem Validatoren-Konto kann nur eine einzige Abhebungsadresse zugewiesen werden, und zwar nur einmal.</strong> Sobald eine Adresse ausgewählt und an die Konsensus-Ebene übermittelt wurde, lässt sich dieser Vorgang nicht mehr rückgängig machen. Überprüfen Sie die Besitzverhältnisse und die Richtigkeit der angegebenen Adresse, bevor Sie sie einreichen.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 In der Zwischenzeit besteht <strong>keine Bedrohung für Ihre Gelder</strong>, wenn Sie dies nicht tun, vorausgesetzt, Ihre Mnemonic-/Seed-Phrase ist offline sicher aufbewahrt und wurde in keiner Weise kompromittiert. Wenn keine Auszahlungsinformationen hinzugefügt werden, bleibt das ETH einfach im Validator-Konto gesperrt, wie es bislang der Fall war, bis eine Auszahlungsadresse angegeben wird.
 
@@ -65,7 +70,7 @@ Staking-Abhebungen sind live! Die Funktionalität für das Abheben wurden als Te
 
 Das Shanghai/Capella Upgrade ermöglicht ETH, das gestaked wurde, mit regulären Ethereum-Konten zurückzufordern. Dies schloss den Kreis hinsichtlich der Bereitstellung von Liquidität und brachte Ethereum einen Schritt näher auf seinem Weg, ein nachhaltiges, skalierbares, sicheres dezentralisiertes Ökosystem zu schaffen.
 
-- [Mehr zur Geschichte von Ethereum](/history/)
+- [Mehr zur Geschichte von Ethereum](/ethereum-forks/)
 - [Mehr zur Ethereum-Roadmap](/roadmap/)
 
 ## Wie funktionieren Auszahlungen? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Sehen Sie sich diese Erklärung für die Abhebungen von Ethereum von Finematics 
 
 Es ist notwendig, dass ein Validator, der den nächsten Block vorschlagen soll, eine Warteschlange mit bis zu 16 zugelassenen Auszahlungen erstellt. Ursprünglich beginnt man mit dem Validator-Index 0 und prüft, ob es gemäß den Protokollregeln eine berechtigte Auszahlung für dieses Konto gibt. Ist dies der Fall, wird sie zur Warteschlange hinzugefügt. Der für den nächsten Block vorgesehene Validator knüpft ununterbrochen dort an, wo der vorherige aufgehört hat, und verfährt dabei in stetiger Reihenfolge.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Stellen Sie sich eine analoge Uhr vor. Der Zeiger der Uhr zeigt auf die Stunde, bewegt sich in eine Richtung, lässt keine Stunden aus und kehrt schließlich nach Erreichen der letzten Zahl wieder an den Anfang zurück.<br/><br/>
 Stellen Sie sich nun vor, dass die Uhr statt 1 bis 12 die Zahlen 0 bis N hat <em>(die Gesamtzahl der jemals auf der Konsensus-Ebene registrierten Validatoren-Konten, über 500.000 im Januar 2023).</em><br/><br/>
 Der Zeiger auf der Uhr zeigt auf den nächstenValidator, der auf zulässige Abhebungen geprüft werden muss. Es beginnt bei 0 und schreitet rundherum fort, ohne irgendwelche Konten zu überspringen. Wenn der letzte Validator erreicht ist, beginnt der Zyklus von vorne.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Überprüfung eines Kontos auf Auszahlungen {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Wenn Sie Teil eines <a href="/staking/pools/">Staking-Pools</a> sind oder Staking-Token besitzen, sollten Sie sich bei Ihrem Anbieter erkundigen, wie Staking-Auszahlungen gehandhabt werden, da jeder Dienst anders funktioniert.
+Wenn Sie Teil eines [Staking-Pools](/staking/pools/) sind oder Staking-Token besitzen, sollten Sie sich bei Ihrem Anbieter erkundigen, wie Staking-Auszahlungen gehandhabt werden, da jeder Dienst anders funktioniert.
 
-Im Allgemeinen sollten Benutzer in der Lage sein, ihr zugrundeliegendes gestaktes ETH zurückzufordern oder zu ändern, welchen Staking-Anbieter sie nutzen. Wenn ein bestimmter Pool zu groß wird, können Mittel abgezogen, eingelöst und mit einem <a href="https://rated.network/">kleineren Anbieter</a> neu gestaked werden. Oder, wenn Sie genug ETH angesammelt haben, könnten Sie <a href="/staking/solo/">von zu Hause aus staken</a>.
+Im Allgemeinen sollten Benutzer in der Lage sein, ihr zugrundeliegendes gestaktes ETH zurückzufordern oder zu ändern, welchen Staking-Anbieter sie nutzen. Wenn ein bestimmter Pool zu groß wird, können Mittel abgezogen, eingelöst und mit einem <a href="https://rated.network/">kleineren Anbieter</a> neu gestaked werden. Oder, wenn Sie genug ETH angesammelt haben, könnten Sie [von zu Hause aus staken](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben 
 
 - [Startplattform für Staking-Auszahlungen](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-Kette implementiert Abhebungen als Operationen](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Auszahlung von gestaktem ETH (Testing) mit Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Auszahlungen per Beacon Chain Push als Operationen mit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Verständnis der effektiven Bilanz des Validators](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -6,9 +6,14 @@ lang: tr
 
 Ethereum ağı, **[İş İspatı (PoW)](/developers/docs/consensus-mechanisms/pow)** kullanan bir uzlaşma mekanizmasıyla başladı. Bu durum, Ethereum ağının düğümler sisteminin Ethereum blok zincirine kaydedilen bütün bilgilerin ortak durumda anlaşmasına olanak tanıdı ve belirli ekonomik saldırı türlerini önledi. Ancak, Ethereum 2022'de iş ispatı mekanizmasını devre dışı bırakarak sonlandırdı ve bunun yerine [hisse ispatını](/developers/docs/consensus-mechanisms/pos) kullanmaya başladı.
 
-<InfoBanner emoji=":wave:">
-    İş ispatı artık kullanımdan kaldırılmıştır. Ethereum artık mutabakat mekanizmasının bir parçası olan iş ispatını kullanmamaktadır. Bunun yerine hisse ispatı kullanılmaktadır. <a href="/developers/docs/consensus-mechanisms/pos/">Hisse ispatı</a> ve <a href="/staking/">hisseleme</a> hakkında daha fazla bilgi edinin.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
+    İş ispatı artık kullanımdan kaldırılmıştır. Ethereum artık mutabakat mekanizmasının bir parçası olan iş ispatını kullanmamaktadır. Bunun yerine hisse ispatı kullanılmaktadır. [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ve [hisseleme](/staking/) hakkında daha fazla bilgi edinin.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Ön Koşullar {#prerequisites}
 
@@ -56,7 +61,7 @@ Kötü niyetli bir madencinin, kötü niyetli ve geçerli bloklar çıkarabilmes
 
 İş ispatı ayrıca sisteme yeni para birimi çıkartmaktan ve madencileri işi yapmaya teşvik etmekten de sorumluydu.
 
-[Constantinople yükseltmesinden](/history/#constantinople) bu yana başarılı bir blok oluşturan madencilere, iki yeni basılmış Ether ve işlem ücretlerinin bir kısmı verilirdi. Ommer blokları da 1,75 Ether'i telafi etti. Ommer blokları, bir madenci tarafından pratik olarak yaklaşık aynı zamanda başka bir madencinin kurallı bloku oluşturmasıyla oluşturulan geçerli bloklardı ve bu blok en sonunda hangi zincirin üzerine ilkinin inşa edildiğine göre belirlendi. Ommer blokları genellikle ağ gecikmesi sebebiyle gerçekleşirdi.
+[Constantinople yükseltmesinden](/ethereum-forks/#constantinople) bu yana başarılı bir blok oluşturan madencilere, iki yeni basılmış Ether ve işlem ücretlerinin bir kısmı verilirdi. Ommer blokları da 1,75 Ether'i telafi etti. Ommer blokları, bir madenci tarafından pratik olarak yaklaşık aynı zamanda başka bir madencinin kurallı bloku oluşturmasıyla oluşturulan geçerli bloklardı ve bu blok en sonunda hangi zincirin üzerine ilkinin inşa edildiğine göre belirlendi. Ommer blokları genellikle ağ gecikmesi sebebiyle gerçekleşirdi.
 
 ## Kesinlik {#finality}
 

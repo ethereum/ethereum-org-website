@@ -14,9 +14,9 @@ export default meta
 export const Breadcrumbs: StoryObj = {
   render: () => (
     <Stack className="gap-8">
-      <BreadcrumbsComponent slug="/en/staking/" />
-      <BreadcrumbsComponent slug="/en/staking/solo/" />
-      <BreadcrumbsComponent slug="/en/roadmap/merge/issuance/" />
+      <BreadcrumbsComponent slug="/staking/" />
+      <BreadcrumbsComponent slug="/staking/solo/" />
+      <BreadcrumbsComponent slug="/roadmap/merge/issuance/" />
     </Stack>
   ),
 }

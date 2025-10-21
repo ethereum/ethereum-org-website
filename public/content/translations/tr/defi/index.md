@@ -47,7 +47,7 @@ DeFi'nin potansiyelini görmenin en iyi yollarından biri, bugün var olan sorun
 | Piyasalar her zaman açıktır.                                                                                       | Çalışanların molaya ihtiyacı olduğu için piyasalar kapanır.                                                              |
 | Şeffaflık üzerine kurulmuştur: Herkes bir ürünün verilerine bakabilir ve sistemin nasıl çalıştığını inceleyebilir. | Finansal kurumlar kapalı kutulardır: Kredi geçmişlerini, yönetilen varlıklarının kaydını vb. görmeyi talep edemezsiniz.  |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   DeFi uygulamalarını keşfedin
 </ButtonLink>
 
@@ -63,12 +63,15 @@ Ethereum bunun üzerine kurulu. Bitcoin gibi, kurallar sizin aleyhinize değişe
 
 Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki"? Bununla birlikte, bu daha çok Ethereum'daki token'ların varsayılan bir özelliğidir. Herkes ödemelerin içine mantık programlayabilir. Böylece Bitcoin'in kontrolünü ve güvenliğini finans kurumlarının sunduğu hizmetler ile karıştırarak elde edebilirsiniz. Bu, borç verme ve borç alma, ödemeleri planlama, endeks fonlarına yatırım yapma ve daha fazlası gibi Bitcoin ile yapamayacağınız şeyleri kripto para birimleriyle yapmanızı sağlar.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     DeFi uygulamalarını keşfet
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## DeFi ile ne yapabilirsiniz? {#defi-use-cases}
 
@@ -92,7 +95,7 @@ Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki"? Bununla b
 
 Bir blok zinciri olarak Ethereum, işlemleri güvenli ve küresel bir şekilde göndermek için tasarlanmıştır. Bitcoin gibi, Ethereum da dünyanın her yerine para göndermeyi bir e-posta göndermek kadar kolay hâle getiriyor. Cüzdanınızdan alıcınızın [ENS adını](/glossary/#ens) (bob.eth gibi) veya hesap adresini girdikten sonra ödemeniz (genellikle) dakikalar içinde doğrudan alıcıya gidecektir. Ödeme göndermek veya almak için bir [cüzdan](/wallets/) gerekir.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ödeme dApp'lerini gör
 </ButtonLink>
 
@@ -123,7 +126,7 @@ Merkezi olmayan sağlayıcılardan borç para almanın iki ana çeşidi vardır.
 - Eşler arası, yani borç alan bir kişi belirli bir borç verenden doğrudan borç alır.
 - Borç verenlerin, borç alacak kişilerin borç alabileceği bir havuza fon (likidite) sağladığı havuz tabanlı çeşit.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Borç alma dapp'leri gör
 </ButtonLink>
 
@@ -168,7 +171,7 @@ B borsasının arzı aniden düşerse ve kullanıcı orijinal krediyi karşılay
 
 Yukarıdaki örneği geleneksel finans dünyasında yapabilmek için çok büyük miktarda paraya ihtiyacınız var. Bu para kazanma stratejilerine yalnızca önceden bir servete sahip olanlar erişebilir. Hızlı krediler, paraya sahip olmanın para kazanmak için mutlaka bir ön koşul olmadığı bir geleceğe bir örnektir.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Hızlı krediler hakkında daha fazla bilgi
 </ButtonLink>
 
@@ -185,7 +188,7 @@ Borç vererek kripto paranızdan faiz kazanabilir ve fonlarınızın gerçek zam
 - aDai'niz faiz oranlarına göre artacak ve cüzdanınızdaki bakiyenizin büyüdüğünü görebilirsiniz. [APR](/glossary/#apr)'ye bağımlı olan cüzdan bakiyenizde birkaç gün hatta birkaç saat sonra 100,1234 gibi bir tutar görebilirsiniz!
 - İstediğiniz zaman aDai bakiyenize eşit miktarda normal Dai çekebilirsiniz.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Borç verme uygulamalarına bakın
 </ButtonLink>
 
@@ -213,7 +216,7 @@ Ethereum'da binlerce token var. Merkeziyetsiz borsalar (DEX'ler), istediğiniz z
 
 Örneğin, kayıpsız piyango PoolTogether'ı (yukarıda açıklanmıştır) kullanmak istiyorsanız, Dai veya USDC gibi bir token'a ihtiyacınız olacaktır. Bu DEX'ler, ETH'nizi bu token'larla değiştirmenize ve işiniz bittiğinde tekrar geri almanıza olanak tanır.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Token borsalarını gör
 </ButtonLink>
 
@@ -225,7 +228,7 @@ Biraz daha fazla kontrol isteyen borsa kullanıcıları için daha gelişmiş se
 
 Merkezi bir borsa kullandığınızda, varlıklarınızı ticaretten önce yatırmanız ve varlıklarınızı koruması için merkezi borsaya güvenmeniz gerekir. Merkezi borsalar hacker'lar için önemli hedefler olduğundan varlıklarınız yatırıldıktan sonra risk altındadır.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Ticaret dapp'lerini gör
 </ButtonLink>
 
@@ -237,7 +240,7 @@ Ethereum'da, seçtiğiniz bir stratejiye dayalı olarak portföyünüzü büyüt
 
 İyi bir örnek: [DeFi Pulse Index fonu (DPI)](https://defipulse.com/blog/defi-pulse-index/). Bu, portföyünüzün toplam piyasa değerine göre her zaman en iyi DeFi jetonlarını içermesini sağlamak için otomatik olarak yeniden dengelenen bir fondur. Hiçbir zaman herhangi bir ayrıntıyı yönetmek zorunda kalmazsınız ve istediğiniz zaman fondan çıkabilirsiniz.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Yatırım dapp'lerini gör
 </ButtonLink>
 
@@ -251,7 +254,7 @@ Ethereum, kitle fonlaması için ideal bir platformdur:
 - Şeffaf olduğu için fon toplayanlar ne kadar para toplandığını kanıtlayabilir. Daha sonra fonların nasıl harcandığını bile takip edebilirsiniz.
 - Fon toplayanlar, örneğin belirli bir son tarih ve karşılanmayan minimum tutar varsa otomatik geri ödemeler ayarlayabilir.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Kitle fonlaması dapp'lerini gör
 </ButtonLink>
 
@@ -280,7 +283,7 @@ Merkezi olmayan sigorta; sigortayı daha ucuz, ödemesi daha hızlı ve daha şe
 
 Ethereum ürünleri, herhangi bir yazılım gibi, hatalardan ve açıklardan zarar görebilir. Dolayısıyla şu anda bu alandaki birçok sigorta ürünü, kullanıcılarını fon kaybına karşı korumaya odaklanıyor. Ancak hayatın karşımıza çıkarabileceği her şeyi kapsamaya başlayan projeler mevcuttur. Güzel bir örnek: [Kenya'daki küçük çiftçileri kuraklık ve sele karşı korumayı](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc) amaçlayan Etherisc'in Hasat teminatı. Merkezi olmayan sigorta, genellikle geleneksel sigortadan fiyatlandırılan çiftçiler için daha ucuz teminat sağlayabilir.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Sigorta dapp'lerini gör
 </ButtonLink>
 
@@ -290,7 +293,7 @@ Ethereum ürünleri, herhangi bir yazılım gibi, hatalardan ve açıklardan zar
 
 Bu kadar çok şey olurken, tüm yatırımlarınızı, kredilerinizi ve ticaretlerinizi takip etmenin bir yoluna ihtiyacınız olacak. Tüm DeFi aktivitelerinizi tek bir yerden koordine etmenize izin veren bir dizi ürün var. Bu, DeFi'nin açık mimarisinin güzelliğidir. Ekipler, ürünler arasında sadece bakiyelerinizi görmenin ötesinde ürünlerin özelliklerini de kullanabileceğiniz arayüzler oluşturabilir. DeFi keşfederken bunu faydalı bulabilirsiniz.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Portföy dapp'lerini gör
 </ButtonLink>
 
@@ -322,7 +325,7 @@ DeFi'yi katmanlar halinde düşünebilirsiniz:
 1. Blok zinciri: Ethereum, işlem geçmişini ve hesapların durumunu içerir.
 2. Varlıklar: [ETH](/eth/) ve diğer token'lar (para birimleri).
 3. Protokol – [akıllı sözleşmeler](/glossary/#smart-contract) işlevsellik sağlar; örneğin, bu varlıklara merkeziyetsiz borçlanmaya izin veren bir servis sağlar.
-4. [Uygulamalar](/dapps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
+4. [Uygulamalar](/apps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
 
 Not: DeFi'nin büyük bir kısmı [ERC-20 standardını](/glossary/#erc-20) kullanır. DeFi'deki uygulamalar, ETH için Sarılı Ether (WETH) adı verilen bir sarıcı kullanır. [Sarılı ether hakkında daha fazla bilgi edinin](/wrapped-eth).
 

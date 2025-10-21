@@ -19,7 +19,7 @@ L'intérêt grandissant pour la cryptomonnaie amène avec lui un risque croissan
 Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies peut amener à des erreurs coûteuses. Par exemple, si quelqu'un prétend être un agent d'un service client qui peut vous rendre vos ETH perdus en échange de vos clés privées, ils s'attaquent aux personnes ne comprenant pas qu'Ethereum est un réseau décentralisé manquant de ce genre de fonctionnalité. S'informer sur le fonctionnement d'Ethereum est un investissement qui en vaut la peine.
 
 <DocLink href="/what-is-ethereum/">
-  Qu'est-ce qu'Ethereum ?
+  Qu'est-ce qu'Ethereum&nbsp;?
 </DocLink>
 
 <DocLink href="/eth/">
@@ -124,11 +124,14 @@ En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais 
 - Ne donnez à personne un accès à distance à votre ordinateur
 - Ne communiquez jamais en dehors des canaux prévus par l'organisation
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Attention : bien que les arnaques à l'assistance se produisent généralement sur Discord, elles peuvent aussi vous arriver sur toutes les plateformes où des discussions autour de la cryptomonnaie ont lieu, y compris par e-mail.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Arnaque au jeton « Eth2 » {#eth2-token-scam}
 
@@ -215,11 +218,14 @@ Un mot de passe qui a été révélé par une faille de sécurité n'est plus un
 
 ### Utiliser un gestionnaire de mots de passe {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Un gestionnaire de mots de passe prend soin de créer des mots de passe forts et uniques et de les retenir ! Nous <strong>recommandons fortement</strong> d'en utiliser un, et la plupart d'entre eux sont gratuits !
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Se souvenir de mots de passe forts et uniques pour chaque compte que vous avez n'est pas idéal. Un gestionnaire de mots de passe offre un stockage sécurisé et chiffré pour tous vos mots de passe auxquels vous pouvez accéder par un seul mot de passe maître fort. Ils suggèrent également des mots de passe forts lors de l'inscription à un nouveau service, de sorte que vous n'ayez pas à créer le vôtre. De nombreux gestionnaires de mots de passe vous diront également si vous avez été impliqué dans une violation de données, vous permettant de modifier les mots de passe avant toute attaque malveillante.
 
@@ -242,11 +248,14 @@ Il vous sera peut-être quelques fois demandé d'authentifier votre identité au
 
 Utilisez **l'authentification à deux facteurs (2FA)** fournit un *facteur de sécurité* supplémentaire pour vos comptes en ligne. Une 2FA assure qu'avoir simplement votre mot de passe n'est pas suffisant pour accéder à un compte. Le plus souvent, le second facteur est un code temporaire aléatoire à 6 chiffres, appelé **mot de passe à usage unique basé sur le temps (TOTP ou time-based one-time password)**, auquel vous accédez par une application d'authentification comme Google Authentifactor ou Authy. Cette méthode est un facteur « Que vous possédez », car la clé racine qui génére les code temporaires est stocké sur votre appareil.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Note : Utiliser l'envoi d'un code SMS comme 2FA n'est pas une méthode sûre à cause des possibilités de <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">piratage de la SIM </a>. Pour une sécurité maximale, utilisez un service comme <a href="https://mashable.com/article/how-to-set-up-google-authenticator"> Google Authenticator</a> ou <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Clés de sécurité {#security-keys}
 

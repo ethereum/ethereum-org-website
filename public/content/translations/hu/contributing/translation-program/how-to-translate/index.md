@@ -34,7 +34,7 @@ Nyissa meg a nyelvet, amelyre fordítani szeretne, így láthatja a fájlok list
 
 A honlap tartalma fel van osztva dokumentumokra és tartalommappákra. A dokumentumok státuszát láthatja a jobb oldalon - ha a fordítási eredmény kisebb mint 100%, akkor segítsen be!
 
-Nem találja a nyelvet? [Nyisson egy kérést](https://github.com/ethereum/ethereum-org-website/issues/new/choose) vagy kérdezze meg a [Discord](/discord/) csatornán
+Nem találja a nyelvet? [Nyisson egy kérést](https://github.com/ethereum/ethereum-org-website/issues/new/choose) vagy kérdezze meg a [Discord](https://discord.gg/ethereum-org) csatornán
 
 ![A lefordított és még nem fordított fájlok a Crowdin-ban](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Szeretne többet megtudni? Tekintse meg a [dokumentációt a Crowdin online szer
 
 Miután befejezte a fordítást (a tartalommappa összes fájlja 100%-ot mutat), a professzionális fordítási szolgáltatás ellenőrzi (és javítja) a tartalmat. Az átnézés után (vagyis az átnézés is 100%-ot mutat), bekerül a fordítás a honlapra.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Ne használjon gépi fordítást, az nem elfogadott. Minden fordítást átnézünk, mielőtt felkerülne a honlapra. Ha a javasolt fordításról kiderül, hogy gép végezte, akkor azokat elvetjük, és a gépi fordítást használó közreműködőket eltávolítjuk a projektből.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Kapcsolatfevétel {#get-in-touch}
 
-Kérdése van? Vagy szeretne együttműködni a csapatunkkal és más fordítókkal? Írjon nekünk a #translations csatornán az [ethereum.org Discord szerveren](/discord/)
+Kérdése van? Vagy szeretne együttműködni a csapatunkkal és más fordítókkal? Írjon nekünk a #translations csatornán az [ethereum.org Discord szerveren](https://discord.gg/ethereum-org)
 
 Elérhet minket a translations@ethereum.org címen is
 

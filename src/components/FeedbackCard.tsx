@@ -1,3 +1,5 @@
+"use client"
+
 import { type ReactNode, useState } from "react"
 import { useLocale } from "next-intl"
 
@@ -67,7 +69,9 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
       dir={dir}
     >
       <div className="flex flex-col gap-4">
-        <h4 className="mb-2">{getTitle(feedbackSubmitted)}</h4>
+        <h2 className="mb-2 text-xl lg:text-2xl">
+          {getTitle(feedbackSubmitted)}
+        </h2>
         {feedbackSubmitted && (
           <p>
             {t("feedback-widget-thank-you-subtitle")}{" "}
@@ -78,11 +82,11 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
           {!feedbackSubmitted ? (
             <>
               <Button variant="outline" onClick={() => handleSubmit(true)}>
-                <FeedbackThumbsUpIcon className="h-6 w-6" />
+                <FeedbackThumbsUpIcon className="text-2xl" />
                 {t("yes")}
               </Button>
               <Button variant="outline" onClick={() => handleSubmit(false)}>
-                <FeedbackThumbsUpIcon className="-scale-y-100" />
+                <FeedbackThumbsUpIcon className="-scale-y-100 text-2xl" />
                 {t("no")}
               </Button>
             </>

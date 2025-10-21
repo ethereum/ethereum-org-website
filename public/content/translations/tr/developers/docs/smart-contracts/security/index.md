@@ -8,7 +8,7 @@ Akıllı sözleşmeler son derece esnektir ve blokzincirlere dağıtılan kod te
 
 Ethereum gibi halka açık blokzincirler, akıllı sözleşmelerin güvenliğini sağlama sorununu daha da karmaşık hale getirir. Dağıtılmış sözleşme kodu _genellikle_ güvenlik açıklarını kapatmak için değiştirilemez, ayrıca akıllı sözleşmelerden çalınan varlıkların takibi aşırı derecede zordur ve çoğunlukla değiştirilemezlik kaynaklı olarak geri alınamaz.
 
-Rakamlar değişkenlik gösterse de, akıllı sözleşmelerdeki güvenlik açıklarından kaynaklı kaybedilen veya çalınan toplam değerin miktarının 1 milyar doları rahatlıkla aştığı tahmin edilmektedir. Bu, [DAO hacki](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6 milyon ETH çalınmıştır; değeri, günümüz fiyatlarıyla 1 milyar doların üzerindedir), [Parity çoklu imza cüzdanı hacki](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (Hackerlara 30 milyon dolar kaybedilmiştir), [Parity donmuş cüzdan sorunu](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 milyon dolardan fazla ETH sonsuza kadar kilitlenmiştir) gibi yüksek profilli olayları içerir.
+Rakamlar değişkenlik gösterse de, akıllı sözleşmelerdeki güvenlik açıklarından kaynaklı kaybedilen veya çalınan toplam değerin miktarının 1 milyar doları rahatlıkla aştığı tahmin edilmektedir. Bu, [DAO hacki](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6 milyon ETH çalınmıştır; değeri, günümüz fiyatlarıyla 1 milyar doların üzerindedir), [Parity çoklu imza cüzdanı hacki](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (Hackerlara 30 milyon dolar kaybedilmiştir), [Parity donmuş cüzdan sorunu](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 milyon dolardan fazla ETH sonsuza kadar kilitlenmiştir) gibi yüksek profilli olayları içerir.
 
 Sayılan sorunlar geliştiricilerin güvenli, güçlü ve sağlam akıllı sözleşmeler oluşturmaya çaba harcamasını zorunlu kılmaktadır. Akıllı sözleşme güvenliği ciddi bir iştir ve her geliştiricinin öğrenmesi gerekir. Bu kılavuz, Ethereum geliştiricilerinin güvenlik konusunda dikkat etmesi gereken hususları ele alacak ve akıllı sözleşme güvenliğini geliştirmeye yönelik kaynakları inceleyecektir.
 
@@ -223,7 +223,7 @@ Zincir üstünde yönetişimle ilgili sorunları önlemenin bir yolu, bir [zaman
 
 Geleneksel yazılım geliştiricileri, yazılım tasarımına gereksiz karmaşıklık eklememeyi tavsiye eden "KISS" ("keep it simple, stupid - basit tut, aptal") prensibini iyi bilir. Bu, uzun süredir kabul gören "karmaşık sistemler karmaşık şekillerde başarısız olur" düşüncesine uygundur ve bu sistemler maliyetli hatalara daha yatkındır.
 
-Akıllı sözleşmeleri yazarken işleri basit tutmak, akıllı sözleşmelerin potansiyel olarak büyük miktarlarda değeri kontrol ettiği göz önüne alındığında özellikle önemlidir. Akıllı sözleşme yazarken basitliği sağlamaya yönelik bir ipucu, mümkün olduğunda [OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/4.x/) gibi mevcut kütüphaneleri yeniden kullanmaktır. Bu kütüphaneler, geliştiriciler tarafından kapsamlı bir şekilde denetlenmiş ve test edilmiş olduğundan bunların kullanılması, yeni işlevselliğin sıfırdan yazılarak hataların eklenmesi olasılığını azaltır.
+Akıllı sözleşmeleri yazarken işleri basit tutmak, akıllı sözleşmelerin potansiyel olarak büyük miktarlarda değeri kontrol ettiği göz önüne alındığında özellikle önemlidir. Akıllı sözleşme yazarken basitliği sağlamaya yönelik bir ipucu, mümkün olduğunda [OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/5.x/) gibi mevcut kütüphaneleri yeniden kullanmaktır. Bu kütüphaneler, geliştiriciler tarafından kapsamlı bir şekilde denetlenmiş ve test edilmiş olduğundan bunların kullanılması, yeni işlevselliğin sıfırdan yazılarak hataların eklenmesi olasılığını azaltır.
 
 Başka yaygın bir tavsiye de küçük fonksiyonlar yazmak ve iş mantığını birden fazla sözleşmeye bölerek sözleşmeleri modüler tutmaktır. Basit kod yazmak, akıllı sözleşmedeki saldırı yüzeyini azaltırken genel sistem doğruluğu hakkında düşünmeyi ve olası tasarım hatalarını erken tespit etmeyi de kolaylaştırır.
 
@@ -304,7 +304,7 @@ Burada, gelen `msg.sender.call.value` tarafından bırakılan gaz miktarı 40.00
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) olayında olduğu gibi akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş suistimallerinin herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
+Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack) olayında olduğu gibi akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş suistimallerinin herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
 
 ##### Yeniden giriş saldırılarını engelleme
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
+Ayrıca fonları hesaplara gönderen bir "itme ödemeleri" sistemi yerine, kullanıcıların akıllı sözleşmelerden fonlarını çekmesini gerektiren bir [çekme ödemeleri](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) sistemini de kullanabilirsiniz. Bu, bilinmeyen adreslerde yanlışlıkla kod tetikleme ihtimalini ortadan kaldırır (ve aynı zamanda belirli hizmet reddi saldırılarını önleyebilir).
 
 #### Tamsayı yetersizlikleri ve taşmaları {#integer-underflows-and-overflows}
 
@@ -474,17 +474,13 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 ### Akıllı sözleşmeleri izlemeye yarayan araçlar {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Akıllı sözleşmelerinizdeki olayları, fonksiyonları ve işlem parametrelerini otomatik olarak izleyip yanıtlamaya yarayan bir araç._
-
 - **[Tenderly Gerçek Zamanlı Uyarı](https://tenderly.co/alerting/)** - _Akıllı sözleşmelerinizde veya cüzdanlarınızda normal olmayan veya beklenmeyen olaylar gerçekleştiğinde gerçek zamanlı bildirimler almaya yarayan bir araç._
 
 ### Akıllı sözleşmelerin güvenli yönetimine yönelik araçlar {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Erişim kontrolleri, yükseltmeler ve duraklatma dahil olmak üzere akıllı sözleşme yönetimine yönelik bir arayüz._
-
 - **[Safe](https://safe.global/)** - _Ethereum üzerinde çalışan ve bir işlemi gerçekleştirmeden önce minimum sayıda kişinin onayının alınmasını gerektiren bir akıllı sözleşme cüzdanı (N'nin M'si)._
 
-- **[OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/4.x/)** - _Sözleşme sahipliği, yükseltmeler, erişim kontrolleri, yönetişim, duraklatabilirlik ve benzeri yönetimsel özellikleri uygulamaya yönelik sözleşme kütüphaneleri._
+- **[OpenZeppelin Sözleşmeleri](https://docs.openzeppelin.com/contracts/5.x/)** - _Sözleşme sahipliği, yükseltmeler, erişim kontrolleri, yönetişim, duraklatabilirlik ve benzeri yönetimsel özellikleri uygulamaya yönelik sözleşme kütüphaneleri._
 
 ### Akıllı sözleşme denetim hizmetleri {#smart-contract-auditing-services}
 
@@ -504,7 +500,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Hacken](https://hacken.io)** - _Blokzincir güvenliğine 360 derece yaklaşımını getiren Web3 siber güvenlik denetimcisi._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
 
 - **[HashEx](https://hashex.org/)** - _HashEx, kripto paraların güvenliğini güvence altına almak için blokzincir ve akıllı sözleşme denetimlerine odaklanırken akıllı sözleşme geliştirme, penetrasyon testi ve blokzincir danışmanlığı gibi hizmetler de sunar._
 
@@ -514,7 +510,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Cyfrin](https://cyfrin.io)** - _Kripto güvenliğini ürünler ve akıllı sözleşme denetim hizmetleri aracılığıyla geliştiren Web3 güvenlik merkezi._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
 
 - **[Oxorio](https://oxor.io/)** - _Kripto şirketleri ve DeFi projeleri için EVM, Solidity, ZK, Zincirler Arası teknolojilerinde uzmanlığa sahip akıllı sözleşme denetimleri ve blokzincir güvenlik hizmetleri._
 
@@ -534,7 +530,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 ### Akıllı sözleşmelerle ilgili bilinen güvenlik açıklarına ve hatalarına ilişkin yayınlar {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Akıllı Sözleşmelere Yönelik Bilinen Saldırılar](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Genellikle örnek kod da içeren, en önemli sözleşme açıklarına ilişkin yeni başlayanlara yönelik açıklamalar._
+- **[ConsenSys: Akıllı Sözleşmelere Yönelik Bilinen Saldırılar](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Genellikle örnek kod da içeren, en önemli sözleşme açıklarına ilişkin yeni başlayanlara yönelik açıklamalar._
 
 - **[SWC Kayıt Defteri](https://swcregistry.io/)** - _Ethereum akıllı sözleşmeleri için geçerli Yaygın Zayıflık Numaralandırması (CWE) maddelerinin birleştirilmiş bir listesi._
 
@@ -562,7 +558,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Akıllı Sözleşme Güvenlik Doğrulama Standardı](https://github.com/securing/SCSVS)** - _Akıllı sözleşmelerin güvenliğini geliştiriciler, mimarlar, güvenlik eleştirmenleri ve satıcılar için standart hale getiren on dört parçalı bir kontrol listesi._
 
-- **[Akıllı Sözleşme Güvenliğini ve Denetimini Öğrenme](https://updraft.cyfrin.io/courses/security)** - _En iyi güvenlik uygulamalarını geliştirmek ve güvenlik araştırmacısı olmak isteyen akıllı sözleşme geliştiricileri için oluşturulan, akıllı sözleşme güvenliği ve denetimi kursu._
+- **[Akıllı Sözleşme Güvenliğini ve Denetimini Öğrenme](https://updraft.cyfrin.io/courses/security) - _En iyi güvenlik uygulamalarını geliştirmek ve güvenlik araştırmacısı olmak isteyen akıllı sözleşme geliştiricileri için oluşturulan, akıllı sözleşme güvenliği ve denetimi kursu._
 
 ### Akıllı sözleşme güvenliği üzerine öğreticiler {#tutorials-on-smart-contract-security}
 

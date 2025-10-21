@@ -4,7 +4,7 @@ description: Úvod do virtuálního stroje Etherea a jeho vztah ke stavu, transa
 lang: cs
 ---
 
-Virtuální stroj Etherea (EVM) je decentralizované virtuální prostředí, které konzistentně a bezpečně vykonává kód na všech uzlech Etherea. Uzly spouštějí EVM, aby vykonávaly chytré kontrakty, přičemž používají "[jednotky](/gas/)" k měření výpočetního úsilí potřebného pro tyto [operace](/developers/docs/evm/opcodes/), což zajišťuje efektivní alokaci zdrojů a bezpečnost sítě.
+Virtuální stroj Etherea (EVM) je decentralizované virtuální prostředí, které konzistentně a bezpečně vykonává kód na všech uzlech Etherea. Uzly spouštějí EVM, aby vykonávaly chytré kontrakty, přičemž používají jednotky „[paliva](/developers/docs/gas/)“ k měření výpočetního úsilí potřebného pro tyto [operace](/developers/docs/evm/opcodes/), což zajišťuje efektivní alokaci zdrojů a bezpečnost sítě.
 
 ## Předpoklady {#prerequisites}
 
@@ -14,7 +14,7 @@ Pro pochopení EVM je nutné mít základní povědomí o běžné terminologii 
 
 Přirovnání k „distribuované účetní knize“ se často používá k popisu blockchainů, jako je Bitcoin, které mají decentralizovanou měnu s využitím základních nástrojů kryptografie. Účetní kniha udržuje záznam aktivit za současného dodržování souboru pravidel, která určují, co může a nemůže uživatel dělat při úpravě této knihy. Např. bitcoinová adresa nemůže utratit více Bitcoinů, než kolik jich předtím obdržela. Tato pravidla jsou základem všech transakcí na Bitcoinu a mnoha dalších blockchainech.
 
-Ethereum má svou vlastní nativní kryptoměnu (Ether), která se řídí téměř stejnými intuitivními pravidly, ale také umožňuje mnohem silnější funkci: [chytré kontrakty](/developers/docs/smart-contracts/). Pro tuto složitější funkci potřebujeme sofistikovanější přirovnání. Namísto distribuované účetní knihy je Ethereum distribuovaný [stavový stroj](https://wikipedia.org/wiki/Finite-state_machine). Stav Etherea je velká datová struktura, která obsahuje nejen všechny účty a zůstatky, ale také _stav stroje_, který se může měnit od bloku k bloku podle předem definovaného souboru pravidel a který může vykonávat libovolný strojový kód. Specifická pravidla pro změnu stavu od bloku k bloku jsou definována v EVM.
+Ethereum sice má vlastní nativní kryptoměnu (ether), která se řídí téměř stejnými intuitivními pravidly, ale zároveň umožňuje mnohem výkonnější funkce: [chytré kontrakty](/developers/docs/smart-contracts/). Pro tuto složitější funkci potřebujeme sofistikovanější přirovnání. Namísto distribuované účetní knihy je Ethereum distribuovaný [stavový stroj](https://wikipedia.org/wiki/Finite-state_machine). Stav Etherea je velká datová struktura, která obsahuje nejen všechny účty a zůstatky, ale také _stav stroje_, který se může měnit od bloku k bloku podle předem definovaného souboru pravidel a který může vykonávat libovolný strojový kód. Specifická pravidla pro změnu stavu od bloku k bloku jsou definována v EVM.
 
 ![Diagram znázorňující složení EVM](./evm.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

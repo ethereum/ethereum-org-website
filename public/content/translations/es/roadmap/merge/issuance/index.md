@@ -30,11 +30,11 @@ title="tldr emisión de ETH">
 
 ### La emisión de la capa de ejecución {#el-issuance-pre-merge}
 
-Bajo la prueba de trabajo, los mineros solo interactuaban con la capa de ejecución y se les compensaba con un bloque de recompensas, si eran los primeros mineros en resolver el siguiente bloque. Desde la [actualización Constantinople](/history/#constantinople) en 2019, esta recompensa era de 2 ETH por bloque. Los mineros también recibían recompensas por publicaciones de bloques [ommer](/glossary/#ommer), que eran bloques válidos que no acababan en la cadena más larga/predilecta. Estas recompensas eran de un máximo 1,75 ETH por ommer, y suponían _un extra_ a la recompensa emitida desde el bloque predilecto. El proceso de minería era una actividad económica intensa, que históricamente requería altos niveles de emisión de ETH para ser sostenible.
+Bajo la prueba de trabajo, los mineros solo interactuaban con la capa de ejecución y se les compensaba con un bloque de recompensas, si eran los primeros mineros en resolver el siguiente bloque. Desde la [actualización Constantinople](/ethereum-forks/#constantinople) en 2019, esta recompensa era de 2 ETH por bloque. Los mineros también recibían recompensas por publicaciones de bloques [ommer](/glossary/#ommer), que eran bloques válidos que no acababan en la cadena más larga/predilecta. Estas recompensas eran de un máximo 1,75 ETH por ommer, y suponían _un extra_ a la recompensa emitida desde el bloque predilecto. El proceso de minería era una actividad económica intensa, que históricamente requería altos niveles de emisión de ETH para ser sostenible.
 
 ### La emisión de la capa de consenso {#cl-issuance-pre-merge}
 
-La [cadena de baliza](/history/#beacon-chain-genesis) empezó en 2020. En vez de mineros, está asegurada por validadores que usan pruebas de participación. Esta cadena era impulsada por usuarios de Ethereum que depositaban ETH unidireccionalmente en un contrato inteligente de red principal (la capa de ejecución), que la cadena de baliza escucha, acreditando al usuario una cantidad equivalente de ETH en la cadena nueva. Hasta que ocurrió La Fusión, los validadores de la cadena de baliza no estaban procesando transacciones y estaban principalmente llegando a consensos sobre el estado del grupo de validadores entre sí.
+La [cadena de baliza](/ethereum-forks/#beacon-chain-genesis) empezó en 2020. En vez de mineros, está asegurada por validadores que usan pruebas de participación. Esta cadena era impulsada por usuarios de Ethereum que depositaban ETH unidireccionalmente en un contrato inteligente de red principal (la capa de ejecución), que la cadena de baliza escucha, acreditando al usuario una cantidad equivalente de ETH en la cadena nueva. Hasta que ocurrió La Fusión, los validadores de la cadena de baliza no estaban procesando transacciones y estaban principalmente llegando a consensos sobre el estado del grupo de validadores entre sí.
 
 A los validadores de la cadena de baliza se les recompensaba con ETH por confirmar el estado de la cadena y proponer bloques. Las recompensas (o penalizaciones) se calculaban y distribuían en cada época (cada 6,4 minutos) en función del rendimiento del validador. Las recompensas de los validadores son **considerablemente** inferiores a las recompensas de los mineros que se emitían anteriormente con la prueba de trabajo (2 ETH cada ~13,5 segundos), ya que el funcionamiento de un nodo de validador no supone un gasto tan elevado, ni requiere o garantiza una gran recompensa.
 
@@ -54,11 +54,17 @@ Suministro total de ETH: **~120.520.000 ETH** (en el momento de La Fusión en se
 - Lo que da como resultado **~620.500** ETH emitidos en un año.
 - Lo que generó una tasa de inflación de **aproximadamente 0,52%** (620,5 K por año / 119,3 M en total).
 
-<InfoBanner>
-<strong>Tasa de emisión anual total (antes de La Fusión): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>~88,7%</strong> de la emisión iba a los mineros en la capa de ejecución (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> era emitida para los participantes en la capa de consenso (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Tasa de emisión anual total (antes de La Fusión): ~4,61%** (4,09% + 0,52%)
+
+**~88,7%** de la emisión iba a los mineros en la capa de ejecución (4,09 / 4,61 * 100)
+
+**~11,3%** era emitida para los participantes en la capa de consenso (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Después de La Fusión (Presente) {#post-merge}
 
@@ -84,18 +90,27 @@ Cuantos más validadores salgan, más se irá reduciendo gradualmente el número
 - La emisión de la capa de ejecución: **0**
 - La emisión de la capa de consenso: igual a la anterior, **~0,52%** tasa emitida anualmente (con un total de 14 millones de ETH apostados)
 
-<InfoBanner>
-Tasa de emisión anual total: <strong>~0,52%</strong><br/><br/>
-Reducción neta de la emisión anual de ETH: <strong>~88,7%</strong> ((4,61% - 0,52%) / 4,61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Tasa de emisión anual total: **~0,52%**
+
+Reducción neta de la emisión anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />La quema {#the-burn}
 
 La fuerza opuesta a la emisión de ETH es la tasa a la cual se quema ETH. Para que se ejecute una transacción en Ethereum, se debe pagar una comisión mínima (conocida como «tarifa de base»), que fluctúa constantemente (bloque-a-bloque) dependiendo de la actividad de la red. La tarifa se debe pagar en ETH y se _requiere_ para que se considere una transacción válida. La tarifa se _quema_ durante el proceso de la transacción, eliminándola de la circulación.
 
-<InfoBanner>
-La quema de la comisión empezó con <a href="/history/#london">la actualización London</a> en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+La quema de la comisión empezó con [la actualización London](/ethereum-forks/#london) en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Además de la tarifa implementada en la actualización London, los validadores también pueden incurrir en penalizaciones por estar fuera de línea, o peor aún, se les puede recortar por romper las reglas específicas que amenazan la seguridad de la red. Estas penalizaciones ocasionan una reducción de ETH del saldo de los validadores, que no recompensa directamente ninguna otra cuenta, quemándolos/eliminándolos efectivamente de circulación.
 

@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Hier zijn de tools en frameworks die u kunt gebruiken om uw Ethereum-applicatie te bouwen.",
   "page-local-environment-setup-title": "Stel u lokale ontwikkelingsomgeving in",
   "page-local-environment-solidity-template-desc": "Een GitHub-template voor vooraf gebouwde instellingen voor uw Solidity slimme contracten. Bevat een lokaal Hardhat-netwerk, Waffle voor tests, Ethers voor portemonnee-implementaties, en meer.",
-  "page-local-environment-solidity-template-logo-alt": "Logo van Solidity-template",
-  "page-local-environment-waffle-desc": "De meest geavanceerde testbibliotheek voor slimme contracten. Gebruik alleen of met Scaffold-eth of Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Waffle logo"
+  "page-local-environment-solidity-template-logo-alt": "Logo van Solidity-template"
 }

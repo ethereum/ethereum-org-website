@@ -19,7 +19,7 @@ Para ilustrar o que são tokens fraudulentos e como identificá-los, veremos um 
 title="O que é ARB?"
 contentPreview=''>
 
-Arbitrum é uma organização que desenvolve e gerencia <a href="/developers/docs/scaling/optimistic-rollups/">rollups otimistas</a>. Inicialmente, a Arbitrum foi organizada como uma empresa com fins lucrativos, mas depois tomou medidas para se descentralizar. Como parte desse processo, a empresa emitiu um <a href="/dao/#token-based-membership">token de governança</a> negociável.
+Arbitrum é uma organização que desenvolve e gerencia [rollups otimistas](/developers/docs/scaling/optimistic-rollups/). Inicialmente, a Arbitrum foi organizada como uma empresa com fins lucrativos, mas depois tomou medidas para se descentralizar. Como parte desse processo, a empresa emitiu um [token de governança](/dao/#token-based-membership) negociável.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ O ponto principal do Ethereum é a descentralização. Isso significa que não h
 title="O que são contratos inteligentes?"
 contentPreview=''>
 
-<a href="/developers/docs/smart-contracts/">Os contratos inteligentes</a> são programas que são executados no blockchain Ethereum. Cada token ERC-20, por exemplo, é implementado como um contrato inteligente.
+[Os contratos inteligentes](/developers/docs/smart-contracts/) são programas que são executados no blockchain Ethereum. Cada token ERC-20, por exemplo, é implementado como um contrato inteligente.
 
 </ExpandableCard>
 

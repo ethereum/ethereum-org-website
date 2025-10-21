@@ -4,13 +4,18 @@ description: Uma explicação de como a mineração funcionava no Ethereum.
 lang: pt-br
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ethereum, o que significa que a mineração foi desativada. Em vez disso, o Ethereum é garantido por validadores que apostam em ETH. Você pode começar a participar com o seu ETH hoje. Leia mais sobre <a href='/roadmap/merge/'>A Fusão</a> (The MErge), <a href='/developers/docs/consensus-mechanisms/pos/'>prova de participação</a> e <a href='/staking/'>participação (stake)</a>. Esta página é apenas para interesse histórico.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Pré-requisitos {#prerequisites}
 
-Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho](/developers/docs/consensus-mechanisms/pow/).
+Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho ](/developers/docs/consensus-mechanisms/pow/).
 
 ## O que é mineração de Ethereum? {#what-is-ethereum-mining}
 

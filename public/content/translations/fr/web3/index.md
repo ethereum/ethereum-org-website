@@ -6,6 +6,10 @@ lang: fr
 
 # Introduction au Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 La centralisation a permis à des milliards de personnes d'accéder au World Wide Web et de créer l'infrastructure stable et robuste sur laquelle il repose. Dans le même temps, une poignée d'entités centralisées ont pris le contrôle de larges pans du World Wide Web, décidant de manière unilatérale de ce qui est autorisé ou non.
 
 Le Web3 est la réponse à ce dilemme. Contrairement à un Web dominé par les grandes entreprises technologiques, le Web3 est décentralisé et est construit, exploité et détenu par ses utilisateurs. Le Web3 donne le pouvoir aux individus plutôt qu'aux entreprises. Avant de parler du Web3, il faut comprendre comment nous en sommes arrivés là.
@@ -61,12 +65,15 @@ Le Web3 vous donne la propriété de vos actifs numériques de façon inégalée
 
 Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glossary/#nft). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink href="/nft/">
     Plus d'infos sur les NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Résistance à la censure {#censorship-resistance}
 
@@ -86,12 +93,15 @@ Les DAO sont définies techniquement comme des [contrats intelligents](/glossary
 
 Le fait est toutefois que les gens définissent de nombreuses communautés Web3 comme étant des DAO. Ces communautés ont toutes des niveaux différents de décentralisation et d'automatisation par code. Actuellement, nous explorons ce que sont les DAO et comment elles pourraient évoluer à l'avenir.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>En savoir plus sur les DAO</div>
   <ButtonLink href="/dao/">
     En savoir plus sur les DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identité {#identity}
 
@@ -139,7 +149,7 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 - [Obtenir un portefeuille](/wallets/)
 - [Trouver une communauté](/community/)
-- [Explorer des applications Web3](/dapps/)
+- [Explorer des applications Web3](/apps/)
 - [Rejoindre une DAO](/dao/)
 - [Construire sur le Web3](/developers/)
 
@@ -147,11 +157,11 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 Le Web3 n’est pas strictement défini. Plusieurs participants de la Communauté ont des points de vue différents à ce sujet. Voici quelques-uns d'entre eux :
 
-- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Comprendre le Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Importance du Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Pourquoi la décentralisation est importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Panorama du Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Débat sur le Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

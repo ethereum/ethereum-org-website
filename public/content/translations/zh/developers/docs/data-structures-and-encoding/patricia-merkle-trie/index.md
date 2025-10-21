@@ -11,7 +11,7 @@ sidebarDepth: 2
 
 默克尔帕特里夏字典树是确定性的并可通过密码学验证：生成状态根的唯一方式是从每个单独的状态进行计算，且两个相同的状态可以通过比较根哈希和父节点哈希（_默克尔证明_）而轻松证明相同。 相反，也无法用同一根哈希创建两个不同的状态，任何用不同值修改状态的尝试都会产生不同的状态根哈希。 理论上，这种结构在插入、查找和删除操作上的效率达到了超乎寻常的 `O(log(n))`。
 
-在不久的将来，以太坊计划迁移到[沃克尔树](https://ethereum.org/en/roadmap/verkle-trees)结构，这将为未来的协议改进开创更多新的可能性。
+在不久的将来，以太坊计划迁移到[沃克尔树](/roadmap/verkle-trees)结构，这将为未来的协议改进开创更多新的可能性。
 
 ## 前提条件 {#prerequisites}
 
@@ -34,33 +34,33 @@ sidebarDepth: 2
 基数树的更新和删除操作定义如下：
 
 ```
-    def update(node,path,value):
-        curnode = db.get(node) if node else [ NULL ] * 17
+    def update(node_hash, path, value):
+        curnode = db.get(node_hash) if node_hash else [ NULL ] * 17
         newnode = curnode.copy()
         if path == '':
             newnode[-1] = value
         else:
-            newindex = update(curnode[path[0]],path[1:],value)
+            newindex = update(curnode[path[0]], path[1:], value)
             newnode[path[0]] = newindex
-        db.put(hash(newnode),newnode)
+        db.put(hash(newnode), newnode)
         return hash(newnode)
 
-    def delete(node,path):
-        if node is NULL:
+    def delete(node_hash, path):
+        if node_hash is NULL:
             return NULL
         else:
-            curnode = db.get(node)
+            curnode = db.get(node_hash)
             newnode = curnode.copy()
             if path == '':
                 newnode[-1] = NULL
             else:
-                newindex = delete(curnode[path[0]],path[1:])
+                newindex = delete(curnode[path[0]], path[1:])
                 newnode[path[0]] = newindex
 
             if all(x is NULL for x in newnode):
                 return NULL
             else:
-                db.put(hash(newnode),newnode)
+                db.put(hash(newnode), newnode)
                 return hash(newnode)
 ```
 
@@ -137,10 +137,10 @@ sidebarDepth: 2
 以下为获取默克尔帕特里夏树中节点的扩展代码：
 
 ```
-    def get_helper(node,path):
-        if path == []: return node
-        if node = '': return ''
-        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
+    def get_helper(node_hash,path):
+        if path == []: return node_hash
+        if node_hash == '': return ''
+        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
@@ -151,13 +151,13 @@ sidebarDepth: 2
         elif len(curnode) == 17:
             return get_helper(curnode[path[0]],path[1:])
 
-    def get(node,path):
+    def get(node_hash,path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node,path2)
+        return get_helper(node_hash,path2)
 ```
 
 ### 前缀树示例 {#example-trie}

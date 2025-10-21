@@ -43,9 +43,14 @@ Trước bản nâng cấp Shanghai/Capella, bạn không thể sử dụng ho�
 
 Cung cấp địa chỉ rút tiền là bước bắt buộc đối với tất cả tài khoản nút xác thực trước khi có thể rút ETH từ số dư của tài khoản đó.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Mỗi tài khoản nút xác thực chỉ có một địa chỉ rút tiền duy nhất, vào một thời điểm.</strong> Sau khi chọn và gửi địa chỉ lên lớp đồng thuận, bạn sẽ không thể hoàn tác hoặc thay đổi lại. Hãy kiểm tra thật kỹ quyền sở hữu và độ chính xác của địa chỉ được cung cấp trước khi nộp.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Trong thời gian chờ đợi, việc chưa cung cấp địa chỉ rút tiền sẽ <strong>không gây rủi ro cho tiền của bạn</strong> nếu cụm từ khởi tạo/mnemonic của bạn được giữ an toàn ngoại tuyến và không bị xâm phạm theo bất kỳ cách nào. Không thêm thông tin xác thực rút tiền sẽ khiến ETH bị khóa trong tài khoản nút xác thực cho đến khi bạn cung cấp địa chỉ rút tiền.
 
@@ -65,7 +70,7 @@ Sau khi một tài khoản được đánh dấu là "có thể rút hoàn toàn
 
 Bản nâng cấp Shanghai/Capella cho phép người dùng lấy lại ETH đã đặt cọc trước đó vào các tài khoản Ethereum thông thường. Điều này giúp hoàn thiện tính thanh khoản của đặt cọc và đưa Ethereum tiến thêm một bước nữa trên hành trình xây dựng một hệ sinh thái phi tập trung bền vững, có khả năng mở rộng và bảo mật.
 
-- [Thông tin thêm về lịch sử của Ethereum](/history/)
+- [Thông tin thêm về lịch sử của Ethereum](/ethereum-forks/)
 - [Thông tin thêm về lộ trình của Ethereum](/roadmap/)
 
 ## Thanh toán rút tiền hoạt động như thế nào? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Hãy xem qua giải thích này của Finematics về rút cổ phần Ethereum:
 
 Khi một nút xác thực được chọn để đề xuất khối tiếp theo, cần xây dựng một hàng đợi rút tiền, tối đa 16 lệnh rút tiền hợp lệ. Quá trình này được thực hiện bằng cách bắt đầu với nút xác thực có chỉ số 0, kiểm tra xem theo quy tắc của giao thức, tài khoản này có lệnh rút tiền hợp lệ không và thêm nó vào danh sách nếu có. Nút xác thực được chọn để đề xuất khối tiếp theo sẽ bắt đầu từ vị trí nút xác thực trước đó dừng lại và tiếp tục theo thứ tự vô hạn.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Hãy tưởng tượng một chiếc đồng hồ kim. Kim đồng hồ chỉ giờ, di chuyển theo một hướng, không bỏ qua giờ nào và cuối cùng quay trở lại vị trí ban đầu sau khi đến số cuối cùng.<br/><br/>
 Bây giờ, thay vì từ 1 đến 12, hãy tưởng tượng chiếc đồng hồ có các số từ 0 đến N <em>(tổng số tài khoản nút xác thực từng được đăng ký trên lớp đồng thuận, tính đến tháng 1 năm 2023 là hơn 500.000).</em><br/><br/>
 Kim đồng hồ sẽ di chuyển đến nút xác thực tiếp theo cần được kiểm tra xem có lệnh rút tiền hợp lệ không. Kim bắt đầu từ 0 và di chuyển theo vòng tròn mà không bỏ qua bất kỳ tài khoản nào. Khi đến nút xác thực cuối cùng, chu kỳ sẽ tiếp tục trở lại từ đầu.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Kiểm tra tài khoản để tìm các lệnh rút tiền {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Nếu bạn đang tham gia một <a href="/staking/pools/">nhóm đặt cọc</a> hoặc nắm giữ token góp cổ phần, bạn nên liên hệ với nhà cung cấp dịch vụ của mình để biết thêm chi tiết về cách thức xử lý rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
+Nếu bạn đang tham gia một [nhóm đặt cọc](/staking/pools/) hoặc nắm giữ token góp cổ phần, bạn nên liên hệ với nhà cung cấp dịch vụ của mình để biết thêm chi tiết về cách thức xử lý rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
 
-Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc nếu bạn đã tích lũy đủ ETH, bạn có thể <a href="/staking/solo/">tự đặt cọc tại nhà</a>.
+Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc nếu bạn đã tích lũy đủ ETH, bạn có thể [tự đặt cọc tại nhà](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Không. Sau khi nút xác thực đã thoát và rút toàn bộ số dư, bất
 
 - [Rút tiền trên Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Chuỗi Beacon đẩy các lệnh rút tiền dưới dạng thao tác](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Thượng Hải](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Rút ETH đã góp (Thử nghiệm) với Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Các lệnh rút tiền đẩy của Chuỗi Beacon dưới dạng thao tác với Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Giải thích về số dư hiệu quả của nút xác thực](https://www.attestant.io/posts/understanding-validator-effective-balance/)

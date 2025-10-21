@@ -1,0 +1,71 @@
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
+
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+
+import I18nProvider from "@/components/I18nProvider"
+
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getMetadata } from "@/lib/utils/metadata"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import RunANodePage from "./_components/run-a-node"
+import RunANodePageJsonLD from "./page-jsonld"
+
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
+
+  setRequestLocale(locale)
+
+  // Get i18n messages
+  const allMessages = await getMessages({ locale })
+  const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
+  const messages = pick(allMessages, requiredNamespaces)
+
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getAppPageContributorInfo(
+      "run-a-node",
+      locale as Lang,
+      commitHistoryCache
+    )
+
+  return (
+    <I18nProvider locale={locale} messages={messages}>
+      <RunANodePageJsonLD
+        locale={locale}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contributors={contributors}
+      />
+      <RunANodePage
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        locale={locale}
+      />
+    </I18nProvider>
+  )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string }
+}) {
+  const { locale } = params
+
+  const t = await getTranslations({ locale, namespace: "page-run-a-node" })
+
+  return await getMetadata({
+    locale,
+    slug: ["run-a-node"],
+    title: t("page-run-a-node-meta-title"),
+    description: t("page-run-a-node-meta-description"),
+    image: "/images/run-a-node/ethereum-inside.png",
+  })
+}
+
+export default Page

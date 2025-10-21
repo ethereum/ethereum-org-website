@@ -25,7 +25,5 @@
   "page-local-environment-setup-subtitle-2": " Tukaj so orodja in ogrodja, ki jih lahko uporabite za lažji razvoj svoje aplikacije na Ethereumu.",
   "page-local-environment-setup-title": "Nastavite svoje lokalno razvojno okolje",
   "page-local-environment-solidity-template-desc": "GitHubova predloga za vnaprej pripravljeno namestitev za pametne pogodbe Solidity. Vključuje lokalno omrežje Hardhat, Waffle za preskuse, Ethers za uvedbo denarnice in več.",
-  "page-local-environment-solidity-template-logo-alt": "Logotip predloge Solidity",
-  "page-local-environment-waffle-desc": "Najnaprednejša knjižnica za preskušanje pametnih pogodb. Uporabite jo samo ali s storitvijo Scaffold-eth ali Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Logotip Waffle"
+  "page-local-environment-solidity-template-logo-alt": "Logotip predloge Solidity"
 }

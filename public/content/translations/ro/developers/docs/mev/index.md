@@ -12,7 +12,7 @@ This concept was first applied under the context of [proof-of-work](/developers/
 
 ## Condiții prealabile {#prerequisites}
 
-Aveţi grijă să vă familiarizaţi cu [tranzacțiile](/developers/docs/transactions/), [blocurile](/developers/docs/blocks/), [gazul](/developers/docs/gas/) și [minarea](/developers/docs/consensus-mechanisms/pow/mining/). Familiarizarea cu [aplicațiile dapp](/dapps/) și [DeFi](/defi/) este de asemenea utilă.
+Aveţi grijă să vă familiarizaţi cu [tranzacțiile](/developers/docs/transactions/), [blocurile](/developers/docs/blocks/), [gazul](/developers/docs/gas/) și [minarea](/developers/docs/consensus-mechanisms/pow/mining/). Familiarizarea cu [aplicațiile dapp](/apps/) și [DeFi](/defi/) este de asemenea utilă.
 
 ## Extragerea MEV {#mev-extraction}
 
@@ -117,7 +117,6 @@ Pe măsură ce DeFi se dezvoltă și cresc în popularitate, MEV ar putea în cu
 ## Resurse conexe {#related-resources}
 
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Tablou de bord și explorator de tranzacții live pentru tranzacțiile MEV_
 
 ## Referințe suplimentare {#further-reading}
 

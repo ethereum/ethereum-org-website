@@ -17,7 +17,7 @@ summaryPoint4: 合併將以太坊的能源消耗降低了約 99.95%。
 
 ## 什麼是「合併」？ {#what-is-the-merge}
 
-合併指將以太坊的原始執行層（自[創世](/history/#frontier)以來就存在的主網）與其新的權益證明共識層「信標鏈」結合在一起。 它減少了對能源密集型挖礦的需求，而是藉由質押的以太幣來確保網路安全。 這是實現以太坊「更高的可擴容性、安全性和永續性」願景的真正令人興奮的一步。
+合併指將以太坊的原始執行層（自[創世](/ethereum-forks/#frontier)以來就存在的主網）與其新的權益證明共識層「信標鏈」結合在一起。 它減少了對能源密集型挖礦的需求，而是藉由質押的以太幣來確保網路安全。 這是實現以太坊「更高的可擴容性、安全性和永續性」願景的真正令人興奮的一步。
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ summaryPoint4: 合併將以太坊的能源消耗降低了約 99.95%。
 
 合併中，歷史記錄不會丟失。 隨著主網與信標鏈合併，以太坊的所有交易記錄也已一併整合。
 
-<InfoBanner>
-這種向權益證明的過渡改變了以太幣的發行方式。 瞭解<a href="/roadmap/merge/issuance/">合併前後的以太幣發行</a>的更多相關資訊。
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+這種向權益證明的過渡改變了以太幣的發行方式。 瞭解[合併前後的以太幣發行](/roadmap/merge/issuance/)的更多相關資訊。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 使用者及持有者 {#users-holders}
 
@@ -62,7 +66,7 @@ id="staking-node-operators">
 
 1. 同時運行共識用戶端及執行用戶端；合併之後，無法再使用取得執行資料的第三方端點。
 2. 使用共用的 JWT 金鑰來驗證執行與共識用戶端，以便他們能夠安全地通訊。
-3 設定「費用接收」地址以接收賺取的交易費小費/最大可提取價值 (MEV)。
+3. 設定「費用接收」地址以接收賺取的交易費小費/最大可提取價值 (MEV)。
 
 在完成上述兩點以前，你的節點會顯示為「離線」，直到兩個層皆同步且通過驗證為止。
 
@@ -92,7 +96,7 @@ title="去中心化應用程式和智慧型合約開發者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合併過程中共識機制亦發生變更，包括以下方面的相關變更：<
+合併過程中共識機制亦發生變更，包括以下方面的相關變更：
 
 <ul>
   <li>區塊結構</li>
@@ -130,7 +134,7 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 
 任何人都能夠執行自己的節點對於維持以太坊網路的去中心化<em>絕對至關重要</em>。
 
-<a href="/run-a-node/">執行自己節點的更多相關資訊</a>
+[執行自己節點的更多相關資訊](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 燃料費用是網路需求相對於網路容量的產物。 合併後，我們棄用了工作量證明，轉而採用權益證明共識機制，但並沒有顯著改變任何直接影響網路容量或吞吐量的參數。
 
-根據<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷軸為中心的開發藍圖</a>，我們主要專注於擴展<a href="/layer-2/">二層網路</a>上的使用者活動，同時讓一層網路主網成為針對卷軸資料儲存進行最佳化的安全去中心化結算層，以協助使卷軸交易成本呈指數級下降。 轉用權益證明是實現這點的關鍵前導步驟。 <a href="/developers/docs/gas/">更多燃料和費用相關資訊。</a>
+根據<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷軸為中心的開發藍圖</a>，我們主要專注於擴展[二層網路](/layer-2/)上的使用者活動，同時讓一層網路主網成為針對卷軸資料儲存進行最佳化的安全去中心化結算層，以協助使卷軸交易成本呈指數級下降。 轉用權益證明是實現這點的關鍵前導步驟。 [更多燃料和費用相關資訊。](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 
 自從上海/卡佩拉網路升級後，質押者現在可以指定<em>提款地址</em>，以開始接收自動支付的額外質押餘額（原本質押的 32 以太幣以外的協定獎勵）。 此升級也使驗證者可以在退出網路時解鎖和收回其全部餘額。
 
-<a href="/staking/withdrawals/">更多質押提款相關資訊</a>
+[更多質押提款相關資訊](/staking/withdrawals/)
 
 </ExpandableCard>
 

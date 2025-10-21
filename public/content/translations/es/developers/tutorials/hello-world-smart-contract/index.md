@@ -16,11 +16,11 @@ published: 2021-03-31
 Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Goerli usando una billetera virtual ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/eth) (no se preocupe si aún no entiende lo que significa todo esto: lo explicaremos).
 
 > **Advertencia**
-> 
+>
 > 🚧 Aviso de baja
-> 
+>
 > Para toda esta guía, se está usando la red de prueba Goerli para crear e implementar un contrato inteligente. Sin embargo, tenga en cuenta que la Ethereum Foundation ha anuciado que [Goerli pronto se dará de baja](https://www.alchemy.com/blog/goerli-faucet-deprecation).
-> 
+>
 > Recomendamos usar [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) y el [grifo de Sepolia](https://sepoliafaucet.com/) para este tutorial.
 
 En la [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) de este tutorial repasaremos cómo podemos interactuar con nuestro contrato inteligente una vez que se implemente aquí, y en [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) mostraremos cómo publicarlo en Etherscan.
@@ -49,7 +49,7 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos Metamask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información sobre las [transacciones](/developers/docs/transactions/).
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
+Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
 
 ![ejemplo de Metamask Ropsten](./metamask-ropsten-example.png)
 
@@ -66,7 +66,7 @@ Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getB
 ```
 
 > **NOTA:** Este resultado es en wei, no en ETH. Wei se usa como la denominación más pequeña de Ether. La conversión de wei a ETH es: 1 eth = 10<sup>18</sup> wei. Entonces si queremos convertir 0x2B5E3AF16B1880000 a decimales, obtenemos 5\*10¹⁸, que equivale a 5 ETH.
-> 
+>
 > ¡Fiu! Nuestro dinero de prueba está todo ahí <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Paso 6: Iniciar nuestro proyecto {#step-6}
@@ -238,9 +238,13 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Para conectarlos efectivamente a nuestro código, vincularemos estas variables en nuestro `hardhat.config.js` en el paso 13.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 ¡No exponga su <code>.env</code>! Asegúrese de que nunca comparte ni expone su archivo <code>.env</code> con nadie, ya que ello conlleva revelar sus secretos. Si está haciendo un control de la versión, añada <code>.env</code> a un archivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Paso 12: Instalar Ethers.js {#step-12-install-ethersjs}
 

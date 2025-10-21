@@ -1,5 +1,6 @@
 ---
 title: Come utilizzare un portafoglio
+metaTitle: Come utilizzare i portafogli di Ethereum | Passo dopo passo
 description: Una guida che spiega come inviare, ricevere token e connettersi a progetti web3.
 lang: it
 ---
@@ -60,14 +61,17 @@ Il tuo indirizzo sarà lo stesso in tutti i progetti di Ethereum. Non devi regis
 ![Selezionare da un elenco di portafogli con cui connettersi](./connect2.png)
 
 5. Conferma la richiesta di firma nel tuo portafoglio per stabilire la connessione. **Firmare questo messaggio non dovrebbe richiedere di spendere ETH**.
-6. È tutto! Inizia a usare l'app. Puoi trovare qualche progetto interessante sulla nostra [pagina delle dApp](/dapps/#explore). <br />
+6. È tutto! Inizia a usare l'app. Puoi trovare qualche progetto interessante sulla nostra [pagina delle dApp](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Vuoi scoprire di più?</div>
   <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Domande frequenti
 

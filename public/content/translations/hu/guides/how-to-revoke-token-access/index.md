@@ -20,7 +20,6 @@ Számos weboldal lehetővé teszi, hogy láthassa és visszavonhassa a címéhez
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (több hálózat)
 - [Revoke](https://revoke.cash/) (több hálózat)
 - [Unrekt](https://app.unrekt.net/) (több hálózat)
 - [EverRevoke](https://everrise.com/everrevoke/) (több hálózat)
@@ -47,12 +46,15 @@ Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és n
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Gyakran ismételt kérdések
 

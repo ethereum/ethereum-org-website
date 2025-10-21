@@ -11,14 +11,16 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-Essa é uma lista não exaustiva mantida pela nossa comunidade. Conhece um evento por vir da Ethereum? [Vá em frente e o adicione a lista](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+Essa é uma lista não exaustiva mantida pela nossa comunidade. Conhece um evento por vir da Ethereum? [Adicione-o à lista](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
-## Encontros da Ethereum {#meetups}
+<EventsOrganizerBanner className="mt-16" />
 
-Nenhum dos eventos serve para você? Tente ir a um encontro. Os encontros são eventos menores realizados por grupos de entusiastas da Ethereum. e uma oportunidade para pessoas com um interesse em comum em Ethereum se reunirem, conversarem sobre o projeto e conhecer mais sobre os desenvolvimentos recentes.
+## Encontros do Ethereum {#meetups}
+
+Nenhum dos eventos serve para você? Tente participar de um encontro. Os encontros são eventos menores realizados por grupos de entusiastas da Ethereum e são uma oportunidade para pessoas interessadas em Ethereum se reunirem, conversarem sobre ela e saber mais sobre os desenvolvimentos recentes.
 
 <MeetupList />
 
 Interessado em organizar o seu próprio encontro? Confira a [BUIDL Network](https://consensys.net/developers/buidlnetwork/), uma iniciativa da ConsenSys para oferecer suporte às comunidades de encontros da Ethereum.
 
-Essa é uma lista não exaustiva mantida pela nossa comunidade. Você pode [ver mais encontros da Ethereum aqui](https://www.meetup.com/topics/ethereum/). Conhece algum grupo ativo de encontros? [Adicione-o a lista](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!
+Essa é uma lista não exaustiva mantida pela nossa comunidade. Você pode [ver mais encontros da Ethereum aqui](https://www.meetup.com/topics/ethereum/). Conhece algum grupo ativo de encontros para adicionar à lista? [Adicione-o à lista](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!
