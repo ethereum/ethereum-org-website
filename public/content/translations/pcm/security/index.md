@@ -136,7 +136,7 @@ For di run-up to [Di Merge](/roadmap/merge/), skammas don take advantaj of di ko
 
 Skammas fit appia as "suppot", as dem dey tell yu dat if yu deposit yor ETH, yu go risiv back 'ETH2'. Nor [official Ethereum suppot](/community/support/) dey, and nor new token dey. Neva shia yor wallet seed fraiz wit anyone.
 
-_Note: E get some derivative tokens/tickers wey fit reprisent ETH wey dem stake (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but dis nor bi sontin yu nid to "migrate to."_
+_Note: E get some derivative tokens/tickers wey fit reprisent ETH wey dem stake (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but dis nor bi sontin yu nid to "migrate to."_
 
 ### Phishing skams {#phishing-scams}
 
