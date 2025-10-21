@@ -35,7 +35,7 @@ Ether is a common noun and should not be capitalized unless at the beginning of 
 
 ### Mainnet {#mainnet}
 
-When referring to the Ethereum Mainnet (i.e. not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
+When referring to the Ethereum Mainnet (i.e., not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
 
 **Correct usage:**
 
@@ -172,16 +172,16 @@ Use the "D-Mon-YYYY" format for dates. This format eliminates ambiguity between 
 
 By adhering to these guidelines, we create a unified approach to presenting dates, fostering clarity and comprehension throughout Ethereum documentation.
 
-### Hard stops (i.e., e.g.,)
+### Hard stops (i.e., and e.g.,)
 When using abbreviations such as i.e., or e.g., it should include the comma after the period. This usage will allow for consistency and presentation.
 
 **Examples:**
-- Preferred: i.e., the preferred usage
-- Avoid: i.e. do not use
+- Preferred: i.e., or e.g., the preferred usage
+- Avoid: i.e. or e.g. do not use
 
 ### Linking to internal pages {#internal-links}
 
-When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
+When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e., `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
 
 ```md
 <!-- Good -->
