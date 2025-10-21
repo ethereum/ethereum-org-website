@@ -55,7 +55,7 @@ body:
     id: wallet_url
     attributes:
       label: URL to the project
-      description: Please provide a URL (e.g. to the website of the wallet).
+      description: Please provide a URL (e.g., to the website of the wallet).
     validations:
       required: true
   - type: input
@@ -129,7 +129,7 @@ body:
     id: wallets_hardware
     attributes:
       label: Is it a hardware wallet?
-      description: How does it broadcast signed transactions (e.g. USB, Bluetooth, QR code)?
+      description: How does it broadcast signed transactions (e.g., USB, Bluetooth, QR code)?
     validations:
       required: true
   - type: markdown
@@ -194,7 +194,7 @@ body:
     id: wallet_scam_protection
     attributes:
       label: Scam protection?
-      description: Does the wallet employ any practices to warn users against potential scams (e.g. when interacting with suspicious accounts/contracts)?
+      description: Does the wallet employ any practices to warn users against potential scams (e.g., when interacting with suspicious accounts/contracts)?
     validations:
       required: true
   - type: markdown
@@ -205,7 +205,7 @@ body:
     id: wallet_dapp_support
     attributes:
       label: Does the wallet support connecting to Ethereum applications?
-      description: Please provide documentation for how users connect to applications. List examples (ie. WalletConnect, connect wallet to dapp directly, in wallet browser, etc.)
+      description: Please provide documentation for how users connect to applications. List examples (i.e., WalletConnect, connect wallet to dapp directly, in wallet browser, etc.)
     validations:
       required: true
   - type: dropdown
@@ -379,7 +379,7 @@ body:
     id: wallet_extra
     attributes:
       label: Does the wallet have any integrated tools not mentioned above?
-      description: Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g. privacy features, transaction batching, etc).
+      description: Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g., privacy features, transaction batching, etc).
   - type: checkboxes
     id: wallet_work_on
     attributes:
