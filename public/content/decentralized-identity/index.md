@@ -39,7 +39,7 @@ These traditional examples of identifiers are issued, held and controlled by cen
 
 1. Decentralized identity increases individual control of identifying information. Decentralized identifiers and attestations can be verified without relying on centralized authorities and third-party services.
 
-2. Decentralized identity solutions facilitates a trustless, seamless, and privacy-protecting method for verifying and managing user identity.
+2. Decentralized identity solutions facilitate a trustless, seamless, and privacy-protecting method for verifying and managing user identity.
 
 3. Decentralized identity harnesses blockchain technology, which creates trust between different parties and provides cryptographic guarantees to prove the validity of attestations.
 
@@ -57,7 +57,7 @@ Decentralized identity has many potential use-cases:
 
 Decentralized identity can help replace password-based logins with decentralized authentication. Service providers can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/glossary/#nft) granting the holder access to an online community.
 
-A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
+A [Sign-In with Ethereum](https://siwe.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
 
 ### 2. KYC authentication {#kyc-authentication}
 
@@ -67,9 +67,9 @@ Decentralized identity allows companies to skip on conventional [Know-Your-Custo
 
 ### 3. Voting and online communities {#voting-and-online-communities}
 
-Online voting and social media are two novel applications for decentralized identity. Online voting schemes are susceptible to manipulation, especially if malicious actors create false identities to vote. Asking individuals to present on-chain attestations can improve the integrity of online voting processes.
+Online voting and social media are two novel applications for decentralized identity. Online voting schemes are susceptible to manipulation, especially if malicious actors create false identities to vote. Asking individuals to present onchain attestations can improve the integrity of online voting processes.
 
-Decentralized identity can help create online communities that are free of fake accounts. For example, each user might have to authenticate their identity using an on-chain identity system, like the Ethereum Name Service, reducing the possibility of bots.
+Decentralized identity can help create online communities that are free of fake accounts. For example, each user might have to authenticate their identity using an onchain identity system, like the Ethereum Name Service, reducing the possibility of bots.
 
 ### 4. Anti-Sybil protection {#sybil-protection}
 
@@ -119,47 +119,48 @@ Decentralized identifiers are also crucial to protecting the privacy of personal
 
 How attestation information is stored and retrieved in an Ethereum-based identity ecosystem is different from traditional identity management. Here is an overview of the various approaches to issuing, storing, and verifying attestations in decentralized identity systems:
 
-### Off-chain attestations {#off-chain-attestations}
+### Offchain attestations {#offchain-attestations}
 
-One concern with storing attestations on-chain is that they might contain information individuals want to keep private. The public nature of the Ethereum blockchain makes it unattractive to store such attestations.
+One concern with storing attestations onchain is that they might contain information individuals want to keep private. The public nature of the Ethereum blockchain makes it unattractive to store such attestations.
 
-The solution is to issue attestations, held by users off-chain in digital wallets, but signed with the issuer's DID stored on-chain. These attestations are encoded as [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) and contain the issuer's digital signature—which allows for easy verification of off-chain claims.
+The solution is to issue attestations, held by users offchain in digital wallets, but signed with the issuer's DID stored onchain. These attestations are encoded as [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) and contain the issuer's digital signature—which allows for easy verification of offchain claims.
 
-Here's an hypothetical scenario to explain off-chain attestations:
+Here's an hypothetical scenario to explain offchain attestations:
 
 1. A university (the issuer) generates an attestation (a digital academic certificate), signs with its keys, and issues it to Bob (the identity owner).
 
 2. Bob applies for a job and wants to prove his academic qualifications to an employer, so he shares the attestation from his mobile wallet. The company (the verifier) can then confirm the validity of the attestation by checking the issuer's DID (i.e., its public key on Ethereum).
 
-### Off-chain attestations with persistent access {#offchain-attestations-with-persistent-access}
+### Offchain attestations with persistent access {#offchain-attestations-with-persistent-access}
 
-Under this arrangement attestations are transformed into JSON files and stored off-chain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a [hash](/glossary/#hash) of the JSON file is stored on-chain and linked to a DID via an on-chain registry. The associated DID could either be that of the issuer of the attestation or the recipient.
+Under this arrangement attestations are transformed into JSON files and stored offchain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a [hash](/glossary/#hash) of the JSON file is stored onchain and linked to a DID via an onchain registry. The associated DID could either be that of the issuer of the attestation or the recipient.
 
 This approach enables attestations to gain blockchain-based persistence, while keeping claims information encrypted and verifiable. It also allows for selective disclosure since the holder of the private key can decrypt the information.
 
-### On-chain attestations {#onchain-attestations}
+### Onchain attestations {#onchain-attestations}
 
-On-chain attestations are held in [smart contracts](/glossary/#smart-contract) on the Ethereum blockchain. The smart contract (acting as a registry) will map an attestation to a corresponding on-chain decentralized identifier (a public key).
+Onchain attestations are held in [smart contracts](/glossary/#smart-contract) on the Ethereum blockchain. The smart contract (acting as a registry) will map an attestation to a corresponding onchain decentralized identifier (a public key).
 
-Here's an example to show how on-chain attestations might work in practice:
+Here's an example to show how onchain attestations might work in practice:
 
 1. A company (XYZ Corp) plans to sell ownership shares using a smart contract but only wants buyers that have completed a background check.
 
-2. XYZ Corp can have the company performing background checks to issue on-chain attestations on Ethereum. This attestation certifies that an individual has passed the background check without exposing any personal information.
+2. XYZ Corp can have the company performing background checks to issue onchain attestations on Ethereum. This attestation certifies that an individual has passed the background check without exposing any personal information.
 
 3. The smart contract selling shares can check the registry contract for the identities of screened buyers, making it possible for the smart contract to determine who is permitted to buy shares or not.
 
 ### Soulbound tokens and identity {#soulbound}
 
-[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique on-chain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
+[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique onchain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
 
 ## Use decentralized identity {#use-decentralized-identity}
 
 There are many ambitious projects using Ethereum as a foundation for decentralized identity solutions:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for on-chain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
+- **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for onchain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
+- **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Open standard for authentication with Ethereum accounts._
 - **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
-- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making on-chain or off-chain attestations about anything._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._
@@ -180,12 +181,12 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _A great explainer video on decentralized identity by Andreas Antonopolous_
 - [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube tutorial on building out an identity management system for creating, reading, and updating a user's profile using their Ethereum wallet by Nader Dabit_
 - [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless podcast episode discussing BrightID, a decentralized identity solution for Ethereum_
-- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentation by Evin McMullen
+- [The Offchain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentation by Evin McMullen
 - [Verifiable Credentials Explained](https://www.youtube.com/watch?v=ce1IdSr-Kig) - YouTube explainer video with demo by Tamino Baumann
 
 ### Communities {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community for enthusiasts and developers working on Sign-in with Ethereum_
+- [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) — _Community for enthusiasts and developers working on Sign-in with Ethereum, and Ethereum Follow Protocol_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _A community of developers contributing to building a framework for verifiable data for applications_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _A community of developers and builders working on decentralized identity use cases across various industries_

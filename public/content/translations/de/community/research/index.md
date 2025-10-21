@@ -41,7 +41,7 @@ Genau wie zukunftsorientierte Forschung werden einige fundamentale Neugestaltung
 
 - [Einführung in Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG-Artikel](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG-Erklärung](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG-Erklärung](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Casper-Artikel](https://arxiv.org/abs/2003.03052)
 
 #### Aktuelle Forschung {#recent-research}
@@ -83,7 +83,7 @@ Ein Ethereum-Knoten wird benötigt, um zwei Arten von Software zu betreiben:
 1. einen Konsens-Client, um die Spitze der Blockchain zu verfolgen, Blöcke zu übermitteln und die Konsenslogik zu verarbeiten
 2. einen Ausführungs-Client, um die virtuelle Ethereum Virtual Machine (EVM) zu unterstützen und Transaktionen sowie Smart Contracts auszuführen
 
-Besuchen Sie die [Knoten- und Clients-Seite](/developers/docs/nodes-and-clients/), um mehr Details zu Knoten und Clients zu erfahren und eine Liste aller aktuellen Client-Implementationen einzusehen. Auf der [Verlaufsseite](/history/) können Sie auch den Verlauf aller Ethereum-Upgrades finden.
+Besuchen Sie die [Knoten- und Clients-Seite](/developers/docs/nodes-and-clients/), um mehr Details zu Knoten und Clients zu erfahren und eine Liste aller aktuellen Client-Implementationen einzusehen. Auf der [Verlaufsseite](/ethereum-forks/) können Sie auch den Verlauf aller Ethereum-Upgrades finden.
 
 ### Ausführungs-Clients {#execution-clients}
 
@@ -224,7 +224,7 @@ Die Wirtschaftsforschung rund um Ethereum verfolgt im Großen und Ganzen zwei An
 
 #### Hintergrundlektüre {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ETHconomics-Workshop bei Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Aktuelle Forschung {#recent-research-9}
@@ -307,7 +307,7 @@ Es werden mehr Tools für die Datenanalyse benötigt. Außerdem braucht es Dashb
 
 #### Aktuelle Forschung {#recent-research-14}
 
-- [Datenanalyse von Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Datenanalyse von Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Apps und Tools {#apps-and-tooling}
 

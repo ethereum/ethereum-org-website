@@ -1,6 +1,6 @@
 ---
 title: Ethereum Development Standards
-description:
+description: Learn about Ethereum standards including EIPs, token standards like ERC-20 and ERC-721, and development conventions.
 lang: en
 incomplete: true
 ---
@@ -17,7 +17,7 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
 - [Introduction to Ethereum Governance](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
-- [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
+- [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/@EthereumProtocol) _(YouTube Playlist)_
 
 ## Types of standards {#types-of-standards}
@@ -41,7 +41,7 @@ More detailed information on these different types and categories can be found i
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
   - [ERC-223](/developers/docs/standards/tokens/erc-223/) - A fungible tokens standard that makes tokens behave identical to ether and supports token transfers handling on the recipients side.
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Defines a token interface for ERC-20 tokens that supports executing recipient code after transfer or transferFrom, or spender code after approve.
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - An extension interface for ERC-20 tokens that supports executing callback on recipient contracts in a single transaction.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - A standardized event emitted when creating/transferring one, or many non-fungible tokens using consecutive token identifiers.
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Interface extension for EIP-721 consumer role.

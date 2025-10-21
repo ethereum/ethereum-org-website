@@ -95,8 +95,7 @@ Terokai projek dan sertai komuni DeSci.
 - [Molekul: Membiayai dan mendapatkan pembiayaan untuk projek penyelidikan anda](https://www.molecule.xyz/)
 - [VitaDAO: menerima pembiayaan melalui perjanjian penyelidikan yang ditaja untuk penyelidikan jangka hayat](https://www.vitadao.com/)
 - [ResearchHub: siarkan hasil saintifik dan libatkan diri dalam perbualan dengan rakan sebaya](https://www.researchhub.com/)
-- [LabDAO: lipat protein dalam-siliko](https://alphafodl.vercel.app/)
-- [dClimate API: data iklim pertanyaan yang dikumpul oleh komuniti teragih](https://api.dclimate.net/)
+- [dClimate API: data iklim pertanyaan yang dikumpul oleh komuniti teragih](https://www.dclimate.net/)
 - [Yayasan DeSci: pembina alat penerbitan DeSci](https://descifoundation.org/)
 - [DeSci.World: kedai sehenti untuk pengguna melihat, melibatkan diri dengan sains teragih](https://desci.world)
 - [OceanDAO: DAO mentadbir pembiayaan untuk sains berkaitan data](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Kami mengalu-alukan cadangan untuk projek baharu untuk disenaraikan - sila lihat
 - [Panduan kepada bioteknologi teagih oleh Jocelynn Pearl untuk masa depan a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Kes untuk DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Panduan untuk DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Sumber sains teragih](https://www.vincentweisser.com/decentralized-science)
+- [Sumber sains teragih](https://www.vincentweisser.com/desci)
 - [IP-NFT Biopharma Molecule - Penerangan Teknikal](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Membina Sistem Sains Tanpa Amanah oleh Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Masa Depan Sains Teragih (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ Kami mengalu-alukan cadangan untuk projek baharu untuk disenaraikan - sila lihat
 - [DeSci: Masa Depan Penyelidikan oleh Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Pembiayaan Sains (Epilog: DeSci dan primitif kripto baharu) oleh Nadia](https://nadia.xyz/science-funding)
 - [Keteragihan Mengganggu Perkembangan Ubatan](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Apakah DeSci – Sains Teragih?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Apakah DeSci – Sains Teragih?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Video {#videos}
 

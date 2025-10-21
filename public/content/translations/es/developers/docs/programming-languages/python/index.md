@@ -56,7 +56,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [eth-utils](https://github.com/ethereum/eth-utils/): _Funciones de utilidad para trabajar con bases de código relacionadas con Ethereum_
 - [py-solc-x:](https://pypi.org/project/py-solc-x/) _wrapper de Python en torno al compilador de Solidity con soporte 0.5.x_
 - [pymaker:](https://github.com/makerdao/pymaker) _API de Python para contratos de Maker_
-- [siwe:](https://github.com/spruceid/siwe-py) _inicio de sesión con Ethereum (siwe) para Python_
+- [siwe:](https://github.com/signinwithethereum/siwe-py) _inicio de sesión con Ethereum (siwe) para Python_
 - [DeFi Web3 para integraciones Ethereum:](https://github.com/tradingstrategy-ai/web3-ethereum-defi) _paquete de Python con integraciones listas para ERC-20, Uniswap y otros proyectos populares_
 - [Wake](https://getwake.io): _Un marco Python todo en uno para pruebas de contratos, fuzzing, implementación, análisis de vulnerabilidades y navegación de código (servidor de lenguajes, [Herramientas para Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

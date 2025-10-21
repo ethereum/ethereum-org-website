@@ -91,7 +91,7 @@ In 1977 heeft Wyoming de LLC uitgevonden, die ondernemers beschermt en hun aansp
 
 ### Een goed voorbeeld {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO gebruikte de DAO-wetgeving van Wyoming om 40 hectare land in de buurt van het Yellowstone National Park te kopen.
+[CityDAO](https://citizen.citydao.io/) – CityDAO gebruikte de DAO-wetgeving van Wyoming om 40 hectare land in de buurt van het Yellowstone National Park te kopen.
 
 ## DAO-lidmaatschap {#dao-membership}
 

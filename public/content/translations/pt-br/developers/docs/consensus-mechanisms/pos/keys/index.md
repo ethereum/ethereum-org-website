@@ -56,6 +56,8 @@ Separar as chaves de validação das chaves da conta Ethereum permite que vário
 
 ![esquema da chave de validação](validator-key-schematic.png)
 
+**Nota**: Sair das funções de staking e sacar o saldo de um validador atualmente requer a assinatura de uma [mensagem de saída voluntária (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) com a chave do validador. No entanto, o [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) é uma proposta que permitirá que um usuário acione a saída de um validador e saque seu saldo assinando mensagens de saída com a chave de saque no futuro. Isso reduzirá as suposições de confiança ao permitir que os participantes que delegam ETH a [provedores de staking como serviço](/staking/saas/#what-is-staking-as-a-service) mantenham o controle de seus fundos.
+
 ## Obtendo chaves de uma frase semente {#deriving-keys-from-seed}
 
 Se cada 32 ETH em stake precisavam de um novo conjunto de 2 chaves completamente independentes, o gerenciamento de chaves se tornaria rapidamente complicado, especialmente para usuários que executam vários validadores. Em vez disso, várias chaves de validação podem ser obtidas de um único segredo comum e armazenar esse segredo único permite acesso a várias chaves de validação.
@@ -94,3 +96,5 @@ Cada galho é separado por uma `/`, então `m/2` significa iniciar com a chave m
 
 - [Postagem no blog da Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Geração de chave EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: Saídas acionadas pela camada de execução](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Gerenciamento de chaves em escala](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

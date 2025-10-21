@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Қолданбаларды байқап көру",
   "page-index-cta-get-eth-description": "Ethereum валютасы",
   "page-index-cta-get-eth-label": "ETH алу",
-  "page-index-cta-networks-description": "Ең төмен комиссиялар",
-  "page-index-cta-networks-label": "Желіні таңдау",
   "page-index-cta-wallet-description": "Аккаунттар жасау және активтерді басқару",
   "page-index-cta-wallet-label": "Әмиянды таңдаңыз",
+  "page-index-cta-build-apps-description": "Алғашқы қосымшаңызды жасаңыз",
+  "page-index-cta-build-apps-label": "Құруды бастаңыз",
   "page-index-description": "Инновациялық қолданбалар мен блокчейн желілері үшін жетекші платформа",
   "page-index-developers-code-example-description-0": "Бағдарламалаған логикаңызбен басқарылатын банк жасаңыз",
   "page-index-developers-code-example-description-1": "Әр түрлі қолданбаларда тасымалдауға және пайдалануға болатын токен жасаңыз",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Соңғы жазбалар",
   "page-index-posts-subtitle": "Қауымдастықтан соңғы блог жазбалары және жаңартулар",
   "page-index-title": "Ethereum-ге қош келдіңіз",
+  "page-index-use-cases-tag": "Қолдану жағдайлары",
   "page-index-values-description": "Цифрлық революцияның бір бөлігі болыңыз",
   "page-index-values-header": "Интернет өзгеріп жатыр",
   "page-index-values-legacy": "Тарих",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Көпшіліктен жабық болу",
   "page-index-values-open-legacy-content-0": "Компаниялар өзінің зияткерлік меншігін қорғайды және онымен бөліспейді. Сырттай ешкім олардың қалай жұмыс істейтінін, мәселелерді шешетінін және жақсартуларды енгізетінін біле алмайды. Адамдарға жаңа құралдар жасау немесе қолданыстағыларын реттеу қиын.",
   "page-index-values-open-ethereum-label": "Барлығына ашық",
-  "page-index-values-open-ethereum-content-0": "Ethereum барлығына ашық. Кез келген адам кодты көре, пайдалана және жаңарта алады, осылайша платформаны барлығы үшін жақсарта алады."
+  "page-index-values-open-ethereum-content-0": "Ethereum барлығына ашық. Кез келген адам кодты көре, пайдалана және жаңарта алады, осылайша платформаны барлығы үшін жақсарта алады.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Жылдың ең үлкен Ethereum оқиғасына қосылыңыз",
+  "page-index-devconnect-banner-get-tickets": "Билеттерді алу"
 }

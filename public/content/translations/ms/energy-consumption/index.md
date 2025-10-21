@@ -61,18 +61,23 @@ Walaupun penggunaan tenaga Ethereum sangat rendah, terdapat juga bangunan komuni
 
 Platform pembiayaan barangan awam asli Web3 seperti [Gitcoin](https://gitcoin.co) menjalankan pusingan iklim untuk merangsang pembangunan yang berorientasikan alam sekitar di lapisan aplikasi Ethereum. Melalui pembangunan inisiatif ini (dan yang lain, contohnya [DeSci](/desci/)), Ethereum menjadi teknologi bersih positif alam sekitar dan sosial.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Jika anda fikir halaman ini boleh dibuat lebih tepat, sila kemukakan isu atau PR. Statistik pada halaman ini adalah anggaran berdasarkan data yang tersedia secara umum - ia tidak mewakili kenyataan rasmi atau janji daripada pasukan ethereum.org, atau Yayasan Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Bacaan lanjut {#further-reading}
 
 - [Indeks Kemampanan Rangkaian Blok Rantai Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Laporan Rumah Putih mengenai blok rantai bukti kerja](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Laporan Rumah Putih mengenai blok rantai bukti kerja](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Pelepasan Ethereum: Anggaran Dari Bawah Ke Atas](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Indeks Penggunaan Tenaga Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@DalamSim](https://twitter.com/InsideTheSim)_
-- [The Merge - Implikasi pada Penggunaan Elektrik dan Jejak Karbon daripada Rangkaian Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
+- [ ETHMerge.com ](https://ethmerge.com/) - _[@DalamSim](https://twitter.com/InsideTheSim)_
+- [The Merge - Implikasi pada Penggunaan Elektrik dan Jejak Karbon daripada Rangkaian Ethereum ](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Penggunaan tenaga Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
 ## Topik berkaitan {#related-topics}

@@ -130,7 +130,7 @@ function auctionEnd() external {
 
 ##### 3 計算程式碼覆蓋率
 
-[程式碼覆蓋率](https://en.m.wikipedia.org/wiki/Code_coverage)是一種測試指標，用於追蹤在測試過程中執行的程式碼分支、行和陳述式的數量。 測試應該覆蓋足夠多的程式碼，否則你可能會遭遇「漏報」，即合約通過了所有測試，但漏洞依然存在于程式碼中。 但是，透過覆蓋足夠多的程式碼，就可以確保智慧型合約中的所有陳述式/函式都經過充分的正確性測試。
+[程式碼覆蓋率](https://en.m.wikipedia.org/wiki/Code_coverage)是一種測試指標，用於追蹤在測試過程中執行的程式碼分支、行和陳述式的數量。 測試應該具有良好的程式碼覆蓋率，以最大程度地減少未經測試漏洞的風險。 如果沒有充足的程式碼覆蓋率，你可能會因爲所有測試都通過了而誤認爲你的合約是安全的，而未經測試的程式碼路徑中仍存在漏洞。 但是，透過覆蓋足夠多的程式碼，就可以確保智慧型合約中的所有陳述式/函式都經過充分的正確性測試。
 
 ##### 4 使用精心開發的測試框架
 
@@ -259,7 +259,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 - **[Brownie 單元測試框架](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie 利用 Pytest，一個功能豐富的測試框架，使你能夠用最少的程式碼編寫小型測試，並且對於大型項目擴展良好，具有高度可延伸性。_
 
-- **[Foundry 測試](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry 提供了 Forge，一個快速且靈活的以太坊測試框架，能夠執行簡單的單元測試、燃料優化檢查，以及合約模糊測試。_
+- **[Foundry 測試](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry 提供了 Forge，一個快速且靈活的以太坊測試框架，能夠執行簡單的單元測試、燃料優化檢查，以及合約模糊測試。_
 
 - **[Hardhat 測試](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _基於 ethers.js、Mocha 和Chai 的智慧型合約測試框架。_
 

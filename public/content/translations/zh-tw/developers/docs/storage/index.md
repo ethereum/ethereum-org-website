@@ -88,7 +88,6 @@ SWARM 是一種去中心化的資料儲存和分發技術，具有儲存激勵�
 
 無「認識客戶」之去中心化工具：
 
-- Züs（實作非 KYC 版本）
 - Skynet
 - Arweave
 - Filecoin
@@ -145,7 +144,7 @@ SWARM 是一種去中心化的資料儲存和分發技術，具有儲存激勵�
 - [文件](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs - _Züs 是具有分片和 blobber 的權益證明去中心化存儲平台。_**
+**Züs - _Züs 是具有分片和 Blobber 的權益證明去中心化存儲平台。_**
 
 - [zus.network](https://zus.network/)
 - [文件](https://0chaindocs.gitbook.io/zus-docs)

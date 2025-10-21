@@ -38,12 +38,12 @@ Platforms with blockchain-based persistence:
 
 **Contract-based** persistence has the intuition that data cannot be replicated by every node and stored forever, and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
 
-In most cases, instead of storing all data on-chain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
+In most cases, instead of storing all data onchain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
 
 Platforms with contract-based persistence:
 
-- [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Filecoin](https://docs.filecoin.io/basics/what-is-filecoin)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
@@ -126,11 +126,11 @@ Proof-of-stake based:
 - [Documentation](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
+**Sia - _Harnesseses cryptography to create a trustless cloud storage marketplace, allowing buyers and sellers to transact directly._**
 
-- [Skynet.net](https://siasky.net/)
-- [Documentation](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Documentation](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
 
@@ -147,7 +147,7 @@ Proof-of-stake based:
 **Züs - _Züs is a proof-of-stake dStorage platform with sharding and blobbers._**
 
 - [zus.network](https://zus.network/)
-- [Documentation](https://0chaindocs.gitbook.io/zus-docs)
+- [Documentation](https://docs.zus.network/zus-docs/)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crust is a dStorage platform on top of the IPFS._**
@@ -159,7 +159,7 @@ Proof-of-stake based:
 **Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
-- [Documentation](https://docs.ethswarm.org/docs/)
+- [Documentation](https://docs.ethswarm.org/)
 - [GitHub](https://github.com/ethersphere/)
 
 **OrbitDB - _A decentralized peer to peer database on top of IPFS._**
@@ -170,14 +170,14 @@ Proof-of-stake based:
 
 **Aleph.im - _Decentralized cloud project (database, file storage, computing and DID). A unique blend of offchain and onchain peer-to-peer technology. IPFS and multi-chain compatibility._**
 
-- [Aleph.im](https://aleph.im/)
-- [Documentation](https://aleph.im/#/developers/)
+- [Aleph.im](https://aleph.cloud/)
+- [Documentation](https://docs.aleph.cloud/)
 - [GitHub](https://github.com/aleph-im/)
 
 **Ceramic - _User-controlled IPFS database storage for data-rich and engaging applications._**
 
 - [Ceramic.network](https://ceramic.network/)
-- [Documentation](https://developers.ceramic.network/learn/welcome/)
+- [Documentation](https://developers.ceramic.network/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
 **Filebase - _S3-compatible decentralized storage and geo-redundant IPFS pinning service. All files uploaded to IPFS through Filebase are automatically pinned to the Filebase infrastructure with 3x replication across the globe._**
@@ -206,7 +206,7 @@ Proof-of-stake based:
 
 ## Further reading {#further-reading}
 
-- [What Is Decentralized Storage?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
+- [What Is Decentralized Storage?](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Busting Five Common Myths about Decentralized Storage](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Know of a community resource that helped you? Edit this page and add it!_

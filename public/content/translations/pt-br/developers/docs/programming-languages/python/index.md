@@ -32,7 +32,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Artigos intermediários {#intermediate-articles}
 
-- [Devenvolvimento de Dapp para programadores Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Desenvolvimento de Dapp para programadores Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Criando uma Interface Python Ethereum: Parte 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Contratos Inteligentes Ethereum em Python: um guia (mais ou menos) abrangente](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 - [Usando Brownie e Python para implantar Contratos Inteligentes](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
@@ -51,21 +51,22 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteca em Python para interagir com Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Linguagem de Smart Contract em Python para a Máquina Virtual Ethereum_
 - [Ape](https://github.com/ApeWorX/ape) - _A ferramenta de desenvolvimento de contrato inteligente (smart contract) para Pythonistas, Cientistas de Dados e Profissionais de Segurança_
-- [Brownie](https://github.com/eth-brownie/brownie) - _Framework em Python para implantar, testar e interagir com contratos inteligentes Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementação de uma Máquina Virtual Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funções de utilidade para trabalhar com bases de código relacionadas com a Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5._
-- [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementação de uma pilha P2P Ethereum_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _API em Python para contratos Maker_
-- [siwe](https://github.com/spruceid/siwe-py) - _Registre-se com Ethereum (siwe) para Python_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Registre-se com Ethereum (siwe) para Python_
 - [Web3 DeFi para integrações Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Um pacote Python com integrações prontas para ERC-20, Uniswap e outros projetos populares_
+- [Wake](https://getwake.io) - _Framework Python completo para teste de contratos, fuzzing, implantação, varredura de vulnerabilidades e navegação de código (servidor de linguagem - [Ferramentas para Solidez](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### Arquivado / Não mais mantido: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _cliente Ethereum Python_
 - [Mamba](https://github.com/arjunaskykok/mamba) - _Framework para escrever, compilar e implantar contratos inteligentes escritos em linguagem Vyper_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Framework em Python para implantar, testar e interagir com contratos inteligentes Ethereum_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementação de uma pilha P2P Ethereum_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web_
 
 Procurando por mais recursos? Confira [ethereum.org/developers](/developers/).
 
@@ -82,8 +83,8 @@ Os seguintes projetos baseados na Ethereum usam ferramentas mencionadas nesta p�
 ## Comunidade de discussão Python {#python-community-contributors}
 
 - [Comunidade Discord Python Ethereum](https://discord.gg/9zk7snTfWe) Para discussões sobre Web3.py e outros frameworks Python
-- [Vyper Discord](https://discord.gg/SdvKC79cJk) Para discussão sobre programação de contrato inteligente com Vyper
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) Para discussões sobre a programação de contratos inteligentes com Vyper
 
 ## Demais listas agregadas {#other-aggregated-lists}
 
-A wiki Vyper tem uma [Lista incrível de recursos para Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+A wiki Vyper tem uma [Lista incrível de recursos sobre Vyper](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

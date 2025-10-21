@@ -1,6 +1,6 @@
 ---
 title: Deploying smart contracts
-description:
+description: Learn how to deploy smart contracts to Ethereum networks, including prerequisites, tools, and deployment steps.
 lang: en
 ---
 

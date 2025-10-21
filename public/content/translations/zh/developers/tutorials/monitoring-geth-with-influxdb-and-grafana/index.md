@@ -29,7 +29,7 @@ published: 2021-01-13
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-还可以选择 [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter)，它是一个用 InfluxDB 和 Grafana 预先配置的选项。 你可以使用 docker 和适用于树莓派 4 的 [Ethbian 操作系统](https://ethbian.org/index.html) 轻松设置它。
+还可以选择 [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter)，它是一个用 InfluxDB 和 Grafana 预先配置的选项。
 
 在本教程中，我们将设置你的 Geth 客户端，将数据推送到 InfluxDB 以创建数据库，并设置 Grafana 来对数据进行图形可视化。 手动操作将帮助你更好地理解这一过程，你可以加以改动，并在不同的环境中部署。
 

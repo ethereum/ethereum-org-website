@@ -61,14 +61,19 @@ lang: fa
 
 پلتفرمهای بومی Web3 برای تامین هزینه کالاهای عمومی مثل [Gitcoin](https://gitcoin.co) میزگردهای مربوط به اقلیم را برای تحریک ساخت سازگار با محیط زیست در لایه اپلیکیشن اتریوم، اجرا می‌کنند. به خاطر این ابتکارها (و موارد دیگر مثل [DeSci](/desci/)) اتریوم از جنبه محیط زیستی و اجتماعی در حال تبدیل شدن به یک تکنولوژی کاملا مثبت است.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   اگر فکر می‌کنید این صفحه می‌تواند دقیق‌تر شود، لطفاً آن را در قالب یک مشکل یا درخواست مطرح کنید. آمار این صفحه بر اساس داده های عمومی می باشد. آنها نشان‌دهنده اعلام رسمی یا قول تیم ethereum.org یا بنیاد اتریوم نیستند.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## بیشتر بخوانید {#further-reading}
 
 - [شاخص پایداری شبکه بلاک‌چین کمبریج](https://ccaf.io/cbnsi/ethereum)
-- [گزارش کاخ سفید درباره اثبات کار بلاک‌چین‌ها](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [گزارش کاخ سفید درباره اثبات کار بلاک‌چین‌ها](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [انتشارات اتریوم: یک برآورد پایین به بالا](https://kylemcdonald.github.io/ethereum-emissions/) - _ کیلی مک دونالد_
 - [شاخص مصرف انرژی اتریوم](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_

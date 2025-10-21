@@ -511,7 +511,7 @@ La funzione `a.sub(b, "message")` produce due azioni. Innanzi tutto calcola `a-b
 
 È pericoloso impostare un margine di tolleranza diverso da zero su un altro valore diverso da zero, perché puoi controllare solo l'ordine delle tue transazioni, ma non di quelle altrui. Immagina che ci siano due utenti: Alice, una ragazza ingenua, e Bill, un uomo disonesto. Alice vuole ricevere da Bill un servizio che secondo lei costa cinque token, quindi concede a Bill un margine di tolleranza di cinque token.
 
-Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è ancora interessata a ricevere il servizio, invia una transazione che imposta il margine di tolleranza di Bill a dieci. Quando Bill vede questa nuova transazione nel pool della transazione, invia una transazione che spende cinque token di Alice e ha un prezzo del gas molto maggiore, così che sarà minata più rapidamente. In questo modo Bill può spendere prima i cinque token e poi, una volta minato il nuovo margine di tolleranza di Alice, spenderne altri dieci per un prezzo complessivo di quindici token, più di quanto Alice volesse autorizzare. Questa tecnica è detta [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è ancora interessata a ricevere il servizio, invia una transazione che imposta il margine di tolleranza di Bill a dieci. Quando Bill vede questa nuova transazione nel pool della transazione, invia una transazione che spende cinque token di Alice e ha un prezzo del gas molto maggiore, così che sarà minata più rapidamente. In questo modo Bill può spendere prima i cinque token e poi, una volta minato il nuovo margine di tolleranza di Alice, spenderne altri dieci per un prezzo complessivo di quindici token, più di quanto Alice volesse autorizzare. Questa tecnica è detta [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Transazione di Alice | Nonce di Alice | Transazione di Bill           | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
 | -------------------- | -------------- | ----------------------------- | ------------- | ------------------ | ------------------------------- |
@@ -587,7 +587,7 @@ La funzione `a.add(b)` è un'aggiunta sicura. Nell'improbabile caso in cui `a`+`
 
 Queste sono le quattro funzioni che effettuano il lavoro effettivo: `_transfer`, `_mint`, `_burn` e `_approve`.
 
-#### La funzione \_transfer {#\_transfer}
+#### La funzione \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Queste sono le righe che effettuano concretamente il trasferimento. Nota che non
 
 Infine, emetti un evento `Transfer`. Gli eventi non sono accessibili agli smart contract, ma il codice eseguito al di fuori della blockchain può ascoltarli e reagire a essi. Ad esempio, un portafoglio può tracciare la ricezione di altri token da parte del proprietario.
 
-#### Le funzioni \_mint e \_burn {#\_mint-and-\_burn}
+#### Le funzioni \_mint e \_burn {#_mint-and-_burn}
 
 Queste due funzioni (`_mint` e `_burn`) modificano la fornitura totale di token. Sono interne e non esiste alcuna funzione che le chiami in questo contratto, quindi sono utili solo se erediti dal contratto e aggiungi la tua logica per decidere a quali condizioni coniare nuovi token o bruciare quelli esistenti.
 
@@ -706,7 +706,7 @@ Assicurati di aggiornare `_totalSupply` quando il numero totale di token cambia.
 
 La funzione `_burn` è quasi identica a `_mint`, con la differenza che va in senso opposto.
 
-#### La funzione \_approve {#\_approve}
+#### La funzione \_approve {#_approve}
 
 Questa è la funzione che specifica concretamente i margini di tolleranza. Nota che consente a un proprietario di specificare una tolleranza superiore al saldo corrente del proprietario. Questo non è un problema, poiché il saldo è controllato al momento del trasferimento, quando potrebbe differire dal saldo alla creazione del margine di tolleranza.
 
@@ -784,7 +784,7 @@ Questa funzione modifica la variabile `_decimals`, usata per indicare alle inter
 
 Questa è la funzione hook da chiamare durante i trasferimenti. Qui è vuota, ma se hai bisogno di fare qualcosa, basta sovrascriverla.
 
-# Conclusioni {#conclusion}
+## Conclusioni {#conclusion}
 
 A titolo di ripasso, ecco alcune delle idee più importanti in questo contrato (a mio parere, probabilmente il tuo sarà diverso):
 

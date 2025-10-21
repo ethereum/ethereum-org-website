@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Скористайтеся програмами",
   "page-index-cta-get-eth-description": "Валюта Ethereum",
   "page-index-cta-get-eth-label": "Отримати ETH",
-  "page-index-cta-networks-description": "Скористайтеся перевагами мінімальної комісії",
-  "page-index-cta-networks-label": "Оберіть мережу",
   "page-index-cta-wallet-description": "Створюйте облікові записи та керуйте активами",
   "page-index-cta-wallet-label": "Виберіть гаманець",
+  "page-index-cta-build-apps-description": "Створіть свій перший застосунок",
+  "page-index-cta-build-apps-label": "Почніть розробку",
   "page-index-description": "Провідна платформа інноваційних програм і блокчейн-мереж",
   "page-index-developers-code-example-description-0": "Створіть банк, який користається запрограмованою вами логікою",
   "page-index-developers-code-example-description-1": "Створюйте токени, які можна переносити в інші програми та використовувати в них",
@@ -65,7 +65,7 @@
   "page-index-learn-tag": "Довідка",
   "page-index-learn-header": "Опанування Ethereum",
   "page-index-meta-description": "Ethereum — це глобальна децентралізована платформа для заробітку грошей і створення нових програм. На ній можна написати код, який контролюватиме обмін коштами, і розробити програми, доступні звідусіль.",
-  "page-index-meta-title": "Повний посібник Ethereum",
+  "page-index-meta-title": "Ethereum.org: повний путівник по Ethereum",
   "page-index-network-stats-total-eth-staked": "Захист цінності Ethereum",
   "page-index-network-stats-tx-cost-description": "Середня вартість транзакції",
   "page-index-network-stats-tx-day-description": "Транзакції за останні 24 години",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Останні публікації",
   "page-index-posts-subtitle": "Найновіші публікації в блозі та оновлення від спільноти",
   "page-index-title": "Раді вітати в Ethereum",
+  "page-index-use-cases-tag": "Способи застосування",
   "page-index-values-description": "Станьте частиною цифрової революції",
   "page-index-values-header": "Інтернет змінюється",
   "page-index-values-legacy": "Спадок",
@@ -116,5 +117,7 @@
   "page-index-values-open-legacy-label": "Закритість для більшості людей",
   "page-index-values-open-legacy-content-0": "Компанії захищають власну інтелектуальну власність, не ділячись нею. Жодна людина поза межами компанії не може дізнатися, як функціонує система, не може розв’язати проблеми чи внести покращення. Людям стає важко створювати нові інструменти й налаштовувати їх під себе.",
   "page-index-values-open-ethereum-label": "Відкритість для всіх",
-  "page-index-values-open-ethereum-content-0": "Мережа Ethereum відкрита для всіх. Будь-хто може бачити, використовувати й покращувати код, щоб зробити систему зручнішою для людей."
+  "page-index-values-open-ethereum-content-0": "Мережа Ethereum відкрита для всіх. Будь-хто може бачити, використовувати й покращувати код, щоб зробити систему зручнішою для людей.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Приєднуйтесь до найбільшої події року в мережі Ethereum",
+  "page-index-devconnect-banner-get-tickets": "Отримати квитки"
 }

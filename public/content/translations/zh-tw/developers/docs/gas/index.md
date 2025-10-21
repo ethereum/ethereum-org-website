@@ -1,5 +1,6 @@
 ---
 title: 燃料和費用
+metaTitle: "以太坊燃料和費用：技術概覽"
 description:
 lang: zh-tw
 ---
@@ -134,7 +135,6 @@ lang: zh-tw
 
 - [以太坊燃料詳解](https://defiprime.com/gas)
 - [減低智慧型合約之燃料消耗](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [權益證明與工作量證明](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [開發者的燃料優化策略](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 文檔](https://eips.ethereum.org/EIPS/eip-1559)。
 - [Tim Beiko 的 EIP-1559 資源](https://hackmd.io/@timbeiko/1559-resources)。

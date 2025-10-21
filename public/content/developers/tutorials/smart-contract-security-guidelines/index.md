@@ -22,11 +22,11 @@ Documentation can be written at different levels, and should be updated while im
 
 - **A plain English description of the system**, describing what the contracts do and any assumptions on the codebase.
 - **Schema and architectural diagrams**, including the contract interactions and the state machine of the system. [Slither printers](https://github.com/crytic/slither/wiki/Printer-documentation) can help to generate these schemas.
-- **Thorough code documentation**, the [Natspec format](https://solidity.readthedocs.io/en/develop/natspec-format.html) can be used for Solidity.
+- **Thorough code documentation**, the [Natspec format](https://docs.soliditylang.org/en/develop/natspec-format.html) can be used for Solidity.
 
-### On-chain vs off-chain computation {#on-chain-vs-off-chain-computation}
+### Onchain vs offchain computation {#onchain-vs-offchain-computation}
 
-- **Keep as much code as you can off-chain.** Keep the on-chain layer small. Pre-process data with code off-chain in such a way that verification on-chain is simple. Do you need an ordered list? Sort the list offchain, then only check its order onchain.
+- **Keep as much code as you can offchain.** Keep the onchain layer small. Pre-process data with code offchain in such a way that verification onchain is simple. Do you need an ordered list? Sort the list offchain, then only check its order onchain.
 
 ### Upgradeability {#upgradeability}
 
@@ -62,7 +62,7 @@ The architecture of your codebase should make your code easy to review. Avoid ar
 ### Avoid known pitfalls {#avoid-known-pitfalls}
 
 - **Be aware of the most common security issues.** There are many online resources to learn about common issues, such as [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Capture the Ether](https://capturetheether.com/), or [Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/).
-- **Be aware of the warnings sections in the [Solidity documentation](https://solidity.readthedocs.io/en/latest/).** The warnings sections will inform you about non-obvious behavior of the language.
+- **Be aware of the warnings sections in the [Solidity documentation](https://docs.soliditylang.org/en/latest/).** The warnings sections will inform you about non-obvious behavior of the language.
 
 ### Dependencies {#dependencies}
 

@@ -134,6 +134,7 @@ export const WalletProductTableStory: Story = {
     wallets: walletsData.map((wallet) => {
       return {
         ...wallet,
+        id: wallet.name,
         languages_supported: wallet.languages_supported as Lang[],
         supportedLanguages: wallet.languages_supported as Lang[],
         supported_chains: [],

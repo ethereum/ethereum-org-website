@@ -34,9 +34,9 @@ In order to create a digital signature for use on Ethereum-based blockchains, yo
 
 Your Ethereum account (i.e. your externally-owned account/EOA) has a private key associated with it, and this is the private key that’s typically used when a website or dapp asks you for a signature (e.g. for “Log in with Ethereum”).
 
-An app can [verify a signature](https://docs.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
+An app can [verify a signature](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
 
-> In fact, because EOA digital signatures use public-key cryptography, they can be generated and verified **off-chain**! This is how gasless DAO voting works — instead of submitting votes on-chain, digital signatures can be created and verified off-chain using cryptographic libraries.
+> In fact, because EOA digital signatures use public-key cryptography, they can be generated and verified **offchain**! This is how gasless DAO voting works — instead of submitting votes onchain, digital signatures can be created and verified offchain using cryptographic libraries.
 
 While EOA accounts have a private key, smart contract accounts do not have any sort of private or secret key (so "Log in with Ethereum", etc. cannot natively work with smart contract accounts).
 
@@ -92,11 +92,11 @@ One notable contract which implements EIP-1271 is Safe (previously Gnosis Safe).
 
 In Safe’s code, `isValidSignature` [is implemented](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol) so that signatures can be created and verified in [two ways](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
 
-1. On-chain messages
+1. Onchain messages
    1. Creation: a safe owner creates a new safe transaction to “sign” a message, passing the message as data into the transaction. Once enough owners sign the transaction to reach the multisig threshold, the transaction is broadcast and run. In the transaction, there is a safe function called which adds the message to a list of “approved” messages.
    2. Verification: call `isValidSignature` on the Safe contract, and pass in the message to verify as the message parameter and [an empty value for the signature parameter](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (i.e. `0x`). The Safe will see that the signature parameter is empty and instead of cryptographically verifying the signature, it will know to just go ahead and check whether the message is on the list of “approved” messages.
-2. Off-chain messages:
-   1. Creation: a safe owner creates a message off-chain, then gets other safe owners to sign the message each individually until there are enough signatures to overcome the multisig approval threshold.
+2. Offchain messages:
+   1. Creation: a safe owner creates a message offchain, then gets other safe owners to sign the message each individually until there are enough signatures to overcome the multisig approval threshold.
    2. Verification: call `isValidSignature`. In the message parameter, pass in the message to be verified. In the signature parameter, pass in each safe owner’s individual signatures all concatenated together, back-to-back. The Safe will check that there are enough signatures to meet the threshold **and** that each signature is valid. If so, it will return a value indicating successful signature verification.
 
 ## What exactly is the `_hash` parameter? Why not pass the whole message?

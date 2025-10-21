@@ -48,7 +48,7 @@ Clique em **Criar app**. Seu app aparecerá na tabela abaixo.
 
 Você precisa de uma conta Ethereum para enviar e receber transações. Nós usaremos MetaMask, a carteira virtual no navegador que permite usuários gerenciarem o endereço da sua conta Ethereum.
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando você estiver criando uma conta, ou se já tiver uma conta, certifique-se de mudar para a “Rede de teste Goerli”, no canto superior direito (para que não estejamos lidando com dinheiro real).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download). Quando você estiver criando uma conta, ou se já tiver uma conta, certifique-se de mudar para a “Rede de teste Goerli”, no canto superior direito (para que não estejamos lidando com dinheiro real).
 
 ### Etapa 4: Adicionar ether de um faucet {#step-4-add-ether-from-a-faucet}
 
@@ -260,7 +260,7 @@ No diretório do projeto, digite:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Etapa 13: Atualizar hardhat.config.js {#step-13-update-hardhat.configjs}
+### Etapa 13: Atualizar hardhat.config.js {#step-13-update-hardhat-configjs}
 
 Até aqui, já adicionamos diversas dependências e plugins. Agora precisamos atualizar o `hardhat.config.js` para que nosso projeto reconheça todos eles.
 
@@ -1116,7 +1116,7 @@ Se você quiser entender mais sobre como as transações no Ethereum funcionam, 
 
 #### Baixar MetaMask {#download-metamask}
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Ao criar uma conta, ou mesmo se você já tiver uma conta, certifique-se de mudar para "Goerli Test Network” na parte superior direita \(para não lidarmos com dinheiro real\).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download). Ao criar uma conta, ou mesmo se você já tiver uma conta, certifique-se de mudar para "Goerli Test Network” na parte superior direita \(para não lidarmos com dinheiro real\).
 
 #### Etapa: Adicionar Faucet ether {#add-ether-from-a-faucet}
 
@@ -1171,7 +1171,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1267,7 +1267,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1329,7 +1329,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

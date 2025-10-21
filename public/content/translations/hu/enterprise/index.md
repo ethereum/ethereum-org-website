@@ -89,7 +89,7 @@ A legtöbb új blokklánc-alkalmazás az [L2](/layer-2) láncokra épül. A más
 - [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _a Tokeny révén tokenizált, zöld kötvények_
 - [Crowdz](https://crowdz.io/) - _platform számlák/követelések pénzügyi kezelésére és faktoringjára_
 - [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _ingatlanbefektetések tokenizálása_
-- [Obligate](https://www.obligate.com/) - _szabályozott és ellenőrzött (KYC) láncon belüli kötvények és kereskedelmi papírok_
+- [Obligate](https://www.obligate.com/) – _szabályozott és ellenőrzött (KYC) láncon belüli kötvények és kereskedelmi papírok_
 - [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain) - _kötvénykibocsátás_
 - [Sila](https://silamoney.com/) - _bankolásra és ACH-fizetésre szolgáló infrastruktúra mint szolgáltatás egy stabil érmét használva_
 - [Societe Generale FORGE](https://www.sgforge.com/product/bonds/) - _kötvénykibocsátás_
@@ -116,7 +116,7 @@ A legtöbb új blokklánc-alkalmazás az [L2](/layer-2) láncokra épül. A más
 ### Adatok notarizációja {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Olasz hírügynökség, mely az álhírek ellen küzd, és lehetővé teszi az olvasók számára, hogy a hírek eredetét a főhálózaton történő rögzítéssel ellenőrizzék_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _az órák származását és javítási történetét rögzíti az Ethereumon_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _az órák származását és javítási történetét rögzíti az Ethereumon_
 - [BRØK](https://www.xn--brk-1na.no/) - _platform a tőzsdén nem jegyzett társaságoknak, melyet a norvég kormány biztosít_
 - [Certifaction](https://certifaction.com/) - _legálisan érvényes elektronikus aláírások, melynek eleve része az adatvédelem_
 - [EthSign](https://ethsign.xyz/) - _feljegyezi az Ethereum-blokkláncra az aláírt elektronikus dokumentumokat_

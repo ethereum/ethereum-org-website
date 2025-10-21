@@ -10,16 +10,6 @@ import {
   TableRow,
 } from "../../table"
 
-/*
- * Note on the Chakra Table components:
- *
- * Only the `TableCell`, `Th`, `Tr`, `TableBody`, and `TableHeader` components are used because those are the
- * only table elements we are defining styles with and sending to the MDX provider
- *
- * The use of `align` is a mock for the `align` prop from the MDX parsing going to
- * the former prop in the given Chakra component.
- */
-
 export const MdxDemoData = () => (
   <>
     <TableHeader>

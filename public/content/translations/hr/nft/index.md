@@ -54,12 +54,15 @@ NFT-evi se upotrebljavati za mnoge svrhe, uključujući:
 
 Možda ste umjetnik koji želi podijeliti svoj rad koristeći NFT-eve, bez gubljenja kontrole i žrtvovanja profita u korist posrednika. Možete izraditi novi ugovor i točno odrediti broj NFT-eva, njihove karakteristike i vezu s određenim umjetničkim djelom. Kao umjetnik **možete u pametni ugovor programirati tantijeme** koje vam se trebaju platiti (npr. prenijeti 5 % od prodajne cijene vlasniku ugovora svaki put kada se NFT prenese). Također, uvijek možete dokazati da ste vi izradili NFT jer ste vlasnik [novčanika](/glossary/#wallet) koji je primijenio ugovor. Vaši kupci mogu jednostavno dokazati da posjeduju **autentični NFT** iz vaše kolekcije jer je njihova [adresa](/glossary/#address) novčanika povezana s tokenom u vašem pametnom ugovoru. Oni ga mogu koristiti u cijelom Ethereumovom ekosustavu, sigurni u njegovu autentičnost.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Istražite, kupite ili izradite vlastitu NFT za umjetnost/kolekcionarske predmete...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Istražite NFT za umjetnost
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Ili zamislite ulaznicu za neki sportski događaj. Isto kao što **organizator nekog događaja može izabrati koliko će karata prodavati**, tako i kreator NFT-a može odlučiti koliko će kopija postojati. Ponekad su to identične kopije, kao na primjer 5000 karata za slobodan ulaz. Ponekad se izradi nekoliko vrlo sličnih, ali svaki malo drugačiji, kao što je ulaznica s dodijeljenim mjestom. One mogu biti kupljene i prodane direktno bez plaćanja posredniku za ulaznice, a kupac uvijek može biti siguran u autentičnost ulaznice provjerom adrese ugovora.
 

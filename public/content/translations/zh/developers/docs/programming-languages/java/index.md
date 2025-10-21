@@ -50,7 +50,6 @@ incomplete: true
 
 ## Java 项目和工具 {#java-projects-and-tools}
 
-- [Hyperledger Besu (Pantheon)（以太坊客户端）](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J（与以太坊客户端交互的库）](https://github.com/web3j/web3j)
 - [ethers-kt（面向基于以太坊虚拟机区块链的高性能异步 Kotlin/Java/Android 库）](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum（事件侦听器）](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ incomplete: true
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu HL 聊天室](https://chat.hyperledger.org/channel/besu)

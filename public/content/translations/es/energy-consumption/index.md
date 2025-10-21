@@ -35,7 +35,7 @@ Obtener las estimaciones precisas de consumo energético es complicado, especial
 
 Las estimaciones de arriba no son comparaciones perfectas. La cantidad de gastos indirectos contabilizados varía dependiendo de la fuente, y rara vez incluye la energía de los dispositivos de usuario final. Cada fuente subyacente incluye mas detalles sobre lo que se está midiendo.
 
-La tabla y el gráfico de arriba también incluyen comparaciones con Bitcoin y con la prueba de trabajo de Ethereum. Es importante notar que el consumo energético de las redes de prueba de trabajo no es estático y que cambia diariamente. Las estimaciones pueden a su vez variar ampliamente dependiendo de la fuente. El tema atrae [debates](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/) moderados, no solo sobre la cantidad de consumo energético, sino también sobre las fuentes de energía utilizadas y la ética asociada. El consumo de energía no se correlaciona necesariamente con la huella ambiental de manera precisa, debido a que diferentes proyectos pueden utilizar distintas fuentes de energía, como por ejemplo una proporción mayor o menor de energías renovables. Por ejemplo, el [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci/comparisons) indica que teóricamente la demanda de la red de Bitcoin podría alimentarse de un suministro de gas o electricidad que de otra manera se perdería en los procesos de transmisión y distribución. La ruta de Ethereum hacia la sostenibilidad consistió en reemplazar la parte de la red que consumía mucha energía por una alternativa ecológica.
+La tabla y el gráfico de arriba también incluyen comparaciones con Bitcoin y con la prueba de trabajo de Ethereum. Es importante notar que el consumo energético de las redes de prueba de trabajo no es estático y que cambia diariamente. Las estimaciones pueden a su vez variar ampliamente dependiendo de la fuente. El tema atrae [ debates ](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/) moderados, no solo sobre la cantidad de consumo energético, sino también sobre las fuentes de energía utilizadas y la ética asociada. El consumo de energía no se correlaciona necesariamente con la huella ambiental de manera precisa, debido a que diferentes proyectos pueden utilizar distintas fuentes de energía, como por ejemplo una proporción mayor o menor de energías renovables. Por ejemplo, el [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci/comparisons) indica que teóricamente la demanda de la red de Bitcoin podría alimentarse de un suministro de gas o electricidad que de otra manera se perdería en los procesos de transmisión y distribución. La ruta de Ethereum hacia la sostenibilidad consistió en reemplazar la parte de la red que consumía mucha energía por una alternativa ecológica.
 
 Las estimaciones de consumo de energía y emisiones de carbono se pueden consultar en el sitio web del [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum).
 
@@ -61,14 +61,19 @@ Mientras que el consumo de energía de Ethereum es muy bajo, también se está d
 
 Las plataformas nativas de financiación de bienes públicos en Web3, como [Gitcoin](https://gitcoin.co) realizan rondas climáticas para estimular el desarrollo respetuoso con el medio ambiente en la capa de aplicación de Ethereum. A través del desarrollo de estas iniciativas (y otras, como por ejemplo, [DeSci](/desci/)), Ethereum se está convirtiendo en una tecnología medioambiental y socialmente positiva.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Si cree que esta página puede ser más precisa, plantee un problema o solicitud pull (PR). Las estadísticas de esta página son estimaciones basadas en datos disponibles públicamente; no representan una declaración oficial ni una promesa del equipo de ethereum.org ni de la Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Más información {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Informe de la Casa Blanca sobre las cadenas de bloques de prueba de trabajo](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Informe de la Casa Blanca sobre las cadenas de bloques de prueba de trabajo](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisiones Ethereum: un cálculo estimado ascendente](https://kylemcdonald.github.io/ethereum-emissions/), _Kyle McDonald_
 - [Índice de consumo energético de Ethereum](https://digiconomist.net/ethereum-energy-consumption/), _Digiconomista_
 - [ETHMerge.com](https://ethmerge.com/), _[@InsideTheSim](https://twitter.com/InsideTheSim)_
