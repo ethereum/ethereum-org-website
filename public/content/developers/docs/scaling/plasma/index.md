@@ -1,171 +1,171 @@
 ---
-title: Plasma chains
-description: An introduction to plasma chains as a scaling solution currently utilized by the Ethereum community.
-lang: en
+title: زنجیره‌های پلاسما
+description: مقدمه‌ای بر زنجیره‌های پلاسما به عنوان یک راهکار مقیاس‌پذیری که در حال حاضر توسط جامعه اتریوم استفاده می‌شود.
+lang: fa
 incomplete: true
 sidebarDepth: 3
 ---
 
-A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executing transactions offchain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use [fraud proofs](/glossary/#fraud-proof) (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
+زنجیره پلاسما یک بلاک چین جداگانه است که به شبکه اصلی اتریوم متصل شده اما تراکنش‌ها را به صورت آف‌چین با مکانیزم اعتبارسنجی بلوک خود اجرا می‌کند. زنجیره‌های پلاسما گاهی اوقات به عنوان زنجیره‌های "فرعی" شناخته می‌شوند که اساساً نسخه‌های کوچکتری از شبکه اصلی اتریوم هستند. زنجیره‌های پلاسما از [اثبات تقلب](/glossary/#fraud-proof) (مانند [رول‌آپ‌های خوش‌بینانه](/developers/docs/scaling/optimistic-rollups/)) برای حل و فصل اختلافات استفاده می‌کنند.
 
-Merkle trees enable the creation of an endless stack of these chains that can work to offload bandwidth from parent chains (including Ethereum Mainnet). However, while these chains derive some security from Ethereum (via fraud proofs), their security and efficiency are affected by several design limitations.
+درخت‌های مرکل امکان ایجاد یک پشته بی‌پایان از این زنجیره‌ها را فراهم می‌کنند که می‌توانند برای تخلیه پهنای باند از زنجیره‌های والد (شامل شبکه اصلی اتریوم) کار کنند. با این حال، در حالی که این زنجیره‌ها امنیت خود را تا حدی از اتریوم می‌گیرند (از طریق اثبات تقلب)، امنیت و کارایی آن‌ها تحت تأثیر چندین محدودیت طراحی قرار دارد.
 
-## Prerequisites {#prerequisites}
+## پیش‌نیازها {#prerequisites}
 
-You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/).
+شما باید درک خوبی از تمام مبانی پایه و درک سطح بالایی از [مقیاس‌پذیری اتریوم](/developers/docs/scaling/) داشته باشید.
 
-## What is Plasma?
+## پلاسما چیست؟ {#what-is-plasma}
 
-Plasma is a framework for improving scalability in public blockchains like Ethereum. As described in the original [Plasma whitepaper](http://plasma.io/plasma.pdf), Plasma chains are built atop another blockchain (called a "root chain"). Each "child chain" extends from the root chain and is generally managed by a smart contract deployed on the parent chain.
+پلاسما یک چارچوب برای بهبود مقیاس‌پذیری در بلاک چین‌های عمومی مانند اتریوم است. همانطور که در [مقاله سفید اصلی پلاسما](http://plasma.io/plasma.pdf) توصیف شده است، زنجیره‌های پلاسما بر روی یک بلاک چین دیگر (به نام "زنجیره ریشه") ساخته می‌شوند. هر "زنجیره فرعی" از زنجیره ریشه منشعب می‌شود و عموماً توسط یک قرارداد هوشمند مستقر در زنجیره والد مدیریت می‌شود.
 
-The Plasma contract functions, among other things, as a [bridge](/developers/docs/bridges/) allowing users to move assets between Ethereum Mainnet and the plasma chain. Although this makes them similar to [sidechains](/developers/docs/scaling/sidechains/), plasma chains benefit—at least, to some extent—from Ethereum Mainnet's security. This is unlike sidechains that are solely responsible for their security.
+قرارداد پلاسما، علاوه بر عملکردهای دیگر، به عنوان یک [پل](/developers/docs/bridges/) عمل می‌کند که به کاربران اجازه می‌دهد دارایی‌های خود را بین شبکه اصلی اتریوم و زنجیره پلاسما جابه‌جا کنند. اگرچه این امر آن‌ها را شبیه به [زنجیره‌های جانبی](/developers/docs/scaling/sidechains/) می‌کند، اما زنجیره‌های پلاسما - حداقل تا حدی - از امنیت شبکه اصلی اتریوم بهره می‌برند. این برخلاف زنجیره‌های جانبی است که مسئولیت امنیت خود را به تنهایی بر عهده دارند.
 
-## How does Plasma work?
+## پلاسما چگونه کار می‌کند؟ {#how-does-plasma-work}
 
-The basic components of the Plasma framework are:
+اجزای اصلی چارچوب پلاسما عبارتند از:
 
-### Offchain computation {#offchain-computation}
+### محاسبات آف‌چین {#offchain-computation}
 
-Ethereum's current processing speed is limited to ~ 15-20 transactions per second, reducing the short-term possibility of scaling to handle more users. This problem exists mainly because Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/) requires many peer-to-peer nodes to verify every update to the blockchain's state.
+سرعت پردازش فعلی اتریوم به حدود ۱۵-۲۰ تراکنش در ثانیه محدود شده است که امکان مقیاس‌پذیری کوتاه‌مدت برای پذیرش کاربران بیشتر را کاهش می‌دهد. این مشکل عمدتاً به این دلیل وجود دارد که [مکانیزم اجماع](/developers/docs/consensus-mechanisms/) اتریوم требует بسیاری از گره‌های نظیر به نظیر برای تأیید هر به‌روزرسانی در وضعیت بلاک چین.
 
-Although Ethereum's consensus mechanism is necessary for security, it may not apply to every use case. For example, Alice may not need her daily payments to Bob for a cup of coffee verified by the entire Ethereum network since some trust exists between both parties.
+اگرچه مکانیزم اجماع اتریوم برای امنیت ضروری است، اما ممکن است برای هر مورد استفاده‌ای اعمال نشود. برای مثال، آلیس ممکن است نیازی نداشته باشد که پرداخت‌های روزانه خود به باب برای یک فنجان قهوه توسط کل شبکه اتریوم تأیید شود، زیرا بین دو طرف مقداری اعتماد وجود دارد.
 
-Plasma supposes that Ethereum Mainnet doesn't need to verify all transactions. Instead, we can process transactions off Mainnet, freeing nodes from having to validate every transaction.
+پلاسما فرض می‌کند که شبکه اصلی اتریوم نیازی به تأیید همه تراکنش‌ها ندارد. در عوض، ما می‌توانیم تراکنش‌ها را خارج از شبکه اصلی پردازش کنیم و گره‌ها را از الزام به تأیید هر تراکنش آزاد کنیم.
 
-Offchain computation is necessary since Plasma chains can optimize for speed and cost. For example, a Plasma chain may—and most often does—use a single "operator" to manage the ordering and execution of transactions. With just one entity verifying transactions, processing times on a plasma chain are faster than Ethereum Mainnet.
+محاسبات آف‌چین ضروری است زیرا زنجیره‌های پلاسما می‌توانند برای سرعت و هزینه بهینه‌سازی شوند. برای مثال، یک زنجیره پلاسما ممکن است - و در اغلب موارد این کار را می‌کند - از یک "اپراتور" واحد برای مدیریت ترتیب‌دهی و اجرای تراکنش‌ها استفاده کند. با تنها یک نهاد تأییدکننده تراکنش‌ها، زمان پردازش در یک زنجیره پلاسما سریع‌تر از شبکه اصلی اتریوم است.
 
-### State commitments {#state-commitments}
+### تعهدات وضعیت {#state-commitments}
 
-While Plasma executes transactions offchain, they are settled on the main Ethereum execution layer—otherwise, Plasma chains cannot benefit from Ethereum's security guarantees. But finalizing offchain transactions without knowing the state of the plasma chain would break the security model and allow the proliferation of invalid transactions. This is why the operator, the entity responsible for producing blocks on the plasma chain, is required to publish "state commitments" on Ethereum periodically.
+در حالی که پلاسما تراکنش‌ها را به صورت آف‌چین اجرا می‌کند، آن‌ها در لایه اجرایی اصلی اتریوم تسویه می‌شوند - در غیر این صورت، زنجیره‌های پلاسما نمی‌توانند از تضمین‌های امنیتی اتریوم بهره‌مند شوند. اما نهایی‌سازی تراکنش‌های آف‌چین بدون اطلاع از وضعیت زنجیره پلاسما، مدل امنیتی را می‌شکند و باعث گسترش تراکنش‌های نامعتبر می‌شود. به همین دلیل است که از اپراتور، نهاد مسئول تولید بلوک‌ها در زنجیره پلاسما، خواسته می‌شود تا به طور دوره‌ای "تعهدات وضعیت" را در اتریوم منتشر کند.
 
-A [commitment scheme](https://en.wikipedia.org/wiki/Commitment_scheme) is a cryptographic technique for committing to a value or statement without revealing it to another party. Commitments are "binding" in the sense that you cannot change the value or statement once you've committed to it. State commitments in Plasma take the form of "Merkle roots" (derived from a [Merkle tree](/whitepaper/#merkle-trees)) which the operator sends at intervals to the Plasma contract on the Ethereum chain.
+[طرح تعهد](https://en.wikipedia.org/wiki/Commitment_scheme) یک تکنیک رمزنگاری برای متعهد شدن به یک مقدار یا عبارت بدون افشای آن به طرف دیگر است. تعهدات از این نظر "الزام‌آور" هستند که شما نمی‌توانید مقدار یا عبارت را پس از متعهد شدن به آن تغییر دهید. تعهدات وضعیت در پلاسما به شکل "ریشه‌های مرکل" (مشتق شده از یک [درخت مرکل](/whitepaper/#merkle-trees)) هستند که اپراتور در فواصل زمانی به قرارداد پلاسما در زنجیره اتریوم ارسال می‌کند.
 
-Merkle roots are cryptographic primitives that enable compressing of large amounts of information. A Merkle root (also called a "block root" in this case) could represent all the transactions in a block. Merkle roots also make it easier to verify that a small piece of data is part of the larger dataset. For instance, a user can produce a [Merkle proof](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) to prove the inclusion of a transaction in a specific block.
+ریشه‌های مرکل primitiveهای رمزنگاری هستند که فشرده‌سازی مقادیر زیادی اطلاعات را امکان‌پذیر می‌کنند. یک ریشه مرکل (که در این مورد "ریشه بلوک" نیز نامیده می‌شود) می‌تواند نمایانگر تمام تراکنش‌های یک بلوک باشد. ریشه‌های مرکل همچنین تأیید اینکه یک قطعه داده کوچک بخشی از مجموعه داده بزرگتر است را آسان‌تر می‌کنند. برای مثال، یک کاربر می‌تواند یک [اثبات مرکل](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) تولید کند تا شمولیت یک تراکنش در یک بلوک خاص را اثبات کند.
 
-Merkle roots are important for providing information about the offchain's state to Ethereum. You can think of Merkle roots as "save points": the operator is saying, "This is the state of the Plasma chain at x point in time, and this is the Merkle root as proof." The operator is committing to the _current state_ of the plasma chain with a Merkle root, which is why it is called a "state commitment".
+ریشه‌های مرکل برای ارائه اطلاعات درباره وضعیت آف‌چین به اتریوم مهم هستند. شما می‌توانید ریشه‌های مرکل را به عنوان "نقاط ذخیره" در نظر بگیرید: اپراتور می‌گوید، "این وضعیت زنجیره پلاسما در زمان x است، و این ریشه مرکل به عنوان اثبات است." اپراتور با یک ریشه مرکل به _وضعیت فعلی_ زنجیره پلاسما متعهد می‌شود، به همین دلیل آن را "تعهد وضعیت" می‌نامند.
 
-### Entries and exits {#entries-and-exits}
+### ورود و خروج {#entries-and-exits}
 
-For Ethereum users to take advantage of Plasma, there needs to be a mechanism for moving funds between Mainnet and plasma chains. We cannot arbitrarily send ether to an address on the plasma chain, though—these chains are incompatible, so the transaction would either fail or lead to lost funds.
+برای اینکه کاربران اتریوم از پلاسما بهره‌مند شوند، باید مکانیزمی برای جابه‌جایی وجوه بین شبکه اصلی و زنجیره‌های پلاسما وجود داشته باشد. ما نمی‌توانیم اتر را به طور دلخواه به یک آدرس در زنجیره پلاسما ارسال کنیم - این زنجیره‌ها ناسازگار هستند، بنابراین تراکنش یا ناموفق خواهد بود یا منجر به از دست رفتن وجوه می‌شود.
 
-Plasma uses a master contract running on Ethereum to process user entries and exits. This master contract is also responsible for tracking state commitments (explained earlier) and punishing dishonest behavior via fraud proofs (more on this later).
+پلاسما از یک قرارداد اصلی اجرا شده روی اتریوم برای پردازش ورود و خروج کاربران استفاده می‌کند. این قرارداد اصلی همچنین مسئول ردیابی تعهدات وضعیت (که قبلاً توضیح داده شد) و مجازات رفتارهای غیرصادقانه از طریق اثبات تقلب (بعداً بیشتر توضیح داده می‌شود) است.
 
-#### Entering the plasma chain {#entering-the-plasma-chain}
+#### ورود به زنجیره پلاسما {#entering-the-plasma-chain}
 
-To enter the plasma chain, Alice (the user) will have to deposit ETH or any ERC-20 token in the plasma contract. The plasma operator, who watches contract deposits, recreates an amount equal to Alice's initial deposit and releases it to her address on the plasma chain. Alice is required to attest to receiving the funds on the child chain and can then use these funds for transactions.
+برای ورود به زنجیره پلاسما، آلیس (کاربر) باید ETH یا هر توکن ERC-20 را در قرارداد پلاسما واریز کند. اپراتور پلاسما، که واریزهای قرارداد را زیر نظر دارد، مقداری معادل واریز اولیه آلیس را بازسازی می‌کند و به آدرس او در زنجیره پلاسما منتشر می‌کند. از آلیس خواسته می‌شود که دریافت وجوه در زنجیره فرعی را attest کند و سپس می‌تواند از این وجوه برای تراکنش‌ها استفاده کند.
 
-#### Exiting the plasma chain {#exiting-the-plasma-chain}
+#### خروج از زنجیره پلاسما {#exiting-the-plasma-chain}
 
-Exiting the plasma chain is more complex than entering it for several reasons. The biggest one is that, while Ethereum has information about the plasma chain's state, it cannot verify if the information is true or not. A malicious user could make an incorrect assertion ("I have 1000 ETH") and get away with providing fake proofs to back up the claim.
+خروج از زنجیره پلاسما به دلایل متعددی پیچیده‌تر از ورود به آن است. بزرگترین دلیل این است که، در حالی که اتریوم اطلاعاتی درباره وضعیت زنجیره پلاسما دارد، نمی‌تواند تأیید کند که این اطلاعات درست هستند یا نه. یک کاربر مخرب می‌تواند ادعای نادرستی کند ("من ۱۰۰۰ ETH دارم") و با ارائه اثبات‌های جعلی برای پشتیبانی از ادعا، فرار کند.
 
-To prevent malicious withdrawals, a "challenge period" is introduced. During the challenge period (usually a week), anyone can challenge a withdrawal request using a fraud-proof. If the challenge succeeds, then the withdrawal request is denied.
+برای جلوگیری از برداشت‌های مخرب، یک "دوره چالش" معرفی می‌شود. در طول دوره چالش (معمولاً یک هفته)، هر کسی می‌تواند با استفاده از یک اثبات تقلب، یک درخواست برداشت را به چالش بکشد. اگر چالش موفقیت‌آمیز باشد، درخواست برداشت رد می‌شود.
 
-However, it is usually the case that users are honest and make correct claims about the funds they own. In this scenario, Alice will initiate a withdrawal request on the root chain (Ethereum) by submitting a transaction to the plasma contract.
+با این حال، معمولاً کاربران صادق هستند و ادعاهای صحیحی درباره وجوهی که در اختیار دارند ارائه می‌دهند. در این سناریو، آلیس با ارسال یک تراکنش به قرارداد پلاسما، یک درخواست برداشت در زنجیره ریشه (اتریوم) آغاز می‌کند.
 
-She must also provide a Merkle proof verifying that a transaction creating her funds on the Plasma chain was included in a block. This is necessary for iterations of Plasma, such as [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), that use a [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) model.
+او همچنین باید یک اثبات مرکل ارائه دهد که تأیید کند تراکنشی که وجوه او را در زنجیره پلاسما ایجاد کرده است در یک بلوک گنجانده شده است. این برای تکرارهای پلاسما، مانند [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html)، که از مدل [خروجی تراکنش خرج نشده (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) استفاده می‌کنند، ضروری است.
 
-Others, like [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), represent funds as [non-fungible tokens](/developers/docs/standards/tokens/erc-721/) instead of UTXOs. Withdrawing, in this case, requires proof of ownership of tokens on the Plasma chain. This is done by submitting the two latest transactions involving the token and providing a Merkle proof verifying the inclusion of those transactions in a block.
+سایرین، مانند [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html)، وجوه را به عنوان [توکن‌های غیرمثلی](/developers/docs/standards/tokens/erc-721/) به جای UTXO نشان می‌دهند. در این مورد، برداشت مستلزم اثمال مالکیت توکن‌ها در زنجیره پلاسما است. این کار با ارسال دو تراکنش آخر مربوط به توکن و ارائه یک اثبات مرکل برای تأیید شمولیت آن تراکنش‌ها در یک بلوک انجام می‌شود.
 
-The user must also add a bond to the withdrawal request as a guarantee of honest behavior. If a challenger proves Alice's withdrawal request invalid, her bond is slashed, and some of it goes to the challenger as a reward.
+کاربر همچنین باید یک وثیقه به درخواست برداشت اضافه کند تا به عنوان تضمینی برای رفتار صادقانه باشد. اگر یک چالش‌کننده درخواست برداشت آلیس را نامعتبر اثبات کند، وثیقه او slashed می‌شود و بخشی از آن به عنوان پاداش به چالش‌کننده می‌رسد.
 
-If the challenge period elapses without anyone providing a fraud-proof, Alice's withdrawal request is considered valid, allowing her to retrieve deposits from the Plasma contract on Ethereum.
+اگر دوره چالش بدون اینکه کسی اثبات تقلب ارائه دهد سپری شود، درخواست برداشت آلیس معتبر در نظر گرفته می‌شود و به او اجازه می‌دهد تا واریزی‌های خود را از قرارداد پلاسما در اتریوم بازیابی کند.
 
-### Dispute arbitration {#dispute-arbitration}
+### حل و فصل اختلافات {#dispute-arbitration}
 
-Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g. double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
+مانند هر بلاک چین، زنجیره‌های پلاسما به یک مکانیزم برای اجرای یکپارچگی تراکنش‌ها در صورت رفتار مخرب شرکت‌کنندگان (مانند دوبار خرج کردن وجوه) نیاز دارند. برای این منظور، زنجیره‌های پلاسما از اثبات تقلب برای حل و فصل اختلافات مربوط به اعتبار انتقال‌های وضعیت و مجازات رفتار بد استفاده می‌کنند. اثبات تقلب به عنوان مکانیزمی استفاده می‌شود که از طریق آن یک زنجیره فرعی پلاسما به زنجیره والد خود یا به زنجیره ریشه شکایت می‌کند.
 
-A fraud-proof is simply a claim that a particular state transition is invalid. An example is if a user (Alice) tries to spend the same funds twice. Perhaps she spent the UTXO in a transaction with Bob and wants to spend the same UTXO (which is now Bob's) in another transaction.
+یک اثبات تقلب به سادگی ادعایی است که یک انتقال وضعیت خاص نامعتبر است. یک مثال این است که اگر یک کاربر (آلیس) سعی کند همان وجوه را دو بار خرج کند. شاید او UTXO را در یک تراکنش با باب خرج کرده باشد و بخواهد همان UTXO (که اکنون متعلق به باب است) را در تراکنش دیگری خرج کند.
 
-To prevent the withdrawal, Bob will construct a fraud-proof by providing evidence of Alice spending the said UTXO in a previous transaction and a Merkle proof of the transaction's inclusion in a block. The same process works in Plasma Cash—Bob would need to provide proof that Alice earlier transferred the tokens she's trying to withdraw.
+برای جلوگیری از برداشت، باب یک اثبات تقلب با ارائه شواهدی از خرج کردن آن UTXO توسط آلیس در یک تراکنش قبلی و یک اثبات مرکل از شمولیت تراکنش در یک بلوک، می‌سازد. همین فرآیند در Plasma Cash کار می‌کند - باب باید اثبات کند که آلیس قبلاً توکن‌هایی را که سعی در برداشت آن‌ها دارد انتقال داده است.
 
-If Bob's challenge succeeds, Alice's withdrawal request is canceled. However, this approach relies on Bob's ability to watch the chain for withdrawal requests. If Bob is offline, then Alice can process the malicious withdrawal once the challenge period elapses.
+اگر چالش باب موفقیت‌آمیز باشد، درخواست برداشت آلیس لغو می‌شود. با این حال، این رویکرد به توانایی باب برای مشاهده زنجیره برای درخواست‌های برداشت متکی است. اگر باب آفلاین باشد، آنگاه آلیس می‌تواند پس از سپری شدن دوره چالش، برداشت مخرب را پردازش کند.
 
-## The mass exit problem in plasma {#the-mass-exit-problem-in-plasma}
+## مشکل خروج دسته‌جمعی در پلاسما {#the-mass-exit-problem-in-plasma}
 
-The mass exit problem occurs when a large number of users try to withdraw from a plasma chain at the same time. Why this problem exists has to do with one of Plasma's biggest problems: **data unavailability**.
+مشکل خروج دسته‌جمعی زمانی رخ می‌دهد که تعداد زیادی از کاربران به طور همزمان سعی در خروج از یک زنجیره پلاسما داشته باشند. دلیل وجود این مشکل به یکی از بزرگترین مشکلات پلاسما مربوط می‌شود: **عدم دسترسی به داده**.
 
-Data availability is the ability to verify that the information for a proposed block was actually published on the blockchain network. A block is "unavailable" if the producer publishes the block itself but withholds data used to create the block.
+دسترسی به داده، توانایی تأیید این است که اطلاعات برای یک بلوک پیشنهادی واقعاً روی شبکه بلاک چین منتشر شده است. یک بلوک "در دسترس نیست" اگر تولیدکننده خود بلوک را منتشر کند اما داده‌های مورد استفاده برای ایجاد بلوک را مخفی کند.
 
-Blocks must be available if nodes are to be able to download the block and verify the validity of transactions. Blockchains ensure data availability by forcing block producers to post all transaction data onchain.
+بلوک‌ها باید در دسترس باشند تا گره‌ها بتوانند بلوک را دانلود کرده و اعتبار تراکنش‌ها را تأیید کنند. بلاک چین‌ها با اجبار به تولیدکنندگان بلوک برای ارسال تمام داده‌های تراکنش روی زنجیره، دسترسی به داده را تضمین می‌کنند.
 
-Data availability also helps with securing offchain scaling protocols that build on Ethereum's base layer. By forcing operators on these chains to publish transaction data on Ethereum, anyone can challenge invalid blocks by constructing fraud proofs referencing the correct state of the chain.
+دسترسی به داده همچنین به امنیت پروتکل‌های مقیاس‌پذیری آف‌چینی که بر روی لایه پایه اتریوم ساخته می‌شوند کمک می‌کند. با اجبار به اپراتورهای این زنجیره‌ها برای انتشار داده تراکنش‌ها روی اتریوم، هر کسی می‌تواند با ساخت اثبات‌های تقلب که به وضعیت صحیح زنجیره ارجاع می‌دهند، بلوک‌های نامعتبر را به چالش بکشد.
 
-Plasma chains primarily store transaction data with the operator and **do not publish any data on Mainnet** (i.e., besides periodic state commitments). This means users must rely on the operator to provide block data if they need to create fraud proofs challenging invalid transactions. If this system works, then users can always use fraud proofs to secure funds.
+زنجیره‌های پلاسما عمدتاً داده تراکنش‌ها را نزد اپراتور ذخیره می‌کنند و **هیچ داده‌ای در شبکه اصلی منتشر نمی‌کنند** (یعنی علاوه بر تعهدات وضعیت دوره‌ای). این بدان معناست که کاربران باید برای ارائه داده بلوک در صورت نیاز به ایجاد اثبات تقلب برای به چالش کشیدن تراکنش‌های نامعتبر، به اپراتور متکی باشند. اگر این سیستم کار کند، آنگاه کاربران همیشه می‌توانند از اثبات تقلب برای ایمن‌سازی وجوه خود استفاده کنند.
 
-The problem starts when the operator, not just any user, is the party acting maliciously. Because the operator is in sole control of the blockchain, they have more incentive to advance invalid state transitions on a larger scale, such as stealing funds belonging to users on the plasma chain.
+مشکل زمانی شروع می‌شود که اپراتور، و نه فقط هر کاربری، طرف عمل مخرب باشد. از آنجا که اپراتور کنترل انحصاری بر بلاک چین دارد، انگیزه بیشتری برای پیشبرد انتقال‌های وضعیت نامعتبر در مقیاس بزرگتر، مانند سرقت وجوه متعلق به کاربران در زنجیره پلاسما، دارد.
 
-In this case, using the classic fraud-proof system does not work. The operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the operator isn't required to make data available to users or Mainnet.
+در این حالت، استفاده از سیستم کلاسیک اثبات تقلب کارساز نیست. اپراتور به راحتی می‌تواند یک تراکنش نامعتبر انجام دهد که وجوه آلیس و باب را به کیف پول خود انتقال می‌دهد و داده‌های لازم برای ایجاد اثبات تقلب را مخفی کند. این امکان‌پذیر است زیرا اپراتور ملزم به در دسترس قرار دادن داده برای کاربران یا شبکه اصلی نیست.
 
-Therefore, the most optimistic solution is to attempt a "mass exit" of users from the plasma chain. The mass exit slows down the malicious operator's plan to steal funds and provides some measure of protection for users. Withdrawal requests are ordered based on when each UTXO (or token) was created, preventing malicious operators from front-running honest users.
+بنابراین، خوش‌بینانه‌ترین راه حل، تلاش برای یک "خروج دسته‌جمعی" کاربران از زنجیره پلاسما است. خروج دسته‌جمعی، برنامه اپراتور مخرب برای سرقت وجوه را کند می‌کند و حفاظتی برای کاربران فراهم می‌کند. درخواست‌های برداشت بر اساس زمانی که هر UTXO (یا توکن) ایجاد شده است مرتب می‌شوند که از پیش�دستی کردن اپراتورهای مخرب بر کاربران صادق جلوگیری می‌کند.
 
-Nonetheless, we still need a way to verify the validity of withdrawal requests during a mass exit—to prevent opportunistic individuals from cashing in on the chaos processing invalid exits. The solution is simple: require users to post the last **valid state of the chain** to exit their money.
+با این وجود، ما هنوز به راهی برای تأیید اعتبار درخواست‌های برداشت در طول یک خروج دسته‌جمعی نیاز داریم - تا از سوءاستفاده افراد فرصت‌طلب در آشفتگی پردازش خروج‌های نامعتبر جلوگیری کنیم. راه حل ساده است: از کاربران بخواهید تا **آخرین وضعیت معتبر زنجیره** را برای خروج پول خود ارسال کنند.
 
-But this approach still has problems. For instance, if all users on a plasma chain need to exit (which is possible in the case of a malicious operator), then the entire valid state of the plasma chain must be dumped on Ethereum's base layer at once. With the arbitrary size of plasma chains (high throughput = more data) and constraints on Ethereum's processing speeds, this is not an ideal solution.
+اما این رویکرد هنوز مشکلاتی دارد. برای مثال، اگر همه کاربران یک زنجیره پلاسما نیاز به خروج داشته باشند (که در مورد یک اپراتور مخرب امکان‌پذیر است)، آنگاه کل وضعیت معتبر زنجیره پلاسما باید یکباره روی لایه پایه اتریوم تخلیه شود. با اندازه دلخواه زنجیره‌های پلاسما (توان عملیاتی بالا = داده بیشتر) و محدودیت‌های سرعت پردازش اتریوم، این یک راه حل ایده‌آل نیست.
 
-Although exit games sound nice in theory, real-life mass exits will likely trigger network-wide congestion on Ethereum itself. Besides harming Ethereum's functionality, a poorly coordinated mass exit means that users may be unable to withdraw funds before the operator drains every account on the plasma chain.
+اگرچه بازی‌های خروج در تئوری خوب به نظر می‌رسند، اما خروج‌های دسته‌جمعی در زندگی واقعی به احتمال زیاد باعث ازدحام در کل شبکه اتریوم می‌شوند. علاوه بر آسیب به عملکرد اتریوم، یک خروج دسته‌جمعی ضعیف هماهنگ شده به این معنی است که کاربران ممکن است نتوانند قبل از اینکه اپراتور هر حساب در زنجیره پلاسما را تخلیه کند، وجوه خود را برداشت کنند.
 
-## Pros and cons of plasma {#pros-and-cons-of-plasma}
+## مزایا و معایب پلاسما {#pros-and-cons-of-plasma}
 
-| Pros                                                                                                                                                                                                                             | Cons                                                                                                                                                                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Offers high throughput and low cost per transaction.                                                                                                                                                                             | Does not support general computation (cannot run smart contracts). Only basic token transfers, swaps, and a few other transaction types are supported via predicate logic.    |
-| Good for transactions between arbitrary users (no overhead per user pair if both are established on the plasma chain)                                                                                                            | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds.                          |
-| Plasma chains can be adapted to specific use-cases that are unrelated to the main chain. Anyone, including businesses, can customize Plasma smart contracts to provide scalable infrastructure that works in different contexts. | Relies on one or more operators to store data and serve it upon request.                                                                                                     |
-| Reduces load on Ethereum Mainnet by moving computation and storage offchain.                                                                                                                                                    | Withdrawals are delayed by several days to allow for challenges. For fungible assets, this can be mitigated by liquidity providers, but there is an associated capital cost. |
-|                                                                                                                                                                                                                                  | If too many users try to exit simultaneously, Ethereum Mainnet could get congested.                                                                                          |
+| مزایا                                                                                                                                                                                                                              | معایب                                                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| توان عملیاتی بالا و هزینه کم در هر تراکنش را ارائه می‌دهد.                                                                                                                                                                              | از محاسبات عمومی پشتیبانی نمی‌کند (نمی‌تواند قراردادهای هوشمند را اجرا کند). فقط انتقال‌های توکن پایه، معاوضه و چند نوع تراکنش دیگر از طریق منطق گزاره‌ای پشتیبانی می‌شوند.                                   |
+| برای تراکنش‌ها بین کاربران دلخواه مناسب است (اگر هر دو در زنجیره پلاسما established باشند، سربار اضافی برای هر جفت کاربر وجود ندارد)                                                                                                       | نیاز به مشاهده دوره‌ای شبکه (نیاز به فعالیت) یا واگذاری این مسئولیت به شخص دیگر برای اطمینان از امنیت وجوه شما.                                                                                 |
+| زنجیره‌های پلاسما می‌توانند برای موارد استفاده خاصی که به زنجیره اصلی مرتبط نیستند، تطبیق داده شوند. هر کسی، از جمله کسب‌وکارها، می‌توانند قراردادهای هوشمند پلاسما را برای ارائه زیرساخت مقیاس‌پذیر که در زمینه‌های مختلف کار می‌کند، سفارشی کنند. | به یک یا چند اپراتور برای ذخیره داده و ارائه آن upon request متکی است.                                                                                                                          |
+| با انتقال محاسبات و ذخیره‌سازی به آف‌چین، بار روی شبکه اصلی اتریوم را کاهش می‌دهد.                                                                                                                                                    | برداشت‌ها به دلیل امکان چالش، چندین روز به تأخیر می‌افتند. برای دارایی‌های مثلی، این را می‌توان با ارائه‌دهندگان نقدینگی کاهش داد، اما هزینه سرمایه مرتبط با آن وجود دارد.                          |
+|                                                                                                                                                                                                                                   | اگر کاربران زیادی به طور همزمان سعی در خروج داشته باشند، شبکه اصلی اتریوم ممکن است دچار ازدحام شود.                                                                                              |
 
-## Plasma vs layer 2 scaling protocols {#plasma-vs-layer-2}
+## پلاسما در مقابل پروتکل‌های مقیاس‌پذیری لایه ۲ {#plasma-vs-layer-2}
 
-While Plasma was once considered a useful scaling solution for Ethereum, it has since been dropped in favor of [layer 2 (L2) scaling protocols](/layer-2/). L2 scaling solutions remedy several of Plasma's problems:
+در حالی که پلاسما زمانی به عنوان یک راهکار مقیاس‌پذیری مفید برای اتریوم در نظر گرفته می‌شد، اما depuis به نفع [پروتکل‌های مقیاس‌پذیری لایه ۲ (L2)](/layer-2/) کنار گذاشته شده است. راه‌حل‌های مقیاس‌پذیری L2 چندین مشکل پلاسما را برطرف می‌کنند:
 
-### Efficiency {#efficiency}
+### کارایی {#efficiency}
 
-[Zero-Knowledge rollups](/developers/docs/scaling/zk-rollups) generate cryptographic proofs of the validity of each batch of transactions processed offchain. This prevents the users (and operators) from advancing invalid state transitions, eliminating the need for challenge periods and exit games. It also means users don't have to watch the chain periodically to secure their funds.
+[رول‌آپ‌های دانش صفر](/developers/docs/scaling/zk-rollups) اثبات‌های رمزنگاری از اعتبار هر دسته از تراکنش‌های پردازش شده آف‌چین را تولید می‌کنند. این از کاربران (و اپراتورها) از پیشبرد انتقال‌های وضعیت نامعتبر جلوگیری می‌کند و نیاز به دوره‌های چالش و بازی‌های خروج را از بین می‌برد. همچنین به این معنی است که کاربران نیازی به مشاهده دوره‌ای زنجیره برای ایمن‌سازی وجوه خود ندارند.
 
-### Support for smart contracts {#support-for-smart-contracts}
+### پشتیبانی از قراردادهای هوشمند {#support-for-smart-contracts}
 
-Another problem with the plasma framework was [the inability to support the execution of Ethereum smart contracts](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). As a result, most implementations of Plasma were mostly built for simple payments or the exchange of ERC-20 tokens.
+مشکل دیگر چارچوب پلاسما، [عدم توانایی در پشتیبانی از اجرای قراردادهای هوشمند اتریوم](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4) بود. در نتیجه، اکثر پیاده‌سازی‌های پلاسما عمدتاً برای پرداخت‌های ساده یا مبادله توکن‌های ERC-20 ساخته شده بودند.
 
-Conversely, optimistic rollups, are compatible with the [Ethereum Virtual Machine](/developers/docs/evm/) and can run Ethereum-native [smart contracts](/developers/docs/smart-contracts/), making them a useful and _secure_ solution for scaling [decentralized applications](/developers/docs/dapps/). Similarly, plans are underway to [create a zero-knowledge implementation of the EVM (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549) that would allow ZK-rollups to process arbitrary logic and execute smart contracts.
+در مقابل، رول‌آپ‌های خوش‌بینانه، با [ماشین مجازی اتریوم](/developers/docs/evm/) سازگار هستند و می‌توانند [قراردادهای هوشمند](/developers/docs/smart-contracts/) بومی اتریوم را اجرا کنند که آن‌ها را به یک راهکار مفید و _امن_ برای مقیاس‌پذیری [برنامه‌های غیرمتمرکز](/developers/docs/dapps/) تبدیل می‌کند. به طور مشابه، برنامه‌هایی برای [ایجاد یک پیاده‌سازی دانش صفر از EVM (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549) در دست اقدام است که به ZK-rollupها اجازه می‌دهد منطق دلخواه را پردازش و قراردادهای هوشمند را اجرا کنند.
 
-### Data unavailability {#data-unavailability}
+### عدم دسترسی به داده {#data-unavailability}
 
-As explained earlier, plasma suffers from a data availability problem. If a malicious operator advanced an invalid transition on the plasma chain, users would be unable to challenge it since the operator can withhold data needed to create the fraud-proof. Rollups solve this problem by forcing operators to post transaction data on Ethereum, allowing anyone to verify the chain's state and create fraud proofs if necessary.
+همانطور که قبلاً توضیح داده شد، پلاسما از مشکل دسترسی به داده رنج می‌برد. اگر یک اپراتور مخرب یک انتقال نامعتبر در زنجیره پلاسما پیش ببرد، کاربران قادر به به چالش کشیدن آن نخواهند بود زیرا اپراتور می‌تواند داده‌های مورد نیاز برای ایجاد اثبات تقلب را مخفی کند. رول‌آپ‌ها این مشکل را با اجبار به اپراتورها برای ارسال داده تراکنش‌ها روی اتریوم حل می‌کنند که به هر کسی اجازه می‌دهد وضعیت زنجیره را تأیید کند و در صورت لزوم اثبات تقلب ایجاد کند.
 
-### Mass exit problem {#mass-exit-problem}
+### مشکل خروج دسته‌جمعی {#mass-exit-problem}
 
-ZK-rollups and optimistic rollups both solve Plasma's mass exit problem in various ways. For example, a ZK-rollup relies on cryptographic mechanisms that ensure operators cannot steal user funds under any scenario.
+هر دو ZK-rollupها و رول‌آپ‌های خوش‌بینانه مشکل خروج دسته‌جمعی پلاسما را به روش‌های مختلف حل می‌کنند. برای مثال، یک ZK-rollup به مکانیزم‌های رمزنگاری متکی است که تضمین می‌کند اپراتورها تحت هیچ سناریویی نمی‌توانند وجوه کاربران را بدزدند.
 
-Similarly, optimistic rollups impose a delay period on withdrawals during which anyone can initiate a challenge and prevent malicious withdrawal requests. While this is similar to Plasma, the difference is that verifiers have access to data needed to create fraud proofs. Thus, there's no need for rollup users to engage in a frenzied, "first-to-get-out" migration to Ethereum Mainnet.
+به طور مشابه، رول‌آپ‌های خوش‌بینانه یک دوره تأخیر برای برداشت‌ها اعمال می‌کنند که در طول آن هر کسی می‌تواند یک چالش آغاز کند و از درخواست‌های برداشت مخرب جلوگیری کند. اگرچه این شبیه به پلاسما است، اما تفاوت در این است که تأییدکنندگان به داده‌های مورد نیاز برای ایجاد اثبات تقلب دسترسی دارند. بنابراین، نیازی نیست که کاربران رول‌آپ در یک مهاجرت frenzied, "first-to-get-out" به شبکه اصلی اتریوم شرکت کنند.
 
-## How does Plasma differ from sidechains and sharding? {#plasma-sidechains-sharding}
+## پلاسما چگونه با زنجیره‌های جانبی و sharding تفاوت دارد؟ {#plasma-sidechains-sharding}
 
-Plasma, sidechains, and sharding are fairly similar because they all connect to Ethereum Mainnet in some way. However, the level and strength of these connections vary, which affects the security properties of each scaling solution.
+پلاسما، زنجیره‌های جانبی و sharding نسبتاً شبیه هستند زیرا همه آن‌ها به نوعی به شبکه اصلی اتریوم متصل می‌شوند. با این حال، سطح و قدرت این اتصالات متفاوت است که بر ویژگی‌های امنیتی هر راهکار مقیاس‌پذیری تأثیر می‌گذارد.
 
-### Plasma vs sidechains {#plasma-vs-sidechains}
+### پلاسما در مقابل زنجیره‌های جانبی {#plasma-vs-sidechains}
 
-A [sidechain](/developers/docs/scaling/sidechains/) is an independently operated blockchain connected to Ethereum Mainnet via a two-way bridge. [Bridges](/bridges/) allow users to exchange tokens between the two blockchains to transact on the sidechain, reducing congestion on Ethereum Mainnet and improving scalability.
-Sidechains use a separate consensus mechanism and are typically much smaller than Ethereum Mainnet. As a result, bridging assets to these chains involves increased risk; given the lack of security guarantees inherited from Ethereum Mainnet in the sidechain model, users risk the loss of funds in an attack on the sidechain.
+یک [زنجیره جانبی](/developers/docs/scaling/sidechains/) یک بلاک چین مستقل است که از طریق یک پل دوطرفه به شبکه اصلی اتریوم متصل شده است. [پل‌ها](/bridges/) به کاربران اجازه می‌دهند تا توکن‌ها را بین دو بلاک چین مبادله کنند تا در زنجیره جانبی تراکنش انجام دهند، ازدحام در شبکه اصلی اتریوم را کاهش دهند و مقیاس‌پذیری را بهبود بخشند.
+زنجیره‌های جانبی از یک مکانیزم اجماع جداگانه استفاده می‌کنند و معمولاً بسیار کوچکتر از شبکه اصلی اتریوم هستند. در نتیجه، انتقال دارایی به این زنجیره‌ها شامل ریسک افزایش یافته است؛ با توجه به عدم وجود تضمین‌های امنیتی به ارث برده شده از شبکه اصلی اتریوم در مدل زنجیره جانبی، کاربران در صورت حمله به زنجیره جانبی risk از دست دادن وجوه را دارند.
 
-Conversely, plasma chains derive their security from Mainnet. This makes them measurably more secure than sidechains. Both sidechains and plasma chains can have different consensus protocols, but the difference is that plasma chains publish Merkle roots for each block on Ethereum Mainnet. Block roots are small pieces of information we can use to verify information about transactions that happen on a plasma chain. If an attack happens on a plasma chain, users can safely withdraw their funds back to Mainnet using the appropriate proofs.
+در مقابل، زنجیره‌های پلاسما امنیت خود را از شبکه اصلی می‌گیرند. این امر آن‌ها را به طور قابل اندازه‌گیری امن‌تر از زنجیره‌های جانبی می‌کند. هر دو زنجیره جانبی و پلاسما می‌توانند پروتکل‌های اجماع متفاوتی داشته باشند، اما تفاوت در این است که زنجیره‌های پلاسما ریشه‌های مرکل را برای هر بلوک در شبکه اصلی اتریوم منتشر می‌کنند. ریشه‌های بلوک قطعات کوچکی از اطلاعات هستند که می‌توانیم از آن‌ها برای تأیید اطلاعات درباره تراکنش‌هایی که در یک زنجیره پلاسما اتفاق می‌افتد استفاده کنیم. اگر حمله‌ای روی یک زنجیره پلاسما اتفاق بیفتد، کاربران می‌توانند با استفاده از اثبات‌های مناسب، وجوه خود را با خیال راحت به شبکه اصلی برداشت کنند.
 
-### Plasma vs sharding {#plasma-vs-sharding}
+### پلاسما در مقابل sharding {#plasma-vs-sharding}
 
-Both plasma chains and shard chains periodically publish cryptographic proofs to Ethereum Mainnet. However, both have different security properties.
+هر دو زنجیره پلاسما و زنجیره‌های shard به طور دوره‌ای اثبات‌های رمزنگاری را به شبکه اصلی اتریوم ارسال می‌کنند. با این حال، هر دو ویژگی‌های امنیتی متفاوتی دارند.
 
-Shard chains commit "collation headers" to Mainnet containing detailed information about each data shard. Nodes on Mainnet verify and enforce the validity of data shards, reducing the possibility of invalid shard transitions and protecting the network against malicious activity.
+زنجیره‌های shard "سرصفحه‌های collation" را به شبکه اصلی متعهد می‌کنند که حاوی اطلاعات دقیق درباره هر داده shard است. گره‌های روی شبکه اصلی اعتبار داده shardها را تأیید و اجرا می‌کنند که احتمال انتقال‌های نامعتبر shard را کاهش می‌دهد و شبکه را در برابر فعالیت مخرب محافظت می‌کند.
 
-Plasma is different because Mainnet only receives minimal information about the state of child chains. This means Mainnet cannot effectively verify transactions conducted on child chains, making them less secure.
+پلاسما متفاوت است زیرا شبکه اصلی فقط حداقل اطلاعات را درباره وضعیت زنجیره‌های فرعی دریافت می‌کند. این بدان معناست که شبکه اصلی نمی‌تواند به طور مؤثر تراکنش‌های انجام شده روی زنجیره‌های فرعی را تأیید کند که آن‌ها را کمتر امن می‌کند.
 
-**Note** that sharding the Ethereum blockchain is no longer on the roadmap. It has been superseded by scaling via rollups and [Danksharding](/roadmap/danksharding).
+**توجه** که sharding بلاک چین اتریوم دیگر در نقشه راه وجود ندارد. توسط مقیاس‌پذیری از طریق رول‌آپ‌ها و [Danksharding](/roadmap/danksharding) جایگزین شده است.
 
-### Use Plasma {#use-plasma}
+### استفاده از پلاسما {#use-plasma}
 
-Multiple projects provide implementations of Plasma that you can integrate into your dapps:
+پروژه‌های متعددی پیاده‌سازی‌های پلاسما را ارائه می‌دهند که می‌توانید در dappهای خود ادغام کنید:
 
 - [Polygon](https://polygon.technology/) (previously Matic Network)
 
-## Further reading {#further-reading}
+## مطالعه بیشتر {#further-reading}
 
 - [Learn Plasma](https://www.learnplasma.org/en/)
 - [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
@@ -173,4 +173,4 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [The Life and Death of Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Know of a community resource that helped you? Edit this page and add it!_
+_آیا منبعی از جامعه می‌شناسید که به شما کمک کرده است؟ این صفحه را ویرایش کنید و آن را اضافه کنید!_
