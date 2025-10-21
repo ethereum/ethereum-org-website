@@ -182,7 +182,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ## Private networks {#private-networks}
 
-An Ethereum network is a private network if its nodes are not connected to a public network (i.e. Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
+An Ethereum network is a private network if its nodes are not connected to a public network (i.e., Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
 
 ### Development networks {#development-networks}
 
