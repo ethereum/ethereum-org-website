@@ -455,6 +455,8 @@ export const walletsData: WalletData[] = [
       "Scroll",
       "Blast",
       "Taiko Alethia",
+      "Unichain",
+      "Ink",
     ],
   },
   {
@@ -508,6 +510,8 @@ export const walletsData: WalletData[] = [
       "OP Mainnet",
       "zkSync Mainnet",
       "Scroll",
+      "Unichain",
+      "Ink",
     ],
   },
   {
@@ -705,6 +709,7 @@ export const walletsData: WalletData[] = [
       "zkSync Mainnet",
       "Scroll",
       "Blast",
+      "Unichain",
     ],
   },
   {
@@ -1207,6 +1212,7 @@ export const walletsData: WalletData[] = [
       "Scroll",
       "Linea",
       "zkSync Mainnet",
+      "Unichain",
     ],
   },
   {
@@ -1271,6 +1277,8 @@ export const walletsData: WalletData[] = [
       "OP Mainnet",
       "Arbitrum One",
       "Blast",
+      "Unichain",
+      "Ink",
     ],
   },
   {
@@ -1563,6 +1571,8 @@ export const walletsData: WalletData[] = [
       "OP Mainnet",
       "Scroll",
       "zkSync Mainnet",
+      "Unichain",
+      "Ink",
     ],
   },
   {
@@ -2281,6 +2291,7 @@ export const walletsData: WalletData[] = [
       "Linea",
       "zkSync Mainnet",
       "Blast",
+      "Unichain",
     ],
   },
   {
