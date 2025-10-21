@@ -38,7 +38,7 @@ Unlike traditional forecasting, blockchain-based prediction markets are:
 
 Even as an observer of the market, you can assess valuable data that would be otherwise unavailable. Think of it like this:
 
-1. Predictions are tied to a specific event (e.g. Will Beam Chain deploy by 2030?).
+1. Predictions are tied to a specific event (e.g., Will Beam Chain deploy by 2030?).
 2. Market participants buy and sell shares based on their confidence in any outcome.
 3. Prices adjust as more participants stake their beliefs, reflecting real-time insights.
 4. Anyone betting correctly earns proportionately to the amount staked. 
