@@ -57,9 +57,11 @@ Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 202
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Toplam yıllık dağıtım oranı (Birleşim öncesi): \~%4,61</strong> (%4,09 + %0,52)<br/><br/>
-Dağıtımın <strong>\~%88,7'i</strong> yürütüm katmanındaki madencilere gidiyordu (4,09/4,61 * 100)<br/><br/>
-<strong>\~%11,3'i</strong> fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
+**Toplam yıllık dağıtım oranı (Birleşim öncesi): \~%4,61** (%4,09 + %0,52)
+
+Dağıtımın **\~%88,7'i** yürütüm katmanındaki madencilere gidiyordu (4,09/4,61 * 100)
+
+**\~%11,3'i** fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Daha fazla doğrulayıcı parasını çektikçe, hisselenmiş yüksek miktarda E
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Toplam yıllıklaştırılmış dağıtım oranı: <strong>\~%0,52</strong><br/><br/>
-ETH dağıtımındaki net azalma: <strong>\~%88,7</strong> ((%4,61 - %0,52)/%4,61 * 100)
+Toplam yıllıklaştırılmış dağıtım oranı: **\~%0,52**
+
+ETH dağıtımındaki net azalma: **\~%88,7** ((%4,61 - %0,52)/%4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

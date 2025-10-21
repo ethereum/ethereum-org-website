@@ -57,11 +57,11 @@ Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Celková anualizovaná míra vydávání (před Sloučením): ~4,61 %</strong> (4,09 % + 0,52 %)
+**Celková anualizovaná míra vydávání (před Sloučením): ~4,61 %** (4,09 % + 0,52 %)
 
-<strong>~88,7 %</strong> vydávaných ETH směřovalo k těžařům v exekuční vrstvě (4,09 / 4,61 * 100)
+**~88,7 %** vydávaných ETH směřovalo k těžařům v exekuční vrstvě (4,09 / 4,61 * 100)
 
-<strong>~11,3 %</strong> bylo vydáváno uzamykatelům ve vrstvě konsenzu (0,52 / 4,61 * 100)
+**~11,3 %** bylo vydáváno uzamykatelům ve vrstvě konsenzu (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -93,8 +93,9 @@ Přibližně 0,33 % z celkového počtu validátorů může odejít během jedno
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Celková roční míra vydávání: <strong>~0,52 %</strong><br/><br/>
-Čisté snížení ročního vydávání ETH: <strong>~88,7 %</strong> ((4,61 % - 0,52 %) / 4,61 % * 100)
+Celková roční míra vydávání: **~0,52 %**
+
+Čisté snížení ročního vydávání ETH: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

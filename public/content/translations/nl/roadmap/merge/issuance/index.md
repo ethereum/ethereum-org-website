@@ -57,9 +57,11 @@ Totale ETH-aanvoer: **~120.520.000 ETH** (ten tijde van de samenvoeging in septe
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Totaal uitgiftepercentage op jaarbasis (voorafgaand aan de samenvoeging): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88,7%</strong> van die uitgifte ging naar miners op de uitvoeringslaag (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> werd uitgegeven aan stakers op de consensuslaag (0,52 / 4,61 * 100)
+**Totaal uitgiftepercentage op jaarbasis (voorafgaand aan de samenvoeging): ~4.61%** (4.09% + 0.52%)
+
+**~88,7%** van die uitgifte ging naar miners op de uitvoeringslaag (4,09 / 4,61 * 100)
+
+**~11,3%** werd uitgegeven aan stakers op de consensuslaag (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Naarmate meer validators vertrekken, zal het maximale aantal vertrekkende valida
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Totaal uitgiftepercentage op jaarbasis: <strong>~0.52%</strong><br/><br/>
-Nettovermindering in jaarlijkse ETH-uitgifte: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+Totaal uitgiftepercentage op jaarbasis: **~0.52%**
+
+Nettovermindering in jaarlijkse ETH-uitgifte: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -57,9 +57,11 @@ Offerta totale di ETH: **circa 120.520.000 ETH** (al momento della Fusione a set
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>Circa l'88,7%</strong> dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)<br/><br/>
-<strong>Circa l'11,3%</strong> era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
+**Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%** (4,09% + 0,52%)
+
+**Circa l'88,7%** dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)
+
+**Circa l'11,3%** era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ All'aumentare del numero di validatori che prelevano, il numero massimo di valid
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tasso di emissione annualizzato totale: <strong>circa 0,52%</strong><br/><br/>
-Riduzione netta nell'emissione annuale di ETH: <strong>circa 88,7%</strong> ((4,61%-0,52%) / 4,61% * 100)
+Tasso di emissione annualizzato totale: **circa 0,52%**
+
+Riduzione netta nell'emissione annuale di ETH: **circa 88,7%** ((4,61%-0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

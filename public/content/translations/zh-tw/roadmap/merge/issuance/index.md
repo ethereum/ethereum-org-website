@@ -57,9 +57,11 @@ title="以太幣發行量總覽">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>總年化發行率（合併前）：約 4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>約 88.7%</strong> 發行的以太幣給了執行層上的礦工 (4.09 / 4.61 * 100)<br/><br/>
-<strong>約 11.3%</strong> 發行的以太幣給了共識層上的質押者 (0.52 / 4.61 * 100)
+**總年化發行率（合併前）：約 4.61%** (4.09% + 0.52%)
+
+**約 88.7%** 發行的以太幣給了執行層上的礦工 (4.09 / 4.61 * 100)
+
+**約 11.3%** 發行的以太幣給了共識層上的質押者 (0.52 / 4.61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ title="以太幣發行量總覽">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-總年化發行率：<strong>約 0.52%</strong><br/><br/>
-年度以太幣發行量淨減少值：<strong>約 88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+總年化發行率：**約 0.52%**
+
+年度以太幣發行量淨減少值：**約 88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -57,9 +57,11 @@ title="以太币发行内容提要">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>总计年化发行率（合并前）：大约 4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>大约 88.7%</strong> 的发行量会给执行层上的矿工 (4.09 / 4.61 * 100)<br/><br/>
-<strong>大约 11.3%</strong> 的发行量会给共识层上的质押人 (0.52 / 4.61 * 100)
+**总计年化发行率（合并前）：大约 4.61%** (4.09% + 0.52%)
+
+**大约 88.7%** 的发行量会给执行层上的矿工 (4.09 / 4.61 * 100)
+
+**大约 11.3%** 的发行量会给共识层上的质押人 (0.52 / 4.61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ title="以太币发行内容提要">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-总计年化发行率：<strong>大约 0.52%</strong><br/><br/>
-每年以太币发行量净减少：<strong>大约 88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+总计年化发行率：**大约 0.52%**
+
+每年以太币发行量净减少：**大约 88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

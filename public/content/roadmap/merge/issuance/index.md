@@ -93,8 +93,9 @@ As more validators withdraw, the maximum number of exiting validators will gradu
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Total annualized issuance rate: <strong>~0.52%</strong><br/><br/>
-Net reduction in annual ETH issuance: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+Total annualized issuance rate: **~0.52%**
+
+Net reduction in annual ETH issuance: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

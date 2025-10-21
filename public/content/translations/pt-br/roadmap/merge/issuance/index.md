@@ -57,9 +57,11 @@ Fornecimento total de ETH: **~120.520.000 ETH** (até o momento do The Merge, em
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Taxa total de emissão anual (pré-fusão): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>~88,7%</strong> da emissão estava indo para mineradores na camada de execução (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> estava sendo emitido para participantes na camada de consenso (0,52 / 4,61 * 100)
+**Taxa total de emissão anual (pré-fusão): ~4,61%** (4,09% + 0,52%)
+
+**~88,7%** da emissão estava indo para mineradores na camada de execução (4,09 / 4,61 * 100)
+
+**~11,3%** estava sendo emitido para participantes na camada de consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Aproximadamente 0,33% da contagem total de validadores pode sair em um dia espec
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Taxa total de emissão anualizada: <strong>~0.52%</strong><br/><br/>
-Redução líquida na emissão anual de ETH: <strong>~88,7%</strong> (4,61% - 0,52%) / 4,61% * 100)
+Taxa total de emissão anualizada: **~0.52%**
+
+Redução líquida na emissão anual de ETH: **~88,7%** (4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -57,9 +57,11 @@ Soláthar iomlán ETH: **~120,520,000 ETH** (ag am The Merge i Meán Fómhair 20
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Ráta eisiúna bliantúil iomlán (réamhchumasc): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-Bhí <strong>~88.7%</strong> den eisiúint ag dul chuig mianadóirí ar an gciseal forghníomhaithe (4.09 / 4.61 * 100)<br/><br/>
-Bhí <strong>~11.3%</strong> á eisiúint chuig geallsealbhóirí ar an tsraith chomhthoil (0.52 / 4.61 * 100)
+**Ráta eisiúna bliantúil iomlán (réamhchumasc): ~4.61%** (4.09% + 0.52%)
+
+Bhí **~88.7%** den eisiúint ag dul chuig mianadóirí ar an gciseal forghníomhaithe (4.09 / 4.61 * 100)
+
+Bhí **~11.3%** á eisiúint chuig geallsealbhóirí ar an tsraith chomhthoil (0.52 / 4.61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ De réir mar a imíonn níos mó bailíochtóirí siar, laghdófar de réir a ch
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Ráta eisiúna bliantúil iomlán: <strong>~0.52%</strong><br/><br/>
-Glanlaghdú ar eisiúint bhliantúil ETH: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+Ráta eisiúna bliantúil iomlán: **~0.52%**
+
+Glanlaghdú ar eisiúint bhliantúil ETH: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -57,9 +57,11 @@ title="ETHの発行についての概要">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>合計年発行率(マージ前): 約4.61%</strong> (4.09% + 0.52%)<br/><br/>
-発行額の<strong>約 88.7%</strong>が実行レイヤー (4.09 / 4.61 * 100) のマイナーへ帰属しました。<br/><br/>
-<strong>約11.3%</strong>がコンセンサスレイヤーのステーカーへ発行されました (0.52 / 4.61 * 100) 。
+**合計年発行率(マージ前): 約4.61%** (4.09% + 0.52%)
+
+発行額の**約 88.7%**が実行レイヤー (4.09 / 4.61 * 100) のマイナーへ帰属しました。
+
+**約11.3%**がコンセンサスレイヤーのステーカーへ発行されました (0.52 / 4.61 * 100) 。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ title="ETHの発行についての概要">
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-合計年間発行率: <strong>約0.52%</strong><br/><br/>
-年間ETH発行の純削減率: <strong>約88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+合計年間発行率: **約0.52%**
+
+年間ETH発行の純削減率: **約88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

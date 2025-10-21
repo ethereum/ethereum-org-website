@@ -57,9 +57,11 @@ Total pasokan ETH: **~120.520.000 ETH** (saat Penggabungan pada September 2022)
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Tingkat penerbitan tahunan total (sebelum penggabungan): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>~88,7%</strong> dari penerbitan diberikan kepada penambang pada lapisan eksekusi (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> diterbitkan kepada para penaruh pada lapisan konsensus (0,52 / 4,61 * 100)
+**Tingkat penerbitan tahunan total (sebelum penggabungan): ~4,61%** (4,09% + 0,52%)
+
+**~88,7%** dari penerbitan diberikan kepada penambang pada lapisan eksekusi (4,09 / 4,61 * 100)
+
+**~11,3%** diterbitkan kepada para penaruh pada lapisan konsensus (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Seiring bertambahnya validator yang menarik diri, jumlah maksimum validator yang
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tingkat penerbitan tahunan total: <strong>~0,52%</strong><br/><br/>
-Pengurangan bersih dalam penerbitan ETH tahunan: <strong>~88,7%</strong> ((4,61% - 0,52%) / 4,61% * 100)
+Tingkat penerbitan tahunan total: **~0,52%**
+
+Pengurangan bersih dalam penerbitan ETH tahunan: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

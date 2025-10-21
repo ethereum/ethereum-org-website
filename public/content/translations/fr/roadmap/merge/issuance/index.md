@@ -57,9 +57,11 @@ Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Taux d'émission annuel totalisé (avant la fusion) : ~4,61 %</strong> (4,09 % + 0,52 %)<br/><br/>
-<strong>~88,7 %</strong> de l'émission allaient aux mineurs de la couche d'exécution (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3 %</strong> étaient émis aux validateurs de la couche de consensus (0,52 / 4,61 * 100)
+**Taux d'émission annuel totalisé (avant la fusion) : ~4,61 %** (4,09 % + 0,52 %)
+
+**~88,7 %** de l'émission allaient aux mineurs de la couche d'exécution (4,09 / 4,61 * 100)
+
+**~11,3 %** étaient émis aux validateurs de la couche de consensus (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Environ 0,33 % du nombre total de validateurs peuvent sortir en une journée don
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Taux d'émission annualisé total : <strong>~0,52 %</strong><br/><br/>
-Réduction nette de l'émission annuelle d'ETH : <strong>~88,7 %</strong> ((4,61 % - 0,52 %) / 4,61 % * 100)
+Taux d'émission annualisé total : **~0,52 %**
+
+Réduction nette de l'émission annuelle d'ETH : **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -57,9 +57,11 @@ Suministro total de ETH: **~120.520.000 ETH** (en el momento de La Fusión en se
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Tasa de emisión anual total (antes de La Fusión): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>~88,7%</strong> de la emisión iba a los mineros en la capa de ejecución (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> era emitida para los participantes en la capa de consenso (0,52 / 4,61 * 100)
+**Tasa de emisión anual total (antes de La Fusión): ~4,61%** (4,09% + 0,52%)
+
+**~88,7%** de la emisión iba a los mineros en la capa de ejecución (4,09 / 4,61 * 100)
+
+**~11,3%** era emitida para los participantes en la capa de consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Cuantos más validadores salgan, más se irá reduciendo gradualmente el número
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tasa de emisión anual total: <strong>~0,52%</strong><br/><br/>
-Reducción neta de la emisión anual de ETH: <strong>~88,7%</strong> ((4,61% - 0,52%) / 4,61% * 100)
+Tasa de emisión anual total: **~0,52%**
+
+Reducción neta de la emisión anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

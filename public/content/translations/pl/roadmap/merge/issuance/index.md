@@ -57,9 +57,11 @@ Całkowita podaż ETH: **około 120.520.000 ETH** (w momencie Połączenia we wr
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Łączna roczna stopa emisji (przed Połączeniem): około 4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>około 88,7%</strong> emisji trafiło do górników w warstwie wykonawczej (4,09 / 4,61 * 100)<br/><br/>
-<strong>około 11,3%</strong> emisji trafiło do stakerów w warstwie konsensusu (0,52 / 4,61 * 100)
+**Łączna roczna stopa emisji (przed Połączeniem): około 4,61%** (4,09% + 0,52%)
+
+**około 88,7%** emisji trafiło do górników w warstwie wykonawczej (4,09 / 4,61 * 100)
+
+**około 11,3%** emisji trafiło do stakerów w warstwie konsensusu (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ W miarę wychodzenia większej liczby walidatorów maksymalna liczba wychodzący
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Całkowita roczna stopa emisji: <strong>około 0,52%</strong><br/><br/>
-Redukcja netto w rocznej emisji ETH: <strong>około 88,7%</strong> ((4,61% - 0,52%) / 4,61% * 100)
+Całkowita roczna stopa emisji: **około 0,52%**
+
+Redukcja netto w rocznej emisji ETH: **około 88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

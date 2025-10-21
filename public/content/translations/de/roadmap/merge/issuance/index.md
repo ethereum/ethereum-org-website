@@ -93,8 +93,9 @@ Wenn mehr Validatoren aussteigen, wird die maximale Anzahl der ausscheidenden Va
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Jährlicher Gesamtausgabesatz: <strong>~0.52%</strong><br/><br/>
-Netto-Reduktion der jährlichen ETH-Emissionen: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+Jährlicher Gesamtausgabesatz: **~0.52%**
+
+Netto-Reduktion der jährlichen ETH-Emissionen: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

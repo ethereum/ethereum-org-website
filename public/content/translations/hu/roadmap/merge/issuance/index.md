@@ -57,9 +57,11 @@ Teljes ETH-kínálat: **~120 520 000 ETH** (a Beolvadás idején, 2022. szepte
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Teljes éves kibocsátási ráta (a Beolvadás előtt): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-a kibocsátás <strong>kb. 88,7%-a</strong> ment a bányászoknak a végrehajtási rétegen (4,09 / 4,61 * 100)<br/><br/>
-<strong>kb. 11,3%-a</strong> a letétesekhez került a konszenzusrétegen (0,52 / 4,61 * 100)
+**Teljes éves kibocsátási ráta (a Beolvadás előtt): ~4,61%** (4,09% + 0,52%)
+
+a kibocsátás **kb. 88,7%-a** ment a bányászoknak a végrehajtási rétegen (4,09 / 4,61 * 100)
+
+**kb. 11,3%-a** a letétesekhez került a konszenzusrétegen (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -91,8 +93,9 @@ Ahogy több validátor vonul ki, a meglévő validátorok száma fokozatosan lec
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Teljes éves kibocsátási ráta: <strong>kb. 0,52%</strong><br/><br/>
-Az éves ETH kibocsátás nettó csökkenése: <strong>kb. 88,7%</strong> ((4,61% – 0,52%) / 4,61% * 100)
+Teljes éves kibocsátási ráta: **kb. 0,52%**
+
+Az éves ETH kibocsátás nettó csökkenése: **kb. 88,7%** ((4,61% – 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
