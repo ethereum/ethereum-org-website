@@ -58,7 +58,7 @@ Ní féidir. Is uirlis bhainistíochta é an sparán a chuidíonn leat cuntais a
 
 ### An féidir liom bitcoin a sheoladh chuig seoladh Ethereum, nó éitear chuig seoladh Bitcoin?
 
-Ní féidir leat. Tá Bitcoin agus éitear ar dhá líonra ar leith (i.e. blocshlabhraí éagsúla), agus a bhformáidí leabharchoimeád agus tá a seoltaí féin ag gach ceann acu. Rinneadh iarrachtaí éagsúla an dá líonra difriúla a dhúnadh, agus is é an ceann is gníomhaí faoi láthair ná [Wrapped Bitcoin nó WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ní moladh é seo, toisc gur réiteach coimeádta é WBTC (a chiallaíonn go rialaíonn grúpa amháin daoine feidhmeanna ríthábhachtacha áirithe) agus cuirtear ar fáil anseo é chun críocha faisnéise amháin.
+Ní féidir leat. Tá Bitcoin agus éitear ar dhá líonra ar leith (i.e., blocshlabhraí éagsúla), agus a bhformáidí leabharchoimeád agus tá a seoltaí féin ag gach ceann acu. Rinneadh iarrachtaí éagsúla an dá líonra difriúla a dhúnadh, agus is é an ceann is gníomhaí faoi láthair ná [Wrapped Bitcoin nó WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ní moladh é seo, toisc gur réiteach coimeádta é WBTC (a chiallaíonn go rialaíonn grúpa amháin daoine feidhmeanna ríthábhachtacha áirithe) agus cuirtear ar fáil anseo é chun críocha faisnéise amháin.
 
 ### Má tá seoladh ETH agam, an liomsa an seoladh céanna ar bhlocshlabhraí eile?
 
