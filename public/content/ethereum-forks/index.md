@@ -1,11 +1,11 @@
 ---
-title: History and Forks of Ethereum
+title: Timeline of all Ethereum forks (2014 to present)
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
 sidebarDepth: 1
 ---
 
-# The history of Ethereum {#the-history-of-ethereum}
+# Timeline of all Ethereum forks (2014 to present) {#the-history-of-ethereum}
 
 A timeline of all the major milestones, forks, and updates to the Ethereum blockchain.
 
@@ -320,7 +320,7 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 
 Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to Ethereum.
 
-The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/history/#london) of August 2021. Before the London upgrade, fees were calculated without separating `base` and `priority` fees, as follows:
+The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/ethereum-forks/#london) of August 2021. Before the London upgrade, fees were calculated without separating `base` and `priority` fees, as follows:
 
 Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei.
 

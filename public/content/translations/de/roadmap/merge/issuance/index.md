@@ -30,11 +30,11 @@ title="ETH-Ausgabe tldr">
 
 ### Ausgabe auf der Ausführungsschicht {#el-issuance-pre-merge}
 
-Unter dem Proof-of-Work-System interagierten die Miner nur mit der Ausführungsschicht und wurden mit Blockbelohnungen belohnt, wenn sie die ersten Miner waren, die den nächsten Block gelöst haben. Seit dem [Constantinople-Upgrade](/history/#constantinople) im Jahr 2019 betrug diese Belohnung 2 ETH pro Block. Miner wurden auch für die Veröffentlichung von [Ommer-Blöcken](/glossary/#ommer) belohnt, das waren gültige Blöcke, die nicht in der längsten/kanonischen Kette landeten. Diese Belohnungen erreichten maximal 1,75 ETH pro Ommer und wurden zusätzlich zu der Belohnung aus dem kanonischen Block ausgegeben. Das Mining war eine wirtschaftlich intensive Tätigkeit, die historisch gesehen ein hohes Niveau an ETH-Ausgabe erforderte, um sie aufrechtzuerhalten.
+Unter dem Proof-of-Work-System interagierten die Miner nur mit der Ausführungsschicht und wurden mit Blockbelohnungen belohnt, wenn sie die ersten Miner waren, die den nächsten Block gelöst haben. Seit dem [Constantinople-Upgrade](/ethereum-forks/#constantinople) im Jahr 2019 betrug diese Belohnung 2 ETH pro Block. Miner wurden auch für die Veröffentlichung von [Ommer-Blöcken](/glossary/#ommer) belohnt, das waren gültige Blöcke, die nicht in der längsten/kanonischen Kette landeten. Diese Belohnungen erreichten maximal 1,75 ETH pro Ommer und wurden zusätzlich zu der Belohnung aus dem kanonischen Block ausgegeben. Das Mining war eine wirtschaftlich intensive Tätigkeit, die historisch gesehen ein hohes Niveau an ETH-Ausgabe erforderte, um sie aufrechtzuerhalten.
 
 ### Ausgabe der Konsensschicht {#cl-issuance-pre-merge}
 
-Die [Beacon Chain](/history/#beacon-chain-genesis) wurde 2020 gestartet. Anstelle von Minern wird sie durch Validatoren mittels Proof-of-Stake gesichert. Diese Kette wurde initiiert, indem Ethereum-Nutzer ETH in einen Smart Contract auf dem Mainnet (der Ausführungsschicht) einzahlten. Die Beacon Chain reagiert darauf und schreibt den Nutzern eine entsprechende Menge ETH auf der neuen Kette gut. Bis zur Durchführung von The Merge verarbeiteten die Validatoren der Beacon Chain keine Transaktionen und kamen im Wesentlichen zu einem Konsens über den Zustand des Validator-Pools selbst.
+Die [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) wurde 2020 gestartet. Anstelle von Minern wird sie durch Validatoren mittels Proof-of-Stake gesichert. Diese Kette wurde initiiert, indem Ethereum-Nutzer ETH in einen Smart Contract auf dem Mainnet (der Ausführungsschicht) einzahlten. Die Beacon Chain reagiert darauf und schreibt den Nutzern eine entsprechende Menge ETH auf der neuen Kette gut. Bis zur Durchführung von The Merge verarbeiteten die Validatoren der Beacon Chain keine Transaktionen und kamen im Wesentlichen zu einem Konsens über den Zustand des Validator-Pools selbst.
 
 Validatoren auf der Beacon Chain werden mit ETH belohnt, wenn sie den Zustand der Kette bestätigen und Blöcke vorschlagen. Belohnungen (oder Strafen) werden bei jedem Zeitalter (alle 6,4 Minuten) basierend auf der Leistung der Validatoren berechnet und verteilt. Die Belohnungen für Validatoren sind erheblich geringer als die zuvor unter dem Proof-of-Work-Verfahren ausgeschütteten Mining-Belohnungen (2 ETH alle etwa 13,5 Sekunden), da der Betrieb eines Validierungsknotens nicht so wirtschaftlich intensiv ist und daher keine so hohe Belohnung erfordert oder rechtfertigt.
 
@@ -57,9 +57,11 @@ Gesamt ETH Angebot: **~120,520,000 ETH** (zum Zeitpunkt von The Merge im Septemb
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-<strong>Jährlicher Gesamtausgabesatz (Pre-Merge): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88.7%</strong> der Ausgabe ging an die Miner auf der Ausführungs-Ebene (4.09 / 4.61 * 100)<br/><br/>
-<strong>~11.3%</strong> wurde an Staker auf der Konsensus-Ebene ausgegeben (0.52 / 4.61 * 100)
+**Jährlicher Gesamtausgabesatz (Pre-Merge): ~4.61%** (4.09% + 0.52%)
+
+**~88.7%** der Ausgabe ging an die Miner auf der Ausführungs-Ebene (4.09 / 4.61 * 100)
+
+**~11.3%** wurde an Staker auf der Konsensus-Ebene ausgegeben (0.52 / 4.61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -104,7 +106,7 @@ Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrann
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Die Verbrennung von Gebühren wurde mit dem [the London Upgrade](/history/#london) im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
+Die Verbrennung von Gebühren wurde mit dem [the London Upgrade](/ethereum-forks/#london) im August 2021 in Betrieb genommen und bleibt seit dem Merge unverändert.
 </AlertDescription>
 </AlertContent>
 </Alert>

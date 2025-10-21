@@ -70,7 +70,7 @@ Staking-Abhebungen sind live! Die Funktionalität für das Abheben wurden als Te
 
 Das Shanghai/Capella Upgrade ermöglicht ETH, das gestaked wurde, mit regulären Ethereum-Konten zurückzufordern. Dies schloss den Kreis hinsichtlich der Bereitstellung von Liquidität und brachte Ethereum einen Schritt näher auf seinem Weg, ein nachhaltiges, skalierbares, sicheres dezentralisiertes Ökosystem zu schaffen.
 
-- [Mehr zur Geschichte von Ethereum](/history/)
+- [Mehr zur Geschichte von Ethereum](/ethereum-forks/)
 - [Mehr zur Ethereum-Roadmap](/roadmap/)
 
 ## Wie funktionieren Auszahlungen? {#how-do-withdrawals-work}

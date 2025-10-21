@@ -30,11 +30,11 @@ title="Tldr sull'emissione di ETH">
 
 ### Emissione del livello d'esecuzione {#el-issuance-pre-merge}
 
-Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/history/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
+Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/ethereum-forks/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
 
 ### Emissione del livello del consenso {#cl-issuance-pre-merge}
 
-La [Beacon Chain](/history/#beacon-chain-genesis) è stata attivata nel 2020. Invece dei miner, è protetta dai validatori, che utilizzano il proof of stake. Questa catena è stata avviata dagli utenti di Ethereum, che depositavano ETH a senso unico in uno smart contract sulla Rete Principale (il livello d'esecuzione), ascoltato dalla Beacon Chain, accreditando l'utente con un importo equivalente di ETH, sulla nuova catena. Fino alla Fusione, i validatori della Beacon Chain non stavano elaborando le transazioni e, fondamentalmente, arrivavano al consenso sullo stato dello stesso gruppo di validatori.
+La [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) è stata attivata nel 2020. Invece dei miner, è protetta dai validatori, che utilizzano il proof of stake. Questa catena è stata avviata dagli utenti di Ethereum, che depositavano ETH a senso unico in uno smart contract sulla Rete Principale (il livello d'esecuzione), ascoltato dalla Beacon Chain, accreditando l'utente con un importo equivalente di ETH, sulla nuova catena. Fino alla Fusione, i validatori della Beacon Chain non stavano elaborando le transazioni e, fondamentalmente, arrivavano al consenso sullo stato dello stesso gruppo di validatori.
 
 I validatori sulla Beacon Chain sono ricompensati con ETH per l'attestazione allo stato della catena e la proposta di blocchi. Le ricompense (o penalità) sono calcolate e distribuite a ogni epoca (ogni 6,4 minuti) a seconda delle prestazioni del validatore. Le ricompense del validatore sono **significativamente** inferiori a quelle di mining, emesse precedentemente sotto il proof-of-work (pari a 2 ETH circa ogni 13,5 secondi), poiché l'operazione di un nodo di convalida non è altrettanto intenso dal punto di vista economico e quindi non richiede né garantisce una ricompensa altrettanto elevata.
 
@@ -104,7 +104,7 @@ La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. P
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/history/#london) ad agosto 2021 e resta immutata da La Fusione.
+La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/ethereum-forks/#london) ad agosto 2021 e resta immutata da La Fusione.
 </AlertDescription>
 </AlertContent>
 </Alert>

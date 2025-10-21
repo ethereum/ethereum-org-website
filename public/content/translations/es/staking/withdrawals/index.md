@@ -70,7 +70,7 @@ Una vez que una cuenta se marca como «retirable» y se proporcionan las credenc
 
 La actualización Shanghai/Capella habilitó previamente que los ETH apostados se reclamen en las cuentas regulares de Ethereum. Con esto se cierra el ciclo de la liquidez y aproima un poco más a Ethereum en su intención de desarrollar un ecosistema descentralizado escalable, seguro y sostenible.
 
-- [Más sobre la historia de Ethereum](/history/)
+- [Más sobre la historia de Ethereum](/ethereum-forks/)
 - [Más sobre la hoja de ruta de Ethereum](/roadmap/)
 
 ## ¿Cómo funcionan los pagos de las retiradas? {#how-do-withdrawals-work}

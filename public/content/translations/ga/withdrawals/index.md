@@ -70,7 +70,7 @@ Tá aistarraingtí geallchuir beo! Cumasaíodh feidhmiúlacht aistarraingthe mar
 
 Mar gheall ar uasghrádú Shanghai/Capella bhíothas in ann ETH a bhí i ngeall roimhe seo a fháil ar ais i gcuntais rialta Ethereum. Dhún sé seo an lúb ar leachtacht geallchuir, agus thug sé Ethereum céim níos gaire dá thuras i dtreo éiceachóras díláraithe inbhuanaithe, inscálaithe, slán a thógáil.
 
-- [Tuilleadh faoi stair Ethereum](/history/)
+- [Tuilleadh faoi stair Ethereum](/ethereum-forks/)
 - [Tuilleadh ar an treochlár Ethereum](/roadmap/)
 
 ## Conas a oibríonn íocaíochtaí aistarraingthe? {#how-do-withdrawals-work}

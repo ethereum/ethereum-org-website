@@ -70,7 +70,7 @@ A letétek visszavonása elérhető! A funkcionalitást a Shanghai/Capella friss
 
 Ennek következtében a korábban letétbe helyezett ETH-t vissza lehet vonni a normális Ethereum-számlákra. Ez lezárta a letétek likviditásának témáját, és az Ethereumot egy lépéssel közelebb vitte a céljához, ami egy fenntartható, skálázható, biztonságot, decentralizált ökoszisztéma.
 
-- [Bővebben az Ethereum történetéről](/history/)
+- [Bővebben az Ethereum történetéről](/ethereum-forks/)
 - [Bővebben az Ethereum fejlesztési terveiről](/roadmap/)
 
 ## Hogyan működik a visszavonási kifizetés? {#how-do-withdrawals-work}

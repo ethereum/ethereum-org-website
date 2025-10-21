@@ -70,7 +70,7 @@ Staking-opnames zijn live! De opnamefunctionaliteit werd ingeschakeld als onderd
 
 De opnamefunctionaliteit werd ingeschakeld als onderdeel van de Shanghai/Capella-upgrade die op 12 april 2023 plaatsvond. Hiermee werd de cirkel rond staking van liquiditeit gesloten en kwam Ethereum een ​​stap dichterbij de opbouw van een duurzaam, schaalbaar en veilig gedecentraliseerd ecosysteem.
 
-- [Meer over de geschiedenis van Ethereum](/history/)
+- [Meer over de geschiedenis van Ethereum](/ethereum-forks/)
 - [Meer over de roadmap van Ethereum](/roadmap/)
 
 ## Hoe werken opnamebetalingen? {#how-do-withdrawals-work}

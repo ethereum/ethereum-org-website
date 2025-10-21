@@ -30,11 +30,11 @@ title="ETH-uitgifte tldr">
 
 ### Uitgifte uitvoeringslaag {#el-issuance-pre-merge}
 
-Onder proof-of-work hadden miners alleen interactie met de uitvoeringslaag en werden ze beloond met blockbeloningen als ze de eerste miner waren die de volgende block oploste. Sinds de [Constantinople-upgrade](/history/#constantinople) in 2019 was deze beloning 2 ETH per block. Miners werden ook beloond voor het publiceren van [ommer](/glossary/#ommer)-blocks, wat geldige blocks waren die niet in de langste/canonieke chain terechtkwamen. Deze beloningen waren maximaal 1,75 ETH per ommer en kwamen _bovenop_ de beloning die werd uitgegeven uit de canonieke block. Het miningproces was een economisch intensieve activiteit, waarvoor historisch gezien een hoog niveau van ETH-uitgifte nodig was om in stand te worden gehouden.
+Onder proof-of-work hadden miners alleen interactie met de uitvoeringslaag en werden ze beloond met blockbeloningen als ze de eerste miner waren die de volgende block oploste. Sinds de [Constantinople-upgrade](/ethereum-forks/#constantinople) in 2019 was deze beloning 2 ETH per block. Miners werden ook beloond voor het publiceren van [ommer](/glossary/#ommer)-blocks, wat geldige blocks waren die niet in de langste/canonieke chain terechtkwamen. Deze beloningen waren maximaal 1,75 ETH per ommer en kwamen _bovenop_ de beloning die werd uitgegeven uit de canonieke block. Het miningproces was een economisch intensieve activiteit, waarvoor historisch gezien een hoog niveau van ETH-uitgifte nodig was om in stand te worden gehouden.
 
 ### Uitgifte consensuslaag {#cl-issuance-pre-merge}
 
-De [Beacon Chain](/history/#beacon-chain-genesis) ging live in 2020. In plaats van miners, wordt het beveiligd door validators die proof-of-stake gebruiken. Deze chain werd gebootstrapt door Ethereum-gebruikers die ETH eenmalig storten in een smart contract op het hoofdnet (de uitvoeringslaag), waar de Beacon Chain naar luistert en de gebruiker crediteert met een gelijke hoeveelheid ETH op de nieuwe chain. Totdat de samenvoeging plaatsvond, verwerkten de validators van de Beacon Chain geen transacties en kwamen ze in wezen tot een consensus over de status van de validatorpool zelf.
+De [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) ging live in 2020. In plaats van miners, wordt het beveiligd door validators die proof-of-stake gebruiken. Deze chain werd gebootstrapt door Ethereum-gebruikers die ETH eenmalig storten in een smart contract op het hoofdnet (de uitvoeringslaag), waar de Beacon Chain naar luistert en de gebruiker crediteert met een gelijke hoeveelheid ETH op de nieuwe chain. Totdat de samenvoeging plaatsvond, verwerkten de validators van de Beacon Chain geen transacties en kwamen ze in wezen tot een consensus over de status van de validatorpool zelf.
 
 Validators op de Beacon Chain worden beloond met ETH voor het bevestigen van de status van de chain en het voorstellen van blocks. Beloningen (of sancties) worden berekend en verdeeld bij elke epoch (elke 6,4 minuten) op basis van de prestaties van de validator. Validatorbeloningen bedragen **beduidend** minder dan de miningbeloningen die voorheen werden uitgegeven onder proof-of-work (2 ETH elke ~13,5 seconden), omdat het uitvoeren van een validerende node economisch niet zo intensief is en dus niet zo'n hoge beloning vereist of rechtvaardigt.
 
@@ -104,7 +104,7 @@ De tegengestelde kracht van ETH-uitgifte is de snelheid waarmee ETH wordt verbra
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Kosten verbranden ging live met [de London-upgrade](/history/#london) in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
+Kosten verbranden ging live met [de London-upgrade](/ethereum-forks/#london) in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
 </AlertDescription>
 </AlertContent>
 </Alert>

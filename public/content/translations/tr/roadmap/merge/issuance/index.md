@@ -30,11 +30,11 @@ title="ETH dağıtımı &quot;çok uzun, okumadım&quot;">
 
 ### Yürütüm katmanı dağıtımı {#el-issuance-pre-merge}
 
-İş ispatı bünyesinde madenciler sadece yürütüm katmanıyla etkileşime girerdi ve bir sonraki bloku çözen ilk madenci blok ödülüyle ödüllendirilirdi. 2019'da gerçekleşen [Constantinople yükseltmesinden](/history/#constantinople) beri bu ödül blok başına 2 ETH idi. Madenciler en uzun/kurallı zincirde yer almayan geçerli [ommer](/glossary/#ommer) blokların yayınlanması sonucunda da ödüllendirilirdi. Bu ödüller ommer blok başına en fazla 1.75 ETH idi ve kurallı bloka verilen ödüle _ek olarak_ verilirdi. Madencilik süreci ekonomik olarak maliyetliydi ve sürdürülebilmesi zamanında yüksek düzeyde ETH dağıtımı gerekliydi.
+İş ispatı bünyesinde madenciler sadece yürütüm katmanıyla etkileşime girerdi ve bir sonraki bloku çözen ilk madenci blok ödülüyle ödüllendirilirdi. 2019'da gerçekleşen [Constantinople yükseltmesinden](/ethereum-forks/#constantinople) beri bu ödül blok başına 2 ETH idi. Madenciler en uzun/kurallı zincirde yer almayan geçerli [ommer](/glossary/#ommer) blokların yayınlanması sonucunda da ödüllendirilirdi. Bu ödüller ommer blok başına en fazla 1.75 ETH idi ve kurallı bloka verilen ödüle _ek olarak_ verilirdi. Madencilik süreci ekonomik olarak maliyetliydi ve sürdürülebilmesi zamanında yüksek düzeyde ETH dağıtımı gerekliydi.
 
 ### Fikir birliği katmanı dağıtımı {#cl-issuance-pre-merge}
 
-[İşaret Zinciri](/history/#beacon-chain-genesis) 2020'de yürürlüğe girdi. Madenciler yerine hisseleme ispatı kullanan doğrulayıcılar tarafından güvence altına alındı. Zincir, Ana Ağ'da (yürütüm katmanında) akıllı kontratlara tek yönlü ETH yatıran Ethereum kullanıcıları tarafından önyüklendi. İşaret Zinciri Ana Ağı dinleyerek kullanıcılara yeni zincirde aynı miktarda ETH yatırdı. Birleşim gerçekleşene kadar İşaret Zinciri'nin doğrulayıcıları işlemleri işlemiyordu, doğrulayıcı havuzunun durumu hakkındaki mutabakata varıyordu.
+[İşaret Zinciri](/ethereum-forks/#beacon-chain-genesis) 2020'de yürürlüğe girdi. Madenciler yerine hisseleme ispatı kullanan doğrulayıcılar tarafından güvence altına alındı. Zincir, Ana Ağ'da (yürütüm katmanında) akıllı kontratlara tek yönlü ETH yatıran Ethereum kullanıcıları tarafından önyüklendi. İşaret Zinciri Ana Ağı dinleyerek kullanıcılara yeni zincirde aynı miktarda ETH yatırdı. Birleşim gerçekleşene kadar İşaret Zinciri'nin doğrulayıcıları işlemleri işlemiyordu, doğrulayıcı havuzunun durumu hakkındaki mutabakata varıyordu.
 
 İşaret Zincirindeki doğrulayıcılar zincirin durumunu onayladıklarına ve blok önerdiklerinde ETH ile ödüllendirilir. Ödüller (veya cezalar) doğrulayıcı performansına dayanarak her dönemde (6,4 dakikada bir) hesaplanır ve dağıtılır. Doğrulayıcı ödülleri eskiden iş ispatı üzerine dağıtılan madenci ödüllerine kıyasla **çok** düşüktür (her 13,5 saniyede 2 ETH).
 
@@ -104,7 +104,7 @@ ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzeri
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Ücret yakımı Ağustos 2021'de [London yükseltmesi](/history/#london) ile yürürlüğe girmiştir ve Birleşim'den bu yana değişmemiştir.
+Ücret yakımı Ağustos 2021'de [London yükseltmesi](/ethereum-forks/#london) ile yürürlüğe girmiştir ve Birleşim'den bu yana değişmemiştir.
 </AlertDescription>
 </AlertContent>
 </Alert>

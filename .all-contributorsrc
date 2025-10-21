@@ -12705,7 +12705,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/31341867?v=4",
       "profile": "https://alexandriaroberts.dev/",
       "contributions": [
-        "code"
+        "code",
+        "content",
+        "test"
       ]
     },
     {
@@ -13510,7 +13512,8 @@
       "profile": "https://github.com/Parizval",
       "contributions": [
         "tool",
-        "code"
+        "code",
+        "maintenance"
       ]
     },
     {
@@ -13637,6 +13640,24 @@
       "profile": "https://github.com/Gwen-M",
       "contributions": [
         "tool"
+      ]
+    },
+    {
+      "login": "SupaMega24",
+      "name": "Charles Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138974329?v=4",
+      "profile": "https://charliej.vercel.app/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nikitakent",
+      "name": "NikitaKent",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57263011?v=4",
+      "profile": "http://nikitakent.com",
+      "contributions": [
+        "content"
       ]
     }
   ],

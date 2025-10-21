@@ -70,7 +70,7 @@ Penarikan penaruhan sudah aktif! Fungsionalitas penarikan dana diaktifkan sebaga
 
 Peningkatan Shanghai/Capella memungkinkan ETH yang sebelumnya dipertaruhkan untuk diklaim kembali ke akun Ethereum biasa. Hal ini menutup lingkaran pada likuiditas penaruhan, dan membawa Ethereum selangkah lebih dekat dalam perjalanannya untuk membangun ekosistem terdesentralisasi yang berkelanjutan, terukur, dan aman.
 
-- [Lebih lanjut tentang sejarah Ethereum](/history/)
+- [Lebih lanjut tentang sejarah Ethereum](/ethereum-forks/)
 - [Lebih lanjut tentang peta perjalanan Ethereum](/roadmap/)
 
 ## Bagaimana cara kerja pembayaran penarikan dana? {#how-do-withdrawals-work}

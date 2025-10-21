@@ -70,7 +70,7 @@ Os saques de stake já estão disponíveis! A funcionalidade de saque foi habili
 
 A atualização Shanghai/Capella permitiu que o ETH previamente em stake fosse recuperado em contas normais do Ethereum. Isso fechou o ciclo de liquidez de stake e trouxe o Ethereum a um passo mais perto de sua jornada para a construção de um ecossistema descentralizado sustentável, dimensionável e seguro.
 
-- [Mais sobre a história do Ethereum](/history/)
+- [Mais sobre a história do Ethereum](/ethereum-forks/)
 - [Mais sobre o roteiro do Ethereum](/roadmap/)
 
 ## Como funcionam os pagamentos de saque? {#how-do-withdrawals-work}

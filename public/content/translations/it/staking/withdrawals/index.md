@@ -70,7 +70,7 @@ I prelievi di staking sono già operativi! La funzionalità di prelievo è stata
 
 L'aggiornamento di Shanghai/Capella ha consentito di rivendicare gli ETH precedentemente messi in staking, in conti regolari di Ethereum. Ciò ha chiuso il ciclo della liquidità di staking e ha portato Ethereum un passo più avanti nel suo percorso per la costruzione di un ecosistema decentralizzato sostenibile, scalabile e sicuro.
 
-- [Maggiori informazioni sulla storia di Ethereum](/history/)
+- [Maggiori informazioni sulla storia di Ethereum](/ethereum-forks/)
 - [Maggiori informazioni sulla tabella di marcia di Ethereum](/roadmap/)
 
 ## Come funzionano i pagamenti dei prelievi? {#how-do-withdrawals-work}

@@ -13,7 +13,7 @@ This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, o
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
+Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>

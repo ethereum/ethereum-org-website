@@ -41,7 +41,7 @@ Des informations plus détaillées sur ces différents types et catégories peuv
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Une interface type pour les jetons fongibles (interchangeables) comme les jetons de vote, les jetons d'enjeu ou les monnaies virtuelles.
   - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Une norme de jetons fongibles qui rend les jetons identiques à l'éther et prend en charge la gestion des transferts de jetons du côté des destinataires.
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Définit une interface de jeton pour les jetons ERC-20 qui prend en charge l'exécution du code du destinataire après transfert ou transferFrom, ou du code de l'expéditeur après approbation.
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - Définit une interface de jeton pour les jetons ERC-20 qui prend en charge l'exécution du code du destinataire après transfert ou transferFrom, ou du code de l'expéditeur après approbation.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Une interface type pour les jetons non fongibles, comme ceux requis pour les œuvres d'art ou une chanson.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Événement normalisé émis lors de la création/du transfert d'un, ou de plusieurs jetons non fongibles à l'aide d'identifiants de jetons consécutifs.
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Extension de l'interface pour le rôle de consommateur EIP-721.

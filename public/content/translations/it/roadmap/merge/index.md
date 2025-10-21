@@ -17,7 +17,7 @@ summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa 
 
 ## In cosa ha consistito la Fusione? {#what-is-the-merge}
 
-La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/history/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
+La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/ethereum-forks/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
 
 <MergeInfographic />
 

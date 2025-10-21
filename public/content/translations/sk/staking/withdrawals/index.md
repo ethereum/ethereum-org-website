@@ -70,7 +70,7 @@ Výbery stakovania sú živé! Funkcia výberu bola povolená v rámci upgradu S
 
 Upgrade Shanghai/Capella umožnil získať skôr vložené ETH späť na bežné účty Ethereum. Tým sa uzavrela slučka v stakovaní likvidity a Ethereum sa o krok priblížilo na jeho ceste k vybudovaniu udržateľného, ​​škálovateľného a bezpečného decentralizovaného ekosystému.
 
-- [Viac o histórii Etherea](/history/)
+- [Viac o histórii Etherea](/ethereum-forks/)
 - [Viac o pláne realizácie Etherea](/roadmap/)
 
 ## Ako fungujú výbery? {#how-do-withdrawals-work}

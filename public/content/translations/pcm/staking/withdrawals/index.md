@@ -70,7 +70,7 @@ Staking witdrawals don dey live! Dem don enabol witdrawal funkshonality as part 
 
 Di Shanghai/Capella upgrade don allow ETH wey dem stake bifor make dem  riklaim am into regular Ethereum akants. Dis don klose di loop on staking liquidity, and don bring Ethereum one step klosa on im joni towods building one sustainabol, kcalabol, sekure disentralized ekosystem.
 
-- [More on Ethereum history](/history/)
+- [More on Ethereum history](/ethereum-forks/)
 - [More on di Ethereum roadmap](/roadmap/)
 
 ## Hau witdrawal payments dey work? {#how-do-withdrawals-work}

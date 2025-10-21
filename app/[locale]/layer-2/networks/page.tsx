@@ -156,7 +156,7 @@ export async function generateMetadata({
     slug: ["layer-2", "networks"],
     title: t("page-layer-2-networks-meta-title"),
     description: t("page-layer-2-networks-hero-description"),
-    image: "/images/layer-2/learn-hero.png",
+    image: "/images/heroes/layer-2-hub-hero.png",
   })
 }
 

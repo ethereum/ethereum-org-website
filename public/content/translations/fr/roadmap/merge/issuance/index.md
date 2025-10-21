@@ -30,11 +30,11 @@ title="Résumé de l'émission d'ETH">
 
 ### Émission de la couche d'exécution {#el-issuance-pre-merge}
 
-En preuve de travail, les mineurs n'interagissaient qu'avec la couche d'exécution et étaient récompensés par des récompenses de bloc, si et seulement s'ils étaient les premiers mineurs à résoudre le nouveau bloc. Depuis [la mise à jour Constantinople](/history/#constantinople) en 2019, cette récompense était de 2 ETH par bloc. Les mineurs étaient également récompensés pour la publication de blocs [oncle](/glossary/#ommer), qui étaient des blocs valides mais qui n'avaient pas abouti à la chaîne la plus longue/canonique. Ces récompenses étaient plafonnées à 1,75 ETH par bloc oncle et _s'ajoutaient à_ la récompense émise à partir du bloc canonique. Le processus de minage était une activité économiquement intensive, qui nécessitait historiquement des niveaux élevés d'émission d'ETH pour être soutenu.
+En preuve de travail, les mineurs n'interagissaient qu'avec la couche d'exécution et étaient récompensés par des récompenses de bloc, si et seulement s'ils étaient les premiers mineurs à résoudre le nouveau bloc. Depuis [la mise à jour Constantinople](/ethereum-forks/#constantinople) en 2019, cette récompense était de 2 ETH par bloc. Les mineurs étaient également récompensés pour la publication de blocs [oncle](/glossary/#ommer), qui étaient des blocs valides mais qui n'avaient pas abouti à la chaîne la plus longue/canonique. Ces récompenses étaient plafonnées à 1,75 ETH par bloc oncle et _s'ajoutaient à_ la récompense émise à partir du bloc canonique. Le processus de minage était une activité économiquement intensive, qui nécessitait historiquement des niveaux élevés d'émission d'ETH pour être soutenu.
 
 ### Émission de la couche de consensus {#cl-issuance-pre-merge}
 
-La [Chaîne phare](/history/#beacon-chain-genesis) est entrée en service en 2020. Au lieu de mineurs, elle est sécurisée par des validateurs utilisant la preuve d'enjeu. Cette chaîne a été lancée grâce aux utilisateurs d'Ethereum qui déposaient de l'ETH de manière unidirectionnelle dans un contrat intelligent sur le réseau principal (la couche d'exécution), que la Chaîne phare écoute, en créditant l'utilisateur d'une quantité égale d'ETH sur la nouvelle chaîne. Jusqu'à ce que La Fusion ait lieu, les validateurs de la Chaîne phare ne traitaient pas les transactions et avaient seulement comme mission d'établir un consensus sur l'état du groupe de validateurs lui-même.
+La [Chaîne phare](/ethereum-forks/#beacon-chain-genesis) est entrée en service en 2020. Au lieu de mineurs, elle est sécurisée par des validateurs utilisant la preuve d'enjeu. Cette chaîne a été lancée grâce aux utilisateurs d'Ethereum qui déposaient de l'ETH de manière unidirectionnelle dans un contrat intelligent sur le réseau principal (la couche d'exécution), que la Chaîne phare écoute, en créditant l'utilisateur d'une quantité égale d'ETH sur la nouvelle chaîne. Jusqu'à ce que La Fusion ait lieu, les validateurs de la Chaîne phare ne traitaient pas les transactions et avaient seulement comme mission d'établir un consensus sur l'état du groupe de validateurs lui-même.
 
 Les validateurs de la Chaîne phare sont récompensés en ETH pour attester de l'état de la chaîne et proposer des blocs. Les récompenses (ou les pénalités) sont calculées et distribuées à chaque période (toutes les 6,4 minutes) en fonction des performances des validateurs. Les récompenses des validateurs sont **nettement** moins élevées que les récompenses de minage qui étaient précédemment émises sous la preuve de travail (2 ETH toutes les ~13,5 secondes), car l'exploitation d'un nœud de validation n'est pas aussi économiquement intense et ne nécessite donc ni ne garantit une récompense aussi élevée.
 
@@ -104,7 +104,7 @@ La force opposée à l'émission d'ETH est le taux auquel l'ETH est brûlé. Pou
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La combustion des frais a été mise en place avec [la mise à jour London](/history/#london) en août 2021 et est restée inchangée depuis la Fusion.
+La combustion des frais a été mise en place avec [la mise à jour London](/ethereum-forks/#london) en août 2021 et est restée inchangée depuis la Fusion.
 </AlertDescription>
 </AlertContent>
 </Alert>

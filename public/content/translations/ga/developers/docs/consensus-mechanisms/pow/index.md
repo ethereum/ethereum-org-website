@@ -61,7 +61,7 @@ Chun bloic go seasta atá mailíseach ach fós bailí, bheadh ​​níos mó n�
 
 Bhí cruthúnas-oibre freagrach freisin as airgeadra nua a eisiúint isteach sa chóras agus as mianadóirí a spreagadh chun an obair a dhéanamh.
 
-Ón [uasghrádú Constantinople](/history/#constantinople), bronnadh dhá ETH úrnua agus cuid de na táillí idirbhirt ar na mianadóirí ar éirigh leo bloc a chruthú. Rinne bloic Ommer cúiteamh 1.75 ETH freisin. Ba bloic bhailí iad bloic Ommer a chruthaigh mianadóir beagnach ag an am céanna agus a chruthaigh mianadóir eile an bloc canónach, a cinneadh ar deireadh thiar ag cibé slabhra a tógadh sa mhullach ar an gcéad cheann. Tharla bloic Ommer de ghnáth mar gheall ar aga folaigh líonra.
+Ón [uasghrádú Constantinople](/ethereum-forks/#constantinople), bronnadh dhá ETH úrnua agus cuid de na táillí idirbhirt ar na mianadóirí ar éirigh leo bloc a chruthú. Rinne bloic Ommer cúiteamh 1.75 ETH freisin. Ba bloic bhailí iad bloic Ommer a chruthaigh mianadóir beagnach ag an am céanna agus a chruthaigh mianadóir eile an bloc canónach, a cinneadh ar deireadh thiar ag cibé slabhra a tógadh sa mhullach ar an gcéad cheann. Tharla bloic Ommer de ghnáth mar gheall ar aga folaigh líonra.
 
 ## Críochnúlacht {#finality}
 

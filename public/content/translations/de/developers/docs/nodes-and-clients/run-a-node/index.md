@@ -444,7 +444,7 @@ Erwägen Sie die Einrichtung eines Dienstes, der Ihren Client automatisch beim S
 
 #### Aktualisieren von Clients {#updating-clients}
 
-Sie müssen Ihre Client-Software mit den neuesten Sicherheitspatches, Funktionen und [EIPs](/eips/) auf dem neuesten Stand halten. Besonders vor [Hard Forks](/history/) sollten Sie sicherstellen, dass Sie die richtigen Client-Versionen verwenden.
+Sie müssen Ihre Client-Software mit den neuesten Sicherheitspatches, Funktionen und [EIPs](/eips/) auf dem neuesten Stand halten. Besonders vor [Hard Forks](/ethereum-forks/) sollten Sie sicherstellen, dass Sie die richtigen Client-Versionen verwenden.
 
 > Vor wichtigen Netzwerk-Updates veröffentlicht EF einen Beitrag in seinem [Blog](https://blog.ethereum.org). Sie können [diese Ankündigungen abonnieren](https://blog.ethereum.org/category/protocol#subscribe), um eine Benachrichtigung per E-Mail zu erhalten, wenn Ihr Node eine Aktualisierung benötigt.
 

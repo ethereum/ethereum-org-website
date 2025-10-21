@@ -30,11 +30,11 @@ title="Az ETH-kibocsátásról röviden">
 
 ### A végrehajtási réteg kibocsátása {#el-issuance-pre-merge}
 
-A proof-of-work mechanizmusban a bányászok csak a végrehajtási réteggel kapcsolódtak, és blokkjutalmat kaptak, ha elsőként oldották meg a következő blokkot. A [Constantinople-frissítés](/history/#constantinople) után, 2019-től ez a jutalom 2 ETH volt blokkonként. A bányászok jutalmat szereztek akkor is, ha nem egy valid blokkot hoztak létre, amely nem került be a leghosszabb/hiteles láncba, hanem annak csak [ommer](/glossary/#ommer) vagy testvérblokkja volt. Ezek a jutalmak maximum 1,75 ETH-t értek ommerenként, és az érvényes blokk nyereségén _felül_ kerültek kibocsátásra. A bányászat egy gazdaságilag intenzív tevékenység volt, amelynek fenntartásához magas szintű ETH kibocsátásra volt szükség.
+A proof-of-work mechanizmusban a bányászok csak a végrehajtási réteggel kapcsolódtak, és blokkjutalmat kaptak, ha elsőként oldották meg a következő blokkot. A [Constantinople-frissítés](/ethereum-forks/#constantinople) után, 2019-től ez a jutalom 2 ETH volt blokkonként. A bányászok jutalmat szereztek akkor is, ha nem egy valid blokkot hoztak létre, amely nem került be a leghosszabb/hiteles láncba, hanem annak csak [ommer](/glossary/#ommer) vagy testvérblokkja volt. Ezek a jutalmak maximum 1,75 ETH-t értek ommerenként, és az érvényes blokk nyereségén _felül_ kerültek kibocsátásra. A bányászat egy gazdaságilag intenzív tevékenység volt, amelynek fenntartásához magas szintű ETH kibocsátásra volt szükség.
 
 ### A konszenzusréteg kibocsátása {#cl-issuance-pre-merge}
 
-A [Beacon lánc](/history/#beacon-chain-genesis) 2020-től működik élesben. A bányászok helyett validátorok biztosították a rendszert a proof-of-stake mechanizmussal. Ezt a láncot úgy állították fel, hogy az Ethereum-felhasználók ETH-t helyeztek letétbe egy okosszerződésbe a főhálózaton (a végrehajtási rétegen), amelyet a Beacon lánc felismert és az új láncon ugyanannyit ETH-t adott a felhasználónak. A Beolvadás bevezetéséig a Beacon lánc validátorai nem kezelték a tranzakciókat és lényegében a validátor gyűjtőjének státuszáról hozták meg a konszenzust.
+A [Beacon lánc](/ethereum-forks/#beacon-chain-genesis) 2020-től működik élesben. A bányászok helyett validátorok biztosították a rendszert a proof-of-stake mechanizmussal. Ezt a láncot úgy állították fel, hogy az Ethereum-felhasználók ETH-t helyeztek letétbe egy okosszerződésbe a főhálózaton (a végrehajtási rétegen), amelyet a Beacon lánc felismert és az új láncon ugyanannyit ETH-t adott a felhasználónak. A Beolvadás bevezetéséig a Beacon lánc validátorai nem kezelték a tranzakciókat és lényegében a validátor gyűjtőjének státuszáról hozták meg a konszenzust.
 
 A Beacon láncon a validátorok ETH jutalmat kaptak azért, hogy tanúsítják a lánc státuszát és blokkokat javasolnak. A validátor teljesítménye alapján jutalmak és büntetések kerülnek kiszabásra minden korszakban (epoch, minden 6,4 percben). A validátorok jutalma **jelentősen** kevesebb, mint a bányászoké volt a proof-of-work mechanizmusban (2 ETH kb. 13,5 másodpercenként), mivel a validáló csomópont üzemeltetése nem annyira intenzív feladat, és így nem jár olyan magas jutalom érte.
 
@@ -104,7 +104,7 @@ Az ETH kibocsátással ellenkező erő az a ráta, ahogy az ETH-t elégetik. Az 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-A díj elégetése a [London-frissítés](/history/#london) óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
+A díj elégetése a [London-frissítés](/ethereum-forks/#london) óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
 </AlertDescription>
 </AlertContent>
 </Alert>

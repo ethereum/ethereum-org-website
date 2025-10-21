@@ -70,7 +70,7 @@ Pengeluaran pertaruhan disiarkan secara langsung! Fungsi pengeluaran telah di da
 
 Peningkatan Shanghai/Capella membolehkan ETH yang dipertaruhkan sebelum ini dituntut semula ke dalam akaun Ethereum biasa. Ini menutup gelung kecairan pertaruhan, dan membawa Ethereum selangkah lebih dekat dalam perjalanannya ke arah membina ekosistem teragih yang mampan, berskala dan selamat.
 
-- [Lagi mengenai sejarah Ethereum](/history/)
+- [Lagi mengenai sejarah Ethereum](/ethereum-forks/)
 - [Lagi mengenai hala tuju Ethereum](/roadmap/)
 
 ## Bagaimanakah pembayaran pengeluaran berfungsi? {#how-do-withdrawals-work}
