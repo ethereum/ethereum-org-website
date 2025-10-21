@@ -30,11 +30,11 @@ title="ETH issuance tldr">
 
 ### Execution layer issuance {#el-issuance-pre-merge}
 
-Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
+Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/ethereum-forks/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
 
 ### Consensus layer issuance {#cl-issuance-pre-merge}
 
-The [Beacon Chain](/history/#beacon-chain-genesis) went live in 2020. Instead of miners, it is secured by validators using proof-of-stake. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet (the execution layer), which the Beacon Chain listens to, crediting the user with an equal amount of ETH on the new chain. Until The Merge happened, the Beacon Chain's validators were not processing transactions and were essentially coming to consensus on the state of the validator pool itself.
+The [Beacon Chain](/ethereum-forks/#beacon-chain-genesis) went live in 2020. Instead of miners, it is secured by validators using proof-of-stake. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet (the execution layer), which the Beacon Chain listens to, crediting the user with an equal amount of ETH on the new chain. Until The Merge happened, the Beacon Chain's validators were not processing transactions and were essentially coming to consensus on the state of the validator pool itself.
 
 Validators on the Beacon Chain are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. Validator rewards are **significantly** less than the mining rewards that were previously issued under proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not as economically intense and thus does not require or warrant as high a reward.
 
@@ -94,7 +94,7 @@ Net reduction in annual ETH issuance: <strong>~88.7%</strong> ((4.61% - 0.52%) /
 The opposite force to ETH issuance is the rate at which ETH is burned. For a transaction to execute on Ethereum, a minimum fee (known as a "base fee") must be paid, which fluctuates continuously (block-to-block) depending on network activity. The fee is paid in ETH and is _required_ for the transaction to be considered valid. This fee gets _burned_ during the transaction process, removing it from circulation.
 
 <InfoBanner>
-Fee burning went live with <a href="/history/#london">the London upgrade</a> in August 2021, and remains unchanged since The Merge.
+Fee burning went live with [the London upgrade](/ethereum-forks/#london) in August 2021, and remains unchanged since The Merge.
 </InfoBanner>
 
 On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning/removing it from circulation.

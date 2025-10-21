@@ -1,18 +1,21 @@
 import { MDXRemoteProps } from "next-mdx-remote"
+import readingTime, { ReadTimeResults } from "reading-time"
 
+import type { Layout } from "@/lib/types"
 import {
   CommitHistory,
   FileContributor,
   Frontmatter,
   Lang,
-  Layout,
   ToCItem,
 } from "@/lib/types"
 
-import { getFileContributorInfo } from "@/lib/utils/contributors"
+import { getMarkdownFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-import { compile } from "./compile"
+import { getLayoutFromSlug } from "../utils/layout"
+
+import { compile, extractLayoutFromMarkdown } from "./compile"
 import { importMd } from "./import"
 
 const commitHistoryCache: CommitHistory = {}
@@ -20,7 +23,8 @@ const commitHistoryCache: CommitHistory = {}
 interface GetPageDataParams {
   locale: string
   slug: string
-  components: MDXRemoteProps["components"]
+  baseComponents: MDXRemoteProps["components"]
+  componentsMapping: Record<Layout, MDXRemoteProps["components"]>
   layout?: Layout
   scope?: Record<string, unknown>
 }
@@ -32,12 +36,14 @@ interface PageData {
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
   isTranslated: boolean
+  timeToRead: ReadTimeResults
 }
 
 export async function getPageData({
   locale,
   slug,
-  components,
+  baseComponents,
+  componentsMapping,
   layout: layoutFromProps,
   scope,
 }: GetPageDataParams): Promise<PageData> {
@@ -45,6 +51,17 @@ export async function getPageData({
 
   // Import and compile markdown
   const { markdown, isTranslated } = await importMd(locale, slug)
+  // Determine layout first to finalize list of components
+  const layout =
+    layoutFromProps ||
+    (await extractLayoutFromMarkdown(markdown)) ||
+    getLayoutFromSlug(slug)
+
+  const components: MDXRemoteProps["components"] = {
+    ...baseComponents,
+    ...(layout ? componentsMapping[layout] : {}),
+  }
+
   const { content, frontmatter, tocNodeItems } = await compile({
     markdown,
     slugArray,
@@ -53,8 +70,6 @@ export async function getPageData({
     scope,
   })
 
-  const layout = layoutFromProps || frontmatter.template || "static"
-
   // Process TOC items
   const tocItems =
     tocNodeItems.length === 1 && "items" in tocNodeItems[0]
@@ -62,19 +77,21 @@ export async function getPageData({
       : tocNodeItems
 
   // Get contributor information
-  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
-    slug,
-    locale,
-    frontmatter.lang as string,
-    layout,
-    commitHistoryCache
-  )
+  const { contributors, lastUpdatedDate } =
+    await getMarkdownFileContributorInfo(
+      slug,
+      locale,
+      frontmatter.lang as string,
+      commitHistoryCache
+    )
 
   // Format timestamp
   const lastEditLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
     lastUpdatedDate
   )
+
+  const timeToRead = readingTime(markdown)
 
   return {
     content,
@@ -83,5 +100,6 @@ export async function getPageData({
     lastEditLocaleTimestamp,
     contributors,
     isTranslated,
+    timeToRead,
   }
 }

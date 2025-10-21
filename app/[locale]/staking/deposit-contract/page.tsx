@@ -1,7 +1,11 @@
-import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -10,13 +14,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import DepositContractPage from "./_components/deposit-contract"
 
-import { loadMessages } from "@/i18n/loadMessages"
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+  setRequestLocale(locale)
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/staking/deposit-contract"
   )
@@ -24,7 +28,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <DepositContractPage />
+      <DepositContractPage locale={locale} />
     </I18nProvider>
   )
 }
@@ -32,9 +36,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

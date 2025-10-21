@@ -51,7 +51,7 @@ O _create-eth-app_ em particular está usando novos [efeitos de hooks](https://r
 
 ### ethers.js {#ethersjs}
 
-Enquanto o [Web3](https://docs.web3js.org/) ainda é mais usado, [ethers. s](https://docs.ethers.io/) tem recebido muito mais tração como uma alternativa no último ano e é integrada no _create-eth-app_. Você pode trabalhar com este, alterá-lo para Web3 ou considerar a possibilidade de atualizar para [ethers.js v5](https://docs-beta.ethers.io/) que já quase saiu da versão beta.
+Enquanto o [Web3](https://docs.web3js.org/) ainda é mais usado, [ethers. s](https://docs.ethers.io/) tem recebido muito mais tração como uma alternativa no último ano e é integrada no _create-eth-app_. Você pode trabalhar com este, alterá-lo para Web3 ou considerar a possibilidade de atualizar para [ethers.js v5](https://docs.ethers.org/v5/) que já quase saiu da versão beta.
 
 ### The Graph {#the-graph}
 
@@ -59,13 +59,13 @@ Enquanto o [Web3](https://docs.web3js.org/) ainda é mais usado, [ethers. s](htt
 
 Geralmente, você obteria dados diretamente do seu contrato inteligente. Gostaria de saber o horário da última transação? Basta chamar `MyContract.methods.latestTradeTime().call()` que busca os dados de um nó Ethereum em seu dapp. Mas e se você precisar de centenas de pontos de dados diferentes? Isso resultaria em centenas de buscas de dados para o nó, cada vez exigindo um [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) tornando seu dapp lento e ineficiente. Uma solução alternativa pode ser uma função de busca de chamadas dentro do seu contrato que retorna vários dados de uma só vez. Mas nem sempre é o ideal.
 
-E então talvez também estejam interessados em dados históricos. Você quer saber não apenas a última troca, mas também os tempos para todas as negociações que você já fez. Use o _create-eth-app_ pacote de subgráfico, leia a [documentação](https://thegraph.com/docs/define-a-subgraph) e adapte-a aos seus próprios contratos. Se você estiver procurando contratos inteligentes populares, pode até ser que já exista um subgrafo. Confira o [explorador de subgrafos](https://thegraph.com/explorer/).
+E então talvez também estejam interessados em dados históricos. Você quer saber não apenas a última troca, mas também os tempos para todas as negociações que você já fez. Use o _create-eth-app_ pacote de subgráfico, leia a [documentação](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) e adapte-a aos seus próprios contratos. Se você estiver procurando contratos inteligentes populares, pode até ser que já exista um subgrafo. Confira o [explorador de subgrafos](https://thegraph.com/explorer/).
 
 Ao obter um subgrafo, você pode escrever uma consulta simples em seu dapp para recuperar todos os dados importantes da blockchain, incluindo os históricos de que você precisa — basta uma única busca.
 
 ### Apollo {#apollo}
 
-Graças à integração do [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), você pode integrar facilmente o grafo em seu aplicativo React. Especialmente ao usar [React hooks e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), buscar dados é tão simples como escrever uma única consulta GraphQl em seu componente:
+Graças à integração do [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), você pode integrar facilmente o grafo em seu aplicativo React. Especialmente ao usar [React hooks e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), buscar dados é tão simples como escrever uma única consulta GraphQl em seu componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

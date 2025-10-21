@@ -18,13 +18,13 @@ We’ll take you from signing up with Alchemy to writing your first web3 script!
 
 ## 1. Sign Up for a Free Alchemy Account {#sign-up-for-a-free-alchemy-account}
 
-Creating an account with Alchemy is easy, [sign up for free here](https://auth.alchemyapi.io/signup).
+Creating an account with Alchemy is easy, [sign up for free here](https://auth.alchemy.com/).
 
 ## 2. Create an Alchemy App {#create-an-alchemy-app}
 
 To communicate with the Ethereum chain and to use Alchemy’s products, you need an API key to authenticate your requests.
 
-You can [create API keys from the dashboard](http://dashboard.alchemyapi.io/). To make a new key, navigate to “Create App” as shown below:
+You can [create API keys from the dashboard](https://dashboard.alchemy.com/). To make a new key, navigate to “Create App” as shown below:
 
 Special thanks to [_ShapeShift_](https://shapeshift.com/) _for letting us show their dashboard!_
 
@@ -144,6 +144,6 @@ The latest block number is 11043912
 
 **Woo! Congrats! You just wrote your first web3 script using Alchemy 🎉**
 
-Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
+Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://www.alchemy.com/docs/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Sign up with Alchemy for free](https://auth.alchemyapi.io/signup), check out our [documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Sign up with Alchemy for free](https://auth.alchemy.com/), check out our [documentation](https://www.alchemy.com/docs/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.

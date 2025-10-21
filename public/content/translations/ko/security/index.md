@@ -268,7 +268,7 @@ _참고: 스테이킹된 ETH를 나타내기 위한 파생 토큰/티커가 있�
 ### 암호화폐 보안 {#reading-crypto-security}
 
 - [당신과 당신의 자금 보호하기](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [암호화폐를 안전하게 보관하는 4가지 방법](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _코인데스크_
+- [암호화폐를 안전하게 보관하는 4가지 방법](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _코인데스크_
 - [모두를 위한 보안 가이드](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [암호화폐 보안: 비밀번호와 인증](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

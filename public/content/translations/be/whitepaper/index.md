@@ -383,7 +383,7 @@ Ethereum рэалізуе спрошчаную версію GHOST, якая сп
 3. Размеркаванне магутнасці майнінгу на практыцы можа аказацца вельмі нераўнамерным.
 4. Спекулянты, палітычныя ворагі і вар'яты, чыя функцыя ўключае ў сябе нанясенне шкоды сетцы, сапраўды існуюць, і яны могуць прадумана ствараць кантракты, у якіх кошт шмат ніжэй кошту, які выплачваецца іншымі вузламі праверкі.
 
-(1) забяспечвае тэндэнцыю для майнера ўключаць менш транзакцый; (2) павялічвае `NC`; такім чынам, гэтыя два эфекты па меншай меры часткова пакрываюць адзін аднаго.<sup>[Як?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) і (4) з'яўляюцца асноўнымі праблемамі. Каб вырашыць іх, мы проста ўсталёўваем плаваючае абмежаванне: ніводны блок не можа мець больш аперацый, чым `BLK_LIMIT_FACTOR` памножаны на доўгатэрміновую экспаненцыяльную зменную сярэднюю. У прыватнасці:
+(1) забяспечвае тэндэнцыю для майнера ўключаць менш транзакцый; (2) павялічвае `NC`; такім чынам, гэтыя два эфекты па меншай меры часткова пакрываюць адзін аднаго.<sup>[Як?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) і (4) з'яўляюцца асноўнымі праблемамі. Каб вырашыць іх, мы проста ўсталёўваем плаваючае абмежаванне: ніводны блок не можа мець больш аперацый, чым `BLK_LIMIT_FACTOR` памножаны на доўгатэрміновую экспаненцыяльную зменную сярэднюю. У прыватнасці:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ Ethereum, як пратакол, першапачаткова разлічаны
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ і аўтаномныя агенты, Джэф Гарзік](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Майк Хэрн пра разумную ўласнасць на фестывалі Т'юрынга](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Дрэва Меркла тыпу Patricia у Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Дрэва Меркла тыпу Patricia у Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Пітэр Тодд пра сумавыя дрэвы Меркла](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Гісторыю дакументацыі можна знайсці ў [гэтай вікі](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Гісторыю дакументацыі можна знайсці ў [гэтай вікі](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, як і многія праекты праграмнага забяспячэння з адкрытым зыходным кодам, кіруемыя супольнасцю, развіваўся з моманту свайго стварэння. Каб даведацца больш пра апошнія навіны ў распрацоўцы Ethereum і як робяцца змяненні ў пратакол, мы прапануем вам наведаць [гэтае кіраўніцтва](/learn/)._

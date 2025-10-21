@@ -52,7 +52,7 @@ Les deux options ont différents avantages résumés plus haut. Si vous cherchez
 
 #### Matériel {#hardware}
 
-Cependant, un réseau décentralisé et résistant à la censure ne devrait pas reposer sur des fournisseurs de cloud. À l'inverse, faire tourner votre nœud avec votre propre matériel local est plus sain pour l'écosystème. [Les estimations](https://www.ethernodes.org/networkType/Hosting) montrent qu'une grande proportion de nœuds tournent dans le cloud, susceptibles de constituer un point de défaillance unique.
+Cependant, un réseau décentralisé et résistant à la censure ne devrait pas reposer sur des fournisseurs de cloud. À l'inverse, faire tourner votre nœud avec votre propre matériel local est plus sain pour l'écosystème. [Les estimations](https://www.ethernodes.org/network-types) montrent qu'une grande proportion de nœuds tournent dans le cloud, susceptibles de constituer un point de défaillance unique.
 
 Les clients Ethereum peuvent être exécutés sur votre ordinateur, votre ordinateur portable, votre serveur ou même un ordinateur mono-carte. Bien que vous puissiez faire tourner des clients sur votre ordinateur personnel, utiliser une machine dédiée uniquement à votre nœud permet de grandement améliorer les performances et la sécurité tout en minimisant l'impact sur votre ordinateur principal.
 
@@ -162,7 +162,7 @@ Il convient également de noter que la diversité de clients est un problème [p
 ##### Clients de consensus
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (ne fournit pas de binaire pré-compilé, seulement une image Docker ou à construire à partir de la source)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (ne fournit pas de binaire pré-compilé, seulement une image Docker ou à construire à partir de la source)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu est également fourni avec un lanceur optionnel qui posera une série de qu
 besu --Xlauncher
 ```
 
-[La documentation de Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contient des options supplémentaires et des détails de configuration.
+[La documentation de Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contient des options supplémentaires et des détails de configuration.
 
 ##### Exécuter Erigon
 
@@ -288,7 +288,7 @@ Vérifiez la documentation [pour toutes les options de configuration](https://ge
 
 ##### Exécuter Nethermind
 
-Nethermind offre diverses [options d'installation](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Le paquet est fourni avec divers binaires, y compris un lanceur doté d'une installation guidée, qui vous aidera à créer votre configuration de manière interactive. Autrement, vous trouverez Runner, qui est l'exécutable lui-même, et pouvez simplement l'exécuter en utilisant des options de configuration. JSON-RPC est activé par défaut.
+Nethermind offre diverses [options d'installation](https://docs.nethermind.io/get-started/installing-nethermind). Le paquet est fourni avec divers binaires, y compris un lanceur doté d'une installation guidée, qui vous aidera à créer votre configuration de manière interactive. Autrement, vous trouverez Runner, qui est l'exécutable lui-même, et pouvez simplement l'exécuter en utilisant des options de configuration. JSON-RPC est activé par défaut.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-La documentation de Nethermind offre un [guide complet](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sur le fonctionnement de Nethermind avec un client de consensus.
+La documentation de Nethermind offre un [guide complet](https://docs.nethermind.io/get-started/running-node/) sur le fonctionnement de Nethermind avec un client de consensus.
 
 Un client d'exécution initiera ses fonctions principales, ses points de terminaison choisis, et commencera à rechercher des pairs. Après avoir réussi à trouver des pairs, le client débute la synchronisation. Le client d'exécution attendra une connexion du client de consensus. Les données actuelles de la blockchain seront disponibles une fois le client correctement synchronisé avec l'état actuel.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Exécuter Prysm
 
-Prysm est livré avec un script qui permet une installation automatique facile. Les détails peuvent être trouvés dans [la documentation Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm est livré avec un script qui permet une installation automatique facile. Les détails peuvent être trouvés dans [la documentation Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +444,7 @@ Envisagez de créer un service pour exécuter automatiquement vos clients au dé
 
 #### Mettre à jour les clients {#updating-clients}
 
-Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIP](/eips/). Tout particulièrement avant [les fourches majeures](/history/), assurez-vous d'utiliser les bonnes versions client.
+Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIP](/eips/). Tout particulièrement avant [les fourches majeures](/ethereum-forks/), assurez-vous d'utiliser les bonnes versions client.
 
 > Avant les mises à jour importantes du réseau, EF publie un message sur son [blog](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://blog.ethereum.org/category/protocol#subscribe) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
 

@@ -179,7 +179,7 @@ Yakınlık yasası, birbirine yakın duran öğelerin birbiriyle alakalı olarak
 
 Sonuç olarak, iki seçeneğin de artıları ve eksileri vardır fakat jetonun sağa yerleştirilmesi ilginç bir şekilde daha popülerdir.
 
-# Buton davranışı {#button-behavior}
+## Buton davranışı {#button-behavior}
 
 Onaylama için ayrı bir buton oluşturmayın. Onaylama için ayrı bir tıklamaya da gerek olmasın. Kullanıcı Takas yapmak istiyor, butona “swap” deyin ve ilk adım olarak onayı başlatın. Bir mod, bir adımlayıcı ile ilerlemeyi veya basit bir "tx 1/2 - onaylanıyor" bildirimini gösterebilir.
 
@@ -187,7 +187,7 @@ Onaylama için ayrı bir buton oluşturmayın. Onaylama için ayrı bir tıklama
 
 ![Onayla yazan tek bir butona sahip bir UI](./15.png)
 
-## Bağlamsal yardım olarak buton {#button-as-contextual-help}
+### Bağlamsal yardım olarak buton {#button-as-contextual-help}
 
 Bu buton bir uyarı görevi de görebilir!
 
@@ -205,7 +205,7 @@ Buton, aynı zamanda gerçekleştirilmesi gereken **eylemle de eşleştirilebili
 
 ![Ana CTA içinde gösterilen hata mesajı](./17.png)
 
-## Bu figma dosyasıyla kendinizinkini oluşturun {#build-your-own-with-this-figma-file}
+### Bu figma dosyasıyla kendinizinkini oluşturun {#build-your-own-with-this-figma-file}
 
 Birçok farklı protokolün sıkı çalışması sayesinde merkeziyetsiz borsa tasarımı oldukça ilerledi. Kullanıcının hangi bilgilere ihtiyacı olduğunu, bu bilgileri nasıl göstermemiz gerektiğini ve bu akışı nasıl mümkün olabildiğince düzgün yapabileceğimizi biliyoruz.
 Bu makalenin UX prensipleriyle ilgili sağlam bir temel sunabildiğini umarız.

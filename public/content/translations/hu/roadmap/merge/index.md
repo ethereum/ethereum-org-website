@@ -17,7 +17,7 @@ summaryPoint4: A Beolvadás nagyjából 99,95%-kal csökkentette az Ethereum ene
 
 ## Mi volt a beolvadás? {#what-is-the-merge}
 
-A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/history/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
+A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/ethereum-forks/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
 
 <MergeInfographic />
 
@@ -38,7 +38,7 @@ A beolvadás jelentette a hivatalos váltást, amely után a Beacon lánc tölti
 Az előzmények nem vesztek el a beolvadással. Ahogy a fő hálózat egyesült a Beacon lánccal, az Ethereum összes tranzakcióelőzményét is magával vitte.
 
 <InfoBanner>
-A proof-of-stake mechanizmus átvétele megváltoztatta az Ether kibocsátásának módját. Tudjon meg többet: <a href="/roadmap/merge/issuance/">Ether-kibocsátás a beolvadás előtt és után</a>.
+A proof-of-stake mechanizmus átvétele megváltoztatta az Ether kibocsátásának módját. Tudjon meg többet: [Ether-kibocsátás a beolvadás előtt és után](/roadmap/merge/issuance/).
 </InfoBanner>
 
 ### Felhasználók és tulajdonosok {#users-holders}
@@ -130,7 +130,7 @@ Egy nem blokk-készítő csomópontot bárki futtathat, működjön bármilyen k
 
 Az Ethereum-hálózat decentralizációjának fenntartásához <em>rendkívül lényeges</em> az a képesség, hogy bárki tudjon saját csomópontot működtetni.
 
-<a href="/run-a-node/">Bővebben a saját csomópont működtetéséről</a>
+[Bővebben a saját csomópont működtetéséről](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 A gasdíjak a hálózati teljesítmény iránti kereslet és a hálózati kapacitás egymáshoz viszonyított változásának eredményeként alakulnak. A beolvadással megszűnt a proof-of-work mechanizmus használata, és áttértünk a proof-of-stake konszenzusra, ám a hálózati kapacitást vagy feldolgozóképességet közvetlenül érintő paraméterekben jelentős változás nem következett be.
 
-A <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">összevonttranzakció-centrikus fejlesztési tervvel</a> az erőfeszítések oda irányultak, hogy a felhasználói aktivitást az <a href="/layer-2/">L2-n</a> tegyék skálázhatóvá, miközben lehetővé teszik, hogy az L1 főhálózat egy biztonságos, decentralizált réteg, ami optimális az összevont tranzakciós adatok tárolására, így azok használata exponenciálisan olcsóbb lehet. Ennek eléréséhez az áttérés a proof-of-stake mechanizmusra létfontosságú előfeltétel volt. <a href="/developers/docs/gas/">Bővebben a gázról és a díjakról.</a>
+A <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">összevonttranzakció-centrikus fejlesztési tervvel</a> az erőfeszítések oda irányultak, hogy a felhasználói aktivitást az [L2-n](/layer-2/) tegyék skálázhatóvá, miközben lehetővé teszik, hogy az L1 főhálózat egy biztonságos, decentralizált réteg, ami optimális az összevont tranzakciós adatok tárolására, így azok használata exponenciálisan olcsóbb lehet. Ennek eléréséhez az áttérés a proof-of-stake mechanizmusra létfontosságú előfeltétel volt. [Bővebben a gázról és a díjakról.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +163,7 @@ Kezdetben a Beolvadás után a letétesek csak az extra díjakat és a MEV-et ka
 
 A Shanghai/Capella hálózatfrissítés óta a letétesek egy <em>visszavonási számlát</em> jelölnek ki, hogy automatikusan megkapják a letéti összeg feletti részt (32 ETH felett). Ez a fejlesztés lehetővé tette, hogy a validátor kilépjen a hálózatból, és ezzel felszabadítsa és visszakapja a teljes egyenlegét.
 
-<a href="/staking/withdrawals/">Bővebben a letétek visszavonásáról</a>
+[Bővebben a letétek visszavonásáról](/staking/withdrawals/)
 
 </ExpandableCard>
 

@@ -10,7 +10,7 @@ lang: en
 
 ## Introduction {#introduction}
 
-[Uniswap v2](https://uniswap.org/whitepaper.pdf) can create an exchange market between any two ERC-20 tokens. In this article we will go over the source code for the contracts that implement this protocol and see why they are written this way.
+[Uniswap v2](https://app.uniswap.org/whitepaper.pdf) can create an exchange market between any two ERC-20 tokens. In this article we will go over the source code for the contracts that implement this protocol and see why they are written this way.
 
 ### What Does Uniswap Do? {#what-does-uniswap-do}
 
@@ -26,7 +26,7 @@ When liquidity providers want their assets back they can burn the pool tokens an
 
 ### Why v2? Why not v3? {#why-v2}
 
-[Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is an upgrade that is much more complicated than the v2. It is easier to first learn v2 and then go to v3.
+[Uniswap v3](https://app.uniswap.org/whitepaper-v3.pdf) is an upgrade that is much more complicated than the v2. It is easier to first learn v2 and then go to v3.
 
 ### Core Contracts vs Periphery Contracts {#contract-types}
 
@@ -437,7 +437,7 @@ If there is new liquidity on which to collect a protocol fee. You can see the sq
                     uint liquidity = numerator / denominator;
 ```
 
-This complicated calculation of fees is explained in [the whitepaper](https://uniswap.org/whitepaper.pdf) on page 5. We know that between the time `kLast` was calculated and the present no liquidity was added or removed (because we run this calculation every time liquidity is added or removed, before it actually changes), so any change in `reserve0 * reserve1` has to come from transaction fees (without them we'd keep `reserve0 * reserve1` constant).
+This complicated calculation of fees is explained in [the whitepaper](https://app.uniswap.org/whitepaper.pdf) on page 5. We know that between the time `kLast` was calculated and the present no liquidity was added or removed (because we run this calculation every time liquidity is added or removed, before it actually changes), so any change in `reserve0 * reserve1` has to come from transaction fees (without them we'd keep `reserve0 * reserve1` constant).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -705,7 +705,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     address public feeToSetter;
 ```
 
-These state variables are necessary to implement the protocol fee (see [the whitepaper](https://uniswap.org/whitepaper.pdf), p. 5).
+These state variables are necessary to implement the protocol fee (see [the whitepaper](https://app.uniswap.org/whitepaper.pdf), p. 5).
 The `feeTo` address accumulates the liquidity tokens for the protocol fee, and `feeToSetter` is the address allowed to change `feeTo` to a different address.
 
 ```solidity
@@ -1323,7 +1323,7 @@ This function performs internal processing that is required for the functions th
         for (uint i; i < path.length - 1; i++) {
 ```
 
-As I'm writing this there are [388,160 ERC-20 tokens](https://etherscan.io/tokens). If there was a pair exchange for each token pair, it would be over 150 billion pair exchanges. The entire chain, at the moment, [only has 0.1% that number of accounts](https://etherscan.io/chart/address). Instead, the swap functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, so there is no need for a direct A-D pair exchange.
+As I'm writing this there are [388,160 ERC-20 tokens](https://eth.blockscout.com/tokens). If there was a pair exchange for each token pair, it would be over 150 billion pair exchanges. The entire chain, at the moment, [only has 0.1% that number of accounts](https://eth.blockscout.com/stats/accountsGrowth). Instead, the swap functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, so there is no need for a direct A-D pair exchange.
 
 The prices on these markets tend to be synchronized, because when they are out of sync it creates an opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C. There are three pair exchanges, one for each pair.
 
@@ -1969,3 +1969,5 @@ This function transfers ether to an account. Any call to a different contract ca
 This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own use cases.
 
 Now go and write something useful and amaze us.
+
+[See here for more of my work](https://cryptodocguy.pro/).

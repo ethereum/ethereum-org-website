@@ -91,7 +91,7 @@ Ethereum originally used proof-of-work but switched to proof-of-stake in Septemb
 - [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Proof-of-stake Ethereum attack and defense](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
-- [Video: Vitalik buterin explains proof-of-stake to Lex Fridman](https://www.youtube.com/watch?v=3yrqBG-7EVE)
+- [Video: Vitalik Buterin explains proof-of-stake to Lex Fridman](https://www.youtube.com/watch?v=3yrqBG-7EVE)
 
 ## Related topics {#related-topics}
 

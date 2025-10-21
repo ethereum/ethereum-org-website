@@ -50,7 +50,6 @@ EVMベースのブロックチェーンとやり取りするための非同期�
 
 ## Javaのプロジェクトとツール {#java-projects-and-tools}
 
-- [ハイパーレジャーBesu (Pantheon) (イーサリアムクライアント)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3j (イーサリアムクライアントとやり取りするためのライブラリ)](https://github.com/web3j/web3j)
 - [ethers-kt (EVMベースのブロックチェーン用の非同期、ハイパフォーマンスのKotlin/Java/Androidライブラリ)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (イベントリスナー)](https://github.com/ConsenSys/eventeum)
@@ -62,4 +61,3 @@ EVMベースのブロックチェーンとやり取りするための非同期�
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu HLチャット](https://chat.hyperledger.org/channel/besu)

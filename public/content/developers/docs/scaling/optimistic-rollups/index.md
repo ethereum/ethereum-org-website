@@ -32,11 +32,11 @@ Optimistic rollups are [offchain scaling solutions](/developers/docs/scaling/#of
 
 The architecture of an optimistic rollup comprises the following parts:
 
-**Onchain contracts**: The optimistic rollups's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense, Ethereum serves as the base layer or "layer 1" for optimistic rollups.
+**Onchain contracts**: The optimistic rollup's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense, Ethereum serves as the base layer or "layer 1" for optimistic rollups.
 
 **Offchain virtual machine (VM)**: Although contracts managing the optimistic rollup protocol run on Ethereum, the rollup protocol performs computation and state storage on another virtual machine separate from the [Ethereum Virtual Machine](/developers/docs/evm/). The offchain VM is where applications live and state changes are executed; it serves as the upper layer or "layer 2" for an optimistic rollup.
 
-As optimistic rollups are designed to run programs either written or compiled for the EVM, the offchain VM incorporates many EVM design specs. Additionally, fraud proofs computed onchain allows the Ethereum network to enforce the validity of state changes computed in the offchain VM.
+As optimistic rollups are designed to run programs either written or compiled for the EVM, the offchain VM incorporates many EVM design specs. Additionally, fraud proofs computed onchain allow the Ethereum network to enforce the validity of state changes computed in the offchain VM.
 
 Optimistic rollups are described as 'hybrid scaling solutions' because, while they exist as separate protocols, their security properties are derived from Ethereum. Among other things, Ethereum guarantees the correctness of a rollup’s offchain computation and the availability of data behind the computation. This makes optimistic rollups more secure than pure offchain scaling protocols (e.g., [sidechains](/developers/docs/scaling/sidechains/)) that do not rely on Ethereum for security.
 
@@ -94,9 +94,9 @@ The `calldata` keyword is also used in Solidity to pass arguments to a smart con
 
 In the context of optimistic rollups, `calldata` is used to send compressed transaction data to the onchain contract. The rollup operator adds a new batch by calling the required function in the rollup contract and passing the compressed data as function arguments. Using `calldata` reduces user fees since most costs that rollups incur come from storing data onchain.
 
-Here is [an example](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
+Here is [an example](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
 
-Some rollups now use blobs to post batches of transactions to Ethereum. 
+Some rollups now use blobs to post batches of transactions to Ethereum.
 
 Blobs are non-modifiable and non-persistent (just like `calldata`) but are pruned from history after ~18 days. For more information on blobs, see [Danksharding](/roadmap/danksharding).
 
@@ -196,7 +196,7 @@ Finally, we should note that L2 > L1 message calls between contracts need to acc
 
 ## How do optimistic rollup fees work? {#how-do-optimistic-rollup-fees-work}
 
-Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much users pay per transaction. Fees charged on optimistic rollups depends on the following components:
+Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much users pay per transaction. Fees charged on optimistic rollups depend on the following components:
 
 1. **State write**: Optimistic rollups publish transaction data and block headers (consisting of the previous block header hash, state root, batch root) to Ethereum as a `blob`, or "binary large object". [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) introduced a cost-effective solution for including data onchain. A `blob` is a new transaction field that allows rollups to post compressed state transition data to Ethereum L1. Unlike `calldata`, which remains permanently onchain, blobs are short-lived and can be pruned from clients after [4096 epochs](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (approximately 18 days). By using blobs to post batches of compressed transactions, optimistic rollups can significantly reduce the cost of writing transactions to L1.
 
@@ -228,7 +228,7 @@ Optimistic rollups use several techniques to achieve transaction data compressio
 Doing some rough calculations on these figures can help show the scalability improvements afforded by an optimistic rollup:
 
 1. The target size for every block is 15 million gas and it costs 16 gas to verify one byte of data. Dividing the average block size by 16 gas (15,000,000/16) shows the average block can hold **937,500 bytes of data**.
-2. If a basic rollup transaction uses 12 bytes, then the average Ethereum block can process **78,125 rollup transactions** (937,5000/12) or **39 rollup batches** (if each batch holds an average of 2,000 transactions).
+2. If a basic rollup transaction uses 12 bytes, then the average Ethereum block can process **78,125 rollup transactions** (937,500/12) or **39 rollup batches** (if each batch holds an average of 2,000 transactions).
 3. If a new block is produced on Ethereum every 15 seconds, then the rollup's processing speeds would amount to roughly **5,208 transactions per second**. This is done by dividing the number of basic rollup transactions an Ethereum block can hold (**78,125**) by the average block time (**15 seconds**).
 
 This is a fairly optimistic estimate, given that optimistic rollup transactions cannot possibly comprise an entire block on Ethereum. However, it can give a rough idea of how much scalability gains that optimistic rollups can afford Ethereum users (current implementations offer up to 2,000 TPS).
@@ -257,9 +257,9 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 
 - [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [What is a Blockchain Rollup? A Technical Introduction](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [The Practical Guide To Ethereum Rollups](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [The State Of Fraud Proofs In Ethereum L2s](https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [How does Optimism's Rollup really work?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [The Essential Guide to Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [The Practical Guide To Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [The State Of Fraud Proofs In Ethereum L2s](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [How does Optimism's Rollup really work?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

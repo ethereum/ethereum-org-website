@@ -20,7 +20,7 @@ Es ist wichtig, die dezentrale Gestaltung von Ethereum zu verstehen, denn jeder,
   Mehr erfahren über die Grundlagen von Ethereum
 </DocLink>
 
-Trotz des Mangels an offizieller Unterstützung sind viele Gruppen, Communitys und Projekte im gesamten Ethereum-Ökosystem gern bereit, zu helfen, und Sie können auf dieser Seite viele nützliche Informationen und Ressourcen finden. Haben Sie noch Fragen? Treten Sie dem [ethereum.org Discord](/discord/) bei und wir versuchen, Ihnen weiterzuhelfen.
+Trotz des Mangels an offizieller Unterstützung sind viele Gruppen, Communitys und Projekte im gesamten Ethereum-Ökosystem gern bereit, zu helfen, und Sie können auf dieser Seite viele nützliche Informationen und Ressourcen finden. Haben Sie noch Fragen? Treten Sie dem [ethereum.org Discord](https://discord.gg/ethereum-org) bei und wir versuchen, Ihnen weiterzuhelfen.
 
 ## Häufig gestellte Fragen {#faq}
 
@@ -57,7 +57,6 @@ Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpu
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs-Discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

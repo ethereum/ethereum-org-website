@@ -44,7 +44,7 @@ May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may pape
 
 - **Mga may-ari ng Ether**: nagmamay-ari ang mga taong ito ng iba't ibang halaga ng ETH. [Iba pang detalye tungkol sa ETH](/eth/).
 - **Mga User ng Application**: nakikipag-ugnauan ang mga taong ito sa mga application sa Ethereum blockchain.
-- **Mga Developer ng Application/Tooling**: sumusulat ang mga taong ito ng mga application na pinapatakbo sa Ethereum blockchain (hal., DeFi, NFT, atbp.) o bumubuo sila ng tooling para magkipag-ugnayan sa Ethereum (hal., mga wallet, test suite, atbp.). [Iba pang detalye tungkol sa dapps](/dapps/).
+- **Mga Developer ng Application/Tooling**: sumusulat ang mga taong ito ng mga application na pinapatakbo sa Ethereum blockchain (hal., DeFi, NFT, atbp.) o bumubuo sila ng tooling para magkipag-ugnayan sa Ethereum (hal., mga wallet, test suite, atbp.). [Iba pang detalye tungkol sa dapps](/apps/).
 - **Mga Node Operator**: nagpapatakbo ang mga taong ito ng mga node na nagpaparami ng mga block at transaksyon, at hindi tinatanggap ng mga ito ang anumang hindi valid na transaksyon o block na matutuklasan ng mga ito. [Iba pang detalye tungkol sa mga node](/developers/docs/nodes-and-clients/).
 - **Mga EIP Author**: nagmumungkahi ang mga taong ito ng mga pagbabago sa Ethereum protocol, sa pamamagitan ng mga Ethereum Improvement Proposal (EIP). [Iba pang detalye tungkol sa EIPs](/eips/).
 - **Mga Validator**: nagpapatakbo ang mga taong ito ng mga node na makakapagdagdag ng mga bagong block sa Ethereum blockchain.
@@ -118,7 +118,7 @@ Karaniwang inaayos ang mga hindi pagkakaunawaan sa mahabang usapan sa mga pampub
 
 Nangyayari ang mga fork kapag may mga pangunahing teknikal na pag-upgrade o pagbabago at babaguhin nito ang "mga panuntunan" ng protocol. Dapat i-update ng [mga Ethereum client](/developers/docs/nodes-and-clients/) ang kanilang software upang ipatupad ang mga panuntunan para sa fork.
 
-Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/understanding-dao-hack-journalists) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
+Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
 
 Pinagbotohan ng komunidad ng Ethereum ang pagkilos na ito. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Ang desisyong mag-fork ay umabot ng mahigit 85% ng mga boto.
 
@@ -152,7 +152,7 @@ Sa proseso ng pamamahala ng Ethereum, madalas na ipinagpapalit ang bilis at kahu
 
 Bagama't palaging ganap na open source ang pagtutukoy at mga pagpapatupad ng pagbabago, hindi ginamit ang mga pormal na prosesong ginagamit para magmungkahi ng mga update. Dahil dito, mas mabilis na natukoy at napagkasunduan ng mga mananaliksik at tagapagpatupad ang mga pagbabago.
 
-Noong magsama ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/history/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
+Noong magsama ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/ethereum-forks/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
 
 <ButtonLink href="/roadmap/merge/">
   Iba pang detalye tungkol sa The Merge

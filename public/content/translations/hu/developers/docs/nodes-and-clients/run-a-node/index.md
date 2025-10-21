@@ -52,7 +52,7 @@ Mindkét opció más előnyökkel jár. Ha felhőalapú megoldás mellett dönt,
 
 #### Hardver {#hardware}
 
-Ugyanakkor egy cenzúrának ellenálló, decentralizált hálózat nem függhet a felhő alapú szolgáltatóktól. Ehelyett az ökoszisztémának egészségesebb, ha a felhasználó a saját csomópontját a saját helyi hardverén üzemelteti. [A becslések](https://www.ethernodes.org/networkType/Hosting) szerint a csomópontok nagy aránya fut felhőn, ami felveti az egyetlen hibaforrás lehetőségét.
+Ugyanakkor egy cenzúrának ellenálló, decentralizált hálózat nem függhet a felhő alapú szolgáltatóktól. Ehelyett az ökoszisztémának egészségesebb, ha a felhasználó a saját csomópontját a saját helyi hardverén üzemelteti. [A becslések](https://www.ethernodes.org/network-types) szerint a csomópontok nagy aránya fut felhőn, ami felveti az egyetlen hibaforrás lehetőségét.
 
 Az Ethereum-klienseket a saját számítógépén, laptopján, szerverén vagy akár egy egykártyás számítógépen is üzemeltetheti. Miközben lehetséges a személyi számítógépen működtetni a klienseket, egy csomópont számára dedikált gép jelentősen növeli a teljesítményt és biztonságot, és minimalizálja az Ön elsődleges számítógépére tett hatást is.
 
@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-Tekintse meg a [Reth konfigurálást](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
+Tekintse meg a [Reth konfigurálását](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
 
 #### A konszenzusos kliens elindítása {#starting-the-consensus-client}
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### A Prysm futtatása
 
-A Prysm egy szkripttel együtt elérhető, amely egyszerű, automatikus telepítést tesz lehetővé. A részleteket a [Prysm dokumentációban](https://docs.prylabs.network/docs/install/install-with-script) találja.
+A Prysm egy szkripttel együtt elérhető, amely egyszerű, automatikus telepítést tesz lehetővé. A részleteket a [Prysm dokumentációban](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) találja.
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +444,7 @@ Fontolja meg, hogy létrehoz egy szolgáltatást, hogy a klienseket automatikusa
 
 #### A kliensek frissítése {#updating-clients}
 
-Tartsa a kliensszoftverét naprakészen a legutóbbi biztonsági javításokkal, funkciókkal és [EIP-ekkel](/eips/). Főleg a [végleges elágazás (hard fork)](/history/) esetén legyen biztos abban, hogy a megfelelő kliensverziót használja.
+Tartsa a kliensszoftverét naprakészen a legutóbbi biztonsági javításokkal, funkciókkal és [EIP-ekkel](/eips/). Főleg a [végleges elágazás (hard fork)](/ethereum-forks/) esetén legyen biztos abban, hogy a megfelelő kliensverziót használja.
 
 > A fontos hálózati frissítések előtt az Ethereum Alapítvány publikál egy cikket a [blogon](https://blog.ethereum.org). Ön is [feliratkozhat ezekre a bejelentésekre](https://blog.ethereum.org/category/protocol#subscribe), hogy e-mailes figyelmeztetést kapjon, amikor a csomópontot frissíteni kell.
 

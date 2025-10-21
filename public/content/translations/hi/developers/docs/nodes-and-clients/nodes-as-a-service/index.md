@@ -156,19 +156,6 @@ sidebarDepth: 2
     - भुगतान-प्रति-घंटे मूल्य निर्धारण
     - प्रत्यक्ष 24/7 सपोर्ट
 
-- [**डेटाहब**](https://datahub.figment.io)
-  - [डॉक्स](https://docs.figment.io/)
-  - विशेषताएँ
-    - 3,000,000 अनुरोध/माह के साथ फ़्री टियर विकल्प
-    - RPC और WSS समापन बिंदु
-    - समर्पित पूर्ण और संग्रह नोड्स
-    - ऑटो-स्केलिंग (वॉल्यूम छूट)
-    - फ़्री आर्काइवल डेटा
-    - सेवा विश्लेषिकी
-    - डैशबोर्ड
-    - प्रत्यक्ष 24/7 सपोर्ट
-    - क्रिप्टो में भुगतान करें (एंटरप्राइज़)
-
 - [**DRPC**](https://drpc.org/)
   - [डॉक्स](https://docs.drpc.org/)
   - विशेषताएँ
@@ -264,7 +251,7 @@ sidebarDepth: 2
     - प्रत्यक्ष, तकनीकी सहायता
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [डॉक्स](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [डॉक्स](https://docs.nodereal.io/docs/introduction)
   - विशेषताएँ
     - विश्वसनीय, तेज और स्केलेबल RPC API सेवाएं
     - web3 डेवलपर के लिए उन्नत API

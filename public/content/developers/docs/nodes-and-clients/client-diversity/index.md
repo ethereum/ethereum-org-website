@@ -46,7 +46,7 @@ _Diagram data from [ethernodes.org](https://ethernodes.org) and [clientdiversity
 
 The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in January 2022). The execution layer is overwhelmingly dominated by [Geth](https://geth.ethereum.org/), with [Open Ethereum](https://openethereum.github.io/) a distant second, [Erigon](https://github.com/ledgerwatch/erigon) third and [Nethermind](https://nethermind.io/) fourth, with other clients comprising less than 1 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is not as dominant as Geth but still represents over 60% of the network. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~20% and ~14% respectively, and other clients are rarely used.
 
-The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23-Jan-2022. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
+The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23-Jan-2022. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g., Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
 Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
@@ -56,31 +56,24 @@ Until now, the conversation around client diversity has focused mainly on the co
 
 ## Use a minority client {#use-minority-client}
 
-Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
+Addressing client diversity requires more than individual users to choose minority clients - it requires validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
 ### Execution clients {#execution-clients}
 
-[Besu](https://www.hyperledger.org/use/besu)
-
-[Nethermind](https://downloads.nethermind.io/)
-
-[Erigon](https://github.com/ledgerwatch/erigon)
-
-[Go-Ethereum](https://geth.ethereum.org/)
+- [Besu](https://www.hyperledger.org/use/besu)
+- [Nethermind](https://downloads.nethermind.io/)
+- [Erigon](https://github.com/ledgerwatch/erigon)
+- [Go-Ethereum](https://geth.ethereum.org/)
+- [Reth](https://reth.rs/)
 
 ### Consensus clients {#consensus-clients}
 
-[Nimbus](https://nimbus.team/)
-
-[Lighthouse](https://github.com/sigp/lighthouse)
-
-[Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
-
-[Lodestar](https://github.com/ChainSafe/lodestar)
-
-[Prysm](https://docs.prylabs.network/docs/getting-started)
-
-[Grandine](https://docs.grandine.io/)
+- [Nimbus](https://nimbus.team/)
+- [Lighthouse](https://github.com/sigp/lighthouse)
+- [Teku](https://consensys.io/teku)
+- [Lodestar](https://github.com/ChainSafe/lodestar)
+- [Prysm](https://prysm.offchainlabs.com/docs/)
+- [Grandine](https://docs.grandine.io/)
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
@@ -92,7 +85,8 @@ Several dashboards give real-time client diversity statistics for the execution 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-  **Execution layer:**
+
+**Execution layer:**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
