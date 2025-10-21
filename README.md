@@ -2118,6 +2118,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AMelhede"><img src="https://avatars.githubusercontent.com/u/95473109?v=4?s=100" width="100px;" alt="Andreas Melhede"/><br /><sub><b>Andreas Melhede</b></sub></a><br /><a href="#example-AMelhede" title="Examples">💡</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Recxsmacx"><img src="https://avatars.githubusercontent.com/u/175395700?v=4?s=100" width="100px;" alt="Ram Shukla"/><br /><sub><b>Ram Shukla</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ARecxsmacx" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dsarfed"><img src="https://avatars.githubusercontent.com/u/186462938?v=4?s=100" width="100px;" alt="0x"/><br /><sub><b>0x</b></sub></a><br /><a href="#maintenance-dsarfed" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lipsyre"><img src="https://avatars.githubusercontent.com/u/196653064?v=4?s=100" width="100px;" alt="Gigabuidl"/><br /><sub><b>Gigabuidl</b></sub></a><br /><a href="#maintenance-lipsyre" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
