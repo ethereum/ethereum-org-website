@@ -41,7 +41,7 @@ Además de la investigación de perspectivas futuras, se están investigando alg
 
 - [Introducción a prueba de participación](/developers/docs/consensus-mechanisms/pos/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Explicación de Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Explicación de Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Documento de Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Investigación reciente {#recent-research}

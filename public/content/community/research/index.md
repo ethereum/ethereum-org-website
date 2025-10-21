@@ -41,7 +41,7 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG explainer](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG explainer](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 #### Recent research {#recent-research}
