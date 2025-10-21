@@ -104,7 +104,7 @@ One high-profile vashon of di don hapun in July 2020, wen dem don hack Twitter a
 
 Di celeb awoof na anoda komon form wey di skam awoof dey take. Di skammas go take one fidio intaview abi konfrens tok wey dem rekod and go put am for YouTube - as dem make am look laik di sey dem give one live fidio intaview to di seleb wia em dey apruf cryptocurrency awoof.
 
-Dem yus Vitalik Buterin often in dis skam, but dem also yu plenti oda popular pipol involve in crypto (e.g. Elon Musk abi Charles Hoskinson). Pesin wey dem sabi wella join to give di skammas livestream sense of legitimasy (dis bi laik skam, but Vitalik join, so im suppose dey okay!).
+Dem yus Vitalik Buterin often in dis skam, but dem also yu plenti oda popular pipol involve in crypto (e.g., Elon Musk abi Charles Hoskinson). Pesin wey dem sabi wella join to give di skammas livestream sense of legitimasy (dis bi laik skam, but Vitalik join, so im suppose dey okay!).
 
 **Awoof na always skams. If yu dey send yor funds to dis akants, yu go luz dem foreva.**
 
