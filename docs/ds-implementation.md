@@ -31,7 +31,7 @@ If you are implementing:
   - Try to avoid creating a new component file `/ComponentA/index.tsx` if there is no additional or custom logic we need to add to them
   - Create a theme file to override the default Chakra styles with the DS specs. See examples under the [Chakra theme folder](https://github.com/ethereum/ethereum-org-website/tree/dev/src/%40chakra-ui/components)
   - Create a `.stories.tsx` file under `src/components/BaseStories`
-- A new custom component (e.g. the PageHero)
+- A new custom component (e.g., the PageHero)
   - Use as many Chakra components as possible
   - Avoid implementing previous implementation details or styles if Chakra offers a solution for that
 
