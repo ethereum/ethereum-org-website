@@ -20,7 +20,7 @@ lang: zh
   学习以太坊基础知识
 </DocLink>
 
-尽管缺乏官方支持，但以太坊生态系统中的许多团体、社区和项目都乐于提供帮助，并且你可以在此页面上找到很多有用的信息和资源。 还有问题吗？ 加入 [ethereum.org Discord](/discord/)，我们会尽力提供帮助。
+尽管缺乏官方支持，但以太坊生态系统中的许多团体、社区和项目都乐于提供帮助，并且你可以在此页面上找到很多有用的信息和资源。 还有问题吗？ 加入 [ethereum.org Discord](https://discord.gg/ethereum-org)，我们会尽力提供帮助。
 
 ## 常见问题 {#faq}
 
@@ -57,7 +57,6 @@ lang: zh
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [以太坊堆栈交易所](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

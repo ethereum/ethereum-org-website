@@ -65,12 +65,15 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Το Web3 επιτρέπει την άμεση κυριότητα μέσω των [μη εναλλάξιμων κρυπτοπαραστατικών (NFT)](/glossary/#nft). Κανείς, ούτε καν οι δημιουργοί του παιχνιδιού, έχουν τη δυνατότητα να πάρουν αυτά που σας ανήκουν. Αν σταματήσετε να παίζετε, μπορείτε να πουλήσετε ή να ανταλλάξετε τα αντικείμενα εντός του παιχνιδιού, στην ελεύθερη αγορά και να ανακτήσετε την αξία τους.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Μάθετε περισσότερα για τα NFT</div>
   <ButtonLink href="/nft/">
     Περισσότερα για τα NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Αντίσταση στη Λογοκρισία {#censorship-resistance}
 
@@ -90,12 +93,15 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Ωστόσο, αρκετοί ορίζουν πολλές κοινότητες Web3 ως DAO. Όλες αυτές οι κοινότητες έχουν διαφορετικά επίπεδα αποκέντρωσης και αυτοματοποίησης με κώδικα. Επί τους παρόντος, διερευνούμε τι είναι οι DAO και πως μπορούν να εξελιχθούν στο μέλλον.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Μάθετε περισσότερα για τους DAO</div>
   <ButtonLink href="/dao/">
     Περισσότερα για τους DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Ταυτότητα {#identity}
 
@@ -143,7 +149,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 - [Αποκτήστε ένα πορτοφόλι](/wallets/)
 - [Βρείτε μια κοινότητα](/community/)
-- [Εξερευνήστε εφαρμογές Web3](/dapps/)
+- [Εξερευνήστε εφαρμογές Web3](/apps/)
 - [Συμμετέχετε σε ένα DAO](/dao/)
 - [Δημιουργήστε στο Web3](/developers/)
 

@@ -44,7 +44,7 @@ V [komunitě Ethereum](/community/) jsou různé zainteresované strany, z nich�
 
 - **Držitele etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/eth/).
 - **Uživatele aplikací**: Tito lidé komunikují s aplikacemi na blockchainu Ethereum.
-- **Vývojáře aplikací a nástrojů**: Tito lidé píší aplikace, které běží na blockchainu Ethereum (např. DeFi, NFT atd.) nebo vytvářejí nástroje pro interakci s Ethereem (např. peněženky, testovací sady atd.). [Více o dappkách](/dapps/).
+- **Vývojáře aplikací a nástrojů**: Tito lidé píší aplikace, které běží na blockchainu Ethereum (např. DeFi, NFT atd.) nebo vytvářejí nástroje pro interakci s Ethereem (např. peněženky, testovací sady atd.). [Více o dappkách](/apps/).
 - **Operátory síťových uzlů**: Tito lidé provozují síťové uzly, které schvalují bloky a transakce a odmítají jakoukoli neplatnou transakci nebo blok, se kterým se setkají. [Více o síťových uzlech](/developers/docs/nodes-and-clients/).
 - **Autory EIP**: Tito lidé navrhují změny protokolu Ethereum ve formě návrhů na vylepšení Etherea (EIP). [Více o EIP](/eips/).
 - **Validátory**: Tito lidé provozují síťové uzly, které mohou přidávat nové bloky do blockchainu Ethereum.
@@ -152,7 +152,7 @@ Proces správy Etherea často upozaďuje rychlost a efektivitu ve prospěch otev
 
 Implementace specifikací a vývoje byly i v případě Beacon Chainu vždy plně open source, ale výše popsané formální procesy používané k navrhování aktualizací použity nebyly. To umožnilo rychleji navrhnout a odsouhlasit změny a stejně tak je i implementovat.
 
-Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/history/#paris). Stav návrhu [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na důkaz podílem.
+Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/ethereum-forks/#paris). Stav návrhu [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na důkaz podílem.
 
 <ButtonLink href="/roadmap/merge/">
   Více o mergi
@@ -180,5 +180,5 @@ Správa Etherea není pevně definována. Různí členové komunity mají na ř
 - [Kdo je Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Řízení, část 2: Plutokracie je furt špatná](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Nahrazení mincemi hlasované řízení](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [Pochopení řízení blockchainu](https://research.2077.xyz/understanding-blockchain-governance) – _2077 Research_
+- [Pochopení řízení blockchainu](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) – _2077 Research_
 - [Vláda Etherea](https://www.galaxy.com/insights/research/ethereum-governance/) – _Christine Kim_

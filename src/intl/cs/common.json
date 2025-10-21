@@ -231,7 +231,7 @@
   "nav-contribute-description": "Pokud potřebujete pomoc, pomůže vám tento návod",
   "nav-contribute-label": "Přispívání na ethereum.org",
   "nav-dao-description": "Členské komunity bez centralizovaného vedení",
-  "nav-dapps-description": "Prozkoumejte bohatý ekosystém aplikací využívajících Ethereum",
+  "nav-apps-description": "Prozkoumejte bohatý ekosystém aplikací využívajících Ethereum",
   "nav-defi-description": "Globální otevřená alternativa k tradičnímu finančnímu trhu",
   "nav-desci-description": "Globální, otevřená alternativa ke stávajícímu vědeckému systému",
   "nav-desoc-description": "Platformy založené na blockchainu pro sociální interakci a tvorbu obsahu",
@@ -280,7 +280,7 @@
   "nav-history-label": "Technická historie Etherea",
   "nav-learn-by-coding-description": "Nástroje, které vám pomohou experimentovat s Ethereem",
   "nav-local-env-description": "Výběr a nastavení sady nástrojů pro vývoj s Ethereem",
-  "nav-mainnet-description": "Podnikové blockchainové aplikace lze vytvářet na veřejné hlavní síti Etherea",
+  "nav-enterprise-description": "Podnikové blockchainové aplikace lze vytvářet na veřejné hlavní síti Etherea",
   "nav-networks-home-description": "Levnější a rychlejší transakce s Ethereem",
   "nav-networks-introduction-label": "Úvod",
   "nav-networks-introduction-description": "Ethereum se rozšířilo do sítě sítí",
@@ -444,5 +444,8 @@
   "withdrawals": "Uzamčení výběrů",
   "wrapped-ether": "Zabalený Ether",
   "yes": "Ano",
-  "zero-knowledge-proofs": "Důkazy s nulovou znalostí"
+  "zero-knowledge-proofs": "Důkazy s nulovou znalostí",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Pochopte rozdíly mezi Ethereem a Bitcoinem"
+
 }

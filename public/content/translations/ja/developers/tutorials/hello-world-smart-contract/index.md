@@ -238,9 +238,13 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 これらの変数を実際にコードに接続するために、ステップ13でこれらの変数を`hardhat.config.js`ファイル内で参照します。
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 <code>.env</code>ファイルをコミットしないでください! <code>.env</code>ファイルを誰かと共有したり公開したりしないようにしてください。秘密が漏洩する可能性があります。 バージョン管理ツールを使用している場合は、<code>.env</code>を<a href="https://git-scm.com/docs/gitignore">gitignore</a>ファイルに追加します。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## ステップ12: Ethers.jsをインストールする {#step-12-install-ethersjs}
 

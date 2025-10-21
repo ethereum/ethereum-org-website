@@ -61,12 +61,15 @@ Web3 ya bada mallaki wajen kirga kaddarori ta hanyar da ba'a taɓa ganiba. Alal 
 
 Web3 yana bada damar yin mallaka kai saye ta hanyar [ non fungible tokens (NFTs)](/glossary/#nft). Ba ɗaya, bama wanda ya kirkiri wasan ninba, keda ikon ɗauke maka mallakin ka. Kuma, in ka dena yin wasanni, zaka iya saidawa ko kayi kasuwancin abubuwan da ke cikin games in a buɗaɗɗiyar kasuwa da kuma dawowa da darajarsu.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Ƙarin koyo game da NFTs</div>
   <ButtonLink href="/nft/">
     Kari akan NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Hani wajen yaɗuwar bayanai {#censorship-resistance}
 
@@ -86,12 +89,15 @@ DAOs a ta'arifi shi ne fasaha da aka yarda akan [zafafa yarjejeniya](/glossary/#
 
 Koma dai yaya, mutane suna ta'arifin dayawa akan muhallin Web3 a masayin DAOs. Wannan muhallin gaba daya sunada bambancin masayi akan wargazawa da kuma dokoki kai saye. A halin yanzu haka, muna kan niman menene DAOs da kuma ya za'ayi a shigar dasu a abu na gaba.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Karin Koyo akan  DAOs</div>
   <ButtonLink href="/dao/">
     Karin bayani akan DOAs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Asali {#identity}
 
@@ -139,7 +145,7 @@ Mu kawai muna farkone wajen ƙirƙirar abinda yafi Web da Web3, amma muna ci gab
 
 - [Samu walet](/wallets/)
 - [Sami al'umma](/community/)
-- [Bincika manhajojin Web3](/dapps/)
+- [Bincika manhajojin Web3](/apps/)
 - [Kashiga DAO](/dao/)
 - [Gini akan Web3](/developers/)
 

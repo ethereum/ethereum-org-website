@@ -10,7 +10,7 @@ published: 2024-06-29
 
 You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** so anybody interested will be able to pin it on a server for future access.
 
-You could use a third-party service such as [Fleek](https://docs.fleek.xyz/docs) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
+You could use a third-party service such as [Fleek](https://resources.fleek.xyz/docs/) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
 
 ## Getting started locally {#getting-started-locally}
 
@@ -18,7 +18,7 @@ There are multiple [third-party IPFS providers](https://docs.ipfs.tech/how-to/wo
 
 1. Install the [IPFS user interface](https://docs.ipfs.tech/install/ipfs-desktop/#install-instructions).
 
-2. Create a directory with your web site. If you are using [Vite](https://vitejs.dev/), use this command:
+2. Create a directory with your web site. If you are using [Vite](https://vite.dev/), use this command:
 
    ```sh
    pnpm vite build
@@ -69,3 +69,5 @@ Additionally, some packages have a problem with IPFS, so if your web site is ver
 ## Conclusion {#conclusion}
 
 Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.
+
+[See here for more of my work](https://cryptodocguy.pro/).

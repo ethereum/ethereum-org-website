@@ -1,3 +1,5 @@
+"use client"
+
 import { Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
@@ -426,7 +428,7 @@ export const walletOnboardingSimData: SimulatorData = {
                   </Link>
                 </ListItem>
                 <ListItem>
-                  <Link href="/dapps/">
+                  <Link href="/apps/">
                     Check out some beginner friendly apps
                   </Link>
                 </ListItem>

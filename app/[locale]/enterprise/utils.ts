@@ -88,8 +88,8 @@ export const parseActivity = async ({
     },
     {
       label: t("page-enterprise-activity-value-protecting"),
-      apiProvider: "Dune Analytics",
-      apiUrl: "https://dune.com/hildobby/eth2-staking",
+      apiProvider: "Beaconcha.in",
+      apiUrl: "https://beaconcha.in",
       state: totalValueSecuringFormatted,
     },
 

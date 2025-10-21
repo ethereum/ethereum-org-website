@@ -44,7 +44,7 @@ W [społeczności Ethereum](/community/) znajdują się różni udziałowcy, a k
 
 - **Posiadaczy etheru**: ludzie ci posiadają dowolną ilość ETH. [Więcej o ETH](/eth/).
 - **Użytkowników aplikacji**: ludzie ci wchodzą w interakcje z aplikacjami znajdującymi się na blockchainie Ethereum.
-- **Deweloperów aplikacji/narzędzi**: ludzie ci piszą aplikacje działające na blockchainie Ethereum (np. DeFi, NFT itp.) lub tworzą narzędzia do interakcji z Ethereum (np. portfele, zestawy testowe itp.). [Więcej o zdecentralizowanych aplikacjach](/dapps/).
+- **Deweloperów aplikacji/narzędzi**: ludzie ci piszą aplikacje działające na blockchainie Ethereum (np. DeFi, NFT itp.) lub tworzą narzędzia do interakcji z Ethereum (np. portfele, zestawy testowe itp.). [Więcej o zdecentralizowanych aplikacjach](/apps/).
 - **Operatorów węzłów**: ci ludzie uruchamiają węzły, które propagują bloki i transakcje, odrzucając wszelkie nieprawidłowe transakcje lub bloki, które napotkają. [Więcej o węzłach](/developers/docs/nodes-and-clients/).
 - **Autorów EIP**: ludzie ci proponują zmiany w protokole Ethereum w formie Propozycji Ulepszeń Ethereum (EIP). [Więcej o EIP](/eips/).
 - **Walidatorów**: ci ludzie uruchamiają węzły, które mogą dodawać nowe bloki do blockchainu Ethereum.
@@ -152,7 +152,7 @@ Proces zarządzania Ethereum często zamienia szybkość i wydajność na otwart
 
 Podczas gdy specyfikacja i implementacje deweloperskie zawsze były w pełni open source, formalne procesy stosowane do proponowania aktualizacji opisane powyżej nie zostały użyte. Pozwoliło to na szybsze określanie i uzgadnianie zmian przez badaczy i osób wdrażających.
 
-Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/history/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
+Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/ethereum-forks/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   Więcej o Połączeniu

@@ -61,14 +61,17 @@ lang: zh
 ![从要连接的钱包列表中选择](./connect2.png)
 
 5. 请在钱包中，确认签名请求以建立连接。 **签署此信息不应花费任何以太币**。
-6. 这样就完成了！ 开始使用这个应用程序吧。 你可以在我们的[去中心化应用程序页面](/dapps/#explore)找到一些有趣的项目。 <br />
+6. 这样就完成了！ 开始使用这个应用程序吧。 你可以在我们的[去中心化应用程序页面](/apps/#explore)找到一些有趣的项目。 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想了解更多信息？</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常见问题
 

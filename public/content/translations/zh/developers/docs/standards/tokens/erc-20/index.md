@@ -155,7 +155,7 @@ print("Addr Balance:", addr_balance)
 3.  无内置处理
     -   ERC-20 标准不包含用于接收待实现合约的强制函数，导致许多合约无法正确管理传入的代币
 
-为了解决这些问题，出现了 [ERC-223](/developers/docs/standards/tokens/erc-223) 等替代标准。
+为了解决这些问题，出现了 [ERC-223](/developers/docs/standards/tokens/erc-223) [ERC-1363](/developers/docs/standards/tokens/erc-1363) 等替代标准。
 
 ## 延伸阅读 {#further-reading}
 
@@ -168,5 +168,6 @@ print("Addr Balance:", addr_balance)
 ## 其他同质化代币标准 {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - 代币化资金库](/developers/docs/standards/tokens/erc-4626)

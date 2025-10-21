@@ -43,9 +43,14 @@ Shanghai/Capella yangilanishidan oldin siz garovga qo‘yilgan ETHingizdan foyda
 
 Har qanday validator hisobi uchun pul yechib olish manzilini taqdim etish - bu hisob balansidan ETH yechib olishga huquq qozonishidan oldingi majburiy qadamdir.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Har bir validator hisobi uchun faqat bitta yechib olish manzili, bir martalik tayinlanishi mumkin.</strong> Manzil tanlanib, konsensus qatlamiga yuborilgandan so‘ng, uni bekor qilish yoki qayta o‘zgartirish mutlaqo imkonsiz bo‘ladi. Yuborishdan avval taqdim etilgan manzilning to‘g‘riligini va uning egasini ikki marta sinchiklab tekshirib chiqing.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Agar sizning mnemonik/urug‘ iborangiz oflaynda xavfsiz saqlangan va hech qanday tarzda buzilmagan bo‘lsa, <strong>bu ma’lumotni taqdim etmasligingiz hozircha mablag‘laringizga hech qanday xavf tug‘dirmaydi</strong>. Yechib olish uchun kerakli ma’lumotlarni qo‘shmaslik natijasida, yechib olish manzili ko‘rsatilmaguncha, ETH validator hisobida shunchaki qulflangan holda qolaveradi.
 
@@ -65,7 +70,7 @@ Steyking yechib olishlari ishga tushdi! 2023-yil 12-aprelda amalga oshirilgan Sh
 
 Shanghai/Capella yangilanishi avvaldan tiklangan ETHni oddiy Ethereum hisoblariga qaytarib olish imkoniyatini yaratdi. Bu likvidlikni garovga qo‘yish jarayonini to‘liq yopdi va Ethereum barqaror, kengaytiriladigan, xavfsiz markazlashmagan ekotizim yaratish yo‘lidagi maqsadiga yana bir qadam yaqinlashdi.
 
-- [Ethereum tarixi haqida ko‘proq ma’lumot](/history/)
+- [Ethereum tarixi haqida ko‘proq ma’lumot](/ethereum-forks/)
 - [Ethereum yo‘l xaritasi to‘g‘risida ko‘proq ma’lumot](/roadmap/)
 
 ## Pul yechib olish jarayoni qanday amalga oshiriladi? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Finematics tomonidan taqdim etilgan Ethereum steykingi yechib olish jarayoni haq
 
 Validator keyingi blokni taklif etish uchun rejalashtirilganda, u 16 tagacha muvofiq yechib olishlardan iborat yechib olish navbatini tuzishi shart bo‘ladi. Bu jarayon dastlab validator indeksi 0 dan boshlanib, protokol qoidalariga ko‘ra ushbu hisob uchun mablag‘ yechib olishga huquq bor-yo‘qligi aniqlanadi va agar bunday huquq mavjud bo‘lsa, u navbatga qo‘shiladi. Keyingi blokni taklif etish uchun tanlangan tekshiruvchilar to‘plami, oldingi blok yakunlangan joydan boshlab, belgilangan tartibda cheksiz davom etadi.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Analog soat haqida o‘ylab ko‘ring. Soat mili vaqtni ko‘rsatadi, faqat bir yo‘nalishda aylanadi, hech qanday soatni o‘tkazib yubormaydi va oxirgi raqamga yetgandan so‘ng yana boshiga qaytadi.<br/><br/>
 Endi 1 dan 12 gacha emas, balki soatda 0 dan N gacha raqamlar bor deb tasavvur qiling <em>(konsensus qatlamida hozirga qadar ro‘yxatdan o‘tgan validator hisoblarining umumiy soni, 2023-yil yanvar holatiga ko‘ra 500 000 dan ortiq)</em>.<br/><br/>
 Soat mili chiqarib olishga huquqi bor-yo‘qligini tekshirish kerak bo‘lgan keyingi validatorni ko‘rsatadi. U noldan boshlanib, hech qanday hisobni o‘tkazib yubormasdan to‘liq aylanib chiqadi. Oxirgi tasdiqlovchiga yetib borgandan so‘ng, jarayon yana boshidan qaytadan boshlanadi.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Akkauntdan pul yechish uchun tekshiruv {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Agar siz <a href="/staking/pools/">steyking puli</a>ning a’zosi bo‘lsangiz yoki steyking tokenlariga ega bo‘lsangiz, steyking yechib olish jarayoni haqida batafsilroq ma’lumot olish uchun o‘z xizmat ko‘rsatuvchingizga murojaat qilishingiz lozim, chunki har bir xizmat turlicha ishlaydi.
+Agar siz [steyking puli](/staking/pools/)ning a’zosi bo‘lsangiz yoki steyking tokenlariga ega bo‘lsangiz, steyking yechib olish jarayoni haqida batafsilroq ma’lumot olish uchun o‘z xizmat ko‘rsatuvchingizga murojaat qilishingiz lozim, chunki har bir xizmat turlicha ishlaydi.
 
-Umuman olganda, foydalanuvchilar o‘zlarining asosiy garovga qo‘yilgan ETHlarini qaytarib olish yoki foydalanayotgan steyking provayderni o‘zgartirish imkoniyatiga ega bo‘lishlari kerak. Agar ma’lum bir fond juda katta bo‘lib ketayotgan bo‘lsa, mablag‘larni chiqarib olish, qaytarib olish va <a href="https://rated.network/">kichikroq provayderga</a> qayta kiritish mumkin. Yoki, agar yetarli miqdorda ETH to‘plagan bo‘lsangiz, <a href="/staking/solo/">uydan turib steyking qilishingiz</a> mumkin.
+Umuman olganda, foydalanuvchilar o‘zlarining asosiy garovga qo‘yilgan ETHlarini qaytarib olish yoki foydalanayotgan steyking provayderni o‘zgartirish imkoniyatiga ega bo‘lishlari kerak. Agar ma’lum bir fond juda katta bo‘lib ketayotgan bo‘lsa, mablag‘larni chiqarib olish, qaytarib olish va <a href="https://rated.network/">kichikroq provayderga</a> qayta kiritish mumkin. Yoki, agar yetarli miqdorda ETH to‘plagan bo‘lsangiz, [uydan turib steyking qilishingiz](/staking/solo/) mumkin.
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Yo'q. Validator chiqib ketgandan so‘ng va uning to‘liq balansi yechib olinga
 
 - [Steykingli ishga tushirish platformasidan mablag‘larni yechib olish](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mayoq zanjiri pul yechib olishlarini operatsiya sifatida amalga oshirish](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum mushuk boshqaruvchilari - Shanxay](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Syao-Vey Vang bilan ETH steyking yechib olishi (sinash) Syao-Vey Vang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Aleks Stoks bilan mayoq zanjiri chiqarish operatsiyalarini pul yechish sifatida amalga oshirish](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Validatorning samarali balansini tushunish](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -17,7 +17,7 @@ import { TableCell, TableHead } from "@/components/ui/table"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
+export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
   {
     id: "l2Info",
     header: ({ table }) => {

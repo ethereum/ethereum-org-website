@@ -237,7 +237,7 @@
   "nav-contribute-description": "如需帮助，这里为您提供指南",
   "nav-contribute-label": "为 ethereum.org 做贡献",
   "nav-dao-description": "成员共同拥有的社区，不存在集中管理机构",
-  "nav-dapps-description": "借助以太坊，探索丰富多姿的应用程序生态系统",
+  "nav-apps-description": "借助以太坊，探索丰富多姿的应用程序生态系统",
   "nav-defi-description": "传统金融市场的全球化、开放性替代方案",
   "nav-desci-description": "对当前科学体系的一种全球化与开放式替代方案",
   "nav-desoc-description": "基于区块链的社交互动与内容创作平台",
@@ -286,7 +286,7 @@
   "nav-history-label": "以太坊技术史",
   "nav-learn-by-coding-description": "可帮助用户尝试以太坊的工具",
   "nav-local-env-description": "选择并设置以太坊开发栈",
-  "nav-mainnet-description": "企业级区块链应用程序可以在公共以太坊主网上构建",
+  "nav-enterprise-description": "企业级区块链应用程序可以在公共以太坊主网上构建",
   "nav-networks-home-description": "以太坊上的交易更经济、更快捷",
   "nav-networks-introduction-label": "简介",
   "nav-networks-introduction-description": "以太坊扩展为众网之网",
@@ -457,5 +457,8 @@
   "withdrawals": "质押提款",
   "wrapped-ether": "包装以太币",
   "yes": "是",
-  "zero-knowledge-proofs": "零知识证明"
+  "zero-knowledge-proofs": "零知识证明",
+  "ethereum-vs-bitcoin": "以太坊 vs. 比特币",
+  "nav-ethereum-vs-bitcoin-description": "了解以太坊和比特币之间的区别"
+
 }

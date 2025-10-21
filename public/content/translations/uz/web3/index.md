@@ -61,12 +61,15 @@ Web3 sizga raqamli aktivlaringizga misli koʻrilmagan tarzda egalik qilish imkon
 
 Web3 [o‘zgarmas tokenlar (NFTlar)](/glossary/#nft) orqali to‘g‘ridan-to‘g‘ri egalik qilish imkonini beradi. Hech kim, hatto o‘yin yaratuvchilari ham sizning mulkingizni tortib olish huquqiga ega emas. Agar o‘ynashni to‘xtatsangiz, o‘yin ichidagi buyumlarni ochiq bozorlarda sotish yoki ayirboshlashingiz va ularning qiymatini to‘ldirishingiz mumkin.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>NFTlar haqida batafsil</div>
   <ButtonLink href="/nft/">
     NFT haqida koʻproq
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Senzuraga qarshilik {#censorship-resistance}
 
@@ -86,12 +89,15 @@ DAOlar texnik jihatdan resurslar fondi (tokenlar) bo‘yicha markazlashmagan qar
 
 Biroq, odamlar ko‘plab Web3 hamjamiyatlarini DAO deb ta’riflaydilar. Ushbu jamoalarning barchasi kod bo‘yicha markazlashtirishni cheklash va avtomatlashtirishning turli darajalariga ega. Hozirda biz DAO nima ekanligi va ular kelajakda qanday rivojlanishi mumkinligini o‘rganmoqdamiz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     DAO haqida ko'proq
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identifikatsiya {#identity}
 
@@ -139,7 +145,7 @@ Biz hali Web3 bilan yaxshiroq Web yaratishning boshidamiz, lekin uni qo‘llab-q
 
 - [Hamyonni oling](/wallets/)
 - [Hamjamiyat toping](/community/)
-- [Web3 ilovalari bilan tanishing](/dapps/)
+- [Web3 ilovalari bilan tanishing](/apps/)
 - [Join a DAO](/dao/)
 - [Web3 da qurish](/developers/)
 

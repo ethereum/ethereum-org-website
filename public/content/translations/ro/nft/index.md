@@ -160,12 +160,15 @@ NFT-urile acționează o nouă economie, în care creatorii nu cedează propriet
 
 Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar atunci când noul proprietar ar revinde NFT-urile, creatorul original poate primi în mod automat redevențe. Garanția acestui lucru este asigurată prin faptul că, la orice vânzare a sa, adresa creatorului este integrată în metadatele tokenului – iar metadatele nu pot fi modificate.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
-  <ButtonLink href="/dapps/?category=collectibles">
+  <ButtonLink href="/apps/categories/collectibles">
     Explorați arta NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Problema copierii/inserării {#nfts-copy-paste}
 
@@ -193,12 +196,15 @@ Acest lucru mai înseamnă că atunci când un joc nu mai este întreținut de d
 
 Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cumpărați NFT-uri care reprezintă parcele virtuale de teren pe care le puteți folosi după bunul plac.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</div>
-  <ButtonLink href="/dapps/?category=gaming">
+  <ButtonLink href="/apps/categories/gaming">
     Explorați jocurile NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -242,7 +248,7 @@ Iar această modalitate nu este greu de realizat pe Ethereum, pentru că ambele 
 
 Creatorii de NFT-uri pot de asemenea să creeze „acțiuni” pentru NFT-ul lor. Acest lucru oferă investitorilor și fanilor posibilitatea să dețină o parte dintr-un NFT fără a fi nevoie să îl cumpere în întregime. Acest lucru deschide și mai multe oportunități, atât pentru creatorii de NFT-uri, cât și pentru colecționari.
 
-- NFT-urile fracționate se pot tranzacționa și pe [DEX-uri](/defi/#dex) precum Uniswap, nu doar pe [piețele de NFT-uri](/dapps?category=collectibles). Aceasta înseamnă mai mulți cumpărători și vânzători.
+- NFT-urile fracționate se pot tranzacționa și pe [DEX-uri](/defi/#dex) precum Uniswap, nu doar pe [piețele de NFT-uri](/apps?category=collectibles). Aceasta înseamnă mai mulți cumpărători și vânzători.
 - Prețul global al unui NFT poate fi definit prin prețul fracțiunilor sale.
 - Aveți mai multe posibilități să dețineți și să profitați de obiectele la care țineți. Este mai greu să vi se interzică să dețineți NFT-uri.
 
@@ -428,6 +434,7 @@ Cu alte cuvinte, dacă Visa procesează 140.839.000.000 de tranzacții ce costă
 
 Într-un singur an, Ethereum va consuma 5.256.000 kWh. Cu un potențial de 788.940.000.000.000 - 3.153.600.000.000.000 de tranzacții procesate în această perioadă.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
   În cazul în care considerați că aceste statistici sunt incorecte sau se poate crește precizia lor, vă rugăm să semnalați o problemă sau să creați un PR. Acestea sunt estimări făcute de echipa ethereum.org utilizând informații accesibile publicului și ce este în faza de proiect pentru Ethereum. Aceasta nu reprezintă o promisiune oficială din partea Fundației Ethereum.
-</InfoBanner>
+</Alert>

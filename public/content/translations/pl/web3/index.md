@@ -61,12 +61,15 @@ Web3 daje Ci prawo własności do Twoich zasobów cyfrowych w bezprecedensowy sp
 
 Web3 pozwala na bezpośrednią własność poprzez [niewymienialne tokeny (NFT)](/glossary/#nft). Nikt, nawet twórcy gry, nie ma prawa odebrać ci Twoich własności. A jeśli przestaniesz grać, możesz sprzedać lub wymienić swoje przedmioty w grze na otwartych rynkach i odzyskać ich wartość.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Dowiedz się więcej o NFT</div>
   <ButtonLink href="/nft/">
     Więcej o NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Odporność na cenzurę {#censorship-resistance}
 
@@ -86,12 +89,15 @@ DAO są technicznie definiowane jako z góry uzgodnione [inteligentne kontrakty]
 
 Ludzie jednak definiują wiele społeczności Web3 jako DAO. Wszystkie te społeczności mają różne poziomy decentralizacji i automatyzacji za pomocą kodu. Obecnie badamy, czym są DAO i jak mogą ewoluować w przyszłości.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Dowiedz się więcej o DAO</div>
   <ButtonLink href="/dao/">
     Więcej informacji o: DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Tożsamość {#identity}
 
@@ -139,7 +145,7 @@ Jesteśmy dopiero na początku tworzenia lepszej sieci z Web3, ale ponieważ nad
 
 - [Wybierz portfel](/wallets/)
 - [Znajdź społeczność](/community/)
-- [Odkryj aplikacje Web3](/dapps/)
+- [Odkryj aplikacje Web3](/apps/)
 - [Dołącz do DAO](/dao/)
 - [Buduj na Web3](/developers/)
 

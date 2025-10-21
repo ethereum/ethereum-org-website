@@ -61,12 +61,15 @@ lang: ko
 
 웹3는 [대체 불가 토큰(NFT)](/glossary/#nft)을 통해 직접적인 소유가 가능하게 합니다. 아무도, 설령 게임 창작자일지라도, 귀하의 소유권을 가져갈 수 없습니다. 또한 게임을 더 이상 안 하더라도 게임 상의 아이템들을 오픈마켓에서 판매하거나 교환함으로써 가치를 활용할 수 있습니다.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>NFT에 대해 자세히 알아보기</div>
   <ButtonLink href="/nft/">
     NFT 이해하기
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### 검열 저항력 {#censorship-resistance}
 
@@ -86,12 +89,15 @@ DAO는 기술적으로 리소스 풀(토큰)을 통해 탈중앙화된 의사 �
 
 하지만 사람들은 많은 웹3 커뮤니티를 DAO라고 정의합니다. 이러한 커뮤니티의 탈중앙화 및 코드 자동화가 이루어지는 정도는 서로 다릅니다. 현재 우리는 DAO가 무엇이며 미래에 어떻게 진화해 나갈지 논의하고 있습니다.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>DAO에 대해 자세히 알아보기</div>
   <ButtonLink href="/dao/">
     DAO 이해하기
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### 신원 증명 {#identity}
 
@@ -139,7 +145,7 @@ Ethereum.org는 중요한 이더리움 콘텐츠를 가능한 많은 언어로 �
 
 - [지갑 만들기](/wallets/)
 - [커뮤니티 찾기](/community/)
-- [웹3 애플리케이션 살펴보기](/dapps/)
+- [웹3 애플리케이션 살펴보기](/apps/)
 - [DAO 가입하기](/dao/)
 - [웹3 빌드하기](/developers/)
 

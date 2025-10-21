@@ -44,7 +44,7 @@ V [komunite Ethereum](/community/) sú rôzne zainteresované strany, z ktorých
 
 - **Držitelia Etheru**: títo ľudia vlastnia ľubovoľné množstvo ETH. [Viac o ETH](/eth/).
 - **Používatelia aplikácií**: títo ľudia interagujú s aplikáciami na Ethereum blockchaine.
-- **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/dapps/).
+- **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/apps/).
 - **Operátori uzlov**: títo ľudia prevádzkujú uzly, ktoré šíria bloky a transakcie a odmietajú akúkoľvek neplatnú transakciu alebo blok, s ktorým sa stretnú. [Viac informácií o uzloch](/developers/docs/nodes-and-clients/).
 - **Autori EIP**: títo ľudia navrhujú zmeny protokolu Ethereum vo forme návrhov na zlepšenie Etherea (EIP). [Viac o EIP](/eips/).
 - **Validátori**: títo ľudia prevádzkujú uzly, ktoré môžu pridávať nové bloky do Ethereum blockchainu.
@@ -152,7 +152,7 @@ Proces správy Etherea často vymieňa rýchlosť a efektivitu za otvorenosť a 
 
 Zatiaľ čo implementácie špecifikácií a vývoja boli vždy plne open source, formálne procesy používané na navrhovanie aktualizácií opísané vyššie sa nepoužívali. To umožnilo výskumníkom a realizátorom rýchlejšie špecifikovať a odsúhlasiť zmeny.
 
-Keď sa 15. septembra 2022 Beacon Chain zlúčil s realizačnou vrstvou Ethereum, bolo zlúčenie dokončené ako súčasť [zlepšenia siete v Paríži](/history/#paris). Návrh [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) sa zmenil z „Posledná výzva“ na „Konečný“, čím sa dokončil prechod na proof-of-stake.
+Keď sa 15. septembra 2022 Beacon Chain zlúčil s realizačnou vrstvou Ethereum, bolo zlúčenie dokončené ako súčasť [zlepšenia siete v Paríži](/ethereum-forks/#paris). Návrh [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) sa zmenil z „Posledná výzva“ na „Konečný“, čím sa dokončil prechod na proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   Viac o zlúčení

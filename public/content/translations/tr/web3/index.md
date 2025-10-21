@@ -65,12 +65,15 @@ Web3, dijital varlıklarınızın mülkiyet hakkını benzeri görülmemiş bir 
 
 Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mülkiyete olanak tanır. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>NFT’ler hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/nft/">
     NFT'ler hakkında daha fazlası
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Sansüre dayanıklılık {#censorship-resistance}
 
@@ -90,12 +93,15 @@ DAO'lar teknik olarak, bir kaynak havuzu (jetonlar) üzerinde merkeziyetsiz kara
 
 Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukların tümü, koda göre farklı merkeziyetsizlik ve otomasyon seviyelerine sahiptir. Şu anda DAO'ların neler olduğunu ve gelecekte nasıl gelişebileceklerini araştırıyoruz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>DAO’lar hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/dao/">
     DAO'lar hakkında daha fazlası
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Kimlik {#identity}
 
@@ -143,7 +149,7 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 - [Bir cüzdan edinin](/wallets/)
 - [Bir topluluk bulun](/community/)
-- [Web3 uygulamalarını keşfedin](/dapps/)
+- [Web3 uygulamalarını keşfedin](/apps/)
 - [Bir DAO'ya katılın](/dao/)
 - [Web3 üzerinde inşa edin](/developers/)
 

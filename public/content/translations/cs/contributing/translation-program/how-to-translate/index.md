@@ -34,7 +34,7 @@ Otevřete jazyk, do kterého chcete překládat, abyste viděli seznam souborů 
 
 Obsah webu je rozdělen do několika dokumentů a obsahových bloků. Napravo můžete zkontrolovat pokrok u každého dokumentu – pokud je pokrok překladu pod 100 %, přispějte!
 
-Nevidíte svůj jazyk v seznamu? [Otevřete problém](https://github.com/ethereum/ethereum-org-website/issues/new/choose) nebo se zeptejte na našem [Discordu](/discord/)
+Nevidíte svůj jazyk v seznamu? [Otevřete problém](https://github.com/ethereum/ethereum-org-website/issues/new/choose) nebo se zeptejte na našem [Discordu](https://discord.gg/ethereum-org)
 
 ![Přeložené a nepřeložené soubory v Crowdinu](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Chcete se dozvědět více? Neváhejte a podívejte se na [dokumentaci k použí
 
 Jakmile dokončíte překlad (tj. všechny soubory pro obsahový blok ukazují 100 %), náš profesionální překladatelský servis obsah zkontroluje (a případně upraví). Jakmile je kontrola dokončena (tj. pokrok kontroly je 100 %), přidáme ho na web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Prosím, nepoužívejte strojový překlad. Všechny překlady budou před přidáním na web zkontrolovány. Pokud zjistíme, že vaše navržené překlady jsou strojové, budou odmítnuty a přispěvatelé, kteří často používají strojový překlad, budou z projektu odstraněni.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Kontaktujte nás {#get-in-touch}
 
-Máte nějaké otázky? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Prosím, napište nám na kanálu #translations na našem [Discord serveru ethereum.org](/discord/).
+Máte nějaké otázky? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Prosím, napište nám na kanálu #translations na našem [Discord serveru ethereum.org](https://discord.gg/ethereum-org).
 
 Můžete se také obrátit na translations@ethereum.org
 

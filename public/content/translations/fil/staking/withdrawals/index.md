@@ -43,9 +43,14 @@ Bago ang Shanghai/Capella upgrade, hindi mo magamit o ma-access ang iyong staked
 
 Ang pagbibigay ng withdrawal address ay isang kinakailangang hakbang para sa anumang validator account bago ito maging eligible na mag-withdraw ng ETH mula sa balanse nito.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Ang bawat validator account ay maaari lang magkaroon ng isang withdrawal address, nang isang beses lang.</strong> Kapag nakapili na ng address at naisumite na ito sa consensus layer, hindi na ito maaaring bawiin o baguhin ulit. I-double check ang pagmamay-ari at katumpakan ng address na ibinigay bago ito isumite.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Sa ngayon, <strong>walang banta sa pondo mo</strong> kung hindi mo ito ibibigay, basta't nananatiling ligtas offline ang iyong mnemonic/seed phrase, at hindi ito nakompromiso sa anumang paraan. Kung hindi maipapakita ang mga kredensyal sa pag-withdraw, hindi makukuha ang ETH sa validator account hangga't hindi nagbibigay ng withdrawal address.
 
@@ -65,7 +70,7 @@ Live na ang mga pag-withdraw sa staking! Ang functionality ng pag-withdraw ay in
 
 Ang Shanghai/Capella upgrade ang nagbigay-daan para maibalik ang staked ETH sa mga regular na Ethereum account. Sinubaybayan nito ang pag-stake ng liquidity, at inilapit nito ang Ethereum sa layunin nitong bumuo ng sustainable, scalable, at secure na decentralized ecosystem.
 
-- [Iba pang detalye tungkol sa kasaysayan ng Ethereum](/history/)
+- [Iba pang detalye tungkol sa kasaysayan ng Ethereum](/ethereum-forks/)
 - [Iba pang detalye tungkol sa roadmap ng Ethereum](/roadmap/)
 
 ## Paano gumagana ang mga withdrawal payment? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Tingnan ang paliwanag ng Finematics tungkol sa mga pag-withdraw sa staking ng Et
 
 Kapag nakaiskedyul ang isang validator na magmungkahi ng susunod na block, kailangan nitong gumawa ng withdrawal queue ng hanggang 16 na eligible withdrawal. Ito ay ginagawa sa pamamagitan ng pagsisimula sa validator index 0, pagtukoy kung may eligible withdrawal para sa account na ito batay sa mga panuntunan ng protocol, at pagdadagdag nito sa queue kung mayroon man. Ang validator na nakatakda na mag-propose ng susunod na bloke ay magpapatuloy kung saan iniwan ng huling bloke, at magpapatuloy ito nang sunod-sunod ng walang katapusan.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Para lang itong analog na orasan. Itinuturo ng kamay sa orasan ang oras, umuusad ito sa isang direksyon, wala itong nilalaktawang anumang oras, at sa huli ay bumabalik ito sa simula kapag naabot na nito ang huling numero.<br/><br/>
 Ngayon, sa halip na 1 hanggang 12, isipin na may 0 hanggang N <em>(ang kabuuang bilang ng mga validator account na nairehistro sa consensus layer, na mahigit 500,000 mula noong Enero 2023).</em><br/><br/>
 Ituturo ng kamay sa orasan ang susunod na validator na kailangang tingnan kung may mga eligible withdrawal. Nagsisimula ito sa, at umuusad paikot nang hindi nilalaktawan ang anumang account. Kapag naabot na ang huling validator, babalik ang sa simula ang cycle.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Pagtingin kung may mga withdrawal ang account {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Kung bahagi ka ng isang <a href="/staking/pools/">staking pool</a> o may hawak kang mga staking token, dapat kang magtanong sa iyong provider ng iba pang detalye tungkol sa kung paano pinapangasiwaan ang mga pag-withdraw sa staking, dahil magkakaiba ang paraan ng pangangasiwa ng bawat serbisyo.
+Kung bahagi ka ng isang [staking pool](/staking/pools/) o may hawak kang mga staking token, dapat kang magtanong sa iyong provider ng iba pang detalye tungkol sa kung paano pinapangasiwaan ang mga pag-withdraw sa staking, dahil magkakaiba ang paraan ng pangangasiwa ng bawat serbisyo.
 
-Sa pangkalahatan, dapat malaya ang mga user na kunin ang kasalukuyan nilang staked ETH, o magpalit ng staking provider na ginagamit nila. Kung masyado nang nagiging malaki ang isang partikular na pool, puwedeng alisin, i-redeem, at i-stake ulit ang pondo sa <a href="https://rated.network/">mas maliit na provider</a>. O, kung nakalikom ka na ng sapat na ETH, maaari kang <a href="/staking/solo/">mag-stake mula sa bahay</a>.
+Sa pangkalahatan, dapat malaya ang mga user na kunin ang kasalukuyan nilang staked ETH, o magpalit ng staking provider na ginagamit nila. Kung masyado nang nagiging malaki ang isang partikular na pool, puwedeng alisin, i-redeem, at i-stake ulit ang pondo sa <a href="https://rated.network/">mas maliit na provider</a>. O, kung nakalikom ka na ng sapat na ETH, maaari kang [mag-stake mula sa bahay](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Hindi. Kapag umalis na ang isang validator at na-wtihdraw na ang kumpletong bala
 
 - [Mga Pag-withdraw sa Staking sa Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mga Beacon chain push withdrawal bilang mga operasyon](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pag-withdraw sa Staked ETH (Testing) kasama sina Potuz at Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Itinutulak ng beacon chain ang mga withdrawal bilang mga operasyon kasama si Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Pag-unawa sa Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

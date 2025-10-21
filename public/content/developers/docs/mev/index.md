@@ -12,7 +12,7 @@ Maximal extractable value was first applied in the context of [proof-of-work](/d
 
 ## Prerequisites {#prerequisites}
 
-Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos) and [gas](/developers/docs/gas/). Familiarity with [dapps](/dapps/) and [DeFi](/defi/) is helpful as well.
+Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos) and [gas](/developers/docs/gas/). Familiarity with [dapps](/apps/) and [DeFi](/defi/) is helpful as well.
 
 ## MEV extraction {#mev-extraction}
 
@@ -180,7 +180,7 @@ Below is an overview of how the Builder API works:
 
 5. A validator using the Builder API is still expected to build a block locally in case the block builder fails to respond promptly, so they don't miss out on block proposal rewards. However, validator cannot create another block using either the now-revealed transactions or another set, as it would amount to _equivocation_ (signing two blocks within the same slot), which is a slashable offense.
 
-An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/Flashbots-auction/overview/) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows validators in proof-of-stake to outsource the work of building profitable blocks to specialized parties called **searchers**.
+An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/Flashbots-auction/overview) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows validators in proof-of-stake to outsource the work of building profitable blocks to specialized parties called **searchers**.
 ![A diagram showing the MEV flow in detail](./mev.png)
 
 Searchers look for lucrative MEV opportunities and send transaction bundles to block proposers along with a [sealed-price bid](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) for inclusion in the block. The validator running mev-geth, a forked version of the go-ethereum (Geth) client only has to choose the bundle with the most profit and include it as part of the new block. To protect block proposers (validators) from spam and invalid transactions, transaction bundles pass through **relayers** for validation before getting to the proposer.
@@ -205,7 +205,6 @@ Some projects, such as MEV Boost, use the Builder API as part of an overall stru
 
 - [Flashbots docs](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _Dashboard and live transaction explorer for MEV transactions_
 - [mevboost.org](https://www.mevboost.org/) - _Tracker with real-time stats for MEV-Boost relays and block builders_
 
 ## Further reading {#further-reading}

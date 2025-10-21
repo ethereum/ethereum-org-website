@@ -33,7 +33,6 @@ import InlineLink from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { InfoGrid } from "@/layouts"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -295,478 +294,479 @@ const RunANodePage = ({
   ]
 
   return (
-    <GappedPage>
-      <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
-        <div className="pb-8">
-          <PageHero content={heroContent} isReverse />
+    <>
+      <GappedPage>
+        <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
+          <div className="pb-8">
+            <PageHero content={heroContent} isReverse />
+          </div>
         </div>
-      </div>
 
-      <Content id="what-is-a-node">
-        <TwoColumnContent>
-          <Width60>
-            <H2>
-              <Translation id="page-run-a-node:page-run-a-node-what-title" />
-            </H2>
-            <H3>{t("page-run-a-node-what-1-subtitle")}</H3>
-            <Text>{t("page-run-a-node-what-1-text")}</Text>
-            <H3>{t("page-run-a-node-what-2-subtitle")}</H3>
-            <Text>{t("page-run-a-node-what-2-text")}</Text>
-            <H3>{t("page-run-a-node-what-3-subtitle")}</H3>
-            <Text>{t("page-run-a-node-what-3-text")}</Text>
-          </Width60>
-          <Width40>
-            <Image
-              src={hackathon}
-              alt=""
-              sizes="624px"
-              style={{ width: "624px", height: "auto" }}
-            />
-          </Width40>
-        </TwoColumnContent>
-      </Content>
+        <Content id="what-is-a-node">
+          <TwoColumnContent>
+            <Width60>
+              <H2>
+                <Translation id="page-run-a-node:page-run-a-node-what-title" />
+              </H2>
+              <H3>{t("page-run-a-node-what-1-subtitle")}</H3>
+              <Text>{t("page-run-a-node-what-1-text")}</Text>
+              <H3>{t("page-run-a-node-what-2-subtitle")}</H3>
+              <Text>{t("page-run-a-node-what-2-text")}</Text>
+              <H3>{t("page-run-a-node-what-3-subtitle")}</H3>
+              <Text>{t("page-run-a-node-what-3-text")}</Text>
+            </Width60>
+            <Width40>
+              <Image
+                src={hackathon}
+                alt=""
+                sizes="624px"
+                style={{ width: "624px", height: "auto" }}
+              />
+            </Width40>
+          </TwoColumnContent>
+        </Content>
 
-      <FlexContent>
-        <VStack
-          className={cn(
-            "relative mb-0 w-full gap-0 self-center rounded-sm border p-6 md:mb-4 md:w-[90%]",
-            "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%"
-          )}
-        >
-          <Stack className="flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
-            <Image
-              src={impact}
-              alt=""
-              sizes="300px"
-              style={{ width: "300px", height: "auto" }}
-            />
-            <div className="me-4">
-              <h2 className="mb-5 mt-4 text-2xl font-semibold leading-[1.4] md:text-[2rem]">
-                <Translation id="page-run-a-node:page-run-a-node-who-title" />
-              </h2>
-              <p className="body-medium mb-0">
-                <Translation id="page-run-a-node:page-run-a-node-who-preview" />
+        <FlexContent>
+          <VStack
+            className={cn(
+              "relative mb-0 w-full gap-0 self-center rounded-sm border p-6 md:mb-4 md:w-[90%]",
+              "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%"
+            )}
+          >
+            <Stack className="flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
+              <Image
+                src={impact}
+                alt=""
+                sizes="300px"
+                style={{ width: "300px", height: "auto" }}
+              />
+              <div className="me-4">
+                <h2 className="mb-5 mt-4 text-2xl font-semibold leading-[1.4] md:text-[2rem]">
+                  <Translation id="page-run-a-node:page-run-a-node-who-title" />
+                </h2>
+                <p className="body-medium mb-0">
+                  <Translation id="page-run-a-node:page-run-a-node-who-preview" />
+                </p>
+              </div>
+            </Stack>
+            <div className="mt-8 border-t pt-6">
+              <p className="mb-6">
+                <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+              </p>
+              <p className="mb-6">{t("page-run-a-node-who-copy-2")}</p>
+              <p className="mb-6">{t("page-run-a-node-who-copy-3")}</p>
+              <p className="mb-6 text-[150%] font-semibold leading-none">
+                {t("page-run-a-node-who-copy-bold")}
               </p>
             </div>
-          </Stack>
-          <div className="mt-8 border-t pt-6">
-            <p className="mb-6">
-              <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
-            </p>
-            <p className="mb-6">{t("page-run-a-node-who-copy-2")}</p>
-            <p className="mb-6">{t("page-run-a-node-who-copy-3")}</p>
-            <p className="mb-6 text-[150%] font-semibold leading-none">
-              {t("page-run-a-node-who-copy-bold")}
-            </p>
+          </VStack>
+        </FlexContent>
+
+        <Content>
+          <H2>
+            <Translation id="page-run-a-node:page-run-a-node-why-title" />
+          </H2>
+          <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-8">
+            {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
+              <ExpandableCard
+                contentPreview={preview}
+                title={title}
+                svg={({ className }) => (
+                  <Svg
+                    className={cn("size-16", className)}
+                    aria-hidden
+                    focusable="false"
+                  />
+                )}
+                key={title}
+              >
+                {body.map((item) => (
+                  <p key={item}>{item}</p>
+                ))}
+              </ExpandableCard>
+            ))}
           </div>
-        </VStack>
-      </FlexContent>
+        </Content>
 
-      <Content>
-        <H2>
-          <Translation id="page-run-a-node:page-run-a-node-why-title" />
-        </H2>
-        <InfoGrid>
-          {whyRunANodeCards.map(({ Svg, title, preview, body, alt }) => (
-            <ExpandableCard
-              contentPreview={preview}
-              title={title}
-              // TODO: make a11y svgs (using <title>)
-              // @ts-expect-error alt does not exist as a valid prop
-              alt={alt}
-              svg={({ className }) => (
-                <Svg className={cn("size-16", className)} />
-              )}
-              key={title}
-            >
-              {body.map((item) => (
-                <p key={item}>{item}</p>
-              ))}
-            </ExpandableCard>
-          ))}
-        </InfoGrid>
-      </Content>
+        <Divider />
 
-      <Divider />
-
-      <Content id="getting-started">
-        <H2>{t("page-run-a-node-getting-started-title")}</H2>
-        <GappedContent>
-          <SoftwareHighlight className="bg-[#ccfcff] dark:bg-[#293233]">
-            <ColumnFill>
-              <Text>
-                {t("page-run-a-node-getting-started-software-section-1")}
-              </Text>
-              <Text>
-                <code>
-                  <Emoji text=":warning:" className="me-4 text-md" />
-                  {t(
-                    "page-run-a-node-getting-started-software-section-1-alert"
-                  )}
-                </code>
-              </Text>
-              <InlineLink href="/developers/docs/nodes-and-clients/run-a-node/">
-                {t("page-run-a-node-getting-started-software-section-1-link")}
-              </InlineLink>
-            </ColumnFill>
-            <ColumnNarrow>
-              <Terminal
-                // TODO: make a11y svgs (using <title>)
-                // @ts-expect-error alt does not exist as a valid prop
-                alt={t("page-run-a-node-glyph-alt-terminal")}
-              />
-            </ColumnNarrow>
-          </SoftwareHighlight>
-
-          <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
-            <ColumnNarrow>
-              <Dappnode
-                // TODO: make a11y svgs (using <title>)
-                // @ts-expect-error alt does not exist as a valid prop
-                alt={t("page-run-a-node-glyph-alt-dappnode")}
-              />
-            </ColumnNarrow>
-            <ColumnFill>
-              <Text>
-                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-2" />
-              </Text>
-            </ColumnFill>
-          </SoftwareHighlight>
-
-          <SoftwareHighlight className="bg-[#E8E8FF] dark:bg-[#212132]">
-            <ColumnFill>
-              <Text>
-                {t("page-run-a-node-getting-started-software-section-3a")}
-              </Text>
-              <Text>
-                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-3b" />
-              </Text>
-            </ColumnFill>
-            <ColumnNarrow>
-              <Dapptap
-                // TODO: make a11y svgs (using <title>)
-                // @ts-expect-error alt does not exist as a valid prop
-                alt={t("page-run-a-node-glyph-alt-phone")}
-              />
-            </ColumnNarrow>
-          </SoftwareHighlight>
-        </GappedContent>
-      </Content>
-
-      <Content>
-        <H2>{t("page-run-a-node-choose-your-adventure-title")}</H2>
-        <Text>{t("page-run-a-node-choose-your-adventure-1")}</Text>
-        <Text>{t("page-run-a-node-choose-your-adventure-2")}</Text>
-        <MarginFlex>
-          <FullyLoaded>
-            <div>
-              <H3>
-                <Emoji text=":shopping_cart:" className="me-4 text-[2rem]" />
-                {t("page-run-a-node-buy-fully-loaded-title")}
-              </H3>
-              <Text>{t("page-run-a-node-buy-fully-loaded-description")}</Text>
-              <ul>
-                <li>{t("page-run-a-node-buy-fully-loaded-note-1")}</li>
-                <li>{t("page-run-a-node-buy-fully-loaded-note-2")}</li>
-                <li className="mb-0 font-bold">
-                  <code>{t("page-run-a-node-buy-fully-loaded-note-3")}</code>
-                </li>
-              </ul>
-            </div>
-            <ButtonContainer>
-              <ButtonLink href="https://dappnode.com/collections/frontpage">
-                {t("page-run-a-node-shop-dappnode")}
-              </ButtonLink>
-              <ButtonLink href="https://ava.do/">
-                {t("page-run-a-node-shop-avado")}
-              </ButtonLink>
-            </ButtonContainer>
-          </FullyLoaded>
-
-          <FullyLoaded>
-            <div>
-              <H3>
-                <Emoji
-                  text=":building_construction:"
-                  className="me-4 text-[2rem]"
-                />
-                {t("page-run-a-node-build-your-own-title")}
-              </H3>
-              <Text>{t("page-run-a-node-choose-your-adventure-build-1")}</Text>
-              <ul>
-                <li>
-                  {t("page-run-a-node-choose-your-adventure-build-bullet-1")}
-                </li>
-                <li>
-                  {t("page-run-a-node-choose-your-adventure-build-bullet-2")}
-                </li>
-                <li className="mb-0">
-                  {t("page-run-a-node-choose-your-adventure-build-bullet-3")}
-                </li>
-              </ul>
-            </div>
-            <Button variant="outline" toId="build-your-own">
-              {t("page-run-a-node-choose-your-adventure-build-start")}
-            </Button>
-          </FullyLoaded>
-        </MarginFlex>
-      </Content>
-
-      <Content id="build-your-own">
-        <H2>{t("page-run-a-node-build-your-own-title")}</H2>
-
-        <BuildContainer>
-          <SvgTitle>
-            <HardwareGlyphIcon
-              className="size-12"
-              aria-label={t("page-run-a-node-glyph-alt-hardware")}
-            />
-            <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
-          </SvgTitle>
-
-          <FlexContainer>
-            <BuildBox>
-              <H4>{t("page-run-a-node-build-your-own-minimum-specs")}</H4>
-              <ul>
-                <li>
-                  <Text>{t("page-run-a-node-build-your-own-min-ram")}</Text>
-                  <Text>
-                    <InlineLink href="#plan-on-staking">
-                      {t("page-run-a-node-build-your-own-ram-note-1")}
-                    </InlineLink>
-                  </Text>
-                  <Text>
-                    <InlineLink href="#rasp-pi">
-                      {t("page-run-a-node-build-your-own-ram-note-2")}
-                    </InlineLink>
-                  </Text>
-                </li>
-                <li className="mb-0">
-                  <Text>{t("page-run-a-node-build-your-own-min-ssd")}</Text>
-                  <Text>
-                    <small>
-                      <em className="mb-8">
-                        {t("page-run-a-node-build-your-own-ssd-note")}
-                      </em>
-                    </small>
-                  </Text>
-                </li>
-              </ul>
-            </BuildBox>
-
-            <BuildBox>
-              <H4>{t("page-run-a-node-build-your-own-recommended")}</H4>
-              <ul>
-                <li>
-                  {t("page-run-a-node-build-your-own-nuc")}
-                  <Text>
-                    <small>
-                      {t("page-run-a-node-build-your-own-nuc-small")}
-                    </small>
-                  </Text>
-                </li>
-                <li>
-                  {t("page-run-a-node-build-your-own-connection")}
-                  <Text>
-                    <small>
-                      {t("page-run-a-node-build-your-own-connection-small")}
-                    </small>
-                  </Text>
-                </li>
-                <li className="mb-0">
-                  {t("page-run-a-node-build-your-own-peripherals")}
-                  <Text>
-                    <small className="mb-8">
-                      {t("page-run-a-node-build-your-own-peripherals-small")}
-                    </small>
-                  </Text>
-                </li>
-              </ul>
-            </BuildBox>
-          </FlexContainer>
-        </BuildContainer>
-
-        <BuildContainer>
-          <SvgTitle>
-            <DownloadGlyphIcon
-              aria-label={t("page-run-a-node-glyph-alt-software")}
-              className="size-12"
-            />
-            <H3>{t("page-run-a-node-build-your-own-software")}</H3>
-          </SvgTitle>
-
-          <FlexContainer>
-            <BuildBoxSpace>
-              <div>
-                <H4>
-                  {t("page-run-a-node-build-your-own-software-option-1-title")}
-                </H4>
+        <Content id="getting-started">
+          <H2>{t("page-run-a-node-getting-started-title")}</H2>
+          <GappedContent>
+            <SoftwareHighlight className="bg-[#ccfcff] dark:bg-[#293233]">
+              <ColumnFill>
                 <Text>
-                  {t(
-                    "page-run-a-node-build-your-own-software-option-1-description"
-                  )}
-                </Text>
-              </div>
-              <ButtonContainer>
-                <ButtonLink href="https://docs.dappnode.io">
-                  {t("page-run-a-node-build-your-own-software-option-1-button")}
-                </ButtonLink>
-              </ButtonContainer>
-            </BuildBoxSpace>
-
-            <BuildBoxSpace>
-              <div>
-                <H4>
-                  {t("page-run-a-node-build-your-own-software-option-2-title")}
-                </H4>
-                <Text>
-                  {t(
-                    "page-run-a-node-build-your-own-software-option-2-description-1"
-                  )}
+                  {t("page-run-a-node-getting-started-software-section-1")}
                 </Text>
                 <Text>
-                  {t(
-                    "page-run-a-node-build-your-own-software-option-2-description-2"
-                  )}
-                </Text>
-              </div>
-              <ButtonContainer>
-                <ButtonLink
-                  href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
-                  variant="outline"
-                >
                   <code>
+                    <Emoji text=":warning:" className="me-4 text-md" />
                     {t(
-                      "page-run-a-node-build-your-own-software-option-2-button"
+                      "page-run-a-node-getting-started-software-section-1-alert"
                     )}
                   </code>
+                </Text>
+                <InlineLink href="/developers/docs/nodes-and-clients/run-a-node/">
+                  {t("page-run-a-node-getting-started-software-section-1-link")}
+                </InlineLink>
+              </ColumnFill>
+              <ColumnNarrow>
+                <Terminal aria-hidden focusable="false" />
+              </ColumnNarrow>
+            </SoftwareHighlight>
+
+            <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
+              <ColumnNarrow>
+                <Dappnode aria-hidden focusable="false" />
+              </ColumnNarrow>
+              <ColumnFill>
+                <Text>
+                  <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-2" />
+                </Text>
+              </ColumnFill>
+            </SoftwareHighlight>
+
+            <SoftwareHighlight className="bg-[#E8E8FF] dark:bg-[#212132]">
+              <ColumnFill>
+                <Text>
+                  {t("page-run-a-node-getting-started-software-section-3a")}
+                </Text>
+                <Text>
+                  <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-3b" />
+                </Text>
+              </ColumnFill>
+              <ColumnNarrow>
+                <Dapptap aria-hidden focusable="false" />
+              </ColumnNarrow>
+            </SoftwareHighlight>
+          </GappedContent>
+        </Content>
+
+        <Content>
+          <H2>{t("page-run-a-node-choose-your-adventure-title")}</H2>
+          <Text>{t("page-run-a-node-choose-your-adventure-1")}</Text>
+          <Text>{t("page-run-a-node-choose-your-adventure-2")}</Text>
+          <MarginFlex>
+            <FullyLoaded>
+              <div>
+                <H3>
+                  <Emoji text=":shopping_cart:" className="me-4 text-[2rem]" />
+                  {t("page-run-a-node-buy-fully-loaded-title")}
+                </H3>
+                <Text>{t("page-run-a-node-buy-fully-loaded-description")}</Text>
+                <ul>
+                  <li>{t("page-run-a-node-buy-fully-loaded-note-1")}</li>
+                  <li>{t("page-run-a-node-buy-fully-loaded-note-2")}</li>
+                  <li className="mb-0 font-bold">
+                    <code>{t("page-run-a-node-buy-fully-loaded-note-3")}</code>
+                  </li>
+                </ul>
+              </div>
+              <ButtonContainer>
+                <ButtonLink href="https://dappnode.com/collections/frontpage">
+                  {t("page-run-a-node-shop-dappnode")}
+                </ButtonLink>
+                <ButtonLink href="https://ava.do/">
+                  {t("page-run-a-node-shop-avado")}
                 </ButtonLink>
               </ButtonContainer>
-            </BuildBoxSpace>
-          </FlexContainer>
-        </BuildContainer>
-      </Content>
+            </FullyLoaded>
 
-      <Content>
-        <SplitContent className="flex-col-reverse md:flex-row">
-          <Column>
-            <H2>{t("page-run-a-node-community-title")}</H2>
-            <Text>{t("page-run-a-node-community-description-1")}</Text>
-            <Text>{t("page-run-a-node-community-description-2")}</Text>
-            <ButtonContainer>
-              <ButtonLink href="https://discord.com/invite/dappnode">
-                <Discord />
-                {t("page-run-a-node-community-link-1")}
-              </ButtonLink>
-              <ButtonLink
-                href="/community/online/"
-                variant="outline"
-                isSecondary
-              >
-                {t("page-run-a-node-community-link-2")}
-              </ButtonLink>
-            </ButtonContainer>
-          </Column>
+            <FullyLoaded>
+              <div>
+                <H3>
+                  <Emoji
+                    text=":building_construction:"
+                    className="me-4 text-[2rem]"
+                  />
+                  {t("page-run-a-node-build-your-own-title")}
+                </H3>
+                <Text>
+                  {t("page-run-a-node-choose-your-adventure-build-1")}
+                </Text>
+                <ul>
+                  <li>
+                    {t("page-run-a-node-choose-your-adventure-build-bullet-1")}
+                  </li>
+                  <li>
+                    {t("page-run-a-node-choose-your-adventure-build-bullet-2")}
+                  </li>
+                  <li className="mb-0">
+                    {t("page-run-a-node-choose-your-adventure-build-bullet-3")}
+                  </li>
+                </ul>
+              </div>
+              <Button variant="outline" toId="build-your-own">
+                {t("page-run-a-node-choose-your-adventure-build-start")}
+              </Button>
+            </FullyLoaded>
+          </MarginFlex>
+        </Content>
+
+        <Content id="build-your-own">
+          <H2>{t("page-run-a-node-build-your-own-title")}</H2>
+
+          <BuildContainer>
+            <SvgTitle>
+              <HardwareGlyphIcon
+                className="size-12"
+                aria-hidden
+                focusable="false"
+              />
+              <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
+            </SvgTitle>
+
+            <FlexContainer>
+              <BuildBox>
+                <H4>{t("page-run-a-node-build-your-own-minimum-specs")}</H4>
+                <ul>
+                  <li>
+                    <Text>{t("page-run-a-node-build-your-own-min-ram")}</Text>
+                    <Text>
+                      <InlineLink href="#plan-on-staking">
+                        {t("page-run-a-node-build-your-own-ram-note-1")}
+                      </InlineLink>
+                    </Text>
+                    <Text>
+                      <InlineLink href="#rasp-pi">
+                        {t("page-run-a-node-build-your-own-ram-note-2")}
+                      </InlineLink>
+                    </Text>
+                  </li>
+                  <li className="mb-0">
+                    <Text>{t("page-run-a-node-build-your-own-min-ssd")}</Text>
+                    <Text>
+                      <small>
+                        <em className="mb-8">
+                          {t("page-run-a-node-build-your-own-ssd-note")}
+                        </em>
+                      </small>
+                    </Text>
+                  </li>
+                </ul>
+              </BuildBox>
+
+              <BuildBox>
+                <H4>{t("page-run-a-node-build-your-own-recommended")}</H4>
+                <ul>
+                  <li>
+                    {t("page-run-a-node-build-your-own-nuc")}
+                    <Text>
+                      <small>
+                        {t("page-run-a-node-build-your-own-nuc-small")}
+                      </small>
+                    </Text>
+                  </li>
+                  <li>
+                    {t("page-run-a-node-build-your-own-connection")}
+                    <Text>
+                      <small>
+                        {t("page-run-a-node-build-your-own-connection-small")}
+                      </small>
+                    </Text>
+                  </li>
+                  <li className="mb-0">
+                    {t("page-run-a-node-build-your-own-peripherals")}
+                    <Text>
+                      <small className="mb-8">
+                        {t("page-run-a-node-build-your-own-peripherals-small")}
+                      </small>
+                    </Text>
+                  </li>
+                </ul>
+              </BuildBox>
+            </FlexContainer>
+          </BuildContainer>
+
+          <BuildContainer>
+            <SvgTitle>
+              <DownloadGlyphIcon
+                className="size-12"
+                aria-hidden
+                focusable="false"
+              />
+              <H3>{t("page-run-a-node-build-your-own-software")}</H3>
+            </SvgTitle>
+
+            <FlexContainer>
+              <BuildBoxSpace>
+                <div>
+                  <H4>
+                    {t(
+                      "page-run-a-node-build-your-own-software-option-1-title"
+                    )}
+                  </H4>
+                  <Text>
+                    {t(
+                      "page-run-a-node-build-your-own-software-option-1-description"
+                    )}
+                  </Text>
+                </div>
+                <ButtonContainer>
+                  <ButtonLink href="https://docs.dappnode.io">
+                    {t(
+                      "page-run-a-node-build-your-own-software-option-1-button"
+                    )}
+                  </ButtonLink>
+                </ButtonContainer>
+              </BuildBoxSpace>
+
+              <BuildBoxSpace>
+                <div>
+                  <H4>
+                    {t(
+                      "page-run-a-node-build-your-own-software-option-2-title"
+                    )}
+                  </H4>
+                  <Text>
+                    {t(
+                      "page-run-a-node-build-your-own-software-option-2-description-1"
+                    )}
+                  </Text>
+                  <Text>
+                    {t(
+                      "page-run-a-node-build-your-own-software-option-2-description-2"
+                    )}
+                  </Text>
+                </div>
+                <ButtonContainer>
+                  <ButtonLink
+                    href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
+                    variant="outline"
+                  >
+                    <code>
+                      {t(
+                        "page-run-a-node-build-your-own-software-option-2-button"
+                      )}
+                    </code>
+                  </ButtonLink>
+                </ButtonContainer>
+              </BuildBoxSpace>
+            </FlexContainer>
+          </BuildContainer>
+        </Content>
+
+        <Content>
+          <SplitContent className="flex-col-reverse md:flex-row">
+            <Column>
+              <H2>{t("page-run-a-node-community-title")}</H2>
+              <Text>{t("page-run-a-node-community-description-1")}</Text>
+              <Text>{t("page-run-a-node-community-description-2")}</Text>
+              <ButtonContainer>
+                <ButtonLink href="https://discord.com/invite/dappnode">
+                  <Discord />
+                  {t("page-run-a-node-community-link-1")}
+                </ButtonLink>
+                <ButtonLink
+                  href="/community/online/"
+                  variant="outline"
+                  isSecondary
+                >
+                  {t("page-run-a-node-community-link-2")}
+                </ButtonLink>
+              </ButtonContainer>
+            </Column>
+            <Column>
+              <Image
+                src={community}
+                alt=""
+                sizes="624px"
+                style={{ width: "624px", height: "auto" }}
+              />
+            </Column>
+          </SplitContent>
+        </Content>
+
+        <Content>
+          <H2>{t("page-run-a-node-further-reading-title")}</H2>
+          <ul>
+            <li>
+              <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+                {t("page-run-a-node-further-reading-1-link")}
+              </InlineLink>{" "}
+              - <i>{t("page-run-a-node-further-reading-1-author")}</i>
+            </li>
+            <li>
+              <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+                {t("page-run-a-node-further-reading-2-link")}
+              </InlineLink>
+            </li>
+            <li>
+              <InlineLink href="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
+                {t("page-run-a-node-further-reading-3-link")}
+              </InlineLink>{" "}
+              - <i>{t("page-run-a-node-further-reading-3-author")}</i>
+            </li>
+          </ul>
+        </Content>
+
+        <Divider />
+
+        <StakingCalloutContainer>
           <Column>
             <Image
-              src={community}
+              className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:scale-[115%] lg:-scale-x-[115%]"
+              src={leslie}
               alt=""
               sizes="624px"
               style={{ width: "624px", height: "auto" }}
             />
           </Column>
-        </SplitContent>
-      </Content>
-
-      <Content>
-        <H2>{t("page-run-a-node-further-reading-title")}</H2>
-        <ul>
-          <li>
-            <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
-              {t("page-run-a-node-further-reading-1-link")}
-            </InlineLink>{" "}
-            - <i>{t("page-run-a-node-further-reading-1-author")}</i>
-          </li>
-          <li>
-            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
-              {t("page-run-a-node-further-reading-2-link")}
+          <Column>
+            <H2>{t("page-run-a-node-staking-title")}</H2>
+            <Text>{t("page-run-a-node-staking-description")}</Text>
+            <ButtonContainer>
+              <ButtonLink href="/staking/">
+                {t("page-run-a-node-staking-link")}
+              </ButtonLink>
+            </ButtonContainer>
+          </Column>
+        </StakingCalloutContainer>
+        <Content>
+          <H3 id="plan-on-staking" className="flex items-center">
+            <Emoji text=":cut_of_meat:" className="me-4 text-[2rem]" />
+            {t("page-run-a-node-staking-plans-title")}
+          </H3>
+          <Text>
+            <Translation id="page-run-a-node:page-run-a-node-staking-plans-description" />
+          </Text>
+          <Text>
+            {t("page-run-a-node-staking-plans-ethstaker-link-description")} -{" "}
+            <InlineLink href="https://youtu.be/C2wwu1IlhDc">
+              {t("page-run-a-node-staking-plans-ethstaker-link-label")}
             </InlineLink>
-          </li>
-          <li>
-            <InlineLink href="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
-              {t("page-run-a-node-further-reading-3-link")}
-            </InlineLink>{" "}
-            - <i>{t("page-run-a-node-further-reading-3-author")}</i>
-          </li>
-        </ul>
-      </Content>
-
-      <Divider />
-
-      <StakingCalloutContainer>
-        <Column>
-          <Image
-            className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:scale-[115%] lg:-scale-x-[115%]"
-            src={leslie}
-            alt=""
-            sizes="624px"
-            style={{ width: "624px", height: "auto" }}
+          </Text>
+          <H3 id="rasp-pi" className="flex items-center">
+            <Emoji text=":pie:" className="me-4 text-[2rem]" />
+            {t("page-run-a-node-rasp-pi-title")}
+          </H3>
+          <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
+          <ul>
+            <li>
+              <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+                {t("page-run-a-node-rasp-pi-note-2-link")}
+              </InlineLink>{" "}
+              - <i>{t("page-run-a-node-rasp-pi-note-2-description")}</i>
+            </li>
+            <li>
+              <InlineLink href="/developers/tutorials/run-node-raspberry-pi">
+                {t("page-run-a-node-rasp-pi-note-3-link")}
+              </InlineLink>{" "}
+              - <i>{t("page-run-a-node-rasp-pi-note-3-description")}</i>
+            </li>
+          </ul>
+        </Content>
+        <Content>
+          <QuizWidget quizKey="run-a-node" />
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-        </Column>
-        <Column>
-          <H2>{t("page-run-a-node-staking-title")}</H2>
-          <Text>{t("page-run-a-node-staking-description")}</Text>
-          <ButtonContainer>
-            <ButtonLink href="/staking/">
-              {t("page-run-a-node-staking-link")}
-            </ButtonLink>
-          </ButtonContainer>
-        </Column>
-      </StakingCalloutContainer>
-      <Content>
-        <H3 id="plan-on-staking" className="flex items-center">
-          <Emoji text=":cut_of_meat:" className="me-4 text-[2rem]" />
-          {t("page-run-a-node-staking-plans-title")}
-        </H3>
-        <Text>
-          <Translation id="page-run-a-node:page-run-a-node-staking-plans-description" />
-        </Text>
-        <Text>
-          {t("page-run-a-node-staking-plans-ethstaker-link-description")} -{" "}
-          <InlineLink href="https://youtu.be/C2wwu1IlhDc">
-            {t("page-run-a-node-staking-plans-ethstaker-link-label")}
-          </InlineLink>
-        </Text>
-        <H3 id="rasp-pi" className="flex items-center">
-          <Emoji text=":pie:" className="me-4 text-[2rem]" />
-          {t("page-run-a-node-rasp-pi-title")}
-        </H3>
-        <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
-        <ul>
-          <li>
-            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
-              {t("page-run-a-node-rasp-pi-note-2-link")}
-            </InlineLink>{" "}
-            - <i>{t("page-run-a-node-rasp-pi-note-2-description")}</i>
-          </li>
-          <li>
-            <InlineLink href="/developers/tutorials/run-node-raspberry-pi">
-              {t("page-run-a-node-rasp-pi-note-3-link")}
-            </InlineLink>{" "}
-            - <i>{t("page-run-a-node-rasp-pi-note-3-description")}</i>
-          </li>
-        </ul>
-      </Content>
-      <Content>
-        <QuizWidget quizKey="run-a-node" />
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
-        <FeedbackCard />
-      </Content>
-    </GappedPage>
+          <FeedbackCard />
+        </Content>
+      </GappedPage>
+    </>
   )
 }
 

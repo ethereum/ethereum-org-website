@@ -54,12 +54,15 @@ NFTs ana amfani dasu akan ababe da yawa, sun haɗa da:
 
 Ta iya yuwa kai mai zane ne mai so ya raba aiyukansa ta hanyar amfani da NFTs, ba tare da ka rasa iko ba da sadaukar da ribar ka ga yantsakiya ba. Kana iya ƙiƙiran sabon kwangila tare keɓance lambar NFTs, kayayyaki da matsomi zuwa ga wasu aikin fasaha na musammanma. A matsayin mai zane, **kana iya shiryawa don shiga smart contract don samun ɗaukaka** wajibine sai ka biya (e.g tura 5% na farashin duk NFT daka sayar zuwaga dan kwangila). Sannan kuma ko wane lokaci kana iya tabbatar da cewa ka ƙirkiri NFTs saboda ka mallaki [lalitar ajiya](/glossary/#wallet) dake wanzar da kwangilar. Masu siyan na ku cikin sauƙi na iya tabbatar da cewa sun mallaki **sahihancin NFT** daga tarin ku saboda ana haɗe [adireshinsu](/glossary/#address) tare da alama a cikin smart contract. Za su iya amfani da shi a duk faɗin tsarin mahallin Ethereum, suna da tabbaci akan sahihancinsa.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Bincika, siya ko ka kirkira naka NFT zane/tattatarawa...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Faɗaɗa zanen NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Ko kuma ka mayar da hankali kan tikiti game da taron wasannin. Kamar dai a matsayin ka na na **mai shirya taro kana iya zaban yawan tikitin da zai sayar**, mai kirkiran NFT zai iya yanke hukuncin adadin kwafin da suke akwaisu. Wasu lokutan waɗannan sune asalin kwafin, kamar 5000 Amintattun Tikiti na Game Gari. Wasu lokutan dayawa suna buga wainda suka fi kama, amman sunada dan banbanci kaɗan, kamar irin tikitan da aka sama musu wuri. Wa'innan ana iya yi kuma a sayar dasu hannu da hannu ba tareda biyan masu tikitin ba sanna masu siye koda yaushe sunada tabbacin ingacin tikitin ta hanyar duba adreshin kwangilar.
 

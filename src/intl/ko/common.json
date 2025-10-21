@@ -236,7 +236,7 @@
   "nav-contribute-description": "도움이 필요하시면 이 자료가 길잡이가 될 수 있습니다.",
   "nav-contribute-label": "ethereum.org에 기여하기",
   "nav-dao-description": "중앙화된 기관이 없는 회원 소유 커뮤니티",
-  "nav-dapps-description": "이더리움을 사용하여 앱의 풍부한 생태계를 살펴보기",
+  "nav-apps-description": "이더리움을 사용하여 앱의 풍부한 생태계를 살펴보기",
   "nav-defi-description": "기존 금융 시장에 대한 글로벌하고 개방적인 대안",
   "nav-desci-description": "현재 과학 시스템에 대한 글로벌하고 개방적인 대안",
   "nav-desoc-description": "소셜 상호 작용 및 콘텐츠 창작을 위한 블록체인 기반 플랫폼",
@@ -285,7 +285,7 @@
   "nav-history-label": "이더리움의 기술적 역사",
   "nav-learn-by-coding-description": "이더리움을 실험하는 데 도움이 되는 도구",
   "nav-local-env-description": "이더리움 개발 스택을 선택하고 설정하세요.",
-  "nav-mainnet-description": "엔터프라이즈 블록체인 애플리케이션은 공개 이더리움 메인넷에 구축될 수 있습니다.",
+  "nav-enterprise-description": "엔터프라이즈 블록체인 애플리케이션은 공개 이더리움 메인넷에 구축될 수 있습니다.",
   "nav-networks-home-description": "이더리움의 더 저렴하고 빠른 거래",
   "nav-networks-introduction-label": "소개",
   "nav-networks-introduction-description": "여러 네트워크의 네트워크까지 확장된 이더리움",
@@ -455,5 +455,8 @@
   "withdrawals": "스테이킹 인출",
   "wrapped-ether": "래핑된 이더",
   "yes": "네",
-  "zero-knowledge-proofs": "영지식 증명"
+  "zero-knowledge-proofs": "영지식 증명",
+  "ethereum-vs-bitcoin": "이더리움 대 비트코인",
+  "nav-ethereum-vs-bitcoin-description": "이더리움과 비트코인의 차이점 이해하기"
+
 }

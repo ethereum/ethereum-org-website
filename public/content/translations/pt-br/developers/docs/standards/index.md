@@ -17,7 +17,7 @@ Normalmente, os padrões são apresentados como [Propostas de melhorias do Ether
 - [Tabela de discussão de EIP](https://ethereum-magicians.org/c/eips)
 - [Introdução à governança do Ethereum](/governance/)
 - [Visão geral da governança Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de Março de 2019 - Boris Mann_
-- [Coordenação de desenvolvimento do protocolo de governança do Ethereum e atualização da rede](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de Março 23 - Hudson Jameson_
+- [Coordenação de desenvolvimento do protocolo de governança do Ethereum e atualização da rede](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de Março 23 - Hudson Jameson_
 - [Lista de reprodução de todas as reuniões de Ethereum Core Dev](https://www.youtube.com/@EthereumProtocol) _(YouTube Playlist)_
 
 ## Tipos de padrões {#types-of-standards}
@@ -40,7 +40,7 @@ Encontre informações mais detalhadas sobre esses tipos e categorias diferentes
 ### Padrões de token {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Uma interface padrão para tokens fungíveis (intermutáveis), como tokens de votação, tokens de staking ou moedas virtuais.
-  - [ERC-1363:](https://eips.ethereum.org/EIPS/eip-1363)define uma interface de token para tokens ERC-20 que suportam a execução do código destinatário após a transferência (ou transferFrom), ou o código do gastador após a aprovação
+  - [ERC-1363:](/developers/docs/standards/tokens/erc-1363/)define uma interface de token para tokens ERC-20 que suportam a execução do código destinatário após a transferência (ou transferFrom), ou o código do gastador após a aprovação
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Uma interface padrão para tokens não fungíveis, como uma ação para obra de arte ou uma música.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309): um evento padronizado emitido ao criar/transferir um ou muitos tokens não-fungíveis usando identificadores de token consecutivos.
   - [ERC-4400:](https://eips.ethereum.org/EIPS/eip-4400)extensão da interface para o papel do consumidor EIP-721

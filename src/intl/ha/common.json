@@ -227,7 +227,7 @@
   "nav-contribute-description": "Idan kuna so ku taimaka, wannan zai taimake ku",
   "nav-contribute-label": "Gudummawa ga ethereum.org",
   "nav-dao-description": "Membobin Al'ummomi ba tare da ikon tsakiya ba",
-  "nav-dapps-description": "Bincika wadataccen yanayin manhajojin da suke amfani da Ethereum",
+  "nav-apps-description": "Bincika wadataccen yanayin manhajojin da suke amfani da Ethereum",
   "nav-defi-description": "Yanayin da zai chanja kasuwar hada hadar kudade a duk fadin duniya",
   "nav-desci-description": "Yanayin da zai kawo chanji ga tsarin kimiyya na yanzu a fadin duniya",
   "nav-desoc-description": "Dandalin da akayi su akan blockchain don hulɗar zamantakewa da kirkirar abubuwa",
@@ -275,7 +275,7 @@
   "nav-layer-2-description": "Mafi sauki kuma mafi arha cinikayyar Ethereum",
   "nav-learn-by-coding-description": "Ababen da za su taimaka wajen gwada Ethereum",
   "nav-local-env-description": "Zaɓi da kuma saita tsarin gina Ethereum",
-  "nav-mainnet-description": "Ana iya gina aikace-aikacen blockchain na yan kasuwa akan budaddiyar Mainnet din Ethereum",
+  "nav-enterprise-description": "Ana iya gina aikace-aikacen blockchain na yan kasuwa akan budaddiyar Mainnet din Ethereum",
   "nav-nft-description": "Hanyar da za'a iya wakiltar abu na musamman akan kadarar tushe ta Ethereum",
   "nav-open-research-description": "Ɗaya daga cikin mahimman ƙarfin Ethereum shine al'ummar ta mai tsananin bincike",
   "nav-open-research-label": "Buɗe bincike",
@@ -430,5 +430,8 @@
   "withdrawals": "Cire Ajiya",
   "wrapped-ether": "Nade Ether",
   "yes": "Eh",
-  "zero-knowledge-proofs": "Hujjojin ilimin sifili"
+  "zero-knowledge-proofs": "Hujjojin ilimin sifili",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Fahimci bambance-bambance tsakanin Ethereum da Bitcoin"
+
 }

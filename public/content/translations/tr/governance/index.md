@@ -44,7 +44,7 @@ _Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi 
 
 - **Ether sahipleri**: Bu kişilerin elinde keyfi miktarda ETH bulunur. [ETH hakkında daha fazla bilgi](/eth/).
 - **Uygulama Kullanıcıları**: Bu kişiler, Ethereum blok zincirindeki uygulamalarla etkileşime girer.
-- **Uygulama/Araç Geliştiricileri**: Bu kişiler Ethereum blok zincirinde çalışan uygulamalar yazarlar (örneğin DeFi, NFT'ler vb.) veya Ethereum ile etkileşime giren araçlar oluştururlar (örneğin cüzdanlar, test paketleri vb.). [Dapp'ler hakkında daha fazla bilgi](/dapps/).
+- **Uygulama/Araç Geliştiricileri**: Bu kişiler Ethereum blok zincirinde çalışan uygulamalar yazarlar (örneğin DeFi, NFT'ler vb.) veya Ethereum ile etkileşime giren araçlar oluştururlar (örneğin cüzdanlar, test paketleri vb.). [Dapp'ler hakkında daha fazla bilgi](/apps/).
 - **Düğüm Operatörleri**: Bu kişiler, blokları ve işlemleri yayan, karşılaştıkları geçersiz işlemleri veya blokları reddeden düğümleri çalıştırır. [Düğümler hakkında daha fazla bilgi](/developers/docs/nodes-and-clients/).
 - **EIP Yazarları**: Bu kişiler, Ethereum İyileştirme Önerileri (EIP'ler) aracılığıyla Ethereum protokolüne değişiklikler yapmayı teklif ederler. [EIP'ler hakkında daha fazla bilgi](/eips/).
 - **Doğrulayıcılar**: Bu kişiler, Ethereum blok zincirine yeni bloklar ekleyebilen düğümler çalıştırırlar.
@@ -152,7 +152,7 @@ Ethereum yönetişim süreci, genellikle açıklık ve kapsayıcılık için hı
 
 Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yukarıda açıklanan güncellemeleri önermek için kullanılan resmi süreçler kullanılmadı. Bu, değişikliklerin araştırmacılar ve uygulayıcılar tarafından daha hızlı belirlenmesine ve üzerinde anlaşmaya varılmasına izin verdi.
 
-İşaret Zinciri 15 Eylül 2022'de Ethereum yürütüm katmanı ile birleştiğinde Birleşim [Paris ağ yükseltmesinin](/history/#paris) bir parçası olarak tamamlanmıştı. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) önerisi 'Son Çağrı' yerine 'Final' olmuştu ve hisse ispatına geçiş tamamlanmıştı.
+İşaret Zinciri 15 Eylül 2022'de Ethereum yürütüm katmanı ile birleştiğinde Birleşim [Paris ağ yükseltmesinin](/ethereum-forks/#paris) bir parçası olarak tamamlanmıştı. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) önerisi 'Son Çağrı' yerine 'Final' olmuştu ve hisse ispatına geçiş tamamlanmıştı.
 
 <ButtonLink href="/roadmap/merge/">
   Birleştirme hakkında ek bilgi

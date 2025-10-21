@@ -65,12 +65,15 @@ Le Web3 vous donne la propriété de vos actifs numériques de façon inégalée
 
 Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glossary/#nft). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink href="/nft/">
     Plus d'infos sur les NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Résistance à la censure {#censorship-resistance}
 
@@ -90,12 +93,15 @@ Les DAO sont définies techniquement comme des [contrats intelligents](/glossary
 
 Le fait est toutefois que les gens définissent de nombreuses communautés Web3 comme étant des DAO. Ces communautés ont toutes des niveaux différents de décentralisation et d'automatisation par code. Actuellement, nous explorons ce que sont les DAO et comment elles pourraient évoluer à l'avenir.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>En savoir plus sur les DAO</div>
   <ButtonLink href="/dao/">
     En savoir plus sur les DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identité {#identity}
 
@@ -143,7 +149,7 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 - [Obtenir un portefeuille](/wallets/)
 - [Trouver une communauté](/community/)
-- [Explorer des applications Web3](/dapps/)
+- [Explorer des applications Web3](/apps/)
 - [Rejoindre une DAO](/dao/)
 - [Construire sur le Web3](/developers/)
 

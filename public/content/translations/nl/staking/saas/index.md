@@ -86,7 +86,7 @@ Door een SaaS-provider te gebruiken, vertrouwt u de werking van uw node toe aan 
 
 Na voltooiing van het shashing-/afsluitproces worden deze fondsen overgemaakt naar het opnameadres dat aan de validator is toegewezen. Hiervoor moet een opnameadres worden opgegeven. Het kan zijn dat dit al is verstrekt bij de initiële storting. Zo niet, dan moeten de validatorsleutels worden gebruikt om een bericht te ondertekenen waarin een opnameadres wordt aangegeven. Als er geen opnameadres wordt opgegeven, blijven fondsen geblokkeerd totdat er een adres is opgegeven.
 
-Neem contact op met de individuele SaaS-provider voor meer informatie over eventuele garanties of verzekeringsopties en voor instructies over het opgeven van een opnameadres. Als u liever de volledige controle over uw validatorinstallatie heeft, <a href="/staking/solo/">leer dan meer over hoe u uw ETH solo kunt staken</a>.
+Neem contact op met de individuele SaaS-provider voor meer informatie over eventuele garanties of verzekeringsopties en voor instructies over het opgeven van een opnameadres. Als u liever de volledige controle over uw validatorinstallatie heeft, [leer dan meer over hoe u uw ETH solo kunt staken](/staking/solo/).
 </ExpandableCard>
 
 ## Verder lezen {#further-reading}

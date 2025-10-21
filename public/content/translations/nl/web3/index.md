@@ -67,12 +67,15 @@ Web3 geeft je op ongekende manier eigendom van je digitale activa. Bijvoorbeeld,
 
 Web3 staat directe eigendom toe via [niet-fungibele tokens (NFT's)](/glossary/#nft). Niemand, zelfs niet de makers van het spel, heeft de macht om je je eigendom af te nemen. En als je stopt met spelen, kun je je in-game items verkopen of verhandelen op open markten en hun waarde terugverdienen.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Lees meer over NFT's</div>
   <ButtonLink href="/nft/">
     Meer over NFT's
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Censuurbestendig {#censorship-resistance}
 
@@ -94,12 +97,15 @@ DAO's worden technisch gedefinieerd als overeengekomen [slimme contracten](/glos
 
 Veel Web3-gemeenschappen worden echter gedefinieerd als DAO's. Deze gemeenschappen hebben allemaal verschillende niveaus van decentralisatie en automatisering per code. Momenteel onderzoeken we wat DAO's zijn en hoe ze in de toekomst kunnen evolueren.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Leer meer over DAO's</div>
   <ButtonLink href="/dao/">
     Meer over DAO's
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identiteit {#identity}
 
@@ -161,7 +167,7 @@ We staan nog maar aan het begin van een beter Web met Web3, maar naarmate we de 
 
 - [Krijg een wallet](/wallets/)
 - [Vind een community](/community/)
-- [Verken Web3-applicaties](/dapps/)
+- [Verken Web3-applicaties](/apps/)
 - [Doe mee aan een DAO](/dao/)
 - [Bouw op Web3](/developers/)
 

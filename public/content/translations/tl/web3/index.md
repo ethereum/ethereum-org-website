@@ -61,12 +61,15 @@ Ibinibigay ng Web3 sa iyo ang pagmamay-ari ng ng iyong mga digital asset sa kaka
 
 Pinapayagan ng Web3 ang pagmamay-ari sa pamamagitan ng [mga non-fungible token (NFT)](/glossary/#nft). Walang sinuman, kahit ang mga game creator, ang may kapangyarihang bawiin ang iyong pagmamay-ari. At, kung hihinto ka sa paglalaro, maaari mong ibenta o i-trade ang iyong mga in-game item sa mga open market at mabawi ang iyong ipinuhunan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Magbasa pa tungkol sa NFT</div>
   <ButtonLink href="/nft/">
     Iba pang detalye tungkol sa NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Paglaban sa censorship {#censorship-resistance}
 
@@ -86,12 +89,15 @@ Ang DAO ay teknikal na tinutukoy bilang mga napagkasunduang [mga smart contract]
 
 Gayunpaman, tinukoy ng mga tao ang maraming komunidad sa Web3 bilang mga DAO. May iba't ibang antas ng decentralization at pag-awtomatiko ayon sa code ang mga komunidad na ito. Kasalukuyan naming sinisuri kung ano ang DAO at kung paano maaaring magbago ang mga ito sa hinaharap.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     Iba pang detalye tungkol sa mga DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identity {#identity}
 
@@ -139,7 +145,7 @@ Nasa simula pa lang tayo ng paggawa ng mas magandang Web sa tulong ng Web3, pero
 
 - [Kumuha ng wallet](/wallets/)
 - [Maghanap ng komunidad](/community/)
-- [Siyasatin ang mga Web3 application](/dapps/)
+- [Siyasatin ang mga Web3 application](/apps/)
 - [Join a DAO](/dao/)
 - [Gumawa sa Web3](/developers/)
 

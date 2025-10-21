@@ -12,7 +12,7 @@ lang: el
 
 ## Προαπαιτούμενα {#prerequisites}
 
-Βεβαιωθείτε ότι είστε εξοικειωμένοι με τις [συναλλαγές](/developers/docs/transactions/), τα [μπλοκ](/developers/docs/blocks/), την [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos) και το [gas](/developers/docs/gas/). Η εξοικείωση με τις [dapps](/dapps/) και [DeFi](/defi/) είναι επίσης χρήσιμη.
+Βεβαιωθείτε ότι είστε εξοικειωμένοι με τις [συναλλαγές](/developers/docs/transactions/), τα [μπλοκ](/developers/docs/blocks/), την [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos) και το [gas](/developers/docs/gas/). Η εξοικείωση με τις [dapps](/apps/) και [DeFi](/defi/) είναι επίσης χρήσιμη.
 
 ## Εξαγωγή MEV {#mev-extraction}
 
@@ -204,7 +204,6 @@ lang: el
 
 - [Έγγραφα Flashbots](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) - _Πίνακας εργαλείων και live εξερευνητής συναλλαγών για συναλλαγές MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Παρακολούθηση με στατιστικά σε πραγματικό χρόνο για relays MEV-Boost και κατασκευαστές μπλοκ_
 
 ## Περισσότερες πληροφορίες {#further-reading}

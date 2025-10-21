@@ -14,7 +14,6 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
@@ -93,7 +92,6 @@ export const docsComponents = {
   Divider,
   Emoji,
   GlossaryTooltip,
-  InfoBanner,
   YouTube,
 } as MDXRemoteProps["components"]
 
@@ -144,9 +142,9 @@ export const DocsLayout = ({
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
-            isMobile
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
+            isMobile
           />
           <div className="prose prose-lg max-w-none break-words">
             {children}

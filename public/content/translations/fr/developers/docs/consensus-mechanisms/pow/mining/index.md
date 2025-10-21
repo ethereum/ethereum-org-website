@@ -4,9 +4,14 @@ description: Une explication de la façon dont le minage fonctionnait sur Ethere
 lang: fr
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 La preuve de travail n'est plus le mécanisme de consensus d'Ethereum, ce qui implique que le minage a été désactivé. À la place, Ethereum est sécurisé par les validateurs qui misent de l'ETH. Vous pouvez commencer à miser votre ETH aujourd'hui. En savoir plus sur <a href='/roadmap/merge/'>La Fusion</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la preuve d'enjeu</a> et <a href='/staking/'>la mise en jeu</a>. Cette page n'a qu'un intérêt historique.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Prérequis {#prerequisites}
 

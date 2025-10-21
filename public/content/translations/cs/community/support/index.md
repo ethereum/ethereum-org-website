@@ -20,7 +20,7 @@ Pochopení decentralizované povahy Etherea je zásadní, protože **každý, kd
   Osvojte si základy Etherea
 </DocLink>
 
-Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu ethereum.org](/discord/) a my se vám pokusíme pomoci.
+Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu ethereum.org](https://discord.gg/ethereum-org) a my se vám pokusíme pomoci.
 
 ## Často kladené dotazy {#faq}
 
@@ -57,7 +57,6 @@ Vývoj může být obtížný. Zde najdete několik zdrojů zaměřených na vý
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 

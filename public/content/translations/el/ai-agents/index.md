@@ -60,11 +60,15 @@ buttons:
 Πράκτορες όπως η Luna ή το AIXBT ελέγχουν το δικό τους onchain πορτοφόλι ([το πορτοφόλι του AIXBT](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43), [το πορτοφόλι της Luna](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) επιτρέποντας τους να δίνουν φιλοδωρήματα σε θαυμαστές και να συμμετέχουν σε οικονομικές δραστηριότητες.
 
 Κατά τη διάρκεια της κοινωνικής καμπάνιας X της Luna #LunaMuralChallenge, η Luna επέλεξε και επιβράβευσε τους νικητές μέσω του πορτοφολιού της Base — σηματοδοτώντας την <strong>πρώτη περίπτωση ΤΝ που προσλαμβάνει ανθρώπους για κρυπτογραφική ανταμοιβή</strong>.
-
-<InfoBanner isWarning emoji="💡">
+<Alert variant="warning">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertDescription>
 <p className="mt-0"><strong>Καλό να γνωρίζετε</strong></p>
 <p className="mt-2">Οι πράκτορες ΤΝ και τα σχετικά εργαλεία βρίσκονται ακόμη σε αρχικό στάδιο ανάπτυξης και είναι πολύ πειραματικά—χρησιμοποιήστε τα με προσοχή.</p>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Ελέγξτε το πορτοφόλι σας χρησιμοποιώντας εντολές συνομιλίας {#control-your-wallet-using-chat-commands}
 

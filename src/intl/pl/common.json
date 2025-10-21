@@ -231,7 +231,7 @@
   "nav-contribute-description": "Jeśli chcesz pomóc, to Cię poprowadzi",
   "nav-contribute-label": "Przyczynianie się do rozwoju ethereum.org",
   "nav-dao-description": "Należące do członków społeczności bez scentralizowanej władzy",
-  "nav-dapps-description": "Poznaj bogaty ekosystem aplikacji korzystających z Ethereum",
+  "nav-apps-description": "Poznaj bogaty ekosystem aplikacji korzystających z Ethereum",
   "nav-defi-description": "Globalna, otwarta alternatywa dla tradycyjnego rynku finansowego",
   "nav-desci-description": "Globalna, otwarta alternatywa dla obecnego systemu naukowego",
   "nav-desoc-description": "Oparte na łańcuchu bloków platformy umożliwiające interakcje społeczne oraz tworzenie treści",
@@ -280,7 +280,7 @@
   "nav-history-label": "Historia techniczna Ethereum",
   "nav-learn-by-coding-description": "Narzędzia, które pomogą Ci eksperymentować z Ethereum",
   "nav-local-env-description": "Wybierz i skonfiguruj swój stos programistyczny Ethereum",
-  "nav-mainnet-description": "Aplikacje blockchain dla przedsiębiorstw można tworzyć w publicznej sieci głównej Ethereum",
+  "nav-enterprise-description": "Aplikacje blockchain dla przedsiębiorstw można tworzyć w publicznej sieci głównej Ethereum",
   "nav-networks-home-description": "Tańsze i szybsze transakcje w Ethereum",
   "nav-networks-introduction-label": "Wprowadzenie",
   "nav-networks-introduction-description": "Ethereum rozszerzyło się do sieci sieci",
@@ -449,5 +449,8 @@
   "withdrawals": "Wypłaty ze stakingu",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Tak",
-  "zero-knowledge-proofs": "Dowody wiedzy zerowej"
+  "zero-knowledge-proofs": "Dowody wiedzy zerowej",
+  "ethereum-vs-bitcoin": "Ethereum a Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Zrozum różnice pomiędzy Ethereum i Bitcoinem"
+
 }

@@ -44,7 +44,7 @@ Ci sono diversi stakeholder nella [ community Ethereum](/community/), ognuno dei
 
 - **Detentori di Ether**: persone che detengono una quantità arbitraria di ETH. [Maggiori informazioni su ETH](/eth/).
 - **Utenti delle applicazioni**: queste persone interagiscono con le applicazioni sulla blockchain Ethereum.
-- **Sviluppatori di applicazioni/strumenti**: queste persone scrivono applicazioni che vengono eseguite sulla blockchain Ethereum (ad esempio DeFi, NFT, ecc.) o sviluppano strumenti per interagire con Ethereum (ad esempio wallet, suite di test, ecc.). [Di più sulle dapp](/dapps/).
+- **Sviluppatori di applicazioni/strumenti**: queste persone scrivono applicazioni che vengono eseguite sulla blockchain Ethereum (ad esempio DeFi, NFT, ecc.) o sviluppano strumenti per interagire con Ethereum (ad esempio wallet, suite di test, ecc.). [Di più sulle dapp](/apps/).
 - **Gestori di nodi**: queste persone eseguono nodi che propagano blocchi e transazioni, rifiutando eventuali transazioni o blocchi invalidi che intercettano. [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/).
 - **Autori EIP**: queste persone propongono modifiche al protocollo Ethereum, sotto forma di Ethereum Improvement Proposal (EIP). [Maggiori informazioni sulle EIP](/eips/).
 - **Validatori**: queste persone eseguono nodi che possono aggiungere nuovi blocchi alla blockchain Ethereum.
@@ -152,7 +152,7 @@ Il processo di governance di Ethereum spesso rinuncia a velocità ed efficienza 
 
 Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open source, non sono stati invece utilizzati i processi formali descritti sopra per proporre gli aggiornamenti. Questo ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
 
-Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 settembre 2022, la Fusione si è completata come parte dell'[aggiornamento di rete di Parigi](/history/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
+Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 settembre 2022, la Fusione si è completata come parte dell'[aggiornamento di rete di Parigi](/ethereum-forks/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   Maggiori informazioni sulla fusione

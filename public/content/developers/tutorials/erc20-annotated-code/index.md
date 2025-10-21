@@ -22,7 +22,7 @@ This is annotated source code. If you want to implement ERC-20,
 ## The Interface {#the-interface}
 
 The purpose of a standard like ERC-20 is to allow many tokens implementations that are interoperable across applications, like wallets and decentralized exchanges. To achieve that, we create an
-[interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to use the token contract
+[interface](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Any code that needs to use the token contract
 can use the same definitions in the interface and be compatible with all token contracts that use it, whether it is a wallet such as
 MetaMask, a dapp such as etherscan.io, or a different contract such as liquidity pool.
 
@@ -90,7 +90,7 @@ every node in the blockchain run it. This kind of function does not generate a t
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
 more valuable than it actually is. However, that fear ignores the true nature of the blockchain. Everything that happens on the blockchain can be verified by
 every node. To achieve this, every contract's machine language code and storage is available on every node. While you are not required to publish the Solidity
-code for your contract, nobody would take you seriously unless you publish the source code and the version of Solidity with which it was complied, so it can
+code for your contract, nobody would take you seriously unless you publish the source code and the version of Solidity with which it was compiled, so it can
 be verified against the machine language code you provided.
 For example, see [this contract](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
@@ -354,7 +354,7 @@ As the name suggests, this variable keeps track of the total supply of tokens.
 These three variables are used to improve readability. The first two are self-explanatory, but `_decimals`
 isn't.
 
-On one hand, ethereum does not have floating point or fractional variables. On the other hand,
+On one hand, Ethereum does not have floating point or fractional variables. On the other hand,
 humans like being able to divide tokens. One reason people settled on gold for currency was that
 it was hard to make change when somebody wanted to buy a duck's worth of cow.
 
@@ -601,7 +601,7 @@ in the transaction pool he sends a transaction that spends Alice's five tokens a
 higher gas price so it will be mined faster. That way Bill can spend first five tokens and then,
 once Alice's new allowance is mined, spend ten more for a total price of fifteen tokens, more than
 Alice meant to authorize. This technique is called
-[front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+[front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice Transaction | Alice Nonce | Bill Transaction              | Bill Nonce | Bill's Allowance | Bill Total Income from Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
@@ -927,3 +927,5 @@ For review, here are some of the most important ideas in this contract (in my op
 
 Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is
 made more secure, go and write your own secure contracts and applications.
+
+[See here for more of my work](https://cryptodocguy.pro/).

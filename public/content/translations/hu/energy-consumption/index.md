@@ -61,14 +61,19 @@ Miközben az Ethereum energiafogyasztása nagyon alacsony, egy jelentős, fejlő
 
 A web3 közjó-finanszírozási platformjai, mint a [Gitcoin](https://gitcoin.co) klímaköröket működtetnek, hogy elősegítsék az Ethereum alkalmazási rétegének környezettudatos építését. Ezen kezdeményezések (és mások, mint a [decentralizált tudomány / DeSci](/desci/)) kialakulása által az Ethereum egy környezeti és közösségi szempontból pozitív technológia.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Ha szeretne az oldallal kapcsolatban fejlesztést javasolni, akkor naplózzon egy kérést (issue) vagy PR-t. A statisztikák nyilvánosan elérhető adatokból készült becslések, nem hivatalos állítások vagy ígéretek az ethereum.org csapat vagy az Ethereum Alapítvány részéről.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## További olvasnivaló {#further-reading}
 
 - [Cambridge-blokklánchálózat fenntarthatósági indexe](https://ccaf.io/cbnsi/ethereum)
-- [Fehérházi jelentése a proof-of-work alapú blokkláncokról](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Fehérházi jelentése a proof-of-work alapú blokkláncokról](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum-kibocsátás: egy alulról építkező becslés](https://kylemcdonald.github.io/ethereum-emissions/) – _Kyle McDonald_
 - [Ethereum energiafelhasználási index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) – _[@InsideTheSim](https://twitter.com/InsideTheSim)_

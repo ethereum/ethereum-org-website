@@ -17,7 +17,7 @@ summaryPoint4: Sloučení snížilo spotřebu energie potřebné k provozu Ether
 
 ## Co bylo Sloučení? {#what-is-the-merge}
 
-Sloučení představovalo spojení původní exekuční vrstvy Etherea (hlavní síť, která existovala od [genesis](/history/#frontier)) s novou konsensuální vrstvou založenou na důkazu podílem, Řetězovou vazbou. To eliminovalo potřebu energeticky náročného těžení a místo toho umožnilo zabezpečení sítě pomocí uzamčeného ETH. Byl to opravdu zajímavý krok k naplnění vize Etherea — větší škálovatelnost, bezpečnost a udržitelnost.
+Sloučení představovalo spojení původní exekuční vrstvy Etherea (hlavní síť, která existovala od [genesis](/ethereum-forks/#frontier)) s novou konsensuální vrstvou založenou na důkazu podílem, Řetězovou vazbou. To eliminovalo potřebu energeticky náročného těžení a místo toho umožnilo zabezpečení sítě pomocí uzamčeného ETH. Byl to opravdu zajímavý krok k naplnění vize Etherea — větší škálovatelnost, bezpečnost a udržitelnost.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Sloučení představovalo oficiální přechod na používání Řetězové vazb
 
 Historie nebyla během Sloučení vymazána. Jak se hlavní síť sloučila s Řetězovou vazbou, sloučila se také celá transakční historie Etherea.
 
-<InfoBanner>
-Tento přechod na důkaz podílem změnil způsob, jakým je ether vydáván. Přečtěte si další informace na téma <a href="/roadmap/merge/issuance/">vydávání etheru před Sloučením a po něm</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Tento přechod na důkaz podílem změnil způsob, jakým je ether vydáván. Přečtěte si další informace na téma [vydávání etheru před Sloučením a po něm](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Uživatelé a držitelé {#users-holders}
 
@@ -130,7 +134,7 @@ Spuštění uzlu, který nenavrhuje bloky, je možné pro každého pod konsensu
 
 Schopnost každého spustit svůj vlastní uzel je <em>naprostým základem</em> pro udržení decentralizace sítě Ethereum.
 
-<a href="/run-a-node/">Další informace o provozování vlastního uzlu</a>
+[Další informace o provozování vlastního uzlu](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Transakční poplatky jsou výsledkem poptávky na síti v poměru k její kapacitě. Sloučení zrušilo používání důkazu prací, došlo k přechodu na důkaz podílem z důvodu konsensu, ale nezměnilo významně žádné parametry, které přímo ovlivňují kapacitu nebo propustnost sítě.
 
-S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plánem orientovaným na rollupy</a> se úsilí zaměřuje na škálování uživatelské aktivity na <a href="/layer-2/">druhé vrstvě</a>, zatímco první vrstva hlavní síť funguje jako bezpečná decentralizovaná vypořádací vrstva optimalizovaná pro ukládání dat rollupů, což vede k exponenciálnímu snížení nákladů na transakce na rollupech. Přechod na důkaz podílem je klíčovým předpokladem pro realizaci tohoto cíle. <a href="/developers/docs/gas/">Další informace o palivu a poplatcích.</a>
+S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plánem orientovaným na rollupy</a> se úsilí zaměřuje na škálování uživatelské aktivity na [druhé vrstvě](/layer-2/), zatímco první vrstva hlavní síť funguje jako bezpečná decentralizovaná vypořádací vrstva optimalizovaná pro ukládání dat rollupů, což vede k exponenciálnímu snížení nákladů na transakce na rollupech. Přechod na důkaz podílem je klíčovým předpokladem pro realizaci tohoto cíle. [Další informace o palivu a poplatcích.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Bezprostředně po Sloučení mohli uzamykatelé přistupovat pouze k odměnám 
 
 Po vylepšení sítě Shanghai/Capella mohou nyní uzamykatelé určit <em>adresu pro výběr</em>, kde mohou začít přijímat automatické výplaty jakéhokoliv přebytku zůstatku uzamčení (množství větší než je 32 ETH z protokolových odměn). Toto vylepšení také umožnilo validátorovi odemknout a získat celý svůj zůstatek po vystoupení ze sítě.
 
-<a href="/staking/withdrawals/">Další informace o výběrech prostředků z uzamčení</a>
+[Další informace o výběrech prostředků z uzamčení](/staking/withdrawals/)
 
 </ExpandableCard>
 
