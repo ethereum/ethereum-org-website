@@ -86,36 +86,31 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 - BAT tokens exist independently on the Ethereum blockchain, allowing users to transfer them to personal wallets or exchanges once earned.
 
-
 ### Audius Music Platform {#audius}
 
 - **[Audius](https://audius.co/)** is a music streaming platform that uses Ethereum blockchain technology to connect artists directly with fans.
 
-- The platform features a hybrid decentralized architecture where content is stored on IPFS while utilizing blockchain for ownership rights and the **[AUDIO token](https://etherscan.io/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**.
+- The platform features a hybrid decentralized architecture where content is stored on IPFS while utilizing blockchain for ownership rights and the **[AUDIO token](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**.
 
 - Audius has established a **[partnership with TikTok](https://audius.co/tiktok)**, bringing Web3 functionality to mainstream audiences and allowing artists to monetize their content through blockchain technology.
 
 - The platform's technical details are available in their **[whitepaper](https://whitepaper.audius.co/)**, showing how they've built upon Ethereum's infrastructure.
 
-
 ### Sorare Fantasy Sports {#sorare}
 
 - **[Sorare](https://sorare.com/)** is a **[fantasy sports platform built on Ethereum](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)** that allows users to collect, trade, and play with official NFT player cards.
 
-- Player cards are verifiable NFTs on the Ethereum blockchain, and the platform's smart contracts can be viewed on **[Etherscan](https://etherscan.io/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205)**.
+- Player cards are verifiable NFTs on the Ethereum blockchain, and the platform's smart contracts can be viewed on **[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)**.
 
 - Sorare combines traditional fantasy sports gameplay with blockchain ownership of digital assets, bringing **[Ethereum to fund](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** functionality to mainstream sports fans.
 
-
-### Twitter/X (Crypto Tipping)  {#twitter}
+### Twitter/X (Crypto Tipping) {#twitter}
 
 **[Twitter](x.com)** (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
 
 - **Crypto Tipping**: The platform has integrated **[Ethereum tipping](https://help.x.com/en/using-x/tips)**, enabling users to send payments via Ethereum-based wallets like Strike.
 
-
 By integrating blockchain features, X is bridging the gap between Web2 social experiences and decentralized digital ownership.
-
 
 ## Further reading {#further-reading}
 
