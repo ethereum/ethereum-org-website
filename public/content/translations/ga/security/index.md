@@ -136,7 +136,7 @@ Sa tréimhse roimh [an gCumasc](/roadmap/merge/), bhain caimiléirí leas as an 
 
 Féadfaidh caimiléirí iad féin a chur in aithne duit mar phearsanra "tacaíochta", ag insint duit má thaisceann tú do ETH, gheobhaidh tú 'ETH2' ar ais. Níl aon [tacaíocht oifigiúil Ethereum ann](/community/support/), agus níl aon chomhartha nua ann. Ná roinn frása síolta do sparán le haon duine.
 
-_Nóta: Tá comharthaí díorthacha/tickers ann a d'fhéadfadh ionadaíocht a dhéanamh ar ETH geallta (ie. rETH ó Rocket Pool, stETH ó Lido, ETH2 ó Coinbase), ach ní gá iad seo a "aistriú chucu."_
+_Nóta: Tá comharthaí díorthacha/tickers ann a d'fhéadfadh ionadaíocht a dhéanamh ar ETH geallta (i.e., rETH ó Rocket Pool, stETH ó Lido, ETH2 ó Coinbase), ach ní gá iad seo a "aistriú chucu."_
 
 ### Camscéimeanna fioscaireachta {#phishing-scams}
 
