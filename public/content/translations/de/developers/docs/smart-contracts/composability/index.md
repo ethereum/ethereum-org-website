@@ -29,7 +29,7 @@ Ethereum-Smart-Contracts sind wie öffentliche APIs, d. h. jeder kann mit dem Ve
 
 ### Kürzere Entwicklungszyklen {#shorter-development-cycle}
 
-Die Zusammensetzbarkeit reduziert die Arbeit, die Entwickler bei der Erstellung von [DApps](/dapps/#what-are-dapps) leisten müssen. [Wie Naval Ravikant es ausdrückt:](https://twitter.com/naval/status/1444366754650656770) „Open Source bedeutet, dass jedes Problem nur einmal gelöst werden muss.“
+Die Zusammensetzbarkeit reduziert die Arbeit, die Entwickler bei der Erstellung von [DApps](/apps/#what-are-dapps) leisten müssen. [Wie Naval Ravikant es ausdrückt:](https://twitter.com/naval/status/1444366754650656770) „Open Source bedeutet, dass jedes Problem nur einmal gelöst werden muss.“
 
 Wenn es einen Smart Contract gibt, der ein Problem löst, können andere Entwickler ihn wiederverwenden, damit sie nicht das gleiche Problem lösen müssen. Auf diese Weise können Entwickler bestehenden Softwarebibliotheken zusätzliche Funktionen hinzufügen, um neue DApps zu erstellen.
 

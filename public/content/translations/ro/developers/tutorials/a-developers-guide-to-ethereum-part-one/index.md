@@ -140,7 +140,7 @@ Un model similar este utilizat la gestionarea tranzacțiilor în <b>ether</b>. N
 
 </FeaturedText>
 
-Încercați să convertiți câteva valori în și din wei. Rețineți că [există și alte denumiri pentru numeroasele denominații](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) între ether și wei. Una din cele mai cunoscute dintre ele este **gwei**, deoarece este adesea modalitatea de reprezentare a taxelor de tranzacție.
+Încercați să convertiți câteva valori în și din wei. Rețineți că [există și alte denumiri pentru numeroasele denominații](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) între ether și wei. Una din cele mai cunoscute dintre ele este **gwei**, deoarece este adesea modalitatea de reprezentare a taxelor de tranzacție.
 
 ```python
 In [2]: Web3.toWei(1, 'ether')

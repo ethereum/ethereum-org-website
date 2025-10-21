@@ -156,19 +156,6 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Bezahlung pro Stunde
     - Direkter Support rund um die Uhr
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Dokumente](https://docs.figment.io/)
-  - Eigenschaften
-    - Kostenlose Stufe mit 3.000.000 Anfragen pro Monat
-    - RPC- und WSS-Endpunkte
-    - Dedizierte Voll- und Archiv-Nodes
-    - Automatische Skalierung (Volumenrabatte)
-    - Kostenlose Archivdaten
-    - Service-Analysen
-    - Dashboard
-    - Direkter Support rund um die Uhr
-    - In Kryptowährung bezahlen (Unternehmen)
-
 - [**DRPC**](https://drpc.org/)
   - [Dokumentation](https://docs.drpc.org/)
   - Eigenschaften
@@ -264,7 +251,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Direkter, technischer Support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Dokumente](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Dokumente](https://docs.nodereal.io/docs/introduction)
   - Eigenschaften
     - Zuverlässige, schnelle und skalierbare RPC-API-Services
     - Verbesserte API für Web3-Entwickler

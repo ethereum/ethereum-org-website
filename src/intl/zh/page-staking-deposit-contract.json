@@ -8,7 +8,7 @@
   "page-staking-deposit-contract-confirm-address": "确认显示地址",
   "page-staking-deposit-contract-copied": "地址已复制",
   "page-staking-deposit-contract-copy": "复制地址",
-  "page-staking-deposit-contract-etherscan": "在 Etherscan 上查看合约",
+  "page-staking-deposit-contract-blockexplorer": "在 Etherscan 上查看合约",
   "page-staking-deposit-contract-h2": "你不应该在这里进行质押",
   "page-staking-deposit-contract-launchpad": "使用启动板进行质押",
   "page-staking-deposit-contract-launchpad-2": "使用启动板",

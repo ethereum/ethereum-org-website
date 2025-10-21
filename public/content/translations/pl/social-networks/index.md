@@ -23,7 +23,7 @@ Wiele zdecentralizowanych serwisów społecznościowych funkcjonuje jako alterna
 
 ### Jak działają zdecentralizowane serwisy społecznościowe? {#decentralized-social-networks-overview}
 
-Zdecentralizowane serwisy społecznościowe reprezentują klasę [aplikacji zdecentralizowanych (d-aplikacji)](/dapps/), czyli aplikacji opartych na [inteligentnych kontraktach](/glossary/#smart-contract) wdrożonych w łańcuchu bloków. Kod kontraktu służy jako zaplecze (backend) tych aplikacji i określa ich logikę biznesową.
+Zdecentralizowane serwisy społecznościowe reprezentują klasę [aplikacji zdecentralizowanych (d-aplikacji)](/apps/), czyli aplikacji opartych na [inteligentnych kontraktach](/glossary/#smart-contract) wdrożonych w łańcuchu bloków. Kod kontraktu służy jako zaplecze (backend) tych aplikacji i określa ich logikę biznesową.
 
 Konwencjonalne serwisy społecznościowe polegają na bazach danych, w których przechowywane są dane użytkowników, kod programu i inne rodzaje informacji. Skutkuje to jednak powstawaniem pojedynczych punktów awarii i wprowadza znaczne ryzyko. Za przykład może posłużyć głośny incydent z października 2021, kiedy to ze względu na [wielogodzinny przestój](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) serwerów Facebooka użytkownicy zostali odcięci od platformy.
 

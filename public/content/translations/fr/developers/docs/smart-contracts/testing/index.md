@@ -207,7 +207,7 @@ Alors que les tests automatisés effectués dans un environnement de développem
 
 Tester votre contrat sur une blockchain locale (également connue sous le nom de [réseau de développement](/developers/docs/development-networks/)) est une alternative recommandée aux tests sur le réseau principal. Une blockchain locale est une copie de la blockchain Ethereum fonctionnant localement sur votre ordinateur qui simule le comportement de la couche d'exécution d'Ethereum. À ce titre, vous pouvez programmer des transactions pour interagir avec un contrat sans encourir de frais généraux importants.
 
-Exécuter des contrats sur une blockchain locale pourrait être utile comme une forme de test d’intégration manuelle. [Les contrats intelligents sont hautement composables](/developers/docs/smart-contracts/composability/), vous permettant de vous intégrer aux protocoles existants, mais vous devrez quand même vous assurer que ces interactions complexes sur la chaîne produisent les bons résultats.
+Exécuter des contrats sur une blockchain locale pourrait être utile comme une forme de test d’intégration manuelle. [Les contrats intelligents sont hautement composables](/developers/docs/smart-contracts/composability/), vous permettant de vous intégrer aux protocoles existants. Vous devrez quand même vous assurer que ces interactions complexes sur la chaîne produisent les bons résultats.
 
 [En savoir plus sur les réseaux de développement.](/developers/docs/development-networks/)
 
@@ -259,7 +259,7 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 
 - **Cadre de test unitaire Brownie** - _Brownie utilise Pytest, un cadre de test riche en fonctionnalités qui vous permet d'écrire de petits tests avec un code minimal, qui s'adapte bien aux grands projets et qui est hautement extensible._
 
-- **[Tests Foundy](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry propose Forge, un cadre de test Ethereum rapide et flexible capable d'exécuter des tests unitaires simples, des contrôles d'optimisation du gaz et du fuzzing de contrats._
+- **[Tests Foundy](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry propose Forge, un cadre de test Ethereum rapide et flexible capable d'exécuter des tests unitaires simples, des contrôles d'optimisation du gaz et du fuzzing de contrats._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework pour tester des contrats intelligents basés sur ethers.js, Mocha et Chai._
 

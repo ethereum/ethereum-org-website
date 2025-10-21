@@ -18,7 +18,7 @@ lang: fa
 - [تماس‌های Core Dev](https://www.youtube.com/@EthereumProtocol) را تماشا کنید و یا در آن شرکت کنید
 - [فهرست نیازمندی‌های برنامه پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - ابزار، اسناد و مناطق زیرساختی که در آن برنامه حمایت از اکوسیستم اتوریوم فعالانه به دنبال کمک به برنامه‌های کمکی است
 - [Web3Bridge](https://www.web3bridge.com/) - برای شناسایی، آموزش و حمایت از صدها توسعه‌دهنده و اعضای انجمن در سراسر آفریقا به جامعه‌ی مشتاق web3 بپیوندید
-- به [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) بپیوندید
+- به [Ethereum Cat Herders Discord](https://discord.gg/Nz6rtfJ8Cu) بپیوندید
 
 ## محققان و دانشگاهیان <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -32,7 +32,7 @@ lang: fa
   - یاد بگیرید که چگونه یک [ویرایشگر EIP](https://eips.ethereum.org/EIPS/eip-5069) شوید
     - حالا می توانید EIPها را مورد بازبینی قرار دهید! [PRهای موجود با تگ`e-review` را مشاهده کنید](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). بازخورد فنی را با کلیک بر `discussion-to` ثبت کنید.
   - در [حاکمیت پیشنهادهای بهبود اتریوم](https://github.com/ethereum-cat-herders/EIPIP) مشارکت کنید
-    - به [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) بپیوندید
+    - به [Ethereum Cat Herders Discord](https://discord.gg/Nz6rtfJ8Cu) بپیوندید
   - [اطلاعات بیشتر درباره EIPها](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - مجموعه‌ای از جایزه‌های تحقیقاتی با ارزش، که در آن می‌توانید تا >100,000 دلار آمریکا کسب کنید
 - [Ethresear.ch](https://ethresear.ch) - انجمن اصلی اتریوم برای تحقیقات، و تأثیرگذارترین انجمن جهان برای اقتصاد رمزنگاری
@@ -112,7 +112,6 @@ lang: fa
 - [Web3 Army](https://web3army.xyz/)
 - [فرصت‌های شغلی Crypto Valley](https://cryptovalley.jobs/)
 - [فرصت‌های شغلی اتریوم](https://startup.jobs/ethereum-jobs)
-- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## پیوستن به DAO {#decentralized-autonomous-organizations-daos}
 
@@ -123,7 +122,6 @@ lang: fa
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *جامعه‌ی هنری*
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *مرکز پرورش DAO*
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*

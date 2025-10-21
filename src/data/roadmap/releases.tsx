@@ -1,43 +1,64 @@
 import { StaticImageData } from "next/image"
 
-import CommunityHeroImage from "@/public/images/heroes/community-hero.png"
-import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
-import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
 
-interface Release {
+type TranslationFunction = (key: string) => string
+
+type DateString =
+  `2${number}${number}${number}-${number}${number}-${number}${number}`
+type YearString = `2${number}${number}${number}`
+
+interface BaseRelease {
   image: StaticImageData
   releaseName: string
-  releaseDate: string
-  content: React.ReactNode
+  content: React.ReactNode | ((t: TranslationFunction) => React.ReactNode)
   href: string
 }
 
-export const releasesData: Release[] = [
+interface ReleaseWithDate extends BaseRelease {
+  releaseDate: DateString
+  plannedReleaseYear?: never
+}
+
+interface ReleaseWithYear extends BaseRelease {
+  releaseDate?: never
+  plannedReleaseYear: YearString
+}
+
+interface ReleaseUnscheduled extends BaseRelease {
+  releaseDate?: never
+  plannedReleaseYear?: never
+}
+
+// Release may have either a releaseDate or a plannedReleaseYear, but not both.
+export type Release = ReleaseWithDate | ReleaseWithYear | ReleaseUnscheduled
+
+export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: DevelopersHubHeroImage,
     releaseName: "Paris (The Merge)",
     releaseDate: "2022-09-15",
     content: (
       <div>
-        <p className="font-bold">Transition to Proof of Stake</p>
+        <p className="font-bold">{t("page-roadmap-paris-pos-title")}</p>
         <ul>
-          <li>Replaced energy-intensive mining with staking-based consensus</li>
-          <li>Reduced Ethereum&apos;s energy consumption by ~99.95%</li>
+          <li>{t("page-roadmap-paris-pos-item-1")}</li>
+          <li>{t("page-roadmap-paris-pos-item-2")}</li>
         </ul>
-        <p className="font-bold">Beacon Chain Integration</p>
+        <p className="font-bold">{t("page-roadmap-paris-beacon-title")}</p>
         <ul>
-          <li>Merged the Beacon Chain with the Ethereum mainnet</li>
-          <li>Enabled the full transition to PoS consensus mechanism</li>
+          <li>{t("page-roadmap-paris-beacon-item-1")}</li>
+          <li>{t("page-roadmap-paris-beacon-item-2")}</li>
         </ul>
-        <p className="font-bold">Difficulty Bomb Removal</p>
+        <p className="font-bold">{t("page-roadmap-paris-difficulty-title")}</p>
         <ul>
-          <li>
-            Removed the difficulty bomb that was increasing mining difficulty
-          </li>
-          <li>Ensured smooth transition to the new consensus mechanism</li>
+          <li>{t("page-roadmap-paris-difficulty-item-1")}</li>
+          <li>{t("page-roadmap-paris-difficulty-item-2")}</li>
         </ul>
       </div>
     ),
@@ -49,22 +70,22 @@ export const releasesData: Release[] = [
     releaseDate: "2023-04-12",
     content: (
       <div>
-        <p className="font-bold">Staking withdrawals</p>
+        <p className="font-bold">
+          {t("page-roadmap-shapella-withdrawals-title")}
+        </p>
         <ul>
-          <li>Enabled validators to withdraw their staked ETH and rewards</li>
-          <li>Introduced partial and full withdrawal capabilities</li>
+          <li>{t("page-roadmap-shapella-withdrawals-item-1")}</li>
+          <li>{t("page-roadmap-shapella-withdrawals-item-2")}</li>
         </ul>
-        <p className="font-bold">EIP-4895: Beacon chain push withdrawals</p>
+        <p className="font-bold">{t("page-roadmap-shapella-eip4895-title")}</p>
         <ul>
-          <li>Added a new system-level operation for withdrawals</li>
-          <li>
-            Ensured secure and efficient processing of withdrawal requests
-          </li>
+          <li>{t("page-roadmap-shapella-eip4895-item-1")}</li>
+          <li>{t("page-roadmap-shapella-eip4895-item-2")}</li>
         </ul>
-        <p className="font-bold">EIP-3651: Warm COINBASE</p>
+        <p className="font-bold">{t("page-roadmap-shapella-eip3651-title")}</p>
         <ul>
-          <li>Reduced gas costs for accessing the COINBASE address</li>
-          <li>Improved efficiency of certain smart contract operations</li>
+          <li>{t("page-roadmap-shapella-eip3651-item-1")}</li>
+          <li>{t("page-roadmap-shapella-eip3651-item-2")}</li>
         </ul>
       </div>
     ),
@@ -76,33 +97,22 @@ export const releasesData: Release[] = [
     releaseDate: "2024-03-13",
     content: (
       <div>
-        <p className="font-bold">Proto-danksharding (EIP-4844)</p>
+        <p className="font-bold">
+          {t("page-roadmap-dencun-danksharding-title")}
+        </p>
         <ul>
-          <li>
-            Introduced blob transactions to significantly reduce rollup
-            transaction costs
-          </li>
-          <li>
-            Added a new transaction type that stores data temporarily and
-            cheaply
-          </li>
+          <li>{t("page-roadmap-dencun-danksharding-item-1")}</li>
+          <li>{t("page-roadmap-dencun-danksharding-item-2")}</li>
         </ul>
-        <p className="font-bold">EIP-1153: Transient storage opcodes</p>
+        <p className="font-bold">{t("page-roadmap-dencun-eip1153-title")}</p>
         <ul>
-          <li>
-            Added TSTORE and TLOAD opcodes for temporary storage during
-            transaction execution
-          </li>
-          <li>
-            Enables more efficient smart contract patterns and reduces gas costs
-          </li>
+          <li>{t("page-roadmap-dencun-eip1153-item-1")}</li>
+          <li>{t("page-roadmap-dencun-eip1153-item-2")}</li>
         </ul>
-        <p className="font-bold">EIP-4788: Beacon block root in the EVM</p>
+        <p className="font-bold">{t("page-roadmap-dencun-eip4788-title")}</p>
         <ul>
-          <li>Exposes consensus layer information to smart contracts</li>
-          <li>
-            Enables new trust-minimized applications and cross-chain bridges
-          </li>
+          <li>{t("page-roadmap-dencun-eip4788-item-1")}</li>
+          <li>{t("page-roadmap-dencun-eip4788-item-2")}</li>
         </ul>
       </div>
     ),
@@ -114,56 +124,45 @@ export const releasesData: Release[] = [
     releaseDate: "2025-05-07",
     content: (
       <div>
-        <p className="font-bold">Enhance EOA wallets with smart contract functionality</p>
+        <p className="font-bold">{t("page-roadmap-pectra-eoa-title")}</p>
         <ul>
-          <li>
-            Users can set their address to be represented by a code of an
-            existing smart contract and gain benefits such as transaction batching, transaction fee sponsorship or better recovery mechanisms
-          </li>
+          <li>{t("page-roadmap-pectra-eoa-item-1")}</li>
         </ul>
-        <p className="font-bold">Increase the max effective balance</p>
+        <p className="font-bold">{t("page-roadmap-pectra-balance-title")}</p>
         <ul>
-          <li>
-            Stakers can now choose an arbitrary amount of ETH to stake and
-            receive rewards on every 1 ETH above the minimum
-          </li>
+          <li>{t("page-roadmap-pectra-balance-item-1")}</li>
         </ul>
-        <p className="font-bold">Blob throughput increase</p>
+        <p className="font-bold">{t("page-roadmap-pectra-blob-title")}</p>
         <ul>
-          <li>
-            The blob count will be increased from 3 to 6 targets, with a maximum
-            of 9, resulting in cheaper fees in Ethereum rollups
-          </li>
+          <li>{t("page-roadmap-pectra-blob-item-1")}</li>
         </ul>
       </div>
     ),
     href: "/roadmap/pectra",
   },
   {
-    image: CommunityHeroImage,
+    image: FusakaImage,
     releaseName: "Fusaka",
-    releaseDate: "2026",
+    plannedReleaseYear: "2025",
     content: (
       <div>
-        <p className="font-bold">
-          PeerDAS (Peer-to-Peer Data Availability Sampling)
-        </p>
+        <p className="font-bold">{t("page-roadmap-fusaka-peerdas-title")}</p>
         <ul>
-          <li>Enables more efficient data availability for rollups</li>
+          <li>{t("page-roadmap-fusaka-peerdas-item-1")}</li>
+          <li>{t("page-roadmap-fusaka-peerdas-item-2")}</li>
+        </ul>
+        <p className="font-bold">Blob Parameter Only (BPO) Forks</p>
+        <ul>
+          <li>Allows flexible blob count increases between major upgrades</li>
           <li>
-            Makes running a node more accessible while maintaining
-            decentralization
+            Enables faster adaptation to L2 scaling needs without waiting for
+            coordinated hard forks
           </li>
         </ul>
-        <p className="font-bold">Potential Additional Features</p>
+        <p className="font-bold">Gas Limit & DoS Hardening</p>
         <ul>
-          <li>
-            EIP-7688: Enhanced smart contract access to network information
-          </li>
-          <li>Blob fee market improvementse</li>
-          <li>
-            Further improvements to validator efficiency and network performance
-          </li>
+          <li>Transaction gas limit cap of 16.7M gas per transaction</li>
+          <li>Default gas limit increase to ~60M (from current 45M)</li>
         </ul>
       </div>
     ),
@@ -172,15 +171,26 @@ export const releasesData: Release[] = [
   {
     image: GuidesHubHeroImage,
     releaseName: "Glamsterdam",
-    releaseDate: "2026",
+    plannedReleaseYear: "2026",
     content: (
       <div>
-        <p className="font-bold">Discussed for Glamsterdam</p>
+        <p className="font-bold">
+          {t("page-roadmap-glamsterdam-discussed-title")}
+        </p>
         <ul>
-          <li>Verkle trees</li>
+          <li>{t("page-roadmap-glamsterdam-discussed-item-1")}</li>
+          <li>{t("page-roadmap-glamsterdam-discussed-item-2")}</li>
         </ul>
       </div>
     ),
-    href: "https://eips.ethereum.org/EIPS/eip-7773",
+    href: "https://forkcast.org/upgrade/glamsterdam/#scheduled-for-inclusion",
   },
 ]
+
+// Legacy export for backward compatibility - uses hardcoded English strings
+export const releasesData: Release[] = getReleasesData((key: string) => {
+  // This is a fallback that returns the key itself if translations aren't available
+  // In practice, this should not be used in the actual app
+  console.warn(`Translation key ${key} used without translation function`)
+  return key
+})

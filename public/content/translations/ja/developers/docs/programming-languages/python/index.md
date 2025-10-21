@@ -56,7 +56,7 @@ incomplete: true
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _イーサリアム関連のコードベースを操作するためのユーティリティ関数_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _solc SolidityコンパイラのPythonラッパー (Solidity 0.5xをサポート)_
 - [pymaker](https://github.com/makerdao/pymaker) - _MakerコントラクトのためのPython API_
-- [siwe](https://github.com/spruceid/siwe-py) - _Pythonのためのイーサリアムによるサインイン (siwe)_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Pythonのためのイーサリアムによるサインイン (siwe)_
 - [イーサリアムの統合のためのWeb3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20、Uniswap、その他の一般的なプロジェクトのための、すぐに統合を行えるPythonパッケージ_
 - [Wake -](https://getwake.io) _コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションが可能なオールインワンPythonフレームワーク(言語サーバー - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

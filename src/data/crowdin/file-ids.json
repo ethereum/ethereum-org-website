@@ -8,8 +8,12 @@
     "path": "/roadmap/index.md"
   },
   {
+    "id": 13426,
+    "path": "/roadmap/fusaka/index.md"
+  },
+  {
     "id": 6161,
-    "path": "/events/index.md"
+    "path": "/community/events/index.md"
   },
   {
     "id": 6428,
@@ -17,7 +21,15 @@
   },
   {
     "id": 7525,
-    "path": "/how-to-create-an-ethereum-account/index.md"
+    "path": "/guides/how-to-create-an-ethereum-account/index.md"
+  },
+  {
+    "id": 12604,
+    "path": "/real-world-assets/index.md"
+  },
+  {
+    "id": 12762,
+    "path": "/eth/supply/index.md"
   },
   {
     "id": 2716,
@@ -241,11 +253,11 @@
   },
   {
     "id": 7591,
-    "path": "/withdrawals/index.md"
+    "path": "/staking/withdrawals/index.md"
   },
   {
     "id": 8019,
-    "path": "/code-of-conduct/index.md"
+    "path": "/community/code-of-conduct/index.md"
   },
   {
     "id": 8035,
@@ -272,12 +284,16 @@
     "path": "/community/research/index.md"
   },
   {
+    "id": 13436,
+    "path": "/community/events/organizing/index.md"
+  },
+  {
     "id": 2926,
     "path": "/roadmap/merge/index.md"
   },
   {
     "id": 6167,
-    "path": "/support/index.md"
+    "path": "/community/support/index.md"
   },
   {
     "id": 7515,
@@ -285,15 +301,15 @@
   },
   {
     "id": 7713,
-    "path": "/account-abstraction/index.md"
+    "path": "/roadmap/account-abstraction/index.md"
   },
   {
     "id": 7717,
-    "path": "/danksharding/index.md"
+    "path": "/roadmap/danksharding/index.md"
   },
   {
     "id": 7745,
-    "path": "/statelessness/index.md"
+    "path": "/roadmap/statelessness/index.md"
   },
   {
     "id": 5553,
@@ -330,6 +346,10 @@
   {
     "id": 7935,
     "path": "/contributing/design/index.md"
+  },
+  {
+    "id": 13440,
+    "path": "/contributing/translation-program/playbook/index.md"
   },
   {
     "id": 6568,
@@ -380,6 +400,18 @@
     "path": "/zero-knowledge-proofs/index.md"
   },
   {
+    "id": 12582,
+    "path": "/prediction-markets/index.md"
+  },
+  {
+    "id": 12584,
+    "path": "/ai-agents/index.md"
+  },
+  {
+    "id": 12754,
+    "path": "/what-are-apps/index.md"
+  },
+  {
     "id": 2962,
     "path": "/foundation/index.md"
   },
@@ -416,8 +448,12 @@
     "path": "/payments/index.md"
   },
   {
+    "id": 2680,
+    "path": "/enterprise/use-cases/index.md"
+  },
+  {
     "id": 2946,
-    "path": "/beacon-chain/index.md"
+    "path": "/roadmap/beacon-chain/index.md"
   },
   {
     "id": 2950,
@@ -429,23 +465,23 @@
   },
   {
     "id": 7721,
-    "path": "/future-proofing/index.md"
+    "path": "/roadmap/future-proofing/index.md"
   },
   {
     "id": 7729,
-    "path": "/scaling/index.md"
+    "path": "/roadmap/scaling/index.md"
   },
   {
     "id": 7737,
-    "path": "/security/index.md"
+    "path": "/roadmap/security/index.md"
   },
   {
     "id": 7749,
-    "path": "/user-experience/index.md"
+    "path": "/roadmap/user-experience/index.md"
   },
   {
     "id": 7919,
-    "path": "/dvt/index.md"
+    "path": "/staking/dvt/index.md"
   },
   {
     "id": 2776,
@@ -624,12 +660,8 @@
     "path": "/developers/docs/scaling/state-channels/index.md"
   },
   {
-    "id": 2680,
-    "path": "/enterprise/index.md"
-  },
-  {
     "id": 2672,
-    "path": "/history/index.md"
+    "path": "/ethereum-forks/index.md"
   },
   {
     "id": 7529,
@@ -676,6 +708,18 @@
     "path": "/roadmap/dencun/index.md"
   },
   {
+    "id": 12608,
+    "path": "/roadmap/pectra/index.md"
+  },
+  {
+    "id": 12614,
+    "path": "/roadmap/pectra/maxeb/index.md"
+  },
+  {
+    "id": 12618,
+    "path": "/roadmap/pectra/7702/index.md"
+  },
+  {
     "id": 6398,
     "path": "/contributing/adding-developer-tools/index.md"
   },
@@ -718,5 +762,9 @@
   {
     "id": 8007,
     "path": "/contributing/quizzes/index.md"
+  },
+  {
+    "id": 12752,
+    "path": "/contributing/adding-resources/index.md"
   }
 ]

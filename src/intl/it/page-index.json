@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "Prova le app",
   "page-index-cta-get-eth-description": "La valuta di Ethereum",
   "page-index-cta-get-eth-label": "Ottieni ETH",
-  "page-index-cta-networks-description": "Commissioni minime",
-  "page-index-cta-networks-label": "Scegli una rete",
   "page-index-cta-wallet-description": "Crea conti e gestisci asset",
   "page-index-cta-wallet-label": "Scegli un portafoglio",
+  "page-index-cta-build-apps-description": "Crei la Sua prima applicazione",
+  "page-index-cta-build-apps-label": "Inizi a sviluppare",
   "page-index-description": "La piattaforma leader per le app innovative e le reti blockchain",
   "page-index-developers-code-example-description-0": "Crea una banca basata sulla logica da te programmata",
   "page-index-developers-code-example-description-1": "Crea token trasferibili e utilizzabili tra più applicazioni",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Post recenti",
   "page-index-posts-subtitle": "Gli ultimi post del blog e gli aggiornamenti della community",
   "page-index-title": "Ti diamo il benvenuto su Ethereum",
+  "page-index-use-cases-tag": "Casi d'uso",
   "page-index-values-description": "Partecipa alla rivoluzione digitale",
   "page-index-values-header": "Internet sta cambiando",
   "page-index-values-legacy": "L'internet di ieri",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Chiuso ai più",
   "page-index-values-open-legacy-content-0": "Le aziende proteggono la loro proprietà intellettuale e non la condividono. Nessuno al di fuori dell'azienda può vedere come funzionano le cose, risolvere i problemi o apportare miglioramenti. È difficile per le persone creare nuovi strumenti o personalizzarli.",
   "page-index-values-open-ethereum-label": "Aperto a tutti",
-  "page-index-values-open-ethereum-content-0": "Ethereum è pubblico. Chiunque può vedere, utilizzare e migliorare il codice a beneficio di tutti."
+  "page-index-values-open-ethereum-content-0": "Ethereum è pubblico. Chiunque può vedere, utilizzare e migliorare il codice a beneficio di tutti.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Partecipa al più grande evento Ethereum dell'anno",
+  "page-index-devconnect-banner-get-tickets": "Ottieni i biglietti"
 }

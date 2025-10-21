@@ -7,7 +7,7 @@ lang: de
 Das Ethereum-Netzwerk hat zu Beginn einen Konsensmechanismus verwendet, der **[Proof-of-Work (PoW)](/developers/docs/consensus-mechanisms/pow)** beinhaltete. Das ermöglichte es den Nodes des Ethereum-Netzwerks, sich über den Status aller auf der Ethereum-Blockchain gespeicherten Informationen zu einigen, und verhinderte bestimmte Arten von wirtschaftlichen Angriffen. 2022 hat Ethereum jedoch Proof-of-Work abgeschaltet und stattdessen begonnen, [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos) zu verwenden.
 
 <InfoBanner emoji=":wave:">
-    Proof-of-Work ist inzwischen veraltet. Ethereum verwendet Proof-of-Work nicht mehr als Teil seines Konsensmechanismus. Stattdessen nutzt Ethereum Proof-of-Stake. Lesen Sie mehr über <a href="/developers/docs/consensus-mechanisms/pos/">Proof-of-Stake</a> und <a href="/staking/">Staking</a>.
+    Proof-of-Work ist inzwischen veraltet. Ethereum verwendet Proof-of-Work nicht mehr als Teil seines Konsensmechanismus. Stattdessen nutzt Ethereum Proof-of-Stake. Lesen Sie mehr über [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und [Staking](/staking/).
 </InfoBanner>
 
 ## Voraussetzungen {#prerequisites}
@@ -56,7 +56,7 @@ Um konsequent bösartige, aber gültige Blöcke zu erstellen, hätte ein bösart
 
 Proof-of-Work war auch dafür verantwortlich, neue Währung in das System einzuspeisen und Miner zur Ausführung der Arbeit zu motivieren.
 
-Seit dem [Konstantinopel-Upgrade](/history/#constantinople) wurden Miner, die erfolgreich einen Block erstellen, mit zwei frisch geprägten ETH und einem Teil der Transaktionsgebühren belohnt. Ommer-Blöcke wurden ebenfalls mit 1,75 ETH vergütet. Ommer-Blöcke waren gültige Blöcke, die von einem Miner praktisch zur selben Zeit erstellt wurden wie ein durch einen anderen Miner erstellter kanonischer Block. Die endgültige Bestimmung erfolgte anhand der Kette, auf die zuerst aufgebaut wurde. Zu Ommer-Blöcken kam es in der Regel durch Netzwerklatenzen.
+Seit dem [Konstantinopel-Upgrade](/ethereum-forks/#constantinople) wurden Miner, die erfolgreich einen Block erstellen, mit zwei frisch geprägten ETH und einem Teil der Transaktionsgebühren belohnt. Ommer-Blöcke wurden ebenfalls mit 1,75 ETH vergütet. Ommer-Blöcke waren gültige Blöcke, die von einem Miner praktisch zur selben Zeit erstellt wurden wie ein durch einen anderen Miner erstellter kanonischer Block. Die endgültige Bestimmung erfolgte anhand der Kette, auf die zuerst aufgebaut wurde. Zu Ommer-Blöcken kam es in der Regel durch Netzwerklatenzen.
 
 ## Endgültigkeit {#finality}
 

@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>
 
 export const Single: Story = {
   args: {
-    name: "dan abrahmov",
-    src: "https://bit.ly/dan-abramov",
+    name: "Sam Richards",
+    src: "https://avatars.githubusercontent.com/u/8097623?v=4",
     href: "#",
   },
   render: (args) => (
@@ -29,8 +29,8 @@ export const Single: Story = {
 
 export const Group: Story = {
   args: {
-    name: "Dan Abrahmov",
-    src: "https://bit.ly/dan-abramov",
+    name: "Sam Richards",
+    src: "https://avatars.githubusercontent.com/u/8097623?v=4",
     href: "#",
   },
   render: (args) => (
@@ -49,10 +49,10 @@ export const Group: Story = {
 
 export const WithUsername: Story = {
   args: {
-    name: "Dan Abrahmov",
-    src: "http://bit.ly/dan-abramov",
-    href: "http://bit.ly/dan-abramov",
-    label: "daneabrahmov",
+    name: "Sam Richards",
+    src: "https://avatars.githubusercontent.com/u/8097623?v=4",
+    href: "https://github.com/samajammin",
+    label: "samajammin",
   },
   render: (args) => (
     <HStack className="gap-4">

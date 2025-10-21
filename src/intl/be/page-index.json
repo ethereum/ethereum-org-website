@@ -36,11 +36,11 @@
   "page-index-cta-dapps-label": "Паспрабуйце выкарыстаць дадаткі",
   "page-index-cta-get-eth-description": "Валюта Ethereum",
   "page-index-cta-get-eth-label": "Атрымайце ETH",
-  "page-index-cta-networks-description": "Мінімальныя камісіі",
-  "page-index-cta-networks-label": "Выбар сеткі",
   "page-index-cta-wallet-description": "Стварэнне акаўнтаў і кіраванне актывамі",
   "page-index-cta-wallet-label": "Выберыце гаманец",
   "page-index-description": "Вядучая платформа для інавацыйных дадаткаў і блокчэйн-сетак",
+  "page-index-cta-build-apps-description": "Стварыце свой першы дадатак",
+  "page-index-cta-build-apps-label": "Пачніце распрацоўку",
   "page-index-developers-code-example-description-0": "Стварыце банк, які кіруецца запраграмаванай вамі логікай",
   "page-index-developers-code-example-description-1": "Стварайце токены, якія потым можна перадаваць і выкарыстоўваць у разнастайных дадатках",
   "page-index-developers-code-example-description-2": "Выкарыстоўвайце існуючыя мовы для ўзаемадзеяння з Ethereum і іншымі дадаткамі",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Нядаўнія публікацыі",
   "page-index-posts-subtitle": "Апошнія публікацыі ў блогу і абнаўленні ад супольнасці",
   "page-index-title": "Сардэчна запрашаем у свет Ethereum",
+  "page-index-use-cases-tag": "Варыянты выкарыстання",
   "page-index-values-description": "Станьце часткай лічбавай рэвалюцыі",
   "page-index-values-header": "Інтэрнэт перажывае змены",
   "page-index-values-legacy": "Спадчына",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Недаступнасць для большасці",
   "page-index-values-open-legacy-content-0": "Кампаніі абараняюць сваю інтэлектуальную ўласнасць і не дзеляцца ёю. Ніхто за межамі кампаніі не можа ўбачыць, як усё працуе, ліквідаваць праблемы або ўнесці паляпшэнні. Людзям пры гэтым складана ствараць новыя інструменты або наладжваць іх.",
   "page-index-values-open-ethereum-label": "Даступнасць для ўсіх",
-  "page-index-values-open-ethereum-content-0": "Ethereum з'яўляецца адкрытым для кожнага. Людзі могуць праглядаць, выкарыстоўваць і паляпшаць код для ўсіх."
+  "page-index-values-open-ethereum-content-0": "Ethereum з'яўляецца адкрытым для кожнага. Людзі могуць праглядаць, выкарыстоўваць і паляпшаць код для ўсіх.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Далучайцеся да найбуйнейшай падзеі Ethereum года",
+  "page-index-devconnect-banner-get-tickets": "Атрымаць квіткі"
 }

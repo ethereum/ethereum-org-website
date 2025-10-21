@@ -40,7 +40,6 @@ Poate fi dificil de construit. Iată câteva spații de dezvoltare cu dezvoltato
 
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 
 Puteți să găsiți documentație și ghiduri de dezvoltare și în secțiunea noastră [Resurse pentru dezvoltatorii Ethereum](/developers/).

@@ -76,7 +76,6 @@
   "enterprise": "एंटरप्राइज़",
   "enterprise-mainnet": "एंटरप्राइज़ - मेननेट एथेरियम",
   "enterprise-menu": "एंटरप्राइज़ मेनू",
-  "enterprise-private": "एंटरप्राइज़ - निजी एथेरियम",
   "esp": "इकोसिस्टम सहायता कार्यक्रम",
   "eth-current-price": "वर्तमान ETH मूल्य (USD)",
   "ethereum": "इथेरियम",
@@ -230,7 +229,7 @@
   "nav-contribute-description": "अगर आप मदद करना चाहते हैं, तो यह आपको गाइड करेगा",
   "nav-contribute-label": "Ethereum.org में योगदान",
   "nav-dao-description": "केंद्रीकृत प्राधिकरण के बिना सदस्य के स्वामित्व वाली कम्युनिटी",
-  "nav-dapps-description": "एथेरियम का इस्तेमाल करके ऐप्स के एक रिच इकोसिस्टम को एक्सप्लोर करें",
+  "nav-apps-description": "एथेरियम का इस्तेमाल करके ऐप्स के एक रिच इकोसिस्टम को एक्सप्लोर करें",
   "nav-defi-description": "परंपरागत वित्तीय बाज़ार का एक वैश्विक, खुला विकल्प",
   "nav-desci-description": "मौजूदा वैज्ञानिक प्रणाली का एक वैश्विक, खुला विकल्प",
   "nav-desoc-description": "सामाजिक संपर्क और सामग्री निर्माण के लिए ब्लॉकचेन-आधारित प्लेटफ़ॉर्म",
@@ -278,7 +277,7 @@
   "nav-layer-2-description": "एथेरियम के लिए सस्ते और तेज़ लेनदेन",
   "nav-learn-by-coding-description": "एथेरियम के साथ प्रयोग करने में आपकी मदद करने वाले उपकरण",
   "nav-local-env-description": "अपना एथेरियम डेवलपमेंट स्टैक चुनें और सेट अप करें",
-  "nav-mainnet-description": "एंटरप्राइज़ ब्लॉकचेन एप्लिकेशन पब्लिक एथेरियम मेननेट पर बनाए जा सकते हैं",
+  "nav-enterprise-description": "एंटरप्राइज़ ब्लॉकचेन एप्लिकेशन पब्लिक एथेरियम मेननेट पर बनाए जा सकते हैं",
   "nav-nft-description": "किसी भी अनोखी चीज़ को एथेरियम-आधारित एसेट के तौर पर पेश करने का तरीका",
   "nav-open-research-description": "एथेरियम की प्रमुख खूबियों में से एक है इसकी एक्टिव रिसर्च कम्युनिटी",
   "nav-open-research-label": "शोध खोलें",
@@ -324,6 +323,8 @@
   "nav-staking-solo-description": "होम हार्डवेयर चलाएं और व्यक्तिगत रूप से इथेरियम नेटवर्क की सुरक्षा और विकेंद्रीकरण में जोड़ें",
   "nav-staking-solo-label": "एकल स्टेकिंग",
   "nav-start-building-description": "नए लोगों के लिए उपयोगी जानकारी",
+  "nav-start-with-crypto-title": "यहाँ से शुरू करें",
+  "nav-start-with-crypto-description": "Ethereum का उपयोग करने के आपके पहले कदम",
   "nav-translation-program-description": "Ethereum.org का सभी भाषाओं में अनुवाद करने की एक सहयोगी कोशिश",
   "nav-tutorials-description": "कम्युनिटी ट्यूटोरियल की क्यूरेट की गई लिस्ट",
   "nav-use-cases-description": "एथेरियम के इस्तेमाल के अलग-अलग तरीके जानें",
@@ -431,5 +432,8 @@
   "withdrawals": "स्टेकिंग निकालना",
   "wrapped-ether": "लपेटा हुआ ईथर",
   "yes": "हाँ",
-  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाण"
+  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाण",
+  "ethereum-vs-bitcoin": "एथेरियम बनाम बिटकॉइन",
+  "nav-ethereum-vs-bitcoin-description": "एथेरियम और बिटकॉइन के बीच के अंतर को समझें"
+
 }

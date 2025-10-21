@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Subukan ang mga app",
   "page-index-cta-get-eth-description": "Ang pera ng Ethereum",
   "page-index-cta-get-eth-label": "Kumuha ng ETH",
-  "page-index-cta-networks-description": "I-enjoy ang mabababang bayarin",
-  "page-index-cta-networks-label": "Pumili ng network",
   "page-index-cta-wallet-description": "Gumawa ng mga account at pamahalaan ang mga asset",
   "page-index-cta-wallet-label": "Pumili ng wallet",
+  "page-index-cta-build-apps-description": "Gumawa ng iyong unang app",
+  "page-index-cta-build-apps-label": "Simulan ang pagbuo",
   "page-index-description": "Ang nangungunang platform para sa mga makabagong app at network ng blockchain",
   "page-index-developers-code-example-description-0": "Bumuo ng bangko na pinapagana ng lohikang ikaw ang nagprograma",
   "page-index-developers-code-example-description-1": "Gumawa ng mga token na maaaring mailipat at magagamit sa iba't ibang application",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Mga kamakailang post",
   "page-index-posts-subtitle": "Ang pinakabagong mga post na blog at update mula sa komunidad",
   "page-index-title": "Welcome sa Ethereum",
+  "page-index-use-cases-tag": "Mga use case",
   "page-index-values-description": "Maging bahagi ng digital na rebolusyon",
   "page-index-values-header": "Nagbabago ang internet",
   "page-index-values-legacy": "Pamana",
@@ -116,5 +117,7 @@
   "page-index-values-open-legacy-label": "Sarado sa karamihan",
   "page-index-values-open-legacy-content-0": "Pinoprotektahan ng mga kumpanya ang intellectual property ng mga ito at hindi nagbabahagi. Walang sinumang wala sa kumpany ang makakakita kung paano gumagana ang mga bagay-bagay, makakapag-ayos ng mga problema, o makakagawa ng mga pagpapahusay. Mahirap para sa mga tao na gumawa ng mga bagong tool o mag-customize.",
   "page-index-values-open-ethereum-label": "Bukas sa lahat",
-  "page-index-values-open-ethereum-content-0": "Pampubliko ang Ethereum sa lahat ng tao. Kahit sino ang makakakita, makakagamit, at makakapagpabuti sa code, para gawin itong mas maganda para sa lahat."
+  "page-index-values-open-ethereum-content-0": "Pampubliko ang Ethereum sa lahat ng tao. Kahit sino ang makakakita, makakagamit, at makakapagpabuti sa code, para gawin itong mas maganda para sa lahat.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Sumali sa pinakamalaking kaganapan ng Ethereum ng taon",
+  "page-index-devconnect-banner-get-tickets": "Kumuha ng mga tiket"
 }
