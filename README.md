@@ -133,7 +133,7 @@ pnpm dev
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
+  - Get **faster** production builds by building only one language, e.g., in your `.env` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
   - To build the site in other selected languages too, you need to set them in `NEXT_PUBLIC_BUILD_LOCALES`, eg: `NEXT_PUBLIC_BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
   - To build all languages, simply comment this line out with a hash mark, eg: `# NEXT_PUBLIC_BUILD_LOCALES=`
 
@@ -156,7 +156,7 @@ git push
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
-- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/images/preview-deploy.png)
+- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.,: ![Netlify deploy preview](public/images/preview-deploy.png)
 - _Confirm that your Netlify preview deploy looks and functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
