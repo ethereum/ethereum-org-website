@@ -172,6 +172,13 @@ Use the "D-Mon-YYYY" format for dates. This format eliminates ambiguity between 
 
 By adhering to these guidelines, we create a unified approach to presenting dates, fostering clarity and comprehension throughout Ethereum documentation.
 
+### Hard stops (i.e., e.g.,)
+When using abbreviations such as i.e., or e.g., it should include the comma after the period. This usage will allow for consistency and presentation.
+
+**Examples:**
+- Preferred: i.e., the preferred usage
+- Avoid: i.e. do not use
+
 ### Linking to internal pages {#internal-links}
 
 When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
