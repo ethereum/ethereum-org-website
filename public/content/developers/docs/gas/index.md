@@ -46,7 +46,7 @@ The total fee would now be equal to:
 
 where the `base fee` is a value set by the protocol and the `priority fee` is a value set by the user as a tip to the validator.
 
-i.e. `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
+i.e., `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
 When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account. Taylor will be credited 1.0000 ETH. The validator receives the tip of 0.000042 ETH. The `base fee` of 0.00021 ETH is burned.
 
@@ -99,7 +99,7 @@ You can explicitly state how much you are willing to pay to get your transaction
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to avoid accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
-Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e. `max fee - (base fee + tip)` is returned).
+Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e., `max fee - (base fee + tip)` is returned).
 
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
