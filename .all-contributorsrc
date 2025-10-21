@@ -13659,6 +13659,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "AMelhede",
+      "name": "Andreas Melhede",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95473109?v=4",
+      "profile": "https://github.com/AMelhede",
+      "contributions": [
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
