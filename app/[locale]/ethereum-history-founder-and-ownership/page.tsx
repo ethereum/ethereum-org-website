@@ -6,7 +6,7 @@ import CommentCard from "@/components/CommentCard"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import { Image } from "@/components/Image"
-import { Strong } from "@/components/IntlStringElements"
+import { Emphasis, Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
@@ -27,7 +27,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations({
-    locale,
     namespace: "page-ethereum-history-founder-and-ownership",
   })
 
@@ -147,13 +146,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 )}
               </p>
               <p>
-                {t(
-                  "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-3"
+                {t.rich(
+                  "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-3",
+                  {
+                    em: Emphasis,
+                  }
                 )}
               </p>
               <p>
-                {t(
-                  "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-4"
+                {t.rich(
+                  "page-ethereum-history-founder-and-ownership-who-founded-ethereum-launch-description-4",
+                  {
+                    whitepaper: (chunks) => (
+                      <Link href="/whitepaper/">{chunks}</Link>
+                    ),
+                  }
                 )}
               </p>
               <CommentCard
@@ -188,7 +195,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         <Link href="https://soliditylang.org/">{chunks}</Link>
                       ),
                       ethereumYellowPaper: (chunks) => (
-                        <Link href="https://ethereum.org/en/yellowpaper/">
+                        <Link href="https://ethereum.github.io/yellowpaper/paper.pdf">
                           {chunks}
                         </Link>
                       ),
@@ -269,6 +276,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               src={EthereumOrgLogo}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[123px]"
+              sizes="123px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -353,13 +361,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-11",
                   {
                     genesisBlock: (chunks) => (
-                      <Link href="https://etherscan.io/block/0">{chunks}</Link>
+                      <Link href="https://eth.blockscout.com/block/0">
+                        {chunks}
+                      </Link>
                     ),
                   }
                 )}
               </p>
               <div>
-                <LinkWithArrow href="/upgrades/">
+                <LinkWithArrow href="/ethereum-forks/">
                   {t(
                     "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-12"
                   )}

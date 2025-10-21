@@ -251,7 +251,7 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
 
 #### Security keys {#security-keys}
 
-A security key is a more advanced and secure type of 2FA. Security keys are physical hardware authentication devices that work like authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+A security key is a more advanced and secure type of 2FA. Security keys are physical hardware authentication devices that work like authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/resources/glossary/fido-u2f/).
 
 Watch more on 2FA:
 

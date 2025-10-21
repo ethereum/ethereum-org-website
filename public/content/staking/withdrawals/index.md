@@ -192,7 +192,7 @@ eventName="read more">
 
 Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to prepare your validator for withdrawals, timing of events, and more details about how withdrawals function.
 
-To try out your setup on a testnet first, visit the <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> to get started.
+To try out your setup on a testnet first, visit the <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> to get started.
 
 </ExpandableCard>
 

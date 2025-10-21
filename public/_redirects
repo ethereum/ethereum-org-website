@@ -149,7 +149,9 @@
 
 /*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!
 
-/*/contributing/translation-program/content-versions/ /:splat/contributing/translation-program/content-buckets/ 301!
+/*/contributing/translation-program/content-versions/ /:splat/contributing/translation-program/ 301!
+
+/*/contributing/translation-program/content-buckets/ /:splat/contributing/translation-program/ 301!
 
 /*/developers/docs/smart-contracts/source-code-verification/ /:splat/developers/docs/smart-contracts/verifying/ 301!
 

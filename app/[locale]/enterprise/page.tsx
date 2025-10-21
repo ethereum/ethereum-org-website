@@ -67,10 +67,10 @@ import EnterprisePageJsonLD from "./page-jsonld"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
+import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -102,7 +102,7 @@ const loadData = dataLoader(
     ["growThePieData", fetchGrowThePie],
     ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
     ["ethPrice", fetchEthPrice],
-    ["totalEthStaked", fetchTotalEthStaked],
+    ["beaconchainEpoch", fetchBeaconchainEpoch],
   ],
   BASE_TIME_UNIT * 1000
 )
@@ -116,7 +116,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     { txCount, txCostsMedianUsd },
     stablecoinMarketCap,
     ethPrice,
-    totalEthStaked,
+    { totalEthStaked },
   ] = await loadData()
 
   const metrics = await parseActivity({

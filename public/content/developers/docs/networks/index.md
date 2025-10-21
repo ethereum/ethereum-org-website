@@ -108,7 +108,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 - [Bordel Faucet](https://faucet.bordel.wtf/)
 - [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
 
-#### Holesky {#holesky}
+#### Holesky (deprecated) {#holesky}
 
 The Holesky testnet is deprecated as of September 2025. Staking operators and infrastructure providers should use Hoodi for validator testing instead.
 

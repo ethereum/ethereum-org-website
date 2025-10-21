@@ -392,7 +392,7 @@ export const useCentralizedExchanges = () => {
             description,
             link: exchanges[exchange].url,
             image: exchanges[exchange].image,
-            alt: "", // TODO: Add alt text for exchange image
+            alt: t("common:item-logo", { item: exchanges[exchange].name }),
           }
         })
     )

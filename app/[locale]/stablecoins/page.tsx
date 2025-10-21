@@ -432,11 +432,7 @@ async function Page({ params }: { params: PageParams }) {
   return (
     <>
       <I18nProvider locale={locale} messages={messages}>
-        <StablecoinsPageJsonLD
-          locale={locale}
-          features={features}
-          contributors={contributors}
-        />
+        <StablecoinsPageJsonLD locale={locale} contributors={contributors} />
         <MainArticle className="mx-auto my-0 w-full flex-col items-center">
           <PageHero isReverse content={heroContent} />
           <Divider />
