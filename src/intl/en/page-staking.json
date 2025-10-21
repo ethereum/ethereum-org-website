@@ -205,7 +205,7 @@
   "page-staking-faq-2-answer": "A validator has the ability to propose and attest to blocks for the network. To prevent dishonest behavior, users must have their funds at stake. This allows the protocol to penalize malicious actors. Staking is a means to keep you honest, as your actions will have financial consequences.",
   "page-staking-faq-3-question": "Can I buy 'Eth2'?",
   "page-staking-faq-3-answer-p1": "There is no 'Eth2' token native to the protocol, as the native token ether (ETH) did not change when Ethereum switched to proof-of-stake.",
-  "page-staking-faq-3-answer-p2": "There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase). Learn more about <a href=\"/staking/pools/\">staking pools</a>",
+  "page-staking-faq-3-answer-p2": "There are derivative tokens/tickers that may represent staked ETH (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase). Learn more about <a href=\"/staking/pools/\">staking pools</a>",
   "page-staking-faq-4-question": "Is staking already live?",
   "page-staking-faq-4-answer-p1": "Yes. Staking has been live since December 1, 2020",
   "page-staking-faq-4-answer-p2": "This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards.",
