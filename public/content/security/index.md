@@ -137,7 +137,7 @@ In the run-up to [The Merge](/roadmap/merge/), scammers took advantage of the co
 
 Scammers may appear as "support", telling you that if you deposit your ETH, you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
-_Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
+_Note: There are derivative tokens/tickers that may represent staked ETH (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
 
 ### Phishing scams {#phishing-scams}
 
