@@ -48,6 +48,7 @@ import okx from "@/public/images/exchanges/okx.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
+import zebpay from "@/public/images/exchanges/zebpay.png"
 import zkp2p from "@/public/images/exchanges/zkp2p.png"
 
 type ExchangeKey =
@@ -81,6 +82,7 @@ type ExchangeKey =
   | "rain"
   | "shakepay"
   | "wazirx"
+  | "zebpay"
   | "zkp2p"
 
 type ExchangeDetail = {
@@ -309,6 +311,12 @@ const exchanges: ExchangeDetails = {
     name: "Korbit",
     url: "https://korbit.co.kr",
     image: korbit,
+    usaExceptions: [],
+  },
+  zebpay: {
+    name: "ZebPay",
+    url: "https://www.zebpay.com/",
+    image: zebpay,
     usaExceptions: [],
   },
   zkp2p: {
