@@ -2129,6 +2129,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Hunter-Plus"><img src="https://avatars.githubusercontent.com/u/29066136?v=4?s=100" width="100px;" alt="Hunter Z"/><br /><sub><b>Hunter Z</b></sub></a><br /><a href="#maintenance-Hunter-Plus" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cjustinobi"><img src="https://avatars.githubusercontent.com/u/5602693?v=4?s=100" width="100px;" alt="Justin"/><br /><sub><b>Justin</b></sub></a><br /><a href="#maintenance-cjustinobi" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/trikunai"><img src="https://avatars.githubusercontent.com/u/46504155?v=4?s=100" width="100px;" alt="trikunai"/><br /><sub><b>trikunai</b></sub></a><br /><a href="#tool-trikunai" title="Tools">🔧</a></td>
+    </tr>
   </tbody>
 </table>
 

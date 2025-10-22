@@ -13761,6 +13761,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "trikunai",
+      "name": "trikunai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46504155?v=4",
+      "profile": "https://github.com/trikunai",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
