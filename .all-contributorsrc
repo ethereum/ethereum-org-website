@@ -13743,6 +13743,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Hunter-Plus",
+      "name": "Hunter Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29066136?v=4",
+      "profile": "https://github.com/Hunter-Plus",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
