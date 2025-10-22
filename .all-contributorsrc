@@ -13724,6 +13724,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "M3dython",
+      "name": "M3D",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68754219?v=4",
+      "profile": "https://github.com/M3dython",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
