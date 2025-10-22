@@ -47,9 +47,10 @@ export const localeToDisplayInfo = (
   // If i18nSource (fetched from `language-{locale}` in current namespace)
   // is not translated (output === englishName), or not available
   // (output === i18nKey), use the Intl.DisplayNames result as fallback
-  const sourceName = [i18nKey, englishName].includes(i18nSource)
-    ? fallbackSource
-    : i18nSource
+  const sourceName =
+    [i18nKey, englishName].includes(i18nSource) && !i18nItem.forceLocalName
+      ? fallbackSource
+      : i18nSource
 
   // Get "target" display name (Language choice displayed in that language)
   const fallbackTarget = new Intl.DisplayNames([localeOption], {
