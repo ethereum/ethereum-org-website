@@ -113,7 +113,6 @@ Pour plus d'informations, [lisez cette page Vyper](https://vyper.readthedocs.io/
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Cadres et outils de développement des Contrats intelligents pour Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - apprendre à sécuriser et à pirater les contrats intelligents Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - exemples de vulnérabilités Vyper](https://www.vyperexamples.com/reentrancy)
 - [Hub Vyper pour le développement](https://github.com/zcor/vyper-dev)
 - [Exemples des meilleurs contrats intelligents pour Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Des ressources géniales liées à Vyper](https://github.com/spadebuilders/awesome-vyper)
@@ -227,7 +226,6 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 
 - [Documentation Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Documentation Yul+](https://github.com/fuellabs/yulp)
-- [Terrain de jeu Yul+](https://yulp.fuel.sh/)
 - [Article d'introduction à Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Exemple de contrat {#example-contract-2}
@@ -322,5 +320,5 @@ Pour des comparaisons de la syntaxe de base, du cycle de vie des contrats, des i
 
 ## Complément d'information {#further-reading}
 
-- [Bibliothèque de contrats Solidity par OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Bibliothèque de contrats Solidity par OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

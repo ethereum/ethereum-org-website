@@ -275,7 +275,7 @@
   "nav-layer-2-description": "Jeftinije i brže transakcije za Ethereum",
   "nav-learn-by-coding-description": "Alati koji vam pomažu da eksperimentirate s Ethereumom",
   "nav-local-env-description": "Odaberite i postavite svoj Ethereum razvojni stog",
-  "nav-mainnet-description": "Poslovne aplikacije blok-lanca se mogu izgraditi na javnom Ethereum Mainnetu",
+  "nav-enterprise-description": "Poslovne aplikacije blok-lanca se mogu izgraditi na javnom Ethereum Mainnetu",
   "nav-nft-description": "Način da se bilo šta jedinstveno prikaže kao imovina zasnovana na Ethereumu",
   "nav-open-research-description": "Jedna od primarnih snaga Ethereuma je njegovna aktivna istraživačka zajednica",
   "nav-open-research-label": "Otvori istraživanje",
@@ -428,5 +428,8 @@
   "withdrawals": "Povlačenje uloga",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Da",
-  "zero-knowledge-proofs": "Dokazi sa nula-znanjem"
+  "zero-knowledge-proofs": "Dokazi sa nula-znanjem",
+  "ethereum-vs-bitcoin": "Ethereum protiv Bitcoina",
+  "nav-ethereum-vs-bitcoin-description": "Razumjeti razlike između Ethereuma i Bitcoina"
+
 }

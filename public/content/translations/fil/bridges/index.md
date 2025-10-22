@@ -59,9 +59,14 @@ Kung mayroon kang ETH sa Ethereum Mainnet at nais mong subukan ang isang alterna
 
 Sabihin nating gusto mong magkaroon ng native na Bitcoin (BTC), ngunit nasa Ethereum Mainnet lang ang pondo mo. Upang magkaroon ng exposure sa BTC sa Ethereum, maaari kang bumili ng Wrapped Bitcoin (WBTC). Gayunpaman, ang WBTC ay isang ERC-20 token na native sa Ethereum network. Ibig sabihin, ito ay isang bersyon ng Bitcoin sa Ethereum at hindi ang orihinal na asset sa Bitcoin blockchain. Para magkaroon ng native na BTC, kailangan mong i-bridge ang iyong mga asset sa Bitcoin mula sa Ethereum gamit ang bridge. Ibi-bridge nito ang WBTC mo at gagawin nito itong native na BTC. Puwede ring mayroon ka nang BTC at gusto mo itong gamitin sa mga Ethereum DeFi protocol. Pabaligtad ang magiging pag-bridge nito, mula sa BTC patungong WBTC na siyang magagamit bilang asset sa Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang <a href="/get-eth/">centralized exchange</a>. Gayunpaman, maliban kung nasa isang exchange na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang [centralized exchange](/get-eth/). Gayunpaman, maliban kung nasa isang exchange na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

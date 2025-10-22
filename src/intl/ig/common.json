@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Nzipụ ego dị ọnụ ala nakwa nke na-aga ngwa ngwa maka Ethereum",
   "nav-learn-by-coding-description": "Ngwaọrụ ndị na-enyere gị aka ịnwale Ethereum",
   "nav-local-env-description": "Họrọ ma hazie nzulite Ethereum stack gị",
-  "nav-mainnet-description": "Enwere ike iwulite ngwa azụmahịa blockchain na Ethereum Mainnet nke ọha",
+  "nav-enterprise-description": "Enwere ike iwulite ngwa azụmahịa blockchain na Ethereum Mainnet nke ọha",
   "nav-nft-description": "Ụzọ e ji egosipụta ihe ọbụla pụrụ iche dị ka akụ nke Ethereum",
   "nav-open-research-description": "Otu n'ime isi ike nke Ethereum di mkpa bụ obodo nyocha ya na-arụ ọrụ",
   "nav-open-research-label": "Nchọpụta mepere emepe",
@@ -431,5 +431,8 @@
   "withdrawals": "Mwepụ ego etinyere",
   "wrapped-ether": "Eta(Ether) akpụrụ na ụdị akara",
   "yes": "Ee",
-  "zero-knowledge-proofs": "Ihe akaebe ihe ọmụma efu"
+  "zero-knowledge-proofs": "Ihe akaebe ihe ọmụma efu",
+  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ghọta ndịiche dị n'etiti Ethereum na Bitcoin"
+
 }

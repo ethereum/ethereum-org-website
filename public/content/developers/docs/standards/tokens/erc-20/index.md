@@ -1,6 +1,6 @@
 ---
 title: ERC-20 Token Standard
-description:
+description: Learn about ERC-20, the standard for fungible tokens on Ethereum that enables interoperable token applications.
 lang: en
 ---
 
@@ -173,7 +173,7 @@ While it is not possible to prevent this issue with ERC-20 completely there are 
 - Always assume that ERC-20 tokens can end up in your contract even if your contract is not supposed to ever receive any. There is no way to prevent or reject accidental deposits on the recipients end. It is recommended to implement a function that would allow to extract accidentally deposited ERC-20 tokens.
 - Consider using alternative token standards.
 
-Some alternative standards have come out of this issue such as [ERC-223](/developers/docs/standards/tokens/erc-223)
+Some alternative standards have come out of this issue such as [ERC-223](/developers/docs/standards/tokens/erc-223) or [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Further reading {#further-reading}
 
@@ -186,5 +186,6 @@ Some alternative standards have come out of this issue such as [ERC-223](/develo
 ## Other fungible token standards {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)

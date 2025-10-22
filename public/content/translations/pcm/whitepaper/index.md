@@ -383,7 +383,7 @@ But, some impotant tins dey difren for real life from doz asumpshons:
 3. Di mining pawa distribushon fit end up radikaly inegalitarian in praktis.
 4. Pipol wey dey spekulate, politikal enemis and krazy pipol wey just want kause palava for di netwok dey exist, and dem fit smartly set up kontracts wia dia kost low pass di kost wey oda nodes wey dey verify dey pay.
 
-(1) dey make miner wan inklude fewer transakshons, and (2) dey inkrease `NC`; so, dis two effects dey partly kancel ish oda out.(<sup>[Hau?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> 3) and (4) na di main palava; to solve dem wi just put floating cap: nor block fit get more operashons pass `BLK_LIMIT_FACTOR` taims di long-term eksponenshal moving averaj. Spesifikally:
+(1) dey make miner wan inklude fewer transakshons, and (2) dey inkrease `NC`; so, dis two effects dey partly kancel ish oda out.(<sup>[Hau?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> 3) and (4) na di main palava; to solve dem wi just put floating cap: nor block fit get more operashons pass `BLK_LIMIT_FACTOR` taims di long-term eksponenshal moving averaj. Spesifikally:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ Di koncept of arbitrary state transishon funshon as run by di Ethereum protokol 
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Wen Mike Hearn dey tok on Smart Propaty for Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Ethereum Merkle Patricia trees](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Wen Peter Todd dey tok on Merkle sum trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_If yu wan sheck di history of di whitepaper make yu sheck [dis wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_If yu wan sheck di history of di whitepaper make yu sheck [dis wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, laik plenti komunity-driven, softwia project wey open sorse, don grow pass wen im first arrive. To learn about di latest divelopment of Ethereum, and hau dem don make shanjis to di protokol, wi rekomend [dis guide](/learn/)._

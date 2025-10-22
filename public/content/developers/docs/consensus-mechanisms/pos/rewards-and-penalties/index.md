@@ -84,7 +84,6 @@ The reward, penalty and slashing design of the consensus mechanism encourages in
 - [Incentives in Ethereum's hybrid Casper protocol](https://arxiv.org/pdf/1903.04205.pdf)
 - [Vitalik's annotated spec](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
-- [EIP-7251 Explained: Increasing Maximum Effective Balance For Validators](https://research.2077.xyz/eip-7251_Increase_MAX_EFFECTIVE_BALANCE)
 - [Analysis of slashing penalties under EIP-7251](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Sources_

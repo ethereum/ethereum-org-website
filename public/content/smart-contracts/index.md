@@ -1,6 +1,6 @@
 ---
 title: Smart contracts
-metaTitle: "Smart contracts: What are the and benefits"
+metaTitle: "Smart contracts: What are they and their benefits"
 description: A non-technical introduction to smart contracts
 lang: en
 ---
@@ -74,7 +74,7 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 - [Stablecoins](/stablecoins/)
 - [Creating and distributing unique digital assets](/nft/)
 - [An automatic, open currency exchange](/get-eth/#dex)
-- [Decentralized gaming](/apps/?category=gaming#explore)
+- [Decentralized gaming](/apps/categories/gaming)
 - [An insurance policy that pays out automatically](https://etherisc.com/)
 - [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)
 

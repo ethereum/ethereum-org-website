@@ -17,7 +17,7 @@ summaryPoint4: Nach The Merge reduzierte sich Ethereums Energieverbrauch um ~99,
 
 ## Was war die Zusammenführung? {#what-is-the-merge}
 
-Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/history/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
+Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/ethereum-forks/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Die Zusammenführung stellte den offiziellen Wechsel zur Verwendung der Beacon C
 
 Keine Historie ging bei der Zusammenführung verloren. Als Mainnet mit der Beacon Chain zusammengeführt wurde, wurde auch die gesamte Transaktionshistorie von Ethereum zusammengeführt.
 
-<InfoBanner>
-Der Übergang zu Proof-of-Stake änderte die Art und Weise wie Ether benutzt wird. Erfahren Sie mehr über <a href="/roadmap/merge/issuance/">Etherausgabe vor und nach der Zusammenführung</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Der Übergang zu Proof-of-Stake änderte die Art und Weise wie Ether benutzt wird. Erfahren Sie mehr über [Etherausgabe vor und nach der Zusammenführung](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Benutzer und Halter {#users-holders}
 
@@ -130,7 +134,7 @@ Jeder kann einen Knoten betreiben, der allerdings nicht erlaubt, andere Blöcke 
 
 Die Möglichkeit für jeden, einen eigenen Node zu betreiben, ist <em>absolut essentiell</em> zur Aufrechterhaltung der Dezentralisierung des Ethereum-Netzwerks.
 
-<a href="/run-a-node/">Mehr zum Betrieb eines eigenen Nodes</a>
+[Mehr zum Betrieb eines eigenen Nodes](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Die Gasgebühren sind ein Produkt der Netznachfrage im Verhältnis zur Netzkapazität. Der Merge veraltete den Einsatz von Proof-of-Work für den Übergang zu Proof-of-Stake als Konsens, aber keine signifikante Änderung von Parametern, die direkt Einfluss auf Netzwerk-Kapazität oder Durchsatz haben.
 
-Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a>, die Bemühungen konzentrieren sich auf die Ausweitung der Nutzeraktivitäten auf <a href="/layer-2/">Ebene 2</a>, und gleichzeitig das Ebene 1 Mainnet als sichere dezentrale Abwicklungsschicht zu etablieren, die für die Speicherung von Rollup-Daten optimiert ist und dazu beiträgt, Rollup-Transaktionen exponentiell billiger zu machen. Der Übergang zu Proof-of-Stake ist ein entscheidender Vorläufer für die Umsetzung. <a href="/developers/docs/gas/">Mehr zum Thema Gas-Kosten.</a>
+Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a>, die Bemühungen konzentrieren sich auf die Ausweitung der Nutzeraktivitäten auf [Ebene 2](/layer-2/), und gleichzeitig das Ebene 1 Mainnet als sichere dezentrale Abwicklungsschicht zu etablieren, die für die Speicherung von Rollup-Daten optimiert ist und dazu beiträgt, Rollup-Transaktionen exponentiell billiger zu machen. Der Übergang zu Proof-of-Stake ist ein entscheidender Vorläufer für die Umsetzung. [Mehr zum Thema Gas-Kosten.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Nach dem Zusammenführen hatten die Staker zunächst nur Zugriff auf Gebührenti
 
 Seit des Netzwerk-Upgrades namens Shanghai/Capella können die Staker nun einen <em>Abhebungsadresse</em> um automatische Auszahlungen von überschüssigem für Staking eingesetzten ETH zu erhalten (ETH über 32 aus Protokollbelohnungen). Mit diesem Upgrade wurde auch die Möglichkeit geschaffen, dass ein Validator sein gesamtes Guthaben beim Verlassen des Netzwerkes entsperren und zurückfordern kann.
 
-<a href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</a>
+[Mehr zu Staking-Auszahlungen](/staking/withdrawals/)
 
 </ExpandableCard>
 

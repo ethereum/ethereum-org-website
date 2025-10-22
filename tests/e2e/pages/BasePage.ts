@@ -118,7 +118,7 @@ export class BasePage {
    */
   async openLanguagePickerMobile(): Promise<void> {
     await this.mobileMenuButton.click()
-    await this.mobileSidebar.getByRole("button", { name: /languages/i }).click()
+    await this.mobileSidebar.getByTestId("mobile-menu-language-picker").click()
   }
 
   /**

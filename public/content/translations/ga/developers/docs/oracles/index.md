@@ -362,7 +362,7 @@ Ba é an cur chuige bunaidh ná feidhmeanna cripteagrafacha bréige a úsáid, m
 
 Is féidir an luach randamach as slabhra a ghiniúint agus é a sheoladh ar slabhra, ach cuireann sé sin ceanglais arda muiníne ar úsáideoirí. Caithfidh siad a chreidiúint gur gineadh an luach go fírinneach trí mheicníochtaí nach féidir a thuar agus nár athraíodh é faoi bhealach.
 
-Réitíonn oracail atá deartha le haghaidh ríomh as slabhra an fhadhb seo trí thorthaí randamacha a ghiniúint go slán as slabhra a chraolann siad ar slabhra mar aon le cruthúnais cripteagrafacha a dhearbhaíonn nach féidir an próiseas a thuar. Sampla is ea [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Feidhm Randamach Infhíoraithe), ar gineadóir uimhreacha randamacha infhíoraithe é atá cothrom agus nach féidir a chur isteach (RNG) úsáideach chun conarthaí cliste iontaofa a thógáil le haghaidh feidhmchláir a bhraitheann ar thorthaí nach féidir a thuar. Sampla eile is ea [API3 QRNG](https://docs.api3.org/explore/qrng/) a fhreastalaíonn ar ghiniúint uimhreacha randamacha Quantum (QRNG) ná modh poiblí Web3 RNG bunaithe ar fheiniméin chandamach, arna sheirbheáil le caoinchead ó Ollscoil Náisiúnta na hAstráile (ANU).
+Réitíonn oracail atá deartha le haghaidh ríomh as slabhra an fhadhb seo trí thorthaí randamacha a ghiniúint go slán as slabhra a chraolann siad ar slabhra mar aon le cruthúnais cripteagrafacha a dhearbhaíonn nach féidir an próiseas a thuar. Sampla is ea [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Feidhm Randamach Infhíoraithe), ar gineadóir uimhreacha randamacha infhíoraithe é atá cothrom agus nach féidir a chur isteach (RNG) úsáideach chun conarthaí cliste iontaofa a thógáil le haghaidh feidhmchláir a bhraitheann ar thorthaí nach féidir a thuar.
 
 ### Torthaí a fháil le haghaidh imeachtaí {#getting-outcomes-for-events}
 
@@ -400,8 +400,6 @@ Tá iliomad feidhmchlár oracal ann ar féidir leat a chomhtháthú isteach i do
 
 **[Prótacal Banna](https://bandprotocol.com/)** - _Is ardán oracail sonraí tras-slabhra é an Prótacal Banna a chomhbhailíonn agus a nascann sonraí ón bhfíorshaol agus APIanna le conarthaí cliste._
 
-**[Paralink](https://paralink.network/)** - _ Soláthraíonn Paralink ardán oracal foinse oscailte agus díláraithe le haghaidh conarthaí cliste a ritheann ar Ethereum agus blocshlabhraí tóir eile._
-
 **[Pyth Network](https://pyth.network/)** - _Is líonra oracal airgeadais céadpháirtí é an líonra Pyth atá deartha chun sonraí leanúnacha ón saol fíor a fhoilsiú ar shlabhra i dtimpeallacht dhíláraithe, dhíláraithe, agus féin-inbhuanaithe._
 
 **[API3 DAO](https://www.api3.org/)** - _Tá API3 DAO ag seachadadh réitigh oracle céadpháirtí a sheachadann trédhearcacht, slándáil agus inscálaitheacht foinse níos fearr i réiteach díláraithe le haghaidh conarthaí cliste_
@@ -417,7 +415,6 @@ Tá iliomad feidhmchlár oracal ann ar féidir leat a chomhtháthú isteach i do
 - [Oracail Dhíláraithe: forbhreathnú cuimsitheach](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Oracal Blocshlabhra a chur i bhfeidhm ar Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) - _Pedro Costa_
 - [Cén fáth nach féidir le conarthaí cliste glaonna API a dhéanamh?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [Cén fáth a dteastaíonn oracail dhíláraithe uainn](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [Mar sin ba mhaith leat oracle praghais a úsáid](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Físeáin**

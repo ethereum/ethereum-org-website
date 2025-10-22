@@ -37,7 +37,7 @@ Diese Implementierungen haben gemeinsam, dass sie alle einer einzigen Spezifikat
 - Ursprünglich wurde das [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) erstellt
 - [Ausführungsspezifikationen](https://github.com/ethereum/execution-specs/)
 - [Konsensspezifikationen](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/), die bei verschiedenen [Netzwerk-Upgrades](/history/) implementiert wurden
+- [EIPs](https://eips.ethereum.org/), die bei verschiedenen [Netzwerk-Upgrades](/ethereum-forks/) implementiert wurden
 
 ### Verfolgung von Knoten im Netzwerk {#network-overview}
 
@@ -196,7 +196,7 @@ Es gibt mehrere Konsensclients (früher als „Eth2“-Clients bekannt), die daz
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, MacOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten und weitere         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, MacOS | Beacon Chain, Goerli, Sepolia, Ropsten und weitere                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, MacOS | Beacon Chain, Goerli, Sepolia, Ropsten und weitere                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Los        | Linux, Windows, MacOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten und weitere |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Los        | Linux, Windows, MacOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten und weitere |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, MacOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten und weitere          |
 | [Grandine](https://docs.grandine.io/) (Beta)                  | Rust       | Linux, Windows, MacOS | Beacon Chain, Goerli, Sepolia und mehr                              |
 
@@ -222,7 +222,7 @@ Erfahren Sie mehr in den [Nimbus-Docs](https://nimbus.guide/)
 
 Prysm ist ein vollwertiger, open-source Konsensclient, der in Go unter der GPL-3.0-Lizenz geschrieben wurde. Er verfügt über eine optionale Webapp-UI und legt großen Wert auf Benutzerfreundlichkeit, Dokumentation und Konfigurierbarkeit sowohl für Stake-at-Home- als auch für institutionelle Benutzer.
 
-Besuchen Sie die [Prysm-Docs](https://docs.prylabs.network/docs/getting-started/), um mehr zu erfahren.
+Besuchen Sie die [Prysm-Docs](https://prysm.offchainlabs.com/docs/), um mehr zu erfahren.
 
 ### Teku {#teku}
 

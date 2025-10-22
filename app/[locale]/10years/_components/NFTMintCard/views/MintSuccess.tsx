@@ -13,7 +13,7 @@ import { getTxEtherscanUrl } from "@/lib/torch"
 
 export default function MintSuccess({ txHash }: { txHash?: string }) {
   const tweetText = encodeURIComponent(
-    "🎉 I just claimed my free 10th-Anniversary collectible NFT from ethereum.org 🔷 Celebrating a decade of open, decentralized innovation. Join me 👉 https://ethereum.org/en/10years/ #Ethereum10"
+    "🎉 I just claimed my free 10th-Anniversary collectible NFT from ethereum.org 🔷 Celebrating a decade of open, decentralized innovation. Join me 👉 https://ethereum.org/10years/ #Ethereum10"
   )
   const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`
 

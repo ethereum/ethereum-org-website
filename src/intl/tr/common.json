@@ -280,7 +280,7 @@
   "nav-history-label": "Ethereum'un teknik tarihi",
   "nav-learn-by-coding-description": "Ethereum'u denemenize yardımcı olacak araçlar",
   "nav-local-env-description": "Ethereum geliştirme yığınınızı seçin ve oluşturun",
-  "nav-mainnet-description": "Halka açık Ethereum Ana Ağı üzerinde işletme blok zinciri uygulamaları oluşturulabilir",
+  "nav-enterprise-description": "Halka açık Ethereum Ana Ağı üzerinde işletme blok zinciri uygulamaları oluşturulabilir",
   "nav-networks-home-description": "Ethereum için daha ucuz ve daha hızlı işlemler",
   "nav-networks-introduction-label": "Giriş",
   "nav-networks-introduction-description": "Ethereum, ağların ağına genişledi",
@@ -444,5 +444,8 @@
   "withdrawals": "Stake çekimleri",
   "wrapped-ether": "Sarılı Ether",
   "yes": "Evet",
-  "zero-knowledge-proofs": "Sıfır bilgili ispatlar"
+  "zero-knowledge-proofs": "Sıfır bilgili ispatlar",
+  "ethereum-vs-bitcoin": "Ethereum ve Bitcoin Karşılaştırması",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum ve Bitcoin arasındaki farkları anlayın"
+
 }

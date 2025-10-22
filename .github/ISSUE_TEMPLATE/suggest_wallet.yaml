@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there. For any required questions, please answer N/A for any questions not applicable to your wallet. This form is very comprehensive, and if you feel like you can't answer all the questions, please reach out to the wallet provider to fill out this template. 
+        Before suggesting a wallet, make sure you've read [our listing policy](https://www.ethereum.org/contributing/adding-wallets/). Only continue with the issue if the wallet meets the criteria listed there. For any required questions, please answer N/A for any questions not applicable to your wallet. This form is very comprehensive, and if you feel like you can't answer all the questions, please reach out to the wallet provider to fill out this template. 
   - type: markdown
     id: project_info
     attributes:

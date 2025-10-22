@@ -148,6 +148,14 @@ export type I18nLocale = {
   localName: string
   langDir: Direction
   dateFormat: string
+  /**
+   * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
+   *   Fallback used when locale language name matches English name.
+   *   Set to `true` in cases where the result from `Intl.DisplayName` not desired.
+   *   When enabled, ensure that the `"language-{code}"` string is available in both `en/common.json` and `{code}/common.json` files.
+   * @example Tagalog (tl) results in "Filipino", which is not desired
+   */
+  forceLocalName?: boolean
 }
 
 export type Languages = {
@@ -294,6 +302,8 @@ export type LocaleDisplayInfo = {
   englishName: string
   approvalProgress: number
   wordsApproved: number
+  progress: string
+  words: string
   isBrowserDefault?: boolean
 }
 
@@ -468,7 +478,7 @@ export type CommonHeroProps<
   /**
    * The primary title of the page
    */
-  title: string
+  title?: string
   /**
    * A tag name for the page
    */
@@ -490,10 +500,11 @@ export interface LearningTool {
   background: string
   subjects: Array<string>
   locales?: Array<Lang>
+  priceType?: string
 }
 
 export interface LearningToolsCardGridProps {
-  category: Array<LearningTool>
+  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
@@ -516,9 +527,14 @@ export type EthStakedResponse = {
   }
 }
 
-export type EpochResponse = Data<{
-  validatorscount: number
-}>
+export type EpochResponse = Data<
+  Record<"eligibleether" | "validatorscount", number>
+>
+
+export type BeaconchainEpochData = Record<
+  "totalEthStaked" | "validatorscount",
+  MetricReturnData
+>
 
 export type StakingStatsData = {
   totalEthStaked: number
@@ -722,11 +738,14 @@ export type WalletData = {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  privacy?: boolean
 }
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
+
+export type WalletRow = Wallet & { id: string }
 
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
@@ -1007,6 +1026,7 @@ export type EventCardProps = {
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  locale?: Lang
 }
 
 export type BreakpointKey = keyof typeof screens
@@ -1101,6 +1121,7 @@ export type App = {
   dateOfLaunch: string
   lastUpdated: string
   ready: string
+  devconnect: string
 }
 
 export type DefiApp = App & {
@@ -1194,7 +1215,7 @@ export type ValuesPairing = {
 export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
 
 export type PageParams = {
-  locale: string
+  locale: Lang
 }
 
 export type SlugPageParams = PageParams & {
@@ -1215,4 +1236,18 @@ export type Story = {
   twitter: string | null
   country: string | null
   date: string
+}
+
+export type SectionNavDetails = {
+  key: string
+  label: string
+  href?: string
+  icon?: React.ReactNode
+}
+
+export interface MatomoEventOptions {
+  eventCategory: string
+  eventAction: string
+  eventName: string
+  eventValue?: string
 }

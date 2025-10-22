@@ -75,7 +75,7 @@ By shifting the direction of capital away from extractive practices toward a reg
 
 ## Additional reading on ReFi
 
-- [A high-level overview of carbon currencies and their place in the economy](https://www.klimadao.finance/blog/the-vision-of-a-carbon-currency)
+- [A high-level overview of carbon currencies and their place in the economy](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
 - [The Ministry for the Future, a novel depicting the role of a carbon-backed currency in fighting climate change](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
 - [A detailed report by the Taskforce for Scaling Voluntary Carbon Markets](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
-- [Kevin Owocki and Evan Miyazono’s CoinMarketCap Glossary entry on ReFi](https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)
+- [Kevin Owocki and Evan Miyazono’s CoinMarketCap Glossary entry on ReFi](https://coinmarketcap.com/academy/glossary/regenerative-finance-refi)

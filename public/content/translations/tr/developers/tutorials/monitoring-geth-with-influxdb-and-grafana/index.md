@@ -29,7 +29,7 @@ Bir Ethereum istemcisi, kronolojik bir veri tabanı şeklinde okunabilecek çok 
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-Ayrıca InfluxDB ve Grafana ile önceden yapılandırılmış olan bir seçenek olan [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) bulunmaktadır. RPi 4 için docker ve [Ethbian OS](https://ethbian.org/index.html) kullanarak kolayca kurabilirsiniz.
+Ayrıca InfluxDB ve Grafana ile önceden yapılandırılmış olan bir seçenek olan [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) bulunmaktadır.
 
 Bu öğreticide, Geth istemcinizi bir veri tabanı oluşturmak için InfluxDB'ye ve verilerin grafik görselleştirmesini oluşturmak için Grafana'ya veri gönderecek şekilde ayarlayacağız. Bunu manuel olarak yapmak; süreci daha iyi anlamanıza, değiştirmenize ve farklı ortamlarda dağıtmanıza yardımcı olacaktır.
 

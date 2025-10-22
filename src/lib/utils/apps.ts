@@ -32,6 +32,13 @@ export const getDiscoverApps = (
   return count ? discoverApps.slice(0, count) : discoverApps
 }
 
+export const getDevconnectApps = (appsData: Record<AppCategory, AppData[]>) => {
+  const devconnectApps = Object.values(appsData)
+    .flatMap((categoryDapps) => categoryDapps)
+    .filter((app) => app.devconnect === "true")
+  return devconnectApps
+}
+
 export const APP_TAG_VARIANTS: Record<AppCategoryEnum, TagProps["status"]> = {
   [AppCategoryEnum.DEFI]: "tag",
   [AppCategoryEnum.COLLECTIBLE]: "success",

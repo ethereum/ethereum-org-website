@@ -61,14 +61,19 @@ Terwijl het energieverbruik van Ethereum zeer laag is, is er ook een substantië
 
 Web3-financieringsplatforms voor eigen publieke goederen zoals [Gitcoin](https://gitcoin.co) voeren klimaatrondes uit om milieubewust bouwen op de toepassingslaag van Ethereum te stimuleren. Door de ontwikkeling van deze initiatieven (en andere, bijv. [DeSci](/desci/)) wordt Ethereum een ecologisch en sociaal netto positieve technologie.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Als je denkt dat deze pagina nauwkeuriger kan worden gemaakt, meld dan een probleem of open een PR. De statistieken op deze pagina zijn schattingen gebaseerd op openbaar beschikbare gegevens - ze vertegenwoordigen geen officiële verklaringen of beloftes van het ethereum.org team of de Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Verder lezen {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [White House-rapport over proof-of-work blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [White House-rapport over proof-of-work blockchains](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

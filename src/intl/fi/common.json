@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Halvemmat ja nopeammat transaktiot Ethereumille",
   "nav-learn-by-coding-description": "Kokeile Ethereumin käyttöä työkaluilla",
   "nav-local-env-description": "Valitse ja luo omat Ethereum-kehitystyökalusi",
-  "nav-mainnet-description": "Julkisessa Ethereumin pääverkossa voidaan rakentaa lohkoketjusovelluksia yrityksille",
+  "nav-enterprise-description": "Julkisessa Ethereumin pääverkossa voidaan rakentaa lohkoketjusovelluksia yrityksille",
   "nav-nft-description": "Tapa esittää ainutlaatuisia asioita digitaalisena Ethereum-omaisuuseränä",
   "nav-open-research-description": "Yksi Ethereumin suurimmista vahvuuksista on sen aktiivinen tutkimusyhteisö",
   "nav-open-research-label": "Avion tutkimus",
@@ -431,5 +431,8 @@
   "withdrawals": "Panostamisen nostot",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Kyllä",
-  "zero-knowledge-proofs": "Nollatietotodistukset"
+  "zero-knowledge-proofs": "Nollatietotodistukset",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ymmärrä Ethereumin ja Bitcoinin väliset erot"
+
 }

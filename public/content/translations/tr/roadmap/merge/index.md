@@ -17,7 +17,7 @@ summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azal
 
 ## Birleşim neydi? {#what-is-the-merge}
 
-Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/history/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
+Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/ethereum-forks/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Birleşim blok üretim motoru olarak İşaret Zinciri'ne resmi geçişi temsil e
 
 Birleşim'de herhangi bir geçmiş kaybedilmedi. Ana Ağ İşaret Zinciri ile birleşti, ayrıca Ethereum'un tüm işlemsel geçmişini de birleştirdi.
 
-<InfoBanner>
-Hisse ispatına geçiş ether basım şeklini değiştirdi. <a href="/roadmap/merge/issuance/">Birleşim'den önce ve sonra ether verilmesi</a> hakkında daha fazla bilgi edinin.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Hisse ispatına geçiş ether basım şeklini değiştirdi. [Birleşim'den önce ve sonra ether verilmesi](/roadmap/merge/issuance/) hakkında daha fazla bilgi edinin.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Kullanıcılar ve sahipler {#users-holders}
 
@@ -130,7 +134,7 @@ Blok üretimi yapmayan bir düğümü çalıştırmak da mutabakat mekanizması 
 
 Herhangi bir kişinin kendi düğümünü çalıştırabilmesi Ethereum ağının merkeziyestizliğinin korunması konusu için <em>kesinlikle gereklidir</em>.
 
-<a href="/run-a-node/">Kendi kodunuzu çalıştırmanızla ilgili daha fazlası</a>
+[Kendi kodunuzu çalıştırmanızla ilgili daha fazlası](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Gaz ücretleri ağın kapasitesine bağlı olan bir ağ talebidir. Birleşim iş ispatı modasını bitirip onun yerine mutabakat için hisse ispatını getirdi, ancak hiçbir parametreyi ciddi şekilde değiştirmedi ya da ağ kapasitesini ve iş hacmini etkilemedi.
 
-Toplama merkezli bir <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">yol haritasıyla</a>, K2'deki <a href="/layer-2/">Katman 2</a>deki kullanıcı aktivitesini ölçeklendirmeye odaklanılırken, Katman 1 Ana Ağı'nı toplama işlemlerinin kat kat ucuz olmasına yardım eden bir optimize edilmiş veri deposu ve güvenli merkeziyesiz bir uzlaşma katmanı olmasını sağlıyor. Hisse ispatına geçiş bunu fark etmede öncü rol oynuyor. <a href="/developers/docs/gas/">Gaz ve ücretler hakkında daha fazlası</a>
+Toplama merkezli bir <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">yol haritasıyla</a>, K2'deki [Katman 2](/layer-2/)deki kullanıcı aktivitesini ölçeklendirmeye odaklanılırken, Katman 1 Ana Ağı'nı toplama işlemlerinin kat kat ucuz olmasına yardım eden bir optimize edilmiş veri deposu ve güvenli merkeziyesiz bir uzlaşma katmanı olmasını sağlıyor. Hisse ispatına geçiş bunu fark etmede öncü rol oynuyor. [Gaz ve ücretler hakkında daha fazlası](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Birleşim'den sonraki ilk zamanlarda, paydaşlar sadece masraf tüyolarına ve b
 
 Shangai/Capella ağ yükseltmesinden bu yana, paydaşlar herhangi bir hisse bakiyesinden artan ödemeleri alabilmek için (protokol ödüllerinden gelen 32'den fazla Ethereum) artık bir <em>para çekme adresi</em> belirleyebiliyor. Bu yükseltme aynı zamanda bir doğrulayıcının ağdan çıktıktan sonra da bakiyelerinin kilitlerini açabilmesini ve tekrar alabilmesini sağladı.
 
-<a href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazlası</a>
+[Hisseleme çekimleri hakkında daha fazlası](/staking/withdrawals/)
 
 </ExpandableCard>
 

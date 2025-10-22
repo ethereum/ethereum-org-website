@@ -39,16 +39,18 @@ const Component = ({ title, label, ...props }: ComponentProps) => {
 }
 
 /**
- * Components using `forwardRef` from the Chakra UI package
+ * Components using `forwardRef` from React
  *
- * The first argument of the generic types is the props type signature.
- *
- * For the second argument of the generic types, you are declaring the primary element type that the component will render.
- * This could be a `div`, `span`, `button`, etc. or a custom component (typeof Button) if said component is being used in the return.
+ * Use React.forwardRef when you need to forward refs to DOM elements or child components.
+ * The ref type should match the element being rendered (HTMLDivElement, HTMLButtonElement, etc.)
  */
-const Component = forwardRef<ComponentProps, "div">(
+const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
   ({ title, label, ...props }, ref) => {
-    // Component code
+    return (
+      <div ref={ref} {...props}>
+        {/* Component code */}
+      </div>
+    )
   }
 )
 ```

@@ -383,7 +383,7 @@ Mar sin féin, tá roinnt diallais thábhachtacha ann ó na boinn tuisceana sin 
 3. D'fhéadfadh go mbeadh an dáileadh cumhachta mianadóireachta go hiomlán míchothromaíoch i ndáiríre.
 4. Tá amhantraithe, naimhde polaitiúla agus na gealta a n-áirítear ina bhfeidhm fóntais díobháil a dhéanamh don líonra ann, agus is féidir leo conarthaí a chur ar bun go cliste nuair a bhíonn a gcostas i bhfad níos ísle ná an costas a íocann nóid fhíoraithe eile.
 
-(1) foráiltear claonadh sa mhianadóir níos lú idirbheart a áireamh, agus (2) méadaíonn `NC`; mar sin, cealaíonn an dá éifeacht chéile ar a laghad go páirteach.<sup>[Conas?]( https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> is iad (3) agus (4) is tábhachtaí; chun iad a réiteach ní dhéanaimid ach caidhp cothlúthaithe a bhunú: ní féidir níos mó oibríochtaí a bheith ag aon bhloc ná `BLK_LIMIT_FACTOR` an meán gluaiseachta easpónantúil fadtéarmach. Go sonrach:
+(1) foráiltear claonadh sa mhianadóir níos lú idirbheart a áireamh, agus (2) méadaíonn `NC`; mar sin, cealaíonn an dá éifeacht chéile ar a laghad go páirteach.<sup>[Conas?]( https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> is iad (3) agus (4) is tábhachtaí; chun iad a réiteach ní dhéanaimid ach caidhp cothlúthaithe a bhunú: ní féidir níos mó oibríochtaí a bheith ag aon bhloc ná `BLK_LIMIT_FACTOR` an meán gluaiseachta easpónantúil fadtéarmach. Go sonrach:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ Soláthraíonn coincheap heidhm aistrithe staide treallach mar a chuirtear i bhf
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ agus Gníomhairí Uathrialacha, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn ar Mhaoin Chliste ag Féile Turing](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Crainn Ethereum Merkle Patricia](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [Ethereum RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Crainn Ethereum Merkle Patricia](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd ar chrainn suim Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Le haghaidh stair an pháipéir bháin, féach [an vicí seo](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Le haghaidh stair an pháipéir bháin, féach [an vicí seo](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Tá Ethereum, cosúil le go leor tionscadal bogearraí foinse oscailte faoi stiúir an phobail, tar éis athrú ó bunaíodh é. Chun foghlaim faoi na forbairtí is déanaí ar Ethereum, agus conas a dhéantar athruithe ar an bprótacal, molaimid [an treoir seo](/learn/)._

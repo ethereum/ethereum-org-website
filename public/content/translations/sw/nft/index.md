@@ -54,12 +54,15 @@ NFT hutumika kwa mambo mengi, ikiwa ni pamoja na:
 
 Labda wewe ni msanii amabaye angependa kushiriki kazi yake kupitia NFT bila wewe kupoteza udhibiti ama kuwapa waamuzi faida zako. Wewe unaweza kutengeneza mkataba mpya na kuweka bayana hesabu ya NFT, vipengele vyao na kiungo chao kwa kazi mahususi ya sanaa. Kama msanii, **unaweza kuprogramu ndani ya mkataba-erevu mrabaha** unaofaa kulipwa (kwa mfano hamisha 5% ya bei ya mauzo kwa mwenye mkataba kila wakati tokeni inapohamishwa). Vile vile unaweza kuthibitisha kwamba wewe ndiwe umetengeneza NFT kwa sababu wewe ndiwe mmiliki wa [mkoba](/glossary/#wallet) iliyotuma mkataba huo. Wanunuzi wako wanaweza kuthibitisha kwa urahisi kwamba wao ndio wamiliki wa **NFT halisi** kutoka kwenye mkusanyiko wako kwa sababu pochi yao ya[anwani](/glossary/#address) ya mkoba zao inashirikishwa na tokeni kutoka kwenye mkataba wako. Wanaweza kuitumia katika mfumo wa ikologia ya Ethereum, inayoaminika kwa uhalisi wake.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chunguza, nunu au tengeneza sanaa ya NFT...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Chunguza sanaa ya NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Ama zingatia tiketi ya tukio ya mechi ijayo. Kama **mratibu wa matukio anavyoweza kuamua idadi ya tiketi za kuuza**, muundaji wa NFT anaweza kuamua idadi ya kuwepo kwa nakala za kazi yake. Wakati mwingine huwa na nakala za ziada, kama vile Tiketi 5000 za Kiingilio cha Jumla. Wakati mwingine nyingine zinachapishwa zinazofanana, ila kila moja ina tofauti ndogo na yenzake, kama vile tiketi yeneye nambari ya kiti. Hizi zinaweza kununuliwa na kuuzwa kutoka kwa mshirika mmoja mpaka kwa mwingine kusipokuwepo na ulipaji wa washikaji tiketi na wanunuzi watakuwa na uhakika wa tiketi halisi kwa kuangalia anwani ya mkataba huo.
 

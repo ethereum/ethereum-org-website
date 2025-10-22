@@ -61,14 +61,19 @@ Zatímco spotřeba energie Etherea je velmi nízká, existuje také významné, 
 
 Nativní platformy pro financování veřejných statků fungujících na principech web3, jako je [Gitcoin](https://gitcoin.co) mají i kola zaměřená na ochranu klimatu, díky čemuž stimulují ekologicky uvědomělý rozvoj na aplikační vrstvě Etherea. Prostřednictvím rozvoje těchto iniciativ (a dalších, např. [DeSci](/desci/)), se Ethereum stává environmentálně a sociálně pozitivní technologií.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Pokud si myslíte, že by tato stránka mohla být přesnější, založze prosím issue nebo PR. Statistiky na této stránce jsou odhady založené na veřejně dostupných datech – nepředstavují oficiální prohlášení nebo příslib týmu ethereum.org nebo Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Další informace {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Zpráva Bílého domu o blockchainech důkazu prací](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Zpráva Bílého domu o blockchainech důkazu prací](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emise Etherea: Souhrnný odhad](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

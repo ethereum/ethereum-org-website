@@ -1,6 +1,6 @@
 ---
 title: Online communities
-description: A listing of the grant programs throughout the Ethereum ecosystem.
+description: Discover online forums, chat rooms, and social media communities where Ethereum enthusiasts gather to discuss and collaborate.
 lang: en
 ---
 
@@ -8,27 +8,27 @@ lang: en
 
 Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
-## Listing Policy {#listing-policy}
+## Listing policy {#listing-policy}
 
 To maintain the integrity and value of the listed communities, ethereum.org follows a strict policy for determining eligibility:
 
-### Eligibility Criteria {#eligibility-criteria}
+### Eligibility criteria {#eligibility-criteria}
 
 - **Relevance**: The community must be directly related to Ethereum and its ecosystem.
-- **Activity Level**: The community should be active, with regular interactions, posts, or discussions. Dormant or inactive communities may be removed.
+- **Activity level**: The community should be active, with regular interactions, posts, or discussions. Dormant or inactive communities may be removed.
 - **Inclusivity**: The community should foster a welcoming environment that respects diversity and encourages participation from people of all backgrounds.
-- **Non-commercial Focus**: Listings are intended for community-driven spaces rather than commercial or promotional platforms.
+- **Non-commercial focus**: Listings are intended for community-driven spaces rather than commercial or promotional platforms.
 
-### Content Guidelines {#content-guidelines}
+### Content guidelines {#content-guidelines}
 
-- **Appropriate Content**: Communities must have their own moderation guidelines, avoiding spam, hate speech, harassment, or any content that promotes illegal activities.
+- **Appropriate content**: Communities must have their own moderation guidelines, avoiding spam, hate speech, harassment, or any content that promotes illegal activities.
 - **Language**: While English is the primary language, communities in other languages are encouraged to submit as long as they maintain an inclusive and respectful atmosphere.
 - **Transparency**: Clear information about the community’s purpose, rules, and moderators should be available to members.
 
-### Other Recommendations {#other-recommendations}
+### Other recommendations {#other-recommendations}
 
 - **Accessibility**: Community forums should be accessible for everyone to read without requiring a sign-up or registration.
-- **Discord Server Invites**: It is recommended that only reliable Discord server invites be added to ethereum.org. Ideally, these invites should link to a community page on the website (e.g., [ethglobal.com/discord](https://ethglobal.com/discord)) or be from an official URL (e.g., [discord.gg/ethstaker](https://discord.gg/ethstaker) or [discord.com/invite/ethstaker](https://discord.com/invite/ethstaker)).
+- **Discord server invites**: It is recommended that only reliable Discord server invites be added to ethereum.org. Ideally, these invites should link to a community page on the website (e.g., [ethglobal.com/discord](https://ethglobal.com/discord)) or be from an official URL (e.g., [discord.gg/ethstaker](https://discord.gg/ethstaker) or [discord.com/invite/ethstaker](https://discord.com/invite/ethstaker)).
 
 If you believe a community should be added or removed based on these guidelines, please [open an issue on our GitHub repository](https://github.com/ethereum/ethereum-org-website/issues).
 

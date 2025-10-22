@@ -27,7 +27,7 @@ export const LOCALES_CODES = BUILD_LOCALES
 // Site urls
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
-export const DISCORD_PATH = "/discord/"
+export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -45,8 +45,13 @@ export const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
 export const COINGECKO_API_URL_PARAMS =
   "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
-export const BASE_TIME_UNIT = 3600 // 1 hour
 export const COLOR_MODE_STORAGE_KEY = "theme"
+
+// API timing
+export const BASE_TIME_UNIT = 3600 // (seconds) 1 hour
+export const TIMEOUT_MS = 5000 // (milliseconds)
+export const MAX_RETRIES = 1
+export const RETRY_DELAY_BASE_MS = 250 // (milliseconds)
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
@@ -126,7 +131,10 @@ export const DEVELOPER_FEATURES = [
 // Chains
 export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
 
+export const CANONICAL_STAKING_TESTNET = "Hoodi"
+
 export const TESTNETS = [
+  "hoodi",
   "goerli",
   "holesky",
   "kiln",

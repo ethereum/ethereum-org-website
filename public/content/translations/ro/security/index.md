@@ -41,11 +41,14 @@ O parolă puternică nu oferă la fel de multă protecție dacă parola este dez
 
 ### Folosiți un gestionar de parole {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Folosirea unui gestionar de parole vă asigură că acesta se va ocupa de crearea de parole puternice, unice și de memorarea acestora! Vă recomandăm <strong>insistent</strong> să folosiți unul, iar majoritatea acestora sunt gratuite!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Memorarea parolelor puternice și unice pentru fiecare cont nu este o situație ideală. Un gestionar de parole, oferă o stocare sigură și criptată pentru toate parolele dvs., pe care le puteți accesa printr-o singură parolă principală unică. De asemenea, acestea sugerează parole puternice atunci când vă înscrieți la un nou serviciu, deci nu trebuie să vă creați propriile parole. Mulți gestionari de parole vă vor spune și dacă ați fost implicat într-o breșă de securitate a datelor, permițându-vă să vă schimbați parolele înainte de orice atac rău intenționat.
 
@@ -68,8 +71,10 @@ Pentru a dovedi că sunteți cu adevărat dvs., există diferite dovezi unice ca
 
 Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de securitate* suplimentar pentru conturile dvs. online, în așa fel încât numai cunoașterea parolei (ceva ce știți) nu este suficientă pentru a accesa un cont. Cel mai frecvent, al doilea factor este un cod de cifre aleatoriu, cunoscut sub numele de **parolă unică temporară (TOTP)**, care poate fi accesat cu ajutorul unei aplicații de autentificare cum ar fi Google Authenticator sau Authy. Acesta funcționează ca un factor de tipul „ceva ce dețineți”, deoarece fraza de securitate („seed”) care generează codul temporar este stocată pe dispozitivul dvs.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
      piratarea SIM (SIM jacking)
@@ -79,8 +84,9 @@ Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de sec
       Google Authenticator
     </a>
      sau <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Cheile de securitate {#security-keys}
 
@@ -204,11 +210,14 @@ Ca regulă generală, personalul nu va comunica niciodată cu dvs. prin canale p
 - nu permiteți niciodată nimănui accesul de la distanță la computerul dvs.
 - nu comunicați niciodată cu nimeni din afara canalelor oficiale autorizate de organizație
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Atenție: deși escrocheriile prin pretinsă asistență au loc pe Discord, acestea pot predomina şi pe orice aplicație de chat pe care au loc discuții despre cripto, inclusiv pe e-mail.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Înșelătorii prin phishing {#phishing-scams}
 

@@ -17,7 +17,7 @@ summaryPoint4: Spojitev je Ethereumovo porabo energijo zmanjšala za približno 
 
 ## Kaj je bila spojitev? {#what-is-the-merge}
 
-Spojitev je bila združitev izvirne izvajalne plasti Ethereuma (glavno omrežje, ki je obstajalo od [izvora](/history/#frontier)) z novo plastjo z mehanizmom za doseganje soglasja z dokazom o deležu, oddajniško verigo. Odpravila je potrebo po energijsko potratnem rudarjenju in namesto tega omogočila zaščito omrežja z zastavljanjem ETH. Predstavljala je zares vznemirljiv korak k realizaciji Ethereumove vizije – več možnosti širitve, varnosti in trajnosti.
+Spojitev je bila združitev izvirne izvajalne plasti Ethereuma (glavno omrežje, ki je obstajalo od [izvora](/ethereum-forks/#frontier)) z novo plastjo z mehanizmom za doseganje soglasja z dokazom o deležu, oddajniško verigo. Odpravila je potrebo po energijsko potratnem rudarjenju in namesto tega omogočila zaščito omrežja z zastavljanjem ETH. Predstavljala je zares vznemirljiv korak k realizaciji Ethereumove vizije – več možnosti širitve, varnosti in trajnosti.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Spojitev je predstavljala uradni premik, kjer se je oddajniška veriga začela u
 
 V spojitvi ni bil izgubljen noben del zgodovine. Ko se je glavno omrežje spojilo z oddajniško verigo, je spojilo tudi celotno Ethereumovo zgodovino transakcij.
 
-<InfoBanner>
-Ta prehod na mehanizem dokaza o deležu je spremenil način izdajanja etra. Preberite več o <a href="/roadmap/merge/issuance/">izdajanju etra pred spojitvijo in po njej</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Ta prehod na mehanizem dokaza o deležu je spremenil način izdajanja etra. Preberite več o [izdajanju etra pred spojitvijo in po njej](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Uporabniki in imetniki {#users-holders}
 

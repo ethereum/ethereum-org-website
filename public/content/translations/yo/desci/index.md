@@ -95,7 +95,6 @@ Awọn ojutu data Web3 to rorun ṣe atilẹyin awọn oju iṣẹlẹ loke ati 
 - [Molecule: Ṣe inawo ati gba owo fun awọn iṣẹ akanṣe iwadi rẹ](https://www.molecule.xyz/)
 - [VitaDAO: gba igbeowosile nipasẹ awọn adehun iwadii onigbọwọ fun iwadii igba pipe](https://www.vitadao.com/)
 - [ResearchHub: firanṣẹ abajade ijinle sayensi kan ki o ṣe ibaraẹnisọrọ pẹlu awọn ẹlẹgbẹ](https://www.researchhub.com/)
-- [LabDAO: ka puroteni sinu silico](https://alphafodl.vercel.app/)
 - [dClimate API: data ibeere oju-ọjọ ti a gba nipasẹ agbegbe alailakoso](https://www.dclimate.net/)
 - [Ajo DeSci: Ohun elo kiko irinse atejade DeSci](https://descifoundation.org/)
 - [Aye DeSci: Ile itaja kan fun awon olumulo lati wo, ni ibasepo pelu sayensi alailakoso](https://desci.world)
@@ -126,7 +125,7 @@ A gba awọn abaa fun awọn iṣẹ akanṣe tuntun lati ṣe atokọ - jọw�
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

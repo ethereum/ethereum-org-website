@@ -43,9 +43,14 @@ Lati ifilọlẹ ti adehun ifowonipamo dokowo ni Oṣu kọkanla ọdun 2020, di
 
 Pipese adirẹsi yiyọ kuro jẹ igbesẹ ti o nilo fun eyikeyi akanti olufọwọsi ṣaaju ki o le yẹ lati yọ ETH re kuro lati iinu iyoku owo rẹ.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Akanti olufọwọsi kọọkan le ṣe iyasọtọ fun adirẹsi yiyọ kuro kan nikan, ni akoko kan</strong>. Ni kete ti o ba yan adirẹsi kan ti o fi silẹ si ipele ipohunpo, eyi ko le ṣe tunṣe tabi yipada lẹẹkansi. Ṣayẹwo nini ati deede lẹẹmeji ti adirẹsi ti o pese ṣaaju fifiranṣẹ.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ko si <strong>ewu fun owo rẹ ni akoko yii</strong> fun kiko lati pese eyi, ka ba gba pe ọrọ iranileti / irugbin rẹ ti wa ni aabo ni nibiti kise ori ayelujara, ati pe ko ti ni ipalara ni eyikeyi ọna. Ikuna lati ṣafikun awọn iwe-ẹri yiyọ kuro yoo fi ETH silẹ ni titipa ninu akanti olufọwọsi bi o ti wa titi ti wa fi pese adirẹsi yiyọ kuro.
 
@@ -65,7 +70,7 @@ Awon iyọkuro owo idokowo ti wa laaye! Iṣẹ ṣiṣe yiyọ owo kuro ni a mu
 
 Igbesoke Shanghai/Capella jẹ ki ETH idokowo se gba pada si awọn akanti Ethereum deede. Eyi ti pari iyipo lori owo idokowo, o si mu Ethereum sunmọ ni igbesẹ kan lori irin-ajo rẹ si ọna kikọ ayika alailakoso to ni iduroṣinṣin, to ni imu gbooro, to ni aabo.
 
-- [Diẹ sii lori itan Etheuum](/history/)
+- [Diẹ sii lori itan Etheuum](/ethereum-forks/)
 - [Diẹ sii lori ọna afojusun Ethereum](/roadmap/)
 
 ## Bawo ni awọn sisanwo yiyọ owo kuro se n sise? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Boya olufọwọsi kan ni ẹtọ fun yiyọ kuro tabi rara jẹ ipinnu nipasẹ
 
 Nigbati a ba ṣeto olufọwọsi kan lati gbero bulọọku atẹle, o nilo lati kọ itotelera yiyọ kuro, ti o to awọn yiyọkuro to yẹ 16. Eyi ni a ṣe nipasẹ ibẹrẹ ti o bẹrẹ pẹlu itọka olufọwọsi 0, ipinnu boya yiyọkuro ti o yẹ fun akanti yii ni ibamu si awọn ofin ti ilana naa, ati ṣafikun rẹ si itotelera to ba wa. Ofọwọsi naa to ṣeto lati daba awọn bulooku wọnyi yoo gbe nibi ti eyi to kẹhin ti duro, lilọsiwaju ninu eto titilai.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Ronu nipa aago alafọwọyi. Ọwọ ti o wa lori aago tọka si wakati naa, nlọsiwaju ni itọsọna kan, ko fo awọn wakati eyikeyi, ati nikẹhin yoo yika si ibẹrẹ lẹẹkansi lẹhin to de nọmba ti o kẹhin.<br/><br/>
 Bayi dipo 1 si 12, fojuinu wo pe aago naa ni 0 si N <em>(apapọ nọmba awọn akanti olufọwọsi ti o ti forukọsilẹ tẹlẹ lori ipele ipohunpo, ju 500,000 ni Jan 2023).</em><br/><br/> 
 Ọwọ lori aago tọka si olufọwọsi atẹle ti o nilo lati ṣayẹwo fun awọn yiyọ kuro to yẹ. O bẹrẹ ni 0, o si tẹsiwaju ni gbogbo ọna yika laisi fifo eyikeyi awọn akanti. Nigbati ti o de olufọwọsi to kẹhin, iyipo naa tẹsiwaju pada lati ibẹrẹ.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Ṣiṣayẹwo akanti kan fun awọn yiyọ kuro {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ti o ba jẹ ara ti <a href="/staking/pools/">akojopo idokowo</a> kan tabi mu awọn token idokowo dani, o yẹ ki o ṣayẹwo pẹlu olupese rẹ fun awọn alaye diẹ sii nipa bi a ṣe n ṣakoso awọn yiyọkuro idokowo, nitori iṣẹ kọọkan n ṣiṣẹ ni ona otooto.
+Ti o ba jẹ ara ti [akojopo idokowo](/staking/pools/) kan tabi mu awọn token idokowo dani, o yẹ ki o ṣayẹwo pẹlu olupese rẹ fun awọn alaye diẹ sii nipa bi a ṣe n ṣakoso awọn yiyọkuro idokowo, nitori iṣẹ kọọkan n ṣiṣẹ ni ona otooto.
 
-Ni gbogbogbo, awọn olumulo yẹ ki o ni ominira lati gba ETH ti wọn fi dokowo pada, tabi yi olupese idokowo ti wọn yoo lo pada. Ti akojopo idokowo kan pato ba n tobi ju, a le gba awọn owo jade, rà pada, ati tun idokowo ṣe pẹlu <a href="https://rated.network/">olupese ti o kere ju</a>. Tabi, ti o ba ti ko ETH jo to o le ṣe <a href="/staking/solo/">idokowo lati ile</a>.
+Ni gbogbogbo, awọn olumulo yẹ ki o ni ominira lati gba ETH ti wọn fi dokowo pada, tabi yi olupese idokowo ti wọn yoo lo pada. Ti akojopo idokowo kan pato ba n tobi ju, a le gba awọn owo jade, rà pada, ati tun idokowo ṣe pẹlu <a href="https://rated.network/">olupese ti o kere ju</a>. Tabi, ti o ba ti ko ETH jo to o le ṣe [idokowo lati ile](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Rara. Ni kete ti olufọwọsi kan ba ti jade ati pe o ti yọ owo to ku re kuro
 
 - [Àwọn yiyọkúrò Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Eip-4895: Beacon chain push withdrawals as operations](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

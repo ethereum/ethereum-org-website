@@ -29,7 +29,7 @@ It is using [create-react-app](https://github.com/facebook/create-react-app) und
 
 ### React & create-react-app {#react--create-react-app}
 
-First of all the heart of the app: React and all the additional features coming with _create-react-app_. Only using this is a great option if you do not want to integrate Ethereum. [React](https://reactjs.org/) itself makes building interactive UI's really easy. It may not be as beginner-friendly as [Vue](https://vuejs.org/), but it is still mostly used, has more features and most importantly thousands of additional libraries to choose from. The _create-react-app_ makes it really easy to start with it as well and includes:
+First of all the heart of the app: React and all the additional features coming with _create-react-app_. Only using this is a great option if you do not want to integrate Ethereum. [React](https://react.dev/) itself makes building interactive UI's really easy. It may not be as beginner-friendly as [Vue](https://vuejs.org/), but it is still mostly used, has more features and most importantly thousands of additional libraries to choose from. The _create-react-app_ makes it really easy to start with it as well and includes:
 
 - React, JSX, ES6, TypeScript, Flow syntax support.
 - Language extras beyond ES6 like the object spread operator.
@@ -38,7 +38,7 @@ First of all the heart of the app: React and all the additional features coming 
 - A live development server that warns about common mistakes.
 - A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
 
-The _create-eth-app_ in particular is making use of the new [hooks effects](https://reactjs.org/docs/hooks-effect.html). A method to write powerful, yet very small so-called functional components. See below section about Apollo for how they are used in _create-eth-app_.
+The _create-eth-app_ in particular is making use of the new [hooks effects](https://legacy.reactjs.org/docs/hooks-effect.html). A method to write powerful, yet very small so-called functional components. See below section about Apollo for how they are used in _create-eth-app_.
 
 ### Yarn Workspaces {#yarn-workspaces}
 
@@ -46,7 +46,7 @@ The _create-eth-app_ in particular is making use of the new [hooks effects](http
 
 ### ethers.js {#ethersjs}
 
-While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
+While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs.ethers.org/v5/) which is almost out of beta.
 
 ### The Graph {#the-graph}
 
@@ -78,7 +78,7 @@ On top you can choose from several different templates. So far you can use an Aa
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) is a decentralized money lending market. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow using collaterals. One unique feature of Aave are those [flash loans](https://docs.aave.com/developers/guides/flash-loans) which allow you to borrow money without any collateral, as long as you return the loan within one transaction. This can be useful for example for giving you extra cash on arbitrage trading.
+[Aave](https://aave.com/) is a decentralized money lending market. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow using collaterals. One unique feature of Aave are those [flash loans](https://aave.com/docs/developers/flash-loans) which allow you to borrow money without any collateral, as long as you return the loan within one transaction. This can be useful for example for giving you extra cash on arbitrage trading.
 
 Traded tokens that earn you interests are called _aTokens_.
 
@@ -102,4 +102,4 @@ Unfortunately, at the time of this writing the integration is only for Uniswap v
 
 ## What's next? {#whats-next}
 
-If you have questions about _create-eth-app_, go to the [Sablier community server](https://discord.gg/bsS8T47), where you can get in touch with the authors of _create-eth-app_. As some first next steps you might want to integrate a UI framework like [Material UI](https://material-ui.com/), write GraphQL queries for the data that you actually need and setup the deployment.
+If you have questions about _create-eth-app_, go to the [Sablier community server](https://discord.gg/bsS8T47), where you can get in touch with the authors of _create-eth-app_. As some first next steps you might want to integrate a UI framework like [Material UI](https://mui.com/material-ui/), write GraphQL queries for the data that you actually need and setup the deployment.

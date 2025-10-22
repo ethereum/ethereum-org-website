@@ -34,7 +34,7 @@ Buka bahasa yang ingin Anda terjemahkan untuk melihat daftar file yang tersedia 
 
 Konten situs web dibagi menjadi beberapa dokumen dan ember konten. Anda dapat memeriksa kemajuan setiap dokumen di sebelah kanan – jika kemajuan terjemahan di bawah 100%, silakan berkontribusi!
 
-Tidak melihat bahasa Anda tercantum? [Buat isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](/discord/) kami
+Tidak melihat bahasa Anda tercantum? [Buat isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](https://discord.gg/ethereum-org) kami
 
 ![File yang telah diterjemahkan atau belum diterjemahkan di Crowdin](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Ingin mempelajari selengkapnya? Jangan ragu untuk memeriksa [dokumentasi tentang
 
 Setelah Anda menyelesaikan terjemahan (yaitu, semua file untuk satu kelompok konten menunjukkan 100%), layanan terjemahan profesional kami akan meninjau (dan mungkin mengedit) konten tersebut. Setelah peninjauan selesai (yaitu kemajuan peninjauan sudah 100%), kami akan menambahkannya ke situs web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Harap tidak menggunakan terjemahan mesin untuk menerjemahkan proyek tersebut. Semua terjemahan akan ditinjau sebelum ditambahkan ke situs web. Jika terjemahan yang Anda sarankan ternyata merupakan terjemahan mesin, terjemahan tersebut akan ditolak dan kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Hubungi kami {#get-in-touch}
 
-Ada pertanyaan? Atau ingin berkolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](/discord/) kami
+Ada pertanyaan? Atau ingin berkolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](https://discord.gg/ethereum-org) kami
 
 Anda juga dapat menghubungi kami di translations@ethereum.org
 

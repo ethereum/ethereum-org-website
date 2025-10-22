@@ -188,6 +188,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/enterprise/",
           text: t("enterprise-mainnet"),
         },
+        {
+          href: "/founders/",
+          text: t("founders"),
+        },
       ],
     },
     {
@@ -251,7 +255,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-roadmap-security-label"),
         },
         {
-          href: "/history/",
+          href: "/ethereum-forks/",
           text: t("nav-history-label"),
         },
         {
@@ -323,6 +327,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           variant="outline"
           isSecondary
           onClick={() => scrollIntoView("body")}
+          data-testid="footer-go-to-top"
         >
           <ChevronUp /> <Translation id="go-to-top" />
         </Button>

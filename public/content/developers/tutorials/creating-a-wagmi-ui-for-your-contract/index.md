@@ -95,7 +95,7 @@ The application is going inside [a `React.StrictMode` component](https://react.d
     <WagmiConfig config={config}>
 ```
 
-The application is also inside [a `WagmiConfig` component](https://wagmi.sh/react/WagmiConfig). [The wagmi (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the viem library](https://viem.sh/) for writing an Ethereum decentralized application.
+The application is also inside [a `WagmiConfig` component](https://wagmi.sh/react/api/WagmiProvider). [The wagmi (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the viem library](https://viem.sh/) for writing an Ethereum decentralized application.
 
 ```tsx
       <RainbowKitProvider chains={chains}>
@@ -134,7 +134,7 @@ This is the standard way to create a React component - define a function that is
   const { isConnected } = useAccount()
 ```
 
-Here we use [`useAccount`](https://wagmi.sh/react/hooks/useAccount) to check if we are connected to a blockchain through a wallet or not.
+Here we use [`useAccount`](https://wagmi.sh/react/api/hooks/useAccount) to check if we are connected to a blockchain through a wallet or not.
 
 By convention, in React functions called `use...` are [hooks](https://www.w3schools.com/react/react_hooks.asp) that return some kind of data. When you use such hooks, not only does your component get the data, but when that data changes the component is re-rendered with the updated information.
 
@@ -501,7 +501,7 @@ export { chains }
 
 ### Adding another blockchain {#add-blockchain}
 
-These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
+These days there are a lot of [L2 scaling solution](/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
 1. Import the `defineChain` type from viem.
 
@@ -580,3 +580,6 @@ Of course, you don't really care about providing a user interface for `Greeter`.
 1. You can [add Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
 
 Now go and make your contracts usable for the wide world.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

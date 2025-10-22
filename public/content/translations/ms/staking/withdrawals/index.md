@@ -43,9 +43,14 @@ Sebelum naik taraf Shanghai/Capella, anda tidak boleh menggunakan atau mengakses
 
 Menyediakan alamat pengeluaran adalah langkah yang diperlukan untuk mana-mana akaun pengesah sebelum ia layak untuk mengeluarkan ETH daripada bakinya.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Setiap akaun pengesah hanya boleh diberikan satu alamat pengeluaran, sekali sahaja.</strong> Setelah alamat dipilih dan diserahkan ke lapisan persetujuan, ini tidak boleh dibuat asal atau ditukar lagi. Periksa semula pemilikan dan ketepatan alamat yang diberikan sebelum menyerahkan.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <strong>Tiada ancaman kepada dana anda buat sementara waktu</strong> kerana tidak menyediakannya, dengan mengandaikan frasa mnemonik/benih anda kekal selamat di luar talian dan tidak terjejas dalam apa jua cara. Kegagalan untuk menambah bukti kelayakan pengeluaran hanya akan membiarkan ETH terkunci dalam akaun pengesah seperti yang berlaku sehingga alamat pengeluaran diberikan.
 
@@ -65,7 +70,7 @@ Pengeluaran pertaruhan disiarkan secara langsung! Fungsi pengeluaran telah di da
 
 Peningkatan Shanghai/Capella membolehkan ETH yang dipertaruhkan sebelum ini dituntut semula ke dalam akaun Ethereum biasa. Ini menutup gelung kecairan pertaruhan, dan membawa Ethereum selangkah lebih dekat dalam perjalanannya ke arah membina ekosistem teragih yang mampan, berskala dan selamat.
 
-- [Lagi mengenai sejarah Ethereum](/history/)
+- [Lagi mengenai sejarah Ethereum](/ethereum-forks/)
 - [Lagi mengenai hala tuju Ethereum](/roadmap/)
 
 ## Bagaimanakah pembayaran pengeluaran berfungsi? {#how-do-withdrawals-work}
@@ -82,10 +87,15 @@ Lihat penjelasan ini mengenai pengeluaran pertaruhan Ethereum oleh Finematics:
 
 Apabila pengesah dijadualkan untuk mencadangkan blok seterusnya, ia dikehendaki membina baris gilir pengeluaran, sehingga 16 pengeluaran yang layak. Ini dilakukan dengan asalnya bermula dengan indeks pengesah 0, menentukan sama ada terdapat pengeluaran yang layak untuk akaun ini mengikut peraturan protokol dan menambahkannya pada baris giliran, jika ada. Pengesah yang ditetapkan untuk mencadangkan blok berikut akan bersambung di tempat terakhir berhenti, maju mengikut urutan secara kekal.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Fikirkan tentang jam analog. Jarum pada jam menunjukkan jam, bergerak ke satu arah, tidak melangkau sebarang jam dan akhirnya berputar ke permulaan semula selepas nombor terakhir dicapai.<br/><br/> Sekarang bukannya 1 hingga 12, bayangkan jam mempunyai 0 hingga N <em>(jumlah bilangan akaun pengesah yang pernah didaftarkan pada lapisan persetujuan, lebih 500,000 pada Januari 2023).</em><br/><br/>
 Tangan pada jam menunjukkan kepada pengesah seterusnya yang perlu disemak untuk pengeluaran yang layak. Ia bermula pada 0, dan terus maju tanpa melangkau sebarang akaun. Apabila pengesah terakhir dicapai, kitaran diteruskan kembali pada permulaan.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Menyemak akaun untuk pengeluaran {#checking-an-account-for-withdrawals}
 
@@ -152,9 +162,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jika anda adalah sebahagian daripada <a href="/staking/pools/">himpunan pertaruhan</a> atau memegang token pertaruhan, anda harus menyemak dengan pembekal anda untuk mendapatkan butiran lanjut tentang cara pengeluaran pertaruhan dikendalikan, kerana setiap perkhidmatan beroperasi secara berbeza.
+Jika anda adalah sebahagian daripada [himpunan pertaruhan](/staking/pools/) atau memegang token pertaruhan, anda harus menyemak dengan pembekal anda untuk mendapatkan butiran lanjut tentang cara pengeluaran pertaruhan dikendalikan, kerana setiap perkhidmatan beroperasi secara berbeza.
 
-Secara umum, pengguna harus bebas untuk menuntut semula ETH yang mereka pertaruhkan, atau menukar penyedia pertaruhan yang mereka gunakan. Jika himpunan tertentu menjadi terlalu besar, dana boleh dikeluarkan, ditebus dan dipertaruhkan semula dengan <a href="https://rated.network/">pembekal yang lebih kecil</a>. Atau, jika anda telah mengumpul ETH yang mencukupi, anda boleh membuat <a href="/staking/solo/">pertaruhan dari rumah</a>.
+Secara umum, pengguna harus bebas untuk menuntut semula ETH yang mereka pertaruhkan, atau menukar penyedia pertaruhan yang mereka gunakan. Jika himpunan tertentu menjadi terlalu besar, dana boleh dikeluarkan, ditebus dan dipertaruhkan semula dengan <a href="https://rated.network/">pembekal yang lebih kecil</a>. Atau, jika anda telah mengumpul ETH yang mencukupi, anda boleh membuat [pertaruhan dari rumah](/staking/solo/).
 
 </ExpandableCard>
 
@@ -211,7 +221,6 @@ Tidak. Sebaik sahaja pengesah telah keluar dan baki penuhnya telah dikeluarkan, 
 
 - [Pengeluaran Pad Pelancaran Pertaruhan](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Rantai Beacon menolak pengeluaran sebagai operasi](https://eips.ethereum.org/EIPS/eip-4895)
-- [Pengembala Kucing Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pengeluaran ETH dipertaruhkan (Pengujian) dengan Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Rantai Beacon menolak pengeluaran sebagai operasi dengan Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Memahami Baki Berkesan Pengesah](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -34,7 +34,7 @@ In order to create a digital signature for use on Ethereum-based blockchains, yo
 
 Your Ethereum account (i.e., your externally-owned account/EOA) has a private key associated with it, and this is the private key that’s typically used when a website or dapp asks you for a signature (e.g., for “Log in with Ethereum”).
 
-An app can [verify a signature](https://docs.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
+An app can [verify a signature](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
 
 > In fact, because EOA digital signatures use public-key cryptography, they can be generated and verified **offchain**! This is how gasless DAO voting works — instead of submitting votes onchain, digital signatures can be created and verified offchain using cryptographic libraries.
 

@@ -61,14 +61,19 @@ Bagama't napakaliit ng kinokonsumong enerhiya ng Ethereum, mayroon ding mahalaga
 
 Ang mga public goods funding platform na native sa Web3 tulad ng [Gitcoin](https://gitcoin.co) ay nagsasagawa ng mga climate round upang isulong ang makakalikasan na paggawa sa application layer ng Ethereum. Sa pamamagitan ng paggawa ng mga inisyatibang ito (at iba pa, hal. [DeSci](/desci/)), ang Ethereum ay nagiging isang teknolohiyang may positibong epekto sa kapaligiran at lipunan.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Kung sa tingin mo ay mas mapapatumpak pa ang page na ito, maghain ng isyu o pull request (PR). Ang stats sa page na ito ay mga pagtatantya batay sa data na available sa publiko - hindi kumakatawan ang mga ito sa isang opisyal na pahayag o pangako mula sa ethereum.org team, o sa Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Karagdagang pagbabasa {#further-reading}
 
 - [Mga Indise ng Sustainable Network ng Cambridge Blockchain](https://ccaf.io/cbnsi/ethereum)
-- [Ulat mula sa White House tungkol sa mga blockchain na patunay ng gawain](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Ulat mula sa White House tungkol sa mga blockchain na patunay ng gawain](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

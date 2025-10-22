@@ -43,9 +43,14 @@ Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH 
 
 Fournir une adresse de retrait est une étape requise pour tout compte de validateur avant d'être admissible à un retrait d'ETH sur son solde.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Chaque compte de validateur ne peut se voir attribué qu'une seule adresse de retrait.</strong> Une fois qu'une adresse est choisie et soumise à la couche de consensus, elle ne peut pas être annulée ou modifiée à nouveau. Vérifiez la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Le fait de ne pas fournir cette adresse ne pose <strong>aucun danger pour vos fonds pendant ce temps</strong>, à condition que votre phrase mnémonique/de récupération soit restée en sécurité hors-ligne, et n'ait été compromise d'aucune façon. Ne pas ajouter d’identifiants de retrait laissera simplement l’ETH verrouillé sur le compte du validateur tel qu'il était jusqu'à jusqu’à ce qu’une adresse de retrait soit fournie.
 
@@ -65,7 +70,7 @@ Les retraits de staking sont disponibles ! La fonction de retrait a été activ�
 
 La mise à niveau Shanghai/Capella a permis de récupérer de l'Ether précédemment mis en jeu vers un compte Ethereum standard. Cela a fermé la boucle de la liquidité mise en jeu, et a fait avancer Ethereum sur son chemin de construction d'un écosystème durable, évolutif, sûr et décentralisé.
 
-- [En savoir plus sur l'histoire d'Ethereum](/history/)
+- [En savoir plus sur l'histoire d'Ethereum](/ethereum-forks/)
 - [En savoir plus sur la feuille de route d'Ethereum](/roadmap/)
 
 ## Comment fonctionnent les paiements de retraits ? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Consultez cette explication de Finematics sur les retraits de staking d'Ethereum
 
 Lorsqu'un validateur doit proposer le bloc suivant, il est tenu de constituer une file d'attente de retraits, pouvant aller jusqu'à 16 retraits éligibles. Pour ce faire, on commence par l'index 0 du validateur, on détermine s'il existe un retrait éligible pour ce compte selon les règles du protocole et on l'ajoute à la file d'attente si tel est le cas. Le validateur configuré pour proposer le bloc suivant reprendra là où le précédent s'est arrêté, progressant dans l'ordre indéfiniment.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Pensez à une horloge analogique. L'aiguille de l’horloge pointe vers l’heure, progresse dans une direction, ne saute pas d’heures, et finit par revenir au début après que le dernier nombre est atteint.<br/><br/>
 Maintenant au lieu de 1 à 12, imaginez que l'horloge a 0 à N <em>(le nombre total de comptes de validateur qui ont déjà été enregistrés sur la couche de consensus, plus de 500 000 en janvier 2023).</em><br/><br/>
 L'aiguille de l’horloge pointe vers le prochain validateur qui doit être vérifié pour les retraits éligibles. Il commence à 0 et progresse tout autour sans sauter de compte. Lorsque le dernier validateur est atteint, le cycle reprend au début.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Vérification des retraits sur un compte {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Si vous faites partie d'un <a href="/staking/pools/">groupe d'enjeux</a> ou si vous détenez des jetons de mise en jeu, vous devez vous renseigner auprès de votre fournisseur pour savoir comment les retraits de mise en jeu sont gérés, car chaque service fonctionne différemment.
+Si vous faites partie d'un [groupe d'enjeux](/staking/pools/) ou si vous détenez des jetons de mise en jeu, vous devez vous renseigner auprès de votre fournisseur pour savoir comment les retraits de mise en jeu sont gérés, car chaque service fonctionne différemment.
 
-En général, les utilisateurs sont censés être libres de récupérer leur ETH sous-jacent mis en jeu, ou de changer le fournisseur de mise en jeu qu'ils utilisent. Si un groupe particulier devient trop important, les fonds peuvent être retirés, rachetés, et remisés auprès d'un <a href="https://rated.network/">fournisseur plus petit</a>. Ou, si vous avez accumulé suffisamment d'ETH, vous pouvez <a href="/staking/solo/">miser depuis chez vous</a>.
+En général, les utilisateurs sont censés être libres de récupérer leur ETH sous-jacent mis en jeu, ou de changer le fournisseur de mise en jeu qu'ils utilisent. Si un groupe particulier devient trop important, les fonds peuvent être retirés, rachetés, et remisés auprès d'un <a href="https://rated.network/">fournisseur plus petit</a>. Ou, si vous avez accumulé suffisamment d'ETH, vous pouvez [miser depuis chez vous](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Non. Une fois qu'un validateur est sorti et que son solde total a été retiré,
 
 - [Retraits de la plateforme de lancement de la mise en jeu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895 : la chaîne phare signale les retraits comme des opérations](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94 : Retrait de l'ETH misé (Testing) avec Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68 : EIP-4895 : Retraits de la chaîne de balises en tant qu'opérations avec Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Comprendre le Solde Effectif du Validateur](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -43,9 +43,14 @@ A Shanghai/Capella frissítés előtt nem lehetett használni vagy elérni ezt a
 
 A visszavonási cím megadása szükséges ahhoz, hogy a validátorszámla egyenlegéből ETH visszavonás történjen.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Minden validátorszámlához egyszer, egyetlen visszavonási cím adható meg.</strong> Amint ezt a címet kiválasztották és elküldték a konszenzus rétegnek, nem lehet visszahívni vagy megváltoztatni. Ellenőrizze le a cím tulajdonosát és pontosságát, mielőtt elküldi azt.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Eközben <strong>a pénzeszközöket nem fenyegeti veszély</strong>, ha nem adja meg a címet, feltéve, hogy a mnemonikus/kulcsmondat biztonságban van offline, és nincs kitéve veszélynek. Amíg nem tudja megadni a visszavonási adatokat, addig az ETH egyszerűen a validátorszámlán marad.
 
@@ -65,7 +70,7 @@ A letétek visszavonása elérhető! A funkcionalitást a Shanghai/Capella friss
 
 Ennek következtében a korábban letétbe helyezett ETH-t vissza lehet vonni a normális Ethereum-számlákra. Ez lezárta a letétek likviditásának témáját, és az Ethereumot egy lépéssel közelebb vitte a céljához, ami egy fenntartható, skálázható, biztonságot, decentralizált ökoszisztéma.
 
-- [Bővebben az Ethereum történetéről](/history/)
+- [Bővebben az Ethereum történetéről](/ethereum-forks/)
 - [Bővebben az Ethereum fejlesztési terveiről](/roadmap/)
 
 ## Hogyan működik a visszavonási kifizetés? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Nézze meg az Ethereum letétvisszavonásról szóló magyarázatát a Finematic
 
 Amikor egy adott validátor be van ütemezve, hogy a következő blokkot ő fogja javasolni, akkor készítenie kell egy 16 tételből álló visszavonási listát. Kezdve a 0 validátorindexel, meghatározza, hogy az adott számla a protokoll szabályai szerint visszavonásra jogosult-e, és ha igen, akkor beteszi a listába. A validátorcsoport ott száll be, ahol az előző abbahagyta és a végtelenségig folytatja.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Képzeljen el egy analóg módon működő órát. Az óramutató egy irányba halad és sorban végigmegy minden számon, majd miután elérte az utolsó számot, visszaér a kezdőpontra. <br/><br/>
 Tegyük fel 1–12 helyett 0-n található <em>(ahol n a validátor számlák teljes száma, amelyek a konszenzus rétegen regisztrálva lettek; több mint 500 000 2023. januárjában).</em><br/><br/>
 Az óramutató a következő validátorra mutat, hogy leellenőrizze azt visszavonás szempontjából. A 0-nál kezdi és végigmegy az összes számlán. Amikor eléri az utolsó validátort, akkor a ciklus újra elindul.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### A számlák ellenőrzése visszavonási szempontból {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ha Ön <a href="/staking/pools/">letéti alapokat</a> vagy letéti tokeneket használ, ellenőrizze a szolgáltatójával, hogy hogyan kezelik a letétvisszavonást, mivel minden szolgáltatás másképp működik.
+Ha Ön [letéti alapokat](/staking/pools/) vagy letéti tokeneket használ, ellenőrizze a szolgáltatójával, hogy hogyan kezelik a letétvisszavonást, mivel minden szolgáltatás másképp működik.
 
-Általánosságban a felhasználók szabadon visszavehetik a letétbe helyezett ETH-t vagy lecserélhetik a letéti szolgáltatójukat. Ha egy adott letéti alap túl nagy méretű lesz, akkor a pénzeszközöket ki lehet venni belőle és újra le lehet kötni egy <a href="https://rated.network/">kisebb szolgáltatóval</a>. Ha pedig elég ETH gyűlt össze, akkor Ön<a href="/staking/solo/">otthonról is végezhet letétbe helyezést</a>.
+Általánosságban a felhasználók szabadon visszavehetik a letétbe helyezett ETH-t vagy lecserélhetik a letéti szolgáltatójukat. Ha egy adott letéti alap túl nagy méretű lesz, akkor a pénzeszközöket ki lehet venni belőle és újra le lehet kötni egy <a href="https://rated.network/">kisebb szolgáltatóval</a>. Ha pedig elég ETH gyűlt össze, akkor Ön[otthonról is végezhet letétbe helyezést](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Nem. Miután egy validátor kilépett, és a teljes egyenlegét kivette, az adot
 
 - [Staking Launchpad visszavonások](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-lánc operációs műveletként intézi a visszavonásokat](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: A letétbe helyezett ETH visszavonása (tesztelés) – Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon lánc operációs műveletként intézi a visszavonásokat – Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [A validátor valós egyenlegének megértése](https://www.attestant.io/posts/understanding-validator-effective-balance/)

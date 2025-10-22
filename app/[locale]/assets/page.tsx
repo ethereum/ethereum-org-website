@@ -5,21 +5,19 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AssetsPage from "./_components/assets"
+import AssetsJsonLD from "./page-jsonld"
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: Lang }>
-}) {
-  const { locale } = await params
+export default async function Page({ params }: { params: PageParams }) {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -28,19 +26,29 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/assets")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "assets",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <AssetsPage />
-    </I18nProvider>
+    <>
+      <AssetsJsonLD locale={locale} contributors={contributors} />
+      <I18nProvider locale={locale} messages={messages}>
+        <AssetsPage />
+      </I18nProvider>
+    </>
   )
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-assets" })
 

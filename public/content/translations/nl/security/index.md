@@ -122,11 +122,14 @@ Als algemene regel zal het personeel nooit met u communiceren via privé- en nie
 - Sta nooit iemand op afstand toegang toe tot uw computer
 - Communiceer nooit buiten de aangewezen kanalen van een organisatie
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Pas op: hoewel support scams vaak gebeuren op Discord, kunnen ze ook voorkomen in chatprogramma's waar discussie over crypto plaatsvindt, inclusief e-mail.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 'Eth2'-tokenscam {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ Een sterk wachtwoord dat openbaar is gemaakt bij een datalek, is niet langer een
 
 ### Gebruik een wachtwoordbeheerder {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Het gebruik van een wachtwoordbeheerder zorgt voor het maken van sterke, unieke wachtwoorden en het onthouden van deze wachtwoorden! Wij raden <strong>sterk</strong> aan om er een te gebruiken, de meeste zijn gratis!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Het onthouden van sterke, unieke wachtwoorden voor elk account dat u heeft is niet ideaal. Een wachtwoordbeheerder biedt een veilige en versleutelde opslag voor al uw wachtwoorden waartoe u via één sterk hoofdwachtwoord toegang kunt verkrijgen. Ze suggereren ook sterke wachtwoorden bij het aanmelden voor een nieuwe service, zodat u uw eigen wachtwoord niet hoeft te maken. Veel wachtwoordbeheerders zullen u ook vertellen of u betrokken bent geweest bij een gegevenslek, waarna ze u uw wachtwoord laten wijzigen voordat er kwaadwillige aanvallen kunnen plaatsvinden.
 
@@ -240,11 +246,14 @@ Soms word je gevraagd je identiteit te verifiëren met unieke bewijzen. Deze sta
 
 Met behulp van **twee-factor-authenticatie (2FA)** zorg je voor een extra *beveiligingsfactor* voor je online accounts. Met 2FA zorg je ervoor dat je met alleen je wachtwoord niet meer toegang krijgt tot een account. Meest gebruikelijk is de tweede factor een willekeurige 6-cijferige code, bekend als een **tijdsgebaseerd eenmalig wachtwoord (TOTP)**, waartoe u toegang heeft via een verificatie-app zoals Google Authenticator of Authy. Deze werken als een "iets dat u bezit"-factor, omdat de seed die de tijdcode genereert op uw apparaat is opgeslagen.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Opmerking: het gebruik van SMS-gebaseerde 2FA is gevoelig voor <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM-jacking</a> en is niet veilig. Voor de beste beveiliging gebruik je een service als <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> of <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Beveiligingssleutels {#security-keys}
 

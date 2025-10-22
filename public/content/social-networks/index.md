@@ -65,22 +65,58 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### Farcaster {#farcaster}
+
+[Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
+
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
-- **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
+- **[Status.app](https://status.app/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
+- **[Ethereum Follow Protocol](https://efp.app/)** - _Ethereum Follow Protocol is a fully decentralized onchain social graph for Ethereum accounts, advancing the vision of a modular Ethereum identity stack, complementing ENS and SIWE._
+- **[Ethereum Comments Protocol](https://www.ethcomments.xyz/)** - _A new, programmable social content primitive on Ethereum to put your thoughts onchain._
 
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
 [Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also exploring or have experimented with integrating Ethereum into their infrastructure:
 
-### Reddit {#reddit}
+### Brave Browser {#brave}
 
-- Reddit previously experimented with **Community Points**, which were ERC-20 tokens users could earn by posting quality content and contributing to specific online communities (subreddits). Users could redeem these tokens within a subreddit for exclusive perks or trade them. For this project, Reddit utilized Arbitrum Nova, a [layer 2](/glossary/#layer-2) network designed to scale Ethereum transactions.
-- The program was notably active in the r/CryptoCurrency subreddit with its "Moons" and the r/FortNiteBR subreddit with its "Bricks". Because these tokens were on the blockchain, they were independent of Reddit once claimed into a user's [wallet](/glossary/#wallet).
-- However, **Reddit [sunsetted the Community Points program](https://www.reddit.com/r/CryptoCurrency/comments/17a33ql/reddit_is_officially_deprecating_community_points/) in late 2023**, citing scalability and resource challenges. While the tokens still exist on the blockchain, Reddit no longer actively supports or integrates them into its platform features.
+- Brave has integrated the **[Basic Attention Token (BAT)](https://basicattentiontoken.org/)**, an ERC-20 token built on Ethereum, into its browser ecosystem to revolutionize digital advertising and content creator support.
+
+- The **[Brave Rewards program](https://brave.com/brave-rewards/)** allows users to earn BAT by viewing privacy-respecting ads and then automatically contribute to websites and content creators across various platforms like YouTube, Twitter, and GitHub based on attention time.
+
+- Content creators can register as **[Brave verified creators](https://creators.brave.com/)** to receive these contributions directly to their Ethereum wallets, creating a bridge between traditional web platforms and blockchain-based monetization.
+
+- BAT tokens exist independently on the Ethereum blockchain, allowing users to transfer them to personal wallets or exchanges once earned.
+
+### Audius Music Platform {#audius}
+
+- **[Audius](https://audius.co/)** is a music streaming platform that uses Ethereum blockchain technology to connect artists directly with fans.
+
+- The platform features a hybrid decentralized architecture where content is stored on IPFS while utilizing blockchain for ownership rights and the **[AUDIO token](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**.
+
+- Audius has established a **[partnership with TikTok](https://audius.co/tiktok)**, bringing Web3 functionality to mainstream audiences and allowing artists to monetize their content through blockchain technology.
+
+- The platform's technical details are available in their **[whitepaper](https://whitepaper.audius.co/)**, showing how they've built upon Ethereum's infrastructure.
+
+### Sorare Fantasy Sports {#sorare}
+
+- **[Sorare](https://sorare.com/)** is a **[fantasy sports platform built on Ethereum](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)** that allows users to collect, trade, and play with official NFT player cards.
+
+- Player cards are verifiable NFTs on the Ethereum blockchain, and the platform's smart contracts can be viewed on **[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)**.
+
+- Sorare combines traditional fantasy sports gameplay with blockchain ownership of digital assets, bringing **[Ethereum to fund](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** functionality to mainstream sports fans.
+
+### Twitter/X (Crypto Tipping) {#twitter}
+
+**[Twitter](x.com)** (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
+
+- **Crypto Tipping**: The platform has integrated **[Ethereum tipping](https://help.x.com/en/using-x/tips)**, enabling users to send payments via Ethereum-based wallets like Strike.
+
+By integrating blockchain features, X is bridging the gap between Web2 social experiences and decentralized digital ownership.
 
 ## Further reading {#further-reading}
 

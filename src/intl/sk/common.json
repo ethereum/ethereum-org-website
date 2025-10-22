@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Lacnejšie a rýchlejšie transakcie pre Ethereum",
   "nav-learn-by-coding-description": "Nástroje, ktoré vám pomôžu experimentovať s Ethereom",
   "nav-local-env-description": "Výber a nastavenie vývojárskeho Ethereum stack",
-  "nav-mainnet-description": "Podnikové blockchainové aplikácie môžu byť vytvárané vo verejnej sieti Ethereum Mainnet",
+  "nav-enterprise-description": "Podnikové blockchainové aplikácie môžu byť vytvárané vo verejnej sieti Ethereum Mainnet",
   "nav-nft-description": "Spôsob, ako reprezentovať čokoľvek unikátne ako majetok založený na Ethereu",
   "nav-open-research-description": "Jednou z hlavných predností Etherea je jeho aktívna komunita výskumníkov",
   "nav-open-research-label": "Otvoriť prieskum",
@@ -431,5 +431,8 @@
   "withdrawals": "Výber stakingu",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Áno",
-  "zero-knowledge-proofs": "Dôkaz nulovou znalosťou"
+  "zero-knowledge-proofs": "Dôkaz nulovou znalosťou",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Pochopte rozdiely medzi Ethereom a Bitcoinom"
+
 }

@@ -41,7 +41,7 @@ lang: zh-tw
 
 - [權益證明簡介](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG 說明](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG 說明](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper 論文](https://arxiv.org/abs/2003.03052)
 
 #### 近期研究 {#recent-research}
@@ -83,7 +83,7 @@ lang: zh-tw
 1. 能夠追蹤區塊鏈頭部、廣播區塊以及處理共識邏輯的共識用戶端
 2. 支援以太坊虛擬機和執行交易及智慧型合約的執行用戶端
 
-查看 [節點及用戶端頁面](/developers/docs/nodes-and-clients/) 以獲得關於節點和用戶端的詳細資訊，以及所有目前用戶端實作的清單。 你也可以在 [歷史紀錄頁面](/history/) 找到以太坊的所有升級的歷史紀錄。
+查看 [節點及用戶端頁面](/developers/docs/nodes-and-clients/) 以獲得關於節點和用戶端的詳細資訊，以及所有目前用戶端實作的清單。 你也可以在 [歷史紀錄頁面](/ethereum-forks/) 找到以太坊的所有升級的歷史紀錄。
 
 ### 執行用戶端 {#execution-clients}
 
@@ -224,7 +224,7 @@ lang: zh-tw
 
 #### 背景介紹讀物 {#background-reading-9}
 
-- [穩健激勵群組](https://ethereum.github.io/rig/)
+- [穩健激勵群組](https://rig.ethereum.org/)
 - [Devconnect 上的 ETHconomics 研討會](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### 近期研究 {#recent-research-9}
@@ -307,7 +307,7 @@ lang: zh-tw
 
 #### 近期研究 {#recent-research-14}
 
-- [穩健激勵群組資料分析](https://ethereum.github.io/rig/)
+- [穩健激勵群組資料分析](https://rig.ethereum.org/)
 
 ## 應用程式和工具 {#apps-and-tooling}
 

@@ -54,12 +54,15 @@ NFTs são utilizados para diversos fins, incluindo:
 
 Você talvez seja um artista que deseja compartilhar seu trabalho usando NFTs, sem perder o controle e sacrificar seus lucros para intermediários. Você pode criar um novo contrato e especificar o número de NFTs, as propriedades e um link para um trabalho artístico específico. Como artista, ** você pode programar em um contrato inteligente** os "royalties" que você deve receber (por exemplo, 5% do valor da venda estipulado pelo proprietário sempre que um NFT for transferido). Você também pode provar que criou de fato o NFT, porque você é quem detém a [carteira](/glossary/#wallet) que implantou o contrato. Os compradores podem facilmente provar que eles são donos de um ** NFT autêntico** da sua coleção porque os [endereços](/glossary/#address) da carteira deles está associado com o token do seu contrato inteligente. Eles podem usá-lo em todo o ecossistema Ethereum, com certeza da autenticidade.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Conheça a arte NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Ou, por exemplo, considere um ingresso para um evento esportivo. Assim como o **organizador de um evento pode escolher quantos ingressos vai vender**, o criador de um NFT pode decidir quantas cópias existem. Às vezes, são réplicas exatas, como 5 mil ingressos de acesso geral. Por vezes, são mintados diversos ingressos muito semelhantes, mas cada um ligeiramente diferente, como um ingresso com um assento designado. Esses podem ser comprados e vendidos de pessoa para pessoa sem pagar intermediários de ingressos, e o comprador sempre tem a garantia da autenticidade do ingresso ao verificar o endereço do contrato.
 

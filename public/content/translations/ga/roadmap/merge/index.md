@@ -17,7 +17,7 @@ summaryPoint4: Laghdaigh an Cumasc tomhaltas fuinnimh Ethereum faoi ~99.95%.
 
 ## Cad a bhí  i gceist leis An Cumasc? {#what-is-the-merge}
 
-Ba é an Cumasc an ciseal forghníomhaithe bunaidh de Ethereum (an Mainnet atá ann ó [genesis](/history/#frontier)) lena ciseal comhaontaithe cruthúnais-gheallta nua, an Slabhra Beacon. Chuir sé deireadh leis an ngá atá le mianadóireacht dhian ar fhuinneamh agus ina ionad sin chuir sé ar chumas an líonra a dhaingniú le ETH geallta. Ba chéim fíor-spreagúil é chun fís Ethereum a fhíorú - níos mó roinnte, slándála agus inbhuanaitheachta.
+Ba é an Cumasc an ciseal forghníomhaithe bunaidh de Ethereum (an Mainnet atá ann ó [genesis](/ethereum-forks/#frontier)) lena ciseal comhaontaithe cruthúnais-gheallta nua, an Slabhra Beacon. Chuir sé deireadh leis an ngá atá le mianadóireacht dhian ar fhuinneamh agus ina ionad sin chuir sé ar chumas an líonra a dhaingniú le ETH geallta. Ba chéim fíor-spreagúil é chun fís Ethereum a fhíorú - níos mó roinnte, slándála agus inbhuanaitheachta.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ B'ionann an Cumasc agus an t-athrú oifigiúil go dtí an Slabhra Beacon a úsá
 
 Níor cailleadh aon stair in An Cumasc. De réir mar a chumasc Mainnet leis an Slabhra Beacon, chomhcheangail sé stair idirbheartaíochta iomlán Ethereum freisin.
 
-<InfoBanner>
-D'athraigh an t-aistriú seo go dtí cruthúnas-gheallta n bealach a eisítear éitear. Foghlaim tuilleadh faoi <a href="/roadmap/merge/issuance/">eisiúint éitear roimh An Cumasc agus ina dhiaidh</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+D'athraigh an t-aistriú seo go dtí cruthúnas-gheallta n bealach a eisítear éitear. Foghlaim tuilleadh faoi [eisiúint éitear roimh An Cumasc agus ina dhiaidh](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Úsáideoirí agus sealbhóirí {#users-holders}
 
@@ -130,7 +134,7 @@ Is féidir le duine ar bith faoi cheachtar meicníocht chomhthoil (cruthúnas oi
 
 Is <em>ríthábhachtach</em> an cumas do dhuine ar bith a bheith in ann a nód féin a reáchtáil chun cosaint a dhéanamh ar dhílárú líonra Ethereum.
 
-<a href="/run-a-node/">Tuilleadh faoi do nód féin a rith</a>
+[Tuilleadh faoi do nód féin a rith](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Is táirge ar éileamh líonra iad táillí gáis i gcoibhneas le hacmhainn an ghréasáin. Níor cháin an Cumasc úsáid cruthúnais oibre, ag aistriú go cruthúnais-gheallta i leith comhdhearcadh, ach níor athraigh sé go suntasach aon pharaiméadair a mbíonn tionchar díreach aige ar acmhainn nó ar thréchur an líonra.
 
-Le <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">treochlár rollú-lárnach</a>, tá iarrachtaí á ndíriú ar ghníomhaíocht úsáideoirí a scálaiú ag <a href="/layer-2/">ciseal 2</a>, agus ciseal 1 Mainnet á chumasú mar chiseal socraíochta díláraithe slán optamaithe le haghaidh stóráil sonraí rollta chun cabhrú le hidirbhearta rollta suas a dhéanamh go heaspónantúil níos saoire. Is réamhtheachtaí ríthábhachtach é an t-aistriú go cruthúnais i leith é seo a bhaint amach. <a href="/developers/docs/gas/">Tuilleadh faoi ghás agus táillí.</a>
+Le <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">treochlár rollú-lárnach</a>, tá iarrachtaí á ndíriú ar ghníomhaíocht úsáideoirí a scálaiú ag [ciseal 2](/layer-2/), agus ciseal 1 Mainnet á chumasú mar chiseal socraíochta díláraithe slán optamaithe le haghaidh stóráil sonraí rollta chun cabhrú le hidirbhearta rollta suas a dhéanamh go heaspónantúil níos saoire. Is réamhtheachtaí ríthábhachtach é an t-aistriú go cruthúnais i leith é seo a bhaint amach. [Tuilleadh faoi ghás agus táillí.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Ar dtús tar éis An Cumasc, ní fhéadfadh geallsealbhóirí rochtain a fháil 
 
 Ó uasghrádú líonra Shanghai/Capella, is féidir le geallsealbhóirí <em>seoladh aistarraingthe</em> a ainmniú anois chun tús a chur le híocaíochtaí uathoibríocha a fháil ar aon iarmhéid gealltanais barrachais (ETH os cionn 32 ó luaíochtaí prótacail). Chuir an t-uasghrádú seo ar chumas an bhailitheoir, freisin, a iarmhéid iomlán a dhíghlasáil agus a éileamh ar ais ón líonra.
 
-<a href="/staking/withdrawals/">Tuilleadh maidir le haistarraingtí geallta</a>
+[Tuilleadh maidir le haistarraingtí geallta](/staking/withdrawals/)
 
 </ExpandableCard>
 

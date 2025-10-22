@@ -47,7 +47,7 @@ DeFi imkoniyatlarini ko‘rishning eng yaxshi usullaridan biri bugungi kunda mav
 | Bozorlar doim ochiq.                                                                                                     | Bozorlar yopiladi, chunki xodimlar tanaffus qilishi kerak.                                                                                                 |
 | Shaffoflikka asoslangan - har kim mahsulot ma’lumotlarini ko‘rib chiqishi va tizim qanday ishlashini tekshirishi mumkin. | Moliyaviy muassasalar yopiq kitoblarga o‘xshaydi: siz ularning kredit tarixi, boshqariladigan aktivlari va boshqalarni ko‘rishni so‘rashingiz mumkin emas. |
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   DeFi ilovalari bilan tanishing
 </ButtonLink>
 
@@ -63,12 +63,15 @@ Ethereum bunga asoslanadi. Xuddi bitcoin singari, qoidalar sizda o‘zgarmaydi v
 
 Bu g‘alati eshitiladi... “nima uchun men o‘z pulimni dasturlashni xohlayman?” Biroq, bu Ethereum tokenlarining birlamchi xususiyatidir. Har kim mantiqni to‘lovlarga dasturlashi mumkin. Shunday qilib, siz bitcoin nazorati va xavfsizligini moliyaviy institutlar tomonidan taqdim etiladigan xizmatlar bilan aralashtirib olishingiz mumkin. Bu sizga kriptovalyutalar bilan bitcoin bilan qila olmaydigan narsalarni, masalan, kredit va qarz olish, to‘lovlarni rejalashtirish, indeks fondlariga sarmoya kiritish va boshqalarni amalga oshirish imkonini beradi.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Agar Ethereumʼda yangi boʻlsangiz, DeFi ilovalari uchun tavsiyalarimiz bilan tanishing.</div>
-  <ButtonLink href="/apps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     DeFi ilovalari bilan tanishing
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## DeFi bilan nima qilish mumkin? {#defi-use-cases}
 
@@ -92,7 +95,7 @@ Aksariyat moliyaviy xizmatlarga markazlashmagan muqobil mavjud. Ammo Ethereum bu
 
 Blokcheyn sifatida Ethereum tranzaksiyalarni xavfsiz va global tarzda yuborish uchun mo‘ljallangan. Bitcoin singari, Ethereum ham butun dunyo bo‘ylab pul yuborishni elektron pochta yuborish kabi osonlashtiradi. Qabul qiluvchining [ENS nomini](/glossary/#ens) (masalan, bob.eth) yoki uning hisob manzilini hamyoningizdan kiriting va to‘lovingiz bir necha daqiqada (odatda) to‘g‘ridan-to‘g‘ri unga tushadi. To‘lov yuborish yoki qabul qilish uchun sizga [hamyon](/wallets/) kerak bo‘ladi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Toʻlov dapplariga qarang
 </ButtonLink>
 
@@ -123,7 +126,7 @@ Markazlashmagan provayderlardan pul qarz olishning ikkita asosiy turi mavjud.
 - Peer-to-peer, ya’ni qarz oluvchi to‘g‘ridan-to‘g‘ri muayyan qarz beruvchidan qarz oladi.
 - Qarz beruvchilar qarz olishlari mumkin bo‘lgan fondga mablag‘ (likvidlik) taqdim etadigan fondga asoslangan.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Qarz olish dapplariga qarang
 </ButtonLink>
 
@@ -185,7 +188,7 @@ Kriptoga kredit berib, real vaqt rejimida mablag‘laringiz o‘sishini kuzatish
 - Sizning aDaiʼngiz foiz stavkalariga qarab oshadi va balansingiz hamyoningizda oshayotganini ko‘rishingiz mumkin. [APR](/glossary/#apr)ga qarab, bir necha kun yoki hatto soatdan keyin hamyoningiz balansi 100,1234 ga yaqin narsani o‘qiydi!
 - Istalgan vaqtda aDai balansingizga teng miqdordagi oddiy Daiʼni yechib olishingiz mumkin.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Qarz berish haqida batafsil
 </ButtonLink>
 
@@ -213,7 +216,7 @@ Ethereumʼda minglab tokenlar mavjud. Markazlashmagan birjalar (DEX) sizga istal
 
 Masalan, agar siz yo‘qotishlarsiz lotereya PoolTogetherʼdan (yuqorida tavsiflangan) foydalanishni xohlasangiz, sizga Dai yoki USDC kabi token kerak bo‘ladi. Bu DEXlar ETH kartangizni o‘sha tokenlarga almashtirish va tugatgandan keyin orqaga qaytish imkonini beradi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Token ayirboshlashga qarang
 </ButtonLink>
 
@@ -225,7 +228,7 @@ Biroz ko‘proq nazoratni yoqtiradigan treyderlar uchun yanada ilg‘or variantl
 
 Agar siz markazlashgan birjadan foydalansangiz, aktivlaringizni savdodan oldin depozitga qo‘yishingiz va ularga g‘amxo‘rlik qilish uchun ishonishingiz kerak. Aktivlaringiz depozit qilinganda, ular risk ostida bo‘ladi, chunki markazlashgan birjalar xakerlar uchun jozibador nishon hisoblanadi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Savdo dapplariga qarang
 </ButtonLink>
 
@@ -237,7 +240,7 @@ Ethereum’da siz tanlagan strategiya asosida portfelingizni oshirishga harakat 
 
 [DeFi Pulse Index fondi (DPI)](https://defipulse.com/blog/defi-pulse-index/) bunga yaxshi misol bo‘la oladi. Bu portfelingiz har doim bozor kapitallashuvi bo‘yicha eng yaxshi DeFi tokenlarini o‘z ichiga olishini ta’minlash uchun avtomatik ravishda qayta balanslanadigan fonddir. Siz hech qachon hech qanday tafsilotlarni boshqarishingiz shart emas va istalgan vaqtda fonddan pul olishingiz mumkin.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Investitsiya dapplariga qarang
 </ButtonLink>
 
@@ -251,7 +254,7 @@ Ethereum kraudfanding uchun ideal platformadir:
 - Bu shaffof, shuning uchun mablag‘ yig‘uvchilar qancha mablag‘ yig‘ilganini isbotlashi mumkin. Hatto keyingi bosqichda mablag‘lar qanday sarflanishini kuzatishingiz mumkin.
 - Mablag‘ yig‘uvchilar, masalan, muayyan muddat va minimal miqdor bajarilmasa, pulni avtomatik qaytarishni sozlashi mumkin.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Kraudfanding dapplariga qarang
 </ButtonLink>
 
@@ -280,7 +283,7 @@ Markazlashmagan sug‘urta sug‘urtani arzonroq, tezroq to‘lash va shaffofroq
 
 Ethereum mahsulotlari, har qanday dasturiy ta’minot kabi, xatolar va ekspluatatsiyadan aziyat chekishi mumkin. Shunday qilib, hozirda ko‘plab sug‘urta mahsulotlari o‘z foydalanuvchilarini mablag‘ yo‘qotishlaridan himoya qilishga qaratilgan. Biroq, hayot bizga berishi mumkin bo‘lgan hamma narsani qamrab olishni boshlagan loyihalar mavjud. Bunga yaxshi misol sifatida Keniyadagi kichik fermerlarni qurg‘oqchilik va suv toshqinidan himoya qilish uchun [“Etherisc Crop Cover” ni keltirish mumkin](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Markazlashmagan sug‘urta ko‘pincha an’anaviy sug‘urta narxidan past bo‘lgan fermerlar uchun arzonroq qoplamni ta’minlashi mumkin.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Sug‘urta dapplarini koʻrish
 </ButtonLink>
 
@@ -290,7 +293,7 @@ Ethereum mahsulotlari, har qanday dasturiy ta’minot kabi, xatolar va ekspluata
 
 Shuncha ishlar bilan siz barcha investitsiyalar, kreditlar va savdolaringizni kuzatib borishingiz kerak bo‘ladi. Barcha DeFi faoliyatingizni bir joydan muvofiqlashtirish imkonini beruvchi ko‘plab mahsulotlar mavjud. Bu DeFi ochiq arxitekturasining go‘zalligidir. Jamoalar interfeys yaratishi mumkin, unda siz nafaqat mahsulotlar bo‘yicha balanslaringizni ko‘ra olmaysiz, balki ularning funksiyalaridan ham foydalanishingiz mumkin. Bu DeFi bilan ko‘proq tanishish uchun foydali bo‘lishi mumkin.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Porfel dapplariga qarang
 </ButtonLink>
 
