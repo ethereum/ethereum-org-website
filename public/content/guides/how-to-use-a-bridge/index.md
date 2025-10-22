@@ -10,7 +10,7 @@ If there is a lot of traffic on Ethereum, it can become expensive. One solution 
 
 **Prerequisite:** 
 
-- have a crypto wallet, you can follow this tutorial: [How to create an Ethereum account](/guides/how-to-create-an-ethereum-account/)
+- have a crypto wallet—if you don't, follow this guide to [create an Ethereum account](/guides/how-to-create-an-ethereum-account/)
 - add funds to your wallet
 
 ## 1. Determine which layer 2 network you want to use
@@ -39,7 +39,7 @@ Review the amount that you will get in return on the layer 2 network and the fee
 
 ## 5. Confirm the transaction in your wallet
 
-You will have to pay a fee in form of ETH for processing the transaction.
+You will have to pay a fee (called [gas](/glossary/#gas)) in form of ETH for processing the transaction.
 
 ![Common interface for bridging tokens](./bridge3.png)
 
@@ -52,12 +52,15 @@ This process should not take more than 10 minutes.
 You can use [chainlist.org](http://chainlist.org) to find the network's RPC details. Once the network is added and transaction finished, you should see the tokens in your wallet.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Frequently asked questions
 

@@ -9,14 +9,19 @@ template: roadmap
 
 Az Ethereum skálázása a [layer 2s](/layer-2/#rollups) második blokkláncréteg (L2), vagy más néven összevont tranzakciók által történik, ami kötegbe rendezi a tranzakciókat és az eredményt beküldi az Ethereumra. Habár az összevont tranzakciók költsége a nyolcada az Ethereum főhálózaténak, még mindig van hova optimalizálni a működésüket és ezzel csökkenteni a felhasználók költségét. A összevont tranzakciók emellett néhány centralizált komponensre támaszkodnak, amelyet a fejlesztők eltávolíthatnak majd, ahogy az összevont tranzakciók fejlődik.
 
-<InfoBanner mb={8} title="Tranzakciós költség">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Tranzakciós költség
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Ma az összevont tranzakciók <strong>kb. 5–20×</strong> olcsóbbak, mint az Ethereum L1</li>
     <li>A ZK összevont tranzakciók esetében hamarosan <strong>~40–100×</strong> alacsonyabb lesz a díj</li>
     <li>Az eljövendő Ethereum-módosítások további <strong>~100–1000×</strong>-szoros skálázást tesznek lehetővé</li>
     <li style={{ marginBottom: 0 }}>A felhasználók számára egy tranzakció <strong>kevesebb mint 0,001 $-ba</strong> fog kerülni</li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Az adatok olcsóbbá tétele {#making-data-cheaper}
 

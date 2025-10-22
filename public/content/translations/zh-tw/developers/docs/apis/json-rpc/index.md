@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 目前網路 ID 的完整清單可在 [chainlist.org](https://chainlist.org) 上找到。 一些常用的如下：
 
 - `1`：以太坊主網
-- `5`：Goerli 測試網
 - `11155111`：Sepolia 測試網
+- `17000`：Hoodi 測試網
 
 **範例**
 
@@ -1771,3 +1771,4 @@ web3.sha3("Print(uint256)")
 - [Javascript 應用程式介面](/developers/docs/apis/javascript/)
 - [後端應用程式介面](/developers/docs/apis/backend/)
 - [執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)
+

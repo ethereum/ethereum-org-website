@@ -17,7 +17,7 @@ summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,
 
 ## Apa itu Penggabungan? {#what-is-the-merge}
 
-Penggabungan adalah penyatuan lapisan eksekusi asli Ethereum (Jaringan Utama yang telah ada sejak [genesis](/history/#frontier)) dengan lapisan konsensus bukti taruhan baru, Rantai Suar. Ini menghilangkan kebutuhan akan penambangan yang boros energi dan sebagai gantinya memungkinkan jaringan untuk diamankan menggunakan ETH yang dipertaruhkan. Ini adalah langkah yang sangat menarik dalam mewujudkan visi Ethereum - skalabilitas, keamanan, dan keberlanjutan yang lebih baik.
+Penggabungan adalah penyatuan lapisan eksekusi asli Ethereum (Jaringan Utama yang telah ada sejak [genesis](/ethereum-forks/#frontier)) dengan lapisan konsensus bukti taruhan baru, Rantai Suar. Ini menghilangkan kebutuhan akan penambangan yang boros energi dan sebagai gantinya memungkinkan jaringan untuk diamankan menggunakan ETH yang dipertaruhkan. Ini adalah langkah yang sangat menarik dalam mewujudkan visi Ethereum - skalabilitas, keamanan, dan keberlanjutan yang lebih baik.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Penggabungan ini merupakan peralihan resmi untuk menggunakan Rantai Suar sebagai
 
 Tidak ada sejarah yang hilang dalam Penggabungan. Ketika Jaringan Utama bergabung dengan Rantai Suar, Jaringan Utama juga menggabungkan seluruh sejarah transaksi Ethereum.
 
-<InfoBanner>
-Transisi ke bukti taruhan ini mengubah cara penerbitan ether. Pelajari lebih lanjut tentang <a href="/roadmap/merge/issuance/">pengeluaran ether sebelum dan setelah Penggabungan</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Transisi ke bukti taruhan ini mengubah cara penerbitan ether. Pelajari lebih lanjut tentang [pengeluaran ether sebelum dan setelah Penggabungan](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Pengguna dan pemegang {#users-holders}
 
@@ -130,7 +134,7 @@ Menjalankan simpul yang tidak memproduksi blok memungkinkan bagi siapa pun di ba
 
 Kemampuan bagi siapa pun untuk menjalankan simpul mereka sendiri adalah <em>mutlak penting</em> untuk menjaga desentralisasi jaringan Ethereum.
 
-<a href="/run-a-node/">Lebih lanjut tentang menjalankan simpul Anda sendiri</a>
+[Lebih lanjut tentang menjalankan simpul Anda sendiri](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. Penggabungan tidak lagi menggunakan bukti kerja, beralih ke bukti taruhan untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas atau keluaran jaringan.
 
-Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta perjalanan berbasis rollup</a>, upaya difokuskan pada penskalaan aktivitas pengguna di <a href="/layer-2/">lapisan ke-2</a>, sambil memungkinkan Jaringan Utama lapisan ke-1 sebagai lapisan penyelesaian terdesentralisasi yang aman yang dioptimalkan untuk penyimpanan data rollup untuk membantu membuat transaksi rollup menjadi jauh lebih murah secara eksponensial. Transisi ke bukti taruhan merupakan langkah awal yang penting untuk mewujudkan hal ini. <a href="/developers/docs/gas/">Lebih lanjut tentang gas dan biaya.</a>
+Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta perjalanan berbasis rollup</a>, upaya difokuskan pada penskalaan aktivitas pengguna di [lapisan ke-2](/layer-2/), sambil memungkinkan Jaringan Utama lapisan ke-1 sebagai lapisan penyelesaian terdesentralisasi yang aman yang dioptimalkan untuk penyimpanan data rollup untuk membantu membuat transaksi rollup menjadi jauh lebih murah secara eksponensial. Transisi ke bukti taruhan merupakan langkah awal yang penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Awalnya setelah Penggabungan, para staker hanya dapat mengakses tip biaya dan ME
 
 Sejak upgrade jaringan Shanghai/Capella, para staker sekarang dapat menunjuk alamat <em>penarikan</em> untuk mulai menerima pembayaran otomatis dari saldo penaruhan berlebihan (ETH di atas 32 dari imbalan protokol). Upgrade ini juga memungkinkan kemampuan bagi validator untuk membuka kunci dan mengklaim seluruh saldo saat keluar dari jaringan.
 
-<a href="/staking/withdrawals/">Lebih lanjut tentang penarikan staking</a>
+[Lebih lanjut tentang penarikan staking](/staking/withdrawals/)
 
 </ExpandableCard>
 

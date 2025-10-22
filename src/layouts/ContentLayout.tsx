@@ -1,22 +1,32 @@
 import type { HTMLAttributes } from "react"
 
+import { FileContributor } from "@/lib/types"
+
 import FeedbackCard from "@/components/FeedbackCard"
-import LeftNavBar, { LeftNavBarProps } from "@/components/LeftNavBar"
+import FileContributors from "@/components/FileContributors"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
+import TableOfContents, {
+  type TableOfContentsProps,
+} from "@/components/TableOfContents"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
-  Pick<LeftNavBarProps, "dropdownLinks" | "tocItems" | "maxDepth"> & {
+  Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {
     children: React.ReactNode
+    tocItems: TableOfContentsProps["items"]
     heroSection: React.ReactNode
+    contributors: FileContributor[]
+    lastEditLocaleTimestamp: string
   }
 
 export const ContentLayout = ({
   children,
   dropdownLinks,
   tocItems,
-  maxDepth,
+  showDropdown = true,
   heroSection,
+  contributors,
+  lastEditLocaleTimestamp,
   ...props
 }: ContentLayoutProps) => {
   return (
@@ -24,19 +34,26 @@ export const ContentLayout = ({
       {heroSection}
 
       <Page>
-        <LeftNavBar
-          className="max-lg:hidden"
+        <TableOfContents
+          items={tocItems}
           dropdownLinks={dropdownLinks}
-          tocItems={tocItems}
-          maxDepth={maxDepth}
+          maxDepth={0}
+          showDropdown={showDropdown}
+          variant="left"
         />
-
         <ContentContainer>
           {children}
+
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
           <FeedbackCard />
         </ContentContainer>
-
-        {dropdownLinks && <MobileButtonDropdown list={dropdownLinks} />}
+        {showDropdown && dropdownLinks && (
+          <MobileButtonDropdown list={dropdownLinks} />
+        )}
       </Page>
     </div>
   )

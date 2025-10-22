@@ -156,19 +156,6 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Óránkénti árazás
     - Közvetlen, napi 24 órás támogatás a hét minden napján
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Dokumentáció](https://docs.figment.io/)
-  - Jellemzők
-    - Ingyenes opció 3 000 000 havi lekéréssel
-    - RPC- és WSS-végpontok
-    - Dedikált teljes és archív csomópontok
-    - Automatikus méretezhetőség (mennyiségi kedvezmények)
-    - Ingyenes archív adatok
-    - Szolgáltatáselemzések
-    - Vezérlőpult
-    - Közvetlen, napi 24 órás támogatás a hét minden napján
-    - Fizetési lehetőség kriptóban (vállalat)
-
 - [**DRPC**](https://drpc.org/)
   - [Dokumentáció](https://docs.drpc.org/)
   - Jellemzők
@@ -226,7 +213,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Több mint 500 adminisztratív és szolgáltatói API
     - RESTful-interfész az Ethereum-tranzakciók beküldésére (Apache Kafka támogatott)
     - Kimenő adatfolyamok esemény-végrehajtáshoz (Apache Kafka támogatott)
-    - Kimerítő láncon kívüli adatok és kiegészítő szolgáltatások (pl. kétoldalú titkosított üzentátadás)
+    - Kimerítő láncon kívüli adatok és kiegészítő szolgáltatások (pl. kétoldalú titkosított üzenetátadás)
     - Egyértelmű becsatlakozás a hálózatba irányítással és szerepkör szerinti hozzáféréskontroll
     - Szofisztikált felhasználókezelés az adminisztrátorok és a végfelhasználók felé is
     - Nagy mértékben skálázható, rugalmas, vállalati szintű infrastruktúra

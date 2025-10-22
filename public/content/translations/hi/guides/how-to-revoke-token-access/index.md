@@ -20,7 +20,6 @@ lang: hi
 
 - [इथअलावेंस](https://ethallowance.com/) (इथेरियम)
 - [इथरस्कैन](https://etherscan.io/tokenapprovalchecker) (इथेरियम)
-- [कॉइनटूल](https://cointool.app/approve/eth) (मल्टीपल नेटवर्क)
 - [निरस्त करें](https://revoke.cash/) (मल्टीपल नेटवर्क)
 - [अनरेक्ट](https://app.unrekt.net/) (मल्टीपल नेटवर्क)
 - [EverRevoke](https://everrise.com/everrevoke/) (मल्टीपल नेटवर्क)
@@ -47,12 +46,15 @@ lang: hi
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>और अधिक सीखना चाहते है?</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## अक्सर पूछे जाने वाले सवाल
 

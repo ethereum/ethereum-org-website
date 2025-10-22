@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Import any ERC-20 token to use in the wallet",
   "page-find-wallet-buy-crypto": "Buy crypto",
   "page-find-wallet-buy-crypto-desc": "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
-  "page-find-wallet-sell-for-fiat": "Sell for fiat",
+  "page-find-wallet-sell-for-fiat": "Sell for cash",
   "page-find-wallet-sell-for-fiat-desc": "Sell crypto to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Wallets that require multiple signatures to authorize a transaction",
@@ -65,7 +65,7 @@
   "page-find-wallet-new-to-crypto-desc": "First time user looking for beginner wallet.",
   "page-find-wallet-nfts-title": "NFTs",
   "page-find-wallet-nfts-desc": "Wallets with focus on NFT support.",
-  "page-find-wallet-hodler-title": "Long term",
+  "page-find-wallet-hodler-title": "Hardware",
   "page-find-wallet-hodler-desc": "Passive token holding with hardware wallets.",
   "page-find-wallet-finance-title": "Finance",
   "page-find-wallet-finance-desc": "Wallets focusing on frequent usage of DeFi apps.",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Links",
   "page-find-wallet-empty-results-title": "No results",
   "page-find-wallet-empty-results-desc": "There are no wallets matching your criteria, try removing some filters.",
-  "page-find-wallet-see-wallets": "See wallets"
+  "page-find-wallet-privacy": "Privacy",
+  "page-find-wallet-privacy-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-see-wallets": "See wallets",
+  "page-find-wallet-search-languages": "Search languages..."
 }

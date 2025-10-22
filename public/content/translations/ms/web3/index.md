@@ -6,6 +6,10 @@ lang: ms
 
 # Pengenalan kepada Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Pemusatan telah membantu membawa berbilion orang ke Web Seluruh Dunia dan mencipta infrastruktur yang stabil dan teguh di mana ia hidup. Pada masa yang sama, segelintir entiti berpusat mempunyai kubu kuat di kawasan besar Web Seluruh Dunia, secara unilateral memutuskan perkara yang patut dan tidak patut dibenarkan.
 
 Web3 ialah jawapan kepada dilema ini. Daripada Web yang dimonopoli oleh syarikat teknologi besar, Web3 merangkumi pengagihan dan sedang dibina, dikendalikan dan dimiliki oleh penggunanya. Web3 meletakkan kuasa di tangan individu dan bukannya syarikat. Sebelum kita bercakap tentang Web3, mari kita terokai bagaimana kita sampai di sini.
@@ -61,12 +65,15 @@ Web3 memberi anda pemilikan aset digital anda dengan cara yang tidak pernah berl
 
 Web3 membenarkan pemilikan langsung melalui [token tidak boleh diganti (NFT).](/glossary/#nft). Tiada sesiapa, malah pencipta permainan, mempunyai kuasa untuk mengambil alih pemilikan anda. Dan, jika anda berhenti bermain, anda boleh menjual atau memperdagangkan item dalam permainan anda di pasaran terbuka dan mendapatkan semula nilainya.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Ketahui lebih lanjut tentang NFT</div>
   <ButtonLink href="/nft/">
     Lebih lanjut tentang NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Rintangan penapisan {#censorship-resistance}
 
@@ -78,7 +85,7 @@ Di Web3, data anda hidup dalam blok rantai. Apabila anda memutuskan untuk mening
 
 Web 2.0 memerlukan pencipta kandungan untuk mempercayai platform untuk tidak mengubah peraturan, tetapi rintangan penapisan ialah ciri asli platform Web3.
 
-#### Decentralized autonomous organizations (DAOs) {#daos}
+#### Organisasi bebas terdesentralisasi (DAO) {#daos}
 
 Selain memiliki data anda dalam Web3, anda boleh memiliki platform sebagai kolektif, menggunakan token yang bertindak seperti saham dalam syarikat. DAO membolehkan anda menyelaraskan pemilikan teragih ke atas platform dan membuat keputusan tentang masa depannya.
 
@@ -86,12 +93,15 @@ DAO ditakrifkan secara teknikal sebagai [kontrak pintar](/glossary/#smart-contra
 
 Walau bagaimanapun, orang mentakrifkan banyak komuniti Web3 sebagai DAO. Komuniti ini semuanya mempunyai tahap keteragihan dan automasi yang berbeza mengikut kod. Pada masa ini, kami sedang meneroka apa itu DAO dan cara ia mungkin berkembang pada masa hadapan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Ketahui lebih lanjut mengenai DAO</div>
   <ButtonLink href="/dao/">
-    Lebih kepada DAOs
+    Lagi tentang DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identiti {#identity}
 
@@ -139,19 +149,19 @@ Kami hanya pada permulaan mencipta Web yang lebih baik dengan Web3, tetapi sambi
 
 - [Dapatkan dompet](/wallets/)
 - [Cari komuniti](/community/)
-- [Terokai aplikasi Web3](/dapps/)
+- [Terokai aplikasi Web3](/apps/)
 - [Sertai DAO](/dao/)
 - [Bina pada Web3](/developers/)
 
 ## Bacaan lanjut {#further-reading}
 
-Web3 tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspektif yang berbeza mengenainya. Berikut adalah beberapa daripada mereka:
+Web3 tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspektif yang berbeza mengenainya. Berikut adalah antaranya:
 
-- [Apakah Web3? Internet Teragih Masa Depan Dijelaskan](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Apakah Web3? Internet Teragih Masa Depan Dijelaskan](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Memahami Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
 - [Kepentingan Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Kepentingan Keteragihan](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Lanskap Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – *a16z*
-- [Debat Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Debat Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

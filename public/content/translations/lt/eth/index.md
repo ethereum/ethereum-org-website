@@ -14,7 +14,7 @@ lang: lt
 
 ## Kas yra ETH ir kaip jį gauti? {#what-is-eth-and-how-do-i-get-it}
 
-Ether arba ETH yra Ethereum valiuta. Tai „skaitmeniniai pinigai“, kurie gali būti siunčiami internetu greitai ir pigiai bei naudojami daugelyje [su Ethereum sukurtų programų](/dapps/).
+Ether arba ETH yra Ethereum valiuta. Tai „skaitmeniniai pinigai“, kurie gali būti siunčiami internetu greitai ir pigiai bei naudojami daugelyje [su Ethereum sukurtų programų](/apps/).
 
 Lengviausias būdas gauti ETH – nusipirkti. Esama daug kriptovaliutos keityklų, kuriose galima nusipirkti ETH; valiutą turite rinktis pagal gyvenamąją vietą ir tai, kaip norite mokėti.
 

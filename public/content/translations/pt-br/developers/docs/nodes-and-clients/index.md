@@ -37,7 +37,7 @@ O que essas implementações têm em comum é que todas seguem uma única especi
 - Originalmente, o [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Especificações de execução](https://github.com/ethereum/execution-specs/)
 - [Especificações de consenso](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implementados em várias [atualizações de rede](/history/)
+- [EIPs](https://eips.ethereum.org/) implementados em várias [atualizações de rede](/ethereum-forks/)
 
 ### Rastreamento de nós na rede {#network-overview}
 
@@ -195,7 +195,7 @@ Existem vários clientes de consenso (anteriormente conhecidos como clientes “
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust                     | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten e mais         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript               | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten e mais                  |
 | [Nimbus](https://nimbus.team/)                                | Nim                      | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten e mais                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go                       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten e mais |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go                       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten e mais |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java                     | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten e mais          |
 
 ### Lighthouse {#lighthouse}
@@ -220,7 +220,7 @@ Saiba mais na [documentação da Nimbus](https://nimbus.guide/)
 
 O Prysm é um cliente de consenso de código aberto completo, escrito em Go sob a licença GPL-3.0. Ele apresenta uma interface de usuário de aplicativo Web opcional e prioriza a experiência do usuário, a documentação e a configurabilidade para usuários institucionais e particulares.
 
-Visite a [documentação do Prysm](https://docs.prylabs.network/docs/getting-started/) para saber mais.
+Visite a [documentação do Prysm](https://prysm.offchainlabs.com/docs/) para saber mais.
 
 ### Teku {#teku}
 

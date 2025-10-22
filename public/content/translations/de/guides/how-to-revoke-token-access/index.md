@@ -20,7 +20,6 @@ Auf mehreren Websites können Sie die mit Ihrer Adresse verbundenen intelligente
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (multiple Netzwerke)
 - [Revoke](https://revoke.cash/) (multiple Netzwerke)
 - [Unrekt](https://app.unrekt.net/) (multiple Netzwerke)
 - [EverRevoke](https://everrise.com/everrevoke/) (multiple Netzwerke)
@@ -47,12 +46,15 @@ Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren un
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Möchten Sie mehr erfahren?</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Häufig gestellte Fragen
 

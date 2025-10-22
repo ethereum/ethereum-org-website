@@ -179,7 +179,7 @@ La loi de proximité stipule que les éléments proches sont perçus comme étan
 
 En fin de compte, les deux options présentent des avantages et des inconvénients, mais il est intéressant de noter que la tendance est au jeton placé à droite.
 
-# Comportement du bouton {#button-behavior}
+## Comportement du bouton {#button-behavior}
 
 N'ayez pas de bouton séparé pour l'approbation. Évitez également de demander un clic séparé pour l'approbation. L'utilisateur veut effectuer un échange, il suffit donc d'indiquer "échanger" sur le bouton et de lancer l'approbation comme première étape. Une fenêtre modale peut afficher la progression avec un indicateur d'étapes, ou une simple notification du type "tx 1 sur 2 - approbation en cours".
 
@@ -187,7 +187,7 @@ N'ayez pas de bouton séparé pour l'approbation. Évitez également de demander
 
 ![Une interface utilisateur avec un seul bouton d'approbation](./15.png)
 
-## Bouton comme aide contextuelle {#button-as-contextual-help}
+### Bouton comme aide contextuelle {#button-as-contextual-help}
 
 Le bouton peut également servir d'alerte !
 
@@ -205,7 +205,7 @@ Le bouton peut également être **associé à l'action** qui doit être effectu�
 
 ![Message d'erreur affiché dans le principal appel à l'action](./17.png)
 
-## Construisez le vôtre avec ce fichier Figma {#build-your-own-with-this-figma-file}
+### Construisez le vôtre avec ce fichier Figma {#build-your-own-with-this-figma-file}
 
 Grâce au travail acharné de plusieurs protocoles, la conception des DEX s'est beaucoup améliorée. Nous savons de quelles informations l'utilisateur a besoin, de quelle manière nous devons les présenter et comment rendre le flux aussi fluide que possible.
 Nous espérons que cet article vous offrira un aperçu solide des principes UX.

@@ -49,8 +49,6 @@ Verkle Trees zijn `(key,value)` paren waarbij de sleutels elementen van 32 bytes
 
 De testnetten van Verkle Trees zijn al in gebruik genomen, maar er zijn nog steeds belangrijke updates van clients nodig om Verkle Trees te ondersteunen. U kunt helpen de voortgang te versnellen door contracten op de testnets te implementeren of testnetclients uit te voeren.
 
-[Ontdek het Verkle Gen Devnet 6 testnet](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [Kijk hoe Guillaume Ballet het Condrieu Verkle-testnet uitlegt](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (merk op dat het Condrieu-testnet proof-of-work was en nu is vervangen door het Verkle Gen Devnet 6 testnet).
 
 ## Verder lezen {#further-reading}
@@ -60,7 +58,7 @@ De testnetten van Verkle Trees zijn al in gebruik genomen, maar er zijn nog stee
 - [Guillaume Ballet legt Verkle Trees uit op ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [“Hoe Verkle bomen Ethereum mager en gedreven maken” door Guillaume Ballet op Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam over statusloze clients op ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest legt Verkle Trees en statusloosheid uit op de Zero Knowledge-podcast](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest legt Verkle Trees en statusloosheid uit op de Zero Knowledge-podcast](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin over Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist over Verkle Trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [EIP documentatie Verkle Tree](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

@@ -75,6 +75,13 @@
       transparent 100%
     );
 
+    --radial-b: radial-gradient(
+      127.67% 82.36% at 50% -15%,
+      hsla(var(--purple-500), var(--radial-a-opacity-2)) 0%,
+      hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
+      transparent 100%
+    );
+
     --linear-bug-bounty-title: linear-gradient(
       to left,
       #f7cbc0 0%,
@@ -83,6 +90,27 @@
       #85acf9 54.14%,
       #1c1ce1 61.77%,
       #000000 69.77%
+    );
+
+    --card-gradient: linear-gradient(
+      123deg,
+      rgba(255, 255, 255, 0.2) 58.99%,
+      rgba(174, 110, 203, 0.13) 104.04%
+    );
+    --card-gradient-secondary: linear-gradient(
+      95deg,
+      rgba(211, 145, 242, 0.12) 0%,
+      rgba(159, 43, 212, 0.12) 102.78%
+    );
+    --card-gradient-secondary-hover: linear-gradient(
+      95deg,
+      rgba(211, 145, 242, 0.2) 0%,
+      rgba(159, 43, 212, 0.2) 102.78%
+    );
+    --ten-year-gradient: linear-gradient(
+      100deg,
+      #f6c9ea 55.38%,
+      #c7a9f1 110.54%
     );
 
     /* Shadows */
@@ -112,10 +140,14 @@
     --shadow-window-box-5-opacity: 0.08;
     --shadow-window-box-1: 0px 2px 12px 1px
       hsla(var(--purple-800), var(--shadow-window-box-1-opacity));
-    --shadow-window-box-2: 0px 16px 12px -3px hsla(var(--purple-800), var(--shadow-window-box-2-opacity));
-    --shadow-window-box-3: 0px 32px 24px -6px hsla(var(--purple-800), var(--shadow-window-box-3-opacity));
-    --shadow-window-box-4: 0px 40px 40px -12px hsla(var(--purple-700), var(--shadow-window-box-4-opacity));
-    --shadow-window-box-5: 0px -64px 120px 80px hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
+    --shadow-window-box-2: 0px 16px 12px -3px
+      hsla(var(--purple-800), var(--shadow-window-box-2-opacity));
+    --shadow-window-box-3: 0px 32px 24px -6px
+      hsla(var(--purple-800), var(--shadow-window-box-3-opacity));
+    --shadow-window-box-4: 0px 40px 40px -12px
+      hsla(var(--purple-700), var(--shadow-window-box-4-opacity));
+    --shadow-window-box-5: 0px -64px 120px 80px
+      hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
 
     /* Staking */
     --staking-gold: 43, 84%, 40%;
@@ -127,7 +159,11 @@
     --staking-red: 4, 36%, 46%;
     --staking-red-fill: 140, 27%, 98%;
 
-    --shadow-widget: 2px 2px 12px 1px rgba(52, 43, 64, 0.02), -16px 16px 12px -3px rgba(52, 43, 64, 0.02), -32px 32px 24px -6px rgba(52, 43, 64, 0.02), -40px 40px 40px -12px rgba(88, 55, 131, 0.04);
+    --shadow-widget:
+      2px 2px 12px 1px rgba(52, 43, 64, 0.02),
+      -16px 16px 12px -3px rgba(52, 43, 64, 0.02),
+      -32px 32px 24px -6px rgba(52, 43, 64, 0.02),
+      -40px 40px 40px -12px rgba(88, 55, 131, 0.04);
   }
 
   /* Dark mode token declarations */
@@ -198,6 +234,13 @@
       #8db4ff 69.77%
     );
 
+    --roadmap-card-gradient: linear-gradient(
+      123deg,
+      rgba(34, 34, 34, 0.2) 40.53%,
+      rgba(174, 110, 203, 0.13) 104.05%
+    );
+    --ten-year-gradient: linear-gradient(100deg, #1e151b 55.38%, #000 110.54%);
+
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);
     --shadow-svg-button-link-1: -2px 2px 12px 1px var(--shadow-color);
@@ -218,15 +261,19 @@
     --shadow-window-box-5-opacity: 0.06;
 
     /* Staking */
-    --staking-gold: #f2bb2f;
-    --staking-gold-fill: #373228;
-    --staking-green: #49de96;
-    --staking-green-fill: #30342b;
-    --staking-blue: #a9d3f2;
-    --staking-blue-fill: #2b352f;
-    --staking-red: #d6bbb9;
-    --staking-red-fill: #313432;
+    --staking-gold: 43, 86%, 57%;
+    --staking-gold-fill: 36, 16%, 19%;
+    --staking-green: 151, 74%, 58%;
+    --staking-green-fill: 90, 10%, 19%;
+    --staking-blue: 204, 76%, 81%;
+    --staking-blue-fill: 150, 10%, 19%;
+    --staking-red: 6, 24%, 78%;
+    --staking-red-fill: 140, 3%, 19%;
 
-    --shadow-widget: -2px 2px 12px 1px rgba(255, 255, 255, 0.04), -6px 6px 12px -3px rgba(255, 255, 255, 0.04), -12px 12px 24px -6px rgba(255, 255, 255, 0.04), -20px 20px 40px -12px rgba(255, 255, 255, 0.04);
+    --shadow-widget:
+      -2px 2px 12px 1px rgba(255, 255, 255, 0.04),
+      -6px 6px 12px -3px rgba(255, 255, 255, 0.04),
+      -12px 12px 24px -6px rgba(255, 255, 255, 0.04),
+      -20px 20px 40px -12px rgba(255, 255, 255, 0.04);
   }
 }

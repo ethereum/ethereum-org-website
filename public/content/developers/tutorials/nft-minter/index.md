@@ -16,9 +16,9 @@ By building an NFT minter — a simple UI where you can input a link to your dig
 - Call smart contract methods from your frontend
 - Sign transactions using MetaMask
 
-In this tutorial, we will be using [React](https://reactjs.org/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project.
+In this tutorial, we will be using [React](https://react.dev/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project.
 
-As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
+As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://react.dev/learn/tutorial-tic-tac-toe). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/).
 
@@ -40,7 +40,7 @@ An NFT's metadata is really what brings it to life, allowing it to have properti
 
 In this tutorial, we're going to focus on part 2, calling an existing NFT's smart contract minting function using our React UI.
 
-[Here's a link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+[Here's a link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
@@ -99,7 +99,7 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-Never heard of React state variables or state hooks? Check out [these](https://reactjs.org/docs/hooks-state.html) docs.
+Never heard of React state variables or state hooks? Check out [these](https://legacy.reactjs.org/docs/hooks-state.html) docs.
 
 Here's what each of the variables represent:
 
@@ -125,7 +125,7 @@ const onMintPressed = async () => {
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html) - this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it (see line 3), it will only be called on the component's _first_ render. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it (see line 3), it will only be called on the component's _first_ render. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
 - `connectWalletPressed` - this function will be called to connect the user's MetaMask wallet to our dapp.
 - `onMintPressed` - this function will be called to mint the user's NFT.
 
@@ -197,7 +197,7 @@ For users to be able to interact with your smart contract they will need to conn
 
 For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/).
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
 
 ### Add ether from a Faucet {#add-ether-from-faucet}
 
@@ -254,7 +254,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -364,7 +364,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -428,7 +428,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -473,7 +473,7 @@ To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a co
 
 ## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
+If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://app.pinata.cloud/auth/signup) and complete the steps to verify your email and account.
 
 ### Create your Pinata API key {#create-pinata-api-key}
 
@@ -512,7 +512,7 @@ Save the file, and then you're ready to start writing the function to upload you
 
 ### Implement pinJSONToIPFS {#pin-json-to-ipfs}
 
-Fortunately for us, Pinata has an [API specifically for uploading JSON data to IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) and a convenient JavaScript with axios example that we can use, with some slight modifications.
+Fortunately for us, Pinata has an [API specifically for uploading JSON data to IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) and a convenient JavaScript with axios example that we can use, with some slight modifications.
 
 In your `utils` folder, let's create another file called `pinata.js` and then import our Pinata secret and key from the .env file like so:
 
@@ -573,7 +573,7 @@ As with our `connectWallet`function return types, we're returning JSON objects s
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
-As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://www.alchemy.com/docs/how-to-create-an-nft).
 
 ### The contract ABI {#contract-abi}
 
@@ -863,6 +863,6 @@ To recap, by building an NFT minter, you successfully learned how to:
 - Call smart contract methods from your frontend
 - Sign transactions using MetaMask
 
-Presumably, you'd like to be able to show off the NFTs minted via your dapp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
+Presumably, you'd like to be able to show off the NFTs minted via your dapp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
 
 And, as always, if you have any questions, we're here to help in the [Alchemy Discord](https://discord.gg/gWuC7zB). We can't wait to see how you apply the concepts from this tutorial to your future projects!

@@ -60,14 +60,17 @@ Alamat Anda akan sama di semua proyek Ethereum. Anda tidak perlu mendaftar secar
 ![Memilih dari daftar dompet yang akan dihubungkan](./connect2.png)
 
 5. Konfirmasikan permintaan tanda tangan di dompet Anda untuk membuat koneksi. **Menandatangani pesan ini tidak perlu mengeluarkan ETH**.
-6. Itu saja! Mulai menggunakan aplikasi. Anda dapat menemukan beberapa proyek menarik di halaman [dApps](/dapps/#explore). <br />
+6. Itu saja! Mulai menggunakan aplikasi. Anda dapat menemukan beberapa proyek menarik di halaman [dApps](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Pertanyaan yang sering diajukan
 
