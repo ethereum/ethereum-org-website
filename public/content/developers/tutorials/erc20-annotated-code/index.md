@@ -252,7 +252,7 @@ import "../../math/SafeMath.sol";
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
   [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which prevents
-  arithmetic overflows/underflows for Solidity versions **<0.8.0**. In Solidity ≥0.8.0, arithmetic operations automatically
+  arithmetic overflows/underflows for Solidity versions **&lt;0.8.0**. In Solidity ≥0.8.0, arithmetic operations automatically
   revert on overflow/underflow, making SafeMath unnecessary. This contract uses SafeMath for backward compatibility with
   older compiler versions.
 
