@@ -76,9 +76,12 @@ Ingin mempelajari selengkapnya? Jangan ragu untuk memeriksa [dokumentasi tentang
 
 Setelah Anda menyelesaikan terjemahan (yaitu, semua file untuk satu kelompok konten menunjukkan 100%), layanan terjemahan profesional kami akan meninjau (dan mungkin mengedit) konten tersebut. Setelah peninjauan selesai (yaitu kemajuan peninjauan sudah 100%), kami akan menambahkannya ke situs web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Harap tidak menggunakan terjemahan mesin untuk menerjemahkan proyek tersebut. Semua terjemahan akan ditinjau sebelum ditambahkan ke situs web. Jika terjemahan yang Anda sarankan ternyata merupakan terjemahan mesin, terjemahan tersebut akan ditolak dan kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Hubungi kami {#get-in-touch}
 

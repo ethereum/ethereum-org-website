@@ -17,7 +17,7 @@ summaryPoint4: 合併將以太坊的能源消耗降低了約 99.95%。
 
 ## 什麼是「合併」？ {#what-is-the-merge}
 
-合併指將以太坊的原始執行層（自[創世](/history/#frontier)以來就存在的主網）與其新的權益證明共識層「信標鏈」結合在一起。 它減少了對能源密集型挖礦的需求，而是藉由質押的以太幣來確保網路安全。 這是實現以太坊「更高的可擴容性、安全性和永續性」願景的真正令人興奮的一步。
+合併指將以太坊的原始執行層（自[創世](/ethereum-forks/#frontier)以來就存在的主網）與其新的權益證明共識層「信標鏈」結合在一起。 它減少了對能源密集型挖礦的需求，而是藉由質押的以太幣來確保網路安全。 這是實現以太坊「更高的可擴容性、安全性和永續性」願景的真正令人興奮的一步。
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ summaryPoint4: 合併將以太坊的能源消耗降低了約 99.95%。
 
 合併中，歷史記錄不會丟失。 隨著主網與信標鏈合併，以太坊的所有交易記錄也已一併整合。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 這種向權益證明的過渡改變了以太幣的發行方式。 瞭解[合併前後的以太幣發行](/roadmap/merge/issuance/)的更多相關資訊。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 使用者及持有者 {#users-holders}
 

@@ -39,7 +39,7 @@ What these implementations have in common is they all follow a single specificat
 - Originally, the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Execution specs](https://github.com/ethereum/execution-specs/)
 - [Consensus specs](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/history/)
+- [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/ethereum-forks/)
 
 ### Tracking nodes in the network {#network-overview}
 
@@ -136,12 +136,12 @@ This table summarizes the different clients. All of them pass [client tests](htt
 
 | Client                                                                   | Language   | Operating systems     | Networks                  | Sync strategies                                                | State pruning   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (without serving), Fast, [Full](#full-sync) | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                             | Archive, Pruned |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                             | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | [Full](#full-sync)                                             | Pruned          |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync) (without serving), Fast, [Full](#full-sync) | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Pruned |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Full](#full-sync)                                             | Pruned          |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -197,12 +197,12 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 | Client                                                        | Language   | Operating systems     | Networks                                                  |
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Pyrmont, Sepolia, and more         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
-| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, and more |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Sepolia, and more          |
-| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Pyrmont, Sepolia, and more         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, and more                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, and more                  |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Pyrmont, Sepolia, and more |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Sepolia, and more          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, and more                  |
 
 ### Lighthouse {#lighthouse}
 

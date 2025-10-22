@@ -81,7 +81,7 @@ It's also important to note it is unlikely we will see extended spikes of full b
 
 ### Priority fee (tips) {#priority-fee}
 
-The priority fee (tip) incentivizes validators to include a transaction in the block. Without tips, validators would find it economically viable to mine empty blocks, as they would receive the same block reward. Small tips give validators a minimal incentive to include a transaction. For transactions to be preferentially executed ahead of other transactions in the same block, a higher tip can be added to try to outbid competing transactions.
+The priority fee (tip) incentivizes validators to maximize the number of transactions in a block, constrained only by the block gas limit. Without tips, a rational validator could include fewer—or even zero—transactions without any direct execution layer or consensus layer penalty, as staking rewards are independent of how many transactions are in a block. Additionally, tips allow users to outbid others for priority within the same block, effectively signalling urgency. 
 
 ### Max fee {#maxfee}
 
@@ -137,6 +137,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 ## Related tools {#related-tools}
 
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
+- [Gas Network](https://gas.network) Onchain Gas Oracles. Support for 35+ chains. 
 
 ## Further reading {#further-reading}
 

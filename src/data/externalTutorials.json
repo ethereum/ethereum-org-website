@@ -578,8 +578,8 @@
     "publishDate": "07/01/2023"
   },
   {
-    "url": "https://speedrunethereum.com/challenge/simple-nft-example",
-    "title": "Simple NFT Example",
+    "url": "https://speedrunethereum.com/challenge/tokenization",
+    "title": "Tokenization",
     "description": "Build, mint, and transfer your own ERC721",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
@@ -626,7 +626,7 @@
     "publishDate": "04/24/2024"
   },
   {
-    "url": "https://speedrunethereum.com/challenge/minimum-viable-exchange",
+    "url": "https://speedrunethereum.com/challenge/dex",
     "title": "Build a DEX",
     "description": "Deploy a decentralized exchange to swap an ERC20 and ETH",
     "author": "Austin Griffith",

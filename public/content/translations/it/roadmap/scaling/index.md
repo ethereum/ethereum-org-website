@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum è ridimensionato utilizzando i [livelli 2](/layer-2/#rollups) (anche noti come rollup), che raggruppano le transazioni, inviando il risultato a Ethereum. Sebbene i rollup siano fino a otto volte meno costosi che sulla Rete Principale di Ethereum, è possibile ottimizzare ulteriormente i rollup per ridurre i costi per gli utenti finali. Inoltre, i rollup, si affidano ad alcuni componenti centralizzati che gli sviluppatori possono rimuovere, al maturare dei rollup.
 
-<InfoBanner mb={8} title="Costi di transazione">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Costi di transazione
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>I rollup odierni sono all'incirca da <strong>5 a 20 volte</strong> più economici del Livello 1 di Ethereum</li>
     <li>I rollup ZK ridurranno presto le commissioni di <strong>circa da 40 a 100 volte</strong></li>
     <li>I cambiamenti in arrivo su Ethereum forniranno un ulteriore ridimensionamento di <strong>circa 100-1000 volte</strong></li>
     <li style={{ marginBottom: 0 }}>Gli utenti dovrebbero beneficiare dalle transazioni <strong>dal costo inferiore a $0,001</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Rendere più economici i dati {#making-data-cheaper}
 

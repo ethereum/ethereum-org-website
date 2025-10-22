@@ -62,12 +62,15 @@ lang: ja
 5. ウォレットで署名リクエストを確認し、接続を確立します。 **この署名を行う際、ETHの送金は必要ありません。**
 6. これで完了です！ アプリを使い始めましょう [dAppsページ](/apps/#explore)にて、興味深いプロジェクトを見つけることができます。 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>詳細をご希望の場合は、</div>
   <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## よくある質問
 

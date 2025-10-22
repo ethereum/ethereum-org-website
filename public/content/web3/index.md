@@ -66,12 +66,15 @@ Web3 gives you ownership of your digital assets in an unprecedented way. For exa
 
 Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/glossary/#nft). No one, not even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell or trade your in-game items on open markets and recoup their value.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about NFTs</div>
   <ButtonLink href="/nft/">
     More on NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Censorship resistance {#censorship-resistance}
 
@@ -91,12 +94,15 @@ DAOs are defined technically as agreed-upon [smart contracts](/glossary/#smart-c
 
 However, people define many Web3 communities as DAOs. These communities all have different levels of decentralization and automation by code. Currently, we are exploring what DAOs are and how they might evolve in the future.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identity {#identity}
 
@@ -155,7 +161,7 @@ Web3 isn’t rigidly defined. Various community participants have different pers
 
 - [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
-- [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
+- [Why Web3 Matters](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [The Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_

@@ -95,6 +95,8 @@
   "decentralization-definition": "The concept of moving the control and execution of processes away from a central entity.",
   "dao-term": "Decentralized autonomous organization (DAO)",
   "dao-definition": "A DAO is a digital organization run by rules coded on a blockchain, where decisions are made by member votes, not a central authority. <a href=\"/dao/\">More on decentralized autonomous organizations (DAOs)</a>.<br />Each member's voting power often tied to the number of tokens they hold. DAOs aim to democratize decision-making and operations, focusing on transparency and community governance.",
+  "desci-term": "DeSci",
+  "desci-definition": "DeSci, or Decentralized Science, is a movement applying <a href='/glossary/#blockchain'>blockchain</a> technology to scientific research. It leverages <a href='/glossary/#dao'>DAOs</a>, <a href='/glossary/#smart-contract'>smart contracts</a>, and tokenized incentives to create more transparent, open, and collaborative funding and research ecosystems.",
   "dex-term": "Decentralized exchange (DEX)",
   "dex-definition": "A type of Ethereum app that lets you swap tokens with peers on the network. DEXes are not subject to geographical restrictions like centralized exchanges – anyone can participate.",
   "deposit-contract-term": "Deposit contract",

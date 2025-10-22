@@ -444,7 +444,7 @@ _Bu, fikir birliği katmanı doğrulayıcı düğümleri için geçerli değildi
 
 #### İstemcileri güncellemek {#updating-clients}
 
-İstemci yazılımınızı en son güvenlik yamaları, özellikler ve [EIP'ler](/eips/) ile güncel tutmalısınız. Özellikle [sert çatallanmalardan](/history/) önce, doğru istemci sürümlerini çalıştırdığınızdan emin olun.
+İstemci yazılımınızı en son güvenlik yamaları, özellikler ve [EIP'ler](/eips/) ile güncel tutmalısınız. Özellikle [sert çatallanmalardan](/ethereum-forks/) önce, doğru istemci sürümlerini çalıştırdığınızdan emin olun.
 
 > Önemli ağ güncellemelerinden önce, EF [blogunda](https://blog.ethereum.org) bir gönderi yayınlar. Düğümünüz güncellemeye ihtiyaç duyduğunda postanıza bir bildirim almak için [bu duyurulara abone olabilirsiniz](https://blog.ethereum.org/category/protocol#subscribe).
 

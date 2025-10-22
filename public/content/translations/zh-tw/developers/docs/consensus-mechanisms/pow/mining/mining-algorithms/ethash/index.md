@@ -4,9 +4,14 @@ description: Ethash 演算法詳細介紹。
 lang: zh-tw
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
    Ethash 是以太坊的工作量證明挖礦演算法。 工作量證明現在已經被**完全關閉**，取而代之的是，以太坊現在使用[權益證明](/developers/docs/consensus-mechanisms/pos/)來確保安全。 閱讀更多關於[合併 ](/roadmap/merge/)、[權益證明](/developers/docs/consensus-mechanisms/pos/)和[質押](/staking/)的資訊。 此頁面僅為滿足對歷史的興趣！  
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ethash 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 演算法的修改版。 Ethash 工作量證明是[記憶體密集型](https://wikipedia.org/wiki/Memory-hard_function)演算法，這被認為使演算法具有專用積體電路抗性。 Ethash 專用積體電路最終被開發出來，但圖形處理單元挖礦仍然是一個可行的選擇，直至工作量證明被關閉。 Ethash 仍在其他非以太坊工作量證明網路上用於挖掘其他代幣。
 

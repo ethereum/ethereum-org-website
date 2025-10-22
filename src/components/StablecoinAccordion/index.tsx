@@ -10,9 +10,9 @@ import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import CardList from "../CardList"
-import InfoBanner from "../InfoBanner"
 import Translation from "../Translation"
 import { Accordion } from "../ui/accordion"
+import { Alert, AlertContent, AlertEmoji } from "../ui/alert"
 
 import {
   AccordionCustomItem,
@@ -86,15 +86,18 @@ const StablecoinAccordion = () => {
               descId="page-stablecoins-accordion-swap-requirement-2-description"
             />
           </StepBoxContainer>
-          <InfoBanner emoji=":light_bulb:">
-            <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
-            <p className="mb-6 leading-6">
-              {t("page-stablecoins-accordion-swap-editors-tip-copy")}
-            </p>
-            <ButtonLink href="/wallets/find-wallet/">
-              {t("page-stablecoins-accordion-swap-editors-tip-button")}
-            </ButtonLink>
-          </InfoBanner>
+          <Alert variant="update">
+            <AlertEmoji text=":light_bulb:" />
+            <AlertContent>
+              <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
+              <p className="mb-6 leading-6">
+                {t("page-stablecoins-accordion-swap-editors-tip-copy")}
+              </p>
+              <ButtonLink href="/wallets/find-wallet/">
+                {t("page-stablecoins-accordion-swap-editors-tip-button")}
+              </ButtonLink>
+            </AlertContent>
+          </Alert>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>
@@ -127,9 +130,9 @@ const StablecoinAccordion = () => {
               descId="page-stablecoins-accordion-buy-requirement-1-description"
             />
           </StepBoxContainer>
-          <InfoBanner isWarning>
+          <Alert variant="warning">
             {t("page-stablecoins-accordion-buy-warning")}
-          </InfoBanner>
+          </Alert>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>

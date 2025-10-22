@@ -34,6 +34,6 @@ Finally, checkpoints can be requested from other nodes; perhaps another Ethereum
 
 - [Weak subjectivity in Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: How I learned to love weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Weak subjectivity (Teku docs)](https://docs.teku.consensys.io/concepts/weak-subjectivity/)
+- [Weak subjectivity (Teku docs)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
 - [Phase-0 Weak subjectivity guide](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Analysis of weak subjectivity in Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

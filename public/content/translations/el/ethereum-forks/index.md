@@ -147,7 +147,7 @@ sidebarDepth: 1
 - [Πακέτα ενημέρωσης επιπέδου 2](/layer-2/)
 - [Proto-Danksharding](/roadmap/scaling/#proto-danksharding)
 - [Danksharding](/roadmap/danksharding/)
-- [Διαβάστε τις προδιαγραφές αναβάθμισης της Cancun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+- [Διαβάστε τις προδιαγραφές αναβάθμισης της Cancun](https://eips.ethereum.org/EIPS/eip-7569)
 
 #### Περίληψη Deneb {#deneb-summary}
 
@@ -196,7 +196,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-- [Διαβάστε τις προδιαγραφές αναβάθμισης της Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+- [Διαβάστε τις προδιαγραφές αναβάθμισης της Shanghai](https://github.com/ethereum/execution-specs/blob/8dbde99b132ff8d8fcc9cfb015a9947ccc8b12d6/network-upgrades/mainnet-upgrades/shanghai.md)
 
 #### Περίληψη Capella {#capella-summary}
 
@@ -221,7 +221,7 @@ sidebarDepth: 1
 
 Η αναβάθμιση Paris προκλήθηκε από το blockchain της απόδειξης εργασίας περνώντας μια [συνολική δυσκολία](/glossary/#terminal-total-difficulty) 5875000000000000000000000. Αυτό συνέβη στο μπλοκ 15537393 στις 15 Σεπτεμβρίου 2022, προκαλώντας την αναβάθμιση Paris στο επόμενο μπλοκ. Το Paris ήταν η μετάβαση στη [Συγχώνευση](/roadmap/merge/), όπου το κύριο χαρακτηριστικό της ήταν η απενεργοποίηση του αλγορίθμου κρυπτόρυξης με την [απόδειξη εργασίας](/developers/docs/consensus-mechanisms/pow) και η σχετική λογική συναίνεσης και η μετάβαση στην [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos). Η Paris αναβάθμισε τους [πελάτες εκτέλεσης](/developers/docs/nodes-and-clients/#execution-clients) (που ισοδυναμεί με την Bellatrix στο επίπεδο συναίνεσης) που τους έδωσε τη δυνατότητα να λάβουν οδηγίες από τους συνδεδεμένους [πελάτες συναίνεσης](/developers/docs/nodes-and-clients/#consensus-clients). Αυτό απαιτούσε να ενεργοποιηθεί ένα νέο σύνολο εσωτερικών μεθόδων API, κοινώς γνωστό ως [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Ήταν αναμφισβήτητα η πιο σημαντική αναβάθμιση στην ιστορία του Ethereum από το [Homestead](#homestead)!
 
-- [Διαβάστε τις προδιαγραφές αναβάθμισης της Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+- [Διαβάστε τις προδιαγραφές αναβάθμισης της Paris](https://github.com/ethereum/execution-specs/blob/8dbde99b132ff8d8fcc9cfb015a9947ccc8b12d6/network-upgrades/mainnet-upgrades/paris.md)
 
 <ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
 
@@ -319,7 +319,7 @@ sidebarDepth: 1
 
 Πριν την αναβάθμιση London, το Ethereum είχε μπλοκ σταθερού μεγέθους. Σε περιόδους υψηλής ζήτησης του δικτύου, αυτά τα μπλοκ λειτουργούσαν με πλήρη χωρητικότητα. Ως αποτέλεσμα, οι χρήστες συχνά έπρεπε να περιμένουν τη ζήτηση να μειωθεί για να συμπεριληφθούν σε ένα μπλοκ, κάτι το οποίο οδήγησε σε μια κακή εμπειρία χρήστη. Η αναβάθμιση London εισήγαγε μπλοκ μεταβλητού μεγέθους στο Ethereum.
 
-Ο τρόπος υπολογισμού των τελών συναλλαγών στο δίκτυο του Ethereum άλλαξε με [την αναβάθμιση London](/history/#london) τον Αύγουστο 2021. Πριν από την αναβάθμιση London, οι χρεώσεις υπολογίζονταν χωρίς διαχωρισμό των τελών `βασικής` και `προτεραιότητας`, ως εξής:
+Ο τρόπος υπολογισμού των τελών συναλλαγών στο δίκτυο του Ethereum άλλαξε με [την αναβάθμιση London](/ethereum-forks/#london) τον Αύγουστο 2021. Πριν από την αναβάθμιση London, οι χρεώσεις υπολογίζονταν χωρίς διαχωρισμό των τελών `βασικής` και `προτεραιότητας`, ως εξής:
 
 Ας πούμε ότι η Αλίκη έπρεπε να πληρώσει τον Μπομπ 1 ETH. Σε αυτή τη συναλλαγή, το όριο του καυσίμου είναι 21.000 μονάδες, και η τιμή του είναι 200 gwei.
 

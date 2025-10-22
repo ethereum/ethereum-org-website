@@ -59,9 +59,14 @@ Jika anda mempunyai ETH di Rangkaian Utama Ethereum dan anda ingin meneroka alt 
 
 Katakan anda mahu memiliki Bitcoin asli (BTC), tetapi anda hanya mempunyai dana di Rangkaian Utama Ethereum. Untuk mendapatkan pendedahan kepada BTC pada Ethereum, anda boleh membeli Bitcoin Berbalut (WBTC). Walau bagaimanapun, WBTC ialah token [ERC-20](/glossary/#erc-20) asli kepada rangkaian Ethereum, yang bermaksud ia adalah versi Ethereum Bitcoin dan bukan aset asal pada blok rantai Bitcoin. Untuk memiliki BTC asli, anda perlu merapatkan aset anda daripada Ethereum kepada Bitcoin menggunakan jambatan. Ini akan merapatkan WBTC anda dan menukarnya kepada BTC asli. Sebagai alternatif, anda mungkin memiliki BTC dan ingin menggunakannya dalam protokol Ethereum [DeFi](/glossary/#defi) . Ini akan memerlukan merapatkan cara lain, dari BTC kepada WBTC yang kemudian boleh digunakan sebagai aset pada Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   Anda juga boleh melakukan semua perkara di atas menggunakan [pertukaran terpusat](/get-eth/). Namun, melainkan dana anda sudah berada di bursa, ia akan melibatkan beberapa langkah, dan anda mungkin akan lebih baik menggunakan jambatan.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

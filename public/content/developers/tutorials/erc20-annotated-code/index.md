@@ -251,9 +251,10 @@ import "../../math/SafeMath.sol";
 - `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
   [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which is used to make
-  addition and subtraction without overflows. This is necessary because otherwise a person might somehow have one token, spend
-  two tokens, and then have 2^256-1 tokens.
+- [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which prevents
+  arithmetic overflows/underflows for Solidity versions **&lt;0.8.0**. In Solidity ≥0.8.0, arithmetic operations automatically
+  revert on overflow/underflow, making SafeMath unnecessary. This contract uses SafeMath for backward compatibility with
+  older compiler versions.
 
 &nbsp;
 
@@ -380,6 +381,8 @@ token you can select a different value. If dividing the token doesn't make sense
      * construction.
      */
     constructor (string memory name_, string memory symbol_) public {
+        // In Solidity ≥0.7.0, 'public' is implicit and can be omitted.
+
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;

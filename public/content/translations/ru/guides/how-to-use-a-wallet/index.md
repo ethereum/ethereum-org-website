@@ -62,12 +62,15 @@ lang: ru
 5. Подтвердите запрос на подпись в вашем кошельке, чтобы установить соединение. **Подписание этого сообщения не должно требовать траты ЕТН**.
 6. Вот и все! Начните пользоваться приложением. Вы найдете некоторые интересные проекты на нашей [странице децентрализованных приложений (dApp)](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Хотите узнать больше?</div>
   <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Часто задаваемые вопросы
 

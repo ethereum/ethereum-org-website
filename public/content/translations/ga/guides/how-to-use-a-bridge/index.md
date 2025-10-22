@@ -52,12 +52,15 @@ Níor cheart go dtógfadh an próiseas seo níos mó ná 10 nóiméad.
 Is féidir leat [chainlist.org](http://chainlist.org) a úsáid chun sonraí RPC an líonra a fháil. Nuair a bheidh an líonra curtha leis agus an t-idirbheart críochnaithe, ba cheart go mbeadh na dearbháin le feiceáil i do sparán.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">
     Féach ar ár dtreoracha eile
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ceisteanna coitianta
 

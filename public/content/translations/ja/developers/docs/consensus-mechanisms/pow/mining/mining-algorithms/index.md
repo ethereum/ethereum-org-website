@@ -4,9 +4,14 @@ description: イーサリアムのマイニングで使われたアルゴリズ�
 lang: ja
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 プルーフ・オブ・ワークは、イーサリアムの合意メカニズムの基盤ではなくなり、すでにマイニングは廃止されています。 マイニングに代わって、イーサリアムはETHをステーキングするバリデータにより保護されています。 今日からETHのステーキングを始めることができます。 詳細については<a href='/roadmap/merge/'>マージ</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>プルーフ・オブ・ステーク</a>および<a href='/staking/'>ステーキング</a>を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 イーサリアムのマイニングでは、Ethashと呼ばれるアルゴリズムを使っていました。 このアルゴリズムの基本的なアイデアは、マイナーがしらみつぶしに計算を行い、ノンス (nonce)の入力を探し、その結果のハッシュ値が、計算された難易度によって決められたしきい値より小さくなるように試みるというものです。 この難易度は動的に調整することが可能で、一定間隔でブロック生成を行うことができます。
 
