@@ -57,7 +57,7 @@ The benefits of this network design are:
 - Minimized or zero syncing
 - Accessible to resource-constrained devices (\<1 GB RAM, \<100 MB disk space, 1 CPU)
 
-The diagram below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
+The table below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
 ### The Portal Networks
 
@@ -69,7 +69,7 @@ The diagram below shows the functions of existing clients that can be delivered 
 
 ## Client diversity by default {#client-diversity-as-default}
 
-The Portal Network developers also made the design choice to build three separate Portal Network clients from day one.
+The Portal Network developers also made the design choice to build four separate Portal Network clients from day one.
 
 The Portal Network clients are:
 
