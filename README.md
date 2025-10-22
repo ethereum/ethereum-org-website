@@ -2125,6 +2125,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/katia-aa"><img src="https://avatars.githubusercontent.com/u/11549223?v=4?s=100" width="100px;" alt="KA "/><br /><sub><b>KA </b></sub></a><br /><a href="#content-katia-aa" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://fishonsnote.medium.com/"><img src="https://avatars.githubusercontent.com/u/43862685?v=4?s=100" width="100px;" alt="Fishon Amos"/><br /><sub><b>Fishon Amos</b></sub></a><br /><a href="#content-fishonamos" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/M3dython"><img src="https://avatars.githubusercontent.com/u/68754219?v=4?s=100" width="100px;" alt="M3D"/><br /><sub><b>M3D</b></sub></a><br /><a href="#maintenance-M3dython" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/PAVANTEJ-05"><img src="https://avatars.githubusercontent.com/u/154254031?v=4?s=100" width="100px;" alt="PHOENIX-05"/><br /><sub><b>PHOENIX-05</b></sub></a><br /><a href="#content-PAVANTEJ-05" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
