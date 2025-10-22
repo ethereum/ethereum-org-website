@@ -2122,6 +2122,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/morph-dev"><img src="https://avatars.githubusercontent.com/u/82043364?v=4?s=100" width="100px;" alt="Milos Stankovic"/><br /><sub><b>Milos Stankovic</b></sub></a><br /><a href="#maintenance-morph-dev" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/katia-aa"><img src="https://avatars.githubusercontent.com/u/11549223?v=4?s=100" width="100px;" alt="KA "/><br /><sub><b>KA </b></sub></a><br /><a href="#content-katia-aa" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
