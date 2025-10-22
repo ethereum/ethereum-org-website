@@ -64,7 +64,6 @@ export default async function IndexPageJsonLD({
       },
     },
   }
-
   // JSON-LD for ethereum.org as an organization
   const organizationJsonLd = {
     "@context": "https://schema.org",
