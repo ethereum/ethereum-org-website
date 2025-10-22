@@ -21,9 +21,9 @@ You can learn more about the different projects and important links on our [laye
 
 Some popular layer 2s are:
 
-- [Arbitrum bridge](https://bridge.arbitrum.io/?l2ChainId=42161)
+- [Arbitrum bridge](https://portal.arbitrum.io/bridge?l2ChainId=42161)
 - [Optimism bridge](https://app.optimism.io/bridge/deposit)
-- [Boba network bridge](https://gateway.boba.network/)
+- [Boba network bridge](https://hub.boba.network/)
 
 ## 3. Connect to the bridge with your wallet
 
