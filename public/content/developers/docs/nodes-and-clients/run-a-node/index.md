@@ -53,7 +53,7 @@ Both options have different advantages summed up above. If you are looking for a
 
 #### Hardware {#hardware}
 
-However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/network-types) show a large share of nodes run on the cloud, which could become a single point of failure.
+However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/networkType/cl/Hosting) show a large share of nodes run on the cloud, which could become a single point of failure.
 
 Ethereum clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
