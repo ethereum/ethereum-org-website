@@ -1,12 +1,12 @@
+"use client"
+
 import { useEffect, useState } from "react"
-import _ from "lodash"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { groupBy } from "lodash"
+import { useLocale } from "next-intl"
 
 import type { CommunityConference, Lang } from "@/lib/types"
 
 import EventCard from "@/components/EventCard"
-import InfoBanner from "@/components/InfoBanner"
 import { Button } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
@@ -15,8 +15,12 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import communityEvents from "@/data/community-events.json"
 
+import { Alert, AlertContent, AlertDescription, AlertEmoji } from "./ui/alert"
+
+import { useTranslation } from "@/hooks/useTranslation"
+
 const UpcomingEventsList = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-community")
   const monthsPerLoad = 2
 
@@ -67,7 +71,7 @@ const UpcomingEventsList = () => {
         formattedDetails: details,
       }
     })
-    const groupedEvents = _.groupBy(formattedEvents, ({ startDate }) => {
+    const groupedEvents = groupBy(formattedEvents, ({ startDate }) => {
       const start = new Date(startDate.replace(/-/g, "/"))
       const formatYearMonth = new Intl.DateTimeFormat(locale, {
         month: "short",
@@ -92,14 +96,19 @@ const UpcomingEventsList = () => {
     })
   }
 
-  if (Object.keys(monthGroupedEvents)?.length === 0) {
+  if (Object.keys(monthGroupedEvents)?.length) {
     return (
-      <InfoBanner emoji=":information_source:">
-        {t("page-community-upcoming-events-no-events")}{" "}
-        <Link href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
-          {t("page-community-please-add-to-page")}
-        </Link>
-      </InfoBanner>
+      <Alert variant="update">
+        <AlertEmoji text=":information_source:" />
+        <AlertContent>
+          <AlertDescription>
+            {t("page-community-upcoming-events-no-events")}{" "}
+            <Link href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+              {t("page-community-please-add-to-page")}
+            </Link>
+          </AlertDescription>
+        </AlertContent>
+      </Alert>
     )
   }
 

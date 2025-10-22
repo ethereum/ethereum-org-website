@@ -41,11 +41,14 @@ lang: ko
 
 ### 비밀번호 관리 프로그램 사용하기 {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     비밀번호 관리 프로그램은 자동으로 강력하고 고유한 비밀번호를 생성하고 저장합니다. 해당하는 프로그램을 사용할 것을 <strong>강력하게</strong> 권하며, 대부분은 무료입니다!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 모든 계정마다 강력하고 유일한 비밀번호를 만들고 기억하는 것은 거의 불가능합니다. 비밀번호 관리 프로그램은 모든 비밀번호에 대해 하나의 강력한 마스터 비밀번호를 통해 액세스할 수 있는 안전하고 암호화된 저장소를 제공합니다. 해당 프로그램은 새로운 서비스에 가입할 때 강력한 비밀번호를 제안하므로, 직접 고민하여 만들지 않아도 됩니다. 다수의 비밀번호 관리 프로그램은 비밀번호가 유출되었을 경우에 알림을 보내며, 악의적인 공격이 발생하기 전에 비밀번호를 변경할 수 있게 합니다.
 
@@ -68,11 +71,14 @@ lang: ko
 
 **2개 요소 인증(2FA)** 또는 2단계 인증이란 온라인 계정에 추가 *보안 요소*를 제공함으로써 로그인 시 비밀번호를 아는 것(지식 기반) 이외에도 1가지를 더 증명하도록 한 것을 일컫습니다. 가장 흔한 두 번째 요소는 6자리의 무작위 숫자 코드인 **시간 기반 일회성 비밀번호(TOTP)**를 사용하는 것으로, Google Authenticator 또는 Authy과 같은 인증 앱을 통해 액세스할 수 있습니다. 시간 기반 코드를 생성하는 시드는 스마트폰에 저장되기 때문에 "소유 기반" 요소로 작동합니다.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     참고: 문자(SMS) 기반 2FA는 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM 탈취</a> 공격에 노출되므로 보안에 취약합니다. 가장 안전한 방법은 <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> 또는 <a href="https://authy.com/">Authy</a>와 같은 서비스를 사용하는 것입니다.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### 보안 키 {#security-keys}
 
@@ -196,11 +202,14 @@ Chrome 확장 프로그램 또는 Firefox 애드온과 같은 브라우저 확�
 - 절대로 타인을 당신의 컴퓨터에 원격 접속시키지 마세요.
 - 절대로 기관의 정해진 채널 외에 다른 곳에서 소통하지 마세요.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     명심하세요: 대부분의 후원 사기는 디스코드에서 발생하지만, 이외에 이메일 등 암호화폐 관련 논의가 오가는 채팅 애플리케이션에서도 일어날 수 있습니다.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 'Eth2' 토큰 사기 {#eth2-token-scam}
 
@@ -268,7 +277,7 @@ _참고: 스테이킹된 ETH를 나타내기 위한 파생 토큰/티커가 있�
 ### 암호화폐 보안 {#reading-crypto-security}
 
 - [당신과 당신의 자금 보호하기](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [암호화폐를 안전하게 보관하는 4가지 방법](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _코인데스크_
+- [암호화폐를 안전하게 보관하는 4가지 방법](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _코인데스크_
 - [모두를 위한 보안 가이드](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [암호화폐 보안: 비밀번호와 인증](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

@@ -54,12 +54,15 @@ Els NFT són útils per a moltes coses, com ara:
 
 Potser sou un artista i voleu compartir la vostra obra utilitzant els NFT, sense perdre'n el control ni sacrificant els vostres beneficis en favor dels intermediaris. Podeu crear un nou contracte i especificar el número d'NFT, les seves propietats i un enllaç a alguna obra d'art específica. Com a artista, **podeu programar dins el contracte intel·ligent els drets d'autor** que hauríeu de pagar (p. ex. transferir el 5 % del preu de venda al propietari del contracte cada vegada que es transfereix un NFT). També podeu demostrar que heu creat els NFT perquè teniu la [cartera](/glossary/#wallet) que va desplegar el contracte. Els vostres compradors poden demostrar fàcilment que posseeixen un **NFT autèntic** de la vostra col·lecció perquè l'[adreça](/glossary/#address) de la seva cartera està associada amb un testimoni en el vostre contracte intel·ligent. Poden utilitzar-ho en tot l'ecosistema Ethereum, totalment segurs de la seva autenticitat.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Exploreu, compreu o creeu els vostres propis NFT d'art o col·leccionables...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Exploreu l'art NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 O penseu en un tiquet per a un esdeveniment esportiu. De la mateixa manera que un **organitzador d'un esdeveniment pot escollir quantes entrades vendre**, el creador d'un NFT pot decidir quantes rèpliques existeixen. De vegades són rèpliques exactes, com ara 5000 tiquets d'accés general. De vegades n'hi ha diversos encunyats que són molt similars, però cadascun lleugerament diferent, com ara un tiquet amb seient assignat. Poden comprar-se i vendre's d'igual a igual, sense pagar a gestors de bitllets i el comprador compta amb la garantia de l'autenticitat del bitllet, així tot comprovant la direcció del contracte.
 

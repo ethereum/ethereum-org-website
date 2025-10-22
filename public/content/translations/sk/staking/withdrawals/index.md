@@ -43,9 +43,14 @@ Pred upgradom Shanghai/Capella ste nemohli používať svoj vsadený ETH ani k n
 
 Poskytnutie adresy pre výber je povinným krokom pre akýkoľvek účet validátora, než bude mať nárok na výber ETH zo svojho zostatku.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Každému účtu validátora je možné priradiť iba jednu adresu pre výber, a to raz.</strong> Akonáhle je adresa vybraná a odoslaná do konsenzuálnej vrstvy, nemožno to vrátiť späť ani znovu zmeniť. Pred odoslaním znova skontrolujte vlastníctvo a správnosť poskytnutej adresy.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Pokiaľ adresu medzitým neposkytnete, <strong>nehrozí vašim finančným prostriedkom žiadne ohrozenie</strong>, za predpokladu, že vaša mnemotechnická/seed fráza zostala v bezpečí offline a nebola žiadnym spôsobom kompromitovaná. Nepridanie prihlasovacích údajov pre výber jednoducho ponechá ETH uzamknuté v účte validátora tak, ako bolo, kým nebola poskytnutá adresa pre výber.
 
@@ -65,7 +70,7 @@ Výbery stakovania sú živé! Funkcia výberu bola povolená v rámci upgradu S
 
 Upgrade Shanghai/Capella umožnil získať skôr vložené ETH späť na bežné účty Ethereum. Tým sa uzavrela slučka v stakovaní likvidity a Ethereum sa o krok priblížilo na jeho ceste k vybudovaniu udržateľného, ​​škálovateľného a bezpečného decentralizovaného ekosystému.
 
-- [Viac o histórii Etherea](/history/)
+- [Viac o histórii Etherea](/ethereum-forks/)
 - [Viac o pláne realizácie Etherea](/roadmap/)
 
 ## Ako fungujú výbery? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Pozrite sa na toto vysvetlenie výberov zo stakovania Ethereum od Finematics:
 
 Keď je naplánované, že validátor navrhne ďalší blok, je nutné zostaviť front pre výber až 16 oprávnených výberov. To sa robí tak, že sa pôvodne začne s indexom validátora 0, určí sa, či pre tento účet existuje oprávnený výber podľa pravidiel protokolu, a ak áno, pridá sa do frontu. Validátor nastavený tak, aby navrhoval nasledujúci blok, bude pokračovať tam, kde skončil posledný, pričom postupuje v poradí neobmedzene dlho.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Predstavte si analógové hodiny. Ručička na hodinách ukazuje na hodinu, postupuje jedným smerom, nepreškoči žiadnu hodinu a nakoniec sa po dosiahnutí posledného čísla opäť pretočí na začiatok.<br/><br/>
 Teraz si namiesto 1 až 12 predstavte, že hodiny majú 0 až N<em>(celkový počet účtov validátorov, ktoré kedy boli zaregistrované na vrstve konsenzu – k januáru 2023 ich je cez 500 000).</em><br/><br/>
 Ručička na hodinách ukazuje na ďalší validátor, pri ktorom je potrebné skontrolovať oprávnené výbery. Začína na 0 a postupuje stále dookola bez toho, aby preskočila akýkoľvek účet. Keď je dosiahnutý posledný validátor, cyklus pokračuje od začiatku.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Kontrola účtu pre výbery {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ak ste súčasťou <a href="/staking/pools/">stakovacie poolu</a> alebo držíte stakovacie tokeny, mali by ste sa u svojho poskytovateľa informovať o tom, ako sa nakladá s výbermi stakovanej sumy, pretože každá služba funguje inak.
+Ak ste súčasťou [stakovacie poolu](/staking/pools/) alebo držíte stakovacie tokeny, mali by ste sa u svojho poskytovateľa informovať o tom, ako sa nakladá s výbermi stakovanej sumy, pretože každá služba funguje inak.
 
-Vo všeobecnosti by používatelia mali mať možnosť získať späť svoje základné stakované ETH alebo zmeniť poskytovateľa stakovania, ktorého využívajú. Ak je konkrétny pool príliš veľký, je možné prostriedky opustiť, uplatniť a znovu stakovať u menšieho <a href="https://rated.network/">poskytovateľa</a>. Alebo, ak ste nazhromaždili dostatok ETH, môžete <a href="/staking/solo/">stakovať ako jednotlivec</a>.
+Vo všeobecnosti by používatelia mali mať možnosť získať späť svoje základné stakované ETH alebo zmeniť poskytovateľa stakovania, ktorého využívajú. Ak je konkrétny pool príliš veľký, je možné prostriedky opustiť, uplatniť a znovu stakovať u menšieho <a href="https://rated.network/">poskytovateľa</a>. Alebo, ak ste nazhromaždili dostatok ETH, môžete [stakovať ako jednotlivec](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Nie. Hneď ako validátor skončí a vyberie sa jeho celý zostatok, všetky dod
 
 - [Výbery zo Staking Launchpadu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: nútené výbery beacon chainu výberu ako operácia](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: výber stakovaných ETH (testovanie) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: nútené výbery beacon chainu ako operácia s Alexom Stokesom](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumenie efektívnemu zostatku validátora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

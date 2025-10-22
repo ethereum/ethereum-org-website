@@ -1,14 +1,14 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { FaXTwitter } from "react-icons/fa6"
+import { useLocale } from "next-intl"
 
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
+
+import Twitter from "@/components/icons/twitter.svg"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 import { TrophyIcon } from "../icons/quiz"
-import Translation from "../Translation"
 import { Button } from "../ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "../ui/flex"
 import { ListItem, UnorderedList } from "../ui/list"
@@ -20,6 +20,8 @@ import {
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
@@ -45,7 +47,7 @@ const QuizzesStats = ({
   averageScoresArray,
   completedQuizzes,
 }: QuizzesStatsProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("learn-quizzes")
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(completedQuizzes)
 
@@ -83,7 +85,7 @@ const QuizzesStats = ({
               }
               className="max-lg:w-full"
             >
-              <FaXTwitter />
+              <Twitter />
               {t("share-results")}
             </Button>
           </div>
@@ -92,7 +94,7 @@ const QuizzesStats = ({
             <Stack className="gap-2">
               <HStack className="gap-4 max-lg:justify-center">
                 <Center className="size-16 rounded-full bg-primary">
-                  <TrophyIcon className="size-[35.62px] fill-background" />
+                  <TrophyIcon className="text-[35.62px] text-background" />
                 </Center>
                 <span className="text-5xl font-bold leading-base">
                   {totalCorrectAnswers}
@@ -146,10 +148,7 @@ const QuizzesStats = ({
                 <Stack key={labelId} className="m-0 gap-0" asChild>
                   <ListItem>
                     <span className="text-body">
-                      <Translation
-                        id={labelId}
-                        options={{ ns: "learn-quizzes" }}
-                      />
+                      <Translation id={labelId} ns="learn-quizzes" />
                     </span>
                     {/* Data from Matomo, manually updated */}
                     <span>{value}</span>

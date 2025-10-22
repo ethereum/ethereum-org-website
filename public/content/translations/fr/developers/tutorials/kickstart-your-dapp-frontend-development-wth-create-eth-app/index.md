@@ -51,7 +51,7 @@ _create-react-app_, en particulier, fait usage des nouveaux [effets hooks](https
 
 ### ethers.js {#ethersjs}
 
-Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs-beta.ethers.io/) qui n'est pratiquement plus en version bêta.
+Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs.ethers.org/v5/) qui n'est pratiquement plus en version bêta.
 
 ### Le réseau Graph  {#the-graph}
 
@@ -59,13 +59,13 @@ Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](h
 
 Vous récupérez normalement directement les données de votre contrat intelligent. Vous souhaitez connaître l'instant précis de la dernière transaction ? Appelez simplement `MyContract.methods.latestTradeTime().call()` qui récupère les données d'un nœud Ethereum comme Infura dans votre dApp. Mais que faire si vous avez besoin de centaines de points de données différents ? Il en résulterait des centaines d'extractions de données vers le nœud, nécessitant à chaque fois un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) qui ralentirait votre dApp et lui ferait perdre son efficacité. Pour éviter cela, une solution pourrait être d'utiliser une fonction d'appel de récupération dans votre contrat qui restitue plusieurs données à la fois. Ce n'est cependant pas toujours idéal.
 
-Vous pourriez également être intéressé par les données historiques. Vous souhaitez peut-être connaître non seulement le moment de la dernière transaction mais également le moment de chacune des transactions que vous avez réalisées vous-même. Utilisez le paquet subgraph de _create-eth-app_, lisez la [documentation](https://thegraph.com/docs/define-a-subgraph) et adaptez-la à vos propres contrats. Si vous êtes à la recherche de contrats intelligents populaires, il se peut même qu'il en existe déjà un avec subgraph. Jetez un œil à [l'explorateur de sous-graphes](https://thegraph.com/explorer/).
+Vous pourriez également être intéressé par les données historiques. Vous souhaitez peut-être connaître non seulement le moment de la dernière transaction mais également le moment de chacune des transactions que vous avez réalisées vous-même. Utilisez le paquet subgraph de _create-eth-app_, lisez la [documentation](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) et adaptez-la à vos propres contrats. Si vous êtes à la recherche de contrats intelligents populaires, il se peut même qu'il en existe déjà un avec subgraph. Jetez un œil à [l'explorateur de sous-graphes](https://thegraph.com/explorer/).
 
 Une fois que vous disposez d'un subgraph, vous pouvez écrire une simple requête dans votre dApp afin de récupérer toutes les données importantes de la blockchain, y compris les données historiques dont vous avez besoin. Une seule demande de récupération suffit.
 
 ### Apollo {#apollo}
 
-Grâce à l'intégration d'[Apollo Boost](https://www.apollographql.com/docs/react/get-started/), vous pouvez facilement intégrer Graph dans votre dApp React. Surtout lorsque vous utilisez [des hooks React et Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), récupérer des données est aussi simple que d'écrire une requête GraphQl dans votre composant:
+Grâce à l'intégration d'[Apollo Boost](https://www.apollographql.com/docs/react/get-started/), vous pouvez facilement intégrer Graph dans votre dApp React. Surtout lorsque vous utilisez [des hooks React et Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), récupérer des données est aussi simple que d'écrire une requête GraphQl dans votre composant:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

@@ -52,7 +52,7 @@ Beide Optionen haben verschiedene Vorteile, die oben zusammengefasst sind. Wenn 
 
 #### Hardware {#hardware}
 
-Ein zensurresistentes, dezentrales Netz sollte sich jedoch nicht auf Cloud-Anbieter verlassen. Stattdessen ist es für das Ökosystem gesünder, wenn Sie Ihren Node auf Ihrer eigenen lokalen Hardware betreiben. [Schätzungen](https://www.ethernodes.org/networkType/Hosting) zeigen, dass ein großer Teil der Knoten in der Cloud betrieben werden, was zu einer einzelnen Fehlerquelle führen kann.
+Ein zensurresistentes, dezentrales Netz sollte sich jedoch nicht auf Cloud-Anbieter verlassen. Stattdessen ist es für das Ökosystem gesünder, wenn Sie Ihren Node auf Ihrer eigenen lokalen Hardware betreiben. [Schätzungen](https://www.ethernodes.org/network-types) zeigen, dass ein großer Teil der Knoten in der Cloud betrieben werden, was zu einer einzelnen Fehlerquelle führen kann.
 
 Ethereum-Clients können auf Ihrem Computer, Laptop, Server oder sogar auf einem Einplatinencomputer ausgeführt werden. Es ist zwar möglich, Clients auf Ihrem Heimcomputer auszuführen, jedoch kann ein eigens für Ihren Knoten eingerichteter Rechner dessen Leistung und Sicherheit erheblich verbessern und gleichzeitig die Auswirkungen auf Ihren primären Computer minimieren.
 
@@ -162,7 +162,7 @@ Es sei auch erwähnet, dass die Client-Vielfalt ein [Problem auf der Ausführung
 ##### Konsens-Clients
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Bietet keine vorgefertigte Binärdatei, sondern nur eine Docker-Abbildung, die aus den Quelldateien erstellt werden muss)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Bietet keine vorgefertigte Binärdatei, sondern nur eine Docker-Abbildung, die aus den Quelldateien erstellt werden muss)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu verfügt auch über eine Startoption, die eine Reihe von Fragen stellt und 
 besu --Xlauncher
 ```
 
-[Dokumentation von Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) enthält zusätzliche Optionen und Konfigurationsdetails.
+[Dokumentation von Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) enthält zusätzliche Optionen und Konfigurationsdetails.
 
 ##### Ausführen von Erigon
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Ausführen von Nethermind
 
-Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Das Paket enthält verschiedene Binärdateien, darunter einen Launcher mit einem geführten Setup, mit dem Sie die Konfiguration interaktiv erstellen können. Alternativ finden Sie Runner, das die ausführbare Datei selbst ist, und Sie können sie einfach mit Konfigurationsflaggen ausführen. JSON-RPC ist standardmäßig aktiviert.
+Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/get-started/installing-nethermind). Das Paket enthält verschiedene Binärdateien, darunter einen Launcher mit einem geführten Setup, mit dem Sie die Konfiguration interaktiv erstellen können. Alternativ finden Sie Runner, das die ausführbare Datei selbst ist, und Sie können sie einfach mit Konfigurationsflaggen ausführen. JSON-RPC ist standardmäßig aktiviert.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Die Nethermind-Dokumente bieten eine [vollständige Anleitung](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) zum Betrieb von Nethermind mit Konsensclients.
+Die Nethermind-Dokumente bieten eine [vollständige Anleitung](https://docs.nethermind.io/get-started/running-node/) zum Betrieb von Nethermind mit Konsensclients.
 
 Ein Ausführungsclient initiiert seine Kernfunktionen, wählt Endpunkte und beginnt mit der Suche nach Peers. Nach erfolgreicher Erkennung von Peers beginnt der Client mit der Synchronisierung. Der Ausführungsclient wartet auf eine Verbindung vom Konsensclient. Die aktuellen Blockchain-Daten sind verfügbar, sobald der Client erfolgreich mit dem aktuellen Zustand synchronisiert wurde.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Ausführen von Prysm
 
-Prysm wird mit einem Skript geliefert, das eine einfache automatische Installation ermöglicht. Einzelheiten sind in den [Prysm-Dokumenten](https://docs.prylabs.network/docs/install/install-with-script) zu finden.
+Prysm wird mit einem Skript geliefert, das eine einfache automatische Installation ermöglicht. Einzelheiten sind in den [Prysm-Dokumenten](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/) zu finden.
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +444,7 @@ Erwägen Sie die Einrichtung eines Dienstes, der Ihren Client automatisch beim S
 
 #### Aktualisieren von Clients {#updating-clients}
 
-Sie müssen Ihre Client-Software mit den neuesten Sicherheitspatches, Funktionen und [EIPs](/eips/) auf dem neuesten Stand halten. Besonders vor [Hard Forks](/history/) sollten Sie sicherstellen, dass Sie die richtigen Client-Versionen verwenden.
+Sie müssen Ihre Client-Software mit den neuesten Sicherheitspatches, Funktionen und [EIPs](/eips/) auf dem neuesten Stand halten. Besonders vor [Hard Forks](/ethereum-forks/) sollten Sie sicherstellen, dass Sie die richtigen Client-Versionen verwenden.
 
 > Vor wichtigen Netzwerk-Updates veröffentlicht EF einen Beitrag in seinem [Blog](https://blog.ethereum.org). Sie können [diese Ankündigungen abonnieren](https://blog.ethereum.org/category/protocol#subscribe), um eine Benachrichtigung per E-Mail zu erhalten, wenn Ihr Node eine Aktualisierung benötigt.
 

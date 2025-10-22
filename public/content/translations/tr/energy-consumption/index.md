@@ -61,14 +61,19 @@ Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda 
 
 [Gitcoin](https://gitcoin.co) gibi Web3'ye ait kamu malı fonlama platformları Ethereum'un uygulama katmanı üzerinde çevresel olarak bilinçli inşayı teşvik etmek için iklim rauntları oluştururlar. Bu inisiyatiflerin gelişimi aracılığıyla (ve [DeSci](/desci/) gibi diğerleri) Ethereum, çevresel ve sosyal bir net pozitif teknoloji haline geliyor.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Eğer bu sayfanın daha isabetli olabileceğini düşünüyorsanız, lütfen bir konu veya PR açın. Bu sayfadaki istatistikler herkese açık veriye dayalı tahminlerdir - ethereum.org takımından veya Ethereum Foundation'dan resmi bir açıklama veya sözü temsil etmezler.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Daha fazla bilgi {#further-reading}
 
 - [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum)
-- [İş ispatı blok zincirleri hakkında Beyaz Saray raporu](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [İş ispatı blok zincirleri hakkında Beyaz Saray raporu](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emisyonları: Baştan Sona Bir Tahmin](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Enerji Tüketim Endeksi](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

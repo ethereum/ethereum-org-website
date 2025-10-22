@@ -16,7 +16,7 @@ A régebbi adatokhoz lehet olcsóbb merevlemezeket használni, de ezek túl lass
 
 Számos módon le lehet csökkenteni a csomópontban tárolt adatmennyiséget, ehhez azonban különféle mértékben, de módosítani kell az Ethereum-protokollon:
 
-- **Az előzményadatok lejárata**: lehetővé teszi, hogy a csomópont törölje azokat a státuszadatokat, amelyek X blokknál régebbiek, de nem változtatja meg a Ethereum-kliens státuszkezelési módját
+- **Az előzményadatok lejárata**: lehetővé teszi, hogy a csomópont törölje azokat a státuszadatokat, amelyek X blokknál régebbiek, de nem változtatja meg a Ethereum-kliens státuszkezelési módját.
 - **A státusz lejárata**: lehetővé teszi, hogy inaktívvá válhassanak azok a státuszadatok, amelyeket nem használnak rendszeresen. Az inaktív adatokkal nem kell foglalkoznia a kliensnek mindaddig, amíg az újból be nem hívják őket.
 - **Gyenge státusztalanság**: csak a blokk-készítőknek van szükségük a teljes státuszadatra, a többi csomópont a lokális státuszadatbázis nélkül is képes ellenőrizni a blokkokat.
 - **Erős státusztalanság**: semelyik csomópontnak nincs szüksége az összes státuszadatra.

@@ -44,11 +44,11 @@ En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple 
 
 - **Tenedores de ether**: personas que tienen una cantidad arbitraria de ETH. [Más información sobre ETH](/eth/).
 - **Usuarios de aplicaciones**: estas personas interactúan con aplicaciones en la cadena de bloques de Ethereum.
-- **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre DApps](/dapps/).
+- **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre DApps](/apps/).
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).
 - **Autores de EIP**: estas personas proponen cambios en el protocolo Ethereum en calidad de propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»). [Más información sobre las EIP](/eips/).
 - **Validadores**: estas personas ejecutan nodos que pueden añadir nuevos bloques a la cadena de bloques de Ethereum.
-- **Desarrolladores del protocolo** (también conocidos como "Desarrolladores principales"): estas personas mantienen las diversas implementaciones de Ethereum (por ejemplo, go-ethereum, Nethermind, Besu, Erigon, Reth en la capa de ejecución o Prysm, Lighthouse, Nimbus, Teku, Lodestar en la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
+- **Desarrolladores del protocolo** (también conocidos como «Desarrolladores Principales»): estas personas mantienen las diversas implementaciones de Ethereum (p. ej., go-ethereum, Nethermind, Besu, Erigon, Reth en la capa de ejecución o Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine ene la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un desarrollador de protocolos podría abogar por una EIP, ejecutar un validador de la cadena de baliza y utilizar aplicaciones DeFi). Sin embargo, por motivos de claridad conceptual, resulta más práctico hacer una distinción entre ellos._
 
@@ -118,7 +118,7 @@ Por lo general, los desacuerdos se tratan en discusiones extensas en foros de ac
 
 Las bifurcaciones se dan cuando hay mejoras técnicas o modificaciones que cambian las reglas del juego en el protocolo. Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) deben actualizar su software para implementar las nuevas reglas establecidas en la bifurcación.
 
-La bifurcación de una DAO surgió en respuesta al [ataque de una DAO en 2016](https://www.coindesk.com/understanding-dao-hack-journalists), donde un contrato inseguro de una [DAO](/glossary/#dao) fue drenado por más de 3,6 millones de ETH en un hack. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
+La bifurcación de una DAO surgió en respuesta al [ataque de una DAO en 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), donde un contrato inseguro de una [DAO](/glossary/#dao) fue drenado por más de 3,6 millones de ETH en un hack. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
 
 Esta acción fue votada por la comunidad Ethereum. Cualquier titular de ETH pudo votar a través de una transacción en [una plataforma de votación](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisión de bifurcar obtuvo más del 85 % de los votos.
 
@@ -152,7 +152,7 @@ El proceso de gobernanza de Ethereum usualmente cambia velocidad y eficiencia po
 
 Si bien la especificación y las implementaciones de desarrollo siempre han sido totalmente de código abierto, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
 
-Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/history/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
+Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/ethereum-forks/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
 <ButtonLink href="/roadmap/merge/">
   Más sobre la fusión

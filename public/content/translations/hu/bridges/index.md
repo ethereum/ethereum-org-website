@@ -24,7 +24,7 @@ De mit csináljunk, ha egy ilyen átváltást két különböző [blokkláncon](
 
 Minden blokkláncnak megvannak a maga korlátai. Az Ethereum skálázásához és hogy ki bírja szolgálni a keresletet, [tranzakcióösszegzőkre (rollup)](/glossary/#rollups) van szüksége. Más L1 blokkláncok, mint a Solana és az Avalanche, másképpen vannak összerakva, így magasabb tranzakcióátvitelt bírnak, de a decentralizációt áldozzák fel cserébe.
 
-Ugyanakkor minden blokkláncot elkülönült környezetben fejlesztenek, más szabályok és más [konszenzusmechanizmus](/glossary/#consensus) alapján. Emiatt maguktól nem tudnak egymással kommunikálni, a tokeneket pedig nem lehet szabadon átvinni az egyikről a másikra.
+Ugyanakkor minden blokkláncot elkülönült környezetben fejlesztenek, más szabályok és más [konszenzusos](/glossary/#consensus) mechanizmus alapján. Emiatt maguktól nem tudnak egymással kommunikálni, a tokeneket pedig nem lehet szabadon átvinni az egyikről a másikra.
 
 A hidak kötik össze a blokkláncokat, lehetővé téve az információ és a tokenek áramlását közöttük.
 
@@ -49,7 +49,7 @@ Tegyük fel, hogy Ön rendelkezik ETH-szel az Ethereum főhálózatán, de olcs�
 
 ### Decentralizált alkalmazások (dapp) más blokkláncokon {#dapps-other-chains}
 
-Tegyük fel, hogy Ön az Aave alkalmazást használja az Ethereum főhálózatán arra, hogy USDT-t kölcsönözzön, de a Polygonon ugyanez az alkalmazás magasabb kamatot ad.
+Tegyük fel, hogy Ön az Aave alkalmazást használja az Ethereum főhálózatán arra, hogy USDT-t biztosítson, de a Polygonon ugyanez az alkalmazás magasabb kamatot ad.
 
 ### A blokklánc-ökoszisztémák felfedezése {#explore-ecosystems}
 
@@ -59,9 +59,14 @@ Ha Ön ETH összeggel rendelkezik az Ethereum-főhálózaton, de fel szeretne fe
 
 Amennyiben Ön szeretne bitcoint (BTC) birtokolni, de a pénzeszközei az Ethereum főhálózatán vannak. Az Ethereumon becsomagolt formában szerezhet bitcoint (WBTC). Ugyanakkor a WBTC egy [ERC-20](/glossary/#erc-20) token az Ethereum hálózatán, tehát egy Ethereum verziójú bitcoin, és nem az eredeti eszköz a Bitcoin-blokkláncon. Az eredeti BTC megszerzéséhez egy hídon keresztül át kell vinnie a pénzeszközeit a Bitcoin hálózatára. Ezzel áthelyezi a WBTC-t és átváltja BTC-re. Másik irányból, ha Ön rendelkezik BTC-vel, de azt az Ethereum [decentralizált pénzügyi (DeFi)](/glossary/#defi) protokolljában akarja használni. Ekkor a hídon a másik irányba mozgatja az eszközeit, BTC-ről WBTC-re váltja, majd azt áthelyezi az Ethereumra.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Mindezt megteheti egy <a href="/get-eth/">centralizált tőzsde</a> segítségével is. Ha azonban az eszközei már a tőzsdén vannak, akkor több lépést kell végrehajtani, és akkor már egyszerűbb a hidat használni.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Mindezt megteheti egy [centralizált tőzsde](/get-eth/) segítségével is. Ha azonban az eszközei már a tőzsdén vannak, akkor több lépést kell végrehajtani, és akkor már egyszerűbb a hidat használni.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -95,11 +100,11 @@ Számos hidat biztosító megoldás e két modell közötti módszert alakít ki
 
 <Divider />
 
-## Híd használata {#use-bridge}
+## A hidak használata {#use-bridge}
 
 A hidak segítségével a felhasználók különböző blokkláncok között tudnak eszközöket mozgatni. Íme néhány forrás, amelyek hasznosak lehetnek a hidak megtalálásához és használatához:
 
-- **[L2BEAT hidakról szóló összefoglaló](https://l2beat.com/bridges/summary) & [L2BEAT hidak kockázati elemzése](https://l2beat.com/bridges/risk)**: Egy átfogó tanulmány a különféle hidakról, beleértve azok piaci részesedését, típusát és azokat a blokkláncokat, melyekkel összeköttetést biztosítanak. Az L2BEAT kockázati elemzést is készített a hidakról, hogy a felhasználók megfelelően tudjanak választani azok közül.
+- **[L2BEAT hidakról szóló összefoglaló](https://l2beat.com/bridges/summary) & [L2BEAT hidak kockázati elemzése](https://l2beat.com/bridges/summary)**: Egy átfogó tanulmány a különféle hidakról, beleértve azok piaci részesedését, típusát és azokat a blokkláncokat, melyekkel összeköttetést biztosítanak. Az L2BEAT kockázati elemzést is készített a hidakról, hogy a felhasználók megfelelően tudjanak választani azok közül.
 - **[DefiLlama hidakról szóló összefoglaló](https://defillama.com/bridges/Ethereum)**: Az Ethereum hálózatok közötti hidak forgalmi adatainak összefoglalója.
 
 <Divider />
@@ -131,7 +136,9 @@ A hidak elengedhetetlenek az Ethereum L2 használatához, illetve ha a felhaszn�
 <Divider />
 
 ## További olvasnivaló {#further-reading}
+- [EIP-5164: Láncok közötti műveletek végrehajtása](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) – _2022. június 18. – Brendan Asselstine_
+- [L2 hidak kockázati keretrendszere](https://gov.l2beat.com/t/l2bridge-risk-framework/31) – _2022. július 5. – Bartek Kiepuszewski_
+- [Miért inkább többláncú a jövő, mintsem láncok közötti](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) – _2022. január 8. – Vitalik Buterin_
+- [A közös biztonság kihasználása a biztonságos láncközi interoperabilitás érdekében: Lagrange státuszbizottságok és további megoldások](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – _2024. június 12. – Emmanuel Awosika_
+- [Az összevont tranzakciók interoperabilitási megoldásainak státusza](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) – _2024. június 20. – Alex Hook_
 
-- [EIP-5164: Láncok közötti műveletek végrehajtása](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _2022. június 18. – Brendan Asselstine_
-- [L2 hidak kockázati keretrendszere](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022. július 5. – Bartek Kiepuszewski_
-- [A jövő miért inkább többláncú, mint láncok közötti](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022. január 8. – Vitalik Buterin_

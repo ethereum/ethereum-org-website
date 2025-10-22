@@ -1,5 +1,4 @@
 import type { ImageProps } from "next/image"
-import { useTranslation } from "next-i18next"
 import type { ReactNode } from "react"
 
 import { cn } from "@/lib/utils/cn"
@@ -8,7 +7,9 @@ import { ButtonLink } from "./ui/buttons/Button"
 import { Center, Flex, HStack } from "./ui/flex"
 import { Tag } from "./ui/tag"
 import GitStars from "./GitStars"
-import { TwImage } from "./Image"
+import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type SubjectBadgeProps = {
   subject: string
@@ -59,6 +60,7 @@ export type ProductCardProps = {
   githubRepoStars?: number
   githubRepoLanguages?: Array<string>
   hideStars?: boolean
+  priceType?: string
 }
 
 const ProductCard = ({
@@ -75,6 +77,7 @@ const ProductCard = ({
   githubRepoStars = 0,
   githubRepoLanguages = [],
   hideStars = false,
+  priceType,
 }: ProductCardProps) => {
   const { t } = useTranslation("common")
 
@@ -87,7 +90,7 @@ const ProductCard = ({
       )}
     >
       <Center className="min-h-[200px]" style={{ backgroundColor: bgProp }}>
-        <TwImage src={image} alt={alt} height="100" className="self-center" />
+        <Image src={image} alt={alt} height="100" className="self-center" />
       </Center>
       <Flex className="h-full flex-col p-6 text-left">
         {githubRepoStars > 0 && (
@@ -119,6 +122,9 @@ const ProductCard = ({
               {subject}
             </SubjectBadge>
           ))}
+        {priceType && (
+          <SubjectBadge subject={priceType}>{priceType}</SubjectBadge>
+        )}
         {githubRepoLanguages.length > 0 &&
           githubRepoLanguages.map((name, idx: number) => (
             <SubjectBadge key={idx} subject={name}>
@@ -126,7 +132,7 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink href={url} className="m-4 h-20">
+      <ButtonLink href={url} className="m-4 py-4 text-center">
         {t("open")} {name}
       </ButtonLink>
     </Flex>

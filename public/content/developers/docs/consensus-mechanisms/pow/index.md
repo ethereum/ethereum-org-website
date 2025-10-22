@@ -6,9 +6,14 @@ lang: en
 
 The Ethereum network began by using a consensus mechanism that involved **[Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)**. This allowed the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevented certain kinds of economic attacks. However, Ethereum switched off proof-of-work in 2022 and started using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead.
 
-<InfoBanner emoji=":wave:">
-    Proof-of-work has now been deprecated. Ethereum no longer uses proof-of-work as part of its consensus mechanism. Instead, it uses proof-of-stake. Read more on <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
+    Proof-of-work has now been deprecated. Ethereum no longer uses proof-of-work as part of its consensus mechanism. Instead, it uses proof-of-stake. Read more on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Prerequisites {#prerequisites}
 
@@ -56,7 +61,7 @@ To consistently create malicious yet valid blocks, a malicious miner would have 
 
 Proof-of-work was also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
-Since the [Constantinople upgrade](/history/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
+Since the [Constantinople upgrade](/ethereum-forks/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
 
 ## Finality {#finality}
 

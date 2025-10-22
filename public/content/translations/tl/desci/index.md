@@ -95,8 +95,7 @@ Tingnan ang mga proyekto at sumali sa komunidad ng DeSci.
 - [Molecule: Maglaan at makakuha ng pondo para sa iyong mga proyektong pananaliksik](https://www.molecule.xyz/)
 - [VitaDAO: makatanggap ng pondo sa pamamagitan ng mga sponsored na research agreement para sa longevity research](https://www.vitadao.com/)
 - [ResearchHub: mag-post ng resulta ng siyentipikong pag-aaral at makipag-usap sa mga kapwa mananaliksik](https://www.researchhub.com/)
-- [LabDAO: mag-fold ng protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: mag-query ng data ng klima na kinolekta ng desentralisadong komunidad](https://api.dclimate.net/)
+- [dClimate API: mag-query ng data ng klima na kinolekta ng desentralisadong komunidad](https://www.dclimate.net/)
 - [DeSci Foundation: builder ng tool sa paglalathala ng DeSc](https://descifoundation.org/)
 - [DeSci.World: one-stop shop para tingnan at mag-engage ang mga user sa decentralized science](https://desci.world)
 - [OceanDAO: pagpopondo na pinapamahalaan ng decentralized autonomous organization (DAO) para sa agham na nauugnay sa data](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ Tumatanggap kami ng mga mungkahi para sa mga bagong proyekto na ililista - tingn
 - [Gabay sa decentralized biotech ni Jocelynn Pearl para sa a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Ang sitwasyon para sa DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Gabay sa DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Mga mapagkukunan tungkol sa decentralized science](https://www.vincentweisser.com/decentralized-science)
+- [Mga mapagkukunan tungkol sa decentralized science](https://www.vincentweisser.com/desci)
 - [Biopharma IP-NFTs ng Molecule - Isang Teknikal na Paglalarawan](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Paggawa ng mga Trustless na System of Science ni Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Ang Kinabukasan ng Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ Tumatanggap kami ng mga mungkahi para sa mga bagong proyekto na ililista - tingn
 - [DeSci: Ang Kinabukasan ng Pananaliksik ni Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Pondo para sa Siyensiya (Epilogo: DeSci at bagong crypto primitives) ni Nadia](https://nadia.xyz/science-funding)
 - [Binabago ng Desentralisasyon ang Pag-develop ng Gamot](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

@@ -87,7 +87,7 @@ APPLY({ Alice: $50, Bob: $50 },"send $70 from Alice to Bob") = ERROR
 3. 確認區塊上的工作量證明是否有效。
 4. 使 `S[0]` 為前一個區塊末端的狀態。
 5. 假設 `TX` 是區塊的交易清單，其中有 `n` 個交易。 對於 `0...n-1` 中的所有 `i`，設定 `S[i+1] = APPLY(S[i],TX[i])`。如果任何應用程式傳回錯誤，則結束並傳回 false。
-6. 傳回 true，並將 <0>S[n]</0> 註冊為該區塊末端的狀態。
+6. 傳回 true，並將 `<0>S[n]</0>` 註冊為該區塊末端的狀態。
 
 本質上，區塊中的每個交易都必須提供一個有效的狀態轉換，即從交易執行之前的規範狀態轉換到某個新狀態。 請注意，狀態不會以任何方式編碼在區塊中；它純粹是驗證節點要記住的抽象，並且只能透過從創世狀態開始並順序應用每個區塊中的每個交易來（安全地）計算任何區塊。 此外，請注意，礦工將交易放入區塊的順序很重要；如果一個區塊中有兩個交易 A 和 B，並且 B 花費了 A 創造的未花費的交易輸出，那麼如果 A 出現在 B 之前，則該區塊將有效，否則無效。
 
@@ -181,7 +181,7 @@ _右：改變默克爾樹的任何部分的任何嘗試最終都會導致鏈上�
 - 訊息接收者
 - 與訊息一起傳輸的以太幣數量
 - 一個可選擇的資料欄位
-- <0>STARTGAS</0> 值
+- `<0>STARTGAS</0>` 值
 
 訊息與交易基本相似，但是訊息是由合約產生的，而不是由外部執行者產生。 當目前執行程式碼的合約執行 `CALL` 操作碼時，就會產生一則訊息，該操作碼會產生並執行一則訊息。 與交易一樣，訊息會使得接收者帳戶執行其程式碼。 因此，如同外部參與者與其他合約建立的關係一樣，合約可以與其他合約建立完全相同的關係。
 
@@ -383,7 +383,7 @@ def register(name, value):
 3. 實際上挖礦能力的分配最終可能極度不平等。
 4. 想破壞網路的投機者、政敵和瘋子確實存在，他們可以巧妙地設定合約，讓他們的成本遠低於其他驗證節點支付的成本。
 
-(1) 讓礦工傾向於添加較少的交易，並且 (2) 增加 `NC`；因此這兩種作用會互相 抵銷一部分。 <sup>[如何抵銷？](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) 和 (4) 是主要問題，為了解決它們，我們簡單地制訂了一個浮動上限： 沒有區塊能夠包含比 `BLK_LIMIT_FACTOR` 乘以長期指數移動平均值更多的操作數。 具體來說：
+(1) 讓礦工傾向於添加較少的交易，並且 (2) 增加 `NC`；因此這兩種作用會互相 抵銷一部分。 <sup>[如何抵銷？](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) 和 (4) 是主要問題，為了解決它們，我們簡單地制訂了一個浮動上限： 沒有區塊能夠包含比 `BLK_LIMIT_FACTOR` 乘以長期指數移動平均值更多的操作數。 具體來說：
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _除了線性的貨幣發行方式外，與比特幣相似，以太幣的長期�
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 及自治代理，Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn 在圖靈節談論智慧型資產](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [以太坊遞迴長度前綴](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [以太坊默克爾帕特里夏樹](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [以太坊遞迴長度前綴](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [以太坊默克爾帕特里夏樹](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 談論默克爾求和樹](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_有關白皮書的歷史記錄，請參閱[此維基](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
+_有關白皮書的歷史記錄，請參閱[此維基](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
 
 _與許多社群驅動的開源軟體專案一樣，以太坊自最初誕生以來一直在不斷發展。 來學習更多最新以太坊發展及多年來之網路協議變動, 我們推薦你詳閱此[指南簡介](/learn/)._

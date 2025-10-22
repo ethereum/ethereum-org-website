@@ -62,7 +62,7 @@ sidebarDepth: 2
 
 始终确保满足客户端文档中给定模式的硬件要求。 归档节点的最大要求是磁盘空间。 根据不同的客户端，此项要求从 3TB 到 12TB 不等。 虽然人们可能认为机械硬盘是更适合存储大量数据的解决方案，不过，同步数据和持续地更新链头需要使用固态硬盘。 [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) 驱动器足够好，但它应该拥有可靠的质量，至少是 [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences) 类型的。 磁盘可以安装在有足够插槽的台式电脑或服务器中。 这样的专用设备是运行高正常运行时间节点的理想选择。 在笔记本上运行是完全可以实现的，代价是需要牺牲一定的便携性。
 
-所有数据需要存放在一个卷中，因此必须对磁盘进行合并，例如采用 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 方案或 [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html)。 你也可以考虑使用 [ZFS](https://en.wikipedia.org/wiki/ZFS)，因为它支持“写时复制”，从而确保数据正确地写入磁盘，而不会出现任何低级错误。
+所有数据需要存放在一个卷中，因此必须对磁盘进行合并，例如采用 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 方案或 LVM。 你也可以考虑使用 [ZFS](https://en.wikipedia.org/wiki/ZFS)，因为它支持“写时复制”，从而确保数据正确地写入磁盘，而不会出现任何低级错误。
 
 为了提高稳定性和安全性，防止发生意外的数据库损坏，你可以在系统支持时考虑使用 [ECC 内存](https://en.wikipedia.org/wiki/ECC_memory)，尤其是在专业设置中。 内存大小通常建议与全节点相同，但更大的内存可以帮助加速同步。
 

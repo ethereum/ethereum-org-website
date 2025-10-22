@@ -41,7 +41,7 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG explainer](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG explainer](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 #### Recent research {#recent-research}
@@ -83,7 +83,7 @@ An Ethereum node is required to run two pieces of software:
 1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
 2. an execution client to support the Ethereum Virtual Machine and execute transactions and smart contracts
 
-See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more detail on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/history/).
+See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more details on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/ethereum-forks/).
 
 ### Execution Clients {#execution-clients}
 
@@ -224,7 +224,7 @@ Economics research in Ethereum broadly follows two approaches: validate the secu
 
 #### Background reading {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [ETHconomics workshop at Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Recent research {#recent-research-9}
@@ -307,7 +307,7 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 #### Recent research {#recent-research-14}
 
-- [Robust Incentives Group Data Analysis](https://ethereum.github.io/rig/)
+- [Robust Incentives Group Data Analysis](https://rig.ethereum.org/)
 
 ## Apps and tooling {#apps-and-tooling}
 
@@ -377,7 +377,7 @@ Hacks on Ethereum generally exploit vulnerabilities in individual applications r
 
 - [Wormhole exploit report](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [List of Ethereum contract hack post-mortems](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Recent research {#recent-research-19}
 

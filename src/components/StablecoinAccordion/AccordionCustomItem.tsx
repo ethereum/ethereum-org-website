@@ -1,5 +1,4 @@
 import { BaseHTMLAttributes, ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -14,6 +13,8 @@ import {
 } from "../ui/accordion"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type LeftColumnPanelElement = BaseHTMLAttributes<HTMLDivElement>
 
@@ -32,18 +33,6 @@ export const RightColumnPanel = (props: ChildOnlyProp) => (
     {...props}
   />
 )
-
-const MoreOrLessLink = ({ isOpen }: { isOpen: boolean }) => {
-  const { t } = useTranslation("page-stablecoins")
-
-  return (
-    <div className="me-6 text-md text-primary">
-      {isOpen
-        ? t("page-stablecoins-accordion-less")
-        : t("page-stablecoins-accordion-more")}
-    </div>
-  )
-}
 
 interface AccordionCustomItemProps {
   /**
@@ -65,8 +54,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
   return (
     <AccordionItem value={contentObj.title} className="border">
       <AccordionTrigger
-        hideIcon
-        className="items-center justify-between px-0 py-0 text-body-medium hover:text-body-medium md:px-0"
+        className="items-center justify-between py-0 ps-0 text-body-medium hover:text-body-medium"
         onClick={handleOpen}
       >
         <Flex
@@ -96,7 +84,6 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
             </p>
           </div>
         </Flex>
-        <MoreOrLessLink isOpen={open} />
       </AccordionTrigger>
       <AccordionContent className="-mx-px -mb-px mt-0 border border-border bg-background p-0 text-md md:p-0">
         <Flex className="flex-col justify-between p-8 lg:flex-row">

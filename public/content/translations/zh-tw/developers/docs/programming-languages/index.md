@@ -15,6 +15,7 @@ lang: zh-tw
 - [Dart開發者適用的 Ethereum 資源](/developers/docs/programming-languages/dart/)
 - [Delphi 開發者適用的Ethereum 資源](/developers/docs/programming-languages/delphi/)
 - [.NET 開發者適用的 Ethereum 資源](/developers/docs/programming-languages/dot-net/)
+- [Elixir 開發者適用的以太坊資源](/developers/docs/programming-languages/elixir/)
 - [Go 開發者適用的以太坊資源](/developers/docs/programming-languages/golang/)
 - [Java 開發者適用的 Ethereum 資源](/developers/docs/programming-languages/java/)
 - [JavaScript 開發者適用的 Ethereum 資源](/developers/docs/programming-languages/javascript/)

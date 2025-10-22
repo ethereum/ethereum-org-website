@@ -60,14 +60,17 @@ Adreesị gị ga-abụ otu na nkwekọrịta Ethereum niile. I kwesighị ịde
 ![Selecting from a list of wallets to connect with](./connect2.png)
 
 5. Kwado arịrịọ nke mbinye aka n'akpa ego ịntanetị gị iji guzobe njikọ ahụ. **Ibinye aka n'ozi a ekwesịghị iwe ETH ọbụla**.
-6. Ọ bụ ya! Malitezie iji ngwa ahụ. I nwere ike ịhụ ụfọdụ ọrụ dị mma na [peeji Ngwa nbipu anyị](/dapps/#explore). <br />
+6. Ọ bụ ya! Malitezie iji ngwa ahụ. I nwere ike ịhụ ụfọdụ ọrụ dị mma na [peeji Ngwa nbipu anyị](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Frequently asked questions
 

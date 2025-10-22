@@ -55,13 +55,14 @@ Si vous pensez qu'une communauté devrait être ajoutée ou supprimée selon ces
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - forum de discussion pour le développement Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - forum de discussion pour le développement Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *- forum de questions-réponses*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *- forum de questions-réponses décentralisé*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Forum communautaire Peera</Link> *- forum décentralisé de questions-réponses*</SocialListItem>
 
-## YouTube et Twitter {#youtube-and-twitter}
+## YouTube et X (anciennement Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Tenez-vous au courant des dernières nouvelles de la fondation Ethereum</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Compte officiel de la Fondation Ethereum</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - Le portail vers Ethereum, construit pour notre communauté mondiale grandissante</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Compte principal Ethereum pour la communauté</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Compte officiel de la Fondation Ethereum</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Le portail vers Ethereum, construit pour notre communauté mondiale grandissante</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Liste des comptes Twitter Ethereum influents</Link></SocialListItem>
 
 <Divider />

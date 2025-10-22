@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Probeer de apps",
   "page-index-cta-get-eth-description": "De valuta van Ethereum",
   "page-index-cta-get-eth-label": "Verkrijg ETH",
-  "page-index-cta-networks-description": "Profiteer van minimale kosten",
-  "page-index-cta-networks-label": "Kies een netwerk",
   "page-index-cta-wallet-description": "Maak accounts aan en beheer activa",
   "page-index-cta-wallet-label": "Kies een portemonnee",
+  "page-index-cta-build-apps-description": "Maak uw eerste app",
+  "page-index-cta-build-apps-label": "Begin met bouwen",
   "page-index-description": "Het toonaangevende platform voor innovatieve apps en blockchain-netwerken",
   "page-index-developers-code-example-description-0": "Bouw een bank aangedreven door logica die jij hebt geprogrammeerd",
   "page-index-developers-code-example-description-1": "Maak tokens aan die je kunt overzetten en gebruiken verspreid over applicaties",
@@ -65,7 +65,7 @@
   "page-index-learn-tag": "Info",
   "page-index-learn-header": "Krijg inzicht in Ethereum",
   "page-index-meta-description": "Ethereum is een wereldwijd, gedecentraliseerd platform voor geld en nieuwe soorten toepassingen. Op Ethereum kun je code schrijven die geld controleert en toepassingen bouwen die overal ter wereld toegankelijk zijn.",
-  "page-index-meta-title": "De volledige handleiding van Ethereum",
+  "page-index-meta-title": "Ethereum.org: De volledige gids tot Ethereum",
   "page-index-network-stats-total-eth-staked": "Waarde die Ethereum beschermt",
   "page-index-network-stats-tx-cost-description": "Gemiddelde transactiekosten",
   "page-index-network-stats-tx-day-description": "Transacties in de afgelopen 24 uur",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Recente posts",
   "page-index-posts-subtitle": "De laatste blogposts en updates van de community",
   "page-index-title": "Welkom bij Ethereum",
+  "page-index-use-cases-tag": "Gebruikssituaties",
   "page-index-values-description": "Maak deel uit van de digitale revolutie",
   "page-index-values-header": "Het internet is aan het veranderen",
   "page-index-values-legacy": "Legacy",
@@ -116,5 +117,7 @@
   "page-index-values-open-legacy-label": "Gesloten voor de meesten",
   "page-index-values-open-legacy-content-0": "Bedrijven beschermen hun intellectuele eigendom en delen deze niet. Niemand buiten het bedrijf kan zien hoe dingen werken, problemen oplossen of verbeteringen doorvoeren. Het is moeilijk voor mensen om nieuwe tools te creëren of aan te passen.",
   "page-index-values-open-ethereum-label": "Open voor iedereen",
-  "page-index-values-open-ethereum-content-0": "Ethereum is openbaar voor iedereen. Iedereen kan de code zien, gebruiken en verbeteren, waardoor het voor iedereen beter wordt."
+  "page-index-values-open-ethereum-content-0": "Ethereum is openbaar voor iedereen. Iedereen kan de code zien, gebruiken en verbeteren, waardoor het voor iedereen beter wordt.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Neem deel aan het grootste Ethereum-evenement van het jaar",
+  "page-index-devconnect-banner-get-tickets": "Koop tickets"
 }

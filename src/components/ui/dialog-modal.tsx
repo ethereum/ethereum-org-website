@@ -1,5 +1,5 @@
 import * as React from "react"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
@@ -114,7 +114,7 @@ const DialogHeader = ({
       {children}
       <Center className={close()} asChild>
         <DialogPrimitive.Close>
-          <MdClose size="20" />
+          <X size="20" />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </Center>

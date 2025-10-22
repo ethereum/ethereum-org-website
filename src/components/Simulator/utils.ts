@@ -6,7 +6,9 @@ export const getValidPathId = (pathIdString: string | null): PathId | null => {
   return pathIdString
 }
 
-const isValidPathId = (pathIdString: string | null): pathIdString is PathId => {
+export const isValidPathId = (
+  pathIdString: string | null
+): pathIdString is PathId => {
   return PATH_IDS.includes(pathIdString as PathId)
 }
 

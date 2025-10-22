@@ -1,12 +1,10 @@
-import { useRouter } from "next/router"
+import { MDXRemoteProps } from "next-mdx-remote"
 import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
-import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
@@ -16,7 +14,6 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
@@ -28,16 +25,17 @@ import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
-import { mdxTableComponents } from "@/components/ui/table"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
+import { addSlashes } from "@/lib/utils/url"
 
-const baseHeadingClasses =
-  "font-mono uppercase font-bold scroll-mt-40 break-words"
+const baseHeadingClasses = "font-bold scroll-mt-40 break-words"
 
 const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
@@ -69,19 +67,24 @@ const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 const BackToTop = (props: ChildOnlyProp) => (
   <div className="display-none mt-12 flex border-t pt-8" {...props}>
     <InlineLink href="#top">
-      <Translation id="back-to-top" /> ↑
+      <Translation id="page-developers-docs:back-to-top" /> ↑
     </InlineLink>
   </div>
 )
+
+const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
 
 export const docsComponents = {
   h1: H1,
   h2: H2,
   h3: H3,
   h4: H4,
-  pre: Codeblock,
+  pre: Pre,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   Card,
   CallToContribute,
@@ -89,9 +92,8 @@ export const docsComponents = {
   Divider,
   Emoji,
   GlossaryTooltip,
-  InfoBanner,
   YouTube,
-}
+} as MDXRemoteProps["components"]
 
 type DocsLayoutProps = Pick<
   MdPageContent,
@@ -108,6 +110,7 @@ type DocsLayoutProps = Pick<
 
 export const DocsLayout = ({
   children,
+  slug,
   frontmatter,
   tocItems,
   lastEditLocaleTimestamp,
@@ -115,12 +118,11 @@ export const DocsLayout = ({
   contentNotTranslated,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="flex w-full flex-col border-b">
-      <SideNavMobile path={relativePath} />
+      <SideNavMobile path={slug} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
           <Translation id="page-developers-docs:banner-page-incomplete" />
@@ -130,7 +132,7 @@ export const DocsLayout = ({
         className="flex justify-between bg-background-highlight lg:pe-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <SideNav path={relativePath} />
+        <SideNav path={addSlashes(slug)} />
         <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
@@ -140,9 +142,9 @@ export const DocsLayout = ({
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
-            isMobile
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
+            isMobile
           />
           <div className="prose prose-lg max-w-none break-words">
             {children}

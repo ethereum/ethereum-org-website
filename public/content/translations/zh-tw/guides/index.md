@@ -12,7 +12,7 @@ lang: zh-tw
 
 1. [如何「創建」以太坊帳戶](/guides/how-to-create-an-ethereum-account/) - 任何人都可以免費創建一個錢包。 本指南會引導你從哪裡開始。
 
-2. [如何使用錢包](/guides/how-to-use-a-wallet/) - 各種錢包的基本功能及用法介紹。
+2. [如何使用錢包](/guides/how-to-use-a-wallet/) - 學習如何在你的錢包中發送、接收代幣，以及將錢包連接到專案。
 
 ## 安全基礎知識
 

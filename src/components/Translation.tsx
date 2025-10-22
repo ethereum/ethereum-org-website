@@ -1,26 +1,22 @@
 import htmr, { type HtmrOptions } from "htmr"
-import type { TOptions } from "i18next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import type { TranslationValues } from "next-intl"
 
 import TooltipLink from "./TooltipLink"
 
+import useTranslation from "@/hooks/useTranslation"
+
 type TranslationProps = {
   id: string
-  options?: TOptions
+  ns?: string
+  values?: TranslationValues
   transform?: HtmrOptions["transform"]
 }
 
 // Renders the translation string for the given translation key `id`. It
 // fallback to English if it doesn't find the given key in the current language
-const Translation = ({ id, options, transform = {} }: TranslationProps) => {
-  const { asPath } = useRouter()
-  const requiredNamespaces = getRequiredNamespacesForPage(asPath)
-
-  const { t } = useTranslation(requiredNamespaces)
-  const translatedText = t(id, options)
+const Translation = ({ id, ns, values, transform = {} }: TranslationProps) => {
+  const { t } = useTranslation(ns)
+  const translatedText = t(id, values)
 
   // Custom components mapping to be used by `htmr` when parsing the translation
   // text

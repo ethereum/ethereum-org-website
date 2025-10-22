@@ -36,11 +36,11 @@
   "page-index-cta-dapps-label": "Опитайте приложенията",
   "page-index-cta-get-eth-description": "Валутата на Eтереум",
   "page-index-cta-get-eth-label": "Вземете ETH",
-  "page-index-cta-networks-description": "Насладете се на минимални такси",
-  "page-index-cta-networks-label": "Изберете мрежа",
   "page-index-cta-wallet-description": "Създавайте акаунти и управлявайте активи",
   "page-index-cta-wallet-label": "Изберете портфейл",
   "page-index-description": "Водещата платформа за иновативни приложения и блокчейн мрежи",
+  "page-index-cta-build-apps-description": "Създайте своето първо приложение",
+  "page-index-cta-build-apps-label": "Започнете разработка",
   "page-index-developers-code-example-description-0": "Изградете банка, управлявана от програмирана от вас логика",
   "page-index-developers-code-example-description-1": "Създайте токени, които да прехвърляте и да използвате в различни приложения",
   "page-index-developers-code-example-description-2": "Използвайте съществуващите езици, за да взаимодействате с Етереум и други приложения",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Последни публикации",
   "page-index-posts-subtitle": "Най-новите публикации в блогове и актуализации от общността",
   "page-index-title": "Добре дошли в Eтереум",
+  "page-index-use-cases-tag": "Случаи на употреба",
   "page-index-values-description": "Бъдете част от дигиталната революция",
   "page-index-values-header": "Интернет се променя",
   "page-index-values-legacy": "Наследство",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Недостъпно за повечето хора",
   "page-index-values-open-legacy-content-0": "Компаниите защитават своята интелектуална собственост и не споделят. Никой извън компанията не може да види как работят нещата, да коригира проблеми или да прави подобрения. За хората е трудно да създават нови инструменти или да персонализират.",
   "page-index-values-open-ethereum-label": "Достъпно за всички",
-  "page-index-values-open-ethereum-content-0": "Eтереум е публичен за всички. Всеки може да види, използва и подобри кода, което го прави по-добър за всички."
+  "page-index-values-open-ethereum-content-0": "Eтереум е публичен за всички. Всеки може да види, използва и подобри кода, което го прави по-добър за всички.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Присъединете се към най-голямото Ethereum събитие на годината",
+  "page-index-devconnect-banner-get-tickets": "Вземете билети"
 }

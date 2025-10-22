@@ -20,7 +20,6 @@ Bazı web siteleri adresinize bağlı akıllı sözleşmeleri görmenize ve kald
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (birden fazla ağ)
 - [Revoke](https://revoke.cash/) (birden fazla ağ)
 - [Unrekt](https://app.unrekt.net/) (birden fazla ağ)
 - [EverRevoke](https://everrise.com/everrevoke/) (birden fazla ağ)
@@ -47,12 +46,15 @@ Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için bi
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Sıkça sorulan sorular
 

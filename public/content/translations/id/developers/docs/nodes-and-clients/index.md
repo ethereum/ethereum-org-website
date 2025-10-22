@@ -235,7 +235,7 @@ Perhatikan dokumentasi klien atau halaman bantuan untuk menemukan mode sinkronis
 
 `besu --sync-mode=FULL`
 
-Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup atau dalam berkas konfigurasi. Contoh lainnya adalah [Nethermind](https://docs.nethermind.io/nethermind/) yang mendorong Anda untuk memilih konfigurasi pada saat inisiasi pertama dan membuat berkas konfigurasi.
+Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup atau dalam berkas konfigurasi. Contoh lainnya adalah [Nethermind](https://docs.nethermind.io/) yang mendorong Anda untuk memilih konfigurasi pada saat inisiasi pertama dan membuat berkas konfigurasi.
 
 ## Klien konsensus (sebelumnya klien 'Eth2') {#consensus-clients}
 
@@ -247,7 +247,7 @@ Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk men
 | [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Rantai Suar, Goerli                  |
 | [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Rantai Suar, Goerli, Pyrmont         |
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Rantai Suar, Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Goerli, Pyrmont |
+| [Prysm](https://prysm.offchainlabs.com/docs/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Goerli, Pyrmont |
 
 ## Perangkat keras {#hardware}
 

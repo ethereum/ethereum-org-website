@@ -20,7 +20,6 @@ Istnieje kilka stron umożliwiających przeglądanie i unieważnianie inteligent
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (wiele sieci)
 - [Revoke](https://revoke.cash/) (wiele sieci)
 - [Unrekt](https://app.unrekt.net/) (wiele sieci)
 - [EverRevoke](https://everrise.com/everrevoke/) (wiele sieci)
@@ -47,12 +46,15 @@ Zalecamy odświeżenie narzędzia do unieważniania po kilku minutach i ponowne 
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Często zadawane pytania
 

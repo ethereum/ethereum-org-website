@@ -70,7 +70,7 @@ Az alacsony szintű formális specifikációkat Hoare-stílusú tulajdonságokk�
 
 ### Hoare-stílusú tulajdonságok {#hoare-style-properties}
 
-A [Hoare-logika](https://en.wikipedia.org/wiki/Hoare_logic) egy sor formális szabályt biztosít a programok, köztük az okosszerződések helyességére vonatkozó érveléshez. Egy Hoare-stílusú tulajdonságot egy Hoare-hármas {_P_}_c_{_Q_} reprezentál, ahol _c_ egy program, _P_ és _Q_ állítások a _c_ státuszára (a programra) vonatkozóan, amelyeket formálisan _előfeltételekkel_ és _utófeltételekkel_ írunk le.
+A [Hoare-logika](https://en.wikipedia.org/wiki/Hoare_logic) egy sor formális szabályt biztosít a programok, köztük az okosszerződések helyességére vonatkozó érveléshez. Egy Hoare-stílusú tulajdonságot egy Hoare-hármas \{_P_}_c_\{_Q_} reprezentál, ahol a _c_ egy program, _P_ és _Q_ állítások a _c_ státuszára (a programra) vonatkozóan, amelyeket formálisan _előfeltételekkel_ és _utófeltételekkel_ írunk le.
 
 Az előfeltétel egy állítás, amely leírja a függvény helyes végrehajtásához szükséges feltételeket; a szerződést meghívó felhasználóknak meg kell felelniük ennek a követelménynek. Az utófeltétel egy állítás, amely azt a feltételt írja le, amelyet egy függvény helyesen végrehajtva állít fel; a felhasználók elvárhatják, hogy ez a feltétel igaz legyen a függvény meghívása után. A _konstans_ a Hoare-logikában olyan állítás, amely egy függvény végrehajtása során megmarad (nem változik).
 

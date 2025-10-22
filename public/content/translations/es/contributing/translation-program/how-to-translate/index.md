@@ -18,7 +18,7 @@ Para quienes aprenden mejor observando, vean la guía paso a paso de Luka para c
 
 Deberá iniciar sesión en su cuenta de Crowdin o registrarse si aún no tiene una. Para registrarse solo necesita una cuenta de correo electrónico y una contraseña.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Únase al proyecto
 </ButtonLink>
 
@@ -34,7 +34,7 @@ Abra el idioma al que quiera traducir para ver la lista de archivos disponibles 
 
 El sitio web se divide en una serie de documentos y lotes de contenido. Puede ver el progreso de cada documento en la parte derecha. Si el progreso de una traducción está por debajo del 100 %, ¡ayúdenos a terminarla!
 
-¿No ve su idioma en la lista de idiomas? [Abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o pregunte en nuestro [Discord](/discord/),
+¿No ve su idioma en la lista de idiomas? [Abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o pregunte en nuestro [Discord](https://discord.gg/ethereum-org),
 
 ![Archivos traducidos y no traducidos en Crowdin](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Los botones de la parte superior le permiten cambiar a la sección de coincidenc
 
 Una vez que complete la traducción (es decir, cuando todos los archivos de un lote de contenido indiquen un 100%), nuestro servicio de traducción profesional revisará (y editará personalmente) el contenido. Cuando la revisión esté lista (cuando el progreso de la revisión sea 100 %), añadiremos la traducción al sitio web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   No utilice la traducción automática para traducir el proyecto. Todas las traducciones serán revisadas antes de ser añadidas al sitio web. Si sus traducciones resultan ser traducciones automáticas, serán rechazadas y los colaboradores que utilicen ltraducción automática posiblemente serán eliminados del proyecto.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Contáctenos {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro servidor [Discord de ethereum.org](/discord/)
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro servidor [Discord de ethereum.org](https://discord.gg/ethereum-org)
 
 También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org.
 

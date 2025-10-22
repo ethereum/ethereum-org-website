@@ -54,12 +54,15 @@ NFT's worden voor veel dingen gebruikt, waaronder:
 
 Misschien ben je een artiest die zijn werk wil delen via NFT's, zonder de controle te verliezen en inkomsten op te offeren aan tussenpersonen. Je kunt een nieuw contract aanmaken en het aantal NFT's, hun eigenschappen en een koppeling naar een uniek kunstwerk specificeren. Als artiest kun je de **royalty's waar je recht op hebt programmeren in het slimme contract** (bijv. 5% van de verkoopprijs naar het contract van de eigenaar overmaken elke keer dat een NFT wordt overgedragen). Je kunt ook altijd bewijzen dat je de NFT's hebt gemaakt, want je bent in het bezit van de [portemonnee](/glossary/#wallet) via welke het contract is ingezet. Je kopers kunnen eenvoudig bewijzen dat ze een **authentieke NFT** uit jouw collectie bezitten, omdat het [adres](/glossary/#address) van hun portemonnee geassocieerd is met een token in jouw slimme contract. Ze kunnen het gebruiken in het hele Ethereum-ecosysteem en vertrouwen hebben in de authenticiteit ervan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Verken, koop of maak je eigen NFT-kunst/-verzamelobjecten...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Verken NFT-kunst
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Of neem bijvoorbeeld een kaartje voor een sportevenement. Net zoals een **organisator van een evenement kan kiezen hoeveel tickets hij wil verkopen**, kan de maker van een NFT beslissen hoeveel replica's er mogen bestaan. Soms gaat het om exacte replica's, zoals 5000 algemene toelatingskaartjes. Soms worden er replica's gemaakt die zeer vergelijkbaar zijn, maar elk lichtjes verschillend, zoals een ticket met een toegewezen zitplaats. Deze kunnen peer-to-peer worden gekocht en verkocht zonder ticketbeheerders te betalen, en de koper kan altijd de authenticiteit van het ticket garanderen door het controleren van het contractadres.
 

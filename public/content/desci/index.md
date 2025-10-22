@@ -96,8 +96,7 @@ Explore projects and join the DeSci community.
 - [Molecule: Fund and get funded for your research projects](https://www.molecule.xyz/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
+- [dClimate API: query climate data collected by a decentralized community](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/)
@@ -110,6 +109,7 @@ Explore projects and join the DeSci community.
 - [ValleyDAO: an open, global community offering funding and translational support for synthetic biology research](https://www.valleydao.bio)
 - [Cerebrum DAO: sourcing and nurturing solutions to advance brain health and prevent neurodegeneration](https://www.cerebrumdao.com/)
 - [CryoDAO: funding moonshot research in the field of cryopreservation](https://www.cryodao.org)
+- [Elata: Have a say in the future of psychiatric medicine](https://www.elata.bio/)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
@@ -119,7 +119,7 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guide to DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Decentralized science resources](https://www.vincentweisser.com/decentralized-science)
+- [Decentralized science resources](https://www.vincentweisser.com/desci)
 - [Molecule’s Biopharma IP-NFTs - A Technical Description](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -127,7 +127,7 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

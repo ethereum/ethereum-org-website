@@ -9,14 +9,19 @@ template: roadmap
 
 A escalabilidade do Ethereum é feita por meio de [camadas 2s](/layer-2/#rollups) (também conhecidas como rollups), que agrupam transações em lote e enviam o resultado para o Ethereum. Embora os rollups sejam até oito vezes mais baratos do que a rede principal do Ethereum, é possível otimizar ainda mais os rollups de forma a reduzir os custos para os usuários finais. Os rollups também dependem de alguns componentes centralizados que os desenvolvedores podem remover à medida que os rollups se desenvolvem.
 
-<InfoBanner mb={8} title="Custos de transação">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Custos de transação
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Os rollups de hoje são cerca de<strong>5 a 20 vezes</strong> mais baratos do que a camada 1 do Ethereum</li>
     <li>ZK-rollups em breve reduzirão as taxas em <strong>~40-100x</strong></li>
     <li>As próximas alterações no Ethereum oferecerão <strong>~100-1000x</strong> a mais de escalabilidade</li>
     <li style={{ marginBottom: 0 }}>Os usuários devem se beneficiar com transações <strong>que custam menos do que $0,001</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Tornar os dados mais baratos {#making-data-cheaper}
 

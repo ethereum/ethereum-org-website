@@ -10,7 +10,7 @@ lang: zh
 
 **前期准备：**
 
-- 要有加密钱包，请参照这个教程：[如何“注册”以太坊帐户](/guides/how-to-create-an-ethereum-account/)
+- 拥有一个加密货币钱包，你可以参照该教程：[如何创建一个以太坊帐户](/guides/how-to-create-an-ethereum-account/)
 - 把代币转入你的钱包
 
 ## 1. 确定你想使用哪个二层网络
@@ -52,12 +52,15 @@ lang: zh
 你可以使用 [chainlist.org](http://chainlist.org) 找到这个网络的远程程序调用的详细信息。 一旦你把这个网络添加到你的钱包，并且交易完成，你应该就可看到代币出现在你的钱包中了。
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想了解更多信息？</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常见问题
 

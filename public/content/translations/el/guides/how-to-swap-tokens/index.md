@@ -12,7 +12,7 @@ lang: el
 
 **Προαπαιτούμενα:**
 
-- Κατοχή [πορτοφολιού κρυπτονομισμάτων](/glossary/#wallet), δείτε τον οδηγό: [Πώς να «δημιουργήσετε» ένα λογαριασμό Ethereum](/guides/how-to-create-an-ethereum-account/).
+- Έχετε [πορτοφόλι κρυπτονομισμάτων;](/glossary/#wallet) Αν όχι, ακολουθήστε αυτόν τον οδηγό: [Πώς να δημιουργήσετε έναν λογαριασμό Ethereum](/guides/how-to-create-an-ethereum-account/).
 - Προσθήκη κεφαλαίων στο πορτοφόλι σας.
 
 ## 1. Συνδέστε το πορτοφόλι σας με το αποκεντρωμένο ανταλλακτήριο (DEX) της επιλογής σας
@@ -49,12 +49,15 @@ lang: el
 Θα λάβετε αυτόματα τα κρυπτονομίσματα της ανταλλαγής στο πορτοφόλι σας μόλις ολοκληρωθεί η συναλλαγή.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Θέλετε να μάθετε περισσότερα;</div>
   <ButtonLink href="/guides/">
     Δείτε τους άλλους οδηγούς μας
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Συχνές ερωτήσεις
 

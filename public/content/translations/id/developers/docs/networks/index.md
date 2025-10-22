@@ -32,75 +32,89 @@ Kebanyakan testnet menggunakan mekanisme konsensus bukti otoritas. Ini berarti s
 
 ETH dalam testnet tidak punya nilai sebenarnya; oleh karena itu, tidak ada pasar untuk ETH testnet. Karena Anda membutuhkan ETH untuk benar-benar berinteraksi dengan Ethereum, kebanyakan orang mendapatkan ETH testnet dari keran. Sebagian besar keran adalah aplikasi web tempat Anda dapat memasukkan alamat pengiriman ETH yang Anda minta.
 
-#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+#### Testnet mana yang harus digunakan?
+
+Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia dan Hoodi. Sepolia adalah jaringan bagi pengembang kontrak dan aplikasi untuk menguji aplikasi mereka. Jaringan Hoodi memungkinkan pengembang protokol menguji peningkatan jaringan, dan memungkinkan para staker menguji validator.
+
+#### Sepolia {#sepolia}
+
+**Sepolia adalah testnet yang direkomendasikan untuk pengembangan aplikasi**. Jaringan Sepolia menggunakan set validator yang diizinkan. Ini cukup baru, yang berarti statusnya dan riwayatnya lebih ringan. Ini berarti jaringan disinkronkan dengan cepat dan menjalankan node membutuhkan lebih sedikit penyimpanan. Ini berguna bagi pengguna yang ingin menjalankan node dengan cepat dan terhubung langsung dengan jaringan.
+
+- Set validator tertutup, dikelola oleh tim klien & pengujian
+- Testnet baru, lebih sedikit aplikasi yang diterapkan daripada testnet lain
+- Sinkronisasi cepat dan menjalankan node membutuhkan sedikit penyimpanan
+
+##### Sumber daya
+
+- [Situs web](https://sepolia.dev/)
+- [GitHub](https://github.com/eth-clients/sepolia)
+- [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
+
+##### Faucet
+
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW Faucet](https://sepolia-faucet.pk910.de/)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia Faucet](https://sepoliafaucet.com/)
+- [Infura Sepolia Faucet](https://www.infura.io/faucet)
+- [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+
+#### Hoodi {#hoodi}
+
+Hoodi adalah testnet untuk pengujian validasi dan staking. Jaringan Hoodi terbuka bagi pengguna yang ingin menjalankan validator testnet. Oleh karena itu, staker yang ingin menguji peningkatan protokol sebelum penerapan ke Jaringan Utama harus menggunakan Hoodi.
+
+- Set validator terbuka, staker dapat menguji peningkatan jaringan
+- Status besar, berguna untuk menguji interaksi kontrak pintar yang kompleks
+- Membutuhkan waktu lebih lama untuk sinkronisasi dan lebih banyak penyimpanan untuk menjalankan node
+
+##### Sumber daya
+
+- [Situs web](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+
+##### Faucet
+
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
+
+Untuk meluncurkan validator di testnet Hoodi, gunakan [launchpad validator Hoodi](https://hoodi.launchpad.ethereum.org/id/).
+
+### Testnet lapisan ke-2 {#layer-2-testnets}
+
+[Lapisan ke-2 (L2)](/layer-2/) adalah istilah kolektif untuk solusi penskalaan Ethereum. Lapisan ke-2 adalah blockchain terpisah yang memperluas Ethereum dan mewarisi jaminan keamanan Ethereum. Testnet lapisan ke-2 biasanya terhubung erat dengan testnet publik Ethereum.
+
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Testnet untuk [Arbitrum](https://arbitrum.io/).
 
-##### Keran Arbitrum Rinkeby
+##### Faucet
 
-- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
-- [Keran Chainlink](https://faucets.chain.link/)
-- [Keran Paradigm](https://faucet.paradigm.xyz/)
+- [Chainlink Faucet](https://faucets.chain.link/)
+- [Alchemy Faucet](https://sepoliafaucet.com/)
 
-#### Görli {#goerli}
-
-Testnet bukti otoritas yang berfungsi di seluruh klien.
-
-##### Keran Görli
-
-- [Keran Görli](https://faucet.goerli.mudit.blog/)
-- [Keran Chainlink](https://faucets.chain.link/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-
-#### Kintsugi {#kintsugi}
-
-Testnet gabungan untuk Ethereum.
-
-##### Keran Kintsugi
-
-- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
-- [Keran Kintsugi](https://faucet.kintsugi.themerge.dev/)
-
-#### Kovan {#kovan}
-
-Testnet bukti kerja untuk mereka yang menjalankan klien OpenEthereum.
-
-##### Keran Kovan
-
-- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
-- [Keran Kovan](https://faucet.kovan.network/)
-- [Keran Chainlink](https://faucets.chain.link/)
-- [Keran Paradigm](https://faucet.paradigm.xyz/)
-
-#### Optimistic Kovan {#optimistic-kovan}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Testnet untuk [Optimism](https://www.optimism.io/).
 
-##### Keran Optimistic Kovan
+##### Faucet
 
-- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
-- [Keran Paradigm](https://faucet.paradigm.xyz/)
+- [Paradigm Faucet](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Sepolia](https://coinbase.com/faucets/optimism-sepolia-faucet)
+- [Alchemy Faucet](https://sepoliafaucet.com/)
 
-#### Rinkeby {#rinkeby}
+#### Starknet Sepolia {#starknet-sepolia}
 
-Testnet bukti otoritas bagi mereka yang menjalankan klien Geth.
+Testnet untuk [Starknet](https://www.starknet.io).
 
-##### Keran Rinkeby
+##### Faucet
 
-- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
-- [Keran Alchemy](https://RinkebyFaucet.com)
-- [Keran Chainlink](https://faucets.chain.link/)
-- [Keran Paradigm](https://faucet.paradigm.xyz/)
-- [Keran Rinkeby](https://faucet.rinkeby.io/)
-
-#### Ropsten {#ropsten}
-
-Testnet bukti kerja. Ini berarti representasi Ethereum yang terbaik.
-
-##### Keran Ropsten
-
-- [FaucETH](https://fauceth.komputing.org)(Keran Multi-Rantai tanpa memerlukan akun sosial)
-- [Keran Paradigm](https://faucet.paradigm.xyz/)
+- [Starknet Faucet](https://faucet.sepolia.starknet.io)
+- [Alchemy Faucet](https://sepoliafaucet.com/)
 
 ## Jaringan privat {#private-networks}
 

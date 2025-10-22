@@ -20,7 +20,6 @@ lang: el
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (πολλαπλά δίκτυα)
 - [Revoke](https://revoke.cash/) (πολλαπλά δίκτυα)
 - [Unrekt](https://app.unrekt.net/) (πολλαπλά δίκτυα)
 - [EverRevoke](https://everrise.com/everrevoke/) (πολλαπλά δίκτυα)
@@ -47,12 +46,15 @@ lang: el
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Θέλετε να μάθετε περισσότερα;</div>
   <ButtonLink href="/guides/">
     Δείτε τους άλλους οδηγούς μας
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Συχνές ερωτήσεις
 

@@ -58,7 +58,7 @@ Web3を使用する場合、 `eth_sendRawTransaction`は [web3.eth.sendSignedTra
 
 さて、これらの疑問が解消できたところで、さっそくチュートリアルを始めましょう。 疑問があれば、Alchemy [discord](https://discord.gg/gWuC7zB)で気軽に質問してください。
 
-### 7. 安全でガス最適化されたプライベートなトランザクションを送信する方法は？ {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7. 安全でガス最適化されたプライベートなトランザクションを送信する方法は？ {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemyには、トランザクションAPIのスイートがあります](https://docs.alchemy.com/reference/transact-api-quickstart)。 これにより、強化されたトランザクションの送信、トランザクションが発生する前のシミュレーション、プライベートなトランザクションの送信、ガス最適化されたトランザクションの送信が可能です。
 - [Notify API](https://docs.alchemy.com/docs/alchemy-notify)では、トランザクションがメモリプールからプルされチェーンに追加されたときに通知を受け取ることが可能です。
@@ -118,9 +118,13 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 <code>.env</code>はコミットしないでください！ <code>.env</code>は決して他人と共有したり、公開したりしないように注意してください。共有することで、あなたのアカウント情報が漏洩する可能性があります。 バージョンを管理する場合は、<code>.env</code>を<a href="https://git-scm.com/docs/gitignore">gitignore</a>ファイルに追加してください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 7. `sendTx.js` ファイルを作成する {#create-sendtx-js}
 

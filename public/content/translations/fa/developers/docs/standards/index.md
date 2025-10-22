@@ -17,7 +17,7 @@ incomplete: true
 - [صفحه گفتگوی EIP](https://ethereum-magicians.org/c/eips)
 - [مقدمه‌ای بر حاکمیت اتریوم](/governance/)
 - [مروری بر حاکمیت اتریوم](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
-- [هماهنگ‌سازی پروتکل توسعه پروتکل و ارتقا شبکه](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 مارس 2020 - هودسون جیمزسون_
+- [هماهنگ‌سازی پروتکل توسعه پروتکل و ارتقا شبکه](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 مارس 2020 - هودسون جیمزسون_
 - [فهرست پخش تمامی جلسات توسعه هسته اتریوم](https://www.youtube.com/@EthereumProtocol) _(فهرست پخش در یوتیوب)_
 
 ## انواع استانداردها {#types-of-standards}
@@ -41,7 +41,7 @@ incomplete: true
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - یک رابط استاندارد برای توکن‌های تعویضپذیر (قابل تعویض)، مانند توکن‌های رای‌گیری، توکن‌های شرط‌بندی یا ارزهای مجازی می باشد.
   - [ERC-223](/developers/docs/standards/tokens/erc-223/) - نوعی استاندارد توکن تعویض پذیر است که رفتاری مشابه اتر دارد و از انتقال توکن هایی که در سمت گیرنده مدیریت می شوند، پشتیبانی می کند.
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - یک رابط برقراری ارتباط با توکن، برای توکن‌های ERC-20 توصیف می‌کند که از اجرای کد گیرنده پس از اجرای انتقال یا «انتقال از» و یا اجرای کد ارسال کننده پس از تایید، پشتیبانی می‌کند.
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - یک رابط برقراری ارتباط با توکن، برای توکن‌های ERC-20 توصیف می‌کند که از اجرای کد گیرنده پس از اجرای انتقال یا «انتقال از» و یا اجرای کد ارسال کننده پس از تایید، پشتیبانی می‌کند.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - یک رابط استاندارد برای توکن‌های تعویض ناپذیر، مانند یک سند برای اثر هنری یا یک آهنگ است.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - یک رویداد استاندارد شده که هنگام ساخت یا انتقال یک یا چندین توکن تعویض ناپذیر، با استفاده از IDهای متوالی، اجرا و اطلاع رسانی می‌شود.
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - افزونه‌ای برای نقش مصرف کننده در رابط EIP-721.
