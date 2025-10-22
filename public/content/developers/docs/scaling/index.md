@@ -13,27 +13,27 @@ The main goal of scalability is to increase transaction speed (faster finality) 
 
 While speed and throughput are important, it is essential that scaling solutions enabling these goals remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
 
-Conceptually we first categorize scaling as either on-chain scaling or off-chain scaling.
+Conceptually we first categorize scaling as either onchain scaling or offchain scaling.
 
 ## Prerequisites {#prerequisites}
 
 You should have a good understanding of all the foundational topics. Implementing scaling solutions is advanced as the technology is less battle-tested, and continues to be researched and developed.
 
-## On-Chain scaling {#on-chain-scaling}
+## Onchain scaling {#onchain-scaling}
 
-On-chain scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). For a long time, sharding the blockchain was expected to scale Ethereum. This was going to involve splitting the blockchain into discrete pieces (shards) to be verified by subsets of validators. However, scaling by layer-2 rollups has taken over as the primary scaling technique. This is supported by the addition of a new cheaper form of data attached to Ethereum blocks that is specially designed to make rollups cheap for users.
+Onchain scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). For a long time, sharding the blockchain was expected to scale Ethereum. This was going to involve splitting the blockchain into discrete pieces (shards) to be verified by subsets of validators. However, scaling by layer-2 rollups has taken over as the primary scaling technique. This is supported by the addition of a new cheaper form of data attached to Ethereum blocks that is specially designed to make rollups cheap for users.
 
 ### Sharding {#sharding}
 
 Sharding is the process of splitting a database. Subsets of validators would be responsible for individual shards rather than keeping track of all of Ethereum. Sharding was on the Ethereum [roadmap](/roadmap/) for a long time, and was once intended to be shipped before The Merge to proof-of-stake. However, the rapid development of [layer 2 rollups](#layer-2-scaling) and the invention of [Danksharding](/roadmap/danksharding) (adding blobs of rollup data to Ethereum blocks that can be very efficiently verified by validators) has led the Ethereum community to favour rollup-centric scaling instead of scaling by sharding. This will also help to keep Ethereum's consensus logic simpler.
 
-## Off-chain scaling {#off-chain-scaling}
+## Offchain scaling {#offchain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains), [validiums](#validium), or [plasma chains](#plasma). These solutions communicate with Mainnet but derive their security differently to obtain a variety of goals.
+Offchain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains), [validiums](#validium), or [plasma chains](#plasma). These solutions communicate with Mainnet but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 scaling {#layer-2-scaling}
 
-This category of off-chain solutions derives its security from Mainnet Ethereum.
+This category of offchain solutions derives its security from Mainnet Ethereum.
 
 Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum Mainnet (layer 1) while taking advantage of the robust decentralized security model of Mainnet. Transaction speed suffers when the network is busy, making the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
@@ -57,11 +57,11 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 There are two types of rollups with different security models:
 
 - **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
-- **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
+- **Zero-knowledge rollups**: runs computation offchain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 
 #### State channels {#channels}
 
-State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with Mainnet. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
+State channels utilize multisig contracts to enable participants to transact quickly and freely offchain, then settle finality with Mainnet. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
 
 Learn more about [state channels](/developers/docs/scaling/state-channels/).
 
@@ -94,7 +94,7 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 
 <YouTube id="BgCgauWVTs0" />
 
-_Note the explanation in the video uses the term "Layer 2" to refer to all off-chain scaling solutions, while we differentiate "Layer 2" as an off-chain solution that derives its security through layer 1 Mainnet consensus._
+_Note the explanation in the video uses the term "Layer 2" to refer to all offchain scaling solutions, while we differentiate "Layer 2" as an offchain solution that derives its security through layer 1 Mainnet consensus._
 
 <YouTube id="7pWxCklcNsU" />
 
@@ -106,9 +106,9 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 - [An Incomplete Guide to Rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-powered ZK-Rollups: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [What kind of Layer 3s make sense?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Data Availability Or: How Rollups Learned To Stop Worrying And Love Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
+- [Data Availability Or: How Rollups Learned To Stop Worrying And Love Ethereum](https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum)
+- [The Practical Guide to Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 
 _Know of a community resource that helped you? Edit this page and add it!_

@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Try apps",
   "page-index-cta-get-eth-description": "Di kurensy of Ethereum",
   "page-index-cta-get-eth-label": "Get ETH",
-  "page-index-cta-networks-description": "Enjoy minimal fees",
-  "page-index-cta-networks-label": "Shuse one netwok",
   "page-index-cta-wallet-description": "Kreate akants and manaj assets",
   "page-index-cta-wallet-label": "Make yu pick one wallet",
+  "page-index-cta-build-apps-description": "Make your first app",
+  "page-index-cta-build-apps-label": "Begin building",
   "page-index-description": "Di platfom wey dey lead for innovative apps and blockchain netwoks",
   "page-index-developers-code-example-description-0": "Build one bank wey dem pawa by logik wey yu don program",
   "page-index-developers-code-example-description-1": "Kreate tokens wey yu fit transfa and yus akross aplikashons",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Risent posts",
   "page-index-posts-subtitle": "Di blog posts wey juz komot and update from di komunity",
   "page-index-title": "Welkom to Ethereum",
+  "page-index-use-cases-tag": "Use cases",
   "page-index-values-description": "Bi part of di dijita revolushon",
   "page-index-values-header": "Di intanet dey shanj",
   "page-index-values-legacy": "Legasy",
@@ -116,5 +117,7 @@
   "page-index-values-open-legacy-label": "Im dey klose to plenti pipol",
   "page-index-values-open-legacy-content-0": "Kompanis dey protet dem intelleshua propaty and nor dey shia am. Nor one outside di komapany fir see haw tins dey work, fix palava, abi dey impruf. Im hard for pipol to kreate new tools abi kustomize am.",
   "page-index-values-open-ethereum-label": "Open to all",
-  "page-index-values-open-ethereum-content-0": "Ethereum dey open to all. Anyone fit see am, yus am, and impruf di kode, wey dey make am betta for efrione."
+  "page-index-values-open-ethereum-content-0": "Ethereum dey open to all. Anyone fit see am, yus am, and impruf di kode, wey dey make am betta for efrione.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Join di biggest Ethereum event of di year",
+  "page-index-devconnect-banner-get-tickets": "Get tickets"
 }

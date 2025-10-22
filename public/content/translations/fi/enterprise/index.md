@@ -41,7 +41,7 @@ Seuraavat projektit tarjoavat lohkoketjupalveluja yritystason järjestelmille:
 - [Blockapps](https://blockapps.net/) _toteutus Enterprise Ethereum -protokollasta, työkaluista ja API:sta, jotka luovat STRATO-alustan_
 - [Clearmatics](https://www.clearmatics.com/about) _protokolla- ja vertaisverkkoalustan arkkitehtuuria sekä lohkoketjuja kehittävä yritys_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _tarjoaa samat ominaisuudet ja toiminnalisuudet kuin HF Besu, sekä muita yrityksille suunnattuja etuja_
-- [Quorum](https://www.goquorum.com/) _avoimen lähdekoodin lohkoketjualusta, joka yhdistää julkisen Ethereum-yhteisön innovaatiot yritysten tarpeisiin suunnattuihin palveluihin_
+- [Quorum](https://docs.goquorum.consensys.io/) _avoimen lähdekoodin lohkoketjualusta, joka yhdistää julkisen Ethereum-yhteisön innovaatiot yritysten tarpeisiin suunnattuihin palveluihin_
 
 ## Protokolla ja Infrastruktuuri {#protocol-and-infrastructure}
 
@@ -63,8 +63,7 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 ### Tietosuoja {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Lisätietoa on [täällä](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Lisätietoa on [täällä](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Lisätietoa on [täällä](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Lisätietoa on [täällä](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Turvallisuus {#security}
 
@@ -74,7 +73,7 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 ### Työkalut {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereumin data-analytiikka-alusta_
-- [Treum](https://treum.io/) _tuo läpinäkyvyyttä, jäljitettävyyttä ja vaihdettavuutta toimitusketjuille lohkoketjuteknologiaa hyödyntäen_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _tuo läpinäkyvyyttä, jäljitettävyyttä ja vaihdettavuutta toimitusketjuille lohkoketjuteknologiaa hyödyntäen_
 
 ## Yrityskehitysyhteisö {#enterprise-developer-community}
 
@@ -82,7 +81,6 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu-kanava)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow-kanava)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack-kanava](http://bit.ly/quorum-slack)

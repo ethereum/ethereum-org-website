@@ -43,9 +43,14 @@ Sebelum peningkatan Shanghai/Capella, Anda tidak dapat menggunakan atau mengakse
 
 Memberikan alamat penarikan adalah langkah yang diperlukan untuk setiap akun validator sebelum akun tersebut memenuhi syarat untuk menarik ETH dari saldonya.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Setiap akun validator hanya dapat diberikan satu alamat penarikan, satu kali.</strong> Setelah alamat dipilih dan dikirimkan ke lapisan konsensus, alamat tersebut tidak dapat dibatalkan atau diubah lagi. Periksa kembali kepemilikan dan keakuratan alamat yang diberikan sebelum mengirim.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Tidak ada <strong>tidak ada ancaman terhadap dana Anda untuk sementara waktu</strong> karena tidak menyediakan ini, dengan asumsi mnemonik/frase benih Anda tetap aman secara offline, dan tidak dikompromikan dengan cara apa pun. Kegagalan untuk menambahkan kredensial penarikan hanya akan membuat ETH terkunci di akun validator seperti sebelumnya sampai alamat penarikan diberikan.
 
@@ -65,7 +70,7 @@ Penarikan penaruhan sudah aktif! Fungsionalitas penarikan dana diaktifkan sebaga
 
 Peningkatan Shanghai/Capella memungkinkan ETH yang sebelumnya dipertaruhkan untuk diklaim kembali ke akun Ethereum biasa. Hal ini menutup lingkaran pada likuiditas penaruhan, dan membawa Ethereum selangkah lebih dekat dalam perjalanannya untuk membangun ekosistem terdesentralisasi yang berkelanjutan, terukur, dan aman.
 
-- [Lebih lanjut tentang sejarah Ethereum](/history/)
+- [Lebih lanjut tentang sejarah Ethereum](/ethereum-forks/)
 - [Lebih lanjut tentang peta perjalanan Ethereum](/roadmap/)
 
 ## Bagaimana cara kerja pembayaran penarikan dana? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Simak penjelasan mengenai penarikan penaruhan Ethereum dari Finematics berikut i
 
 Ketika validator dijadwalkan untuk mengajukan blok berikutnya, diperlukan antrean penarikan hingga 16 penarikan yang memenuhi syarat. Hal ini dilakukan dengan memulai dengan indeks validator 0, menentukan apakah ada penarikan yang memenuhi syarat untuk akun ini sesuai dengan aturan protokol, dan menambahkannya ke antrean jika ada. Validator yang ditetapkan untuk mengajukan blok berikutnya akan melanjutkan blok yang terakhir ditinggalkan, dan terus maju tanpa batas waktu.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Pikirkan tentang jam analog. Jarum jam menunjuk ke arah jam, bergerak ke satu arah, tidak melewatkan satu jam pun, dan akhirnya berputar ke awal lagi setelah angka terakhir tercapai.<br/><br/>
 Sekarang, alih-alih 1 hingga 12, bayangkan jam memiliki 0 hingga N <em>(jumlah total akun validator yang pernah terdaftar di lapisan konsensus, lebih dari 500.000 per Januari 2023).</em><br/><br/>
 Jarum penunjuk pada jam menunjuk ke validator berikutnya yang perlu diperiksa untuk penarikan yang memenuhi syarat. Dimulai dari 0, dan berkembang terus tanpa melewatkan satu akun pun. Ketika validator terakhir tercapai, siklus berlanjut kembali ke awal.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Memeriksa akun untuk penarikan dana {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Jika Anda merupakan bagian dari <a href="/staking/pools/">pool penaruhan</a> atau memegang token penaruhan, Anda harus bertanya kepada penyedia Anda detail lebih lanjut tentang bagaimana penarikan penaruhan ditangani, karena setiap layanan beroperasi secara berbeda.
+Jika Anda merupakan bagian dari [pool penaruhan](/staking/pools/) atau memegang token penaruhan, Anda harus bertanya kepada penyedia Anda detail lebih lanjut tentang bagaimana penarikan penaruhan ditangani, karena setiap layanan beroperasi secara berbeda.
 
-Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan <a href="/staking/solo/">penaruhan dari beranda</a>.
+Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan [penaruhan dari beranda](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap dana ta
 
 - [Penarikan Landasan Peluncuran Penaruhan](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Rantai suar mendorong penarikan sebagai operasi](https://eips.ethereum.org/EIPS/eip-4895)
-- [Penggembala Kucing Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Penarikan ETH yang Dipertaruhkan (Pengujian) dengan Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Rantai suar mendorong penarikan sebagai operasi bersama Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Memahami Saldo Efektif Validator](https://www.attestant.io/posts/understanding-validator-effective-balance/)

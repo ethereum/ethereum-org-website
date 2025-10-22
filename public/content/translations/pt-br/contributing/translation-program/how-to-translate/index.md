@@ -18,7 +18,7 @@ Para as pessoas que aprendem melhor de forma visual, assistam ao vídeo do Luka 
 
 Você precisará fazer login na sua conta do Crowdin ou criar uma conta, caso ainda não tenha. Você só precisa de uma conta de e-mail e senha para se cadastrar.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Junte-se ao projeto
 </ButtonLink>
 
@@ -34,7 +34,7 @@ Escolha o idioma para o qual deseja traduzir para ver a lista de arquivos dispon
 
 O conteúdo do site é dividido em vários documentos e grupos de conteúdo. Você pode verificar o progresso de cada documento à direita. Se o progresso da tradução estiver abaixo de 100%, contribua!
 
-Não vê seu idioma na lista? [Abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou faça uma pergunta no [Discord](/discord/)
+Não vê seu idioma na lista? [Abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou faça uma pergunta no [Discord](https://discord.gg/ethereum-org)
 
 ![Arquivos traduzidos e não traduzidos no Crowdin](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Quer saber mais? Confira a [documentação sobre como usar o editor online do Cr
 
 Quando tiver concluído a tradução (ou seja, todos os arquivos de um grupo de conteúdo que exibem 100%), nosso serviço de tradução profissional revisará (e possivelmente editará) o conteúdo. Assim que a revisão estiver completa (ou seja, o progresso de revisão atingir 100%), o adicionaremos ao site.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Não utilize tradução automatizada para traduzir o projeto. Todas as traduções serão revisadas antes de serem adicionadas ao site. Caso suas sugestões de tradução sejam traduções automatizadas, elas serão desconsideradas e colaboradores que usam tradução automatizada serão periodicamente removidos do projeto.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Entre em contato conosco {#get-in-touch}
 
-Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord no ethereum.org](/discord/)
+Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord no ethereum.org](https://discord.gg/ethereum-org)
 
 Você também pode entrar em contato conosco por meio do e-mail translations@ethereum.org
 

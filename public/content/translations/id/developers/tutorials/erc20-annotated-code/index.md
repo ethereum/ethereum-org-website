@@ -511,7 +511,7 @@ Panggilan fungsi `a.sub(b, "message")` melakukan dua hal. Pertama, fungsi terseb
 
 Menetapkan tunjangan tidak nol ke nilai tidak nol lainnya berbahaya, karena Anda hanya mengendalikan urutan transaksi Anda sendiri, bukan milik orang lain. Bayangkan Anda mempunyai dua pengguna, Alice yang naif dan Bill yang tidak jujur. Alice menginginkan beberapa layanan dari Bill, yang dipikirnya membutuhkan lima token - sehingga ia memberikan tunjangan sebesar lima token kepada Bill.
 
-Lalu, sesuatu berubah dan harga Bill naik menjadi sepuluh token. Alice, yang masih memerlukan layanan, mengirim transaksi yang menetapkan tunjangan Bill menjadi sepuluh token. Saat Bill melihat transaksi baru ini dalam pool transaksi, ia mengirim transaksi yang membelanjakan lima token Alice dan memiliki harga gas yang jauh lebih tinggi, sehingga transaksi akan ditambang lebih cepat. Dengan cara itu, Bill dapat membelanjakan kelima token pertama dan kemudian, setelah tunjangan baru Alice ditambang, membelanjakan sepuluh token lagi untuk total harga lima belas token, melebihi jumlah yang dizinkan oleh Alice. Teknik ini disebut [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+Lalu, sesuatu berubah dan harga Bill naik menjadi sepuluh token. Alice, yang masih memerlukan layanan, mengirim transaksi yang menetapkan tunjangan Bill menjadi sepuluh token. Saat Bill melihat transaksi baru ini dalam pool transaksi, ia mengirim transaksi yang membelanjakan lima token Alice dan memiliki harga gas yang jauh lebih tinggi, sehingga transaksi akan ditambang lebih cepat. Dengan cara itu, Bill dapat membelanjakan kelima token pertama dan kemudian, setelah tunjangan baru Alice ditambang, membelanjakan sepuluh token lagi untuk total harga lima belas token, melebihi jumlah yang dizinkan oleh Alice. Teknik ini disebut [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Transaksi Alice   | Nonce Alice | Transaksi Bill                | Nonce Bill | Tunjangan Bill | Tagihkan Total Pendapatan dari Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | -------------- | ------------------------------------ |
@@ -587,7 +587,7 @@ Fungsi `a.add(b)` aman untuk ditambahkan. Dalam kasus yang jarang terjadi bahwa 
 
 Keempat fungsi ini melakukan pekerjaan sebenarnya: `_transfer`, `_mint`, `_burn`, dan `_approve`.
 
-#### Fungsi \_transfer {#\_transfer}
+#### Fungsi \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Baris-baris ini benar-benar melakukan transfer. Perhatikan bahwa **tidak terjadi
 
 Akhirnya, pancarkan aksi `Transfer`. Aksi tidak dapat diakses oleh kontrak pintar, tetapi kode yang beroperasi di luar rantai blok dapat mendengarkan aksi dan bereaksi terhadapnya. Contohnya, dompet dapat menelusuri waktu pemilik mendapatkan lebih banyak token.
 
-#### Fungsi \_mint dan \_burn {#\_mint-and-\_burn}
+#### Fungsi \_mint dan \_burn {#_mint-and-_burn}
 
 Kedua fungsi (`_mint` dan `_burn`) ini memodifikasi total persediaan token. Kedua fungsi tersebut bersifat internal dan tidak memiliki fungsi yang memanggil kedua fungsi tersebut dalam kontrak ini, sehingga kedua fungsi tersebut hanya berguna jika Anda mewariskannya dari kontrak dan menambahkan logika Anda sendiri untuk menentukan dalam kondisi apa untuk mencetak token baru atau membakar token yang sudah ada.
 
@@ -706,7 +706,7 @@ Pastikan memperbarui `_totalSupply` ketika total jumlah token berubah.
 
 Fungsi `_burn` hampir sama dengan `_mint`, kecuali bergerak ke arah yang lain.
 
-#### Fungsi \_approve {#\_approve}
+#### Fungsi \_approve {#_approve}
 
 Fungsi ini benar-benar menentukan tunjangan. Perhatikan bahwa fungsi tersebut membuat pemilik menentukan tunjangan yang lebih tinggi dari saldo pemilik saat ini. Ini OKE karena saldo diperiksa pada waktu transfer terjadi, ketika saldonya dapat berbeda dari saldo saat tunjangan dibuat.
 
@@ -784,7 +784,7 @@ Fungsi ini memodifikasi variabel `_decimals` yang digunakan untuk memberitahu an
 
 Fungsi kaitan ini yang akan dipanggil selama transfer. It is empty here, but if you need it to do something you just override it.
 
-# Kesimpulan {#conclusion}
+## Kesimpulan {#conclusion}
 
 Sebagai tinjauan ulang, berikut adalah beberapa pemikiran paling penting dalam kontrak ini (menurut pendapat saya, kepunyaan Anda mungkin bisa saja berbeda):
 

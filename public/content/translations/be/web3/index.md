@@ -61,12 +61,15 @@ Web3 дае вам магчымасць валодання вашымі лічб
 
 Web3 дазваляе прамое валоданне праз [нятоесныя токены (NFT)](/glossary/#nft). Ніхто, нават стваральнікі гульні, не маюць улады забраць у вас права валодання. І, калі вы спыніце гульню, вы можаце прадаць або абмяняць свае прадметы ў гульні на адкрытых рынках і вярнуць іх каштоўнасць.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Даведайцеся больш пра NFT</div>
   <ButtonLink href="/nft/">
     Дакладней пра NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Устойлівасць да цэнзуры {#censorship-resistance}
 
@@ -86,12 +89,15 @@ DAOs тэхнічна вызначаюцца як дамоўленасці [ра
 
 Тым не менш, многія Web3 супольнасці вызначаюцца як DAOs. Гэтыя супольнасці маюць розныя ўзроўні дэцэнтралізацыі і аўтаматызацыі праз код. У дадзены момант мы даследуем, што такое DAOs, і як яны могуць развівацца ў будучыні.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Ідэнтычнасць {#identity}
 
@@ -139,7 +145,7 @@ Web3 — гэта маладая экасістэма, якая развівае
 
 - [Атрымаць гаманец](/wallets/)
 - [Знайдзіце супольнасць](/community/)
-- [Даследуйце прыкладанні Web3](/dapps/)
+- [Даследуйце прыкладанні Web3](/apps/)
 - [Join a DAO](/dao/)
 - [Стварайце на Web3](/developers/)
 
@@ -147,11 +153,11 @@ Web3 — гэта маладая экасістэма, якая развівае
 
 Web3 не мае жорсткага вызначэння. Розныя ўдзельнікі супольнасці маюць розныя погляды на гэта. Here are a few of them:
 
-- [Што такое Web3? Тлумачэнне дэцэнтралізаванага Інтэрнэту будучыні](https://www.freecodecamp.org/news/what-is-web3/) — _Надэр Дабіт_
+- [Што такое Web3? Тлумачэнне дэцэнтралізаванага Інтэрнэту будучыні](https://www.freecodecamp.org/news/what-is-web3) — _Надэр Дабіт_
 - [Асэнсаванне Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) — _Джош Старк_
 - [Чаму Web3 — гэта важна](https://future.a16z.com/why-web3-matters/) — _Крыс Дыксан_
 - [Чаму дэцэнтралізацыя з'яўляецца важнай](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Крыс Дыксан_
 - [Пейзаж Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) — _a16z_
-- [Дэбаты Web3](https://www.notboring.co/p/the-web3-debate?s=r) — _Пэкі Маккормік_
+- [Дэбаты Web3](https://www.notboring.co/p/the-web3-debate) — _Пэкі Маккормік_
 
 <QuizWidget quizKey="web3" />

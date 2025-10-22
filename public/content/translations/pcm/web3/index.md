@@ -61,12 +61,15 @@ Web3 dey give yu ownaship of yor dijital assets in stranj way. For eksampol, sey
 
 Web3 go give yu diret ownaship thru [non-fungibol tokens (NFTs)](/glossary/#nft). Nor one, not even di pipol wey kretae di game, get di pawa to komot yor ownaship. And, if yu stop to dey play, yu fit sell abi trade yor in-game items on open markets and bring dem value back.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Make yu learn more abou NFTs</div>
   <ButtonLink href="/nft/">
     More abou NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Sensorship resistans {#censorship-resistance}
 
@@ -86,12 +89,15 @@ Dem difine DAOs as dem agree [smart kontracts](/glossary/#smart-contract) wey au
 
 Haueva, pipol difine many Web3 komunitis as DAOs. All dis komunitis dem get difren levels of disentralizashon and automashon by kode. Currently, we dey explore wetin DAOs be and how dem fit evolve in the future. Nau-nau, wi dey eksplore wetin DAOs bi and hau dem fit shanj in di fushure.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Una fit learn plenty about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identity {#identity}
 
@@ -139,7 +145,7 @@ Wi just dey start to dey kreate betta Web wit Web3, but as we kontinu to impruf 
 
 - [Make yu get one wallet](/wallets/)
 - [Find one komunity](/community/)
-- [Make yu ekspore Web3 aplikashons](/dapps/)
+- [Make yu ekspore Web3 aplikashons](/apps/)
 - [Make u join DAO](/dao/)
 - [Build on Web3](/developers/)
 
@@ -147,11 +153,11 @@ Wi just dey start to dey kreate betta Web wit Web3, but as we kontinu to impruf 
 
 Dem nor rily define Web3. Difrent pipol wey dey patisipate in Web3 get difrent opinion abou am. Hia na few of dem:
 
-- [Wetin bi Web3? Di disentralized intanet of di fushure wey dem Explain](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Wetin bi Web3? Di disentralized intanet of di fushure wey dem Explain](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Hau pesi fit make sense of Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Why We3 Matta](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why disentralizashon matta](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Di Web3 landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Di Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Di Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

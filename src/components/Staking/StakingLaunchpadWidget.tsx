@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { useTranslation } from "next-i18next"
-import { FaTools } from "react-icons/fa"
+"use client"
 
+import { useState } from "react"
+
+import Tools from "@/components/icons/tools.svg"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
@@ -9,7 +10,11 @@ import { Flex } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
+
 import Select, { type SelectOnChange } from "../Select"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type StakingDataOption = { label: string; value: string }
 
@@ -31,9 +36,12 @@ const StakingLaunchpadWidget = () => {
 
   const data = {
     testnet: {
-      label: `Holesky ${t("testnet")}`,
-      url: "https://holesky.launchpad.ethereum.org",
+      label: t("page-staking:page-staking-network-testnet", {
+        network: CANONICAL_STAKING_TESTNET,
+      }),
+      url: "https://hoodi.launchpad.ethereum.org",
     },
+    url: `https://${CANONICAL_STAKING_TESTNET.toLowerCase()}.launchpad.ethereum.org`,
     mainnet: {
       label: "Mainnet",
       url: "https://launchpad.ethereum.org",
@@ -72,9 +80,14 @@ const StakingLaunchpadWidget = () => {
       </p>
       <div className="mb-4">
         <ButtonLink href={data[selection].url} className="w-full md:w-auto">
-          {selection === "mainnet"
-            ? t("page-staking:page-staking-launchpad-widget-mainnet-start")
-            : t("page-staking:page-staking-launchpad-widget-testnet-start")}
+          {t("page-staking:page-staking-launchpad-widget-start", {
+            network:
+              selection === "mainnet"
+                ? t("page-staking:page-staking-launchpad-widget-mainnet-label")
+                : t("page-staking:page-staking-network-testnet", {
+                    network: CANONICAL_STAKING_TESTNET,
+                  }),
+          })}
         </ButtonLink>
       </div>
       <p className="mb-6 leading-6">
@@ -86,7 +99,7 @@ const StakingLaunchpadWidget = () => {
           variant="outline"
           className="w-full md:w-auto"
         >
-          <FaTools />{" "}
+          <Tools />{" "}
           <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
       </div>

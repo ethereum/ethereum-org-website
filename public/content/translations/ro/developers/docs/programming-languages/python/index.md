@@ -58,7 +58,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [py-wasm](https://github.com/ethereum/py-wasm) - _implementare Python pentru interpretorul Web Assembly_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementarea stivei P2P Ethereum_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python pentru contracte Maker_
-- [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (siwe) for Python_
 - [Smart contracts for testing](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _A Python package that comes with ERC-20, Uniswap and other common contracts for writing tests with Web3.py_
 
 ### Arhivate/Neîntreținute: {#archived--no-longer-maintained}

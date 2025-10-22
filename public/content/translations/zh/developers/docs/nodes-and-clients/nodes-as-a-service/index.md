@@ -156,19 +156,6 @@ sidebarDepth: 2
     - 按小时计费定价
     - 全天候直接支持
 
-- [**DataHub**](https://datahub.figment.io)
-  - [文档](https://docs.figment.io/)
-  - 特性
-    - 每月 3 百万个请求的免费套餐选项
-    - RPC 、 HTTPS 和 WSS 端点
-    - 专用全节点和归档节点
-    - 自动扩容（容量折扣）
-    - 免费归档数据
-    - 服务分析
-    - 仪表板
-    - 全天候直接支持
-    - 加密货币支付（企业）
-
 - [**DRPC**](https://drpc.org/)
   - [相关文档](https://docs.drpc.org/)
   - 特性
@@ -226,7 +213,7 @@ sidebarDepth: 2
     - 500 多个管理和服务应用程序接口
     - 用于提交以太坊交易的 RESTful 接口（支持 Apache Kafka）
     - 用于事件传送的出站流（支持 Apache Kafka）
-    - “脱链”和辅助服务的深度集合（例如双边加密消息传输）
+    - “链下”和辅助服务的深度集合（例如双边加密消息传输）
     - 简单明了的配置入网，提供治理和基于角色的访问控制
     - 适用于管理员和最终用户的精细用户管理
     - 高度可扩展、复原力强的企业级基础设施
@@ -264,7 +251,7 @@ sidebarDepth: 2
     - 直接技术支持
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [相关文档](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [相关文档](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速而且可扩展的远程过程调用应用程序接口服务
     - 面向 Web3 开发者的增强型应用程序接口

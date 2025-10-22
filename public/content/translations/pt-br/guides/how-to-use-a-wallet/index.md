@@ -60,14 +60,17 @@ Seu endereço será o mesmo em todos os projetos do Ethereum. Você não precisa
 ![Selecionando de uma lista de carteiras com as quais se conectar](./connect2.png)
 
 5. Confirme o pedido de assinatura na sua carteira para estabelecer a conexão. **A assinatura desta mensagem não dever exigir o gasto de nenhum ETH**.
-6. É isso! Comece a usar o app. Você pode encontrar alguns projetos interessantes em nossa [página de dApps](/dapps/#explore). <br />
+6. É isso! Comece a usar o app. Você pode encontrar alguns projetos interessantes em nossa [página de dApps](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Perguntas frequentes
 

@@ -61,14 +61,19 @@ lang: el
 
 Οι πλατφόρμες χρηματοδότησης εγγενών δημόσιων αγαθών Web3, όπως το [Gitcoin](https://gitcoin.co) εκτελούν κλιματικές δράσεις για να τονώσουν την περιβαλλοντική συνείδηση στο επίπεδο εφαρμογής του Ethereum. Μέσω της ανάπτυξης αυτών των πρωτοβουλιών (και άλλων π.χ. [DeSci](/desci/)), το Ethereum γίνεται μια περιβαλλοντική και κοινωνικά θετική τεχνολογία.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Εάν πιστεύετε ότι αυτή η σελίδα μπορεί να γίνει πιο ακριβής, αναφέρετε ένα ζήτημα ή υποβάλλετε ένα ζήτημα. Τα στατιστικά στοιχεία σε αυτήν τη σελίδα είναι εκτιμήσεις που βασίζονται σε δημόσια διαθέσιμα δεδομένα και δεν αντιπροσωπεύουν επίσημη δήλωση ή υπόσχεση από την ομάδα του ethereum.org ή το Ίδρυμα Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [Δείκτης βιωσιμότητας δικτύου κρυπτοαλυσίδας Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Έκθεση του Λευκού Οίκου για κρυπτοαλυσίδες με απόδειξη εργασίας](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Έκθεση του Λευκού Οίκου για κρυπτοαλυσίδες με απόδειξη εργασίας](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Εκπομπές Ethereum: Εκτίμηση από κάτω προς τα πάνω](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Δείκτης κατανάλωσης ενέργειας Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

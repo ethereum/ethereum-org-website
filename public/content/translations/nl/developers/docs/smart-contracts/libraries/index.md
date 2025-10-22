@@ -104,7 +104,7 @@ Tot slot moet u bij het nemen van een beslissing over het al dan niet gebruiken 
 
 **thirdweb Solidity SDK -** **_Biedt de tools die nodig zijn om aangepaste smart contracts efficiënt te bouwen_**
 
-- [Documentatie](https://portal.thirdweb.com/solidity/)
+- [Documentatie](https://portal.thirdweb.com/contracts/build/overview)
 - [Github](https://github.com/thirdweb-dev/contracts)
 
 ## Gerelateerde tutorials {#related-tutorials}

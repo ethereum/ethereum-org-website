@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import Translation from "@/components/Translation"
 import { Center } from "@/components/ui/flex"
 
@@ -33,7 +33,7 @@ const StakingHowSoloWorks = () => {
           <ListItem key={index}>{item}</ListItem>
         ))}
       </OrderedList>
-      <TwImage src={image} alt="" width={400} />
+      <Image src={image} alt="" width={400} />
     </Center>
   )
 }

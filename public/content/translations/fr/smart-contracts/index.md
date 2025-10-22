@@ -1,10 +1,15 @@
 ---
 title: Contrats intelligents
+metaTitle: "Contrats intelligents : quels sont les avantages"
 description: Une introduction non technique aux contrats intelligents
 lang: fr
 ---
 
 # Introduction aux contrats intelligents {#introduction-to-smart-contracts}
+
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
 Les contrats intelligents sont les éléments fondamentaux de la couche applicative d'Ethereum. Il s'agit de programmes informatiques stockés sur la [blockchain](/glossary/#blockchain) qui suivent la logique « si ceci alors cela » et sont garantis de s'exécuter selon les règles définies par leur code, qui ne peut être modifié une fois créé.
 
@@ -69,14 +74,13 @@ Ils peuvent effectuer des calculs, produire de la monnaie, stocker des données,
 - [Stablecoins](/stablecoins/)
 - [Création et distribution d'actifs numériques uniques](/nft/)
 - [Plateforme d'échange ouverte et automatisée](/get-eth/#dex)
-- [Jeu décentralisé](/dapps/?category=gaming#explore)
+- [Jeu décentralisé](/apps/categories/gaming)
 - [Police d'assurance qui paie automatiquement](https://etherisc.com/)
 - [Norme qui permet aux gens de créer des devises personnalisées et interopérables](/developers/docs/standards/tokens/)
 
 ## Complément d'information {#further-reading}
 
 - [Comment les contrats intelligents vont changer le monde](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Contrats intelligents : la technologie de la blockchain qui va remplacer les juristes](https://blockgeeks.com/guides/smart-contracts/)
 - [Les contrats intelligents pour les développeurs](/developers/docs/smart-contracts/)
 - [Apprenez à rédiger des contrats intelligents](/developers/learning-tools/)
 - [Maîtriser Ethereum - Qu'est-ce qu'un contrat intelligent ?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

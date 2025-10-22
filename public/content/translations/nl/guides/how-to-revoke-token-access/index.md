@@ -20,7 +20,6 @@ Verschillende websites laten je slimme contracten die verbonden zijn met je adre
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (verschillende netwerken)
 - [Revoke](https://revoke.cash/) (verschillende netwerken)
 - [Unrekt](https://app.unrekt.net/) (verschillende netwerken)
 - [EverRevoke](https://everrise.com/everrevoke/) (verschillende netwerken)
@@ -47,12 +46,15 @@ We raden je aan om de intrek-tool na een paar minuten te vernieuwen en opnieuw v
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Wil je meer informatie?</div>
   <ButtonLink href="/guides/">
     Bekijk onze andere gidsen
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Veelgestelde vragen
 

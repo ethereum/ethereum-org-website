@@ -130,7 +130,7 @@ Molti quadri di test unitari ti consentono di creare asserzioni – semplici dic
 
 ##### 3. Misurare la copertura del codice
 
-La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è un parametro di prova che traccia il numero di rami, righe e dichiarazioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona copertura del codice, altrimenti potresti ottenere dei "falsi negativi", che si verificano quando un contratto supera tutti i test ma continuano a esistere vulnerabilità nel codice. Registrare un'elevata copertura del codice, tuttavia, garantisce che tutte le dichiarazioni/funzioni di un contratto intelligente siano state testate sufficientemente per verificarne la correttezza.
+La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è un parametro di prova che traccia il numero di rami, righe e dichiarazioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona code coverage per ridurre al minimo il rischio di vulnerabilità non testate. Senza una code coverage sufficiente potresti dare erroneamente per scontato che il tuo contratto sia sicuro; pur superando tutti i test, infatti, potrebbero comunque esistere vulnerabilità in percorsi di codice non testati. Registrare un'elevata copertura del codice, tuttavia, garantisce che tutte le dichiarazioni/funzioni di un contratto intelligente siano state testate sufficientemente per verificarne la correttezza.
 
 ##### 4. Utilizzare quadri di test ben sviluppati
 
@@ -213,7 +213,7 @@ Eseguire i contratti su una blockchain locale potrebbe essere utile come forma d
 
 ### Testare i contratti sulle reti di prova {#testing-contracts-on-testnets}
 
-Una rete di prova funziona esattamente come la Rete principale di Ethereum, tranne nel fatto che utilizza ether (ETH) privi di valore reale. Distribuire il proprio contratto su una [rete di prova](/developers/docs/networks/#ethereum-testnets) significa che chiunque può interagirvi (es. tramite il frontend della dapp) senza mettere a rischio dei fondi.
+Una rete di prova funziona esattamente come la Rete Principale di Ethereum, tranne per il fatto che utilizza degli ether (ETH) privi di valore reale. Distribuire il proprio contratto su una [rete di prova](/developers/docs/networks/#ethereum-testnets) significa che chiunque può interagirvi (es. tramite il frontend della dapp) senza mettere a rischio dei fondi.
 
 Questa forma di test manuale è utile per valutare il flusso end-to-end della tua applicazione dal punto di vista di un utente. Inoltre, qui i beta tester possono eseguire prove e segnalare qualsiasi problema con la logica aziendale del contratto e le sue funzionalità complessive.
 
@@ -259,7 +259,7 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Quadro di test unitari di Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utilizza Pytest, un quadro di test ricco di funzionalità che ti consente di scrivere piccoli test con codice minimale, si ridimensiona bene per i grandi progetti ed è altamente estendibile._
 
-- **[Test di Foundry](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry offre Forge, un quadro di test di Ethereum veloci e flessibili, in grado di eseguire semplici test unitari, controlli d'ottimizzazione del carburante e fuzzing del contratto._
+- **[Test di Foundry](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry offre Forge, un quadro di test di Ethereum veloci e flessibili, in grado di eseguire semplici test unitari, controlli d'ottimizzazione del carburante e fuzzing del contratto._
 
 - **[Test di Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Quadro per testare i contratti intelligenti basato su ethers.js, Mocha e Chai._
 

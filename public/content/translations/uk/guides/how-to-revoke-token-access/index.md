@@ -20,7 +20,6 @@ lang: uk
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (різні мережі)
 - [Revoke](https://revoke.cash/) (різні мережі)
 - [Unrekt](https://app.unrekt.net/) (різні мережі)
 - [EverRevoke](https://everrise.com/everrevoke/) (різні мережі)
@@ -47,12 +46,15 @@ lang: uk
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Хочете дізнатися більше?</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Поширені запитання
 

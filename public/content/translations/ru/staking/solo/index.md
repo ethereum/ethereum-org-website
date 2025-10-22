@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="Безопасное управление ключами" eventCategory="SoloStaking" eventName="clicked secure key management">
 Приватные ключи обеспечивают безопасность вашего адреса Ethereum, и вам тоже нужно будет сгенерировать ключи специально для вашего валидатора. Вы должны понимать, как держать все кодовые фразы и приватные ключи в безопасности. {' '}
 
-<a href="/security/">Безопасность Ethereum и предотвращение мошенничества</a>
+[Безопасность Ethereum и предотвращение мошенничества](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ summaryPoints:
 <ExpandableCard title="Могу ли я внести более 32 ЕТН?">
 Каждая пара ключей, связанная с валидатором, требует для активации ровно 32 ETH. Больше ЕТН, внесенных в депозит на один набор ключей, не увеличивает потенциал вознаграждений, так как каждый валидатор ограничен <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">эффективным балансом</a> в 32 ETH. Это означает, что стейкинг выполняется с шагом в 32 ETH, каждый с собственным набором ключей и баланса.
 
-Не вносите более 32 ЕТН для одного валидатора. Это не увеличит ваши вознаграждения. Если для валидатора был установлен адрес вывода средств, избыточные средства более 32 ETH будут автоматически выведены на этот адрес в течение следующего <a href="/staking/withdrawals/#validator-sweeping">перебора валидаторов</a>.
+Не вносите более 32 ЕТН для одного валидатора. Это не увеличит ваши вознаграждения. Если для валидатора был установлен адрес вывода средств, избыточные средства более 32 ETH будут автоматически выведены на этот адрес в течение следующего [перебора валидаторов](/staking/withdrawals/#validator-sweeping).
 
-Если одиночный стейкинг кажется слишком требовательным для вас, подумайте об обращении к поставщику <a href="/staking/saas/">стейкинга как услуги</a>. Если вы работаете с менее чем 32 ETH, обратите внимание на <a href="/staking/pools/">стейкинг-пулы</a>.
+Если одиночный стейкинг кажется слишком требовательным для вас, подумайте об обращении к поставщику [стейкинга как услуги](/staking/saas/). Если вы работаете с менее чем 32 ETH, обратите внимание на [стейкинг-пулы](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Попаду ли я под сокращение, если перейду в офлайн-режим? (Если коротко: нет.)">
@@ -200,7 +200,6 @@ summaryPoints:
 - [Помощь с разнообразием клиентов](https://www.attestant.io/posts/helping-client-diversity/) — _Джим Макдональд, 2022 г._
 - [Разнообразие клиентов на консенсусном уровне Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) — _jmcook.eth, 2022 г._
 - [Как покупать оборудование для валидатора Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) — _EthStaker, 2022 г._
-- [Шаг за шагом: как присоединиться к тестовой сети Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) — _Butta_
 - [Советы по предотвращению сокращения Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Рауль Джордан, 2020 г._
 
 <QuizWidget quizKey="staking-solo" />

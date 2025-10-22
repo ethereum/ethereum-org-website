@@ -72,23 +72,29 @@ The traditional process of verifying contracts can be complex. This is why we ha
 
 Although mostly known as an [Ethereum blockchain explorer](/developers/docs/data-and-analytics/block-explorers/), Etherscan also offers a [source code verification service](https://etherscan.io/verifyContract) for smart contract developers and users.
 
-Etherscan allows you to recompile contract bytecode from the original data payload (source code, library address, compiler settings, contract address, etc.) If the recompiled bytecode is associated with the bytecode (and constructor parameters) of the on-chain contract, then [the contract is verified](https://info.etherscan.com/types-of-contract-verification/).
+Etherscan allows you to recompile contract bytecode from the original data payload (source code, library address, compiler settings, contract address, etc.) If the recompiled bytecode is associated with the bytecode (and constructor parameters) of the onchain contract, then [the contract is verified](https://info.etherscan.com/types-of-contract-verification/).
 
 Once verified, your contract’s source code receives a "Verified" label and is published on Etherscan for others to audit. It also gets added to the [Verified Contracts](https://etherscan.io/contractsVerified/) section—a repository of smart contracts with verified source codes.
 
-Etherscan is the most used tool for verifying contracts. However, Etherscan's contract verification has a drawback: it fails to compare the **metadata hash** of the on-chain bytecode and recompiled bytecode. Therefore the matches in Etherscan are partial matches.
+Etherscan is the most used tool for verifying contracts. However, Etherscan's contract verification has a drawback: it fails to compare the **metadata hash** of the onchain bytecode and recompiled bytecode. Therefore the matches in Etherscan are partial matches.
 
 [More on verifying contracts on Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
+
+### Blockscout {#blockscout}
+
+[Blockscout](https://blockscout.com/) is an open-source blockchain explorer that also provides a [contract verification service](https://eth.blockscout.com/contract-verification) for smart contract developers and users. As an open-source alternative, Blockscout offers transparency in how verification is performed and enables community contributions to improve the verification process.
+
+Similar to other verification services, Blockscout allows you to verify your contract's source code by recompiling the bytecode and comparing it with the deployed contract. Once verified, your contract receives verification status and the source code becomes publicly available for auditing and interaction. Verified contracts are also listed in Blockscout's [verified contracts repository](https://eth.blockscout.com/verified-contracts) for easy browsing and discovery.
 
 ### Sourcify {#sourcify}
 
 [Sourcify](https://sourcify.dev/#/verifier) is another tool for verifying contracts that is open-sourced and decentralized. It is not a block explorer and only verifies contracts on [different EVM based networks](https://docs.sourcify.dev/docs/chains). It acts as a public infrastructure for other tools to build on top of it, and aims to enable more human-friendly contract interactions using the [ABI](/developers/docs/smart-contracts/compiling/#web-applications) and [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) comments found in the metadata file.
 
-Unlike Etherscan, Sourcify supports full matches with the metadata hash. The verified contracts are served in its [public repository](https://docs.sourcify.dev/docs/repository/) on HTTP and [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs), which is a decentralized, [content-addressed](https://web3.storage/docs/concepts/content-addressing/) storage. This allows fetching the metadata file of a contract over IPFS since the appended metadata hash is an IPFS hash.
+Unlike Etherscan, Sourcify supports full matches with the metadata hash. The verified contracts are served in its [public repository](https://docs.sourcify.dev/docs/repository/) on HTTP and [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs), which is a decentralized, [content-addressed](https://docs.storacha.network/concepts/content-addressing/) storage. This allows fetching the metadata file of a contract over IPFS since the appended metadata hash is an IPFS hash.
 
 Additionally, one can also retrieve the source code files over IPFS, as IPFS hashes of these files are also found in the metadata. A contract can be verified by providing the metadata file and source files over its API or the [UI](https://sourcify.dev/#/verifier), or using the plugins. Sourcify monitoring tool also listens to contract creations on new blocks and tries to verify the contracts if their metadata and source files are published on IPFS.
 
-[More on verifying contracts on Sourcify](https://blog.soliditylang.org/2020/06/25/sourcify-faq/).
+[More on verifying contracts on Sourcify](https://soliditylang.org/blog/2020/06/25/sourcify-faq/).
 
 ### Tenderly {#tenderly}
 
@@ -96,7 +102,7 @@ The [Tenderly platform](https://tenderly.co/) enables Web3 developers to build, 
 
 It's possible to verify a contract privately or publicly. If verified privately, the smart contract is visible only to you (and other members in your project). Verifying a contract publicly makes it visible to everyone using the Tenderly platform.
 
-You can verify your contracts using the [Dashboard](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-a-smart-contract), [Tenderly Hardhat plugin](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-the-tenderly-hardhat-plugin), or [CLI](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
+You can verify your contracts using the [Dashboard](https://docs.tenderly.co/contract-verification), [Tenderly Hardhat plugin](https://docs.tenderly.co/contract-verification/hardhat), or [CLI](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
 
 When verifying contracts through the Dashboard, you need to import the source file or the metadata file generated by the Solidity compiler, the address/network, and compiler settings.
 

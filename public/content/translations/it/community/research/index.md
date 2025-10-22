@@ -41,7 +41,7 @@ Oltre alla ricerca prospettica, si stanno studiando alcune riprogettazioni fonda
 
 - [Introduzione al proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Spiegazione di Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Spiegazione di Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Documento Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Ricerca recente {#recent-research}
@@ -83,7 +83,7 @@ I client di Ethereum sono implementazioni del protocollo di Ethereum. Lo svilupp
 1. un client di consenso per tenere traccia della testa della blochchain, dei blocchi di gossip e per gestire la logica di consenso
 2. un client di esecuzione per supportare la macchina virtuale di Ethereum ed eseguire le transazioni e i contratti intelligenti
 
-Consulta la [pagina dei nodi e dei client](/developers/docs/nodes-and-clients/) per maggiori dettagli su nodi e client e per un elenco di tutte le implementazioni di client correnti. Puoi anche trovare una cronologia di tutti gli aggiornamenti di Ethereum nella [pagina della cronologia](/history/).
+Consulta la [pagina dei nodi e dei client](/developers/docs/nodes-and-clients/) per maggiori dettagli su nodi e client e per un elenco di tutte le implementazioni di client correnti. Puoi anche trovare una cronologia di tutti gli aggiornamenti di Ethereum nella [pagina della cronologia](/ethereum-forks/).
 
 ### Client di esecuzione {#execution-clients}
 
@@ -111,7 +111,7 @@ Attualmente esistono diversi protocolli di Livello 2 che ridimensionano Ethereum
 #### Ricerca recente {#recent-research-2}
 
 - [Ordinamento equo di Arbitrum per i sequenziatori](https://eprint.iacr.org/2021/1465)
-- [Livello 2 su ethresear.ch](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Livello 2](https://ethresear.ch/c/layer-2/32)
 - [Tabella di marcia incentrata sui rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ I portafogli di Ethereum possono essere estensioni del browser, applicazioni des
 
 - [Introduzione ai portafogli elettronici](/wallets/)
 - [Introduzione alla sicurezza dei portafogli](/security/)
-- [Sicurezza su ethresear.ch](https://ethresear.ch/tag/security)
+- [Ethresear.ch Sicurezza](https://ethresear.ch/tag/security)
 - [Astrazione del conto EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Astrazione del conto EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -224,7 +224,7 @@ La ricerca economica in Ethereum segue in linea di massima due approcci: convali
 
 #### Letture di base {#background-reading-9}
 
-- [Gruppo d'incentivi robusti](https://ethereum.github.io/rig/)
+- [Gruppo d'incentivi robusti](https://rig.ethereum.org/)
 - [Workshop di ETHconomics a Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Ricerca recente {#recent-research-9}
@@ -307,7 +307,7 @@ C'è necessità di un maggior numero di strumenti di analisi dei dati e di panne
 
 #### Ricerca recente {#recent-research-14}
 
-- [Analisi dei dati del gruppo d'incentivi robusti](https://ethereum.github.io/rig/)
+- [Analisi dei dati del gruppo d'incentivi robusti](https://rig.ethereum.org/)
 
 ## Applicazioni e strumenti {#apps-and-tooling}
 
@@ -364,7 +364,7 @@ Gli oracoli importano dati off-chain sulla blockchain in modo decentralizzato e 
 
 - [Introduzione agli oracoli](/developers/docs/oracles/)
 
-#### Ricerca recente {#recent-research-18}
+#### Ricerche recenti {#recent-research-18}
 
 - [Sondaggio sugli oracoli delle blockchain](https://arxiv.org/pdf/2004.07140.pdf)
 - [White paper di Chainlink](https://chain.link/whitepaper)
@@ -377,11 +377,11 @@ Gli attacchi su Ethereum generalmente sfruttano le vulnerabilità di singole app
 
 - [Rapporto sull'exploit "wormhole"](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Elenco degli hack post-mortem dei contratti Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Ultime notizie su Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Ultime notizie su Rekt](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Ricerca recente {#recent-research-19}
 
-- [Applicazioni su ethresear.ch](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Applicazioni](https://ethresear.ch/c/applications/18)
 
 ### Stack tecnologico {#technology-stack}
 

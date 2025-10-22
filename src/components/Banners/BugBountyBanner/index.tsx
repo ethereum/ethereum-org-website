@@ -8,13 +8,7 @@ import { Center } from "@/components/ui/flex"
 const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
-      <p>
-        The Ethereum Protocol Attackathon is live on{" "}
-        <a href="https://immunefi.com/audit-competition/ethereum-protocol-attackathon/">
-          Immunefi
-        </a>{" "}
-        until the 20th of January, with up to $1,500,000 in rewards!
-      </p>
+      <p>Fusaka vulnerabilities are now part of the Bug Bounty Program!</p>
     </Center>
   </BannerNotification>
 )

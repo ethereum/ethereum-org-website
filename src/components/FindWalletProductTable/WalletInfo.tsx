@@ -1,146 +1,124 @@
-import { useTranslation } from "next-i18next"
-import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
+import { memo, useMemo } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 
-import { Wallet } from "@/lib/types"
+import type { ChainName, Wallet } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
-import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
+import ChainImages from "@/components/ChainImages"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
-import { TwImage } from "@/components/Image"
-import Tooltip from "@/components/Tooltip"
-import { Tag } from "@/components/ui/tag"
+import { Image } from "@/components/Image"
+import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 
+import { breakpointAsNumber } from "@/lib/utils/screen"
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
-import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
+import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
+
+import MediaQuery from "../MediaQuery"
+import { ButtonLink } from "../ui/buttons/Button"
+
+import PersonaTags from "./PersonaTags"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface WalletInfoProps {
   wallet: Wallet
-  isExpanded: boolean
 }
 
-const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
+const WalletInfo = ({ wallet }: WalletInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const walletPersonas = getWalletPersonas(wallet)
-  const deviceLabels: Array<string> = []
 
-  wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
-  wallet.android && deviceLabels.push(t("page-find-wallet-android"))
-  wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
-  wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
-  wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
-  wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
-  wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
-  wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
+  const walletPersonas = useMemo(() => {
+    return getWalletPersonas(wallet)
+  }, [wallet])
+
+  const deviceLabels = useMemo(() => {
+    const labels: Array<string> = []
+    if (wallet.ios) labels.push(t("page-find-wallet-iOS"))
+    if (wallet.android) labels.push(t("page-find-wallet-android"))
+    if (wallet.linux) labels.push(t("page-find-wallet-linux"))
+    if (wallet.windows) labels.push(t("page-find-wallet-windows"))
+    if (wallet.macOS) labels.push(t("page-find-wallet-macOS"))
+    if (wallet.chromium) labels.push(t("page-find-wallet-chromium"))
+    if (wallet.firefox) labels.push(t("page-find-wallet-firefox"))
+    if (wallet.hardware) labels.push(t("page-find-wallet-hardware"))
+    return labels
+  }, [wallet, t])
+
+  const deviceLabelsText = useMemo(() => {
+    return deviceLabels.join(" · ")
+  }, [deviceLabels])
+
+  const formattedLanguages = useMemo(() => {
+    return formatStringList(
+      wallet.supportedLanguages,
+      NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+    )
+  }, [wallet.supportedLanguages])
+
+  const hasExtraLanguages = useMemo(() => {
+    return (
+      wallet.supportedLanguages.length > NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+    )
+  }, [wallet.supportedLanguages])
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-4">
-          <div className="hidden flex-row gap-4 lg:flex">
-            <TwImage
-              src={wallet.image}
-              alt=""
-              style={{ objectFit: "contain", width: "56px", height: "56px" }}
-            />
-            <div className="flex flex-col gap-2">
-              <p className="text-xl font-bold">{wallet.name}</p>
-              {walletPersonas.length > 0 && (
-                <div className="flex flex-row flex-wrap gap-1">
-                  {walletPersonas.map((persona) => (
-                    <Tag key={persona} variant="high-contrast" size="small">
-                      {t(persona)}
-                    </Tag>
-                  ))}
-                </div>
-              )}
-              <div
-                className={`ml-2 mt-1 flex flex-row ${
-                  walletPersonas.length === 0 ? "mb-4" : ""
-                }`}
-              >
-                {wallet.supported_chains.map((chain) => {
-                  const chainData = [ethereumNetworkData, ...layer2Data].find(
-                    (l2) => l2.chainName === chain
-                  )
-                  return (
-                    <div
-                      key={chain}
-                      className="-ml-1.5 overflow-hidden rounded-full"
-                    >
-                      <Tooltip content={chainData?.name || ""}>
-                        <TwImage
-                          src={chainData?.logo || ""}
-                          alt=""
-                          className="rounded-full"
-                          style={{
-                            objectFit: "contain",
-                            width: "24px",
-                            height: "24px",
-                          }}
-                        />
-                      </Tooltip>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 lg:hidden">
-            <div className="flex flex-row items-center gap-4">
-              <TwImage
+          {/* Desktop layout */}
+          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
+            <div className="hidden flex-row gap-4 lg:flex">
+              <Image
                 src={wallet.image}
                 alt=""
-                style={{ objectFit: "contain", width: "24px", height: "24px" }}
+                style={{ objectFit: "contain", width: "56px", height: "56px" }}
               />
-              <p className="text-xl font-bold">{wallet.name}</p>
-            </div>
-            <div>
-              {walletPersonas.length > 0 && (
-                <div className="flex flex-row flex-wrap gap-1">
-                  {walletPersonas.map((persona) => (
-                    <Tag key={persona} variant="high-contrast" size="small">
-                      {t(persona)}
-                    </Tag>
-                  ))}
+              <div className="flex flex-col gap-2">
+                <p className="text-xl font-bold">{wallet.name}</p>
+
+                <PersonaTags walletPersonas={walletPersonas} />
+
+                <div
+                  className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
+                >
+                  <ChainImages
+                    chains={wallet.supported_chains as ChainName[]}
+                    className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+                  />
                 </div>
-              )}
+              </div>
             </div>
-            <div
-              className={`ml-2 flex flex-row ${
-                walletPersonas.length === 0 ? "mb-4" : ""
-              }`}
-            >
-              {wallet.supported_chains.map((chain) => {
-                const chainData = [ethereumNetworkData, ...layer2Data].find(
-                  (l2) => l2.chainName === chain
-                )
-                return (
-                  <div
-                    key={chain}
-                    className="-ml-1.5 overflow-hidden rounded-full"
-                  >
-                    <Tooltip content={chainData?.name || ""}>
-                      <TwImage
-                        src={chainData?.logo || ""}
-                        alt=""
-                        className="rounded-full"
-                        style={{
-                          objectFit: "contain",
-                          width: "24px",
-                          height: "24px",
-                        }}
-                      />
-                    </Tooltip>
-                  </div>
-                )
-              })}
+          </MediaQuery>
+
+          {/* Mobile layout */}
+          <MediaQuery queries={[`(max-width: ${breakpointAsNumber.lg - 1}px)`]}>
+            <div className="flex flex-col gap-4 lg:hidden">
+              <div className="flex flex-row items-center gap-4">
+                <Image
+                  src={wallet.image}
+                  alt=""
+                  style={{
+                    objectFit: "contain",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+                <p className="text-xl font-bold">{wallet.name}</p>
+              </div>
+              <div>
+                <PersonaTags walletPersonas={walletPersonas} />
+              </div>
+              <ChainImages
+                chains={wallet.supported_chains as ChainName[]}
+                className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+              />
             </div>
-          </div>
+          </MediaQuery>
+
           <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 lg:block">
               <div
-                className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
+                className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
               />
             </div>
             <div
@@ -148,17 +126,19 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             >
               {deviceLabels.length > 0 && (
                 <div className="flex flex-row gap-2">
-                  <DevicesIcon />
-                  <p className="text-md">{deviceLabels.join(" · ")}</p>
+                  <DevicesIcon className="size-6" />
+                  <p className="text-md">{deviceLabelsText}</p>
                 </div>
               )}
               <div className="flex flex-row gap-2">
-                <LanguagesIcon />
+                <LanguagesIcon className="size-6" />
                 <p className="text-md">
-                  {formatStringList(wallet.supportedLanguages, 5)}{" "}
-                  <SupportedLanguagesTooltip
-                    supportedLanguages={wallet.supportedLanguages}
-                  />
+                  {formattedLanguages}{" "}
+                  {hasExtraLanguages && (
+                    <SupportedLanguagesTooltip
+                      supportedLanguages={wallet.supportedLanguages}
+                    />
+                  )}
                 </p>
               </div>
             </div>
@@ -166,31 +146,31 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
         </div>
         <div>
           <button className="text-primary">
-            {isExpanded ? (
-              <IoChevronUpSharp size={24} />
-            ) : (
-              <IoChevronDownSharp size={24} />
-            )}
+            <ChevronUp className="text-2xl group-data-[state=closed]/collapsible:hidden" />
+            <ChevronDown className="text-2xl group-data-[state=open]/collapsible:hidden" />
           </button>
         </div>
       </div>
       <div className="flex flex-row gap-4">
         <div className="relative hidden w-14 lg:block">
           <div
-            className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
+            className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
           />
         </div>
         <div className="flex flex-1">
           <ButtonLink
             href={wallet.url}
             variant="outline"
-            w={{ base: "full", sm: "auto" }}
-            isExternal
+            className="p-2 max-sm:w-full"
             size="sm"
             customEventOptions={{
               eventCategory: "WalletExternalLinkList",
               eventAction: "Tap main button",
               eventName: `${wallet.name}`,
+            }}
+            onClick={(e) => {
+              // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+              e.stopPropagation()
             }}
           >
             {t("page-find-wallet-visit-website")}
@@ -201,4 +181,4 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
   )
 }
 
-export default WalletInfo
+export default memo(WalletInfo)

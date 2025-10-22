@@ -18,7 +18,7 @@ Görsel olarak daha kolay öğrenenler için Luka'nın Crowdin'in kurulumunu anl
 
 Crowdin hesabınızda oturum açmanız veya henüz hesabınız yoksa Crowdin hesabı oluşturmanız gerekecektir. Kaydolmak için gerekli olan tek şey bir e-posta hesabı ve şifredir.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Projeye katılın
 </ButtonLink>
 
@@ -34,7 +34,7 @@ Crowdin'e giriş yaptıktan sonra bir proje açıklaması ile kullanılabilir t�
 
 Web site içeriği, çok sayıda belge ve içerik gruplarına bölünmüştür. Her belgenin ilerleme durumunu sağ taraftan kontrol edebilirsiniz; çevirinin ilerleme durumu %100'ün altındaysa lütfen katkıda bulunun!
 
-Dilinizi listede göremiyor musunuz? [Bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord'da](/discord/) sorun
+Dilinizi listede göremiyor musunuz? [Bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord'da](https://discord.gg/ethereum-org) sorun
 
 ![Crowdin'de çevrilmiş ve çevrilmemiş dosyalar](./crowdin-files.png)
 
@@ -76,14 +76,17 @@ Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciy
 
 Çeviriyi tamamladığınızda (yani, içerik grubundaki tüm dosyalar 100% olarak göründüğünde) profesyonel çeviri hizmeti aldığımız kurum içeriği gözden geçirecektir (ve potansiyel olarak düzeltecektir). Gözden geçirme tamamlandıktan sonra (yani gözden geçirmenin ilerleme durumu %100 olduğunda) çevirileri web sitesine ekleriz.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Lütfen projeyi makine çevirisi kullanarak çevirmeyin. Tüm çeviriler web sitesine eklenmeden önce gözden geçirilecektir. Önerdiğiniz çevirilerin makine çevirisi olduğu tespit edilirse, çeviriler reddedilir ve makine çevirisini kullanarak katkıda bulunanlar sıklıkla projeden çıkarılır.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### İletişime geçin {#get-in-touch}
 
-Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](/discord/) #translations kanalına yazın
+Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalına yazın
 
-Ayrıca bize translations@ethereum.org adresinden de ulaşabilirsiniz
+Bize translations@ethereum.org adresinden de ulaşabilirsiniz
 
 Ethereum.org Çeviri Programına katıldığınız için teşekkür ederiz!

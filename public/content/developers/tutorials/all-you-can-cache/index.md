@@ -8,11 +8,11 @@ published: 2022-09-15
 lang: en
 ---
 
-When using rollups the cost of a byte in the transaction is a lot more expensive than the cost of a storage slot. Therefore, it makes sense to cache as much information as possible on chain.
+When using rollups the cost of a byte in the transaction is a lot more expensive than the cost of a storage slot. Therefore, it makes sense to cache as much information as possible onchain.
 
-In this article you learn how to create and use a caching contract in such a way that any parameter value that is likely to be used multiple times will be cached and available for use (after the first time) with a much smaller number of bytes, and how to write off chain code that uses this cache.
+In this article you learn how to create and use a caching contract in such a way that any parameter value that is likely to be used multiple times will be cached and available for use (after the first time) with a much smaller number of bytes, and how to write offchain code that uses this cache.
 
-If you want to skip the article and just see the source code, [it is here](https://github.com/qbzzt/20220915-all-you-can-cache). The development stack is [Foundry](https://book.getfoundry.sh/getting-started/installation).
+If you want to skip the article and just see the source code, [it is here](https://github.com/qbzzt/20220915-all-you-can-cache). The development stack is [Foundry](https://getfoundry.sh/introduction/installation/).
 
 ## Overall design {#overall-design}
 
@@ -53,7 +53,7 @@ These constants are used to interpret the special cases where we provide all the
     mapping(uint => uint) public val2key;
 ```
 
-A [mapping](https://www.geeksforgeeks.org/solidity-mappings/) between the values and their keys. This information is necessary to encode values before you send out the transaction.
+A [mapping](https://www.geeksforgeeks.org/solidity/solidity-mappings/) between the values and their keys. This information is necessary to encode values before you send out the transaction.
 
 ```solidity
     // Location n has the value for key n+1, because we need to preserve
@@ -242,7 +242,7 @@ One big advantage of Foundry is that it allows tests to be written in Solidity (
     function encodeVal(uint _val) public view returns(bytes memory) {
 ```
 
-`encodeVal` is a function that off-chain code calls to help create calldata that uses the cache. It receives a single value and returns the bytes that encode it. This function is a `view`, so it does not require a transaction and when called externally does not cost any gas.
+`encodeVal` is a function that offchain code calls to help create calldata that uses the cache. It receives a single value and returns the bytes that encode it. This function is a `view`, so it does not require a transaction and when called externally does not cost any gas.
 
 ```solidity
         uint _key = val2key[_val];
@@ -305,7 +305,7 @@ If we get here it means we got a key that's not less than 16\*256<sup>15</sup>. 
 
 ### Testing the cache {#testing-the-cache}
 
-One of the advantages of Foundry is that [it lets you write tests in Solidity](https://book.getfoundry.sh/forge/tests), which makes it easier to write unit tests. The tests for the `Cache` class are [here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Because the testing code is repetitive, as tests tend to be, this article only explains the interesting parts.
+One of the advantages of Foundry is that [it lets you write tests in Solidity](https://getfoundry.sh/forge/tests/overview/), which makes it easier to write unit tests. The tests for the `Cache` class are [here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Because the testing code is repetitive, as tests tend to be, this article only explains the interesting parts.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -352,7 +352,7 @@ Tests are functions whose names start with `test`. This function checks the basi
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-This is how you do the actual testing, using [`assert...` functions](https://book.getfoundry.sh/reference/forge-std/std-assertions). In this case, we check that the value we wrote is the one we read. We can discard the result of `cache.cacheWrite` because we know that cache keys are assigned linearly.
+This is how you do the actual testing, using [`assert...` functions](https://getfoundry.sh/reference/forge-std/std-assertions/). In this case, we check that the value we wrote is the one we read. We can discard the result of `cache.cacheWrite` because we know that cache keys are assigned linearly.
 
 ```solidity
         }
@@ -724,7 +724,7 @@ The read function is a `view`, so it does not require a transaction and does not
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Here we use the fact that `cacheWrite` returns the cache key. This is not something we'd expect to use in production, because `cacheWrite` changes the state, and therefore can only be called during a transaction. Transactions don't have return values, if they have results those results are supposed to be emitted as events. So the `cacheWrite` return value is only accessible from on-chain code, and on-chain code does not need parameter caching.
+Here we use the fact that `cacheWrite` returns the cache key. This is not something we'd expect to use in production, because `cacheWrite` changes the state, and therefore can only be called during a transaction. Transactions don't have return values, if they have results those results are supposed to be emitted as events. So the `cacheWrite` return value is only accessible from onchain code, and onchain code does not need parameter caching.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
@@ -753,10 +753,9 @@ Since we use the low level `<address>.call()` function, we can't use `vm.expectR
         (_success,) = address(worm).call(_callInput);
 ```
 
-This is the way we verify that code [emits an event correctly](https://book.getfoundry.sh/cheatcodes/expect-emit) in Foundry.
+This is the way we verify that code [emits an event correctly](https://getfoundry.sh/reference/cheatcodes/expect-emit/) in Foundry.
 
 ### The client {#the-client}
-
 One thing you don't get with Solidity tests is JavaScript code you can cut and paste into your own application. To write that code I deployed WORM to [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), [Optimism's](https://www.optimism.io/) new testnet. It is at address [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
 [You can see JavaScript code for the client here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). To use it:
@@ -862,3 +861,6 @@ The code in this article is a proof of concept, the purpose is to make the idea 
   There are ways to solve this problem, and the related problem of transactions that are in the mempool during the cache reorder, but you must be aware of it.
 
 I demonstrated caching here with Optimism, because I'm an Optimism employee and this is the rollup I know best. But it should work with any rollup that charges a minimal cost for internal processing, so that in comparison writing the transaction data to L1 is the major expense.
+
+[See here for more of my work](https://cryptodocguy.pro/).
+

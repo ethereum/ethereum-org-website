@@ -1,5 +1,5 @@
 import { type ReactNode } from "react"
-import type { IconType } from "react-icons/lib"
+import { LucideIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -9,7 +9,7 @@ import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
 
 type SendReceiveButtonProps = {
-  icon: IconType
+  icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
   isHighlighted: boolean
   isDisabled: boolean
   onClick?: () => void
@@ -41,8 +41,7 @@ export const SendReceiveButton = ({
       )}
     >
       {!isDisabled && isAnimated && <PulseAnimation type="circle" />}
-      {/* TODO: Remove important flags from class utils when simulator icons are migrated to tailwind */}
-      <Icon className="!size-4 !text-background md:!size-6" />
+      <Icon className="size-4 text-background md:size-6" />
     </div>
     <div className="relative">
       <p

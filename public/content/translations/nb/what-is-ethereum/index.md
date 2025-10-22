@@ -19,7 +19,7 @@ Ny til Ethereum? Du er på rett sted. La oss starte med en generell oversikt.
 
 **Som andre blokkjeder har Ethereum sin egen kryptovaluta kalt ether (ETH).** ETH er digitale penger. Hvis du har hørt om [Bitcoin](http://bitcoin.org/) så har ETH mange av de samme funksjonene. Den er helt digital, og kan sendes umiddelbart til alle hvor som helst i verden. Tilgangen på ETH er ikke kontrollert av noen myndigheter eller selskaper - det er desentralisert, og det er ett begrenset antall av dem. Folk over hele verden bruker ETH for å betale, som lagring av verdi eller som sikkerhet.
 
-**Men i motsetning til andre blokkkjeder kan Ethereum gjøre mye mer.** Ethereum er programmerbart, som betyr at utviklere kan bruke det til [å bygge nye applikasjoner på](/dapps/).
+**Men i motsetning til andre blokkkjeder kan Ethereum gjøre mye mer.** Ethereum er programmerbart, som betyr at utviklere kan bruke det til [å bygge nye applikasjoner på](/apps/).
 
 Disse desentraliserte applikasjonene (eller “dapps”) får fordelene av kryptovaluta og blokkjedeknologien. De er pålitelige. Det vil si at når de er "lastet opp" på Ethereum vil de alltid kjøre som programmert. Det kan styre digitale eiendeler for å skape nye typer finansielle applikasjoner. De kan desentraliseres, det betyr at det ikke er noen enkeltenhet eller person som styrer dem.
 
@@ -39,6 +39,6 @@ Disse desentraliserte applikasjonene (eller “dapps”) får fordelene av krypt
 
 **Er du ikke sikker på neste trinn?**
 
-- Vil du komme i gang med å bruke Ethereum? [ethereum.org/dapps](/dapps/)
+- Vil du komme i gang med å bruke Ethereum? [ethereum.org/dapps](/apps/)
 - Nysgjerrig på å lære mer om Ethereum og teknologien bak? [ethereum.org/learn](/learn/)
 - Er du en utvikler interessert i å bygge på Ethereum? [ethereum.org/developers](/developers/)

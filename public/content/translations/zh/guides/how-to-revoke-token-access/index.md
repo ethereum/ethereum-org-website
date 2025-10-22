@@ -20,7 +20,6 @@ lang: zh
 
 - [Ethallowance](https://ethallowance.com/)（以太坊）
 - [Etherscan](https://etherscan.io/tokenapprovalchecker)（以太坊）
-- [Cointool](https://cointool.app/approve/eth)（多个网络）
 - [Revoke](https://revoke.cash/)（多个网络）
 - [Unrekt](https://app.unrekt.net/)（多个网络）
 - [EverRevoke](https://everrise.com/everrevoke/)（多个网络）
@@ -47,12 +46,15 @@ lang: zh
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想了解更多信息？</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常见问题
 

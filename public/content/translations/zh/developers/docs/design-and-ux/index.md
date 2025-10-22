@@ -32,12 +32,12 @@ lang: zh
 | <Tag status="tag">权益质押</Tag>              | [OpenUX：Rocket Pool 节点运营商的用户体验](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                       |
 | <Tag status="tag">权益质押</Tag>              | [质押：主要趋势、要点与预测 - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)                |
 | <Tag status="tag">权益质押</Tag>              | [多重应用程序质押](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
-| <Tag status="error">去中心化自治组织</Tag>             | [2022 年去中心化自治组织研究更新：去中心化自治组织构建者需要什么？](https://blog.aragon.org/2022-dao-research-update/)                                                                        |
+| <Tag variant="solid" status="error">去中心化自治组织</Tag>             | [2022 年去中心化自治组织研究更新：去中心化自治组织构建者需要什么？](https://blog.aragon.org/2022-dao-research-update/)                                                                        |
 | <Tag status="error">去中心化金融</Tag>              | [2024 年去中心化金融状况](https://stateofdefi.org/)（调查进行中）                                                                                                               |
 | <Tag status="error">去中心化金融</Tag>              | [保险池](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
 | <Tag status="error">去中心化金融</Tag>              | [ConSensys：2022 年去中心化金融用户研究报告](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                      |
-| <Tag variant="solid" status="tag">元宇宙</Tag>                 | [元宇宙：用户研究报告](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                               |
-| <Tag variant="solid" status="tag">元宇宙</Tag>                 | [野外冒险：对元宇宙用户的研究](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube)（27 分钟视频）                           |
+| <Tag variant="solid">元宇宙</Tag>                 | [元宇宙：用户研究报告](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                               |
+| <Tag variant="solid">元宇宙</Tag>                 | [野外冒险：对元宇宙用户的研究](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube)（27 分钟视频）                           |
 | <Tag variant="solid" status="tag">Ethereum.org 用户体验数据</Tag> | [可用性与用户满意度调查仪表板 - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                                 |
 
 ## Web3 相关设计 {#design-for-web3}
@@ -77,7 +77,6 @@ lang: zh
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
-- [开源 Web3 设计](https://www.web3designers.org/)
 
 ## 设计体系 {#design-systems}
 

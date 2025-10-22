@@ -41,7 +41,7 @@ lang: ru
 
 - [Введение в доказательство доли владения](/developers/docs/consensus-mechanisms/pos/)
 - [Документ Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Поясняющая статья Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Поясняющая статья Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Документ Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Недавние исследования {#recent-research}
@@ -83,7 +83,7 @@ lang: ru
 1. Консенсус-клиент, который следит за вершиной блокчейна, обменивается блоками и обрабатывает логику консенсуса.
 2. Клиент исполнения, который поддерживает виртуальную машину Ethereum, выполняет транзакции и смарт-контракты.
 
-Дополнительную информацию об узлах и клиентах, а также список всех текущих реализаций клиентов см. на [странице об узлах и клиентах](/developers/docs/nodes-and-clients/). Историю всех обновлений Ethereum можно найти на [странице истории](/history/).
+Дополнительную информацию об узлах и клиентах, а также список всех текущих реализаций клиентов см. на [странице об узлах и клиентах](/developers/docs/nodes-and-clients/). Историю всех обновлений Ethereum можно найти на [странице истории](/ethereum-forks/).
 
 ### Клиенты исполнения: {#execution-clients}
 
@@ -224,7 +224,7 @@ lang: ru
 
 #### Дополнительные материалы {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Секция ETHconomics на Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Недавние исследования {#recent-research-9}
@@ -307,7 +307,7 @@ lang: ru
 
 #### Недавние исследования {#recent-research-14}
 
-- [Анализ данных от Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Анализ данных от Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Приложения и инструменты {#apps-and-tooling}
 

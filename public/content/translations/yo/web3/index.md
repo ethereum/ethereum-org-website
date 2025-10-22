@@ -61,12 +61,15 @@ Wẹẹbù kẹta fún o ní anfaani lati ní àwọn dukia digitali fúnra rẹ
 
 Wẹ́ẹ̀bù kẹta fún o ni àáye lati ni ohún-ini taara nipasẹ [àwọn token ohun-ini alailegbe (NFTs)](/glossary/#nft). Kò sí enikankan, koda kò jẹ awon oluṣẹda ere idaraya, to ní agbara lati gba ini rẹ. Atipe, ti o kò ba gba ere idaraya mọ, o le ta tabi paarọ ohún ini rẹ lori ọja gbangba lati gba deede iye owo rẹ pada.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Ko sí nipa NFTs</div>
   <ButtonLink href="/nft/">
     Díẹ̀ si nípa NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Ìtako ìfofindè {#censorship-resistance}
 
@@ -86,12 +89,15 @@ Pẹ̀lú bí o ti ní àwọn data tirẹ ní Wẹẹbu kẹta, otún le ní oj
 
 Àmọ àwọn eniyan túnmọ̀ ọpọlọpọ awujo wẹẹbù kẹta sí DAOs. Àwọn awujo yii ni ipele orisirisi alailakoso ati koodu ti o ń siṣe fúnra rẹ. Lọwọlọwọ, a ń ṣe iṣawari àwọn nkan tí DAOs jẹ, ati idagbasoke wọn ni ojo iwaju.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     Díẹ̀ si lórí àwọn DAO
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Idanimọ {#identity}
 
@@ -139,7 +145,7 @@ A si wa ni ibẹrẹ siṣẹda wẹẹbu to dara julọ pẹ̀lú wẹẹbu ket
 
 - [Gba wọ́lẹ́ẹ́tì kan](/wallets/)
 - [Wa awujo lati darapọ mọ](/community/)
-- [Sawari àwọn afilọlẹ wẹ́ẹ̀bù keta](/dapps/)
+- [Sawari àwọn afilọlẹ wẹ́ẹ̀bù keta](/apps/)
 - [Darapọ̀ mọ́ DAO](/dao/)
 - [Kọ si ori Wẹẹbu kẹta](/developers/)
 
@@ -147,11 +153,11 @@ A si wa ni ibẹrẹ siṣẹda wẹẹbu to dara julọ pẹ̀lú wẹẹbu ket
 
 Wẹ́ẹ̀bù kẹta ò ní ìtumọ̀ kan. Àwọn omo ẹgbẹ awujo ní èró ọtọọtọ lori rẹ. Èyí ni díẹ̀ nínú won:
 
-- [Kí ni Wẹ́ẹ̀bù keta? Alaye ọjọ iwaju Intanẹẹti alailakoso](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Kí ni Wẹ́ẹ̀bù keta? Alaye ọjọ iwaju Intanẹẹti alailakoso](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Mímú itúnmọ jade ninu Wẹẹbu keta](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Kí ní ìdí tí Wẹẹbu kẹta fí ṣe koko](https://future.a16z.com/why-web3-matters/)— _Chris Dixon_
 - [Kí ní ìdí tí alailakoso fí ṣe koko](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [ Ìrísí Ojú Ilẹ̀ Wẹẹbu kẹta](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _Chris Dixon_
-- [Itakurọsọ lori Wẹ́ẹ̀bù kẹta](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Itakurọsọ lori Wẹ́ẹ̀bù kẹta](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

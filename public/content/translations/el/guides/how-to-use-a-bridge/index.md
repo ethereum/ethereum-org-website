@@ -10,7 +10,7 @@ lang: el
 
 **Προαπαιτούμενα:**
 
-- κατοχή πορτοφολιού κρυπτονομισμάτων, δείτε τον οδηγό: [Πώς να «δημιουργήσετε» ένα λογαριασμό Ethereum](/guides/how-to-create-an-ethereum-account/)
+- Κατοχή πορτοφολιού κρυπτονομισμάτων, δείτε τον οδηγό: [Πώς να δημιουργήσετε ένα λογαριασμό Ethereum](/guides/how-to-create-an-ethereum-account/)
 - προσθήκη κεφαλαίων στο πορτοφόλι σας
 
 ## 1. Καθορίστε ποιο δίκτυο επιπέδου 2 θέλετε να χρησιμοποιήσετε
@@ -52,12 +52,15 @@ lang: el
 Μπορείτε να χρησιμοποιήσετε το [chainlist.org](http://chainlist.org) για να βρείτε στοιχεία RPC του δικτύου. Μόλις το δίκτυο προστεθεί και ολοκληρωθεί η συναλλαγή, θα δείτε τα κρυπτονομίσματα στο πορτοφόλι σας.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Θέλετε να μάθετε περισσότερα;</div>
   <ButtonLink href="/guides/">
     Δείτε τους άλλους οδηγούς μας
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Συχνές ερωτήσεις
 

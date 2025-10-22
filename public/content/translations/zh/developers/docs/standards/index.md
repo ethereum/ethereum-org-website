@@ -17,7 +17,7 @@ incomplete: true
 - [EIP 讨论板](https://ethereum-magicians.org/c/eips)
 - [以太坊治理简介](/governance/)
 - [以太坊治理概述](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019 年 3 月 31 日 - Boris Mann_
-- [以太坊协议开发治理和网络升级协调](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020 年 3 月 23 日 - Hudson Jameson_
+- [以太坊协议开发治理和网络升级协调](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020 年 3 月 23 日 - Hudson Jameson_
 - [以太坊核心开发者会议播放列表](https://www.youtube.com/@EthereumProtocol)_（YouTube 播放列表）_
 
 ## 标准的类型 {#types-of-standards}
@@ -41,7 +41,7 @@ EIP 有 3 种类型：
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 同质化（可互换）代币的标准接口，比如投票代币、质押代币或虚拟货币。
   - [ERC-223](/developers/docs/standards/tokens/erc-223/) - 一个同质化代币标准，使代币的行为与以太币行为相同，并支持在接收方处理代币转账。
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或在批准后执行消费者代码。
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或在批准后执行消费者代码。
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - 非同质化代币的标准接口，比如艺术作品或歌曲的契约。
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - 使用连续的代币标识符创建/转移一个或多个非同质化代币时，触发的标准事件。
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721 消费者角色的接口扩展。

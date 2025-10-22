@@ -56,7 +56,7 @@ If you want to raise a flag on a particular string that needs attention, feel fr
 
 ## What is Translation Memory (TM)? {#translation-memory}
 
-Translation Memory (TM) is a feature of Crowdin that stores all the previously translated strings across [ethereum.org](http://ethereum.org/). When a string is translated, it is automatically saved into our project TM. This could be a useful tool to help you save your time!
+Translation Memory (TM) is a feature of Crowdin that stores all the previously translated strings across ethereum.org. When a string is translated, it is automatically saved into our project TM. This could be a useful tool to help you save your time!
 
 - Look at the "TM and MT Suggestions" section and you will see how other translators translated the same or similar string. If you find a suggestion with a high matching rate, feel free to refer to the translation by clicking it.
 - If there is nothing on the list, you can search the TM for previously made translations and reuse them for consistency.
@@ -104,7 +104,7 @@ We recommend you leave names of brands, companies, and personnel untranslated as
 
 To ensure a certain level of quality and consistency in our translations, we work with [Acolad](https://www.acolad.com/), one of the largest language service providers globally. Acolad has 20,000 professional linguists, which means that they can provide professional reviewers for every language and type of content we need.
 
-The review process is straightforward; once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
+The review process is straightforward; once a set of content is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
 
 ## How do I add content in my language? {#adding-foreign-language-content}
 

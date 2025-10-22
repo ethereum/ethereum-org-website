@@ -1,47 +1,15 @@
 import { BaseHTMLAttributes } from "react"
-import { useTranslation } from "next-i18next"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { TranslationKey } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
-import { ButtonLink, ButtonLinkProps } from "./ui/buttons/Button"
-import { Center, Flex, Stack } from "./ui/flex"
+import { ButtonLink } from "./ui/buttons/Button"
+import { Center } from "./ui/flex"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement>
-
-const CardRow = ({ children }: ChildOnlyProp) => (
-  <Flex className="mx-4 my-16 flex-wrap justify-between">{children}</Flex>
-)
-
-const SubmitBugBountyButton = ({
-  children,
-  ...props
-}: Omit<ButtonLinkProps, "href">) => (
-  <ButtonLink
-    className="m-4"
-    href="https://forms.gle/Gnh4gzGh66Yc3V7G8"
-    {...props}
-  >
-    {children}
-  </ButtonLink>
-)
-
-const Card = ({ children, ...props }: FlexProps) => {
-  return (
-    <Stack
-      className={cn(
-        "flex-[1_1_412px] gap-0 xl:flex-[1_1_216px]",
-        "m-4 justify-between bg-background",
-        "rounded-sm border shadow-table-box",
-        "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
-      )}
-      {...props}
-    >
-      {children}
-    </Stack>
-  )
-}
 
 type LabelVariant = "low" | "medium" | "high" | "critical"
 
@@ -61,46 +29,13 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
 
   return (
     <Center
-      className={cn(
-        "rounded-t-[1px] border-b px-0 py-1 text-sm uppercase",
-        variantClassName
-      )}
+      className={cn("border-b px-0 py-1 text-sm uppercase", variantClassName)}
       {...props}
     >
       {children}
     </Center>
   )
 }
-
-const H2 = ({ children, ...props }) => (
-  <h2
-    className={cn("-mb-2 mt-2 p-4", "text-start text-2xl font-bold leading-6")}
-    {...props}
-  >
-    {children}
-  </h2>
-)
-
-const Description = ({ children, ...props }) => (
-  <p className="mb-6 px-4 py-0 text-xl opacity-60" {...props}>
-    {children}
-  </p>
-)
-
-const SubHeader = ({ children, ...props }) => (
-  <p className="mb-2 ms-4 mt-4 text-sm uppercase opacity-60" {...props}>
-    {children}
-  </p>
-)
-
-const TextBox = ({
-  children,
-  ...props
-}: BaseHTMLAttributes<HTMLDivElement>) => (
-  <div className="m-4 mt-2" {...props}>
-    {children}
-  </div>
-)
 
 export interface BugBountyCardInfo {
   lowLabelTranslationId?: TranslationKey
@@ -176,48 +111,72 @@ const bugBountyCardsInfo: BugBountyCardInfo[] = [
 
 const BugBountyCards = () => {
   const { t } = useTranslation("page-bug-bounty")
+
+  const Banner = ({ card }: { card: BugBountyCardInfo }) => {
+    if (card.lowLabelTranslationId)
+      return <Label variant="low">{t(card.lowLabelTranslationId)}</Label>
+    if (card.mediumLabelTranslationId)
+      return <Label variant="medium">{t(card.mediumLabelTranslationId)}</Label>
+    if (card.highLabelTranslationId)
+      return <Label variant="high">{t(card.highLabelTranslationId)}</Label>
+    if (card.criticalLabelTranslationId)
+      return (
+        <Label variant="critical">{t(card.criticalLabelTranslationId)}</Label>
+      )
+    return <></>
+  }
   return (
-    <CardRow>
+    <div className="mx-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
       {bugBountyCardsInfo.map((card, idx) => (
-        <Card key={`bug-bounty-card-${idx}`}>
-          {card.lowLabelTranslationId && (
-            <Label variant="low">{t(card.lowLabelTranslationId)}</Label>
+        <div
+          key={`bug-bounty-card-${idx}`}
+          className={cn(
+            "row-span-6 m-4 grid grid-rows-subgrid",
+            "overflow-hidden rounded border bg-background shadow-table-box",
+            "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
           )}
-          {card.mediumLabelTranslationId && (
-            <Label variant="medium">{t(card.mediumLabelTranslationId)}</Label>
-          )}
-          {card.highLabelTranslationId && (
-            <Label variant="high">{t(card.highLabelTranslationId)}</Label>
-          )}
-          {card.criticalLabelTranslationId && (
-            <Label variant="critical">
-              {t(card.criticalLabelTranslationId)}
-            </Label>
-          )}
-          <H2>{t(card.h2TranslationId)}</H2>
-          <Description>{t(card.descriptionTranslationId)}</Description>
-          <SubHeader>{t(card.subDescriptionTranslationId)}</SubHeader>
+        >
+          <Banner card={card} />
 
-          <SubHeader>{t(card.subHeader1TranslationId)}</SubHeader>
-          <TextBox>
-            <ul>
-              {card.severityList.map((listItemId) => (
-                <li key={listItemId}>
-                  {t(listItemId)}
-                  {/* <Translation id={listItemId} /> */}
-                </li>
-              ))}
-            </ul>
-          </TextBox>
+          <div className="row-span-5 grid grid-rows-subgrid gap-y-6 px-4 py-6">
+            <div className="space-y-2">
+              <h3 className="text-2xl/6 font-bold">
+                {t(card.h2TranslationId)}
+              </h3>
+              <p className="mb-6 text-xl opacity-60">
+                {t(card.descriptionTranslationId)}
+              </p>
+            </div>
 
-          <SubHeader>{t(card.subHeader2TranslationId)}</SubHeader>
-          <TextBox>{t(card.textTranslationId)}</TextBox>
-          <SubmitBugBountyButton>
-            {t(card.styledButtonTranslationId)}
-          </SubmitBugBountyButton>
-        </Card>
+            <p className="mb-2 mt-4 text-sm uppercase opacity-60">
+              {t(card.subDescriptionTranslationId)}
+            </p>
+
+            <div className="space-y-2">
+              <h4 className="text-sm font-normal uppercase opacity-60">
+                {t(card.subHeader1TranslationId)}
+              </h4>
+              <ul>
+                {card.severityList.map((listItemId) => (
+                  <li key={listItemId}>{t(listItemId)}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="text-sm font-normal uppercase opacity-60">
+                {t(card.subHeader2TranslationId)}
+              </h4>
+              <p className="my-4 mt-2">{t(card.textTranslationId)}</p>
+            </div>
+
+            <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+              {t(card.styledButtonTranslationId)}
+            </ButtonLink>
+          </div>
+        </div>
       ))}
-    </CardRow>
+    </div>
   )
 }
 

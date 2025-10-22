@@ -1,7 +1,7 @@
 import { type ReactNode } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { MdInfoOutline } from "react-icons/md"
+import { cva, type VariantProps } from "class-variance-authority"
+import { Info } from "lucide-react"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { cn } from "@/lib/utils/cn"
 import { isValidDate } from "@/lib/utils/date"
@@ -16,18 +16,56 @@ type BigNumberProps = {
   sourceUrl?: string
   lastUpdated?: number | string
   className?: string
-}
+} & VariantProps<typeof bigNumberVariants>
 
-const BigNumber = ({
+const bigNumberVariants = cva("flex shrink-0 flex-col self-stretch py-8", {
+  variants: {
+    variant: {
+      default: "flex-1",
+      light: "",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+const valueVariants = cva("font-bold text-4xl", {
+  variants: {
+    variant: {
+      default: "sm:text-5xl",
+      light: "",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+const childrenVariants = cva("text-sm", {
+  variants: {
+    variant: {
+      default: "",
+      light: "text-body-medium",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+const BigNumber = async ({
   children,
   value,
   sourceName,
   sourceUrl,
   lastUpdated,
   className,
+  variant,
 }: BigNumberProps) => {
-  const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: "common" })
+
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
       ? new Intl.DateTimeFormat(locale, {
@@ -36,34 +74,40 @@ const BigNumber = ({
       : ""
   return (
     <div
-      className={cn(
-        "flex flex-1 shrink-0 flex-col self-stretch py-8",
-        className
-      )}
+      data-label="big-number"
+      className={cn(bigNumberVariants({ variant }), className)}
     >
       {value ? (
         <>
-          <div className="text-4xl font-bold sm:text-5xl">{value}</div>
-          <div className="text-sm">
+          <div data-label="value" className={valueVariants({ variant })}>
+            {value}
+          </div>
+          <div className={childrenVariants({ variant })}>
             {children}
             {sourceName && sourceUrl && (
-              <Tooltip
-                content={
-                  <>
-                    <p>
-                      {t("data-provided-by")}{" "}
-                      <Link href={sourceUrl}>{sourceName}</Link>
-                    </p>
-                    {lastUpdated && (
-                      <p className="mt-2">
-                        {t("last-updated")}: {lastUpdatedDisplay}
+              <>
+                &nbsp;
+                <Tooltip
+                  content={
+                    <>
+                      <p>
+                        {t("data-provided-by")}{" "}
+                        <Link href={sourceUrl}>{sourceName}</Link>
                       </p>
-                    )}
-                  </>
-                }
-              >
-                <MdInfoOutline className="mb-0.5 ms-2 inline align-text-bottom" />
-              </Tooltip>
+                      {lastUpdated && (
+                        <p className="mt-2">
+                          {t("last-updated")}: {lastUpdatedDisplay}
+                        </p>
+                      )}
+                    </>
+                  }
+                >
+                  <Info
+                    className="mb-0.5 inline size-3.5 align-text-bottom"
+                    aria-label={t("data-provided-by")}
+                  />
+                </Tooltip>
+              </>
             )}
           </div>
         </>

@@ -8,7 +8,7 @@ Smart contracts are extremely flexible, and capable of controlling large amounts
 
 Public blockchains, like Ethereum, further complicate the issue of securing smart contracts. Deployed contract code _usually_ cannot be changed to patch security flaws, while assets stolen from smart contracts are extremely difficult to track and mostly irrecoverable due to immutability.
 
-Although figures vary, it is estimated that the total amount of value stolen or lost due to security defects in smart contracts is easily over $1 billion. This includes high-profile incidents, such as the [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH stolen, worth over $1B in today’s prices), [Parity multi-sig wallet hack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30M lost to hackers), and the [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (over $300M in ETH locked forever).
+Although figures vary, it is estimated that the total amount of value stolen or lost due to security defects in smart contracts is easily over $1 billion. This includes high-profile incidents, such as the [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH stolen, worth over $1B in today’s prices), [Parity multi-sig wallet hack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30M lost to hackers), and the [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (over $300M in ETH locked forever).
 
 The aforementioned issues make it imperative for developers to invest effort in building secure, robust, and resilient smart contracts. Smart contract security is serious business, and one that every developer will do well to learn. This guide will cover security considerations for Ethereum developers and explore resources for improving smart contract security.
 
@@ -115,7 +115,7 @@ The existence of audits and bug bounties doesn’t excuse your responsibility to
 
 - Use a [development environment](/developers/docs/frameworks/) for testing, compiling, deploying smart contracts
 
-- Run your code through basic code analysis tools, such as, [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
+- Run your code through basic code analysis tools, such as, [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
 
 - Ensure your code compiles without errors, and the Solidity compiler emits no warnings
 
@@ -199,23 +199,23 @@ This example shows the basic features of emergency stops:
 
 `onlyWhenStopped` is used for functions that should be callable during an emergency (e.g., `emergencyWithdraw()`). Such functions can help resolve the situation, hence their exclusion from the “restricted functions” list.
 
-Using an emergency stop functionality provides an effective stopgap for dealing with serious vulnerabilities in your smart contract. However, it increases the need for users to trust developers not to activate it for self-serving reasons. To this end, decentralizing control of the emergency stop either by subjecting it to an on-chain voting mechanism, timelock, or approval from a multisig wallet are possible solutions.
+Using an emergency stop functionality provides an effective stopgap for dealing with serious vulnerabilities in your smart contract. However, it increases the need for users to trust developers not to activate it for self-serving reasons. To this end, decentralizing control of the emergency stop either by subjecting it to an onchain voting mechanism, timelock, or approval from a multisig wallet are possible solutions.
 
 #### Event monitoring {#event-monitoring}
 
 [Events](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) allow you to track calls to smart contract functions and monitor changes to state variables. It is ideal to program your smart contract to emit an event whenever some party takes a safety-critical action (e.g., withdrawing funds).
 
-Logging events and monitoring them off-chain provides insights on contract operations and aids faster discovery of malicious actions. This means your team can respond faster to hacks and take action to mitigate impact on users, such as pausing functions or performing an upgrade.
+Logging events and monitoring them offchain provides insights on contract operations and aids faster discovery of malicious actions. This means your team can respond faster to hacks and take action to mitigate impact on users, such as pausing functions or performing an upgrade.
 
 You can also opt for an off-the-shelf monitoring tool that automatically forwards alerts whenever someone interacts with your contracts. These tools will allow you to create custom alerts based on different triggers, such as transaction volume, frequency of function calls, or the specific functions involved. For example, you could program an alert that comes in when the amount withdrawn in a single transaction crosses a particular threshold.
 
 ### 7. Design secure governance systems {#design-secure-governance-systems}
 
-You may want to decentralize your application by turning over control of core smart contracts to community members. In this case, the smart contract system will include a governance module—a mechanism that allows community members to approve administrative actions via an on-chain governance system. For example, a proposal to upgrade a proxy contract to a new implementation may be voted upon by token-holders.
+You may want to decentralize your application by turning over control of core smart contracts to community members. In this case, the smart contract system will include a governance module—a mechanism that allows community members to approve administrative actions via an onchain governance system. For example, a proposal to upgrade a proxy contract to a new implementation may be voted upon by token-holders.
 
 Decentralized governance can be beneficial, especially because it aligns the interests of developers and end-users. Nevertheless, smart contract governance mechanisms may introduce new risks if implemented incorrectly. A plausible scenario is if an attacker acquires enormous voting power (measured in number of tokens held) by taking out a [flash loan](/defi/#flash-loans) and pushes through a malicious proposal.
 
-One way of preventing problems related to on-chain governance is to [use a timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). A timelock prevents a smart contract from executing certain actions until a specific amount of time passes. Other strategies include assigning a “voting weight” to each token based on how long it has been locked up for, or measuring the voting power of an address at a historical period (for example, 2-3 blocks in the past) instead of the current block. Both methods reduce the possibility of quickly amassing voting power to swing on-chain votes.
+One way of preventing problems related to onchain governance is to [use a timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). A timelock prevents a smart contract from executing certain actions until a specific amount of time passes. Other strategies include assigning a “voting weight” to each token based on how long it has been locked up for, or measuring the voting power of an address at a historical period (for example, 2-3 blocks in the past) instead of the current block. Both methods reduce the possibility of quickly amassing voting power to swing onchain votes.
 
 More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos), and [the common DAO attack vectors leveraging DeFi](https://dacian.me/dao-governance-defi-attacks) in the shared links.
 
@@ -223,7 +223,7 @@ More on [designing secure governance systems](https://blog.openzeppelin.com/smar
 
 Traditional software developers are familiar with the KISS (“keep it simple, stupid”) principle, which advises against introducing unnecessary complexity into software design. This follows the long-held thinking that “complex systems fail in complex ways” and are more susceptible to costly errors.
 
-Keeping things simple is of particular importance when writing smart contracts, given that smart contracts are potentially controlling large amounts of value. A tip for achieving simplicity when writing smart contracts is to reuse existing libraries, such as [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), where possible. Because these libraries have been extensively audited and tested by developers, using them reduces the chances of introducing bugs by writing new functionality from scratch.
+Keeping things simple is of particular importance when writing smart contracts, given that smart contracts are potentially controlling large amounts of value. A tip for achieving simplicity when writing smart contracts is to reuse existing libraries, such as [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), where possible. Because these libraries have been extensively audited and tested by developers, using them reduces the chances of introducing bugs by writing new functionality from scratch.
 
 Another common advice is to write small functions and keep contracts modular by splitting business logic across multiple contracts. Not only does writing simpler code reduce the attack surface in a smart contract, it also makes it easier to reason about the correctness of the overall system and detect possible design errors early.
 
@@ -304,7 +304,7 @@ There’s nothing wrong here, except that `Attacker` has another function that c
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show.
+The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show.
 
 ##### How to prevent reentrancy attacks
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-You can also use a [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
+You can also use a [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
 
 #### Integer underflows and overflows {#integer-underflows-and-overflows}
 
@@ -439,13 +439,13 @@ As of version 0.8.0, the Solidity compiler rejects code that results in integer 
 
 #### Oracle manipulation {#oracle-manipulation}
 
-[Oracles](/developers/docs/oracles/) source off-chain information and send it on-chain for smart contracts to use. With oracles, you can design smart contracts that interoperate with off-chain systems, such as capital markets, greatly expanding their application.
+[Oracles](/developers/docs/oracles/) source offchain information and send it onchain for smart contracts to use. With oracles, you can design smart contracts that interoperate with offchain systems, such as capital markets, greatly expanding their application.
 
-But if the oracle is corrupted and sends incorrect information on-chain, smart contracts will execute based on erroneous inputs, which can cause problems. This is the basis of the “oracle problem”, which concerns the task of making sure information from a blockchain oracle is accurate, up-to-date, and timely.
+But if the oracle is corrupted and sends incorrect information onchain, smart contracts will execute based on erroneous inputs, which can cause problems. This is the basis of the “oracle problem”, which concerns the task of making sure information from a blockchain oracle is accurate, up-to-date, and timely.
 
-A related security concern is using an on-chain oracle, such as a decentralized exchange, to get the spot price for an asset. Lending platforms in the [decentralized finance (DeFi)](/defi/) industry often do this to determine the value of a user’s collateral to determine how much they can borrow.
+A related security concern is using an onchain oracle, such as a decentralized exchange, to get the spot price for an asset. Lending platforms in the [decentralized finance (DeFi)](/defi/) industry often do this to determine the value of a user’s collateral to determine how much they can borrow.
 
-DEX prices are often accurate, largely due to arbitrageurs restoring parity in markets. However, they are open to manipulation, particularly if the on-chain oracle calculates asset prices based on historical trading patterns (as is usually the case).
+DEX prices are often accurate, largely due to arbitrageurs restoring parity in markets. However, they are open to manipulation, particularly if the onchain oracle calculates asset prices based on historical trading patterns (as is usually the case).
 
 For instance, an attacker could artificially pump the spot price of an asset by taking out a flash loan right before interacting with your lending contract. Querying the DEX for the asset’s price would return a higher-than-normal value (due to the attacker’s large “buy order” skewing demand for the asset), allowing them to borrow more than they should. Such "flash loan attacks" have been used to exploit reliance on price oracles among DeFi applications, costing protocols millions in lost funds.
 
@@ -453,7 +453,7 @@ For instance, an attacker could artificially pump the spot price of an asset by 
 
 The minimum requirement to [avoid oracle manipulation](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) is to use a decentralized oracle network that queries information from multiple sources to avoid single points of failure. In most cases, decentralized oracles have built-in cryptoeconomic incentives to encourage oracle nodes to report correct information, making them more secure than centralized oracles.
 
-If you plan on querying an on-chain oracle for asset prices, consider using one that implements a time-weighted average price (TWAP) mechanism. A [TWAP oracle](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) queries the price of an asset at two different points in time (which you can modify) and calculates the spot price based on the average obtained. Choosing longer time periods protects your protocol against price manipulation since large orders executed recently cannot impact asset prices.
+If you plan on querying an onchain oracle for asset prices, consider using one that implements a time-weighted average price (TWAP) mechanism. A [TWAP oracle](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) queries the price of an asset at two different points in time (which you can modify) and calculates the spot price based on the average obtained. Choosing longer time periods protects your protocol against price manipulation since large orders executed recently cannot impact asset prices.
 
 ## Smart contract security resources for developers {#smart-contract-security-resources-for-developers}
 
@@ -475,21 +475,17 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 ### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
-
-- **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
+- **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
 
 ### Tools for secure administration of smart contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
-
 - **[Safe](https://safe.global/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
-- **[ConsenSys Diligence](https://consensys.net/diligence/)** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
+- **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
 
 - **[CertiK](https://www.certik.com/)** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 
@@ -505,7 +501,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Hacken](https://hacken.io)** - _Web3 cybersecurity auditor bringing the 360-degree approach to blockchain security._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
 
@@ -515,7 +511,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
 - **[Oxorio](https://oxor.io/)** - _Smart contract audits and blockchain security services with expertise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
 
@@ -528,14 +524,14 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 
 - **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
-  
+
 -  **[Sherlock](https://www.sherlock.xyz/)** - _Underwriter in Web3 for smart contract security, with payouts for auditors managed via smart contracts to secure that relevant bugs are paid fairly._
-  
+
 -  **[CodeHawks](https://www.codehawks.com/)** - _Competitive bug bounty platform where auditors take part in security contests and challenges, and (soon) in their own private audits._
 
 ### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Beginner-friendly explanation of the most significant contract vulnerabilities, with sample code for most cases._
+- **[ConsenSys: Smart Contract Known Attacks](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Beginner-friendly explanation of the most significant contract vulnerabilities, with sample code for most cases._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Curated list of Common Weakness Enumeration (CWE) items that apply to Ethereum smart contracts._
 

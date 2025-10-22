@@ -41,7 +41,7 @@ Oprócz badań wybiegających w przyszłość, badane są niektóre fundamentaln
 
 - [Wprowadzenie do proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Dokument Casper-FPG](https://arxiv.org/abs/1710.09437)
-- [Objaśnienie Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Objaśnienie Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Dokument Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Ostatnie badania {#recent-research}
@@ -83,7 +83,7 @@ Węzeł Ethereum wymaga uruchomienia dwóch elementów oprogramowania:
 1. klienta konsensusu do śledzenia początku blockchainu, plotkowania bloków i obsługi logiki konsensusu
 2. klienta wykonawczego do obsługi maszyny wirtualnej Ethereum oraz wykonywania transakcji i inteligentnych kontraktów
 
-Więcej szczegółów na temat węzłów i klientów oraz lista wszystkich aktualnych implementacji klientów znajduje się na [strona węzłów i klientów](/developers/docs/nodes-and-clients/). Historię wszystkich uaktualnień Ethereum możesz również znaleźć na [stronie historii](/history/).
+Więcej szczegółów na temat węzłów i klientów oraz lista wszystkich aktualnych implementacji klientów znajduje się na [strona węzłów i klientów](/developers/docs/nodes-and-clients/). Historię wszystkich uaktualnień Ethereum możesz również znaleźć na [stronie historii](/ethereum-forks/).
 
 ### Klienty wykonawcze {#execution-clients}
 
@@ -224,7 +224,7 @@ Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach:
 
 #### Podstawowe informacje {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Warsztaty ETHconomics na Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Ostatnie badania {#recent-research-9}
@@ -307,7 +307,7 @@ Istnieje zapotrzebowanie na więcej narzędzi do analizy danych i pulpitów nawi
 
 #### Ostatnie badania {#recent-research-14}
 
-- [Analiza danych Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Analiza danych Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Aplikacje i narzędzia {#apps-and-tooling}
 

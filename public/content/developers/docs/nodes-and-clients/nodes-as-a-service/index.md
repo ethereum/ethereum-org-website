@@ -52,7 +52,7 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
 - [**Alchemy**](https://alchemy.com/)
-  - [Docs](https://docs.alchemyapi.io/)
+  - [Docs](https://www.alchemy.com/docs/)
   - Features
     - Largest free tier with 300M compute units per month (~30M getLatestBlock requests)
     - Multichain support for Polygon, Starknet, Optimism, Arbitrum
@@ -63,6 +63,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard with Request Explorer, Mempool Watcher, and Composer
     - Integrated testnet faucet access
     - Active Discord builder community with 18k users
+
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Docs](https://docs.allnodes.com/)
+  - Features
+    - No rate limits with PublicNode token created on the Allnodes portfolio page.
+    - Privacy focused free rpc endpoints (100+ blockchains) on [PublicNode](https://www.publicnode.com)
+    - Dedicated nodes without rate limits for 90+ blockchains
+    - Dedicated archive nodes for 30+ blockchains
+    - Available in 3 regions (US, EU, Asia)
+    - Snapshots for 100+ blockchains on [PublicNode](https://www.publicnode.com/snapshots)
+    - 24/7 technical support with 99.90%-99.98% uptime SLA (depends on plan).
+    - Pay-per-hour pricing
+    - Pay with Credit Card, PayPal or Crypto
 
 - [**All That Node**](https://allthatnode.com/)
   - [Docs](https://docs.allthatnode.com/)
@@ -156,33 +169,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay-per-hour pricing
     - Direct 24/7 support
 
-- [**DataHub**](https://datahub.figment.io)
-  - [Docs](https://docs.figment.io/)
-  - Features
-    - Free tier option with 3,000,000 reqs/month
-    - RPC and WSS endpoints
-    - Dedicated full and archive nodes
-    - Auto-Scaling (Volume Discounts)
-    - Free archival data
-    - Service Analytics
-    - Dashboard
-    - Direct 24/7 Support
-    - Pay in Crypto (Enterprise)
-
-- [**DRPC**](https://drpc.org/)
-  - [Docs](https://docs.drpc.org/)
-  - Features
-    - Decentralized RPC nodes
-    - 15+ Node providers
-    - Node balancing
-    - Unlimited compute units per month on the free tier
-    - Data verification
-    - Custom endpoints
-    - HTTP and WSS endpoints
-    - Unlimited keys (free and paid tier)
-    - Flexible fallback options
-    - [Public Endpoint](https://eth.drpc.org)
-    - Free shared archive nodes
+- [**dRPC**](https://drpc.org/)
+  - [Docs](https://drpc.org/docs)
+  - NodeCloud: Plug-n-play RPC infra starting at $10 (USD)—full speed, no limits
+  - NodeCloud features:
+    - API support for 185 networks
+    - Distributed pool of 40+ providers
+    - Global coverage with nine (9) geo-clusters
+    - AI-powered load balancing system
+    - Pay-as-you-go flat pricing—no hikes, no expiry, no lock-ins
+    - Unlimited keys, granular key tweaks, team roles, front-end protection
+    - Methods flat rate at 20 compute units (CUs) per method
+    - [Public endpoint chainlist](https://drpc.org/chainlist)
+    - [Pricing calculator](https://drpc.org/pricing#calculator)
+  - NodeCore: open-source stack for organizations wanting full control
 
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
@@ -226,7 +226,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 500+ administrative and service APIs
     - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
     - Outbound streams for event delivery (Apache Kafka backed)
-    - Deep collection of "off-chain" and ancillary services (e.g. bilateral encrypted messaging transport)
+    - Deep collection of "offchain" and ancillary services (e.g. bilateral encrypted messaging transport)
     - Straightforward network onboarding with governance and role-based access control
     - Sophisticated user management for both administrators and end users
     - Highly scalable, resilient, enterprise-grade infrastructure
@@ -264,7 +264,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Direct, technical support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Docs](https://docs.nodereal.io/docs/introduction)
   - Features
     - Reliable, fast and scalable RPC API services
     - Enhanced API for web3 developers

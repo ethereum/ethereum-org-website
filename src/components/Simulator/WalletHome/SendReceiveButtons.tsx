@@ -1,9 +1,7 @@
-import React from "react"
-import { PiPaperPlaneRightFill } from "react-icons/pi"
+import { QrCode, SendHorizontal } from "lucide-react"
 
 import { Flex } from "@/components/ui/flex"
 
-import { QrCodeIcon } from "../icons"
 import type { SimulatorNav } from "../interfaces"
 
 import { SendReceiveButton } from "./SendReceiveButton"
@@ -32,7 +30,7 @@ export const SendReceiveButtons = ({
         onClick={nav?.progressStepper}
         isDisabled={disableSend}
         isHighlighted={highlightSend}
-        icon={PiPaperPlaneRightFill}
+        icon={SendHorizontal}
       >
         Send
       </SendReceiveButton>
@@ -40,8 +38,7 @@ export const SendReceiveButtons = ({
         onClick={nav?.progressStepper}
         isDisabled={disableReceive}
         isHighlighted={highlightReceive}
-        // @ts-expect-error icon component needs to be migrated to use react-icons base
-        icon={QrCodeIcon}
+        icon={QrCode}
         isAnimated
       >
         Receive

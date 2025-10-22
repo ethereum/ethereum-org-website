@@ -1,5 +1,5 @@
 {
-  "page-layer-2-learn-meta-title": "What is layer 2?",
+  "page-layer-2-learn-meta-title": "What is layer 2? | ethereum.org",
   "page-layer-2-learn-title": "What is layer 2?",
   "page-layer-2-learn-description": "Scaling Ethereum for mass adoption",
   "page-layer-2-learn-button-1-label": "What is layer 2?",
@@ -37,7 +37,7 @@
   "page-layer-2-learn-rollupCards-optimistic-description": "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid transaction is suspected, a fault proof is ran to see if this has taken place.",
   "page-layer-2-learn-rollupCards-optimistic-childSentence": "More on optimistic rollups",
   "page-layer-2-learn-rollupCards-zk-title": "Zero knowledge rollups",
-  "page-layer-2-learn-rollupCards-zk-description": "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
+  "page-layer-2-learn-rollupCards-zk-description": "Zero Knowledge rollups use validity proofs where transactions calculations are computed offchain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
   "page-layer-2-learn-rollupCards-zk-childSentence": "More on zk-rollups",
   "page-layer-2-learn-dyor-title": "Do your own research: Risks of layer 2",
   "page-layer-2-learn-dyor-1": "Because layer 2 chains inherit security from Ethereum, in an ideal world, they are as safe as L1 Ethereum. However, many of the <strong>projects are still young and somewhat experimental</strong>. After years of R&D, many of the L2 technologies that will scale Ethereum went live in 2021. This is not to say these L2s are not secure, only that no layer 2 is as battle tested as Ethereum Mainnet. Always do your own research and decide if you're comfortable with any risks involved.",

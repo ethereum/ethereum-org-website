@@ -19,7 +19,7 @@ A hamis tokenek illusztrálása végett, és hogyan lehet beazonosítani azokat,
 title="Mi az az ARB?"
 contentPreview=''>
 
-Az Arbitrum egy olyan szervezet, mely <a href="/developers/docs/scaling/optimistic-rollups/">optimista rollupokat</a> fejleszt és kezel. Kezdetben az Arbitrum egy profitorientált vállalatként működött, de aztán decentralizálta magát. Ennek részeként kibocsátott egy <a href="/dao/#token-based-membership">irányítási tokent</a>, amivel kereskedni lehet.
+Az Arbitrum egy olyan szervezet, mely [optimista rollupokat](/developers/docs/scaling/optimistic-rollups/) fejleszt és kezel. Kezdetben az Arbitrum egy profitorientált vállalatként működött, de aztán decentralizálta magát. Ennek részeként kibocsátott egy [irányítási tokent](/dao/#token-based-membership), amivel kereskedni lehet.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Az Ethereum lényege a decentralizáció. Emiatt nincs központi hatóság, amel
 title="Mi az az okosszerződés?"
 contentPreview=''>
 
-Az <a href="/developers/docs/smart-contracts/">okosszerződések</a> olyan programok, amelyek az Ethereum-blokkláncon futnak. Minden ERC-20 token egy okosszerződéként van létrehozva.
+Az [okosszerződések](/developers/docs/smart-contracts/) olyan programok, amelyek az Ethereum-blokkláncon futnak. Minden ERC-20 token egy okosszerződéként van létrehozva.
 
 </ExpandableCard>
 

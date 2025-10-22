@@ -1,5 +1,6 @@
+"use client"
+
 import { ChangeEvent, FC, useMemo, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
@@ -7,11 +8,15 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
+
 import { Alert, AlertContent } from "../ui/alert"
 import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
 import Input from "../ui/input"
 import { Spinner } from "../ui/spinner"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface Validator {
   validatorIndex: number
@@ -31,7 +36,7 @@ const WithdrawalCredentials: FC = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
-    const network = isTestnet ? "Holesky" : "Mainnet"
+    const network = isTestnet ? CANONICAL_STAKING_TESTNET : "Mainnet"
     const networkLowercase = network.toLowerCase()
     trackCustomEvent({
       eventCategory: `Validator index`,
@@ -94,7 +99,7 @@ const WithdrawalCredentials: FC = () => {
             <strong>
               <Translation
                 id="page-staking:comp-withdrawal-credentials-upgraded-1"
-                options={{ validatorIndex: validator.validatorIndex }}
+                values={{ validatorIndex: validator.validatorIndex }}
               />{" "}
             </strong>
             {t("comp-withdrawal-credentials-upgraded-2")}{" "}
@@ -120,9 +125,13 @@ const WithdrawalCredentials: FC = () => {
       <Alert variant="error">
         <AlertContent className="inline">
           <strong>
-            {validator.isTestnet
-              ? t("comp-withdrawal-credentials-not-upgraded-1-testnet")
-              : t("comp-withdrawal-credentials-not-upgraded-1")}
+            {t("page-staking:comp-withdrawal-credentials-not-upgraded-1", {
+              network: validator.isTestnet
+                ? t("page-staking:page-staking-network-testnet", {
+                    network: CANONICAL_STAKING_TESTNET,
+                  })
+                : "",
+            })}
           </strong>{" "}
           <Translation id="page-staking:comp-withdrawal-credentials-not-upgraded-2" />
         </AlertContent>
@@ -145,7 +154,9 @@ const WithdrawalCredentials: FC = () => {
             onClick={() => checkWithdrawalCredentials()}
             disabled={!inputValue.length}
           >
-            {t("comp-withdrawal-credentials-verify-mainnet")}
+            {t("page-staking:comp-withdrawal-credentials-verify", {
+              network: "Mainnet",
+            })}
             {isLoading.mainnet && <Spinner />}
           </Button>
           <Button
@@ -153,7 +164,9 @@ const WithdrawalCredentials: FC = () => {
             disabled={!inputValue.length}
             variant="outline"
           >
-            {t("comp-withdrawal-credentials-verify-holesky")}
+            {t("page-staking:comp-withdrawal-credentials-verify", {
+              network: CANONICAL_STAKING_TESTNET,
+            })}
             {isLoading.testnet && <Spinner />}
           </Button>
         </Flex>

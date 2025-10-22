@@ -59,9 +59,14 @@ Jika anda mempunyai ETH di Rangkaian Utama Ethereum dan anda ingin meneroka alt 
 
 Katakan anda mahu memiliki Bitcoin asli (BTC), tetapi anda hanya mempunyai dana di Rangkaian Utama Ethereum. Untuk mendapatkan pendedahan kepada BTC pada Ethereum, anda boleh membeli Bitcoin Berbalut (WBTC). Walau bagaimanapun, WBTC ialah token [ERC-20](/glossary/#erc-20) asli kepada rangkaian Ethereum, yang bermaksud ia adalah versi Ethereum Bitcoin dan bukan aset asal pada blok rantai Bitcoin. Untuk memiliki BTC asli, anda perlu merapatkan aset anda daripada Ethereum kepada Bitcoin menggunakan jambatan. Ini akan merapatkan WBTC anda dan menukarnya kepada BTC asli. Sebagai alternatif, anda mungkin memiliki BTC dan ingin menggunakannya dalam protokol Ethereum [DeFi](/glossary/#defi) . Ini akan memerlukan merapatkan cara lain, dari BTC kepada WBTC yang kemudian boleh digunakan sebagai aset pada Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Anda juga boleh melakukan semua perkara di atas menggunakan <a href="/get-eth/">pertukaran terpusat</a>. Namun, melainkan dana anda sudah berada di bursa, ia akan melibatkan beberapa langkah, dan anda mungkin akan lebih baik menggunakan jambatan.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Anda juga boleh melakukan semua perkara di atas menggunakan [pertukaran terpusat](/get-eth/). Namun, melainkan dana anda sudah berada di bursa, ia akan melibatkan beberapa langkah, dan anda mungkin akan lebih baik menggunakan jambatan.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -77,7 +82,7 @@ Jambatan mempunyai pelbagai jenis reka bentuk dan kerumitan. Secara umumnya, jam
 
 Secara ringkasnya, kita boleh mengatakan bahawa jambatan yang dipercayai mempunyai andaian kepercayaan, sedangkan jambatan tanpa kepercayaan mempunyai kepercayaan yang minimum dan tidak membuat andaian kepercayaan baru di luar domain asas. Berikut ialah cara istilah-istilah ini boleh diterangkan:
 
-- **Tanpa kepercayaan**: mempunyai keselamatan yang setara dengan domain asas. Seperti yang diterangkan oleh [Arjun Bhuptani dalam artikel ini.](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
+- **Tanpa kepercayaan**: mempunyai keselamatan yang setara dengan domain asas. Seperti yang diterangkan oleh [Arjun Bhuptani dalam artikel ini. ](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
 - **Andaian kepercayaan:**bergerak jauh daripada keselamatan domain asas dengan menambah pengesahan luaran dalam sistem, dengan itu menjadikannya satu kripto ekonomi yang kurang selamat.
 
 Untuk mengembangkan pemahaman yang lebih baik tentang perbezaan utama antara dua pendekatan tersebut, mari kita ambil satu contoh:
@@ -99,7 +104,7 @@ Banyak penyelesaian jambatan mengguna pakai model antara dua ekstrem ini dengan 
 
 Menggunakan jambatan membolehkan anda mengalihkan aset anda merentasi blok rantai yang berbeza. Berikut ialah beberapa sumber yang boleh membantu anda mencari dan menggunakan jambatan:
 
-- **[Ringkasan Jambatan L2BEAT](https://l2beat.com/bridges/summary) & [Analisis Risiko Jambatan L2BEAT](https://l2beat.com/bridges/risk)**: Ringkasan komprehensif pelbagai jambatan, termasuk butiran mengenai pasaran saham, jenis jambatan dan rantaian destinasi. L2BEAT juga mempunyai analisis risiko untuk jambatan, membantu pengguna membuat keputusan termaklum apabila memilih jambatan.
+- **[Ringkasan Jambatan L2BEAT](https://l2beat.com/bridges/summary) & [Analisis Risiko Jambatan L2BEAT](https://l2beat.com/bridges/summary)**: Ringkasan komprehensif pelbagai jambatan, termasuk butiran mengenai pasaran saham, jenis jambatan dan rantaian destinasi. L2BEAT juga mempunyai analisis risiko untuk jambatan, membantu pengguna membuat keputusan termaklum apabila memilih jambatan.
 - **[Ringkasan Jambatan DefiLlama](https://defillama.com/bridges/Ethereum)**: Ringkasan bilangan jambatan merentas rangkaian Ethereum.
 
 <Divider />

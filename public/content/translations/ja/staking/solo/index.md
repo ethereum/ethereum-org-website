@@ -55,7 +55,7 @@ summaryPoints:
 <ExpandableCard title="安全な鍵の管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 秘密鍵がイーサリアムアドレスを保護するのと同じように、バリデータ専用の鍵を生成する必要があります。 シードフレーズや秘密鍵を安全に保管する方法を理解する必要があります。{' '}
 
-<a href="/security/">イーサリアムのセキュリティと詐欺対策</a>
+[イーサリアムのセキュリティと詐欺対策](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="メンテナンス" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -136,9 +136,9 @@ ETHのソロステーキングを支援するツールやサービスは増え�
 <ExpandableCard title="32 ETH超を預け入れできますか?">
 バリデータに関連付けられたそれぞれの鍵ペアを、バリデータとして有効化するには、ちょうど32 ETHを必要とします。 バリデータにつき、<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有効残高</a>が32 ETHに制限されているため、1つの鍵セットに対して、32 ETH超の預け入れがあった場合でも、報酬が高くなることはありません。 つまり、ステーキングは32 ETH単位で行われ、それぞれに鍵と残高が設定されています。
 
-1つのバリデータに、32 ETHを超えるETHを預け入れないでください。 32ETHを超える預け入れにより、報酬が増えるわけではありません。 バリデータの引き出しアドレスが設定されている場合、32ETHを超える超過資金は、次回の<a href="/saking/withdrawals/#validator-sweeting">バリデータスイープ</a>中にこの引き出しアドレスへ自動的に引き落とされます。
+1つのバリデータに、32 ETHを超えるETHを預け入れないでください。 32ETHを超える預け入れにより、報酬が増えるわけではありません。 バリデータの引き出しアドレスが設定されている場合、32ETHを超える超過資金は、次回の[バリデータスイープ](/saking/withdrawals/#validator-sweeting)中にこの引き出しアドレスへ自動的に引き落とされます。
 
-ソロステーキングが難しい場合は、<a href="/staking/saas/">ステーキング・アズ・ア・サービス(SaaS)</a>プロバイダーの利用をご検討ください。また、32 ETH未満でステーキングを行う場合は、<a href="/staking/pools/">ステーキングプール</a>をチェックしてみてください。
+ソロステーキングが難しい場合は、[ステーキング・アズ・ア・サービス(SaaS)](/staking/saas/)プロバイダーの利用をご検討ください。また、32 ETH未満でステーキングを行う場合は、[ステーキングプール](/staking/pools/)をチェックしてみてください。
 </ExpandableCard>
 
 <ExpandableCard title="オフライン状態になるとスラッシングの対象ですか? (答えは、いいえです)">
@@ -200,7 +200,6 @@ ETHのソロステーキングを支援するツールやサービスは増え�
 - [クライアントの多様性の支援](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [イーサリアムのコンセンサスレイヤーにおけるクライアントの多様性](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [イーサリアムバリデータ用のハードウェアの購入方法](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [イーサリアム2.0テストネットに参加するステップ・バイ・ステップ手順](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2スラッシング防止のためのヒント](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

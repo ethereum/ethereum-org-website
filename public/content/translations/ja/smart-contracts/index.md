@@ -69,7 +69,7 @@ Finematicsによるスマートコントラクトの説明:
 - [ステーブルコイン](/stablecoins/)
 - [唯一無二なデジタルアセットの作成と配布](/nft/)
 - [自動で開かれた為替](/get-eth/#dex)
-- [分散型ゲーム](/dapps/?category=gaming#explore)
+- [分散型ゲーム](/apps/categories/gaming)
 - [自動的に支払いを行う保険契約](https://etherisc.com/)
 - [カスタマイズされ、相互運用可能な通貨を作成するための標準](/developers/docs/standards/tokens/)
 
