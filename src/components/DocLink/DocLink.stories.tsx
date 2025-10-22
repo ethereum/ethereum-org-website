@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    href: "/history/",
+    href: "/ethereum-forks/",
     children: "History of Ethereum",
   },
 }
@@ -34,7 +34,7 @@ export const MultipleLinks: Story = {
   },
   render: () => (
     <VStack className="items-stretch gap-4">
-      <DocLink href="/history/">History of Ethereum</DocLink>
+      <DocLink href="/ethereum-forks/">History of Ethereum</DocLink>
       <DocLink href="https://ethereum.org" isExternal>
         Ethereum Website
       </DocLink>

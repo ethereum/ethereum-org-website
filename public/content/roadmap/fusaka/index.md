@@ -10,9 +10,13 @@ The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more ne
 
 This upgrade is planned for Q4 2025.
 
-<InfoBanner>
-The Fusaka upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+The Fusaka upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Improvements in Fusaka {#improvements-in-fusaka}
 
@@ -191,6 +195,98 @@ Yes, the Fusaka upgrade requires updates to both [execution clients and consensu
 - **Beware of Scams!** <Emoji text="⚠️" /> **anyone instructing you to "upgrade" your ETH is trying to scam you.** There is nothing you need to do in relation to this upgrade. Your assets will stay completely unaffected. Remember, staying informed is the best defense against scams.
 
 [More on recognizing and avoiding scams](/security/)
+
+### What's with the zebras? <Emoji text="🦓" /> {#whats-with-the-zebras}
+
+A zebra is Fusaka's developer-chosen "mascot" because its stripes reflect PeerDAS’s column-based data-availability sampling, where nodes custody certain column subnets and sample a few other columns from each peers slot to check that blob data is available.
+
+The Merge in 2022 [used a panda](https://x.com/hwwonx/status/1431970802040127498) as its mascot to signal the joining of the execution & consensus layers. Since then, mascots have been informally chosen for each fork and show up as ASCII art in the client logs at the time of upgrade. It’s just a fun way to celebrate.
+
+### What improvements are included for L2 Scaling? {#what-improvements-are-included-for-l2-scaling}
+
+[PeerDAS](/roadmap/fusaka/peerdas) is the main feature of the fork. It implements data availability sampling (DAS) that unlocks more scalability for rollups, theoretically scaling the blob space up to 8 times the current size. Blob fee market will be also improved to efficiently react to congestion and guarantee L2s pay a meaningful fee for the compute and space that blobs impose on nodes.
+
+### How are BPO forks different? {#how-are-bpo-forks-different}
+
+Blob Only Parameter forks provide a mechanism to continuously increase the blob count (both target and max) after PeerDAS is activated, without having to wait for a full coordinated upgrade. Each increase is hardcoded to be pre-configured in client releases supporting Fusaka.
+
+As user or a validator, you don’t need to update your clients for each BPO and only make sure to follow major hardforks like Fusaka. This is same practice as before, no special actions are needed to It is still recommended to monitor your clients around upgrades and BPOs and keep them update even between major releases as fixes or optimizations might follow the hardfork.
+
+### What is the BPO schedule? {#what-is-the-bpo-schedule}
+
+The exact schedule of BPO updates is going to be determined with Fusaka releases. Follow [Protocol announcements](https://blog.ethereum.org/category/protocol) and release notes of your clients.
+
+Example of how it might look like:
+
+- Before Fusaka: target 6, max 9
+- At Fusaka activation: target 6, max 9
+- BPO1, few weeks after Fusaka activation: target 10, max 15, increasing by two thirds
+- BPO2, few weeks after BPO1: target 14, max 21
+
+### Will this lower fees on Ethereum (layer 1) {#will-this-lower-gas}
+
+This upgrade does not lower gas fees on L1, at least not directly. The main focus is more blob space for rollup data, therefore lowering fees on layer 2. This might have some side effects on L1 fee market but no significant change is expected.
+
+### As a staker, what do I need to do for the upgrade? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
+
+As with every network upgrade, make sure to update your clients to latest versions marked with Fusaka support. Follow updates in the mailing list and [Protocol Announcements on the EF Blog](https://blog.ethereum.org/category/protocol) to get informed about releases.
+To validate your setup before Fusaka gets activated on Mainnet, you can run a validator on testnets. Fusaka is [activated sooner on testnets](https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement) giving you more space to make sure everything works and report bugs. Testnet forks are also announced in the mailing list and blog.
+
+### Does "Deterministic Proposer Lookahead" (EIP-7917) affect validators? {#does-7917-affect-validators}
+
+This change doesn’t change how your validator client functions, however, it will provide more insight into the future of your validator duties. Make sure to update your monitoring tooling to keep up with new features.
+
+### How does Fusaka affect bandwidth requirements for nodes and validators? {#how-does-fusaka-affect-bandwidth-requirements-for-nodes-and-validators}
+
+PeerDAS makes a significant change in how nodes transmit blob data. All data is divided into pieces called columns across 128 subnets with nodes subscribing to only some of them. The amount of subnet columns that nodes have to custody depends on their configuration and number of validators connected. The actual bandwidth requirements will depend on the amount of blobs allowed in the network and type of the node. At the moment of Fusaka activation the blob target stays the same as before, but with PeerDAS, node operators can see a decrease in their disk usage of blobs and network traffic. As BPOs configure higher numbers of blobs in the network, the necessary bandwidth will increase with each BPO.
+
+Nodes requirements are still within [recommended margins](https://eips.ethereum.org/EIPS/eip-7870) even after Fusaka BPOs.
+
+#### Full nodes {#full-nodes}
+
+Regular nodes without any validators will subscribe to only 4 subnets, providing custody for 1/8 of the original data. This means that with the same amount of blob data, the node bandwidth of downloading them would be smaller by a factor of eight (8). The disk usage and download bandwidth of blobs for a normal full node might decrease around 80%, to only few Mb.
+
+#### Solo stakers {#solo-stakers}
+
+If the node is used for a validator client, it has to custody more columns and therefore process more data. With a validator added, the node subscribes to at least 8 column subnets and therefore processes twice as much data as regular node but still less than before Fusaka. If the validator balance is above 287 ETH, more and more subnets will be subscribed to.
+
+For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwith will have to be around 5 times higher, at 100Mpbs.
+
+#### Large validators {#large-validators}
+
+The number of subscribed subnets grows with more balance and validators added to the node. For example, around 800 ETH balance, the node custodies 25 columns and will need around 30% more download bandwidth than before. The necessary upload rises similar to regular nodes and at least 100Mbps is necessary.
+
+At 4096 ETH, 2 max balance validators, the node becomes 'supernode' which custodies all columns, therefore downloads and stores everything. These nodes actively heal the network by contributing missing data back but also requires much more bandwidth and storage. With the final blob target being 6 times higher than before, super nodes will have to store around 600GB extra blob data and have faster sustained download bandwidth at around 20Mbps.
+
+[Read more details on expected requirements.](https://ethpandaops.io/posts/fusaka-bandwidth-estimation/#theoretical-requirements)
+
+### What EVM changes are implemented? {#what-evm-changes-are-implemented}
+
+Fusaka solidifies the EVM with new minor changes and features.
+
+- For security while scaling, a maximum size of a single transaction will be [limited to 16.7 million](https://eips.ethereum.org/EIPS/eip-7825) units of gas.
+- [New opcode count leading zeros (CLZ)](https://eips.ethereum.org/EIPS/eip-7939) is added to the EVM and will enable smart contract languages to perform certain operations more efficiently.
+- [The cost of `ModExp` precompile will be increased](https://eips.ethereum.org/EIPS/eip-7883)—contracts using it will charge more gas for execution.
+
+### How does new 16M gas limit affects contract developers? {#how-does-new-16m-gas-limit-affects-contract-developers}
+
+Fusaka introduces a limit to [maximum size of a single transaction to 16.7 million](https://eips.ethereum.org/EIPS/eip-7825) (2^24) gas units. This is roughly the previous size of an average block which makes it big enough to accommodate complex transactions that would consume an entire block. This limit creates protection for clients, preventing potential DoS attacks in the future with higher block gas limit. The goal of scaling is to enable more transactions to get into the blockchain without a single one consuming the whole block.
+
+Regular user transactions are far from reaching this limit. Certain edge cases like big and complex DeFi operations, large smart contract deployments or batch transactions targeting multiple contracts might be affected by this change. These transaction will have to be divided into smaller ones or optimized in another way. Use simulation before submitting transactions that potentially reach the limit.
+
+The RPC method `eth_call` is not limited and will allow simulation of bigger transactions than the actual blockchain limit. The actual limit for RPC methods can be configured by the client operator to ensure prevent abuse.
+
+### What CLZ means for developers? {#what-clz-means-for-developers}
+
+EVM compilers like Solidity will implement and utilize the new function for counting zeros under the hood. New contracts might benefit from gas savings if they rely on this sort of operation. Follow releases and feature announcement of the smart contract language for documentation on potential savings.
+
+### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers}
+
+Fusaka has no direct affect that would break any existing contracts or change their behavior. Changes introduced to the execution layer are made with backward compatibility, however, always keep an eye on edge cases and potential impact.
+
+[With the increased cost of `ModExp` precompile](https://eips.ethereum.org/EIPS/eip-7883), contracts that depend on it will consume more gas for execution. If your contract relies heavily on this and becomes more expensive for users, reconsider how it’s utilized.
+
+Consider the [new 16.7 million limit](https://eips.ethereum.org/EIPS/eip-7825) if transactions executing your contracts might be reaching similar size.
 
 ## Further reading {#further-reading}
 

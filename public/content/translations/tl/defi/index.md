@@ -63,12 +63,15 @@ Kaya nabuo ang Ethereum dahil dito. Tulad ng Bitcoin, hindi maaaring magbago ang
 
 Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? Gayunpaman, isa itong default na feature ng mga token sa Ethereum. Kahit sino ay maaaring mag-program ng logic sa mga pagbabayad. Kaya makukuha mo ang kontrol at seguridad ng Bitcoin pati ang mga serbisyong ibinibigay ng mga pinansyal na institusyon. Dahil dito, magagawa mo sa mga cryptocurrency ang mga bagay na hindi mo magagawa sa Bitcoin, tulad ng pagpapautang at panghihiram, pag-i-schedule ng mga pagbabayad, pag-invest sa mga index fund at iba pa.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Siyasatin ang aming mga rekomendasyon para sa mga DeFi application na dapat subukan kung bago ka sa Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Siyasatin ang mga DeFi app
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ano ang magagawa mo sa DeFi? {#defi-use-cases}
 

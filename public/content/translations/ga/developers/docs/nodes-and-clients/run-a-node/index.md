@@ -444,7 +444,7 @@ Smaoinigh ar sheirbhís a chruthú chun do chliaint a rith go huathoibríoch agu
 
 #### Cliaint á nuashonrú {#updating-clients}
 
-Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/history/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
+Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/ethereum-forks/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
 
 > Roimh nuashonruithe líonra tábhachtacha, foilsíonn EF postáil ar a [blog](https://blog.ethereum.org). Is féidir leat [liostáil leis na fógraí seo](https://blog.ethereum.org/category/protocol#subscribe) chun fógra a chur chuig do ríomhphost nuair a bhíonn nuashonrú de dhíth ar do nód.
 

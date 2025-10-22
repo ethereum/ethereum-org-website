@@ -59,9 +59,14 @@ Ha Ön ETH összeggel rendelkezik az Ethereum-főhálózaton, de fel szeretne fe
 
 Amennyiben Ön szeretne bitcoint (BTC) birtokolni, de a pénzeszközei az Ethereum főhálózatán vannak. Az Ethereumon becsomagolt formában szerezhet bitcoint (WBTC). Ugyanakkor a WBTC egy [ERC-20](/glossary/#erc-20) token az Ethereum hálózatán, tehát egy Ethereum verziójú bitcoin, és nem az eredeti eszköz a Bitcoin-blokkláncon. Az eredeti BTC megszerzéséhez egy hídon keresztül át kell vinnie a pénzeszközeit a Bitcoin hálózatára. Ezzel áthelyezi a WBTC-t és átváltja BTC-re. Másik irányból, ha Ön rendelkezik BTC-vel, de azt az Ethereum [decentralizált pénzügyi (DeFi)](/glossary/#defi) protokolljában akarja használni. Ekkor a hídon a másik irányba mozgatja az eszközeit, BTC-ről WBTC-re váltja, majd azt áthelyezi az Ethereumra.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   Mindezt megteheti egy [centralizált tőzsde](/get-eth/) segítségével is. Ha azonban az eszközei már a tőzsdén vannak, akkor több lépést kell végrehajtani, és akkor már egyszerűbb a hidat használni.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

@@ -63,12 +63,15 @@ Bitcoin була першою програмою DeFi з усіх боків. Bi
 
 Звучить дивно, чи не так? Для чого програмувати гроші? Однак це радше стандартна функція для токенів на Ethereum. Будь-хто може запрограмувати логіку в платежі. Так ви отримуєте контроль і надійність Bitcoin у поєднанні з послугами, які надають фінансові установи. Це дасть вам змогу виконувати операції з криптовалютою, недоступні в Bitcoin, як-от надання й отримання позик, планування платежів, інвестування в індексні фонди тощо.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ознайомтеся з програмами DeFi, якщо ви лише починаєте працювати з Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Ознайомитися з програмами DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Які можливості надає DeFi? {#defi-use-cases}
 

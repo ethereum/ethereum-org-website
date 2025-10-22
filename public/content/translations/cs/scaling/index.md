@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum je škálováno pomocí [druhé vrstvy](/layer-2/#rollups) (řešení též známého pod pojmem „rollupy“), která sdružuje transakce a výstup odesílá do Etherea. Přestože jsou rollupy až osmkrát levnější než hlavní síť Ethereum, je možné je dále optimalizovat a snížit tak náklady pro koncové uživatele. Rollupy spoléhají na některé centralizované komponenty, které mohou vývojáři v budoucnu odstranit.
 
-<InfoBanner mb={8} title="Transakční náklady">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Transakční náklady
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Dnešní rollupy jsou přibližně <strong>5x až 20x</strong> levnější než 1. vrstva Etherea</li>
     <li>ZK-rollupy brzy sníží poplatky <strong>asi 40x až 100x</strong></li>
     <li>ZK-rollupy brzy sníží poplatky <strong>asi 40x až 100x</strong></li>
     <li style={{ marginBottom: 0 }}>Pro uživatele to bude znamenat, že se cena za provedení transakce ustálí na hodnotě, která odpovídá přibližně <strong>0,001 USD</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Zlevnění dat {#making-data-cheaper}
 

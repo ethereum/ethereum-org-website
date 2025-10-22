@@ -39,9 +39,14 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 
 Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 There is <strong>no threat to your funds in the meantime</strong> for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
@@ -61,7 +66,7 @@ Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade whi
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
-- [More on Ethereum history](/history/)
+- [More on Ethereum history](/ethereum-forks/)
 - [More on the Ethereum roadmap](/roadmap/)
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
@@ -78,11 +83,16 @@ Check out this explanation of Ethereum staking withdrawals by Finematics:
 
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.<br/><br/>
 Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the consensus layer, over 500,000 as of Jan 2023).</em><br/><br/>
 The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Checking an account for withdrawals {#checking-an-account-for-withdrawals}
 
@@ -192,7 +202,7 @@ eventName="read more">
 
 Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to prepare your validator for withdrawals, timing of events, and more details about how withdrawals function.
 
-To try out your setup on a testnet first, visit the <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> to get started.
+To try out your setup on a testnet first, visit the <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> to get started.
 
 </ExpandableCard>
 

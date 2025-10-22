@@ -268,7 +268,7 @@ A London frissítés bevezette az [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 
 A London-frissítés előtt az Ethereum fix méretű blokkokkal működött. A magas hálózati kereslet idején ezek a blokkok teljes kapacitással működtek. Ennek eredményeképp a felhasználóknak sokszor várni kellett a kereslet csökkenésére, hogy bekerülhessenek egy blokkba, ami rontott a felhasználói élményen. A London-frissítés bevezette a változó méretű blokkokat az Ethereumon.
 
-A tranzakciós díjak számításának módja 2021. augusztusában megváltozott [a London-frissítéssel](/history/#london) az Ethereum hálózatán. A London Upgrade előtt a díjakat úgy kalkulálták, hogy elkülönítették az `alapdíjat` és az `elsőbbségi díjat`:
+A tranzakciós díjak számításának módja 2021. augusztusában megváltozott [a London-frissítéssel](/ethereum-forks/#london) az Ethereum hálózatán. A London Upgrade előtt a díjakat úgy kalkulálták, hogy elkülönítették az `alapdíjat` és az `elsőbbségi díjat`:
 
 Tegyük fel, hogy Alice-nek fizetnie kell Bobnak 1 ETH-t. A tranzakcióban a gázkorlátozás 21 000 egység, a gázdíj pedig 200 gwei.
 

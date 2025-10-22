@@ -4,9 +4,14 @@ description: Súil mhionsonraithe ar na halgartaim a úsáidtear do mhianadóire
 lang: ga
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:" />
+<AlertContent>
+<AlertDescription>
 Níl cruthúnas-oibre mar bhunús le meicníocht chomhdhearcaidh Ethereum a thuilleadh, rud a chiallaíonn go bhfuil an mhianadóireacht múchta. Ina áit sin, tá Ethereum urraithe ag bailíochtóirí a bhfuil ETH i ngeall acu. Is féidir leat tosú ag geallchur do chuid ETH inniu. Léigh tuilleadh ar <a href='/roadmap/merge/'>An Cumasc</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>cruthúnas-gill</a>, agus <a href='/staking/'>geallchur</a>. Leathanach le spéis stairiúil é seo.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Bhain mianadóireacht Ethereum úsáid as algartam ar a dtugtar Ethash. Is é bun-smaoineamh an algartam go ndéanann mianadóir iarracht ionchur nonce a aimsiú trí úsáid a bhaint as ríomh lántrialach ionas go mbeidh an hais a eascraíonn as níos lú ná an tairseach a chinneann an deacracht ríofa. Is féidir an leibhéal deacrachta seo a choigeartú go dinimiciúil, rud a fhágann gur féidir bloctháirgeadh a dhéanamh go tráthrialta.
 

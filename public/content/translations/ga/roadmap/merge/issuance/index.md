@@ -30,11 +30,11 @@ title="Eisiúint ETH tldr">
 
 ### Eisiúint ciseal fhorghníomhaithe {#el-issuance-pre-merge}
 
-Faoi chruthúnas-oibre, ní raibh idirghníomhú ag mianadóirí ach leis an gciseal forghníomhaithe agus tugadh luach saothair bloc dóibh dá mba iad an chéad mhianadóir a réitigh an chéad bhloc eile. Ós rud é [uasghrádú Constantinople](/history/#constantinople) in 2019 ba é an luach saothair seo ná 2 ETH in aghaidh an bhloc. Bronnadh luach saothair ar na mianadóirí freisin as bloic [ommer](/glossary/#ommer) a fhoilsiú, ar bhloic bhailí iad nach raibh sa slabhra canónach is faide. Mhéadaigh na luach saothair seo ag 1.75 ETH in aghaidh an ómra, agus b'ionann iad _i dteannta_ an luach saothair a eisíodh ón mbloc canónach. Gníomhaíocht dhian eacnamaíoch a bhí sa phróiseas mianadóireachta, rud a d'éiligh leibhéil arda eisiúint ETH go stairiúil chun í a choineáil ag gabháil.
+Faoi chruthúnas-oibre, ní raibh idirghníomhú ag mianadóirí ach leis an gciseal forghníomhaithe agus tugadh luach saothair bloc dóibh dá mba iad an chéad mhianadóir a réitigh an chéad bhloc eile. Ós rud é [uasghrádú Constantinople](/ethereum-forks/#constantinople) in 2019 ba é an luach saothair seo ná 2 ETH in aghaidh an bhloc. Bronnadh luach saothair ar na mianadóirí freisin as bloic [ommer](/glossary/#ommer) a fhoilsiú, ar bhloic bhailí iad nach raibh sa slabhra canónach is faide. Mhéadaigh na luach saothair seo ag 1.75 ETH in aghaidh an ómra, agus b'ionann iad _i dteannta_ an luach saothair a eisíodh ón mbloc canónach. Gníomhaíocht dhian eacnamaíoch a bhí sa phróiseas mianadóireachta, rud a d'éiligh leibhéil arda eisiúint ETH go stairiúil chun í a choineáil ag gabháil.
 
 ### Eisiúint ciseal comhdhearcadh {#cl-issuance-pre-merge}
 
-Chuaigh an [Slabhra Beacon](/history/#beacon-chain-genesis) beo sa bhliain 2020. In ionad mianadóirí, tá sé urraithe ag bailíochtaithe ag baint úsáide as cruthúnas-gheallta. Bhí an slabhra seo tosaithe ag úsáideoirí Ethereum ag taisceadh ETH aon-bhealach isteach i gconradh cliste ar Mainnet (an ciseal forghníomhaithe), a éisteann an Beacon Chain leis, ag creidiúnú don úsáideoir méid comhionann ETH ar an slabhra nua. Go dtí gur tharla The Merge, ní raibh bailíochtaitheoirí Slabhra Beacon ag próiseáil idirbhearta agus go bunúsach bhí siad ag teacht ar chomhdhearcadh maidir le staid an chomhthiomsaithe bailíochtaithe féin.
+Chuaigh an [Slabhra Beacon](/ethereum-forks/#beacon-chain-genesis) beo sa bhliain 2020. In ionad mianadóirí, tá sé urraithe ag bailíochtaithe ag baint úsáide as cruthúnas-gheallta. Bhí an slabhra seo tosaithe ag úsáideoirí Ethereum ag taisceadh ETH aon-bhealach isteach i gconradh cliste ar Mainnet (an ciseal forghníomhaithe), a éisteann an Beacon Chain leis, ag creidiúnú don úsáideoir méid comhionann ETH ar an slabhra nua. Go dtí gur tharla The Merge, ní raibh bailíochtaitheoirí Slabhra Beacon ag próiseáil idirbhearta agus go bunúsach bhí siad ag teacht ar chomhdhearcadh maidir le staid an chomhthiomsaithe bailíochtaithe féin.
 
 Tugtar luach saothair ETH do bhailitheoirí ar an Slabhra Beacon as staid an tslabhra a fhianú agus as bloic a mholadh. Déantar luach saothair (nó pionóis) a ríomh agus a dháileadh ag gach tréimhse (gach 6.4 nóiméad) bunaithe ar fheidhmíocht an bhailitheoir. Tá luach saothair bhailitheoir **go suntasach** níos lú ná na luach saothair mhianadóireachta a eisíodh roimhe seo faoi chruthúnas oibre (2 ETH gach ~13.5 soicind), toisc nach bhfuil feidhmiú nód bailíochtaithe chomh dian ó thaobh na heacnamaíochta de agus mar sin ní éilíonn nó ní údaraíonn sé luach saothair chomh hard.
 
@@ -54,11 +54,17 @@ Soláthar iomlán ETH: **~120,520,000 ETH** (ag am The Merge i Meán Fómhair 20
 - Eisíodh torthaí i **~620,500** ETH thar tréimhse bliana
 - Bhí ráta boilscithe **thart ar 0.52%** mar thoradh air (620.5K in aghaidh na bliana / 119.3M san iomlán)
 
-<InfoBanner>
-<strong>Ráta eisiúna bliantúil iomlán (réamhchumasc): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-Bhí <strong>~88.7%</strong> den eisiúint ag dul chuig mianadóirí ar an gciseal forghníomhaithe (4.09 / 4.61 * 100)<br/><br/>
-Bhí <strong>~11.3%</strong> á eisiúint chuig geallsealbhóirí ar an tsraith chomhthoil (0.52 / 4.61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Ráta eisiúna bliantúil iomlán (réamhchumasc): ~4.61%** (4.09% + 0.52%)
+
+Bhí **~88.7%** den eisiúint ag dul chuig mianadóirí ar an gciseal forghníomhaithe (4.09 / 4.61 * 100)
+
+Bhí **~11.3%** á eisiúint chuig geallsealbhóirí ar an tsraith chomhthoil (0.52 / 4.61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Iar-chumascadh (an lá inniu) {#post-merge}
 
@@ -84,18 +90,27 @@ De réir mar a imíonn níos mó bailíochtóirí siar, laghdófar de réir a ch
 - Eisiúint ciseal feidhmithe: **0**
 - Eisiúint ciseal comhdhearcadh: Mar an gcéanna leis an méid thuas, **~0.52%** ráta eisiúna bliantúil (le 14 milliún ETH iomlán i gceist)
 
-<InfoBanner>
-Ráta eisiúna bliantúil iomlán: <strong>~0.52%</strong><br/><br/>
-Glanlaghdú ar eisiúint bhliantúil ETH: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Ráta eisiúna bliantúil iomlán: **~0.52%**
+
+Glanlaghdú ar eisiúint bhliantúil ETH: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> an Dóchán {#the-burn}
 
 Is é an fórsa contrártha le heisiúint ETH an ráta ag a dhóitear ETH. Chun idirbheart a fhorghníomhú ar Ethereum, ní mór táille íosta (ar a dtugtar "bonn-táille") a íoc, a luainíonn go leanúnach (bloc-go-bloc) ag brath ar ghníomhaíocht líonra. Íoctar an táille in ETH agus _éilítear_ chun go measfar an t-idirbheart a bheith bailí. Déantar _an táille seo a dhó_ le linn an phróisis idirbhirt, rud a bhaintear as cúrsaíocht í.
 
-<InfoBanner>
-Chuaigh dó táillí beo le [uasghrádú Londain](/history/#london) i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Chuaigh dó táillí beo le [uasghrádú Londain](/ethereum-forks/#london) i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Anuas ar an dó táillí arna chur i bhfeidhm ag uasghrádú Londain, is féidir le bailíochtaithe pionóis a thabhú as a bheith as líne, nó níos measa fós, is féidir iad a ghearradh as rialacha sonracha a sháraíonn slándáil líonra a bhagairt. Is é an toradh a bhíonn ar na pionóis seo ná laghdú ETH ó iarmhéid an bhailíochtóra sin, nach dtugtar luach saothair díreach dó chuig aon chuntas eile, rud a dhónn é/a bhaineann as cúrsaíocht é.
 

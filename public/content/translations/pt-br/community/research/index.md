@@ -41,7 +41,7 @@ Além da pesquisa voltada para o futuro, algumas reformulações fundamentais do
 
 - [Introdução à prova de participação](/developers/docs/consensus-mechanisms/pos/)
 - [Artigo sobre o Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Artigo sobre Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Artigo sobre Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Artigo sobre o Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Pesquisa recente {#recent-research}
@@ -83,7 +83,7 @@ Um nó Ethereum é necessário para executar dois softwares:
 1. um cliente de consenso para manter o controle da cabeça do blockchain, blocos de transmissão e para processar a lógica de consenso
 2. um cliente de execução para oferecer suporte à Máquina Virtual do Ethereum e executar transações e contratos inteligentes
 
-Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) para obter mais detalhes sobre nós e clientes e uma lista de todas as implementações atuais de clientes. Um histórico de todas as melhorias do Ethereum também está disponível na [página de histórico](/history/).
+Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) para obter mais detalhes sobre nós e clientes e uma lista de todas as implementações atuais de clientes. Um histórico de todas as melhorias do Ethereum também está disponível na [página de histórico](/ethereum-forks/).
 
 ### Clientes de execução {#execution-clients}
 

@@ -152,7 +152,7 @@ Proses tadbir urus Ethereum sering diniagakan daripada kelajuan dan kecekapan un
 
 Walaupun spesifikasi dan pelaksanaan pembangunan sentiasa sumber terbuka sepenuhnya, proses formal yang digunakan untuk mencadangkan kemas kini yang diterangkan di atas tidak digunakan. Ini membolehkan perubahan ditentukan dan dipersetujui dengan lebih cepat oleh penyelidik dan pelaksana.
 
-Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 September 2022, The Merge ini telah lengkap sebagai sebahagian daripada [naik taraf rangkaian Paris](/history/#paris). Cadangan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) telah ditukar daripada 'Panggilan Terakhir' kepada 'Muktamad', melengkapkan peralihan kepada bukti penaruhan.
+Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 September 2022, The Merge ini telah lengkap sebagai sebahagian daripada [naik taraf rangkaian Paris](/ethereum-forks/#paris). Cadangan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) telah ditukar daripada 'Panggilan Terakhir' kepada 'Muktamad', melengkapkan peralihan kepada bukti penaruhan.
 
 <ButtonLink href="/roadmap/merge/">
   Lagi tentang The Merge

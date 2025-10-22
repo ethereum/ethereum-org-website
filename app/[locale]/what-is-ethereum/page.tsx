@@ -1040,7 +1040,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                     </p>
                     <p>{t("page-what-is-ethereum-when-who-governance-4")}</p>
                   </div>
-                  <LinkWithArrow href="/history/">
+                  <LinkWithArrow href="/ethereum-history-founder-and-ownership/">
                     {t("page-what-is-ethereum-when-who-learn-more")}
                   </LinkWithArrow>
                 </div>

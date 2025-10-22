@@ -41,7 +41,7 @@ Además de la investigación de perspectivas futuras, se están investigando alg
 
 - [Introducción a prueba de participación](/developers/docs/consensus-mechanisms/pos/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Explicación de Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Explicación de Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Documento de Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Investigación reciente {#recent-research}
@@ -83,7 +83,7 @@ Se requiere un nodo de Ethereum para ejecutar dos piezas de software:
 1. un cliente de consenso para hacer un seguimiento de la cabeza de la cadena de bloques, bloqueos gossip y la gestión de la lógica de consenso;
 2. un cliente de ejecución para dar soporte a la máquina virtual de Ethereum y ejecutar transacciones y contratos inteligentes.
 
-Véase la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalle de los nodos y clientes, y para obtener una lista de todas las implementaciones de clientes. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/history/).
+Véase la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalle de los nodos y clientes, y para obtener una lista de todas las implementaciones de clientes. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/ethereum-forks/).
 
 ### Clientes de ejecución {#execution-clients}
 

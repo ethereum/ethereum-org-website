@@ -43,9 +43,14 @@ Bifor di Shenghai/Capella upgrade, yu nor fit yus abi access yor ETH wey yu stak
 
 To dey provide witdrawal address na step wi nid for any validator akant bifor im go dey eligibol to witdraw ETH from im balans.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong> Ish validator akant fit only get one singol witdrawal address, one taim.</strong> Wons dem don shuse one address and don submit to di konsensus layer, wi nor fit undo abi shanj am again. Make yu doubol-sheck ownaship and akurasy of di address wey dem provide bifor yu submit.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Nor threat <strong>dey to dey fund in di meantaim</strong> as yu nor dey provide dis, assuming yor mnemonic/seed fraiz don rimain safe offline, and dem neva spoil in any way. Failure to add witdrawal kredenshials go simply leave di ETH wey dem lock in di validator akant as im don bi ontil dem provide witdrawal address.
 
@@ -65,7 +70,7 @@ Staking witdrawals don dey live! Dem don enabol witdrawal funkshonality as part 
 
 Di Shanghai/Capella upgrade don allow ETH wey dem stake bifor make dem  riklaim am into regular Ethereum akants. Dis don klose di loop on staking liquidity, and don bring Ethereum one step klosa on im joni towods building one sustainabol, kcalabol, sekure disentralized ekosystem.
 
-- [More on Ethereum history](/history/)
+- [More on Ethereum history](/ethereum-forks/)
 - [More on di Ethereum roadmap](/roadmap/)
 
 ## Hau witdrawal payments dey work? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Make yu shek dis explanashon of Ethereum staking withdrawals by Finematiks:
 
 Wen dem schedule one validator to propose di next block, dem nid am to build one witdrawal queue, of up to 16 eligibol witdrawals. Dem dey do dis by orijinaly starting wit validator index 0, wey dey ditamin if dia is one eligibol witdrawal for dis akant par di rules of di protokol, and dey add am to di queue if im dey. Di validator wan propose di folowing block go pick up wia di last one wey rimain, dey progress in order indefinitely.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Tink abou one analogue clock. Di hand on di clock dey point to di hawa, dey progress on one direkshon, nor dey skip any hawas, and wraps around las las to di start again afta di last numba don rish.<br/><br/>
 Nua insted of 1 thru 12, imajin sey di clock get 0 thru N <em>(di komplete numba of validator akounts wey dem don eva regista on di konsensus layer, ova 500,000 as of Jan 2023).</em><br/><br/>
 Di hand on di clock points to di next validator wey nid to dey shek for eligibol witdrawals. Im start for 0, and kontinu all di way around witout skipping any akants. Wen di last validator don rish, di cykol kontinu back at di start.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### To dey shek one akant for witdrawals {#checking-an-account-for-withdrawals}
 

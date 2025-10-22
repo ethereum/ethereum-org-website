@@ -57,9 +57,9 @@ Si quelqu'un connaissait les points aléatoires utilisés pour l'engagement, il 
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ni le Danksharding ni le Proto-Danksharding ne suivent le modèle traditionnel de « fragmentation » qui visait à diviser la blockchain en plusieurs fragments. La fragmentation de la chaîne ne fait plus partie de la feuille de route. Au lieu de cela, le Danksharding utilise un échantillonnage de données distribué à travers les blobs pour faire passer Ethereum à l'échelle. Ceci est beaucoup plus simple à mettre en œuvre. Ce modèle est parfois désigné sous le nom de « data-sharding » ou « fragmentation de données ».
-</InfoBanner>
+</Alert>
 
 ## Qu'est-ce que le Danksharding ? {#what-is-danksharding}
 

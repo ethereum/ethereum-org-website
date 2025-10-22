@@ -76,9 +76,12 @@ Szeretne többet megtudni? Tekintse meg a [dokumentációt a Crowdin online szer
 
 Miután befejezte a fordítást (a tartalommappa összes fájlja 100%-ot mutat), a professzionális fordítási szolgáltatás ellenőrzi (és javítja) a tartalmat. Az átnézés után (vagyis az átnézés is 100%-ot mutat), bekerül a fordítás a honlapra.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Ne használjon gépi fordítást, az nem elfogadott. Minden fordítást átnézünk, mielőtt felkerülne a honlapra. Ha a javasolt fordításról kiderül, hogy gép végezte, akkor azokat elvetjük, és a gépi fordítást használó közreműködőket eltávolítjuk a projektből.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Kapcsolatfevétel {#get-in-touch}
 

@@ -63,12 +63,15 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 이건 이상하게 들립니다. "왜 제가 돈을 프로그래밍하고 싶겠어요?" 그러나 이것은 이더리움 토큰의 기본 기능일 뿐입니다. 누구나 로직을 지불금으로 프로그래밍할 수 있습니다. 그래서 당신은 금융기관이 제공하는 서비스와 함께 비트코인의 통제권과 보안을 얻을 수 있습니다. 이것을 통해 비트코인으로 할 수 없는 대부와 대출, 결제 일정 수립, 인덱스 펀드에 투자하기 등과 같은 것들을 암호화폐로 할 수 있습니다.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.</div>
   <ButtonLink href="/apps/categories/defi">
     디파이 앱 둘러보기
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 디파이로 무엇을 할 수 있나요? {#defi-use-cases}
 

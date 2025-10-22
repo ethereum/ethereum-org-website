@@ -6,9 +6,14 @@ lang: es
 
 La red Ethereum comenzó utilizando un mecanismo de consenso que implica una**[prueba de trabajo (o PoW, por sus siglas en inglés)](/developers/docs/consensus-mechanisms/pow)**. Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la cadena de bloques de Ethereum y prevenir ciertos tipos de ataques económicos. Sin embargo, Ethereum se desconectó de la prueba de trabajo en 2022 y empezó a usar la [prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     La prueba de trabajo ha quedado obsoleta. Ethereum ya no utiliza la prueba de trabajo como parte de su mecanismo de consenso. En su lugar, utiliza la prueba de participación. Descubra más cosas sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) y la [participación](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Requisitos previos {#prerequisites}
 
@@ -56,7 +61,7 @@ Para crear sistemáticamente bloques maliciosos pero que sean válidos, un miner
 
 La prueba de trabajo también es responsable de la generación de nuevas monedas en el sistema e incentivar a que los mineros lleven a cabo el trabajo.
 
-Desde la actualización del [Constantinople](/history/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
+Desde la actualización del [Constantinople](/ethereum-forks/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
 
 ## Finalidad {#finality}
 

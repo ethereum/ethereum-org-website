@@ -63,12 +63,15 @@ Ethereum construieşte pe aceste baze. La fel ca în cazul Bitcoin, regulile nu 
 
 Asta sună ciudat... „De ce aș vrea să-mi programez banii”? Cu toate acestea, este mai degrabă o funcţionalitate implicită a tokenurilor de pe Ethereum. Oricine poate programa logica în plăți. Așa că puteți obține controlul și securitatea Bitcoin îmbinate cu serviciile oferite de instituțiile financiare. Aceasta vă permite să faceți cu criptomonedele lucruri pe care nu le puteți face cu Bitcoin, cum ar fi a lua şi a da cu împrumut, a planifica plăţile, a investi în fonduri de indexare și multe altele.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explorați sugestiile noastre de aplicațiile DeFi pe care să le testaţi dacă nu aţi mai folosit Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorați aplicațiile DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ce puteți face cu DeFi? {#defi-use-cases}
 

@@ -99,6 +99,7 @@
   "ethereum-foundation-logo": "Ethereum Foundation logo",
   "ethereum-glossary": "Ethereum glossary",
   "ethereum-governance": "Ethereum governance",
+  "ethereum-history-founder-and-ownership": "Ethereum history, founder and ownership",
   "ethereum-logo": "Ethereum logo",
   "ethereum-online": "Online communities",
   "ethereum-protocol": "Ethereum protocol",
@@ -142,6 +143,7 @@
   "how-to-use-a-bridge": "How to bridge tokens to layer 2",
   "how-to-use-a-wallet": "How to use a wallet",
   "image": "image",
+  "item-logo": "{item} logo",
   "in-this-section": "In this section",
   "individuals": "Individuals",
   "jobs": "Jobs",
@@ -204,6 +206,7 @@
   "language-te": "Telugu",
   "language-th": "Thai",
   "language-tk": "Turkmen",
+  "language-tl": "Tagalog",
   "language-tr": "Turkish",
   "language-uk": "Ukrainian",
   "language-ur": "Urdu",
@@ -274,6 +277,7 @@
   "nav-ethereum-networks": "Ethereum networks",
   "nav-ethereum-networks-description": "Cheaper and faster transactions for Ethereum",
   "nav-ethereum-vs-bitcoin-description": "Understand the differences between Ethereum and Bitcoin",
+  "nav-ethereum-history-founder-and-ownership-description": "Understand the history, founder and ownership of Ethereum",
   "nav-ethereum-wallets-description": "An app to interact with your Ethereum account",
   "nav-events-description": "Decentralization and freedom to participate for anyone",
   "nav-events-irl-description": "Every month there are major Ethereum events in-person and online",
@@ -281,6 +285,7 @@
   "nav-events-online-description": "Hundreds of thousands of Ethereum enthusiasts gather in these online communities",
   "nav-find-wallet-description": "Wallets allow you to use crypto",
   "nav-find-wallet-label": "Choose your wallet",
+  "nav-gaming-description": "Games built on blockchain where assets and gameplay are fully decentralized and transparent.",
   "nav-founders-description": "Empowering founders with programs, mentorship, and resources",
   "nav-gas-fees-description": "How are ETH transaction fees calculated",
   "nav-gas-fees-label": "Gas fees",
@@ -375,6 +380,7 @@
   "nfts": "NFTs",
   "no": "No",
   "on-this-page": "On this page",
+  "onchain-gaming": "Onchain Gaming",
   "open": "Open",
   "open-research": "Open research",
   "page-developers-aria-label": "Developers' Menu",
@@ -485,8 +491,5 @@
   "region-wake-island-usa": "Wake Island (USA)",
   "region-bonaire-netherlands": "Bonaire (Netherlands)",
   "region-saba-netherlands": "Saba (Netherlands)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)",
-  "ethereum-vs-bitcoin": "Ethereum vs Bitcoin",
-  "nav-ethereum-vs-bitcoin-description": "Understand the differences between Ethereum and Bitcoin"
-
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)"
 }

@@ -63,12 +63,15 @@ Ethereum bunga asoslanadi. Xuddi bitcoin singari, qoidalar sizda o‘zgarmaydi v
 
 Bu g‘alati eshitiladi... “nima uchun men o‘z pulimni dasturlashni xohlayman?” Biroq, bu Ethereum tokenlarining birlamchi xususiyatidir. Har kim mantiqni to‘lovlarga dasturlashi mumkin. Shunday qilib, siz bitcoin nazorati va xavfsizligini moliyaviy institutlar tomonidan taqdim etiladigan xizmatlar bilan aralashtirib olishingiz mumkin. Bu sizga kriptovalyutalar bilan bitcoin bilan qila olmaydigan narsalarni, masalan, kredit va qarz olish, to‘lovlarni rejalashtirish, indeks fondlariga sarmoya kiritish va boshqalarni amalga oshirish imkonini beradi.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Agar Ethereumʼda yangi boʻlsangiz, DeFi ilovalari uchun tavsiyalarimiz bilan tanishing.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi ilovalari bilan tanishing
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## DeFi bilan nima qilish mumkin? {#defi-use-cases}
 

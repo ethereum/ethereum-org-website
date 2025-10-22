@@ -21,9 +21,9 @@ You can learn more about the different projects and important links on our [laye
 
 Some popular layer 2s are:
 
-- [Arbitrum bridge](https://bridge.arbitrum.io/?l2ChainId=42161)
+- [Arbitrum bridge](https://portal.arbitrum.io/bridge?l2ChainId=42161)
 - [Optimism bridge](https://app.optimism.io/bridge/deposit)
-- [Boba network bridge](https://gateway.boba.network/)
+- [Boba network bridge](https://hub.boba.network/)
 
 ## 3. Connect to the bridge with your wallet
 
@@ -52,12 +52,15 @@ This process should not take more than 10 minutes.
 You can use [chainlist.org](http://chainlist.org) to find the network's RPC details. Once the network is added and transaction finished, you should see the tokens in your wallet.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Frequently asked questions
 
