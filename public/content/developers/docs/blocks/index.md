@@ -50,23 +50,23 @@ There is a lot of information contained within a block. At the highest level a b
 
 The block `body` contains several fields of its own:
 
-| Field                | Description                                        |
-| :------------------- | :------------------------------------------------- |
-| `randao_reveal`      | a value used to select the next block proposer     |
-| `eth1_data`          | information about the deposit contract             |
-| `graffiti`           | arbitrary data used to tag blocks                  |
-| `proposer_slashings` | list of validators to be slashed                   |
-| `attester_slashings` | list of attesters to be slashed                    |
-| `attestations`       | list of attestations made against previous slots   |
-| `deposits`           | list of new deposits to the deposit contract       |
-| `voluntary_exits`    | list of validators exiting the network             |
-| `sync_aggregate`     | subset of validators used to serve light clients   |
-| `execution_payload`  | transactions passed from the execution client      |
+| Field                | Description                                      |
+| :------------------- | :----------------------------------------------- |
+| `randao_reveal`      | a value used to select the next block proposer   |
+| `eth1_data`          | information about the deposit contract           |
+| `graffiti`           | arbitrary data used to tag blocks                |
+| `proposer_slashings` | list of validators to be slashed                 |
+| `attester_slashings` | list of attesters to be slashed                  |
+| `attestations`       | list of attestations made against previous slots |
+| `deposits`           | list of new deposits to the deposit contract     |
+| `voluntary_exits`    | list of validators exiting the network           |
+| `sync_aggregate`     | subset of validators used to serve light clients |
+| `execution_payload`  | transactions passed from the execution client    |
 
 The `attestations` field contains a list of all the attestations in the block. Attestations have their own data type that contains several pieces of data. Each attestation contains:
 
 | Field              | Description                                                    |
-| :----------------- | :----------------------------------------------------------    |
+| :----------------- | :------------------------------------------------------------- |
 | `aggregation_bits` | a list of which validators participated in this attestation    |
 | `data`             | a container with multiple subfields                            |
 | `signature`        | aggregate signature of a set of validators against `data` part |
@@ -74,7 +74,7 @@ The `attestations` field contains a list of all the attestations in the block. A
 The `data` field in the `attestation` contains the following:
 
 | Field               | Description                                                     |
-| :------------------ | :-------------------------------------------------------        |
+| :------------------ | :-------------------------------------------------------------- |
 | `slot`              | the slot the attestation relates to                             |
 | `index`             | indices for attesting validators                                |
 | `beacon_block_root` | the root hash of the Beacon block seen as the head of the chain |
