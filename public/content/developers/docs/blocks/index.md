@@ -56,8 +56,8 @@ The block `body` contains several fields of its own:
 | `eth1_data`          | information about the deposit contract             |
 | `graffiti`           | arbitrary data used to tag blocks                  |
 | `proposer_slashings` | list of validators to be slashed                   |
-| `attester_slashings` | list of attesters to be slashed                   |
-| `attestations`       | list of attestations in favor of the current block |
+| `attester_slashings` | list of attesters to be slashed                    |
+| `attestations`       | list of attestations made against previous slots   |
 | `deposits`           | list of new deposits to the deposit contract       |
 | `voluntary_exits`    | list of validators exiting the network             |
 | `sync_aggregate`     | subset of validators used to serve light clients   |
@@ -65,21 +65,21 @@ The block `body` contains several fields of its own:
 
 The `attestations` field contains a list of all the attestations in the block. Attestations have their own data type that contains several pieces of data. Each attestation contains:
 
-| Field              | Description                                                 |
-| :----------------- | :---------------------------------------------------------- |
-| `aggregation_bits` | a list of which validators participated in this attestation |
-| `data`             | a container with multiple subfields                         |
-| `signature`        | aggregate signature of all attesting validators             |
+| Field              | Description                                                    |
+| :----------------- | :----------------------------------------------------------    |
+| `aggregation_bits` | a list of which validators participated in this attestation    |
+| `data`             | a container with multiple subfields                            |
+| `signature`        | aggregate signature of a set of validators against `data` part |
 
 The `data` field in the `attestation` contains the following:
 
-| Field               | Description                                              |
-| :------------------ | :------------------------------------------------------- |
-| `slot`              | the slot the attestation relates to                      |
-| `index`             | indices for attesting validators                         |
-| `beacon_block_root` | the root hash of the Beacon block containing this object |
-| `source`            | the last justified checkpoint                            |
-| `target`            | the latest epoch boundary block                          |
+| Field               | Description                                                     |
+| :------------------ | :-------------------------------------------------------        |
+| `slot`              | the slot the attestation relates to                             |
+| `index`             | indices for attesting validators                                |
+| `beacon_block_root` | the root hash of the Beacon block seen as the head of the chain |
+| `source`            | the last justified checkpoint                                   |
+| `target`            | the latest epoch boundary block                                 |
 
 Executing the transactions in the `execution_payload` updates the global state. All clients re-execute the transactions in the `execution_payload` to ensure the new state matches that in the new block `state_root` field. This is how clients can tell that a new block is valid and safe to add to their blockchain. The `execution payload` itself is an object with several fields. There is also an `execution_payload_header` that contains important summary information about the execution data. These data structures are organized as follows:
 
