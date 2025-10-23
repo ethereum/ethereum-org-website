@@ -152,7 +152,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Coinbase Cloud Node -** **_Blockchain Infrastructure API._**
 
-- [Coinbase Cloud Node](https://www.coinbase.com/en-nl/developer-platform)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Documentation](https://docs.cdp.coinbase.com/)
 
 **DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
@@ -165,7 +165,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [moralis.io](https://moralis.io)
 - [Documentation](https://docs.moralis.io/)
 - [GitHub](https://github.com/MoralisWeb3)
-- [Discord](https://discord.com/invite/s3UfDvXQTc)
+- [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
 **NFTPort -** **_Ethereum Data and Mint APIs._**
