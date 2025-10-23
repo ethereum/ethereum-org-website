@@ -2,7 +2,7 @@
 title: "Using Stealth Addresses"
 description: "Stealth addresses allow users to transfer assets anonymously. After reading this article, you will be able to: Explain what stealth addresses are and how they work, understand how to use stealth addresses in a way that preserves anonymity, and write a web-based application that uses stealth addresses."
 author: Ori Pomerantz
-tags: ["Stealth address", "privacy", "cryptography"]
+tags: ["Stealth address", "privacy", "cryptography", "rust", "wasm"]
 skill: intermediate
 published: 2025-11-30
 lang: en
@@ -21,7 +21,7 @@ This article will attempt to explain stealth addresses in two ways. The first is
 
 ### The simple version (how to use stealth addresses) {#how-use}
 
-Alice creates two private keys, and then publishes the two corresponding public keys (which might appear like a double-length public key). Bill also creates a private key and publishes the corresponding public key.
+Alice creates two private keys, and then publishes the two corresponding public keys (which can appear as a double-length public key). Bill also creates a private key and publishes the corresponding public key.
 
 Using one party's public key and the other's private key, you can figure out a shared secret, which only Alice and Bill know (it can't be derived from the public keys alone). Using this shared secret, Bill gets the stealth address, and is able to send assets to it.
 
@@ -81,99 +81,132 @@ Another solution is to layer [privacy solutions](/privacy). This way, Carol woul
 
 There is [a typescript stealth address library](https://github.com/ScopeLift/stealth-address-sdk) we could use. However, cryptographic operations can be CPU intensive. I prefer to do them in a compiled language, such as [Rust](https://rust-lang.org/), using [WASM](https://webassembly.org/) to run the code in the browser.
 
-For the client-side code we are going to use [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) and [Wagmi](https://wagmi.sh/). These are industry standard tools, if you are not familiar with them, you can use [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). To use Vite we need Node.
+We are going to use [Vite](https://vite.dev/) and [React](https://react.dev/). These are industry standard tools, if you are not familiar with them, you can use [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). To use Vite we need Node.
 
-The blockchain we use is `anvil`, a local testing blockchain which is part of [Foundry](https://getfoundry.sh/introduction/installation).
+### See stealth addresses in action {#in-action}
 
-### Getting started {#getting-started}
+1. Install the necessary tools: [Rust](https://rust-lang.org/tools/install/) and [Node](https://nodejs.org/en/download).
 
-1. Install the necessary tools: [Rust](https://rust-lang.org/tools/install/), [Node](https://nodejs.org/en/download), and [Foundry](https://getfoundry.sh/introduction/installation).
-
-2. Create a Wagmi application.
+2. Clone the github repository.
 
    ```sh
-   npm create wagmi
+   git clone  https://github.com/qbzzt/251022-stealth-addresses.git
+   cd 251022-stealth-addresses
    ```
 
-   Name the project `stealth`. Select a **React** project of the **Vite** variant.
-
-3. Install the project.
+3. Install prerequisites and compile the Rust code.
 
    ```sh
-   cd stealth
-   npm install
-   ```
-
-4. Prepare the Rust project
-
-   ```sh
-   rustup target add wasm32-unknown-unknown
-   cargo new --lib rust-wasm
-   cd rust-wasm
-   cargo install wasm-pack
-   cargo add wasm-bindgen
-   cargo add getrandom@0.2 --features js
-   ```
-
-5. Edit `Cargo.toml` to add these sections. Do not remove the other sections.
-
-   ```toml
-   [lib]
-   crate-type = ["cdylib"]
-
-   [target.'cfg(target_arch = "wasm32")'.dependencies]
-   getrandom = { version = "0.2", features = ["js"] }    
-   ```
-
-### Stealth address library {#stealth-addr-lib}
-
-The Rust library we use is [`eth-stealth-addresses`](https://crates.io/crates/eth-stealth-addresses). 
-
-1. Install the library.
-
-    ```sh
-    cargo add eth-stealth-addresses
-    ```
-
-2. Build the default Rust program and copy the results to the web server.
-
-   ```sh
+   cd src/rust-wasm
+   rustup target add wasm32-unknown-unknown   
+   cargo install wasm-pack   
    wasm-pack build --target web
-   mkdir ../public
-   cp pkg/*.wasm pkg/*.js ../public
    ```
 
+4. Start the web server.
+
+   ```sh
+   cd ../..
+   npm install
+   npm run dev
+   ```
+
+5. Browse to [the application](http://localhost:5173/). This application page has two frames, one is Alice's user interface and the other is Bill's. The two frames do not communicate, they are only on the same page for convenience.
+
+6. As Alice, click **Generate a Stealth Meta Address**. This will display the new stealth address and the corresponding private keys. Copy the stealth meta address to the clipboard.
+
+7. As Bill, paste the new stealth meta address and click **Generate an address**. This gives you the address to fund for Alice. 
+
+8. Copy the address and Bill's public key and paste them in the "Private key for address generated by Bill" area of Alice's user interface. Once those fields are filled, you will see the private key to access assets on the address.
+
+9. You can use [an online calculator](https://iancoleman.net/ethereum-private-key-to-address/) to ensure the private key corresponds to the address.
+
+### How it works {#how-it-works}
+
+#### The User interface {#ui}
+
+The user interface is written using [React](https://react.dev/) and served by [Vite](https://vite.dev/). You can learn about them using [this tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). There is no need for [WAGMI](https://wagmi.sh/) here because we do not interact directly with a blockchain or a wallet.
+
+The only non obvious part of the user interface is WASM connectivity. Here is the explanation of how it works.
+
+**`vite.config.js`**
 
 ```js
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rust WASM Demo</title>
-</head>
-<body>
-  <h1>Rust + WASM Example</h1>
-  <pre id="output"></pre>
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import wasm from "vite-plugin-wasm";
 
-  <script type="module">
-    // Import the init function and any Rust exports you defined
-    import init, { add } from "./rust_wasm.js";
-
-    async function run() {
-      // Initialize the WASM module (this fetches rust_wasm_bg.wasm)
-      await init();
-
-      // Call into Rust
-      const sum = add(1n,2n);
-
-      alert(sum);
-    }
-
-    console.log("Before run");
-    run();
-    console.log("After run");
-  </script>
-</body>
-</html>
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), wasm()],
+})
 ```
 
+**`App.jsx`**
+
+```jsx
+import init from './rust-wasm/pkg/rust_wasm.js'
+
+.
+.
+.
+
+function App() {
+  const [wasmReady, setWasmReady] = useState(false)
+
+
+  useEffect(() => {
+    const loadWasm = async () => {
+      try {
+        await init();
+        setWasmReady(true)
+      } catch (err) {
+        console.error('Error loading wasm:', err)
+        alert("Wasm error: " + err)
+      }
+    }
+
+    loadWasm()
+    }, []
+  )
+```
+
+**`Bill.jsx`**
+
+```jsx
+import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
+
+function Bill() {
+   .
+   .
+   .
+        { stealthAddress.length == 132 && (
+          <div>
+
+            <button onClick={() => {
+              setPublicAddress(JSON.parse(wasm_generate_stealth_address(stealthAddress)))
+            }}>
+              Generate
+              {publicAddress.address ? " a new Address" : " an Address"}
+            </button><p />
+            {
+              publicAddress.address && (
+                <>
+                  <b>Address: </b> {publicAddress.address}
+                  <br />
+                  .
+                  .
+                  .
+                </>
+              )
+            }
+          </div>
+        )}   
+```
+
+The code in `Alice.jsx` is very similar.
+
+#### The WASM component {#wasm}
+
 ## Conclusion {#conclusion}
+
