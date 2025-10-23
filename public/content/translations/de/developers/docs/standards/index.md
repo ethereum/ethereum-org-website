@@ -13,7 +13,7 @@ Normalerweise werden diese als [Ethereum Improvement Proposals](/eips/) (EIPs) e
 
 - [Einführung in EIPs](/eips/)
 - [Liste der EIPs](https://eips.ethereum.org/)
-- [EIP GitHub-Repository](https://github.com/ethereum/EIPs)
+- [EIP GitHub-Repository](https://eips.ethereum.org)
 - [EIP-Diskussionsforum](https://ethereum-magicians.org/c/eips)
 - [Einführung die Ethereum Governance](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/Ethereum-Governance/) _31. März 2019 - Boris Mann_

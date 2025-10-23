@@ -13,7 +13,7 @@ Normalmente se introducen estándares como [Propuestas de mejora de Ethereum](/e
 
 - [Introducción a EIP](/eips/)
 - [Lista de EIP](https://eips.ethereum.org/)
-- [Repositorio de GitHub de EIP](https://github.com/ethereum/EIPs)
+- [Repositorio de GitHub de EIP](https://eips.ethereum.org)
 - [Tablón de discusión de EIP](https://ethereum-magicians.org/c/eips)
 - [Introducción a la Gobernanza de Ethereum](/governance/)
 - [Resumen de gobernanza de Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de marzo de 2019, Mann Boris_

@@ -195,4 +195,4 @@ Nonostante ERC-223 affronti diversi problemi che si trovano nello standard ERC-2
 ## Letture consigliate {#further-reading}
 
 - [EIP-223: standard per token ERC-223](https://eips.ethereum.org/EIPS/eip-223)
-- [Proposta iniziale di ERC-223](https://github.com/ethereum/eips/issues/223)
+- [Proposta iniziale di ERC-223](https://eips.ethereum.org/issues/223)

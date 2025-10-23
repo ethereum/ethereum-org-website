@@ -30,7 +30,7 @@ lang: fa
     2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1) را بخوانید - **بله، این _کل_ سند است.**
     3. دستورالعمل ها را در EIP-1 دنبال کنید. در حین نگارش پیش نویس، به آن ارجاع دهید.
   - یاد بگیرید که چگونه یک [ویرایشگر EIP](https://eips.ethereum.org/EIPS/eip-5069) شوید
-    - حالا می توانید EIPها را مورد بازبینی قرار دهید! [PRهای موجود با تگ`e-review` را مشاهده کنید](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). بازخورد فنی را با کلیک بر `discussion-to` ثبت کنید.
+    - حالا می توانید EIPها را مورد بازبینی قرار دهید! [PRهای موجود با تگ`e-review` را مشاهده کنید](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). بازخورد فنی را با کلیک بر `discussion-to` ثبت کنید.
   - در [حاکمیت پیشنهادهای بهبود اتریوم](https://github.com/ethereum-cat-herders/EIPIP) مشارکت کنید
     - به [Ethereum Cat Herders Discord](https://discord.gg/Nz6rtfJ8Cu) بپیوندید
   - [اطلاعات بیشتر درباره EIPها](/eips/)

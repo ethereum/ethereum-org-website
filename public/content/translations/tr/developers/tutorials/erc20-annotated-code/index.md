@@ -136,7 +136,7 @@ Aynı tür çıktı, sözleşmenin durumunu değiştiren diğer fonksiyonlar tar
      * taşıdığına dikkat edin. Bu yarış koşulunun etkisini azaltmanın muhtemel bir yolu,
      * ilk olarak harcayanın ödeneğini 0'a ayarlayıp arzulanan değeri
      * daha sonra belirlemektir:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://eips.ethereum.org/issues/20#issuecomment-263524729
      *
      * Bir {Approval} olayı yayar.
      */

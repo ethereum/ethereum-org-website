@@ -13,7 +13,7 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 
 - [Introduction to EIPs](/eips/)
 - [List of EIPs](https://eips.ethereum.org/)
-- [EIP GitHub repo](https://github.com/ethereum/EIPs)
+- [EIP GitHub repo](https://eips.ethereum.org)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
 - [Introduction to Ethereum Governance](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_

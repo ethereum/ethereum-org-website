@@ -22,7 +22,7 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 ## EIP 历史 {#history-of-eips}
 
-[Ethereum Improvement Proposals (EIP) GitHub 存储库](https://github.com/ethereum/EIPs) 于 2015 年 10 月创建。 EIP 进程基于[比特币改进提议 (BIP)](https://github.com/bitcoin/bips) 进程。它本身基于 [Python 增强提议 (PEP)](https://www.python.org/dev/peps/) 进程。
+[Ethereum Improvement Proposals (EIP) GitHub 存储库](https://eips.ethereum.org) 于 2015 年 10 月创建。 EIP 进程基于[比特币改进提议 (BIP)](https://github.com/bitcoin/bips) 进程。它本身基于 [Python 增强提议 (PEP)](https://www.python.org/dev/peps/) 进程。
 
 以太坊改进提案编辑人员的任务是审查以太坊改进提案的技术可靠性、格式问题，并校正拼写、语法和代码风格。 Martin Becze、Vitalik Buterin、Gavin Wood 和其他一些人是 2015 年至 2016 年末最初的 EIP 编辑者。
 

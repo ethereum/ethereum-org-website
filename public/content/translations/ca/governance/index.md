@@ -90,7 +90,7 @@ Aquest flux, a la vegada que molt simplificat, dona una visió general dels nive
 
 ### Treballs previs {#prior-work}
 
-Els autors d'EIP haurien de familiaritzar-se amb les propostes i els treballs previs abans de crear una EIP que pugui ser considerada formalment per a la seva implementació a la xarxa principal d'Ethereum. D'aquesta manera, s'espera que l'EIP aporti quelcom de nou que no hagi estat rebutjat anteriorment. Els tres llocs principals per fer-ne recerques són el [repositori d'EIP](https://github.com/ethereum/eips), el fòrum [Ethereum Magicians](https://ethereum-magicians.org/) i [ethresear.ch](https://ethresear.ch/).
+Els autors d'EIP haurien de familiaritzar-se amb les propostes i els treballs previs abans de crear una EIP que pugui ser considerada formalment per a la seva implementació a la xarxa principal d'Ethereum. D'aquesta manera, s'espera que l'EIP aporti quelcom de nou que no hagi estat rebutjat anteriorment. Els tres llocs principals per fer-ne recerques són el [repositori d'EIP](https://eips.ethereum.org), el fòrum [Ethereum Magicians](https://ethereum-magicians.org/) i [ethresear.ch](https://ethresear.ch/).
 
 ### Grups de treball {#working-groups}
 

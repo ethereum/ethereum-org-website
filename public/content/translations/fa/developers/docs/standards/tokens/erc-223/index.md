@@ -206,4 +206,4 @@ contract RecipientContract is IERC223Recipient {
 ## ادامه مطلب {#further-reading}
 
 - [EIP-223: استاندارد توکن ERC-223](https://eips.ethereum.org/EIPS/eip-223)
-- [پیشنهاد اولیه ERC-223](https://github.com/ethereum/eips/issues/223)
+- [پیشنهاد اولیه ERC-223](https://eips.ethereum.org/issues/223)

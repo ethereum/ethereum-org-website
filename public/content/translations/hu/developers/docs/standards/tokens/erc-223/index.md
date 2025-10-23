@@ -194,4 +194,4 @@ Miközben az ERC-223 megold néhány gondot az ERC-20 szabvány kapcsán, megvan
 ## További olvasnivaló {#further-reading}
 
 - [EIP-223: ERC-223 tokenszabvány](https://eips.ethereum.org/EIPS/eip-223)
-- [Eredeti ERC-223 javaslat](https://github.com/ethereum/eips/issues/223)
+- [Eredeti ERC-223 javaslat](https://eips.ethereum.org/issues/223)

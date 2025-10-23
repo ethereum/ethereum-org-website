@@ -32,7 +32,7 @@ Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethe
     2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1) sayfasını okuyun. **Evet, bu dökümanın _tamamı._**
     3. EIP-1'in yönergelerini takip edin. Taslağınızı hazırlarken, EIP-1 den referans alın.
   - Nasıl bir [EIP Editörü](https://eips.ethereum.org/EIPS/eip-5069) olacağınızı öğrenin
-    - Siz de şu anda EIP'leri gözden geçirebilirsiniz! [Açılan PR taleplerini `e-inceleme`etikeyiyle görebilirsiniz](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Teknik geri bildirimlerinizi `tartışmalar` bağlantısına bırakın.
+    - Siz de şu anda EIP'leri gözden geçirebilirsiniz! [Açılan PR taleplerini `e-inceleme`etikeyiyle görebilirsiniz](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Teknik geri bildirimlerinizi `tartışmalar` bağlantısına bırakın.
   - [EIP yönetişimine](https://github.com/ethereum-cat-herders/EIPIP) katılın
     - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) grubuna katılın
   - [EIP'ler hakkında daha fazla bilgi](/eips/)

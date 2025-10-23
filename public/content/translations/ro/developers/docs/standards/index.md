@@ -13,7 +13,7 @@ De obicei standardele sunt introduse ca [Propuneri de îmbunătățire pentru Et
 
 - [Introducere despre EIP-uri](/eips/)
 - [Lista EIP-urilor](https://eips.ethereum.org/)
-- [EIP GitHub repo](https://github.com/ethereum/EIPs)
+- [EIP GitHub repo](https://eips.ethereum.org)
 - [Forum de discuții EIP](https://ethereum-magicians.org/c/eips)
 - [Introducere despre guvernanța Ethereum](/governance/)
 - [Prezentare generală a guvernanței Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 martie 2019 - Boris Mann_

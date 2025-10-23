@@ -53,8 +53,8 @@ By utilizing these interfaces, dApps can access smart account functionalities pr
 
 For more information:
 
-- [ERC-5792 specification](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5792.md)
-- [ERC-6900 specification](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6900.md)
+- [ERC-5792 specification](https://eips.ethereum.org/blob/master/EIPS/eip-5792.md)
+- [ERC-6900 specification](https://eips.ethereum.org/blob/master/EIPS/eip-6900.md)
 
 **Avoiding Vendor Lock-In**: In line with the above, a good implementation is vendor-neutral and interoperable. This often means adhering to emerging standards for smart accounts. For instance, [Alchemy’s Modular Account](https://github.com/alchemyplatform/modular-account) uses the ERC-6900 standard for modular smart accounts and is designed with “permissionless interoperable usage” in mind.
 

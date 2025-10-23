@@ -32,7 +32,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
     2. Read [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Yes, that's the _entire_ document.**
     3. Follow the directions in EIP-1. Reference it as you write your draft.
   - Learn how to become an [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
-    - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
+    - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
   - Participate in [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP)
     - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [More on EIPs](/eips/)

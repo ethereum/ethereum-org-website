@@ -13,7 +13,7 @@ Ces normes sont généralement présentées via les [propositions d'amélioratio
 
 - [Introduction aux EIP](/eips/)
 - [Liste des EIP](https://eips.ethereum.org/)
-- [Repo GitHub EIP](https://github.com/ethereum/EIPs)
+- [Repo GitHub EIP](https://eips.ethereum.org)
 - [Forum de discussions sur les EIP](https://ethereum-magicians.org/c/eips)
 - [Introduction à la gouvernance d'Ethereum](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _- Boris Mann, 31 mars 2019_

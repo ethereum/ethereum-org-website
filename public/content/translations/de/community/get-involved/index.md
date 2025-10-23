@@ -32,7 +32,7 @@ Haben Sie einen Hintergrund in Mathematik, Kryptographie oder Wirtschaftswissens
     2. Lesen Sie [EIP-1](https://eips.ethereum.org/EIPS/eip-1) – **Ja, das ist das _ganze_ Dokument**.
     3. Folgen Sie den Anweisungen in EIP-1. Beziehen Sie sich auf die darin enthaltenen Informationen, während Sie Ihren Entwurf schreiben.
   - Erfahren Sie, wie Sie ein [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069) werden.
-    - Sie können direkt in das Peer-Review von EIPs einsteigen. Sehen Sie [Öffnen von PRs mit dem `e-review`-Tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Geben Sie technisches Feedback über den `discussion-to`-Link.
+    - Sie können direkt in das Peer-Review von EIPs einsteigen. Sehen Sie [Öffnen von PRs mit dem `e-review`-Tag](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Geben Sie technisches Feedback über den `discussion-to`-Link.
   - Beteiligen Sie sich an der [EIP-Verwaltung](https://github.com/ethereum-cat-herders/EIPIP).
     - Treten Sie dem [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) bei
   - [Mehr zu EIPs](/eips/)

@@ -13,7 +13,7 @@ incomplete: true
 
 - [EIPとは何か？](/eips/)
 - [EIPリスト](https://eips.ethereum.org/)
-- [GitHubのEIPレポジトリ](https://github.com/ethereum/EIPs)
+- [GitHubのEIPレポジトリ](https://eips.ethereum.org)
 - [EIPディスカッションボード](https://ethereum-magicians.org/c/eips)
 - [イーサリアムにおけるガバナンス入門](/governance/)
 - [イーサリアムにおけるガバナンスの概説](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019年3月31日、ボリス・マン作成。_

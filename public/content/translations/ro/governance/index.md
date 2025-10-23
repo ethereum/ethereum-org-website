@@ -90,7 +90,7 @@ Acest parcurs, deși foarte simplificat, oferă o imagine de ansamblu a etapelor
 
 ### Înțelegerea a ceea ce s-a realizat anterior {#prior-work}
 
-Campionii EIP-ului ar trebui să se familiarizeze cu realizările și propunerile anterioare înainte de a crea un EIP care să poată fi luat în considerare în mod serios pentru a fi implementat pe Mainnet-ul Ethereum. În acest fel, EIP-ul sperăm că aduce ceva nou, care nu a mai fost respins înainte. Cele trei locuri principale pentru a se informa despre aceasta sunt [depozitarul EIP-ului](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) și [ethresear.ch](https://ethresear.ch/).
+Campionii EIP-ului ar trebui să se familiarizeze cu realizările și propunerile anterioare înainte de a crea un EIP care să poată fi luat în considerare în mod serios pentru a fi implementat pe Mainnet-ul Ethereum. În acest fel, EIP-ul sperăm că aduce ceva nou, care nu a mai fost respins înainte. Cele trei locuri principale pentru a se informa despre aceasta sunt [depozitarul EIP-ului](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) și [ethresear.ch](https://ethresear.ch/).
 
 ### Grupuri de lucru {#working-groups}
 

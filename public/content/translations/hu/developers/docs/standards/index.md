@@ -13,7 +13,7 @@ Az Ethereum közösség sok szabványt vezetett be, hogy a projektek (mint az [E
 
 - [Bevezetés az EIP-kbe](/eips/)
 - [EIP-k listája](https://eips.ethereum.org/)
-- [EIP GitHub mappa](https://github.com/ethereum/EIPs)
+- [EIP GitHub mappa](https://eips.ethereum.org)
 - [EIP vitafórum](https://ethereum-magicians.org/c/eips)
 - [Bevezetés az Ethereum irányításába](/governance/)
 - [Az Ethereum irányításának áttekintése](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019. március 31., Boris Mann_

@@ -32,7 +32,7 @@ Máte znalosti matematiky, kryptografie nebo ekonomie? Možná vás zaujme někt
     2. Přečtěte si [EIP-1](https://eips.ethereum.org/EIPS/eip-1) – **Ano, to je _celý_ dokument.**
     3. Postupujte podle pokynů v EIP-1. Odkazujte na něj při psaní svého návrhu.
   - Naučte se, jak se stát [editorem EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Začít recenzovat EIP můžete hned! Podívejte se na [otevřené PRs s označením `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Poskytněte technickou zpětnou vazbu na `diskusní` odkaz.
+    - Začít recenzovat EIP můžete hned! Podívejte se na [otevřené PRs s označením `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Poskytněte technickou zpětnou vazbu na `diskusní` odkaz.
   - Účastněte se [správy EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Připojte se k [Discordu Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Více o EIP](/eips/)

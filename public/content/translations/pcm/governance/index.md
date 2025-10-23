@@ -90,7 +90,7 @@ Dis flow, as dem simplify am, dey give ovaview of di signifikant stagis for prot
 
 ### To sabi wetin don hapun bifor {#prior-work}
 
-EIP SHampions supose sabi di wok wey don hapun bifor wella, and proposal bifor dem kreate one EIP wey dem fit konsida wella for diployment on di Ethereum Mainnet. Dis way, di EIP fit bring somtin new wey dem neva rijet bifor. The three main places wey yu fit risearch na [EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) and [ethresear.ch](https://ethresear.ch/).
+EIP SHampions supose sabi di wok wey don hapun bifor wella, and proposal bifor dem kreate one EIP wey dem fit konsida wella for diployment on di Ethereum Mainnet. Dis way, di EIP fit bring somtin new wey dem neva rijet bifor. The three main places wey yu fit risearch na [EIP repository](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) and [ethresear.ch](https://ethresear.ch/).
 
 ### Groups wey dey wok {#working-groups}
 

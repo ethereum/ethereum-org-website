@@ -90,7 +90,7 @@ Benché molto semplificato, questo flusso può dare un'idea delle fasi principal
 
 ### Comprendere il lavoro fatto in precedenza {#prior-work}
 
-Gli EIP Champion dovrebbero familiarizzare con il lavoro e le proposte fatte in precedenza prima di creare una EIP che possa essere considerata seriamente per il rilascio sulla rete principale di Ethereum. In questo modo, si spera che l'EIP possa portare qualcosa di nuovo, che non sia già stato rifiutato in precedenza. Le tre principali fonti di informazioni a questo proposito sono [l'EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ed [ethresear.ch](https://ethresear.ch/).
+Gli EIP Champion dovrebbero familiarizzare con il lavoro e le proposte fatte in precedenza prima di creare una EIP che possa essere considerata seriamente per il rilascio sulla rete principale di Ethereum. In questo modo, si spera che l'EIP possa portare qualcosa di nuovo, che non sia già stato rifiutato in precedenza. Le tre principali fonti di informazioni a questo proposito sono [l'EIP repository](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) ed [ethresear.ch](https://ethresear.ch/).
 
 ### Gruppi di lavoro {#working-groups}
 

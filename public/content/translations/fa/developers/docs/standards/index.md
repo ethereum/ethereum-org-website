@@ -13,7 +13,7 @@ incomplete: true
 
 - [مقدمه ای بر EIPها](/eips/)
 - [لیست EIPها](https://eips.ethereum.org/)
-- [مخزن گیتهاب EIP](https://github.com/ethereum/EIPs)
+- [مخزن گیتهاب EIP](https://eips.ethereum.org)
 - [صفحه گفتگوی EIP](https://ethereum-magicians.org/c/eips)
 - [مقدمه‌ای بر حاکمیت اتریوم](/governance/)
 - [مروری بر حاکمیت اتریوم](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_

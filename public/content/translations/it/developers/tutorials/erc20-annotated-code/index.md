@@ -136,7 +136,7 @@ La funzione `allowance` consente a chiunque di richiedere di vedere quale sia il
      * transaction ordering. One possible solution to mitigate this race
      * condition is to first reduce the spender's allowance to 0 and set the
      * desired value afterwards:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://eips.ethereum.org/issues/20#issuecomment-263524729
      *
      * Emits an {Approval} event.
      */

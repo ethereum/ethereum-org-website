@@ -90,7 +90,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 ### 了解先前的工作 {#prior-work}
 
-以太坊改進提案擁護者應先熟悉之前的工作和提案，之後再建立能受到認真考慮可部署於以太坊主網的以太坊改進提案。 這樣一來，以太坊改進提案但願能帶來一些未被拒絕過的新內容。 要深入研究這點，有三個主要的位置：[以太坊改進提案儲存庫](https://github.com/ethereum/EIPs)、[Ethereum Magicians](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)。
+以太坊改進提案擁護者應先熟悉之前的工作和提案，之後再建立能受到認真考慮可部署於以太坊主網的以太坊改進提案。 這樣一來，以太坊改進提案但願能帶來一些未被拒絕過的新內容。 要深入研究這點，有三個主要的位置：[以太坊改進提案儲存庫](https://eips.ethereum.org)、[Ethereum Magicians](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)。
 
 ### 工作群組 {#working-groups}
 

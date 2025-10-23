@@ -22,7 +22,7 @@ En plus de fournir les spécifications techniques des modifications, les EIP rep
 
 ## Historique des EIP {#history-of-eips}
 
-Le dépôt [GitHub des EIP](https://github.com/ethereum/EIPs) a été créé en octobre 2015. Le processus des EIP est basé sur celui des [propositions d'amélioration de Bitcoin (BIP)](https://github.com/bitcoin/bips), lui-même basé sur celui des [propositions d'amélioration de Python (PEP)](https://www.python.org/dev/peps/).
+Le dépôt [GitHub des EIP](https://eips.ethereum.org) a été créé en octobre 2015. Le processus des EIP est basé sur celui des [propositions d'amélioration de Bitcoin (BIP)](https://github.com/bitcoin/bips), lui-même basé sur celui des [propositions d'amélioration de Python (PEP)](https://www.python.org/dev/peps/).
 
 Les éditeurs d'EIP ont pour tâche de passer en revue les EIP pour en vérifier la solidité technique, les problèmes de formatage et corriger l'orthographe, la grammaire et le style de code. Martin Becze, Vitalik Buterin, Gavin Wood et quelques autres ont été les éditeurs d'origine des EIP de 2015 à fin 2016.
 

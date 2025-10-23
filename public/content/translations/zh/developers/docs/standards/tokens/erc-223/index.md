@@ -194,4 +194,4 @@ contract RecipientContract is IERC223Recipient {
 ## 扩展阅读{#further-reading}
 
 - [EIP-223：ERC-223 代币标准](https://eips.ethereum.org/EIPS/eip-223)
-- [初始 ERC-223 提案](https://github.com/ethereum/eips/issues/223)
+- [初始 ERC-223 提案](https://eips.ethereum.org/issues/223)

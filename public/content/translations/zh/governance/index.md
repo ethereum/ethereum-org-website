@@ -90,7 +90,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 ### 了解先前的工作 {#prior-work}
 
-以太坊改进提案倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提案。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要方面是[以太坊改进提案存储库](https://github.com/ethereum/EIPs)、[以太坊魔法师](https://ethereum-magicians.org/)和 [ethresear.ch](https://ethresear.ch/)。
+以太坊改进提案倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提案。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要方面是[以太坊改进提案存储库](https://eips.ethereum.org)、[以太坊魔法师](https://ethereum-magicians.org/)和 [ethresear.ch](https://ethresear.ch/)。
 
 ### 工作组 {#working-groups}
 

@@ -90,7 +90,7 @@ Bu akış, çok basitleştirilmiş olsa da, Ethereum'da bir protokol değişikli
 
 ### Geçmişteki çalışmaları anlamak {#prior-work}
 
-EIP Öncüleri, Ethereum Mainnet'te dağıtım için ciddi olarak düşünülebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP'nin daha önce reddedilmemiş yeni bir şey sunması umulur. Bunu araştırmak için üç ana yer şunlardır: [EIP deposu](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch](https://ethresear.ch/).
+EIP Öncüleri, Ethereum Mainnet'te dağıtım için ciddi olarak düşünülebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP'nin daha önce reddedilmemiş yeni bir şey sunması umulur. Bunu araştırmak için üç ana yer şunlardır: [EIP deposu](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch](https://ethresear.ch/).
 
 ### Çalışma grupları {#working-groups}
 

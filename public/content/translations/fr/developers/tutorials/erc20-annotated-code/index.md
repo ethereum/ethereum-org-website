@@ -136,7 +136,7 @@ La fonction `allowance` permet à quiconque de demander à voir quelle allocatio
      * commande de transactions erronée. Solution possible pour résoudre le problème
      * réduire l'allocation du client à 0 et fixer la
      * valeur souhaitée par la suite :
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://eips.ethereum.org/issues/20#issuecomment-263524729
      *
      * Émet un événement {Approval}.
      */

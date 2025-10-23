@@ -32,7 +32,7 @@ Avez-vous une formation en mathématiques, en cryptographie ou en économie ? V
     2. Lisez l'[EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Oui, lisez bien _tout_ le document.**
     3. Suivez les consignes de l'EIP-1. Référencez-le lorsque vous rédigez votre brouillon.
   - Apprenez comment devenir un [Rédacteur d'EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Vous pouvez participer à une revue des EIP par les pairs dès maintenant ! Trouvez [des PR ouvertes comportant le libellé `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fournissez un retour technique sur le lien `discussion-to`.
+    - Vous pouvez participer à une revue des EIP par les pairs dès maintenant ! Trouvez [des PR ouvertes comportant le libellé `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fournissez un retour technique sur le lien `discussion-to`.
   - Participez à la [Gouvernance des EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Rejoignez le Discord [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Plus d'infos les EIP](/eips/)

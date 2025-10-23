@@ -136,7 +136,7 @@ Fungsi `tunjangan` membiarkan setiap orang membuat kueri untuk melihat tunjangan
      * pengurutan transaksi yang tidak diharapkan. Satu solusi yang mungkin untuk mengatasi kompetisi ini
      * adalah pertama-tama mengurangi uang tunjangan pengguna ke 0 dan menetapkan
      * nilai yang diinginkan setelahnya:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://eips.ethereum.org/issues/20#issuecomment-263524729
      *
      * Memancarkan aksi {Approval}.
      */

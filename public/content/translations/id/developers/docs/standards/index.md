@@ -13,7 +13,7 @@ Biasanya standar diperkenalkan sebagai [Proposal Peningkatan Ethereum](/eips/) (
 
 - [Pengantar EIPs](/eips/)
 - [Daftar EIP](https://eips.ethereum.org/)
-- [Repositori github EIP](https://github.com/ethereum/EIPs)
+- [Repositori github EIP](https://eips.ethereum.org)
 - [Ruang diskusi EIP](https://ethereum-magicians.org/c/eips)
 - [Pengantar tentang Tata Kelola Ethereum](/governance/)
 - [Gambaran Umum Tata Kelola Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 Maret 2019 - Boris Mann_

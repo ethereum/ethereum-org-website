@@ -13,7 +13,7 @@ incomplete: true
 
 - [Εισαγωγή στα EIP](/eips/)
 - [Λίστα EIPs](https://eips.ethereum.org/)
-- [Αποθετήριο EIP GitHub](https://github.com/ethereum/EIPs)
+- [Αποθετήριο EIP GitHub](https://eips.ethereum.org)
 - [Φόρουμ συζητήσεων EIP](https://ethereum-magicians.org/c/eips)
 - [Εισαγωγή στη διακυβέρνηση του Ethereum](/governance/)
 - [Επισκόπηση διακυβέρνησης Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 Μαρτίου 2019 - Boris Mann_

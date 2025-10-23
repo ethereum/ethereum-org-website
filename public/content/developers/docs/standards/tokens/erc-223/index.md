@@ -195,4 +195,4 @@ While ERC-223 addresses several issues found in the ERC-20 standard, it is not w
 ## Further reading {#further-reading}
 
 - [EIP-223: ERC-223 Token Standard](https://eips.ethereum.org/EIPS/eip-223)
-- [Initial ERC-223 proposal](https://github.com/ethereum/eips/issues/223)
+- [Initial ERC-223 proposal](https://eips.ethereum.org/issues/223)

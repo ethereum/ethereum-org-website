@@ -22,7 +22,7 @@ Naast het leveren van een technische specificatie voor veranderingen, zijn EIP's
 
 ## Geschiedenis van EIP's {#history-of-eips}
 
-De [Ethereum Improvement Proposals (EIP's) GitHub repository](https://github.com/ethereum/EIPs) is gemaakt in oktober 2015. Het EIP-proces is gebaseerd op het proces van de [Bitcoin-verbeteringsvoorstellen (BIP's)](https://github.com/bitcoin/bips), dat zelf is gebaseerd op het proces van de [Python-verbeteringsvoorstellen (PEP's)](https://www.python.org/dev/peps/).
+De [Ethereum Improvement Proposals (EIP's) GitHub repository](https://eips.ethereum.org) is gemaakt in oktober 2015. Het EIP-proces is gebaseerd op het proces van de [Bitcoin-verbeteringsvoorstellen (BIP's)](https://github.com/bitcoin/bips), dat zelf is gebaseerd op het proces van de [Python-verbeteringsvoorstellen (PEP's)](https://www.python.org/dev/peps/).
 
 EIP-editors hebben als taak om EIP's te beoordelen op technische correctheid, opmaakproblemen en het corrigeren van spelling, grammatica en codestijl. Martin Becze, Vitalik Buterin, Gavin Wood en nog een paar anderen waren de oorspronkelijke EIP-editors van 2015 tot eind 2016.
 

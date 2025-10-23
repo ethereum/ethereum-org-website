@@ -32,7 +32,7 @@ Le sugerimos que comience enterándose de la misión y los valores de ethereum.o
     2. Lea [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Sí, es _todo el documento_. **
     3. Siga las indicaciones en EIP-1. Haga referencia a él mientras escribe su borrador.
   - Aprenda a convertirse en un [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
-    - ¡Puede revisar las EIP por pares desde ya mismo! Vea [abrir relaciones públicas con la etiqueta `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Proporcione comentarios técnicos con el enlace `discussion-to`.
+    - ¡Puede revisar las EIP por pares desde ya mismo! Vea [abrir relaciones públicas con la etiqueta `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Proporcione comentarios técnicos con el enlace `discussion-to`.
   - Participe en [Gobernanza del EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Únase al [Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu).
   - [Más información sobre las EIP](/eips/)

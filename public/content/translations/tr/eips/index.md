@@ -22,7 +22,7 @@ Değişiklikler için teknik bir şartname sağlamanın yanı sıra EIP'ler, Eth
 
 ## EIP'lerin Tarihçesi {#history-of-eips}
 
-[Ethereum İyileştirme Önerileri (EIP'ler) Github deposu](https://github.com/ethereum/EIPs) Ekim 2015'te oluşturuldu. EIP işlemi, [Bitcoin İyileştirme Önerileri (BIP'ler)](https://github.com/bitcoin/bips) sürecini; bu süreç de [Python Geliştirme Önerileri (PEP'ler)](https://www.python.org/dev/peps/) sürecini temel alır.
+[Ethereum İyileştirme Önerileri (EIP'ler) Github deposu](https://eips.ethereum.org) Ekim 2015'te oluşturuldu. EIP işlemi, [Bitcoin İyileştirme Önerileri (BIP'ler)](https://github.com/bitcoin/bips) sürecini; bu süreç de [Python Geliştirme Önerileri (PEP'ler)](https://www.python.org/dev/peps/) sürecini temel alır.
 
 EIP editörleri; teknik sağlamlık, yazım/dil bilgisi kontrolü, format ve de kod stili için EIP'leri gözden geçirmekle görevlidir. Martin Becze, Vitalik Buterin, Gavin Wood ve diğerleri, 2015'ten 2016'nın sonlarına kadar ilk EIP editörleriydi.
 

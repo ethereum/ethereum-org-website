@@ -46,7 +46,7 @@ Slither包含一个实用程序[slither-check-erc](https://github.com/crytic/sli
 - **Transfer和transferFrom返回一个布尔值。** 一些通证不会在这些函数上返回布尔值。 因此，他们在合约中的调用可能会失败。
 - **如果使用了名称、小数和符号函数，就会出现。**因为这些函数在ERC20标准中是可选的，所以也有可能不会出现。
 - **Decimals返回uint8。**一些通证会错误地返回uint256。 如果是这种情况，请确保返回的值低于255。
-- **该通证缓解了已知的[ERC20条件竞争攻击](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729)。** ERC20标准有一个已知的ERC20条件竞争攻击，必须加以修复，从而防止攻击者窃取通证。
+- **该通证缓解了已知的[ERC20条件竞争攻击](https://eips.ethereum.org/issues/20#issuecomment-263524729)。** ERC20标准有一个已知的ERC20条件竞争攻击，必须加以修复，从而防止攻击者窃取通证。
 - **该通证不是ERC777通证，在transfer和transferFrom中没有外部函数调用。** transfer函数中的外部调用可能导致重入漏洞。
 
 Slither包括一个实用程序[slither-prop](https://github.com/crytic/slither/wiki/Property-generation)，它可以生成单元测试和安全属性，可以发现许多常见的ERC缺陷。 使用slither-prop来检查：

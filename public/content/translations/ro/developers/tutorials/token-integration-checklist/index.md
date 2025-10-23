@@ -46,7 +46,7 @@ Slither include un utilitar, [slither-check-erc](https://github.com/crytic/slith
 - **Transfer și transferFrom returnează un boolean.** Numeroase tokenuri nu returnează un boolean pe aceste funcții. Ca urmare, apelurile lor în contract ar putea eșua.
 - **Funcțiile nume, zecimale și simboluri sunt prezente dacă sunt utilizate.** Aceste funcții sunt opționale în ERC20 standard și s-ar putea să nu fie prezente.
 - **Zecimalele returnează un uint8.** Numeroase tokenuri returnează incorect un uint256. Dacă este cazul, asigură-te că valoarea returnată este sub 255.
-- **Tokenul atenuează cunoscuta [condiție de cursă ERC20](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729).** ERC20 Standard are o condiție cunoscută de cursă ERC20, care trebuie atenuată pentru a împiedica atacatorii să fure tokenuri.
+- **Tokenul atenuează cunoscuta [condiție de cursă ERC20](https://eips.ethereum.org/issues/20#issuecomment-263524729).** ERC20 Standard are o condiție cunoscută de cursă ERC20, care trebuie atenuată pentru a împiedica atacatorii să fure tokenuri.
 - **Tokenul nu este un token ERC777 și nu are niciun apel extern de funcție în transfer și transferFrom.** Apelurile externe în funcțiile transfer pot duce la re-intrări.
 
 Slither include un utilitar, [slither-prop](https://github.com/crytic/slither/wiki/Property-generation), care generează teste de unitate și proprietăți de securitate, care pot descoperi multe defecte comune ERC. Utilizează slither-prop pentru a verifica dacă:

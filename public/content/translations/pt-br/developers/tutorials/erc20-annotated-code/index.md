@@ -136,7 +136,7 @@ A função `allowance` permite que qualquer pessoa consulte qual é a provisão 
      * transaction ordering. Uma solução possível para mitigar esta corrida
      * é primeiramente reduzir a tolerância do remetente para 0 e definir o
      * valor desejado depois:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://eips.ethereum.org/issues/20#issuecomment-263524729
      *
      * Emite um evento de {Approval}.
      */

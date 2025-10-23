@@ -194,4 +194,4 @@ ERC-223, ERC-20 standardında bulunan birkaç sorunu ele alırken, kendi sınır
 ## Daha fazla kaynak {#further-reading}
 
 - [EIP-223: ERC-223 Jeton Standardı](https://eips.ethereum.org/EIPS/eip-223)
-- [İlk ERC-223 önerisi](https://github.com/ethereum/eips/issues/223)
+- [İlk ERC-223 önerisi](https://eips.ethereum.org/issues/223)

@@ -32,7 +32,7 @@ lang: ru
     2. Прочтите [EIP-1](https://eips.ethereum.org/EIPS/eip-1). **Да, это _весь_ документ.**
     3. Следуйте указаниям из документа EIP-1. Ссылайтесь на него при составлении черновика.
   - Узнайте, как стать [редактором EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Теперь вы можете рассматривать EIP других участников! Просматривайте [открытые запросы на включение изменений с тегом `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Давайте обратную связь относительно технических аспектов по ссылке `discussion-to`.
+    - Теперь вы можете рассматривать EIP других участников! Просматривайте [открытые запросы на включение изменений с тегом `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Давайте обратную связь относительно технических аспектов по ссылке `discussion-to`.
   - Участвуйте в [администрировании EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Подробнее об EIP](/eips/)

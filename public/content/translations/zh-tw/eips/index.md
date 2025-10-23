@@ -22,7 +22,7 @@ lang: zh-tw
 
 ## 以太坊改進提案演進史 {#history-of-eips}
 
-[以太坊改進提案 (EIP) GitHub 存放庫](https://github.com/ethereum/EIPs)於 2015 年 10 月建立。 以太坊改進提案流程基於[比特幣改進提案 (BIP)](https://github.com/bitcoin/bips) 流程，而後者又是基於 [Python 增強提案 (PEP)](https://www.python.org/dev/peps/) 流程。
+[以太坊改進提案 (EIP) GitHub 存放庫](https://eips.ethereum.org)於 2015 年 10 月建立。 以太坊改進提案流程基於[比特幣改進提案 (BIP)](https://github.com/bitcoin/bips) 流程，而後者又是基於 [Python 增強提案 (PEP)](https://www.python.org/dev/peps/) 流程。
 
 以太坊改進提案編輯負責審查以太坊改進提案的技術健全性、格式問題，以及修正拼音、文法及程式碼樣式方面的錯誤。 2015 至 2016 年底，Martin Becze、Vitalik Buterin、Gavin Wood 等人擔綱初代的以太坊改進提案編輯。
 

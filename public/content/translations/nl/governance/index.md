@@ -90,7 +90,7 @@ Deze stroom, hoewel zeer vereenvoudigd, geeft een overzicht van de belangrijke f
 
 ### Voorafgaand werk begrijpen {#prior-work}
 
-EIP Champions zouden zich vertrouwd moeten maken met eerder werk en voorstellen alvorens een EIP te creëren die serieus overwogen kan worden om in het Ethereum Mainnet te worden ingezet. Op deze manier brengt het EIP hopelijk iets nieuws mee dat eerder niet is verworpen. De drie belangrijkste plaatsen om dit te onderzoeken zijn de [EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) en [ethresear.ch](https://ethresear.ch/).
+EIP Champions zouden zich vertrouwd moeten maken met eerder werk en voorstellen alvorens een EIP te creëren die serieus overwogen kan worden om in het Ethereum Mainnet te worden ingezet. Op deze manier brengt het EIP hopelijk iets nieuws mee dat eerder niet is verworpen. De drie belangrijkste plaatsen om dit te onderzoeken zijn de [EIP repository](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) en [ethresear.ch](https://ethresear.ch/).
 
 ### Werkgroepen {#working-groups}
 

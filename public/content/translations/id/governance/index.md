@@ -90,7 +90,7 @@ Alur ini, sekalipun sangat sederhana, memberi gambaran umum tentang tahap-tahap 
 
 ### Memahami hasil pekerjaan sebelumnya {#prior-work}
 
-Pejuang EIP harus membiasakan diri dengan hasil pekerjaan dan proposal di masa lalu sebelum membuat EIP yang dapat dianggap penting untuk digunakan di Jaringan Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum ditolak sebelumnya. Tiga tempat utama untuk melakukan riset tentang hal ini adalah [repositori EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) dan [ethresear.ch](https://ethresear.ch/).
+Pejuang EIP harus membiasakan diri dengan hasil pekerjaan dan proposal di masa lalu sebelum membuat EIP yang dapat dianggap penting untuk digunakan di Jaringan Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum ditolak sebelumnya. Tiga tempat utama untuk melakukan riset tentang hal ini adalah [repositori EIP](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) dan [ethresear.ch](https://ethresear.ch/).
 
 ### Grup kerja {#working-groups}
 

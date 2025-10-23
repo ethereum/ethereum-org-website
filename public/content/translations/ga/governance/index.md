@@ -90,7 +90,7 @@ Cé go bhfuil sé an-simplithe, tugann an sreabhadh seo forbhreathnú ar na céi
 
 ### Réamhobair a thuiscint {#prior-work}
 
-Ba cheart go gcuirfeadh Seaimpíní an EIP iad féin ar an eolas maidir le réamhobair agus moltaí sula gcruthaítear EIP ar féidir breithniú dáiríre a dhéanamh air lena imscaradh ar Ethereum Mainnet. Ar an mbealach seo, tá súil againn go dtabharfaidh an EIP rud éigin nua nár diúltaíodh cheana. Is iad na trí phríomháit le taighde a dhéanamh air seo ná [stór EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) agus [ethresear.ch](https://ethresear.ch/).
+Ba cheart go gcuirfeadh Seaimpíní an EIP iad féin ar an eolas maidir le réamhobair agus moltaí sula gcruthaítear EIP ar féidir breithniú dáiríre a dhéanamh air lena imscaradh ar Ethereum Mainnet. Ar an mbealach seo, tá súil againn go dtabharfaidh an EIP rud éigin nua nár diúltaíodh cheana. Is iad na trí phríomháit le taighde a dhéanamh air seo ná [stór EIP](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) agus [ethresear.ch](https://ethresear.ch/).
 
 ### Grúpaí oibre {#working-groups}
 

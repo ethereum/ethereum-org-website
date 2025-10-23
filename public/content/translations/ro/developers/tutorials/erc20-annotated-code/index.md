@@ -136,7 +136,7 @@ Prin funcția `allowance`, oricine poate interoga ce alocație permite o adresă
      * greşit tranzacţiile. O posibilă soluție pentru a atenua acest risc
      * este de a reduce întâi la 0 alocația celui care cheltuiește și de a seta
      * valoarea dorită după aceea:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://eips.ethereum.org/issues/20#issuecomment-263524729
      *
      * Emite un eveniment {Approval}.
      */

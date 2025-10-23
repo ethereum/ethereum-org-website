@@ -32,7 +32,7 @@ lang: zh-tw
     2. 閱讀 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **沒錯，就是指_整篇_文件。**
     3. 遵照 EIP-1 中的指示， 並在寫草稿時參考指示。
   - 了解如何成為[以太坊改進提案編輯](https://eips.ethereum.org/EIPS/eip-5069)
-    - 現在，你可以進行同行評審，審核其他人的以太坊改進提案！ 請見[使用 `e-review` 標籤建立新提取請求](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)。 在 `discussion-to` 連結提供技術性回饋。
+    - 現在，你可以進行同行評審，審核其他人的以太坊改進提案！ 請見[使用 `e-review` 標籤建立新提取請求](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)。 在 `discussion-to` 連結提供技術性回饋。
   - 參與[以太坊改進提案管理體系](https://github.com/ethereum-cat-herders/EIPIP)
     - 加入[以太坊牧貓人組織的 Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [更多以太坊改進提案相關資訊](/eips/)

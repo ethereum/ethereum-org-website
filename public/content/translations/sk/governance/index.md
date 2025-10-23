@@ -90,7 +90,7 @@ Tento postup, aj keď je veľmi zjednodušený, poskytuje prehľad dôležitých
 
 ### Pochopenie predchádzajúcej práce {#prior-work}
 
-Šampióni EIP by sa mali oboznámiť s predchádzajúcou prácou a návrhmi pred vytvorením EIP, o ktorého nasadení možno vážne uvažovať v sieti Ethereum Mainnet. Týmto spôsobom dúfame, že EIP prinesie niečo nové, čo ešte nebolo odmietnuté. Tri hlavné miesta, kde sa môžete zoznámiť s prácou ostatných navrhovateľov, sú [úložisko EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) a [ethresear.ch](https://ethresear.ch/).
+Šampióni EIP by sa mali oboznámiť s predchádzajúcou prácou a návrhmi pred vytvorením EIP, o ktorého nasadení možno vážne uvažovať v sieti Ethereum Mainnet. Týmto spôsobom dúfame, že EIP prinesie niečo nové, čo ešte nebolo odmietnuté. Tri hlavné miesta, kde sa môžete zoznámiť s prácou ostatných navrhovateľov, sú [úložisko EIP](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) a [ethresear.ch](https://ethresear.ch/).
 
 ### Pracovné skupiny {#working-groups}
 

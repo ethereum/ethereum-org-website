@@ -86,7 +86,7 @@ Ta tok, čeprav zelo poenostavljen, daje pregled nad pomembnimi fazami za aktiva
 
 ### Razumevanje predhodnega dela {#prior-work}
 
-EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://github.com/ethereum/eips), [Ethereum čarovniki](https://ethereum-magicians.org/) in [ethresear.ch](https://ethresear.ch/).
+EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://eips.ethereum.org), [Ethereum čarovniki](https://ethereum-magicians.org/) in [ethresear.ch](https://ethresear.ch/).
 
 ### Delovne skupine {#working-groups}
 

@@ -22,7 +22,7 @@ Kromě poskytnutí technické specifikace změn jsou EIP také jednotkou, kolem 
 
 ## Historie EIP {#history-of-eips}
 
-[GitHub repozitář Ethereum Improvement Proposals (EIPs)](https://github.com/ethereum/EIPs) byl založen v říjnu 2015. Proces EIP je založen na procesu [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips), který sám o sobě vychází z procesu [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/).
+[GitHub repozitář Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org) byl založen v říjnu 2015. Proces EIP je založen na procesu [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips), který sám o sobě vychází z procesu [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/).
 
 Editoři EIP mají za úkol revidovat EIP z hlediska technické správnosti, formátování a opravy pravopisu, gramatiky a stylu kódu. Martin Becze, Vitalik Buterin, Gavin Wood a několik dalších byli původními editory EIP od roku 2015 do konce roku 2016.
 

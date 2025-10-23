@@ -194,4 +194,4 @@ ERC-223は、ERC-20規格で見られるいくつかの問題に対処してい�
 ## 参考リンク{#further-reading}
 
 - [EIP-223: ERC-223トークン規格](https://eips.ethereum.org/EIPS/eip-223)
-- [初期のERC-223提案](https://github.com/ethereum/eips/issues/223)
+- [初期のERC-223提案](https://eips.ethereum.org/issues/223)

@@ -90,7 +90,7 @@ Ez az egyszerűsített folyamat betekintést ad a protokollváltoztatások főbb
 
 ### A korábbi munkák megértése {#prior-work}
 
-Az EIP-bajnokoknak ismerni kell a korábbi munkákat és javaslatokat, mielőtt egy újat készítenek, hogy azt komolyan megfontolják egy Ethereum-fejlesztéseként. Így az EIP javaslat újdonságot hozhat, nem pedig egy korábban már elutasított dolgot. Három fő helyen kell átnézni az anyagokat: [EIP-könyvtár](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) és [ethresear.ch](https://ethresear.ch/).
+Az EIP-bajnokoknak ismerni kell a korábbi munkákat és javaslatokat, mielőtt egy újat készítenek, hogy azt komolyan megfontolják egy Ethereum-fejlesztéseként. Így az EIP javaslat újdonságot hozhat, nem pedig egy korábban már elutasított dolgot. Három fő helyen kell átnézni az anyagokat: [EIP-könyvtár](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) és [ethresear.ch](https://ethresear.ch/).
 
 ### Munkacsoportok {#working-groups}
 

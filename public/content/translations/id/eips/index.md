@@ -22,7 +22,7 @@ Seiring dengan menyediakan spesifikasi teknis untuk perubahan, EIP adalah unit d
 
 ## Riwayat EIP {#history-of-eips}
 
-[Repositori GitHub Ethereum Improvement Proposals (EIP)](https://github.com/ethereum/EIPs) dibuat pada Oktober 2015. Proses EIP didasarkan pada proses [Bitcoin Improvement Proposals (BIP)](https://github.com/bitcoin/bips), yang didasatkan pada proses [Python Enhancement Proposals (PEP)](https://www.python.org/dev/peps/).
+[Repositori GitHub Ethereum Improvement Proposals (EIP)](https://eips.ethereum.org) dibuat pada Oktober 2015. Proses EIP didasarkan pada proses [Bitcoin Improvement Proposals (BIP)](https://github.com/bitcoin/bips), yang didasatkan pada proses [Python Enhancement Proposals (PEP)](https://www.python.org/dev/peps/).
 
 Editor EIP bertugas dalam proses peninjauan EIP untuk kesehatan teknis, masalah format, dan mengoreksi ejaan, tata bahasa, dan gaya kode. Martin Becze, Vitalik Buterin, Gavin Wood, dan beberapa lainnya adalah editor asli EIP dari 2015 sampai akhir 2016.
 

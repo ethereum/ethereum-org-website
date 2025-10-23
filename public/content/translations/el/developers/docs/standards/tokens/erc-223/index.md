@@ -194,4 +194,4 @@ contract RecipientContract is IERC223Recipient {
 ## Περαιτέρω υλικό για διάβασμα {#further-reading}
 
 - [EIP-223: Πρότυπο Token ERC-223[(https://eips.ethereum.org/EIPS/eip-223)
-- [Αρχική πρόταση ERC-223](https://github.com/ethereum/eips/issues/223)
+- [Αρχική πρόταση ERC-223](https://eips.ethereum.org/issues/223)

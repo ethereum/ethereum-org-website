@@ -90,7 +90,7 @@ Aliran ini, walaupun sangat mudah, memberikan gambaran keseluruhan peringkat pen
 
 ### Memahami kerja-kerja terdahulu {#prior-work}
 
-Juara EIP perlu membiasakan diri dengan kerja dan cadangan sebelum mewujudkan EIP yang boleh dipertimbangkan secara serius untuk digunakan di Rangkaian Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum pernah ditolak sebelum ini. Tiga tempat utama untuk penyelidikan ini ialah [repositori EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) dan [ethresear.ch](https://ethresear.ch/).
+Juara EIP perlu membiasakan diri dengan kerja dan cadangan sebelum mewujudkan EIP yang boleh dipertimbangkan secara serius untuk digunakan di Rangkaian Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum pernah ditolak sebelum ini. Tiga tempat utama untuk penyelidikan ini ialah [repositori EIP](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) dan [ethresear.ch](https://ethresear.ch/).
 
 ### Kumpulan kerja {#working-groups}
 

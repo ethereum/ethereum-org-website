@@ -32,7 +32,7 @@ lang: ja
     2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1) **を読んでください。これが_すべての_ドキュメント**です。
     3. EIP-1の指示に従います。 草案を書く際の参考にしてください。
   - [EIP編集者](https://eips.ethereum.org/EIPS/eip-5069)になる方法を学ぶ
-    - いつでもEIPをピアレビューできます。  [`e-review`タグが付いたオープンなプルリクエスト](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)を参照してください。 `discussion-to`リンクで技術的なフィードバックを提供してください。
+    - いつでもEIPをピアレビューできます。  [`e-review`タグが付いたオープンなプルリクエスト](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)を参照してください。 `discussion-to`リンクで技術的なフィードバックを提供してください。
   - [EIP ガバナンス](https://github.com/ethereum-cat-herders/EIPIP)への参加
     - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)に加わりましょう。
   - [イーサリアム改善提案(EIP)の詳細](/eips/)

@@ -14,7 +14,7 @@ Svaki član zajednice Ethereum može izraditi EIP. Smjernice o tome kako napisat
 
 ## Što EIP znači? {#why-do-eips-matter}
 
-EIP ima centralnu ulogu u postupku kako se promjene događaju i dokumentiraju u Ethereumu. One su način kako pojedinci mogu predložiti promjene, raspraviti o njima i u konačnici ih usvojiti. Postoje [različite vrste EIP-ova](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), uključujući osnovne EIP-ove za promjene protokola niske razine koje imaju utjecaj na konsenzus i zahtijevaju mrežnu nadogradnju poput [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) te ERC-ovi za norme u svezi s aplikacijom poput [EIP-20](https://eips.ethereum.org/EIPS/eip-20) i [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+EIP ima centralnu ulogu u postupku kako se promjene događaju i dokumentiraju u Ethereumu. One su način kako pojedinci mogu predložiti promjene, raspraviti o njima i u konačnici ih usvojiti. Postoje [različite vrste EIP-ova](https://eips.ethereum.org/blob/master/EIPS/eip-1.md#eip-types), uključujući osnovne EIP-ove za promjene protokola niske razine koje imaju utjecaj na konsenzus i zahtijevaju mrežnu nadogradnju poput [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) te ERC-ovi za norme u svezi s aplikacijom poput [EIP-20](https://eips.ethereum.org/EIPS/eip-20) i [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
 Svaka se mrežna nadogradnja sastoji od skupine EIP-ova koju svaki [Ethereumov korisnik](/learn/#clients-and-nodes) mora implementirati na mreži. To znači da ako žele ostati u konsenzusu s drugim korisnicima glavne mreže Ethereum, razvojni programeri korisnika moraju implementirati sve obvezne EIP-ove.
 
@@ -22,7 +22,7 @@ Zajedno s tehničkim specifikacijama promjena, EIP predstavlja osnovu upravljanj
 
 ## Povijest EIP-a {#history-of-eips}
 
-[GitHubov repozitorij prijedloga za poboljšanje Ethereuma](https://github.com/ethereum/EIPs) izrađen je u listopadu 2015. Postupak za EIP temelji se na postupku za [prijedloge za poboljšanje Bitcoina (BIP)](https://github.com/bitcoin/bips), a koji se temelji na postupku za [prijedloge za poboljšanje Pythona (PEP)](https://www.python.org/dev/peps/).
+[GitHubov repozitorij prijedloga za poboljšanje Ethereuma](https://eips.ethereum.org) izrađen je u listopadu 2015. Postupak za EIP temelji se na postupku za [prijedloge za poboljšanje Bitcoina (BIP)](https://github.com/bitcoin/bips), a koji se temelji na postupku za [prijedloge za poboljšanje Pythona (PEP)](https://www.python.org/dev/peps/).
 
 Urednici EIP-a dobivaju zadatak pregleda EIP-a pri čemu se usredotočuju na tehničku jasnoću, pogreške u formatiranju te ispravljanje pravopisnih, gramatičkih pogrešaka i stila koda. Martin Becze, Vitalik Buterin, Gavin Wood i ješ nekolicina bili su izvorni urednici za EIP od 2015. do kraja 2016.
 

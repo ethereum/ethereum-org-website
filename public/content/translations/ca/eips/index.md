@@ -14,7 +14,7 @@ Qualsevol dins la comunitat Ethereum té la capacitat de crear una EIP. [EIP 1](
 
 ## Per què són importants les EIP? {#why-do-eips-matter}
 
-Les EIP juguen un paper central en com succeeixen i són documentats els canvis a Ethereum. Són el mitjà perquè la gent proposi, debati i adopti canvis. Hi ha [diferents tipus d'EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types) inclòs EIP bàsiques per a canvis de protocol de baix nivell que afecten el consens i requereixen una millora de la xarxa també així com l'ERC per estàndards d'aplicacions. Per exemple, els estàndards per crear tokens, com l' [ERC20](https://eips.ethereum.org/EIPS/eip-20) o l'[ERC721](https://eips.ethereum.org/EIPS/eip-721) permet a les aplicacions la interacció d'aquests tokens amb la resta de tokens de tracte utilitzant les mateixes normes, cosa que fa més fàcil crear aplicacions interoperables.
+Les EIP juguen un paper central en com succeeixen i són documentats els canvis a Ethereum. Són el mitjà perquè la gent proposi, debati i adopti canvis. Hi ha [diferents tipus d'EIP](https://eips.ethereum.org/blob/master/EIPS/eip-1.md#eip-types) inclòs EIP bàsiques per a canvis de protocol de baix nivell que afecten el consens i requereixen una millora de la xarxa també així com l'ERC per estàndards d'aplicacions. Per exemple, els estàndards per crear tokens, com l' [ERC20](https://eips.ethereum.org/EIPS/eip-20) o l'[ERC721](https://eips.ethereum.org/EIPS/eip-721) permet a les aplicacions la interacció d'aquests tokens amb la resta de tokens de tracte utilitzant les mateixes normes, cosa que fa més fàcil crear aplicacions interoperables.
 
 Cada millora de xarxa consisteix en un conjunt d'EIP que necessiten ser implementades per cada [client Ethereum](/learn/#clients-and-nodes) a la xarxa. Això implica que per mantenir-se en consens amb altres clients de la xarxa Principal d'Ethereum, els desenvolupadors de clients necessiten estar segurs que han implementat totes les EIP requerides.
 
@@ -22,7 +22,7 @@ A més de proveir especificacions tècniques per als canvis, les EIP són les un
 
 ## Història de les EIP {#history-of-eips}
 
-El [repositori GitHub de Propostes de Millora d'Ethereum (EIP, per les seves sigles en anglès)](https://github.com/ethereum/EIPs) fou creat l'octubre de 2015. El procés de l'EIP està basat en el procés de [Propostes de Millora de Bitcoin (BIP, per les seves sigles en anglès)](https://github.com/bitcoin/bips), que està basat en sí mateix en el procés de [Propostes de Millora de Python (PEP, per les seves sigles en anglès)](https://www.python.org/dev/peps/).
+El [repositori GitHub de Propostes de Millora d'Ethereum (EIP, per les seves sigles en anglès)](https://eips.ethereum.org) fou creat l'octubre de 2015. El procés de l'EIP està basat en el procés de [Propostes de Millora de Bitcoin (BIP, per les seves sigles en anglès)](https://github.com/bitcoin/bips), que està basat en sí mateix en el procés de [Propostes de Millora de Python (PEP, per les seves sigles en anglès)](https://www.python.org/dev/peps/).
 
 Els editors d'EIP se'ls encomana el procés de revisió de les EIP per obtenir solidesa tècnica, ortografia i gramàtica correctes i estil de codificació. Martin Becze, Vitalik Buterin, Gavin Wood i d'altres van ser els editors originals d'EIP des del 2015 a finals de 2016. Els editors d'EIP actuals són:
 

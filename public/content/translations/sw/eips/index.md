@@ -14,7 +14,7 @@ Mtu yeyote ndani ya jumuiya ya Ethereum ana uwezo wa kuunda EIP. Miongozo ya kua
 
 ## Kwa nini EIPs ni muhimu? {#why-do-eips-matter}
 
-EIPs huchukua jukumu kuu katika mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ndio njia ya watu kupendekeza, kujadili na kupitsha mabadiliko. Kuna [aina tofauti za EIPs](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types) ikijumuisha EIP za msingi kwa ajili ya mabadiliko ya itifaki ya kiwango cha chini ambayo yanaathiri makubaliano na kuhitaji usasishaji wa mtandao pamoja na ERCs kwa viwango vya maombi. Kwa mfano, viwango vya kutengeneza tokeni, kama [ERC20](https://eips.ethereum.org/EIPS/eip-20)ama[ERC721](https://eips.ethereum.org/EIPS/eip-721) hurusu programu zinazoingiliana na hizi tokeni kushughulikia tokeni zotye kwa kutumia masharti yaleyale, ambayo hurahisisha uundaji wa programu zinazoingiliana.
+EIPs huchukua jukumu kuu katika mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ndio njia ya watu kupendekeza, kujadili na kupitsha mabadiliko. Kuna [aina tofauti za EIPs](https://eips.ethereum.org/blob/master/EIPS/eip-1.md#eip-types) ikijumuisha EIP za msingi kwa ajili ya mabadiliko ya itifaki ya kiwango cha chini ambayo yanaathiri makubaliano na kuhitaji usasishaji wa mtandao pamoja na ERCs kwa viwango vya maombi. Kwa mfano, viwango vya kutengeneza tokeni, kama [ERC20](https://eips.ethereum.org/EIPS/eip-20)ama[ERC721](https://eips.ethereum.org/EIPS/eip-721) hurusu programu zinazoingiliana na hizi tokeni kushughulikia tokeni zotye kwa kutumia masharti yaleyale, ambayo hurahisisha uundaji wa programu zinazoingiliana.
 
 Kila boresha/sasisho la mtandao hujumuisha na seti ya EIPs amabazo zinahitaji utekelezaji kwa kila [ mteja/programu ya Ethereum](/learn/#clients-and-nodes) ilioko kwenye mtandao. Hii inamaana kwamba ili kuwa na makubaliano na programu zingine juu ya Mtandao mkuu wa Ethereum, wasanidi programu wanatakiwa kuhakikisha kua wametekeleza EIPs zote zinazohitajika.
 
@@ -22,7 +22,7 @@ Pamaoja na kutoa maelezo ya kiufundi kwa ajili ya mabadiliko, EIPs ni kitengo am
 
 ## Historia ya EIPs {#history-of-eips}
 
-[Hazina ya Mapendekezo ya Uboreshwaji wa Ethereum (EIPs)yalioko GitHub](https://github.com/ethereum/EIPs)yaliundwa mwezi Oktoba, 2015. Mchakato wa EIP unategemea/ kuangalia [ Mapendekezo ya Uboreshwaji wa Bitcoin (BIPs)](https://github.com/bitcoin/bips), ambayo yenyewe inajilinganisha /kutegemea mabadiliko yanayoendelea kwenye mchakato wa [ Mapendekezo ya Uboreshwaji wa Python (PEPs)](https://www.python.org/dev/peps/).
+[Hazina ya Mapendekezo ya Uboreshwaji wa Ethereum (EIPs)yalioko GitHub](https://eips.ethereum.org)yaliundwa mwezi Oktoba, 2015. Mchakato wa EIP unategemea/ kuangalia [ Mapendekezo ya Uboreshwaji wa Bitcoin (BIPs)](https://github.com/bitcoin/bips), ambayo yenyewe inajilinganisha /kutegemea mabadiliko yanayoendelea kwenye mchakato wa [ Mapendekezo ya Uboreshwaji wa Python (PEPs)](https://www.python.org/dev/peps/).
 
 Wahariri wa EIP wanapewa jukumu la kufanya mchakato wa uhakiki wa kiufundi, sarufi/tahjia, na aina ya msimbo sahihi. Martin Becze, Vitalik Buterin, Gavin Wood na wengine wachache ndio wahariri waanzilishi wa EIP kutoka mwaka 2015 kwenda mwishoni mwa mwaka 2016. Wahariri wa sasa wa EIP ni:
 

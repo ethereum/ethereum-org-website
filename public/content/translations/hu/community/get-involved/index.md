@@ -32,7 +32,7 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
     2. Olvassa el az [EIP-1-et](https://eips.ethereum.org/EIPS/eip-1) – **Igen, ez a _teljes_ dokumentum.**
     3. Kövesse az EIP-1 iránymutatásait. Hivatkozzon rá, ahogy a vázlatot készíti.
   - Tudja meg, hogyan lehet [EIP-szerkesztő](https://eips.ethereum.org/EIPS/eip-5069)
-    - Ön is véleményezheti az EIP-ket már most! Nézze meg a [nyitott PR-okat az `e-review` címkét](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review) használva. Adjon technikai visszajelzést a `discussion-to` hivatkozáson.
+    - Ön is véleményezheti az EIP-ket már most! Nézze meg a [nyitott PR-okat az `e-review` címkét](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review) használva. Adjon technikai visszajelzést a `discussion-to` hivatkozáson.
   - Vegyen részt az [EIP-menedzsementben](https://github.com/ethereum-cat-herders/EIPIP)
     - Csatlakozzon az [Ethereum Cat Herders Discord csatornához](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Bővebben az EIP-kről](/eips/)

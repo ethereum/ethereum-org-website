@@ -90,7 +90,7 @@ Ten przebieg, choć bardzo uproszczony, daje obraz istotnych etapów aktywacji z
 
 ### Rozumienie wcześniejszych prac {#prior-work}
 
-Mistrzowie EIP powinni zapoznać się z wcześniejszymi pracami i propozycjami przed stworzeniem EIP, które można poważnie rozważyć do wdrożenia w sieci głównej Ethereum. W ten sposób EIP może wnieść coś nowego, co nie zostało wcześniej odrzucone. Trzy główne miejsca, w których można to sprawdzić to [repozytorium EIP](https://github.com/ethereum/EIPs), [forum Ethereum Magicians](https://ethereum-magicians.org/) i [ethresear.ch](https://ethresear.ch/).
+Mistrzowie EIP powinni zapoznać się z wcześniejszymi pracami i propozycjami przed stworzeniem EIP, które można poważnie rozważyć do wdrożenia w sieci głównej Ethereum. W ten sposób EIP może wnieść coś nowego, co nie zostało wcześniej odrzucone. Trzy główne miejsca, w których można to sprawdzić to [repozytorium EIP](https://eips.ethereum.org), [forum Ethereum Magicians](https://ethereum-magicians.org/) i [ethresear.ch](https://ethresear.ch/).
 
 ### Grupy robocze {#working-groups}
 

@@ -13,7 +13,7 @@ incomplete: true
 
 - [以太坊改进提案介绍](/eips/)
 - [EIP 列表](https://eips.ethereum.org/)
-- [EIP GitHub 存储库](https://github.com/ethereum/EIPs)
+- [EIP GitHub 存储库](https://eips.ethereum.org)
 - [EIP 讨论板](https://ethereum-magicians.org/c/eips)
 - [以太坊治理简介](/governance/)
 - [以太坊治理概述](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019 年 3 月 31 日 - Boris Mann_

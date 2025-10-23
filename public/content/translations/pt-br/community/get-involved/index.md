@@ -30,7 +30,7 @@ Você tem formação em matemática, criptografia ou economia? Talvez tenha inte
     2. Leia a [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Sim, esse é o documento _na íntegra_.**
     3. Siga as orientações estabelecidas na EIP-1. Consulte-a ao redigir a sua versão preliminar.
   - Saiba como se tornar um [editor de EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Você pode fazer a revisão por pares de EIPs agora mesmo! Consulte os [PRs abertos com a tag `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Envie feedback técnico por meio do link `discussion-to`.
+    - Você pode fazer a revisão por pares de EIPs agora mesmo! Consulte os [PRs abertos com a tag `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Envie feedback técnico por meio do link `discussion-to`.
   - Participe da [governança de EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Junte-se ao [Discord Ethereum Cat Herders](https://discord.gg/Nz6rtfJ8Cu)
   - [Mais sobre EIPs](/eips/)

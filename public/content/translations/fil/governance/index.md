@@ -90,7 +90,7 @@ Ang flow na ito, bagama't lubhang pinasimple, ay nagbibigay ng pangkalahatang-id
 
 ### Pag-unawa sa mga naunang gawain {#prior-work}
 
-Dapat pag-aralan ng mga EIP Champion ang mga naunang gawain at proposal bago gumawa ng EIP na maaari talagang i-deploy sa Ethereum Mainnet. Sa ganitong paraan, inaasahang magdadala ang EIP ng bagong bagay na hindi pa tinatanggihan. Ang tatlong pangunahing lugar para i-research ito ay ang [EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/), at [ethresear.ch](https://ethresear.ch/).
+Dapat pag-aralan ng mga EIP Champion ang mga naunang gawain at proposal bago gumawa ng EIP na maaari talagang i-deploy sa Ethereum Mainnet. Sa ganitong paraan, inaasahang magdadala ang EIP ng bagong bagay na hindi pa tinatanggihan. Ang tatlong pangunahing lugar para i-research ito ay ang [EIP repository](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/), at [ethresear.ch](https://ethresear.ch/).
 
 ### Mga working group {#working-groups}
 

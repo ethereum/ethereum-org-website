@@ -32,7 +32,7 @@ lang: el
     2. Διαβάστε το [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Ναι, είναι _ολόκληρο_ έγγραφο.**
     3. Ακολουθήστε τις οδηγίες στο EIP-1. Αναφερθείτε σε αυτό καθώς γράφετε το προσχέδιό σας.
   - Μάθετε πως να γίνετε [συντάκτης EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Μπορείτε να αξιολογήσετε τα EIP χρηστών! Δείτε το [ανοιχτές PR με την ετικέτα `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Υποβάλλετε τεχνικά σχόλια για τον σύνδεσμο `discussion-to`.
+    - Μπορείτε να αξιολογήσετε τα EIP χρηστών! Δείτε το [ανοιχτές PR με την ετικέτα `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Υποβάλλετε τεχνικά σχόλια για τον σύνδεσμο `discussion-to`.
   - Συμμετέχετε στη [διακυβέρνηση EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Εγγραφείτε στο [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Περισσότερα για τα EIP](/eips/)

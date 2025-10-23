@@ -90,7 +90,7 @@ Este fluxo, embora muito simplificado, fornece uma visão geral das etapas relev
 
 ### Entendendo o trabalho anterior {#prior-work}
 
-Os ganhadores da EIP devem se familiarizar com o trabalho prévio e as propostas antes de criar uma EIP que pode ser seriamente considerada para implantação na rede principal Ethereum. Desta forma, a EIP traz algo novo que não foi rejeitado antes. Os três principais lugares para pesquisar isso são o [repositório EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) e [ethresear.ch](https://ethresear.ch/).
+Os ganhadores da EIP devem se familiarizar com o trabalho prévio e as propostas antes de criar uma EIP que pode ser seriamente considerada para implantação na rede principal Ethereum. Desta forma, a EIP traz algo novo que não foi rejeitado antes. Os três principais lugares para pesquisar isso são o [repositório EIP](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) e [ethresear.ch](https://ethresear.ch/).
 
 ### Grupos de trabalho {#working-groups}
 

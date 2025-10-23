@@ -195,4 +195,4 @@ Bien que l'ERC-223 résolve plusieurs problèmes présents dans la norme ERC-20,
 ## En savoir plus {#further-reading}
 
 - [EIP-223 : Standard de jeton ERC-223](https://eips.ethereum.org/EIPS/eip-223)
-- [Proposition initiale de l'ERC-223](https://github.com/ethereum/eips/issues/223)
+- [Proposition initiale de l'ERC-223](https://eips.ethereum.org/issues/223)

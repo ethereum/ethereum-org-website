@@ -194,4 +194,4 @@ Cé go dtugann ERC-223 aghaidh ar roinnt saincheisteanna a aimsítear i gcaighde
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [EIP-223: Caighdeán Comhartha ERC-223](https://eips.ethereum.org/EIPS/eip-223)
-- [Togra tosaigh ERC-223](https://github.com/ethereum/eips/issues/223)
+- [Togra tosaigh ERC-223](https://eips.ethereum.org/issues/223)

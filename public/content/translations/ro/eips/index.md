@@ -14,7 +14,7 @@ Oricine din comunitatea Ethereum are capacitatea de a crea un EIP. Îndrumările
 
 ## De ce contează EIP-urile? {#why-do-eips-matter}
 
-EIP-urile joacă un rol central pentru modul în care schimbările se produc și sunt documentate pe Ethereum. Acestea sunt modalitatea prin care oamenii pot propune, dezbate și adopta schimbări. Există [diferite tipuri de EIP-uri](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), inclusiv EIP-uri de bază pentru modificări ale protocolului de nivel scăzut, care afectează consensul și necesită o actualizare a rețelei, precum [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), și ERC-uri privind standardele de aplicare, precum [EIP-20](https://eips.ethereum.org/EIPS/eip-20) și [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+EIP-urile joacă un rol central pentru modul în care schimbările se produc și sunt documentate pe Ethereum. Acestea sunt modalitatea prin care oamenii pot propune, dezbate și adopta schimbări. Există [diferite tipuri de EIP-uri](https://eips.ethereum.org/blob/master/EIPS/eip-1.md#eip-types), inclusiv EIP-uri de bază pentru modificări ale protocolului de nivel scăzut, care afectează consensul și necesită o actualizare a rețelei, precum [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), și ERC-uri privind standardele de aplicare, precum [EIP-20](https://eips.ethereum.org/EIPS/eip-20) și [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
 Fiecare actualizare de rețea constă dintr-un set de EIP-uri care trebuie implementate de fiecare [client Ethereum](/learn/#clients-and-nodes) din rețea. Acest lucru înseamnă că, pentru a rămâne în consens cu alți clienți de pe Mainnet-ul Ethereum, dezvoltatorii de clienți trebuie să se asigure că au implementat toate EIP-urile necesare.
 
@@ -22,7 +22,7 @@ Fiecare actualizare de rețea constă dintr-un set de EIP-uri care trebuie imple
 
 ## Istoricul EIP-urilor {#history-of-eips}
 
-[Depozitarul GitHub pentru Propunerile de îmbunătățire pentru Ethereum (EIPuri)](https://github.com/ethereum/EIPs) a fost creat în octombrie 2015. Procesul EIP-urilor se bazează pe procesul de [Propuneri de îmbunătățire Bitcoin (BIP-uri)](https://github.com/bitcoin/bips), care în sine se bazează pe procesul de [Propuneri de ămbunătățire Python (PEP-uri)](https://www.python.org/dev/peps/).
+[Depozitarul GitHub pentru Propunerile de îmbunătățire pentru Ethereum (EIPuri)](https://eips.ethereum.org) a fost creat în octombrie 2015. Procesul EIP-urilor se bazează pe procesul de [Propuneri de îmbunătățire Bitcoin (BIP-uri)](https://github.com/bitcoin/bips), care în sine se bazează pe procesul de [Propuneri de ămbunătățire Python (PEP-uri)](https://www.python.org/dev/peps/).
 
 Editorii EIP-urilor sunt însărcinați cu revizuirea EIP-urilor pentru a le stabili temeinicia din puncte de vedere tehnic, al aspectelor de formatare și al corectării ortografiei, gramaticii și stilului de cod. Martin Becze, Vitalik Buterin, Gavin Wood și alţi câțiva au fost editorii iniţiali de EIP-uri din 2015 până la sfârșitul anului 2016.
 

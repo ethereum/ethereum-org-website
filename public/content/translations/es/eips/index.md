@@ -22,7 +22,7 @@ Además de proporcionar una especificación técnica para los cambios, las EIP s
 
 ## Historia de las EIP {#history-of-eips}
 
-El [repositorio de Github de propuestas de mejora de Ethereum (EIP)](https://github.com/ethereum/EIPs) se creó en octubre de 2015. El proceso de EIP se basa en el proceso de [propuestas de mejora de Bitcoin (BIP)](https://github.com/bitcoin/bips), que a su vez se basa en el [proceso de propuestas de mejora de Python (PEP)](https://www.python.org/dev/peps/).
+El [repositorio de Github de propuestas de mejora de Ethereum (EIP)](https://eips.ethereum.org) se creó en octubre de 2015. El proceso de EIP se basa en el proceso de [propuestas de mejora de Bitcoin (BIP)](https://github.com/bitcoin/bips), que a su vez se basa en el [proceso de propuestas de mejora de Python (PEP)](https://www.python.org/dev/peps/).
 
 Los editores de EIP se encargan de revisar las EIP para verificar su solidez técnica, así como su correcta ortografía, gramática y estilo de código. Martin Becze, Vitalik Buterin y Gavin Wood, entre otros, fueron los editores originales de EIP desde 2015 hasta finales de 2016.
 

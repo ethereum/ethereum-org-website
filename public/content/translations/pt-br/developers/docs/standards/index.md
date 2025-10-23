@@ -13,7 +13,7 @@ Normalmente, os padrões são apresentados como [Propostas de melhorias do Ether
 
 - [Introdução às EIPs](/eips/)
 - [Lista de EIPs](https://eips.ethereum.org/)
-- [Repositório de GitHub sobre EIP](https://github.com/ethereum/EIPs)
+- [Repositório de GitHub sobre EIP](https://eips.ethereum.org)
 - [Tabela de discussão de EIP](https://ethereum-magicians.org/c/eips)
 - [Introdução à governança do Ethereum](/governance/)
 - [Visão geral da governança Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de Março de 2019 - Boris Mann_

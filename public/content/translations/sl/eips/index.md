@@ -14,7 +14,7 @@ Katerikoli član Ethereumove skupnosti lahko ustvari predlog za izboljšanje Eth
 
 ## Zakaj so predlogi za izboljšanje Ethereuma pomembni? {#why-do-eips-matter}
 
-Predlogi za izboljšanje Ethereuma igrajo osrednjo vlogo pri tem, kako nastanejo spremembe, in so dokumentirani na Ethereumu. So način, na katerega lahko uporabniki predlagajo spremembe, o njih razpravljajo in jih sprejmejo. Obstaja [več vrst predlogov za izboljšanje Ethereuma](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), vključno z jedrnimi predlogi za spremembe protokola na nižji ravni, ki vplivajo na mehanizem doseganja soglasja in zahtevajo nadgradnjo omrežja, na primer [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), in predlogi za standarde aplikacij ERC, na primer [EIP-20](https://eips.ethereum.org/EIPS/eip-20) in [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+Predlogi za izboljšanje Ethereuma igrajo osrednjo vlogo pri tem, kako nastanejo spremembe, in so dokumentirani na Ethereumu. So način, na katerega lahko uporabniki predlagajo spremembe, o njih razpravljajo in jih sprejmejo. Obstaja [več vrst predlogov za izboljšanje Ethereuma](https://eips.ethereum.org/blob/master/EIPS/eip-1.md#eip-types), vključno z jedrnimi predlogi za spremembe protokola na nižji ravni, ki vplivajo na mehanizem doseganja soglasja in zahtevajo nadgradnjo omrežja, na primer [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), in predlogi za standarde aplikacij ERC, na primer [EIP-20](https://eips.ethereum.org/EIPS/eip-20) in [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
 Vsaka nadgradnja omrežja je sestavljena iz nabora predlogov za izboljšanje Ethereuma, ki jih morajo uveljaviti vsi [Ethereumovi odjemalci](/learn/#clients-and-nodes) v omrežju. To pomeni, da morajo razvijalci odjemalcev uvesti vse zahtevane predloge za izboljšanje Ethereuma, da ostanejo v soglasju z drugimi odjemalci v glavnem Ethereumovem omrežju.
 
@@ -22,7 +22,7 @@ Poleg zagotavljanja tehničnih specifikacij za spremembe predstavljajo predlogi 
 
 ## Zgodovina predlogov za izboljšanje Ethereuma {#history-of-eips}
 
-[Repozitorij predlogov za izboljšanje Ethereuma v GitHubu](https://github.com/ethereum/EIPs) je bil ustvarjen oktobra 2015. Postopek za predloge za izboljšanje Ethereuma temelji na [postopku predlogov za izboljšanje Bitcoina (BIP)](https://github.com/bitcoin/bips), ki je zasnovan na postopku [za izboljšanje Pythona (PEP)](https://www.python.org/dev/peps/).
+[Repozitorij predlogov za izboljšanje Ethereuma v GitHubu](https://eips.ethereum.org) je bil ustvarjen oktobra 2015. Postopek za predloge za izboljšanje Ethereuma temelji na [postopku predlogov za izboljšanje Bitcoina (BIP)](https://github.com/bitcoin/bips), ki je zasnovan na postopku [za izboljšanje Pythona (PEP)](https://www.python.org/dev/peps/).
 
 Uredniki predlogov za izboljšanje Ethereuma so pristojni za pregled tehnične ustreznosti, oblikovnih težav, pravilnega črkovanja in slovnice ter sloga kode predlogov. Prvotni uredniki predlogov za izboljšanje Ethereuma so bili od leta 2015 do konca leta 2016 Martin Becze, Vitalik Buterin, Gavin Wood in še nekateri drugi.
 

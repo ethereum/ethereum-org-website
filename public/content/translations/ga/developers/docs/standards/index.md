@@ -13,7 +13,7 @@ De ghnáth tugtar isteach caighdeáin mar [Tograí Feabhsúcháin Ethereum](/eip
 
 - [Réamhrá do EIPanna](/eips/)
 - [Liosta EIPanna](https://eips.ethereum.org/)
-- [EIP stóras GitHub](https://github.com/ethereum/EIPs)
+- [EIP stóras GitHub](https://eips.ethereum.org)
 - [Bord plé an EIP](https://ethereum-magicians.org/c/eips)
 - [Réamhrá ar Rialachas Ethereum](/governance/)
 - [Forbhreathnú ar Rialachas Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _ 31 Márta, 2019 - Boris Mann_

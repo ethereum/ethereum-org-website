@@ -13,7 +13,7 @@ Po navadi so standardi predstavljeni kot [predlogi za izboljšanje Ethereuma](/e
 
 - [Uvod v EIP-je](/eips/)
 - [Seznam EIP-jev](https://eips.ethereum.org/)
-- [Repozitorij EIP GitHub](https://github.com/ethereum/EIPs)
+- [Repozitorij EIP GitHub](https://eips.ethereum.org)
 - [Klepetalnica za EIP](https://ethereum-magicians.org/c/eips)
 - [Uvod v Ethereumovo upravljanje](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31. marec 2019 – Boris Mann_

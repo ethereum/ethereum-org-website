@@ -32,7 +32,7 @@ Hai conoscenze di matematica, crittografia o economia? Potresti essere interessa
     2. Leggi [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Sì, questo è _l'intero_ documento.**
     3. Segui le indicazioni nella EIP-1. Fai riferimento a questo documento mentre scrivi la tua bozza.
   - Scopri come diventare un [editor di EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Puoi effettuare la revisione delle EIP dei colleghi proprio ora! Vedi [le PR aperte con l'etichetta `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fornisci un feedback tecnico al collegamento `discussion-to`.
+    - Puoi effettuare la revisione delle EIP dei colleghi proprio ora! Vedi [le PR aperte con l'etichetta `e-review`](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fornisci un feedback tecnico al collegamento `discussion-to`.
   - Partecipa alla [Governance EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Unisciti al [Discord di Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Maggiori informazioni sulle EIP](/eips/)

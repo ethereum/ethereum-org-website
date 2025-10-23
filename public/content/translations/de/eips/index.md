@@ -22,7 +22,7 @@ Neben der Bereitstellung einer technischen Spezifikation für Änderungen sind d
 
 ## Chronik der EIP {#history-of-eips}
 
-Das [GitHub-Repository zu EIPs (Ethereum -Verbesserungsvorschlägen)](https://github.com/ethereum/EIPs) wurde im Oktober 2015 geschaffen. Der EIP-Prozess basiert auf dem [Bitcoin-Prozess für Verbesserungsvorschläge (BIPs)](https://github.com/bitcoin/bips), der selbst auf dem Prozess [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/) aufbaut.
+Das [GitHub-Repository zu EIPs (Ethereum -Verbesserungsvorschlägen)](https://eips.ethereum.org) wurde im Oktober 2015 geschaffen. Der EIP-Prozess basiert auf dem [Bitcoin-Prozess für Verbesserungsvorschläge (BIPs)](https://github.com/bitcoin/bips), der selbst auf dem Prozess [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/) aufbaut.
 
 EIP-Autoren werden mit der Überprüfung von EIPs auf technische Stichhaltigkeit, korrekte Rechtschreibung/Grammatik und Codestil beauftragt. Martin Becze, Vitalik Buterin, Gavin Wood und einige andere waren von 2015 bis Ende 2016 die ursprünglichen EIP-Autoren.
 

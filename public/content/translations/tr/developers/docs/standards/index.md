@@ -13,7 +13,7 @@ Genellikle standartlar, bir [standart süreci](https://eips.ethereum.org/EIPS/ei
 
 - [EIP'lere giriş](/eips/)
 - [EIP listesi](https://eips.ethereum.org/)
-- [EIP GitHub deposu](https://github.com/ethereum/EIPs)
+- [EIP GitHub deposu](https://eips.ethereum.org)
 - [EIP tartışma panosu](https://ethereum-magicians.org/c/eips)
 - [Ethereum Yönetişimine Giriş](/governance/)
 - [Ethereum Yönetişimine Genel Bakış](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 Mart 2019 - Boris Mann_

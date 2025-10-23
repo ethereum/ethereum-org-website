@@ -46,7 +46,7 @@ Slither memasukkan utilitas, [slither-check-erc](https://github.com/crytic/slith
 - **Transfer dan transferFrom mengembalikan boolean.** Beberapa token tidak mengembalikan boolean pada fungsi ini. Akibatnya, pemanggilan mereka dalam kontrak mungkin gagal.
 - **Fungsi nama, desimal, dan simbol ada jika digunakan.** Fungsi ini bersifat opsional dalam standar ERC20 dan mungkin tidak ada.
 - **Desimal mengembalikan uint8.** Beberapa token secara tidak benar mengembalikan uint256. Jika ini terjadi, pastikan nilai yang dikembalikan di bawah 255.
-- **Token memitigasi [kondisi pacu ERC20](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729) yang diketahui.** Standar ERC20 memiliki kondisi pacu ERC20 yang diketahui yang harus dimitigasi untuk mencegah penyerang mencuri token.
+- **Token memitigasi [kondisi pacu ERC20](https://eips.ethereum.org/issues/20#issuecomment-263524729) yang diketahui.** Standar ERC20 memiliki kondisi pacu ERC20 yang diketahui yang harus dimitigasi untuk mencegah penyerang mencuri token.
 - **Token bukan token ERC777 dan tidak memiliki pemanggilan fungsi eksternal dalam transfer dan transferFrom.** Pemanggilan eksternal dalam fungsi transfer bisa menyebabkan reentancy.
 
 Slither memasukkan utilitas, [slither-prop](https://github.com/crytic/slither/wiki/Property-generation), yang membuat tes unit dan properti keamanan yang bisa menemukan banyak kelemahan ERC umum. Gunakan slither-prop untuk mengulas bahwa:

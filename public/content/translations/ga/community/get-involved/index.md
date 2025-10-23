@@ -32,7 +32,7 @@ An bhfuil cúlra agat sa mhatamaitic, cripteagrafaíocht nó eacnamaíocht? B’
     2. Léigh [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - ** Sea, sin é an _doiciméad iomlán_.**
     3. Lean na treoracha in EIP-1. Déan tagairt dó agus tú ag scríobh do dhréacht.
   - Foghlaim conas a bheith i do [Eagarthóir EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Is féidir leat piarmheasúnú EIP a dhéanamh anois! Féach [PRanna oscailte leis an `e-review` clib](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Tabhair aiseolas teicniúil ar an nasc `discussion-to`.
+    - Is féidir leat piarmheasúnú EIP a dhéanamh anois! Féach [PRanna oscailte leis an `e-review` clib](https://eips.ethereum.org/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Tabhair aiseolas teicniúil ar an nasc `discussion-to`.
   - Glac páirt i [Rialachas EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - Glac páirt sa [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Tuilleadh faoi EIPeanna](/eips/)

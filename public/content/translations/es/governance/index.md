@@ -90,7 +90,7 @@ Esta secuencia, aunque muy simplificada, da una visión general de las etapas si
 
 ### Comprensión del trabajo previo {#prior-work}
 
-Los defensores de una determinada EIP deberían familiarizarse con el trabajo y las propuestas previas antes de crear una EIP que pueda llegar a considerarse seriamente para su implementación en la red principal de Ethereum. De esta forma, la EIP traerá consigo una idea novedosa que no se haya rechazado anteriormente. Los tres lugares principales para estas investigaciones son: el [repositorio de EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) y [ethinvestig.ch](https://ethresear.ch/).
+Los defensores de una determinada EIP deberían familiarizarse con el trabajo y las propuestas previas antes de crear una EIP que pueda llegar a considerarse seriamente para su implementación en la red principal de Ethereum. De esta forma, la EIP traerá consigo una idea novedosa que no se haya rechazado anteriormente. Los tres lugares principales para estas investigaciones son: el [repositorio de EIP](https://eips.ethereum.org), [Ethereum Magicians](https://ethereum-magicians.org/) y [ethinvestig.ch](https://ethresear.ch/).
 
 ### Grupos de trabajo {#working-groups}
 

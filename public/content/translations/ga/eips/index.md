@@ -22,7 +22,7 @@ Chomh maith le sonraíocht theicniúil a sholáthar le haghaidh athruithe, is ia
 
 ## Stair na nEIPanna {#history-of-eips}
 
-Cruthaíodh stór GitHub [Tograí Feabhsúcháin Ethereum (EIPanna)](https://github.com/ethereum/EIPs) i mí Dheireadh Fómhair 2015. Tá an próiseas EIP bunaithe ar an bpróiseas [Moltaí Feabhsúcháin Bitcoin (BIPanna)](https://github.com/bitcoin/bips), atá bunaithe ar an [Próiseas Moltaí Feabhsúcháin Python (PEPanna)](https://www.python.org/dev/peps/).
+Cruthaíodh stór GitHub [Tograí Feabhsúcháin Ethereum (EIPanna)](https://eips.ethereum.org) i mí Dheireadh Fómhair 2015. Tá an próiseas EIP bunaithe ar an bpróiseas [Moltaí Feabhsúcháin Bitcoin (BIPanna)](https://github.com/bitcoin/bips), atá bunaithe ar an [Próiseas Moltaí Feabhsúcháin Python (PEPanna)](https://www.python.org/dev/peps/).
 
 Tá sé de chúram ar eagarthóirí EIP athbhreithniú a dhéanamh ar EIPanna le haghaidh fóntacht theicniúil, saincheisteanna formáidithe, agus litriú, gramadach agus stíl chóid a cheartú. Ba iad Martin Becze, Vitalik Buterin, Gavin Wood, agus roinnt eile na heagarthóirí bunaidh EIP ó 2015 go dtí deireadh 2016.
 
