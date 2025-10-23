@@ -25,7 +25,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Documentation](https://docs.alchemy.com/)
+- [Documentation](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
@@ -61,7 +61,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)
-- [Documentation](https://getblock.io/docs/)
+- [Documentation](https://docs.getblock.io/)
 
 **Infura -** **_The Ethereum API as a service._**
 
@@ -77,7 +77,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **NOWNodes - _Full Nodes and Block Explorers._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+- [Documentation](https://nownodes.gitbook.io/documentation)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
@@ -114,7 +114,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Python Tooling -** **_Variety of libraries for Ethereum interaction via Python._**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
@@ -152,8 +152,8 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Coinbase Cloud Node -** **_Blockchain Infrastructure API._**
 
-- [Coinbase Cloud Node](https://www.coinbase.com/cloud)
-- [Documentation](https://docs.cloud.coinbase.com/)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
+- [Documentation](https://docs.cdp.coinbase.com/)
 
 **DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
 
