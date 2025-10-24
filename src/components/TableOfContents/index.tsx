@@ -24,7 +24,7 @@ const variants = cva(
   {
     variants: {
       variant: {
-        docs: "top-19 min-w-48 max-w-[25%] p-4 pe-0 gap-4 max-h-[calc(100vh-5rem)]",
+        docs: "top-19 min-w-48 max-w-[25%] p-4 pb-16 pe-0 gap-4 max-h-[calc(100vh-5rem)]",
         card: cn(
           "top-28 min-w-80 max-w-72 lg:p-8 px-3 py-2",
           "shrink-0 gap-y-2.5 rounded-2xl bg-accent-a/10 text-body-medium"
