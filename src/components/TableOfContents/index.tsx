@@ -20,7 +20,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 
 const variants = cva(
-  "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
+  "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto max-h-[calc(100vh-5rem)]",
   {
     variants: {
       variant: {
