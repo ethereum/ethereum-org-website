@@ -96,7 +96,7 @@ const UpcomingEventsList = () => {
     })
   }
 
-  if (Object.keys(monthGroupedEvents)?.length) {
+  if (Object.keys(monthGroupedEvents)?.length === 0) {
     return (
       <Alert variant="update">
         <AlertEmoji text=":information_source:" />
