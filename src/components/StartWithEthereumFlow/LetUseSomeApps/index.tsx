@@ -11,7 +11,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import AaveImage from "@/public/images/dapps/aave.png"
 import OpenSeaImage from "@/public/images/dapps/opensea.png"
 import UniswapImage from "@/public/images/dapps/uni.png"
-import WarpcastImage from "@/public/images/dapps/warpcast.png"
+import FarcasterImage from "@/public/images/dapps/farcaster.png"
 
 const LetUseSomeApps = ({
   stepIndex,
@@ -24,8 +24,8 @@ const LetUseSomeApps = ({
 
   const dappsList = [
     {
-      name: "Warpcast",
-      description: t("page-start-apps-warpcast-description"),
+      name: "Farcaster",
+      description: t("page-start-apps-farcaster-description"),
       tag: (
         <Tag
           status="tag"
@@ -35,8 +35,8 @@ const LetUseSomeApps = ({
           {t("page-start-apps-socials-tag")}
         </Tag>
       ),
-      url: "https://warpcast.com/",
-      image: WarpcastImage,
+      url: "https://www.farcaster.xyz/",
+      image: FarcasterImage,
     },
     {
       name: "Aave",
