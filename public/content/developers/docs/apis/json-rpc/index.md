@@ -1172,9 +1172,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae", false],"id":1}'
 // Result
 {
-"jsonrpc": "2.0",
-"id": 1,
-"result": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
     "difficulty": "0x4ea3f27bc",
     "extraData": "0x476574682f4c5649562f76312e302e302f6c696e75782f676f312e342e32",
     "gasLimit": "0x1388",
@@ -1197,7 +1197,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
     "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
     "uncles": [
     ]
-}
+  }
 }
 ```
 
