@@ -73,7 +73,7 @@ The core Ethereum protocol is primarily concerned with data availability, not da
 ## Further reading {#further-reading}
 
 - [WTF is Data Availability?](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
-- [What Is Data Availability?](https://coinmarketcap.com/alexandria/article/what-is-data-availability)
+- [What Is Data Availability?](https://coinmarketcap.com/academy/article/what-is-data-availability)
 - [A primer on data availability checks](https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html)
 - [An explanation of the sharding + DAS proposal](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
 - [A note on data availability and erasure coding](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding#can-an-attacker-not-circumvent-this-scheme-by-releasing-a-full-unavailable-block-but-then-only-releasing-individual-bits-of-data-as-clients-query-for-them)
