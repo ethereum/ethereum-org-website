@@ -4,7 +4,6 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import ContributorsQuizBanner from "@/components/Banners/ContributorsQuizBanner"
 import Card from "@/components/Card"
-import ClientDiversityChart from "@/components/ClientDiversityChart"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
 import Contributors from "@/components/Contributors"
@@ -167,7 +166,6 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 export const reactComponents = {
   ...AlertComponents,
   BrowseApps,
-  ClientDiversityChart,
   ButtonLink,
   Card,
   ContentContainer,

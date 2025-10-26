@@ -151,6 +151,5 @@
   "back-to-top": "Back to top",
   "banner-page-incomplete": "This page is incomplete and we'd love your help. Edit this page and add anything that you think might be useful to others.",
   "next": "Next",
-  "previous": "Previous",
-  "client-diversity-chart-disclaimer": "This diagram may be outdated — go to <a href=\"https://ethernodes.org\">ethernodes.org</a> and <a href=\"https://clientdiversity.org/\">clientdiversity.org</a> for up-to-date information."
+  "previous": "Previous"
 }
