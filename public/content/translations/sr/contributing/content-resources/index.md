@@ -1,3 +1,4 @@
+<!-- Test minor doc update for Talent Protocol -->
 ---
 title: Dodavanje resursa za sadržaj
 lang: sr
