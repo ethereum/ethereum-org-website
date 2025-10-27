@@ -116,10 +116,12 @@ export function PieChart({
   if (processedData.length === 0) {
     return (
       <Card className="w-full">
-        <CardHeader className="!pt-0">
-          {title && <CardTitle>{title}</CardTitle>}
-          {description && <CardDescription>{description}</CardDescription>}
-        </CardHeader>
+        {(title || description) && (
+          <CardHeader className="!pt-0">
+            {title && <CardTitle>{title}</CardTitle>}
+            {description && <CardDescription>{description}</CardDescription>}
+          </CardHeader>
+        )}
         <CardContent className="flex h-64 items-center justify-center">
           <p className="text-muted-foreground">No data available</p>
         </CardContent>
