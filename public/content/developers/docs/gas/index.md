@@ -34,9 +34,9 @@ You can set the amount of gas you are willing to pay when you submit a transacti
 
 The total gas you pay is divided into two components: the `base fee` and the `priority fee` (tip).
 
-The `base fee` is set by the protocol - you have to pay at least this amount for your transaction to be considered valid. The `priority fee` is a tip that you add to the base fee to make your transaction attractive to validators so that they choose it for inclusion in the next block.
+The `base fee` is set by the protocol—you have to pay at least this amount for your transaction to be considered valid. The `priority fee` is a tip that you add to the base fee to make your transaction attractive to validators so that they choose it for inclusion in the next block.
 
-A transaction that only pays the `base fee` is technically valid but unlikely to be included because it offers no incentive to the validators to choose it over any other transaction. The 'correct' `priority` fee is determined by the network usage at the time you send your transaction - if there is a lot of demand then you might have to set your `priority` fee higher, but when there is less demand you can pay less.
+A transaction that only pays the `base fee` is technically valid but unlikely to be included because it offers no incentive to the validators to choose it over any other transaction. The 'correct' `priority` fee is determined by the network usage at the time you send your transaction—if there is a lot of demand then you might have to set your `priority` fee higher, but when there is less demand you can pay less.
 
 For example, let's say Jordan has to pay Taylor 1 ETH. An ETH transfer requires 21,000 units of gas, and the base fee is 10 gwei. Jordan includes a tip of 2 gwei.
 
@@ -52,7 +52,7 @@ When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account
 
 ### Base fee {#base-fee}
 
-Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is created this **base fee is "burned"**, removing it from circulation.
+Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it, making transaction fees more predictable for users. When the block is created this **base fee is "burned"**, removing it from circulation.
 
 The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size (half of the gas limit). The base fee will increase or decrease by a maximum of 12.5% per block if the target block size is above or below the target, respectively. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
 
@@ -122,7 +122,7 @@ High gas fees are due to the popularity of Ethereum. If there's too much demand,
 
 The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
-Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. 
+Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability.
 
 [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling)
 
