@@ -122,7 +122,7 @@ La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilit�
 
 <ExpandableCard
 title="Equivoci: &quot;Eseguire un nodo richiede lo staking di 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Esistono due tipi di nodi di Ethereum: i nodi che possono proporre blocchi e quelli che non possono.
 

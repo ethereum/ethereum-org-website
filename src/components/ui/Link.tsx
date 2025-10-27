@@ -46,13 +46,13 @@ export type LinkProps = BaseProps &
  * Link wrapper which handles:
  *
  * - Hashed links
- * e.g. <Link href="/page-2/#specific-section">
+ * e.g., <Link href="/page-2/#specific-section">
  *
  * - External links
- * e.g. <Link href="https://example.com/">
+ * e.g., <Link href="https://example.com/">
  *
  * - PDFs & static files (which open in a new tab)
- * e.g. <Link href="/eth-whitepaper.pdf">
+ * e.g., <Link href="/eth-whitepaper.pdf">
  */
 export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   {

@@ -119,7 +119,7 @@ id="developers">
 
 <ExpandableCard
 title="الاعتقاد الخطأ: &quot;يتطلب تشغيل عقدة تجميد 32 إثيريوم.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 يوجد نوعان من عُقد إثيريوم: العُقد التي قد تقترح الكتل والعقد التي لا تقترح الكتل.
 
 حيث تمثل العُقد التي تقترح كتل فقط عددًا صغيرًا من مجموع العقد على إثيريوم. وتشمل هذه الفئة عُقد التنقيب بموجب إثبات العمل (PoW) وعقد برنامج المدقق بموجب إثبات الحصة (PoS). كما تتطلب هذه الفئة تخصيص مصادر اقتصادية (مثل قوة تجزئة GPU في إثبات العمل أو تجميد ETH في إثبات الحصة) نظير القدرة على اقتراح الكتلة التالية من حين لآخر والحصول على مكافآت البروتوكول.

@@ -122,7 +122,7 @@ The Merge também preparou o terreno para futuras atualizações de escalabilida
 
 <ExpandableCard
 title="Equívoco: &quot;executar um nó requer a participação de 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Existem dois tipos de nós no Ethereum: nós que podem propor blocos e nós que não podem.
 

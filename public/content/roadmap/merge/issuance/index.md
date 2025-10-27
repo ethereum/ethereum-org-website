@@ -6,7 +6,7 @@ lang: en
 
 # How The Merge impacted ETH supply {#how-the-merge-impacts-ETH-supply}
 
-The Merge represented the Ethereum network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
+The Merge represented the Ethereum network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e., Mainnet) and the consensus layer (i.e., Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
 
 ## Components of ETH issuance {#components-of-eth-issuance}
 

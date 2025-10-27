@@ -122,7 +122,7 @@ Sloučení také připravilo půdu pro další škálovatelná vylepšení, kter
 
 <ExpandableCard
 title="Mylná představa: &quot;Pro spuštění uzlu je potřeba uzamknout 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Existují dva typy síťových uzlů Etherea: Uzly, které mohou navrhovat bloky, a uzly, které nemohou.
 
