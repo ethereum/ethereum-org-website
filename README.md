@@ -399,7 +399,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.yazkhoury.com"><img src="https://avatars2.githubusercontent.com/u/9094204?v=4?s=100" width="100px;" alt="Yaz Khoury"/><br /><sub><b>Yaz Khoury</b></sub></a><br /><a href="#content-YazzyYaz" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://yos.io"><img src="https://avatars3.githubusercontent.com/u/1084226?v=4?s=100" width="100px;" alt="Yos Riady"/><br /><sub><b>Yos Riady</b></sub></a><br /><a href="#content-yosriady" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://infura.io"><img src="https://avatars2.githubusercontent.com/u/1210802?v=4?s=100" width="100px;" alt="Andrew Cohen"/><br /><sub><b>Andrew Cohen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aandrewjcohen" title="Bug reports">🐛</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/wslyvh"><img src="https://avatars2.githubusercontent.com/u/25974464?v=4?s=100" width="100px;" alt="Wesley van Heije"/><br /><sub><b>Wesley van Heije</b></sub></a><br /><a href="#content-wslyvh" title="Content">🖋</a> <a href="#infra-wslyvh" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/wslyvh"><img src="https://avatars2.githubusercontent.com/u/25974464?v=4?s=100" width="100px;" alt="Wesley"/><br /><sub><b>Wesley</b></sub></a><br /><a href="#content-wslyvh" title="Content">🖋</a> <a href="#infra-wslyvh" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gr0uch0dev"><img src="https://avatars1.githubusercontent.com/u/17497722?v=4?s=100" width="100px;" alt="gr0uch0dev"/><br /><sub><b>gr0uch0dev</b></sub></a><br /><a href="#content-gr0uch0dev" title="Content">🖋</a></td>
@@ -2131,6 +2131,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/trikunai"><img src="https://avatars.githubusercontent.com/u/46504155?v=4?s=100" width="100px;" alt="trikunai"/><br /><sub><b>trikunai</b></sub></a><br /><a href="#tool-trikunai" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/baiwfg2"><img src="https://avatars.githubusercontent.com/u/5157680?v=4?s=100" width="100px;" alt="Lewis Chan"/><br /><sub><b>Lewis Chan</b></sub></a><br /><a href="#content-baiwfg2" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

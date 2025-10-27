@@ -1305,7 +1305,7 @@
     },
     {
       "login": "wslyvh",
-      "name": "Wesley van Heije",
+      "name": "Wesley",
       "avatar_url": "https://avatars2.githubusercontent.com/u/25974464?v=4",
       "profile": "https://twitter.com/wslyvh",
       "contributions": [
@@ -13769,6 +13769,15 @@
       "profile": "https://github.com/trikunai",
       "contributions": [
         "tool"
+      ]
+    },
+    {
+      "login": "baiwfg2",
+      "name": "Lewis Chan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5157680?v=4",
+      "profile": "https://github.com/baiwfg2",
+      "contributions": [
+        "content"
       ]
     }
   ],
