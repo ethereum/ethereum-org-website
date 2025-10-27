@@ -14,7 +14,7 @@ If you are new to blockchain development and don’t know where to start, or if 
 >
 > 🚧 Deprecation Notice
 >
-> For the entirety of this guide, the Sepolia test network is being used for creating and deploying a smart contract. However, please note that the Ethereum Foundation has announced that [Sepolia will soon be deprecated](https://www.alchemy.com/blog/Sepolia-faucet-deprecation).
+> For the entirety of this guide, the Sepolia test network is being used for creating and deploying a smart contract. However, please note that the Ethereum Foundation has announced that [Sepolia will soon be deprecated](https://www.alchemy.com/blog/sepolia-faucet-deprecation).
 >
 > We recommend you to use the [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) and [Sepolia faucet](https://sepoliafaucet.com/) for this tutorial.
 
@@ -50,7 +50,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ## Step 4: Add ether from a Faucet {#step-4}
 
-In order to deploy our smart contract to the test network, we’ll need some fake Eth. To get Eth you can go to the [Sepolia faucet](https://Sepoliafaucet.com/) and log into your Alchemy account and enter your wallet address, then click “Send Me Eth.” It may take some time to receive your fake Eth due to network traffic. (At the time of writing this, it took around 30 minutes.) You should see Eth in your Metamask account soon after!
+In order to deploy our smart contract to the test network, we’ll need some fake Eth. To get Eth you can go to the [Sepolia faucet](https://sepoliafaucet.com/) and log into your Alchemy account and enter your wallet address, then click “Send Me Eth.” It may take some time to receive your fake Eth due to network traffic. (At the time of writing this, it took around 30 minutes.) You should see Eth in your Metamask account soon after!
 
 ## Step 5: Check your Balance {#step-5}
 
@@ -227,7 +227,7 @@ Copy Alchemy API URL
 Your `.env` should look like this:
 
 ```
-API_URL = "https://eth-Sepolia.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
@@ -345,7 +345,7 @@ You should then see something like:
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-If we go to the [Sepolia etherscan](https://Sepolia.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
+If we go to the [Sepolia etherscan](https://sepolia.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
 
 ![etherscan contract](./etherscan-contract.png)
 
