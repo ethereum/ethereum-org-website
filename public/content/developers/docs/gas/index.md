@@ -54,7 +54,7 @@ When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account
 
 Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is created this **base fee is "burned"**, removing it from circulation.
 
-The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size. The base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
+The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size (half of the gas limit). The base fee will increase or decrease by a maximum of 12.5% per block if the target block size is above or below the target, respectively. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
@@ -67,7 +67,7 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 7            |          36M |        12.5% |       180.2 gwei |
 | 8            |          36M |        12.5% |       202.7 gwei |
 
-Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
+In the table above, an example is demonstrated using 36 million as the gas limit. Following this example, to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
 
 It's also important to note it is unlikely we will see extended spikes of full blocks because of the speed at which the base fee increases preceding a full block.
 
@@ -89,7 +89,9 @@ To execute a transaction on the network, users can specify a maximum limit they 
 
 ### Block size {#block-size}
 
-Each block has a target size of 18 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 36 million gas (2x the target block size). The protocol achieves an equilibrium block size of 18 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target.
+Each block has a target size of half the current gas limit, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit is reached (2x the target block size). The protocol achieves an equilibrium average block size at the target through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size.
+
+The amount by which the base fee is adjusted is proportional to how far the current block size is from the target. This is a linear calculation from -12.5% for an empty block, 0% at the target size, up to +12.5% for a block reaching the gas limit. The gas limit can fluctuate over time based on validator signalling, as well as via network upgrades. You can [view the changes in gas limit over time here](https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths).
 
 [More on blocks](/developers/docs/blocks/)
 
