@@ -60,6 +60,7 @@ import {
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
+import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
@@ -81,11 +82,13 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -145,6 +148,7 @@ const loadData = dataLoader(
     ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
+    ["appsData", fetchApps],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -168,7 +172,10 @@ const Page = async ({ params }: { params: PageParams }) => {
     communityEvents,
     attestantPosts,
     xmlBlogs,
+    appsData,
   ] = await loadData()
+
+  const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)
 
@@ -508,6 +515,24 @@ const Page = async ({ params }: { params: PageParams }) => {
                 eventCategory={eventCategory}
               />
             ))}
+          </Section>
+
+          {/* Apps of the week - Discover the best apps on Ethereum */}
+          <Section id="apps-of-the-week">
+            <SectionContent className="flex flex-col gap-4">
+              <div className="flex flex-col items-center text-center">
+                <SectionTag>Apps of the week</SectionTag>
+                <SectionHeader>Discover apps on Ethereum</SectionHeader>
+                <p className="text-lg">Start exploring Ethereum today</p>
+              </div>
+              <AppsHighlight
+                apps={appsOfTheWeek}
+                matomoCategory="apps-of-the-week"
+              />
+              <div className="flex justify-center">
+                <ButtonLink href="/apps">Browse apps &gt;</ButtonLink>
+              </div>
+            </SectionContent>
           </Section>
 
           {/* Activity - The strongest ecosystem */}

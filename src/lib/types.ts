@@ -1122,6 +1122,8 @@ export type App = {
   lastUpdated: string
   ready: string
   devconnect: string
+  appOfTheWeekStartDate: Date | null
+  appOfTheWeekEndDate: Date | null
 }
 
 export type DefiApp = App & {
