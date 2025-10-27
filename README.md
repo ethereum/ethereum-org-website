@@ -2133,6 +2133,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/trikunai"><img src="https://avatars.githubusercontent.com/u/46504155?v=4?s=100" width="100px;" alt="trikunai"/><br /><sub><b>trikunai</b></sub></a><br /><a href="#tool-trikunai" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/baiwfg2"><img src="https://avatars.githubusercontent.com/u/5157680?v=4?s=100" width="100px;" alt="Lewis Chan"/><br /><sub><b>Lewis Chan</b></sub></a><br /><a href="#content-baiwfg2" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ocandocrypto"><img src="https://avatars.githubusercontent.com/u/124130440?v=4?s=100" width="100px;" alt="Angela O"/><br /><sub><b>Angela O</b></sub></a><br /><a href="#maintenance-ocandocrypto" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/HSuke"><img src="https://avatars.githubusercontent.com/u/3211079?v=4?s=100" width="100px;" alt="HSuke"/><br /><sub><b>HSuke</b></sub></a><br /><a href="#maintenance-HSuke" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
