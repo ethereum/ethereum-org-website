@@ -9,9 +9,9 @@ import { Tag } from "@/components/ui/tag"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import AaveImage from "@/public/images/dapps/aave.png"
+import FarcasterImage from "@/public/images/dapps/farcaster.png"
 import OpenSeaImage from "@/public/images/dapps/opensea.png"
 import UniswapImage from "@/public/images/dapps/uni.png"
-import FarcasterImage from "@/public/images/dapps/farcaster.png"
 
 const LetUseSomeApps = ({
   stepIndex,
