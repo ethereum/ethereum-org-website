@@ -13780,6 +13780,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ocandocrypto",
+      "name": "Angela O",
+      "avatar_url": "https://avatars.githubusercontent.com/u/124130440?v=4",
+      "profile": "https://github.com/ocandocrypto",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
