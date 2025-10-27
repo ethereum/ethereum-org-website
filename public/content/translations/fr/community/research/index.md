@@ -39,9 +39,9 @@ Outre des recherches prospectives, certaines refontes fondamentales du protocole
 
 #### Lecture de fond {#background-reading}
 
-- Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
 - [Article Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Explication Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Explication Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Article Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Recherche récente {#recent-research}

@@ -54,11 +54,17 @@ Offerta totale di ETH: **circa 120.520.000 ETH** (al momento della Fusione a set
 - Il risultato è **circa 620.500** ETH emessi in un anno
 - Il risultato è un tasso d'inflazione **approssimativamente dello 0,52%** (620.5K l'anno / 119.3M totali)
 
-<InfoBanner>
-<strong>Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>Circa l'88,7%</strong> dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)<br/><br/>
-<strong>Circa l'11,3%</strong> era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Tasso di emissione annualizzato totale (pre-Fusione): circa 4,61%** (4,09% + 0,52%)
+
+**Circa l'88,7%** dell'emissione andava ai miner sul livello d'esecuzione (4,09 / 4,61 * 100)
+
+**Circa l'11,3%** era emesso agli staker sul livello del consenso (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Post-Fusione (oggi) {#post-merge}
 
@@ -84,18 +90,27 @@ All'aumentare del numero di validatori che prelevano, il numero massimo di valid
 - Emissione del livello d'esecuzione: **0**
 - Emissione del livello di consenso: come sopra, tasso di emissione annualizzato **approssimativo dello 0,52%** (con 14 milioni di ETH in staking totali)
 
-<InfoBanner>
-Tasso di emissione annualizzato totale: <strong>circa 0,52%</strong><br/><br/>
-Riduzione netta nell'emissione annuale di ETH: <strong>circa 88,7%</strong> ((4,61%-0,52%) / 4,61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Tasso di emissione annualizzato totale: **circa 0,52%**
+
+Riduzione netta nell'emissione annuale di ETH: **circa 88,7%** ((4,61%-0,52%) / 4,61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />La bruciatura {#the-burn}
 
 La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. Per l'esecuzione di una transazione su Ethereum, dev'essere pagata una commissione minima (nota come "commissione di base"), che fluttua continuamente (da blocco a blocco), a seconda dell'attività di rete. La commissione è pagata in ETH ed è _necessaria_ affinché la transazione sia considerata valida. Questa commissione viene _bruciata_ durante il procedimento della transazione, rimuovendola dalla circolazione.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 La bruciatura delle commissioni è divenuta attiva con l'[aggiornamento di Londra](/ethereum-forks/#london) ad agosto 2021 e resta immutata da La Fusione.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Oltre alla bruciatura della commissione, implementata dall'aggiornamento di Londra, i validatori, inoltre, possono incorrere in sanzioni per essere online o, peggio, possono ricevere tagli per l'infrazione di regole specifiche che minacciano la sicurezza della rete. Queste, risultano in una riduzione degli ETH dal saldo di quel validatore, che non è ricompensato direttamente a nessun altro conto, bruciandoli/rimuovendoli effettivamente dalla circolazione.
 

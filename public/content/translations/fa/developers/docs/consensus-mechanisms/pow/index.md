@@ -6,9 +6,14 @@ lang: fa
 
 شبکه اتریوم با استفاده از یک مکانیزم اجماعی که شامل **[اثبات کار (PoW)](/developers/docs/consensus-mechanisms/pow)** بود، شروع به کار کرد. این موضوع به گره های شبکه اتریوم اجازه داد روی وضعیت تمام اطلاعات ثبت شده روی زنجیره‌‌ بلوکی اتریوم به توافق برسند و از انواع خاصی از حملات اقتصادی جلوگیری کنند. با این حال، اتریوم اثبات کار را در سال 2022 خاموش کرد و به جای آن شروع به استفاده از [اثبات سهام](/developers/docs/consensus-mechanisms/pos) کرد.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     در حال حاضر اثبات کار منسوخ شده است. اتریوم دیگر از اثبات کار به عنوان بخشی از مکانیزم اجماع خود استفاده نمی کند. در عوض، از اثبات سهام استفاده می کند. در مورد [اثبات سهام](/developers/docs/consensus-mechanisms/pos/) و [سهام گذاری](/staking/) بیشتر بخوانید.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## پیش‌نیازها {#prerequisites}
 

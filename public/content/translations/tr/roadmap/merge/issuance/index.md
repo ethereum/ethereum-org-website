@@ -54,11 +54,17 @@ Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 202
 - Yıllık **~620.500** dağıtımı ile sonuçlanır
 - **Yaklaşık %0.52** enflasyon oranı ile sonuçlanır (yıllık 620,5K/toplam 119,3M)
 
-<InfoBanner>
-<strong>Toplam yıllık dağıtım oranı (Birleşim öncesi): \~%4,61</strong> (%4,09 + %0,52)<br/><br/>
-Dağıtımın <strong>\~%88,7'i</strong> yürütüm katmanındaki madencilere gidiyordu (4,09/4,61 * 100)<br/><br/>
-<strong>\~%11,3'i</strong> fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Toplam yıllık dağıtım oranı (Birleşim öncesi): \~%4,61** (%4,09 + %0,52)
+
+Dağıtımın **\~%88,7'i** yürütüm katmanındaki madencilere gidiyordu (4,09/4,61 * 100)
+
+**\~%11,3'i** fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Birleşim sonrası (günümüz) {#post-merge}
 
@@ -84,18 +90,27 @@ Daha fazla doğrulayıcı parasını çektikçe, hisselenmiş yüksek miktarda E
 - Yürütüm katmanı dağıtımı: **0**
 - Fikir birliği katmanı dağıtımı: Yukardakiyle aynı şekilde %**~0,52** yıllıklaştırılmış dağıtım oranı (toplam 14 millyon hisselenmiş ETH)
 
-<InfoBanner>
-Toplam yıllıklaştırılmış dağıtım oranı: <strong>\~%0,52</strong><br/><br/>
-ETH dağıtımındaki net azalma: <strong>\~%88,7</strong> ((%4,61 - %0,52)/%4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Toplam yıllıklaştırılmış dağıtım oranı: **\~%0,52**
+
+ETH dağıtımındaki net azalma: **\~%88,7** ((%4,61 - %0,52)/%4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />Yakma {#the-burn}
 
 ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzerinde bir işlemin gerçekleştirilebilmesi için, bir minimum ücret (ana ücret) ödenmelidir ve bu fiyat ağ aktivitesine bağlı olarak sürekli olarak dalgalanır (bloktan bloka). Bu ücret ETH olarak ödenir ve işlemin geçerli olarak kabul edilmesi için _zorunludur_. Bu ücret, işlem sırasında _yakılır_ ve dolaşımdan kaldırılır.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Ücret yakımı Ağustos 2021'de [London yükseltmesi](/ethereum-forks/#london) ile yürürlüğe girmiştir ve Birleşim'den bu yana değişmemiştir.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 London yükseltmesinde uygulanan ücret yakımına ek olarak doğrulayıcılar çevrimdışı olmaları sebebiyle ceza alabilir, hatta daha kötüsü, belirli kurallara uymayarak ağın güvenliğini tehdit ettikleri için paralarının bir kısmını kaybedebilir ve atılabilirler. Bu cezalar doğrulayıcı bakiyelerinde azaltma ile sonuçlanabilir ve bu bakiyeler başka hesaplara ödül olarak verilmeden yakılır/dolaşımdan kaldırılır.
 

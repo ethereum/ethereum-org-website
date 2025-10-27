@@ -54,11 +54,17 @@ Teljes ETH-kínálat: **~120 520 000 ETH** (a Beolvadás idején, 2022. szepte
 - Ennek eredményeként **kb. 620 500** ETH-t bocsátanak ki évente
 - Ennek eredménye a **kb. 0,52%-os** inflációs ráta (évi 620,5 ezer osztva a teljes 119,3 millióval)
 
-<InfoBanner>
-<strong>Teljes éves kibocsátási ráta (a Beolvadás előtt): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-a kibocsátás <strong>kb. 88,7%-a</strong> ment a bányászoknak a végrehajtási rétegen (4,09 / 4,61 * 100)<br/><br/>
-<strong>kb. 11,3%-a</strong> a letétesekhez került a konszenzusrétegen (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Teljes éves kibocsátási ráta (a Beolvadás előtt): ~4,61%** (4,09% + 0,52%)
+
+a kibocsátás **kb. 88,7%-a** ment a bányászoknak a végrehajtási rétegen (4,09 / 4,61 * 100)
+
+**kb. 11,3%-a** a letétesekhez került a konszenzusrétegen (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## A Beolvadás után (jelenlegi szisztéma) {#post-merge}
 
@@ -84,18 +90,27 @@ Ahogy több validátor vonul ki, a meglévő validátorok száma fokozatosan lec
 - A végrehajtási réteg kibocsátása: **0**
 - A konszenzusréteg kibocsátása: A fentivel megegyezik, **kb. 0,52%** éves kibocsátási ráta (14 millió letétbe helyezett ETH-szel)
 
-<InfoBanner>
-Teljes éves kibocsátási ráta: <strong>kb. 0,52%</strong><br/><br/>
-Az éves ETH kibocsátás nettó csökkenése: <strong>kb. 88,7%</strong> ((4,61% – 0,52%) / 4,61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Teljes éves kibocsátási ráta: **kb. 0,52%**
+
+Az éves ETH kibocsátás nettó csökkenése: **kb. 88,7%** ((4,61% – 0,52%) / 4,61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Az elégetés {#the-burn}
 
 Az ETH kibocsátással ellenkező erő az a ráta, ahogy az ETH-t elégetik. Az Ethereumon végrehajtandó tranzakcióért fizetni kell egy minimális díjat (alapdíj), amely állandóan változik, blokkról blokkra, a hálózati működés függvényében. Ezt a díjat ETH-ben fizetik, és _elengedhetetlen_ ahhoz, hogy egy tranzakció érvényes legyen. Ezt a díjat _elégetik_ a tranzakció végrehajtása során, így kikerül a körforgásból.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 A díj elégetése a [London-frissítés](/ethereum-forks/#london) óta (2021. augusztus) működik, és a Beolvadás óta változatlan.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 A bevezetett díj elégetése mellett a validátorok büntetéseket is kaphatnak azért, ha nincsenek online, vagy ami még rosszabb, ha olyan szabályokat hágnak át, amely a hálózat biztonságát veszélyeztetik, akkor az súlyos büntetéssel és kizárással jár. Ezek a büntetések lecsökkentik az ETH-t a validátor számláján, ami utána nem kerül máshova, tehát lényegében kivonják a forgalomból vagy elégetik.
 

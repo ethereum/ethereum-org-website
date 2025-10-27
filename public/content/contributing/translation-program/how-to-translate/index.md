@@ -74,11 +74,14 @@ Want to learn more? Feel free to check out the [documentation on using the Crowd
 
 ### Review process {#review-process}
 
-Once you've completed the translation (i.e. all files for a content bucket display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
+Once you've completed the translation (i.e., all files for a content bucket display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e., review progress is 100%), we will add it to the website.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Please do not use machine translation to translate the project. All the translations will be reviewed before being added to the website. If your suggested translations are found to be machine translated, they will be dismissed and contributors who use machine translation often will be removed from the project.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Get in touch {#get-in-touch}
 

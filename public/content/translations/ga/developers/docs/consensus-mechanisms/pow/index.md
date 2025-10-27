@@ -6,9 +6,14 @@ lang: ga
 
 Thosaigh líonra Ethereum trí leas a bhaint as meicníocht chomhdhearcaidh a raibh **[Cruthúnas-oibre (PoW)](/developers/docs/consensus-mechanisms/pow)** i gceist leis. Cheadaigh sé seo do nóid líonra Ethereum aontú ar staid na faisnéise go léir a taifeadadh ar an mblocshlabhra Ethereum agus chuir sé cosc ​​ar chineálacha áirithe ionsaithe eacnamaíocha. Ach mhúch Ethereum cruthúnas-oibre in 2022 agus thosaigh sé ag úsáid [cruthúnas-gill](/developers/docs/consensus-mechanisms/pos) ina ionad sin.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:" />
+<AlertContent>
+<AlertDescription>
     Tá an cruthúnas-oibre imithe i léig anois. Ní úsáideann Ethereum cruthúnas-oibre a thuilleadh mar chuid dá mheicníocht chomhdhearcaidh. Ina áit sin, úsáideann sé cruthúnas-gill. Léigh tuilleadh ar [cruthúnas-gill](/developers/docs/consensus-mechanisms/pos/) agus [geallchur](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Réamhriachtanais {#prerequisites}
 
@@ -16,7 +21,7 @@ Chun an leathanach seo a thuiscint níos fearr, molaimid duit léamh ar [idirbhe
 
 ## Cad é Cruthúnas-oibre (PoW)? {#what-is-pow}
 
-Is é comhdhearcadh Nakamoto, a úsáideann cruthúnas-oibre, an mheicníocht a cheadaigh uair amháin don líonra díláraithe Ethereum teacht ar chomhdhearcadh (i.e. gach nód ar aon dearcadh) ar rudaí mar iarmhéideanna cuntais agus ord na n-idirbheart. Chuir sé seo cosc ​​​​ar úsáideoirí "caitheamh dúbailte" a dhéanamh ar a gcuid bonn a agus chinntigh sé go raibh sé thar a bheith deacair slabhra Ethereum a ionsaí nó a ionramháil. Tagann na hairíonna slándála seo anois ó cruthúnas-gill ag baint úsáide as an meicníocht chomhthoil ar a dtugtar [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Is é comhdhearcadh Nakamoto, a úsáideann cruthúnas-oibre, an mheicníocht a cheadaigh uair amháin don líonra díláraithe Ethereum teacht ar chomhdhearcadh (i.e., gach nód ar aon dearcadh) ar rudaí mar iarmhéideanna cuntais agus ord na n-idirbheart. Chuir sé seo cosc ​​​​ar úsáideoirí "caitheamh dúbailte" a dhéanamh ar a gcuid bonn a agus chinntigh sé go raibh sé thar a bheith deacair slabhra Ethereum a ionsaí nó a ionramháil. Tagann na hairíonna slándála seo anois ó cruthúnas-gill ag baint úsáide as an meicníocht chomhthoil ar a dtugtar [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Cruthúnas-oibre agus mianadóireacht {#pow-and-mining}
 

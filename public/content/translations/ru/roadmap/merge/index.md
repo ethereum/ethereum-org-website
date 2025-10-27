@@ -37,9 +37,13 @@ summaryPoint4: Слияние уменьшило потребление энер
 
 Старые данные при слиянии не пострадали. Когда основная сеть слилась с сетью Beacon, также произошло слияние всей истории транзакций Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Этот переход к доказательству владения изменил подход к выпуску эфира. Подробнее о [выпуске эфира до и после слияния](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Пользователи и держатели {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="Заблуждение: «запуск узла требует поставить 32 ETH»."
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Существует два типа узлов Ethereum: узлы, которые могут предлагать блоки, и те, которые не могут этого делать.
 

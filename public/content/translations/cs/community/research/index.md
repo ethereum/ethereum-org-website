@@ -41,7 +41,7 @@ Kromě výzkumu zaměřeného na budoucnost se zkoumají i některé zásadní z
 
 - [Úvod do důkazu podílem](/developers/docs/consensus-mechanisms/pos/)
 - [Práce na Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Vysvětlení Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Vysvětlení Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Práce na Casper](https://arxiv.org/abs/2003.03052)
 
 #### Nedávný výzkum {#recent-research}

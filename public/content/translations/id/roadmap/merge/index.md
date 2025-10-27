@@ -37,9 +37,13 @@ Penggabungan ini merupakan peralihan resmi untuk menggunakan Rantai Suar sebagai
 
 Tidak ada sejarah yang hilang dalam Penggabungan. Ketika Jaringan Utama bergabung dengan Rantai Suar, Jaringan Utama juga menggabungkan seluruh sejarah transaksi Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Transisi ke bukti taruhan ini mengubah cara penerbitan ether. Pelajari lebih lanjut tentang [pengeluaran ether sebelum dan setelah Penggabungan](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Pengguna dan pemegang {#users-holders}
 
@@ -118,7 +122,7 @@ Penggabungan juga membuka jalan untuk peningkatan skalabilitas lebih lanjut yang
 
 <ExpandableCard
 title="Miskonsepsi: &quot;Menjalankan simpul membutuhkan penaruhan 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Ada dua jenis simpul Ethereum: simpul yang dapat mengusulkan blok dan simpul yang tidak.
 

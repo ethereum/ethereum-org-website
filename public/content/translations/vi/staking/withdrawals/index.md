@@ -43,9 +43,14 @@ Trước bản nâng cấp Shanghai/Capella, bạn không thể sử dụng ho�
 
 Cung cấp địa chỉ rút tiền là bước bắt buộc đối với tất cả tài khoản nút xác thực trước khi có thể rút ETH từ số dư của tài khoản đó.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Mỗi tài khoản nút xác thực chỉ có một địa chỉ rút tiền duy nhất, vào một thời điểm.</strong> Sau khi chọn và gửi địa chỉ lên lớp đồng thuận, bạn sẽ không thể hoàn tác hoặc thay đổi lại. Hãy kiểm tra thật kỹ quyền sở hữu và độ chính xác của địa chỉ được cung cấp trước khi nộp.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Trong thời gian chờ đợi, việc chưa cung cấp địa chỉ rút tiền sẽ <strong>không gây rủi ro cho tiền của bạn</strong> nếu cụm từ khởi tạo/mnemonic của bạn được giữ an toàn ngoại tuyến và không bị xâm phạm theo bất kỳ cách nào. Không thêm thông tin xác thực rút tiền sẽ khiến ETH bị khóa trong tài khoản nút xác thực cho đến khi bạn cung cấp địa chỉ rút tiền.
 
@@ -82,11 +87,16 @@ Hãy xem qua giải thích này của Finematics về rút cổ phần Ethereum:
 
 Khi một nút xác thực được chọn để đề xuất khối tiếp theo, cần xây dựng một hàng đợi rút tiền, tối đa 16 lệnh rút tiền hợp lệ. Quá trình này được thực hiện bằng cách bắt đầu với nút xác thực có chỉ số 0, kiểm tra xem theo quy tắc của giao thức, tài khoản này có lệnh rút tiền hợp lệ không và thêm nó vào danh sách nếu có. Nút xác thực được chọn để đề xuất khối tiếp theo sẽ bắt đầu từ vị trí nút xác thực trước đó dừng lại và tiếp tục theo thứ tự vô hạn.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Hãy tưởng tượng một chiếc đồng hồ kim. Kim đồng hồ chỉ giờ, di chuyển theo một hướng, không bỏ qua giờ nào và cuối cùng quay trở lại vị trí ban đầu sau khi đến số cuối cùng.<br/><br/>
 Bây giờ, thay vì từ 1 đến 12, hãy tưởng tượng chiếc đồng hồ có các số từ 0 đến N <em>(tổng số tài khoản nút xác thực từng được đăng ký trên lớp đồng thuận, tính đến tháng 1 năm 2023 là hơn 500.000).</em><br/><br/>
 Kim đồng hồ sẽ di chuyển đến nút xác thực tiếp theo cần được kiểm tra xem có lệnh rút tiền hợp lệ không. Kim bắt đầu từ 0 và di chuyển theo vòng tròn mà không bỏ qua bất kỳ tài khoản nào. Khi đến nút xác thực cuối cùng, chu kỳ sẽ tiếp tục trở lại từ đầu.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Kiểm tra tài khoản để tìm các lệnh rút tiền {#checking-an-account-for-withdrawals}
 

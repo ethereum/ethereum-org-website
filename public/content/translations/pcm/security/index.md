@@ -104,7 +104,7 @@ One high-profile vashon of di don hapun in July 2020, wen dem don hack Twitter a
 
 Di celeb awoof na anoda komon form wey di skam awoof dey take. Di skammas go take one fidio intaview abi konfrens tok wey dem rekod and go put am for YouTube - as dem make am look laik di sey dem give one live fidio intaview to di seleb wia em dey apruf cryptocurrency awoof.
 
-Dem yus Vitalik Buterin often in dis skam, but dem also yu plenti oda popular pipol involve in crypto (e.g. Elon Musk abi Charles Hoskinson). Pesin wey dem sabi wella join to give di skammas livestream sense of legitimasy (dis bi laik skam, but Vitalik join, so im suppose dey okay!).
+Dem yus Vitalik Buterin often in dis skam, but dem also yu plenti oda popular pipol involve in crypto (e.g., Elon Musk abi Charles Hoskinson). Pesin wey dem sabi wella join to give di skammas livestream sense of legitimasy (dis bi laik skam, but Vitalik join, so im suppose dey okay!).
 
 **Awoof na always skams. If yu dey send yor funds to dis akants, yu go luz dem foreva.**
 
@@ -124,11 +124,14 @@ As one general rule, staff go neva komunikate wit yu thru private, shanels wey n
 - Neva allow anyone remote access into yor komputa
 - Neva komunikate one organisashon shanels for outside
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Dey kiaful: aldoh suppot-style skam dey always hapun on Discord, dem fit also plenti on any chat aplikashons wia crypto diskushon dey hapun, inkludin email.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 'Eth2' token skam {#eth2-token-scam}
 
@@ -136,7 +139,7 @@ For di run-up to [Di Merge](/roadmap/merge/), skammas don take advantaj of di ko
 
 Skammas fit appia as "suppot", as dem dey tell yu dat if yu deposit yor ETH, yu go risiv back 'ETH2'. Nor [official Ethereum suppot](/community/support/) dey, and nor new token dey. Neva shia yor wallet seed fraiz wit anyone.
 
-_Note: E get some derivative tokens/tickers wey fit reprisent ETH wey dem stake (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but dis nor bi sontin yu nid to "migrate to."_
+_Note: E get some derivative tokens/tickers wey fit reprisent ETH wey dem stake (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but dis nor bi sontin yu nid to "migrate to."_
 
 ### Phishing skams {#phishing-scams}
 
@@ -215,11 +218,14 @@ One strong passwods wey don show di data breach nor bi strong passwod again. Di 
 
 ### Make yu yus one passwod manaja {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     To dey yus passwod manaja dey take kia of kreatin strong, unik passwods and dey rimemba dem! We rekomend <strong>strongly</strong> to dey yus one, and plenti of dem dey free!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Make yu dey rimember strong, unik passwods for efri akant yu get nor gud. Passwod manaja dey offa sekure, enkrypted atore for all yor passwods wey yu fit access thru one strong masta passwod. Dem also sujest strong passwods wen yu dey sign up for new savis, so yu nor nid to kreate yor own. Plenti passwod manajas go also tell yu if yu don enta data breach, to allow yu shanj di passwods bifor any bad attak.
 
@@ -242,11 +248,14 @@ Dem fit somtaims ask make yu autentikate yor identity thru unik prufs. Dem sabi 
 
 To dey yus **Two-Faktor Autentikashon (2FA)** dey provide one *sekurity faktor* join for yor online akants. 2FA dey make sure sey to get yor passwod nor dey enuf to access one akant. As im komon, di sekond faktor na randomaiz 6-digit kode, wey dem sabi as one **taim-base one-taim passwod (TOTP)**, wey yu fit access thru one autentikator app laik Google Autentikator abi Authy. Dis dey wok as one "somtin yu get" faktor bikos dem store di seed wey dey generate di taim kode on yor device.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Note: To dey yus 2FA dipend on <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and im nor dey sekure. For di sekurity wey betta pass, yus one savis laik <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Autentikator</a> abi <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Sekurity keys {#security-keys}
 

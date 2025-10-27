@@ -37,9 +37,13 @@ B'ionann an Cumasc agus an t-athrú oifigiúil go dtí an Slabhra Beacon a úsá
 
 Níor cailleadh aon stair in An Cumasc. De réir mar a chumasc Mainnet leis an Slabhra Beacon, chomhcheangail sé stair idirbheartaíochta iomlán Ethereum freisin.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 D'athraigh an t-aistriú seo go dtí cruthúnas-gheallta n bealach a eisítear éitear. Foghlaim tuilleadh faoi [eisiúint éitear roimh An Cumasc agus ina dhiaidh](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Úsáideoirí agus sealbhóirí {#users-holders}
 
@@ -118,13 +122,13 @@ Shocraigh an Cumasc freisin an chéim le haghaidh tuilleadh uasghrádaithe insc�
 
 <ExpandableCard
 title="Míthuiscint: &quot;Tá 32 ETH ag teastáil chun nód a rith.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Tá dhá chineál nóid Ethereum ann: nóid ar féidir leo bloic a mholadh agus nóid nach molann.
 
 Níl na nóid a mholann bloic ach líon beag de na nóid iomlána ar Ethereum. Áirítear leis an gcatagóir seo nóid mhianadóireachta faoi chruthúnas oibre (PoW) agus nóid bhailíochtaithe faoi chruthúnas-gheallta (PoS). Éilíonn an chatagóir seo acmhainní eacnamaíocha a thiomnú (cosúil le cumhacht hash GPU mar chruthúnas oibre nó ETH geallta mar chruthúnas-gheallta) mar mhalairt ar an gcumas an chéad bhloc eile a mholadh ó am go chéile agus luach saothair prótacail a thuilleamh.
 
-Ní cheanglaítear ar na nóid eile ar an líonra (i.e. an tromlach) aon acmhainní eacnamaíocha a thiomnú thar ríomhaire de ghrád tomhaltóra a bhfuil 1-2 TB de stóráil ar fáil agus nasc idirlín aige. Ní mholann na nóid seo bloic, ach tá ról ríthábhachtach acu fós chun an líonra a dhaingniú trí gach tairgeoir bloc a choinneáil cuntasach trí éisteacht le haghaidh bloic nua agus trína mbailíocht a fhíorú ar theacht dóibh de réir rialacha comhdhearcadh an líonra. Má tá an bloc bailí, leanann an nód ar aghaidh ag iomadú tríd an líonra. Má tá an bloc neamhbhailí ar chúis ar bith, déanfaidh na bogearraí nód neamhaird air mar neamhbhailí agus stopfaidh sé a iomadú.
+Ní cheanglaítear ar na nóid eile ar an líonra (i.e., an tromlach) aon acmhainní eacnamaíocha a thiomnú thar ríomhaire de ghrád tomhaltóra a bhfuil 1-2 TB de stóráil ar fáil agus nasc idirlín aige. Ní mholann na nóid seo bloic, ach tá ról ríthábhachtach acu fós chun an líonra a dhaingniú trí gach tairgeoir bloc a choinneáil cuntasach trí éisteacht le haghaidh bloic nua agus trína mbailíocht a fhíorú ar theacht dóibh de réir rialacha comhdhearcadh an líonra. Má tá an bloc bailí, leanann an nód ar aghaidh ag iomadú tríd an líonra. Má tá an bloc neamhbhailí ar chúis ar bith, déanfaidh na bogearraí nód neamhaird air mar neamhbhailí agus stopfaidh sé a iomadú.
 
 Is féidir le duine ar bith faoi cheachtar meicníocht chomhthoil (cruthúnas oibre nó cruthúnas-gheallta) nód neamh-bhloctháirgthe a rith; seo rud <em>a mholtar go láidir</em> do gach úsáideoir má tá na hacmhainní acu. Tá sé thar a bheith luachmhar do Ethereum nód a rith agus tugann sé buntáistí breise d'aon duine a ritheann ceann, mar shlándáil fheabhsaithe, príobháideacht agus friotaíocht cinsireachta.
 
@@ -149,7 +153,7 @@ title="Míthuiscint: &quot;Cuireadh dlús suntasach le hidirbhearta mar gheall a
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
 Is féidir "luas" idirbhirt a thomhas ar chúpla bealach, lena n-áirítear am le cur san áireamh i mbloc agus am le tabhairt chun críche. Athraíonn an dá cheann seo beagán, ach ní ar bhealach a thabharfaidh úsáideoirí faoi deara.
 
-Go stairiúil, ar chruthúnas oibre, ba é an sprioc a bhí ann bloc nua a bheith ann gach ~13.3 soicind. Faoi chruthúnas-gheallta, tarlaíonn sliotáin go beacht gach 12 soicind, agus tugann gach ceann díobh deis do bhailitheoir bloc a fhoilsiú. Bíonn bloic ag formhór na sliotán, ach ní gá go mbeadh bloc ag gach sliotán (i.e. tá bailíochtóir as líne). I gcás cruthúnais-gheallta, déantar bloic ~10% níos minice ná mar a dhéantar ar chruthúnas oibre. Ba athrú measartha neamhshuntasach é seo agus ní dócha go dtabharfaidh úsáideoirí faoi deara é.
+Go stairiúil, ar chruthúnas oibre, ba é an sprioc a bhí ann bloc nua a bheith ann gach ~13.3 soicind. Faoi chruthúnas-gheallta, tarlaíonn sliotáin go beacht gach 12 soicind, agus tugann gach ceann díobh deis do bhailitheoir bloc a fhoilsiú. Bíonn bloic ag formhór na sliotán, ach ní gá go mbeadh bloc ag gach sliotán (i.e., tá bailíochtóir as líne). I gcás cruthúnais-gheallta, déantar bloic ~10% níos minice ná mar a dhéantar ar chruthúnas oibre. Ba athrú measartha neamhshuntasach é seo agus ní dócha go dtabharfaidh úsáideoirí faoi deara é.
 
 Thug cruthúnas-gheallta coincheap críochnaitheacht an idirbhirt nach raibh ann roimhe seo. Le linn cruthúnais oibre, éiríonn an cumas bloc a aisiompú thar a bheith níos deacra nuair a dhéantar gach bloc pasála a bhaintear de bhreis ar idirbheart, ach ní shroicheann sé nialas riamh. Faoi chruthúnas i gceist, déantar bloic a chuachadh ina dtréimhsí (réisí ama 6.4 nóiméad ina bhfuil 32 seans ar bhloic) a vótálann bailíochtaithe orthu. Nuair a thagann deireadh le ré, vótálann bailíochtaithe ar cheart an ré a mheas 'go bhfuil údar maith leis'. Má aontaíonn bailíochtaithe údar a thabhairt do ré, tabharfar chun críche é sa chéad tréimhse eile. Tá sé neamh-inmharthana go heacnamaíoch idirbhearta críochnaithe a chealú mar go mbeadh gá le breis agus trian den ETH iomlán atá i ngeall air a fháil agus a dhó.
 

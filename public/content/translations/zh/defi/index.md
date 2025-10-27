@@ -64,12 +64,15 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 这听起来很奇怪……“我为什么会想对钱进行编程”？ 然而，这只是以太坊代币的一个默认功能。 任何人都可以对逻辑编程，以生成支付。 这样，你就可以将比特币的控制权和安全性与传统金融机构提供的服务相结合。 然后，你就可以用加密货币做一些比特币做不到的事情，比如借贷、预约付款、投资指数基金等等。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融应用程序
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 你可以用去中心化金融做什么？ {#defi-use-cases}
 

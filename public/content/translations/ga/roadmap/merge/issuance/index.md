@@ -6,7 +6,7 @@ lang: ga
 
 # Conas a chuaigh an Cumasc i bhfeidhm ar sholáthar ETH {#how-the-merge-impacts-ETH-supply}
 
-Ba ionann an Cumasc agus aistriú líonra Ethereum ó chruthúnas oibre go cruthúnas-gheallta a tharla i Meán Fómhair 2022. Rinneadh athruithe ar an mbealach ar eisíodh ETH tráth an aistrithe sin. Roimhe seo, eisíodh ETH nua ó dhá fhoinse: an ciseal forghníomhaithe (i.e. Mainnet) agus an ciseal comhthola (i.e. Slabhra Beacon). Ó tharla an Cumasc, tá eisiúint ar an gciseal fhorghníomhú anois náid. Déanaimis é seo a bhriseadh síos.
+Ba ionann an Cumasc agus aistriú líonra Ethereum ó chruthúnas oibre go cruthúnas-gheallta a tharla i Meán Fómhair 2022. Rinneadh athruithe ar an mbealach ar eisíodh ETH tráth an aistrithe sin. Roimhe seo, eisíodh ETH nua ó dhá fhoinse: an ciseal forghníomhaithe (i.e., Mainnet) agus an ciseal comhthola (i.e., Slabhra Beacon). Ó tharla an Cumasc, tá eisiúint ar an gciseal fhorghníomhú anois náid. Déanaimis é seo a bhriseadh síos.
 
 ## Comhpháirteanna eisiúint ETH {#components-of-eth-issuance}
 
@@ -54,11 +54,17 @@ Soláthar iomlán ETH: **~120,520,000 ETH** (ag am The Merge i Meán Fómhair 20
 - Eisíodh torthaí i **~620,500** ETH thar tréimhse bliana
 - Bhí ráta boilscithe **thart ar 0.52%** mar thoradh air (620.5K in aghaidh na bliana / 119.3M san iomlán)
 
-<InfoBanner>
-<strong>Ráta eisiúna bliantúil iomlán (réamhchumasc): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-Bhí <strong>~88.7%</strong> den eisiúint ag dul chuig mianadóirí ar an gciseal forghníomhaithe (4.09 / 4.61 * 100)<br/><br/>
-Bhí <strong>~11.3%</strong> á eisiúint chuig geallsealbhóirí ar an tsraith chomhthoil (0.52 / 4.61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Ráta eisiúna bliantúil iomlán (réamhchumasc): ~4.61%** (4.09% + 0.52%)
+
+Bhí **~88.7%** den eisiúint ag dul chuig mianadóirí ar an gciseal forghníomhaithe (4.09 / 4.61 * 100)
+
+Bhí **~11.3%** á eisiúint chuig geallsealbhóirí ar an tsraith chomhthoil (0.52 / 4.61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Iar-chumascadh (an lá inniu) {#post-merge}
 
@@ -84,18 +90,27 @@ De réir mar a imíonn níos mó bailíochtóirí siar, laghdófar de réir a ch
 - Eisiúint ciseal feidhmithe: **0**
 - Eisiúint ciseal comhdhearcadh: Mar an gcéanna leis an méid thuas, **~0.52%** ráta eisiúna bliantúil (le 14 milliún ETH iomlán i gceist)
 
-<InfoBanner>
-Ráta eisiúna bliantúil iomlán: <strong>~0.52%</strong><br/><br/>
-Glanlaghdú ar eisiúint bhliantúil ETH: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Ráta eisiúna bliantúil iomlán: **~0.52%**
+
+Glanlaghdú ar eisiúint bhliantúil ETH: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> an Dóchán {#the-burn}
 
 Is é an fórsa contrártha le heisiúint ETH an ráta ag a dhóitear ETH. Chun idirbheart a fhorghníomhú ar Ethereum, ní mór táille íosta (ar a dtugtar "bonn-táille") a íoc, a luainíonn go leanúnach (bloc-go-bloc) ag brath ar ghníomhaíocht líonra. Íoctar an táille in ETH agus _éilítear_ chun go measfar an t-idirbheart a bheith bailí. Déantar _an táille seo a dhó_ le linn an phróisis idirbhirt, rud a bhaintear as cúrsaíocht í.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Chuaigh dó táillí beo le [uasghrádú Londain](/ethereum-forks/#london) i mí Lúnasa 2021, agus níl aon athrú air ó The Merge.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Anuas ar an dó táillí arna chur i bhfeidhm ag uasghrádú Londain, is féidir le bailíochtaithe pionóis a thabhú as a bheith as líne, nó níos measa fós, is féidir iad a ghearradh as rialacha sonracha a sháraíonn slándáil líonra a bhagairt. Is é an toradh a bhíonn ar na pionóis seo ná laghdú ETH ó iarmhéid an bhailíochtóra sin, nach dtugtar luach saothair díreach dó chuig aon chuntas eile, rud a dhónn é/a bhaineann as cúrsaíocht é.
 

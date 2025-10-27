@@ -54,11 +54,17 @@ Totale ETH-aanvoer: **~120.520.000 ETH** (ten tijde van de samenvoeging in septe
 - Resulteert in **~620.500** uitgegeven ETH in één jaar
 - Resulteerde in een inflatiepercentage van **bijna 0,52%** (620.500 per jaar / 119,3M in totaal)
 
-<InfoBanner>
-<strong>Totaal uitgiftepercentage op jaarbasis (voorafgaand aan de samenvoeging): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88,7%</strong> van die uitgifte ging naar miners op de uitvoeringslaag (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> werd uitgegeven aan stakers op de consensuslaag (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Totaal uitgiftepercentage op jaarbasis (voorafgaand aan de samenvoeging): ~4.61%** (4.09% + 0.52%)
+
+**~88,7%** van die uitgifte ging naar miners op de uitvoeringslaag (4,09 / 4,61 * 100)
+
+**~11,3%** werd uitgegeven aan stakers op de consensuslaag (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Na de samenvoeging (vandaag de dag) {#post-merge}
 
@@ -84,18 +90,27 @@ Naarmate meer validators vertrekken, zal het maximale aantal vertrekkende valida
 - Uitgifte uitvoeringslaag: **0**
 - Uitgifte consensuslaag: hetzelfde als hierboven, **~0,52%** jaarlijkse uitgiftepercentage (met 14 miljoen totaal gestakete ETH)
 
-<InfoBanner>
-Totaal uitgiftepercentage op jaarbasis: <strong>~0.52%</strong><br/><br/>
-Nettovermindering in jaarlijkse ETH-uitgifte: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Totaal uitgiftepercentage op jaarbasis: **~0.52%**
+
+Nettovermindering in jaarlijkse ETH-uitgifte: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />De verbranding {#the-burn}
 
 De tegengestelde kracht van ETH-uitgifte is de snelheid waarmee ETH wordt verbrand. Om een transactie op Ethereum uit te voeren, moet een minimale kost (bekend als een "basiskost") worden betaald, die continu fluctueert (van block tot block) afhankelijk van de netwerkactiviteit. Deze kost wordt betaald in ETH en is _vereist_ om de transactie als geldig te beschouwen. Deze kost wordt _verbrand_ tijdens het transactieproces, waardoor het uit circulatie wordt gehaald.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Kosten verbranden ging live met [de London-upgrade](/ethereum-forks/#london) in augustus 2021, en bleef ongewijzigd sinds de samenvoeging.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Bovenop de verbranding van de kosten die door de London-upgrade zijn geïmplementeerd, kunnen validators ook sancties krijgen als ze offline zijn, of erger nog, ze kunnen worden geslasht voor het overtreden van specifieke regels die de veiligheid van het netwerk in gevaar brengen. Deze sancties leiden tot een vermindering van ETH van het saldo van deze validator, wat niet direct beloond wordt op een ander account, waardoor het effectief wordt verbrand/verwijderd uit de circulatie.
 

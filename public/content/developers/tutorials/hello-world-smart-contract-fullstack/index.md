@@ -840,7 +840,7 @@ return (
 
 If you scan this code carefully, you'll notice where we use our various state variables in our UI:
 
-- On lines 6-12, if the user's wallet is connected \(i.e. `walletAddress.length > 0`\), we display a truncated version of the user `walletAddress` in the button with ID "walletButton;" otherwise it simply says "Connect Wallet."
+- On lines 6-12, if the user's wallet is connected \(i.e., `walletAddress.length > 0`\), we display a truncated version of the user `walletAddress` in the button with ID "walletButton;" otherwise it simply says "Connect Wallet."
 - On line 17, we display the current message stored in the smart contract, which is captured in the `message` string.
 - On lines 23-26, we use a [controlled component](https://legacy.reactjs.org/docs/forms.html#controlled-components) to update our `newMessage` state variable when the input in the text field changes.
 
@@ -1068,7 +1068,7 @@ contract HelloWorld {
 }
 ```
 
-Smart contract events are a way for your contract to communicate that something happened \(i.e. there was an _event_\) on the blockchain to your front-end application, which can be 'listening' for specific events and take action when they happen.
+Smart contract events are a way for your contract to communicate that something happened \(i.e., there was an _event_\) on the blockchain to your front-end application, which can be 'listening' for specific events and take action when they happen.
 
 The `addSmartContractListener` function is going to specifically listen for our Hello World smart contract's `UpdatedMessages` event, and update our UI to display the new message.
 
@@ -1343,7 +1343,7 @@ function addWalletListener() {
 
 I bet you don't even need our help to understand what's going on here at this point, but for thoroughness purposes, let's quickly break it down:
 
-- First, our function checks if `window.ethereum` is enabled \(i.e. MetaMask is installed\).
+- First, our function checks if `window.ethereum` is enabled \(i.e., MetaMask is installed\).
   - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
   - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dapp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
 
@@ -1381,7 +1381,7 @@ This won't take very long; let's finish this dapp!
 
 Naturally, it makes sense to have some sort of input error handling at the start of the function.
 
-We'll want our function to return early if there is no MetaMask extension installed, there is no wallet connected \(i.e. the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
+We'll want our function to return early if there is no MetaMask extension installed, there is no wallet connected \(i.e., the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
 
 ```javascript
 // interact.js

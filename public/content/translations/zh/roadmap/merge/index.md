@@ -37,9 +37,13 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 历史记录不会在合并中丢失。 随着主网与信标链合并，它还合并以太坊的整个交易历史记录。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 这种向权益证明的过渡改变了以太币的发行方式。 了解有关[合并前后以太币发行的更多信息](/roadmap/merge/issuance/)。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 用户与持有者 {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="误区：&quot;运行一个节点需要质押 32 个以太币。&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 以太坊节点有两种类型：可以提议区块的节点和不能提议区块的节点。
 

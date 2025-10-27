@@ -40,12 +40,15 @@ Iarrfaidh roinnt aipeanna ort "frása athshlánaithe" rúnda a shábháil (ar a 
 **Is féidir le duine ar bith a bhfuil an frása ar eolas aige smacht a fháil ar na cistí go léir.** Ná roinn é seo le haon duine choíche. Ba chóir go mbeadh idir 12 agus 24 focal a gineadh go randamach san abairt seo (tá ord na bhfocal tábhachtach).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Sparán suiteáilte?</b><br/>Foghlaim conas é a úsáid.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Conas sparán a úsáid
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 Spéis agat i dtreoracha eile? Breathnaigh ar ár: [dtreoracha céim ar chéim](/guides/)
@@ -58,7 +61,7 @@ Ní féidir. Is uirlis bhainistíochta é an sparán a chuidíonn leat cuntais a
 
 ### An féidir liom bitcoin a sheoladh chuig seoladh Ethereum, nó éitear chuig seoladh Bitcoin?
 
-Ní féidir leat. Tá Bitcoin agus éitear ar dhá líonra ar leith (i.e. blocshlabhraí éagsúla), agus a bhformáidí leabharchoimeád agus tá a seoltaí féin ag gach ceann acu. Rinneadh iarrachtaí éagsúla an dá líonra difriúla a dhúnadh, agus is é an ceann is gníomhaí faoi láthair ná [Wrapped Bitcoin nó WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ní moladh é seo, toisc gur réiteach coimeádta é WBTC (a chiallaíonn go rialaíonn grúpa amháin daoine feidhmeanna ríthábhachtacha áirithe) agus cuirtear ar fáil anseo é chun críocha faisnéise amháin.
+Ní féidir leat. Tá Bitcoin agus éitear ar dhá líonra ar leith (i.e., blocshlabhraí éagsúla), agus a bhformáidí leabharchoimeád agus tá a seoltaí féin ag gach ceann acu. Rinneadh iarrachtaí éagsúla an dá líonra difriúla a dhúnadh, agus is é an ceann is gníomhaí faoi láthair ná [Wrapped Bitcoin nó WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ní moladh é seo, toisc gur réiteach coimeádta é WBTC (a chiallaíonn go rialaíonn grúpa amháin daoine feidhmeanna ríthábhachtacha áirithe) agus cuirtear ar fáil anseo é chun críocha faisnéise amháin.
 
 ### Má tá seoladh ETH agam, an liomsa an seoladh céanna ar bhlocshlabhraí eile?
 

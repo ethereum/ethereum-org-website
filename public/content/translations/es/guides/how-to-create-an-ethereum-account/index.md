@@ -40,12 +40,15 @@ Algunas aplicaciones le pedirán que guarde una "frase de recuperación" secreta
 **Cualquier persona que conozca la frase puede tomar el control de todos los fondos.** Nunca la comparta con nadie. Esta frase debe contener entre 12 a 24 palabras generadas al azar (el orden de las palabras importa).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cómo utilizar una cartera
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 ¿Interesado en otras guías? Eche un vistazo a nuestras [Guías paso a paso](/guides/).

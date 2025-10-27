@@ -37,9 +37,13 @@ Die Zusammenführung stellte den offiziellen Wechsel zur Verwendung der Beacon C
 
 Keine Historie ging bei der Zusammenführung verloren. Als Mainnet mit der Beacon Chain zusammengeführt wurde, wurde auch die gesamte Transaktionshistorie von Ethereum zusammengeführt.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Der Übergang zu Proof-of-Stake änderte die Art und Weise wie Ether benutzt wird. Erfahren Sie mehr über [Etherausgabe vor und nach der Zusammenführung](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Benutzer und Halter {#users-holders}
 
@@ -118,7 +122,7 @@ Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche
 
 <ExpandableCard
 title="Misverständnis: &quot; Das Betreiben einer Node benötigt 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Es gibt zwei Arten von Ethereum Nodes: Nodes die Blöcke vorschlagen können und Nodes die das nicht können.
 

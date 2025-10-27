@@ -6,9 +6,14 @@ lang: fr
 
 Le réseau Ethereum a commencé par utiliser un mécanisme de consensus basé sur la **[Preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow)**. Cela permet à l'ensemble des nœuds du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques. Ethereum a néanmoins abandonné la preuve de travail en 2022 et a commencé à utiliser la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos).
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     La preuve de travail est maintenant obsolète. Ethereum n'utilise plus la preuve de travail dans le cadre de son mécanisme de consensus. En lieu et place, Ethereum utilise la preuve d'enjeu. En savoir plus sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et le [staking](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Prérequis {#prerequisites}
 

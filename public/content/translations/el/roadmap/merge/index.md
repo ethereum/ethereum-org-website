@@ -37,9 +37,13 @@ summaryPoint4: Η συγχώνευση μείωσε την κατανάλωση 
 
 Δεν χάθηκε κανένα ιστορικό κατά τη Συγχώνευση. Με τη συγχώνευσή του με την Κύρια Αλυσίδα, το Κεντρικό Δίκτυο συγχώνευσε και ολόκληρο το ιστορικό συναλλαγών του Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Αυτή η μετάβαση στην απόδειξη συμμετοχής άλλαξε τον τρόπο με τον οποίο εκδίδονται τα ether. Μάθετε περισσότερα για [την έκδοση ether πριν και μετά τη Συγχώνευση](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Χρήστες και κάτοχοι {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="Εσφαλμένη αντίληψη: &quot;Η εκτέλεση ενός κόμβου απαιτεί την αποθήκευση 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Υπάρχουν δύο τύποι κόμβων Ethereum: οι κόμβοι που μπορούν να προτείνουν μπλοκ και οι κόμβοι που δεν μπορούν να προτείνουν.
 

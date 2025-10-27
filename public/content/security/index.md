@@ -105,7 +105,7 @@ A high-profile version of this occurred in July 2020, when the Twitter accounts 
 
 The celebrity giveaway is another common form the giveaway scam takes. The scammers will take a recorded video interview or conference talk given by a celebrity and livestream it on YouTube - making it appear as though the celebrity was giving a live video interview endorsing a cryptocurrency giveaway.
 
-Vitalik Buterin is used most often in this scam, but many other prominent people involved in crypto are also used (e.g. Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
+Vitalik Buterin is used most often in this scam, but many other prominent people involved in crypto are also used (e.g., Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
 
 **Giveaways are always scams. If you send your funds to these accounts, you will lose them forever.**
 
@@ -125,11 +125,14 @@ As a general rule, staff will never communicate with you through private, unoffi
 - Never allow anyone remote access into your computer
 - Never communicate outside an organization's designated channels
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Beware: although support-style scams commonly happen on Discord, they can also be prevalent on any chat applications where crypto discussion happens, including email.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 'Eth2' token scam {#eth2-token-scam}
 
@@ -137,7 +140,7 @@ In the run-up to [The Merge](/roadmap/merge/), scammers took advantage of the co
 
 Scammers may appear as "support", telling you that if you deposit your ETH, you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
-_Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
+_Note: There are derivative tokens/tickers that may represent staked ETH (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
 
 ### Phishing scams {#phishing-scams}
 
@@ -216,11 +219,14 @@ A strong password that has been revealed in a data breach is no longer a strong 
 
 ### Use a password manager {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one, and most of them are free!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Remembering strong, unique passwords for every account you have isn't ideal. A password manager offers a secure, encrypted store for all your passwords that you can access through one strong master password. They also suggest strong passwords when signing up for a new service, so you don't have to create your own. Many password managers will also tell you if you have been involved in a data breach, allowing you to change the passwords before any malicious attacks.
 
@@ -243,11 +249,14 @@ You may sometimes be asked to authenticate your identity through unique proofs. 
 
 Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts. 2FA ensures that merely having your password is not enough to access an account. Most commonly, the second factor is a randomized 6-digit code, known as a **time-based one-time password (TOTP)**, that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed that generates the timed code is stored on your device.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Note: Using SMS-based 2FA is susceptible to <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and is not secure. For the best security, use a service like <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> or <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Security keys {#security-keys}
 

@@ -37,9 +37,13 @@ summaryPoint4: Злиття знизило енергоспоживання Ethe
 
 Під час The Merge не було втрачено жодної частини історії. Під час об’єднання головної мережі та Beacon Chain відбулося також об’єднання всієї історії транзакцій Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Перехід до proof-of-stake змінив спосіб випуску ether. Дізнайтеся більше про [випуск ефіру до та після злиття](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Користувачі та власники {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="Хибне уявлення: «Запуск вузла потребує стейкінгу 32 ETH»."
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Існує два типи вузлів Ethereum: вузли, які можуть пропонувати блоки, і вузли, які цього не можуть.
 

@@ -37,9 +37,13 @@ Spojitev je predstavljala uradni premik, kjer se je oddajniška veriga začela u
 
 V spojitvi ni bil izgubljen noben del zgodovine. Ko se je glavno omrežje spojilo z oddajniško verigo, je spojilo tudi celotno Ethereumovo zgodovino transakcij.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Ta prehod na mehanizem dokaza o deležu je spremenil način izdajanja etra. Preberite več o [izdajanju etra pred spojitvijo in po njej](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Uporabniki in imetniki {#users-holders}
 
@@ -115,7 +119,7 @@ Spojitev je tudi postavila temelje za nadaljnje širitve omrežja, ki z dokazom 
 
 <ExpandableCard
 title="Zmota: &quot;Če želite upravljati vozlišče, morate zastaviti 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 Obstajata dve vrsti Ethereumovih vozlišč: vozlišča, ki predlagajo bloke, in vozlišča, ki jih ne.
 
 Vozlišča, ki predlagajo bloke, predstavljajo le majhno število vseh Ethereumovih vozlišč. Ta kategorija vključuje vozlišča za rudarjenje, ki uporabljajo mehanizem dokaza o delu, in validacijska vozlišča, ki uporabljajo mehanizem dokaza o deležu. Zahteva zagotavljanje ekonomskih virov (na primer računske moči grafične kartice za dokaz o delu ali zastavljenega ETH za dokaz o deležu) za možnost, da občasno predlagajo naslednji blok in zaslužijo nagrade, ki jih podeljuje protokol.

@@ -43,9 +43,14 @@ Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i pro
 
 Fornire un indirizzo di prelievo è un passaggio necessario per qualsiasi conto del validatore affinché sia idoneo per il prelievo di ETH dal suo saldo.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Ogni account validatore è assegnabile esclusivamente a un singolo indirizzo di prelievo, una sola volta.</strong> Una volta che un indirizzo è scelto e inviato al livello del consenso, ciò non è annullabile o nuovamente modificabile. Ricontrolla la proprietà e l'accuratezza dell'indirizzo fornito prima di inviarlo.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <strong>Nel mentre, non esiste alcuna minaccia ai tuoi fondi</strong> per non averlo fornito, supponendo che la tua frase mnemonica/di seed sia rimasta al sicuro offline e non sia stata compromessa in alcun modo. La mancata aggiunta delle credenziali di prelievo lascerà semplicemente gli ETH bloccati nel conto del validatore finché non sarà fornito un indirizzo di prelievo.
 
@@ -82,11 +87,16 @@ Dai un'occhiata a questa spiegazione dei prelievi di staking di Ethereum, di Fin
 
 Quando è pianificato che un validatore proponga il prossimo blocco, è necessario costruire una coda di prelievo, composta da un massimo di 16 prelievi idonei. Ciò avviene iniziando originariamente dall'indice 0 del validatore, determinando se esista un prelievo idoneo per questo conto secondo le regole del protocollo e, in tal caso, aggiungendolo alla coda. Il validatore impostato per proporre il blocco successivo riprenderà da dove si è fermato il precedente, procedendo indefinitamente in ordine.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Pensa a un orologio analogico. La lancetta dell'orologio indica l'ora, si muove in una direzione, non salta alcuna ora e, infine, torna nuovamente all'inizio, dopo aver raggiunto l'ultimo numero.<br/><br/>
 Ora, invece che da 1 a 12, immagina che l'orologio vada da 0 a N <em>(il numero totale di account validatore registrati sul livello del consenso, oltre 500.000 a gennaio 2023).</em><br/><br/>
 La lancetta dell'orologio punta al validatore successivo, che dev'essere controllato per verificare la presenza di prelievi idonei. Inizia a 0 e procede controllando tutti i conti, senza saltarne nessuno. Quando viene raggiunto l'ultimo validatore, il ciclo continua ricominciando dall'inizio.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Verificare un conto per i prelievi {#checking-an-account-for-withdrawals}
 

@@ -70,7 +70,7 @@ const SPELLING_MISTAKES: Array<string> = [
 // ! Current usage of this const is commented out
 // const CASE_SENSITIVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
-// Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
+// Regex for explicit lang path (e.g., /en/) && for glossary links (trailing slash breaks links e.g., /glossary/#pos/ doesn't work)
 // We should have case sensitive spelling mistakes && check they are not in links.
 
 interface Languages {
@@ -119,7 +119,7 @@ function sortMarkdownPathsIntoLanguages(
     const isTranslation = path.includes(translationDir)
     const langIndex = path.indexOf(translationDir) + translationDir.length
 
-    // RegEx to grab the root of the path (e.g. the lang code for translated files)
+    // RegEx to grab the root of the path (e.g., the lang code for translated files)
     const regex = /^([^/]+)\//
     const match = path.substring(langIndex).match(regex)
     const lang = isTranslation && match && match.length > 1 ? match[1] : "en"

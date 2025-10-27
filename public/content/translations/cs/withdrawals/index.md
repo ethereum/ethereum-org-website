@@ -43,9 +43,14 @@ Před upgradem Shanghai/Capella jste nemohli používat svůj vsazený ETH ani k
 
 Poskytnutí adresy pro výběr je povinným krokem pro jakýkoli účet validátoru, než bude mít nárok na výběr ETH ze svého zůstatku.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Každému účtu validátoru lze přiřadit pouze jednu adresu pro výběr, a to jednou.</strong> Jakmile je adresa vybrána a odeslána do konsensuální vrstvy, nelze to vrátit zpět ani znovu změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Pokud adresu mezitím neposkytnete, <strong>nehrozí vašim finančním prostředkům žádné ohrožení</strong>, za předpokladu, že vaše mnemotechnická pomůcka nebo fráze zůstala v bezpečí offline a nebyla žádným způsobem kompromitována. Nepřidání přihlašovacích údajů pro výběr jednoduše ponechá ETH uzamčené v účtu validátoru tak, jak bylo, dokud nebyla poskytnuta adresa pro výběr.
 
@@ -82,11 +87,16 @@ Podívejte se na toto vysvětlení výběrů z vkladů Ethereum od Finematics:
 
 Když je naplánováno, že validátor navrhne další blok, je nutné sestavit frontu pro výběr až 16 způsobilých výběrů. To se provádí tak, že se původně začne s indexem validátoru 0, určí se, zda pro tento účet existuje způsobilý výběr podle pravidel protokolu, a pokud ano, přidá se do fronty. Validátor nastavený tak, aby navrhoval následující blok, bude pokračovat tam, kde skončil poslední, přičemž postupuje v pořadí neomezeně dlouho.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Představte si analogové hodiny. Ručička na hodinách ukazuje na hodinu, postupuje jedním směrem, nepřeskakuje žádné hodiny a nakonec se po dosažení posledního čísla opět přetočí na začátek.<br/><br/>
 Nyní si místo 1 až 12 představte, že hodiny mají 0 až N <em>(celkový počet účtů validátorů, které kdy byly zaregistrovány na vrstvě konsensu, přes 500 000 k lednu 2023).</em><br/> <br/>
 Ručička na hodinách ukazuje na další validátor, u kterého je třeba zkontrolovat oprávněné výběry. Začíná na 0 a postupuje stále dokola, aniž by přeskakovala jakýkoli účet. Když je dosaženo posledního validátoru, cyklus pokračuje zpět na začátek.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Kontrola účtu pro výběry {#checking-an-account-for-withdrawals}
 

@@ -165,7 +165,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ## Private networks {#private-networks}
 
-An Ethereum network is a private network if its nodes are not connected to a public network (i.e. Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
+An Ethereum network is a private network if its nodes are not connected to a public network (i.e., Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
 
 ### Development networks {#development-networks}
 
@@ -178,6 +178,29 @@ There are projects and tools dedicated to assist with this. Learn more about [de
 The consensus process is controlled by a pre-defined set of nodes that are trusted. For example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
 
 If a public Ethereum network is like the public internet, a consortium network is like a private intranet.
+
+## <Emoji text="🚉" /> Why are Ethereum testnets named after metro stations? {#why-naming}
+
+Many Ethereum testnets are named after real-world metro or train stations. This naming tradition started early and reflects the global cities where contributors have lived or worked. It's symbolic, memorable, and practical. Just like testnets are isolated from Ethereum mainnet, metro lines run separately from surface traffic.
+
+### <Emoji text="🚧" /> Commonly used and legacy testnets {#common-and-legacy-testnets}
+
+- **Sepolia** - A metro-linked neighborhood in Athens, Greece. Currently used for smart contract and dApp testing.
+- **Hoodi** - Named after Hoodi metro station in Bengaluru, India. Used for validator and protocol upgrade testing.
+- **Goerli** _(deprecated)_ - Named after Görlitzer Bahnhof in Berlin, Germany.
+- **Rinkeby** _(deprecated)_ - Named after a Stockholm suburb with a metro station.
+- **Ropsten** _(deprecated)_ - Refers to an area and former ferry/metro terminal in Stockholm.
+- **Kovan** _(deprecated)_ - Named after a Singapore MRT station.
+- **Morden** _(deprecated)_ - Named after a London Underground station. Ethereum’s first public testnet.
+
+### <Emoji text="🧪" /> Other specialized testnets {#other-testnets}
+
+Some testnets were created for short-term or upgrade-specific testing and are not necessarily metro-themed:
+
+- **Holesky** _(deprecated)_ - Named after Holešovice station in Prague. Used for validator testing; deprecated in 2025.
+- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(all deprecated)_ and **Ephemery** - Purpose-built for upgrade simulations like The Merge, Shanghai, or validator experiments. Some names are regional or thematic rather than metro-based.
+
+Using metro station names helps developers quickly identify and remember testnets without needing to rely on numeric chain IDs. It also reflects Ethereum’s culture: practical, global, and human-centered.
 
 ## Related tools {#related-tools}
 

@@ -62,12 +62,15 @@ Je adres zal hetzelfde zijn in alle Ethereum-projecten. Je hoeft je voor geen en
 5. Bevestig het handtekeningverzoek in je portemonnee om de verbinding tot stand te brengen. **Het ondertekenen van dit bericht zou geen ETH mogen kosten**.
 6. Dat is alles! Begin met het gebruiken van de app. Je kunt een aantal interessante projecten vinden op onze [dApps-pagina](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Wilt u hier meer over leren?</div>
   <ButtonLink href="/guides/">
     Bekijk onze andere gidsen
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Veelgestelde vragen
 

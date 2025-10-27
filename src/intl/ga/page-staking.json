@@ -201,7 +201,7 @@
   "page-staking-faq-2-answer": "Tá an cumas ag bailíochtóir bloic don líonra a mholadh agus a fhianú. Chun iompar mímhacánta a chosc, caithfidh úsáideoirí a gcuid cistí a bheith i gceist leis an ngeallchur. Leis sin ligtear don phrótacal pionós a ghearradh ar ghníomhuithe mailíseacha. Is bealach é an geallchur chun thú a choinneáil macánta, mar beidh iarmhairtí airgeadais ag do ghníomhartha.",
   "page-staking-faq-3-question": "An féidir liom 'Eth2' a cheannach?",
   "page-staking-faq-3-answer-p1": "Níl aon chomhartha 'Eth2' ann atá dúchasach don phrótacal, mar níor athraíodh comhartha dúchais an éitir (ETH) nuair a bogadh Ethereum go cruthúnas geallchuir.",
-  "page-staking-faq-3-answer-p2": "Tá comharthaí/ticeoirí díorthacha ann a d'fhéadfadh a bheith mar ETH geallchurtha (ie. rETH ó Rocket Pool, stETH ó Lido, ETH2 ó Coinbase). Foghlaim tuilleadh faoi <a href=\"/staking/pools/\">linnte geallchuir</a>",
+  "page-staking-faq-3-answer-p2": "Tá comharthaí/ticeoirí díorthacha ann a d'fhéadfadh a bheith mar ETH geallchurtha (i.e., rETH ó Rocket Pool, stETH ó Lido, ETH2 ó Coinbase). Foghlaim tuilleadh faoi <a href=\"/staking/pools/\">linnte geallchuir</a>",
   "page-staking-faq-4-question": "An bhfuiltear i mbun geallchuir cheana féin?",
   "page-staking-faq-4-answer-p1": "Tá. Tá an Geallchur beo ón 1 Nollaig 2020",
   "page-staking-faq-4-answer-p2": "Ciallaíonn sé seo go bhfuil an geallchur beo faoi láthair le haghaidh úsáideoirí chun a gcuid ETH a íoc mar éarlais, chun cliant bailíochtaithe a rith agus chun tús a chur le luaíochtaí a thuilleamh.",

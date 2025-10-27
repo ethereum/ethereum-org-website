@@ -37,9 +37,13 @@ La Fusione ha rappresentato il passaggio ufficiale all'uso della Beacon Chain co
 
 Con La Fusione, la cronologia non è andata perduta. Quando la Rete principale si è fusa con la Beacon Chain, ha unito anche l'intera cronologia delle transazioni di Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'ether. Scopri di più sull'[emissione di ether prima e dopo La Fusione](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Utenti e detentori {#users-holders}
 
@@ -118,7 +122,7 @@ La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilit�
 
 <ExpandableCard
 title="Equivoci: &quot;Eseguire un nodo richiede lo staking di 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Esistono due tipi di nodi di Ethereum: i nodi che possono proporre blocchi e quelli che non possono.
 

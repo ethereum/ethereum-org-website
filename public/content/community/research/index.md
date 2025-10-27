@@ -41,7 +41,7 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG explainer](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG explainer](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 #### Recent research {#recent-research}
@@ -57,7 +57,7 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 - building out light client support;
 - researching gas limits;
-- and incorporating new data structures (e.g. Verkle Tries).
+- and incorporating new data structures (e.g., Verkle Tries).
 
 #### Background reading {#background-reading-1}
 
@@ -266,7 +266,7 @@ Validators use Ethereum's native asset (ether) as collateral against dishonest b
 
 ### Liquid staking and derivatives {#liquid-staking-and-derivatives}
 
-Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking are still being discovered, as well as its effect on Ethereum's security (e.g. centralization risks).
+Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking are still being discovered, as well as its effect on Ethereum's security (e.g., centralization risks).
 
 #### Background reading {#background-reading-12}
 

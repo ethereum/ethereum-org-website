@@ -151,7 +151,7 @@ Here's an example to show how onchain attestations might work in practice:
 
 ### Soulbound tokens and identity {#soulbound}
 
-[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique onchain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
+[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique onchain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g., finishing some specific online course or passing a threshold score in a game) or community participation.
 
 ## Use decentralized identity {#use-decentralized-identity}
 
@@ -160,7 +160,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for onchain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
 - **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Open standard for authentication with Ethereum accounts._
 - **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
-- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
+- **[Ethereum Attestation Service (EAS)](https://attest.org/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._

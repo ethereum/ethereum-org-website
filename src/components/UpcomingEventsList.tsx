@@ -7,7 +7,6 @@ import { useLocale } from "next-intl"
 import type { CommunityConference, Lang } from "@/lib/types"
 
 import EventCard from "@/components/EventCard"
-import InfoBanner from "@/components/InfoBanner"
 import { Button } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
@@ -15,6 +14,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import communityEvents from "@/data/community-events.json"
+
+import { Alert, AlertContent, AlertDescription, AlertEmoji } from "./ui/alert"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -97,12 +98,17 @@ const UpcomingEventsList = () => {
 
   if (Object.keys(monthGroupedEvents)?.length === 0) {
     return (
-      <InfoBanner emoji=":information_source:">
-        {t("page-community-upcoming-events-no-events")}{" "}
-        <Link href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
-          {t("page-community-please-add-to-page")}
-        </Link>
-      </InfoBanner>
+      <Alert variant="update">
+        <AlertEmoji text=":information_source:" />
+        <AlertContent>
+          <AlertDescription>
+            {t("page-community-upcoming-events-no-events")}{" "}
+            <Link href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+              {t("page-community-please-add-to-page")}
+            </Link>
+          </AlertDescription>
+        </AlertContent>
+      </Alert>
     )
   }
 

@@ -166,19 +166,19 @@ return (
       <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
       <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="e.g. My first NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
       <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="e.g. Even cooler than cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>

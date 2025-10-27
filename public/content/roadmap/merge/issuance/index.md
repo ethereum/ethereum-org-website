@@ -6,7 +6,7 @@ lang: en
 
 # How The Merge impacted ETH supply {#how-the-merge-impacts-ETH-supply}
 
-The Merge represented the Ethereum network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
+The Merge represented the Ethereum network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e., Mainnet) and the consensus layer (i.e., Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
 
 ## Components of ETH issuance {#components-of-eth-issuance}
 
@@ -54,11 +54,17 @@ Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 - Results in **~620,500** ETH issued in a year
 - Resulted in inflation rate of **approximately 0.52%** (620.5K per year / 119.3M total)
 
-<InfoBanner>
-<strong>Total annualized issuance rate (pre-merge): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88.7%</strong> of the issuance was going to miners on the execution layer (4.09 / 4.61 * 100)<br/><br/>
-<strong>~11.3%</strong> was being issued to stakers on the consensus layer (0.52 / 4.61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Total annualized issuance rate (pre-merge): ~4.61%** (4.09% + 0.52%)
+
+**~88.7%** of the issuance was going to miners on the execution layer (4.09 / 4.61 * 100)
+
+**~11.3%** was being issued to stakers on the consensus layer (0.52 / 4.61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Post-merge (present day) {#post-merge}
 
@@ -84,18 +90,28 @@ As more validators withdraw, the maximum number of exiting validators will gradu
 - Execution layer issuance: **0**
 - Consensus layer issuance: Same as above, **~0.52%** annualized issuance rate (with 14 million total ETH staked)
 
-<InfoBanner>
-Total annualized issuance rate: <strong>~0.52%</strong><br/><br/>
-Net reduction in annual ETH issuance: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Total annualized issuance rate: **~0.52%**
+
+Net reduction in annual ETH issuance: **~88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> The burn {#the-burn}
 
 The opposite force to ETH issuance is the rate at which ETH is burned. For a transaction to execute on Ethereum, a minimum fee (known as a "base fee") must be paid, which fluctuates continuously (block-to-block) depending on network activity. The fee is paid in ETH and is _required_ for the transaction to be considered valid. This fee gets _burned_ during the transaction process, removing it from circulation.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+
 Fee burning went live with [the London upgrade](/ethereum-forks/#london) in August 2021, and remains unchanged since The Merge.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning/removing it from circulation.
 

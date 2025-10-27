@@ -46,12 +46,15 @@ Anyị na-adụ ọdụ ka i megharịa akụrụngwa i ji eme nkagbu mgbe nkeji
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Frequently asked questions
 

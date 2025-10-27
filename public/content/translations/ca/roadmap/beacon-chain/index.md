@@ -29,9 +29,14 @@ La cadena de balisa introduirà la [prova de participació](/developers/docs/con
 
 Apostar i convertir-se en validador és més senzill que [minar](/developers/docs/consensus-mechanisms/pow/mining/) (la manera actual de mantenir la xarxa segura). I s'espera que això contribueixi a fer Ethereum més segur a llarg termini. Com més gent participi a la xarxa, més descentralitzada i segura serà davant dels atacs.
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<AlertEmoji text=":money_bag:"/>
+<AlertContent>
+<AlertDescription>
 Si us interessa ser validador i contribuir a protegir la cadena de balisa, [aquí podeu aprendre més sobre les apostes](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Això és un canvi important per una altra millora:[les cadenes de fragments](/roadmap/danksharding/).
 

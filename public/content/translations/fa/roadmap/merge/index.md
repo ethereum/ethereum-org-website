@@ -37,9 +37,13 @@ summaryPoint4: میزان مصرف انرژی اتریوم بعد از ادغا�
 
 هیچ سابقه‌ای در «ادغام» گم نشد. همچنان‌که شبکه اصلی با زنجیره بیکن ادغام شد، کل سابقۀ معاملات اتریوم را نیز ادغام کرد.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 با گذار به اثبات سهام، نحوۀ صدور اتر تغییر یافت. درباره [نحوه صدور اتر قبل و بعد از ادغام](/roadmap/merge/issuance/) بیشتر بدانید.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### کاربران و دارندگان {#users-holders}
 
@@ -116,7 +120,7 @@ id="developers">
 
 <ExpandableCard
 title="تصور غلط: &quot;اجرای یک گره مستلزم سهام‌گذاری 32 اتر است.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 دو نوع گره اتریوم وجود دارد: گره‌هایی که می‌توانند بلوک‌ها را پیشنهاد کنند و گره‌هایی که نمی‌توانند این کار را انجام دهند.
 

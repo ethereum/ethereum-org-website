@@ -63,12 +63,15 @@ Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen e
 
 Dit klinkt vreemd... "Waarom zou ik mijn geld willen programmeren"? Dit is echter meer dan een standaardkenmerk van tokens op Ethereum. Iedereen kan logica programmeren in betalingen. Zodat u de controle en veiligheid van Bitcoin kunt krijgen gemengd met de diensten die door financiële instellingen worden aangeboden. Dit laat u dingen doen met cryptocurrencies die u niet kunt doen met Bitcoin, zoals leningen geven en nemen, betalingen plannen, investeren in indexfondsen en veel meer.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Verken onze suggesties voor DeFi-applicaties om uit te proberen als u nieuw bent bij Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Verken DeFi-apps
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Wat kunt u doen met DeFi? {#defi-use-cases}
 

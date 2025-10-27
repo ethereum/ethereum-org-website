@@ -129,7 +129,7 @@ Seo scéal hipitéiseach chun fianuithe as slabhra a mhíniú:
 
 1. Gineann ollscoil (an t-eisitheoir) fianú (teastas acadúil digiteach), síníonn sí é leis na heochracha, agus eisíonn sí é chuig Bob (úinéir na céannachta).
 
-2. Déanann Bob iarratas ar phost agus ba mhaith leis a cháilíochtaí acadúla a chruthú le fostóir, mar sin roinneann sé an fianú óna sparán soghluaiste. Féadfaidh an chuideachta (an fíoraitheoir) bailíocht an fhianaithe a dhearbhú ansin trí DID an eisitheora a sheiceáil (i.e. a eochair phoiblí ar Ethereum).
+2. Déanann Bob iarratas ar phost agus ba mhaith leis a cháilíochtaí acadúla a chruthú le fostóir, mar sin roinneann sé an fianú óna sparán soghluaiste. Féadfaidh an chuideachta (an fíoraitheoir) bailíocht an fhianaithe a dhearbhú ansin trí DID an eisitheora a sheiceáil (i.e., a eochair phoiblí ar Ethereum).
 
 ### Fianuithe as slabhra le rochtain leanúnach {#offchain-attestations-with-persistent-access}
 

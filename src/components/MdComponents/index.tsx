@@ -14,7 +14,6 @@ import FeaturedText from "@/components/FeaturedText"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage"
-import InfoBanner from "@/components/InfoBanner"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
@@ -29,6 +28,8 @@ import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
+
+import * as AlertComponents from "../ui/alert"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -162,6 +163,7 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
+  ...AlertComponents,
   BrowseApps,
   ButtonLink,
   Card,
@@ -174,7 +176,6 @@ export const reactComponents = {
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,

@@ -64,12 +64,15 @@ Tógann Ethereum air sin. Cosúil le Bitcoin, ní féidir leis na rialacha athr�
 
 Tá cuma ait ar an scéal seo... "cén fáth a mbeinn ag iarraidh mo chuid airgid a ríomhchlárú"? Mar sin féin, níl sé seo ach ina ghné réamhshocraithe de chomharthaí ar Ethereum. Is féidir le duine ar bith an loighic a ríomhchlárú in íocaíochtaí. Mar sin is féidir leat rialú agus slándáil Bitcoin a fháil i dteannta leis na seirbhísí a sholáthraíonn institiúidí airgeadais. Leis sin ligtear duit rudaí a dhéanamh le criptea-airgeadraí nach féidir leat a dhéanamh le Bitcoin cosúil le hiasachtaí a thabhairt agus iasachtaí a fháil, íocaíochtaí a sceidealú, infheistíocht a dhéanamh i gcistí innéacs agus go leor eile.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Foghlaim faoinár moltaí le haghaidh feidhmchláir DeFi le triail a bhaint astu mura bhfuil tú cleachta le hEthereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Foghlaim faoi aipeanna DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Cad is féidir leat a dhéanamh le DeFi? {#defi-use-cases}
 

@@ -22,7 +22,7 @@ One of the foundations of ReFi is the concept of regenerative economics pioneere
 
 ![Eight interconnected principles](refi-regenerative-economy-diagram.png)
 
-ReFi projects realize these principles using [smart contracts](/glossary/#smart-contract) and [decentralized finance (DeFi)](/glossary/#defi) applications to incentivize regenerative behaviors, e.g. restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
+ReFi projects realize these principles using [smart contracts](/glossary/#smart-contract) and [decentralized finance (DeFi)](/glossary/#defi) applications to incentivize regenerative behaviors, e.g., restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
@@ -32,7 +32,7 @@ ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, w
 
 The **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is a mechanism for funding projects that make a verified positive impact on carbon emissions, either reducing ongoing emissions, or removing greenhouse gases already emitted from the atmosphere. These projects receive an asset called "carbon credits" after they are verified, which they can sell to individuals and organizations who want to support climate action.
 
-In addition to the VCM, there are also several government-mandated carbon markets (‘compliance markets’) that aim to establish a carbon price via laws or regulations within a particular jurisdiction (e.g. country or region), controlling the supply of permits to be distributed. Compliance markets incentivize polluters within their jurisdiction to reduce emissions, but they are not capable of removing greenhouse gases which have already been emitted.
+In addition to the VCM, there are also several government-mandated carbon markets (‘compliance markets’) that aim to establish a carbon price via laws or regulations within a particular jurisdiction (e.g., country or region), controlling the supply of permits to be distributed. Compliance markets incentivize polluters within their jurisdiction to reduce emissions, but they are not capable of removing greenhouse gases which have already been emitted.
 
 Despite its development over recent decades, the VCM continues to suffer from a variety of issues:
 

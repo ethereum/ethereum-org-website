@@ -37,9 +37,13 @@ Sloučení představovalo oficiální přechod na používání Řetězové vazb
 
 Historie nebyla během Sloučení vymazána. Jak se hlavní síť sloučila s Řetězovou vazbou, sloučila se také celá transakční historie Etherea.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Tento přechod na důkaz podílem změnil způsob, jakým je ether vydáván. Přečtěte si další informace na téma [vydávání etheru před Sloučením a po něm](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Uživatelé a držitelé {#users-holders}
 
@@ -118,7 +122,7 @@ Sloučení také připravilo půdu pro další škálovatelná vylepšení, kter
 
 <ExpandableCard
 title="Mylná představa: &quot;Pro spuštění uzlu je potřeba uzamknout 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Existují dva typy síťových uzlů Etherea: Uzly, které mohou navrhovat bloky, a uzly, které nemohou.
 

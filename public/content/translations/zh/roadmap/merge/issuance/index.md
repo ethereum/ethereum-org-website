@@ -54,11 +54,17 @@ title="以太币发行内容提要">
 - 因此一年发行**大约 620,500** 个以太币
 - 因此通胀率**大约是 0.52%**（每年 62.06 万个/总共 1.193 亿个）
 
-<InfoBanner>
-<strong>总计年化发行率（合并前）：大约 4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>大约 88.7%</strong> 的发行量会给执行层上的矿工 (4.09 / 4.61 * 100)<br/><br/>
-<strong>大约 11.3%</strong> 的发行量会给共识层上的质押人 (0.52 / 4.61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**总计年化发行率（合并前）：大约 4.61%** (4.09% + 0.52%)
+
+**大约 88.7%** 的发行量会给执行层上的矿工 (4.09 / 4.61 * 100)
+
+**大约 11.3%** 的发行量会给共识层上的质押人 (0.52 / 4.61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 合并后（现状） {#post-merge}
 
@@ -84,18 +90,27 @@ title="以太币发行内容提要">
 - 执行层发行量：**0**
 - 共识层发行量：同上，年化发行率**大约 0.52%**（质押总量为 1400 万个以太币）
 
-<InfoBanner>
-总计年化发行率：<strong>大约 0.52%</strong><br/><br/>
-每年以太币发行量净减少：<strong>大约 88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+总计年化发行率：**大约 0.52%**
+
+每年以太币发行量净减少：**大约 88.7%** ((4.61% - 0.52%) / 4.61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />销毁 {#the-burn}
 
 针对以太币发行的反制因素是以太币销毁率。 为了在以太坊上执行交易，必须支付最低费用（称为“基础费”），基础费随网络活动持续波动（区块到区块）。 该费用使用以太币支付，为了让交易有效_必须_支付。 基础费在交易过程中_销毁_并退出流通。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 费用销毁在 2021 年 8 月的[伦敦升级](/ethereum-forks/#london)后上线，在合并后保持不变。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 除了伦敦升级实现的费用销毁外，验证者也会因为离线受到惩罚，更糟糕的情况是，他们可能会因为违反某些规则致使网络安全受到威胁而被罚没。 这些惩罚导致验证者的以太币余额减少，罚没金额不会直接奖励给任何其他帐户，而是真正地销毁/退出流通。
 

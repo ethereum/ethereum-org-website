@@ -62,12 +62,15 @@ Twój adres będzie taki sam we wszystkich projektach Ethereum. Nie musisz rejes
 5. Potwierdź prośbę o podpis w portfelu, aby ustanowić połączenie. **Podpisywanie tej wiadomości nie powinno wymagać wydawania żadnych ETH**.
 6. Gotowe! Zacznij używać aplikacji. Możesz znaleźć kilka interesujących projektów na naszej [stronie zdecentralizowanych aplikacji](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Często zadawane pytania
 

@@ -49,12 +49,15 @@ Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz.
 İşlem yapıldığında otomatik olarak takas edilmiş token'ları cüzdanınıza alacaksınız.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Sıkça sorulan sorular
 

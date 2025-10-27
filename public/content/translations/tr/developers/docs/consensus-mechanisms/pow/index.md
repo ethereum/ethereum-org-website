@@ -6,9 +6,14 @@ lang: tr
 
 Ethereum ağı, **[İş İspatı (PoW)](/developers/docs/consensus-mechanisms/pow)** kullanan bir uzlaşma mekanizmasıyla başladı. Bu durum, Ethereum ağının düğümler sisteminin Ethereum blok zincirine kaydedilen bütün bilgilerin ortak durumda anlaşmasına olanak tanıdı ve belirli ekonomik saldırı türlerini önledi. Ancak, Ethereum 2022'de iş ispatı mekanizmasını devre dışı bırakarak sonlandırdı ve bunun yerine [hisse ispatını](/developers/docs/consensus-mechanisms/pos) kullanmaya başladı.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     İş ispatı artık kullanımdan kaldırılmıştır. Ethereum artık mutabakat mekanizmasının bir parçası olan iş ispatını kullanmamaktadır. Bunun yerine hisse ispatı kullanılmaktadır. [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ve [hisseleme](/staking/) hakkında daha fazla bilgi edinin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Ön Koşullar {#prerequisites}
 

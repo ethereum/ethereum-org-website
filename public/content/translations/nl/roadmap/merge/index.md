@@ -37,9 +37,13 @@ De samenvoeging betekende de officiële overstap naar het gebruik van de Beacon 
 
 Geen enkele geschiedenis ging verloren tijdens de samenvoeging. Toen het hoofdnet fuseerde met de Beacon Chain, werd ook de hele transactiegeschiedenis van Ethereum samengevoegd.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Deze overgang naar proof-of-stake veranderde de manier waarop ether wordt uitgegeven. Ontdek meer over de [ether-uitgifte voor en na de samenvoeging](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Gebruikers en houders {#users-holders}
 
@@ -118,7 +122,7 @@ De samenvoeging heeft ook de weg vrijgemaakt voor verdere opschalingsupgrades di
 
 <ExpandableCard
 title="Misvatting: &quot;voor het uitvoeren van een node moet u 32 ETH staken.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Er zijn twee soorten Ethereum-nodes: nodes die blocks kunnen voorstellen en nodes die dat niet kunnen.
 

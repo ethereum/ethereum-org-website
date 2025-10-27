@@ -34,9 +34,14 @@ summaryPoint3: बीकन चेन ने कंसेंसस तर्क 
 
 और सर्वसम्मति तंत्र के रूप में प्रूफ-ऑफ-स्टेक का उपयोग करना [सुरक्षित, पर्यावरण के अनुकूल और स्केलेबल एथेरियम के लिए एक मूलभूत घटक है जो हमारे पास अभी है](/roadmap/vision/)।
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<AlertEmoji text=":money_bag:"/>
+<AlertContent>
+<AlertDescription>
   यदि आप एक सत्यापनकर्ता बनने में रुचि रखते हैं और एथेरियम को सुरक्षित करने में मदद करते हैं, तो [स्टेकिंग के बारे में और जानें](/staking/)।
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### शार्डिंग सेट करना {#setting-up-for-sharding}
 
