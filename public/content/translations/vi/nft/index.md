@@ -54,12 +54,15 @@ NFT được dùng cho nhiều thứ, bao gồm:
 
 Có thể bạn là một nghệ sĩ muốn chia sẻ tác phẩm của mình bằng NFT mà không bị mất quyền kiểm soát chúng hoặc hy sinh lợi nhuận của mình cho các bên trung gian. Bạn có thể tạo một hợp đồng mới và định sẵn số lượng NFT, thuộc tính của chúng và một liên kết tới một tác phẩm nghệ thuật cụ thể nào đó. Là nghệ sĩ, **bạn có thể lập trình vào hợp đồng thông minh phí bản quyền** sẽ được trả cho bạn (ví dụ như giữ lại 5% giá chuyển nhượng tới người tạo ra NFT mỗi lần NFT này được chuyển đi). Bạn có thể chứng minh rằng bạn đã tạo ra những NFT đó bởi vì bạn sở hữu [địa chỉ ví](/glossary/#wallet) dùng để triển khai hợp đồng đó. Người mua NFT của bạn có thể dễ dàng chứng minh rằng họ sở hữu **NFT xác thực** từ bộ sưu tập của bạn bởi vì [địa chỉ](/glossary/#address) ví của họ được liên kết với một token trong hợp đồng thông minh của bạn. Họ có thể dùng nó trong hệ sinh thái Ethereum và yên tâm về tính xác thực của nó.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Khám phá nghệ thuật NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Hoặc xem nó như một vé tham gia một sự kiện thể thao. Tương tự như việc một **quản lý tổ chức sự kiện có thể lựa chọn số lượng vé sẽ bán ra **, tác giả của một NFT có thể quyết định số lượng phiên bản NFT tồn tại. Đôi khi chúng là những phiên bản y hệt nhau, ví dụ như 5000 vé tham gia chung. Đôi khi một số khác thì được đúc rất tương đồng nhưng mỗi phiên bản sẽ hơi khác nhau, ví dụ như mỗi tấm vé với một số ghế riêng. Những thứ này có thể được bán và mua giữa người dùng mà không phải trả tiền cho các nhà quản lí vé, và người mua luôn đảm bảo được tính xác thực của vé đó bằng cách kiểm tra địa chỉ của hợp đồng đó.
 

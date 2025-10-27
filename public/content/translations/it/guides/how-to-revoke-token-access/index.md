@@ -20,7 +20,6 @@ Svariati siti web ti consentono di visualizzare e revocare i contratti intellige
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (svariate reti)
 - [Revoke](https://revoke.cash/) (svariate reti)
 - [Unrekt](https://app.unrekt.net/) (svariate reti)
 - [EverRevoke](https://everrise.com/everrevoke/) (svariate reti)
@@ -47,12 +46,15 @@ Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di ric
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Vuoi scoprire di più?</div>
   <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Domande frequenti
 

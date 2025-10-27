@@ -36,11 +36,11 @@
   "page-index-cta-dapps-label": "جرب التطبيقات",
   "page-index-cta-get-eth-description": "عملة تطبيقات إيثريوم",
   "page-index-cta-get-eth-label": "احصل على عملات إثير",
-  "page-index-cta-networks-description": "استمتع مقابل رسوم بسيطة",
-  "page-index-cta-networks-label": "اختر شبكة",
   "page-index-cta-wallet-description": "إنشاء الحسابات وإدارة الأصول",
   "page-index-cta-wallet-label": "اختر محفظة",
   "page-index-description": "المنصة الرائدة للتطبيقات المبتكرة وشبكات البلوكتشين",
+  "page-index-cta-build-apps-description": "أنشئ أول تطبيق لك",
+  "page-index-cta-build-apps-label": "ابدأ التطوير",
   "page-index-developers-code-example-description-0": "بإمكانك بناء مصرف يدعمه المنطق الذي تقوم ببرمجته بنفسك",
   "page-index-developers-code-example-description-1": "يمكنك إنشاء رموز بحيث يمكنك نقلها واستخدامها عبر التطبيقات",
   "page-index-developers-code-example-description-2": "بإمكانك استخدام اللغات الموجودة للتفاعل مع إيثريوم والتطبيقات الأخرى",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "أحدث المنشورات",
   "page-index-posts-subtitle": "أحدث منشورات المدونة والتحديثات من المجتمع",
   "page-index-title": "مرحبًا بكم في إيثريوم",
+  "page-index-use-cases-tag": "حالات الاستخدام",
   "page-index-values-description": "كن جزءًا من الثورة الرقمية",
   "page-index-values-header": "الانترنت آخذ في التغير",
   "page-index-values-legacy": "أثرية",
@@ -116,5 +117,7 @@
   "page-index-values-open-legacy-label": "مغلقة للأغلبية",
   "page-index-values-open-legacy-content-0": "تحمي الشركات ملكيتها الفكرية ولا تشاركها مع الآخرين. ولا يستطيع أحد خارج الشركة أن يرى كيفية سير الأعمال، أو حل المشكلات، أو إجراء التطويرات. ومن الصعب على الأشخاص أن يبتكروا أدوات جديدة أو يخصصوها.",
   "page-index-values-open-ethereum-label": "مفتوحة للجميع",
-  "page-index-values-open-ethereum-content-0": "الإيثريوم متاحة للجميع. يمكن لأي شخص رؤية النص البرمجي واستخدامه وتحسينه، ما يجعله أفضل للجميع."
+  "page-index-values-open-ethereum-content-0": "الإيثريوم متاحة للجميع. يمكن لأي شخص رؤية النص البرمجي واستخدامه وتحسينه، ما يجعله أفضل للجميع.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "انضم إلى أكبر حدث Ethereum لهذا العام",
+  "page-index-devconnect-banner-get-tickets": "احصل على التذاكر"
 }

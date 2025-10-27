@@ -60,14 +60,17 @@ lang: fa
 ![انتخاب از لیست کیف پول ها برای اتصال](./connect2.png)
 
 5. برای برقرار کردن اتصال، درخواست امضا را در کیف پول خود تایید کنید. **برای امضای این پیام، نباید به پرداخت هیچ ETH نیاز باشد**.
-6. همین! استفاده از اپلیکیشن را شروع کنید. در [صفحه برنامه های غیرمتمرکز](/dapps/#explore) می توانید پروژه های جالبی را پیدا کنید. <br />
+6. همین! استفاده از اپلیکیشن را شروع کنید. در [صفحه برنامه های غیرمتمرکز](/apps/#explore) می توانید پروژه های جالبی را پیدا کنید. <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>می‌خواهید بیشتر بدانید؟</div>
   <ButtonLink href="/guides/">
     راهنماهای دیگر ما را ببینید
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## پرسش‌های متداول
 

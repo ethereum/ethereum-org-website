@@ -1,12 +1,12 @@
 ---
 title: ERC-1155 Multi-Token Standard
-description:
+description: Learn about ERC-1155, a multi-token standard that combines fungible and non-fungible tokens in a single contract.
 lang: en
 ---
 
 ## Introduction {#introduction}
 
-A standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g. semi-fungible tokens).
+A standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g., semi-fungible tokens).
 
 **What is meant by Multi-Token Standard?**
 
@@ -141,6 +141,6 @@ _Note_: All batch functions including the hook also exist as versions without ba
 ## Further reading {#further-reading}
 
 - [EIP-1155: Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/5.x/erc1155)
 - [ERC-1155: GitHub Repo](https://github.com/enjin/erc-1155)
-- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)

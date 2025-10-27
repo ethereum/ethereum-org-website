@@ -34,16 +34,11 @@ ETH on testnets is supposed to have no real value; however, there have been mark
 
 #### Which Testnet should I use?
 
-The two public testnets that client developers are currently maintaining are Sepolia and Goerli. Sepolia is a network for contract and application developers to test their applications. The Goerli network lets protocol developers test network upgrades, and lets stakers test running validators.
+The two public testnets that client developers are currently maintaining are Sepolia and Hoodi. Sepolia is a network for contract and application developers to test their applications. The Hoodi network lets protocol developers test network upgrades, and lets stakers test running validators.
 
 #### Sepolia {#sepolia}
 
-**Sepolia is the recommended default testnet for application development**.
-The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
-
-- Closed validator set, controlled by client & testing teams
-- New testnet, less applications deployed than other testnets
-- Fast to sync and running a node requires minimal disk space
+**Sepolia is the recommended default testnet for application development**. The Sepolia network uses a permissioned validator set controlled by client & testing teams.
 
 ##### Resources
 
@@ -55,20 +50,19 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 ##### Faucets
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
-- [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Infura Sepolia Faucet](https://www.infura.io/faucet)
+- [PoW Faucet](https://sepolia-faucet.pk910.de/)
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Goerli _(long-term support)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
-
-Goerli is a testnet for testing validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+Hoodi is a testnet for testing validating and staking. The Hoodi network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Hoodi.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
@@ -76,56 +70,102 @@ Goerli is a testnet for testing validating and staking. The Goerli network is op
 
 ##### Resources
 
-- [Website](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Website](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
 
 ##### Faucets
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
+- [PoW Faucet](https://hoodi-faucet.pk910.de/)
 
-To launch a Validator on Holesky testnet, use ethstaker's ["cheap Holesky validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/).
+#### Ephemery {#ephemery}
+
+Ephemery is a unique kind of testnet that fully resets every month. The execution and consensus state reverts back to genesis every 28 days, which means anything that happens on the testnet is ephemeral. This makes it ideal for a short term testing, fast node bootstrap and 'hello world' kind of applications that don't need permanence.
+
+- Always fresh state, short term testing of validators and apps
+- Includes only basic set of contracts
+- Open validator set and easy to access large amounts of funds
+- Smallest node requirements and quickest sync, &lt;5GB on average
+
+##### Resources
+
+- [Website](https://ephemery.dev/)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [Community chat](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [Beacon explorer](https://beaconlight.ephemery.dev/)
+- [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Launchpad](https://launchpad.ephemery.dev/)
+
+#### Faucets
+
+- [Bordel Faucet](https://faucet.bordel.wtf/)
+- [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
+
+#### Holesky (deprecated) {#holesky}
+
+The Holesky testnet is deprecated as of September 2025. Staking operators and infrastructure providers should use Hoodi for validator testing instead.
+
+- [Holesky Testnet Shutdown Announcement](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1-September-2025_
+- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
 
 ### Layer 2 testnets {#layer-2-testnets}
 
 [Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer 2 testnets are usually tightly coupled to public Ethereum testnets.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
+##### Resources
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
+
 ##### Faucets
 
-- [Chainlink faucet](https://faucets.chain.link/)
+- [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
+##### Resources
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
+
 ##### Faucets
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
+- [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 A testnet for [Starknet](https://www.starknet.io).
 
+##### Resources
+
+- [Starkscan](https://sepolia.starkscan.co/)
+
 ##### Faucets
 
-- [Starknet faucet](https://faucet.goerli.starknet.io)
+- [Alchemy Faucet](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Blast Starknet Sepolia Faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
+- [Starknet Faucet](https://starknet-faucet.vercel.app/)
 
 ## Private networks {#private-networks}
 
-An Ethereum network is a private network if its nodes are not connected to a public network (i.e. Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
+An Ethereum network is a private network if its nodes are not connected to a public network (i.e., Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
 
 ### Development networks {#development-networks}
 
@@ -138,6 +178,29 @@ There are projects and tools dedicated to assist with this. Learn more about [de
 The consensus process is controlled by a pre-defined set of nodes that are trusted. For example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
 
 If a public Ethereum network is like the public internet, a consortium network is like a private intranet.
+
+## <Emoji text="🚉" /> Why are Ethereum testnets named after metro stations? {#why-naming}
+
+Many Ethereum testnets are named after real-world metro or train stations. This naming tradition started early and reflects the global cities where contributors have lived or worked. It's symbolic, memorable, and practical. Just like testnets are isolated from Ethereum mainnet, metro lines run separately from surface traffic.
+
+### <Emoji text="🚧" /> Commonly used and legacy testnets {#common-and-legacy-testnets}
+
+- **Sepolia** - A metro-linked neighborhood in Athens, Greece. Currently used for smart contract and dApp testing.
+- **Hoodi** - Named after Hoodi metro station in Bengaluru, India. Used for validator and protocol upgrade testing.
+- **Goerli** _(deprecated)_ - Named after Görlitzer Bahnhof in Berlin, Germany.
+- **Rinkeby** _(deprecated)_ - Named after a Stockholm suburb with a metro station.
+- **Ropsten** _(deprecated)_ - Refers to an area and former ferry/metro terminal in Stockholm.
+- **Kovan** _(deprecated)_ - Named after a Singapore MRT station.
+- **Morden** _(deprecated)_ - Named after a London Underground station. Ethereum’s first public testnet.
+
+### <Emoji text="🧪" /> Other specialized testnets {#other-testnets}
+
+Some testnets were created for short-term or upgrade-specific testing and are not necessarily metro-themed:
+
+- **Holesky** _(deprecated)_ - Named after Holešovice station in Prague. Used for validator testing; deprecated in 2025.
+- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(all deprecated)_ and **Ephemery** - Purpose-built for upgrade simulations like The Merge, Shanghai, or validator experiments. Some names are regional or thematic rather than metro-based.
+
+Using metro station names helps developers quickly identify and remember testnets without needing to rely on numeric chain IDs. It also reflects Ethereum’s culture: practical, global, and human-centered.
 
 ## Related tools {#related-tools}
 

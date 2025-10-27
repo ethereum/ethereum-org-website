@@ -23,7 +23,7 @@ La clave de firma del validador consta de dos elementos:
 - Clave **privada** de validador
 - Clave **pública** de validador
 
-El propósito de la clave privada del validador es firmar operaciones en cadena, como propuestas de bloque y certificaciones. Debido a esto, estas claves deben estar en una cartera en línea.
+El propósito de la clave privada de validador es firmar operaciones en cadena, como propuestas de bloque y certificados. Debido a esto, estas claves deben estar en una cartera en línea.
 
 Esta flexibilidad tiene la ventaja de mover las claves de firma del validador muy rápidamente de un dispositivo a otro, sin embargo, si se han perdido o se han robado, un ladrón puede ser capaz de **actuar maliciosamente** de varias maneras:
 
@@ -55,6 +55,8 @@ Perder esta llave antes de actualizar las credenciales de retiro al tipo `0x01` 
 La separación de las claves del validador de las claves de la cuenta de Ethereum permite que un solo usuario ejecute varios validadores.
 
 ![esquema de la clave del validador](validator-key-schematic.png)
+
+**Nota**: Salir de las funciones de participación y retirar el balance del validador actualmente requiere firmar un [mensaje de salida voluntaria (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) con la clave de validador. Sin embargo, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) es una propuesta que permitirá a un usuario activar la salida de un validador y retirar su balance firmando mensajes de salida con la clave de retirada en el futuro. Esto reducirá las suposiciones de confianza al permitir que los participantes que delegan ETH a [proveedores de participación como servicio](/staking/saas/#what-is-staking-as-a-service) mantengan el control de sus fondos.
 
 ## Derivar claves de una frase semilla {#deriving-keys-from-seed}
 
@@ -94,3 +96,5 @@ Cada rama está separada por un `/`, por lo que `m/2` significa comenzar con la 
 
 - [Publicación en el blog de Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Generación de claves EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: Salidas activables por la capa de ejecución](https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Gestión de claves a gran escala](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

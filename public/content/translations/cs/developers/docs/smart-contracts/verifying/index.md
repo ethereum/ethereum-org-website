@@ -72,11 +72,11 @@ Tradiční proces ověřování kontraktů může být složitý. Proto máme n�
 
 Ačkoli je Etherscan známý především jako [prohlížeč blockchainu Etherea](/developers/docs/data-and-analytics/block-explorers/), nabízí také [službu ověřování zdrojového kódu](https://etherscan.io/verifyContract) pro vývojáře a uživatele chytrých kontraktů.
 
-Etherscan umožňuje překompilovat bytekód kontraktu z původního datového payloadu (zdrojový kód, adresa knihovny, nastavení kompilátoru, adresa kontraktu atd.). Pokud je překompilovaný bytekód spojen s bytekódem (a parametry konstruktoru) kontraktu na blockchainu, pak je [smlouva ověřena](https://info.etherscan.com/types-of-contract-verification/).
+Etherscan umožňuje překompilovat bytekód kontraktu z původního datového payloadu (zdrojový kód, adresa knihovny, nastavení kompilátoru, adresa kontraktu atd.). Pokud je překompilovaný bytekód spojen s bytekódem (a parametry konstruktoru) kontraktu na blockchainu, pak je [kontrakt ověřen](https://info.etherscan.com/types-of-contract-verification/).
 
 Po ověření obdrží zdrojový kód vašeho kontraktu označení „Ověřeno“ a je zveřejněn na Etherscanu, kde ho mohou kontrolovat ostatní. Přidá se také do sekce [Ověřené kontrakty](https://etherscan.io/contractsVerified/) – úložiště chytrých kontraktů s ověřenými zdrojovými kódy.
 
-Etherscan je nejpoužívanějším nástrojem pro ověřování kontraktů. Ověřování kontraktu na Etherscanu má však nevýhodu: nepodaří se mu porovnat **hash metadat** bytekódu na blockchainu a překompilovaného bytekódu. Shody v programu Etherscan jsou proto pouze částečné.
+Etherscan je nejpoužívanějším nástrojem pro ověřování kontraktů. Ověřování kontraktu na Etherscanu má však nevýhodu: nedokáže porovnat **hash metadat** bytekódu na blockchainu a překompilovaného bytekódu. Shody v programu Etherscan jsou proto pouze částečné.
 
 [ Více o ověřování kontraktů na Etherscanu](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 

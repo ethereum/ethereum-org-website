@@ -42,7 +42,7 @@ Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel ge
 
 Wir benötigen ein Ethereum-Konto, um Transaktionen zu senden und zu empfangen. In diesem Tutorial verwenden wir MetaMask, eine virtuelle Wallet im Browser, mit der Sie Ihre Ethereum-Kontoadresse verwalten können. Weitere Informationen zu [Transaktionen](/developers/docs/transactions/).
 
-Sie können MetaMask [hier](https://metamask.io/download.html) kostenlos herunterladen und ein Konto erstellen. Wenn Sie ein Konto erstellen oder wenn Sie bereits ein Konto haben, stellen Sie sicher, dass Sie oben rechts zum "Ropsten-Testnet" wechseln (damit wir nicht mit echtem Geld arbeiten).
+Sie können MetaMask [hier](https://metamask.io/download) kostenlos herunterladen und ein Konto erstellen. Wenn Sie ein Konto erstellen oder wenn Sie bereits ein Konto haben, stellen Sie sicher, dass Sie oben rechts zum "Ropsten-Testnet" wechseln (damit wir nicht mit echtem Geld arbeiten).
 
 ![Beispiel MetaMask Ropsten](./metamask-ropsten-example.png)
 
@@ -233,9 +233,13 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Um diese mit unserem Code zu verbinden, werden wir diese Variablen in unserer `hardhat.config.js`-Datei in Schritt 13 referenzieren.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Führen Sie keinen Commit für <code>.env</code> aus. Stellen Sie sicher, dass Sie Ihre <code>.env</code>-Datei niemals an andere weitergeben, denn damit würden Sie Ihre geheimen Daten weitergeben. Wenn Sie die Versionskontrolle verwenden, fügen Sie Ihre <code>Env-Datei</code> zu einer Datei <a href="https://git-scm.com/docs/gitignore">gitignore</a> hinzu.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Schritt 12: Ethers.js installieren {#step-12-install-ethersjs}
 

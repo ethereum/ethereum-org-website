@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 Η πλήρης λίστα τρεχόντων ID δικτύου είναι διαθέσιμη στο [chainlist.org](https://chainlist.org). Δείτε περισσότερα στο:
 
 - `1`: Κεντρικό δίκτυο Ethereum
-- `5`: Δίκτυο δοκιμών Goerli
 - `11155111`: Δίκτυο δοκιμών Sepolia
+- `560048` : Δίκτυο δοκιμών Hoodi
 
 **Παράδειγμα**
 

@@ -259,7 +259,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 - **[Brownie 單元測試框架](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie 利用 Pytest，一個功能豐富的測試框架，使你能夠用最少的程式碼編寫小型測試，並且對於大型項目擴展良好，具有高度可延伸性。_
 
-- **[Foundry 測試](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry 提供了 Forge，一個快速且靈活的以太坊測試框架，能夠執行簡單的單元測試、燃料優化檢查，以及合約模糊測試。_
+- **[Foundry 測試](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry 提供了 Forge，一個快速且靈活的以太坊測試框架，能夠執行簡單的單元測試、燃料優化檢查，以及合約模糊測試。_
 
 - **[Hardhat 測試](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _基於 ethers.js、Mocha 和Chai 的智慧型合約測試框架。_
 

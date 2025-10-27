@@ -8,7 +8,7 @@ Acknowledgments: https://bounty.ethereum.org
 Preferred-Languages: en
 Canonical: https://ethereum.org/.well-known/security.txt
 Policy: https://bounty.ethereum.org
-Hiring: https://ethereum.org/en/community/get-involved/#ethereum-jobs
+Hiring: https://ethereum.org/community/get-involved/#ethereum-jobs
 -----BEGIN PGP SIGNATURE-----
 
 iQIzBAEBCAAdFiEErpbtlp5HmwCE8+F/6I0zNPpfagoFAmXYslMACgkQ6I0zNPpf

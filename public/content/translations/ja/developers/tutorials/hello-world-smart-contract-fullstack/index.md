@@ -48,7 +48,7 @@ _注意: 必ず**Goerli**を選択してください。そうしないと、こ�
 
 トランザクションの送受信には、イーサリアムアカウントが必要です。 ここでは、MetaMaskを使います。MataMaskは、ユーザーがイーサリアムのアカウントアドレスを管理できるブラウザーの仮想ウォレットです。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Goerli Test Network」に切り替えてください。
+Metamaskのアカウントは[こちら](https://metamask.io/download)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Goerli Test Network」に切り替えてください。
 
 ### ステップ4: フォーセットからイーサリアムを追加する {#step-4-add-ether-from-a-faucet}
 
@@ -602,7 +602,7 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 #### hardhat-etherscanのインストール {#install-hardhat-etherscan}
 
-あなたのコントラクトをEtherescanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
+あなたのコントラクトをEtherscanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
@@ -1116,7 +1116,7 @@ useEffect(async () => {
 
 #### MetaMaskをダウンロード {#download-metamask}
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は\( 実際に支払いが発生しないように \)右上の「Goerli Test Network」に切り替えてください。
+Metamaskのアカウントは[こちら](https://metamask.io/download)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は\( 実際に支払いが発生しないように \)右上の「Goerli Test Network」に切り替えてください。
 
 #### フォーセットからイーサ(ETH)を追加 {#add-ether-from-a-faucet}
 
@@ -1171,7 +1171,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1267,7 +1267,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1329,7 +1329,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

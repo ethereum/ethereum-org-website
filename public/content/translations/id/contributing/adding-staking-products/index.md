@@ -87,7 +87,7 @@ Untuk perangkat lunak atau kontrak pintar khusus yang terlibat:
 
 Untuk produk perangkat lunak yang terkait dengan pengaturan, manajemen, atau migrasi simpul atau klien:
 
-**Klien lapisan konsensus mana (mis. Lighthouse, Teku, Nimbus, Prysm) yang didukung?**
+**Klien lapisan konsensus mana (mis. Lighthouse, Teku, Nimbus, Prysm, Grandine) yang didukung?**
 
 - Klien mana yang didukung? Apakah pengguna dapat memilih?
 - Ini digunakan untuk menentukan skor "multi-client" produk.

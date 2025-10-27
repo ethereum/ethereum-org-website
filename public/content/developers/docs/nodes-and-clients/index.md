@@ -39,7 +39,7 @@ What these implementations have in common is they all follow a single specificat
 - Originally, the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Execution specs](https://github.com/ethereum/execution-specs/)
 - [Consensus specs](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/history/)
+- [EIPs](https://eips.ethereum.org/) implemented in various [network upgrades](/ethereum-forks/)
 
 ### Tracking nodes in the network {#network-overview}
 
@@ -49,6 +49,7 @@ Multiple trackers offer a real-time overview of nodes in the Ethereum network. N
 - [Ethernodes](https://ethernodes.org/) by Bitfly
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
 - [Monitoreth](https://monitoreth.io/) - by MigaLabs, A distributed network monitoring tool
+- [Weekly Network Health Reports](https://probelab.io) - by ProbeLab, Using the [Nebula crawler](https://github.com/dennis-tra/nebula) and other tools
 
 ## Node types {#node-types}
 
@@ -56,7 +57,7 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Full node {#full-node}
 
-Full nodes do a block-by-block validation of the blockchain, including downloading and verifying the block body and state data for each block. There are different classes of full node - some start from the genesis block and verify every single block in the entire history of the blockchain. Others start their verification at a more recent block that they trust to be valid (e.g. Geth's 'snap sync'). Regardless of where the verification starts, full nodes only keep a local copy of relatively recent data (typically the most recent 128 blocks), allowing older data to be deleted to save disk space. Older data can be regenerated when it is needed.
+Full nodes do a block-by-block validation of the blockchain, including downloading and verifying the block body and state data for each block. There are different classes of full node - some start from the genesis block and verify every single block in the entire history of the blockchain. Others start their verification at a more recent block that they trust to be valid (e.g., Geth's 'snap sync'). Regardless of where the verification starts, full nodes only keep a local copy of relatively recent data (typically the most recent 128 blocks), allowing older data to be deleted to save disk space. Older data can be regenerated when it is needed.
 
 - Stores full blockchain data (although this is periodically pruned so a full node does not store all state data back to genesis)
 - Participates in block validation, verifies all blocks and states.
@@ -67,7 +68,7 @@ Full nodes do a block-by-block validation of the blockchain, including downloadi
 
 Archive nodes are full nodes that verify every block from genesis and never delete any of the downloaded data.
 
-- Stores everything kept in the full node and builds an archive of historical states. It is needed if you want to query something like an account balance at block #4,000,000, or simply and reliably test your own transactions set without mining them using tracing.
+- Stores everything kept in the full node and builds an archive of historical states. It is needed if you want to query something like an account balance at block #4,000,000, or simply and reliably test your own transactions set without validating them using tracing.
 - This data represents units of terabytes, which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
@@ -76,7 +77,7 @@ Learn more about [Archive nodes](/developers/docs/nodes-and-clients/archive-node
 
 ### Light node {#light-node}
 
-Instead of downloading every block, light nodes only download block headers. These headers contain summary information about the contents of the blocks. Any other information the light node requires gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality and security guarantees as a full node.
+Instead of downloading every block, light nodes only download block headers. These headers contain summary information about the contents of the blocks. Any other information the light node requires gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e., they cannot be validators), but they can access the Ethereum blockchain with the same functionality and security guarantees as a full node.
 
 Light clients are an area of active development for Ethereum and we expect to see new light clients for the consensus layer and execution layer soon.
 There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
@@ -95,7 +96,7 @@ Running your own node enables you to use Ethereum in a private, self-sufficient 
 - You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to intermediaries. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), and [many other wallets](/wallets/find-wallet/) offer RPC-importing, allowing them to use your node.
 - You can run and self-host other services which depend on data from Ethereum. For example, this might be a Beacon Chain validator, software like layer 2, infrastructure, block explorers, payment processors, etc.
 - You can provide your own custom [RPC endpoints](/developers/docs/apis/json-rpc/). You could even offer these endpoints publicly to the community to help them avoid big centralized providers.
-- You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g. when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e. frontrunning).
+- You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g., when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e., frontrunning).
 - You can directly stake ETH to secure the network and earn rewards. See [solo staking](/staking/solo/) to get started.
 
 ![How you access Ethereum via your application and nodes](./nodes.png)
@@ -135,12 +136,12 @@ This table summarizes the different clients. All of them pass [client tests](htt
 
 | Client                                                                   | Language   | Operating systems     | Networks                  | Sync strategies                                                | State pruning   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (without serving), Fast, [Full](#full-sync) | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                             | Archive, Pruned |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                             | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | [Full](#full-sync)                                             | Pruned          |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync) (without serving), Fast, [Full](#full-sync) | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Pruned |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Full](#full-sync)                                             | Pruned          |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -196,12 +197,12 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 | Client                                                        | Language   | Operating systems     | Networks                                                  |
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Pyrmont, Sepolia, and more         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, and more |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Sepolia, and more          |
-| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia, and more                  |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Pyrmont, Sepolia, and more         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, and more                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, and more                  |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Pyrmont, Sepolia, and more |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Sepolia, and more          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, and more                  |
 
 ### Lighthouse {#lighthouse}
 
@@ -213,7 +214,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 
 Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
-More information can be found on our [Lodestar website](https://lodestar.chainsafe.io/)
+More information can be found on the [Lodestar website](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
@@ -225,7 +226,7 @@ Learn more in [Nimbus docs](https://nimbus.guide/)
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
-Visit [Prysm docs](https://docs.prylabs.network/docs/getting-started/) to learn more.
+Visit [Prysm docs](https://prysm.offchainlabs.com/docs/) to learn more.
 
 ### Teku {#teku}
 

@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
+**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. To learn more about RLP serialization, see [Recursive-length prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
 
 ## How does SSZ work? {#how-does-ssz-work}
 
@@ -16,7 +16,7 @@ SSZ is a serialization scheme that is not self-describing - rather it relies on 
 - unsigned integers
 - Booleans
 
-For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. Where these objects all have fixed lengths (i.e. the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
+For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. Where these objects all have fixed lengths (i.e., the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
 
 For types with variable lengths, the actual data gets replaced by an "offset" value in that element's position in the serialized object. The actual data gets added to a heap at the end of the serialized object. The offset value is the index for the start of the actual data in the heap, acting as a pointer to the relevant bytes.
 

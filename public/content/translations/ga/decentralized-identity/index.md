@@ -57,7 +57,7 @@ Tá go leor cásanna úsáide féideartha ag baint le céannacht dhíláraithe:
 
 Is féidir le céannacht dhíláraithe cuidiú le fíordheimhniú díláraithe a chur in ionad logáil isteach atá bunaithe ar phasfhocal. Is féidir le soláthraithe seirbhíse fianuithe a eisiúint d'úsáideoirí, ar féidir iad a stóráil i sparán Ethereum. Sampla de fhianú is ea [NFT](/glossary/#nft) a thugann rochtain don sealbhóir ar phobal ar líne.
 
-Ansin chuirfeadh feidhm [Sínigh isteach le hEthereum](https://login.xyz/) ar chumas na bhfreastalaithe cuntas Ethereum an úsáideora a dhearbhú agus an fianú riachtanach a fháil óna seoladh cuntais. Ciallaíonn sé sin gur féidir le húsáideoirí rochtain a fháil ar ardáin agus ar shuímh ghréasáin gan pasfhocail fhada a chur de ghlanmheabhair agus feabhsaíonn sé an t‑eispéireas ar líne d'úsáideoirí.
+Ansin chuirfeadh feidhm [Sínigh isteach le hEthereum](https://siwe.xyz/) ar chumas na bhfreastalaithe cuntas Ethereum an úsáideora a dhearbhú agus an fianú riachtanach a fháil óna seoladh cuntais. Ciallaíonn sé sin gur féidir le húsáideoirí rochtain a fháil ar ardáin agus ar shuímh ghréasáin gan pasfhocail fhada a chur de ghlanmheabhair agus feabhsaíonn sé an t‑eispéireas ar líne d'úsáideoirí.
 
 ### 2. Fíordheimhniú KYC {#kyc-authentication}
 
@@ -67,9 +67,9 @@ Le céannacht díláraithe ligtear do chuideachtaí scipeáil ar ghnáthphróisi
 
 ### 3. Pobail vótála agus ar líne {#voting-and-online-communities}
 
-Dhá fheidhmchlár nua ar chéannacht dhíláraithe iad vótáil ar líne agus na meáin shóisialta. Tá scéimeanna vótála ar líne so-ghabhálach i leith cúblála, go háirithe má chruthaíonn gníomhaithe mailíseacha céannachtaí bréagacha chun vóta a chaitheamh. Asking individuals to present onchain attestations can improve the integrity of online voting processes.
+Dhá fheidhmchlár nua ar chéannacht dhíláraithe iad vótáil ar líne agus na meáin shóisialta. Tá scéimeanna vótála ar líne so-ghabhálach i leith cúblála, go háirithe má chruthaíonn gníomhaithe mailíseacha céannachtaí bréagacha chun vóta a chaitheamh. Má iarrtar ar dhaoine fianuithe ar slabhra a chur i láthair, féadtar sláine na bpróiseas vótála ar líne a fheabhsú.
 
-Is féidir le céannacht dhíláraithe cabhrú le pobail ar líne a chruthú atá saor ó chuntais bhréige. For example, each user might have to authenticate their identity using an onchain identity system, like the Ethereum Name Service, reducing the possibility of bots.
+Is féidir le céannacht dhíláraithe cabhrú le pobail ar líne a chruthú atá saor ó chuntais bhréige. Mar shampla, d'fhéadfadh go mbeadh ar gach úsáideoir a bhféiniúlacht a fhíordheimhniú trí úsáid a bhaint as córas aitheantais ar slabhra, cosúil leis Seirbhís Ainmneacha Ethereum, rud a laghdódh féidearthacht róbónna.
 
 ### 4. Cosaint frith-Sybil {#sybil-protection}
 
@@ -119,47 +119,47 @@ Tá aitheantóirí díláraithe ríthábhachtach freisin chun príobháideacht f
 
 Tá an chaoi a stóráiltear agus a n-aisghabhtar faisnéis fianaithe in éiceachóras céannachta bunaithe ar Ethereum difriúil ó bhainistíocht thraidisiúnta chéannachta. Seo forbhreathnú ar na cineálacha cur chuige éagsúla maidir le fianuithe i gcórais dhíláraithe chéannachta a eisiúint, a stóráil agus a fhíorú:
 
-### Offchain attestations {#offchain-attestations}
+### Fianuithe as slabhra {#offchain-attestations}
 
-One concern with storing attestations onchain is that they might contain information individuals want to keep private. Mar gheall ar nádúr poiblí bhlocshlabhra Ethereum níl sé mealltach fianuithe den sórt sin a stóráil.
+Ábhar imní amháin a bhaineann le fianuithe a stóráil ar shlabhra ná go bhféadfadh faisnéis a bheith iontu ar mhian le daoine aonair a choinneáil príobháideach. Mar gheall ar nádúr poiblí bhlocshlabhra Ethereum níl sé mealltach fianuithe den sórt sin a stóráil.
 
-The solution is to issue attestations, held by users offchain in digital wallets, but signed with the issuer's DID stored onchain. These attestations are encoded as [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) and contain the issuer's digital signature—which allows for easy verification of offchain claims.
+Is é an réiteach ná fianuithe a eisiúint, atá á gcoinneáil ag úsáideoirí as slabhra i sparáin dhigiteacha, ach atá sínithe le DID an eisitheora atá stóráilte ar slabhra. Tá na fianuithe seo ionchódaithe mar [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) agus tá síniú digiteach an eisitheora iontu - a cheadaíonn fíorú éasca ar éilimh as slabhra.
 
-Here's an hypothetical scenario to explain offchain attestations:
+Seo scéal hipitéiseach chun fianuithe as slabhra a mhíniú:
 
 1. Gineann ollscoil (an t-eisitheoir) fianú (teastas acadúil digiteach), síníonn sí é leis na heochracha, agus eisíonn sí é chuig Bob (úinéir na céannachta).
 
-2. Déanann Bob iarratas ar phost agus ba mhaith leis a cháilíochtaí acadúla a chruthú le fostóir, mar sin roinneann sé an fianú óna sparán soghluaiste. Féadfaidh an chuideachta (an fíoraitheoir) bailíocht an fhianaithe a dhearbhú ansin trí DID an eisitheora a sheiceáil (i.e. a eochair phoiblí ar Ethereum).
+2. Déanann Bob iarratas ar phost agus ba mhaith leis a cháilíochtaí acadúla a chruthú le fostóir, mar sin roinneann sé an fianú óna sparán soghluaiste. Féadfaidh an chuideachta (an fíoraitheoir) bailíocht an fhianaithe a dhearbhú ansin trí DID an eisitheora a sheiceáil (i.e., a eochair phoiblí ar Ethereum).
 
-### Offchain attestations with persistent access {#offchain-attestations-with-persistent-access}
+### Fianuithe as slabhra le rochtain leanúnach {#offchain-attestations-with-persistent-access}
 
-Under this arrangement attestations are transformed into JSON files and stored offchain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a [hash](/glossary/#hash) of the JSON file is stored onchain and linked to a DID via an onchain registry. D’fhéadfadh gurb ionann an DID gaolmhar agus eisitheoir an fhianaithe nó an fhaighteora.
+Faoin socrú seo déantar fianuithe a chlaochlú i gcomhaid JSON agus a stóráil as slabhra (go hidéalach ar ardán [néal stórála díláraithe](/developers/docs/storage/), mar IPFS nó Scaoth). Mar sin féin, déantar [hais](/glossary/#hash) den chomhad JSON a stóráil ar slabhra agus a nascadh le DID trí chlár ar slabhra. D’fhéadfadh gurb ionann an DID gaolmhar agus eisitheoir an fhianaithe nó an fhaighteora.
 
 Cuireann an cur chuige seo ar chumas fianuithe marthanacht bunaithe ar bhlocshlabhra a fháil, agus faisnéis éilimh a choinneáil criptithe agus infhíoraithe. Ceadaíonn sé freisin do nochtadh roghnach toisc gur féidir le sealbhóir na heochrach príobháidí an fhaisnéis a dhíchriptiú.
 
-### Onchain attestations {#onchain-attestations}
+### Fianuithe ar slabhra {#onchain-attestations}
 
-Onchain attestations are held in [smart contracts](/glossary/#smart-contract) on the Ethereum blockchain. The smart contract (acting as a registry) will map an attestation to a corresponding onchain decentralized identifier (a public key).
+Coinnítear fianuithe ar shlabhra i [gconarthaí cliste](/glossary/#smart-contract) ar blocshlabhra Ethereum. Déanfaidh an conradh cliste (ag feidhmiú mar chlár) fianú a mhapáil ar aitheantóir díláraithe comhfhreagrach ar slabhra (eochair phoiblí).
 
-Here's an example to show how onchain attestations might work in practice:
+Seo sampla chun a thaispeáint conas a bheadh fianuithe ar slabhra ag oibriú go praiticiúil:
 
 1. Tá sé beartaithe ag cuideachta (XYZ Corp) scaireanna úinéireachta a dhíol trí úsáid a bhaint as conradh cliste ach ní theastaíonn uathu ach ceannaitheoirí a bhfuil seiceáil cúlra críochnaithe acu.
 
-2. XYZ Corp can have the company performing background checks to issue onchain attestations on Ethereum. Deimhníonn an fianú seo gur éirigh le duine an tseiceáil chúlra gan aon fhaisnéis phearsanta a nochtadh.
+2. Is féidir le XYZ Corp iarraidh ar an gcuideachta seiceálacha cúlra a dhéanamh chun fianuithe ar slabhra a eisiúint ar Ethereum. Deimhníonn an fianú seo gur éirigh le duine an tseiceáil chúlra gan aon fhaisnéis phearsanta a nochtadh.
 
 3. Is féidir leis an gconradh cliste a dhíolann scaireanna an conradh clárlainne a sheiceáil le haghaidh aitheantais na gceannaitheoirí scagtha, rud a fhágann gur féidir leis an gconradh cliste a chinneadh cé hiad a bhfuil nó nach bhfuil cead acu scaireanna a cheannach.
 
 ### Comharthaí agus féiniúlacht faoi cheangal anama {#soulbound}
 
-[Soulbound comharthaí](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFTanna neamh-aistrithe](/glossary/#nft)) D’fhéadfaí iad a úsáid chun faisnéis a bhailiú a bhaineann le sparán ar leith. This effectively creates a unique onchain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
+[Soulbound comharthaí](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFTanna neamh-aistrithe](/glossary/#nft)) D’fhéadfaí iad a úsáid chun faisnéis a bhailiú a bhaineann le sparán ar leith. Cruthaíonn sé seo go héifeachtach féiniúlacht uathúil ar slabhra atá ceangailte le seoladh Ethereum ar leith a áireodh comharthaí a sheasann do ghaisce (m.sh. cúrsa sonrach ar líne a chríochnú nó scór tairsí a phasáil i gcluiche) nó rannpháirtíocht phobail.
 
 ## Úsáid céannacht dhíláraithe {#use-decentralized-identity}
 
 Tá go leor tionscadal uaillmhianach ag baint úsáide as Ethereum mar bhunús le haghaidh réitigh chéannachta díláraithe:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for onchain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
+- **[Seirbhís Ainmneacha Ethereum (ENS)](https://ens.domains/)** - _Córas ainmniúcháin díláraithe le haghaidh aitheantóirí meaisín-inléite ar slabhra, amhail seoltaí sparán Ethereum, haise inneachair, agus meiteashonraí._
 - **[SpruceID](https://www.spruceid.com/)** - _Tionscadal díláraithe céannachta a ligeann d’úsáideoirí céannacht dhigiteach a rialú le cuntais Ethereum agus le próifílí ENS seachas a bheith ag brath ar sheirbhísí tríú páirtí._
-- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
+- **[Seirbhís Fianaithe Ethereum (EAS)](https://attest.sh/)** - _ Mórleabhar/prótacal díláraithe chun fianuithe ar slabhra nó as slabhra a dhéanamh faoi rud ar bith._
 - **[Cruthúnas ar Dhaonnacht](https://www.proofofhumanity.id)** - _ Córas fíoraithe céannachta sóisialta é an Cruthúnas ar Dhaonnacht (nó PoH) a tógadh ar Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Líonra díláraithe foinse oscailte, maidir le céannacht shóisialta atá ag iarraidh fíorú céannachta a athchóiriú trí ghraf sóisialta a chruthú agus a anailísiú._
 - **[walt.id](https://walt.id)** — _Aitheantas díláraithe foinse oscailte agus bonneagar sparán a chuireann ar chumas forbróirí agus eagraíochtaí féiniúlacht fhéincheannasach agus NFTanna/SBTanna a ghiaráil._
@@ -180,12 +180,12 @@ Tá go leor tionscadal uaillmhianach ag baint úsáide as Ethereum mar bhunús l
 - [Céannacht Dhíláraithe (Seisiún Bónais Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Físeán míniúcháin den scoth ar chéannacht dhíláraithe le hAndreas Antonopolous_
 - [Sínigh isteach le hEthereum agus Céannacht Dhíláraithe le Ceramic, IDX, React, agus 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _ Rang teagaisc YouTube ar chóras bainistíochta céannachta a thógáil amach chun próifíl úsáideora a chruthú, a léamh agus a nuashonrú trí úsáid a bhaint as a sparán Ethereum le Nader Dabit_
 - [BrightID - Céannacht Dhíláraithe ar Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Eipeasóid podchraoltaí gan Bhanc ina bpléitear BrightID, réiteach céannachta díláraithe d'Ethereum_
-- [The Offchain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentation by Evin McMullen
+- [Idirlíon Gan Slabhra: Aitheantais Díláraithe & Dintiúir Infhíoraithe](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — cur i láthair EthDenver 2022 le Evin McMullen
 - [Dintiúir Infhíoraithe arna Míniú](https://www.youtube.com/watch?v=ce1IdSr-Kig) - físeán míniúcháin YouTube le taispeántas le Tamino Baumann
 
 ### Pobail {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Tacaitheoirí chaighdeán ERC725 chun aitheantas a bhainistiú ar bhlocshlabhra Ethereum_
-- [freastalaí SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Pobal do dhíograiseoirí agus d'fhorbróirí atá ag obair ar Sínigh isteach le hEthereum_
+- [freastalaí EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Pobal do dhíograiseoirí agus d'fhorbróirí atá ag obair ar Sínigh isteach le hEthereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Pobal forbróirí a chuidíonn le creat a chruthú le haghaidh sonraí infhíoraithe d'fheidhmchláir_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Pobal forbróirí agus tógálaithe atá ag obair ar chásanna úsáide céannachta díláraithe ar fud tionscail éagsúla_

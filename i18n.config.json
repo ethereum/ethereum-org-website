@@ -5,7 +5,8 @@
     "name": "English",
     "localName": "English",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "am",
@@ -13,7 +14,8 @@
     "name": "Amharic",
     "localName": "አማርኛ",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ar",
@@ -21,7 +23,8 @@
     "name": "Arabic",
     "localName": "العربية",
     "langDir": "rtl",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "az",
@@ -29,7 +32,8 @@
     "name": "Azerbaijani",
     "localName": "Azərbaycan",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "be",
@@ -37,7 +41,8 @@
     "name": "Belarusian",
     "localName": "беларускі",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "bg",
@@ -45,7 +50,8 @@
     "name": "Bulgarian",
     "localName": "български",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "bn",
@@ -53,7 +59,8 @@
     "name": "Bengali",
     "localName": "বাংলা",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "bs",
@@ -61,7 +68,8 @@
     "name": "Bosnian",
     "localName": "босански",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ca",
@@ -69,7 +77,8 @@
     "name": "Catalan",
     "localName": "Català",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "cs",
@@ -77,7 +86,8 @@
     "name": "Czech",
     "localName": "Čeština",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "da",
@@ -85,7 +95,8 @@
     "name": "Danish",
     "localName": "Dansk",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "de",
@@ -93,7 +104,8 @@
     "name": "German",
     "localName": "Deutsch",
     "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY"
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "el",
@@ -101,7 +113,8 @@
     "name": "Greek",
     "localName": "Ελληνικά",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "es",
@@ -109,7 +122,8 @@
     "name": "Spanish",
     "localName": "Español",
     "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY"
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "fa",
@@ -117,7 +131,8 @@
     "name": "Farsi",
     "localName": "فارسی",
     "langDir": "rtl",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "fi",
@@ -125,7 +140,8 @@
     "name": "Finnish",
     "localName": "Suomi",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "fr",
@@ -133,7 +149,8 @@
     "name": "French",
     "localName": "Français",
     "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY"
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ga",
@@ -141,7 +158,8 @@
     "name": "Irish",
     "localName": "Gaeilge",
     "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY"
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "gl",
@@ -149,7 +167,8 @@
     "name": "Galician",
     "localName": "Galego",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "gu",
@@ -157,7 +176,8 @@
     "name": "Gujarati",
     "localName": "ગુજરાતી",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ha",
@@ -165,7 +185,8 @@
     "name": "Hausa",
     "localName": "Hausa",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "he",
@@ -173,7 +194,8 @@
     "name": "Hebrew",
     "localName": "עִבְרִית",
     "langDir": "rtl",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "hi",
@@ -181,7 +203,8 @@
     "name": "Hindi",
     "localName": "हिन्दी",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "hr",
@@ -189,7 +212,8 @@
     "name": "Croatian",
     "localName": "Hrvatski",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "hu",
@@ -197,7 +221,8 @@
     "name": "Hungarian",
     "localName": "Magyar",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "hy-am",
@@ -205,7 +230,8 @@
     "name": "Armenian",
     "localName": "հայերեն",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "id",
@@ -213,7 +239,8 @@
     "name": "Indonesian",
     "localName": "Bahasa Indonesia",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ig",
@@ -221,7 +248,8 @@
     "name": "Igbo",
     "localName": "Ibo",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "it",
@@ -229,7 +257,8 @@
     "name": "Italian",
     "localName": "Italiano",
     "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY"
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ja",
@@ -237,7 +266,8 @@
     "name": "Japanese",
     "localName": "日本語",
     "langDir": "ltr",
-    "dateFormat": "YYYY/MM/DD"
+    "dateFormat": "YYYY/MM/DD",
+    "validISO639_1": true
   },
   {
     "code": "ka",
@@ -245,7 +275,8 @@
     "name": "Georgian",
     "localName": "ქართული",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "kk",
@@ -253,7 +284,8 @@
     "name": "Kazakh",
     "localName": "қазақ",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "km",
@@ -261,7 +293,8 @@
     "name": "Khmer",
     "localName": "ចក្រភពខ្មែរ",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "kn",
@@ -269,7 +302,8 @@
     "name": "Kannada",
     "localName": "ಕನ್ನಡ",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ko",
@@ -277,7 +311,8 @@
     "name": "Korean",
     "localName": "한국어",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "lt",
@@ -285,7 +320,8 @@
     "name": "Lithuanian",
     "localName": "Lietuvis",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ml",
@@ -293,7 +329,8 @@
     "name": "Malayalam",
     "localName": "മലയാളം",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "mr",
@@ -301,7 +338,8 @@
     "name": "Marathi",
     "localName": "मराठी",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ms",
@@ -309,7 +347,8 @@
     "name": "Malay",
     "localName": "Melayu",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ne-np",
@@ -317,7 +356,8 @@
     "name": "Nepali",
     "localName": "नेपाली",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "nl",
@@ -325,7 +365,8 @@
     "name": "Dutch",
     "localName": "Nederlands",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "nb",
@@ -333,7 +374,8 @@
     "name": "Norwegian",
     "localName": "Norsk",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "pcm",
@@ -341,7 +383,8 @@
     "name": "Nigerian Pidgin",
     "localName": "Nigerian Pidgin",
     "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY"
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": false
   },
   {
     "code": "fil",
@@ -349,7 +392,8 @@
     "name": "Filipino",
     "localName": "Filipino",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": false
   },
   {
     "code": "pl",
@@ -357,7 +401,8 @@
     "name": "Polish",
     "localName": "Polski",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "pt-br",
@@ -365,7 +410,8 @@
     "name": "Portuguese (Brazilian)",
     "localName": "Português",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "pt",
@@ -373,7 +419,8 @@
     "name": "Portuguese",
     "localName": "Português",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ro",
@@ -381,7 +428,8 @@
     "name": "Romanian",
     "localName": "Română",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ru",
@@ -389,7 +437,8 @@
     "name": "Russian",
     "localName": "Pусский",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "se",
@@ -397,7 +446,8 @@
     "name": "Swedish",
     "localName": "Svenska",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "sk",
@@ -405,7 +455,8 @@
     "name": "Slovak",
     "localName": "Slovenský",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "sl",
@@ -413,7 +464,8 @@
     "name": "Slovenian",
     "localName": "Slovenščina",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "sn",
@@ -421,7 +473,8 @@
     "name": "Shona",
     "localName": "Shona",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "sr",
@@ -429,7 +482,8 @@
     "name": "Serbian",
     "localName": "Српски",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "sw",
@@ -437,7 +491,8 @@
     "name": "Swahili",
     "localName": "Kiswahili",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ta",
@@ -445,7 +500,8 @@
     "name": "Tamil",
     "localName": "தமிழ்",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "te",
@@ -453,7 +509,8 @@
     "name": "Telugu",
     "localName": "తెలుగు",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "tk",
@@ -461,7 +518,8 @@
     "name": "Turkmen",
     "localName": "türkmen",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "th",
@@ -469,7 +527,8 @@
     "name": "Thai",
     "localName": "ภาษาไทย",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "tl",
@@ -477,7 +536,9 @@
     "name": "Tagalog",
     "localName": "Tagalog",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "forceLocalName": true,
+    "validISO639_1": true
   },
   {
     "code": "tr",
@@ -485,7 +546,8 @@
     "name": "Turkish",
     "localName": "Türkçe",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "tw",
@@ -493,7 +555,8 @@
     "name": "Akan, Twi",
     "localName": "Twi",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "uk",
@@ -501,7 +564,8 @@
     "name": "Ukrainian",
     "localName": "Українська",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "ur",
@@ -509,7 +573,8 @@
     "name": "Urdu",
     "localName": "اردو",
     "langDir": "rtl",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "uz",
@@ -517,7 +582,8 @@
     "name": "Uzbek",
     "localName": "O'zbekcha",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "vi",
@@ -525,7 +591,8 @@
     "name": "Vietnamese",
     "localName": "Tiếng Việt",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "yo",
@@ -533,7 +600,8 @@
     "name": "Yoruba",
     "localName": "Yorùbá",
     "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY"
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
   },
   {
     "code": "zh-tw",
@@ -541,7 +609,8 @@
     "name": "Chinese Traditional",
     "localName": "繁體中文",
     "langDir": "ltr",
-    "dateFormat": "YYYY-MM-DD"
+    "dateFormat": "YYYY-MM-DD",
+    "validISO639_1": true
   },
   {
     "code": "zh",
@@ -549,6 +618,7 @@
     "name": "Chinese Simplified",
     "localName": "简体中文",
     "langDir": "ltr",
-    "dateFormat": "YYYY-MM-DD"
+    "dateFormat": "YYYY-MM-DD",
+    "validISO639_1": true
   }
 ]

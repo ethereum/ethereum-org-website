@@ -76,9 +76,9 @@ To tok am for simpol tams, funshons fit get informashon abi set of informashon a
 Twi types of funshon kolls dey:
 
 - `internal` – dis ones nor dey kreate EVM koll
-  - Internal funshons and state variabols fit only hapun internaly (i.e. from inside di kurent kontract abi kontracts wey dey take from am)
+  - Internal funshons and state variabols fit only hapun internaly (i.e., from inside di kurent kontract abi kontracts wey dey take from am)
 - `external` – dis ones dey kreate EVM koll
-  - Ekstanal funshons nor dey part of di kontract interface, wey mean sey dem fit koll dem from oda kontracts and thru transakshons. Dem nor fit koll ekstanal funshon for inside `f` (i.e. `f()` nor dey work, but `dis one.f()` dey work).
+  - Ekstanal funshons nor dey part of di kontract interface, wey mean sey dem fit koll dem from oda kontracts and thru transakshons. Dem nor fit koll ekstanal funshon for inside `f` (i.e., `f()` nor dey work, but `dis one.f()` dey work).
 
 Dem fit also bi `publik` abi `private`
 

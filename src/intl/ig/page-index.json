@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Nwalee ngwa",
   "page-index-cta-get-eth-description": "Ego nke Ethereum",
   "page-index-cta-get-eth-label": "Nweta ETH",
-  "page-index-cta-networks-description": "Na-akwụ ụgwọ dị ala",
-  "page-index-cta-networks-label": "Họrọ otu netwọk",
   "page-index-cta-wallet-description": "Mepụta akaụntụ ma jikwaa akụ",
   "page-index-cta-wallet-label": "Họrọ akpaego",
+  "page-index-cta-build-apps-description": "Mepụta ngwa gị mbụ",
+  "page-index-cta-build-apps-label": "Bido mmepe",
   "page-index-description": "Ndi kachasi mma maka ngwa echeputara ohuru na netwọkụ blockchain",
   "page-index-developers-code-example-description-0": "Wulite ụlọ akụ nke ihe nghota imeputara na-akwado",
   "page-index-developers-code-example-description-1": "Mepụta akara ndị ị nwere ike ịnyefe ma jiri n'ofe ngwa",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Edemede nndi di so nso a",
   "page-index-posts-subtitle": "Blọọgụ kacha ọhụrụ na mmelite sitere na obodo",
   "page-index-title": "Nnọọ na Ethereum",
+  "page-index-use-cases-tag": "Jiri ikpe",
   "page-index-values-description": "Sonye mgbanwe dijitalụ",
   "page-index-values-header": "Ịntanetị na-agbanwe",
   "page-index-values-legacy": "Ihe nketa",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Mechiri emechi nye ututu",
   "page-index-values-open-legacy-content-0": "Ụlọ ọrụ na-echebe ikike ọgụgụ isi ha ma ghara ịkesa ya. Ọ dịghị onye na-abụghị ụlọ ọrụ ahu nwere ike ịhụ ka ihe si arụ ọrụ, dozie nsogbu, ma ọ bụ imeziwanye ihe. Ọ na-esiri ndị mmadụ ike ịmepụta ngwaọrụ ọhụrụ ma ọ bụ hazie ya.",
   "page-index-values-open-ethereum-label": "Mepeere nye mmadụ niile",
-  "page-index-values-open-ethereum-content-0": "Ethereum bụ maka ọha mmadụ niile. Onye ọ bụla nwere ike ịhụ, jiri, ma melite koodu ahụ, na-eme ka ọ dị mma maka onye ọ bụla."
+  "page-index-values-open-ethereum-content-0": "Ethereum bụ maka ọha mmadụ niile. Onye ọ bụla nwere ike ịhụ, jiri, ma melite koodu ahụ, na-eme ka ọ dị mma maka onye ọ bụla.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Soro na mmemme Ethereum kacha buo n'afọ",
+  "page-index-devconnect-banner-get-tickets": "Nweta tiketi"
 }

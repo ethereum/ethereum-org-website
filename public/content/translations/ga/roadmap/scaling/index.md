@@ -9,14 +9,19 @@ template: roadmap
 
 Déantar Ethereum a scála ag baint úsáide as [ciseal 2s](/layer-2/#rollups) (ar a dtugtar rollups freisin), a dhéanann idirbhearta a bhaisc le chéile agus a sheolann an t-aschur chuig Ethereum. Cé go bhfuil rolladh suas le hocht n-uaire níos saoire ná Ethereum Mainnet, is féidir rolladh suas a bharrfheabhsú tuilleadh chun costais a laghdú d'úsáideoirí deiridh. Braitheann Rollups freisin ar roinnt comhpháirteanna láraithe gur féidir le forbróirí a bhaint de réir mar a aibíonn na rollóirí.
 
-<InfoBanner mb={8} title="Costais idirbhirt">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Costais idirbhirt
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Tá rolladh an lae inniu <strong>~5-20x</strong> níos saoire ná ciseal 1 Ethereum</li>
     <li>Is gearr go laghdóidh ZK-rollups táillí faoi <strong>~40-100x</strong></li>
     <li>Soláthróidh athruithe atá le teacht ar Ethereum <strong>~100-1000x</strong> eile de scálaithe</li>
     <li style={{ marginBottom: 0 }}>Ba cheart go mbainfeadh úsáideoirí leas as idirbhearta <strong>a chosnaíonn níos lú ná $0.001</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Sonraí a dhéanamh níos saoire {#making-data-cheaper}
 

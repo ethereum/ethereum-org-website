@@ -95,8 +95,7 @@ Awọn ojutu data Web3 to rorun ṣe atilẹyin awọn oju iṣẹlẹ loke ati 
 - [Molecule: Ṣe inawo ati gba owo fun awọn iṣẹ akanṣe iwadi rẹ](https://www.molecule.xyz/)
 - [VitaDAO: gba igbeowosile nipasẹ awọn adehun iwadii onigbọwọ fun iwadii igba pipe](https://www.vitadao.com/)
 - [ResearchHub: firanṣẹ abajade ijinle sayensi kan ki o ṣe ibaraẹnisọrọ pẹlu awọn ẹlẹgbẹ](https://www.researchhub.com/)
-- [LabDAO: ka puroteni sinu silico](https://alphafodl.vercel.app/)
-- [dClimate API: data ibeere oju-ọjọ ti a gba nipasẹ agbegbe alailakoso](https://api.dclimate.net/)
+- [dClimate API: data ibeere oju-ọjọ ti a gba nipasẹ agbegbe alailakoso](https://www.dclimate.net/)
 - [Ajo DeSci: Ohun elo kiko irinse atejade DeSci](https://descifoundation.org/)
 - [Aye DeSci: Ile itaja kan fun awon olumulo lati wo, ni ibasepo pelu sayensi alailakoso](https://desci.world)
 - [OceanDAO: DAO ṣe iṣakoso igbeowosile fun sayensi to ni ibatan pelu data](https://oceanprotocol.com/)
@@ -118,7 +117,7 @@ A gba awọn abaa fun awọn iṣẹ akanṣe tuntun lati ṣe atokọ - jọw�
 - [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guide to DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Decentralized science resources](https://www.vincentweisser.com/decentralized-science)
+- [Decentralized science resources](https://www.vincentweisser.com/desci)
 - [Molecule’s Biopharma IP-NFTs - A Technical Description](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -126,7 +125,7 @@ A gba awọn abaa fun awọn iṣẹ akanṣe tuntun lati ṣe atokọ - jọw�
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

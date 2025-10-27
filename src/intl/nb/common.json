@@ -76,7 +76,6 @@
   "enterprise": "Bedrift",
   "enterprise-mainnet": "Enterprise – Mainnet Ethereum",
   "enterprise-menu": "Bedrift-meny",
-  "enterprise-private": "Enterprise – Private Ethereum",
   "esp": "Støtteprogram for økosystem",
   "eth-current-price": "Nåværende ETH-pris (USD)",
   "ethereum": "Ethereum",
@@ -228,7 +227,7 @@
   "nav-contribute-description": "Hvis du vil ha hjelp, vill dette veilede deg",
   "nav-contribute-label": "Bidra til ethereum.org",
   "nav-dao-description": "Samfunn eid av medlemmer uten sentralisert myndighet",
-  "nav-dapps-description": "Utforsk et rikt økosystem av apper ved bruk av Ethereum",
+  "nav-apps-description": "Utforsk et rikt økosystem av apper ved bruk av Ethereum",
   "nav-defi-description": "Et globalt, åpent alternativ til det tradisjonelle finansmarkedet",
   "nav-desci-description": "Et globalt, åpent alternativ til dagens vitenskapelige system",
   "nav-desoc-description": "Blokkjede-baserte plattformer for sosiale interaksjoner og utvikling av innhold",
@@ -277,7 +276,7 @@
   "nav-layer-2-description": "Billigere og raskere transaksjoner for Ethereum",
   "nav-learn-by-coding-description": "Verktøy som hjelper deg å eksperimentere med Ethereum",
   "nav-local-env-description": "Velg og sett opp Ethereum-utviklingsstabelen din",
-  "nav-mainnet-description": "Enterprise blokkjede-applikasjoner kan bygges på det offentlige Ethereum Mainnet",
+  "nav-enterprise-description": "Enterprise blokkjede-applikasjoner kan bygges på det offentlige Ethereum Mainnet",
   "nav-nft-description": "En måte å representere noe unikt som en Ethereum-basert eiendel",
   "nav-open-research-description": "En av de viktigste styrkene til Ethereum er det aktive forskningsmiljøet",
   "nav-open-research-label": "Åpen forskning",
@@ -322,6 +321,8 @@
   "nav-staking-solo-description": "Kjør hjemmemaskinvare og legg personlig til sikkerheten og desentraliseringen av Ethereum-nettverket",
   "nav-staking-solo-label": "Solo-staking",
   "nav-start-building-description": "Nyttig informasjon for nykommere",
+  "nav-start-with-crypto-title": "Start her",
+  "nav-start-with-crypto-description": "Dine første steg med Ethereum",
   "nav-translation-program-description": "Et samarbeid for å oversette ethereum.org til alle språk",
   "nav-tutorials-description": "Kuratert liste over opplæringsprogrammer for fellesskapet",
   "nav-use-cases-description": "Oppdag forskjellige ideer for bruk av Ethereum",
@@ -429,5 +430,8 @@
   "withdrawals": "Staking uttak",
   "wrapped-ether": "Innpakket Ether",
   "yes": "Ja",
-  "zero-knowledge-proofs": "Null-kunnskap bevis"
+  "zero-knowledge-proofs": "Null-kunnskap bevis",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Forstå forskjellene mellom Ethereum og Bitcoin"
+
 }

@@ -2,7 +2,13 @@ import type { NetworkUpgradeData } from "@/lib/types"
 
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
   pectra: {
-    isPending: true,
+    dateTimeAsString: "2025-05-07T10:05:11.000Z",
+    ethPriceInUSD: 2222,
+    waybackLink:
+      "https://web.archive.org/web/20250414180015/https://ethereum.org/en/",
+    blockNumber: 22431084,
+    epochNumber: 364032,
+    slotNumber: 364032 * 32,
   },
   dencun: {
     dateTimeAsString: "2024-03-13T13:55:35.000Z",
@@ -50,7 +56,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   arrowGlacier: {
-    dateTimeAsString: "2021-12-09T07:55:23.000Z",
+    dateTimeAsString: "2021-12-09T19:55:23.000Z",
     ethPriceInUSD: 4111,
     waybackLink:
       "https://web.archive.org/web/20211207064430/https://ethereum.org/en/",
@@ -86,13 +92,13 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   beaconChainGenesis: {
-    dateTimeAsString: "2020-12-01T12:00:35.000Z",
+    dateTimeAsString: "2020-12-01T12:00:23.000Z",
     ethPriceInUSD: 586.23,
     waybackLink:
       "https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/",
     blockNumber: undefined,
     epochNumber: undefined,
-    slotNumber: 1,
+    slotNumber: 0,
   },
   stakingDepositContractDeployed: {
     dateTimeAsString: "2020-10-14T09:22:52.000Z",
@@ -113,7 +119,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   istanbul: {
-    dateTimeAsString: "2019-12-08T12:25:09.000Z",
+    dateTimeAsString: "2019-12-08T00:25:09.000Z",
     ethPriceInUSD: 151.06,
     waybackLink:
       "https://web.archive.org/web/20191216101254if*/https://ethereum.org/",
@@ -122,7 +128,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   constantinople: {
-    dateTimeAsString: "2019-02-28T07:52:04.000Z",
+    dateTimeAsString: "2019-02-28T19:52:04.000Z",
     ethPriceInUSD: 136.29,
     waybackLink:
       "https://web.archive.org/web/20190415163751/https://www.ethereum.org/",
@@ -140,7 +146,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   spuriousDragon: {
-    dateTimeAsString: "2016-11-22T04:15:44.000Z",
+    dateTimeAsString: "2016-11-22T16:15:44.000Z",
     ethPriceInUSD: 9.84,
     waybackLink:
       "https://web.archive.org/web/20161127154654/https://www.ethereum.org/",
@@ -149,7 +155,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   tangerineWhistle: {
-    dateTimeAsString: "2016-10-18T01:19:31.000Z",
+    dateTimeAsString: "2016-10-18T13:19:31.000Z",
     ethPriceInUSD: 12.5,
     waybackLink:
       "https://web.archive.org/web/20161030043727/https://www.ethereum.org/",
@@ -158,7 +164,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   daoFork: {
-    dateTimeAsString: "2016-07-20T01:20:40.000Z",
+    dateTimeAsString: "2016-07-20T13:20:40.000Z",
     ethPriceInUSD: 12.54,
     waybackLink:
       "https://web.archive.org/web/20160803215306/https://ethereum.org/",
@@ -167,7 +173,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   homestead: {
-    dateTimeAsString: "2016-03-14T06:49:53.000Z",
+    dateTimeAsString: "2016-03-14T18:49:53.000Z",
     ethPriceInUSD: 12.5,
     waybackLink:
       "https://web.archive.org/web/20160313203843/https://www.ethereum.org/",
@@ -176,7 +182,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   frontierThawing: {
-    dateTimeAsString: "2015-09-07T09:33:09.000Z",
+    dateTimeAsString: "2015-09-07T21:33:09.000Z",
     ethPriceInUSD: 1.24,
     waybackLink:
       "https://web.archive.org/web/20150912193811/https://www.ethereum.org/",
@@ -185,7 +191,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     slotNumber: undefined,
   },
   frontier: {
-    dateTimeAsString: "2015-07-30T03:26:13.000Z",
+    dateTimeAsString: "2015-07-30T15:26:13.000Z",
     ethPriceInUSD: 0,
     waybackLink:
       "https://web.archive.org/web/20150802035735/https://www.ethereum.org/",

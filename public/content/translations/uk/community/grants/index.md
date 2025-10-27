@@ -26,16 +26,16 @@ lang: uk
 У межах цих проєктів створено власні гранти, спрямовані на розробку й тестування власних технологій.
 
 - [Програма грантів Aave](https://aavegrants.org/) — _гранти DAO від [Aave](https://aave.com/)_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд екосистеми [Balancer](https://balancer.fi/)_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) — _фонд екосистеми [Balancer](https://balancer.fi/)_
 - [Програма грантів Chainlink](https://chain.link/community/grants) — _гранти спільноти [Chainlink](https://chain.link/)_
-- [Програма грантів Compound](https://compoundgrants.org/) — _фінансова екосистема [Compound](https://compound.finance/)_
+- [Програма грантів Compound](https://compoundgrants.questbook.app/) — _фінансова екосистема [Compound](https://compound.finance/)_
 - [Програма грантів Decentraland](https://governance.decentraland.org/grants/) — _[децентралізація](https://decentraland.org/) DAO Metaverse_
 - [Організація грантів Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _фінансова екосистема [Lido](https://lido.fi/)_
 - [Програма MetaMask](https://metamaskgrants.org/) — _гранти під керівництвом співробітників DAO від [MetaMask](https://metamask.io/)_
 - [Програма грантів mStable](https://docs.mstable.org/advanced/grants-program) — _спільнота [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _екосистема [The Graph](https://thegraph.com/)_
 - [Програма грантів UMA](https://grants.umaproject.org/) — _підтримка розробників від [UMA](https://umaproject.org/)_
-- [Програма грантів Uniswap](https://www.unigrants.org/) — _спільнота [Uniswap](https://uniswap.org/)_
+- [Програма грантів Uniswap](https://www.uniswapfoundation.org/) — _спільнота [Uniswap](https://uniswap.org/)_
 
 ## Чотиричне фінансування {#quadratic-funding}
 

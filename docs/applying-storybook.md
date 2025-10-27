@@ -14,11 +14,11 @@ Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-story
 
 ## Spinning up the Storybook server
 
-It's as easy as running `yarn storybook` to boot up a dedicated localhost to see all the components that have stories.
+It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see all the components that have stories.
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook v7, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
+> 🚨 NOTE: This project uses Storybook v8.6+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
@@ -40,7 +40,7 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
-const meta {
+const meta = {
   title: "ComponentA",
   component: ComponentA
 } satisfies Meta<typeof ComponentA>
@@ -52,11 +52,11 @@ type Story = StoryObj<typeof meta>;
 export const Basic: Story = {}
 ```
 
-- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e. `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
+- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e., `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
 - The `satisfies` TypeScript keyword is used with the `Meta` type for stricter type checking. This is particularly helpful to make sure required args are not missed. [Storybook Docs regarding `satisfies`](https://storybook.js.org/docs/writing-stories/typescript#using-satisfies-for-better-type-safety)
 - The use of `StoryObj` is to be able to typecheck the creation of a story as an object. This helps with prop inference.
 - We use `StoryObj<typeof meta>` in the event a required arg is provided in the `meta` object, to be applied to all stories in the file. This prevents type errors throwing at the story level for a required missing arg.
-- If the story does not need any args or any custom rendering, it should be left as an empty object. Otherwise, use the `render` option to explicitly write the rendering of the story: i.e. `render: () => <Component />`
+- If the story does not need any args or any custom rendering, it should be left as an empty object. Otherwise, use the `render` option to explicitly write the rendering of the story: i.e., `render: () => <Component />`
 
 Also, please view the Figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
 
@@ -71,7 +71,7 @@ import Button from "."
 
 type ButtonType = typeof Button
 
-const meta {
+const meta = {
   title: "Atoms / Form / Button",
   component: Button
 } satisfies Meta<ButtonType>

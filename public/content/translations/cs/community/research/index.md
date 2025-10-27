@@ -41,7 +41,7 @@ Kromě výzkumu zaměřeného na budoucnost se zkoumají i některé zásadní z
 
 - [Úvod do důkazu podílem](/developers/docs/consensus-mechanisms/pos/)
 - [Práce na Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Vysvětlení Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Vysvětlení Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Práce na Casper](https://arxiv.org/abs/2003.03052)
 
 #### Nedávný výzkum {#recent-research}
@@ -83,7 +83,7 @@ Ethereum uzel vyžaduje spuštění dvou částí softwaru:
 1. konsenzuálního klientu, který má přehled o hlavě blockchainu, gossip blocích a zpracovává logiku konsenzu
 2. exekučního klientu pro podporu virtuálního stroje Etherea a provádění transakcí a chytrých kontraktů
 
-Další podrobnosti o uzlech a klientech a seznam všech aktuálních implementací klientů najdete na stránce o [uzlech a klientech](/developers/docs/nodes-and-clients/). Historii všech upgradů Etherea najdete také na stránce o [historii](/history/).
+Další podrobnosti o uzlech a klientech a seznam všech aktuálních implementací klientů najdete na stránce o [uzlech a klientech](/developers/docs/nodes-and-clients/). Historii všech upgradů Etherea najdete také na stránce o [historii](/ethereum-forks/).
 
 ### Exekuční klienty {#execution-clients}
 
@@ -224,7 +224,7 @@ Ekonomický výzkum v oblasti Etherea se obecně řídí dvěma přístupy: ově
 
 #### Základní podklady {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Workshop ETHconomics na Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Nedávný výzkum {#recent-research-9}
@@ -307,7 +307,7 @@ Je potřeba vytvořit více nástrojů pro analýzu dat a ovládacích panelů, 
 
 #### Nedávný výzkum {#recent-research-14}
 
-- [Datová analýza Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Datová analýza Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Aplikace a nástroje {#apps-and-tooling}
 
@@ -358,7 +358,7 @@ Nástroje pro vývojáře Etherea se rychle zlepšují. V této obecné oblasti 
 
 ### Orákula {#oracles}
 
-Orákula importují data mimo blockchain dovnitř decentralizovaným způsobem bez nutnosti oprávnění. Získávání těchto dat do blockchainu umožňuje dappkám reagovat na jevy reálného světa, jako jsou výkyvy cen reálných aktiv, události v aplikacích mimo blockchain nebo dokonce změny počasí.
+Orákula importují data mimo blockchain do blockchainu decentralizovaným způsobem bez nutnosti povolení. Získávání těchto dat na blockchain umožňuje decentralizovaným aplikacím reagovat na jevy reálného světa, jako jsou výkyvy cen reálných aktiv, události v aplikacích mimo blockchain, nebo dokonce změny počasí.
 
 #### Základní podklady {#background-reading-18}
 

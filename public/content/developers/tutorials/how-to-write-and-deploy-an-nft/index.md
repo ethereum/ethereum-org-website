@@ -42,7 +42,7 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
 
 ![Set Sepolia as your network](./metamask-goerli.png)
 
@@ -186,7 +186,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
    }
    ```
 
-3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library into our folder.
+3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts^4.0.0` to install the library into our folder.
 
 So, what does this code _do_ exactly? Let’s break it down, line-by-line.
 

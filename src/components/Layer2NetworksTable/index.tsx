@@ -1,5 +1,3 @@
-import { useMemo, useState } from "react"
-
 import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
@@ -9,6 +7,8 @@ import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubCom
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import DataTable from "../DataTable"
 
 import useTranslation from "@/hooks/useTranslation"
 
@@ -22,15 +22,20 @@ const Layer2NetworksTable = ({
   mainnetData: ExtendedRollup
 }) => {
   const networkFilterOptions = useNetworkFilters()
-  const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
   const { t } = useTranslation("page-layer-2-networks")
 
-  const filteredData = useMemo(() => {
-    const networks = [mainnetData, ...layer2Data]
+  const networks = [mainnetData, ...layer2Data].map((network) => ({
+    ...network,
+    id: network.name,
+  }))
 
-    const filteredData = networks
+  const filterFn = (
+    networks: (ExtendedRollup & { id: string })[],
+    filters: FilterOption[]
+  ) => {
+    return networks
       .filter((network) => {
-        if (network === mainnetData) return true
+        if (network.name === mainnetData.name) return true
 
         const maturityFilter = filters[1].items.find(
           (item) => item.filterKey === network.networkMaturity
@@ -43,40 +48,49 @@ const Layer2NetworksTable = ({
           filters[0].items[0].inputState as string
         )
       })
-
-    return filteredData
-  }, [layer2Data, mainnetData, filters])
-
-  const resetFilters = () => {
-    setFilters(networkFilterOptions)
-    trackCustomEvent({
-      eventCategory: "Layer2NetworksTable",
-      eventAction: "Reset button",
-      eventName: "reset_click",
-    })
   }
 
   return (
-    <ProductTable
-      meta={{
-        locale: locale,
-      }}
-      columns={useNetworkColumns}
-      data={filteredData}
-      allDataLength={layer2Data.length}
-      matomoEventCategory="l2_networks"
-      filters={filters}
+    <ProductTable<ExtendedRollup & { id: string }>
+      data={networks}
+      filters={networkFilterOptions}
       presetFilters={[]}
-      resetFilters={resetFilters}
-      setFilters={setFilters}
-      subComponent={(network) => {
-        return <NetworkSubComponent network={network} />
-      }}
-      noResultsComponent={() => (
-        <NetworksNoResults resetFilters={resetFilters} />
-      )}
+      filterFn={filterFn}
       mobileFiltersLabel={t("page-layer-2-networks-transaction-see-networks")}
-    />
+    >
+      {({
+        filteredData,
+        setMobileFiltersOpen,
+        resetFilters,
+        activeFiltersCount,
+      }) => (
+        <DataTable<ExtendedRollup & { id: string }, unknown>
+          variant="product"
+          data={filteredData}
+          columns={useNetworkColumns}
+          subComponent={(network) => <NetworkSubComponent network={network} />}
+          noResultsComponent={() => (
+            <NetworksNoResults
+              resetFilters={() => {
+                resetFilters()
+                trackCustomEvent({
+                  eventCategory: "Layer2NetworksTable",
+                  eventAction: "Reset button",
+                  eventName: "reset_click",
+                })
+              }}
+            />
+          )}
+          matomoEventCategory="l2_networks"
+          allDataLength={layer2Data.length}
+          activeFiltersCount={activeFiltersCount}
+          setMobileFiltersOpen={setMobileFiltersOpen}
+          meta={{
+            locale: locale,
+          }}
+        />
+      )}
+    </ProductTable>
   )
 }
 

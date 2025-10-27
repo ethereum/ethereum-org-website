@@ -56,7 +56,7 @@ Se você quiser reportar um erro em uma determinada cadeia de caracteres que pre
 
 ## O que é Memória de Tradução (MT)? {#translation-memory}
 
-Memória de Tradução (MT) é uma funcionalidade do Crowdin que armazena todas as frases traduzidas anteriormente no [ethereum.org](http://ethereum.org/). Quando uma cadeia de caracteres é traduzida, ela é automaticamente salva em nosso projeto de MT. Ela pode ser uma ferramenta útil para você economizar tempo!
+Memória de Tradução (MT) é uma funcionalidade do Crowdin que armazena todas as frases traduzidas anteriormente no [ethereum.org](https://ethereum.org/). Quando uma cadeia de caracteres é traduzida, ela é automaticamente salva em nosso projeto de MT. Ela pode ser uma ferramenta útil para você economizar tempo!
 
 - Veja na seção "Sugestões de MT " como outros tradutores traduziram a mesma string, ou similar. Se você encontrar uma sugestão com uma alta correspondência, sinta-se livre para se referir à tradução clicando nela.
 - Se não houver nada na lista, você poderá procurar na MT traduções feitas anteriormente e reutilizá-las para consistência.

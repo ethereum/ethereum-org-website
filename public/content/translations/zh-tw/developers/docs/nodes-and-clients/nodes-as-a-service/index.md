@@ -156,19 +156,6 @@ sidebarDepth: 2
     - 按小時付費定價
     - 全年無休直接支援
 
-- [**DataHub**](https://datahub.figment.io)
-  - [文件](https://docs.figment.io/)
-  - 功能
-    - 免費方案 3,000,000 次請求/月
-    - RPC 及 WSS 末端
-    - 專用之全及歸檔節點
-    - 自動擴容（批量折扣）
-    - 免費歸檔資料
-    - 服務分析
-    - 控制面板
-    - 全年無休直接支援
-    - 可用加密貨幣付款（企業）
-
 - [**DRPC**](https://drpc.org/)
   - [文件](https://docs.drpc.org/)
   - 功能
@@ -264,7 +251,7 @@ sidebarDepth: 2
     - 直接技術支援
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [文件](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [文件](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速和可擴充的遠端程序呼叫應用程式介面服務
     - 專為 Web3 開發者打造的增強版應用程式介面

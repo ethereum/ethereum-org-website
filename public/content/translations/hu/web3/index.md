@@ -6,6 +6,10 @@ lang: hu
 
 # Bevezetés a Web3 világába {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 A centralizáció segített abban, hogy emberek milliárdjai használják az internetet, és megalapozta annak stabil, robosztus infrastruktúráját. Eközben néhány centralizált entitás tartja a kezében az internet nagy részét, és egyoldalúan eldönti, hogy mit szabad és mit nem.
 
 A Web3 a válasz erre a dilemmára. Ahelyett, hogy a web nagy technológiai cégek monopóliuma lenne, a web3 lényege a decentralizáció, így a felhasználók építik, működtetik és birtokolják. A Web3 az egyének kezébe helyezi a hatalmat a cégek helyett. Mielőtt mélyebben elmerülünk a Web3 világában, nézzük meg, hogyan jutottunk el idáig.
@@ -61,12 +65,15 @@ A Web3 sosem látott módon ad a felhasználóknak képességet arra, hogy digit
 
 A Web3 közvetlen tulajdonjogot ad [nem helyettesíthető tokenek (NFT)](/glossary/#nft) révén. Senki, még a játék készítői sem tudják elvenni ezt a jogot. Ha abbahagyja a játékot, akkor el tudja adni, kereskedni tud azokkal a nyitott piacokon és visszaszerezni az értékét.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Tudjon meg többet az NFT-kről</div>
   <ButtonLink href="/nft/">
     Bővebben az NFT-kről
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Cenzúraálló kialakítás {#censorship-resistance}
 
@@ -86,12 +93,15 @@ A DAO-kat technikailag úgy határozzák meg, mint megállapodás szerinti [inte
 
 Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közösségek más-más szintű decentralizációval és automatizációval rendelkeznek. Jelenleg még vizsgáljuk, hogy mi is az a DAO és hova fejlődik a jövőben.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Tudjon meg többet a DAO-król</div>
   <ButtonLink href="/dao/">
     További információk a DAO-król
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identitás {#identity}
 
@@ -139,7 +149,7 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 
 - [Tárca szerzése](/wallets/)
 - [Találjon egy közösséget](/community/)
-- [Fedezze fel a Web3-alkalmazásokat](/dapps/)
+- [Fedezze fel a Web3-alkalmazásokat](/apps/)
 - [DAO-hoz csatlakozás](/dao/)
 - [Építsen a Web3-ra](/developers/)
 
@@ -147,11 +157,11 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 
 A Web3 nincs szigorúan definiálva. A közösségek különböző résztvevői más-más perspektívával bírnak. Néhány ezek közül:
 
-- [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [A Web3 értelmezése](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Miért számít a Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Miért fontos a decentralizáció](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [A Web3 világa](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [A Web3 vita](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [A Web3 vita](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

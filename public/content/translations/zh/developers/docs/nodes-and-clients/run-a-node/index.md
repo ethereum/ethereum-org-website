@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### 硬件 {#hardware}
 
-不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/networkType/Hosting)来看，在云端运行大部分节点可能引发单点故障。
+不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/network-types)来看，在云端运行大部分节点可能引发单点故障。
 
 以太坊客户端可以在你的计算机、笔记本电脑、服务器甚至单板计算机上运行。 虽然可以在你的个人计算机上运行客户端，但为你的节点配备一台专用机器可以显著提高其性能和安全性，同时最大限度地减少对你的主计算机的影响。
 
@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### 共识客户端
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)（不提供预构建的二进制文件，仅提供 Docker 映像或使用源代码进行构建）
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（不提供预构建的二进制文件，仅提供 Docker 映像或使用源代码进行构建）
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu 还带有一个启动器选项，它会询问一系列问题并生成配置
 besu --Xlauncher
 ```
 
-[Besu 相关文档](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)包含更多选项和配置详细信息。
+[Besu 相关文档](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含更多选项和配置详细信息。
 
 ##### 运行 Erigon
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 运行 Nethermind
 
-Nethermind 提供各种[安装选项](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
+Nethermind 提供各种[安装选项](https://docs.nethermind.io/get-started/installing-nethermind)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/get-started/running-node/)。
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### 运行 Prysm
 
-Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://docs.prylabs.network/docs/install/install-with-script)中找到。
+Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)中找到。
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +444,7 @@ _但是，共识层的验证者节点就需要一直在线。_验证者节点离
 
 #### 更新客户端 {#updating-clients}
 
-你应该通过安装最新的安全补丁、功能和[以太坊改进提案](/eips/)，让客户端软件更新到最新版本。 特别是在[硬分叉](/history/)之前，确保运行正确的客户端版本。
+你应该通过安装最新的安全补丁、功能和[以太坊改进提案](/eips/)，让客户端软件更新到最新版本。 特别是在[硬分叉](/ethereum-forks/)之前，确保运行正确的客户端版本。
 
 > 在重要的网络更新之前，以太坊基金会在其[博客](https://blog.ethereum.org)上发布相关文章。 你可以[订阅这些公告](https://blog.ethereum.org/category/protocol#subscribe)，以便在你的节点需要更新时收到邮件通知。
 

@@ -133,7 +133,7 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 
 분산형 신원 증명은 비밀번호 기반 로그인을 [탈중앙화 인증](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)으로 대체할 수 있게 합니다. 서비스 제공자는 사용자에게 증명을 발행할 수 있으며, 해당 증명은 이더리움 지갑에 저장됩니다. 증명의 예시로, 소유자가 특정 온라인 커뮤니티에 액세스할 수 있게 하는 [NFT](/nft/)가 있을 수 있습니다.
 
-그 후 [이더리움 로그인](https://login.xyz/) 기능은 서버가 사용자의 이더리움 계정을 확인하고 해당 계정 주소로부터 필요한 증명 정보를 가져올 수 있도록 합니다. 즉, 사용자는 긴 비밀번호를 기억하지 않고도 플랫폼이나 웹사이트에 액세스할 수 있으며, 이는 사용자의 온라인 환경을 향상합니다.
+그 후 [이더리움 로그인](https://siwe.xyz/) 기능은 서버가 사용자의 이더리움 계정을 확인하고 해당 계정 주소로부터 필요한 증명 정보를 가져올 수 있도록 합니다. 즉, 사용자는 긴 비밀번호를 기억하지 않고도 플랫폼이나 웹사이트에 액세스할 수 있으며, 이는 사용자의 온라인 환경을 향상합니다.
 
 ### 2. KYC 인증 {#kyc-authentication}
 
@@ -160,7 +160,7 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 - **[EAS(Ethereum Attestation Service)](https://attest.sh/)** - _모든 것에 대한 온체인 또는 오프체인 증명을 만들 수 있는 탈중앙화된 장부/프로토콜입니다._
 - **[인간 증명](https://www.proofofhumanity.id)** - _인간 증명(PoH: Proof of Humanity)은 이더리움 기반의 소셜 신원 증명 시스템입니다._
 - **[BrightID](https://www.brightid.org/)** - _소셜 그래프를 만들고 분석함으로써 신원 증명을 개혁하고자 하는 탈중앙화된 오픈소스의 소셜 신원 증명 네트워크입니다._
-- **[개인 증명 여권](https://proofofpersonhood.com/)** - _탈중앙화 디지털 신원 정보 종합 플랫폼입니다._
+- **[개인 증명 여권](https://passport.human.tech/)** - _탈중앙화 디지털 신원 정보 종합 플랫폼입니다._
 
 ## 더 읽을 거리 {#further-reading}
 
@@ -181,5 +181,5 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 ### 커뮤니티 {#communities}
 
 - [GitHub의 ERC-725 연합](https://github.com/erc725alliance): *이더리움 블록체인에서 신원 관리를 위한 ERC 725 표준의 지원자*
-- [SpruceID 디스코드 서버](https://discord.com/invite/Sf9tSFzrnt): *이더리움 로그인을 개발 중인 개발자와 매니아의 커뮤니티*
+- [EthID 디스코드 서버](https://discord.com/invite/ZUyG3mSXFD): *이더리움 로그인을 개발 중인 개발자와 매니아의 커뮤니티*
 - [Veramo Labs](https://discord.gg/sYBUXpACh4): *애플리케이션의 검증 가능한 데이터를 위한 프레임워크 개발자의 커뮤니티*

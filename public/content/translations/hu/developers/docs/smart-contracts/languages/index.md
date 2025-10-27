@@ -113,7 +113,6 @@ További információkért [tekintse meg a Vyper magyarázatát](https://vyper.r
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Okosszerződés-fejlesztési keretrendszerek és eszközök Vyperre](/developers/docs/programming-languages/python/)
 - [VyperPunk – tanulja meg a Vyper okosszerződéseket biztosítását és meghackelését](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples – Példák a Vyper sebezhetőségére](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub fejlesztéshez](https://github.com/zcor/vyper-dev)
 - [Példák a Vyper legjobb okosszerződéseire](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [A Vyper által gondozott kiváló források](https://github.com/spadebuilders/awesome-vyper)
@@ -180,7 +179,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. feltételek ellenőrzése
     # 2. akció végrehajtás (potenciálisan megváltoztatja a feltételeket)
@@ -227,7 +226,6 @@ Ha Önnek új az Ethereum és nem programozott okosszerződésnyelveken, akkor a
 
 - [Yul Dokumentáció](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Dokumentáció](https://github.com/fuellabs/yulp)
-- [Yul+ Játszótér](https://yulp.fuel.sh/)
 - [Yul+ Bevezető poszt](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Példa szerződés {#example-contract-2}
@@ -322,5 +320,5 @@ Az alapvető szintaxis, szerződés-életciklus, interfészek, operátorok, adat
 
 ## További olvasnivaló {#further-reading}
 
-- [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts)
+- [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity egy példa alapján](https://solidity-by-example.org)

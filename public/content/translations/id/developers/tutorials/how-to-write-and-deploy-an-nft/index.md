@@ -47,7 +47,7 @@ Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat a
 
 Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Jika Anda ingin memahami lebih lanjut tentang cara transaksi di Ethereum bekerja, lihat [halaman ini](/developers/docs/transactions/) dari yayasan Ethereum.
 
-Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download.html). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
+Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
 
 ![Tetapkan Ropsten sebagi jaringan Anda](./metamask-goerli.png)
 
@@ -240,9 +240,13 @@ Your `.env` should now look like this:
 
 Untuk betul-betul menghubungkannya ke kode kita, kita akan mereferensikan variabel-variabel ini dalam berkas hardhat.config.js kita pada langkah ke-13.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Langkah 12: Instal Ethers.js {#install-ethers}
 

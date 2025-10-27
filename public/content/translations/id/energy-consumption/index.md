@@ -61,14 +61,19 @@ Meskipun konsumsi energi Ethereum sangat rendah, ada juga komunitas [**keuangan 
 
 Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co) menjalankan putaran iklim untuk menstimulasi pembangunan yang sadar lingkungan pada lapisan aplikasi Ethereum. Melalui pengembangan inisiatif-inisiatif ini (dan yang lainnya, misalnya [DeSci](/desci/)), Ethereum menjadi teknologi yang positif bagi lingkungan dan sosial.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Jika menurut Anda halaman ini dapat dibuat lebih akurat, silakan ajukan masalah atau PR. Statistik di halaman ini adalah perkiraan berdasarkan data yang tersedia untuk umum - statistik ini tidak mewakili pernyataan atau janji resmi dari tim ethereum.org, atau Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Indeks Keberlanjutan Jaringan Rantai Blok Cambridge](https://ccaf.io/cbnsi/ethereum)
-- [Laporan Gedung Putih tentang rantai blok bukti kerja](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Laporan Gedung Putih tentang rantai blok bukti kerja](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisi Ethereum: Perkiraan dari Bawah ke Atas](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Indeks Konsumsi Energi Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

@@ -6,6 +6,10 @@ lang: zh
 
 # Web3 简介 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 中心化网络已经帮助数十亿人融入了互联网，并在其上创建了稳定、可靠的基础设施。 与此同时，少数中心化巨头几乎垄断了互联网，甚至可以为所欲为。
 
 Web3 是摆脱这一困境的方案。 不同于科技巨头垄断的传统互联网，Web3 采用去中心化，由所有用户构建、运营和拥有。 Web3 将权力赋予个人而非公司。 在我们讨论 Web3 之前，先来看看我们是如何走到这一步的。
@@ -61,12 +65,15 @@ Web3 以前所未有的方式赋予你数字资产的所有权。 例如，假�
 
 Web3 允许通过[非同质化代币 (NFT)](/glossary/#nft) 直接拥有所有权。 任何人甚至是游戏创作者，都没有权力剥夺你的所有权。 而且，如果你停止玩这个游戏，你可以在公开市场上出售或交易你的游戏内物品并收回它们的价值。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>了解更多有关非同质化代币的更多信息</div>
   <ButtonLink href="/nft/">
     关于非同质化代币的更多信息
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### 抗审查 {#censorship-resistance}
 
@@ -86,12 +93,15 @@ Web 2.0 需要内容创作者信任平台不会更改规则，但抗审查则是
 
 然而，许多 Web3 社区都被定义为去中心化自治组织。 这些社区都通过代码实现了不同程度的去中心化和自动化。 目前，我们仍在探索去中心化自治组织是什么以及它们在未来会如何发展。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>了解更多有关去中心化自治组织的信息</div>
   <ButtonLink href="/dao/">
     关于去中心化自治组织的更多信息
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### 身份 {#identity}
 
@@ -139,7 +149,7 @@ Web3 是一个年轻且不断发展的生态系统。 Gavin Wood 在 2014 年创
 
 - [获取钱包](/wallets/)
 - [寻找社区](/community/)
-- [探索 Web3 应用程序](/dapps/)
+- [探索 Web3 应用程序](/apps/)
 - [加入去中心化自治组织](/dao/)
 - [基于 Web3 构建](/developers/)
 
@@ -147,11 +157,11 @@ Web3 是一个年轻且不断发展的生态系统。 Gavin Wood 在 2014 年创
 
 Web3 没有严格的定义。 不同的社区参与者对其有不同的看法。 例如：
 
-- [什么是 Web3？ 解析未来的去中心化互联网](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [什么是 Web3？ 解析未来的去中心化互联网](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [理解 Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
 - [为什么 Web3 很重要](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [为什么去中心化很重要](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 概况](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 之辩论](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web3 之辩论](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

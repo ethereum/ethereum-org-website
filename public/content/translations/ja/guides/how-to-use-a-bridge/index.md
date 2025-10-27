@@ -52,12 +52,15 @@ lang: ja
 [chainlist.org](http://chainlist.org)で、ネットワークのRPCの詳細について確認できます。 ネットワークの追加およびトランザクションの完了により、トークンがウォレットに表示されるはずです。
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>詳細をご希望の場合は、</div>
   <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## よくある質問
 
