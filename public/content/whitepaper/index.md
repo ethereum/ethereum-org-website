@@ -515,8 +515,8 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn on Smart Property at Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [Ethereum RLP](https://ethereum.org/developers/docs/data-structures-and-encoding/rlp/)
-20. [Ethereum Merkle Patricia trees](https://ethereum.org/ru/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
+19. [Ethereum RLP](/developers/docs/data-structures-and-encoding/rlp/)
+20. [Ethereum Merkle Patricia trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd on Merkle sum trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _For history of the whitepaper, see [this wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
