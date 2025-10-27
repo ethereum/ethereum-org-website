@@ -272,10 +272,10 @@ const { API_URL, PRIVATE_KEY } = process.env;
 */
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "Sepolia",
+   defaultNetwork: "sepolia",
    networks: {
       hardhat: {},
-      Sepolia: {
+      sepolia: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`]
       }
@@ -336,7 +336,7 @@ Calling `deploy()` on a `ContractFactory` will start the deployment, and return 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
 ```
-npx hardhat run scripts/deploy.js --network Sepolia
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 You should then see something like:
