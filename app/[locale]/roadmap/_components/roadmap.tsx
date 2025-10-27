@@ -256,7 +256,6 @@ const RoadmapPage = () => {
                   </div>
                 </ExpandableCard>
               </div>
-
             </div>
           </div>
 

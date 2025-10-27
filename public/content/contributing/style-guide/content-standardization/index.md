@@ -356,16 +356,19 @@ He was sure of one thing — he would not give up.
 The results -- despite initial doubts -- were impressive.
 ```
 
-### Examples (e.g.,) and Restatements (i..e,) {#example-restatements}
+### Examples (e.g.,) and restatements (i.e.,) {#examples-restatements}
+
 When using examples (e.g.,) or restatements (i.e.,) it should include the comma after the second period. 
 
-Usage:
-i.e., (that is) introduces a word or phrase that restates what has already been stated.
-e.g., (for example) is used similarly to "for example" preceding an item or list of items.
+**Usage:**
+
+- i.e., (that is) introduces a word or phrase that restates what has already been stated.
+- e.g., (for example) is used similarly to "for example" preceding an item or list of items.
 
 This usage will allow for consistency and presentation across the documentation.
 
 **Examples:**
+
 - Preferred: i.e., or e.g.,
 - Avoid: i.e. ie. e.g. or eg.
 
