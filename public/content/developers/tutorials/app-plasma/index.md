@@ -194,7 +194,7 @@ balance=100_000
 nonce=0
 ```
 
-This is the way to specify an array of structures. For each entry, we specify the address, balance (in milliETH a.k.a. [Finney](https://cryptovalleyjournal.com/glossary/finney/)), and the next nonce value.
+This is the way to specify an array of structures. For each entry, we specify the address, balance (in milliETH a.k.a. [finney](https://cryptovalleyjournal.com/glossary/finney/)), and the next nonce value.
 
 #### `client/src/Transfer.tsx` {#client-src-transfer-tsx}
 
@@ -552,7 +552,7 @@ Read the amount and nonce from the message.
     let mut stillReadingNonce: bool = false;
 ```
 
-In the message, the first number after the address is the amount of Finneys (a.k.a. thousandth of an ETH) to transfer. The second number is the nonce. Any text between them is ignored.
+In the message, the first number after the address is the amount of finney (a.k.a. thousandth of an ETH) to transfer. The second number is the nonce. Any text between them is ignored.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
