@@ -152,7 +152,7 @@ Proces zarządzania Ethereum często zamienia szybkość i wydajność na otwart
 
 Podczas gdy specyfikacja i implementacje deweloperskie zawsze były w pełni open source, formalne procesy stosowane do proponowania aktualizacji opisane powyżej nie zostały użyte. Pozwoliło to na szybsze określanie i uzgadnianie zmian przez badaczy i osób wdrażających.
 
-Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/history/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
+Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/ethereum-forks/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   Więcej o Połączeniu

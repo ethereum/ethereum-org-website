@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Ethereum üçün daha ucuz və daha sürətli tranzaksiyalar",
   "nav-learn-by-coding-description": "Ethereum-u sınamanıza kömək edən alətlər",
   "nav-local-env-description": "Ethereum inkişaf platformanızı seçin və quraşdırın",
-  "nav-mainnet-description": "Ethereum-un əsas ictimai şəbəkəsində qurula biləcək olan Müəssisə blokçeyn tətbiqləri",
+  "nav-enterprise-description": "Ethereum-un əsas ictimai şəbəkəsində qurula biləcək olan Müəssisə blokçeyn tətbiqləri",
   "nav-nft-description": "Unikal olan hər bir şeyin Ethereum əsaslı aktiv kimi təqdim edilmə yolu",
   "nav-open-research-description": "Ethereum-un əsas güclü tərəflərindən biri onun fəal tədqiqat icmasıdır",
   "nav-open-research-label": "Açıq araşdırma",
@@ -431,5 +431,8 @@
   "withdrawals": "Payın çıxarılması",
   "wrapped-ether": "Tokenləşdirilmiş Ether",
   "yes": "Bəli",
-  "zero-knowledge-proofs": "Sıfır biliklərlə təsdiqləmə"
+  "zero-knowledge-proofs": "Sıfır biliklərlə təsdiqləmə",
+  "ethereum-vs-bitcoin": "Ethereum və Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Ethereum və Bitcoin arasındakı fərqləri anlayın"
+
 }

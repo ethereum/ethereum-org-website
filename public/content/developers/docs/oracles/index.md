@@ -14,7 +14,7 @@ This page assumes the reader is familiar with Ethereum fundamentals, including [
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle}
 
-Oracles are applications that source, verify, and transmit external information (i.e. information stored offchain) to smart contracts running on the blockchain. Besides “pulling” offchain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
+Oracles are applications that source, verify, and transmit external information (i.e., information stored offchain) to smart contracts running on the blockchain. Besides “pulling” offchain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
 
 Without an oracle, a smart contract would be limited entirely to onchain data.
 
@@ -32,7 +32,7 @@ To achieve deterministic execution, blockchains limit nodes to reaching consensu
 - “Does this account have enough funds to cover the transaction?”
 - “Is this transaction valid in the context of this smart contract?”, etc.
 
-If blockchains received information from external sources (i.e. from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely to change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
+If blockchains received information from external sources (i.e., from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely to change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
 
 For a public blockchain like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, nodes need mechanisms for arriving at the same state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform.
 
@@ -44,7 +44,7 @@ Essentially, a blockchain oracle bridges the information gap between the blockch
 
 ## What is the oracle problem? {#the-oracle-problem}
 
-Oracles solve an important problem, but also introduce some complications, e.g.:
+Oracles solve an important problem, but also introduce some complications, e.g.,:
 
 - How do we verify that the injected information was extracted from the correct source or hasn’t been tampered with?
 
@@ -54,7 +54,7 @@ The so-called “oracle problem” demonstrates the issues that come with using 
 
 Different oracles offer different solutions to the oracle problem, which we explore later. Oracles are typically evaluated on how well they can handle the following challenges:
 
-1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid offchain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e. wasn’t altered) before being sent onchain.
+1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid offchain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e., wasn’t altered) before being sent onchain.
 
 2. **Availability**: An oracle should not delay or prevent smart contracts from executing actions and triggering state changes. This means that data from an oracle must be _available on request_ without interruption.
 
@@ -362,7 +362,7 @@ The original approach was to use pseudorandom cryptographic functions, such as `
 
 It is possible to generate the random value offchain and send it onchain, but doing so imposes high trust requirements on users. They must believe the value was truly generated via unpredictable mechanisms and wasn’t altered in transit.
 
-Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes. Another example is [API3 QRNG](https://docs.api3.org/explore/qrng/) that serves Quantum random number generation (QRNG) is a public method of Web3 RNG based on quantum phenomena, served with the courtesy of the Australian National University (ANU).
+Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes.
 
 ### Getting outcomes for events {#getting-outcomes-for-events}
 
@@ -400,30 +400,28 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts._
 
-**[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
-
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data onchain in a tamper-resistant, decentralized, and self-sustainable environment._
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
 
 **[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for onchain and offchain use-cases. 
 
+**[Gas Network](https://gas.network/)** - A distributed oracle platform providing real-time gas price data across blockchain. By bringing data from leading gas price data providers onchain, Gas Network is helping to drive interoperability. Gas Network supports data for over 35 chains, including Ethereum Mainnet and many leading L2s.
+
 ## Further reading {#further-reading}
 
 **Articles**
 
 - [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) — _Chainlink_
-- [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
+- [What is a Blockchain Oracle?](https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [Why we need decentralized oracles](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
 - [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Videos**
 
 - [Oracles and the Expansion of Blockchain Utility](https://youtu.be/BVUZpWa8vpw) — _Real Vision Finance_
-- [The differences between first party and third party oracles](https://blockchainoraclesummit.io/first-party-vs-third-party-oracles/) - _Blockchain Oracle Summit_
 
 **Tutorials**
 

@@ -8,6 +8,10 @@
     "path": "/roadmap/index.md"
   },
   {
+    "id": 13426,
+    "path": "/roadmap/fusaka/index.md"
+  },
+  {
     "id": 6161,
     "path": "/community/events/index.md"
   },
@@ -22,6 +26,10 @@
   {
     "id": 12604,
     "path": "/real-world-assets/index.md"
+  },
+  {
+    "id": 12762,
+    "path": "/eth/supply/index.md"
   },
   {
     "id": 2716,
@@ -276,6 +284,10 @@
     "path": "/community/research/index.md"
   },
   {
+    "id": 13436,
+    "path": "/community/events/organizing/index.md"
+  },
+  {
     "id": 2926,
     "path": "/roadmap/merge/index.md"
   },
@@ -336,6 +348,10 @@
     "path": "/contributing/design/index.md"
   },
   {
+    "id": 13440,
+    "path": "/contributing/translation-program/playbook/index.md"
+  },
+  {
     "id": 6568,
     "path": "/developers/docs/networking-layer/index.md"
   },
@@ -392,6 +408,10 @@
     "path": "/ai-agents/index.md"
   },
   {
+    "id": 12754,
+    "path": "/what-are-apps/index.md"
+  },
+  {
     "id": 2962,
     "path": "/foundation/index.md"
   },
@@ -426,6 +446,10 @@
   {
     "id": 12565,
     "path": "/payments/index.md"
+  },
+  {
+    "id": 2680,
+    "path": "/enterprise/use-cases/index.md"
   },
   {
     "id": 2946,
@@ -636,12 +660,8 @@
     "path": "/developers/docs/scaling/state-channels/index.md"
   },
   {
-    "id": 2680,
-    "path": "/enterprise/index.md"
-  },
-  {
     "id": 2672,
-    "path": "/history/index.md"
+    "path": "/ethereum-forks/index.md"
   },
   {
     "id": 7529,
@@ -742,5 +762,9 @@
   {
     "id": 8007,
     "path": "/contributing/quizzes/index.md"
+  },
+  {
+    "id": 12752,
+    "path": "/contributing/adding-resources/index.md"
   }
 ]

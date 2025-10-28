@@ -40,12 +40,15 @@ Niektóre aplikacje poproszą o zapisanie tajnej „frazy odzyskiwania” (czasa
 **Każda osoba, która zna tę frazę, może przejąć kontrolę nad wszystkimi funduszami.** Nigdy nikomu nie ujawniaj tej frazy. Ta fraza powinna zawierać od 12 do 24 losowo wygenerowanych słów (kolejność słów ma znaczenie).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Portfel już zainstalowany?</b><br/>Naucz się z niego korzystać.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Jak używać portfela
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Interesują Cię inne przewodniki? Sprawdź nasze: [Poradniki krok po kroku](/guides/)

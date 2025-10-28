@@ -41,7 +41,7 @@ lang: fa
 
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [توضیح‌دهنده Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [توضیح‌دهنده Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 #### جدیدترین تحقیقات {#recent-research}
@@ -83,7 +83,7 @@ lang: fa
 1. کاربر اجماع برای ردیابی راس بلاکچین، بلوک‌های بی‌مورد و مدیریت منطق اجماع
 2. کاربر اجرایی برای پشتیبانی از ماشین مجازی اتریوم و اجرای تراکنش‌ها و قراردادهای هوشمند
 
-برای جزئیات بیشتر در مورد گره‌ها و کاربرها و فهرستی از تمام کاربرهای فعلی، به [صفحه گره‌ها و کاربرها](/developers/docs/nodes-and-clients/) مراجعه کنید. همچنین می‌توانید تاریخچه تمام به‌روزرسانی‌های اتریوم را در [صفحه تاریخچه](/history/) پیدا کنید.
+برای جزئیات بیشتر در مورد گره‌ها و کاربرها و فهرستی از تمام کاربرهای فعلی، به [صفحه گره‌ها و کاربرها](/developers/docs/nodes-and-clients/) مراجعه کنید. همچنین می‌توانید تاریخچه تمام به‌روزرسانی‌های اتریوم را در [صفحه تاریخچه](/ethereum-forks/) پیدا کنید.
 
 ### کاربرهای اجرا {#execution-clients}
 
@@ -220,7 +220,7 @@ lang: fa
 
 #### پیشینه مطالعاتی {#background-reading-9}
 
-- [گروه مشوق‌های بزرگ](https://ethereum.github.io/rig/)
+- [گروه مشوق‌های بزرگ](https://rig.ethereum.org/)
 - [کارگاه ETHconomics در Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### جدیدترین تحقیقات {#recent-research-9}
@@ -303,7 +303,7 @@ lang: fa
 
 #### جدیدترین تحقیقات {#recent-research-14}
 
-- [تجزیه و تحلیل داده‌های گروه مشوق‌های بزرگ](https://ethereum.github.io/rig/)
+- [تجزیه و تحلیل داده‌های گروه مشوق‌های بزرگ](https://rig.ethereum.org/)
 
 ## اپلیکیشن‌ها و ابزارسازی {#apps-and-tooling}
 

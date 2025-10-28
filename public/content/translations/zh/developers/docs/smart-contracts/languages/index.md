@@ -113,7 +113,6 @@ contract Coin {
 - [备忘单](https://reference.auditless.com/cheatsheet)
 - [Vyper 的智能合约开发框架和工具](/developers/docs/programming-languages/python/)
 - [VyperPunk - 学习保护和破解 Vyper 智能合约](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyper 漏洞示例](https://www.vyperexamples.com/reentrancy)
 - [Vyper 开发中心](https://github.com/zcor/vyper-dev)
 - [Vyper 最热门的智能合约示例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [出色的 Vyper 精选资源](https://github.com/spadebuilders/awesome-vyper)
@@ -174,7 +173,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -221,7 +220,6 @@ def endAuction():
 
 - [Yul 相关文档](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ 相关文档](https://github.com/fuellabs/yulp)
-- [Yul+ 实战场](https://yulp.fuel.sh/)
 - [Yul+ 介绍帖子](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### 合约示例 {#example-contract-2}
@@ -316,5 +314,5 @@ contract GuestBook:
 
 ## 延伸阅读 {#further-reading}
 
-- [OpenZeppelin 的 Solidity 合约库](https://docs.openzeppelin.com/contracts)
+- [OpenZeppelin 的 Solidity 合约库](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity 示例](https://solidity-by-example.org)

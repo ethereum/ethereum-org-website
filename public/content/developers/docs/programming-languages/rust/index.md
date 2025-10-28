@@ -38,7 +38,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Rust projects and tools {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with Ethereum-like network_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Fast Ethereum consensus layer client_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposed redesign of the Ethereum smart contract execution layer using a deterministic subset of WebAssembly_
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API reference_

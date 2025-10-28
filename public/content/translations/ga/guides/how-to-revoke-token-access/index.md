@@ -20,7 +20,6 @@ Ligeann go leor suíomhanna gréasáin duit conarthaí cliste a bhaineann le do 
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (líonraí iolracha)
 - [Cúlghairm](https://revoke.cash/) (líonraí iomadúla)
 - [Unrekt](https://app.unrekt.net/) (líonraí iolracha)
 - [EverRevoke](https://everrise.com/everrevoke/) (líonraí iomadúla)
@@ -47,12 +46,15 @@ Molaimid duit an uirlis chúlghairme a athnuachan tar éis cúpla nóiméad agus
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">
     Féach ar ár dtreoracha eile
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ceisteanna coitianta
 

@@ -34,7 +34,7 @@ Apri la lingua verso cui desideri tradurre per visualizzare l'elenco dei file di
 
 I contenuti del sito web sono divisi in una serie di documenti e contenitori. Puoi controllare lo stato di avanzamento di ciascun documento sul lato destro – se l'avanzamento della traduzione è inferiore al 100%, ti invitiamo a contribuire!
 
-Non vedi la tua lingua nell'elenco? [Apri una segnalazione](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o chiedi nel nostro [Discord](/discord/)
+Non vedi la tua lingua nell'elenco? [Apri una segnalazione](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o chiedi nel nostro [Discord](https://discord.gg/ethereum-org)
 
 ![File tradotti e non tradotti su Crowdin](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Vuoi scoprire di più? Sentiti libero di dare un'occhiata alla [documentazione s
 
 Una volta completata la traduzione (cioè, tutti i file per una categoria di contenuti mostrano il 100%), il nostro servizio di traduzione professionale revisionerà (ed eventualmente modificherà) i contenuti. Una volta completata la revisione (ovvero quando lo stato di avanzamento della revisione è al 100%), aggiungeremo il contenuto al sito web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Si prega di non utilizzare la traduzione automatica per tradurre il progetto. Tutte le traduzioni saranno revisionate prima di essere aggiunte al sito web. Se le traduzioni suggerite sono tradotte automaticamente, saranno rimosse e i collaboratori che utilizzano spesso la traduzione automatica saranno rimossi dal progetto.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Contattaci {#get-in-touch}
 
-Hai delle domande? O desideri collaborare con il nostro team e altri traduttori? Ti invitiamo a pubblicare nel canale #translations del nostro [server Discord ethereum.org](/discord/)
+Hai delle domande? O desideri collaborare con il nostro team e altri traduttori? Ti invitiamo a pubblicare nel canale #translations del nostro [server Discord ethereum.org](https://discord.gg/ethereum-org)
 
 Puoi anche contattarci all'indirizzo translations@ethereum.org
 

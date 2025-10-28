@@ -275,7 +275,7 @@
   "nav-layer-2-description": "Transaccións máis rápidas e baratas para Ethereum",
   "nav-learn-by-coding-description": "Ferramentas que lle permiten experimentar con Ethereum",
   "nav-local-env-description": "Elixa e configure a súa pila de desenvolvemento de Ethereum",
-  "nav-mainnet-description": "As aplicacións de cadea de bloques para empresa pódense construír na rede principal e pública de Ethereum",
+  "nav-enterprise-description": "As aplicacións de cadea de bloques para empresa pódense construír na rede principal e pública de Ethereum",
   "nav-nft-description": "Unha forma de representar calquera cousa única como un activo baseado en Ethereum",
   "nav-open-research-description": "Unha das principais fortalezas de Ethereum é a súa comunidade de investigación activa",
   "nav-open-research-label": "Abrir investigación",
@@ -429,5 +429,8 @@
   "withdrawals": "Retiradas de participación",
   "wrapped-ether": "Éter envolto",
   "yes": "Si",
-  "zero-knowledge-proofs": "Probas de coñecemento cero"
+  "zero-knowledge-proofs": "Probas de coñecemento cero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Comprenda as diferenzas entre Ethereum e Bitcoin"
+
 }

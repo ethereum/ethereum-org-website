@@ -37,7 +37,7 @@ Ce que ces implémentations ont en commun, c'est qu'elles suivent toutes une seu
 - À l'origine, le [Livre jaune Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Spécifications d'exécution](https://github.com/ethereum/execution-specs/)
 - [Spécifications de consensus](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implémentés dans diverses [mises à jour réseau](/history/)
+- [EIPs](https://eips.ethereum.org/) implémentés dans diverses [mises à jour réseau](/ethereum-forks/)
 
 ### Suivi des nœuds sur le réseau {#network-overview}
 
@@ -196,7 +196,7 @@ De nombreux clients de consensus (précédemment connus sous le nom de clients '
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS   | Beacon Chain, Holesky, Pyrmont, Sepolia, et plus encore         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, et plus encore |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia, et plus encore |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS   | Beacon Chain, Gnosis, Holesky, Sepolia, et plus encore          |
 | [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS   | Beacon Chain, Holesky, Sepolia, et plus encore                  |
 
@@ -222,7 +222,7 @@ En savoir plus avec la [Documentation de Nimbus](https://nimbus.guide/)
 
 Prysm est un client de consensus open source complet écrit en Go sous la licence GPL-3.0. Il dispose d'une interface utilisateur optionnelle et donne la priorité à l'expérience utilisateur, à la documentation et à la configurabilité, tant pour les utilisateurs particuliers qu'institutionnels.
 
-Consultez [la documentation Prysm](https://docs.prylabs.network/docs/getting-started/) pour en savoir plus.
+Consultez [la documentation Prysm](https://prysm.offchainlabs.com/docs/) pour en savoir plus.
 
 ### Teku {#teku}
 

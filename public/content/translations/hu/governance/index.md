@@ -152,7 +152,7 @@ Az Ethereum-irányítási folyamat gyakran a gyorsaság és a hatékonyság rov�
 
 Miközben a specifikáció és a fejlesztés teljesen nyitott volt, a hivatalos fejlesztési folyamat nem követte a fenti lépéseket. Így a kutatók és a fejlesztők gyorsabban meg tudtak egyezni a specifikus változtatásokon.
 
-Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/history/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
+Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/ethereum-forks/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
 
 <ButtonLink href="/roadmap/merge/">
   A beolvadásról bővebben
@@ -180,5 +180,5 @@ Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség kül�
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
 - [Irányítás, 2. rész: A plutokrácia még mindig rossz](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Túl az érmealapú szavazásra épülő irányításon](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
-- [A blokklánc irányítás megértése](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [A blokklánc irányítás megértése](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [Az Ethereum irányítása](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

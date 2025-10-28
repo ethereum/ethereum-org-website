@@ -55,12 +55,15 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 假设你是一位艺术家，希望使用非同质化代币分享自己的作品，同时不想失去对作品的控制，也不想中间商分走利润。 你可以创建一个新合约，指定非同质化代币的数量、属性和特定艺术品的链接。 作为艺术家，**你可以在智能合约中设置你应该收取的版税**（例如，每次转让非同质化代币时，将销售价格的 5% 转给合约所有人）。 因为你拥有部署合约的[钱包](/glossary/#wallet)，所以你始终可以证明是你是非同质化代币的创建者。 你的买家也可以轻松地证明他们拥有代表你的系列艺术品的**真正的非同质化代币**，因为他们的钱包[地址](/glossary/#address)与你的智能合约中的一个代币相关联。 他们可以在整个以太坊生态系统中使用该非同质化代币，因为其真实性能得到保证。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>探索、购买或创建自己的非同质化代币艺术品/收藏品...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     探索非同质化代币艺术品
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 再以体育赛事的门票为例。 就像**赛事组织方可以选择出售多少门票一样**，非同质化代币的创建者可以决定创建多少份复制品。 有时候，它们是完全相同的复制品，如 5000 张普通门票。 有时候，会制作一些非常相似但略有不同的门票，如指定座位的门票。 这些门票可以在用户之间点对点买卖，而无需支付票务处理费用，买家始终可以通过检查合约地址来确保门票的真实性。
 

@@ -46,7 +46,7 @@ For PBKDF2, the kdfparams include:
 - `salt`: salt passed to PBKDF;
 - `dklen`: length for the derived key. Must be >= 32.
 
-Once the file's key has been derived, it should be verified through the derivation of the MAC. The MAC should be calculated as the SHA3 (keccak-256) hash of the byte array formed as the concatenations of the second-leftmost 16 bytes of the derived key with the `ciphertext` key's contents, i.e.:
+Once the file's key has been derived, it should be verified through the derivation of the MAC. The MAC should be calculated as the SHA3 (keccak-256) hash of the byte array formed as the concatenations of the second-leftmost 16 bytes of the derived key with the `ciphertext` key's contents, i.e.,:
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -66,7 +66,7 @@ This cipher takes the following parameters, given as keys to the cipherparams ke
 
 - `iv`: 128-bit initialisation vector for the cipher.
 
-The key for the cipher is the leftmost 16 bytes of the derived key, i.e. `DK[0..15]`
+The key for the cipher is the leftmost 16 bytes of the derived key, i.e., `DK[0..15]`
 
 The creation/encryption of a secret key should be essentially the reverse of these instructions. Make sure the `uuid`, `salt` and `iv` are actually random.
 

@@ -71,7 +71,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 **Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
 
 - [Website](https://tenderly.co/)
-- [Documentation](https://docs.tenderly.co/ethereum-development-practices)
+- [Documentation](https://docs.tenderly.co/)
 
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 
@@ -115,7 +115,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**

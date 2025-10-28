@@ -65,7 +65,7 @@ incomplete: true
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _βοηθητικές λειτουργίες για την εργασία με βάσεις κώδικα που σχετίζονται με το Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper γύρω από τον μεταγλωττιστή solidity με υποστήριξη 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _Συμβόλαια Python API για δημιουργούς_
-- [siwe](https://github.com/spruceid/siwe-py) - _Συνδεθείτε στο Ethereum (siwe) για Python_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Συνδεθείτε στο Ethereum (siwe) για Python_
 - [Web3 DeFi για ενσωματώσεις Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Ένα πακέτο Python με έτοιμες ενσωματώσεις για ERC-20, Uniswap και άλλα δημοφιλή έργα_
 - [Wake](https://getwake.io) - _Πλαίσιο Python All-in-one για δοκιμή συμβάσεων, ασάφεια, ανάπτυξη, σάρωση ευπάθειας και πλοήγηση κώδικα (διακομιστής γλώσσας - [Εργαλεία για Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 

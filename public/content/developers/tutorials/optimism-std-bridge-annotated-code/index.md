@@ -572,7 +572,7 @@ Only cells that are set to a different value are written to storage.
 ```
 
 To want to be able to upgrade this contract without having to copy all the variables in the storage.
-To do that we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), a contract that uses [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contact whose address is stored by the proxy contract (when you upgrade you tell the proxy to change that address).
+To do that we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), a contract that uses [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contract whose address is stored by the proxy contract (when you upgrade you tell the proxy to change that address).
 When you use `delegatecall` the storage remains the storage of the _calling_ contract, so the values of all the contract state variables are unaffected.
 
 One effect of this pattern is that the storage of the contract that is the _called_ of `delegatecall` is not used and therefore the constructor values passed to it do not matter.
@@ -769,7 +769,7 @@ These two functions are wrappers around `_initiateERC20Deposit`, the function th
 ```solidity
     /**
      * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)
+     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
      *
      * @param _l1Token Address of the L1 ERC20 we are depositing
      * @param _l2Token Address of the L1 respective L2 ERC20
@@ -1353,3 +1353,5 @@ These bridges typically work by having assets on L1, which they provide immediat
 When the bridge (or the people running it) anticipates being short on L1 assets it transfers sufficient assets from L2. As these are very big withdrawals, the withdrawal cost is amortized over a large amount and is a much smaller percentage.
 
 Hopefully this article helped you understand more about how layer 2 works, and how to write Solidity code that is clear and secure.
+
+[See here for more of my work](https://cryptodocguy.pro/).

@@ -22,7 +22,7 @@ Ní féidir leat clár a imscartar chuig seoladh ar líonra Ethereum a athrú go
 
 Is féidir é seo a dhéanamh trí na modhanna seo a leanas:
 
-1. Leaganacha iolracha de chonradh cliste a chruthú agus staid ascnaimh (i.e. sonraí) ón seanchonradh go dtí ásc nua den chonradh.
+1. Leaganacha iolracha de chonradh cliste a chruthú agus staid ascnaimh (i.e., sonraí) ón seanchonradh go dtí ásc nua den chonradh.
 
 2. Conarthaí ar leith a chruthú chun loighic agus staid ghnó a stóráil.
 
@@ -74,7 +74,7 @@ Teastaíonn tuiscint ar fheidhm **glaoch toscaire** chun na patrúin seachfhreas
 
 Ón [Doiciméadú Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
 
-> _Tá leagan speisialta de ghlao teachtaireachta ann, darb ainm **glao toscaire** atá comhionann le glao teachtaireachta seachas an cód ag an sprioc-seoladh a dhéantar i gcomhthéacs (i.e. ag an seoladh) den chonradh glaonna agus `msg.sender` agus `msg.value` ná a luachanna a athrú._ _ Ciallaíonn sé seo gur féidir le conradh cód a lódáil go dinimiciúil ó sheoladh eile ag am rite. Tagraíonn stóras, seoladh reatha agus iarmhéid don chonradh atá ag glaoch, ní thógtar ach an cód ón seoladh a nglaoitear air._
+> _Tá leagan speisialta de ghlao teachtaireachta ann, darb ainm **glao toscaire** atá comhionann le glao teachtaireachta seachas an cód ag an sprioc-seoladh a dhéantar i gcomhthéacs (i.e., ag an seoladh) den chonradh glaonna agus `msg.sender` agus `msg.value` ná a luachanna a athrú._ _ Ciallaíonn sé seo gur féidir le conradh cód a lódáil go dinimiciúil ó sheoladh eile ag am rite. Tagraíonn stóras, seoladh reatha agus iarmhéid don chonradh atá ag glaoch, ní thógtar ach an cód ón seoladh a nglaoitear air._
 
 Tá a fhios ag an gconradh seachfhreastalaí `glaochtoscaire` a agairt aon uair a ghlaonn úsáideoir ar fheidhm toisc go bhfuil feidhm `tacachumais` ionsuite ann. I ríomhchlárú Solidity déantar an [fheidhm tacachumais](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) nuair nach meaitseálann glao feidhme na feidhmeanna sonraithe i gconradh.
 
@@ -94,7 +94,7 @@ Bíonn tionchar ag an [bpatrún straitéise](https://en.wikipedia.org/wiki/Strat
 
 Sa phríomhchonradh sa chás seo tá an loighic lárnach gnó, ach déanann sé comhéadan le conarthaí cliste eile ("conarthaí satailíte") chun feidhmeanna áirithe a rith. Stórálann an príomhchonradh seo seoladh gach conartha satailíte agus féadann sé aistriú idir feidhmeanna éagsúla an chonartha satailíte.
 
-Is féidir leat conradh satailíte nua a thógáil agus an príomhchonradh a chumrú leis an seoladh nua. Ligeann sé seo duit _straitéisí_ a athrú (i.e. loighic nua a chur i bhfeidhm) le haghaidh conradh cliste.
+Is féidir leat conradh satailíte nua a thógáil agus an príomhchonradh a chumrú leis an seoladh nua. Ligeann sé seo duit _straitéisí_ a athrú (i.e., loighic nua a chur i bhfeidhm) le haghaidh conradh cliste.
 
 Cé go bhfuil sé cosúil leis an bpatrún seachfhreastalaí a pléadh níos luaithe, tá patrún na straitéise difriúil toisc go bhfuil loighic an ghnó i seilbh an phríomhchonartha, a n-idirghníomhaíonn úsáideoirí leis. Trí úsáid a bhaint as an bpatrún seo tugtar an deis duit athruithe teoranta a thabhairt isteach ar chonradh cliste gan cur isteach ar an mbonneagar lárnach.
 

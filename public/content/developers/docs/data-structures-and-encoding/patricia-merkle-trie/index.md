@@ -11,7 +11,7 @@ Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because
 
 A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Conversely, there is no way to create two different states with the same root hash, and any attempt to modify state with different values will result in a different state root hash. Theoretically, this structure provides the 'holy grail' of `O(log(n))` efficiency for inserts, lookups and deletes.
 
-In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
+In the near future, Ethereum plans to migrate to a [Verkle Tree](/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
 
 ## Prerequisites {#prerequisites}
 
@@ -68,7 +68,7 @@ A "Merkle" Radix tree is built by linking nodes using deterministically-generate
 
 It is impossible for an attacker to provide a proof of a `(path, value)` pair that does not exist since the root hash is ultimately based on all hashes below it. Any underlying modification would change the root hash. You can think of the hash as a compressed representation of structural information about the data, secured by the pre-image protection of the hashing function.
 
-We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4 bit binary number) as a "nibble". While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as an array of length 17. We call these 17-element arrays "branch nodes".
+We'll refer to an atomic unit of a radix tree (e.g., a single hex character, or 4 bit binary number) as a "nibble". While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as an array of length 17. We call these 17-element arrays "branch nodes".
 
 ## Merkle Patricia Trie {#merkle-patricia-trees}
 
@@ -186,7 +186,7 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-When one node is referenced inside another node, what is included is `H(rlp.encode(node))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
+When one node is referenced inside another node, what is included is `keccak256(rlp.encode(node))`, if `len(rlp.encode(node)) >= 32` else `node` where `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
 
 Note that when updating a trie, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 
@@ -202,11 +202,11 @@ From a block header there are 3 roots from 3 of these tries.
 
 ### State Trie {#state-trie}
 
-There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
+There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an Ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
 
 ### Storage Trie {#storage-trie}
 
-Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be passed as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be passed as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g., to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545

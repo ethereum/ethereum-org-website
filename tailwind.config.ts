@@ -237,7 +237,6 @@ const config = {
         "card-gradient-secondary": "var(--card-gradient-secondary)",
         "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
         "ten-year-gradient": "var(--ten-year-gradient)",
-        "rainbow-gradient": "var(--rainbow-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -322,16 +321,16 @@ const config = {
           "100%": { transform: "translateY(100%)", opacity: "0" },
         },
         "overlay-fade-out": {
-          "0%":   { opacity: "1" },
+          "0%": { opacity: "1" },
           "100%": { opacity: "0" },
         },
         overlayShow: {
           from: { opacity: "0" },
-          to:   { opacity: "1" },
+          to: { opacity: "1" },
         },
         overlayFadeOut: {
           from: { opacity: "1" },
-          to:   { opacity: "0" },
+          to: { opacity: "0" },
         },
       },
       animation: {
@@ -347,7 +346,6 @@ const config = {
         "spin-18": "spin 36s linear infinite",
         "counter-spin-18": "spin 36s linear infinite reverse",
         "spin-9": "spin 18s linear infinite",
-        "spin-4": "spin 4s linear infinite",
         "counter-spin-9": "spin 18s linear infinite reverse",
         "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 150ms ease-in-out",

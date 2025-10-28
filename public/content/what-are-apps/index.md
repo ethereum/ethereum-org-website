@@ -29,11 +29,11 @@ Ethereum applications have their logic running on the Ethereum blockchain instea
 
 ## Why does this matter {#why-does-this-matter}
 
-Ethereum apps can do stuff that just isn’t possible with traditional apps. Like lend money to a complete stranger with a guarantee that you’ll get your money back, plus interest. Without paying a “trustworthy” intermediary, like a lawyer, to handle the transaction. 
+Ethereum apps can do stuff that just isn’t possible with traditional apps. Like lend money to a complete stranger with a guarantee that you’ll get your money back, plus interest. Without paying a “trustworthy” intermediary, like a lawyer, to handle the transaction.
 
 There are apps for everything: gaming, finance, work, messaging, storage and more. With most apps you aren’t subjected to ads or limited by restricted access.
 
-All you need is an Ethereum wallet and a little ETH to start using any ethereum app.
+All you need is an Ethereum wallet and a little ETH to start using any Ethereum app.
 
 ## How does it work {#how-does-it-work}
 
@@ -60,22 +60,22 @@ When apps are all built on Ethereum, they are all compatible. A token for one ap
 
 <BrowseApps />
 
-## Further reading
+## Further reading {#further-reading}
 
 - [Ethereum for beginners](/what-is-ethereum)
 - [What is a smart contract?](/developers/docs/smart-contracts/)
 - [Technical dapp documentation](/developers/docs/dapps/)
 
-## Frequently asked questions
+## Frequently asked questions {#faq}
 
 <ExpandableCard title="What does dapp stand for?" visible>
   <p>Dapp stands for decentralized applications. Those are applications built on blockchain networks like Ethereum. They are called decentralized because underlying network is decentralized.</p>
 </ExpandableCard>
 
 <ExpandableCard title="Do I buy coins on a dapp?" visible>
-  <p>Some applications do let you trade or buy crypto tokens, but not all apps are for that. If you are looking to buy your first tokens visit <a href="/get-eth">Get ETH</a>.</p>
+  <p>Some applications do let you trade or buy crypto tokens, but not all apps are for that. If you are looking to buy your first tokens, visit [Get ETH](/get-eth).</p>
 </ExpandableCard>
 
 <ExpandableCard title="What is the best crypto wallet?" visible>
-  <p>Crypto wallet lets you hold your tokens and manage your Ethereum account. There many great wallets, each serving a different purpose. To find out which wallet is best for you, visit our <a href="/wallets/find-wallet">list of wallets</a>.</p>
+  <p>Crypto wallet lets you hold your tokens and manage your Ethereum account. There many great wallets, each serving a different purpose. To find out which wallet is best for you, visit our [list of wallets](/wallets/find-wallet).</p>
 </ExpandableCard>

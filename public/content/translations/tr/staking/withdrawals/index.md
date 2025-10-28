@@ -43,9 +43,14 @@ Shanghai/Capella yükseltmesinden önce hisselenmiş ETH'lerinizi kullanamaz vey
 
 Herhangi bir doğrulayıcı hesabının kendi bakiyesinden ETH çekebilir durumuna erişmesi için bir çekim adresi belirtmesi, gerekli adımdır.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Her bir doğrulayıcı hesabı bir seferde yalnızca bir para çekme adresi atayabilir.</strong> Bir adres seçilip fikir birliği katmanına kaydedildiğinde bu, geri alınamaz veya tekrardan değiştirilemez. Kaydetmeden önce sahipliği ve bildirilen adresin doğruluğunu iki defa kontrol edin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Aksini belirtmediğiniz için güvenlik kelimelerinizin çevrimdışı ortamda güvende kaldığı ve herhangi bir yolla ele geçirilemeyeceği varsayıldığından <strong>aynı zamanda bakiyelerinize herhangi bir tehdit de bulunmamaktadır</strong>. Para çekme kimliği ekleme başarısızlığı, çekim adresi belirtilene kadar ETH'nizi basit bir biçimde doğrulayıcı hesabında kilitli halde bırakacaktır.
 
@@ -65,7 +70,7 @@ Hisseleme çekimleri aktif! Para çekebilme işlevi 12 Nisan 2023'te gerçekleş
 
 Şangay/Capella yükseltmesi, daha önceden hisselenmiş ETH'lerin normal Ethereum hesaplarına geri alınabilmesini sağladı. Bu da likidite hisseleme döngüsünü kapattı; Ethereum'u daha sürdürülebilir, ölçeklenebilir ve de merkeziyetsiz ekosistem oluşturma yolculuğuna bir adım daha yaklaştırdı.
 
-- [Ethereum'un tarihçesi hakkında daha fazla bilgi](/history/)
+- [Ethereum'un tarihçesi hakkında daha fazla bilgi](/ethereum-forks/)
 - [Ethereum'un yol haritası hakkında daha fazla bilgi](/roadmap/)
 
 ## Para çekme ödemeleri nasıl çalışır? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Finematics tarafından sağlanmış Ethereum hisseleme çekim işlemleri açıkl
 
 Doğrulayıcının bir sonraki bloku önerebilmesi için 16 adede kadar uygun para çekme işleminden oluşan bir para çekme kuyruğu oluşturması gerekir. Bu başlangıçta doğrulayıcı indeksinin 0 ile başlayarak, bu hesabın protokolün kuralları gereğince para çekmeye uygun olup olmadığını belirleyerek ve uygunsa kuyruğa ekleyerek yapılır. Aşağıdaki bloku önermek için ayarlanan doğrulayıcı son blokun kaldığı yerden devam edecek ve sonsuza kadar bu sırayla ilerleyecek.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Analog bir saat düşünün. Saatteki akrep saate işaret eder, bir yönde ilerler, herhangi bir saati atlamaz ve eninde sonunda son sayıya ulaşıldıktan sonra tekrardan başa sarar.<br/><br/>
 Şimdi 1 ile 12 arası yerine, saatin 0 ile N <em>(fikir birliği katmanına şimdiye kadar kayıt olmuş tüm doğrulayıcı hesaplarının sayısı, Ocak 2023 itibariyle 500.000) arasına sahip olduğunu düşünün.</em><br/><br/>
 Saatin akrebi para çekme uygunluğu için kontrol edilmesi gereken sıradaki doğrulayıcıya işaret edecektir. 0 ile başlar ve hiçbir sayıyı atlamadan tüm yol boyunca devam eder. Son doğrulayıcıya ulaşıldığında döngü baştan başlayarak devam eder.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Para çekme işlemleri için hesabı kontrol etme {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Eğer bir <a href="/staking/pools/">paydaşlık havuzunun</a> parçasıysanız veya hisseleme token'ları tutuyorsanız, her bir servis farklı çalıştığı için hisseleme çekimlerinin nasıl yapıldığıyla ilgili daha fazla detay için sağlayıcınıza danışın.
+Eğer bir [paydaşlık havuzunun](/staking/pools/) parçasıysanız veya hisseleme token'ları tutuyorsanız, her bir servis farklı çalıştığı için hisseleme çekimlerinin nasıl yapıldığıyla ilgili daha fazla detay için sağlayıcınıza danışın.
 
-Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya kullandıkları hisseleme sağlayıcısını değiştirmekte özgürdür. Eğer spesifik bir havuz çok büyük hale geliyorsa fonlar çıkartılabilir, alınabilir ve <a href="https://rated.network/">daha küçük bir sağlayıcı</a> ile yeniden hisselenebilir. Ya da yeterince ETH biriktirdiyseniz <a href="/staking/solo/">evden hisseleyebilirsiniz</a>.
+Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya kullandıkları hisseleme sağlayıcısını değiştirmekte özgürdür. Eğer spesifik bir havuz çok büyük hale geliyorsa fonlar çıkartılabilir, alınabilir ve <a href="https://rated.network/">daha küçük bir sağlayıcı</a> ile yeniden hisselenebilir. Ya da yeterince ETH biriktirdiyseniz [evden hisseleyebilirsiniz](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu 
 
 - [Hisseleme Başlama Noktası Para Çekme İşlemleri](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: İşlem olarak işaret zinciri para çekme işlemleri](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Kedi Çobanları - Şangay](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz ve Hsiao-Wei Wang ile Kilitli ETH Çekimi (Test)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Operasyon olarak Alex Stokes ile işaret zincirinde zorla para çekme işlemleri](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Doğrulayıcının Geçerli Bakiyesini Anlamak](https://www.attestant.io/posts/understanding-validator-effective-balance/)

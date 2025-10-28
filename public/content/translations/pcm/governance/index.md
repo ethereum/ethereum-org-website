@@ -44,13 +44,13 @@ Plenti stakeholdas dey for [Ethereum komunity](/community/), wey ish dey play on
 
 - **ETher holdas**: dis pipol hold one arbitary amount of ETH. [More tok ETH](/eth/).
 - **Aplikashon Users**: dis pipol dey interact wit aplikashon on di Ethereum blockchain.
-- **Aplikashon/Tooling Divelopas**: dis pipol dey write aplikashons wey dey run ontop di Ethereum blockchain (e.g. DeFi, NFTs, etc.) dem dey also build tooling wey pipol fit yus wit Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/apps/).
+- **Aplikashon/Tooling Divelopas**: dis pipol dey write aplikashons wey dey run ontop di Ethereum blockchain (e.g., DeFi, NFTs, etc.) dem dey also build tooling wey pipol fit yus wit Ethereum (e.g., wallets, test suites, etc.). [More on dapps](/apps/).
 - **Pipol wey dey operate Node**: dis pipol dey run nodes wey dey propagate blocks and transakshons, di node dey also reject any transakshon abi block wey nor koret wey dem kome akross. [More on nodes](/developers/docs/nodes-and-clients/).
 - **EIP Authors**: na dis pipol dey propose shanjis to di Ethereum protokol, in di form of Ethereum Imprufment Proposals (EIPs). [More on EIPs](/eips/).
 - **Validators**: na dis pipol dey run nodes wey fit add new blocks to di Ethereum blockchain.
-- **Protokol Divelopas** (a.k.a. "Kore Divelopas"): dis pipol dey maintain di varios Ethereum implimentashons (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at di exekushon layer abi Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandie at di konsensus layer). [More on Ethereum klients](/developers/docs/nodes-and-clients/).
+- **Protokol Divelopas** (a.k.a. "Kore Divelopas"): dis pipol dey maintain di varios Ethereum implimentashons (e.g., go-ethereum, Nethermind, Besu, Erigon, Reth at di exekushon layer abi Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandie at di konsensus layer). [More on Ethereum klients](/developers/docs/nodes-and-clients/).
 
-_Notes: any individual fit bi part of plenti groups (e.g. one protokol divelopa fit shampion one EIP, and run one beakon chain validator, and yus DeFi aplikashons). For konsepshual klarity, im izy pass to distinguish bitwin dem, doh._
+_Notes: any individual fit bi part of plenti groups (e.g., one protokol divelopa fit shampion one EIP, and run one beakon chain validator, and yus DeFi aplikashons). For konsepshual klarity, im izy pass to distinguish bitwin dem, doh._
 
 <Divider />
 
@@ -102,7 +102,7 @@ As some EIPs bit diret teknika imprufment wit smoll palava, some dey komplex and
 
 E no get playbook wey we fit follow to take handle proposals wey no go cause gbege. Dis na one rizut of Ethereum disentralize disihn wia nor singol stakeholda group fit yus forse on oda thru brute forse: protokol divelopas fit shuse make im nor impliment kode shanjis; node operators fit nor shuse to run di latest Ethereum klient; aplikashon teams and users fit nor shuse to transact on di chain. Sinse Protokol Divelopas nor get way to forse pipol to adopt netwok upgrades, dem go generaly afoid to dey impliment EIPs wia di kontenshiosnes pass di benefits to di broada komunity.
 
-Dem ekspet EIP Shampions to solicit feedbak from all relivant stakeholdas. If yu find yorsef di shampion of one kontenshios EIP, yu supose try and address objeshons to build konsensus around yor EIP. Bikos di siza and divasity of di Ethereum komunity, nor singol metrik (e.g. one koin vote) dem fit yus dat to gauge komunity konsensus, and ekspet EIP Shampions to adapt to di situashon of dem proposal.
+Dem ekspet EIP Shampions to solicit feedbak from all relivant stakeholdas. If yu find yorsef di shampion of one kontenshios EIP, yu supose try and address objeshons to build konsensus around yor EIP. Bikos di siza and divasity of di Ethereum komunity, nor singol metrik (e.g., one koin vote) dem fit yus dat to gauge komunity konsensus, and ekspet EIP Shampions to adapt to di situashon of dem proposal.
 
 Biyond di sekurity of di Ethereum netwok, signifikant weight dey on Protokol Divelopas on wetin Aplikashon/Tooling Divelopas and Aplikashon Users value, bikos dem dey yus and dey divelop on Ethereum make dem atrative for oda stakeholdas. Also, wi nid impliment EIPs akross all klient implimentashons, and difren teams dey manaj ish of dis klients. Part of dis process ushualy mean to dey konvins plenti teams of Protokol Divelopas sey one patikular shanj get value and im dey helep end-users abi solve one sekurity issue.
 
@@ -152,7 +152,7 @@ Di Ethereum gofanans process dey somtaims trade off speed and effishiensy for op
 
 As di spesifikashon and divelopment implimentashon na always fully open sorse, dem nor yus di formal process dem yus to propose updates wey dem diskribe above. Na dis one make am posibol for risearchas and implimentas to kwikly agree on shanjis.
 
-Wen Beacon Chain join wit di Ethereum exekushon layer for September 15, 2022 Di Merge komplete as part of di [Paris netwok upgrade](/history/#paris). Di proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) kon shanj name from 'Last Koll' to 'Final', na dis one make di transishon to proof-of-stake komplete.
+Wen Beacon Chain join wit di Ethereum exekushon layer for September 15, 2022 Di Merge komplete as part of di [Paris netwok upgrade](/ethereum-forks/#paris). Di proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) kon shanj name from 'Last Koll' to 'Final', na dis one make di transishon to proof-of-stake komplete.
 
 <ButtonLink href="/roadmap/merge/">
   More on Di Merge

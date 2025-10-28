@@ -32,7 +32,7 @@ If wi go back to awa eksampol bifor, di only evidens yu nid to pruf yor citizens
 
 Kredit kard payments somtaims dey show plenti partis, wey inklude di payments provida, banks, and oda partis wey get intrest (e.g., gofament autoritis). As finanshial surveillans get gud side to sabi aktivity wey nor legit, im also look down on di privacy of ordinary citizens.
 
-Cryptocurrencies suppose provide one means for users to do private, peer-to-peer transakshons. But plenti cryptocurrency transakshons dey show wella for publik blockchains. User identitis dey often bi fake and fit link to real-world identitis (e.g. by inkludin ETH address for Twitter abi GitHub profiles) abi fit join wit real-world identitis as yu dey yus basik on and off-chain data analysis.
+Cryptocurrencies suppose provide one means for users to do private, peer-to-peer transakshons. But plenti cryptocurrency transakshons dey show wella for publik blockchains. User identitis dey often bi fake and fit link to real-world identitis (e.g., by inkludin ETH address for Twitter abi GitHub profiles) abi fit join wit real-world identitis as yu dey yus basik on and off-chain data analysis.
 
 Spesifik "privacy coins" dey wey dem disign for transakshons wey wi nor sabi kpatakpata. Blockchains wey fokus on privacy, laik Zcash and Monero, dey kova transakshon ditails, plus senda/risiva address, asset type, kwontity, and di transakshon taimline.
 
@@ -88,7 +88,7 @@ For eksampol, [quadratic funding mechanisms](https://www.radicalxchange.org/conc
 
 To dey dey on-chain voting dey make quadratic funding dey eksposed to kollushon; blockchains dey publik, so pesin wey dey bribe fit sheck hau pesin wey kollet bribe for on-chain aktivity dey "vote". Dis way quadratic funding nor bi ogbonge way to dey allokate funds base on di aggregate komunity dem prifa.
 
-Gud tin bi sey, solushons wey new pass laik MACI (Minimum Anti-Collusion Infrastructure) dey yus zero-knowlej prufs to make on-chain voting (eg., quadratic funding mechanisms) dey resist bribe and kollushon. MACI na one set of smart kontracts and skripts wey dey allow one sentral administrator (wey dem koll "koordinator") to gada vote kon tally rizuts _witout_ showin spesifik on hau ish pesin don vote. Even so, im still dey posibol to verify sey dem don kount di vote wella, abi konfam sey one patikular pesin don patisipate for di voting round.
+Gud tin bi sey, solushons wey new pass laik MACI (Minimum Anti-Collusion Infrastructure) dey yus zero-knowlej prufs to make on-chain voting (e.g., quadratic funding mechanisms) dey resist bribe and kollushon. MACI na one set of smart kontracts and skripts wey dey allow one sentral administrator (wey dem koll "koordinator") to gada vote kon tally rizuts _witout_ showin spesifik on hau ish pesin don vote. Even so, im still dey posibol to verify sey dem don kount di vote wella, abi konfam sey one patikular pesin don patisipate for di voting round.
 
 #### Hau MACI dey wok wit zero-knowlej prufs? {#how-maci-works-with-zk-proofs}
 

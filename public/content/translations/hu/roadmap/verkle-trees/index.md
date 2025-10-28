@@ -49,8 +49,6 @@ A Verkle-fák `key, value` (kulcs, érték) párokból állnak, ahol a kulcsok 3
 
 A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfrissítésre van még szükség ahhoz, hogy támogatni tudják ezt az adatstruktúrát. Ön is segíthet a fejlesztés meggyorsításában, ha szerződéseket hoz létre a teszthálózaton és klienseket működtet a teszthez.
 
-[Fedezze fel a Verkle Gen Devnet 6 teszthálózatot](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [Nézze meg, ahogy Guillaume Ballet bemutatja a Condrieu Verkle-teszthálózatot](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (a Condrieu teszthálózat még a proof-of-work mechanizmus szerint működött, és mára már Verkle Gen Devnet 6 teszthálózat váltotta fel).
 
 ## További olvasnivaló {#further-reading}

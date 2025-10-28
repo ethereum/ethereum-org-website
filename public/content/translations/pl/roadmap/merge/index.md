@@ -17,7 +17,7 @@ summaryPoint4: Połączenie zmniejszyło zużycie energii przez Ethereum o okoł
 
 ## Czym było Połączenie? {#what-is-the-merge}
 
-Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej, która istnieje od [genezy](/history/#frontier)) z nową warstwą konsensusu proof-of-stake, łańcuchem śledzącym. Wyeliminowało to potrzebę energochłonnego wydobycia, a zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanych ETH. To był naprawdę ekscytujący krok w realizacji wizji Ethereum — większej skalowalności, bezpieczeństwa i zrównoważenia ekologicznego.
+Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej, która istnieje od [genezy](/ethereum-forks/#frontier)) z nową warstwą konsensusu proof-of-stake, łańcuchem śledzącym. Wyeliminowało to potrzebę energochłonnego wydobycia, a zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanych ETH. To był naprawdę ekscytujący krok w realizacji wizji Ethereum — większej skalowalności, bezpieczeństwa i zrównoważenia ekologicznego.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Połączenie oznaczało oficjalne przejście na używanie łańcucha śledząceg
 
 Podczas Połączenia nie została utracona żadna historia. Gdy sieć główna połączyła się z łańcuchem śledzącym, połączona została również cała historia transakcyjna Ethereum.
 
-<InfoBanner>
-Przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o <a href="/roadmap/merge/issuance/">emisji etheru przed i po Połączeniu</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o [emisji etheru przed i po Połączeniu](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Użytkownicy i posiadacze {#users-holders}
 
@@ -118,7 +122,7 @@ Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności,
 
 <ExpandableCard
 title="Błędne przekonanie: „Uruchomienie węzła wymaga stakowania 32 ETH”."
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Są dwa typy węzłów Ethereum: węzły, które mogą proponować bloki, i węzły, które tego nie mogą.
 
@@ -130,7 +134,7 @@ Uruchomienie węzła nieprodukującego bloków jest możliwe dla każdego w rama
 
 Możliwość uruchomienia własnego węzła przez każdego jest <em> absolutnie niezbędna </em> do utrzymania decentralizacji sieci Ethereum.
 
-<a href="/run-a-node/"> Więcej na temat uruchamiania własnego węzła</a>
+[ Więcej na temat uruchamiania własnego węzła](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Opłaty za gaz są wypadkową zapotrzebowania na sieć i jej przepustowości. W wyniku Połączenia zrezygnowano z mechanizmu proof-of-work, przechodząc na mechanizm konsensusu proof-of-stake, ale nie zmieniono znacząco żadnych parametrów, które bezpośrednio wpływają na przepustowość sieci.
 
-Przy planie <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"> działania zorientowanym na pakiety zbiorcze</a> wysiłki koncentrują się na skalowaniu aktywności użytkowników w <a href="/layer-2/"> warstwie 2</a> jednocześnie uaktywniając warstwę 1 Mainnet jako bezpieczną zdecentralizowaną warstwę rozliczeniową zoptymalizowaną pod kątem przechowywania danych pakietów zbiorczych, aby transakcje pakietów zbiorczych stały się wykładniczo tańsze. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. <a href="/developers/docs/gas/"> Więcej na temat gazu i opłat.</a>
+Przy planie <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"> działania zorientowanym na pakiety zbiorcze</a> wysiłki koncentrują się na skalowaniu aktywności użytkowników w [ warstwie 2](/layer-2/) jednocześnie uaktywniając warstwę 1 Mainnet jako bezpieczną zdecentralizowaną warstwę rozliczeniową zoptymalizowaną pod kątem przechowywania danych pakietów zbiorczych, aby transakcje pakietów zbiorczych stały się wykładniczo tańsze. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. [ Więcej na temat gazu i opłat.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Początkowo po połączeniu stakerzy mogli uzyskać dostęp tylko do napiwków i
 
 Od czasu aktualizacji sieci Shanghai/Capella stakerzy mogą wyznaczać <em>adres wypłaty</em>, aby zacząć otrzymywać automatyczne wypłaty nadwyżki salda stakingu (ETH powyżej 32 z nagród wynikających z protokołu). Ta aktualizacja umożliwiła również walidatorowi odblokowanie i odzyskanie całego salda po wyjściu z sieci.
 
-<a href="/staking/withdrawals/">Więcej na temat wypłat ze stakowania</a>
+[Więcej na temat wypłat ze stakowania](/staking/withdrawals/)
 
 </ExpandableCard>
 

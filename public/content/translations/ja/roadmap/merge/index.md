@@ -17,7 +17,7 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が99
 
 ## マージとは {#what-is-the-merge}
 
-マージとは、イーサリアムの元の実行レイヤー ([誕生](/history/#frontier)から存在するメインネット) と、新規のプルーフ・オブ・ステークのコンセンサスレイヤーであるビーコンチェーンをマージ(統合)することでした。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステーキングされたETHを利用して、ネットワークのセキュリティが確保されるようになりました。 イーサリアムのビジョンである、より高性能なスケーラビリティ、より安心なセキュリティ、より高いレベルの持続可能性を実現するための、本当にエキサイティングなステップとなりました。
+マージとは、イーサリアムの元の実行レイヤー ([誕生](/ethereum-forks/#frontier)から存在するメインネット) と、新規のプルーフ・オブ・ステークのコンセンサスレイヤーであるビーコンチェーンをマージ(統合)することでした。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステーキングされたETHを利用して、ネットワークのセキュリティが確保されるようになりました。 イーサリアムのビジョンである、より高性能なスケーラビリティ、より安心なセキュリティ、より高いレベルの持続可能性を実現するための、本当にエキサイティングなステップとなりました。
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が99
 
 マージにより、履歴は失われていません。 メインネットがビーコンチェーンにマージされ、イーサリアムのすべてのトランザクション履歴もマージされました。
 
-<InfoBanner>
-このプルーフ・オブ・ステークへの移行により、イーサ(ETH)の発行方法も変わりました。 マージ前後におけるイーサ(ETH)発行の詳細については、<a href="/roadmap/merge/issuance/">こちら</a>をご覧ください。
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+このプルーフ・オブ・ステークへの移行により、イーサ(ETH)の発行方法も変わりました。 マージ前後におけるイーサ(ETH)発行の詳細については、[こちら](/roadmap/merge/issuance/)をご覧ください。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### ユーザーと所有者 {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="誤解: &quot;ノードの運用には、32 ETHのステーキングが必要&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 イーサリアムのノードには、ブロックを提案できるノードとできないノードがあります。
 
@@ -130,7 +134,7 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 
 また、誰もが自分自身のノードを運用できることは、イーサリアムネットワークの分散化を維持するために<em>不可欠</em>です。
 
-<a href="/run-a-node/">自分のノードを運用することについての詳細</a>
+[自分のノードを運用することについての詳細](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 ガス代は、ネットワーク容量に対するネットワーク需要の産物です。 マージにより、コンセンサスにプルーフ・オブ・ワークからプルーフ・オブ・ステークに移行しましたが、ネットワーク容量やスループットに直接影響するパラメーターは大幅に変更されませんでした。
 
-<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">ロールアップを中心としたロードマップ</a>では、<a href="/layer-2/">レイヤー2</a>でのユーザーアクティビティのスケーリングに集中して取り組み、レイヤー1メインネットをロールアップのデータ保存に最適化された安全な分散型決済レイヤーとして稼働させ、ロールアップトランザクションの大幅な低コスト化を目指しています。 プルーフ・オブ・ステークへの移行は、これを実現するための重要な布石となります。 <a href="/developers/docs/gas/">ガスとフィーについての詳細</a>
+<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">ロールアップを中心としたロードマップ</a>では、[レイヤー2](/layer-2/)でのユーザーアクティビティのスケーリングに集中して取り組み、レイヤー1メインネットをロールアップのデータ保存に最適化された安全な分散型決済レイヤーとして稼働させ、ロールアップトランザクションの大幅な低コスト化を目指しています。 プルーフ・オブ・ステークへの移行は、これを実現するための重要な布石となります。 [ガスとフィーについての詳細](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 
 上海/カペラネットワークのアップグレード以降、 ステーカーは<em>引き出しアドレス</em>を指定して、超過しているステーキング残高(32ETHを越えた分のプロトコル報酬)の自動支払を受け取れるようになりました。 このアップグレードにより、バリデータがネットワークから抜け出すときに、ロックを解除して残高全体を回収できるようになりました。
 
-<a href="/staking/withdrawals/">ステーキングの引き出しについての詳細</a>
+[ステーキングの引き出しについての詳細](/staking/withdrawals/)
 
 </ExpandableCard>
 

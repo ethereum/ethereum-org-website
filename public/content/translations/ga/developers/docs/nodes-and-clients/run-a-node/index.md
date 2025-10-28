@@ -52,7 +52,7 @@ Tá buntáistí éagsúla ag an dá rogha mar atá achoimrithe thuas. Má tá r�
 
 #### Crua-earraí {#hardware}
 
-Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/networkType/Hosting) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
+Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/network-types) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
 
 Is féidir le cliaint Ethereum rith ar do ríomhaire, ríomhaire glúine, freastalaí, nó fiú ríomhaire aonchláir. Cé gur féidir cliaint a reáchtáil ar do ríomhaire pearsanta, má tá meaisín tiomnaithe díreach do do nód féadann sé a fheidhmíocht agus a shlándáil a fheabhsú go suntasach agus an tionchar ar do phríomh-ríomhaire a íoslaghdú.
 
@@ -191,7 +191,7 @@ Tar éis duit na bogearraí cliant a shuiteáil, a íoslódáil, nó a thiomsú,
 
 Tosaímid le roghanna ar féidir leo tionchar suntasach a imirt ar fheidhmíocht na gcliant agus ar úsáid sonraí. Léiríonn [ modhanna sioncronaithe](/developers/docs/nodes-and-clients/#sync-modes) modhanna éagsúla chun sonraí blocshlabhra a íoslódáil agus a bhailíochtú. Sula dtosaíonn tú an nód, ba cheart duit cinneadh a dhéanamh cén modh líonra agus sioncronaithe a úsáidfidh tú. Is iad na rudaí is tábhachtaí le breithniú ná an spás diosca, agus an t-am sioncronaithe a bheidh ag teastáil ón gcliant. Tabhair aird ar dhoiciméid an chliaint chun a chinneadh cén modh sioncronaithe atá réamhshocraithe. Mura n-oireann sin duit, roghnaigh ceann eile bunaithe ar an leibhéal slándála, na sonraí atá ar fáil, agus an costas. Seachas an t-algartam sioncrónaithe, is féidir leat prúnáil de chineálacha éagsúla sean-shonraí a shocrú freisin. Cumasaíonn prúnáil sonraí atá as dáta a scriosadh, m.sh. nóid trie stáit a bhaint nach féidir teacht orthu ó bhloic le déanaí.
 
-Tá roghanna bunúsacha cumraíochta eile ann, e.g. roghnú líonra - Mainnet nó testnets, críochphointe HTTP do RPC nó WebSockets, srl a chumasú. Is féidir leat na gnéithe agus na roghanna go léir a fháil i ndoiciméadú an chliaint. Is féidir cumraíochtaí éagsúla cliant a shocrú tríd an gcliant a rith leis na bratacha comhfhreagracha go díreach sa chomhad CLI nó cumraíochta. Tá gach cliant beagán difriúil; déan tagairt i gcónaí dá cháipéisíocht oifigiúil nó dá leathanach cabhrach le haghaidh sonraí ar roghanna cumraíochta.
+Tá roghanna bunúsacha cumraíochta eile ann, e.g., roghnú líonra - Mainnet nó testnets, críochphointe HTTP do RPC nó WebSockets, srl a chumasú. Is féidir leat na gnéithe agus na roghanna go léir a fháil i ndoiciméadú an chliaint. Is féidir cumraíochtaí éagsúla cliant a shocrú tríd an gcliant a rith leis na bratacha comhfhreagracha go díreach sa chomhad CLI nó cumraíochta. Tá gach cliant beagán difriúil; déan tagairt i gcónaí dá cháipéisíocht oifigiúil nó dá leathanach cabhrach le haghaidh sonraí ar roghanna cumraíochta.
 
 Chun críocha tástála, b'fhéidir gurbh fhearr leat cliant a rith ar cheann de na líonraí testnet. [Féach forbhreathnú ar líonraí tacaithe](/developers/docs/nodes-and-clients/#execution-clients).
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Ag rith Prysm
 
-Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -384,7 +384,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API ](https://eth2docs.vercel.app/).
+Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API](https://eth2docs.vercel.app/).
 
 ### Bailíochtóirí a chur leis {#adding-validators}
 
@@ -402,7 +402,7 @@ Tairgeann cliaint reatha [ críochphointí API RPC](/developers/docs/apis/json-r
 
 - Ag glaoch orthu de láimh le prótacal oiriúnach (m.sh. ag baint úsáide as `curl`)
 - Consól soláthraithe á cheangal (m.sh. `get attach`)
-- Iad a chur i bhfeidhm in aon fheidhmchlár a úsáideann leabharlanna web3, e.g. [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io /ethers.js/)
+- Iad a chur i bhfeidhm in aon fheidhmchlár a úsáideann leabharlanna web3, e.g., [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io /ethers.js/)
 
 Tá feidhmiúcháin éagsúla de chríochphointí RPC ag cliaint éagsúla. Ach tá JSON-RPC caighdeánach ann ar féidir leat a úsáid le gach cliant. Le haghaidh forbhreathnú [léigh na doiciméid JSON-RPC](/developers/docs/apis/json-rpc/). Is féidir le hiarratais a dteastaíonn faisnéis ó líonra Ethereum uathu an RPC seo a úsáid. Mar shampla, ligeann sparán móréilimh MetaMask duit [nascadh le do chríochphointe RPC féin](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) a bhfuil buntáistí láidre príobháideachta agus slándála aige.
 
@@ -440,11 +440,11 @@ _Ní bhaineann sé seo le nóid bhailíochtóirí ciseal comhdhearcaidh._ Má th
 
 #### Seirbhísí cliant a chruthú {#creating-client-services}
 
-Smaoinigh ar sheirbhís a chruthú chun do chliaint a rith go huathoibríoch agus iad ag am tosaithe. Mar shampla, ar fhreastalaithe Linux, bheadh ​​dea-chleachtas ann seirbhís a chruthú, e.g. le `systemd`, a fheidhmíonn an cliant le cumraíocht chuí, faoi úsáideoir le pribhléidí teoranta agus a atosaíonn go huathoibríoch.
+Smaoinigh ar sheirbhís a chruthú chun do chliaint a rith go huathoibríoch agus iad ag am tosaithe. Mar shampla, ar fhreastalaithe Linux, bheadh ​​dea-chleachtas ann seirbhís a chruthú, e.g., le `systemd`, a fheidhmíonn an cliant le cumraíocht chuí, faoi úsáideoir le pribhléidí teoranta agus a atosaíonn go huathoibríoch.
 
 #### Cliaint á nuashonrú {#updating-clients}
 
-Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/history/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
+Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/ethereum-forks/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
 
 > Roimh nuashonruithe líonra tábhachtacha, foilsíonn EF postáil ar a [blog](https://blog.ethereum.org). Is féidir leat [liostáil leis na fógraí seo](https://blog.ethereum.org/category/protocol#subscribe) chun fógra a chur chuig do ríomhphost nuair a bhíonn nuashonrú de dhíth ar do nód.
 

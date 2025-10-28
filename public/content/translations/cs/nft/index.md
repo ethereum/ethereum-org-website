@@ -55,12 +55,15 @@ NFT se používají pro spoustu věcí, mezi které patří:
 
 Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by ztratil kontrolu a přišel o své zisky kvůli prostředníkům. Můžete vytvořit nový kontrakt a zadat počet NFT, jejich vlastnosti a přidat odkaz na konkrétní umělecké dílo. Jako umělec **můžete do chytrého kontraktu naprogramovat licenční poplatky**, které by vám měly být vyplaceny (např. 5 % z prodejní ceny, což je vlastníkovi kontraktu vyplaceno pokaždé, když je NFT převedeno na novou adresu). Vždy také můžete prokázat, že jste toto NFT vytvořili, protože vlastníte [peněženku](/glossary/#wallet), která kontrakt vytvořila. Kupující mohou snadno prokázat, že vlastní **autentické NFT** z vaší kolekce, protože [adresa](/glossary/#address) jejich peněženky je spojena s tokenem ve vašem chytrém kontraktu. Mohou jej používat v celém ekosystému Etherea a jsou si jisti jeho pravostí.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Prozkoumat NFT umění
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Nebo si představte vstupenku na sportovní událost. Stejně jako **si organizátor události může vybrat, kolik vstupenek bude prodávat**, může se tvůrce NFT rozhodnout, kolik kopií vytvoří. Někdy se jedná o přesné kopie, jako je 5 000 všeobecných vstupenek. Někdy je vytvořených několik NFT, která jsou velmi podobná, ale každé mírně odlišné, jako například vstupenka s přiděleným sedadlem. Ty lze kupovat a prodávat peer-to-peer bez placení prodejcům vstupenek a kupující se vždy může ujistit o pravosti vstupenky pomocí kontroly adresy kontraktu.
 

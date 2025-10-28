@@ -5,10 +5,11 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
@@ -19,6 +20,7 @@ import { layer2Data } from "@/data/networks/networks"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
+import Layer2PageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -35,8 +37,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -67,8 +69,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "layer-2",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <Layer2PageJsonLD locale={locale} contributors={contributors} />
       <Layer2Page
         randomL2s={randomL2s}
         userRandomL2s={userRandomL2s}
@@ -88,9 +98,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-layer-2" })
 

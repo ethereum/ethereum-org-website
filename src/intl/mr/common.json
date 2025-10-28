@@ -276,7 +276,7 @@
   "nav-layer-2-description": "इथरियमसाठी स्वस्त आणि जलद व्यवहार",
   "nav-learn-by-coding-description": "तुम्हाला इथरियमचा प्रयोग करण्यास मदत करणारी साधने",
   "nav-local-env-description": "तुमचे इथरियम विकास भागभांडवल निवडा आणि सेट करा",
-  "nav-mainnet-description": "सार्वजनिक इथरियम मेननेटवर एंटरप्राइझ ब्लॉकचेन अ‍ॅप्लिकेशन्स तयार केले जाऊ शकतात",
+  "nav-enterprise-description": "सार्वजनिक इथरियम मेननेटवर एंटरप्राइझ ब्लॉकचेन अ‍ॅप्लिकेशन्स तयार केले जाऊ शकतात",
   "nav-nft-description": "Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग",
   "nav-open-research-description": "इथरियमची प्राथमिक ताकद म्हणजे त्याचा सक्रिय संशोधन समुदाय",
   "nav-open-research-label": "संशोधन खोला",
@@ -430,5 +430,8 @@
   "withdrawals": "पैसे काढणे स्टिकिंग",
   "wrapped-ether": "गुंडाळलेला इथर",
   "yes": "होय",
-  "zero-knowledge-proofs": "शून्य-ज्ञान पुरावे"
+  "zero-knowledge-proofs": "शून्य-ज्ञान पुरावे",
+  "ethereum-vs-bitcoin": "इथेरियम विरुद्ध बिटकॉइन",
+  "nav-ethereum-vs-bitcoin-description": "इथेरियम आणि बिटकॉइनमधील फरक समजून घ्या"
+
 }

@@ -510,7 +510,7 @@ A chamada da função `a.sub(b, "message")` faz duas coisas. Primeiro, ela calcu
 
 É perigoso definir uma margem que não seja zero como outro valor que não seja zero, porque você só controla a ordem de suas próprias transações, mas não as de outras pessoas. Imagine que você tenha dois usuários: Alice, que é ingênua, e Bill, que é desonesto. Alice quer solicitar um serviço de Bill que, segundo ela, custa cinco tokens — então, ela dá a Bill uma provisão de cinco tokens.
 
-Então, algo muda e o preço de Bill aumenta para dez tokens. Alice, que ainda quer o serviço, envia uma transação que define a provisão de Bill para dez. No momento em que Bill vê essa nova transação no pool de transações, ele envia uma transação que gasta os cinco tokens de Alice e com uma tarifa de gás muito mais alta que, portanto, será minerada mais rápido. Dessa forma, Bill pode gastar os cinco primeiros tokens e, quando a nova provisão de Alice for minerada, pode gastar mais dez por um preço total de quinze tokens, mais do que Alice queria autorizar. Essa técnica é chamada de [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+Então, algo muda e o preço de Bill aumenta para dez tokens. Alice, que ainda quer o serviço, envia uma transação que define a provisão de Bill para dez. No momento em que Bill vê essa nova transação no pool de transações, ele envia uma transação que gasta os cinco tokens de Alice e com uma tarifa de gás muito mais alta que, portanto, será minerada mais rápido. Dessa forma, Bill pode gastar os cinco primeiros tokens e, quando a nova provisão de Alice for minerada, pode gastar mais dez por um preço total de quinze tokens, mais do que Alice queria autorizar. Essa técnica é chamada de [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Transação de Alice | Nonce de Alice | Transação de Bill             | Nonce de Bill | A provisão de Bill | Total faturado por Bill de Alice |
 | ------------------ | -------------- | ----------------------------- | ------------- | ------------------ | -------------------------------- |
@@ -593,7 +593,7 @@ Essas são as quatro funções que realmente funcionam: `_transfer`, `_mint`, `_
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
      * This is internal function is equivalent to {transfer}, and can be used to
-     * e.g. implement automatic token fees, slashing mechanisms, etc.
+     * e.g., implement automatic token fees, slashing mechanisms, etc.
      *
      * Emits a {Transfer} event.
      *
@@ -714,7 +714,7 @@ Essa é a função que especifica as provisões. Observe que ela permite que um 
      * @dev Sets `amount` as the allowance of `spender` over the `owner` s tokens.
      *
      * This internal function is equivalent to `approve`, and can be used to
-     * e.g. set automatic allowances for certain subsystems, etc.
+     * e.g., set automatic allowances for certain subsystems, etc.
      *
      * Emits an {Approval} event.
      *

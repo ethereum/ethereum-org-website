@@ -96,7 +96,6 @@ Explore projects and join the DeSci community.
 - [Molecule: Fund and get funded for your research projects](https://www.molecule.xyz/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: query climate data collected by a decentralized community](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
@@ -110,6 +109,7 @@ Explore projects and join the DeSci community.
 - [ValleyDAO: an open, global community offering funding and translational support for synthetic biology research](https://www.valleydao.bio)
 - [Cerebrum DAO: sourcing and nurturing solutions to advance brain health and prevent neurodegeneration](https://www.cerebrumdao.com/)
 - [CryoDAO: funding moonshot research in the field of cryopreservation](https://www.cryodao.org)
+- [Elata: Have a say in the future of psychiatric medicine](https://www.elata.bio/)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 

@@ -24,7 +24,7 @@ One eksampol dey hia:
 
 Alice and Bob wan do bicycle race. Make wi say Alice dey yus $10 wey e go yus win di race. Bob dey konfident sey e go win di race and agree to di bet. In di end, Alice dey finish di race well ahead of Bob and na di klear winna. But Bob rifuse to dey pay out on di bet, dey klaim sey Alice suppose don cheat.
 
-Na dis kind silly eksampol we fit yus do ekampol for di palava wey nor smart. Even if dem don meet di kondishons (i.e. yu bi di winna of di race), yu suppose still trust anoda pesin to fulfill di agreement (i.e. payout on di bet).
+Na dis kind silly eksampol we fit yus do ekampol for di palava wey nor smart. Even if dem don meet di kondishons (i.e., yu bi di winna of di race), yu suppose still trust anoda pesin to fulfill di agreement (i.e., payout on di bet).
 
 ## One digital vending machine {#vending-machine}
 
@@ -69,7 +69,7 @@ Dem fit pafom komputashons, kreate kurrensy, store data, mint [NFTs](/glossary/#
 - [Stabolcoins](/stablecoins/)
 - [To dey kreate and dey distribute unik dijital assets](/nft/)
 - [One automatik, open kurensy ekshanj](/get-eth/#dex)
-- [Decentralized gaming](/apps/?category=gaming#explore)
+- [Decentralized gaming](/apps/categories/gaming)
 - [Insurans policy wey go dey pay out automatikaly](https://etherisc.com/)
 - [One standard wey dey allow pipol kreate kustomized, interopabol kurensis](/developers/docs/standards/tokens/)
 

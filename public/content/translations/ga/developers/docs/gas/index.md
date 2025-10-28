@@ -45,7 +45,7 @@ Bheadh ​​an táille iomlán cothrom anois le:
 
 nuair is luach é an `buntáille` atá socraithe ag an bprótacal agus gur luach é an `táille tosaíochta` a shocraíonn an t-úsáideoir mar leid don bhailíochtóir.
 
-i.e. `21,000* (10+2) = 252,000 gwei` (0.000252 ETH).
+i.e., `21,000* (10+2) = 252,000 gwei` (0.000252 ETH).
 
 Nuair a sheolann Jordáin an t-airgead, asbhainfear 1.000252 ETH ó chuntas Jordan. Cuirfear 1.0000 ETH chun sochair Taylor. Faigheann an bailíochtóir an barr 0.000042 ETH. Dóitear an `buntáille` de 0.00021 ETH.
 
@@ -98,7 +98,7 @@ Is féidir leat a rá go follasach cé mhéad atá tú sásta a íoc chun d’id
 
 I mbeagán focal, cabhraíonn táillí gáis le líonra Ethereum a choinneáil slán. Trí tháille a éileamh ar gach ríomh a dhéantar ar an líonra, cuirimid cosc ​​ar dhroch-aisteoirí an líonra a thurscar. D'fhonn lúba gan teorainn trí thaisme nó naimhdeach nó cur amú ríomhaireachtúil eile sa chód a sheachaint, ní mór do gach idirbheart teorainn a shocrú maidir le cé mhéad céimeanna ríomhaireachtúla um rith an chóid is féidir leis a úsáid. Is é "gás" an bunaonad ríomhaireachtúil.
 
-Cé go bhfuil teorainn san áireamh in idirbheart, cuirtear aon ghás nach n-úsáidtear in idirbheart ar ais chuig an úsáideoir (i.e. aischuirtear `uas-táille - (buntáille + leid)`).
+Cé go bhfuil teorainn san áireamh in idirbheart, cuirtear aon ghás nach n-úsáidtear in idirbheart ar ais chuig an úsáideoir (i.e., aischuirtear `uas-táille - (buntáille + leid)`).
 
 ![Léaráid a thaispeánann conas a dhéantar gás neamhúsáidte a aisíoc](../transactions/gas-tx.png) _Léaráid oiriúnaithe ó [Ethereum EVM léirithe](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -135,8 +135,7 @@ Más mian leat monatóireacht a dhéanamh ar phraghsanna gáis, ionas gur féidi
 
 - [Gás Ethereum Mínithe](https://defiprime.com/gas)
 - [Ídiú gáis do Chonarthaí Cliste a laghdú](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Cruthúnas Geallta in aghaidh Cruthúnas Oibre](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Straitéisí Optamaithe Gáis d'Fhorbróirí](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 doiciméad](https://eips.ethereum.org/EIPS/eip-1559).
 - [Acmhainní EIP-1559 Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Separating Mechanisms From Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Separating Mechanisms From Memes](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

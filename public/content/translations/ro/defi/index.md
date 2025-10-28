@@ -47,7 +47,7 @@ Unul dintre cele mai bune moduri de a ne da seama de potențialul DeFi este prin
 | Piețele sunt întotdeauna deschise.                                                                                                   | Piețele se închid pentru că angajații trebuie să ia pauze.                                                                                                        |
 | Este construită pe transparență – oricine se poate uita la datele unui produs și poate inspecta modul în care funcționează sistemul. | Instituțiile financiare sunt registre închise: nu puteți solicita să le vedeți istoricul de împrumuturi, o evidență a activelor pe care le gestionează și altele. |
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Explorați aplicațiile DeFi
 </ButtonLink>
 
@@ -63,12 +63,15 @@ Ethereum construieşte pe aceste baze. La fel ca în cazul Bitcoin, regulile nu 
 
 Asta sună ciudat... „De ce aș vrea să-mi programez banii”? Cu toate acestea, este mai degrabă o funcţionalitate implicită a tokenurilor de pe Ethereum. Oricine poate programa logica în plăți. Așa că puteți obține controlul și securitatea Bitcoin îmbinate cu serviciile oferite de instituțiile financiare. Aceasta vă permite să faceți cu criptomonedele lucruri pe care nu le puteți face cu Bitcoin, cum ar fi a lua şi a da cu împrumut, a planifica plăţile, a investi în fonduri de indexare și multe altele.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explorați sugestiile noastre de aplicațiile DeFi pe care să le testaţi dacă nu aţi mai folosit Ethereum.</div>
-  <ButtonLink href="/apps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Explorați aplicațiile DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ce puteți face cu DeFi? {#defi-use-cases}
 
@@ -92,7 +95,7 @@ Există o alternativă descentralizată la majoritatea serviciilor financiare. D
 
 Ca blockchain, Ethereum este destinat tranzacțiilor în mod securizat și la nivel mondial. Ca și Bitcoin, Ethereum trimite bani în întreaga lume tot atât de ușor cum s-ar trimite un e-mail. Introduceți [numele ENS](/nft/#nft-Domains) al destinatarului (precum bob.eth) sau adresa contului acestuia din portofel și plata va fi efectuată direct către acesta în câteva minute (de obicei). Pentru a trimite sau a primi plăți, aveți nevoie de un [portofel](/wallets/).
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți aplicațiile dapp de plată
 </ButtonLink>
 
@@ -123,7 +126,7 @@ Monede precum Dai sau USDC au o valoare care se menține la câțiva cenți de u
 - Direct între participanți (peer-to-peer), adică un debitor va împrumuta direct de la un anume creditor.
 - Pe bază de fonduri comune (pool-based), în care creditorii pun la dispoziție fonduri (lichidități) într-o rezervă comună din care debitorii pot împrumuta.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți dapp-urile de împrumut
 </ButtonLink>
 
@@ -183,7 +186,7 @@ Puteți să câștigați dobândă creditând cripto și să vedeți cum vă cre
 - Valoarea aDai va crește în funcție de ratele dobânzilor și puteți vedea cum vă crește soldul în portofel. În funcție de APR, soldul portofelului va deveni ceva de genul 100,1234 după câteva zile sau chiar ore!
 - Puteți retrage în orice moment o cantitate de Dai obișnuită, egală cu soldul dvs. aDai.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți dapp-uri de creditare
 </ButtonLink>
 
@@ -211,7 +214,7 @@ Există mii de tokenuri pe Ethereum. Schimburile descentralizate (DEX) vă permi
 
 De exemplu, dacă doriți să folosiți loteria fără pierderi PoolTogether (descrisă mai sus), veți avea nevoie de un token precum Dai sau USDC. DEX-urile vă permit să efectuați schimburi de ETH pentru aceste token-uri și invers în momentul în care ați terminat.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți schimburile de tokenuri
 </ButtonLink>
 
@@ -223,7 +226,7 @@ Există opțiuni mai avansate pentru cei ce doresc să tranzacționeze deținân
 
 Atunci când folosiți un schimb centralizat, trebuie să vă depuneți activele înainte de tranzacție și să vă bazați că sunt pe mâini bune. Cât timp activele sunt depuse, acestea sunt în pericol, deoarece schimburile centralizate sunt ținte atractive pentru hackeri.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți dapp-urile de tranzacționare
 </ButtonLink>
 
@@ -235,7 +238,7 @@ Există produse de gestionare a fondurilor pe Ethereum care vor încerca să vă
 
 Un bun exemplu este [fondul DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Acesta este un fond care se reechilibrează automat pentru a vă asigura că portofoliul dvs. include întotdeauna [tokenurile de top în funcție de capitalizarea de piață](https://www.coingecko.com/en/defi). Nu trebuie niciodată să gestionați vreun detaliu și puteți retrage din fond oricând doriți.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți aplicațiile dapp de investiţii
 </ButtonLink>
 
@@ -249,7 +252,7 @@ Ethereum este o platformă ideală pentru finanțarea participativă:
 - Este transparentă, deci colectorii de fonduri pot dovedi câți bani au fost strânși. Puteți urmări chiar și modul în care fondurile sunt cheltuite ulterior, pe parcurs.
 - Finanțatorii pot configura rambursări automate dacă, de exemplu, nu s-a respectat un anumit termen limită și nu s-a întrunit o sumă minimă.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți aplicațiile dapp de finanțare participativă
 </ButtonLink>
 
@@ -276,7 +279,7 @@ Asigurările descentralizate urmăresc reducerea costurilor de asigurare, fiind 
 
 Produsele Ethereum, ca orice software, pot fi afectate de bug-uri și alte moduri de a profita. Deci o mulțime de produse de asigurare din acest spațiu se concentrează acum pe protejarea utilizatorilor acestora de pierderile de fonduri. Cu toate acestea, există proiecte care încep să creeze o acoperire pentru tot ceea ce ni se poate întâmpla. Un bun exemplu în acest sens este asigurarea Etherisc's Crop, care are ca scop [protejarea micilor fermieri din Kenya de secetă și inundații](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Asigurarea descentralizată poate oferi o acoperire mai ieftină pentru fermierii care adesea nu își pot permite asigurarea tradițională.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți dapp-urile de asigurare
 </ButtonLink>
 
@@ -286,7 +289,7 @@ Produsele Ethereum, ca orice software, pot fi afectate de bug-uri și alte modur
 
 Având în vedere ceea ce se întâmplă, veți avea nevoie de o modalitate de a ține evidența tuturor investițiilor, împrumuturilor și tranzacțiilor. Există o multitudine de produse care vă permit să vă coordonați întreaga activitate DeFi dintr-un singur loc. Aceasta este splendoarea arhitecturii DeFi deschise. Echipele pot construi interfețe în care nu puteți doar vedea soldurile din toate produsele, ci puteți folosi și funcțiile acestora. Puteți descoperi utilitatea acestui fapt pe măsură ce continuați explorarea DeFi.
 
-<ButtonLink href="/apps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Vedeți dapp-urile portofoliului
 </ButtonLink>
 

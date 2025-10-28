@@ -22,6 +22,12 @@ const SheetClose = React.forwardRef<
 ))
 SheetClose.displayName = SheetPrimitive.Close.displayName
 
+const SheetDismiss = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Close>
+>(({ ...props }, ref) => <SheetPrimitive.Close ref={ref} asChild {...props} />)
+SheetDismiss.displayName = SheetPrimitive.Close.displayName
+
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
@@ -58,14 +64,16 @@ const sheetVariants = cva(
 
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
+    VariantProps<typeof sheetVariants> {
+  hideOverlay?: boolean
+}
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, ...props }, ref) => (
+>(({ side = "right", hideOverlay = false, className, ...props }, ref) => (
   <SheetPortal>
-    <SheetOverlay />
+    {!hideOverlay && <SheetOverlay />}
     <SheetPrimitive.Content
       ref={ref}
       className={cn(sheetVariants({ side }), className)}
@@ -135,6 +143,7 @@ export {
   SheetClose,
   SheetContent,
   SheetDescription,
+  SheetDismiss,
   SheetFooter,
   SheetHeader,
   SheetOverlay,

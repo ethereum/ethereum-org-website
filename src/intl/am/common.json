@@ -276,7 +276,7 @@
   "nav-layer-2-description": "ለEthereum ርካሽ እና ፈጣን ግብይቶች",
   "nav-learn-by-coding-description": "በEthereum ለመሞከር የሚረዱዎት መሳሪያዎች",
   "nav-local-env-description": "የእርስዎን የEthereum ልማት ቁልል ይምረጡ እና ያቀናብሩ",
-  "nav-mainnet-description": "የድርጅት ብሎክቼይን መተግበሪያዎች በይፋዊው Ethereum ዋና መረብ ላይ ሊገነቡ ይችላሉ",
+  "nav-enterprise-description": "የድርጅት ብሎክቼይን መተግበሪያዎች በይፋዊው Ethereum ዋና መረብ ላይ ሊገነቡ ይችላሉ",
   "nav-nft-description": "ማንኛውንም ልዩ የሆነ ነገር የሚወከልበት መንገድ እንደ Ethereum-ተኮር ንብረት",
   "nav-open-research-description": "ከEthereum ዋነኛ ጥንካሬዎች አንዱ ንቁ የምርምር ማህበረሰቡ ነው",
   "nav-open-research-label": "ምርምሩን ይክፈቱ",
@@ -431,5 +431,8 @@
   "withdrawals": "ቀብድ ማውጣት",
   "wrapped-ether": "የታሸገ ኢተር",
   "yes": "አዎ",
-  "zero-knowledge-proofs": "የዜሮ-ዕውቀት ማረጋገጫዎች"
+  "zero-knowledge-proofs": "የዜሮ-ዕውቀት ማረጋገጫዎች",
+  "ethereum-vs-bitcoin": "ኢቴሬም ከ ቢትኮይን",
+  "nav-ethereum-vs-bitcoin-description": "በኢቴሬም እና በቢትኮይን መካከል ያለውን ልዩነት ይረዱ"
+
 }

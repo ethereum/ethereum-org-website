@@ -113,7 +113,6 @@ Per ulteriori informazioni, [consulta la logica di Vyper](https://vyper.readthed
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Quadro di sviluppo dei contratti intelligenti e strumenti per Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk: impara a proteggere e hackerare i contratti intelligenti di Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples: Esempi di vulnerabilità di Vyper](https://www.vyperexamples.com/reentrancy)
 - [Hub di Vyper per lo sviluppo](https://github.com/zcor/vyper-dev)
 - [Esempi dei migliori contratti intelligenti di Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Fantastiche risorse curate di Vyper](https://github.com/spadebuilders/awesome-vyper)
@@ -180,7 +179,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. controllo delle condizioni
     # 2. esecuzione delle azioni (potenzialmente modificando le condizioni)
@@ -227,7 +226,6 @@ Se non hai esperienza con Ethereum e non hai ancora programmato con alcun lingua
 
 - [Documentazione di Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Documentazione di Yul+](https://github.com/fuellabs/yulp)
-- [Playground di Yul+](https://yulp.fuel.sh/)
 - [Post Introduttivo di Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Esempio di contratto {#example-contract-2}
@@ -322,5 +320,5 @@ Per confrontare la sintassi di base, la durata del contratto, le interfacce, gli
 
 ## Ulteriori letture {#further-reading}
 
-- [Libreria di Contratti in Solidity di OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Libreria di Contratti in Solidity di OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity per Esempio](https://solidity-by-example.org)

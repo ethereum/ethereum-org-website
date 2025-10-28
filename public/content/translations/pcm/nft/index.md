@@ -52,14 +52,17 @@ Dem dey yus NFTs for many tins, wey inklude:
 - e dey for desentralize intanet domain names
 - kollateral inside [disentralized finans](/glossary/#defi)
 
-E fit bi say yu bi artist wey wont shia dem work wey dey yus NFTs, witout luzin kontrol and sakrifisin yor profits to intamediaris. Yu fit kreate new kontrat and spesify di nomba of NFTs, dem propatis, and one link to some spesifik artwork. As di artist, ** yu fit program am inside di smart kontract di royaltis** wey dem suppose pay yu (e.g. transfa 5% of hau much dem sell NFT to di pesin wey get di kontract efri taim wey dem sell yor NFT). Yu fit also always pruf say yu don kreate di NFT bikos yu go own di [wallet](/glossary/#wallet) wey deploy di kontract. Pipol wey dey buy fit pruf sey dem own one **orijina NFT** from yor koleshon bikos dem wallet [address](/glossary/#address) dey konet wit one token inside yor smart kontract. Dem fit yus am akross di Ethereum ekosystem, konfidnet in im authentisity.
+E fit bi say yu bi artist wey wont shia dem work wey dey yus NFTs, witout luzin kontrol and sakrifisin yor profits to intamediaris. Yu fit kreate new kontrat and spesify di nomba of NFTs, dem propatis, and one link to some spesifik artwork. As di artist, ** yu fit program am inside di smart kontract di royaltis** wey dem suppose pay yu (e.g., transfa 5% of hau much dem sell NFT to di pesin wey get di kontract efri taim wey dem sell yor NFT). Yu fit also always pruf say yu don kreate di NFT bikos yu go own di [wallet](/glossary/#wallet) wey deploy di kontract. Pipol wey dey buy fit pruf sey dem own one **orijina NFT** from yor koleshon bikos dem wallet [address](/glossary/#address) dey konet wit one token inside yor smart kontract. Dem fit yus am akross di Ethereum ekosystem, konfidnet in im authentisity.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Eksplore, buy abi kreate yor own NFT art/kolectibols...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Make yu eksplore NFT art
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Abi konsida one ticket for one sport event. Just like pesin wey dey **organise one event fit shuse many tickets to sell**, pesin wey kreate NFT fit deside hau many replikate dey. Somtaims dis dey resembol am, like 5000 General Admishon tikets. Somtaims dem dey mint plenti wey bi di same, but ish one difren smoll, like one ticket wit one seat wey dem assign. Pipol fit buy and sell dem peer-to-peer witout paying ticket handlas and di pesin wey buy go always get asurans for di ticket authentisity as dem dey shek di kontract address.
 

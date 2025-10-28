@@ -10,9 +10,13 @@ The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought chang
 
 This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
-<InfoBanner>
-Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about <a href="/roadmap/">the protocol roadmap</a> and <a href="/history/">previous upgrades</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/ethereum-forks/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Improvements in Pectra {#new-improvements}
 
@@ -44,7 +48,7 @@ Currently, network targets an average 3 blobs per block with a maximum of 6 blob
 
 ### Increase calldata cost {#7623}
 
-Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using [calldata](/docs/data-availability/blockchain-data-storage-strategies/#calldata) to store their data in Ethereum. Both blobs and calldata affect Ethereum's bandwidth usage. While most blocks only use a minimal amount of calldata, data-heavy blocks that also contain many blobs can be harmful to Ethereum's p2p network. 
+Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using [calldata](/developers/docs/data-availability/blockchain-data-storage-strategies/#calldata) to store their data in Ethereum. Both blobs and calldata affect Ethereum's bandwidth usage. While most blocks only use a minimal amount of calldata, data-heavy blocks that also contain many blobs can be harmful to Ethereum's p2p network. 
 
 To address this, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) increases calldata pricing, but only for data-heavy transactions. This bounds the worst-case block size, provides an incentive for L2s to only use blobs and leaves over 99% of transactions unaffected.
 
@@ -62,11 +66,11 @@ Validator deposits are currently processed by [eth1data poll](https://eth2book.i
 
 ### Precompile for BLS12-381 {#2537}
 
-Precompiles are a special set of smart contracts built directly into the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). Unlike regular contracts, precompiles are not deployed by users but are part of the client implementation itself, written in its native language (e.g. Go, Java, etc, not Solidity). Precompiles serve for widely used and standardized functions like cryptographic operations. Smart contract developers can call precompiles as a regular contract but with more security and efficiency.
+Precompiles are a special set of smart contracts built directly into the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). Unlike regular contracts, precompiles are not deployed by users but are part of the client implementation itself, written in its native language (e.g., Go, Java, etc, not Solidity). Precompiles serve for widely used and standardized functions like cryptographic operations. Smart contract developers can call precompiles as a regular contract but with more security and efficiency.
 
 [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537) adds new precompiles for curve operations over [BLS12-381](https://hackmd.io/@benjaminion/bls12-381). This elliptic curve became widely used in cryptocurrency ecosystems thanks to its practical properties. More specifically, it's been adopted by Ethereum's consensus layer, where it's used by validators.
 
-The new precompile adds the ability for every developer to easily, efficiently, and securely perform cryptographic operations using this curve, for example, verifying signatures. Onchain applications that depend on this curve can become more gas efficient and secure relying on a precompile instead of some custom contract. This mainly applies to applications that want to reason about validators inside the EVM, e.g. staking pools, restaking, light clients, bridges but also zero-knowledge.
+The new precompile adds the ability for every developer to easily, efficiently, and securely perform cryptographic operations using this curve, for example, verifying signatures. Onchain applications that depend on this curve can become more gas efficient and secure relying on a precompile instead of some custom contract. This mainly applies to applications that want to reason about validators inside the EVM, e.g., staking pools, restaking, light clients, bridges but also zero-knowledge.
 
 ### Serve historical block hashes from state {#2935}
 
@@ -84,9 +88,13 @@ The Beacon Chain consensus is based on validators casting their votes for the la
 
 [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) is a simple change that adds a new field to execution layer client configuration. It configures the number of blocks, enabling dynamic setting for target and maximum blob counts per block as well as blob fee adjustment. With directly defined configuration, clients can avoid the complexity of exchanging this information via Engine API.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 To learn more about how Pectra affects you specifically as an Ethereum user, developer or validator, look into <a href="https://epf.wiki/#/wiki/pectra-faq">Pectra FAQ</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Does this upgrade affect all Ethereum nodes and validators? {#client-impact}
 

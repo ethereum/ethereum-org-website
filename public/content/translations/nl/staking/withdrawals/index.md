@@ -43,9 +43,14 @@ Vóór de upgrade van Shanghai/Capella kon je je gestakete ETH niet gebruiken of
 
 Het opgeven van een opnameadres is een vereiste stap voor elk validatoraccount voordat er ETH van het saldo kan worden opgenomen.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Aan elk validatoraccount kan slechts één opnameadres worden toegewezen, en wel één keer.</strong> Zodra een adres is gekozen en ingediend bij de consensuslaag, kan dit niet meer ongedaan worden gemaakt of worden gewijzigd. Controleer nogmaals of het opgegeven adres juist is en of het eigendomsrechtelijk is vastgelegd voordat je het indient.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Er bestaat <strong>geen dreiging voor je geld in de tussentijd</strong> als je dit niet doet, ervan uitgaande dat je geheugensteuntje/zaadzin offline veilig offline is gebleven en op geen enkele manier is gecompromitteerd. Als je geen opnamegegevens invoert, blijft de ETH zoals tevoren geblokkeerd in het validatoraccount totdat er een opnameadres wordt opgegeven.
 
@@ -65,7 +70,7 @@ Staking-opnames zijn live! De opnamefunctionaliteit werd ingeschakeld als onderd
 
 De opnamefunctionaliteit werd ingeschakeld als onderdeel van de Shanghai/Capella-upgrade die op 12 april 2023 plaatsvond. Hiermee werd de cirkel rond staking van liquiditeit gesloten en kwam Ethereum een ​​stap dichterbij de opbouw van een duurzaam, schaalbaar en veilig gedecentraliseerd ecosysteem.
 
-- [Meer over de geschiedenis van Ethereum](/history/)
+- [Meer over de geschiedenis van Ethereum](/ethereum-forks/)
 - [Meer over de roadmap van Ethereum](/roadmap/)
 
 ## Hoe werken opnamebetalingen? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Bekijk deze uitleg van Finematics over Ethereum staking-opnames:
 
 Wanneer een validator het volgende blok moet voorstellen, moet hij een opnamewachtrij samenstellen van maximaal 16 in aanmerking komende opnames. Dit wordt gedaan door te beginnen met de validatorindex 0 en te bepalen of er een opname in aanmerking komt voor dit account volgens de regels van het protocol. Als dit het geval is, wordt het account toegevoegd aan de wachtrij. De validator die is ingesteld om het volgende blok voor te stellen, gaat verder waar het vorige blok is gestopt en gaat oneindig door.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Denk aan een analoge klok. De wijzer op de klok wijst naar het uur, beweegt in één richting, slaat geen uren over en komt uiteindelijk weer terecht bij het begin nadat het laatste nummer is bereikt.<br/><br/>
 Stel je nu voor dat de klok in plaats van 1 tot en met 12 0 tot en met N heeft <em>(het totale aantal validatoraccounts dat ooit is geregistreerd op de consensuslaag, meer dan 500.000 in januari 2023).</em><br/><br/>
 De wijzer op de klok wijst naar de volgende validator die moet worden gecontroleerd op in aanmerking komende opnames. Hij begint bij 0 en gaat door tot het einde, zonder dat er accounts worden overgeslagen. Wanneer de laatste validator bereikt is, begint de cyclus weer opnieuw vanaf het begin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Een account controleren op opnames {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Als je deel uitmaakt van een <a href="/staking/pools/">staking-pool</a> of staking-tokens bezit, dient je bij je provider navraag te doen naar de manier waarop staking-opnames worden afgehandeld. Elke service werkt namelijk anders.
+Als je deel uitmaakt van een [staking-pool](/staking/pools/) of staking-tokens bezit, dient je bij je provider navraag te doen naar de manier waarop staking-opnames worden afgehandeld. Elke service werkt namelijk anders.
 
-Over het algemeen moeten gebruikers de vrijheid hebben om hun onderliggende gestakete ETH terug te vorderen, of om te veranderen van staking-provider. Als een bepaalde pool te groot wordt, kun je het geld eruit halen, inwisselen en opnieuw staken bij een <a href="https://rated.network/">kleinere aanbieder</a>. Of als je genoeg ETH hebt verzameld, kun je <a href="/staking/solo/">vanuit huis staken</a>.
+Over het algemeen moeten gebruikers de vrijheid hebben om hun onderliggende gestakete ETH terug te vorderen, of om te veranderen van staking-provider. Als een bepaalde pool te groot wordt, kun je het geld eruit halen, inwisselen en opnieuw staken bij een <a href="https://rated.network/">kleinere aanbieder</a>. Of als je genoeg ETH hebt verzameld, kun je [vanuit huis staken](/staking/solo/).
 
 </ExpandableCard>
 
@@ -213,7 +223,6 @@ Nee. Zodra een validator is afgesloten en het volledige saldo is opgenomen, word
 
 - [Staking Launchpad-opnames](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push-opnames als activiteiten](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: opname van gestakete ETH (test) met Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push-opnames als activiteiten met Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Inzicht in effectief saldo van validators](https://www.attestant.io/posts/understanding-validator-effective-balance/)

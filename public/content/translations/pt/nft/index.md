@@ -54,12 +54,15 @@ Os NFT são utilizados para muitas coisas, incluindo:
 
 Talvez seja um artista que queira partilhar o seu trabalho usando NFT, sem perder o controlo nem dividir os lucros com intermediários. Pode criar um novo contrato e especificar o número de NFT, as suas propriedades e uma associação a um trabalho artístico específico. Como artista, **pode programar no contrato inteligente, os royalties** que devem ser pagos (por exemplo, transferir 5% do preço de venda para o proprietário do contrato cada vez que um NFT é transferido). Você também pode sempre provar que criou os NFT porque possui o [wallet](/glossary/#wallet) que implantou o contrato. Os seus compradores podem facilmente provar que possuem um NFT **autêntico** de sua coleção porque sua carteira [endereço](/glossary/#address) está associada a um token em seu contrato inteligente. Podem utilizá-lo em todo o ecossistema Ethereum, confiantes na sua autenticidade.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explore, compre ou crie a sua própria arte/colecionáveis NFT...</div>
-  <ButtonLink href="/apps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     Explore arte NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Ou considere um bilhete para um evento desportivo. Assim como um organizador de ** de um evento pode escolher quantos ingressos vender**, o criador de um NFT pode decidir quantas réplicas existem. Por vezes, tratam-se de réplicas exatas, tal como 5000 bilhetes de acesso geral ao evento. Outras vezes, vários bilhetes cunhados são muito semelhantes, mas com ligeiras diferenças, tal como um bilhete com lugar marcado. Estes bilhetes podem ser comprados e vendidos entre pares sem pagar a quem os distribui e o comprador tem sempre a garantia da autenticidade do bilhete, verificando o endereço do contrato.
 

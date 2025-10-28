@@ -41,7 +41,7 @@ lang: zh
 
 - [权益证明简介](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG 论文](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG 的解释说明](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG 的解释说明](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper 论文](https://arxiv.org/abs/2003.03052)
 
 #### 近期的研究 {#recent-research}
@@ -83,7 +83,7 @@ lang: zh
 1. 一个共识客户端，用于追踪区块链头部、传播区块并处理共识逻辑
 2. 一个执行客户端，用于支持以太坊虚拟机并执行交易和智能合约
 
-查看[节点和客户端页面](/developers/docs/nodes-and-clients/)以了解关于节点和客户端的更多详细信息以及当前所有客户端实现的清单。 你也可以在[历史页面](/history/)找到所有以太坊升级的历史信息。
+查看[节点和客户端页面](/developers/docs/nodes-and-clients/)以了解关于节点和客户端的更多详细信息以及当前所有客户端实现的清单。 你也可以在[历史页面](/ethereum-forks/)找到所有以太坊升级的历史信息。
 
 ### 执行客户端 {#execution-clients}
 
@@ -224,7 +224,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 #### 背景阅读 {#background-reading-9}
 
-- [稳健激励小组](https://ethereum.github.io/rig/)
+- [稳健激励小组](https://rig.ethereum.org/)
 - [Devconnect 上的 ETHconomics 研讨会](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### 近期的研究 {#recent-research-9}
@@ -307,7 +307,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 #### 近期的研究 {#recent-research-14}
 
-- [稳健激励小组数据分析](https://ethereum.github.io/rig/)
+- [稳健激励小组数据分析](https://rig.ethereum.org/)
 
 ## 应用程序与工具 {#apps-and-tooling}
 

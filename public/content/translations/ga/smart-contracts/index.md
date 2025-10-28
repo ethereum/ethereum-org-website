@@ -29,7 +29,7 @@ Seo sampla:
 
 Tá rás rothar ar siúl ag Alice agus Bob. Deirimis go ngeallann Alice $10 do Bob go mbeidh an bua aici sa rás. Tá Bob muiníneach gurb é féin a bheidh mar bhuaiteoir agus aontaíonn sé leis an ngeall. Sa deireadh, críochnaíonn Alice an rás go maith chun tosaigh ar Bob agus níl aon amhras ach gurb ise an buaiteoir. Ach diúltaíonn Bob a íoc as an ngeall, agus deir sé go ndearna Alice caimiléireacht air.
 
-Léiríonn an sampla amaideach seo an fhadhb le haon chomhaontú neamhchliste. Fiú má shásaítear coinníollacha an chomhaontaithe (i.e. is tusa buaiteoir an rása), ní mór duit muinín a bheith agat as duine eile fós chun an comhaontú a chomhlíonadh (i.e. íocaíocht a dhéanamh ar an ngeall).
+Léiríonn an sampla amaideach seo an fhadhb le haon chomhaontú neamhchliste. Fiú má shásaítear coinníollacha an chomhaontaithe (i.e., is tusa buaiteoir an rása), ní mór duit muinín a bheith agat as duine eile fós chun an comhaontú a chomhlíonadh (i.e., íocaíocht a dhéanamh ar an ngeall).
 
 ## Meaisín díola digiteach {#vending-machine}
 
@@ -74,7 +74,7 @@ Is féidir leo ríomhanna a dhéanamh, airgeadra a chruthú, sonraí a stóráil
 - [Stablecoins](/stablecoins/)
 - [Sócmhainní digiteacha uathúla a chruthú agus a dháileadh](/nft/)
 - [Malartán airgeadra oscailte uathoibríoch](/get-eth/#dex)
-- [Cluichíocht dhíláraithe](/apps/?category=gaming#explore)
+- [Cluichíocht dhíláraithe](/apps/categories/gaming)
 - [Polasaí árachais a íocann amach go huathoibríoch](https://etherisc.com/)
 - [Caighdeán a ligeann do dhaoine airgeadraí saincheaptha, idir-inoibritheacha a chruthú](/developers/docs/standards/tokens/)
 

@@ -44,13 +44,13 @@ There are various stakeholders in the [Ethereum community](/community/), each pl
 
 - **Ether holders**: these people hold an arbitrary amount of ETH. [More on ETH](/eth/).
 - **Application Users**: these people interact with applications on the Ethereum blockchain.
-- **Application/Tooling Developers**: these people write applications that run on the Ethereum blockchain (e.g. DeFi, NFTs, etc.) or build tooling to interact with Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/apps/).
+- **Application/Tooling Developers**: these people write applications that run on the Ethereum blockchain (e.g., DeFi, NFTs, etc.) or build tooling to interact with Ethereum (e.g., wallets, test suites, etc.). [More on dapps](/apps/).
 - **Node Operators**: these people run nodes that propagate blocks and transactions, rejecting any invalid transaction or block that they come across. [More on nodes](/developers/docs/nodes-and-clients/).
 - **EIP Authors**: these people propose changes to the Ethereum protocol, in the form of Ethereum Improvement Proposals (EIPs). [More on EIPs](/eips/).
 - **Validators**: these people run nodes that can add new blocks to the Ethereum blockchain.
-- **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
+- **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g., go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
 
-_Note: any individual can be part of multiple of these groups (e.g. a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
+_Note: any individual can be part of multiple of these groups (e.g., a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
 
 <Divider />
 
@@ -102,7 +102,7 @@ While some EIPs are straightforward technical improvements with minimal nuance, 
 
 There is no clear playbook on how to handle contentious proposals. This is a result of Ethereum's decentralized design whereby no single stakeholder group can coerce the other through brute force: protocol developers can choose not to implement code changes; node operators can choose not to run the latest Ethereum client; application teams and users can choose not to transact on the chain. Since Protocol Developers have no way to force people to adopt network upgrades, they will generally avoid implementing EIPs where the contentiousness outweighs the benefits to the broader community.
 
-EIP Champions are expected to solicit feedback from all relevant stakeholders. If you find yourself the champion of a contentious EIP, you should try and address objections to build consensus around your EIP. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g. a coin vote) that can be used to gauge community consensus, and EIP Champions are expected to adapt to the circumstances of their proposal.
+EIP Champions are expected to solicit feedback from all relevant stakeholders. If you find yourself the champion of a contentious EIP, you should try and address objections to build consensus around your EIP. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g., a coin vote) that can be used to gauge community consensus, and EIP Champions are expected to adapt to the circumstances of their proposal.
 
 Beyond the security of the Ethereum network, significant weight has historically been placed by Protocol Developers on what Application/Tooling Developers and Application Users value, given that their using and developing on Ethereum is what makes the ecosystem attractive for other stakeholders. Additionally, EIPs need to be implemented across all client implementations, which are managed by distinct teams. Part of this process usually means convincing multiple teams of Protocol Developers that a particular change is valuable and that it helps end-users or solves a security issue.
 
@@ -152,7 +152,7 @@ The Ethereum governance process often trades off speed and efficiency for openne
 
 While the specification and development implementations have always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
 
-When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
+When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](/ethereum-forks/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   More on The Merge
@@ -180,5 +180,5 @@ Governance in Ethereum isn’t rigidly defined. Various community participants h
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Moving beyond coin voting governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [Understanding Blockchain Governance](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [Understanding Blockchain Governance](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [The Ethereum Government](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

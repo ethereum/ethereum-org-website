@@ -59,16 +59,21 @@ CCRI estimates that The Merge reduced Ethereum's annualized electricity consumpt
 
 While Ethereum's energy consumption is very low, there is also a substantial, growing, and highly active [**regenerative finance (ReFi)**](/refi/) community building on Ethereum. ReFi applications use DeFi components to build financial applications that have positive externalities benefiting the environment. ReFi is part of a wider ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) movement that is closely aligned with Ethereum and aims to couple technological advancement and environmental stewardship. The decentralized, permissionless, and composable nature of Ethereum makes it the ideal base layer for the ReFi and solarpunk communities.
 
-Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co) run climate rounds to stimulate environmentally conscious building on Ethereum's application layer. Through the development of these initiatives (and others, e.g. [DeSci](/desci/)), Ethereum is becoming an environmentally and socially net-positive technology.
+Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co) run climate rounds to stimulate environmentally conscious building on Ethereum's application layer. Through the development of these initiatives (and others, e.g., [DeSci](/desci/)), Ethereum is becoming an environmentally and socially net-positive technology.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   If you think this page can be made more accurate, please raise an issue or PR. The stats on this page are estimates based on publicly available data - they do not represent an official statement or promise from the ethereum.org team, or the Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Further reading {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [White House report on proof-of-work blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [White House report on proof-of-work blockchains](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

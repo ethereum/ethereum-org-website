@@ -511,7 +511,7 @@ La funzione `a.sub(b, "message")` produce due azioni. Innanzi tutto calcola `a-b
 
 È pericoloso impostare un margine di tolleranza diverso da zero su un altro valore diverso da zero, perché puoi controllare solo l'ordine delle tue transazioni, ma non di quelle altrui. Immagina che ci siano due utenti: Alice, una ragazza ingenua, e Bill, un uomo disonesto. Alice vuole ricevere da Bill un servizio che secondo lei costa cinque token, quindi concede a Bill un margine di tolleranza di cinque token.
 
-Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è ancora interessata a ricevere il servizio, invia una transazione che imposta il margine di tolleranza di Bill a dieci. Quando Bill vede questa nuova transazione nel pool della transazione, invia una transazione che spende cinque token di Alice e ha un prezzo del gas molto maggiore, così che sarà minata più rapidamente. In questo modo Bill può spendere prima i cinque token e poi, una volta minato il nuovo margine di tolleranza di Alice, spenderne altri dieci per un prezzo complessivo di quindici token, più di quanto Alice volesse autorizzare. Questa tecnica è detta [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è ancora interessata a ricevere il servizio, invia una transazione che imposta il margine di tolleranza di Bill a dieci. Quando Bill vede questa nuova transazione nel pool della transazione, invia una transazione che spende cinque token di Alice e ha un prezzo del gas molto maggiore, così che sarà minata più rapidamente. In questo modo Bill può spendere prima i cinque token e poi, una volta minato il nuovo margine di tolleranza di Alice, spenderne altri dieci per un prezzo complessivo di quindici token, più di quanto Alice volesse autorizzare. Questa tecnica è detta [front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Transazione di Alice | Nonce di Alice | Transazione di Bill           | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
 | -------------------- | -------------- | ----------------------------- | ------------- | ------------------ | ------------------------------- |
@@ -594,7 +594,7 @@ Queste sono le quattro funzioni che effettuano il lavoro effettivo: `_transfer`,
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
      * This is internal function is equivalent to {transfer}, and can be used to
-     * e.g. implement automatic token fees, slashing mechanisms, etc.
+     * e.g., implement automatic token fees, slashing mechanisms, etc.
      *
      * Emits a {Transfer} event.
      *
@@ -715,7 +715,7 @@ Questa è la funzione che specifica concretamente i margini di tolleranza. Nota 
      * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
      *
      * This internal function is equivalent to `approve`, and can be used to
-     * e.g. set automatic allowances for certain subsystems, etc.
+     * e.g., set automatic allowances for certain subsystems, etc.
      *
      * Emits an {Approval} event.
      *

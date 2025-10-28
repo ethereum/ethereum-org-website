@@ -43,9 +43,14 @@ summaryPoints:
 
 引き出しアドレスの設定は、残高からETHを引き出させるようするために全てのバリデータアカウントに必要なステップです。
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>各バリデータアカウントには一度に一つの引き出しアドレスしか割り当てることはできません。</strong>一度アドレスが選択され、コンセンサスレイヤーに提出されると、取り消しや再変更はできません。 提出前に、指定したアドレスの所有権があることと正しいかを再確認してください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ニーモニック/シードフレーズが安全なオフラインのままであり、いかなる方法でも侵害されていないと仮定すると、引き出しアドレスを指定しない間も<strong>資金に対する脅威はありません</strong>。 引き出し認証情報の追加に失敗すると、ETHは引き出しアドレスが指定されるまでの間、単にバリデーターアカウントにロックされたままになります。
 
@@ -65,7 +70,7 @@ _いかなる_資金もバリデータアカウントの残高から移動でき
 
 上海/カペラアップグレードによって、過去にステークされていたETHを一般的なイーサリアムアカウントに回収することが可能になりました。 これにより、流動性をステークするループが閉じられ、イーサリアムは持続可能でスケーラブルかつ安全な分散型エコシステムの構築に向けた旅に一歩近づきました。
 
-- [イーサリアムの歴史についてより詳しく](/history/)
+- [イーサリアムの歴史についてより詳しく](/ethereum-forks/)
 - [イーサリアムのロードマップについてより詳しく](/roadmap/)
 
 ## 引き出しはどのように機能しますか？ {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Finematicsによるイーサリアムステーキングの引き出しについ�
 
 バリデーターが次のブロックを提案する予定である場合、最大16件の適格な引き出しからなる引き出しキューを構築する必要があります。 これは、最初はバリデーターインデックス 0 から始まり、 プロトコルの規則に従ってこのアカウントが引き出し対象かどうかを判断し、対象である場合はキューに追加することで行われます。 次のブロックを提案するように設定されたバリデーターは、最後のブロックが中断したところから再開し、無限に順番に進めます。
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 アナログ時計について考えてみてください。 時計の針は時刻を指し、一方向に進み、どの時刻も跳ばすことはなく、最終的には最後の数字に達し、一周して再び先頭に戻ります。<br/><br/>
 では、1から12ではなく0からN<em>(コンセンサスレイヤーに登録されたことのあるバリデータアカウントの総数は、2023年1月時点で500,000を超えています)</em><br/><br/>まである時計を考えて下さい。
 時計の針は引き出し対象の確認を受ける必要がある次のバリデータを指し示します。 それは0から始まり、どのアカウントもスキップすることなく最後まで進みます。 最後のバリデーターに達すると、最初に戻ってサイクルは続きます。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### 引き出しのためのアカウントの確認 {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-もし <a href="/staking/pools/">ステーキングプール</a> に参加しているか、ステーキングトークンを保有している場合は、各サービスによって運用が異なるため、ステーキングの引き出し方法の詳細については、プロバイダーに確認する必要があります
+もし [ステーキングプール](/staking/pools/) に参加しているか、ステーキングトークンを保有している場合は、各サービスによって運用が異なるため、ステーキングの引き出し方法の詳細については、プロバイダーに確認する必要があります
 
-一般的に、ユーザーは自由に元金であるステークされたETHを回収したり、利用するステーキングプロバイダーを変更したりできるはずです。 特定のプールが大きくなりすぎた場合は、撤退および償還し、<a href="https://rated.network/">より小さいプロバイダー</a>で再びステーキングできます。 それとも、もし十分なETHが貯まっているなら <a href="/staking/solo/">自宅のコンピューターでステーク</a>することもできます。
+一般的に、ユーザーは自由に元金であるステークされたETHを回収したり、利用するステーキングプロバイダーを変更したりできるはずです。 特定のプールが大きくなりすぎた場合は、撤退および償還し、<a href="https://rated.network/">より小さいプロバイダー</a>で再びステーキングできます。 それとも、もし十分なETHが貯まっているなら [自宅のコンピューターでステーク](/staking/solo/)することもできます。
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ eventName="read more">
 
 - [Staking Launchpad 「Withdrawals」](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: ビーコンチェーンプッシュ引き出しの実装](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz & Hsiao-Wei WangによるステークしたETHの引き出し(テスト)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: Alex Stokesによるビーコンチェーンプッシュ引き出しの実装の解説](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [バリデーターの有効残高について理解する](https://www.attestant.io/posts/understanding-validator-effective-balance/)

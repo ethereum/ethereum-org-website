@@ -4,6 +4,8 @@ import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
+import Emoji, { type EmojiProps } from "../Emoji"
+
 import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
@@ -67,7 +69,10 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("[&_p]:leading-relaxed", className)}
+    className={cn(
+      "[&_p]:mb-4 [&_p]:mt-0 [&_p]:leading-relaxed last:[&_p]:mb-0",
+      className
+    )}
     {...props}
   />
 ))
@@ -89,4 +94,24 @@ const AlertCloseButton = React.forwardRef<
 ))
 AlertCloseButton.displayName = "AlertCloseButton"
 
-export { Alert, AlertCloseButton, AlertContent, AlertDescription, AlertTitle }
+const AlertEmoji = React.forwardRef<SVGElement, EmojiProps>(
+  ({ className, ...props }) => (
+    <Emoji
+      className={cn(
+        "flex-shrink-0 flex-grow-0 self-start text-4xl sm:self-auto",
+        className
+      )}
+      {...props}
+    />
+  )
+)
+AlertEmoji.displayName = "AlertEmoji"
+
+export {
+  Alert,
+  AlertCloseButton,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+  AlertTitle,
+}

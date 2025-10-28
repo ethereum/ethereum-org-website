@@ -279,7 +279,7 @@
   "nav-history-label": "Istoricul tehnic al Ethereum",
   "nav-learn-by-coding-description": "Instrumente care te ajută să experimentezi cu Ethereum",
   "nav-local-env-description": "Alege și configurează stiva de dezvoltare Ethereum",
-  "nav-mainnet-description": "Aplicațiile blockchain pentru companii pot fi create pe rețeaua principală publică Ethereum",
+  "nav-enterprise-description": "Aplicațiile blockchain pentru companii pot fi create pe rețeaua principală publică Ethereum",
   "nav-networks-home-description": "Tranzacții mai ieftine și mai rapide pentru Ethereum",
   "nav-networks-introduction-label": "Introducere",
   "nav-networks-introduction-description": "Ethereum s-a extins într-o rețea de rețele",
@@ -443,5 +443,8 @@
   "withdrawals": "Retrageri la mizare",
   "wrapped-ether": "Ether „Wrapped”",
   "yes": "Da",
-  "zero-knowledge-proofs": "Dovezi zero-knowledge"
+  "zero-knowledge-proofs": "Dovezi zero-knowledge",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Înțelegeți diferențele dintre Ethereum și Bitcoin"
+
 }

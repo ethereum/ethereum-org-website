@@ -19,7 +19,7 @@ Chun a léiriú cad is dearbháin chaimiléireachta ann, agus conas iad a aithin
 title="Cad é ARB?"
 contentPreview=''>
 
-Is eagraíocht é Arbitrum a fhorbraíonn agus a bhainistíonn <a href="/developers/docs/scaling/optimistic-rollups/">rollaí dóchasacha</a>. Ar dtús, eagraíodh Arbitrum mar chuideachta bhrabús, ach ansin ghlac céimeanna chun dílárú. Mar chuid den phróiseas sin, d'eisigh siad <a href="/dao/#token-based-membership">comhartha rialachais</a> intrádála.
+Is eagraíocht é Arbitrum a fhorbraíonn agus a bhainistíonn [rollaí dóchasacha](/developers/docs/scaling/optimistic-rollups/). Ar dtús, eagraíodh Arbitrum mar chuideachta bhrabús, ach ansin ghlac céimeanna chun dílárú. Mar chuid den phróiseas sin, d'eisigh siad [comhartha rialachais](/dao/#token-based-membership) intrádála.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Is é dílárú bun agus barr Ethereum. Ciallaíonn sé seo nach bhfuil aon úda
 title="Cad is conarthaí cliste ann?"
 contentPreview=''>
 
-Is iad <a href="/developers/docs/smart-contracts/">Conarthaí cliste</a> na cláir a ritheann ar bharr blockchain Ethereum. Cuirtear gach dearbhán ERC-20, mar shampla, i bhfeidhm mar chonradh cliste.
+Is iad [Conarthaí cliste](/developers/docs/smart-contracts/) na cláir a ritheann ar bharr blockchain Ethereum. Cuirtear gach dearbhán ERC-20, mar shampla, i bhfeidhm mar chonradh cliste.
 
 </ExpandableCard>
 

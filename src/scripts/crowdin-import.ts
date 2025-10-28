@@ -42,7 +42,7 @@ const argv = require("minimist")(process.argv.slice(2))
  *
  * 2b. Alternatively, you can manually add buckets to import to the USER_OVERRIDE object below.
  *   1. Add the number of the corresponding content bucket to the chosen language array below
- *      ie. `es: [1, 10],` would import the "Homepage" and "Learn" buckets for Spanish
+ *      i.e., `es: [1, 10],` would import the "Homepage" and "Learn" buckets for Spanish
  *   2. Save file without committing*
  *
  * Optionally: To view summary of buckets from CSV, run `pnpm crowdin-import --buckets` or `pnpm crowdin-import -b`
@@ -51,7 +51,7 @@ const argv = require("minimist")(process.argv.slice(2))
  * 3. Export translated content from Crowdin and import into ./.crowdin folder:
  *   1. Export latest translated content from Crowdin and unzip
  *   2. Copy languages folder from Crowdin export to ./.crowdin
- *      ie. ./.crowdin/{lang-codes}
+ *      i.e., ./.crowdin/{lang-codes}
  *
  * 4. Execute script:
  *   1. Execute script by running `pnpm crowdin-import`

@@ -52,7 +52,7 @@ Les deux options ont différents avantages résumés plus haut. Si vous cherchez
 
 #### Matériel {#hardware}
 
-Cependant, un réseau décentralisé et résistant à la censure ne devrait pas reposer sur des fournisseurs de cloud. À l'inverse, faire tourner votre nœud avec votre propre matériel local est plus sain pour l'écosystème. [Les estimations](https://www.ethernodes.org/networkType/Hosting) montrent qu'une grande proportion de nœuds tournent dans le cloud, susceptibles de constituer un point de défaillance unique.
+Cependant, un réseau décentralisé et résistant à la censure ne devrait pas reposer sur des fournisseurs de cloud. À l'inverse, faire tourner votre nœud avec votre propre matériel local est plus sain pour l'écosystème. [Les estimations](https://www.ethernodes.org/network-types) montrent qu'une grande proportion de nœuds tournent dans le cloud, susceptibles de constituer un point de défaillance unique.
 
 Les clients Ethereum peuvent être exécutés sur votre ordinateur, votre ordinateur portable, votre serveur ou même un ordinateur mono-carte. Bien que vous puissiez faire tourner des clients sur votre ordinateur personnel, utiliser une machine dédiée uniquement à votre nœud permet de grandement améliorer les performances et la sécurité tout en minimisant l'impact sur votre ordinateur principal.
 
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-La documentation de Nethermind offre un [guide complet](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) sur le fonctionnement de Nethermind avec un client de consensus.
+La documentation de Nethermind offre un [guide complet](https://docs.nethermind.io/get-started/running-node/) sur le fonctionnement de Nethermind avec un client de consensus.
 
 Un client d'exécution initiera ses fonctions principales, ses points de terminaison choisis, et commencera à rechercher des pairs. Après avoir réussi à trouver des pairs, le client débute la synchronisation. Le client d'exécution attendra une connexion du client de consensus. Les données actuelles de la blockchain seront disponibles une fois le client correctement synchronisé avec l'état actuel.
 
@@ -365,7 +365,7 @@ nimbus_beacon_node \
 
 ##### Exécuter Prysm
 
-Prysm est livré avec un script qui permet une installation automatique facile. Les détails peuvent être trouvés dans [la documentation Prysm](https://docs.prylabs.network/docs/install/install-with-script).
+Prysm est livré avec un script qui permet une installation automatique facile. Les détails peuvent être trouvés dans [la documentation Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +444,7 @@ Envisagez de créer un service pour exécuter automatiquement vos clients au dé
 
 #### Mettre à jour les clients {#updating-clients}
 
-Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIP](/eips/). Tout particulièrement avant [les fourches majeures](/history/), assurez-vous d'utiliser les bonnes versions client.
+Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIP](/eips/). Tout particulièrement avant [les fourches majeures](/ethereum-forks/), assurez-vous d'utiliser les bonnes versions client.
 
 > Avant les mises à jour importantes du réseau, EF publie un message sur son [blog](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://blog.ethereum.org/category/protocol#subscribe) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
 

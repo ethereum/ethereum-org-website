@@ -279,7 +279,7 @@
   "nav-history-label": "ประวัติทางเทคนิคของอีเธอเรียม",
   "nav-learn-by-coding-description": "เครื่องมือที่ช่วยให้คุณทดลองกับอีเธอเรียมได้",
   "nav-local-env-description": "เลือกและตั้งค่าสแต็กการพัฒนาอีเธอเรียมของคุณ",
-  "nav-mainnet-description": "สามารถสร้างแอปพลิเคชันบล็อกเชนระดับองค์กรขึ้นบนเครือข่ายหลักของอีเธอเรียมสาธารณะได้",
+  "nav-enterprise-description": "สามารถสร้างแอปพลิเคชันบล็อกเชนระดับองค์กรขึ้นบนเครือข่ายหลักของอีเธอเรียมสาธารณะได้",
   "nav-networks-home-description": "การทำธุรกรรมสำหรับอีเธอเรียมที่ราคาถูกกว่าและเร็วกว่า",
   "nav-networks-introduction-label": "บทนำ",
   "nav-networks-introduction-description": "อีเธอเรียมได้ขยายตัวเป็นเครือข่ายของเครือข่าย",
@@ -443,5 +443,8 @@
   "withdrawals": "การถอน Staking",
   "wrapped-ether": "อีเธอร์ห่อหุ้ม",
   "yes": "ใช่",
-  "zero-knowledge-proofs": "การพิสูจน์ความจริงโดยไม่เปิดเผยข้อมูล"
+  "zero-knowledge-proofs": "การพิสูจน์ความจริงโดยไม่เปิดเผยข้อมูล",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "ทำความเข้าใจความแตกต่างระหว่าง Ethereum และ Bitcoin"
+
 }
