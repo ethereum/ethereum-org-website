@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "செயலிகளை முயற்சிக்கவும்",
   "page-index-cta-get-eth-description": "Ethereum -இன் நாணயம்",
   "page-index-cta-get-eth-label": "ETH பெறுக",
-  "page-index-cta-networks-description": "குறைந்தபட்ச கட்டணத்தை மகிழ்ந்திடுங்கள்",
-  "page-index-cta-networks-label": "ஒரு பிணையத்தை தேர்ந்தெடுங்கள்",
   "page-index-cta-wallet-description": "கணக்குகளை உருவாக்கி, உடைமைகளை நிர்வகித்திடுங்கள்",
   "page-index-cta-wallet-label": "பணப்பையைத் தேர்வுசெய்க",
+  "page-index-cta-build-apps-description": "உங்கள் முதல் பயன்பாட்டை உருவாக்குங்கள்",
+  "page-index-cta-build-apps-label": "உருவாக்கத்தைத் தொடங்குங்கள்",
   "page-index-description": "புதுமையான செயலிகள் மற்றும் பிளாக்செயின் பிணையங்களுக்கான முன்னணி தளம்",
   "page-index-developers-code-example-description-0": "நீங்கள் புரோகிராம் செய்த லாஜிக் மூலம் இயங்கும் ஒரு வங்கியை உருவாக்கிடுங்கள்",
   "page-index-developers-code-example-description-1": "நாணயப் பரிமாற்றம் செய்து அனைத்துச் செயலிகளிலும் பயன்படுத்துவதற்கான டோக்கன்களை உருவாக்கிடுங்கள்",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "அண்மை இடுகைகள்",
   "page-index-posts-subtitle": "சமூகத்தின் சமீபத்திய வலைப்பதிவு இடுகைகள் மற்றும் புதுப்பிப்புகள்",
   "page-index-title": "Ethereum -க்கு வருக",
+  "page-index-use-cases-tag": "பயன்பாடு வழக்குகள்",
   "page-index-values-description": "டிஜிட்டல் புரட்சியின் ஒரு பகுதியாக இருங்கள்",
   "page-index-values-header": "இணையம் மாறி வருகிறது",
   "page-index-values-legacy": "மரபு",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "பெரும்பாலானவற்றுக்கும் நெருக்கமானது",
   "page-index-values-open-legacy-content-0": "நிறுவனங்கள் தங்கள் அறிவுசார் சொத்துக்களை பாதுகாக்கின்றன மற்றும் பகிர்ந்து கொள்ளாது. நிறுவனங்கள் எவ்வாறு செயல்படுகின்றன, சிக்கல்களைச் சரிசெய்வது அல்லது மேம்படுத்துவது ஆகியவற்றை நிறுவனத்திற்கு வெளியே யாரும் பார்க்க முடியாது. மக்கள் புதிய கருவிகளை உருவாக்குவது அல்லது தனிப்பயனாக்குவது கடினம்.",
   "page-index-values-open-ethereum-label": "அனைவரும் பயன்படுத்தக்கூடியது",
-  "page-index-values-open-ethereum-content-0": "Ethereum அனைவருக்கும் பொதுவானது. குறியீட்டை எவரும் பார்க்கலாம், பயன்படுத்தலாம் மற்றும் மேம்படுத்தலாம், இது அனைவருக்கும் சிறப்பாக இருக்கும்."
+  "page-index-values-open-ethereum-content-0": "Ethereum அனைவருக்கும் பொதுவானது. குறியீட்டை எவரும் பார்க்கலாம், பயன்படுத்தலாம் மற்றும் மேம்படுத்தலாம், இது அனைவருக்கும் சிறப்பாக இருக்கும்.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "இந்த ஆண்டின் மிகப்பெரிய Ethereum நிகழ்வில் சேரவும்",
+  "page-index-devconnect-banner-get-tickets": "டிக்கெட்டுகளைப் பெறுங்கள்"
 }

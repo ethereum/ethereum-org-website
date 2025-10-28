@@ -20,7 +20,6 @@ Lọgan ti pẹpẹ kan ba ni awọn ẹtọ wiwọle ailopin si tọ́kẹ̀n k
 
 - [Ethallowance](https://ethallowance.com/)(Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker)(Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (onírúurú nẹtiwọki)
 - [fífagi lée](https://revoke.cash/) (onírúurú nẹtiwọki)
 - [Unrekt](https://app.unrekt.net/) (onírúurú nẹtiwọki)
 - [EverRevoke](https://everrise.com/everrevoke/) (onírúurú nẹtiwọki)
@@ -47,12 +46,15 @@ A gbà ọ níyànjú láti ṣe àtúnṣe sí ẹ̀rọ ìfagilé rẹ lẹ́y
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ṣe o f mọ̀ síi?</div>
   <ButtonLink href="/guides/">
     Wo àwọn ìtọ́sọ́nà wa mìíràn
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Awon ibere gbogbo ìgbà
 

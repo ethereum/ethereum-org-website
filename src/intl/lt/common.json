@@ -76,7 +76,6 @@
   "enterprise": "Verslui",
   "enterprise-mainnet": "Enterprise - Ethereum pagrindinis tinklas",
   "enterprise-menu": "Verslo meniu",
-  "enterprise-private": "Enterprise - Privatus Ethereum",
   "esp": "Ekosistemos palaikymo programa",
   "eth-current-price": "Dabartinė ETH kaina (USD)",
   "ethereum": "Ethereum",
@@ -227,7 +226,7 @@
   "nav-contribute-description": "Norėdami padėti, laikykitės šių rekomendacijų",
   "nav-contribute-label": "Prisidėkite prie ethereum.org",
   "nav-dao-description": "Narių bendruomenės be centralizuoto valdymo",
-  "nav-dapps-description": "Atraskite turtingą taikomųjų programų ekosistemą naudodami Ethereum",
+  "nav-apps-description": "Atraskite turtingą taikomųjų programų ekosistemą naudodami Ethereum",
   "nav-defi-description": "Visuotinė, atvira tradicinės finansų rinkos alternatyva",
   "nav-desci-description": "Visuotinė, atvira alternatyva dabartinei mokslo sistemai",
   "nav-desoc-description": "Socialinės sąveikos ir turinio kūrimo platformos blokų grandinių pagrindu",
@@ -276,7 +275,7 @@
   "nav-layer-2-description": "Ethereum pigesni ir spartesni sandoriai",
   "nav-learn-by-coding-description": "Įrankiai, kurie padeda jums eksperimentuoti Ethereum platformoje",
   "nav-local-env-description": "Pasirinkite ir sukurtkite savo Ethereum kūrimo saugyklą",
-  "nav-mainnet-description": "Verslo blokų grandinių taikomąsias programas galima sukurti viešame tinkle Ethereum Mainnet",
+  "nav-enterprise-description": "Verslo blokų grandinių taikomąsias programas galima sukurti viešame tinkle Ethereum Mainnet",
   "nav-nft-description": "Būdas pateikti viską, kas unikalu, kaip Ethereum pagrįstą investiciją",
   "nav-open-research-description": "Viena iš pagrindinių Ethereum stiprybių – aktyvi tyrėjų bendruomenė",
   "nav-open-research-label": "Atverti tyrimą",
@@ -321,6 +320,8 @@
   "nav-staking-solo-description": "Paleiskite namų įrangą ir asmeniškai prisidėkite prie Ethereum tinklo saugumo ir decentralizacijos",
   "nav-staking-solo-label": "Savarankiškas palaikymas",
   "nav-start-building-description": "Naudinga informacija naujokams",
+  "nav-start-with-crypto-title": "Pradėkite čia",
+  "nav-start-with-crypto-description": "Pirmieji žingsniai su Ethereum",
   "nav-translation-program-description": "Bendros pastangos išversti puslapį ethereum.org į visas kalbas",
   "nav-tutorials-description": "Sudarytas bendruomenės vadovėlių sąrašas",
   "nav-use-cases-description": "Atraskite kitokio Ethereum panaudojimo idėjų",
@@ -428,5 +429,8 @@
   "withdrawals": "Palaikymo lėšų atsiėmimas",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Taip",
-  "zero-knowledge-proofs": "Įrodymas be žinių"
+  "zero-knowledge-proofs": "Įrodymas be žinių",
+  "ethereum-vs-bitcoin": "Ethereum ir Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Supraskite skirtumus tarp Ethereum ir Bitcoin"
+
 }

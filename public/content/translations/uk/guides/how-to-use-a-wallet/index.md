@@ -60,14 +60,17 @@ lang: uk
 ![Вибір зі списку гаманців для підключення](./connect2.png)
 
 5. Підтвердьте запит на підпис у вашому гаманці, щоб установити з’єднання. **Підписання цього повідомлення не має вимагати витрати ЕТН**.
-6. Готово! Почніть користуватися додатком. Ви можете знайти деякі цікаві проєкти на нашій [сторінці децентралізованих додатків (dApp)](/dapps/#explore). <br />
+6. Готово! Почніть користуватися додатком. Ви можете знайти деякі цікаві проєкти на нашій [сторінці децентралізованих додатків (dApp)](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Хочете дізнатися більше?</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Поширені запитання
 

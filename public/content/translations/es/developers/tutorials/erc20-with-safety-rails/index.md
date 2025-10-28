@@ -24,7 +24,7 @@ Si quieres ver el código fuente completo:
 
 ## Creando un contrato ERC-20 {#creating-an-erc-20-contract}
 
-Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato ERC-20. En este artículo usaremos [el Asistente de Contratos de OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Ábrelo en otra ventana del navegador y sigue estas instrucciones:
+Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato ERC-20. En este artículo usaremos [el Asistente de Contratos de OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). Ábrelo en otra ventana del navegador y sigue estas instrucciones:
 
 1. Selecciona **ERC-20**.
 2. Ingresa estos ajustes:
@@ -132,8 +132,8 @@ Algunas veces es útil tener un administrador que puede deshacer los errores. Pa
 
 OpenZeppelin proporciona dos mecanismos para activar el acceso administrativo:
 
-- Los contratos [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) tienen un único dueño. Las funciones que tiene el [modificador](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` sólo las puede activar el propietario. Los dueños pueden transferir la propiedad a otra persona o renunciar a esta completamente. Los derechos de todas las otras cuentas son generalmente idénticos.
-- Los contratos [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) tienen [control de acceso basado en roles (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
+- Los contratos [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) tienen un único dueño. Las funciones que tiene el [modificador](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `onlyOwner` sólo las puede activar el propietario. Los dueños pueden transferir la propiedad a otra persona o renunciar a esta completamente. Los derechos de todas las otras cuentas son generalmente idénticos.
+- Los contratos [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) tienen [control de acceso basado en roles (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 Para simplificar la explicación, en este artículo utilizaremos `Ownable`.
 

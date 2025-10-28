@@ -49,7 +49,7 @@ Cuir is gcás go bhfuil ETH agat ar Ethereum Mainnet ach ba mhaith leat táillí
 
 ### Daipeanna ar bhlocshlabhraí eile {#dapps-other-chains}
 
-If you’ve been using Aave on Ethereum Mainnet to supply USDT but the interest rate you may receive for supplying USDT using Aave on Polygon is higher.
+Má tá Aave á úsáid agat ar Ethereum Príomhlíonra chun USDT a sholáthar ach tá an ráta úis a fhéadfaidh tú a fháil chun USDT a sholáthar ag baint úsáide as Aave ar Polygon níos airde.
 
 ### Déan iniúchadh ar éiceachórais blocshlabhra {#explore-ecosystems}
 
@@ -59,9 +59,14 @@ Má tá ETH agat ar Ethereum Mainnet agus ba mhaith leat alt L1 a iniúchadh chu
 
 Deirimis gur mhaith leat Bitcoin dúchais (BTC) a bheith agat, ach níl cistí agat ach ar Ethereum Mainnet. Chun nochtadh do BTC a fháil ar Ethereum, is féidir leat Bitcoin Fillte (WBTC) a cheannach. Mar sin féin, is comhartha [ERC-20](/glossary/#erc-20) é WBTC ó dhúchas do líonra Ethereum, rud a chiallaíonn gur leagan Ethereum de Bitcoin é agus ní an tsócmhainn bhunaidh ar bhlocshlabhra Bitcoin. Chun BTC dúchais a bheith agat, bheadh ​​ort do shócmhainní a aistriú ó Ethereum go Bitcoin trí dhroichead a úsáid. Leis sin déanfar droichead do do chuid WBTC agus déanfar é a thiontú ina BTC dúchais. Mar mhalairt air sin, b'fhéidir gur leat BTC agus gur mhaith leat é a úsáid i bprótacail Ethereum [DeFi](/glossary/#defi). Bheadh ​​gá leis an mbealach eile a nascadh, ó BTC go WBTC ar féidir a úsáid ansin mar shócmhainn ar Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Is féidir leat gach rud thuas a dhéanamh freisin trí úsáid a bhaint as <a href="/get-eth/">malartán láraithe</a>. Mar sin féin, mura bhfuil do chistí ar mhalartú cheana féin, bheadh ​​ilchéimeanna i gceist leis, agus is dócha go mbeadh tú níos fearr as droichead a úsáid.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Is féidir leat gach rud thuas a dhéanamh freisin trí úsáid a bhaint as [malartán láraithe](/get-eth/). Mar sin féin, mura bhfuil do chistí ar mhalartú cheana féin, bheadh ​​ilchéimeanna i gceist leis, agus is dócha go mbeadh tú níos fearr as droichead a úsáid.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -99,7 +104,7 @@ Glacann go leor réiteach tógála droichid samhlacha idir an dá fhoirceann seo
 
 Trí dhroichid a úsáid is féidir leat do chuid sócmhainní a bhogadh thar bhlocshlabhraí éagsúla. Seo roinnt acmhainní a chabhróidh leat droichid a aimsiú agus a úsáid:
 
-- **[Achoimre ar Dhroichid L2BEAT](https://l2beat.com/bridges/summary) & [Anailís Riosca ar Dhroichid L2BEAT](https://l2beat.com/bridges/risk)**: Achoimre chuimsitheach ar dhroichid éagsúla, lena n-áirítear sonraí ar sciar den mhargadh, cineál droichid, agus slabhraí cinn scríbe. Tá anailís riosca ag L2BEAT freisin maidir le droichid, ag cabhrú le húsáideoirí cinntí eolasacha a dhéanamh agus iad ag roghnú droichead.
+- **[Achoimre ar Dhroichid L2BEAT](https://l2beat.com/bridges/summary) & [Anailís Riosca ar Dhroichid L2BEAT](https://l2beat.com/bridges/summary)**: Achoimre chuimsitheach ar dhroichid éagsúla, lena n-áirítear sonraí ar sciar den mhargadh, cineál droichid, agus slabhraí cinn scríbe. Tá anailís riosca ag L2BEAT freisin maidir le droichid, ag cabhrú le húsáideoirí cinntí eolasacha a dhéanamh agus iad ag roghnú droichead.
 - **[Achoimre ar Dhroichead DefiLlama](https://defillama.com/bridges/Ethereum)**: Achoimre ar mhéideanna droichead thar líonraí Ethereum.
 
 <Divider />
@@ -131,9 +136,9 @@ Tá droichid ríthábhachtach chun úsáideoirí a chur ar bord ar Ethereum L2an
 <Divider />
 
 ## Tuilleadh léitheoireachta {#further-reading}
-- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _June 18, 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _July 5, 2022 - Bartek Kiepuszewski_
-- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _January 8, 2022 - Vitalik Buterin_
-- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
-- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
+- [EIP-5164: Forghníomhú Trasshlabhra](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _ 18 Meitheamh, 2022 - Brendan Asselstine_
+- [Creat Riosca L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _ 5 Iúil, 2022 - Bartek Kiepuszewski_
+- [ "Cén fáth go mbeidh an todhchaí ilshlabhra, ach ní bheidh sé tras-shlabhra." ](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _Eanáir 8, 2022 - Vitalik Buterin_
+- [Feabhas a chur ar Shlándáil Roinnte Chun Idir-inoibritheacht Slán Trasshlabhra: Coistí Stáit Lagrange Agus Thall](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _ 12 Meitheamh, 2024 - Emmanuel Awosika_
+- [Staid na Réitigh Idir-inoibritheachta Rolla suas](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _ 20 Meitheamh, 2024 - Alex Hook_
 

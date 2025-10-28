@@ -43,9 +43,14 @@ Kafin shi Shanghai/Capella su inganta, bazaka iya anfani ko samun ribar ba ETH. 
 
 Samar da adireshi na cirewa ana buƙatan shi a duk wata gaba a duk wata asusun da aka ingantaahi kafin yazama halastacce wajen samun cire ETH daga abinda ka ajiye.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong> A kowane ingancaccan asusu akan sanya adireshi cirewa gudaɗaya, sau ɗaya.</strong> matukar adireshin da aka zaɓa aka bada shi wa masu dedetawa, wannan asusun bazai tabuɓa ko kuma a canzuwa. Dubar mallaka sau biyu da kwarewar adireshin da aka samar kafin kaddamarwa.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Akwai <strong> ba barazana ga kuɗinka a wannan lokacin </strong> dan ba'a samar da wannan bah, kamar mnemonic/sees phrase yanada sauran ajiya a awajen yanar gizo, kuma ba'a mishi son zuciya a ko wani hanyaba. Gaza ƙara takardun cirewa, zai bar makullan ETH cikin sauki a asusun da aka tabbatar kuma zai zauna har sa an samar da adireshin cirewa.
 
@@ -65,7 +70,7 @@ Cire abinda aka ajiya na yuwuwa yanzu! Cire abinda aka ajiye yana cikin sashin a
 
 Ingantawar Shanghai/Capella yasa ajiyan ETH ta baya ya dawo cikin asusun Ethereum. Wannan ya cike gurbin ajiyar kuɗin liquidity, kuma ya kawo Ethereum kusa da tafiyar wajen gina wayarwa, mizani, kula da wargajewar yanayin muhalli.
 
-- [Ƙarin bayani akan tarihin Ethereum](/history/)
+- [Ƙarin bayani akan tarihin Ethereum](/ethereum-forks/)
 - [Ƙarin bayani akan hanyar taswira na Ethereum](/roadmap/)
 
 ## Ya ake amfani da sarin cire kuɗin? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Ka duba wannan bayanan ajiyar Ethereum da cirewa na Finematics:
 
 Lokacin da tabbatarwa an tsara hi ta tallafawa kullewa na gaba, yana bukatar gina layin cirewa, na har sawan halastaccan cirewa sau 16. Wannan na yuwuwane daga asalin farawa da tabbatarwa lissafin 0, duba yuwuwar halastan cirewa a wanna asusun a duk dokokin da sare-saren, da karawa akan intanet ɗin akwai. Mai tabbatarwa zai shirya tallafawa makullai masu zuwa wajen ɗaukan na ƙarshe da aka bari, da cigaban saboda rashin iyaka.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Yi tunani akan agogo mai juyawa. Hannun da yake jan agogon yana nuna sa'a ne, cigabanshi akan hanyarshi, bai sallake wani sa'a, kuma daga bisani yakan dawo farkon inda ya fara bayan lamban karshe.<br/><br/>
 Yanzu maimakon 1 zuwa 12, abin mamaki agogon yana 0 zuwa N<em>( duk kan yawan tabbatarwa asusun wanda aka yimusu ragister akan dedetawa, sama da 500,000 acikin jan 2023).</em><br/><br/>
 Hannun agogon akan masaya zuwa tabbatarwa wanda yake bukatan a duba halascin cire shi. Yana farawa da 0, kuma ya ci gaba ta kowani hanya batare da sallake kowani asusu ba. Idan tabbatarwa na ƙarshe ya kai, makewayin yana ci gabane da komawa farko.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Ana duba asusu don cirewa {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Idan kana cikin <a href="/staking/pools/"> staking pool</a> ko rike kuɗin ajiyan, zaku iya dubawa da abin dubawa zan samun karin bayanai akan yanda ake cire kudade da rikes u, tunda ko wani aiki ana yinshi ne daban-daban.
+Idan kana cikin [ staking pool](/staking/pools/) ko rike kuɗin ajiyan, zaku iya dubawa da abin dubawa zan samun karin bayanai akan yanda ake cire kudade da rikes u, tunda ko wani aiki ana yinshi ne daban-daban.
 
-A gabaɗaya, masu amfani su saki jiki wajen dawowa abinda suka ajiye ETH, ko canzawa abinda aka ajiye da samar da amfani. Idan muhimman abu ya sami mafi babba, kudin zai iya fita, dawawo, da sake ajiyewa a <a href="https://rated.network/"> ƙaramin mai samarwa </a>. Ko, idan ka haɗa wadataccen ETH zaka iya <a href="/staking/solo/"> ajiye shi daga gida</a>.
+A gabaɗaya, masu amfani su saki jiki wajen dawowa abinda suka ajiye ETH, ko canzawa abinda aka ajiye da samar da amfani. Idan muhimman abu ya sami mafi babba, kudin zai iya fita, dawawo, da sake ajiyewa a <a href="https://rated.network/"> ƙaramin mai samarwa </a>. Ko, idan ka haɗa wadataccen ETH zaka iya [ ajiye shi daga gida](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ A'a. Da zarar mai tabbatarwa ya fita da sauran kuɗin gabaki ɗaya, duk wani kar
 
 - [Saka Ajiyar Cire Kuɗi na Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain cirewa ne mai turuwa kaman aiki](https://eips.ethereum.org/EIPS/eip-4895)
-- [Etgereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Cire Kuɗin ETH (Gwaji) da potuz & amp; Hsiao- wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain cirewa na turawa kaman aiki da Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Fahimtar Mai Tabbatar da Daidai Ragowar Kuɗi](https://www.attestant.io/posts/understanding-validator-effective-balance/)

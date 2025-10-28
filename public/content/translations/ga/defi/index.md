@@ -48,7 +48,7 @@ Ceann de na bealaí is fearr chun acmhainneacht DeFi a fheiceáil ná na fadhban
 | Bíonn na margaí ar oscailt i gcónaí.                                                                                                                  | Dúnann na margaí mar go dteastaíonn sosanna ó fhostaithe.                                                                                                        |
 | Tá sé bunaithe ar thrédhearcacht - is féidir le duine ar bith breathnú ar shonraí táirge agus iniúchadh a dhéanamh ar an gcaoi a n-oibríonn an córas. | Is leabhair dhúnta iad institiúidí airgeadais: ní féidir leat iarraidh féachaint ar a stair iasachtaí, ar thaifead ar a sócmhainní bainistithe, agus mar sin de. |
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Foghlaim faoi aipeanna DeFi
 </ButtonLink>
 
@@ -64,12 +64,15 @@ Tógann Ethereum air sin. Cosúil le Bitcoin, ní féidir leis na rialacha athr�
 
 Tá cuma ait ar an scéal seo... "cén fáth a mbeinn ag iarraidh mo chuid airgid a ríomhchlárú"? Mar sin féin, níl sé seo ach ina ghné réamhshocraithe de chomharthaí ar Ethereum. Is féidir le duine ar bith an loighic a ríomhchlárú in íocaíochtaí. Mar sin is féidir leat rialú agus slándáil Bitcoin a fháil i dteannta leis na seirbhísí a sholáthraíonn institiúidí airgeadais. Leis sin ligtear duit rudaí a dhéanamh le criptea-airgeadraí nach féidir leat a dhéanamh le Bitcoin cosúil le hiasachtaí a thabhairt agus iasachtaí a fháil, íocaíochtaí a sceidealú, infheistíocht a dhéanamh i gcistí innéacs agus go leor eile.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Foghlaim faoinár moltaí le haghaidh feidhmchláir DeFi le triail a bhaint astu mura bhfuil tú cleachta le hEthereum.</div>
-  <ButtonLink href="/dapps/?category=finance#explore">
+  <ButtonLink href="/apps/categories/defi">
     Foghlaim faoi aipeanna DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Cad is féidir leat a dhéanamh le DeFi? {#defi-use-cases}
 
@@ -93,7 +96,7 @@ Tá rogha dhíláraithe eile ann seachas an chuid is mó de na seirbhísí airge
 
 Mar bhlocshlabhra, tá Ethereum deartha chun idirbhearta a sheoladh ar bhealach slán agus domhanda. Cosúil le Bitcoin, déanann Ethereum airgead a sheoladh ar fud an domhain chomh héasca le ríomhphost a sheoladh. Cuir isteach [ainm ENS](/glossary/#ens) (cosúil le bob.eth) nó seoladh cuntais an fhaighteora ó do sparán agus rachaidh d’íocaíocht díreach chucu faoi chionn nóiméid (go hiondúil). Chun íocaíochtaí a sheoladh nó a fháil, beidh [sparán](/wallets/) uait.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna íocaíochta
 </ButtonLink>
 
@@ -124,7 +127,7 @@ Tá dhá phríomhchineál ann chun airgead a fháil ar iasacht ó sholáthraithe
 - Idir comhghleacaí, rud a chiallaíonn go bhfaighidh an t‑iasachtaí an iasacht go díreach ó iasachtóir ar leith.
 - Pobalbhunaithe nuair a chuireann iasachtóirí cistí (leachtacht) ar fáil do chomhthiomsú ar féidir le hiasachtaithe iasachtaí a fháil uaithi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna iasachtaíochta
 </ButtonLink>
 
@@ -186,7 +189,7 @@ Is féidir leat ús a thuilleamh ar do crypto trína thabhairt ar iasacht agus f
 - Méadóidh do aDai bunaithe ar na rátaí úis agus feicfidh tú d’iarmhéid ag fás i do sparán. Ag brath ar an [APR](/glossary/#apr), beidh iarmhéid do sparáin rud éigin mar 100.1234 tar éis cúpla lá nó fiú cúpla uair an chloig!
 - Is féidir leat méid Dai rialta a aistarraingt atá comhionann le d’iarmhéid aDai ag am ar bith.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna iasachta
 </ButtonLink>
 
@@ -214,7 +217,7 @@ Tá na mílte comharthaí ar Ethereum. Le malartáin dhíláraithe (DEXanna) lig
 
 Mar shampla, más mian leat an crannchur gan chailliúint PoolTogether (a gcuirtear síos air thuas) a úsáid, beidh comhartha cosúil le Dai nó USDC ag teastáil uait. Ligeann na DEXanna seo duit do chuid ETH a mhalartú ar na comharthaí sin agus ar ais arís nuair a bheidh tú críochnaithe.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach ar mhalartáin comharthaí
 </ButtonLink>
 
@@ -226,7 +229,7 @@ Tá roghanna níos forbartha ann do thrádálaithe ar mhaith leo beagán níos m
 
 Nuair a úsáideann tú malartán láraithe caithfidh tú do shócmhainní a thaisceadh roimh an trádáil agus muinín a bheith agat as aire a thabhairt dóibh. Cé go bhfuil do shócmhainní i dtaisce, tá siad i mbaol mar gur spriocanna tarraingteacha iad malartáin láraithe do hackers.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna trádála
 </ButtonLink>
 
@@ -238,7 +241,7 @@ Tá táirgí bainistíochta cistí ar Ethereum a dhéanfaidh iarracht do phunann
 
 Sampla maith is ea an [ciste Innéacs Pulse DeFi (DPI)](https://defipulse.com/blog/defi-pulse-index/). Is ciste é seo a athchothromaíonn go huathoibríoch chun a chinntiú go n-áiríonn do phunann na comharthaí DeFi is fearr i gcónaí trí chaipitliú margaidh. Ní gá duit aon cheann de na sonraí a bhainistiú riamh agus is féidir leat tarraingt siar ón gciste aon uair is mian leat.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna infheistíochta
 </ButtonLink>
 
@@ -252,7 +255,7 @@ Is ardán iontach é Ethereum le haghaidh an tslua-chistithe:
 - Tá sé trédhearcach ionas gur féidir le tiomsaitheoirí airgid a chruthú cé mhéad airgid a bailíodh. Is féidir leat a rianú fiú conas atá cistí á chaitheamh níos déanaí.
 - Is féidir le tiomsaitheoirí airgid aisíocaíochtaí uathoibríocha a shocrú má tá, mar shampla, spriocdháta sonrach agus íosmhéid nach bhfuil comhlíonta.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna slua-chistithe
 </ButtonLink>
 
@@ -260,7 +263,7 @@ Is ardán iontach é Ethereum le haghaidh an tslua-chistithe:
 
 Is bogearraí foinse oscailte é Ethereum agus go dtí seo tá go leor den obair maoinithe ag an bpobal. Mar thoradh air sin tá fás ar shamhail nua spéisiúil tiomsaithe airgid: maoiniú cuadratach. D’fhéadfadh sé seo feabhas a chur ar an mbealach a mhaoinímid gach cineál earraí poiblí sa todhchaí.
 
-Cinntíonn maoiniú cearnógach gurb iad na tionscadail a fhaigheann an maoiniú is mó na cinn leis an éileamh is uathúla. I bhfocail eile, tionscadail a sheasann chun feabhas a chur ar shaol na ndaoine is mó. Seo mar a oibríonn sé:
+Cinntíonn maoiniú cuadratach gurb iad na tionscadail a fhaigheann an maoiniú is mó na cinn leis an éileamh is uathúla. I bhfocail eile, tionscadail a sheasann chun feabhas a chur ar shaol na ndaoine is mó. Seo mar a oibríonn sé:
 
 1. Tá comhthiomsú cistí deonaithe ann.
 2. Cuirtear tús le babhta maoinithe poiblí.
@@ -281,7 +284,7 @@ Tá sé mar aidhm ag árachas díláraithe árachas a dhéanamh níos saoire, n�
 
 Is féidir le táirgí Ethereum, cosúil le haon bhogearraí, fulaingt ó fhabhtanna agus ó dhúshaothair. Mar sin, anois díreach tá a lán de na táirgí árachais sa spás ag díriú ar a n-úsáideoirí a chosaint i gcoinne caillteanas cistí. Mar sin féin, tá tionscadail ag tosú ar chlúdach a fhorbairt do gach rud a d'fhéadfadh tarlú sa saol. Sampla maith de seo is ea clúdach Barraí Etherisc a bhfuil sé mar aidhm aige [feirmeoirí ar sealbhóirí beaga iad sa Chéinia a chosaint ar thriomaigh agus tuilte](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Is féidir le hárachas díláraithe cumhdach níos saoire a sholáthar d’fheirmeoirí ar minic a mbíonn praghsanna le haghaidh árachas traidisiúnta ró-ard.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna árachais
 </ButtonLink>
 
@@ -291,7 +294,7 @@ Is féidir le táirgí Ethereum, cosúil le haon bhogearraí, fulaingt ó fhabht
 
 Agus an oiread sin ar siúl, beidh bealach uait chun súil a choinneáil ar do chuid infheistíochtaí, iasachtaí agus trádála go léir. Tá go leor táirgí ann a ligeann duit do ghníomhaíocht DeFi go léir a chomhordú ó áit amháin. Seo áilleacht ailtireacht oscailte DeFi. Is féidir le foirne comhéadain a chruthú nach féidir leat d'iarmhéideanna thar tháirgí a fheiceáil, ach is féidir leat a gcuid gnéithe a úsáid freisin. Seans go mbeidh sé seo úsáideach duit agus tú ag foghlaim tuilleadh faoi DeFi.
 
-<ButtonLink href="/dapps/?category=finance#explore">
+<ButtonLink href="/apps/categories/defi">
   Féach daipeanna punann
 </ButtonLink>
 
@@ -323,7 +326,7 @@ Is féidir leat smaoineamh ar DeFi i gcisil:
 1. Tá stair na n-idirbheart agus staid na gcuntas sa bhlocshlabhra - Ethereum.
 2. Na sócmhainní – [ETH](/eth/) agus na comharthaí eile (airgeadraí).
 3. Na prótacail – [conarthaí cliste](/glossary/#smart-contract) trína soláthraítear an fheidhmiúlacht, mar shampla, seirbhís a cheadaíonn iasachtú díláraithe sócmhainní.
-4. [Na feidhmchláir](/dapps/) – na táirgí a úsáidimid chun na prótacail a bhainistiú agus a rochtain.
+4. [Na feidhmchláir](/apps/) – na táirgí a úsáidimid chun na prótacail a bhainistiú agus a rochtain.
 
 Nóta: úsáideann cuid mhór de DeFi [caighdeán ERC-20](/glossary/#erc-20). Úsáideann feidhmchláir in DeFi fillteán le haghaidh ETH ar a dtugtar éitear fillte (WETH). [Foghlaim tuilleadh faoi éitear fillte](/wrapped-eth).
 

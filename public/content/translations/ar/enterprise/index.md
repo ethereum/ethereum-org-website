@@ -40,7 +40,7 @@ lang: ar
 - [Blockapps](https://blockapps.net/) _تنفيذ بروتوكول إيثريوم للمؤسسات وأدوات وAPIs من منصة STRATO_
 - [Clearmatics](https://www.clearmatics.com/about) _بروتوكولات وبنية منصة نظراء، سلسلة كتل R&D للشركة_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _يوفر نفس ميزات ووظائف HF Besu، بالإضافة إلى فوائد إضافية تركز على المؤسسة_
-- [Quorum](https://www.goquorum.com/) _منصة سلسلة كتل مفتوحة المصدر تجمع بين ابتكار مجتمع إيثريوم العام وتحسينات لدعم احتياجات المؤسسة_
+- [Quorum](https://docs.goquorum.consensys.io/) _منصة سلسلة كتل مفتوحة المصدر تجمع بين ابتكار مجتمع إيثريوم العام وتحسينات لدعم احتياجات المؤسسة_
 
 ## البروتوكول والبنية التحتية {#protocol-and-infrastructure}
 
@@ -62,8 +62,7 @@ lang: ar
 ### الخصوصية {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _المزيد من المعلومات [هنا](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _المزيد من المعلومات [هنا](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _المزيد من المعلومات [هنا](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _المزيد من المعلومات [هنا](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### الأمان {#security}
 
@@ -73,7 +72,7 @@ lang: ar
 ### الأدوات {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _منصة لتحليل البيانات بواسطة إيثريوم_
-- [Treum](https://treum.io/) _جلب الشفافية وقابلية التتبع وقابلية الإتجار لسلالس الإمداد، باستخدام تقنية سلسلة الكتل_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _جلب الشفافية وقابلية التتبع وقابلية الإتجار لسلالس الإمداد، باستخدام تقنية سلسلة الكتل_
 
 ## المجتمع المؤسسي للمطورين {#enterprise-developer-community}
 
@@ -81,7 +80,6 @@ lang: ar
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu channel)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow channel)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)

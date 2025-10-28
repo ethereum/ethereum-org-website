@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { useTranslations } from "next-intl"
 import { useAccount } from "wagmi"
 
 import ConnectToEthereumButton from "@/components/ConnectToEthereumButton"
@@ -21,6 +22,7 @@ const ConnectYourWallet = ({
   totalSteps: number
 }) => {
   const { isConnected } = useAccount()
+  const t = useTranslations("page-start")
 
   useEffect(() => {
     if (isConnected) {
@@ -41,17 +43,16 @@ const ConnectYourWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">Connect Your Wallet</h2>
-          <p>
-            You can use your new wallet as a single account in all apps and
-            projects on Ethereum. No separate accounts needed.
-          </p>
+          <h2 className="text-3xl font-bold">
+            {t("page-start-connect-wallet-title")}
+          </h2>
+          <p>{t("page-start-connect-wallet-description")}</p>
         </div>
         <div className="hidden flex-col items-center justify-center gap-4 lg:flex">
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
             <p className="text-center text-md font-bold">
-              This is your account
+              {t("page-start-connect-wallet-account-message")}
             </p>
           )}
           <ConnectToEthereumButton
@@ -74,7 +75,7 @@ const ConnectYourWallet = ({
                 })
               }}
             >
-              Lets continue
+              {t("page-start-connect-wallet-continue")}
             </Button>
           )}
         </div>
@@ -84,7 +85,7 @@ const ConnectYourWallet = ({
           <Image
             className="hidden lg:block"
             src={FinanceImage}
-            alt="Finance"
+            alt={t("page-start-connect-wallet-finance-alt")}
             width={370}
             height={370}
           />
@@ -92,7 +93,7 @@ const ConnectYourWallet = ({
             <Image
               className="block lg:hidden"
               src={FinanceImage}
-              alt="Finance"
+              alt={t("page-start-connect-wallet-finance-alt")}
               width={200}
               height={200}
             />
@@ -102,7 +103,7 @@ const ConnectYourWallet = ({
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
             <p className="text-center text-md font-bold">
-              This is your account
+              {t("page-start-connect-wallet-account-message")}
             </p>
           )}
           <ConnectToEthereumButton
@@ -125,7 +126,7 @@ const ConnectYourWallet = ({
                 })
               }}
             >
-              Lets continue
+              {t("page-start-connect-wallet-continue")}
             </Button>
           )}
         </div>

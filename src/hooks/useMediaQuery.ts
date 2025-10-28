@@ -24,7 +24,7 @@ export function useMediaQuery(
       media: query,
       matches: !IS_SERVER
         ? window.matchMedia(query).matches
-        : !!_fallbackQueries[idx],
+        : (_fallbackQueries?.[idx] ?? false),
     }))
   })
 

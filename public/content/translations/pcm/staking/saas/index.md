@@ -86,7 +86,7 @@ As yu dey yus one SaaS provida, yu dey entrust di operashon of yor node to someo
 
 Afta kompleshon of di slashing/exiting process, dem go transfa dis funds to di witdrawal address wey dem assign to di validator. Di rikwaya to dey provide one witdrawal address to enabol. Dis for don provide di first deposit. If not, yu go nid di validator witdrawal keys to sign one messaj wey dey diklare witdrawal address. If yu nor provide any witdrawal address, funds go rimain lock ontil yu provide am.
 
-Make yu kontact SaaS provida for more details on any guaratees abi insurans opshons, and for instrukshons on hau to provide one witdrawal address. If yu go laik to dey in kontrol of yor validator setup, <a href="/staking/solo/">make yu learn more abou hau yu fit stake yor ETH</a>.
+Make yu kontact SaaS provida for more details on any guaratees abi insurans opshons, and for instrukshons on hau to provide one witdrawal address. If yu go laik to dey in kontrol of yor validator setup, [make yu learn more abou hau yu fit stake yor ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Further reading {#further-reading}

@@ -8,7 +8,7 @@ image: /images/staking/leslie-pool.png
 alt: Leslie na di rhino weh deh swim for di pool.
 sidebarDepth: 2
 summaryPoints:
-  - Stake and earn riwods wit any amount of TEH as yu dey join forces wit odas
+  - Stake and earn riwods wit any amount of ETH as yu dey join forces wit odas
   - Skip di hard part and entrust validator operashon to one third-party
   - Hold to dey stake tokens in yor own wallet
 ---
@@ -26,7 +26,7 @@ In addishon to di benefits wi outline for waw [intro to staking](/staking/), to 
 <CardGrid>
   <Card title="Smoll tins wey nor fit make yu enta" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Make yu put money tuday" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />

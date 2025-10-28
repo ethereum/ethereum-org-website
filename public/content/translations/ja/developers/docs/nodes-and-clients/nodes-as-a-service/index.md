@@ -156,19 +156,6 @@ sidebarDepth: 2
     - 時間課金制
     - 24時間年中無休のダイレクトサポート
 
-- [**DataHub**](https://datahub.figment.io)
-  - [ドキュメント](https://docs.figment.io/)
-  - 機能
-    - 毎月300万件のリクエストの無料ティアオプション
-    - RPCとWSSエンドポイント
-    - 専用フルノードとアーカイブノード
-    - 自動スケーリング(ボリューム割引)
-    - 無料のアーカイブデータ
-    - サービス分析
-    - ダッシュボード
-    - 24時間年中無休のダイレクトサポート
-    - 暗号通貨での支払い(エンタープライズ)
-
 - [**DRPC**](https://drpc.org/)
   - [ドキュメント](https://docs.drpc.org/)
   - 機能
@@ -264,7 +251,7 @@ sidebarDepth: 2
     - ダイレクト技術サポート
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [ドキュメント](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [ドキュメント](https://docs.nodereal.io/docs/introduction)
   - 機能
     - 信頼性の高い、高速かつスケーラブルなRPC APIサービス
     - Web3デベロッパー向けに改良されたAPI

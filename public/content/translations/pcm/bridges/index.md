@@ -59,9 +59,14 @@ If yu get ETH on top Ethereum Mainnet and yu wan eksplor one alt L1 to try out d
 
 Make wi sey yu wan own mative Bitcoin (BTC), but yu only get funds for Ethereum Mainnet. If yu wan gain eksposure to BTC for Ethereum, yu fit buy Wrapped Bitcoin (WBTC). Haueva, WBTC na [ERC-20](/glossary/#erc-20) token native to Ethereum netwok, and dis tin mean sey na Ethereum vashon of Bitcoin, and nor bi original asset for Bitcoin blockchain. To own native BTC, yu go nid bridge yor assets from Ethereum to Bitcoin as yu dey yus one bridge. Dis go bridge yor WBTC and konvert am into native BTC. Also, yu fit own BTC and wan yus am for Ethereum [DeFi](/glossary/#defi) protokols. Dis go nid to dey bridge di oda way, from BTC to WBTC wey dem fit kon yus as one asset on Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Yu fit also do all of di above as yu dey yus one <a href="/get-eth/">sentralized ekshanj</a>. Haueva, onless yor funds don already dey on one ekshanj, im go nid plenti steps, and yu go fit get betta as yu dey yus bridge.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Yu fit also do all of di above as yu dey yus one [sentralized ekshanj](/get-eth/). Haueva, onless yor funds don already dey on one ekshanj, im go nid plenti steps, and yu go fit get betta as yu dey yus bridge.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -99,7 +104,7 @@ Plenti solushons wey dey bridge dey adopt model bitwin dis two oposite ends wit 
 
 To dey yus bridges dey allow yu muv yor assets akross difren blockchains. Here na some risorsis wey fit helep yu find and yus bridges:
 
-- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/risk)**: One ogbonge summary of difren bridges, wey inklude ditails on market shia, bridge type, and destinashon chains. L2BEAT also get one risk analysis for bridges, as im dey helep users make koret disishons wen dem dey selet one bridge.
+- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/summary)**: One ogbonge summary of difren bridges, wey inklude ditails on market shia, bridge type, and destinashon chains. L2BEAT also get one risk analysis for bridges, as im dey helep users make koret disishons wen dem dey selet one bridge.
 - **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: One summary of bridge volumes akross Ethereum netwoks.
 
 <Divider />

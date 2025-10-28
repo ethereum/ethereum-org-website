@@ -17,7 +17,7 @@ summaryPoints:
 
 Об’єднаний стейкінг — це спосіб, який дає змогу багатьом користувачам, у яких недостатня сума ефірів (ETH), отримати 32 ETH, необхідних для активації набору ключів валідатора. Функція пулу не підтримується протоколом, тому для задоволення цієї потреби було створено окремі рішення.
 
-Деякі пули працюють за допомогою смартконтрактів, де кошти можуть бути внесені в контракт, який надійно керує вашою часткою й відстежує її, а також видає вам токен, який представляє цю вартість. Інші пули можуть не використовувати смартконтракти, а натомість опосередковуються поза мережею.
+Деякі пули працюють за допомогою смартконтрактів, де кошти можуть бути внесені в контракт, який надійно керує вашою часткою й відстежує її, а також видає вам токен, який представляє цю вартість. Інші пули можуть не використовувати смарт-контракти й функціонувати поза блокчейном.
 
 ## Навіщо робити стейкінг із пулом? {#why-stake-with-a-pool}
 
@@ -26,7 +26,7 @@ summaryPoints:
 <CardGrid>
   <Card title="Низький бар’єр входу" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Стейкінг сьогодні" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Стейкінг токенів" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Стейкінг токенів" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />

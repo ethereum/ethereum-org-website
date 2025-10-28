@@ -163,19 +163,19 @@ return (
       <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
       <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="e.g. My first NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
       <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="e.g. Even cooler than cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
@@ -203,7 +203,7 @@ Kullanıcıların akıllı sözleşmenizle etkileşime girebilmeleri için Ether
 
 Bu öğretici için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcıda sanal bir cüzdan olan MetaMask'ı kullanacağız. Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, [bu sayfaya](/developers/docs/transactions/) bakın.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun \(böylece gerçek parayla uğraşmayız\).
+[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun \(böylece gerçek parayla uğraşmayız\).
 
 ### Bir Musluktan ether ekleyin {#add-ether-from-faucet}
 
@@ -260,7 +260,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -370,7 +370,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -434,7 +434,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -479,7 +479,7 @@ Meta verilerimizi IPFS'de depolamak için, uygun bir IPFS API'si ve araç takım
 
 ## Meta verilerinizi IPFS'ye sabitlemek için Pinata'yı kullanın {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-[Pinata](https://pinata.cloud/) hesabınız yoksa, [buradan](https://pinata.cloud/signup) ücretsiz bir hesap için kaydolun ve e-postanızla hesabınızı doğrulamak için adımları tamamlayın.
+[Pinata](https://pinata.cloud/) hesabınız yoksa, [buradan](https://app.pinata.cloud/auth/signup) ücretsiz bir hesap için kaydolun ve e-postanızla hesabınızı doğrulamak için adımları tamamlayın.
 
 ### Pinata API anahtarınızı oluşturun {#create-pinata-api-key}
 
@@ -518,7 +518,7 @@ Dosyayı kaydettikten sonra JSON meta verilerinizi IPFS'ye yüklemek için fonks
 
 ### PinJSONToIPFS'yi uygulayın {#pin-json-to-ipfs}
 
-Neyse ki, Pinata'nın [özellikle JSON verilerini IPFS'ye yüklemek için bir API'si](https://pinata.cloud/documentation#PinJSONToIPFS) ve axios örneğiyle bazı ufak değişiklikler yaparak birlikte kullanabileceğimiz uygun bir JavaScript'i var.
+Neyse ki, Pinata'nın [özellikle JSON verilerini IPFS'ye yüklemek için bir API'si](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) ve axios örneğiyle bazı ufak değişiklikler yaparak birlikte kullanabileceğimiz uygun bir JavaScript'i var.
 
 `utils` klasörünüzde `pinata.js` adında başka bir dosya oluşturalım ve ardından .env dosyasından Pinata sırrımızı ve anahtarımızı şu şekilde içe aktaralım:
 

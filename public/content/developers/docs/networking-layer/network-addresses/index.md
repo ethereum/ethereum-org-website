@@ -36,5 +36,4 @@ Ethereum Node Records (ENRs) are a standardized format for network addresses on 
 ## Further Reading {#further-reading}
 
 - [EIP-778: Ethereum Node Records (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [Network addresses in Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
 - [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

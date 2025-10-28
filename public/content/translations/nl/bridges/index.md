@@ -59,9 +59,14 @@ Als je ETH hebt op het Ethereum Mainnet en je een alt L1 wilt verkennen om hun e
 
 Laten we zeggen dat je native Bitcoin (BTC) wilt hebben, maar dat je alleen fondsen hebt op Ethereum Mainnet. Voor het krijgen van blootstelling aan BTC op Ethereum, kun je Wrapped Bitcoin (WBTC) kopen. WBTC is echter een [ERC-20](/glossary/#erc-20)-token dat hoort bij het Ethereum-netwerk, wat betekent dat het een Ethereum-versie van Bitcoin is en niet het oorspronkelijke activum op de Bitcoin-blockchain. Om je eigen BTC te bezitten, moet je je activa overbruggen van Ethereum naar Bitcoin met behulp van een brug. Dit zal je WBTC overbruggen en omzetten in echte BTC. Of je zou ook BTC kunnen bezitten die je wilt gebruiken in Ethereum [DeFi](/glossary/#defi)-protocollen. Hiervoor zou overbrugging de andere kant op vereisen, van BTC naar WBTC, dat vervolgens kan worden gebruikt als een activum op Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Je kunt ook al het bovenstaande doen met behulp van een <a href="/get-eth/">gecentraliseerde exchange</a>. Tenzij je fondsen echter al op een exchange staan, zou dit meerdere stappen vergen, en dus ben je waarschijnlijk beter af met het gebruik van een brug.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Je kunt ook al het bovenstaande doen met behulp van een [gecentraliseerde exchange](/get-eth/). Tenzij je fondsen echter al op een exchange staan, zou dit meerdere stappen vergen, en dus ben je waarschijnlijk beter af met het gebruik van een brug.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

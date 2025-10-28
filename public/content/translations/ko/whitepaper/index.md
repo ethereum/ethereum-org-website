@@ -383,7 +383,7 @@ DAO를 코드화 하는 대략적인 방법은 다음과 같다. 가장 단순�
 3. 사실상 채굴력 분배는 급진적으로 불평등하게 될 수도 있다.
 4. 네트워크에 위해를 가하려는 투기자들, 정적들, 혹은 그냥 이상한 사람들이 존재하며, 이들은 자신들의 비용에 비해 전체 네트워크 검증 비용이 훨씬 높게 나오는 계약을 생성할 수 있다.
 
-(1)은 채굴자들이 블록에 포함하는 거래의 수를 줄이도록 유도하고, (2)는 `NC`를 증가시킨다. 따라서 이들 두 효과는 적어도 부분적으로 서로를 상쇄한다.<sup>[방법 알아보기](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3)과 (4)가 주요한 문제이다. 이 문제들을 해결하기 우리는 단순하게 상한을 도입하였다. 즉, 어떠한 블록도 장기적인 지수이동평균의 `BLK_LIMIT_FACTOR`배 이상 연산을 수행할 수 없도록 하였다. 구체적으로
+(1)은 채굴자들이 블록에 포함하는 거래의 수를 줄이도록 유도하고, (2)는 `NC`를 증가시킨다. 따라서 이들 두 효과는 적어도 부분적으로 서로를 상쇄한다.<sup>[방법 알아보기](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3)과 (4)가 주요한 문제이다. 이 문제들을 해결하기 우리는 단순하게 상한을 도입하였다. 즉, 어떠한 블록도 장기적인 지수이동평균의 `BLK_LIMIT_FACTOR`배 이상 연산을 수행할 수 없도록 하였다. 구체적으로
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -508,10 +508,10 @@ _연속적인 통화 발행에도 불구하고, 공급 증가율은 비트코인
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 와 자동화된 에이전트, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [튜링 페스티벌에서 스마트 프로퍼티에 대한 Mike Hearn](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
-19. [이더리움 RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [이더리움 머클 패트리시아 트리](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [이더리움 RLP](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [이더리움 머클 패트리시아 트리](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 의 머클 합 트리](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_본 백서의 역사를 알고 싶으면, [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)를 참조하십시오._
+_본 백서의 역사를 알고 싶으면, [this wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)를 참조하십시오._
 
 _여러가지의 커뮤니티 기반 오픈소스 소프트웨어 프로젝트와 마찬가지로, 이더리움은 초기 등장 이후로 발전해왔습니다. 이더리움의 최신 개발 동향과 프로토콜이 어떻게 바뀌었는지에 대해 알고 싶으시다면, [this guide](/learn/)를 추천드립니다._

@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Oricine este autorizat să transfere un token este autorizat să îl și ardă. În timp ce arderea pare echivalentul unui transfer la adresa zero, această adresă nu primește de fapt tokenul. Aceasta ne permite să eliberăm tot spațiul de stocare folosit pentru token, ceea ce poate reduce costul de gaz al tranzacției.
 
-# Utilizarea acestui contract {#using-contract}
+## Utilizarea acestui contract {#using-contract}
 
 Spre deosebire de Solidity, Vyper nu are funcția de moștenire. Aceasta este o opțiune deliberată de concepție, pentru a conferi claritate codului, facilitându-i prin aceasta securizarea. Deci, pentru a vă crea propriul contract Vyper ERC-721, porniți de la [acest contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) și modificați-l pentru a implementa logica operațională pe care o doriți.
 
-## Concluzie {#conclusion}
+### Concluzie {#conclusion}
 
 În recapitulare, iată câteva din cele mai importante idei din acest contract:
 

@@ -39,9 +39,9 @@ Outre des recherches prospectives, certaines refontes fondamentales du protocole
 
 #### Lecture de fond {#background-reading}
 
-- Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
 - [Article Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Explication Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Explication Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Article Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Recherche récente {#recent-research}
@@ -83,7 +83,7 @@ Un nœud Ethereum est nécessaire pour faire fonctionner deux logiciels :
 1. un client de consensus chargé de suivre la tête de la blockchain, de propager les blocs et de gérer la logique de consensus
 2. un client d'exécution permettant de prendre en charge la machine virtuelle Ethereum et d'exécuter des transactions et des contrats intelligents
 
-Voir la [page des nœuds et des clients] (/developers/docs/nodes-and-clients/) pour plus de détails sur les nœuds et les clients et pour une liste de toutes les implémentations clients actuelles. Vous pouvez également consulter l'historique de toutes les mises à jour d'Ethereum sur la [page Historique](/history/).
+Voir la [page des nœuds et des clients] (/developers/docs/nodes-and-clients/) pour plus de détails sur les nœuds et les clients et pour une liste de toutes les implémentations clients actuelles. Vous pouvez également consulter l'historique de toutes les mises à jour d'Ethereum sur la [page Historique](/ethereum-forks/).
 
 ### Clients d'exécution {#execution-clients}
 
@@ -224,7 +224,7 @@ La recherche économique sur Ethereum suit globalement deux approches : valider 
 
 #### Lectures de référence {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Atelier ETHconomics à Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Recherche récente {#recent-research-9}
@@ -307,7 +307,7 @@ Il est nécessaire de disposer d'un plus grand nombre d'outils d'analyse de donn
 
 #### Recherche récente {#recent-research-14}
 
-- [Analyse des données par le Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Analyse des données par le Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Applications et outils {#apps-and-tooling}
 
@@ -358,7 +358,7 @@ Les outils destinés aux développeurs Ethereum s'améliorent rapidement. Il res
 
 ### Oracles {#oracles}
 
-Les oracles importent des données hors chaîne sur la blockchain de manière décentralisée et sans autorisation. L'obtention de ces données sur la chaîne permet aux DApps d'être réactives aux phénomènes du monde réel, tels que les fluctuations de prix des actifs réels, les événements dans les applications hors chaîne, ou même les changements météorologiques.
+Les oracles importent des données hors chaîne sur la blockchain de manière décentralisée et sans autorisation. L'obtention de ces données sur la chaîne permet aux Dapps d'être réactives aux phénomènes du monde réel, tels que les fluctuations de prix des actifs réels, les événements dans les applications hors chaîne, ou même les changements météorologiques.
 
 #### Lectures de référence {#background-reading-18}
 

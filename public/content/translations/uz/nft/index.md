@@ -54,12 +54,15 @@ NFT ko‘p narsalar uchun ishlatiladi, jumladan:
 
 Ehtimol, siz o‘z ijodingizda nazoratni yo‘qotmasdan va daromadingizni vositachilarga berib yubormasdan, NFTʼlar orqali ulashishni istaydigan san’atkordirsiz. Siz yangi shartnoma yaratib, NFTlar miqdorini, ularning xususiyatlarini va muayyan san’at asariga bo‘lgan havolani belgilashingiz mumkin. Sanʼatkor sifatida **siz aqlli shartnomaga o‘zingizga to‘lanishi kerak bo‘lgan royaltilarni dasturlashtirishingiz mumkin** (masalan, har safar NFT boshqa shaxsga o‘tkazilganda, sotuv narxining 5 foizini shartnoma egasiga o‘tkazish). Siz har doim NFTʼlarni yaratganingizni isbotlay olasiz, chunki shartnomani joylashtirgan [hamyon](/glossary/#wallet) sizning ixtiyoringizda. Xaridorlaringiz kolleksiyangizdan **haqiqiy NFTʼga** egalik qilishlarini osongina isbotlay olishlari mumkin, chunki ularning hamyon [manzili](/glossary/#address) aqlli shartnomaningizdagi token bilan bog‘langan. Ular Ethereum ekotizimi bo‘ylab uning haqiqiyligiga to‘la ishonch bilan foydalana oladi.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>NFT san’at asarlari va kolleksiyalarini o‘rganing, sotib oling yoki o‘zingiznikini yarating...</div>
-  <ButtonLink href="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/apps/categories/collectibles">
     NFT san’atini o‘rganing
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Yoki sport tadbiriga chipta olishni ko‘rib chiqing. Xuddi **tadbir tashkilotchisi qancha chipta sotishni tanlashi mumkin bo‘lganidek**, NFT yaratuvchisi ham nechta nusxa mavjud bo‘lishini belgilay oladi. Ba’zan bular 5000 ta umumiy kirish chiptasi kabi aynan o‘xshash nusxalar bo‘ladi. Ba’zida bir-biriga juda o‘xshash, ammo har biri biroz farqli bo‘lgan bir nechta nusxa yaratiladi, masalan, belgilangan o‘rindiqli chipta kabi. Bularni vositachilarga pul to‘lamasdan tengma-teng sotib olish va sotish mumkin. Xaridor esa shartnoma manzilini tekshirish orqali chiptaning haqiqiyligiga doim ishonch hosil qiladi.
 

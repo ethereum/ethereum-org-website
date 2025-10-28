@@ -1,6 +1,6 @@
 ---
 title: Transfers and approval of ERC-20 tokens from a solidity smart contract
-description: How to use a smart contract to interact with a token using the Solidity language
+description: Build a DEX smart contract that handles ERC-20 token transfers and approvals using Solidity.
 author: "jdourlens"
 tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: intermediate
@@ -13,7 +13,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 In the previous tutorial we studied [the anatomy of an ERC-20 token in Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.
 
-For this smart contract, we’ll create a really dummy decentralized exchange where a user can trade ether for our newly deployed [ERC-20 token](/developers/docs/standards/tokens/erc-20/).
+For this smart contract, we’ll create a real dummy decentralized exchange where a user can trade ether for our newly deployed [ERC-20 token](/developers/docs/standards/tokens/erc-20/).
 
 For this tutorial we’ll use the code we wrote in the previous tutorial as a base. Our DEX will instantiate an instance of the contract in its constructor and perform the operations of:
 

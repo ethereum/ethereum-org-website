@@ -41,16 +41,16 @@ A Hardhat Network a beépített Hardhat-tel jön, ami egy Ethereum fejlesztői k
 
 Néhány konszenzusos kliens rendelkezik olyan beépített eszközökkel, amellyel fel lehet állítani helyi Beacon láncokat a teszteléshez. Elérhető instrukciók a Lighthouse, Nimbus és Lodestar kliensekhez:
 
-- [Helyi teszthálózat a Lodestarhoz](https://chainsafe.github.io/lodestar/usage/local/)
+- [Helyi teszthálózat a Lodestarhoz](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Helyi teszthálózat a Lighthouse-hoz](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Helyi teszthálózat a Nimbushoz](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Nyilvános Ethereum-tesztláncok {#public-beacon-testchains}
 
-Az Ethereum két karbantartott, nyilvános tesztimplementációval is rendelkezik: Goerli és Sepolia. A Goerli a javasolt teszthálózat, mely hosszú távú támogatással bír, és mindenkinek ingyenesen használható validálásra. A Sepolia egy újabb, kisebb lánc, melyet szintén fenn akarnak tartani a jövőben, és amelynek része egy engedélyhez kötött validátorszett (nem működhet bárki validátorként). A Ropsten lánc 2022. 4. negyedévében, a Rinkeby lánc pedig 2023. 2./3. negyedévében kerül lezárásra.
+Az Ethereum két karbantartott, nyilvános tesztimplementációval is rendelkezik: Sepolia és Hoodi. A Sepolia az alkalmazásfejlesztéshez ajánlott standard teszthálózat, zárt validátorszettel a gyors szinkronizáláshoz. A Hoodi egy validálásra és letétbe helyezésre szolgáló teszthálózat, amely nyílt validátorszettet használ, és potenciálisan bárki számára lehetővé teszi a validálást.
 
-- [Goerli letétbe helyezési indítópult](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby és Kiln kivezetési bejelentés](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi letétbe helyezési indítópult](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia honlap](https://sepolia.dev/)
+- [Hoodi honlap](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis Ethereum csomag {#kurtosis}
 

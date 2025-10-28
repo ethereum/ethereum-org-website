@@ -4,13 +4,13 @@ description: An introduction to the JavaScript client libraries that let you int
 lang: en
 ---
 
-In order for a web app to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
+In order for a web app to interact with the Ethereum blockchain (i.e., read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
 For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
 If you want to use JavaScript to connect with an Ethereum node, it's possible to use vanilla JavaScript but several convenience libraries exist within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
-Please note that since [The Merge](/roadmap/merge/), two connected pieces of Ethereum software - an execution client and a consensus client - are required to run a node. Please ensure your node includes both an execution and consensus client. If your node is not on your local machine (e.g. your node is running on an AWS instance) update the IP addresses in the tutorial accordingly. For more information please see our page on [running a node](/developers/docs/nodes-and-clients/run-a-node/).
+Please note that since [The Merge](/roadmap/merge/), two connected pieces of Ethereum software - an execution client and a consensus client - are required to run a node. Please ensure your node includes both an execution and consensus client. If your node is not on your local machine (e.g., your node is running on an AWS instance) update the IP addresses in the tutorial accordingly. For more information please see our page on [running a node](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prerequisites {#prerequisites}
 
@@ -18,13 +18,15 @@ As well as understanding JavaScript, it might be helpful to understand the [Ethe
 
 ## Why use a library? {#why-use-a-library}
 
-These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
+These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g., converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
 
 ## Library features {#library-features}
 
 ### Connect to Ethereum nodes {#connect-to-ethereum-nodes}
 
 Using providers, these libraries allow you to connect to Ethereum and read its data, whether that's over JSON-RPC, INFURA, Etherscan, Alchemy or MetaMask.
+
+> **Warning:** Web3.js was archived on March 4, 2025. [Read the announcement](https://blog.chainsafe.io/web3-js-sunset/). Consider using alternative libraries like [ethers.js](https://ethers.org) or [viem](https://viem.sh) for new projects.
 
 **Ethers example**
 
@@ -164,7 +166,7 @@ contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
 
-    function Test(uint testInt)  { a = testInt;}
+    constructor(uint testInt)  { a = testInt;}
 
     event Event(uint indexed b, bytes32 c);
 
@@ -233,51 +235,43 @@ ethers.utils.formatEther(balance)
 ```
 
 - [Web3js utility functions](https://docs.web3js.org/api/web3-utils)
-- [Ethers utility functions](https://docs.ethers.io/v5/api/utils/)
+- [Ethers utility functions](https://docs.ethers.org/v6/api/utils/)
 
 ## Available libraries {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
-- [Documentation](https://docs.web3js.org/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [Documentation](https://docs.web3js.org)
+- [GitHub](https://github.com/ethereum/web3.js)
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
-- [Documentation](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [Ethers.js home](https://ethers.org/)
+- [Documentation](https://docs.ethers.io)
+- [GitHub](https://github.com/ethers-io/ethers.js)
 
 **The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
 
-- [The Graph](https://thegraph.com/)
-- [Graph Explorer](https://thegraph.com/explorer/)
-- [Documentation](https://thegraph.com/docs/)
-- [GitHub](https://github.com/graphprotocol/)
+- [The Graph](https://thegraph.com)
+- [Graph Explorer](https://thegraph.com/explorer)
+- [Documentation](https://thegraph.com/docs)
+- [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_A high-level reactive JS library optimized for light clients._**
+**Alchemy SDK -** **_Wrapper around Ethers.js with enhanced apis._**
 
-- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
-
-**Web3-wrapper -** **_Typescript alternative to Web3.js._**
-
-- [Documentation](https://0x.org/docs/web3-wrapper#introduction)
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
-
-**Alchemyweb3 -** **_Wrapper around Web3.js with automatic retries and enhanced apis._**
-
-- [Documentation](https://docs.alchemy.com/reference/api-overview)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
-
-**Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**
-
-- [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+- [Documentation](https://www.alchemy.com/docs)
+- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
 **viem -** **_TypeScript Interface for Ethereum._**
 
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**Drift -** **_TypeScript meta-library with built-in caching, hooks, and test mocks._**
+
+- [Documentation](https://ryangoree.github.io/drift/)
+- [GitHub](https://github.com/ryangoree/drift/)
 
 ## Further reading {#further-reading}
 

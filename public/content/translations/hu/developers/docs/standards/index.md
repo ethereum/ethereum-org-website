@@ -17,7 +17,7 @@ Az Ethereum közösség sok szabványt vezetett be, hogy a projektek (mint az [E
 - [EIP vitafórum](https://ethereum-magicians.org/c/eips)
 - [Bevezetés az Ethereum irányításába](/governance/)
 - [Az Ethereum irányításának áttekintése](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019. március 31., Boris Mann_
-- [Ethereum protokollfejlesztés-irányítás és hálózatfrissítés-koordináció](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020. március 23., Hudson Jameson_
+- [Ethereum protokollfejlesztés-irányítás és hálózatfrissítés-koordináció](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020. március 23., Hudson Jameson_
 - [Lejátszási lista az Ethereum protokollfejlesztőinek megbeszéléseiről](https://www.youtube.com/@EthereumProtocol) _(YouTube lejátszási lista)_
 
 ## Szabványtípusok {#types-of-standards}
@@ -41,7 +41,7 @@ A különböző típusokról és kategóriákról részletesebb információ az 
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) – Egy sztenderd interfész a helyettesíthető (cserélhető) tokenekhez, például a szavazási és letéti tokenekhez vagy a virtuális valutákhoz.
   - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Egy helyettesíthető tokenszabvány, melynek révén a tokenek az etherrel azonosan működnek, és támogatja a tokenküldés kezelését a fogadó oldalán.
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) – Egy tokeninterfészt határoz meg az ERC-20 tokenek számára, amely támogatja a címzett kód végrehajtását a transfer vagy transferFrom után, illetve a feladó kódját a jóváhagyás után.
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) – Egy tokeninterfészt határoz meg az ERC-20 tokenek számára, amely támogatja a címzett kód végrehajtását a transfer vagy transferFrom után, illetve a feladó kódját a jóváhagyás után.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) – Egy sztenderd interfész a nem helyettesíthető tokenekhez, például egy műalkotásról szóló okirathoz vagy egy dalhoz.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) – Egy szabványosított esemény, amelyet egy vagy több, egymást követő tokenazonosítókat használó, nem helyettesítő token létrehozásakor/átadásakor bocsátanak ki.
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) – Az EIP-721 fogyasztói szerepkör interfészbővítése.

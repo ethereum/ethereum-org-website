@@ -43,9 +43,14 @@ Roimh uasghrádú Shanghai/Capella, ní raibh tú in ann do ETH geallta a úsái
 
 Is céim riachtanach é seoladh aistarraingthe a sholáthar d’aon chuntas bailíochtóra sula mbeidh sé incháilithe ETH a aistarraingt óna iarmhéid.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Ní féidir ach seoladh aistarraingthe amháin a shannadh do gach cuntas bailíochtóra, uair amháin.</strong> Nuair a roghnaítear seoladh agus a chuirtear isteach sa tsraith chomhthola é, ní féidir é seo a chealú nó a athrú arís. Déan seiceáil faoi dhó ar úinéireacht agus ar chruinneas an tseolta a cuireadh ar fáil sula gcuirtear isteach é.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Níl <strong>bagairt ar do chistí idir an dá linn</strong> mura soláthraitear é seo, ag glacadh leis go bhfuil d'fhrása cuimhneacháin/síolta fós slán as líne, agus nach bhfuil sé curtha i mbaol ar bhealach ar bith. Mura gcuirtear dintiúir aistarraingthe leis, fágfar an ETH faoi ghlas sa chuntas bailíochtóra mar a bhí sé go dtí go gcuirtear seoladh aistarraingthe ar fáil.
 
@@ -65,14 +70,14 @@ Tá aistarraingtí geallchuir beo! Cumasaíodh feidhmiúlacht aistarraingthe mar
 
 Mar gheall ar uasghrádú Shanghai/Capella bhíothas in ann ETH a bhí i ngeall roimhe seo a fháil ar ais i gcuntais rialta Ethereum. Dhún sé seo an lúb ar leachtacht geallchuir, agus thug sé Ethereum céim níos gaire dá thuras i dtreo éiceachóras díláraithe inbhuanaithe, inscálaithe, slán a thógáil.
 
-- [Tuilleadh faoi stair Ethereum](/history/)
+- [Tuilleadh faoi stair Ethereum](/ethereum-forks/)
 - [Tuilleadh ar an treochlár Ethereum](/roadmap/)
 
 ## Conas a oibríonn íocaíochtaí aistarraingthe? {#how-do-withdrawals-work}
 
 Is é staid chuntas an bhailíochtóra féin a chinneann an bhfuil bailíochtóir áirithe incháilithe le haghaidh aistarraingthe nó nach bhfuil. Níl aon ionchur úsáideora ag teastáil ag aon am ar leith le cinneadh cé acu ar cheart nó nár cheart go dtionscnófaí aistarraingt cuntais – déantar an próiseas iomlán go huathoibríoch trí chiseal comhthola ar lúb leanúnach.
 
-### An bhfuil tú níos mó d’fhoghlaimeoir amhairc? {#visual-learner}
+### An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
 
 Breathnaigh ar an míniú seo ar aistarraingtí geallchuir Ethereum ag Finematics:
 
@@ -82,11 +87,16 @@ Breathnaigh ar an míniú seo ar aistarraingtí geallchuir Ethereum ag Finematic
 
 Nuair atá bailíochtóir sceidealta chun an chéad bhloc eile a mholadh, ní mór dó scuaine aistarraingthe a thógáil, de suas le 16 aistarraingt incháilithe. Déantar é seo trí thosú ar dtús le hinnéacs bailíochtóra 0, ag cinneadh an bhfuil aistarraingt incháilithe don chuntas seo de réir rialacha an phrótacail, agus é a chur leis an scuaine má tá. Tógfaidh an bailíochtóir atá socraithe chun an bloc seo a leanas a mholadh an áit atá fágtha ag an gceann deireanach, ag dul ar aghaidh in ord ar feadh tréimhse éiginnte.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Smaoinigh ar chlog analógach. Díríonn an lámh ar an gclog go dtí an uair, téann sí ar aghaidh i dtreo amháin, ní scipeann sí uaireanta ar bith, agus sa deireadh filleann sí ar ais go dtí an tús arís tar éis an uimhir dheireanach a shroicheadh.<br/><br/>
 Anois in ionad 1 go 12, samhlaigh go bhfuil 0 trí N <em> ag an gclog (líon iomlán na gcuntas bailíochtóra a cláraíodh riamh ar an tsraith chomhthola, níos mó ná 500,000 ó Eanáir 2023).</em><br/> <br/>
 Díríonn an lámh ar an gclog chuig an gcéad bhailíochtóir eile nach mór a sheiceáil le haghaidh aistarraingtí incháilithe. Tosaíonn sé ag 0, agus téann sé chun cinn an bealach ar fad gan aon chuntais a scipeáil. Nuair a shroichtear an bailíochtóir deiridh, leanann an timthriall ar ais ag an tús.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Cuntas á sheiceáil le haghaidh aistarraingtí {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Má tá tú mar chuid de <a href="/staking/pools/">linn geallchuir</a> nó má tá comharthaí geallta agat, ba cheart duit seiceáil le do sholáthraí le haghaidh tuilleadh sonraí faoin gcaoi a láimhseáiltear aistarraingtí geallchuir, toisc go n-oibríonn gach seirbhís ar bhealach difriúil.
+Má tá tú mar chuid de [linn geallchuir](/staking/pools/) nó má tá comharthaí geallta agat, ba cheart duit seiceáil le do sholáthraí le haghaidh tuilleadh sonraí faoin gcaoi a láimhseáiltear aistarraingtí geallchuir, toisc go n-oibríonn gach seirbhís ar bhealach difriúil.
 
-Go ginearálta, ba cheart go mbeadh cead ag úsáideoirí a ETH bunaidh atá geallta a éileamh ar ais, nó an soláthraí geallchuir a úsáideann siad a athrú. Má tá comhthiomsú ar leith ag dul i méid ró-mhór, is féidir cistí a fhágáil, a fhuascailt agus a chur i ngeall arís le <a href="https://rated.network/">soláthraí níos lú</a>. Nó, má tá go leor ETH carntha agat d’fhéadfá <a href="/staking/solo/">geallchur a dhéanamh ón mbaile</a>.
+Go ginearálta, ba cheart go mbeadh cead ag úsáideoirí a ETH bunaidh atá geallta a éileamh ar ais, nó an soláthraí geallchuir a úsáideann siad a athrú. Má tá comhthiomsú ar leith ag dul i méid ró-mhór, is féidir cistí a fhágáil, a fhuascailt agus a chur i ngeall arís le <a href="https://rated.network/">soláthraí níos lú</a>. Nó, má tá go leor ETH carntha agat d’fhéadfá [geallchur a dhéanamh ón mbaile](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Ní féidir. A luaithe a bheidh bailíochtóir imithe agus a iarmhéid iomlán a
 
 - [Aistarraingtí ón gCeap Lainseála Geallchuir](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: aistarraingtí brú slabhra beacon mar oibríochtaí](https://eips.ethereum.org/EIPS/eip-4895)
-- [Tréadaithe Cat Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Aistarraingt ETH Geallta (Tástáil) le Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: aistarraingtí brú slabhra Beacon mar oibríochtaí le Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Iarmhéid Éifeachtach an Bhailíochtóra a Thuiscint](https://www.attestant.io/posts/understanding-validator-effective-balance/)

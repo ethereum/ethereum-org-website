@@ -10,9 +10,9 @@ summaryPoints:
 
 # Account abstraction {#account-abstraction}
 
-Most existing users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to pay transaction fees. 
+Most existing users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to pay transaction fees.
 
-Account abstraction is a way to solve these problems by allowing users to flexibly program more security and better user experiences into their accounts. This can happen by [upgrading EOAs](https://eips.ethereum.org/EIPS/eip-7702) so they can be controlled by smart contracts. There is also another path involving adding a [second, separate transaction system](https://eips.ethereum.org/EIPS/eip-4337) to run in parallel to the existing protocol. Regardless of the route, the outcome is access to Ethereum via smart contract wallets, either natively supported as part of the existing protocol or via an add-on transaction network.
+Account abstraction is a way to solve these problems by allowing users to flexibly program more security and better user experiences into their accounts. This can happen by [upgrading EOAs](https://eips.ethereum.org/EIPS/eip-7702) (EIP-7702) so they can be controlled by smart contracts. There is also another path involving adding a [second, separate transaction system](https://eips.ethereum.org/EIPS/eip-4337) (EIP-4337) to run in parallel to the existing protocol. Regardless of the route, the outcome is access to Ethereum via smart contract wallets, either natively supported as part of the existing protocol or via an add-on transaction network.
 
 Smart contract wallets unlock many benefits for the user, including:
 
@@ -20,7 +20,7 @@ Smart contract wallets unlock many benefits for the user, including:
 - recover your account if you lose the keys
 - share your account security across trusted devices or individuals
 - pay someone else's gas, or have someone else pay yours
-- batch transactions together (e.g. approve and execute a swap in one go)
+- batch transactions together (e.g., approve and execute a swap in one go)
 - more opportunities for dapps and wallet developers to innovate on user experiences
 
 These benefits are not natively supported today because only externally-owned accounts ([EOAs](/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
@@ -32,76 +32,40 @@ If you lose your keys they can't be recovered, and stolen keys give thieves inst
 
 Smart contract wallets are the solution to these problems, but today they are difficult to program because in the end, any logic they implement has to be translated into a set of EOA transactions before they can be processed by Ethereum. Account abstraction enables smart contracts to initiate transactions themselves, so that any logic that the user wishes to implement can be coded into the smart contract wallet itself and executed on Ethereum.
 
-Ultimately, account abstraction improves support for smart contract wallets, making them easier to build and safer to use. In the end, with account abstraction, users can enjoy all the benefits of Ethereum without knowing or caring about the underlying technology.
+Ultimately, account abstraction improves support for smart contract wallets, making them easier to build and safer to use. With account abstraction, users can enjoy all the benefits of Ethereum without needing to understand the underlying technology.
 
 ## Beyond seed phrases {#beyond-seed-phrases}
 
-Today's accounts are secured using private keys that are calculated from seed phrases. Any person who has access to a seed phrase can easily discover the private key protecting an account and gain access to all the assets it protects. If a private key and seed phrase are lost, they can never be recovered and the assets they control are frozen forever. Securing these seed phrases is awkward, even for expert users and seed phrase phishing is one of the most common ways users get scammed.
+Today's accounts are secured using private keys that are calculated from seed phrases. Anyone with access to a seed phrase can easily discover the private key protecting an account and gain access to all the assets it protects. If a private key and seed phrase are lost, the assets are permanently inaccessible. Securing these seed phrases is awkward, even for expert users, and seed phrase phishing is one of the most common scams.
 
-Account abstraction will solve this problem by using a smart contract to hold assets and authorize transactions. These smart contracts can then be decorated with custom logic to make them as secure and tailored to the user as possible. Ultimately, you still use private keys to control access to your account, but with safety nets that make them easier and safer to manage.
+Account abstraction solves this by using a smart contract to hold assets and authorize transactions. Smart contracts can include custom logic tailored for maximum security and usability. Users still use private keys to control access, but with enhanced safety measures.
 
-For example, backup keys can be added to a wallet so that if you lose or accidentally expose your main key, it can be replaced with a new, secure one with permission from the backup keys. You might secure each of these keys in a different way, or split them across trusted guardians. This makes it much harder for a thief to gain full control over your funds. Similarly, you can add rules to the wallet to reduce the impact if your main key gets compromised, for example, you might allow low-value transactions to be verified by a single signature, whereas higher-value transactions require approval from multiple authenticated signers. There are other ways smart contract wallets can help you to thwart thieves too, for example, an allowlist can be used to block every transaction unless it is to a trusted address or verified by several of your pre-approved keys.
-
-### Examples of security logic that can be built into a smart contract wallet:
-
-- **Multisig authorization**: You can share authorization credentials across multiple trusted people or devices. Then the contract can be configured so that transactions of more than some preset value require authorization from a certain proportion (e.g. 3/5) of the trusted parties. For example, high-value transactions might require approval from both a mobile device and a hardware wallet, or signatures from accounts distributed to trusted family members.
-- **Account freezing**: If a device is lost or compromised the account can be locked from another authorized device, protecting the user's assets.
-- **Account recovery**: Lost a device or forgotten a password? In the current paradigm, this means your assets could be frozen forever. With a smart contract wallet, you can setup an allowlist of accounts that can authorize new devices and reset access.
-- **Set transaction limits**: Specify daily thresholds for how much value can be transferred from the account in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
-- **Create allowlists**: Only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could only send funds to destination accounts on your list. These allowlists would require multiple signatures to change them so that an attacker couldn't add their own address to the list unless they had access to several of your backup keys.
+For example, backup keys can be added to a wallet, enabling key replacement if the primary key is compromised. Each key can be secured differently or distributed among trusted individuals, significantly increasing security. Additional wallet rules can mitigate damage from key exposure, such as requiring multiple signatures for high-value transactions or restricting transactions to trusted addresses.
 
 ## Better user experience {#better-user-experience}
 
-Account abstraction allows for a **better overall user experience** as well as **improved security** because it adds support for smart contract wallets at the protocol level. The most important reason for this is that it will provide developers of smart contracts, wallets and applications with much more freedom to innovate on the user experience in ways that we may not yet be able to anticipate. Some obvious improvements that will come along with account abstraction include bundling of transactions for speed and efficiency. For example, a simple swap should be a one-click operation, but today it requires signing multiple transactions to approve spending of individual tokens before the swap is executed. Account abstraction removes that friction by allowing transaction bundling. Furthermore, the bundled transaction could approve precisely the right value of tokens required for each transaction and then revoke the approvals after the transaction completes, providing additional security.
+Account abstraction greatly enhances the user experience and security by supporting smart contract wallets at the protocol level. Developers can innovate freely, improving transaction bundling for speed and efficiency. Simple swaps can become one-click operations, significantly improving ease of use.
 
-Gas management is also much improved with account abstraction. Not only can applications offer to pay their users' gas fees, but gas fees can be paid in tokens other than ETH, freeing users from having to maintain an ETH balance for funding transactions. This would work by swapping the user's tokens for ETH inside the contract and then using the ETH to pay for gas.
-
-<ExpandableCard title="How can account abstraction help with gas?" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
-
-Gas management is one of the primary frictions for users of Ethereum, mainly because ETH is the only asset that can be used to pay for transactions. Imagine you have a wallet with a USDC balance, but no ETH. You can't move or swap those USDC tokens because you can't pay gas. You can't swap the USDC for ETH either, because that in itself costs gas. You would have to send more ETH to your account from an exchange or another address to solve the problem. With smart contract wallets, you can simply pay gas in USDC instead, freeing your account. You don't have to keep an ETH balance in all your accounts anymore.
-
-Account abstraction also allows dapp developers to be creative with gas management. For example, you might be able to start paying your favorite DEX a fixed fee each month for unlimited transactions. Dapps might offer to pay all your gas fees on your behalf as a reward for using their platform, or as an onboarding offer. It will be much easier for developers to innovate on gas when smart contract wallets are supported at the protocol level.
-
-</ExpandableCard>
-
-Trusted sessions are also potentially transformative for user experiences, especially for applications like gaming, where large numbers of small transactions might need approval in a short time. Individually approving each transaction would break the gaming experience, but permanent approval is unsafe. A smart contract wallet could approve certain transactions for a fixed time, up to a specific value or only to certain addresses.
-
-It is also interesting to consider how purchases could change with account abstraction. Today, each transaction has to be approved and executed from a wallet pre-funded with a sufficient amount of the correct token. With account abstraction, the experience could be more like familiar online shopping where a user could fill a "basket" with items and click once to purchase all at once, with all the logic required handled by the contract, not the user.
-
-These are just a few examples of how user experiences could be leveled up by account abstraction, but there will be many more that we haven't imagined yet. Account abstraction frees developers from the constraints of present-day EOAs, allows them to bring the good aspects of web2 into web3 without sacrificing self-custody, and to hack creatively on inventive new user experiences.
+Gas management improves considerably. Applications can pay users' gas fees or allow payment in tokens other than ETH, eliminating the need to maintain an ETH balance.
 
 ## How will account abstraction be implemented? {#how-will-aa-be-implemented}
 
-Smart contract wallets exist today but are challenging to implement because the EVM does not support them. Instead, they rely on wrapping relatively complex code around standard Ethereum transactions. Ethereum can change this by allowing smart contracts to initiate transactions, handling the necessary logic in Ethereum smart contracts instead of offchain. Putting logic into smart contracts also increases Ethereum's decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to regular Ethereum transactions.
+Currently, smart contract wallets are challenging to implement as they rely on complex code wrapping standard transactions. Ethereum can change this by allowing smart contracts to directly initiate transactions, embedding logic in Ethereum smart contracts rather than relying on external relayers.
 
-<ExpandableCard title="EIP-4337: account abstraction without changing the Ethereum protocol" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
+### EIP-4337: Account abstraction without protocol changes
 
-EIP-4337 is the first step towards native smart contract wallet support in a decentralized way <em>without requiring changes to the Ethereum protocol</em>. Instead of modifying the consensus layer to support smart contract wallets, a new system is added separately to the normal transaction gossip protocol. This higher-level system is built around a new object called a <code>UserOperation</code> that package up actions from a user along with the relevant signatures. These <code>UserOperation</code> objects then get broadcast into a dedicated mempool where validators can collect them into a "bundle transaction". The bundle transaction represents a sequence of many individual <code>UserOperations</code> and can be included in Ethereum blocks just like a normal transaction, and would be picked up by validators using a similar fee-maximizing selection model.
-
-The way wallets work would also change under EIP-4337. Instead of each wallet re-implementing common but complex safety logic, those functions would be outsourced to a global wallet contract known as the &quot;entry point&quot;. This would handle operations such as paying fees and executing EVM code so that wallet developers can focus on providing excellent user experiences.
-
-<strong>Note</strong> the EIP 4337 entry point contract was deployed to Ethereum Mainnet on 1st March 2023. You can see the contract on <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a>.
-
-</ExpandableCard>
+EIP-4337 enables native smart contract wallet support without modifying Ethereum's core protocol. It introduces `UserOperation` objects collected into transaction bundles by validators, simplifying wallet development. The EIP-4337 EntryPoint contract was deployed to Ethereum Mainnet on 1st March 2023 and has facilitated the creation of over 26 million smart wallets and 170 million UserOperations.
 
 ## Current progress {#current-progress}
 
-**The next two Ethereum upgrades ([Pectra](/roadmap/pectra/) and later Fusaka) will address these improvements.** Pectra will be released soon in upcomming months. Smart contract wallets are already available. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so many wallets have started adopting this standard.
-
-**Note**: You can track adoption of ERC-4337 smart contract wallets [via this dashboard](https://www.bundlebear.com/overview/all).
+As part of Ethereum's Pectra upgrade, EIP-7702 is scheduled for May 7, 2025. EIP-4337 has been widely adopted, [with over 26 million smart accounts deployed and more than 170 million UserOperations processed](https://www.bundlebear.com/erc4337-overview/all).
 
 ## Further reading {#further-reading}
 
-- [erc4337.io](https://www.erc4337.io/)
-- [Account abstraction panel discussion from Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
-- ["Why account abstraction is a game changer for dapps" from Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
-- ["Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
-- [Vitalik's "Road to Account Abstraction" notes](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitalik's blog post on social recovery wallets](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
-- [EIP-4337 notes](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
+- [erc4337.io](https://docs.erc4337.io/)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
-- ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)
-- [Charting Ethereum's Account Abstraction Roadmap I: EIP-3074, EIP-5806, & EIP-7702](https://research.2077.xyz/charting-ethereums-account-abstraction-roadmap-eip-3074-eip-5806-eip-7702)
+- [EIP-7702 documentation](https://eips.ethereum.org/EIPS/eip-7702)
+- [ERC-4337 adoption dashboard](https://www.bundlebear.com/erc4337-overview/all)
+- [Vitalik's "Road to Account Abstraction"](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
+- [Vitalik's blog on social recovery wallets](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Awesome Account Abstraction](https://github.com/4337Mafia/awesome-account-abstraction)
-- [Modular Account Abstraction for Everyone Else](https://blog.rhinestone.wtf/part-1-modular-account-abstraction-for-everyone-else-84567422bc46)
-
