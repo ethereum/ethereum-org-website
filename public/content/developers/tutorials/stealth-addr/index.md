@@ -225,18 +225,48 @@ Use the [`format!`](https://doc.rust-lang.org/std/fmt/index.html) macro to gener
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-This function turns a hex string (provided by JavaScript) into a byte array.
+This function turns a hex string (provided by JavaScript) into a byte array. We use this function to parse values provided by the JavaScript code.
+
+This function is a bit complicated because of the way Rust deals with arrays and vectors.
+
+The `<const N: usize>` expression is called a [generic](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` is a parameter that controls the length of the returned array. The function is actually called as `str_to_array::<n>`, with `n` the length of the array.
+
+The return values is `Option<[u8; N]>`, which means the returned array is [optional](https://doc.rust-lang.org/std/option/). This is a common pattern in Rust for functions that may fail. 
+
+For example, if we call `str_to_array::10("bad060a7")`, the function is supposed to return a ten value array, but the input is only four bytes. The function needs to fail, and the way it fails is by returning `None`. The return value for `str_to_array::4("bad060a7")` would be `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode returns Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
-    // ensure correct length
+```
+
+The [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) function return a `Result<Vec<u8>, FromHexError>`. The [`Result`](https://doc.rust-lang.org/std/result/) type can contain either a successfult result (`Ok(value)`) or an error (`Err(error)`).
+
+The `.ok()` method turns the `Result` into an `Option`, whose value is either the `Ok()` value if successful or `None` if not. Finally, the [question mark operator](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) aborts the current functions and returns a `None` if the `Option` is empty. Otherwise it unwraps the value and returns that (in this case, to assign a value to `vec`).
+
+This looks like a strangely convoluted method to handle errors, but `Result` and `Option` ensure that all errors are handled, one way or another.
+
+```rust
     if vec.len() != N { return None; }
+```
+
+If the number of bytes is incorrect, that's a failure and we return `None`.
+
+```rust
     // try_into consumes vec and attempts to make [u8; N]
     let array: [u8; N] = vec.try_into().ok()?;
+```
+
+Rust has two array types. [Arrays](https://doc.rust-lang.org/std/primitive.array.html) have a fixed size. [Vectors](https://doc.rust-lang.org/std/vec/index.html) can grow and shrink. `hex::decode` returns a vector, but the `eth_stealth_addresses` library wants to receive arrays. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) converts a value into another type, for example a vector into an array.
+
+```rust
     Some(array)
 }
+```
 
+Rust does not require you to use the [`return`](https://doc.rust-lang.org/std/keyword.return.html) keyword when returning a value at the end of a function.
+
+```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
     let (address, r_pub, scan) = 
