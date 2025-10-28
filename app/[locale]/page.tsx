@@ -518,24 +518,27 @@ const Page = async ({ params }: { params: PageParams }) => {
           </Section>
 
           {/* Apps of the week - Discover the best apps on Ethereum */}
-          <Section id="apps-of-the-week">
-            <SectionContent className="flex flex-col gap-4">
-              <div className="flex flex-col items-center text-center">
-                <SectionTag>Apps of the week</SectionTag>
-                <SectionHeader>Discover apps on Ethereum</SectionHeader>
-                <p className="text-lg">Start exploring Ethereum today</p>
-              </div>
-              <AppsHighlight
-                apps={appsOfTheWeek}
-                matomoCategory="apps-of-the-week"
-              />
-              <div className="!mt-8 flex justify-center">
-                <ButtonLink href="/apps" size="lg">
-                  Browse apps <ChevronNext />
-                </ButtonLink>
-              </div>
-            </SectionContent>
-          </Section>
+          {/* // TODO: Remove locale restriction after translation */}
+          {locale === DEFAULT_LOCALE && (
+            <Section id="apps-of-the-week">
+              <SectionContent className="flex flex-col gap-4">
+                <div className="flex flex-col items-center text-center">
+                  <SectionTag>Apps of the week</SectionTag>
+                  <SectionHeader>Discover apps on Ethereum</SectionHeader>
+                  <p className="text-lg">Start exploring Ethereum today</p>
+                </div>
+                <AppsHighlight
+                  apps={appsOfTheWeek}
+                  matomoCategory="apps-of-the-week"
+                />
+                <div className="!mt-8 flex justify-center">
+                  <ButtonLink href="/apps" size="lg">
+                    Browse apps <ChevronNext />
+                  </ButtonLink>
+                </div>
+              </SectionContent>
+            </Section>
+          )}
 
           {/* Activity - The strongest ecosystem */}
           <Section id="activity" variant="responsiveFlex">
