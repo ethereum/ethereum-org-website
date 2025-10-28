@@ -152,7 +152,6 @@ console_error_panic_hook = "0.1.7"
 
 [This library](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) gives us more meaningful error messages when the WASM code panics and cannot continue.
 
-
 ```toml
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -162,7 +161,7 @@ The output type required to produce WASM code.
 
 **`lib.rs`**
 
-This is the actual code.
+This is the actual Rust code.
 
 ```rust
 use wasm_bindgen::prelude::*;
@@ -188,18 +187,47 @@ Rust typically uses byte [arrays](https://doc.rust-lang.org/std/primitive.array.
 
 ```rust
 #[wasm_bindgen]
+```
+
+Generate WASM bindings to be able to call this function from JavaScript.
+
+```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
+```
+
+The easiest way to return an object with multiple fields is to return a JSON string. 
+
+```rust
     let (address, spend_private_key, view_private_key) = 
         generate_stealth_meta_address();
+```
 
+The [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) returns three fields:
+
+- The meta-address (*K<sub>pub</sub>* and *V<sub>pub</sub>*)
+- The viewing private key (*V<sub>priv</sub>*)
+- The spending private key (*K<sub>priv</sub>*)
+
+The [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) syntax lets us separate those values again.
+
+```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
         encode(address),
         encode(view_private_key),
         encode(spend_private_key)
     )
 }
+```
 
+Use the [`format!`](https://doc.rust-lang.org/std/fmt/index.html) macro to generate the JSON-encoded string. Use [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) to change the arrays to hex strings.
+
+```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
+```
+
+This function turns a hex string (provided by JavaScript) into a byte array.
+
+```rust
     // decode returns Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
     // ensure correct length
