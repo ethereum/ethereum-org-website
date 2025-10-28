@@ -530,7 +530,9 @@ const Page = async ({ params }: { params: PageParams }) => {
                 matomoCategory="apps-of-the-week"
               />
               <div className="flex justify-center">
-                <ButtonLink href="/apps">Browse apps &gt;</ButtonLink>
+                <ButtonLink href="/apps">
+                  Browse apps <ChevronNext />
+                </ButtonLink>
               </div>
             </SectionContent>
           </Section>
