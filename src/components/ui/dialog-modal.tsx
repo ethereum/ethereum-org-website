@@ -10,10 +10,10 @@ import { Center, Flex } from "./flex"
 
 const dialogVariant = tv({
   slots: {
-    content: 
-      "w-full grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal data-[state=open]:animate-slide-up data-[state=closed]:animate-slide-down",
-    overlay: 
-      "data-[state=open]:animate-overlayShow data-[state=closed]:animate-overlay-fade-out fixed inset-0 z-overlay bg-black/70 grid place-items-end overflow-hidden p-0",
+    content:
+      "data-[state=open]:animate-fade-in w-full grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
+    overlay:
+      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
     header: "relative pe-12",
     title: "text-2xl",
     footer: "pt-8",
