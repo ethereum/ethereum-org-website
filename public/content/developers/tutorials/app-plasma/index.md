@@ -40,7 +40,7 @@ These fields in _Data<sub>private</sub>_:
   - _Destination address_ that receives the transfer
   - _Amount_ being transferred
   - _Nonce_ to ensure each transaction can only be processed once.
-  The source address does not need to be in the transaction, because it can be recovered from the signature.
+    The source address does not need to be in the transaction, because it can be recovered from the signature.
 - _Signature_, a signature that is authorized to perform the transaction. In our case, the only address authorized to perform a transaction is the source address. Because our zero-knowledge system works the way it does, we also need the account's public key, in addition to the Ethereum signature.
 
 These are the fields in _Data<sub>public</sub>_:
@@ -55,7 +55,7 @@ The relationship checks several conditions:
 - The transaction, when applied to the old state, results in the new state.
 - The signature comes from the transaction's source address.
 
-Because of the properties of cryptographic hash functions, proving these conditions is enough to ensure integrity. 
+Because of the properties of cryptographic hash functions, proving these conditions is enough to ensure integrity.
 
 ### Data structures {#data-structures}
 
@@ -63,7 +63,7 @@ The primary data structure is the state held by the server. For every account, t
 
 ### Components {#components}
 
-This system requires two components: 
+This system requires two components:
 
 - The _server_ that receives transactions, processes them, and posts hashes to the chain along with the zero-knowledge proofs.
 - A _smart contract_ that stores the hashes and verifies the zero-knowledge proofs to ensure state transitions are legitimate.
@@ -75,6 +75,7 @@ These are the ways that the various components communicate to transfer from one 
 1. A web browser submits a signed transaction asking for a transfer from the signer's account to a different account.
 
 2. The server verifies that the transaction is valid:
+
    - The signer has an account in the bank with a sufficient balance.
    - The recipient has an account in the bank.
 
@@ -83,6 +84,7 @@ These are the ways that the various components communicate to transfer from one 
 4. The server calculates a zero-knowledge proof that the state change is a valid one.
 
 5. The server submits to Ethereum a transaction that includes:
+
    - The new state hash
    - The transaction hash (so the transaction sender can know it has been processed)
    - The zero-knowledge proof that proves the transition to the new state is valid
@@ -127,11 +129,11 @@ To see it in action:
    npm run dev
    ```
 
-   The reason you need a web server here is that, to prevent certain types of fraud, many wallets (such as MetaMask) don't accept files served directly from the disk   
+   The reason you need a web server here is that, to prevent certain types of fraud, many wallets (such as MetaMask) don't accept files served directly from the disk
 
 3. Open a browser with a wallet.
 
-4. In the wallet, enter a new passphrase. Note that this will delete your existing passphrase, so _make sure you have a backup_. 
+4. In the wallet, enter a new passphrase. Note that this will delete your existing passphrase, so _make sure you have a backup_.
 
    The passphrase is `test test test test test test test test test test test junk`, the default testing passphrase for anvil.
 
@@ -277,7 +279,7 @@ Set the state variables. Doing this redraws the component (after the `sign` func
     let proverToml = `
 ```
 
-The text for `Prover.toml`. 
+The text for `Prover.toml`.
 
 ```tsx
 message="${message}"
@@ -318,7 +320,7 @@ This is the HTML (more accurately, [JSX](https://react.dev/learn/writing-markup-
 
 #### `server/noir/src/main.nr` {#server-noir-src-main-nr}
 
-[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero-knowledge code. 
+[This file](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) is the actual zero-knowledge code.
 
 ```
 use std::hash::pedersen_hash;
@@ -337,7 +339,7 @@ These two functions are external libraries, defined in [`Nargo.toml`](https://gi
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir is inspired by [Rust](https://www.rust-lang.org/). Variables, by default, are constants. This is how we define global configuration constants. Specifically, `ACCOUNT_NUMBER` is the number of accounts we store. 
+Noir is inspired by [Rust](https://www.rust-lang.org/). Variables, by default, are constants. This is how we define global configuration constants. Specifically, `ACCOUNT_NUMBER` is the number of accounts we store.
 
 Data types named `u<number>` are that number of bits, unsigned. The only supported types are `u8`, `u16`, `u32`, `u64`, and `u128`.
 
@@ -355,10 +357,10 @@ As explained above, the message length is fixed. It is specified here.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
-global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH; 
+global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[EIP-191 signatures](https://eips.ethereum.org/EIPS/eip-191) require a buffer with a 26-byte prefix, followed by the message length in ASCII, and finally the message itself. 
+[EIP-191 signatures](https://eips.ethereum.org/EIPS/eip-191) require a buffer with a 26-byte prefix, followed by the message length in ASCII, and finally the message itself.
 
 ```
 struct Account {
@@ -478,18 +480,18 @@ This function applies a transfer transaction and returns the new accounts array.
     let from = find_account(accounts, txn.from);
     let to = find_account(accounts, txn.to);
 
-    let (txnFrom, txnAmount, txnNonce, accountNonce) = 
+    let (txnFrom, txnAmount, txnNonce, accountNonce) =
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
 We cannot access structure elements inside a format string in Noir, so we create a usable copy.
 
 ```rust
-    assert (accounts[from].balance >= txn.amount, 
+    assert (accounts[from].balance >= txn.amount,
         f"{txnFrom} does not have {txnAmount} finney");
 
     assert (accounts[from].nonce == txn.nonce,
-        f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");    
+        f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");
 ```
 
 These are two conditions that could render a transaction invalid.
@@ -508,7 +510,7 @@ These are two conditions that could render a transaction invalid.
 Create the new accounts array and then return it.
 
 ```rust
-fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field 
+fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
 This function reads the address from the message. 
@@ -741,11 +743,11 @@ This is similar to [Solidity's `ecrecover`](https://docs.soliditylang.org/en/v0.
 }
 
 fn main(
-        accounts: [Account; ACCOUNT_NUMBER], 
-        message: str<MESSAGE_LENGTH>, 
+        accounts: [Account; ACCOUNT_NUMBER],
+        message: str<MESSAGE_LENGTH>,
         pubKeyX: [u8; 32],
-        pubKeyY: [u8; 32],        
-        signature: [u8; 64],        
+        pubKeyY: [u8; 32],
+        signature: [u8; 64],
     ) -> pub (
         Field,  // Hash of old accounts array
         Field,  // Hash of new accounts array
@@ -770,13 +772,13 @@ We need `txn` to be mutable because we don't read the from address from the mess
         pubKeyY,
         signature);
 
-    txn.from = fromAddress;    
+    txn.from = fromAddress;
 
     let newAccounts = apply_transfer_txn(accounts, txn);
 
     (
         hash_accounts(accounts),
-        hash_accounts(newAccounts),        
+        hash_accounts(newAccounts),
         txnHash1,
         txnHash2
     )
@@ -824,9 +826,9 @@ To see it in action:
 
    The problem with this solution is that the time might not be perfectly synchronized. So instead, we sign a value that changes every minute. This means that our window of vulnerability to replay attacks is at most one minute. Considering that in production the signed request will be protected by TLS, and that the other side of the tunnel---the server---can already disclose the balance and nonce (it has to know them to work), this is an acceptable risk.
 
-8. Once the browser gets back the balance and nonce, it shows the transfer form. Select the destination address and the amount and click **Transfer**. Sign this request.
+7. Once the browser gets back the balance and nonce, it shows the transfer form. Select the destination address and the amount and click **Transfer**. Sign this request.
 
-9. To see the transfer, either **Update account data** or look in the window where you run the server. The server logs the state every time it changes.
+8. To see the transfer, either **Update account data** or look in the window where you run the server. The server logs the state every time it changes.
 
     ```
     ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
@@ -884,7 +886,7 @@ const accountInformation = async signature => {
     })
 ```
 
-To provide account information, we only need the signature. The reason is we already know what the message is going to be, and therefore the message hash. 
+To provide account information, we only need the signature. The reason is we already know what the message is going to be, and therefore the message hash.
 
 ```js
 const processMessage = async (message, signature) => {
@@ -972,7 +974,7 @@ The initial `Accounts` structure.
 5. Go to the smart contracts and set the environment variables to use the `anvil` blockchain.
 
    ```sh
-   cd ../../smart-contracts   
+   cd ../../smart-contracts
    export ETH_RPC_URL=http://localhost:8545
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
@@ -1112,7 +1114,7 @@ The public fields need to be an array of 32-byte values. However, since we neede
 Each address only uses each nonce once so that we can use a combination of `fromAddress` and `nonce` as a unique identifier for the witness file and the output directory.
 
 ```js
-    try { 
+    try {
         await zkBank.write.processTransaction([
             proof, publicFields])
     } catch (err) {
@@ -1162,7 +1164,7 @@ Every time the state changes, we emit a `TransactionProcessed` event.
 
 ```solidity
     function processTransaction(
-        bytes calldata _proof, 
+        bytes calldata _proof,
         bytes32[] calldata _publicFields
     ) public {
 ```
@@ -1170,11 +1172,11 @@ Every time the state changes, we emit a `TransactionProcessed` event.
 This function processes transactions. It gets the proof (as `bytes`) and the public inputs (as a `bytes32` array), in the format that the verifier requires (to minimize onchain processing and therefore gas costs).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash, 
+        require(_publicInputs[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-The zero-knowledge proof needs to be that the transaction changes from our current hash to a new one. 
+The zero-knowledge proof needs to be that the transaction changes from our current hash to a new one.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
