@@ -12,10 +12,10 @@ import {
   IconBox,
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
+import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
 import { CardTitle } from "@/components/ui/card"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
@@ -225,30 +225,39 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                 })}
               </p>
               <p>{t("page-what-is-ether-how-to-buy-eth-description-2")}</p>
-              <InfoBanner isWarning emoji="💡">
-                <p>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
-                    strong: Strong,
-                  })}
-                </p>
-                <p className="mt-2">
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-4", {
-                    strong: Strong,
-                  })}
-                </p>
-                <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
-                  <ListItem>
-                    {t.rich("page-what-is-ether-how-to-buy-eth-description-5", {
+              <Alert variant="warning">
+                <AlertEmoji text="💡" />
+                <AlertContent>
+                  <p>
+                    {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
                       strong: Strong,
                     })}
-                  </ListItem>
-                  <ListItem>
-                    {t.rich("page-what-is-ether-how-to-buy-eth-description-6", {
+                  </p>
+                  <p className="mt-2">
+                    {t.rich("page-what-is-ether-how-to-buy-eth-description-4", {
                       strong: Strong,
                     })}
-                  </ListItem>
-                </UnorderedList>
-              </InfoBanner>
+                  </p>
+                  <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
+                    <ListItem>
+                      {t.rich(
+                        "page-what-is-ether-how-to-buy-eth-description-5",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </ListItem>
+                    <ListItem>
+                      {t.rich(
+                        "page-what-is-ether-how-to-buy-eth-description-6",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </ListItem>
+                  </UnorderedList>
+                </AlertContent>
+              </Alert>
               <p className="text-xl">
                 <strong>
                   {t("page-what-is-ether-how-to-buy-eth-description-7")}
@@ -344,39 +353,42 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   }
                 )}
               </p>
-              <InfoBanner isWarning emoji="💡">
-                <p>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
-                    strong: Strong,
-                  })}
-                </p>
-                <p className="mt-2">
-                  {t.rich(
-                    "page-what-is-ether-how-to-send-and-receive-eth-description-4",
-                    {
+              <Alert variant="warning">
+                <AlertEmoji text="💡" />
+                <AlertContent>
+                  <p>
+                    {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
                       strong: Strong,
-                    }
-                  )}
-                </p>
-                <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
-                  <ListItem>
+                    })}
+                  </p>
+                  <p className="mt-2">
                     {t.rich(
-                      "page-what-is-ether-how-to-send-and-receive-eth-description-5",
+                      "page-what-is-ether-how-to-send-and-receive-eth-description-4",
                       {
                         strong: Strong,
                       }
                     )}
-                  </ListItem>
-                  <ListItem>
-                    {t.rich(
-                      "page-what-is-ether-how-to-send-and-receive-eth-description-6",
-                      {
-                        strong: Strong,
-                      }
-                    )}
-                  </ListItem>
-                </UnorderedList>
-              </InfoBanner>
+                  </p>
+                  <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
+                    <ListItem>
+                      {t.rich(
+                        "page-what-is-ether-how-to-send-and-receive-eth-description-5",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </ListItem>
+                    <ListItem>
+                      {t.rich(
+                        "page-what-is-ether-how-to-send-and-receive-eth-description-6",
+                        {
+                          strong: Strong,
+                        }
+                      )}
+                    </ListItem>
+                  </UnorderedList>
+                </AlertContent>
+              </Alert>
               <p>
                 {t(
                   "page-what-is-ether-how-to-send-and-receive-eth-description-7"
