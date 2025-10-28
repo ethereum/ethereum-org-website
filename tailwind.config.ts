@@ -306,32 +306,6 @@ const config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "rotate-back-and-forth": {
-          "0%": { transform: "rotate(0deg)" },
-          "25%": { transform: "rotate(5deg)" },
-          "75%": { transform: "rotate(-5deg)" },
-          "100%": { transform: "rotate(0deg)" },
-        },
-        "slide-up": {
-          "0%": { transform: "translateY(100%)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        "slide-down": {
-          "0%": { transform: "translateY(0)", opacity: "1" },
-          "100%": { transform: "translateY(100%)", opacity: "0" },
-        },
-        "overlay-fade-out": {
-          "0%": { opacity: "1" },
-          "100%": { opacity: "0" },
-        },
-        overlayShow: {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
-        overlayFadeOut: {
-          from: { opacity: "1" },
-          to: { opacity: "0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -349,11 +323,6 @@ const config = {
         "counter-spin-9": "spin 18s linear infinite reverse",
         "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 150ms ease-in-out",
-        wave: "rotate-back-and-forth 1s linear infinite",
-        "slide-up": "slide-up 0.28s cubic-bezier(.16,1,.3,1)",
-        "slide-down": "slide-down 0.22s ease-in",
-        "overlay-fade-out": "overlay-fade-out 0.18s ease-in",
-        overlayShow: "overlayShow 180ms ease-out",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {
