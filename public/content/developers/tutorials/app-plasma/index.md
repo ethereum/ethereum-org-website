@@ -26,28 +26,28 @@ This is not a production-ready system, but a teaching tool. As such, it is writt
 
 ### Zero-knowledge proofs {#zero-knowledge-proofs}
 
-At a fundamental level, a zero-knowledge proof shows that the prover knows some data, *Data<sub>private</sub>* such that there is a relationship *Relationship* between some public data, *Data<sub>public</sub>*, and *Data<sub>private</sub>*. The verifier knows *Relationship* and *Data<sub>public</sub>*.
+At a fundamental level, a zero-knowledge proof shows that the prover knows some data, _Data<sub>private</sub>_ such that there is a relationship _Relationship_ between some public data, _Data<sub>public</sub>_, and _Data<sub>private</sub>_. The verifier knows _Relationship_ and _Data<sub>public</sub>_.
 
 To preserve privacy, we need the states and the transactions to be private. But to ensure integrity, we need the [cryptographic hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of states to be public. To prove to people who submit transactions that those transactions really happened, we also need to post transaction hashes.
 
-In most cases, *Data<sub>private</sub>* is the input to the zero-knowledge proof program, and *Data<sub>public</sub>* is the output.
+In most cases, _Data<sub>private</sub>_ is the input to the zero-knowledge proof program, and _Data<sub>public</sub>_ is the output.
 
-These fields in *Data<sub>private</sub>*:
+These fields in _Data<sub>private</sub>_:
 
-- *State<sub>n</sub>*, the old state
-- *State<sub>n+1</sub>*, the new state
-- *Transaction*, a transaction that changes from the old state to the new one. This transaction needs to include these fields:
-  - *Destination address* that receives the transfer
-  - *Amount* being transferred
-  - *Nonce* to ensure each transaction can only be processed once.
+- _State<sub>n</sub>_, the old state
+- _State<sub>n+1</sub>_, the new state
+- _Transaction_, a transaction that changes from the old state to the new one. This transaction needs to include these fields:
+  - _Destination address_ that receives the transfer
+  - _Amount_ being transferred
+  - _Nonce_ to ensure each transaction can only be processed once.
   The source address does not need to be in the transaction, because it can be recovered from the signature.
-- *Signature*, a signature that is authorized to perform the transaction. In our case, the only address authorized to perform a transaction is the source address. Because our zero-knowledge system works the way it does, we also need the account's public key, in addition to the Ethereum signature.
+- _Signature_, a signature that is authorized to perform the transaction. In our case, the only address authorized to perform a transaction is the source address. Because our zero-knowledge system works the way it does, we also need the account's public key, in addition to the Ethereum signature.
 
-These are the fields in *Data<sub>public</sub>*:
+These are the fields in _Data<sub>public</sub>_:
 
-- *Hash(State<sub>n</sub>)* the hash of the old state
-- *Hash(State<sub>n+1</sub>)* the hash of the new state
-- *Hash(Transaction)* the hash of the transaction that changes the state from *State<sub>n</sub>* to *State<sub>n+1</sub>*.
+- _Hash(State<sub>n</sub>)_ the hash of the old state
+- _Hash(State<sub>n+1</sub>)_ the hash of the new state
+- _Hash(Transaction)_ the hash of the transaction that changes the state from _State<sub>n</sub>_ to _State<sub>n+1</sub>_.
 
 The relationship checks several conditions:
 
@@ -65,8 +65,8 @@ The primary data structure is the state held by the server. For every account, t
 
 This system requires two components: 
 
-- The *server* that receives transactions, processes them, and posts hashes to the chain along with the zero-knowledge proofs.
-- A *smart contract* that stores the hashes and verifies the zero-knowledge proofs to ensure state transitions are legitimate.
+- The _server_ that receives transactions, processes them, and posts hashes to the chain along with the zero-knowledge proofs.
+- A _smart contract_ that stores the hashes and verifies the zero-knowledge proofs to ensure state transitions are legitimate.
 
 ### Data and control flow {#flows}
 
@@ -131,7 +131,7 @@ To see it in action:
 
 3. Open a browser with a wallet.
 
-4. In the wallet, enter a new passphrase. Note that this will delete your existing passphrase, so *make sure you have a backup*. 
+4. In the wallet, enter a new passphrase. Note that this will delete your existing passphrase, so _make sure you have a backup_. 
 
    The passphrase is `test test test test test test test test test test test junk`, the default testing passphrase for anvil.
 
@@ -290,7 +290,7 @@ Viem provides us the public key as a 65-byte hexadecimal string. The first byte 
 
 However, Noir expects to get this information as two-byte arrays, one for `x` and one for `y`. It is easier to parse it here on the client rather than as part of the zero-knowledge proof.
 
-Note that this is good practice in zero-knowledge in general. Code inside a zero-knowledge proof is expensive, so any processing that can be done outside of the zero-knowledge proof *should* be done outside the zero-knowledge proof.
+Note that this is good practice in zero-knowledge in general. Code inside a zero-knowledge proof is expensive, so any processing that can be done outside of the zero-knowledge proof _should_ be done outside the zero-knowledge proof.
 
 ```tsx
 signature=${hexToArray(signature.slice(2,-2))}
@@ -413,7 +413,7 @@ This function turns the accounts array into a `Field` array, which can be used a
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-This is how you specify a mutable variable, that is, *not* a constant. Variables in Noir must always have a value, so we initialize this variable to all zeros.
+This is how you specify a mutable variable, that is, _not_ a constant. Variables in Noir must always have a value, so we initialize this variable to all zeros.
 
 ```
     for i in 0..ACCOUNT_NUMBER {
@@ -455,9 +455,9 @@ However, in zero-knowledge proofs, there is no flow control. If we ever need to 
 
 A similar thing happens with `if` statements. The `if` statement in the loop above is translated into these mathematical statements.
 
-*condition<sub>result</sub> = accounts[i].address == address* // one if they are equal, zero otherwise
+_condition<sub>result</sub> = accounts[i].address == address_ // one if they are equal, zero otherwise
 
-*account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>*
+_account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
 ```rust
     assert (account < ACCOUNT_NUMBER, f"{address} does not have an account");
@@ -1200,9 +1200,9 @@ If everything checks out, update the state hash to the new value and emit a `Tra
 
 Information security consists of three attributes:
 
-- *Confidentiality*, users cannot read information they are not authorized to read.
-- *Integrity*, information cannot be changed except by authorized users in an authorized manner.
-- *Availability*, authorized users can use the system.
+- _Confidentiality_, users cannot read information they are not authorized to read.
+- _Integrity_, information cannot be changed except by authorized users in an authorized manner.
+- _Availability_, authorized users can use the system.
 
 On this system, integrity is provided through zero-knowledge proofs. Availability is much harder to guarantee, and confidentiality is impossible, because the bank has to know each account's balance and all transactions. There is no way to prevent an entity that has information from sharing that information.
 
