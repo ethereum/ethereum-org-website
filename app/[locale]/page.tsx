@@ -529,8 +529,8 @@ const Page = async ({ params }: { params: PageParams }) => {
                 apps={appsOfTheWeek}
                 matomoCategory="apps-of-the-week"
               />
-              <div className="flex justify-center">
-                <ButtonLink href="/apps">
+              <div className="!mt-8 flex justify-center">
+                <ButtonLink href="/apps" size="lg">
                   Browse apps <ChevronNext />
                 </ButtonLink>
               </div>
@@ -642,7 +642,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                     </ButtonLink>
                   </div>
                 </div>
-              </div>{" "}
+              </div>
             </SectionContent>
           </Section>
 
