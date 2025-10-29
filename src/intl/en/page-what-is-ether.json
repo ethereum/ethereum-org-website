@@ -48,7 +48,7 @@
   "page-what-is-ether-how-long-does-it-take-to-send-eth-description-2": "Transactions achieve 'finality' after ~15 minutes, compared to Bitcoin's 60-minute average.",
   "page-what-is-ether-how-long-does-it-take-to-send-eth-description-3": "During high network traffic, you can speed up transactions by paying higher transaction fees, placing you ahead in line. Fees are split between validators and a burning mechanism.",
   "page-what-is-ether-how-much-does-it-cost-to-send-eth": "How much does it cost to send ETH?",
-  "page-what-is-ether-how-much-does-it-cost-to-send-eth-description-1": "Ethereum transactions require transaction <strong>fees paid in ETH</strong> and calculated in a unit called gas. Fees fluctuate based on network demand, with off-peak periods offering lower costs.",
+  "page-what-is-ether-how-much-does-it-cost-to-send-eth-description-1": "Ethereum transactions require transaction <strong>fees paid in ETH</strong> and calculated using a unit of computation called gas. Fees fluctuate based on network demand, with off-peak periods offering lower costs.",
   "page-what-is-ether-l2s": "Enter L2s: Scaling Ethereum",
   "page-what-is-ether-l2s-description-1": "As Ethereum's popularity grows, keeping transaction fees low becomes challenging. Layer 2 (L2) networks address this issue.",
   "page-what-is-ether-l2s-description-2": "L2s like <optimism>Optimism</optimism> and <arbitrum>Arbitrum</arbitrum> offer <strong>5-10x cheaper fees</strong> while inheriting Ethereum's security. They process transactions off-chain and post summaries to Ethereum.",
