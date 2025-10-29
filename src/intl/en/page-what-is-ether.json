@@ -51,7 +51,7 @@
   "page-what-is-ether-how-much-does-it-cost-to-send-eth-description-1": "Ethereum transactions require transaction <strong>fees paid in ETH</strong> and calculated using a unit of computation called gas. Fees fluctuate based on network demand, with off-peak periods offering lower costs.",
   "page-what-is-ether-l2s": "Enter L2s: Scaling Ethereum",
   "page-what-is-ether-l2s-description-1": "As Ethereum's popularity grows, keeping transaction fees low becomes challenging. Layer 2 (L2) networks address this issue.",
-  "page-what-is-ether-l2s-description-2": "L2s like <optimism>Optimism</optimism> and <arbitrum>Arbitrum</arbitrum> offer <strong>5-10x cheaper fees</strong> while inheriting Ethereum's security. They process transactions off-chain and post summaries to Ethereum.",
+  "page-what-is-ether-l2s-description-2": "L2s like <optimism>Optimism</optimism> and <arbitrum>Arbitrum</arbitrum> offer <strong>5-10x cheaper fees</strong> while inheriting Ethereum's security. They process transactions offchain and post summaries to Ethereum.",
   "page-what-is-ether-l2s-description-3": "Think of them as express lanes that provide faster, cheaper transactions alongside Ethereum's main highway.",
   "page-what-is-ether-l2s-description-4": "L2 <strong>transfers can cost as little as $0.04</strong>, bringing Ethereum to millions more users through integrations with companies like Robinhood, PayPal, and Shopify.",
   "page-what-is-ether-what-is-the-eth-supply": "What is the ETH supply?",
