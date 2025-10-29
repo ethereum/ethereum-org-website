@@ -64,7 +64,7 @@
   "page-what-is-ether-what-is-the-distribution-of-eth": "What is the distribution of ETH?",
   "page-what-is-ether-what-is-the-distribution-of-eth-description-1": "Ownership is widely distributed across <etherscan>tens of millions of addresses</etherscan>, preventing concentration of control and enhancing decentralization.",
   "page-what-is-ether-breakdown": "A breakdown of ether distribution",
-  "page-what-is-ether-breakdown-description-1": "<strong>Staked ether</strong>: Millions of ETH <beaconchain>locked</beaconchain> for network security",
+  "page-what-is-ether-breakdown-description-1": "<strong>Staked ether</strong>: Tens-of-millions of ETH <beaconchain>locked</beaconchain> for network security",
   "page-what-is-ether-breakdown-description-2": "<strong>Exchanges</strong>: Centralized platforms <unchained>hold 13-16%</unchained> of supply",
   "page-what-is-ether-breakdown-description-3": "<strong>Smart contracts</strong>: Significant amounts in smart contracts including DeFi protocols",
   "page-what-is-ether-breakdown-description-4": "<strong>Ethereum Foundation</strong>: Holds <ef>less than 0.3%</ef> of supply (down from 9% in 2014)",
