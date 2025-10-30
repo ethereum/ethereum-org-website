@@ -118,7 +118,7 @@ export const setRedisData = async (
   try {
     const serialized = JSON.stringify(value)
     await client.set(
-      key,
+      `external-data:${key}`,
       serialized,
       ttlSeconds ? { ex: ttlSeconds } : undefined
     )
@@ -139,7 +139,7 @@ export const getRedisData = async <T>(key: string): Promise<T | null> => {
   }
 
   try {
-    const data = await client.get(key)
+    const data = await client.get(`external-data:${key}`)
     if (!data) {
       return null
     }
@@ -160,7 +160,7 @@ export const deleteRedisData = async (key: string): Promise<boolean> => {
   }
 
   try {
-    await client.del(key)
+    await client.del(`external-data:${key}`)
     return true
   } catch (error) {
     console.error(`Failed to delete data from Redis for key "${key}":`, error)

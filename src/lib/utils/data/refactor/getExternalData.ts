@@ -1,5 +1,8 @@
+import { MetricReturnData } from "@/lib/types"
+
 import { ExternalDataMap } from "./fetchExternalData"
 import { getRedisData } from "./redisClient"
+import { getSupabaseData } from "./supabaseClient"
 
 /**
  * Retrieves external data from Redis.
@@ -14,15 +17,15 @@ export const getExternalData = async (
   if (keys && keys.length > 0) {
     const results = await Promise.all(
       keys.map(async (key) => {
-        const redisKey = `external-data:${key}`
-        const data = await getRedisData(redisKey)
+        const data = await getRedisData(key)
+        // const data = await getSupabaseData(key)
         return { key, data }
       })
     )
 
     const dataMap = results.reduce((acc, { key, data }) => {
-      if (data !== null) {
-        acc[key] = data
+      if (data !== null && data !== undefined) {
+        acc[key] = data as MetricReturnData | Record<string, MetricReturnData>
       }
       return acc
     }, {} as ExternalDataMap)
@@ -30,7 +33,6 @@ export const getExternalData = async (
     return Object.keys(dataMap).length > 0 ? dataMap : null
   }
 
-  // Otherwise, you would need to scan Redis for all keys with prefix "external-data:"
   // This is more complex and typically requires knowing the keys ahead of time
   // For now, return null and require keys to be specified
   console.warn(
@@ -48,6 +50,26 @@ export const getExternalData = async (
 export const getExternalDataByKey = async <T = unknown>(
   key: string
 ): Promise<T | null> => {
-  const redisKey = `external-data:${key}`
-  return await getRedisData<T>(redisKey)
+  const fromRedis = await getRedisData<T>(key)
+  if (fromRedis !== null) return fromRedis
+  return await getSupabaseData<T>(key)
+}
+
+// Test function - run with: npx tsx src/lib/utils/data/refactor/getExternalData.ts
+if (require.main === module) {
+  import("dotenv/config").then(async () => {
+    console.log("Testing getExternalData...")
+
+    try {
+      const data = await getExternalData(["ethPrice", "calendarEvents"])
+
+      if (data) {
+        console.log("\n✅ Successfully retrieved external data:")
+        console.log(data)
+      }
+    } catch (error) {
+      console.error("❌ Error testing getExternalData:", error)
+      process.exit(1)
+    }
+  })
 }
