@@ -46,6 +46,23 @@ Current identity management systems put personal information at risk. Zero-knowl
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
 
+<Alert variant="info">
+  <AlertEmoji text="💡" />
+  <AlertContent>
+    <AlertTitle className="mb-2">
+      ZKP + Identity in action: Bhutan National Digital ID (NDI) on Ethereum
+    </AlertTitle>
+    <AlertDescription>
+      <p>
+        A real-world example of using ZKP for identity management systems is the Kingdom of Bhutan's National Digital ID (NDI) system, built on Ethereum. Bhutan’s NDI uses ZKPs to allow citizens to cryptographically prove facts about themselves, like "I am a citizen" or "I am over 18," without revealing the sensitive personal data on their ID.
+      </p>
+      <p>
+        Learn more about Bhutan NDI in the <a href="https://ethereum.org/decentralized-identity/#national-and-government-id">Decentralized Identity case study</a>.
+      </p>
+    </AlertDescription>
+  </AlertContent>
+</Alert>
+
 ### Proof of Humanity {#proof-of-humanity}
 
 One of the most widely used examples of zero-knowledge proofs in action today is the [World ID protocol](https://world.org/blog/world/world-id-faqs), which can be thought of as “a global digital passport for the age of AI.” It allows people to prove they are unique individuals without revealing personal information. This is achieved through a device called the Orb, which scans a person's iris and generates an iris code. The iris code is checked and verified to confirm the person is a biologically unique human being. After verification, an identity commitment generated on the user’s device (and not linked to or derived from the biometric data) is added to a secure list on the blockchain. Then, whenever the user wants to prove they’re a verified human – whether to sign in, vote, or take other actions – they can generate a zero-knowledge proof that confirms their membership in the list. The beauty of using a zero-knowledge proof is that only one statement is revealed: this person is unique. Everything else stays private.
