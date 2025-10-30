@@ -6,6 +6,7 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  CommunityEvent,
   DocsFrontmatter,
   RoadmapFrontmatter,
   StakingFrontmatter,
@@ -569,7 +570,7 @@ export type DefiLlamaTVLResponse = {
   totalLiquidityUSD: number
 }[]
 
-export type MetricReturnData = ValueOrError<number>
+export type MetricReturnData = ValueOrError<number | CommunityEvent[]>
 
 export type StatsBoxState = ValueOrError<string>
 
