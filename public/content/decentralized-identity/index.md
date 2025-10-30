@@ -77,9 +77,9 @@ Grant-giving applications that use [quadratic voting](/glossary/#quadratic-votin
 
 ### 5. National and Government ID {#national-and-government-id}
 
-Governments can use the principles of decentralized identity to issue foundational identity documents—such as national IDs, passports, or driver's licenses—as verifiable credentials on Ethereum, providing strong cryptographic guarantees of authenticity to reduce fraud and forgery in online identity verification. Citizens can store these attestations in their personal [wallet](https://ethereum.org/wallets/) and use them to prove their identity, age, or right to vote.
+Governments can use the principles of decentralized identity to issue foundational identity documents—such as national IDs, passports, or driver's licenses—as verifiable credentials on Ethereum, providing strong cryptographic guarantees of authenticity to reduce fraud and forgery in online identity verification. Citizens can store these attestations in their personal [wallet](/wallets/) and use them to prove their identity, age, or right to vote.
 
-This model allows for selective disclosure, especially when combined with [zero-knowledge proof (ZKP)](https://ethereum.org/zero-knowledge-proofs/) privacy technology. For example, a citizen could cryptographically prove they are over 18 to access an age-restricted service without revealing their exact date of birth, offering greater privacy than a traditional ID.
+This model allows for selective disclosure, especially when combined with [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/) privacy technology. For example, a citizen could cryptographically prove they are over 18 to access an age-restricted service without revealing their exact date of birth, offering greater privacy than a traditional ID.
 
 #### 💡Case study: Bhutan National Digital ID (NDI) on Ethereum
 
@@ -87,7 +87,7 @@ The Kingdom of Bhutan [launched a National Digital Identity (NDI) system](https:
 
 Using decentralized identifiers and verifiable credentials, Bhutan's NDI issues digitally signed credentials directly to a citizen's personal wallet. By anchoring cryptographic proofs of these credentials on Ethereum, the system ensures they are authentic, tamper-proof, and can be verified by any party without querying a central authority.
 
-The system's architecture emphasizes privacy through the use of [Zero-Knowledge Proof (ZKP)](https://ethereum.org/zero-knowledge-proofs/) technology. This implementation of "selective disclosure" allows citizens to prove specific facts (e.g., "I am over 18" or "I am a citizen") to access services without revealing the underlying personal data, such as their full ID number or exact date of birth. This demonstrates a powerful, real-world use of Ethereum for a secure, user-centric, and privacy-preserving national ID system.
+The system's architecture emphasizes privacy through the use of [Zero-Knowledge Proof (ZKP)](/zero-knowledge-proofs/) technology. This implementation of "selective disclosure" allows citizens to prove specific facts (e.g., "I am over 18" or "I am a citizen") to access services without revealing the underlying personal data, such as their full ID number or exact date of birth. This demonstrates a powerful, real-world use of Ethereum for a secure, user-centric, and privacy-preserving national ID system.
 
 ## What are attestations? {#what-are-attestations}
 

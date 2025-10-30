@@ -57,7 +57,7 @@ Zero-knowledge proofs are particularly useful in the context of [decentralized i
         A real-world example of using ZKP for identity management systems is the Kingdom of Bhutan's National Digital ID (NDI) system, built on Ethereum. Bhutan’s NDI uses ZKPs to allow citizens to cryptographically prove facts about themselves, like "I am a citizen" or "I am over 18," without revealing the sensitive personal data on their ID.
       </p>
       <p>
-        Learn more about Bhutan NDI in the <a href="https://ethereum.org/decentralized-identity/#national-and-government-id">Decentralized Identity case study</a>.
+        Learn more about Bhutan NDI in the <a href="/decentralized-identity/#national-and-government-id">Decentralized Identity case study</a>.
       </p>
     </AlertDescription>
   </AlertContent>
