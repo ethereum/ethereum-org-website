@@ -83,9 +83,7 @@ This model allows for selective disclosure, especially when combined with [zero-
 
 #### 💡Case study: Bhutan National Digital ID (NDI) on Ethereum
 
-The Kingdom of Bhutan [launched a National Digital Identity (NDI) system](https://www.dailybhutan.com/article/bhutan-makes-history-as-the-world-s-first-nation-to-launch-a-national-digital-id-on-ethereum) on Ethereum in October 2025, built on the principles of decentralized identity and self-sovereign identity. This nationwide deployment puts the decentralized identity model into practice across the country.
-
-Using decentralized identifiers and verifiable credentials, Bhutan's NDI issues digitally signed credentials directly to a citizen's personal wallet. By anchoring cryptographic proofs of these credentials on Ethereum, the system ensures they are authentic, tamper-proof, and can be verified by any party without querying a central authority.
+The Kingdom of Bhutan [launched a National Digital Identity (NDI) system](https://www.dailybhutan.com/article/bhutan-makes-history-as-the-world-s-first-nation-to-launch-a-national-digital-id-on-ethereum) on Ethereum in October 2025, built on the principles of decentralized identity and self-sovereign identity. Using decentralized identifiers and verifiable credentials, Bhutan's NDI issues digitally signed credentials directly to a citizen's personal wallet. By anchoring cryptographic proofs of these credentials on Ethereum, the system ensures they are authentic, tamper-proof, and can be verified by any party without querying a central authority.
 
 The system's architecture emphasizes privacy through the use of [Zero-Knowledge Proof (ZKP)](/zero-knowledge-proofs/) technology. This implementation of "selective disclosure" allows citizens to prove specific facts (e.g., "I am over 18" or "I am a citizen") to access services without revealing the underlying personal data, such as their full ID number or exact date of birth. This demonstrates a powerful, real-world use of Ethereum for a secure, user-centric, and privacy-preserving national ID system.
 
