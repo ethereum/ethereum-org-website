@@ -29,3 +29,19 @@ export const fetchExternalData = async (): Promise<ExternalDataMap> => {
     return acc
   }, {} as ExternalDataMap)
 }
+
+// Allow running this file directly from the CLI:
+//   npx tsx src/lib/utils/data/refactor/fetchExternalData.ts
+if (require.main === module) {
+  import("dotenv/config").then(async () => {
+    try {
+      const data = await fetchExternalData()
+      console.log(data)
+      process.exit(0)
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error("Error running fetchExternalData:", error)
+      process.exit(1)
+    }
+  })
+}
