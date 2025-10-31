@@ -61,7 +61,7 @@ if (require.main === module) {
     console.log("Testing getExternalData...")
 
     try {
-      const data = await getExternalData(["ethPrice", "calendarEvents"])
+      const data = await getExternalData(["ethPrice", "calendarEvents"]) //TODO: this should return list of endpoints to fetch from
 
       if (data) {
         console.log("\n✅ Successfully retrieved external data:")

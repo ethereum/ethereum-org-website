@@ -7,6 +7,8 @@ export type ExternalDataMap = Record<
   MetricReturnData | Record<string, MetricReturnData>
 >
 
+// TODO: Make fetchExternalDAily, fetchExternalWeekly, fetchExternalHourly, etc...
+
 export const fetchExternalData = async (): Promise<ExternalDataMap> => {
   const results = await Promise.all(
     externalServices.map(async (service) => {
