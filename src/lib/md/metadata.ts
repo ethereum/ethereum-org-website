@@ -12,7 +12,7 @@ export const getMdMetadata = async ({
 }) => {
   const slug = slugArray.join("/")
 
-  const { markdown } = await importMd(locale, slug)
+  const { markdown, isTranslated } = await importMd(locale, slug)
   const { frontmatter } = await compile({
     markdown,
     slugArray: slug.split("/"),
@@ -28,7 +28,7 @@ export const getMdMetadata = async ({
   const image = frontmatter.image
   const author = frontmatter.author
 
-  return await getMetadata({
+  const baseMetadata = await getMetadata({
     locale,
     slug: slugArray,
     title: pageTitle,
@@ -36,4 +36,9 @@ export const getMdMetadata = async ({
     image,
     author,
   })
+
+  // If the page is not translated, do not index the page
+  return isTranslated
+    ? baseMetadata
+    : { ...baseMetadata, robots: { index: false } }
 }
