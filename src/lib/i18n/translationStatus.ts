@@ -1,6 +1,6 @@
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { loadMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/lib/i18n/loadMessages"
 
 /**
  * Determine whether all required i18n namespaces exist for a given locale.

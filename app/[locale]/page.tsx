@@ -87,7 +87,6 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { areNamespacesTranslated } from "@/i18n/translationStatus"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
@@ -96,6 +95,7 @@ import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import { areNamespacesTranslated } from "@/lib/i18n/translationStatus"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(

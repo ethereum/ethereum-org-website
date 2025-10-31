@@ -23,7 +23,7 @@ export async function loadMessages(locale: string) {
     const namespaces = getNamespaces(localePath)
 
     for (const ns of namespaces) {
-      messages[ns] = (await import(`../intl/${locale}/${ns}.json`)).default
+      messages[ns] = (await import(`../../intl/${locale}/${ns}.json`)).default
     }
   }
 
