@@ -83,7 +83,7 @@ const UpgradeCountdown = () => {
   return (
     <>
       <BaseLink
-        href={`/roadmap/${upgrade}}/`}
+        href={`/roadmap/${upgrade}/`}
         className="text-5xl font-bold text-body no-underline hover:text-primary"
       >
         {upgrade.slice(0, 1).toUpperCase() + upgrade.slice(1)}
