@@ -530,7 +530,11 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             {/* DESKTOP */}
             <Scroller>
               {hackathons.map((event, idx) => (
-                <HackathonCard key={idx} event={event} className="flex-1" />
+                <HackathonCard
+                  key={idx}
+                  event={event}
+                  className="min-w-72 max-w-md flex-1"
+                />
               ))}
             </Scroller>
             {/* MOBILE */}
