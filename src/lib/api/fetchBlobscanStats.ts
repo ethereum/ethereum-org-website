@@ -1,3 +1,5 @@
+import type { ValueOrError } from "../types"
+
 type BlobscanOverallStats = {
   avgBlobAsCalldataFee: number
   avgBlobFee: number
@@ -17,41 +19,20 @@ type BlobscanOverallStats = {
   updatedAt: string
 }
 
-type BlobscanOverallStatsErr = {
-  message: string
-  code: string
-  issues: [message: string]
-}
-
 /**
  * Fetch the overall stats from Blobscan
  *
  * @see https://api.blobscan.com/#/stats/stats-getOverallStats
  *
  */
-export const fetchBlobscanStats = async () => {
-  const data = await fetch("https://api.blobscan.com/stats/overall").then(
-    (res) => responseHandler(res)
-  )
+export const fetchBlobscanStats = async (): Promise<
+  ValueOrError<BlobscanOverallStats>
+> => {
+  const response = await fetch("https://api.blobscan.com/stats/overall")
 
-  return data
-}
+  if (!response.ok) return { error: "Response for fetchBlobscanStats not okay" }
 
-type BlobscanResponse =
-  | (Omit<Response, "json"> & {
-      json: () => BlobscanOverallStats | PromiseLike<BlobscanOverallStats>
-    })
-  | (Omit<Response, "json"> & {
-      json: () => BlobscanOverallStatsErr | PromiseLike<BlobscanOverallStatsErr>
-    })
+  const [json]: [BlobscanOverallStats] = await response.json()
 
-const responseHandler = async (response: Response) => {
-  const res = await (response as BlobscanResponse).json()
-
-  if ("message" in res) {
-    throw Error(`Code ${res.code}: Failed to fetch Blobscan Overall Stats`, {
-      cause: res.message,
-    })
-  }
-  return res
+  return { value: json, timestamp: Date.now() }
 }

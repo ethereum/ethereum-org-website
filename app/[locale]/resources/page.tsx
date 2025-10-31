@@ -52,19 +52,23 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const { txCostsMedianUsd } = growThePieData
 
-  const { totalBlobs, avgBlobFee } = blobscanOverallStats
-
-  const formattedTotalBlobs = new Intl.NumberFormat(undefined, {
-    notation: "compact",
-    maximumFractionDigits: 1,
-  }).format(totalBlobs)
-
-  console.log({ avgBlobFee, formattedTotalBlobs })
+  const blobStats =
+    "error" in blobscanOverallStats
+      ? {
+          avgBlobFee: "—",
+          totalBlobs: "—",
+        }
+      : {
+          avgBlobFee: blobscanOverallStats.value.avgBlobFee,
+          totalBlobs: new Intl.NumberFormat(undefined, {
+            notation: "compact",
+            maximumFractionDigits: 1,
+          }).format(blobscanOverallStats.value.totalBlobs),
+        }
 
   const resourceSections = await getResources({
     txCostsMedianUsd,
-    totalBlobs: formattedTotalBlobs,
-    avgBlobFee,
+    ...blobStats,
   })
 
   const commitHistoryCache: CommitHistory = {}
