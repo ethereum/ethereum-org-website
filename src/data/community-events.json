@@ -191,7 +191,8 @@
     "href": "https://ethrome.org",
     "location": "Rome, ITA",
     "description": "The hackathon for builders by builders",
-    "imageUrl": "https://www.ethrome.org/opengraph-image.png"
+    "imageUrl": "https://www.ethrome.org/opengraph-image.png",
+    "hackathon": true
   },
   {
     "title": "Urbe Village",
@@ -204,12 +205,32 @@
   },
   {
     "title": "ETH Latam",
+    "startDate": "2025-11-06",
+    "endDate": "2025-11-07",
+    "href": "https://ethlatam.org",
+    "location": "São Paulo, BR",
+    "description": "Real World Ethereum Hackathon: A 2-day hackathon powered by ETH Samba—with 500 hackers building real use cases.",
+    "imageUrl": "https://taikai.azureedge.net/n2se9-rYN3sttTYTA8x8287JQJxQiijLJVJ5JOakN9I/rs:fit:1280:0:0/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3RhaWthaS1zdG9yYWdlL2ltYWdlcy9hNzIzNjBmMC02OTRjLTExZjAtOTE1Yi1kN2Q0MTViMDk4NjlQb3J0YWRhLnBuZw",
+    "hackathon": true
+  },
+  {
+    "title": "ETH Latam",
     "startDate": "2025-11-08",
     "endDate": "2025-11-09",
     "href": "https://ethlatam.org",
     "location": "São Paulo, BR",
     "description": "ETH Latam is a gathering place for builders and enthusiasts of Ethereum in Latin America.",
     "imageUrl": "https://strapi.ethkipu.org/uploads/Metadata_ETH_Latam_2025_ING_759a4fae04.png"
+  },
+  {
+    "title": "ETHGlobal Buenos Aires",
+    "startDate": "2025-11-21",
+    "endDate": "2025-11-23",
+    "href": "https://ethglobal.com/events/buenosaires",
+    "location": "Buenos Aires, ARG",
+    "description": "ETHGlobal's long awaited return to Argentina! Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/buenosaires/images/un4u4/default.jpg",
+    "hackathon": true
   },
   {
     "title": "DevConnect",
@@ -222,11 +243,11 @@
   },
   {
     "title": "ETH Riyadh",
-    "startDate": "2025-12-3",
-    "endDate": "2025-12-4",
+    "startDate": "2026-02-01",
+    "endDate": "2026-02-28",
     "href": "https://ethriyadh.com/",
     "location": "Riyadh, KSA",
-    "description": "ETH Riyadh 2025 will reconvene as the Middle East’s premier Web3 summit, uniting global luminaries from the Ethereum and blockchain ecosystems in Riyadh.",
+    "description": "ETH Riyadh 2025 will reconvene as the Middle East’s premier Web3 summit, uniting global luminaries from the Ethereum and blockchain ecosystems in Riyadh. February 2026, details TBD.",
     "imageUrl": "https://d1u25r3n8sm37o.cloudfront.net/wrold3ai/riyadh2025.jpg"
   }
 ]
