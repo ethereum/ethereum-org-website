@@ -227,7 +227,7 @@
   "nav-contribute-description": "Jika anda mahu membantu, ini akan memberi anda panduan",
   "nav-contribute-label": "Menyumbang kepada ethereum.org",
   "nav-dao-description": "Komuniti milik ahli tanpa penguasaan berpusat",
-  "nav-dapps-description": "Terokai pelbagai ekosistem aplikasi menggunakan Ethereum",
+  "nav-apps-description": "Terokai pelbagai ekosistem aplikasi menggunakan Ethereum",
   "nav-defi-description": "Satu alternatif global yang terbuka berbanding pasaran kewangan tradisional",
   "nav-desci-description": "Alternatif global dan terbuka kepada sistem sains semasa",
   "nav-desoc-description": "Platform berasaskan blok rantai untuk interaksi sosial dan penciptaan kandungan",
@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Transaksi yang lebih murah dan pantas untuk Ethereum",
   "nav-learn-by-coding-description": "Alat-alat yang membantu anda mencuba dengan Ethereum",
   "nav-local-env-description": "Pilih dan tetapkan tindanan pembangunan Ethereum anda",
-  "nav-mainnet-description": "Aplikasi blok rantai syarikat boleh dibina pada Rangkaian Utama Ethereum umum",
+  "nav-enterprise-description": "Aplikasi blok rantai syarikat boleh dibina pada Rangkaian Utama Ethereum umum",
   "nav-nft-description": "Satu cara untuk mewakili apa sahaja yang unik sebagai aset berasaskan Ethereum",
   "nav-open-research-description": "Salah satu kelebihan utama Ethereum ialah komuniti penyelidikannya yang aktif",
   "nav-open-research-label": "Penyelidikan terbuka",
@@ -322,6 +322,8 @@
   "nav-staking-solo-description": "Jalankan perkakasan laman utama dan tambah pada keselamatan dan keteragihan rangkaian Ethereum secara peribadi",
   "nav-staking-solo-label": "Pertaruhan solo",
   "nav-start-building-description": "Maklumat berguna untuk pengguna baharu",
+  "nav-start-with-crypto-title": "Mulakan di sini",
+  "nav-start-with-crypto-description": "Langkah pertama anda menggunakan Ethereum",
   "nav-translation-program-description": "Usahasama untuk menterjemah ethereum.org kepada semua bahasa",
   "nav-tutorials-description": "Senarai tutorial komuniti yang dipilih susun",
   "nav-use-cases-description": "Terokai idea lain untuk penggunaan Ethereum",
@@ -429,5 +431,8 @@
   "withdrawals": "Pertaruhan keluaran",
   "wrapped-ether": "Ether Terlindung",
   "yes": "Ya",
-  "zero-knowledge-proofs": "Bukti sifar pengetahuan"
+  "zero-knowledge-proofs": "Bukti sifar pengetahuan",
+  "ethereum-vs-bitcoin": "Ethereum lwn. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Fahami perbezaan antara Ethereum dan Bitcoin"
+
 }

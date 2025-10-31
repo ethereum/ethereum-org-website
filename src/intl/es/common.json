@@ -231,7 +231,7 @@
   "nav-contribute-description": "Si quiere ayudar, esta guía le dirá cómo.",
   "nav-contribute-label": "Colaborar con ethereum.org",
   "nav-dao-description": "Comunidades con propiedad compartida por los miembros sin liderazgo centralizado.",
-  "nav-dapps-description": "Explore el rico ecosistema de aplicaciones que usan Ethereum",
+  "nav-apps-description": "Explore el rico ecosistema de aplicaciones que usan Ethereum",
   "nav-defi-description": "Una alternativa abierta y global al tradicional mercado financiero",
   "nav-desci-description": "Una alternativa global y abierta al sistema científico actual",
   "nav-desoc-description": "Plataformas basadas en cadenas de bloques para interacción social y creación de contenido",
@@ -280,7 +280,7 @@
   "nav-history-label": "Historia técnica de Ethereum",
   "nav-learn-by-coding-description": "Herramientas que le ayudan a experimentar con Ethereum",
   "nav-local-env-description": "Elija y defina su pila de desarrollo en Ethereum",
-  "nav-mainnet-description": "Las aplicaciones de cadena de bloques para empresa se pueden construir en la red principal y pública de Ethereum",
+  "nav-enterprise-description": "Las aplicaciones de cadena de bloques para empresa se pueden construir en la red principal y pública de Ethereum",
   "nav-networks-home-description": "Transacciones más rápidas y baratas para Ethereum",
   "nav-networks-introduction-label": "Introducción",
   "nav-networks-introduction-description": "Ethereum se expandió en una red de redes",
@@ -334,6 +334,8 @@
   "nav-staking-solo-description": "Ejecute hardware doméstico y contribuya personalmente a la seguridad y a la descentralización de la red Ethereum.",
   "nav-staking-solo-label": "Participación en solitario",
   "nav-start-building-description": "Información útil para principiantes",
+  "nav-start-with-crypto-title": "Empieza aquí",
+  "nav-start-with-crypto-description": "Tus primeros pasos con Ethereum",
   "nav-translation-program-description": "Una iniciativa de colaboración para traducir ethereum.org a todos los idiomas",
   "nav-tutorials-description": "Lista seleccionada de tutoriales de la comunidad",
   "nav-use-cases-description": "Descubra diferentes ideas de usos de Ethereum",
@@ -442,5 +444,8 @@
   "withdrawals": "Retiradas de participaciones",
   "wrapped-ether": "Wrapped Ether (eter envuelto)",
   "yes": "Sí",
-  "zero-knowledge-proofs": "Pruebas de conocimiento cero"
+  "zero-knowledge-proofs": "Pruebas de conocimiento cero",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "Entiende las diferencias entre Ethereum y Bitcoin"
+
 }

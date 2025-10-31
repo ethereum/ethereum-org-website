@@ -1,8 +1,10 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
+
+import Emoji, { type EmojiProps } from "../Emoji"
 
 import { Button } from "./buttons/Button"
 
@@ -67,7 +69,10 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("[&_p]:leading-relaxed", className)}
+    className={cn(
+      "[&_p]:mb-4 [&_p]:mt-0 [&_p]:leading-relaxed last:[&_p]:mb-0",
+      className
+    )}
     {...props}
   />
 ))
@@ -83,10 +88,30 @@ const AlertCloseButton = React.forwardRef<
     className={cn("-me-4 rounded-full text-body", className)}
     {...props}
   >
-    <MdClose className="h-6 w-6" />
+    <X className="h-6 w-6" />
     <span className="sr-only">Close</span>
   </Button>
 ))
 AlertCloseButton.displayName = "AlertCloseButton"
 
-export { Alert, AlertCloseButton, AlertContent, AlertDescription, AlertTitle }
+const AlertEmoji = React.forwardRef<SVGElement, EmojiProps>(
+  ({ className, ...props }) => (
+    <Emoji
+      className={cn(
+        "flex-shrink-0 flex-grow-0 self-start text-4xl sm:self-auto",
+        className
+      )}
+      {...props}
+    />
+  )
+)
+AlertEmoji.displayName = "AlertEmoji"
+
+export {
+  Alert,
+  AlertCloseButton,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+  AlertTitle,
+}

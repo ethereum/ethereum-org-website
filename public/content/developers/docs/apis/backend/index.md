@@ -4,7 +4,7 @@ description: An introduction to the Ethereum client APIs that let you interact w
 lang: en
 ---
 
-In order for a software application to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
+In order for a software application to interact with the Ethereum blockchain (i.e., read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
 For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there is a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
@@ -16,7 +16,7 @@ It might be helpful to understand the [Ethereum stack](/developers/docs/ethereum
 
 ## Why use a library? {#why-use-a-library}
 
-These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
+These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g., converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
 
 ## Available libraries {#available-libraries}
 
@@ -25,7 +25,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Documentation](https://docs.alchemy.com/)
+- [Documentation](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
@@ -39,7 +39,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentation](https://docs.blastapi.io)
-- [Discord](https://discord.gg/bwarelabs)
+- [Discord](https://discord.gg/SaRqmRUjjQ)
 
 **BlockPi -** **_Provide more efficient and fast RPC services_**
 
@@ -55,10 +55,13 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Etherscan - Block Explorer and Transaction APIs**
 - [Documentation](https://docs.etherscan.io/)
 
+**Blockscout - Open Source Block Explorer**
+- [Documentation](https://docs.blockscout.com/)
+
 **GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)
-- [Documentation](https://getblock.io/docs/)
+- [Documentation](https://docs.getblock.io/)
 
 **Infura -** **_The Ethereum API as a service._**
 
@@ -74,7 +77,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **NOWNodes - _Full Nodes and Block Explorers._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+- [Documentation](https://nownodes.gitbook.io/documentation)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
@@ -111,7 +114,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Python Tooling -** **_Variety of libraries for Ethereum interaction via Python._**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
@@ -144,13 +147,13 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Chainstack -** **_Elastic and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
-- [Documentation](https://docs.chainbase.com/docs)
+- [Documentation](https://docs.chainstack.com/)
 - [Ethereum API reference](https://docs.chainstack.com/reference/ethereum-getting-started)
 
 **Coinbase Cloud Node -** **_Blockchain Infrastructure API._**
 
-- [Coinbase Cloud Node](https://www.coinbase.com/cloud)
-- [Documentation](https://docs.cloud.coinbase.com/)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
+- [Documentation](https://docs.cdp.coinbase.com/)
 
 **DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
 

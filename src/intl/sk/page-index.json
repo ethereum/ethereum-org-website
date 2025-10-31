@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Vyskúšajte aplikácie",
   "page-index-cta-get-eth-description": "Mena Ethereum",
   "page-index-cta-get-eth-label": "Získať ETH",
-  "page-index-cta-networks-description": "Užite si minimálne poplatky",
-  "page-index-cta-networks-label": "Vyberte si sieť",
   "page-index-cta-wallet-description": "Vytvoriť si učty a spravujte aktíva",
   "page-index-cta-wallet-label": "Vyberte si peňaženku",
+  "page-index-cta-build-apps-description": "Vytvorte svoju prvú aplikáciu",
+  "page-index-cta-build-apps-label": "Začnite vyvíjať",
   "page-index-description": "Popredná platforma pre inovatívne aplikácie a blockchainové siete",
   "page-index-developers-code-example-description-0": "Vybudujte banku poháňanú logikou, ktorú ste naprogramovali",
   "page-index-developers-code-example-description-1": "Vytvárajte tokeny, ktoré môžete prenášať a používať v rôznych aplikáciách",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Najnovšie príspevky",
   "page-index-posts-subtitle": "Najnovšie blogové príspevky a novinky z komunity",
   "page-index-title": "Vitajte v Ethereum",
+  "page-index-use-cases-tag": "Prípady použitia",
   "page-index-values-description": "Buďte súčasťou digitálnej revolúcie",
   "page-index-values-header": "Internet sa mení",
   "page-index-values-legacy": "Dedičstvo",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Uzavretosť",
   "page-index-values-open-legacy-content-0": "Spoločnosti si chránia svoje duševné vlastníctvo a nezdieľajú ho. Nikto mimo spoločnosti nemôže vidieť, ako veci fungujú, riešiť problémy alebo niečo zlepšiť. Ľudia môžu len ťažko vytvoriť nové nástroje alebo ich prispôsobiť.",
   "page-index-values-open-ethereum-label": "Otvorenosť",
-  "page-index-values-open-ethereum-content-0": "Ethereum je verejné pre všetkých. Ktokoľvek môže vidieť, používať a vylepšovať kód, čím sa stáva lepším pre všetkých."
+  "page-index-values-open-ethereum-content-0": "Ethereum je verejné pre všetkých. Ktokoľvek môže vidieť, používať a vylepšovať kód, čím sa stáva lepším pre všetkých.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Zúčastnite sa najväčšieho podujatia roka Ethereum",
+  "page-index-devconnect-banner-get-tickets": "Získajte vstupenky"
 }

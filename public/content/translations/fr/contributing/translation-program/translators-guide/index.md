@@ -116,7 +116,7 @@ La meilleure façon de gérer les liens est de les copier directement à partir 
 
 ![Exemple de lien.png](./example-of-link.png)
 
-Les liens apparaissent également dans le texte source sous la forme de balises (c'est-à-dire  `<0> </0>`). Si vous survolez la balise, l'éditeur affichera son véritable contenu. Parfois, ces balises désigneront des liens.
+Les liens apparaissent également dans le texte source sous la forme de balises (c'est-à-dire `<0> </0>`). Si vous survolez la balise, l'éditeur affichera son véritable contenu. Parfois, ces balises désigneront des liens.
 
 Il est très important de copier les liens depuis le texte source et de ne pas modifier l'ordre des balises.
 

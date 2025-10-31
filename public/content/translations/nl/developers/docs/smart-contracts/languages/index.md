@@ -113,7 +113,6 @@ Voor meer informatie, [lees de Vyper-rationale](https://vyper.readthedocs.io/en/
 - [Cheat sheet](https://reference.auditless.com/cheatsheet)
 - [Frameworks en tools voor de ontwikkeling van smart contracts voor Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - leer smart contracts van Vyper beveiligen en hacken](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyper-kwetsbaarheidsvoorbeelden](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub voor ontwikkeling](https://github.com/zcor/vyper-dev)
 - [Vyper greatest hits, voorbeelden smart contract](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Geweldige door Vyper samengestelde bronnen](https://github.com/spadebuilders/awesome-vyper)
@@ -180,7 +179,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -227,7 +226,6 @@ Bent u nieuw met Ethereum en hebt u nog niet eerder geprogrammeerd met smart con
 
 - [Yul-documentatie](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+-documentatie](https://github.com/fuellabs/yulp)
-- [Yul+-speeltuin](https://yulp.fuel.sh/)
 - [Yul+ -kennismakingspost](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Voorbeeldcontract {#example-contract-2}
@@ -322,5 +320,5 @@ Bekijk deze [Auditless-cheatsheet](https://reference.auditless.com/cheatsheet/) 
 
 ## Lees verder {#further-reading}
 
-- [Solidity-contractenbibliotheek door OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Solidity-contractenbibliotheek door OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

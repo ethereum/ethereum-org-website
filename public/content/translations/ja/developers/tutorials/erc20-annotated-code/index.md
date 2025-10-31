@@ -511,7 +511,7 @@ internal関数を使用して、状態変更が起こる場所の数を最小限
 
 ゼロ以外の割当量を別のゼロ以外の値に設定することには、リスクが伴います。自分が制御できるのは自分のトランザクションの順序のみであり、他のユーザーのトランザクションの順序を制御することはできないからです。 アリスという初心者ユーザーと、ビルという誠実さに欠けるユーザーがいるとします。 アリスは、ビルが提供しているサービスを購入することにしました。購入には5トークンの費用がかかるため、アリスは5トークンの割当量(allowance)をビルに付与しました。
 
-その後、ビルの設定した価格が何らかの理由で10トークンに上がりました。 アリスは依然としてそのサービスの購入を希望しており、ビルへの割当量を10に設定したトランザクションを送信しました。 ビルは、トランザクションプールでこの新しいトランザクションを確認した瞬間に、より早くマイニングされるようにかなり高いガス代を設定した、アリスの5トークンを使うトランザクションを送信します。 この方法で、ビルは5トークンを使います。その後、アリスが送信した新しい割当量がマイニングされたら、さらに10トークンを使います。こうして、アリスが承認するつもりだった量を超える、合計15トークンを使えることになります。 この手法は、[フロントランニング](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)と呼ばれます。
+その後、ビルの設定した価格が何らかの理由で10トークンに上がりました。 アリスは依然としてそのサービスの購入を希望しており、ビルへの割当量を10に設定したトランザクションを送信しました。 ビルは、トランザクションプールでこの新しいトランザクションを確認した瞬間に、より早くマイニングされるようにかなり高いガス代を設定した、アリスの5トークンを使うトランザクションを送信します。 この方法で、ビルは5トークンを使います。その後、アリスが送信した新しい割当量がマイニングされたら、さらに10トークンを使います。こうして、アリスが承認するつもりだった量を超える、合計15トークンを使えることになります。 この手法は、[フロントランニング](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)と呼ばれます。
 
 | アリスのトランザクション      | アリスのノンス | ビルのトランザクション                   | ビルのノンス | ビルの割当量 | ビルのアリスからの総収入 |
 | ----------------- | ------- | ----------------------------- | ------ | ------ | ------------ |
@@ -594,7 +594,7 @@ B:
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
      * This is internal function is equivalent to {transfer}, and can be used to
-     * e.g. implement automatic token fees, slashing mechanisms, etc.
+     * e.g., implement automatic token fees, slashing mechanisms, etc.
      *
      * Emits a {Transfer} event.
      *
@@ -715,7 +715,7 @@ OpenZeppelin ERC-20のコードはすでに監査を受けており、安全で�
      * @dev Sets `amount` as the allowance of `spender` over the `owner` s tokens.
      *
      * This internal function is equivalent to `approve`, and can be used to
-     * e.g. set automatic allowances for certain subsystems, etc.
+     * e.g., set automatic allowances for certain subsystems, etc.
      *
      * Emits an {Approval} event.
      *

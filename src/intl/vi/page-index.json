@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "Dùng thử ứng dụng",
   "page-index-cta-get-eth-description": "Tiền tệ của Ethereum",
   "page-index-cta-get-eth-label": "Mua ETH",
-  "page-index-cta-networks-description": "Tận hưởng mức phí tối thiểu",
-  "page-index-cta-networks-label": "Chọn một mạng",
   "page-index-cta-wallet-description": "Tạo tài khoản & quản lý tài sản",
   "page-index-cta-wallet-label": "Chọn ví",
+  "page-index-cta-build-apps-description": "Hãy tạo ứng dụng đầu tiên của quý vị",
+  "page-index-cta-build-apps-label": "Bắt đầu phát triển",
   "page-index-description": "Nền tảng hàng đầu cho các ứng dụng sáng tạo và mạng chuỗi khối",
   "page-index-developers-code-example-description-0": "Xây dựng một ngân hàng được vận hành bằng logic mà bạn đã lập trình",
   "page-index-developers-code-example-description-1": "Tạo token mà bạn có thể chuyển và sử dụng trên nhiều ứng dụng",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Bài viết gần đây",
   "page-index-posts-subtitle": "Các bài viết trên blog mới nhất và cập nhật từ cộng đồng",
   "page-index-title": "Chào mừng bạn đến với Ethereum",
+  "page-index-use-cases-tag": "Trường hợp sử dụng",
   "page-index-values-description": "Hãy là một phần của cuộc cách mạng kỹ thuật số",
   "page-index-values-header": "Internet đang thay đổi",
   "page-index-values-legacy": "Di sản",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Đóng với đa số",
   "page-index-values-open-legacy-content-0": "Các công ty bảo vệ sở hữu trí tuệ và không chia sẻ. Không ai bên ngoài công ty có thể thấy mọi thứ hoạt động như thế nào, khắc phục sự cố hoặc cải thiện như thế nào. Mọi người khó có thể tạo ra các công cụ mới hoặc tùy chỉnh.",
   "page-index-values-open-ethereum-label": "Mở cửa cho tất cả",
-  "page-index-values-open-ethereum-content-0": "Ethereum công khai cho tất cả mọi người. Bất kỳ ai cũng có thể xem, sử dụng và cải thiện mã, giúp nó trở nên tốt hơn cho mọi người."
+  "page-index-values-open-ethereum-content-0": "Ethereum công khai cho tất cả mọi người. Bất kỳ ai cũng có thể xem, sử dụng và cải thiện mã, giúp nó trở nên tốt hơn cho mọi người.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Tham gia sự kiện Ethereum lớn nhất trong năm",
+  "page-index-devconnect-banner-get-tickets": "Lấy vé"
 }

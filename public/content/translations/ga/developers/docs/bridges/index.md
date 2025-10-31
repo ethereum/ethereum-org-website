@@ -51,7 +51,7 @@ Le droichid, níl aon réitigh foirfe ann. Ina ionad sin, ní dhéantar ach comh
 
 - **Slándáil –** Cé a fhíoraíonn an córas? De ghnáth ní bhíonn na droichid atá daingnithe ag bailíochtaithe seachtracha chomh slán ná na droichid atá daingnithe go háitiúil nó ó dhúchas ag bailíochtóirí na blocshlabhra.
 - **Áisiúlacht –** Cé chomh fada a thógann sé idirbheart a chur i gcrích, agus cé mhéad idirbheart a bhí ar úsáideoir a shíniú? Maidir le forbróir, cé chomh fada agus a thógann sé droichead a chomhtháthú, agus cé chomh casta atá an próiseas?
-- ** Nascacht –** Cad iad na slabhraí cinn scríbe éagsúla is féidir le droichead a nascadh (i.e. rolladh suas, slabhraí taoibh, blocshlabhraí ciseal 1 eile, etc.), agus cé chomh deacair is atá sé blocshlabhra nua a chomhtháthú?
+- ** Nascacht –** Cad iad na slabhraí cinn scríbe éagsúla is féidir le droichead a nascadh (i.e., rolladh suas, slabhraí taoibh, blocshlabhraí ciseal 1 eile, etc.), agus cé chomh deacair is atá sé blocshlabhra nua a chomhtháthú?
 - **In ann sonraí níos casta a rith –** An féidir le droichead aistriú teachtaireachtaí agus sonraí treallacha níos casta thar slabhraí a chumasú, nó an dtacaíonn sé le haistrithe sócmhainní tras-slabhra amháin?
 - **Éifeachtacht costais –** Cé mhéad a chosnaíonn sé sócmhainní a aistriú thar slabhraí trí dhroichead? Go hiondúil, gearrann droichid táille sheasta nó athraitheach ag brath ar chostais gháis agus leachtacht bealaí sonracha. Tá sé ríthábhachtach freisin costas-éifeachtacht droichid a mheas bunaithe ar an gcaipiteal a theastaíonn chun a shlándáil a chinntiú.
 
@@ -127,8 +127,8 @@ Chun monatóireacht a dhéanamh ar ghníomhaíocht conartha thar slabhraí, is f
 - [An Trilemma Idir-inoibritheachta](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 Deireadh Fómhair, 2021 - Arjun Bhuptani
 - [Braislí: Cé chomh Iontaofa & Droichid Íoslaghdaithe a Mhúnann an Tírdhreach Ilshlabhra](https://blog.celestia.org/clusters/) - 4 Deireadh Fómhair, 2021 - Mustafa Al-Bassam
 - [LI.FI: Le Droichid, is Speictream é Iontaobhas](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 Aibreán, 2022 - Arjun Chand
-- [Staid na Réitigh Idir-inoibritheachta Rollup](https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Meitheamh, 2024 - Alex Hook
-- [ Leas a bhaint as Slándáil Roinnte Chun Idir-inoibritheacht Thrasshlabhra Slán: Coistí Stáit Lagrange Agus Thall](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Meitheamh, 2024 - Emmanuel Awosika
+- [Staid na Réitigh Idir-inoibritheachta Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Meitheamh, 2024 - Alex Hook
+- [ Leas a bhaint as Slándáil Roinnte Chun Idir-inoibritheacht Thrasshlabhra Slán: Coistí Stáit Lagrange Agus Thall](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Meitheamh, 2024 - Emmanuel Awosika
 
 Ina theannta sin, seo roinnt cur i láthair léargasach ó [James Prestwich](https://twitter.com/_prestwich) ar féidir leo cabhrú le tuiscint níos doimhne ar dhroichid a fhorbairt:
 

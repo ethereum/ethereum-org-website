@@ -29,7 +29,7 @@ Tá conarthaí cliste Ethereum cosúil le API poiblí, ionas gur féidir le duin
 
 ### Timthriall forbartha níos giorra {#shorter-development-cycle}
 
-Laghdaíonn in-chumthacht an obair atá le déanamh ag forbróirí agus [dapps](/dapps/#what-are-dapps) á gcruthú. [Mar a deir Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Ciallaíonn foinse oscailte go gcaithfear gach fadhb a réiteach uair amháin."
+Laghdaíonn in-chumthacht an obair atá le déanamh ag forbróirí agus [dapps](/apps/#what-are-dapps) á gcruthú. [Mar a deir Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Ciallaíonn foinse oscailte go gcaithfear gach fadhb a réiteach uair amháin."
 
 Má tá conradh cliste ann a réitíonn fadhb amháin, is féidir le forbróirí eile é a athúsáid, ionas nach mbeidh orthu an fhadhb chéanna a réiteach. Ar an mbealach seo, is féidir le forbróirí leabharlanna bogearraí atá ann cheana féin a ghlacadh agus feidhmiúlacht bhreise a chur leis chun dapps nua a chruthú.
 
@@ -43,7 +43,7 @@ Feabhsaíonn idir-inoibritheacht idir comhpháirteanna den éiceachóras Ethereu
 
 Úsáidfimid sampla ó thrádáil arbatráiste chun buntáistí idir-inoibritheachta a léiriú:
 
-Má tá comhartha ag trádáil níos airde ar `mhalartán A` ná ar`mhalartán B`, is féidir leat leas a bhaint as an difríocht praghais chun brabús a dhéanamh. Ní féidir leat é sin a dhéanamh, áfach, ach amháin má tá go leor caipitil agat chun an t-idirbheart a mhaoiniú (i.e. an chomhartha a cheannach ó `mhalartán B` agus é a dhíol ar `mhalartán A`).
+Má tá comhartha ag trádáil níos airde ar `mhalartán A` ná ar`mhalartán B`, is féidir leat leas a bhaint as an difríocht praghais chun brabús a dhéanamh. Ní féidir leat é sin a dhéanamh, áfach, ach amháin má tá go leor caipitil agat chun an t-idirbheart a mhaoiniú (i.e., an chomhartha a cheannach ó `mhalartán B` agus é a dhíol ar `mhalartán A`).
 
 I gcás nach bhfuil go leor airgid agat chun an trádáil a chlúdach, d'fhéadfadh iasacht splaince a bheith oiriúnach. Tá [Iasachtaí splaince](/defi/#flash-loans) thar a bheith teicniúil, ach is é an bun-smaoineamh gur féidir leat sócmhainní a fháil ar iasacht (gan comhthaobhacht) agus iad a thabhairt ar ais laistigh de _idirbheart amháin_.
 

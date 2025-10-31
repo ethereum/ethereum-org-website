@@ -17,7 +17,7 @@ incomplete: true
 - [EIPディスカッションボード](https://ethereum-magicians.org/c/eips)
 - [イーサリアムにおけるガバナンス入門](/governance/)
 - [イーサリアムにおけるガバナンスの概説](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019年3月31日、ボリス・マン作成。_
-- [イーサリアムにおけるプロトコル開発のガバナンスならびにネットワークアップグレードの調整](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020年3月23日、ハドソン・ジェイムソン作成。_
+- [イーサリアムにおけるプロトコル開発のガバナンスならびにネットワークアップグレードの調整](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020年3月23日、ハドソン・ジェイムソン作成。_
 - [イーサリアムコア開発ミーティングのすべてのプレイリスト](https://www.youtube.com/@EthereumProtocol) _(YouTubeプレイリスト)_
 
 ## 標準規格の種類 {#types-of-standards}
@@ -41,7 +41,7 @@ EIPは、以下の3種類に分類されます:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票トークン、ステーキングトークン、通貨トークンなど、代替性トークン (FT) のための標準インタフェースです。
   - [ERC-223](/developers/docs/standards/tokens/erc-223/) - トークンをEtherと同じように動作させ、受信者側でのトークン送金処理をサポートする代替性トークン規格です。
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - transferまたはtransferFromを受信した後の受信者側におけるコードの実行や、承認後におけるspenderコードをサポートする、ERC-20トークンのトークンインターフェイスを定義します。
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - transferまたはtransferFromを受信した後の受信者側におけるコードの実行や、承認後におけるspenderコードをサポートする、ERC-20トークンのトークンインターフェイスを定義します。
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲のための証書など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - ひとつのNFTあるいは連続するトークン識別子を用いた複数のNFTを作成／転送する際に発行される標準イベント。
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721コンシューマーロール向けのインターフェース拡張機能。

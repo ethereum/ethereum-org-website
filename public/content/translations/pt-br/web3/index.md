@@ -65,12 +65,15 @@ a Web3 dá-lhe posse dos seus ativos digitais de uma forma sem precedentes. Por 
 
 A Web3 permite a propriedade direta por meio de [tokens não fungíveis (NFTs)](/glossary/#nft). Ninguém, nem mesmo os criadores do jogo, consegue tirar sua propriedade. E, se você parar de jogar, pode vender ou trocar seus itens no jogo em mercados abertos e recuperar o seu valor.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Saiba mais sobre NFTs</div>
   <ButtonLink href="/nft/">
     Mais sobre NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Resistência à censura {#censorship-resistance}
 
@@ -90,12 +93,15 @@ DAOs são definidos tecnicamente como [contratos inteligentes](/glossary/#smart-
 
 No entanto, as pessoas definem muitas comunidades Web3 como DAOs. Todas essas comunidades têm diferentes níveis de descentralização e automação por código. Atualmente, estamos explorando o que são DAOs e como elas podem evoluir no futuro.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Saiba mais sobre DAOs</div>
   <ButtonLink href="/dao/">
     Mais sobre DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identidade {#identity}
 
@@ -143,7 +149,7 @@ Estamos apenas no início da criação de uma Web melhor com a Web3, mas à medi
 
 - [Obtenha uma carteira](/wallets/)
 - [Encontre uma comunidade](/community/)
-- [Explore aplicativos Web3](/dapps/)
+- [Explore aplicativos Web3](/apps/)
 - [Participe de uma DAO](/dao/)
 - [Construir na Web3](/developers/)
 
@@ -151,11 +157,11 @@ Estamos apenas no início da criação de uma Web melhor com a Web3, mas à medi
 
 Web3 não é rigidamente definida. Vários participantes da comunidade têm diversas perspectivas sobre isso. Veja aqui alguns deles:
 
-- [O que é Web3? A Internet Descentralizada do Futuro Explicada](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [O que é Web3? A Internet Descentralizada do Futuro Explicada](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Compreendendo a Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Por que a Web3 é Importante?](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Por que a descentralização é importante?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) _Feb-, - Chris Dixon_
 - [O Cenário Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [O Debate Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [O Debate Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

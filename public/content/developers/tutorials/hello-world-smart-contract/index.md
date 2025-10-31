@@ -8,53 +8,47 @@ lang: en
 published: 2021-03-31
 ---
 
-If you are new to blockchain development and don’t know where to start, or if you just want to understand how to deploy and interact with smart contracts, this guide is for you. We will walk through creating and deploying a simple smart contract on the Goerli test network using a virtual wallet [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), and [Alchemy](https://alchemyapi.io/eth) (don’t worry if you don’t understand what any of this means yet, we will explain it).
+If you are new to blockchain development and don’t know where to start, or if you just want to understand how to deploy and interact with smart contracts, this guide is for you. We will walk through creating and deploying a simple smart contract on the Sepolia test network using a virtual wallet [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), and [Alchemy](https://www.alchemy.com/eth) (don’t worry if you don’t understand what any of this means yet, we will explain it).
 
-> **Warning**
->
-> 🚧 Deprecation Notice
->
-> For the entirety of this guide, the Goerli test network is being used for creating and deploying a smart contract. However, please note that the Ethereum Foundation has announced that [Goerli will soon be deprecated](https://www.alchemy.com/blog/goerli-faucet-deprecation).
->
-> We recommend you to use the [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) and [Sepolia faucet](https://sepoliafaucet.com/) for this tutorial.
-
-In [part 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) of this tutorial we’ll go through how we can interact with our smart contract once it’s deployed here, and in [part 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) we’ll cover how to publish it on Etherscan.
+In [part 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) of this tutorial we’ll go through how we can interact with our smart contract once it’s deployed here, and in [part 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) we’ll cover how to publish it on Etherscan.
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
 ## Step 1: Connect to the Ethereum network {#step-1}
 
-There are many ways to make requests to the Ethereum chain. For simplicity, we’ll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes. The platform also has developer tools for monitoring and analytics that we’ll take advantage of in this tutorial to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, [you can sign up for free here](https://dashboard.alchemyapi.io/signup).
+There are many ways to make requests to the Ethereum chain. For simplicity, we’ll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes. The platform also has developer tools for monitoring and analytics that we’ll take advantage of in this tutorial to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, [you can sign up for free here](https://dashboard.alchemy.com/signup).
 
 ## Step 2: Create your app (and API key) {#step-2}
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Goerli test network. If you’re not familiar with testnets, check out [this page](/developers/docs/networks/).
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. If you’re not familiar with testnets, check out [this page](/developers/docs/networks/).
 
-1.  Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
+1.  Navigate to the "Create new app" page in your Alchemy Dashboard by selecting "Select an app" in the nav bar and clicking "Create new app"
 
 ![Hello world create app](./hello-world-create-app.png)
 
-2. Name your app “Hello World”, offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Goerli” for your network.
+2. Name your app “Hello World”, offer a short description, and choose a use case, e.g., "Infra & Tooling." Next, search for "Ethereum" and select the network.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-3. Click “Create app” and that’s it! Your app should appear in the table below.
+3. Click "Next" to proceed, then “Create app” and that’s it! Your app should appear in the nav bar dropdown menu, with an API Key available to copy.
 
 ## Step 3: Create an Ethereum account (address) {#step-3}
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. More on [transactions](/developers/docs/transactions/).
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
+You can download MetaMask and create an Ethereum account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the "Sepolia" test network using the network dropdown menu (so that we’re not dealing with real money).
 
-![metamask ropsten example](./metamask-ropsten-example.png)
+If you do not see Sepolia listed, go into the menu, then Advanced and scroll down to toggle "Show test networks" on. In the network selection menu, choose the "Custom" tab to find a list of testnets and select "Sepolia."
 
-## Step 4: Add ether from a Faucet {#step-4}
+![metamask sepolia example](./metamask-sepolia-example.png)
 
-In order to deploy our smart contract to the test network, we’ll need some fake Eth. To get Eth you can go to the [Goerli faucet](https://goerlifaucet.com/) and log into your Alchemy account and enter your wallet address, then click “Send Me Eth.” It may take some time to receive your fake Eth due to network traffic. (At the time of writing this, it took around 30 minutes.) You should see Eth in your Metamask account soon after!
+## Step 4: Add ether from a faucet {#step-4}
+
+In order to deploy our smart contract to the test network, we’ll need some fake Eth. To get Sepolia ETH you can go to the [Sepolia network details](/developers/docs/networks/#sepolia) to view a list of various faucets. If one doesn't work, try another as they can sometimes run dry. It may take some time to receive your fake ETH due to network traffic. You should see ETH in your Metamask account soon after!
 
 ## Step 5: Check your Balance {#step-5}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) request using [Alchemy’s composer tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -217,25 +211,29 @@ npm install dotenv --save
 
 Then, create a `.env` file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
 
-- Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key
+- Follow [these instructions](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) to export your private key
 - See below to get HTTP Alchemy API URL
 
-![get alchemy api key](./get-alchemy-api-key.gif)
+![get alchemy api key](./get-alchemy-api-key.png)
 
 Copy Alchemy API URL
 
 Your `.env` should look like this:
 
 ```
-API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
@@ -268,10 +266,10 @@ const { API_URL, PRIVATE_KEY } = process.env;
 */
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "goerli",
+   defaultNetwork: "sepolia",
    networks: {
       hardhat: {},
-      goerli: {
+      sepolia: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`]
       }
@@ -332,7 +330,7 @@ Calling `deploy()` on a `ContractFactory` will start the deployment, and return 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
 ```
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 You should then see something like:
@@ -341,7 +339,7 @@ You should then see something like:
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-If we go to the [Goerli etherscan](https://goerli.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
+If we go to the [Sepolia etherscan](https://sepolia.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
 
 ![etherscan contract](./etherscan-contract.png)
 
@@ -354,9 +352,9 @@ Congrats! You just deployed a smart contract to the Ethereum chain 🎉
 To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “Hello World”.
 ![hello world explorer](./hello-world-explorer.png)
 
-Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important ones to call out here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to actually write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when
+Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important ones to call out here are [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), which is the request to actually write our contract onto the Sepolia chain, and [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) which is a request to read information about our transaction given the hash (a typical pattern when
 transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-That’s all for part 1 of this tutorial, in part 2 we’ll actually [interact with our smart contract](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) by updated our initial message, and in part 3 we’ll [publish our smart contract to Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan) so everyone will know how to interact with it.
+That’s all for part 1 of this tutorial, in part 2 we’ll actually [interact with our smart contract](https://www.alchemy.com/docs/interacting-with-a-smart-contract) by updated our initial message, and in part 3 we’ll [publish our smart contract to Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) so everyone will know how to interact with it.
 
-**Want to learn more about Alchemy? Check out our [website](https://alchemyapi.io/eth). Never want to miss an update? Subscribe to our newsletter [here](https://www.alchemyapi.io/newsletter)! Be sure to also follow our [Twitter](https://twitter.com/alchemyplatform) and join our [Discord](https://discord.com/invite/u72VCg3)**.
+**Want to learn more about Alchemy? Check out our [website](https://www.alchemy.com/eth). Never want to miss an update? Subscribe to our newsletter [here](https://www.alchemy.com/newsletter)! Be sure to also join our [Discord](https://discord.gg/u72VCg3).**.

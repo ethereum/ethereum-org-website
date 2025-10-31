@@ -168,7 +168,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send Ether)
+    # with other contracts (i.e., they call functions or send Ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -216,7 +216,6 @@ Jeśli dopiero zapoznajesz się z Ethereum i nie kodowałeś jeszcze w językach
 
 - [Dokumentacja Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Dokumentacja Yul+](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Post wprowadzający do Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Przykładowy kontrakt {#example-contract-2}
@@ -273,5 +272,5 @@ Aby porównać podstawową składnię, cykl życia kontraktu, interfejsy, operat
 
 ## Dalsza lektura {#further-reading}
 
-- [Biblioteka Kontraktów Solidity autorstwa OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Biblioteka Kontraktów Solidity autorstwa OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity w przykładach](https://solidity-by-example.org)

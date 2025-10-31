@@ -41,7 +41,7 @@ Mutabakat araştırması, [Ethereum'un hisse ispatı mekanizması](/developers/d
 
 - [Hisse ispatına giriş](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG makalesi](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG açıklayıcısı](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG açıklayıcısı](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper makalesi](https://arxiv.org/abs/2003.03052)
 
 #### Yakın geçmişteki araştırmalar {#recent-research}
@@ -83,7 +83,7 @@ Ethereum istemcileri Ethereum protokolünün uygulamalarıdır. İstemci gelişt
 1. dedikodu bloklarının, mutabakat mantığının ve blokzincirin başının kaydını tutan bir fikir birliği istemcisi
 2. Ethereum Sanal Makinesi'ni destekleyen ve akıllı sözleşmeler ile işlemleri yürürlüğe sokan bir yürütüm işlemcisi
 
-Düğümler ve istemciler hakkında daha detaylı bilgi ve güncel istemcilerin bir listesi için buraya [düğümler ve istemciler sayfası](/developers/docs/nodes-and-clients/) göz atın. Ayrıca bütün Ethereum güncellemelerinin tarihçesini [tarihçe sayfasında](/history/) bulabilirsiniz.
+Düğümler ve istemciler hakkında daha detaylı bilgi ve güncel istemcilerin bir listesi için buraya [düğümler ve istemciler sayfası](/developers/docs/nodes-and-clients/) göz atın. Ayrıca bütün Ethereum güncellemelerinin tarihçesini [tarihçe sayfasında](/ethereum-forks/) bulabilirsiniz.
 
 ### Yürütüm İstemcileri {#execution-clients}
 
@@ -224,7 +224,7 @@ Ethereum'da ekonomi araştırmaları genel olarak iki yaklaşımı kullanır: ek
 
 #### Arka plan okuması {#background-reading-9}
 
-- [Robust Incentives Group](https://ethereum.github.io/rig/)
+- [Robust Incentives Group](https://rig.ethereum.org/)
 - [Devconnect'te ETHconomics çalıştayı](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Yakın geçmişteki araştırmalar {#recent-research-9}
@@ -307,7 +307,7 @@ Ethereum üzerindeki aktiviteler ve ağın sağlığı hakkında detaylı bilgi 
 
 #### Yakın geçmişteki araştırmalar {#recent-research-14}
 
-- [Robust Incentives Group Veri Analizi](https://ethereum.github.io/rig/)
+- [Robust Incentives Group Veri Analizi](https://rig.ethereum.org/)
 
 ## Uygulamalar ve araçlar {#apps-and-tooling}
 

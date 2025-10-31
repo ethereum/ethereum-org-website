@@ -57,7 +57,7 @@ Decentralizovaná identita má mnoho možných využití:
 
 Decentralizovaná identita může pomoci nahradit přihlašování založené na heslech decentralizovanou autentifikací. Poskytovatelé služeb mohou vydávat atestace uživatelům, které mohou být uloženy v Ethereum peněžence. Příkladem atestace by byl [NFT](/glossary/#nft) umožňující držiteli přístup k online komunitě.
 
-Funkce [Přihlášení s Ethereem](https://login.xyz/) by pak umožnila serverům potvrdit uživatelův Ethereum účet a načíst požadovanou atestaci z jejich adresy účtu. To znamená, že uživatelé mohou přistupovat k platformám a webům, aniž by si museli zapamatovat dlouhá hesla, a tím zlepšili jejich online zážitek.
+Funkce [Přihlášení s Ethereem](https://siwe.xyz/) by pak umožnila serverům potvrdit uživatelův Ethereum účet a načíst požadovanou atestaci z jejich adresy účtu. To znamená, že uživatelé mohou přistupovat k platformám a webům, aniž by si museli zapamatovat dlouhá hesla, a tím zlepšili jejich online zážitek.
 
 ### 2. Autentizace KYC {#kyc-authentication}
 
@@ -186,6 +186,6 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 ### Komunity {#communities}
 
 - [Aliance ERC-725 na GitHubu](https://github.com/erc725alliance) – _Stoupenci normy ERC725 pro správu identity na blockchainu Ethereum_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) – _Komunita pro nadšence a vývojáře pracující na přihlášení s Ethereem_
+- [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) – _Komunita pro nadšence a vývojáře pracující na přihlášení s Ethereem_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) – _Komunita vývojářů podílejících se na budování rámce pro ověřitelná data pro aplikace_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Komunika vývojářů a builderů pracující na praktickém použití decentralizované identity napříč různými obory_

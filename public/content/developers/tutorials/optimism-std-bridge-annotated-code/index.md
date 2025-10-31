@@ -17,7 +17,7 @@ One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](/de
 Eventually, whoever ends up with them might want to bridge them back to L1.
 When doing this, the assets are burned on L2 and then released back to the user on L1.
 
-This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge) works.
+This is the way the [Optimism standard bridge](https://docs.optimism.io/app-developers/bridging/standard-bridge) works.
 In this article we go over the source code for that bridge to see how it works and study it as an example of well written Solidity code.
 
 ## Control flows {#control-flows}
@@ -572,7 +572,7 @@ Only cells that are set to a different value are written to storage.
 ```
 
 To want to be able to upgrade this contract without having to copy all the variables in the storage.
-To do that we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), a contract that uses [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contact whose address is stored by the proxy contract (when you upgrade you tell the proxy to change that address).
+To do that we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), a contract that uses [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contract whose address is stored by the proxy contract (when you upgrade you tell the proxy to change that address).
 When you use `delegatecall` the storage remains the storage of the _calling_ contract, so the values of all the contract state variables are unaffected.
 
 One effect of this pattern is that the storage of the contract that is the _called_ of `delegatecall` is not used and therefore the constructor values passed to it do not matter.
@@ -769,7 +769,7 @@ These two functions are wrappers around `_initiateERC20Deposit`, the function th
 ```solidity
     /**
      * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)
+     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
      *
      * @param _l1Token Address of the L1 ERC20 we are depositing
      * @param _l2Token Address of the L1 respective L2 ERC20
@@ -1101,7 +1101,7 @@ There are two significant differences:
 1. On L1 you initiate deposits and finalize withdrawals.
    Here you initiate withdrawals and finalize deposits.
 2. On L1 it is necessary to distinguish between ETH and ERC-20 tokens.
-   On L2 we can use the same functions for both because internally ETH balances on Optimism are handled as an ERC-20 token with the address [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
+   On L2 we can use the same functions for both because internally ETH balances on Optimism are handled as an ERC-20 token with the address [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
 
 ```solidity
 /* Library Imports */
@@ -1347,9 +1347,11 @@ The only way we can do this from L2 is to send a message that will have to wait 
 
 The standard bridge is the most flexible mechanism for asset transfers.
 However, because it is so generic it is not always the easiest mechanism to use.
-Especially for withdrawals, most users prefer to use [third party bridges](https://www.optimism.io/apps/bridges) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
+Especially for withdrawals, most users prefer to use [third party bridges](https://optimism.io/apps#bridge) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
 
 These bridges typically work by having assets on L1, which they provide immediately for a small fee (often less than the cost of gas for a standard bridge withdrawal).
 When the bridge (or the people running it) anticipates being short on L1 assets it transfers sufficient assets from L2. As these are very big withdrawals, the withdrawal cost is amortized over a large amount and is a much smaller percentage.
 
 Hopefully this article helped you understand more about how layer 2 works, and how to write Solidity code that is clear and secure.
+
+[See here for more of my work](https://cryptodocguy.pro/).

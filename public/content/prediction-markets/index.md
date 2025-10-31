@@ -30,7 +30,7 @@ In theory, because bettors stand to profit from being correct, prediction market
 
 Unlike traditional forecasting, blockchain-based prediction markets are:
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
   <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
   <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
@@ -38,7 +38,7 @@ Unlike traditional forecasting, blockchain-based prediction markets are:
 
 Even as an observer of the market, you can assess valuable data that would be otherwise unavailable. Think of it like this:
 
-1. Predictions are tied to a specific event (e.g. Will Beam Chain deploy by 2030?).
+1. Predictions are tied to a specific event (e.g., Will Beam Chain deploy by 2030?).
 2. Market participants buy and sell shares based on their confidence in any outcome.
 3. Prices adjust as more participants stake their beliefs, reflecting real-time insights.
 4. Anyone betting correctly earns proportionately to the amount staked. 
@@ -50,10 +50,15 @@ There are several Ethereum-based prediction markets available. These are some of
 
 <PredictionMarketLists />
 
-<InfoBanner isWarning emoji="💡">
+<Alert variant="warning">
+<AlertEmoji text="💡"/>
+<AlertContent>
+<AlertDescription>
   <p className="mt-0"><strong>Stay mindful of the risks</strong></p>
   <p className="mt-2">Only bet what you can afford, and be aware of potential addictive behaviors.</p>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Challenges & Risks {#challenges-and-risks}
 

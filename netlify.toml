@@ -7,7 +7,7 @@
   publish = ".next"
 
   # Default build command.
-  command = "yarn build"
+  command = "pnpm build"
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"

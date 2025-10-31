@@ -49,20 +49,18 @@ Verkle trees are `(key,value)` pairs where the keys are 32-byte elements compose
 
 Verkle tree testnets are already up and running, but there are still substantial outstanding updates to clients that are required to support Verkle trees. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
 
-[Explore the Verkle Gen Devnet 6 testnet](https://verkle-gen-devnet-6.ethpandaops.io/)
-
 [Watch Guillaume Ballet explain the Condrieu Verkle testnet](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (note that the Condrieu testnet was proof-of-work and has now been superseded by the Verkle Gen Devnet 6 testnet).
 
 ## Further reading {#further-reading}
 
 - [Verkle Trees for Statelessness](https://verkle.info/)
 - [Dankrad Feist explain Verkle trees on PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Verkle Trees For The Rest Of Us](https://research.2077.xyz/verkle-trees)
+- [Verkle Trees For The Rest Of Us](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [Anatomy of A Verkle Proof](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet explain Verkle trees at ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["How Verkle trees make Ethereum lean and mean" by Guillaume Ballet at Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam on stateless clients from ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest explains Verkle trees and statelessness on Zero Knowledge podcast](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest explains Verkle trees and statelessness on Zero Knowledge podcast](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin on Verkle trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist on Verkle trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Verkle tree EIP documentation](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

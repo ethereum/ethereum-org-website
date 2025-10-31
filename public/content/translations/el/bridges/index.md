@@ -59,9 +59,14 @@ _Το Web3 έχει εξελιχθεί σε ένα οικοσύστημα από
 
 Ας υποθέσουμε ότι θέλετε να είστε κάτοχος Bitcoin (BTC), αλλά έχετε χρήματα μόνο στο κεντρικό δίκτυο Ethereum. Για να αποκτήσετε μέρος BTC στο Ethereum, μπορείτε να αγοράσετε Wrapped Bitcoin (WBTC). Ωστόσο, το WBTC είναι ένα εγγενές ψηφιακό στοιχείο [ERC-20](/glossary/#erc-20) στο δίκτυο Ethereum, πράγμα που σημαίνει ότι είναι μια έκδοση στο Ethereum του Bitcoin και όχι το αρχικό ψηφιακό στοιχείο στην κρυπτοαλυσίδα του Bitcoin. Για να κατέχετε το εγγενές BTC, θα πρέπει να γεφυρώσετε τα περιουσιακά σας στοιχεία από το Ethereum στο Bitcoin χρησιμοποιώντας μια γέφυρα. Αυτό θα γεφυρώσει το WBTC σας και θα το μετατρέψει σε εγγενές BTC. Εναλλακτικά, μπορεί να είστε κάτοχος BTC και να θέλετε να το χρησιμοποιήσετε σε πρωτόκολλα Ethereum [DeFi](/glossary/#defi). Αυτό θα απαιτούσε τη γεφύρωση με άλλο τρόπο, από το BTC στο WBTC, το οποίο στη συνέχεια μπορεί να χρησιμοποιηθεί ως περιουσιακό στοιχείο στο Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  Μπορείτε επίσης να κάνετε όλα τα παραπάνω χρησιμοποιώντας ένα <a href="/get-eth/">κεντρικό ανταλλακτήριο</a>. Ωστόσο, εκτός εάν τα χρήματά σας βρίσκονται ήδη σε ανταλλακτήριο, αυτό θα περιλαμβάνει πολλά βήματα και πιθανότατα θα ήταν καλύτερα να χρησιμοποιήσετε μια γέφυρα.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  Μπορείτε επίσης να κάνετε όλα τα παραπάνω χρησιμοποιώντας ένα [κεντρικό ανταλλακτήριο](/get-eth/). Ωστόσο, εκτός εάν τα χρήματά σας βρίσκονται ήδη σε ανταλλακτήριο, αυτό θα περιλαμβάνει πολλά βήματα και πιθανότατα θα ήταν καλύτερα να χρησιμοποιήσετε μια γέφυρα.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -95,16 +100,16 @@ _Το Web3 έχει εξελιχθεί σε ένα οικοσύστημα από
 
 <Divider />
 
-## Χρήση γέφυρας {#use-bridge}
+## Χρήση γεφυρών {#use-bridge}
 
 Η χρήση γεφυρών σας επιτρέπει να μεταφέρετε τα κρυπτονομίσματά σας μεταξύ διαφορετικών κρυπτοαλυσίδων. Δείτε παρακάτω μερικές πηγές που θα σας βοηθήσουν στην εύρεση και χρήση γεφυρών:
 
-- **[Σύνοψη των γεφυρών L2BEAT](https://l2beat.com/bridges/summary) & [ ανάλυση κινδύνου γεφυρών L2BEAT](https://l2beat.com/bridges/risk)**: Μια περιεκτική σύνοψη διαφόρων γεφυρών, συμπεριλαμβανομένων λεπτομερειών σχετικά με το μερίδιο αγοράς, τον τύπο της γέφυρας και τις αλυσίδες προορισμού. Το L2BEAT διαθέτει επίσης ανάλυση κινδύνου για γέφυρες, βοηθώντας τους χρήστες να λαμβάνουν τεκμηριωμένες αποφάσεις όταν επιλέγουν μια γέφυρα.
+- **[Σύνοψη των γεφυρών L2BEAT](https://l2beat.com/bridges/summary) & [ ανάλυση κινδύνου γεφυρών L2BEAT](https://l2beat.com/bridges/summary)**: Μια περιεκτική σύνοψη διαφόρων γεφυρών, συμπεριλαμβανομένων λεπτομερειών σχετικά με το μερίδιο αγοράς, τον τύπο της γέφυρας και τις αλυσίδες προορισμού. Το L2BEAT διαθέτει επίσης ανάλυση κινδύνου για γέφυρες, βοηθώντας τους χρήστες να λαμβάνουν τεκμηριωμένες αποφάσεις όταν επιλέγουν μια γέφυρα.
 - **[Σύνοψη της γέφυρας DefiLlama](https://defillama.com/bridges/Ethereum)**: Σύνοψη των όγκων γεφυρών στα δίκτυα Ethereum.
 
 <Divider />
 
-## Κίνδυνοι χρήσης γεφυρών {#bridge-risk}
+## Κίνδυνος χρήσης γεφυρών {#bridge-risk}
 
 Οι γέφυρες βρίσκονται στα αρχικά στάδια ανάπτυξης. Είναι πιθανό ο βέλτιστος σχεδιασμός της γέφυρας να μην έχει ακόμη ανακαλυφθεί. Η αλληλεπίδραση με οποιονδήποτε τύπο γέφυρας ενέχει κινδύνους:
 
@@ -134,6 +139,6 @@ _Το Web3 έχει εξελιχθεί σε ένα οικοσύστημα από
 - [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 Ιουνίου 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _05 Ιουλίου 2022 - Bartek Kiepuszewski_
 - ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _08 Ιανουαρίου 2022 - Vitalik Buterin_
-- [Εκμετάλλευση κοινής ασφάλειας για ασφαλή διαλειτουργικότητα μεταξύ των αλυσίδων: Επιτροπές πολιτειών Lagrange και πέρα](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Ιουνίου 2024 - Emmanuel Awosika_
-- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Ιουνίου 2024 - Alex Hook_
+- [Εκμετάλλευση κοινής ασφάλειας για ασφαλή διαλειτουργικότητα μεταξύ των αλυσίδων: Επιτροπές πολιτειών Lagrange και πέρα](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Ιουνίου 2024 - Emmanuel Awosika_
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Ιουνίου 2024 - Alex Hook_
 

@@ -15,7 +15,7 @@ lang: tr
 
 Optimism'de (veya başka herhangi bir K2'de) K1 varlıklarını kullanmak için varlıkların [köprülenmesi](/bridges/#prerequisites) gerekir. Kullanıcıların varlıkları (ETH ve [ERC-20 token'ları](/developers/docs/standards/tokens/erc-20/) en yaygın olanlardır) L1'de kilitlemesi ve L2'de eş değer varlıklar alması bunu başarmanın yollarından biridir. Nihayetinde bu varlıkları alan kişiler bunları tekrar K1'e köprülemek isteyebilir. Bunu yaparken, varlıklar K2'de yakılır ve ardından K1'de kullanıcıya geri verilir.
 
-[Optimism standart köprüsü](https://community.optimism.io/docs/developers/bridge/standard-bridge) bu şekilde çalışır. Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu gözden geçireceğiz ve onu iyi yazılmış bir Solidity kodu örneği olarak inceleyeceğiz.
+[Optimism standart köprüsü](https://docs.optimism.io/app-developers/bridging/standard-bridge) bu şekilde çalışır. Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu gözden geçireceğiz ve onu iyi yazılmış bir Solidity kodu örneği olarak inceleyeceğiz.
 
 ## Kontrol akışları {#control-flows}
 
@@ -725,7 +725,7 @@ Bu iki fonksiyon, gerçek ERC-20 yatırma işlemini yöneten fonksiyon olan `_in
 ```solidity
     /**
      * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)
+     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
      *
      * @param _l1Token Address of the L1 ERC20 we are depositing
      * @param _l2Token Address of the L1 respective L2 ERC20
@@ -1270,7 +1270,7 @@ Bir kullanıcı yanlış Katman 2 token adresini kullanarak tespit edilebilir bi
 
 ## Sonuç {#conclusion}
 
-Standart köprü, varlık aktarımları için en esnek mekanizmadır. Ancak çok genel olduğu için her zaman kullanması en kolay olan mekanizma değildir. Özellikle çekimler için, çoğu kullanıcı meydan okuma süresini beklemeyen ve çekimi sonlandırmak için bir Merkle ispatı gerektirmeyen [üçüncü parti köprüleri](https://www.optimism.io/apps/bridges) kullanmayı tercih eder.
+Standart köprü, varlık aktarımları için en esnek mekanizmadır. Ancak çok genel olduğu için her zaman kullanması en kolay olan mekanizma değildir. Özellikle çekimler için, çoğu kullanıcı meydan okuma süresini beklemeyen ve çekimi sonlandırmak için bir Merkle ispatı gerektirmeyen [üçüncü parti köprüleri](https://optimism.io/apps#bridge) kullanmayı tercih eder.
 
 Bu köprüler genellikle Katman 1 üzerinde küçük bir ücret (genelde bir standart köprü çekiminin gaz ücretinden daha azına) için anında sağladıkları varlıklara sahip olarak çalışırlar. Köprü (ya da onu çalıştıran insanlar) Katman 1 varlıklarının azaldığını sezdiğinde Katman 2'den yeteri kadar varlığı aktarır. Bunlar çok büyük çekimler olduğu için, çekim ücreti büyük bir miktar üzerinden amorti edilmiştir ve daha küçük bir yüzdeliktir.
 

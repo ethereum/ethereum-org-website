@@ -43,9 +43,14 @@ Před upgradem Shanghai/Capella jste nemohli používat svůj vsazený ETH ani k
 
 Poskytnutí adresy pro výběr je povinným krokem pro jakýkoli účet validátoru, než bude mít nárok na výběr ETH ze svého zůstatku.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Každému účtu validátoru lze přiřadit pouze jednu adresu pro výběr, a to jednou.</strong> Jakmile je adresa vybrána a odeslána do konsensuální vrstvy, nelze to vrátit zpět ani znovu změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Pokud adresu mezitím neposkytnete, <strong>nehrozí vašim finančním prostředkům žádné ohrožení</strong>, za předpokladu, že vaše mnemotechnická pomůcka nebo fráze zůstala v bezpečí offline a nebyla žádným způsobem kompromitována. Nepřidání přihlašovacích údajů pro výběr jednoduše ponechá ETH uzamčené v účtu validátoru tak, jak bylo, dokud nebyla poskytnuta adresa pro výběr.
 
@@ -65,7 +70,7 @@ Výběry vkladů jsou živé! Funkce výběru byla povolena v rámci upgradu Sha
 
 Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžné účty Ethereum. Tím se uzavřela smyčka v nasazování likvidity a Ethereum se o krok přiblížilo na jeho cestě k vybudování udržitelného, ​​škálovatelného a bezpečného decentralizovaného ekosystému.
 
-- [Více o historii Etherea](/history/)
+- [Více o historii Etherea](/ethereum-forks/)
 - [Více o plánu Etherea](/roadmap/)
 
 ## Jak fungují platby za výběr? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Podívejte se na toto vysvětlení výběrů z vkladů Ethereum od Finematics:
 
 Když je naplánováno, že validátor navrhne další blok, je nutné sestavit frontu pro výběr až 16 způsobilých výběrů. To se provádí tak, že se původně začne s indexem validátoru 0, určí se, zda pro tento účet existuje způsobilý výběr podle pravidel protokolu, a pokud ano, přidá se do fronty. Validátor nastavený tak, aby navrhoval následující blok, bude pokračovat tam, kde skončil poslední, přičemž postupuje v pořadí neomezeně dlouho.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Představte si analogové hodiny. Ručička na hodinách ukazuje na hodinu, postupuje jedním směrem, nepřeskakuje žádné hodiny a nakonec se po dosažení posledního čísla opět přetočí na začátek.<br/><br/>
 Nyní si místo 1 až 12 představte, že hodiny mají 0 až N <em>(celkový počet účtů validátorů, které kdy byly zaregistrovány na vrstvě konsensu, přes 500 000 k lednu 2023).</em><br/> <br/>
 Ručička na hodinách ukazuje na další validátor, u kterého je třeba zkontrolovat oprávněné výběry. Začíná na 0 a postupuje stále dokola, aniž by přeskakovala jakýkoli účet. Když je dosaženo posledního validátoru, cyklus pokračuje zpět na začátek.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Kontrola účtu pro výběry {#checking-an-account-for-withdrawals}
 
@@ -153,9 +163,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Pokud jste součástí <a href="/staking/pools/">vkladového fondu</a> nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
+Pokud jste součástí [vkladového fondu](/staking/pools/) nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
 
-Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete <a href="/staking/solo/">vložit z domova</a>.
+Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [vložit z domova](/staking/solo/).
 
 </ExpandableCard>
 
@@ -212,7 +222,6 @@ Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré doda
 
 - [Výběry z vkladového spouštěcího panelu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Řetězová vazba výběru jako operace](https://eips.ethereum.org/EIPS/eip-4895)
-- [Ethereum Cat Herders – Šanghaj](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Výběr vložených ETH (testování) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Výběry pomocí řetězové vazby jako operace s Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumění efektivnímu zůstatku validátoru](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -37,11 +37,11 @@
   "page-index-cta-dapps-label": "Prova aplicacions",
   "page-index-cta-get-eth-description": "La moneda d'Ethereum",
   "page-index-cta-get-eth-label": "Aconsegueix ETH",
-  "page-index-cta-networks-description": "Gaudeix d'una comissió mínima",
-  "page-index-cta-networks-label": "Tria una xarxa",
   "page-index-cta-wallet-description": "Crea comptes i administra actius",
   "page-index-cta-wallet-label": "Selecciona una cartera",
   "page-index-description": "La plataforma líder per a aplicacions innovadores i xarxes de cadena de blocs",
+  "page-index-cta-build-apps-description": "Creï la seva primera aplicació",
+  "page-index-cta-build-apps-label": "Comenci a crear",
   "page-index-developers-code-example-description-0": "Crea un banc que funcioni amb la lògica que hagis programat",
   "page-index-developers-code-example-description-1": "Crea tokens per transferir i utilitzar en diverses aplicacions",
   "page-index-developers-code-example-description-2": "Utilitza els llenguatges existents per interactuar amb Ethereum i altres aplicacions",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Publicacions recents",
   "page-index-posts-subtitle": "Les últimes publicacions de blog i actualitzacions de la comunitat",
   "page-index-title": "Et donem la benvinguda a Ethereum",
+  "page-index-use-cases-tag": "Casos d'ús",
   "page-index-values-description": "Forma part de la revolució digital",
   "page-index-values-header": "Internet està canviant",
   "page-index-values-legacy": "Llegat",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Tancat per a la majoria",
   "page-index-values-open-legacy-content-0": "Les empreses protegeixen la seva propietat intel·lectual i no la comparteixen. Ningú fora de l'empresa pot veure com funcionen les coses, solucionar problemes ni realitzar millores. És difícil per a les persones crear noves eines o personalitzar-les.",
   "page-index-values-open-ethereum-label": "Obert per a tothom",
-  "page-index-values-open-ethereum-content-0": "Ethereum és públic per a tothom. Qualsevol pot veure, utilitzar i millorar el codi, fent-lo millor per a tots."
+  "page-index-values-open-ethereum-content-0": "Ethereum és públic per a tothom. Qualsevol pot veure, utilitzar i millorar el codi, fent-lo millor per a tots.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Uneix-te a l'esdeveniment d'Ethereum més gran de l'any",
+  "page-index-devconnect-banner-get-tickets": "Aconsegueix entrades"
 }

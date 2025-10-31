@@ -6,6 +6,11 @@ lang: en
 
 # Wrapped ether (WETH) {#intro-to-weth}
 
+<Alert variant="update">
+<Emoji text="🎁" />
+<div>Connect your wallet to wrap or unwrap ETH on any chain at [WrapETH.com](https://www.wrapeth.com/)</div>
+</Alert>
+
 Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking, as a currency, and paying for gas fees for computation. **WETH is effectively an upgraded form of ETH with some additional functionality required by many applications and [ERC-20 tokens](/glossary/#erc-20)**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
 
 To bridge this gap, wrapped ETH (WETH) was created. **Wrapped ETH is a smart contract that lets you deposit any amount of ETH into the contract and receive the same amount in minted WETH** that conforms to the ERC-20 token standard. WETH is a representation of ETH that allows you to interact with it as an ERC-20 token, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
@@ -62,5 +67,5 @@ Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02a
 ## Further reading {#further-reading}
 
 - [WTF is WETH?](https://weth.tkn.eth.limo/)
-- [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [WETH token information on Blockscout](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)

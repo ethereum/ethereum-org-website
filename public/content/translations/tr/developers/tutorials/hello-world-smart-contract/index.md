@@ -49,7 +49,7 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtar
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. [İşlemler](/developers/docs/transactions/) üzerine dahası.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak indirebilir ve bir Metamask hesabı oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin (bu sayede gerçek parayla denemeler yapmayız).
+[Buradan](https://metamask.io/download) ücretsiz olarak indirebilir ve bir Metamask hesabı oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin (bu sayede gerçek parayla denemeler yapmayız).
 
 ![metamask ropsten örneği](./metamask-ropsten-example.png)
 
@@ -238,9 +238,13 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Bunları kodumuza gerçekten bağlamak için, adım 13'te `hardhat.config.js` dosyamızda bu değişkenlere başvuracağız.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 <code>.env</code> doyasını taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Adım 12: Ethers.js'yi kurun {#step-12-install-ethersjs}
 

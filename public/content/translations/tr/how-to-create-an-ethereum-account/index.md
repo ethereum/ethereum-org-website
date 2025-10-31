@@ -40,12 +40,15 @@ Bazı uygulamalar sizden gizli bir "kurtarma ifadesi" (bazen "güvenlik kelimele
 **Bu ifadeyi bilen bir kişi, tüm fonlarınızı kontrol edebilir.** Bu ifadeyi asla kimseyle paylaşmayın. Bu ifade, rastgele üretilmiş 12 ila 24 kelimeyi (kelimelerin sırası önemlidir) içermelidir.
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Cüzdan yüklendi mi?</b><br/>Nasıl kullanacağınızı öğrenin.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cüzdan nasıl kullanılır?
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 İlgilendiğiniz başka rehberler de mi var? Şuraya göz atın: [Adım adım kılavuzlarımız](/guides/)

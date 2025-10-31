@@ -18,7 +18,7 @@ lang: en
 published: 2021-10-25
 ---
 
-This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Goerli test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemyapi.io/eth).
+This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Goerli test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemy.com/eth).
 
 You'll need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
@@ -32,7 +32,7 @@ There are many ways to make requests to the Ethereum chain. For simplicity, we'l
 
 ### Create your app and API key {#create-your-app-and-api-key}
 
-Once you've created an Alchemy account, you can generate an API key by creating an app. This will allow you to make requests to the Goerli testnet. If you're not familiar with testnets you can [read Alchemy's guide to choosing a network](https://docs.alchemyapi.io/guides/choosing-a-network).
+Once you've created an Alchemy account, you can generate an API key by creating an app. This will allow you to make requests to the Goerli testnet. If you're not familiar with testnets you can [read Alchemy's guide to choosing a network](https://www.alchemy.com/docs/choosing-a-web3-network).
 
 On the Alchemy dashboard, find the **Apps** dropdown in the navigation bar and click **Create App**.
 
@@ -50,7 +50,7 @@ Click **Create app**. Your app will appear in the table below.
 
 You need an Ethereum account to send and receive transactions. We'll use MetaMask, a virtual wallet in the browser that lets users manage their Ethereum account address.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
 ### Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
@@ -223,7 +223,7 @@ We’ve created a MetaMask wallet, Alchemy account, and written our smart contra
 
 Every transaction sent from your wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key in an environment file. We will also store an API key for Alchemy here.
 
-> To learn more about sending transactions, check out [this tutorial](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy) on sending transactions using web3.
+> To learn more about sending transactions, check out [this tutorial](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) on sending transactions using web3.
 
 First, install the dotenv package in your project directory:
 
@@ -367,7 +367,7 @@ The `From` address should match your MetaMask account address and the `To` addre
 
 Congrats! You just deployed a smart contract to an Ethereum testnet.
 
-To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select **Hello World**.
+To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemy.com/explorer). If you have multiple Alchemy apps make sure to filter by app and select **Hello World**.
 
 ![](./hello-world-explorer.png)
 
@@ -680,9 +680,9 @@ By the end of this tutorial, you'll know how to:
 - Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
 - Sign Ethereum transactions using MetaMask
 
-For this dapp, we'll be using [React](https://reactjs.org/) as our frontend framework; however, it's important to note that we won't be spending much time breaking down its fundamentals, as we'll mostly be focusing on bringing Web3 functionality to our project.
+For this dapp, we'll be using [React](https://react.dev/) as our frontend framework; however, it's important to note that we won't be spending much time breaking down its fundamentals, as we'll mostly be focusing on bringing Web3 functionality to our project.
 
-As a prerequisite, you should have a beginner-level understanding of React. If not, we recommend completing the official [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html).
+As a prerequisite, you should have a beginner-level understanding of React. If not, we recommend completing the official [Intro to React tutorial](https://react.dev/learn).
 
 ### Clone the starter files {#clone-the-starter-files}
 
@@ -790,7 +790,7 @@ const onUpdatePressed = async () => {
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html)- this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it \(see line 4\), it will only be called on the component's _first_ render. Here we'll load the current message stored in our smart contract, call our smart contract and wallet listeners, and update our UI to reflect whether a wallet is already connected.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it \(see line 4\), it will only be called on the component's _first_ render. Here we'll load the current message stored in our smart contract, call our smart contract and wallet listeners, and update our UI to reflect whether a wallet is already connected.
 - `addSmartContractListener`- this function sets up a listener that will watch for our HelloWorld contract's `UpdatedMessages` event and update our UI when the message is changed in our smart contract.
 - `addWalletListener`- this function sets up a listener that detects changes in the user's MetaMask wallet state, such as when the user disconnects their wallet or switches addresses.
 - `connectWalletPressed`- this function will be called to connect the user's MetaMask wallet to our dapp.
@@ -840,9 +840,9 @@ return (
 
 If you scan this code carefully, you'll notice where we use our various state variables in our UI:
 
-- On lines 6-12, if the user's wallet is connected \(i.e. `walletAddress.length > 0`\), we display a truncated version of the user `walletAddress` in the button with ID "walletButton;" otherwise it simply says "Connect Wallet."
+- On lines 6-12, if the user's wallet is connected \(i.e., `walletAddress.length > 0`\), we display a truncated version of the user `walletAddress` in the button with ID "walletButton;" otherwise it simply says "Connect Wallet."
 - On line 17, we display the current message stored in the smart contract, which is captured in the `message` string.
-- On lines 23-26, we use a [controlled component](https://reactjs.org/docs/forms.html#controlled-components) to update our `newMessage` state variable when the input in the text field changes.
+- On lines 23-26, we use a [controlled component](https://legacy.reactjs.org/docs/forms.html#controlled-components) to update our `newMessage` state variable when the input in the text field changes.
 
 In addition to our state variables, you'll also see that `connectWalletPressed` and `onUpdatePressed` functions are called when the buttons with IDs `publishButton` and `walletButton` are clicked respectively.
 
@@ -1068,7 +1068,7 @@ contract HelloWorld {
 }
 ```
 
-Smart contract events are a way for your contract to communicate that something happened \(i.e. there was an _event_\) on the blockchain to your front-end application, which can be 'listening' for specific events and take action when they happen.
+Smart contract events are a way for your contract to communicate that something happened \(i.e., there was an _event_\) on the blockchain to your front-end application, which can be 'listening' for specific events and take action when they happen.
 
 The `addSmartContractListener` function is going to specifically listen for our Hello World smart contract's `UpdatedMessages` event, and update our UI to display the new message.
 
@@ -1119,7 +1119,7 @@ If you want to understand more about how transactions on Ethereum work, check ou
 
 #### Download MetaMask {#download-metamask}
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right \(so that we’re not dealing with real money\).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right \(so that we’re not dealing with real money\).
 
 #### Add ether from a Faucet {#add-ether-from-a-faucet}
 
@@ -1174,7 +1174,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1270,7 +1270,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1332,7 +1332,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -1343,7 +1343,7 @@ function addWalletListener() {
 
 I bet you don't even need our help to understand what's going on here at this point, but for thoroughness purposes, let's quickly break it down:
 
-- First, our function checks if `window.ethereum` is enabled \(i.e. MetaMask is installed\).
+- First, our function checks if `window.ethereum` is enabled \(i.e., MetaMask is installed\).
   - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
   - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dapp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
 
@@ -1381,7 +1381,7 @@ This won't take very long; let's finish this dapp!
 
 Naturally, it makes sense to have some sort of input error handling at the start of the function.
 
-We'll want our function to return early if there is no MetaMask extension installed, there is no wallet connected \(i.e. the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
+We'll want our function to return early if there is no MetaMask extension installed, there is no wallet connected \(i.e., the `address` passed in is an empty string\), or the `message` is an empty string. Let's add the following error handling to `updateMessage`:
 
 ```javascript
 // interact.js

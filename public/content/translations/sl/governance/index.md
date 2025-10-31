@@ -42,7 +42,7 @@ V [Ethereum skupnosti](/community/) so prisotni različni deležniki, od katerih
 
 - **Ether lastnike**: to so osebe, ki hranijo poljubno količino ETH. [Več o ETH](/eth/).
 - **Uporabniki aplikacij**: to so osebe, ki uporabljajo aplikacije na blokovni verigi Ethereum.
-- **Razvijalci aplikacij/orodij**: to so osebe, ki razvijajo aplikacije, ki delujejo na blokovni verigi Ethereum (kot so DeFi, NFTs itd.), ali razvijajo orodja za interakcije z Ethereumom (kot so denarnice, testna območja itd.). [Več o dappih](/dapps/).
+- **Razvijalci aplikacij/orodij**: to so osebe, ki razvijajo aplikacije, ki delujejo na blokovni verigi Ethereum (kot so DeFi, NFTs itd.), ali razvijajo orodja za interakcije z Ethereumom (kot so denarnice, testna območja itd.). [Več o dappih](/apps/).
 - **Operaterji vozlišč**: to so osebe, ki upravljajo vozlišča, ki potrjujejo bloke in transakcije, zavračajo kakršnekoli neveljavne transakcije ali bloke, ki jih najdejo. [Več o vozliščih](/developers/docs/nodes-and-clients/).
 - **EIP avtorji**: to so osebe, ki predlagajo spremembe za Ethereum protokol v obliki Ethereum predlogov za izboljšave (EIPs). [Več o EIPs](/eips/).
 - **Rudarji/validatorji**: to so osebe, ki upravljajo vozlišča, ki lahko v blokovno verigo Ethereum dodajajo bloke.
@@ -86,7 +86,7 @@ Ta tok, čeprav zelo poenostavljen, daje pregled nad pomembnimi fazami za aktiva
 
 ### Razumevanje predhodnega dela {#prior-work}
 
-EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://github.com/ethereum/eips), [Ethereum čarovniki](https://www.ethereum-magicians.org/) in [ ethresear.ch](https://www.ethresear.ch/).
+EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://github.com/ethereum/eips), [Ethereum čarovniki](https://ethereum-magicians.org/) in [ethresear.ch](https://ethresear.ch/).
 
 ### Delovne skupine {#working-groups}
 
@@ -114,7 +114,7 @@ Na splošno se nestrinjanje rešuje z dolgo razpravo na javnih forumih, da bi la
 
 Razcepi se zgodijo, ko pride do pomembnejših nadgradenj ali sprememb omrežja in sprememb pravil protokola. [Ethereum stranke](/developers/docs/nodes-and-clients/) morajo nadgraditi svojo programsko opremo, da implementirajo nova pravila razcepa.
 
-DAO razcep se je zgodil kot odziv na [2016 DAO napad](https://www.coindesk.com/understanding-dao-hack-journalists), pri katerem je bilo z napadom iz nezavarovane [DAO](/glossary/#dao) pogodbe izpraznjenih več kot 3,6 milijona ETH. Razcep je prestavil sredstva iz pogodbe z napako v novo pogodbo, kar je vsem, ki so sredstva v napadu izgubili, omogočilo vračilo.
+DAO razcep se je zgodil kot odziv na [2016 DAO napad](https://www.coindesk.com/learn/understanding-the-dao-attack), pri katerem je bilo z napadom iz nezavarovane [DAO](/glossary/#dao) pogodbe izpraznjenih več kot 3,6 milijona ETH. Razcep je prestavil sredstva iz pogodbe z napako v novo pogodbo, kar je vsem, ki so sredstva v napadu izgubili, omogočilo vračilo.
 
 O tem načinu odziva je glasovala Ethereum skupnost. Katerikoli lastnik ETH je lahko glasoval prek transakcije na [glasovalni platformi](http://v1.carbonvote.com/). Odločitev za razcep je prejela več kot 85 % glasov.
 

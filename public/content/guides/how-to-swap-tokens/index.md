@@ -22,7 +22,7 @@ Some popular exchanges are:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 Interesting? Learn more about what [decentralised finance (DeFi)](/defi/) is and how these new kinds of exchanges work.
 
@@ -50,12 +50,15 @@ You can view the progress of the transaction on any blockchain explorer. This pr
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Frequently asked questions
 

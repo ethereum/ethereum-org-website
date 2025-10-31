@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "Încercați aplicațiile",
   "page-index-cta-get-eth-description": "Moneda Ethereum",
   "page-index-cta-get-eth-label": "Obțineți ETH",
-  "page-index-cta-networks-description": "Bucurați-vă de comisioane minime",
-  "page-index-cta-networks-label": "Alegeți o rețea",
   "page-index-cta-wallet-description": "Creați conturi și gestionați active",
   "page-index-cta-wallet-label": "Alegeți un portofel",
+  "page-index-cta-build-apps-description": "Creați-vă prima aplicație",
+  "page-index-cta-build-apps-label": "Începeți să dezvoltați",
   "page-index-description": "Platforma de top pentru aplicații inovatoare și rețele blockchain",
   "page-index-developers-code-example-description-0": "Construiți o bancă gestionată de codul pe care l-ați programat",
   "page-index-developers-code-example-description-1": "Creați tokenuri pe care le puteți transfera și utiliza în mai multe aplicații",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Postări recente",
   "page-index-posts-subtitle": "Cele mai recente postări pe bloguri și actualizări din comunitate",
   "page-index-title": "Bun venit la Ethereum",
+  "page-index-use-cases-tag": "Cazuri de utilizare",
   "page-index-values-description": "Intrați în revoluția digitală",
   "page-index-values-header": "Internetul se schimbă",
   "page-index-values-legacy": "Sistemul tradițional",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Închis pentru cei mai mulți",
   "page-index-values-open-legacy-content-0": "Companiile își protejează proprietatea intelectuală și nu comunică. Nimeni din afara companiei nu poate afla cum funcționează lucrurile, cum sunt rezolvate problemele sau cum se efectuează îmbunătățirile. Oamenilor le este dificil să creeze instrumente noi sau să efectueze personalizări.",
   "page-index-values-open-ethereum-label": "Deschidere pentru toată lumea",
-  "page-index-values-open-ethereum-content-0": "Ethereum este deschisă tuturor. Oricine poate vedea, folosi și îmbunătăți codul pentru toată lumea."
+  "page-index-values-open-ethereum-content-0": "Ethereum este deschisă tuturor. Oricine poate vedea, folosi și îmbunătăți codul pentru toată lumea.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Alăturați-vă celui mai mare eveniment Ethereum al anului",
+  "page-index-devconnect-banner-get-tickets": "Obțineți bilete"
 }

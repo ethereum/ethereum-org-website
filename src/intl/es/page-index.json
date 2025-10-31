@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "Pruebe apps",
   "page-index-cta-get-eth-description": "La moneda de Ethereum",
   "page-index-cta-get-eth-label": "Consiga ETH",
-  "page-index-cta-networks-description": "Aproveche tarifas mínimas",
-  "page-index-cta-networks-label": "Elija una red",
   "page-index-cta-wallet-description": "Cree cuentas y administre activos",
   "page-index-cta-wallet-label": "Seleccione una billetera",
+  "page-index-cta-build-apps-description": "Cree su primera aplicación",
+  "page-index-cta-build-apps-label": "Empiece a desarrollar",
   "page-index-description": "La plataforma líder para aplicaciones innovadoras y redes de cadena de bloques",
   "page-index-developers-code-example-description-0": "Construya un banco impulsado por la lógica que programe",
   "page-index-developers-code-example-description-1": "Cree tókenes que pueda transferir y usar en distintas aplicaciones",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "Publicaciones recientes",
   "page-index-posts-subtitle": "Las últimas publicaciones de blog y actualizaciones de la comunidad",
   "page-index-title": "Bienvenidos a Ethereum",
+  "page-index-use-cases-tag": "Casos de uso",
   "page-index-values-description": "Sea parte de la revolución digital",
   "page-index-values-header": "Internet está cambiando",
   "page-index-values-legacy": "Legado",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "Cerrado a la mayoría",
   "page-index-values-open-legacy-content-0": "Las empresas protegen su propiedad intelectual y no la comparten. Nadie fuera de la empresa puede ver cómo funcionan las cosas, solucionar problemas ni realizar mejoras. Es difícil para las personas crear nuevas herramientas o personalizarlas.",
   "page-index-values-open-ethereum-label": "Abierto a todos",
-  "page-index-values-open-ethereum-content-0": "Ethereum es de código abierto. Cualquiera puede ver, usar y mejorar el código, haciéndolo mejor para todos."
+  "page-index-values-open-ethereum-content-0": "Ethereum es de código abierto. Cualquiera puede ver, usar y mejorar el código, haciéndolo mejor para todos.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Únase al evento de Ethereum más grande del año",
+  "page-index-devconnect-banner-get-tickets": "Conseguir entradas"
 }

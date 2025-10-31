@@ -1,3 +1,4 @@
+import { MDXRemoteProps } from "next-mdx-remote"
 import type { HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -10,7 +11,6 @@ import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
@@ -28,17 +28,11 @@ import YouTube from "@/components/YouTube"
 import { getEditPath } from "@/lib/utils/editPath"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1
-    className="font-monospace uppercase max-lg:text-[1.75rem]"
-    {...props}
-  />
+  <MdHeading1 className="max-lg:text-[1.75rem]" {...props} />
 )
 
 const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading2
-    className="mt-12 scroll-mt-40 font-monospace uppercase max-md:text-2xl"
-    {...props}
-  />
+  <MdHeading2 className="mt-12 scroll-mt-40 max-md:text-2xl" {...props} />
 )
 
 const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -66,6 +60,12 @@ const KBD = (props: HTMLAttributes<HTMLElement>) => (
   />
 )
 
+const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
+
 export const tutorialsComponents = {
   a: TooltipLink,
   h1: Heading1,
@@ -74,16 +74,16 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  pre: Codeblock,
+  pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
   CallToContribute,
   Card,
   Emoji,
   EnvWarningBanner,
-  InfoBanner,
   YouTube,
-}
+} as MDXRemoteProps["components"]
+
 type TutorialLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,

@@ -17,7 +17,7 @@ summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa 
 
 ## In cosa ha consistito la Fusione? {#what-is-the-merge}
 
-La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/history/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
+La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/ethereum-forks/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ La Fusione ha rappresentato il passaggio ufficiale all'uso della Beacon Chain co
 
 Con La Fusione, la cronologia non è andata perduta. Quando la Rete principale si è fusa con la Beacon Chain, ha unito anche l'intera cronologia delle transazioni di Ethereum.
 
-<InfoBanner>
-Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'ether. Scopri di più sull'<a href="/roadmap/merge/issuance/">emissione di ether prima e dopo La Fusione</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'ether. Scopri di più sull'[emissione di ether prima e dopo La Fusione](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Utenti e detentori {#users-holders}
 
@@ -118,7 +122,7 @@ La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilit�
 
 <ExpandableCard
 title="Equivoci: &quot;Eseguire un nodo richiede lo staking di 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Esistono due tipi di nodi di Ethereum: i nodi che possono proporre blocchi e quelli che non possono.
 
@@ -130,7 +134,7 @@ Eseguire un nodo che non produce blocchi è possibile per chiunque, in entrambi 
 
 L'abilità per chiunque di gestire il proprio nodo è <em>assolutamente essenziale</em> per mantenere la decentralizzazione della rete di Ethereum.
 
-<a href="/run-a-node/">Ulteriori informazioni sull'esecuzione di un proprio nodo</a>
+[Ulteriori informazioni sull'esecuzione di un proprio nodo](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Le commissioni del gas sono un prodotto della domanda di rete relativo alla capacità della rete. La Fusione ha reso obsoleto l'uso del Proof of Work, passando al Proof of stake per il consenso, ma non ha modificato significativamente alcun parametro che influenzi direttamente la capacità o il volume di rete.
 
-Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">tabella di marcia incentrata sui rollup</a>, gli sforzi si concentrano sul ridimensionamento delle attività degli utenti al <a href="/layer-2/">livello 2</a>, consentendo alla Rete Principale di Livello 1 di essere un livello di accordo decentralizzato e sicuro, ottimizzato per l'archiviazione dei dati dei rollup, per aiutare a rendere esponenzialmente più economiche le transazioni dei rollup. La transizione al Proof of stake è un precursore essenziale per realizzarlo. <a href="/developers/docs/gas/">Ulteriori informazioni su gas e commissioni.</a>
+Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">tabella di marcia incentrata sui rollup</a>, gli sforzi si concentrano sul ridimensionamento delle attività degli utenti al [livello 2](/layer-2/), consentendo alla Rete Principale di Livello 1 di essere un livello di accordo decentralizzato e sicuro, ottimizzato per l'archiviazione dei dati dei rollup, per aiutare a rendere esponenzialmente più economiche le transazioni dei rollup. La transizione al Proof of stake è un precursore essenziale per realizzarlo. [Ulteriori informazioni su gas e commissioni.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -163,7 +167,7 @@ Inizialmente, dopo La Fusione, gli staker potevano accedere soltanto alle mance 
 
 Dall'aggiornamento della rete di Shanghai/Capella, gli staker possono ora designare un <em>indirizzo di prelievo</em> per iniziare a ricevere pagamenti automatici di qualsiasi saldo di staking in eccesso (ETH superiori a 32, da ricompense del protocollo). Questo aggiornamento, inoltre, ha consentito la capacità di un validatore di sbloccare e rivendicare l'intero saldo all'uscita dalla rete.
 
-<a href="/staking/withdrawals/">Maggiori informazioni sui prelievi in staking</a>
+[Maggiori informazioni sui prelievi in staking](/staking/withdrawals/)
 
 </ExpandableCard>
 

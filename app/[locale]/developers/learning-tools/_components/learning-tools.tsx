@@ -1,16 +1,16 @@
 "use client"
 
 import { BaseHTMLAttributes } from "react"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 
 import { LearningTool } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert, AlertEmoji } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -28,10 +28,8 @@ import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import LearnWeb3Image from "@/public/images/dev-tools/learnweb3.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
-import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
-import PlatziImage from "@/public/images/dev-tools/platzi.png"
 import QuestbookImage from "@/public/images/dev-tools/questbook.png"
 import RemixImage from "@/public/images/dev-tools/remix.png"
 import ReplitImage from "@/public/images/dev-tools/replit.png"
@@ -277,6 +275,9 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-paid"
+      ),
     },
     {
       name: "BloomTech",
@@ -290,6 +291,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-paid"
+      ),
     },
     {
       name: "Questbook",
@@ -303,6 +307,9 @@ const LearningToolsPage = () => {
       ),
       background: "#141236",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Metaschool",
@@ -316,33 +323,9 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "NFT School",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-nftschool-description"
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
       ),
-      url: "https://nftschool.dev/",
-      image: NFTSchoolImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
-      ),
-      background: "#111f29",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "Platzi",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-platzi-description"
-      ),
-      url: "https://platzi.com/escuela/escuela-blockchain/",
-      image: PlatziImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-platzi-logo-alt"
-      ),
-      background: "#121f3d",
-      subjects: ["Solidity", "web3"],
-      locales: ["es"],
     },
     {
       name: "Speed Run Ethereum",
@@ -356,6 +339,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Alchemy University",
@@ -369,6 +355,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "LearnWeb3",
@@ -382,6 +371,9 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
     {
       name: "Cyfrin Updraft",
@@ -395,6 +387,9 @@ const LearningToolsPage = () => {
       ),
       background: "#000000",
       subjects: ["Solidity", "web3"],
+      priceType: t(
+        "page-developers-learning-tools:page-learning-tools-price-free"
+      ),
     },
   ]
 
@@ -418,10 +413,11 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </p>
-          <LearningToolsCardGrid category={randomizedSandboxes} />
-          <InfoBanner emoji=":point_up:" shouldCenter>
+          <LearningToolsCardGrid products={randomizedSandboxes} />
+          <Alert variant="update" className="mx-auto max-w-[55rem]">
+            <AlertEmoji text=":point_up:" />
             <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-          </InfoBanner>
+          </Alert>
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>
@@ -430,7 +426,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
           </p>
-          <LearningToolsCardGrid category={games} />
+          <LearningToolsCardGrid products={games} />
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>
@@ -439,7 +435,7 @@ const LearningToolsPage = () => {
           <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
           </p>
-          <LearningToolsCardGrid category={bootcamps} />
+          <LearningToolsCardGrid products={bootcamps} />
         </StackContainer>
         <ContentBox>
           <CalloutBanner

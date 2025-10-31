@@ -39,16 +39,18 @@ const Component = ({ title, label, ...props }: ComponentProps) => {
 }
 
 /**
- * Components using `forwardRef` from the Chakra UI package
+ * Components using `forwardRef` from React
  *
- * The first argument of the generic types is the props type signature.
- *
- * For the second argument of the generic types, you are declaring the primary element type that the component will render.
- * This could be a `div`, `span`, `button`, etc. or a custom component (typeof Button) if said component is being used in the return.
+ * Use React.forwardRef when you need to forward refs to DOM elements or child components.
+ * The ref type should match the element being rendered (HTMLDivElement, HTMLButtonElement, etc.)
  */
-const Component = forwardRef<ComponentProps, "div">(
+const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
   ({ title, label, ...props }, ref) => {
-    // Component code
+    return (
+      <div ref={ref} {...props}>
+        {/* Component code */}
+      </div>
+    )
   }
 )
 ```
@@ -63,7 +65,7 @@ For the props type signature use the naming convention `<ComponentName>Props` to
 
 A positive side-effect to directly annotating the props object is for IDE intellisense where you can view the props when hovering over the component name to see it's signature.
 
-i.e. `const Component: ({ label, title, ...props }: ComponentProps) => React.JSX.Element`
+i.e., `const Component: ({ label, title, ...props }: ComponentProps) => React.JSX.Element`
 
 #### Use the type alias for props type
 

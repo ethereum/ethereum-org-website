@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 [ロードスター](https://github.com/ChainSafe/lodestar)
 
-[プリズム](https://docs.prylabs.network/docs/getting-started)
+[プリズム](https://prysm.offchainlabs.com/docs/)
 
 ノードオペレーターを大多数を占めるクライアントからの移行を奨励し、移行プロセスを加速できるよう、技術系のユーザーはマイノリティクライアント向けのチュートリアルやドキュメントの作成にご協力ください。 マイノリティコンセンサスクライアントへの移行に関するガイドは、 [clientdiversity.org](https://clientdiversity.org/)から入手できます。
 

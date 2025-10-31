@@ -65,12 +65,15 @@ lang: fa
 
 Web3 امکان مالکیت مستقیم را از طریق [توکن‌های غیرقابل معاوضه (NFTها)](/glossary/#nft) فراهم می کند. هیچ‌کس، حتی سازندگان بازی، قدرت سلب مالکیت شما را ندارند. و اگر بازی را متوقف کنید، می‌توانید آیتم‌های درون بازی خود را در بازارهای آزاد بفروشید یا معامله کنید و ارزش آن‌ها را بازپس بگیرید.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>درباره‌ی NFTها بیشتر بدانید</div>
   <ButtonLink href="/nft/">
     اطلاعات بیشتر درباره NFTها
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### مقاومت در برابر سانسور {#censorship-resistance}
 
@@ -90,12 +93,15 @@ DAOها از نظر فنی با عنوان [قراردادهای هوشمند](/
 
 با این حال، مردم، بسیاری از جوامع Web3 را به عنوان DAO تعریف می کنند. همه این جوامع، سطوح مختلفی از تمرکززدایی و اتوماسیون با کد دارند. در حال حاضر، ما در حال بررسی این هستیم که DAO چیست و چگونه ممکن است در آینده تکامل یابد.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>درباره DAO ها بیشتر بیاموزید</div>
   <ButtonLink href="/dao/">
     اطلاعات بیشتر درباره DAO ها
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### هویت {#identity}
 
@@ -143,7 +149,7 @@ Web3 یک اکوسیستم جوان و در حال تکامل است. گاوین
 
 - [یک کیف پول بگیرید](/wallets/)
 - [افزودن جامعه](/community/)
-- [برنامه‌های وب 3 را کاوش کنید](/dapps/)
+- [برنامه‌های وب 3 را کاوش کنید](/apps/)
 - [پیوستن به یک DAO](/dao/)
 - [ساختن در وب 3](/developers/)
 
@@ -151,11 +157,11 @@ Web3 یک اکوسیستم جوان و در حال تکامل است. گاوین
 
 Web3 تعریف سفت و محکمی ندارد. شرکت‌کنندگان مختلف جامعه، دیدگاه‌های متفاوتی در مورد آن دارند. چند نمونه از آن‌ها در ادامه ذکر شده است:
 
-- [وب 3 چیست؟ توضیح تعامل غیرمتمرکز آینده](https://www.freecodecamp.org/news/what-is-web3/) – _نادر دبیت_
+- [وب 3 چیست؟ توضیح تعامل غیرمتمرکز آینده](https://www.freecodecamp.org/news/what-is-web3) – _نادر دبیت_
 - [درک وب 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ جاش استارک_
 - [چرا وب 3 مهم است](https://future.a16z.com/why-web3-matters/) – _کریس دیکسون_
 - [چرا تمرکززدایی مهم است](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _کریس دیکسون_
 - [فضای وب 3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate?s=r) - _پکی مک‌کورمیک_
+- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate) - _پکی مک‌کورمیک_
 
 <QuizWidget quizKey="web3" />

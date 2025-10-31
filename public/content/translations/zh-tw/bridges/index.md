@@ -59,9 +59,14 @@ _Web 3 已發展成由一層和二層網路擴容解決方案組成的生態系�
 
 假設你想擁有原生比特幣 (BTC)，但你的資金只存在於以太坊主網上。 要在以太坊上獲得比特幣，你可以購買包裝比特幣 (WBTC)。 然而，包裝比特幣是以太坊網路原生的 [ERC-20](/glossary/#erc-20) 代幣，這意味著它是以太坊版本的比特幣，而不是比特幣區塊鏈上的原始資產。 要擁有原生比特幣，你必須使用跨鏈橋將資產從以太坊轉移到比特幣。 這將會橋接包裝比特幣並轉換為原生比特幣。 或者，你可能擁有比特幣，並想在以太坊的[去中心化金融](/glossary/#defi)協定中使用它。 這將需要以另一種方式橋接，從比特幣到包裝比特幣，然後可將包裝比特幣作為以太坊上的資產。
 
-<InfoBanner shouldCenter emoji=":bulb:">
-  你也可以使用 <a href="/get-eth/">中央化交易所</a> 完成上述所有操作。 但是，除非你已有資金在交易所內，否則會涉及多個步驟，而你可能會覺得使用跨鏈橋比較好。
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  你也可以使用 [中央化交易所](/get-eth/) 完成上述所有操作。 但是，除非你已有資金在交易所內，否則會涉及多個步驟，而你可能會覺得使用跨鏈橋比較好。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 
@@ -99,7 +104,7 @@ _Web 3 已發展成由一層和二層網路擴容解決方案組成的生態系�
 
 使用跨鏈橋能夠讓你在不同的區塊鏈之間轉移資產。 以下是一些可以幫助你找到和使用跨鏈橋的資源：
 
-- **[L2BEAT 跨鏈橋摘要](https://l2beat.com/bridges/summary)和 [L2BEAT 跨鏈橋風險分析](https://l2beat.com/bridges/risk)**：提供各種跨鏈橋的完整摘要，包括市場份額、跨鏈橋類型和目標鏈的細節。 L2BEAT 也提供跨鏈橋風險分析，幫助使用者明智地挑選跨鏈橋。
+- **[L2BEAT 跨鏈橋摘要](https://l2beat.com/bridges/summary)和 [L2BEAT 跨鏈橋風險分析](https://l2beat.com/bridges/summary)**：提供各種跨鏈橋的完整摘要，包括市場份額、跨鏈橋類型和目標鏈的細節。 L2BEAT 也提供跨鏈橋風險分析，幫助使用者明智地挑選跨鏈橋。
 - **[DefiLlama 跨鏈橋摘要](https://defillama.com/bridges/Ethereum)**：提供以太坊網路上各種跨鏈橋的交易量摘要。
 
 <Divider />

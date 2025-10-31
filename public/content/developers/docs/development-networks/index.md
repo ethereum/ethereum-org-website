@@ -20,7 +20,7 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
-- Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
+- Deterministically seeding your local blockchain with data (e.g., accounts with ETH balances)
 - Instantly producing blocks with each transaction it receives, in order and with no delay
 - Enhanced debugging and logging functionality
 
@@ -35,15 +35,14 @@ A local Ethereum network designed for development. It allows you to deploy your 
 Hardhat Network comes built-in with Hardhat, an Ethereum development environment for professionals.
 
 - [Website](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Local Beacon Chains {#local-beacon-chains}
 
 Some consensus clients have built-in tools for spinning up local beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available:
 
-- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Local testnet using Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Public Ethereum Test-chains {#public-beacon-testchains}
 

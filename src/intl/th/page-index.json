@@ -37,10 +37,10 @@
   "page-index-cta-dapps-label": "ลองใช้แอป",
   "page-index-cta-get-eth-description": "สกุลเงินของอีเธอเรียม",
   "page-index-cta-get-eth-label": "รับ ETH",
-  "page-index-cta-networks-description": "ใช้งานโดยมีค่าธรรมเนียมขั้นต่ำ",
-  "page-index-cta-networks-label": "เลือกเครือข่าย",
   "page-index-cta-wallet-description": "สร้างบัญชีและจัดการสินทรัพย์",
   "page-index-cta-wallet-label": "เลือกวอลเล็ท",
+  "page-index-cta-build-apps-description": "สร้างแอปแรกของคุณ",
+  "page-index-cta-build-apps-label": "เริ่มต้นการพัฒนา",
   "page-index-description": "แพลตฟอร์มชั้นนำสำหรับแอปที่เป็นนวัตกรรมและเครือข่าย blockchain",
   "page-index-developers-code-example-description-0": "สร้างธนาคารที่ทำงานด้วยตรรกะที่คุณเขียนโปรแกรมเอง",
   "page-index-developers-code-example-description-1": "สร้างโทเค็นที่สามารถถ่ายโอนและใช้ระหว่างแอปพลิเคชันต่าง ๆ ได้",
@@ -83,6 +83,7 @@
   "page-index-posts-header": "โพสต์ล่าสุด",
   "page-index-posts-subtitle": "โพสต์และข้อมูลอัปเดตล่าสุดในบล็อกจากชุมชน",
   "page-index-title": "ยินดีต้อนรับสู่อีเธอเรียม",
+  "page-index-use-cases-tag": "กรณีการใช้งาน",
   "page-index-values-description": "มาร่วมเป็นส่วนหนึ่งของการปฏิวัติทางดิจิทัล",
   "page-index-values-header": "อินเตอร์เน็ตกำลังเปลี่ยนแปลง",
   "page-index-values-legacy": "แบบดั้งเดิม",
@@ -117,5 +118,7 @@
   "page-index-values-open-legacy-label": "ปิดสำหรับคนส่วนใหญ่",
   "page-index-values-open-legacy-content-0": "บริษัทต่าง ๆ ปกป้องทรัพย์สินทางปัญญาของตนและไม่แชร์ข้อมูลให้ผู้อื่น ไม่มีบุคคลใดภายนอกบริษัทจะเห็นวิธีการทำงาน การแก้ไขปัญหา หรือปรับปรุงสิ่งต่าง ๆ จึงเป็นเรื่องยากที่ผู้คนจะสร้างเครื่องมือใหม่ ๆ หรือปรับแต่งเครื่องมือ",
   "page-index-values-open-ethereum-label": "เปิดให้ทุกคน",
-  "page-index-values-open-ethereum-content-0": "อีเธอเรียมเปิดเผยต่อสาธารณะ ทุกคนสามารถดู ใช้ และปรับปรุงโค้ด เพื่อให้ดีขึ้นสำหรับทุกคน"
+  "page-index-values-open-ethereum-content-0": "อีเธอเรียมเปิดเผยต่อสาธารณะ ทุกคนสามารถดู ใช้ และปรับปรุงโค้ด เพื่อให้ดีขึ้นสำหรับทุกคน",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "เข้าร่วมกิจกรรม Ethereum ที่ใหญ่ที่สุดแห่งปี",
+  "page-index-devconnect-banner-get-tickets": "รับตั๋ว"
 }

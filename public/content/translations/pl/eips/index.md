@@ -74,6 +74,6 @@ Każdy może utworzyć EIP. Przed przesłaniem propozycji należy przeczytać [E
 
 <cite class="citation">
 
-Zawartość strony dostarczona w części z [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) przez Hudsona Jamesona
+Zawartość strony dostarczona w części z [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) przez Hudsona Jamesona
 
 </cite>

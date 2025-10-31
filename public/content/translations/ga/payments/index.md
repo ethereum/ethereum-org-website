@@ -1,31 +1,31 @@
 ---
 title: Íocaíochtaí Ethereum
-metaTitle: Payments on Ethereum
-description: An overview of payments on Ethereum
+metaTitle: Íocaíochtaí ar Ethereum
+description: Forbhreathnú ar íocaíochtaí ar Ethereum
 lang: ga
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: An Eth logo being displayed along with giving hands.
-summaryPoint1: A world where money moves as freely as information
-summaryPoint2: Open and global, enabling borderless transactions for everyone
-summaryPoint3: Payments received within a minute
+alt: Lógó Eth á thaispeáint mar aon le lámha a thabhairt.
+summaryPoint1: Domhan ina bhfuil airgead ag gluaiseacht chomh héasca le faisnéis
+summaryPoint2: Oscailte agus domhanda, rud a chumasaíonn idirbhearta gan teorainn do gach duine
+summaryPoint3: Íocaíochtaí faighte laistigh de nóiméad
 ---
 
-Every day, millions of people face the same challenge: moving money across borders is slow, expensive, and often frustrating. A freelancer in Bali waits days for payment to clear from their New York client. This particularly affects people in regions with limited banking infrastructure, making it difficult to participate in the global economy.
+Gach lá, bíonn an dúshlán céanna roimh na milliúin daoine: bíonn sé mall, costasach, agus is minic a bhíonn frustrachas ar airgead a aistriú thar theorainneacha. Fanann saoroibrí in Bali laethanta le híocaíocht a ghlanadh óna gcliant i Nua-Eabhrac. Cuireann sé seo isteach go háirithe ar dhaoine i réigiúin a bhfuil infrastruchtúr baincéireachta teoranta acu, rud a fhágann go bhfuil sé deacair a bheith rannpháirteach sa gheilleagar domhanda.
 
-This isn't a far-off dream – it's happening today on Ethereum. While traditional financial institutions have built robust payment systems over decades, they often remain constrained by borders, working hours, and legacy infrastructure. Ethereum offers a new paradigm: a global, 24/7 financial platform that enables near-instant, programmable transactions for anyone with internet access.
+Ní aisling am éigin i bhfad amach romhainn é seo - tá sé ag tarlú inniu ar Ethereum. Cé go bhfuil córais láidre íocaíochta tógtha ag institiúidí airgeadais traidisiúnta le blianta fada anuas, is minic go mbíonn siad srianta fós ag teorainneacha, uaireanta oibre agus bonneagar leagáide. Tairgeann Ethereum paraidím nua: ardán airgeadais domhanda 24/7 a chumasaíonn idirbhearta in-ríomhchláraithe neasláithreach do gach duine a bhfuil rochtain idirlín acu.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![Ethereum logo on the computer screen](./computer.png)
+![Lógó Ethereum ar scáileán an ríomhaire](./computer.png)
 
 </div>
 
-## Remittances: cheaper international transfers {#remittances}
+## Seoltáin: aistrithe idirnáisiúnta níos saoire {#remittances}
 
-For millions of people working abroad, sending money back home is a regular necessity. Traditional remittance services often come with high fees and slow processing times. Ethereum offers a compelling alternative.
+Do na milliúin daoine atá ag obair thar lear, tá sé riachtanach go rialta airgead a chur ar ais abhaile. Is minic a bhíonn táillí arda agus amanna próiseála mall ag baint le seirbhísí íocaíochta traidisiúnta. Tairgeann Ethereum rogha eile an-láidir.
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
@@ -33,123 +33,129 @@ For millions of people working abroad, sending money back home is a regular nece
   <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
 </CardGrid>
 
-## Access to Global Currencies {#access-to-global-currencies}
+## Rochtain ar Airgeadra Domhanda {#access-to-global-currencies}
 
-In many countries, inflation is a pressing concern, often accompanied by limited access to foreign currencies. People in these situations struggle to preserve their wealth as they are forced to hold rapidly depreciating savings.
+Ina lán tíortha, is ábhar imní práinneach é boilsciú, agus go minic bíonn rochtain theoranta ar airgeadraí eachtracha ag gabháil leis. Bíonn deacrachtaí ag daoine sna cásanna seo a saibhreas a chaomhnú mar go gcuirtear iallach orthu coigilteas a choinneáil atá ag dímheas go tapa.
 
-The Ethereum community has created **a robust alternative financial system** that is independent of any nation’s monetary policies or control.
+Chruthaigh pobal Ethereum **córas airgeadais malartach láidir** atá  neamhspleách ar bheartais airgeadaíochta nó ar rialú aon náisiún.
 
-Ethereum users can use **stablecoins—tokens typically tied to strong currencies like the US Dollar**. By earning and saving in cryptocurrency, people can protect themselves from high inflation in their country, helping to preserve or even grow their purchasing power. This also enables easier payments for goods and services, both locally and globally.
+Is féidir le húsáideoirí Ethereum **stablecoins a úsáid - dearbháin atá ceangailte go hiondúil le hairgeadraí láidre cosúil le Dollar SAM**. Trí thuilleamh agus coigilt i criptea-airgeadra, is féidir le daoine iad féin a chosaint ó bhoilsciú ard ina dtír, ag cabhrú a chaomhnú nó fiú fás a gcumhacht ceannaigh. Cumasaíonn sé seo íocaíochtaí níos éasca ar earraí agus ar sheirbhísí, go háitiúil agus go domhanda.
 
 <ButtonLink href="/stablecoins">
-  More on stablecoins
+  Tuilleadh faoi bhoinn stáblaí
 </ButtonLink>
 
-## Buying Goods and Payment for Services {#buying-goods-and-payment-for-services}
+## Earraí a Cheannach agus Íocaíocht as Seirbhísí {#buying-goods-and-payment-for-services}
 
-Many businesses are beginning to accept ether (ETH) and other cryptocurrencies as payment. Mar shampla:
+Tá go leor gnólachtaí ag tosú ag glacadh éitear (ETH) agus criptea-airgeadraí eile mar íocaíocht. Mar shampla:
 
-- **Newegg:** The popular electronics retailer accepts Ethereum for purchases in select countries.
-- **Travala.com:** This travel booking platform allows users to pay for hotels and flights using Ethereum.
-- **Shopify:** This popular E-commerce platform which serves as a platform for hosting businesses also accepts payments for goods and services using Ethereum.
-- **Sotheby's:** This organisation trade fine and decorative art, jewellery, and collectibles and allows for payments using Ethereum and other cryptocurrencies.
+- \*\* Newegg:\*\* Glacann an miondíoltóir leictreonaice móréilimh le Ethereum le ceannach i dtíortha roghnaithe.
+- **Travala.com:** Ligeann an t-ardán áirithinte taistil seo d’úsáideoirí íoc as óstáin agus eitiltí ag baint úsáide as Ethereum.
+- \*\* Shopify:\*\* Glacann an t-ardán ríomhthráchtála móréilimh seo a fheidhmíonn mar ardán do ghnólachtaí óstála freisin le híocaíochtaí ar earraí agus seirbhísí a úsáideann Ethereum.
+- **Sotheby's:** Déanann an eagraíocht seo trádáil mínealaíona agus maisiúla, seodra agus earraí inbhailithe agus ceadaíonn sí íocaíochtaí trí úsáid a bhaint as Ethereum agus criptea-airgeadraí eile.
 
-Countries like El Salvador and the Central African Republic have even adopted cryptocurrencies as legal tender, paving the way for wider acceptance of Ethereum payments in everyday transactions.
+Ghlac tíortha cosúil le El Salvador agus Poblacht na hAfraice Láir fiú criptea-airgeadraí mar airgead dlíthairge, ag réiteach an bhealaigh le haghaidh glacadh níos leithne le híocaíochtaí Ethereum in idirbhearta laethúla.
 
-In countries where their means of payment have been disconnected from the rest of the world, crypto-integrated payment solutions have been a huge relief. Payments of subscriptions for platforms like Netflix, Spotify, and educational courses have now been made easy through crypto payment platforms like Gnosis Pay and Paypal.
+I dtíortha ina bhfuil a gcuid modhanna íocaíochta dícheangailte ón gcuid eile den domhan, bhí réitigh íocaíochta criptithe-chomhtháite ina faoiseamh ollmhór. Tá sé éasca anois síntiúis a íoc le haghaidh ardáin mar Netflix, Spotify, agus cúrsaí oideachais trí ardáin íocaíochta criptea mar Gnosis Pay agus Paypal.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Create your Ethereum account with a wallet app today.</div>
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
+  <div>Cruthaigh do chuntas Ethereum le aip sparán inniu.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Get started
+    Cuir tús leis
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
-## Salary Payments {#salary-payments}
+## Íocaíochtaí Tuarastail {#salary-payments}
 
-Many forward-thinking companies are now offering employees the option to receive their salaries, or a portion of them, in cryptocurrencies like ether (ETH):
+Tá go leor comhlachtaí atá ag smaoineamh chun cinn ag tairiscint an rogha d’fhostaithe anois a dtuarastail, nó cuid díobh, a fháil in criptea-airgeadraí mar éitear (ETH):
 
-- **Gipsybee:** is an organisation that deals in electronics, robotics, game creation and other services. They give employees the option to get paid in Ethereum.
-- **SC5:** This Finnish company was one of the first to offer salaries in Bitcoin, paving the way for similar arrangements with Ethereum.
-- **Blockchain startups:** Many companies in the blockchain space naturally offer cryptocurrency salary options to their employees.
-- **DAOs:** Due to the peculiarity and diversity of contributors to DAOs, most contributions and salaries are rewarded in cryptocurrency.
+- Is eagraíocht é **Gipsybee:**  a dhéileálann le leictreonaic, róbataic, cruthú cluichí agus seirbhísí eile. Tugann siad rogha d’fhostaithe íocaíocht a fháil in Ethereum.
+- **SC5:** Bhí an comhlacht Fionlannach seo ar cheann de na chéad chomhlachtaí a thairg tuarastail i Bitcoin, rud a réitigh an bealach le haghaidh socruithe comhchosúla le Ethereum.
+- \*\* Gnólachtaí nuathionscanta Blocshlabhra:\*\* Go nádúrtha cuireann go leor comhlachtaí sa spás blocshlabhra roghanna tuarastail criptea-airgeadra ar fáil dá bhfostaithe.
+- **DAOs:** Mar gheall ar shainiúlacht agus éagsúlacht na rannpháirtithe le DAO, bronntar an chuid is mó de ranníocaíochtaí agus tuarastail in airgead criptea-airgeadra.
 
-This trend particularly appeals to remote workers and digital nomads who can benefit from borderless payments and potentially favorable exchange rates.
+Taitníonn an treocht seo go háirithe le hoibrithe iargúlta agus le fánaithe digiteacha ar féidir leo leas a bhaint as íocaíochtaí gan teorainn agus rátaí malairte a d’fhéadfadh a bheith fabhrach.
 
 <Divider />
 
-## Global relief efforts {#global-relief-efforts}
+## Iarrachtaí faoisimh dhomhanda {#global-relief-efforts}
 
-In February 2023, when devastating earthquakes struck Turkey and Syria, the global crypto community sprang into action. Various campaigns were launched to collect funds for relief efforts, showcasing the power of Ethereum in times of crisis. Despite crypto [not being a recognized form](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) of payment in Turkey, authorities made [exceptions](https://x.com/haluklevent/status/1622913175409623041) for some organizations to collect donations. Some examples are:
+I mí Feabhra 2023, nuair a bhuail creathanna talún millteach an Tuirc agus an tSiria, chuaigh an pobal criptea domhanda i mbun gnímh. Seoladh feachtais éagsúla chun cistí a bhailiú le haghaidh iarrachtaí faoisimh, ag taispeáint cumhacht Ethereum in aimsir ghéarchéime. In ainneoin criptea [nach foirm aitheanta é](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) íocaíochta sa Tuirc, rinne údaráis [eisceachtaí] (https://x.com/haluklevent/status/1622913175409623041) roinnt eagraíochtaí tabhartais a bhailiú. Seo a leanas roinnt samplaí:
 
-- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): is a renowned digital artist who initiated a fundraising campaign.
-- DAO Power: [Anka Relief DAO](https://ankarelief.org/) and [Bankless DAO](https://x.com/banklessDAO) joined forces with [Giveth](https://x.com/Giveth/status/1623493672149843969) to raise funds.
-- [Pak](https://cause.quest/), a prominent NFT artist, also contributed to the cause.
-- Even Ethereum co-founder [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) made personal donations to multiple campaigns.
-  The result of this? Over $6 million was raised in a matter of days, as tracked by a [Dune](https://dune.com/davy42/turkiye-earthquake-donations) Analytics dashboard.
+- [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): is ealaíontóir digiteach clúiteach é a chuir tús le feachtas tiomsaithe airgid.
+- DAO Power: Chuaigh [Anka Relief DAO](https://ankarelief.org/) agus [Bankless DAO](https://x.com/banklessDAO) i gcomhar le [Giveth](https://x.com/Giveth/status/1623493672149843969) chun airgead a chruinniú.
+- Chuir [Pak](https://cause.quest/), ealaíontóir suntasach NFT, leis an gcúis freisin.
+- Thug fiú comhbhunaitheoir Ethereum [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) síntiúis phearsanta d'ilfheachtais.
+  An toradh ar seo? Bailíodh os cionn $6 milliún i gceann cúpla lá, arna rianú ag painéal anailíse [Dune](https://dune.com/davy42/turkiye-earthquake-donations).
 
-There were also similar response times for tragedies that happened in India and Ukraine. This rapid response highlights a crucial advantage of Ethereum payments, which is the ability to quickly mobilize global support without the hurdles of currency conversion, lengthy bank transfers, or exorbitant fees.
+Bhí amanna freagartha comhchosúla ann freisin do thragóidí a tharla san India agus san Úcráin. Leagann an freagra tapa seo béim ar bhuntáiste ríthábhachtach a bhaineann le híocaíochtaí Ethereum, is é sin an cumas tacaíocht dhomhanda a shlógadh go tapa gan na constaicí a bhaineann le comhshó airgeadra, aistrithe bainc fada, nó táillí iomarcach.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![Ethereum Robot Image](./eth_robot.png)
+![Íomhá an robot Ethereum](./eth_robot.png)
 
 </div>
 
 ## Ethereum vs fiat {#ethereum-vs-fiat}
 
-To truly appreciate the impact of Ethereum payments, it's worth comparing them to traditional fiat currencies:
+Le fírinne, chun tionchar íocaíochtaí Ethereum a thuiscint, is fiú iad a chur i gcomparáid le hairgeadraí fiat traidisiúnta:
 
-|                       | **Ethereum**            | **Traditional banks**                                        |
-| --------------------- | ----------------------- | ------------------------------------------------------------ |
-| **Speed**             | Seconds to minutes      | Hours to days                                                |
-| **Global Reach**      | Borderless, 24/7        | Subject to international banking restrictions and work hours |
-| **Transparency**      | Fully transparent       | Varies by institution                                        |
-| **Programmability**   | Smart contracts enabled | Limited to basic transactions                                |
-| **Inflation Control** | Predictable issuance    | Subject to central bank policies                             |
-| **Inrochtaineacht**   | Anyone with internet    | Subject to national and international restrictions           |
+|                            | **Ethereum**                    | **Bainc traidisiúnta**                                              |
+| -------------------------- | ------------------------------- | ------------------------------------------------------------------- |
+| **Luas**                   | Soicind go nóiméid              | Uaireanta a chloig go laethanta                                     |
+| **Rochtain Dhomhanda**     | Gan teorainn, 24/7              | Faoi réir srianta baincéireachta idirnáisiúnta agus uaireanta oibre |
+| **Trédhearcacht**          | Go hiomlán trédhearcach         | Athraíonn de réir institiúide                                       |
+| **In-ríomhchláraitheacht** | Conarthaí cliste cumasaithe     | Teoranta go hidirbhearta bunúsacha                                  |
+| **Rialú Boilscithe**       | Eisiúint intuartha              | Faoi réir bheartais an bhainc cheannais                             |
+| **Inrochtaineacht**        | Aon duine a bhfuil idirlíon acu | Faoi réir srianta náisiúnta agus idirnáisiúnta                      |
 
-At its core, Ethereum is a decentralized platform that allows for secure, fast, and transparent transactions. However, many components set it apart from traditional payment methods. Let's dive into the benefits that make Ethereum payments a game-changer:
+Ag a chroílár, is ardán díláraithe é Ethereum a cheadaíonn idirbhearta slán, tapa agus trédhearcach. Mar sin féin, leagann go leor comhpháirteanna amach é ó mhodhanna íocaíochta traidisiúnta. Léimimis isteach ar na buntáistí a fhágann gur rud claochlaitheach iad íocaíochtaí Ethereum:
 
-### Programmability {#programmability}
+### In-ríomhchláraitheacht {#programmability}
 
-One of Ethereum's unique features is its ability to support smart contracts. Smart contracts are self-executing agreements with the terms directly written into code. This opens up a world of possibilities for automated, condition-based payments that can greatly improve transactions like:
+Ceann de na gnéithe uathúla atá ag Ethereum ná a chumas tacú le conarthaí cliste. Is comhaontuithe féin-fhorghníomhaithe iad conarthaí cliste leis na téarmaí atá scríofa go díreach isteach sa chód. Osclaíonn sé seo saol ina bhfuil féidearthachtaí maidir le híocaíochtaí uathoibrithe, bunaithe ar choinníoll, ar féidir leo feabhas mór a chur ar idirbhearta mar:
 
-- Escrow services
-- Recurring payments
-- Performance-based compensation
+- Seirbhísí eascró
+- Íocaíochtaí a tharlaíonn arís agus arís
+- Cúiteamh bunaithe ar fheidhmíocht
 
-### Speed {#speed}
+### Luas {#speed}
 
-Do you remember the last time you waited days for an international bank transfer to clear? The long queue? And the multiple forms you had to fill? With Ethereum, those days are long gone. Transactions on the Ethereum network settle in minutes, regardless of where the sender and recipient are located. Due to Ethereum being permissionless, there is no regulatory bureaucracy when sending money. This speed is particularly crucial in time-sensitive situations, such as emergency relief efforts.
+An cuimhin leat an uair dheireanach a d’fhan tú laethanta le haistriú bainc idirnáisiúnta a ghlanadh? An scuaine fada? Agus na foirmeacha iolracha a bhí le líonadh agat? Le Ethereum, tá na laethanta sin imithe le fada. Socraíonn idirbhearta ar líonra Ethereum i nóiméid, beag beann ar an áit a bhfuil an seoltóir agus an faighteoir suite. Toisc go bhfuil Ethereum gan chead, níl aon mhaorlathas rialála ann nuair a bhíonn airgead á sheoladh. Tá an luas seo ríthábhachtach go háirithe i gcásanna atá íogair ó thaobh ama de, amhail iarrachtaí faoisimh éigeandála.
 
-### Lower Fees {#lower-fees}
+### Táillí Níos Ísle {#lower-fees}
 
-Traditional international money transfers fees sometimes eat up a significant portion of the amount sent, especially when dealing with transactions in the hundreds of dollars. Ethereum transactions, while not free, often come with lower fees. This means more of your money goes where you intend it to, rather than lining the pockets of intermediaries.
+Uaireanta itheann táillí aistrithe airgid traidisiúnta idirnáisiúnta cuid shuntasach den mhéid a sheoltar, go háirithe agus iad ag déileáil le hidirbhearta sna céadta dollar. Is minic a thagann idirbhearta Ethereum, cé nach bhfuil siad saor in aisce, le táillí níos ísle. Ciallaíonn sé seo go dtéann níos mó de do chuid airgid san áit a bhfuil sé beartaithe agat é a dhéanamh, seachas pócaí na n-idirghabhálaithe a líneáil.
 
-### Transparency {#transparency}
+### Trédhearcacht {#transparency}
 
-Every transaction on the Ethereum blockchain is recorded on a public ledger. This means anyone can verify the movement of funds, making it an excellent tool for:
+Déantar gach idirbheart ar an Ethereum blocshlabhra a thaifeadadh ar mhórleabhar poiblí. Ciallaíonn sé seo gur féidir le duine ar bith gluaiseacht cistí a fhíorú, rud a fhágann gur uirlis iontach é le haghaidh:
 
-- Charitable organizations to demonstrate how donations are used
-- Businesses to prove payments to suppliers or employees
-- Individuals to keep track of their financial activities
+- Eagraíochtaí carthanacha a léiriú conas a úsáidtear síntiúis
+- Gnólachtaí chun íocaíochtaí le soláthraithe nó fostaithe a chruthú
+- Daoine aonair súil a choinneáil ar a gcuid gníomhaíochtaí airgeadais
 
-With Ethereum, everyone can see how money moves and how costs are implemented, unlike traditional organisations where most of these remain unknown.
+Le Ethereum, is féidir le gach duine a fheiceáil conas a ghluaiseann airgead agus conas a chuirtear costais i bhfeidhm, murab ionann agus eagraíochtaí traidisiúnta ina bhfuil an chuid is mó díobh seo fós anaithnid.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![walking image](./walking.png)
+![íomhá ag siúl](./walking.png)
 
 </div>
 
-While fiat currencies have the advantage of widespread acceptance and stability, Ethereum offers unique benefits that make it an attractive option for certain types of transactions.
+Cé go bhfuil buntáiste ag airgeadraí fiat go bhfuil glactha go forleathan agus cobhsaíocht, cuireann Ethereum buntáistí uathúla a fhágann go bhfuil sé ina rogha tarraingteach do chineálacha áirithe idirbheart.
 
-From facilitating rapid disaster relief to empowering global workers, Ethereum payments are writing a new chapter in the long history of money. While challenges remain, the unique advantages offered by this technology make it an attractive option for a wide range of use cases.
+Ó fhaoiseamh tubaiste tapa a éascú chun oibrithe domhanda a chumhachtú, tá íocaíochtaí Ethereum ag cur tús le ré nua i stair fhada an airgid. Cé go bhfuil dúshláin fós ann, de bharr buntáistí uathúla na teicneolaíochta seo is rogha tarraingteach é do raon leathan cásanna úsáide.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Time to get your own Ethereum account.</div>
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
+  <div>Tá sé in am agat do chuntas Ethereum féin a fháil.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Get started
+    Cuir tús leis
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>

@@ -30,11 +30,11 @@ title="Ringkasan penerbitan ETH">
 
 ### Penerbitan lapisan eksekusi {#el-issuance-pre-merge}
 
-Pada bukti kerja, penambang hanya berinteraksi dengan lapisan eksekusi dan mendapatkan reward blok jika mereka adalah penambang pertama yang menyelesaikan blok berikutnya. Sejak [peningkatan Constantinople](/history/#constantinople) pada tahun 2019, rewardnya adalah 2 ETH per blok. Para penambang juga diberi imbalan dengan menerbitkan blok [ommer](/glossary/#ommer), yang merupakan blok valid yang tidak berakhir di rantai terpanjang/kanonik. Imbalan ini maksimal sebesar 1,75 ETH per ommer, dan _sebagai tambahan untuk_ imbalan yang diterbitkan dari blok kanonik. Proses penambangan adalah kegiatan yang intensif secara ekonomi, yang secara historis membutuhkan tingkat penerbitan ETH yang tinggi untuk mempertahankannya.
+Pada bukti kerja, penambang hanya berinteraksi dengan lapisan eksekusi dan mendapatkan reward blok jika mereka adalah penambang pertama yang menyelesaikan blok berikutnya. Sejak [peningkatan Constantinople](/ethereum-forks/#constantinople) pada tahun 2019, rewardnya adalah 2 ETH per blok. Para penambang juga diberi imbalan dengan menerbitkan blok [ommer](/glossary/#ommer), yang merupakan blok valid yang tidak berakhir di rantai terpanjang/kanonik. Imbalan ini maksimal sebesar 1,75 ETH per ommer, dan _sebagai tambahan untuk_ imbalan yang diterbitkan dari blok kanonik. Proses penambangan adalah kegiatan yang intensif secara ekonomi, yang secara historis membutuhkan tingkat penerbitan ETH yang tinggi untuk mempertahankannya.
 
 ### Penerbitan lapisan konsensus {#cl-issuance-pre-merge}
 
-[Rantai Suar](/history/#beacon-chain-genesis) mulai beroperasi pada tahun 2020. Alih-alih penambang, ini diamankan oleh validator menggunakan bukti taruhan. Rantai ini di-bootstrap oleh pengguna Ethereum yang menyetor ETH satu arah ke dalam kontrak pintar di Jaringan Utama (lapisan eksekusi), yang kemudian didengarkan oleh Rantai Suar, dan mengkreditkan pengguna dengan jumlah ETH yang sama di rantai yang baru. Hingga Penggabungan terjadi, validator Rantai Suar tidak memproses transaksi dan pada dasarnya mencapai konsensus tentang keadaan kumpulan validator itu sendiri.
+[Rantai Suar](/ethereum-forks/#beacon-chain-genesis) mulai beroperasi pada tahun 2020. Alih-alih penambang, ini diamankan oleh validator menggunakan bukti taruhan. Rantai ini di-bootstrap oleh pengguna Ethereum yang menyetor ETH satu arah ke dalam kontrak pintar di Jaringan Utama (lapisan eksekusi), yang kemudian didengarkan oleh Rantai Suar, dan mengkreditkan pengguna dengan jumlah ETH yang sama di rantai yang baru. Hingga Penggabungan terjadi, validator Rantai Suar tidak memproses transaksi dan pada dasarnya mencapai konsensus tentang keadaan kumpulan validator itu sendiri.
 
 Validator di Rantai Suar diberi imbalan dengan ETH karena telah membuktikan status rantai dan mengusulkan blok. Imbalan (atau penalti) dihitung dan didistribusikan pada setiap jangka waktu (setiap 6,4 menit) berdasarkan kinerja validator. Imbalan validator **secara signifikan** lebih kecil daripada imbalan penambangan yang sebelumnya dikeluarkan di bawah bukti kerja (2 ETH setiap ~13,5 detik), karena mengoperasikan simpul validasi tidak terlalu membutuhkan biaya yang besar sehingga tidak membutuhkan imbalan yang tinggi.
 
@@ -54,11 +54,17 @@ Total pasokan ETH: **~120.520.000 ETH** (saat Penggabungan pada September 2022)
 - Hasilnya adalah **~620.500** ETH yang diterbitkan dalam setahun
 - Menghasilkan tingkat inflasi **sekitar 0,52%** (620,5 ribu per tahun / total 119,3 juta)
 
-<InfoBanner>
-<strong>Tingkat penerbitan tahunan total (sebelum penggabungan): ~4,61%</strong> (4,09% + 0,52%)<br/><br/>
-<strong>~88,7%</strong> dari penerbitan diberikan kepada penambang pada lapisan eksekusi (4,09 / 4,61 * 100)<br/><br/>
-<strong>~11,3%</strong> diterbitkan kepada para penaruh pada lapisan konsensus (0,52 / 4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Tingkat penerbitan tahunan total (sebelum penggabungan): ~4,61%** (4,09% + 0,52%)
+
+**~88,7%** dari penerbitan diberikan kepada penambang pada lapisan eksekusi (4,09 / 4,61 * 100)
+
+**~11,3%** diterbitkan kepada para penaruh pada lapisan konsensus (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Setelah penggabungan (saat ini) {#post-merge}
 
@@ -84,18 +90,27 @@ Seiring bertambahnya validator yang menarik diri, jumlah maksimum validator yang
 - Penerbitan lapisan eksekusi: **0**
 - Penerbitan lapisan konsensus: Sama seperti sebelumnya, tingkat penerbitan tahunan sebesar **~0,52%** (dengan total 14 juta ETH yang dipertaruhkan)
 
-<InfoBanner>
-Tingkat penerbitan tahunan total: <strong>~0,52%</strong><br/><br/>
-Pengurangan bersih dalam penerbitan ETH tahunan: <strong>~88,7%</strong> ((4,61% - 0,52%) / 4,61% * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Tingkat penerbitan tahunan total: **~0,52%**
+
+Pengurangan bersih dalam penerbitan ETH tahunan: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Pembakaran {#the-burn}
 
 Kekuatan berlawanan dengan penerbitan ETH adalah tingkat pembakaran ETH. Untuk sebuah transaksi dieksekusi di Ethereum, biaya minimum (dikenal sebagai "biaya dasar") harus dibayarkan, yang terus berfluktuasi (dari blok ke blok) tergantung pada aktivitas jaringan. Biaya tersebut dibayarkan dalam bentuk ETH dan _wajib_ agar transaksi dianggap sah. Biaya ini akan _dibakar_ selama proses transaksi, mengeluarkannya dari sirkulasi.
 
-<InfoBanner>
-Pembakaran biaya diaktifkan dengan <a href="/history/#london">peningkatan London</a> pada Agustus 2021, dan tetap tidak berubah sejak Terjadinya Penggabungan.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Pembakaran biaya diaktifkan dengan [peningkatan London](/ethereum-forks/#london) pada Agustus 2021, dan tetap tidak berubah sejak Terjadinya Penggabungan.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Selain pembakaran biaya yang diimplementasikan oleh peningkatan London, validator juga dapat dikenakan denda karena tidak aktif, atau bahkan lebih buruk lagi, mereka dapat dipotong karena melanggar aturan tertentu yang mengancam keamanan jaringan. Penalti ini mengakibatkan pengurangan ETH dari saldo validator tersebut, yang tidak langsung diberikan sebagai imbalan kepada akun lain, secara efektif dibakar/mengeluarkannya dari sirkulasi.
 

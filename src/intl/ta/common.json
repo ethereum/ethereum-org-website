@@ -227,7 +227,7 @@
   "nav-contribute-description": "நீங்கள் உதவ விரும்பினால், இது உங்களுக்கு வழிகாட்டும்",
   "nav-contribute-label": "ethereum.org தளத்திற்கான பங்களிப்பு",
   "nav-dao-description": "மையப்படுத்தப்பட்ட அதிகாரம் அற்ற உறுப்பினர்களுக்குச் சொந்தமான சமூகங்கள்",
-  "nav-dapps-description": "Ethereum-ஐ பயன்படுத்தி செயலிகளின் உயரிய அமைப்பை ஆராய்ந்திடுங்கள்",
+  "nav-apps-description": "Ethereum-ஐ பயன்படுத்தி செயலிகளின் உயரிய அமைப்பை ஆராய்ந்திடுங்கள்",
   "nav-defi-description": "பாரம்பரிய நிதிச் சந்தைக்கான உலகளாவிய, வெளிப்படையான மாற்று",
   "nav-desci-description": "தற்போதைய அறிவியல் அமைப்புக்கு உலகளாவிய, திறந்த மாற்று",
   "nav-desoc-description": "சமூக தொடர்பு மற்றும் உள்ளடக்க உருவாக்கத்திற்கான பிளாக்செயின் அடிப்படையிலான தளங்கள்",
@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Ethereum-க்கான விலைமலிவான மற்றும் விரைவான பரிவர்த்தனைகள்",
   "nav-learn-by-coding-description": "Ethereum உடன் ஆராய்வதற்கு உதவக்கூடிய கருவிகள்",
   "nav-local-env-description": "உங்கள் Ethereum உருவாக்க அடுக்கைத் தேர்ந்தெடுத்து அமைத்தல்",
-  "nav-mainnet-description": "நிறுவன பிளாக்செயின் செயலிகள் பொது Ethereum மெயின்நெட்டில் உருவாக்கலாம்",
+  "nav-enterprise-description": "நிறுவன பிளாக்செயின் செயலிகள் பொது Ethereum மெயின்நெட்டில் உருவாக்கலாம்",
   "nav-nft-description": "Ethereum அடிப்படையிலான உடைமையைப் போன்று ஏதேனும் தனித்துவமான ஒன்றை கட்சிப்படுத்தும் வழி",
   "nav-open-research-description": "Ethereum-இன் முதன்மை வலிமைகளில் ஒன்று அதன் செயல்பாட்டுடன் கூடிய ஆராய்ச்சி சமூகம்",
   "nav-open-research-label": "திறந்த ஆராய்ச்சி",
@@ -321,6 +321,8 @@
   "nav-staking-solo-description": "முகப்பு வன்பொருளை இயக்கவும் மற்றும் Ethereum நெட்வொர்க்கின் பாதுகாப்பு மற்றும் பரவலாக்கத்தில் தனிப்பட்ட முறையில் சேர்க்கவும்",
   "nav-staking-solo-label": "சோலோ ஸ்டேக்கிங்",
   "nav-start-building-description": "புதிதாக நிறுவியுள்ளவர்களுக்கான பயனுள்ள தகவல்கள்",
+  "nav-start-with-crypto-title": "இங்கிருந்து தொடங்குங்கள்",
+  "nav-start-with-crypto-description": "Ethereum பயன்படுத்தும் உங்கள் முதல் படிகள்",
   "nav-translation-program-description": "Ethereum.org-ஐ அனைத்து மொழிகளிலும் மொழிபெயர்ப்பு செய்வதற்கான ஒரு கூட்டு முயற்சி",
   "nav-tutorials-description": "சமூக கல்விசார் பாடங்களின் தொகுப்பு",
   "nav-use-cases-description": "Ethereum பயன்பாட்டிற்கான வெவ்வேறு யோசனைகளை கண்டறிதல்",
@@ -428,5 +430,8 @@
   "withdrawals": "ஸ்டேக்கிங் பின்வாங்கல்",
   "wrapped-ether": "மூடப்பட்ட ஈதர்",
   "yes": "ஆம்",
-  "zero-knowledge-proofs": "ஜீரோ-நிரூபன சான்றுகள்"
+  "zero-knowledge-proofs": "ஜீரோ-நிரூபன சான்றுகள்",
+  "ethereum-vs-bitcoin": "எத்தேரியம் மற்றும் பிட்காயின்",
+  "nav-ethereum-vs-bitcoin-description": "எத்தேரியம் மற்றும் பிட்காயின் இடையிலான வேறுபாடுகளைப் புரிந்து கொள்ளுங்கள்"
+
 }

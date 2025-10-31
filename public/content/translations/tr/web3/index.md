@@ -65,12 +65,15 @@ Web3, dijital varlıklarınızın mülkiyet hakkını benzeri görülmemiş bir 
 
 Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mülkiyete olanak tanır. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>NFT’ler hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/nft/">
     NFT'ler hakkında daha fazlası
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Sansüre dayanıklılık {#censorship-resistance}
 
@@ -90,12 +93,15 @@ DAO'lar teknik olarak, bir kaynak havuzu (jetonlar) üzerinde merkeziyetsiz kara
 
 Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukların tümü, koda göre farklı merkeziyetsizlik ve otomasyon seviyelerine sahiptir. Şu anda DAO'ların neler olduğunu ve gelecekte nasıl gelişebileceklerini araştırıyoruz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>DAO’lar hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/dao/">
     DAO'lar hakkında daha fazlası
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Kimlik {#identity}
 
@@ -143,7 +149,7 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 - [Bir cüzdan edinin](/wallets/)
 - [Bir topluluk bulun](/community/)
-- [Web3 uygulamalarını keşfedin](/dapps/)
+- [Web3 uygulamalarını keşfedin](/apps/)
 - [Bir DAO'ya katılın](/dao/)
 - [Web3 üzerinde inşa edin](/developers/)
 
@@ -151,11 +157,11 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 
-- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Web 3'ü Anlamak](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae)–_Josh Stark_
 - [Web3 Neden Önemli?](https://future.a16z.com/why-web3-matters/)—_Chris Dixon_
 - [Merkeziyetsizlik Neden Önemli?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 Manzarası](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

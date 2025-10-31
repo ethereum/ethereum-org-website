@@ -42,7 +42,7 @@ published: 2021-03-31
 
 我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask，它是浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 关于[交易](/developers/docs/transactions/)的详细信息。
 
-您可以点击[此处](https://metamask.io/download.html)免费下载并创建一个 MetaMask 账户。 创建账户时，或者如果您已经有一个账户时，确保切换到右上方的“Ropsten 测试网络”（这样我们就不会用实际货币进行交易）。
+您可以点击[此处](https://metamask.io/download)免费下载并创建一个 MetaMask 账户。 创建账户时，或者如果您已经有一个账户时，确保切换到右上方的“Ropsten 测试网络”（这样我们就不会用实际货币进行交易）。
 
 ![metask ropsten 示例](./metamask-ropsten-example.png)
 
@@ -231,9 +231,13 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 为了将这些变量和代码连接，我们将在步骤 13 中调用 `hardhat.config.js` 文件中的这些变量。
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的私钥。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 步骤 12：安装 Ethers.js {#step-12-install-ethersjs}
 

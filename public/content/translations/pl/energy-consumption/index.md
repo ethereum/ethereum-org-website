@@ -61,14 +61,19 @@ Obecnie zużycie energii przez Ethereum jest bardzo niskie, a ponadto istnieje r
 
 Natywne platformy Web3 do finansowania dóbr publicznych, takie jak [Gitcoin](https://gitcoin.co), przeprowadzają rundy klimatyczne w celu stymulowania świadomego i ekologicznego budowania w warstwie aplikacji Ethereum. Dzięki rozwojowi tych inicjatyw (i innych, takich jak [DeSci](/desci/)) Ethereum staje się technologią o pozytywnym wpływie środowiskowym i społecznym.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Jeśli uważasz, że ta strona może być dokładniejsza, zgłoś problem lub PR. Statystyki na tej stronie są szacunkami opartymi na danych, które są dostępne publicznie — nie stanowią one oficjalnego oświadczenia ani obietnicy ze strony zespołu ethereum.org lub Fundacji Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Dalsza lektura {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Raport Białego Domu na temat blockchainów proof-of-work](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Raport Białego Domu na temat blockchainów proof-of-work](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisje Ethereum: wstępne oszacowanie](https://kylemcdonald.github.io/ethereum-emissions/) — _Kyle McDonald_
 - [Indeks zużycia energii Ethereum](https://digiconomist.net/ethereum-energy-consumption/) — _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_

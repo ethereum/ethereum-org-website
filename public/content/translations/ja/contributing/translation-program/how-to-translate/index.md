@@ -34,7 +34,7 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 ウェブサイトのコンテンツは、多数のドキュメントとコンテンツバケットに分割されています。 各ドキュメントの進捗状況は右側で確認できます。翻訳の進捗が100％未満の場合は、ぜひご協力ください!
 
-あなたの言語が表示されてない場合は、 [イシューを作成する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)か、[Discord](/discord/) で問い合わせてください。
+あなたの言語が表示されてない場合は、 [イシューを作成する](https://github.com/ethereum/ethereum-org-website/issues/new/choose)か、[Discord](https://discord.gg/ethereum-org) で問い合わせてください。
 
 ![Crowdinにある翻訳されたファイルと未翻訳のファイル](./crowdin-files.png)
 
@@ -76,13 +76,16 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 翻訳が完了(コンテンツバケットの全ファイルが100％と表示)したら、プロの翻訳サービスがコンテンツをレビューします。またレビューの際は、編集する場合もあります。 レビューが完了(レビューの進捗率が100％)したら、ウェブサイトに追加されます。
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   機械翻訳を使った翻訳はご遠慮ください。 翻訳されたものはすべて、ウェブサイトに追加される前に審査されます。 提案された翻訳が機械翻訳であることが判明した場合、その翻訳は却下され、機械翻訳を頻繁に使う貢献者はプロジェクトから排除されます。
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### お問い合わせ {#get-in-touch}
 
-何かご質問がある場合や、 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.orgのDiscordサーバー](/discord/)の#translationチャネルに投稿してください。
+何かご質問がある場合や、 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.orgのDiscordサーバー](https://discord.gg/ethereum-org)の#translationチャネルに投稿してください。
 
 または、translations@ethereum.orgまでご連絡ください
 

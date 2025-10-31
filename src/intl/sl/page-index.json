@@ -36,10 +36,10 @@
   "page-index-cta-dapps-label": "Preizkusi aplikacije",
   "page-index-cta-get-eth-description": "Valuta na Ethereum",
   "page-index-cta-get-eth-label": "Pridobite ETH",
-  "page-index-cta-networks-description": "Uživajte v minimalnih provizijah",
-  "page-index-cta-networks-label": "Izberite omrežje",
   "page-index-cta-wallet-description": "Ustvarite račune in upravljajte sredstva",
   "page-index-cta-wallet-label": "Izberite denarnico",
+  "page-index-cta-build-apps-description": "Ustvarite svojo prvo aplikacijo",
+  "page-index-cta-build-apps-label": "Začnite razvijati",
   "page-index-description": "Vodilna platforma za inovativne aplikacije in omrežja verige blokov",
   "page-index-developers-code-example-description-0": "Ustvarite banko, ki jo poganja logika, ki ste jo programirali sami",
   "page-index-developers-code-example-description-1": "Ustvarite žetone, ki jih lahko prenašate in uporabljate v različnih aplikacijah",
@@ -82,6 +82,7 @@
   "page-index-posts-header": "Nedavne objave",
   "page-index-posts-subtitle": "Najnovejše objave spletnih dnevnikov in novosti iz skupnosti",
   "page-index-title": "Dobrodošli v Ethereum",
+  "page-index-use-cases-tag": "Primeri uporabe",
   "page-index-values-description": "Bodite del digitalne revolucije",
   "page-index-values-header": "Internet se spreminja",
   "page-index-values-legacy": "Zapuščina",
@@ -115,5 +116,7 @@
   "page-index-values-open-legacy-label": "Zaprto za večino",
   "page-index-values-open-legacy-content-0": "Podjetja ščitijo svojo intelektualno lastnino in je ne delijo. Nihče izven podjetja ne more videti, kako stvari delujejo, se odpravljajo težave ali izvajajo izboljšave. Ljudje tako s težavo ustvarjajo nova orodja ali prilagoditve.",
   "page-index-values-open-ethereum-label": "Odprto za vse",
-  "page-index-values-open-ethereum-content-0": "Ethereum je javen za vse. Vsak lahko vidi, uporabi in izboljša kodo ter tako koristi vsem."
+  "page-index-values-open-ethereum-content-0": "Ethereum je javen za vse. Vsak lahko vidi, uporabi in izboljša kodo ter tako koristi vsem.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Pridružite se največjemu dogodku Ethereum v letu",
+  "page-index-devconnect-banner-get-tickets": "Pridobite vstopnice"
 }

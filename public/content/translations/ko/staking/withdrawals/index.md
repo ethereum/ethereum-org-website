@@ -43,9 +43,14 @@ summaryPoints:
 
 잔액에서 ETH를 인출할 수 있으려면 검증자 계정에 대한 출금 주소를 제공해야 합니다.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>각 검증자 계정은 단 한 번, 한 개의 출금 주소만 할당받을 수 있습니다.</strong> 주소를 선택하고 합의 계층에 제출하면 취소하거나 다시 변경할 수 없습니다. 제출하기 전에 제공된 주소의 소유권과 정확성을 다시 확인하십시오.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 니모닉/시드 문구가 오프라인에서 안전하게 유지되고 어떤 식으로든 손상되지 않았다고 가정할 때 이 정보를 제공하지 않아도 <strong>그동안 자금에 대한 위협은 없습니다</strong>. 단, 출금 자격 증명을 추가하지 않으면 출금 주소가 제공될 때까지 검증자 계정에 ETH가 묶여 있게 됩니다.
 
@@ -65,7 +70,7 @@ _모든_ 자금을 검증자 계정 잔액에서 이체하려면 출금 주소�
 
 상하이/카펠라 업그레이드는 이전에 스테이킹된 ETH를 일반 이더리움 계정으로 회수할 수 있게 했습니다. 이 작업을 통해 스테이킹 유동성을 마무리했으며, 이더리움은 지속 가능하고 확장 가능하며 탈중앙화 생태계를 구축하는 여정에 한 걸음 더 가까워졌습니다.
 
-- [이더리움 역사에 대해 자세히 알아보기](/history/)
+- [이더리움 역사에 대해 자세히 알아보기](/ethereum-forks/)
 - [이더리움 로드맵에 대해 자세히 알아보기](/roadmap/)
 
 ## 인출 지급은 어떻게 작동하나요? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Finematics 제공 이더리움 스테이킹 출금에 대한 다음 설명을 �
 
 검증자가 다음 블록을 제안할 예정이면 최대 16개의 적합한 출금으로 구성된 출금 대기열을 구축해야 합니다. 이 작업은 원래 검증자 인덱스 0부터 시작하여 프로토콜 규칙에 따라 이 계정에 대한 적합한 출금이 있는지 확인한 후 대기열에 추가합니다. 다음 블록을 제안하도록 설정된 검증자는 마지막 블록이 중단된 부분부터 무기한 순서대로 진행합니다.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 이는 아날로그 시계와 유사합니다. 시계의 시침은 시간을 가리키고, 한 방향으로 진행하며, 어떤 시간도 거르지 않고, 마지막 시간에 도달하면 다시 처음으로 돌아갑니다.<br/><br/>
 이제 1에서 12까지가 아니라 시계가 0에서 N 까지라고 상상해 보세요<em>(합의 계층에 등록된 검증자 계정의 총합. 2023년 1월 기준 500,000개 이상).</em><br/><br/>
 시계에 있는 시침이 다음 검증자를 가리키고 다음 검증자가 적합한 인출 여부를 확인합니다. 이는 0에서 시작하며, 어떤 계정도 건너뛰지 않고 계속 진행됩니다. 마지막 검증자에 도달하면 주기는 처음부터 다시 계속됩니다.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### 출금 계좌 확인하기 {#checking-an-account-for-withdrawals}
 
@@ -159,9 +169,9 @@ eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-<a href="/staking/pools/">스테이킹 풀</a>에 속해 있거나 스테이킹 토큰을 갖고 있는 경우, 스테이킹 출금 처리 방법에 대한 자세한 사항은 제공업체에 문의해야 합니다. 각 서비스마다 운영 방식은 다를 수 있습니다.
+[스테이킹 풀](/staking/pools/)에 속해 있거나 스테이킹 토큰을 갖고 있는 경우, 스테이킹 출금 처리 방법에 대한 자세한 사항은 제공업체에 문의해야 합니다. 각 서비스마다 운영 방식은 다를 수 있습니다.
 
-일반적으로 사용자는 기본 스테이킹 ETH를 자유롭게 회수하거나, 사용하는 스테이킹 제공 업체를 변경할 수 있습니다. 특정 풀이 너무 커지면 자금은 인출 또는 상환되거나 <a href="https://rated.network/">소규모 공급 업체</a>로 다시 스테이킹할 수 있습니다. 또는 ETH가 충분한 경우 <a href="/staking/solo/">홈에서 스테이킹</a>할 수도 있습니다.
+일반적으로 사용자는 기본 스테이킹 ETH를 자유롭게 회수하거나, 사용하는 스테이킹 제공 업체를 변경할 수 있습니다. 특정 풀이 너무 커지면 자금은 인출 또는 상환되거나 <a href="https://rated.network/">소규모 공급 업체</a>로 다시 스테이킹할 수 있습니다. 또는 ETH가 충분한 경우 [홈에서 스테이킹](/staking/solo/)할 수도 있습니다.
 
 </ExpandableCard>
 
@@ -218,7 +228,6 @@ eventName="read more">
 
 - [스테이킹 런치패드 출금](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: 작업으로 비콘 체인 푸시 출금](https://eips.ethereum.org/EIPS/eip-4895)
-- [이더리움 고양이 양치기 - 상하이](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: 포투즈 및 시아오 웨이 왕과 스테이킹한 ETH 출금(테스트)](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: 알렉스 스톡스와 함께 작업으로 비콘 체인 푸시 출금](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [검증자의 유효한 잔액 이해](https://www.attestant.io/posts/understanding-validator-effective-balance/)

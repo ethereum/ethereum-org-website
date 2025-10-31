@@ -83,6 +83,7 @@
   "page-index-posts-header": "Ostatnie wpisy",
   "page-index-posts-subtitle": "Najnowsze wpisy na blogu i aktualności dotyczące społeczności",
   "page-index-title": "Witamy w Ethereum",
+  "page-index-use-cases-tag": "Przypadki użycia",
   "page-index-values-description": "Bądź częścią cyfrowej rewolucji",
   "page-index-values-header": "Internet się zmienia",
   "page-index-values-legacy": "Dotychczasowy system",
@@ -112,10 +113,12 @@
   "page-index-values-censorship-legacy-label": "Podlegający cenzurze",
   "page-index-values-censorship-legacy-content-0": "Współczesne platformy i ich zasady często się zmieniają. Mogą na nie mieć wpływ interesariusze, kierownictwo firmy, a nawet opresyjne władze.",
   "page-index-values-censorship-ethereum-label": "Odporność na cenzurę",
-  "page-index-values-censorship-ethereum-content-0": "Odporność na ucisk jest kluczową zasadą Ethereum. Jego funkcjonalność powinna zawsze pozostać uczciwa i bezstronna.",
+  "page-index-values-censorship-ethereum-content-0": "Opór wobec opresji jest kluczową zasadą w Ethereum. Platforma powinna zawsze pozostawać uczciwa i bezstronna.",
   "page-index-values-censorship-ethereum-content-1": "Żadna władza, firma ani osoba fizyczna nie ma kontroli nad Ethereum.",
   "page-index-values-open-legacy-label": "Niedostępne dla większości",
   "page-index-values-open-legacy-content-0": "Firmy chronią swoją własność intelektualną i nie dzielą się nią. Nikt spoza firmy nie może widzieć procesów, rozwiązywać problemów ani wprowadzać ulepszeń. Ludziom trudno jest tworzyć nowe narzędzia lub je personalizować.",
   "page-index-values-open-ethereum-label": "Otwarte dla wszystkich",
-  "page-index-values-open-ethereum-content-0": "Platforma Ethereum jest publicznie dostępna dla wszystkich. Każdy może zobaczyć, wykorzystać i udoskonalić kod, tak aby uczynić go lepszym dla wszystkich."
+  "page-index-values-open-ethereum-content-0": "Platforma Ethereum jest publicznie dostępna dla wszystkich. Każdy może zobaczyć, wykorzystać i udoskonalić kod, tak aby uczynić go lepszym dla wszystkich.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Dołącz do największego wydarzenia Ethereum w roku",
+  "page-index-devconnect-banner-get-tickets": "Zdobądź bilety"
 }

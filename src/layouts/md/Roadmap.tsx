@@ -3,24 +3,14 @@ import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ContentHero, HubHero } from "@/components/Hero"
-import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
-import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 
 import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
-const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2" {...props} />
-)
-
 // Roadmap layout components
-export const roadmapComponents = {
-  CardGrid,
-  RoadmapActionCard,
-  RoadmapImageContent,
-}
+export const roadmapComponents = {}
 
 type RoadmapLayoutProps = ChildOnlyProp &
   Pick<
@@ -99,7 +89,11 @@ export const RoadmapLayout = ({
   const heroProps = {
     ...frontmatter,
     breadcrumbs: { slug, startDepth: 1 },
-    heroImg: frontmatter.image,
+    heroImg: {
+      src: frontmatter.image,
+      width: 1456,
+      height: 816,
+    },
   }
 
   return (
@@ -107,7 +101,6 @@ export const RoadmapLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
-      maxDepth={frontmatter.sidebarDepth}
       contributors={contributors}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={
@@ -115,7 +108,6 @@ export const RoadmapLayout = ({
           <HubHero
             heroImg={RoadmapHubHeroImage}
             header={frontmatter.title}
-            title=""
             description={frontmatter.description}
           />
         ) : (

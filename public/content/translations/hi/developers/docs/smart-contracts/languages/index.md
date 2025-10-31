@@ -113,7 +113,6 @@ contract Coin {
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
 - [Vyper के लिए स्मार्ट अनुबंध विकास ढांचे और उपकरण](/developers/docs/programming-languages/python/)
 - [VyperPunk - Vyper स्मार्ट अनुबंध को सुरक्षित और हैक करने के तरीके सीखें](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyper कमजोरी के उदाहरण](https://www.vyperexamples.com/reentrancy)
 - [विकास के लिए Vyper हब](https://github.com/zcor/vyper-dev)
 - [Vyper ने स्मार्ट अनुबंध उदाहरणों को सबसे ज्यादा हिट किया](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [बहुत बढ़िया Vyper क्यूरेटेड संसाधन](https://github.com/spadebuilders/awesome-vyper)
@@ -180,7 +179,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -227,7 +226,6 @@ def endAuction():
 
 - [Yul प्रलेखन](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ प्रलेखन](https://github.com/fuellabs/yulp)
-- [Yul+ खेल का मैदान](https://yulp.fuel.sh/)
 - [Yul+ परिचय पोस्ट](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### उदाहरण अनुबंध {#example-contract-2}
@@ -322,5 +320,5 @@ contract GuestBook:
 
 ## अग्रिम पठन {#further-reading}
 
-- [OpenZeppelin द्वारा Solidity अनुबंध लाइब्रेरी](https://docs.openzeppelin.com/contracts)
+- [OpenZeppelin द्वारा Solidity अनुबंध लाइब्रेरी](https://docs.openzeppelin.com/contracts/5.x/)
 - [उदाहरण के लिए Solidity](https://solidity-by-example.org)

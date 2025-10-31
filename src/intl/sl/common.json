@@ -227,7 +227,7 @@
   "nav-contribute-description": "Če potrebujete pomoč, jo lahko dobite tukaj",
   "nav-contribute-label": "Prispevanje k skupnosti ethereum.org",
   "nav-dao-description": "Skupnosti v lasti članov brez centralizirane oblasti",
-  "nav-dapps-description": "Raziščite bogat ekosistem aplikacij, ki uporabljajo Ethereum",
+  "nav-apps-description": "Raziščite bogat ekosistem aplikacij, ki uporabljajo Ethereum",
   "nav-defi-description": "Globalna, odprta alternativa tradicionalnemu finančnemu trgu",
   "nav-desci-description": "Globalna, odprta alternativa obstoječemu sistemu znanosti",
   "nav-desoc-description": "Platforme, ki temeljijo na verigah blokov, za družabno interakcijo in ustvarjanje vsebin",
@@ -276,7 +276,7 @@
   "nav-layer-2-description": "Cenejše in hitrejše transakcije v Ethereumovem omrežju",
   "nav-learn-by-coding-description": "Orodja, ki vam pomagajo pri eksperimentiranju z Ethereumom",
   "nav-local-env-description": "Izberite in nastavite sklad za razvoj v Ethereumu",
-  "nav-mainnet-description": "Poslovne aplikacije z verigami blokov lahko razvijate v javnem glavnem Ethereumovem omrežju",
+  "nav-enterprise-description": "Poslovne aplikacije z verigami blokov lahko razvijate v javnem glavnem Ethereumovem omrežju",
   "nav-nft-description": "Način predstavitve česar koli edinstvenega kot sredstva, ki temelji na Ethereumu",
   "nav-open-research-description": "Ena glavnih Ethereumovih prednosti je njegova aktivna raziskovalna skupnost",
   "nav-open-research-label": "Odprte raziskave",
@@ -322,6 +322,8 @@
   "nav-staking-solo-description": "zagnati domačo strojno opremo in osebno prispevati k varnosti in decentralizaciji omrežja Ethereum",
   "nav-staking-solo-label": "Samostojno zastavljanje",
   "nav-start-building-description": "Koristne informacije za novince",
+  "nav-start-with-crypto-title": "Začnite tukaj",
+  "nav-start-with-crypto-description": "Vaši prvi koraki z Ethereumom",
   "nav-translation-program-description": "Skupna prizadevanja za prevod spletnega mesta ethereum.org v vse jezike",
   "nav-tutorials-description": "Pregledan seznam vadnic skupnosti",
   "nav-use-cases-description": "Odkrijte različne zamisli za uporabo Ethereuma",
@@ -429,5 +431,8 @@
   "withdrawals": "Zastavljanje dvigov",
   "wrapped-ether": "Ovit eter",
   "yes": "Da",
-  "zero-knowledge-proofs": "Dokazi brez znanja"
+  "zero-knowledge-proofs": "Dokazi brez znanja",
+  "ethereum-vs-bitcoin": "Ethereum proti Bitcoinu",
+  "nav-ethereum-vs-bitcoin-description": "Razumevanje razlik med Ethereumom in Bitcoinom"
+
 }

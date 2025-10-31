@@ -1,8 +1,8 @@
 "use client"
 
 import { type ReactNode, useEffect, useState } from "react"
+import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
-import { MdInfoOutline } from "react-icons/md"
 import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
 
 import { cn } from "@/lib/utils/cn"
@@ -107,23 +107,26 @@ const RadialChart = ({
         <div className="text-sm">
           {label}
           {sourceName && sourceUrl && (
-            <Tooltip
-              content={
-                <>
-                  <p>
-                    {t("data-provided-by")}{" "}
-                    <Link href={sourceUrl}>{sourceName}</Link>
-                  </p>
-                  {lastUpdated && (
-                    <p className="mt-2">
-                      {t("last-updated")}: {lastUpdatedDisplay}
+            <>
+              &nbsp;
+              <Tooltip
+                content={
+                  <>
+                    <p>
+                      {t("data-provided-by")}{" "}
+                      <Link href={sourceUrl}>{sourceName}</Link>
                     </p>
-                  )}
-                </>
-              }
-            >
-              <MdInfoOutline className="mb-0.5 ms-2 inline align-text-bottom" />
-            </Tooltip>
+                    {lastUpdated && (
+                      <p className="mt-2">
+                        {t("last-updated")}: {lastUpdatedDisplay}
+                      </p>
+                    )}
+                  </>
+                }
+              >
+                <Info className="mb-0.5 inline size-[0.875em] align-text-bottom" />
+              </Tooltip>
+            </>
           )}
         </div>
       </div>
