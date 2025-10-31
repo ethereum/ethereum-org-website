@@ -243,12 +243,11 @@
   },
   {
     "title": "ETH Riyadh",
-    "startDate": "2025-12-3",
-    "endDate": "2025-12-4",
+    "startDate": "2026-02-01",
+    "endDate": "2026-02-28",
     "href": "https://ethriyadh.com/",
     "location": "Riyadh, KSA",
-    "description": "ETH Riyadh 2025 will reconvene as the Middle East’s premier Web3 summit, uniting global luminaries from the Ethereum and blockchain ecosystems in Riyadh.",
-    "imageUrl": "https://d1u25r3n8sm37o.cloudfront.net/wrold3ai/riyadh2025.jpg",
-    "hackathon": true
+    "description": "ETH Riyadh 2025 will reconvene as the Middle East’s premier Web3 summit, uniting global luminaries from the Ethereum and blockchain ecosystems in Riyadh. February 2026, details TBD.",
+    "imageUrl": "https://d1u25r3n8sm37o.cloudfront.net/wrold3ai/riyadh2025.jpg"
   }
 ]
