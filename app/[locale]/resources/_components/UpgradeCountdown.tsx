@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import humanizeDuration from "humanize-duration"
 import { useLocale } from "next-intl"
 
 import type { NetworkUpgradeDetails } from "@/lib/types"
@@ -17,9 +18,8 @@ const getLatestNetworkUpgradeDate = () => {
 
   const result = entries.reduce<[string | null, string | null]>(
     (acc, [network, details]) => {
-      // ignore pending or missing date entries
-      if (details.isPending || typeof details.dateTimeAsString !== "string")
-        return acc
+      // include pending entries as long as they have a valid date string
+      if (typeof details.dateTimeAsString !== "string") return acc
 
       const candidateTime = Date.parse(details.dateTimeAsString)
       if (isNaN(candidateTime)) return acc
@@ -54,9 +54,6 @@ const UpgradeCountdown = () => {
     const scalingUpgradeDate = new Date(upgradeDate || "2025-05-07T00:00:00Z")
     const scalingUpgradeDateTime = scalingUpgradeDate.getTime()
     const SECONDS = 1000
-    const MINUTES = SECONDS * 60
-    const HOURS = MINUTES * 60
-    const DAYS = HOURS * 24
 
     const countdown = () => {
       const now = Date.now()
@@ -65,13 +62,8 @@ const UpgradeCountdown = () => {
       // If the date has past, set the countdown to null
       if (timeLeft < 0) return setUpgradeCountdown(null)
 
-      const daysLeft = Math.floor(timeLeft / DAYS)
-      const hoursLeft = Math.floor((timeLeft % DAYS) / HOURS)
-      const minutesLeft = Math.floor((timeLeft % HOURS) / MINUTES)
-      const secondsLeft = Math.floor((timeLeft % MINUTES) / SECONDS)
-
       setUpgradeCountdown(
-        `${daysLeft}days :: ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`
+        humanizeDuration(timeLeft, { units: ["d", "h", "m", "s"], round: true })
       )
     }
     countdown()
