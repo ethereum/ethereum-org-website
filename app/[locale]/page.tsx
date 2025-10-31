@@ -87,6 +87,7 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
+import { areNamespacesTranslated } from "@/i18n/translationStatus"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
@@ -1016,12 +1017,14 @@ export async function generateMetadata({
 
   try {
     const t = await getTranslations({ locale, namespace: "page-index" })
-    return await getMetadata({
+    const isTranslated = await areNamespacesTranslated(locale, ["page-index"])
+    const base = await getMetadata({
       locale,
       slug: [""],
       title: t("page-index-meta-title"),
       description: t("page-index-meta-description"),
     })
+    return isTranslated ? base : { ...base, robots: { index: false } }
   } catch (error) {
     const t = await getTranslations({
       locale: DEFAULT_LOCALE,
