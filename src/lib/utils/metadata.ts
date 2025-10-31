@@ -42,6 +42,7 @@ export const getMetadata = async ({
   twitterDescription,
   image,
   author,
+  shouldIndex = true,
 }: {
   locale: string
   slug: string[]
@@ -50,6 +51,7 @@ export const getMetadata = async ({
   twitterDescription?: string
   image?: string
   author?: string
+  shouldIndex?: boolean
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
@@ -66,7 +68,7 @@ export const getMetadata = async ({
   /* Set fallback ogImage based on path */
   const ogImage = image || getOgImage(slug)
 
-  return {
+  const base: Metadata = {
     title,
     description,
     metadataBase: new URL(SITE_URL),
@@ -110,4 +112,6 @@ export const getMetadata = async ({
       "docsearch:description": description,
     },
   }
+
+  return shouldIndex ? base : { ...base, robots: { index: false } }
 }

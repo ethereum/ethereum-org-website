@@ -1018,13 +1018,13 @@ export async function generateMetadata({
   try {
     const t = await getTranslations({ locale, namespace: "page-index" })
     const isTranslated = await areNamespacesTranslated(locale, ["page-index"])
-    const base = await getMetadata({
+    return await getMetadata({
       locale,
       slug: [""],
       title: t("page-index-meta-title"),
       description: t("page-index-meta-description"),
+      shouldIndex: isTranslated,
     })
-    return isTranslated ? base : { ...base, robots: { index: false } }
   } catch (error) {
     const t = await getTranslations({
       locale: DEFAULT_LOCALE,

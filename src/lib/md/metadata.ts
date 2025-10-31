@@ -28,17 +28,14 @@ export const getMdMetadata = async ({
   const image = frontmatter.image
   const author = frontmatter.author
 
-  const baseMetadata = await getMetadata({
+  const metadata = await getMetadata({
     locale,
     slug: slugArray,
     title: pageTitle,
     description,
     image,
     author,
+    shouldIndex: isTranslated,
   })
-
-  // If the page is not translated, do not index the page
-  return isTranslated
-    ? baseMetadata
-    : { ...baseMetadata, robots: { index: false } }
+  return metadata
 }

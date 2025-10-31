@@ -54,11 +54,11 @@ export async function generateMetadata({
 
   const t = await getTranslations({ locale, namespace: "page-community" })
   const isTranslated = await areNamespacesTranslated(locale, ["page-community"])
-  const base = await getMetadata({
+  return await getMetadata({
     locale,
     slug: ["community"],
     title: t("page-community-meta-title"),
     description: t("page-community-meta-description"),
+    shouldIndex: isTranslated,
   })
-  return isTranslated ? base : { ...base, robots: { index: false } }
 }
