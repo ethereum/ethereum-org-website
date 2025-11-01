@@ -143,14 +143,14 @@ Transaktionen in <b>Ether</b> werden in ähnlicher Weise verwaltet. Aber statt z
 Versuchen Sie, einige Werte nach und von Wei zu konvertieren. [Beachten Sie](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations), dass es zwischen Ether und Wei noch andere Einheiten gibt. Eine der bekanntesten ist **Gwei**, da Transaktionsgebühren in dieser Einheit angegeben werden.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Das Web3-Modul enthält außerdem einen Datenformatkonvertierer (z. B. [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), Adresse (z. B., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), und Hashfunktionen (z. B., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Viele davon werden hier genauer erklärt. Um alle verfügbaren Funktionen und Eigenschaften anzuzeigen, können Sie die Autovervollständigung in IPython nutzen. Geben Sie dafür den folgenden Code ein: `Web3`. Anschließend drücken Sie bitte zweimal die Tab-Taste.
+Das Web3-Modul enthält außerdem einen Datenformatkonvertierer (z. B. [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), Adresse (z. B., [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), und Hashfunktionen (z. B., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Viele davon werden hier genauer erklärt. Um alle verfügbaren Funktionen und Eigenschaften anzuzeigen, können Sie die Autovervollständigung in IPython nutzen. Geben Sie dafür den folgenden Code ein: `Web3`. Anschließend drücken Sie bitte zweimal die Tab-Taste.
 
 ## Kommunikation mit der Blockchain {#talk-to-the-chain}
 

@@ -143,14 +143,14 @@ Pola yang sama digunakan ketika menangani transaksi dalam <b>ether</b>. Namun, a
 Cobalah untuk mengubah beberapa nilai ke dan dari wei. Perhatikan bahwa [ada nama untuk banyak denominasi](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) di antara ether dan wei. Salah satu yang lebih dikenal di antaranya adalah **gwei**, karena sering menjadi cara mewakili biaya transaksi.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Metode utilitas lainnya di modul Web3 memasukkan pengubah format data (misalnya, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), pembantu alamat (misalnya, [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), dan fungsi hash (misalnya, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Beberapa di antaranya akan dibahas nanti dalam seri. Untuk melihat semua metode dan properti yang tersedia, manfaatkan fitur pelengkap otomatis IPython dengan mengetik `Web3`. dan menekan tombol tab dua kali setelah tanda titik.
+Metode utilitas lainnya di modul Web3 memasukkan pengubah format data (misalnya, [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), pembantu alamat (misalnya, [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), dan fungsi hash (misalnya, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Beberapa di antaranya akan dibahas nanti dalam seri. Untuk melihat semua metode dan properti yang tersedia, manfaatkan fitur pelengkap otomatis IPython dengan mengetik `Web3`. dan menekan tombol tab dua kali setelah tanda titik.
 
 ## Berbicara dengan rantai {#talk-to-the-chain}
 

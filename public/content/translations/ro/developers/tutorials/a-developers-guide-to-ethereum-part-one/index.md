@@ -143,14 +143,14 @@ Un model similar este utilizat la gestionarea tranzacțiilor în <b>ether</b>. N
 Încercați să convertiți câteva valori în și din wei. Rețineți că [există și alte denumiri pentru numeroasele denominații](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) între ether și wei. Una din cele mai cunoscute dintre ele este **gwei**, deoarece este adesea modalitatea de reprezentare a taxelor de tranzacție.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Alte metode utilitare din modulul Web3 cuprind convertoare de formate de date (de exemplu, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), ajutoare de adrese (de exemplu, [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) și funcții hash (de exemplu, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Multe dintre acestea vor fi abordate mai târziu în această serie. Pentru a vizualiza toate metodele și proprietățile disponibile, utilizați autocompletarea IPython, tastând `Web3`. și apăsând tasta „Tab” de două ori după punct.
+Alte metode utilitare din modulul Web3 cuprind convertoare de formate de date (de exemplu, [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), ajutoare de adrese (de exemplu, [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) și funcții hash (de exemplu, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Multe dintre acestea vor fi abordate mai târziu în această serie. Pentru a vizualiza toate metodele și proprietățile disponibile, utilizați autocompletarea IPython, tastând `Web3`. și apăsând tasta „Tab” de două ori după punct.
 
 ## Comunicaţi cu lanțul {#talk-to-the-chain}
 

@@ -143,14 +143,14 @@ In [1]: from web3 import Web3
 试一下将一些数值转换为 wei 或反向转换。 请注意， [ETH 和 wei 之间还有其他面额](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)名称。 其中比较有名的是 **gwei**，因为它通常用于表示交易费用。
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)），地址助手，（例如 [`is address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)），以及哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。 其中许多内容将在后面的系列文章中介绍。 要查看所有可用的方法和属性，可以利用 IPython 的自动补全功能，输入 `Web3`。 然后在点号后面按两次 tab 键。
+Web3 模块上的其他实用方法包括数据格式转换器（例如 [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)），地址助手，（例如 [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)），以及哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。 其中许多内容将在后面的系列文章中介绍。 要查看所有可用的方法和属性，可以利用 IPython 的自动补全功能，输入 `Web3`。 然后在点号后面按两次 tab 键。
 
 ## 与链交互 {#talk-to-the-chain}
 
