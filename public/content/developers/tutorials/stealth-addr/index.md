@@ -29,11 +29,9 @@ Alice also gets the address from the shared secret, but because she knows the pr
 
 ### The mathematics (why stealth addresses work like this) {#how-math}
 
-Standard stealth addresses use [elliptic-curve cryptography (ECC)](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/#elliptic-curves-building-blocks-of-a-better-trapdoor) to get better performance with fewer key bits, while still keeping the same level of security. But we can ignore that and pretend we are using regular arithmetic (modulo a prime number). The reason we use ECC is that it acts so similarly to regular arithmetic.
+Standard stealth addresses use [elliptic-curve cryptography (ECC)](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/#elliptic-curves-building-blocks-of-a-better-trapdoor) to get better performance with fewer key bits, while still keeping the same level of security. But for the most part we can ignore that and pretend we are using regular arithmetic.
 
-There is a number everybody knows, *G*. You can multiply by *G*. But because of the nature of ECC (or modular arithmetic), it is practically impossible to divide by *G* (or any other number).
-
-The way public key cryptography generally works in Ethereum is that you can use a private key, *P<sub>priv</sub>*, to sign transactions that are then verified by a public key, *P<sub>pub</sub> = GP<sub>priv</sub>*. 
+There is a number everybody knows, *G*. You can multiply by *G*. But because of the nature of ECC, it is practically impossible to divide by *G*. The way public key cryptography generally works in Ethereum is that you can use a private key, *P<sub>priv</sub>*, to sign transactions that are then verified by a public key, *P<sub>pub</sub> = GP<sub>priv</sub>*. 
 
 Alice creates two private keys, *K<sub>priv</sub>* and *V<sub>priv</sub>*. *K<sub>priv</sub>* will be used to spend money out of the steal address, and *V<sub>priv</sub>* to view the addresses that belong to Alice. Alice then publishes the public keys: *K<sub>pub</sub> = GK<sub>priv</sub>* and *V<sub>pub</sub> = GV<sub>priv</sub>*
 
