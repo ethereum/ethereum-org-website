@@ -182,7 +182,7 @@ Acum sunteți gata pentru a naviga în lanț! Unii oameni spun că acest lucru n
 Să începem cu începutul, o verificare a sănătății:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
@@ -213,7 +213,7 @@ Out[7]: 1000000000000000000000000
 Asta înseamnă o mulțime de zerouri! Înainte de a vă bucura că aveți o tonă de bani, amintiți-vă de lecția dinainte despre denominaţiile monetare. Valorile etherului sunt reprezentate în cea mai mică denominaţie, wei. Convertiți-o în ether:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -248,7 +248,7 @@ Suntem blocați la blocul zero până când va exista o tranzacție de minat, a�
 In [10]: tx_hash = w3.eth.sendTransaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether')
+   'value': w3.to_wei(3, 'ether')
 })
 ```
 

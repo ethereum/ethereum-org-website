@@ -182,7 +182,7 @@ Jetzt können Sie mit der Blockchain kommunizieren. Wie das genau funktioniert? 
 Zuallererst eine Zuverlässigkeitsüberprüfung:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
@@ -213,7 +213,7 @@ Out[7]: 1000000000000000000000000
 Das sind viele Nullen. Bevor Sie vor Freude in die Luft springen, erinnern Sie sich bitte an unsere vorherige Lektion über die Schreibweise von Währungen. Ether wird in der kleinsten Einheit Wei angegeben. Rechnen Sie dies in Ether um:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -248,7 +248,7 @@ Wir verharren bei Block Null bis es eine Transaktion zum Minen gibt, also geben 
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether'),
+   'value': w3.to_wei(3, 'ether'),
    'gas': 21000
 })
 ```

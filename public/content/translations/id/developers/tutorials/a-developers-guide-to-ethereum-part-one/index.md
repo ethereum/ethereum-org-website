@@ -182,7 +182,7 @@ Sekarang Anda siap untuk berselancar di atas rantai! Itu bukanlah sesuatu yang d
 Pertama-tama, pemeriksaan kewarasan:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
@@ -213,7 +213,7 @@ Out[7]: 1000000000000000000000000
 Itu berangka nol sangat banyak! Sebelum Anda menuju ke bank palsunya sambil tertawa, coba ingat kembali pelajaran tentang denominasi mata uang dari bagian sebelumnya. Nilai ether diwakilkan dalam denominasi terkecil, wei. Ubah itu ke ether:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -248,7 +248,7 @@ Kita akan terhenti pada blok nol sampai ada transaksi yang akan ditambang, jadi 
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether'),
+   'value': w3.to_wei(3, 'ether'),
    'gas': 21000
 })
 ```
