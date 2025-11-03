@@ -35,7 +35,7 @@ export const getMdMetadata = async ({
     description,
     image,
     author,
-    shouldIndex: isTranslated,
+    noIndex: !isTranslated,
   })
   return metadata
 }

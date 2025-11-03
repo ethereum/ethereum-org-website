@@ -95,7 +95,6 @@ import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
-import { areNamespacesTranslated } from "@/lib/i18n/translationStatus"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(
@@ -1017,13 +1016,11 @@ export async function generateMetadata({
 
   try {
     const t = await getTranslations({ locale, namespace: "page-index" })
-    const isTranslated = await areNamespacesTranslated(locale, ["page-index"])
     return await getMetadata({
       locale,
       slug: [""],
       title: t("page-index-meta-title"),
       description: t("page-index-meta-description"),
-      shouldIndex: isTranslated,
     })
   } catch (error) {
     const t = await getTranslations({

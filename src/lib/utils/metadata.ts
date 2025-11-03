@@ -3,7 +3,12 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
-import { isLocaleValidISO639_1 } from "./translations"
+import { areNamespacesTranslated } from "../i18n/translationStatus"
+
+import {
+  getPrimaryNamespaceForPath,
+  isLocaleValidISO639_1,
+} from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -42,7 +47,7 @@ export const getMetadata = async ({
   twitterDescription,
   image,
   author,
-  shouldIndex = true,
+  noIndex = false,
 }: {
   locale: string
   slug: string[]
@@ -51,7 +56,7 @@ export const getMetadata = async ({
   twitterDescription?: string
   image?: string
   author?: string
-  shouldIndex?: boolean
+  noIndex?: boolean
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
@@ -113,5 +118,16 @@ export const getMetadata = async ({
     },
   }
 
-  return shouldIndex ? base : { ...base, robots: { index: false } }
+  if (noIndex) {
+    return { ...base, robots: { index: false } }
+  }
+
+  // Check if the page is translated by checking only the primary namespace
+  const primaryNamespace = getPrimaryNamespaceForPath(slugString)
+  const isTranslated = await areNamespacesTranslated(locale, [
+    primaryNamespace || "",
+  ])
+
+  // If the page is not translated, do not index the page
+  return isTranslated ? base : { ...base, robots: { index: false } }
 }

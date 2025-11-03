@@ -16,8 +16,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import CommunityPage from "./_components/community"
 import CommunityJsonLD from "./page-jsonld"
 
-import { areNamespacesTranslated } from "@/lib/i18n/translationStatus"
-
 export default async function Page({ params }: { params: PageParams }) {
   const { locale } = params
 
@@ -53,12 +51,10 @@ export async function generateMetadata({
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-community" })
-  const isTranslated = await areNamespacesTranslated(locale, ["page-community"])
   return await getMetadata({
     locale,
     slug: ["community"],
     title: t("page-community-meta-title"),
     description: t("page-community-meta-description"),
-    shouldIndex: isTranslated,
   })
 }
