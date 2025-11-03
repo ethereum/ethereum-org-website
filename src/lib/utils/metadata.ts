@@ -3,12 +3,9 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
-import { areNamespacesTranslated } from "../i18n/translationStatus"
+import { isPageTranslated } from "../i18n/pageTranslation"
 
-import {
-  getPrimaryNamespaceForPath,
-  isLocaleValidISO639_1,
-} from "./translations"
+import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -122,11 +119,7 @@ export const getMetadata = async ({
     return { ...base, robots: { index: false } }
   }
 
-  // Check if the page is translated by checking only the primary namespace
-  const primaryNamespace = getPrimaryNamespaceForPath(slugString)
-  const isTranslated = await areNamespacesTranslated(locale, [
-    primaryNamespace || "",
-  ])
+  const isTranslated = await isPageTranslated(locale, slugString)
 
   // If the page is not translated, do not index the page
   return isTranslated ? base : { ...base, robots: { index: false } }
