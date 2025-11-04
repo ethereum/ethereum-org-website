@@ -64,34 +64,6 @@ export const getRedisClient = async (): Promise<RedisClient | null> => {
     }
   }
 
-  // Fallback to regular Redis (ioredis)
-  const redisUrl = process.env.REDIS_URL
-
-  if (redisUrl) {
-    try {
-      const Redis = (await import("ioredis")).default
-      const client = new Redis(redisUrl)
-
-      redisClient = {
-        set: async (key: string, value: string, options?: { ex?: number }) => {
-          if (options?.ex) {
-            return await client.set(key, value, "EX", options.ex)
-          }
-          return await client.set(key, value)
-        },
-        get: async (key: string) => {
-          return await client.get(key)
-        },
-        del: async (key: string) => {
-          return await client.del(key)
-        },
-      }
-      return redisClient
-    } catch (error) {
-      console.error("Failed to initialize Redis:", error)
-    }
-  }
-
   if (!hasWarned) {
     console.warn(
       "Redis not configured. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN for Upstash, or REDIS_URL for regular Redis."

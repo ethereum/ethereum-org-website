@@ -1,75 +1,60 @@
-import { MetricReturnData } from "@/lib/types"
-
 import { ExternalDataMap } from "./fetchExternalData"
-import { getRedisData } from "./redisClient"
-import { getSupabaseData } from "./supabaseClient"
 
 /**
- * Retrieves external data from Redis.
+ * Retrieves external data using Next.js fetch with caching and revalidation.
+ * This function wraps the Redis/Supabase data access through an API route,
+ * allowing Next.js to handle caching automatically.
  *
- * @param keys Optional array of keys to retrieve. If not provided, attempts to retrieve all keys.
+ * @param keys Array of keys to retrieve.
+ * @param revalidateSeconds Optional revalidation time in seconds. Defaults to 3600 (1 hour).
  * @returns Promise that resolves to the external data map, or null if not found
  */
 export const getExternalData = async (
-  keys?: string[]
+  keys: string[],
+  revalidateSeconds?: number
 ): Promise<ExternalDataMap | null> => {
-  // If specific keys are provided, retrieve only those
-  if (keys && keys.length > 0) {
-    const results = await Promise.all(
-      keys.map(async (key) => {
-        const data = await getRedisData(key)
-        // const data = await getSupabaseData(key)
-        return { key, data }
-      })
-    )
+  try {
+    // Use relative URL - Next.js handles this correctly in server components
+    // The fetch API in Next.js server components automatically resolves relative URLs
+    const url = `/api/external-data?keys=${encodeURIComponent(keys.join(","))}&revalidate=${revalidateSeconds}`
 
-    const dataMap = results.reduce((acc, { key, data }) => {
-      if (data !== null && data !== undefined) {
-        acc[key] = data as MetricReturnData | Record<string, MetricReturnData>
+    const response = await fetch(url, {
+      next: {
+        revalidate: revalidateSeconds,
+      },
+    })
+
+    if (!response.ok) {
+      // Try to get error details from response
+      let errorDetails = ""
+      try {
+        const errorData = await response.json()
+        errorDetails = JSON.stringify(errorData, null, 2)
+        console.error(
+          `Failed to fetch external data: ${response.status} ${response.statusText}`
+        )
+        console.error("Error response:", errorDetails)
+      } catch {
+        try {
+          errorDetails = await response.text()
+          console.error(
+            `Failed to fetch external data: ${response.status} ${response.statusText}`
+          )
+          console.error("Error response (text):", errorDetails)
+        } catch {
+          console.error(
+            `Failed to fetch external data: ${response.status} ${response.statusText} (could not read error response)`
+          )
+        }
       }
-      return acc
-    }, {} as ExternalDataMap)
-
-    return Object.keys(dataMap).length > 0 ? dataMap : null
-  }
-
-  // This is more complex and typically requires knowing the keys ahead of time
-  // For now, return null and require keys to be specified
-  console.warn(
-    "Retrieving all external data requires specifying keys. Use the keys parameter."
-  )
-  return null
-}
-
-/**
- * Retrieves a single external data entry from Redis.
- *
- * @param key The key of the external data entry to retrieve
- * @returns Promise that resolves to the data, or null if not found
- */
-export const getExternalDataByKey = async <T = unknown>(
-  key: string
-): Promise<T | null> => {
-  const fromRedis = await getRedisData<T>(key)
-  if (fromRedis !== null) return fromRedis
-  return await getSupabaseData<T>(key)
-}
-
-// Test function - run with: npx tsx src/lib/utils/data/refactor/getExternalData.ts
-if (require.main === module) {
-  import("dotenv/config").then(async () => {
-    console.log("Testing getExternalData...")
-
-    try {
-      const data = await getExternalData(["ethPrice", "calendarEvents"]) //TODO: this should return list of endpoints to fetch from
-
-      if (data) {
-        console.log("\n✅ Successfully retrieved external data:")
-        console.log(data)
-      }
-    } catch (error) {
-      console.error("❌ Error testing getExternalData:", error)
-      process.exit(1)
+      return null
     }
-  })
+
+    const dataMap: ExternalDataMap = await response.json()
+
+    return dataMap
+  } catch (error) {
+    console.error("Error fetching external data:", error)
+    return null
+  }
 }
