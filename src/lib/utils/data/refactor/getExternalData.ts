@@ -6,12 +6,12 @@ import { ExternalDataMap } from "./fetchExternalData"
  * allowing Next.js to handle caching automatically.
  *
  * @param keys Array of keys to retrieve.
- * @param revalidateSeconds Optional revalidation time in seconds. Defaults to 3600 (1 hour).
+ * @param revalidateSeconds Revalidation time in seconds (e.g., 3600 for hourly, 86400 for daily).
  * @returns Promise that resolves to the external data map, or null if not found
  */
 export const getExternalData = async (
   keys: string[],
-  revalidateSeconds?: number
+  revalidateSeconds: number
 ): Promise<ExternalDataMap | null> => {
   try {
     // Use relative URL - Next.js handles this correctly in server components
@@ -52,7 +52,7 @@ export const getExternalData = async (
 
     const dataMap: ExternalDataMap = await response.json()
 
-    return dataMap
+    return Object.keys(dataMap).length > 0 ? dataMap : null
   } catch (error) {
     console.error("Error fetching external data:", error)
     return null
