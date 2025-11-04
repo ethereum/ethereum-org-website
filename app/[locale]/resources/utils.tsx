@@ -382,7 +382,9 @@ export const getResources = async ({
       title: t("page-resources-roadmap-title"),
       metric: (
         <div className="grid place-items-center py-8">
-          <div className="text-sm">Latest upgrade</div>
+          <div className="text-sm">
+            {t("page-resources-roadmap-metric-label")}
+          </div>
           <UpgradeCountdownFigure />
         </div>
       ),
@@ -400,13 +402,13 @@ export const getResources = async ({
       metric: (
         <div className="flex gap-4">
           <BigNumber className="items-center" value={totalBlobs}>
-            Total blobs
+            {t("page-resources-blobs-metric-total-label")}
           </BigNumber>
           <BigNumber
             className="items-center"
             value={"value" in avgBlobFeeUsd ? avgBlobFeeUsd.value : "—"}
           >
-            Average Blob Fee
+            {t("page-resources-blobs-metric-fee-label")}
           </BigNumber>
         </div>
       ),
