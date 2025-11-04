@@ -1,3 +1,5 @@
+import { getBaseUrl } from "@/lib/utils/url"
+
 import { ExternalDataMap } from "./fetchExternalData"
 
 /**
@@ -14,9 +16,9 @@ export const getExternalData = async (
   revalidateSeconds: number
 ): Promise<ExternalDataMap | null> => {
   try {
-    // Use relative URL - Next.js handles this correctly in server components
-    // The fetch API in Next.js server components automatically resolves relative URLs
-    const url = `/api/external-data?keys=${encodeURIComponent(keys.join(","))}&revalidate=${revalidateSeconds}`
+    // Use absolute URL - required for fetch in server components
+    const baseUrl = getBaseUrl()
+    const url = `${baseUrl}/api/external-data?keys=${encodeURIComponent(keys.join(","))}&revalidate=${revalidateSeconds}`
 
     const response = await fetch(url, {
       next: {

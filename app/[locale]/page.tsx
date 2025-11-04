@@ -63,6 +63,7 @@ import WindowBox from "@/components/WindowBox"
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -87,14 +88,10 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchApps } from "@/lib/api/fetchApps"
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
-import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(
@@ -141,11 +138,7 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["totalValueLocked", fetchTotalValueLocked],
     ["growThePieData", fetchGrowThePie],
-    ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
     ["appsData", fetchApps],
@@ -164,16 +157,54 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
-  const [
-    ethPrice,
-    { totalEthStaked },
-    totalValueLocked,
-    growThePieData,
-    communityEvents,
-    attestantPosts,
-    xmlBlogs,
-    appsData,
-  ] = await loadData()
+  const [growThePieData, attestantPosts, xmlBlogs, appsData] = await loadData()
+
+  // Fetch hourly data with 1-hour revalidation
+  const hourlyData = await getExternalData(
+    ["ethPrice", "beaconchainEpoch", "totalValueLocked"],
+    3600
+  )
+
+  // Extract hourly metrics from external data
+  const ethPrice = (hourlyData?.ethPrice as
+    | { value: number; timestamp: number }
+    | undefined) ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const totalValueLocked = (hourlyData?.totalValueLocked as
+    | { value: number; timestamp: number }
+    | undefined) ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const beaconchainEpoch = hourlyData?.beaconchainEpoch as
+    | {
+        totalEthStaked?: { value: number; timestamp: number }
+      }
+    | undefined
+  const totalEthStaked = beaconchainEpoch?.totalEthStaked ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
+
+  // Fetch daily data (calendar events) with 24-hour revalidation
+  const dailyData = await getExternalData(["calendarEvents"], 86400)
+  const calendarData = dailyData?.calendarEvents as
+    | {
+        pastEvents?: {
+          value: Array<{ date: string; title: string; calendarLink: string }>
+        }
+        upcomingEvents?: {
+          value: Array<{ date: string; title: string; calendarLink: string }>
+        }
+      }
+    | undefined
+
+  const communityEvents = {
+    upcomingEventData: calendarData?.upcomingEvents?.value ?? [],
+    pastEventData: calendarData?.pastEvents?.value ?? [],
+  }
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 

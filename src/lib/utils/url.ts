@@ -89,3 +89,17 @@ export const normalizeUrlForJsonLd = (
   const url = new URL(path, SITE_URL)
   return url.toString()
 }
+
+/**
+ * Get the base URL for API requests.
+ * In development, uses localhost with the port from environment or default 3000.
+ * Otherwise uses SITE_URL.
+ */
+export const getBaseUrl = (): string => {
+  // In development, use localhost
+  if (process.env.NODE_ENV === "development") {
+    const port = process.env.PORT || "3000"
+    return `http://localhost:${port}`
+  }
+  return SITE_URL
+}
