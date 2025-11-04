@@ -1,9 +1,14 @@
+import { getTranslations } from "next-intl/server"
+
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import communityHubs from "@/data/community-hubs"
 
-const CommunityHubsList = () => {
+const CommunityHubsList = async () => {
+  const t = await getTranslations({
+    namespace: "page-community",
+  })
   return (
     <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
       {communityHubs.map((hub) => (
@@ -16,7 +21,9 @@ const CommunityHubsList = () => {
           />
           <div className="p-2">
             <div className="flex flex-col gap-2 text-center">
-              <h3 className="text-xl font-bold md:text-2xl">Community Hub</h3>
+              <h3 className="text-xl font-bold md:text-2xl">
+                {t("page-community-community-hub-list-h3")}
+              </h3>
               <span className="text-sm opacity-60">{hub.location}</span>
             </div>
             <div className="flex flex-col gap-4">
@@ -30,7 +37,7 @@ const CommunityHubsList = () => {
                 hideArrow
                 className="flex-1"
               >
-                Co-work sign up
+                {t("page-community-community-hub-list-cta-label-1")}
               </ButtonLink>
               <ButtonLink
                 href={hub.meetupUrl}
@@ -38,7 +45,7 @@ const CommunityHubsList = () => {
                 hideArrow
                 className="flex-1"
               >
-                Meetup
+                {t("page-community-community-hub-list-cta-label-2")}
               </ButtonLink>
             </div>
           </div>
