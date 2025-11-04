@@ -1,16 +1,19 @@
 import { fetchExternalData } from "@/lib/utils/data/refactor/fetchExternalData"
 import { storeExternalData } from "@/lib/utils/data/refactor/storeExternalData"
 
+import { externalServicesHourly } from "@/data/external-services"
+
 import "dotenv/config"
 
 /**
  * CRON job function to fetch and store external data in Redis.
+ * This version runs hourly.
  * Optionally set EXTERNAL_DATA_TTL_SECONDS environment variable to set TTL for stored data.
  */
-export const externalDataStorageCRON = async () => {
+export const externalDataStorageCRONHourly = async () => {
   try {
-    console.log("Starting external data fetch and storage...")
-    const externalData = await fetchExternalData()
+    console.log("Starting external data fetch and storage (hourly)...")
+    const externalData = await fetchExternalData(externalServicesHourly)
 
     const success = await storeExternalData(externalData)
 
@@ -28,5 +31,5 @@ export const externalDataStorageCRON = async () => {
 
 // Run if executed directly
 if (require.main === module) {
-  externalDataStorageCRON()
+  externalDataStorageCRONHourly()
 }

@@ -31,8 +31,8 @@ jobs:
       - name: Install ts-node
         run: pnpm add -g ts-node
 
-      - name: Run external data storage CRON
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/externalDataStorageCRON.ts
+      - name: Run external data storage CRON (daily)
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/externalDataStorageCRONDaily.ts
         env:
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}

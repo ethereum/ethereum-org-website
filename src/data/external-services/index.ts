@@ -7,22 +7,15 @@ export interface ExternalService {
   name: string
   key: string
   attribution?: string // TODO: Add attribution to the service info
-  cadence?: string // TODO: Add cadence to the service info (check based on the timestamp if this needs to run)
   function: () => Promise<unknown>
 }
 
-//TODO: Daily external services and Hourly external services
-
-export const externalServices: ExternalService[] = [
+// Services that should be fetched hourly
+export const externalServicesHourly: ExternalService[] = [
   {
     name: "Beaconcha.in epoch",
     key: "beaconchainEpoch",
     function: fetchBeaconchainEpoch,
-  },
-  {
-    name: "Calendar Events - Google Calendar",
-    key: "calendarEvents",
-    function: fetchCalendarEvents,
   },
   {
     name: "ETH Price - CoinGecko",
@@ -33,5 +26,14 @@ export const externalServices: ExternalService[] = [
     name: "TVL - Defi Llama",
     key: "totalValueLocked",
     function: fetchTotalValueLocked,
+  },
+]
+
+// Services that should be fetched daily
+export const externalServicesDaily: ExternalService[] = [
+  {
+    name: "Calendar Events - Google Calendar",
+    key: "calendarEvents",
+    function: fetchCalendarEvents,
   },
 ]
