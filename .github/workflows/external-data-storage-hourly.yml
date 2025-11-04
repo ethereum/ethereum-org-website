@@ -1,0 +1,42 @@
+name: External Data Storage (Hourly)
+
+on:
+  schedule:
+    # Runs every hour at minute 0 (e.g., 00:00, 01:00, 02:00, etc.)
+    - cron: "0 * * * *"
+  workflow_dispatch: # Can be dispatched manually
+
+jobs:
+  store-external-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install ts-node
+        run: pnpm add -g ts-node
+
+      - name: Run external data storage CRON
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/externalDataStorageCRON.ts
+        env:
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          EXTERNAL_DATA_TTL_SECONDS: ${{ secrets.EXTERNAL_DATA_TTL_SECONDS }}
+
