@@ -7,7 +7,7 @@ hideEditButton: true
 
 # Discover community events and community hubs {#discover-community-events-and-community-hubs}
 
-Ethereum comes alive through the people - from small meetups and community gatherings to major conferences, hackathons, and permanent Community Hubs that anchor local ecosystems around the world.
+Ethereum comes alive through the people—from small meetups and community gatherings to major conferences, hackathons, and permanent Community Hubs that anchor local ecosystems around the world.
 
 Every co-working day, meetup, or event is a chance to learn something new, meet like-minded people, share ideas, and collaborate on real projects that shape our future. Whether you’re a developer, researcher, designer, or just curious, there’s always a place for you to connect, contribute, and grow.
 
@@ -19,7 +19,7 @@ Want to discover Ethereum events or community hubs in your area? Take a look at 
 
 Ethereum Community Hubs are permanent, inclusive spaces that function as co-working areas, host regular events, and serve as innovation and knowledge centers that spark collaboration and build strong, interconnected local ecosystems.
 
-Whether you're a local, digital nomad, or temporary resident, you can join co-working sessions, workshops, and meetups, discover opportunities, or even host your own event. Each community hub has its own registration process - you can find more information and links below.
+Whether you're a local, digital nomad, or temporary resident, you can join co-working sessions, workshops, and meetups, discover opportunities, or even host your own event. Each community hub has its own registration process—you can find more information and links below.
 
 <CommunityHubsList/>
 
