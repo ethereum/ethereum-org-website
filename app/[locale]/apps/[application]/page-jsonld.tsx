@@ -2,7 +2,7 @@ import { AppData, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { normalizeUrlForJsonLd, slugify } from "@/lib/utils/url"
 
 export default async function AppsAppJsonLD({
   locale,
@@ -13,7 +13,7 @@ export default async function AppsAppJsonLD({
   app: AppData
   contributors: FileContributor[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/apps/${app.name}`)
+  const url = normalizeUrlForJsonLd(locale, `/apps/${slugify(app.name)}`)
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
