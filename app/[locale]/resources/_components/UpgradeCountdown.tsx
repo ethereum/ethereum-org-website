@@ -62,9 +62,21 @@ const UpgradeCountdown = () => {
       // If the date has past, set the countdown to null
       if (timeLeft < 0) return setUpgradeCountdown(null)
 
-      setUpgradeCountdown(
-        humanizeDuration(timeLeft, { units: ["d", "h", "m", "s"], round: true })
-      )
+      const baseOptions = {
+        units: ["d", "h", "m", "s"],
+        round: true,
+      }
+
+      try {
+        setUpgradeCountdown(
+          humanizeDuration(timeLeft, {
+            ...baseOptions,
+            language: locale,
+          })
+        )
+      } catch {
+        setUpgradeCountdown(humanizeDuration(timeLeft, baseOptions))
+      }
     }
     countdown()
 
