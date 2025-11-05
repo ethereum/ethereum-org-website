@@ -1,4 +1,4 @@
-import { MetricReturnData } from "../types"
+import { ExternalDataReturnData } from "../types"
 
 export type LlamaStablecoinchainsResponseItem = {
   gecko_id: string | null
@@ -7,7 +7,7 @@ export type LlamaStablecoinchainsResponseItem = {
   name: string
 }
 
-export async function fetchEthereumStablecoinsMcap(): Promise<MetricReturnData> {
+export async function fetchEthereumStablecoinsMcap(): Promise<ExternalDataReturnData> {
   const url = "https://stablecoins.llama.fi/stablecoinchains"
 
   try {

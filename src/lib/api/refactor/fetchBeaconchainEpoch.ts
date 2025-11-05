@@ -1,7 +1,7 @@
-import type { EpochResponse, MetricReturnData } from "@/lib/types"
+import type { EpochResponse, ExternalDataReturnData } from "@/lib/types"
 
 export const fetchBeaconchainEpoch = async (): Promise<
-  Record<string, MetricReturnData>
+  Record<string, ExternalDataReturnData>
 > => {
   const response = await fetch("https://beaconcha.in/api/v1/epoch/latest")
   if (!response.ok) {

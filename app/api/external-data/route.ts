@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
-import { MetricReturnData } from "@/lib/types"
+import { ExternalDataReturnData } from "@/lib/types"
 
 import { ExternalDataMap } from "@/lib/utils/data/refactor/fetchExternalData"
 import { getRedisData } from "@/lib/utils/data/refactor/redisClient"
@@ -56,7 +56,9 @@ export async function GET(request: NextRequest) {
     // Build the data map
     const dataMap = results.reduce((acc, { key, data }) => {
       if (data !== null && data !== undefined) {
-        acc[key] = data as MetricReturnData | Record<string, MetricReturnData>
+        acc[key] = data as
+          | ExternalDataReturnData
+          | Record<string, ExternalDataReturnData>
       }
       return acc
     }, {} as ExternalDataMap)

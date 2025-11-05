@@ -534,7 +534,7 @@ export type EpochResponse = Data<
 
 export type BeaconchainEpochData = Record<
   "totalEthStaked" | "validatorscount",
-  MetricReturnData
+  ExternalDataReturnData
 >
 
 export type StakingStatsData = {
@@ -570,13 +570,16 @@ export type DefiLlamaTVLResponse = {
   totalLiquidityUSD: number
 }[]
 
-export type MetricReturnData = ValueOrError<number | CommunityEvent[]>
+export type ExternalDataReturnData = ValueOrError<number | CommunityEvent[]>
 
 export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
-export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
+export type GrowThePieData = Record<
+  GrowThePieMetricKey,
+  ExternalDataReturnData
+> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
 }
@@ -589,7 +592,7 @@ export type HomepageActivityMetric =
 
 export type AllHomepageActivityData = Record<
   HomepageActivityMetric,
-  MetricReturnData
+  ExternalDataReturnData
 >
 
 export type EnterpriseActivityMetric =
@@ -601,7 +604,7 @@ export type EnterpriseActivityMetric =
 
 export type AllEnterpriseActivityData = Record<
   EnterpriseActivityMetric,
-  MetricReturnData
+  ExternalDataReturnData
 >
 
 export type StatsBoxMetric = {

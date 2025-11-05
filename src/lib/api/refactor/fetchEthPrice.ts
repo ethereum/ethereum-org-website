@@ -1,6 +1,6 @@
-import { MetricReturnData } from "@/lib/types"
+import { ExternalDataReturnData } from "@/lib/types"
 
-export const fetchEthPrice = async (): Promise<MetricReturnData> => {
+export const fetchEthPrice = async (): Promise<ExternalDataReturnData> => {
   const data: { ethereum: { usd: number } } = await fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
   ).then((res) => res.json())

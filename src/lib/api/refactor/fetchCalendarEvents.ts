@@ -1,8 +1,8 @@
-import type { MetricReturnData } from "@/lib/types"
+import type { ExternalDataReturnData } from "@/lib/types"
 import type { CommunityEvent, ReqCommunityEvent } from "@/lib/interfaces"
 
 export const fetchCalendarEvents = async (): Promise<
-  Record<string, MetricReturnData>
+  Record<string, ExternalDataReturnData>
 > => {
   const apiKey = process.env.GOOGLE_API_KEY
   const calendarId = process.env.GOOGLE_CALENDAR_ID

@@ -1,10 +1,10 @@
-import { MetricReturnData } from "@/lib/types"
+import { ExternalDataReturnData } from "@/lib/types"
 
 import { ExternalService } from "@/data/external-services"
 
 export type ExternalDataMap = Record<
   string,
-  MetricReturnData | Record<string, MetricReturnData>
+  ExternalDataReturnData | Record<string, ExternalDataReturnData>
 >
 
 export const fetchExternalData = async (
@@ -14,13 +14,13 @@ export const fetchExternalData = async (
     services.map(async (service) => {
       try {
         const data = await service.function()
-        return { key: service.key, data: data as MetricReturnData }
+        return { key: service.key, data: data as ExternalDataReturnData }
       } catch (error) {
         return {
           key: service.key,
           data: {
             error: error instanceof Error ? error.message : String(error),
-          } as MetricReturnData,
+          } as ExternalDataReturnData,
         }
       }
     })
