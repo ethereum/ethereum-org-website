@@ -122,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="誤解：「執行節點需要質押 32 以太幣。」"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 以太坊的節點有兩種類型：可以提出區塊；無法提出區塊。
 

@@ -115,7 +115,7 @@ De asemenea, Fuziunea a creat posibilitatea pentru și mai multe modernizări de
 
 <ExpandableCard
 title="Neînțelegere: &quot;Rularea unui nod necesită mizarea a 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 Există două tipuri de noduri Ethereum: noduri care pot propune blocuri și noduri care nu pot propune blocuri.
 
 Nodurile care propun blocuri sunt doar un număr mic din numărul total de noduri pe Ethereum. Această categorie include noduri de minare în dovada muncii (PoW) și noduri de validator în dovada mizei (PoS). Această categorie necesită angajarea de resurse economice (precum puterea hashului pentru GPU în dovada muncii sau ETH mizat în dovada mizei) în schimbul posibilității de a propune ocazional următorul bloc și de a câștiga recompense acordate de protocol.

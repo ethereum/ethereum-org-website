@@ -1,6 +1,6 @@
 import type { NetworkUpgradeData } from "@/lib/types"
 
-const NetworkUpgradeSummaryData: NetworkUpgradeData = {
+const networkUpgradeSummaryData: NetworkUpgradeData = {
   pectra: {
     dateTimeAsString: "2025-05-07T10:05:11.000Z",
     ethPriceInUSD: 2222,
@@ -228,4 +228,4 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
   },
 }
 
-export default NetworkUpgradeSummaryData
+export default networkUpgradeSummaryData

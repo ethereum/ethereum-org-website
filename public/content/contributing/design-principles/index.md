@@ -14,7 +14,7 @@ You should read these before you [contribute to ethereum.org](/contributing/).
 
 ## What are design principles? {#ways-to-contribute}
 
-Don't worry, they're pretty simple! **Design principles** are a set of guidelines we refer to when designing (i.e. creating, maintaining or updating) something.
+Don't worry, they're pretty simple! **Design principles** are a set of guidelines we refer to when designing (i.e., creating, maintaining or updating) something.
 
 In the context of ethereum.org these design principles are the foundation for what we want the website to represent and project to the world. They're both aspirational **and** functional. It's not just how the website _looks_, but also how it _works_ and even how it makes someone _feel._ Everything, from the colors to the page layouts to how we talk about Ethereum on the website should be informed by these principles.
 
@@ -22,9 +22,9 @@ In the context of ethereum.org these design principles are the foundation for wh
 
 Let's look at an example. One of the principles is “Credible”, which means that we want visitors to the site to _feel_ and _know_ that the site is trustworthy - just like the wider Ethereum ecosystem. Within that principle, we have 3 functional “sub-principles” that we believe are actionable steps we can take to make the site credible:
 
-- _“Fresh”_ i.e. keep the content up-to-date.
-- _“Social Proof”_ i.e. show the size, diversity and activity of the ecosystem (you know: Ethereum upgrade progress, DeFi, gaming, all the hackathons, etc.)
-- _“Consistent”_ i.e. consistency in the design of the site and the tone and accuracy of the writing.
+- _“Fresh”_ i.e., keep the content up-to-date.
+- _“Social Proof”_ i.e., show the size, diversity and activity of the ecosystem (you know: Ethereum upgrade progress, DeFi, gaming, all the hackathons, etc.)
+- _“Consistent”_ i.e., consistency in the design of the site and the tone and accuracy of the writing.
 
 So when we're making design decisions, or copywriting decisions, we can then reference the “Credible” principle and ask:
 

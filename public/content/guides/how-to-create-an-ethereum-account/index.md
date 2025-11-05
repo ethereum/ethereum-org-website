@@ -61,7 +61,7 @@ No. The wallet is a management tool that helps you to manage accounts. A single 
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped Bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
+No, you cannot. Bitcoin and ether exist on two separate networks (i.e., different blockchains), each with their own bookkeeping and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped Bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 

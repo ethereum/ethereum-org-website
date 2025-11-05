@@ -105,7 +105,7 @@ A high-profile version of this occurred in July 2020, when the Twitter accounts 
 
 The celebrity giveaway is another common form the giveaway scam takes. The scammers will take a recorded video interview or conference talk given by a celebrity and livestream it on YouTube - making it appear as though the celebrity was giving a live video interview endorsing a cryptocurrency giveaway.
 
-Vitalik Buterin is used most often in this scam, but many other prominent people involved in crypto are also used (e.g. Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
+Vitalik Buterin is used most often in this scam, but many other prominent people involved in crypto are also used (e.g., Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
 
 **Giveaways are always scams. If you send your funds to these accounts, you will lose them forever.**
 
@@ -140,7 +140,7 @@ In the run-up to [The Merge](/roadmap/merge/), scammers took advantage of the co
 
 Scammers may appear as "support", telling you that if you deposit your ETH, you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
-_Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
+_Note: There are derivative tokens/tickers that may represent staked ETH (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
 
 ### Phishing scams {#phishing-scams}
 

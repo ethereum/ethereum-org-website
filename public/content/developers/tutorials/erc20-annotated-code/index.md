@@ -691,7 +691,7 @@ These are the four functions that do the actual work: `_transfer`, `_mint`, `_bu
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
      * This is internal function is equivalent to {transfer}, and can be used to
-     * e.g. implement automatic token fees, slashing mechanisms, etc.
+     * e.g., implement automatic token fees, slashing mechanisms, etc.
      *
      * Emits a {Transfer} event.
      *
@@ -834,7 +834,7 @@ created.
      * @dev Sets `amount` as the allowance of `spender` over the `owner` s tokens.
      *
      * This internal function is equivalent to `approve`, and can be used to
-     * e.g. set automatic allowances for certain subsystems, etc.
+     * e.g., set automatic allowances for certain subsystems, etc.
      *
      * Emits an {Approval} event.
      *

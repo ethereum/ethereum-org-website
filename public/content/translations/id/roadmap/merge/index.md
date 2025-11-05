@@ -122,7 +122,7 @@ Penggabungan juga membuka jalan untuk peningkatan skalabilitas lebih lanjut yang
 
 <ExpandableCard
 title="Miskonsepsi: &quot;Menjalankan simpul membutuhkan penaruhan 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Ada dua jenis simpul Ethereum: simpul yang dapat mengusulkan blok dan simpul yang tidak.
 

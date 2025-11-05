@@ -200,7 +200,7 @@
   "page-staking-faq-2-answer": "Pesin wey dey validate get pawa to propose and attest to blocks for di netwok. To privent dishonest bihavior, users suppose get dem funds at stake. Dis dey allow di protokol to penalize malisjios aktors. Staking na means to make dey honest, as yor akshons go get finashia konsikwensis.",
   "page-staking-faq-3-question": "I fit buy 'Eth2'?",
   "page-staking-faq-3-answer-p1": "'Eth2' token native to di protokol nor dey, as di native token ether (ETH) nor shanj wen Ethereum don switch for proof-of-stake.",
-  "page-staking-faq-3-answer-p2": "Dem derivative tokens/tickers wey fit reprisent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase). Learn more abou <a href=\"/staking/pools/\">staking pools</a>",
+  "page-staking-faq-3-answer-p2": "Dem derivative tokens/tickers wey fit reprisent staked ETH (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase). Learn more abou <a href=\"/staking/pools/\">staking pools</a>",
   "page-staking-faq-4-question": "Staking don dey live already?",
   "page-staking-faq-4-answer-p1": "Na so. Staking don dey live sinse December 1, 2020",
   "page-staking-faq-4-answer-p2": "Dis mean sey staking dey live nau for users to deposit dem ETH, run one validator klient, kon start to dey earn riwods.",

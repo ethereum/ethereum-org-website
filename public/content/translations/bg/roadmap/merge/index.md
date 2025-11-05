@@ -119,7 +119,7 @@ id="developers">
 
 <ExpandableCard
 title="Заблуда: „Управлението на възел изисква залагане на 32 ETH.“"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 Има два вида възли на Етереум: възли, които могат да предлагат блокове, и които не го правят.
 
 Възлите, които предлагат блокове, са само малък брой от всички възли в Етереум. Тази категория включва възли за добиване при доказателство-за-работа (PoW) и валидаторски възли при доказателство-за-залог (PoS). Тази категория изисква ангажиране с икономически ресурси (GPU хеш мощност при доказателство-за-работа или заложени ETH при доказателство-за-залог) в замяна на възможността периодично да предлагате следващия блок и да печелите награди за протоколи.

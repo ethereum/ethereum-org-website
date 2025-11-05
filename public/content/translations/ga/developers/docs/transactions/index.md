@@ -164,7 +164,7 @@ Tá gás riachtanach le haghaidh aon idirbheart a bhaineann le conradh cliste.
 
 Féadfaidh feidhmeanna ar a dtugtar [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) nó <a bheith i gconarthaí cliste freisin a href="https://docs.soliditylang.org/en/latest/contracts.html#pure-functions">`pure`</a> feidhmeanna, nach n-athraíonn staid an chonartha. Mar sin, ní bheidh gá le haon ghás chun na feidhmeanna seo a ghlaoch ó EOA. Is é an glao RPC bunúsach don chás seo ná [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
-Murab ionann agus nuair a dhéantar rochtain orthu trí úsáid a bhaint as `eth_call`, is gnách go dtugtar go hinmheánach ar na feidhmeanna `view` nó `pure` seo (i.e. ón gconradh féin nó ó chonradh eile) a dhéanann costas gáis.
+Murab ionann agus nuair a dhéantar rochtain orthu trí úsáid a bhaint as `eth_call`, is gnách go dtugtar go hinmheánach ar na feidhmeanna `view` nó `pure` seo (i.e., ón gconradh féin nó ó chonradh eile) a dhéanann costas gáis.
 
 ## Saolré idirbhirt {#transaction-lifecycle}
 

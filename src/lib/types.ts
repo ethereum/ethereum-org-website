@@ -862,7 +862,7 @@ export type FeedbackWidgetContextType = {
 }
 
 // Historical upgrades
-type NetworkUpgradeDetails = {
+export type NetworkUpgradeDetails = {
   blockNumber?: number
   epochNumber?: number
   slotNumber?: number
@@ -1122,6 +1122,8 @@ export type App = {
   lastUpdated: string
   ready: string
   devconnect: string
+  appOfTheWeekStartDate: Date | null
+  appOfTheWeekEndDate: Date | null
 }
 
 export type DefiApp = App & {

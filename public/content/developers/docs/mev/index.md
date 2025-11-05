@@ -26,7 +26,7 @@ With that, for some highly competitive MEV opportunities, such as [DEX arbitrage
 
 This dynamic has made being good at "gas golfing" — programming transactions so that they use the least amount of gas — a competitive advantage, because it allows searchers to set a higher gas price while keeping their total gas fees constant (since gas fees = gas price \* gas used).
 
-A few well-known gas golf techniques include: using addresses that start with a long string of zeroes (e.g. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://eth.blockscout.com/address/0x0000000000C521824EaFf97Eac7B73B084ef9306)) since they take less space (and hence gas) to store; and leaving small [ERC-20](/developers/docs/standards/tokens/erc-20/) token balances in contracts, since it costs more gas to initialize a storage slot (the case if the balance is 0) than to update a storage slot. Finding more techniques to reduce gas usage is an active area of research among searchers.
+A few well-known gas golf techniques include: using addresses that start with a long string of zeroes (e.g., [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://eth.blockscout.com/address/0x0000000000C521824EaFf97Eac7B73B084ef9306)) since they take less space (and hence gas) to store; and leaving small [ERC-20](/developers/docs/standards/tokens/erc-20/) token balances in contracts, since it costs more gas to initialize a storage slot (the case if the balance is 0) than to update a storage slot. Finding more techniques to reduce gas usage is an active area of research among searchers.
 
 ### Generalized frontrunners {#mev-extraction-generalized-frontrunners}
 
@@ -52,9 +52,9 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to lend out to other users.
+Lending protocols like Maker and Aave require users to deposit some collateral (e.g., ETH). This deposited collateral is then used to lend out to other users.
 
-Users can then borrow assets and tokens from others depending on what they need (e.g. you might borrow MKR if you want to vote in a MakerDAO governance proposal) up to a certain percentage of their deposited collateral. For example, if the borrowing amount is a maximum of 30%, a user who deposits 100 DAI into the protocol can borrow up to 30 DAI worth of another asset. The protocol determines the exact borrowing power percentage.
+Users can then borrow assets and tokens from others depending on what they need (e.g., you might borrow MKR if you want to vote in a MakerDAO governance proposal) up to a certain percentage of their deposited collateral. For example, if the borrowing amount is a maximum of 30%, a user who deposits 100 DAI into the protocol can borrow up to 30 DAI worth of another asset. The protocol determines the exact borrowing power percentage.
 
 As the value of a borrower's collateral fluctuates, so too does their borrowing power. If, due to market fluctuations, the value of borrowed assets exceeds say, 30% of the value of their collateral (again, the exact percentage is determined by the protocol), the protocol typically allows anyone to liquidate the collateral, instantly paying off the lenders (this is similar to how [margin calls](https://www.investopedia.com/terms/m/margincall.asp) work in traditional finance). If liquidated, the borrower usually has to pay a hefty liquidation fee, some of which goes to the liquidator — which is where the MEV opportunity comes in.
 

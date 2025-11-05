@@ -1305,7 +1305,7 @@
     },
     {
       "login": "wslyvh",
-      "name": "Wesley van Heije",
+      "name": "Wesley",
       "avatar_url": "https://avatars2.githubusercontent.com/u/25974464?v=4",
       "profile": "https://twitter.com/wslyvh",
       "contributions": [
@@ -13468,7 +13468,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/178667149?v=4",
       "profile": "https://github.com/pete-vielhaber",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "content"
       ]
     },
     {
@@ -13615,7 +13616,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/225852520?v=4",
       "profile": "https://github.com/MOSHKA-GOT",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "code"
       ]
     },
     {
@@ -13769,6 +13771,69 @@
       "profile": "https://github.com/trikunai",
       "contributions": [
         "tool"
+      ]
+    },
+    {
+      "login": "baiwfg2",
+      "name": "Lewis Chan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5157680?v=4",
+      "profile": "https://github.com/baiwfg2",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ocandocrypto",
+      "name": "Angela O",
+      "avatar_url": "https://avatars.githubusercontent.com/u/124130440?v=4",
+      "profile": "https://github.com/ocandocrypto",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "HSuke",
+      "name": "HSuke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3211079?v=4",
+      "profile": "https://github.com/HSuke",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "GarmashAlex",
+      "name": "GarmashAlex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193699300?v=4",
+      "profile": "https://github.com/GarmashAlex",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "zeeshan8281",
+      "name": "Mohammad Zeeshan Jawed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89350024?v=4",
+      "profile": "http://zeeshan8281.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "GaetanFrejoux",
+      "name": "Slyrik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47180075?v=4",
+      "profile": "https://github.com/GaetanFrejoux",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "eagerapps",
+      "name": "Mohammed Israil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26349077?v=4",
+      "profile": "https://github.com/eagerapps",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],

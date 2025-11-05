@@ -122,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="誤解: &quot;ノードの運用には、32 ETHのステーキングが必要&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 イーサリアムのノードには、ブロックを提案できるノードとできないノードがあります。
 

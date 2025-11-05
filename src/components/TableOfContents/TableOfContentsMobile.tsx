@@ -52,7 +52,7 @@ const Mobile = ({ items, maxDepth, variant }: TableOfContentsMobileProps) => {
       <DropdownMenuContent
         align="start"
         sideOffset={8}
-        className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        className="max-h-[calc(100vh-20rem)] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-auto"
         // prevents focus from moving to the trigger after closing
         onCloseAutoFocus={(e) => {
           e.preventDefault()

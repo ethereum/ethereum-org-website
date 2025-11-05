@@ -14,7 +14,7 @@ This page assumes the reader is familiar with Ethereum fundamentals, including [
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle}
 
-Oracles are applications that source, verify, and transmit external information (i.e. information stored offchain) to smart contracts running on the blockchain. Besides “pulling” offchain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
+Oracles are applications that source, verify, and transmit external information (i.e., information stored offchain) to smart contracts running on the blockchain. Besides “pulling” offchain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
 
 Without an oracle, a smart contract would be limited entirely to onchain data.
 
@@ -32,7 +32,7 @@ To achieve deterministic execution, blockchains limit nodes to reaching consensu
 - “Does this account have enough funds to cover the transaction?”
 - “Is this transaction valid in the context of this smart contract?”, etc.
 
-If blockchains received information from external sources (i.e. from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely to change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
+If blockchains received information from external sources (i.e., from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely to change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
 
 For a public blockchain like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, nodes need mechanisms for arriving at the same state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform.
 
@@ -44,7 +44,7 @@ Essentially, a blockchain oracle bridges the information gap between the blockch
 
 ## What is the oracle problem? {#the-oracle-problem}
 
-Oracles solve an important problem, but also introduce some complications, e.g.:
+Oracles solve an important problem, but also introduce some complications, e.g.,:
 
 - How do we verify that the injected information was extracted from the correct source or hasn’t been tampered with?
 
@@ -54,7 +54,7 @@ The so-called “oracle problem” demonstrates the issues that come with using 
 
 Different oracles offer different solutions to the oracle problem, which we explore later. Oracles are typically evaluated on how well they can handle the following challenges:
 
-1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid offchain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e. wasn’t altered) before being sent onchain.
+1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid offchain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e., wasn’t altered) before being sent onchain.
 
 2. **Availability**: An oracle should not delay or prevent smart contracts from executing actions and triggering state changes. This means that data from an oracle must be _available on request_ without interruption.
 

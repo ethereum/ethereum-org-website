@@ -122,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="误区：&quot;运行一个节点需要质押 32 个以太币。&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 以太坊节点有两种类型：可以提议区块的节点和不能提议区块的节点。
 
