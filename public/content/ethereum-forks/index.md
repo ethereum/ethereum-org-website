@@ -73,6 +73,12 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2025 {#2025}
 
+### Fulu-Osaka ("Fusaka", _in progress_) {#fusaka}
+
+<NetworkUpgradeSummary name="fusaka" />
+
+[More on Fusaka](/roadmap/fusaka/)
+
 ### Prague-Electra ("Pectra") {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
