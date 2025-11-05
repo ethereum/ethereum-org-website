@@ -10,7 +10,8 @@ import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
 type TranslationFunction = (key: string) => string
 
 type DateString =
-  `2${number}${number}${number}-${number}${number}-${number}${number}`
+  | `2${number}${number}${number}-${number}${number}-${number}${number}`
+  | `${number}${number}${number}${number}-${number}${number}-${number}${number}T${number}${number}:${number}${number}:${number}${number}.${number}${number}${number}Z`
 type YearString = `2${number}${number}${number}`
 
 interface BaseRelease {
@@ -143,7 +144,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: FusakaImage,
     releaseName: "Fusaka",
-    releaseDate: "2025-12-03",
+    releaseDate: "2025-12-03T21:49:11.000Z",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-fusaka-peerdas-title")}</p>
