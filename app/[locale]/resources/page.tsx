@@ -26,6 +26,7 @@ import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
+import { fetchBlobscanStats } from "@/lib/api/fetchBlobscanStats"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
@@ -34,7 +35,10 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const EVENT_CATEGORY = "dashboard"
 
 const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["blobscanOverallStats", fetchBlobscanStats],
+  ],
   REVALIDATE_TIME * 1000
 )
 
@@ -44,10 +48,28 @@ const Page = async ({ params }: { params: PageParams }) => {
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
   // Load data
-  const [growThePieData] = await loadData()
+  const [growThePieData, blobscanOverallStats] = await loadData()
+
   const { txCostsMedianUsd } = growThePieData
 
-  const resourceSections = await getResources({ txCostsMedianUsd })
+  const blobStats =
+    "error" in blobscanOverallStats
+      ? {
+          avgBlobFee: "—",
+          totalBlobs: "—",
+        }
+      : {
+          avgBlobFee: blobscanOverallStats.value.avgBlobFee,
+          totalBlobs: new Intl.NumberFormat(undefined, {
+            notation: "compact",
+            maximumFractionDigits: 1,
+          }).format(blobscanOverallStats.value.totalBlobs),
+        }
+
+  const resourceSections = await getResources({
+    txCostsMedianUsd,
+    ...blobStats,
+  })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(

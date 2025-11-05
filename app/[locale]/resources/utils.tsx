@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
+import BigNumber from "@/components/BigNumber"
 import SectionIconArrowsFullscreen from "@/components/icons/arrows-fullscreen.svg"
 import SectionIconEthGlyph from "@/components/icons/eth-glyph.svg"
 import SectionIconEthWallet from "@/components/icons/eth-wallet.svg"
@@ -13,10 +14,9 @@ import { Spinner } from "@/components/ui/spinner"
 import { formatSmallUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
-import BigNumber from "../../../src/components/BigNumber"
-
 import type { DashboardBox, DashboardSection } from "./types"
 
+import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
@@ -65,12 +65,41 @@ const SlotCountdownChart = dynamic(
     ),
   }
 )
+
+const UpgradeCountdownFigure = dynamic(
+  () => import("./_components/UpgradeCountdown"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="grid h-32 place-items-center">
+        <Spinner />
+      </div>
+    ),
+  }
+)
+
 export const getResources = async ({
   txCostsMedianUsd,
+  totalBlobs,
+  avgBlobFee,
 }): Promise<DashboardSection[]> => {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-resources" })
   const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
+
+  const ethPrice = await fetchEthPrice()
+
+  const avgBlobFeeUsd =
+    "error" in ethPrice
+      ? { error: ethPrice.error }
+      : {
+          ...ethPrice,
+          value: formatSmallUSD(
+            // Converting value from wei to USD
+            avgBlobFee * 1e-18 * ethPrice.value,
+            localeForNumberFormat
+          ),
+        }
 
   const medianTxCost =
     "error" in txCostsMedianUsd
@@ -351,7 +380,14 @@ export const getResources = async ({
   const scalingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-roadmap-title"),
-      // TODO: Add metric
+      metric: (
+        <div className="grid place-items-center py-8">
+          <div className="text-sm">
+            {t("page-resources-roadmap-metric-label")}
+          </div>
+          <UpgradeCountdownFigure />
+        </div>
+      ),
       items: [
         {
           title: "Ethereum Roadmap",
@@ -363,7 +399,19 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-blobs-title"),
-      // TODO: Add metric
+      metric: (
+        <div className="flex gap-4">
+          <BigNumber className="items-center" value={totalBlobs}>
+            {t("page-resources-blobs-metric-total-label")}
+          </BigNumber>
+          <BigNumber
+            className="items-center"
+            value={"value" in avgBlobFeeUsd ? avgBlobFeeUsd.value : "—"}
+          >
+            {t("page-resources-blobs-metric-fee-label")}
+          </BigNumber>
+        </div>
+      ),
       items: [
         {
           title: "Blob Scan",
