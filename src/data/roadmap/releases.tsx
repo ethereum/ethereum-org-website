@@ -143,7 +143,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: FusakaImage,
     releaseName: "Fusaka",
-    plannedReleaseYear: "2025",
+    releaseDate: "2025-12-03",
     content: (
       <div>
         <p className="font-bold">{t("page-roadmap-fusaka-peerdas-title")}</p>
