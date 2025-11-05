@@ -1,3 +1,4 @@
+import { fetchAttestantPosts } from "@/lib/api/refactor/fetchAttestantPosts"
 import { fetchBeaconchainEpoch } from "@/lib/api/refactor/fetchBeaconchainEpoch"
 import { fetchCalendarEvents } from "@/lib/api/refactor/fetchCalendarEvents"
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
@@ -35,5 +36,10 @@ export const externalServicesDaily: ExternalService[] = [
     name: "Calendar Events - Google Calendar",
     key: "calendarEvents",
     function: fetchCalendarEvents,
+  },
+  {
+    name: "Attestant Posts",
+    key: "attestantPosts",
+    function: fetchAttestantPosts,
   },
 ]

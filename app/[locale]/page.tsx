@@ -90,7 +90,6 @@ import { getActivity, getUpcomingEvents } from "./utils"
 import { routing } from "@/i18n/routing"
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
@@ -139,7 +138,6 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const loadData = dataLoader(
   [
     ["growThePieData", fetchGrowThePie],
-    ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
     ["appsData", fetchApps],
   ],
@@ -157,7 +155,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
-  const [growThePieData, attestantPosts, xmlBlogs, appsData] = await loadData()
+  const [growThePieData, xmlBlogs, appsData] = await loadData()
 
   // Fetch hourly data with 1-hour revalidation
   const hourlyData = await getExternalData(
@@ -188,8 +186,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     timestamp: Date.now(),
   }
 
-  // Fetch daily data (calendar events) with 24-hour revalidation
-  const dailyData = await getExternalData(["calendarEvents"], 86400)
+  // Fetch daily data (calendar events and attestant posts) with 24-hour revalidation
+  const dailyData = await getExternalData(
+    ["calendarEvents", "attestantPosts"],
+    86400
+  )
   const calendarData = dailyData?.calendarEvents as
     | {
         pastEvents?: {
@@ -205,6 +206,25 @@ const Page = async ({ params }: { params: PageParams }) => {
     upcomingEventData: calendarData?.upcomingEvents?.value ?? [],
     pastEventData: calendarData?.pastEvents?.value ?? [],
   }
+
+  // Extract attestant posts from daily data
+  const attestantPostsData = dailyData?.attestantPosts as
+    | {
+        value: Array<{
+          title: string
+          link: string
+          content: string
+          source: string
+          sourceUrl: string
+          sourceFeedUrl: string
+          imgSrc?: string
+          pubDate: string
+        }>
+      }
+    | { error: string }
+    | undefined
+  const attestantPosts =
+    "value" in (attestantPostsData ?? {}) ? attestantPostsData.value : []
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 

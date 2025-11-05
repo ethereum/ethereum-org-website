@@ -570,7 +570,9 @@ export type DefiLlamaTVLResponse = {
   totalLiquidityUSD: number
 }[]
 
-export type ExternalDataReturnData = ValueOrError<number | CommunityEvent[]>
+export type ExternalDataReturnData = ValueOrError<
+  number | CommunityEvent[] | RSSItem[]
+>
 
 export type StatsBoxState = ValueOrError<string>
 

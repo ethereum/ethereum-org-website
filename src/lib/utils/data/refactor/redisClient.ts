@@ -154,6 +154,6 @@ export const storeRedis = async (
   value: unknown,
   ttlSeconds?: number
 ): Promise<boolean> => {
-  const redisKey = `external-data:${key}`
-  return await setRedisData(redisKey, value, ttlSeconds)
+  // setRedisData already adds the "external-data:" prefix, so we pass the key as-is
+  return await setRedisData(key, value, ttlSeconds)
 }
