@@ -13,7 +13,7 @@ There are also improvements that make censoring transactions much more difficult
 
 ## Staking withdrawals {#staking-withdrawals}
 
-The upgrade from [proof-of-work](/glossary/#pow) to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. There has been a second update on April 12, 2023 to allow to withdraw the staked ETH. Since then validators can freely stake or withdraw ETH.
+The upgrade from [proof-of-work](/glossary/#pow) to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. There was a second update on April 12, 2023 to allow validators to withdraw staked ETH. Since then validators can freely stake or withdraw ETH.
 
 <ButtonLink variant="outline-color" href="/staking/withdrawals/">Read about withdrawals</ButtonLink>
 
