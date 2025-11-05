@@ -13,7 +13,7 @@ There are also improvements that make censoring transactions much more difficult
 
 ## Staking withdrawals {#staking-withdrawals}
 
-The upgrade from [proof-of-work](/glossary/#pow) to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. There has been a second update on April 12, 2023 to allow withdraw the staked ETH. Since then validators can freely stake or withdraw ETH.
+The upgrade from [proof-of-work](/glossary/#pow) to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. There has been a second update on April 12, 2023 to allow to withdraw the staked ETH. Since then validators can freely stake or withdraw ETH.
 
 <ButtonLink variant="outline-color" href="/staking/withdrawals/">Read about withdrawals</ButtonLink>
 
@@ -45,4 +45,4 @@ It is possible that a sophisticated attacker could identify upcoming validators 
 
 ## Current progress {#current-progress}
 
-**Security upgrades on the roadmap are in advanced stages of research**, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.
+**Security upgrades on the roadmap are in advanced stages of research**, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE are to finalize a specification and start building prototypes.
