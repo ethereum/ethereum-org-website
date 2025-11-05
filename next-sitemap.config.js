@@ -5,8 +5,7 @@ const defaultLocale = "en"
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://ethereum.org",
-  generateRobotsTxt: true,
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org",
   transform: async (_, path) => {
     const rootPath = path.split("/")[1]
     if (path.endsWith("/404")) return null
