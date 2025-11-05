@@ -2,6 +2,7 @@ import { fetchAttestantPosts } from "@/lib/api/refactor/fetchAttestantPosts"
 import { fetchBeaconchainEpoch } from "@/lib/api/refactor/fetchBeaconchainEpoch"
 import { fetchCalendarEvents } from "@/lib/api/refactor/fetchCalendarEvents"
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
+import { fetchBlogFeeds } from "@/lib/api/refactor/fetchRSS"
 import { fetchTotalValueLocked } from "@/lib/api/refactor/fetchTotalValueLocked"
 
 export interface ExternalService {
@@ -41,5 +42,10 @@ export const externalServicesDaily: ExternalService[] = [
     name: "Attestant Posts",
     key: "attestantPosts",
     function: fetchAttestantPosts,
+  },
+  {
+    name: "Blog Feeds",
+    key: "blogFeeds",
+    function: fetchBlogFeeds,
   },
 ]

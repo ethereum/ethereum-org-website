@@ -11,6 +11,7 @@ import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -19,17 +20,13 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
 
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchBeaconchainEthstore } from "@/lib/api/fetchBeaconchainEthstore"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["beaconchainApr", fetchBeaconchainEthstore],
-  ],
+  [["beaconchainApr", fetchBeaconchainEthstore]],
   REVALIDATE_TIME * 1000
 )
 
@@ -38,12 +35,38 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [{ totalEthStaked, validatorscount }, apr] = await loadData()
+  const [apr] = await loadData()
+
+  // Fetch hourly data (beaconchain epoch) with 1-hour revalidation
+  const hourlyData = await getExternalData(["beaconchainEpoch"], 3600)
+  const beaconchainEpoch = hourlyData?.beaconchainEpoch as
+    | {
+        totalEthStaked?: { value: number; timestamp: number }
+        validatorscount?: { value: number; timestamp: number }
+      }
+    | undefined
+
+  const totalEthStakedData = beaconchainEpoch?.totalEthStaked ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const validatorscountData = beaconchainEpoch?.validatorscount ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
 
   const data: StakingStatsData = {
-    totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,
-    validatorscount: "value" in validatorscount ? validatorscount.value : 0,
-    apr: "value" in apr ? apr.value : 0,
+    totalEthStaked:
+      "value" in totalEthStakedData &&
+      typeof totalEthStakedData.value === "number"
+        ? totalEthStakedData.value
+        : 0,
+    validatorscount:
+      "value" in validatorscountData &&
+      typeof validatorscountData.value === "number"
+        ? validatorscountData.value
+        : 0,
+    apr: "value" in apr && typeof apr.value === "number" ? apr.value : 0,
   }
 
   // Get i18n messages

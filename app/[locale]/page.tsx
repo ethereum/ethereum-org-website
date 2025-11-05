@@ -72,9 +72,7 @@ import { polishRSSList } from "@/lib/utils/rss"
 import events from "@/data/community-events.json"
 
 import {
-  ATTESTANT_BLOG,
   BASE_TIME_UNIT,
-  BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   DEFAULT_LOCALE,
@@ -90,7 +88,6 @@ import { getActivity, getUpcomingEvents } from "./utils"
 import { routing } from "@/i18n/routing"
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchRSS } from "@/lib/api/fetchRSS"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(
@@ -127,18 +124,12 @@ const ValuesMarquee = dynamic(
   }
 )
 
-const fetchXmlBlogFeeds = async () => {
-  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
-  return await fetchRSS(xmlUrls)
-}
-
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
     ["growThePieData", fetchGrowThePie],
-    ["rssData", fetchXmlBlogFeeds],
     ["appsData", fetchApps],
   ],
   REVALIDATE_TIME * 1000
@@ -155,7 +146,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
-  const [growThePieData, xmlBlogs, appsData] = await loadData()
+  const [growThePieData, appsData] = await loadData()
 
   // Fetch hourly data with 1-hour revalidation
   const hourlyData = await getExternalData(
@@ -186,9 +177,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     timestamp: Date.now(),
   }
 
-  // Fetch daily data (calendar events and attestant posts) with 24-hour revalidation
+  // Fetch daily data (calendar events, attestant posts, and blog feeds) with 24-hour revalidation
   const dailyData = await getExternalData(
-    ["calendarEvents", "attestantPosts"],
+    ["calendarEvents", "attestantPosts", "blogFeeds"],
     86400
   )
   const calendarData = dailyData?.calendarEvents as
@@ -224,7 +215,29 @@ const Page = async ({ params }: { params: PageParams }) => {
     | { error: string }
     | undefined
   const attestantPosts =
-    "value" in (attestantPostsData ?? {}) ? attestantPostsData.value : []
+    attestantPostsData && "value" in attestantPostsData
+      ? attestantPostsData.value
+      : []
+
+  // Extract blog feeds from daily data
+  const blogFeedsData = dailyData?.blogFeeds as
+    | {
+        value: Array<
+          Array<{
+            title: string
+            link: string
+            source: string
+            sourceUrl: string
+            sourceFeedUrl: string
+            imgSrc?: string
+            pubDate: string
+          }>
+        >
+      }
+    | { error: string }
+    | undefined
+  const xmlBlogs =
+    blogFeedsData && "value" in blogFeedsData ? blogFeedsData.value : []
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 

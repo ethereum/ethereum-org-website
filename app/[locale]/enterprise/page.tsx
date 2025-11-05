@@ -50,6 +50,7 @@ import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -67,9 +68,7 @@ import EnterprisePageJsonLD from "./page-jsonld"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
@@ -101,8 +100,6 @@ const loadData = dataLoader(
   [
     ["growThePieData", fetchGrowThePie],
     ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
   ],
   BASE_TIME_UNIT * 1000
 )
@@ -112,12 +109,30 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  const [
-    { txCount, txCostsMedianUsd },
-    stablecoinMarketCap,
-    ethPrice,
-    { totalEthStaked },
-  ] = await loadData()
+  const [{ txCount, txCostsMedianUsd }, stablecoinMarketCap] = await loadData()
+
+  // Fetch hourly data (ethPrice and beaconchainEpoch) with 1-hour revalidation
+  const hourlyData = await getExternalData(
+    ["ethPrice", "beaconchainEpoch"],
+    3600
+  )
+
+  // Extract hourly metrics from external data
+  const ethPrice = (hourlyData?.ethPrice as
+    | { value: number; timestamp: number }
+    | undefined) ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const beaconchainEpoch = hourlyData?.beaconchainEpoch as
+    | {
+        totalEthStaked?: { value: number; timestamp: number }
+      }
+    | undefined
+  const totalEthStaked = beaconchainEpoch?.totalEthStaked ?? {
+    value: 0,
+    timestamp: Date.now(),
+  }
 
   const metrics = await parseActivity({
     txCount,
