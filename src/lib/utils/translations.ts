@@ -72,97 +72,23 @@ export const getRequiredNamespacesForPage = (
 const getRequiredNamespacesForPath = (relativePath: string) => {
   const path = url.addSlashes(relativePath)
 
-  let primaryNamespace: string | undefined // the primary namespace for the page
+  const primaryNamespace = getPrimaryNamespaceForPath(path) // the primary namespace for the page
   let requiredNamespaces: string[] = [] // any additional namespaces required for the page
 
-  if (path === "/assets/") {
-    primaryNamespace = "page-assets"
-  }
-
   if (path === "/") {
-    primaryNamespace = "page-index"
     requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
-  if (path === "/collectibles/") {
-    primaryNamespace = "page-collectibles"
-  }
-
-  if (path === "/contributing/translation-program/acknowledgements/") {
-    primaryNamespace = "page-contributing-translation-program-acknowledgements"
-  }
-
-  if (path === "/contributing/translation-program/contributors/") {
-    primaryNamespace = "page-contributing-translation-program-contributors"
-  }
-
-  if (path.startsWith("/community/")) {
-    primaryNamespace = "page-community"
-  }
-
-  if (path.startsWith("/apps/")) {
-    primaryNamespace = "page-apps"
-  }
-
   if (path.startsWith("/energy-consumption/")) {
-    primaryNamespace = "page-energy-consumption"
     requiredNamespaces = [...requiredNamespaces, "page-about"]
-  }
-
-  if (path.startsWith("/eth/")) {
-    primaryNamespace = "page-eth"
   }
 
   if (path.startsWith("/glossary/")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
-  if (path.startsWith("/ethereum-forks/")) {
-    primaryNamespace = "page-history"
-  }
-
-  if (path.startsWith("/resources/")) {
-    primaryNamespace = "page-resources"
-  }
-
-  if (path.startsWith("/stablecoins/")) {
-    primaryNamespace = "page-stablecoins"
-  }
-
-  if (path.startsWith("/staking/")) {
-    primaryNamespace = "page-staking"
-  }
-
-  if (path.startsWith("/staking/deposit-contract/")) {
-    primaryNamespace = "page-staking-deposit-contract"
-  }
-
-  if (path.startsWith("/developers/")) {
-    primaryNamespace = "page-developers-index"
-  }
-
-  if (path.startsWith("/learn/")) {
-    primaryNamespace = "page-learn"
-  }
-
-  if (path.startsWith("/developers/local-environment/")) {
-    primaryNamespace = "page-developers-local-environment"
-  }
-
-  if (path.startsWith("/developers/learning-tools/")) {
-    primaryNamespace = "page-developers-learning-tools"
-  }
-
-  if (path.startsWith("/developers/tutorials/")) {
-    primaryNamespace = "page-developers-tutorials"
-  }
-
   if (path.startsWith("/developers/docs/scaling/")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
-  }
-
-  if (path === "/get-eth/") {
-    primaryNamespace = "page-get-eth"
   }
 
   if (path.startsWith("/roadmap/vision/")) {
@@ -174,56 +100,19 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/gas/")) {
-    primaryNamespace = "page-gas"
     requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
-  if (path.startsWith("/what-is-ethereum/")) {
-    primaryNamespace = "page-what-is-ethereum"
-  }
-
-  if (path === "/bug-bounty/") {
-    primaryNamespace = "page-bug-bounty"
-  }
-
-  if (path.startsWith("/run-a-node/")) {
-    primaryNamespace = "page-run-a-node"
-  }
-
-  if (path.endsWith("/wallets/")) {
-    primaryNamespace = "page-wallets"
-  }
-
   if (path.endsWith("/wallets/find-wallet/")) {
-    primaryNamespace = "page-wallets-find-wallet"
     requiredNamespaces = [...requiredNamespaces, "page-wallets", "table"]
   }
 
-  // TODO: Remove this when the page is translated
-  if (path.startsWith("/layer-2/")) {
-    primaryNamespace = "page-layer-2"
-  }
-
-  if (path.startsWith("/layer-2/learn/")) {
-    primaryNamespace = "page-layer-2-learn"
-  }
-
   if (path.startsWith("/layer-2/networks/")) {
-    primaryNamespace = "page-layer-2-networks"
     requiredNamespaces = [...requiredNamespaces, "table"]
   }
 
-  if (path.startsWith("/roadmap/")) {
-    primaryNamespace = "page-roadmap"
-  }
-
   if (path.startsWith("/start/")) {
-    primaryNamespace = "page-start"
     requiredNamespaces = [...requiredNamespaces]
-  }
-
-  if (path.startsWith("/contributing/translation-program/translatathon/")) {
-    primaryNamespace = "page-translatathon"
   }
 
   if (path.startsWith("/10years/")) {
@@ -275,6 +164,143 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   return primaryNamespace
     ? [primaryNamespace, ...requiredNamespaces]
     : [...requiredNamespaces]
+}
+
+export const getPrimaryNamespaceForPath = (relativePath: string) => {
+  const path = url.addSlashes(relativePath)
+
+  let primaryNamespace: string | undefined
+
+  if (path === "/assets/") {
+    primaryNamespace = "page-assets"
+  }
+
+  if (path === "/") {
+    primaryNamespace = "page-index"
+  }
+
+  if (path === "/collectibles/") {
+    primaryNamespace = "page-collectibles"
+  }
+
+  if (path === "/contributing/translation-program/acknowledgements/") {
+    primaryNamespace = "page-contributing-translation-program-acknowledgements"
+  }
+
+  if (path === "/contributing/translation-program/contributors/") {
+    primaryNamespace = "page-contributing-translation-program-contributors"
+  }
+
+  if (path.startsWith("/community/")) {
+    primaryNamespace = "page-community"
+  }
+
+  if (path.startsWith("/apps/")) {
+    primaryNamespace = "page-apps"
+  }
+
+  if (path.startsWith("/energy-consumption/")) {
+    primaryNamespace = "page-energy-consumption"
+  }
+
+  if (path.startsWith("/eth/")) {
+    primaryNamespace = "page-eth"
+  }
+
+  if (path.startsWith("/ethereum-forks/")) {
+    primaryNamespace = "page-history"
+  }
+
+  if (path.startsWith("/resources/")) {
+    primaryNamespace = "page-resources"
+  }
+
+  if (path.startsWith("/stablecoins/")) {
+    primaryNamespace = "page-stablecoins"
+  }
+
+  if (path.startsWith("/staking/")) {
+    primaryNamespace = "page-staking"
+  }
+
+  if (path.startsWith("/staking/deposit-contract/")) {
+    primaryNamespace = "page-staking-deposit-contract"
+  }
+
+  if (path.startsWith("/developers/")) {
+    primaryNamespace = "page-developers-index"
+  }
+
+  if (path.startsWith("/learn/")) {
+    primaryNamespace = "page-learn"
+  }
+
+  if (path.startsWith("/developers/local-environment/")) {
+    primaryNamespace = "page-developers-local-environment"
+  }
+
+  if (path.startsWith("/developers/learning-tools/")) {
+    primaryNamespace = "page-developers-learning-tools"
+  }
+
+  if (path.startsWith("/developers/tutorials/")) {
+    primaryNamespace = "page-developers-tutorials"
+  }
+
+  if (path === "/get-eth/") {
+    primaryNamespace = "page-get-eth"
+  }
+
+  if (path.startsWith("/gas/")) {
+    primaryNamespace = "page-gas"
+  }
+
+  if (path.startsWith("/what-is-ethereum/")) {
+    primaryNamespace = "page-what-is-ethereum"
+  }
+
+  if (path === "/bug-bounty/") {
+    primaryNamespace = "page-bug-bounty"
+  }
+
+  if (path.startsWith("/run-a-node/")) {
+    primaryNamespace = "page-run-a-node"
+  }
+
+  if (path.endsWith("/wallets/")) {
+    primaryNamespace = "page-wallets"
+  }
+
+  if (path.endsWith("/wallets/find-wallet/")) {
+    primaryNamespace = "page-wallets-find-wallet"
+  }
+
+  // TODO: Remove this when the page is translated
+  if (path.startsWith("/layer-2/")) {
+    primaryNamespace = "page-layer-2"
+  }
+
+  if (path.startsWith("/layer-2/learn/")) {
+    primaryNamespace = "page-layer-2-learn"
+  }
+
+  if (path.startsWith("/layer-2/networks/")) {
+    primaryNamespace = "page-layer-2-networks"
+  }
+
+  if (path.startsWith("/roadmap/")) {
+    primaryNamespace = "page-roadmap"
+  }
+
+  if (path.startsWith("/start/")) {
+    primaryNamespace = "page-start"
+  }
+
+  if (path.startsWith("/contributing/translation-program/translatathon/")) {
+    primaryNamespace = "page-translatathon"
+  }
+
+  return primaryNamespace
 }
 
 const getRequiredNamespacesForLayout = (layout?: string) => {

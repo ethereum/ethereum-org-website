@@ -2135,6 +2135,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ocandocrypto"><img src="https://avatars.githubusercontent.com/u/124130440?v=4?s=100" width="100px;" alt="Angela O"/><br /><sub><b>Angela O</b></sub></a><br /><a href="#maintenance-ocandocrypto" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/HSuke"><img src="https://avatars.githubusercontent.com/u/3211079?v=4?s=100" width="100px;" alt="HSuke"/><br /><sub><b>HSuke</b></sub></a><br /><a href="#maintenance-HSuke" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/GarmashAlex"><img src="https://avatars.githubusercontent.com/u/193699300?v=4?s=100" width="100px;" alt="GarmashAlex"/><br /><sub><b>GarmashAlex</b></sub></a><br /><a href="#maintenance-GarmashAlex" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://zeeshan8281.com"><img src="https://avatars.githubusercontent.com/u/89350024?v=4?s=100" width="100px;" alt="Mohammad Zeeshan Jawed"/><br /><sub><b>Mohammad Zeeshan Jawed</b></sub></a><br /><a href="#maintenance-zeeshan8281" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GaetanFrejoux"><img src="https://avatars.githubusercontent.com/u/47180075?v=4?s=100" width="100px;" alt="Slyrik"/><br /><sub><b>Slyrik</b></sub></a><br /><a href="#translation-GaetanFrejoux" title="Translation">🌍</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/eagerapps"><img src="https://avatars.githubusercontent.com/u/26349077?v=4?s=100" width="100px;" alt="Mohammed Israil"/><br /><sub><b>Mohammed Israil</b></sub></a><br /><a href="#maintenance-eagerapps" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

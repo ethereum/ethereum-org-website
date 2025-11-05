@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
+import { isPageTranslated } from "../i18n/pageTranslation"
+
 import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
@@ -42,6 +44,7 @@ export const getMetadata = async ({
   twitterDescription,
   image,
   author,
+  noIndex = false,
 }: {
   locale: string
   slug: string[]
@@ -50,6 +53,7 @@ export const getMetadata = async ({
   twitterDescription?: string
   image?: string
   author?: string
+  noIndex?: boolean
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
@@ -66,7 +70,7 @@ export const getMetadata = async ({
   /* Set fallback ogImage based on path */
   const ogImage = image || getOgImage(slug)
 
-  return {
+  const base: Metadata = {
     title,
     description,
     metadataBase: new URL(SITE_URL),
@@ -110,4 +114,13 @@ export const getMetadata = async ({
       "docsearch:description": description,
     },
   }
+
+  if (noIndex) {
+    return { ...base, robots: { index: false } }
+  }
+
+  const isTranslated = await isPageTranslated(locale, slugString)
+
+  // If the page is not translated, do not index the page
+  return isTranslated ? base : { ...base, robots: { index: false } }
 }

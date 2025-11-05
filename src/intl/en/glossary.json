@@ -300,7 +300,7 @@
   "receipt-term": "Receipt",
   "receipt-definition": "Data returned by an Ethereum client to represent the result of a particular <a href=\"/glossary/#transaction\">transaction</a>, including a <a href=\"/glossary/#hash\">hash</a> of the transaction, its <a href=\"/glossary/#block\">block</a> number, the amount of <a href=\"/glossary/#gas\">gas</a> used, and, in case of deployment of a <a href=\"/glossary/#smart-contract\">smart contract</a>, the <a href=\"/glossary/#address\">address</a> of the contract.",
   "recovery-phrase-term": "Seed phrase/recovery phrase",
-  "recovery-phrase-definition": "A list of words given to you when you create a digital wallet. It acts like a  password that can help you get back into your wallet if you lose access, making sure you don't lose your digital money or tokens.",
+  "recovery-phrase-definition": "A list of words given to you when you create a digital wallet. It acts like a password that can help you get back into your wallet if you lose access, making sure you don't lose your digital money or tokens.",
   "re-entrancy-attack-term": "Re-entrancy attack",
   "re-entrancy-attack-definition": "An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts. <a href=\"/developers/docs/smart-contracts/security/#reentrancy\">More on re-entrancy</a>.",
   "reward-term": "Reward",

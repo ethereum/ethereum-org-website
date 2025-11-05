@@ -862,7 +862,7 @@ export type FeedbackWidgetContextType = {
 }
 
 // Historical upgrades
-type NetworkUpgradeDetails = {
+export type NetworkUpgradeDetails = {
   blockNumber?: number
   epochNumber?: number
   slotNumber?: number
