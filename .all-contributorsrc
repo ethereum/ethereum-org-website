@@ -13826,6 +13826,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "eagerapps",
+      "name": "Mohammed Israil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26349077?v=4",
+      "profile": "https://github.com/eagerapps",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
