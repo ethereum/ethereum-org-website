@@ -31,14 +31,14 @@ type Crumb = {
 // TODO: update docs after removing pathname and slug logic
 
 // Generate crumbs from slug
-// e.g. "/eth2/proof-of-stake/" will generate:
+// e.g., "/eth2/proof-of-stake/" will generate:
 // [
 //   { fullPath: "/", text: "HOME" },
 //   { fullPath: "/eth2/", text: "ETH2" },
 //   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
 // `startDepth` will trim breadcrumbs
-// e.g. startDepth=1 will generate:
+// e.g., startDepth=1 will generate:
 // [
 //   { fullPath: "/eth2/", text: "ETH2" },
 //   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
@@ -54,7 +54,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const sliced = slugChunk.filter((item) => !!item)
 
   const crumbs = [
-    // If homepage (e.g. "en"), set text to "home" translation
+    // If homepage (e.g., "en"), set text to "home" translation
     ...(hasHome
       ? [
           {

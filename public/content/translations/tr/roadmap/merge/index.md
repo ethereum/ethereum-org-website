@@ -122,7 +122,7 @@ Birleşim aynı zamanda, iş ispatı altında mümkün olmayan daha fazla ölçe
 
 <ExpandableCard
 title="Yanılgı: &quot;Bir düğüm çalıştırmak 32 ETH gerektirir.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 İki tip Ethereum düğümü bulunur: Blok önerebilen ve öneremeyen düğümler.
 

@@ -17,6 +17,7 @@ import MarkdownImage from "@/components/Image/MarkdownImage"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
+import { PieChart } from "@/components/PieChart"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -177,6 +178,7 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   Page,
+  PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
   Tag,

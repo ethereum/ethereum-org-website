@@ -74,7 +74,7 @@ Want to learn more? Feel free to check out the [documentation on using the Crowd
 
 ### Review process {#review-process}
 
-Once you've completed the translation (i.e. all files for a content bucket display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
+Once you've completed the translation (i.e., all files for a content bucket display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e., review progress is 100%), we will add it to the website.
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>

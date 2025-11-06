@@ -38,7 +38,7 @@ If you are implementing:
 
 ### 🧩 Base components
 
-*(components that already exist in the [shadcn/ui components list](https://ui.shadcn.com/docs/components), e.g. Button, Input, Alert)*
+*(components that already exist in the [shadcn/ui components list](https://ui.shadcn.com/docs/components), e.g., Button, Input, Alert)*
 
 * Do **not** create a new component file under `/ComponentA/index.tsx` unless additional or custom logic is required.
 * Extend or style base components in `src/components/ui`.
@@ -47,7 +47,7 @@ If you are implementing:
 
 ### 🧱 Custom components
 
-*(components not covered by shadcn/ui, e.g. PageHero)*
+*(components not covered by shadcn/ui, e.g., PageHero)*
 
 * Use base `ui` components whenever possible.
 * Keep the structure consistent with the DS and Figma specifications.

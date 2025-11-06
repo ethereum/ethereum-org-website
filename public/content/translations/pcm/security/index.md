@@ -104,7 +104,7 @@ One high-profile vashon of di don hapun in July 2020, wen dem don hack Twitter a
 
 Di celeb awoof na anoda komon form wey di skam awoof dey take. Di skammas go take one fidio intaview abi konfrens tok wey dem rekod and go put am for YouTube - as dem make am look laik di sey dem give one live fidio intaview to di seleb wia em dey apruf cryptocurrency awoof.
 
-Dem yus Vitalik Buterin often in dis skam, but dem also yu plenti oda popular pipol involve in crypto (e.g. Elon Musk abi Charles Hoskinson). Pesin wey dem sabi wella join to give di skammas livestream sense of legitimasy (dis bi laik skam, but Vitalik join, so im suppose dey okay!).
+Dem yus Vitalik Buterin often in dis skam, but dem also yu plenti oda popular pipol involve in crypto (e.g., Elon Musk abi Charles Hoskinson). Pesin wey dem sabi wella join to give di skammas livestream sense of legitimasy (dis bi laik skam, but Vitalik join, so im suppose dey okay!).
 
 **Awoof na always skams. If yu dey send yor funds to dis akants, yu go luz dem foreva.**
 
@@ -139,7 +139,7 @@ For di run-up to [Di Merge](/roadmap/merge/), skammas don take advantaj of di ko
 
 Skammas fit appia as "suppot", as dem dey tell yu dat if yu deposit yor ETH, yu go risiv back 'ETH2'. Nor [official Ethereum suppot](/community/support/) dey, and nor new token dey. Neva shia yor wallet seed fraiz wit anyone.
 
-_Note: E get some derivative tokens/tickers wey fit reprisent ETH wey dem stake (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but dis nor bi sontin yu nid to "migrate to."_
+_Note: E get some derivative tokens/tickers wey fit reprisent ETH wey dem stake (i.e., rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but dis nor bi sontin yu nid to "migrate to."_
 
 ### Phishing skams {#phishing-scams}
 

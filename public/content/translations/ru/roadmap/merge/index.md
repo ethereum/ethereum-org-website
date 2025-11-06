@@ -122,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="Заблуждение: «запуск узла требует поставить 32 ETH»."
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Существует два типа узлов Ethereum: узлы, которые могут предлагать блоки, и те, которые не могут этого делать.
 

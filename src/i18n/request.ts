@@ -3,8 +3,9 @@ import { getRequestConfig } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
-import { loadMessages } from "./loadMessages"
 import { routing } from "./routing"
+
+import { loadMessages } from "@/lib/i18n/loadMessages"
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // This typically corresponds to the `[locale]` segment

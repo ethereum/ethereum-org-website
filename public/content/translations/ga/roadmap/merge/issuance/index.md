@@ -6,7 +6,7 @@ lang: ga
 
 # Conas a chuaigh an Cumasc i bhfeidhm ar sholáthar ETH {#how-the-merge-impacts-ETH-supply}
 
-Ba ionann an Cumasc agus aistriú líonra Ethereum ó chruthúnas oibre go cruthúnas-gheallta a tharla i Meán Fómhair 2022. Rinneadh athruithe ar an mbealach ar eisíodh ETH tráth an aistrithe sin. Roimhe seo, eisíodh ETH nua ó dhá fhoinse: an ciseal forghníomhaithe (i.e. Mainnet) agus an ciseal comhthola (i.e. Slabhra Beacon). Ó tharla an Cumasc, tá eisiúint ar an gciseal fhorghníomhú anois náid. Déanaimis é seo a bhriseadh síos.
+Ba ionann an Cumasc agus aistriú líonra Ethereum ó chruthúnas oibre go cruthúnas-gheallta a tharla i Meán Fómhair 2022. Rinneadh athruithe ar an mbealach ar eisíodh ETH tráth an aistrithe sin. Roimhe seo, eisíodh ETH nua ó dhá fhoinse: an ciseal forghníomhaithe (i.e., Mainnet) agus an ciseal comhthola (i.e., Slabhra Beacon). Ó tharla an Cumasc, tá eisiúint ar an gciseal fhorghníomhú anois náid. Déanaimis é seo a bhriseadh síos.
 
 ## Comhpháirteanna eisiúint ETH {#components-of-eth-issuance}
 

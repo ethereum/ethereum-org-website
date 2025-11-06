@@ -122,13 +122,13 @@ The Merge also set the stage for further scalability upgrades not possible under
 
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 There are two types of Ethereum nodes: nodes that can propose blocks and nodes that don't.
 
 Nodes that propose blocks are only a small number of the total nodes on Ethereum. This category includes mining nodes under proof-of-work (PoW) and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in proof-of-work or staked ETH in proof-of-stake) in exchange for the ability to occasionally propose the next block and earn protocol rewards.
 
-The other nodes on the network (i.e. the majority) are not required to commit any economic resources beyond a consumer-grade computer with 1-2 TB of available storage and an internet connection. These nodes do not propose blocks, but they still serve a critical role in securing the network by holding all block proposers accountable by listening for new blocks and verifying their validity on arrival according to the network consensus rules. If the block is valid, the node continues propagating it through the network. If the block is invalid for whatever reason, the node software will disregard it as invalid and stop its propagation.
+The other nodes on the network (i.e., the majority) are not required to commit any economic resources beyond a consumer-grade computer with 1-2 TB of available storage and an internet connection. These nodes do not propose blocks, but they still serve a critical role in securing the network by holding all block proposers accountable by listening for new blocks and verifying their validity on arrival according to the network consensus rules. If the block is valid, the node continues propagating it through the network. If the block is invalid for whatever reason, the node software will disregard it as invalid and stop its propagation.
 
 Running a non-block-producing node is possible for anyone under either consensus mechanism (proof-of-work or proof-of-stake); it is <em>strongly encouraged</em> for all users if they have the means. Running a node is immensely valuable for Ethereum and gives added benefits to any individual running one, such as improved security, privacy and censorship resistance.
 
@@ -153,7 +153,7 @@ title="Misconception: &quot;Transactions were accelerated substantially by The M
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
 A transaction's "speed" can be measured in a few ways, including time to be included in a block and time to finalization. Both of these changes slightly, but not in a way that users will notice.
 
-Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e. a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
+Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e., a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
 
 Proof-of-stake introduced the transaction finality concept that did not previously exist. In proof-of-work, the ability to reverse a block gets exponentially more difficult with every passing block mined on top of a transaction, but it never quite reaches zero. Under proof-of-stake, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which validators vote on. When an epoch ends, validators vote on whether to consider the epoch 'justified'. If validators agree to justify the epoch, it gets finalized in the next epoch. Undoing finalized transactions is economically inviable as it would require obtaining and burning over one-third of the total staked ETH.
 

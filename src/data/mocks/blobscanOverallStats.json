@@ -1,0 +1,18 @@
+{
+  "avgBlobAsCalldataFee": 18402670294113620,
+  "avgBlobFee": 1337454615991715,
+  "avgBlobGasPrice": 4657716809.805255,
+  "avgMaxBlobGasFee": 19666167416.48503,
+  "totalBlobGasUsed": "875492278272",
+  "totalBlobAsCalldataGasUsed": "12165759474144",
+  "totalBlobFee": "4174952855822794358784",
+  "totalBlobAsCalldataFee": "57445149899315095107588",
+  "totalBlobs": 6679476,
+  "totalBlobSize": "875492278272",
+  "totalBlocks": 1664933,
+  "totalTransactions": 3121566,
+  "totalUniqueBlobs": 6575105,
+  "totalUniqueReceivers": 5361,
+  "totalUniqueSenders": 5941,
+  "updatedAt": "2025-03-25T11:45:00.590Z"
+}
