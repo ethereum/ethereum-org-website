@@ -11,6 +11,7 @@ import { fetchGFIs } from "@/lib/api/refactor/fetchGFIs"
 import { fetchGrowThePie } from "@/lib/api/refactor/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/refactor/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "@/lib/api/refactor/fetchGrowThePieMaster"
+import { fetchL2beat } from "@/lib/api/refactor/fetchL2beat"
 import { fetchBlogFeeds } from "@/lib/api/refactor/fetchRSS"
 import { fetchStablecoinsData } from "@/lib/api/refactor/fetchStablecoinsData"
 import { fetchTotalValueLocked } from "@/lib/api/refactor/fetchTotalValueLocked"
@@ -68,6 +69,11 @@ export const externalServicesHourly: ExternalService[] = [
     name: "GrowThePie - Master Data",
     key: "growThePieMaster",
     function: fetchGrowThePieMaster,
+  },
+  {
+    name: "L2beat - Scaling Summary",
+    key: "l2beatData",
+    function: fetchL2beat,
   },
   {
     name: "Stablecoins Data - CoinGecko",

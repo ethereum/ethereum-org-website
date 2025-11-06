@@ -10,11 +10,11 @@ import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import {
   extractGrowThePieBlockspace,
   extractGrowThePieData,
   extractGrowThePieMaster,
+  extractL2beatData,
   extractValue,
 } from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
@@ -26,35 +26,22 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
-
-import { fetchL2beat } from "@/lib/api/fetchL2beat"
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [["l2beatData", fetchL2beat]],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [l2beatData] = await loadData()
-
-  // Fetch hourly data (growThePie, ethereum market cap, blockspace data, and master data) with 1-hour revalidation
+  // Fetch hourly data (growThePie, ethereum market cap, blockspace data, master data, and l2beat data) with 1-hour revalidation
   const hourlyData = await getExternalData(
     [
       "growThePie",
       "ethereumMarketcap",
       "growThePieBlockspace",
       "growThePieMaster",
+      "l2beatData",
     ],
     3600
   )
@@ -64,6 +51,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   // Extract master data (launch dates)
   const growThePieMasterData = extractGrowThePieMaster(hourlyData)
+
+  // Extract L2beat data
+  const l2beatData = extractL2beatData(hourlyData)
 
   // Extract and process growThePie data
   const growThePieDataRaw = extractGrowThePieData(hourlyData)
@@ -81,11 +71,12 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const layer2DataCompiled = layer2Data
     .map((network) => {
+      const project = l2beatData?.projects[network.l2beatID]
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.projects[network.l2beatID].tvs.breakdown.total,
-        networkMaturity: networkMaturity(l2beatData.projects[network.l2beatID]),
+        tvl: project?.tvs.breakdown.total || 0,
+        networkMaturity: project ? networkMaturity(project) : "emerging",
         activeAddresses: growThePieData.activeAddresses[network.growthepieID],
         blockspaceData: growThePieBlockspaceData[network.growthepieID] || null,
         launchDate:

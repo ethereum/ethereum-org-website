@@ -612,6 +612,56 @@ export type GrowThePieBlockspaceData = Record<
  */
 export type GrowThePieLaunchDates = Record<string, string>
 
+/**
+ * L2beat project data structure.
+ */
+export interface L2beatProject {
+  id: string
+  name: string
+  slug: string
+  type: string
+  category: string
+  provider: string
+  purposes: string[]
+  isArchived: boolean
+  isUpcoming: boolean
+  isUnderReview: boolean
+  badges: Array<{ category: string; name: string }>
+  tvs: {
+    breakdown: {
+      total: number
+      ether: number
+      stablecoin: number
+      associated: number
+    }
+    associatedTokens: string[]
+    change7d: number
+  }
+  stage: string
+  risks: Array<{
+    name: string
+    category: string
+    value: string
+    description: string
+    sentiment: "bad" | "warning" | "good" | "neutral"
+  }>
+}
+
+/**
+ * L2beat API response structure.
+ * The API returns a summary of all L2 scaling solutions with their TVL, risks, and maturity data.
+ */
+export interface L2beatResponse {
+  success: boolean
+  data: {
+    chart: {
+      types: string[]
+      data: Array<Array<number | string>>
+    }
+  }
+  projects: Record<string, L2beatProject>
+}
+
 export type ExternalDataReturnData = ValueOrError<
   | number
   | CommunityEvent[]
@@ -624,6 +674,7 @@ export type ExternalDataReturnData = ValueOrError<
   | CoinGeckoCoinMarketItem[]
   | GrowThePieBlockspaceData
   | GrowThePieLaunchDates
+  | L2beatResponse
 >
 
 export type StatsBoxState = ValueOrError<string>

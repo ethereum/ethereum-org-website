@@ -6,6 +6,7 @@ import type {
   GrowThePieBlockspaceData,
   GrowThePieLaunchDates,
   GrowThePieRawDataItem,
+  L2beatResponse,
   RSSItem,
 } from "@/lib/types"
 import type { CommunityEvent } from "@/lib/interfaces"
@@ -217,4 +218,18 @@ export const extractGrowThePieMaster = (
     | undefined
 
   return dataItem && "value" in dataItem ? dataItem.value : {}
+}
+
+/**
+ * Extracts L2beat scaling summary data.
+ */
+export const extractL2beatData = (
+  data: ExternalDataMap | null
+): L2beatResponse | null => {
+  const dataItem = data?.["l2beatData"] as
+    | { value: L2beatResponse }
+    | { error: string }
+    | undefined
+
+  return dataItem && "value" in dataItem ? dataItem.value : null
 }
