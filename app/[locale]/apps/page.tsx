@@ -20,14 +20,12 @@ import {
   getHighlightedApps,
 } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { extractCommunityPicks } from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { appsCategories } from "@/data/apps/categories"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
@@ -37,31 +35,23 @@ import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 import AppsJsonLD from "./page-jsonld"
 
-import { fetchCommunityPicks } from "@/lib/api/fetchCommunityPicks"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [["communityPicks", fetchCommunityPicks]],
-  REVALIDATE_TIME * 1000
-)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [communityPicks] = await loadData()
+  // Fetch daily data (apps and community picks) with 24-hour revalidation
+  const dailyData = await getExternalData(["appsData", "communityPicks"], 86400)
 
-  // Fetch apps data with 24-hour revalidation
-  const appsDataRaw = await getExternalData(["appsData"], 86400)
-  const appsData = extractAppsData(
-    appsDataRaw?.appsData as
-      | { value: Record<string, unknown> }
-      | { error: string }
-      | undefined
-  )
+  // Extract apps data
+  const appsDataRaw = dailyData?.appsData as
+    | { value: Record<string, unknown> }
+    | { error: string }
+    | undefined
+  const appsData = extractAppsData(appsDataRaw)
+
+  // Extract community picks
+  const communityPicks = extractCommunityPicks(dailyData)
 
   // Get 3 random highlighted apps
   const highlightedApps = getHighlightedApps(appsData, 3)

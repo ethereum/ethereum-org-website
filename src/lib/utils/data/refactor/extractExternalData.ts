@@ -1,4 +1,5 @@
 import type {
+  CommunityPick,
   ExternalDataReturnData,
   GrowThePieRawDataItem,
   RSSItem,
@@ -159,4 +160,13 @@ export const extractRSSItems = (
  */
 export const extractRSSFeeds = (data: ExternalDataMap | null): RSSItem[][] => {
   return extractArray<RSSItem[]>(data, "blogFeeds")
+}
+
+/**
+ * Extracts community picks array.
+ */
+export const extractCommunityPicks = (
+  data: ExternalDataMap | null
+): CommunityPick[] => {
+  return extractArray<CommunityPick>(data, "communityPicks")
 }

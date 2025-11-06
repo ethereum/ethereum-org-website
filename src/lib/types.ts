@@ -593,6 +593,7 @@ export type ExternalDataReturnData = ValueOrError<
   | RSSItem[][]
   | Record<AppCategory, AppData[]>
   | GrowThePieRawDataItem[]
+  | CommunityPick[]
 >
 
 export type StatsBoxState = ValueOrError<string>

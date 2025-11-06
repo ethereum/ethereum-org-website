@@ -3,6 +3,7 @@ import { fetchAttestantPosts } from "@/lib/api/refactor/fetchAttestantPosts"
 import { fetchBeaconchainEpoch } from "@/lib/api/refactor/fetchBeaconchainEpoch"
 import { fetchBeaconchainEthstore } from "@/lib/api/refactor/fetchBeaconchainEthstore"
 import { fetchCalendarEvents } from "@/lib/api/refactor/fetchCalendarEvents"
+import { fetchCommunityPicks } from "@/lib/api/refactor/fetchCommunityPicks"
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/refactor/fetchGrowThePie"
 import { fetchBlogFeeds } from "@/lib/api/refactor/fetchRSS"
@@ -65,5 +66,10 @@ export const externalServicesDaily: ExternalService[] = [
     name: "Apps - Google Sheets",
     key: "appsData",
     function: fetchApps,
+  },
+  {
+    name: "Community Picks",
+    key: "communityPicks",
+    function: fetchCommunityPicks,
   },
 ]
