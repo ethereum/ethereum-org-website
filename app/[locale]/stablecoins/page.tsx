@@ -32,16 +32,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { extractStablecoinsData } from "@/lib/utils/data/refactor/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { stablecoins } from "./data"
 import StablecoinsPageJsonLD from "./page-jsonld"
 
-import { fetchEthereumStablecoinsData } from "@/lib/api/stablecoinsData"
 import sparkfiImg from "@/public/images/dapps/sparkfi.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -59,14 +57,6 @@ import visaImg from "@/public/images/stablecoins/tools/visa.png"
 import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 import usdsLargeImg from "@/public/images/stablecoins/usds-large.png"
 
-type CoinGeckoCoinMarketResponse = Array<{
-  id: string
-  name: string
-  market_cap: number
-  image: string
-  symbol: string
-}>
-
 export type CoinDetails = {
   name: string
   marketCap: string
@@ -77,8 +67,6 @@ export type CoinDetails = {
   symbol: string
 }
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const MIN_MARKET_CAP_USD = 500_000
 
 const Section = ({
@@ -86,11 +74,6 @@ const Section = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <section className={cn("w-full px-8 py-4", className)} {...props} />
-)
-
-const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
-  [["ethereumStablecoinsData", fetchEthereumStablecoinsData]],
-  REVALIDATE_TIME * 1000
 )
 
 async function Page({ params }: { params: PageParams }) {
@@ -105,13 +88,15 @@ async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 
-  let marketsHasError = false // TODO: Implement error handling
+  // Fetch hourly data (stablecoins data) with 1-hour revalidation
+  const hourlyData = await getExternalData(["stablecoinsData"], 3600)
+  const stablecoinsData = extractStablecoinsData(hourlyData)
+
+  let marketsHasError = false
   const coinDetails: CoinDetails[] = []
 
   try {
     marketsHasError = false
-
-    const [stablecoinsData] = await loadData()
 
     const ethereumStablecoinData = stablecoins
       .map(({ id, ...rest }) => {
@@ -139,7 +124,7 @@ async function Page({ params }: { params: PageParams }) {
     coinDetails.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
-    marketsHasError = true // TODO: Handle error state
+    marketsHasError = true
   }
 
   const heroContent = {

@@ -1,4 +1,5 @@
 import type {
+  CoinGeckoCoinMarketItem,
   CommunityPick,
   ExternalDataReturnData,
   GHIssue,
@@ -177,4 +178,13 @@ export const extractCommunityPicks = (
  */
 export const extractGFIssues = (data: ExternalDataMap | null): GHIssue[] => {
   return extractArray<GHIssue>(data, "gfissues")
+}
+
+/**
+ * Extracts stablecoins data array from CoinGecko.
+ */
+export const extractStablecoinsData = (
+  data: ExternalDataMap | null
+): CoinGeckoCoinMarketItem[] => {
+  return extractArray<CoinGeckoCoinMarketItem>(data, "stablecoinsData")
 }

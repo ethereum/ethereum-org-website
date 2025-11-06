@@ -586,6 +586,14 @@ export type GrowThePieRawDataItem = {
   value: number
 }
 
+export type CoinGeckoCoinMarketItem = {
+  id: string
+  name: string
+  market_cap: number
+  image: string
+  symbol: string
+}
+
 export type ExternalDataReturnData = ValueOrError<
   | number
   | CommunityEvent[]
@@ -595,6 +603,7 @@ export type ExternalDataReturnData = ValueOrError<
   | GrowThePieRawDataItem[]
   | CommunityPick[]
   | GHIssue[]
+  | CoinGeckoCoinMarketItem[]
 >
 
 export type StatsBoxState = ValueOrError<string>
