@@ -14,6 +14,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import {
   extractGrowThePieBlockspace,
   extractGrowThePieData,
+  extractGrowThePieMaster,
   extractValue,
 } from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
@@ -30,17 +31,13 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
-import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [
-    ["growThePieMasterData", fetchGrowThePieMaster],
-    ["l2beatData", fetchL2beat],
-  ],
+  [["l2beatData", fetchL2beat]],
   REVALIDATE_TIME * 1000
 )
 
@@ -49,16 +46,24 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [growThePieMasterData, l2beatData] = await loadData()
+  const [l2beatData] = await loadData()
 
-  // Fetch hourly data (growThePie, ethereum market cap, and blockspace data) with 1-hour revalidation
+  // Fetch hourly data (growThePie, ethereum market cap, blockspace data, and master data) with 1-hour revalidation
   const hourlyData = await getExternalData(
-    ["growThePie", "ethereumMarketcap", "growThePieBlockspace"],
+    [
+      "growThePie",
+      "ethereumMarketcap",
+      "growThePieBlockspace",
+      "growThePieMaster",
+    ],
     3600
   )
 
   // Extract blockspace data
   const growThePieBlockspaceData = extractGrowThePieBlockspace(hourlyData)
+
+  // Extract master data (launch dates)
+  const growThePieMasterData = extractGrowThePieMaster(hourlyData)
 
   // Extract and process growThePie data
   const growThePieDataRaw = extractGrowThePieData(hourlyData)
@@ -84,9 +89,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         activeAddresses: growThePieData.activeAddresses[network.growthepieID],
         blockspaceData: growThePieBlockspaceData[network.growthepieID] || null,
         launchDate:
-          (growThePieMasterData?.launchDates || {})[
-            network.growthepieID.replace(/_/g, "-")
-          ] || null,
+          growThePieMasterData[network.growthepieID.replace(/_/g, "-")] || null,
         walletsSupported: walletsData
           .filter((wallet) =>
             wallet.supported_chains.includes(network.chainName)

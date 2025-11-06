@@ -605,6 +605,13 @@ export type GrowThePieBlockspaceData = Record<
   }
 >
 
+/**
+ * GrowThePie launch dates mapping.
+ * Keys are network URL identifiers (e.g., "arbitrum", "base", "zksync-era").
+ * Values are launch date strings in ISO format (YYYY-MM-DD).
+ */
+export type GrowThePieLaunchDates = Record<string, string>
+
 export type ExternalDataReturnData = ValueOrError<
   | number
   | CommunityEvent[]
@@ -616,6 +623,7 @@ export type ExternalDataReturnData = ValueOrError<
   | GHIssue[]
   | CoinGeckoCoinMarketItem[]
   | GrowThePieBlockspaceData
+  | GrowThePieLaunchDates
 >
 
 export type StatsBoxState = ValueOrError<string>

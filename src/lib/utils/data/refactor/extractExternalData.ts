@@ -4,6 +4,7 @@ import type {
   ExternalDataReturnData,
   GHIssue,
   GrowThePieBlockspaceData,
+  GrowThePieLaunchDates,
   GrowThePieRawDataItem,
   RSSItem,
 } from "@/lib/types"
@@ -198,6 +199,20 @@ export const extractGrowThePieBlockspace = (
 ): GrowThePieBlockspaceData => {
   const dataItem = data?.["growThePieBlockspace"] as
     | { value: GrowThePieBlockspaceData }
+    | { error: string }
+    | undefined
+
+  return dataItem && "value" in dataItem ? dataItem.value : {}
+}
+
+/**
+ * Extracts GrowThePie master data (launch dates).
+ */
+export const extractGrowThePieMaster = (
+  data: ExternalDataMap | null
+): GrowThePieLaunchDates => {
+  const dataItem = data?.["growThePieMaster"] as
+    | { value: GrowThePieLaunchDates }
     | { error: string }
     | undefined
 
