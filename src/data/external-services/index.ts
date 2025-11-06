@@ -1,6 +1,7 @@
 import { fetchApps } from "@/lib/api/refactor/fetchApps"
 import { fetchAttestantPosts } from "@/lib/api/refactor/fetchAttestantPosts"
 import { fetchBeaconchainEpoch } from "@/lib/api/refactor/fetchBeaconchainEpoch"
+import { fetchBeaconchainEthstore } from "@/lib/api/refactor/fetchBeaconchainEthstore"
 import { fetchCalendarEvents } from "@/lib/api/refactor/fetchCalendarEvents"
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/refactor/fetchGrowThePie"
@@ -20,6 +21,11 @@ export const externalServicesHourly: ExternalService[] = [
     name: "Beaconcha.in epoch",
     key: "beaconchainEpoch",
     function: fetchBeaconchainEpoch,
+  },
+  {
+    name: "Beaconcha.in ethstore (APR)",
+    key: "beaconchainApr",
+    function: fetchBeaconchainEthstore,
   },
   {
     name: "ETH Price - CoinGecko",

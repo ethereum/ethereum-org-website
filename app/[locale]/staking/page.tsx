@@ -10,61 +10,53 @@ import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import {
+  extractNestedValue,
+  extractValue,
+} from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
-
-import { fetchBeaconchainEthstore } from "@/lib/api/fetchBeaconchainEthstore"
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [["beaconchainApr", fetchBeaconchainEthstore]],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [apr] = await loadData()
+  // Fetch hourly data (beaconchain epoch and APR) with 1-hour revalidation
+  const hourlyData = await getExternalData(
+    ["beaconchainEpoch", "beaconchainApr"],
+    3600
+  )
 
-  // Fetch hourly data (beaconchain epoch) with 1-hour revalidation
-  const hourlyData = await getExternalData(["beaconchainEpoch"], 3600)
-  const beaconchainEpoch = hourlyData?.beaconchainEpoch as
-    | {
-        totalEthStaked?: { value: number; timestamp: number }
-        validatorscount?: { value: number; timestamp: number }
-      }
-    | undefined
+  // Extract beaconchain epoch data
+  const totalEthStaked = extractNestedValue(
+    hourlyData,
+    "beaconchainEpoch",
+    "totalEthStaked",
+    0
+  )
+  const validatorscount = extractNestedValue(
+    hourlyData,
+    "beaconchainEpoch",
+    "validatorscount",
+    0
+  )
 
-  const totalEthStakedData = beaconchainEpoch?.totalEthStaked ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
-  const validatorscountData = beaconchainEpoch?.validatorscount ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
+  // Extract APR data
+  const apr = extractValue(hourlyData, "beaconchainApr", 0)
 
   const data: StakingStatsData = {
     totalEthStaked:
-      "value" in totalEthStakedData &&
-      typeof totalEthStakedData.value === "number"
-        ? totalEthStakedData.value
+      "value" in totalEthStaked && typeof totalEthStaked.value === "number"
+        ? totalEthStaked.value
         : 0,
     validatorscount:
-      "value" in validatorscountData &&
-      typeof validatorscountData.value === "number"
-        ? validatorscountData.value
+      "value" in validatorscount && typeof validatorscount.value === "number"
+        ? validatorscount.value
         : 0,
     apr: "value" in apr && typeof apr.value === "number" ? apr.value : 0,
   }
