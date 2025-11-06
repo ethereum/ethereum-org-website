@@ -18,7 +18,7 @@ import { ATTESTANT_BLOG, BLOG_FEEDS, RSS_DISPLAY_COUNT } from "@/lib/constants"
  * @param url - The URL to fetch the XML data from.
  * @returns A promise that resolves to the parsed XML data as a JSON object.
  */
-const fetchXml = async (url: string) => {
+export const fetchXml = async (url: string) => {
   try {
     const response = await fetch(url, {
       headers: { Cookie: "", DNT: "1" }, // Empty cookie header and do-not-track

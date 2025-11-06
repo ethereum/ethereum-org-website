@@ -1,6 +1,6 @@
 import type { ExternalDataReturnData, HTMLResult, RSSItem } from "@/lib/types"
 
-import { fetchXml } from "../fetchRSS"
+import { fetchXml } from "./fetchRSS"
 
 export const fetchAttestantPosts =
   async (): Promise<ExternalDataReturnData> => {
