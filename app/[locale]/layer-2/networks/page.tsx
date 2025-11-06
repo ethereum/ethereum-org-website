@@ -11,6 +11,10 @@ import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import {
+  extractGrowThePieData,
+  extractValue,
+} from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -25,7 +29,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
-import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
@@ -35,7 +38,6 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
-    ["ethereumMarketcapData", fetchEthereumMarketcap],
     ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
     ["growThePieMasterData", fetchGrowThePieMaster],
     ["l2beatData", fetchL2beat],
@@ -48,37 +50,28 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [
-    ethereumMarketcapData,
-    growThePieBlockspaceData,
-    growThePieMasterData,
-    l2beatData,
-  ] = await loadData()
+  const [growThePieBlockspaceData, growThePieMasterData, l2beatData] =
+    await loadData()
 
-  // Fetch hourly data (growThePie) with 1-hour revalidation
-  const hourlyData = await getExternalData(["growThePie"], 3600)
+  // Fetch hourly data (growThePie and ethereum market cap) with 1-hour revalidation
+  const hourlyData = await getExternalData(
+    ["growThePie", "ethereumMarketcap"],
+    3600
+  )
 
-  // Extract and process growThePie data from hourly data
-  const growThePieDataRaw = hourlyData?.growThePie as
-    | {
-        value: Array<{
-          metric_key: string
-          origin_key: string
-          date: string
-          value: number
-        }>
+  // Extract and process growThePie data
+  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieData = growThePieDataRaw
+    ? processGrowThePieData(growThePieDataRaw)
+    : {
+        txCount: { value: 0, timestamp: Date.now() },
+        txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+        dailyTxCosts: {} as Record<string, number | undefined>,
+        activeAddresses: {} as Record<string, number | undefined>,
       }
-    | { error: string }
-    | undefined
-  const growThePieData =
-    growThePieDataRaw && "value" in growThePieDataRaw
-      ? processGrowThePieData(growThePieDataRaw.value)
-      : {
-          txCount: { value: 0, timestamp: Date.now() },
-          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
-          dailyTxCosts: {} as Record<string, number | undefined>,
-          activeAddresses: {} as Record<string, number | undefined>,
-        }
+
+  // Extract Ethereum market cap
+  const ethereumMarketcapData = extractValue(hourlyData, "ethereumMarketcap", 0)
 
   const layer2DataCompiled = layer2Data
     .map((network) => {
@@ -135,7 +128,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     mainnetData: {
       ...ethereumNetworkData,
       txCosts: growThePieData.dailyTxCosts.ethereum,
-      tvl: "value" in ethereumMarketcapData ? ethereumMarketcapData.value : 0,
+      tvl:
+        "value" in ethereumMarketcapData &&
+        typeof ethereumMarketcapData.value === "number"
+          ? ethereumMarketcapData.value
+          : 0,
       walletsSupported: walletsData
         .filter((wallet) =>
           wallet.supported_chains.includes("Ethereum Mainnet")
