@@ -94,7 +94,7 @@ module.exports = (phase, { defaultConfig }) => {
         },
         {
           protocol: "https",
-          hostname: "avatars.githubusercontent.com",
+          hostname: "avatars*.githubusercontent.com",
         },
         {
           protocol: "https",

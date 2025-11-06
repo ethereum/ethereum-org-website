@@ -1,6 +1,7 @@
 import type {
   CommunityPick,
   ExternalDataReturnData,
+  GHIssue,
   GrowThePieRawDataItem,
   RSSItem,
 } from "@/lib/types"
@@ -169,4 +170,11 @@ export const extractCommunityPicks = (
   data: ExternalDataMap | null
 ): CommunityPick[] => {
   return extractArray<CommunityPick>(data, "communityPicks")
+}
+
+/**
+ * Extracts GitHub good first issues array.
+ */
+export const extractGFIssues = (data: ExternalDataMap | null): GHIssue[] => {
+  return extractArray<GHIssue>(data, "gfissues")
 }
