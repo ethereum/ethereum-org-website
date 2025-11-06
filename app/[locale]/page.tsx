@@ -62,6 +62,14 @@ import WindowBox from "@/components/WindowBox"
 
 import { extractAppsData, parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
+import {
+  extractCalendarEventsFormatted,
+  extractGrowThePieData,
+  extractNestedValue,
+  extractRSSFeeds,
+  extractRSSItems,
+  extractValue,
+} from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
@@ -140,50 +148,26 @@ const Page = async ({ params }: { params: PageParams }) => {
     3600
   )
 
-  // Extract and process growThePie data from hourly data
-  const growThePieDataRaw = hourlyData?.growThePie as
-    | {
-        value: Array<{
-          metric_key: string
-          origin_key: string
-          date: string
-          value: number
-        }>
-      }
-    | { error: string }
-    | undefined
-  const growThePieData =
-    growThePieDataRaw && "value" in growThePieDataRaw
-      ? processGrowThePieData(growThePieDataRaw.value)
-      : {
-          txCount: { value: 0, timestamp: Date.now() },
-          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
-          dailyTxCosts: {} as Record<string, number | undefined>,
-          activeAddresses: {} as Record<string, number | undefined>,
-        }
-
   // Extract hourly metrics from external data
-  const ethPrice = (hourlyData?.ethPrice as
-    | { value: number; timestamp: number }
-    | undefined) ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
-  const totalValueLocked = (hourlyData?.totalValueLocked as
-    | { value: number; timestamp: number }
-    | undefined) ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
-  const beaconchainEpoch = hourlyData?.beaconchainEpoch as
-    | {
-        totalEthStaked?: { value: number; timestamp: number }
+  const ethPrice = extractValue(hourlyData, "ethPrice", 0)
+  const totalValueLocked = extractValue(hourlyData, "totalValueLocked", 0)
+  const totalEthStaked = extractNestedValue(
+    hourlyData,
+    "beaconchainEpoch",
+    "totalEthStaked",
+    0
+  )
+
+  // Extract and process growThePie data
+  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieData = growThePieDataRaw
+    ? processGrowThePieData(growThePieDataRaw)
+    : {
+        txCount: { value: 0, timestamp: Date.now() },
+        txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+        dailyTxCosts: {} as Record<string, number | undefined>,
+        activeAddresses: {} as Record<string, number | undefined>,
       }
-    | undefined
-  const totalEthStaked = beaconchainEpoch?.totalEthStaked ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
 
   // Fetch daily data (calendar events, attestant posts, and blog feeds) with 24-hour revalidation
   const dailyData = await getExternalData(
@@ -191,64 +175,16 @@ const Page = async ({ params }: { params: PageParams }) => {
     86400
   )
 
-  const calendarData = dailyData?.calendarEvents as
-    | {
-        pastEvents?: {
-          value: Array<{ date: string; title: string; calendarLink: string }>
-        }
-        upcomingEvents?: {
-          value: Array<{ date: string; title: string; calendarLink: string }>
-        }
-      }
-    | undefined
+  // Extract calendar events
+  const communityEvents = extractCalendarEventsFormatted(dailyData)
 
-  const communityEvents = {
-    upcomingEventData: calendarData?.upcomingEvents?.value ?? [],
-    pastEventData: calendarData?.pastEvents?.value ?? [],
-  }
+  // Extract attestant posts
+  const attestantPosts = extractRSSItems(dailyData, "attestantPosts")
 
-  // Extract attestant posts from daily data
-  const attestantPostsData = dailyData?.attestantPosts as
-    | {
-        value: Array<{
-          title: string
-          link: string
-          content: string
-          source: string
-          sourceUrl: string
-          sourceFeedUrl: string
-          imgSrc?: string
-          pubDate: string
-        }>
-      }
-    | { error: string }
-    | undefined
-  const attestantPosts =
-    attestantPostsData && "value" in attestantPostsData
-      ? attestantPostsData.value
-      : []
+  // Extract blog feeds
+  const xmlBlogs = extractRSSFeeds(dailyData)
 
-  // Extract blog feeds from daily data
-  const blogFeedsData = dailyData?.blogFeeds as
-    | {
-        value: Array<
-          Array<{
-            title: string
-            link: string
-            source: string
-            sourceUrl: string
-            sourceFeedUrl: string
-            imgSrc?: string
-            pubDate: string
-          }>
-        >
-      }
-    | { error: string }
-    | undefined
-  const xmlBlogs =
-    blogFeedsData && "value" in blogFeedsData ? blogFeedsData.value : []
-
-  // Extract apps from daily data
+  // Extract apps
   const appsDataRaw = dailyData?.appsData as
     | { value: Record<string, unknown> }
     | { error: string }
