@@ -662,6 +662,19 @@ export interface L2beatResponse {
   projects: Record<string, L2beatProject>
 }
 
+/**
+ * GitHub repository data for a framework.
+ */
+export interface FrameworkRepoData {
+  starCount: number
+  languages: string[]
+}
+
+/**
+ * GitHub data for all frameworks, keyed by framework ID.
+ */
+export type FrameworkGitHubData = Record<string, FrameworkRepoData>
+
 export type ExternalDataReturnData = ValueOrError<
   | number
   | CommunityEvent[]
@@ -675,6 +688,7 @@ export type ExternalDataReturnData = ValueOrError<
   | GrowThePieBlockspaceData
   | GrowThePieLaunchDates
   | L2beatResponse
+  | FrameworkGitHubData
 >
 
 export type StatsBoxState = ValueOrError<string>

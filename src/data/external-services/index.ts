@@ -7,6 +7,7 @@ import { fetchCommunityPicks } from "@/lib/api/refactor/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "@/lib/api/refactor/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/refactor/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
+import { fetchFrameworkGitHubData } from "@/lib/api/refactor/fetchFrameworkGitHubData"
 import { fetchGFIs } from "@/lib/api/refactor/fetchGFIs"
 import { fetchGrowThePie } from "@/lib/api/refactor/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/refactor/fetchGrowThePieBlockspace"
@@ -113,5 +114,10 @@ export const externalServicesDaily: ExternalService[] = [
     name: "GitHub Good First Issues",
     key: "gfissues",
     function: fetchGFIs,
+  },
+  {
+    name: "Framework GitHub Data",
+    key: "frameworkGitHubData",
+    function: fetchFrameworkGitHubData,
   },
 ]

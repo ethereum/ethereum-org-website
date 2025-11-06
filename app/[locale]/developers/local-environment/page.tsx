@@ -10,25 +10,36 @@ import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { extractFrameworkGitHubData } from "@/lib/utils/data/refactor/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { frameworksList } from "@/data/frameworks/frameworks"
+
 import LocalEnvironmentPage from "./_components/local-environment"
 import LocalEnvironmentJsonLD from "./page-jsonld"
-
-import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
-
-const loadData = dataLoader([
-  ["frameworksListData", getLocalEnvironmentFrameworkData],
-])
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [frameworksListData] = await loadData()
+  // Fetch daily data (framework GitHub data) with 24-hour revalidation
+  const dailyData = await getExternalData(["frameworkGitHubData"], 86400)
+
+  // Extract framework GitHub data
+  const frameworkGitHubData = extractFrameworkGitHubData(dailyData)
+
+  // Combine static framework data with GitHub data
+  const frameworksListData = frameworksList.map((framework) => {
+    const githubData = frameworkGitHubData?.[framework.id]
+    return {
+      ...framework,
+      starCount: githubData?.starCount,
+      languages: githubData?.languages?.slice(0, 2),
+    }
+  })
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })

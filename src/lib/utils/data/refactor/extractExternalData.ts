@@ -2,6 +2,7 @@ import type {
   CoinGeckoCoinMarketItem,
   CommunityPick,
   ExternalDataReturnData,
+  FrameworkGitHubData,
   GHIssue,
   GrowThePieBlockspaceData,
   GrowThePieLaunchDates,
@@ -228,6 +229,20 @@ export const extractL2beatData = (
 ): L2beatResponse | null => {
   const dataItem = data?.["l2beatData"] as
     | { value: L2beatResponse }
+    | { error: string }
+    | undefined
+
+  return dataItem && "value" in dataItem ? dataItem.value : null
+}
+
+/**
+ * Extracts framework GitHub data.
+ */
+export const extractFrameworkGitHubData = (
+  data: ExternalDataMap | null
+): FrameworkGitHubData | null => {
+  const dataItem = data?.["frameworkGitHubData"] as
+    | { value: FrameworkGitHubData }
     | { error: string }
     | undefined
 
