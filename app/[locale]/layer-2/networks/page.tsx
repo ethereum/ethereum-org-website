@@ -11,6 +11,8 @@ import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -24,7 +26,6 @@ import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
@@ -35,7 +36,6 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const loadData = dataLoader(
   [
     ["ethereumMarketcapData", fetchEthereumMarketcap],
-    ["growThePieData", fetchGrowThePie],
     ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
     ["growThePieMasterData", fetchGrowThePieMaster],
     ["l2beatData", fetchL2beat],
@@ -50,11 +50,35 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const [
     ethereumMarketcapData,
-    growThePieData,
     growThePieBlockspaceData,
     growThePieMasterData,
     l2beatData,
   ] = await loadData()
+
+  // Fetch hourly data (growThePie) with 1-hour revalidation
+  const hourlyData = await getExternalData(["growThePie"], 3600)
+
+  // Extract and process growThePie data from hourly data
+  const growThePieDataRaw = hourlyData?.growThePie as
+    | {
+        value: Array<{
+          metric_key: string
+          origin_key: string
+          date: string
+          value: number
+        }>
+      }
+    | { error: string }
+    | undefined
+  const growThePieData =
+    growThePieDataRaw && "value" in growThePieDataRaw
+      ? processGrowThePieData(growThePieDataRaw.value)
+      : {
+          txCount: { value: 0, timestamp: Date.now() },
+          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+          dailyTxCosts: {} as Record<string, number | undefined>,
+          activeAddresses: {} as Record<string, number | undefined>,
+        }
 
   const layer2DataCompiled = layer2Data
     .map((network) => {

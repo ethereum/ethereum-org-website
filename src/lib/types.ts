@@ -570,25 +570,32 @@ export type DefiLlamaTVLResponse = {
   totalLiquidityUSD: number
 }[]
 
+export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
+
+export type GrowThePieData = {
+  txCount: { value: number; timestamp: number }
+  txCostsMedianUsd: { value: number; timestamp: number }
+  dailyTxCosts: Record<string, number | undefined>
+  activeAddresses: Record<string, number | undefined>
+}
+
+export type GrowThePieRawDataItem = {
+  metric_key: string
+  origin_key: string
+  date: string
+  value: number
+}
+
 export type ExternalDataReturnData = ValueOrError<
   | number
   | CommunityEvent[]
   | RSSItem[]
   | RSSItem[][]
   | Record<AppCategory, AppData[]>
+  | GrowThePieRawDataItem[]
 >
 
 export type StatsBoxState = ValueOrError<string>
-
-export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
-
-export type GrowThePieData = Record<
-  GrowThePieMetricKey,
-  ExternalDataReturnData
-> & {
-  dailyTxCosts: Record<string, number | undefined>
-  activeAddresses: Record<string, number | undefined>
-}
 
 export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD

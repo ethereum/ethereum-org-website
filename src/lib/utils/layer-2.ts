@@ -13,16 +13,11 @@ const TXCOSTS_MEDIAN_USD = "txcosts_median_usd"
 const TXCOUNT = "txcount"
 const ACTIVE_ADDRESSES = "aa_last7d"
 
-export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
-  const url = "https://api.growthepie.com/v1/fundamentals_7d.json"
-
-  const response = await fetch(url)
-  if (!response.ok) {
-    console.log(response.status, response.statusText)
-    throw new Error("Failed to fetch growthepie data")
-  }
-  const data: DataItem[] = await response.json()
-
+/**
+ * Processes raw GrowThePie API data into structured format.
+ * Handles filtering, date resolution, weighted averages, and data aggregation.
+ */
+export const processGrowThePieData = (data: DataItem[]): GrowThePieData => {
   // Filter data to only include the metrics we need
   const filteredData = data.filter((item) =>
     [TXCOSTS_MEDIAN_USD, TXCOUNT, ACTIVE_ADDRESSES].includes(item.metric_key)

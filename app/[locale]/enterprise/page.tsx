@@ -51,6 +51,7 @@ import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -69,7 +70,6 @@ import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -97,10 +97,7 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
 })
 
 const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
-  ],
+  [["ethereumStablecoins", fetchEthereumStablecoinsMcap]],
   BASE_TIME_UNIT * 1000
 )
 
@@ -109,13 +106,36 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  const [{ txCount, txCostsMedianUsd }, stablecoinMarketCap] = await loadData()
+  const [stablecoinMarketCap] = await loadData()
 
-  // Fetch hourly data (ethPrice and beaconchainEpoch) with 1-hour revalidation
+  // Fetch hourly data (ethPrice, beaconchainEpoch, and growThePie) with 1-hour revalidation
   const hourlyData = await getExternalData(
-    ["ethPrice", "beaconchainEpoch"],
+    ["ethPrice", "beaconchainEpoch", "growThePie"],
     3600
   )
+
+  // Extract and process growThePie data from hourly data
+  const growThePieDataRaw = hourlyData?.growThePie as
+    | {
+        value: Array<{
+          metric_key: string
+          origin_key: string
+          date: string
+          value: number
+        }>
+      }
+    | { error: string }
+    | undefined
+  const growThePieData =
+    growThePieDataRaw && "value" in growThePieDataRaw
+      ? processGrowThePieData(growThePieDataRaw.value)
+      : {
+          txCount: { value: 0, timestamp: Date.now() },
+          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+          dailyTxCosts: {} as Record<string, number | undefined>,
+          activeAddresses: {} as Record<string, number | undefined>,
+        }
+  const { txCount, txCostsMedianUsd } = growThePieData
 
   // Extract hourly metrics from external data
   const ethPrice = (hourlyData?.ethPrice as

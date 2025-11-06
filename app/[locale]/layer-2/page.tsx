@@ -11,6 +11,8 @@ import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -23,17 +25,13 @@ import Layer2Page from "./_components/layer-2"
 import Layer2PageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["l2beatData", fetchL2beat],
-  ],
+  [["l2beatData", fetchL2beat]],
   REVALIDATE_TIME * 1000
 )
 
@@ -42,7 +40,32 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [growThePieData, l2beatData] = await loadData()
+  const [l2beatData] = await loadData()
+
+  // Fetch hourly data (growThePie) with 1-hour revalidation
+  const hourlyData = await getExternalData(["growThePie"], 3600)
+
+  // Extract and process growThePie data from hourly data
+  const growThePieDataRaw = hourlyData?.growThePie as
+    | {
+        value: Array<{
+          metric_key: string
+          origin_key: string
+          date: string
+          value: number
+        }>
+      }
+    | { error: string }
+    | undefined
+  const growThePieData =
+    growThePieDataRaw && "value" in growThePieDataRaw
+      ? processGrowThePieData(growThePieDataRaw.value)
+      : {
+          txCount: { value: 0, timestamp: Date.now() },
+          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+          dailyTxCosts: {} as Record<string, number | undefined>,
+          activeAddresses: {} as Record<string, number | undefined>,
+        }
 
   const getRandomL2s = () => {
     let randomL2s = layer2Data.filter(

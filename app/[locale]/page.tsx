@@ -62,17 +62,16 @@ import WindowBox from "@/components/WindowBox"
 
 import { extractAppsData, parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
+import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
 
 import {
-  BASE_TIME_UNIT,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   DEFAULT_LOCALE,
@@ -86,7 +85,6 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(
@@ -123,13 +121,7 @@ const ValuesMarquee = dynamic(
   }
 )
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
-  REVALIDATE_TIME * 1000
-)
+// Hourly revalidation for growThePie data
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
@@ -142,13 +134,33 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
-  const [growThePieData] = await loadData()
-
   // Fetch hourly data with 1-hour revalidation
   const hourlyData = await getExternalData(
-    ["ethPrice", "beaconchainEpoch", "totalValueLocked"],
+    ["ethPrice", "beaconchainEpoch", "totalValueLocked", "growThePie"],
     3600
   )
+
+  // Extract and process growThePie data from hourly data
+  const growThePieDataRaw = hourlyData?.growThePie as
+    | {
+        value: Array<{
+          metric_key: string
+          origin_key: string
+          date: string
+          value: number
+        }>
+      }
+    | { error: string }
+    | undefined
+  const growThePieData =
+    growThePieDataRaw && "value" in growThePieDataRaw
+      ? processGrowThePieData(growThePieDataRaw.value)
+      : {
+          txCount: { value: 0, timestamp: Date.now() },
+          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+          dailyTxCosts: {} as Record<string, number | undefined>,
+          activeAddresses: {} as Record<string, number | undefined>,
+        }
 
   // Extract hourly metrics from external data
   const ethPrice = (hourlyData?.ethPrice as

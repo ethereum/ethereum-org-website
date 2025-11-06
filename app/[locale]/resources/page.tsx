@@ -16,35 +16,49 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const EVENT_CATEGORY = "dashboard"
-
-const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
-  // Load data
-  const [growThePieData] = await loadData()
+  // Fetch hourly data (growThePie) with 1-hour revalidation
+  const hourlyData = await getExternalData(["growThePie"], 3600)
+
+  // Extract and process growThePie data from hourly data
+  const growThePieDataRaw = hourlyData?.growThePie as
+    | {
+        value: Array<{
+          metric_key: string
+          origin_key: string
+          date: string
+          value: number
+        }>
+      }
+    | { error: string }
+    | undefined
+  const growThePieData =
+    growThePieDataRaw && "value" in growThePieDataRaw
+      ? processGrowThePieData(growThePieDataRaw.value)
+      : {
+          txCount: { value: 0, timestamp: Date.now() },
+          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+          dailyTxCosts: {} as Record<string, number | undefined>,
+          activeAddresses: {} as Record<string, number | undefined>,
+        }
   const { txCostsMedianUsd } = growThePieData
 
   const resourceSections = await getResources({ txCostsMedianUsd })
