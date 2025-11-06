@@ -1,6 +1,12 @@
 import type { NetworkUpgradeData } from "@/lib/types"
 
 const networkUpgradeSummaryData: NetworkUpgradeData = {
+  fusaka: {
+    dateTimeAsString: "2025-12-03T21:49:11.000Z",
+    epochNumber: 411392,
+    slotNumber: 411392 * 32,
+    isPending: true,
+  },
   pectra: {
     dateTimeAsString: "2025-05-07T10:05:11.000Z",
     ethPriceInUSD: 2222,
