@@ -594,6 +594,17 @@ export type CoinGeckoCoinMarketItem = {
   symbol: string
 }
 
+export type GrowThePieBlockspaceData = Record<
+  string,
+  {
+    nft: number
+    defi: number
+    social: number
+    token_transfers: number
+    unlabeled: number
+  }
+>
+
 export type ExternalDataReturnData = ValueOrError<
   | number
   | CommunityEvent[]
@@ -604,6 +615,7 @@ export type ExternalDataReturnData = ValueOrError<
   | CommunityPick[]
   | GHIssue[]
   | CoinGeckoCoinMarketItem[]
+  | GrowThePieBlockspaceData
 >
 
 export type StatsBoxState = ValueOrError<string>

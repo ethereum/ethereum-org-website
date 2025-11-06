@@ -3,6 +3,7 @@ import type {
   CommunityPick,
   ExternalDataReturnData,
   GHIssue,
+  GrowThePieBlockspaceData,
   GrowThePieRawDataItem,
   RSSItem,
 } from "@/lib/types"
@@ -187,4 +188,18 @@ export const extractStablecoinsData = (
   data: ExternalDataMap | null
 ): CoinGeckoCoinMarketItem[] => {
   return extractArray<CoinGeckoCoinMarketItem>(data, "stablecoinsData")
+}
+
+/**
+ * Extracts GrowThePie blockspace data.
+ */
+export const extractGrowThePieBlockspace = (
+  data: ExternalDataMap | null
+): GrowThePieBlockspaceData => {
+  const dataItem = data?.["growThePieBlockspace"] as
+    | { value: GrowThePieBlockspaceData }
+    | { error: string }
+    | undefined
+
+  return dataItem && "value" in dataItem ? dataItem.value : {}
 }

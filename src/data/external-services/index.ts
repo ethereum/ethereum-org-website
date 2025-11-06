@@ -9,6 +9,7 @@ import { fetchEthereumStablecoinsMcap } from "@/lib/api/refactor/fetchEthereumSt
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
 import { fetchGFIs } from "@/lib/api/refactor/fetchGFIs"
 import { fetchGrowThePie } from "@/lib/api/refactor/fetchGrowThePie"
+import { fetchGrowThePieBlockspace } from "@/lib/api/refactor/fetchGrowThePieBlockspace"
 import { fetchBlogFeeds } from "@/lib/api/refactor/fetchRSS"
 import { fetchStablecoinsData } from "@/lib/api/refactor/fetchStablecoinsData"
 import { fetchTotalValueLocked } from "@/lib/api/refactor/fetchTotalValueLocked"
@@ -56,6 +57,11 @@ export const externalServicesHourly: ExternalService[] = [
     name: "GrowThePie - Transaction Data",
     key: "growThePie",
     function: fetchGrowThePie,
+  },
+  {
+    name: "GrowThePie - Blockspace Data",
+    key: "growThePieBlockspace",
+    function: fetchGrowThePieBlockspace,
   },
   {
     name: "Stablecoins Data - CoinGecko",

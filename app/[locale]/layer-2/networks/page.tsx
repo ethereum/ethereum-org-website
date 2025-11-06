@@ -12,6 +12,7 @@ import I18nProvider from "@/components/I18nProvider"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import {
+  extractGrowThePieBlockspace,
   extractGrowThePieData,
   extractValue,
 } from "@/lib/utils/data/refactor/extractExternalData"
@@ -29,7 +30,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
-import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
@@ -38,7 +38,6 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
-    ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
     ["growThePieMasterData", fetchGrowThePieMaster],
     ["l2beatData", fetchL2beat],
   ],
@@ -50,14 +49,16 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [growThePieBlockspaceData, growThePieMasterData, l2beatData] =
-    await loadData()
+  const [growThePieMasterData, l2beatData] = await loadData()
 
-  // Fetch hourly data (growThePie and ethereum market cap) with 1-hour revalidation
+  // Fetch hourly data (growThePie, ethereum market cap, and blockspace data) with 1-hour revalidation
   const hourlyData = await getExternalData(
-    ["growThePie", "ethereumMarketcap"],
+    ["growThePie", "ethereumMarketcap", "growThePieBlockspace"],
     3600
   )
+
+  // Extract blockspace data
+  const growThePieBlockspaceData = extractGrowThePieBlockspace(hourlyData)
 
   // Extract and process growThePie data
   const growThePieDataRaw = extractGrowThePieData(hourlyData)
@@ -81,8 +82,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         tvl: l2beatData.projects[network.l2beatID].tvs.breakdown.total,
         networkMaturity: networkMaturity(l2beatData.projects[network.l2beatID]),
         activeAddresses: growThePieData.activeAddresses[network.growthepieID],
-        blockspaceData:
-          (growThePieBlockspaceData || {})[network.growthepieID] || null,
+        blockspaceData: growThePieBlockspaceData[network.growthepieID] || null,
         launchDate:
           (growThePieMasterData?.launchDates || {})[
             network.growthepieID.replace(/_/g, "-")
