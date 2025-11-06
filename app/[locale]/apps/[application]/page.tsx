@@ -30,9 +30,9 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
-import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
+import { APP_TAG_VARIANTS, extractAppsData } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -42,19 +42,12 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import AppCard from "../_components/AppCard"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
+// 24 hours revalidation for apps data
 
 const Page = async ({
   params,
@@ -72,8 +65,14 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // const [application] = application
-  const [appsData] = await loadData()
+  // Fetch apps data with 24-hour revalidation
+  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsData = extractAppsData(
+    appsDataRaw?.appsData as
+      | { value: Record<string, unknown> }
+      | { error: string }
+      | undefined
+  )
   const app = Object.values(appsData)
     .flat()
     .find((app) => slugify(app.name) === application)!
@@ -394,7 +393,14 @@ export async function generateMetadata({
 }) {
   const { locale, application } = params
 
-  const [appsData] = await loadData()
+  // Fetch apps data with 24-hour revalidation
+  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsData = extractAppsData(
+    appsDataRaw?.appsData as
+      | { value: Record<string, unknown> }
+      | { error: string }
+      | undefined
+  )
 
   const app = Object.values(appsData)
     .flat()

@@ -571,7 +571,11 @@ export type DefiLlamaTVLResponse = {
 }[]
 
 export type ExternalDataReturnData = ValueOrError<
-  number | CommunityEvent[] | RSSItem[] | RSSItem[][]
+  | number
+  | CommunityEvent[]
+  | RSSItem[]
+  | RSSItem[][]
+  | Record<AppCategory, AppData[]>
 >
 
 export type StatsBoxState = ValueOrError<string>

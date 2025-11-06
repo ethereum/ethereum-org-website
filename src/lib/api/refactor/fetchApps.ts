@@ -1,15 +1,20 @@
-import { AppCategoryEnum, AppData } from "@/lib/types"
+import type { AppData, ExternalDataReturnData } from "@/lib/types"
+import { AppCategoryEnum } from "@/lib/types"
 
-export async function fetchApps(): Promise<Record<string, AppData[]>> {
+export const fetchApps = async (): Promise<ExternalDataReturnData> => {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
   if (!sheetId) {
-    throw new Error("Google Sheets ID not set")
+    return {
+      error: "Google Sheets ID not set",
+    }
   }
 
   if (!googleApiKey) {
-    throw new Error("Google API key not set")
+    return {
+      error: "Google API key not set",
+    }
   }
 
   try {
@@ -127,10 +132,18 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
       result[sheetName] = apps
     }
 
-    return result
+    return {
+      value: result,
+      timestamp: Date.now(),
+    }
   } catch (error) {
     console.error("Error fetching from Google Sheets:", error)
-    return {}
+    return {
+      error:
+        error instanceof Error
+          ? error.message
+          : "Failed to fetch apps from Google Sheets",
+    }
   }
 }
 

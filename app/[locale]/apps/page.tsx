@@ -14,12 +14,14 @@ import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
 import {
+  extractAppsData,
   getDevconnectApps,
   getDiscoverApps,
   getHighlightedApps,
 } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -35,17 +37,13 @@ import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 import AppsJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchCommunityPicks } from "@/lib/api/fetchCommunityPicks"
 
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader(
-  [
-    ["appsData", fetchApps],
-    ["communityPicks", fetchCommunityPicks],
-  ],
+  [["communityPicks", fetchCommunityPicks]],
   REVALIDATE_TIME * 1000
 )
 
@@ -54,7 +52,16 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [appsData, communityPicks] = await loadData()
+  const [communityPicks] = await loadData()
+
+  // Fetch apps data with 24-hour revalidation
+  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsData = extractAppsData(
+    appsDataRaw?.appsData as
+      | { value: Record<string, unknown> }
+      | { error: string }
+      | undefined
+  )
 
   // Get 3 random highlighted apps
   const highlightedApps = getHighlightedApps(appsData, 3)

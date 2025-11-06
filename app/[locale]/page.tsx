@@ -60,7 +60,7 @@ import {
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
-import { parseAppsOfTheWeek } from "@/lib/utils/apps"
+import { extractAppsData, parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
@@ -86,7 +86,6 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
@@ -128,10 +127,7 @@ const ValuesMarquee = dynamic(
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["appsData", fetchApps],
-  ],
+  [["growThePieData", fetchGrowThePie]],
   REVALIDATE_TIME * 1000
 )
 
@@ -146,7 +142,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
-  const [growThePieData, appsData] = await loadData()
+  const [growThePieData] = await loadData()
 
   // Fetch hourly data with 1-hour revalidation
   const hourlyData = await getExternalData(
@@ -179,9 +175,10 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   // Fetch daily data (calendar events, attestant posts, and blog feeds) with 24-hour revalidation
   const dailyData = await getExternalData(
-    ["calendarEvents", "attestantPosts", "blogFeeds"],
+    ["calendarEvents", "attestantPosts", "blogFeeds", "appsData"],
     86400
   )
+
   const calendarData = dailyData?.calendarEvents as
     | {
         pastEvents?: {
@@ -239,6 +236,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   const xmlBlogs =
     blogFeedsData && "value" in blogFeedsData ? blogFeedsData.value : []
 
+  // Extract apps from daily data
+  const appsDataRaw = dailyData?.appsData as
+    | { value: Record<string, unknown> }
+    | { error: string }
+    | undefined
+  const appsData = extractAppsData(appsDataRaw)
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)

@@ -2,6 +2,48 @@ import { AppCategory, AppCategoryEnum, AppData } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
+/**
+ * Converts date strings back to Date objects after JSON deserialization.
+ * This is needed because Date objects are serialized as strings when stored in Redis/Supabase.
+ */
+const convertDateField = (value: unknown): Date | null => {
+  if (!value) return null
+  if (typeof value === "string") return new Date(value)
+  if (value instanceof Date) return value
+  return null
+}
+
+/**
+ * Extracts and normalizes apps data from external data storage.
+ * Handles date conversion from JSON strings back to Date objects.
+ */
+export const extractAppsData = (
+  appsDataRaw:
+    | { value: Record<string, unknown> }
+    | { error: string }
+    | undefined
+): Record<AppCategory, AppData[]> => {
+  if (!appsDataRaw || !("value" in appsDataRaw)) {
+    return {} as Record<AppCategory, AppData[]>
+  }
+
+  return Object.fromEntries(
+    Object.entries(appsDataRaw.value).map(([category, apps]) => [
+      category,
+      (apps as unknown[]).map((app: unknown) => {
+        const appData = app as Record<string, unknown>
+        return {
+          ...appData,
+          appOfTheWeekStartDate: convertDateField(
+            appData.appOfTheWeekStartDate
+          ),
+          appOfTheWeekEndDate: convertDateField(appData.appOfTheWeekEndDate),
+        } as AppData
+      }),
+    ])
+  ) as Record<AppCategory, AppData[]>
+}
+
 // Get highlighted apps (apps with highlight=true)
 export const getHighlightedApps = (
   appsData: Record<AppCategory, AppData[]>,

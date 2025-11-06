@@ -1,3 +1,4 @@
+import { fetchApps } from "@/lib/api/refactor/fetchApps"
 import { fetchAttestantPosts } from "@/lib/api/refactor/fetchAttestantPosts"
 import { fetchBeaconchainEpoch } from "@/lib/api/refactor/fetchBeaconchainEpoch"
 import { fetchCalendarEvents } from "@/lib/api/refactor/fetchCalendarEvents"
@@ -47,5 +48,10 @@ export const externalServicesDaily: ExternalService[] = [
     name: "Blog Feeds",
     key: "blogFeeds",
     function: fetchBlogFeeds,
+  },
+  {
+    name: "Apps - Google Sheets",
+    key: "appsData",
+    function: fetchApps,
   },
 ]

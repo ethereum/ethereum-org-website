@@ -27,15 +27,13 @@ import {
 } from "@/components/ui/breadcrumb"
 import TabNav from "@/components/ui/TabNav"
 
-import { getHighlightedApps } from "@/lib/utils/apps"
+import { extractAppsData, getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { appsCategories } from "@/data/apps/categories"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AppsHighlight from "../../_components/AppsHighlight"
 import AppsTable from "../../_components/AppsTable"
@@ -43,17 +41,10 @@ import SuggestAnApp from "../../_components/SuggestAnApp"
 
 import AppsCategoryJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-
 const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 
 const isValidCategory = (category: string): category is AppCategoryEnum =>
   VALID_CATEGORIES.includes(category as AppCategoryEnum)
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -63,7 +54,14 @@ const Page = async ({
   const { locale, catetgoryName } = params
   setRequestLocale(locale)
 
-  const [appsData] = await loadData()
+  // Fetch apps data with 24-hour revalidation
+  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsData = extractAppsData(
+    appsDataRaw?.appsData as
+      | { value: Record<string, unknown> }
+      | { error: string }
+      | undefined
+  )
 
   const t = await getTranslations({ locale, namespace: "page-apps" })
 
