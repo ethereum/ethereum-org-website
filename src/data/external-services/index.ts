@@ -5,6 +5,7 @@ import { fetchBeaconchainEthstore } from "@/lib/api/refactor/fetchBeaconchainEth
 import { fetchCalendarEvents } from "@/lib/api/refactor/fetchCalendarEvents"
 import { fetchCommunityPicks } from "@/lib/api/refactor/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "@/lib/api/refactor/fetchEthereumMarketcap"
+import { fetchEthereumStablecoinsMcap } from "@/lib/api/refactor/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "@/lib/api/refactor/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/refactor/fetchGrowThePie"
 import { fetchBlogFeeds } from "@/lib/api/refactor/fetchRSS"
@@ -38,6 +39,11 @@ export const externalServicesHourly: ExternalService[] = [
     name: "Ethereum Market Cap - CoinGecko",
     key: "ethereumMarketcap",
     function: fetchEthereumMarketcap,
+  },
+  {
+    name: "Ethereum Stablecoins Market Cap - Llama.fi",
+    key: "ethereumStablecoinsMcap",
+    function: fetchEthereumStablecoinsMcap,
   },
   {
     name: "TVL - Defi Llama",

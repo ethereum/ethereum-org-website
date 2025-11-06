@@ -49,12 +49,14 @@ import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import {
+  extractGrowThePieData,
+  extractNestedValue,
+  extractValue,
+} from "@/lib/utils/data/refactor/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
@@ -69,7 +71,6 @@ import EnterprisePageJsonLD from "./page-jsonld"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
-import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -96,68 +97,51 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
   ),
 })
 
-const loadData = dataLoader(
-  [["ethereumStablecoins", fetchEthereumStablecoinsMcap]],
-  BASE_TIME_UNIT * 1000
-)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  const [stablecoinMarketCap] = await loadData()
-
-  // Fetch hourly data (ethPrice, beaconchainEpoch, and growThePie) with 1-hour revalidation
+  // Fetch hourly data (ethPrice, beaconchainEpoch, growThePie, and stablecoin market cap) with 1-hour revalidation
   const hourlyData = await getExternalData(
-    ["ethPrice", "beaconchainEpoch", "growThePie"],
+    ["ethPrice", "beaconchainEpoch", "growThePie", "ethereumStablecoinsMcap"],
     3600
   )
 
-  // Extract and process growThePie data from hourly data
-  const growThePieDataRaw = hourlyData?.growThePie as
-    | {
-        value: Array<{
-          metric_key: string
-          origin_key: string
-          date: string
-          value: number
-        }>
+  // Extract and process growThePie data
+  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieData = growThePieDataRaw
+    ? processGrowThePieData(growThePieDataRaw)
+    : {
+        txCount: { value: 0, timestamp: Date.now() },
+        txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+        dailyTxCosts: {} as Record<string, number | undefined>,
+        activeAddresses: {} as Record<string, number | undefined>,
       }
-    | { error: string }
-    | undefined
-  const growThePieData =
-    growThePieDataRaw && "value" in growThePieDataRaw
-      ? processGrowThePieData(growThePieDataRaw.value)
-      : {
-          txCount: { value: 0, timestamp: Date.now() },
-          txCostsMedianUsd: { value: 0, timestamp: Date.now() },
-          dailyTxCosts: {} as Record<string, number | undefined>,
-          activeAddresses: {} as Record<string, number | undefined>,
-        }
   const { txCount, txCostsMedianUsd } = growThePieData
 
   // Extract hourly metrics from external data
-  const ethPrice = (hourlyData?.ethPrice as
-    | { value: number; timestamp: number }
-    | undefined) ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
-  const beaconchainEpoch = hourlyData?.beaconchainEpoch as
-    | {
-        totalEthStaked?: { value: number; timestamp: number }
-      }
-    | undefined
-  const totalEthStaked = beaconchainEpoch?.totalEthStaked ?? {
-    value: 0,
-    timestamp: Date.now(),
-  }
+  const ethPrice = extractValue(hourlyData, "ethPrice", 0)
+  const totalEthStaked = extractNestedValue(
+    hourlyData,
+    "beaconchainEpoch",
+    "totalEthStaked",
+    0
+  )
+  const stablecoinMarketCap = extractValue(
+    hourlyData,
+    "ethereumStablecoinsMcap",
+    0
+  )
 
   const metrics = await parseActivity({
     txCount,
     txCostsMedianUsd,
-    stablecoinMarketCap,
+    stablecoinMarketCap:
+      "value" in stablecoinMarketCap &&
+      typeof stablecoinMarketCap.value === "number"
+        ? stablecoinMarketCap
+        : { value: 0, timestamp: Date.now() },
     ethPrice,
     totalEthStaked,
   })
