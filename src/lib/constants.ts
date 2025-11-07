@@ -47,12 +47,6 @@ export const COINGECKO_API_URL_PARAMS =
   "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
-// API timing
-export const BASE_TIME_UNIT = 3600 // (seconds) 1 hour
-export const TIMEOUT_MS = 5000 // (milliseconds)
-export const MAX_RETRIES = 1
-export const RETRY_DELAY_BASE_MS = 250 // (milliseconds)
-
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
 export const PASSING_QUIZ_SCORE = 65

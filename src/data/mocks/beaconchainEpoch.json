@@ -1,4 +1,10 @@
 {
-  "totalEthStaked": { "value": 35000000, "timestamp": 1759687080325 },
-  "validatorscount": { "value": 1000000, "timestamp": 1759687080325 }
+  "totalEthStaked": {
+    "value": 35708424,
+    "timestamp": 1762449885224
+  },
+  "validatorscount": {
+    "value": 995987,
+    "timestamp": 1762449885224
+  }
 }

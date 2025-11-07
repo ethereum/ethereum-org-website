@@ -1,0 +1,80 @@
+{
+  "value": {
+    "Kurtosis Ethereum Package": {
+      "starCount": 425,
+      "languages": [
+        "Starlark",
+        "HTML",
+        "Python",
+        "Shell"
+      ]
+    },
+    "hardhat": {
+      "starCount": 8293,
+      "languages": [
+        "TypeScript",
+        "Solidity",
+        "JavaScript",
+        "HTML",
+        "Shell",
+        "Vyper",
+        "CSS"
+      ]
+    },
+    "brownie": {
+      "starCount": 2723,
+      "languages": [
+        "C",
+        "Python",
+        "Solidity",
+        "Vyper",
+        "Dockerfile"
+      ]
+    },
+    "createethapp": {
+      "starCount": 2770,
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "Handlebars",
+        "HTML",
+        "Vue",
+        "CSS",
+        "Shell"
+      ]
+    },
+    "scaffoldeth": {
+      "starCount": 1852,
+      "languages": [
+        "TypeScript",
+        "Solidity",
+        "JavaScript",
+        "CSS"
+      ]
+    },
+    "soliditytemplate": {
+      "starCount": 1981,
+      "languages": [
+        "TypeScript",
+        "Solidity",
+        "JavaScript"
+      ]
+    },
+    "foundry": {
+      "starCount": 9777,
+      "languages": [
+        "Rust",
+        "Shell",
+        "TypeScript",
+        "JavaScript",
+        "Solidity",
+        "Makefile",
+        "Dockerfile",
+        "Nix",
+        "Python",
+        "Vyper"
+      ]
+    }
+  },
+  "timestamp": 1762456320024
+}

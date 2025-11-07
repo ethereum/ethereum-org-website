@@ -1,0 +1,507 @@
+{
+  "pastEvents": {
+    "value": [
+      {
+        "date": "2023-08-09T10:00:00+01:00",
+        "title": "🤝 ethereum.org Translatathon: Team formation session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=N2QxOXN1ZnEza2UzbnJmdDQ4NDJsaml1dDEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-10T17:00:00+01:00",
+        "title": "🤝 ethereum.org Translatathon: Team formation session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NHZlYjNtcnB0bXNsZ2lkdTk1MjdhNmRtYTAgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-16T10:00:00+01:00",
+        "title": "🧑‍💻 ethereum.org Translatathon: virtual coworking session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MjMwZzhmZWcwbmZoaDR2dDRyM3ExNDdvNmUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-17T17:00:00+01:00",
+        "title": "🧑‍💻 ethereum.org Translatathon: virtual coworking session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Nm11aW4zc2tkOTFxM21yZTA0ZWl0Mmw4N2UgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-15T18:00:00+01:00",
+        "title": "🌐 ethereum.org Translatathon: Crowdin & style guide workshop",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NHF2NmxrbDVyZWVqYXJnZjZ2NWw1b2NqdWQgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-31T17:00:00+01:00",
+        "title": "☎️ Ethereum.org Community Call - August 2023",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MnZibjdvODJvcDlhbWwzdGVsNGFjZjFtdGYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-09T18:00:00+01:00",
+        "title": "QA Release Candidate bash",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWowYTZiYWI3cDhtcTZ2dmhrNTBtY3R0MDEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-07T17:00:00+01:00",
+        "title": "🌐  ethereum.org Translatathon: Kick-off call",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MGZlbGZpZDUyNnZ0bTNxcXM2ajVsNXE1Y3MgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-24T17:00:00+01:00",
+        "title": "🌐 ethereum.org Translatathon: thanks for participating + next steps ✨",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MW10am5rbjhkZzRkYnUyN3V2Y3JjMnY3amUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-09-14T17:00:00+01:00",
+        "title": "⚙️ Ethereum.org Office Hours: How to use Github",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NmoyNGs4bXVtdjBvY3U0aG8zN29rbnJ2NnUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-09-26T17:00:00+01:00",
+        "title": "⚙️ Ethereum.org Office Hours: Introducción a Github (en español)",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NG5hOW52dGcyOWNqMDU4N2Z1dDUyM2lyNDYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-09-28T17:00:00+01:00",
+        "title": "☎️ Ethereum.org Community Call - September 2023",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mm5kMmd0ZXQyaW82YjJvdm1qdms3bnM2MnAgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-10-20T17:00:00+01:00",
+        "title": "🦄 Ethereum.org Writers Cohort II - kick-off call (week 1)",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MTNva2ZpaGdxYmhkZ3Y3ZXZ2bHRrMWU0dWcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-10-26T17:00:00+01:00",
+        "title": "☎️ Ethereum.org Community Call - October 2023",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NTQ1NTZqdjg2Y2ExcDl0bWdzN3IwaGtoZ2YgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-11-01T17:00:00Z",
+        "title": "✍️ ethereum.org Writers Cohort II: coworking session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mm84dTBjbm11YTgxbjdkcG0zYWF0YWE3djUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-11-07T16:00:00Z",
+        "title": "✍️ ethereum.org Writers Cohort II: coworking session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=M3BmMHFibTVpZGQyM2oyNWJkc3RvNjEycWMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-11-02T16:00:00Z",
+        "title": "🌱 ethereum.org + Gitcoin Grants 19 info session",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWJrY2p2MXQ3MzF2ZmxrbTNxc3R1OGc0Y20gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-11-17T12:00:00Z",
+        "title": "(in)finite games 🎲 ethereum.org Community Gathering @ Devconnect",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NmFnNjBtYjhrcGsxZ3BiYmhxNnI3Z280aDggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-12-19T16:00:00Z",
+        "title": "☎️ Ethereum.org Community Call - December 2023",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NzdqdXFzN2RxMzMwYXAwMnZ2MDFubTZsc2MgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-11-30T16:00:00Z",
+        "title": "☎️ Ethereum.org Community Call - November 2023",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MXZwNjgyZmxjcHY5NXIxczA3NzExZHA5ZHEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-12-13T17:00:00Z",
+        "title": "✍️ ethereum.org Office Hours: How to create content on ethereum.org",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MXVoajI3YnRxMHZlbjU5dW05ODUzYXN2NjIgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-01-25T17:00:00Z",
+        "title": "☎️ Ethereum.org Community Call - January 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MzdkZWp2ODNqYmFsZnFrajExMnE3ZXNncXMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-08-23T17:00:00+01:00",
+        "title": "Release candidate QA",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzA4MjNUMTYwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2023-11-01T16:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzExMDFUMTYwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2023-11-15T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzExMTVUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2023-12-06T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzExMjlUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2023-12-20T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzEyMTNUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2023-12-27T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzEyMjdUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2024-01-10T18:15:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyNDAxMTBUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2024-02-14T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyNDAyMDdUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2023-11-01T16:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzExMDFUMTYwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2024-02-29T17:00:00Z",
+        "title": "☎️ Ethereum.org Community Call - February 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mzg1bDQ1am1tdjE4anFmNnA3bzJ1bGo0cWEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-01-24T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyNDAxMjRUMTcwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2024-02-28T15:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=N2kwMjg2ZXN0bGdwYWY5NmlqdmdzcTB0aTkgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-03-28T16:00:00Z",
+        "title": "☎️ Ethereum.org Community Call - March 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWEwaXY0YTRyZ2MwbGoxbnNqb2ExcmVma3MgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-03-21T16:00:00Z",
+        "title": "⚙️ ethereum.org Office Hours [S3E1]",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NTc5OW9ra2VkNTB2Nmp1dTAxZWlndDA0cmMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-03-13T15:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MHY4anM2ZjdkYmJtcmdodm9uODM4NDlhbG0gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-04-04T16:00:00+01:00",
+        "title": "⚙️ ethereum.org Office Hours [S3E2]",
+        "calendarLink": "https://www.google.com/calendar/event?eid=M3JsbjVtOGFtNm8wNjFjMmtwczFwMnE1djkgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-04-18T16:00:00+01:00",
+        "title": "⚙️ ethereum.org Office Hours [S3E3]",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NWlrYmlpN2FnYzB1MDFuN3UwdWxmcmJhOXYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-04-25T17:00:00+01:00",
+        "title": "☎️ Ethereum.org Community Call - April 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NmtkZnFzcTRrZHU4ZDFuNDdrdnNyaHQ5ZzcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-03-27T14:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NTdsamJrY2xtZHU0dHJ2N2tnZGduMmNsdjcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-04-24T16:45:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MnY5Z2ppbWRjajliNzllNGM5cDJhZXJvZWYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-05-29T17:00:00+01:00",
+        "title": "☎️ ethereum.org Community Call - May 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mzh0aTByNTFibGg1YnU5YjdzOXVtOXRrN20gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-05-08T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NmV1djRtYWo1cmw4aDU1ZWdpbHAyMTg5ZWsgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-05-22T17:00:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NGNpbjQ3aXRrc2sydm5jOGc4MHQ0cm1ibGogY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-06-19T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MHRqbG8xMXY0aW04OWZvdGN2ZTBqOGY3aTUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-06-20T17:00:00+01:00",
+        "title": "👾 Live coding session - Implementing a visual testing component on ethereum.org",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Njc0Z2ZrMzF2ajM3NnBtNG9lcXA2aGRnaWkgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-06-27T16:00:00+01:00",
+        "title": "☎️ ethereum.org Community Call - June 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mmo0aTVpZWJsOWlxbWQ5ZTlxYWQwY29vMGogY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-07-25T16:00:00+01:00",
+        "title": "☎️ ethereum.org Community Call - July 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=M3JwdjJ2ZG00aDg1Z2Rta2dwMmc5NmFibTQgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-07-10T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NG00ajI5MGxza3ZhazVoc2NkcTA1NDUwZnYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-07-24T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MDhyaTBvN2NiNWQ5N3VhdGgzc2dnMXV1YmsgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-07T17:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NTlwdWdrYW1mczFzcWU5anI5MDkyaDllc2sgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-21T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Nm0xNzJqMzdmY3FyazNwZjFocWU4c2xsNzAgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-09T13:00:00+01:00",
+        "title": "Translatathon kickoff",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NjU5dDRoNW9yNG0waDM3bjY0dDJmNWx2dmsgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-06T10:30:00+01:00",
+        "title": "🐬 ethereum.org Translatathon: Crowdin & style guide workshop",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MHJoczcybG42Y2R2YXFncDBwZmxvbzRoNjUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-07T16:30:00+01:00",
+        "title": "🐬 ethereum.org Translatathon: Crowdin & style guide workshop",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NGRpZWo3Y3E4a2d2dWVqMjdjNnFtZzZzZTEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-15T16:00:00+01:00",
+        "title": "☕ Translatathon coffee break",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NGJxazFsa2xjdm9ocmZnaGU0ZWZqbGIwNWEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-08-13T10:30:00+01:00",
+        "title": "☕ Translatathon coffee break",
+        "calendarLink": "https://www.google.com/calendar/event?eid=N292aDBqNWRnb3BoY2lldXBmcDVsM2o4MjIgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-09-26T16:00:00+01:00",
+        "title": "☎️ ethereum.org Community Call - September 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=M2VyNTRibmFxZWUybWZzZHZsNnJjOWxoZ2MgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-09-18T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MGlzdW85ZjV1azVsdmNqOG8yMnZwbWhnZGYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-09-05T16:00:00+01:00",
+        "title": "☎️ ethereum.org Community Call - August 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NnY4NWhvN3IxajVsbGFqM3VyOWx1cDRnbDYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-09-04T17:00:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NmdwYWF1bmozODhzaTc1ZW5rZ3BlNW5jNWwgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2023-09-20T17:00:00+01:00",
+        "title": "Release candidate QA",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWdhb24xNWZ2bjA5bWhoM2Judjc5dTFvYzRfMjAyMzA5MjBUMTYwMDAwWiBjXzllNGIxYjI3NjA3NDM0NjM4MTYxMDBhMTY5ZDE0MjQzMDM1MmE3Y2ZjMzM0NGIxZTc4NWRiNTIzODVjOWZkMzZAZw"
+      },
+      {
+        "date": "2024-10-02T16:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NmlycGRhNTkwNmNvdmFpMmozcW1lb20wbWkgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-10-31T15:00:00Z",
+        "title": "☎️ ethereum.org Community Call - October 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NWRja2UwaGxnbm5oMzh2ZTBiNW9lZ3QwcWYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-09-24T15:15:00+01:00",
+        "title": "New Event",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Xzg5MWsyZHBoNjkzM2FiOW42Y28zNGI5azg4cTNpYmExNjUxM2FiYTY4OHMzY2Q5azhwMTQ4ZTIxNjQgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-10-23T17:00:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NGtrdGE3cDV0NTk4MzdsbjBuNzI2NTQ4Z2EgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-11-06T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mm50Y2o0dThxcDJuY3JxbmRmZzVhYXEwNjAgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-12-05T16:00:00Z",
+        "title": "☎️ ethereum.org Community Call - November/December 2024",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MnMzbGxyMm5tOTdqazNsc25kZDhwZTgxczMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-11-27T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NWxkMTk4NG5pa3V2cjN2dTVqMjMxdThsamIgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-11-12T02:30:00Z",
+        "title": "🦄 ethereum.org @ Devcon SEA Impact Forum",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NGlrYTltM2xsYm9pNzRvOWc3NDgxa2MzcXQgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-12-04T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NjhiYmZ2MW1tbnJibmxtNG41bXBxdTF0OW0gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2024-12-18T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=N211OWdqMWVmYXRqODFrZWgwdXA2NnJrMmwgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-01-08T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Mms5cm5uMmtnbXJpcm80NnZ0bnNqMzdpYXQgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-01-29T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MjM0bGdranRyMzMwbGY4MHZybHMwaGxhdG8gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-02-26T17:00:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=M3E5MGk2NzkwNjB0ZXZtMWtrbzlsN2xmMmcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-02-12T16:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWZhMXBjN2hjYWhrNDNhN2s0OGJiMWYyYmggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-03-12T17:30:00Z",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MTBqa2d0YjY4ZnFqZDdqanBpbzUwM2swazggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-03-20T16:00:00Z",
+        "title": "☎️  ethereum.org Community Call I - March 2025",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MHY5N2FsNnBxcmU0bTA4NmFpaTg5YjlrNHYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-03-26T17:00:00Z",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MGUxdjZoM2NsdXZwdGdtYm12bmxqa2trZG8gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-05-15T17:00:00+01:00",
+        "title": "☎️  ethereum.org Community Call II - May 2025",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MThqa2JjZWdwdGw2MW1rNzJlMWZsZWgzY3QgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-04-16T17:00:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MGFkYnJjYmIxdDZlMGUwN25rOHNoYTQ3NWYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-04-30T17:00:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MGdidnExbXMxYzFtcm5sOWg3NjJvbWRzNjggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-05-14T17:30:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NnBjY3U0ZXN2b25iZWZkcXNrOWE0ODdjODggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-07-24T17:00:00+01:00",
+        "title": " ☎️ ethereum.org Community Call III - July 2025",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MDFpM2FyOWJ1MWdtaGQ4dnJtMXRzM2V0cnIgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-06-25T17:45:00+01:00",
+        "title": "🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=N2VkOWhkbmU4c2M0cDEwcThvYmI3NzlvOTcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-07-30T17:45:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MHZjbTR2a2JsdnA1NWY5M2xnOTNwb2w4OTEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-09-25T17:00:00+01:00",
+        "title": " ☎️ ethereum.org Community Call IV - September 2025",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MmE0YWJzdmEyMjQ4NW5pdm4xMTIwbzhtMDYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-08-13T17:45:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=Nm5iaDljZGluaGs5aDdiZ2M1YWIybmViaGcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-08-27T17:45:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NTA2YXBsMjNwa3VldHRzM2o0MmdkcnM5cTkgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-08-25T13:00:00+01:00",
+        "title": "Translatathon kickoff call",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MzBzYzQ0ODU5YnZkNHNiY251bDl0M2M2bnMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-08-20T18:00:00+01:00",
+        "title": "Translatathon overview #1",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NWQxNWM3dnA5MjdhazF0a3BvbHNubmUxOHMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-08-21T13:00:00+01:00",
+        "title": "Translatathon overview #2",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NWU3ZzE3czNyazViYXVqcjNqZnQ5dHYxMmMgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-09-10T17:45:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=M3NjbXNhOHNoNW5wcjVja3NuaTR1cW1zaTYgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-08-29T15:00:00+01:00",
+        "title": "Translatathon office hours and QA",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MTBjMHFlajcyYjYxOXZiZnV2cGJnajF1MWggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-09-24T17:45:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NXJ0Z21yajRwNDY1MmQzN3V2MnMzcm02M28gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-10-22T17:45:00+01:00",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MjVqbjA1MzRnNDhjbTV2bWt2NnRiaTM0ZDUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      },
+      {
+        "date": "2025-11-05T17:45:00Z",
+        "title": " 🛠 QA session - ethereum.org portal",
+        "calendarLink": "https://www.google.com/calendar/event?eid=MWR0NnQ3YTNnNnIyc2xtYXVmOWlmdHZxZTcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      }
+    ],
+    "timestamp": 1762456319836
+  },
+  "upcomingEvents": {
+    "value": [
+      {
+        "date": "2025-12-11T17:00:00Z",
+        "title": " ☎️ ethereum.org Community Call V - December 2025",
+        "calendarLink": "https://www.google.com/calendar/event?eid=NnNxcHZmZW9nbmlzMW83anBrcnYzMWZnc2cgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
+      }
+    ],
+    "timestamp": 1762456319836
+  }
+}
