@@ -19,6 +19,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -36,7 +37,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
   // Fetch hourly data (growThePie) with 1-hour revalidation
-  const hourlyData = await getExternalData(["growThePie"], 3600)
+  const hourlyData = await getExternalData(["growThePie"], every("hour"))
 
   // Extract and process growThePie data from hourly data
   const growThePieDataRaw = hourlyData?.growThePie as

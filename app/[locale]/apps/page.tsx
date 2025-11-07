@@ -23,6 +23,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { extractCommunityPicks } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { appsCategories } from "@/data/apps/categories"
@@ -41,7 +42,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch daily data (apps and community picks) with 24-hour revalidation
-  const dailyData = await getExternalData(["appsData", "communityPicks"], 86400)
+  const dailyData = await getExternalData(
+    ["appsData", "communityPicks"],
+    every("day")
+  )
 
   // Extract apps data
   const appsDataRaw = dailyData?.appsData as

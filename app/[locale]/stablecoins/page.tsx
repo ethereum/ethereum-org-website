@@ -35,6 +35,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { extractStablecoinsData } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { stablecoins } from "./data"
@@ -89,7 +90,7 @@ async function Page({ params }: { params: PageParams }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   // Fetch hourly data (stablecoins data) with 1-hour revalidation
-  const hourlyData = await getExternalData(["stablecoinsData"], 3600)
+  const hourlyData = await getExternalData(["stablecoinsData"], every("hour"))
   const stablecoinsData = extractStablecoinsData(hourlyData)
 
   let marketsHasError = false

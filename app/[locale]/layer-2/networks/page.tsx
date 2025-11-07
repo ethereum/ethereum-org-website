@@ -21,6 +21,7 @@ import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
@@ -43,7 +44,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       "growThePieMaster",
       "l2beatData",
     ],
-    3600
+    every("hour")
   )
 
   // Extract blockspace data

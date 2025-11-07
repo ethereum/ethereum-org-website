@@ -16,6 +16,7 @@ import {
 } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import StakingPage from "./_components/staking"
@@ -29,7 +30,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch hourly data (beaconchain epoch and APR) with 1-hour revalidation
   const hourlyData = await getExternalData(
     ["beaconchainEpoch", "beaconchainApr"],
-    3600
+    every("hour")
   )
 
   // Extract beaconchain epoch data

@@ -31,6 +31,7 @@ import { extractAppsData, getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { appsCategories } from "@/data/apps/categories"
@@ -55,7 +56,7 @@ const Page = async ({
   setRequestLocale(locale)
 
   // Fetch apps data with 24-hour revalidation
-  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsDataRaw = await getExternalData(["appsData"], every("day"))
   const appsData = extractAppsData(
     appsDataRaw?.appsData as
       | { value: Record<string, unknown> }

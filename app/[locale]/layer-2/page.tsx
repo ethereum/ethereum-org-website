@@ -18,6 +18,7 @@ import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/networks/networks"
@@ -33,7 +34,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch hourly data (growThePie and l2beat) with 1-hour revalidation
-  const hourlyData = await getExternalData(["growThePie", "l2beatData"], 3600)
+  const hourlyData = await getExternalData(
+    ["growThePie", "l2beatData"],
+    every("hour")
+  )
 
   // Extract and process growThePie data
   const growThePieDataRaw = extractGrowThePieData(hourlyData)

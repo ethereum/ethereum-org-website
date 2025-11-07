@@ -57,6 +57,7 @@ import {
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
@@ -105,7 +106,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch hourly data (ethPrice, beaconchainEpoch, growThePie, and stablecoin market cap) with 1-hour revalidation
   const hourlyData = await getExternalData(
     ["ethPrice", "beaconchainEpoch", "growThePie", "ethereumStablecoinsMcap"],
-    3600
+    every("hour")
   )
 
   // Extract and process growThePie data

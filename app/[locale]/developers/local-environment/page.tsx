@@ -13,6 +13,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { extractFrameworkGitHubData } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { frameworksList } from "@/data/frameworks/frameworks"
@@ -26,7 +27,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch daily data (framework GitHub data) with 24-hour revalidation
-  const dailyData = await getExternalData(["frameworkGitHubData"], 86400)
+  const dailyData = await getExternalData(["frameworkGitHubData"], every("day"))
 
   // Extract framework GitHub data
   const frameworkGitHubData = extractFrameworkGitHubData(dailyData)

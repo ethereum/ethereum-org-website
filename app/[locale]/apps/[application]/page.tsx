@@ -35,6 +35,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
+import { every } from "@/lib/utils/time"
 import {
   formatLanguageNames,
   getRequiredNamespacesForPage,
@@ -66,7 +67,7 @@ const Page = async ({
   const messages = pick(allMessages, requiredNamespaces)
 
   // Fetch apps data with 24-hour revalidation
-  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsDataRaw = await getExternalData(["appsData"], every("day"))
   const appsData = extractAppsData(
     appsDataRaw?.appsData as
       | { value: Record<string, unknown> }
@@ -394,7 +395,7 @@ export async function generateMetadata({
   const { locale, application } = params
 
   // Fetch apps data with 24-hour revalidation
-  const appsDataRaw = await getExternalData(["appsData"], 86400)
+  const appsDataRaw = await getExternalData(["appsData"], every("day"))
   const appsData = extractAppsData(
     appsDataRaw?.appsData as
       | { value: Record<string, unknown> }

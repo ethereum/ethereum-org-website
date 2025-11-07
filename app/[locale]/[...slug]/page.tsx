@@ -16,6 +16,7 @@ import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
+import { every } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
@@ -39,7 +40,7 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   setRequestLocale(locale)
 
   // Fetch daily data (GitHub good first issues) with 24-hour revalidation
-  const dailyData = await getExternalData(["gfissues"], 86400)
+  const dailyData = await getExternalData(["gfissues"], every("day"))
   const gfissues = extractGFIssues(dailyData)
 
   const slug = slugArray.join("/")

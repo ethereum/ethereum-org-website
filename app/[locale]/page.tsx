@@ -76,6 +76,7 @@ import { getDirection } from "@/lib/utils/direction"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
+import { every } from "@/lib/utils/time"
 
 import events from "@/data/community-events.json"
 
@@ -145,7 +146,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch hourly data with 1-hour revalidation
   const hourlyData = await getExternalData(
     ["ethPrice", "beaconchainEpoch", "totalValueLocked", "growThePie"],
-    3600
+    every("hour")
   )
 
   // Extract hourly metrics from external data
@@ -172,7 +173,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch daily data (calendar events, attestant posts, and blog feeds) with 24-hour revalidation
   const dailyData = await getExternalData(
     ["calendarEvents", "attestantPosts", "blogFeeds", "appsData"],
-    86400
+    every("day")
   )
 
   // Extract calendar events
