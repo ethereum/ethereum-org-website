@@ -13,8 +13,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
   extractNestedValue,
   extractValue,
-} from "@/lib/utils/data/refactor/extractExternalData"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+} from "@/lib/utils/data/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 

@@ -13,8 +13,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
   extractGrowThePieData,
   extractL2beatData,
-} from "@/lib/utils/data/refactor/extractExternalData"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+} from "@/lib/utils/data/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"

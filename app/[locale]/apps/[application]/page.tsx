@@ -32,7 +32,7 @@ import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS, extractAppsData } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {

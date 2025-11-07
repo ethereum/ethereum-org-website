@@ -59,49 +59,68 @@ export const getActivity = async (
 
   const localeForNumberFormat = getLocaleForNumberFormat(locale)
 
-  const hasEthStakerAndPriceData =
-    "value" in totalEthStaked && "value" in ethPrice
-  const totalStakedInUsd = hasEthStakerAndPriceData
-    ? totalEthStaked.value * ethPrice.value
-    : 0
+  const totalEthStakedValue =
+    "value" in totalEthStaked && typeof totalEthStaked.value === "number"
+      ? totalEthStaked.value
+      : 0
+  const ethPriceValue =
+    "value" in ethPrice && typeof ethPrice.value === "number"
+      ? ethPrice.value
+      : 0
+  const totalStakedInUsd = totalEthStakedValue * ethPriceValue
 
-  const totalEtherStaked = !totalStakedInUsd
-    ? {
-        error:
-          "error" in totalEthStaked
-            ? totalEthStaked.error
-            : "error" in ethPrice
-              ? ethPrice.error
-              : "",
-      }
-    : {
-        ...totalEthStaked,
-        value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
-      }
+  const totalEtherStaked =
+    !totalStakedInUsd || totalEthStakedValue === 0 || ethPriceValue === 0
+      ? {
+          error:
+            "error" in totalEthStaked
+              ? totalEthStaked.error
+              : "error" in ethPrice
+                ? ethPrice.error
+                : "",
+        }
+      : {
+          ...totalEthStaked,
+          value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
+        }
 
   const valueLocked =
     "error" in totalValueLocked
       ? { error: totalValueLocked.error }
-      : {
-          ...totalValueLocked,
-          value: formatLargeUSD(totalValueLocked.value, localeForNumberFormat),
-        }
+      : "value" in totalValueLocked &&
+          typeof totalValueLocked.value === "number"
+        ? {
+            ...totalValueLocked,
+            value: formatLargeUSD(
+              totalValueLocked.value,
+              localeForNumberFormat
+            ),
+          }
+        : { value: "0", timestamp: Date.now() }
 
   const txs =
     "error" in txCount
       ? { error: txCount.error }
-      : {
-          ...txCount,
-          value: formatLargeNumber(txCount.value, localeForNumberFormat),
-        }
+      : "value" in txCount && typeof txCount.value === "number"
+        ? {
+            ...txCount,
+            value: formatLargeNumber(txCount.value, localeForNumberFormat),
+          }
+        : { value: "0", timestamp: Date.now() }
 
   const medianTxCost =
     "error" in txCostsMedianUsd
       ? { error: txCostsMedianUsd.error }
-      : {
-          ...txCostsMedianUsd,
-          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
-        }
+      : "value" in txCostsMedianUsd &&
+          typeof txCostsMedianUsd.value === "number"
+        ? {
+            ...txCostsMedianUsd,
+            value: formatSmallUSD(
+              txCostsMedianUsd.value,
+              localeForNumberFormat
+            ),
+          }
+        : { value: "0", timestamp: Date.now() }
 
   const metrics: StatsBoxMetric[] = [
     {

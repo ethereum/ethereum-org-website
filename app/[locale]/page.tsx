@@ -69,8 +69,8 @@ import {
   extractRSSFeeds,
   extractRSSItems,
   extractValue,
-} from "@/lib/utils/data/refactor/extractExternalData"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+} from "@/lib/utils/data/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { processGrowThePieData } from "@/lib/utils/layer-2"

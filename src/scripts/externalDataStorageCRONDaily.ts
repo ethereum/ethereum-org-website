@@ -1,5 +1,5 @@
-import { fetchExternalData } from "@/lib/utils/data/refactor/fetchExternalData"
-import { storeExternalData } from "@/lib/utils/data/refactor/storeExternalData"
+import { fetchExternalData } from "@/lib/utils/data/fetchExternalData"
+import { storeExternalData } from "@/lib/utils/data/storeExternalData"
 
 import { externalServicesDaily } from "@/data/external-services"
 

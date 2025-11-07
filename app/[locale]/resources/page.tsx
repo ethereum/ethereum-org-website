@@ -16,7 +16,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
 

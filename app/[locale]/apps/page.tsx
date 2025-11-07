@@ -20,8 +20,8 @@ import {
   getHighlightedApps,
 } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { extractCommunityPicks } from "@/lib/utils/data/refactor/extractExternalData"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { extractCommunityPicks } from "@/lib/utils/data/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 

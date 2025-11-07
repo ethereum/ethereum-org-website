@@ -10,8 +10,8 @@ import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { extractFrameworkGitHubData } from "@/lib/utils/data/refactor/extractExternalData"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { extractFrameworkGitHubData } from "@/lib/utils/data/extractExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 

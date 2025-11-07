@@ -13,8 +13,8 @@ try {
   // Environment variables might be set another way (e.g., system env vars)
 }
 
-import { getRedisData } from "@/lib/utils/data/refactor/redisClient"
-import { getSupabaseData } from "@/lib/utils/data/refactor/supabaseClient"
+import { getRedisData } from "@/lib/utils/data/redisClient"
+import { getSupabaseData } from "@/lib/utils/data/supabaseClient"
 
 import {
   externalServicesDaily,

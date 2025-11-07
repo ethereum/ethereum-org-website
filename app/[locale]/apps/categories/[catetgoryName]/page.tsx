@@ -29,7 +29,7 @@ import TabNav from "@/components/ui/TabNav"
 
 import { extractAppsData, getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getExternalData } from "@/lib/utils/data/refactor/getExternalData"
+import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 

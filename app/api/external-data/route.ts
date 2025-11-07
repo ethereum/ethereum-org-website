@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server"
 
 import { ExternalDataReturnData } from "@/lib/types"
 
-import { ExternalDataMap } from "@/lib/utils/data/refactor/fetchExternalData"
-import { getRedisData } from "@/lib/utils/data/refactor/redisClient"
-import { getSupabaseData } from "@/lib/utils/data/refactor/supabaseClient"
+import { ExternalDataMap } from "@/lib/utils/data/fetchExternalData"
+import { getRedisData } from "@/lib/utils/data/redisClient"
+import { getSupabaseData } from "@/lib/utils/data/supabaseClient"
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
