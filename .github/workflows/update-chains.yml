@@ -7,7 +7,7 @@ on:
 
 jobs:
   update-chains:
-    runs-on: ubuntu-latest
+    runs-on: carbonrunner-2vcpu-ubuntu-latest
 
     steps:
       - name: Checkout repository
