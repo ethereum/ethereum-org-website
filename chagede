@@ -1,0 +1,32 @@
+import { Line } from 'react-chartjs-2';
+import { useState, useEffect } from 'react';
+
+
+export default function PriceChart() {
+const [labels, setLabels] = useState<string[]>([]);
+const [values, setValues] = useState<number[]>([]);
+
+
+useEffect(() => {
+const id = setInterval(() => {
+setLabels(l => [...l.slice(-50), new Date().toLocaleTimeString()]);
+setValues(v => [...v.slice(-50), Math.random() * 2000]);
+}, 1500);
+return () => clearInterval(id);
+}, []);
+
+
+const data = {
+labels,
+datasets: [
+{
+label: 'Mock price',
+data: values,
+tension: 0.2,
+},
+],
+};
+
+
+return <div style={{height:300}}><Line data={data} /></div>;
+}
