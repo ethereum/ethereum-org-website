@@ -13,8 +13,8 @@ import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
-import DevconnectBannerVariation1 from "@/components/DevconnectBanner/Variation1"
-import HomeHero from "@/components/Hero/HomeHero"
+import FusakaHero from "@/components/Hero/FusakaHero"
+// import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
@@ -436,8 +436,8 @@ const Page = async ({ params }: { params: PageParams }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <DevconnectBannerVariation1 />
-        <HomeHero />
+        {/* <HomeHero /> */}
+        <FusakaHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
             {subHeroCTAs.map(
