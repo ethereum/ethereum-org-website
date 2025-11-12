@@ -118,5 +118,10 @@
   "page-index-values-open-ethereum-label": "Avoin kaikille",
   "page-index-values-open-ethereum-content-0": "Ethereum on kaikille julkinen. Kuka tahansa voi nähdä koodin ja käyttää ja parantaa sitä. Siksi on parempi kaikille.",
   "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Liity vuoden suurimpaan Ethereum-tapahtumaan",
-  "page-index-devconnect-banner-get-tickets": "Hanki liput"
+  "page-index-devconnect-banner-get-tickets": "Hanki liput",
+  "page-index-fusaka-network-upgrade": "Verkon päivitys",
+  "page-index-fusaka-description": "Nopeammalle, turvallisemmalle ja käyttäjäystävällisemmälle Ethereum-verkolle |",
+  "page-index-fusaka-read-more": "Lue lisää",
+  "page-index-fusaka-going-live-in": "Käynnistyy<br></br>",
+  "page-index-fusaka-live-now": "Käynnissä nyt"
 }

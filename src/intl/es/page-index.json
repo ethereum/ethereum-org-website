@@ -120,5 +120,10 @@
   "page-index-values-open-ethereum-label": "Abierto a todos",
   "page-index-values-open-ethereum-content-0": "Ethereum es de código abierto. Cualquiera puede ver, usar y mejorar el código, haciéndolo mejor para todos.",
   "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Únase al evento de Ethereum más grande del año",
-  "page-index-devconnect-banner-get-tickets": "Conseguir entradas"
+  "page-index-devconnect-banner-get-tickets": "Conseguir entradas",
+  "page-index-fusaka-network-upgrade": "Actualización de red",
+  "page-index-fusaka-description": "Para una red Ethereum más rápida, segura y fácil de usar |",
+  "page-index-fusaka-read-more": "Leer más",
+  "page-index-fusaka-going-live-in": "Se activará<br></br> en",
+  "page-index-fusaka-live-now": "Activo ahora"
 }

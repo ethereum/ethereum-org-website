@@ -115,5 +115,12 @@
   "page-index-values-open-legacy-label": "Yetum ama nipa dodo",
   "page-index-values-open-legacy-content-0": "Nnwumakuw bɔ wɔn adwene mu agyapade ho ban na wɔnkyɛ. Obiara nni adwumakuw no akyi a obetumi ahu sɛnea nneɛma yɛ adwuma, nsiesie ɔhaw ahorow, anaa nnya nkɔso. Ɛyɛ den ma nkurɔfo sɛ wɔbɛbɔ nnwinnade foforo anaasɛ wɔbɛyɛ sɛnea wɔpɛ.",
   "page-index-values-open-ethereum-label": "Yebue ama obiara",
-  "page-index-values-open-ethereum-content-0": "Ethereum yɛ baguam ma obiara. Obiara betumi ahu, de adi dwuma, na ama mmara no atu mpɔn, na ama ayɛ papa ama obiara."
+  "page-index-values-open-ethereum-content-0": "Ethereum yɛ baguam ma obiara. Obiara betumi ahu, de adi dwuma, na ama mmara no atu mpɔn, na ama ayɛ papa ama obiara.",
+  "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Beka Ethereum dwumadie a ɛso paa wɔ afe no mu",
+  "page-index-devconnect-banner-get-tickets": "Nya tikiti",
+  "page-index-fusaka-network-upgrade": "Netwek upgrade",
+  "page-index-fusaka-description": "Ma Ethereum netwek a ɛyɛ ntɛm, a ɛyɛ den na ɛnyɛ den ma adwumayɛfo |",
+  "page-index-fusaka-read-more": "Kenkan nea eka ho pii",
+  "page-index-fusaka-going-live-in": "Ɔkɔ live<br></br>",
+  "page-index-fusaka-live-now": "Live seesei"
 }
