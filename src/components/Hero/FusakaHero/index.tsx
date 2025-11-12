@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { Image } from "@/components/Image"
-import InlineLink from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import FusakaCountdown from "./FusakaCountdown"
 
@@ -23,15 +23,15 @@ const FusakaHero = async () => {
         />
       </div>
 
-      <div className="relative z-10 -mt-1 rounded-none border border-[rgba(0,0,0,0.08)] bg-[#333369]/95 p-4 text-center text-white lg:mx-8 lg:-mt-14 lg:rounded-2xl lg:border-[#C8B2F5] lg:shadow-[0_10px_10px_0_rgba(108,30,210,0.51)]">
+      <LinkBox className="-mt-1 rounded-none border border-[rgba(0,0,0,0.08)] bg-[#333369]/95 p-4 text-center text-white lg:mx-8 lg:-mt-14 lg:rounded-2xl lg:border-[#C8B2F5] lg:shadow-[0_10px_10px_0_rgba(108,30,210,0.51)]">
         <div className="flex flex-col items-center justify-between lg:flex-row lg:gap-16">
           <p className="text-4xl font-extrabold lg:text-5xl">FUSAKA</p>
           <p className="">
             The upgrade for a faster, safer, and more user-friendly Ethereum
-            network.{" "}
-            <InlineLink href="/roadmap/fusaka" className="text-white">
+            network |{" "}
+            <LinkOverlay href="/roadmap/fusaka" className="text-white">
               Read more
-            </InlineLink>
+            </LinkOverlay>
             .
           </p>
           <div className="mt-4 flex flex-row items-center justify-center gap-4 lg:mt-0 lg:flex-col lg:gap-0">
@@ -41,7 +41,7 @@ const FusakaHero = async () => {
             <FusakaCountdown />
           </div>
         </div>
-      </div>
+      </LinkBox>
 
       <div className="flex flex-col items-center px-4 py-10 text-center">
         <LanguageMorpher />
