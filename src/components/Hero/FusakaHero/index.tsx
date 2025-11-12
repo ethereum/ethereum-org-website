@@ -23,12 +23,18 @@ const FusakaHero = async () => {
         />
       </div>
 
-      <LinkBox className="-mt-1 rounded-none border border-[rgba(0,0,0,0.08)] bg-[#333369]/95 p-4 text-center text-white lg:mx-8 lg:-mt-14 lg:rounded-2xl lg:border-[#C8B2F5] lg:shadow-[0_10px_10px_0_rgba(108,30,210,0.51)]">
+      <LinkBox className="duration-50 -mt-1 rounded-none border border-[rgba(0,0,0,0.08)] bg-[#333369]/95 p-4 text-center text-white transition-shadow lg:mx-8 lg:-mt-14 lg:rounded-2xl lg:border-[#C8B2F5] lg:shadow-[0_10px_10px_0_rgba(108,30,210,0.51)] lg:hover:shadow-[0_20px_10px_5px_rgba(108,30,210,0.51)]">
         <div className="flex flex-col items-center justify-between lg:flex-row lg:gap-16">
-          <p className="text-4xl font-extrabold lg:text-5xl">FUSAKA</p>
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-4xl font-extrabold uppercase !leading-none lg:text-5xl">
+              FUSAKA
+            </p>
+            <p className="text-xs font-bold uppercase text-purple-100">
+              Network upgrade
+            </p>
+          </div>
           <p className="">
-            The upgrade for a faster, safer, and more user-friendly Ethereum
-            network |{" "}
+            For a faster, safer, and more user-friendly Ethereum network |{" "}
             <LinkOverlay href="/roadmap/fusaka" className="text-white">
               Read more
             </LinkOverlay>
