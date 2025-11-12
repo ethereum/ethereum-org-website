@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import humanizeDuration from "humanize-duration"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 const fusakaDate = new Date("2025-12-03T21:49:11.000Z")
 const fusakaDateTime = fusakaDate.getTime()
@@ -110,6 +110,7 @@ const getTimeLabels = (locale: string): TimeLabels => {
 
 const FusakaCountdown = () => {
   const locale = useLocale()
+  const t = useTranslations("page-index")
   const [timeUnits, setTimeUnits] = useState<TimeUnits>(() => getTimeUnits())
   const [labels, setLabels] = useState<TimeLabels>(() => getTimeLabels(locale))
 
@@ -128,7 +129,11 @@ const FusakaCountdown = () => {
   }, [])
 
   if (timeUnits.isExpired) {
-    return <p className="text-2xl font-extrabold text-white">Live now</p>
+    return (
+      <p className="text-2xl font-extrabold text-white">
+        {t("page-index-fusaka-live-now")}
+      </p>
+    )
   }
 
   return (

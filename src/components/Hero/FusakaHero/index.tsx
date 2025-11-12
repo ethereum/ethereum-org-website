@@ -30,23 +30,24 @@ const FusakaHero = async () => {
               FUSAKA
             </p>
             <p className="text-sm font-bold uppercase text-purple-100">
-              Network upgrade
+              {t("page-index-fusaka-network-upgrade")}
             </p>
           </div>
           <p className="text-xs text-white lg:text-sm">
-            For a faster, safer, and more user-friendly Ethereum network |{" "}
+            {t("page-index-fusaka-description")}{" "}
             <LinkOverlay
               href="/roadmap/fusaka"
               className="text-white hover:text-purple-300"
             >
-              Read more
+              {t("page-index-fusaka-read-more")}
             </LinkOverlay>
             .
           </p>
           <div className="flex flex-row items-center justify-center gap-4 lg:mt-0 lg:flex-col lg:gap-0">
             <p className="text-xs font-bold uppercase text-gray-200">
-              Going
-              <br className="lg:hidden" /> live in
+              {t.rich("page-index-fusaka-going-live-in", {
+                br: () => <br className="lg:hidden" />,
+              })}
             </p>
             <FusakaCountdown />
           </div>
