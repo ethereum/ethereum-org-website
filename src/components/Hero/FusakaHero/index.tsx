@@ -14,19 +14,10 @@ const FusakaHero = async () => {
 
   return (
     <div className="relative w-full">
-      <div className="relative z-0 h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
-        <Image
-          src={RoadmapFusakaImage}
-          alt="Fusaka Hero"
-          className="h-full w-full object-cover"
-          priority
-        />
-      </div>
-
-      <LinkBox className="duration-50 -mt-1 rounded-none border border-[rgba(0,0,0,0.08)] bg-[#333369]/95 p-4 text-center text-white transition-shadow lg:mx-8 lg:-mt-14 lg:rounded-2xl lg:border-[#C8B2F5] lg:shadow-[0_10px_10px_0_rgba(108,30,210,0.51)] lg:hover:shadow-[0_20px_10px_5px_rgba(108,30,210,0.51)]">
+      <LinkBox className="bg-[#333369] p-4 text-center text-white">
         <div className="flex flex-col items-center justify-between gap-2 lg:flex-row lg:gap-16">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-xl font-extrabold uppercase !leading-none lg:text-5xl">
+            <p className="text-xl font-extrabold uppercase !leading-none lg:text-2xl">
               FUSAKA
             </p>
             <p className="text-sm font-bold uppercase text-purple-100">
@@ -53,6 +44,15 @@ const FusakaHero = async () => {
           </div>
         </div>
       </LinkBox>
+
+      <div className="relative z-0 h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
+        <Image
+          src={RoadmapFusakaImage}
+          alt="Fusaka Hero"
+          className="h-full w-full object-cover"
+          priority
+        />
+      </div>
 
       <div className="flex flex-col items-center px-4 py-10 text-center">
         <LanguageMorpher />
