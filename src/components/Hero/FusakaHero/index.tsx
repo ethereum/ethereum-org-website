@@ -14,17 +14,17 @@ const FusakaHero = async () => {
 
   return (
     <div className="relative w-full">
-      <LinkBox className="bg-[#333369] p-4 text-center text-white">
-        <div className="flex flex-col items-center justify-between gap-2 lg:flex-row lg:gap-16">
+      <LinkBox className="bg-[#333369] p-2 text-center text-white">
+        <div className="flex flex-col items-center justify-between gap-2 md:flex-row md:gap-16">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-xl font-extrabold uppercase !leading-none lg:text-2xl">
+            <p className="text-xl font-extrabold uppercase !leading-none md:text-2xl">
               FUSAKA
             </p>
             <p className="text-sm font-bold uppercase text-purple-100">
               {t("page-index-fusaka-network-upgrade")}
             </p>
           </div>
-          <p className="text-xs text-white lg:text-sm">
+          <p className="text-xs text-white md:text-sm">
             {t("page-index-fusaka-description")}{" "}
             <LinkOverlay
               href="/roadmap/fusaka"
@@ -34,10 +34,10 @@ const FusakaHero = async () => {
             </LinkOverlay>
             .
           </p>
-          <div className="flex flex-row items-center justify-center gap-4 lg:mt-0 lg:flex-col lg:gap-0">
+          <div className="flex flex-row items-center justify-center gap-4 md:mt-0 md:flex-col md:gap-0">
             <p className="text-xs font-bold uppercase text-gray-200">
               {t.rich("page-index-fusaka-going-live-in", {
-                br: () => <br className="lg:hidden" />,
+                br: () => <br className="md:hidden" />,
               })}
             </p>
             <FusakaCountdown />
@@ -45,7 +45,7 @@ const FusakaHero = async () => {
         </div>
       </LinkBox>
 
-      <div className="relative z-0 h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
+      <div className="relative z-0 h-[240px] overflow-hidden md:h-[480px]">
         <Image
           src={RoadmapFusakaImage}
           alt="Fusaka Hero"
@@ -56,9 +56,9 @@ const FusakaHero = async () => {
 
       <div className="flex flex-col items-center px-4 py-10 text-center">
         <LanguageMorpher />
-        <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
+        <div className="flex flex-col items-center gap-y-5 md:max-w-2xl">
           <h1 className="font-black">{t("page-index-title")}</h1>
-          <p className="max-w-96 text-md text-body-medium lg:text-lg">
+          <p className="max-w-96 text-md text-body-medium md:text-lg">
             {t("page-index-description")}
           </p>
         </div>

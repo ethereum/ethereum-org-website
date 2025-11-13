@@ -140,7 +140,7 @@ const FusakaCountdown = () => {
     <div className="flex items-center justify-center gap-4">
       {timeUnits.days > 0 && (
         <div className="flex flex-col items-center">
-          <p className="text-xl font-extrabold text-white lg:text-3xl">
+          <p className="text-xl font-extrabold text-white md:text-3xl">
             {String(timeUnits.days).padStart(2, "0")}
           </p>
           <p className="text-xs font-bold uppercase text-white">
@@ -149,13 +149,13 @@ const FusakaCountdown = () => {
         </div>
       )}
       <div className="flex flex-col items-center">
-        <p className="text-xl font-extrabold text-white lg:text-3xl">
+        <p className="text-xl font-extrabold text-white md:text-3xl">
           {String(timeUnits.hours).padStart(2, "0")}
         </p>
         <p className="text-xs font-bold uppercase text-white">{labels.hours}</p>
       </div>
       <div className="flex flex-col items-center">
-        <p className="text-xl font-extrabold text-white lg:text-3xl">
+        <p className="text-xl font-extrabold text-white md:text-3xl">
           {String(timeUnits.minutes).padStart(2, "0")}
         </p>
         <p className="text-xs font-bold uppercase text-white">
@@ -164,7 +164,7 @@ const FusakaCountdown = () => {
       </div>
       {timeUnits.seconds !== null && (
         <div className="flex flex-col items-center">
-          <p className="text-xl font-extrabold text-white lg:text-3xl">
+          <p className="text-xl font-extrabold text-white md:text-3xl">
             {String(timeUnits.seconds).padStart(2, "0")}
           </p>
           <p className="text-xs font-bold uppercase text-white">
