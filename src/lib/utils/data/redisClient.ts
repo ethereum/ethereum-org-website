@@ -3,6 +3,8 @@
  * Supports both Upstash Redis (serverless-friendly) and regular Redis.
  */
 
+import { unstable_cache } from "next/cache"
+
 type RedisClient = {
   set: (
     key: string,
@@ -102,9 +104,10 @@ export const setRedisData = async (
 }
 
 /**
- * Retrieve data from Redis.
+ * Internal function to fetch data from Redis without caching.
+ * This is the underlying function that will be cached by unstable_cache.
  */
-export const getRedisData = async <T>(key: string): Promise<T | null> => {
+async function fetchRedisDataUncached<T>(key: string): Promise<T | null> {
   const client = await getRedisClient()
   if (!client) {
     return null
@@ -120,6 +123,29 @@ export const getRedisData = async <T>(key: string): Promise<T | null> => {
     console.error(`Failed to retrieve data from Redis for key "${key}":`, error)
     return null
   }
+}
+
+/**
+ * Retrieve data from Redis.
+ * The result will be cached using Next.js unstable_cache.
+ *
+ * @param key The data key to retrieve
+ * @param revalidateSeconds Revalidation time in seconds for Next.js caching.
+ * @returns Promise that resolves to the data, or null if not found
+ */
+export const getRedisData = async <T>(
+  key: string,
+  revalidateSeconds: number
+): Promise<T | null> => {
+  const cachedFetch = unstable_cache(
+    async () => fetchRedisDataUncached<T>(key),
+    ["redis-data", key],
+    {
+      revalidate: revalidateSeconds,
+      tags: [`external-data:${key}`],
+    }
+  )
+  return await cachedFetch()
 }
 
 /**

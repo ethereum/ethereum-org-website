@@ -2,6 +2,7 @@
  * Supabase client utility for storing and retrieving external data.
  */
 
+import { unstable_cache } from "next/cache"
 import type { SupabaseClient } from "@supabase/supabase-js"
 
 let supabaseClient: SupabaseClient | null = null
@@ -82,9 +83,10 @@ export const storeSupabase = async (
 }
 
 /**
- * Retrieve external data from Supabase.
+ * Internal function to fetch data from Supabase without caching.
+ * This is the underlying function that will be cached by unstable_cache.
  */
-export const getSupabaseData = async <T>(key: string): Promise<T | null> => {
+async function fetchSupabaseDataUncached<T>(key: string): Promise<T | null> {
   const client = await getSupabaseClient()
   if (!client) {
     return null
@@ -109,4 +111,27 @@ export const getSupabaseData = async <T>(key: string): Promise<T | null> => {
     )
     return null
   }
+}
+
+/**
+ * Retrieve external data from Supabase.
+ * The result will be cached using Next.js unstable_cache.
+ *
+ * @param key The data key to retrieve
+ * @param revalidateSeconds Revalidation time in seconds for Next.js caching.
+ * @returns Promise that resolves to the data, or null if not found
+ */
+export const getSupabaseData = async <T>(
+  key: string,
+  revalidateSeconds: number
+): Promise<T | null> => {
+  const cachedFetch = unstable_cache(
+    async () => fetchSupabaseDataUncached<T>(key),
+    ["supabase-data", key],
+    {
+      revalidate: revalidateSeconds,
+      tags: [`external-data:${key}`],
+    }
+  )
+  return await cachedFetch()
 }
