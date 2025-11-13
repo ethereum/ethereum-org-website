@@ -4,7 +4,10 @@ import { ExternalService } from "@/data/external-services"
 
 export type ExternalDataMap = Record<
   string,
-  ExternalDataReturnData | Record<string, ExternalDataReturnData>
+  | ExternalDataReturnData
+  | Record<string, ExternalDataReturnData>
+  | null
+  | undefined
 >
 
 export const fetchExternalData = async (

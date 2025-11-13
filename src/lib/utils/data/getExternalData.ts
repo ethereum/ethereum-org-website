@@ -1,5 +1,3 @@
-import { ExternalDataReturnData } from "@/lib/types"
-
 import { ExternalDataMap } from "./fetchExternalData"
 import { loadMockDataForKeys } from "./loadMockData"
 import { getRedisData } from "./redisClient"
@@ -54,17 +52,16 @@ export const getExternalData = async (
       })
     )
 
-    // Build the data map
+    // Build the data map - always include all requested keys, even if null/undefined
+    // This allows consumers to distinguish between "key not requested" vs "key requested but not found"
     const dataMap = results.reduce((acc, { key, data }) => {
-      if (data !== null && data !== undefined) {
-        acc[key] = data as
-          | ExternalDataReturnData
-          | Record<string, ExternalDataReturnData>
-      }
+      acc[key] = data as ExternalDataMap[string]
       return acc
     }, {} as ExternalDataMap)
 
-    return Object.keys(dataMap).length > 0 ? dataMap : null
+    // Always return the map if keys were requested (even if all values are null/undefined)
+    // Only return null if no keys were requested
+    return sortedKeys.length > 0 ? dataMap : null
   } catch (error) {
     console.error("Error fetching external data:", error)
     return null
