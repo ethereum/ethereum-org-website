@@ -1,6 +1,6 @@
+import { redisStoreFunction } from "./clients/redisStoreFunction"
+import { supabaseStoreFunction } from "./clients/supabaseStoreFunction"
 import { ExternalDataMap } from "./fetchExternalData"
-import { redisStoreFunction } from "./redisStoreFunction"
-import { supabaseStoreFunction } from "./supabaseStoreFunction"
 
 /**
  * Stores external data using multiple storage methods (Redis and Supabase).

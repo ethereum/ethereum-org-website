@@ -1,5 +1,6 @@
-import { storeSupabase } from "./clients/supabaseClient"
-import { ExternalDataMap } from "./fetchExternalData"
+import { ExternalDataMap } from "../fetchExternalData"
+
+import { storeSupabase } from "./supabaseClient"
 
 export const supabaseStoreFunction = async (data: ExternalDataMap) => {
   const results = await Promise.all(

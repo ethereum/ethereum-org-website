@@ -1,6 +1,11 @@
 import { beforeEach, describe, expect, it, vi } from "vitest"
 
-import { getRedisData, storeRedis } from "../redisClient"
+import { getRedisData, storeRedis } from "../clients/redisClient"
+
+// Mock next/cache
+vi.mock("next/cache", () => ({
+  unstable_cache: vi.fn((fn) => fn),
+}))
 
 // Mock @upstash/redis
 const mockRedisClient = {
@@ -31,7 +36,7 @@ describe("Redis Client", () => {
       process.env.UPSTASH_REDIS_REST_URL = "https://test.upstash.io"
       process.env.UPSTASH_REDIS_REST_TOKEN = "test-token"
       vi.resetModules()
-      const { storeRedis } = await import("../redisClient")
+      const { storeRedis } = await import("../clients/redisClient")
 
       mockRedisClient.set.mockResolvedValue("OK")
 
@@ -50,7 +55,7 @@ describe("Redis Client", () => {
       process.env.UPSTASH_REDIS_REST_URL = "https://test.upstash.io"
       process.env.UPSTASH_REDIS_REST_TOKEN = "test-token"
       vi.resetModules()
-      const { storeRedis } = await import("../redisClient")
+      const { storeRedis } = await import("../clients/redisClient")
 
       mockRedisClient.set.mockResolvedValue("OK")
 
@@ -72,7 +77,7 @@ describe("Redis Client", () => {
       delete process.env.UPSTASH_REDIS_REST_URL
       delete process.env.UPSTASH_REDIS_REST_TOKEN
       vi.resetModules()
-      const { storeRedis } = await import("../redisClient")
+      const { storeRedis } = await import("../clients/redisClient")
 
       const testData = { value: 3000, timestamp: Date.now() }
       const result = await storeRedis("testKey", testData)
@@ -95,7 +100,7 @@ describe("Redis Client", () => {
       const testData = { value: 3000, timestamp: Date.now() }
       mockRedisClient.get.mockResolvedValue(JSON.stringify(testData))
 
-      const result = await getRedisData<typeof testData>("testKey")
+      const result = await getRedisData<typeof testData>("testKey", 3600)
 
       expect(result).toEqual(testData)
       expect(mockRedisClient.get).toHaveBeenCalledWith("external-data:testKey")
@@ -104,7 +109,7 @@ describe("Redis Client", () => {
     it("should return null when key does not exist", async () => {
       mockRedisClient.get.mockResolvedValue(null)
 
-      const result = await getRedisData("nonexistent")
+      const result = await getRedisData("nonexistent", 3600)
 
       expect(result).toBeNull()
     })
@@ -112,7 +117,7 @@ describe("Redis Client", () => {
     it("should return null when Redis client is not available", async () => {
       delete process.env.UPSTASH_REDIS_REST_URL
 
-      const result = await getRedisData("testKey")
+      const result = await getRedisData("testKey", 3600)
 
       expect(result).toBeNull()
     })
@@ -120,7 +125,7 @@ describe("Redis Client", () => {
     it("should handle retrieval errors", async () => {
       mockRedisClient.get.mockRejectedValue(new Error("Redis error"))
 
-      const result = await getRedisData("testKey")
+      const result = await getRedisData("testKey", 3600)
 
       expect(result).toBeNull()
     })
@@ -128,7 +133,7 @@ describe("Redis Client", () => {
     it("should handle JSON parse errors", async () => {
       mockRedisClient.get.mockResolvedValue("invalid json")
 
-      const result = await getRedisData("testKey")
+      const result = await getRedisData("testKey", 3600)
 
       expect(result).toBeNull()
     })
@@ -140,7 +145,7 @@ describe("Redis Client", () => {
       process.env.UPSTASH_REDIS_REST_TOKEN = "test-token"
 
       // Re-import to get fresh module state
-      const { getRedisClient } = await import("../redisClient")
+      const { getRedisClient } = await import("../clients/redisClient")
       const client = await getRedisClient()
 
       expect(client).not.toBeNull()
@@ -151,7 +156,7 @@ describe("Redis Client", () => {
       delete process.env.UPSTASH_REDIS_REST_TOKEN
 
       // Re-import to get fresh module state
-      const { getRedisClient } = await import("../redisClient")
+      const { getRedisClient } = await import("../clients/redisClient")
       const client = await getRedisClient()
 
       expect(client).toBeNull()

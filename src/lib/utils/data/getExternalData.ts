@@ -1,7 +1,7 @@
+import { getRedisData } from "./clients/redisClient"
+import { getSupabaseData } from "./clients/supabaseClient"
 import { ExternalDataMap } from "./fetchExternalData"
 import { loadMockDataForKeys } from "./loadMockData"
-import { getRedisData } from "./redisClient"
-import { getSupabaseData } from "./supabaseClient"
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
 

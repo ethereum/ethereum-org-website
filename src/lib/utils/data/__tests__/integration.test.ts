@@ -10,11 +10,11 @@ import {
 import { getExternalData } from "../getExternalData"
 
 // Mock storage clients
-vi.mock("../redisClient", () => ({
+vi.mock("../clients/redisClient", () => ({
   getRedisData: vi.fn(),
 }))
 
-vi.mock("../supabaseClient", () => ({
+vi.mock("../clients/supabaseClient", () => ({
   getSupabaseData: vi.fn(),
 }))
 
@@ -30,7 +30,7 @@ describe("Integration: getExternalData + extractors", () => {
   })
 
   it("should fetch and extract simple value data", async () => {
-    const { getRedisData } = await import("../redisClient")
+    const { getRedisData } = await import("../clients/redisClient")
     const mockData = { value: 3000, timestamp: Date.now() }
 
     vi.mocked(getRedisData).mockResolvedValue(mockData)
@@ -43,7 +43,7 @@ describe("Integration: getExternalData + extractors", () => {
   })
 
   it("should fetch and extract array data", async () => {
-    const { getRedisData } = await import("../redisClient")
+    const { getRedisData } = await import("../clients/redisClient")
     const mockData = {
       value: [
         { name: "Pick 1", twitterURL: "https://example.com" },
@@ -63,7 +63,7 @@ describe("Integration: getExternalData + extractors", () => {
   })
 
   it("should fetch and extract GrowThePie data", async () => {
-    const { getRedisData } = await import("../redisClient")
+    const { getRedisData } = await import("../clients/redisClient")
     const mockData = {
       value: [
         {
@@ -86,7 +86,7 @@ describe("Integration: getExternalData + extractors", () => {
   })
 
   it("should handle missing data gracefully", async () => {
-    const { getRedisData } = await import("../redisClient")
+    const { getRedisData } = await import("../clients/redisClient")
     vi.mocked(getRedisData).mockResolvedValue(null)
 
     const data = await getExternalData(["nonexistent"], every("hour"))
@@ -96,7 +96,7 @@ describe("Integration: getExternalData + extractors", () => {
   })
 
   it("should handle error responses", async () => {
-    const { getRedisData } = await import("../redisClient")
+    const { getRedisData } = await import("../clients/redisClient")
     const errorData = { error: "API error" }
 
     vi.mocked(getRedisData).mockResolvedValue(errorData)

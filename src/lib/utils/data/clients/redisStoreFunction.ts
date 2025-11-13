@@ -1,5 +1,6 @@
-import { storeRedis } from "./clients/redisClient"
-import { ExternalDataMap } from "./fetchExternalData"
+import { ExternalDataMap } from "../fetchExternalData"
+
+import { storeRedis } from "./redisClient"
 
 export const redisStoreFunction = async (data: ExternalDataMap) => {
   const results = await Promise.all(

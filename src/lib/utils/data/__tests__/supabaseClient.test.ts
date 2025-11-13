@@ -9,6 +9,11 @@ vi.mock("@supabase/supabase-js", () => ({
   createClient: vi.fn(() => mockSupabaseClient),
 }))
 
+// Mock next/cache
+vi.mock("next/cache", () => ({
+  unstable_cache: vi.fn((fn) => fn),
+}))
+
 describe("Supabase Client", () => {
   beforeEach(() => {
     vi.clearAllMocks()
@@ -25,7 +30,7 @@ describe("Supabase Client", () => {
 
   describe("storeSupabase", () => {
     it("should store data successfully", async () => {
-      const { storeSupabase } = await import("../supabaseClient")
+      const { storeSupabase } = await import("../clients/supabaseClient")
       const mockUpsert = vi.fn().mockResolvedValue({ error: null })
       mockSupabaseClient.from.mockReturnValue({
         upsert: mockUpsert,
@@ -53,7 +58,7 @@ describe("Supabase Client", () => {
       // Re-import to get fresh module state without client
       vi.resetModules()
       const { storeSupabase: storeSupabaseFresh } = await import(
-        "../supabaseClient"
+        "../clients/supabaseClient"
       )
 
       const testData = { value: 3000, timestamp: Date.now() }
@@ -63,7 +68,7 @@ describe("Supabase Client", () => {
     })
 
     it("should handle storage errors", async () => {
-      const { storeSupabase } = await import("../supabaseClient")
+      const { storeSupabase } = await import("../clients/supabaseClient")
       const mockUpsert = vi.fn().mockResolvedValue({
         error: new Error("Supabase error"),
       })
@@ -80,7 +85,7 @@ describe("Supabase Client", () => {
 
   describe("getSupabaseData", () => {
     it("should retrieve data successfully", async () => {
-      const { getSupabaseData } = await import("../supabaseClient")
+      const { getSupabaseData } = await import("../clients/supabaseClient")
       const testData = { value: 3000, timestamp: Date.now() }
       const mockSelect = vi.fn().mockReturnValue({
         eq: vi.fn().mockReturnValue({
@@ -94,7 +99,7 @@ describe("Supabase Client", () => {
         select: mockSelect,
       })
 
-      const result = await getSupabaseData<typeof testData>("testKey")
+      const result = await getSupabaseData<typeof testData>("testKey", 3600)
 
       expect(result).toEqual(testData)
       expect(mockSupabaseClient.from).toHaveBeenCalledWith("external_data")
@@ -102,7 +107,7 @@ describe("Supabase Client", () => {
     })
 
     it("should return null when key does not exist", async () => {
-      const { getSupabaseData } = await import("../supabaseClient")
+      const { getSupabaseData } = await import("../clients/supabaseClient")
       const mockSelect = vi.fn().mockReturnValue({
         eq: vi.fn().mockReturnValue({
           single: vi.fn().mockResolvedValue({
@@ -115,7 +120,7 @@ describe("Supabase Client", () => {
         select: mockSelect,
       })
 
-      const result = await getSupabaseData("nonexistent")
+      const result = await getSupabaseData("nonexistent", 3600)
 
       expect(result).toBeNull()
     })
@@ -126,16 +131,16 @@ describe("Supabase Client", () => {
 
       vi.resetModules()
       const { getSupabaseData: getSupabaseDataFresh } = await import(
-        "../supabaseClient"
+        "../clients/supabaseClient"
       )
 
-      const result = await getSupabaseDataFresh("testKey")
+      const result = await getSupabaseDataFresh("testKey", 3600)
 
       expect(result).toBeNull()
     })
 
     it("should handle retrieval errors", async () => {
-      const { getSupabaseData } = await import("../supabaseClient")
+      const { getSupabaseData } = await import("../clients/supabaseClient")
       const mockSelect = vi.fn().mockReturnValue({
         eq: vi.fn().mockReturnValue({
           single: vi.fn().mockRejectedValue(new Error("Supabase error")),
@@ -145,7 +150,7 @@ describe("Supabase Client", () => {
         select: mockSelect,
       })
 
-      const result = await getSupabaseData("testKey")
+      const result = await getSupabaseData("testKey", 3600)
 
       expect(result).toBeNull()
     })
