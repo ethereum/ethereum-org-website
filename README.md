@@ -2141,6 +2141,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eagerapps"><img src="https://avatars.githubusercontent.com/u/26349077?v=4?s=100" width="100px;" alt="Mohammed Israil"/><br /><sub><b>Mohammed Israil</b></sub></a><br /><a href="#maintenance-eagerapps" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mnelsonBT"><img src="https://avatars.githubusercontent.com/u/74370515?v=4?s=100" width="100px;" alt="mnelsonBT"/><br /><sub><b>mnelsonBT</b></sub></a><br /><a href="#content-mnelsonBT" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@gualison"><img src="https://avatars.githubusercontent.com/u/1316240?v=4?s=100" width="100px;" alt="Alberto Gualis"/><br /><sub><b>Alberto Gualis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=agualis" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
