@@ -33,7 +33,7 @@ Standard stealth addresses use [elliptic-curve cryptography (ECC)](https://blog.
 
 There is a number everybody knows, *G*. You can multiply by *G*. But because of the nature of ECC, it is practically impossible to divide by *G*. The way public key cryptography generally works in Ethereum is that you can use a private key, *P<sub>priv</sub>*, to sign transactions that are then verified by a public key, *P<sub>pub</sub> = GP<sub>priv</sub>*. 
 
-Alice creates two private keys, *K<sub>priv</sub>* and *V<sub>priv</sub>*. *K<sub>priv</sub>* will be used to spend money out of the steal address, and *V<sub>priv</sub>* to view the addresses that belong to Alice. Alice then publishes the public keys: *K<sub>pub</sub> = GK<sub>priv</sub>* and *V<sub>pub</sub> = GV<sub>priv</sub>*
+Alice creates two private keys, *K<sub>priv</sub>* and *V<sub>priv</sub>*. *K<sub>priv</sub>* will be used to spend money out of the stealth address, and *V<sub>priv</sub>* to view the addresses that belong to Alice. Alice then publishes the public keys: *K<sub>pub</sub> = GK<sub>priv</sub>* and *V<sub>pub</sub> = GV<sub>priv</sub>*
 
 Bill creates a third private key, *R<sub>priv</sub>*, and publishes *R<sub>pub</sub> = GR<sub>priv</sub>* to a central registry (Bill could also have sent it to Alice, but we assume Carol is listening).
 
