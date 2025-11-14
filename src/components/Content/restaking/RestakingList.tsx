@@ -10,6 +10,24 @@ import symbiotic from "@/public/images/use-cases/symbiotic-logo.png"
 export const RestakingList = () => {
   const productListSets = [
     {
+      title: "EigenLayer (Restaking Platform)",
+      description: "",
+      image: eigenLayer,
+      alt: "eigen layer logo",
+      contentItems: [
+        <p key="eigenlayer-description">
+          EigenLayer introduced the idea of restaking in 2023 and has grown to
+          thousands of people restaking millions of ETH. Referred to as
+          “Ethereum middleware”, it connects stakers, operators and AVSs.
+        </p>,
+        <div key="eigenlayer-button">
+          <ButtonLink href="https://eigenlayer.xyz/" variant="outline">
+            Visit EigenLayer
+          </ButtonLink>
+        </div>,
+      ],
+    },
+    {
       title: "Symbiotic (Restaking platform)",
       description: "",
       image: symbiotic,
@@ -77,31 +95,6 @@ export const RestakingList = () => {
         <div key="lido-button">
           <ButtonLink href="https://lido.fi/" variant="outline">
             Visit Lido
-          </ButtonLink>
-        </div>,
-      ],
-    },
-  ]
-
-  return <ProductListComponent content={productListSets} actionLabel="Go" />
-}
-
-export const EigenLayer = () => {
-  const productListSets = [
-    {
-      title: "EigenLayer (Restaking Platform)",
-      description: "",
-      image: eigenLayer,
-      alt: "eigen layer logo",
-      contentItems: [
-        <p key="symbiotic-description">
-          EigenLayer introduced the idea of restaking in 2023 and has grown to
-          thousands of people restaking millions of ETH. Referred to as
-          “Ethereum middleware”, it connects stakers, operators and AVSs.{" "}
-        </p>,
-        <div key="symbiotic-button">
-          <ButtonLink href="https://www.eigenlayer.xyz/" variant="outline">
-            Visit EigenLayer
           </ButtonLink>
         </div>,
       ],

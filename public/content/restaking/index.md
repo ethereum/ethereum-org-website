@@ -23,9 +23,9 @@ People all over the world lock away (or “stake”) [ether (ETH)](/eth/) in sma
 
 Restaking is a technology built for [stakers](/staking/) to extend this security to other services, applications, or networks. In return, they earn additional restaking rewards. However, they also put their staked ETH at more risk.
 
-**Restaking explained in 7 minutes**
+**Restaking explained in 18 minutes**
 
-<YouTube id="5r0SooSQFJg" />
+<YouTube id="rOJo7VwPh7I" />
 
 ## What is restaking? {#what-is-restaking}
 
@@ -52,7 +52,7 @@ In the same way that many ETH stakers run Ethereum validation software, many res
 | Earn ETH rewards               | Earn ETH Rewards + AVS rewards                    |
 | Secures the Ethereum network   | Secures the Ethereum network + AVSs               |
 | No minimum ETH                 | No minimum ETH                                    |
-| Low risk level                 | Low-to-medium risk level                          |
+| Low risk level                 | Low-to-high risk level                            |
 | Withdraw time depends on queue | Withdraw time depends on queue + unbonding period |
 
 ## Why do we need restaking? {#why-do-we-need-restaking}
@@ -107,24 +107,6 @@ There are several entities involved in restaking — each one of them plays an i
 
 While a novel idea, a few projects have emerged to explore the possibilities of restaking.
 
-<EigenLayer/>
-
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="EigenPods" emoji=":money_with_wings:" >
-    A set of smart contracts that let ETH validators connect their staked ETH to EigenLayer's restaking system.
-  </Card>
-  
-  <Card title="Marketplace" emoji=":earth_africa:" >
-    Making it easy for AVSs to find operators and stakers that meet their requirements, and vice versa.
-  </Card>
-  
-  <Card title="Tooling" emoji=":hammer_and_wrench:" >
-    Developer libraries, documentation and codebases to integrate with and build DeFi protocols on top of EigenLayer.
-  </Card>
-</CardGrid>
-
-## Other examples {#other-examples}
-
 <RestakingList/>
 
 <br/>
@@ -147,14 +129,12 @@ While AVSs offer different rates, Liquid Restaking Tokens (LRTs) like eETH give 
 
 ## What are the risks of restaking? {#what-are-the-risks-of-restaking}
 
-To truly appreciate the impact of Ethereum payments, it's worth comparing them to traditional fiat currencies:
-
-| **Risks**                     | **Description**                                                                                                                                                | **Risk level** |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| **Penalties (or “slashing”)** | Like ETH staking, if restakers/operators go offline, censor messages or try to corrupt the network, their stake can be slashed (burned) partially or entirely. | LOW            |
-| **Centralization**            | If few operators dominate most of the restaking they could have a great influence on restakers, AVSs and even restaking platforms.                             | LOW            |
-| **Chain reactions**           | If a restaker gets slashed while securing multiple AVSs, this could lower the security for the other AVSs, making them vulnerable.                             | LOW/MEDIUM     |
-| **Immediate access to funds** | There is a wait time (or “unbonding period”) for withdrawing restaked ETH so you may not always have access immediately.                                       | LOW/MEDIUM     |
+| **Risks**                     | **Description**                                                                                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Penalties (or “slashing”)** | Like ETH staking, if restakers/operators go offline, censor messages or try to corrupt the network, their stake can be slashed (burned) partially or entirely. |
+| **Centralization**            | If few operators dominate most of the restaking they could have a great influence on restakers, AVSs and even restaking platforms.                             |
+| **Chain reactions**           | If a restaker gets slashed while securing multiple AVSs, this could lower the security for the other AVSs, making them vulnerable.                             |
+| **Immediate access to funds** | There is a wait time (or “unbonding period”) for withdrawing restaked ETH so you may not always have access immediately.                                       |
 
 <br/>
 
@@ -175,7 +155,7 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 | 🫡 Beginners                                                    | 🤓 Advanced Users                                                                     |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 1. Stake ETH on platforms like Lido or Rocket Pool to get LSTs. | 1. Stake your ETH as a validator on Ethereum.                                         |
-| 2. Use those LSTs to start restaking on EigenLayer.             | 2. Compare restaking services like EigenLayer, Symbiotic and others.                  |
+| 2. Use those LSTs to start restaking on a restaking service.             | 2. Compare restaking services like EigenLayer, Symbiotic and others.                  |
 |                                                                 | 3. Follow the instructions to connect your validator to the restaking smart contract. |
 
 <br/>

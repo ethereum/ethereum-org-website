@@ -7,10 +7,7 @@ import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLi
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
 import OnchainGamingProductList from "@/components/Content/gaming/OnchainGamingProductList"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
-import {
-  EigenLayer,
-  RestakingList,
-} from "@/components/Content/restaking/RestakingList"
+import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import TabbedSection from "@/components/Content/restaking/RestakingTab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
@@ -38,7 +35,6 @@ export const useCasesComponents = {
   BuildYourOwnAIAgent,
   RestakingList,
   TabbedSection,
-  EigenLayer,
   OnchainGamingProductList,
   PredictionMarketLists,
 }
