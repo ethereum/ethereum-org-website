@@ -4,6 +4,7 @@
  */
 
 import { unstable_cache } from "next/cache"
+import { Redis } from "@upstash/redis"
 
 type RedisClient = {
   set: (
@@ -33,7 +34,6 @@ export const getRedisClient = async (): Promise<RedisClient | null> => {
 
   if (upstashUrl && upstashToken) {
     try {
-      const { Redis } = await import("@upstash/redis")
       const upstashClient = new Redis({
         url: upstashUrl,
         token: upstashToken,

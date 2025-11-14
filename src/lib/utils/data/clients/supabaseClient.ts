@@ -4,6 +4,7 @@
 
 import { unstable_cache } from "next/cache"
 import type { SupabaseClient } from "@supabase/supabase-js"
+import { createClient } from "@supabase/supabase-js"
 
 let supabaseClient: SupabaseClient | null = null
 let hasWarned = false
@@ -21,7 +22,6 @@ export const getSupabaseClient = async (): Promise<SupabaseClient | null> => {
 
   if (supabaseUrl && supabaseAnonKey) {
     try {
-      const { createClient } = await import("@supabase/supabase-js")
       supabaseClient = createClient(supabaseUrl, supabaseAnonKey)
       return supabaseClient
     } catch (error) {
