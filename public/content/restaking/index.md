@@ -35,12 +35,15 @@ The decentralized services secured by restaking are known as "Actively Validated
 In the same way that many ETH stakers run Ethereum validation software, many restakers run specialized AVS software.
 
 <br/>
-<InfoBanner shouldSpaceBetween emoji=":bulb:">
-  <div>
-    <strong>Good to know</strong><br />
-    While "Actively Validated Services" (AVSs) is the most common, different restaking platforms may use other names for the decentralized services they help secure, like "Autonomously Validated Services," "Distributed Secure Services," or "Networks."
-  </div>
-</InfoBanner>
+<Alert className="justify-between">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  <p className="mt-0"><strong>Good to know</strong></p>
+  <p className="mt-2">While "Actively Validated Services" (AVSs) is the most common, different restaking platforms may use other names for the decentralized services they help secure, like "Autonomously Validated Services," "Distributed Secure Services," or "Networks."</p>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Staking vs restaking {#staking-vs-restaking}
 
@@ -62,12 +65,15 @@ In this world with restaking, both the AVS and staker benefit from being able to
 
 <br/>
 
-<InfoBanner shouldSpaceBetween emoji=":bulb:">
-  <div>
-    <strong>Added benefit of restaking</strong><br />
-    AVSs can pour all their resources into building and marketing their services, instead of getting distracted with decentralization and security.
-  </div>
-</InfoBanner>
+<Alert className="justify-between">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  <p className="mt-0"><strong>Added benefit of restaking</strong></p>
+  <p className="mt-2">AVSs can pour all their resources into building and marketing their services, instead of getting distracted with decentralization and security.</p>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## How does restaking work? {#how-does-restaking-work}
 
@@ -86,13 +92,16 @@ There are several entities involved in restaking — each one of them plays an i
 
 <br/>
 
-<InfoBanner shouldSpaceBetween emoji=":bulb:">
-  <div>
-    <strong>Good to know</strong><br />
-    Native and liquid restakers often delegate their staked ETH to an operator, instead of running the software to secure AVSs themselves.<br />
-    This way they don’t need to worry about complicated technical requirements from AVSs, though they receive a lower reward rate than operators.
-  </div>
-</InfoBanner>
+<Alert className="justify-between">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  <p className="mt-0"><strong>Good to know</strong></p>
+  <p className="mt-2">Native and liquid restakers often delegate their staked ETH to an operator, instead of running the software to secure AVSs themselves.</p>
+  <p className="mt-2">This way they don't need to worry about complicated technical requirements from AVSs, though they receive a lower reward rate than operators.</p>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## What are some examples of restaking? {#what-are-some-examples-of-restaking}
 
@@ -120,12 +129,15 @@ While a novel idea, a few projects have emerged to explore the possibilities of 
 
 <br/>
 
-<InfoBanner shouldSpaceBetween emoji=":bulb:" isWarning>
-  <div>
-    <strong>Misnomer alert</strong><br />
-    Some people confuse “restaking” with lending and borrowing LSTs in DeFi. Both put staked ETH to work, but restaking means securing AVSs, not just earning yield on LSTs.
-  </div>
-</InfoBanner>
+<Alert variant="warning" className="justify-between">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  <p className="mt-0"><strong>Misnomer alert</strong></p>
+  <p className="mt-2">Some people confuse "restaking" with lending and borrowing LSTs in DeFi. Both put staked ETH to work, but restaking means securing AVSs, not just earning yield on LSTs.</p>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## How much can I make from restaking? {#how-much-can-i-make-from-restaking}
 
@@ -146,14 +158,17 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 
 <br/>
 
-<InfoBanner shouldSpaceBetween emoji=":bulb:">
-  <div>
-    <p><strong>The Ethereum co-founder is typing…</strong></p>
-    <p>
-      Vitalik, the co-founder of Ethereum, warned about the potential risks of restaking in a 2021 blog post called <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Don't Overload Consensus. </a>
-    </p>
-  </div>
-</InfoBanner>
+<Alert className="justify-between">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+  <p className="mt-0"><strong>The Ethereum co-founder is typing…</strong></p>
+  <p className="mt-2">
+    Vitalik, the co-founder of Ethereum, warned about the potential risks of restaking in a 2021 blog post called <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Don't Overload Consensus. </a>
+  </p>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## How to get started with restaking? {#how-to-get-started-with-restaking}
 
@@ -165,12 +180,17 @@ To truly appreciate the impact of Ethereum payments, it's worth comparing them t
 
 <br/>
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div><strong>Ethereum Staking :</strong> How does it work?</div>
+<Alert className="justify-between">
+<AlertEmoji text=":eyes:"/>
+<AlertContent>
+<AlertDescription>
+  <p className="mt-0"><strong>Ethereum Staking :</strong> How does it work?</p>
   <ButtonLink href="/staking/">
     Learn More
   </ButtonLink>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Advanced {#advanced}
 

@@ -4,6 +4,10 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import ContributorsQuizBanner from "@/components/Banners/ContributorsQuizBanner"
 import Card from "@/components/Card"
+import {
+  EigenLayer,
+  RestakingList,
+} from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
 import Contributors from "@/components/Contributors"
@@ -173,6 +177,7 @@ export const reactComponents = {
   ContributorsQuizBanner,
   Divider,
   DocLink,
+  EigenLayer,
   Emoji,
   ExpandableCard,
   FeaturedText,
@@ -181,6 +186,7 @@ export const reactComponents = {
   PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  RestakingList,
   Tag,
   Title,
   WhatAreAppsStories,

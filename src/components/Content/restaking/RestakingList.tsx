@@ -1,7 +1,7 @@
 import ProductListComponent from "@/components/ProductList"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import eigenLayer from "@/public/images/eigen-layer-logo.png"
+import eigenLayer from "@/public/images/use-cases/eigen-layer-logo.png"
 import lido from "@/public/images/use-cases/lido-logo.png"
 import obol from "@/public/images/use-cases/obol-logo.png"
 import omni from "@/public/images/use-cases/omni-logo.png"
