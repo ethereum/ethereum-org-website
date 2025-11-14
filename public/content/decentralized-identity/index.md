@@ -81,11 +81,25 @@ Governments can use the principles of decentralized identity to issue foundation
 
 This model allows for selective disclosure, especially when combined with [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/) privacy technology. For example, a citizen could cryptographically prove they are over 18 to access an age-restricted service without revealing their exact date of birth, offering greater privacy than a traditional ID.
 
-#### 💡Case study: Bhutan National Digital ID (NDI) on Ethereum
+#### 💡Case study: Bhutan National Digital ID (NDI) on Ethereum {#case-study-bhutan-ndi}
 
-The Kingdom of Bhutan [launched a National Digital Identity (NDI) system](https://www.dailybhutan.com/article/bhutan-makes-history-as-the-world-s-first-nation-to-launch-a-national-digital-id-on-ethereum) on Ethereum in October 2025, built on the principles of decentralized identity and self-sovereign identity. Using decentralized identifiers and verifiable credentials, Bhutan's NDI issues digitally signed credentials directly to a citizen's personal wallet. By anchoring cryptographic proofs of these credentials on Ethereum, the system ensures they are authentic, tamper-proof, and can be verified by any party without querying a central authority.
+- Provides access to verifiable identity credentials for Bhutan's nearly 800,000 citizens
+- Migrated from the Polygon network [to Ethereum mainnet](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) in October 2025
+- Over [234,000 digital IDs](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) issued as of March 2025
 
-The system's architecture emphasizes privacy through the use of [Zero-Knowledge Proof (ZKP)](/zero-knowledge-proofs/) technology. This implementation of "selective disclosure" allows citizens to prove specific facts (e.g., "I am over 18" or "I am a citizen") to access services without revealing the underlying personal data, such as their full ID number or exact date of birth. This demonstrates a powerful, real-world use of Ethereum for a secure, user-centric, and privacy-preserving national ID system.
+The Kingdom of Bhutan [migrated its National Digital Identity (NDI) system](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) to Ethereum in October 2025. Built on the principles of decentralized identity and self-sovereign identity, Bhutan’s NDI system uses decentralized identifiers and verifiable credentials to issue digitally signed credentials directly to a citizen's personal wallet. By anchoring cryptographic proofs of these credentials on Ethereum, the system ensures they are authentic, tamper-proof, and can be verified by any party without querying a central authority.
+
+The system's architecture emphasizes privacy through the use of [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/) technology. This implementation of "selective disclosure" allows citizens to prove specific facts (e.g., "I am over 18" or "I am a citizen") to access services without revealing the underlying personal data, such as their full ID number or exact date of birth. This demonstrates a powerful, real-world use of Ethereum for a secure, user-centric, and privacy-preserving national ID system.
+
+#### 💡Case study: City of Buenos Aires QuarkID on Ethereum [Layer 2](/layer-2/) ZKSync Era {#case-study-buenos-aires-quarkid}
+
+- Issued decentralized identity credentials to over [3.6 million users](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) at launch
+- QuarkID is an open-source protocol recognized as a [Digital Public Good](https://www.digitalpublicgoods.net/r/quarkid) under the UN Sustainable Development Goals
+- Emphasizes a "[government-as-user](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)" model, where the city does not own the protocol, giving citizens full data ownership and privacy
+
+In 2024, the Government of the City of Buenos Aires (GCBA) integrated QuarkID, the open-source “digital trust framework” built by the GCBA’s Secretariat of Innovation and Digital Transformation, into miBA, the city’s official app for residents to access government services and official documents. At launch, all 3.6 million+ users of miBA were issued decentralized digital identities that allow them to manage and share verifiable digital documents and certificates onchain, including citizenship credentials, birth, marriage, and death certificates, tax records, vaccination records, and more.
+
+Built on Ethereum [Layer 2](/layer-2/) network ZKSync Era, the QuarkID system uses ZKP technology to allow citizens to verify personal credentials peer-to-peer through their mobile devices&mdash;without exposing unnecessary personal data. The program highlights a “government-as-user" model in which the GCBA acts as one user of the open-source, interoperable QuarkID protocol, rather than acting as a centralized owner. This ZKP-enabled architecture provides a key privacy feature: no third-party, not even the GCBA, can track how, when, or why a citizen uses their credentials. This successful program provides citizens with full self-sovereign identity and control over their sensitive data, all secured by Ethereum’s globally-distributed network.
 
 ## What are attestations? {#what-are-attestations}
 
