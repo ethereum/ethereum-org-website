@@ -48,9 +48,9 @@ export class StartPage extends BasePage {
   }
 
   async continueToUseAppsStep() {
-    await this.page.getByRole("button", { name: "Lets continue" }).click()
+    await this.page.getByRole("button", { name: "Let's continue" }).click()
     await expect(
-      this.page.getByRole("heading", { name: "Let Use Some Apps" })
+      this.page.getByRole("heading", { name: "Let's use some apps" })
     ).toBeVisible()
   }
 }
