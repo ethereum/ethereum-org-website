@@ -120,5 +120,10 @@
   "page-index-values-open-ethereum-label": "เปิดให้ทุกคน",
   "page-index-values-open-ethereum-content-0": "อีเธอเรียมเปิดเผยต่อสาธารณะ ทุกคนสามารถดู ใช้ และปรับปรุงโค้ด เพื่อให้ดีขึ้นสำหรับทุกคน",
   "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "เข้าร่วมกิจกรรม Ethereum ที่ใหญ่ที่สุดแห่งปี",
-  "page-index-devconnect-banner-get-tickets": "รับตั๋ว"
+  "page-index-devconnect-banner-get-tickets": "รับตั๋ว",
+  "page-index-fusaka-network-upgrade": "อัปเกรดเครือข่าย",
+  "page-index-fusaka-description": "สำหรับเครือข่าย Ethereum ที่เร็วขึ้น ปลอดภัยขึ้น และใช้งานง่ายขึ้น |",
+  "page-index-fusaka-read-more": "อ่านเพิ่มเติม",
+  "page-index-fusaka-going-live-in": "จะเปิดใช้งาน<br></br> ใน",
+  "page-index-fusaka-live-now": "กำลังใช้งานอยู่"
 }
