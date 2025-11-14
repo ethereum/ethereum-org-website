@@ -62,12 +62,15 @@ Alamat anda akan sama dalam semua projek Ethereum. Anda tidak perlu mendaftar se
 5. Sahkan permintaan tandatangan dalam dompet anda untuk mewujudkan sambungan. **Menandatangani mesej ini sepatutnya tidak memerlukan penggunaan mana-mana ETH**.
 6. Itu sahaja! Mula menggunakan aplikasi. Anda boleh menjumpai beberapa projek menarik di [halaman dApp](/apps/#explore) kami. <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Soalan yang kerap ditanya
 

@@ -118,7 +118,7 @@ Má dhéanann duine agóid in aghaidh dearbhaithe, ansin cuirfidh an prótacal u
 
 Déanann scéimeanna um chruthú idirghníomhach aon-bhabhta idirbhearta faoi dhíospóid a athimirt ar L1 chun dearbhuithe neamhbhailí a bhrath. Déanann an prótacal uas-scálaithe aithris ar ath-rith an idirbhirt faoi dhíospóid ar L1 (Ethereum) ag baint úsáide as conradh fíoraitheora, agus is é bunchloch an stáit ríofa a chinneann cé a bhuaigh an dúshlán. Má tá éileamh an iomaitheoir faoi staid cheart an uas-scálaithe i gceart, gearrtar pionós ar an oibreoir trína bhanna a ghearradh.
 
-Mar sin féin, chun idirbhearta a ath-rith ar L1 chun calaois a bhrath ní mór gealltanais staide a fhoilsiú maidir le hidirbhearta aonair agus méadaítear ar na sonraí is gá do na huas-scáluithe a fhoilsiú ar slabhra. Tabhaítear costais shuntasacha gáis freisin le hidirbhearta athimeartha. Ar na cúiseanna seo, tá uas-scáluithe dóchasacha ag aistriú go cruthú idirghníomhach il-bhabhta, a bhaineann an cuspóir céanna amach (i.e. oibríochtaí rollup neamhbhailí a bhrath) le níos mó éifeachtúlachta.
+Mar sin féin, chun idirbhearta a ath-rith ar L1 chun calaois a bhrath ní mór gealltanais staide a fhoilsiú maidir le hidirbhearta aonair agus méadaítear ar na sonraí is gá do na huas-scáluithe a fhoilsiú ar slabhra. Tabhaítear costais shuntasacha gáis freisin le hidirbhearta athimeartha. Ar na cúiseanna seo, tá uas-scáluithe dóchasacha ag aistriú go cruthú idirghníomhach il-bhabhta, a bhaineann an cuspóir céanna amach (i.e., oibríochtaí rollup neamhbhailí a bhrath) le níos mó éifeachtúlachta.
 
 #### Cruthú idirghníomhach il-bhabhta {#multi-round-interactive-proving}
 
@@ -168,7 +168,7 @@ Tar éis an t-iarratas aistarraingthe a thionscnamh ar an uas-scálú L2, cuirte
 
 Ionas nach gá fanacht seachtain roimh airgead a aistarraingt chuig Ethereum, is féidir le húsáideoirí uas-scálú dóchasach **soláthraí leachtachta** (LP) a fhostú. Glacann soláthraí leachtachta úinéireacht ar aistarraingt L2 atá ar feitheamh agus íocann sé an t-úsáideoir ar L1 (mar mhalairt ar tháille).
 
-Is féidir le soláthraithe leachtachta bailíocht iarratas aistarraingthe an úsáideora a sheiceáil (tríd an slabhra a rith iad féin) sula scaoiltear cistí. Ar an mbealach seo tá dearbhuithe acu go ndeimhneofar an t-idirbheart sa deireadh (i.e. críochnaitheacht gan iontaoibh).
+Is féidir le soláthraithe leachtachta bailíocht iarratas aistarraingthe an úsáideora a sheiceáil (tríd an slabhra a rith iad féin) sula scaoiltear cistí. Ar an mbealach seo tá dearbhuithe acu go ndeimhneofar an t-idirbheart sa deireadh (i.e., críochnaitheacht gan iontaoibh).
 
 #### 2. Comhoiriúnacht EVM {#evm-compatibility}
 

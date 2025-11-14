@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server"
 
-import { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -11,32 +11,18 @@ import { APPLICATION_END_DATE } from "@/components/Translatathon/constants"
 import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isDateReached } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { Leaderboard } from "./_components/Leaderboard"
 import TranslatathonLeaderboardJsonLD from "./page-jsonld"
 
-import { fetchTranslatathonTranslators } from "@/lib/api/fetchTranslatathonTranslators"
 import heroImg from "@/public/images/heroes/translatathon-hero.png"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [["translatathonTranslators", fetchTranslatathonTranslators]],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params
 
   setRequestLocale(locale)
-
-  const [translatathonTranslators] = await loadData()
 
   const heroProps = {
     title: "2025 Ethereum.org Translatathon",
@@ -156,13 +142,7 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
               Final scores will be announced after all the evaluations are
               completed!
             </p>
-            {translatathonTranslators.length > 0 ? (
-              <Leaderboard translators={translatathonTranslators} />
-            ) : (
-              <div className="text-center text-body-medium">
-                No data available
-              </div>
-            )}
+            <Leaderboard />
           </div>
           {isDateReached(APPLICATION_END_DATE) && (
             <div id="apply-now">
@@ -178,9 +158,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   return await getMetadata({
     locale,

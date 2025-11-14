@@ -54,7 +54,7 @@ Many Internet sites and servers use cookies. Many cookies contain a so-called co
 
 Through the use of cookies, the Foundation may provide the users of the Websites with more user-friendly services that would not be possible without the cookie setting.
 
-Cookies may allow us, as previously mentioned, to recognize our Website users. The purpose of this recognition is to make it easier for users to utilize our Websites. The Website user that uses cookies, e.g. does not have to enter access data each time the Website is accessed, because this is taken over by the Website, and the cookie is thus stored on the user's computer system.
+Cookies may allow us, as previously mentioned, to recognize our Website users. The purpose of this recognition is to make it easier for users to utilize our Websites. The Website user that uses cookies, e.g., does not have to enter access data each time the Website is accessed, because this is taken over by the Website, and the cookie is thus stored on the user's computer system.
 
 You may, at any time, prevent the setting of cookies through our Websites by means of a corresponding setting of the Internet browser used, and may thus permanently deny the setting of cookies. Furthermore, previously set cookies may be deleted at any time via an Internet browser or other software programs. This is possible in all popular Internet browsers. If the data subject deactivates the setting of cookies in the Internet browser used, it may not be possible to use all the functions of our Websites.
 
@@ -106,7 +106,7 @@ We may use plug-ins from social networks such as Blog, GitHub, YouTube, Reddit, 
 
 To register for any event organized by the Foundation through our Websites, we may require the following registration data: First and last name, language, company affiliation, company title, credit card information, e-mail address.
 
-We may use this information as well as other information you voluntarily provide (e.g. preferences, comments) only in order to execute the reservation agreement, unless otherwise stated in this Privacy Policy or you have not specifically consented thereto.
+We may use this information as well as other information you voluntarily provide (e.g., preferences, comments) only in order to execute the reservation agreement, unless otherwise stated in this Privacy Policy or you have not specifically consented thereto.
 
 We may process the data by name in order to record your reservation as you have requested, to contact you in case of a question or problem and to ensure correct payment.
 
@@ -133,7 +133,7 @@ They are obliged to protect data privacy to the same extent as we ourselves. If 
 
 We use appropriate technical and organizational security measures to protect your stored personal data against manipulation, partial or complete loss, and unauthorized access by third parties. Our security measures are continuously being improved in line with technical developments.
 
-Please note that any data transmission on the Internet (e.g. communication by e-mail) is generally not secure and we accept no liability for data transmitted to us via the Internet. Unfortunately, absolute protection is not technically possible.
+Please note that any data transmission on the Internet (e.g., communication by e-mail) is generally not secure and we accept no liability for data transmitted to us via the Internet. Unfortunately, absolute protection is not technically possible.
 
 This information does not apply to the Websites of third parties and the corresponding links given on our Websites. The Foundation assumes no responsibility and liability for these.
 

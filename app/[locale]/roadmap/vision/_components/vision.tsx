@@ -9,12 +9,12 @@ import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero, {
   type ContentType as PageHeroContent,
 } from "@/components/PageHero"
 import Trilemma from "@/components/Trilemma"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, type FlexProps, VStack } from "@/components/ui/flex"
@@ -238,12 +238,14 @@ const VisionPage = ({
               </InlineLink>
             </Text>
             <Text>{t("page-roadmap-vision-sustainability-desc-3")}</Text>
-            <InfoBanner>
-              <Text>{t("page-roadmap-vision-sustainability-desc-8")}</Text>
-              <ButtonLink href="/roadmap/merge/">
-                {t("page-upgrades-index:page-upgrades-merge-btn")}
-              </ButtonLink>
-            </InfoBanner>
+            <Alert variant="update">
+              <div>
+                <Text>{t("page-roadmap-vision-sustainability-desc-8")}</Text>
+                <ButtonLink href="/roadmap/merge/">
+                  {t("page-upgrades-index:page-upgrades-merge-btn")}
+                </ButtonLink>
+              </div>
+            </Alert>
           </CentralContent>
           <FileContributors
             className="my-10 border-t"

@@ -43,9 +43,14 @@ summaryPoints:
 
 對於任何驗證者帳戶來說，提供提款地址是必要的步驟，然後才有資格從其餘額中提取以太幣。
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>每個驗證者帳戶一次只能分配一個提款地址。</strong>一旦選好地址並提交到共識層，就無法撤消或再次更改。 提交前請再次檢查所提供地址的所有權和正確性。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 假設你的助記詞/種子助記詞在離線狀態下保持安全，沒有受到任何損害，那麼即使沒有提供提款地址，<strong>也不會對你的資金造成威脅</strong>。 如果未能添加提款憑證，以太幣只會被鎖定在驗證者帳戶中，直到提供提款地址為止。
 
@@ -65,7 +70,7 @@ summaryPoints:
 
 上海/卡佩拉升級讓之前質押的以太幣得以回收到常規以太坊帳戶中。 這結束了質押流動性的循環，使以太坊在構建永續、可擴展、安全的去中心化生態系統的道路上又更近一步。
 
-- [關於以太坊歷史的更多資訊](/history/)
+- [關於以太坊歷史的更多資訊](/ethereum-forks/)
 - [關於以太坊開發藍圖的更多資訊](/roadmap/)
 
 ## 提款付款流程如何運作？ {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ summaryPoints:
 
 當驗證者準備提交下一個區塊時，需要建立一個提款隊列，其中最多包含 16 項符合資格的提款。 最初從驗證者索引 0 開始，根據協議規則，確定此帳戶是否有符合條件的提款，如果有，則將其添加到隊列中。 提交下一個區塊的驗證者們將從上一個區塊停止的地方開始，按順序依次進行。
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 想像一下指針式時鐘。 時鐘上的指針指向小時，朝一個方向前進，不會跳過任何小時，並最終在到達最後一個數字後再次回到起點。<br/><br/>
 現在，假設時鐘不是 1 到 12，而是 0 到 N <em>（共識層上註冊的驗證者帳戶總數，截至 2023 年 1 月超過 500,000 個）。</em><br/><br/>
 時鐘上的指針指向下一個驗證者，需要檢查其是否具備提款資格。 它從 0 開始，一路前進，不跳過任何帳戶。 到達最後一個驗證者後，從頭開始繼續循環。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### 檢查帳戶提款情況 {#checking-an-account-for-withdrawals}
 

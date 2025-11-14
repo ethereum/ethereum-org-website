@@ -17,7 +17,7 @@ summaryPoint4: De samenvoeging verminderde het energieverbruik van Ethereum met 
 
 ## Wat is de samenvoeging? {#what-is-the-merge}
 
-De samenvoeging was het bij elkaar brengen van de oorspronkelijke uitvoeringslaag van Ethereum (het hoofdnet dat sinds [het ontstaan](/history/#frontier) bestaat) met de nieuwe proof-of-stake consensuslaag, de Beacon Chain. Het elimineerde de noodzaak voor energie-intensieve mining en maakte het in plaats daarvan mogelijk om het netwerk te beveiligen met behulp van staked ETH. Het was echt een geweldige stap in de realisatie van de Ethereum-visie: meer schaalbaarheid, veiligheid en duurzaamheid.
+De samenvoeging was het bij elkaar brengen van de oorspronkelijke uitvoeringslaag van Ethereum (het hoofdnet dat sinds [het ontstaan](/ethereum-forks/#frontier) bestaat) met de nieuwe proof-of-stake consensuslaag, de Beacon Chain. Het elimineerde de noodzaak voor energie-intensieve mining en maakte het in plaats daarvan mogelijk om het netwerk te beveiligen met behulp van staked ETH. Het was echt een geweldige stap in de realisatie van de Ethereum-visie: meer schaalbaarheid, veiligheid en duurzaamheid.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ De samenvoeging betekende de officiële overstap naar het gebruik van de Beacon 
 
 Geen enkele geschiedenis ging verloren tijdens de samenvoeging. Toen het hoofdnet fuseerde met de Beacon Chain, werd ook de hele transactiegeschiedenis van Ethereum samengevoegd.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Deze overgang naar proof-of-stake veranderde de manier waarop ether wordt uitgegeven. Ontdek meer over de [ether-uitgifte voor en na de samenvoeging](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Gebruikers en houders {#users-holders}
 
@@ -118,7 +122,7 @@ De samenvoeging heeft ook de weg vrijgemaakt voor verdere opschalingsupgrades di
 
 <ExpandableCard
 title="Misvatting: &quot;voor het uitvoeren van een node moet u 32 ETH staken.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Er zijn twee soorten Ethereum-nodes: nodes die blocks kunnen voorstellen en nodes die dat niet kunnen.
 

@@ -9,7 +9,8 @@ import { Flex, Stack } from "@/components/ui/flex"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
-import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
+import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
+
 import Emoji from "../Emoji"
 import InlineLink from "../ui/Link"
 
@@ -32,7 +33,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
     blockNumber,
     epochNumber,
     slotNumber,
-  } = NetworkUpgradeSummaryData[name]
+  } = networkUpgradeSummaryData[name]
   // TODO fix dateTimeAsString
 
   // calculate date format only on the client side to avoid hydration issues

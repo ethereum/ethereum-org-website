@@ -17,7 +17,7 @@ summaryPoint4: A Fusão reduziu o consumo de energia do Ethereum em cerca de 99,
 
 ## O que foi A Fusão? {#what-is-the-merge}
 
-A Fusão foi a junção da camada de execução original do Ethereum (a Rede principal que existe desde a [origem](/history/#frontier)) com a sua nova camada de consenso de prova de participação, a Beacon Chain. Ele eliminou a necessidade de mineração que faz uso intensivo de energia e, em vez disso, permitiu que a rede fosse protegida usando participação de ETH. Foi uma etapa realmente emocionante para a realização da visão do Ethereum — mais escalabilidade, segurança e sustentabilidade.
+A Fusão foi a junção da camada de execução original do Ethereum (a Rede principal que existe desde a [origem](/ethereum-forks/#frontier)) com a sua nova camada de consenso de prova de participação, a Beacon Chain. Ele eliminou a necessidade de mineração que faz uso intensivo de energia e, em vez disso, permitiu que a rede fosse protegida usando participação de ETH. Foi uma etapa realmente emocionante para a realização da visão do Ethereum — mais escalabilidade, segurança e sustentabilidade.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ A integração representou a mudança oficial para o uso da Beacon Chain como o 
 
 Nenhuma história foi perdida na Fusão. À medida que a Rede principal se uniu com a Beacon Chain, ela também integrou todo o histórico transacional do Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Essa transição para a prova de participação mudou o modo como o ether é emitido. Saiba mais sobre [Emissão de ether antes de depois do The Merge](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Usuários e titulares {#users-holders}
 
@@ -118,7 +122,7 @@ The Merge também preparou o terreno para futuras atualizações de escalabilida
 
 <ExpandableCard
 title="Equívoco: &quot;executar um nó requer a participação de 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Existem dois tipos de nós no Ethereum: nós que podem propor blocos e nós que não podem.
 

@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { ChainName, CommitHistory, Lang } from "@/lib/types"
+import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
@@ -59,9 +59,9 @@ const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 const Page = async ({
   params,
 }: {
-  params: { locale: string; application: string }
+  params: PageParams & { application: string }
 }) => {
-  const { locale, application } = await params
+  const { locale, application } = params
   setRequestLocale(locale)
 
   // Get translations
@@ -127,6 +127,11 @@ const Page = async ({
     if (diffInDays === 0) return t("page-apps-today")
     if (diffInDays === 1) return t("page-apps-one-day-ago")
     return t("page-apps-days-ago", { days: diffInDays })
+  }
+
+  const getDisplayYear = (dateString: string) => {
+    if (!isValidDate(dateString)) return "—"
+    return new Date(app.dateOfLaunch).getFullYear()
   }
 
   const commitHistoryCache: CommitHistory = {}
@@ -326,9 +331,7 @@ const Page = async ({
                 <p className="text-sm text-body-medium">
                   {t("page-apps-info-founded")}
                 </p>
-                <p className="text-sm">
-                  {new Date(app.dateOfLaunch).getFullYear()}
-                </p>
+                <p className="text-sm">{getDisplayYear(app.dateOfLaunch)}</p>
               </div>
               <div>
                 <p className="text-sm text-body-medium">
@@ -387,9 +390,9 @@ const Page = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; application: string }>
+  params: { locale: string; application: string }
 }) {
-  const { locale, application } = await params
+  const { locale, application } = params
 
   const [appsData] = await loadData()
 

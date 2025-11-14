@@ -34,9 +34,14 @@ De overgang naar proof-of-stake maakte Ethereum aanzienlijk veiliger en gedecent
 
 Bovendien is proof-of-stake gebruiken als consensusmechanisme een fundamenteel onderdeel voor het [veilige, milieuvriendelijke en schaalbare Ethereum van nu](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<AlertEmoji text=":money_bag:"/>
+<AlertContent>
+<AlertDescription>
   Wilt u een validator worden en de Beacon Chain beveiligen? [Ontdek dan hier meer over staking](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Voorbereiden van sharding {#setting-up-for-sharding}
 

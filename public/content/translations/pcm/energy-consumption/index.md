@@ -61,9 +61,14 @@ As Ethereum energy konsumpshon dey very low, im still get big, growin, and aktiv
 
 Web3 native publik goods wey dey fund platfoms laik [Gitcoin](https://gitcoin.co) dey run klimate rounds so dem go fit promote building on aplikashon layer of Ethereum wey go konsida di environment. Thru di divelopment of dis initiatives ( and odas, laik [DeSci](/desci/)), Ethereum dey turn teknology wey dey good environmentally and socially.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   If yu feel sey dis page fit dey more akurate, abeg try raise issue abi PR. Dem estimate di stats on dis page base on publik data wey dey afailabol - dem nor reprisent offishial statement abi promise from di ethereum.org team, abi di Ethereum Foundashon.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Further reading {#further-reading}
 

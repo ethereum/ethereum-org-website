@@ -17,7 +17,7 @@ summaryPoint4: मर्ज ने एथेरियम की ऊर्जा 
 
 ## मर्ज क्या था? {#what-is-the-merge}
 
-मर्ज, एथेरियम की ओरिजिनल निष्पादन परत (मेननेट जो कि [उत्पत्ति](/history/#frontier) के बाद से मौजूद है) के साथ अपनी नई हिस्सेदारी के सबूत सहमति परत, बीकन चेन से जुड़ने की प्रक्रिया थी। इसने ऊर्जा-गहन माईनिंग की ज़रूरत को ख़त्म कर दिया और इसके बजाय नेटवर्क को स्टेक्ड ETH का उपयोग करके सुरक्षित करने में सक्षम बनाया। एथेरियम विज़न—अधिक स्केलेबिलिटी, सुरक्षा और स्थिरता को साकार करने में यह वास्तव में एक रोमांचक कदम था।
+मर्ज, एथेरियम की ओरिजिनल निष्पादन परत (मेननेट जो कि [उत्पत्ति](/ethereum-forks/#frontier) के बाद से मौजूद है) के साथ अपनी नई हिस्सेदारी के सबूत सहमति परत, बीकन चेन से जुड़ने की प्रक्रिया थी। इसने ऊर्जा-गहन माईनिंग की ज़रूरत को ख़त्म कर दिया और इसके बजाय नेटवर्क को स्टेक्ड ETH का उपयोग करके सुरक्षित करने में सक्षम बनाया। एथेरियम विज़न—अधिक स्केलेबिलिटी, सुरक्षा और स्थिरता को साकार करने में यह वास्तव में एक रोमांचक कदम था।
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ summaryPoint4: मर्ज ने एथेरियम की ऊर्जा 
 
 मर्ज में कोई इतिहास नहीं खोया था। मेननेट का बीकन चेन के साथ मर्ज होने के बाद, इसने एथेरियम के संपूर्ण लेनदेन के इतिहास को भी मर्ज कर दिया।
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 हिस्सेदारी का सबूत के इस ट्राज़िशन से ईथर जारी करने का तरीका बदल गया। [मर्ज से पहले और बाद में ईथर जारी करने](/roadmap/merge/issuance/) के बारे में ज़्यादा जानें।
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### उपयोगकर्ताओं और धारकों {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="गलत धारणा: &quot;एक नोड को चलाने के लिए स्टेकिंग 32 ETH की आवश्यकता होती है।&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 एथेरियम नोड्स दो प्रकार के होते हैं: नोड्स जो ब्लॉक को प्रस्ताव दे सकते हैं और ऐसे नोड्स जो नहीं देते हैं।
 

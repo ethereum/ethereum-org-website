@@ -179,7 +179,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. feltételek ellenőrzése
     # 2. akció végrehajtás (potenciálisan megváltoztatja a feltételeket)

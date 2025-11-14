@@ -37,7 +37,7 @@ sidebarDepth: 2
 - Αρχικά, το [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Προδιαγραφές εκτέλεσης](https://github.com/ethereum/execution-specs/)
 - [Προδιαγραφές συναίνεσης](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) που υλοποιούνται σε διάφορες [αναβαθμίσεις δικτύου](/history/)
+- [EIPs](https://eips.ethereum.org/) που υλοποιούνται σε διάφορες [αναβαθμίσεις δικτύου](/ethereum-forks/)
 
 ### Παρακολούθηση κόμβων στο δίκτυο {#network-overview}
 

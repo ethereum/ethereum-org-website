@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang } from "@/lib/types"
+import { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
@@ -13,7 +13,11 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
+import {
+  getDevconnectApps,
+  getDiscoverApps,
+  getHighlightedApps,
+} from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -26,6 +30,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
 import CommunityPicks from "./_components/CommunityPicks"
+import DevconnectBanner from "./_components/DevconnectBanner"
 import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 import AppsJsonLD from "./page-jsonld"
@@ -44,8 +49,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: { locale: string } }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -56,6 +61,9 @@ const Page = async ({ params }: { params: { locale: string } }) => {
 
   // Get 6 random staff pick apps
   const discoverApps = getDiscoverApps(appsData, 6)
+
+  // get devconnect apps
+  const devconnectApps = getDevconnectApps(appsData)
 
   // Get translations
   const t = await getTranslations({ locale, namespace: "page-apps" })
@@ -94,6 +102,10 @@ const Page = async ({ params }: { params: { locale: string } }) => {
           <div className="flex flex-col gap-8 px-4 md:px-8">
             <h2>{t("page-apps-highlights-title")}</h2>
             <AppsHighlight apps={highlightedApps} matomoCategory="apps" />
+          </div>
+
+          <div className="flex flex-col gap-4 px-4 md:px-8">
+            <DevconnectBanner apps={devconnectApps} />
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -158,9 +170,9 @@ const Page = async ({ params }: { params: { locale: string } }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-apps" })
 
   return await getMetadata({

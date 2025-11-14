@@ -124,11 +124,14 @@ Mar riail ghinearálta, ní bheidh an fhoireann i dteagmháil leat trí bhealaí
 - Ná lig d’aon duine cianrochtain isteach ar do ríomhaire
 - Ná déan cumarsáid riamh lasmuigh de bhealaí ainmnithe eagraíochta
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Tabhair faoi deara: cé go dtarlaíonn camscéimeanna ar stíl tacaíochta go coitianta ar Discord, is féidir leo a bheith coitianta freisin ar aon fheidhmchláir chomhrá ina dtarlaíonn plé crypto, lena n-áirítear ríomhphost.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Scam chomhartha 'Eth2' {#eth2-token-scam}
 
@@ -136,7 +139,7 @@ Sa tréimhse roimh [an gCumasc](/roadmap/merge/), bhain caimiléirí leas as an 
 
 Féadfaidh caimiléirí iad féin a chur in aithne duit mar phearsanra "tacaíochta", ag insint duit má thaisceann tú do ETH, gheobhaidh tú 'ETH2' ar ais. Níl aon [tacaíocht oifigiúil Ethereum ann](/community/support/), agus níl aon chomhartha nua ann. Ná roinn frása síolta do sparán le haon duine.
 
-_Nóta: Tá comharthaí díorthacha/tickers ann a d'fhéadfadh ionadaíocht a dhéanamh ar ETH geallta (ie. rETH ó Rocket Pool, stETH ó Lido, ETH2 ó Coinbase), ach ní gá iad seo a "aistriú chucu."_
+_Nóta: Tá comharthaí díorthacha/tickers ann a d'fhéadfadh ionadaíocht a dhéanamh ar ETH geallta (i.e., rETH ó Rocket Pool, stETH ó Lido, ETH2 ó Coinbase), ach ní gá iad seo a "aistriú chucu."_
 
 ### Camscéimeanna fioscaireachta {#phishing-scams}
 
@@ -215,11 +218,14 @@ Ní focal faire láidir a thuilleadh é pasfhocal láidir a nochtaíodh i sárú
 
 ### Bain úsáid as bainisteoir phasfhocal {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Trí úsáid a bhaint as bainisteoir phasfhocail déantar cúram de phasfhocail láidre, uathúla a chruthú agus de chuimhneamh orthu! Molaimid go <strong>láidir</strong> ceann a úsáid, agus tá an chuid is mó acu saor in aisce!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ní rud iontach é pasfhocail láidre uathúla a mheabhrú do gach cuntas atá agat. Tairgeann bainisteoir pasfhocail stór slán, criptithe do gach pasfhocal ar féidir leat rochtain a fháil air trí mháistirfhocal láidir amháin. Molann siad freisin pasfhocail láidre agus tú ag clárú le haghaidh seirbhís nua, mar sin ní gá duit do chuid féin a chruthú. Inseoidh go leor bainisteoirí pasfhocal duit freisin má bhí baint agat le sárú sonraí, rud a ligeann duit na pasfhocail a athrú roimh aon ionsaithe mailíseach.
 
@@ -242,11 +248,14 @@ Ar uairibh iarrtar ort d’aitheantas a fhíordheimhniú trí chruthúnas uathú
 
 Má úsáidtear **Fíordheimhniú Dhá Fhachtóir (2FA)** soláthraítear *fachtóir slándála* breise do do chuntais ar líne. Cinntíonn 2FA nach leor do phasfhocal a bheith agat chun rochtain a fháil ar chuntas. Go coitianta, is é an dara fachtóir cód randamach 6-dhigit, ar a dtugtar **focal faire aonuaire (TOTP) ama-bhunaithe**, ar féidir leat rochtain a fháil air trí aip fíordheimhnitheora mar Google Authenticator nó Authy. Feidhmíonn siad seo mar fhachtóir "rud éigin leat" toisc go bhfuil an síol a ghineann an cód uainithe stóráilte ar do ghléas.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Nóta: Trí 2FA atá SMS-bhunaithe a úsáid beidh tú leochailleach roimh ionsaithe <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">Jacking SIM</a> agus níl sé slán. Ar mhaithe leis an tslándáil is fearr, úsáid seirbhís amhail <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nó <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Eochracha slándála {#security-keys}
 

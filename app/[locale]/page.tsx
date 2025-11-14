@@ -6,13 +6,14 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type {
   AllHomepageActivityData,
   CommunityBlog,
+  PageParams,
   ValuesPairing,
 } from "@/lib/types"
-import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
+import DevconnectBannerVariation1 from "@/components/DevconnectBanner/Variation1"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -59,6 +60,7 @@ import {
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
+import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
@@ -80,16 +82,18 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchApps } from "@/lib/api/fetchApps"
+import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
-import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
@@ -138,18 +142,19 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const loadData = dataLoader(
   [
     ["ethPrice", fetchEthPrice],
-    ["totalEthStaked", fetchTotalEthStaked],
+    ["beaconchainEpoch", fetchBeaconchainEpoch],
     ["totalValueLocked", fetchTotalValueLocked],
     ["growThePieData", fetchGrowThePie],
     ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
+    ["appsData", fetchApps],
   ],
   REVALIDATE_TIME * 1000
 )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
@@ -161,13 +166,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const [
     ethPrice,
-    totalEthStaked,
+    { totalEthStaked },
     totalValueLocked,
     growThePieData,
     communityEvents,
     attestantPosts,
     xmlBlogs,
+    appsData,
   ] = await loadData()
+
+  const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)
 
@@ -428,6 +436,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
+        <DevconnectBannerVariation1 />
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -507,6 +516,29 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               />
             ))}
           </Section>
+
+          {/* Apps of the week - Discover the best apps on Ethereum */}
+          {/* // TODO: Remove locale restriction after translation */}
+          {locale === DEFAULT_LOCALE && (
+            <Section id="apps-of-the-week">
+              <SectionContent className="flex flex-col gap-4">
+                <div className="flex flex-col items-center text-center">
+                  <SectionTag>Apps of the week</SectionTag>
+                  <SectionHeader>Discover apps on Ethereum</SectionHeader>
+                  <p className="text-lg">Start exploring Ethereum today</p>
+                </div>
+                <AppsHighlight
+                  apps={appsOfTheWeek}
+                  matomoCategory="apps-of-the-week"
+                />
+                <div className="!mt-8 flex justify-center">
+                  <ButtonLink href="/apps" size="lg">
+                    Browse apps <ChevronNext />
+                  </ButtonLink>
+                </div>
+              </SectionContent>
+            </Section>
+          )}
 
           {/* Activity - The strongest ecosystem */}
           <Section id="activity" variant="responsiveFlex">
@@ -613,7 +645,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     </ButtonLink>
                   </div>
                 </div>
-              </div>{" "}
+              </div>
             </SectionContent>
           </Section>
 
@@ -978,9 +1010,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   try {
     const t = await getTranslations({ locale, namespace: "page-index" })

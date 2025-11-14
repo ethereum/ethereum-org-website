@@ -57,9 +57,9 @@ Eğer biri bu taahhüt için kullanılan rastgele lokasyonları biliyorsa, söz 
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ne Danksharding ne de Proto-Danksharding, blokzinciri birden fazla parçaya ayırmayı hedefleyen geleneksel "parçalama" modelini uygulamaz. Parça zincirleri artık yol haritasının bir parçası değildir. Bunun yerine, "Danksharding", Ethereum'u ölçeklendirmek için damlalar etrafında dağıtılmış veri örneklendirmesini kullanır. Bu, uygulanması çok daha kolay bir yöntemdir. Bu modele bazen "veri parçalama" da denir.
-</InfoBanner>
+</Alert>
 
 ## DankSharding nedir? {#what-is-danksharding}
 

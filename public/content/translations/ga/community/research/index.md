@@ -83,7 +83,7 @@ Teastaíonn nód Ethereum chun dhá phíosa bogearraí a rith:
 1. cliant comhdhearcaidh chun súil a choinneáil ar cheann an blocshlabhra, cúlchaint bloic agus láimhseáil loighic comhdhearcaidh
 2. cliant reatha chun tacú le Meaisín Fíorúil Ethereum agus idirbhearta agus conarthaí cliste a rith
 
-Féach ar an [leathanach nóid agus cliaint] (/developers/docs/nodes-and-clients/) le haghaidh tuilleadh sonraí ar nóid agus cliaint agus le haghaidh liosta de na feidhmiúcháin cliant reatha go léir. Is féidir leat stair gach uasghrádú Ethereum a fháil freisin ar an [leathanach staire] (/history/).
+Féach ar an [leathanach nóid agus cliaint] (/developers/docs/nodes-and-clients/) le haghaidh tuilleadh sonraí ar nóid agus cliaint agus le haghaidh liosta de na feidhmiúcháin cliant reatha go léir. Is féidir leat stair gach uasghrádú Ethereum a fháil freisin ar an [leathanach staire] (/ethereum-forks/).
 
 ### Cliaint Reatha {#execution-clients}
 

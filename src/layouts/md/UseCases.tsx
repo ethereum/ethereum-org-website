@@ -5,6 +5,7 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
+import OnchainGamingProductList from "@/components/Content/gaming/OnchainGamingProductList"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
 import {
   EigenLayer,
@@ -35,11 +36,10 @@ export const useCasesComponents = {
   CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
-
   RestakingList,
   TabbedSection,
   EigenLayer,
-
+  OnchainGamingProductList,
   PredictionMarketLists,
 }
 
@@ -152,6 +152,15 @@ export const UseCasesLayout = ({
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "ai-agents",
+        },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-onchain-gaming"),
+        href: "/gaming/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "onchain-gaming",
         },
       },
       {

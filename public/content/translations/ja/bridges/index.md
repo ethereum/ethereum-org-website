@@ -59,9 +59,14 @@ USDTを貸し出すのにイーサリアムムメインネットのAaveを使用
 
 例えば、ネイティブビットコイン(BTC)の保有を希望しており、資金はイーサリアムメインネットにあるとします。 イーサリアムでBTCを入手するために、ラップドビットコイン(WBTC)を購入できます。 しかし、WBTCはイーサリアムネットワークの[ERC-20](/glossary/#erc-20)トークンであり、ビットコインのイーサリアム版のようなもので、ビットコインブロックチェーンの資産ではありません。 ネイティブのBTCを保有するには、イーサリアムからビットコインに資産をブリッジする必要があります。 WBTCをブリッジすれば、ネイティブのBTCに交換できます。 あるいは、BTCを保有していて、イーサリアムの[分散型金融(DeFi)](/glossary/#defi)プロトコルで使用したいとします。 これには、逆にBTCからWBTCへのブリッジが必要となり、WBTCはイーサリアムの資産として使用することができます。
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   [中央集権型取引所](/get-eth/)を使用すると、これらのすべてを行えます。 しかし、取引所に資産がある場合を除いては、複数の手順が必要になるため、ブリッジを使用する方が手間が省けます。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

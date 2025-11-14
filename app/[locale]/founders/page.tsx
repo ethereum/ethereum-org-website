@@ -2,8 +2,14 @@ import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, SectionNavDetails } from "@/lib/types"
+import type {
+  CommitHistory,
+  Lang,
+  PageParams,
+  SectionNavDetails,
+} from "@/lib/types"
 
+import CommentCard from "@/components/CommentCard"
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
@@ -37,8 +43,8 @@ import heroImg from "@/public/images/upgrades/merge.png"
 
 const GetInTouchId = "get-in-touch"
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-founders" })
 
   const supportTags = {
@@ -188,7 +194,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           tags: ["active", "grantProgram", "auditGrants", "toolingInfra"],
           description: t("page-founders-funding-unichain-description"),
           highlights: [t("page-founders-funding-unichain-highlight-1")],
-          href: "https://uniswapfoundation.mirror.xyz/CR1Boh_s3T7FDGwn2TQyyHYNMO_wp4jJDdtKR4U4CgE",
+          href: "https://www.uniswapfoundation.org/build",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
             name: "Unichain",
           }),
@@ -262,7 +268,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           tags: ["active", "auditGrants"],
           description: t("page-founders-partnerships-unichain-description"),
           highlights: [t("page-founders-partnerships-unichain-highlight-1")],
-          href: "https://www.uniswapfoundation.org/grants",
+          href: "https://www.uniswapfoundation.org/build",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
             name: "Unichain",
           }),
@@ -509,27 +515,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {stories.map(({ name, affiliation, content, className }) => (
-                <Card
+                <CommentCard
                   key={name}
+                  description={content}
+                  name={name}
+                  title={affiliation}
                   className={cn(
                     "h-fit space-y-1 rounded-2xl border bg-background p-6",
                     className
                   )}
-                >
-                  <div className="space-y-6">{content}</div>
-                  <div className="flex items-center gap-x-2">
-                    <div
-                      data-label="avatar"
-                      className="grid size-8 place-items-center rounded-full text-body-inverse"
-                    >
-                      {name[0].toUpperCase()}
-                    </div>
-                    <div>
-                      <p className="font-bold">{name}</p>
-                      <p className="text-sm text-body-medium">{affiliation}</p>
-                    </div>
-                  </div>
-                </Card>
+                />
               ))}
             </div>
           </Section>
@@ -555,9 +550,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

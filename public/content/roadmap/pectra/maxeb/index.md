@@ -12,9 +12,9 @@ lang: en
 
 ### Who is affected? {#who-is-affected}
 
-Anyone who runs a validator - this is likely someone who knows the index (e.g. [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g. Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
+Anyone who runs a validator - this is likely someone who knows the index (e.g., [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g., Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
 
-If you stake using a liquid staking token (e.g. rETH or stETH), no action is required or recommended.
+If you stake using a liquid staking token (e.g., rETH or stETH), no action is required or recommended.
 
 ### What is "maxEB"? {#what-is-maxeb}
 
@@ -101,8 +101,8 @@ The target validator must
 
 The consolidation request will be signed by the withdrawal address associated with the source validator and have:
 
-1. Address of the source validator (e.g. `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`)
-2. Public key of the source validator (e.g. `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`)
+1. Address of the source validator (e.g., `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`)
+2. Public key of the source validator (e.g., `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`)
 3. Public key of that target validator
 
 In a conversion, 2 & 3 will be the same. This operation can be done on [the Launchpad](https://launchpad.ethereum.org/).
@@ -139,6 +139,7 @@ There are several tools available to manage consolidations. The official tool, c
 | Pectra Validator Ops CLI Tool | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract) | Yes, MIT | [Luganodes](https://www.luganodes.com/) | Yes, Quantstamp [May 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Command line | Batching, for many validators at once |
 | Ethereal | [GitHub](https://github.com/wealdtech/ethereal) | Yes, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | No | Command line | Full feature set for validator and node management |
 | Siren | [GitHub](https://github.com/sigp/siren) | Yes, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/) | No | Some command line, but primarily web UI | Only works if you're using the Lighthouse consensus client |
+| Consolideth.app | https://consolideth.app/ [GitHub](https://github.com/Stakely/consolideth) | Yes, MIT licences | [Stakely](https://stakely.io/) | No | Web UI, hosted by stakely and ready to be selfhosted freely| Supports major wallet connections including safe with walletconnect |
 
 ## FAQ {#faq}
 

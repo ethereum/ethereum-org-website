@@ -43,9 +43,14 @@ Shanghai/Capella yükseltmesinden önce hisselenmiş ETH'lerinizi kullanamaz vey
 
 Herhangi bir doğrulayıcı hesabının kendi bakiyesinden ETH çekebilir durumuna erişmesi için bir çekim adresi belirtmesi, gerekli adımdır.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Her bir doğrulayıcı hesabı bir seferde yalnızca bir para çekme adresi atayabilir.</strong> Bir adres seçilip fikir birliği katmanına kaydedildiğinde bu, geri alınamaz veya tekrardan değiştirilemez. Kaydetmeden önce sahipliği ve bildirilen adresin doğruluğunu iki defa kontrol edin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Aksini belirtmediğiniz için güvenlik kelimelerinizin çevrimdışı ortamda güvende kaldığı ve herhangi bir yolla ele geçirilemeyeceği varsayıldığından <strong>aynı zamanda bakiyelerinize herhangi bir tehdit de bulunmamaktadır</strong>. Para çekme kimliği ekleme başarısızlığı, çekim adresi belirtilene kadar ETH'nizi basit bir biçimde doğrulayıcı hesabında kilitli halde bırakacaktır.
 
@@ -65,7 +70,7 @@ Hisseleme çekimleri aktif! Para çekebilme işlevi 12 Nisan 2023'te gerçekleş
 
 Şangay/Capella yükseltmesi, daha önceden hisselenmiş ETH'lerin normal Ethereum hesaplarına geri alınabilmesini sağladı. Bu da likidite hisseleme döngüsünü kapattı; Ethereum'u daha sürdürülebilir, ölçeklenebilir ve de merkeziyetsiz ekosistem oluşturma yolculuğuna bir adım daha yaklaştırdı.
 
-- [Ethereum'un tarihçesi hakkında daha fazla bilgi](/history/)
+- [Ethereum'un tarihçesi hakkında daha fazla bilgi](/ethereum-forks/)
 - [Ethereum'un yol haritası hakkında daha fazla bilgi](/roadmap/)
 
 ## Para çekme ödemeleri nasıl çalışır? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Finematics tarafından sağlanmış Ethereum hisseleme çekim işlemleri açıkl
 
 Doğrulayıcının bir sonraki bloku önerebilmesi için 16 adede kadar uygun para çekme işleminden oluşan bir para çekme kuyruğu oluşturması gerekir. Bu başlangıçta doğrulayıcı indeksinin 0 ile başlayarak, bu hesabın protokolün kuralları gereğince para çekmeye uygun olup olmadığını belirleyerek ve uygunsa kuyruğa ekleyerek yapılır. Aşağıdaki bloku önermek için ayarlanan doğrulayıcı son blokun kaldığı yerden devam edecek ve sonsuza kadar bu sırayla ilerleyecek.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Analog bir saat düşünün. Saatteki akrep saate işaret eder, bir yönde ilerler, herhangi bir saati atlamaz ve eninde sonunda son sayıya ulaşıldıktan sonra tekrardan başa sarar.<br/><br/>
 Şimdi 1 ile 12 arası yerine, saatin 0 ile N <em>(fikir birliği katmanına şimdiye kadar kayıt olmuş tüm doğrulayıcı hesaplarının sayısı, Ocak 2023 itibariyle 500.000) arasına sahip olduğunu düşünün.</em><br/><br/>
 Saatin akrebi para çekme uygunluğu için kontrol edilmesi gereken sıradaki doğrulayıcıya işaret edecektir. 0 ile başlar ve hiçbir sayıyı atlamadan tüm yol boyunca devam eder. Son doğrulayıcıya ulaşıldığında döngü baştan başlayarak devam eder.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Para çekme işlemleri için hesabı kontrol etme {#checking-an-account-for-withdrawals}
 

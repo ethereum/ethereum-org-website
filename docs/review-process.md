@@ -30,7 +30,7 @@ Any new feature correlated with an approved issue is of medium priority. Similar
 
 ### Content
 
-Content PRs are considered medium-priority. Depending on their content, they can be very high-impact but also a high effort to go through the various stages of content review to ensure the content meets the standards we aim for. Content PRs can be broken into two categories: major content (e.g. a new page) and minor content changes (e.g. a new section to an existing page). Typo or grammar fixes are considered separately.
+Content PRs are considered medium-priority. Depending on their content, they can be very high-impact but also a high effort to go through the various stages of content review to ensure the content meets the standards we aim for. Content PRs can be broken into two categories: major content (e.g., a new page) and minor content changes (e.g., a new section to an existing page). Typo or grammar fixes are considered separately.
 
 **Timeline:** Major content should be merged within 30 days of opening. Minor content changes within 14 days of opening.
 

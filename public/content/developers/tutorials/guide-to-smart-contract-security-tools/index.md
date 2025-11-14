@@ -12,7 +12,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 We are going to use three distinctive testing and program analysis techniques:
 
-- **Static analysis with [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** All the paths of the program are approximated and analyzed at the same time, through different program presentations (e.g. control-flow-graph)
+- **Static analysis with [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** All the paths of the program are approximated and analyzed at the same time, through different program presentations (e.g., control-flow-graph)
 - **Fuzzing with [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** The code is executed with a pseudo-random generation of transactions. The fuzzer will try to find a sequence of transactions to violate a given property.
 - **Symbolic execution with [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** A formal verification technique, which translates each execution path to a mathematical formula, on which on top constraints can be checked.
 
@@ -26,7 +26,7 @@ Each technique has advantages and pitfalls, and will be useful in [specific case
 
 \* if all the paths are explored without timeout
 
-**Slither** analyzes contracts within seconds, however, static analysis might lead to false alarms and will be less suitable for complex checks (e.g. arithmetic checks). Run Slither via the API for push-button access to built-in detectors or via the API for user-defined checks.
+**Slither** analyzes contracts within seconds, however, static analysis might lead to false alarms and will be less suitable for complex checks (e.g., arithmetic checks). Run Slither via the API for push-button access to built-in detectors or via the API for user-defined checks.
 
 **Echidna** needs to run for several minutes and will only produce true positives. Echidna checks user-provided security properties, written in Solidity. It might miss bugs since it is based on random exploration.
 
@@ -41,14 +41,14 @@ Start with Slither's built-in detectors to ensure that no simple bugs are presen
 - Use Slither to write custom static checks
 - Use Manticore once you want in-depth assurance of critical security properties
 
-**A note on unit tests**. Unit tests are necessary to build high-quality software. However, these techniques are not the best suited to find security flaws. They are typically used to test positive behaviors of code (i.e. the code works as expected in the normal context), while security flaws tend to reside in edge cases that the developers did not consider. In our study of dozens of smart contract security reviews, [unit test coverage had no effect on the number or severity of security flaws](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) we found in our client's code.
+**A note on unit tests**. Unit tests are necessary to build high-quality software. However, these techniques are not the best suited to find security flaws. They are typically used to test positive behaviors of code (i.e., the code works as expected in the normal context), while security flaws tend to reside in edge cases that the developers did not consider. In our study of dozens of smart contract security reviews, [unit test coverage had no effect on the number or severity of security flaws](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) we found in our client's code.
 
 ## Determining Security Properties {#determining-security-properties}
 
 To effectively test and verify your code, you must identify the areas that need attention. As your resources spent on security are limited, scoping the weak or high-value parts of your codebase is important to optimize your effort. Threat modeling can help. Consider reviewing:
 
 - [Rapid Risk Assessments](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (our preferred approach when time is short)
-- [Guide to Data-Centric System Threat Modeling](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (aka NIST 800-154)
+- [Guide to Data-Centric System Threat Modeling](https://csrc.nist.gov/pubs/sp/800/154/ipd) (aka NIST 800-154)
 - [Shostack threat modeling](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
 - [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
@@ -64,7 +64,7 @@ The broad areas that are frequently relevant for smart contracts include:
 
   - Echidna and Manticore are the tools to favor to test state-machine specifications.
 
-- **Access controls.** If your system has privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
+- **Access controls.** If your system has privileged users (e.g., an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
 
   - Slither, Echidna and Manticore can check for correct access controls. For example, Slither can check that only whitelisted functions lack the onlyOwner modifier. Echidna and Manticore are useful for more complex access control, such as a permission given only if the contract reaches a given state.
 
@@ -80,7 +80,7 @@ The broad areas that are frequently relevant for smart contracts include:
 
   - Manticore and Echidna are the best choice for testing external interactions with your contracts. Manticore has an built-in mechanism to stub external contracts.
 
-- **Standard conformance.** Ethereum standards (e.g. ERC20) have a history of flaws in their design. Be aware of the limitations of the standard you are building on.
+- **Standard conformance.** Ethereum standards (e.g., ERC20) have a history of flaws in their design. Be aware of the limitations of the standard you are building on.
   - Slither, Echidna, and Manticore will help you to detect deviations from a given standard.
 
 ### Tool selection cheatsheet {#tool-selection-cheatsheet}

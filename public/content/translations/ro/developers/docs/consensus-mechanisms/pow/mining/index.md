@@ -15,9 +15,14 @@ Minarea este procesul de creare a unui bloc de tranzacții care trebuie adăugat
 
 Ethereum, la fel ca Bitcoin, utilizează în prezent un mecanism de consens prin [dovada-muncii (PoW)](/developers/docs/consensus-mechanisms/pow/). Minarea este forța vie a dovezii-muncii. Miner-ii Ethereum - computere care rulează software - își folosesc timpul și puterea de calcul pentru a procesa tranzacții și a produce blocuri.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
    Dovada-mizei va înlocui minarea și dovada-muncii în cursul anului viitor. Puteți începe de astăzi să vă mizați ETH-ul. [Aflați mai multe despre mizare](/staking/)    
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## De ce există miner-i? {#why-do-miners-exist}
 

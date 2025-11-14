@@ -62,12 +62,15 @@ O ní láti fún ẹnikẹ́ni tó bá fẹ́ fi owó ránṣẹ́ sí ọ ní àd
 5. Buwọ́lu ìbéèrè ifọwọ́sí tó wà nínú wọ́lẹ́ẹ́tì rẹ láti ṣètò ìsopọ̀ náà. **Buwọ́lu ìsọfúnni yìí kò ní nílò ìnáwó ETH kankan**.
 6. Òhun nìyẹn! Bẹ̀rẹ̀ sí ní lo ohun èlò náà. O le rí díẹ̀ nínú àwọn iṣẹ́ àkànṣe tó wúni lórí[ojú-ewè Dapps wa](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ṣe o f mọ̀ síi?</div>
   <ButtonLink href="/guides/">
     Wo àwọn ìtọ́sọ́nà wa mìíràn
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Awon ibere gbogbo ìgbà
 

@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Castle,
   Landmark,
   LockKeyhole,
@@ -7,9 +6,9 @@ import {
   SquareCode,
   User,
 } from "lucide-react"
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -22,13 +21,12 @@ import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
-import Link, { LinkProps } from "@/components/ui/Link"
+import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
@@ -86,23 +84,8 @@ const HighlightCardContent = ({
   <div className={cn("space-y-6 text-body-medium", className)} {...props} />
 )
 
-const LinkWithArrow = async ({ href, className, children }: LinkProps) => {
-  const locale = await getLocale()
-  const { twFlipForRtl } = getDirection(locale as Lang)
-  return (
-    <Link
-      href={href}
-      className={cn("group block w-fit no-underline", className)}
-    >
-      <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
-      &nbsp;
-      <span className="group-hover:underline">{children}</span>
-    </Link>
-  )
-}
-
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-what-is-ethereum",
@@ -353,7 +336,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 </div>
               </div>
 
-              <LinkWithArrow href="/layer-2/networks/">
+              <LinkWithArrow href="/what-is-the-ethereum-network/">
                 {t("page-what-is-ethereum-network-learn-more")}
               </LinkWithArrow>
             </Section>
@@ -821,20 +804,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <div className="space-y-6">
                     <p>{t("page-what-is-ethereum-start-business-desc-1")}</p>
                     <p>{t("page-what-is-ethereum-start-business-desc-2")} </p>
-                    <p>
-                      {t("page-what-is-ethereum-start-business-desc-3")}
-                      <UnorderedList className="[&>li]:mb-0">
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-1")}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-2")}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-3")}
-                        </ListItem>
-                      </UnorderedList>
-                    </p>
+                    <p>{t("page-what-is-ethereum-start-business-desc-3")}</p>
+                    <UnorderedList className="[&>li]:mb-0">
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-1")}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-2")}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-3")}
+                      </ListItem>
+                    </UnorderedList>
                     <p>
                       {t.rich("page-what-is-ethereum-start-business-example", {
                         a: (chunks) => (
@@ -914,10 +895,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </div>
                 </div>
 
-                {/* // TODO: Re-enable when page ready */}
-                {/* <LinkWithArrow href="#TODO-get-link">
+                <LinkWithArrow href="/ethereum-vs-bitcoin/">
                   {t("page-what-is-ethereum-bitcoin-learn-more")}
-                </LinkWithArrow> */}
+                </LinkWithArrow>
               </div>
             </Section>
 
@@ -1058,7 +1038,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     </p>
                     <p>{t("page-what-is-ethereum-when-who-governance-4")}</p>
                   </div>
-                  <LinkWithArrow href="/history/">
+                  <LinkWithArrow href="/ethereum-history-founder-and-ownership/">
                     {t("page-what-is-ethereum-when-who-learn-more")}
                   </LinkWithArrow>
                 </div>
@@ -1152,9 +1132,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,

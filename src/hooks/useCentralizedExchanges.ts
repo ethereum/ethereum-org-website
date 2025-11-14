@@ -48,6 +48,8 @@ import okx from "@/public/images/exchanges/okx.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
+import zebpay from "@/public/images/exchanges/zebpay.png"
+import zkp2p from "@/public/images/exchanges/zkp2p.png"
 
 type ExchangeKey =
   | "binance"
@@ -80,6 +82,8 @@ type ExchangeKey =
   | "rain"
   | "shakepay"
   | "wazirx"
+  | "zebpay"
+  | "zkp2p"
 
 type ExchangeDetail = {
   name: string
@@ -309,6 +313,18 @@ const exchanges: ExchangeDetails = {
     image: korbit,
     usaExceptions: [],
   },
+  zebpay: {
+    name: "ZebPay",
+    url: "https://www.zebpay.com/",
+    image: zebpay,
+    usaExceptions: [],
+  },
+  zkp2p: {
+    name: "ZKP2P",
+    url: "https://zkp2p.xyz",
+    image: zkp2p,
+    usaExceptions: [],
+  },
 }
 
 export const useCentralizedExchanges = () => {
@@ -384,7 +400,7 @@ export const useCentralizedExchanges = () => {
             description,
             link: exchanges[exchange].url,
             image: exchanges[exchange].image,
-            alt: "", // TODO: Add alt text for exchange image
+            alt: t("common:item-logo", { item: exchanges[exchange].name }),
           }
         })
     )

@@ -32,7 +32,7 @@ Going back to our earlier example, the only evidence you need to prove your citi
 
 Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
 
-Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
+Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g., by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
 
 There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 
@@ -94,7 +94,7 @@ For example, [quadratic funding mechanisms](https://www.radicalxchange.org/wiki/
 
 Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
 
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (e.g., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
 
 #### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
 
@@ -116,7 +116,7 @@ Using MACI _does_ require trusting the coordinator not to collude with bribers o
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of onchain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 
-[Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Learn more about MACI](https://maci.pse.dev/).
 
 ## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
 

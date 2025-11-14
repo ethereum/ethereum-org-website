@@ -25,9 +25,26 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/what-is-ethereum/",
             },
             {
+              label: t("what-is-the-ethereum-network"),
+              description: t("nav-what-is-ethereum-network-description"),
+              href: "/what-is-the-ethereum-network/",
+            },
+            {
               label: t("what-is-ether"),
               description: t("nav-what-is-ether-description"),
               href: "/eth/",
+            },
+            {
+              label: t("ethereum-vs-bitcoin"),
+              description: t("nav-ethereum-vs-bitcoin-description"),
+              href: "/ethereum-vs-bitcoin/",
+            },
+            {
+              label: t("ethereum-history-founder-and-ownership"),
+              description: t(
+                "nav-ethereum-history-founder-and-ownership-description"
+              ),
+              href: "/ethereum-history-founder-and-ownership/",
             },
             {
               label: t("ethereum-wallets"),
@@ -179,6 +196,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/dao/",
             },
             {
+              label: t("decentralized-social-networks"),
+              description: t("nav-desoc-description"),
+              href: "/social-networks/",
+            },
+            {
               label: t("nav-emerging-label"),
               description: t("nav-emerging-description"),
               items: [
@@ -186,11 +208,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   label: t("decentralized-identity"),
                   description: t("nav-did-description"),
                   href: "/decentralized-identity/",
-                },
-                {
-                  label: t("decentralized-social-networks"),
-                  description: t("nav-desoc-description"),
-                  href: "/social-networks/",
                 },
                 {
                   label: t("decentralized-science"),
@@ -206,6 +223,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   label: t("ai-agents"),
                   description: t("nav-ai-agents-description"),
                   href: "/ai-agents/",
+                },
+                {
+                  label: t("onchain-gaming"),
+                  description: t("nav-gaming-description"),
+                  href: "/gaming/",
                 },
                 {
                   label: t("prediction-markets"),
@@ -461,7 +483,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-history-label"),
               description: t("nav-history-description"),
-              href: "/history/",
+              href: "/ethereum-forks/",
             },
             {
               label: t("nav-open-research-label"),

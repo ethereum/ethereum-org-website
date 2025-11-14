@@ -427,5 +427,8 @@
   "withdrawals": "स्टेकिंग निकासी",
   "wrapped-ether": "बेरिएको Ether",
   "yes": "हो",
-  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाणहरू"
+  "zero-knowledge-proofs": "शून्य-ज्ञान प्रमाणहरू",
+  "ethereum-vs-bitcoin": "इथेरियम बनाम बिटकोइन",
+  "nav-ethereum-vs-bitcoin-description": "इथेरियम र बिटकोइन बीचको भिन्नताहरू बुझ्नुहोस्"
+
 }

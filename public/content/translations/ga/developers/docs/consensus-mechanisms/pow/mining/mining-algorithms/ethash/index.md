@@ -4,9 +4,14 @@ description: Súil mhionsonraithe ar algartam Ethash.
 lang: ga
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:" />
+<AlertContent>
+<AlertDescription>
    Ba é Ethash algartam mianadóireachta cruthúnas-oibre Ethereum. Tá cruthúnas-de-oibre **múchta go hiomlán** anois agus tá Ethereum daingnithe anois ag baint úsáide as [cruthúnas-de-gealláil](/developers/docs/consensus-mechanisms/pos/) ina ionad sin. Léigh tuilleadh ar [An Cumasc](/roadmap/merge/), [cruthúnas-gill](/developers/docs/consensus-mechanisms/pos/) agus [geallchur](/staking/). Leathanach le spéis stairiúil é seo!  
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Is leagan modhnaithe é Ethash den algartam [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Tá [cruthú cuimhne](https://wikipedia.org/wiki/Memory-hard_function) ar cruthúnas-oibre Ethash, rud a measadh a fhágann go bhfuil an algartam frithsheasmhach in ASIC. Forbraíodh ASICanna Ethash sa deireadh ach bhí mianadóireacht GPU fós ina rogha inmharthana go dtí gur múchadh cruthúnas-oibre. Úsáidtear Ethash fós do mhianadóireacht bonn ar líonraí eile nach bhfuil ar chruthúnas-oibre Ethereum.
 
@@ -44,7 +49,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### Úsáid 'SHA3' {#sha3}
 
-Tharla forbairt Ethereum ag an am céanna le forbairt an chaighdeáin SHA3, agus rinne an próiseas caighdeáin athrú déanach i stuáil an algartam haise críochnaithe, ionas nach haiseanna Ethereum caighdeánacha sha3 iad "sha3_256" agus "sha3_512", ach malairt ar a dtugtar "Keccak-256" agus "Keccak-512" go minic i gcomhthéacsanna eile. Féach plé, e.g. [anseo](https://eips.ethereum.org/EIPS/eip-1803), [anseo](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), nó [anseo](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Tharla forbairt Ethereum ag an am céanna le forbairt an chaighdeáin SHA3, agus rinne an próiseas caighdeáin athrú déanach i stuáil an algartam haise críochnaithe, ionas nach haiseanna Ethereum caighdeánacha sha3 iad "sha3_256" agus "sha3_512", ach malairt ar a dtugtar "Keccak-256" agus "Keccak-512" go minic i gcomhthéacsanna eile. Féach plé, e.g., [anseo](https://eips.ethereum.org/EIPS/eip-1803), [anseo](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), nó [anseo](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Meabhraigh le do thoil go dtagraítear do haiseanna mar "sha3" san algartam thíos.
 

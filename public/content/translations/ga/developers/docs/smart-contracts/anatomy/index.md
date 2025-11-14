@@ -76,9 +76,9 @@ Lena rá go simplí, is féidir le feidhmeanna faisnéis a fháil nó faisnéis 
 Tá dhá chineál glaonna feidhme ann:
 
 - `internal` – ní chruthaíonn siad seo glao EVM
-  - Ní féidir rochtain a fháil ar fheidhmeanna inmheánacha agus ar athróga staide ach go hinmheánach (i.e. ón taobh istigh den chonradh reatha nó de na conarthaí a eascraíonn as)
+  - Ní féidir rochtain a fháil ar fheidhmeanna inmheánacha agus ar athróga staide ach go hinmheánach (i.e., ón taobh istigh den chonradh reatha nó de na conarthaí a eascraíonn as)
 - `seachtrach` –cruthaíonn siad seo glao EVM
-  - Is cuid den chomhéadan conartha iad feidhmeanna seachtracha, rud a chiallaíonn gur féidir iad a ghlaoch ó chonarthaí eile agus trí idirbhearta. Ní féidir glaoch inmheánach a chur ar fheidhm sheachtrach `f` (i.e. ní oibríonn `f()`, ach oibríonn `this.f()`).
+  - Is cuid den chomhéadan conartha iad feidhmeanna seachtracha, rud a chiallaíonn gur féidir iad a ghlaoch ó chonarthaí eile agus trí idirbhearta. Ní féidir glaoch inmheánach a chur ar fheidhm sheachtrach `f` (i.e., ní oibríonn `f()`, ach oibríonn `this.f()`).
 
 Is féidir leo a bheith `poiblí` nó `príobháideach` freisin
 

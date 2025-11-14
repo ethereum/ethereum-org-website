@@ -168,7 +168,7 @@ Is é an príomhrud ná gur dócha nach ndéanann sé difríocht mhór don inús
 
 Bhí sé suimiúil go leor an faisean a fheiceáil ag athrú le himeacht ama. Ar dtús bhí an comhartha ag Uniswap ar chlé, ach tá sé tar éis bogadh ar dheis ó shin. Rinne Sushiswap an t-athrú seo freisin le linn uasghrádú dearaidh. Lean formhór na bprótacal, ach ní iad léir, an nós seo.
 
-Go traidisiúnta cuireann coinbhinsiún airgeadais an tsiombail airgeadra roimh an uimhir, e.g. $50, €50, £50, ach _deirimid_ 50 dollar, 50 Euro, 50 punt.
+Go traidisiúnta cuireann coinbhinsiún airgeadais an tsiombail airgeadra roimh an uimhir, e.g., $50, €50, £50, ach _deirimid_ 50 dollar, 50 Euro, 50 punt.
 
 Don úsáideoir ginearálta - go háirithe duine a léann ó chlé go deas, ó bharr go bun - is dócha go mothaíonn comhartha ar dheis níos nádúrtha.
 

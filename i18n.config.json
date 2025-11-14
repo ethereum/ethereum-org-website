@@ -537,6 +537,7 @@
     "localName": "Tagalog",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY",
+    "forceLocalName": true,
     "validISO639_1": true
   },
   {

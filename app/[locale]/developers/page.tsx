@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -109,12 +109,8 @@ const WhyGrid = () => {
     </div>
   )
 }
-const DevelopersPage = async ({
-  params,
-}: {
-  params: Promise<{ locale: Lang }>
-}) => {
-  const { locale } = await params
+const DevelopersPage = async ({ params }: { params: PageParams }) => {
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-developers-index",
@@ -534,7 +530,11 @@ const DevelopersPage = async ({
             {/* DESKTOP */}
             <Scroller>
               {hackathons.map((event, idx) => (
-                <HackathonCard key={idx} event={event} className="flex-1" />
+                <HackathonCard
+                  key={idx}
+                  event={event}
+                  className="min-w-72 max-w-md flex-1"
+                />
               ))}
             </Scroller>
             {/* MOBILE */}
@@ -608,9 +608,9 @@ const DevelopersPage = async ({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,
