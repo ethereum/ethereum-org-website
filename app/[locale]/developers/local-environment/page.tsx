@@ -5,12 +5,16 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type {
+  CommitHistory,
+  FrameworkGitHubData,
+  Lang,
+  PageParams,
+} from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { extractFrameworkGitHubData } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { every } from "@/lib/utils/time"
@@ -27,10 +31,14 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch daily data (framework GitHub data) with 24-hour revalidation
-  const dailyData = await getExternalData(["frameworkGitHubData"], every("day"))
+  const { frameworkGitHubData: frameworkGitHubResponse } =
+    (await getExternalData(["frameworkGitHubData"], every("day"))) || {}
 
   // Extract framework GitHub data
-  const frameworkGitHubData = extractFrameworkGitHubData(dailyData)
+  const frameworkGitHubData =
+    frameworkGitHubResponse && "value" in frameworkGitHubResponse
+      ? (frameworkGitHubResponse.value as FrameworkGitHubData)
+      : null
 
   // Combine static framework data with GitHub data
   const frameworksListData = frameworksList.map((framework) => {

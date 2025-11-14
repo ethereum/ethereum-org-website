@@ -6,10 +6,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type {
   AllHomepageActivityData,
   CommunityBlog,
+  ExternalDataReturnData,
+  GrowThePieRawDataItem,
   PageParams,
+  RSSItem,
   ValuesPairing,
 } from "@/lib/types"
-import { CodeExample } from "@/lib/interfaces"
+import { CodeExample, CommunityEvent } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
@@ -62,14 +65,6 @@ import WindowBox from "@/components/WindowBox"
 
 import { extractAppsData, parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import {
-  extractCalendarEventsFormatted,
-  extractGrowThePieData,
-  extractNestedValue,
-  extractRSSFeeds,
-  extractRSSItems,
-  extractValue,
-} from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
@@ -144,23 +139,40 @@ const Page = async ({ params }: { params: PageParams }) => {
   const { direction: dir, isRtl } = getDirection(locale)
 
   // Fetch hourly data with 1-hour revalidation
-  const hourlyData = await getExternalData(
+  const {
+    ethPrice: ethPriceResponse,
+    totalValueLocked: totalValueLockedResponse,
+    beaconchainEpoch: beaconchainEpochData,
+    growThePie: growThePieResponse,
+  } = (await getExternalData(
     ["ethPrice", "beaconchainEpoch", "totalValueLocked", "growThePie"],
     every("hour")
-  )
+  )) || {}
 
   // Extract hourly metrics from external data
-  const ethPrice = extractValue(hourlyData, "ethPrice", 0)
-  const totalValueLocked = extractValue(hourlyData, "totalValueLocked", 0)
-  const totalEthStaked = extractNestedValue(
-    hourlyData,
-    "beaconchainEpoch",
-    "totalEthStaked",
-    0
-  )
+  const ethPrice =
+    ethPriceResponse && "value" in ethPriceResponse
+      ? ethPriceResponse
+      : { value: 0, timestamp: Date.now() }
+  const totalValueLocked =
+    totalValueLockedResponse && "value" in totalValueLockedResponse
+      ? totalValueLockedResponse
+      : { value: 0, timestamp: Date.now() }
+  const totalEthStaked =
+    beaconchainEpochData &&
+    !("error" in beaconchainEpochData) &&
+    typeof beaconchainEpochData === "object" &&
+    "totalEthStaked" in beaconchainEpochData &&
+    beaconchainEpochData.totalEthStaked &&
+    "value" in beaconchainEpochData.totalEthStaked
+      ? beaconchainEpochData.totalEthStaked
+      : { value: 0, timestamp: Date.now() }
 
   // Extract and process growThePie data
-  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieDataRaw =
+    growThePieResponse && "value" in growThePieResponse
+      ? (growThePieResponse.value as GrowThePieRawDataItem[])
+      : null
   const growThePieData = growThePieDataRaw
     ? processGrowThePieData(growThePieDataRaw)
     : {
@@ -171,26 +183,56 @@ const Page = async ({ params }: { params: PageParams }) => {
       }
 
   // Fetch daily data (calendar events, attestant posts, and blog feeds) with 24-hour revalidation
-  const dailyData = await getExternalData(
+  const {
+    calendarEvents: calendarEventsResponse,
+    attestantPosts: attestantPostsResponse,
+    blogFeeds: blogFeedsResponse,
+    appsData: appsDataRaw,
+  } = (await getExternalData(
     ["calendarEvents", "attestantPosts", "blogFeeds", "appsData"],
     every("day")
-  )
+  )) || {}
 
   // Extract calendar events
-  const communityEvents = extractCalendarEventsFormatted(dailyData)
+  const calendarEventsData =
+    calendarEventsResponse && "value" in calendarEventsResponse
+      ? (calendarEventsResponse.value as {
+          upcomingEvents?: { value: CommunityEvent[] }
+          pastEvents?: { value: CommunityEvent[] }
+        })
+      : undefined
+  const communityEvents = {
+    upcomingEventData:
+      (calendarEventsData?.upcomingEvents &&
+        "value" in calendarEventsData.upcomingEvents &&
+        calendarEventsData.upcomingEvents.value) ||
+      [],
+    pastEventData:
+      (calendarEventsData?.pastEvents &&
+        "value" in calendarEventsData.pastEvents &&
+        calendarEventsData.pastEvents.value) ||
+      [],
+  }
 
   // Extract attestant posts
-  const attestantPosts = extractRSSItems(dailyData, "attestantPosts")
+  const attestantPosts =
+    attestantPostsResponse && "value" in attestantPostsResponse
+      ? (attestantPostsResponse.value as RSSItem[])
+      : []
 
   // Extract blog feeds
-  const xmlBlogs = extractRSSFeeds(dailyData)
+  const xmlBlogs =
+    blogFeedsResponse && "value" in blogFeedsResponse
+      ? (blogFeedsResponse.value as RSSItem[][])
+      : []
 
   // Extract apps
-  const appsDataRaw = dailyData?.appsData as
-    | { value: Record<string, unknown> }
-    | { error: string }
-    | undefined
-  const appsData = extractAppsData(appsDataRaw)
+  const appsData = extractAppsData(
+    appsDataRaw as
+      | { value: Record<string, unknown> }
+      | { error: string }
+      | undefined
+  )
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)
@@ -422,9 +464,9 @@ const Page = async ({ params }: { params: PageParams }) => {
   const upcomingEvents = allUpcomingEvents.slice(0, 3)
 
   const metricResults: AllHomepageActivityData = {
-    ethPrice,
-    totalEthStaked,
-    totalValueLocked,
+    ethPrice: ethPrice as ExternalDataReturnData,
+    totalEthStaked: totalEthStaked as ExternalDataReturnData,
+    totalValueLocked: totalValueLocked as ExternalDataReturnData,
     txCount: growThePieData.txCount,
     txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }

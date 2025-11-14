@@ -5,18 +5,19 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type {
+  CommitHistory,
+  GrowThePieBlockspaceData,
+  GrowThePieLaunchDates,
+  GrowThePieRawDataItem,
+  L2beatResponse,
+  Lang,
+  PageParams,
+} from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import {
-  extractGrowThePieBlockspace,
-  extractGrowThePieData,
-  extractGrowThePieMaster,
-  extractL2beatData,
-  extractValue,
-} from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -36,7 +37,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch hourly data (growThePie, ethereum market cap, blockspace data, master data, and l2beat data) with 1-hour revalidation
-  const hourlyData = await getExternalData(
+  const {
+    growThePie: growThePieResponse,
+    ethereumMarketcap: ethereumMarketcapResponse,
+    growThePieBlockspace: growThePieBlockspaceResponse,
+    growThePieMaster: growThePieMasterResponse,
+    l2beatData: l2beatResponse,
+  } = (await getExternalData(
     [
       "growThePie",
       "ethereumMarketcap",
@@ -45,19 +52,31 @@ const Page = async ({ params }: { params: PageParams }) => {
       "l2beatData",
     ],
     every("hour")
-  )
+  )) || {}
 
   // Extract blockspace data
-  const growThePieBlockspaceData = extractGrowThePieBlockspace(hourlyData)
+  const growThePieBlockspaceData =
+    growThePieBlockspaceResponse && "value" in growThePieBlockspaceResponse
+      ? (growThePieBlockspaceResponse.value as GrowThePieBlockspaceData)
+      : {}
 
   // Extract master data (launch dates)
-  const growThePieMasterData = extractGrowThePieMaster(hourlyData)
+  const growThePieMasterData =
+    growThePieMasterResponse && "value" in growThePieMasterResponse
+      ? (growThePieMasterResponse.value as GrowThePieLaunchDates)
+      : {}
 
   // Extract L2beat data
-  const l2beatData = extractL2beatData(hourlyData)
+  const l2beatData =
+    l2beatResponse && "value" in l2beatResponse
+      ? (l2beatResponse.value as L2beatResponse)
+      : null
 
   // Extract and process growThePie data
-  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieDataRaw =
+    growThePieResponse && "value" in growThePieResponse
+      ? (growThePieResponse.value as GrowThePieRawDataItem[])
+      : null
   const growThePieData = growThePieDataRaw
     ? processGrowThePieData(growThePieDataRaw)
     : {
@@ -68,7 +87,10 @@ const Page = async ({ params }: { params: PageParams }) => {
       }
 
   // Extract Ethereum market cap
-  const ethereumMarketcapData = extractValue(hourlyData, "ethereumMarketcap", 0)
+  const ethereumMarketcapData =
+    ethereumMarketcapResponse && "value" in ethereumMarketcapResponse
+      ? ethereumMarketcapResponse
+      : { value: 0, timestamp: Date.now() }
 
   const layer2DataCompiled = layer2Data
     .map((network) => {

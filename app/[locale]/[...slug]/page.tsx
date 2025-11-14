@@ -6,12 +6,11 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { SlugPageParams } from "@/lib/types"
+import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
-import { extractGFIssues } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
@@ -40,8 +39,12 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   setRequestLocale(locale)
 
   // Fetch daily data (GitHub good first issues) with 24-hour revalidation
-  const dailyData = await getExternalData(["gfissues"], every("day"))
-  const gfissues = extractGFIssues(dailyData)
+  const { gfissues: gfissuesResponse } =
+    (await getExternalData(["gfissues"], every("day"))) || {}
+  const gfissues =
+    gfissuesResponse && "value" in gfissuesResponse
+      ? (gfissuesResponse.value as GHIssue[])
+      : []
 
   const slug = slugArray.join("/")
 

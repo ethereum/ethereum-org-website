@@ -5,15 +5,17 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type {
+  CommitHistory,
+  GrowThePieRawDataItem,
+  L2beatResponse,
+  Lang,
+  PageParams,
+} from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import {
-  extractGrowThePieData,
-  extractL2beatData,
-} from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -34,13 +36,14 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch hourly data (growThePie and l2beat) with 1-hour revalidation
-  const hourlyData = await getExternalData(
-    ["growThePie", "l2beatData"],
-    every("hour")
-  )
+  const { growThePie: growThePieResponse, l2beatData: l2beatResponse } =
+    (await getExternalData(["growThePie", "l2beatData"], every("hour"))) || {}
 
   // Extract and process growThePie data
-  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieDataRaw =
+    growThePieResponse && "value" in growThePieResponse
+      ? (growThePieResponse.value as GrowThePieRawDataItem[])
+      : null
   const growThePieData = growThePieDataRaw
     ? processGrowThePieData(growThePieDataRaw)
     : {
@@ -51,7 +54,10 @@ const Page = async ({ params }: { params: PageParams }) => {
       }
 
   // Extract L2beat data
-  const l2beatData = extractL2beatData(hourlyData)
+  const l2beatData =
+    l2beatResponse && "value" in l2beatResponse
+      ? (l2beatResponse.value as L2beatResponse)
+      : null
 
   const getRandomL2s = () => {
     if (!l2beatData)

@@ -10,10 +10,6 @@ import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import {
-  extractNestedValue,
-  extractValue,
-} from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { every } from "@/lib/utils/time"
@@ -28,27 +24,40 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch hourly data (beaconchain epoch and APR) with 1-hour revalidation
-  const hourlyData = await getExternalData(
-    ["beaconchainEpoch", "beaconchainApr"],
-    every("hour")
-  )
+  const {
+    beaconchainEpoch: beaconchainEpochData,
+    beaconchainApr: aprResponse,
+  } =
+    (await getExternalData(
+      ["beaconchainEpoch", "beaconchainApr"],
+      every("hour")
+    )) || {}
 
   // Extract beaconchain epoch data
-  const totalEthStaked = extractNestedValue(
-    hourlyData,
-    "beaconchainEpoch",
-    "totalEthStaked",
-    0
-  )
-  const validatorscount = extractNestedValue(
-    hourlyData,
-    "beaconchainEpoch",
-    "validatorscount",
-    0
-  )
+  const totalEthStaked =
+    beaconchainEpochData &&
+    !("error" in beaconchainEpochData) &&
+    typeof beaconchainEpochData === "object" &&
+    "totalEthStaked" in beaconchainEpochData &&
+    beaconchainEpochData.totalEthStaked &&
+    "value" in beaconchainEpochData.totalEthStaked
+      ? beaconchainEpochData.totalEthStaked
+      : { value: 0, timestamp: Date.now() }
+  const validatorscount =
+    beaconchainEpochData &&
+    !("error" in beaconchainEpochData) &&
+    typeof beaconchainEpochData === "object" &&
+    "validatorscount" in beaconchainEpochData &&
+    beaconchainEpochData.validatorscount &&
+    "value" in beaconchainEpochData.validatorscount
+      ? beaconchainEpochData.validatorscount
+      : { value: 0, timestamp: Date.now() }
 
   // Extract APR data
-  const apr = extractValue(hourlyData, "beaconchainApr", 0)
+  const apr =
+    aprResponse && "value" in aprResponse
+      ? aprResponse
+      : { value: 0, timestamp: Date.now() }
 
   const data: StakingStatsData = {
     totalEthStaked:

@@ -6,7 +6,12 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type {
+  CoinGeckoCoinMarketItem,
+  CommitHistory,
+  Lang,
+  PageParams,
+} from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -32,7 +37,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { extractStablecoinsData } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { every } from "@/lib/utils/time"
@@ -90,8 +94,12 @@ async function Page({ params }: { params: PageParams }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   // Fetch hourly data (stablecoins data) with 1-hour revalidation
-  const hourlyData = await getExternalData(["stablecoinsData"], every("hour"))
-  const stablecoinsData = extractStablecoinsData(hourlyData)
+  const { stablecoinsData: stablecoinsDataResponse } =
+    (await getExternalData(["stablecoinsData"], every("hour"))) || {}
+  const stablecoinsData =
+    stablecoinsDataResponse && "value" in stablecoinsDataResponse
+      ? (stablecoinsDataResponse.value as CoinGeckoCoinMarketItem[])
+      : []
 
   let marketsHasError = false
   const coinDetails: CoinDetails[] = []

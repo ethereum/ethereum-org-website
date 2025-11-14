@@ -2,11 +2,6 @@ import { beforeEach, describe, expect, it, vi } from "vitest"
 
 import { every } from "@/lib/utils/time"
 
-import {
-  extractArray,
-  extractGrowThePieData,
-  extractValue,
-} from "../extractExternalData"
 import { getExternalData } from "../getExternalData"
 
 // Mock storage clients
@@ -36,7 +31,10 @@ describe("Integration: getExternalData + extractors", () => {
     vi.mocked(getRedisData).mockResolvedValue(mockData)
 
     const data = await getExternalData(["ethPrice"], every("hour"))
-    const result = extractValue(data, "ethPrice", 0)
+    const result =
+      data?.ethPrice && "value" in data.ethPrice
+        ? data.ethPrice
+        : { value: 0, timestamp: Date.now() }
 
     expect(result.value).toBe(3000)
     expect(result.timestamp).toBeDefined()
@@ -55,10 +53,13 @@ describe("Integration: getExternalData + extractors", () => {
     vi.mocked(getRedisData).mockResolvedValue(mockData)
 
     const data = await getExternalData(["communityPicks"], every("day"))
-    const result = extractArray(data, "communityPicks")
+    const result =
+      data?.communityPicks && "value" in data.communityPicks
+        ? data.communityPicks.value
+        : []
 
     expect(Array.isArray(result)).toBe(true)
-    expect(result.length).toBe(2)
+    expect(Array.isArray(result) && result.length).toBe(2)
     expect(result[0]).toHaveProperty("name")
   })
 
@@ -78,7 +79,10 @@ describe("Integration: getExternalData + extractors", () => {
     vi.mocked(getRedisData).mockResolvedValue(mockData)
 
     const data = await getExternalData(["growThePie"], every("hour"))
-    const result = extractGrowThePieData(data)
+    const result =
+      data?.growThePie && "value" in data.growThePie
+        ? data.growThePie.value
+        : null
 
     expect(result).toBeDefined()
     expect(Array.isArray(result)).toBe(true)
@@ -90,7 +94,10 @@ describe("Integration: getExternalData + extractors", () => {
     vi.mocked(getRedisData).mockResolvedValue(null)
 
     const data = await getExternalData(["nonexistent"], every("hour"))
-    const result = extractValue(data, "nonexistent", 0)
+    const result =
+      data?.nonexistent && "value" in data.nonexistent
+        ? data.nonexistent
+        : { value: 0, timestamp: Date.now() }
 
     expect(result.value).toBe(0) // default value
   })
@@ -102,7 +109,10 @@ describe("Integration: getExternalData + extractors", () => {
     vi.mocked(getRedisData).mockResolvedValue(errorData)
 
     const data = await getExternalData(["ethPrice"], every("hour"))
-    const result = extractValue(data, "ethPrice", 0)
+    const result =
+      data?.ethPrice && "value" in data.ethPrice
+        ? data.ethPrice
+        : { value: 0, timestamp: Date.now() }
 
     expect(result.value).toBe(0) // default value when error
   })

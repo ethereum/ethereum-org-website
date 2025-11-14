@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang, PageParams } from "@/lib/types"
+import { CommitHistory, CommunityPick, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
@@ -20,7 +20,6 @@ import {
   getHighlightedApps,
 } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { extractCommunityPicks } from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { every } from "@/lib/utils/time"
@@ -42,20 +41,22 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch daily data (apps and community picks) with 24-hour revalidation
-  const dailyData = await getExternalData(
-    ["appsData", "communityPicks"],
-    every("day")
-  )
+  const { appsData: appsDataRaw, communityPicks: communityPicksResponse } =
+    (await getExternalData(["appsData", "communityPicks"], every("day"))) || {}
 
   // Extract apps data
-  const appsDataRaw = dailyData?.appsData as
-    | { value: Record<string, unknown> }
-    | { error: string }
-    | undefined
-  const appsData = extractAppsData(appsDataRaw)
+  const appsData = extractAppsData(
+    appsDataRaw as
+      | { value: Record<string, unknown> }
+      | { error: string }
+      | undefined
+  )
 
   // Extract community picks
-  const communityPicks = extractCommunityPicks(dailyData)
+  const communityPicks =
+    communityPicksResponse && "value" in communityPicksResponse
+      ? (communityPicksResponse.value as CommunityPick[])
+      : []
 
   // Get 3 random highlighted apps
   const highlightedApps = getHighlightedApps(appsData, 3)

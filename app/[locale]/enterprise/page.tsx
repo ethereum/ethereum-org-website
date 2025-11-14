@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server"
 
 import type {
   CommitHistory,
+  ExternalDataReturnData,
+  GrowThePieRawDataItem,
   Lang,
   PageParams,
   StatsBoxMetric,
@@ -49,11 +51,6 @@ import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import {
-  extractGrowThePieData,
-  extractNestedValue,
-  extractValue,
-} from "@/lib/utils/data/extractExternalData"
 import { getExternalData } from "@/lib/utils/data/getExternalData"
 import { processGrowThePieData } from "@/lib/utils/layer-2"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -104,13 +101,21 @@ const Page = async ({ params }: { params: PageParams }) => {
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
   // Fetch hourly data (ethPrice, beaconchainEpoch, growThePie, and stablecoin market cap) with 1-hour revalidation
-  const hourlyData = await getExternalData(
+  const {
+    ethPrice: ethPriceResponse,
+    beaconchainEpoch: beaconchainEpochData,
+    growThePie: growThePieResponse,
+    ethereumStablecoinsMcap: stablecoinMarketCapResponse,
+  } = (await getExternalData(
     ["ethPrice", "beaconchainEpoch", "growThePie", "ethereumStablecoinsMcap"],
     every("hour")
-  )
+  )) || {}
 
   // Extract and process growThePie data
-  const growThePieDataRaw = extractGrowThePieData(hourlyData)
+  const growThePieDataRaw =
+    growThePieResponse && "value" in growThePieResponse
+      ? (growThePieResponse.value as GrowThePieRawDataItem[])
+      : null
   const growThePieData = growThePieDataRaw
     ? processGrowThePieData(growThePieDataRaw)
     : {
@@ -122,18 +127,23 @@ const Page = async ({ params }: { params: PageParams }) => {
   const { txCount, txCostsMedianUsd } = growThePieData
 
   // Extract hourly metrics from external data
-  const ethPrice = extractValue(hourlyData, "ethPrice", 0)
-  const totalEthStaked = extractNestedValue(
-    hourlyData,
-    "beaconchainEpoch",
-    "totalEthStaked",
-    0
-  )
-  const stablecoinMarketCap = extractValue(
-    hourlyData,
-    "ethereumStablecoinsMcap",
-    0
-  )
+  const ethPrice =
+    ethPriceResponse && "value" in ethPriceResponse
+      ? ethPriceResponse
+      : { value: 0, timestamp: Date.now() }
+  const totalEthStaked =
+    beaconchainEpochData &&
+    !("error" in beaconchainEpochData) &&
+    typeof beaconchainEpochData === "object" &&
+    "totalEthStaked" in beaconchainEpochData &&
+    beaconchainEpochData.totalEthStaked &&
+    "value" in beaconchainEpochData.totalEthStaked
+      ? beaconchainEpochData.totalEthStaked
+      : { value: 0, timestamp: Date.now() }
+  const stablecoinMarketCap =
+    stablecoinMarketCapResponse && "value" in stablecoinMarketCapResponse
+      ? stablecoinMarketCapResponse
+      : { value: 0, timestamp: Date.now() }
 
   const metrics = await parseActivity({
     txCount,
@@ -141,10 +151,10 @@ const Page = async ({ params }: { params: PageParams }) => {
     stablecoinMarketCap:
       "value" in stablecoinMarketCap &&
       typeof stablecoinMarketCap.value === "number"
-        ? stablecoinMarketCap
+        ? (stablecoinMarketCap as ExternalDataReturnData)
         : { value: 0, timestamp: Date.now() },
-    ethPrice,
-    totalEthStaked,
+    ethPrice: ethPrice as ExternalDataReturnData,
+    totalEthStaked: totalEthStaked as ExternalDataReturnData,
   })
 
   const signals: StatsBoxMetric[] = [
