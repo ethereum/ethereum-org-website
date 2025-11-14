@@ -23,7 +23,7 @@ const StakingGuides = () => {
     },
     {
       title: t("page-staking-guide-title-stakewise"),
-      link: "https://docs.stakewise.io/guides/staking#liquid-solo-staking",
+      link: "https://docs.stakewise.io/docs/guides/staking#solo-staking-with-stakewise",
       description: t("page-staking-guide-description-mac-linux-windows"),
     },
   ]
