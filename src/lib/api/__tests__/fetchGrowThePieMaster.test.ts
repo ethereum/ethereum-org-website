@@ -35,10 +35,11 @@ describe("fetchGrowThePieMaster", () => {
 
     const result = await fetchGrowThePieMaster()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(result.value).toHaveProperty("ethereum")
-    expect(result.value.ethereum).toBe("2015-07-30")
+    expect(typeof result === "object" && !("error" in result)).toBe(true)
+    if (typeof result === "object" && !("error" in result)) {
+      expect(result).toHaveProperty("ethereum")
+      expect(result.ethereum).toBe("2015-07-30")
+    }
   })
 
   it("should transform chains data to launch dates record", async () => {
@@ -56,7 +57,7 @@ describe("fetchGrowThePieMaster", () => {
 
     const result = await fetchGrowThePieMaster()
 
-    expect(result.value).toEqual({ test: "2020-01-01" })
+    expect(result).toEqual({ test: "2020-01-01" })
   })
 
   it("should return error format on API failure", async () => {

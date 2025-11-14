@@ -19,9 +19,8 @@ describe("fetchTotalValueLocked", () => {
 
     const result = await fetchTotalValueLocked()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(result.value).toBe(3000000) // Should use last value
+    expect(typeof result).toBe("number")
+    expect(result).toBe(3000000) // Should use last value
   })
 
   it("should throw error on API failure", async () => {

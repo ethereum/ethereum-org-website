@@ -9,7 +9,7 @@ describe("fetchEthereumMarketcap", () => {
     vi.clearAllMocks()
   })
 
-  it("should return ExternalDataReturnData format on success", async () => {
+  it("should return number on success", async () => {
     const mockData = await loadMockDataFile<{
       value: number
       timestamp: number
@@ -26,9 +26,8 @@ describe("fetchEthereumMarketcap", () => {
 
     const result = await fetchEthereumMarketcap()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(result.value).toBe(mockData.value)
+    expect(typeof result).toBe("number")
+    expect(result).toBe(mockData.value)
   })
 
   it("should return error format on API failure", async () => {
@@ -39,8 +38,10 @@ describe("fetchEthereumMarketcap", () => {
 
     const result = await fetchEthereumMarketcap()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("status 500")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("status 500")
+    }
   })
 
   it("should return error when market cap is missing", async () => {
@@ -53,8 +54,10 @@ describe("fetchEthereumMarketcap", () => {
 
     const result = await fetchEthereumMarketcap()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Unable to fetch ETH market cap")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Unable to fetch ETH market cap")
+    }
   })
 
   it("should handle network errors gracefully", async () => {
@@ -62,7 +65,9 @@ describe("fetchEthereumMarketcap", () => {
 
     const result = await fetchEthereumMarketcap()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Network error")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Network error")
+    }
   })
 })

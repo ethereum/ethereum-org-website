@@ -1,6 +1,4 @@
-import { ExternalDataReturnData } from "@/lib/types"
-
-export const fetchEthPrice = async (): Promise<ExternalDataReturnData> => {
+export const fetchEthPrice = async (): Promise<number> => {
   const data: { ethereum: { usd: number } } = await fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
   ).then((res) => res.json())
@@ -8,5 +6,5 @@ export const fetchEthPrice = async (): Promise<ExternalDataReturnData> => {
     ethereum: { usd },
   } = data
   if (!usd) throw new Error("Unable to fetch ETH price from CoinGecko")
-  return { value: usd, timestamp: Date.now() }
+  return usd
 }

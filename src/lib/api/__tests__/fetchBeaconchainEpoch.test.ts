@@ -9,7 +9,7 @@ describe("fetchBeaconchainEpoch", () => {
     vi.clearAllMocks()
   })
 
-  it("should return ExternalDataReturnData format on success", async () => {
+  it("should return object with raw values on success", async () => {
     const mockData = await loadMockDataFile<{
       totalEthStaked: { value: number; timestamp: number }
       validatorscount: { value: number; timestamp: number }
@@ -32,10 +32,10 @@ describe("fetchBeaconchainEpoch", () => {
 
     expect(result).toHaveProperty("totalEthStaked")
     expect(result).toHaveProperty("validatorscount")
-    expect(result.totalEthStaked).toHaveProperty("value")
-    expect(result.totalEthStaked).toHaveProperty("timestamp")
-    expect(result.totalEthStaked.value).toBe(mockData.totalEthStaked.value)
-    expect(result.validatorscount.value).toBe(mockData.validatorscount.value)
+    expect(typeof result.totalEthStaked).toBe("number")
+    expect(typeof result.validatorscount).toBe("number")
+    expect(result.totalEthStaked).toBe(mockData.totalEthStaked.value)
+    expect(result.validatorscount).toBe(mockData.validatorscount.value)
   })
 
   it("should convert gwei to ETH correctly", async () => {
@@ -51,7 +51,7 @@ describe("fetchBeaconchainEpoch", () => {
 
     const result = await fetchBeaconchainEpoch()
 
-    expect(result.totalEthStaked.value).toBe(1000000000) // 1 ETH * 1e9
+    expect(result.totalEthStaked).toBe(1000000000) // 1 ETH * 1e9
   })
 
   it("should throw error on API failure", async () => {

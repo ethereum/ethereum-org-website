@@ -47,12 +47,12 @@ describe("fetchCommunityPicks", () => {
 
     const result = await fetchCommunityPicks()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(Array.isArray(result.value)).toBe(true)
-    expect(result.value.length).toBeGreaterThan(0)
-    expect(result.value[0]).toHaveProperty("name")
-    expect(result.value[0]).toHaveProperty("twitterURL")
+    expect(Array.isArray(result)).toBe(true)
+    if (Array.isArray(result)) {
+      expect(result.length).toBeGreaterThan(0)
+      expect(result[0]).toHaveProperty("name")
+      expect(result[0]).toHaveProperty("twitterURL")
+    }
   })
 
   it("should return error when Google Sheets ID is not set", async () => {
@@ -60,8 +60,10 @@ describe("fetchCommunityPicks", () => {
 
     const result = await fetchCommunityPicks()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toBe("Google Sheets ID not set")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toBe("Google Sheets ID not set")
+    }
   })
 
   it("should return error when Google API key is not set", async () => {
@@ -69,8 +71,10 @@ describe("fetchCommunityPicks", () => {
 
     const result = await fetchCommunityPicks()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toBe("Google API key not set")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toBe("Google API key not set")
+    }
   })
 
   it("should return error format on API failure", async () => {
@@ -82,8 +86,10 @@ describe("fetchCommunityPicks", () => {
 
     const result = await fetchCommunityPicks()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Failed to fetch community picks")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Failed to fetch community picks")
+    }
   })
 
   it("should filter out empty rows", async () => {
@@ -101,9 +107,11 @@ describe("fetchCommunityPicks", () => {
 
     const result = await fetchCommunityPicks()
 
-    expect(result.value).toHaveLength(2)
-    expect(result.value[0].name).toBe("John Doe")
-    expect(result.value[1].name).toBe("Jane Doe")
+    if (Array.isArray(result)) {
+      expect(result).toHaveLength(2)
+      expect(result[0].name).toBe("John Doe")
+      expect(result[1].name).toBe("Jane Doe")
+    }
   })
 
   it("should handle network errors gracefully", async () => {
@@ -111,7 +119,9 @@ describe("fetchCommunityPicks", () => {
 
     const result = await fetchCommunityPicks()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Network error")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Network error")
+    }
   })
 })

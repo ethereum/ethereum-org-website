@@ -1,12 +1,6 @@
 import { parseString } from "xml2js"
 
-import type {
-  AtomElement,
-  AtomResult,
-  ExternalDataReturnData,
-  RSSItem,
-  RSSResult,
-} from "@/lib/types"
+import type { AtomElement, AtomResult, RSSItem, RSSResult } from "@/lib/types"
 
 import { isValidDate } from "@/lib/utils/date"
 
@@ -163,9 +157,10 @@ const fetchRSS = async (xmlUrl: string | string[]): Promise<RSSItem[][]> => {
 
 /**
  * Fetches blog feeds (excluding Attestant, which is fetched separately).
- * Returns ExternalDataReturnData format for consistency with other external data fetchers.
  */
-export const fetchBlogFeeds = async (): Promise<ExternalDataReturnData> => {
+export const fetchBlogFeeds = async (): Promise<
+  RSSItem[][] | { error: string }
+> => {
   try {
     const xmlUrls = BLOG_FEEDS.filter(
       (feed) => ![ATTESTANT_BLOG].includes(feed)
@@ -177,10 +172,7 @@ export const fetchBlogFeeds = async (): Promise<ExternalDataReturnData> => {
       throw new Error("Insufficient number of RSS items fetched")
     }
 
-    return {
-      value: allItems,
-      timestamp: Date.now(),
-    }
+    return allItems
   } catch (error) {
     console.error(
       "Error fetching blog feeds:",

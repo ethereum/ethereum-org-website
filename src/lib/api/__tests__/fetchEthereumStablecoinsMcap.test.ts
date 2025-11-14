@@ -27,9 +27,8 @@ describe("fetchEthereumStablecoinsMcap", () => {
 
     const result = await fetchEthereumStablecoinsMcap()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(result.value).toBe(80000000000) // Sum of usdt + usdc
+    expect(typeof result).toBe("number")
+    expect(result).toBe(80000000000) // Sum of usdt + usdc
   })
 
   it("should return error when Ethereum data not found", async () => {
@@ -45,8 +44,10 @@ describe("fetchEthereumStablecoinsMcap", () => {
 
     const result = await fetchEthereumStablecoinsMcap()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Ethereum stablecoin data not found")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Ethereum stablecoin data not found")
+    }
   })
 
   it("should return error format on API failure", async () => {
@@ -57,8 +58,10 @@ describe("fetchEthereumStablecoinsMcap", () => {
 
     const result = await fetchEthereumStablecoinsMcap()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("500")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("500")
+    }
   })
 
   it("should handle network errors gracefully", async () => {
@@ -66,7 +69,9 @@ describe("fetchEthereumStablecoinsMcap", () => {
 
     const result = await fetchEthereumStablecoinsMcap()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Network error")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Network error")
+    }
   })
 })

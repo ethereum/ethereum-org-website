@@ -75,13 +75,12 @@ describe("fetchFrameworkGitHubData", () => {
 
     const result = await fetchFrameworkGitHubData()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    if (result && "value" in result) {
-      expect(Object.keys(result.value).length).toBeGreaterThan(0)
-      const firstKey = Object.keys(result.value)[0]
-      expect(result.value[firstKey]).toHaveProperty("starCount")
-      expect(result.value[firstKey]).toHaveProperty("languages")
+    expect(typeof result === "object" && !("error" in result)).toBe(true)
+    if (typeof result === "object" && !("error" in result)) {
+      expect(Object.keys(result).length).toBeGreaterThan(0)
+      const firstKey = Object.keys(result)[0]
+      expect(result[firstKey]).toHaveProperty("starCount")
+      expect(result[firstKey]).toHaveProperty("languages")
     }
   })
 
@@ -140,16 +139,16 @@ describe("fetchFrameworkGitHubData", () => {
 
     const result = await fetchFrameworkGitHubData()
 
-    expect(result).toHaveProperty("value")
-    if (result && "value" in result) {
+    expect(typeof result === "object" && !("error" in result)).toBe(true)
+    if (typeof result === "object" && !("error" in result)) {
       // Should not have the first framework (it failed)
-      expect(result.value).not.toHaveProperty(frameworks[0])
+      expect(result).not.toHaveProperty(frameworks[0])
       // Should have at least one framework (the second one that succeeded)
       if (frameworks.length > 1) {
         // Check that we have at least one framework in the result
-        expect(Object.keys(result.value).length).toBeGreaterThan(0)
+        expect(Object.keys(result).length).toBeGreaterThan(0)
         // The second framework should be in the result
-        const resultKeys = Object.keys(result.value)
+        const resultKeys = Object.keys(result)
         expect(resultKeys.length).toBeGreaterThan(0)
       }
     }
@@ -165,16 +164,16 @@ describe("fetchFrameworkGitHubData", () => {
 
     // When Promise.all rejects, the outer try-catch should catch it and return error
     // But looking at the code, Promise.all will reject and the catch block should handle it
-    if ("error" in result) {
+    if (typeof result === "object" && "error" in result) {
       expect(result.error).toBeDefined()
     } else {
       // If all individual fetches fail but Promise.all doesn't reject (unlikely),
       // it would return empty object. Let's check for either case
-      expect(result).toHaveProperty("value")
+      expect(typeof result === "object").toBe(true)
       // If it's an empty object, that's also acceptable behavior
-      if ("value" in result && Object.keys(result.value).length === 0) {
+      if (typeof result === "object" && !("error" in result)) {
         // This is acceptable - all repos failed but no error was thrown
-        expect(true).toBe(true)
+        expect(Object.keys(result).length).toBeGreaterThanOrEqual(0)
       }
     }
   })

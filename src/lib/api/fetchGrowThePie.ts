@@ -1,6 +1,8 @@
-import type { ExternalDataReturnData, GrowThePieRawDataItem } from "@/lib/types"
+import type { GrowThePieRawDataItem } from "@/lib/types"
 
-export const fetchGrowThePie = async (): Promise<ExternalDataReturnData> => {
+export const fetchGrowThePie = async (): Promise<
+  GrowThePieRawDataItem[] | { error: string }
+> => {
   const url = "https://api.growthepie.com/v1/fundamentals_7d.json"
 
   try {
@@ -18,10 +20,7 @@ export const fetchGrowThePie = async (): Promise<ExternalDataReturnData> => {
     const data: GrowThePieRawDataItem[] = await response.json()
 
     // Store only the raw API response
-    return {
-      value: data,
-      timestamp: Date.now(),
-    }
+    return data
   } catch (error) {
     console.error("Error fetching GrowThePie data:", error)
     return {

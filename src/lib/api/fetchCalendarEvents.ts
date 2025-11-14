@@ -1,9 +1,9 @@
-import type { ExternalDataReturnData } from "@/lib/types"
 import type { CommunityEvent, ReqCommunityEvent } from "@/lib/interfaces"
 
-export const fetchCalendarEvents = async (): Promise<
-  Record<string, ExternalDataReturnData>
-> => {
+export const fetchCalendarEvents = async (): Promise<{
+  pastEvents: CommunityEvent[]
+  upcomingEvents: CommunityEvent[]
+}> => {
   const apiKey = process.env.GOOGLE_API_KEY
   const calendarId = process.env.GOOGLE_CALENDAR_ID
 
@@ -32,7 +32,7 @@ export const fetchCalendarEvents = async (): Promise<
     })
   )
   return {
-    pastEvents: { value: pastEventData, timestamp: Date.now() },
-    upcomingEvents: { value: upcomingEventData, timestamp: Date.now() },
+    pastEvents: pastEventData,
+    upcomingEvents: upcomingEventData,
   }
 }

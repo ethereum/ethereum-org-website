@@ -23,11 +23,11 @@ describe("fetchGrowThePie", () => {
 
     const result = await fetchGrowThePie()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(Array.isArray(result.value)).toBe(true)
-    expect(result.value.length).toBeGreaterThan(0)
-    expect(result.value[0]).toHaveProperty("date")
+    expect(Array.isArray(result)).toBe(true)
+    if (Array.isArray(result)) {
+      expect(result.length).toBeGreaterThan(0)
+      expect(result[0]).toHaveProperty("date")
+    }
   })
 
   it("should return error format on API failure", async () => {
@@ -39,8 +39,10 @@ describe("fetchGrowThePie", () => {
 
     const result = await fetchGrowThePie()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Failed to fetch growthepie data")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Failed to fetch growthepie data")
+    }
   })
 
   it("should handle network errors gracefully", async () => {
@@ -48,7 +50,9 @@ describe("fetchGrowThePie", () => {
 
     const result = await fetchGrowThePie()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Network error")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Network error")
+    }
   })
 })

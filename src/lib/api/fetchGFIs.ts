@@ -1,10 +1,10 @@
-import type { ExternalDataReturnData, GHIssue } from "@/lib/types"
+import type { GHIssue } from "@/lib/types"
 
 const owner = "ethereum"
 const repo = "ethereum-org-website"
 const label = "good first issue"
 
-export const fetchGFIs = async (): Promise<ExternalDataReturnData> => {
+export const fetchGFIs = async (): Promise<GHIssue[] | { error: string }> => {
   const url = new URL(`https://api.github.com/repos/${owner}/${repo}/issues`)
   url.searchParams.append("labels", label)
   url.searchParams.append("state", "open")
@@ -34,10 +34,7 @@ export const fetchGFIs = async (): Promise<ExternalDataReturnData> => {
 
     const issues = (await response.json()) as GHIssue[]
 
-    return {
-      value: issues,
-      timestamp: Date.now(),
-    }
+    return issues
   } catch (error) {
     console.error("Error fetching GitHub good first issues:", error)
     return {

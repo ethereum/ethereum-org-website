@@ -16,14 +16,13 @@ export const fetchExternalData = async (
   const results = await Promise.all(
     services.map(async (service) => {
       try {
-        const data = await service.function()
-        // Data can be ExternalDataReturnData or Record<string, ExternalDataReturnData>
-        // Both are valid for ExternalDataMap
+        const result = await service.function()
         return {
           key: service.key,
-          data: data as
-            | ExternalDataReturnData
-            | Record<string, ExternalDataReturnData>,
+          data: {
+            value: result,
+            timestamp: Date.now(),
+          } as ExternalDataReturnData,
         }
       } catch (error) {
         return {

@@ -9,7 +9,7 @@ describe("fetchEthPrice", () => {
     vi.clearAllMocks()
   })
 
-  it("should return ExternalDataReturnData format on success", async () => {
+  it("should return number on success", async () => {
     const mockData = await loadMockDataFile<{
       value: number
       timestamp: number
@@ -26,10 +26,8 @@ describe("fetchEthPrice", () => {
 
     const result = await fetchEthPrice()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(result.value).toBe(mockData.value)
-    expect(typeof result.timestamp).toBe("number")
+    expect(typeof result).toBe("number")
+    expect(result).toBe(mockData.value)
   })
 
   it("should throw error when USD price is missing", async () => {

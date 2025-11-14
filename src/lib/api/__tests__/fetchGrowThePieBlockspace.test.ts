@@ -63,11 +63,12 @@ describe("fetchGrowThePieBlockspace", () => {
 
     const result = await fetchGrowThePieBlockspace()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(result.value).toHaveProperty("arbitrum")
-    expect(result.value.arbitrum).toHaveProperty("nft")
-    expect(result.value.arbitrum).toHaveProperty("defi")
+    expect(typeof result === "object" && !("error" in result)).toBe(true)
+    if (typeof result === "object" && !("error" in result)) {
+      expect(result).toHaveProperty("arbitrum")
+      expect(result.arbitrum).toHaveProperty("nft")
+      expect(result.arbitrum).toHaveProperty("defi")
+    }
   })
 
   it("should continue with other networks if one fails", async () => {
@@ -119,8 +120,8 @@ describe("fetchGrowThePieBlockspace", () => {
 
     const result = await fetchGrowThePieBlockspace()
 
-    expect(result.value).toHaveProperty(secondNetwork)
-    expect(result.value).not.toHaveProperty(firstNetwork)
+    expect(result).toHaveProperty(secondNetwork)
+    expect(result).not.toHaveProperty(firstNetwork)
   })
 
   it("should handle missing social data", async () => {
@@ -160,7 +161,7 @@ describe("fetchGrowThePieBlockspace", () => {
 
     const result = await fetchGrowThePieBlockspace()
 
-    expect(result.value[testNetwork].social).toBe(0)
+    expect(result[testNetwork].social).toBe(0)
   })
 
   it("should return error format on complete failure", async () => {
@@ -179,7 +180,6 @@ describe("fetchGrowThePieBlockspace", () => {
     const result = await fetchGrowThePieBlockspace()
 
     // When all networks fail, function returns empty object, not error
-    expect(result).toHaveProperty("value")
-    expect(Object.keys(result.value)).toHaveLength(0)
+    expect(Object.keys(result)).toHaveLength(0)
   })
 })

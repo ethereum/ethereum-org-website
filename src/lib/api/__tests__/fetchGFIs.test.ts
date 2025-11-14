@@ -24,12 +24,12 @@ describe("fetchGFIs", () => {
 
     const result = await fetchGFIs()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(Array.isArray(result.value)).toBe(true)
-    expect(result.value.length).toBeGreaterThan(0)
-    expect(result.value[0]).toHaveProperty("title")
-    expect(result.value[0]).toHaveProperty("html_url")
+    expect(Array.isArray(result)).toBe(true)
+    if (Array.isArray(result)) {
+      expect(result.length).toBeGreaterThan(0)
+      expect(result[0]).toHaveProperty("title")
+      expect(result[0]).toHaveProperty("html_url")
+    }
   })
 
   it("should return error format on API failure", async () => {
@@ -41,8 +41,10 @@ describe("fetchGFIs", () => {
 
     const result = await fetchGFIs()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("403")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("403")
+    }
   })
 
   it("should include Authorization header", async () => {
@@ -74,7 +76,9 @@ describe("fetchGFIs", () => {
 
     const result = await fetchGFIs()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Network error")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Network error")
+    }
   })
 })

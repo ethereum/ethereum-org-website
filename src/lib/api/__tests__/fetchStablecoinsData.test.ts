@@ -15,8 +15,8 @@ describe("fetchStablecoinsData", () => {
         id: "tether",
         symbol: "usdt",
         name: "Tether",
-        current_price: 1.0,
         market_cap: 100000000000,
+        image: "https://example.com/tether.png",
       },
     ]
 
@@ -27,10 +27,10 @@ describe("fetchStablecoinsData", () => {
 
     const result = await fetchStablecoinsData()
 
-    expect(result).toHaveProperty("value")
-    expect(result).toHaveProperty("timestamp")
-    expect(Array.isArray(result.value)).toBe(true)
-    expect(result.value).toEqual(mockData)
+    expect(Array.isArray(result)).toBe(true)
+    if (Array.isArray(result)) {
+      expect(result).toEqual(mockData)
+    }
   })
 
   it("should return error format on API failure", async () => {
@@ -42,8 +42,10 @@ describe("fetchStablecoinsData", () => {
 
     const result = await fetchStablecoinsData()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("429")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("429")
+    }
   })
 
   it("should handle network errors gracefully", async () => {
@@ -51,7 +53,9 @@ describe("fetchStablecoinsData", () => {
 
     const result = await fetchStablecoinsData()
 
-    expect(result).toHaveProperty("error")
-    expect(result.error).toContain("Network error")
+    expect(typeof result === "object" && "error" in result).toBe(true)
+    if (typeof result === "object" && "error" in result) {
+      expect(result.error).toContain("Network error")
+    }
   })
 })

@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest"
 import type {
   CoinGeckoCoinMarketItem,
   CommunityPick,
+  ExternalDataReturnData,
   FrameworkGitHubData,
   GHIssue,
   GrowThePieBlockspaceData,
@@ -34,7 +35,10 @@ import type { ExternalDataMap } from "../fetchExternalData"
 describe("extractValue", () => {
   it("should extract simple value from data map", () => {
     const data: ExternalDataMap = {
-      ethPrice: { value: 3000, timestamp: Date.now() },
+      ethPrice: {
+        value: 3000,
+        timestamp: Date.now(),
+      } as ExternalDataReturnData,
     }
 
     const result = extractValue(data, "ethPrice", 0)
@@ -67,7 +71,10 @@ describe("extractValue", () => {
 
   it("should work with string values", () => {
     const data: ExternalDataMap = {
-      testKey: { value: "test", timestamp: Date.now() },
+      testKey: {
+        value: "test",
+        timestamp: Date.now(),
+      } as unknown as ExternalDataReturnData,
     }
 
     const result = extractValue(data, "testKey", "default")
@@ -144,9 +151,9 @@ describe("extractArray", () => {
         value: [
           { name: "Pick 1", twitterURL: "https://example.com" },
           { name: "Pick 2", twitterURL: "https://example2.com" },
-        ],
+        ] as CommunityPick[],
         timestamp: Date.now(),
-      },
+      } as ExternalDataReturnData,
     }
 
     const result = extractArray<CommunityPick>(data, "communityPicks")
@@ -189,9 +196,9 @@ describe("extractGrowThePieData", () => {
             txCount: 1000000,
             txCostsMedianUsd: 2.5,
           },
-        ] as GrowThePieRawDataItem[],
+        ] as unknown as GrowThePieRawDataItem[],
         timestamp: Date.now(),
-      },
+      } as unknown as ExternalDataReturnData,
     }
 
     const result = extractGrowThePieData(data)
@@ -398,14 +405,14 @@ describe("extractCalendarEventsFormatted", () => {
           upcomingEvents: {
             value: [mockEvent],
             timestamp: Date.now(),
-          },
+          } as ExternalDataReturnData,
           pastEvents: {
             value: [],
             timestamp: Date.now(),
-          },
+          } as ExternalDataReturnData,
         },
         timestamp: Date.now(),
-      },
+      } as unknown as ExternalDataReturnData,
     }
 
     const result = extractCalendarEventsFormatted(data)

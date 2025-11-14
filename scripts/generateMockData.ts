@@ -13,8 +13,8 @@ try {
   // Environment variables might be set another way (e.g., system env vars)
 }
 
-import { getRedisData } from "@/lib/utils/data/redisClient"
-import { getSupabaseData } from "@/lib/utils/data/supabaseClient"
+import { getRedisData } from "@/lib/utils/data/clients/redisClient"
+import { getSupabaseData } from "@/lib/utils/data/clients/supabaseClient"
 
 import {
   externalServicesDaily,
@@ -35,11 +35,11 @@ async function generateAllMockData() {
     allKeys.map(async (key) => {
       try {
         // Try Redis first
-        let data = await getRedisData(key)
+        let data = await getRedisData(key, 3600) // Use 1 hour revalidation
 
         // Fallback to Supabase if Redis returns null
         if (data === null) {
-          data = await getSupabaseData(key)
+          data = await getSupabaseData(key, 3600) // Use 1 hour revalidation
         }
 
         // If still not found in cache, try fetching fresh data

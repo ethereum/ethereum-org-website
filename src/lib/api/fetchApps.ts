@@ -1,7 +1,9 @@
-import type { AppData, ExternalDataReturnData } from "@/lib/types"
+import type { AppData } from "@/lib/types"
 import { AppCategoryEnum } from "@/lib/types"
 
-export const fetchApps = async (): Promise<ExternalDataReturnData> => {
+export const fetchApps = async (): Promise<
+  Record<string, AppData[]> | { error: string }
+> => {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
@@ -132,10 +134,7 @@ export const fetchApps = async (): Promise<ExternalDataReturnData> => {
       result[sheetName] = apps
     }
 
-    return {
-      value: result,
-      timestamp: Date.now(),
-    }
+    return result
   } catch (error) {
     console.error("Error fetching from Google Sheets:", error)
     return {

@@ -1,6 +1,8 @@
-import type { ExternalDataReturnData, L2beatResponse } from "@/lib/types"
+import type { L2beatResponse } from "@/lib/types"
 
-export const fetchL2beat = async (): Promise<ExternalDataReturnData> => {
+export const fetchL2beat = async (): Promise<
+  L2beatResponse | { error: string }
+> => {
   try {
     const response = await fetch("https://l2beat.com/api/scaling/summary")
     if (!response.ok) {
@@ -16,10 +18,7 @@ export const fetchL2beat = async (): Promise<ExternalDataReturnData> => {
 
     const data = (await response.json()) as L2beatResponse
 
-    return {
-      value: data,
-      timestamp: Date.now(),
-    }
+    return data
   } catch (error) {
     console.error("Error fetching L2beat data:", error)
     return {
