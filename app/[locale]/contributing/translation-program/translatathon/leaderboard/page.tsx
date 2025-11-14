@@ -1,36 +1,28 @@
 import { setRequestLocale } from "next-intl/server"
 
+import type { CommitHistory, Lang } from "@/lib/types"
+
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
-import LeftNavBar from "@/components/LeftNavBar"
 import MainArticle from "@/components/MainArticle"
+import TableOfContents from "@/components/TableOfContents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { APPLICATION_END_DATE } from "@/components/Translatathon/constants"
 import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
 
-import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { isDateReached } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import { Leaderboard } from "./_components/Leaderboard"
+import TranslatathonLeaderboardJsonLD from "./page-jsonld"
 
-import { fetchTranslatathonTranslators } from "@/lib/api/fetchTranslatathonTranslators"
 import heroImg from "@/public/images/heroes/translatathon-hero.png"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [["translatathonTranslators", fetchTranslatathonTranslators]],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params
 
   setRequestLocale(locale)
-
-  const [translatathonTranslators] = await loadData()
 
   const heroProps = {
     title: "2025 Ethereum.org Translatathon",
@@ -96,27 +88,42 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
     ],
   }
 
+  const tocItems = [
+    {
+      title: "Leaderboard",
+      url: "#leaderboard",
+    },
+  ]
+
+  if (isDateReached(APPLICATION_END_DATE)) {
+    tocItems.push({
+      title: "Apply now",
+      url: "#apply-now",
+    })
+  }
+
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "contributing/translation-program/translatathon/leaderboard",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
+      <TranslatathonLeaderboardJsonLD
+        locale={locale}
+        contributors={contributors}
+      />
       <div className="relative mt-4">
         <ContentHero {...heroProps} />
       </div>
 
       <div className="mx-auto mb-16 flex w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0">
-        <LeftNavBar
-          className="max-lg:hidden"
+        <TableOfContents
           dropdownLinks={dropdownLinks}
-          tocItems={[
-            {
-              title: "Leaderboard",
-              url: "#leaderboard",
-            },
-            {
-              title: "Apply now",
-              url: "#apply-now",
-            },
-          ]}
-          maxDepth={0}
+          items={tocItems}
+          variant="left"
         />
         <MainArticle className="relative flex-[1_1_992px] px-8 pb-8">
           <div className="flex flex-col gap-4">
@@ -135,17 +142,13 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
               Final scores will be announced after all the evaluations are
               completed!
             </p>
-            {translatathonTranslators.length > 0 ? (
-              <Leaderboard translators={translatathonTranslators} />
-            ) : (
-              <div className="text-center text-body-medium">
-                No data available
-              </div>
-            )}
+            <Leaderboard />
           </div>
-          <div id="apply-now">
-            <ApplyNow />
-          </div>
+          {isDateReached(APPLICATION_END_DATE) && (
+            <div id="apply-now">
+              <ApplyNow />
+            </div>
+          )}
         </MainArticle>
       </div>
     </>
@@ -155,9 +158,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   return await getMetadata({
     locale,

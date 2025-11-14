@@ -14,7 +14,7 @@ Glacann an leathanach seo leis go bhfuil an léitheoir eolach ar bhunghnéithe E
 
 ## Cad is oracal blocshlabhra ann? {#what-is-a-blockchain-oracle}
 
-Is feidhmchláir iad Oracail a fhoinsíonn, a fhíoraíonn agus a tharchuireann faisnéis sheachtrach (i.e. faisnéis a stóráiltear as slabhra) chuig conarthaí cliste a ritheann ar an mblocshlabhra. Chomh maith le sonraí a "tharraingt" as slabhra agus é a chraoladh ar Ethereum, is féidir le horacail faisnéis a “bhrú” ón mBlocshlabhra chuig córais sheachtracha, m.sh. glas cliste a dhíghlasáil a luaithe a sheolann an t-úsáideoir táille trí idirbheart Ethereum.
+Is feidhmchláir iad Oracail a fhoinsíonn, a fhíoraíonn agus a tharchuireann faisnéis sheachtrach (i.e., faisnéis a stóráiltear as slabhra) chuig conarthaí cliste a ritheann ar an mblocshlabhra. Chomh maith le sonraí a "tharraingt" as slabhra agus é a chraoladh ar Ethereum, is féidir le horacail faisnéis a “bhrú” ón mBlocshlabhra chuig córais sheachtracha, m.sh. glas cliste a dhíghlasáil a luaithe a sheolann an t-úsáideoir táille trí idirbheart Ethereum.
 
 Gan oracal, bheadh ​​conradh cliste teoranta go hiomlán do shonraí ar slabhra.
 
@@ -32,7 +32,7 @@ Chun forghníomhú cinntitheach a bhaint amach, teorannaíonn blocshlabhra nóid
 - “An bhfuil go leor cistí ag an gcuntas seo chun an t-idirbheart a chlúdach?”
 - “An bhfuil an t-idirbheart seo bailí i gcomhthéacs an chonartha chliste seo?”, etc.
 
-Dá bhfaigheadh ​​blocshlabhra faisnéis ó fhoinsí seachtracha (i.e. ón bhfíorshaol), bheadh ​​sé dodhéanta cinntitheacht a bhaint amach, rud a chuirfeadh cosc ​​ar nóid aontú ar bhailíocht athruithe ar staid na blocshlabhra. Tóg mar shampla conradh cliste a ritheann idirbheart bunaithe ar an ráta malairte ETH-USD reatha a fhaightear ó API praghais traidisiúnta. Is dócha go n-athróidh an figiúr seo go minic (gan trácht ar go bhféadfaí an API a dhímholadh nó a haiceáil), rud a chiallaíonn go dtiocfadh torthaí éagsúla ar nóid a fhorghníomhaíonn an cód conartha céanna.
+Dá bhfaigheadh ​​blocshlabhra faisnéis ó fhoinsí seachtracha (i.e., ón bhfíorshaol), bheadh ​​sé dodhéanta cinntitheacht a bhaint amach, rud a chuirfeadh cosc ​​ar nóid aontú ar bhailíocht athruithe ar staid na blocshlabhra. Tóg mar shampla conradh cliste a ritheann idirbheart bunaithe ar an ráta malairte ETH-USD reatha a fhaightear ó API praghais traidisiúnta. Is dócha go n-athróidh an figiúr seo go minic (gan trácht ar go bhféadfaí an API a dhímholadh nó a haiceáil), rud a chiallaíonn go dtiocfadh torthaí éagsúla ar nóid a fhorghníomhaíonn an cód conartha céanna.
 
 I gcás blocshlabhra poiblí cosúil le Ethereum, ina bhfuil na mílte nód ar fud an domhain ag próiseáil idirbhearta, tá cinntitheacht ríthábhachtach. Gan aon údarás lárnach ag feidhmiú mar fhoinse na fírinne, tá meicníochtaí ag teastáil ó nóid chun teacht ar an staid chéanna tar éis na hidirbhearta céanna a chur i bhfeidhm. Má ritheann nód A cód conartha cliste agus go bhfaigheann sé “3” mar thoradh air sin, cé go bhfaigheann nód B “7” tar éis an t-idirbheart céanna a rith, bheadh ​​comhaontú ann chun luach Ethereum a bhriseadh síos mar ardán ríomhaireachta díláraithe agus é a dhíchur.
 
@@ -54,7 +54,7 @@ Léiríonn an “fhadhb oracal” mar a thugtar air na saincheisteanna a bhainea
 
 Tairgeann oracail éagsúla réitigh éagsúla ar fhadhb na n-oracal, a ndéanaimid iniúchadh orthu níos déanaí. De ghnáth déantar measúnú ar Oracail de réir chomh maith agus is féidir leo na dúshláin seo a leanas a láimhseáil:
 
-1. **Cruinneas**: Níor cheart go gcuirfeadh oracal faoi deara go spreagfadh conarthaí cliste athruithe staide bunaithe ar shonraí neamhbhailí as slabhra. Caithfidh oracal _barántúlacht_ agus _sláine_ na sonraí a ráthú. Ciallaíonn barántúlacht go bhfuarthas na sonraí ón bhfoinse cheart, agus ciallaíonn sláine gur fhan na sonraí slán (i.e. níor athraíodh iad) sular seoladh iad ar slabhra.
+1. **Cruinneas**: Níor cheart go gcuirfeadh oracal faoi deara go spreagfadh conarthaí cliste athruithe staide bunaithe ar shonraí neamhbhailí as slabhra. Caithfidh oracal _barántúlacht_ agus _sláine_ na sonraí a ráthú. Ciallaíonn barántúlacht go bhfuarthas na sonraí ón bhfoinse cheart, agus ciallaíonn sláine gur fhan na sonraí slán (i.e., níor athraíodh iad) sular seoladh iad ar slabhra.
 
 2. **Infhaighteacht**: Níor cheart go gcuirfeadh oracal moill nó cosc ​​ar chonarthaí cliste ó ghníomhartha a dhéanamh agus athruithe staide a chur i bhfeidhm. Ciallaíonn sé seo go gcaithfidh sonraí ó oracal a bheith _ar fáil ach iad a iarraidh_ gan aon bhriseadh.
 
@@ -256,7 +256,7 @@ Is meicníochtaí cripteagrafaíocha iad cruthúnais bharántúlachta a chumasa�
 
 I measc samplaí de chruthúnais bharántúlachta tá:
 
-**Cruthúnais Slándála Sraithe Iompair (TLS)**: Is minic a dhéanann nóid Oracle sonraí a aisghabháil ó fhoinsí seachtracha trí úsáid a bhaint as nasc slán HTTP bunaithe ar phrótacal Slándáil Sraithe Iompair(TLS). Úsáideann roinnt oracal díláraithe cruthúnais barántúlachta chun seisiúin TLS a fhíorú (i.e. malartú faisnéise idir nód agus freastalaí ar leith a dhearbhú) agus chun a dhearbhú nár athraíodh a bhfuil sa seisiún.
+**Cruthúnais Slándála Sraithe Iompair (TLS)**: Is minic a dhéanann nóid Oracle sonraí a aisghabháil ó fhoinsí seachtracha trí úsáid a bhaint as nasc slán HTTP bunaithe ar phrótacal Slándáil Sraithe Iompair(TLS). Úsáideann roinnt oracal díláraithe cruthúnais barántúlachta chun seisiúin TLS a fhíorú (i.e., malartú faisnéise idir nód agus freastalaí ar leith a dhearbhú) agus chun a dhearbhú nár athraíodh a bhfuil sa seisiún.
 
 **Timpeallacht Fhianaithe Iontaofa Reatha (TEE)**: Is timpeallacht ríomhbhosca gainimh é [timpeallacht reatha iontaofa](https://en.wikipedia.org/wiki/Trusted_execution_environment) (TEE) atá scoite amach ó phróisis oibriúcháin a chórais óstaigh. Cinntíonn TEEanna go gcoimeádtar sláine, rúndacht agus neamh-inaistritheacht cibé cód feidhmchláir nó sonraí a stóráiltear/a úsáidtear sa timpeallacht ríomha. Is féidir le húsáideoirí fianú a ghiniúint freisin chun a chruthú go bhfuil ásc feidhmchláir ag rith laistigh den timpeallacht reatha iontaofa.
 

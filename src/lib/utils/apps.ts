@@ -32,6 +32,13 @@ export const getDiscoverApps = (
   return count ? discoverApps.slice(0, count) : discoverApps
 }
 
+export const getDevconnectApps = (appsData: Record<AppCategory, AppData[]>) => {
+  const devconnectApps = Object.values(appsData)
+    .flatMap((categoryDapps) => categoryDapps)
+    .filter((app) => app.devconnect === "true")
+  return devconnectApps
+}
+
 export const APP_TAG_VARIANTS: Record<AppCategoryEnum, TagProps["status"]> = {
   [AppCategoryEnum.DEFI]: "tag",
   [AppCategoryEnum.COLLECTIBLE]: "success",
@@ -41,4 +48,21 @@ export const APP_TAG_VARIANTS: Record<AppCategoryEnum, TagProps["status"]> = {
   [AppCategoryEnum.PRODUCTIVITY]: "normal",
   [AppCategoryEnum.PRIVACY]: "normal",
   [AppCategoryEnum.GOVERNANCE_DAO]: "normal",
+}
+
+export const parseAppsOfTheWeek = (
+  appsData: Record<AppCategory, AppData[]>
+) => {
+  const currentDate = new Date()
+  const appsOfTheWeek = Object.values(appsData)
+    .flatMap((categoryApps) => categoryApps)
+    .filter(
+      (app) =>
+        app.appOfTheWeekStartDate &&
+        app.appOfTheWeekEndDate &&
+        currentDate >= app.appOfTheWeekStartDate &&
+        currentDate <= app.appOfTheWeekEndDate
+    )
+    .sort(() => Math.random() - 0.5)
+  return appsOfTheWeek
 }

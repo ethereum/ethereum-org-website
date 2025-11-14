@@ -164,7 +164,7 @@ Property-based testing is the process of checking that a smart contract satisfie
 
 A static analyzer takes as input the source code of a smart contract and outputs results declaring whether a contract satisfies a property or not. Unlike dynamic analysis, static analysis doesn't involve executing a contract to analyze it for correctness. Static analysis instead reasons about all the possible paths that a smart contract could take during execution (i.e., by examining the structure of the source code to determine what it would mean for the contracts operation at runtime).
 
-[Linting](https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important) and [static testing](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) are common methods for running static analysis on contracts. Both require analyzing low-level representations of a contracts execution such as [abstract syntax trees](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) and [control flow graphs](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) output by the compiler.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) and [static testing](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) are common methods for running static analysis on contracts. Both require analyzing low-level representations of a contracts execution such as [abstract syntax trees](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) and [control flow graphs](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) output by the compiler.
 
 In most cases, static analysis is useful for detecting safety issues like use of unsafe constructs, syntax errors, or violations of coding standards in a contracts code. However, static analyzers are known to be generally unsound at detecting deeper vulnerabilities, and may produce excessive false positives.
 
@@ -172,7 +172,7 @@ In most cases, static analysis is useful for detecting safety issues like use of
 
 Dynamic analysis generates symbolic inputs (e.g., in [symbolic execution](https://en.m.wikipedia.org/wiki/Symbolic_execution)) or concrete inputs (e.g., in [fuzzing](https://owasp.org/www-community/Fuzzing)) to a smart contracts functions to see if any execution trace(s) violates specific properties. This form of property-based testing differs from unit tests in that test cases cover multiple scenarios and a program handles the generation of test cases.
 
-[Fuzzing](https://halborn.com/what-is-fuzz-testing-fuzzing/) is an example of a dynamic analysis technique for verifying arbitrary properties in smart contracts. A fuzzer invokes functions in a target contract with random or malformed variations of a defined input value. If the smart contract enters an error state (e.g., one where an assertion fails), the problem is flagged and inputs that drive execution toward the vulnerable path are produced in a report.
+[Fuzzing](https://www.halborn.com/blog/post/what-is-fuzz-testing-fuzzing) is an example of a dynamic analysis technique for verifying arbitrary properties in smart contracts. A fuzzer invokes functions in a target contract with random or malformed variations of a defined input value. If the smart contract enters an error state (e.g., one where an assertion fails), the problem is flagged and inputs that drive execution toward the vulnerable path are produced in a report.
 
 Fuzzing is useful for evaluating a smart contracts input validation mechanism since improper handling of unexpected inputs might result in unintended execution and produce dangerous effects. This form of property-based testing can be ideal for many reasons:
 
@@ -188,7 +188,7 @@ Running property-based testing typically starts with defining a property (e.g., 
 
 Once configured properly, the property testing tool will execute your smart contracts functions with randomly generated inputs. If there are any assertion violations, you should get a report with concrete input data that violates the property under evaluation. See some of the guides below to get started with running property-based testing with different tools:
 
-- **[Static analysis of smart contracts with Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Static analysis of smart contracts with Slither](https://github.com/crytic/slither)**
 - **[Static analysis of smart contracts with Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Property-based testing with Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Fuzzing contracts with Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**

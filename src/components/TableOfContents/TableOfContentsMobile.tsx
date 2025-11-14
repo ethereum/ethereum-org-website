@@ -19,13 +19,13 @@ import { useTranslation } from "@/hooks/useTranslation"
 const variants = cva("flex w-full justify-between lg:hidden", {
   variants: {
     variant: {
-      default: "",
-      beginner:
-        "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
+      docs: "",
+      card: "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
+      left: "",
     },
   },
   defaultVariants: {
-    variant: "default",
+    variant: "docs",
   },
 })
 
@@ -52,7 +52,7 @@ const Mobile = ({ items, maxDepth, variant }: TableOfContentsMobileProps) => {
       <DropdownMenuContent
         align="start"
         sideOffset={8}
-        className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        className="max-h-[calc(100vh-20rem)] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-auto"
         // prevents focus from moving to the trigger after closing
         onCloseAutoFocus={(e) => {
           e.preventDefault()

@@ -54,7 +54,7 @@ This is a curated list of user research done in web3 that may help with design a
 
 ## Web3 Design Case Studies {#design-case-studies}
 
-- [Deep Work Studio](https://deepwork.studio/case-studies/)
+- [Deep Work Studio](https://www.deepwork.studio/case-studies)
 - [Selling an NFT on OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
 

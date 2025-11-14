@@ -54,12 +54,15 @@ NFT digunakan untuk banyak perkara, termasuk:
 
 Mungkin anda seorang artis yang ingin berkongsi hasil kerja menggunakan NFT, tanpa hilang kawalan atau mengorbankan keuntungan kepada orang tengah. Anda boleh mencipta kontrak baharu dan menentukan bilangan NFT, sifat NFT itu dan pautan kepada karya seni tertentu. Sebagai artis, **anda boleh memprogramkan ke dalam kontrak pintar royalti** anda patut diterima (cth. pindahkan 5% daripada harga jualan kepada pemilik kontrak setiap kali NFT dipindahkan). Anda juga boleh sentiasa membuktikan bahawa anda mencipta NFT kerana anda memiliki [dompet](/glossary/#wallet) yang menggunakan kontrak. Pembeli anda boleh membuktikan dengan mudah bahawa mereka memiliki **NFT sahih** daripada koleksi anda kerana [alamat](/glossary/#address) dompet mereka dikaitkan dengan token pada kontrak pintar anda. Mereka boleh menggunakannya dalam ekosistem Ethereum, yakin dengan keasliannya.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Teroka, beli atau cipta seni/koleksi NFT anda sendiri...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Terokai seni NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Atau bayangkan tiket ke acara sukan. Sama seperti **penganjur acara boleh memilih bilangan tiket untuk dijual**, pencipta NFT boleh menentukan bilangan replika yang wujud. Kadangkala ini merupakan replika yang tepat, seperti 5000 tiket Kemasukan Am. Kadangkala beberapa akan ditempa kelihatan serupa, tetapi setiap satu berbeza sedikit, seperti tiket dengan tempat duduk yang ditetapkan. Ia boleh dibeli dan dijual antara rakan setara tanpa membayar pengendali tiket dan pembeli juga sentiasa mempunyai jaminan keaslian tiket dengan menyemak alamat kontrak.
 

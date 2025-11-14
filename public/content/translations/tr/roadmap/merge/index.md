@@ -17,7 +17,7 @@ summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azal
 
 ## Birleşim neydi? {#what-is-the-merge}
 
-Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/history/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
+Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/ethereum-forks/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Birleşim blok üretim motoru olarak İşaret Zinciri'ne resmi geçişi temsil e
 
 Birleşim'de herhangi bir geçmiş kaybedilmedi. Ana Ağ İşaret Zinciri ile birleşti, ayrıca Ethereum'un tüm işlemsel geçmişini de birleştirdi.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Hisse ispatına geçiş ether basım şeklini değiştirdi. [Birleşim'den önce ve sonra ether verilmesi](/roadmap/merge/issuance/) hakkında daha fazla bilgi edinin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Kullanıcılar ve sahipler {#users-holders}
 
@@ -118,7 +122,7 @@ Birleşim aynı zamanda, iş ispatı altında mümkün olmayan daha fazla ölçe
 
 <ExpandableCard
 title="Yanılgı: &quot;Bir düğüm çalıştırmak 32 ETH gerektirir.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 İki tip Ethereum düğümü bulunur: Blok önerebilen ve öneremeyen düğümler.
 

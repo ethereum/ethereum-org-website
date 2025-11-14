@@ -49,12 +49,15 @@ Je kunt de voortgang van de transactie bekijken op elke blockchain-verkenner. Di
 Je ontvangt automatisch de geruilde tokens in je portemonnee zodra de transactie is verwerkt.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Wilt u hier meer over leren?</div>
   <ButtonLink href="/guides/">
     Bekijk onze andere gidsen
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Veelgestelde vragen
 

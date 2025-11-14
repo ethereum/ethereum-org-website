@@ -41,7 +41,7 @@ lang: ja
 
 - [プルーフ・オブ・ステーク入門](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG ペーパー](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG の解説](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG の解説](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper ペーパー](https://arxiv.org/abs/2003.03052)
 
 #### 最近の研究 {#recent-research}
@@ -83,7 +83,7 @@ lang: ja
 1. コンセンサスクライアント：ブロックチェーンのヘッドを追跡し、ブロックを伝播し、コンセンサスロジックを処理します。
 2. 実行クライアント：イーサリアム仮想マシンをサポートし、トランザクションやスマートコントラクトを実行します。
 
-ノードやクライアントの詳細については、[ノードとクライアントのページ](/developers/docs/nodes-and-clients/) で確認でき、すべての現行クライアント実装のリストもご覧いただけます。 また、イーサリアムの全てのアップグレード履歴は[履歴ページ](/history/) で確認可能です。
+ノードやクライアントの詳細については、[ノードとクライアントのページ](/developers/docs/nodes-and-clients/) で確認でき、すべての現行クライアント実装のリストもご覧いただけます。 また、イーサリアムの全てのアップグレード履歴は[履歴ページ](/ethereum-forks/) で確認可能です。
 
 ### 実行クライアント {#execution-clients}
 

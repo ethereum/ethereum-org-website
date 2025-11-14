@@ -49,12 +49,15 @@ lang: el
 Θα λάβετε αυτόματα τα κρυπτονομίσματα της ανταλλαγής στο πορτοφόλι σας μόλις ολοκληρωθεί η συναλλαγή.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Θέλετε να μάθετε περισσότερα;</div>
   <ButtonLink href="/guides/">
     Δείτε τους άλλους οδηγούς μας
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Συχνές ερωτήσεις
 

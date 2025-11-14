@@ -457,5 +457,8 @@
   "withdrawals": "質押提款",
   "wrapped-ether": "包裝以太幣",
   "yes": "是",
-  "zero-knowledge-proofs": "零知識證明"
+  "zero-knowledge-proofs": "零知識證明",
+  "ethereum-vs-bitcoin": "以太坊 vs. 比特幣",
+  "nav-ethereum-vs-bitcoin-description": "了解以太坊和比特幣之間的區別"
+
 }

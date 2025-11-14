@@ -57,7 +57,7 @@ Tá go leor cásanna úsáide féideartha ag baint le céannacht dhíláraithe:
 
 Is féidir le céannacht dhíláraithe cuidiú le fíordheimhniú díláraithe a chur in ionad logáil isteach atá bunaithe ar phasfhocal. Is féidir le soláthraithe seirbhíse fianuithe a eisiúint d'úsáideoirí, ar féidir iad a stóráil i sparán Ethereum. Sampla de fhianú is ea [NFT](/glossary/#nft) a thugann rochtain don sealbhóir ar phobal ar líne.
 
-Ansin chuirfeadh feidhm [Sínigh isteach le hEthereum](https://login.xyz/) ar chumas na bhfreastalaithe cuntas Ethereum an úsáideora a dhearbhú agus an fianú riachtanach a fháil óna seoladh cuntais. Ciallaíonn sé sin gur féidir le húsáideoirí rochtain a fháil ar ardáin agus ar shuímh ghréasáin gan pasfhocail fhada a chur de ghlanmheabhair agus feabhsaíonn sé an t‑eispéireas ar líne d'úsáideoirí.
+Ansin chuirfeadh feidhm [Sínigh isteach le hEthereum](https://siwe.xyz/) ar chumas na bhfreastalaithe cuntas Ethereum an úsáideora a dhearbhú agus an fianú riachtanach a fháil óna seoladh cuntais. Ciallaíonn sé sin gur féidir le húsáideoirí rochtain a fháil ar ardáin agus ar shuímh ghréasáin gan pasfhocail fhada a chur de ghlanmheabhair agus feabhsaíonn sé an t‑eispéireas ar líne d'úsáideoirí.
 
 ### 2. Fíordheimhniú KYC {#kyc-authentication}
 
@@ -129,7 +129,7 @@ Seo scéal hipitéiseach chun fianuithe as slabhra a mhíniú:
 
 1. Gineann ollscoil (an t-eisitheoir) fianú (teastas acadúil digiteach), síníonn sí é leis na heochracha, agus eisíonn sí é chuig Bob (úinéir na céannachta).
 
-2. Déanann Bob iarratas ar phost agus ba mhaith leis a cháilíochtaí acadúla a chruthú le fostóir, mar sin roinneann sé an fianú óna sparán soghluaiste. Féadfaidh an chuideachta (an fíoraitheoir) bailíocht an fhianaithe a dhearbhú ansin trí DID an eisitheora a sheiceáil (i.e. a eochair phoiblí ar Ethereum).
+2. Déanann Bob iarratas ar phost agus ba mhaith leis a cháilíochtaí acadúla a chruthú le fostóir, mar sin roinneann sé an fianú óna sparán soghluaiste. Féadfaidh an chuideachta (an fíoraitheoir) bailíocht an fhianaithe a dhearbhú ansin trí DID an eisitheora a sheiceáil (i.e., a eochair phoiblí ar Ethereum).
 
 ### Fianuithe as slabhra le rochtain leanúnach {#offchain-attestations-with-persistent-access}
 
@@ -186,6 +186,6 @@ Tá go leor tionscadal uaillmhianach ag baint úsáide as Ethereum mar bhunús l
 ### Pobail {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Tacaitheoirí chaighdeán ERC725 chun aitheantas a bhainistiú ar bhlocshlabhra Ethereum_
-- [freastalaí SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Pobal do dhíograiseoirí agus d'fhorbróirí atá ag obair ar Sínigh isteach le hEthereum_
+- [freastalaí EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Pobal do dhíograiseoirí agus d'fhorbróirí atá ag obair ar Sínigh isteach le hEthereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Pobal forbróirí a chuidíonn le creat a chruthú le haghaidh sonraí infhíoraithe d'fheidhmchláir_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Pobal forbróirí agus tógálaithe atá ag obair ar chásanna úsáide céannachta díláraithe ar fud tionscail éagsúla_

@@ -63,12 +63,15 @@ Na tom Ethereum staví. Stejně jako u Bitcoinu se pravidla nemohou změnit a p�
 
 Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je však více než výchozí funkce tokenů na Ethereu. Každý může naprogramovat logiku do plateb. Takže můžete získat kontrolu a bezpečnost Bitcoinu v kombinaci se službami poskytovanými finančními institucemi. Díky tomu můžete s kryptoměnami dělat věci, které s Bitcoinem dělat nemůžete, jako je půjčování a vypůjčování, plánování plateb, investování do indexových fondů a další.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
   <ButtonLink href="/apps/categories/defi">
     Objevte DeFi aplikace
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Co můžete udělat s DeFi? {#defi-use-cases}
 

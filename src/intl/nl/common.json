@@ -441,5 +441,8 @@
   "withdrawals": "Opnames staken",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Ja",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "ethereum-vs-bitcoin": "Ethereum vs. Bitcoin",
+  "nav-ethereum-vs-bitcoin-description": "De verschillen tussen Ethereum en Bitcoin begrijpen"
+
 }

@@ -61,12 +61,15 @@ Web3 dey give yu ownaship of yor dijital assets in stranj way. For eksampol, sey
 
 Web3 go give yu diret ownaship thru [non-fungibol tokens (NFTs)](/glossary/#nft). Nor one, not even di pipol wey kretae di game, get di pawa to komot yor ownaship. And, if yu stop to dey play, yu fit sell abi trade yor in-game items on open markets and bring dem value back.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Make yu learn more abou NFTs</div>
   <ButtonLink href="/nft/">
     More abou NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Sensorship resistans {#censorship-resistance}
 
@@ -86,12 +89,15 @@ Dem difine DAOs as dem agree [smart kontracts](/glossary/#smart-contract) wey au
 
 Haueva, pipol difine many Web3 komunitis as DAOs. All dis komunitis dem get difren levels of disentralizashon and automashon by kode. Currently, we dey explore wetin DAOs be and how dem fit evolve in the future. Nau-nau, wi dey eksplore wetin DAOs bi and hau dem fit shanj in di fushure.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Una fit learn plenty about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identity {#identity}
 

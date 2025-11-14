@@ -59,9 +59,14 @@ Máte-li ETH na hlavní síti Ethereum a chcete prozkoumat alternativní L1 bloc
 
 Představte si, že si chcete koupit Bitcoin (BTC), ale máte peníze pouze na hlavní síti Ethereum. Abyste získali BTC zastoupený na Ethereu, můžete si koupit Wrapped Bitcoin (WBTC). WBTC je ale token [ERC-20](/glossary/#erc-20) nativní pro síť Ethereum, což znamená, že jde o verzi Bitcoinu na Ethereu a nikoli o BTC na blockchainu Bitcoin. Abyste mohli vlastnit původní BTC, musíte svá aktiva převést z Etherea na Bitcoin pomocí přemostění. Tímto způsobem převedete svůj WBTC na BTC. Alternativně můžete vlastnit BTC a chtít jej použít v protokolech [DeFi](/glossary/#defi) na Ethereu. To by vyžadovalo přemostění opačným směrem, tedy z BTC na WBTC, který lze pak použít jako aktivum na Ethereu.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   Všechny tyto operace můžete provést také prostřednictvím [centralizované burzy](/get-eth/). Ale pokud vaše prostředky ještě na burze nejsou, zahruje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

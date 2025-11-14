@@ -40,12 +40,15 @@ Einige Apps werden Sie auffordern, eine geheime „Wiederherstellungsphrase“ (
 **Jede Person, die diese Phrase kennt, kann die Kontrolle über alle Geldmittel übernehmen.** Teilen Sie sie niemals mit irgendjemandem. Diese Phrase sollte 12 bis 24 zufällig generierte Wörter enthalten (die Reihenfolge der Wörter ist wichtig).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Wallet installiert?</b><br/>Erfahren Sie, wie Sie sie benutzen.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     So verwenden Sie eine Wallet
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Interessiert an anderen Anleitungen? Sehen Sie sich unsere [Schritt-für-Schritt-Anleitungen](/guides/) an

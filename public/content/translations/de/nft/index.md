@@ -54,12 +54,15 @@ NFTs werden unter anderem für folgende Zwecke eingesetzt:
 
 Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs verbreiten möchte, ohne die Kontrolle abzugeben und seine Gewinne an Zwischenhändler zu opfern. Sie können einen neuen Contract erstellen und die Anzahl der NFTs, ihre Eigenschaften und eine Verknüpfung zu einem bestimmten Kunstwerk angeben. Als Künstler **können Sie die Lizenzgebühren in den Smart Contract einprogrammieren**, die Ihnen gezahlt werden sollen (z. B. bei jeder Übertragung eines NFT werden 5 % des Verkaufspreises an den Vertragsinhaber überwiesen). Sie können auch jederzeit nachweisen, dass Sie die NFTs erstellt haben, da Sie die [Wallet](/glossary/#wallet) besitzen, die den Vertrag bereitgestellt hat. Ihre Käufer können leicht nachweisen, dass sie ein **authentisches NFT** aus Ihrer Sammlung besitzen, da ihre Wallet-[Adresse](/glossary/#address) mit einem Token in Ihrem Smart Contract verknüpft ist. Sie können ihn im gesamten Ethereum-Ökosystem verwenden und sich seiner Authentizität gewiss sein.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Entdecken, kaufen oder erstellen Sie Ihre eigene(n) NFT-Kunst/Sammelgegenstände ...</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT-Kunst entdecken
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Oder denken Sie an ein Ticket für ein Sportevent. So wie ein **Organisator einer Veranstaltung wählen kann, wie viele Tickets er verkaufen möchte**, kann der Ersteller eines NFT entscheiden, wie viele Repliken existieren. Manchmal handelt es sich dabei um genaue Repliken, wie etwa 5.000 Tickets mit freier Platzwahl. Manchmal werden auch mehrere Stücke geprägt, die zwar sehr ähnlich sind, aber doch leichte Unterschiede aufweisen, wie z. B. ein Ticket mit einem zugewiesenem Sitzplatz. Diese können auf Peer-to-Peer-Basis gekauft und verkauft werden, ohne dass Zwischenhändler dafür bezahlt werden müssen. Dabei kann sich der Käufer durch Überprüfung der Contract-Adresse stets von der Echtheit des Tickets überzeugen.
 

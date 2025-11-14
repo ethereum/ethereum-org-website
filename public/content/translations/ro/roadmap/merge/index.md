@@ -17,7 +17,7 @@ summaryPoint4: Fuziunea a redus consumul de energie al Ethereum cu aproximativ 9
 
 ## Ce este Fuziunea? {#what-is-the-merge}
 
-Fuziunea a reprezentat combinarea stratului de execuție original al Ethereum (Rețeaua principală care a existat încă de la [geneză](/history/#frontier)) cu noul strat de consens cu dovada mizei, Lanțul Beacon. Acesta a eliminat nevoie de minare cu un consum mare de energie și, în schimb, a permis ca rețeaua să fie securizată folosind miza ETH. Realizarea viziunii Ethereum a fost un pas cu adevărat extraordinar: mai multă scalabilitate, mai multă securitate și mai multă durabilitate.
+Fuziunea a reprezentat combinarea stratului de execuție original al Ethereum (Rețeaua principală care a existat încă de la [geneză](/ethereum-forks/#frontier)) cu noul strat de consens cu dovada mizei, Lanțul Beacon. Acesta a eliminat nevoie de minare cu un consum mare de energie și, în schimb, a permis ca rețeaua să fie securizată folosind miza ETH. Realizarea viziunii Ethereum a fost un pas cu adevărat extraordinar: mai multă scalabilitate, mai multă securitate și mai multă durabilitate.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ Fuziunea a reprezentat trecerea oficială la folosirea Lanțului Beacon drept mo
 
 Niciun istoric nu a fost pierdut în Fuziune. Când Rețeaua principală a fuzionat cu Lanțul Beacon, a fuzionat cu întregul istoric al tranzacțiilor Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre [emiterea de eter înainte și după Fuziune](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Utilizatori și deținători {#users-holders}
 
@@ -111,7 +115,7 @@ De asemenea, Fuziunea a creat posibilitatea pentru și mai multe modernizări de
 
 <ExpandableCard
 title="Neînțelegere: &quot;Rularea unui nod necesită mizarea a 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 Există două tipuri de noduri Ethereum: noduri care pot propune blocuri și noduri care nu pot propune blocuri.
 
 Nodurile care propun blocuri sunt doar un număr mic din numărul total de noduri pe Ethereum. Această categorie include noduri de minare în dovada muncii (PoW) și noduri de validator în dovada mizei (PoS). Această categorie necesită angajarea de resurse economice (precum puterea hashului pentru GPU în dovada muncii sau ETH mizat în dovada mizei) în schimbul posibilității de a propune ocazional următorul bloc și de a câștiga recompense acordate de protocol.

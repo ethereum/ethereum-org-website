@@ -6,9 +6,14 @@ lang: zh-tw
 
 在以太坊網路的初期，我們使用一種涉及**[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow)** 的共識機制。 這個機制讓以太坊網路的節點對所有在以太坊區塊鏈上紀錄的資訊的狀態達成共識，並可防範某些種類的經濟攻擊。 但是，以太坊於 2022 年停止使用工作量證明，並轉為使用[權益證明](/developers/docs/consensus-mechanisms/pos)。
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     現在，業界普遍都已棄用工作量證明。 以太坊亦不在其共識機制內使用工作量證明。 取而代之的，是權益證明。 閱讀更多關於[權益證明](/developers/docs/consensus-mechanisms/pos/)和[質押](/staking/)的資訊。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 基本資訊 {#prerequisites}
 
@@ -56,7 +61,7 @@ lang: zh-tw
 
 工作量證明還負責發行新貨幣至系統中，獎勵礦工參與挖礦工作。
 
-自[君士坦丁堡升級](/history/#constantinople)以來，成功建立區塊的礦工將獲得兩枚新鑄造的以太幣及部分交易費作為獎勵。 Ommer 區塊也會補償 1.75 枚以太幣。 Ommer 區塊是由一個礦工與另一個建立了規範區塊的曠工幾乎同時建立的有效區塊，規範區塊最終取決於首先在其上建置的鏈。 Ommer 區塊通常是因網路延遲而發生。
+自[君士坦丁堡升級](/ethereum-forks/#constantinople)以來，成功建立區塊的礦工將獲得兩枚新鑄造的以太幣及部分交易費作為獎勵。 Ommer 區塊也會補償 1.75 枚以太幣。 Ommer 區塊是由一個礦工與另一個建立了規範區塊的曠工幾乎同時建立的有效區塊，規範區塊最終取決於首先在其上建置的鏈。 Ommer 區塊通常是因網路延遲而發生。
 
 ## 最終確定性 {#finality}
 

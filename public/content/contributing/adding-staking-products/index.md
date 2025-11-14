@@ -57,7 +57,7 @@ Staking products or services submissions will be assessed by the following crite
 
 **What platforms are supported?**
 
-- i.e. Linux, macOS, Windows, iOS, Android
+- i.e., Linux, macOS, Windows, iOS, Android
 
 #### Software and smart contracts {#software-and-smart-contracts}
 
@@ -87,18 +87,18 @@ For any custom software or smart contracts involved:
 
 For software products related to node or client setup, management or migration:
 
-**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm, Grandine) are supported?**
+**Which consensus layer clients (i.e., Lighthouse, Teku, Nimbus, Prysm, Grandine) are supported?**
 
 - Which clients are supported? Can the user choose?
 - This is used to determine the products "multi-client" score.
 
 #### Staking as a service {#staking-as-a-service}
 
-For [staking-as-a-service listings](/staking/saas/) (i.e. delegated node operation):
+For [staking-as-a-service listings](/staking/saas/) (i.e., delegated node operation):
 
 **What are the fees associated with using the service?**
 
-- What is the fee structure, e.g. is there a monthly fee for the service?
+- What is the fee structure, e.g., is there a monthly fee for the service?
 - Any additional staking requirements?
 
 **Are users required to sign-up for an account?**
@@ -123,7 +123,7 @@ For [pooled staking services](/staking/pools/):
 
 **What is the minimum ETH required to stake?**
 
-- e.g. 0.01 ETH
+- e.g., 0.01 ETH
 
 **What are the fees or staking requirements involved?**
 
@@ -151,7 +151,7 @@ For [pooled staking services](/staking/pools/):
 
 **What user interfaces are supported?**
 
-- i.e. Browser app, desktop app, mobile app, CLI
+- i.e., Browser app, desktop app, mobile app, CLI
 
 **For node tooling, does the software provide an easy way to switch between clients?**
 

@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
+import { isPageTranslated } from "../i18n/pageTranslation"
+
 import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
@@ -11,7 +13,7 @@ import { routing } from "@/i18n/routing"
  * List of default og images for different sections
  */
 const imageForSlug = [
-  { section: "developers", image: "/images/heroes/developers-hub-hero.jpg" },
+  { section: "developers", image: "/images/heroes/developers-hub-hero.png" },
   { section: "roadmap", image: "/images/heroes/roadmap-hub-hero.jpg" },
   { section: "guides", image: "/images/heroes/guides-hub-hero.jpg" },
   { section: "community", image: "/images/heroes/community-hero.png" },
@@ -39,15 +41,19 @@ export const getMetadata = async ({
   slug,
   title,
   description: descriptionProp,
+  twitterDescription,
   image,
   author,
+  noIndex = false,
 }: {
   locale: string
   slug: string[]
   title: string
   description?: string
+  twitterDescription?: string
   image?: string
   author?: string
+  noIndex?: boolean
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
@@ -64,7 +70,7 @@ export const getMetadata = async ({
   /* Set fallback ogImage based on path */
   const ogImage = image || getOgImage(slug)
 
-  return {
+  const base: Metadata = {
     title,
     description,
     metadataBase: new URL(SITE_URL),
@@ -94,7 +100,7 @@ export const getMetadata = async ({
     },
     twitter: {
       title,
-      description,
+      description: twitterDescription || description,
       card: "summary_large_image",
       creator: author || siteTitle,
       site: author || siteTitle,
@@ -108,4 +114,13 @@ export const getMetadata = async ({
       "docsearch:description": description,
     },
   }
+
+  if (noIndex) {
+    return { ...base, robots: { index: false } }
+  }
+
+  const isTranslated = await isPageTranslated(locale, slugString)
+
+  // If the page is not translated, do not index the page
+  return isTranslated ? base : { ...base, robots: { index: false } }
 }

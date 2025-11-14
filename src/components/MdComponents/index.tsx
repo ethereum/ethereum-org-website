@@ -14,10 +14,10 @@ import FeaturedText from "@/components/FeaturedText"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage"
-import InfoBanner from "@/components/InfoBanner"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
+import { PieChart } from "@/components/PieChart"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -29,6 +29,8 @@ import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
+
+import * as AlertComponents from "../ui/alert"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -104,6 +106,13 @@ export const Paragraph = (props: ChildOnlyProp) => (
   <p className="mb-4 mt-8" {...props} />
 )
 
+export const Blockquote = (props: ChildOnlyProp) => (
+  <blockquote
+    className="mb-4 mt-8 border-s-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
+    {...props}
+  />
+)
+
 export const HR = () => (
   <hr className="mb-4 mt-8 inline-block w-full border-body-medium opacity-60" />
 )
@@ -111,6 +120,7 @@ export const HR = () => (
 // All base html element components
 export const htmlElements = {
   a: TooltipLink,
+  blockquote: Blockquote,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -154,6 +164,7 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
+  ...AlertComponents,
   BrowseApps,
   ButtonLink,
   Card,
@@ -166,8 +177,8 @@ export const reactComponents = {
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Page,
+  PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
   Tag,

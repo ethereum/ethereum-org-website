@@ -37,14 +37,28 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
       ) || []
 
     // Filter out sheets that are not valid AppCategoryEnum values
-    const validSheetNames = sheetNames.filter((name: string) =>
+    const appCategorySheetNames = sheetNames.filter((name: string) =>
       Object.values(AppCategoryEnum).includes(name as AppCategoryEnum)
     )
+
+    const appsOfTheWeek = await fetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/App%20of%20the%20day!A2:C?majorDimension=ROWS&key=${googleApiKey}`
+    )
+
+    if (!appsOfTheWeek.ok) {
+      console.error(
+        `Failed to fetch from sheet Apps of the day:`,
+        appsOfTheWeek.status,
+        appsOfTheWeek.statusText
+      )
+    }
+
+    const appsOfTheWeekData = await appsOfTheWeek.json()
 
     const result: Record<string, AppData[]> = {}
 
     // Fetch and process data from each sheet
-    for (const sheetName of validSheetNames) {
+    for (const sheetName of appCategorySheetNames) {
       const dataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A:Z?majorDimension=ROWS&key=${googleApiKey}`
       const dataResponse = await fetch(dataUrl)
 
@@ -101,6 +115,8 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
             dateOfLaunch: row[22] || "",
             lastUpdated: row[23] || "",
             ready: row[24]?.toLowerCase(),
+            devconnect: row[25]?.toLowerCase(),
+            ...parseAppOfTheWeekDate(row[0], appsOfTheWeekData),
           }
 
           return appData as unknown as AppData
@@ -149,4 +165,17 @@ function parseCommaSeparated(value: string): string[] {
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean)
+}
+
+const parseAppOfTheWeekDate = (
+  appName: string,
+  appsOfTheWeekData: { values: Array<[string, string, string]> }
+): { appOfTheWeekStartDate: Date | null; appOfTheWeekEndDate: Date | null } => {
+  const appOfTheWeek = appsOfTheWeekData.values.find(
+    (app: [string, string, string]) => app[0] === appName
+  )
+  return {
+    appOfTheWeekStartDate: appOfTheWeek ? new Date(appOfTheWeek[1]) : null,
+    appOfTheWeekEndDate: appOfTheWeek ? new Date(appOfTheWeek[2]) : null,
+  }
 }

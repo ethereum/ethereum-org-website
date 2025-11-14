@@ -55,7 +55,7 @@ By providing diverse opportunities for learning, collaboration, and growth, you 
 
 Organizing a successful Ethereum conference or community event requires careful timing and consideration. The right moment depends on a variety of factors that contribute to the event's overall success.
 
-You should take into consideration community maturity, market conditions, whether you have a team, and whether there is a local scene (e.g. potential sponsors).
+You should take into consideration community maturity, market conditions, whether you have a team, and whether there is a local scene (e.g., potential sponsors).
 
 ### KYC — Know your community {#kyc-know-your-community}
 
@@ -206,10 +206,6 @@ The key is to keep the momentum alive. Continue engaging with your community, sh
 A big thank you to everyone who contributed to this article by sharing their insights: Slavo Fabisik from ETHBratislava; Lola from ETH Kipu and ETH Latam; Tanja Mladenovic from ETH Belgrade, Juan David from Ethereum Bogota; Monika Zając from ETHWarsaw; Raffaele Orefice from NapulETH; Xiao Wu(Ling) from ETH Riyadh; Marco from urbe.eth; Caolán Walsh from ETH Dublin; Alex Males from ETHCluj; and Stanko Devic from ETH Slovenia.
 
 ## Resources {#resources}
-
-Template:
-
-- [Ethereum event checklist](https://cryptpad.fr/sheet/#/2/sheet/view/yhGnwo2bKxgA13SnkG9tS76+0+MtO0I6ZUFYEYP0J7w/)
 
 Podcast: How to organize and promote an ETH event from A-Z:
 
