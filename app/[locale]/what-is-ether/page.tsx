@@ -141,12 +141,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
               <ListItem>
                 {t("page-what-is-ether-what-is-ether-description-4")}
               </ListItem>
-              <ListItem>
-                {t("page-what-is-ether-what-is-ether-description-5")}
-              </ListItem>
             </OrderedList>
             <p>
-              {t.rich("page-what-is-ether-what-is-ether-description-6", {
+              {t.rich("page-what-is-ether-what-is-ether-description-5", {
                 assets: (chunks) => (
                   <Link href="https://companiesmarketcap.com/assets-by-market-cap/">
                     {chunks}
@@ -162,11 +159,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   </IconBox>
                   <div>
                     <CardTitle className="mb-2">
-                      {t("page-what-is-ether-what-is-ether-description-7")}
+                      {t("page-what-is-ether-what-is-ether-description-6")}
                     </CardTitle>
                     <HighlightCardContent>
                       <p>
-                        {t("page-what-is-ether-what-is-ether-description-8")}
+                        {t("page-what-is-ether-what-is-ether-description-7")}
                       </p>
                     </HighlightCardContent>
                   </div>
@@ -177,11 +174,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   </IconBox>
                   <div>
                     <CardTitle className="mb-2">
-                      {t("page-what-is-ether-what-is-ether-description-9")}
+                      {t("page-what-is-ether-what-is-ether-description-8")}
                     </CardTitle>
                     <HighlightCardContent>
                       <p>
-                        {t("page-what-is-ether-what-is-ether-description-10")}
+                        {t("page-what-is-ether-what-is-ether-description-9")}
                       </p>
                     </HighlightCardContent>
                   </div>
@@ -192,11 +189,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   </IconBox>
                   <div>
                     <CardTitle className="mb-2">
-                      {t("page-what-is-ether-what-is-ether-description-11")}
+                      {t("page-what-is-ether-what-is-ether-description-10")}
                     </CardTitle>
                     <HighlightCardContent>
                       <p>
-                        {t("page-what-is-ether-what-is-ether-description-12")}
+                        {t("page-what-is-ether-what-is-ether-description-11")}
                       </p>
                     </HighlightCardContent>
                   </div>
@@ -204,7 +201,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
               </HighlightStack>
             </div>
             <LinkWithArrow href="/staking/">
-              {t("page-what-is-ether-what-is-ether-description-13")}
+              {t("page-what-is-ether-what-is-ether-description-12")}
             </LinkWithArrow>
           </Section>
 
@@ -551,23 +548,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
               className="mx-auto max-w-[214px]"
             />
             <div className="space-y-6">
-              <h3>{t("page-what-is-ether-who-holds-most")}</h3>
-              <p>{t("page-what-is-ether-who-holds-most-description-1")}</p>
-              <p>
-                {t.rich("page-what-is-ether-who-holds-most-description-2", {
-                  strategic: (chunks) => (
-                    <Link href="https://strategicethreserve.xyz/">
-                      {chunks}
-                    </Link>
-                  ),
-                })}
-              </p>
+              <h3>{t("page-what-is-ether-distribution")}</h3>
+              <p>{t("page-what-is-ether-distribution-description-1")}</p>
             </div>
-          </Section>
-
-          <Section className="space-y-6">
-            <h3>{t("page-what-is-ether-distribution")}</h3>
-            <p>{t("page-what-is-ether-distribution-description-1")}</p>
           </Section>
 
           <Section id={getId(tocItems[7].url)} className="space-y-6">
