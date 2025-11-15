@@ -85,7 +85,7 @@
   "page-what-is-ether-what-is-wrapping-eth-description-3": "Trading pairs on decentralized exchanges like <uniswap>Uniswap</uniswap>",
   "page-what-is-ether-what-is-wrapping-eth-description-4": "Collateral on lending platforms like <aave>Aave</aave>",
   "page-what-is-ether-what-is-wrapping-eth-description-5": "Bidding on NFT marketplaces like <opensea>OpenSea</opensea>",
-  "page-what-is-ether-what-is-wrapping-eth-description-6": "WETH can be unwrapped back to ETH anytime with minimal fees. Most applications handle the wrapping process seamlessly.",
+  "page-what-is-ether-what-is-wrapping-eth-description-6": "WETH can be unwrapped back to ETH anytime with minimal fees. The WETH is destroyed, and the ETH it represented is released from the smart contract. Most applications handle the wrapping and unwrapping process seamlessly.",
   "page-what-is-ether-what-is-wrapping-eth-description-7": "Learn more about Wrapped ETH (WETH)",
   "page-what-is-ether-gas-table-transaction-type": "Transaction type",
   "page-what-is-ether-gas-table-typical-cost-range": "Live cost range",
