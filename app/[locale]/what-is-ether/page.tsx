@@ -203,9 +203,9 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                 </HighlightCard>
               </HighlightStack>
             </div>
-            <Link href="/staking/">
+            <LinkWithArrow href="/staking/">
               {t("page-what-is-ether-what-is-ether-description-13")}
-            </Link>
+            </LinkWithArrow>
           </Section>
 
           <Section id={getId(tocItems[1].url)} className="space-y-6">
