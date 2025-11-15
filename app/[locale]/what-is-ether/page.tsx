@@ -312,7 +312,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
           <Section
             id={getId(tocItems[2].url)}
-            className="-scroll-mt-80 space-y-14"
+            className="space-y-14"
           >
             <Image
               src={ethOrgLogo}
