@@ -13616,7 +13616,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/225852520?v=4",
       "profile": "https://github.com/MOSHKA-GOT",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "code"
       ]
     },
     {
@@ -13788,6 +13789,69 @@
       "profile": "https://github.com/ocandocrypto",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "HSuke",
+      "name": "HSuke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3211079?v=4",
+      "profile": "https://github.com/HSuke",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "GarmashAlex",
+      "name": "GarmashAlex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193699300?v=4",
+      "profile": "https://github.com/GarmashAlex",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "zeeshan8281",
+      "name": "Mohammad Zeeshan Jawed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89350024?v=4",
+      "profile": "http://zeeshan8281.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "GaetanFrejoux",
+      "name": "Slyrik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47180075?v=4",
+      "profile": "https://github.com/GaetanFrejoux",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "eagerapps",
+      "name": "Mohammed Israil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26349077?v=4",
+      "profile": "https://github.com/eagerapps",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "mnelsonBT",
+      "name": "mnelsonBT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74370515?v=4",
+      "profile": "https://github.com/mnelsonBT",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "agualis",
+      "name": "Alberto Gualis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1316240?v=4",
+      "profile": "https://medium.com/@gualison",
+      "contributions": [
+        "code"
       ]
     }
   ],

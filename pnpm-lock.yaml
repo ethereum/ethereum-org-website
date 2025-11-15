@@ -143,6 +143,9 @@ importers:
       htmr:
         specifier: ^1.0.2
         version: 1.0.2(react@18.3.1)
+      humanize-duration:
+        specifier: ^3.33.1
+        version: 3.33.1
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -6245,6 +6248,9 @@ packages:
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
+
+  humanize-duration@3.33.1:
+    resolution: {integrity: sha512-hwzSCymnRdFx9YdRkQQ0OYequXiVAV6ZGQA2uzocwB0F4309Ke6pO8dg0P8LHhRQJyVjGteRTAA/zNfEcpXn8A==}
 
   husky@9.1.7:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
@@ -17209,6 +17215,8 @@ snapshots:
       - supports-color
 
   human-signals@5.0.0: {}
+
+  humanize-duration@3.33.1: {}
 
   husky@9.1.7: {}
 

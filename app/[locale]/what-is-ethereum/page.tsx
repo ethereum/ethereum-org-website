@@ -766,20 +766,18 @@ const Page = async ({ params }: { params: PageParams }) => {
                   <div className="space-y-6">
                     <p>{t("page-what-is-ethereum-start-business-desc-1")}</p>
                     <p>{t("page-what-is-ethereum-start-business-desc-2")} </p>
-                    <p>
-                      {t("page-what-is-ethereum-start-business-desc-3")}
-                      <UnorderedList className="[&>li]:mb-0">
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-1")}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-2")}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-start-business-benefit-3")}
-                        </ListItem>
-                      </UnorderedList>
-                    </p>
+                    <p>{t("page-what-is-ethereum-start-business-desc-3")}</p>
+                    <UnorderedList className="[&>li]:mb-0">
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-1")}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-2")}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-start-business-benefit-3")}
+                      </ListItem>
+                    </UnorderedList>
                     <p>
                       {t.rich("page-what-is-ethereum-start-business-example", {
                         a: (chunks) => (

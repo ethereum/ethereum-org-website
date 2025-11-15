@@ -7,6 +7,7 @@
   "template-usecase-dropdown-payments": "Ethereum Payments",
   "template-usecase-dropdown-prediction-markets": "Prediction Markets",
   "template-usecase-dropdown-social-networks": "Decentralized social networks",
+  "template-usecase-dropdown-restaking" : "Restaking",
   "template-usecase-dropdown-identity": "Decentralized identity",
   "template-usecase-dropdown-desci": "Decentralized science (DeSci)",
   "template-usecase-dropdown-refi": "Regenerative finance (ReFi)",
