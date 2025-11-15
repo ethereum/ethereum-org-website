@@ -2,9 +2,6 @@ import ProductListComponent from "@/components/ProductList"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import eigenLayer from "@/public/images/use-cases/eigen-layer-logo.png"
-import lido from "@/public/images/use-cases/lido-logo.png"
-import obol from "@/public/images/use-cases/obol-logo.png"
-import omni from "@/public/images/use-cases/omni-logo.png"
 import symbiotic from "@/public/images/use-cases/symbiotic-logo.png"
 
 export const RestakingList = () => {
@@ -40,61 +37,6 @@ export const RestakingList = () => {
         <div key="symbiotic-button">
           <ButtonLink href="https://symbiotic.fi/" variant="outline">
             Visit Symbiotic
-          </ButtonLink>
-        </div>,
-      ],
-    },
-    {
-      title: "Omni Network (AVS)",
-      description: "",
-      image: omni,
-      alt: "Omni logo",
-      contentItems: [
-        <p key="omni-description">
-          Omni Network is an AVS that uses EigenLayer to secure messaging
-          between Ethereum and other blockchains. Operators guarantee delivery
-          of these messages in return for OMNI tokens.
-        </p>,
-        <div key="omni-button">
-          <ButtonLink href="https://omni.network/" variant="outline">
-            Visit Omni
-          </ButtonLink>
-        </div>,
-      ],
-    },
-    {
-      title: "Obol Network (Operator)",
-      description: "",
-      image: obol,
-      alt: "Obol logo",
-      contentItems: [
-        <p key="obol-description">
-          Obol Network is an EigenLayer operator. They use a unique set up that
-          splits the work from an AVS across multiple operators, improving
-          stability and reducing the chance of issues like downtime.
-        </p>,
-        <div key="omni-button">
-          <ButtonLink href="https://obol.org/" variant="outline">
-            Visit Obol
-          </ButtonLink>
-        </div>,
-      ],
-    },
-    {
-      title: "Lido (LSP)",
-      description: "",
-      image: lido,
-      alt: "Lido logo",
-      contentItems: [
-        <p key="lido-description">
-          Lido is a Liquid Staking Protocol (LSP) on Ethereum that lets people
-          use their ETH while staking it on Ethereum. Users who stake ETH
-          through Lido receive stETH tokens, that they can use for restaking and
-          DeFi lending.
-        </p>,
-        <div key="lido-button">
-          <ButtonLink href="https://lido.fi/" variant="outline">
-            Visit Lido
           </ButtonLink>
         </div>,
       ],
