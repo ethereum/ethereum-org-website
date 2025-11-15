@@ -57,7 +57,7 @@
   "page-what-is-ether-what-is-the-eth-supply": "What is the ETH supply?",
   "page-what-is-ether-what-is-the-eth-supply-description-1": "Unlike Bitcoin's fixed 21 million cap, ETH has dynamic supply mechanics:",
   "page-what-is-ether-what-is-the-eth-supply-description-2": "New ETH is issued to reward network validators at a limited rate calculated by the protocol",
-  "page-what-is-ether-what-is-the-eth-supply-description-3": "A portion of every transaction fee is permanently \"burned\"",
+  "page-what-is-ether-what-is-the-eth-supply-description-3": "A portion of every transaction fee is permanently \"burned\" (deleted from existence)",
   "page-what-is-ether-what-is-the-eth-supply-description-4": "This creates alternating periods of inflation and deflation based on network usage",
   "page-what-is-ether-what-is-the-eth-supply-description-5": "<strong>Expected equilibrium</strong>: The system balances network security with long-term value preservation. High usage leads to deflation; low usage results in inflation.",
   "page-what-is-ether-what-is-the-eth-supply-description-6": "Data sources: <etherscan>Etherscan</etherscan>, <ultrasound>Ultrasound Money</ultrasound>",
