@@ -34,12 +34,9 @@ import impactTransparent from "@/public/images/impact_transparent.png"
 import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
 
 const Page = async ({ params }: { params: { locale: Lang } }) => {
-  const { locale } = await params
-
-  setRequestLocale(locale)
+  const { locale } = params
 
   const t = await getTranslations({
-    locale,
     namespace: "page-what-is-ether",
   })
 
