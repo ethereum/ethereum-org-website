@@ -1,5 +1,5 @@
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
@@ -208,112 +208,98 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             </Link>
           </Section>
 
-          <Section
-            id={getId(tocItems[1].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
-                {tocItems[1].title}
-              </h2>
-              <p>
-                {t.rich("page-what-is-ether-how-to-buy-eth-description-1", {
-                  strong: Strong,
-                })}
-              </p>
-              <p>{t("page-what-is-ether-how-to-buy-eth-description-2")}</p>
-              <Alert variant="warning">
-                <AlertEmoji text="💡" />
-                <AlertContent>
-                  <p>
-                    {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
+          <Section id={getId(tocItems[1].url)} className="space-y-6">
+            <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
+              {tocItems[1].title}
+            </h2>
+            <p>
+              {t.rich("page-what-is-ether-how-to-buy-eth-description-1", {
+                strong: Strong,
+              })}
+            </p>
+            <p>{t("page-what-is-ether-how-to-buy-eth-description-2")}</p>
+            <Alert variant="warning">
+              <AlertEmoji text="💡" />
+              <AlertContent>
+                <p>
+                  {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
+                    strong: Strong,
+                  })}
+                </p>
+                <p className="mt-2">
+                  {t.rich("page-what-is-ether-how-to-buy-eth-description-4", {
+                    strong: Strong,
+                  })}
+                </p>
+                <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
+                  <ListItem>
+                    {t.rich("page-what-is-ether-how-to-buy-eth-description-5", {
                       strong: Strong,
                     })}
-                  </p>
-                  <p className="mt-2">
-                    {t.rich("page-what-is-ether-how-to-buy-eth-description-4", {
+                  </ListItem>
+                  <ListItem>
+                    {t.rich("page-what-is-ether-how-to-buy-eth-description-6", {
                       strong: Strong,
                     })}
-                  </p>
-                  <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
-                    <ListItem>
-                      {t.rich(
-                        "page-what-is-ether-how-to-buy-eth-description-5",
-                        {
-                          strong: Strong,
-                        }
-                      )}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich(
-                        "page-what-is-ether-how-to-buy-eth-description-6",
-                        {
-                          strong: Strong,
-                        }
-                      )}
-                    </ListItem>
-                  </UnorderedList>
-                </AlertContent>
-              </Alert>
-              <p className="text-xl">
-                <strong>
-                  {t("page-what-is-ether-how-to-buy-eth-description-7")}
-                </strong>
-              </p>
-              <UnorderedList>
-                <ListItem>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-8", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-9", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-10", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-              </UnorderedList>
-              <p>
-                {t.rich("page-what-is-ether-how-to-buy-eth-description-11", {
+                  </ListItem>
+                </UnorderedList>
+              </AlertContent>
+            </Alert>
+            <p className="text-xl">
+              <strong>
+                {t("page-what-is-ether-how-to-buy-eth-description-7")}
+              </strong>
+            </p>
+            <UnorderedList>
+              <ListItem>
+                {t.rich("page-what-is-ether-how-to-buy-eth-description-8", {
                   strong: Strong,
                 })}
-              </p>
-              <p className="text-xl">
-                <strong>
-                  {t("page-what-is-ether-how-to-buy-eth-description-12")}
-                </strong>
-              </p>
-              <UnorderedList>
-                <ListItem>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-13", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-14", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-how-to-buy-eth-description-15", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-              </UnorderedList>
-              <LinkWithArrow href="/get-eth/">
-                {t("page-what-is-ether-how-to-buy-eth-description-16")}
-              </LinkWithArrow>
-            </div>
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-how-to-buy-eth-description-9", {
+                  strong: Strong,
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-how-to-buy-eth-description-10", {
+                  strong: Strong,
+                })}
+              </ListItem>
+            </UnorderedList>
+            <p>
+              {t.rich("page-what-is-ether-how-to-buy-eth-description-11", {
+                strong: Strong,
+              })}
+            </p>
+            <p className="text-xl">
+              <strong>
+                {t("page-what-is-ether-how-to-buy-eth-description-12")}
+              </strong>
+            </p>
+            <UnorderedList>
+              <ListItem>
+                {t.rich("page-what-is-ether-how-to-buy-eth-description-13", {
+                  strong: Strong,
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-how-to-buy-eth-description-14", {
+                  strong: Strong,
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-how-to-buy-eth-description-15", {
+                  strong: Strong,
+                })}
+              </ListItem>
+            </UnorderedList>
+            <LinkWithArrow href="/get-eth/">
+              {t("page-what-is-ether-how-to-buy-eth-description-16")}
+            </LinkWithArrow>
           </Section>
 
-          <Section
-            id={getId(tocItems[2].url)}
-            className="space-y-14"
-          >
+          <Section id={getId(tocItems[2].url)} className="space-y-14">
             <Image
               src={ethOrgLogo}
               alt="Ethereum.org Logo"
@@ -399,30 +385,25 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             </div>
           </Section>
 
-          <Section
-            id={getId(tocItems[3].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
-                {tocItems[3].title}
-              </h2>
-              <p>
-                {t(
-                  "page-what-is-ether-how-long-does-it-take-to-send-eth-description-1"
-                )}
-              </p>
-              <p>
-                {t(
-                  "page-what-is-ether-how-long-does-it-take-to-send-eth-description-2"
-                )}
-              </p>
-              <p>
-                {t(
-                  "page-what-is-ether-how-long-does-it-take-to-send-eth-description-3"
-                )}
-              </p>
-            </div>
+          <Section id={getId(tocItems[3].url)} className="space-y-6">
+            <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
+              {tocItems[3].title}
+            </h2>
+            <p>
+              {t(
+                "page-what-is-ether-how-long-does-it-take-to-send-eth-description-1"
+              )}
+            </p>
+            <p>
+              {t(
+                "page-what-is-ether-how-long-does-it-take-to-send-eth-description-2"
+              )}
+            </p>
+            <p>
+              {t(
+                "page-what-is-ether-how-long-does-it-take-to-send-eth-description-3"
+              )}
+            </p>
           </Section>
 
           <Section
@@ -450,28 +431,26 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             </div>
           </Section>
 
-          <Section className="space-y-14">
-            <div className="space-y-6">
-              <h3>{t("page-what-is-ether-l2s")}</h3>
-              <p>{t("page-what-is-ether-l2s-description-1")}</p>
-              <p>
-                {t.rich("page-what-is-ether-l2s-description-2", {
-                  strong: Strong,
-                  optimism: (chunks) => (
-                    <Link href="https://optimism.io/">{chunks}</Link>
-                  ),
-                  arbitrum: (chunks) => (
-                    <Link href="https://arbitrum.io/">{chunks}</Link>
-                  ),
-                })}
-              </p>
-              <p>{t("page-what-is-ether-l2s-description-3")}</p>
-              <p>
-                {t.rich("page-what-is-ether-l2s-description-4", {
-                  strong: Strong,
-                })}
-              </p>
-            </div>
+          <Section className="space-y-6">
+            <h3>{t("page-what-is-ether-l2s")}</h3>
+            <p>{t("page-what-is-ether-l2s-description-1")}</p>
+            <p>
+              {t.rich("page-what-is-ether-l2s-description-2", {
+                strong: Strong,
+                optimism: (chunks) => (
+                  <Link href="https://optimism.io/">{chunks}</Link>
+                ),
+                arbitrum: (chunks) => (
+                  <Link href="https://arbitrum.io/">{chunks}</Link>
+                ),
+              })}
+            </p>
+            <p>{t("page-what-is-ether-l2s-description-3")}</p>
+            <p>
+              {t.rich("page-what-is-ether-l2s-description-4", {
+                strong: Strong,
+              })}
+            </p>
           </Section>
 
           <Section
@@ -525,68 +504,61 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             </div>
           </Section>
 
-          <Section
-            id={getId(tocItems[6].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[6].url)} className="scroll-mt-28">
-                {tocItems[6].title}
-              </h2>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-what-is-the-distribution-of-eth-description-1",
-                  {
-                    etherscan: (chunks) => (
-                      <Link href="https://etherscan.io/chart/address">
-                        {chunks}
-                      </Link>
-                    ),
-                  }
-                )}
-              </p>
-            </div>
+          <Section id={getId(tocItems[6].url)} className="space-y-6">
+            <h2 id={getId(tocItems[6].url)} className="scroll-mt-28">
+              {tocItems[6].title}
+            </h2>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-is-the-distribution-of-eth-description-1",
+                {
+                  etherscan: (chunks) => (
+                    <Link href="https://etherscan.io/chart/address">
+                      {chunks}
+                    </Link>
+                  ),
+                }
+              )}
+            </p>
           </Section>
 
-          <Section className="space-y-14">
-            <div className="space-y-6">
-              <h3>{t("page-what-is-ether-breakdown")}</h3>
-              <UnorderedList>
-                <ListItem>
-                  {t.rich("page-what-is-ether-breakdown-description-1", {
-                    strong: Strong,
-                    beaconchain: (chunks) => (
-                      <Link href="https://beaconcha.in/">{chunks}</Link>
-                    ),
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-breakdown-description-2", {
-                    strong: Strong,
-                    unchained: (chunks) => (
-                      <Link href="https://unchainedcrypto.com/amount-of-bitcoin-and-ether-on-exchanges-reach-record-multi-year-lows/">
-                        {chunks}
-                      </Link>
-                    ),
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-breakdown-description-3", {
-                    strong: Strong,
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t.rich("page-what-is-ether-breakdown-description-4", {
-                    strong: Strong,
-                    ef: (chunks) => (
-                      <Link href="https://ethereum.foundation/report-2024.pdf">
-                        {chunks}
-                      </Link>
-                    ),
-                  })}
-                </ListItem>
-              </UnorderedList>
-            </div>
+          <Section className="space-y-6">
+            <h3>{t("page-what-is-ether-breakdown")}</h3>
+            <UnorderedList>
+              <ListItem>
+                {t.rich("page-what-is-ether-breakdown-description-1", {
+                  strong: Strong,
+                  beaconchain: (chunks) => (
+                    <Link href="https://beaconcha.in/">{chunks}</Link>
+                  ),
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-breakdown-description-2", {
+                  strong: Strong,
+                  unchained: (chunks) => (
+                    <Link href="https://unchainedcrypto.com/amount-of-bitcoin-and-ether-on-exchanges-reach-record-multi-year-lows/">
+                      {chunks}
+                    </Link>
+                  ),
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-breakdown-description-3", {
+                  strong: Strong,
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-what-is-ether-breakdown-description-4", {
+                  strong: Strong,
+                  ef: (chunks) => (
+                    <Link href="https://ethereum.foundation/report-2024.pdf">
+                      {chunks}
+                    </Link>
+                  ),
+                })}
+              </ListItem>
+            </UnorderedList>
           </Section>
 
           <Section className="space-y-14">
@@ -610,120 +582,102 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
             </div>
           </Section>
 
-          <Section className="space-y-14">
-            <div className="space-y-6">
-              <h3>{t("page-what-is-ether-distribution")}</h3>
-              <p>{t("page-what-is-ether-distribution-description-1")}</p>
-            </div>
+          <Section className="space-y-6">
+            <h3>{t("page-what-is-ether-distribution")}</h3>
+            <p>{t("page-what-is-ether-distribution-description-1")}</p>
           </Section>
 
-          <Section
-            id={getId(tocItems[7].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[7].url)} className="scroll-mt-28">
-                {tocItems[7].title}
-              </h2>
-              <p>
-                {t("page-what-is-ether-what-makes-eth-valuable-description-1")}
-              </p>
-              <p>
+          <Section id={getId(tocItems[7].url)} className="space-y-6">
+            <h2 id={getId(tocItems[7].url)} className="scroll-mt-28">
+              {tocItems[7].title}
+            </h2>
+            <p>
+              {t("page-what-is-ether-what-makes-eth-valuable-description-1")}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-makes-eth-valuable-description-2",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-makes-eth-valuable-description-3",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-makes-eth-valuable-description-4",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-makes-eth-valuable-description-5",
+                {
+                  strong: Strong,
+                  ultrasound: (chunks) => (
+                    <Link href="https://ultrasound.money/?timeFrame=since_burn">
+                      {chunks}
+                    </Link>
+                  ),
+                }
+              )}
+            </p>
+          </Section>
+
+          <Section id={getId(tocItems[8].url)} className="space-y-6">
+            <h2 id={getId(tocItems[8].url)} className="scroll-mt-28">
+              {tocItems[8].title}
+            </h2>
+            <p>{t("page-what-is-ether-what-is-wrapping-eth-description-1")}</p>
+            <p>{t("page-what-is-ether-what-is-wrapping-eth-description-2")}</p>
+            <UnorderedList>
+              <ListItem>
                 {t.rich(
-                  "page-what-is-ether-what-makes-eth-valuable-description-2",
+                  "page-what-is-ether-what-is-wrapping-eth-description-3",
                   {
                     strong: Strong,
-                  }
-                )}
-              </p>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-what-makes-eth-valuable-description-3",
-                  {
-                    strong: Strong,
-                  }
-                )}
-              </p>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-what-makes-eth-valuable-description-4",
-                  {
-                    strong: Strong,
-                  }
-                )}
-              </p>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-what-makes-eth-valuable-description-5",
-                  {
-                    strong: Strong,
-                    ultrasound: (chunks) => (
-                      <Link href="https://ultrasound.money/?timeFrame=since_burn">
-                        {chunks}
-                      </Link>
+                    uniswap: (chunks) => (
+                      <Link href="https://uniswap.org/">{chunks}</Link>
                     ),
                   }
                 )}
-              </p>
-            </div>
-          </Section>
-
-          <Section
-            id={getId(tocItems[8].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[8].url)} className="scroll-mt-28">
-                {tocItems[8].title}
-              </h2>
-              <p>
-                {t("page-what-is-ether-what-is-wrapping-eth-description-1")}
-              </p>
-              <p>
-                {t("page-what-is-ether-what-is-wrapping-eth-description-2")}
-              </p>
-              <UnorderedList>
-                <ListItem>
-                  {t.rich(
-                    "page-what-is-ether-what-is-wrapping-eth-description-3",
-                    {
-                      strong: Strong,
-                      uniswap: (chunks) => (
-                        <Link href="https://uniswap.org/">{chunks}</Link>
-                      ),
-                    }
-                  )}
-                </ListItem>
-                <ListItem>
-                  {t.rich(
-                    "page-what-is-ether-what-is-wrapping-eth-description-4",
-                    {
-                      strong: Strong,
-                      aave: (chunks) => (
-                        <Link href="https://aave.com/">{chunks}</Link>
-                      ),
-                    }
-                  )}
-                </ListItem>
-                <ListItem>
-                  {t.rich(
-                    "page-what-is-ether-what-is-wrapping-eth-description-5",
-                    {
-                      strong: Strong,
-                      opensea: (chunks) => (
-                        <Link href="https://opensea.io/">{chunks}</Link>
-                      ),
-                    }
-                  )}
-                </ListItem>
-              </UnorderedList>
-              <p>
-                {t("page-what-is-ether-what-is-wrapping-eth-description-6")}
-              </p>
-              <LinkWithArrow href="/wrapped-eth/">
-                {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
-              </LinkWithArrow>
-            </div>
+              </ListItem>
+              <ListItem>
+                {t.rich(
+                  "page-what-is-ether-what-is-wrapping-eth-description-4",
+                  {
+                    strong: Strong,
+                    aave: (chunks) => (
+                      <Link href="https://aave.com/">{chunks}</Link>
+                    ),
+                  }
+                )}
+              </ListItem>
+              <ListItem>
+                {t.rich(
+                  "page-what-is-ether-what-is-wrapping-eth-description-5",
+                  {
+                    strong: Strong,
+                    opensea: (chunks) => (
+                      <Link href="https://opensea.io/">{chunks}</Link>
+                    ),
+                  }
+                )}
+              </ListItem>
+            </UnorderedList>
+            <p>{t("page-what-is-ether-what-is-wrapping-eth-description-6")}</p>
+            <LinkWithArrow href="/wrapped-eth/">
+              {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
+            </LinkWithArrow>
           </Section>
         </div>
       </MainArticle>
