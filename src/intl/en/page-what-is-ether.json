@@ -80,7 +80,7 @@
   "page-what-is-ether-what-makes-eth-valuable-description-4": "<strong>Store of value</strong>: Many view ETH as \"digital oil\"—a scarce asset with real utility powering the digital economy.",
   "page-what-is-ether-what-makes-eth-valuable-description-5": "<strong>Supply dynamics</strong>: Fee burning creates deflationary pressure during high usage periods. Since 2021, <ultrasound>millions of ETH have been permanently removed</ultrasound> from circulation.",
   "page-what-is-ether-what-is-wrapping-eth": "What is wrapping ETH?",
-  "page-what-is-ether-what-is-wrapping-eth-description-1": "Wrapped ETH (WETH) is ETH packaged in a smart contract for compatibility with certain decentralized applications. It maintains a 1:1 value with ETH but follows technical standards (like ERC-20) that some applications require.",
+  "page-what-is-ether-what-is-wrapping-eth-description-1": "Wrapped ETH (WETH) is an ERC-20 token that represents ETH on a 1:1 basis. Many decentralized apps and L2 networks are built to handle ERC-20 tokens, but native ETH itself is not an ERC-20 token. ‘Wrapping' (locking in a smart contract) ETH, and issuing an ERC-20 representation of that locked ETH (WETH), allows ether to be used across any apps and L2s that can only accept ERC-20 tokens. ",
   "page-what-is-ether-what-is-wrapping-eth-description-2": "Common uses include:",
   "page-what-is-ether-what-is-wrapping-eth-description-3": "Trading pairs on decentralized exchanges like <uniswap>Uniswap</uniswap>",
   "page-what-is-ether-what-is-wrapping-eth-description-4": "Collateral on lending platforms like <aave>Aave</aave>",
