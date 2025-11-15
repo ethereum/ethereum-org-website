@@ -54,7 +54,7 @@
   "page-what-is-ether-l2s-description-1": "As Ethereum's popularity grows, keeping transaction fees low becomes challenging. <strong>Layer 2 (L2)</strong> networks address this issue.",
   "page-what-is-ether-l2s-description-2": "L2s like <optimism>Optimism</optimism> and <arbitrum>Arbitrum</arbitrum> offer <strong>5-10x cheaper fees</strong> while inheriting Ethereum's security. They process transactions offchain and post summaries to Ethereum.",
   "page-what-is-ether-l2s-description-3": "Think of them as express lanes that provide faster, cheaper transactions alongside Ethereum's main highway.",
-  "page-what-is-ether-l2s-description-4": "L2 <strong>transfers can cost as little as $0.04</strong>, bringing Ethereum to millions more users through integrations with companies like Robinhood, PayPal, and Shopify.",
+  "page-what-is-ether-l2s-description-4": "L2 <strong>transfers can cost as little as less than $0.01</strong>, bringing Ethereum to millions more users through integrations with companies like Robinhood, PayPal, and Shopify.",
   "page-what-is-ether-what-is-the-eth-supply": "What is the ETH supply?",
   "page-what-is-ether-what-is-the-eth-supply-description-1": "Unlike Bitcoin's fixed 21 million cap, ETH has dynamic supply mechanics:",
   "page-what-is-ether-what-is-the-eth-supply-description-2": "New ETH is issued to reward network validators",
