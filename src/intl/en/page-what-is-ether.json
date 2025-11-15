@@ -81,7 +81,7 @@
   "page-what-is-ether-what-makes-eth-valuable-description-5": "<strong>Supply dynamics</strong>: Fee burning creates deflationary pressure during high usage periods. Since 2021, <ultrasound>millions of ETH have been permanently removed</ultrasound> from circulation.",
   "page-what-is-ether-what-is-wrapping-eth": "What is wrapping ETH?",
   "page-what-is-ether-what-is-wrapping-eth-description-1": "Wrapped ETH (WETH) is ETH packaged in a smart contract for compatibility with certain decentralized applications. It maintains a 1:1 value with ETH but follows technical standards (like ERC-20) that some applications require.",
-  "page-what-is-ether-what-is-wrapping-eth-description-2": "Common uses include:`",
+  "page-what-is-ether-what-is-wrapping-eth-description-2": "Common uses include:",
   "page-what-is-ether-what-is-wrapping-eth-description-3": "Trading pairs on decentralized exchanges like <uniswap>Uniswap</uniswap>",
   "page-what-is-ether-what-is-wrapping-eth-description-4": "Collateral on lending platforms like <aave>Aave</aave>",
   "page-what-is-ether-what-is-wrapping-eth-description-5": "Bidding on NFT marketplaces like <opensea>OpenSea</opensea>",
