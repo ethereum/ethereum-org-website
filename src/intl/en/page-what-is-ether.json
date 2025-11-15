@@ -56,7 +56,7 @@
   "page-what-is-ether-l2s-description-4": "L2 <strong>transfers can cost as little as less than $0.01</strong>, bringing Ethereum to millions more users through integrations with companies like Robinhood, PayPal, and Shopify.",
   "page-what-is-ether-what-is-the-eth-supply": "What is the ETH supply?",
   "page-what-is-ether-what-is-the-eth-supply-description-1": "Unlike Bitcoin's fixed 21 million cap, ETH has dynamic supply mechanics:",
-  "page-what-is-ether-what-is-the-eth-supply-description-2": "New ETH is issued to reward network validators",
+  "page-what-is-ether-what-is-the-eth-supply-description-2": "New ETH is issued to reward network validators at a limited rate calculated by the protocol",
   "page-what-is-ether-what-is-the-eth-supply-description-3": "A portion of every transaction fee is permanently \"burned\"",
   "page-what-is-ether-what-is-the-eth-supply-description-4": "This creates alternating periods of inflation and deflation based on network usage",
   "page-what-is-ether-what-is-the-eth-supply-description-5": "<strong>Expected equilibrium</strong>: The system balances network security with long-term value preservation. High usage leads to deflation; low usage results in inflation.",
