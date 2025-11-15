@@ -5,12 +5,11 @@ import type { ImageProps, StaticImageData } from "next/image"
 
 import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
+import { Button } from "@/components/ui/buttons/Button"
+import { Flex, Stack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import { ButtonLink } from "../ui/buttons/Button"
-import { Flex, Stack } from "../ui/flex"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -41,6 +40,40 @@ const AssetDownload = ({
       eventName: title,
     })
   }
+
+  const handleDownload = async (url: string, fileExtension: string) => {
+    if (!url) return
+
+    matomoHandler()
+
+    try {
+      const response = await fetch(url)
+      const blob = await response.blob()
+      const blobUrl = window.URL.createObjectURL(blob)
+      const link = document.createElement("a")
+      link.href = blobUrl
+      link.download = `${title.replace(/\s+/g, "-").toLowerCase()}.${fileExtension}`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(blobUrl)
+    } catch (error) {
+      console.error("Failed to download file:", error)
+    }
+  }
+
+  const handleSvgDownload = () => {
+    if (!svgUrl) return
+    handleDownload(svgUrl, "svg")
+  }
+
+  const handleImageDownload = () => {
+    const imgSrc = (image as StaticImageData).src
+    if (!imgSrc) return
+    const fileExt = extname(imgSrc).slice(1)
+    handleDownload(imgSrc, fileExt)
+  }
+
   const imgSrc = (image as StaticImageData).src
 
   return (
@@ -56,14 +89,14 @@ const AssetDownload = ({
         )}
       </div>
       <Flex className="mt-4 gap-5">
-        <ButtonLink href={imgSrc} onClick={matomoHandler} target="_blank">
+        <Button onClick={handleImageDownload}>
           {t("page-assets-download-download")} (
           {extname(imgSrc).slice(1).toUpperCase()})
-        </ButtonLink>
+        </Button>
         {svgUrl && (
-          <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">
+          <Button onClick={handleSvgDownload}>
             {t("page-assets-download-download")} (SVG)
-          </ButtonLink>
+          </Button>
         )}
       </Flex>
     </Stack>
