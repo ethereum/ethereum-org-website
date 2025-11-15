@@ -344,32 +344,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                       strong: Strong,
                     })}
                   </p>
-                  <p className="mt-2">
-                    {t.rich(
-                      "page-what-is-ether-how-to-send-and-receive-eth-description-4",
-                      {
-                        strong: Strong,
-                      }
+                  <p>
+                    {t(
+                      "page-what-is-ether-how-to-send-and-receive-eth-callout"
                     )}
                   </p>
-                  <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
-                    <ListItem>
-                      {t.rich(
-                        "page-what-is-ether-how-to-send-and-receive-eth-description-5",
-                        {
-                          strong: Strong,
-                        }
-                      )}
-                    </ListItem>
-                    <ListItem>
-                      {t.rich(
-                        "page-what-is-ether-how-to-send-and-receive-eth-description-6",
-                        {
-                          strong: Strong,
-                        }
-                      )}
-                    </ListItem>
-                  </UnorderedList>
                 </AlertContent>
               </Alert>
               <p>
@@ -433,7 +412,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
           <Section className="space-y-6">
             <h3>{t("page-what-is-ether-l2s")}</h3>
-            <p>{t("page-what-is-ether-l2s-description-1")}</p>
+            <p>
+              {t.rich("page-what-is-ether-l2s-description-1", {
+                strong: Strong,
+              })}
+            </p>
             <p>
               {t.rich("page-what-is-ether-l2s-description-2", {
                 strong: Strong,
