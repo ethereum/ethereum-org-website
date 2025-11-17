@@ -1,7 +1,7 @@
 ---
 title: Organizing an Ethereum Event
 description: How to organize an Ethereum event
-lang: en
+lang: es
 hideEditButton: true
 ---
 
@@ -205,7 +205,7 @@ The key is to keep the momentum alive. Continue engaging with your community, sh
 
 A big thank you to everyone who contributed to this article by sharing their insights: Slavo Fabisik from ETHBratislava; Lola from ETH Kipu and ETH Latam; Tanja Mladenovic from ETH Belgrade, Juan David from Ethereum Bogota; Monika Zając from ETHWarsaw; Raffaele Orefice from NapulETH; Xiao Wu(Ling) from ETH Riyadh; Marco from urbe.eth; Caolán Walsh from ETH Dublin; Alex Males from ETHCluj; and Stanko Devic from ETH Slovenia.
 
-## Resources {#resources}
+## Recursos {#resources}
 
 Podcast: How to organize and promote an ETH event from A-Z:
 
