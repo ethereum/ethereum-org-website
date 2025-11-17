@@ -213,3 +213,24 @@ export type BranchDetailsResponse = {
   url: string
   object: BranchObject
 }
+
+export type CrowdinAddFileResponse = {
+  id: number
+  projectId: number
+  branchId: number | null
+  directoryId: number | null
+  name: string
+  title: string | null
+  context: string | null
+  type: string
+  path: string
+  status: string
+  revisionId: number
+  priority: string
+  importOptions: Record<string, unknown> | null
+  exportOptions: Record<string, unknown> | null
+  excludedTargetLanguages: string[] | null
+  parserVersion: number | null
+  createdAt: string | null
+  updatedAt: string | null
+}

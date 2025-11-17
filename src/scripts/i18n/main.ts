@@ -7,6 +7,7 @@ import type {
   BranchObject,
   BuildProjectFileTranslationResponse,
   ContentType,
+  CrowdinAddFileResponse,
   CrowdinFileData,
   CrowdinFileInfoResponseModel,
   CrowdinPreTranslateResponse,
@@ -33,16 +34,28 @@ const crowdinToInternalCodeMapping: Record<string, string> = i18nConfig.reduce(
 // )
 
 const gitHubApiKey = process.env.I18N_GITHUB_API_KEY || ""
-if (!gitHubApiKey)
+if (!gitHubApiKey) {
+  console.error("[ERROR] Missing I18N_GITHUB_API_KEY environment variable")
+  console.error(
+    "[ERROR] Please set I18N_GITHUB_API_KEY in your .env.local file"
+  )
   throw new Error("No GitHub API Key found (I18N_GITHUB_API_KEY)")
+}
+console.log("[DEBUG] GitHub API key found ✓")
 const gitHubBearerHeaders = {
   Authorization: `Bearer ${gitHubApiKey}`,
   Accept: "application/vnd.github.v3+json",
 }
 
 const crowdinApiKey = process.env.I18N_CROWDIN_API_KEY || ""
-if (!crowdinApiKey)
+if (!crowdinApiKey) {
+  console.error("[ERROR] Missing I18N_CROWDIN_API_KEY environment variable")
+  console.error(
+    "[ERROR] Please set I18N_CROWDIN_API_KEY in your .env.local file"
+  )
   throw new Error("No Crowdin API Key found (I18N_CROWDIN_API_KEY)")
+}
+console.log("[DEBUG] Crowdin API key found ✓")
 const crowdinBearerHeaders = { Authorization: `Bearer ${crowdinApiKey}` }
 
 const env = {
@@ -54,6 +67,72 @@ const env = {
   preTranslatePromptId: 168584,
   allCrowdinCodes: ["es-EM"], // i18nConfig.map((item) => item.crowdinCode),
   baseBranch: "i18n-flow-1", // "dev",
+}
+
+// --- Utilities: resilient fetch for GitHub calls ---
+const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
+
+type RetryOptions = {
+  retries?: number
+  timeoutMs?: number
+  backoffMs?: number
+  retryOnStatuses?: number[]
+}
+
+const fetchWithRetry = async (
+  url: string,
+  init?: RequestInit,
+  options?: RetryOptions
+) => {
+  const retries = options?.retries ?? 3
+  const timeoutMs = options?.timeoutMs ?? 30000
+  const backoffMs = options?.backoffMs ?? 1000
+  const retryOnStatuses = options?.retryOnStatuses ?? [
+    408, 429, 500, 502, 503, 504,
+  ]
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const controller = new AbortController()
+    const id = setTimeout(() => controller.abort(), timeoutMs)
+    try {
+      const res = await fetch(url, {
+        ...(init || {}),
+        signal: controller.signal,
+      })
+      clearTimeout(id)
+      if (
+        !res.ok &&
+        retryOnStatuses.includes(res.status) &&
+        attempt < retries
+      ) {
+        const wait = backoffMs * Math.pow(2, attempt)
+        console.warn(
+          `[RETRY] ${url} -> ${res.status}. Attempt ${attempt + 1}/${retries}. Waiting ${wait}ms.`
+        )
+        await delay(wait)
+        continue
+      }
+      return res
+    } catch (err: unknown) {
+      clearTimeout(id)
+      const errObj = err as { name?: string; code?: string }
+      const isAbort = errObj?.name === "AbortError"
+      const isConnectTimeout = errObj?.code === "UND_ERR_CONNECT_TIMEOUT"
+      if ((isAbort || isConnectTimeout) && attempt < retries) {
+        const wait = backoffMs * Math.pow(2, attempt)
+        console.warn(
+          `[RETRY] ${url} -> ${isAbort ? "AbortError" : errObj?.code}. Attempt ${
+            attempt + 1
+          }/${retries}. Waiting ${wait}ms.`
+        )
+        await delay(wait)
+        continue
+      }
+      throw err
+    }
+  }
+  // Unreachable, but TS wants a return
+  throw new Error("fetchWithRetry: exhausted retries")
 }
 
 /**
@@ -70,21 +149,29 @@ const getAllEnglishFiles = async (
   url.searchParams.set("per_page", perPage.toString())
   url.searchParams.set("page", "1")
 
+  console.log(`[DEBUG] GitHub search query: ${query}`)
+  console.log(`[DEBUG] GitHub search URL: ${url.toString()}`)
+
   try {
-    const res = await fetch(url.toString(), { headers: gitHubBearerHeaders })
+    const res = await fetchWithRetry(url.toString(), {
+      headers: gitHubBearerHeaders,
+    })
 
     if (!res.ok) {
-      console.warn("Res not OK")
+      console.warn(`[ERROR] GitHub API response not OK: ${res.status}`)
       const body = await res.text().catch(() => "")
+      console.error(`[ERROR] Response body:`, body)
       throw new Error(`GitHub getAllEnglishFiles (${res.status}): ${body}`)
     }
 
     type JsonResponse = { items: GitHubQueryResponseItem[] }
     const json: JsonResponse = await res.json()
 
+    console.log(`[DEBUG] Found ${json.items.length} files from GitHub`)
+    console.log(`[DEBUG] First GitHub file:`, json.items[0])
     return json.items
   } catch (error) {
-    console.error(error)
+    console.error(`[ERROR] Failed to get English files from GitHub:`, error)
     process.exit(1)
   }
 }
@@ -124,12 +211,15 @@ const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
   )
   url.searchParams.set("limit", "500")
 
+  console.log(`[DEBUG] Fetching Crowdin project files from: ${url.toString()}`)
+
   try {
     const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
 
     if (!res.ok) {
-      console.warn("Res not OK")
+      console.warn(`[ERROR] Crowdin API response not OK: ${res.status}`)
       const body = await res.text().catch(() => "")
+      console.error(`[ERROR] Response body:`, body)
       throw new Error(
         `Crowdin getCrowdinProjectFiles failed (${res.status}): ${body}`
       )
@@ -140,10 +230,13 @@ const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
 
     const mappedData = json.data.map(({ data }) => data)
 
-    console.log("Example:", mappedData[0])
+    console.log(
+      `[DEBUG] Successfully fetched ${mappedData.length} Crowdin files`
+    )
+    console.log(`[DEBUG] First Crowdin file:`, mappedData[0])
     return mappedData
   } catch (error) {
-    console.error(error)
+    console.error(`[ERROR] Failed to fetch Crowdin project files:`, error)
     process.exit(1)
   }
 }
@@ -152,14 +245,41 @@ const findCrowdinFile = (
   targetFile: GitHubCrowdinFileMetadata,
   crowdinFiles: CrowdinFileData[]
 ): CrowdinFileData => {
+  console.log(
+    `[DEBUG] Looking for Crowdin file matching: ${targetFile.filePath}`
+  )
+  console.log(`[DEBUG] Target file name: ${targetFile["Crowdin-API-FileName"]}`)
+
+  // Log first few Crowdin files for comparison
+  console.log(`[DEBUG] Total Crowdin files found: ${crowdinFiles.length}`)
+  console.log(
+    `[DEBUG] First 3 Crowdin file paths:`,
+    crowdinFiles.slice(0, 3).map((f) => f.path)
+  )
+
   const found = crowdinFiles.find(({ path }) =>
     path.endsWith(targetFile.filePath)
   )
 
-  if (!found) throw new Error("No matching Crowdin project file found")
+  if (!found) {
+    console.error(
+      `[ERROR] No matching Crowdin project file found for: ${targetFile.filePath}`
+    )
+    console.error(
+      `[ERROR] Available Crowdin file paths:`,
+      crowdinFiles.map((f) => f.path)
+    )
+    throw new Error(
+      `No matching Crowdin project file found for: ${targetFile.filePath}`
+    )
+  }
 
+  console.log(
+    `[DEBUG] Successfully matched with Crowdin file: ${found.path} (ID: ${found.id})`
+  )
   return found
 }
+
 const putCrowdinFile = async (
   fileId: number,
   storageId: number
@@ -186,6 +306,192 @@ const putCrowdinFile = async (
     }
 
     type JsonResponse = { data: CrowdinFileInfoResponseModel }
+    const json: JsonResponse = await res.json()
+    console.log("Updated file:", json.data)
+    return json.data
+  } catch (error) {
+    console.error(error)
+    process.exit(1)
+  }
+}
+
+/**
+ * Lists all Crowdin directories in the project.
+ */
+const getCrowdinProjectDirectories = async (): Promise<
+  { id: number; name: string; directoryId?: number }[]
+> => {
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/projects/${env.projectId}/directories`
+  )
+  url.searchParams.set("limit", "500")
+
+  console.log(`[DEBUG] Fetching Crowdin directories: ${url.toString()}`)
+
+  try {
+    const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
+    if (!res.ok) {
+      const body = await res.text().catch(() => "")
+      throw new Error(
+        `Crowdin getCrowdinProjectDirectories failed (${res.status}): ${body}`
+      )
+    }
+    type DirJson = {
+      data: { data: { id: number; name: string; directoryId?: number } }[]
+    }
+    const json: DirJson = await res.json()
+    const dirs = json.data.map(({ data }) => data)
+    console.log(`[DEBUG] Loaded ${dirs.length} directories`)
+    return dirs
+  } catch (error) {
+    console.error("[ERROR] getCrowdinProjectDirectories:", error)
+    throw error
+  }
+}
+
+/**
+ * Creates a single Crowdin directory (one segment). Parent may be undefined for root.
+ */
+const postCrowdinDirectory = async (
+  name: string,
+  parentDirectoryId?: number
+): Promise<number> => {
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/projects/${env.projectId}/directories`
+  )
+
+  const body: Record<string, unknown> = { name }
+  if (parentDirectoryId) body.directoryId = parentDirectoryId
+
+  console.log(
+    `[DEBUG] Creating directory segment "${name}" parent=${parentDirectoryId ?? "ROOT"}`
+  )
+
+  try {
+    const res = await fetch(url.toString(), {
+      method: "POST",
+      headers: {
+        ...crowdinBearerHeaders,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(body),
+    })
+
+    if (!res.ok) {
+      const text = await res.text().catch(() => "")
+      // 409 = already exists race condition
+      throw new Error(
+        `Crowdin postCrowdinDirectory failed (${res.status}): ${text}`
+      )
+    }
+
+    type JsonResponse = { data: { id: number } }
+    const json: JsonResponse = await res.json()
+    console.log(`[DEBUG] Created directory id=${json.data.id} name="${name}"`)
+    return json.data.id
+  } catch (error) {
+    console.error("[ERROR] postCrowdinDirectory:", error)
+    throw error
+  }
+}
+
+/**
+ * Ensures a nested path of directories exists.
+ * Example path: "public/content/community/events/organizing"
+ * Returns the final (deepest) directory id.
+ *
+ * - Splits path on "/" ignoring empty segments.
+ * - Reuses existing segments (matched by name + parent).
+ * - Creates missing segments sequentially.
+ */
+const createCrowdinDirectory = async (fullPath: string): Promise<number> => {
+  if (!fullPath || typeof fullPath !== "string") {
+    throw new Error("createCrowdinDirectory: path must be a non-empty string")
+  }
+  console.log(`[DEBUG] Ensuring Crowdin directory path: "${fullPath}"`)
+
+  const segments = fullPath
+    .split("/")
+    .map((s) => s.trim())
+    .filter(Boolean)
+  if (!segments.length) throw new Error("No valid path segments")
+
+  const invalidChars = /[\\:*?"<>|]/ // Disallowed per Crowdin docs for directory name (exclude forward slash which is path separator)
+  for (const segment of segments) {
+    if (invalidChars.test(segment)) {
+      throw new Error(
+        `createCrowdinDirectory: segment "${segment}" contains invalid characters in path "${fullPath}"`
+      )
+    }
+  }
+
+  // Load existing directories once
+  const existing = await getCrowdinProjectDirectories()
+
+  // Build quick lookup: parentId|name -> id (root parentId = 0 sentinel)
+  const key = (parentId: number | undefined, name: string) =>
+    `${parentId || 0}|${name}`
+
+  const directoryIndex = new Map<string, number>()
+  for (const dir of existing) {
+    directoryIndex.set(key(dir.directoryId, dir.name), dir.id)
+  }
+
+  let currentParentId: number | undefined
+  for (const segment of segments) {
+    const k = key(currentParentId, segment)
+    let dirId = directoryIndex.get(k)
+    if (dirId) {
+      console.log(
+        `[DEBUG] Reusing existing directory "${segment}" id=${dirId} parent=${currentParentId ?? "ROOT"}`
+      )
+      currentParentId = dirId
+      continue
+    }
+    // Create
+    dirId = await postCrowdinDirectory(segment, currentParentId)
+    directoryIndex.set(k, dirId)
+    currentParentId = dirId
+  }
+
+  if (!currentParentId)
+    throw new Error("Failed to resolve final directory id (unexpected)")
+
+  console.log(
+    `[DEBUG] Final directory id for path "${fullPath}" = ${currentParentId}`
+  )
+  return currentParentId
+}
+
+const postCrowdinFile = async (
+  storageId: number,
+  name: string,
+  dir: string
+): Promise<CrowdinAddFileResponse> => {
+  const directoryId = await createCrowdinDirectory(dir)
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/projects/${env.projectId}/files`
+  )
+
+  try {
+    const res = await fetch(url.toString(), {
+      method: "POST",
+      headers: {
+        ...crowdinBearerHeaders,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ storageId, name, directoryId }),
+    })
+
+    if (!res.ok) {
+      console.warn("Res not OK")
+      const body = await res.text().catch(() => "")
+      throw new Error(`Crowdin postCrowdinFile failed (${res.status}): ${body}`)
+    }
+
+    type JsonResponse = { data: CrowdinAddFileResponse }
     const json: JsonResponse = await res.json()
     console.log("Updated file:", json.data)
     return json.data
@@ -413,7 +719,9 @@ const postBuildProjectFileTranslation = async (
   if (!res.ok) {
     console.warn("Res not OK")
     const body = await res.text().catch(() => "")
-    throw new Error(`Crowdin putCrowdinFile failed (${res.status}): ${body}`)
+    throw new Error(
+      `Crowdin postBuildProjectFileTranslation failed (${res.status}): ${body}`
+    )
   }
 
   type JsonResponse = { data: BuildProjectFileTranslationResponse }
@@ -503,7 +811,9 @@ const getBranchObject = async (branch: string): Promise<BranchObject> => {
     `https://api.github.com/repos/${env.ghOrganization}/${env.ghRepo}/git/ref/heads/${branch}`
   )
 
-  const res = await fetch(url.toString(), { headers: gitHubBearerHeaders })
+  const res = await fetchWithRetry(url.toString(), {
+    headers: gitHubBearerHeaders,
+  })
 
   if (!res.ok) {
     console.warn("Res not OK")
@@ -574,7 +884,7 @@ const getDestinationFromPath = (
 /**
  * method: PUT
  */
-const putCreateBranchFrom = async (ref = env.baseBranch) => {
+const postCreateBranchFrom = async (ref = env.baseBranch) => {
   const { sha } = await getBranchObject(ref)
 
   const branch = createBranchName()
@@ -584,8 +894,11 @@ const putCreateBranchFrom = async (ref = env.baseBranch) => {
   )
 
   try {
-    const res = await fetch(url.toString(), {
-      method: "PUT",
+    console.log(
+      `[DEBUG] Creating branch from base="${ref}" sha=${sha} -> new branch="${branch}"`
+    )
+    const res = await fetchWithRetry(url.toString(), {
+      method: "POST",
       headers: {
         ...gitHubBearerHeaders,
         "Content-Type": "application/json",
@@ -596,6 +909,9 @@ const putCreateBranchFrom = async (ref = env.baseBranch) => {
     if (!res.ok) {
       console.warn("Res not OK")
       const body = await res.text().catch(() => "")
+      console.error(
+        `[ERROR] Failed to create branch. URL=${url.toString()} status=${res.status}`
+      )
       throw new Error(`GitHub createBranchFrom (${res.status}): ${body}`)
     }
 
@@ -606,12 +922,14 @@ const putCreateBranchFrom = async (ref = env.baseBranch) => {
   }
 }
 
-const getPathSha = async (path: string) => {
+const getPathSha = async (path: string, branch: string) => {
   const url = new URL(
-    `https://api.github.com/repos/${env.ghOrganization}/${env.ghRepo}/contents/${path}?ref=${env.baseBranch}`
+    `https://api.github.com/repos/${env.ghOrganization}/${env.ghRepo}/contents/${path}?ref=${branch}`
   )
 
-  const res = await fetch(url.toString(), { headers: gitHubBearerHeaders })
+  const res = await fetchWithRetry(url.toString(), {
+    headers: gitHubBearerHeaders,
+  })
 
   if (!res.ok) {
     console.warn("Res not OK")
@@ -644,7 +962,7 @@ const putCommitFile = async (
 
     if (sha) body["sha"] = sha
 
-    const res = await fetch(url.toString(), {
+    const res = await fetchWithRetry(url.toString(), {
       method: "PUT",
       headers: {
         ...gitHubBearerHeaders,
@@ -654,8 +972,9 @@ const putCommitFile = async (
     })
 
     if (res.status === 422) {
-      const { sha: fileSha } = await getPathSha(destinationPath)
-      putCommitFile(buffer, destinationPath, branch, fileSha)
+      const { sha: fileSha } = await getPathSha(destinationPath, branch)
+      // Retry as an update with the file SHA and return to avoid falling through
+      return await putCommitFile(buffer, destinationPath, branch, fileSha)
     }
 
     if (!res.ok) {
@@ -681,7 +1000,7 @@ const postPullRequest = async (head: string, base = env.baseBranch) => {
     body: "Automated Crowdin translation import",
   }
 
-  const res = await fetch(url.toString(), {
+  const res = await fetchWithRetry(url.toString(), {
     method: "POST",
     headers: {
       ...gitHubBearerHeaders,
@@ -701,28 +1020,82 @@ const postPullRequest = async (head: string, base = env.baseBranch) => {
   return json
 }
 
+// const test = async () => {
+//         const fileBuffer = await downloadGitHubFile(file.download_url)
+//         const storageInfo = await postFileToStorage(
+//           fileBuffer,
+//           file["Crowdin-API-FileName"]
+//         )
+
+//         await putCrowdinFile(foundFile.id, storageInfo.id)
+//         // fileBuffer goes out of scope here and can be garbage collected
+//       }
+
 async function main(options?: { allLangs: boolean }) {
+  console.log(`[DEBUG] Starting main function with options:`, options)
+  console.log(`[DEBUG] Environment config:`, {
+    projectId: env.projectId,
+    baseBranch: env.baseBranch,
+    jsonRoot: env.jsonRoot,
+    mdRoot: env.mdRoot,
+    allCrowdinCodes: env.allCrowdinCodes,
+  })
+
   const allEnglishFiles = await getAllEnglishFiles(4)
+  console.log(
+    `[DEBUG] Found ${allEnglishFiles.length} English files from GitHub`
+  )
+
   // TODO: Add filter here to select specific files
   const fileMetadata = await getFileMetadata(allEnglishFiles)
+  console.log(`[DEBUG] Generated metadata for ${fileMetadata.length} files`)
+  console.log(`[DEBUG] First file metadata:`, fileMetadata[0])
+
   const crowdinProjectFiles = await getCrowdinProjectFiles() // ***
+  console.log(
+    `[DEBUG] Found ${crowdinProjectFiles.length} files in Crowdin project`
+  )
 
   /**
    * Iterate through each file and upload
    */
   const fileIdsSet = new Set<number>()
   for (const file of fileMetadata) {
-    const foundFile = findCrowdinFile(file, crowdinProjectFiles)
-    fileIdsSet.add(foundFile.id)
-
+    console.log(`[DEBUG] Processing file: ${file.filePath}`)
     await (async () => {
+      let foundFile: CrowdinFileData | undefined
+      try {
+        foundFile = findCrowdinFile(file, crowdinProjectFiles)
+      } catch {
+        console.log("File not found in Crowdin, attempting to add new file")
+      }
       const fileBuffer = await downloadGitHubFile(file.download_url)
       const storageInfo = await postFileToStorage(
         fileBuffer,
         file["Crowdin-API-FileName"]
       )
-
-      await putCrowdinFile(foundFile.id, storageInfo.id)
+      let crowdinFileResponse: CrowdinAddFileResponse | undefined
+      if (foundFile) {
+        await putCrowdinFile(foundFile.id, storageInfo.id)
+      } else {
+        // Derive full parent directory path (exclude filename)
+        const parts = file.filePath.split("/").filter(Boolean)
+        parts.pop() // remove filename
+        const parentDirPath = parts.join("/") || "/"
+        console.log(
+          `[DEBUG] Attempting to create new Crowdin file in parent directory path: ${parentDirPath}`
+        )
+        crowdinFileResponse = await postCrowdinFile(
+          storageInfo.id,
+          file["Crowdin-API-FileName"],
+          parentDirPath
+        )
+      }
+      if (!foundFile && !crowdinFileResponse)
+        throw new Error("No file found AND unable to add new file")
+      fileIdsSet.add(
+        foundFile?.id || (crowdinFileResponse as CrowdinAddFileResponse).id
+      )
       // fileBuffer goes out of scope here and can be garbage collected
     })()
   }
@@ -758,25 +1131,27 @@ async function main(options?: { allLangs: boolean }) {
     },
     {} as Record<number, string>
   )
-  const internalLanguageCodes = languageIds.map(
-    (crowdinCode) => crowdinToInternalCodeMapping[crowdinCode]
-  )
+  // Build mapping between Crowdin IDs (e.g. "es-EM") and internal codes (e.g. "es")
+  const languagePairs = languageIds.map((crowdinId) => ({
+    crowdinId,
+    internalLanguageCode: crowdinToInternalCodeMapping[crowdinId],
+  }))
   // const detailsForCommits = internalLanguageCodes.map((internalLanguageCode) =>
   //   createCommitDetails(crowdinFilePaths, internalLanguageCode)
   // )
 
-  const { branch } = await putCreateBranchFrom(env.baseBranch)
+  const { branch } = await postCreateBranchFrom(env.baseBranch)
 
   // Create branch from dev
 
   // For each language
-  for (const languageCode of internalLanguageCodes) {
+  for (const { crowdinId, internalLanguageCode } of languagePairs) {
     // Build, download and commit each file updated
     for (const fileId of fileIds) {
       // 1- Build
       const { url: downloadUrl } = await postBuildProjectFileTranslation(
         fileId,
-        languageCode,
+        crowdinId, // Crowdin expects the Crowdin language ID here (e.g., "es-EM")
         env.projectId
       )
       // 2- Download
@@ -784,7 +1159,7 @@ async function main(options?: { allLangs: boolean }) {
       // 3a- Get destination path
       const destinationPath = getDestinationFromPath(
         fileIdToPathMapping[fileId],
-        languageCode
+        internalLanguageCode // Use internal code (e.g., "es") for repo path replacement
       )
       // 3b- Commit
       putCommitFile(buffer, destinationPath, branch)
