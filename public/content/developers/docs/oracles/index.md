@@ -1,88 +1,88 @@
 ---
 title: Oracles
-description: Oracles provide Ethereum smart contracts with access to real-world data, unlocking more use-cases and greater value for users.
-lang: en
+description: Los oráculos proporcionan a los contratos inteligentes de Ethereum acceso a los datos del mundo real para aprovechar más casos de uso y otorgar mayor valor a los usuarios.
+lang: es
 ---
 
-Oracles are applications that produce data feeds that make offchain data sources available to the blockchain for smart contracts. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
+Los oráculos son aplicaciones que producen fuentes de datos que ponen a disposición de la cadena de bloques fuentes de datos externas a la cadena para su uso en contratos inteligentes. Se necesitan, ya que los contratos inteligentes basados en Ethereum no pueden, por defecto, acceder a información almacenada fuera de la red de cadena de bloques.
 
-Giving smart contracts the ability to execute using offchain data extends the utility and value of decentralized applications. For instance, onchain prediction markets rely on oracles to provide information about outcomes that they use to validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
+Dar a los contratos inteligentes la capacidad de ejecutarse utilizando datos offchain consigue extiender la utilidad y el valor de las aplicaciones descentralizadas. Por ejemplo, los mercados de predicción en la cadena dependen de oráculos para proporcionar información sobre los resultados que utilizan para validar las predicciones de los usuarios. Supongamos que Alice apuesta 20 ETH sobre quién será el próximo presidente de EE.UU. En ese caso, la dapp del mercado de predicciones necesita un oráculo para confirmar los resultados de las elecciones y determinar si Alice puede recibir el pago.
 
-## Prerequisites {#prerequisites}
+## Requisitos previos {#prerequisites}
 
-This page assumes the reader is familiar with Ethereum fundamentals, including [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and the [EVM](/developers/docs/evm/). You should also have a good grasp of [smart contracts](/developers/docs/smart-contracts/) and [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), especially [events](/glossary/#events).
+Esta página asume que el lector está familiarizado con los fundamentos de Ethereum, incluidos los [nodos](/developers/docs/nodes-and-clients/), [mecanismos de consenso](/developers/docs/consensus-mechanisms/) y la [EVM](/developers/docs/evm/). También debe tener un buen entendimiento de los [smart contracts](/developers/docs/smart-contracts/) y de la [anatomía de los smart contracts](/developers/docs/smart-contracts/anatomy/), especialmente de los [eventos](/glossary/#events).
 
-## What is a blockchain oracle? {#what-is-a-blockchain-oracle}
+## ¿Qué es un oráculo de la cadena de bloques? {#what-is-a-blockchain-oracle}
 
-Oracles are applications that source, verify, and transmit external information (i.e., information stored offchain) to smart contracts running on the blockchain. Besides “pulling” offchain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
+Los oráculos son aplicaciones que obtienen, verifican y transmiten información externa (es decir, información almacenada fuera de la cadena) a los smart contracts que se ejecutan en la blockchain. Además de "obtener" datos offchain y transmitirlos en Ethereum, los oráculos también pueden "enviar" información desde la blockchain a sistemas externos, por ejemplo, desbloqueando una cerradura inteligente una vez que el usuario envíe una tarifa a través de una transacción de Ethereum.
 
-Without an oracle, a smart contract would be limited entirely to onchain data.
+Sin un oráculo, un contrato inteligente estaría limitado completamente a los datos en la cadena.
 
-Oracles differ based on the source of data (one or multiple sources), trust models (centralized or decentralized), and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles based on whether they retrieve external data for use by onchain contracts (input oracles), send information from the blockchain to the offchain applications (output oracles), or perform computational tasks offchain (computational oracles).
+Los oráculos difieren en función de la fuente de datos (una o varias fuentes), los modelos de confianza (centralizados o descentralizados) y la arquitectura del sistema (inmediato-lectura, publicación-suscripción y solicitud-respuesta). También podemos distinguir entre oráculos según si recuperan datos externos para ser utilizados por contratos en la cadena (oráculos de entrada), envían información desde la blockchain a aplicaciones offchain (oráculos de salida), o realizan tareas computacionales fuera de la cadena (oráculos computacionales).
 
-## Why do smart contracts need oracles? {#why-do-smart-contracts-need-oracles}
+## ¿Por qué los contratos inteligentes necesitan oráculos? {#why-do-smart-contracts-need-oracles}
 
-Many developers see smart contracts as code running at specific addresses on the blockchain. However, a more [general view of smart contracts](/smart-contracts/) is that they are self-executing software programs capable of enforcing agreements between parties once specific conditions are met - hence the term “smart contracts.”
+Muchos desarrolladores ven a los contratos inteligentes como código ejecutándose en direcciones específicas en la cadena de bloques. Sin embargo, una [visión más general de los smart contracts](/smart-contracts/) es que son programas de software autoejecutables capaces de hacer cumplir acuerdos entre partes una vez que se cumplen condiciones específicas; de ahí el término "smart contracts".
 
-But using smart contracts to enforce agreements between people isn't straightforward, given that Ethereum is deterministic. A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input, meaning there is no randomness or variation in the process of computing outputs from inputs.
+Pero usar contratos inteligentes para hacer cumplir acuerdos entre personas no es fácil, dado que Ethereum es determinista. Un [sistema determinista](https://en.wikipedia.org/wiki/Deterministic_algorithm) es aquel que siempre produce los mismos resultados dado un estado inicial y una entrada particular, lo que significa que no hay aleatoriedad ni variación en el proceso de cálculo de salidas a partir de entradas.
 
-To achieve deterministic execution, blockchains limit nodes to reaching consensus on simple binary (true/false) questions using _only_ data stored on the blockchain itself. Examples of such questions include:
+Para lograr la ejecución determinista, las blockchains limitan a los nodos a llegar a consenso únicamente sobre preguntas binarias (verdadero/falso) usando _solo_ datos almacenados en la propia blockchain. Ejemplos de estas preguntas incluyen:
 
-- “Did the account owner (identified by a public key) sign this transaction with the paired private key?”
-- “Does this account have enough funds to cover the transaction?”
-- “Is this transaction valid in the context of this smart contract?”, etc.
+- “¿Firmó el propietario de la cuenta (identificado por una clave pública) esta transacción con la clave privada emparejada?”
+- “¿Esta cuenta tiene fondos suficientes para cubrir la transacción?”
+- “¿Es esta transacción válida en el contexto de este contrato inteligente?”, etc.
 
-If blockchains received information from external sources (i.e., from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely to change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
+Si las blockchains recibieran información de fuentes externas (es decir, del mundo real), sería imposible lograr el determinismo, impidiendo que los nodos acuerden la validez de los cambios en el estado de la blockchain. Tomemos por ejemplo un contrato inteligente que ejecuta una transacción basada en el tipo de cambio actual ETH-USD obtenido de una API de precios tradicional. Es probable que esta figura cambie con frecuencia (por no mencionar que la API puede quedar obsoleta o hackeada), significando que los nodos ejecutando el mismo código de contrato pueden llegar a resultados diferentes.
 
-For a public blockchain like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, nodes need mechanisms for arriving at the same state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform.
+Para una cadena de bloques pública como Ethereum, con miles de nodos alrededor del mundo procesando transacciones, el determinismo es crítico. Sin una autoridad central funcionando como una fuente de la verdad, los nodos necesitan mecanismos para llegar al mismo estado luego de aplicar las mismas transacciones. Un caso en el que el nodo A ejecuta el código de un contrato inteligente y obtiene "3" como resultado, mientras que el nodo B obtiene "7" después de ejecutar la misma transacción causaría que el consenso se rompa y eliminaría el valor de Ethereum como plataforma de computación descentralizada.
 
-This scenario also highlights the problem with designing blockchains to pull information from external sources. Oracles, however, solve this problem by taking information from offchain sources and storing it on the blockchain for smart contracts to consume. Since information stored onchain is unalterable and publicly available, Ethereum nodes can safely use the oracle imported offchain data to compute state changes without breaking consensus.
+Esta situación también pone de relevancia un problema con el diseño de cadenas de bloques para extraer información de fuentes externas. Los oráculos, sin embargo, resuelven este problema tomando información de fuentes offchain y almacenándola en la blockchain para que los contratos inteligentes la consuman. Dado que la información almacenada en la cadena es inalterable y se encuentra disponible de forma pública, los nodos de Ethereum pueden usar de manera segura los datos importados desde oráculos offchain para calcular cambios de estado sin romper el consenso.
 
-To do this, an oracle is typically made up of a smart contract running onchain and some offchain components. The onchain contract receives requests for data from other smart contracts, which it passes to the offchain component (called an oracle node). This oracle node can query data sources—using application programming interfaces (APIs), for example—and send transactions to store the requested data in the smart contract's storage.
+Para conseguilo, un oráculo generalmente está compuesto por un contrato inteligente que se ejecuta en la cadena y algunos componentes offchain. El contrato en la cadena recibe solicitudes de datos de otros contratos inteligentes, que luego pasa al componente offchain (llamado nodo oráculo). Este nodo de oráculo puede consultar fuentes de datos (usando interfaces de programación de aplicaciones, por ejemplo) y enviar transacciones para almacenar los datos solicitados en el almacenamiento del contrato inteligente.
 
-Essentially, a blockchain oracle bridges the information gap between the blockchain and the external environment, creating “hybrid smart contracts”. A hybrid smart contract is one that functions based on a combination of onchain contract code and offchain infrastructure. Decentralized prediction markets are an excellent example of hybrid smart contracts. Other examples might include crop insurance smart contracts that pay out when a set of oracles determine that certain weather phenomena have taken place.
+Esencialmente, un oráculo de cadena de bloques es un puente entre la brecha de información entre la cadena de bloques y el entorno externo, lo que crea “contratos inteligentes híbridos”. Un contrato inteligente híbrido es aquel que funciona basado en una combinación de código de contrato en la cadena e infraestructura offchain. Los mercados de predicción descentralizados son un excelente ejemplo de contratos inteligentes híbridos. Otros ejemplos podrían ser los contratos inteligentes de seguros de cosechas que pagan cuando un conjunto de oráculos determinan que se han producido ciertas condiciones meteorológicas.
 
-## What is the oracle problem? {#the-oracle-problem}
+## ¿Cuál es el problema de los oráculos? {#the-oracle-problem}
 
-Oracles solve an important problem, but also introduce some complications, e.g.,:
+Los oráculos resuelven un problema importante, pero también introducen algunas complicaciones, por ejemplo:
 
-- How do we verify that the injected information was extracted from the correct source or hasn’t been tampered with?
+- ¿Cómo verificamos si la información inyectada se extrajo de la fuente correcta o si fue manipulada?
 
-- How do we ensure that this data is always available and updated regularly?
+- ¿Cómo garantizamos que estos datos estén siempre disponibles y se actualicen regularmente?
 
-The so-called “oracle problem” demonstrates the issues that come with using blockchain oracles to send inputs to smart contracts. Data from an oracle must be correct for a smart contract to execute correctly. Further, having to ‘trust’ oracle operators to provide accurate information undermines the 'trustless' aspect of smart contracts.
+El llamado "problema de los oráculos" demuestra los problemas que conlleva el uso de oráculos de cadenas de bloques para enviar entradas a contratos inteligentes. Los datos de un oráculo deben ser correctos para que un contrato inteligente se ejecute correctamente. Además, el tener que «confiar» en que los operadores de oráculos proporcionen información precisa socava la «falta de confianza» de los contratos inteligentes.
 
-Different oracles offer different solutions to the oracle problem, which we explore later. Oracles are typically evaluated on how well they can handle the following challenges:
+Diferentes oráculos ofrecen diferentes soluciones al problema del oráculo, que exploraremos más adelante. Los oráculos suelen ser evaluados sobre lo bien que manejan los siguientes desafíos:
 
-1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid offchain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e., wasn’t altered) before being sent onchain.
+1. **Corrección**: Un oráculo no debe hacer que los smart contracts desencadenen cambios de estado basándose en datos offchain inválidos. Un oráculo debe garantizar la _autenticidad_ y la _integridad_ de los datos. Autenticidad significa que los datos se obtuvieron de la fuente correcta, mientras que integridad indica que los datos se mantuvieron intactos (es decir, no fueron alterados) antes de ser enviados onchain.
 
-2. **Availability**: An oracle should not delay or prevent smart contracts from executing actions and triggering state changes. This means that data from an oracle must be _available on request_ without interruption.
+2. **Disponibilidad**: Un oráculo no debe retrasar o impedir que los smart contracts ejecuten acciones y desencadenen cambios de estado. Esto significa que los datos provenientes de un oráculo deben estar _disponibles bajo demanda_ sin interrupción.
 
-3. **Incentive compatibility**: An oracle should incentivize offchain data providers to submit correct information to smart contracts. Incentive compatibility involves _attributability_ and _accountability_. Attributability allows for linking a piece of external information to its provider, while accountability bonds data providers to the information they give, so they can be rewarded or penalized based on the quality of information provided.
+3. **Compatibilidad de incentivos**: Un oráculo debe incentivar a los proveedores de datos offchain a enviar información correcta a los smart contracts. La compatibilidad de incentivos implica _atribuibilidad_ y _responsabilidad_. La atribuibilidad permite vincular una información externa a su proveedor, mientras que la rendición de cuentas vincula a los proveedores de datos con la información que proporcionan, para que puedan ser recompensados o penalizados en función de la calidad de la información proporcionada.
 
-## How does a blockchain oracle service work? {#how-does-a-blockchain-oracle-service-work}
+## ¿Cómo funciona un servicio de oráculo de cadena de bloques? {#how-does-a-blockchain-oracle-service-work}
 
-### Users {#users}
+### Usuarios {#users}
 
-Users are entities (i.e., smart contracts) that need information external to the blockchain to complete specific actions. The basic workflow of an oracle service starts with the user sending a data request to the oracle contract. Data requests will usually answer some or all of the following questions:
+Los usuarios son entidades (es decir, contratos inteligentes) que necesitan información externa a la cadena de bloques para completar acciones específicas. El flujo de trabajo básico de un servicio de oráculo comienza con un usuario que envía una solicitud de datos al contrato del oráculo. Las solicitudes de datos generalmente responderán algunas o todas las siguientes preguntas:
 
-1. What sources can offchain nodes consult for the requested information?
+1. ¿Qué fuentes pueden consultar los nodos offchain para obtener la información solicitada?
 
-2. How do reporters process information from data sources and extract useful data points?
+2. ¿Cómo procesan los informantes la información de fuentes de datos y extraen puntos de datos útiles?
 
-3. How many oracle nodes can participate in retrieving the data?
+3. ¿Cuántos nodos de oráculos pueden participar en la recuperación de los datos?
 
-4. How should discrepancies in oracle reports be managed?
+4. ¿Cómo deben manejarse las discrepancias en los informes de oráculos?
 
-5. What method should be implemented in filtering submissions and aggregating reports into a single value?
+5. ¿Qué método se debe aplicar para filtrar las presentaciones y agregar o resumir los informes en un único valor?
 
-### Oracle contract {#oracle-contract}
+### Contrato de oráculo {#oracle-contract}
 
-The oracle contract is the onchain component for the oracle service. It listens for data requests from other contracts, relays data queries to oracle nodes, and broadcasts returned data to client contracts. This contract may also perform some computation on the returned data points to produce an aggregate value to send to the requesting contract.
+El contrato del oráculo es el componente de la cadena de bloques para este servicio. Escucha las solicitudes de datos de otros contratos, retransmite las consultas de datos a los nodos del oráculo y transmite los datos devueltos a los contratos de los clientes. Este contrato también puede realizar algunos cálculos en los puntos de datos devueltos para producir un valor añadido que enviar al contrato solicitante.
 
-The oracle contract exposes some functions which client contracts call when making a data request. Upon receiving a new query, the smart contract will emit a [log event](/developers/docs/smart-contracts/anatomy/#events-and-logs) with details of the data request. This notifies offchain nodes subscribed to the log (usually using something like the JSON-RPC `eth_subscribe` command), who proceed to retrieve data defined in the log event.
+El contrato de oráculo expone algunas funciones que los contratos de cliente invocan al realizar una solicitud de datos. Al recibir una nueva consulta, el smart contract emitirá un [evento de registro](/developers/docs/smart-contracts/anatomy/#events-and-logs) con los detalles de la solicitud de datos. Esto notifica a los nodos fuera de la cadena que están suscritos al registro (generalmente utilizando algo como el comando JSON-RPC `eth_subscribe`), quienes proceden a recuperar los datos definidos en el evento de registro.
 
-Below is an [example oracle contract](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) by Pedro Costa. This is a simple oracle service that can query offchain APIs upon request by other smart contracts and store the requested information on the blockchain:
+A continuación se muestra un [ejemplo de contrato oráculo](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) de Pedro Costa. Este es un servicio de oráculo simple que puede consultar APIs offchain a petición de otros contratos inteligentes y almacenar la información solicitada en la blockchain:
 
 ```solidity
 pragma solidity >=0.4.21 <0.6.0;
@@ -196,129 +196,129 @@ contract Oracle {
 }
 ```
 
-### Oracle nodes {#oracle-nodes}
+### Nodos de oráculo {#oracle-nodes}
 
-The oracle node is the offchain component of the oracle service. It extracts information from external sources, such as APIs hosted on third-party servers, and puts it onchain for consumption by smart contracts. Oracle nodes listen for events from the onchain oracle contract and proceed to complete the task described in the log.
+El nodo del oráculo es el componente offchain del servicio de oráculo. Extrae información de fuentes externas, como APIs alojadas en servidores de terceros, y la coloca en la cadena para su consumo por parte de contratos inteligentes. Los nodos del oráculo escuchan los eventos del contrato del oráculo en la cadena y proceden a completar la tarea descrita en el registro.
 
-A common task for oracle nodes is sending a [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) request to an API service, parsing the response to extract relevant data, formatting into a blockchain-readable output, and sending it onchain by including it in a transaction to the oracle contract. The oracle node may also be required to attest to the validity and integrity of submitted information using “authenticity proofs”, which we explore later.
+Una tarea común para los nodos oráculo es enviar una solicitud [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) a un servicio API, analizar la respuesta para extraer los datos relevantes, formatearla en una salida legible por la blockchain y enviarla onchain incluyéndola en una transacción al contrato oráculo. También se le podría solicitar al nodo de oráculo que certifique la validez e integridad de la información enviada utilizando “pruebas de autenticidad”, las cuales exploraremos más adelante.
 
-Computational oracles also rely on offchain nodes to perform computational tasks that would be impractical to execute onchain, given gas costs and block size limits. For example, the oracle node may be tasked with generating a verifiably random figure (e.g., for blockchain-based games).
+Los oráculos computacionales también dependen de nodos offchain para realizar tareas computacionales que serían poco prácticas de ejecutar en la cadena, debido a los costos de gas y los límites del tamaño de bloque. Por ejemplo, el nodo de oráculo podría tener la tarea de generar una figura verificablemente aleatoria (por ejemplo, para juegos basados en la cadena de bloques).
 
-## Oracle design patterns {#oracle-design-patterns}
+## Patrones de diseño de oráculos {#oracle-design-patterns}
 
-Oracles come in different types, including _immediate-read_, _publish-subscribe_, and _request-response_, with the latter two being the most popular among Ethereum smart contracts. Here we briefly describe the publish-subscribe and request-response models.
+Existen diferentes tipos de oráculos, entre ellos _lectura inmediata_, _publicación-suscripción_ y _petición-respuesta_, siendo estos dos últimos los más populares entre los smart contracts en Ethereum. Aquí describimos brevemente los modelos de publicación-suscripción y solicitud-respuesta.
 
-### Publish-subscribe oracles {#publish-subscribe-oracles}
+### Oráculos de publicación-suscripción {#publish-subscribe-oracles}
 
-This type of oracle exposes a “data feed” which other contracts can regularly read for information. The data in this case is expected to change frequently, so client contracts must listen for updates to the data in the oracle’s storage. An example is an oracle that provides the latest ETH-USD price information to users.
+Este tipo de oráculo expone una «fuente de datos» que otros contratos pueden leer regularmente para obtener información. En este caso se espera que los datos cambien frecuentemente, por lo que los contratos de los clientes deben estar atentos a las actualizaciones de los datos en el almacenamiento del oráculo. Un ejemplo es un oráculo que proporciona la última información de precios de ETH-USD a los usuarios.
 
-### Request-response oracles {#request-response-oracles}
+### Oráculos de petición-respuesta {#request-response-oracles}
 
-A request-response setup allows the client contract to request arbitrary data other than that provided by a publish-subscribe oracle. Request-response oracles are ideal when the dataset is too large to be stored in a smart contract’s storage, and/or users will only need a small part of the data at any point in time.
+Una configuración de solicitud-respuesta permite que el contrato del cliente solicite datos arbitrarios distintos de los proporcionados por un oráculo publicación-suscripción. Los oráculos de solicitud-respuesta son idóneos cuando el conjunto de datos es demasiado grande para almacenarse en el almacenamiento de un contrato inteligente, y/o los usuarios solo van a nacesitar una pequeña parte de los datos en cualquier momento.
 
-Although more complex than publish-subscribe models, request-response oracles are basically what we described in the previous section. The oracle will have an onchain component that receives a data request and passes it to an offchain node for processing.
+Aunque son más complejos que los modelos de publicación-suscripción, los oráculos del tipo solicitud-respuesta son basicamente lo que describimos en la sección anterior. El oráculo tendrá un componente en la cadena que recibe una solicitud de datos y la pasa a un nodo offchain para su procesamiento.
 
-Users initiating data queries must cover the cost of retrieving information from the offchain source. The client contract must also provide funds to cover gas costs incurred by the oracle contract in returning the response via the callback function specified in the request.
+Los usuarios que inicien consultas de datos deben cubrir el costo de recuperar la información de la fuente offchain. El contrato del cliente también debe de proporcionar fondos para cubrir los costos del gas incurridos por el contrato del oráculo para devolver la respuesta a través de la función callback especificada en la solicitud.
 
-## Centralized vs. decentralized oracles {#types-of-oracles}
+## Oráculos centralizados vs. descentralizados {#types-of-oracles}
 
-### Centralized oracles {#centralized-oracles}
+### Oráculos centralizados {#centralized-oracles}
 
-A centralized oracle is controlled by a single entity responsible for aggregating offchain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth. They may function better in cases where proprietary datasets are published directly by the owner with a widely accepted signature. However, they bring downsides as well:
+Un oráculo centralizado es controlado por una única entidad responsable de agregar la información offchain y actualizar los datos del contrato oráculo según se solicite. Los oráculos centralizados son eficientes, ya que se basan en una única fuente de verdad. Pueden funcionar mejor en los casos en que el propietario publica directamente los conjuntos de datos en propiedad con una firma ampliamente aceptada. Sin embargo, también tienen desventajas:
 
-#### Low correctness guarantees {#low-correctness-guarantees}
+#### Bajas garantías de corrección {#low-correctness-guarantees}
 
-With centralized oracles, there's no way to confirm if the information provided is correct or not. Even "reputable" providers can go rogue or get hacked. If the oracle becomes corrupt, smart contracts will execute based on bad data.
+Con los oráculos centralizados, no hay forma de confirmar si la información proporcionada es correcta o no. Incluso los proveedores «de buena reputación» pueden ser malos actores o verse pirateados. Si el oráculo se corrompe, los contratos inteligentes se ejecutarán en función de datos incorrectos.
 
-#### Poor availability {#poor-availability}
+#### Baja disponibilidad {#poor-availability}
 
-Centralized oracles aren't guaranteed to always make offchain data available to other smart contracts. If the provider decides to turn off the service or a hacker hijacks the oracle's offchain component, your smart contract is at risk of a denial of service (DoS) attack.
+Los oráculos centralizados no garantizan que los datos offchain siempre estén disponibles para otros contratos inteligentes. Si el proveedor decide apagar el servicio o un hacker secuestra el componente offchain del oráculo, tu contrato inteligente está en riesgo de un ataque de denegación de servicio (DoS).
 
-#### Poor incentive compatibility {#poor-incentive-compatibility}
+#### Baja compatibilidad de incentivos {#poor-incentive-compatibility}
 
-Centralized oracles often have poorly designed or non-existent incentives for the data provider to send accurate/unaltered information. Paying an oracle for correctness does not guarantee honesty. This problem gets bigger as the amount of value controlled by smart contracts increases.
+Los oráculos centralizados a menudo tienen incentivos mal diseñados o inexistentes para que el proveedor de datos envíe información precisa e inalterada. Pagar a un oráculo por información precisa o correcta no garantiza honestidad. Este problema aumenta a medida que se incrementa la cantidad de valor que controlan los contratos inteligentes.
 
-### Decentralized oracles {#decentralized-oracles}
+### Oráculos descentralizados {#decentralized-oracles}
 
-Decentralized oracles are designed to overcome the limitations of centralized oracles by eliminating single points of failure. A decentralized oracle service comprises multiple participants in a peer-to-peer network that form consensus on offchain data before sending it to a smart contract.
+Los oráculos descentralizados están diseñados para superar las limitaciones de los oráculos centralizados mediante la eliminación de puntos únicos de falla. Un servicio de oráculo descentralizado comprende múltiples participantes en una red peer-to-peer que alcanzan consenso sobre los datos offchain antes de enviarlos a un contrato inteligente.
 
-A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is on a spectrum. There are semi-decentralized oracle networks where anyone can participate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
+Un oráculo descentralizado debería (idealmente) no tener permiso, no necesitar confianza y estar libre de la administración de una parte central; en realidad, la descentralización entre los oráculos está en un espectro. Existen redes de oráculos semidescentralizadas en las que cualquiera puede participar, pero con un "propietario" que aprueba y elimina nodos en función del rendimiento histórico. Tambien existen redes de oráculos totalmente descentralizadas: por lo general, se ejecutan como cadenas de bloques independientes y tienen mecanismos de consenso definidos para coordinar nodos y castigar el mal comportamiento.
 
-Using decentralized oracles comes with the following benefits:
+El uso de oráculos descentralizados tiene los siguientes beneficios:
 
-### High correctness guarantees {#high-correctness-guarantees}
+### Altas garantías de corrección {#high-correctness-guarantees}
 
-Decentralized oracles attempt to achieve correctness of data using different approaches. This includes using proofs attesting to the authenticity and integrity of the returned information and requiring multiple entities to collectively agree on the validity of offchain data.
+Los oráculos descentralizados intentan lograr la corrección de los datos utilizando diferentes enfoques. Esto incluye el uso de pruebas que atestiguan la autenticidad e integridad de la información devuelta y requiere que múltiples entidades acuerden colectivamente la validez de los datos offchain.
 
-#### Authenticity proofs {#authenticity-proofs}
+#### Pruebas de autenticidad {#authenticity-proofs}
 
-Authenticity proofs are cryptographic mechanisms that enable independent verification of information retrieved from external sources. These proofs can validate the source of the information and detect possible alterations to the data after retrieval.
+Las pruebas de autenticidad son mecanismos criptográficos que permiten la verificación independiente de la información recuperada de fuentes externas. Estas pruebas pueden validar la fuente de la información y detectar posibles alteraciones en los datos despues de la recuperación.
 
-Examples of authenticity proofs include:
+Ejemplos de pruebas de autenticidad incluyen:
 
-**Transport Layer Security (TLS) proofs**: Oracle nodes often retrieve data from external sources using a secure HTTP connection based on the Transport Layer Security (TLS) protocol. Some decentralized oracles use authenticity proofs to verify TLS sessions (i.e., confirm the exchange of information between a node and a specific server) and confirm that the contents of the session were not altered.
+**Pruebas de Transport Layer Security (TLS)**: Los nodos oráculo suelen recuperar datos de fuentes externas utilizando una conexión HTTP segura basada en el protocolo Transport Layer Security (TLS). Algunos oráculos descentralizados utilizan pruebas de autenticidad para verificar las sesiones TLS (es decir, confirmar el intercambio de información entre un nodo y un servidor específico) y confirmar que el contenido de la sesión no se haya alterado.
 
-**Trusted Execution Environment (TEE) attestations**: A [trusted execution environment](https://en.wikipedia.org/wiki/Trusted_execution_environment) (TEE) is a sandboxed computational environment that is isolated from the operational processes of its host system. TEEs ensure that whatever application code or data stored/used in the computation environment retains integrity, confidentiality, and immutability. Users can also generate an attestation to prove an application instance is running within the trusted execution environment.
+**Atestaciones de Trusted Execution Environment (TEE)**: Un [entorno de ejecución confiable](https://en.wikipedia.org/wiki/Trusted_execution_environment) (TEE) es un entorno computacional aislado del resto de los procesos operativos del sistema anfitrión. Los TEE garantizan que cualquier código de aplicación o datos almacenados/utilizados en el entorno informático conserven la integridad, la confidencialidad y la inmutabilidad. Los usuarios tambien pueden generar una certificación para demostrar que una instancia de la aplicación se está corriendo dentro del entorno de ejecución de confianza.
 
-Certain classes of decentralized oracles require oracle node operators to provide TEE attestations. This confirms to a user that the node operator is running an instance of oracle client in a trusted execution environment. TEEs prevent external processes from altering or reading an application’s code and data, hence, those attestations prove that the oracle node has kept the information intact and confidential.
+Ciertas clases de oráculos descentralizados requieren que los operadores de nodos de oráculo proporcionen certificaciones de TEE. Esto le confirma a un usuario que el operador del nodo está ejecutando una instancia del oráculo del cliente en un entrono de ejecución confiable. Los TEE evitan que los procesos externos alteren o lean el código y los datos de una aplicación; por lo tanto, esas certificaciones prueban que el nodo del oráculo ha mantenido la información intacta y confidencial.
 
-#### Consensus-based validation of information {#consensus-based-validation-of-information}
+#### Validación de información basada en consenso {#consensus-based-validation-of-information}
 
-Centralized oracles rely on a single source of truth when providing data to smart contracts, which introduces the possibility of publishing inaccurate information. Decentralized oracles solve this problem by relying on multiple oracle nodes to query offchain information. By comparing data from multiple sources, decentralized oracles reduce the risk of passing invalid information to onchain contracts.
+Los oráculos centralizados se basan en una única fuente de verdad cuando proporcionan datos a contratos inteligentes, lo que introduce la posibilidad de publicar información inexacta. Los oráculos descentralizados resuelven este problema al depender de múltiples nodos de oráculo para consultar información offchain. Al comparar datos de múltiples fuentes, los oráculos descentralizados reducen el riesgo de transmitir información inválida a los contratos onchain.
 
-Decentralized oracles, however, must deal with discrepancies in information retrieved from multiple offchain sources. To minimize differences in information and ensure the data passed to the oracle contract reflects the collective opinion of oracle nodes, decentralized oracles use the following mechanisms:
+Los oráculos descentralizados, sin embargo, deben lidiar con discrepancias en la información obtenida de múltiples fuentes offchain. Para minimizar las diferencias en la información y garantizar que los datos pasados al contrato del oráculo reflejen la opinión coletiva de los nodos de oráculo, los oráculos descentralizados utilizan los siguientes mecanismos:
 
-##### Voting/staking on accuracy of data
+##### Votar/apostar por la precisión de los datos
 
-Some decentralized oracle networks require participants to vote or stake on the accuracy of answers to data queries (e.g., "Who won the 2020 US election?") using the network’s native token. An aggregation protocol then aggregates the votes and stakes and takes the answer supported by the majority as the valid one.
+Algunas redes de oráculos descentralizados requieren que los participantes voten o apuesten por la precisión de las respuestas a las consultas de datos (por ejemplo., "¿Quién ganó las elecciones estadounidenses de 2020?") utilizando el token nativo de la red. Luego, un protocolo de agregación agrega los votos, las apuestas y toma la respuesta apoyada por la mayoría como la válida.
 
-Nodes whose answers deviate from the majority answer are penalized by having their tokens distributed to others who provide more correct values. Forcing nodes to provide a bond before providing data incentivizes honest responses since they are assumed to be rational economic actors intent on maximizing returns.
+Los nodos cuyas respuestas se desvían de la respuesta mayoritaria son penalizados con la distribución de sus tokens a otros que proporcionen valores más correctos. Obligar a los nodos a proporcionar un vínculo antes de proporcionar datos incentiva las respuestas honestas, ya que se supone que son actores económicos racionales que intentan maximizar los rendimientos.
 
-Staking/voting also protects decentralized oracles from [Sybil attacks](/glossary/#sybil-attack) where malicious actors create multiple identities to game the consensus system. However, staking cannot prevent “freeloading” (oracle nodes copying information from others) and “lazy validation” (oracle nodes following the majority without verifying the information themselves).
+El staking/votación también protege a los oráculos descentralizados de los [ataques Sybil](/glossary/#sybil-attack), donde actores maliciosos crean múltiples identidades para manipular el sistema de consenso. Sin embargo, apostar no puede prevenir "la carga gratuita" (nodos de oráculos que copian datos de otros) y "la validación diferida" (o "lazy validation", nodos de oráculos que siguen a la mayoría sin verificar la información ellos mismos).
 
-##### Schelling point mechanisms
+##### Mecanismos de punto de Schelling
 
-[Schelling point](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) is a game-theory concept that assumes multiple entities will always default to a common solution to a problem in absence of any communication. Schelling-point mechanisms are often used in decentralized oracle networks to enable nodes reach consensus on answers to data requests.
+[Punto de Schelling](https://en.wikipedia.org/wiki/Focal_point_\(game_theory\)) es un concepto de teoría de juegos que asume que múltiples entidades siempre optarán por una solución común a un problema en ausencia de comunicación. Los mecanismos de punto de Shelling se utilizan a menudo en redes de oráculos descentralizados para permitir que los nodos lleguen a un consenso sobre las respuestas a las solicitudes de datos.
 
-An early idea for this was [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), a proposed data feed where participants submit responses to "scalar" questions (questions whose answers are described by magnitude, e.g., "what is the price of ETH?"), along with a deposit. Users who provide values between the 25th and 75th [percentile](https://en.wikipedia.org/wiki/Percentile) are rewarded, while those whose values deviate largely from the median value are penalized.
+Una idea temprana para esto fue [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), un feed de datos propuesto donde los participantes envían respuestas a preguntas "escalares" (preguntas cuyas respuestas se describen por magnitud, por ejemplo, "¿cuál es el precio de ETH?"), junto con un depósito. Los usuarios que proporcionan valores entre el 25 y el 75 [percentil](https://en.wikipedia.org/wiki/Percentile) son recompensados, mientras que aquellos cuyos valores difieren mucho del valor medio son penalizados.
 
-While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use the schelling-point mechanism to improve accuracy of oracle data. Each Maker Oracle consists of an offchain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an onchain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset.
+Si bien SchellingCoin no existe actualmente, varios oráculos descentralizados—en particular los [Oráculos del Protocolo Maker](https://docs.makerdao.com/smart-contract-modules/oracle-module)—utilizan el mecanismo de punto de Schelling para mejorar la precisión de los datos de oráculo. Cada Oráculo Maker consiste en una red P2P offchain de nodos ("intermediarios" y "fuentes") que envían los precios de mercado de los activos colaterales y un contrato onchain “Medianizer” que calcula la mediana de todos los valores proporcionados. Una vez que el periodo de atraso especificado termina, el valor medio se vuelve el nuevo precio de referencia del activo asociado.
 
-Other examples of oracles that use Schelling point mechanisms include [Chainlink Offchain Reporting](https://docs.chain.link/architecture-overview/off-chain-reporting) and [Witnet](https://witnet.io/). In both systems, responses from oracle nodes in the peer-to-peer network are aggregated into a single aggregate value, such as a mean or median. Nodes are rewarded or punished according to the extent to which their responses align with or deviate from the aggregate value.
+Otros ejemplos de oráculos que usan mecanismos de punto de Schelling incluyen [Chainlink Offchain Reporting](https://docs.chain.link/architecture-overview/off-chain-reporting) y [Witnet](https://witnet.io/). En ambos sistemas, las respuestas de los nodos de oráculo en la red peer-to-peef son agregados en un único valor agregado, como una media o promedio. Los nodos son recompensados o castigados de acuerdo con la medida en que sus respuestas se alinean o se desvían del valor agregado.
 
-Schelling point mechanisms are attractive because they minimize onchain footprint (only one transaction needs to be sent) while guaranteeing decentralization. The latter is possible because nodes must sign off on the list of submitted responses before it is fed into the algorithm that produces the mean/median value.
+Los mecanismos de punto de Schelling son atractivos porque minimizan la huella en la cadena (solo se necesita enviar una transacción) mientras garantizan la descentralización. Esta última es posible porque los nodos deben firmar la lista de respuestas enviadas antes de que se introduzcan en el algoritmo que produce el valor medio/mediana.
 
-### Availability {#availability}
+### Disponibilidad {#availability}
 
-Decentralized oracle services ensure high availability of offchain data to smart contracts. This is achieved by decentralizing both the source of offchain information and nodes responsible for transferring the information onchain.
+Los servicios de oráculos descentralizados garantizan una alta disponibilidad de datos offchain para los contratos inteligentes. Esto se logra descentralizando tanto la fuente de información offchain como los nodos responsables de transferir la información onchain.
 
-This ensures fault-tolerance since the oracle contract can rely on multiple nodes (who also rely on multiple data sources) to execute queries from other contracts. Decentralization at the source _and_ node-operator level is crucial—a network of oracle nodes serving information retrieved from the same source will run into the same problem as a centralized oracle.
+Esto garantiza la tolerancia a fallas, ya que el contrato de oráculo puede confiar en múltiples nodos (que también usan múltiples fuentes de datos) para ejecutar consultas de otros contratos. La descentralización tanto en la fuente como a nivel de los operadores de nodos es fundamental: una red de nodos oráculo que sirve información obtenida de la misma fuente enfrentará el mismo problema que un oráculo centralizado.
 
-It is also possible for stake-based oracles to slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
+También es posible que los oráculos basados en staking penalicen a los operadores de nodos que no respondan rápidamente a las solicitudes de datos. Esto incentiva significativamente a los nodos de oráculo a invertir en infraestructura tolerante a fallas y a proporcionar datos de manera oportuna.
 
-### Good incentive compatibility {#good-incentive-compatibility}
+### Buena compatibilidad de incentivos {#good-incentive-compatibility}
 
-Decentralized oracles implement various incentive designs to prevent [Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault) behavior among oracle nodes. Specifically, they achieve _attributability_ and _accountability_:
+Los oráculos descentralizados implementan varios diseños de incentivos para prevenir comportamientos [bizantinos](https://en.wikipedia.org/wiki/Byzantine_fault) entre los nodos oráculo. Específicamente, logran _atribuibilidad_ y _responsabilidad_:
 
-1. Decentralized oracle nodes are often required to sign the data they provide in response to data requests. This information helps with evaluating the historical performance of oracle nodes, such that users can filter out unreliable oracle nodes when making data requests. An example is Witnet’s [Algorithmic Reputation System](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system).
+1. A menudo se requiere que los nodos de oráculo descentralizados firmen los datos que proporcionan en respuesta a las solicitudes de datos. Esta información ayuda a evaluar el rendimiento histórico de los nodos de oráculo, de modo que los usuarios pueden filtrar los nodos de oráculo poco fiables al hacer solicitudes de datos. Un ejemplo es el [Sistema de Reputación Algorítmica](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system) de Witnet.
 
-2. Decentralized oracles—as explained earlier—may require nodes to place a stake on their confidence in the truth of data they submit. If the claim checks out, this stake can be returned along with rewards for honest service. But it can also be slashed in case the information is incorrect, which provides some measure of accountability.
+2. Los oráculos descentralizados, como se explicó anteriormente, pueden requerir que los nodos pongan una participación o apuesta en su confianza en la veracidad de los datos que envían. Si la reclamación se comprueba, esta participación se puede devolver junto con recompensas por un servicio honesto. Pero también se puede acuchillar en caso de que la información sea incorrecta, lo que hace que se tenga responsabilidad.
 
-## Applications of oracles in smart contracts {#applications-of-oracles-in-smart-contracts}
+## Aplicaciones de oráculos en smart contracts {#applications-of-oracles-in-smart-contracts}
 
-The following are common use-cases for oracles in Ethereum:
+Los siguientes son casos de uso comunes de oráculos en Ethereum:
 
-### Retrieving financial data {#retrieving-financial-data}
+### Recuperación de datos financieros {#retrieving-financial-data}
 
-[Decentralized finance](/defi/) (DeFi) applications allow for peer-to-peer lending, borrowing, and trading of assets. This often requires getting different financial information, including exchange rate data (for calculating the fiat value of cryptocurrencies or comparing token prices) and capital markets data (for calculating the value of tokenized assets, such as gold or the US dollar).
+Las aplicaciones de [finanzas descentralizadas](/defi/) (DeFi) permiten préstamos, préstamos y comercio de activos entre pares. Para ello, se suele requerir información financiera diferente, incluidos datos de tipos de cambio (para calcular el valor fiduciario de las criptomonedas o comparar los precios de los tókenes) y datos de los mercados de capital (para calcular el valor de los activos tokenizados, como el oro o el dólar estadounidense).
 
-A DeFi lending protocol, for example, needs to query current market prices for assets (e.g., ETH) deposited as collateral. This lets the contract determine the value of collateral assets and determine how much it can borrow from the system.
+Un protocolo de préstamo DeFi, por ejemplo, necesita consultar los precios actuales del mercado de los activos (por ejemplo, ETH) depositados como garantía. Esto permite que el contrato determine el valor de los activos colaterales y determine cuánto puede pedir prestado del sistema.
 
-Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), and [Maker Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module).
+Los populares "oráculos de precios" (como a menudo se les llama) en DeFi incluyen Chainlink Price Feeds, el [Open Price Feed](https://compound.finance/docs/prices) de Compound Protocol, los [Precios de Promedio Ponderado por Tiempo (TWAPs)](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) de Uniswap y los [Oráculos de Maker](https://docs.makerdao.com/smart-contract-modules/oracle-module).
 
-Builders should understand the caveats that come with these price oracles before integrating them into their project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned.
+Los constructores deben entender las advertencias que traen estos oráculos de precios antes de integrarlos en su proyecto. Este [artículo](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) proporciona un análisis detallado de lo que se debe considerar al planificar el uso de cualquiera de los oráculos de precios mencionados.
 
-Below is an example of how you can retrieve the latest ETH price in your smart contract using a Chainlink price feed:
+A continuación se muestra un ejemplo de cómo puede recuperar el último precio de ETH en su contrato inteligente utilizando una fuente de precios de Chainlink:
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -354,80 +354,80 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Generating verifiable randomness {#generating-verifiable-randomness}
+### Generación de aleatoriedad verificable {#generating-verifiable-randomness}
 
-Certain blockchain applications, such as blockchain-based games or lottery schemes, require a high level of unpredictability and randomness to work effectively. However, the deterministic execution of blockchains eliminates randomness.
+Ciertas aplicaciones de cadena de bloques, como los juegos basados en la cadena de bloques o los esquemas de lotería, requieren un alto nivel de imprevisibilidad y aleatoriedad para funcionar de manera efectiva. No obstante, la ejecución determinista de las cadenas de bloques elimina cualquier aleatoriedad.
 
-The original approach was to use pseudorandom cryptographic functions, such as `blockhash`, but these could be [manipulated by miners](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) solving the proof-of-work algorithm. Also, Ethereum’s [switch to proof-of-stake](/roadmap/merge/) means developers can no longer rely on `blockhash` for onchain randomness. The Beacon Chain’s [RANDAO mechanism](https://eth2book.info/altair/part2/building_blocks/randomness) provides an alternative source of randomness instead.
+El enfoque original era usar funciones criptográficas seudoaleatorias, como `blockhash`, pero estas podían ser [manipuladas por los mineros](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) resolviendo el algoritmo de proof-of-work. Además, el [cambio de Ethereum a proof-of-stake](/roadmap/merge/) significa que los desarrolladores ya no pueden depender de `blockhash` para aleatoriedad onchain. El [mecanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la Beacon Chain ofrece una fuente alternativa de aleatoriedad.
 
-It is possible to generate the random value offchain and send it onchain, but doing so imposes high trust requirements on users. They must believe the value was truly generated via unpredictable mechanisms and wasn’t altered in transit.
+Es posible generar el valor aleatorio offchain y enviarlo onchain, pero hacerlo impone altos requisitos de confianza a los usuarios. Deben creer que el valor se generó realmente a través de mecanismos impredecibles y no se alteró en el tránsito.
 
-Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes.
+Los oráculos diseñados para la computación offchain resuelven este problema generando de manera segura resultados aleatorios offchain que transmiten onchain junto con pruebas criptográficas que certifican la imprevisibilidad del proceso. Un ejemplo es [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Función Aleatoria Verificable), que es un generador de números aleatorios (RNG) demostrablemente justo e inalterable, útil para construir smart contracts fiables para aplicaciones que dependen de resultados impredecibles.
 
-### Getting outcomes for events {#getting-outcomes-for-events}
+### Obtener resultados de eventos {#getting-outcomes-for-events}
 
-With oracles, creating smart contracts that respond to real-world events is easy. Oracle services make this possible by allowing contracts to connect to external APIs through offchain components and consume information from those data sources. For example, the prediction dapp mentioned earlier may request an oracle to return election results from a trusted offchain source (e.g., the Associated Press).
+Con los oráculos, es fácil crear contratos inteligentes que respondan a eventos del mundo real. Los servicios de oráculos lo hacen posible, ya que permiten que los contratos se conecten a API externas a través de componentes fuera de la cadena y utilicen información de esas fuentes de datos. Por ejemplo, la dapp de predicción mencionada anteriormente puede solicitar a un oráculo que devuelva los resultados de las elecciones desde una fuente offchain confiable (por ejemplo, la Associated Press).
 
-Using oracles to retrieve data based on real-world outcomes enables other novel use cases; for example, a decentralized insurance product needs accurate information about weather, disasters, etc. to work effectively.
+El uso de oráculos para recuperar datos basados en resultados del mundo real permite otros nuevos casos de uso; por ejemplo, un producto de seguro descentralizado necesita información precisa sobre el clima, los desastres, etc. para funcionar de manera efectiva.
 
-### Automating smart contracts {#automating-smart-contracts}
+### Automatización de smart contracts {#automating-smart-contracts}
 
-Smart contracts do not run automatically; rather, an externally owned account (EOA), or another contract account, must trigger the right functions to execute the contract’s code. In most cases, the bulk of the contract’s functions are public and can be invoked by EOAs and other contracts.
+Los contratos inteligentes no se ejecutan automáticamente; más bien, una cuenta de propiedad externa (EOA), u otra cuenta de contrato debe activar las funciones correctas para ejecutar el código del contrato. En la mayoría de los casos, la mayor parte de las funciones del contrato son públicas y pueden ser invocadas por las EOA y otros contratos.
 
-But there are also _private functions_ within a contract that are inaccessible to others;, but that are critical to a dapp's overall functionality. Examples include a `mintERC721Token()` function that periodically mints new NFTs for users, a function for awarding payouts in a prediction market, or a function for unlocking staked tokens in a DEX.
+Pero también existen _funciones privadas_ dentro de un contrato que son inaccesibles para otros; pero que son críticas para la funcionalidad general de una dapp. Ejemplos incluyen una función `mintERC721Token()` que emite periódicamente nuevos NFT para los usuarios, una función para otorgar recompensas en un mercado de predicción, o una función para desbloquear tokens bloqueados en un DEX.
 
-Developers will need to trigger such functions at intervals to keep the application running smoothly. However, this might lead to more hours lost on mundane tasks for developers, which is why automating execution of smart contracts is attractive.
+Los desarrolladores tendrán que activar dichas funciones a diferentes intervalos para mantener el funcionamiento de la aplicación. No obstante, esto podría llevar a que se pierdan más horas en tareas mundanas para los desarrolladores, por lo que la automatización de la ejecución de contratos inteligentes es atractiva.
 
-Some decentralized oracle networks offer automation services, which allow offchain oracle nodes to trigger smart contract functions according to parameters defined by the user. Typically, this requires “registering” the target contract with the oracle service, providing funds to pay the oracle operator, and specifying the conditions or times to trigger the contract.
+Algunas redes de oráculos descentralizados ofrecen servicios de automatización, que permiten a los nodos oráculo offchain activar funciones de contratos inteligentes según los parámetros definidos por el usuario. Por lo general, esto requiere «registrar» el contrato de destino en el servicio de oráculo, proporcionar fondos para pagar al operador del oráculo y especificar las condiciones o los tiempos para activar el contrato.
 
-Chainlink’s [Keeper Network](https://chain.link/keepers) provides options for smart contracts to outsource regular maintenance tasks in a trust minimized and decentralized manner. Read the official [Keeper's documentation](https://docs.chain.link/docs/chainlink-keepers/introduction/) for information on making your contract Keeper-compatible and using the Upkeep service.
+La [Keeper Network](https://chain.link/keepers) de Chainlink proporciona opciones para que los smart contracts subcontraten tareas regulares de mantenimiento de forma minimizada en confianza y descentralizada. Lea la [documentación oficial de Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) para obtener información sobre cómo hacer que su contrato sea compatible con Keeper y utilizar el servicio Upkeep.
 
-## How to use blockchain oracles {#use-blockchain-oracles}
+## Cómo utilizar oráculos blockchain {#use-blockchain-oracles}
 
-There are multiple oracle applications you can integrate into your Ethereum dapp:
+Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereum:
 
-**[Chainlink](https://chain.link/)** - _Chainlink decentralized oracle networks provide tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain._
+**[Chainlink](https://chain.link/)** - _Las redes de oráculos descentralizados de Chainlink proporcionan entradas, salidas y cálculos resistentes a manipulaciones para respaldar smart contracts avanzados en cualquier blockchain._
 
-**[RedStone Oracles](https://redstone.finance/)** - _RedStone is a decentralized modular oracle that provides gas-optimized data feeds. It specializes in offering price feeds for emerging assets, such as liquid staking tokens (LSTs), liquid restaking tokens (LRTs), and Bitcoin staking derivatives._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone es un oráculo modular descentralizado que provee feeds de datos optimizados en consumo de gas._ Se especializa en ofrecer feeds de precios para activos emergentes, como tokens de staking líquido (LSTs), tokens de restaking líquido (LRTs) y derivados de staking de Bitcoin._
 
-**[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data onchain by developing truly scalable, cost-efficient, decentralized, and verifiable oracles._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle supera las limitaciones actuales de transferencia de datos onchain mediante el desarrollo de oráculos verdaderamente escalables, rentables, descentralizados y verificables._
 
-**[Witnet](https://witnet.io/)** - _Witnet is a permissionless, decentralized, and censorship-resistant oracle helping smart contracts to react to real world events with strong crypto-economic guarantees._
+**[Witnet](https://witnet.io/)** - _Witnet es un oráculo sin permisos, descentralizado y resistente a la censura que ayuda a los smart contracts a reaccionar ante eventos del mundo real con sólidas garantías criptoeconómicas._
 
-**[UMA Oracle](https://uma.xyz)** - _UMA's optimistic oracle allows smart contracts to quickly and receive any kind of data for different applications, including insurance, financial derivatives, and prediction markets._
+**[UMA Oracle](https://uma.xyz)** - _El oráculo optimista de UMA permite a los smart contracts recibir rápidamente cualquier tipo de dato para distintas aplicaciones, incluyendo seguros, derivados financieros y mercados de predicción._
 
-**[Tellor](https://tellor.io/)** - _Tellor is a transparent and permissionless oracle protocol for your smart contract to easily get any data whenever it needs it._
+**[Tellor](https://tellor.io/)** - _Tellor es un protocolo de oráculo transparente y sin permisos que permite a su smart contract obtener cualquier dato cuando lo necesite._
 
-**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol es una plataforma de oráculos de datos cross-chain que agrega y conecta datos y APIs del mundo real con smart contracts._
 
-**[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data onchain in a tamper-resistant, decentralized, and self-sustainable environment._
+**[Pyth Network](https://pyth.network/)** - _La red Pyth es una red de oráculos financieros de primera parte diseñada para publicar datos del mundo real de manera continua onchain en un entorno resistente a manipulaciones, descentralizado y autosostenible._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
+**[API3 DAO](https://www.api3.org/)** - _API3 DAO está ofreciendo soluciones de oráculo de primera parte que proporcionan mayor transparencia sobre el origen, seguridad y escalabilidad en una solución descentralizada para smart contracts_
 
-**[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for onchain and offchain use-cases. 
+**[Supra](https://supra.com/)** - Un conjunto de herramientas verticalmente integrado de soluciones cross-chain que interconectan todas las blockchains, ya sean públicas (L1s y L2s) o privadas (empresas), proporcionando feeds de precios de oráculo descentralizados que pueden usarse tanto para casos de uso onchain como offchain.
 
-**[Gas Network](https://gas.network/)** - A distributed oracle platform providing real-time gas price data across blockchain. By bringing data from leading gas price data providers onchain, Gas Network is helping to drive interoperability. Gas Network supports data for over 35 chains, including Ethereum Mainnet and many leading L2s.
+**[Gas Network](https://gas.network/)** - Una plataforma de oráculos distribuida que proporciona datos de precios de gas en tiempo real en blockchain. Al llevar datos de los principales proveedores de precios de gas onchain, Gas Network está ayudando a impulsar la interoperabilidad. Gas Network ofrece soporte de datos para más de 35 cadenas, incluida Ethereum Mainnet y muchas L2 destacadas.
 
-## Further reading {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-**Articles**
+**Artículos**
 
-- [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) — _Chainlink_
-- [What is a Blockchain Oracle?](https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
-- [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
-- [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
-- [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
+- [¿Qué es un oráculo blockchain?](https://chain.link/education/blockchain-oracles) — _Chainlink_
+- [¿Qué es un oráculo blockchain?](https://medium.com/better-programming/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
+- [Oráculos descentralizados: una visión completa](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
+- [Cómo implementar un oráculo blockchain en Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
+- [¿Por qué los smart contracts no pueden hacer llamadas API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
+- [Así que quieres usar un oráculo de precios](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **Videos**
 
-- [Oracles and the Expansion of Blockchain Utility](https://youtu.be/BVUZpWa8vpw) — _Real Vision Finance_
+- [Oráculos y la expansión de la utilidad de blockchain](https://youtu.be/BVUZpWa8vpw) — _Real Vision Finance_
 
-**Tutorials**
+**Tutoriales**
 
-- [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
-- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_ 
+- [Cómo obtener el precio actual de Ethereum en Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
+- [Consumir datos de oráculo](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_
 
-**Example projects**
+**Proyectos de ejemplo**
 
-- [Full Chainlink starter project for Ethereum in Solidity](https://github.com/hackbg/chainlink-fullstack) — _HackBG_
+- [Proyecto inicial completo de Chainlink para Ethereum en Solidity](https://github.com/hackbg/chainlink-fullstack) — _HackBG_
