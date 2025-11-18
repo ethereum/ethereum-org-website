@@ -108,9 +108,9 @@
 
 /*/upgrades/beacon-chain /:splat/roadmap/beacon-chain 301!
 
-/upgrades/vision/ /roadmap/vision/ 301!
+/upgrades/vision/ /roadmap/ 301!
 
-/*/upgrades/vision/ /:splat/roadmap/vision/ 301!
+/*/upgrades/vision/ /:splat/roadmap/ 301!
 
 /upgrades /roadmap 301!
 
