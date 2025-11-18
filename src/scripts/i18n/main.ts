@@ -9,7 +9,6 @@ import type {
   ContentType,
   CrowdinAddFileResponse,
   CrowdinFileData,
-  CrowdinFileInfoResponseModel,
   CrowdinPreTranslateResponse,
   GitHubCrowdinFileMetadata,
   GitHubQueryResponseItem,
@@ -24,14 +23,6 @@ const crowdinToInternalCodeMapping: Record<string, string> = i18nConfig.reduce(
   },
   {} as Record<string, string>
 )
-
-// const internalToCrowdinCodeMapping: Record<string, string> = i18nConfig.reduce(
-//   (acc, { crowdinCode, code }) => {
-//     acc[code] = crowdinCode
-//     return acc
-//   },
-//   {} as Record<string, string>
-// )
 
 const gitHubApiKey = process.env.I18N_GITHUB_API_KEY || ""
 if (!gitHubApiKey) {
@@ -202,7 +193,6 @@ const getFileMetadata = async (
     }
   })
   return englishFileMetadata
-  // return { owner, repo, branch, englishFiles }
 }
 
 const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
@@ -280,38 +270,80 @@ const findCrowdinFile = (
   return found
 }
 
-const putCrowdinFile = async (
-  fileId: number,
-  storageId: number
-): Promise<unknown> => {
-  const url = new URL(
-    `https://api.crowdin.com/api/v2/projects/${env.projectId}/files/${fileId}`
-  )
+/**
+ * Unhides all hidden strings in a Crowdin file.
+ * Hidden strings (often marked as duplicates) cannot be translated.
+ * This function makes them visible so they can be processed by pre-translation.
+ */
+const unhideStringsInFile = async (fileId: number): Promise<number> => {
+  console.log(`[UNHIDE] Checking for hidden strings in fileId=${fileId}`)
+
+  // Get all strings from the file
+  const listUrl = `https://api.crowdin.com/api/v2/projects/${env.projectId}/strings?fileId=${fileId}&limit=500`
 
   try {
-    const res = await fetch(url.toString(), {
-      method: "PUT",
-      headers: {
-        ...crowdinBearerHeaders,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ storageId }),
-    })
-
-    if (!res.ok) {
-      console.warn("Res not OK")
-      const body = await res.text().catch(() => "")
-      throw new Error(`Crowdin putCrowdinFile failed (${res.status}): ${body}`)
+    const listRes = await fetch(listUrl, { headers: crowdinBearerHeaders })
+    if (!listRes.ok) {
+      const text = await listRes.text().catch(() => "")
+      console.warn(
+        `[UNHIDE] Failed to list strings for fileId=${fileId}: ${text}`
+      )
+      return 0
     }
 
-    type JsonResponse = { data: CrowdinFileInfoResponseModel }
-    const json: JsonResponse = await res.json()
-    console.log("Updated file:", json.data)
-    return json.data
+    const listJson = await listRes.json()
+    const strings = listJson.data || []
+
+    let unhiddenCount = 0
+
+    for (const item of strings) {
+      const stringId = item.data.id
+      const isHidden = item.data.isHidden
+
+      if (!isHidden) continue
+
+      // Unhide the string using PATCH
+      const patchUrl = `https://api.crowdin.com/api/v2/projects/${env.projectId}/strings/${stringId}`
+
+      try {
+        const patchRes = await fetch(patchUrl, {
+          method: "PATCH",
+          headers: {
+            ...crowdinBearerHeaders,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            {
+              op: "replace",
+              path: "/isHidden",
+              value: false,
+            },
+          ]),
+        })
+
+        if (patchRes.ok) {
+          unhiddenCount++
+        } else {
+          const text = await patchRes.text().catch(() => "")
+          console.warn(`[UNHIDE] Failed to unhide string ${stringId}: ${text}`)
+        }
+      } catch (err) {
+        console.warn(`[UNHIDE] Error unhiding string ${stringId}:`, err)
+      }
+    }
+
+    if (unhiddenCount > 0) {
+      console.log(
+        `[UNHIDE] ✓ Unhidden ${unhiddenCount} strings in fileId=${fileId}`
+      )
+    } else {
+      console.log(`[UNHIDE] No hidden strings found in fileId=${fileId}`)
+    }
+
+    return unhiddenCount
   } catch (error) {
-    console.error(error)
-    process.exit(1)
+    console.error(`[UNHIDE] Error processing fileId=${fileId}:`, error)
+    return 0
   }
 }
 
@@ -751,28 +783,6 @@ const getBuiltFile = async (
     const buffer = Buffer.from(arrayBuffer)
 
     return { buffer }
-
-    // const contentDisposition = res.headers.get("content-disposition") || ""
-    // const cdMatch = /filename\*=UTF-8''([^;]+)|filename="?([^";]+)"?/.exec(
-    //   contentDisposition
-    // )
-    // let fileName = ""
-    // if (cdMatch) {
-    //   fileName = decodeURIComponent(cdMatch[1] || cdMatch[2] || "")
-    // }
-    // if (!fileName) {
-    //   try {
-    //     const urlObj = new URL(downloadUrl)
-    //     fileName = urlObj.pathname.split("/").pop() || "file"
-    //   } catch {
-    //     fileName = "file"
-    //   }
-    // }
-
-    // const contentType =
-    //   res.headers.get("content-type") || "application/octet-stream"
-
-    // return { buffer, fileName, contentType }
   } catch (error) {
     console.error("getBuiltFile error:", error)
     throw error
@@ -827,59 +837,56 @@ const getBranchObject = async (branch: string): Promise<BranchObject> => {
   return json.object
 }
 
-// const addSlashes = (path: string) =>
-//   path.replace(/^\/*/, "/").replace(/\/*$/, "/")
-
 const createBranchName = () => {
   const ts = new Date().toISOString().replace(/\..*$/, "").replace(/[:]/g, "-") // e.g., 2025-11-10T04-20-13
   return "i18n/import/" + ts
 }
 
 const getDestinationFromPath = (
-  crowdinFilePath: string, // e.g. src/intl/en/page-foo.json
+  crowdinFilePath: string, // e.g. src/intl/en/page-foo.json OR public/content/.../index.md
   internalLanguageCode: string
 ) => {
-  const destinationPath = crowdinFilePath
-    .replace("/en/", `/${internalLanguageCode}/`)
-    .replace(/^\//, "")
+  const normalized = crowdinFilePath.replace(/^\//, "")
+  const isJson = normalized.toLowerCase().endsWith(".json")
+  const isMarkdown = normalized.toLowerCase().endsWith(".md")
 
+  let destinationPath = normalized
+
+  if (isJson) {
+    // JSON: src/intl/en/*.json -> src/intl/<lang>/*.json
+    if (normalized.startsWith("src/intl/en/")) {
+      destinationPath = normalized.replace(
+        /^src\/intl\/en\//,
+        `src/intl/${internalLanguageCode}/`
+      )
+    } else if (normalized.startsWith("src/intl/")) {
+      // Fallback: if for some reason "en" segment is missing, inject lang after src/intl/
+      const parts = normalized.split("/")
+      // parts: [src, intl, ...]
+      parts.splice(2, 0, internalLanguageCode)
+      destinationPath = parts.join("/")
+    }
+  } else if (isMarkdown) {
+    // Markdown: public/content/<path>/index.md -> public/content/translations/<lang>/<path>/index.md
+    if (normalized.startsWith("public/content/")) {
+      const rel = normalized.replace(/^public\/content\//, "")
+      // If already inside translations/, avoid duplicating; rewrite to current lang
+      const relParts = rel.split("/").filter(Boolean)
+      if (relParts[0] === "translations") {
+        // Drop existing translations/<lang>/
+        const rest = relParts.slice(2).join("/")
+        destinationPath = `public/content/translations/${internalLanguageCode}/${rest}`
+      } else {
+        destinationPath = `public/content/translations/${internalLanguageCode}/${rel}`
+      }
+    }
+  }
+
+  console.log(
+    `[DEBUG] Destination mapping: ${crowdinFilePath} -> ${destinationPath} (lang=${internalLanguageCode})`
+  )
   return destinationPath
-  // return { destinationPath, internalLanguageCode }
 }
-
-// const createCommitDetails = (
-//   crowdinFilePaths: string[], // e.g. src/intl/en/page-foo.json
-//   internalLanguageCode: string
-// ) => {
-//   // const ext = (crowdinFilePath.split(".").pop() || "").toLowerCase()
-//   // const isJson = ext === "json"
-//   // const rootEnPath = addSlashes(isJson ? env.jsonRoot : env.mdRoot)
-
-//   // const crowdinCode = $("Split fileIds").first().json.languageIds[0]
-
-//   // const langCode = $("Language code mapping").first().json[crowdinCode]
-//   const destinationPaths = crowdinFilePaths.map((crowdinFilePath) =>
-//     crowdinFilePath
-//       .replace("/en/", `/${internalLanguageCode}/`)
-//       .replace(/^\//, "")
-//   )
-
-//   return { destinationPaths, internalLanguageCode }
-
-//   // const simpleName = isJson
-//   //   ? crowdinFilePath
-//   //       .split("/")
-//   //       .pop()
-//   //       .replace(/\.[^.]+$/, "")
-//   //   : crowdinFilePath
-//   //       .split(rootEnPath)
-//   //       .pop()
-//   //       .replace("/index.md", "")
-//   //       .replace("/", "-")
-
-//   // const branch = branchParts.join("/")
-//   // return [{ branch, destinationPath, langCode: internalLanguageCode }]
-// }
 
 /**
  * method: PUT
@@ -946,8 +953,9 @@ const putCommitFile = async (
   buffer: Buffer,
   destinationPath: string,
   branch: string,
-  sha?: string
-) => {
+  sha?: string,
+  attempt = 0
+): Promise<void> => {
   const url = `https://api.github.com/repos/${env.ghOrganization}/${env.ghRepo}/contents/${destinationPath}`
 
   try {
@@ -973,8 +981,38 @@ const putCommitFile = async (
 
     if (res.status === 422) {
       const { sha: fileSha } = await getPathSha(destinationPath, branch)
-      // Retry as an update with the file SHA and return to avoid falling through
-      return await putCommitFile(buffer, destinationPath, branch, fileSha)
+      console.warn(
+        `[RETRY] 422 Unprocessable for ${destinationPath}. Retrying with existing SHA ${fileSha}`
+      )
+      return await putCommitFile(
+        buffer,
+        destinationPath,
+        branch,
+        fileSha,
+        attempt
+      )
+    }
+
+    if (res.status === 409) {
+      if (attempt >= 5) {
+        const bodyText = await res.text().catch(() => "")
+        throw new Error(
+          `GitHub putCommitFile conflict persists after ${attempt} retries (${res.status}): ${bodyText}`
+        )
+      }
+      const backoff = 500 * Math.pow(2, attempt) // 500ms, 1s, 2s, 4s, 8s
+      console.warn(
+        `[RETRY] 409 Conflict for ${destinationPath}. Attempt ${attempt + 1}. Waiting ${backoff}ms before retry.`
+      )
+      await delay(backoff)
+      const { sha: latestSha } = await getPathSha(destinationPath, branch)
+      return await putCommitFile(
+        buffer,
+        destinationPath,
+        branch,
+        latestSha,
+        attempt + 1
+      )
     }
 
     if (!res.ok) {
@@ -1015,21 +1053,9 @@ const postPullRequest = async (head: string, base = env.baseBranch) => {
     throw new Error(`Crowdin postPullRequest failed (${res.status}): ${body}`)
   }
 
-  // type JsonResponse = { data: { data: CrowdinFileData }[] }
   const json = await res.json()
   return json
 }
-
-// const test = async () => {
-//         const fileBuffer = await downloadGitHubFile(file.download_url)
-//         const storageInfo = await postFileToStorage(
-//           fileBuffer,
-//           file["Crowdin-API-FileName"]
-//         )
-
-//         await putCrowdinFile(foundFile.id, storageInfo.id)
-//         // fileBuffer goes out of scope here and can be garbage collected
-//       }
 
 async function main(options?: { allLangs: boolean }) {
   console.log(`[DEBUG] Starting main function with options:`, options)
@@ -1041,7 +1067,8 @@ async function main(options?: { allLangs: boolean }) {
     allCrowdinCodes: env.allCrowdinCodes,
   })
 
-  const allEnglishFiles = await getAllEnglishFiles(4)
+  // Increase scope of English files fetched (remove overly restrictive perPage=4)
+  const allEnglishFiles = await getAllEnglishFiles()
   console.log(
     `[DEBUG] Found ${allEnglishFiles.length} English files from GitHub`
   )
@@ -1060,6 +1087,10 @@ async function main(options?: { allLangs: boolean }) {
    * Iterate through each file and upload
    */
   const fileIdsSet = new Set<number>()
+  // Maintain authoritative mapping of processed Crowdin fileId -> path (including newly added files this run)
+  const processedFileIdToPath: Record<number, string> = {}
+  // Keep original English buffers to detect untranslated outputs
+  const englishBuffers: Record<number, Buffer> = {}
   for (const file of fileMetadata) {
     console.log(`[DEBUG] Processing file: ${file.filePath}`)
     await (async () => {
@@ -1069,50 +1100,115 @@ async function main(options?: { allLangs: boolean }) {
       } catch {
         console.log("File not found in Crowdin, attempting to add new file")
       }
-      const fileBuffer = await downloadGitHubFile(file.download_url)
-      const storageInfo = await postFileToStorage(
-        fileBuffer,
-        file["Crowdin-API-FileName"]
-      )
+
       let crowdinFileResponse: CrowdinAddFileResponse | undefined
+      let effectiveFileId: number
+      let effectivePath: string
+
       if (foundFile) {
-        await putCrowdinFile(foundFile.id, storageInfo.id)
+        // File exists - DO NOT update to preserve parsed string structure
+        console.log(
+          `[SKIP-UPDATE] File already exists in Crowdin with ID: ${foundFile.id}, using existing structure`
+        )
+        console.log(
+          `[SKIP-UPDATE] Skipping upload/update to preserve existing parsed strings`
+        )
+        effectiveFileId = foundFile.id
+        effectivePath = foundFile.path
+
+        // Still download English for buffer comparison later
+        console.log(
+          `[DOWNLOAD] Downloading English source for buffer comparison: ${file.download_url}`
+        )
+        const fileBuffer = await downloadGitHubFile(file.download_url)
+        englishBuffers[effectiveFileId] = fileBuffer
       } else {
+        // File doesn't exist - create it
+        console.log(`[UPLOAD] File NOT found in Crowdin, creating new file`)
+        console.log(
+          `[UPLOAD] Downloading English source from: ${file.download_url}`
+        )
+        const fileBuffer = await downloadGitHubFile(file.download_url)
+        console.log(`[UPLOAD] Downloaded ${fileBuffer.length} bytes`)
+
+        const storageInfo = await postFileToStorage(
+          fileBuffer,
+          file["Crowdin-API-FileName"]
+        )
+        console.log(
+          `[UPLOAD] Uploaded to Crowdin storage with ID: ${storageInfo.id}`
+        )
+
         // Derive full parent directory path (exclude filename)
         const parts = file.filePath.split("/").filter(Boolean)
         parts.pop() // remove filename
         const parentDirPath = parts.join("/") || "/"
         console.log(
-          `[DEBUG] Attempting to create new Crowdin file in parent directory path: ${parentDirPath}`
+          `[UPLOAD] Creating new Crowdin file in directory path: ${parentDirPath}`
         )
         crowdinFileResponse = await postCrowdinFile(
           storageInfo.id,
           file["Crowdin-API-FileName"],
           parentDirPath
         )
+        console.log(
+          `[UPLOAD] ✓ Created new Crowdin file with ID: ${crowdinFileResponse.id}`
+        )
+
+        effectiveFileId = crowdinFileResponse.id
+        effectivePath = crowdinFileResponse.path
+        englishBuffers[effectiveFileId] = fileBuffer
+
+        // Wait for new file parsing
+        const delayMs = 10000
+        console.log(
+          `[UPLOAD] ⏱️  Waiting ${delayMs / 1000}s for Crowdin to parse new file...`
+        )
+        await delay(delayMs)
+        console.log(`[UPLOAD] ✓ Parsing delay complete`)
       }
-      if (!foundFile && !crowdinFileResponse)
-        throw new Error("No file found AND unable to add new file")
-      fileIdsSet.add(
-        foundFile?.id || (crowdinFileResponse as CrowdinAddFileResponse).id
-      )
-      // fileBuffer goes out of scope here and can be garbage collected
+
+      fileIdsSet.add(effectiveFileId)
+      // Record path for destination mapping later (Crowdin returns leading slash paths)
+      if (effectivePath) processedFileIdToPath[effectiveFileId] = effectivePath
     })()
   }
+
+  // Unhide any hidden/duplicate strings before pre-translation
+  console.log(
+    `\n[UNHIDE] ========== Unhiding strings in ${fileIdsSet.size} files ==========`
+  )
+  for (const fileId of fileIdsSet) {
+    await unhideStringsInFile(fileId)
+  }
+
+  console.log(
+    `\n[PRE-TRANSLATE] ========== Requesting AI Pre-Translation ==========`
+  )
+  console.log(`[PRE-TRANSLATE] FileIds to translate:`, Array.from(fileIdsSet))
+  console.log(`[PRE-TRANSLATE] Target languages:`, env.allCrowdinCodes)
+  console.log(`[PRE-TRANSLATE] AI Prompt ID:`, env.preTranslatePromptId)
 
   const applyPreTranslationResponse = await postApplyPreTranslation(
     Array.from(fileIdsSet),
     options?.allLangs ? env.allCrowdinCodes : env.allCrowdinCodes
   )
-  console.log({ preTranslationId: applyPreTranslationResponse.identifier })
+  console.log(
+    `[PRE-TRANSLATE] ✓ Pre-translation job created with ID: ${applyPreTranslationResponse.identifier}`
+  )
+  console.log(
+    `[PRE-TRANSLATE] Initial status:`,
+    applyPreTranslationResponse.status
+  )
 
+  console.log(`\n[PRE-TRANSLATE] Waiting for job to complete...`)
   const preTranslateJobCompletedResponse = await awaitPreTranslationCompleted(
     applyPreTranslationResponse.identifier
   )
 
   if (preTranslateJobCompletedResponse.status !== "finished") {
     console.error(
-      "Pre-translation did not finish successfully. Full response:",
+      "[PRE-TRANSLATE] ❌ Pre-translation did not finish successfully. Full response:",
       preTranslateJobCompletedResponse
     )
     throw new Error(
@@ -1120,113 +1216,112 @@ async function main(options?: { allLangs: boolean }) {
     )
   }
 
-  console.log(preTranslateJobCompletedResponse)
+  console.log(`[PRE-TRANSLATE] ✓ Job completed successfully!`)
+  console.log(
+    `[PRE-TRANSLATE] Progress: ${preTranslateJobCompletedResponse.progress}%`
+  )
+  console.log(
+    `[PRE-TRANSLATE] Full response:`,
+    JSON.stringify(preTranslateJobCompletedResponse, null, 2)
+  )
 
   const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
 
-  const fileIdToPathMapping = crowdinProjectFiles.reduce(
-    (acc, { path, id }) => {
-      if (fileIds.includes(id)) acc[id] = path
-      return acc
-    },
-    {} as Record<number, string>
-  )
+  // Build mapping for commit phase. Prefer processed mapping (includes newly added files); fall back to existing Crowdin snapshot for any missed IDs.
+  const fileIdToPathMapping: Record<number, string> = {}
+  for (const fid of fileIds) {
+    if (processedFileIdToPath[fid]) {
+      fileIdToPathMapping[fid] = processedFileIdToPath[fid]
+    } else {
+      const existing = crowdinProjectFiles.find((f) => f.id === fid)
+      if (existing) fileIdToPathMapping[fid] = existing.path
+    }
+    if (!fileIdToPathMapping[fid]) {
+      console.warn(
+        `[WARN] Missing path mapping for fileId=${fid} (may impact destination path calculation)`
+      )
+    }
+  }
   // Build mapping between Crowdin IDs (e.g. "es-EM") and internal codes (e.g. "es")
   const languagePairs = languageIds.map((crowdinId) => ({
     crowdinId,
     internalLanguageCode: crowdinToInternalCodeMapping[crowdinId],
   }))
-  // const detailsForCommits = internalLanguageCodes.map((internalLanguageCode) =>
-  //   createCommitDetails(crowdinFilePaths, internalLanguageCode)
-  // )
 
   const { branch } = await postCreateBranchFrom(env.baseBranch)
-
-  // Create branch from dev
+  console.log(`\n[BRANCH] ✓ Created branch: ${branch}`)
 
   // For each language
   for (const { crowdinId, internalLanguageCode } of languagePairs) {
+    console.log(
+      `\n[BUILD] ========== Building translations for language: ${crowdinId} (internal: ${internalLanguageCode}) ==========`
+    )
+
     // Build, download and commit each file updated
     for (const fileId of fileIds) {
+      console.log(`\n[BUILD] --- Processing fileId: ${fileId} ---`)
+      const crowdinPath = fileIdToPathMapping[fileId]
+      console.log(`[BUILD] Crowdin path: ${crowdinPath}`)
+
       // 1- Build
+      console.log(
+        `[BUILD] Requesting build for fileId=${fileId}, language=${crowdinId}`
+      )
       const { url: downloadUrl } = await postBuildProjectFileTranslation(
         fileId,
         crowdinId, // Crowdin expects the Crowdin language ID here (e.g., "es-EM")
         env.projectId
       )
+      console.log(`[BUILD] ✓ Build complete, download URL: ${downloadUrl}`)
+
       // 2- Download
+      console.log(`[BUILD] Downloading translated file...`)
       const { buffer } = await getBuiltFile(downloadUrl)
+      console.log(`[BUILD] Downloaded ${buffer.length} bytes`)
+
+      // Check if translation differs from English
+      const originalEnglish = englishBuffers[fileId]
+      if (originalEnglish) {
+        console.log(
+          `[BUILD] Original English size: ${originalEnglish.length} bytes`
+        )
+        if (originalEnglish.compare(buffer) === 0) {
+          console.warn(
+            `[BUILD] ⚠️  Skipping commit - content identical to English (no translation occurred)`
+          )
+          continue
+        } else {
+          console.log(`[BUILD] ✓ Translation differs from English, will commit`)
+        }
+      }
+
       // 3a- Get destination path
       const destinationPath = getDestinationFromPath(
-        fileIdToPathMapping[fileId],
+        crowdinPath,
         internalLanguageCode // Use internal code (e.g., "es") for repo path replacement
       )
+      console.log(`[BUILD] Destination path: ${destinationPath}`)
+
       // 3b- Commit
-      putCommitFile(buffer, destinationPath, branch)
+      console.log(`[BUILD] Committing to branch: ${branch}`)
+      await putCommitFile(buffer, destinationPath, branch)
+      console.log(`[BUILD] ✓ Committed successfully`)
     }
   }
 
-  const pr = postPullRequest(branch, env.baseBranch)
+  console.log(`\n[PR] ========== Creating Pull Request ==========`)
+  console.log(`[PR] Head branch: ${branch}`)
+  console.log(`[PR] Base branch: ${env.baseBranch}`)
 
-  console.log("SUCCESS!", pr)
+  const pr = await postPullRequest(branch, env.baseBranch)
 
-  /**
-   * First markdown test
-   */
-  // try {
-  //   const firstMarkdown = fileMetadata.filter(
-  //     (file) => file["Content-Type"] === "text/markdown"
-  //   )[0]
-  //   console.log(firstMarkdown)
-  //   const fileBuffer = await downloadGitHubFile(firstMarkdown.download_url)
-  //   await postFileToStorage(fileBuffer, firstMarkdown["Crowdin-API-FileName"])
-  // } catch (error) {
-  //   console.error("No JSON found while parsing fileMetadata")
-  // }
-
-  /**
-   * First JSON test
-   */
-  // try {
-  //   const firstJson = fileMetadata.filter(
-  //     (file) => file["Content-Type"] === "application/json"
-  //   )[0]
-
-  //   // const targetCrowdinFile = crowdinProjectFiles.find(({ path }) => {
-
-  //   // })
-  //   // console.log(firstJson)
-  //   // crowdinProjectFiles[0].id // fileId
-  //   // crowdinProjectFiles[0].path // e.g., /path/to/file.ext
-
-  //   // const found = crowdinProjectFiles.find(({ path }) =>
-  //   //   path.endsWith(firstJson.filePath)
-  //   // )
-  //   // if (!found) throw new Error("No matching Crowdin project file found")
-
-  //   const found = findCrowdinFile(firstJson, crowdinProjectFiles)
-  //   const fileBuffer = await downloadGitHubFile(firstJson.download_url)
-  //   const storageInfo = await postFileToStorage(
-  //     fileBuffer,
-  //     firstJson["Crowdin-API-FileName"]
-  //   )
-  //   await putCrowdinFile((found as CrowdinFileData).id, storageInfo.id)
-  // } catch (error) {
-  //   console.error("No JSON found while parsing fileMetadata")
-  // }
+  console.log(`\n[SUCCESS] ========== Translation import complete! ==========`)
+  console.log(`[SUCCESS] Pull Request URL: ${pr.html_url}`)
+  console.log(`[SUCCESS] PR Number: #${pr.number}`)
+  console.log(pr)
 }
 
 main().catch((err) => {
   console.error("Fatal error:", err)
   process.exit(1)
 })
-
-/**
- * 1. Get all english content files from GitHub
- * 1b. Filter to selected files
- * 2. Download files from GitHub
- * 3. Upload to Crowdin storage
- * return [{ json: { fileId: found.id, projectId: found.projectId, name: found.name, path: found.path } }];
- * 4. Point fileId to new storageId
- * Need array with at LEAST { storageId, fileId }[]
- */
