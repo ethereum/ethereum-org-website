@@ -45,7 +45,7 @@ jobs:
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main.ts
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
-          I18N_GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
 
       - name: Summary
         run: |
