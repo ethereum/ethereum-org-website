@@ -386,7 +386,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 #### Summary {#beacon-chain-genesis-summary}
 
-The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Ethereum vision](/roadmap/vision/).
+The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, and the Beacon Chain started producing blocks on December 1, 2020.
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
