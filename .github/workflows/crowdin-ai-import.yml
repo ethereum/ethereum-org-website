@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v5
-        with:
-          ref: i18n-automation
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
