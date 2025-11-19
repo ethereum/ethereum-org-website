@@ -60,7 +60,9 @@ Tenga en cuenta la importancia de elegir un servicio que tome en serio la [diver
 ## Preguntas frecuentes {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
+
 Por lo general, los tókenes de participación ERC-20 se emiten a los participantes y representan el valor de sus ETH apostados y las recompensas. Tenga en cuenta que las diferentes agrupaciones repartirán las recompensas de las participaciones entre sus usuarios a través de métodos ligeramente diferentes, pero siempre se reparten.
+
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
@@ -68,14 +70,18 @@ Por lo general, los tókenes de participación ERC-20 se emiten a los participan
 
 Alternativamente, los grupos que usan tókenes de participación ERC-20, permiten a los usuarios operar dicho token en el libre mercado, pudiendo vender la posición en participación, «retirándola» de forma eficaz sin tener que eliminar ETH del contrato de participación.
 
-<ButtonLink href="/staking/withdrawals/">Más sobre retiros de staking</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Más sobre retiros de staking</ButtonLink>
+
+</ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">
 Existen muchas similitudes entre estas opciones de staking en pool y los exchanges centralizados, como la posibilidad de hacer staking con pequeñas cantidades de ETH y agruparlos para activar validadores.
 
 A diferencia de los intercambios centralizados, muchas otras opciones de participación agrupadas utilizan contratos inteligentes y/o tókenes de participación, que son usualmente tókenes ERC-20 que pueden permanecer en la cartera, y comprarse o venderse como cualquier otro token. Esto ofrece una capa de soberanía y seguridad al darle el control sobre sus tókenes, pero no le da el control directo sobre el cliente validador que certifica en su nombre en segundo plano.
 
-Algunas opciones de agrupamiento están más descentralizadas que otras cuando se trata de los nodos que las respaldan. Para promover la salud y la descentralización de la red, siempre se anima a los participantes a seleccionar un servicio de agrupación que permita un conjunto descentralizado de operadores de nodos sin permisos. </ExpandableCard>
+Algunas opciones de agrupamiento están más descentralizadas que otras cuando se trata de los nodos que las respaldan. Para promover la salud y la descentralización de la red, siempre se anima a los participantes a seleccionar un servicio de agrupación que permita un conjunto descentralizado de operadores de nodos sin permisos.
+
+</ExpandableCard>
 
 ## Lecturas adicionales {#further-reading}
 

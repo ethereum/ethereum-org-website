@@ -81,7 +81,7 @@ Este sitio web también tiene un dominio alternativo impulsado por NFTs, **ether
 
 ## ¿Cómo funcionan los NFT? {#how-nfts-work}
 
-Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado <<contrato inteligente>>. Estos contratos siguen ciertas reglas, como los estándares [ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan lo que el contrato puede hacer.
+Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado "contrato inteligente". Estos contratos siguen ciertas reglas, como los estándares [ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan lo que el contrato puede hacer.
 
 Los contratos inteligentes de NFT pueden hacer algunas cosas importantes:
 

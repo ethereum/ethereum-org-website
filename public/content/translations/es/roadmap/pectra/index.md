@@ -10,9 +10,13 @@ La actualización de la red Pectra se efectuó tras [Dencun](/roadmap/dencun/) e
 
 Esta actualización se activó con éxito en la red principal de Ethereum en la época `364032`, el **7 de mayo de 2025 a las 10:05 (UTC)**.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 La actualización de Pectra es solo un paso dentro de los objetivos de desarrollo a largo plazo de Ethereum. Conoce más sobre el [la hoja de ruta del protocolo](/roadmap/) y las [actualizaciones anteriores](/history/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Mejoras en Pectra {#new-improvements}
 
@@ -84,8 +88,13 @@ La EIP-7549](https://eips.ethereum.org/EIPS/eip-7549) mueve este índice fuera d
 
 La [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) es un cambio sencillo que añade un nuevo campo a la configuración del cliente de la capa de ejecución. Configura el número de bloques, permitiendo establecer de forma dinámica los conteos objetivo y máximo de blobs por bloque, así como el ajuste de las tarifas de blobs. Con esta configuración definida directamente, los clientes pueden evitar la complejidad de intercambiar esta información a través de la Engine API.
 
-<InfoBanner>
-Para obtener más información sobre cómo Pectra puede afectarle como usuario, desarrollador o validador de Ethereum, consulte las <a href="https://epf.wiki/#/wiki/pectra-faq">Preguntas frecuentes sobre Pectra</a>.</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Para obtener más información sobre cómo Pectra puede afectarle como usuario, desarrollador o validador de Ethereum, consulte las <a href="https://epf.wiki/#/wiki/pectra-faq">Preguntas frecuentes sobre Pectra</a>.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## ¿Afecta esta actualización a todos los nodos y validadores de Ethereum? {#client-impact}
 

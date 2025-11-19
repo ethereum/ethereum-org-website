@@ -42,7 +42,8 @@ La comunidad de Ethereum ha creado **un sistema financiero alternativo sólido**
 Los usuarios de Ethereum pueden utilizar **stablecoins, es decir, tokens vinculados a monedas fuertes como el dólar estadounidense**. Al ganar y ahorrar en criptomonedas, las personas pueden protegerse de la alta inflación en su país, lo que contribuye a preservar o incluso aumentar su poder adquisitivo. Esto también facilita los pagos de bienes y servicios, tanto a nivel local como global.
 
 <ButtonLink href="/stablecoins">
-  Más sobre stablecoins</ButtonLink>
+  Más sobre stablecoins
+</ButtonLink>
 
 ## Compra de bienes y pago de servicios {#buying-goods-and-payment-for-services}
 
