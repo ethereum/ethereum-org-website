@@ -1,30 +1,32 @@
 ---
-title: Cómo simular contratos inteligentes de Solidity para probarlos
-description: '¿Por qué debería burlarse de sus contratos al probarlos?'
+title: Cómo simular contratos inteligentes de Solidity para pruebas.
+description: Por qué debe simular sus contratos al realizar pruebas.
 author: Markus Waas
 lang: es
 tags:
-  - "solidity"
-  - "contratos inteligentes"
-  - "pruebas"
-  - "simular"
-skill: intermediate
+  [
+    "solidity",
+    "smart contracts",
+    "pruebas",
+    "simulación"
+  ]
+skill: intermedio
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[Los objetos simulados](https://wikipedia.org/wiki/Mock_object) son un patrón de diseño común en la programación orientada a objetos. Viene de la antigua palabra francesa «mocquer» con el significado de «reírse de algo» y evolucionó a «imitar a algo real» que es, en realidad, lo que hacemos en programación. Por tanto, ríase todo lo que quiera de sus contratos inteligentes si quieres, pero simúlelos siempre que pueda. ¡Le simplifica la vida!
+Los [objetos simulados](https://wikipedia.org/wiki/Mock_object) son un patrón de diseño común en la programación orientada a objetos. Proviniendo del antiguo término francés 'mocquer', que significa 'burlarse de', evolucionó hacia 'imitar algo real', que es efectivamente lo que hacemos en programación. Por favor, sólo búrlese de sus smart contracts si le apetece, pero simúlelos siempre que sea posible. Le facilitará la vida.
 
 ## Pruebas unitarias de contratos con simulaciones {#unit-testing-contracts-with-mocks}
 
-Simular un contrato significa básicamente crear una segunda versión del contrato que se comporta de manera muy similar al original, pero de una forma que el desarrollador puede controlar fácilmente. A menudo suele uno acabar con contratos complejos cuando lo único que quiere es [ hacer pruebas unitarias en partes pequeñas del contrato.](/developers/docs/smart-contracts/testing/). El problema es: ¿qué sucedería si esta pequeña parte requiere un estado de contrato muy específico que es complicado para comenzar?
+Simular un contrato esencialmente significa crear una segunda versión de ese contrato que se comporta de forma muy similar al original, pero de una manera fácilmente controlable por el desarrollador. A menudo acaba con contratos complejos donde solo desea [probar unidades pequeñas del contrato](/developers/docs/smart-contracts/testing/). El problema es: ¿qué pasa si probar esa pequeña parte requiere un estado del contrato muy específico que es difícil de alcanzar?
 
-Puede escribir una lógica de configuración de prueba compleja cada vez que el contrato se encuentre en el estado requerido, o escriba una simulación. Simular un contrato es fácil con herencia. Simplemente crea un segundo contrato simulado que hereda del original. Ahora puede sobrescribir funciones a su imitación. Veámoslo mejor poniendo un ejemplo.
+Podría escribir una lógica de configuración de pruebas compleja cada vez que lleve el contrato al estado requerido, o escribir una simulación. Simular un contrato es fácil utilizando herencia. Simplemente cree un segundo contrato simulado que herede del contrato original. Ahora puede sobrescribir funciones en su simulación. Veámoslo con un ejemplo.
 
 ## Ejemplo: ERC20 privado {#example-private-erc20}
 
-Usamos el ejemplo de un contrato ERC-20 que tiene un tiempo inicial privado. El propietario puede administrar usuarios privados y solo ellos estarán autorizados a recibir tókenes al principio. Una vez transcurrido un periodo específico, cualquiera podrá usar los tókenes. Si le pica la curiosidad, estamos usando el gancho [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) de los nuevos contratos v3 de OpenZeppelin.
+Utilizamos un ejemplo de contrato ERC-20 que tiene un tiempo inicial privado. El propietario puede gestionar los usuarios privados y solo estos podrán recibir tokens al principio. Una vez transcurrido cierto tiempo, todos podrán usar los tokens. Si tiene curiosidad, estamos usando el hook [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) de los nuevos contratos OpenZeppelin v3.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -85,22 +87,22 @@ contract PrivateERC20Mock is PrivateERC20 {
 }
 ```
 
-Recibirás uno de los siguientes mensajes de error:
+Recibirá uno de los siguientes mensajes de error:
 
 - `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
-- `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
+- `PrivateERC20.sol: TypeError: Trying to override non-virtual function. ¿Olvidó añadir "virtual"?.`
 
-Ya que estamos usando la nueva versión 0.6 de Solidity, tenemos que añadir la palabra clave `virtual` para funciones que puedan ser sobrescritas y sobrescribir para la función de sobrescribir. Entonces, añadámoslas a ambas funciones `isPublic`.
+Como estamos usando la nueva versión 0.6 de Solidity, debemos añadir la palabra clave `virtual` a las funciones que pueden ser sobrescritas y `override` en la función que sobrescribe. Así que añadamos esos modificadores a ambas funciones `isPublic`.
 
-Ahora, en sus pruebas unitarias, puede usar `PrivateERC20Mock` en su lugar. Cuando quiera probar el comportamiento durante un tiempo privado de uso, utilice `setIsPublic(false)` al igual que `setIsPublic(true)` para probar el tiempo público de uso. Por supuesto, en nuestro ejemplo también podemos usar únicamente [ayudas de tiempo](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) para cambiar los tiempos según corresponda. Esperamos que la idea de simular le haya quedado ahora clara y puede imaginar situaciones en las que todo no es tan sencillo como simplemente hacer avanzar el tiempo.
+Ahora en sus pruebas unitarias, puede usar `PrivateERC20Mock` en su lugar. Cuando desee probar el comportamiento durante el tiempo de uso privado, use `setIsPublic(false)` y de igual manera `setIsPublic(true)` para probar el tiempo de uso público. Por supuesto, en nuestro ejemplo, también podríamos usar [time helpers](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) para ajustar los tiempos según corresponda. Pero la idea de la simulación debería estar clara ahora y puede imaginar escenarios donde no es tan fácil como simplemente adelantar el tiempo.
 
-## Simular varios contratos {#mocking-many-contracts}
+## Simulando muchos contratos {#mocking-many-contracts}
 
-Puede volverse un tanto caótico si tiene que crear otro contrato para cada imitación única. Si esto le preocupa, puede revisar la biblioteca [MockContract](https://github.com/gnosis/mock-contract). Le permite sobrescribir y cambiar los comportamientos de los contratos sobre la marcha. Sin embargo, esto solo funciona para simular la activación de otro contrato, por lo que no funcionará para nuestro ejemplo.
+Puede volverse complicado si tiene que crear otro contrato para cada simulación. Si esto le incomoda, puede consultar la biblioteca [MockContract](https://github.com/gnosis/mock-contract). Le permite sobrescribir y cambiar el comportamiento de los contratos al instante. Sin embargo, solo funciona para simular llamadas a otro contrato, por lo que no sería útil en nuestro ejemplo.
 
-## Simular puede ser aún más eficaz {#mocking-can-be-even-more-powerful}
+## La simulación puede ser aún más potente {#mocking-can-be-even-more-powerful}
 
-Los poderes de la simulación no terminan aquí.
+Los beneficios de la simulación no terminan ahí.
 
-- Añadir funciones: no solo sobrescribir una función específica es útil, también lo es añadir funciones adicionales. Un buen ejemplo para los tókenes es contar con una función adicional `mint` para permitir a cualquier usuario consiga los nuevos tókenes sin coste.
-- Uso en redes de prueba: cuando implemente y pruebe sus contratos en redes de pruebas junto con su DApp, considere el usar una versión simulada. Evita el tener que sobreescribir las funciones, a menos que sea realmente necesario. Al fin y al cabo, se trata de probar la lógica real. Pero agregar, por ejemplo, una función de reinicio puede ser útil para simplemente restablecer el contrato a su estado inicial, sin requerir un nuevo despliegue. Obviamente, no haría eso en un contrato de red principal.
+- Agregar funciones: No solo es útil sobrescribir una función específica, sino que también se pueden añadir funciones adicionales. Un buen ejemplo para los tokens es añadir una función `mint` adicional que permita a cualquier usuario obtener nuevos tokens de forma gratuita.
+- Uso en testnets: Cuando implemente y pruebe sus contratos en testnets junto a su dapp, considere usar una versión simulada. Evite sobrescribir funciones a menos que sea realmente necesario. Después de todo, querrá probar la lógica real. Pero agregar, por ejemplo, una función de reinicio puede ser útil, la cual simplemente restablece el estado del contrato al inicio, sin necesidad de una nueva implementación. Obviamente, no querría tener eso en un contrato en Mainnet.
