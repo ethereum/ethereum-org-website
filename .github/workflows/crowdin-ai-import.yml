@@ -4,9 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       file_limit:
-        description: 'Number of files to process (default: 100, use 1-10 for testing)'
+        description: "Number of files to process (default: 100, use 1-10 for testing)"
         required: false
-        default: '100'
+        default: "100"
+        type: string
+      target_languages:
+        description: "Comma-separated Crowdin language codes (default: es-EM)"
+        required: false
+        default: "es-EM"
+        type: string
+      base_branch:
+        description: "Base branch to create PR against (default: dev)"
+        required: false
+        default: "dev"
         type: string
 
 jobs:
@@ -23,35 +33,17 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: Set up git
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Action"
-
-      - name: Generate timestamp and readable date
-        id: date
-        run: |
-          echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
-          echo "READABLE_DATE=$(date +'%B %-d, %Y at %H:%M UTC')" >> $GITHUB_ENV
 
       - name: Run Crowdin AI translation import
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main.ts
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
-
-      - name: Summary
-        run: |
-          echo "## 🎉 Translation Import Complete!" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "The script has completed successfully and created a pull request with the translations." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Details:**" >> $GITHUB_STEP_SUMMARY
-          echo "- Triggered: ${{ env.READABLE_DATE }}" >> $GITHUB_STEP_SUMMARY
-          echo "- File limit: ${{ github.event.inputs.file_limit }} files" >> $GITHUB_STEP_SUMMARY
-          echo "- Check the script output above for PR link and translation details" >> $GITHUB_STEP_SUMMARY
+          FILE_LIMIT: ${{ github.event.inputs.file_limit }}
+          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
+          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          GITHUB_REPOSITORY: ${{ github.repository }}

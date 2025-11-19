@@ -49,15 +49,37 @@ if (!crowdinApiKey) {
 console.log("[DEBUG] Crowdin API key found ✓")
 const crowdinBearerHeaders = { Authorization: `Bearer ${crowdinApiKey}` }
 
+// Parse environment variables with defaults
+const targetLanguages = process.env.TARGET_LANGUAGES
+  ? process.env.TARGET_LANGUAGES.split(",").map((lang) => lang.trim())
+  : ["es-EM"]
+
+const baseBranch = process.env.BASE_BRANCH || "dev"
+
+const fileLimit = process.env.FILE_LIMIT
+  ? parseInt(process.env.FILE_LIMIT, 10)
+  : 100
+
+// Parse GitHub repository from env (format: "owner/repo")
+const githubRepo =
+  process.env.GITHUB_REPOSITORY || "ethereum/ethereum-org-website"
+const [ghOrganization, ghRepo] = githubRepo.split("/")
+
+console.log("[DEBUG] Configuration:")
+console.log(`[DEBUG] - Target languages: ${targetLanguages.join(", ")}`)
+console.log(`[DEBUG] - Base branch: ${baseBranch}`)
+console.log(`[DEBUG] - File limit: ${fileLimit}`)
+console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
+
 const env = {
   projectId: 834930,
-  ghOrganization: "ethereum",
-  ghRepo: "ethereum-org-website",
+  ghOrganization,
+  ghRepo,
   jsonRoot: "src/intl/en",
   mdRoot: "public/content",
   preTranslatePromptId: 168584,
-  allCrowdinCodes: ["es-EM"], // i18nConfig.map((item) => item.crowdinCode),
-  baseBranch: "i18n-flow-1", // "dev",
+  allCrowdinCodes: targetLanguages,
+  baseBranch,
 }
 
 // --- Utilities: resilient fetch for GitHub calls ---
@@ -1067,8 +1089,8 @@ async function main(options?: { allLangs: boolean }) {
     allCrowdinCodes: env.allCrowdinCodes,
   })
 
-  // Increase scope of English files fetched (remove overly restrictive perPage=4)
-  const allEnglishFiles = await getAllEnglishFiles()
+  // Fetch English files with the configured file limit
+  const allEnglishFiles = await getAllEnglishFiles(fileLimit)
   console.log(
     `[DEBUG] Found ${allEnglishFiles.length} English files from GitHub`
   )
