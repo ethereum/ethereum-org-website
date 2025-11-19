@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title SimpleBaseStorage
+ * @dev A simple contract for storing and reading a number on Base network.
+ */
+contract SimpleBaseStorage {
+    uint256 private storedNumber;
+    address public owner;
+
+    event NumberUpdated(uint256 oldNumber, uint256 newNumber);
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function setNumber(uint256 newNumber) public {
+        uint256 oldNumber = storedNumber;
+        storedNumber = newNumber;
+        emit NumberUpdated(oldNumber, newNumber);
+    }
+
+    function getNumber() public view returns (uint256) {
+        return storedNumber;
+    }
+}
