@@ -38,14 +38,14 @@ Una de las mejores maneras de determinar el potencial de las DeFi es entender lo
 
 ### Una comparación {#defi-comparison}
 
-| DeFi                                                                                                                                                                  | Finanzas tradicionales                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usted guarda su dinero.                                                                                                                               | Las empresas guardan su dinero.                                                                                                                                          |
-| Usted controla el destino de su dinero y la manera en la cual se gasta.                                                                               | Debe confiar en que las compañías no administren mal su dinero, como prestárselo a prestatarios no fiables.                                                              |
-| Los fondos se transfieren en cuestión de minutos.                                                                                                     | Los pagos pueden tomar días debido a procesos manuales.                                                                                                                  |
-| La actividad financiera se realiza bajo un seudónimo.                                                                                                 | La actividad financiera está fuertemente vinculada a su identidad.                                                                                                       |
-| DeFi está abierto a cualquier persona.                                                                                                                | Debe solicitar el uso de los servicios financieros.                                                                                                                      |
-| Los mercados siempre están abiertos.                                                                                                                  | Los mercados cierran debido a que los empleados necesitan descanso.                                                                                                      |
+| DeFi                                                                                                                                  | Finanzas tradicionales                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Usted guarda su dinero.                                                                                                               | Las empresas guardan su dinero.                                                                                                                          |
+| Usted controla el destino de su dinero y la manera en la cual se gasta.                                                               | Debe confiar en que las compañías no administren mal su dinero, como prestárselo a prestatarios no fiables.                                              |
+| Los fondos se transfieren en cuestión de minutos.                                                                                     | Los pagos pueden tomar días debido a procesos manuales.                                                                                                  |
+| La actividad financiera se realiza bajo un seudónimo.                                                                                 | La actividad financiera está fuertemente vinculada a su identidad.                                                                                       |
+| DeFi está abierto a cualquier persona.                                                                                                | Debe solicitar el uso de los servicios financieros.                                                                                                      |
+| Los mercados siempre están abiertos.                                                                                                  | Los mercados cierran debido a que los empleados necesitan descanso.                                                                                      |
 | Construido sobre la transparencia: cualquier persona puede mirar los datos del producto e inspeccionar el funcionamiento del sistema. | Las instituciones financieras son como libros cerrados: no puede preguntar por el historial de préstamos, el registro de sus activos administrados, etc. |
 
 <ButtonLink href="/apps/categories/defi">
@@ -115,7 +115,8 @@ La volatilidad de las criptomonedas es un problema para muchos productos financi
 Las monedas como Dai o USDC tienen un valor que varía en pocos céntimos del dólar. Esto las hace perfectas para acumular ganancias o comerciar. Muchas personas en Latinoamérica han utilizado las monedas estables como una forma de proteger sus ahorros frente a momentos de gran incertidumbre que involucran a las monedas emitidas por su gobierno.
 
 <ButtonLink href="/stablecoins/">
-  Más sobre stablecoins</ButtonLink>
+  Más sobre stablecoins
+</ButtonLink>
 
 <Divider />
 
