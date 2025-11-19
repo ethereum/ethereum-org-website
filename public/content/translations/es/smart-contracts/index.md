@@ -1,17 +1,21 @@
 ---
 title: Contratos inteligentes
-metaTitle: "Contratos inteligentes: Qué son y sus beneficios"
+metaTitle: "Contratos inteligentes: Qué son y cuáles son sus beneficios."
 description: Una introducción sin tecnicismos a los contratos inteligentes
 lang: es
 ---
 
 # Introducción a los contratos inteligentes {#introduction-to-smart-contracts}
 
-Los contratos inteligentes son los bloques de construcción fundamentales de la capa de aplicación de Ethereum. Se trata de programas computacionales almacenados en la [cadena de bloques](/glossary/#blockchain) que siguen la lógica "si ocurre esto, entonces ocurre aquello". Los programas garantizan ejecutarse siguiendo las reglas definidas por su propio código, las cuales no se pueden cambiar una vez que fueron creadas.
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
-Nick Szabo acuñó el término «contrato inteligente». En 1994, escribió [una introducción al concepto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), y en 1996 escribió [una exploración de lo que podrían hacer los contratos inteligentes](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Los contratos inteligentes son los bloques de construcción fundamentales de la capa de aplicación de Ethereum. Son programas informáticos almacenados en la [blockchain](/glossary/#blockchain) que siguen una lógica "si esto, entonces aquello", y cuya ejecución está garantizada según las reglas definidas por su código, las cuales no pueden cambiarse una vez creado.
 
-Szabo imaginó un mercado digital donde procesos autómaticos y [criptográficamente seguros](/glossary/#cryptography) permitieran realizar transacciones y negocios sin la necesidad de intermediarios de confianza. Los contratos inteligentes en Ethereum ponen esta visión en práctica.
+Nick Szabo acuñó el término «contrato inteligente». En 1994, escribió [una introducción al concepto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), y en 1996 escribió [una exploración sobre lo que los contratos inteligentes podrían hacer](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+
+Szabo imaginó un mercado digital donde procesos automáticos y [criptográficamente seguros](/glossary/#cryptography) permiten la realización de transacciones y funciones comerciales sin intermediarios de confianza. Los contratos inteligentes en Ethereum ponen esta visión en práctica.
 
 Mire en este vídeo cómo Finematics explica los contratos inteligentes:
 
@@ -61,22 +65,26 @@ Los contratos inteligentes también protegen su privacidad. Puesto que Ethereum 
 
 Finalmente, así como con los contratos tradicionales, usted puede verificar el contenido de un contrato inteligente antes de firmarlo (o alternativamente, interactuar con él). La transparencia de un contato inteligente garantiza que cualquiera pueda examinarlo.
 
-## Casos de uso de contratos inteligentes {#use-cases}
+## Casos de uso de los contratos inteligentes {#use-cases}
 
 Los contratos inteligentes básicamente pueden hacer lo mismo que otros programas informáticos.
 
-Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossary/#nft), enviar comunicaciones e incluso generar gráficos. He aquí algunos ejemplos populares sacados del mundo real:
+Pueden realizar cálculos, crear monedas, almacenar datos, acuñar [NFTs](/glossary/#nft), enviar comunicaciones e incluso generar gráficos. He aquí algunos ejemplos populares sacados del mundo real:
 
-- [Monedas estables](/stablecoins/)
-- [Crear y distribuir activos digitales únicos](/nft/)
-- [Un cambio de divisas automático y abierto](/get-eth/#dex)
+- [Stablecoins](/stablecoins/)
+- [Creación y distribución de activos digitales únicos](/nft/)
+- [Un intercambio de divisas abierto y automático](/get-eth/#dex)
 - [Juegos descentralizados](/apps/categories/gaming)
-- [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
-- [Un estándar que permite a las personas crear divisas interoperables y personalizadas](/developers/docs/standards/tokens/)
+- [Una póliza de seguro que paga de forma automática](https://etherisc.com/)
+- [Un estándar que permite a las personas crear monedas personalizadas e interoperables](/developers/docs/standards/tokens/)
 
-## Más información {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-- [¿Cómo cambiarán el mundo los contratos inteligentes?](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
+- [Cómo los contratos inteligentes cambiarán el mundo](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Contratos inteligentes para desarrolladores](/developers/docs/smart-contracts/)
-- [Aprenda a redactar contratos inteligentes](/developers/learning-tools/)
-- [Dominar Ethereum: ¿Qué es un contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Aprenda a programar contratos inteligentes](/developers/learning-tools/)
+- [Mastering Ethereum - ¿Qué es un contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />
