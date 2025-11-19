@@ -65,11 +65,19 @@ const githubRepo =
   process.env.GITHUB_REPOSITORY || "ethereum/ethereum-org-website"
 const [ghOrganization, ghRepo] = githubRepo.split("/")
 
+// Check if resuming from existing pre-translation
+const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
+
 console.log("[DEBUG] Configuration:")
 console.log(`[DEBUG] - Target languages: ${targetLanguages.join(", ")}`)
 console.log(`[DEBUG] - Base branch: ${baseBranch}`)
 console.log(`[DEBUG] - File limit: ${fileLimit}`)
 console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
+if (existingPreTranslationId) {
+  console.log(
+    `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
+  )
+}
 
 const env = {
   projectId: 834930,
@@ -1079,6 +1087,110 @@ const postPullRequest = async (head: string, base = env.baseBranch) => {
   return json
 }
 
+/**
+ * Build and commit translations from a completed pre-translation job
+ */
+async function buildAndCommitTranslations(
+  preTranslateJobCompletedResponse: CrowdinPreTranslateResponse
+) {
+  if (preTranslateJobCompletedResponse.status !== "finished") {
+    console.error(
+      "[BUILD] ❌ Pre-translation did not finish successfully. Full response:",
+      preTranslateJobCompletedResponse
+    )
+    throw new Error(
+      `Pre-translation ended with unexpected status: ${preTranslateJobCompletedResponse.status}`
+    )
+  }
+
+  console.log(`[BUILD] ✓ Pre-translation completed successfully!`)
+  console.log(`[BUILD] Progress: ${preTranslateJobCompletedResponse.progress}%`)
+  console.log(
+    `[BUILD] Full response:`,
+    JSON.stringify(preTranslateJobCompletedResponse, null, 2)
+  )
+
+  const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
+
+  // Get Crowdin project files for path mapping
+  const crowdinProjectFiles = await getCrowdinProjectFiles()
+
+  // Build mapping for commit phase using existing Crowdin files
+  const fileIdToPathMapping: Record<number, string> = {}
+  for (const fid of fileIds) {
+    const existing = crowdinProjectFiles.find((f) => f.id === fid)
+    if (existing) fileIdToPathMapping[fid] = existing.path
+
+    if (!fileIdToPathMapping[fid]) {
+      console.warn(
+        `[WARN] Missing path mapping for fileId=${fid} (may impact destination path calculation)`
+      )
+    }
+  }
+
+  // Build mapping between Crowdin IDs (e.g. "es-EM") and internal codes (e.g. "es")
+  const languagePairs = languageIds.map((crowdinId) => ({
+    crowdinId,
+    internalLanguageCode: crowdinToInternalCodeMapping[crowdinId],
+  }))
+
+  const { branch } = await postCreateBranchFrom(env.baseBranch)
+  console.log(`\n[BRANCH] ✓ Created branch: ${branch}`)
+
+  // For each language
+  for (const { crowdinId, internalLanguageCode } of languagePairs) {
+    console.log(
+      `\n[BUILD] ========== Building translations for language: ${crowdinId} (internal: ${internalLanguageCode}) ==========`
+    )
+
+    // Build, download and commit each file
+    for (const fileId of fileIds) {
+      console.log(`\n[BUILD] --- Processing fileId: ${fileId} ---`)
+      const crowdinPath = fileIdToPathMapping[fileId]
+      console.log(`[BUILD] Crowdin path: ${crowdinPath}`)
+
+      // 1- Build
+      console.log(
+        `[BUILD] Requesting build for fileId=${fileId}, language=${crowdinId}`
+      )
+      const { url: downloadUrl } = await postBuildProjectFileTranslation(
+        fileId,
+        crowdinId,
+        env.projectId
+      )
+      console.log(`[BUILD] ✓ Build complete, download URL: ${downloadUrl}`)
+
+      // 2- Download
+      console.log(`[BUILD] Downloading translated file...`)
+      const { buffer } = await getBuiltFile(downloadUrl)
+      console.log(`[BUILD] Downloaded ${buffer.length} bytes`)
+
+      // 3a- Get destination path
+      const destinationPath = getDestinationFromPath(
+        crowdinPath,
+        internalLanguageCode
+      )
+      console.log(`[BUILD] Destination path: ${destinationPath}`)
+
+      // 3b- Commit
+      console.log(`[BUILD] Committing to branch: ${branch}`)
+      await putCommitFile(buffer, destinationPath, branch)
+      console.log(`[BUILD] ✓ Committed successfully`)
+    }
+  }
+
+  console.log(`\n[PR] ========== Creating Pull Request ==========`)
+  console.log(`[PR] Head branch: ${branch}`)
+  console.log(`[PR] Base branch: ${env.baseBranch}`)
+
+  const pr = await postPullRequest(branch, env.baseBranch)
+
+  console.log(`\n[SUCCESS] ========== Translation import complete! ==========`)
+  console.log(`[SUCCESS] Pull Request URL: ${pr.html_url}`)
+  console.log(`[SUCCESS] PR Number: #${pr.number}`)
+  console.log(pr)
+}
+
 async function main(options?: { allLangs: boolean }) {
   console.log(`[DEBUG] Starting main function with options:`, options)
   console.log(`[DEBUG] Environment config:`, {
@@ -1088,6 +1200,40 @@ async function main(options?: { allLangs: boolean }) {
     mdRoot: env.mdRoot,
     allCrowdinCodes: env.allCrowdinCodes,
   })
+
+  // Check if resuming from existing pre-translation
+  if (existingPreTranslationId) {
+    console.log(
+      `\n[RESUME] ========== Resuming from pre-translation ID: ${existingPreTranslationId} ==========`
+    )
+    console.log(`[RESUME] Checking status of existing pre-translation...`)
+
+    const preTranslateJobCompletedResponse = await getPreTranslationStatus(
+      existingPreTranslationId
+    )
+
+    if (preTranslateJobCompletedResponse.status === "in_progress") {
+      console.log(
+        `[RESUME] Pre-translation still in progress (${preTranslateJobCompletedResponse.progress}%). Waiting for completion...`
+      )
+      const completedResponse = await awaitPreTranslationCompleted(
+        existingPreTranslationId
+      )
+      return await buildAndCommitTranslations(completedResponse)
+    } else if (preTranslateJobCompletedResponse.status === "finished") {
+      console.log(
+        `[RESUME] Pre-translation already finished. Building translations...`
+      )
+      return await buildAndCommitTranslations(preTranslateJobCompletedResponse)
+    } else {
+      throw new Error(
+        `Pre-translation ${existingPreTranslationId} has unexpected status: ${preTranslateJobCompletedResponse.status}`
+      )
+    }
+  }
+
+  // Normal flow: Start new pre-translation
+  console.log(`\n[START] ========== Starting new pre-translation ==========`)
 
   // Fetch English files with the configured file limit
   const allEnglishFiles = await getAllEnglishFiles(fileLimit)
@@ -1228,119 +1374,8 @@ async function main(options?: { allLangs: boolean }) {
     applyPreTranslationResponse.identifier
   )
 
-  if (preTranslateJobCompletedResponse.status !== "finished") {
-    console.error(
-      "[PRE-TRANSLATE] ❌ Pre-translation did not finish successfully. Full response:",
-      preTranslateJobCompletedResponse
-    )
-    throw new Error(
-      `Pre-translation ended with unexpected status: ${preTranslateJobCompletedResponse.status}`
-    )
-  }
-
-  console.log(`[PRE-TRANSLATE] ✓ Job completed successfully!`)
-  console.log(
-    `[PRE-TRANSLATE] Progress: ${preTranslateJobCompletedResponse.progress}%`
-  )
-  console.log(
-    `[PRE-TRANSLATE] Full response:`,
-    JSON.stringify(preTranslateJobCompletedResponse, null, 2)
-  )
-
-  const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
-
-  // Build mapping for commit phase. Prefer processed mapping (includes newly added files); fall back to existing Crowdin snapshot for any missed IDs.
-  const fileIdToPathMapping: Record<number, string> = {}
-  for (const fid of fileIds) {
-    if (processedFileIdToPath[fid]) {
-      fileIdToPathMapping[fid] = processedFileIdToPath[fid]
-    } else {
-      const existing = crowdinProjectFiles.find((f) => f.id === fid)
-      if (existing) fileIdToPathMapping[fid] = existing.path
-    }
-    if (!fileIdToPathMapping[fid]) {
-      console.warn(
-        `[WARN] Missing path mapping for fileId=${fid} (may impact destination path calculation)`
-      )
-    }
-  }
-  // Build mapping between Crowdin IDs (e.g. "es-EM") and internal codes (e.g. "es")
-  const languagePairs = languageIds.map((crowdinId) => ({
-    crowdinId,
-    internalLanguageCode: crowdinToInternalCodeMapping[crowdinId],
-  }))
-
-  const { branch } = await postCreateBranchFrom(env.baseBranch)
-  console.log(`\n[BRANCH] ✓ Created branch: ${branch}`)
-
-  // For each language
-  for (const { crowdinId, internalLanguageCode } of languagePairs) {
-    console.log(
-      `\n[BUILD] ========== Building translations for language: ${crowdinId} (internal: ${internalLanguageCode}) ==========`
-    )
-
-    // Build, download and commit each file updated
-    for (const fileId of fileIds) {
-      console.log(`\n[BUILD] --- Processing fileId: ${fileId} ---`)
-      const crowdinPath = fileIdToPathMapping[fileId]
-      console.log(`[BUILD] Crowdin path: ${crowdinPath}`)
-
-      // 1- Build
-      console.log(
-        `[BUILD] Requesting build for fileId=${fileId}, language=${crowdinId}`
-      )
-      const { url: downloadUrl } = await postBuildProjectFileTranslation(
-        fileId,
-        crowdinId, // Crowdin expects the Crowdin language ID here (e.g., "es-EM")
-        env.projectId
-      )
-      console.log(`[BUILD] ✓ Build complete, download URL: ${downloadUrl}`)
-
-      // 2- Download
-      console.log(`[BUILD] Downloading translated file...`)
-      const { buffer } = await getBuiltFile(downloadUrl)
-      console.log(`[BUILD] Downloaded ${buffer.length} bytes`)
-
-      // Check if translation differs from English
-      const originalEnglish = englishBuffers[fileId]
-      if (originalEnglish) {
-        console.log(
-          `[BUILD] Original English size: ${originalEnglish.length} bytes`
-        )
-        if (originalEnglish.compare(buffer) === 0) {
-          console.warn(
-            `[BUILD] ⚠️  Skipping commit - content identical to English (no translation occurred)`
-          )
-          continue
-        } else {
-          console.log(`[BUILD] ✓ Translation differs from English, will commit`)
-        }
-      }
-
-      // 3a- Get destination path
-      const destinationPath = getDestinationFromPath(
-        crowdinPath,
-        internalLanguageCode // Use internal code (e.g., "es") for repo path replacement
-      )
-      console.log(`[BUILD] Destination path: ${destinationPath}`)
-
-      // 3b- Commit
-      console.log(`[BUILD] Committing to branch: ${branch}`)
-      await putCommitFile(buffer, destinationPath, branch)
-      console.log(`[BUILD] ✓ Committed successfully`)
-    }
-  }
-
-  console.log(`\n[PR] ========== Creating Pull Request ==========`)
-  console.log(`[PR] Head branch: ${branch}`)
-  console.log(`[PR] Base branch: ${env.baseBranch}`)
-
-  const pr = await postPullRequest(branch, env.baseBranch)
-
-  console.log(`\n[SUCCESS] ========== Translation import complete! ==========`)
-  console.log(`[SUCCESS] Pull Request URL: ${pr.html_url}`)
-  console.log(`[SUCCESS] PR Number: #${pr.number}`)
-  console.log(pr)
+  // Build and commit translations
+  await buildAndCommitTranslations(preTranslateJobCompletedResponse)
 }
 
 main().catch((err) => {
