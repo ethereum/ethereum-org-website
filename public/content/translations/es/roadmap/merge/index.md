@@ -17,17 +17,17 @@ summaryPoint4: La Fusión redujo el consumo de energía de Ethereum en un ~99,95
 
 ## ¿Qué es La Fusión? {#what-is-the-merge}
 
-La fusión fue la unión de la capa de ejecución inicial de Ethereum (la red principal que ha existido desde el [génesis](/ethereum-forks/#frontier)) con su nueva capa de consenso de prueba de participación, la cadena de baliza. Eliminó la necesidad de la minería conun consumo intensivo de energía y, en su lugar, permitió asegurar la red utilizando ETH apostados. Es un paso verdaderamente emocionante para hacer la visión de Ethereum una realidad: más escalabilidad, seguridad y sostenibilidad.
+La Fusión fue la unión de la capa de ejecución original de Ethereum (la Mainnet que ha existido desde el [génesis](/history/#frontier)) con su nueva capa de consenso proof-of-stake, la Beacon Chain. Eliminó la necesidad de la minería conun consumo intensivo de energía y, en su lugar, permitió asegurar la red utilizando ETH apostados. Es un paso verdaderamente emocionante para hacer la visión de Ethereum una realidad: más escalabilidad, seguridad y sostenibilidad.
 
 <MergeInfographic />
 
-Inicialmente, la [cadena de baliza](/roadmap/beacon-chain/) se lanzó de manera separada de la [red principal](/glossary/#mainnet). La red principal de Ethereum, con todas sus cuentas, balances, contratos inteligentes y estado de la cadena de bloques, continúa siendo asegurdad por el mecanismo de [prueba de participación](/developers/docs/consensus-mechanisms/pow/), incluso cuando la cadena de baliza se ejecuta en paralelo usando la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). La Fusión se produce cuando estos dos sistemas finalmente se unen, siendo la prueba de trabajo permanentemente remplazada por la prueba de participación.
+Inicialmente, la [Beacon Chain](/roadmap/beacon-chain/) se lanzó por separado de la [Mainnet](/glossary/#mainnet). La Mainnet de Ethereum - con todas sus cuentas, balances, contratos inteligentes y estado de la blockchain - continuó asegurada mediante [proof-of-work](/developers/docs/consensus-mechanisms/pow/), incluso mientras la Beacon Chain funcionaba en paralelo utilizando [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusión se produce cuando estos dos sistemas finalmente se unen, siendo la prueba de trabajo permanentemente remplazada por la prueba de participación.
 
-Imagina que Ethereum es una nave espacial que es lanzada antes de estar lista para un viaje interestelar. Con la cadena de baliza, la comunidad construyó un nuevo motor y un chasis más fuerte. Después de muchas pruebas, casi ha llegado el momento de cambiar el nuevo motor por el antiguo en pleno vuelo. De este modo, el nuevo motor, más eficiente, se integrará en la nave existente, preparada para recorrer grandes distancias y conquistar el universo.
+Imagina que Ethereum es una nave espacial que es lanzada antes de estar lista para un viaje interestelar. Con la cadena de baliza, la comunidad construyó un nuevo motor y un chasis más fuerte. Después de muchas pruebas, casi ha llegado el momento de cambiar el nuevo motor por el antiguo en pleno vuelo. Esto integró el nuevo y más eficiente motor en la nave existente, permitiéndole recorrer grandes distancias y enfrentar el universo.
 
-## Acoplamiento con la red principal {#merging-with-mainnet}
+## Fusión con Mainnet {#merging-with-mainnet}
 
-Prueba de trabajo aseguraba la red principal de Ethereum desde sus orígenes hasta La Fusión. Esto permitió que la cadena de bloques de Ethereum que todos usamos se creara en julio de 2015 con todas sus características familiares: transacciones, contratos inteligentes, cuentas, etc.
+Prueba de trabajo aseguraba la red principal de Ethereum desde sus orígenes hasta La Fusión. Esto permitió que la blockchain de Ethereum que todos conocemos existiera desde julio de 2015 con todas sus características familiares: transacciones, contratos inteligentes, cuentas, etc.
 
 A lo largo de la historia de Ethereum, los desarrolladores han trabajado duro para preparar una eventual transición del algoritmo de consenso prueba de trabajo a prueba de participación. El 1 de diciembre de 2020 se creó la cadena de baliza, que desde entonces existe como una cadena de bloques independiente de la red principal, funcionando en paralelo.
 
@@ -37,28 +37,24 @@ La Fusión representa la transición oficial al uso de la cadena de baliza como 
 
 El historial no se ha perdido tras La Fusión. Ya que la red principal se fusionó con la cadena de baliza, también se produjo una fusión de todo el historial de transacciones de Ethereum.
 
-<Alert variant="update">
-<AlertContent>
-<AlertDescription>
-Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre [la emisión de ether antes y después de La Fusión](/roadmap/merge/issuance/).
-</AlertDescription>
-</AlertContent>
-</Alert>
+<InfoBanner>
+Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Aprende más sobre [la emisión de ether antes y después de The Merge](/roadmap/merge/issuance/).
+</InfoBanner>
 
-### Usuarios y titulares {#users-holders}
+### Usuarios y poseedores {#users-holders}
 
 **La Fusión no cambió nada para los titulares/usuarios.**
 
-_Es necesario repetirlo_: Como usuarios o titulares de ETH o cualquier otro activo digital de Ethereum, así como aquellos participantes que no operan en nodos, **no es necesario realizar ninguna acción relacionada con sus fondos, cartera o cuenta para La Fusión.** ETH sigue siendo ETH. No existirán tales cosas como «old ETH»/«new ETH» ni «ETH1»/«ETH2». Las carteras seguirán funcionando exactamente igual que como lo hacían antes de La Fusión. Las personas que sugieran lo contrario, probablemente sean estafadores.
+_Esto merece repetirse_: Como usuario o poseedor de ETH o cualquier otro activo digital en Ethereum, así como stakeadores que no operan nodos, **no necesita hacer nada con sus fondos o billetera para tener en cuenta la Fusión.** ETH sigue siendo solo ETH. No existirán tales cosas como «old ETH»/«new ETH» ni «ETH1»/«ETH2». Las carteras seguirán funcionando exactamente igual que como lo hacían antes de La Fusión. Las personas que sugieran lo contrario, probablemente sean estafadores.
 
 A pesar de intercambiar la prueba de trabajo y transicionar a la prueba de participación, el historial completo de Ethereum se mantiene intacto y sin alteraciones desde su creación. Todos los fondos que tengas en tu cartera antes de La Fusión siguen siendo accesibles después de la misma. **No se requiere ninguna actualización por su parte.**
 
-[Más información sobre la seguridad de Ethereum](/security/#eth2-token-scam)
+[Más sobre seguridad en Ethereum](/security/#eth2-token-scam)
 
-### Operadores de nodos y desarrolladores de DApps {#node-operators-dapp-developers}
+### Operadores de nodos y desarrolladores de dapps {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Operadores de nodos de participación y proveedores"
+title="Staking node operators and providers"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
 id="staking-node-operators">
 
@@ -70,11 +66,10 @@ Las principales medidas son las siguientes:
 
 Si no se completan los dos puntos anteriores, el nodo se verá como «desconectado» hasta que ambas capas estén sincronizadas y autenticadas.
 
-Si no se establece un «receptor de las comisiones», el validador seguirá comportandose como de costumbre, pero se perderán las propinas de las comisiones no consumidas y cualquier MEV que se hubiera ganado en los bloques que propone el validador.
-</ExpandableCard>
+Si no se establece un «receptor de las comisiones», el validador seguirá comportandose como de costumbre, pero se perderán las propinas de las comisiones no consumidas y cualquier MEV que se hubiera ganado en los bloques que propone el validador. </ExpandableCard>
 
 <ExpandableCard
-title="Operadores de nodos no validadores y proveedores de infraestructura"
+title="Non-validating node operators and infrastructure providers"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
 id="node-operators">
 
@@ -82,17 +77,17 @@ Hasta el momento de La Fusión, un cliente de ejecución (como Geth, Erigon, Bes
 
 Como resultado de ello, un nodo completo de Ethereum ahora requiere tanto de un cliente de ejecución como de un cliente de consenso. Estos dos clientes trabajan juntos utilizando una nueva Engine API. La Engine API requiere la autenticación mediante un JWT secreto, que se proporciona a ambos clientes permitiendo una comunicación segura.
 
-Las acciones clave incluyen:
+Las principales medidas son las siguientes:
 
-- La instalación de un cliente de consenso adicional al cliente de ejecución.
-- La autenticación de los clientes de ejecución y consenso con un JWT secreto compartido para permitir que estos se comuniquen entre sí de manera segura.
+- Instale un cliente de consenso además de un cliente de ejecución
+- Autentique los clientes de ejecución y consenso con un secreto JWT compartido para que puedan comunicarse de forma segura entre sí.
 
 Si no se completan los pasos anteriores, su nodo aparecerá como «desconectado» hasta que ambas capas estén sincronizadas y autenticadas.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Desarrolladores de DApps y contratos inteligentes"
+title="Dapp and smart contract developers"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
@@ -112,17 +107,17 @@ Para obtener más información, eche un vistazo a esta publicación en el blog d
 
 ## La Fusión y el consumo de energía {#merge-and-energy}
 
-La Fusión marcó el final de la prueba de trabajo para Ethereum y dio inicio a la era de un Ethereum más sostenible y ecológico. El consumo de energía de Ethereum se redujo en un 99,95% aproximadamente, haciendo de Ethereum una cadena de bloques ecológica. Más información sobre [el consumo de energía de Ethereum](/energy-consumption/).
+La Fusión marcó el final de la prueba de trabajo para Ethereum y dio inicio a la era de un Ethereum más sostenible y ecológico. El consumo de energía de Ethereum se redujo en un 99,95% aproximadamente, haciendo de Ethereum una cadena de bloques ecológica. Conozca más sobre el [consumo energético de Ethereum](/energy-consumption/).
 
-## La Fusión y la fragmentación {#merge-and-scaling}
+## La Fusión y la escalabilidad {#merge-and-scaling}
 
-La Fusión coloca a Ethereum en una nueva fase de actualizaciones escalables que no podrían realizarse bajo el mecanismo de prueba de trabajo, lo que permite que Ethereum dé un paso importante en la consecución de los objetivos de escalabilidad, seguridad y sustentabilidad contenidos en la [Visión de Ethereum](/roadmap/vision/).
+La Fusión también preparó el camino para futuras mejoras de escalabilidad que no serían posibles bajo proof-of-work, acercando a Ethereum un paso más a lograr la escala, seguridad y sustentabilidad completas descritas en su [visión de Ethereum](/roadmap/vision/).
 
-## Conceptos erróneos sobre La Fusión {#misconceptions}
+## Conceptos erróneos sobre la Fusión {#misconceptions}
 
 <ExpandableCard
-title="Concepto erróneo: &quot;Ejecutar un nodo requiere depositar 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+title="Concepto erróneo: &quot;Ejecutar un nodo requiere hacer staking de 32 ETH.&quot;"
+contentPreview="Falso. Cualquier persona puede sincronizar su propia copia auto-verificada de Ethereum (es decir, ejecutar un nodo). No se requiere ETH, ni antes de la Fusión, ni después de la Fusión, ni nunca.">
 
 Hay dos tipos de nodos en Ethereum: los que pueden proponer bloques y los que no.
 
@@ -134,54 +129,53 @@ Cualquier persona bajo cualquier mecanismo de consenso (prueba de trabajo o prue
 
 La capacidad de cualquier persona tiene de ejecutar su propio nodo es <em>absolutamente esencial</em> para mantener la descentralización de la red Ethereum.
 
-[Más información sobre cómo ejecutar su propio nodo.](/run-a-node/)
+[Más sobre la ejecución de su propio nodo](/run-a-node/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Concepto erróneo: &quot;La Fusión falló en la reducción de la tarifa de gas.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Concepto erróneo: &quot;La Fusión no logró reducir las tarifas de gas.&quot;"
+contentPreview="Falso. La Fusión fue un cambio de mecanismo de consenso, no una expansión de la capacidad de la red, y nunca se pretendió que redujera las tarifas de gas.">
 
 Las tarifas de gas son producto de la demanda de la red en relación con la capacidad de la misma. La Fusión dejó obsoleto el uso del mecanismo de prueba de trabajo, permitiendo la transición a la prueba de participación para el consenso, pero no cambió de manera significativa ninguno de los parámetros que influyen de manera directa la capacidad o rendimiento de la red.
 
-Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en las acumulaciones</a>, los esfuerzos se están centrando en escalar la actividad del usuario en la [capa 2](/layer-2/), al tiempo que se le permite la red principal de la capa 1 ser una capa de liquidación descentralizada segura optimizada para el almacenamiento de datos de la acumulación y así ayudar a hacer que las transacciones sean exponencialmente más baratas. La transición a la prueba de participación es un precursor fundamental para conseguirlo. [Más información sobre el gas y las tarifas. ](/developers/docs/gas/)
+Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en los rollups</a>, los esfuerzos se enfocan en escalar la actividad de los usuarios en la [capa 2](/layer-2/), mientras que la capa 1 Mainnet se habilita como una capa de liquidación descentralizada y segura, optimizada para el almacenamiento de datos de los rollups, lo que ayuda a que las transacciones de rollups sean exponencialmente más baratas. La transición a la prueba de participación es un precursor fundamental para conseguirlo. [Más sobre el gas y las tasas.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Concepto erróneo: &quot;Las transacciones se aceleraron sustancialmente tras La Fusión.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
-La «velocidad» de una transacción puede medirse de varias maneras, incluyendo el tiempo de inclusión en un bloque y el tiempo de finalización. Ambas cosas cambian ligeramente, aunque no de forma perceptible para los usuarios.
+title="Concepto erróneo: &quot;Las transacciones se aceleraron sustancialmente con la Fusión.&quot;"
+contentPreview="Falso. Aunque existen algunos pequeños cambios, la velocidad de las transacciones en la capa 1 sigue siendo prácticamente la misma que antes de la Fusión.">
+La "velocidad" de una transacción se puede medir de varias maneras, incluyendo el tiempo hasta ser incluida en un bloque y el tiempo hasta su finalización. Ambas cosas cambian ligeramente, aunque no de forma perceptible para los usuarios.
 
 Históricamente, en la prueba de trabajo, el objetivo era tener un nuevo bloque cada ~13,3 segundos. Con la prueba de participación, los intervalos ocurren cada 12 segundos, y cada uno de ellos constituye una oportunidad para que el validador publique un bloque. La mayoría de las ranuras tienen bloques, aunque no necesariamente todos (por ejemplo , un validador está desconectado). Con la prueba de participación, los bloques se producen con más de 10 % de frecuencia en comparación con la prueba de trabajo. Esto es un cambio relativamente insignificante, con pocas probabilidades de ser percibido por los usuarios.
 
-La prueba de participación introduce el concepto de finalidad de la transacción que no existía anteriormente. Con la prueba de trabajo, la posibilidad de revertir un bloque se hace exponencialmente más difícil, con cada bloque aprobado siendo minado como complemento de la transacción, aunque nunca suele llegar a cero. En la prueba de participación, los bloques se agrupan en épocas (periodos de tiempo de 6,4 minutos que contienen 32 oportunidades para los bloques) que los validadores votan. Cuando termina una época, los validadores votan si la consideran «justificada». Si los validadores están de acuerdo en justificarla, se finaliza en la siguiente. Deshacer las transacciones finalizadas es económicamente inviable ya que requeriría obtener y quemar más de un tercio del total de ETH depositado.
+La prueba de participación introduce el concepto de finalidad de la transacción que no existía anteriormente. Con la prueba de trabajo, la posibilidad de revertir un bloque se hace exponencialmente más difícil, con cada bloque aprobado siendo minado como complemento de la transacción, aunque nunca suele llegar a cero. En la prueba de participación, los bloques se agrupan en épocas (periodos de tiempo de 6,4 minutos que contienen 32 oportunidades para los bloques) que los validadores votan. Cuando termina una época, los validadores votan si la consideran «justificada». Si los validadores están de acuerdo en justificarla, se finaliza en la siguiente. Deshacer transacciones finalizadas es económicamente inviable, ya que requeriría obtener y quemar más de un tercio del ETH total en staking.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Concepto erróneo: &quot;La Fusión habilitará los retiros de la participación.&quot;"
+title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
 
 Inicialmente, después de La Fusión, los participantes solo podían acceder a las propinas de tarifas y MEV que se ganaban como resultado de las propuestas de bloques. Estas recompensas se acreditan a una cuenta sin participación controlada por el validador (conocida como el <em>destinatario de la tarifa</em>), y están disponibles de inmediato. Estas recompensas están separadas de las recompensas del protocolo para realizar las tareas de validación.
 
 Desde la mejora de la red Shanghai/Capella, los participantes pueden designar una <em>dirección de retirada</em> para comenzar a recibir pagos automáticos de cualquier saldo en exceso (más de 32 ETH por recompensas del protocolo). Esta actualización también permitió a los validadores desbloquear y reclamar el total de su saldo al salir de la red.
 
-[Más información sobre la retirada de participaciones.](/staking/withdrawals/)
+[Más sobre retiradas de participaciones](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Ideas erróneas: &quot;ahora que se ha completado La Fusión y las retiradas se han activado, los participantes pueden salir todos a la vez.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
-Desde que la actualización Shanghai/Capella activó las retiradas, los validadores tienen el incentivo de retirar su saldo excedente de participación por encima de los 32 ETH, pues estos fondos no suman al rendimiento y sólo están bloqueados. Dependiendo de la tasa efectiva anual (o APR, según sus siglas en inglés), que viene determinada por el total de ETH depositado, se puede animar a su(s) validadores a reclamar todo su saldo o potencialmente apostar aún más usando sus recompensas para ganar más rendimiento.
+title="Concepto erróneo: &quot;Ahora que la Fusión está completa y los retiros están habilitados, todos los stakeadores podrían salir al mismo tiempo.&quot;"
+contentPreview="Falso. La salida de validadores está limitada por tasa por motivos de seguridad.">
+Desde que la actualización Shanghai/Capella habilitó los retiros, los validadores están incentivados a retirar el saldo en staking por encima de 32 ETH, ya que esos fondos no generan rendimiento y de otro modo permanecen bloqueados. Dependiendo de la tasa efectiva anual (o APR, según sus siglas en inglés), que viene determinada por el total de ETH depositado, se puede animar a su(s) validadores a reclamar todo su saldo o potencialmente apostar aún más usando sus recompensas para ganar más rendimiento.
 
 Un detalle importante que cabe recalcar es que el ritmo de las salidas de un validador total las limita el protocolo, y sólo puede salir cierto número de validadores por época (cada 6,4 minutos). Este límite fluctúa dependiendo del número de validadores activos, pero llega a aproximadamente el 0,33 % del total de ETH en participación que puede salir de la red en un solo día.
 
 Esto evita un éxodo masivo de fondos en participación. Además, evita que un potencial atacante con acceso a una gran parte del total de ETH en participación actúe de mala fe y que se pueda recortar/retirar todo el saldo del validador causante en la misma época, antes de que el protocolo pueda hacer cumplir la penalización mediante recorte.
 
-La APR también es intencionalmente dinámica, lo que permite a un mercado de participantes equilibrar cuánto están dispuestos a que se les pague para ayudar a proteger la red. Si la tasa es muy baja, los validadores se retirarán a un ritmo limitado por el protocolo. Poco a poco, esto aumentará la APR para todos los que se queden, atrayendo a nuevos participantes o a los que regresen.
-</ExpandableCard>
+La APR también es intencionalmente dinámica, lo que permite a un mercado de participantes equilibrar cuánto están dispuestos a que se les pague para ayudar a proteger la red. Si la tasa es muy baja, los validadores se retirarán a un ritmo limitado por el protocolo. Poco a poco, esto aumentará la APR para todos los que se queden, atrayendo a nuevos participantes o a los que regresen. </ExpandableCard>
 
 ## ¿Qué pasó con «Eth2»? {#eth2}
 
@@ -194,39 +188,39 @@ Para evitar mayor confusión, la comunidad ha actualizado estos términos:
 
 Estas actualizaciones de terminología solo cambian la nomenclatura, no alteran los objetivos ni el itinerario de Ethereum.
 
-[Más información acerca del cambio de nombre a «Eth2»](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Obtenga más información sobre el cambio de nombre de 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
 ## Relación entre actualizaciones {#relationship-between-upgrades}
 
 Las actualizaciones de Ethereum están interrelacionadas de alguna manera. Recapitulemos pues, sobre cómo se relaciona La Fusión con otras actualizaciones.
 
-### La Fusión y la cadena de baliza {#merge-and-beacon-chain}
+### La Fusión y la Beacon Chain {#merge-and-beacon-chain}
 
-La Fusión representa la adopción formal de la cadena de baliza como la nueva capa de consenso de la capa de ejecución original de la red principal. Desde La Fusión, se asignan validadores para proteger la red principal de Ethereum y el minado de la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/) deja de ser el medio válido para la producción de bloques.
+La Fusión representa la adopción formal de la cadena de baliza como la nueva capa de consenso de la capa de ejecución original de la red principal. Desde la Fusión, los validadores están asignados para asegurar la Mainnet de Ethereum, y la minería mediante [proof-of-work](/developers/docs/consensus-mechanisms/pow/) ya no es un método válido para la producción de bloques.
 
 En su lugar, los bloques serán propuestos desde un nodo validado que tenga ETH apostados a cambio del derecho de participar en el consenso. Estas actualizaciones sientan las bases para futuras mejoras de escalabilidad, incluida la fragmentación.
 
 <ButtonLink href="/roadmap/beacon-chain/">
-  La cadena de baliza
+  La Beacon Chain
 </ButtonLink>
 
-### La Fusión y actualización Shanghai {#merge-and-shanghai}
+### La Fusión y la actualización Shanghai {#merge-and-shanghai}
 
 Con la intención de simplificar y maximizar los esfuerzos centrados en una transición fructífera a la prueba de participación, la actualización de La Fusión no incluirá algunas características previamente anticipadas, como la posibilidad de retirar ETH apostados. Esta funcionalidad se habilitó de forma separada con la actualización Shanghai/Capella.
 
-Aquellos que quieran saber más, pueden ver la charla [Lo que ocurrirá después de La Fusión](https://youtu.be/7ggwLccuN5s?t=101), que dio Vitalik, en el evento ETHGlobal en abril de 2021.
+Para quienes tengan curiosidad, conozca más sobre [Qué sucede después de la Fusión](https://youtu.be/7ggwLccuN5s?t=101), presentado por Vitalik en el evento ETHGlobal de abril de 2021.
 
-### La fusión y la fragmentación {#merge-and-data-sharding}
+### La Fusión y el sharding {#merge-and-data-sharding}
 
-Originalmente, el plan era trabajar en la fragmentación antes de La Fusión para abordar la escalabilidad. No obstante, con la proliferación de las [soluciones escalables de capa 2](/layer-2/), las prioridades se reorientaron a pasar de prueba de trabajo a prueba de participación.
+Originalmente, el plan era trabajar en la fragmentación antes de La Fusión para abordar la escalabilidad. Sin embargo, con el auge de las [soluciones de escalado de capa 2](/layer-2/), la prioridad cambió a reemplazar primero el proof-of-work por proof-of-stake.
 
 Los planes de fragmentación están evolucionando rápidamente, pero dado el auge y el éxito de las tecnologías de capa 2 para escalar la ejecución de transacciones, los planes de fragmentación han pasado a buscar la forma más óptima de distribuir la carga de almacenar los datos comprimidos de las llamadas procedentes de las acumulaciones, permitiendo un crecimiento exponencial de la capacidad de la red. Esto no sería posible sin pasar primero a la prueba de participación.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Fragmentación
+  Sharding
 </ButtonLink>
 
-## Más información {#further-reading}
+## Lecturas adicionales {#further-reading}
 
 <MergeArticleList />
 
