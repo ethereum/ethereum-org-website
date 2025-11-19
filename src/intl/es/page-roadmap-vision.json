@@ -14,7 +14,7 @@
   "page-roadmap-vision-problems": "Los problemas actuales",
   "page-roadmap-vision-scalability": "Escalabilidad",
   "page-roadmap-vision-scalability-desc": "Ethereum tiene que ser capaz de manejar más transacciones por segundo sin aumentar el tamaño de los nodos en la red. Los nodos son vitales participantes de la red que almacenan y ejecutan la cadena de bloques. Aumentar el tamaño de los nodos no es práctico, ya que solo aquellos con computadoras potentes y caras podrían hacerlo. Para escalar, Ethereum necesita más transacciones por segundo junto con más nodos. Y más nodos significa más seguridad.",
-  "page-roadmap-vision-scalability-desc-3": "Layer 2 rollups scale Ethereum by moving transactions off-chain and only posting summary data to Ethereum. This batching increases Ethereum's throughput while drastically reducing costs for users.",
+  "page-roadmap-vision-scalability-desc-3": "Los rollups de Capa 2 escalan Ethereum al mover las transacciones fuera de la cadena y solo publicar datos resumidos en Ethereum. Este procesamiento por lotes aumenta el rendimiento de Ethereum mientras reduce drásticamente los costos para los usuarios.",
   "page-roadmap-vision-scalability-desc-4": "Las acumulaciones necesitan un almacenamiento a bajo coste en la capa 1 para abaratar las transacciones lo máximo posible para los usuarios. Esto se proporciona en forma de «masa» adjuntas a los bloques de Ethereum. Con el tiempo, se adjuntarán muchas masas a los bloques de Ethereum y proporcionarán un almacenamiento barato para numerosas acumulaciones.",
   "page-roadmap-vision-security": "Seguridad",
   "page-roadmap-vision-security-desc": "Las actualizaciones planificadas mejoran la seguridad de Ethereum contra ataques coordinados.",
