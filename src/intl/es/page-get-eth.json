@@ -1,6 +1,6 @@
 {
-  "page-get-eth-article-keeping-crypto-safe": "Las claves para tener sus criptomonedas seguras",
-  "page-get-eth-article-protecting-yourself": "Protegerte a ti y a tus fondos",
+  "page-get-eth-article-keeping-crypto-safe": "Las claves para mantener seguras sus criptomonedas.",
+  "page-get-eth-article-protecting-yourself": "Protéjase a usted y a sus fondos",
   "page-get-eth-article-store-digital-assets": "Cómo almacenar recursos digitales en Ethereum",
   "page-get-eth-article-protecting-yourself-desc": "MiCripto",
   "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
@@ -21,7 +21,7 @@
   "page-get-eth-daos-link-desc": "Más información sobre DAO",
   "page-get-eth-cex-link-desc": "Ver un listado de intercambios",
   "page-get-eth-staking-link-desc": "Más información sobre las participaciones",
-  "page-get-eth-dexs": "Plataformas de intercambio descentralizada (DEX)",
+  "page-get-eth-dexs": "Plataformas de intercambio descentralizada (DEXs)",
   "page-get-eth-dexs-desc": "Los intercambios descentralizados son mercados abiertos para ETH y otros tókenes. Conectan directamente a compradores y vendedores.",
   "page-get-eth-dexs-desc-2": "En lugar de utilizar un tercero de confianza para salvaguardar fondos en la transacción, usan código. El ETH del vendedor únicamente se transferirá cuando el pago esté garantizado. Este tipo de código se conoce como «contrato inteligente».",
   "page-get-eth-dexs-desc-3": "Esto significa que existen menos restricciones geográficas en comparación con las alternativas centralizadas. Si alguien está vendiendo lo que usted desea y acepta un método de pago que pueda proporcionar, entonces está listo para llevar a cabo un buen negocio.",
