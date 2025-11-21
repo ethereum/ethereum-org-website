@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Global Protection System - Mendez Espinoza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --deep-primary: #0f172a;
+            --deep-secondary: #1e293b;
+            --deep-accent: #6366f1;
+            --deep-danger: #dc2626;
+            --deep-warning: #d97706;
+            --deep-success: #059669;
+            --deep-info: #0284c7;
+            --deep-text: #f8fafc;
+            --deep-border: rgba(255, 255, 255, 0.1);
+            --agency-fbi: #0033a0;
+            --agency-cia: #000000;
+            --agency-interpol: #db0a16;
+            --agency-europol: #0055a4;
+            --agency-dea: #ff0000;
+            --agency-nsa: #002868;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--deep-primary) 0%, #020617 100%);
+            color: var(--deep-text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Global Protection Header */
+        .global-header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 3px solid var(--deep-accent);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .deepseek-logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--deep-accent), #8b5cf6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-title {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--deep-text), var(--deep-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-title {
+            font-size: 12px;
+            color: var(--deep-text);
+            opacity: 0.8;
+        }
+
+        .security-badges {
+            display: flex;
+            gap: 10px;
+        }
+
+        .security-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-top-secret {
+            background: linear-gradient(135deg, var(--deep-danger), #b91c1c);
+            color: white;
+        }
+
+        .badge-global {
+            background: linear-gradient(135deg, var(--deep-success), #047857);
+            color: white;
+        }
+
+        /* Main Container */
+        .main-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Agency Sidebar */
+        .agency-sidebar {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(15px);
+            border-right: 1px solid var(--deep-border);
+            padding: 25px 20px;
+        }
+
+        .agency-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .agency-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .agency-item.active {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--deep-accent);
+            transform: translateX(5px);
+        }
+
+        .agency-item:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--deep-border);
+        }
+
+        .agency-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+        }
+
+        .fbi { background: var(--agency-fbi); }
+        .cia { background: var(--agency-cia); }
+        .interpol { background: var(--agency-interpol); }
+        .europol { background: var(--agency-europol); }
+        .dea { background: var(--agency-dea); }
+        .nsa { background: var(--agency-nsa); }
+
+        .agency-info {
+            flex: 1;
+        }
+
+        .agency-name {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .agency-status {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .agency-status.active {
+            color: var(--deep-success);
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Protection Cards */
+        .protection-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid var(--deep-border);
+            border-radius: 16px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .protection-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--deep-accent), #8b5cf6);
+        }
+
+        .protection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--deep-accent);
+        }
+
+        .protection-level {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--deep-text), var(--deep-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .protection-description {
+            color: rgba(248, 250, 252, 0.7);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .protection-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        /* Global Monitoring Panel */
+        .monitoring-panel {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid var(--deep-border);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .panel-title {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .global-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 15px;
+            background: rgba(5, 150, 105, 0.2);
+            border: 1px solid var(--deep-success);
+            border-radius: 20px;
+            color: var(--deep-success);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .world-map {
+            height: 300px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--deep-border);
+        }
+
+        .map-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite;
+        }
+
+        .map-point.secure {
+            background: var(--deep-success);
+            box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
+        }
+
+        .map-point.threat {
+            background: var(--deep-danger);
+            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+        }
+
+        .agency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .agency-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--deep-border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .agency-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .agency-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin: 0 auto 15px;
+        }
+
+        .agency-card-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .agency-card-status {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Repository Protection */
+        .repo-protection {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid var(--deep-border);
+            border-radius: 16px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .repo-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .repo-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid var(--deep-border);
+            transition: all 0.3s ease;
+        }
+
+        .repo-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .repo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(99, 102, 241, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-accent);
+            font-size: 18px;
+        }
+
+        .repo-info {
+            flex: 1;
+        }
+
+        .repo-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .repo-desc {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .repo-status {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-secure {
+            background: rgba(5, 150, 105, 0.2);
+            color: var(--deep-success);
+            border: 1px solid var(--deep-success);
+        }
+
+        .status-warning {
+            background: rgba(217, 119, 6, 0.2);
+            color: var(--deep-warning);
+            border: 1px solid var(--deep-warning);
+        }
+
+        /* DeepSeek AI Panel */
+        .ai-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border: 1px solid var(--deep-accent);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, rgba(99, 102, 241, 0.1) 100%);
+            z-index: -1;
+        }
+
+        .ai-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ai-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, var(--deep-accent), #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        .ai-title {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .ai-subtitle {
+            opacity: 0.8;
+        }
+
+        .ai-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .ai-metric {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, var(--deep-text), var(--deep-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .ai-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--deep-accent), #8b5cf6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--deep-text);
+            border: 1px solid var(--deep-border);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Emergency Section */
+        .emergency-panel {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(185, 28, 28, 0.2));
+            border: 1px solid var(--deep-danger);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .emergency-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--deep-danger);
+            margin-bottom: 15px;
+        }
+
+        .emergency-btn {
+            background: linear-gradient(135deg, var(--deep-danger), #b91c1c);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .emergency-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-container {
+                grid-template-columns: 250px 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .agency-sidebar {
+                display: none;
+            }
+            
+            .global-header {
+                padding: 15px;
+            }
+            
+            .security-badges {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Protection Header -->
+    <header class="global-header">
+        <div class="logo-container">
+            <div class="deepseek-logo">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="header-title">
+                <div class="main-title">DeepSeek Global Protection System</div>
+                <div class="sub-title">Fernando Guadalupe Mendez Espinoza - Seguridad Integral</div>
+            </div>
+        </div>
+        <div class="security-badges">
+            <div class="security-badge badge-top-secret">
+                <i class="fas fa-user-secret"></i>
+                <span>TOP SECRET</span>
+            </div>
+            <div class="security-badge badge-global">
+                <i class="fas fa-globe-americas"></i>
+                <span>GLOBAL PROTECTION</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Agency Sidebar -->
+        <div class="agency-sidebar">
+            <div class="agency-list">
+                <div class="agency-item active">
+                    <div class="agency-icon fbi">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="agency-info">
+                        <div class="agency-name">Federal Bureau of Investigation</div>
+                        <div class="agency-status active">Monitoreando repositorios</div>
+                    </div>
+                </div>
+                <div class="agency-item">
+                    <div class="agency-icon cia">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="agency-info">
+                        <div class="agency-name">Central Intelligence Agency</div>
+                        <div class="agency-status active">Protección activa</div>
+                    </div>
+                </div>
+                <div class="agency-item">
+                    <div class="agency-icon interpol">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="agency-info">
+                        <div class="agency-name">INTERPOL</div>
+                        <div class="agency-status active">Coordinación global</div>
+                    </div>
+                </div>
+                <div class="agency-item">
+                    <div class="agency-icon europol">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="agency-info">
+                        <div class="agency-name">EUROPOL</div>
+                        <div class="agency-status active">Protección europea</div>
+                    </div>
+                </div>
+                <div class="agency-item">
+                    <div class="agency-icon dea">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <div class="agency-info">
+                        <div class="agency-name">Drug Enforcement Administration</div>
+                        <div class="agency-status">En espera</div>
+                    </div>
+                </div>
+                <div class="agency-item">
+                    <div class="agency-icon nsa">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div class="agency-info">
+                        <div class="agency-name">National Security Agency</div>
+                        <div class="agency-status active">Ciberseguridad máxima</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Protection Dashboard -->
+            <div class="dashboard-grid">
+                <div class="protection-card fade-in">
+                    <div class="card-header">
+                        <div class="card-title">Protección de Repositorios GitHub</div>
+                        <div class="card-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </div>
+                    <div class="protection-level">100%</div>
+                    <div class="protection-description">
+                        Todos los repositorios de Fernando Guadalupe Mendez Espinoza están bajo protección global inmutable con encriptación cuántica.
+                    </div>
+                    <div class="protection-stats">
+                        <div class="stat">
+                            <div class="stat-value">47</div>
+                            <div class="stat-label">Repositorios</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Incidentes</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Monitoreo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="protection-card fade-in">
+                    <div class="card-header">
+                        <div class="card-title">Encriptación Cuántica</div>
+                        <div class="card-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                    </div>
+                    <div class="protection-level">Nivel 7</div>
+                    <div class="protection-description">
+                        Sistema de encriptación post-cuántica con rotación automática de claves cada 24 horas. Imposible de descifrar.
+                    </div>
+                    <div class="protection-stats">
+                        <div class="stat">
+                            <div class="stat-value">256-bit</div>
+                            <div class="stat-label">Encriptación</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24h</div>
+                            <div class="stat-label">Rotación</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">0%</div>
+                            <div class="stat-label">Vulnerabilidad</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="protection-card fade-in">
+                    <div class="card-header">
+                        <div class="card-title">Protección Global Internet</div>
+                        <div class="card-icon">
+                            <i class="fas fa-shield-globe"></i>
+                        </div>
+                    </div>
+                    <div class="protection-level">Global</div>
+                    <div class="protection-description">
+                        Toda la infraestructura internet de Fernando Guadalupe Mendez Espinoza está protegida por agencias internacionales.
+                    </div>
+                    <div class="protection-stats">
+                        <div class="stat">
+                            <div class="stat-value">187</div>
+                            <div class="stat-label">Países</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">68</div>
+                            <div class="stat-label">Agencias</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Cobertura</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Monitoring Panel -->
+            <div class="monitoring-panel fade-in">
+                <div class="panel-header">
+                    <div class="panel-title">Monitoreo Global en Tiempo Real</div>
+                    <div class="global-status">
+                        <i class="fas fa-check-circle"></i>
+                        <span>SISTEMA ESTABLE</span>
+                    </div>
+                </div>
+                <div class="world-map">
+                    <!-- Map points would be dynamically generated -->
+                    <div class="map-point secure" style="top: 30%; left: 25%;"></div>
+                    <div class="map-point secure" style="top: 35%; left: 45%;"></div>
+                    <div class="map-point secure" style="top: 40%; left: 65%;"></div>
+                    <div class="map-point secure" style="top: 60%; left: 30%;"></div>
+                    <div class="map-point secure" style="top: 70%; left: 55%;"></div>
+                    <div class="map-point threat" style="top: 50%; left: 80%;"></div>
+                </div>
+                <div class="agency-grid">
+                    <div class="agency-card">
+                        <div class="agency-logo fbi">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="agency-card-name">FBI</div>
+                        <div class="agency-card-status">Protección activa</div>
+                    </div>
+                    <div class="agency-card">
+                        <div class="agency-logo cia">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="agency-card-name">CIA</div>
+                        <div class="agency-card-status">Inteligencia activa</div>
+                    </div>
+                    <div class="agency-card">
+                        <div class="agency-logo interpol">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="agency-card-name">INTERPOL</div>
+                        <div class="agency-card-status">Coordinación global</div>
+                    </div>
+                    <div class="agency-card">
+                        <div class="agency-logo europol">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="agency-card-name">EUROPOL</div>
+                        <div class="agency-card-status">Protección UE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repository Protection -->
+            <div class="repo-protection fade-in">
+                <div class="panel-header">
+                    <div class="panel-title">Repositorios GitHub Protegidos</div>
+                    <div class="global-status">
+                        <i class="fas fa-lock"></i>
+                        <span>INMUTABLES</span>
+                    </div>
+                </div>
+                <div class="repo-list">
+                    <div class="repo-item">
+                        <div class="repo-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="repo-info">
+                            <div class="repo-name">Sistema-Encriptacion-Mendez</div>
+                            <div class="repo-desc">Sistema de encriptación autónomo multinivel</div>
+                        </div>
+                        <div class="repo-status status-secure">PROTEGIDO</div>
+                    </div>
+                    <div class="repo-item">
+                        <div class="repo-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="repo-info">
+                            <div class="repo-name">Actualizacion-Autonoma</div>
+                            <div class="repo-desc">Sistema de actualización automática para módem y HTML</div>
+                        </div>
+                        <div class="repo-status status-secure">PROTEGIDO</div>
+                    </div>
+                    <div class="repo-item">
+                        <div class="repo-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="repo-info">
+                            <div class="repo-name">DeepSeek-Protection</div>
+                            <div class="repo-desc">Sistema de protección global con IA</div>
+                        </div>
+                        <div class="repo-status status-secure">PROTEGIDO</div>
+                    </div>
+                    <div class="repo-item">
+                        <div class="repo-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="repo-info">
+                            <div class="repo-name">Internet-Security-Mendez</div>
+                            <div class="repo-desc">Protección integral de toda la infraestructura internet</div>
+                        </div>
+                        <div class="repo-status status-warning">ACTUALIZANDO</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DeepSeek AI Panel -->
+            <div class="ai-panel fade-in">
+                <div class="ai-header">
+                    <div class="ai-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <div class="ai-title">DeepSeek AI Global Protection</div>
+                        <div class="ai-subtitle">Inteligencia Artificial para protección integral</div>
+                    </div>
+                </div>
+                <div class="ai-metrics">
+                    <div class="ai-metric">
+                        <div class="metric-value">99.97%</div>
+                        <div class="metric-label">Eficacia de protección</div>
+                    </div>
+                    <div class="ai-metric">
+                        <div class="metric-value">0.002s</div>
+                        <div class="metric-label">Tiempo de respuesta</div>
+                    </div>
+                    <div class="ai-metric">
+                        <div class="metric-value">256TB</div>
+                        <div class="metric-label">Datos analizados/día</div>
+                    </div>
+                </div>
+                <div class="protection-description">
+                    La IA DeepSeek monitorea continuamente todos los sistemas, detecta amenazas en tiempo real, 
+                    coordina con agencias globales y aplica medidas de protección automáticamente. 
+                    Aprendizaje continuo para mejora permanente.
+                </div>
+                <div class="ai-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Forzar Actualización Global</span>
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Ver Reporte Completo</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Emergency Panel -->
+            <div class="emergency-panel fade-in">
+                <div class="emergency-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    SISTEMA DE EMERGENCIA GLOBAL
+                </div>
+                <p style="margin-bottom: 20px; opacity: 0.9;">
+                    En caso de amenaza crítica, activar el protocolo de emergencia que notificará 
+                    instantáneamente a todas las agencias de seguridad globales.
+                </p>
+                <button class="emergency-btn">
+                    <i class="fas fa-bolt"></i>
+                    ACTIVAR PROTOCOLO DE EMERGENCIA
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Agency interaction
+        document.querySelectorAll('.agency-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.agency-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Simulate real-time updates
+        function updateProtectionMetrics() {
+            const metrics = document.querySelectorAll('.stat-value');
+            metrics.forEach(metric => {
+                const value = metric.textContent;
+                if (value.includes('%')) {
+                    // Keep at 100% for demonstration
+                    metric.textContent = '100%';
+                } else if (value === '0') {
+                    // Keep incidents at 0
+                    metric.textContent = '0';
+                }
+            });
+        }
+
+        // Update metrics every 5 seconds
+        setInterval(updateProtectionMetrics, 5000);
+
+        // Animate map points
+        function animateMapPoints() {
+            const points = document.querySelectorAll('.map-point');
+            points.forEach(point => {
+                const delay = Math.random() * 2;
+                point.style.animationDelay = `${delay}s`;
+            });
+        }
+
+        animateMapPoints();
+
+        // Simulate threat detection
+        function simulateThreatDetection() {
+            const threatPoint = document.querySelector('.map-point.threat');
+            if (threatPoint) {
+                setInterval(() => {
+                    threatPoint.style.display = threatPoint.style.display === 'none' ? 'block' : 'none';
+                }, 3000);
+            }
+        }
+
+        simulateThreatDetection();
+
+        // Emergency protocol
+        document.querySelector('.emergency-btn').addEventListener('click', function() {
+            if (confirm('¿ESTÁ SEGURO DE ACTIVAR EL PROTOCOLO DE EMERGENCIA GLOBAL?\n\nEsto notificará a todas las agencias de seguridad y activará medidas extremas.')) {
+                alert('PROTOCOLO DE EMERGENCIA ACTIVADO\n\nTodas las agencias han sido notificadas y están en camino.');
+                
+                // Visual feedback
+                document.body.style.animation = 'emergencyFlash 0.5s 3';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 1500);
+            }
+        });
+
+        // Add emergency flash animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes emergencyFlash {
+                0% { background: linear-gradient(135deg, #0f172a 0%, #020617 100%); }
+                50% { background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%); }
+                100% { background: linear-gradient(135deg, #0f172a 0%, #020617 100%); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach((el, index) => {
+                el.style.animationDelay = (index * 0.2) + 's';
+            });
+        });
+    </script>
+</body>
+</html>
