@@ -348,6 +348,7 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 ### DeFi articles {#defi-articles}
 
 - [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
+- [EEA DeFi Risk Assessment Guidelines](https://entethalliance.org/specs/defi-risks/) – An industry-backed overview of how to identify and assess key risks in DeFi protocols.
 
 ### Videos {#videos}
 
