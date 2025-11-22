@@ -13835,6 +13835,24 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "mnelsonBT",
+      "name": "mnelsonBT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74370515?v=4",
+      "profile": "https://github.com/mnelsonBT",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "agualis",
+      "name": "Alberto Gualis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1316240?v=4",
+      "profile": "https://medium.com/@gualison",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

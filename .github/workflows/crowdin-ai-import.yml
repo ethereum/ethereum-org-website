@@ -1,0 +1,49 @@
+name: Import Crowdin AI Translations
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_limit:
+        description: "Number of files to process (default: 100, use 1-10 for testing)"
+        required: false
+        default: "100"
+        type: string
+      target_languages:
+        description: "Comma-separated Crowdin language codes (default: es-EM)"
+        required: false
+        default: "es-EM"
+        type: string
+      base_branch:
+        description: "Base branch to create PR against (default: dev)"
+        required: false
+        default: "dev"
+        type: string
+
+jobs:
+  import_translations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Crowdin AI translation import
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main.ts
+        env:
+          I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          FILE_LIMIT: ${{ github.event.inputs.file_limit }}
+          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
+          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
