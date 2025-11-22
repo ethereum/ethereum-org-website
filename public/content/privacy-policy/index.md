@@ -225,9 +225,9 @@ to:
 - EU General Data Protection Regulation:
   https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG
 - Swiss Federal Act on Data Protection:
-  https://www.admin.ch/opc/en/classified-compilation/19920153/index.html
+  https://www.fedlex.admin.ch/eli/cc/2022/491/en
 - Swiss Ordinance to the Federal Act on Data Protection:
-  https://www.admin.ch/opc/en/classified-compilation/19930159/index.html
+  https://www.fedlex.admin.ch/eli/cc/2022/568/en
 
 Please do not hesitate to contact us if you have any questions regarding
 this Privacy Policy by contacting us at [support@ethereum.org](mailto:support@ethereum.org).
