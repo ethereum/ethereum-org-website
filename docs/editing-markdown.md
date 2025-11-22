@@ -13,3 +13,4 @@
 - Scroll down, write a brief description about the changes you made and click on `Propose Changes`.
 - Click on `Create pull request` and wait for the reviewers to review your PR.
   ![create-pull-request](https://user-images.githubusercontent.com/55744578/136703597-6644e43c-7c64-4cc0-bf8b-7fb8db9544cf.jpg)
+> Note: This guide is continuously improved by community contributors.
