@@ -14,7 +14,7 @@ const FusakaHero = async () => {
 
   return (
     <div className="relative w-full">
-      <LinkBox className="bg-[#333369] p-2 text-center text-white">
+      <LinkBox className="bg-[#333369] p-2 text-center text-white md:p-4 md:px-8">
         <div className="flex flex-col items-center justify-between gap-2 md:flex-row md:gap-16">
           <div className="flex flex-col items-center justify-center">
             <p className="text-xl font-extrabold uppercase !leading-none md:text-2xl">
