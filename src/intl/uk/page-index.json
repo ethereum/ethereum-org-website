@@ -119,5 +119,10 @@
   "page-index-values-open-ethereum-label": "Відкритість для всіх",
   "page-index-values-open-ethereum-content-0": "Мережа Ethereum відкрита для всіх. Будь-хто може бачити, використовувати й покращувати код, щоб зробити систему зручнішою для людей.",
   "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Приєднуйтесь до найбільшої події року в мережі Ethereum",
-  "page-index-devconnect-banner-get-tickets": "Отримати квитки"
+  "page-index-devconnect-banner-get-tickets": "Отримати квитки",
+  "page-index-fusaka-network-upgrade": "Оновлення мережі",
+  "page-index-fusaka-description": "Для швидшої, безпечнішої та зручнішої для користувачів мережі Ethereum |",
+  "page-index-fusaka-read-more": "Читати далі",
+  "page-index-fusaka-going-live-in": "Запуск через<br></br>",
+  "page-index-fusaka-live-now": "Вже запущено"
 }

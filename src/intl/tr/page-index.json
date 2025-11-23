@@ -120,5 +120,10 @@
   "page-index-values-open-ethereum-label": "Herkese açık",
   "page-index-values-open-ethereum-content-0": "Ethereum herkese açıktır. Herkes kodu görebilir, kullanabilir ve geliştirebilir; böylece sistem herkes için daha iyi hale gelir.",
   "page-index-devconnect-banner-join-the-biggest-ethereum-event-of-the-year": "Yılın en büyük Ethereum etkinliğine katılın",
-  "page-index-devconnect-banner-get-tickets": "Bilet al"
+  "page-index-devconnect-banner-get-tickets": "Bilet al",
+  "page-index-fusaka-network-upgrade": "Ağ güncellemesi",
+  "page-index-fusaka-description": "Daha hızlı, daha güvenli ve daha kullanıcı dostu bir Ethereum ağı için |",
+  "page-index-fusaka-read-more": "Daha fazla oku",
+  "page-index-fusaka-going-live-in": "Canlıya geçiyor<br></br>",
+  "page-index-fusaka-live-now": "Şimdi canlı"
 }

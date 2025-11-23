@@ -70,7 +70,7 @@ export default function HomepageSectionImage({
   } = getImageProps({
     ...common,
     ...images.desktop,
-    quality: 25,
+    quality: 35,
   })
 
   const {

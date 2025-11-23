@@ -1,4 +1,5 @@
 import en from "@/intl/en/common.json"
+import enStart from "@/intl/en/page-start.json"
 import es from "@/intl/es/common.json"
 
 /**
@@ -36,6 +37,7 @@ export const testData = {
   content: {
     headings: {
       homepage: en["site-title"],
+      startPage: enStart["page-start-meta-title"],
       findWallet: en["nav-find-wallet-label"],
       notFoundEn: en["we-couldnt-find-that-page"],
       notFoundEs: es["we-couldnt-find-that-page"],
