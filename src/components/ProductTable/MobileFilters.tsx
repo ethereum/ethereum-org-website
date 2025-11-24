@@ -6,15 +6,15 @@ import { FilterOption, TPresetFilters } from "@/lib/types"
 import Filters from "@/components/ProductTable/Filters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -51,8 +51,7 @@ const MobileFilters = ({
 
   return (
     <div className="border-b border-b-background-highlight">
-      <Drawer
-        direction="left"
+      <Sheet
         open={mobileFiltersOpen}
         onOpenChange={(open) => {
           setMobileFiltersOpen(open)
@@ -63,7 +62,7 @@ const MobileFilters = ({
           })
         }}
       >
-        <DrawerTrigger className="px-4" asChild>
+        <SheetTrigger className="px-4" asChild>
           <Button
             variant="outline"
             className="gap-4 border-0 ps-4"
@@ -77,21 +76,21 @@ const MobileFilters = ({
               <ListFilter className="-mb-0.5 size-6 stroke-1" />
             </div>
           </Button>
-        </DrawerTrigger>
-        <DrawerContent className="flex h-full flex-col p-2">
+        </SheetTrigger>
+        <SheetContent side="left" className="flex h-full flex-col p-2">
           <div className="sticky top-0 flex items-center justify-end p-2">
-            <DrawerClose asChild>
+            <SheetClose asChild>
               <Button variant="ghost">
                 <X className="text-2xl" />
               </Button>
-            </DrawerClose>
+            </SheetClose>
           </div>
-          <DrawerHeader className="sr-only">
-            <DrawerTitle>{t("table-filters")}</DrawerTitle>
-            <DrawerDescription>
+          <SheetHeader className="sr-only">
+            <SheetTitle>{t("table-filters")}</SheetTitle>
+            <SheetDescription>
               {`${activeFiltersCount} ${t("table-active")}`}
-            </DrawerDescription>
-          </DrawerHeader>
+            </SheetDescription>
+          </SheetHeader>
           <div className="flex-1 overflow-y-auto">
             <PresetFilters
               presets={presets}
@@ -107,7 +106,7 @@ const MobileFilters = ({
               activeFiltersCount={activeFiltersCount}
             />
           </div>
-          <DrawerFooter>
+          <SheetFooter>
             <div className="grid grid-cols-2 items-center">
               <div>
                 <Button
@@ -119,16 +118,16 @@ const MobileFilters = ({
                   {t("table-reset-filters")}
                 </Button>
               </div>
-              <DrawerClose className="text-center" asChild>
+              <SheetClose className="text-center" asChild>
                 <Button
                   className="w-full"
                   data-testid="mobile-filters-submit-button"
                 >{`${mobileFiltersLabel} (${dataCount})`}</Button>
-              </DrawerClose>
+              </SheetClose>
             </div>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
+          </SheetFooter>
+        </SheetContent>
+      </Sheet>
     </div>
   )
 }
