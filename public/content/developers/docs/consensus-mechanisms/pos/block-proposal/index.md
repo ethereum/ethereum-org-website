@@ -4,29 +4,51 @@ description: Explanation of how blocks are proposed in proof-of-stake Ethereum.
 lang: en
 ---
 
-Blocks are the fundamental units of the blockchain. Blocks are discrete units of information that get passed between nodes, agreed upon and added to each node's database. This page explains how they are produced.
+Blocks are the fundamental building units of the Ethereum blockchain. Each block contains a snapshot of consensus-layer activity and execution-layer transactions. They are propagated across the network, validated by nodes, and appended to local databases to extend the canonical chain. This page provides a more detailed overview of how blocks are proposed in proof-of-stake (PoS) Ethereum.
 
 ## Prerequisites {#prerequisites}
 
-Block proposal is part of the proof-of-stake protocol. To help understand this page, we recommend you read about [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [block architecture](/developers/docs/blocks/).
+Block proposal is a core component of the PoS consensus mechanism. For best understanding, you should be familiar with:
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Block architecture](/developers/docs/blocks/)
+- [Fork choice and attestations](/developers/docs/consensus-mechanisms/pos/gasper/)
 
 ## Who produces blocks? {#who-produces-blocks}
 
-Validator accounts propose blocks. Validator accounts are managed by node operators who run validator software as part of their execution and consensus clients and have deposited at least 32 ETH into the deposit contract. However, each validator is only occasionally responsible for proposing a block. Ethereum measures time in slots and epochs. Each slot is twelve seconds, and 32 slots (6.4 minutes) make up an epoch. Every slot is an opportunity to add a new block on Ethereum.
+Blocks are produced by **validator accounts**. Each validator is a participant who:
+- Runs consensus and execution clients,
+- Has deposited **32 ETH** into the deposit contract,
+- And is responsible for attesting and occasionally proposing blocks.
+
+Time in Ethereum is divided into **slots** (12 seconds each) and **epochs** (32 slots = 6.4 minutes).  
+Every slot is an opportunity to propose a new block, but **only one validator** is responsible for proposing in each slot.
 
 ### Random selection {#random-selection}
 
-A single validator is pseudo-randomly chosen to propose a block in each slot. There is no such thing as true randomness in a blockchain because if each node generated genuinely random numbers, they couldn't come to consensus. Instead, the aim is to make the validator selection process unpredictable. The randomness is achieved on Ethereum using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed two epochs in advance as a way to protect against certain kinds of seed manipulation.
+Validator selection is **pseudo-random**. True randomness is impossible in a deterministic distributed system, so Ethereum uses an unpredictable yet verifiable scheme based on **RANDAO**.
 
-Although validators add to RANDAO in each slot, the global RANDAO value is only updated once per epoch. To compute the index of the next block proposer, the RANDAO value is mixed with the slot number to give a unique value in each slot. The probability of an individual validator being selected is not simply `1/N` (where `N` = total active validators). Instead, it is weighted by the effective ETH balance of each validator. The maximum effective balance is 32 ETH (this means that `balance < 32 ETH` leads to a lower weight than `balance == 32 ETH`, but `balance > 32 ETH` does not lead to higher weighting than `balance == 32 ETH`).
+Key properties:
 
-Only one block proposer is selected in each slot. Under normal conditions, a single block producer creates and releases a single block in their dedicated slot. Creating two blocks for the same slot is a slashable offence, often known as "equivocation".
+- Each validator contributes randomness by revealing a signature-based value each epoch.
+- The global RANDAO value updates once per epoch and becomes the randomness seed.
+- This seed is mixed with the slot number to derive a unique proposer index for every slot.
+- Validator selection is determined **two epochs in advance** to prevent last-minute biasing attempts.
+
+The probability of being selected depends on a validator's **effective balance**, capped at 32 ETH.  
+Validators with balances below 32 ETH have proportionally lower chances of being selected.
+
+Producing more than one block in the same slot (“equivocating”) is a **slashable offense**.
 
 ## How is the block created? {#how-is-a-block-created}
 
-The block proposer is expected to broadcast a signed beacon block that builds on top of the most recent head of the chain according to the view of their own locally-run fork choice algorithm. The fork choice algorithm applies any queued attestations left over from the previous slot, then finds the block with the greatest accumulated weight of attestations in its history. That block is the parent of the new block created by the proposer.
+Once chosen, the block proposer must construct and broadcast a **signed beacon block** that builds on the current head of the chain according to their **fork choice rule** (LMD-GHOST).
 
-The block proposer creates a block by collecting data from its own local database and view of the chain. The contents of the block are shown in the snippet below:
+The proposer:
+1. Applies queued attestations from the previous slot.
+2. Determines the head block with the highest accumulated attestation weight.
+3. Builds a new block on top of that parent.
+
+A beacon block contains the following fields:
 
 ```rust
 class BeaconBlockBody(Container):
@@ -42,28 +64,66 @@ class BeaconBlockBody(Container):
     execution_payload: ExecutionPayload
 ```
 
-The `randao_reveal` field takes a verifiable random value that the block proposer creates by signing the current epoch number. `eth1_data` is a vote for the block proposer's view of the deposit contract, including the root of the deposit Merkle trie and the total number of deposits that enable new deposits to be verified. `graffiti` is an optional field that can be used to add a message to the block. `proposer_slashings` and `attester_slashings` are fields that contain proof that certain validators have committed slashable offenses according to the proposer's view of the chain. `deposits` is a list of new validator deposits that the block proposer is aware of, and `voluntary_exits` is a list of validators that wish to exit that the block proposer has heard about on the consensus layer gossip network. The `sync_aggregate` is a vector showing which validators were previously assigned to a sync committee (a subset of validators that serve light client data) and participated in signing data.
+Explanation of major fields:
 
-The `execution_payload` enables information about transactions to be passed between the execution and consensus clients. The `execution_payload` is a block of execution data that gets nested inside a beacon block. The fields inside the `execution_payload` reflect the block structure outlined in the Ethereum yellow paper, except that there are no ommers and `prev_randao` exists in place of `difficulty`. The execution client has access to a local pool of transactions that it has heard about on its own gossip network. These transactions are executed locally to generate an updated state trie known as a post-state. The transactions are included in the `execution_payload` as a list called `transactions` and the post-state is provided in the `state-root` field.
+- **randao_reveal** – The proposer signs the current epoch number to reveal their part of the RANDAO randomness.
+- **eth1_data** – Information about the deposit contract and deposit tree, used to verify new validator deposits.
+- **graffiti** – A 32-byte custom field for messages, metadata, or node identification.
+- **proposer_slashings / attester_slashings** – Evidence of slashable behavior detected by the proposer.
+- **attestations** – Attestations collected from the network during or before the slot.
+- **deposits** – Newly processed deposits enabling new validators to join.
+- **voluntary_exits** – Validators requesting to exit.
+- **sync_aggregate** – Signatures from sync committee participants supporting light clients.
 
-All of these data are collected in a beacon block, signed, and broadcast to the block proposer's peers, who propagate it on to their peers, etc.
+### Execution payload
 
-Read more about the [anatomy of blocks](/developers/docs/blocks).
+The `execution_payload` embeds a full execution-layer block (the “transaction block”) inside the beacon block.  
+Its structure follows the Ethereum Yellow Paper with notable differences:
+- No ommers,
+- `prev_randao` replaces the former `difficulty` value.
+
+The execution client locally selects transactions from its mempool, executes them, updates the state trie, and outputs:
+- A transaction list,
+- A new state root (post-state root),
+- Receipts and gas-related fields.
+
+This payload is then included in the beacon block.
+
+After assembling the block, the proposer **signs and broadcasts** it over the consensus-layer gossip network.
 
 ## What happens to the block? {#what-happens-to-blocks}
 
-The block is added to the block proposer's local database and broadcast to peers over the consensus layer gossip network. When a validator receives the block, it verifies the data inside it, including checking that the block has the correct parent, corresponds to the correct slot, that the proposer index is the expected one, that the RANDAO reveal is valid and that the proposer is not slashed. The `execution_payload` is unbundled, and the validator's execution client re-executes the transactions in the list to check the proposed state change. Assuming the block passes all these checks, each validator adds the block to its own canonical chain. The process then starts again in the next slot.
+Once broadcast, the block spreads rapidly across the validator network.
+
+Each receiving validator:
+1. Verifies the block signature.
+2. Checks proposer index correctness.
+3. Confirms the block belongs to the correct slot.
+4. Validates the beacon block fields (attestations, slashings, deposits, exits, etc.).
+5. Passes the `execution_payload` to the execution client.
+6. Re-executes transactions to confirm the claimed state changes.
+7. Ensures the block extends a valid parent chain.
+8. Adds the block to the local canonical chain.
+
+If the block is valid, it becomes the head (unless fork choice rules select a different branch).  
+This process repeats at every new slot.
 
 ## Block rewards {#block-rewards}
 
-The block proposer receives payment for their work. There is a `base_reward` calculated as a function of the number of active validators and their effective balances. The block proposer then receives a fraction of `base_reward` for every valid attestation included in the block; the more validators attest to the block, the greater the block proposer's reward. There is also a reward for reporting validators that should be slashed, equal to `1/512 * effective balance` for each slashed validator.
+Proposers receive rewards for producing valid blocks. Rewards come from:
 
-[More on rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+- A share of the **base reward**, derived from the total number of active validators.
+- Additional rewards for including attestations:
+  - More included attestations = higher proposer reward.
+- A reward for reporting slashable behavior:
+  - `1/512 * effective_balance` for each slashed validator.
+
+Rewards incentivize timely proposals and inclusion of as much consensus data as possible.
 
 ## Further reading {#further-reading}
 
 - [Introduction to blocks](/developers/docs/blocks/)
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Ethereum consensus specs](https://github.com/ethereum/consensus-specs)
+- [Ethereum consensus specifications](https://github.com/ethereum/consensus-specs)
 - [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
 - [Upgrading Ethereum](https://eth2book.info/)
