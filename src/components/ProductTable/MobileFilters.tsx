@@ -5,16 +5,8 @@ import { FilterOption, TPresetFilters } from "@/lib/types"
 
 import Filters from "@/components/ProductTable/Filters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { PersistentPanel } from "@/components/ui/persistent-panel"
+import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -49,19 +41,22 @@ const MobileFilters = ({
 }: MobileFiltersProps) => {
   const { t } = useTranslation("table")
 
+  const handleOpenChange = (open: boolean) => {
+    setMobileFiltersOpen(open)
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle",
+      eventName: `show mobile filters ${open}`,
+    })
+  }
+
+  const handleClose = () => {
+    handleOpenChange(false)
+  }
+
   return (
     <div className="border-b border-b-background-highlight">
-      <Sheet
-        open={mobileFiltersOpen}
-        onOpenChange={(open) => {
-          setMobileFiltersOpen(open)
-          trackCustomEvent({
-            eventCategory: "MobileFilterToggle",
-            eventAction: "Tap MobileFilterToggle",
-            eventName: `show mobile filters ${open}`,
-          })
-        }}
-      >
+      <Sheet open={mobileFiltersOpen} onOpenChange={handleOpenChange}>
         <SheetTrigger className="px-4" asChild>
           <Button
             variant="outline"
@@ -77,57 +72,59 @@ const MobileFilters = ({
             </div>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="flex h-full flex-col p-2">
-          <div className="sticky top-0 flex items-center justify-end p-2">
-            <SheetClose asChild>
-              <Button variant="ghost">
-                <X className="text-2xl" />
-              </Button>
-            </SheetClose>
-          </div>
-          <SheetHeader className="sr-only">
-            <SheetTitle>{t("table-filters")}</SheetTitle>
-            <SheetDescription>
-              {`${activeFiltersCount} ${t("table-active")}`}
-            </SheetDescription>
-          </SheetHeader>
-          <div className="flex-1 overflow-y-auto">
-            <PresetFilters
-              presets={presets}
-              filters={filters}
-              presetFiltersCounts={presetFiltersCounts}
-              setFilters={setFilters}
-              showMobileSidebar={true}
-            />
-            <Filters
-              filters={filters}
-              setFilters={setFilters}
-              resetFilters={resetFilters}
-              activeFiltersCount={activeFiltersCount}
-            />
-          </div>
-          <SheetFooter>
-            <div className="grid grid-cols-2 items-center">
-              <div>
-                <Button
-                  variant="ghost"
-                  className="gap-1"
-                  onClick={resetFilters}
-                >
-                  <RotateCcw />
-                  {t("table-reset-filters")}
-                </Button>
-              </div>
-              <SheetClose className="text-center" asChild>
-                <Button
-                  className="w-full"
-                  data-testid="mobile-filters-submit-button"
-                >{`${mobileFiltersLabel} (${dataCount})`}</Button>
-              </SheetClose>
-            </div>
-          </SheetFooter>
-        </SheetContent>
       </Sheet>
+
+      {/* Persistent content that stays mounted after first render */}
+      <PersistentPanel
+        open={mobileFiltersOpen}
+        side="left"
+        className="flex h-full flex-col p-2"
+        onOpenChange={handleOpenChange}
+      >
+        <div className="sticky top-0 flex items-center justify-end p-2">
+          <Button variant="ghost" onClick={handleClose}>
+            <X className="text-2xl" />
+          </Button>
+        </div>
+        <div className="sr-only">
+          <h2 className="text-foreground text-lg font-normal">
+            {t("table-filters")}
+          </h2>
+          <p className="text-muted-foreground text-sm">
+            {`${activeFiltersCount} ${t("table-active")}`}
+          </p>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+          <PresetFilters
+            presets={presets}
+            filters={filters}
+            presetFiltersCounts={presetFiltersCounts}
+            setFilters={setFilters}
+            showMobileSidebar={true}
+          />
+          <Filters
+            filters={filters}
+            setFilters={setFilters}
+            resetFilters={resetFilters}
+            activeFiltersCount={activeFiltersCount}
+          />
+        </div>
+        <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2">
+          <div className="grid w-full grid-cols-2 items-center sm:w-auto">
+            <div>
+              <Button variant="ghost" className="gap-1" onClick={resetFilters}>
+                <RotateCcw />
+                {t("table-reset-filters")}
+              </Button>
+            </div>
+            <Button
+              className="w-full"
+              onClick={handleClose}
+              data-testid="mobile-filters-submit-button"
+            >{`${mobileFiltersLabel} (${dataCount})`}</Button>
+          </div>
+        </div>
+      </PersistentPanel>
     </div>
   )
 }
