@@ -25,25 +25,20 @@ const MobileMenuClient = ({
   const [open, setOpen] = useCloseOnNavigate()
 
   return (
-    <>
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger className={className} asChild>
-          <HamburgerButton
-            className={cn("-me-2", className)}
-            isMenuOpen={open}
-          />
-        </SheetTrigger>
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <HamburgerButton className={cn("-me-2", className)} isMenuOpen={open} />
+      </SheetTrigger>
 
-        <PersistentPanel
-          open={open}
-          side={side}
-          className="flex flex-col"
-          onOpenChange={setOpen}
-        >
-          {children}
-        </PersistentPanel>
-      </Sheet>
-    </>
+      <PersistentPanel
+        open={open}
+        side={side}
+        className="flex flex-col"
+        onOpenChange={setOpen}
+      >
+        {children}
+      </PersistentPanel>
+    </Sheet>
   )
 }
 
