@@ -1,5 +1,6 @@
 import * as React from "react"
 import { createPortal } from "react-dom"
+import { FocusScope } from "@radix-ui/react-focus-scope"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -9,6 +10,8 @@ interface PersistentPanelProps {
   className?: string
   children: React.ReactNode
   onOpenChange?: (open: boolean) => void
+  /** Ref to the trigger element - focus returns here on close */
+  triggerRef?: React.RefObject<HTMLElement | null>
 }
 
 /**
@@ -22,7 +25,7 @@ interface PersistentPanelProps {
  * - Lazy mount: only renders after first open
  * - Stays mounted: avoids re-render cost on subsequent opens
  * - Animated: slide-in/out transitions work correctly
- * - Accessible: escape key, overlay click, scroll lock, aria attributes
+ * - Accessible: escape key, overlay click, scroll lock, focus trap, aria attributes
  */
 const PersistentPanel = ({
   open,
@@ -30,6 +33,7 @@ const PersistentPanel = ({
   className,
   children,
   onOpenChange,
+  triggerRef,
 }: PersistentPanelProps) => {
   // Track if component should be in DOM (lazy mount, stays mounted after first open)
   const [isMounted, setIsMounted] = React.useState(false)
@@ -37,6 +41,7 @@ const PersistentPanel = ({
   const [showContent, setShowContent] = React.useState(false)
 
   const overlayRef = React.useRef<HTMLDivElement>(null)
+  const contentRef = React.useRef<HTMLDivElement>(null)
 
   // Mount component on first open
   React.useEffect(() => {
@@ -94,6 +99,29 @@ const PersistentPanel = ({
     }
   }, [showContent, isMounted])
 
+  // Track previous showContent state to detect visibility transitions
+  const prevShowContentRef = React.useRef(showContent)
+
+  // Handle focus on visibility transitions
+  // We use showContent (not open) because FocusScope trapped={showContent}
+  // must be false before focus can leave the panel
+  React.useEffect(() => {
+    const wasVisible = prevShowContentRef.current
+    prevShowContentRef.current = showContent
+
+    if (showContent && !wasVisible && contentRef.current) {
+      // Panel became visible: focus first element
+      const firstFocusable = contentRef.current.querySelector<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      firstFocusable?.focus()
+    } else if (!showContent && wasVisible) {
+      // Panel became hidden: restore focus to trigger
+      // This runs AFTER FocusScope trapped becomes false
+      triggerRef?.current?.focus()
+    }
+  }, [showContent, triggerRef])
+
   // Don't render until first open
   if (!isMounted) {
     return null
@@ -120,7 +148,6 @@ const PersistentPanel = ({
 
   return createPortal(
     <>
-      {/* Overlay */}
       <div
         ref={overlayRef}
         className={overlayClasses}
@@ -128,10 +155,16 @@ const PersistentPanel = ({
         aria-hidden="true"
       />
 
-      {/* Content */}
-      <div className={contentClasses} role="dialog" aria-modal="true">
-        {children}
-      </div>
+      <FocusScope trapped={showContent} loop={showContent} asChild>
+        <div
+          ref={contentRef}
+          className={contentClasses}
+          role="dialog"
+          aria-modal="true"
+        >
+          {children}
+        </div>
+      </FocusScope>
     </>,
     document.body
   )

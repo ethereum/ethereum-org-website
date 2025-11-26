@@ -23,11 +23,16 @@ const MobileMenuClient = ({
   children,
 }: MobileMenuClientProps) => {
   const [open, setOpen] = useCloseOnNavigate()
+  const triggerRef = React.useRef<HTMLButtonElement>(null)
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <HamburgerButton className={cn("-me-2", className)} isMenuOpen={open} />
+        <HamburgerButton
+          ref={triggerRef}
+          className={cn("-me-2", className)}
+          isMenuOpen={open}
+        />
       </SheetTrigger>
 
       <PersistentPanel
@@ -35,6 +40,7 @@ const MobileMenuClient = ({
         side={side}
         className="flex flex-col"
         onOpenChange={setOpen}
+        triggerRef={triggerRef}
       >
         {children}
       </PersistentPanel>

@@ -40,6 +40,7 @@ const MobileFilters = ({
   mobileFiltersLabel,
 }: MobileFiltersProps) => {
   const { t } = useTranslation("table")
+  const triggerRef = React.useRef<HTMLButtonElement>(null)
 
   const handleOpenChange = (open: boolean) => {
     setMobileFiltersOpen(open)
@@ -59,6 +60,7 @@ const MobileFilters = ({
       <Sheet open={mobileFiltersOpen} onOpenChange={handleOpenChange}>
         <SheetTrigger className="px-4" asChild>
           <Button
+            ref={triggerRef}
             variant="outline"
             className="gap-4 border-0 ps-4"
             data-testid="mobile-filters-button"
@@ -74,12 +76,12 @@ const MobileFilters = ({
         </SheetTrigger>
       </Sheet>
 
-      {/* Persistent content that stays mounted after first render */}
       <PersistentPanel
         open={mobileFiltersOpen}
         side="left"
         className="flex h-full flex-col p-2"
         onOpenChange={handleOpenChange}
+        triggerRef={triggerRef}
       >
         <div className="sticky top-0 flex items-center justify-end p-2">
           <Button variant="ghost" onClick={handleClose}>
