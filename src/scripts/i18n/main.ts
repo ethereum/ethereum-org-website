@@ -93,7 +93,7 @@ const env = {
   ghRepo,
   jsonRoot: "src/intl/en",
   mdRoot: "public/content",
-  preTranslatePromptId: 168584,
+  preTranslatePromptId: 326942,
   allCrowdinCodes: targetLanguages,
   baseBranch,
 }
