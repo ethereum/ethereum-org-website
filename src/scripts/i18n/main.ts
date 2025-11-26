@@ -104,6 +104,7 @@ const env = {
   jsonRoot: "src/intl/en",
   mdRoot: "public/content",
   preTranslatePromptId: 326942,
+  qaPromptId: Number.parseInt(process.env.QA_PROMPT_ID || "168592"),
   allCrowdinCodes: targetLanguages,
   baseBranch,
 }
@@ -667,7 +668,8 @@ const postFileToStorage = async (fileBuffer: Buffer, fileName: string) => {
 
 const postApplyPreTranslation = async (
   fileIds: number[],
-  languageIds?: string[]
+  languageIds?: string[],
+  aiPromptIdOverride?: number
 ): Promise<CrowdinPreTranslateResponse> => {
   const url = new URL(
     `https://api.crowdin.com/api/v2/projects/${env.projectId}/pre-translations`
@@ -683,7 +685,10 @@ const postApplyPreTranslation = async (
         languageIds: languageIds || env.allCrowdinCodes, // ["es-EM"], // TODO: All languages
         fileIds,
         method: "ai",
-        aiPromptId: env.preTranslatePromptId,
+        aiPromptId:
+          typeof aiPromptIdOverride === "number"
+            ? aiPromptIdOverride
+            : env.preTranslatePromptId,
       }),
     })
 
@@ -1488,6 +1493,39 @@ async function main(options?: { allLangs: boolean }) {
   console.log(
     `[PRE-TRANSLATE] Full response:`,
     JSON.stringify(preTranslateJobCompletedResponse, null, 2)
+  )
+
+  // Optional QA polish pass using Crowdin AI with qa_check prompt
+  console.log(`\n[QA-CHECK] ========== Requesting AI QA-Polish ==========`)
+  console.log(`[QA-CHECK] Using AI Prompt ID:`, env.qaPromptId)
+  const qaApplyResponse = await postApplyPreTranslation(
+    preTranslateJobCompletedResponse.attributes.fileIds,
+    preTranslateJobCompletedResponse.attributes.languageIds,
+    env.qaPromptId
+  )
+  console.log(
+    `[QA-CHECK] ✓ QA job created with ID: ${qaApplyResponse.identifier}`
+  )
+  console.log(`[QA-CHECK] Initial status:`, qaApplyResponse.status)
+
+  console.log(`\n[QA-CHECK] Waiting for QA job to complete...`)
+  const qaCompletedResponse = await awaitPreTranslationCompleted(
+    qaApplyResponse.identifier
+  )
+  if (qaCompletedResponse.status !== "finished") {
+    console.error(
+      "[QA-CHECK] ❌ QA check did not finish successfully. Full response:",
+      qaCompletedResponse
+    )
+    throw new Error(
+      `QA check ended with unexpected status: ${qaCompletedResponse.status}`
+    )
+  }
+  console.log(`[QA-CHECK] ✓ QA job completed successfully!`)
+  console.log(`[QA-CHECK] Progress: ${qaCompletedResponse.progress}%`)
+  console.log(
+    `[QA-CHECK] Full response:`,
+    JSON.stringify(qaCompletedResponse, null, 2)
   )
 
   const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes

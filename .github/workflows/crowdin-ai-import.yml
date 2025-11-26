@@ -37,6 +37,16 @@ on:
         required: false
         default: "30000"
         type: string
+      pre_translate_prompt_id:
+        description: "AI prompt ID for pre_translate (default: 326942)"
+        required: false
+        default: "326942"
+        type: string
+      qa_prompt_id:
+        description: "AI prompt ID for qa_check (default: 168592)"
+        required: false
+        default: "168592"
+        type: string
 
 jobs:
   import_translations:
@@ -69,4 +79,6 @@ jobs:
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
           PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
+          PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
+          QA_PROMPT_ID: ${{ github.event.inputs.qa_prompt_id }}
           GITHUB_REPOSITORY: ${{ github.repository }}
