@@ -68,6 +68,14 @@ const startOffset = process.env.START_OFFSET
   ? parseInt(process.env.START_OFFSET, 10)
   : 0
 
+// Adaptive polling / timeout configuration (milliseconds)
+const pretranslateTimeoutMs = process.env.PRETRANSLATE_TIMEOUT_MS
+  ? parseInt(process.env.PRETRANSLATE_TIMEOUT_MS, 10)
+  : 6 * 60 * 60 * 1000 // default 6h
+const pretranslatePollBaseMs = process.env.PRETRANSLATE_POLL_BASE_MS
+  ? Math.max(5000, parseInt(process.env.PRETRANSLATE_POLL_BASE_MS, 10))
+  : 30_000 // default 30s base (min clamped to 5s)
+
 const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
 
 // Parse GitHub repository from env (format: "owner/repo")
@@ -81,6 +89,8 @@ console.log(`[DEBUG] - Base branch: ${baseBranch}`)
 console.log(`[DEBUG] - File limit: ${fileLimit}`)
 console.log(`[DEBUG] - Start offset: ${startOffset}`)
 console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
+console.log(`[DEBUG] - Pretranslate timeout ms: ${pretranslateTimeoutMs}`)
+console.log(`[DEBUG] - Pretranslate poll base ms: ${pretranslatePollBaseMs}`)
 if (existingPreTranslationId) {
   console.log(
     `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
@@ -753,41 +763,65 @@ const getPreTranslationStatus = async (
  */
 const awaitPreTranslationCompleted = async (
   preTranslationId: string,
-  options?: { intervalMs?: number; timeoutMs?: number }
+  opts?: { timeoutMs?: number; baseIntervalMs?: number }
 ): Promise<CrowdinPreTranslateResponse> => {
-  const intervalMs = options?.intervalMs ?? 10_000
-  const timeoutMs = options?.timeoutMs ?? 30 /* min */ * 60 * 1000
+  const timeoutMs = opts?.timeoutMs ?? pretranslateTimeoutMs
+  const baseInterval = opts?.baseIntervalMs ?? pretranslatePollBaseMs
+  const start = Date.now()
+  let attempt = 0
 
-  return await new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => {
-      reject(new Error("Timed out waiting for pre-translation to finish"))
-    }, timeoutMs)
+  const computeInterval = (elapsedMs: number): number => {
+    const minutes = elapsedMs / 60000
+    if (minutes < 10) return baseInterval
+    if (minutes < 30) return Math.max(baseInterval * 2, 60_000)
+    if (minutes < 60) return Math.max(baseInterval * 4, 180_000)
+    return Math.max(baseInterval * 10, 300_000) // cap at 5 min
+  }
 
-    const poll = async () => {
-      try {
-        const res = await getPreTranslationStatus(preTranslationId)
-        if (res.status !== "in_progress") {
-          clearTimeout(timeout)
-          if (res.status === "finished") {
-            resolve(res)
-          } else {
-            reject(
-              new Error(
-                `Pre-translation ended with unexpected status: ${res.status}`
-              )
-            )
-          }
-        } else {
-          setTimeout(poll, intervalMs)
-        }
-      } catch (err) {
-        clearTimeout(timeout)
-        reject(err)
-      }
+  // Bounded loop: terminates once elapsed exceeds timeoutMs
+  while (Date.now() - start <= timeoutMs) {
+    const elapsed = Date.now() - start
+    attempt++
+    let res: CrowdinPreTranslateResponse
+    try {
+      res = await getPreTranslationStatus(preTranslationId)
+    } catch (e) {
+      // transient fetch errors: log + continue within timeout window
+      const nextWait = computeInterval(elapsed)
+      console.warn(
+        `[PRE-TRANSLATE][POLL] Error on attempt ${attempt}: ${(e as Error).message}. Retrying in ${nextWait}ms.`
+      )
+      await delay(nextWait)
+      continue
     }
-
-    void poll()
-  })
+    if (res.status !== "in_progress") {
+      if (res.status === "finished") {
+        console.log(
+          `[PRE-TRANSLATE][POLL] Completed after ${attempt} attempts; elapsed ${Math.round(
+            (Date.now() - start) / 60000
+          )}m.`
+        )
+        return res
+      }
+      throw new Error(
+        `Pre-translation ended with unexpected status: ${res.status}`
+      )
+    }
+    const nextWait = computeInterval(elapsed)
+    const progressPct = res.progress ?? 0
+    console.log(
+      `[PRE-TRANSLATE][POLL] attempt=${attempt} progress=${progressPct}% elapsed=${Math.round(
+        elapsed / 60000
+      )}m nextWait=${nextWait}ms`
+    )
+    await delay(nextWait)
+  }
+  const finalElapsed = Date.now() - start
+  throw new Error(
+    `Timed out waiting for pre-translation (elapsed ${Math.round(
+      finalElapsed / 60000
+    )}m)`
+  )
 }
 
 /**

@@ -27,6 +27,16 @@ on:
         required: false
         default: "dev"
         type: string
+      pretranslate_timeout_ms:
+        description: "Max ms to wait for pre-translate (default: 21600000 ~6h)"
+        required: false
+        default: "21600000"
+        type: string
+      pretranslate_poll_base_ms:
+        description: "Base poll interval ms (default: 30000)"
+        required: false
+        default: "30000"
+        type: string
 
 jobs:
   import_translations:
@@ -57,4 +67,6 @@ jobs:
           START_OFFSET: ${{ github.event.inputs.start_offset }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
+          PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           GITHUB_REPOSITORY: ${{ github.repository }}
