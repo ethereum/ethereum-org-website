@@ -34,6 +34,7 @@ import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbo
 import IconEtherealize from "@/public/images/resources/etherealize.png"
 import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
+import IconOtterscan from "@/public/images/resources/eth-glyph-blue-circle.png"
 import IconFarcaster from "@/public/images/resources/farcaster.png"
 import IconGasTracker from "@/public/images/resources/gas.png"
 import IconGrowthepie from "@/public/images/resources/growthepie.png"
@@ -180,6 +181,12 @@ export const getResources = async ({
           description: t("page-resources-block-explorers-txcity-description"),
           href: "https://txcity.io/",
           imgSrc: IconTxCity,
+        },
+        {
+          title: "Otterscan",
+          description: t("page-resources-block-explorers-otterscan-description"),
+          href: "https://otterscan.io/",
+          imgSrc: IconOtterscan,
         },
       ],
     },
