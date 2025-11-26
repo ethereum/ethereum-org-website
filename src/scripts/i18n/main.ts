@@ -1,7 +1,11 @@
+/* eslint-disable import/order */
+import fs from "fs"
+
 import dotenv from "dotenv"
 
 import i18nConfig from "../../../i18n.config.json"
 
+import { runSanitizer } from "./post_import_sanitize"
 import type {
   BranchDetailsResponse,
   BranchObject,
@@ -60,6 +64,12 @@ const fileLimit = process.env.FILE_LIMIT
   ? parseInt(process.env.FILE_LIMIT, 10)
   : 100
 
+const startOffset = process.env.START_OFFSET
+  ? parseInt(process.env.START_OFFSET, 10)
+  : 0
+
+const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
+
 // Parse GitHub repository from env (format: "owner/repo")
 const githubRepo =
   process.env.GITHUB_REPOSITORY || "ethereum/ethereum-org-website"
@@ -69,7 +79,13 @@ console.log("[DEBUG] Configuration:")
 console.log(`[DEBUG] - Target languages: ${targetLanguages.join(", ")}`)
 console.log(`[DEBUG] - Base branch: ${baseBranch}`)
 console.log(`[DEBUG] - File limit: ${fileLimit}`)
+console.log(`[DEBUG] - Start offset: ${startOffset}`)
 console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
+if (existingPreTranslationId) {
+  console.log(
+    `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
+  )
+}
 
 const env = {
   projectId: 834930,
@@ -149,44 +165,75 @@ const fetchWithRetry = async (
 }
 
 /**
- * Get all files, using perPage to limit amount fetched
+ * Get English files with pagination, allowing limit + offset.
+ * GitHub Search API caps `per_page` at 100; we fetch pages until
+ * we accumulate `offset + limit` items, then return the slice.
  */
 const getAllEnglishFiles = async (
-  perPage = 100
+  limit = 100,
+  offset = 0
 ): Promise<GitHubQueryResponseItem[]> => {
   const ghSearchEndpointBase = "https://api.github.com/search/code"
   const query = `repo:${env.ghOrganization}/${env.ghRepo} extension:md path:"${env.mdRoot}" -path:"${env.mdRoot}/translations" OR repo:${env.ghOrganization}/${env.ghRepo} extension:json path:"${env.jsonRoot}"`
 
-  const url = new URL(ghSearchEndpointBase)
-  url.searchParams.set("q", query)
-  url.searchParams.set("per_page", perPage.toString())
-  url.searchParams.set("page", "1")
-
   console.log(`[DEBUG] GitHub search query: ${query}`)
-  console.log(`[DEBUG] GitHub search URL: ${url.toString()}`)
 
-  try {
-    const res = await fetchWithRetry(url.toString(), {
-      headers: gitHubBearerHeaders,
-    })
+  const perPage = 100
+  const needed = offset + limit
+  const collected: GitHubQueryResponseItem[] = []
 
-    if (!res.ok) {
-      console.warn(`[ERROR] GitHub API response not OK: ${res.status}`)
-      const body = await res.text().catch(() => "")
-      console.error(`[ERROR] Response body:`, body)
-      throw new Error(`GitHub getAllEnglishFiles (${res.status}): ${body}`)
+  let page = 1
+  while (collected.length < needed) {
+    const url = new URL(ghSearchEndpointBase)
+    url.searchParams.set("q", query)
+    url.searchParams.set("per_page", perPage.toString())
+    url.searchParams.set("page", page.toString())
+
+    console.log(`[DEBUG] Fetching search page ${page} ...`)
+
+    try {
+      const res = await fetchWithRetry(url.toString(), {
+        headers: gitHubBearerHeaders,
+      })
+
+      if (!res.ok) {
+        console.warn(`[ERROR] GitHub API response not OK: ${res.status}`)
+        const body = await res.text().catch(() => "")
+        console.error(`[ERROR] Response body:`, body)
+        throw new Error(`GitHub getAllEnglishFiles (${res.status}): ${body}`)
+      }
+
+      type JsonResponse = { items: GitHubQueryResponseItem[] }
+      const json: JsonResponse = await res.json()
+
+      if (!json.items.length) {
+        console.log(`[DEBUG] No more results at page ${page}.`)
+        break
+      }
+
+      collected.push(...json.items)
+      console.log(`[DEBUG] Collected ${collected.length} items so far.`)
+
+      page += 1
+      if (page > 10) {
+        // Safety cap: avoid excessive paging; typical search caps ~1000 results
+        console.warn(
+          `[WARN] Reached pagination safety cap at page ${page - 1}.`
+        )
+        break
+      }
+    } catch (error) {
+      console.error(`[ERROR] Failed to get English files from GitHub:`, error)
+      process.exit(1)
     }
-
-    type JsonResponse = { items: GitHubQueryResponseItem[] }
-    const json: JsonResponse = await res.json()
-
-    console.log(`[DEBUG] Found ${json.items.length} files from GitHub`)
-    console.log(`[DEBUG] First GitHub file:`, json.items[0])
-    return json.items
-  } catch (error) {
-    console.error(`[ERROR] Failed to get English files from GitHub:`, error)
-    process.exit(1)
   }
+
+  const sliced = collected.slice(offset, offset + limit)
+  console.log(
+    `[DEBUG] Returning ${sliced.length} files (offset=${offset}, limit=${limit})`
+  )
+  if (sliced.length) console.log(`[DEBUG] First GitHub file:`, sliced[0])
+  return sliced
 }
 
 const getFileMetadata = async (
@@ -1079,6 +1126,134 @@ const postPullRequest = async (head: string, base = env.baseBranch) => {
   return json
 }
 
+async function buildAndCommitTranslations(
+  preTranslateJobCompletedResponse: CrowdinPreTranslateResponse
+) {
+  if (preTranslateJobCompletedResponse.status !== "finished") {
+    console.error(
+      "[BUILD] ❌ Pre-translation did not finish successfully. Full response:",
+      preTranslateJobCompletedResponse
+    )
+    throw new Error(
+      `Pre-translation ended with unexpected status: ${preTranslateJobCompletedResponse.status}`
+    )
+  }
+
+  console.log(`[BUILD] ✓ Pre-translation completed successfully!`)
+  console.log(`[BUILD] Progress: ${preTranslateJobCompletedResponse.progress}%`)
+  console.log(
+    `[BUILD] Full response:`,
+    JSON.stringify(preTranslateJobCompletedResponse, null, 2)
+  )
+
+  const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
+
+  // Get Crowdin project files for path mapping
+  const crowdinProjectFiles = await getCrowdinProjectFiles()
+
+  // Build mapping for commit phase using existing Crowdin files
+  const fileIdToPathMapping: Record<number, string> = {}
+  for (const fid of fileIds) {
+    const existing = crowdinProjectFiles.find((f) => f.id === fid)
+    if (existing) fileIdToPathMapping[fid] = existing.path
+
+    if (!fileIdToPathMapping[fid]) {
+      console.warn(
+        `[WARN] Missing path mapping for fileId=${fid} (may impact destination path calculation)`
+      )
+    }
+  }
+
+  // Build mapping between Crowdin IDs (e.g. "es-EM") and internal codes (e.g. "es")
+  const languagePairs = languageIds.map((crowdinId) => ({
+    crowdinId,
+    internalLanguageCode: crowdinToInternalCodeMapping[crowdinId],
+  }))
+
+  const { branch } = await postCreateBranchFrom(env.baseBranch)
+  console.log(`\n[BRANCH] ✓ Created branch: ${branch}`)
+
+  // For each language
+  for (const { crowdinId, internalLanguageCode } of languagePairs) {
+    console.log(
+      `\n[BUILD] ========== Building translations for language: ${crowdinId} (internal: ${internalLanguageCode}) ==========`
+    )
+
+    // Build, download and commit each file
+    for (const fileId of fileIds) {
+      console.log(`\n[BUILD] --- Processing fileId: ${fileId} ---`)
+      const crowdinPath = fileIdToPathMapping[fileId]
+      console.log(`[BUILD] Crowdin path: ${crowdinPath}`)
+
+      // 1- Build
+      console.log(
+        `[BUILD] Requesting build for fileId=${fileId}, language=${crowdinId}`
+      )
+      const { url: downloadUrl } = await postBuildProjectFileTranslation(
+        fileId,
+        crowdinId,
+        env.projectId
+      )
+      console.log(`[BUILD] ✓ Build complete, download URL: ${downloadUrl}`)
+
+      // 2- Download
+      console.log(`[BUILD] Downloading translated file...`)
+      const { buffer } = await getBuiltFile(downloadUrl)
+      console.log(`[BUILD] Downloaded ${buffer.length} bytes`)
+
+      // 3a- Get destination path
+      const destinationPath = getDestinationFromPath(
+        crowdinPath,
+        internalLanguageCode
+      )
+      console.log(`[BUILD] Destination path: ${destinationPath}`)
+
+      // 3b- Commit
+      console.log(`[BUILD] Committing to branch: ${branch}`)
+      await putCommitFile(buffer, destinationPath, branch)
+      console.log(`[BUILD] ✓ Committed successfully`)
+    }
+  }
+
+  // Run post-import sanitizer BEFORE creating PR (may produce additional commits)
+  console.log(
+    `\n[SANITIZE] ========== Running post-import sanitizer before PR ==========`
+  )
+  const sanitizeResult = runSanitizer(env.allCrowdinCodes)
+  const changedFiles = sanitizeResult.changedFiles || []
+  if (changedFiles.length) {
+    console.log(`[SANITIZE] Files changed by sanitizer: ${changedFiles.length}`)
+    for (const abs of changedFiles) {
+      const relPath = abs.startsWith(process.cwd())
+        ? abs.slice(process.cwd().length + 1)
+        : abs
+      try {
+        const buf = fs.readFileSync(abs)
+        await putCommitFile(buf, relPath, branch)
+        console.log(`[SANITIZE] ✓ Committed sanitized file: ${relPath}`)
+      } catch (e) {
+        console.warn(
+          `[SANITIZE] Failed to commit sanitized file ${relPath}:`,
+          e
+        )
+      }
+    }
+  } else {
+    console.log("[SANITIZE] No sanitation changes to commit")
+  }
+
+  console.log(`\n[PR] ========== Creating Pull Request ==========`)
+  console.log(`[PR] Head branch: ${branch}`)
+  console.log(`[PR] Base branch: ${env.baseBranch}`)
+
+  const pr = await postPullRequest(branch, env.baseBranch)
+
+  console.log(`\n[SUCCESS] ========== Translation import complete! ==========`)
+  console.log(`[SUCCESS] Pull Request URL: ${pr.html_url}`)
+  console.log(`[SUCCESS] PR Number: #${pr.number}`)
+  console.log(pr)
+}
+
 async function main(options?: { allLangs: boolean }) {
   console.log(`[DEBUG] Starting main function with options:`, options)
   console.log(`[DEBUG] Environment config:`, {
@@ -1089,10 +1264,44 @@ async function main(options?: { allLangs: boolean }) {
     allCrowdinCodes: env.allCrowdinCodes,
   })
 
-  // Fetch English files with the configured file limit
-  const allEnglishFiles = await getAllEnglishFiles(fileLimit)
+  // Check if resuming from existing pre-translation
+  if (existingPreTranslationId) {
+    console.log(
+      `\n[RESUME] ========== Resuming from pre-translation ID: ${existingPreTranslationId} ==========`
+    )
+    console.log(`[RESUME] Checking status of existing pre-translation...`)
+
+    const preTranslateJobCompletedResponse = await getPreTranslationStatus(
+      existingPreTranslationId
+    )
+
+    if (preTranslateJobCompletedResponse.status === "in_progress") {
+      console.log(
+        `[RESUME] Pre-translation still in progress (${preTranslateJobCompletedResponse.progress}%). Waiting for completion...`
+      )
+      const completedResponse = await awaitPreTranslationCompleted(
+        existingPreTranslationId
+      )
+      return await buildAndCommitTranslations(completedResponse)
+    } else if (preTranslateJobCompletedResponse.status === "finished") {
+      console.log(
+        `[RESUME] Pre-translation already finished. Building translations...`
+      )
+      return await buildAndCommitTranslations(preTranslateJobCompletedResponse)
+    } else {
+      throw new Error(
+        `Pre-translation ${existingPreTranslationId} has unexpected status: ${preTranslateJobCompletedResponse.status}`
+      )
+    }
+  }
+
+  // Normal flow: Start new pre-translation
+  console.log(`\n[START] ========== Starting new pre-translation ==========`)
+
+  // Fetch English files with limit + start offset
+  const allEnglishFiles = await getAllEnglishFiles(fileLimit, startOffset)
   console.log(
-    `[DEBUG] Found ${allEnglishFiles.length} English files from GitHub`
+    `[DEBUG] Found ${allEnglishFiles.length} English files from GitHub (offset=${startOffset}, limit=${fileLimit})`
   )
 
   // TODO: Add filter here to select specific files
@@ -1329,6 +1538,33 @@ async function main(options?: { allLangs: boolean }) {
       await putCommitFile(buffer, destinationPath, branch)
       console.log(`[BUILD] ✓ Committed successfully`)
     }
+  }
+
+  // Run post-import sanitizer BEFORE creating PR (may produce additional commits)
+  console.log(
+    `\n[SANITIZE] ========== Running post-import sanitizer before PR ==========`
+  )
+  const sanitizeResult = runSanitizer(env.allCrowdinCodes)
+  const changedFiles = sanitizeResult.changedFiles || []
+  if (changedFiles.length) {
+    console.log(`[SANITIZE] Files changed by sanitizer: ${changedFiles.length}`)
+    for (const abs of changedFiles) {
+      const relPath = abs.startsWith(process.cwd())
+        ? abs.slice(process.cwd().length + 1)
+        : abs
+      try {
+        const buf = fs.readFileSync(abs)
+        await putCommitFile(buf, relPath, branch)
+        console.log(`[SANITIZE] ✓ Committed sanitized file: ${relPath}`)
+      } catch (e) {
+        console.warn(
+          `[SANITIZE] Failed to commit sanitized file ${relPath}:`,
+          e
+        )
+      }
+    }
+  } else {
+    console.log("[SANITIZE] No sanitation changes to commit")
   }
 
   console.log(`\n[PR] ========== Creating Pull Request ==========`)

@@ -3,10 +3,19 @@ name: Import Crowdin AI Translations
 on:
   workflow_dispatch:
     inputs:
+      pretranslation_id:
+        description: "Pre-translation ID to resume from (optional - leave empty to start new)"
+        required: false
+        type: string
       file_limit:
         description: "Number of files to process (default: 100, use 1-10 for testing)"
         required: false
         default: "100"
+        type: string
+      start_offset:
+        description: "Starting offset for files (skip first N files; default: 0)"
+        required: false
+        default: "0"
         type: string
       target_languages:
         description: "Comma-separated Crowdin language codes (default: es-EM)"
@@ -43,7 +52,9 @@ jobs:
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           FILE_LIMIT: ${{ github.event.inputs.file_limit }}
+          START_OFFSET: ${{ github.event.inputs.start_offset }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
           GITHUB_REPOSITORY: ${{ github.repository }}
