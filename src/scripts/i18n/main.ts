@@ -1711,42 +1711,92 @@ async function main(options?: { allLangs: boolean }) {
   }
   // Use project source language from repo (assume en-US or en) — map from i18n config
   const sourceLanguageId = "en"
-  // For each language, request a completion over all strings of the selected files
+  const MAX_STRINGS_PER_REQUEST = 500
+  // For each language, run QA per file (naturally batches and ties issues to specific files)
   for (const lang of qaLanguageIds) {
-    const allStringIds = Object.values(fileStringMap).flat()
-    if (!allStringIds.length) {
-      console.log(`[QA-CHECK] No strings found to QA for ${lang}`)
-      continue
-    }
     console.log(
-      `[QA-CHECK] Posting completions for ${lang} with ${allStringIds.length} strings`
+      `[QA-CHECK] Running QA for ${lang} across ${qaFileIds.length} files`
     )
-    let job: QaCompletionJob | undefined
-    try {
-      job = await postQaCompletions(env.qaPromptId, {
-        projectId: env.projectId,
-        sourceLanguageId,
-        targetLanguageId: lang,
-        stringIds: allStringIds,
-      })
-    } catch (e) {
-      const msg = String((e as Error).message || e)
-      console.warn(`[QA-CHECK] Skipping QA for ${lang}: ${msg}`)
-      qaSummaries.push(
-        `QA for ${lang}: skipped (token lacks AI completions scope).`
+    const allIssues: QaIssue[] = []
+    let skipped = false
+
+    for (const fid of qaFileIds) {
+      const stringIds = fileStringMap[fid] || []
+      if (!stringIds.length) {
+        console.log(`[QA-CHECK] Skipping fileId=${fid} (no strings)`)
+        continue
+      }
+
+      console.log(
+        `[QA-CHECK] QA for ${lang} fileId=${fid} (${stringIds.length} strings)`
       )
-      continue
+
+      // Chunk large files to stay within API limits
+      const chunks =
+        stringIds.length > MAX_STRINGS_PER_REQUEST
+          ? Array.from(
+              { length: Math.ceil(stringIds.length / MAX_STRINGS_PER_REQUEST) },
+              (_, i) =>
+                stringIds.slice(
+                  i * MAX_STRINGS_PER_REQUEST,
+                  (i + 1) * MAX_STRINGS_PER_REQUEST
+                )
+            )
+          : [stringIds]
+
+      for (let chunkIdx = 0; chunkIdx < chunks.length; chunkIdx++) {
+        const chunk = chunks[chunkIdx]
+        if (chunks.length > 1) {
+          console.log(
+            `[QA-CHECK]   Chunk ${chunkIdx + 1}/${chunks.length} (${chunk.length} strings)`
+          )
+        }
+
+        let job: QaCompletionJob | undefined
+        try {
+          job = await postQaCompletions(env.qaPromptId, {
+            projectId: env.projectId,
+            sourceLanguageId,
+            targetLanguageId: lang,
+            stringIds: chunk,
+          })
+        } catch (e) {
+          const msg = String((e as Error).message || e)
+          console.warn(
+            `[QA-CHECK] Failed for fileId=${fid} chunk ${chunkIdx + 1}: ${msg}`
+          )
+          if (msg.includes("403")) {
+            // If 403, skip entire language (endpoint not accessible)
+            qaSummaries.push(
+              `QA for ${lang}: skipped (endpoint not accessible - may require Enterprise or AI credits).`
+            )
+            skipped = true
+            break
+          }
+          continue
+        }
+
+        const finished = await awaitQaCompletion(job.id)
+        if (finished.status !== "finished") {
+          console.warn(
+            `[QA-CHECK] Completion for fileId=${fid} chunk ${chunkIdx + 1} status=${finished.status}`
+          )
+          continue
+        }
+        const issues = await downloadQaCompletionResult(job.id)
+        allIssues.push(...issues)
+      }
+
+      if (skipped) break
     }
-    const finished = await awaitQaCompletion(job.id)
-    if (finished.status !== "finished") {
-      console.warn(
-        `[QA-CHECK] Completion status=${finished.status} for ${lang}`
-      )
-      continue
+
+    if (
+      !skipped &&
+      (allIssues.length > 0 || Object.keys(fileStringMap).length > 0)
+    ) {
+      const summary = summarizeQaIssues(allIssues, processedFileIdToPath, lang)
+      qaSummaries.push(summary)
     }
-    const issues = await downloadQaCompletionResult(job.id)
-    const summary = summarizeQaIssues(issues, processedFileIdToPath, lang)
-    qaSummaries.push(summary)
   }
 
   const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
