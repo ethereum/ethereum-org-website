@@ -177,6 +177,182 @@ const fetchWithRetry = async (
   throw new Error("fetchWithRetry: exhausted retries")
 }
 
+// --- Crowdin AI Completions (qa_check) helpers ---
+type QaCompletionRequest = {
+  projectId: number
+  sourceLanguageId: string
+  targetLanguageId: string
+  stringIds: number[]
+}
+type QaCompletionJob = {
+  id: string
+  status: "in_progress" | "finished" | string
+  progress?: number
+}
+type QaIssue = {
+  fileId: number
+  stringId: number
+  severity: "error" | "warning" | "info"
+  title: string
+  details?: string
+}
+
+const resolveCrowdinUserId = async (): Promise<string> => {
+  const url = new URL("https://api.crowdin.com/api/v2/user")
+  const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
+  if (!res.ok) {
+    const text = await res.text().catch(() => "")
+    throw new Error(`resolveCrowdinUserId (${res.status}): ${text}`)
+  }
+  const json = await res.json()
+  const id = String(json.data?.id || json.id)
+  if (!id) throw new Error("Failed to resolve Crowdin user id from /users/me")
+  return id
+}
+
+const listStringIdsForFile = async (fileId: number): Promise<number[]> => {
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/projects/${env.projectId}/strings`
+  )
+  url.searchParams.set("fileId", String(fileId))
+  url.searchParams.set("limit", "500")
+  const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
+  if (!res.ok) {
+    const text = await res.text().catch(() => "")
+    throw new Error(`listStringIdsForFile (${res.status}): ${text}`)
+  }
+  const json = await res.json()
+  type StringItem = { data: { id: number } }
+  const items: StringItem[] = json.data || []
+  const ids: number[] = items.map((d) => d.data.id)
+  return ids
+}
+
+const postQaCompletions = async (
+  qaPromptId: number,
+  payload: QaCompletionRequest
+): Promise<QaCompletionJob> => {
+  const userId = await resolveCrowdinUserId()
+  if (!userId) throw new Error("CROWDIN_USER_ID env missing for completions")
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/${qaPromptId}/completions`
+  )
+  const res = await fetch(url.toString(), {
+    method: "POST",
+    headers: { ...crowdinBearerHeaders, "Content-Type": "application/json" },
+    body: JSON.stringify({ resources: payload }),
+  })
+  if (!res.ok) {
+    const text = await res.text().catch(() => "")
+    throw new Error(`postQaCompletions (${res.status}): ${text}`)
+  }
+  const json = await res.json()
+  return json.data as QaCompletionJob
+}
+
+const getQaCompletion = async (
+  completionId: string
+): Promise<QaCompletionJob> => {
+  const userId = await resolveCrowdinUserId()
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/completions/${completionId}`
+  )
+  const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
+  if (!res.ok) {
+    const text = await res.text().catch(() => "")
+    throw new Error(`getQaCompletion (${res.status}): ${text}`)
+  }
+  const json = await res.json()
+  return json.data as QaCompletionJob
+}
+
+const awaitQaCompletion = async (
+  completionId: string,
+  timeoutMs = pretranslateTimeoutMs,
+  baseIntervalMs = pretranslatePollBaseMs
+): Promise<QaCompletionJob> => {
+  const start = Date.now()
+  let attempt = 0
+  const computeInterval = (elapsedMs: number): number => {
+    const minutes = elapsedMs / 60000
+    if (minutes < 10) return baseIntervalMs
+    if (minutes < 30) return Math.max(baseIntervalMs * 2, 60_000)
+    if (minutes < 60) return Math.max(baseIntervalMs * 4, 180_000)
+    return Math.max(baseIntervalMs * 10, 300_000)
+  }
+  while (Date.now() - start <= timeoutMs) {
+    attempt++
+    const elapsed = Date.now() - start
+    let job: QaCompletionJob
+    try {
+      job = await getQaCompletion(completionId)
+    } catch (e) {
+      const wait = computeInterval(elapsed)
+      console.warn(
+        `[QA-CHECK][POLL] Error on attempt ${attempt}: ${(e as Error).message}. Waiting ${wait}ms.`
+      )
+      await delay(wait)
+      continue
+    }
+    if (job.status !== "in_progress") return job
+    const wait = computeInterval(elapsed)
+    console.log(
+      `[QA-CHECK][POLL] attempt=${attempt} progress=${job.progress ?? 0}% nextWait=${wait}ms`
+    )
+    await delay(wait)
+  }
+  throw new Error("Timed out awaiting QA completion")
+}
+
+const downloadQaCompletionResult = async (
+  completionId: string
+): Promise<QaIssue[]> => {
+  const userId = await resolveCrowdinUserId()
+  const url = new URL(
+    `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/completions/${completionId}/download`
+  )
+  const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
+  if (!res.ok) {
+    const text = await res.text().catch(() => "")
+    throw new Error(`downloadQaCompletionResult (${res.status}): ${text}`)
+  }
+  // Assume JSON structure containing issues; adjust as per actual response
+  const arrayBuffer = await res.arrayBuffer()
+  const text = Buffer.from(arrayBuffer).toString("utf-8")
+  try {
+    const parsed = JSON.parse(text)
+    const issues: QaIssue[] = parsed.issues || parsed.data || []
+    return issues
+  } catch {
+    // If plain text, return empty and attach raw for summary
+    return []
+  }
+}
+
+const summarizeQaIssues = (
+  issues: QaIssue[],
+  fileIdToPath: Record<number, string>,
+  lang: string
+): string => {
+  if (!issues.length) return `No QA issues detected for ${lang}.`
+  const counts = { error: 0, warning: 0, info: 0 }
+  for (const i of issues) {
+    const sev = i.severity
+    if (sev === "error" || sev === "warning" || sev === "info") {
+      counts[sev]++
+    }
+  }
+  const top = issues.slice(0, 10)
+  const lines = [
+    `QA for ${lang}: ${counts.error} errors, ${counts.warning} warnings, ${counts.info} info`,
+  ]
+  for (const i of top) {
+    const path = fileIdToPath[i.fileId] || `fileId=${i.fileId}`
+    lines.push(`- [${i.severity}] ${path} string=${i.stringId} — ${i.title}`)
+  }
+  return lines.join("\n")
+}
+
 /**
  * Get English files with pagination, allowing limit + offset.
  * GitHub Search API caps `per_page` at 100; we fetch pages until
@@ -1136,7 +1312,11 @@ const putCommitFile = async (
   }
 }
 
-const postPullRequest = async (head: string, base = env.baseBranch) => {
+const postPullRequest = async (
+  head: string,
+  base = env.baseBranch,
+  bodyText?: string
+) => {
   const url = new URL(
     `https://api.github.com/repos/${env.ghOrganization}/${env.ghRepo}/pulls`
   )
@@ -1145,7 +1325,7 @@ const postPullRequest = async (head: string, base = env.baseBranch) => {
     title: "i18n: automated Crowdin translation import",
     head,
     base,
-    body: "Automated Crowdin translation import",
+    body: bodyText || "Automated Crowdin translation import",
   }
 
   const res = await fetchWithRetry(url.toString(), {
@@ -1304,6 +1484,8 @@ async function main(options?: { allLangs: boolean }) {
     mdRoot: env.mdRoot,
     allCrowdinCodes: env.allCrowdinCodes,
   })
+
+  // Crowdin user id is fetched on-demand when calling completions API
 
   // Check if resuming from existing pre-translation
   if (existingPreTranslationId) {
@@ -1497,21 +1679,49 @@ async function main(options?: { allLangs: boolean }) {
     JSON.stringify(preTranslateJobCompletedResponse, null, 2)
   )
 
-  // Optional QA: Crowdin AI Prompt Completions (qa_check) — placeholder until completions wiring
+  // QA via Crowdin AI Prompt Completions (qa_check)
   console.log(`\n[QA-CHECK] ========== AI QA via Prompt Completions ==========`)
-  const crowdinUserId = process.env.CROWDIN_USER_ID
-  if (!crowdinUserId) {
+  const qaSummaries: string[] = []
+  const { languageIds: qaLanguageIds, fileIds: qaFileIds } =
+    preTranslateJobCompletedResponse.attributes
+  // Build stringId lists per file
+  const fileStringMap: Record<number, number[]> = {}
+  for (const fid of qaFileIds) {
+    try {
+      fileStringMap[fid] = await listStringIdsForFile(fid)
+    } catch (e) {
+      console.warn(`[QA-CHECK] Failed listing strings for fileId=${fid}:`, e)
+      fileStringMap[fid] = []
+    }
+  }
+  // Use project source language from repo (assume en-US or en) — map from i18n config
+  const sourceLanguageId = "en"
+  // For each language, request a completion over all strings of the selected files
+  for (const lang of qaLanguageIds) {
+    const allStringIds = Object.values(fileStringMap).flat()
+    if (!allStringIds.length) {
+      console.log(`[QA-CHECK] No strings found to QA for ${lang}`)
+      continue
+    }
     console.log(
-      `[QA-CHECK] Skipping QA: missing env CROWDIN_USER_ID required for completions API`
+      `[QA-CHECK] Posting completions for ${lang} with ${allStringIds.length} strings`
     )
-  } else {
-    console.log(
-      `[QA-CHECK] Ready to request completions with qa_prompt_id=${env.qaPromptId} for files:`,
-      preTranslateJobCompletedResponse.attributes.fileIds
-    )
-    console.log(
-      `[QA-CHECK] TODO: Implement completions POST /users/{userId}/ai/prompts/{aiPromptId}/completions with stringIds per file/language.`
-    )
+    const job = await postQaCompletions(env.qaPromptId, {
+      projectId: env.projectId,
+      sourceLanguageId,
+      targetLanguageId: lang,
+      stringIds: allStringIds,
+    })
+    const finished = await awaitQaCompletion(job.id)
+    if (finished.status !== "finished") {
+      console.warn(
+        `[QA-CHECK] Completion status=${finished.status} for ${lang}`
+      )
+      continue
+    }
+    const issues = await downloadQaCompletionResult(job.id)
+    const summary = summarizeQaIssues(issues, processedFileIdToPath, lang)
+    qaSummaries.push(summary)
   }
 
   const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
@@ -1629,7 +1839,10 @@ async function main(options?: { allLangs: boolean }) {
   console.log(`[PR] Head branch: ${branch}`)
   console.log(`[PR] Base branch: ${env.baseBranch}`)
 
-  const pr = await postPullRequest(branch, env.baseBranch)
+  const prBody = qaSummaries.length
+    ? `Automated Crowdin translation import\n\nQA Summary:\n\n${qaSummaries.join("\n\n")}`
+    : "Automated Crowdin translation import"
+  const pr = await postPullRequest(branch, env.baseBranch, prBody)
 
   console.log(`\n[SUCCESS] ========== Translation import complete! ==========`)
   console.log(`[SUCCESS] Pull Request URL: ${pr.html_url}`)
