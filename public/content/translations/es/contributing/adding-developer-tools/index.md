@@ -4,37 +4,37 @@ lang: es
 description: Nuestros criterios para enumerar herramientas para desarrolladores en ethereum.org
 ---
 
-# Agregar herramientas para desarrolladores {#contributing-to-ethereumorg-}
+# Añadir herramientas para desarrolladores {#contributing-to-ethereumorg-}
 
 Queremos estar seguros que contar con los mejores recursos para desarrolladores para que puedan construir con confianza y que tengan el apoyo que requiren.
 
 Si hay alguna herramienta útil para desarrollador que no hayamos incluido, puede sugerir que la agreguen.
 
-Actualmente incluimos las herramientas para desarrollador en nuestro [portal para desarrolladores](/developers/).
+Actualmente, incluimos herramientas para desarrolladores en nuestro [portal para desarrolladores](/developers/).
 
 **No dude en sugerir nuevas adiciones a las páginas apropiadas.**
 
-## Cómo decidimos {#ways-to-contribute}
+## Cómo lo decidimos {#ways-to-contribute}
 
 Las solicitudes de herramientas para desarrolladores se evaluarán según los siguientes criterios:
 
-**¿Tiene una diferencia significativa con respecto a las herramientas ya mencionadas?**
+**¿Se diferencia de forma significativa de las herramientas que ya figuran en la lista?**
 
 - Nuevas categorías o tipos de herramientas
 - Nuevas funciones comparadas con herramientas similares existentes
 - Dirigido a un caso de uso distinto no cubierto por herramientas similares existentes
 
-**¿Está bien documentada la herramienta?**
+**¿Está la herramienta bien documentada?**
 
 - ¿Existe la documentación?
 - ¿La documentación es suficiente para utilizar la herramienta?
 - ¿La documentación se ha actualizado recientemente?
 
-**¿La herramienta goza de un uso generalizado?**
+**¿Es la herramienta ampliamente utilizada?**
 
 - Consideraremos sistemas de medición como las estrellas de GitHub, las estadísticas de descarga y si las utilizan empresas o proyectos conocidos.
 
-**¿La herramienta es de suficiente calidad?**
+**¿Tiene la herramienta la calidad suficiente?**
 
 - ¿Hay errores recurrentes?
 - ¿La herramienta es fiable?
@@ -46,16 +46,16 @@ Muchos proyectos en el espacio de Ethereum son de código abierto. Es más proba
 
 ---
 
-## Pedido de productos {#product-ordering}
+## Ordenación de productos {#product-ordering}
 
-A menos que los productos estén específicamente ordenados de otra manera, como por ejemplo en orden alfabético, los productos se mostrarán de menos a más recientemente añadidos a la página. Es decir, los productos más nuevos se añaden al final de la lista.
+A menos que los productos estén específicamente ordenados de otra manera, como por ejemplo en orden alfabético, los productos se mostrarán de menos a más recientemente añadidos a la página. En otras palabras, los productos más nuevos se añaden al final de la lista.
 
 ---
 
-## Añadir herramientas para desarrolladores {#how-decisions-about-the-site-are-made}
+## Añada su herramienta para desarrolladores {#how-decisions-about-the-site-are-made}
 
 Si desea añadir una herramienta para desarrollador a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
-  Crear una incidencia
+  Crear incidencia
 </ButtonLink>
