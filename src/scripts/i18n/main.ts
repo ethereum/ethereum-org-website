@@ -237,6 +237,8 @@ const postQaCompletions = async (
   const url = new URL(
     `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/${qaPromptId}/completions`
   )
+  console.log(`[QA-CHECK][DEBUG] POST ${url.toString()}`)
+  console.log(`[QA-CHECK][DEBUG] Payload:`, JSON.stringify(payload, null, 2))
   const res = await fetch(url.toString(), {
     method: "POST",
     headers: { ...crowdinBearerHeaders, "Content-Type": "application/json" },
@@ -244,6 +246,12 @@ const postQaCompletions = async (
   })
   if (!res.ok) {
     const text = await res.text().catch(() => "")
+    if (res.status === 403) {
+      throw new Error(
+        `QA completions endpoint not accessible (403). ` +
+          `This may require Crowdin Enterprise or AI credits. URL: ${url.toString()} Raw: ${text}`
+      )
+    }
     throw new Error(`postQaCompletions (${res.status}): ${text}`)
   }
   const json = await res.json()
@@ -1706,12 +1714,22 @@ async function main(options?: { allLangs: boolean }) {
     console.log(
       `[QA-CHECK] Posting completions for ${lang} with ${allStringIds.length} strings`
     )
-    const job = await postQaCompletions(env.qaPromptId, {
-      projectId: env.projectId,
-      sourceLanguageId,
-      targetLanguageId: lang,
-      stringIds: allStringIds,
-    })
+    let job: QaCompletionJob | undefined
+    try {
+      job = await postQaCompletions(env.qaPromptId, {
+        projectId: env.projectId,
+        sourceLanguageId,
+        targetLanguageId: lang,
+        stringIds: allStringIds,
+      })
+    } catch (e) {
+      const msg = String((e as Error).message || e)
+      console.warn(`[QA-CHECK] Skipping QA for ${lang}: ${msg}`)
+      qaSummaries.push(
+        `QA for ${lang}: skipped (token lacks AI completions scope).`
+      )
+      continue
+    }
     const finished = await awaitQaCompletion(job.id)
     if (finished.status !== "finished") {
       console.warn(
