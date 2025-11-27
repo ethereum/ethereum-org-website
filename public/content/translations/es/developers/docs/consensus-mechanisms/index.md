@@ -8,7 +8,7 @@ El término «mecanismo de consenso» a menudo se usa coloquialmente para referi
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, le recomendamos visitar nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Para entender mejor esta página, le recomendamos que lea primero nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## ¿Qué es el consenso? {#what-is-consensus}
 
@@ -30,11 +30,11 @@ Estos componentes juntos forman el mecanismo del consenso.
 
 ## Tipos de mecanismos de consenso {#types-of-consensus-mechanisms}
 
-### Basados en la prueba de trabajo {#proof-of-work}
+### Basado en la prueba de trabajo {#proof-of-work}
 
-Al igual que Bitcoin, Ethereum una vez usó un protocolo de consenso basado en la **prueba de trabajo (PoW)**.
+Al igual que Bitcoin, Ethereum utilizó en su momento un protocolo de consenso basado en la **prueba de trabajo (PoW)**.
 
-#### Creación del bloque {#pow-block-creation}
+#### Creación de bloques {#pow-block-creation}
 
 Los mineros compiten para crear nuevos bloques llenos de transacciones procesadas. El ganador comparte el nuevo bloque con el resto de la red y gana algunos ETH minados recientemente. La carrera la gana el ordenador que sea capaz de resolver un acertijo matemático más rápido. Esto produce el enlace criptografico entre el bloque actual y el bloque anterior. De resolver este acertijo se encarga la «prueba de trabajo». Luego la cadena predilecta se determina mediante una regla de elección de bifurcación que selecciona el conjunto de bloques en los que se ha realizado la mayor parte del trabajo para extraerlos.
 
@@ -44,9 +44,9 @@ La red se mantiene segura por el hecho de que se necesitaría el 51 % de la pote
 
 Más información sobre la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
 
-### Basados en la prueba de participación {#proof-of-stake}
+### Basado en la prueba de participación {#proof-of-stake}
 
-Ethereum ahora usa un protocolo de consenso basado en la **prueba de participación (PoS)**.
+Ethereum ahora utiliza un protocolo de consenso basado en la **prueba de participación (PoS)**.
 
 #### Creación de bloques {#pos-block-creation}
 
@@ -64,29 +64,29 @@ Obtenga más información sobre los diferentes tipos de mecanismos de consenso u
 
 <YouTube id="ojxfbN78WFQ" />
 
-### Resistencia a ataque Sybil & selección de cadena {#sybil-chain}
+### Resistencia a ataques Sybil y selección de cadena {#sybil-chain}
 
 Técnicamente, ni la prueba de trabajo ni la prueba de participación son protocolos de consenso de por sí, pero se les etiqueta de tal manera por simplicidad. En realidad son mecanismos de resistencia a Sybil y selectores de autor de bloque; son una manera de decidir quién es el autor del último bloque. Otro componente importante es el algoritmo de selección de cadena (también conocido como bifurcación) que permite a los nodos elegir un único bloque correcto en la cabeza de la cadena en escenarios donde existen múltiples bloques en la misma posición.
 
-La **resistencia a Sybil** mide cómo le va a un protocolo frente a un ataque Sybil. La resistencia a este tipo de ataques es esencial para una cadena de bloques descentralizada y permite a los mineros y validadores recibir una recompensa equitativa según los recursos que hayan invertido. La prueba de trabajo y la prueba de participación se protegen frente a esto haciendo que los usuarios tengan que gastar una gran cantidad de energía o entregar varias garantías. Estas protecciones son un elemento económico disuasorio frente a los ataques Sybil.
+La **resistencia a ataques Sybil** mide cómo un protocolo se enfrenta a un ataque Sybil. La resistencia a este tipo de ataques es esencial para una cadena de bloques descentralizada y permite a los mineros y validadores recibir una recompensa equitativa según los recursos que hayan invertido. La prueba de trabajo y la prueba de participación se protegen frente a esto haciendo que los usuarios tengan que gastar una gran cantidad de energía o entregar varias garantías. Estas protecciones son un elemento económico disuasorio frente a los ataques Sybil.
 
-Las **reglas de selección de cadena**se utilizan para decidir qué cadena es la cadena «correcta». Bitcoin utiliza la regla de la «cadena más larga», lo que significa que la cadena de bloques más larga será la que el resto de los nodos acepten como válida y con la que trabajen. Para las cadenas de prueba de trabajo, la cadena más larga viene determinada por la dificultad total de la prueba de trabajo acumulativa de las cadenas. Ethereum también solía usar la regla de la cadena más larga; sin embargo, ahora que Ethereum se ejecuta con prueba de participación, adoptó un algoritmo de elección de bifurcación actualizado que mide el «peso» de la cadena. El peso es la suma acumulada de los votos del validador, ponderada por los saldos de ether apostado del validador.
+Una **regla de selección de cadena** se utiliza para decidir qué cadena es la «correcta». Bitcoin utiliza la regla de la «cadena más larga», lo que significa que la cadena de bloques más larga será la que el resto de los nodos acepten como válida y con la que trabajen. Para las cadenas de prueba de trabajo, la cadena más larga viene determinada por la dificultad total de la prueba de trabajo acumulativa de las cadenas. Ethereum también solía usar la regla de la cadena más larga; sin embargo, ahora que Ethereum se ejecuta con prueba de participación, adoptó un algoritmo de elección de bifurcación actualizado que mide el "peso" de la cadena. El peso es la suma acumulada de los votos del validador, ponderada por los saldos de ether apostado del validador.
 
-Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) que combina [la prueba de participación de Casper FFG](https://arxiv.org/abs/1710.09437) con la [regla de elección de bifurcación GHOST](https://arxiv.org/abs/2003.03052).
+Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) que combina la [prueba de participación Casper FFG](https://arxiv.org/abs/1710.09437) con la [regla de elección de bifurcación GHOST](https://arxiv.org/abs/2003.03052).
 
-## Más información {#further-reading}
+## Lecturas adicionales {#further-reading}
 
 - [¿Qué es un algoritmo de consenso de cadena de bloques?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
-- [¿Qué es el consenso de Nakamoto? Guía para principiantes completa](https://blockonomi.com/nakamoto-consensus/)
+- [¿Qué es el Consenso Nakamoto? Guía completa para principiantes](https://blockonomi.com/nakamoto-consensus/)
 - [¿Cómo funciona Casper?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [Sobre la seguridad y el rendimiento de las cadenas de bloques de prueba de trabajo](https://eprint.iacr.org/2016/555.pdf)
+- [Sobre la seguridad y el rendimiento de las cadenas de bloques con prueba de trabajo](https://eprint.iacr.org/2016/555.pdf)
 - [Fallo bizantino](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya sido de ayuda? Editar esta página y agregarla!_
 
 ## Temas relacionados {#related-topics}
 
 - [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
-- [Minado](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Minería](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
 - [Prueba de autoridad](/developers/docs/consensus-mechanisms/poa/)
