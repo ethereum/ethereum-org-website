@@ -237,15 +237,18 @@ const postQaCompletions = async (
   const url = new URL(
     `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/${qaPromptId}/completions`
   )
+  const bodyPayload = { resources: payload }
   console.log(`[QA-CHECK][DEBUG] POST ${url.toString()}`)
-  console.log(`[QA-CHECK][DEBUG] Payload:`, JSON.stringify(payload, null, 2))
+  console.log(`[QA-CHECK][DEBUG] Body:`, JSON.stringify(bodyPayload, null, 2))
   const res = await fetch(url.toString(), {
     method: "POST",
     headers: { ...crowdinBearerHeaders, "Content-Type": "application/json" },
-    body: JSON.stringify({ resources: payload }),
+    body: JSON.stringify(bodyPayload),
   })
+  console.log(`[QA-CHECK][DEBUG] Response status: ${res.status}`)
   if (!res.ok) {
     const text = await res.text().catch(() => "")
+    console.log(`[QA-CHECK][DEBUG] Error response:`, text)
     if (res.status === 403) {
       throw new Error(
         `QA completions endpoint not accessible (403). ` +
@@ -255,6 +258,10 @@ const postQaCompletions = async (
     throw new Error(`postQaCompletions (${res.status}): ${text}`)
   }
   const json = await res.json()
+  console.log(
+    `[QA-CHECK][DEBUG] Success response:`,
+    JSON.stringify(json, null, 2)
+  )
   return json.data as QaCompletionJob
 }
 
