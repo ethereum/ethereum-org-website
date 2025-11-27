@@ -8,24 +8,24 @@ lang: es
 
 Queremos asegurarnos de que estamos incluyendo los mejores recursos posibles para que los usuarios pueden navegar en el espacio de la capa 2 de una manera fiable y segura.
 
-Cualquiera es libre de sugerir añadir una capa 2 a ethereum.org. Si hay alguna capa 2 que hayamos olvidado **[ por favor sugiérela](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)**.
+Cualquiera es libre de sugerir añadir una capa 2 a ethereum.org. Si nos hemos olvidado de alguna capa 2, **[sugiérala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 Actualmente enumeramos las capas 2 en las páginas siguientes:
 
-- [Acumulaciones optimistas (Optimistic rollups)](/developers/docs/scaling/optimistic-rollups/)
-- [Rollups de Conocimiento Cero](/developers/docs/scaling/zk-rollups/)
+- [Rollups optimistas](/developers/docs/scaling/optimistic-rollups/)
+- [Rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/)
 - [Capa 2](/layer-2/)
 
 La capa 2 es un modelo relativamente nuevo y emocionante para Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
 
-## El marco de decisión {#decision-framework}
+## El sistema de decisión {#decision-framework}
 
-### Criterios para la inclusión: los aspectos obligatorios {#criteria-for-inclusion-the-must-haves}
+### Criterios de inclusión: los imprescindibles {#criteria-for-inclusion-the-must-haves}
 
 **Listado en L2BEAT**
 
-- Para ser considerado, este proyecto debe estar listado en [L2BEAT](https://l2beat.com). L2BEAT proporciona una sólida evaluación de riesgos de los proyectos de capa 2 en los que nos apoyamos para evaluar proyectos de capa 2. **Si el proyecto no aparece en L2BEAT, no lo listaremos como capa 2 en ethereum.org.**
-- [Aprenda a añadir su proyecto de capa 2 a L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Para que se tenga en cuenta, el proyecto debe aparecer en la lista de [L2BEAT](https://l2beat.com). L2BEAT proporciona una sólida evaluación de riesgos de los proyectos de capa 2 en los que nos apoyamos para evaluar proyectos de capa 2. **Si el proyecto no aparece en L2BEAT, no lo listaremos como capa 2 en ethereum.org.**
+- [Aprenda a añadir su proyecto de L2 a L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Código abierto**
 
@@ -38,11 +38,11 @@ Para que una solución sea considerada como aplicación de capa 2, estamos aplic
 - Acumulaciones optimistas (Optimistic rollups)
 - Acumulaciones (rollup) de conocimiento cero
 
-_No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum para la disponibilidad de datos o seguridad sean de capa 2._
+_No consideramos que otras soluciones de escalado que no utilicen Ethereum para la disponibilidad de datos o la seguridad sean de capa 2._
 
 **Ethereum para disponibilidad de datos**
 
-- La disponibilidad de datos es un factor diferencial importante entre otras soluciones de escalabilidad y la capa 2. Un proyecto **debe** utilizar la red principal de Ethereum para tener en cuenta la disponibilidad de datos con vistas a su publicación.
+- La disponibilidad de datos es un factor diferencial importante entre otras soluciones de escalabilidad y la capa 2. Un proyecto **debe** usar la red principal de Ethereum para la disponibilidad de datos para que se considere su inclusión en la lista.
 
 **Puentes**
 
@@ -70,7 +70,7 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 - Los proyectos incluidos requieren un explorador de bloque funcional que permita a los usuarios navegar de forma sencilla por la cadena.
 
-### Otros criterios: los aspectos deseables {#nice-to-haves}
+### Otros criterios: los requisitos deseables {#nice-to-haves}
 
 **Soporte de Exchanges al proyecto**
 
