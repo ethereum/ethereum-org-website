@@ -27,7 +27,7 @@ const socialLinks = [
   },
   {
     icon: Farcaster,
-    href: "https://warpcast.com/ethdotorg",
+    href: "https://farcaster.xyz/ethdotorg",
     ariaLabel: "Farcaster",
   },
   {

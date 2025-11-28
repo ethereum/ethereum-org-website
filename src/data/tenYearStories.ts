@@ -278,7 +278,7 @@ const tenYearStories: Story[] = [
     name: "imrulo.eth        ",
     date: "26.4.",
     country: "Serbia",
-    twitter: "https://warpcast.com/guinoki.eth        ",
+    twitter: "https://farcaster.xyz/guinoki.eth        ",
     region: "Europe",
   },
   {
