@@ -1,50 +1,17 @@
+// This file configures the initialization of Sentry on the client.
+// The added config here will be used whenever a users loads a page in their browser.
+// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+
 import * as Sentry from "@sentry/nextjs"
 
-const environment = process.env.NEXT_PUBLIC_CONTEXT || "development"
-
-/**
- * Finds the closest element (including the element itself) that has an id attribute
- * @param element - The starting element to search from
- * @param maxDepth - Maximum number of parent levels to search (default: 3)
- * @returns The first found attribute value in priority order, null otherwise
- */
-function findClosestElementId(
-  element: Element | null | undefined,
-  maxDepth: number = 3
-): string | null {
-  if (!element || maxDepth < 0) return null
-
-  const sentryId = element.getAttribute("data-testid")
-  if (sentryId) return sentryId
-
-  const ariaLabel = element.getAttribute("aria-label")
-  if (ariaLabel) return ariaLabel
-
-  const id = element.getAttribute("id")
-  if (id) return id
-
-  // Recursively check parent elements up to maxDepth
-  return findClosestElementId(element.parentElement, maxDepth - 1)
-}
-
 Sentry.init({
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  tracesSampleRate: 0.01,
-  debug: environment === "development",
-  environment,
-  enabled: environment === "production",
-  beforeBreadcrumb(breadcrumb, hint) {
-    if (breadcrumb.category === "ui.click") {
-      const element = hint?.event?.target
+  dsn: "https://03068ebfe51a5e37bd004332f6050d5b@o4509810240651264.ingest.de.sentry.io/4509810243534928",
 
-      const id = findClosestElementId(element)
-      if (id) {
-        breadcrumb.message = id + " (" + breadcrumb.message + ")"
-      }
-    }
+  // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
+  tracesSampleRate: 1,
 
-    return breadcrumb
-  },
+  // Setting this option to true will print useful information to the console while you're setting up Sentry.
+  debug: false,
 })
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart

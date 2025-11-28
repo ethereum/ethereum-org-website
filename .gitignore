@@ -65,3 +65,6 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 build-storybook.log
 build-archive.log
 storybook-static
+
+# Sentry Config File
+.env.sentry-build-plugin

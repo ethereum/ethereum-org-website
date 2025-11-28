@@ -190,7 +190,7 @@ module.exports = (phase, { defaultConfig }) => {
 }
 
 module.exports = withSentryConfig(module.exports, {
-  org: "ethereumorg-ow",
+  org: "none-aou",
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
