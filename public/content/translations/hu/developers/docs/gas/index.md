@@ -87,7 +87,7 @@ Ahhoz, hogy a hálózaton végre legyen hajtva egy tranzakció, a felhasználók
 
 ### Blokkméret {#block-size}
 
-Minden blokk 15 millió gáz célmérettel rendelkezik, de a blokk mérete a hálózati kereslet függvényében, egészen a 30 millió gáz határig (amely a célméret kétszerese) változik. A protokoll úgy éri el az egyensúlyi, átlagos 15 milliós blokkméretet, hogy a _tâtonnement_, vagyis a közelítés módszerét alkalmazza. Tehát, ha a blokkméret meghaladja a célértéket, akkor a protokoll megnöveli az alapdíjat a következő blokknál. Ugyanígy csökkenti az alapdíjat, ha a blokkméret kisebb, mint a célérték. Az alapdíj mértéke arányosan változik annak függvényében, hogy a jelenlegi blokkméret hogyan viszonyul a célmérethez. [Bővebben a blokkokról](/developers/docs/blocks/).
+Minden blokk 30 millió gáz célmérettel rendelkezik, de a blokk mérete a hálózati kereslet függvényében, egészen a 60 millió gáz határig (amely a célméret kétszerese) változik. A protokoll úgy éri el az egyensúlyi, átlagos 30 milliós blokkméretet, hogy a _tâtonnement_, vagyis a közelítés módszerét alkalmazza. Tehát, ha a blokkméret meghaladja a célértéket, akkor a protokoll megnöveli az alapdíjat a következő blokknál. Ugyanígy csökkenti az alapdíjat, ha a blokkméret kisebb, mint a célérték. Az alapdíj mértéke arányosan változik annak függvényében, hogy a jelenlegi blokkméret hogyan viszonyul a célmérethez. [Bővebben a blokkokról](/developers/docs/blocks/).
 
 ### A gázdíjak kiszámítása a gyakorlatban {#calculating-fees-in-practice}
 

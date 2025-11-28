@@ -87,7 +87,7 @@ Ağ üzerinde bir işlem yürütmek için kullanıcılar, işlemlerinin yürüt�
 
 ### Blok boyutu {#block-size}
 
-Her blokun hedef boyutu 15 milyon gazdır, ancak blokların boyutu, 30 milyon gaz blok sınırına kadar (hedef blok boyutunun 2 katı) ağ talebine göre artacak veya azalacaktır. Protokol, _tâtonnement_ süreci ile ortalama 15 milyonluk bir denge bloku boyutuna ulaşır. Bu, blok boyutunun hedef blok boyutundan büyük olması durumunda, protokolün bir sonraki blok için ana ücreti artıracağı anlamına gelir. Benzer şekilde, blok boyutu hedef blok boyutundan küçükse protokol ana ücreti düşürür. Ana ücretin ayarlandığı miktar, mevcut blok boyutunun hedeften ne kadar uzak olduğu ile orantılıdır. [Bloklar hakkında daha fazlası](/developers/docs/blocks/).
+Her blokun hedef boyutu 30 milyon gazdır, ancak blokların boyutu, 60 milyon gaz blok sınırına kadar (hedef blok boyutunun 2 katı) ağ talebine göre artacak veya azalacaktır. Protokol, _tâtonnement_ süreci ile ortalama 30 milyonluk bir denge bloku boyutuna ulaşır. Bu, blok boyutunun hedef blok boyutundan büyük olması durumunda, protokolün bir sonraki blok için ana ücreti artıracağı anlamına gelir. Benzer şekilde, blok boyutu hedef blok boyutundan küçükse protokol ana ücreti düşürür. Ana ücretin ayarlandığı miktar, mevcut blok boyutunun hedeften ne kadar uzak olduğu ile orantılıdır. [Bloklar hakkında daha fazlası](/developers/docs/blocks/).
 
 ### Pratikte gaz ücretlerini hesaplamak {#calculating-fees-in-practice}
 
