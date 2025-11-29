@@ -54,7 +54,7 @@ Jednotkové testy jsou užitečné pro kontrolu, zda funkce vracejí očekávan�
 
 ##### 1. Pochopte obchodní logiku a pracovní postupy vašich kontraktů
 
-Před psaním jednotkových testů je dobré vědět, jaké funkce chytrý kontrakt nabízí a jak k nim budou uživatelé přistupovat a používat je. To je užitečné zejména při provádění testů [šťastné cesty](https://en.m.wikipedia.org/wiki/Happy_path), které zjišťují, zda funkce v kontraktu vracejí správný výstup pro platné uživatelské vstupy. Tento koncept si vysvětlíme na tomto (zkráceném) příkladu [aukčního kontraktu.](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
+Před psaním jednotkových testů je dobré vědět, jaké funkce chytrý kontrakt nabízí a jak k nim budou uživatelé přistupovat a používat je. To je užitečné zejména při provádění testů [šťastné cesty](https://en.m.wikipedia.org/wiki/Happy_path), které zjišťují, zda funkce v kontraktu vracejí správný výstup pro platné uživatelské vstupy. Tento koncept si vysvětlíme na tomto (zkráceném) příkladu [aukčního kontraktu.](https://docs.soliditylang.org/en/v0.8.17/Solidity-by-example.HTML?highlight=Auction%20contract#simple-open-auction)
 
 ```
 constructor(
@@ -126,7 +126,7 @@ Mnoho frameworků pro jednotkové testy umožňuje vytvářet tvrzení – jedno
 
 - Uživatelům, kteří aukci nevyhráli, jsou připsány jejich finanční prostředky.
 
-**Poznámka**: Další možností testování předpokladů je psaní testů, které spouštějí [modifikátory funkcí](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) v kontraktu, zejména příkazy `require`, `assert` a `if…else`.
+**Poznámka**: Další možností testování předpokladů je psaní testů, které spouštějí [modifikátory funkcí](https://docs.soliditylang.org/en/v0.8.16/contracts.HTML#function-modifiers) v kontraktu, zejména příkazy `require`, `assert` a `if…else`.
 
 ##### 3. Změřte pokrytí kódu
 
@@ -138,17 +138,17 @@ Kvalita nástrojů používaných při spouštění jednotkových testů pro va�
 
 Frameworky jednotkového testování pro chytré kontrakty Solidity existují v různých jazycích (většinou JavaScript, Python a Rust). Informace o tom, jak začít spouštět jednotkové testy s různými testovacími frameworky, najdete v některých z níže uvedených návodů:
 
-- **[Spouštění jednotkových testů pomocí Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
+- **[Spouštění jednotkových testů pomocí Brownie](https://ETH-brownie.readthedocs.io/en/v1.0.0_a/tests.HTML)**
 - **[Spouštění jednotkových testů pomocí Foundry](https://book.getfoundry.sh/forge/writing-tests)**
-- **[Spouštění jednotkových testů pomocí Waffle](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
-- **[Spouštění jednotkových testů pomocí Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
-- **[Spouštění jednotkových testů pomocí Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
+- **[Spouštění jednotkových testů pomocí Waffle](https://Ethereum-waffle.readthedocs.io/en/latest/getting-started.HTML#writing-tests)**
+- **[Spouštění jednotkových testů pomocí Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.HTML#write-tests)**
+- **[Spouštění jednotkových testů pomocí Ape](https://docs.apeworx.io/ape/stable/userguides/testing.HTML)**
 - **[Spouštění jednotkových testů pomocí Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[Spouštění jednotkových testů pomocí Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Integrační testování {#integration-testing-for-smart-contracts}
 
-Zatímco jednotkové testy ladí funkce kontraktu izolovaně, integrační testy hodnotí součásti chytrého kontraktu jako celek. Integrační testování může odhalit problémy vyplývající z volání napříč kontrakty nebo interakcí mezi různými funkcemi ve stejném chytrém kontraktu. Integrační testy mohou například pomoci zkontrolovat, zda věci jako [dědičnost](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) a injekce závislostí fungují správně.
+Zatímco jednotkové testy ladí funkce kontraktu izolovaně, integrační testy hodnotí součásti chytrého kontraktu jako celek. Integrační testování může odhalit problémy vyplývající z volání napříč kontrakty nebo interakcí mezi různými funkcemi ve stejném chytrém kontraktu. Integrační testy mohou například pomoci zkontrolovat, zda věci jako [dědičnost](https://docs.soliditylang.org/en/v0.8.12/contracts.HTML#inheritance) a injekce závislostí fungují správně.
 
 Integrační testování je užitečné, pokud váš kontrakt používá modulární architekturu nebo se během provádění propojuje s jinými kontrakty na blockchainu. Jedním ze způsobů provádění integračních testů je [rozvětvit blockchain](/glossary/#fork) v určité míře (pomocí nástroje jako [Forge](https://book.getfoundry.sh/forge/fork-testing) nebo [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) a simulovat interakce mezi vaším kontraktem a nasazenými kontrakty.
 
@@ -184,18 +184,18 @@ Fuzzing je užitečný pro vyhodnocení mechanismu ověřování vstupů chytrý
 
 ### Pokyny pro testování chytrých kontraktů na základě vlastností {#running-property-based-tests}
 
-Provádění testování na základě vlastností obvykle začíná definováním vlastnosti (např. nepřítomnost přetečení [celých čísel](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) nebo kolekce vlastností, které chcete v chytrém kontraktu ověřit. Při psaní testů vlastností může být také nutné definovat rozsah hodnot, ve kterém může program generovat data pro vstupy transakcí.
+Provádění testování na základě vlastností obvykle začíná definováním vlastnosti (např. nepřítomnost přetečení [celých čísel](https://GitHub.com/ConsenSys/mythril/wiki/Integer-Overflow)) nebo kolekce vlastností, které chcete v chytrém kontraktu ověřit. Při psaní testů vlastností může být také nutné definovat rozsah hodnot, ve kterém může program generovat data pro vstupy transakcí.
 
 Po správné konfiguraci bude nástroj pro testování vlastností vykonávat funkce vašich chytrých kontraktů s náhodně vygenerovanými vstupy. Pokud dojde k porušení tvrzení, měla by se zobrazit zpráva s konkrétními vstupními daty, která porušují vyhodnocovanou vlastnost. Podívejte se na některé z níže uvedených návodů, které vám pomohou začít s testováním na základě vlastností pomocí různých nástrojů:
 
-- **[Statická analýza chytrých kontraktů pomocí Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Statická analýza chytrých kontraktů pomocí Slither](https://GitHub.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
 - **[Statická analýza chytrých kontraktů pomocí Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
-- **[Testování na základě vlastností pomocí Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
+- **[Testování na základě vlastností pomocí Brownie](https://ETH-brownie.readthedocs.io/en/stable/tests-hypothesis-property.HTML)**
 - **[Fuzzingové kontrakty s Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
-- **[Fuzzingové kontrakty s Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Fuzzingové kontrakty s Echidna](https://GitHub.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzingové kontrakty s Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
-- **[Symbolické provádění chytrých kontraktů pomocí Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Symbolické provádění chytrých kontraktů pomocí Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Symbolické provádění chytrých kontraktů pomocí Manticore](https://GitHub.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
+- **[Symbolické provádění chytrých kontraktů pomocí Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.HTML)**
 
 ## Ruční testování pro chytré kontrakty {#manual-testing-for-smart-contracts}
 
@@ -213,7 +213,7 @@ Spuštění kontraktů na lokálním blockchainu by mohlo být užitečné jako 
 
 ### Testování kontraktů v testovacích sítích {#testing-contracts-on-testnets}
 
-Testovací síť neboli testnet funguje přesně jako hlavní síť Ethereum s tím rozdílem, že používá ether (ETH) bez reálné hodnoty. Nasazení kontraktu na [testovací síti](/developers/docs/networks/#ethereum-testnets) znamená, že s ním může kdokoli interagovat (např. prostřednictvím frontendu dappky), aniž by ohrozil finanční prostředky.
+Testovací síť neboli testnet funguje přesně jako hlavní síť Ethereum s tím rozdílem, že používá ether (ETH) bez reálné hodnoty. Nasazení kontraktu na [testovací síti](/developers/docs/networks/#Ethereum-testnets) znamená, že s ním může kdokoli interagovat (např. prostřednictvím frontendu dappky), aniž by ohrozil finanční prostředky.
 
 Tato forma ručního testování je užitečná pro vyhodnocení komplexního toku aplikace z pohledu uživatele. Zde mohou beta testeři také provádět zkušební provoz a hlásit případné problémy s obchodní logikou a celkovou funkčností kontraktu.
 
@@ -249,21 +249,21 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 
 ### Nástroje pro jednotkové testování {#unit-testing-tools}
 
-- **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** – _Nástroj pro pokrytí kódu chytrých kontraktů napsaných v Solidity._
+- **[Solidity-coverage](https://GitHub.com/sc-forks/Solidity-coverage)** – _Nástroj pro pokrytí kódu chytrých kontraktů napsaných v Solidity._
 
-- **[Waffle](https://ethereum-waffle.readthedocs.io/en/latest/)** – _Framework pro pokročilý vývoj a testování chytrých kontraktů (založený na ethers.js)_.
+- **[Waffle](https://Ethereum-waffle.readthedocs.io/en/latest/)** – _Framework pro pokročilý vývoj a testování chytrých kontraktů (založený na ethers.js)_.
 
-- **[Remix Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** – _Nástroj pro testování chytrých kontraktů Solidity. Pracuje pod pluginem „Solidity Unit Testing“ v prostředí Remix IDE, který se používá k psaní a spouštění testovacích případů pro kontrakt._
+- **[Remix Tests](https://GitHub.com/Ethereum/remix-project/tree/master/libs/remix-tests)** – _Nástroj pro testování chytrých kontraktů Solidity. Pracuje pod pluginem „Solidity Unit Testing“ v prostředí Remix IDE, který se používá k psaní a spouštění testovacích případů pro kontrakt._
 
-- **[OpenZeppelin Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** – _Knihovna pro testování chytrých kontraktů na Ethereu. Ujistěte se, že se vaše kontrakty chovají podle očekávání!_
+- **[OpenZeppelin Test Helpers](https://GitHub.com/OpenZeppelin/openzeppelin-test-helpers)** – _Knihovna pro testování chytrých kontraktů na Ethereu. Ujistěte se, že se vaše kontrakty chovají podle očekávání!_
 
-- **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** – _Brownie využívá Pytest, funkčně bohatý testovací framework, který umožňuje psát malé testy s minimem kódu, dobře se škáluje pro velké projekty a je vysoce rozšiřitelný._
+- **[Brownie unit testing framework](https://ETH-brownie.readthedocs.io/en/v1.0.0_a/tests.HTML)** – _Brownie využívá Pytest, funkčně bohatý testovací framework, který umožňuje psát malé testy s minimem kódu, dobře se škáluje pro velké projekty a je vysoce rozšiřitelný._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _Foundry nabízí Forge, rychlý a flexibilní framework pro testování na Ethereu, který dokáže provádět jednoduché jednotkové testy, kontroly optimalizace paliva a fuzzing kontraktů._
+- **[Foundry Tests](https://GitHub.com/foundry-rs/foundry/tree/master/crates/forge)** – _Foundry nabízí Forge, rychlý a flexibilní framework pro testování na Ethereu, který dokáže provádět jednoduché jednotkové testy, kontroly optimalizace paliva a fuzzing kontraktů._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** – _Framework pro testování chytrých kontraktů založený na ethers.js, Mocha a Chai._
 
-- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** – _Vývojový a testovací framework pro chytré kontrakty v jazyce Python zaměřený na virtuální stroj Etherea._
+- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.HTML)** – _Vývojový a testovací framework pro chytré kontrakty v jazyce Python zaměřený na virtuální stroj Etherea._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** – _Python framework pro jednotkové testování a fuzzing se silnými možnostmi ladění a podporou testování napříč blockchainy, využívající pytest a Anvil pro co nejlepší uživatelský zážitek a výkon._
 
@@ -271,7 +271,7 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 
 #### Nástroje pro statickou analýzu {#static-analysis-tools}
 
-- **[Slither](https://github.com/crytic/slither)** – _Statický analytický framework v Solidity založený na Pythonu pro vyhledávání zranitelností, zlepšování srozumitelnosti kódu a psaní vlastních analýz pro chytré kontrakty._
+- **[Slither](https://GitHub.com/crytic/slither)** – _Statický analytický framework v Solidity založený na Pythonu pro vyhledávání zranitelností, zlepšování srozumitelnosti kódu a psaní vlastních analýz pro chytré kontrakty._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** – _Linter pro vynucení nejlepších postupů stylu a zabezpečení pro programovací jazyk chytrých kontraktů Solidity._
 
@@ -281,13 +281,13 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 
 #### Nástroje pro dynamickou analýzu {#dynamic-analysis-tools}
 
-- **[Echidna](https://github.com/crytic/echidna/)** – _Rychlý fuzzer kontraktů pro odhalování zranitelností v chytrých kontraktech pomocí testování na základě vlastností._
+- **[Echidna](https://GitHub.com/crytic/echidna/)** – _Rychlý fuzzer kontraktů pro odhalování zranitelností v chytrých kontraktech pomocí testování na základě vlastností._
 
 - **[Diligence Fuzzing](https://consensys.net/diligence/fuzzing/)** – _Automatický fuzzing nástroj užitečný pro odhalování porušení vlastností v kódu chytrých kontraktů._
 
-- **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** – _Dynamický framework pro symbolické spouštění pro analýzu EVM bytekódu._
+- **[Manticore](https://manticore.readthedocs.io/en/latest/index.HTML)** – _Dynamický framework pro symbolické spouštění pro analýzu EVM bytekódu._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** – _Nástroj pro vyhodnocování EVM bytekódu pro detekci zranitelností kontraktů pomocí analýzy taintů, analýzy concolic a kontroly toku řízení._
+- **[Mythril](https://GitHub.com/ConsenSys/mythril-classic)** – _Nástroj pro vyhodnocování EVM bytekódu pro detekci zranitelností kontraktů pomocí analýzy taintů, analýzy concolic a kontroly toku řízení._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** – _Scribble je specifikační jazyk a runtime ověřovací nástroj, který umožňuje anotovat chytré kontrakty pomocí vlastností, které umožňují automatické testování kontraktů pomocí nástrojů, jako je Diligence Fuzzing nebo MythX._
 
@@ -297,12 +297,12 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 - [Jak používat Echidnu k testování chytrých kontraktů](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Jak používat Manticore k vyhledávání chyb v chytrých kontraktech](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Jak používat Slither k hledání chyb ve smart kontraktech](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Jak vytvořit maketu smlouvy Solidity pro testování](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Jak spouštět jednotkové testy v Solidity pomocí Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Jak vytvořit maketu smlouvy Solidity pro testování](/developers/tutorials/how-to-mock-Solidity-contracts-for-testing/)
+- [Jak spouštět jednotkové testy v Solidity pomocí Foundry](https://www.rareskills.io/post/foundry-testing-Solidity)
 
 ## Další informace {#further-reading}
 
-- [Podrobný průvodce testováním chytrých kontraktů na Ethereu](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
-- [Jak testovat chytré kontrakty na Ethereu](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
-- [Průvodce jednotkovým testováním pro vývojáře od MolochDAO](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
+- [Podrobný průvodce testováním chytrých kontraktů na Ethereu](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-Ethereum-smart-contracts-2e41b2770297)
+- [Jak testovat chytré kontrakty na Ethereu](https://betterprogramming.pub/how-to-test-Ethereum-smart-contracts-35abc8fa199d)
+- [Průvodce jednotkovým testováním pro vývojáře od MolochDAO](https://GitHub.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
 - [Jak testovat chytré kontrakt jako borec](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)
