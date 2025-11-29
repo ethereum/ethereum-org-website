@@ -18,9 +18,9 @@ on:
         default: "0"
         type: string
       target_languages:
-        description: "Comma-separated Crowdin language codes (default: es-EM)"
+        description: "Comma-separated internal language codes (default: es)"
         required: false
-        default: "es-EM"
+        default: "es"
         type: string
       base_branch:
         description: "Base branch to create PR against (default: dev)"

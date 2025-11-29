@@ -2,6 +2,8 @@ import * as dotenv from "dotenv"
 
 import i18nConfig from "../../../i18n.config.json"
 
+import { mapInternalCodeToCrowdin } from "./lib/utils/mapping"
+
 dotenv.config({ path: ".env.local" })
 
 // Language code mapping
@@ -44,9 +46,14 @@ console.log("[DEBUG] Crowdin API key found ✓")
 export const crowdinBearerHeaders = { Authorization: `Bearer ${crowdinApiKey}` }
 
 // Parse environment variables with defaults
-const targetLanguages = process.env.TARGET_LANGUAGES
+// Accept internal codes (e.g., "es") and convert to Crowdin codes (e.g., "es-EM")
+const targetLanguagesInput = process.env.TARGET_LANGUAGES
   ? process.env.TARGET_LANGUAGES.split(",").map((lang) => lang.trim())
-  : ["es-EM"]
+  : ["es"]
+
+const targetLanguages = targetLanguagesInput.map((code) =>
+  mapInternalCodeToCrowdin(code)
+)
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
@@ -75,7 +82,12 @@ const githubRepo =
 const [ghOrganization, ghRepo] = githubRepo.split("/")
 
 console.log("[DEBUG] Configuration:")
-console.log(`[DEBUG] - Target languages: ${targetLanguages.join(", ")}`)
+console.log(
+  `[DEBUG] - Target languages (internal): ${targetLanguagesInput.join(", ")}`
+)
+console.log(
+  `[DEBUG] - Target languages (Crowdin): ${targetLanguages.join(", ")}`
+)
 console.log(`[DEBUG] - Base branch: ${baseBranch}`)
 console.log(`[DEBUG] - File limit: ${fileLimit}`)
 console.log(`[DEBUG] - Start offset: ${startOffset}`)
