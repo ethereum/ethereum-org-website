@@ -12,15 +12,15 @@ Naším cílem je poskytovat vzdělávací obsah ve všech jazycích a pomoci p�
 
 Pokud dáváte přednost čtení ve svém rodném jazyce nebo znáte někoho, kdo nemluví anglicky, níže najdete seznam užitečných neanglických zdrojů. Stovky tisíc nadšenců Etherea se shromažďují na těchto online fórech, aby sdíleli novinky, probírali nejnovější vývoj, debatovali o technických otázkách a představovali si budoucnost.
 
-Víte o vzdělávacím zdroji ve svém jazyce? [Otevřete problém](https://github.com/ethereum/ethereum-org-website/issues/new/choose) a přidejte ho do seznamu!
+Víte o vzdělávacím zdroji ve svém jazyce? [Otevřete problém](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new/choose) a přidejte ho do seznamu!
 
-## Zdroje na Ethereum.org {#ethereum-org}
+## Zdroje na Ethereum.org {#Ethereum-org}
 
 Ethereum.org je přeloženo do více než 40 jazyků, které najdete pomocí našeho jazykového výběru v menu, které se nachází v záhlaví každé stránky.
 
 ![Nabídka výběru jazyka](./language-selector-menu.png)
 
-Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapojit do [překladového programu ethereum.org](/contributing/translation-program/#translation-program) a pomoci nám s překladem webových stránek.
+Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapojit do [překladového programu Ethereum.org](/contributing/translation-program/#translation-program) a pomoci nám s překladem webových stránek.
 
 ## Komunitní zdroje {#community}
 
@@ -30,14 +30,14 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 
 - [BeInCrypto](http://www.beincrypto.com.br) – zprávy a články o kryptoměnách, včetně seznamu burz dostupných v Brazílii
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) – brazilská verze Cointelegraph, hlavního zpravodajského serveru o kryptoměnách
-- [Livecoins](http://www.livecoins.com.br/ethereum) – zprávy o kryptoměnách a nástroje
+- [Livecoins](http://www.livecoins.com.br/Ethereum) – zprávy o kryptoměnách a nástroje
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – zprávy a reporty o kryptoměnách
 - [Modular Crypto](https://modularcrypto.xyz/) – zprávy a vzdělávací články o kryptoměnách
 
 **Vzdělávání**
 
 - [web3dev](https://www.web3dev.com.br/) – hub obsahu a discordová komunita pro web3 vývojáře.
-- [Web3Brasil](https://github.com/web3brasil/web3brasil) – zdroje týkající se Web3 a DeFi
+- [Web3Brasil](https://GitHub.com/web3brasil/web3brasil) – zdroje týkající se Web3 a DeFi
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) – zprávy a vzdělávání v oblasti kryptoměn, včetně „Ethereum pro začátečníky“ a „DeFi“ pro začátečníky
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) – postřehy ze světa kryptoměn, vzdělávání a blog
 - [Cointimes](http://www.cointimes.com.br/) – zprávy a vzdělávání o kryptoměnách
@@ -47,12 +47,12 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 
 **Obecné zdroje**
 
-- [Ethereum.cn](https://www.ethereum.cn/) – komunitou udržovaný obsah, zahrnující upgrade konsenzuální vrstvy, poznámky ze schůzek klíčových vývojářů, vrstvy 2 atd.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) – naučte se vše od základů po pokročilá témata Etherea
+- [Ethereum.cn](https://www.Ethereum.cn/) – komunitou udržovaný obsah, zahrnující upgrade konsenzuální vrstvy, poznámky ze schůzek klíčových vývojářů, vrstvy 2 atd.
+- [EthFans](https://GitHub.com/editor-Ajian/EthFans.org-annual-collected-works/) – naučte se vše od základů po pokročilá témata Etherea
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – komunitou udržovaný obsah, zahrnující znalosti o Ethereu, DeFi, NFT, Web3
 - [123ETH](https://123eth.org/) – portál do ekosystému Etherea
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – bezplatné online kurzy o kryptoměnách a jejich aplikacích
-- [Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) – čínská verze whitepaperu Etherea
+- [Ethereum Whitepaper](https://GitHub.com/Ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) – čínská verze whitepaperu Etherea
 
 **Ekosystém Etherea**
 
@@ -62,7 +62,7 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 
 **Pro vývojáře**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) – studijní skupina zaměřená na studium hlavních dappek a každotýdenní sdílení názorů a komentářů
+- [DappLearning](https://GitHub.com/Dapp-Learning-DAO/Dapp-Learning) – studijní skupina zaměřená na studium hlavních dappek a každotýdenní sdílení názorů a komentářů
 - [LearnBlockchain](https://learnblockchain.cn/) – komunita pro vývojáře, sdílení informací o blockchainových technologiích
 
 **Pro kryptografické výzkumníky**
@@ -79,27 +79,27 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 
 ### Francouzština {#fr}
 
-- [Ethereum France](https://www.ethereum-france.com/) – Ethereum France organizuje akce, vytváří obsah a podporuje diskuse o Ethereu
-- [Ethereum.fr](https://ethereum.fr/) – novinky a vzdělávání
+- [Ethereum France](https://www.Ethereum-france.com/) – Ethereum France organizuje akce, vytváří obsah a podporuje diskuse o Ethereu
+- [Ethereum.fr](https://Ethereum.fr/) – novinky a vzdělávání
 - [BanklessFR](https://banklessfr.substack.com/) – Bankless newsletter ve francouzštině
-- [CryptoFR](https://cryptofr.com/category/44/ethereum-general) – kryptoměnové fórum s podstránkou pro Ethereum
+- [CryptoFR](https://cryptofr.com/category/44/Ethereum-general) – kryptoměnové fórum s podstránkou pro Ethereum
 
 ### Němčina {#de}
 
-- [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) – použití Solidity
-- [Microsoft Learn (chytré kontrakty)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – psaní chytrých kontraktů na Ethereu se Solidity
-- [Microsoft Learn (Ethereovské sítě)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) – připojení a nasazení sítí Etherea
-- [Microsoft Learn (blockchainy)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) – úvod do blockchainového vývoje
+- [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-Solidity/) – použití Solidity
+- [Microsoft Learn (chytré kontrakty)](https://docs.microsoft.com/de-de/learn/modules/blockchain-Solidity-Ethereum-smart-contracts/) – psaní chytrých kontraktů na Ethereu se Solidity
+- [Microsoft Learn (Ethereovské sítě)](https://docs.microsoft.com/de-de/learn/modules/blockchain-Ethereum-networks/) – připojení a nasazení sítí Etherea
+- [Microsoft Learn (blockchainy)](https://docs.microsoft.com/de-de/learn/paths/Ethereum-blockchain-development/) – úvod do blockchainového vývoje
 
 ### Hebrejština {#he}
 
-- [Udi Wertheimer – co se mohou bitcoinoví nadšenci naučit od Etherea](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Udi Wertheimer – co se mohou bitcoinoví nadšenci naučit od Etherea](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-Ethereum/)
 - [Omer Greismen (OpenZeppelin) – jak jsme zabránili hacku chytrého kontraktu za 15 miliard dolarů](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
 - [Shy Datika (INX) – tokenizace a budoucnost cenných papírů, včetně toho, zda je Ethereum cenný papír](https://www.cryptojungle.co.il/shy-datika-tokenization/)
 - [Roy Confino (Lemonade) – pojištění na Ethereu](https://www.cryptojungle.co.il/roy-confino-insurance/)
 - [Idan Ofrat (Fireblocks) – institucionální adopce](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
-- [Gal Weizman (MetaMask) – co je MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
-- [Dror Aviely (Consensys) – centrum Etherea](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Gal Weizman (MetaMask) – co je MetaMask](https://www.cryptojungle.co.il/gal-weizman-MetaMask/)
+- [Dror Aviely (Consensys) – centrum Etherea](https://www.cryptojungle.co.il/dror-aviely-Ethereum-center/)
 - [Nir Rozin – být kryptopunk](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
 - [Adan Kedem – gaming & metaverse](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
 - [Uri Kolodny (Starkware) – Ethereum a vrstvy blockchainu](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
@@ -107,21 +107,21 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 - [Ben Samocha (myself) – Ethereum 2.0 – příležitost?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
 - [Alon Muroch (Bloxstaking) – co je Ethereum 2.0?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
 - [Eilon Aviv (Collider Ventures) – co se může pokazit s Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
-- [Eilon Aviv (Collider Ventures) – proč potřebujeme Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+- [Eilon Aviv (Collider Ventures) – proč potřebujeme Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-Ethereum-2-0/)
 
 ### Italština {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/) – vzdělávání, akce a novinky o Ethereu, zaměřené na chytré kontrakty a technologii blockchainu
-- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) – podcast o Ethereu v italštině
-- [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) – naučte se, jak používat Solidity
-- [Microsoft Learn (chytré kontrakty)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – naučte se psát chytré kontrakty pomocí Solidity
+- [Ethereum Italia](https://www.Ethereum-italia.it/) – vzdělávání, akce a novinky o Ethereu, zaměřené na chytré kontrakty a technologii blockchainu
+- [Ethereum Italia Podcast](https://www.Ethereum-italia.it/podcast/) – podcast o Ethereu v italštině
+- [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-Solidity/) – naučte se, jak používat Solidity
+- [Microsoft Learn (chytré kontrakty)](https://docs.microsoft.com/it-it/learn/modules/blockchain-Solidity-Ethereum-smart-contracts/) – naučte se psát chytré kontrakty pomocí Solidity
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – vytvoření uživatelského rozhraní s decentralizovanými aplikacemi
 
 ### Japonština {#ja}
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Začněte s vývojem blockchainu – Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – tato výuková cesta vás uvede do světa blockchainu a vývoje na platformě Ethereum
+- [Začněte s vývojem blockchainu – Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/Ethereum-blockchain-development/) – tato výuková cesta vás uvede do světa blockchainu a vývoje na platformě Ethereum
 - [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) – kniha Mastering Ethereum v japonštině
 - [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – praktický vývoj chytrých kontraktů pomocí Solidity a Etherea v japonštině
 
@@ -134,8 +134,8 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 ### Španělština {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) – kurzy, akce a blogy o blockchainu, DeFi a řízení
-- [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) – průvodce Ethereem pro začátečníky ve španělštině
-- [Online tutoriály](https://tutoriales.online/curso/solidity) – naučte se Solidity a programování na Ethereu
+- [Cointelegraph](https://es.cointelegraph.com/Ethereum-for-beginners) – průvodce Ethereem pro začátečníky ve španělštině
+- [Online tutoriály](https://tutoriales.online/curso/Solidity) – naučte se Solidity a programování na Ethereu
 - [Kurz Úvod do vývoje na Ethereu](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) – základy Solidity, testování a nasazení vašeho prvního chytrého kontraktu
 - [Kurz Úvod do bezpečnosti a hackování na Ethereu](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) – pochopení běžných zranitelností a bezpečnostních problémů v reálných chytrých kontraktech
 - [Kurz Úvod do vývoje DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) – naučte se, jak fungují chytré kontrakty DeFi v Solidity a vytvořte si vlastního automatizovaného tvůrce trhu
@@ -144,10 +144,10 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 ### Turečtina {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) – kurz zaměřený na blockchain a kryptoměny
-- [Velké přejmenování: co se stalo s Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) – turecký překlad blogového příspěvku o upuštění od terminologie „Eth2“
+- [Velké přejmenování: co se stalo s Eth2?](https://miningturkiye.org/konu/Ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) – turecký překlad blogového příspěvku o upuštění od terminologie „Eth2“
 
 ### Vietnamština {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – přehled Etherea, dapps, peněženek a častých dotazů
-- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – webová platforma s podstránkami s novinkami a vzdělávání o Ethereu
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) – kryptoměnový portál s novinkami a vzdělávacím obsahem o Ethereu
+- [Tino Group](https://wiki.tino.org/Ethereum-la-gi/) – přehled Etherea, dapps, peněženek a častých dotazů
+- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-Ethereum-ETH) – webová platforma s podstránkami s novinkami a vzdělávání o Ethereu
+- [Coin68](https://coin68.com/Ethereum-tieu-diem/) – kryptoměnový portál s novinkami a vzdělávacím obsahem o Ethereu
