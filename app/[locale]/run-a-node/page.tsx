@@ -1,16 +1,11 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import RunANodePage from "./_components/run-a-node"
@@ -50,22 +45,22 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
-}) {
-  const { locale } = params
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { locale: string }
+// }) {
+//   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-run-a-node" })
+//   const t = await getTranslations({ locale, namespace: "page-run-a-node" })
 
-  return await getMetadata({
-    locale,
-    slug: ["run-a-node"],
-    title: t("page-run-a-node-meta-title"),
-    description: t("page-run-a-node-meta-description"),
-    image: "/images/run-a-node/ethereum-inside.png",
-  })
-}
+//   return await getMetadata({
+//     locale,
+//     slug: ["run-a-node"],
+//     title: t("page-run-a-node-meta-title"),
+//     description: t("page-run-a-node-meta-description"),
+//     image: "/images/run-a-node/ethereum-inside.png",
+//   })
+// }
 
 export default Page
