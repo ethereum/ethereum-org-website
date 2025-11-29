@@ -39,7 +39,7 @@ Neúplný seznam klíčových problémů ve vědě a způsobů, jakými může d
 | **Duševní vlastnictví (intellectual property, IP) patří vám**. Vytváříte a distribuujete ho podle transparentních podmínek.                     | **Vaše domovská instituce vlastní IP**, které vygenerujete. Přístup k IP není transparentní.                                             |
 | **Sdílíte veškerý výzkum** na blockchainu, včetně dat z neúspěšných pokusů.                                                                     | **Publikační zaujatost** znamená, že výzkumníci s větší pravděpodobností budou sdílet jen experimenty, které byly úspěšné.               |
 
-## Ethereum a DeSci {#ethereum-and-desci}
+## Ethereum a DeSci {#Ethereum-and-desci}
 
 Decentralizovaný vědecký systém vyžaduje robustní zabezpečení, minimální peněžní a transakční náklady a rozsáhlý ekosystém pro vývoj aplikací. Ethereum poskytuje vše potřebné pro vybudování decentralizovaného vědeckého ekosystému.
 
@@ -68,15 +68,15 @@ Současný standardní model financování vědy spočívá v tom, že jednotliv
 
 Studie ukázaly, že hodnotící panely pro udělování grantů nedokážou dobře vybírat kvalitní návrhy, protože stejné návrhy poskytnuté různým panelům mají zcela odlišné výsledky. Vzhledem k tomu, že financování je stále vzácnější, koncentrovalo se do menší skupiny zkušenějších výzkumníků s intelektuálně konzervativnějšími projekty. Tento efekt vytvořil hyperkonkurenční prostředí pro financování, posilující nepřirozené podněty a brzdící inovace.
 
-Web3 má potenciál narušit tento nefungující model financování tím, že experimentuje s různými modely podnětů vyvinutými DAO a Web3 obecně. [Retroaktivní financování veřejných statků](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kvadratické financování](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) a [tokenizované stimulační struktury](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) jsou některými z nástrojů web3, které by mohly pomoci spustit revoluci ve financování vědy.
+Web3 má potenciál narušit tento nefungující model financování tím, že experimentuje s různými modely podnětů vyvinutými DAO a Web3 obecně. [Retroaktivní financování veřejných statků](https://medium.com/Ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kvadratické financování](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) a [tokenizované stimulační struktury](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) jsou některými z nástrojů web3, které by mohly pomoci spustit revoluci ve financování vědy.
 
 ### Vlastnictví a vývoj IP {#ip-ownership}
 
-Duševní vlastnictví (IP) je v tradiční vědě velkým problémem: počínaje ponecháním na univerzitách přes nevyužití v biotechnologiích až po notoricky obtížné ocenění. Nicméně vlastnictví digitálních aktiv (jako jsou vědecká data nebo články) je něco, co Web3 umí výjimečně dobře pomocí [nezaměnitelných tokenů (NFT)](/glossary/#nft).
+Duševní vlastnictví (IP) je v tradiční vědě velkým problémem: počínaje ponecháním na univerzitách přes nevyužití v biotechnologiích až po notoricky obtížné ocenění. Nicméně vlastnictví digitálních aktiv (jako jsou vědecká data nebo články) je něco, co Web3 umí výjimečně dobře pomocí [nezaměnitelných tokenů (NFT)](/glossary/#NFT).
 
-Podobně jako NFT mohou posílat budoucí příjmy z transakcí zpět původnímu tvůrci, můžete vytvořit transparentní řetězce přiřazující ocenění, abyste odměňovali výzkumníky, řídící orgány (jako DAO) nebo dokonce subjekty, jejichž data jsou shromažďována.
+Podobně jako NFT mohou PoSílat budoucí příjmy z transakcí zpět původnímu tvůrci, můžete vytvořit transparentní řetězce přiřazující ocenění, abyste odměňovali výzkumníky, řídící orgány (jako DAO) nebo dokonce subjekty, jejichž data jsou shromažďována.
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mohou také fungovat jako klíč k decentralizovanému datovému úložišti prováděných výzkumných experimentů a spojení do finančního systému NFT a [DeFi](/glossary/#defi) (od frakcionace po úvěrové fondy a ocenění). Také nativně umožňují entitám na blockchainu, jako jsou DAO, například [VitaDAO](https://www.vitadao.com/), provádět výzkum přímo na blockchainu. Důležitou roli v DeSci může hrát také příchod nepřenosných ["soulbound" tokenů](https://vitalik.eth.limo/general/2022/01/26/soulbound.html), které jednotlivcům umožní prokázat své zkušenosti a kvalifikace spojené s jejich Ethereum adresou.
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mohou také fungovat jako klíč k decentralizovanému datovému úložišti prováděných výzkumných experimentů a spojení do finančního systému NFT a [DeFi](/glossary/#defi) (od frakcionace po úvěrové fondy a ocenění). Také nativně umožňují entitám na blockchainu, jako jsou DAO, například [VitaDAO](https://www.vitadao.com/), provádět výzkum přímo na blockchainu. Důležitou roli v DeSci může hrát také příchod nepřenosných ["soulbound" tokenů](https://vitalik.ETH.limo/general/2022/01/26/soulbound.HTML), které jednotlivcům umožní prokázat své zkušenosti a kvalifikace spojené s jejich Ethereum adresou.
 
 ### Ukládání dat, přístup a architektura {#data-storage}
 
