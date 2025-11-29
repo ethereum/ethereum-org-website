@@ -1,14 +1,14 @@
 ---
 title: Poslání a vize
 lang: cs
-description: Poslání a vize překladatelského programu ethereum.org
+description: Poslání a vize překladatelského programu Ethereum.org
 ---
 
 # Poslání a vize {#mission-and-vision}
 
-Komunita Etherea se snaží být globální a inkluzivní, přesto však velká část jejího obsahu oslovuje pouze anglicky mluvící, čímž vylučuje 6 miliard lidí, kteří anglicky nemluví. Aby mohl ethereum.org sloužit jako portál do světa Etherea pro globální komunitu, věříme, že poskytování obsahu o Ethereu v rodných jazycích neanglicky mluvících uživatelů je zásadní.
+Komunita Etherea se snaží být globální a inkluzivní, přesto však velká část jejího obsahu oslovuje pouze anglicky mluvící, čímž vylučuje 6 miliard lidí, kteří anglicky nemluví. Aby mohl Ethereum.org sloužit jako portál do světa Etherea pro globální komunitu, věříme, že poskytování obsahu o Ethereu v rodných jazycích neanglicky mluvících uživatelů je zásadní.
 
-Cílem překladatelského programu ethereum.org je zpřístupnit Ethereum všem tím, že překládáme ethereum.org a další obsah Etherea do co nejvíce jazyků.
+Cílem překladatelského programu Ethereum.org je zpřístupnit Ethereum všem tím, že překládáme Ethereum.org a další obsah Etherea do co nejvíce jazyků.
 
 ## Naše mise {#our-mission}
 
