@@ -62,9 +62,9 @@ Aby se předešlo podvodným výběrům, zavádí se „období výzvy“. Běhe
 
 Obvykle jsou však uživatelé poctiví a o prostředcích, které vlastní, mluví pravdu. V tomto scénáři Alice zahájí žádost o výběr na kořenovém řetězci (Ethereum) odesláním transakce do plazmového kontraktu.
 
-Alice musí také poskytnout Merkle důkaz ověřující, že transakce, která vytvořila její prostředky na plazmovém řetězci, byla zahrnuta do bloku. To je nezbytné pro varianty Plasmy, jako je [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), které používají model [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Alice musí také poskytnout Merkle důkaz ověřující, že transakce, která vytvořila její prostředky na plazmovém řetězci, byla zahrnuta do bloku. To je nezbytné pro varianty Plasmy, jako je [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.HTML), které používají model [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Jiné varianty, jako je [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), představují prostředky, jako jsou [nezaměnitelné tokeny](/developers/docs/standards/tokens/erc-721/) místo UTXO. V tomto případě je pro výběr nutné předložit důkaz o vlastnictví tokenů na plazmovém řetězci. Toho je možné docílit předložením dvou nejnovějších transakcí zahrnujících token a poskytnutím Merkle důkazu ověřujícího zahrnutí těchto transakcí do bloku.
+Jiné varianty, jako je [Plasma Cash](https://www.learnplasma.org/en/learn/cash.HTML), představují prostředky, jako jsou [nezaměnitelné tokeny](/developers/docs/standards/tokens/erc-721/) místo UTXO. V tomto případě je pro výběr nutné předložit důkaz o vlastnictví tokenů na plazmovém řetězci. Toho je možné docílit předložením dvou nejnovějších transakcí zahrnujících token a poskytnutím Merkle důkazu ověřujícího zahrnutí těchto transakcí do bloku.
 
 Uživatel musí také přidat k žádosti o výběr zástavu jako záruku poctivého chování. Pokud vyzyvatel prokáže neplatnost žádosti o výběr Alice, její záloha je penalizována a část z ní jde vyzyvateli jako odměna.
 
@@ -167,8 +167,8 @@ Několik projektů poskytuje implementace Plasmy, které můžete integrovat do 
 ## Další informace {#further-reading}
 
 - [Učte se o Plasmě](https://www.learnplasma.org/en/)
-- [Rychlá připomínka toho, co znamená „sdílená bezpečnost“ a proč je tak důležitá](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Postranní řetězce vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Rychlá připomínka toho, co znamená „sdílená bezpečnost“ a proč je tak důležitá](https://old.reddit.com/r/Ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Postranní řetězce vs Plasma vs Sharding](https://vitalik.ETH.limo/general/2019/06/12/plasma_vs_sharding.HTML)
 - [Pochopení Plasmy, část 1: Základy](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Život a smrt Plasmy](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
