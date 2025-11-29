@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo Eth zobrazené prostřednictvím hologramu.
+alt: Logo ETH zobrazené prostřednictvím hologramu.
 summaryPoint1: Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu.
 summaryPoint2: NFT dávají tvůrcům obsahu větší moc než kdykoliv předtím.
 summaryPoint3: Běží na chytrých kontraktech na blockchainu Ethereum.
@@ -27,7 +27,7 @@ NFT a Ethereum řeší některé problémy, které dnes na internetu existují. 
 
 Zde je porovnání NFT internetu a internetu, tak jak ho známe dnes...
 
-### Porovnání {#nft-comparison}
+### Porovnání {#NFT-comparison}
 
 | NFT internet                                                                                                                                                      | Dnešní internet                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Zde je porovnání NFT internetu a internetu, tak jak ho známe dnes...
 | Tvůrci obsahu **mohou prodávat svá díla kdekoliv** a mají přístup na globální trh.                                                                                | Tvůrci spoléhají na infrastrukturu a distribuci platforem, které využívají. Často je omezují podmínky používání a **zeměpisná omezení**. |
 | Tvůrci NFT si mohou **ponechat vlastnická práva** ke svému dílu a naprogramovat licenční poplatky přímo do NFT kontraktu.                                         | Platformy, např. **služby streamování hudby, si nechávají většinu zisků z prodeje**.                                                     |
 
-## K čemu se NFT používají? {#nft-use-cases}
+## K čemu se NFT používají? {#NFT-use-cases}
 
 NFT se používají pro spoustu věcí, mezi které patří:
 
@@ -58,7 +58,8 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...</div>
+  <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Prozkoumat NFT umění
   </ButtonLink>
@@ -67,11 +68,11 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 
 Nebo si představte vstupenku na sportovní událost. Stejně jako **si organizátor události může vybrat, kolik vstupenek bude prodávat**, může se tvůrce NFT rozhodnout, kolik kopií vytvoří. Někdy se jedná o přesné kopie, jako je 5 000 všeobecných vstupenek. Někdy je vytvořených několik NFT, která jsou velmi podobná, ale každé mírně odlišné, jako například vstupenka s přiděleným sedadlem. Ty lze kupovat a prodávat peer-to-peer bez placení prodejcům vstupenek a kupující se vždy může ujistit o pravosti vstupenky pomocí kontroly adresy kontraktu.
 
-**NFT na ethereum.org slouží k prokázání, že lidé smysluplně přispěli** do našeho Github repozitáře (naprogramovali web, napsali nebo upravili článek...), přeložili náš obsah, nebo se zúčastnili našeho komunitního hovoru. Také máme naše vlastní doménové jméno spojené s NFT. Pokud budete přispívat na ethereum.org, můžete získat [POAP](/glossary/#poap) NFT. Některé krypto meetupy používají POAPy jako vstupenky. [Více o přispívání](/contributing/#poap).
+**NFT na Ethereum.org slouží k prokázání, že lidé smysluplně přispěli** do našeho GitHub repozitáře (naprogramovali web, napsali nebo upravili článek...), přeložili náš obsah, nebo se zúčastnili našeho komunitního hovoru. Také máme naše vlastní doménové jméno spojené s NFT. Pokud budete přispívat na Ethereum.org, můžete získat [POAP](/glossary/#poap) NFT. Některé krypto meetupy používají POAPy jako vstupenky. [Více o přispívání](/contributing/#poap).
 
-![ethereum.org POAP](./poap.png)
+![Ethereum.org POAP](./poap.png)
 
-Tato webová stránka má také alternativní název domény využívající NFT, **ethereum.eth**. Naše adresa `.org` je centrálně spravována poskytovatelem doménových jmen (DNS), zatímco ethereum`.eth` je registrována na síti Ethereum prostřednictvím Ethereum Name Service (ENS). A je vlastněná a ovládaná námi. [Podívejte se na náš ENS záznam.](https://app.ens.domains/name/ethereum.eth)
+Tato webová stránka má také alternativní název domény využívající NFT, **Ethereum.ETH**. Naše adresa `.org` je centrálně spravována poskytovatelem doménových jmen (DNS), zatímco Ethereum`.ETH` je registrována na síti Ethereum prostřednictvím Ethereum Name Service (ENS). A je vlastněná a ovládaná námi. [Podívejte se na náš ENS záznam.](https://app.ens.domains/name/Ethereum.ETH)
 
 [Více o ENS](https://app.ens.domains)
 
@@ -91,9 +92,9 @@ Když někdo "vytvoří" nebo "vytěží" nějaké NFT, tak prakticky říkají 
 
 Tvůrce kontraktu může navíc přidat další pravidla. Může nastavit kolik má být daného NFT vytvořeno nebo může rozhodnout, že dostane malý autorský poplatek, kdykoliv NFT změní svého majitele.
 
-### Zabezpečení NFT {#nft-security}
+### Zabezpečení NFT {#NFT-security}
 
-Ethereum je zabezpečeno [mechanismem důkazu podílem](/glossary/#pos). Systém je navržen tak, aby ekonomicky bránil zlovolným akcím, takže Ethereum je chráněno proti neoprávněným zásahům. To je to, co umožňuje NFT fungovat. Jakmile bude [blok](/glossary/#block) obsahující vaši NFT transakci [dokončen](/glossary/#finality), změnit ho by stálo útočníka miliony ETH. Každý, kdo používá Ethereum software, by byl okamžitě schopen odhalit nepoctivé a nedovolené zásahy týkající se NFT a záškodník by byl ekonomicky penalizován a vykázán.
+Ethereum je zabezpečeno [mechanismem důkazu podílem](/glossary/#PoS). Systém je navržen tak, aby ekonomicky bránil zlovolným akcím, takže Ethereum je chráněno proti neoprávněným zásahům. To je to, co umožňuje NFT fungovat. Jakmile bude [blok](/glossary/#block) obsahující vaši NFT transakci [dokončen](/glossary/#finality), změnit ho by stálo útočníka miliony ETH. Každý, kdo používá Ethereum software, by byl okamžitě schopen odhalit nepoctivé a nedovolené zásahy týkající se NFT a záškodník by byl ekonomicky penalizován a vykázán.
 
 Bezpečnostní otázky týkající se NFT se nejčastěji týkají podvodů s phishingem, zranitelnosti chytrých kontraktů nebo uživatelské chyby (jako je neúmyslné odhalení privátního klíče). Dobrá ochrana peněženky je tedy pro majitele NFT klíčovou.
 
@@ -104,10 +105,10 @@ Bezpečnostní otázky týkající se NFT se nejčastěji týkají podvodů s ph
 ## Další informace {#further-reading}
 
 - [Průvodce NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, leden 2020_
-- [EtherscanNFT tracker](https://etherscan.io/nft-top-contracts)
+- [EtherscanNFT tracker](https://etherscan.io/NFT-top-contracts)
 - [Standart tokenu ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standart tokenu ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Oblíbené aplikace a nástroje NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+- [Oblíbené aplikace a nástroje NFT](https://www.Ethereum-ecosystem.com/blockchains/Ethereum/nfts)
 
 ## Další zdroje {#other-resources}
 
