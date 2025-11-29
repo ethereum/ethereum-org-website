@@ -1,26 +1,26 @@
 ---
 title: Průvodce překladem
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: Pokyny a tipy pro překladatele Ethereum.org
 ---
 
-# Průvodce stylem překladu ethereum.org {#style-guide}
+# Průvodce stylem překladu Ethereum.org {#style-guide}
 
-Průvodce stylem překladu pro ethereum.org obsahuje některé z nejdůležitějších pokynů, instrukcí a tipů pro překladatele, kteří nám pomáhají lokalizovat webové stránky.
+Průvodce stylem překladu pro Ethereum.org obsahuje některé z nejdůležitějších pokynů, instrukcí a tipů pro překladatele, kteří nám pomáhají lokalizovat webové stránky.
 
 Tento dokument slouží jako obecný průvodce a není specifický pro žádný konkrétní jazyk.
 
-Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte nás kontaktovat na translations@ethereum.org, pošlete zprávu na @ethdotorg na Crowdin nebo se [připojte k našemu Discordu](https://discord.gg/ethereum-org), kde nám můžete poslat zprávu v kanálu #translations nebo kontaktovat některého z členů týmu.
+Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte nás kontaktovat na translations@Ethereum.org, pošlete zprávu na @ethdotorg na Crowdin nebo se [připojte k našemu Discordu](https://discord.gg/Ethereum-org), kde nám můžete poslat zprávu v kanálu #translations nebo kontaktovat některého z členů týmu.
 
-## Používání Crowdinu {#using-crowdin}
+## Používání Crowdinu {#using-Crowdin}
 
 Základní pokyny, jak se připojit k projektu na Crowdinu a jak používat online editor Crowdin, najdete na stránce [Translation Program](/contributing/translation-program/#how-to-translate).
 
-Pokud byste se chtěli dozvědět více o Crowdinu a používat některé z jeho pokročilých funkcí, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje mnoho podrobných průvodců a přehledů všech jeho funkcionalit.
+Pokud byste se chtěli dozvědět více o Crowdinu a používat některé z jeho pokročilých funkcí, [znalostní báze Crowdin](https://support.Crowdin.com/online-editor/) obsahuje mnoho podrobných průvodců a přehledů všech jeho funkcionalit.
 
 ## Zachycení podstaty sdělení {#capturing-the-essence}
 
-Při překládání obsahu ethereum.org se vyhýbejte doslovným překladům.
+Při překládání obsahu Ethereum.org se vyhýbejte doslovným překladům.
 
 Je důležité, aby překlady zachytily podstatu sdělení. To může znamenat přeformulování určitých frází nebo použití popisných překladů místo překládání obsahu slovo od slova.
 
@@ -80,13 +80,13 @@ Níže najdete několik příkladů toho, jak tyto řetězce vypadají pro přek
 
 ![Názvy článků v postranním panelu.png](./article-titles-in-sidebar.png) ![Názvy článků v editoru.png](./article-titles-in-editor.png)
 
-## Upozornění v Crowdinu {#crowdin-warnings}
+## Upozornění v Crowdinu {#Crowdin-warnings}
 
 Crowdin má zabudovanou funkci, která varuje překladatele, když se chystají udělat chybu. Crowdin vás automaticky upozorní před uložením překladu, pokud zapomenete zahrnout tag ze zdroje, přeložíte prvky, které by neměly být přeloženy, přidáte několik po sobě jdoucích mezer, zapomenete koncové interpunkční znaménko atd. Pokud vidíte takové upozornění, vraťte se a dvakrát zkontrolujte navrhovaný překlad.
 
 **Nikdy tato varování neignorujte, protože obvykle znamenají, že něco není v pořádku nebo že v překladu chybí klíčová část zdrojového textu.**
 
-Příklad upozornění v Crowdinu, když zapomenete přidat tag do překladu: ![Příklad upozornění v Crowdinu](./crowdin-warning-example.png)
+Příklad upozornění v Crowdinu, když zapomenete přidat tag do překladu: ![Příklad upozornění v Crowdinu](./Crowdin-warning-example.png)
 
 ## Práce s tagy a úryvky kódu {#dealing-with-tags}
 
@@ -108,7 +108,7 @@ Při výběru této možnosti se celý text tagu již nebude zobrazovat a bude n
 
 **Odkazy**
 
-Můžete si také všimnout úplných odkazů na stránky na ethereum.org nebo na jiné webové stránky.
+Můžete si také všimnout úplných odkazů na stránky na Ethereum.org nebo na jiné webové stránky.
 
 Tyto odkazy by měly být identické se zdrojem a neměly by být měněny nebo překládány. Pokud odkaz přeložíte nebo ho jakýmkoliv způsobem změníte, dokonce i jen odstraněním části, jako je například lomítko (/), povede to k nefunkčním a nepoužitelným odkazům.
 
@@ -192,7 +192,7 @@ Překlady tlačítek by měly být co nejkratší, aby se zabránilo problémům
 
 ## Překládání s ohledem na inkluzivitu {#translating-for-inclusivity}
 
-Návštěvníci ethereum.org pocházejí z celého světa a z různých prostředí. Jazyk na webu by proto měl být neutrální, přívětivý ke všem a ne vylučující.
+Návštěvníci Ethereum.org pocházejí z celého světa a z různých prostředí. Jazyk na webu by proto měl být neutrální, přívětivý ke všem a ne vylučující.
 
 Důležitým aspektem tohoto přístupu je genderová neutralita. Toho lze snadno dosáhnout použitím formálního způsobu oslovení a vyhnutím se jakýmkoli genderově specifickým slovům v překladech.
 
@@ -286,7 +286,7 @@ Některé příklady toho, na co být obzvláště opatrní:
 
 ## Závěr {#conclusion}
 
-Překlad ethereum.org je skvělou příležitostí, jak se dozvědět více o různých aspektech Etherea.
+Překlad Ethereum.org je skvělou příležitostí, jak se dozvědět více o různých aspektech Etherea.
 
 Při překládání se nesnažte spěchat. Vezměte to v klidu a bavte se!
 
