@@ -35,7 +35,7 @@
   "page-eth-no-centralized-desc": "ETH je decentralizované a globální. Neexistuje žádná společnost nebo banka, která by se mohla rozhodnout vytisknout více ETH nebo změnit podmínky používání.",
   "page-eth-non-fungible-tokens-link": "Nezaměnitelné tokeny",
   "page-eth-not-only-crypto": "ETH není jediná kryptoměna na Ethereu",
-  "page-eth-not-only-crypto-desc": "Kdokoli může vytvářet nové druhy aktiv a na Ethereu s nimi obchodovat. Tato aktiva známe jako „tokeny“. Uživatelé už tokenizovali tradiční měny, své nemovitosti, své umění, a dokonce sami sebe!",
+  "page-eth-not-only-crypto-desc": "Kdokoli může vytvářet nové druhy aktiv a na Ethereu s nimi obchodovat. Tato aktiva známe jako „tokeny". Uživatelé už tokenizovali tradiční měny, své nemovitosti, své umění, a dokonce sami sebe!",
   "page-eth-not-only-crypto-desc-2": "Ethereum je domovem tisíce tokenů. Některé jsou užitečnější a cennější než jiné. Vývojáři vytvářejí nové tokeny, které představují nové možnosti a otevírají nové trhy.",
   "page-eth-open": "Otevřené komukoli",
   "page-eth-open-desc": "K přijetí ETH potřebujete pouze připojení k internetu a peněženku. Nepotřebujete přístup k bankovnímu účtu abyste přijímali platby. ",
@@ -89,5 +89,5 @@
   "page-eth-tokens-dao-description": "Internetové komunity často spravované držiteli tokenů.",
   "page-eth-whats-defi": "Další informace o DeFi",
   "page-eth-whats-defi-description": "DeFi je decentralizovaný finanční systém postavený na Ethereu. Tento přehled vysvětluje, co tento systém umožňuje provést.",
-  "page-what-is-ethereum-what-is-ether": "Co je to ether?"
+  "page-what-is-ethereum-what-is-ether": "Co je ether?"
 }
