@@ -10,9 +10,9 @@ summaryPoints:
 
 # Abstrakce účtu {#account-abstraction}
 
-Uživatelé interagují s Ethereem pomocí **[externě vlastněných účtů (externally owned accounts, EOA)](/glossary/#eoa)**. To je jediný způsob, jak poslat transakci nebo spustit chytrý kontrakt. To limituje možnosti uživatelů interagovat s Ethereem. Např. to komplikuje hromadné posílání transakcí a je nutné, aby uživatelé neustále měli na účtu zůstatek ETH na pokrytí poplatků za palivo.
+Uživatelé interagují s Ethereem pomocí **[externě vlastněných účtů (externally owned accounts, EOA)](/glossary/#eoa)**. To je jediný způsob, jak poslat transakci nebo spustit chytrý kontrakt. To limituje možnosti uživatelů interagovat s Ethereem. Např. to komplikuje hromadné PoSílání transakcí a je nutné, aby uživatelé neustále měli na účtu zůstatek ETH na pokrytí poplatků za palivo.
 
-Abstrakce účtů je způsob, jak tyto problémy vyřešit, a to tak, že uživatelům umožňuje flexibilně naprogramovat do svých účtů větší zabezpečení a lepší uživatelské prostředí. Toho může být dosaženo vylepšením [EOA](https://eips.ethereum.org/EIPS/eip-3074), aby je bylo možné ovládat pomocí chytrých kontraktů, nebo [vylepšením chytrých kontraktů](https://eips.ethereum.org/EIPS/eip-2938), aby mohly iniciovat transakce. Obě možnosti vyžadují změny v protokolu Etherea. Existuje také třetí cesta, která zahrnuje přidání [druhého, samostatného systému zpracovávání transakcí](https://eips.ethereum.org/EIPS/eip-4337), který běží paralelně se stávajícím protokolem. Bez ohledu na způsob je výsledkem přístup k Ethereu prostřednictvím peněženek založených na chytrých kontraktech, buď nativně podporovaných jako součást stávajícího protokolu, nebo prostřednictvím doplňkové transakční sítě.
+Abstrakce účtů je způsob, jak tyto problémy vyřešit, a to tak, že uživatelům umožňuje flexibilně naprogramovat do svých účtů větší zabezpečení a lepší uživatelské prostředí. Toho může být dosaženo vylepšením [EOA](https://eips.Ethereum.org/EIPS/EIP-3074), aby je bylo možné ovládat pomocí chytrých kontraktů, nebo [vylepšením chytrých kontraktů](https://eips.Ethereum.org/EIPS/EIP-2938), aby mohly iniciovat transakce. Obě možnosti vyžadují změny v protokolu Etherea. Existuje také třetí cesta, která zahrnuje přidání [druhého, samostatného systému zpracovávání transakcí](https://eips.Ethereum.org/EIPS/EIP-4337), který běží paralelně se stávajícím protokolem. Bez ohledu na způsob je výsledkem přístup k Ethereu prostřednictvím peněženek založených na chytrých kontraktech, buď nativně podporovaných jako součást stávajícího protokolu, nebo prostřednictvím doplňkové transakční sítě.
 
 Peněženky založené na chytrých kontraktech odemykají spoustu výhod pro uživatele, např.:
 
@@ -48,7 +48,7 @@ Záložní klíče mohou být např. přidány do peněženky, takže pokud ztra
 - **Zmrazení účtu**: Pokud je zařízení ztraceno nebo kompromitováno, může být účet uzamčen z jiného autorizovaného zařízení, což chrání prostředky uživatele.
 - **Obnova účtu**: Ztratili jste zařízení nebo zapomněli heslo? V současném paradigmatu to znamená, že vaše prostředky mohou být navždy zmrazeny. S chytrou kontraktovou peněženkou můžete nastavit whitelist účtů, které mohou autorizovat nová zařízení a znovu nastavit přístup.
 - **Nastavení limitů transakcí**: Lze určit denní hodnoty pro to, kolik prostředků může být převedeno z účtu za den/týden/měsíc. To znamená, že i když útočník získá přístup k vašemu účtu, nemůže najednou vybrat vše a máte příležitost zmrazit a znovu nastavit přístup.
-- **Vytvoření whitelistů**: Umožňuje povolit transakce jen na určité adresy, které označíte jako bezpečné. To znamená, že _i když_ by byl váš privátní klíč zcizen, útočník by mohl posílat prostředky pouze na účty na vašem seznamu. Změna těchto whitelistů by vyžadovala více podpisů, takže útočník nemůže přidat vlastní adresu na seznam, pokud nemá přístup k několika vašim záložním klíčům.
+- **Vytvoření whitelistů**: Umožňuje povolit transakce jen na určité adresy, které označíte jako bezpečné. To znamená, že _i když_ by byl váš privátní klíč zcizen, útočník by mohl PoSílat prostředky pouze na účty na vašem seznamu. Změna těchto whitelistů by vyžadovala více podpisů, takže útočník nemůže přidat vlastní adresu na seznam, pokud nemá přístup k několika vašim záložním klíčům.
 
 ## Lepší uživatelská zkušenost {#better-user-experience}
 
@@ -82,7 +82,7 @@ EIP-2771 zavádí koncept meta-transakcí, které umožňují třetím stranám 
 
 <ExpandableCard title="EIP-4337: abstrakce účtu bez změny protokolu Ethereum" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
-EIP-4337 je prvním krokem směrem k nativní podpoře chytrých kontraktových peněženek decentralizovaným způsobem, <em>aniž by bylo potřeba měnit protokol Ethereum</em>. Místo úpravy konsenzuální vrstvy pro podporu chytrých kontraktových peněženek je přidán nový systém odděleně od běžného transakčního komunikačního protokolu. Tento vysoceúrovňový systém je postaven kolem nového objektu nazývaného <code>UserOperation</code>, který balí akce uživatele spolu s relevantními podpisy. Tyto objekty <code>UserOperation</code> jsou následně posílány do specializovaného mempoolu, kde je validátoři shromažďují do „balíčkové transakce“. Balíčková transakce představuje sekvenci mnoha jednotlivých objektů <code>UserOperation</code> a může být zahrnuta do bloků na Ethereu stejně jako běžná transakce, a může být vybírána validátory pomocí podobného modelu maximizace poplatků.
+EIP-4337 je prvním krokem směrem k nativní podpoře chytrých kontraktových peněženek decentralizovaným způsobem, <em>aniž by bylo potřeba měnit protokol Ethereum</em>. Místo úpravy konsenzuální vrstvy pro podporu chytrých kontraktových peněženek je přidán nový systém odděleně od běžného transakčního komunikačního protokolu. Tento vysoceúrovňový systém je postaven kolem nového objektu nazývaného <code>UserOperation</code>, který balí akce uživatele spolu s relevantními podpisy. Tyto objekty <code>UserOperation</code> jsou následně PoSílány do specializovaného mempoolu, kde je validátoři shromažďují do „balíčkové transakce“. Balíčková transakce představuje sekvenci mnoha jednotlivých objektů <code>UserOperation</code> a může být zahrnuta do bloků na Ethereu stejně jako běžná transakce, a může být vybírána validátory pomocí podobného modelu maximizace poplatků.
 
 Způsob, jakým peněženky fungují, by se se zavedením EIP-4337 také změnil. Místo toho, aby každá peněženka znovu implementovala běžnou, ale složitou bezpečnostní logiku, by tyto funkce byly outsourcovány do globálního peněženkového kontraktu známého jako „vstupní bod“. Ten by spravoval operace, jako je platba poplatků a spuštění EVM kódu, takže vývojáři peněženek se mohou soustředit na poskytování vynikajících uživatelských funkcí.
 
@@ -92,7 +92,7 @@ Způsob, jakým peněženky fungují, by se se zavedením EIP-4337 také změnil
 
 <ExpandableCard title="EIP-2938: změna protokolu Ethereum za účelem podpory abstrakce účtu" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
-<a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> si klade za cíl vylepšit protokol Ethereum zavedením nového typu transakce, <code>AA_TX_TYPE</code>, který zahrnuje tři položky: <code>nonce</code>, <code>target</code> a <code>data</code>, kde <code>nonce</code> je čítač transakcí, <code>target</code> je cílová adresa kontraktu vstupního bodu a <code>data</code> je bytecode EVM. Za účelem vykonání těchto transakcí je třeba přidat do EVM dvě nové instrukce (známé jako opkódy): <code>NONCE</code> a <code>PAYGAS</code>. Opkód <code>NONCE</code> sleduje sekvenci transakcí a <code>PAYGAS</code> počítá a vybírá ze zůstatku kontraktu poplatek za palivo potřebný k vykonání transakce. Tyto nové funkce umožňují Ethereu podporovat chytré kontraktové peněženky nativně, protože potřebná infrastruktura je zabudována do protokolu Ethereum.
+<a href="https://eips.Ethereum.org/EIPS/EIP-2938">EIP-2938</a> si klade za cíl vylepšit protokol Ethereum zavedením nového typu transakce, <code>AA_TX_TYPE</code>, který zahrnuje tři položky: <code>nonce</code>, <code>target</code> a <code>data</code>, kde <code>nonce</code> je čítač transakcí, <code>target</code> je cílová adresa kontraktu vstupního bodu a <code>data</code> je bytecode EVM. Za účelem vykonání těchto transakcí je třeba přidat do EVM dvě nové instrukce (známé jako opkódy): <code>NONCE</code> a <code>PAYGAS</code>. Opkód <code>NONCE</code> sleduje sekvenci transakcí a <code>PAYGAS</code> počítá a vybírá ze zůstatku kontraktu poplatek za palivo potřebný k vykonání transakce. Tyto nové funkce umožňují Ethereu podporovat chytré kontraktové peněženky nativně, protože potřebná infrastruktura je zabudována do protokolu Ethereum.
 
 Připomínáme, že EIP-2938 v současné době není aktivní. Komunita aktuálně upřednostňuje EIP-4337, protože nevyžaduje změny protokolu.
 
@@ -100,7 +100,7 @@ Připomínáme, že EIP-2938 v současné době není aktivní. Komunita aktuál
 
 <ExpandableCard title="EIP-3074: vylepšení externě vlastněných účtů pro abstrakci účtu" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
-<a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> si klade za cíl aktualizovat externě vlastněné účty na Ethereu tím, že umožní delegování kontroly nad nimi na chytrý kontrakt. To znamená, že logika chytrého kontraktu by mohla schvalovat transakce pocházející z EOA (externě vlastněného účtu). To by umožnilo funkce jako sponzorování poplatků za palivo a sdružování transakcí. Aby to fungovalo, je třeba do EVM přidat dva nové opkódy: <code>AUTH</code> a <code>AUTHCALL</code>. S EIP-3074 jsou výhody chytrých kontraktových peněženek dostupné <em>bez nutnosti kontraktu</em> – místo toho zpracovává transakce specifický typ stateless, trustless, nevylepšitelného kontraktu známého jako "započínač".
+<a href="https://eips.Ethereum.org/EIPS/EIP-3074">EIP-3074</a> si klade za cíl aktualizovat externě vlastněné účty na Ethereu tím, že umožní delegování kontroly nad nimi na chytrý kontrakt. To znamená, že logika chytrého kontraktu by mohla schvalovat transakce pocházející z EOA (externě vlastněného účtu). To by umožnilo funkce jako sponzorování poplatků za palivo a sdružování transakcí. Aby to fungovalo, je třeba do EVM přidat dva nové opkódy: <code>AUTH</code> a <code>AUTHCALL</code>. S EIP-3074 jsou výhody chytrých kontraktových peněženek dostupné <em>bez nutnosti kontraktu</em> – místo toho zpracovává transakce specifický typ stateless, trustless, nevylepšitelného kontraktu známého jako "započínač".
 
 Připomínáme, že EIP-3074 v současné době není aktivní. Komunita aktuálně upřednostňuje EIP-4337, protože nevyžaduje změny protokolu.
 
@@ -116,11 +116,11 @@ Peněženky založené na chytrých kontraktech jsou už k dispozici, ale je tř
 - [Panelová diskuze o abstrakci účtu na Devconu v Bogotě](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
 - [„Proč je abstrakce účtů revoluční pro dappky“ z Devconu v Bogotě](https://www.youtube.com/watch?v=OwppworJGzs)
 - [„Abstrakce účtů ELI5“ z Devconu v Bogotě](https://www.youtube.com/watch?v=QuYZWJj65AY)
-- [Vitalikovy poznámky „Cesta k abstrakci účtů“](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitalikův blogový příspěvek o společenském obnovování peněženek](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
+- [Vitalikovy poznámky „Cesta k abstrakci účtů“](https://notes.Ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
+- [Vitalikův blogový příspěvek o společenském obnovování peněženek](https://vitalik.ETH.limo/general/2021/01/11/recovery.HTML)
 - [Poznámky k EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
-- [Dokumentace k EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
-- [Poznámky k EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
-- [Dokumentace k EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)
-- [Dokumentace k EIP-2771](https://eips.ethereum.org/EIPS/eip-2771)
+- [Dokumentace k EIP-2938](https://eips.Ethereum.org/EIPS/EIP-2938)
+- [Poznámky k EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-Ethereum-protocol-changes-d75c9d94dc4a)
+- [Dokumentace k EIP-4337](https://eips.Ethereum.org/EIPS/EIP-4337)
+- [Dokumentace k EIP-2771](https://eips.Ethereum.org/EIPS/EIP-2771)
 - [„Základy abstrakce účtů“ – Co je abstrakce účtů, část I](https://www.alchemy.com/blog/account-abstraction)
