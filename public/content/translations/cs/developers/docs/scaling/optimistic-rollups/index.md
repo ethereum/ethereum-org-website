@@ -76,7 +76,7 @@ Ethereum Mainnet poskytuje centrum pro ověřování důkazů podvodu a řešen�
 
 Uživatelé odesílají transakce „operátorům“, což jsou síťové uzly odpovědné za zpracování transakcí na optimistickém rollupu. Operátor, také známý jako „validátor“ nebo „agregátor“, agreguje transakce, komprimuje podkladová data a zveřejňuje bloky na Ethereu.
 
-Ačkoli se validátorem může stát kdokoli, validátoři optimistických rollupů musí před vytvořením bloků složit zálohu, podobně jako v [systému proof of stake](/developers/docs/consensus-mechanisms/pos/). Z této zálohy může být zaplacena pokuta, pokud validátor zveřejní neplatný blok nebo postaví na starém, ale neplatném bloku (i když jeho blok platný je). Tímto způsobem optimistické rollupy využívají kryptografické ekonomické pobídky k zajištění poctivého chování validátorů.
+Ačkoli se validátorem může stát kdokoli, validátoři optimistických rollupů musí před vytvořením bloků složit zálohu, podobně jako v [systému proof of stake](/developers/docs/consensus-mechanisms/PoS/). Z této zálohy může být zaplacena pokuta, pokud validátor zveřejní neplatný blok nebo postaví na starém, ale neplatném bloku (i když jeho blok platný je). Tímto způsobem optimistické rollupy využívají kryptografické ekonomické pobídky k zajištění poctivého chování validátorů.
 
 Ostatní validátoři na řetězci optimistického rollupu mají za úkol exekuovat odeslané transakce pomocí své kopie stavu rollupu. Pokud se konečný stav validátora liší od navrhovaného stavu operátora, mohou zahájit výzvu a vypočítat důkaz podvodu.
 
@@ -84,11 +84,11 @@ Některé optimistické rollupy mohou upustit od systému validátorů bez povol
 
 Sekvencer se liší od běžného operátora rollupu tím, že má větší kontrolu nad pořadím transakcí. Také má prioritní přístup k řetězci rollupu a je jediným subjektem, který je oprávněn odesílat transakce do on-chain kontraktu. Transakce ze síťových uzlů, které nejsou sekvencery, nebo od běžných uživatelů jsou jednoduše zařazeny do samostatné fronty, dokud je sekvencer nezahrne do nového balíčku.
 
-#### Odesílání bloků rollupu na Ethereum {#submitting-blocks-to-ethereum}
+#### Odesílání bloků rollupu na Ethereum {#submitting-blocks-to-Ethereum}
 
 Jak již bylo zmíněno, operátor optimistického rollupu seskupuje transakce mimo řetězec do balíčku a odesílá jej na Ethereum za účelem ověření. Tento proces zahrnuje kompresi dat souvisejících s transakcemi a jejich zveřejnění na Ethereu jako `calldata` nebo v blobech.
 
-`Calldata` je nemodifikovatelná a nepersistentní oblast ve smart kontraktu, která se většinou chová jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Zatímco `calldata` zůstávají na řetězci jako součást [historických záznamů blockchainu](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs), nejsou uložena jako součást stavu Etherea. Protože `calldata` se nedotýkají žádné části stavu Etherea, jsou levnější než stav pro ukládání dat na řetězci.
+`Calldata` je nemodifikovatelná a nepersistentní oblast ve smart kontraktu, která se většinou chová jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Zatímco `calldata` zůstávají na řetězci jako součást [historických záznamů blockchainu](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML?highlight=memory#logs), nejsou uložena jako součást stavu Etherea. Protože `calldata` se nedotýkají žádné části stavu Etherea, jsou levnější než stav pro ukládání dat na řetězci.
 
 Klíčové slovo `calldata` se také používá v jazyce Solidity k předání argumentů funkci smart kontraktu během jeho exekuce. `calldata` identifikuje funkci, která je volána během transakce, a drží vstupy pro tuto funkci ve formě libovolné sekvence bytů.
 
@@ -172,7 +172,7 @@ Poskytovatelé likvidity mohou před uvolněním prostředků ověřit platnost 
 
 #### 2. Kompatibilita s EVM {#evm-compatibility}
 
-Pro vývojáře je výhodou optimistických rollupů jejich kompatibilita – nebo ještě lépe, ekvivalence – s [Virtuálním strojem Etherea (EVM)](/developers/docs/evm/). Rollupy kompatibilní s EVM splňují specifikace uvedené v [Ethereum Yellow Paperu](https://ethereum.github.io/yellowpaper/paper.pdf) a podporují EVM na úrovni bytekódu.
+Pro vývojáře je výhodou optimistických rollupů jejich kompatibilita – nebo ještě lépe, ekvivalence – s [Virtuálním strojem Etherea (EVM)](/developers/docs/evm/). Rollupy kompatibilní s EVM splňují specifikace uvedené v [Ethereum Yellow Paperu](https://Ethereum.GitHub.io/yellowpaper/paper.pdf) a podporují EVM na úrovni bytekódu.
 
 Kompatibilita s EVM v optimistických rollupech přináší následující výhody:
 
@@ -198,21 +198,21 @@ Je třeba poznamenat, že zprávy L2 > L1 mezi kontrakty musí počítat se zpo�
 
 Optimistické rollupy používají systém poplatků za palivo podobně jako Ethereum, aby bylo možné vyčíslit, kolik uživatelé platí za transakci. Poplatky účtované u optimistických rollupů závisí na následujících složkách:
 
-1. **Zápis stavu**: Optimistické rollupy posílají data transakcí a hlavičky bloků (sestávající z hashe hlavičky předchozího bloku, state rootu a batch rootu) na Ethereum jako `blob` nebo „velký binární objekt“. [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) zavedl nákladově efektivní řešení pro zahrnutí dat na řetězec. `Blob` je nové pole transakce, které umožňuje rollupům zveřejnit komprimovaná data o přechodu stavu na Ethereum L1. Na rozdíl od `calldata`, které zůstává na řetězi trvale, jsou bloby krátkodobé a mohou být odstraněny z klientů po [4 096 epochách](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (přibližně 18 dnech). Použitím blobů pro zveřejnění balíčků komprimovaných transakcí mohou optimistické rollupy výrazně snížit náklady na zápis transakcí na L1.
+1. **Zápis stavu**: Optimistické rollupy PoSílají data transakcí a hlavičky bloků (sestávající z hashe hlavičky předchozího bloku, state rootu a batch rootu) na Ethereum jako `blob` nebo „velký binární objekt“. [EIP-4844](https://eips.Ethereum.org/EIPS/EIP-4844) zavedl nákladově efektivní řešení pro zahrnutí dat na řetězec. `Blob` je nové pole transakce, které umožňuje rollupům zveřejnit komprimovaná data o přechodu stavu na Ethereum L1. Na rozdíl od `calldata`, které zůstává na řetězi trvale, jsou bloby krátkodobé a mohou být odstraněny z klientů po [4 096 epochách](https://GitHub.com/Ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (přibližně 18 dnech). Použitím blobů pro zveřejnění balíčků komprimovaných transakcí mohou optimistické rollupy výrazně snížit náklady na zápis transakcí na L1.
 
-2. **Palivo spotřebované blobem**: Transakce s blobem používají dynamický mechanismus poplatků podobný tomu, který byl zaveden [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Poplatek za palivo pro typ-3 transakce zohledňuje základní poplatek za bloby, který je určen sítí na základě poptávky po blobovém prostoru a využití blobového prostoru transakcí, která je odesílána.
+2. **Palivo spotřebované blobem**: Transakce s blobem používají dynamický mechanismus poplatků podobný tomu, který byl zaveden [EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559). Poplatek za palivo pro typ-3 transakce zohledňuje základní poplatek za bloby, který je určen sítí na základě poptávky po blobovém prostoru a využití blobového prostoru transakcí, která je odesílána.
 
 3. **Poplatky operátorů L2**: Toto je částka zaplacená síťovým uzlům rollupu jako kompenzace za výpočetní náklady vzniklé při zpracování transakcí, podobně jako poplatky za palivo na Ethereu. Uzel rollupu účtuje nižší transakční poplatky, protože L2 má vyšší kapacitu zpracování a není konfrontován s přetížením sítě, které nutí validátory na Ethereu upřednostňovat transakce s vyššími poplatky.
 
 Optimistické rollupy využívají několik mechanismů ke snížení poplatků pro uživatele, včetně seskupování transakcí a komprese `calldata` pro snížení nákladů na publikaci dat. Pro přehled v reálném čase o tom, kolik stojí používání optimistických rollupů na Ethereu, se můžete podívat na [L2 fee tracker](https://l2fees.info/).
 
-## Jak optimistické rollupy škálují Ethereum? {#scaling-ethereum-with-optimistic-rollups}
+## Jak optimistické rollupy škálují Ethereum? {#scaling-Ethereum-with-optimistic-rollups}
 
 Jak bylo vysvětleno, optimistické rollupy zveřejňují komprimovaná data transakcí na Ethereum, aby zajistily dostupnost dat. Schopnost komprimovat data zveřejněná na řetězi je klíčová pro škálování propustnosti na Ethereu s optimistickými rollupy.
 
 Hlavní řetězec Etherea klade limity na množství dat, která mohou být v blocích, což je vyjádřeno v jednotkách paliva ([průměrná velikost bloku](/developers/docs/blocks/#block-size) je 15 milionů paliva). Zatímco toto omezuje množství paliva, které může každá transakce použít, také to znamená, že můžeme zvýšit počet transakcí zpracovaných na blok snížením množství dat souvisejících s transakcemi – což přímo zlepšuje škálovatelnost.
 
-Optimistické rollupy používají k dosažení komprese dat transakcí a zlepšení rychlosti TPS (transakcí za sekundu) několik technik. Například tento [článek](https://vitalik.eth.limo/general/2021/01/05/rollup.html) porovnává data generovaná základní uživatelskou transakcí (posílání etheru) na Mainnetu a množství dat, která generuje stejná transakce na rollupu:
+Optimistické rollupy používají k dosažení komprese dat transakcí a zlepšení rychlosti TPS (transakcí za sekundu) několik technik. Například tento [článek](https://vitalik.ETH.limo/general/2021/01/05/rollup.HTML) porovnává data generovaná základní uživatelskou transakcí (PoSílání etheru) na Mainnetu a množství dat, která generuje stejná transakce na rollupu:
 
 | Parametr                | Ethereum (L1)         | Rollup (L2)   |
 | ----------------------- | --------------------- | ------------- |
@@ -256,8 +256,8 @@ Učíte se spíše vizuálně? Podívejte se na video od Finematics, které vysv
 ## Další čtení o optimistických rollupech
 
 - [Jak fungují optimistické rollupy (kompletní průvodce)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Co je to Blockchain Rollup? Technický úvod](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+- [Co je to Blockchain Rollup? Technický úvod](https://www.Ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Zásadní průvodce pro Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Jak skutečně funguje rollup od Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Hloubkový rozbor OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Hloubkový rozbor OVM](https://medium.com/Ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Co je to Virtuální stroj Optimistic?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
