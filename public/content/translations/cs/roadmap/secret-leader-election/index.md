@@ -10,17 +10,17 @@ summaryPoints:
 
 # Tajná volba lídra {#single-secret-leader-election}
 
-V dnešním mechanismu konsensu založeném na [důkazu podílem](/developers/docs/consensus-mechanisms/pos) je seznam budoucích navrhovatelů bloků veřejný a lze mapovat jejich IP adresy. To znamená, že útočníci by mohli identifikovat, kteří validátoři mají navrhnout blok, a zaměřit se na ně útokem denial-of-service (DOS), který jim nedovolí blok včas navrhnout.
+V dnešním mechanismu konsensu založeném na [důkazu podílem](/developers/docs/consensus-mechanisms/PoS) je seznam budoucích navrhovatelů bloků veřejný a lze mapovat jejich IP adresy. To znamená, že útočníci by mohli identifikovat, kteří validátoři mají navrhnout blok, a zaměřit se na ně útokem denial-of-service (DOS), který jim nedovolí blok včas navrhnout.
 
 To by mohlo dát útočníkovi příležitost vydělat. Např. navrhovatel bloku vybraný pro slot `n+1` by mohl DOS navrhovatele ve slotu `n`, takže by nestihl navrhnout blok. To by umožnilo útočícímu navrhovateli bloku extrahovat MEV obou slotů nebo vzít všechny transakce, které měly být rozděleny do dvou bloků, a místo toho je všechny zahrnout do jednoho, čímž by získal všechny poplatky, které s nimi souvisejí. V ohrožení jsou zejména domácí validátoři, nikoli sofistikovaní institucionální validátoři, kteří se mohou chránit před útoky DOS pomocí pokročilejších metod, a mohli by proto být centralizační silou.
 
-Existuje několik řešení tohoto problému. Jedním z nich je [Technologie distribuovaných validátorů](https://github.com/ethereum/distributed-validator-specs), jejímž cílem je rozdělit různé úkoly související se spuštěním validátoru na více počítačů s redundancí, takže pro útočníka je mnohem těžší zabránit navržení bloku v konkrétním slotu. Nejrobustnějším řešením je však **tajná volba jediného lídra (Single Secret Leader Election, SSLE)**.
+Existuje několik řešení tohoto problému. Jedním z nich je [Technologie distribuovaných validátorů](https://GitHub.com/Ethereum/distributed-validator-specs), jejímž cílem je rozdělit různé úkoly související se spuštěním validátoru na více počítačů s redundancí, takže pro útočníka je mnohem těžší zabránit navržení bloku v konkrétním slotu. Nejrobustnějším řešením je však **tajná volba jediného lídra (Single Secret Leader Election, SSLE)**.
 
 ## Tajná volba jediného lídra {#secret-leader-election}
 
 V SSLE se používá chytrá kryptografie, která zajišťuje, že pouze vybraný validátor ví, že byl vybrán. Funguje to tak, že se každý validátor zaváže k tajemství sdílenému všemi. Tyto závazky se zamíchají a překonfigurují tak, aby nikdo nemohl mapovat závazky validátorů, ale každý validátor ví, který závazek k němu patří. Poté je náhodně vybrán jeden závazek. Pokud validátor zjistí, že byl vybrán jeho závazek, ví, že je řada na něm, aby navrhl blok.
 
-Hlavní implementace této myšlenky se nazývá [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Funguje takto:
+Hlavní implementace této myšlenky se nazývá [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-Ethereum/11763). Funguje takto:
 
 1. Validátoři se zavazují ke sdílenému tajemství. Schéma závazku je navrženo tak, že může být vázáno na identitu validátora, ale také randomizováno, takže žádná třetí strana nemůže zpětně tuto vazbu zanalyzovat a tím propojit konkrétní závazek s konkrétním validátorem.
 2. Na začátku epochy je náhodně vybrána sada validátorů, která pomocí RANDAO odebere vzorky závazků od 16 384 validátorů.
