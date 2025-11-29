@@ -11,7 +11,7 @@ Dva nejaktivnější a nejvíce udržované jazyky jsou:
 - Solidity
 - Vyper
 
-Remix IDE poskytuje komplexní vývojové prostředí pro vytváření a testování kontraktů jak v Solidity, tak ve Vyperu. [Vyzkoušejte webový Remix IDE](https://remix.ethereum.org), abyste mohli začít kódovat.
+Remix IDE poskytuje komplexní vývojové prostředí pro vytváření a testování kontraktů jak v Solidity, tak ve Vyperu. [Vyzkoušejte webový Remix IDE](https://remix.Ethereum.org), abyste mohli začít kódovat.
 
 Zkušenější vývojáři mohou také chtít používat Yul, což je intermediární jazyk pro [Virtuální stroj Etherea](/developers/docs/evm/), nebo Yul+, rozšíření jazyka Yul.
 
@@ -21,7 +21,7 @@ Pokud jste zvědaví a rádi pomáháte testovat nové jazyky, které jsou stál
 
 Předchozí znalosti programovacích jazyků, zejména JavaScriptu nebo Pythonu, vám mohou pomoci lépe porozumět rozdílům mezi jazyky pro smart kontrakty. Doporučujeme také, abyste nejprve pochopili koncept smart kontraktů, než se ponoříte do srovnání jazyků. [Úvod do smart kontraktů](/developers/docs/smart-contracts/).
 
-## Solidity {#solidity}
+## Solidity {#Solidity}
 
 - Objektově orientovaný, vysoce úrovňový jazyk pro implementaci chytrých kontraktů.
 - Jazyk se složenými závorkami, který je nejvíce ovlivněn jazykem C++.
@@ -35,18 +35,18 @@ Předchozí znalosti programovacích jazyků, zejména JavaScriptu nebo Pythonu,
 
 - [Dokumentace](https://docs.soliditylang.org/en/latest/)
 - [Portál jazyka Solidity](https://soliditylang.org/)
-- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
-- [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) propojeno se [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity by Example](https://docs.soliditylang.org/en/latest/Solidity-by-example.HTML)
+- [GitHub](https://GitHub.com/Ethereum/Solidity/)
+- [Solidity Gitter Chatroom](https://gitter.im/Ethereum/Solidity) propojeno se [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Tahák](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
 - [Twitter Solidity](https://twitter.com/solidity_lang)
 
 ### Ukázkový kontrakt {#example-contract}
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >= 0.7.0;
+pragma Solidity >= 0.7.0;
 
 contract Coin {
     // The keyword "public" makes variables
@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů v Solidity. Pro podrobnější popis funkcí a proměnných [si přečtěte dokumentaci](https://docs.soliditylang.org/en/latest/contracts.html).
+Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů v Solidity. Pro podrobnější popis funkcí a proměnných [si přečtěte dokumentaci](https://docs.soliditylang.org/en/latest/contracts.HTML).
 
 ## Vyper {#vyper}
 
@@ -101,21 +101,21 @@ Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontr
   - Nekonečné smyčky
   - Binární pevné body
 
-Pro více informací si přečtěte [Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
+Pro více informací si přečtěte [Vyper rationale](https://vyper.readthedocs.io/en/latest/index.HTML).
 
 ### Důležité odkazy {#important-links-1}
 
 - [Dokumentace](https://vyper.readthedocs.io)
-- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.HTML)
 - [More Vyper by Example](https://vyper-by-example.org/)
-- [GitHub](https://github.com/vyperlang/vyper)
+- [GitHub](https://GitHub.com/vyperlang/vyper)
 - [Discord chat Vyper komunity](https://discord.gg/SdvKC79cJk)
 - [Tahák](https://reference.auditless.com/cheatsheet)
 - [Frameworky a nástroje pro vývoj smart kontraktů v jazyce Vyper](/developers/docs/programming-languages/python/)
-- [VyperPunk – naučte se zabezpečit a hackovat smart kontrakty v jazyce Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [Vyper Hub pro vývojáře](https://github.com/zcor/vyper-dev)
-- [Příklady nejlepších chytrých kontraktů na Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Úžasné Vyperem kurátorované zdroje](https://github.com/spadebuilders/awesome-vyper)
+- [VyperPunk – naučte se zabezpečit a hackovat smart kontrakty v jazyce Vyper](https://GitHub.com/SupremacyTeam/VyperPunk)
+- [Vyper Hub pro vývojáře](https://GitHub.com/zcor/vyper-dev)
+- [Příklady nejlepších chytrých kontraktů na Vyper](https://GitHub.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Úžasné Vyperem kurátorované zdroje](https://GitHub.com/spadebuilders/awesome-vyper)
 
 ### Příklad {#example}
 
@@ -204,7 +204,7 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů ve Vyperu. Pro podrobnější popis funkcí a proměnných [si přečtěte dokumentaci](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů ve Vyperu. Pro podrobnější popis funkcí a proměnných [si přečtěte dokumentaci](https://vyper.readthedocs.io/en/latest/vyper-by-example.HTML#simple-open-auction).
 
 ## Yul a Yul+ {#yul}
 
@@ -213,7 +213,7 @@ Pokud jste v Ethereum nováčkem a ještě jste neprogramovali v jazycích pro s
 **Yul**
 
 - Pokročilý jazyk pro Ethereum.
-- Podporuje [EVM](/developers/docs/evm) i [Ewasm](https://github.com/ewasm), což je varianta WebAssembly přizpůsobená pro Ethereum, a je navržen tak, aby byl použitelným společným základem pro obě platformy.
+- Podporuje [EVM](/developers/docs/evm) i [Ewasm](https://GitHub.com/ewasm), což je varianta WebAssembly přizpůsobená pro Ethereum, a je navržen tak, aby byl použitelným společným základem pro obě platformy.
 - Dobrá volba pro optimalizační fáze na vyšší úrovni, které mohou mít stejný přínos jak pro platformy EVM, tak pro Ewasm.
 
 **Yul+**
@@ -224,9 +224,9 @@ Pokud jste v Ethereum nováčkem a ještě jste neprogramovali v jazycích pro s
 
 ### Důležité odkazy {#important-links-2}
 
-- [Dokumentace Yul](https://docs.soliditylang.org/en/latest/yul.html)
-- [Dokumentace Yul+](https://github.com/fuellabs/yulp)
-- [Úvodní příspěvek Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Dokumentace Yul](https://docs.soliditylang.org/en/latest/yul.HTML)
+- [Dokumentace Yul+](https://GitHub.com/fuellabs/yulp)
+- [Úvodní příspěvek Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-Ethereum-aa64ce89512f)
 
 ### Ukázkový kontrakt {#example-contract-2}
 
@@ -251,7 +251,7 @@ Následující jednoduchý příklad implementuje funkci mocniny. Lze jej zkompi
 }
 ```
 
-Pokud již máte se smart kontrakty bohaté zkušenosti, plnou implementaci ERC20 v Yul můžete najít [zde](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Pokud již máte se smart kontrakty bohaté zkušenosti, plnou implementaci ERC20 v Yul můžete najít [zde](https://Solidity.readthedocs.io/en/latest/yul.HTML#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -262,9 +262,9 @@ Pokud již máte se smart kontrakty bohaté zkušenosti, plnou implementaci ERC2
 
 ### Důležité odkazy {#important-links-3}
 
-- [GitHub](https://github.com/ethereum/fe)
-- [Oznámení Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Plán vylepšení Fe pro rok 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [GitHub](https://GitHub.com/Ethereum/fe)
+- [Oznámení Fe](https://snakecharmers.Ethereum.org/fe-a-new-language-for-the-Ethereum-ecosystem/)
+- [Plán vylepšení Fe pro rok 2021](https://notes.Ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat na Discordu Fe](https://discord.com/invite/ywpkAXFjZH)
 - [Twitter Fe](https://twitter.com/official_fe)
 
@@ -297,7 +297,7 @@ Stejně jako u jakéhokoli jiného programovacího jazyka jde především o vý
 
 Uvádíme několik věcí, které byste měli zvážit, pokud jste ještě žádný z jazyků nezkusili:
 
-### Co je skvělé na Solidity? {#solidity-advantages}
+### Co je skvělé na Solidity? {#Solidity-advantages}
 
 - Pokud jste začátečník, najdete mnoho tutoriálů a vzdělávacích nástrojů. Více se dozvíte v sekci [Learn by Coding](/developers/learning-tools/).
 - K dispozici je dobrá sada nástrojů pro vývojáře.
@@ -321,4 +321,4 @@ Pro srovnání základní syntaxe, životního cyklu kontraktů, rozhraní, oper
 ## Další čtení {#further-reading}
 
 - [Knihovna Solidity kontraktů od OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
-- [Solidity by Example](https://solidity-by-example.org)
+- [Solidity by Example](https://Solidity-by-example.org)
