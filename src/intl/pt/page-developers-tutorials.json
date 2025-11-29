@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "Leitura rápida",
+  "page-tutorial-listing-policy-intro": "Antes de enviar um tutorial, por favor <a href=\"/contributing/content-resources/\">leia nossa política de listagem</a>.",
+  "comp-tutorial-metadata-tip-author": "Dica Autor",
+  "page-tutorial-create-an-issue": "Criar uma issue",
+  "page-tutorial-create-an-issue-desc": "Preencha o modelo de issue descrevendo seu tutorial.",
+  "page-tutorial-raise-issue-btn": "Levantar uma Questão",
+  "page-tutorial-read-time": "min",
+  "page-tutorial-submit-btn": "Enviar um tutorial",
+  "page-tutorial-subtitle": "Bem-vindo à nossa lista de tutoriais da comunidade com curadoria.",
+  "page-tutorial-tags-error": "Ainda não existem tutoriais com todas as tags que você escolheu",
+  "page-tutorial-title": "Tutoriais de desenvolvimento Ethereum",
+  "page-tutorials-meta-description": "Navegue e filtre por tópico os tutoriais da comunidade Ethereum que foram avaliados.",
+  "page-tutorial-external-link": "Externo",
+  "page-tutorials-meta-title": "Tutoriais de desenvolvimento Ethereum",
+  "page-tutorial-beginner": "Iniciante",
+  "page-tutorial-intermediate": "Intermediário",
+  "page-tutorial-advanced": "Avançado",
+  "page-find-wallet-try-removing": "Tente remover uma ou duas funcionalidades",
+  "page-find-wallet-clear": "Limpar filtros",
+  "page-tutorials-env-banner": "Não faça commit do <code>.env</code>! Por favor, certifique-se de nunca compartilhar ou expor seu arquivo <code>.env</code> com ninguém, pois ao fazer isso você estará comprometendo seus segredos. Se você estiver usando controle de versão, adicione seu <code>.env</code> a um arquivo <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
+}
