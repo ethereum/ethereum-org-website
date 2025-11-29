@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/Ethereum-learn.png
 summaryPoint1: Platformy založené na blockchainu pro sociální interakci a tvorbu a distribuci obsahu.
 summaryPoint2: Decentralizované sociální sítě chrání soukromí uživatelů a zvyšují bezpečnost dat.
 summaryPoint3: Tokeny a NFT umožňují monetizovat obsah novým způsobem.
@@ -43,13 +43,13 @@ Mnoho sociálních platforem založených na blockchainu má vlastní tokeny, kt
 
 4. Jako dappky běžící na Ethereu, které je udržováno globální sítí uzlů peer-to-peer, jsou i decentralizované sociální sítě **méně náchylné na výpadky serverů** a odstávky.
 
-5. Decentralizované sociální platformy nabízejí pro tvůrce obsahu **vylepšený způsob zpeněžení** pomocí [nezaměnitelných tokenů (NFT)](/glossary/#nft), aplikačních krypto plateb a dalších možností.
+5. Decentralizované sociální platformy nabízejí pro tvůrce obsahu **vylepšený způsob zpeněžení** pomocí [nezaměnitelných tokenů (NFT)](/glossary/#NFT), aplikačních krypto plateb a dalších možností.
 
 6. Decentralizované sociální sítě poskytují uživatelům **vysokou úroveň soukromí a anonymity**. Například jednotlivec se může přihlásit do sociální sítě založené na Ethereu pomocí [ENS](/glossary/#ens) profilu nebo [peněženky](/glossary/#wallet)—aniž by musel osobně sdílet identifikovatelné informace (personally identifiable information, PII), jako jsou jména, e-mailové adresy atp.
 
 7. Decentralizované sociální sítě spoléhají na decentralizované úložiště, nikoliv na centralizované databáze, což je mnohem lepší způsob zabezpečení uživatelských dat.
 
-## Decentralizované sociální sítě na Ethereu {#ethereum-social-networks}
+## Decentralizované sociální sítě na Ethereu {#Ethereum-social-networks}
 
 Síť Ethereum se stala preferovaným nástrojem pro vývojáře vytvářející decentralizovaná sociální média, a to díky popularitě jejich tokenů a obrovskému počtu uživatelů. Zde jsou některé příklady sociálních sítí běžících na Ethereu:
 
@@ -57,7 +57,7 @@ Síť Ethereum se stala preferovaným nástrojem pro vývojáře vytvářející
 
 [Mirror](https://mirror.xyz/) je platforma pro psaní s podporou Web3, jejímž cílem je být decentralizovaná a vlastněná uživateli. Uživatelé platformy Mirror mohou číst a psát obsah zdarma jednoduše přihlášením pomocí svých peněženek. Také mohou sbírat publikovaný obsah a předplatit si své oblíbené tvůrce.
 
-Příspěvky publikované na Mirroru jsou trvale uloženy na Arweave, decentralizované úložné platformě, a mohou být vytvořeny jako sběratelské [nezaměnitelné tokeny (NFT)](/nft/) známé jako Writing NFT. Vytváření Writing NFT je pro tvůrce zcela zdarma a jejich převody probíhají na [vrstvě 2](/glossary/#layer-2) Etherea, což zajišťuje levné, rychlé a ekologicky šetrné transakce.
+Příspěvky publikované na Mirroru jsou trvale uloženy na Arweave, decentralizované úložné platformě, a mohou být vytvořeny jako sběratelské [nezaměnitelné tokeny (NFT)](/NFT/) známé jako Writing NFT. Vytváření Writing NFT je pro tvůrce zcela zdarma a jejich převody probíhají na [vrstvě 2](/glossary/#layer-2) Etherea, což zajišťuje levné, rychlé a ekologicky šetrné transakce.
 
 ### MINDS {#minds}
 
@@ -72,7 +72,7 @@ K platbě za předměty na sociální síti používají uživatelé nativní [E
 - **[Lens Protocol](https://lens.xyz/)** – _Lens Protocol je komponovatelný a decentralizovaný sociální diagram, který pomáhá tvůrcům uchovat vlastnictví nad jimi vytvořeným obsahem kdekoliv v digitální zahradě decentralizovaného internetu._
 - **[Farcaster](https://farcaster.xyz/)** – _Farcaster je dostatečně decentralizovaná sociální síť. Je to otevřený protokol, který může podporovat více klientů, stejně jako e-mail._
 
-## Web2 sociální sítě na Ethereu {#web2-social-networks-and-ethereum}
+## Web2 sociální sítě na Ethereu {#web2-social-networks-and-Ethereum}
 
 [Web3](/glossary/#web3) nativní sociální platformy nejsou jediné, které se snaží začlenit technologii blockchainu do sociálních médií. I mnoho centralizovaných platforem plánuje integrovat Ethereum do své infrastruktury:
 
@@ -92,7 +92,7 @@ Community Points mohou být kromě utracení za odemknutí speciálních funkcí
 - [Sociální sítě jsou další velkou příležitostí pro decentralizaci](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 má příslib decentralizovaných komunitně řízených sociálních sítí](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Přehled ekosystému blockchainových sociálních médií](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
-- [Jak může blockchain vyřešit otázku soukromí na sociálních sítích](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
+- [Jak může blockchain vyřešit otázku soukromí na sociálních sítích](https://www.investopedia.com/news/Ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Dostatečná decentralizace pro sociální sítě](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Videa {#videos}
