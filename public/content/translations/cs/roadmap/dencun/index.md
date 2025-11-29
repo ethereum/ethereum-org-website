@@ -18,7 +18,7 @@ Toto výrazně snižuje náklady rollupů, omezuje nepřiměřený růst řetěz
 - Všichni hlavní poskytovatelé rollupů, jako Arbitrum nebo Optimism, oznámili, že bloby budou podporovány ihned po vylepšení
 - Časový rámec pro podporu jednotlivých rollupů se může lišit, protože každý poskytovatel musí aktualizovat své systémy, aby mohl využívat nový prostor pro bloby
 
-## Jak mohu posílat ETH po hard forku? {#scam-alert}
+## Jak mohu PoSílat ETH po hard forku? {#scam-alert}
 
 - **S vašimi prostředky nemusíte nic dělat**: Po vylepšení Ethereum Dencun není potřeba ETH převádět nebo vylepšovat. Zůstatky na vašem účtu se nezmění a ETH, které aktuálně držíte, zůstanou po hard forku přístupné ve své stávající podobě.
 - **Pozor na podvody!** <Emoji text="⚠️" /> **Každý, kdo vás vyzývá k „upgradu“ vašich ETH, se vás snaží podvést.** V souvislosti s tímto vylepšením nemusíte podnikat žádné kroky. Vaše aktiva zůstanou nedotčena. Pamatujte, že informovanost je nejlepší obranou proti podvodům.
@@ -64,7 +64,7 @@ Tato škálovatelnost je zásadní pro [podporu miliard uživatelů na Ethereu](
 
 ## Ovlivňuje tento upgrade všechny konsenzus klienty a validátory Etherea? {#client-impact}
 
-Ano, Proto-Danksharding (EIP-4844) vyžaduje aktualizace jak pro klienty zajišťující posílání transakcí (exekuční klienty), tak pro konsenzus klienty. Všechny hlavní klienty Etherea vydaly verze podporující toto vylepšení. Aby operátoři uzlů po vylepšení udrželi synchronizaci se sítí Ethereum, musí si ověřit, že používají podporovanou verzi klienta. Nezapomínejte, že informace o vydání upgradů klientů jsou časově citlivé, a uživatelé by měli sledovat nejnovější aktualizace pro nejaktuálnější podrobnosti. [Další informace o podporovaných verzích klientů](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Ano, Proto-Danksharding (EIP-4844) vyžaduje aktualizace jak pro klienty zajišťující PoSílání transakcí (exekuční klienty), tak pro konsenzus klienty. Všechny hlavní klienty Etherea vydaly verze podporující toto vylepšení. Aby operátoři uzlů po vylepšení udrželi synchronizaci se sítí Ethereum, musí si ověřit, že používají podporovanou verzi klienta. Nezapomínejte, že informace o vydání upgradů klientů jsou časově citlivé, a uživatelé by měli sledovat nejnovější aktualizace pro nejaktuálnější podrobnosti. [Další informace o podporovaných verzích klientů](https://blog.Ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
 Konsenzus klienty spravují software _validátora_, který byl kompletně aktualizován, aby mohl tato vylepšení využívat.
 
@@ -112,9 +112,9 @@ _Blobspace 101 with Domothy – Bankless_
 ## Further reading {#further-reading}
 
 - [EIP4844.com](https://www.eip4844.com/)
-- [EIP-4844: Transakce shard blobů (Proto-Danksharding)](https://eips.ethereum.org/EIPS/eip-4844)
-- [Oznámení o spuštění vylepšení Dencun na hlavní síti](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) – _blog Ethereum Foundation_
-- [Stopařův průvodce po Ethereu: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) – _Jon Charbonneau_
-- [Často kladené otázky o Proto-Dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
-- [Podrobné vysvětlení EIP-4844: Jádro upgradu Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) – _Ebunker_
+- [EIP-4844: Transakce shard blobů (Proto-Danksharding)](https://eips.Ethereum.org/EIPS/EIP-4844)
+- [Oznámení o spuštění vylepšení Dencun na hlavní síti](https://blog.Ethereum.org/2024/02/27/dencun-mainnet-announcement) – _blog Ethereum Foundation_
+- [Stopařův průvodce po Ethereu: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-Ethereum/#proto-danksharding-EIP-4844) – _Jon Charbonneau_
+- [Často kladené otázky o Proto-Dankshardingu](https://notes.Ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
+- [Podrobné vysvětlení EIP-4844: Jádro upgradu Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-EIP-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) – _Ebunker_
 - [Aktualizace AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) – _Tim Beiko_
