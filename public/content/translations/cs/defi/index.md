@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: Logo Eth vyrobené z cihel lega.
+alt: Logo ETH vyrobené z cihel lega.
 sidebarDepth: 2
 summaryPoint1: Globální, otevřená alternativa ke stávající finanční soustavě.
 summaryPoint2: Produkty, které vám umožňují půjčovat, šetřit, investovat, obchodovat a více.
@@ -66,7 +66,8 @@ Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je vš
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
+  <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Objevte DeFi aplikace
   </ButtonLink>
@@ -77,7 +78,7 @@ Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je vš
 
 Existuje decentralizovaná alternativa k většině finančních služeb. Ethereum však také vytváří příležitosti pro vytváření finančních produktů, které jsou zcela nové. Toto je stále rostoucí seznam.
 
-- [Posílat peníze napříč zeměkoulí](#send-money)
+- [PoSílat peníze napříč zeměkoulí](#send-money)
 - [Streamovat peníze napříč zeměkoulí](#stream-money)
 - [Pracovat se stabilními měnami](#stablecoins)
 - [Vypůjčit si finanční prostředky se zajištěním](#lending)
@@ -91,9 +92,9 @@ Existuje decentralizovaná alternativa k většině finančních služeb. Ethere
 
 <Divider />
 
-### Rychle posílat peníze napříč zeměkoulí {#send-money}
+### Rychle PoSílat peníze napříč zeměkoulí {#send-money}
 
-Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celosvětových transakcí. Stejně jako Bitcoin umožňuje Ethereum posílat peníze po celém světě stejně snadno jako poslat e-mail. Stačí zadat příjemcovo [ENS jméno](/glossary/#ens) (např. bob.eth) nebo adresu jeho účtu z vaší peněženky a vaše platba mu (obvykle) během několika minut přijde. Chcete-li posílat nebo přijímat platby, budete potřebovat [peněženku](/wallets/).
+Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celosvětových transakcí. Stejně jako Bitcoin umožňuje Ethereum PoSílat peníze po celém světě stejně snadno jako poslat e-mail. Stačí zadat příjemcovo [ENS jméno](/glossary/#ens) (např. bob.ETH) nebo adresu jeho účtu z vaší peněženky a vaše platba mu (obvykle) během několika minut přijde. Chcete-li PoSílat nebo přijímat platby, budete potřebovat [peněženku](/wallets/).
 
 <ButtonLink href="/apps/categories/defi">
   Zobrazit platební dappky
@@ -103,7 +104,7 @@ Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celo
 
 Můžete také streamovat peníze přes Ethereum. To vám umožní vyplatit někomu jejich plat za pouhou vteřinu a umožnit jim přístup k jejich penězům, kdykoli bude potřeba. Nebo si za vteřinu něco pronajmout, jako třeba úložnou skříňku nebo elektrický skútr.
 
-A pokud nechcete posílat nebo streamovat [ETH](/glossary/#ether) kvůli tomu, jak moc se může měnit jeho hodnota, existují na Ethereu alternativní měny: [stablecoiny](/glossary/#stablecoin).
+A pokud nechcete PoSílat nebo streamovat [ETH](/glossary/#ether) kvůli tomu, jak moc se může měnit jeho hodnota, existují na Ethereu alternativní měny: [stablecoiny](/glossary/#stablecoin).
 
 <Divider />
 
@@ -136,7 +137,7 @@ Použití decentralizovaného věřitele má mnoho výhod...
 
 Dnes se půjčování peněz točí kolem zúčastněných osob. Banky musí vědět, zda je pravděpodobné, že úvěr splatíte před jeho poskytnutím.
 
-Decentralizované půjčky fungují, aniž by se kterákoli ze stran musela identifikovat. Místo toho musí dlužník poskytnout zajištění, který věřitel automaticky obdrží, pokud dlužníkův úvěr nebude splacen. Někteří věřitelé dokonce přijímají jako kolaterál [NFT](/glossary/#nft). NFT je listina na unikátní aktivum, jako třeba obraz. [Více o NFT](/nft/)
+Decentralizované půjčky fungují, aniž by se kterákoli ze stran musela identifikovat. Místo toho musí dlužník poskytnout zajištění, který věřitel automaticky obdrží, pokud dlužníkův úvěr nebude splacen. Někteří věřitelé dokonce přijímají jako kolaterál [NFT](/glossary/#NFT). NFT je listina na unikátní aktivum, jako třeba obraz. [Více o NFT](/NFT/)
 
 To vám umožní půjčit si peníze bez úvěrových kontrol nebo předávání vašich citlivých informací.
 
@@ -305,13 +306,13 @@ DeFi využívá kryptoměny a chytré kontrakty k poskytování služeb, které 
 
 V systému DeFi nahrazuje chytrý kontrakt finanční instituci v transakci. Chytrý kontrakt je typ Ethereum účtu, který může uchovávat finanční prostředky a na základě určitých podmínek je odesílat/vracet. Když je chytrý kontrakt v provozu, nikdo ho nemůže pozměnit – vždy bude fungovat tak, jak byl naprogramován.
 
-Kontrakt, který je určen k vyplácení kapesného, může být naprogramován tak, aby každý pátek posílal peníze z účtu A na účet B. A to vždy jen do té doby, dokud má účet A požadované prostředky. Nikdo nemůže kontrakt změnit a přidat účet C jako příjemce a ukrást tak finanční prostředky.
+Kontrakt, který je určen k vyplácení kapesného, může být naprogramován tak, aby každý pátek PoSílal peníze z účtu A na účet B. A to vždy jen do té doby, dokud má účet A požadované prostředky. Nikdo nemůže kontrakt změnit a přidat účet C jako příjemce a ukrást tak finanční prostředky.
 
 Kontrakty jsou rovněž veřejné a každý si je může prohlédnout a zkontrolovat. To znamená, že špatné kontrakty se často rychle dostanou pod drobnohled komunity.
 
 To znamená, že v současné době je třeba důvěřovat techničtějším členům komunity Etherea, kteří umí číst kód. Open-source komunita pomáhá udržet vývojáře pod kontrolou, ale tato potřeba se bude časem snižovat s tím, jak budou chytré kontrakty snáze čitelné a budou se vyvíjet další způsoby, jak prokázat důvěryhodnost kódu.
 
-## Ethereum a DeFi {#ethereum-and-defi}
+## Ethereum a DeFi {#Ethereum-and-defi}
 
 Ethereum je ideálním základem pro DeFi z několika důvodů:
 
@@ -323,11 +324,11 @@ Ethereum je ideálním základem pro DeFi z několika důvodů:
 O DeFi můžete přemýšlet ve vrstvách:
 
 1. Blockchain – Ethereum obsahuje historii transakcí a stavy účtů.
-2. Aktiva – [ETH](/eth/) a ostatní tokeny (měny).
+2. Aktiva – [ETH](/ETH/) a ostatní tokeny (měny).
 3. Protokoly 2 [chytré kontrakty](/glossary/#smart-contract), které poskytují například službu umožňující decentralizované půjčování aktiv.
 4. [Aplikace](/apps/) – produkty, které používáme ke správě a přístupu k protokolům.
 
-Poznámka: Většina subjektů působících v DeFi používá [ERC-20 standard](/glossary/#erc-20). Aplikace v DeFi používají wrapper pro ETH, který je nazývá Wrapped Ether (WETH). [Další informace o WETH](/wrapped-eth).
+Poznámka: Většina subjektů působících v DeFi používá [ERC-20 standard](/glossary/#erc-20). Aplikace v DeFi používají wrapper pro ETH, který je nazývá Wrapped Ether (WETH). [Další informace o WETH](/wrapped-ETH).
 
 ## Budujte DeFi {#build-defi}
 
