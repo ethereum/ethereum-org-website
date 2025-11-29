@@ -8,7 +8,7 @@ Decentralizovaná aplikace (dappka) je aplikace naprogramovaná na decentralizov
 
 ## Předpoklady {#prerequisites}
 
-Než se začnete učit o dappkách, měli byste se seznámit se[ základy blockchainu](/developers/docs/intro-to-ethereum/) a přečíst si něco o síti Ethereu a o její decentralizaci.
+Než se začnete učit o dappkách, měli byste se seznámit se[ základy blockchainu](/developers/docs/intro-to-Ethereum/) a přečíst si něco o síti Ethereu a o její decentralizaci.
 
 ## Definice dappky {#definition-of-a-dapp}
 
@@ -51,28 +51,28 @@ Chytrý kontrakt je kód, který žije v blockchainu Etherea a běží přesně 
 
 **Scaffold-ETH_ – Experimentujte se Solidity pomocí frontendu, který se přizpůsobuje vašemu chytrému kontraktu._**
 
-- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://GitHub.com/scaffold-ETH/scaffold-ETH-2)
 - [Příkladová dappka](https://punkwallet.io/)
 
 **Vytvořte ethereovskou appku _– Vytvořte aplikace s podporou Etherea pomocí jednoho příkazu._**
 
-- [GitHub](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://GitHub.com/paulrberg/create-ETH-app)
 
 **One Click Dapp_ – FOSS nástroj pro generování frontendů dappek z [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
+- [GitHub](https://GitHub.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow _– FOSS nástroj pro vývojáře Etherea k testování uzlů a sestavování a ladění RPC volání z prohlížeče._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
-- [GitHub](https://github.com/abunsen/etherflow)
+- [GitHub](https://GitHub.com/abunsen/etherflow)
 
 **thirdweb_ – SDK v každém jazyce, chytré kontrakty, nástroje a infrastruktura pro vývoj web3._**
 
 - [Domovská stránka](https://thirdweb.com/)
 - [Dokumentace](https://portal.thirdweb.com/)
-- [GitHub](https://github.com/thirdweb-dev/)
+- [GitHub](https://GitHub.com/thirdweb-dev/)
 
 **Crossmint _– Web3 vývojová platforma podnikové úrovně pro nasazování chytrých kontraktů, umožnění plateb kreditní kartou a plateb mezi řetězci a používání API k vytváření, distribuci, prodeji, ukládání a úpravě NFT._**
 
@@ -92,5 +92,5 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 ## Související témata {#related-topics}
 
-- [Úvod do stacku Etherea](/developers/docs/ethereum-stack/)
+- [Úvod do stacku Etherea](/developers/docs/Ethereum-stack/)
 - [Vývojářské rámce](/developers/docs/frameworks/)
