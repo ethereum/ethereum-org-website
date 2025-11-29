@@ -34,7 +34,7 @@ Období Web 2.0 začalo v roce 2004 s nástupem sociálních sítí. Namísto st
 
 ## Web 3.0: Konzumace a tvorba obsahu, zachování vlastnictví {#web3}
 
-Koncepci "Webu 3.0" navrhl krátce po spuštění [Etherea](/what-is-ethereum/) v roce 2014 jeho spoluzakladatel Gavin Wood. Gavin popsal řešení problému, který pociťovalo mnoho raných uživatelů kryptoměn: Web vyžadoval přílišnou důvěru uživatelů. Jinými slovy, většina webových služeb, které uživatelé znají a používají, je v současné době provozována několika soukromými společnostmi. Uživatelům nezbývá než věřit, že budou jednat v nejlepším zájmu veřejnosti.
+Koncepci "Webu 3.0" navrhl krátce po spuštění [Etherea](/what-is-Ethereum/) v roce 2014 jeho spoluzakladatel Gavin Wood. Gavin popsal řešení problému, který pociťovalo mnoho raných uživatelů kryptoměn: Web vyžadoval přílišnou důvěru uživatelů. Jinými slovy, většina webových služeb, které uživatelé znají a používají, je v současné době provozována několika soukromými společnostmi. Uživatelům nezbývá než věřit, že budou jednat v nejlepším zájmu veřejnosti.
 
 ![Decentralizovaná architektura síťových uzlů, reprezentující Web3](./web3.png)
 
@@ -59,13 +59,14 @@ Ačkoliv klíčové rysy Web3 nejsou izolované a nedají se zařadit do pevnýc
 
 Web3 vám umožňuje vlastnit vaše digitální aktiva dosud nevídaným způsobem. Představte si například, že hrajete hru na Web2. Pokud si v této hře zakoupíte nějaký předmět, je přímo spojen s vaším účtem. V případě, že tvůrci hry smažou váš účet, o všechny zakoupené předměty přijdete. Nebo pokud tuto hru přestanete hrát, přijdete o veškeré prostředky, které jste do herních předmětů vložili.
 
-Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#nft). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení.
+Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#NFT). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Další informace o NFT</div>
-  <ButtonLink href="/nft/">
+  <div>Další informace o NFT
+</div>
+  <ButtonLink href="/NFT/">
     Více o NFT
   </ButtonLink>
 </AlertContent>
@@ -92,7 +93,8 @@ Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají růz
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Více o DAO</div>
+  <div>Více o DAO
+</div>
   <ButtonLink href="/dao/">
     Více o DAO
   </ButtonLink>
@@ -109,7 +111,7 @@ Web3 řeší tyto problémy tím, že vám umožňuje ovládat vaši digitální
 
 Platební infrastruktura Web2 spoléhá na banky a další subjekty, přičemž lidé bez bankovních účtů nebo ti, kteří nežijí ve "správné" zemi, nemohou platit vůbec. Web3 používá tokeny jako [ETH](/glossary/#ether) k odesílání peněz přímo v prohlížeči a nevyžaduje žádnou třetí stranu, které byste museli důvěřovat.
 
-<ButtonLink href="/eth/">
+<ButtonLink href="/ETH/">
   Více na ETH
 </ButtonLink>
 
