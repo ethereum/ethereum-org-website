@@ -4,23 +4,23 @@ description: Prozkoumejte různé oblasti výzkumu a zjistěte, jak se můžete 
 lang: cs
 ---
 
-# Aktivní oblasti výzkumu Etherea {#active-areas-of-ethereum-research}
+# Aktivní oblasti výzkumu Etherea {#active-areas-of-Ethereum-research}
 
 Jednou z hlavních silných stránek Etherea je aktivní výzkumná a inženýrská komunita, která neustále pracuje na jeho zlepšování. Mnoho nadšených a schopných lidí po celém světě by se rádo zapojilo do řešení aktuálních problémů Etherea, ale ne vždy je snadné zjistit, jaké problémy to jsou. Tato stránka nastiňuje klíčové oblasti aktivního výzkumu jako přehled aktuálního stavu v oblasti výzkumu Etherea.
 
-## Jak funguje výzkum Etherea {#how-ethereum-research-works}
+## Jak funguje výzkum Etherea {#how-Ethereum-research-works}
 
 Výzkum Etherea je otevřený a transparentní, přičemž se řídí principy [Decentralizované vědy (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Vše je navržené tak, aby výzkumné nástroje a výstupy byly co nejvíce otevřené a interaktivní, například prostřednictvím spustitelných notebooků. Výzkum Etherea postupuje rychle, přičemž nové poznatky jsou zveřejňovány a diskutovány otevřeně na fórech, jako je [ethresear.ch](https://ethresear.ch/), spíše než aby se dostávaly ke komunitě prostřednictvím tradičních publikací po několika kolech odborného hodnocení.
 
 ## Obecné výzkumné zdroje {#general-research-resources}
 
-Bez ohledu na konkrétní téma existuje na [ethresear.ch](https://ethresear.ch) a kanálu [Eth R&D Discord](https://discord.gg/qGpsxSA) spousta informací o výzkumu Etherea. To jsou hlavní místa, kde výzkumníci Etherea diskutují o nejnovějších nápadech a možnostech vývoje.
+Bez ohledu na konkrétní téma existuje na [ethresear.ch](https://ethresear.ch) a kanálu [ETH R&D Discord](https://discord.gg/qGpsxSA) spousta informací o výzkumu Etherea. To jsou hlavní místa, kde výzkumníci Etherea diskutují o nejnovějších nápadech a možnostech vývoje.
 
-Tato zpráva publikovaná v květnu 2022 společností [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) poskytuje dobrý přehled o plánu rozvoje Etherea.
+Tato zpráva publikovaná v květnu 2022 společností [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-Ethereum) poskytuje dobrý přehled o plánu rozvoje Etherea.
 
 ## Zdroje financování {#sources-of-funding}
 
-Každý se může zapojit do výzkumu Etherea a být za to placen! Například [Ethereum Foundation](/foundation/) nedávno uspořádala [financování Akademických grantů](https://esp.ethereum.foundation/academic-grants). Informace o aktivních a nadcházejících možnostech financování najdete na [stránce věnované grantům Etherea](/community/grants/).
+Každý se může zapojit do výzkumu Etherea a být za to placen! Například [Ethereum Foundation](/foundation/) nedávno uspořádala [financování Akademických grantů](https://esp.Ethereum.foundation/academic-grants). Informace o aktivních a nadcházejících možnostech financování najdete na [stránce věnované grantům Etherea](/community/grants/).
 
 ## Výzkum protokolů {#protocol-research}
 
@@ -28,7 +28,7 @@ Výzkum protokolů se zabývá základní vrstvou Etherea – souborem pravidel,
 
 ### Konsenzus {#consensus}
 
-Výzkum konsenzu se zabývá [Ethereum mechanismem „důkaz podílem“](/developers/docs/consensus-mechanisms/pos/). Mezi příklady témat výzkumu konsenzu patří:
+Výzkum konsenzu se zabývá [Ethereum mechanismem „důkaz podílem“](/developers/docs/consensus-mechanisms/PoS/). Mezi příklady témat výzkumu konsenzu patří:
 
 - identifikace a oprava zranitelností;
 - kvantifikace kryptoekonomické bezpečnosti;
@@ -39,7 +39,7 @@ Kromě výzkumu zaměřeného na budoucnost se zkoumají i některé zásadní z
 
 #### Základní podklady {#background-reading}
 
-- [Úvod do důkazu podílem](/developers/docs/consensus-mechanisms/pos/)
+- [Úvod do důkazu podílem](/developers/docs/consensus-mechanisms/PoS/)
 - [Práce na Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Vysvětlení Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Práce na Casper](https://arxiv.org/abs/2003.03052)
@@ -49,7 +49,7 @@ Kromě výzkumu zaměřeného na budoucnost se zkoumají i některé zásadní z
 - [Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
 - [Dilema dostupnosti/finality](https://arxiv.org/abs/2009.04987)
 - [Finalita jednoho slotu](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [Separace navrhovatele a stavitele](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Separace navrhovatele a stavitele](https://notes.Ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Provádění {#execution}
 
@@ -66,13 +66,13 @@ Exekuční vrstva se stará o provádění transakcí, spouštění [virtuální
 
 #### Nedávný výzkum {#recent-research-1}
 
-- [Optimalizace databází](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [Expirace stavu](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Optimalizace databází](https://GitHub.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
+- [Expirace stavu](https://notes.Ethereum.org/@vbuterin/state_expiry_eip)
 - [Cesty k expiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Návrh k expiraci Verkle a stavu](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [Správa historie](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle stromy](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [Vzorkování dostupnosti dat](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+- [Návrh k expiraci Verkle a stavu](https://notes.Ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
+- [Správa historie](https://eips.Ethereum.org/EIPS/EIP-4444)
+- [Verkle stromy](https://vitalik.ETH.limo/general/2021/06/18/verkle.HTML)
+- [Vzorkování dostupnosti dat](https://GitHub.com/Ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Vývoj klientů {#client-development}
 
@@ -83,17 +83,17 @@ Ethereum uzel vyžaduje spuštění dvou částí softwaru:
 1. konsenzuálního klientu, který má přehled o hlavě blockchainu, gossip blocích a zpracovává logiku konsenzu
 2. exekučního klientu pro podporu virtuálního stroje Etherea a provádění transakcí a chytrých kontraktů
 
-Další podrobnosti o uzlech a klientech a seznam všech aktuálních implementací klientů najdete na stránce o [uzlech a klientech](/developers/docs/nodes-and-clients/). Historii všech upgradů Etherea najdete také na stránce o [historii](/ethereum-forks/).
+Další podrobnosti o uzlech a klientech a seznam všech aktuálních implementací klientů najdete na stránce o [uzlech a klientech](/developers/docs/nodes-and-clients/). Historii všech upgradů Etherea najdete také na stránce o [historii](/Ethereum-forks/).
 
 ### Exekuční klienty {#execution-clients}
 
-- [Specifikace exekučního klientu](https://github.com/ethereum/execution-specs)
-- [Specifikace exekučního API](https://github.com/ethereum/execution-apis)
+- [Specifikace exekučního klientu](https://GitHub.com/Ethereum/execution-specs)
+- [Specifikace exekučního API](https://GitHub.com/Ethereum/execution-apis)
 
 ### Konsenzuální klienty {#consensus-clients}
 
-- [Specifikace konsenzuálního klientu](https://github.com/ethereum/consensus-specs)
-- [Specifikace Beacon API](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [Specifikace konsenzuálního klientu](https://GitHub.com/Ethereum/consensus-specs)
+- [Specifikace Beacon API](https://Ethereum.GitHub.io/beacon-APIs/#/Beacon/getStateRoot)
 
 ## Škálování a výkon {#scaling-and-performance}
 
@@ -112,7 +112,7 @@ V současné době existuje několik protokolů vrstvy 2, které škálují Ethe
 
 - [Arbitrum a spravedlivé řazení pro sekvencery](https://eprint.iacr.org/2021/1465)
 - [Vrstva 2 Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [Rollup-centrický plán](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [Rollup-centrický plán](https://Ethereum-magicians.org/t/a-rollup-centric-Ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
 ### Přemostění {#bridges}
@@ -122,13 +122,13 @@ Jednou z konkrétních oblastí vrstvy 2, která vyžaduje další výzkum a vý
 #### Základní podklady {#background-reading-3}
 
 - [Úvod do přemostění blockchainů](/bridges/)
-- [Vitalik o přemostění](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
+- [Vitalik o přemostění](https://old.reddit.com/r/Ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Článek o přemostění blockchainů](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
 - [Hodnota uzamčena v přemostění](https://dune.com/eliasimos/Bridge-Away-\(from-Ethereum\))
 
 #### Nedávný výzkum {#recent-research-3}
 
-- [Validování přemostění](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [Validování přemostění](https://stonecoldpat.GitHub.io/images/validatingbridges.pdf)
 
 ### Sharding {#sharding}
 
@@ -140,14 +140,14 @@ Předchůdce ryzího Dankshardingu, známý jako Proto-Danksharding, byl spušt�
 
 #### Základní podklady {#background-reading-4}
 
-- [Poznámky o Proto-Dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+- [Poznámky o Proto-Dankshardingu](https://notes.Ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Video na Danksharding od Bankless](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [Kompendium výzkumu shardingu Etherea](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
+- [Kompendium výzkumu shardingu Etherea](https://notes.Ethereum.org/@serenity/H1PGqDhpm?type=view)
 - [Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
 
 #### Nedávný výzkum {#recent-research-4}
 
-- [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
+- [EIP-4844: Proto-Danksharding](https://eips.Ethereum.org/EIPS/EIP-4844)
 - [Vitalik o shardingu a vzorkování dostupnosti dat](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### Hardware {#hardware}
@@ -156,7 +156,7 @@ Předchůdce ryzího Dankshardingu, známý jako Proto-Danksharding, byl spušt�
 
 #### Základní podklady {#background-reading-5}
 
-- [Ethereum na ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum na ARM](https://Ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Nedávný výzkum {#recent-research-5}
 
@@ -190,15 +190,15 @@ Peněženky Etherea mohou být rozšíření prohlížeče, desktopové a mobiln
 - [Úvod do peněženek](/wallets/)
 - [Úvod do zabezpečení peněženek](/security/)
 - [Bezpečnost Ethresear.ch](https://ethresear.ch/tag/security)
-- [Abstrakce účtu EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
-- [Abstrakce účtu EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)
+- [Abstrakce účtu EIP-2938](https://eips.Ethereum.org/EIPS/EIP-2938)
+- [Abstrakce účtu EIP-4337](https://eips.Ethereum.org/EIPS/EIP-4337)
 
 #### Nedávný výzkum {#recent-research-7}
 
-- [Validace zaměřená na peněženky s chytrými kontrakty](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [Budoucnost účtů](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [AUTH a AUTHCALL operační kódy EIP-3074](https://eips.ethereum.org/EIPS/eip-3074)
-- [Zveřejnění kódu na EOA adrese](https://eips.ethereum.org/EIPS/eip-5003)
+- [Validace zaměřená na peněženky s chytrými kontrakty](https://Ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [Budoucnost účtů](https://Ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [AUTH a AUTHCALL operační kódy EIP-3074](https://eips.Ethereum.org/EIPS/EIP-3074)
+- [Zveřejnění kódu na EOA adrese](https://eips.Ethereum.org/EIPS/EIP-5003)
 
 ## Komunita, vzdělávání a oslovování {#community-education-and-outreach}
 
@@ -216,7 +216,7 @@ Aby se na Ethereum dostalo více lidí, musí ekosystém zlepšit UX/UI. To bude
 
 - [Design Discord Web3](https://discord.gg/FsCFPMTSm9)
 - [Design principy Web3](https://www.web3designprinciples.com/)
-- [Ethereum Magicians UX diskuze](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Ethereum Magicians UX diskuze](https://Ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
 ### Ekonomika {#economics}
 
@@ -224,13 +224,13 @@ Ekonomický výzkum v oblasti Etherea se obecně řídí dvěma přístupy: ově
 
 #### Základní podklady {#background-reading-9}
 
-- [Robust Incentives Group](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.Ethereum.org/)
 - [Workshop ETHconomics na Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Nedávný výzkum {#recent-research-9}
 
 - [Empirická analýza EIP1559](https://arxiv.org/abs/2201.05574)
-- [Rovnováha nabídky v oběhu](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
+- [Rovnováha nabídky v oběhu](https://ethresear.ch/t/circulating-supply-equilibrium-for-Ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
 - [Kvantifikace MEV: Jak temný je les?](https://arxiv.org/abs/2101.05511)
 
 ### Blokový prostor a trhy poplatků {#blockspace-fee-markets}
@@ -240,7 +240,7 @@ Trhy s blokovým prostorem řídí začlenění transakcí koncových uživatel�
 #### Základní podklady {#background-reading-10}
 
 - [Návrh mechanismu transakčních poplatků pro Ethereum Blockchain: Ekonomická analýza EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [Simulace EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
+- [Simulace EIP-1559 (Robust Incentives Group)](https://Ethereum.GitHub.io/abm1559)
 - [Ekonomika rollupů z prvních principů](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Frontrunning, změna pořadí transakcí a nestabilita konsenzu na decentralizovaných burzách](https://arxiv.org/abs/1904.05234)
 
@@ -256,12 +256,12 @@ Validátoři používají nativní aktivum Etherea (ether) jako zástavu proti n
 
 #### Základní podklady {#background-reading-11}
 
-- [Masterclass ekonomiky Etherea a ekonomický model](https://github.com/CADLabs/ethereum-economic-model)
-- [Simulace pobídek důkazem podílu (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
+- [Masterclass ekonomiky Etherea a ekonomický model](https://GitHub.com/CADLabs/Ethereum-economic-model)
+- [Simulace pobídek důkazem podílu (Robust Incentives Group)](https://Ethereum.GitHub.io/beaconrunner/)
 
 #### Nedávný výzkum {#recent-research-11}
 
-- [Zvyšování cenzurní odolnosti transakcí v rámci oddělení navrhovatele a sestavovatele (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
+- [Zvyšování cenzurní odolnosti transakcí v rámci oddělení navrhovatele a sestavovatele (PBS)](https://notes.Ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
 - [Tři útoky na důkaz podílem Ethereum](https://arxiv.org/abs/2110.10086)
 
 ### Likvidní staking a deriváty {#liquid-staking-and-derivatives}
@@ -271,14 +271,14 @@ Likvidní staking umožňuje uživatelům s méně než 32 ETH získat výnosy z
 #### Základní podklady {#background-reading-12}
 
 - [Likvidní staking Ethresear.ch](https://ethresear.ch/search?q=liquid%20staking)
-- [Lido: Cesta ke stakingu Etherea bez nutnosti další důvěry](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
+- [Lido: Cesta ke stakingu Etherea bez nutnosti další důvěry](https://blog.lido.fi/the-road-to-trustless-Ethereum-staking/)
 - [Rocket Pool: Úvod k protokolům stakingu](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
 #### Nedávný výzkum {#recent-research-12}
 
-- [Zpracování výběrů z Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Zpracování výběrů z Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-ETH-liquid-staking-protocol/8873)
 - [Ověřovací údaje o výběrech](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [Rizika derivátů likvidního stakingu](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Rizika derivátů likvidního stakingu](https://notes.Ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Testování {#testing}
 
@@ -288,13 +288,13 @@ Formální ověřování je psaní kódu, který ověřuje, zda jsou specifikace
 
 #### Základní podklady {#background-reading-13}
 
-- [Úvod do formálního ověřování](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
+- [Úvod do formálního ověřování](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.HTML)
 - [Formální ověřování (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
 #### Nedávný výzkum {#recent-research-13}
 
-- [Formální ověřování vkladového kontraktu](https://github.com/runtimeverification/deposit-contract-verification)
-- [Formální ověřování specifikace Beacon Chain](https://github.com/runtimeverification/deposit-contract-verification)
+- [Formální ověřování vkladového kontraktu](https://GitHub.com/runtimeverification/deposit-contract-verification)
+- [Formální ověřování specifikace Beacon Chain](https://GitHub.com/runtimeverification/deposit-contract-verification)
 
 ## Datová věda a analytika {#data-science-and-analytics}
 
@@ -307,7 +307,7 @@ Je potřeba vytvořit více nástrojů pro analýzu dat a ovládacích panelů, 
 
 #### Nedávný výzkum {#recent-research-14}
 
-- [Datová analýza Robust Incentives Group](https://rig.ethereum.org/)
+- [Datová analýza Robust Incentives Group](https://rig.Ethereum.org/)
 
 ## Aplikace a nástroje {#apps-and-tooling}
 
@@ -325,7 +325,7 @@ Decentralizované finance (DeFi) jsou jednou z hlavních tříd aplikací postav
 #### Nedávný výzkum {#recent-research-15}
 
 - [Decentralizované finance, centralizované vlastnictví?] (https://arxiv.org/pdf/2012.09306.pdf)
-- [Optimism: Cesta k poddolarovým transakcím](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [Optimism: Cesta k poddolarovým transakcím](https://medium.com/Ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
 
 ### DAO {#daos}
 
@@ -348,13 +348,13 @@ Nástroje pro vývojáře Etherea se rychle zlepšují. V této obecné oblasti 
 
 - [Nástroje dle programovacího jazyka](/developers/docs/programming-languages/)
 - [Vývojářské frameworky](/developers/docs/frameworks/)
-- [Seznam konsenzuálních vývojářských nástrojů](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Seznam konsenzuálních vývojářských nástrojů](https://GitHub.com/ConsenSys/Ethereum-developer-tools-list)
 - [Standardy tokenů](/developers/docs/standards/tokens/)
-- [CryptoDevHub: Nástroje pro EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+- [CryptoDevHub: Nástroje pro EVM](https://cryptodevhub.io/wiki/Ethereum-virtual-machine-tools)
 
 #### Nedávný výzkum {#recent-research-17}
 
-- [Discord kanál pro nástroje k výzkumu a vývoji Eth konsenzu](https://discordapp.com/channels/595666850260713488/746343380900118528)
+- [Discord kanál pro nástroje k výzkumu a vývoji ETH konsenzu](https://discordapp.com/channels/595666850260713488/746343380900118528)
 
 ### Orákula {#oracles}
 
@@ -376,7 +376,7 @@ Hackeři na Ethereu obvykle využívají zranitelnosti v jednotlivých aplikací
 #### Základní podklady {#background-reading-19}
 
 - [Zpráva o zneužití Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
-- [Seznam následných rozborů hacků kontraktů na Ethereu](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+- [Seznam následných rozborů hacků kontraktů na Ethereu](https://forum.openzeppelin.com/t/list-of-Ethereum-smart-contracts-post-mortems/1191)
 - [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Nedávný výzkum {#recent-research-19}
@@ -389,7 +389,7 @@ Decentralizace celého technologického stacku Etherea je důležitou oblastí v
 
 #### Základní podklady {#background-reading-20}
 
-- [Stack Etherea](/developers/docs/ethereum-stack/)
+- [Stack Etherea](/developers/docs/Ethereum-stack/)
 - [Coinbase: Úvod do Web3 stacku](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
 - [Úvod do chytrých kontraktů](/developers/docs/smart-contracts/)
 - [Úvod do decentralizovaného úložiště](/developers/docs/storage/)
