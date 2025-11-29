@@ -6,7 +6,7 @@ lang: cs
 
 ## Předpoklady {#prerequisites}
 
-K lepšímu pochopení této stránky vám doporučujeme si nejprve přečíst náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
+K lepšímu pochopení této stránky vám doporučujeme si nejprve přečíst náš [úvod do Etherea](/developers/docs/intro-to-Ethereum/).
 
 ## Co je kryptoměna? {#what-is-a-cryptocurrency}
 
@@ -46,7 +46,7 @@ Pálení základního poplatku omezuje schopnost producenta bloku manipulovat s 
 
 Protože hodnota mnoha transakcí na Ethereu je malá, ether má několik denominací, které mohou být použity jako menší účetní jednotky. Z těchto denominací jsou obzvláště důležité wei a gwei.
 
-Wei je nejmenší možnou jednotkou etheru, a proto se mnoho technických implementací, např. [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), zakládá na výpočtech ve wei.
+Wei je nejmenší možnou jednotkou etheru, a proto se mnoho technických implementací, např. [Ethereum Yellowpaper](https://Ethereum.GitHub.io/yellowpaper/paper.pdf), zakládá na výpočtech ve wei.
 
 Gwei, zkratka pro giga-wei, se často používá k popisu nákladů na palivo na Ethereu.
 
@@ -71,7 +71,7 @@ Uživatelé mohou zjistit zůstatek etheru na jakémkoliv [účtu](/developers/d
 
 ## Další informace {#further-reading}
 
-- [Definování etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [Definování etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-Ethereum.HTML) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): Původní návrh Etherea. Tento dokument obsahuje popis etheru a motivaci za jeho vytvořením.
 - [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadnou konverzi mezi wei, gwei a ether. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
 
