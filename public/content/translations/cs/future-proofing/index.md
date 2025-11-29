@@ -13,13 +13,13 @@ Některé části plánu nejsou nezbytně nutné pro škálování nebo zabezpe�
 
 Až budou vynalezeny kvantové počítače, bude část [kryptografie](/glossary/#cryptography) zajišťující bezpečnost současného Etherea ohrožena. Přestože kvantové počítače jsou pravděpodobně desítky let vývoje daleko od toho, aby se staly skutečnou hrozbou pro moderní kryptografii, Ethereum je budováno tak, aby bylo bezpečné po celá staletí. I tak je ale snaha o [Ethereum odolné proti útokům kvantových počítačům](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) prioritou.
 
-Výzva, před kterou vývojáři Etherea stojí, spočívá v tom, že současný protokol [Důkaz podílem](/glossary/#pos) spoléhá na efektivní podpisové schéma pro agregaci hlasů na platných [blocích](/glossary/#block), známé jako BLS. Toto schéma podpisu je ohroženo kvantovými počítači, ale kvantově odolné alternativy nejsou tak účinné.
+Výzva, před kterou vývojáři Etherea stojí, spočívá v tom, že současný protokol [Důkaz podílem](/glossary/#PoS) spoléhá na efektivní podpisové schéma pro agregaci hlasů na platných [blocích](/glossary/#block), známé jako BLS. Toto schéma podpisu je ohroženo kvantovými počítači, ale kvantově odolné alternativy nejsou tak účinné.
 
 Je známo, že [schémata závazků „KZG“](/roadmap/danksharding/#what-is-kzg), která se v Ethereu používají ke generování kryptografických tajemství, jsou kvantově zranitelná. V současné době se tento problém obchází pomocí „nastavení s nutností důvěry“, kde mnoho uživatelů generuje náhodnost, kterou nelze zpětně analyzovat kvantovým počítačem. Ideálním řešením by však bylo začlenit místo toho kvantově bezpečnou kryptografii. Existují dva hlavní přístupy, které by mohly účinně nahradit BLS schéma: Podepisování založené na [STARK](https://hackmd.io/@vbuterin/stark_aggregation) technologii a podepisování založené na [mřížce](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Ty jsou v současné době zkoumány a prototypovány**.
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Další materiály o KZG a nastaveních s nutností důvěry</ButtonLink>
 
-## Jednodušší a efektivnější Ethereum {#simpler-more-efficient-ethereum}
+## Jednodušší a efektivnější Ethereum {#simpler-more-efficient-Ethereum}
 
 Složitost vytváří příležitosti pro chyby nebo zranitelnosti, které mohou útočníci zneužít. Proto je součástí plánu vývoje Etherea jeho zjednodušení a odstranění kódu, který byl připojen s různými vylepšeními, ale už není potřeba nebo je možné ho vylepšit. Štíhlý a jednoduchý kód je pro vývojáře snazší udržovat a rozvíjet.
 
