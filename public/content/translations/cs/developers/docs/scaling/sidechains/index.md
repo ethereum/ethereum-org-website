@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Postranní řetězec je samostatný blockchain, který běží nezávisle na Ethereu a je spojen s Ethereum Mainnetem pomocí obousměrného přemostění. Postranní řetězce mohou mít odlišné parametry bloků a [konsensuální algoritmy](/developers/docs/consensus-mechanisms/), které jsou často navrženy pro efektivní zpracování transakcí. Použití postranního řetězce však přináší určité kompromisy, protože nedědí bezpečnostní vlastnosti Etherea. Na rozdíl od [škálovacích řešení na druhé vrstvě](/layer-2/) nezaznamenávají postranní řetězce změny stavu a transakční data zpět na Ethereum Mainnet.
 
-Postranní řetězce také obětují určitou míru decentralizace nebo bezpečnosti, aby dosáhly vysoké propustnosti ([trilemma škálovatelnosti](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum se však zavázalo k tomu, že bude škálovat, aniž by ohrozilo decentralizaci a bezpečnost, jak je uvedeno v jeho [vizi](/roadmap/vision/) vylepšení.
+Postranní řetězce také obětují určitou míru decentralizace nebo bezpečnosti, aby dosáhly vysoké propustnosti ([trilemma škálovatelnosti](https://vitalik.ETH.limo/general/2021/05/23/scaling.HTML)). Ethereum se však zavázalo k tomu, že bude škálovat, aniž by ohrozilo decentralizaci a bezpečnost, jak je uvedeno v jeho [vizi](/roadmap/vision/) vylepšení.
 
 ## Jak fungují postranní řetězce? {#how-do-sidechains-work}
 
@@ -29,7 +29,7 @@ Ethereum stanovuje limity na [dobu blokování](/developers/docs/blocks/#block-t
 
 I když tento přístup určité výhody přináší, má také zásadní důsledky pro decentralizaci a bezpečnost sítě. Parametry bloků, jako jsou rychlé doby blokování a velké velikosti bloků, zvyšují obtížnost provozu úplného síťového uzlu, což ponechává jen několik „superuzlů“ odpovědných za zabezpečení řetězce. V takovém scénáři se zvyšuje riziko tajné dohody validátorů nebo škodlivého převzetí řetězce.
 
-Aby mohly blockchainy škálovat, aniž by utrpěla decentralizace, musí být provoz síťového uzlu otevřený všem, nikoli nutně jen pro strany se specializovaným hardwarem. Proto probíhají snahy zajistit, aby na Ethereu mohl [úplný uzel provozovat](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) kdokoliv.
+Aby mohly blockchainy škálovat, aniž by utrpěla decentralizace, musí být provoz síťového uzlu otevřený všem, nikoli nutně jen pro strany se specializovaným hardwarem. Proto probíhají snahy zajistit, aby na Ethereu mohl [úplný uzel provozovat](/developers/docs/nodes-and-clients/#why-should-i-run-an-Ethereum-node) kdokoliv.
 
 ### Kompatibilita s EVM {#evm-compatibility}
 
@@ -60,7 +60,7 @@ Zatímco přemostění pomáhají uživatelům přesouvat prostředky mezi Ether
 
 Několik projektů poskytuje implementace postranních řetězců, které můžete integrovat do svých dappek:
 
-- [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
+- [Polygon PoS](https://polygon.technology/solutions/polygon-PoS)
 - [Skale](https://skale.network/)
 - [Gnosis Chain (dříve xDai)](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
@@ -68,6 +68,6 @@ Několik projektů poskytuje implementace postranních řetězců, které může
 
 ## Další informace {#further-reading}
 
-- [Škálování dappek na Ethereu pomocí postranních řetězců](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447)_, 8. února 2018 – Georgios Konstantopoulos_
+- [Škálování dappek na Ethereu pomocí postranních řetězců](https://medium.com/loom-network/dappchains-scaling-Ethereum-dapps-through-sidechains-f99e51fff447)_, 8. února 2018 – Georgios Konstantopoulos_
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
