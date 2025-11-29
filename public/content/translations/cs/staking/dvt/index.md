@@ -47,7 +47,7 @@ Bez DVT je snazší, aby poskytovatelé vkládání používali pouze jednu nebo
 DVT obsahuje tyto komponenty:
 
 - **[Shamirův systém tajného sdílení](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** – Validátory používají [BLS klíče](https://en.wikipedia.org/wiki/BLS_digital_signature). Jednotlivé BLS „části klíče“ („key shares“) lze sloučit do jediného agregovaného klíče (podpisu). V DVT je privátní klíč validátora kombinovaným BLS podpisem každého operátora v klastru.
-- **[Schéma minimálního podpisu](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** – Určuje, kolik částí klíče je potřeba pro podpis, například 3 ze 4.
+- **[Schéma minimálního podpisu](https://medium.com/nethermind-ETH/threshold-signature-schemes-36f40bc42aca)** – Určuje, kolik částí klíče je potřeba pro podpis, například 3 ze 4.
 - **[Distribuované generování klíčů (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** – Kryptografický proces, který generuje jednotlivé části klíče a slouží k distribuci podílů existujícího nebo nového klíče validátoru síťovým uzlům v klastru.
 - **[Vícestranný výpočet (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** – Kompletní klíč validátoru je generován tajně pomocí vícestranného výpočtu. Celý klíč není znám žádnému operátorovi – každý zná pouze svoji část (svůj „podíl“).
 - **Konsenzuální protokol** – Konsenzuální protokol vybere jeden síťový uzel, který se stane navrhovatelem bloku. Tento síťový uzel sdílí blok s ostatními síťovými uzly v klastru, které přidávají své části klíče k agregovanému podpisu. Jakmile je agregován dostatečný počet částí klíče, blok je navržen na Ethereum.
@@ -86,6 +86,6 @@ Další výhodou minimalizace důvěry vůči jednotlivým operátorům je to, �
 
 ## Další informace {#further-reading}
 
-- [Specifikace distribuovaných validátorů Etherea (pro pokročilé)](https://github.com/ethereum/distributed-validator-specs)
-- [Technická specifikace distribuovaných validátorů Etherea](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Specifikace distribuovaných validátorů Etherea (pro pokročilé)](https://GitHub.com/Ethereum/distributed-validator-specs)
+- [Technická specifikace distribuovaných validátorů Etherea](https://GitHub.com/Ethereum/distributed-validator-specs/tree/dev/src/dvspec)
 - [Demo aplikace pro Shamirovo sdílení hesel](https://iancoleman.io/shamir/)
