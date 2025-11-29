@@ -72,11 +72,11 @@ V proxy vzoru se děje toto:
 
 Použití proxy vzorů vyžaduje znalost funkce **delegatecall**. `delegatecall` je v podstatě operační kód, který umožňuje kontraktu volat jiný kontrakt, zatímco skutečné provádění kódu probíhá v kontextu volajícího kontraktu. Důsledkem použití `delegatecall` v proxy vzorech je, že proxy kontrakt čte a zapisuje do svého úložiště a provádí logiku uloženou v logickém kontraktu, jako by volal interní funkci.
 
-Z [dokumentace Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
+Z [dokumentace Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML#delegatecall-callcode-and-libraries):
 
 > _Existuje speciální varianta volání zprávy s názvem **delegatecall**, která je totožná s voláním zprávy až na to, že kód na cílové adrese se provádí v kontextu (tj. na adrese) volajícího kontraktu a `msg.sender` a `msg.value` nemění své hodnoty._ _To znamená, že kontrakt může za běhu dynamicky načíst kód z jiné adresy. Úložiště, aktuální adresa a zůstatek se stále vztahují k volajícímu kontraktu, pouze kód je převzat z volané adresy._
 
-Proxy kontrakt ví, že má zavolat `delegatecall`, kdykoli uživatel zavolá funkci, protože má v sobě zabudovanou funkci `fallback`. V programování Solidity se funkce [fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) provede, když volání funkce neodpovídá funkcím uvedeným v kontraktu.
+Proxy kontrakt ví, že má zavolat `delegatecall`, kdykoli uživatel zavolá funkci, protože má v sobě zabudovanou funkci `fallback`. V programování Solidity se funkce [fallback](https://docs.soliditylang.org/en/latest/contracts.HTML#fallback-function) provede, když volání funkce neodpovídá funkcím uvedeným v kontraktu.
 
 Zprovoznění proxy vzoru vyžaduje napsání vlastní nouzové funkce, která určuje, jak má proxy kontrakt zacházet s voláními funkcí, které nepodporuje. V tomto případě je záložní funkce proxy kontraktu naprogramována tak, aby iniciovala delegatecall a přesměrovala požadavek uživatele na aktuální implementaci logického kontraktu.
 
@@ -84,7 +84,7 @@ Proxy kontrakt je ve výchozím nastavení neměnný, ale lze vytvářet nové l
 
 Ukázáním proxy kontraktu na nový logický kontrakt se změní kód prováděný při volání funkce proxy kontraktu uživateli. To nám umožňuje vylepšit logiku kontraktu, aniž bychom od uživatelů vyžadovali interakci s novým kontraktem.
 
-Proxy vzory jsou oblíbenou metodou vylepšení chytrých kontraktů, protože eliminují obtíže spojené s migrací kontraktu. Použití proxy vzorů je však složitější a při nesprávném použití může způsobit kritické chyby, například [kolize selektorů funkcí](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357).
+Proxy vzory jsou oblíbenou metodou vylepšení chytrých kontraktů, protože eliminují obtíže spojené s migrací kontraktu. Použití proxy vzorů je však složitější a při nesprávném použití může způsobit kritické chyby, například [kolize selektorů funkcí](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-Ethereum-proxies-62629adf3357).
 
 [Více o proxy vzorech](https://blog.openzeppelin.com/proxy-patterns/).
 
@@ -104,7 +104,7 @@ Hlavní nevýhodou je, že tento vzor je užitečný hlavně pro zavádění dro
 
 Diamantový vzor lze považovat za vylepšení proxy vzoru. Diamantové vzory se od proxy vzorů liší tím, že diamantový proxy kontrakt může delegovat volání funkcí na více než jeden logický kontrakt.
 
-Logické kontrakty v diamantovém vzoru se označují jako _fasety_. Aby diamantový vzor fungoval, je třeba v proxy kontraktu vytvořit mapování, které mapuje [selektory funkcí](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) na různé adresy faset.
+Logické kontrakty v diamantovém vzoru se označují jako _fasety_. Aby diamantový vzor fungoval, je třeba v proxy kontraktu vytvořit mapování, které mapuje [selektory funkcí](https://docs.soliditylang.org/en/latest/abi-spec.HTML#function-selector) na různé adresy faset.
 
 Když uživatel zavolá funkci, proxy kontrakt zkontroluje mapování a najde aspekt odpovědný za provedení dané funkce. Poté vyvolá `delegatecall` (pomocí funkce fallback) a přesměruje volání na příslušný logický kontrakt.
 
@@ -146,20 +146,20 @@ Diamantový vzor vylepšení má oproti tradičním vzorům proxy vylepšení ur
 
 **OpenZeppelin Upgrades Plugins – _Sada nástrojů pro nasazení a zabezpečení vylepšitelných chytrých kontraktů._**
 
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
+- [GitHub](https://GitHub.com/OpenZeppelin/openzeppelin-upgrades)
 - [Dokumentace](https://docs.openzeppelin.com/upgrades)
 
 ## Návody {#tutorials}
 
 - [Vylepšení vašich chytrých kontraktů | YouTube Tutoriál](https://www.youtube.com/watch?v=bdXJmWajZRY) od Patrick Collins
-- [Tutoriál na migraci chytrého kontraktu na Ethereu](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) od Austin Griffith
+- [Tutoriál na migraci chytrého kontraktu na Ethereu](https://medium.com/coinmonks/Ethereum-smart-contract-migration-13f6f12539bd) od Austin Griffith
 - [Použití UUPS proxy vzoru k vylepšení chytrých kontraktů](https://blog.logrocket.com/author/praneshas/) od Pranesh A.S
-- [Web3 Tutoriál: Napište vylepšitelný chytrý kontrakt (proxy) pomocí OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) od fangjun.eth
+- [Web3 Tutoriál: Napište vylepšitelný chytrý kontrakt (proxy) pomocí OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) od fangjun.ETH
 
 ## Další informace {#further-reading}
 
 - [Stav vylepšení chytrých kontraktů](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) od Santiago Palladino
-- [Více způsobů, jak vylepšit chytrý kontrakt Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) – Crypto Market Pool blog
+- [Více způsobů, jak vylepšit chytrý kontrakt Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-Solidity-smart-contract/) – Crypto Market Pool blog
 - [Učení: Vylepšení chytrých kontraktů](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) – Dokumentace OpenZeppelin
 - [Proxy vzory pro vylepšitelnost kontraktů Solidity: Transparentní vs. UUPS proxy](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) od Naveen Sahu
 - [Jak fungují diamantová vylepšení](https://dev.to/mudgen/how-diamond-upgrades-work-417j) od Nick Mudge
