@@ -388,105 +388,12 @@ async function main(options?: { allLangs: boolean }) {
     internalLanguageCode: mapCrowdinCodeToInternal(crowdinId),
   }))
 
-  const { branch } = await postCreateBranchFrom(config.baseBranch)
-  console.log(`\n[BRANCH] ✓ Created branch: ${branch}`)
-
-  // For each language
-  for (const { crowdinId, internalLanguageCode } of languagePairs) {
-    console.log(
-      `\n[BUILD] ========== Building translations for language: ${crowdinId} (internal: ${internalLanguageCode}) ==========`
-    )
-
-    // Build, download and commit each file
-    for (const fileId of fileIds) {
-      console.log(`\n[BUILD] --- Processing fileId: ${fileId} ---`)
-      const crowdinPath = fileIdToPathMapping[fileId]
-      console.log(`[BUILD] Crowdin path: ${crowdinPath}`)
-
-      // 1- Build
-      console.log(
-        `[BUILD] Requesting build for fileId=${fileId}, language=${crowdinId}`
-      )
-      const { url: downloadUrl } = await postBuildProjectFileTranslation(
-        fileId,
-        crowdinId,
-        config.projectId
-      )
-      console.log(`[BUILD] ✓ Build complete, download URL: ${downloadUrl}`)
-
-      // 2- Download
-      console.log(`[BUILD] Downloading translated file...`)
-      const { buffer } = await getBuiltFile(downloadUrl)
-      console.log(`[BUILD] Downloaded ${buffer.length} bytes`)
-
-      // Check if translation differs from English
-      const originalEnglish = englishBuffers[fileId]
-      if (originalEnglish) {
-        console.log(
-          `[BUILD] Original English size: ${originalEnglish.length} bytes`
-        )
-        if (originalEnglish.compare(buffer) === 0) {
-          console.warn(
-            `[BUILD] ⚠️  Skipping commit - content identical to English (no translation occurred)`
-          )
-          continue
-        } else {
-          console.log(`[BUILD] ✓ Translation differs from English, will commit`)
-        }
-      }
-
-      // 3a- Get destination path
-      const destinationPath = getDestinationFromPath(
-        crowdinPath,
-        internalLanguageCode
-      )
-      console.log(`[BUILD] Destination path: ${destinationPath}`)
-
-      // 3b- Commit
-      console.log(`[BUILD] Committing to branch: ${branch}`)
-      await putCommitFile(buffer, destinationPath, branch)
-      console.log(`[BUILD] ✓ Committed successfully`)
-    }
-  }
-
-  // Run post-import sanitizer BEFORE creating PR
-  console.log(
-    `\n[SANITIZE] ========== Running post-import sanitizer before PR ==========`
-  )
-  const sanitizeResult = runSanitizer(config.allCrowdinCodes)
-  const changedFiles = sanitizeResult.changedFiles || []
-  if (changedFiles.length) {
-    console.log(`[SANITIZE] Files changed by sanitizer: ${changedFiles.length}`)
-    for (const abs of changedFiles) {
-      const relPath = abs.startsWith(process.cwd())
-        ? abs.slice(process.cwd().length + 1)
-        : abs
-      try {
-        const buf = fs.readFileSync(abs)
-        await putCommitFile(buf, relPath, branch)
-        console.log(`[SANITIZE] ✓ Committed sanitized file: ${relPath}`)
-      } catch (e) {
-        console.warn(
-          `[SANITIZE] Failed to commit sanitized file ${relPath}:`,
-          e
-        )
-      }
-    }
-  } else {
-    console.log("[SANITIZE] No sanitation changes to commit")
-  }
-
-  console.log(`\n[PR] ========== Creating Pull Request ==========`)
-  console.log(`[PR] Head branch: ${branch}`)
-  console.log(`[PR] Base branch: ${config.baseBranch}`)
-
   // Step 1: Detect the current model for pre-translation prompt
   console.log(
     `\n[MODEL-DETECTION] Fetching model for promptId: ${config.preTranslatePromptId}`
   )
   let modelKey: string | undefined
   try {
-    // Fetch userId from Crowdin API (we'll need to add this to config or fetch dynamically)
     const userId = process.env.I18N_CROWDIN_USER_ID
     if (userId) {
       modelKey = await getPromptModelKey(
@@ -536,26 +443,189 @@ async function main(options?: { allLangs: boolean }) {
   // Step 3: QA routing based on trust matrix (with model-aware lookup)
   const internalCodes = languagePairs.map((p) => p.internalLanguageCode)
   const qaPlan = planQaForLanguages(internalCodes, modelKey)
-  const prBody = qaSummaries.length
-    ? `Automated Crowdin translation import\n\nQA Summary:\n\n${qaSummaries.join("\n\n")}`
-    : `Automated Crowdin translation import`
-  const pr = await postPullRequest(branch, config.baseBranch, prBody)
 
-  console.log(`\n[SUCCESS] Pull Request created: ${pr.html_url}`)
-  console.log(`[SUCCESS] PR Number: #${pr.number}`)
+  // Step 4: Group languages by trust tier
+  const highTrustLangs = languagePairs.filter(
+    (p) => qaPlan[p.internalLanguageCode] === "skip"
+  )
+  const mediumTrustLangs = languagePairs.filter(
+    (p) => qaPlan[p.internalLanguageCode] === "copilot"
+  )
+  const lowTrustLangs = languagePairs.filter(
+    (p) => qaPlan[p.internalLanguageCode] === "copilot+claude"
+  )
 
-  // Step 4: Post follow-up comment with scoped AI review mentions
-  console.log(`\n[PR-COMMENT] Posting AI review comment...`)
-  try {
-    await postPrReviewComment(pr.number, qaPlan)
-  } catch (err) {
-    console.warn(`[PR-COMMENT] Failed to post review comment:`, err)
+  console.log(
+    `\n[TIER-GROUPING] High trust (no review): ${highTrustLangs.length} languages`
+  )
+  console.log(
+    `[TIER-GROUPING] Medium trust (@copilot): ${mediumTrustLangs.length} languages`
+  )
+  console.log(
+    `[TIER-GROUPING] Low trust (@copilot + @claude): ${lowTrustLangs.length} languages`
+  )
+
+  // Helper function to process one tier
+  const processTierPr = async (
+    tierLabel: "high-trust" | "medium-trust" | "low-trust",
+    tierName: string,
+    langs: typeof languagePairs
+  ) => {
+    if (langs.length === 0) {
+      console.log(`\n[TIER-${tierLabel.toUpperCase()}] No languages, skipping`)
+      return
+    }
+
+    console.log(
+      `\n[TIER-${tierLabel.toUpperCase()}] ========== Processing ${langs.length} languages ==========`
+    )
+
+    const { branch } = await postCreateBranchFrom(config.baseBranch, tierLabel)
+    console.log(`[BRANCH] ✓ Created branch: ${branch}`)
+
+    // For each language in this tier
+    for (const { crowdinId, internalLanguageCode } of langs) {
+      console.log(
+        `\n[BUILD] ========== Building translations for language: ${crowdinId} (internal: ${internalLanguageCode}) ==========`
+      )
+
+      // Build, download and commit each file
+      for (const fileId of fileIds) {
+        console.log(`\n[BUILD] --- Processing fileId: ${fileId} ---`)
+        const crowdinPath = fileIdToPathMapping[fileId]
+        console.log(`[BUILD] Crowdin path: ${crowdinPath}`)
+
+        // 1- Build
+        console.log(
+          `[BUILD] Requesting build for fileId=${fileId}, language=${crowdinId}`
+        )
+        const { url: downloadUrl } = await postBuildProjectFileTranslation(
+          fileId,
+          crowdinId,
+          config.projectId
+        )
+        console.log(`[BUILD] ✓ Build complete, download URL: ${downloadUrl}`)
+
+        // 2- Download
+        console.log(`[BUILD] Downloading translated file...`)
+        const { buffer } = await getBuiltFile(downloadUrl)
+        console.log(`[BUILD] Downloaded ${buffer.length} bytes`)
+
+        // Check if translation differs from English
+        const originalEnglish = englishBuffers[fileId]
+        if (originalEnglish) {
+          console.log(
+            `[BUILD] Original English size: ${originalEnglish.length} bytes`
+          )
+          if (originalEnglish.compare(buffer) === 0) {
+            console.warn(
+              `[BUILD] ⚠️  Skipping commit - content identical to English (no translation occurred)`
+            )
+            continue
+          } else {
+            console.log(
+              `[BUILD] ✓ Translation differs from English, will commit`
+            )
+          }
+        }
+
+        // 3a- Get destination path
+        const destinationPath = getDestinationFromPath(
+          crowdinPath,
+          internalLanguageCode
+        )
+        console.log(`[BUILD] Destination path: ${destinationPath}`)
+
+        // 3b- Commit
+        console.log(`[BUILD] Committing to branch: ${branch}`)
+        await putCommitFile(buffer, destinationPath, branch)
+        console.log(`[BUILD] ✓ Committed successfully`)
+      }
+    }
+
+    // Run post-import sanitizer for this tier's languages only
+    console.log(
+      `\n[SANITIZE] ========== Running sanitizer for ${tierLabel} languages ==========`
+    )
+    const tierCrowdinCodes = langs.map((p) => p.crowdinId)
+    const sanitizeResult = runSanitizer(tierCrowdinCodes)
+    const changedFiles = sanitizeResult.changedFiles || []
+    if (changedFiles.length) {
+      console.log(
+        `[SANITIZE] Files changed by sanitizer: ${changedFiles.length}`
+      )
+      for (const abs of changedFiles) {
+        const relPath = abs.startsWith(process.cwd())
+          ? abs.slice(process.cwd().length + 1)
+          : abs
+        try {
+          const buf = fs.readFileSync(abs)
+          await putCommitFile(buf, relPath, branch)
+          console.log(`[SANITIZE] ✓ Committed sanitized file: ${relPath}`)
+        } catch (e) {
+          console.warn(
+            `[SANITIZE] Failed to commit sanitized file ${relPath}:`,
+            e
+          )
+        }
+      }
+    } else {
+      console.log("[SANITIZE] No sanitation changes to commit")
+    }
+
+    // Create PR with tier-appropriate title and body
+    console.log(
+      `\n[PR] ========== Creating ${tierName} Pull Request ==========`
+    )
+    console.log(`[PR] Head branch: ${branch}`)
+    console.log(`[PR] Base branch: ${config.baseBranch}`)
+
+    const langCodes = langs.map((p) => p.internalLanguageCode).join(", ")
+    let prTitle = `[${tierName}] Automated Crowdin translations (${langCodes})`
+    if (tierLabel !== "high-trust") {
+      const reviewers =
+        tierLabel === "medium-trust" ? "@copilot" : "@copilot @claude"
+      prTitle += ` - ${reviewers} review requested`
+    }
+
+    // Filter QA summaries to this tier's languages if available
+    const tierQaSummaries = qaSummaries.filter((s) =>
+      langs.some((p) => s.includes(p.crowdinId))
+    )
+    const prBody = tierQaSummaries.length
+      ? `${prTitle}\n\nQA Summary:\n\n${tierQaSummaries.join("\n\n")}`
+      : prTitle
+
+    const pr = await postPullRequest(branch, config.baseBranch, prBody)
+
+    console.log(`\n[SUCCESS] Pull Request created: ${pr.html_url}`)
+    console.log(`[SUCCESS] PR Number: #${pr.number}`)
+
+    // Post follow-up comment with scoped AI review mentions
+    console.log(`\n[PR-COMMENT] Posting AI review comment...`)
+    const tierQaPlan: Record<string, (typeof qaPlan)[string]> = {}
+    for (const { internalLanguageCode } of langs) {
+      tierQaPlan[internalLanguageCode] = qaPlan[internalLanguageCode]
+    }
+    try {
+      await postPrReviewComment(pr.number, tierQaPlan)
+    } catch (err) {
+      console.warn(`[PR-COMMENT] Failed to post review comment:`, err)
+    }
+
+    console.log(
+      `\n[SUCCESS] ========== ${tierName} PR complete: ${pr.html_url} ==========`
+    )
   }
 
-  console.log(`\n[SUCCESS] ========== Translation import complete! ==========`)
-  console.log(`[SUCCESS] Pull Request URL: ${pr.html_url}`)
-  console.log(`[SUCCESS] PR Number: #${pr.number}`)
-  console.log(pr)
+  // Process each tier
+  await processTierPr("high-trust", "High Trust", highTrustLangs)
+  await processTierPr("medium-trust", "Medium Trust", mediumTrustLangs)
+  await processTierPr("low-trust", "Low Trust", lowTrustLangs)
+
+  console.log(
+    `\n[SUCCESS] ========== All translation imports complete! ==========`
+  )
 }
 
 main().catch((err) => {
