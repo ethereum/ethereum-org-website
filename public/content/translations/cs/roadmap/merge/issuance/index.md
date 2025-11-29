@@ -8,7 +8,7 @@ lang: cs
 
 Sloučení představovalo přechod sítě Ethereum z důkazu prací na důkaz podílem, který proběhl v září 2022. Způsob vydávání nových ETH do oběhu v této době prošel změnami. Dříve byly nové ETH vydávány ze dvou zdrojů: z exekuční vrstvy (tj. hlavní síť) a vrstvy konsenzu (tj. Řetězová vazba). Od Sloučení je na exekuční vrstvě vydávání nových ETH nulové. Pojďme si to vysvětlit.
 
-## Složky vydávání ETH {#components-of-eth-issuance}
+## Složky vydávání ETH {#components-of-ETH-issuance}
 
 Nabídku ETH můžeme rozdělit na dvě hlavní složky: vydávání a pálení.
 
@@ -30,11 +30,11 @@ title="Vydávání ETH tldr">
 
 ### Vydávání v exekuční vrstvě {#el-issuance-pre-merge}
 
-Za časů důkazu prací komunikovali těžaři pouze s exekuční vrstvou, a pokud byli první, kdo vyřešil další blok, byla jejich práce kompenzována blokovými odměnami. Od [vylepšení Constantinople](/ethereum-forks/#constantinople) v roce 2019 činila tato odměna 2 ETH na blok. Těžaři byli také odměňováni za zveřejňování [ommer](/glossary/#ommer) bloků, což byly platné bloky, které se neobjevily v nejdelším/kanonickém řetězci. Tyto odměny dosahovaly maximálně 1,75 ETH na ommer a těžaři je dostávali _navíc k_ odměně za kanonický blok. Proces těžby byl ekonomicky náročnou aktivitou, která v minulosti navíc vyžadovala vysokou úroveň vydávání ETH za účelem zachování udržitelnosti.
+Za časů důkazu prací komunikovali těžaři pouze s exekuční vrstvou, a pokud byli první, kdo vyřešil další blok, byla jejich práce kompenzována blokovými odměnami. Od [vylepšení Constantinople](/Ethereum-forks/#constantinople) v roce 2019 činila tato odměna 2 ETH na blok. Těžaři byli také odměňováni za zveřejňování [ommer](/glossary/#ommer) bloků, což byly platné bloky, které se neobjevily v nejdelším/kanonickém řetězci. Tyto odměny dosahovaly maximálně 1,75 ETH na ommer a těžaři je dostávali _navíc k_ odměně za kanonický blok. Proces těžby byl ekonomicky náročnou aktivitou, která v minulosti navíc vyžadovala vysokou úroveň vydávání ETH za účelem zachování udržitelnosti.
 
 ### Vydávání ve vrstvě konsenzu {#cl-issuance-pre-merge}
 
-[Řetězová vazba](/ethereum-forks/#beacon-chain-genesis) byla spuštěna v roce 2020. Místo těžařů je zabezpečena validátory využívajícími důkaz podílem. Tento řetězec byl inicializován uživateli Etherea, kteří vkládali ETH jednosměrně do chytrého kontraktu na hlavní síti (exekuční vrstva), který Řetězová vazba sledovala a připsala uživateli stejné množství ETH na novém řetězci. Dokud nedošlo ke Sloučení, validátoři Řetězové vazby nezpracovávali transakce a v podstatě dosahovali shody ohledně samotného stavu poolu validátorů.
+[Řetězová vazba](/Ethereum-forks/#beacon-chain-genesis) byla spuštěna v roce 2020. Místo těžařů je zabezpečena validátory využívajícími důkaz podílem. Tento řetězec byl inicializován uživateli Etherea, kteří vkládali ETH jednosměrně do chytrého kontraktu na hlavní síti (exekuční vrstva), který Řetězová vazba sledovala a připsala uživateli stejné množství ETH na novém řetězci. Dokud nedošlo ke Sloučení, validátoři Řetězové vazby nezpracovávali transakce a v podstatě dosahovali shody ohledně samotného stavu poolu validátorů.
 
 Validátoři na Řetězové vazbě jsou za potvrzování stavu řetězce a navrhování bloků odměňováni v ETH. Odměny (nebo pokuty) jsou vypočítávány a rozdělovány každou epochu (každých 6,4 minuty) na základě výkonu validátorů. Odměny validátorům jsou **výrazně** menší než odměny za těžbu, které byly dříve vydávány v době důkazu prací (2 ETH každých ~13,5 sekundy), protože provoz validujícího uzlu není tak ekonomicky náročný, a proto nevyžaduje, a tím pádem ani neospravedlňuje, tak vysokou odměnu.
 
@@ -46,7 +46,7 @@ Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
 
 - Odhadováno na 2,08 ETH každých 13,3 sekundy*: **~4 930 000** ETH vydáno za rok
 - Vedlo k inflaci **přibližně 4,09 %** (4,93 mil. za rok / 120,5 mil. celkem)
-- \*To zahrnuje 2 ETH za kanonický blok, plus průměrně 0,08 ETH za ommer bloky. Také pracuje s časovým úsekem 13,3 sekundy, což je základní cílový čas bloku bez jakéhokoli vlivu [bomby obtížnosti.](/glossary/#difficulty-bomb). ([Vizte zdroje](https://bitinfocharts.com/ethereum/))
+- \*To zahrnuje 2 ETH za kanonický blok, plus průměrně 0,08 ETH za ommer bloky. Také pracuje s časovým úsekem 13,3 sekundy, což je základní cílový čas bloku bez jakéhokoli vlivu [bomby obtížnosti.](/glossary/#difficulty-bomb). ([Vizte zdroje](https://bitinfocharts.com/Ethereum/))
 
 **Vydávání ve vrstvě konsenzu:**
 
@@ -107,7 +107,7 @@ Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Pálení poplatků bylo spuštěno s [vylepšením London](/ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává beze změn.
+Pálení poplatků bylo spuštěno s [vylepšením London](/Ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává beze změn.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -146,4 +146,4 @@ Například, pokud `X` (denní vydávání ETH) vzroste na 1800 na základě cel
 
 - [Sloučení](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Dashboardy dostupné k vizualizaci vydávání a pálení ETH v reálném čase_
-- [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_
+- [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-Ethereum-issuance/) - _Jim McDonald 2020_
