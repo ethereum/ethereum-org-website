@@ -53,13 +53,13 @@ Základem DAO je [chytrý kontrakt](/glossary/#smart-contract), který definuje 
 
 To je možné z toho důvodu, že chytré kontrakty jsou po nasazení na Ethereum chráněny proti nedovolené manipulaci. Pravidla DAO jsou totiž zapsaná pomocí veřejně dostupného kódu a nelze je tak upravovat bez povšimnutí.
 
-## Ethereum a DAO {#ethereum-and-daos}
+## Ethereum a DAO {#Ethereum-and-daos}
 
 Ethereum je ideálním ekosystémem pro založení DAO a to hned z několika důvodů:
 
 - Vlastní konsenzus sítě Ethereum je natolik distribuovaný a zavedený, že mu organizace mohou důvěřovat.
 - Kód chytrého kontraktu nemůže být po svém nasazení upraven a to ani vlastními majiteli. To umožňuje řídit DAO podle pravidel, se kterými byla naprogramována.
-- Chytré kontrakty mohou posílat i přijímat finanční prostředky, což umožňuje správu společných financí bez existence důvěryhodného prostředníka.
+- Chytré kontrakty mohou PoSílat i přijímat finanční prostředky, což umožňuje správu společných financí bez existence důvěryhodného prostředníka.
 - Komunita kolem Etherea prokazuje schopnost spolupracovat, což umožňuje vznik osvědčených postupů a podpůrných systémů.
 
 ## Řízení DAO {#dao-governance}
@@ -126,7 +126,7 @@ _Tento přístup se obvykle používá při decentralizovaném vývoji a řízen
 
 #### Příklad z praxe {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao bylo globální suverénní družstvo budující a řídící decentralizované protokoly a aplikace od roku 2019. Ke koordinaci a správě finančních prostředků využívalo řízení založené na reputaci a [holografický konsensus](/glossary/#holographic-consensus), což znamená, že si nikdo nemohl koupit ovládání budoucnosti organizace.
+[DXdao](https://DXdao.ETH.limo) – DXdao bylo globální suverénní družstvo budující a řídící decentralizované protokoly a aplikace od roku 2019. Ke koordinaci a správě finančních prostředků využívalo řízení založené na reputaci a [holografický konsensus](/glossary/#holographic-consensus), což znamená, že si nikdo nemohl koupit ovládání budoucnosti organizace.
 
 ## Připojte se / založte DAO {#join-start-a-dao}
 
@@ -154,8 +154,8 @@ _Tento přístup se obvykle používá při decentralizovaném vývoji a řízen
 - [Jak založit komunitu založenou na DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Co je to DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Co je holografický konsenzus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO nejsou korporace: kde na decentralizaci v autonomních organizacích záleží od Vitalika](https://vitalik.eth.limo/general/2022/09/20/daos.html)
-- [DAO, DAC, DA a další: Neúplná příručka terminologie](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
+- [DAO nejsou korporace: kde na decentralizaci v autonomních organizacích záleží od Vitalika](https://vitalik.ETH.limo/general/2022/09/20/daos.HTML)
+- [DAO, DAC, DA a další: Neúplná příručka terminologie](https://blog.Ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.Ethereum.org)
 
 ### Videa {#videos}
 
