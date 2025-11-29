@@ -15,7 +15,7 @@ summaryPoints:
 
 ## Co je Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, známý také jako [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), je způsob, jakým mohou [rollupy](/layer-2/#rollups) přidávat levnější data do bloků. Název pochází od dvou výzkumníků, kteří tento nápad navrhli: Protolambdy a Dankrada Feista. Historicky byly rollupy omezeny v tom, jak levně mohou zpracovávat uživatelské transakce, protože jejich transakce byly ukládány do `CALLDATA`.
+Proto-Danksharding, známý také jako [EIP-4844](https://eips.Ethereum.org/EIPS/EIP-4844), je způsob, jakým mohou [rollupy](/layer-2/#rollups) přidávat levnější data do bloků. Název pochází od dvou výzkumníků, kteří tento nápad navrhli: Protolambdy a Dankrada Feista. Historicky byly rollupy omezeny v tom, jak levně mohou zpracovávat uživatelské transakce, protože jejich transakce byly ukládány do `CALLDATA`.
 
 Toto je drahé, protože CALLDATA jsou zpracovávána všemi uzly na Ethereu a zůstávají na blockchainu navždy, i když rollupy potřebují tato data jen po krátkou dobu. Proto-Danksharding zavádí datové bloby, které mohou být odeslány a připojeny k blokům. Data v těchto blobech nejsou přístupná pro EVM a jsou automaticky smazána po stanovené době (v době psaní tohoto článku to bylo 4 096 epoch, což je přibližně 18 dní). To znamená, že rollupy mohou odesílat svá data mnohem levněji a přenést úspory na koncové uživatele ve formě levnějších transakcí.
 
@@ -37,7 +37,7 @@ Rollupy zveřejňují transakce, které provádějí, v datových blobech. Záro
 
 ### Co je KZG? {#what-is-kzg}
 
-KZG znamená Kate-Zaverucha-Goldberg – jména tří [původních autorů](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) schématu, které redukuje blob dat na malý [kryptografický „závazek“](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). Blob dat předložený rollupem musí být ověřen, aby bylo zajištěno, že rollup nejedná nepoctivě. To zahrnuje ověřovatelovo opětovné provedení transakcí v blobu, aby bylo ověřeno, že závazek byl platný. To je konceptuálně stejné jako způsob, jakým exekuční klienti kontrolují platnost transakcí na Ethereu na vrstvě 1 pomocí Merkle důkazů. KZG je alternativní důkaz, který přizpůsobí polynomiální rovnici datům. Závazek vyhodnocuje polynom na určitých tajných bodech dat. Ověřovatel by přizpůsobil stejný polynom datům a vyhodnotil ho na stejných hodnotách, přičemž by ověřil, že výsledek je stejný. To je způsob, jak ověřit data, který je kompatibilní s technikami zero-knowledge používanými některými rollupy a nakonec i jinými částmi protokolu Ethereum.
+KZG znamená Kate-Zaverucha-Goldberg – jména tří [původních autorů](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) schématu, které redukuje blob dat na malý [kryptografický „závazek“](https://dankradfeist.de/Ethereum/2020/06/16/kate-polynomial-commitments.HTML). Blob dat předložený rollupem musí být ověřen, aby bylo zajištěno, že rollup nejedná nepoctivě. To zahrnuje ověřovatelovo opětovné provedení transakcí v blobu, aby bylo ověřeno, že závazek byl platný. To je konceptuálně stejné jako způsob, jakým exekuční klienti kontrolují platnost transakcí na Ethereu na vrstvě 1 pomocí Merkle důkazů. KZG je alternativní důkaz, který přizpůsobí polynomiální rovnici datům. Závazek vyhodnocuje polynom na určitých tajných bodech dat. Ověřovatel by přizpůsobil stejný polynom datům a vyhodnotil ho na stejných hodnotách, přičemž by ověřil, že výsledek je stejný. To je způsob, jak ověřit data, který je kompatibilní s technikami zero-knowledge používanými některými rollupy a nakonec i jinými částmi protokolu Ethereum.
 
 ### Co byl Ceremoniál KZG? {#what-is-a-kzg-ceremony}
 
@@ -81,15 +81,15 @@ Vzorkování dostupnosti dat je nezbytné pro validátory k rychlému a efektivn
 
 ### Aktuální průběh {#current-progress}
 
-Úplný Danksharding je vzdálen několik let. Mezitím Ceremoniál KZG skončil s více než 140 000 příspěvky a [EIP](https://eips.ethereum.org/EIPS/eip-4844) pro Proto-Danksharding je hotový. Tento návrh byl plně implementován na všech testovacích sítích a byl spuštěn na hlavní síti s vylepšením sítě Cancun-Deneb („Dencun“) v březnu 2024.
+Úplný Danksharding je vzdálen několik let. Mezitím Ceremoniál KZG skončil s více než 140 000 příspěvky a [EIP](https://eips.Ethereum.org/EIPS/EIP-4844) pro Proto-Danksharding je hotový. Tento návrh byl plně implementován na všech testovacích sítích a byl spuštěn na hlavní síti s vylepšením sítě Cancun-Deneb („Dencun“) v březnu 2024.
 
 ### Další informace {#further-reading}
 
-- [Poznámky k Proto-Dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
-- [Poznámky Dankrada k Dankshardingu](https://notes.ethereum.org/@dankrad/new_sharding)
+- [Poznámky k Proto-Dankshardingu](https://notes.Ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
+- [Poznámky Dankrada k Dankshardingu](https://notes.Ethereum.org/@dankrad/new_sharding)
 - [Diskuze mezi Dankradem, Protem a Vitalikem o Dankshardingu](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [Ceremoniál KZG](https://ceremony.ethereum.org/)
+- [Ceremoniál KZG](https://ceremony.Ethereum.org/)
 - [Přednáška Carla Beekhuizena na Devconu o důvěryhodných nastaveních](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
 - [Více o vzorkování dostupnosti dat pro bloby](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
 - [Dankrad Feist o KZG závazcích a důkazech](https://youtu.be/8L2C6RDMV9Q)
-- [KZG polynomiální závazky](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
+- [KZG polynomiální závazky](https://dankradfeist.de/Ethereum/2020/06/16/kate-polynomial-commitments.HTML)
