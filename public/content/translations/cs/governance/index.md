@@ -18,7 +18,7 @@ Pod pojmem řízení rozumíme systémy, které umožňují přijímat rozhodnut
 
 Nikdo nevlastní ani neřídí protokol Etherea, ale stále je třeba dělat rozhodnutí o implementaci změn, aby byla co nejlépe zajištěna životnost a prosperita sítě. Nedostatek vlastnictví znamená, že tradiční organizační řízení není řešením.
 
-## Kdo řídí Ethereum {#ethereum-governance}
+## Kdo řídí Ethereum {#Ethereum-governance}
 
 Řízení Etherea je proces, kterým se provádějí změny v protokolu. Je důležité zdůraznit, že tento proces nesouvisí s tím, jak uživatelé a aplikace protokol používají – Ethereum je bez vstupních bariér. Do blockchainových aktivit se může zapojit kdokoli z celého světa. Nejsou nastavena žádná pravidla pro to, kdo může nebo nemůže spustit aplikaci nebo odeslat transakci. Existuje však proces navrhování změn základního protokolu, nad kterým jsou spuštěny decentralizované aplikace. Na stabilitě Etherea je v současné době závislých hodně lidí. Existuje proto vysoce pečlivá koordinace změn základních funkcí, včetně sociálních a technických procesů, za účelem zajištění bezpečnosti jakýchkoliv změn Etherea, které budou zároveň přijaty komunitou.
 
@@ -42,19 +42,19 @@ _Zatímco na úrovni protokolu je řízení Etherea mimo blockchain, velké mno�
 
 V [komunitě Ethereum](/community/) jsou různé zainteresované strany, z nichž každá hraje roli v procesu řízení. Počínaje zainteresovanými stranami, které jsou nejvzdálenější od protokolu, se jedná o:
 
-- **Držitele etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/eth/).
+- **Držitele etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/ETH/).
 - **Uživatele aplikací**: Tito lidé komunikují s aplikacemi na blockchainu Ethereum.
 - **Vývojáře aplikací a nástrojů**: Tito lidé píší aplikace, které běží na blockchainu Ethereum (např. DeFi, NFT atd.) nebo vytvářejí nástroje pro interakci s Ethereem (např. peněženky, testovací sady atd.). [Více o dappkách](/apps/).
 - **Operátory síťových uzlů**: Tito lidé provozují síťové uzly, které schvalují bloky a transakce a odmítají jakoukoli neplatnou transakci nebo blok, se kterým se setkají. [Více o síťových uzlech](/developers/docs/nodes-and-clients/).
 - **Autory EIP**: Tito lidé navrhují změny protokolu Ethereum ve formě návrhů na vylepšení Etherea (EIP). [Více o EIP](/eips/).
 - **Validátory**: Tito lidé provozují síťové uzly, které mohou přidávat nové bloky do blockchainu Ethereum.
-- **Vývojáře protokolu** (také známí jako  „Klíčoví vývojáři“ ): Tito lidé se starají o různé implementace Etherea (např. go-ethereum, Nethermind, Besu, Erigon a Reth na exekuční vrstvě nebo Prysm, Lighthouse, Nimbus, Teku, Lodestar a Grandine na vrstvě konsenzu). [Více o klientech Etherea](/developers/docs/nodes-and-clients/).
+- **Vývojáře protokolu** (také známí jako  „Klíčoví vývojáři“ ): Tito lidé se starají o různé implementace Etherea (např. go-Ethereum, Nethermind, Besu, Erigon a Reth na exekuční vrstvě nebo Prysm, Lighthouse, Nimbus, Teku, Lodestar a Grandine na vrstvě konsenzu). [Více o klientech Etherea](/developers/docs/nodes-and-clients/).
 
 _Poznámka: Každý může být součástí více skupin (např. vývojář protokolu může navrhovat EIP a provozovat validátor beacon chainu a používat DeFi aplikace). Pro jednoduchost je však lepší tyto skupiny uvést odděleně._
 
 <Divider />
 
-## Co je to EIP? {#what-is-an-eip}
+## Co je to EIP? {#what-is-an-EIP}
 
 Důležitým procesem používaným při řízení Etherea je **návrh na zlepšení Etherea (Ethereum Improvement Proposals, EIP)**. EIP jsou standardy specifikující potenciální nové funkce nebo procesy pro Ethereum. EIP může vytvořit kdokoliv. Jestliže chcete sepsat EIP nebo se zúčastnit vzájemného hodnocení a/nebo správy, podívejte se na:
 
@@ -68,9 +68,9 @@ Důležitým procesem používaným při řízení Etherea je **návrh na zlepš
 
 Formální proces zavádění změn do protokolu Ethereum je následující:
 
-1. **Navrhněte základní EIP**: Jak je popsáno v [EIP- 1](https://eips.ethereum.org/EIPS/eip-1#core-eips), prvním krokem k formálnímu navržení změny Etherea je její podrobný popis v Core EIP. Ten bude sloužit jako oficiální specifikace pro EIP, kterou budou vývojáři protokolů implementovat, pokud bude přijata.
+1. **Navrhněte základní EIP**: Jak je popsáno v [EIP- 1](https://eips.Ethereum.org/EIPS/EIP-1#core-eips), prvním krokem k formálnímu navržení změny Etherea je její podrobný popis v Core EIP. Ten bude sloužit jako oficiální specifikace pro EIP, kterou budou vývojáři protokolů implementovat, pokud bude přijata.
 
-2. **Představte své EIP vývojářům protokolu**: Jakmile budete mít základní EIP, pro které jste dostali zpětnou vazbu od komunity, měli byste je předložit vývojářům protokolu. To uděláte tak, že ho navrhnete k diskusi na [AllCoreDevs callu](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Je pravděpodobné, že některé diskuze již proběhly asynchronně na [fóru Ethereum Magicians](https://ethereum-magicians.org/) nebo na [Ethereum R&D Discordu](https://discord.gg/mncqtgVSVw).
+2. **Představte své EIP vývojářům protokolu**: Jakmile budete mít základní EIP, pro které jste dostali zpětnou vazbu od komunity, měli byste je předložit vývojářům protokolu. To uděláte tak, že ho navrhnete k diskusi na [AllCoreDevs callu](https://GitHub.com/Ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Je pravděpodobné, že některé diskuze již proběhly asynchronně na [fóru Ethereum Magicians](https://Ethereum-magicians.org/) nebo na [Ethereum R&D Discordu](https://discord.gg/mncqtgVSVw).
 
 > Potenciální výsledky této fáze jsou:
 
@@ -90,7 +90,7 @@ Tento postup, i když je velmi zjednodušený, poskytuje přehled hlavních fáz
 
 ### Porozumění předchozím vylepšením {#prior-work}
 
-Šampioni EIP by se měli seznámit s předchozí prací a návrhy před vytvořením EIP, které má ambice vylepšit hlavní síť Ethereum. Díky tomu, doufejme, přináší EIP něco nového, co dosud nebylo zamítnuto. Tři hlavní místa, kde se můžete seznámit s prací ostatních navrhovatelů vylepšení, jsou [EIP repozitář](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) a [ethresear.ch](https://ethresear.ch/).
+Šampioni EIP by se měli seznámit s předchozí prací a návrhy před vytvořením EIP, které má ambice vylepšit hlavní síť Ethereum. Díky tomu, doufejme, přináší EIP něco nového, co dosud nebylo zamítnuto. Tři hlavní místa, kde se můžete seznámit s prací ostatních navrhovatelů vylepšení, jsou [EIP repozitář](https://GitHub.com/Ethereum/EIPs), [Ethereum Magicians](https://Ethereum-magicians.org/) a [ethresear.ch](https://ethresear.ch/).
 
 ### Pracovní skupiny {#working-groups}
 
@@ -152,7 +152,7 @@ Proces správy Etherea často upozaďuje rychlost a efektivitu ve prospěch otev
 
 Implementace specifikací a vývoje byly i v případě Beacon Chainu vždy plně open source, ale výše popsané formální procesy používané k navrhování aktualizací použity nebyly. To umožnilo rychleji navrhnout a odsouhlasit změny a stejně tak je i implementovat.
 
-Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/ethereum-forks/#paris). Stav návrhu [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na důkaz podílem.
+Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/Ethereum-forks/#paris). Stav návrhu [EIP-3675](https://eips.Ethereum.org/EIPS/EIP-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na důkaz podílem.
 
 <ButtonLink href="/roadmap/merge/">
   Více o mergi
@@ -163,22 +163,22 @@ Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, 
 ## Jak se mohu zapojit? {#get-involved}
 
 - [Navrhněte EIP](/eips/#participate)
-- [Diskutujte o aktuálních návrzích](https://ethereum-magicians.org/)
+- [Diskutujte o aktuálních návrzích](https://Ethereum-magicians.org/)
 - [Zapojte se do diskuse o výzkumu a vývoji](https://ethresear.ch/)
 - [Připojte se k Discord serveru Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Spusť uzel](/developers/docs/nodes-and-clients/run-a-node/)
 - [Přispějte k rozvoji klienta](/developers/docs/nodes-and-clients/#execution-clients)
-- [Program Core Developer Apprenticeship](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Program Core Developer Apprenticeship](https://blog.Ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Další informace {#further-reading}
 
 Správa Etherea není pevně definována. Různí členové komunity mají na řízení odlišné pohledy. Zde je několik z nich:
 
-- [Poznámky k řízení blockchainu](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Jak funguje Ethereum Governance?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [Jak funguje správa Etherea](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Kdo je Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Řízení, část 2: Plutokracie je furt špatná](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Nahrazení mincemi hlasované řízení](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Poznámky k řízení blockchainu](https://vitalik.ETH.limo/general/2017/12/17/voting.HTML) - _Vitalik Buterin_
+- [Jak funguje Ethereum Governance?](https://cryptotesters.com/blog/Ethereum-governance) – _Cryptotesters_
+- [Jak funguje správa Etherea](https://medium.com/coinmonks/how-Ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [Kdo je Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-Ethereum-core-developer/) - _Hudson Jameson_
+- [Řízení, část 2: Plutokracie je furt špatná](https://vitalik.ETH.limo/general/2018/03/28/plutocracy.HTML) - _Vitalik Buterin_
+- [Nahrazení mincemi hlasované řízení](https://vitalik.ETH.limo/general/2021/08/16/voting3.HTML) - _Vitalik Buterin_
 - [Pochopení řízení blockchainu](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) – _2077 Research_
-- [Vláda Etherea](https://www.galaxy.com/insights/research/ethereum-governance/) – _Christine Kim_
+- [Vláda Etherea](https://www.galaxy.com/insights/research/Ethereum-governance/) – _Christine Kim_
