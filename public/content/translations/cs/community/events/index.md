@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-Toto je neúplný seznam spravován naší komunitou. Znáš nějaké další Ethereum události pro přidání do tohoto seznamu? [Prosím, přidej ji](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+Toto je neúplný seznam spravován naší komunitou. Znáš nějaké další Ethereum události pro přidání do tohoto seznamu? [Prosím, přidej ji](https://GitHub.com/Ethereum/Ethereum-org-website/blob/dev/src/data/community-events.json)!
 
 ## Ethereum setkání {#meetups}
 
@@ -21,4 +21,4 @@ Nevidíš událost, která ti vyhovuje? Zkus se připojit ke schůzce. Setkání
 
 Máš zájem o zahájení své vlastní schůzky? Podívejte se na [BUIDL Network](https://consensys.net/developers/buidlnetwork/), iniciativu ConsenSys na podporu komunit setkání Ethereum.
 
-Toto je neúplný seznam spravován naší komunitou. Další Ethereum schůzky [ lze najít zde](https://www.meetup.com/topics/ethereum/). Znáš aktivní schůzku pro přidání do seznamu? [Prosím, přidej ji](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!
+Toto je neúplný seznam spravován naší komunitou. Další Ethereum schůzky [ lze najít zde](https://www.meetup.com/topics/Ethereum/). Znáš aktivní schůzku pro přidání do seznamu? [Prosím, přidej ji](https://GitHub.com/Ethereum/Ethereum-org-website/blob/dev/src/data/community-meetups.json)!
