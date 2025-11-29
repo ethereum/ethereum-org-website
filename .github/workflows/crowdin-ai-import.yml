@@ -72,6 +72,8 @@ jobs:
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          I18N_CROWDIN_USER_ID: ${{ secrets.I18N_CROWDIN_USER_ID }}
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           FILE_LIMIT: ${{ github.event.inputs.file_limit }}
           START_OFFSET: ${{ github.event.inputs.start_offset }}

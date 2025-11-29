@@ -1,0 +1,44 @@
+{
+  "default": {
+    "lastUpdated": "2025-11-28T00:00:00Z",
+    "Aplus": ["es", "fr", "de", "zh"],
+    "A": ["ar", "it", "ja", "pt-br", "ru", "zh-tw"],
+    "Aminus": ["ko", "pt", "nl", "se", "uk"],
+    "Bplus": ["tr", "pl", "cs", "hi", "vi", "el", "he", "id", "da", "nb", "ca"],
+    "B": [
+      "bn",
+      "th",
+      "fa",
+      "ro",
+      "hu",
+      "fi",
+      "fil",
+      "tl",
+      "ur",
+      "ms",
+      "bg",
+      "hr",
+      "sr",
+      "bs",
+      "sk",
+      "sl",
+      "gl"
+    ],
+    "Bminus": ["ta", "te", "kn", "gu", "mr", "ml", "lt"],
+    "Cplus": [
+      "hy-am",
+      "ka",
+      "kk",
+      "uz",
+      "az",
+      "be",
+      "ga",
+      "sw",
+      "am",
+      "ne-np",
+      "km"
+    ],
+    "C": ["ha", "ig", "yo", "sn", "tw", "tk"],
+    "Dplus": ["pcm"]
+  }
+}

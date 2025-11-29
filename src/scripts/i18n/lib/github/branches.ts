@@ -35,9 +35,9 @@ export const getBranchObject = async (
 /**
  * Generate a branch name based on current timestamp
  */
-export const createBranchName = () => {
+export const createBranchName = (suffix?: string) => {
   const ts = new Date().toISOString().replace(/\..*$/, "").replace(/[:]/g, "-")
-  return "i18n/import/" + ts
+  return "i18n/import/" + ts + (suffix ? `-${suffix}` : "")
 }
 
 /**
@@ -46,9 +46,12 @@ export const createBranchName = () => {
  * @param ref - The base branch reference (defaults to config.baseBranch)
  * @returns Object containing the new branch name and SHA
  */
-export const postCreateBranchFrom = async (ref = config.baseBranch) => {
+export const postCreateBranchFrom = async (
+  ref = config.baseBranch,
+  suffix?: string
+) => {
   const { sha } = await getBranchObject(ref)
-  const branch = createBranchName()
+  const branch = createBranchName(suffix)
 
   const url = new URL(
     `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/git/refs`
