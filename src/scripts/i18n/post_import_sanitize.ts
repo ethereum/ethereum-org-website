@@ -235,17 +235,81 @@ function processJsonFile(jsonPath: string): {
   // Normalize BOM and smart quotes
   const cleaned = content
     .replace(/^\uFEFF/, "")
-    .replace(/[“”]/g, '"')
-    .replace(/[‘’]/g, "'")
+    .replace(/[""]/g, '"')
+    .replace(/['']/g, "'")
   if (cleaned !== content) {
     content = cleaned
     fixed = true
   }
+
+  // Try parsing; if it fails, attempt to fix unescaped quotes
+  let parseError: Error | null = null
   try {
     JSON.parse(content)
   } catch (e) {
-    issues.push(`JSON parse error: ${(e as Error).message}`)
+    parseError = e as Error
+    issues.push(`Initial JSON parse error: ${parseError.message}`)
+
+    // Attempt to fix unescaped quotes in JSON string values
+    // Strategy: scan for patterns like "text "word" text" and escape the internal quotes
+    try {
+      let fixedContent = content
+
+      // Find all string values that might have unescaped internal quotes
+      // Pattern: ": "...content..." - we look for quotes after a colon
+      let modified = false
+      const lines = fixedContent.split("\n")
+      const fixedLines = lines.map((line) => {
+        // Match JSON key-value pairs with string values
+        // Look for pattern: "key": "value potentially with "quotes""
+        const match = line.match(/^(\s*"[^"]+"\s*:\s*")(.*)("\s*,?\s*)$/)
+        if (!match) return line
+
+        const prefix = match[1] // '  "key": "'
+        const value = match[2] // 'text with "quotes" inside'
+        const suffix = match[3] // '",\n' or '"\n'
+
+        // Check if value contains unescaped quotes
+        if (!value.includes('"')) return line
+
+        // Escape unescaped quotes in the value
+        let fixedValue = ""
+        for (let i = 0; i < value.length; i++) {
+          const char = value[i]
+          if (char === '"') {
+            // Count preceding backslashes
+            let backslashCount = 0
+            for (let j = i - 1; j >= 0 && value[j] === "\\"; j--) {
+              backslashCount++
+            }
+            // If not escaped (even number of backslashes), escape it
+            if (backslashCount % 2 === 0) {
+              fixedValue += '\\"'
+              modified = true
+            } else {
+              fixedValue += char
+            }
+          } else {
+            fixedValue += char
+          }
+        }
+
+        return prefix + fixedValue + suffix
+      })
+
+      if (modified) {
+        fixedContent = fixedLines.join("\n")
+        content = fixedContent
+        fixed = true
+        // Re-validate after fix
+        JSON.parse(content)
+        issues.push("Auto-fixed unescaped quotes in JSON string values")
+      }
+    } catch (fixError) {
+      issues.push(`Failed to auto-fix JSON: ${(fixError as Error).message}`)
+    }
   }
+
   if (fixed) fs.writeFileSync(jsonPath, content, "utf8")
   return { fixed, issues }
 }
