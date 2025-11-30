@@ -8,13 +8,13 @@ Bloky jsou soubory transakcí s hashem předchozího bloku v řetězci. Tím se 
 
 ## Předpoklady {#prerequisites}
 
-Bloky jsou velmi přívětivým tématem pro začátečníky. K lepšímu pochopení této stránky však doporučujeme nejprve si přečíst [Účty](/developers/docs/accounts/), [Transakce](/developers/docs/transactions/), a náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
+Bloky jsou velmi přívětivým tématem pro začátečníky. K lepšímu pochopení této stránky však doporučujeme nejprve si přečíst [Účty](/developers/docs/accounts/), [Transakce](/developers/docs/transactions/), a náš [úvod do Etherea](/developers/docs/intro-to-Ethereum/).
 
 ## Proč bloky? {#why-blocks}
 
 Aby bylo zajištěno, že všichni účastníci sítě Ethereum udržují synchronizovaný stav a shodují se na přesné historii transakcí, seskupujeme transakce do bloků. To znamená, že desítky (nebo stovky) transakcí jsou potvrzeny, odsouhlaseny a synchronizovány najednou.
 
-![Diagram zobrazující transakci v bloku, která způsobuje změny stavu](./tx-block.png) _Diagram převzat z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram zobrazující transakci v bloku, která způsobuje změny stavu](./tx-block.png) _Diagram převzat z [ilustrace Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Tím, že rozdělujeme potvrzení do jednotlivých intervalů, dáváme všem účastníkům sítě dostatek času k dosažení konsenzu: I když jsou požadavky na transakce zasílány v řádu vyšších desítek za sekundu, bloky jsou na Ethereu vytvářeny a potvrzovány pouze jednou za dvanáct sekund.
 
@@ -33,7 +33,7 @@ Důkaz podílem znamená následující:
 - Ostatní validátoři, kteří se dozvědí o novém bloku, znovu provedou transakce, aby se ujistili, že souhlasí s navrženou změnou globálního stavu. Pokud je blok platný, přidají jej do své vlastní databáze.
 - Pokud validátor obdrží informace o dvou konfliktních blocích pro stejný slot, použije svůj algoritmus pro volbu větve, aby vybral ten, který podpořilo nejvíce uzamčených ETH.
 
-[Více o důkazu podílem](/developers/docs/consensus-mechanisms/pos)
+[Více o důkazu podílem](/developers/docs/consensus-mechanisms/PoS)
 
 ## Co je v bloku? {#block-anatomy}
 
@@ -149,4 +149,4 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 - [Transakce](/developers/docs/transactions/)
 - [Palivo](/developers/docs/gas/)
-- [Důkaz podílem](/developers/docs/consensus-mechanisms/pos)
+- [Důkaz podílem](/developers/docs/consensus-mechanisms/PoS)
