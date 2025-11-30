@@ -7,13 +7,13 @@ alt: "Plán Etherea"
 template: roadmap
 ---
 
-**Ethereum už je velmi bezpečná** a decentralizovaná platforma pro [chytré kontrakty](/glossary/#smart-contract). Nicméně stále je možné ho vylepšit, aby zůstalo odolné vůči jakémukoliv druhu útoků i v daleké budoucnosti. To zahrnuje jemné změny v tom, jak se [klienti na Ethereu](/glossary/#consensus-client) chovají ke konkurenčním [blokům](/glossary/#block), stejně jako zrychlení procesu, kdy síť považuje bloky za [„finalizované“](/developers/docs/consensus-mechanisms/pos/#finality) (což znamená, že je nelze změnit bez extrémních ekonomických ztrát pro útočníka).
+**Ethereum už je velmi bezpečná** a decentralizovaná platforma pro [chytré kontrakty](/glossary/#smart-contract). Nicméně stále je možné ho vylepšit, aby zůstalo odolné vůči jakémukoliv druhu útoků i v daleké budoucnosti. To zahrnuje jemné změny v tom, jak se [klienti na Ethereu](/glossary/#consensus-client) chovají ke konkurenčním [blokům](/glossary/#block), stejně jako zrychlení procesu, kdy síť považuje bloky za [„finalizované“](/developers/docs/consensus-mechanisms/PoS/#finality) (což znamená, že je nelze změnit bez extrémních ekonomických ztrát pro útočníka).
 
-Existují také vylepšení, která ztíží cenzuru transakcí tím, že navrhovatelé bloků nebudou mít přístup k aktuálnímu obsahu svých bloků, a další nové způsoby, jak identifikovat, kdy se klient snaží blockchain cenzorovat. Tyto změny vylepší protokol [důkaz podílem](/glossary/#pos) tak, aby uživatelé – jak jednotlivci, tak firmy – měli okamžitou důvěru v aplikace, data a aktiva na Ethereu.
+Existují také vylepšení, která ztíží cenzuru transakcí tím, že navrhovatelé bloků nebudou mít přístup k aktuálnímu obsahu svých bloků, a další nové způsoby, jak identifikovat, kdy se klient snaží blockchain cenzorovat. Tyto změny vylepší protokol [důkaz podílem](/glossary/#PoS) tak, aby uživatelé – jak jednotlivci, tak firmy – měli okamžitou důvěru v aplikace, data a aktiva na Ethereu.
 
 ## Uzamčení výběrů {#staking-withdrawals}
 
-Přechod z [důkazu prací](/glossary/#pow) na důkaz podílem začal tím, že první uživatelé na Ethereu „uzamkli“ své ETH do depozitního kontraktu. Tyto ETH jsou používány k ochraně sítě. 12. dubna 2023 byla provedena druhá aktualizace, která umožňuje výběr uzamčeného ETH. Od té doby mohou validátoři uzamykat nebo vybírat ETH bez dřívějších omezení.
+Přechod z [důkazu prací](/glossary/#PoW) na důkaz podílem začal tím, že první uživatelé na Ethereu „uzamkli“ své ETH do depozitního kontraktu. Tyto ETH jsou používány k ochraně sítě. 12. dubna 2023 byla provedena druhá aktualizace, která umožňuje výběr uzamčeného ETH. Od té doby mohou validátoři uzamykat nebo vybírat ETH bez dřívějších omezení.
 
 <ButtonLink variant="outline-color" href="/staking/withdrawals/">Další informace o výběrech</ButtonLink>
 
