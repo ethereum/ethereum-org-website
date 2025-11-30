@@ -18,7 +18,7 @@ Veškeré údaje o kontraktu musí být přiřazeny k lokaci: buď do `storage`,
 
 Trvalá data se označují jako storage a jsou reprezentována stavovými proměnnými. Tyto hodnoty se trvale uloží na blockchain. Datový typ je třeba deklarovat, aby kontrakt mohl při kompilaci sledovat, kolik potřebuje na blockchainu úložiště.
 
-```solidity
+```Solidity
 // Solidity example
 contract SimpleStorage {
     uint storedData; // State variable
@@ -49,14 +49,14 @@ Mezi další datové typy patří:
 
 Další vysvětlení najdete v těchto dokumentech:
 
-- [Datové typy ve Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Datové typy v Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Datové typy ve Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.HTML#value-types)
+- [Datové typy v Solidity](https://Solidity.readthedocs.io/en/latest/types.HTML#value-types)
 
 ### Memory {#memory}
 
 Hodnoty, které jsou uloženy pouze po dobu provádění funkce kontraktu, se nazývají paměťové proměnné. Protože nejsou trvale uloženy na blockchainu, je jejich používání mnohem levnější.
 
-Více informací o tom, jak EVM ukládá data (Storage, Memory a Stack), najdete v [dokumentech Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Více informací o tom, jak EVM ukládá data (Storage, Memory a Stack), najdete v [dokumentech Solidity](https://Solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.HTML?highlight=memory#storage-memory-and-the-stack).
 
 ### Proměnné prostředí {#environment-variables}
 
@@ -89,7 +89,7 @@ Funkce i stavové proměnné mohou být veřejné nebo soukromé.
 
 Zde je funkce pro aktualizaci stavové proměnné v kontraktu:
 
-```solidity
+```Solidity
 // Solidity example
 function update_name(string value) public {
     dapp_name = value;
@@ -104,7 +104,7 @@ function update_name(string value) public {
 
 Tyto funkce slibují, že nebudou měnit stav dat kontraktu. Běžným příkladem jsou „getter“ funkce – můžete je použít například k získání zůstatku uživatele.
 
-```solidity
+```Solidity
 // Solidity example
 function balanceOf(address _owner) public view returns (uint256 _balance) {
     return ownerPizzaCount[_owner];
@@ -123,10 +123,10 @@ def readName() -> string:
 Co se považuje jako změna stavu:
 
 1. Zápis do stavových proměnných.
-2. [Odesílání událostí](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
-3. [Vytváření jiných kontraktů](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+2. [Odesílání událostí](https://Solidity.readthedocs.io/en/v0.7.0/contracts.HTML#events).
+3. [Vytváření jiných kontraktů](https://Solidity.readthedocs.io/en/v0.7.0/control-structures.HTML#creating-contracts).
 4. Používání `selfdestruct`.
-5. Posílání etheru pomocí volání.
+5. PoSílání etheru pomocí volání.
 6. Volání jakékoli funkce, která není označena jako `view` nebo `pure`.
 7. Používání nízkoúrovňových volání.
 8. Používání inline assembly, která obsahuje určité operační kódy.
@@ -135,7 +135,7 @@ Co se považuje jako změna stavu:
 
 Funkce `konstruktor` se provedou pouze jednou při prvním nasazení kontraktu. Podobně jako `konstruktory` v mnoha programovacích jazycích založených na třídách, tyto funkce často inicializují stavové proměnné na zadané hodnoty.
 
-```solidity
+```Solidity
 // Solidity example
 // Initializes the contract's data, setting the `owner`
 // to the address of the contract creator.
@@ -143,7 +143,7 @@ constructor() public {
     // All smart contracts rely on external transactions to trigger its functions.
     // `msg` is a global variable that includes relevant data on the given transaction,
     // such as the address of the sender and the ETH value included in the transaction.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.HTML#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
@@ -165,7 +165,7 @@ Kromě proměnných a funkcí, které definujete v kontraktu, existují i speci�
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-Ty umožňují posílat ETH na jiné účty.
+Ty umožňují PoSílat ETH na jiné účty.
 
 ## Psaní funkcí {#writing-functions}
 
@@ -176,8 +176,8 @@ Vaše funkce potřebuje:
 - deklaraci, zda je pure/view/payable
 - datový typ návratové hodnoty (pokud nějakou vrací)
 
-```solidity
-pragma solidity >=0.4.0 <=0.6.0;
+```Solidity
+pragma Solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
     string dapp_name; // state variable
@@ -207,19 +207,19 @@ Události umožňují vašemu chytrému kontraktu komunikovat s vaším frontend
 
 ## Příklady s poznámkami {#annotated-examples}
 
-Zde jsou příklady napsané v Solidity. Pokud si chcete s kódem pohrát, můžete tak udělat v [Remixu](http://remix.ethereum.org).
+Zde jsou příklady napsané v Solidity. Pokud si chcete s kódem pohrát, můžete tak udělat v [Remixu](http://remix.Ethereum.org).
 
 ### Ahoj světe {#hello-world}
 
-```solidity
+```Solidity
 // Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.5.10;
+// Learn more: https://Solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.HTML#pragma
+pragma Solidity ^0.5.10;
 
 // Defines a contract named `HelloWorld`.
 // A contract is a collection of functions and data (its state).
 // Once deployed, a contract resides at a specific address on the Ethereum blockchain.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Learn more: https://Solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.HTML
 contract HelloWorld {
 
     // Declares a state variable `message` of type `string`.
@@ -231,7 +231,7 @@ contract HelloWorld {
     // Similar to many class-based object-oriented languages, a constructor is
     // a special function that is only executed upon contract creation.
     // Constructors are used to initialize the contract's data.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#constructors
     constructor(string memory initMessage) public {
         // Accepts a string argument `initMessage` and sets the value
         // into the contract's `message` storage variable).
@@ -248,23 +248,23 @@ contract HelloWorld {
 
 ### Token {#token}
 
-```solidity
-pragma solidity ^0.5.10;
+```Solidity
+pragma Solidity ^0.5.10;
 
 contract Token {
     // An `address` is comparable to an email address - it's used to identify an account on Ethereum.
     // Addresses can represent a smart contract or an external (user) accounts.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/types.HTML#address
     address public owner;
 
     // A `mapping` is essentially a hash table data structure.
     // This `mapping` assigns an unsigned integer (the token balance) to an address (the token holder).
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/types.HTML#mapping-types
     mapping (address => uint) public balances;
 
     // Events allow for logging of activity on the blockchain.
     // Ethereum clients can listen for events in order to react to contract state changes.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#events
     event Transfer(address from, address to, uint amount);
 
     // Initializes the contract's data, setting the `owner`
@@ -273,7 +273,7 @@ contract Token {
         // All smart contracts rely on external transactions to trigger its functions.
         // `msg` is a global variable that includes relevant data on the given transaction,
         // such as the address of the sender and the ETH value included in the transaction.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.HTML#block-and-transaction-properties
         owner = msg.sender;
     }
 
@@ -282,7 +282,7 @@ contract Token {
         // `require` is a control structure used to enforce certain conditions.
         // If a `require` statement evaluates to `false`, an exception is triggered,
         // which reverts all changes made to the state during the current call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/control-structures.HTML#error-handling-assert-require-revert-and-exceptions
 
         // Only the contract owner can call this function
         require(msg.sender == owner, "You are not the owner.");
@@ -311,12 +311,12 @@ contract Token {
 
 ### Unikátní digitální aktivum {#unique-digital-asset}
 
-```solidity
-pragma solidity ^0.5.10;
+```Solidity
+pragma Solidity ^0.5.10;
 
 // Imports symbols from other files into the current contract.
 // In this case, a series of helper contracts from OpenZeppelin.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// Learn more: https://Solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.HTML#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
@@ -325,7 +325,7 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
 // The `is` keyword is used to inherit functions and keywords from external contracts.
 // In this case, `CryptoPizza` inherits from the `IERC721` and `ERC165` contracts.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Uses OpenZeppelin's SafeMath library to perform arithmetic operations safely.
     // Learn more: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
@@ -333,13 +333,13 @@ contract CryptoPizza is IERC721, ERC165 {
 
     // Constant state variables in Solidity are similar to other languages
     // but you must assign from an expression which is constant at compile time.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
     // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/types.HTML#structs
     struct Pizza {
         string name;
         uint256 dna;
@@ -364,17 +364,17 @@ contract CryptoPizza is IERC721, ERC165 {
     function _createPizza(string memory _name, uint256 _dna)
         // The `internal` keyword means this function is only visible
         // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#visibility-and-getters
         internal
         // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.HTML#function-modifiers
         isUnique(_name, _dna)
     {
         // Adds Pizza to array of Pizzas and get id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/control-structures.HTML#error-handling-assert-require-revert-and-exceptions
 
         // note that address(0) is the zero address,
         // indicating that pizza[id] is not yet allocated to a particular user.
@@ -399,7 +399,7 @@ contract CryptoPizza is IERC721, ERC165 {
     function generateRandomDna(string memory _str, address _owner)
         public
         // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#pure-functions
         pure
         returns (uint256)
     {
@@ -414,13 +414,13 @@ contract CryptoPizza is IERC721, ERC165 {
     function getPizzasByOwner(address _owner)
         public
         // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#view-functions
         view
         returns (uint256[] memory)
     {
         // Uses the `memory` storage location to store values only for the
         // lifecycle of this function call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.HTML#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -598,7 +598,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Disable solium check because of
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://GitHub.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -626,7 +626,7 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
+        // See https://Ethereum.stackexchange.com/a/14016/36603
         // for more details about how this works.
         // TODO Check this again before the Serenity release, because all addresses will be
         // contracts then.
@@ -643,7 +643,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
 Kompletní přehled chytrých kontraktů najdete v dokumentaci Solidity a Vyper:
 
-- [Solidity](https://solidity.readthedocs.io/)
+- [Solidity](https://Solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
 ## Související témata {#related-topics}
@@ -655,4 +655,4 @@ Kompletní přehled chytrých kontraktů najdete v dokumentaci Solidity a Vyper:
 
 - [Zmenšování kontraktů pro boj s limitem velikosti kontraktu](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– několik praktických tipů pro zmenšení velikosti vašeho chytrého kontraktu._
 - [Zaznamenávání dat z chytrých kontraktů pomocí událostí](/developers/tutorials/logging-events-smart-contracts/) _– úvod do událostí chytrých kontraktů a jak je můžete použít k zaznamenávání dat._
-- [Interagujte s dalšími kontrakty ze Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním._
+- [Interagujte s dalšími kontrakty ze Solidity](/developers/tutorials/interact-with-other-contracts-from-Solidity/) _– jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním._
