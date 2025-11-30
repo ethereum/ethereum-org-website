@@ -36,7 +36,7 @@ Kryptoměny byly vyvinuty jako nástroj pro uskutečňování soukromých peer-t
 
 Existují specifické „kryptoměny na ochranu soukromí“ určené pro zcela anonymní transakce. Blockchainy zaměřené na soukromí, jako jsou Zcash a Monero, neuvádí podrobnosti o transakci, včetně adres odesílatele/příjemce, typu finančních prostředků, množství a časové osy transakce.
 
-Díky zahrnutí technologie nulové znalosti umožňují [blockchainové](/glossary/#blockchain) sítě, které se zaměřují na soukromí, [síťovým uzlům](/glossary/#node) ověřovat transakce bez nutnosti přístupu k datům transakcí. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) je příkladem navrženého návrhu, který umožní nativní soukromé převody hodnoty v blockchainu Etherea. Takové návrhy je však obtížné realizovat kvůli kombinaci bezpečnostních, regulačních a uživatelských obav.
+Díky zahrnutí technologie nulové znalosti umožňují [blockchainové](/glossary/#blockchain) sítě, které se zaměřují na soukromí, [síťovým uzlům](/glossary/#node) ověřovat transakce bez nutnosti přístupu k datům transakcí. [EIP-7503](https://eips.Ethereum.org/EIPS/EIP-7503) je příkladem navrženého návrhu, který umožní nativní soukromé převody hodnoty v blockchainu Etherea. Takové návrhy je však obtížné realizovat kvůli kombinaci bezpečnostních, regulačních a uživatelských obav.
 
 **Důkazy s nulovými znalostmi se také používají při anonymizaci transakcí na veřejných blockchainech.** Příkladem je Tornado Cash, decentralizovaná služba bez třetí strany, která uživatelům umožňuje provádět soukromé transakce na Ethereu. Tornado Cash používá důkazy s nulovou znalostí ke skrytí podrobností o transakcích a k zajištění finančního soukromí. Bohužel, protože se jedná o "opt-in" nástroje ochrany osobních údajů, jsou spojovány s nezákonnou činností. Pro vyřešení tohoto problému je třeba, aby se soukromí stalo výchozím nastavením veřejných blockchainů.
 
@@ -110,7 +110,7 @@ Používání MACI _vyžaduje_ víru, že se koordinátor nedomluví s úplatká
 
 Ale v případech, kdy je koordinátor čestný, MACI představuje mocný nástroj pro zaručení poctivosti hlasování na blockchainu. To vysvětluje jeho popularitu mezi aplikacemi kvadratického financování (např. [clr.fund](https://clr.fund/#/about/maci)), které do značné míry spoléhají na nedotknutelnost volby každého jednotlivce.
 
-[Zjistěte více o MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Zjistěte více o MACI](https://privacy-scaling-explorations.GitHub.io/maci/).
 
 ## Jak důkazy s nulovou znalostí fungují? {#how-do-zero-knowledge-proofs-work}
 
@@ -209,6 +209,6 @@ ZK-STARK je považován za imunní vůči hrozbě kvantových počítačů, prot
 - [Důkaz s nulovou znalostí: Zlepšení soukromí na blockchainu](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) – _Dmitrij Lavrenov_
 - [zk-SNARKs — Realistický příklad použití nulových znalostí, který jde do hloubky](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs — Vytvořte ověřitelnou důvěru, odolnou dokonce i proti kvantovým počítačům](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Přibližné úvod k tomu, jak fungují zk-SNARKy](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Přibližné úvod k tomu, jak fungují zk-SNARKy](https://vitalik.ETH.limo/general/2021/01/26/snarks.HTML) — _Vitalik Buterin_
 - [Proč je Zero Knowledge Proof (ZKP) zásadní změnou pro samostatnou identitu](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 vysvětleno: Povolení soukromých převodů na Ethereu pomocí důkazů nulové znalosti](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 vysvětleno: Povolení soukromých převodů na Ethereu pomocí důkazů nulové znalosti](https://research.2077.xyz/EIP-7503-zero-knowledge-wormholes-for-private-Ethereum-transactions#introduction) — _Emmanuel Awosika_
