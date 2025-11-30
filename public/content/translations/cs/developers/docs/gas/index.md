@@ -19,7 +19,7 @@ Jelikož každá transakce na Ethereu potřebuje výpočetní zdroje k jejímu p
 
 Poplatek za palivo je **množství paliva použitého k provedení určité operace, vynásobené nákladem na jednotku paliva**. Poplatek je zaplacen bez ohledu na to, zda je transakce úspěšně realizována, nebo selže.
 
-![Diagram znázorňující, kde je potřeba palivo pro EVM operace](./gas.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram znázorňující, kde je potřeba palivo pro EVM operace](./gas.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Poplatky za palivo musí být zaplaceny v nativní měně Etherea, etheru (ETH). Ceny paliva jsou obvykle uváděny v gwei, což je denominace ETH. Každý gwei je roven jedné miliardtině ETH (0,000000001 ETH nebo 10<sup>-9</sup> ETH).
 
@@ -100,7 +100,7 @@ Stručně řečeno, poplatky za palivo pomáhají udržovat bezpečnost sítě E
 
 Ačkoliv transakce obsahuje limit, palivo nevyužité během transakce se vrací uživateli (tj. `maximální poplatek - (základní polatek + spropitné)` se vrací).
 
-![Diagram ukazující vrácení nepoužitého paliva](../transactions/gas-tx.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram ukazující vrácení nepoužitého paliva](../transactions/gas-tx.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Co je to limit paliva? {#what-is-gas-limit}
 
@@ -124,7 +124,7 @@ Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za 
 
 - [Etherscan](https://etherscan.io/gastracker) – _odhad ceny paliva za transakci_
 - [ETH tracker paliva](https://www.ethgastracker.com/) _Monitorujte a sledujte ceny paliva na Ethereu a vrstvě 2, abyste snížili transakční poplatky a ušetřili peníze_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) – _rozšíření pro prohlížeč Chrome odhadující poplatky za palivo, které podporuje jak typ 0 legacy transakce, tak typ 2 transakce EIP-1559_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-ETH-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) – _rozšíření pro prohlížeč Chrome odhadující poplatky za palivo, které podporuje jak typ 0 legacy transakce, tak typ 2 transakce EIP-1559_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) – _kalkulačka poplatků za palivo v místní měně pro různé typy transakcí na hlavní síti, Arbitru a Polygonu_
 
 ## Související nástroje {#related-tools}
@@ -135,7 +135,7 @@ Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za 
 
 - [Vysvětlení paliva na Ethereu](https://defiprime.com/gas)
 - [Snížení spotřeby paliva ve vašich chytrých kontraktech](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Strategie optimalizace paliva pro vývojáře](https://www.alchemy.com/overviews/solidity-gas-optimization)
-- [Dokumentace EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)
+- [Strategie optimalizace paliva pro vývojáře](https://www.alchemy.com/overviews/Solidity-gas-optimization)
+- [Dokumentace EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559)
 - [Zdroje k EIP-1559 od Tima Beika](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Oddělování mechanismů od memů](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Oddělování mechanismů od memů](https://web.archive.org/web/20241126205908/https://research.2077.xyz/EIP-1559-separating-mechanisms-from-memes)
