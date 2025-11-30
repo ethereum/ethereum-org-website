@@ -111,7 +111,7 @@ Jakmile některá ze stran vyvolá on-chain systém řešení sporů, druhá str
 
 Ať už je situace jakákoliv, uživatelé kanálu mají vždy silné záruky finálnosti: Pokud je přechod stavu, který mají k dispozici, podepsán všemi členy a je to nejnovější aktualizace, má stejnou finálnost jako běžná on-chain transakce. Stále musí na řetězci vyzvat druhou stranu, ale jediným možným výsledkem je finalizace posledního platného stavu, který drží.
 
-### Jak stavové kanály interagují s Ethereem? {#how-do-state-channels-interact-with-ethereum}
+### Jak stavové kanály interagují s Ethereem? {#how-do-state-channels-interact-with-Ethereum}
 
 Ačkoli existují jako off-chain protokoly, stavové kanály mají on-chain komponentu: chytrý kontrakt nasazený na Ethereu při otevření kanálu. Tento kontrakt kontroluje aktiva vložená do kanálu, ověřuje aktualizace stavu a řeší spory mezi účastníky.
 
@@ -235,7 +235,7 @@ I když to usnadňuje úvahy o stavových kanálech, omezuje to užitečnost ná
 
 ### Zpracování paralelních transakcí {#parallel-transaction-processing}
 
-Účastníci stavového kanálu posílají aktualizace stavu postupně, což je důvod, proč nejlépe fungují pro „aplikace založené na střídání tahů“ (např. šachová hra pro dva hráče). To eliminuje potřebu zpracovávat současné aktualizace stavu a snižuje zátěž, kterou on-chain kontrakt musí zvládnout, aby potrestal ty, kteří zveřejňují zastaralé aktualizace. Vedlejším efektem tohoto návrhu však je, že transakce jsou na sobě závislé, což zvyšuje latenci a zhoršuje celkový uživatelský zážitek.
+Účastníci stavového kanálu PoSílají aktualizace stavu postupně, což je důvod, proč nejlépe fungují pro „aplikace založené na střídání tahů“ (např. šachová hra pro dva hráče). To eliminuje potřebu zpracovávat současné aktualizace stavu a snižuje zátěž, kterou on-chain kontrakt musí zvládnout, aby potrestal ty, kteří zveřejňují zastaralé aktualizace. Vedlejším efektem tohoto návrhu však je, že transakce jsou na sobě závislé, což zvyšuje latenci a zhoršuje celkový uživatelský zážitek.
 
 Některé stavové kanály řeší tento problém pomocí „full-duplex“ návrhu, který rozděluje off-chain stav na dva jednosměrné „simplexní“ stavy, což umožňuje souběžné aktualizace stavu. Takové návrhy zlepšují propustnost mimo řetězec a snižují zpoždění transakcí.
 
@@ -255,7 +255,7 @@ Několik projektů poskytuje implementace stavových kanálů, které můžete i
 
 - [Porozumění škalovacím řešením na vrstvě 2 Etherea: Stavové kanály, Plasma a Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. února 2018_
 - [Stavové kanály - vysvětlení](https://www.jeffcoleman.ca/state-channels/) _6. listopadu 2015 – Jeff Coleman_
-- [Základy stavových kanálů](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Základy stavových kanálů](https://education.district0x.io/general-topics/understanding-Ethereum/basics-state-channels/) _District0x_
 - [Stavové kanály na blockchainu: Špička blockchainu](https://ieeexplore.ieee.org/document/9627997)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
