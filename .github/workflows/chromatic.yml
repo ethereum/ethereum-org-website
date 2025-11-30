@@ -17,7 +17,7 @@ jobs:
     # Job steps
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           # Tells the checkout which commit hash to reference
