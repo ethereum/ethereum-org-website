@@ -8,15 +8,15 @@ Transakce jsou kryptograficky podepsané instrukce poslané z účtů. Účet za
 
 ## Předpoklady {#prerequisites}
 
-Abyste této stránce lépe porozuměli, doporučujeme vám si nejprve přečíst sekci [Účty](/developers/docs/accounts/) a náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
+Abyste této stránce lépe porozuměli, doporučujeme vám si nejprve přečíst sekci [Účty](/developers/docs/accounts/) a náš [úvod do Etherea](/developers/docs/intro-to-Ethereum/).
 
 ## Co je to transakce? {#whats-a-transaction}
 
 Transakce na Ethereu odkazuje na akci zahájenou externě vlastněným účtem, jinými slovy účtem spravovaným člověkem, nikoliv kontraktem. Např. pokud Bob pošle Alici 1 ETH, zůstatek na Bobově účtu musí být snížen a Alicin musí být navýšen. Tato akce mění stav sítě a probíhá v rámci transakce.
 
-![Diagram ukazující, jak transakce způsobí změnu stavu](./tx.png) _Diagram převzat z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram ukazující, jak transakce způsobí změnu stavu](./tx.png) _Diagram převzat z [ilustrace Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Transakce, které mění stav EVM, musí být posílány do celé sítě. Jakýkoliv uzel může vyslat požadavek na provedení transakce na EVM. Poté validátor provede transakci a výslednou změnu stavu sdílí do zbytku sítě.
+Transakce, které mění stav EVM, musí být PoSílány do celé sítě. Jakýkoliv uzel může vyslat požadavek na provedení transakce na EVM. Poté validátor provede transakci a výslednou změnu stavu sdílí do zbytku sítě.
 
 Transakce vyžadují poplatek a musí být zahrnuty do validovaného bloku. Abychom tento přehled zjednodušili, poplatkům za palivo a validaci se věnujeme jinde.
 
@@ -110,7 +110,7 @@ Většina transakcí putuje do kontraktu z externě vlastněného účtu. Větš
 
 První čtyři bajty specifikují, která funkce se má zavolat, pomocí hashe názvu funkce a jejích argumentů. Někdy můžete identifikovat funkci pomocí selektoru s využitím [této databáze](https://www.4byte.directory/signatures/).
 
-Zbytek calldat jsou argumenty, [zakódované podle specifikace ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Zbytek calldat jsou argumenty, [zakódované podle specifikace ABI](https://docs.soliditylang.org/en/latest/abi-spec.HTML#formal-specification-of-the-encoding).
 
 Např. se podívejme na [tuto transakci](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). K zobrazení calldat použijte možnost **„Click to see More“**.
 
@@ -154,7 +154,7 @@ Základní poplatek **0,00399 ETH** bude spálen.
 Validátor si ponechá spropitné ve výši **0,000210 ETH**.
 
 
-![Diagram ukazující vrácení nepoužitého paliva](./gas-tx.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram ukazující vrácení nepoužitého paliva](./gas-tx.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Jakékoliv palivo, které nebude v transakci použito, bude vráceno na účet odesílatele.
 
@@ -162,7 +162,7 @@ Jakékoliv palivo, které nebude v transakci použito, bude vráceno na účet o
 
 Palivo je potřeba pro jakoukoliv transakci, která zahrnuje chytrý kontrakt.
 
-Chytré kontrakty mohou také obsahovat funkce známé jako [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) nebo [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), které nemění stav kontraktu. Volání těchto funkcí z externě vlastněného účtu tedy nevyžaduje žádné palivo. Základní RPC volání pro tento scénář je [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Chytré kontrakty mohou také obsahovat funkce známé jako [`view`](https://docs.soliditylang.org/en/latest/contracts.HTML#view-functions) nebo [`pure`](https://docs.soliditylang.org/en/latest/contracts.HTML#pure-functions), které nemění stav kontraktu. Volání těchto funkcí z externě vlastněného účtu tedy nevyžaduje žádné palivo. Základní RPC volání pro tento scénář je [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
 Na rozdíl od volání pomocí `eth_call` jsou tyto funkce `view` nebo `pure` často volány interně (tj. z kontraktu samotného nebo z jiného kontraktu), což stojí palivo.
 
@@ -187,9 +187,9 @@ Ethereum původně mělo pro transakce jen jeden formát. Každá transakce obsa
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum se vyvinulo tak, aby podporovalo více typů transakcí a umožnilo implementaci nových funkcí, jako jsou seznamy přístupu a [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), aniž by to ovlivnilo starší formáty transakcí.
+Ethereum se vyvinulo tak, aby podporovalo více typů transakcí a umožnilo implementaci nových funkcí, jako jsou seznamy přístupu a [EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559), aniž by to ovlivnilo starší formáty transakcí.
 
-[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) toto chování umožňuje. Transakce jsou interpretovány takto:
+[EIP-2718](https://eips.Ethereum.org/EIPS/EIP-2718) toto chování umožňuje. Transakce jsou interpretovány takto:
 
 `TransactionType || TransactionPayload`
 
@@ -200,17 +200,17 @@ Kde jsou pole definována jako:
 
 Na základě hodnoty `TransactionType` může být transakce klasifikována jako:
 
-1. **Transakce typu 0 (Legacy):** Původní formát transakce používaný od spuštění Etherea. Neobsahuje funkce z [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), jako je dynamický výpočet poplatků za palivo nebo seznamy přístupu pro chytré kontrakty. Legacy transakce nemají specifický prefix označující jejich typ ve svém serializovaném formátu, začínají bajtem `0xf8` při použití kódování [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp). Hodnota TransactionType pro tyto transakce je `0x0`.
+1. **Transakce typu 0 (Legacy):** Původní formát transakce používaný od spuštění Etherea. Neobsahuje funkce z [EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559), jako je dynamický výpočet poplatků za palivo nebo seznamy přístupu pro chytré kontrakty. Legacy transakce nemají specifický prefix označující jejich typ ve svém serializovaném formátu, začínají bajtem `0xf8` při použití kódování [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp). Hodnota TransactionType pro tyto transakce je `0x0`.
 
-2. **Transakce typu 1**: Ty byly zavedeny v [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) jako součást [vylepšení Berlín](/ethereum-forks/#berlin) a zahrnují parametr `accessList`. Tento seznam specifikuje adresy a klíče úložiště, které by měla transakce kontaktovat, což může potenciálně snížit náklady na [palivo](/developers/docs/gas/) pro složité transakce zahrnující chytré kontrakty. Změny v tržním mechanismu poplatků podle EIP-1559 nejsou v transakcích typu 1 zahrnuty. Transakce typu 1 také obsahují parametr `yParity`, který může být buď `0x0` nebo `0x1`, což označuje paritu hodnoty y v podpisu secp256k1. Tyto transakce jsou identifikovány začátkem bajtu `0x01` a jejich hodnota TransactionType je `0x1`.
+2. **Transakce typu 1**: Ty byly zavedeny v [EIP-2930](https://eips.Ethereum.org/EIPS/EIP-2930) jako součást [vylepšení Berlín](/Ethereum-forks/#berlin) a zahrnují parametr `accessList`. Tento seznam specifikuje adresy a klíče úložiště, které by měla transakce kontaktovat, což může potenciálně snížit náklady na [palivo](/developers/docs/gas/) pro složité transakce zahrnující chytré kontrakty. Změny v tržním mechanismu poplatků podle EIP-1559 nejsou v transakcích typu 1 zahrnuty. Transakce typu 1 také obsahují parametr `yParity`, který může být buď `0x0` nebo `0x1`, což označuje paritu hodnoty y v podpisu secp256k1. Tyto transakce jsou identifikovány začátkem bajtu `0x01` a jejich hodnota TransactionType je `0x1`.
 
-3. **Transakce typu 2**, běžně označovány jako transakce podle EIP-1559, byly zavedeny v [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) v rámci [vylepšení Londýn](/ethereum-forks/#london). Staly se standardním typem transakcí na Ethereu. Tyto transakce zavádějí nový mechanismus trhu s poplatky, který zlepšuje předvídatelnost rozdělením poplatku za transakci na základní poplatek a prioritní poplatek. Začínají bajtem `0x02` a zahrnují pole, jako je `maxPriorityFeePerGas` a `maxFeePerGas`. Transakce typu 2 jsou nyní výchozí díky své flexibilitě a efektivitě, zejména v obdobích vysokého zatížení sítě, protože uživatelům umožňují lépe plánovat poplatky za transakce. Hodnota TransactionType pro tyto transakce je `0x2`.
+3. **Transakce typu 2**, běžně označovány jako transakce podle EIP-1559, byly zavedeny v [EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559) v rámci [vylepšení Londýn](/Ethereum-forks/#london). Staly se standardním typem transakcí na Ethereu. Tyto transakce zavádějí nový mechanismus trhu s poplatky, který zlepšuje předvídatelnost rozdělením poplatku za transakci na základní poplatek a prioritní poplatek. Začínají bajtem `0x02` a zahrnují pole, jako je `maxPriorityFeePerGas` a `maxFeePerGas`. Transakce typu 2 jsou nyní výchozí díky své flexibilitě a efektivitě, zejména v obdobích vysokého zatížení sítě, protože uživatelům umožňují lépe plánovat poplatky za transakce. Hodnota TransactionType pro tyto transakce je `0x2`.
 
 
 
 ## Další informace {#further-reading}
 
-- [EIP-2718: Typizovaná transakční obálka](https://eips.ethereum.org/EIPS/eip-2718)
+- [EIP-2718: Typizovaná transakční obálka](https://eips.Ethereum.org/EIPS/EIP-2718)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
