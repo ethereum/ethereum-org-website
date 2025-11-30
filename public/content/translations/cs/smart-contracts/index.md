@@ -8,7 +8,7 @@ lang: cs
 
 Chytré kontrakty jsou základními stavebními kameny aplikační vrstvy Etherea. Jsou to počítačové programy uložené na [blockchainu](/glossary/#blockchain), které se řídí logikou „jestli tohle, tak tamto“ a je zaručeno, že se spouštějí podle pravidel definovaných svým kódem, který po vytvoření nelze měnit.
 
-Nick Szabo zavedl termín „chytrý kontrakt“. V roce 1994 napsal [úvod do tohoto konceptu](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) a v roce 1996 napsal [výzkum činností, které by chytré kontrakty mohly dělat](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo zavedl termín „chytrý kontrakt“. V roce 1994 napsal [úvod do tohoto konceptu](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.HTML) a v roce 1996 napsal [výzkum činností, které by chytré kontrakty mohly dělat](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.HTML).
 
 Szabo popsal digitální tržiště, kde automatické, [kryptografií zabezpečené](/glossary/#cryptography), procesy umožňují provádění transakcí a obchodních funkcí bez důvěryhodných zprostředkovatelů. Chytré kontrakty na Ethereu tuto vizi uvedly do praxe.
 
@@ -64,11 +64,11 @@ A konečně, stejně jako v případě tradičních kontraktů, můžete prozkou
 
 Chytré kontrakty umí v podstatě cokoli, co umí počítačové programy.
 
-Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glossary/#nft), odesílat komunikaci a dokonce generovat grafiku. Zde jsou některé reálné populární příklady:
+Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glossary/#NFT), odesílat komunikaci a dokonce generovat grafiku. Zde jsou některé reálné populární příklady:
 
 - [Stablecoiny](/stablecoins/)
-- [Vytváření a distribuce jedinečných digitálních majetků](/nft/)
-- [Automatická otevřená směnárna](/get-eth/#dex)
+- [Vytváření a distribuce jedinečných digitálních majetků](/NFT/)
+- [Automatická otevřená směnárna](/get-ETH/#dex)
 - [Decentralizované počítačové hry](/apps/categories/gaming)
 - [Pojistná smlouva, která automaticky vyplatí plnění](https://etherisc.com/)
 - [Standard, který umožňuje vytvářet interoperabilní měny dle konkrétních požadavků](/developers/docs/standards/tokens/)
@@ -79,4 +79,4 @@ Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glos
 - [Chytré kontrakty: Blockchainová technologie, která nahradí právníky](https://blockgeeks.com/guides/smart-contracts/)
 - [Chytré kontrakty pro vývojáře](/developers/docs/smart-contracts/)
 - [Naučte se psát chytré kontrakty](/developers/learning-tools/)
-- [Pochopení Etherea – Co je chytrý kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Pochopení Etherea – Co je chytrý kontrakt?](https://GitHub.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-Solidity.asciidoc#what-is-a-smart-contract)
