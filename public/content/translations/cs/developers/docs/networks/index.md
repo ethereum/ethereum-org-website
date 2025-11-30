@@ -10,19 +10,19 @@ Váš účet na Ethereu bude fungovat na různých sítích, ale zůstatek na ú
 
 ## Předpoklady {#prerequisites}
 
-Předtím, než se začnete zabývat různými sítěmi, byste měli rozumět [základům Etherea](/developers/docs/intro-to-ethereum/), protože testovací sítě vám poskytnou levnou a bezpečnou verzi Etherea pro experimentování.
+Předtím, než se začnete zabývat různými sítěmi, byste měli rozumět [základům Etherea](/developers/docs/intro-to-Ethereum/), protože testovací sítě vám poskytnou levnou a bezpečnou verzi Etherea pro experimentování.
 
 ## Veřejné sítě {#public-networks}
 
 Veřejné sítě jsou přístupné komukoliv na světě s připojením k internetu. Každý může číst nebo vytvářet transakce na veřejném blockchainu a ověřovat prováděné transakce. Konsenzus mezi síťovými uzly rozhoduje o zahrnutí transakcí a stavu sítě.
 
-### Hlavní síť Ethereum {#ethereum-mainnet}
+### Hlavní síť Ethereum {#Ethereum-mainnet}
 
 Hlavní síť je primární veřejný produkční blockchain Etherea, kde dochází k transakcím s reálnou hodnotou na distribuované účetní knize.
 
 Když veřejnost nebo burzy diskutují o cenách ETH, mluví o ETH na hlavní síti.
 
-### Testovací sítě Etherea {#ethereum-testnets}
+### Testovací sítě Etherea {#Ethereum-testnets}
 
 Kromě hlavní sítě existují veřejné testovací sítě. Tyto sítě používají vývojáři protokolu nebo chytrých kontraktů k testování jak vylepšení protokolu, tak potenciálních chytrých kontraktů v prostředí podobném produkčnímu prostředí, než budou nasazeny na hlavní síť. Můžete si je představit jako analogii mezi produkčním a testovacím serverem.
 
@@ -47,21 +47,21 @@ Dvě veřejné testovací sítě, které aktuálně udržují vývojáři klient
 ##### Zdroje
 
 - [Web](https://sepolia.dev/)
-- [GitHub](https://github.com/eth-clients/sepolia)
+- [GitHub](https://GitHub.com/ETH-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
-- [Blockscout](https://eth-sepolia.blockscout.com/)
+- [Blockscout](https://ETH-sepolia.blockscout.com/)
 
 ##### Faucety
 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/Ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Ethereum Ecosystem faucet](https://www.Ethereum-ecosystem.com/faucets/Ethereum-sepolia)
 
 #### Hoodi {#hoodi}
 
@@ -74,7 +74,7 @@ Hoodi je testovací síť pro testování validace a uzamčení. Síť Hoodi je 
 ##### Zdroje
 
 - [Web](https://hoodi.ethpandaops.io/)
-- [GitHub](https://github.com/eth-clients/hoodi)
+- [GitHub](https://GitHub.com/ETH-clients/hoodi)
 - [Explorer](https://explorer.hoodi.ethpandaops.io/)
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
@@ -82,7 +82,7 @@ Hoodi je testovací síť pro testování validace a uzamčení. Síť Hoodi je 
 
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-Ke spuštění validátoru na testovací síti Hoodi použijte [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
+Ke spuštění validátoru na testovací síti Hoodi použijte [Hoodi launchpad](https://hoodi.launchpad.Ethereum.org/en/).
 
 ### Testovací sítě druhé vrstvy {#layer-2-testnets}
 
@@ -133,9 +133,9 @@ Pokud je veřejná síť Etherea jako veřejný internet, konsorciová síť je 
 ## Související nástroje {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _– seznam EVM sítí pro připojení peněženek a poskytovatelů k odpovídajícímu Chain ID a Network ID_
-- [EVM-based Chains](https://github.com/ethereum-lists/chains) _– repozitář na GitHubu obsahující metadata řetězců, která napájí Chainlist_
+- [EVM-based Chains](https://GitHub.com/Ethereum-lists/chains) _– repozitář na GitHubu obsahující metadata řetězců, která napájí Chainlist_
 
 ## Další informace {#further-reading}
 
-- [Návrh: Předvídatelný životní cyklus testovací sítě Etherea](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
-- [Vývoj testovacích sítí Etherea](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
+- [Návrh: Předvídatelný životní cyklus testovací sítě Etherea](https://Ethereum-magicians.org/t/proposal-predictable-Ethereum-testnet-lifecycle/11575/17)
+- [Vývoj testovacích sítí Etherea](https://etherworld.co/2022/08/19/the-evolution-of-Ethereum-testnet/)
