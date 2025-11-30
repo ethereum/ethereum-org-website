@@ -14,7 +14,7 @@ Blockchain je veřejná databáze, která je aktualizována a sdílena mnoha po�
 
 Každý počítač v síti musí souhlasit s každým novým blokem a řetězcem jako celkem. Tyto počítače jsou známé jako „uzly“. Tyto uzly zajišťují, že všichni, kdo interagují s blockchainem, mají stejná data. K dosažení tohoto distribuovaného souhlasu blockchainy potřebují mechanismus konsenzu.
 
-Ethereum používá [mechanismus konsenzu založený na důkazu podílem](/developers/docs/consensus-mechanisms/pos/). Každý, kdo chce přidat nové bloky do řetězce, musí uzamknout ETH – nativní měnu v Ethereu – jako záruku a spustit validační software. Tito „validátoři“ mohou být pak náhodně vybráni k navržení bloků, které ostatní validátoři zkontrolují a přidají na blockchain. Existuje systém odměn a trestů, který silně motivuje účastníky, aby byli poctiví a co nejvíce online.
+Ethereum používá [mechanismus konsenzu založený na důkazu podílem](/developers/docs/consensus-mechanisms/PoS/). Každý, kdo chce přidat nové bloky do řetězce, musí uzamknout ETH – nativní měnu v Ethereu – jako záruku a spustit validační software. Tito „validátoři“ mohou být pak náhodně vybráni k navržení bloků, které ostatní validátoři zkontrolují a přidají na blockchain. Existuje systém odměn a trestů, který silně motivuje účastníky, aby byli poctiví a co nejvíce online.
 
 Pokud se chcete podívat, jak jsou blockchainová data hashována a následně přidávána k historii odkazů bloků, podívejte se na [tuto ukázku](https://andersbrownworth.com/blockchain/blockchain) od Anderse Brownwortha na videu níže.
 
@@ -22,7 +22,7 @@ Podívejte se, jak Anders vysvětluje hashe na blockchainech:
 
 <YouTube id="_160oMzblY8" />
 
-## Co je to Ethereum? {#what-is-ethereum}
+## Co je to Ethereum? {#what-is-Ethereum}
 
 Ethereum je blockchain s integrovaným počítačem. Je základem pro budování aplikací a organizací decentralizovaným, cenzuře odolným způsobem bez nutnosti dovolovat se třetí strany.
 
@@ -44,7 +44,7 @@ ETH se také používá k zajištění kryptografické bezpečnosti sítě třem
 
 ## Co to jsou chytré kontrakty? {#what-are-smart-contracts}
 
-V praxi účastníci nepíší nový kód pokaždé, když chtějí požádat o výpočet na EVM. Místo toho vývojáři aplikací nahrají programy (znovu použitelné úryvky kódu) do stavu EVM a uživatelé posílají požadavky na provedení těchto úryvků kódu s různými parametry. Tyto programy, které jsou nahrány do sítě a touto sítí také vykonávány, nazýváme chytré kontrakty.
+V praxi účastníci nepíší nový kód pokaždé, když chtějí požádat o výpočet na EVM. Místo toho vývojáři aplikací nahrají programy (znovu použitelné úryvky kódu) do stavu EVM a uživatelé PoSílají požadavky na provedení těchto úryvků kódu s různými parametry. Tyto programy, které jsou nahrány do sítě a touto sítí také vykonávány, nazýváme chytré kontrakty.
 
 Na základní úrovni si můžete chytrý kontrakt představit jako druh automatu: Skript, který při volání s určitými parametry, pokud jsou splněny určité podmínky, provádí nějaké akce nebo výpočet. Např. jednoduchý vydávající chytrý kontrakt by mohl vytvořit a přiřadit vlastnictví digitálního aktiva, pokud volající pošle ETH konkrétnímu příjemci.
 
@@ -58,7 +58,7 @@ Díky chytrým kontraktům mohou vývojáři budovat a spouštět libovolně slo
 
 Sekvence všech bloků, které byly historicky přidány na síť Ethereum. Toto pojmenování odráží, že každý blok obsahuje odkaz na předchozí blok, což nám pomáhá udržovat pořadí všech bloků (a tedy přesnou historii).
 
-### ETH {#eth}
+### ETH {#ETH}
 
 **Ether (ETH)** je nativní kryptoměna Etherea. Uživatelé platí ETH jiným uživatelům, aby byly splněny jejich požadavky na vykonání kódu.
 
@@ -107,10 +107,10 @@ Znovu použitelný úryvek kódu (program), který vývojář nahraje do stavu E
 ## Další četba {#further-reading}
 
 - [Oficiální dokumenty Ethereum](/whitepaper/)
-- [Jak vlastně Ethereum funguje?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**Poznámka**: Tento zdroj je stále užitečný, ale vezměte na vědomí, že předchází [Sloučení](/roadmap/merge), a proto stále odkazuje na mechanismus důkazu prací – Ethereum je nyní zabezpečeno pomocí [důkazu podílem.](/developers/docs/consensus-mechanisms/pos))
+- [Jak vlastně Ethereum funguje?](https://medium.com/@preethikasireddy/how-does-Ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**Poznámka**: Tento zdroj je stále užitečný, ale vezměte na vědomí, že předchází [Sloučení](/roadmap/merge), a proto stále odkazuje na mechanismus důkazu prací – Ethereum je nyní zabezpečeno pomocí [důkazu podílem.](/developers/docs/consensus-mechanisms/PoS))
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
 ## Související návody {#related-tutorials}
 
-- [Průvodce Ethereem pro vývojáře, část 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Velmi přívětivý průvodce Ethereem používající Python a web3.py_
+- [Průvodce Ethereem pro vývojáře, část 1](/developers/tutorials/a-developers-guide-to-Ethereum-part-one/) _– Velmi přívětivý průvodce Ethereem používající Python a web3.py_
