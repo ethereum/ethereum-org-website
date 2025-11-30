@@ -41,11 +41,11 @@ Danksharding je způsob, jakým se Ethereum rozšíří na > 100 000 transakcí 
 
 ## Aktuální průběh {#current-progress}
 
-PBS je v pokročilé fázi výzkumu, ale stále existují některé důležité konstrukční otázky, které je třeba vyřešit, než bude možné jej prototypovat v klientech Etherea. Pro žádný z nápadů zatím neexistuje konečná specifikace. To znamená, že uvedení PBS do praxe nás pravděpodobně čeká za rok nebo později. Podívejte se, [v jaké fázi se momentálně tento výzkum nachází](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
+PBS je v pokročilé fázi výzkumu, ale stále existují některé důležité konstrukční otázky, které je třeba vyřešit, než bude možné jej prototypovat v klientech Etherea. Pro žádný z nápadů zatím neexistuje konečná specifikace. To znamená, že uvedení PBS do praxe nás pravděpodobně čeká za rok nebo později. Podívejte se, [v jaké fázi se momentálně tento výzkum nachází](https://notes.Ethereum.org/@vbuterin/pbs_censorship_resistance).
 
 ## Další informace {#further-reading}
 
-- [Stav výzkumu: Odolnost proti cenzuře díky PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Stav výzkumu: Odolnost proti cenzuře díky PBS](https://notes.Ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [PBS – návrhy trhů s akceptovatelnými poplatky](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
-- [PBS a odolnost proti cenzuře](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
-- [Seznamy zařazení transakcí](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
+- [PBS a odolnost proti cenzuře](https://notes.Ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
+- [Seznamy zařazení transakcí](https://notes.Ethereum.org/@fradamt/H1ZqdtrBF)
