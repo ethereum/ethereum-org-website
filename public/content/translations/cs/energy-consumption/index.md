@@ -6,9 +6,9 @@ lang: cs
 
 # Energetické náklady Etherea {#proof-of-stake-energy}
 
-Ethereum je "zelený" blockchain. Mechanismus konsenzu [důkazu podílem](/developers/docs/consensus-mechanisms/pos) Etherea používá ETH místo [ energie k zabezpečení sítě](/developers/docs/consensus-mechanisms/pow). Spotřeba energie Etherea je v celé globální síti přibližně [~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022).
+Ethereum je "zelený" blockchain. Mechanismus konsenzu [důkazu podílem](/developers/docs/consensus-mechanisms/PoS) Etherea používá ETH místo [ energie k zabezpečení sítě](/developers/docs/consensus-mechanisms/PoW). Spotřeba energie Etherea je v celé globální síti přibližně [~0,0026 TWh/rok](https://carbon-ratings.com/ETH-report-2022).
 
-Odhad spotřeby energie pro Ethereum pochází ze studie [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Ta obsahovala celkové odhady spotřeby elektřiny a uhlíkové stopy sítě Ethereum ([viz zpráva](https://carbon-ratings.com/eth-report-2022)). Měřili spotřebu elektřiny různých uzlů s různými konfiguracemi hardwaru a klientského softwaru. Odhadovaných **2,601 MWh** (0.0026 TWh) pro roční spotřebu elektřiny sítě odpovídá ročním emisím uhlíku **870 tun CO2e** při použití regionálních faktorů intenzity uhlíku. Tato hodnota se mění, když se síťové uzly připojí nebo odpojí od sítě – můžete ji sledovat pomocí klouzavého sedmidenního průměrného odhadu podle [Cambridge Blockchain network Sustainability indexu](https://ccaf.io/cbnsi/ethereum) (všimněte si, že pro své odhady používají trochu jinou metodu – podrobnosti jsou k dispozici na jejich webu).
+Odhad spotřeby energie pro Ethereum pochází ze studie [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Ta obsahovala celkové odhady spotřeby elektřiny a uhlíkové stopy sítě Ethereum ([viz zpráva](https://carbon-ratings.com/ETH-report-2022)). Měřili spotřebu elektřiny různých uzlů s různými konfiguracemi hardwaru a klientského softwaru. Odhadovaných **2,601 MWh** (0.0026 TWh) pro roční spotřebu elektřiny sítě odpovídá ročním emisím uhlíku **870 tun CO2e** při použití regionálních faktorů intenzity uhlíku. Tato hodnota se mění, když se síťové uzly připojí nebo odpojí od sítě – můžete ji sledovat pomocí klouzavého sedmidenního průměrného odhadu podle [Cambridge Blockchain network Sustainability indexu](https://ccaf.io/cbnsi/Ethereum) (všimněte si, že pro své odhady používají trochu jinou metodu – podrobnosti jsou k dispozici na jejich webu).
 
 Abychom uvedli spotřebu energie Etherea do kontextu, můžeme porovnat roční odhady pro některá další průmyslová odvětví. To nám pomůže lépe pochopit, zda je odhad pro Ethereum vysoký nebo nízký.
 
@@ -22,12 +22,12 @@ Výše uvedený graf zobrazuje odhadovanou roční spotřebu energie v TWh/rok p
 | Bitcoin                |                 149                 |         53,000x          |                                                                 [zdroj](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Těžba zlata            |                 131                 |         50 000x          |                                                                 [zdroj](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Gaming v USA\*       |                 34                  |         13 000x          |                 [zdroj](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
-| PoW Ethereum           |                 21                  |          8,100x          |                                                                    [zdroj](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
+| PoW Ethereum           |                 21                  |          8,100x          |                                                                    [zdroj](https://ccaf.io/cbnsi/Ethereum/1)                                                                     |
 | Google                 |                 19                  |          7,300x          |                                           [zdroj](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix                |                0,457                |           176x           | [zdroj](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
 | PayPal                 |                0,26                 |           100x           |                                  [zdroj](https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf)                                   |
 | AirBnB                 |                0,02                 |            8x            |                               [zdroj](https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf)                               |
-| **PoS Ethereum**       |             **0,0026**              |          **1x**          |                                                               [zdroj](https://carbon-ratings.com/eth-report-2022)                                                                |
+| **PoS Ethereum**       |             **0,0026**              |          **1x**          |                                                               [zdroj](https://carbon-ratings.com/ETH-report-2022)                                                                |
 
 \*Zahrnuje zařízení koncových uživatelů jako jsou třeba počítače, notebooky a herní konzole.
 
@@ -37,7 +37,7 @@ Tyto výše uvedené odhady nejsou dokonalým srovnáním. Výše nepřímých v
 
 Tabulka a graf výše také obsahují srovnání s Bitcoinem a Ethereem důkazu prací. Je důležité si uvědomit, že spotřeba energie v sítích důkazu prací není statická a mění se ze dne na den. Odhady se mohou mezi jednotlivými zdroji značně lišit. Toto téma přitahuje různorodé [debaty](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/), nejen o množství spotřebované energie, ale také o jejích zdrojích a souvisejících etických otázkách. Spotřeba energie nemusí nutně přesně odpovídat ekologické stopě, protože různé projekty mohou využívat různé zdroje energie, včetně menšího či většího podílu obnovitelných zdrojů. Například [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci/comparisons) ukazuje, že poptávka po síti Bitcoin by teoreticky mohla být napájena spalováním plynu nebo elektřinou, která by se jinak ztratila při přenosu a distribuci. Cesta Etherea k udržitelnosti spočívala v nahrazení energeticky náročné části sítě zelenou alternativou.
 
-Na [stránce Cambridge Blockchain Network Sustainability indexu](https://ccaf.io/cbnsi/ethereum) si můžete prohlédnout odhady spotřeby energie a uhlíkových emisí pro spoustu průmyslových odvětví.
+Na [stránce Cambridge Blockchain Network Sustainability indexu](https://ccaf.io/cbnsi/Ethereum) si můžete prohlédnout odhady spotřeby energie a uhlíkových emisí pro spoustu průmyslových odvětví.
 
 ## Odhady spotřeby jednotlivých transakcí {#per-transaction-estimates}
 
@@ -65,20 +65,20 @@ Nativní platformy pro financování veřejných statků fungujících na princi
 <AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
-  Pokud si myslíte, že by tato stránka mohla být přesnější, založze prosím issue nebo PR. Statistiky na této stránce jsou odhady založené na veřejně dostupných datech – nepředstavují oficiální prohlášení nebo příslib týmu ethereum.org nebo Ethereum Foundation.
+  Pokud si myslíte, že by tato stránka mohla být přesnější, založze prosím issue nebo PR. Statistiky na této stránce jsou odhady založené na veřejně dostupných datech – nepředstavují oficiální prohlášení nebo příslib týmu Ethereum.org nebo Ethereum Foundation.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Další informace {#further-reading}
 
-- [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
+- [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/Ethereum)
 - [Zpráva Bílého domu o blockchainech důkazu prací](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
-- [Emise Etherea: Souhrnný odhad](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
-- [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
+- [Emise Etherea: Souhrnný odhad](https://kylemcdonald.GitHub.io/Ethereum-emissions/) - _Kyle McDonald_
+- [Ethereum Energy Consumption Index](https://digiconomist.net/Ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
-- [Merge - Dopady na spotřebu elektřiny a uhlíkovou stopu sítě Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
-- [Spotřeba energie Etherea](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
+- [Merge - Dopady na spotřebu elektřiny a uhlíkovou stopu sítě Ethereum](https://carbon-ratings.com/ETH-report-2022) - _CCRI_
+- [Spotřeba energie Etherea](https://mirror.xyz/jmcook.ETH/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
 ## Související témata {#related-topics}
 
