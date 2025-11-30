@@ -1,6 +1,6 @@
 ---
 title: Etický kodex
-description: Základní standardy, o které se snažíme napříč ekosystémem ethereum.org.
+description: Základní standardy, o které se snažíme napříč ekosystémem Ethereum.org.
 lang: cs
 ---
 
@@ -12,7 +12,7 @@ Vyvinout a udržovat nejkomplexnější a nejdostupnější centrum znalostí pr
 
 ## Hodnoty {#values}
 
-Komunita ethereum.org se snaží být:
+Komunita Ethereum.org se snaží být:
 
 - otevřena vzdělávání, cílem je pomoci pochopit Ethereum komukoliv
 - inkluzivní
@@ -33,11 +33,11 @@ Komunita ethereum.org se snaží být:
 
 ### Závazek {#pledge}
 
-Otevřená účast je základem étosu ethereum.org. Jsme webová stránka a komunita spravovaná tisíci přispěvateli, a to je možné pouze tehdy, pokud udržujeme příjemné a participativní prostředí. Za tímto účelem se přispěvatelé ethereum.org zavazují udržovat příjemné prostředí bez obtěžování na všech platformách a komunitních prostorech ethereum.org. Komunita ethereum.org uvítá každého, kdo se chce zapojit konstruktivním a přátelským způsobem, bez ohledu na věk, postižení, etnický původ, pohlaví, genderovou identitu, úroveň zkušeností, oblast odbornosti, vzdělání, socioekonomický status, národnost, vzhled, rasu, náboženství nebo jakýkoliv další rozměr rozmanitosti.
+Otevřená účast je základem étosu Ethereum.org. Jsme webová stránka a komunita spravovaná tisíci přispěvateli, a to je možné pouze tehdy, pokud udržujeme příjemné a participativní prostředí. Za tímto účelem se přispěvatelé Ethereum.org zavazují udržovat příjemné prostředí bez obtěžování na všech platformách a komunitních prostorech Ethereum.org. Komunita Ethereum.org uvítá každého, kdo se chce zapojit konstruktivním a přátelským způsobem, bez ohledu na věk, postižení, etnický původ, pohlaví, genderovou identitu, úroveň zkušeností, oblast odbornosti, vzdělání, socioekonomický status, národnost, vzhled, rasu, náboženství nebo jakýkoliv další rozměr rozmanitosti.
 
 ### Rozsah {#scope}
 
-Tento kodex chování se vztahuje na všechny prostory ethereum.org (jako jsou GitHub, Discord, Figma Crowdin, Twitter a další online platformy) i na veřejné prostory skutečného světa, jako jsou meetingy, konference a další události.
+Tento kodex chování se vztahuje na všechny prostory Ethereum.org (jako jsou GitHub, Discord, Figma Crowdin, Twitter a další online platformy) i na veřejné prostory skutečného světa, jako jsou meetingy, konference a další události.
 
 ### Naše standardy {#our-standards}
 
@@ -74,4 +74,4 @@ Při hlášení potíží uveďte co nejvíce podrobností, včetně konkrétní
 
 ### Vynucení {#enforcement}
 
-V závislosti na závažnosti mohou lidé, kteří porušují kodex chování, obdržet varování, dočasné zákazy nebo trvalé zákazy od komunit ethereum.org.
+V závislosti na závažnosti mohou lidé, kteří porušují kodex chování, obdržet varování, dočasné zákazy nebo trvalé zákazy od komunit Ethereum.org.
