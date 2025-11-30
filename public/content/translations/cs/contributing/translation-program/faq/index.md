@@ -1,18 +1,18 @@
 ---
 title: Často kladené otázky (FAQ) o překladatelském programu
 lang: cs
-description: Často kladené otázky týkající se překladatelského programu stránky ethereum.org
+description: Často kladené otázky týkající se překladatelského programu stránky Ethereum.org
 ---
 
-# Průvodce překladem ethereum.org {#translating-ethereum-guide}
+# Průvodce překladem Ethereum.org {#translating-Ethereum-guide}
 
 Pokud jste noví v překladatelském programu a váháte, jestli se vrhnout na překlad, toto jsou některé často kladené otázky, jejichž zodpovězení vám může pomoci začít. Tento průvodce obsahuje odpovědi na nejčastější dotazy.
 
-## Mohu za překlad ethereum.org dostat zaplaceno? {#compensation}
+## Mohu za překlad Ethereum.org dostat zaplaceno? {#compensation}
 
 Ethereum.org je open-source web, což znamená, že se do něj může zapojit a přispívat kdokoli.
 
-Překladatelský program ethereum.org je jeho rozšířením a je organizován s podobnou filozofií.
+Překladatelský program Ethereum.org je jeho rozšířením a je organizován s podobnou filozofií.
 
 Cílem překladatelského programu je zpřístupnit obsah Etherea všem bez ohledu na to, jakým jazykem mluví. Umožňuje také každému dvojjazyčnému člověku zapojit se do ekosystému Etherea a přispívat přístupným způsobem.
 
@@ -27,11 +27,11 @@ Ne každý řetězec je čistě v textové podobě. Některé řetězce obsahuj�
 - Přeložte text mezi značkami, ale ne samotné značky. To, co se nachází mezi `<` a `>`, nesmí být přeloženo ani odstraněno.
 - Pro jistotu doporučujeme kliknout na tlačítko „Kopírovat zdroj“ vlevo dole. To zkopíruje původní řetězec a vloží jej do textového pole. To vám pomůže si ujasnit, kde jsou značky, a pomáhá vám vyhnout se chybám.
 
-![Rozhraní Crowdin se zvýrazněným tlačítkem Kopírovat zdroj](./html-tag-strings.png)
+![Rozhraní Crowdin se zvýrazněným tlačítkem Kopírovat zdroj](./HTML-tag-strings.png)
 
 Umístění značek v řetězci můžete přesunout, aby překlad ve vašem jazyce zněl přirozeněji. Jen se ujistěte, že přesouváte celou značku.
 
-Podrobnější informace o práci se štítky a úryvky kódu naleznete v [průvodci stylem překladu ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
+Podrobnější informace o práci se štítky a úryvky kódu naleznete v [průvodci stylem překladu Ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
 ## Odkud tyto řetězce jsou? {#strings}
 
@@ -56,7 +56,7 @@ Pokud chcete upozornit na určitý řetězec, který vyžaduje pozornost, může
 
 ## Co je překladová paměť (PP)? {#translation-memory}
 
-Překladová paměť (PP) je funkce Crowdinu, která ukládá všechny dříve přeložené řetězce na [ethereum.org](https://ethereum.org/). Když je řetězec přeložen, automaticky se uloží do PP našeho projektu. Může to být užitečný nástroj, který vám pomůže ušetřit čas!
+Překladová paměť (PP) je funkce Crowdinu, která ukládá všechny dříve přeložené řetězce na [Ethereum.org](https://Ethereum.org/). Když je řetězec přeložen, automaticky se uloží do PP našeho projektu. Může to být užitečný nástroj, který vám pomůže ušetřit čas!
 
 - Podívejte se do sekce „Návrhy PP a SP“ a uvidíte, jak stejný nebo podobný řetězec přeložili jiní překladatelé. Pokud naleznete návrh s vysokou mírou shody, neváhejte na překlad odkázat kliknutím.
 - Pokud v seznamu nic není, můžete v PP vyhledat dříve vytvořené překlady a znovu je použít pro zajištění konzistence.
@@ -110,10 +110,10 @@ Proces revize je jednoduchý; jakmile je určitá [obsahová kategorie](/contrib
 
 V současné době je veškerý neanglický obsah překládán přímo z anglického zdrojového obsahu a obsah, který neexistuje v angličtině, nelze přidat do jiných jazyků.
 
-Chcete-li navrhnout nový obsah pro ethereum.org, můžete [vytvořit problém](https://github.com/ethereum/ethereum-org-website/issues) na GitHubu. V případě přidání bude obsah sepsán v angličtině a přeložen do dalších jazyků přes Crowdin.
+Chcete-li navrhnout nový obsah pro Ethereum.org, můžete [vytvořit problém](https://GitHub.com/Ethereum/Ethereum-org-website/issues) na GitHubu. V případě přidání bude obsah sepsán v angličtině a přeložen do dalších jazyků přes Crowdin.
 
 V blízké budoucnosti plánujeme přidat podporu pro přidávání jiného než anglického obsahu.
 
 ## Kontaktujte nás {#contact}
 
-Děkujeme, že jste si všechno přečetli. Doufáme, že vám to pomůže při nástupu do našeho programu. Neváhejte se připojit k našemu [překladatelskému kanálu na Discordu](https://discord.gg/ethereum-org) a klást otázky a spolupracovat s ostatními překladateli, nebo nás kontaktujte na adrese translations@ethereum.org!
+Děkujeme, že jste si všechno přečetli. Doufáme, že vám to pomůže při nástupu do našeho programu. Neváhejte se připojit k našemu [překladatelskému kanálu na Discordu](https://discord.gg/Ethereum-org) a klást otázky a spolupracovat s ostatními překladateli, nebo nás kontaktujte na adrese translations@Ethereum.org!
