@@ -58,7 +58,7 @@ Specifikace na vysoké úrovni obecně zachycují dvě klíčové temporální v
 
 Vezměme si pro příklad tento bezpečnostní požadavek, který pokrývá podmínky pro použití funkcí `transfer()` nebo `transferFrom()` v ERC-20 tokenových kontraktech: _„Zůstatek odesílatele nikdy nesmí být nižší než požadované množství tokenů, které mají být odeslány.“_ Tento popis invariantu kontraktu v přirozeném jazyce lze převést do formální (matematické) specifikace, která pak může být rigorózně ověřena z hlediska platnosti.
 
-Živostní vlastnosti zajišťují, že „se ve výsledku stane něco dobrého“, a týkají se schopnosti kontraktu přepínat mezi různými stavy. Příkladem živostní vlastnosti je „likvidita“, která odkazuje na schopnost kontraktu převádět své zůstatky uživatelům na základě žádosti. Pokud je tato vlastnost porušena, uživatelé nejsou schopni vybrat aktiva uložená v kontraktu, jako se to stalo při incidentu s [Parity peněženkou](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).
+Živostní vlastnosti zajišťují, že „se ve výsledku stane něco dobrého“, a týkají se schopnosti kontraktu přepínat mezi různými stavy. Příkladem živostní vlastnosti je „likvidita“, která odkazuje na schopnost kontraktu převádět své zůstatky uživatelům na základě žádosti. Pokud je tato vlastnost porušena, uživatelé nejsou schopni vybrat aktiva uložená v kontraktu, jako se to stalo při incidentu s [Parity peněženkou](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.HTML).
 
 ### Specifikace na nízké úrovni {#low-level-specifications}
 
@@ -160,7 +160,7 @@ Trasování provádění, které vede k přetečení celého čísla, by muselo 
 
 #### Potřeba spolehlivosti {#need-for-reliability}
 
-Formální ověřování se používá k posouzení správnosti systémů kritických z hlediska bezpečnosti, jejichž selhání může mít katastrofální následky, jako je smrt, zranění nebo finanční krach. Chytré kontrakty jsou aplikace s vysokou hodnotou, které ovládají obrovské množství hodnot, a jednoduché chyby v návrhu mohou vést k [nezvratným ztrátám pro uživatele](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Formální ověření kontraktu před jeho nasazením však může zvýšit záruku, že bude po spuštění na blockchainu fungovat dle očekávání.
+Formální ověřování se používá k posouzení správnosti systémů kritických z hlediska bezpečnosti, jejichž selhání může mít katastrofální následky, jako je smrt, zranění nebo finanční krach. Chytré kontrakty jsou aplikace s vysokou hodnotou, které ovládají obrovské množství hodnot, a jednoduché chyby v návrhu mohou vést k [nezvratným ztrátám pro uživatele](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-Ethereum-9e5dc29e33ce/amp/). Formální ověření kontraktu před jeho nasazením však může zvýšit záruku, že bude po spuštění na blockchainu fungovat dle očekávání.
 
 Spolehlivost je velmi žádaná vlastnost každého chytrého kontraktu, zejména proto, že kód nasazený ve virtuálním stroji Etherea (EVM) je obvykle neměnný. Vzhledem k tomu, že aktualizace po spuštění nejsou snadno dostupné, je nutné zaručit spolehlivost kontraktu a provést formální ověření. Formální ověřování dokáže odhalit záludné problémy, jako je přetečení a podtečení integerů, reentrace a špatná optimalizace paliva, které mohou auditorům a testerům uniknout.
 
@@ -214,8 +214,8 @@ Také není vždy možné, aby ověřovatelé programů určili, zda je vlastnos
 
 **Act** – _*Act umožňuje specifikovat aktualizace úložiště, předběžné/následné podmínky a invarianty kontraktu. Jeho sada nástrojů má také dokazovací backendy, které dokáží dokázat mnoho vlastností pomocí Coq, SMT solverů nebo hevm.**
 
-- [GitHub](https://github.com/ethereum/act)
-- [Dokumentace](https://ethereum.github.io/act/)
+- [GitHub](https://GitHub.com/Ethereum/act)
+- [Dokumentace](https://Ethereum.GitHub.io/act/)
 
 **Scribble** – _*Scribble transformuje anotace kódu ve specifikačním jazyce Scribble na konkrétní tvrzení, která kontrolují specifikaci.**
 
@@ -223,61 +223,61 @@ Také není vždy možné, aby ověřovatelé programů určili, zda je vlastnos
 
 **Dafny** – _*Dafny je programovací jazyk připravený na ověřování, který se spoléhá na vysokoúrovňové anotace pro zdůvodnění a prokázání správnosti kódu.**
 
-- [GitHub](https://github.com/dafny-lang/dafny)
+- [GitHub](https://GitHub.com/dafny-lang/dafny)
 
 ### Ověřovače programů pro kontrolu správnosti {#program-verifiers}
 
 **Certora Prover** – _Certora Prover je automatický formální ověřovací nástroj pro kontrolu správnosti kódu v chytrých kontraktech. Specifikace jsou napsány v jazyce CVL (Certora Verification Language), přičemž porušení vlastností se zjišťuje pomocí kombinace statické analýzy a řešení omezení._
 
 - [Web](https://www.certora.com/)
-- [Dokumentace](https://docs.certora.com/en/latest/index.html)
+- [Dokumentace](https://docs.certora.com/en/latest/index.HTML)
 
 **Solidity SMTChecker** – _*Solidity SMTChecker je vestavěný ověřovač modelu založený na SMT (Satisfiability Modulo Theories) a Hornově řešení. Během kompilace potvrzuje, zda zdrojový kód kontraktu odpovídá specifikacím, a staticky kontroluje, zda nejsou porušeny bezpečnostní vlastnosti.**
 
-- [GitHub](https://github.com/ethereum/solidity)
+- [GitHub](https://GitHub.com/Ethereum/Solidity)
 
 **solc-verify** – _*solc-verify je rozšířená verze kompilátoru Solidity, která dokáže provádět automatické formální ověřování kódu Solidity pomocí anotací a modulárního ověřování programu.**
 
-- [GitHub](https://github.com/SRI-CSL/solidity)
+- [GitHub](https://GitHub.com/SRI-CSL/Solidity)
 
 **KEVM** – _*KEVM je formální sémantika virtuálního stroje Etherea (EVM) napsaná ve frameworku K. KEVM je spustitelný a může dokazovat určitá tvrzení týkající se vlastností pomocí logiky dosažitelnosti.**
 
-- [GitHub](https://github.com/runtimeverification/evm-semantics)
+- [GitHub](https://GitHub.com/runtimeverification/evm-semantics)
 - [Dokumentace](https://jellopaper.org/)
 
 ### Logické frameworky pro dokazování tvrzení {#theorem-provers}
 
 **Isabelle** – _Isabelle/HOL je dokazovací pomocník, který umožňuje vyjádřit matematické formule ve formálním jazyce a poskytuje nástroje pro dokazování těchto formulí. Hlavní aplikací je formalizace matematických důkazů a zejména formální ověřování, které zahrnuje dokazování správnosti počítačového hardwaru nebo softwaru a dokazování vlastností počítačových jazyků a protokolů._
 
-- [GitHub](https://github.com/isabelle-prover)
-- [Dokumentace](https://isabelle.in.tum.de/documentation.html)
+- [GitHub](https://GitHub.com/isabelle-prover)
+- [Dokumentace](https://isabelle.in.tum.de/documentation.HTML)
 
 **Coq** – _Coq je interaktivní dokazovací nástroj, který umožňuje definovat programy pomocí vět a interaktivně generovat strojově kontrolované důkazy správnosti._
 
-- [GitHub](https://github.com/coq/coq)
-- [Dokumentace](https://coq.github.io/doc/v8.13/refman/index.html)
+- [GitHub](https://GitHub.com/coq/coq)
+- [Dokumentace](https://coq.GitHub.io/doc/v8.13/refman/index.HTML)
 
 ### Nástroje pro odhalování zranitelných vzorů v chytrých kontraktech založené na symbolickém provádění {#symbolic-execution-tools}
 
 **Manticore** – _*Nástroj pro analýzu bytekódu EVM založený na symbolickém provádění*.*
 
-- [GitHub](https://github.com/trailofbits/manticore)
-- [Dokumentace](https://github.com/trailofbits/manticore/wiki)
+- [GitHub](https://GitHub.com/trailofbits/manticore)
+- [Dokumentace](https://GitHub.com/trailofbits/manticore/wiki)
 
 **hevm** – _*hevm je nástroj pro symbolické provádění a kontrolu ekvivalence pro bytekód EVM.**
 
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://GitHub.com/dapphub/dapptools/tree/master/src/hevm)
 
 **Mythril** – _Nástroj pro symbolické provádění k odhalování zranitelností v chytrých kontraktech Etherea._
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [GitHub](https://GitHub.com/ConsenSys/mythril-classic)
 - [Dokumentace](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## Další četba {#further-reading}
 
 - [Jak funguje formální ověřování chytrých kontraktů](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Jak může formální ověřování zajistit bezchybné chytré kontrakty](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
-- [Přehled projektů formálního ověřování v ekosystému Etherea](https://github.com/leonardoalt/ethereum_formal_verification_overview)
-- [Formální end-to-end ověřování chytrého kontraktu Ethereum 2.0 Deposit Smart Contract](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
+- [Přehled projektů formálního ověřování v ekosystému Etherea](https://GitHub.com/leonardoalt/ethereum_formal_verification_overview)
+- [Formální end-to-end ověřování chytrého kontraktu Ethereum 2.0 Deposit Smart Contract](https://runtimeverification.com/blog/end-to-end-formal-verification-of-Ethereum-2-0-deposit-smart-contract/)
 - [Formální ověření nejoblíbenějšího chytrého kontraktu na světě](https://www.zellic.io/blog/formal-verification-weth)
-- [SMTChecker a formální ověřování](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)
+- [SMTChecker a formální ověřování](https://docs.soliditylang.org/en/v0.8.15/smtchecker.HTML)
