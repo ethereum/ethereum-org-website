@@ -26,9 +26,9 @@ summaryPoint3: Řetězová vazba představila logiku konsensu a blokový komunik
 
 ### Zavedení uzamčení {#introducing-staking}
 
-Řetězová vazba umožnila v Ethereu [důkaz podílem](/developers/docs/consensus-mechanisms/pos/). To udržuje Ethereum v bezpečí a vydělává validátorům více ETH. V praxi to znamená, že uzamknete ETH, abyste se stali validátorem. Jako uzamykatel spouštíte software, který vytváří a ověřuje nové bloky.
+Řetězová vazba umožnila v Ethereu [důkaz podílem](/developers/docs/consensus-mechanisms/PoS/). To udržuje Ethereum v bezpečí a vydělává validátorům více ETH. V praxi to znamená, že uzamknete ETH, abyste se stali validátorem. Jako uzamykatel spouštíte software, který vytváří a ověřuje nové bloky.
 
-Uzamčení slouží k podobnému účelu, jako dříve sloužila [těžba](/developers/docs/consensus-mechanisms/pow/mining/), ale v mnoha ohledech se liší. Těžba vyžadovala velké výdaje ve formě pořízení výkonného hardwaru a spotřeby energie, což vedlo k úsporám z rozsahu a tím k podpoře centralizace. Těžba nevyžadovala zablokování aktiv jako kolaterálu, což omezovalo schopnost protokolu uvalit sankce na těžaře, kteří útočili na síť.
+Uzamčení slouží k podobnému účelu, jako dříve sloužila [těžba](/developers/docs/consensus-mechanisms/PoW/mining/), ale v mnoha ohledech se liší. Těžba vyžadovala velké výdaje ve formě pořízení výkonného hardwaru a spotřeby energie, což vedlo k úsporám z rozsahu a tím k podpoře centralizace. Těžba nevyžadovala zablokování aktiv jako kolaterálu, což omezovalo schopnost protokolu uvalit sankce na těžaře, kteří útočili na síť.
 
 Přechod na Ethereum založené na důkazu podílem významně zabezpečil a decentralizoval jeho provoz ve srovnání s důkazem prací. Čím více lidí se do sítě zapojí, tím bude decentralizovanější a bezpečnější před útoky.
 
@@ -77,4 +77,4 @@ Tříštění může být bezpečně implementováno do ekosystému Ethereum pou
 
 - [Více o budoucích vylepšeních Etherea](/roadmap/vision)
 - [Více o architektuře síťových uzlů](/developers/docs/nodes-and-clients/node-architecture)
-- [Více o důkazu podílem](/developers/docs/consensus-mechanisms/pos)
+- [Více o důkazu podílem](/developers/docs/consensus-mechanisms/PoS)
