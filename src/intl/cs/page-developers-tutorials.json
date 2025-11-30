@@ -1,4 +1,22 @@
 {
+  "comp-tutorial-metadata-minute-read": "minuta čtení",
+  "page-tutorial-listing-policy-intro": "Než odešlete návod, <a href=\"/contributing/content-resources/\">přečtěte si prosím naše zásady pro zařazování</a>.",
+  "comp-tutorial-metadata-tip-author": "Autor Tip",
+  "page-tutorial-create-an-issue": "Vytvořit problém",
+  "page-tutorial-create-an-issue-desc": "Vyplňte šablonu pro zadání „issue“, ve které načrtnete svůj návod.",
+  "page-tutorial-raise-issue-btn": "Vytvořit hlášení o chybě",
+  "page-tutorial-read-time": "min",
+  "page-tutorial-submit-btn": "Odeslat tutoriál",
+  "page-tutorial-subtitle": "Vítejte v našem upraveném seznamu komunitních tutoriálů.",
+  "page-tutorial-tags-error": "Zatím neexistují žádné návody se všemi vámi vybranými štítky.",
+  "page-tutorial-title": "Vývojové tutoriály pro Ethereum",
+  "page-tutorials-meta-description": "Procházejte a filtruje vetřelé Ethereum komunitní tutoriály podle tématu.",
+  "page-tutorial-external-link": "Externí",
+  "page-tutorials-meta-title": "Vývojové tutoriály pro Ethereum",
+  "page-tutorial-beginner": "Začátečník",
+  "page-tutorial-intermediate": "Středně pokročilý",
+  "page-tutorial-advanced": "Další",
   "page-find-wallet-try-removing": "Zkuste odebrat funkci nebo dvě",
-  "page-find-wallet-clear": "Zrušit filtry"
+  "page-find-wallet-clear": "Zrušit filtry",
+  "page-tutorials-env-banner": "Nekomitujte <code>.env</code>! Ujistěte se prosím, že soubor <code>.env</code> nikdy s nikým nesdílíte ani jej nikde nezveřejňujete, protože tím ohrožujete své citlivé údaje. Pokud používáte systém pro správu verzí, přidejte soubor <code>.env</code> do souboru <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
 }
