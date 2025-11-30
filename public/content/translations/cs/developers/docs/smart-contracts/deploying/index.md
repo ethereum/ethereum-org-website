@@ -27,26 +27,26 @@ Nakonec budete muset kontrakt před nasazením zkompilovat, takže se ujistěte,
 
 ### Kroky k nasazení chytrého kontraktu {#steps-to-deploy}
 
-Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se například podívat do [Hardhat dokumentace o nasazování kontraktů](https://hardhat.org/guides/deploying.html) nebo do [Foundry dokumentace o nasazování a ověřování chytrého kontraktu](https://book.getfoundry.sh/forge/deploying). Po nasazení bude mít váš kontrakt adresu Etherea jako ostatní [účty](/developers/docs/accounts/) a lze jej ověřit pomocí [nástrojů pro ověření zdrojového kódu](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se například podívat do [Hardhat dokumentace o nasazování kontraktů](https://hardhat.org/guides/deploying.HTML) nebo do [Foundry dokumentace o nasazování a ověřování chytrého kontraktu](https://book.getfoundry.sh/forge/deploying). Po nasazení bude mít váš kontrakt adresu Etherea jako ostatní [účty](/developers/docs/accounts/) a lze jej ověřit pomocí [nástrojů pro ověření zdrojového kódu](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Související nástroje {#related-tools}
 
 **Remix – _remix IDE umožňuje vyvíjet, nasazovat a spravovat chytré kontrakty pro blockchainy typu Etherea_**
 
-- [Remix](https://remix.ethereum.org)
+- [Remix](https://remix.Ethereum.org)
 
 **Tenderly – _platforma na vývoj Web3, která poskytuje ladění, pozorovatelnost a infrastrukturní stavební bloky pro vývoj, testování, monitorování a provozování chytrých kontraktů_**
 
 - [tenderly.co](https://tenderly.co/)
 - [Dokumentace](https://docs.tenderly.co/)
-- [GitHub](https://github.com/Tenderly)
+- [GitHub](https://GitHub.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
 **Hardhat – _vývojové prostředí pro kompilaci, nasazení, testování a ladění Ethereum softwaru_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Dokumentace na nasazování vašich kontraktů](https://hardhat.org/guides/deploying.html)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [Dokumentace na nasazování vašich kontraktů](https://hardhat.org/guides/deploying.HTML)
+- [GitHub](https://GitHub.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
 **thirdweb – _lehce nasaďte libovolný kontrakt do libovolného blockchainu kompatibilního s EVM pomocí jediného příkazu_**
@@ -64,13 +64,13 @@ Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se napří
 
 - [Nasazení vašeho prvního chytrého kontraktu](/developers/tutorials/deploying-your-first-smart-contract/) _– úvod do nasazení prvního chytrého kontraktu v testovací síti Etherea._
 - [Ahoj Světe | tutoriál na chytrý kontrakt](/developers/tutorials/hello-world-smart-contract/) _– jednoduchý návod na vytvoření a nasazení základního chytrého kontraktu na Ethereu._
-- [Interagujte s dalšími kontrakty ze Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním._
+- [Interagujte s dalšími kontrakty ze Solidity](/developers/tutorials/interact-with-other-contracts-from-Solidity/) _– jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním._
 - [Jak snížit velikost kontraktu](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– jak snížit velikost kontraktu, abyste nepřekročili limit a ušetřili za palivo_
 
 ## Další informace {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) – _OpenZeppelin_
-- [Nasazení vašich kontraktů pomocí Hardhat](https://hardhat.org/guides/deploying.html) – _Nomic Labs_
+- [Nasazení vašich kontraktů pomocí Hardhat](https://hardhat.org/guides/deploying.HTML) – _Nomic Labs_
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ji!_
 
