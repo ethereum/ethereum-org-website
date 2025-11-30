@@ -7,7 +7,7 @@ incomplete: true
 
 ## Stručné představení {#a-brief-introduction}
 
-Chytré kontrakty na Ethereu jsou veřejné a lze je považovat za otevřená API. Nemusíte napsat vlastní chytrý kontrakt, abyste se stali vývojářem dapp, stačí vědět, jak s nimi pracovat. Například můžete použít existující chytré kontrakty [Uniswapu](https://uniswap.exchange/swap), decentralizované burzy, k obsluze veškeré logiky pro směnu tokenů ve vaší aplikaci – nemusíte začínat od nuly. Podívejte se na některé z jejich kontraktů [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) a [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
+Chytré kontrakty na Ethereu jsou veřejné a lze je považovat za otevřená API. Nemusíte napsat vlastní chytrý kontrakt, abyste se stali vývojářem dapp, stačí vědět, jak s nimi pracovat. Například můžete použít existující chytré kontrakty [Uniswapu](https://uniswap.exchange/swap), decentralizované burzy, k obsluze veškeré logiky pro směnu tokenů ve vaší aplikaci – nemusíte začínat od nuly. Podívejte se na některé z jejich kontraktů [v2](https://GitHub.com/Uniswap/uniswap-v2-core/tree/master/contracts) a [v3](https://GitHub.com/Uniswap/uniswap-v3-core/tree/main/contracts).
 
 ## Co je to složitelnost? {#what-is-composability}
 
@@ -49,7 +49,7 @@ V situaci, kdy nemáte dostatek prostředků na pokrytí takové směny, může 
 
 Vrátíme-li se k našemu původnímu příkladu, arbitrážní obchodník si může vzít velkou bleskovou půjčku, nakoupit tokeny na `burze B`, prodat je na `burze A`, splatit půjčený kapitál i s úroky a vydělat na tom, to vše v rámci jedné transakce. Tato složitá logika vyžaduje kombinování volání více kontraktů, což by nebylo možné, kdyby chytré kontrakty neměly interoperabilitu.
 
-## Příklady složitelnosti na Ethereu {#composability-in-ethereum}
+## Příklady složitelnosti na Ethereu {#composability-in-Ethereum}
 
 ### Směny tokenů {#token-swaps}
 
@@ -65,7 +65,7 @@ Místo vytváření vlastního autentizačního systému nebo nutnosti spoléhat
 
 ## Související návody {#related-tutorials}
 
-- [Nastartujte vývoj frontendového rozhraní pro dappky pomocí create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Přehled o tom, jak používat create-eth-app k vytváření aplikací s populárními chytrými kontrakty._
+- [Nastartujte vývoj frontendového rozhraní pro dappky pomocí create-ETH-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-ETH-app/) _– Přehled o tom, jak používat create-ETH-app k vytváření aplikací s populárními chytrými kontrakty._
 
 ## Další informace {#further-reading}
 
