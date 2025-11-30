@@ -44,7 +44,7 @@ Expirace stavu znamená odstranění stavových dat z jednotlivých uzlů v př�
 
 Expirace na základě nájmu by mohla spočívat v přímém počítání nájmu účtům za účelem jejich udržení v aktivní stavové databázi. Expirace na základě času by mohla být odpočítáváním od poslední interakce s účtem, nebo by mohlo jít o periodickou expiraci všech účtů. Mohly by také existovat mechanismy, které kombinují prvky obou modelů založených na čase a nájmu, např. jednotlivé účty by zůstaly v aktivním stavu, pokud by zaplatily malý poplatek před vypršením času. Při expiraci stavu je důležité si uvědomit, že neaktivní stav **není smazán**, pouze je uložen odděleně od aktivního stavu. Neaktivní stav může být obnoven do aktivního stavu.
 
-To by mohlo fungovat tak, že by existoval stavový strom pro specifická časová období (řekněme ~1 rok). Kdykoli začne nové období, začíná i zcela nový stavový strom. Pouze aktuální stavový strom může být modifikován, všechny ostatní jsou neměnné. Od uzlů Etherea se očekává, že budou držet pouze aktuální stavový strom a nejnovější předchozí strom. K tomu je zapotřebí najít způsob, jak spojit adresu s obdobím, ve kterém existuje. Existuje [několik možných způsobů](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607), jak toho dosáhnout, ale jedna z hlavních možností vyžaduje [prodloužení adres](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485), aby se do nich vešla dodatečná informace, s přidaným benefitem, že delší adresy jsou mnohem bezpečnější. Plánovaná položka v plánu, která toto umožňuje, se nazývá [rozšíření adresního prostoru (address space extension)](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+To by mohlo fungovat tak, že by existoval stavový strom pro specifická časová období (řekněme ~1 rok). Kdykoli začne nové období, začíná i zcela nový stavový strom. Pouze aktuální stavový strom může být modifikován, všechny ostatní jsou neměnné. Od uzlů Etherea se očekává, že budou držet pouze aktuální stavový strom a nejnovější předchozí strom. K tomu je zapotřebí najít způsob, jak spojit adresu s obdobím, ve kterém existuje. Existuje [několik možných způsobů](https://Ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607), jak toho dosáhnout, ale jedna z hlavních možností vyžaduje [prodloužení adres](https://Ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485), aby se do nich vešla dodatečná informace, s přidaným benefitem, že delší adresy jsou mnohem bezpečnější. Plánovaná položka v plánu, která toto umožňuje, se nazývá [rozšíření adresního prostoru (address space extension)](https://Ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
 Podobně jako u expirace historie, v případě expirací stavu je odpovědnost za ukládání starých stavových dat odebrána jednotlivým uživatelům a přenesena na jiné subjekty, jako jsou centralizovaní poskytovatelé, altruističtí členové komunity nebo futurističtější decentralizovaná řešení, jako je Portal Network.
 
@@ -72,7 +72,7 @@ Aby to bylo možné, musí už být v klientských verzích Etherea implementov�
 
 Bezstavovost spoléhá na to, že sestavovatelé bloků udržují kopii plných stavových dat, aby mohli generovat svědky, kteří mohou být použiti k ověření bloku. Ostatní síťové uzly nepotřebují přístup ke stavovým datům, všechny informace potřebné k ověření bloku jsou dostupné ve svědkovi. To vede k situaci, kdy je navrhování bloku nákladné, ale ověřování bloku je levné, což naznačuje, že méně operátorů bude provozovat uzly navrhující bloky. Decentralizace navrhovatelů bloků však není kritická, pokud si co nejvíce účastníků může nezávisle ověřit, že bloky, které navrhují, jsou platné.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Další informace najdete v Dankradových poznámkách</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.Ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Další informace najdete v Dankradových poznámkách</ButtonLink>
 </ExpandableCard>
 
 Navrhovatelé bloků používají stavová data k vytvoření „svědků“ – minimální sady dat, která prokazuje hodnoty stavů, jež jsou transakcemi v bloku změněny. Ostatní validátoři stavová data neuchovávají, pouze ukládají kořen stavu (hash celého stavu). Dostanou blok a svědka a jejich pomocí aktualizují svůj kořen stavu. Díky tomu je ověřovací uzel tak lehký.
@@ -81,7 +81,7 @@ Slabá bezstavovost je v pokročilém stadiu výzkumu, ale spoléhá na implemen
 
 ### Silná bezstavovost {#strong-statelessness}
 
-Silná bezstavovost odstraňuje potřebu jakéhokoliv uzlu uchovávat stavová data. Místo toho jsou transakce odesílány se svědky, kteří mohou být sdružováni producenty bloků. Producenti bloků jsou pak zodpovědní za ukládání pouze těch stavových dat, která jsou potřeba pro generování svědků k příslušným účtům. Odpovědnost za stav se téměř úplně přesouvá na uživatele, kteří posílají svědky a „přístupové seznamy“, aby deklarovali, s jakými účty a klíči úložiště interagují. To by umožnilo extrémně lehké uzly, ale za cenu kompromisů, včetně toho, že transakce s chytrými kontrakty by byly obtížnější.
+Silná bezstavovost odstraňuje potřebu jakéhokoliv uzlu uchovávat stavová data. Místo toho jsou transakce odesílány se svědky, kteří mohou být sdružováni producenty bloků. Producenti bloků jsou pak zodpovědní za ukládání pouze těch stavových dat, která jsou potřeba pro generování svědků k příslušným účtům. Odpovědnost za stav se téměř úplně přesouvá na uživatele, kteří PoSílají svědky a „přístupové seznamy“, aby deklarovali, s jakými účty a klíči úložiště interagují. To by umožnilo extrémně lehké uzly, ale za cenu kompromisů, včetně toho, že transakce s chytrými kontrakty by byly obtížnější.
 
 Silnou bezstavovost zkoumali výzkumní vývojáři, ale v současnosti se neočekává, že by byla součástí plánu Etherea – jako pravděpodobnější varianta se jeví, že slabá bezstavovost bude pro potřeby škálování Etherea dostatečná.
 
@@ -91,13 +91,13 @@ Slabá bezstavovost, expirace historie a expirace stavu jsou všechny ve fázi v
 
 ## Další informace {#further-reading}
 
-- [AMA s Vitalikem o bezstavovosti](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [AMA s Vitalikem o bezstavovosti](https://www.reddit.com/r/Ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Teorie řízení velikosti stavu](https://hackmd.io/@vbuterin/state_size_management)
 - [Znovuobnovení konfliktů a minimalizace omezení stavu](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
 - [Cesty k bezstavovosti a expiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Specifikace EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
+- [Specifikace EIP-4444](https://eips.Ethereum.org/EIPS/EIP-4444)
 - [Alex Stokes o EIP-4444](https://youtu.be/SfDC_qUZaos)
-- [Proč je tak důležité přejít na bezstavovost](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [Proč je tak důležité přejít na bezstavovost](https://dankradfeist.de/Ethereum/2021/02/14/why-stateless.HTML)
 - [Původní poznámky ke konceptu bezstavového klienta](https://ethresear.ch/t/the-stateless-client-concept/172)
 - [Další informace o expiraci stavu](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
 - [Ještě více informací o expiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
