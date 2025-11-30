@@ -113,7 +113,7 @@ Vezměte prosím na vědomí, že je důležité vybrat [menšinového klienta](
 
 ### Generátory klíčů
 
-Tyto nástroje lze použít jako alternativu k [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), které vám pomohou s generováním klíčů.
+Tyto nástroje lze použít jako alternativu k [Staking Deposit CLI](https://GitHub.com/Ethereum/staking-deposit-cli/), které vám pomohou s generováním klíčů.
 
 <StakingProductsCardGrid category="keyGen" />
 
@@ -169,7 +169,7 @@ Jednotlivé klienty se mohou mírně lišit, pokud jde o výkon a uživatelské 
 
 Protože všechny produkční klienty poskytují stejnou základní funkcionalitu, je ve skutečnosti velmi důležité, abyste si vybrali <strong>menšinového klienta</strong>, což znamená jakéhokoli klienta, kterého momentálně NEPOUŽÍVÁ většina validátorů v síti. Může to znít neintuitivně, ale provozování většinového nebo supervětšinového klienta vás vystavuje zvýšenému riziku trestu v případě chyby v tomto klientu. Provozování menšinového klienta tato rizika drasticky omezuje.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Další informace o tom, proč je rozmanitost klientů kritická</a>
+<a href="https://mirror.xyz/jmcook.ETH/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Další informace o tom, proč je rozmanitost klientů kritická</a>
 </ExpandableCard>
 
 <ExpandableCard title="Mohu použít pouze VPS (virtuální soukromý server)?">
@@ -198,7 +198,7 @@ Chcete-li odemknout a získat zpět celý zůstatek, musíte také dokončit pro
 - [Adresář vkládání Etherea](https://www.staking.directory/) – _Eridian a Spacesider_
 - [Problém s diverzitou klientů Etherea](https://hackernoon.com/ethereums-client-diversity-problem) – _@emmanuelawosika 2022_
 - [Pomáháme rozmanitosti klientů](https://www.attestant.io/posts/helping-client-diversity/) – _Jim McDonald 2022_
-- [Klientská diverzita na konsensuální vrstvě Etherea](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022_
+- [Klientská diverzita na konsensuální vrstvě Etherea](https://mirror.xyz/jmcook.ETH/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.ETH 2022_
 - [Jak na to: Nakupovat hardware validátoru Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
 - [Tipy pro prevenci trestu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020 _
 
