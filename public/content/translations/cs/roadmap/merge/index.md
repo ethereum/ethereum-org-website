@@ -17,11 +17,11 @@ summaryPoint4: Sloučení snížilo spotřebu energie potřebné k provozu Ether
 
 ## Co bylo Sloučení? {#what-is-the-merge}
 
-Sloučení představovalo spojení původní exekuční vrstvy Etherea (hlavní síť, která existovala od [genesis](/ethereum-forks/#frontier)) s novou konsensuální vrstvou založenou na důkazu podílem, Řetězovou vazbou. To eliminovalo potřebu energeticky náročného těžení a místo toho umožnilo zabezpečení sítě pomocí uzamčeného ETH. Byl to opravdu zajímavý krok k naplnění vize Etherea — větší škálovatelnost, bezpečnost a udržitelnost.
+Sloučení představovalo spojení původní exekuční vrstvy Etherea (hlavní síť, která existovala od [genesis](/Ethereum-forks/#frontier)) s novou konsensuální vrstvou založenou na důkazu podílem, Řetězovou vazbou. To eliminovalo potřebu energeticky náročného těžení a místo toho umožnilo zabezpečení sítě pomocí uzamčeného ETH. Byl to opravdu zajímavý krok k naplnění vize Etherea — větší škálovatelnost, bezpečnost a udržitelnost.
 
 <MergeInfographic />
 
-Původně byla [Řetězová vazba](/roadmap/beacon-chain/) spuštěna nezávisle na [hlavní síti](/glossary/#mainnet). Hlavní síť Ethereum — se všemi svými účty, zůstatky, chytrými kontrakty a stavem blockchainu — byla nadále zabezpečována pomocí [důkazu prací](/developers/docs/consensus-mechanisms/pow/), i když Řetězová vazba běžela paralelně na [důkazu podílem](/developers/docs/consensus-mechanisms/pos/). Sloučení byl okamžik, kdy se tyto dva systémy konečně spojily a důkaz prací byl trvale nahrazen důkazem podílem.
+Původně byla [Řetězová vazba](/roadmap/beacon-chain/) spuštěna nezávisle na [hlavní síti](/glossary/#mainnet). Hlavní síť Ethereum — se všemi svými účty, zůstatky, chytrými kontrakty a stavem blockchainu — byla nadále zabezpečována pomocí [důkazu prací](/developers/docs/consensus-mechanisms/PoW/), i když Řetězová vazba běžela paralelně na [důkazu podílem](/developers/docs/consensus-mechanisms/PoS/). Sloučení byl okamžik, kdy se tyto dva systémy konečně spojily a důkaz prací byl trvale nahrazen důkazem podílem.
 
 Představte si Ethereum jako vesmírnou loď, která byla vypuštěna předtím, než byla zcela připravena na mezihvězdné putování. S Řetězovou vazbou komunita postavila nový motor a zpevněný trup. Po pečlivém testování nastal čas vyměnit starý motor za nový během letu. Tím se nový, efektivnější motor zapojil do existující lodi, což jí umožnilo urazit velké vzdálenosti a vydat se hlouběji do vesmíru.
 
@@ -106,7 +106,7 @@ Sloučení přineslo změny v konsensu, což zahrnuje i změny týkající se:
   <li>konceptu <em>bezpečného prvního prvku</em> a <em>finalizovaných bloků</em></li>
 </ul>
 
-Více informací najdete v tomto příspěvku na blogu od Tima Beika o tom, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">jak Sloučení ovlivňuje aplikační vrstvu Etherea</a>.
+Více informací najdete v tomto příspěvku na blogu od Tima Beika o tom, <a href="https://blog.Ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">jak Sloučení ovlivňuje aplikační vrstvu Etherea</a>.
 
 </ExpandableCard>
 
@@ -144,7 +144,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Transakční poplatky jsou výsledkem poptávky na síti v poměru k její kapacitě. Sloučení zrušilo používání důkazu prací, došlo k přechodu na důkaz podílem z důvodu konsensu, ale nezměnilo významně žádné parametry, které přímo ovlivňují kapacitu nebo propustnost sítě.
 
-S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plánem orientovaným na rollupy</a> se úsilí zaměřuje na škálování uživatelské aktivity na [druhé vrstvě](/layer-2/), zatímco první vrstva hlavní síť funguje jako bezpečná decentralizovaná vypořádací vrstva optimalizovaná pro ukládání dat rollupů, což vede k exponenciálnímu snížení nákladů na transakce na rollupech. Přechod na důkaz podílem je klíčovým předpokladem pro realizaci tohoto cíle. [Další informace o palivu a poplatcích.](/developers/docs/gas/)
+S <a href="https://Ethereum-magicians.org/t/a-rollup-centric-Ethereum-roadmap/4698">plánem orientovaným na rollupy</a> se úsilí zaměřuje na škálování uživatelské aktivity na [druhé vrstvě](/layer-2/), zatímco první vrstva hlavní síť funguje jako bezpečná decentralizovaná vypořádací vrstva optimalizovaná pro ukládání dat rollupů, což vede k exponenciálnímu snížení nákladů na transakce na rollupech. Přechod na důkaz podílem je klíčovým předpokladem pro realizaci tohoto cíle. [Další informace o palivu a poplatcích.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -194,7 +194,7 @@ Aby nedošlo ke zmatku, komunita tyto termíny aktualizovala:
 
 Tyto změny termínů slouží pouze k úpravě názvosloví. Cíle ani plán Etherea se nemění.
 
-[Další informace o přejmenování Eth2](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Další informace o přejmenování Eth2](https://blog.Ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
 ## Vztahy mezi aktualizacemi {#relationship-between-upgrades}
 
@@ -202,7 +202,7 @@ Všechna Ethereum vylepšení jsou poněkud vzájemně provázaná. Pojďme si t
 
 ### Sloučení a Řetězová vazba {#merge-and-beacon-chain}
 
-Sloučení představuje formální přijetí Řetězové vazby jako nové konsensuální vrstvy k původní exekuční vrstvě, hlavní síti. Po Sloučení jsou validátoři pověřeni zajištěním hlavní sítě Ethereum a těžba pomocí [důkazu prací](/developers/docs/consensus-mechanisms/pow/) již není platným způsobem tvorby bloků.
+Sloučení představuje formální přijetí Řetězové vazby jako nové konsensuální vrstvy k původní exekuční vrstvě, hlavní síti. Po Sloučení jsou validátoři pověřeni zajištěním hlavní sítě Ethereum a těžba pomocí [důkazu prací](/developers/docs/consensus-mechanisms/PoW/) již není platným způsobem tvorby bloků.
 
 Bloky jsou nyní navrhovány validujícími uzly, které mají uzamčené ETH, výměnou za právo účastnit se konsensu. Tato vylepšení připravují půdu pro budoucí škálovací vylepšení, včetně tříštění.
 
