@@ -8,38 +8,38 @@ lang: cs
 
 V Ethereum komunitě najdete osoby s různými zázemími a dovednostmi. Ať už jste vývojář, umělec, nebo účetní, existují způsoby, jak se zapojit. Zde je seznam nápadů, které vám mohou pomoci začít.
 
-Začněte tím, že si v našem [kodexu chování](/community/code-of-conduct) přečtete o misi a hodnotách ethereum.org.
+Začněte tím, že si v našem [kodexu chování](/community/code-of-conduct) přečtete o misi a hodnotách Ethereum.org.
 
 ## Vývojáři <Emoji text=":computer:" size={1} /> {#developers}
 
-- Učte se o Ethereu a experimentujte s ním na [ethereum.org/developers/](/developers/)
+- Učte se o Ethereu a experimentujte s ním na [Ethereum.org/developers/](/developers/)
 - Zúčastněte se blízkého hackathonu [ETHGlobal](http://ethglobal.co/)!
 - Podívejte se na [projekty související s vaší odborností nebo oblíbeným programovacím jazykem](/developers/docs/programming-languages/)
 - Sledujte nebo se účastněte videohovorů [Consensus a Execution Layer](https://www.youtube.com/@EthereumProtocol/streams)
-- [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) – nástroje, dokumentace a infrastruktura, ve kterých tento program aktivně shání žádosti o granty
+- [Ecosystem Support Program's wishlist](https://esp.Ethereum.foundation/wishlist/) – nástroje, dokumentace a infrastruktura, ve kterých tento program aktivně shání žádosti o granty
 - [Web3Bridge](https://www.web3bridge.com/) – připojte se k začínající komunitě web3, která se snaží identifikovat, školit a podporovat stovky vývojářů a členů komunity napříč Afrikou
-- Připojte se k [Discordu Eth R&D](https://discord.com/invite/VmG7Uxc)
+- Připojte se k [Discordu ETH R&D](https://discord.com/invite/VmG7Uxc)
 - Připojte se k [Discordu Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Výzkumníci & akademici <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
 Máte znalosti matematiky, kryptografie nebo ekonomie? Možná vás zaujme některá z pokročilých prací v ekosystému Ethereum:
 
-- Připojte se k [Discordu Eth R&D](https://discord.com/invite/VmG7Uxc)
+- Připojte se k [Discordu ETH R&D](https://discord.com/invite/VmG7Uxc)
 - Napište nebo recenzujte návrh na vylepšení Etherea (EIP)
   - Napište EIP
-    1. Popište svůj nápad na [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Přečtěte si [EIP-1](https://eips.ethereum.org/EIPS/eip-1) – **Ano, to je _celý_ dokument.**
+    1. Popište svůj nápad na [Ethereum Magicians](https://Ethereum-magicians.org)
+    2. Přečtěte si [EIP-1](https://eips.Ethereum.org/EIPS/EIP-1) – **Ano, to je _celý_ dokument.**
     3. Postupujte podle pokynů v EIP-1. Odkazujte na něj při psaní svého návrhu.
-  - Naučte se, jak se stát [editorem EIP](https://eips.ethereum.org/EIPS/eip-5069)
-    - Začít recenzovat EIP můžete hned! Podívejte se na [otevřené PRs s označením `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Poskytněte technickou zpětnou vazbu na `diskusní` odkaz.
-  - Účastněte se [správy EIP](https://github.com/ethereum-cat-herders/EIPIP)
+  - Naučte se, jak se stát [editorem EIP](https://eips.Ethereum.org/EIPS/EIP-5069)
+    - Začít recenzovat EIP můžete hned! Podívejte se na [otevřené PRs s označením `e-review`](https://GitHub.com/Ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Poskytněte technickou zpětnou vazbu na `diskusní` odkaz.
+  - Účastněte se [správy EIP](https://GitHub.com/Ethereum-cat-herders/EIPIP)
     - Připojte se k [Discordu Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Více o EIP](/eips/)
-- [Challenges.ethereum.org](https://challenges.ethereum.org/) – série výzkumných bounties s vysokou hodnotou, kde si můžete vydělat > 100 000 USD
+- [Challenges.Ethereum.org](https://challenges.Ethereum.org/) – série výzkumných bounties s vysokou hodnotou, kde si můžete vydělat > 100 000 USD
 - [Ethresear.ch](https://ethresear.ch) – hlavní fórum pro výzkum Etherea a nejvlivnější fórum pro kryptoekonomii na světě
-- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – otázky a odpovědi s výzkumníky Etherea. Jakmile se ohlásí další díl, kdokoliv jim může položit otázky.
-- [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) – výzkumné oblasti, ve kterých tento program aktivně hledá žádosti o granty
+- [EF Research AMA](https://old.reddit.com/r/Ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – otázky a odpovědi s výzkumníky Etherea. Jakmile se ohlásí další díl, kdokoliv jim může položit otázky.
+- [Ecosystem Support Program's wishlist](https://esp.Ethereum.foundation/wishlist/) – výzkumné oblasti, ve kterých tento program aktivně hledá žádosti o granty
 - [AllWalletDevs](https://allwallet.dev) – fórum pro vývojáře, designéry a zájemce o Ethereum, kde se pravidelně setkávají a diskutují o peněženkách
 
 [Prozkoumejte další aktivní oblasti výzkumu](/community/research/).
@@ -55,15 +55,15 @@ Pokud nejste vývojář, může být obtížné zjistit, jak začít pracovat s 
 ### Pište o Ethereu {#write-content}
 
 - Ethereum potřebuje dobré autory, kteří zvládnou vysvětlit jeho přínos jednoduše
-- Nejste připraveni publikovat vlastní články? Zvažte možnost přispívat ke stávajícímu obsahu komunitních zdrojů nebo [navrhněte nový obsah pro ethereum.org](/contributing/)!
+- Nejste připraveni publikovat vlastní články? Zvažte možnost přispívat ke stávajícímu obsahu komunitních zdrojů nebo [navrhněte nový obsah pro Ethereum.org](/contributing/)!
 
 ### Nabídněte pomoc při psaní poznámek během komunitních hovorů {#take-notes}
 
 - Existuje mnoho hovorů open-source komunit a mít osobu dedikovanou na zápis poznámek je velká pomoc. Pokud máte zájem, připojte se k [Discordu Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)a představte se!
 
-### Překládejte obsah o Ethereu do svého rodného jazyka {#translate-ethereum}
+### Překládejte obsah o Ethereu do svého rodného jazyka {#translate-Ethereum}
 
-- ethereum.org má program věnovaný překladům, který překládá webové stránky a další zdroje do mnoha různých jazyků
+- Ethereum.org má program věnovaný překladům, který překládá webové stránky a další zdroje do mnoha různých jazyků
 - [Tady](/contributing/translation-program)zjistíte, jak se můžete zapojit
 
 ### Spustit uzel {#run-a-node}
@@ -98,22 +98,22 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 
 - V ekosystému Etherea existuje mnoho otevřených pozic v oblasti marketingu a komunikace!
 
-## Pracovní pozice v ekosystému Etherea {#ethereum-jobs}
+## Pracovní pozice v ekosystému Etherea {#Ethereum-jobs}
 
 **Hledáte práci v ekosystému Etherea?**
 
-- [ethereum.org jobs](/about/#open-jobs)
+- [Ethereum.org jobs](/about/#open-jobs)
 - [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Ethereum Foundation job board (BambooHR)](https://Ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
-- [Kryptoměna – pracovní pozice](https://cryptocurrencyjobs.co/ethereum/)
+- [Kryptoměna – pracovní pozice](https://cryptocurrencyjobs.co/Ethereum/)
 - [Kariéra v ConsenSys](https://consensys.net/careers/)
-- [Seznam pracovních pozic – Crypto](https://cryptojobslist.com/ethereum-jobs)
+- [Seznam pracovních pozic – Crypto](https://cryptojobslist.com/Ethereum-jobs)
 - [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
 - [Web3 – pracovní pozice](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley – pracovní pozice](https://cryptovalley.jobs/)
-- [Ethereum – pracovní pozice](https://startup.jobs/ethereum-jobs)
+- [Ethereum – pracovní pozice](https://startup.jobs/Ethereum-jobs)
 
 ## Připojte se k DAO {#decentralized-autonomous-organizations-daos}
 
@@ -130,4 +130,4 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) – _Komunita zaměřená na financování vývoje Etherea_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) – _Kolektiv stavitelů Web3_
 
-Mějte prosím na paměti, že při přispívání na ethereum.org je třeba se řídit [kodexem chování](/community/code-of-conduct)!
+Mějte prosím na paměti, že při přispívání na Ethereum.org je třeba se řídit [kodexem chování](/community/code-of-conduct)!
