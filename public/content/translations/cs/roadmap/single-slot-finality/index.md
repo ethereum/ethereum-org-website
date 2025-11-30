@@ -63,4 +63,4 @@ SSF je ve fázi výzkumu. Neočekává se, že bude spuštěno v nejbližších 
 ## Další informace {#further-reading}
 
 - [Vitalik o SSF na EDCONu v roce 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
-- [Vitalikovy poznámky: Cesta k finalitě v jednom slotu](https://notes.ethereum.org/@vbuterin/single_slot_finality)
+- [Vitalikovy poznámky: Cesta k finalitě v jednom slotu](https://notes.Ethereum.org/@vbuterin/single_slot_finality)
