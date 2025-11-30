@@ -20,7 +20,7 @@ Ověřování chytrých kontraktů umožňuje zkoumat, co kontrakt dělá, prost
 
 Některé části zdrojového kódu nemají na zkompilovaný bytekód vliv, například komentáře nebo názvy proměnných. To znamená, že dva zdrojové kódy s různými názvy proměnných a různými komentáři budou schopny ověřit stejný kontrakt. Záškodník tak může do zdrojového kódu přidat klamavé komentáře nebo uvést zavádějící názvy proměnných a nechat ověřit kontrakt s jiným zdrojovým kódem, než je původní zdrojový kód.
 
-Tomu je možné se vyhnout tak, že se k bytekódu připojí další data, která slouží jako _kryptografická záruka_ přesnosti zdrojového kódu a jako _otisk prstu_ informací o kompilaci. Potřebné informace se nacházejí v [metadatech kontraktu Solidity](https://docs.soliditylang.org/en/v0.8.15/metadata.html) a hash tohoto souboru je připojen k bytekódu kontraktu. Můžete si je prohlédnout v akci na [metadatovém hřišti](https://playground.sourcify.dev)
+Tomu je možné se vyhnout tak, že se k bytekódu připojí další data, která slouží jako _kryptografická záruka_ přesnosti zdrojového kódu a jako _otisk prstu_ informací o kompilaci. Potřebné informace se nacházejí v [metadatech kontraktu Solidity](https://docs.soliditylang.org/en/v0.8.15/metadata.HTML) a hash tohoto souboru je připojen k bytekódu kontraktu. Můžete si je prohlédnout v akci na [metadatovém hřišti](https://playground.sourcify.dev)
 
 Soubor metadat obsahuje informace o kompilaci kontraktu včetně zdrojových souborů a jejich hashů. To znamená, že pokud se změní nastavení kompilace nebo dokonce jediný bajt v některém ze zdrojových souborů, změní se i soubor metadat. V důsledku toho se změní i hash souboru metadat, který je připojen k bytekódu. To znamená, že pokud se bytekód kontraktu + připojený hash metadat shodují s daným zdrojovým kódem a nastavením kompilace, můžeme si být jisti, že se jedná o přesně stejný zdrojový kód, který byl použit při původní kompilaci, a že se neliší ani o jediný bajt.
 
@@ -44,9 +44,9 @@ U chytrých kontraktů je obvykle v sázce spousta peněz. To vyžaduje vyšší
 
 Zveřejnění souborů se zdrojovým kódem chytrého kontraktu usnadňuje zájemcům, například auditorům, posouzení kontraktu z hlediska možných vektorů útoku. Díky tomu, že chytrý kontrakt nezávisle ověřuje více stran, mají uživatelé větší záruku jeho bezpečnosti.
 
-## Jak ověřit zdrojový kód chytrých kontraktů na Ethereu {#source-code-verification-for-ethereum-smart-contracts}
+## Jak ověřit zdrojový kód chytrých kontraktů na Ethereu {#source-code-verification-for-Ethereum-smart-contracts}
 
-[Nasazení chytrého kontraktu na Ethereu](/developers/docs/smart-contracts/deploying/) vyžaduje odeslání transakce s datovým payloadem (zkompilovaným bytekódem) na speciální adresu. Datový payload je generován kompilací zdrojového kódu a [argumentů konstruktoru](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) instance kontraktu připojené k datovému payloadu v transakci. Kompilace je deterministická, což znamená, že při použití stejných zdrojových souborů a nastavení kompilace (např. verze překladače, optimalizátor) je vždy vytvořen stejný výstup (tj. bytekód kontraktu).
+[Nasazení chytrého kontraktu na Ethereu](/developers/docs/smart-contracts/deploying/) vyžaduje odeslání transakce s datovým payloadem (zkompilovaným bytekódem) na speciální adresu. Datový payload je generován kompilací zdrojového kódu a [argumentů konstruktoru](https://docs.soliditylang.org/en/v0.8.14/contracts.HTML#constructor) instance kontraktu připojené k datovému payloadu v transakci. Kompilace je deterministická, což znamená, že při použití stejných zdrojových souborů a nastavení kompilace (např. verze překladače, optimalizátor) je vždy vytvořen stejný výstup (tj. bytekód kontraktu).
 
 ![Diagram znázorňující ověření zdrojového kódu chytrého kontraktu](./source-code-verification.png)
 
@@ -82,7 +82,7 @@ Etherscan je nejpoužívanějším nástrojem pro ověřování kontraktů. Ově
 
 ### Sourcify {#sourcify}
 
-[Sourcify](https://sourcify.dev/#/verifier) je další nástroj pro ověřování kontraktů, který je open-source a decentralizovaný. Není to průzkumník bloků a ověřuje pouze kontrakty v [různých sítích založených na EVM](https://docs.sourcify.dev/docs/chains). Funguje jako veřejná infrastruktura pro další nástroje, které na ní mohou stavět, a jejím cílem je umožnit lidsky přívětivější interakce s kontrakty pomocí komentářů [ABI](/developers/docs/smart-contracts/compiling/#web-applications) a [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html), které se nacházejí v souboru metadat.
+[Sourcify](https://sourcify.dev/#/verifier) je další nástroj pro ověřování kontraktů, který je open-source a decentralizovaný. Není to průzkumník bloků a ověřuje pouze kontrakty v [různých sítích založených na EVM](https://docs.sourcify.dev/docs/chains). Funguje jako veřejná infrastruktura pro další nástroje, které na ní mohou stavět, a jejím cílem je umožnit lidsky přívětivější interakce s kontrakty pomocí komentářů [ABI](/developers/docs/smart-contracts/compiling/#web-applications) a [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.HTML), které se nacházejí v souboru metadat.
 
 Na rozdíl od Etherscanu podporuje Sourcify úplné shody s hashem metadat. Ověřené kontrakty jsou doručovány do jeho [veřejného úložiště](https://docs.sourcify.dev/docs/repository/) na HTTP a [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs), což je decentralizované, [obsahem adresované](https://web3.storage/docs/concepts/content-addressing/) úložiště. To umožňuje načtení souboru metadat kontraktu přes IPFS, protože připojený hash metadat je hash IPFS.
 
