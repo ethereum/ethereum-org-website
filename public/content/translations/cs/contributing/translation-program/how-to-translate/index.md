@@ -1,7 +1,7 @@
 ---
 title: Jak překládat
 lang: cs
-description: Instrukce pro používání Crowdinu pro překlad ethereum.org
+description: Instrukce pro používání Crowdinu pro překlad Ethereum.org
 ---
 
 # Jak překládat {#how-to-translate}
@@ -18,7 +18,7 @@ Pro ty, kteří se lépe učí vizuálně: Podívejte se, jak vás Luka provede 
 
 Budete se muset přihlásit do svého účtu Crowdin nebo se zaregistrovat, pokud ho ještě nemáte. K registraci stačí pouze e-mail a heslo.
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://Crowdin.com/project/Ethereum-org/">
   Připojte se k projektu
 </ButtonLink>
 
@@ -34,15 +34,15 @@ Otevřete jazyk, do kterého chcete překládat, abyste viděli seznam souborů 
 
 Obsah webu je rozdělen do několika dokumentů a obsahových bloků. Napravo můžete zkontrolovat pokrok u každého dokumentu – pokud je pokrok překladu pod 100 %, přispějte!
 
-Nevidíte svůj jazyk v seznamu? [Otevřete problém](https://github.com/ethereum/ethereum-org-website/issues/new/choose) nebo se zeptejte na našem [Discordu](https://discord.gg/ethereum-org)
+Nevidíte svůj jazyk v seznamu? [Otevřete problém](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new/choose) nebo se zeptejte na našem [Discordu](https://discord.gg/Ethereum-org)
 
-![Přeložené a nepřeložené soubory v Crowdinu](./crowdin-files.png)
+![Přeložené a nepřeložené soubory v Crowdinu](./Crowdin-files.png)
 
-Poznámka k obsahovým blokům: V rámci Crowdinu používáme „obsahové bloky“, abychom nejprve přeložili obsah s nejvyšší prioritou. Když se podíváte na jazyk, například [filipínštinu](https://crowdin.com/project/ethereum-org/fil#), uvidíte složky pro obsahové bloky („1. Úvodní stránka“, „2. Základy“, „3. Průzkum“ atd.).
+Poznámka k obsahovým blokům: V rámci Crowdinu používáme „obsahové bloky“, abychom nejprve přeložili obsah s nejvyšší prioritou. Když se podíváte na jazyk, například [filipínštinu](https://Crowdin.com/project/Ethereum-org/fil#), uvidíte složky pro obsahové bloky („1. Úvodní stránka“, „2. Základy“, „3. Průzkum“ atd.).
 
 Doporučujeme vám překládat v tomto číselném pořadí (1 → 2 → 3 → ⋯), aby byly nejdůležitější stránky přeloženy jako první.
 
-[Další informace o obsahových blocích ethereum.org](/contributing/translation-program/content-buckets/)
+[Další informace o obsahových blocích Ethereum.org](/contributing/translation-program/content-buckets/)
 
 ### Překládejte {#translate}
 
@@ -70,7 +70,7 @@ Zde můžete najít komentáře, položky překladové paměti a položky glosá
 
 Pomocí tlačítek nahoře můžete také přepnout na Překladovou paměť, kde můžete vyhledávat existující překlady, nebo na Glosář, který obsahuje popisy a standardní překlady klíčových termínů.
 
-Chcete se dozvědět více? Neváhejte a podívejte se na [dokumentaci k používání online editoru Crowdin](https://support.crowdin.com/online-editor/).
+Chcete se dozvědět více? Neváhejte a podívejte se na [dokumentaci k používání online editoru Crowdin](https://support.Crowdin.com/online-editor/).
 
 ### Proces kontroly {#review-process}
 
@@ -85,8 +85,8 @@ Jakmile dokončíte překlad (tj. všechny soubory pro obsahový blok ukazují 1
 
 ### Kontaktujte nás {#get-in-touch}
 
-Máte nějaké otázky? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Prosím, napište nám na kanálu #translations na našem [Discord serveru ethereum.org](https://discord.gg/ethereum-org).
+Máte nějaké otázky? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Prosím, napište nám na kanálu #translations na našem [Discord serveru Ethereum.org](https://discord.gg/Ethereum-org).
 
-Můžete se také obrátit na translations@ethereum.org
+Můžete se také obrátit na translations@Ethereum.org
 
-Děkujeme vám za vaši účast v překladatelském programu ethereum.org!
+Děkujeme vám za vaši účast v překladatelském programu Ethereum.org!
