@@ -39,7 +39,7 @@ Každý fond a nástroje nebo chytré kontrakty, které používají, byly vytvo
 
 Tyto vložené ETH tokeny však mají tendenci vykazovat kartelové chování, kdy velké množství vložených ETH skončí pod kontrolou několika centralizovaných organizací, místo toho aby bylo rozděleno mezi mnoho nezávislých jednotlivců. To vytváří podmínky pro cenzuru nebo extrakci hodnot. Zlatým standardem pro vkládání by vždy měli být jednotlivci provozující validátory na vlastním hardwaru, kdykoli je to možné.
 
-[Další informace o rizicích vkladových tokenů](https://notes.ethereum.org/@djrtwo/risks-of-lsd).
+[Další informace o rizicích vkladových tokenů](https://notes.Ethereum.org/@djrtwo/risks-of-lsd).
 
 Atributové indikátory se používají níže k signalizaci pozoruhodných silných nebo slabých stránek, které může mít uvedený vkladový fond. Tuto část použijte jako referenci, jak definujeme tyto atributy, když vybíráte fond, ke kterému se chcete připojit.
 
@@ -82,5 +82,5 @@ Některé možnosti sdružování jsou více decentralizované než jiné, pokud
 ## Další četba {#further-reading}
 
 - [Adresář vkládání Etherea](https://www.staking.directory/) – _Eridian a Spacesider_
-- [Staking with Rocket Pool – Přehled vkládání](https://docs.rocketpool.net/guides/staking/overview.html) – _Dokumenty RocketPool_
-- [Staking Ethereum with Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) – _Lido dokumenty nápovědy_
+- [Staking with Rocket Pool – Přehled vkládání](https://docs.rocketpool.net/guides/staking/overview.HTML) – _Dokumenty RocketPool_
+- [Staking Ethereum with Lido](https://help.lido.fi/en/collections/2947324-staking-Ethereum-with-lido) – _Lido dokumenty nápovědy_
