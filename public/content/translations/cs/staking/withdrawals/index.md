@@ -70,7 +70,7 @@ Výběry vkladů jsou živé! Funkce výběru byla povolena v rámci upgradu Sha
 
 Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžné účty Ethereum. Tím se uzavřela smyčka v nasazování likvidity a Ethereum se o krok přiblížilo na jeho cestě k vybudování udržitelného, ​​škálovatelného a bezpečného decentralizovaného ekosystému.
 
-- [Více o historii Etherea](/ethereum-forks/)
+- [Více o historii Etherea](/Ethereum-forks/)
 - [Více o plánu Etherea](/roadmap/)
 
 ## Jak fungují platby za výběr? {#how-do-withdrawals-work}
@@ -204,9 +204,9 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Provozovatelům validátorů doporučujeme navštívit stránku <a href="https://launchpad.ethereum.org/withdrawals/">Výběry z vkladového spouštěcího panelu</a>, kde najdete další podrobnosti o přípravě validátoru na výběry, načasování událostí a další podrobnosti o fungování výběrů.
+Provozovatelům validátorů doporučujeme navštívit stránku <a href="https://launchpad.Ethereum.org/withdrawals/">Výběry z vkladového spouštěcího panelu</a>, kde najdete další podrobnosti o přípravě validátoru na výběry, načasování událostí a další podrobnosti o fungování výběrů.
 
-Chcete-li své nastavení nejprve vyzkoušet na testovací síti, navštivte <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> a začněte.
+Chcete-li své nastavení nejprve vyzkoušet na testovací síti, navštivte <a href="https://holesky.launchpad.Ethereum.org">Holesky Testnet Staking Launchpad</a> a začněte.
 
 </ExpandableCard>
 
@@ -220,8 +220,8 @@ Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré doda
 
 ## Další informace {#further-reading}
 
-- [Výběry z vkladového spouštěcího panelu](https://launchpad.ethereum.org/withdrawals)
-- [EIP-4895: Řetězová vazba výběru jako operace](https://eips.ethereum.org/EIPS/eip-4895)
+- [Výběry z vkladového spouštěcího panelu](https://launchpad.Ethereum.org/withdrawals)
+- [EIP-4895: Řetězová vazba výběru jako operace](https://eips.Ethereum.org/EIPS/EIP-4895)
 - [PEEPanEIP #94: Výběr vložených ETH (testování) s Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Výběry pomocí řetězové vazby jako operace s Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Porozumění efektivnímu zůstatku validátoru](https://www.attestant.io/posts/understanding-validator-effective-balance/)
