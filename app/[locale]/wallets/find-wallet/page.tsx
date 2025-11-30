@@ -23,6 +23,8 @@ import {
 
 import FindWalletPageJsonLD from "./page-jsonld"
 
+import { routing } from "@/i18n/routing"
+
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
   const t = await getTranslations({
@@ -80,6 +82,12 @@ const Page = async ({ params }: { params: PageParams }) => {
       </I18nProvider>
     </>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
 }
 
 export async function generateMetadata({
