@@ -20,7 +20,7 @@ Pochopení decentralizované povahy Etherea je zásadní, protože **každý, kd
   Osvojte si základy Etherea
 </DocLink>
 
-Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu ethereum.org](https://discord.gg/ethereum-org) a my se vám pokusíme pomoci.
+Přestože neexistuje oficiální podpora, mnoho skupin, komunit a projektů v ekosystému Etherea je ochotných vám pomoci a na této stránce můžete najít mnoho užitečných informací a zdrojů. Stále máte dotazy? Připojte se na [Discordu Ethereum.org](https://discord.gg/Ethereum-org) a my se vám pokusíme pomoci.
 
 ## Často kladené dotazy {#faq}
 
@@ -38,17 +38,17 @@ Ethereum giveaway jsou podvody navržené k tomu, aby vám ukradly ETH. Nenechte
 
 Transakce na Ethereu se mohou někdy zaseknout, a to v případě, že jste zadali nižší poplatek za transakci, než je požadováno vzhledem k zatížení sítě. Spousta peněženek poskytuje možnost znovu odeslat stejnou transakci s vyšším poplatkem, aby byla transakce zpracována. Alternativně můžete zrušit nevyřízenou transakci tím, že pošlete transakci na svou vlastní adresu a použijete stejné jedinečné číslo nonce jako u nevyřízené transakce.
 
-[Jak zrychlit nebo zrušit nevyřízenou transakci v MetaMasku](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[Jak zrychlit nebo zrušit nevyřízenou transakci v MetaMasku](https://MetaMask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
 
-[Jak zrušit nevyřízené transakce na Ethereu](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+[Jak zrušit nevyřízené transakce na Ethereu](https://info.etherscan.com/how-to-cancel-Ethereum-pending-transactions/)
 
-### Jak mohu těžit Ethereum? {#mining-ethereum}
+### Jak mohu těžit Ethereum? {#mining-Ethereum}
 
-Těžba Etherea už není možná. Těžba byla ukončena, když Ethereum přešlo z [proof of work](/glossary/#pow) na [proof of stake](/glossary/#pos). Nyní má Ethereum místo těžařů validátory. Každý může [stakovat](/glossary/#staking) ETH a dostávat odměny za provozování validačního softwaru zabezpečujícího síť.
+Těžba Etherea už není možná. Těžba byla ukončena, když Ethereum přešlo z [proof of work](/glossary/#PoW) na [proof of stake](/glossary/#PoS). Nyní má Ethereum místo těžařů validátory. Každý může [stakovat](/glossary/#staking) ETH a dostávat odměny za provozování validačního softwaru zabezpečujícího síť.
 
 ### Jak se stát stakerem / provozovat validátor? {#how-to-stake}
 
-Chcete-li se stát validátorem, musíte zastakovat 32 ETH v Ethereum deposit contractu a nastavit validační síťový uzel. Další informace naleznete na našich [stránkách o stakování](/staking) a na [staking launchpadu](https://launchpad.ethereum.org/).
+Chcete-li se stát validátorem, musíte zastakovat 32 ETH v Ethereum deposit contractu a nastavit validační síťový uzel. Další informace naleznete na našich [stránkách o stakování](/staking) a na [staking launchpadu](https://launchpad.Ethereum.org/).
 
 ## Vývoj dappek {#building-support}
 
@@ -56,7 +56,7 @@ Vývoj může být obtížný. Zde najdete několik zdrojů zaměřených na vý
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
-- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
+- [Ethereum StackExchange](https://Ethereum.stackexchange.com/)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
@@ -68,7 +68,7 @@ Týká se vaše otázka konkrétního nástroje, projektu nebo knihovny? Větši
 
 Zde jsou některé oblíbené příklady:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/Ethereum/Solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -89,8 +89,8 @@ Většina týmů, které vytvářejí klienty na Ethereu, má také veřejně p�
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
-- [Erigon](https://github.com/ledgerwatch/erigon/issues)
-- [Reth](https://github.com/paradigmxyz/reth/discussions)
+- [Erigon](https://GitHub.com/ledgerwatch/erigon/issues)
+- [Reth](https://GitHub.com/paradigmxyz/reth/discussions)
 
 ### Konsenzuální klienti {#consensus-clients}
 
