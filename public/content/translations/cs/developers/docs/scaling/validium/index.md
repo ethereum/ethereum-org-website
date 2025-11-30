@@ -23,7 +23,7 @@ Nicméně uživatelé validia mohou mít své prostředky zmrazené a výběry o
 
 Toto je hlavní rozdíl mezi validiem a ZK-rollupy – jejich pozice na spektru dostupnosti dat. Obě řešení přistupují k ukládání dat odlišně, což má dopady na bezpečnost a nezávislost na důvěře.
 
-## Jak validia interagují s Ethereem? {#how-do-validiums-interact-with-ethereum}
+## Jak validia interagují s Ethereem? {#how-do-validiums-interact-with-Ethereum}
 
 Validia jsou škálovací protokoly postavené na stávajícím řetězci Etherea. Ačkoli provádí transakce mimo řetězec, validiový řetězec je spravován sadou smart kontraktů nasazených na Mainnetu, včetně:
 
@@ -47,7 +47,7 @@ Pokud on-chain ověřovací kontrakt shledá důkaz neplatným, jsou transakce z
 
 ### Transakce {#transactions}
 
-Uživatelé předkládají transakce operátorovi, což je síťový uzel zodpovědný za provádění transakcí na validiu. Některá validia mohou používat k exekuci řetězce jediného operátora nebo se pro rotaci operátorů spoléhat na mechanismus [proof of stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Uživatelé předkládají transakce operátorovi, což je síťový uzel zodpovědný za provádění transakcí na validiu. Některá validia mohou používat k exekuci řetězce jediného operátora nebo se pro rotaci operátorů spoléhat na mechanismus [proof of stake (PoS)](/developers/docs/consensus-mechanisms/PoS/).
 
 Operátor agreguje transakce do balíku a odešle je do ověřovacího okruhu k potvrzení. Ověřovací okruh přijme balík transakcí (a další relevantní data) jako vstupy a výstupem je důkaz o platnosti, který ověřuje, že operace byly provedeny správně.
 
@@ -87,7 +87,7 @@ Validia se liší v přístupu ke správě dostupnosti dat. Některá se spoléh
 
 Pro zajištění dostupnosti off-chain dat jmenují některá validiová řešení skupinu důvěryhodných subjektů, společně známou jako komise pro dostupnost dat (DAC), která ukládá kopie stavu a poskytuje důkazy o dostupnosti dat. DAC jsou snazší na implementaci a vyžadují méně koordinace, protože členství je omezené.
 
-Uživatelé však musí věřit DAC, že data budou k dispozici, když budou potřeba (např. pro generování Merkle důkazů). Existuje možnost, že členové komise [budou kompromitováni podvodníkem](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view), který pak může zadržovat off-chain data.
+Uživatelé však musí věřit DAC, že data budou k dispozici, když budou potřeba (např. pro generování Merkle důkazů). Existuje možnost, že členové komise [budou kompromitováni podvodníkem](https://notes.Ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view), který pak může zadržovat off-chain data.
 
 [Více o komisi pro dostupnost dat na validiu](https://medium.com/starkware/data-availability-e5564c416424).
 
@@ -117,7 +117,7 @@ Některé týmy se však pokoušejí optimalizovat stávající opkódy EVM pro 
 
 [Více o zkEVM](https://www.alchemy.com/overviews/zkevm).
 
-## Jak validia škálují Ethereum? {#scaling-ethereum-with-validiums}
+## Jak validia škálují Ethereum? {#scaling-Ethereum-with-validiums}
 
 ### 1. Off-chain úložiště dat {#off-chain-data-storage}
 
@@ -162,4 +162,4 @@ Několik projektů poskytuje implementace validia a volitia, které můžete int
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-rollupy versus Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition a vznikající spektrum dostupnosti dat](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollupy, validia a volitia: Seznamte se s nejžhavějšími škálovacími řešeními pro Ethereum](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [Rollupy, validia a volitia: Seznamte se s nejžhavějšími škálovacími řešeními pro Ethereum](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-Ethereum-scaling-solutions)
