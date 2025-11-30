@@ -47,6 +47,16 @@ on:
         required: false
         default: "168592"
         type: string
+      glossary_min_votes:
+        description: "Minimum votes for glossary terms (default: 2)"
+        required: false
+        default: "2"
+        type: string
+      skip_glossary_backup_pr:
+        description: "Skip creating a PR for glossary backups (default: false)"
+        required: false
+        default: "false"
+        type: string
 
 jobs:
   import_translations:
@@ -74,6 +84,8 @@ jobs:
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           I18N_CROWDIN_USER_ID: ${{ secrets.I18N_CROWDIN_USER_ID }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           FILE_LIMIT: ${{ github.event.inputs.file_limit }}
           START_OFFSET: ${{ github.event.inputs.start_offset }}
@@ -83,4 +95,6 @@ jobs:
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
           QA_PROMPT_ID: ${{ github.event.inputs.qa_prompt_id }}
+          GLOSSARY_MIN_VOTES: ${{ github.event.inputs.glossary_min_votes }}
+          SKIP_GLOSSARY_BACKUP_PR: ${{ github.event.inputs.skip_glossary_backup_pr }}
           GITHUB_REPOSITORY: ${{ github.repository }}

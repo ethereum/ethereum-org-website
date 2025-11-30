@@ -68,6 +68,26 @@ async function main(options?: { allLangs: boolean }) {
     allCrowdinCodes: config.allCrowdinCodes,
   })
 
+  // Step 0: Sync glossary from Supabase to Crowdin
+  if (!config.existingPreTranslationId) {
+    console.log("\n[GLOSSARY] ========== Syncing Glossary ==========")
+    try {
+      const { syncGlossary } = await import("./sync-glossary")
+      const glossaryResult = await syncGlossary()
+      console.log(
+        `[GLOSSARY] ✓ Updated ${glossaryResult.updatedGlossaries.length} languages`
+      )
+      if (glossaryResult.backupPrUrl) {
+        console.log(`[GLOSSARY] ✓ Backup PR: ${glossaryResult.backupPrUrl}`)
+      }
+    } catch (error) {
+      console.error("[GLOSSARY] Failed to sync glossary:", error)
+      console.error("[GLOSSARY] Continuing with workflow anyway...")
+    }
+  } else {
+    console.log("\n[GLOSSARY] Skipping glossary sync (resuming existing job)")
+  }
+
   // Shared state used in both resume and new flows
   const crowdinProjectFiles = await getCrowdinProjectFiles()
   const fileIdsSet = new Set<number>()
