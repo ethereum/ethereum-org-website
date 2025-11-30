@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/ETH-gif-cat.png
 summaryPoint1: Tradiční systémy identity centralizovaly vydávání, údržbu a kontrolu vašich identifikátorů.
 summaryPoint2: Decentralizovaná identita odstraňuje závislost na centralizovaných třetích stranách.
 summaryPoint3: Díky kryptu mají nyní opět uživatelé nástroje k vydávání, držení a ovládání svých identifikátorů a osvědčení.
@@ -55,7 +55,7 @@ Decentralizovaná identita má mnoho možných využití:
 
 ### 1. Univerzální přihlášení {#universal-dapp-logins}
 
-Decentralizovaná identita může pomoci nahradit přihlašování založené na heslech decentralizovanou autentifikací. Poskytovatelé služeb mohou vydávat atestace uživatelům, které mohou být uloženy v Ethereum peněžence. Příkladem atestace by byl [NFT](/glossary/#nft) umožňující držiteli přístup k online komunitě.
+Decentralizovaná identita může pomoci nahradit přihlašování založené na heslech decentralizovanou autentifikací. Poskytovatelé služeb mohou vydávat atestace uživatelům, které mohou být uloženy v Ethereum peněžence. Příkladem atestace by byl [NFT](/glossary/#NFT) umožňující držiteli přístup k online komunitě.
 
 Funkce [Přihlášení s Ethereem](https://siwe.xyz/) by pak umožnila serverům potvrdit uživatelův Ethereum účet a načíst požadovanou atestaci z jejich adresy účtu. To znamená, že uživatelé mohou přistupovat k platformám a webům, aniž by si museli zapamatovat dlouhá hesla, a tím zlepšili jejich online zážitek.
 
@@ -87,7 +87,7 @@ Tradiční identifikátory, jako je vaše jméno nebo e-mailová adresa, jsou z�
 
 Decentralizované identifikátory jsou vydávány, drženy a kontrolovány jednotlivci. [Účet na Ethereu](/glossary/#account) je příkladem decentralizovaného identifikátoru. Můžete si vytvořit tolik účtů, kolik chcete, bez povolení od kohokoliv a bez nutnosti jejich uložení do centrálního rejstříku.
 
-Decentralizované identifikátory jsou uloženy v decentralizovaných strukturách ([blockchainech](/glossary/#blockchain)) nebo v [sítích typu peer-to-peer](/glossary/#peer-to-peer-network). Díky tomu jsou DID [globálně jedinečné, řešitelné s vysokou dostupností a kryptograficky ověřitelné](https://w3c-ccg.github.io/did-primer/). Decentralizovaný identifikátor může být spojen s různými entitami, včetně lidí, organizací nebo vládních institucí.
+Decentralizované identifikátory jsou uloženy v decentralizovaných strukturách ([blockchainech](/glossary/#blockchain)) nebo v [sítích typu peer-to-peer](/glossary/#peer-to-peer-network). Díky tomu jsou DID [globálně jedinečné, řešitelné s vysokou dostupností a kryptograficky ověřitelné](https://w3c-ccg.GitHub.io/did-primer/). Decentralizovaný identifikátor může být spojen s různými entitami, včetně lidí, organizací nebo vládních institucí.
 
 ## Které technologie umožňují použití decentralizovaných identifikátorů? {#what-makes-decentralized-identifiers-possible}
 
@@ -151,7 +151,7 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 ### Soulbound tokeny a identity {#soulbound}
 
-[Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nepřenosná NFT](/glossary/#nft)) je možné používat ke shromažďování informací, které jsou pro konkrétní peněženku jedinečné. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účast.
+[Soulbound tokeny](https://vitalik.ETH.limo/general/2022/01/26/soulbound.HTML) ([nepřenosná NFT](/glossary/#NFT)) je možné používat ke shromažďování informací, které jsou pro konkrétní peněženku jedinečné. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účast.
 
 ## Využití decentralizované identity {#use-decentralized-identity}
 
@@ -185,7 +185,7 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 
 ### Komunity {#communities}
 
-- [Aliance ERC-725 na GitHubu](https://github.com/erc725alliance) – _Stoupenci normy ERC725 pro správu identity na blockchainu Ethereum_
+- [Aliance ERC-725 na GitHubu](https://GitHub.com/erc725alliance) – _Stoupenci normy ERC725 pro správu identity na blockchainu Ethereum_
 - [EthID Discord server](https://discord.com/invite/ZUyG3mSXFD) – _Komunita pro nadšence a vývojáře pracující na přihlášení s Ethereem_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) – _Komunita vývojářů podílejících se na budování rámce pro ověřitelná data pro aplikace_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Komunika vývojářů a builderů pracující na praktickém použití decentralizované identity napříč různými obory_
