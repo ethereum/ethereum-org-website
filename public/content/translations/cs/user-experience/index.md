@@ -7,7 +7,7 @@ alt: "Plán Etherea"
 template: roadmap
 ---
 
-**Používání Etherea musí být jednodušší**; od správy [klíčů](/glossary/#key) a [peněženek](/glossary/#wallet) až po posílání transakcí. Aby bylo masové přijetí vůbec možné, musí být používání Etherea mnohem jednodušší, aby měli uživatelé možnost cenzuře odolného přístupu k Ethereu bez omezení se zkušeností podobnou bezproblémovému používání [Web2](/glossary/#web2) aplikací.
+**Používání Etherea musí být jednodušší**; od správy [klíčů](/glossary/#key) a [peněženek](/glossary/#wallet) až po PoSílání transakcí. Aby bylo masové přijetí vůbec možné, musí být používání Etherea mnohem jednodušší, aby měli uživatelé možnost cenzuře odolného přístupu k Ethereu bez omezení se zkušeností podobnou bezproblémovému používání [Web2](/glossary/#web2) aplikací.
 
 ## Za bezpečnostní frází {#no-more-seed-phrases}
 
