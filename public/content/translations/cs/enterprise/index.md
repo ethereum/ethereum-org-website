@@ -5,11 +5,11 @@ lang: cs
 sidebarDepth: 1
 ---
 
-# Ethereum pro firmy {#ethereum-for-enterprise}
+# Ethereum pro firmy {#Ethereum-for-enterprise}
 
 <FeaturedText>Příručky, články a nástroje o veřejných a soukromých blockchainech Etherea pro firmy.</FeaturedText>
 
-## K čemu je Ethereum pro firmy? {#why-enterprise-ethereum}
+## K čemu je Ethereum pro firmy? {#why-enterprise-Ethereum}
 
 Proč by se firmy měly starat o Ethereum?
 
@@ -21,8 +21,8 @@ Proč by se firmy měly starat o Ethereum?
 
 Tady jsou některé související články pro více informací:
 
-- [5 Reasons Why Enterprise Ethereum Is so Much More Than a Distributed Ledger Technology](https://media.consensys.net/5-reasons-why-enterprise-ethereum-is-so-much-more-than-a-distributed-ledger-technology-c9a89db82cb5)
-- [Blockchain Use Cases and Applications by Industry](https://media.consensys.net/enterprise-ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
+- [5 Reasons Why Enterprise Ethereum Is so Much More Than a Distributed Ledger Technology](https://media.consensys.net/5-reasons-why-enterprise-Ethereum-is-so-much-more-than-a-distributed-ledger-technology-c9a89db82cb5)
+- [Blockchain Use Cases and Applications by Industry](https://media.consensys.net/enterprise-Ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
 - [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
@@ -57,18 +57,18 @@ Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je použí
 
 ### Chráněný přístup {#permissioning}
 
-- [Pegasys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
-- [Quorum Permissioning solution](https://github.com/jpmorganchase/quorum/wiki/Security)
+- [Pegasys Permissioning Contracts](https://GitHub.com/PegaSysEng/permissioning-smart-contracts)
+- [Quorum Permissioning solution](https://GitHub.com/jpmorganchase/quorum/wiki/Security)
 
 ### Ochrana soukromí {#privacy}
 
-- [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Více informací [zde](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Více informací [zde](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Ernst & Young's ‘Nightfall'](https://GitHub.com/EYBlockchain/nightfall) _Více informací [zde](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Více informací [zde](https://GitHub.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Bezpečnost {#security}
 
-- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _používaný pro podepisování transakcí a data je zamýšlen jako náhrada pro správu účtů v Geth_
-- [EthSigner](https://github.com/ConsenSys/ethsigner) _Aplikace pro podepisování transakcí pro použití s poskytovateli web3_
+- [Clef](https://geth.Ethereum.org/docs/clef/tutorial) _používaný pro podepisování transakcí a data je zamýšlen jako náhrada pro správu účtů v Geth_
+- [EthSigner](https://GitHub.com/ConsenSys/ethsigner) _Aplikace pro podepisování transakcí pro použití s poskytovateli web3_
 
 ### Nástroje {#tooling}
 
