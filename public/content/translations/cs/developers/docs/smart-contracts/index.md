@@ -30,8 +30,8 @@ Tato logika je naprogramována do automatu.
 
 Smart kontrakt má do sebe naprogramovanou logiku, podobně jako prodejní automat. Zde je jednoduchý příklad, jak by takový prodejní automat vypadal, kdyby to byl smart kontrakt napsaný v Solidity:
 
-```solidity
-pragma solidity 0.8.7;
+```Solidity
+pragma Solidity 0.8.7;
 
 contract VendingMachine {
 
@@ -90,7 +90,7 @@ Samotné chytré kontrakty nemohou získávat informace o „skutečných“ ud�
 
 Nicméně je důležité, aby blockchainové aplikace mohly používat data, která jsou mimo blockchain. Řešením jsou [orákula](/developers/docs/oracles/), což jsou nástroje, které zpracovávají data mimo blockchain a zpřístupňují je chytrým kontraktům.
 
-Dalším omezením smart kontraktů je maximální velikost kontraktu. Smart kontrakt může mít maximálně 24 Kb, jinak dojde k vyčerpání paliva. Toto lze obejít pomocí tzv. [Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
+Dalším omezením smart kontraktů je maximální velikost kontraktu. Smart kontrakt může mít maximálně 24 Kb, jinak dojde k vyčerpání paliva. Toto lze obejít pomocí tzv. [Diamond Pattern](https://eips.Ethereum.org/EIPS/EIP-2535).
 
 ## Multisig kontrakty {#multisig}
 
@@ -101,7 +101,7 @@ Multisig (vícepodpisové) kontrakty jsou smart kontraktové účty, které vyž
 **OpenZeppelin Contracts –** **_knihovna pro vývoj bezpečných chytrých kontraktů._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [GitHub](https://GitHub.com/OpenZeppelin/openzeppelin-contracts)
 - [Komunitní fórum](https://forum.openzeppelin.com/c/general/16)
 
 ## Další informace {#further-reading}
