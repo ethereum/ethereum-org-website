@@ -15,8 +15,8 @@ Možná vám pomůže, když si před čtením o kompilaci přečtete náš úvo
 
 Aby [EVM](/developers/docs/evm/) mohl spustit váš kontrakt, musí být v **bytecode**. Kompilace udělá z tohoto:
 
-```solidity
-pragma solidity 0.4.24;
+```Solidity
+pragma Solidity 0.4.24;
 
 contract Greeter {
 
@@ -274,7 +274,7 @@ Níže je uvedeno ABI pro kontrakt na tokeny ERC-20. ERC-20 je token, se kterým
 
 ## Další informace {#further-reading}
 
-- [ABI specifikace](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
+- [ABI specifikace](https://Solidity.readthedocs.io/en/v0.7.0/abi-spec.HTML) _– Solidity_
 
 ## Související témata {#related-topics}
 
