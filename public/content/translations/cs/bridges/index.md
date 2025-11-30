@@ -63,7 +63,7 @@ Představte si, že si chcete koupit Bitcoin (BTC), ale máte peníze pouze na h
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Všechny tyto operace můžete provést také prostřednictvím [centralizované burzy](/get-eth/). Ale pokud vaše prostředky ještě na burze nejsou, zahruje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
+  Všechny tyto operace můžete provést také prostřednictvím [centralizované burzy](/get-ETH/). Ale pokud vaše prostředky ještě na burze nejsou, zahruje taková operace vícero kroků, a pravděpodobně bude jednodušší použít přemostění.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -136,9 +136,9 @@ Přemostění jsou klíčová pro vstup uživatelů do 2. vrstev Etherea, stejn�
 <Divider />
 
 ## Další četba {#further-reading}
-- [EIP-5164: Meziblockchainová exekuce](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) – _18. června 2022 – Brendan Asselstine_
+- [EIP-5164: Meziblockchainová exekuce](https://Ethereum-magicians.org/t/EIP-5164-cross-chain-execution/9658) – _18. června 2022 – Brendan Asselstine_
 - [Rizika přemostění vrstev 2](https://gov.l2beat.com/t/l2bridge-risk-framework/31) – _5. července 2022 – Bartek Kiepuszewski_
-- [Proč je budoucnost multiblockchainová, ale ne meziblockchainová](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) – _8. ledna 2022 – Vitalik Buterin_
+- [Proč je budoucnost multiblockchainová, ale ne meziblockchainová](https://old.reddit.com/r/Ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) – _8. ledna 2022 – Vitalik Buterin_
 - [Využití sdíleného zabezpečení pro bezpečnou interoperabilitu mezi blockchainy: Lagrangovy stavové výbory a další](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – _ 12. června 2024 – Emmanuel Awosika_
 - [Stav řešení interoperability rollupů](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) – _20. června 2024 – Alex Hook_
 
