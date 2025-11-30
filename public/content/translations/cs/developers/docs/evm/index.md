@@ -16,9 +16,9 @@ Přirovnání k „distribuované účetní knize“ se často používá k popi
 
 Ethereum sice má vlastní nativní kryptoměnu (ether), která se řídí téměř stejnými intuitivními pravidly, ale zároveň umožňuje mnohem výkonnější funkce: [chytré kontrakty](/developers/docs/smart-contracts/). Pro tuto složitější funkci potřebujeme sofistikovanější přirovnání. Namísto distribuované účetní knihy je Ethereum distribuovaný [stavový stroj](https://wikipedia.org/wiki/Finite-state_machine). Stav Etherea je velká datová struktura, která obsahuje nejen všechny účty a zůstatky, ale také _stav stroje_, který se může měnit od bloku k bloku podle předem definovaného souboru pravidel a který může vykonávat libovolný strojový kód. Specifická pravidla pro změnu stavu od bloku k bloku jsou definována v EVM.
 
-![Diagram znázorňující složení EVM](./evm.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram znázorňující složení EVM](./evm.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Funkce změny stavu na Ethereu {#the-ethereum-state-transition-function}
+## Funkce změny stavu na Ethereu {#the-Ethereum-state-transition-function}
 
 EVM se chová jako matematická funkce: Na základě vstupu produkuje deterministický výstup. Je tedy užitečné formálněji popsat Ethereum jako systém s **funkcí změny stavu**:
 
@@ -48,7 +48,7 @@ Kontrakty však obsahují trie _úložiště_ Merkle Patricia (jako pole adresov
 
 Zkompilovaný bytecode chytrého kontraktu se vykonává jako řada [opkódů](/developers/docs/evm/opcodes) EVM, které provádějí standardní zásobníkové operace jako `XOR`, `AND`, `ADD`, `SUB` atd. EVM také implementuje několik blockchainově specifických zásobníkových operací, jako je `ADDRESS`, `BALANCE`, `BLOCKHASH` atd.
 
-![Diagram znázorňující, kde jsou potřeba jednotky pro EVM operace](../gas/gas.png) _Diagram převzat z [ilustrovaného Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram znázorňující, kde jsou potřeba jednotky pro EVM operace](../gas/gas.png) _Diagram převzat z [ilustrovaného Ethereum EVM](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implementace EVM {#evm-implementations}
 
@@ -58,20 +58,20 @@ Během devítileté historie Etherea prošlo EVM několika revizemi a existuje n
 
 [Exekuční klienty Etherea](/developers/docs/nodes-and-clients/#execution-clients) obsahují implementaci EVM. Navíc existuje několik samostatných implementací, včetně:
 
-- [Py-EVM](https://github.com/ethereum/py-evm) – _Python_
-- [evmone](https://github.com/ethereum/evmone) – _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) – _JavaScript_
-- [revm](https://github.com/bluealloy/revm) – _Rust_
+- [Py-EVM](https://GitHub.com/Ethereum/py-evm) – _Python_
+- [evmone](https://GitHub.com/Ethereum/evmone) – _C++_
+- [ethereumjs-vm](https://GitHub.com/ethereumjs/ethereumjs-vm) – _JavaScript_
+- [revm](https://GitHub.com/bluealloy/revm) – _Rust_
 
 ## Další informace {#further-reading}
 
-- [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Ethereum Yellowpaper](https://Ethereum.GitHub.io/yellowpaper/paper.pdf)
 - [Jellopaper alias KEVM: Sémantika EVM v K](https://jellopaper.org/)
-- [The Beigepaper](https://github.com/chronaeon/beigepaper)
+- [The Beigepaper](https://GitHub.com/chronaeon/beigepaper)
 - [Opkódy Virtuálního stroje Etherea](https://www.ethervm.io/)
 - [Interaktivní reference pro opkódy Virtuálního stroje Etherea](https://www.evm.codes/)
-- [Krátký úvod v dokumentaci Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Kniha Mastering Ethereum – Virtuální stroj Etherea](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Krátký úvod v dokumentaci Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML#index-6)
+- [Kniha Mastering Ethereum – Virtuální stroj Etherea](https://GitHub.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## Související témata {#related-topics}
 
