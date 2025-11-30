@@ -20,7 +20,7 @@ Při přesunu prostředků ze ZK-rollupu na Ethereum nedochází ke zpožděním
 
 ZK-rollupy zapisují transakce na Ethereum jako `calldata`. `calldata` je místo, kde jsou uložena data, která jsou zahrnuta v externích voláních funkcí smart kontraktů. Informace v `calldata` jsou publikovány na blockchainu, což umožňuje komukoli nezávisle rekonstruovat stav rollupu. ZK-rollupy používají kompresní techniky ke snížení objemu transakčních dat – například účty jsou reprezentovány indexem namísto adresy, což ušetří 28 bajtů dat. Publikování dat na řetězec je pro rollupy velkým nákladem, takže komprese dat může snížit poplatky uživatelů.
 
-## Jak ZK-rollupy interagují s Ethereem? {#zk-rollups-and-ethereum}
+## Jak ZK-rollupy interagují s Ethereem? {#zk-rollups-and-Ethereum}
 
 Řetězec ZK-rollupu je off-chain protokol, který funguje na vrcholu blockchainu Etherea a je řízen on-chain smart kontrakty na Ethereu. ZK-rollupy provádějí transakce mimo Mainnet, ale pravidelně odesílají balíky transakcí z off-chain na on-chain kontrakt rollupu. Tento záznam transakcí je neměnný, podobně jako blockchain Etherea, a tvoří řetězec ZK-rollupu.
 
@@ -58,11 +58,11 @@ Jako bezpečnostní opatření umožňují ZK-rollupy uživatelům zasílat tran
 
 Uživatelé v ZK-rollupu podepisují transakce a zasílají je operátorům L2 ke zpracování a zahrnutí do dalšího balíku. V některých případech je operátor centralizovaný subjekt, nazývaný sekvencer, který provádí transakce, agreguje je do balíků a odesílá na vrstvu 1. Sekvencer v tomto systému je jediným subjektem, který má povoleno vytvářet bloky vrstvy 2 a přidávat transakce rollupu do kontraktu ZK-rollupu.
 
-Jiné ZK-rollupy mohou rotovat roli operátora pomocí sady validátorů [proof of stake](/developers/docs/consensus-mechanisms/pos/). Potenciální operátoři vkládají prostředky do kontraktu rollupu, přičemž velikost každého vkladu ovlivňuje šance stakera na výběr pro vytvoření dalšího balíku rollupu. Podíl operátora může být penalizován snížením zástavy, pokud jedná podvodně, což ho motivuje k tomu, aby odesílal platné bloky.
+Jiné ZK-rollupy mohou rotovat roli operátora pomocí sady validátorů [proof of stake](/developers/docs/consensus-mechanisms/PoS/). Potenciální operátoři vkládají prostředky do kontraktu rollupu, přičemž velikost každého vkladu ovlivňuje šance stakera na výběr pro vytvoření dalšího balíku rollupu. Podíl operátora může být penalizován snížením zástavy, pokud jedná podvodně, což ho motivuje k tomu, aby odesílal platné bloky.
 
-#### Jak ZK-rollupy publikují transakční data na Ethereu {#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### Jak ZK-rollupy publikují transakční data na Ethereu {#how-zk-rollups-publish-transaction-data-on-Ethereum}
 
-Jak jsme už vysvětlili, transakční data jsou publikována na Ethereu jako `calldata`. `calldata` je datová oblast ve smart kontraktu, která slouží k předávání argumentů do funkce a chová se podobně jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Zatímco oblast `calldata` není uložena jako součást stavu Etherea, přetrvává na řetězci jako součást [historických logů](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) řetězce Etherea. `calldata` neovlivňuje stav Etherea, což z ní činí levný způsob ukládání dat na řetězci.
+Jak jsme už vysvětlili, transakční data jsou publikována na Ethereu jako `calldata`. `calldata` je datová oblast ve smart kontraktu, která slouží k předávání argumentů do funkce a chová se podobně jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Zatímco oblast `calldata` není uložena jako součást stavu Etherea, přetrvává na řetězci jako součást [historických logů](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML?highlight=memory#logs) řetězce Etherea. `calldata` neovlivňuje stav Etherea, což z ní činí levný způsob ukládání dat na řetězci.
 
 Klíčové slovo `calldata` často identifikuje metodu smart kontraktu, kterou transakce volá, a obsahuje vstupy do metody ve formě libovolné posloupnosti bajtů. ZK-rollupy používají `calldata` k publikování komprimovaných transakčních dat na řetězec; operátor rollupu jednoduše přidá nový balík tím, že zavolá požadovanou funkci v kontraktu rollupu a předá komprimovaná data jako argumenty funkce. To pomáhá snižovat náklady uživatelů, protože velká část poplatků za rollupy jde na ukládání transakčních dat na řetězci.
 
@@ -180,7 +180,7 @@ Kolik uživatelé platí za transakce na ZK-rollupech závisí na poplatku za pa
 
 1. **Zápis stavu**: Náklad na zápis do stavu Etherea (tj. podání transakce na blockchainu Etherea) je pevně daný. ZK-rollupy tento náklad snižují tím, že seskupují transakce a rozdělují pevné náklady mezi více uživatelů.
 
-2. **Publikování dat**: ZK-rollupy publikují stavová data pro každou transakci na Ethereu jako `calldata`. Náklady na `calldata` jsou aktuálně řízeny [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), který stanovuje náklady 16 jednotek paliva za bajt, který není nulový, a 4 jednotky paliva za nulový bajt `calldata`. Cena zaplacená za každou transakci je ovlivněna množstvím `calldata`, které je potřeba zveřejnit.
+2. **Publikování dat**: ZK-rollupy publikují stavová data pro každou transakci na Ethereu jako `calldata`. Náklady na `calldata` jsou aktuálně řízeny [EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559), který stanovuje náklady 16 jednotek paliva za bajt, který není nulový, a 4 jednotky paliva za nulový bajt `calldata`. Cena zaplacená za každou transakci je ovlivněna množstvím `calldata`, které je potřeba zveřejnit.
 
 3. **Poplatky operátorů L2**: Toto je částka vyplacená operátorovi rollupu jako kompenzace za výpočetní náklady spojené se zpracováním transakcí, podobně jako [„poplatky za prioritu transakce (spropitné)“](/developers/docs/gas/#how-are-gas-fees-calculated) na Ethereum Mainnetu.
 
@@ -188,7 +188,7 @@ Kolik uživatelé platí za transakce na ZK-rollupech závisí na poplatku za pa
 
 Kromě seskupování transakcí snižují ZK-rollupy poplatky pro uživatele kompresí transakčních dat. Můžete se [podívat na aktuální přehled nákladů](https://l2fees.info/) na používání Ethereum ZK-rollupů.
 
-## Jak ZK-rollupy škálují Ethereum? {#scaling-ethereum-with-zk-rollups}
+## Jak ZK-rollupy škálují Ethereum? {#scaling-Ethereum-with-zk-rollups}
 
 ### Komprese dat transakcí {#transaction-data-compression}
 
@@ -227,13 +227,13 @@ Podívejte se na vysvětlení ZK-rollupů od Finematics:
 
 Projekty pracující na zkEVM zahrnují:
 
-- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** – _zkEVM je projekt financovaný Ethereum Foundation, jehož cílem je vyvinout ZK-rollup kompatibilní s EVM a mechanismus pro generování důkazů platnosti pro bloky Etherea._
+- **[zkEVM](https://GitHub.com/privacy-scaling-explorations/zkevm-specs)** – _zkEVM je projekt financovaný Ethereum Foundation, jehož cílem je vyvinout ZK-rollup kompatibilní s EVM a mechanismus pro generování důkazů platnosti pro bloky Etherea._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** – _je decentralizovaný ZK Rollup na Ethereum Mainnetu, který pracuje na Virtuálním stroji Etherea s nulovou znalostí (zkEVM), provádí Ethereum transakce transparentním způsobem, včetně smart kontraktů s ověřením pomocí důkazů s nulovou znalostí._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** – _Scroll je technologicky zaměřená společnost, která pracuje na vybudování nativního zkEVM řešení vrstvy 2 pro Ethereum._
 
-- **[Taiko](https://taiko.xyz)** – _Taiko je decentralizovaný, Ethereum-ekvivalentní ZK-rollup ([typ 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** – _Taiko je decentralizovaný, Ethereum-ekvivalentní ZK-rollup ([typ 1 ZK-EVM](https://vitalik.ETH.limo/general/2022/08/04/zkevm.HTML))._
 
 - **[ZKsync](https://docs.zksync.io/)** – _ZKsync Era je ZK Rollup kompatibilní s EVM vyvinutý Matter Labs, poháněný vlastním zkEVM._
 
@@ -249,6 +249,6 @@ Projekty pracující na zkEVM zahrnují:
 - [Co je zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Typy ZK-EVM: Ethereum-ekvivalentní, EVM-ekvivalentní, Type 1, Type 4 a další kryptické pojmy](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Úvod do zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
-- [Zdroje awesome-zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKY pod pokličkou](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
-- [Jak jsou SNARKy možné?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
+- [Zdroje awesome-zkEVM](https://GitHub.com/LuozhuZhang/awesome-zkevm)
+- [ZK-SNARKY pod pokličkou](https://vitalik.ETH.limo/general/2017/02/01/zk_snarks.HTML)
+- [Jak jsou SNARKy možné?](https://vitalik.ETH.limo/general/2021/01/26/snarks.HTML)
