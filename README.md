@@ -22,10 +22,11 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 ## Table of contents
 
-- [How to contribute](#how-to-contribute)
-- [Translation Program](docs/translation-program.md)
-- [The ethereum.org website stack](docs/stack.md)
-- [Website conventions / best practices](docs/best-practices.md)
+  * How to contribute
+  * Translation Program
+  * The ethereum.org website stack
+  * Website conventions / best practices
+  * Claim your POAP and OATs!
 
 ## How to contribute
 
