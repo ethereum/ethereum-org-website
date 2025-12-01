@@ -49,10 +49,15 @@ buttons:
 
 <PredictionMarketLists />
 
-<InfoBanner isWarning emoji="💡">
+<Alert variant="warning">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertDescription>
   <p className="mt-0"><strong>Να έχετε επίγνωση των κινδύνων</strong></p>
   <p className="mt-2">Στοιχηματίστε μόνο όσα μπορείτε να αντέξετε οικονομικά και να γνωρίζετε πιθανές εθιστικές συμπεριφορές.</p>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Προκλήσεις & Κίνδυνοι {#challenges-and-risks}
 
