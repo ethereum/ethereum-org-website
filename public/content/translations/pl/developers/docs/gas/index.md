@@ -87,7 +87,7 @@ Aby wykonać transakcję w sieci, użytkownicy mogą określić maksymalny limit
 
 ### Rozmiar bloku {#block-size}
 
-Każdy blok ma docelowy rozmiar 15 milionów gazu, ale rozmiar bloków będzie zwiększać się lub zmniejszać zgodnie z zapotrzebowaniem sieci, aż do limitu bloku wynoszącego 30 milionów gazu (dwukrotność docelowego rozmiaru bloku). Protokół osiąga zrównoważony rozmiar bloku wynoszący średnio 15 milionów poprzez proces nazywany _tâtonnement_. Oznacza to, że jeśli rozmiar bloku jest większy niż docelowy rozmiar bloku, protokół zwiększy opłatę podstawową dla kolejnego bloku. Podobnie również protokół zmniejszy opłatę podstawową, jeśli rozmiar bloku jest mniejszy niż docelowy rozmiar bloku. Kwotą, o jaką opłata podstawowa zostaje dostosowana, jest proporcjonalna do tego, jak daleko aktualny rozmiar bloku znajduje się od tego docelowego. [Więcej na temat bloków](/developers/docs/blocks/).
+Każdy blok ma docelowy rozmiar 30 milionów gazu, ale rozmiar bloków będzie zwiększać się lub zmniejszać zgodnie z zapotrzebowaniem sieci, aż do limitu bloku wynoszącego 60 milionów gazu (dwukrotność docelowego rozmiaru bloku). Protokół osiąga zrównoważony rozmiar bloku wynoszący średnio 30 milionów poprzez proces nazywany _tâtonnement_. Oznacza to, że jeśli rozmiar bloku jest większy niż docelowy rozmiar bloku, protokół zwiększy opłatę podstawową dla kolejnego bloku. Podobnie również protokół zmniejszy opłatę podstawową, jeśli rozmiar bloku jest mniejszy niż docelowy rozmiar bloku. Kwotą, o jaką opłata podstawowa zostaje dostosowana, jest proporcjonalna do tego, jak daleko aktualny rozmiar bloku znajduje się od tego docelowego. [Więcej na temat bloków](/developers/docs/blocks/).
 
 ### Obliczanie opłat za gaz w praktyce {#calculating-fees-in-practice}
 
