@@ -64,6 +64,19 @@ sidebarDepth: 2
     - 統合されたテストネットフォーセットのアクセス
     - 18,000人のアクティブユーザーを持つ開発者のためのDiscordコミュニティ
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [ドキュメント](https://docs.allnodes.com/)
+  - 機能
+    - Allnodesポートフォリオページで作成されたPublicNodeトークンでのレート制限なし。
+    - [PublicNode](https://www.publicnode.com)でのプライバシー重視の無料RPCエンドポイント（100以上のブロックチェーン）
+    - 90以上のブロックチェーン向けレート制限なしの専用ノード
+    - 30以上のブロックチェーン向け専用アーカイブノード
+    - 3つの地域で利用可能（米国、欧州、アジア）
+    - [PublicNode](https://www.publicnode.com/snapshots)での100以上のブロックチェーン向けスナップショット
+    - 99.90%-99.98%稼働率SLA付き24時間365日テクニカルサポート（プランによる）
+    - 時間課金制
+    - クレジットカード、PayPal、クリプトで支払い
+
 - [**All That Node**](https://allthatnode.com/)
   - [ドキュメント](https://docs.allthatnode.com/)
   - 機能
@@ -155,6 +168,19 @@ sidebarDepth: 2
     - BYOC(Bring your own cloud、クラウド持ち込み)
     - 時間課金制
     - 24時間年中無休のダイレクトサポート
+
+- [**DataHub**](https://datahub.figment.io)
+  - [ドキュメント](https://docs.figment.io/)
+  - 機能
+    - 毎月300万件のリクエストの無料ティアオプション
+    - RPCとWSSエンドポイント
+    - 専用フルノードとアーカイブノード
+    - 自動スケーリング(ボリューム割引)
+    - 無料のアーカイブデータ
+    - サービス分析
+    - ダッシュボード
+    - 24時間年中無休のダイレクトサポート
+    - 暗号通貨での支払い(エンタープライズ)
 
 - [**DRPC**](https://drpc.org/)
   - [ドキュメント](https://docs.drpc.org/)
@@ -251,7 +277,7 @@ sidebarDepth: 2
     - ダイレクト技術サポート
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [ドキュメント](https://docs.nodereal.io/docs/introduction)
+  - [ドキュメンテーション](https://docs.nodereal.io/docs/introduction)
   - 機能
     - 信頼性の高い、高速かつスケーラブルなRPC APIサービス
     - Web3デベロッパー向けに改良されたAPI
@@ -311,7 +337,7 @@ sidebarDepth: 2
     - 従量課金制
 
 - [**SenseiNode**](https://senseinode.com)
-  - [ドキュメンテーション](https://docs.senseinode.com/)
+  - [ドキュメント](https://docs.senseinode.com/)
   - 機能
     - 専用ノードと共有ノード
     - ダッシュボード

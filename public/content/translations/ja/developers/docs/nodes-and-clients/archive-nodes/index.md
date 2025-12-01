@@ -62,7 +62,7 @@ sidebarDepth: 2
 
 クライアントのドキュメントで、所定のモードの要件を必ず確認するようにしてください。 アーカイブノードでは、ディスクスペースが最大の要件となります。 クライアントにもよりますが、3TBから12TBが必要になります。 HDDは、大容量データの保存には適しているかもしれませんが、同期して常にチェーンの先頭を更新するには、SSDドライブが必要です。 [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html)ドライブでも十分ですが、最低でも [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences)以上の品質のものを選びましょう。 ディスクは、十分なスロットがあるデスクトップコンピュータまたはサーバーが適しています。 このような専用デバイスは、稼働時間の長いノードに最適です。 ノートパソコンで実行しても全く問題ありませんが、移植性の面で追加コストがかかります。
 
-全データを1つのボリュームに収めるため、複数のディスクを [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0)やLVMを使って結合する必要があります。 [ZFS](https://en.wikipedia.org/wiki/ZFS)では、低レベルのエラーの影響を受けずに正しいデータを確実に書き込む「コピーオンライト」をサポートしているため、検討する価値があるかもしれません。
+全データを1つのボリュームに収めるため、複数のディスクを[RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) やLVMを使って結合する必要があります。 [ZFS](https://en.wikipedia.org/wiki/ZFS)では、低レベルのエラーの影響を受けずに正しいデータを確実に書き込む「コピーオンライト」をサポートしているため、検討する価値があるかもしれません。
 
 特に専門的なセットアップにおいては、さらなる安定性とセキュリティのために、偶発的なデータベースの破損を防ぐ[ECCメモリ](https://en.wikipedia.org/wiki/ECC_memory)の使用を検討してください。 RAMのサイズは通常、フルノードと同等のサイズにすることが推奨されますが、RAMのサイズが大きいほど、同期の速度は向上します。
 
@@ -70,7 +70,7 @@ sidebarDepth: 2
 
 ## 参考文献 {#further-reading}
 
-- [イーサリアムフルノードとアーカイブノードの比較](https://www.quicknode.com/guides/infrastructure/node-setup/ethereum-full-node-vs-archive-node) - *QuickNode、2022年9月*
+- [イーサリアムフルノードとアーカイブノードの比較](https://www.quicknode.com/guides/infrastructor/ethereum-full-node-vs-archive-node) - *QuickNode、2022年9月*
 - [自分のイーサリアムアーカイブノードを構築する](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush、2021年8月_
 - [エリゴン、エリゴンのRPC、TrueBlocks(スクレイピングとAPI)をサービスとしてセットアップする方法](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _ – Magnus Hansson、2022年9月更新_
 

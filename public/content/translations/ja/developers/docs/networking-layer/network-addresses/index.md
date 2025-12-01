@@ -36,4 +36,5 @@ enodeとは、URLアドレス形式を用いたイーサリアムノードの識
 ## 参考文献 {#further-reading}
 
 - [EIP-778: イーサリアム・ノード・レコード(ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [イーサリアムのネットワークアドレス](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
+- [LibP2P: Multiaddr-Enode-ENR？！](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

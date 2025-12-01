@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 元々は[イーサリアムイエローペーパー](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [実行クライアントの仕様](https://github.com/ethereum/execution-specs/)
 - [コンセンサスクライアントの仕様](https://github.com/ethereum/consensus-specs)
-- さまざまな[ネットワーク・アップグレード](/ethereum-forks/)で実装された[EIP](https://eips.ethereum.org/)
+- さまざまな[ネットワーク・アップグレード](/history/)で実装された[EIP](https://eips.ethereum.org/)
 
 ### ネットワークのノードの追跡 {#network-overview}
 
@@ -46,6 +46,8 @@ sidebarDepth: 2
 - Etherscanによる[ノードのマップ](https://etherscan.io/nodetracker)
 - Bitflyによる[Ethernodes](https://ethernodes.org/)
 - [Nodewatch](https://www.nodewatch.io/): Chainsafeによるコンセンサスノードのクローリング
+- [Monitoreth](https://monitoreth.io/) - MigaLabsによる分散型ネットワーク・モニタリングツール
+- [Weekly Network Health Reports](https://probelab.io) - ProbeLabが開発し、[Nebula crawler](https://github.com/dennis-tra/nebula)やその他のツールを使用
 
 ## ノードの類型 {#node-types}
 
@@ -64,7 +66,7 @@ sidebarDepth: 2
 
 アーカイブノードは、ジェネシスからすべてのブロックを検証し、ダウンロードしたデータを永久に保存するフルノードです。
 
-- フルノードに保存されているすべてを保持し、過去の状態のアーカイブを構築する。 例えば、ブロック4,000,000のアカウント残高をクエリしたい場合、または簡単にかつ確実にトレースを使用してマイニングを行うことなく、自分のトランザクションセットをテストしたい場合などに必要。
+- フルノードに保存されているすべてを保持し、過去の状態のアーカイブを構築する。 例えば、ブロック4,000,000のアカウント残高をクエリしたい場合や、トレースを使用して検証せずに、簡単にかつ確実に自分のトランザクションセットをテストしたい場合などに必要。
 - データがテラバイト単位になるため、平均的なユーザーにとってアーカイブノードは魅力的なものではないが、ブロックエクスプローラー、ウォレットベンダー、チェーン分析などのサービスに有用。
 
 アーカイブ以外の任意のモードでクライアントを同期すると、ブロックチェーンデータがプルーニングされます。 つまり、すべての過去の状態を保存するアーカイブは存在しませんが、フルノードは必要に応じて構築できます。
@@ -73,7 +75,7 @@ sidebarDepth: 2
 
 ### ライトノード {#light-node}
 
-ライトノードは、すべてのブロックをダウンロードする代わりに、ブロックヘッダーのみをダウンロードします。 ブロックヘッダーには、ブロックの内容に関するサマリー情報が含まれています。 ライトノードは、必要に応じて、フルノードからブロックヘッダー以外の情報を取得します。 また、受信したデータをブロックヘッダーの状態ルートに対して個別に検証できます。 ライトノードでは、フルノードを実行するために必要な強力なハードウェアや高帯域幅がなくても、イーサリアムネットワークに参加できます。 最終的には、ライトノードは携帯電話や組み込み機器で動作できるようになる可能性があります。 ライトノードはコンセンサスには参加せず、マイナーやバリデータにはなれませんが、フルノードと同じ機能とセキュリティ保証でイーサリアムブロックチェーンにアクセスできます。
+ライトノードは、すべてのブロックをダウンロードする代わりに、ブロックヘッダーのみをダウンロードします。 ブロックヘッダーには、ブロックの内容に関するサマリー情報が含まれています。 ライトノードは、必要に応じて、フルノードからブロックヘッダー以外の情報を取得します。 また、受信したデータをブロックヘッダーの状態ルートに対して個別に検証できます。 ライトノードでは、フルノードを実行するために必要な強力なハードウェアや高帯域幅がなくても、イーサリアムネットワークに参加できます。 最終的には、ライトノードは携帯電話や組み込み機器で動作できるようになる可能性があります。 ライトノードはコンセンサスには参加せず、バリデータにはなれませんが、フルノードと同じ機能とセキュリティ保証でイーサリアムブロックチェーンにアクセスできます。
 
 イーサリアムでは、ライトクライアントの開発が活発に行われています。コンセンサスレイヤーと実行レイヤーの新しいライトクライアントが、まもなくリリースされる予定です。 また、[ゴシップネットワーク](https://www.ethportal.net/)を介して、ライトクライアントデータを提供する方法もあります。 ゴシップネットワークは、フルノードがリクエストに応答することなくライトノードのネットワークをサポートできるため効率的です。
 
@@ -190,13 +192,14 @@ EthereumJS実行クライアント(EthereumJS)は、TypeScriptで書かれ、い
 
 [コンセンサスアップグレード](/roadmap/beacon-chain/)に対応する複数のコンセンサスクライアント(旧称: 「Eth2」クライアント) があります。 コンセンサスクライアントは、フォーク選択アルゴリズム、アテステーションの処理、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)の報酬とペナルティの管理など、コンセンサスに関連するロジックをすべて担っています。
 
-| クライアント                                                        | 言語         | オペレーティングシステム        | ネットワーク                                           |
-| ------------------------------------------------------------- | ---------- | ------------------- | ------------------------------------------------ |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | ビーコンチェーン、Goerli、Pyrmont、Sepolia、Ropstenなど        |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | ビーコンチェーン、Goerli、Sepolia、Ropstenなど                |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | ビーコンチェーン、Goerli、Sepolia、Ropstenなど                |
-| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Goerli、Pyrmont、Sepolia、Ropstenなど |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Goerli、Sepolia、Ropstenなど         |
+| クライアント                                                        | 言語         | オペレーティングシステム        | ネットワーク                                    |
+| ------------------------------------------------------------- | ---------- | ------------------- | ----------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | ビーコンチェーン、Holesky、Pyrmont、Sepoliaなど        |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | ビーコンチェーン、Holesky、Sepoliaなど                |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | ビーコンチェーン、Holesky、Sepoliaなど                |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Holesky、Pyrmont、Sepoliaなど |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | ビーコンチェーン、Gnosis、Holesky、Sepoliaなど         |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux、Windows、macOS | ビーコンチェーン、Holesky、Sepoliaなど                |
 
 ### Lighthouse {#lighthouse}
 
@@ -220,7 +223,7 @@ Nimbusは、Apache-2.0ライセンスの下、Nimで書かれたコンセンサ�
 
 Prysmは、GPL-3.0ライセンスの下、Goで書かれたフル機能のオープンソースのコンセンサスクライアントです。 オプションのWebアプリのUIを備え、自宅でステーキングするユーザーと機関ユーザーの両方に向けて、ユーザーエクスペリエンス、ドキュメント、設定可能性を優先しているのが特徴です。
 
-詳しくは、[Prysmのドキュメント](https://prysm.offchainlabs.com/docs/)をご覧ください。
+詳しくは、[Prysmのドキュメント](https://docs.prylabs.network/docs/getting-started/)をご覧ください。
 
 ### Teku {#teku}
 
@@ -229,6 +232,12 @@ Tekuは、オリジナルのビーコンチェーンで誕生したクライア�
 Tekuは、非常に柔軟なデプロイメントオプションを提供しています。 ビーコンノードとバリデータクライアントをシングルプロセスとして実行できるので、ソロステーカーにとって非常に便利です。または、高度なステーキング操作を行う場合は、個別にノードを実行することもできます。 さらに、署名キーのセキュリティとスラッシング保護のために、[Web3Signer](https://github.com/ConsenSys/web3signer/)と完全に互換性があります。
 
 Tekuは、Javaで実装されており、Apache 2.0でライセンスされています。 BesuやWeb3Signerを手がけるConsenSys社のプロトコルチームによって開発されています。 詳しくは、[Tekuのドキュメント](https://docs.teku.consensys.net/en/latest/)をご覧ください。
+
+### Grandine {#grandine}
+
+Grandineは、GPL-3.0ライセンスの下、Rustで書かれたコンセンサスクライアントの実装です。 Gradineコアチームによって管理されており、高速・高性能かつ軽量です。 ラズベリーパイのようなリソースの限られたデバイスで動かすソロステーカーから、数万のバリデータを運用する大規模機関のステーカーまで、幅広く対応することができます。
+
+詳しくは、 [Grandineのドキュメント](https://docs.grandine.io/)をご覧ください。
 
 ## 同期モード {#sync-modes}
 

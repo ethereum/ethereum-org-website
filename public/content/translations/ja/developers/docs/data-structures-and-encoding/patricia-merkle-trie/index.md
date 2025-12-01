@@ -11,7 +11,7 @@ sidebarDepth: 2
 
 マークル・パトリシア・ツリーは、決定論的で暗号的に検証可能です。状態ルートを生成する唯一の方法は、状態のそれぞれの部分で計算することです。2つの状態が同一であることは、ルートハッシュとその計算から導かれたハッシュを比較することで簡単に証明できます (_マークルプルーフ_) 。 反対に、同じルートハッシュで2つの異なる状態を生成することはあり得ません。また、異なる値で状態を変更しようとすると、異なる状態のルートハッシュになります。 理論的には、この構造により、挿入、検索、削除で`O(log(n))`による効率の「ホーリー・グレイル」を提供します。
 
-今後、イーサリアムでは[バークルツリー](/roadmap/verkle-trees)構造への移行を計画しています。これにより、将来のプロトコルの改善において、さまざまな新しい可能性が開かれます。
+今後、イーサリアムでは[バークルツリー](https://ethereum.org/en/roadmap/verkle-trees)構造への移行を計画しています。これにより、将来のプロトコルの改善において、さまざまな新しい可能性が開かれます。
 
 ## 前提知識 {#prerequisites}
 
@@ -33,34 +33,34 @@ sidebarDepth: 2
 
 基数ツリーの更新操作と削除操作は、次のように定義できます。
 
-```
-    def update(node,path,value):
-        curnode = db.get(node) if node else [ NULL ] * 17
+```python
+    def update(node_hash, path, value):
+        curnode = db.get(node_hash) if node_hash else [NULL] * 17
         newnode = curnode.copy()
-        if path == '':
+        if path == "":
             newnode[-1] = value
         else:
-            newindex = update(curnode[path[0]],path[1:],value)
+            newindex = update(curnode[path[0]], path[1:], value)
             newnode[path[0]] = newindex
-        db.put(hash(newnode),newnode)
+        db.put(hash(newnode), newnode)
         return hash(newnode)
 
-    def delete(node,path):
-        if node is NULL:
+    def delete(node_hash, path):
+        if node_hash is NULL:
             return NULL
         else:
-            curnode = db.get(node)
+            curnode = db.get(node_hash)
             newnode = curnode.copy()
-            if path == '':
+            if path == "":
                 newnode[-1] = NULL
             else:
-                newindex = delete(curnode[path[0]],path[1:])
+                newindex = delete(curnode[path[0]], path[1:])
                 newnode[path[0]] = newindex
 
             if all(x is NULL for x in newnode):
                 return NULL
             else:
-                db.put(hash(newnode),newnode)
+                db.put(hash(newnode), newnode)
                 return hash(newnode)
 ```
 
@@ -95,69 +95,72 @@ sidebarDepth: 2
 
 上記の_残りの部分パス長が偶数または奇数_かと、_リーフまたは拡張ノード_かを表すフラグは両方、あらゆる「2アイテムのノード」の部分パスの最初のニブルにあります。 結果は、次の通りになります。
 
-    hex char    bits    |    node type partial     path length
-    ----------------------------------------------------------
-       0        0000    |       extension              even
-       1        0001    |       extension              odd
-       2        0010    |   terminating (leaf)         even
-       3        0011    |   terminating (leaf)         odd
+| 16進数文字 | ビット  | ノードタイプ部分 | パス長 |
+| ------ | ---- | -------- | --- |
+| 0      | 0000 | 拡張子      | 偶数  |
+| 1      | 0001 | 拡張子      | 奇数  |
+| 2      | 0010 | 終端 （リーフ） | 偶数  |
+| 3      | 0011 | 終端 （リーフ） | 奇数  |
 
 偶数の残りのパス長 (`0`または`2`)の場合 、もう一つの`0`の「パディング」のニブルが常に続きます。
 
-```
+```python
     def compact_encode(hexarray):
         term = 1 if hexarray[-1] == 16 else 0
-        if term: hexarray = hexarray[:-1]
+        if term:
+            hexarray = hexarray[:-1]
         oddlen = len(hexarray) % 2
         flags = 2 * term + oddlen
         if oddlen:
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        // hexarray now has an even length whose first nibble is the flags.
-        o = ''
-        for i in range(0,len(hexarray),2):
-            o += chr(16 * hexarray[i] + hexarray[i+1])
+        # hexarrayは、最初のニブルがフラグである偶数の長さを持ちます。
+        o = ""
+        for i in range(0, len(hexarray), 2):
+            o += chr(16 * hexarray[i] + hexarray[i + 1])
         return o
 ```
 
 例：
 
-```
-    > [ 1, 2, 3, 4, 5, ...]
+```python
+    > [1, 2, 3, 4, 5, ...]
     '11 23 45'
-    > [ 0, 1, 2, 3, 4, 5, ...]
+    > [0, 1, 2, 3, 4, 5, ...]
     '00 01 23 45'
-    > [ 0, f, 1, c, b, 8, 10]
+    > [0, f, 1, c, b, 8, 10]
     '20 0f 1c b8'
-    > [ f, 1, c, b, 8, 10]
+    > [f, 1, c, b, 8, 10]
     '3f 1c b8'
 ```
 
 以下は、パトリシア・マークル・ツリーでノードを取得する拡張コードです。
 
-```
-    def get_helper(node,path):
-        if path == []: return node
-        if node = '': return ''
-        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
+```python
+    def get_helper(node_hash, path):
+        if path == []:
+            return node_hash
+        if node_hash == "":
+            return ""
+        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
-            if k2 == path[:len(k2)]:
-                return get(v2, path[len(k2):])
+            if k2 == path[: len(k2)]:
+                return get(v2, path[len(k2) :])
             else:
-                return ''
+                return ""
         elif len(curnode) == 17:
-            return get_helper(curnode[path[0]],path[1:])
+            return get_helper(curnode[path[0]], path[1:])
 
-    def get(node,path):
+    def get(node_hash, path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node,path2)
+        return get_helper(node_hash, path2)
 ```
 
 ### ツリーの例 {#example-trie}
@@ -199,13 +202,13 @@ sidebarDepth: 2
 
 ### ステート(状態)ツリー  {#state-trie}
 
-グローバルの状態ツリーが1つあり、クライアントがブロックを処理するたびに更新されます。 その中では、 `path`は常に`keccak256(ethereumAddress)`であり、`value`は常に`rlp(ethereumAccount)`です。 より具体的には、イーサリアムの`account`は、4つのアイテムの配列`[nonce,balance,storageRoot,codeHash]`です。 この点において、この`storageRoot`が、もう一つのパトリシア・ツリーであることは非常に重要です。
+グローバルの状態ツリーが1つあり、クライアントがブロックを処理するたびに更新されます。 その中では、 `path`は常に`keccak256(ethereumAddress)`であり、`value`は常に`rlp(ethereumAccount)`です。 より具体的には、イーサリアムの`アカウント`は`[nonce,balance,storageRoot,codeHash]`の4項目配列です。 この点において、この`storageRoot`が、もう一つのパトリシア・ツリーであることは非常に重要です。
 
 ### ストレージツリー {#storage-trie}
 
 ストレージツリーは、 _すべて_のコントラクトデータが存在する場所です。 アカウントごとに個別のストレージツリーがあります。 与えられたアドレスにある、特定のストレージポジションの値を取得するには、ストレージアドレスであるストレージに格納されたデータの整数のポジションと、ブロックIDが必要です。 これらは、JSON-RPC APIで定義されている`eth_getStorageAt`に引数として渡すことができます。アドレス`0x295a70b2de5e3953354a6a8344e616ed314d7251`ストレージスロット0のデータを取得する例は、次のようになります。
 
-```
+```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
@@ -214,7 +217,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ストレージの他の要素を取得するのは、ストレージツリーのポジションを最初に計算する必要があるため、より複雑になります。 ポジションは、アドレスとストレージポジションの`keccak256`ハッシュとして計算され、両方とも長さ32バイト長になるように左からゼロが足されます。 例えば、アドレス `0x391694e7e0b0cce554cb130d723a9d27458f9298`のストレージスロット1のデータの位置は、次のようになります。
 
-```
+```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
@@ -229,7 +232,7 @@ undefined
 
 よって、`path`は`keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`となります。 これを使用して、前と同様にストレージツリーからデータを取得できます。
 
-```
+```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
@@ -241,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ブロックごとに個別のトランザクションツリーがあり、ここでも`(key, value)`ペアが格納されます。 パスは、ここでは`rlp(transactionIndex)`で、以下によって決定される値に対応するキーを表します。
 
-```
+```python
 if legacyTx:
   value = rlp(tx)
 else:

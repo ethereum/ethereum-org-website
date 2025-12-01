@@ -44,12 +44,12 @@ lang: ja
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): TypeScriptで実装されたコンセンサスライトクライアント
 - [Helios](https://github.com/a16z/helios): Rustで実装された実行およびコンセンサスを結合したライトクライアント
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): Goで実装された実行クライアントのライトモード(開発中)
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Goで実装された実行クライアントのライトモード(開発中)
 - [Nimbus](https://nimbus.guide/el-light-client.html): Nimで実装されたコンセンサスライトクライアント
 
 現時点では、これらはまだ本番環境で使用できるものではありません。
 
-また、ライトクライアントがイーサリアムのデータにアクセスする方法の改善にも、多くの作業が必要です。 現状、ライトクライアントは、クライアント/サーバーモデルを使用したフルノードへのRPCリクエストが必要ですが、将来的には、[ポータルネットワーク](https://www.ethportal.net/)などのピアツーピアのゴシッププロトコルを使用して、ライトクライアントに対してデータを提供できるようになります。
+また、ライトクライアントがイーサリアムのデータにアクセスする方法の改善にも、多くの作業が必要です。 現状、ライトクライアントは、クライアント/サーバーモデルを使用したフルノードへのRPCリクエストが必要ですが、将来的には、[ポータルネットワーク](https://www. ethportal.net/)などのピアツーピアのゴシッププロトコルを使用して、ライトクライアントに対してデータを提供できるようになります。
 
 [バークルツリー](/roadmap/verkle-trees/)や[ステートレス](/roadmap/statelessness/)などの[ロードマップ](/roadmap/)アイテムの導入により、ライトクライアントのセキュリティ保証もフルクライアントと同等になるでしょう。
 

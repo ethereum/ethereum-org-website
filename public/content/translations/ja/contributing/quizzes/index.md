@@ -14,7 +14,7 @@ lang: ja
 
 - [レイヤー2](/layer-2)
 - [NFT](/nft/)
-- [イーサリアムとは？](/what-is-ethereum/)
+- [イーサリアムとは](/what-is-ethereum/)
 - [ETHとは何？](/eth/)
 
 ## 学習クイズの追加
