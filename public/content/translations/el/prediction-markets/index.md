@@ -29,7 +29,7 @@ buttons:
 
 Σε αντίθεση με τις παραδοσιακές προβλέψεις, οι αγορές πρόβλεψης που βασίζονται σε blockchain είναι:
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
   <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
   <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
@@ -63,8 +63,8 @@ buttons:
 
 Οι αγορές πρόβλεψης στο blockchain αντιμετωπίζουν λίγες προκλήσεις που μπορούν να επηρεάσουν τη δικαιοσύνη, τη νομιμότητα και την ακρίβεια.
 
-⚠️ **Χειραγώγηση Αγοράς** – Πλούσιοι παίκτες μπορούν να διαστρεβλώσουν τα αποτελέσματα μέσω wash trading.\
-💧 **Θέματα Ρευστότητας** – Η χαμηλή συμμετοχή [ελάχιστη ρευστότητα](https://www.investopedia.com/terms/t/thinmarket.asp) μπορεί να μειώσει την αξιοπιστία της αγοράς.\
+⚠️ **Χειραγώγηση Αγοράς** – Πλούσιοι παίκτες μπορούν να διαστρεβλώσουν τα αποτελέσματα μέσω wash trading.  
+💧 **Θέματα Ρευστότητας** – Η χαμηλή συμμετοχή [ελάχιστη ρευστότητα](https://www.investopedia.com/terms/t/thinmarket.asp) μπορεί να μειώσει την αξιοπιστία της αγοράς.  
 🏛 **Ρυθμιστική Αβεβαιότητα** – Οι κυβερνήσεις έχουν επιβάλει περιορισμούς σε ορισμένες πλατφόρμες.
 
 Για να μετριάσουν αυτά τα ζητήματα, οι προγραμματιστές του Ethereum πειραματίζονται με λύσεις όπως η futarchy (διακυβέρνηση μέσω αγορών πρόβλεψης) και η αποκεντρωμένη επαλήθευση ταυτότητας.
@@ -79,6 +79,6 @@ buttons:
 
 ## Περαιτέρω υλικό για διάβασμα {#further-reading}
 
-[From prediction markets to info finance](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin\
-[Decentralized Prediction Market Development on Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)\
+[From prediction markets to info finance](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
+[Decentralized Prediction Market Development on Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
 [The Augur Project Whitepaper](https://github.com/AugurProject/whitepaper)
