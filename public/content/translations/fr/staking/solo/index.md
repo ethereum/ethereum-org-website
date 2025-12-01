@@ -53,9 +53,9 @@ Il faut également faire un petit peu de configuration matérielle et posséder 
 </ExpandableCard>
 
 <ExpandableCard title="Gestion des clés sécurisée" eventCategory="SoloStaking" eventName="clicked secure key management">
-Tout comme la façon dont les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiques pour votre validateur. Vous devez comprendre comment conserver toutes vos phrases de récupération ou vos clés privées en sécurité.{' '}
+Tout comme la façon dont les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiques pour votre validateur. Vous devez comprendre comment protéger vos phrases clés et clés privées. {' '}
 
-[Sécurité d'Ethereum et prévention des escroqueries](/security/)
+[Sécurité Ethereum et prévention des arnaques](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -134,11 +134,15 @@ Un validateur est une entité virtuelle existant sur Ethereum et participant au 
 </ExpandableCard>
 
 <ExpandableCard title="Puis-je déposer plus de 32 ETH ?">
-Chaque paire de clés associée à un validateur nécessite exactement 32 ETH pour être activée. Déposer plus d'ETH sur un même ensemble de clés n'augmente pas le potentiel de récompense, car chaque validateur est limité à un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">solde effectif</a> de 32 ETH. Cela signifie que la mise en jeu se fait par tranches de 32 ETH, chacune avec son propre jeu de clés et son propre solde.
+Oui, les comptes validateurs modernes peuvent contenir jusqu’à 2048 ETH. Tout montant d’ETH supérieur à 32 s’accumulera de manière progressive, augmentant par paliers entiers à mesure que votre solde réel augmente. Ceci est connu sous le nom de <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">solde effectif</a>.
 
-Ne déposez pas plus de 32 ETH pour un seul validateur. Cela n'augmentera pas vos récompenses. Si une adresse de retrait a été définie pour le validateur, Les fonds excédentaires de 32 ETH seront automatiquement retirés à cette adresse lors du prochain [balayage de validateur](/staking/withdrawals/#validator-sweeping).
+Pour augmenter le solde effectif d’un compte, et donc accroître les récompenses, il faut dépasser une marge de 0,25 ETH au-delà de chaque palier entier en ETH. Par exemple, un compte avec un solde réel de 32,9 ETH et un solde effectif de 32 ETH devrait gagner encore 0,35 ETH pour porter son solde réel au-delà de 33,25 ETH avant de déclencher une augmentation du solde effectif.
 
-Si la mise en jeu à domicile vous semble trop exigeante, envisagez d'utiliser un fournisseur [de mise en jeu en tant que service](/staking/saas/), ou si vous possédez moins de 32 ETH, consultez [les groupes d'enjeu](/staking/pools/).
+Cette marge empêche également le solde effectif de baisser tant qu’il n’est pas descendu de 0,25 ETH en dessous de son solde effectif actuel.
+
+Chaque paire de clés associée à un validateur nécessite au minimum 32  ETH pour être activée. Tout solde au-delà de ce montant peut être retiré à l’adresse de retrait associée à tout moment, via une transaction signée par cette adresse. Tout fonds dépassant le solde effectif maximal sera automatiquement retiré de façon périodique.
+
+Si le staking à domicile vous semble trop exigeant, envisagez d'utiliser un fournisseur de [staking-as-a-service](/staking/saas/), ou si vous travaillez avec moins de 32 ETH, consultez les [pools de staking](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Vais-je être sanctionné si je me déconnecte ? (tdlr : Non.)">
@@ -200,6 +204,7 @@ Pour déverrouiller et recevoir la totalité de votre solde, vous devez égaleme
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

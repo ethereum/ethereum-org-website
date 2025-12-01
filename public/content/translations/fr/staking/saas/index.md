@@ -1,6 +1,6 @@
 ---
 title: Mise en jeu en tant que service
-description: Un aperçu de la façon de débuter avec la mise en jeu ETH mutualisée
+description: En savoir plus sur le staking en tant que service
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
@@ -74,7 +74,7 @@ Les stakers qui ont fourni une adresse de retrait avec le dépôt initial n'ont 
 </ExpandableCard>
 
 <ExpandableCard title="Quand puis-je effectuer un retrait ?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Les retraits de prises ont été mis en œuvre lors de la mise à niveau de Shanghai/Capella en avril 2023. Après cela, les personnes qui misent doivent fournir une adresse de retrait (si elle n'est pas fournie avec le dépôt initial) et les paiements de récompense commenceront automatiquement à être distribués de façon périodique à intervalles de quelques jours.
+Après cela, les personnes qui misent doivent fournir une adresse de retrait (si elle n'est pas fournie avec le dépôt initial) et les paiements de récompense commenceront automatiquement à être distribués de façon périodique à intervalles de quelques jours.
 
 Les validateurs peuvent également se retirer entièrement en tant que validateur, ce qui débloquera leur solde ETH restant pour le retrait. Les comptes qui ont fourni une adresse de retrait d’exécution et terminé le processus de sortie recevront tout leur solde à l’adresse de retrait fournie lors du prochain balayage du validateur.
 
@@ -86,7 +86,7 @@ En utilisant un fournisseur SaaS, vous confiez l'exploitation de votre nœud à 
 
 Une fois le processus de coupure ou de sortie terminé, ces fonds seront transférés à l'adresse de retrait assignée au validateur. Cela nécessite de fournir une adresse de retrait à activer. Il se peut que l'adresse de retrait ait été fournie sur dépôt initial. Sinon, les clés de retrait du validateur devront être utilisées pour signer un message indiquant une adresse de retrait. Si aucune adresse de retrait n'a été fournie, les fonds resteront verrouillés jusqu'à ce qu'ils soient fournis.
 
-Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de détails sur n'importe quelles garanties ou options d'assurance ainsi que des instructions sur la façon de fournir une adresse de retrait. Si vous préférez contrôler complètement la configuration de votre validateur, [apprenez-en plus sur la façon de miser votre ETH](/staking/solo/) de manière individuelle.
+Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de détails sur n'importe quelles garanties ou options d'assurance ainsi que des instructions sur la façon de fournir une adresse de retrait. Si vous préférez avoir le contrôle total de la configuration de votre validateur, [apprenez-en plus sur la façon de miser votre ETH en solo](/staking/solo/).
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}

@@ -27,7 +27,7 @@ Ce n’est pas un rêve lointain – cela se passe aujourd’hui sur Ethereum. B
 
 Pour des millions de personnes travaillant à l’étranger, envoyer de l’argent au pays est une nécessité régulière. Les services de transfert de fonds traditionnels s’accompagnent souvent de frais élevés et de délais de traitement longs. Ethereum propose une alternative intéressante.
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
   <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
   <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
@@ -58,16 +58,12 @@ Des pays comme le Salvador et la République centrafricaine ont même adopté le
 
 Dans les pays où les moyens de paiement ont été déconnectés du reste du monde, les solutions de paiement intégrant les cryptomonnaies ont constitué un grand soulagement. Le paiement d’abonnements à des plateformes comme Netflix, Spotify ou encore à des cours en ligne est désormais facilité grâce aux plateformes de paiement en cryptomonnaie telles que Gnosis Pay et PayPal.
 
-
-<Alert variant="update">
-<AlertEmoji text=":eyes:" />
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Créez votre compte Ethereum dès aujourd’hui avec une application de portefeuille.</div>
   <ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Paiement des salaires {#salary-payments}
 
@@ -151,12 +147,9 @@ Bien que les monnaies fiduciaires aient l'avantage d'une large acceptation et st
 
 Qu'il s'agisse de faciliter les secours rapides en cas de catastrophe ou d'autonomiser les travailleurs du monde entier, les paiements en Ethereum écrivent un nouveau chapitre dans la longue histoire de l'argent. Bien que des défis subsistent, les avantages uniques offerts par cette technologie en font une option intéressante pour une large gamme de cas d’utilisation.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:" />
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Le moment est venu de créer votre propre compte Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>

@@ -40,15 +40,12 @@ Certaines applications vous demanderont d'enregistrer une "phrase de récupérat
 **Toute personne possédant la phrase peut prendre le contrôle de tous vos fonds.** Ne partagez jamais cette information avec qui que ce soit. Cette phrase doit contenir 12 à 24 mots générés de manière aléatoire (l'ordre des mots est important).
 
 <div>
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row justify-between items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div><b>Portefeuille installé ?</b><br/>Apprenez à l'utiliser.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Comment utiliser un portefeuille
   </ButtonLink>
- </AlertContent>
-</Alert>
+</InfoBanner>
 </div>
 
 Êtes-vous intéressé par d'autres guides ? Consultez nos : [Guides étape par étape](/guides/)

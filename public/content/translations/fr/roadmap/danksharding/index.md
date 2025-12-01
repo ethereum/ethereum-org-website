@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: Découvrez le Proto-Danksharding et le Danksharding, deux mises à jour consécutives pour passer à l’échelle Ethereum.
+description: Découvrez le Proto-Danksharding et le Danksharding, deux mises à niveau consécutives pour passer à l’échelle Ethereum.
 lang: fr
 summaryPoints:
   - Le Danksharding est une mise à jour en plusieurs phases visant à améliorer le passage à l’échelle et les capacités d'Ethereum.
@@ -21,7 +21,7 @@ Cette solution est onéreuse car ces données sont traitées par l’ensemble de
 
 <ExpandableCard title="Pourquoi les blobs rendent-ils les rollups moins coûteux ?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
-Les rollups sont une méthode pour faire passer Ethereum à l'échelle en regroupant les transactions hors chaîne, puis en publiant les résultats sur Ethereum. Un rollup est essentiellement composé de deux parties : les données et la vérification de l'exécution. Les données représentent la séquence complète de transactions traitées par un rollup pour générer le changement d'état publié sur Ethereum. La vérification de l'exécution consiste à faire réexécuter ces transactions par un acteur honnête (un « démonstrateur ») pour garantir que le changement d'état proposé est correct. Pour que la vérification de l'exécution soit possible, les données de transaction doivent être disponibles suffisamment longtemps afin que quiconque puisse les télécharger et les vérifier. Cela signifie que tout comportement malhonnête de la part du séquenceur de rollup peut être identifié et contesté par le démonstrateur. Cependant, ces données n'ont pas besoin d'être disponibles indéfiniment.
+Les rollups sont un moyen de faire évoluer Ethereum en regroupant les transactions hors chaîne, puis en publiant les résultats sur Ethereum. Un rollup est essentiellement composé de deux parties : les données et la vérification de l'exécution. Les données représentent la séquence complète de transactions traitées par un rollup pour générer le changement d'état publié sur Ethereum. La vérification de l'exécution consiste à faire réexécuter ces transactions par un acteur honnête (un « démonstrateur ») pour garantir que le changement d'état proposé est correct. Pour que la vérification de l'exécution soit possible, les données de transaction doivent être disponibles suffisamment longtemps afin que quiconque puisse les télécharger et les vérifier. Cela signifie que tout comportement malhonnête de la part du séquenceur de rollup peut être identifié et contesté par le démonstrateur. Cependant, ces données n'ont pas besoin d'être disponibles indéfiniment.
 
 </ExpandableCard>
 
@@ -57,9 +57,9 @@ Si quelqu'un connaissait les points aléatoires utilisés pour l'engagement, il 
 
 </ExpandableCard>
 
-<Alert variant="warning" className="mb-8">
+<InfoBanner isWarning mb={8}>
   Ni le Danksharding ni le Proto-Danksharding ne suivent le modèle traditionnel de « fragmentation » qui visait à diviser la blockchain en plusieurs fragments. La fragmentation de la chaîne ne fait plus partie de la feuille de route. Au lieu de cela, le Danksharding utilise un échantillonnage de données distribué à travers les blobs pour faire passer Ethereum à l'échelle. Ceci est beaucoup plus simple à mettre en œuvre. Ce modèle est parfois désigné sous le nom de « data-sharding » ou « fragmentation de données ».
-</Alert>
+</InfoBanner>
 
 ## Qu'est-ce que le Danksharding ? {#what-is-danksharding}
 

@@ -18,7 +18,7 @@ Vous souhaitez entamer votre aventure sur Ethereum ? Nos guides pratiques vous c
 
 1. [Comment révoquer l'accès des contrats intelligents à vos cryptos](/guides/how-to-revoke-token-access/) - Si vous découvrez une transaction dans votre portefeuille que vous n'avez pas initiée, ce guide vous apprendra comment éviter que cela ne se reproduise.
 
-2. [Comment identifier les arnaques aux jetons](/guides/how-to-id-scam-tokens/) - Que sont les jetons d'arnaque, comment parviennent-ils à se faire passer pour légitimes et comment les identifier pour vous protéger et éviter les escroqueries.
+2. [Comment identifier les tokens frauduleux](/guides/how-to-id-scam-tokens/) - Que sont les tokens frauduleux ? Comment ces tokens se donnent-ils une apparence légitime, et comment les identifier pour vous protéger et éviter les arnaques ?
 
 ## Utiliser Ethereum
 

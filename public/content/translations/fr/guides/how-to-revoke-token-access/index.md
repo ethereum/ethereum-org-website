@@ -20,6 +20,8 @@ Plusieurs sites Web vous permettent de visualiser et de révoquer les contrats i
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Cointool](https://cointool.app/approve/eth) (plusieurs réseaux)
 - [Revoke](https://revoke.cash/) (plusieurs réseaux)
 - [Unrekt](https://app.unrekt.net/) (plusieurs réseaux)
 - [EverRevoke](https://everrise.com/everrevoke/) (plusieurs réseaux)
@@ -46,15 +48,12 @@ Nous vous conseillons de rafraîchir l'outil de révocation après quelques minu
 
  <br />
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Questions fréquemment posées
 

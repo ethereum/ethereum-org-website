@@ -9,19 +9,14 @@ template: roadmap
 
 Ethereum est mis à l'échelle à l'aide de [couches 2](/layer-2/#rollups) (également appelées rollups), qui regroupent les transactions et envoient le résultat à Ethereum. Bien que les rollups soient jusqu'à huit fois moins chers que le réseau principal d'Ethereum, il est possible d'optimiser davantage ces derniers, et réduire ainsi les coûts des utilisateurs finaux. Les rollups reposent également sur certains composants centralisés, que les développeurs peuvent supprimer à mesure que les rollups évoluent.
 
-<Alert variant="update" className="mb-8">
-<AlertContent>
-<AlertTitle className="mb-4">
-  Frais de transaction
-</AlertTitle>
+<InfoBanner mb={8} title="Frais de transaction">
   <ul style={{ marginBottom: 0 }}>
     <li>Aujourd'hui, les rollups sont <strong> 5 à 20 fois</strong> moins coûteux que la couche 1 d'Ethereum</li>
     <li>Les rollups ZK réduiront bientôt de <strong> 40 à 100 fois moins </strong>ces coûts</li>
     <li>Les changements à venir apportés à Ethereum fourniront une mise à l'échelle <strong>~100-1000x</strong> supplémentaire</li>
     <li style={{ marginBottom: 0 }}>Les utilisateurs bénéficieront de transactions<strong> à moins de 0,001 USD</strong></li>
   </ul>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Rendre les données moins onéreuses {#making-data-cheaper}
 
@@ -37,7 +32,7 @@ Avec le Proto-Danksharding, il est possible d'ajouter de nombreux blobs aux bloc
 
 La seconde étape de l'expansion des données blob est compliquée car elle nécessite de nouvelles méthodes pour vérifier que les données rollup sont disponibles sur le réseau, et elle dépend de [validateurs](/glossary/#validator) séparant leur responsabilité de création de [bloc](/glossary/#block) et de proposition de bloc. Cela nécessite également un moyen de prouver cryptographiquement que les validateurs ont vérifié de petits sous-ensembles de données blob.
 
-Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). **Celle-ci prendra certainement plusieurs années** avant d'être totalement implémentée. La solution Danksharding repose sur d'autres développements tels que [la séparation entre la construction et la proposition de blocs](/roadmap/pbs) et de nouveaux modèles de réseau qui permettent à celui-ci de confirmer avec efficacité, que les données sont disponibles en échantillonnant de manière aléatoire quelques kilo-octets à la fois, aussi appelé [Échantillonnage de disponibilité des données (DAS)](/developers/docs/data-availability).
+Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). Les travaux d’implémentation se poursuivent, avec des avancées sur des prérequis comme [la séparation entre la construction et la proposition de blocs](/roadmap/pbs) et de nouveaux modèles de réseau qui permettent à celui-ci de confirmer avec efficacité, que les données sont disponibles en échantillonnant de manière aléatoire quelques kilo-octets à la fois, aussi appelé [Échantillonnage de disponibilité des données (DAS)](/developers/docs/data-availability).
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding/">En savoir plus sur la fragmentation</ButtonLink>
 
@@ -49,8 +44,10 @@ Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). *
 
 ## Progrès actuels {#current-progress}
 
-Le Proto-Danksharding est le premier élément de cette feuille de route à être implémenté comme faisant partie de la mise à niveau du réseau Cancun-Deneb (« Dencun ») en mars 2024. Or, **la mise en œuvre complète de la solution Danksharding reste peu évidente avant plusieurs années**, tant celle-ci dépend de la réalisation de plusieurs autres éléments de la feuille de route devant être concrétisés en première instance. La décentralisation de l'infrastructure de rollup sera probablement un processus progressif : il existe de nombreux rollups différents qui construisent des systèmes légèrement différents et seront entièrement décentralisés à des rythmes différents.
+Le Proto-Danksharding a été mis en œuvre avec succès dans le cadre de la mise à niveau du réseau Cancun-Deneb (« Dencun ») en mars 2024. Depuis sa mise en œuvre, les rollups ont commencé à utiliser le stockage de blobs, entraînant une réduction des frais de transaction pour les utilisateurs et des millions de transactions traitées dans des blobs.
 
-[Plus d'informations sur la mise à niveau du réseau Dencun](/roadmap/dencun/)
+Les travaux sur le Danksharding complet se poursuivent, avec des avancées sur ses prérequis tels que PBS (Proposer-Builder Separation) et DAS (Data Availability Sampling). La décentralisation de l'infrastructure de rollup est un processus progressif : il existe de nombreux rollups différents qui construisent des systèmes légèrement différents et seront entièrement décentralisés à des rythmes différents.
+
+[En savoir plus sur la mise à niveau réseau Dencun et son impact](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

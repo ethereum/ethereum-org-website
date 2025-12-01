@@ -1,5 +1,5 @@
 ---
-title: Introduction à Ethereum
+title: Introduction technique à Ethereum
 description: Introduction aux concepts fondamentaux d'Ethereum pour les développeurs de DApp.
 lang: fr
 ---
@@ -108,6 +108,14 @@ Extraits de code réutilisables (un programme) qu'un développeur publie dans l'
 
 - [Livre blanc Ethereum](/whitepaper/)
 - [Comment fonctionne Ethereum, en fait ?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** cette ressource est toujours utile mais sachez qu'elle est antérieure à [La Fusion](/roadmap/merge) et fait donc toujours référence au mécanisme de preuve de travail d'Ethereum - Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos))
+
+### Davantage qu'un apprenant visuel ? {#visual-learner}
+
+Cette série de vidéos propose une exploration approfondie des sujets fondamentaux :
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Liste de lecture : Bases d’Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 

@@ -95,6 +95,6 @@ _Nous étudions également des options de vote afin que la communauté puisse in
 
 Si vous souhaitez ajouter une DApp à ethereum.org et qu’elle répond aux critères, créez un ticket sur GitHub.
 
-<ButtonLink href="https://submitapp.paperform.co/">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Créez un ticket
 </ButtonLink>

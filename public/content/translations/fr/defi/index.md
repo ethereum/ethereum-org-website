@@ -64,15 +64,12 @@ L'Ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas chang
 
 Cela semble étrange... « pourquoi je voudrais programmer mon argent » ? Cependant, il s'agit plutôt d'une fonctionnalité par défaut des jetons sur Ethereum. N'importe qui peut programmer une logique de paiement. Ainsi, vous pouvez obtenir le contrôle et la sécurité de Bitcoin mélangés avec les services fournis par les institutions financières. Cela vous permet de faire des choses avec des cryptomonnaies que vous ne pouvez pas faire avec des Bitcoins comme des prêts et des emprunts, des paiements, des investissements dans des fonds d'indice et plus encore.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorez nos suggestions pour les applications de la DeFi pour essayer si vous êtes nouveau sur Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorer la DeFi
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Que pouvez-vous faire avec la DeFi ? {#defi-use-cases}
 
@@ -143,7 +140,7 @@ Cela vous permet d'emprunter de l'argent sans chèques d'acompte et sans remise 
 
 #### Accès aux fonds mondiaux {#access-global-funds}
 
-Lorsque vous utilisez un prêteur décentralisé, vous avez accès aux fonds déposés du monde entier, pas seulement les fonds détenus par la banque ou l'institution que vous avez choisie. Cela rend les prêts plus accessibles et améliore les taux d'intérêt.
+Lorsque vous utilisez un prêteur décentralisé, vous avez accès aux fonds déposés du monde entier, pas seulement les fonds détenus par la banque ou l'institution que vous avez choisie. Cela rend les prêts plus accessibles et améliore les taux d’intérêt.
 
 #### Efficacité fiscale {#tax-efficiencies}
 
@@ -172,7 +169,7 @@ Si l'échange B chutait soudainement et que l'utilisateur n'était pas en mesure
 
 Pour pouvoir faire ce qui précède dans le monde de la finance traditionnelle, vous auriez besoin d'une somme d'argent énorme. Ces stratégies pour gagner de l'argent ne sont accessibles qu'à ceux qui possèdent déjà une certaine richesse. Les prêts Flash sont un exemple d'avenir où avoir de l'argent n'est pas nécessairement une condition préalable pour gagner de l'argent.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   Plus d'infos sur les prêts Flash
 </ButtonLink>
 
@@ -326,7 +323,7 @@ Vous pouvez voir la DeFi comme des couches :
 1. La Blockchain, Ethereum qui trace l'historique des transactions et les états de comptes.
 2. Les actifs [ETH](/eth/) et autres jetons (devises).
 3. Les protocoles, [contrats intelligents](/glossary/#smart-contract) qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
-4. [Les applications](/apps/) les produits que vous utilisez pour accéder et gérer les protocoles.
+4. [Les applications](/apps/) – les produits que vous utilisez pour gérer les protocoles et y accéder.
 
 Note : Beaucoup de DeFi utilisent la [norme ERC-20](/glossary/#erc-20). Les applications de DeFi utilisent un "wrapper" pour l'ETH appelé Wrapped Ether (WETH). [En apprendre plus à propos de l'ether symbolique](/wrapped-eth).
 
@@ -334,7 +331,7 @@ Note : Beaucoup de DeFi utilisent la [norme ERC-20](/glossary/#erc-20). Les appl
 
 DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouverts et libres pour que vous puissiez les inspecter, fouiller et innover dessus. Grâce à cette superposition (ils partagent tous la même Blockchain et les mêmes ressources de base), les protocoles peuvent être mélangés et assemblés pour créer des combos d'opportunités uniques.
 
-<ButtonLink href="/developers/docs/dapps/">
+<ButtonLink href="/developers/docs/apps/">
   En savoir plus sur la fabrication de dapps
 </ButtonLink>
 

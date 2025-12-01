@@ -1,5 +1,5 @@
 ---
-title: Les arbres de Verkle
+title: Arbres de Verkle
 description: Une description précise des arbres de Verkle et de la manière dont ceux-ci seront utilisés pour mettre à niveau Ethereum.
 lang: fr
 summaryPoints:
@@ -7,11 +7,11 @@ summaryPoints:
   - Prenez connaissance de l'amélioration utile que sont les arbres de Verkle pour Ethereum
 ---
 
-# Les arbres de Verkle {#verkle-trees}
+# Arbres de Verkle {#verkle-trees}
 
 Les arbres de Verkle (porte-manteau de « Vector commitment » et « Merkle Trees ») sont une structure de données qui peut être utilisée pour mettre à niveau les nœuds d'Ethereum, afin qu'ils puissent cesser de stocker de grandes quantités de données d'état, sans perdre la capacité à valider les blocs.
 
-## Le principe de non-vérification de l'état de la blockchain {#statelessness}
+## Statelessness {#statelessness}
 
 Les arbres de Verkle constituent une étape cruciale sur la voie des clients Ethereum sans état. Les clients sans état sont ceux qui n'ont nul besoin de stocker l'ensemble de la base de données d'état, afin de valider les blocs entrants. Au lieu d'utiliser leur propre copie locale de l'état d'Ethereum pour vérifier les blocs, les clients sans état ont recours à un « témoin » pour les données d'état qui arrivent avec le bloc. Un témoin est un ensemble d'éléments individuels des données d'état, nécessaires à l'exécution d'un groupe particulier de transactions, accompagné d'une preuve cryptographique que le témoin fait réellement partie de la totalité des données. Le témoin est utilisé _au lieu_ de la base de données d'état. Pour que cela fonctionne, les témoins doivent être très petits, de sorte qu'ils puissent être diffusés en toute sécurité dans le temps imparti sur le réseau, et que les validateurs puissent les traiter dans un créneau de 12 secondes. La structure actuelle des données d'état n'est pas adaptée car les témoins sont bien trop volumineux. Les arbres de Verkle résolvent ce problème en permettant l'utilisation de petits témoins, éliminant ainsi l'un des principaux obstacles à l'utilisation de clients sans état.
 
@@ -51,12 +51,16 @@ Les arbres de Verkle sont des paires `(clé, valeur)` où les clés sont des él
 
 Les réseaux de test des arbres Verkle sont déjà opérationnels, mais il reste encore d'importantes mises à jour en attente pour les logiciels clients qui sont nécessaires pour prendre en charge les arbres de Verkle. Vous pouvez contribuer à accélérer les progrès en déployant des contrats sur les réseaux de test ou en exécutant des clients de réseau de test.
 
+[Explorer le réseau de test Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
+
 [Regardez Guillaume Ballet expliquer le réseau de test Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (notez que le réseau de test Condrieu était une preuve de travail et a maintenant été remplacé par le réseau de test Verkle Gen Devnet 6).
 
 ## Complément d'information {#further-reading}
 
 - [Verkle Trees for Statelessness](https://verkle.info/)
 - [Dankrad Feist décrypte les arbres de Verkle sur PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
+- [Verkle Trees expliqués pour tous](https://research.2077.xyz/verkle-trees)
+- [Anatomie d'une preuve Verkle](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet présente les arbres de Verkle à l'ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [« Comment les arbres de Verkle rendent Ethereum léger et agressif » par Guillaume Ballet à Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sur les clients sans état depuis l'ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)

@@ -34,15 +34,11 @@ L'ETH sur les réseaux de test est censé n'avoir aucune valeur réelle ; cepend
 
 #### Quel réseau de test dois-je utiliser ?
 
-Les deux réseaux de test publics que les développeurs de clients conservent actuellement sont Sepolia et Hoodi. Sepolia est un réseau dédié aux développeurs de contrats et d'applications qui vise à tester leurs applications. Le réseau Hoodi permet aux développeurs de protocoles de tester les mises à jour du réseau, et aux participants de tester les validateurs en cours d'exécution.
+Les deux réseaux de test publics que les développeurs de clients conservent actuellement sont Sepolia et Hoodi. Sepolia est un réseau dédié aux développeurs de contrats et d'applications qui vise à tester leurs applications. Le réseau Hoodi permet aux développeurs de protocoles de tester les mises à niveau du réseau, et aux stakers de tester les validateurs en cours d'exécution.
 
 #### Sepolia {#sepolia}
 
-**Sepolia est le réseau de test recommandé par défaut pour le développement d'applications.**. Le réseau Sepolia utilise un ensemble de validateurs autorisés. Il est assez nouveau, de sorte que son état et son historique sont tous deux assez restreints. Cela signifie que le réseau est rapide à synchroniser et que l'exécution d'un nœud en son sein nécessite moins de stockage. Ceci est utile pour les utilisateurs désireux de faire tourner un nœud rapidement et d'interagir directement avec le réseau.
-
-- Ensemble de validateurs fermés, contrôlé par le client & équipes de test
-- Nouveau réseau de test, moins d'applications déployées que sur d'autres réseaus de tests
-- La synchronisation rapide et le fonctionnement d'un nœud nécessitent un espace disque minimal
+**Sepolia est le réseau de test recommandé par défaut pour le développement d'applications.**. Le réseau Sepolia utilise un ensemble de validateurs avec autorisation, contrôlé par les équipes de client et de test.
 
 ##### Ressources
 
@@ -54,37 +50,85 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 
 ##### Robinets
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [Robinet PoW](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+- [PoW faucet](https://sepolia-faucet.pk910.de/)
+- [Robinet Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Robinet de l'écosystème Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Faucet de l’écosystème Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Google Cloud Web3 Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
-_Note : [le réseau de test Goerli est obsolète](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) et a été remplacé par Hoodi. Veuillez envisager de migrer vos applications vers Sepolia._
+Hoodi est un réseau de test qui permet de tester, de valider et de mettre en jeu. Le réseau Hoodi est ouvert aux utilisateurs souhaitant exécuter un validateur de réseau de test. Les utilisateurs désireux de tester les mises à niveau de protocoles avant de les déployer sur le réseau principal sont donc invités à utiliser Hoodi.
 
-Hoodi est un réseau de test qui permet de tester, de valider et de mettre en jeu. Le réseau Hoodi est ouvert aux utilisateurs souhaitant exécuter un validateur de réseau de test. Les utilisateurs désireux de tester les mises à jour de protocoles avant de les déployer sur le réseau principal sont donc invités à utiliser Hoodi.
-
-- Ensemble de validateurs ouvert, les validateurs peuvent tester les mises à jour du réseau
-- État diversifié, utile pour tester les interactions des contrats intelligents complexes
+- Ensemble de validateurs ouvert, les validateurs peuvent tester les mises à niveau du réseau
+- État diversifié, utile pour tester des interactions de contrats intelligents complexes
 - Plus long à synchroniser et nécessite plus de stockage pour exécuter un nœud
 
 ##### Ressources
 
 - [Site Web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
-- [Explorer](https://explorer.hoodi.ethpandaops.io/)
-- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Explorateur](https://explorer.hoodi.ethpandaops.io/)
+- [Synchronisation des points de contrôle](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
+- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Robinets
 
-- [Robinet Hoodi](https://hoodi.ethpandaops.io/)
+- [Faucet d'Hoodi](https://hoodi.ethpandaops.io/)
+- [PoW faucet](https://hoodi-faucet.pk910.de/)
 
-Pour lancer un validateur sur le réseau de test Hoodi, utilisez la [plateforme de lancement Hoodi](https://hoodi.launchpad.ethereum.org/en/).
+#### Ephemery {#ephemery}
+
+Ephemery est un type unique de réseau de test qui se réinitialise entièrement chaque mois. L'état d'exécution et de consensus revient à la genèse tous les 28 jours, ce qui signifie que tout ce qui se passe sur le réseau de test est éphémère. Cela le rend idéal pour les tests à court terme, l'amorçage rapide des nœuds et les applications de type « hello world » qui n'ont pas besoin de permanence.
+
+- État toujours frais, tests à court terme des validateurs et des applications
+- Comprend uniquement l'ensemble de contrats de base
+- Un ensemble de validateurs ouvert, avec un accès aisé à des capitaux importants
+- Exigences minimales pour un nœud et synchronisation la plus rapide, &lt;5 Go en moyenne
+
+##### Ressources
+
+- [Site Web](https://ephemery.dev/)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [Forum de la communauté](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [Explorateur Beacon](https://beaconlight.ephemery.dev/)
+- [Synchronisation des points de contrôle](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Plateforme de lancement](https://launchpad.ephemery.dev/)
+
+#### Robinets
+
+- [Bordel Faucet](https://faucet.bordel.wtf/)
+- [Robinet PoW Pk910](https://ephemery-faucet.pk910.de/)
+
+#### Holesky {#holesky}
+
+Le réseau de test Holesky sera [déprécié en septembre 2025](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky). Les opérateurs de staking et les fournisseurs d'infrastructure devraient utiliser Hoodi pour les tests de validateurs à la place.
+
+##### Ressources
+
+- [Site Web](https://holesky.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/holesky)
+- [Otterscan](https://holesky.otterscan.io/)
+- [Etherscan](https://holesky.etherscan.io/)
+- [Blockscout](https://eth-holesky.blockscout.com/)
+
+##### Robinets
+
+- [QuickNode Holesky Faucet](https://faucet.quicknode.com/ethereum/holesky)
+- [PoW faucet](https://holesky-faucet.pk910.de/)
+- [Alchemy Holesky Faucet](https://www.alchemy.com/faucets/ethereum-holesky)
+- [Chainstack Holesky faucet](https://faucet.chainstack.com/holesky-testnet-faucet)
+- [Faucet de l’écosystème Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
+- [Google Cloud Web3 Holesky faucet](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
+
+Pour lancer un validateur sur le réseau de test Hoodi, utilisez le [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Réseaux de test de Couche 2 {#layer-2-testnets}
 
@@ -94,27 +138,47 @@ Pour lancer un validateur sur le réseau de test Hoodi, utilisez la [plateforme 
 
 Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
+##### Ressources
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
+
 ##### Robinets
 
-- [Robinet Chainlink](https://faucets.chain.link/arbitrum-sepolia)
-- [Robinet Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
+- [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Chainlink Arbitrum Sepolia Faucet](https://faucets.chain.link/arbitrum-sepolia)
 
-#### Optimistic Sepolia {#optimistic-sepolia}
+#### Sepolia Optimiste {#optimistic-sepolia}
 
 Réseau de test pour [Optimism](https://www.optimism.io/).
 
+##### Ressources
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
+
 ##### Robinets
 
-- [Robinet Chainlink](https://faucets.chain.link/optimism-sepolia)
-- [Robinet Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Faucets de réseau de test](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
 Un réseau de test pour [Starknet](https://www.starknet.io).
 
+##### Ressources
+
+- [Starkscan](https://sepolia.starkscan.co/)
+
 ##### Robinets
 
-- [Robinet Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Faucet Starknet](https://starknet-faucet.vercel.app/)
+- [Blast Starknet Sepolia faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
 
 ## Réseaux privés {#private-networks}
 

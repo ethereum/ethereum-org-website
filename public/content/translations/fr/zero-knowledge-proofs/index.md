@@ -36,7 +36,7 @@ Les cryptomonnaies étaient destinées à fournir aux utilisateurs un moyen de r
 
 Il existe des "crypto-monnaies anonymes" spécialement conçues pour des transactions complètement anonymes. Les blockchains axées sur la confidentialité, telles que Zcash et Monero, protègent les détails des transactions, y compris les adresses de l'expéditeur/du destinataire, le type d'actif, la quantité et la chronologie de la transaction.
 
-En injectant dans le protocole une technologie à divulgation nulle de connaissance, les réseaux [blockchain](/glossary/#blockchain) axés sur la confidentialité permettent aux [nœuds](/glossary/#node) de valider les transactions sans avoir besoin d'accéder aux données de transaction.
+En injectant dans le protocole une technologie à divulgation nulle de connaissance, les réseaux [blockchain](/glossary/#blockchain) axés sur la confidentialité permettent aux [nœuds](/glossary/#node) de valider les transactions sans avoir besoin d'accéder aux données de transaction. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) est un exemple de proposition de conception visant à permettre des transferts de valeur privés, de manière native, sur la blockchain Ethereum. De telles propositions sont toutefois difficiles à mettre en œuvre en raison d’un mélange de préoccupations liées à la sécurité, à la réglementation et à l’expérience utilisateur (UX).
 
 **Les preuves à divulgation nulle de connaissance sont également utilisées pour anonymiser les transactions sur les blockchains publiques**. C'est le cas de Tornado Cash, un service décentralisé et non-custodial (qui n'a pas le contrôle direct sur les fonds ou les actifs de l'utilisateur) qui permet aux utilisateurs d'effectuer des transactions privées sur Ethereum. Tornado Cash utilise des preuves à divulgation nulle pour masquer les détails de la transaction et garantir la confidentialité financière. Malheureusement, étant donné qu'il s'agit d'outils de protection de la vie privée, ils sont associés à des activités illicites. Pour surmonter cela, la confidentialité doit devenir la valeur par défaut sur les blockchains publiques.
 
@@ -45,6 +45,12 @@ En injectant dans le protocole une technologie à divulgation nulle de connaissa
 Les systèmes actuels de gestion de l'identité mettent en péril les renseignements personnels. Les preuves à divulgation nulle peuvent aider les individus à valider leur identité tout en protégeant leurs données personnelles.
 
 Les preuves à divulgation nulle sont particulièrement utiles dans un contexte de [décentralisation de l'identité](/decentralized-identity/). La décentralisation de l'identité (également appelée "'identité auto-souveraine") donne à l'individu la possibilité de contrôler l'accès à ses données personnelles. Prouver votre citoyenneté sans révéler les détails de vos documents d'identité est un bon exemple de la manière dont la technologie de la preuve à divulgation nulle de connaissance permet une décentralisation de l'identité.
+
+### Preuve d’humanité {#proof-of-humanity}
+
+L’un des exemples les plus largement utilisés de preuves à divulgation nulle de connaissance aujourd’hui est le [protocole World ID](https://world.org/blog/world/world-id-faqs), que l’on peut considérer comme « un passeport numérique mondial pour l’ère de l’IA ». Il permet aux personnes de prouver qu’elles sont des individus uniques sans révéler d’informations personnelles. Cela est rendu possible grâce à un dispositif appelé l’Orb, qui scanne l’iris d’une personne et génère un code d’iris. Le code d’iris est vérifié afin de confirmer que la personne est un être humain biologiquement unique. Après vérification, un engagement d’identité généré sur l’appareil de l’utilisateur (et non lié ni dérivé des données biométriques) est ajouté à une liste sécurisée sur la blockchain. Ensuite, chaque fois que l’utilisateur souhaite prouver qu’il est un humain vérifié — que ce soit pour se connecter, voter ou effectuer d’autres actions — il peut générer une preuve à divulgation nulle de connaissance confirmant son appartenance à la liste. La beauté de l’utilisation d’une preuve à divulgation nulle de connaissance réside dans le fait qu’une seule affirmation est révélée : cette personne est unique. Tout le reste reste privé.
+
+World ID repose sur le [protocole Semaphore](https://docs.semaphore.pse.dev/) développé par l’équipe [PSE](https://pse.dev/) de la Fondation Ethereum. Semaphore est conçu pour être un moyen léger mais puissant de générer et de vérifier des preuves à divulgation nulle de connaissance. Il permet aux utilisateurs de prouver qu’ils font partie d’un groupe (dans ce cas, des humains vérifiés) sans révéler quel membre du groupe ils sont. Semaphore est également très flexible, permettant de créer des groupes selon une large gamme de critères comme la vérification d’identité, la participation à des événements ou la possession de justificatifs.
 
 ### Authentification {#authentication}
 
@@ -58,9 +64,9 @@ Le calcul vérifiable est une autre application de la technologie à divulgation
 
 Le calcul vérifiable est **essentiel pour améliorer la vitesse de traitement sur les blockchains** sans réduire la sécurité. Pour comprendre cela, il faut connaître les différences entre les différentes solutions proposées pour l'évolutivité d'Ethereum.
 
-[Les solutions d'évolutivité en chaîne](/developers/docs/scaling/#on-chain-scaling), telles que la fragmentation, nécessitent une modification extensive de la couche de base de la blockchain. Cependant, cette approche est très complexe et les erreurs de mise en œuvre peuvent compromettre le modèle de sécurité d'Ethereum.
+[Les solutions d'évolutivité en chaîne](/developers/docs/scaling/#onchain-scaling), telles que la fragmentation, nécessitent une modification extensive de la couche de base de la blockchain. Cependant, cette approche est très complexe et les erreurs de mise en œuvre peuvent compromettre le modèle de sécurité d'Ethereum.
 
-[Les solutions d'évolutivité hors chaîne](/developers/docs/scaling/#off-chain-scaling) ne nécessitent pas de refonte du protocole Ethereum de base. Elles s'appuient plutôt sur un modèle de calcul externalisé afin d'améliorer le débit sur la couche de base d'Ethereum.
+[Les solutions d'évolutivité hors chaîne](/developers/docs/scaling/#offchain-scaling) ne nécessitent pas de refonte du protocole Ethereum de base. Elles s'appuient plutôt sur un modèle de calcul externalisé afin d'améliorer le débit sur la couche de base d'Ethereum.
 
 Voici comment les choses fonctionnent dans la pratique :
 
@@ -72,9 +78,9 @@ Cela a pour avantage d'exonérer Ethereum de toute exécution des tâches. Ether
 
 La chaîne a besoin d'un moyen de valider les transactions hors chaîne sans les ré-exécuter, sans quoi la valeur de l'exécution hors chaîne serait perdue.
 
-C'est ici que le calcul vérifiable entre en jeu. En effet, lorsqu'un nœud exécute une transaction en dehors d'Ethereum, il soumet une preuve à divulgation nulle pour prouver la justesse de l'exécution hors chaîne. Cette preuve (appelée [preuve de validation](/glossary/#validity-proof)) garantit la validité d'une transaction, permettant ainsi à Ethereum d'appliquer le résultat obtenu à son état, cela sans aucune contestation possible.
+C'est ici que le calcul vérifiable entre en jeu. Lorsqu'un nœud exécute une transaction en dehors d'Ethereum, il soumet une preuve à divulgation nulle pour prouver la justesse de l'exécution hors chaîne. Cette preuve (appelée [preuve de validation](/glossary/#validity-proof)) garantit la validité d'une transaction, permettant ainsi à Ethereum d'appliquer le résultat obtenu à son état, cela sans aucune contestation possible.
 
-[Les ZK-Rollups](/developers/docs/scaling/zk-rollups) et [ les validiums](/developers/docs/scaling/validium/) sont deux solutions d'évolutivité hors chaîne qui utilisent des preuves de validité pour fournir une évolutivité sécurisée. Ces protocoles exécutent des milliers de transactions hors chaîne et soumettent des preuves pour vérification sur Ethereum. Ces résultats peuvent être appliqués immédiatement une fois la preuve vérifiée, permettant ainsi à Ethereum de traiter plus de transactions, sans augmenter le calcul sur la couche de base.
+[Les rollups ZK](/developers/docs/scaling/zk-rollups) et [les validiums](/developers/docs/scaling/validium/) sont deux solutions d'évolutivité hors chaîne qui utilisent des preuves de validité pour fournir une évolutivité sécurisée. Ces protocoles exécutent des milliers de transactions hors chaîne et soumettent des preuves pour vérification sur Ethereum. Ces résultats peuvent être appliqués immédiatement une fois la preuve vérifiée, permettant ainsi à Ethereum de traiter plus de transactions, sans augmenter le calcul sur la couche de base.
 
 ### Réduire la corruption et la collusion lors du vote en chaîne {#secure-blockchain-voting}
 
@@ -86,13 +92,13 @@ La corruption et la collusion limitent l'efficacité de tout processus utilisant
 
 Par exemple, [les mécanismes de financement quadratiques](https://www.radicalxchange.org/concepts/plural-funding/) dépendent des dons pour mesurer la préférence envers certaines options parmi différents projets d'intérêt public. Chaque don compte comme un « vote » pour un projet spécifique, les projets qui reçoivent le plus de votes obtenant plus de fonds de la réserve de correspondance.
 
-L'utilisation du vote en chaîne rend le financement quadratique vulnérable à la collusion : les transactions blockchain sont publiques, de sorte que les corrupteurs peuvent inspecter les activités en chaîne d'un corrompu pour voir comment il a "voté". De cette façon, le financement quadratique cesse d’être un moyen efficace d’allouer des fonds en fonction des préférences cumulées de la collectivité.
+L'utilisation du vote en chaîne rend le financement quadratique vulnérable à la collusion : les transactions blockchain sont publiques, de sorte que les corrupteurs peuvent inspecter les activités en chaîne d'un corrompu pour voir comment il a « voté ». De cette façon, le financement quadratique cesse d’être un moyen efficace d’allouer des fonds en fonction des préférences cumulées de la collectivité.
 
-Heureusement, de nouvelles solutions telles que MACI (Minimum Anti-Collusion Infrastructure) utilisent des preuves à divulgation nulle pour rendre le vote en chaîne (par ex. Mécanismes de financement quadratiques) résistant à la corruption et à la collusion. MACI est un ensemble de contrats intelligents et de scripts qui permettent à un administrateur central (appelé un "coordinateur") d'agréger les votes et de comptabiliser les résultats _sans_ révéler des détails sur la façon dont chaque personne a voté. Malgré cela, il est toujours possible de vérifier que les votes ont été comptés correctement, ou de confirmer qu'une personne particulière a participé au vote.
+Heureusement, de nouvelles solutions telles que MACI (Minimum Anti-Collusion Infrastructure) utilisent des preuves à divulgation nulle pour rendre le vote en chaîne (par ex. mécanismes de financement quadratiques) résistant à la corruption et à la collusion. MACI est un ensemble de contrats intelligents et de scripts qui permettent à un administrateur central (appelé un "coordinateur") d'agréger les votes et de comptabiliser les résultats _sans_ révéler des détails sur la façon dont chaque personne a voté. Malgré cela, il est toujours possible de vérifier que les votes ont été comptés correctement, ou de confirmer qu'une personne particulière a participé au vote.
 
 #### Comment MACI fonctionne-t-il avec la preuve à divulgation nulle ? {#how-maci-works-with-zk-proofs}
 
-Au départ, le coordinateur déploie le contrat MACI sur Ethereum, après quoi les utilisateurs peuvent s'inscrire au vote (en inscrivant leur clé publique dans le contrat intelligent). Les utilisateurs votent en envoyant des messages chiffrés avec leur clé publique au contrat intelligent (un vote valide doit être signé avec la clé publique la plus récente associée à l'identité de l'utilisateur, entre autres). Le coordinateur traite ensuite tous les messages une fois la période de vote terminée, calcule les votes et vérifie les résultats en chaîne.
+Au départ, le coordinateur déploie le contrat MACI sur Ethereum, après quoi les utilisateurs peuvent s'inscrire au vote (en inscrivant leur clé publique dans le contrat intelligent). Les utilisateurs votent en envoyant des messages chiffrés avec leur clé publique au contrat intelligent (un vote valide doit être signé avec la clé publique la plus récente associée à l'identité de l'utilisateur, entre autres). Ensuite, le coordinateur traite tous les messages une fois la période de vote terminée, comptabilise les votes et vérifie les résultats sur la blockchain.
 
 Dans MACI, des preuves à divulgation nulle sont utilisées pour assurer l'exactitude du calcul en empêchant le coordinateur de traiter les votes et de comptabiliser les résultats de manière incorrecte. Pour ce faire, le coordinateur est tenu de produire des preuves ZK-SNARK permettant de vérifier que a) tous les messages ont été traités correctement b) le résultat final correspond à la somme de tous les _votes valides_.
 
@@ -104,7 +110,7 @@ Ainsi, même sans partager une répartition des votes par utilisateur (comme c'e
 - Alice envoie secrètement une transaction chiffrée pour changer la clé publique associée à son identité.
 - Alice envoie un autre message (chiffré) au contrat intelligent afin de voter pour l'`option A` en utilisant la nouvelle clé publique.
 - Alice montre à Bob une transaction indiquant qu'elle a voté pour l'`option B` (qui est invalide car la clé publique n'est plus associée à l'identité d'Alice dans le système)
-- Lors du traitement des messages, le coordinateur ignore le vote d'Alice pour l'`option B` et ne compte que le vote pour l'`option A`. Ainsi, la tentative de Bob de se joindre à Alice et de manipuler le vote sur la chaîne échoue.
+- Lors du traitement des messages, le coordinateur ignore le vote d'Alice pour l'`option B` et ne compte que le vote pour l'`option A`. Ainsi, la tentative de Bob de se joindre à Alice et de manipuler le vote sur la blockchain échoue.
 
 L'utilisation de MACI _nécessite_ de faire confiance au coordinateur pour ne pas collaborer avec des corrupteurs ou tenter de soudoyer les électeurs eux-mêmes. Le coordinateur peut déchiffrer les messages des utilisateurs (nécessaires à la création de la preuve), afin qu'ils puissent vérifier avec précision comment chaque personne a voté.
 
@@ -211,4 +217,4 @@ Un ZK-STARK est considéré comme immunisé contre les menaces de l'informatique
 - [ZK-STARKs – Créez une confiance vérifiable, même contre Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Une brève introduction à la façon dont les zk-SNARK sont possibles](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Pourquoi la preuve à divulgation nulle de connaissance (ZKP) est un changement majeur pour l'identité numérique auto-souveraine](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) - _Franklin Ohaegbulam_
-
+- [EIP-7503 expliqué : permettre des transferts privés sur Ethereum grâce aux preuves ZK](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_

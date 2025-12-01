@@ -65,15 +65,12 @@ Le Web3 vous donne la propriété de vos actifs numériques de façon inégalée
 
 Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glossary/#nft). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink href="/nft/">
     Plus d'infos sur les NFT
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 #### Résistance à la censure {#censorship-resistance}
 
@@ -93,15 +90,12 @@ Les DAO sont définies techniquement comme des [contrats intelligents](/glossary
 
 Le fait est toutefois que les gens définissent de nombreuses communautés Web3 comme étant des DAO. Ces communautés ont toutes des niveaux différents de décentralisation et d'automatisation par code. Actuellement, nous explorons ce que sont les DAO et comment elles pourraient évoluer à l'avenir.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les DAO</div>
   <ButtonLink href="/dao/">
     En savoir plus sur les DAO
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ### Identité {#identity}
 
@@ -157,7 +151,7 @@ Nous n'en sommes qu'au début de la création d'un meilleur Web avec le Web3, ma
 
 Le Web3 n’est pas strictement défini. Plusieurs participants de la Communauté ont des points de vue différents à ce sujet. Voici quelques-uns d'entre eux :
 
-- [Qu'est-ce que le Web3? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
+- [Qu'est-ce que le Web3 ? L'Internet décentralisé du futur expliqué](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Comprendre le Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Importance du Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Pourquoi la décentralisation est importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

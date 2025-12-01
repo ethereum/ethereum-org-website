@@ -1,7 +1,7 @@
 ---
 title: Gaz et frais
 metaTitle: "Gaz et frais Ethereum : aperçu technique"
-description:
+description: En savoir plus sur les frais de gaz Ethereum, comment ils sont calculés et leur rôle dans la sécurité du réseau et le traitement des transactions.
 lang: fr
 ---
 
@@ -106,7 +106,7 @@ Bien qu'une transaction comprenne une limite, tout gaz inutilisé dans une trans
 
 La limite de gaz correspond à la quantité maximale de gaz que vous êtes prêt à consommer lors d'une transaction. Les transactions plus compliquées impliquant des [contrats intelligents](/developers/docs/smart-contracts/) nécessitent plus de travail de calcul, et donc une limite de gaz supérieure à celle d'un simple paiement. Un transfert standard d'ETH nécessite une limite de gaz de 21 000 unités de gaz.
 
-Par exemple, si vous définissez votre limite de gaz à 50 000 pour un simple transfert ETH, l'EVM en consommera 21 000 et vous récupérerez les 29 000 restants. Cependant, si vous fixez un montant de gaz trop faible, par exemple une limite de gaz de 20 000 pour un simple transfert ETH, l'EVM consommera vos 20 000 unités de gaz en essayant de réaliser la transaction, mais celle-ci ne sera pas complète. L'EVM annule alors toute modification, mais comme le validateur a déjà effectué un travail d'une valeur de 20 000 unités de gaz, ce gaz est consommé.
+Par exemple, si vous définissez votre limite de gaz à 50 000 pour un simple transfert ETH, l'EVM en consommera 21 000 et vous récupérerez les 29 000 restants. Cependant, si vous spécifiez trop peu de gaz, par exemple une limite de gaz de 20 000 pour un simple transfert d’ETH, la transaction échouera lors de la phase de validation. Elle sera rejetée avant d’être incluse dans un bloc, et aucun gaz ne sera consommé. En revanche, si une transaction épuise tout son gaz pendant l'exécution (par exemple, un contrat intelligent utilise tout le gaz à mi-parcours), l'EVM annulera toutes les modifications effectuées, mais tout le gaz fourni sera tout de même consommé pour le travail accompli.
 
 ## Pourquoi les frais de gaz peuvent-ils devenir si élevés ? {#why-can-gas-fees-get-so-high}
 
@@ -123,6 +123,7 @@ La mise à l'échelle de la couche 2 est une initiative primordiale pour amélio
 Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindre coût, vous pouvez utiliser différents outils comme :
 
 - [Etherscan](https://etherscan.io/gastracker) _- Évaluateur du prix du gaz pour une transaction_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimation du prix du gaz par transaction open source_
 - [Suivi du gaz ETH](https://www.ethgastracker.com/) _Surveillez et suivez les prix du gaz sur Ethereum et des solutions de niveau 2 pour réduire les frais de transaction et économiser de l'argent_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extension Chrome pour estimer le gaz à la fois pour les transactions de Type 0 et les transactions de Type 2 EIP-1559 ._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculez les frais de gaz dans votre devise locale pour différents types de transaction sur le réseau principal, Arbitrum et Polygon._
@@ -135,6 +136,8 @@ Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindr
 
 - [Explication du gaz sur Ethereum](https://defiprime.com/gas)
 - [Réduire la consommation de gaz de vos contrats intelligents](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Preuve d'enjeu contre preuve de travail](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Des Stratégies pour Optimiser la Consommation de Gas, pour les Développeurs](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [documentation EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Ressources EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).
+- [Ressources EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559 : Séparer les mécanismes des Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

@@ -13,13 +13,13 @@ Ils peuvent vous tromper de deux façons :
 - **Vente d'un jeton frauduleux**, qui peut ressembler au jeton légitime que vous souhaitez acheter, mais qui est émis par les escrocs et ne vaut rien.
 - **Incitation à signer des transactions frauduleuses**, généralement en vous dirigeant vers leur propre interface utilisateur. Ils pourraient essayer de vous inciter à accorder à leurs contrats une allocation de vos jetons ERC-20, à divulguer des informations sensibles qui leur donneraient accès à vos actifs, etc. Ces interfaces utilisateurs peuvent être des clones presque parfaits de sites honnêtes, mais avec des astuces cachées.
 
-Pour illustrer ce que sont les jetons frauduleux et comment les identifier, nous allons examiner un exemple de jeton frauduleux : [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Ce jeton tente de ressembler au jeton [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) légitime.
+Pour illustrer ce que sont les jetons frauduleux et comment les identifier, nous allons examiner un exemple de jeton frauduleux : [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Ce jeton tente de ressembler au jeton [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) légitime.
 
 <ExpandableCard
 title="Qu'est-ce que ARB?"
 contentPreview=''>
 
-Arbitrum est une organisation qui développe et gère des [rollups optimistiques](/developers/docs/scaling/optimistic-rollups/). Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, un [jeton de gouvernance](/dao/#token-based-membership) échangeable a été créé.
+Arbitrum est une organisation qui développe et gère des [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, ils ont émis un [jeton de gouvernance](/dao/#token-based-membership) échangeable.
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ L'objectif d'Ethereum est la décentralisation. Cela signifie qu'il n'y a pas d'
 title="Qu'est-ce qu'un contrat intelligent ?"
 contentPreview=''>
 
-[Les contrats intelligents](/developers/docs/smart-contracts/) sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.
+Les [contrats intelligents](/developers/docs/smart-contracts/) sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.
 
 </ExpandableCard>
 
@@ -55,7 +55,7 @@ Les créateurs de jetons frauduleux ont recours à plusieurs astuces pour paraî
 
 - **Propriétaires légitimes**. Les jetons frauduleux créditent souvent des soldes importants à des adresses qui pourraient vraisemblablement détenir des jetons authentiques.
 
-  Par exemple, regardons à nouveau `wARB`. [Environ 16 % des jetons](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) sont détenus par une adresse dont la balise publique est [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). Il ne s'agit _pas_ d'une fausse adresse, c'est vraiment l'adresse qui a [déployé le vrai contrat ARB sur Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  Par exemple, regardons à nouveau `wARB`. [Environ 16 % des jetons](https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders) sont détenus par une adresse dont la balise publique est [Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F). Il ne s'agit _pas_ d'une fausse adresse, c'est vraiment l'adresse qui a [déployé le vrai contrat ARB sur le réseau principal Ethereum](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
   Étant donné que le solde ERC-20 d'une adresse fait partie du stockage du contrat ERC-20, il peut être spécifié par le contrat comme étant ce que souhaite le développeur du contrat. Il est également possible qu'un contrat interdise les transferts afin que les utilisateurs légitimes ne puissent pas se débarrasser de ces jetons frauduleux.
 
@@ -94,4 +94,4 @@ Tant qu'il y aura de la valeur dans le monde, il y aura des malfaiteurs qui tent
 - Les jetons malveillants imitent des jetons légitimes en utilisant le même nom, symbole, etc.
 - Les jetons malveillants _ne peuvent pas_ utiliser la même adresse de contrat.
 - La meilleure source pour l'adresse légitime du jeton est l'organisation émettrice dudit jeton.
-- À défaut, vous pouvez utiliser des applications populaires et fiables comme [Uniswap](https://app.uniswap.org/#/swap) et [Etherscan](https://etherscan.io/).
+- À défaut, vous pouvez utiliser des applications populaires et fiables telles que [Uniswap](https://app.uniswap.org/#/swap) et [Blockscout](https://eth.blockscout.com/).

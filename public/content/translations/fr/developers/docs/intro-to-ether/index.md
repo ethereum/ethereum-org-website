@@ -1,5 +1,5 @@
 ---
-title: Introduction à l'ether
+title: Introduction technique à l’ether
 description: Une introduction pour développeur à la cryptomonnaie ether.
 lang: fr
 ---
@@ -38,7 +38,7 @@ L'Ether est frappé comme une récompense pour chaque bloc proposé et à chaque
 
 L'éther peut être créé par le biais de récompenses en bloc. Il peut aussi être détruit par un processus appelé « burn ». Quand l'ether est brûlé, il est retiré de la circulation de façon permanente.
 
-Le brûlage d'ether se produit pour chaque transaction sur Ethereum. Lorsque les utilisateurs paient pour leurs transactions, des frais de base de gaz fixés par le réseau en fonction de la demande transactionnelle, sont détruits. Ceci, couplé à des tailles variables de blocs et à des frais de gaz maximaux, simplifie l'estimation des frais de transaction sur Ethereum. Lorsque la demande du réseau est élevée, les [blocs](https://etherscan.io/block/12965263) peuvent brûler plus d'ether qu'ils n'en frappent, compensant ainsi efficacement la création d'ether.
+Le brûlage d'ether se produit pour chaque transaction sur Ethereum. Lorsque les utilisateurs paient pour leurs transactions, des frais de base de gaz fixés par le réseau en fonction de la demande transactionnelle, sont détruits. Ceci, couplé à des tailles variables de blocs et à des frais de gaz maximaux, simplifie l'estimation des frais de transaction sur Ethereum. Lorsque la demande du réseau est élevée, les [blocs](https://eth.blockscout.com/block/22580057) peuvent brûler plus d'ether qu'ils n'en frappent, compensant ainsi efficacement la création d'ether.
 
 Brûler les frais de base entrave la capacité des producteurs de blocs à manipuler les transactions. Par exemple, si les créateurs de blocs obtiennent les frais de base, ils pourraient inclure leurs propres transactions gratuitement et augmenter les frais de base pour tous les autres. Ils pourraient également rembourser les frais de base à certains utilisateurs hors chaîne, engendrant un marché des frais de transaction plus opaque et plus complexe.
 
@@ -67,11 +67,11 @@ Quand l'adresse du destinataire est un [contrat intelligent](/developers/docs/sm
 
 Les utilisateurs peuvent interroger le solde en ether de n'importe quel [compte](/developers/docs/accounts/) en inspectant son champ du `balance`, qui indique la quantité d'ether possédée en wei.
 
-[Etherscan](https://etherscan.io) est un outil populaire pour inspecter les soldes d'adresses via une application basée sur le Web. Par exemple, [cette page Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) affiche le solde de l'Ethereum Foundation. Les soldes du compte peuvent également être interrogés en utilisant des portefeuilles ou directement, en faisant des requêtes aux nœuds.
+[Etherscan](https://etherscan.io) et [Blockscout](https://eth.blockscout.com) sont des outils populaires permettant d’inspecter les soldes d’adresses via des applications web. Par exemple, [ cette page Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) affiche le solde de l'Ethereum Foundation. Les soldes du compte peuvent également être interrogés en utilisant des portefeuilles ou directement, en faisant des requêtes aux nœuds.
 
 ## Complément d'information {#further-reading}
 
-- [Définition d'Ether et d'Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _Groupe CME_
+- [Définition d'ether et d'Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _Groupe CME_
 - [Livre blanc Ethereum](/whitepaper/): La proposition originale pour Ethereum. Ce document contient une description de l'ether et les motivations de sa création.
 - [Calculatrice de Gwei](https://www.alchemy.com/gwei-calculator) : Utilisez cette calculatrice de Gwei pour facilement convertir Wei, Gwei et Ether. Il vous suffit d'introduire n'importe quelle quantité de Wei, Gwei ou ETH et de calculer automatiquement la conversion.
 

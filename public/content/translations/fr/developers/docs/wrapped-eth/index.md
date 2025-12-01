@@ -6,6 +6,11 @@ lang: fr
 
 # Ether symbolique (WETH) {#intro-to-weth}
 
+<Alert variant="update">
+<Emoji text="🎁" />
+<div>Connectez votre portefeuille pour envelopper ou déballer des ETH sur n'importe quelle chaîne sur [WrapETH.com](https://www.wrapeth.com/)</div>
+</Alert>
+
 L'Ether (ETH) est la monnaie principale d'Ethereum. Il est utilisé à plusieurs fins, comme la mise en jeu, en tant que monnaie, et pour payer les frais de gaz liés aux calculs. **Le WETH est en réalité une version améliorée de l'ETH dotée de fonctionnalités supplémentaires requises par de nombreuses applications et [jetons ERC-20](/glossary/#erc-20)**, qui sont d'autres types d'actifs numériques sur Ethereum. Pour fonctionner avec ces jetons, l'ETH doit suivre les mêmes règles qu'eux, connues sous le nom de standard ERC-20.
 
 Pour combler cet écart, l'Ether symbolique (WETH) a été créé. **L'Ether symbolique est un contrat intelligent qui vous permet de déposer n'importe quel montant d'ETH dans le contrat et de recevoir le même montant en WETH frappés**, conformément à la norme de jeton ERC-20. Le WETH est une représentation de l'ETH qui vous permet d'interagir avec lui en tant que jeton ERC-20, et non comme l'actif natif ETH. Vous aurez toujours besoin d'ETH natif pour payer les frais de gaz, alors assurez-vous d'en conserver une partie lors du dépôt.
@@ -61,5 +66,5 @@ Outre la [version canonique de WETH](https://etherscan.io/token/0xc02aaa39b223fe
 ## En savoir plus {#further-reading}
 
 - [C'est quoi le WETH?](https://weth.tkn.eth.limo/)
-- [Informations sur le jeton WETH sur Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [Informations sur le jeton WETH sur Blockscout](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Vérification formelle du WETH](https://zellic.io/blog/formal-verification-weth)

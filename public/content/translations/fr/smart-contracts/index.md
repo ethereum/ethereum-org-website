@@ -84,3 +84,7 @@ Ils peuvent effectuer des calculs, produire de la monnaie, stocker des données,
 - [Les contrats intelligents pour les développeurs](/developers/docs/smart-contracts/)
 - [Apprenez à rédiger des contrats intelligents](/developers/learning-tools/)
 - [Maîtriser Ethereum - Qu'est-ce qu'un contrat intelligent ?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

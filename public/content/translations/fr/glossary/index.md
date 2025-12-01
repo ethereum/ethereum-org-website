@@ -320,11 +320,11 @@ lang: fr
 
 ## O {#section-o}
 
-<GlossaryDefinition term="off-chain" />
+<GlossaryDefinition term="offchain" />
 
 <GlossaryDefinition term="ommer" />
 
-<GlossaryDefinition term="on-chain" />
+<GlossaryDefinition term="onchain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -474,6 +474,8 @@ lang: fr
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -488,7 +490,7 @@ lang: fr
 
 ## Sources {#sources}
 
-_Fournis pour partie par [Maîtriser Ethereum](https://github.com/ethereumbook/ethereumbook) par [Andreas M. Antonopoulos et Gavin Wood](https://ethereumbook.info), sous licence CC-BY-SA_
+_Fournis en partie par [Maîtriser Ethereum](https://github.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos et Gavin Wood](https://ethereumbook.info), sous licence CC-BY-SA_
 
 <Divider />
 

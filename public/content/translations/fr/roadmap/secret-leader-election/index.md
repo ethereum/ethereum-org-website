@@ -1,5 +1,5 @@
 ---
-title: Élection d'un chef secret
+title: Élection secrète du leader
 description: Explication sur la manière dont l'élection du leader secret peut aider à protéger les validateurs contre certaines attaques
 lang: fr
 summaryPoints:
@@ -8,7 +8,7 @@ summaryPoints:
   - Une extension de cette idée est de rendre la sélection des validateurs aléatoire pour chaque créneau.
 ---
 
-# Élection d'un chef secret {#single-secret-leader-election}
+# Élection secrète du leader {#single-secret-leader-election}
 
 Dans le mécanisme de consensus actuel basé sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos), la liste des futurs proposeurs de blocs est publique et il est possible de cartographier leurs adresses IP. Cela signifie que les attaquants pourraient identifier les validateurs censés proposer un bloc et cibler ces derniers via une attaque par déni de service (DOS) les rendant incapables de proposer leur bloc dans le temps imparti.
 

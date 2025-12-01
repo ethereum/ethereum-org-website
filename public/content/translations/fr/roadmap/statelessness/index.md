@@ -50,7 +50,7 @@ De même que pour l'expiration de l'historique, sous l'expiration de l'état, la
 
 L'expiration de l'état est encore en phase de recherche et n'est pas encore prête à être expédiée. L'expiration de l'état pourrait bien se produire après les clients sans état et l'expiration de l'historique, car ces mises à niveau rendent les grandes tailles d'état facilement gérables pour la majorité des validateurs.
 
-## Le principe de non-vérification de l'état de la blockchain {#statelessness}
+## Statelessness {#statelessness}
 
 L'absence d'état est un peu un abus de langage car cela ne signifie pas que le concept d'« état » est éliminé, mais cela implique des changements dans la façon dont les nœuds Ethereum traitent les données d'état. L'absence d'état elle-même se présente sous deux formes : l'absence d'état faible et l'absence d'état forte. L'absence d'état faible permet à la plupart des nœuds de devenir sans état en plaçant la responsabilité du stockage de l'état sur quelques-uns. L'absence d'état forte retire entièrement le besoin pour tous les nœuds de stocker les données d'état complètes. Les absences d'état faibles et fortes offrent toutes les deux les avantages suivants aux validateurs normaux :
 
