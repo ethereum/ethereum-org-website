@@ -1,5 +1,7 @@
 "use client"
 
+import { Suspense } from "react"
+
 import CalloutSSR from "@/components/CalloutSSR"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
@@ -29,11 +31,13 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
       <MainArticle className="relative flex flex-col">
         <ContentHero {...heroProps} />
 
-        <Layer2NetworksTable
-          layer2Data={layer2Data}
-          locale={locale}
-          mainnetData={mainnetData}
-        />
+        <Suspense fallback={null}>
+          <Layer2NetworksTable
+            layer2Data={layer2Data}
+            locale={locale}
+            mainnetData={mainnetData}
+          />
+        </Suspense>
 
         <div id="more-advanced-cta" className="w-full px-8 py-9">
           <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">

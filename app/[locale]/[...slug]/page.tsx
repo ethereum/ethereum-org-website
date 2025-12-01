@@ -17,7 +17,7 @@ import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { LOCALES_CODES } from "@/lib/constants"
+import { STATIC_LOCALES } from "@/lib/constants"
 
 import SlugJsonLD from "./page-jsonld"
 
@@ -32,8 +32,8 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   const { locale, slug: slugArray } = params
 
   // Check if this specific path is in our valid paths
-  const validPaths = (await generateStaticParams()) as SlugPageParams[]
-  const isValidPath = checkPathValidity(validPaths, params)
+  const slugs = await getPostSlugs("/")
+  const isValidPath = checkPathValidity(slugs, "/" + slugArray.join("/"))
 
   if (!isValidPath) notFound()
 
@@ -107,7 +107,7 @@ export async function generateStaticParams() {
   try {
     const slugs = await getPostSlugs("/")
 
-    return LOCALES_CODES.flatMap((locale) =>
+    return STATIC_LOCALES.flatMap((locale) =>
       slugs.map((slug) => ({
         slug: slug.split("/").slice(1),
         locale,

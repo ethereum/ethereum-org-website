@@ -11,6 +11,8 @@ import Matomo from "@/components/Matomo"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
+import { STATIC_LOCALES } from "@/lib/constants"
+
 import Providers from "./providers"
 
 import "@/styles/global.css"
@@ -31,6 +33,12 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
   variable: "--font-mono",
 })
+
+export async function generateStaticParams() {
+  return STATIC_LOCALES.map((locale) => ({
+    locale,
+  }))
+}
 
 export default async function LocaleLayout({
   children,

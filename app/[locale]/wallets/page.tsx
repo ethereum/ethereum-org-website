@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react"
+import { ComponentPropsWithRef, Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -305,14 +305,16 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         {locale === "en" ? (
           <div className="my-20 w-full px-0 py-4">
-            <Simulator data={walletOnboardingSimData}>
-              <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
-                Interactive tutorial
-              </p>
-              <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
-                How to use a wallet
-              </h2>
-            </Simulator>
+            <Suspense fallback={null}>
+              <Simulator data={walletOnboardingSimData}>
+                <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
+                  Interactive tutorial
+                </p>
+                <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
+                  How to use a wallet
+                </h2>
+              </Simulator>
+            </Suspense>
           </div>
         ) : (
           <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">
