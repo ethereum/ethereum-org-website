@@ -23,7 +23,7 @@ Muchas redes sociales descentralizadas existen como alternativa a los servicios 
 
 ### ¿Cómo funcionan las redes sociales descentralizadas? {#decentralized-social-networks-overview}
 
-Las redes sociales descentralizadas son una clase de [aplicaciones descentralizadas (dApps)](/apps/), aplicaciones que funcionan con [contratos inteligentes](/glossary/#smart-contract) implementados en la cadena de bloques. El código del contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
+Las redes sociales descentralizadas son una clase de [aplicaciones descentralizadas (DApps)](/apps/), o sea, aplicaciones que funcionan con [contratos inteligentes](/glossary/#smart-contract) implementados en la cadena de bloques. El código del contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
 
 Las plataformas tradicionales de redes sociales se basan en bases de datos para almacenar información del usuario, el código del programa y otras formas de datos. Pero esto crea puntos únicos de falla y supone un riesgo significativo. Por ejemplo, los servidores de Facebook infamemente [se desconectaron durante horas](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) en octubre de 2021, dejando a los usuarios sin acceso a la plataforma.
 
@@ -74,33 +74,31 @@ Los usuarios utilizan el token nativo de [ERC-20](/glossary/#erc-20) de la plata
 
 ## Redes sociales Web2 en Ethereum {#web2-social-networks-and-ethereum}
 
-Las plataformas de redes sociales nativas [Web3](/glossary/#web3) no son las únicas que intentan incorporar la tecnología de cadena de bloques a las redes sociales. Muchas plataformas centralizadas también están planeando integrar Ethereum en su infraestructura:
+Las plataformas de redes sociales nativas [Web3](/glossary/#web3) no son las únicas que intentan incorporar la tecnología de cadena de bloques a las redes sociales. Muchas plataformas centralizadas también están contemplando integrar a Ethereum en su infraestructura o ya han experimentado con ello:
 
 ### Reddit {#reddit}
 
-Reddit ha [promocionado los Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), que son tokens ERC-20 que los usuarios pueden obtener publicando contenidos de calidad y contribuyendo a las comunidades en línea (subreddits). Puede canjear estos tokens dentro de un subreddit para conseguir privilegios y ventajas exclusivos. Para este proyecto, Reddit está trabajando con Arbitrum, una red de [capa 2](/glossary/#layer-2) diseñada para escalar las transacciones de Ethereum.
-
-El programa ya está activo, con el subreddit r/CryptoCurrency [ejecutando su versión de puntos de comunidad llamada "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Según la descripción oficial, los Moons "recompensan a los publicadores, comentaristas y moderadores por sus contribuciones al subreddit". Debido a que estos tokens están en la cadena de bloques (los usuarios los reciben en carteras), estos son independientes de Reddit y no se pueden quitar.
-
-Además de usar puntos comunitarios para desbloquear funciones especiales, los usuarios también pueden cambiarlos por moneda fiduciaria en plataformas de intercambio. Además, la cantidad de puntos de la comunidad que posee un usuario determina su influencia en el proceso de toma de decisiones dentro de la comunidad.
+- Reddit experimentó previamente con los **puntos comunitarios**, que eran tókenes ERC-20 que los usuarios podían ganar publicando contenido de calidad y contribuyendo a comunidades específicas en línea (subreddits). Los usuarios podían canjear estos tókenes en un subreddit para obtener ventajas exclusivas o intercambiarlos. Para este proyecto, Reddit utilizó Arbitrum Nova: una red de [capa 2](/glossary/#layer-2) diseñada para escalar las transacciones de Ethereum.
+- Este programa fue especialmente activo en el subreddit r/CryptoCurrency con sus «Moons» y en el subreddit r/FortNiteBR con sus «Bricks». Como los tókenes estaban en la cadena de bloques, eran independientes de Reddit una vez adjudicados en la [cartera](/glossary/#wallet) de un usuario.
+- No obstante, **Reddit [puso fin al programa de puntos comunitarios](https://www.reddit.com/r/CryptoCurrency/comments/17a33ql/reddit_is_officially_deprecating_community_points/) a finales de 2023**, alegando problemas de recursos y escalabilidad. Aunque los tókenes aún existen en la cadena de bloques, Reddit ya no los admite ni los integra activamente en las funcionalidades de su plataforma.
 
 ## Para profundizar sobre el tema {#further-reading}
 
 ### Artículos {#articles}
 
-- [Descentralizar las redes sociales: una guía para el apilamiento social de web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
-- [Las redes sociales son la gran oportunidad futura de descentralización](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
-- [Web3 contiene la promesa de redes sociales descentralizadas y alimentadas por la comunidad](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
-- [Un vistazo al panorama de las redes sociales en la cadena de bloques](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
-- [Cómo la cadena de bloques puede resolver la privacidad de las redes sociales](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
-- [Descentralización suficiente para las redes sociales](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks): _Varun Srinivasan_
+- [Descentralizando las redes sociales: una guía a la pila social de la Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack): _Coinbase Ventures_
+- [Las redes sociales son la próxima gran oportunidad de descentralización](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/): _Ben Goertzel_
+- [Web3 contiene la promesa de redes sociales descentralizadas gestionadas por la comunidad](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/): _Sumit Ghosh_
+- [Una visión general del panorama de las redes sociales de cadena de bloques](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media): _Gemini Cryptopedia_
+- [Cómo las cadenas de bloques pueden resolver la privacidad en las redes sociales](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/): _Prableen Bajpai_
+- [Descentralización suficiente para redes sociales](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks): _Varun Srinivasan_
 
 ### Vídeos {#videos}
 
-- [Explicación sobre las redes sociales descentralizadas](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
-- [La cadena de bloques DeSo quiere descentralizar las redes sociales](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
-- [El futuro de las redes sociales descentralizadas con Balaji, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
+- [Explicación de redes sociales descentralizadas](https://www.youtube.com/watch?v=UdT2lpcGvcQ): _Coinmarketcap_
+- [La cadena de bloque DeSo quiere descentralizar las redes sociales](https://www.youtube.com/watch?v=SG2HUiVp0rE): _Bloomberg Technology_
+- [El futuro de las redes sociales descentralizadas, con Balaji Srinivasan, Vitalik Buterin y Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE): _ETHGlobal_
 
 ### Comunidades {#communities}
 
-- [Subreddit r/Cryptocurrency](https://www.reddit.com/r/CryptoCurrency/)
+- [Subreddit r/CryptoCurrency](https://www.reddit.com/r/CryptoCurrency/)

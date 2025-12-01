@@ -55,6 +55,9 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 **Etherscan: Explorador de bloques y API de transacción**
 - [Documentación](https://docs.etherscan.io/)
 
+**Blockscout: explorador de bloques de código abierto**
+- [Documentación](https://docs.blockscout.com/)
+
 **GetBlock:** **_Cadena de bloques como servicio para el desarrollo web3_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -144,7 +147,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 **Chainstack:** **_Nodos elásticos y dedicados de Ethereum como servicio._**
 
 - [chainstack.com](https://chainstack.com)
-- [Documentación](https://docs.chainbase.com/docs)
+- [Documentación](https://docs.chainstack.com/)
 - [Referencia de API de Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
 **Coinbase Cloud Node:** **_API de infraestructura de cadena de bloques._**

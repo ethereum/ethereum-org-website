@@ -4,7 +4,7 @@ description: Una explicación sobre las cuentas Ethereum, su estructura de datos
 lang: es
 ---
 
-Una cuenta Ethereum con un saldo en ether (ETH), que permite realizar transacciones en Ethereum. Los usuarios pueden controlar las cuentas, o bien se pueden implementar como contratos inteligentes.
+Una cuenta Ethereum es una entidad con un saldo de ether (ETH) que puede enviar mensajes en Ethereum. Los usuarios pueden controlar las cuentas, o bien se pueden implementar como contratos inteligentes.
 
 ## Requisitos previos {#prerequisites}
 
@@ -34,7 +34,7 @@ Ambos tipos de cuenta tienen la habilidad de:
 **Contrato**
 
 - Crear un contrato tiene un coste porque está usando almacenamiento en la red
-- Solo se pueden enviar transacciones como respuesta a una transacción recibida
+- Solo se pueden enviar mensajes en respuesta a la recepción de una transacción
 - Las transacciones de cuentas externas a una cuenta de contrato pueden activar código, que a su vez realiza muchas acciones diferentes, como transferir tokens o incluso crear un nuevo contrato
 - Las cuentas de contrato no tienen claves privadas. En su lugar, están controlados por la lógica del código de contrato inteligente
 
@@ -45,7 +45,7 @@ Las cuentas Ethereum tienen cuatro campos:
 - `Nonce`: contador que indica el número de transacciones enviadas desde una cuenta con titularidad externa o el número de contratos creados por una cuenta de contrato. Sólo puede ejecutarse una transacción con un nonce determinado por cada cuenta, lo que protege contra los ataques de repetición cuyas transacciones firmadas se difunden y reejecutan repetidamente.
 - `saldo`: número de wei pertenecientes a esa dirección. Wei es una denominación de ETH, y hay 1e+18 wei por ETH.
 - `codeHash`: este hash hace referencia al _código_ de una cuenta en la máquina virtual de Ethereum (EVM). Las cuentas de contrato tienen fragmentos de código programados que pueden realizar diferentes operaciones. Este código EVM se ejecuta si la cuenta recibe una llamada de mensaje. Este campo no se puede modificar, a diferencia de otros campos de la cuenta. Todos estos fragmentos de código están contenidos en la base de datos de estado con sus correspondientes hashes para su recuperación. Este valor hash es conocido como un codeHash. Para las cuentas de titularidad externa, el campo codeHash es el hash de una cadena vacía.
-- `storageRoot`: a veces conocido como hash de almacenamiento. Un hash de 256 bits del nodo raíz de un trie de Merkle Patricia que codifica el contenido de almacenamiento de la cuenta (un mapeo entre valores enteros de 256 bits), codificado en el trie como un mapeo del hash de 256 bits de Keccak de las claves enteras de 256 bits para los valores enteros de 256 bits codificados en RLP. Este trie codifica el hash del contenido de almacenamiento de esta cuenta y está vacío por defecto.
+- `storageRoot`: a veces conocido como hash de almacenamiento. Un hash de 256 bits del nodo raíz de un [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica el contenido de almacenamiento de la cuenta (un mapeo entre valores enteros de 256 bits), codificado en el trie como un mapeo desde el hash Keccak de 256 bits de las claves enteras de 256 bits a los valores enteros de 256 bits codificados en RLP. Este trie codifica el hash del contenido de almacenamiento de esta cuenta y está vacío por defecto.
 
 ![Un diagrama que muestra la creación de una cuenta](./accounts.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

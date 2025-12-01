@@ -4,7 +4,7 @@ description: 'Una introducción a los rollups optimistas: una solución de escal
 lang: es
 ---
 
-Los rollups optimistas son protocolos de capa 2 (L2) diseñados para ampliar el rendimiento de la capa base de Ethereum. Reducen el cómputo en la cadena principal de Ethereum al procesar las transacciones fuera de la cadena, ofreciendo mejoras significativas en la velocidad de procesamiento. A diferencia de otras soluciones de escalabilidad, como [cadenas laterales](/developers/docs/scaling/sidechains/), los rollups optimistas derivan la seguridad de la red principal publicando los resultados de las transacciones en cadena, o [cadenas de plasma](/developers/docs/scaling/plasma/), que también verifican las transacciones en Ethereum con pruebas de fraude, pero almacenan los datos de las transacciones en otros lugares.
+Los rollups optimistas son protocolos de capa 2 (L2) diseñados para ampliar el rendimiento de la capa base de Ethereum. Reducen la computación en la cadena principal de Ethereum procesando transacciones fuera de cadena, lo que ofrece mejoras significativas en la velocidad de procesamiento. A diferencia de otras soluciones de escalabilidad, como las [cadenas laterales](/developers/docs/scaling/sidechains/), los rollups optimistas obtienen la seguridad de la red principal publicando los resultados de las transacciones en cadena, o [cadenas de plasma](/developers/docs/scaling/plasma/), que también verifican las transacciones en Ethereum con pruebas de fraude, pero almacenan los datos de las transacciones en otros lugares.
 
 Como la computación es la parte lenta y costosa del uso de Ethereum, los rollups optimistas pueden ofrecer mejoras de hasta 10-100x en la escalabilidad. Los rollups optimistas también escriben transacciones en Ethereum como `calldata` o en [blobs](/roadmap/danksharding/), lo que reduce los costos de gas para los usuarios.
 
@@ -16,9 +16,9 @@ Debería haber leído y entendido nuestras páginas sobre [escalabilidad de Ethe
 
 Un rollup optimista es un enfoque para escalar Ethereum que implica pasar la computación y el almacenamiento de estado fuera de la cadena. Los rollups optimistas ejecutan transacciones fuera de Ethereum, pero publican los datos de las transacciones en la Red principal como `calldata` o en [blobs](/roadmap/danksharding/).
 
-Los operadores de rollup optimistas agrupan múltiples transacciones fuera de la cadena en grandes lotes antes de enviarlas a Ethereum. Este enfoque permite distribuir los costes fijos entre múltiples transacciones en cada lote, reduciendo así las tarifas para los usuarios finales. Los rollups optimistas también utilizan técnicas de compresión para reducir la cantidad de datos publicados en Ethereum.
+Los operadores de rollup optimista agrupan múltiples transacciones fuera de la cadena en grandes lotes antes de enviarlas a Ethereum. Este enfoque permite distribuir los costes fijos entre múltiples transacciones en cada lote, reduciendo así las tarifas para los usuarios finales. Los rollups optimistas también utilizan técnicas de compresión para reducir la cantidad de datos publicados en Ethereum.
 
-Los rollups optimistas se consideran «optimistas» porque asumen que las transacciones fuera de la cadena son válidas y no publican pruebas de validez para los lotes de transacciones publicados en la cadena. Esto separa los rollups optimistas de los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) que publican [pruebas criptográficas de validez](/glossary/#validity-proof) para transacciones fuera de la cadena.
+Los rollups optimistas se consideran «optimistas» porque asumen que las transacciones fuera de la cadena son válidas y no publican pruebas de validez para los lotes de transacciones publicados en la cadena. Esto es lo que diferencia los rollups optimistas de los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) que publican [pruebas criptográficas de validez](/glossary/#validity-proof) para transacciones fuera de cadena.
 
 En cambio, los rollups optimistas se basan en un esquema de prueba de fraude para detectar casos en los que las transacciones no se calculan correctamente. Después de enviar un lote de rollup en Ethereum, hay una ventana de tiempo (llamada período de desafío) durante la cual cualquiera puede desafiar los resultados de una transacción rollup calculando una [prueba de fraude](/glossary/#fraud-proof).
 
@@ -28,17 +28,17 @@ Si el lote de rollup permanece sin impugnar (es decir, todas las transacciones s
 
 ## ¿Cómo interactúan los rollups optimistas con Ethereum? {#optimistic-rollups-and-Ethereum}
 
-Los rollups optimistas son [soluciones de escalabilidad fuera de la cadena](/developers/docs/scaling/#off-chain-scaling) creadas para operar sobre Ethereum. Cada rollup optimista lo administra un conjunto de contratos inteligentes desplegados en la red Ethereum. Los rollups optimistas procesan las transacciones fuera de la cadena principal de Ethereum, pero publican las transacciones fuera de la cadena (en lotes) en un contrato rollup en cadena. Al igual que la cadena de bloques de Ethereum, este registro de transacciones es inmutable y forma la «cadena de rollup optimista».
+Los rollups optimistas son [soluciones de escalabilidad externas a cadena](/developers/docs/scaling/#offchain-scaling) creadas para trabajar sobre Ethereum. Cada rollup optimista lo administra un conjunto de contratos inteligentes desplegados en la red Ethereum. Los rollups optimistas procesan las transacciones fuera de la cadena principal de Ethereum, pero publican transacciones fuera de la cadena (en bloques) en un contrato de rollup en cadena. Al igual que la cadena de bloques de Ethereum, este registro de transacciones es inmutable y forma la «cadena de rollup optimista».
 
 La arquitectura de un rollup optimista comprende las siguientes partes:
 
-**Contratos en cadena**: La operación de los rollups optimistas está controlada por contratos inteligentes que se ejecutan en Ethereum. Esto incluye contratos que almacenan bloques de rollup, monitorean las actualizaciones de estado en el rollup y rastrean los depósitos de los usuarios. En este sentido, Ethereum sirve como capa base o «capa 1» para los rollups optimistas.
+**Contratos en cadena**: el funcionamiento de los rollups optimistas está controlado por contratos inteligentes que se ejecutan en Ethereum. Esto incluye contratos que almacenan bloques de rollup, monitorean las actualizaciones de estado en el rollup y rastrean los depósitos de los usuarios. En este sentido, Ethereum sirve como capa base o «capa 1» para los rollups optimistas.
 
-**Máquina virtual fuera de cadena (VM)**: Aunque los contratos que gestionan el protocolo de rollup optimista se ejecutan en Ethereum, el protocolo rollup realiza el cálculo y el almacenamiento de estado en otra máquina virtual separada de la [Máquina virtual Ethereum](/developers/docs/evm/). En la máquina virtual fuera de la cadena se activan las aplicaciones y se ejecutan los cambios de estado; sirve de capa superior o «capa 2» para un rollup optimista.
+**Máquina virtual fuera de cadena**: aunque los contratos que gestionan el protocolo de rollups optimistas se ejecutan en Ethereum, el protocolo de rollups realiza los cálculos y el almacenamiento de estado en otra máquina virtual separada de la [Máquina virtual de Ethereum](/developers/docs/evm/). En la máquina virtual fuera de cadena residen las aplicaciones y se ejecutan los cambios de estado; sirve como la capa superior (o capa 2) para un rollup optimista.
 
-Como los rollups optimistas están diseñados para ejecutar programas escritos o compilados para la EVM, la máquina virtual fuera de la cadena incorpora muchas especificaciones de diseño de la EVM. Además, las pruebas de fraude calculadas en cadena permiten que la red Ethereum refuerce el cumplimiento de la validez de los cambios de estado calculados en la máquina virtual fuera de la cadena VM.
+Como los rollups optimistas están diseñados para ejecutar programas escritos o compilados para la EVM, la máquina virtual fuera de la cadena incorpora muchas especificaciones de diseño de la EVM. Además, las pruebas de fraude calculadas en cadena permiten que la red de Ethereum haga que se cumpla la validez de los cambios de estado calculados en la máquina virtual fuera de la cadena.
 
-Los rollups optimistas pueden definirse como «soluciones de escalado híbridas» porque, aunque existen como protocolos separados, sus propiedades de seguridad se derivan de Ethereum. Entre otras cosas, Ethereum garantiza la exactitud del cálculo fuera de cadena de un rollup y la disponibilidad de datos detrás del cálculo. Esto hace que los rollups optimistas sean más seguros que los protocolos de escalabilidad fuera de la cadena (por ejemplo, [cadenas laterales](/developers/docs/scaling/sidechains/)) cuya seguridad no depende de Ethereum.
+Los rollups optimistas pueden definirse como «soluciones de escalabilidad híbridas» porque, aunque existen como protocolos separados, sus propiedades de seguridad se derivan de Ethereum. Entre otras cosas, Ethereum garantiza la exactitud del cálculo fuera de cadena de un rollup y la disponibilidad de los datos detrás del cálculo. Esto hace que los rollups optimistas sean más seguros que los protocolos de escalabilidad que están exclusivamente fuera de la cadena (por ejemplo, [cadenas laterales](/developers/docs/scaling/sidechains/)) cuya seguridad no depende de Ethereum.
 
 Los rollups optimistas se basan en el protocolo principal de Ethereum para lo siguiente:
 
@@ -46,7 +46,7 @@ Los rollups optimistas se basan en el protocolo principal de Ethereum para lo si
 
 Como se mencionó, los rollups optimistas publican datos de transacciones en Ethereum como `calldata` o [blobs](/roadmap/danksharding/). Dado que la ejecución de la cadena de rollup se basa en las transacciones enviadas, cualquier persona puede usar esta información, anclada en la capa base de Ethereum, para ejecutar el estado del acumulable y verificar la exactitud de las transiciones de estado.
 
-[La disponibilidad de los datos](/developers/docs/data-availability/) es crítica porque sin acceso a los datos estatales, los retadores no pueden construir pruebas de fraude para disputar operaciones rollup no válidas. Al proporcionar Ethereum disponibilidad de datos, se reduce el riesgo de que los operadores de rollup se salgan con la suya mediante actos maliciosos (por ejemplo, la presentación de bloques no válidos).
+[La disponibilidad de los datos](/developers/docs/data-availability/) es crítica porque sin acceso a los datos de estado, los retadores no pueden construir pruebas de fraude para disputar operaciones rollup no válidas. Al proporcionar Ethereum disponibilidad de datos, se reduce el riesgo de que los operadores de rollup se salgan con la suya mediante actos maliciosos (por ejemplo, la presentación de bloques no válidos).
 
 ### Resistencia a la censura {#censorship-resistance}
 
@@ -86,15 +86,15 @@ El secuenciador es diferente de un operador de rollup regular, porque tienen un 
 
 #### Envío de bloques de rollup a Ethereum {#submitting-blocks-to-ethereum}
 
-Como se ha mencionado anteriormente, el operador de un rollup optimista agrupa las transacciones fuera de la cadena en un lote y las envía a Ethereum para su certificación notarial. Este proceso consiste en comprimir los datos relacionados con las transacciones y publicarlos en Ethereum como `calldata` o en blobs.
+Como se ha mencionado anteriormente, el operador de un rollup optimista agrupa las transacciones fuera de la cadena en un lote y lo envía a Ethereum para su certificación notarial. Este proceso consiste en comprimir los datos relacionados con las transacciones y publicarlos en Ethereum como `calldata` o en blobs.
 
-`Calldata` es un área no modificable y no persistente en un contrato inteligente que se comporta principalmente como [memoria](/developers/docs/smart-contracts/anatomy/#memory). Si bien `calldata` persiste en la cadena como parte de los [registros del historial de la cadena de bloques](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs), no se almacena como parte del estado de Ethereum. Debido a que `calldata` no toca ninguna parte del estado de Ethereum, es más barato que el estado para almacenar datos en la cadena.
+`Calldata` es un área no modificable y no persistente en un contrato inteligente que se comporta principalmente como [memoria](/developers/docs/smart-contracts/anatomy/#memory). Mientras que `calldata` persiste en cadena como parte de los [registros de historial](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) de la cadena de bloques, no se almacena como parte del estado de Ethereum. Debido a que `calldata` no toca ninguna parte del estado de Ethereum, es más barato que el estado para almacenar datos en cadena.
 
 La palabra clave `calldata` también se utiliza en Solidity para pasar argumentos a una función de contrato inteligente en el momento de la ejecución. `Calldata` identifica la función que se activa durante una transacción y le proporciona información a la función en forma de una secuencia arbitraria de bytes.
 
-En el contexto de las rollups optimistas, `calldata` se utiliza para enviar datos de transacción comprimidos al contrato en cadena. El operador de rollup añade un nuevo lote llamando a la función requerida en el contrato de rollup y pasando los datos comprimidos como argumentos de función. El uso de `calldata` reduce las tarifas de usuario, ya que la mayoría de los costes en los que incurren provienen del almacenamiento de datos en cadena.
+En el contexto de los rollups optimistas, `calldata` se utiliza para enviar datos de transacción comprimidos al contrato en cadena. El operador de rollup añade un nuevo lote llamando a la función requerida en el contrato de rollup y pasando los datos comprimidos como argumentos de función. El uso de `calldata` reduce las tarifas de los usuarios, ya que la mayoría de los costes en los que se incurren los rollups provienen del almacenamiento de datos en cadena.
 
-Aquí está [un ejemplo](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) de un envío de lotes de rollup para mostrar cómo funciona este concepto. El secuenciador invocó el método `appendSequencerBatch()` y pasó los datos comprimidos de la transacción como entradas usando `calldata`.
+He aquí [un ejemplo](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) de un envío de lotes de rollup para mostrar cómo funciona este concepto. El secuenciador invocó el método `appendSequencerBatch()` y pasó los datos comprimidos de la transacción como entradas usando `calldata`.
 
 Algunos rollups ahora utilizan blobs para publicar lotes de transacciones en Ethereum.
 
@@ -104,7 +104,7 @@ Los blobs son no modificables y no persistentes (al igual que `calldata`), pero 
 
 En cualquier momento, el estado del rollup optimista (cuentas, saldos, código de contrato, etc.) se organiza como un [árbol de Merkle](/whitepaper/#merkle-trees) denominado «árbol de estado». La raíz de este árbol de Merkle (raíz de estado), que hace referencia al último estado del rollup, se agrupa y se almacena en el contrato de rollup. Cada transición de estado en la cadena produce un nuevo estado de rollup, con el que un operador se compromete calculando una nueva raíz de estado.
 
-Al publicar lotes, el operador debe enviar tanto las antiguas raíces de estado como las nuevas raíces de estado. Si la raíz de estado anterior coincide con la raíz de estado existente en el contrato en cadena, esta última se descarta y se reemplaza con la nueva raíz de estado.
+Al publicar lotes, el operador debe enviar tanto las antiguas raíces de estado como las nuevas raíces de estado. Si la raíz de estado antigua coincide con la raíz de estado existente en el contrato de cadena, esta última se descarta y se reemplaza con la nueva raíz de estado.
 
 El operador de rollup también debe confirmar una raíz de Merkle para el propio lote de transacciones. Esto permite a cualquier persona probar la inclusión de una transacción en el lote (en L1) presentando una [prueba de Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/).
 
@@ -118,7 +118,7 @@ Si alguien disputa una afirmación, entonces el protocolo de rollup iniciará el
 
 Los esquemas de prueba interactivos de una sola ronda reproducen las transacciones en disputa en L1 para detectar aserciones no válidas. El protocolo rollup emula la reejecución de la transacción en disputa en L1 (Ethereum) utilizando un contrato de verificador, y la raíz de estado calculada determina quién gana el desafío. Si la afirmación del retador sobre el estado correcto del rollup es acertada, se le penaliza al operador por la reducción de su fianza.
 
-Sin embargo, volver a ejecutar transacciones en L1 para detectar el fraude requiere la publicación de compromisos de estado para transacciones individuales y aumenta los datos de rollups que deben publicarse en cadena. La repetición de las transacciones también incurre en importantes costes de gas. Por estas razones, los rollups optimistas están cambiando a pruebas interactivas de varias rondas, lo que logra el mismo objetivo (es decir, detectar operaciones de rollup no válidas) con más eficiencia.
+Sin embargo, la reejecución de transacciones en L1 para detectar el fraude requiere la publicación de compromisos estatales para transacciones individuales y aumenta los rollups de datos que deben publicarse en cadena. La repetición de las transacciones también incurre en importantes costes de gas. Por estas razones, los rollups optimistas están cambiando a pruebas interactivas de varias rondas, lo que logra el mismo objetivo (es decir, detectar operaciones de rollup no válidas) con más eficiencia.
 
 #### Demostración interactiva de varias rondas {#multi-round-interactive-proving}
 
@@ -132,7 +132,7 @@ Algunos apuntes sobre este tipo de prueba de fraude:
 
 1. La prueba de fraude interactiva de varias rondas se considera eficiente porque minimiza el trabajo que la cadena L1 debe hacer en el arbitraje de disputas. En lugar de reproducir toda la transacción, la cadena L1 solo necesita volver a ejecutar un paso en la ejecución del rollup.
 
-2. Los protocolos de bisección reducen la cantidad de datos publicados en la cadena (no es necesario publicar confirmaciones de estado para cada transacción). Además, las transacciones rollup optimistas no están limitadas por el límite de gas de Ethereum. Por el contrario, los rollups optimistas que vuelven a ejecutar transacciones deben asegurarse de que una transacción L2 tenga un límite de gas más bajo para emular su ejecución dentro de una sola transacción de Ethereum.
+2. Los protocolos de bisección reducen la cantidad de datos publicados en cadena (sin necesidad de publicar confirmaciones de estado para cada transacción). Además, las transacciones rollup optimistas no están limitadas por el límite de gas de Ethereum. Por el contrario, los rollups optimistas que vuelven a ejecutar transacciones deben asegurarse de que una transacción L2 tenga un límite de gas más bajo para emular su ejecución dentro de una sola transacción de Ethereum.
 
 3. Parte del vínculo del afirmador malicioso se otorga al retador, mientras que la otra parte se quema. La quema evita la connivencia entre los validadores; si dos validadores conspiran para iniciar desafíos falsos, aún perderán una parte considerable de toda la participación.
 
@@ -198,7 +198,7 @@ Por último, debemos tener en cuenta que las llamadas de mensajes L2 > L1 entre 
 
 Los rollups optimistas utilizan un esquema de tarifas de gas, al igual que Ethereum, para indicar cuánto pagan los usuarios por transacción. Las tarifas cobradas en los rollups optimistas dependen de los siguientes componentes:
 
-1. **Escritura de estado**: Los rollups optimistas publican datos de transacciones y encabezados de bloque (que constan de hash de encabezado de bloque anterior, raíz de estado, raíz por lotes) en Ethereum como un `blob`, u "objeto grande binario" (binary large object). [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) introdujo una solución rentable para incluir datos en cadena. Un `blob` es un nuevo campo de transacción que permite que los rollups publiquen datos de transición de estado comprimidos en la Capa 1 de Ethereum. A diferencia de `calldata`, que se queda permanentemente en la cadena, los blobs son de corta duración y se pueden podar de los clientes después de [4096 épocas](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (aproximadamente 18 días). Al usar blobs para publicar lotes de transacciones comprimidas, los rollups optimistas pueden reducir significativamente el costo de escribir transacciones en la Capa 1.
+1. **Escritura de estado**: Los rollups optimistas publican datos de transacciones y encabezados de bloque (que constan de hash de encabezado de bloque anterior, raíz de estado, raíz por lotes) en Ethereum como un `blob`, u "objeto grande binario" (binary large object). [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) introdujo una solución rentable para incluir datos en cadena. Un `blob` es un nuevo campo de transacción que permite que los rollups publiquen datos de transición de estado comprimidos en la Capa 1 de Ethereum. A diferencia de `calldata`, que se mantiene permanentemente en la cadena, los blobs son de corta duración y se pueden «podarse» de los clientes después de [4096 épocas](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (aproximadamente 18 días). Al usar blobs para publicar lotes de transacciones comprimidas, los rollups optimistas pueden reducir significativamente el costo de escribir transacciones en la Capa 1.
 
 2. **Gas de blob utilizado**: Las transacciones que cargan blobs emplean un mecanismo de tarifas dinámico similar al introducido por [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). La tarifa de gas para las transacciones de tipo 3 tiene en cuenta la tarifa base para los blobs, que es determinada por la red en función de la demanda de espacio de blobs y el uso de espacio de blobs de la transacción que se envía.
 
@@ -208,7 +208,7 @@ Los rollups optimistas aplican varios mecanismos para reducir las tarifas a los 
 
 ## ¿Cómo escalan los rollups optimistas a Ethereum? {#scaling-ethereum-with-optimistic-rollups}
 
-Como se explicó, los rollups optimistas publican datos de transacciones comprimidos en Ethereum para garantizar la disponibilidad de los datos. La capacidad de comprimir los datos publicados en cadena es crucial para escalar el rendimiento en Ethereum con aumentos de rollups optimistas.
+Como se explicó, los rollups optimistas publican datos de transacciones comprimidos en Ethereum para garantizar la disponibilidad de los datos. La capacidad de comprimir los datos publicados en cadena es crucial para escalar el rendimiento en Ethereum con rollups optimistas.
 
 La cadena principal de Ethereum pone límites a la cantidad de bloques de datos que pueden contener, denominados en unidades de gas (el [tamaño promedio del bloque](/developers/docs/blocks/#block-size) es de 15 millones de gas). Si bien esto restringe la cantidad de gas que puede usar cada transacción, también significa que podemos aumentar las transacciones procesadas por bloque reduciendo los datos relacionados con las transacciones, mejorando directamente la escalabilidad.
 
@@ -258,6 +258,8 @@ Se espera que la introducción de la [fragmentación de datos](/roadmap/dankshar
 - [¿Cómo funcionan los rollups optimistas? (La guía completa)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [¿Qué es un rollup de cadena de bloques?: introducción técnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Guía esencial sobre Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [La guía práctica de los rollups de Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [El estado de las pruebas de fraude en las capas 2 de Ethereum](https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [¿Cómo funcionan realmente los rollup optimistas?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Análisis detallado de OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [¿Qué es la máquina virtual optimista?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

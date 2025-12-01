@@ -37,7 +37,7 @@ Con el diseño del mecanismo actual, para acortar la finalidad, es necesario que
 
 El mecanismo de consenso actual combina certificaciones de multiples validadores, conocidos como comités, para reducir el número de mensajes que cada validador tiene que procesar para validar un bloque. Cada validador tiene una oportunidad para certificar en cada época (32 ranuras) pero en cada ranura, solo un subgrupo de validadores, conocido como comité de certificación. Ellos lo hacen al dividirse en subredes en las que se seleccionan a unos cuantos validadores para ser «agregadores». Cada agregador combina todas las firmas de parte de los validadores en su subred en una sola firma. Los agregadores que incluyen los números más grandes de contribuidores individuales pasan su firma combinada al bloque del proponente, quien la incluye en el bloque, junto con la firma combinada de otros comités.
 
-Este proceso proporciona suficiente capacidad para que cada validador vote en cada época, ya que 32 ranuras * 64 comités * 256 validadores por comité = 524.288 validadores por época`. Al cierra de la edición de este documento (febrero de 2023) hay ~513.000 validadores activos.
+Este proceso proporciona suficiente capacidad para que cada validador vote en cada época, ya que 32 ranuras * 64 comités * 256 validadores por comité = 524.288 validadores por época`. Al cierre de la edición de este documento (febrero de 2023) hay ~513.000 validadores activos.
 
 En este esquema, cada validador solo puede votar en un bloque para distribuir sus certificaciones a través de la época completa. Sin embargo, hay formas potenciales de mejorar el mecanismo para que _cada validador tenga la oportunidad de certificar en cada ranura_.
 </ExpandableCard>

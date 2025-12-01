@@ -64,15 +64,12 @@ Ethereum se basa en esto. Al igual que Bitcoin, las reglas no pueden cambiar en 
 
 Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embargo, esto no es más que una característica natural de los tókenes en Ethereum. Cualquier persona puede programar operaciones lógicas dentro de los pagos. De esta manera, puede obtener el control y la seguridad de Bitcoin combinado con los servicios que proveen las instituciones financieras. Esto le permite realizar actividades con las criptomonedas que no podría hacer en Bitcoin como prestar o pedir un préstamo, planificar pagos, invertir en fondos indexados y más.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar las aplicaciones DeFi
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## ¿Qué puede hacer con DeFi? {#defi-use-cases}
 
@@ -143,7 +140,7 @@ Esto le permite pedir dinero prestado sin cheques de crédito ni entregar inform
 
 #### Acceso a los fondos globales {#access-global-funds}
 
-Cuando usted utiliza un prestamista o crédito descentralizado, tiene acceso a los fondos depositados de todo el mundo, no solo los fondos bajo custodia de su banco o institución elegida. Esto hace más accesibles los préstamos y mejora los tipos de interés.
+Cuando usted utiliza un prestamista o crédito descentralizado, tiene acceso a los fondos depositados de todo el mundo, no solo los fondos bajo custodia de su banco o institución elegida. Esto hace que los préstamos sean más accesibles y mejora las tasas de interés.
 
 #### Eficiencias fiscales {#tax-efficiencies}
 
@@ -172,7 +169,7 @@ Si la oferta de B cayera repentinamente y el usuario no pudiera comprar la canti
 
 Para hacer lo que describimos en el ejemplo de arriba pero en el mundo real necesitaría mucho dinero. Estas estrategias para hacer dinero solo son accesibles para aquellos que ya tienen dinero. Los préstamos flash son un ejemplo de un futuro en el que tener dinero no es necesariamente un requisito previo para ganar dinero.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   Más información sobre los préstamos flash
 </ButtonLink>
 
@@ -328,13 +325,13 @@ DeFi se puede dividir en varias capas:
 3. Los protocolos, o [contratos inteligentes](/glossary/#smart-contract), brindan funcionalidad, como por ejemplo, un servicio que permite el préstamo descentralizado de activos.
 4. [Las aplicaciones](/apps/): los productos que usamos para gestionar y acceder a los protocolos.
 
-Nota: Gran parte de la DeFi utiliza el [estándar ERC-20](/glossary/#erc-20). Las aplicaciones en DeFi utilizan un wrapper para ETH llamado Wrapped Ether (WETH). [Más información sobre Wrapper Ether](/wrapped-eth).
+Nota: Gran parte de la DeFi utiliza el [estándar ERC-20](/glossary/#erc-20). Las aplicaciones en DeFi usan un wrapper de ETH llamado Wrapped Ether (WETH). [Más información sobre Wrapper Ether](/wrapped-eth).
 
 ## Desarrollar DeFi {#build-defi}
 
 DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar todos los protocolos y aplicaciones de DeFi. Debido a su naturaleza de capas (todos comparten la misma cadena de bloques y los mismos activos), los protocolos pueden mezclarse y emparejarse para desbloquear combinaciones de oportunidades únicas.
 
-<ButtonLink href="/developers/docs/dapps/">
+<ButtonLink href="/developers/docs/apps/">
   Más información sobre el desarrollo de DApps
 </ButtonLink>
 

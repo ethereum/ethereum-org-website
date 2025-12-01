@@ -46,17 +46,15 @@ Esto te ayudará a entender cosas como "¿Cuál es la estructura de datos de una
 
 Si prefieres leer el código, JavaScript podría ser una buena alternativa para leer detenidamente nuestros documentos.
 
-**Revisa el monorepo**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
+**Eche un vistazo a la EVM**  
+[`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
 ### Nodos y clientes {#nodes-and-clients}
 
 Un cliente de Ethereumjs es un desarrollo activo que le permite profundizar en cómo funcionan los clientes Ethereum en un idioma que comprenda; JavaScript.
 
-Solía ​​estar alojado en un [`repositorio`](https://github.com/ethereumjs/ethereumjs-client) independiente; sin embargo, luego se fusionó con el monorepo EthereumVM como un paquete.
-
-**Revise el cliente**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Eche un vistazo al cliente**  
+[`@ethereumjs/cliente`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Otros proyectos {#other-projects}
 

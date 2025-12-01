@@ -10,7 +10,7 @@ lang: es
 
 ¿Está buscando el soporte técnico oficial de Ethereum? Lo primero que debe saber es que Ethereum está descentralizado. Eso significa que carece de organización centra y que ninguna entidad ni persona es dueña de Ethereum. Por lo tanto, no existen canales de soporte oficiales.
 
-Comprender la naturaleza descentralizada de Ethereum es vital, ya que todo aquel que afirme ser el soporte técnico oficial de Ethereum probablemente esté tratando de estafarle. La mejor manera de protegerse contra estafadores es enterarse bien y tomarse la seguridad en serio.
+Comprender la naturaleza descentralizada de Ethereum es fundamental, ya que **cualquiera que afirme ser parte del soporte técnico de Ethereum probablemente busque engañarle**. La mejor protección contra estafadores es educarse por su cuenta y tomarse la seguridad en serio.
 
 <DocLink href="/security/">
   Seguridad en Ethereum y prevención de fraudes
@@ -57,6 +57,7 @@ Crear puede ser difícil. A continuación, le indicamos algunos espacios centrad
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord de CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Ethereum Stackexchange](https://ethereum.stackexchange.com/)
+- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
@@ -99,5 +100,6 @@ La mayoría de los equipos que se encargan de la creación de clientes de Ethere
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 También puede [aprender aquí a ejecutar su propio nodo](/developers/docs/nodes-and-clients/run-a-node/).

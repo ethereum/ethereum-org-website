@@ -123,19 +123,18 @@ Este es el código:
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // La única token que queremos aceptar.
+    address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // Es importante entender que dentro de esta función
-        // msg.sender es la dirección de una token que está siendo recibida
-        // msg.value es siempre 0 por lo que la token del contrato normalmente no tiene o envía Ether
-        // _from es el remitente de la transferencia.
-        // _value es la cantidad de tokens que fue depositada.
+        // It is important to understand that within this function
+        // msg.sender is the address of a token that is being received,
+        // msg.value  is always 0 as the token contract does not own or send ether in most cases,
+        // _from      is the sender of the token transfer,
+        // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
     }
-}
 ```
 
 ## Preguntas frecuentes {#faq}
@@ -154,7 +153,7 @@ Si se envía un token ERC-20 al `RecipientContract`, los tokens se transferirán
 
 ### ¿Qué ocurre si queremos ejecutar una función luego de que el depósito haya sido completado? {#function-execution}
 
-Existen varias formas de lograrlo. En este ejemplo, seguiremos el método que hace que las transferencias ERC-223 sean identicas a transferencias de Ether:
+Existen varias formas de lograrlo. En este ejemplo, veremos el método que hace que las transferencias ERC-223 sean idénticas a transferencias de Ether:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
@@ -177,7 +176,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Cuando el `RecipientContract` recibe un token ERC-223, el contrato ejecutará una función codificada con el parámetro `_data` que corresponde a la transacción del token. Esto es idéntico al modo en que las transacciones de Ether codifican las llamadas a funciones como `data` de transacción. Lea [el campo de datos](/developers/docs/transactions/#the-data-field) para obtener más información.
+Cuando el RecipientContract recibe un token ERC-223, el contrato ejecutará una función codificada con el parámetro `_data` de la transacción del token. Esto es idéntico a cómo transacciones de Ether codifican las llamadas a funciones como datos de transacción. Lea [el campo de datos](https://ethereum.org/en/developers/docs/transactions/#the-data-field) para obtener más información.
 
 En el ejemplo anterior, se debe transferir un token ERC-223 a la dirección del `RecipientContract` con la función `transfer(address,uin256,bytes calldata _data)`. Si el parámetro de los datos será `0xc2985578` (la firma de una función `foo()`), la función foo() será invocada luego de que se reciba el depósito y se disparará el evento Foo().
 

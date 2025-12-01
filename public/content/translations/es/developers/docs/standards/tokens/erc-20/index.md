@@ -1,6 +1,6 @@
 ---
 title: Estándar de token ERC-20
-description:
+description: Familiarícese con ERC-20, el estándar para tókenes fungibles en Ethereum que permite aplicaciones de tókenes interoperables.
 lang: es
 ---
 
@@ -144,6 +144,8 @@ print("Addr Balance:", addr_balance)
 
 ### Problema de recepción de tokens ERC-20 {#reception-issue}
 
+**A partir del 20-6-2024 se perdieron al menos 83.656.418 dólares en tókenes ERC-20 debido a este problema. Tenga en cuenta que una implementación pura de ERC-20 es propensa a este problema a menos que implemente un conjunto de restricciones adicionales en la parte superior del estándar como se indica a continuación.**
+
 Cuando se envían tokens ERC-20 a un contrato inteligente que no está diseñado para manejar tokens ERC-20, esos tokens pueden perderse de forma permanente. Esto sucede porque el contrato que los recibe no tiene la funcionalidad de reconocer o responder a los tokens entrantes, y no hay ningún mecanismo en el estándar ERC-20 para notificar al contrato de recepción sobre los tokens entrantes. Las principales formas en que este problema toma forma es a través de:
 
 1.  Mecanismo de transferencia de tokens
@@ -155,7 +157,16 @@ Cuando se envían tokens ERC-20 a un contrato inteligente que no está diseñado
 3.  No hay forma de manejo incorporada
     -   El estándar ERC-20 no incluye una función obligatoria para la implementación de los contratos de recepción, lo que lleva a una situación en la que muchos contratos no pueden administrar los tokens entrantes correctamente
 
-Algunos estándares alternativos han surgido como resultado de este problema, como [ERC-223](/developers/docs/standards/tokens/erc-223) o [ERC-1363](/developers/docs/standards/tokens/erc-1363).
+**Posibles soluciones**
+
+Aunque este problema no se puede evitar por completo con ERC-20, hay métodos que permitirían reducir considerablemente la posibilidad de una pérdida de tókenes para el usuario final:
+
+- El problema más común sobreviene cuando un usuario envía tókenes a la propia dirección del contrato de tókenes (por ejemplo, USDT depositado en la dirección del contrato de tókenes USDT). Se recomienda restringir la función `transfer(..)` para revertir dichos intentos de transferencia. Considere agregar `require(_to ! = address(this));` comprobar dentro de la implementación de la función `transfer(..)`.
+- La función `transfer(..)` en general no está diseñada para depositar tókenes en contratos. `approve(..) & transferFrom(..)` el patrón se utiliza para depositar los tókenes ERC-20 en contratos en su lugar. Se puede restringir la función de transferencia para no permitir el depósito de tókenes a cualquier contrato con ella, sin embargo, puede afectar a la compatibilidad con contratos que asumen que los tókenes se pueden depositar en contratos con la función `transfer(..)` (por ejemplo, grupos de liquidez Uniswap).
+- Asuma siempre que los tókenes ERC-20 pueden terminar en su contrato, incluso si se supone que su contrato nunca recibirá ninguno. El destinatario no tiene manera de prevenir ni rechazar los depósitos accidentales. Se recomienda implementar una función que permita extraer tókenes ERC-20 depositados accidentalmente.
+- Plantéese el uso de estándares de tokens alternativos.
+
+Algunos estándares alternativos han surgido como resultado de este problema, como [ERC-223](/developers/docs/standards/tokens/erc-223)
 
 ## Leer más {#further-reading}
 
@@ -168,6 +179,5 @@ Algunos estándares alternativos han surgido como resultado de este problema, co
 ## Otros estándares de tokens fungibles {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
-- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626: bóvedas tokenizadas](/developers/docs/standards/tokens/erc-4626)

@@ -130,7 +130,7 @@ Muchos marcos de pruebas unitarias le permiten crear aserciones, que son declara
 
 ##### 3. Medir la cobertura de código
 
-La [cobertura de código](https://en.m.wikipedia.org/wiki/Code_coverage) es una métrica de prueba que realiza un seguimiento del número de ramificaciones, líneas y declaraciones ejecutadas en su código ejecuado durante las pruebas. Las pruebas deben tener una buena cobertura de código; de lo contrario, puede obtener "falsos negativos" que hagan que el contrato pase todas las pruebas cuando en realidad existen vulnerabilidades. Registrar una alta cobertura de código, sin embargo, brinda la garantía de que todas las declaraciones y funciones en un contrato inteligente fueron suficientemente probadas para verificar que son correctas.
+La [cobertura de código](https://en.m.wikipedia.org/wiki/Code_coverage) es una métrica de prueba que realiza un seguimiento del número de ramificaciones, líneas y declaraciones ejecutadas en su código ejecuado durante las pruebas. Las pruebas deben tener buena cobertura del código para minimizar el riesgo de vulnerabilidades no probadas. Sin contar con la cobertura suficiente podría asumir falsamente que su contrato es seguro, ya que todas las pruebas se aprueban, mientras que aún existen vulnerabilidades en las rutas de código no probadas. Registrar una alta cobertura de código, sin embargo, brinda la garantía de que todas las declaraciones y funciones en un contrato inteligente fueron suficientemente probadas para verificar que son correctas.
 
 ##### 4. Utilizar marcos de pruebas bien desarrollados
 
@@ -207,13 +207,13 @@ Si bien las pruebas automatizadas realizadas en un entorno de desarrollo local p
 
 Probar su contrato en una cadena de bloques local (también conocida como una [red de desarrollo](/developers/docs/development-networks/)) es una alternativa recomendada a las pruebas en la Red principal. Una cadena de bloques local es una copia de la cadena de bloques de Ethereum que se ejecuta localmente en su computadora y simula el comportamiento de la capa de ejecución de Ethereum. Como tal, puede programar transacciones para interactuar con un contrato sin incurrir en gastos significativos.
 
-Ejecutar contratos en una cadena de bloques local podría ser útil como una forma de prueba de integración manual. Los [contratos inteligentes son altamente componibles](/developers/docs/smart-contracts/composability/), lo que permite la integración con protocolos existentes —pero aun así necesitará asegurarse de que estas complejas interacciones en cadena produzcan los resultados correctos—.
+Ejecutar contratos en una cadena de bloques local podría ser útil como una forma de prueba de integración manual. [Los contratos inteligentes son muy amoldables](/developers/docs/smart-contracts/composability/), lo que le permite integrarlos con protocolos existentes. Aún así necesitará garantizar que tales interacciones complejas en cadena producen los resultados esperados.
 
 [Más información sobre las redes de desarrollo.](/developers/docs/development-networks/)
 
 ### Pruebas de contratos en redes de pruebas {#testing-contracts-on-testnets}
 
-Una red de pruebas o testnet funciona exactamente como la Red principal de Ethereum, excepto que usa Ether (ETH) sin valor real. Implementar su contrato en una [red de pruebas](/developers/docs/networks/#ethereum-testnets) significa que cualquiera puede interactuar con él (por ejemplo, a través del frontend de la dapp) sin poner fondos en riesgo.
+Una prueba en la red o una ed de prueba funciona exactamente como la red principal de Ethereum, excepto que utiliza ether (ETH) sin valor en el mundo real. Implementar su contrato en una [red de pruebas](/developers/docs/networks/#ethereum-testnets) significa que cualquiera puede interactuar con él (por ejemplo, a través del frontend de la dapp) sin poner fondos en riesgo.
 
 Esta forma de prueba manual es útil para evaluar el flujo de extremo a extremo de la aplicación desde el punto de vista del usuario. Aquí, los beta testers también pueden realizar ejecuciones de prueba y reportar cualquier problema en la lógica de negocio del contrato y su funcionalidad general.
 
@@ -259,7 +259,7 @@ La diferencia principal es que los programas de recompensas por errores están a
 
 - **[Marco de pruebas unitarias de Brownie:](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** _Brownie utiliza Pytest, un marco de pruebas rico en funciones que le permite escribir pequeñas pruebas con código mínimo, escala bien para proyectos grandes y es altamente extendible._
 
-- **[Foundry Tests:](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** _Foundry ofrece Forge, un marco de pruebas de Ethereum rápido y flexible capaz de ejecutar pruebas unitarias simples, comprobaciones de optimización de gas y fuzzing de contratos._
+- **[Pruebas con Foundry:](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** _Foundry ofrece Forge, un marco de pruebas de Ethereum rápido y flexible capaz de ejecutar pruebas unitarias sencillas, comprobaciones de optimización de gas y contratos de fuzzing (o análisis dinámico)._
 
 - **[Hardhat Tests:](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** _Marco para probar contratos inteligentes basado en ethers.js, Mocha y Chai._
 

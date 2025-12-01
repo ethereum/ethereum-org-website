@@ -37,7 +37,7 @@ Una lista parcial de problemas clave en la ciencia y cómo la ciencia descentral
 | Se pueden desarrollar **nuevos modelos de publicación** que utilicen primitivos de Web3 para la confianza, la transparencia y el acceso universal. | Se publica a través de vías establecidas frecuentemente reconocidas como **ineficaces, sesgadas y explotadoras**.                                     |
 | Se puede **ganar tokens y reputación por revisar trabajos de otros**.                                                                              | El **trabajo de revisión por pares no es remunerado**, lo que beneficia a editores que tienen fines de lucro.                                         |
 | **Usted es dueño de la propiedad intelectual (PI)** que genera y la distribuye según términos transparentes.                                       | ** La institución a la que pertenece es dueña de la propiedad intelectual (PI)** que genera. El acceso a la propiedad intelectual no es transparente. |
-| **Se comparte toda la investigación**, incluyendo los datos de los esfuerzos no exitosos, al tener todos los pasos en la cadena de bloques.        | **El sesgo de publicación** implica que los investigadores tienen más probabilidad de compartir experimentos que tuvieron resultados exitosos.        |
+| **Se comparte toda la investigación**, incluyendo los datos de iniciativas que no han dado sus frutos, al tener todos los pasos en cadena.         | **El sesgo de publicación** implica que los investigadores tienen más probabilidad de compartir experimentos que tuvieron resultados exitosos.        |
 
 ## Ethereum y DeSci {#ethereum-and-desci}
 
@@ -76,7 +76,7 @@ La propiedad intelectual (PI) es un gran problema en la ciencia tradicional: des
 
 De la misma manera que los NFT pueden transferir ingresos de vuelta al creador original, puede establecer cadenas transparentes de atribución de valor para recompensar a investigadores, organismos gubernamentales (como DAO), o incluso a los sujetos cuyos datos se recolectan.
 
-Los [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) también pueden servir como una llave para acceder a un repositorio descentralizado de datos de experimentos de investigación y conectarse con la financiación de NFT y [DeFi](/glossary/#defi) (desde el fraccionamiento hasta los pools de préstamos y la valoración). También permite a entidades nativas en cadena como las DAO similares a [VitaDAO](https://www.vitadao.com/) realizar investigaciones directamente en cadena. La llegada de los tokens [ "AlmaDestinados" no transferibles](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) también puede desempeñar un papel importante en DeSci al permitir a las personas demostrar su experiencia y credenciales vinculadas a su dirección de Ethereum.
+Los [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) también pueden servir como una llave para acceder a un repositorio descentralizado de datos de experimentos de investigación y conectarse con la financiación de NFT y [DeFi](/glossary/#defi) (desde el fraccionamiento hasta los pools de préstamos y la valoración). También permiten a entidades nativas en cadena como DAO similares a [VitaDAO](https://www.vitadao.com/) realizar investigaciones directamente en cadena. La llegada de los tokens [ "AlmaDestinados" no transferibles](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) también puede desempeñar un papel importante en DeSci al permitir a las personas demostrar su experiencia y credenciales vinculadas a su dirección de Ethereum.
 
 ### Almacenamiento de datos, acceso y arquitectura {#data-storage}
 
@@ -95,6 +95,7 @@ Explore proyectos y únase a la comunidad DeSci.
 - [Molecule: financie y reciba fondos para sus proyectos de investigación](https://www.molecule.xyz/)
 - [VitaDAO: recibe financiación a través de acuerdos de investigación patrocinados para la investigación de la longevidad](https://www.vitadao.com/)
 - [ResearchHub: publique un resultado científico y participe en conversaciones con pares](https://www.researchhub.com/)
+- [LabDAO: pliegue una proteína simulada por ordenador](https://alphafodl.vercel.app/)
 - [dClimate API: consulta datos climáticos recopilados por una comunidad descentralizada](https://www.dclimate.net/)
 - [DeSci Foundation: creador de herramientas de publicación DeSci](https://descifoundation.org/)
 - [DeSci.World: ventanilla única para que los usuarios vean e interactúen con la ciencia descentralizada](https://desci.world)

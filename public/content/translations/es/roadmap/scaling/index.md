@@ -1,6 +1,6 @@
 ---
 title: Escalar en Ethereum
-description: Las acumulaciones agrupan transacciones en lotes y lo hacen fuera de la cadena, reduciendo costes para el usuario. Sin embargo, la forma en que los rollups usan datos actualmente es muy costosa, limitando cuán baratas pueden ser las transacciones. Proto-anksharing se encarga de solucionarlo.
+description: Los rollups agrupan transacciones fuera de cadena, reduciendo los costes para el usuario. Sin embargo, la forma en que los rollups usan datos actualmente es muy costosa, limitando cuán baratas pueden ser las transacciones. Proto-anksharing se encarga de solucionarlo.
 lang: es
 image: /images/roadmap/roadmap-transactions.png
 alt: "Hoja de ruta de Ethereum"
@@ -9,19 +9,14 @@ template: roadmap
 
 Ethereum escala utilizando las [capas 2](/layer-2/#rollups) (también conocidas como acumulaciones o «rollups»), que agrupan transacciones y envían el resultado a Ethereum. Aunque las acumulaciones son hasta ocho veces más baratas que la red principal de Ethereum, es posible optimizarlas aún más para reducir costes para los usuarios finales. Las acumulaciones dependen de algunos componentes centralizados que los desarrolladores podrán eliminar en la medida en que dichas acumulaciones maduren.
 
-<Alert variant="update" className="mb-8">
-<AlertContent>
-<AlertTitle className="mb-4">
-  Costos de transacción
-</AlertTitle>
+<InfoBanner mb={8} title="Costos de transacción">
   <ul style={{ marginBottom: 0 }}>
     <li>Los rollups actuales son <strong>~5-20 veces</strong> más baratos que Ethereum de capa 1.</li>
     <li>Las acumulaciones ZK pronto reducirán un <strong>~40-100</strong> las tarifas.</li>
     <li>Los próximos cambios en Ethereum traerán un incremento de <strong>~100-1.000</strong> en escalabilidad.</li>
     <li style={{ marginBottom: 0 }}>Los usuarios deberían beneficiarse con transacciones <strong>que cuesten menos de 0,001 USD</strong>.</li>
   </ul>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Abaratar los datos {#making-data-cheaper}
 
@@ -37,7 +32,7 @@ Con Proto-Danksharding, es posible añadir muchos blobs a los bloques de Ethereu
 
 La segunda fase de expansión de los datos de blobs es complicada porque requiere nuevos métodos para comprobar si los datos de los rollups están disponibles en la red y depende de que se puedan separar las responsabilidades de los [validadores](/glossary/#validator) de construcción de [bloques](/glossary/#block) y propuesta de bloques. También requiere una forma de demostrar criptográficamente que los validadores han verificado pequeños subconjuntos de los datos masivos.
 
-Este segundo paso es conocido como [«Danksharding»](/roadmap/danksharding/). **Es probable que demore varios años** en implementarse completamente. Danksharding se basa en otros desarrollos como [separar la construcción y la propuesta de bloques](/roadmap/pbs) y nuevos diseños de red que permitan a la red confirmar eficientemente que los datos están disponibles, muestreando aleatoriamente unos cuantos kilobytes cada vez, lo que se denomina [muestreo de disponibilidad de datos (DAS)](/developers/docs/data-availability).
+Este segundo paso se conoce como ["Danksharding"](/roadmap/danksharding/). El trabajo de implementación continúa, y se están logrando progresos en prerrequisitos como [separar la creación de bloques y la propuesta de bloques](/roadmap/pbs) y nuevos diseños de red que permitan que la red pueda confirmar de forma eficiente que los datos están disponibles muestreando aleatoriamente unos pocos kilobytes cada vez, lo que se conoce como [muestreo de disponibilidad de datos (DAS en inglés)](/developers/docs/data-availability).
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding/">Más información sobre la fragmentación.</ButtonLink>
 
@@ -49,8 +44,10 @@ Las [acumulaciones](/layer-2) ya están escalando en Ethereum. Un ecosistema ric
 
 ## Progreso actual {#current-progress}
 
-Proto-Danksharding es el primero de estos elementos de la hoja de ruta que se implementarán como parte de la actualización de la red Cancun-Deneb ("Dencun") en marzo de 2024. **El Danksharding completo probablemente no vea la luz en varios años**, ya que depende de que antes se completen varios otros elementos de la hoja de ruta. Descentralizar la infraestructura de acumulaciones seguramente será un proceso gradual: hay muchas acumulaciones distintas que están construyendo sistemas ligeramente diferentes y se descentralizarán totalmente a diferentes velocidades.
+ProtoDanksharding se implementó con éxito como parte de la actualización de red Cancun-Deneb ("Dencun") en marzo de 2024. Desde su implementación, los rollups han empezado a utilizar almacenamiento de blobs, dando como resultado una reducción en los costes de transacción para usuarios y millones de transacciones procesadas en blobs.
 
-[Más sobre la actualización de la red de Dencun](/roadmap/dencun/)
+Continúa la labor de implementación completa de Danksharding, con avances en sus prerrequisitos, como la separación del creador de propuestas (PBS en inglés) y muestreo de disponibilidad de datos (DAS en inglés). Descentralizar la infraestructura de rollups es un proceso paulatino —hay muchas rollups diferentes que están construyendo sistemas ligeramente diferentes y descentralizarán de forma completa a diferentes velocidades—.
+
+[Más información sobre la actualización de red Dencun y su impacto](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

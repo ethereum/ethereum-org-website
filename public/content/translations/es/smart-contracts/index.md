@@ -7,6 +7,10 @@ lang: es
 
 # Introducción a los contratos inteligentes {#introduction-to-smart-contracts}
 
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
+
 Los contratos inteligentes son los bloques de construcción fundamentales de la capa de aplicación de Ethereum. Se trata de programas computacionales almacenados en la [cadena de bloques](/glossary/#blockchain) que siguen la lógica "si ocurre esto, entonces ocurre aquello". Los programas garantizan ejecutarse siguiendo las reglas definidas por su propio código, las cuales no se pueden cambiar una vez que fueron creadas.
 
 Nick Szabo acuñó el término «contrato inteligente». En 1994, escribió [una introducción al concepto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), y en 1996 escribió [una exploración de lo que podrían hacer los contratos inteligentes](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
@@ -80,3 +84,7 @@ Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossa
 - [Contratos inteligentes para desarrolladores](/developers/docs/smart-contracts/)
 - [Aprenda a redactar contratos inteligentes](/developers/learning-tools/)
 - [Dominar Ethereum: ¿Qué es un contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

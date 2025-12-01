@@ -1,12 +1,37 @@
 ---
 title: Comunidades en línea
-description: Un listado de los programas de subvención entregados a través del ecosistema de Ethereum.
+description: Descubra foros de internet, salas de chat y comunidades de redes sociales donde se reúnen los amantes de Ethereum para comentar y colaborar.
 lang: es
 ---
 
 # Comunidades en línea {#online-communities}
 
 Cientos de miles de entusiastas de Ethereum se reúnen en estos foros en línea para compartir noticias, hablar de desarrollos recientes, debatir cuestiones técnicas e imaginar el futuro.
+
+## Políticas de Listado {#listing-policy}
+
+Para mantener la integridad y valor de las comunidades registradas, ethereum.org sigue una politica estricta para determinar la seleccion:
+
+### Criterios de selección {#eligibility-criteria}
+
+- **Relevancia**: La comunidad debe estar directamente relacionada con Ethereum y su ecosistema.
+- **Nivel de actividad**: La comunidad debe ser activa, con interacciones, publicaciones o discusiones regulares. Las comunidades inactivas se pueden eliminar.
+- **Inclusividad**: La comunidad debe promover un ambiente inclusivo que respete la diversidad y fomente la participación activa de personas de todos los orígenes.
+- **Foco no comercial**: Los listados buscan priorizar espacios impulsados por la comunidad en lugar de plataformas comerciales o promocionales.
+
+### Pautas de contenido {#content-guidelines}
+
+- **Contenido apropiado**: Las comunidades deben tener sus propias pautas de moderación del contenido, evitando el spam, la incitación al odio, el acoso, o cualquier contenido que promueva actividades ilegales.
+- **Idioma**: Si bien inglés es el idioma principal, animamos a que las comunidades hablantes de otros idiomas participen mientras mantengan una atmósfera de inclusividad y respeto.
+- **Transparencia**: Información clara sobre el propósito de la comunidad, reglas y moderadores deberían ser accesibles a los miembros de dichas comunidades.
+
+### Otras Recomendaciones {#other-recommendations}
+
+- **Accesibilidad**: Foros de comunidad deberán ser accesibles a todos sin requerir un registro.
+- **Invitaciones a servidores de Discord**: Se recomienda agregar únicamente invitaciones a servidores de Discord de confianza en ethereum.org. Idealmente, estas invitaciones deberán enlazar a páginas de la comunidad (p.ej., [ethglobal.com/discord](https://ethglobal.com/discord)) o venir de una URL oficial (p.ej., [discord.gg/ethstaker](https://discord.gg/ethstaker) o [discord.com/invite/ethstaker](https://discord.com/invite/ethstaker)).
+
+Si cree que una comunidad se debe añadir o eliminar en base a estas políticas por favor [abra una incidencia en nuestro repositorio de GitHub](https://github.com/ethereum/ethereum-org-website/issues).
+
 
 ## Foros {#forums}
 
@@ -30,14 +55,14 @@ Cientos de miles de entusiastas de Ethereum se reúnen en estos foros en línea 
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link>: chat sobre el desarrollo de Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link>: chat sobre el desarrollo de Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *: foro de preguntas y respuestas*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *: foro descentralizado de preguntas y respuestas*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Foro comunitario de Peera</Link>*: foro descentralizado de preguntas y respuestas*</SocialListItem>
 
-## YouTube y Twitter {#youtube-and-twitter}
+## YouTube y X (anteriormente Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link>: para estar al corriente de todas las novedades sobre Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link>: cuenta oficial de Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link>: el portal de Ethereum, creado para nuestra comunidad global cada vez más numerosa</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Lista de las cuentas influyentes de Ethereum en twitter</Link></SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link>: cuenta principal de Ethereum para la comunidad</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link>: cuenta oficial de Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link>: el portal de Ethereum, creado para nuestra comunidad global cada vez más numerosa</SocialListItem>
 
 <Divider />
 

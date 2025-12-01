@@ -1,6 +1,6 @@
 ---
 title: Lenguajes de programación
-description:
+description: Descubre recursos de desarrollo en Ethereum para varios lenguajes de programación, incluidos JavaScript, Python, Go, Rust y más.
 lang: es
 ---
 
@@ -15,6 +15,7 @@ Seleccione su lenguaje de programación de preferencia para encontrar proyectos,
 - [Ethereum para desarrolladores de Dart](/developers/docs/programming-languages/dart/)
 - [Ethereum para desarrolladores de Delphi](/developers/docs/programming-languages/delphi/)
 - [Ethereum para desarrolladores de .NET](/developers/docs/programming-languages/dot-net/)
+- [Ethereum para desarrolladores de Elixir](/developers/docs/programming-languages/elixir/)
 - [Ethereum para desarrolladores de Go](/developers/docs/programming-languages/golang/)
 - [Ethereum para desarrolladores Java](/developers/docs/programming-languages/java/)
 - [Ethereum para desarrolladores de JavaScript](/developers/docs/programming-languages/javascript/)

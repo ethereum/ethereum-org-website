@@ -13,19 +13,19 @@ Es necesario que comprenda los conceptos básicos de Ethereum para poder entende
 
 ## Servicios {#services}
 
-- [Etherscan](https://etherscan.io/) -_También disponible en chino, coreano, ruso y japonés_
+- [Etherscan:](https://etherscan.io/) _También disponible en chino, coreano, ruso y japonés_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
+- [Blockchair:](https://blockchair.com/ethereum) _También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
+- [Ethplorer:](https://ethplorer.io/) _También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Herramientas de código abierto {#open-source-tools}
 
@@ -94,7 +94,7 @@ Los exploradores de bloques se han convertido en un lugar común para que las pe
 - Límite de gas: El número máximo de unidades de gas que esta transaccion puede consumir
 - Gas usado: La cantidad real de unidades de gas que consumió la transacción
 - Precio del gas: El precio establecido por unidad de gas
-- Nonce: El número de transacción de la dirección `from` (tenga en cuenta que empieza en 0, por ende, un nonce de `100` actualmente sería la transacción número 101 enviada por esta cuenta
+- Nonce: el número de transacción de la dirección `from` (tenga en cuenta que empieza en 0, por ende, un nonce de `100` actualmente sería la transacción número 101 enviada por esta cuenta)
 - Datos de entrada: Cualquier información extra requerida por la transacción
 
 ### Cuentas {#accounts}
@@ -237,13 +237,12 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 
 ## Exploradores de bloques {#block-explorers}
 
-- [Etherscan](https://etherscan.io/): Un explorador de bloques que puede usar para buscar datos de la red principal de Ethereum y la red de pruebas Sepolia y Hoodi
+- [Etherscan](https://etherscan.io/): un explorador de bloques que puede usar para obtener datos de la red principal y la red de prueba de Ethereum
 - [3xpl](https://3xpl.com/ethereum): Un explorador de Ethereum de código abierto sin anuncios que permite descargar sus conjuntos de datos
-- [Beaconcha.in](https://beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y las redes de pruebas Sepolia y Hoodi
+- [Beaconcha.in](https://beaconcha.in/): un explorador de bloques de código abierto para la red principal y la red de prueba de Ethereum
 - [Blockchair](https://blockchair.com/ethereum): El explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
 - [Etherchain](https://www.etherchain.org/): Un explorador de bloques para la red principal de Ethereum
-- [Ethplorer](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Sepolia
-- [Rantom](https://rantom.app/): Un visor de código abierto y fácil de usar de información detallada de transaccinoes DeFI y NFT
+- [Ethplore](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Kovan
 - [Ethernow](https://www.ethernow.xyz/): Un explorador de transacciones en tiempo real que le permite ver la capa previa a la cadena de la Red principal de Ethereum
 
 ## Para seguir leyendo {#further-reading}

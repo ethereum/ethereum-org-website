@@ -19,7 +19,7 @@ Una DAO (Decentralized Autonomous Organization) es una organización de propieda
 
 Las DAO nos permiten trabajar con personas de ideas afines a nosotros en todo el mundo sin tener que confiar en un líder benévolo para que administre los fondos u operaciones. No existe ningún director ejecutivo que pueda gastar los fondos a su antojo, ni ningún director financiero que pueda manipular la contabilidad. En lugar de eso, las reglas basadas en la cadena de bloques e integradas en el código son las que definen cómo funciona la organización y cómo se gastan los fondos.
 
-Han incorporado tesoros a los que nadie tiene autoridad para acceder sin la aprobación del grupo. Las decisiones se rigen por propuestas y votos para asegurar que todos los miembros de la organización tengan voz y que todo sea transparente [en la cadena de bloques](/glossary/#on-chain).
+Han incorporado tesoros a los que nadie tiene autoridad para acceder sin la aprobación del grupo. Las decisiones se rigen por propuestas y votaciones para garantizar que todos dentro del sistema tengan voz, y que todo ocurra de manera transparente [en cadena](/glossary/#onchain).
 
 ## ¿Por qué necesitamos DAO? {#why-dao}
 
@@ -120,7 +120,7 @@ _Normalmente se utiliza para organizaciones más unidas, centradas en el ser hum
 
 ### Membresía basada en la reputación {#reputation-based-membership}
 
-La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tokens o en la participación, las DAO basadas en la reputación no transfieren la propiedad a los colaboradores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permiso, y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar reputación y tokens como recompensa a cambio de su contribución.
+La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tokens o en la participación, las DAO basadas en la reputación no transfieren la propiedad a los colaboradores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permiso, y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar reputación y tókenes como recompensa a cambio de su contribución.
 
 _Normalmente se utiliza para el desarrollo descentralizado y la gobernanza de protocolos y [dapps](/glossary/#dapp), pero también se adapta bien a un conjunto diverso de organizaciones como organizaciones benéficas, sindicatos, clubes de inversión, etc._
 

@@ -10,7 +10,7 @@ Si hay mucho tráfico en la red de Ethereum, puede ser costoso. Una solución pa
 
 **Requisitos previos:**
 
-- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Determine la red de capa 2 que quiere usar
@@ -52,15 +52,12 @@ Este proceso no debería tardar más de 10 minutos.
 Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles RPC de la red. Una vez que se añada la red y la transacción haya finalizado, deberían aparecer los tókenes en su cartera.
 <br />
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Preguntas más frecuentes
 

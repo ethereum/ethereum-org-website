@@ -5,7 +5,7 @@ lang: es
 ---
 
 Desde el lanzamiento de Uniswap en 2018, se han creado cientos de exchanges, o plataformas de intercambio, descentralizados en docenas de diferentes cadenas de bloques.
-Muchos de ellos han introducido nuevos elementos o han añadido su propio toque, pero la interfaz ha seguido siendo la misma en general.
+Muchos de ellos han introducido nuevos elementos o han añadido su propio toque, pero la interfaz ha seguido siendo la misma, por lo general.
 
 Una de las razones es la [Ley de Jakob](https://lawsofux.com/jakobs-law/):
 
@@ -206,7 +206,7 @@ El botón también puede ser **mapeado a la acción** a realizar. Por ejemplo, s
 
 ![Mensaje de error mostrado en el CTA principal](./17.png)
 
-### Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
+## Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
 
 Gracias a la ardua labor de múltiples protocolos, el diseño de DEX ha mejorado mucho. Sabemos qué información necesita el usuario, cómo debemos mostrarla y cómo hacer que el flujo sea lo más fluido posible.
 Esperamos que este artículo ofrezca una sólida visión general de los principios de la UX.

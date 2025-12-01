@@ -41,7 +41,7 @@ Además de la investigación de perspectivas futuras, se están investigando alg
 
 - [Introducción a prueba de participación](/developers/docs/consensus-mechanisms/pos/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Explicación de Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
+- [Explicación de Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Documento de Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Investigación reciente {#recent-research}
@@ -83,7 +83,7 @@ Se requiere un nodo de Ethereum para ejecutar dos piezas de software:
 1. un cliente de consenso para hacer un seguimiento de la cabeza de la cadena de bloques, bloqueos gossip y la gestión de la lógica de consenso;
 2. un cliente de ejecución para dar soporte a la máquina virtual de Ethereum y ejecutar transacciones y contratos inteligentes.
 
-Véase la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalle de los nodos y clientes, y para obtener una lista de todas las implementaciones de clientes. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/ethereum-forks/).
+Consulte la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalles sobre nodos y clientes y una lista de todas las implementaciones de clientes actuales. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/history/).
 
 ### Clientes de ejecución {#execution-clients}
 
@@ -111,7 +111,7 @@ Ahora hay varios protocolos de capa 2 que escalan Ethereum utilizando diferentes
 #### Investigación reciente {#recent-research-2}
 
 - [Ordenación justa de Arbitrum para secuenciadores](https://eprint.iacr.org/2021/1465)
-- [Capa 2 de ethresear.ch](https://ethresear.ch/c/layer-2/32)
+- [Capa 2 Ethresear.ch](https://ethresear.ch/c/layer-2/32)
 - [Hoja de ruta centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -190,7 +190,7 @@ Las billeteras de Ethereum pueden ser extensiones de navegador, aplicaciones de 
 
 - [Introducción a las billeteras](/wallets/)
 - [Introducción a la seguridad de las billeteras](/security/)
-- [Seguridad ethresear.ch](https://ethresear.ch/tag/security)
+- [Seguridad Ethresear.ch](https://ethresear.ch/tag/security)
 - [EIP-2938: Abstracción de cuentas](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337: Abstracción de cuentas](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -225,7 +225,7 @@ La investigación económica en Ethereum sigue ampliamente dos enfoques: validar
 
 #### Lectura de fondo {#background-reading-9}
 
-- [Robust Incentives Group](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://ethereum.github.io/rig/)
 - [Workshop de ETHconomics en Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Investigación reciente {#recent-research-9}
@@ -271,7 +271,7 @@ El staking líquido permite a los usuarios con menos de 32 ETH recibir rendimien
 
 #### Lectura de fondo {#background-reading-12}
 
-- [Ethresear.ch staking líquido](https://ethresear.ch/search?Q=liquid%20staking)
+- [Ethresear.ch staking líquido](https://ethresear.ch/search? Q=liquid%20staking)
 - [Lido: El camino hacia el staking en Ethereum sin confianza](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
 - [Rocket Pool: Introducción al protocolo de staking](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
@@ -279,7 +279,7 @@ El staking líquido permite a los usuarios con menos de 32 ETH recibir rendimien
 
 - [Gestión de retirada de fondos de Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 - [Credenciales de retirada](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [Los riesgos de los derivados del staking líquido](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Los riesgos de los derivados del staking líquido] (https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Pruebas {#testing}
 
@@ -308,7 +308,7 @@ Se necesitan más herramientas de análisis de datos y paneles que proporcionen 
 
 #### Investigación reciente {#recent-research-14}
 
-- [Análisis de datos del Robust Incentives Group](https://rig.ethereum.org/)
+- [Análisis de datos del Robust Incentives Group] (https://ethereum.github.io/rig/)
 
 ## Aplicaciones y herramientas {#apps-and-tooling}
 
@@ -345,11 +345,11 @@ Un caso de uso de alto impacto para Ethereum es la capacidad de organizarse de m
 
 Las herramientas para desarrolladores de Ethereum están evolucionando rápidamente. Hay mucha investigación y desarrollo activo por hacer en esta área general.
 
-#### Lectura de fondo {#lectura-de-fondo-17}
+#### Lectura de fondo {#lectura de fondo-17}
 
 - [Herramientas por lenguaje de programación](/developers/docs/programming-languages/)
 - [Marcos de desarrolladores](/developers/docs/frameworks/)
-- [Lista de herramientas de desarrollo de consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Lista de herramientas de desarrollo de consenso] (https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Estándares de tokens](/desarrolladores/documentos/estándares/tokens/)
 - [CryptoDevHub: herramientas de EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
@@ -359,13 +359,13 @@ Las herramientas para desarrolladores de Ethereum están evolucionando rápidame
 
 ### Oráculos {#oracles}
 
-Los oráculos importan datos fuera de la cadena a la cadena de bloques de manera descentralizada y sin permisos. Obtener estos datos dentro de la cadena permite que las dapps puedan reaccionar ante los fenómenos del mundo real, como las fluctuaciones de precios en los activos del mundo real, los eventos en las aplicaciones fuera de la cadena o incluso los cambios en el clima.
+Los oráculos importan datos de fuera de la cadena a la cadena de bloques de manera descentralizada y sin requerir permiso. Llevar estos datos a la cadena permite que las dapps puede reaccionar a fenómenos del mundo real como fluctuaciones de precios en activos del mundo real, eventos en aplicaciones externas a la cadena o incluso cambios en el tiempo.
 
 #### Lectura de fondo {#background-reading-18}
 
 - [Introducción a los oráculos](/developers/docs/oracles/)
 
-#### Investigación reciente {#recent-research-18}
+#### Búsqueda reciente {#recent-research-18}
 
 - [Encuesta de oráculos de cadenas de bloques](https://arxiv.org/pdf/2004.07140.pdf)
 - [Documento técnico de Chainlink](https://chain.link/whitepaper)
@@ -374,21 +374,21 @@ Los oráculos importan datos fuera de la cadena a la cadena de bloques de manera
 
 Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplicaciones individuales y no en el propio protocolo. Los hackers y los desarrolladores de aplicaciones están enfrascados en una carrera armamentística para desarrollar nuevos ataques y defensas. Esto significa que siempre es necesario realizar una investigación y un desarrollo importantes para mantener las aplicaciones a salvo de los hackeos.
 
-#### Lectura de fondo {#lectura-de-fondo-19}
+#### Lectura de fondo {#lectura de fondo-19}
 
-- [Informe de explotación de agujero de gusano](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
+- [Informe de explotación de agujero de gusano] (https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Investigación reciente {#recent-research-19}
 
-- [ethresear.ch Aplicaciones](https://ethresear.ch/c/applications/18)
+- [Applicaciones Ethresear.ch](https://ethresear.ch/c/applications/18)
 
 ### Pila de tecnología {#technology-stack}
 
 La descentralización de toda la pila de tecnología de Ethereum es un área de investigación importante. Actualmente, las dapps en Ethereum suelen tener algunos puntos de centralización, ya que dependen de herramientas o infraestructuras centralizadas.
 
-#### Lectura de fondo {#lectura-de-fondo-20}
+#### Lectura de fondo {#lectura de fondo-20}
 
 - [Pila de Ethereum](/developers/docs/ethereum-stack/)
 - [Coinbase: Introducción al Stack Web3](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)

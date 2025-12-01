@@ -32,11 +32,11 @@ Volviendo a nuestro ejemplo anterior, la única evidencia que usted necesita par
 
 Los pagos con tarjeta de crédito a menudo son visibles para varias partes, incluyendo el proveedor de pagos, los bancos y otras partes interesadas (por ejemplo, las autoridades gubernamentales). Si bien la vigilancia financiera tiene beneficios para identificar la actividad ilegal, también quebranta la privacidad de los ciudadanos ordinarios.
 
-Las criptomonedas tuvieron por objetivo proporcionar un medio para que los usuarios realizaran transacciones privadas entre pares. Pero la mayoría de las transacciones de criptomonedas son abiertamente visibles en las cadenas de bloques públicas. Las identidades de los usuarios a menudo son seudónimos y o bien deliberadamente vinculadas a las identidades del mundo real (por ejemplo, incluyendo direcciones de ETH en los perfiles de Twitter o GitHub) o pueden asociarse a identidades del mundo real utilizando análisis de datos dentro y fuera de la cadena básicos.
+Las criptomonedas tuvieron por objetivo proporcionar un medio para que los usuarios realizaran transacciones privadas entre pares. Pero la mayoría de las transacciones de criptomonedas son abiertamente visibles en las cadenas de bloques públicas. Los usuarios suelen camuflar su identidad mediante seudónimo, que vinculan ingeniosamiente a identidades del mundo real (como por ejemplo, incluyendo direcciones de ETH en los perfiles de Twitter o GitHub) o pueden asociarse a identidades del mundo real utilizando análisis de datos básicos dentro y fuera de la cadena.
 
 Existen "monedas de privacidad" específicas diseñadas para transacciones completamente anónimas. Las cadenas de bloques centradas en la privacidad, como Zcash y Monero, protegen los detalles de las transacciones, lo que incluye direcciones de remitente/receptor, tipo de activo, cantidad y cronograma de la transacción.
 
-Al insertar tecnología de conocimiento cero en el protocolo, las redes de [cadena de bloques](/glossary/#blockchain) centradas en la privacidad permiten a los [nodos](/glossary/#node) validar las transacciones sin necesidad de acceder a los datos de las transacciones.
+Al insertar tecnología de conocimiento cero en el protocolo, las redes de [cadena de bloques](/glossary/#blockchain) centradas en la privacidad permiten a los [nodos](/glossary/#node) validar las transacciones sin necesidad de acceder a los datos de las transacciones. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) es un ejemplo de diseño propuesto que permitirá transferencias de valor nativas y privadas en la cadena de bloques de Ethereum. Estas propuestas son, sin embargo, difíciles de aplicar debido a una conjunción de factores de seguridad, reglamentación y experiencia de usuario.
 
 **Las pruebas de conocimiento cero también se están aplicando a la anonimización de transacciones en las cadenas de bloques públicas**. Un ejemplo es Tornado Cash, un servicio descentralizado y no custodiado que permite a los usuarios realizar transacciones privadas en Ethereum. Tornado Cash utiliza pruebas de conocimiento cero para ocultar los detalles de la transacción y garantizar la privacidad financiera. Desafortunadamente, debido a que se trata de herramientas de privacidad "opt-in", se asocian con actividades ilícitas. Para superar esto, la privacidad eventualmente debe convertirse en la opción predeterminada en las cadenas de bloques públicas.
 
@@ -45,6 +45,12 @@ Al insertar tecnología de conocimiento cero en el protocolo, las redes de [cade
 Los sistemas actuales de gestión de identidad ponen en peligro la información personal. Las pruebas de conocimiento cero pueden ayudar a los individuos a validar la identidad al tiempo que protegen los detalles sensibles.
 
 Las pruebas de conocimiento cero son particularmente útiles en el contexto de la [identidad descentralizada](/decentralized-identity/). La identidad descentralizada (también descrita como "identidad autosoberana") da al individuo la capacidad de controlar el acceso a los identificadores personales. La demostración de su ciudadanía sin revelar su identificación fiscal o los datos de su pasaporte es un buen ejemplo de cómo la tecnología de conocimiento cero permite la identidad descentralizada.
+
+### Prueba de humanidad {#proof-of-humanity}
+
+Uno de los ejemplos más utilizados de pruebas de conocimiento cero en vigor es el [protocolo World ID](https://world.org/blog/world/world-id-faqs), que puede considerarse como «un pasaporte digital global en la era de la IA». Este protocolo permite a las personas demostrar que son individuos únicos sin revelar información personal. Para ello se utiliza un dispositivo denominado Orb, que escanea el iris de una persona y genera un código de iris. El código del iris se consulta y verifica para confirmar que la persona es un ser humano biológicamente único. Después de la verificación, un compromiso de identidad generado en el dispositivo del usuario (que no está vinculado o deriva de los datos biométricos) se añade a una lista segura en la cadena de bloques. A partir de entonces, cada vez que el usuario quiera demostrar que es un humano verificado –ya sea para iniciar sesión, votar o realizar otras acciones– podrá generar una prueba de conocimiento cero que confirme su pertenencia en la lista. La ventaja de utilizar una prueba de conocimiento cero es que solo se pone en evidencia una afirmación: esta persona es única. Todo lo demás sigue siendo privado.
+
+El World ID se basa en el [protocolo Semaphore](https://docs.semaphore.pse.dev/) desarrollado por el [equipo PSE](https://pse.dev/) de Ethereum Foundation. Semaphore está diseñado para ser una forma ligera pero potente de generar y verificar pruebas de conocimiento cero. Permite a los usuarios demostrar que forman parte de un grupo (en este caso, humanos verificados) sin mostrar qué miembro del grupo son. Semaphore también es muy flexible, ya que permite crear grupos basados en una amplia gama de criterios, como la verificación de la identidad, la participación en eventos o la propiedad de credenciales.
 
 ### Autenticación {#authentication}
 
@@ -58,9 +64,9 @@ El cómputo o cálculo verificable es otra aplicación de tecnología de conocim
 
 El cálculo verificable es **crítico para mejorar las velocidades de procesamiento en las cadenas de bloques** sin reducir la seguridad. Entender esto requiere conocer las diferencias en las soluciones propuestas para el escalamiento de Ethereum.
 
-Las [soluciones de escalado en cadena](/developers/docs/scaling/#on-chain-scaling), tal como el sharding o fragmentación, requieren gran modificación de la capa base de la cadena de bloques. Sin embargo, este enfoque es muy complejo, y los errores en la aplicación pueden socavar el modelo de seguridad de Ethereum.
+Las [soluciones de escalado en cadena](/developers/docs/scaling/#onchain-scaling), tal como el sharding o fragmentación, requieren gran modificación de la capa base de la cadena de bloques. Sin embargo, este enfoque es muy complejo, y los errores en la aplicación pueden socavar el modelo de seguridad de Ethereum.
 
-Las [soluciones de escalado fuera de la cadena](/developers/docs/scaling/#off-chain-scaling) no requieren rediseñar el protocolo central de Ethereum. En cambio, se basan en un modelo de cálculo externalizado para mejorar el rendimiento en la capa base de Ethereum.
+[Las soluciones de escalabilidad fuera de la cadena](/developers/docs/scaling/#offchain-scaling) no requieren rediseñar el protocolo central de Ethereum. En cambio, se basan en un modelo de cálculo externalizado para mejorar el rendimiento en la capa base de Ethereum.
 
 Así es como funciona esto en la práctica:
 
@@ -74,11 +80,11 @@ La cadena necesita una forma de validar las transacciones fuera de la cadena sin
 
 Aquí es donde entra en juego el cálculo verificable. Cuando un nodo ejecuta una transacción fuera de Ethereum, presenta una prueba de conocimiento cero para demostrar si la ejecución fuera de la cadena es correcta. Esta prueba (llamada [prueba de validez](/glossary/#validity-proof)) garantiza que una transacción sea válida, lo que permite que Ethereum aplique el resultado a su estado —sin necesidad de que alguien lo discuta—.
 
-Los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) y los [validiums](/developers/docs/scaling/validium/) son dos soluciones de escalado fuera de cadena que utilizan las pruebas de validez para proporcionar escalabilidad segura. Estos protocolos ejecutan miles de transacciones fuera de la cadena y presentan pruebas para su verificación en Ethereum. Estos resultados se pueden aplicar inmediatamente una vez verificada la prueba, lo que permite a Ethereum procesar más transacciones sin aumentar el cálculo en la capa base.
+[Los rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) y los [validiums](/developers/docs/scaling/validium/) son dos soluciones de escalabilidad fuera de cadena que utilizan las pruebas de validez para proporcionar escalabilidad segura. Estos protocolos ejecutan miles de transacciones fuera de la cadena y presentan pruebas para su verificación en Ethereum. Estos resultados se pueden aplicar inmediatamente una vez verificada la prueba, lo que permite a Ethereum procesar más transacciones sin aumentar el cálculo en la capa base.
 
 ### Reducir el soborno y el complot en la votación en cadena {#secure-blockchain-voting}
 
-Los esquemas de votación de la cadena de bloques tienen muchas características favorables: son totalmente auditables, son seguros contra los ataques, son resistentes a la censura y están libres de restricciones geográficas. Pero, aun así, no son inmunes al problema del **complot**.
+Los esquemas de votación de la cadena de bloques tienen muchas características favorables: son totalmente auditables, son seguros contra los ataques, son resistentes a la censura y están libres de restricciones geográficas. Y a pesar de ello, los planes de votación en cadena no son inmunes al problema de la **confabulación**.
 
 El complot, colusión o conspiración, que se define como la "coordinación para limitar la competencia abierta engañando, defraudando y estafando a los demás", puede adoptar la forma de un actor malicioso que influye en el voto ofreciendo sobornos. Por ejemplo, Alice podría recibir un soborno de Bob para elegir la `option B` en una votación, incluso si prefiere la `option A`.
 
@@ -86,9 +92,9 @@ El soborno y el complot limitan la efectividad de cualquier proceso que utilice 
 
 Por ejemplo, los [mecanismos de financiación cuadrática](https://www.radicalxchange.org/concepts/plural-funding/) dependen de las donaciones para medir la preferencia por ciertas opciones entre diferentes proyectos para bien público. Cada donación cuenta como un "voto" para un proyecto específico, y los proyectos que reciben más votos obtienen más fondos del fondo correspondiente.
 
-El uso de la votación en cadena hace que el financiamiento cuadrático sea susceptible a la colusión: las transacciones de la cadena de bloques son públicas, por lo que sobornadores puedan inspeccionar la actividad en cadena de un sobornado para ver cómo “votó”. De esta manera, la financiación cuadrática deja de ser un medio eficaz para asignar fondos en función de las preferencias agregadas de la comunidad.
+El uso de la votación en cadena hace que la financiación cuadrática sea susceptible a la confabulación: las transacciones de la cadena de bloques son públicas, por lo que sobornadores puedan inspeccionar la actividad en cadena de un sobornado para ver cómo «votó». De esta manera, la financiación cuadrática deja de ser un medio eficaz para asignar fondos en función de las preferencias agregadas de la comunidad.
 
-Afortunadamente, soluciones más recientes como MACI (Minimum Anti-Collusion Infrastructure) están usando las pruebas de conocimiento cero para hacer votaciones en cadena (por ejemplo, mecanismos de financiación cuadrática) resistentes al soborno y a la colusión. La MACI es un conjunto de contratos inteligentes y scripts que permiten a un administrador central (llamado "coordinador") sumar los votos y recontar resultados _sin_ revelar detalles sobre cómo votó cada individuo. Aun así, todavía es posible verificar que las votaciones se contabilizaron correctamente o confirmar que un individuo en particular participó en la ronda de votaciones.
+Por suerte, soluciones más recientes como MACI (Minimum Anti-Collusion Infrastructure) están usando las pruebas de conocimiento cero para hacer votaciones en cadena (por ejemplo, mecanismos de financiación cuadrática) firmes frente al soborno y a la confabulación. La MACI es un conjunto de contratos inteligentes y scripts que permiten a un administrador central (llamado "coordinador") sumar los votos y recontar resultados _sin_ revelar detalles sobre cómo votó cada individuo. Aun así, todavía es posible verificar que las votaciones se contabilizaron correctamente o confirmar que un individuo en particular participó en la ronda de votaciones.
 
 #### ¿Cómo funciona la MACI con las pruebas de conocimiento cero? {#how-maci-works-with-zk-proofs}
 
@@ -104,7 +110,7 @@ Por lo tanto, incluso sin compartir un desglose de los votos por usuario (como s
 - Alice envía secretamente una transacción cifrada para cambiar la clave pública asociada a su identidad.
 - Alice envía otro mensaje (cifrado) al contrato inteligente para votar la `option A` usando la nueva clave pública.
 - Alice muestra a Bob una transacción que da cuenta de que votó por la `opción B` (que no es válida, ya que la clave pública ya no está asociada con la identidad de Alice en el sistema).
-- Al procesar mensajes, el coordinador omite el voto de Alice por la `option B` y solo cuenta el voto de la `option A`. Por lo tanto, el intento de Bob de colusión con Alice y de manipular el voto en cadena fracasa.
+- Al procesar mensajes, el coordinador omite el voto de Alice por la `option B` y solo cuenta el voto de la `option A`. Por lo tanto, un intento cualquiera de confabulación con Alice y de manipular el voto en cadena fracasaría.
 
 Usar la MACI _requiere_ confiar en que el coordinador no complote con los sobornadores o intente sobornar a los votantes. El coordinador puede descifrar los mensajes de usuario (necesarios para crear la prueba) y así verificar con precisión cómo votó cada persona.
 
@@ -211,4 +217,4 @@ ZK-STARK se considera inmune a la amenaza de la computación cuántica, ya que s
 - [STARK de conocimiento cero: crear confianza verificable incluso contra ordenadores cuánticos](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Una introducción aproximada a cómo son posibles los zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html), _Vitalik Buterin_
 - [Por qué las pruebas de conocimiento cero (ZKP) cambian las reglas del juego para la identidad autosoberana](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-
+- [EIP-7503 explicada: cómo habilitar transferencias privadas en Ethereum con pruebas de conocimiento cero](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_

@@ -72,13 +72,19 @@ El proceso tradicional de verificar contratos puede ser complejo. Es por eso que
 
 Aunque es mayormente conocido como un [explorador de cadena de bloques de Ethereum](/developers/docs/data-and-analytics/block-explorers/), Etherscan también ofrece un [servicio de verificación de código fuente](https://etherscan.io/verifyContract) para desarrolladores y usuarios de contratos inteligentes.
 
-Etherscan le permite volver a compilar el bytecode del contrato a partir de la carga útil de datos original (código fuente, dirección de la biblioteca, configuración del compilador, dirección del contrato, etc). Si el bytecode recompilado está asociado con el bytecode (y a los parámetros constructor) del contrato en la cadena, [el contrato está verificado](https://info.etherscan.com/types-of-contract-verification/).
+Etherscan le permite volver a compilar el bytecode del contrato a partir de la carga útil de datos original (código fuente, dirección de la biblioteca, configuración del compilador, dirección del contrato, etc). Si el código intermedio recopilado está asociado con el código intermedio (y los parámetros constructores) del contrato en cadena, [el contrato se verifica](https://info.etherscan.com/types-of-contract-verification/).
 
 Una vez verificado, el código fuente de su contrato recibe una etiqueta de "Verificado" y se publica en Etherscan para que otros puedan auditarlo. También se agrega a la sección de [Contratos verificados](https://etherscan.io/contractsVerified/), que es un repositorio de contratos inteligentes con código fuente verificado.
 
-Etherscan es la herramienta más utilizada para verificar contratos. Sin embargo, la verificación de contratos de Etherscan tiene una desventaja: no compara el **hash de metadatos** del bytecode en la cadena con el bytecode recompilado. Por lo tanto, las coincidencias en Etherscan son coincidencias parciales.
+Etherscan es la herramienta más utilizada para verificar contratos. Sin embargo, la verificación de contratos de Etherscan tiene una desventaja: no compara el **hash de metadatos** del código intermedio en cadena y el código intermedio recopilado. Por lo tanto, las coincidencias en Etherscan son coincidencias parciales.
 
 [Más información sobre la verificación de contratos en Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
+
+### Blockscout {#blockscout}
+
+[Blockscout](https://blockscout.com/) es un explorador de cadenas de bloques de código abierto que también proporciona un [servicio de verificación de contratos](https://eth.blockscout.com/contract-verification) para desarrolladores y usuarios de contratos inteligentes. Como alternativa de código abierto, Blockscout ofrece transparencia en relación a cómo se realiza la verificación y permite contribuciones de la comunidad para mejorar el proceso de verificación.
+
+De forma similar a otros servicios de verificación, Blockscout le permite verificar el código fuente de su contrato recompilando el bytecode y comparándolo con el contrato implementado. Una vez verificado, su contrato recibe el estado de verificación y el código fuente pasa a estar disponible públicamente para su auditoría y para interactuar con él. Los contratos verificados también son listados en el [repositorio de contratos verificados](https://eth.blockscout.com/verified-contracts) de Blockscout para que sea fácil consultarlos y encontrarlos.
 
 ### Sourcify {#sourcify}
 

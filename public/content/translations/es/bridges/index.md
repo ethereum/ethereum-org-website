@@ -24,7 +24,7 @@ Pero, ¿qué puede hacer si quiere realizar un intercambio similar para usar una
 
 Todas las cadenas de bloques tienen sus limitaciones. Para que Ethereum escale y siga el ritmo de la demanda, ha requerido el uso de [rollups](/glossary/#rollups). Alternativamente, los L1 como Solana y Avalanche están diseñados de forma diferente para permitir una mayor velocidad en las transacciones, pero a costa de la descentralización.
 
-Sin embargo, todas las cadenas de bloques se desarrollan en un entorno aislado y tienen diferentes reglas y mecanismos de [consenso](/glossary/#consensus). Esto significa que no pueden comunicarse de forma nativa, y los tokens no pueden moverse libremente entre cadenas de bloques.
+Sin embargo, todas las cadenas de bloques se desarrollan en entornos aislados y tienen diferentes reglas y mecanismos de [consenso](/glossary/#consensus). Esto significa que no pueden comunicarse de forma nativa, y los tokens no pueden moverse libremente entre cadenas de bloques.
 
 Los puentes existen para conectar cadenas de bloques, permitiendo la transferencia de información y tokens entre ellas.
 
@@ -49,7 +49,7 @@ Digamos que tiene ETH en la Red principal de Ethereum y quiere comisiones de tra
 
 ### DApps en otras cadenas de bloques {#dapps-other-chains}
 
-Si ha estado usando Aave en la Red principal de Ethereum para prestar USDT, pero la tasa de interés para prestarlos usando Aave en Polygon es más alta.
+Si ha estado utilizando Aave en la Red principal de Ethereum para suministrar USDT, pero la tasa de interés que puede recibir por suministrar USDT usando Aave en Polygon es mayor.
 
 ### Explorar ecosistemas de cadenas de bloques {#explore-ecosystems}
 
@@ -59,18 +59,13 @@ Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L
 
 Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red principal de Ethereum. Para obtener exposición a BTC en Ethereum, puede comprar Wrapped Bitcoin (WBTC). Sin embargo, WBTC es un token [ERC-20](/glossary/#erc-20) nativo de la red de Ethereum, lo que significa que es una versión de Ethereum de Bitcoin y no el activo original en la cadena de bloques de Bitcoin. Para tener BTC nativo, usted tendría que trasladar sus activos de Ethereum a Bitcoin usando un puente. Esto trasladará entre redes su WBTC y lo convertirá en BTC nativo. De forma alternativa, podría tener BTC y querer usarlo en protocolos [DeFi](/glossary/#defi) de Ethereum. Esto requeriría un puente pero al revés, desde el BTC hasta WBTC, que luego puede ser utilizado como un activo en Ethereum.
 
-<Alert variant="update">
-<AlertEmoji text=":bulb:"/>
-<AlertContent>
-<AlertDescription>
-  También puede hacer todo lo anterior usando un [exchange centralizado](/get-eth/). Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
-</AlertDescription>
-</AlertContent>
-</Alert>
+<InfoBanner shouldCenter emoji=":bulb:">
+  También puede hacer todo lo anterior usando una [plataforma de intercambio centralizada](/get-eth). Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
+</InfoBanner>
 
 <Divider />
 
-## Tipos de puente {#types-of-bridge}
+## Tipos de puentes {#types-of-bridge}
 
 Los puentes tienen muchos tipos de diseños y complejidades. Generalmente encontramos dos categorías: puentes de confianza (trusted) y puentes sin confianza o que no la necesitan (trustless).
 
@@ -104,12 +99,12 @@ Muchas soluciones de puente adoptan modelos entre estos dos extremos con diferen
 
 Usar puentes le permite mover sus activos a través de diferentes cadenas de bloques. He aquí algunos recursos que le pueden ayudar a encontrar y usar puentes:
 
-- **[Resumen de los puentes L2BEAT ](https://l2beat.com/bridges/summary) & [Análisis de riesgo de puentes L2BEAT](https://l2beat.com/bridges/summary)**: Un resumen que comprende varios puentes, incluyendo detalles sobre la cuota de mercado, el tipo de puente y las cadenas de destino. L2BEAT también tiene análisis de riesgo de puentes, ayudando a los usuarios a tomar decisiones informadas a lo largo del proceso de elección de un puente.
+- **[Resumen de los puentes L2BEAT ](https://l2beat.com/bridges/summary) & [Análisis de riesgo de puentes L2BEAT](https://l2beat.com/bridges/risk)**: Un resumen que comprende varios puentes, incluyendo detalles sobre la cuota de mercado, el tipo de puente y las cadenas de destino. L2BEAT también tiene análisis de riesgo de puentes, ayudando a los usuarios a tomar decisiones informadas a lo largo del proceso de elección de un puente.
 - **[Resumen de los puentes DefiLlama](https://defillama.com/bridges/Ethereum)**: Un resumen de los volúmenes de puentes a lo largo de la red de Ethereum.
 
 <Divider />
 
-## Riesgo al utilizar puentes {#bridge-risk}
+## Riesgos de utilizar puentes {#bridge-risk}
 
 Los puentes se encuentran en las primeras etapas de desarrollo. Es probable que todavía no se haya descubierto el diseño óptimo de estos. Interactuar con cualquier tipo de puente conlleva riesgos:
 
@@ -136,7 +131,9 @@ Los puentes son cruciales para incorporar a los usuarios a las L2 de Ethereum e 
 <Divider />
 
 ## Para seguir leyendo {#further-reading}
+- [EIP-5164: ejecución entre cadenas](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658): _18 de junio de 2022, Brendan Asselstine_
+- [Modelo de riesgos L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31): _5 de julio de 2022, Bartek Kiepuszewski_
+- ["Por qué el futuro será multicadena, pero no entre cadenas"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/): _8 de enero de 2022, Vitalik Buterin_
+- [Aprovechar la seguridad compartida para una interoperabilidad segura entre cadenas: comités estatales de Lagrange y más allá](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability): _12 de junio de 2024, Emmanuel Awosika_
+- [La situación de las soluciones de interoperabilidad en los rollup](https://research.2077.xyz/the-state-of-rollup-interoperability): _20 de junio de 2024, Alex Hook_
 
-- [EIP-5164: Ejecución entre cadenas (cross-chain)](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junio de 2022 - Brendan Asselstine_
-- [Marco de riesgos L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julio de 2022 - Bartek Kiepuszewski_
-- ["Por qué el futuro será multicadena, pero no entre cadenas"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 de enero de 2022 - Vitalik Buterin_

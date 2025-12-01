@@ -6,6 +6,11 @@ lang: es
 
 # Wrapped Ether (WETH) {#intro-to-weth}
 
+<Alert variant="update">
+<Emoji text="🎁" />
+<div>Conecte su cartera para agrupar o desagrupar ETH en cualquier cadena en [WrapETH.com](https://www.wrapeth.com/)</div>
+</Alert>
+
 Ether (ETH) es la moneda principal de Ethereum. Se utiliza para varios propósitos como staking, como moneda, y pagar comisiones de gas para las transacciones. **WETH es efectivamente una forma actualizada de ETH con alguna funcionalidad adicional requerida por muchas aplicaciones y [tokens ERC-20](/glossary/#erc-20)**, que son otros tipos de activos digitales en Ethereum. Para trabajar con estos tokens, ETH debe seguir las mismas reglas que ellos, conocidas como el estándar ERC-20.
 
 Para cerrar esta brecha, se creó Wrapped Ether (WETH). **Wrapped ETH es un contrato inteligente que le permite depositar cualquier cantidad de ETH en el contrato y recibir la misma cantidad en WETH minteado** que cumple con el estándar de tokens ERC-20. WETH es una representación de ETH que le permite interactuar con él como un token ERC-20, no como el activo nativo ETH. Aún necesitará ETH nativo para pagar las tarifas de gas, así que asegúrese de ahorrar un poco al depositar.
@@ -61,5 +66,5 @@ Además de la [implementación canónica de WETH](https://etherscan.io/token/0xc
 ## Lecturas adicionales {#further-reading}
 
 - [¿Qué es WETH?](https://weth.tkn.eth.limo/)
-- [Información del token WETH en Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [Información del token WETH en Blockscout](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Verificación formal de WETH](https://zellic.io/blog/formal-verification-weth)

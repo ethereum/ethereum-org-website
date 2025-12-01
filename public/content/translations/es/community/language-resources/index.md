@@ -56,7 +56,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 **Ecosistema Ethereum**
 
-- [ETHPlanet](https://www.ethplanet.org/): hackathons en línea y en persona, ofreciendo entrenamiento a estudiantes universitarios.
+- [ETHPlanet](https://www.ethplanet.org/): hackatones en línea y en persona, ofreciendo entrenamiento a estudiantes universitarios.
 - [PrimitivesLane](https://www.primitiveslane.org/): un grupo de investigación sin fines de lucro, enfocado en la tecnología de cadena de bloques.
 - [Ethereum Translation Community CN](https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171): una comunidad dedicada a traducir contenido educativo de Ethereum.
 

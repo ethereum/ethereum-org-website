@@ -8,6 +8,8 @@ lang: es
 
 ethereum.org es un recurso público de código abierto para la comunidad Ethereum al que cualquiera puede contribuir. Tenemos un pequeño equipo central dedicado a mantener y desarrollar el sitio con contribuciones de miles de miembros de la comunidad en todo el mundo.
 
+**Ningún miembro de ethereum.org se pondrá en contacto con usted. No responda.**
+
 ## Un apunte sobre los nombres {#a-note-on-names}
 
 Es común que la gente confunda los nombres dentro del panorama de Ethereum, lo que puede producir modelos mentales deficientes sobre cómo funciona Ethereum. He aquí una explicación rápida para aclarar las cosas:
@@ -88,9 +90,9 @@ Ethereum es algo mucho más grande: incluye una comunidad, una tecnología que l
 
 ## Hoja de ruta del producto {#roadmap}
 
-Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaboración comunitaria, el equipo central de ethereum.org publica una descripción general de nuestros objetivos de hoja de ruta trimestral.
+Para hacer nuestro trabajo más accesible y fomentar una mayor colaboración entre la comunidad, el equipo principal de ethereum.org publica una descripción general de nuestras metas de la hoja de ruta del [ciclo shape up](https://www.productplan.com/glossary/shape-up-method/).
 
-[Vea nuestra hoja de ruta de productos del tercer trimestre de 2024](https://github.com/ethereum/ethereum-org-website/issues/13399)
+[Vea nuestra hoja de ruta de producto para el ciclo 1 de 2025](https://github.com/ethereum/ethereum-org-website/issues/14726)
 
 **¿Qué le parece? ** Siempre apreciamos los comentarios sobre nuestra hoja de ruta. Si hay algo en lo que cree que deberíamos trabajar, ¡por favor, díganoslo! Damos la bienvenida a ideas y relaciones públicas de cualquier persona de la comunidad.
 

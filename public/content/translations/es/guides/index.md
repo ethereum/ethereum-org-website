@@ -18,7 +18,7 @@ lang: es
 
 1. [Cómo revocar el acceso al contrato inteligente a sus fondos criptográficos](/guides/how-to-revoke-token-access/): si de repente ve una transacción en su cartera que no inició, esta guía le enseñará a evitar que eso suceda de nuevo.
 
-2. [Cómo identificar fichas de estafa](/guides/how-to-id-scam-tokens/): qué son las fichas de estafa, cómo hacen para parecer legítimas y cómo identificarlas para protegerse y evitar estafas.
+2. [Cómo identificar los tókenes estafa](/guides/how-to-id-scam-tokens/): ¿Qué son los tókenes estafa? ¿Cómo hacen que parezcan legítimos y cómo puede identificarlos para protegerse y evitar caer en estafas?
 
 ## Uso de Ethereum
 

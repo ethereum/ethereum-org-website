@@ -1,6 +1,6 @@
 ---
 title: Participación como servicio
-description: Una visión general de cómo empezar con la participación agrupada de ETH
+description: Conozca más a fondo la participación como servicio
 lang: es
 template: staking
 emoji: ":money_with_wings:"
@@ -74,7 +74,7 @@ Para habilitar la retirada, es necesario actualizar las credenciales\*. Este pro
 </ExpandableCard>
 
 <ExpandableCard title="¿Cuándo puedo retirar?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-En abril de 2023, se habilitó la retirada de participaciones en la actualización Shanghai/Capella. Los participantes deben proporcionar una dirección de retirada (si no se proporciona en el depósito inicial), y los pagos de recompensas se distribuirán automáticamente de forma periódica cada pocos días.
+Los participantes deben proporcionar una dirección de retirada (si no se proporciona en el depósito inicial), y los pagos de recompensas se distribuirán automáticamente de forma periódica cada pocos días.
 
 Los validadores también pueden salir como validadores, lo que desbloqueará su saldo restante en ETH para retirarlo. Las cuentas que hayan proporcionado una dirección de retirada de ejecución y hayan completado el proceso de salida recibirán su saldo completo a la dirección de retirada proporcionada durante el próximo barrido del validador.
 
@@ -86,7 +86,7 @@ Al usar un proveedor SaaS, está confiando la operación de su nodo a otra perso
 
 Al finalizar el proceso de recorte y salida, estos fondos se transferirán a la dirección de retirada asignada al validador. Para habilitar la retirada, es preciso proporcionar una dirección. Puede haberse proporcionado en un depósito inicial. De lo contrario, se tendrán que usar las claves de retirada del validador para firmar un mensaje declarando una dirección de retirada. Si no se ha proporcionado ninguna dirección de retirada, los fondos permanecerán bloqueados hasta que se proporcione.
 
-Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener control total de la configuración de su validador, [infórmese sobre cómo apostar sus ETH en solitario](/staking/solo/).
+Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener el control total de la configuración de su validador, [entérese de cómo puede participar desde casa con sus ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Para profundizar sobre el tema {#further-reading}

@@ -86,9 +86,9 @@ Obtenga más información sobre la [componibilidad de los contratos inteligentes
 
 ## Limitaciones {#limitations}
 
-Los contratos inteligentes por sí solos no pueden obtener información sobre eventos del "mundo real" porque no pueden recuperar datos de fuentes fuera de la cadena. Esto significa que no pueden responder a los eventos en el mundo real. Esto es por defecto. Depender de información externa puede poner en peligro el consenso, pieza clave para la seguridad y la descentralización.
+Los contratos inteligentes no pueden obtener por sí solos información sobre eventos del «mundo real», porque no pueden obtener datos de fuentes externas a la cadena. Esto significa que no pueden responder a los eventos en el mundo real. Esto es por defecto. Depender de información externa puede poner en peligro el consenso, pieza clave para la seguridad y la descentralización.
 
-Sin embargo, es importante que las aplicaciones de cadena de bloques puedan utilizar datos fuera de la cadena. La solución son los [oráculos](/developers/docs/oracles/), que son herramientas que procesan datos fuera de la cadena y los ponen a disposición de los contratos inteligentes.
+Sin embargo, es importante que las aplicaciones de cadena de bloques puedan usar datos externos a la cadena. La solución a esto son los [oráculos](/developers/docs/oracles/), es decir, herramientas que toman datos fuera de cadena y los ponen a disposición de contratos inteligentes.
 
 Otra limitación de los contratos inteligentes es el tamaño máximo de los contratos. Un contrato inteligente puede tener un máximo de 24 KB; superar esta cantidad supone quedarse sin gas. Para evitarlo puede usarse [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 

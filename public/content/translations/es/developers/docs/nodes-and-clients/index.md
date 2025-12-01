@@ -37,7 +37,7 @@ Lo que estas implementaciones de clientes tienen en común es que todas siguen u
 - En su origen, el [Protocolo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Especificaciones de ejecución](https://github.com/ethereum/execution-specs/)
 - [Especificaciones de consenso](https://github.com/ethereum/consensus-specs)
-- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/ethereum-forks/)
+- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/history/)
 
 ### Nodos de rastreamiento en la red {#network-overview}
 
@@ -46,6 +46,8 @@ Múltiples rastreadores ofrecen una visión general en tiempo real de los nodos 
 - [Mapa de nodos](https://etherscan.io/nodetracker) por Etherscan
 - [Nodos de Ether](https://ethernodes.org/) por Bitfly
 - [Nodewatch](https://www.nodewatch.io/) de Chainsafe, nodos de consenso rastreados
+- [Monitoreth](https://monitoreth.io/): de MigaLabs, una herramienta de control de redes distribuidas
+- [Informes semanales de salud de la red](https://probelab.io): por ProbeLab, usando el [Rastreador de nebulosa](https://github.com/dennis-tra/nebula) y otras herramientas
 
 ## Tipos de nodos {#node-types}
 
@@ -64,7 +66,7 @@ Los nodos completos hacen una validación bloque a bloque de la cadena de bloque
 
 Los nodos de archivo son nodos completos que verifican cada bloque de genesis y nunca eliminan ninguno de los datos descargados.
 
-- Almacena todo lo que se guarda en el nodo completo y construye un archivo de estados históricos. Esto es necesario si quiere consultar algún elemento como el saldo de una cuenta en el bloque número 4.000.000, o simplemente probar sus propias transacciones sin minarlas usando el seguimiento.
+- Almacena todo lo que se guarda en el nodo completo y construye un archivo de estados históricos. Es necesario si desea consultar algo como un saldo de cuenta en el bloque #4.000.000, o simplemente y de manera fiable su propio conjunto de transacciones sin validarlas utilizando el rastreo.
 - Estos datos representan unidades de terabytes, lo que hace que los nodos de almacenamiento sean menos atractivos para el usuario medio, pero que pueden ser útiles para servicios como los exploradores de bloques, proveedores de carteras y análisis de cadena.
 
 Sincronizar clientes en algún modo distinto al almacenamiento (archivo) ocasionará que los datos de la cadena de bloques resultante sean truncados. Esto significa que no hay un archivo de todo el historial de estados, pero el nodo completo es capaz de construirlo bajo demanda.
@@ -73,7 +75,7 @@ Más información sobre [Nodos de almacenamiento](/developers/docs/nodes-and-cli
 
 ### Nodo ligero {#light-node}
 
-En lugar de descargar cada bloque, los nodos ligeros solo descargan los encabezados de los bloques. Estos encabezados contienen información resumida sobre el contenido de los bloques. Cualquier otra información que requiera el nodo ligero se solicita a un nodo completo. El nodo ligero puede entonces verificar independientemente los datos que recibe frente a raíces de estado en los encabezados de bloque. Los nodos ligeros permiten a los usuarios participar en la red Ethereum sin el potente hardware o amplitud de achura de banda necesarios para ejecutar nodos completos. Con el tiempo, los nodos ligeros podrían ejecutarse en teléfonos móviles o dispositivos pequeños. Los nodos ligeros no participan en el consenso (es decir, no pueden ser mineros/validadores), pero sí pueden acceder a la cadena de bloques de Ethereum con las mismas garantías de funcionalidad y seguridad que un nodo completo.
+En lugar de descargar cada bloque, los nodos ligeros solo descargan los encabezados de los bloques. Estos encabezados contienen información resumida sobre el contenido de los bloques. Cualquier otra información que requiera el nodo ligero se solicita a un nodo completo. El nodo ligero puede entonces verificar independientemente los datos que recibe frente a raíces de estado en los encabezados de bloque. Los nodos ligeros permiten a los usuarios participar en la red Ethereum sin el potente hardware o amplitud de achura de banda necesarios para ejecutar nodos completos. Con el tiempo, los nodos ligeros podrían ejecutarse en teléfonos móviles o dispositivos pequeños. Los nodos ligeros no participan en el consenso (es decir, no pueden ser validadores), pero sí pueden acceder a la cadena de bloques Ethereum con la misma funcionalidad y garantías de seguridad que un nodo completo.
 
 Los clientes ligeros son un área de desarrollo activo para Ethereum y esperamos ver pronto nuevos clientes ligeros para la capa de consenso y la capa de ejecución. También hay rutas potenciales para proporcionar datos ligeros del cliente a través de la [red de intercambio de información (o Gossip)](https://www.ethportal.net/). Lo que supone una ventaja, ya que la red de intercambio de información podría soportar una red de nodos ligeros sin necesidad de nodos completos para servir solicitudes.
 
@@ -192,11 +194,12 @@ Existen múltiples clientes de consenso (antes conocidos como clientes Eth2) que
 
 | Cliente                                                       | Idioma     | Sistemas operativos   | Redes                                                     |
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Cadena de baliza, Holesky, Pyrmont, Sepolia y más         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Cadena de baliza, Holesky, Sepolia y más                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Cadena de baliza, Holesky, Sepolia y más                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Holesky, Pyrmont, Sepolia y más |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Cadena de baliza, Gnosis, Holesky, Sepolia y más          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Cadena de baliza, Holesky, Sepolia y más                  |
 
 ### Lighthouse {#lighthouse}
 
@@ -220,7 +223,7 @@ Encontrará más información en el [manual de Nimbus](https://nimbus.guide/)
 
 Prysm es un cliente de consenso de código abierto completamente escrito en Go bajo la licencia GPL-3.0. Cuenta con una interfaz de usuario opcional de la aplicación web y prioriza la experiencia del usuario, la documentación y la configurabilidad tanto para usuarios interesados como institucionales.
 
-Visite [documentos de Prysm](https://prysm.offchainlabs.com/docs/) para obtener más información.
+Visite [documentos de Prysm](https://docs.prylabs.network/docs/getting-started/) para obtener más información.
 
 ### Teku {#teku}
 
@@ -229,6 +232,12 @@ Teku es uno de los clientes originales desde los orígenes de la cadena de baliz
 Teku ofrece opciones de despliegue muy flexibles. El nodo de baliza y el cliente validador pueden ejecutarse juntos como un solo proceso, lo que es extremadamente conveniente para los interesados en la participación en solitario, o los nodos pueden ejecutarse por separado para sofisticadas operaciones de participación. Además, Teku es completamente interoperable con [Web3Signer](https://github.com/ConsenSys/web3signer/) para firmar la seguridad clave y protección de recortes.
 
 Está escrito en Java y dispone de licencia Apache 2.0. Es desarrollado por el equipo de Protocols de ConsenSys que también es responsable de Besu y Web3Signer. Obtenga más información en el [manual de Teku](https://docs.teku.consensys.net/en/latest/).
+
+### Grandine {#grandine}
+
+Grandine es una implementación de cliente de consenso, escrita en Rust bajo la licencia GPL-3.0. La mantiene el equipo de Grandine y es una implementación rápida, de alto rendimiento y ligera. Grandine ofrece opciones para una amplia gama de participantes desde participación individual ejecutándose en dispositivos tales como Raspberry Pi a operaciones de participación en gran escala con ejecuciones de decenas de miles de validadores.
+
+Puede encontrar documentación en el [Manual de Grandine](https://docs.grandine.io/)
 
 ## Modos de sincronización {#sync-modes}
 

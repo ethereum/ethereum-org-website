@@ -2,7 +2,7 @@
   "page-community-card-1-title": "Únase a una comunidad en línea",
   "page-community-card-1-description": "Encuentre a su tribu y participe en comunidad con otros entusiastas de Ethereum.",
   "page-community-card-2-title": "Eventos de Ethereum",
-  "page-community-card-2-description": "Encuentre y participe en una conferencia, hackathon o encuentro de Ethereum.",
+  "page-community-card-2-description": "Encuentre y participe en una conferencia, hackatón o encuentro de Ethereum.",
   "page-community-card-3-title": "Contribuir con un proyecto",
   "page-community-card-3-description": "Descubra en esta lista todas las formas en las que puede involucrarse y contribuir, según sus habilidades y experiencia profesional.",
   "page-community-card-4-title": "Buscar subvenciones",
@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "Pruebe Ethereum por sí mismo",
   "page-community-upcoming-events-no-events": "No sabemos de ningún evento próximo. ¿Sabe usted de alguno?",
   "page-community-upcoming-events-load-more": "Cargar más",
+  "page-community-upcoming-events-view-event": "Ver el evento",
   "page-community-why-get-involved-title": "¿Por qué participar?",
   "page-community-why-get-involved-card-1-title": "Encuentre su tribu",
   "page-community-why-get-involved-card-1-description": "Hay una tribu para todos. Encuentre y conéctese con personas afines para debatir, reflexionar y celebrar Ethereum juntos.",
   "page-community-why-get-involved-card-2-title": "Gánese su porvenir",
   "page-community-why-get-involved-card-2-description": "Todo el mundo tiene facturas que pagar. Ethereum le permite encontrar un trabajo bien remunerado y cobrar justamente por hacerlo.",
   "page-community-why-get-involved-card-3-title": "Marque la diferencia",
-  "page-community-why-get-involved-card-3-description": "Involucrarse en Ethereum le permite participar proactivamente en una tecnología que está teniendo un efecto positivo en millones de personas."
+  "page-community-why-get-involved-card-3-description": "Involucrarse en Ethereum le permite participar proactivamente en una tecnología que está teniendo un efecto positivo en millones de personas.",
+  "page-index-internet-image-alt": "Ilustración de un ordenador futurista, propulsado por cristales de Ethereum.",
+  "page-index-get-started-image-alt": "Imagen de una persona trabajando en un ordenador.",
+  "page-index-get-started-wallet-image-alt": "Ilustración de un robot con una caja fuerte como cuerpo, que representa una cartera de Ethereum.",
+  "page-index-get-started-eth-image-alt": "Imagen de un grupo de personas maravilladas ante un glifo asombroso de ether (ETH).",
+  "page-index-get-started-dapps-image-alt": "Ilustración de un doge utilizando un ordenador.",
+  "page-index-get-started-devs-image-alt": "Una Ilustración de una mano creando un logotipo de ETH hecho con bloques de LEGO."
 }

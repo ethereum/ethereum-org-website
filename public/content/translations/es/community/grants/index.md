@@ -15,32 +15,55 @@ Esta lista ha sido creada por nuestra comunidad. Si falta algo o encuentra infor
 Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una amplia gama de proyectos. Incluyen soluciones de escalabilidad, construcción de comunidad, seguridad y privacidad, entre otras cosas. Las subvenciones no son específicas de ninguna plataforma Ethereum en particular y sirven de acertado punto de partida en caso de duda.
 
 - [Programa de apoyo al ecosistema EF](https://esp.ethereum.foundation): _ financia proyectos de código abierto que beneficien a Ethereum, con enfoque particular en herramientas universales, infraestructura, investigación y bienes públicos_
-- [Moloch DAO](https://www.molochdao.com/): _privacidad, escalabilidad en capa 2, seguridad del cliente y más_.
-- [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
 - [Becas académicas](https://esp.ethereum.foundation/academic-grants): _becas para apoyar el trabajo académico relacionado con Ethereum_
+
+## Agregadores y plataformas de listas de subvenciones {#grant-list-aggregators}
+
+Estos recursos compilan y organizan varias oportunidades de subvenciones en todo el ecosistema de Ethereum, haciendo que sea más fácil descubrir oportunidades que encajen con las necesidades de su proyecto. Los hemos organizado por perfiles para ayudarle a encontrar a la primera los recursos más relevantes, según sus necesidades de financiación particulares.
+
+### Para todos los solicitantes de subvenciones: Directorios completos {#comprehensive-directories}
+
+Estas plataformas generales ofrecen una amplia cobertura de las subvenciones en todo el espacio de la Web3 y son útiles puntos de partida para cualquiera que busque financiación:
+
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks ha elaborado un directorio exhaustivo de todas las subvenciones, solicitudes de propuestas (o RFP) y recompensas por detección de errores_
+- [Subvenciones de cadena de bloques](https://www.blockchaingrants.org/): _directorio de subvenciones de cadena de bloques y criptográficas_
 
-## Para proyectos concretos {#project-specific}
+### Para desarrolladores y constructores {#for-developers-and-builders}
 
-Estos proyectos han creado sus propias subvenciones para proyectos con fines de desarrollo y experimentación de su propia tecnología.
+- [Visor de programas de subvenciones](https://airtable.com/shr86elKgWTSCP4AY): _base de datos pública de Airtable de programas de subvenciones_
+- [Hoja de cálculo de subvenciones Web3](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0): _hoja de cálculo de Google con opciones a subvenciones Web3_
+- [Subvenciones de Arbitrum](https://arbitrum.foundation/grants): Arbitrum DAO y [Arbitrum Foundation](https://arbitrum.foundation/)
+- [Programa de subvenciones aztecas](https://aztec.network/grants): lenguaje Noir y la red [azteca](https://aztec.network/)
 
-- [Programa de Subvenciones Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) subvenciones DAO_
-- [Balancer](https://grants.balancer.community/): fondo de ecosistemas _[Balancer](https://balancer.fi/)_
-- [Programa de subvenciones de Chainlink](https://chain.link/community/grants): _subvenciones para la comunidad[Chainlink](https://chain.link/)_
-- [Programa de subvenciones Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) Metaverso DAO_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego): _[ecosistema financiero](https://lido.fi/) Lido_
-- [Programa MetaMask](https://metamaskgrants.org/): _[MetaMask](https://metamask.io/) subvenciones lideradas por empleados DAO_
-- [Programa de subvenciones para la red SKALE](https://skale.space/developers#grants): _[ecosistema](https://skale.space/) de la red SKALE_
-- [Programa de Subvenciones de la Swarm Foundation](https://my.ethswarm.org): ecosistema de la _[Swarm Foundation](https://www.ethswarm.org/)_
-- [The Graph](https://thegraph.com/ecosystem/grants/): ecosistema de _[The Graph](https://thegraph.com/)_
-- [Programa de donaciones de Uniswap](https://www.uniswapfoundation.org/approach): comunidad de _[Uniswap](https://uniswap.org/)_
+### Para proyectos DeFi y aplicaciones financieras {#for-defi-projects}
 
-## Financiamiento cuadrático {#quadratic-funding}
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants): _directorio del programa de subvenciones de DeFi Llama_
+- [Subvenciones AlphaGrowth](https://alphagrowth.io/crypto-web3-grants-list): _lista completa de subvenciones criptográficas y Web3_
 
-Las raíces de código abierto de Ethereum han propiciado la aparición de un nuevo modelo de financiamiento muy interesante: el financiamiento cuadrático. Tiene el potencial de mejorar la forma en que financiaremos todo tipo de bienes públicos en el futuro. El financiamiento cuadrático asegura que los proyectos que reciban más financiamiento sean aquellos que tengan mayor demanda. En otras palabras, proyectos que pretenden mejorar la vida de la mayoría de las personas. [Más información sobre el financiamiento cuadrático.](/defi/#quadratic-funding)
+### Para colaboradores de DAO e innovadores de gobernanza {#for-dao-contributors}
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+Recursos para proyectos impulsados por la comunidad y experimentos de gobernanza:
+
+- [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
+- [Base de datos MetaGov](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708): _mapa integral de subvenciones Web3_
+
+### Para emprendedores y empresas emergentes {#for-entrepreneurs-and-startups}
+
+Recursos para aquellos que construyen productos y buscan inversión más allá de las subvenciones:
+
+- [Web3Native](https://www.web3native.co/): _directorio de subvenciones, inversores y programas de aceleración de Web3_
+- [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Plataforma para encontrar financiación para proyectos de Web3_
+
+### Bienes públicos e impacto {#public-goods-and-impact}
+
+Estos programas se centran en la financiación de proyectos que benefician a la comunidad en general, sobre bienes públicos y de iniciativas de impacto. Incluyen, por ejemplo, proveedores de subvenciones, así como plataformas de donaciones que utilizan mecanismos de asignación de fondos en cadena, incluida la [financiación cuadrática](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program): _Gitcoin Grants utiliza múltiples mecanismos de asignación de capital para financiar proyectos de código abierto y bienes públicos en el ecosistema Ethereum_
+- [Octant](https://octant.app/home): _ecosistema de financiación de bienes públicos que equilibra el bien común y el empoderamiento financiero particular_
+- [Giveth](https://giveth.io/): _plataforma de donación de criptomonedas que permite donaciones directas de proyectos benéficos con cero tarifas adicionales_
+- [Artizen](https://artizen.fund/): _ayudar a los creadores a igualar la financiación de nuevos proyectos en la frontera del arte, la ciencia, la tecnología y la cultura_
+- [Acelerador cuadrático](https://qacc.giveth.io/): _programa acelerador de puesta en marcha que utiliza financiación cuadrática para apoyar proyectos en pos del bien público_
+
 
 ## Empleo en Ethereum {#work-in-ethereum}
 

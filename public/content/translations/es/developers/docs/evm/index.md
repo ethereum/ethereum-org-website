@@ -4,7 +4,7 @@ description: Una introducción a la máquina virtual de Ethereum y su relación 
 lang: es
 ---
 
-La Maquina Virtual de Ethereum (EVM) es un ecosistema virtual descentralizado que ejecuta código consistentemente y de forma segura en todos los nodos de Ethereum. Los nodos corren la EVM para ejecutar contratos inteligentes, utilizando "[gas](/gas/)" para medir el esfuerzo computacional requerido para las [operaciones](/developers/docs/evm/opcodes/), lo que garantiza una asignación eficiente de recursos y la seguridad de la red.
+La Maquina Virtual de Ethereum (EVM) es un ecosistema virtual descentralizado que ejecuta código consistentemente y de forma segura en todos los nodos de Ethereum. Los nodos ejecutan la EVM para ejecutar contratos inteligentes, utilizando "[gas](/developers/docs/gas/)" para medir el esfuerzo computacional requerido para las [operaciones](/developers/docs/evm/opcodes/), lo que garantiza una asignación eficiente de recursos y la seguridad de la red.
 
 ## Requisitos previos {#prerequisites}
 
@@ -14,7 +14,7 @@ Para comprender la EVM es necesario estar familiarizado con terminología básic
 
 La analogía del "libro de contabilidad distribuido" suele utilizarse para describir blockchains como Bitcoin, que permite la existencia de una moneda descentralizada que utiliza herramientas fundamentales de criptografía. El libro mayor mantiene un registro de actividad que debe adherirse a un conjunto de reglas que rigen lo que alguien puede y no puede hacer para modificar el libro. Por ejemplo, una dirección de Bitcoin no puede gastar más Bitcoin de los que ha recibido previamente. Estas reglas sustentan todas las transacciones de Bitcoin y muchas otras blockchains.
 
-Aunque Ethereum tenga su propia criptomoneda nativa (Ether), que sigue casi exactamente las mismas reglas intuitivas, también permite el uso de una función mucho más poderosa: [los contratos inteligentes](/developers/docs/smart-contracts/). Para explicar esta característica más compleja se requiere una analogía más sofisticada. En lugar de un libro mayor distribuido, Ethereum es una [máquina de estado](https://wikipedia.org/wiki/Finite-state_machine) distribuida. El estado de Ethereum es una gran estructura de datos, que no solo sostiene todas las cuentas y saldos, sino que también alberga el _estado de la máquina_. Este puede cambiar de bloque a bloque según un conjunto de reglas predefinidas, así como ejecutar un código de máquina arbitrario. Las reglas específicas de cambiar el estado de bloque a bloque las define la EVM.
+Aunque Ethereum tiene su propia criptomoneda nativa (ether) que sigue casi exactamente las mismas reglas intuitivas, también posibilita una función mucho más poderosa: [contratos inteligentes](/developers/docs/smart-contracts/). Para explicar esta característica más compleja se requiere una analogía más sofisticada. En lugar de un libro mayor distribuido, Ethereum es una [máquina de estado](https://wikipedia.org/wiki/Finite-state_machine) distribuida. El estado de Ethereum es una gran estructura de datos, que no solo sostiene todas las cuentas y saldos, sino que también alberga el _estado de la máquina_. Este puede cambiar de bloque a bloque según un conjunto de reglas predefinidas, así como ejecutar un código de máquina arbitrario. Las reglas específicas de cambiar el estado de bloque a bloque las define la EVM.
 
 ![Un diagrama que muestra la composición de la EVM.](./evm.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

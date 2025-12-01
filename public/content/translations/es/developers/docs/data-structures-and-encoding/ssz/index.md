@@ -5,7 +5,7 @@ lang: es
 sidebarDepth: 2
 ---
 
-**Simple serialize (SSZ)** es el método de serialización utilizado en la cadena de Baliza. Reemplaza la serialización RLP utilizada en la capa de ejecución en todas partes de la capa de consenso, excepto el protocolo de descubrimiento de pares. SSZ está diseñado para ser determinista y también para Merklealizar de manera eficiente. Se puede considerar que SSZ tiene dos componentes: un esquema de serialización y un esquema de Merkleización que está diseñado para funcionar de manera eficiente con la estructura de datos serializados.
+**Simple serialize (SSZ)** es el método de serialización utilizado en la cadena de Baliza. Reemplaza la serialización RLP utilizada en la capa de ejecución en todas partes de la capa de consenso, excepto el protocolo de descubrimiento de pares. Si quiere profundizar sobre la serialización RLP, consulte [Prefijo de longitud recursiva (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ está diseñado para ser determinista y también para Merklealizar de manera eficiente. Se puede considerar que SSZ tiene dos componentes: un esquema de serialización y un esquema de Merkleización que está diseñado para funcionar de manera eficiente con la estructura de datos serializados.
 
 ## ¿Cómo funciona SSZ? {#how-does-ssz-work}
 

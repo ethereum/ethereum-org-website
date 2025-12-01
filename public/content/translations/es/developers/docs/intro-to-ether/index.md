@@ -1,5 +1,5 @@
 ---
-title: Introducción a ether
+title: Introducción técnica al ether
 description: Una introducción para desarrolladores a la criptomoneda ethereum
 lang: es
 ---
@@ -26,7 +26,7 @@ La criptomoneda Ether incluye un mecanismo de fijación de precios para determin
 
 Por lo tanto, incluso si una DApp maliciosa ejecuta un bucle infinito, se llegaría a un punto en el que la transacción carecería de Ether y terminaría, lo que permitiría que la red vuelva a la normalidad.
 
-[Es](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [común](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confundir](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum y ether. Cuando las personas dicen «el precio de Ethereum» se están refiriendo al precio de ether.
+Es [común confundir](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum y ether — cuando las personas dicen el «precio de Ethereum» se refieren al precio de ether.
 
 ## Mintear ether {#minting-ether}
 
@@ -38,9 +38,9 @@ Ether se acuña como recompensa por cada bloque propuesto y en cada punto de con
 
 Además de crear ether a través de las recompensas por bloque, el ether puede destruirse mediante un proceso llamado «quema». Cuando se quema el ether, este se elimina de la circulación de forma permanente.
 
-La quema de ether se produce en cada transacción en Ethereum. Cuando los usuarios pagan por sus transacciones, se destruye una comisión de gas base, establecida por la red, de acuerdo con la demanda transaccional. Esto, junto con tamaños de bloque variables y una tarifa de gas máxima, simplifica la estimación de la comisión de transacción en Ethereum. Cuando la demanda de red es alta, los [bloques](https://etherscan.io/block/12965263) pueden quemar más ether de los que acuñan, compensando efectivamente la emisión de ether.
+La quema de ether se produce en cada transacción en Ethereum. Cuando los usuarios pagan por sus transacciones, se destruye una comisión de gas base, establecida por la red, de acuerdo con la demanda transaccional. Esto, junto con tamaños de bloque variables y una tarifa de gas máxima, simplifica la estimación de la comisión de transacción en Ethereum. Cuando la demanda de red es alta, los [bloques](https://eth.blockscout.com/block/22580057) pueden quemar más ether de los que acuñan, compensando efectivamente la emisión de ether.
 
-Quitar la comnisión base impide que los productores de bloques puedan manipular las transacciones. Por ejemplo, si los mineros obtuvieran la tarifa base, podrían incluir sus propias transacciones de forma gratuita y aumentar la tarifa base para todos los demás. Como alternativa, podrían reembolsar la tarifa de base a algunos usuarios fuera de cadena, lo que provocaría un mercado de comisiones de transacción más opaco y complejo.
+Quitar la comnisión base impide que los productores de bloques puedan manipular las transacciones. Por ejemplo, si los mineros obtuvieran la tarifa base, podrían incluir sus propias transacciones de forma gratuita y aumentar la tarifa base para todos los demás. Por otra parte, podrían reembolsar la tarifa base a algunos usuarios fuera de la cadena, lo que conduciría a un mercado de tarifas de transacción más opaco y complejo.
 
 ## Denominaciones de ether {#denominations}
 
@@ -67,11 +67,11 @@ Cuando la dirección del destinatario es un [contrato inteligente](/developers/d
 
 Los usuarios pueden consultar el saldo en ether de cualquier [cuenta](/developers/docs/accounts/) al inspeccionar el campo `saldo` de la cuenta, el cual muestra la reserva de ether expresada en wei.
 
-[Etherscan](https://etherscan.io) es una herramienta muy conocida que permite inspeccionar el saldo de las direcciones a través de una aplicación web. Por ejemplo, en [esta página de Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) se muestra el saldo de la Ethereum Foundation. Los saldos de la cuenta también se pueden consultar usando carteras o directamente haciendo peticiones a nodos.
+[Etherscan](https://etherscan.io) y [Blockscout](https://eth.blockscout.com) son herramientas populares para inspeccionar los saldos de direcciones a través de aplicaciones basadas en la web. Por ejemplo, [esta página de Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) muestra el saldo de Ethereum Foundation. Los saldos de la cuenta también se pueden consultar usando carteras o directamente haciendo peticiones a nodos.
 
 ## Más información {#further-reading}
 
-- [Definición de Ether y Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) — _Grupo CME_
+- [Definición de ether y Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html): _CME Group_
 - [Informe de Ethereum](/whitepaper/): la propuesta original de Ethereum. En este documento se incluyen una descripción de ether y los motivos por los que se creó.
 - [Calculadora de gwei](https://www.alchemy.com/gwei-calculator): utilice esta calculadora gwei para convertir fácilmente wei, gwei y ether. Simplemente añada cualquier cantidad de wei, gwei o ETH y calcule automáticamente la conversión.
 

@@ -8,7 +8,7 @@ Los contratos inteligentes son extremadamente flexibles y capaces de controlar g
 
 Las cadenas de bloques públicas como Ethereum complican aún más la cuestión de la seguridad de los contratos inteligentes. El código de los contratos ya implementado _por lo general_ no puede cambiarse para corregir fallas de seguridad, mientras que los activos robados de los contratos inteligentes son extremadamente difíciles de rastrear y en su mayor parte irrecuperables debido a la inmutabilidad.
 
-Aunque las cifras varían, se estima que la cantidad total de valor robado o perdido debido a defectos de seguridad en los contratos inteligentes supera fácilmente los USD 1000 millones de dólares. Esto incluye incidentes de alto perfil, tal como el [hackeo a la DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millones de ETH robados, por valor de más de USD 1000 millones a precios actuales), el [hackeo de la billetera multifirma de Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (USD 30M perdidos a manos de hackers) y el [problema de billeteras congeladas de Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mas de USD 300M en ETH bloqueados para siempre).
+Aunque las cifras varían, se estima que la cantidad total de valor robado o perdido debido a defectos de seguridad en los contratos inteligentes supera fácilmente los USD 1000 millones de dólares. Esto incluye incidentes de alto perfil, tal como el [ataque a la DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6 millones de ETH robados, por valor de más de USD 1000 millones a precios actuales), el [ataque de la cartera multifirma de Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (USD 30M perdidos a manos de hackers) y el [asunto de las carteras congeladas de Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mas de USD 300M en ETH bloqueados para siempre).
 
 Los problemas mencionados anteriormente hacen que sea imperativo que los desarrolladores inviertan esfuerzos en la creación de contratos inteligentes seguros, robustos y resistentes. La seguridad de los contratos inteligentes es un asunto serio que todo desarrollador hará bien en aprender. Esta guía abordará consideraciones de seguridad para los desarrolladores de Ethereum y explorará recursos para mejorar la seguridad de los contratos inteligentes.
 
@@ -99,7 +99,7 @@ Dicho esto, hay que evitar tratar las auditorías como una bala de plata. Las au
 
 La creación de un programa de recompensas por errores es otro enfoque para implementar revisiones de código externas. Un bug bounty es una recompensa económica que se da a las personas (normalmente hackers de sombrero blanco) que descubren vulnerabilidades en una aplicación.
 
-Cuando se utilizan correctamente, las recompensas por errores ofrecen a los miembros de la comunidad de hackers un incentivo para inspeccionar su código en busca de fallas críticas. Un ejemplo de la vida real es el "bug del dinero infinito" que habría permitido a un atacante crear una cantidad ilimitada de Ether en [Optimism](https://www.optimism.io/), un protocolo de [Capa 2](/layer-2/) que se ejecuta en Ethereum. Afortunadamente, un hacker de sombrero blanco [descubrió la falla](https://www.saurik.com/optimism.html) y notificó al equipo, [obteniendo un premio grande en el proceso](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Cuando se utilizan correctamente, las recompensas por errores ofrecen a los miembros de la comunidad de hackers un incentivo para inspeccionar su código en busca de fallas críticas. Un ejemplo de la vida real es el «error del dinero infinito» que habría permitido a un atacante crear una cantidad ilimitada de Ether en [Optimism](https://www.optimism.io/), un protocolo de [capa 2](/layer-2/) que se ejecuta en Ethereum. Afortunadamente, un hacker de sombrero blanco [descubrió la falla](https://www.saurik.com/optimism.html) y notificó al equipo, [obteniendo un premio grande en el proceso](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Una estrategia útil es establecer el pago de un programa de recompensas por fallas en proporción a la cantidad de fondos en juego. Descrito como el "[scaling bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", este enfoque proporciona incentivos financieros para que los individuos revelen responsablemente las vulnerabilidades en lugar de explotarlas.
 
@@ -199,23 +199,23 @@ Este ejemplo muestra las características básicas de las paradas de emergencia:
 
 `onlyWhenStopped` se utiliza para funciones que deben ser invocables durante una emergencia (por ejemplo, `emergencyWithdraw()`). Tales funciones pueden ayudar a resolver la situación, de ahí su exclusión de la lista de "funciones restringidas".
 
-El uso de una funcionalidad de parada de emergencia proporciona un recurso efectivo para hacer frente a vulnerabilidades graves en su contrato inteligente. No obstante, aumenta la necesidad de que los usuarios confíen en que los desarrolladores no lo activen por razones de su interés. Con este fin, la descentralización del control de la parada de emergencia, ya sea sometiéndola a un mecanismo de votación en cadena, un bloqueo de tiempo o la aprobación de una billetera multifirma, son posibles soluciones.
+El uso de una funcionalidad de parada de emergencia proporciona un recurso efectivo para hacer frente a vulnerabilidades graves en su contrato inteligente. No obstante, aumenta la necesidad de que los usuarios confíen en que los desarrolladores no lo activen por razones de su interés. Con este fin, existen varias soluciones, como descentralizar el control de la parada de emergencia, ya sea sometiéndolo a un mecanismo de votación en cadena, a un bloqueo temporal, o a la aprobación de una cartera multifirma.
 
 #### Monitoreo de eventos {#event-monitoring}
 
 Los [eventos](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) le permiten realizar un seguimiento de las llamadas a las funciones de un contrato inteligente y supervisar los cambios en las variables de estado. Es ideal programar su contrato inteligente para que emita un evento cada vez que alguna parte realice una acción crítica para la seguridad (por ejemplo, retirar fondos).
 
-El registro de eventos y su supervisión fuera de la cadena proporciona información sobre las operaciones del contrato y ayuda a un descubrimiento más rápido de acciones maliciosas. Esto significa que su equipo puede responder más rápido a los hackeos y tomar medidas para mitigar el impacto en los usuarios, como pausar funciones o realizar una actualización.
+Registrar eventos y supervisarlos fuera de la cadena proporciona información sobre las operaciones del contrato y facilita una detección más rápida de acciones maliciosas. Esto significa que su equipo puede responder más rápido a los hackeos y tomar medidas para mitigar el impacto en los usuarios, como pausar funciones o realizar una actualización.
 
 También puede optar por una herramienta de monitoreo lista para usar que reenvíe automáticamente alertas cada vez que alguien interactúe con sus contratos. Estas herramientas le permitirán crear alertas personalizadas basadas en diferentes activadores, como el volúmen de transacciones, la frecuencia de las llamadas a funciones o las funciones específicas involucradas. Por ejemplo, podría programar una alerta que llegue cuando la cantidad retirada en una misma transacción supere un umbral en particular.
 
 ### 7. Diseñar sistemas de gobernanza seguros {#design-secure-governance-systems}
 
-Es posible que desee descentralizar su aplicación entregando el control de los contratos inteligentes básicos a los miembros de la comunidad. En este caso, el sistema de contratos inteligentes incluirá un módulo de gobernanza, es decir, un mecanismo que permita a los miembros de la comunidad aprobar acciones administrativas a través de un sistema de gobernanza en cadena. Por ejemplo, los titulares de tokens pueden votar por una propuesta para actualizar un contrato proxy a una nueva implementación.
+Es posible que desee descentralizar su aplicación entregando el control de los contratos inteligentes básicos a los miembros de la comunidad. En este caso, el sistema de contratos inteligentes incluirá un módulo de gobernanza—un mecanismo que permite a los miembros de la comunidad aprobar acciones administrativas a través de un sistema de gobernanza en cadena. Por ejemplo, los titulares de tokens pueden votar por una propuesta para actualizar un contrato proxy a una nueva implementación.
 
 La gobernanza descentralizada puede ser beneficiosa, especialmente porque alinea los intereses de los desarrolladores y los usuarios finales. A pesar de todo, los mecanismos de gobernanza de contratos inteligentes pueden introducir nuevos riesgos si se implementan incorrectamente. Un escenario plausible es si un atacante adquiere un enorme poder de voto (medido por el número de tokens mantenidos) mediante la obtención de un [préstamo flash](/defi/#flash-loans) y obliga a aceptar una propuesta maliciosa.
 
-Una manera de prevenir problemas relacionados con la gobernanza en cadena es [usar un bloqueo de tiempo o timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un bloqueo de tiempo impide que un contrato inteligente ejecute ciertas acciones hasta que pase una cantidad específica de tiempo. Otras estrategias incluyen asignar un "peso de votación" a cada token en función de cuánto tiempo ha estado bloqueado, o medir el poder de voto de una dirección en un período histórico (por ejemplo, 2-3 bloques en el pasado) en lugar del bloque actual. Ambos métodos reducen la posibilidad de acumular rápidamente el poder de voto para cambiar los votos en cadena.
+Una manera de evitar problemas relacionados con la gobernanza en cadena es [usar un bloqueo temporal](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un bloqueo de tiempo impide que un contrato inteligente ejecute ciertas acciones hasta que pase una cantidad específica de tiempo. Otras estrategias incluyen asignar un "peso de votación" a cada token en función de cuánto tiempo ha estado bloqueado, o medir el poder de voto de una dirección en un período histórico (por ejemplo, 2-3 bloques en el pasado) en lugar del bloque actual. Ambos métodos reducen la posibilidad de acumular rápidamente poder de voto para manipular las votaciones en cadena.
 
 Obtenga más información sobre [diseño de sistemas de gobernanza seguros](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [diferentes mecanismos de votación en las DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) y [los vectores de ataque comunes de DAO que aprovechan DeFi](https://dacian.me/dao-governance-defi-attacks) en los enlaces compartidos.
 
@@ -223,7 +223,7 @@ Obtenga más información sobre [diseño de sistemas de gobernanza seguros](http
 
 Los desarrolladores de software tradicionales están familiarizados con el principio KISS ("mantenlo simple, estúpido") (Keep it simple stupid), que desaconseja introducir complejidad innecesaria en el diseño de software. Esto sigue la idea de pensamiento de hace tiempo de que "los sistemas complejos fallan de maneras complejas" y son más susceptibles a errores costosos.
 
-Mantener las cosas simples es de particular importancia a la hora de escribir contratos inteligentes, dado que los contratos inteligentes están controlando potencialmente grandes cantidades de valor. Un consejo para lograr simplicidad al escribir contratos inteligentes es reutilizar bibliotecas existentes, como [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), siempre que sea posible. Debido a que estas bibliotecas han sido ampliamente auditadas y probadas por los desarrolladores, su uso reduce las posibilidades de introducir errores al escribir nuevas funcionalidades desde cero.
+Mantener las cosas simples es de particular importancia a la hora de escribir contratos inteligentes, dado que los contratos inteligentes están controlando potencialmente grandes cantidades de valor. Un consejo para lograr simplicidad al escribir contratos inteligentes es reutilizar bibliotecas existentes, como [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/), siempre que sea posible. Debido a que estas bibliotecas han sido ampliamente auditadas y probadas por los desarrolladores, su uso reduce las posibilidades de introducir errores al escribir nuevas funcionalidades desde cero.
 
 Otro consejo común es escribir pequeñas funciones y mantener los contratos modulares dividiendo la lógica empresarial entre múltiples contratos. Escribir código más simple no solo reduce la superficie de ataque en un contrato inteligente, sino que también hace que sea más fácil razonar sobre la corrección del sistema general y detectar posibles errores de diseño temprano.
 
@@ -235,7 +235,7 @@ La EVM no permite la concurrencia, lo que significa que dos contratos involucrad
 
 Aunque en su mayor parte resulta inofensivo, la transferencia del flujo de control a contratos sin confianza puede causar problemas, como el reingreso o reentrada. Un ataque de reentrada ocurre cuando un contrato malicioso vuelve a llamar a un contrato vulnerable antes de que se complete la invocación de la función original. Este tipo de ataque se explica mejor con un ejemplo.
 
-Considere un simple contrato inteligente ("Víctima") que permita a cualquier persona depositar y retirar Ether:
+Piense en un contrato inteligente sencillo («víctima») que permite a cualquiera depositar y retirar ether:
 
 ```solidity
 // This contract is vulnerable. Do not use in production
@@ -304,7 +304,7 @@ No hay nada malo aquí, excepto que `Attacker` tiene otra función que llama a `
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
+El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque puede usarse para vaciar los fondos de un contrato inteligente, como ocurrió en el [ataque de la DAO en 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cómo prevenir los ataques de reentrada
 
@@ -346,7 +346,7 @@ contract MutexPattern {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
-        bool (success, ) = msg.sender.call{value: _amount}("");
+        (bool success, ) = msg.sender.call{value: _amount}("");
         require(success);
 
         return true;
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-También puede utilizar un sistema de [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) que requiera que los usuarios retiren fondos de los contratos inteligentes, en lugar de un sistema de "pagos push" que envíe fondos a las cuentas. Esto elimina la posibilidad de activar inadvertidamente el código en direcciones desconocidas (y también puede prevenir ciertos ataques de denegación de servicio).
+También puede utilizar un sistema de [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) que requiera que los usuarios retiren fondos de los contratos inteligentes, en lugar de un sistema de "pagos push" que envíe fondos a las cuentas. Esto elimina la posibilidad de activar inadvertidamente el código en direcciones desconocidas (y también puede prevenir ciertos ataques de denegación de servicio).
 
 #### Desbordamiento de enteros {#integer-underflows-and-overflows}
 
@@ -439,13 +439,13 @@ A partir de la versión 0.8.0, el compilador de Solidity rechaza el código que 
 
 #### Manipulación de oráculos {#oracle-manipulation}
 
-Los [oráculos](/developers/docs/oracles/) obtienen información fuera de la cadena y la envían en cadena para que los contratos inteligentes la usen. Con los oráculos, puede diseñar contratos inteligentes que interactúen con sistemas fuera de la cadena, como los mercados de capitales, ampliando en gran medida su aplicación.
+[Los oráculos](/developers/docs/oracles/) obtienen información fuera de la cadena y la envían a la cadena para que los contratos inteligentes la utilicen. Con los oráculos, puedes diseñar contratos inteligentes que interoperan con sistemas fuera de la cadena, como los mercados de capitales, ampliando enormemente sus aplicaciones.
 
-Pero si el oráculo está dañado y envía información incorrecta en cadena, los contratos inteligentes se ejecutarán en función de entradas erróneas, lo que puede causar problemas. Esta es la base del "problema del oráculo", que se refiere a la tarea de asegurarse de que la información de un oráculo de cadena de bloques sea precisa, actualizada y oportuna.
+No obstante, si el oráculo se corrompe y envía información incorrecta a la cadena, los contratos inteligentes se ejecutarán en base a datos erróneos, lo que puede causar problemas. Esta es la base del "problema del oráculo", que se refiere a la tarea de asegurarse de que la información de un oráculo de cadena de bloques sea precisa, actualizada y oportuna.
 
-Una preocupación de seguridad relacionada es el uso de un oráculo en cadena, como un exchange descentralizado, para obtener el precio al contado de un activo. Las plataformas de préstamos en la industria de las [finanzas descentralizadas (DeFi)](/defi/) a menudo hacen esto para determinar el valor del colateral de un usuario para determinar cuánto puede pedir prestado.
+Una cuestión inquietante relativa a la seguridad es usar un oráculo en cadena, como un intercambio descentralizado, para obtener el precio al contado de un activo. Las plataformas de préstamos en la industria de las [finanzas descentralizadas (DeFi)](/defi/) a menudo hacen esto para determinar el valor del colateral de un usuario para determinar cuánto puede pedir prestado.
 
-Los precios de los DEX suelen ser precisos, en gran parte debido a que los arbitradores restauran la paridad en los mercados. No obstante, están abiertos a la manipulación, especialmente si el oráculo en cadena calcula los precios de los activos en función de los patrones comerciales históricos (como suele ser el caso).
+Los precios de los DEX suelen ser precisos, en gran parte debido a que los arbitradores restauran la paridad en los mercados. Sin embargo, están expuestos a manipulaciones, especialmente si el oráculo en cadena calcula los precios de los activos en función de patrones históricos de negociación (como suele ser el caso).
 
 Por ejemplo, un atacante podría inflar artificialmente el precio al contado de un activo obteniendo un préstamo flash justo antes de interactuar con su contrato de préstamo. Consultar el precio del activo en el DEX devolvería un valor más alto de lo normal (debido a la gran "orden de compra" del atacante que sesga la demanda del activo), lo que le permitiría pedir prestado más de lo permitido. Tales "ataques de préstamos flash" se han utilizado para explotar la dependencia de los oráculos de precios entre las aplicaciones DeFi, lo que ha costado a los protocolos millones en fondos perdidos.
 
@@ -453,7 +453,7 @@ Por ejemplo, un atacante podría inflar artificialmente el precio al contado de 
 
 El requisito mínimo para [evitar la manipulación del oráculo](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) consiste en utilizar una red de oráculo descentralizada que obtiene información de múltiples fuentes para evitar un único punto de error. En la mayoría de los casos, los oráculos descentralizados tienen incentivos criptoeconómicos incorporados para alentar a los nodos de oráculos a que pasen información correcta, lo que los hace más seguros que los oráculos centralizados.
 
-Si planea consultar a un oráculo en cadena precios de activos, considere el uso de uno que implemente un mecanismo de precio promedio ponderado en el tiempo (TWAP). Un [Oráculo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) consulta el precio de un activo en dos puntos diferentes en el tiempo (que puede modificar) y calcula el precio al contado en función del promedio obtenido. La elección de períodos de tiempo más largos protege su protocolo contra la manipulación de precios, ya que los pedidos grandes ejecutados recientemente no pueden afectar a los precios de los activos.
+Si planea consultar a un oráculo en cadena para obtener precios de activos, piense en usar uno que implemente un mecanismo de precio medio ponderado en el tiempo (TWAP). Un [Oráculo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) consulta el precio de un activo en dos puntos diferentes en el tiempo (que puede modificar) y calcula el precio al contado en función del promedio obtenido. La elección de períodos de tiempo más largos protege su protocolo contra la manipulación de precios, ya que los pedidos grandes ejecutados recientemente no pueden afectar a los precios de los activos.
 
 ## Recursos de seguridad de contratos inteligentes para desarrolladores {#smart-contract-security-resources-for-developers}
 
@@ -475,13 +475,17 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 ### Herramientas para monitorear contratos inteligentes {#smart-contract-monitoring-tools}
 
+- **[OpenZeppelin Defender Sentinels:](https://docs.openzeppelin.com/defender/v1/sentinel)** _Una herramienta para monitorear y responder automáticamente a eventos, funciones y parámetros de transacción en sus contratos inteligentes. _
+
 - **[Tenderly Real-Time Alerting:](https://tenderly.co/alerting/)** _Una herramienta para recibir notificaciones en tiempo real cuando ocurren eventos inusuales o inesperados en sus contratos inteligentes o billeteras. _
 
 ### Herramientas para la administración segura de contratos inteligentes {#smart-contract-administration-tools}
 
+- **[OpenZeppelin Defender Admin:](https://docs.openzeppelin.com/defender/v1/admin)** _interfaz para gestionar la administración de contratos inteligentes, incluidos los controles de acceso, las actualizaciones y pausas._
+
 - **[Safe:](https://safe.global/)** _Billetera de contrato inteligente que se ejecuta en Ethereum y requiere un número mínimo de personas para aprobar una transacción antes de que pueda ocurrir (M de N). _
 
-- **[Contratos OpenZeppelin:](https://docs.openzeppelin.com/contracts/5.x/)** _Bibliotecas de contratos para implementar funciones administrativas, incluida la propiedad del contrato, actualizaciones, controles de acceso, gobernanza, pausa y otras._
+- **[Contratos OpenZeppelin:](https://docs.openzeppelin.com/contracts/4.x/)** _Bibliotecas de contratos para implementar funciones administrativas, incluida la propiedad del contrato, actualizaciones, controles de acceso, gobernanza, pausa y otras._
 
 ### Servicios de auditoría de contratos inteligentes {#smart-contract-auditing-services}
 
@@ -511,7 +515,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Cyfrin:](https://cyfrin.io)** _Plataforma de seguridad web3 que incuba la seguridad criptográfica a través de productos y servicios de auditoría de contratos inteligentes._
 
-- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _firma de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloques a través de un equipo de auditores experimentados y herramientas de primer nivel._
 
 - **[Oxorio:](https://oxor.io/)** _Auditorías de contratos inteligentes y servicios de seguridad de cadena de bloques con experiencia en EVM, Solidity, ZK y tecnología de cadena cruzada para empresas criptográficas y proyectos DeFi._
 
@@ -531,7 +535,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 ### Publicaciones de vulnerabilidades y explotaciones conocidas en los contratos inteligentes {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: ataques conocidos de contratos inteligentes:](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** _ Explicación para principiantes de las vulnerabilidades de contratos más importantes, con código de ejemplo para la mayoría de los casos. _
+- **[ConsenSys: ataques conocidos de contratos inteligentes:](https://consensys.github.io/smart-contract-best-practices/attacks/)** _ Explicación para principiantes de las vulnerabilidades de contratos más importantes, con código de ejemplo para la mayoría de los casos. _
 
 - **[Registro SWC:](https://swcregistry.io/)** _Lista curada de elementos de Common Weakness Enumeration (CWE) que se aplican a los contratos inteligentes de Ethereum._
 
@@ -559,7 +563,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Estándar de verificación de seguridad de contratos inteligentes:](https://github.com/securing/SCSVS)** _Lista de verificación de catorce partes creada para estandarizar la seguridad de los contratos inteligentes para desarrolladores, arquitectos, revisores y proveedores de seguridad. _
 
-- **[Aprenda sobre seguridad y auditorías de contratos inteligentes:](https://updraft.cyfrin.io/courses/security) _Curso definitivo de seguridad y auditoría de contratos inteligentes creado para desarrolladores de contratos inteligentes que buscan mejorar sus buenas prácticas de seguridad y convertirse en investigadores de seguridad._
+- **[Aprenda sobre seguridad y auditoría de contratos inteligentes](https://updraft.cyfrin.io/courses/security)**: _el curso definitivo de seguridad y auditoría de contratos inteligentes, creado para desarrolladores de contratos inteligentes que buscan mejorar sus prácticas de seguridad y convertirse en investigadores de seguridad._
 
 ### Tutoriales sobre seguridad de contratos inteligentes {#tutorials-on-smart-contract-security}
 

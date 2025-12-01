@@ -11,7 +11,7 @@ La estructura de datos de Ethereum es un «trie Merkle-Patricia modificado», ll
 
 Un trie de Merkle-Patricia es determinista y criptográficamente verificable: la única manera de generar una raíz de estado es calculándola a partir de cada pieza individual del estado, y dos estados que son idénticos se pueden probar fácilmente comparando el hash raíz y los hashes que lo llevaron a él (_una prueba de Merkle_). Por el contrario, no hay forma de crear dos estados diferentes con el mismo hash raíz, y cualquier intento de modificar el estado con diferentes valores dará como resultado un hash raíz de estado diferente. En teoría, esta estructura proporciona el «santo grial» de `O(log(n))` eficiencia para inserciones, búsquedas y eliminaciones.
 
-En un futuro próximo, Ethereum planea migrar a una estructura de [árbol Verkle](/roadmap/verkle-trees), lo que abrirá muchas y nuevas posibilidades para futuras mejoras del protocolo.
+En un futuro próximo, Ethereum planea migrar a una estructura de [árbol Verkle](https://ethereum.org/en/roadmap/verkle-trees), lo que abrirá muchas y nuevas posibilidades para futuras mejoras del protocolo.
 
 ## Requisitos previos {#prerequisites}
 
@@ -33,34 +33,34 @@ Hay una diferencia entre buscar algo en el "trie" y en la base de datos clave/va
 
 Las operaciones de actualización y eliminación para los radix tries se pueden definir de la siguiente manera:
 
-```
-    def update(node,path,value):
-        curnode = db.get(node) if node else [ NULL ] * 17
+```python
+    def update(node_hash, path, value):
+        curnode = db.get(node_hash) if node_hash else [NULL] * 17
         newnode = curnode.copy()
-        if path == '':
+        if path == "":
             newnode[-1] = value
         else:
-            newindex = update(curnode[path[0]],path[1:],value)
+            newindex = update(curnode[path[0]], path[1:], value)
             newnode[path[0]] = newindex
-        db.put(hash(newnode),newnode)
+        db.put(hash(newnode), newnode)
         return hash(newnode)
 
-    def delete(node,path):
-        if node is NULL:
+    def delete(node_hash, path):
+        if node_hash is NULL:
             return NULL
         else:
-            curnode = db.get(node)
+            curnode = db.get(node_hash)
             newnode = curnode.copy()
-            if path == '':
+            if path == "":
                 newnode[-1] = NULL
             else:
-                newindex = delete(curnode[path[0]],path[1:])
+                newindex = delete(curnode[path[0]], path[1:])
                 newnode[path[0]] = newindex
 
             if all(x is NULL for x in newnode):
                 return NULL
             else:
-                db.put(hash(newnode),newnode)
+                db.put(hash(newnode), newnode)
                 return hash(newnode)
 ```
 
@@ -95,69 +95,72 @@ Al atravesar rutas en nibbles, podemos terminar con un número impar de nibbles 
 
 El marcado tanto de _longitud de ruta parcial restante par vs. impar_ como de _nodo de hoja vs. extensión_ como se describe anteriormente reside en el primer nibble de la ruta parcial de cualquier nodo de 2 elementos. Resultan en lo siguiente:
 
-    hex char    bits    |    node type partial     path length
-    ----------------------------------------------------------
-       0        0000    |       extension              even
-       1        0001    |       extension              odd
-       2        0010    |   terminating (leaf)         even
-       3        0011    |   terminating (leaf)         odd
+| hex char | bits | tipo de nodo parcial | longitud de la ruta |
+| -------- | ---- | -------------------- | ------------------- |
+| 0        | 0000 | extensión            | par                 |
+| 1        | 0001 | extensión            | impar               |
+| 2        | 0010 | terminación (hoja)   | par                 |
+| 3        | 0011 | terminación (hoja)   | impar               |
 
 Para la longitud de ruta restante par (`0` o `2`), siempre seguirá otro nibble de "padding" `0`.
 
-```
+```python
     def compact_encode(hexarray):
         term = 1 if hexarray[-1] == 16 else 0
-        if term: hexarray = hexarray[:-1]
+        if term:
+            hexarray = hexarray[:-1]
         oddlen = len(hexarray) % 2
         flags = 2 * term + oddlen
         if oddlen:
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        // hexarray now has an even length whose first nibble is the flags.
-        o = ''
-        for i in range(0,len(hexarray),2):
-            o += chr(16 * hexarray[i] + hexarray[i+1])
+        # hexarray now has an even length whose first nibble is the flags.
+        o = ""
+        for i in range(0, len(hexarray), 2):
+            o += chr(16 * hexarray[i] + hexarray[i + 1])
         return o
 ```
 
 Ejemplos:
 
-```
-    > [ 1, 2, 3, 4, 5, ...]
+```python
+    > [1, 2, 3, 4, 5, ...]
     '11 23 45'
-    > [ 0, 1, 2, 3, 4, 5, ...]
+    > [0, 1, 2, 3, 4, 5, ...]
     '00 01 23 45'
-    > [ 0, f, 1, c, b, 8, 10]
+    > [0, f, 1, c, b, 8, 10]
     '20 0f 1c b8'
-    > [ f, 1, c, b, 8, 10]
+    > [f, 1, c, b, 8, 10]
     '3f 1c b8'
 ```
 
 Aquí está el código extendido para obtener un nodo en el Merkle Patricia trie:
 
-```
-    def get_helper(node,path):
-        if path == []: return node
-        if node = '': return ''
-        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
+```python
+    def get_helper(node_hash, path):
+        if path == []:
+            return node_hash
+        if node_hash == "":
+            return ""
+        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
-            if k2 == path[:len(k2)]:
-                return get(v2, path[len(k2):])
+            if k2 == path[: len(k2)]:
+                return get(v2, path[len(k2) :])
             else:
-                return ''
+                return ""
         elif len(curnode) == 17:
-            return get_helper(curnode[path[0]],path[1:])
+            return get_helper(curnode[path[0]], path[1:])
 
-    def get(node,path):
+    def get(node_hash, path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node,path2)
+        return get_helper(node_hash, path2)
 ```
 
 ### Ejemplo de Trie {#example-trie}
@@ -199,13 +202,13 @@ Desde un encabezado de bloque hay 3 raíces de 3 de estos tries.
 
 ### State Trie {#state-trie}
 
-Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un bloque. En él, un `path` es siempre: `keccak256(ethereumAddress)` y un `value` es siempre: `rlp(ethereumAccount)`. Más específicamente, una `account` de ethereum es una matriz de 4 elementos de `[nonce,balance,storageRoot,codeHash]`. En este punto, vale la pena señalar que este `storageRoot` es la raíz de otro patricia trie:
+Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un bloque. En él, un `path` es siempre: `keccak256(ethereumAddress)` y un `value` es siempre: `rlp(ethereumAccount)`. Más específicamente, una `account` de Ethereum es una matriz de 4 elementos de `[nonce,balance,storageRoot,codeHash]`. En este punto, vale la pena señalar que este `storageRoot` es la raíz de otro patricia trie:
 
 ### Trie de almacenamiento (storage) {#storage-trie}
 
 El trie de almacenamiento es donde residen _todos_  los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección determinada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos se pueden pasar como argumentos al `eth_getStorageAt` definido en la API JSON-RPC, por ejemplo, para recuperar los datos en la ranura de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
-```
+```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
@@ -214,7 +217,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Recuperar otros elementos en el almacenamiento es un poco más complicado porque primero se debe calcular la posición en el trie de almacenamiento. La posición se calcula como el hash `keccak256` de la dirección y la posición de almacenamiento, ambas rellenadas a la izquierda con ceros hasta una longitud de 32 bytes. Por ejemplo, la posición de los datos en la ranura de almacenamiento 1 para la dirección `0x391694e7e0b0cce554cb130d723a9d27458f9298` es:
 
-```
+```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
@@ -229,7 +232,7 @@ undefined
 
 Por lo tanto, el `path` es `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Esto ahora se puede utilizar para recuperar los datos del trie de almacenamiento como antes:
 
-```
+```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
@@ -241,7 +244,7 @@ Nota: El `storageRoot` para una cuenta de Ethereum está vacío de forma predete
 
 Hay un trie de transacciones separado para cada bloque, que de nuevo almacena pares `(key, value)`. Una ruta aquí es: `rlp(transactionIndex)` que representa la clave que corresponde a un valor determinado por:
 
-```
+```python
 if legacyTx:
   value = rlp(tx)
 else:

@@ -64,6 +64,19 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Acceso intregrado a un grifo de red de pruebas
     - Comunidad constructora activa en Discord con 18.000 usuarios
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Documentos](https://docs.allnodes.com/)
+  - Características
+    - Sin límites de tarifa con el token PublicNode creado en la página de la cartera de Allnodes.
+    - Puntos finales de rpc gratuitos centrados en la privacidad (100+ blockchains) en [PublicNode](https://www.publicnode.com)
+    - Nodos dedicados sin límites de velocidad para más de 90 cadenas de bloques
+    - Nodos de archivo exclusivos para más de 30 cadenas de bloques
+    - Disponible en 3 regiones (EE. UU., UE, Asia)
+    - Instantáneas para más de 100 cadenas de bloques en [PublicNode](https://www.publicnode.com/snapshots)
+    - Soporte técnico 24/7 con SLA de tiempo de actividad del 99,90%-99,98% (depende del plan).
+    - Precio por hora
+    - Pague con tarjeta de crédito, PayPal o Crypto
+
 - [**All That Node**](https://allthatnode.com/)
   - [Documentos](https://docs.allthatnode.com/)
   - Características
@@ -101,7 +114,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Asistencia directa
 
 - [**Blast**](https://blastapi.io/)
-  - [Documentos](https://docs.blastapi.io/)
+  - [Documentación](https://docs.blastapi.io/)
   - Características
     - Compatible con RPC y WSS
     - Alojamiento de nodo multiregión
@@ -116,7 +129,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Pago en criptomoneda
 
 - [**BlockDaemon**](https://blockdaemon.com/)
-  - [Documentación](https://ubiquity.docs.blockdaemon.com/)
+  - [Documentos](https://ubiquity.docs.blockdaemon.com/)
   - Beneficios
     - Tablero
     - Base por nodo
@@ -155,6 +168,19 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Traiga su nube (Bring Your Own Cloud o BYOC)
     - Precio por hora
     - Soporte directo 24/7
+
+- [**DataHub**](https://datahub.figment.io)
+  - [Documentos](https://docs.figment.io/)
+  - Características
+    - Opción de categoría gratuita con 3.000.000 sol/mes
+    - Puntos de conexión RPC y WSS
+    - Nodos dedicados completos y de archivo
+    - Escalabilidad automática (descuentos por volumen)
+    - Datos de archivo gratuitos
+    - Analíticas de servicio
+    - Panel
+    - Soporte directo 24/7
+    - Pago en criptomonedas (para empresas)
 
 - [**DRPC**](https://drpc.org/)
   - [Documentos](https://docs.drpc.org/)
@@ -196,7 +222,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Acceso a más de 50 nodos de la cadena de bloques
 
 - [**Infura**](https://infura.io/)
-  - [Documentos](https://infura.io/docs)
+  - [Documentación](https://infura.io/docs)
   - Características
     - Opción de nivel gratuito
     - Escalabilidad en función del uso
@@ -205,7 +231,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Panel de control
 
 - [**Kaleido**](https://kaleido.io/)
-  - [Documentación](https://docs.kaleido.io/)
+  - [Documentos](https://docs.kaleido.io/)
   - Características
     - Categoría de inicio gratuita
     - Despliegue de nodo de Ethereum en un clic
@@ -213,7 +239,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Más de 500 API administrativas y de servicio
     - Interfaz RESTful para envío de transacciones de Ethereum (Apache Kafka respaldado)
     - Flujos salientes para la entrega del evento (Apache Kafka respaldado)
-    - Colección exhaustiva de servicios auxiliares y «fuera de cadena» (por ejemplo, transporte bilateral de mensajes cifrados)
+    - Colección exhaustiva de servicios auxiliares y «fuera de la cadena» (por ejemplo, transporte bilateral de mensajes cifrados)
     - Incorporación de la red sencilla con gobernanza y control de acceso basado en funciones
     - Gestión sofisticada de usuarios tanto para administradores como para usuarios finales
     - Infraestructura altamente escalable, resistente y de grado empresarial

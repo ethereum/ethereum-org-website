@@ -12,7 +12,7 @@ Un intercambio de tokens involucra el intercambio de dos activos diferentes que 
 
 **Requisitos previos:**
 
-- tener una [billetera de criptomonedas](/glossary/#wallet) (puede seguir este tutorial: [Cómo "registrar" una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- tener una [cartera de criptomonedas](/glossary/#wallet); si no la tiene, puede seguir esta guía sobre [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Conecte su cartera al intercambio descentralizado (DEX) que prefiera
@@ -22,7 +22,7 @@ Algunos intercambios descentralizados populares son:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 ¿Le interesa? Aprenda más sobre qué son las [finanzas descentralizadas (DeFi)](/defi/) y cómo funcionan estos nuevos tipos de exchanges.
 
@@ -49,15 +49,12 @@ Puede seguir el progreso de la transacción en cualquier navegador de cadena de 
 Recibirá automáticamente los tokens intercambiados en su billetera una vez que la transacción sea procesada.
 <br />
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Preguntas más frecuentes
 

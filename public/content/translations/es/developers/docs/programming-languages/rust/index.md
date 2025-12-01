@@ -38,7 +38,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Proyectos y herramientas de Rust {#rust-projects-and-tools}
 
-- [pwasm-ethereum:](https://github.com/paritytech/pwasm-ethereum) _colección de recursos externos para interactuar con redes similares a Ethereum_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Lista de funciones externas para interactuar con una red similar a Ethereum_
 - [Lighthouse:](https://github.com/sigp/lighthouse) _cliente de capa de consenso de Ethereum rápido_
 - [Ethereum WebAssembly:](https://ewasm.readthedocs.io/en/mkdocs/) _rediseño propuesto de la capa de ejecución de contratos inteligentes de Ethereum utilizando un subconjunto determinístico de WebAssembly_
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html): _Referencia de la API de OASIS_

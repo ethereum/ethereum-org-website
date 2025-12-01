@@ -52,7 +52,7 @@ Ambas opciones tienen diferentes ventajas, resumidas arriba. Si está buscando u
 
 #### Hardware {#hardware}
 
-Sin embargo, una red descentralizada, resistente a la censura, no debería depender de proveedores en la nube. En su lugar, ejecutar su nodo en su propio hardware local es más saludable para el ecosistema. [Las estimaciones](https://www.ethernodes.org/network-types) muestran un gran porcentaje de nodos ejecutados en la nube, lo que podría convertirse en un único punto de error.
+Sin embargo, una red descentralizada, resistente a la censura, no debería depender de proveedores en la nube. En su lugar, ejecutar su nodo en su propio hardware local es más saludable para el ecosistema. [Las estimaciones](https://www.ethernodes.org/networkType/Hosting) muestran un gran porcentaje de nodos ejecutados en la nube, lo que podría convertirse en un único punto de error.
 
 Los clientes de Ethereum pueden ejecutarse en su ordenador, portátil, servidor o incluso en un ordenador de una sola placa. Si bien es posible ejecutar clientes en su ordenador personal, tener una máquina específica solo para su nodo puede mejorar significativamente su rendimiento y seguridad al tiempo que minimiza el impacto en su ordenador principal.
 
@@ -128,6 +128,7 @@ Los múltiples proyectos fáciles de usar pretenden mejorar la experiencia de la
 A continuación se presentan algunos proyectos que pueden ayudarle a instalar y controlar clientes con unos pocos clics:
 
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path): DappNode no viene solo con una máquina de un proveedor. El software, el lanzador de nodos real y el centro de control con muchas funciones pueden utilizarse en hardware arbitrario.
+- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar): la forma más rápida y fácil de configurar un nodo completo. Herramienta de configuración de una sola línea y gestión de nodos TUI. Gratis. Código abierto. Bienes públicos para Ethereum por participantes individuales. Soporte ARM64 y AMD64.
 - [eth-docker](https://eth-docker.net/): la configuración automatizada utilizando Docker centrada en una participación fácil y segura, requiere conocimientos básicos de terminal y Docker. Recomendado para usuarios un poco más avanzados.
 - [Stereum](https://stereum.net/ethereum-node-setup/): lanzador para instalar clientes en un servidor remoto a través de conexión SSH con una guía de configuración de interfaz de usuario, centro de control y muchas otras funciones.
 - [NiceNode](https://www.nicenode.xyz/): lanzamiento con una experiencia de usuario directa para ejecutar un nodo en su ordenador. Sólo tiene que elegir a los clientes y empezar con unos pocos clics. Aún está en fase de desarrollo.
@@ -296,7 +297,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Los documentos sobre Nethermind ofrecen una [guía completa](https://docs.nethermind.io/get-started/running-node/) sobre cómo ejecutar Nethermind con el cliente de consenso.
+Los documentos sobre Nethermind ofrecen una [guía completa](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) sobre cómo ejecutar Nethermind con el cliente de consenso.
 
 Un cliente de ejecución iniciará sus funciones básicas, las terminales elegidas seleccionados y comenzará a buscar pares. Al encontrar pares correctamente, el cliente inicia la sincronización. El cliente de ejecución esperará una conexión desde el cliente de consenso. Los datos actuales de la cadena de bloques estarán disponibles una vez que el cliente se sincronice correctamente al estado actual.
 
@@ -311,7 +312,7 @@ nodo reth \
     --authrpc.port 8551
 ```
 
-Consulte [Configuración de Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) para obtener más información sobre los directorios de datos predeterminados. [La documentación de Reth](https://reth.rs/run/mainnet.html) contiene opciones y detalles de configuración adicionales.
+Consulte [ Configuración de Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth)para obtener más información sobre los directorios de datos predeterminados. [La documentación de Reth](https://reth.rs/run/mainnet.html) contiene opciones y detalles de configuración adicionales.
 
 #### Cómo iniciar el cliente de consenso {#starting-the-consensus-client}
 
@@ -365,7 +366,7 @@ nimbus_beacon_node \
 
 ##### Cómo ejecutar Prysm
 
-Prysm viene con un script que permite una fácil instalación automática. Los detalles pueden encontrarse en el [manual de Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
+Prysm viene con un script que permite una fácil instalación automática. Los detalles pueden encontrarse en el [manual de Prysm](https://docs.prylabs.network/docs/install/install-with-script).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +445,7 @@ Considere la opción de crear un servicio para ejecutar su cliente automáticame
 
 #### Cómo actualizar clientes {#updating-clients}
 
-Debe mantener actualizado el software de su cliente con los últimos parches de seguridad, características y [EIP](/eips/). Especialmente antes de las [bifurcaciones duras](/ethereum-forks/), asegúrese de que está ejecutando la versión de cliente correcta.
+Debe mantener actualizado el software de su cliente con los últimos parches de seguridad, características y [EIP](/eips/). Especialmente antes de las [bifurcaciones duras](/history/), asegúrese de que está ejecutando la versión de cliente correcta.
 
 > Antes de actualizaciones importantes de red, EF sube una publicación en su [blog](https://blog.ethereum.org). Puede [suscribirse a estos anuncios](https://blog.ethereum.org/category/protocol#subscribe) para recibir una notificación a su correo cuando su nodo necesite una actualización.
 
@@ -465,8 +466,9 @@ Como parte de su control, asegúrese de estar atento al funcionamiento de sus m�
 ## Más información {#further-reading}
 
 - [Guías de participación para Ethereum](https://github.com/SomerEsat/ethereum-staking-guides), _Somer Esat, actualizado a menudo_
-- [Guía | Cómo configurar un validador de la participación en la red principal de Ethereum](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _, CoinCashew, actualizado regularmente_
+- [Guía | Cómo configurar un validador para participar en Ethereum en la red principal](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, actualizado con frecuencia_
 - [guías de ETHStaker sobre la ejecución de validadores en redes de prueba](https://github.com/remyroy/ethstaker#guides), _ETHStaker, actualizado regularmente_
+- [Aplicación de muestra AWS Blockchain Node Runner para nodos de Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum): _AWS, actualizada a menudo_
 - [Preguntas frecuentes sobre La Fusión para operadores de nodos](https://notes.ethereum.org/@launchpad/node-faq-merge), _julio de 2022_
 - [Análisis de los requisitos de hardware para crear un nodo validado y completo de Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902)_, Albert Palau, 24 de septiembre de 2018_
 - [Cómo ejecutar los nodos completos de Ethereum: una guía para aquellas personas que se encuentren desmotivadas](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _, Justin Leroux, 7 de noviembre de 2019_

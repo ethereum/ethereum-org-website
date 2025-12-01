@@ -474,6 +474,8 @@ lang: es
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -494,6 +496,6 @@ _Proporcionado en parte por [Mastering Ethereum](https://github.com/ethereumbook
 
 ## Contribuir a esta página {#contribute-to-this-page}
 
-¿Hemos olvidado algo? ¿Hay algo incorrecto? ¡Ayúdenos a mejorar contribuyendo a este glosario en GitHub!
+¿Nos hemos dejado algo? ¿Hay algo incorrecto? ¡Ayúdenos a mejorar contribuyendo con este glosario en GitHub!
 
-[Aprenda cómo contribuir](/contributing/adding-glossary-terms)
+[Entérese aquí de cómo puede contribuir](/contributing/adding-glossary-terms)

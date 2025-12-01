@@ -1,6 +1,7 @@
 ---
 title: Gas y tarifas
-description:
+metaTitle: "Gas y tarifas de Ethereum: visión técnica"
+description: Conozca las comisiones de gas en Ethereum, cómo se calculan y su papel en la seguridad de la red y el procesamiento de transacciones.
 lang: es
 ---
 
@@ -105,7 +106,7 @@ Aunque una transacción incluye un límite, cualquier gas no utilizado en una tr
 
 El límite del gas se refiere a la cantidad máxima de gas que esté dispuesto a que se consuma en una transacción. Las transacciones más complicadas que implican [contratos inteligentes](/developers/docs/smart-contracts/) requieren más trabajo informático, por eso comportan un límite de gas más alto que un pago sencillo. Una transferencia estándar de ETH requiere un límite de gas de 21.000 unidades de gas.
 
-Por ejemplo, si se pone un límite de gas de 50.000 para una simple transferencia ETH, la EVM consumiría 21.000 y recuperaría los 29.000. Sin embargo, si especifica un límite de gas muy bajo, por ejemplo, un límite de gas de 20.000 para una transacción sencilla de ETH, la EVM consumirá sus 20.000 unidades de gas para intentar completar la transacción, pero no se completará. La EVM entonces revierte cualquier cambio, pero dado que el validador ya se hizo con 20.000 unidades de gas por su trabajo, el gas se consume.
+Por ejemplo, si se pone un límite de gas de 50.000 para una simple transferencia ETH, la EVM consumiría 21.000 y recuperaría los 29.000. Sin embargo, si especifica muy poco gas, por ejemplo, un límite de gas de 20.000 para una simple transferencia de ETH, la transacción fallará durante la fase de validación. Se rechazará antes de incluirse en un bloque y no se consumirá gas. Por otro lado, si la transacción se queda sin gas durante la ejecución (p. ej., un contrato inteligente usa todo el gas en la mitad del proceso), la EVM revertirá cualquier cambio, pero aun así se consumirá el gas proporcionado debido al trabajo realizado.
 
 ## ¿Por qué las comisiones de gas son tan elevadas? {#why-can-gas-fees-get-so-high}
 
@@ -122,6 +123,8 @@ La escalabilidad de la capa 2 es una iniciativa primordial para mejorar de maner
 Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, puede usar diferentes herramientas, como:
 
 - [Etherscan](https://etherscan.io/gastracker) _Calculador de precios del gas_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de precios de gas de transacciones de código abierto_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitorea precios de gas para Ethereum y L2 para reducir las tarifas de transacción y ahorrar dinero_
 - [Calculadora de gas de ETH de Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm)_Extensión de Chrome para el cálculo de gas compatible con ambas transacciones tradicionales Tipo 0 y transacciones EIP-1559 Tipo 2._
 - [Calculadora de tarifas de gas Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la red principal, Arbitrum y Polygon._
 
@@ -133,6 +136,8 @@ Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, pue
 
 - [Explicación sobre el gas de Ethereum](https://defiprime.com/gas)
 - [Reducir el consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Documentacion sobre EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Recursos Tim Beiko's EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+- [Recursos EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559: separar mecanismos de memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

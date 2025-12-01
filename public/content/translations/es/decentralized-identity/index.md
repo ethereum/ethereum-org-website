@@ -57,7 +57,7 @@ La identidad descentralizada tiene muchos casos potenciales de uso:
 
 La identidad descentralizada puede ayudar a reemplazar los inicios de sesión basados en contraseña con autenticación descentralizada. Los proveedores de servicios pueden emitir certificados a los usuarios, los cuales pueden ser almacenados en una cartera de Ethereum. Un certificado de ejemplo sería un [NFT](/glossary/#nft) que otorga al titular acceso a una comunidad en línea.
 
-Una función [de inicio de sesión con Ethereum](https://siwe.xyz/) habilitaría entonces a los servidores para confirmar la cuenta de Ethereum del usuario y obtener la verificación necesaria desde la dirección de su cuenta. Esto significa que los usuarios pueden acceder a plataformas y sitios web sin tener que memorizar contraseñas largas y mejorar la experiencia en línea de los usuarios.
+Una función [de inicio de sesión con Ethereum](https://login.xyz/) habilitaría entonces a los servidores para confirmar la cuenta de Ethereum del usuario y obtener la verificación necesaria desde la dirección de su cuenta. Esto significa que los usuarios pueden acceder a plataformas y sitios web sin tener que memorizar contraseñas largas y mejorar la experiencia en línea de los usuarios.
 
 ### 2. Autenticación KYC {#kyc-authentication}
 
@@ -67,7 +67,7 @@ La identidad descentralizada permite a las empresas saltarse a los procesos [Con
 
 ### 3. Votaciones y comunidades en línea {#voting-and-online-communities}
 
-Las votaciones en línea y las redes sociales son dos nuevas aplicaciones para la identidad descentralizada. Los esquemas de votación en línea son susceptibles de manipulación, especialmente si los actores maliciosos crean identidades falsas para votar. Pedir a las personas que presenten certificaciones en la cadena puede mejorar la integridad de los procesos de votación en línea.
+Las votaciones en línea y las redes sociales son dos nuevas aplicaciones para la identidad descentralizada. Los esquemas de votación en línea son susceptibles de manipulación, especialmente si los actores maliciosos crean identidades falsas para votar. Preguntar a las personas que presenten certificados en cadena puede mejorar la integridad de los procesos de votación en línea.
 
 La identidad descentralizada puede ayudar a crear comunidades en línea libres de falsas cuentas. Por ejemplo, cada usuario podría tener que autenticar su identidad utilizando un sistema de identidad en la cadena, como el Ethereum Name Service, reduciendo la posibilidad de bots.
 
@@ -87,7 +87,7 @@ Los identificadores tradicionales como tu nombre jurídico o dirección de corre
 
 Los identificadores descentralizados son emitidos, mantenidos y controlados por individuos. Una [cuenta de Ethereum](/glossary/#account) es un ejemplo de un identificador descentralizado. Puede crear tantas cuentas como quiera sin el permiso de nadie y sin necesidad de almacenarlas en un registro central.
 
-Los identificadores descentralizados son almacenados en "ledgers" distribuidos ([cadena de bloques](/glossary/#blockchain)[) o `<1>`redes persona a persona](/glossary/#peer-to-peer-network) (peer-to-peer). Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
+Los identificadores descentralizados son almacenados en "ledgers" distribuidos ([cadena de bloques](/glossary/#blockchain)[) o <1>redes persona a persona](/glossary/#peer-to-peer-network) (peer-to-peer). Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
 
 ## ¿Qué hace que los identificadores descentralizados sean posibles? {#what-makes-decentralized-identifiers-possible}
 
@@ -119,47 +119,47 @@ Los identificadores descentralizados también son cruciales para proteger la pri
 
 La forma en que se almacena y recupera la información de los certificados en un ecosistema de identidad basado en Ethereum es diferente de la gestión tradicional de la identidad. He aquí una visión general de los diversos enfoques para emitir, almacenar y verificar los certificados en sistemas de identidad descentralizados:
 
-### Certificados fuera de cadena {#off-chain-attestations}
+### Certificaciones fuera de cadena {#offchain-attestations}
 
-Un problema que conlleva el almacenamiento de certificados en la cadena es que pueden contener información que los individuos quieren mantener privados. La naturaleza pública de la cadena de bloques de Ethereum no facilita el almacenamiento de tales certificados.
+Una de las cuestiones que plantea el almacenamiento de certificaciones en la cadena de bloques es que podrían contener información que las personas quieren mantener privada. La naturaleza pública de la cadena de bloques de Ethereum no facilita el almacenamiento de tales certificados.
 
-La solución es emitir certificados mantenidos por los usuarios fuera de la cadena en carteras digitales pero firmadas con el CPI del emisor almacenado en la cadena. Estos certificados están codificados como [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) y contienen la firma digital del emisor, lo que permite una verificación fácil de las reclamaciones fuera de la cadena.
+La solución es emitir certificaciones, mantenidas por los usuarios fuera de la cadena en carteras digitales, pero firmadas con el DID almacenado en cadena del emisor. Estas certificaciones están codificadas como [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) y contienen la firma digital del emisor, lo que permite una fácil verificación de las reclamaciones fuera de la cadena.
 
-Este es un escenario hipotético para explicar los certificados fuera de la cadena:
+He aquí un escenario hipotético para explicar las atestaciones fuera de cadena:
 
 1. Una universidad (el emisor) genera un certificado (un certificado académico digital), firma con sus claves y lo emite a Bob (el titular de la identidad).
 
 2. Bob solicita un empleo y quiere demostrar sus cualificaciones académicas a un empleador, por lo que comparte la certificación desde su cartera. La compañía (el verificador) puede confirmar la validez del certificado comprobando el CPI del emisor (es decir, su clave pública en Ethereum).
 
-### Certificaciones fuera de cadena con acceso permanente {#offchain-attestations-with-persistent-access}
+### Certificaciones fuera de cadena con acceso persistente {#offchain-attestations-with-persistent-access}
 
-Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un [hash](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
+Amparadas por este acuerdo, las certificaciones se transforman en archivos JSON y se almacenan fuera de la cadena (idealmente en una plataforma [almacenamiento descentralizado en la nube](/developers/docs/storage/), como IPFS o Swarm). Sin embargo, un [hash](/glossary/#hash) del archivo JSON se almacena en cadena y se vincula a un DID a través de un registro en cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
 
 Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de reclamaciones cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
 
-### Certificados en la cadena {#onchain-attestations}
+### Certificaciones en cadena {#onchain-attestations}
 
-Los certificados en cadena se mantienen en [contratos inteligentes](/glossary/#smart-contract) en la cadena de bloques de Ethereum. El contrato inteligente (actuando como un registro) enlazará un certificado a un identificador descentralizado correspondiente en la cadena (una clave pública).
+Las certificaciones en cadena se mantienen en [contratos inteligentes](/glossary/#smart-contract) en la cadena de bloques de Ethereum. El contrato inteligente (que actúa como un registro) enlazará una certificación con un identificador descentralizado correspondiente en la cadena (una clave pública).
 
-He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los certificados en la cadena:
+He aquí un ejemplo para mostrar cómo las certificaciones en cadena podrían funcionar en la práctica:
 
 1. Una empresa (XYZ Corp) planea vender acciones utilizando un contrato inteligente, pero solo quiere compradores que hayan completado una comprobación de antecedentes.
 
-2. XYZ Corp puede hacer que la empresa realice comprobaciones de antecedentes para emitir certificados en cadena en Ethereum. Este certificado verifica que el individuo ha pasado la comprobación de antecedentes sin exponer ninguna información personal.
+2. XYZ Corp puede hacer que la empresa realice verificaciones de antecedentes para emitir certificaciones en cadena en Ethereum. Este certificado verifica que el individuo ha pasado la comprobación de antecedentes sin exponer ninguna información personal.
 
 3. El contrato inteligente de venta de acciones puede comprobar el contrato de registro para ver las identidades de los compradores examinados, haciendo posible que el contrato inteligente determine quién está autorizado a comprar acciones y quién no.
 
 ### Los tókenes Souldbound y la identidad {#soulbound}
 
-[Los tokens Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFT no transferibles](/glossary/#nft)) podrían usarse para recopilar información exclusiva de una billetera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
+[Los tokens Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFT no transferibles](/glossary/#nft)) podrían usarse para recopilar información exclusiva de una billetera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección Ethereum en particular que podría incluir tókenes que representan logros (por ejemplo, terminar algún curso en línea específico o aprobar una puntuación umbral en un juego) o participación de la comunidad.
 
 ## Usos de la identidad descentralizada {#use-decentralized-identity}
 
 Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones de identidad descentralizada:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Un sistema de nomenclatura descentralizado en la cadena, identificadores legibles por máquinas, como direcciones del cartera Ethereum, hashes de contenido y metadatos._
+- **[Ethereum Name Service (ENS)](https://ens.domains/)**: _un sistema de nomenclatura descentralizado para identificadores legibles por máquina en cadena, como direcciones de cartera Ethereum, hashes de contenido y metadatos. _
 - **[SpruceID](https://www.spruceid.com/)** - _Un proyecto de identidad descentralizado que permite a los usuarios controlar la identidad digital con cuentas de Ethereum y perfiles ENS en lugar de depender de servicios de terceros._
-- **[Servicio de Atestación de Ethereum (EAS)](https://attest.sh/)**: _Un registro/protocolo descentralizado para hacer atestaciones dentro o fuera de la cadena sobre cualquier cosa._
+- **[Servicio de Atestaciones Ethereum (EAS)](https://attest.sh/)**: _un libro mayor/protocolo descentralizado para hacer certificaciones en cadena o fuera de cadena sobre cualquier cosa. _
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (o PoH) es un sistema de verificación de identidad social construido en Ethereum._
 - **[Brillo](https://www.brightid.org/)** - _Una red de identidad social descentralizada y de código abierto que busca reformar la verificación de identidad a través de la creación y el análisis de un gráfico social._
 - **[walt.id](https://walt.id)**: _ infraestructura de cartera e identidad descentralizadas de código abierto que permiten a los desarrolladores y organizaciones aprovechar la identidad autosoberana y los NFT/SBT._
@@ -180,12 +180,12 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
 - [BrightID - Identidad descentralizada en Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _episodio de pódcast Bankless abordando BrightID, una solución de identidad descentralizada para Ethereum_
-- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
+- [The Offchain Internet: identidad descentralizada & y credenciales verificables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) Presentación de EthDenver 2022 por Evin McMullen
 - [Credenciales verificables explicadas](https://www.youtube.com/watch?v=ce1IdSr-Kig), Vídeo explicativo de YouTube con una demostración realizada por Tamino Baumann
 
 ### Comunidades {#communities}
 
 - [ERC-725 Alianza en GitHub](https://github.com/erc725alliance) — _Partidarios del estándar ERC725 para gestionar la identidad en la cadena de bloques Ethereum_
-- [Servidor EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Comunidad para entusiastas y desarrolladores que trabajan en Sign-in con Ethereum_
+- [Servidor SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Comunidad para entusiastas y desarrolladores que trabajan en SpruceID con Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una comunidad de desarrolladores que contribuyen a la construcción de un marco para datos verificables para aplicaciones_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ): _una comunidad de desarrolladores y constructores que se ocupan de los casos de uso para las identidades descentralizadas en varias industrias._

@@ -23,7 +23,7 @@ Para una mejor comprensión de esta página, recomendamos que primero lea acerca
 - [Transferencia en lotes](#batch_transfers): transfiera múltiples activos en una sola llamada.
 - [Saldos en lote](#batch_balance): obtenga saldos de multiples activos en una sola llamada.
 - [Aprobación en lote](#batch_approval): apruebe todos los tokens en una dirección.
-- [Hooks](#receive_hook): reciba hooks de tokens.
+- [Hooks](#recieve_hook): reciba hooks de tokens.
 - [Compatibilidad con NFT](#nft_support): si el suministro solo es 1, trátelo como un NFT.
 - [Reglas de transferencia segura](#safe_transfer_rule): conjunto de reglas para una transferencia segura.
 
@@ -141,6 +141,6 @@ _Nota_: Todas las funciones de lote, incluyendo hook, también existen como vers
 ## Más información {#further-reading}
 
 - [EIP-1155: estándar multitoken](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155: Documentos de Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155: Documentos de Openzeppelin](https://docs.openzeppelin.com/contracts/5.x/erc1155)
 - [ERC-1155: Repositorio de GitHub](https://github.com/enjin/erc-1155)
 - [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -70,7 +70,7 @@ Las especificaciones formales de bajo nivel se pueden dar como propiedades de es
 
 ### Propiedades de estilo Hoare {#hoare-style-properties}
 
-La [lógica de Hoare](https://en.wikipedia.org/wiki/Hoare_logic) proporciona un conjunto de reglas formales para razonar sobre la corrección de los programas, incluidos los contratos inteligentes. Una propiedad de estilo Hoare está representada por un triple Hoare `{P}c{Q}`, donde `c` es un programa y `P` y `Q` son predicados sobre el estado del `c` (es decir, el programa), descrito formalmente como _precondiciones_ y _poscondiciones_, respectivamente.
+La [lógica de Hoare](https://en.wikipedia.org/wiki/Hoare_logic) proporciona un conjunto de reglas formales para razonar sobre la corrección de los programas, incluidos los contratos inteligentes. Una propiedad de estilo Hoare se representa por un triplete de Hoare `{P}c{Q}`, donde `c` es un programa y `P` y `Q` son predicados sobre el estado de `c` (es decir, el programa), descritos formalmente como _precondiciones_ y _poscondiciones_, respectivamente.
 
 Una precondición es un predicado que describe las condiciones requeridas para la correcta ejecución de una función; los usuarios que invocan o llaman al contrato deben cumplir con este requisito. Una poscondición es un predicado que describe la condición que una función establece si se ejecuta correctamente; los usuarios pueden esperar que esta condición sea verdadera después de invocar la función. Un _invariante_ en la lógica de Hoare es un predicado que se conserva mediante la ejecución de una función (es decir, no cambia).
 

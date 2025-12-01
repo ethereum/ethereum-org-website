@@ -7,7 +7,13 @@ hideEditButton: true
 
 # Próximos eventos {#events}
 
-**Cada mes, se celebran grandes eventos de Ethereum en todo el mundo.** Plantéese asistir a alguno cerca suyo para conocer a más gente en la comunidad, aprender sobre oportunidades de empleo y desarrollar nuevas habilidades.
+Los eventos de Ethereum suelen celebrarse con periodicidad y en múltiples formatos: desde encuentros informales a pequeña escala a grandes conferencias, e incluso hasta hackatones mundiales.
+
+Estos eventos son la forma más divertida y atractiva de aprender, conectar con tu comunidad local, descubrir opportunidades y desarrollar nuevas habilidades.
+
+¿Quiere organizar un evento o tiene una iniciativa comunitaria en mente? ¡Póngase en contacto con el equipo de Ethereum Everywhere para obtener asistencia! → [Póngase en contacto aquí](https://docs.google.com/forms/d/e/1FAIpQLSeA-W8iy2PJxrY3TD4lMYXyky_wLd4QB_7NRwqSxCd0e19MUg/viewform)
+
+¿Quiere descubrir los eventos de Ethereum que haya en su zona? ¡Eche un vistazo a los eventos y reuniones de abajo para encontrar los próximos a los que pueda unirse!
 
 <UpcomingEventsList/>
 

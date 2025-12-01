@@ -13,7 +13,7 @@ Le sugerimos que comience enterándose de la misión y los valores de ethereum.o
 ## Desarrolladores <Emoji text=":computer:" size={1} /> {#developers}
 
 - Aprenda y pruebe Ethereum en [ethereum.org/developers/](/developers/)
-- ¡Participe en un hackaton (o encuentro de programadores) [ETHGlobal](http://ethglobal.co/) cerca de donde viveo
+- ¡Participe en un hackatón (o encuentro de programadores) [ETHGlobal](http://ethglobal.co/) cerca de donde vive
 - Consulte [los proyectos relacionados con su área especialidad o el lenguaje de programación de su elección](/developers/docs/programming-languages/).
 - Vea o participe en las [Llamadas de la capa de consenso y ejecución](https://www.youtube.com/@EthereumProtocol/streams).
 - [Lista de deseos del Programa de apoyo al ecosistema](https://esp.ethereum.foundation/wishlist/): herramientas, documentación e infraestructura donde el Programa de apoyo al ecosistema de Ethereum está buscando activamente propuestas para becar.
@@ -106,6 +106,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 - [Bolsa de trabajo de Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Bolsa de trabajo de Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
+- [Tablón de anuncio vacantes de empleo de Ethereum](https://www.ethereumjobboard.com/)
 - [Vacantes de empleo de criptomoneda](https://cryptocurrencyjobs.co/ethereum/)
 - [Empleo en ConsenSys](https://consensys.net/careers/)
 - [Lista de empleos de cripto](https://cryptojobslist.com/ethereum-jobs)
@@ -114,6 +115,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 - [Web3 Army](https://web3army.xyz/)
 - [Vacantes de empleo en Crypto Valley](https://cryptovalley.jobs/)
 - [Vacantes de empleo en Ethereum](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Únase a una DAO {#decentralized-autonomous-organizations-daos}
 
@@ -124,6 +126,7 @@ Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovec
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech): _Colectivo independiente de desarrollo de Web3 que funciona como una DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit): _Comunidad de gobernanza de DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO): _Ingeniería jurídica_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial): _Comunidad artística_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO): _Iniciativa de prelanzamiento de proyectos de criptomonedas_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam): _Mecánica de juego MMORPG aplicada a la vida real_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory): _Marcas de ropa «digifísicas»_

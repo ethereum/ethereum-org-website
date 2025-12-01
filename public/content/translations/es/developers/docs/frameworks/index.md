@@ -63,7 +63,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 **Tenderly:** **_Plataforma de desarrollo web3 que permite a los desarrolladores de cadena de bloques crear, probar, depurar, monitorear y operar contratos inteligentes y mejorar la experiencia de usuario de dapps._**
 
 - [Sitio web](https://tenderly.co/)
-- [Documentación](https://docs.tenderly.co/)
+- [Documentación](https://docs.tenderly.co/ethereum-development-practices)
 
 **The Graph:** **_The Graph para consultar datos de la cadena de bloques de manera eficiente._**
 
@@ -107,7 +107,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 
 **OpenZeppelin SDK: ****_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
 
-- [SDK de OpenZeppelin](https://docs.openzeppelin.com)
+- [SDK de OpenZeppelin](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/support/17)
 - **El desarollo de OpenZeppelin SDK ha finalizado**
@@ -131,6 +131,14 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [Documentación](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Extensión de VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo:** **_un marco modular, de código abierto y agnóstico que facilita a los desarrolladores de aplicaciones descentralizadas la integración de identidades descentralizadas y credenciales verificables en sus aplicaciones._**
+
+- [Página de inicio](https://veramo.io/)
+- [Documentación](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [Paquete NPM](https://www.npmjs.com/package/@veramo/core)
 
 ## Leer más {#further-reading}
 

@@ -38,12 +38,12 @@ Plataformas con persistencia basada en la cadena de bloques:
 
 La persistencia **basada en contratos** intuye que los datos no pueden ser replicados por cada nodo y almacenados para siempre, y en su lugar deben ser mantenidos con acuerdos contractuales. Hay acuerdos realizados con múltiples nodos que se comprometen a mantener ciertos datos durante un período de tiempo. Estos deberán ser reembolsados o renovados cuando expiran para seguir manteniendo los datos.
 
-En la mayoría de los casos, en lugar de almacenar todos los datos en la cadena, se almacena solo el hash del lugar donde se encuentran los datos en la cadena. De esta manera no es necesario escalar toda la cadena para poder mantener la información completa.
+En la mayoría de los casos, en vez de almacenar todos los datos en cadena, se almacenan en el hash donde se encuentran los datos en una cadena. De esta manera no es necesario escalar toda la cadena para poder mantener la información completa.
 
 Plataformas con persistencia basada en contratos:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
@@ -88,7 +88,6 @@ No existen buenas herramientas para medir el nivel de descentralización de las 
 
 Herramientas descentralizadas sin KYC:
 
-- Züs (implementando una edición sin KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -127,11 +126,11 @@ Basado en prueba de participación:
 - [Documentación](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet: _Skynet es una cadena de PoW descentralizada dedicada a una Web descentralizada._**
+**Sia: _aprovecha la criptografía para crear un mercado de almacenamiento en la nube que no requiere de confianza y que permite a compradores y vendedores realizar transacciones directamente._**
 
-- [Skynet.net](https://siasky.net/)
-- [Documentación](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Documentación](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin: _Filecoin fue creado por el equipo creador de IPFS. Es una capa de incentivos basada en los ideales de IPFS._**
 
@@ -145,7 +144,7 @@ Basado en prueba de participación:
 - [Documentación](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs: _Züs es una plataforma de dStorage de prueba de participación con sharding y blobbers._**
+**Züs - _Züs es una plataforma dStorage de prueba de consenso con sharding y blobbers._**
 
 - [zus.network](https://zus.network/)
 - [Documentación](https://0chaindocs.gitbook.io/zus-docs)

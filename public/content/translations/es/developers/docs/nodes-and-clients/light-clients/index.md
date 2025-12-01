@@ -44,14 +44,18 @@ Se está desarrollando una cantidad considerable de clientes ligeros, incluidos 
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente ligero de consenso escrito en TypeScript
 - [Helios](https://github.com/a16z/helios): cliente ligero de consenso y ejecución combinados escrito en Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): modo ligero para el cliente de ejecución (en desarrollo) escrito en Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): cliente ligero de consenso escrito en Nim
+-
+[Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modo ligero para el cliente de ejecución (en desarrollo) escrito en Go</li> 
+  
+  - [Nimbus](https://nimbus.guide/el-light-client.html): cliente ligero de consenso escrito en Nim</ul> 
 
 A nuestro entender, ninguna de estas implementaciones se considera lista para entrar aún en la fase de producción.
 
 También se ha realizado un inmenso esfuerzo por mejorar la manera en que los clientes ligeros acceden a los datos en Ethereum. Actualmente, los clientes ligeros confían en las solicitudes que hacen los RPC a los nodos completos usando un modelo cliente/servidor, pero en el futuro se podrían solicitar los datos de una forma más descentralizada, utilizando redes dedicadas como las de la [Portal Network](https://www.ethportal.net/) la cual puede suministrar datos a los clientes ligeros usando un protocolo de intercambio de información P2P.
 
 Otros elementos en la [hoja de ruta](/roadmap/) como [árbol de Verkle](/roadmap/verkle-trees/) y [sin estado](/roadmap/statelessness/) aportarán con el tiempo la misma garantía de seguridad de los clientes ligeros a los clientes completos.
+
+
 
 ## Más información {#further-reading}
 

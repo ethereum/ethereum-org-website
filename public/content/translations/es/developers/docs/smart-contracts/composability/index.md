@@ -1,6 +1,6 @@
 ---
 title: Componibilidad de los contratos inteligentes
-description:
+description: Descubra cómo los contratos inteligentes pueden combinarse al igual que los bloques de Lego para construir DApps complejas reutilizando componentes existentes.
 lang: es
 incomplete: true
 ---
@@ -29,7 +29,7 @@ Los contratos inteligentes de Ethereum son como API públicas, por lo que cualqu
 
 ### Ciclo de desarrollo más corto {#shorter-development-cycle}
 
-La componibilidad reduce el trabajo que los desarrolladores tienen que hacer al crear [dapps](/apps/#what-are-dapps). [Como indica Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Código abierto significa que cada problema tiene que resolverse una vez."
+La amoldabilidad reduce el trabajo que los desarrolladores tienen que hacer al crear [DApps](/apps/#what-are-dapps). [Como indica Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Código abierto significa que cada problema tiene que resolverse una vez."
 
 Si hay un contrato inteligente que resuelve un problema, otros desarrolladores pueden reutilizarlo, por lo que no tienen que resolver el mismo problema. De esta manera, los desarrolladores pueden usar las bibliotecas de software ya existentes y añadir funcionalidad adicional para crear nuevas dapps.
 
@@ -57,7 +57,7 @@ Si crea un dapp que requiere que las transacciones se paguen en ETH, puede permi
 
 ### Gobernanza {#governance}
 
-Crear sistemas de gobernanza a medida para una [DAO](/dao/) puede ser costoso y consumir mucho tiempo. En su lugar, se podría utilizar un kit de herramientas de gobernanza de código abierto, como [Aragon Client](https://client.aragon.org/), para arrancar la DAO y poder crear rápidamente un marco de gobernanza.
+Crear sistemas de gobernanza a medida para una [DAO](/dao/) puede ser costoso y consumir mucho tiempo. En su lugar, se podría utilizar un kit de herramientas de gobernanza de código abierto, como <0">Aragon Client</a>, para arrancar la DAO y poder crear rápidamente un marco de gobernanza.
 
 ### Gestión de identidades {#identity-management}
 

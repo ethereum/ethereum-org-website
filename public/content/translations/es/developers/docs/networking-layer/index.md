@@ -75,7 +75,7 @@ Junto con los mensajes de saludo, el protocolo de cable también puede enviar un
 
 Una vez que los pares están conectados y se ha iniciado una sesión RLPx, el protocolo de cable define cómo se comunican los pares. Inicialmente, el protocolo de cable definía tres tareas principales: sincronización de la cadena, propagación de bloques e intercambio de transacciones. Sin embargo, una vez que Ethereum cambió a la prueba de participación, la propagación de bloques y la sincronización de cadenas se convirtieron en parte de la capa de consenso. El intercambio de transacciones todavía está en el ámbito de los clientes de ejecución. El intercambio de transacciones se refiere al intercambio de transacciones pendientes entre nodos para que los constructores de bloques puedan seleccionar algunas de ellas para su inclusión en el siguiente bloque. Hay información detallada sobre estas tareas [aquí](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Los clientes que admiten estos subprotocolos los exponen a través del [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### les (subprotocolo ligero de ethereum) {#les}
+#### les (subprotocolo ligero de Ethereum) {#les}
 
 Este es un protocolo mínimo para sincronizar clientes ligeros. Tradicionalmente, este protocolo rara vez se ha utilizado porque los nodos completos deben servir datos a los clientes ligeros sin ser incentivados. El comportamiento predeterminado de los clientes de ejecución no es servir datos de clientes ligeros sobre les. Hay más información disponible en la [especificación de Ies](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 

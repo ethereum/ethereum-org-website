@@ -34,7 +34,7 @@ Una red local de Ethereum diseñada para el desarrollo. Le permite implementar s
 
 La red de tipo Hardhat viene integrada con Hardhat, que es un entorno de desarrollo de Ethereum para profesionales.
 
-- [Sitio web.](https://hardhat.org/)
+- [Sitio web](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### Cadenas de baliza locales {#local-beacon-chains}
@@ -43,14 +43,13 @@ Algunos clientes de consenso tienen herramientas integradas para implementar cad
 
 - [Red de prueba local con Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Red de prueba local con Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Red de prueba local con Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Cadenas de prueba públicas de Ethereum {#public-beacon-testchains}
 
-También hay dos implantaciones de prueba públicas mantenidas de Ethereum: Sepolia y Hoodi. Sepolia es la red de prueba estándar recomendada para el desarrollo de aplicaciones, con un conjunto de validadores cerrado para una sincronización rápida. Hoodi es una red de prueba para validación y staking, que utiliza un conjunto de validadores abierto y permite potencialmente que cualquiera valide.
+También hay dos implementaciones de prueba públicas de Ethereum mantenidas: Sepolia y Hoodi. La red de prueba recomendada con soporte a largo plazo es Hoodi, en la que cualquiera es libre de validar. Sepolia usa un conjunto de validadores autorizados, lo que significa que no hay acceso general a nuevos validadores en esta red de prueba.
 
-- [Launchpad de staking de Hoodi](https://hoodi.launchpad.ethereum.org/en/)
-- [Sitio web de Sepolia](https://sepolia.dev/)
-- [Sitio web de Hoodi](https://hoodi.ethpandaops.io/)
+- [Lanzador de participación en Hoodi](https://hoodi.launchpad.ethereum.org/)
 
 ### Paquete de Ethereum de Kurtosis {#kurtosis}
 
@@ -59,7 +58,7 @@ Kurtosis es un sistema de construcción para entornos de prueba de múltiples co
 El paquete Ethereum Kurtosis se puede utilizar para instanciar rápidamente una red de pruebas de Ethereum parametrizable, altamente escalable y privada sobre Docker o Kubernetes. El paquete es compatible con los principales clientes de la Capa de Ejecución (EL) y la Capa de Consenso (CL). Kurtosis gestiona con elegancia todos los mapeos locales de puertos y conexiones de servicios para una red representativa que se utilizará en flujos de trabajo de validación y pruebas relacionados con la infraestructura básica de Ethereum.
 
 - [Paquete de red Ethereum](https://github.com/kurtosis-tech/ethereum-package)
-- [Sitio web](https://www.kurtosis.com/)
+- [Sitio web.](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentación](https://docs.kurtosis.com/)
 

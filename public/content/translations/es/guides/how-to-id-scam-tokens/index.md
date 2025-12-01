@@ -13,13 +13,13 @@ Hay dos maneras en las que puede que intenten engañarle:
 - **Vendiéndole un token estafa**, que puede parecer el token legítimo que quiere comprar, pero que lo emiten los estafadores y, por tanto, no vale nada.
 - **Engañándole para que firme malas transacciones**, generalmente dirigiéndole a su propia interfaz de usuario. Podrían intentar que le dé a sus contratos una asignación en sus tókenes ERC-20, exponiendo información confidencial que les dé acceso a sus activos, etc. Estas interfaces de usuario podrían ser clones casi perfectos de sitios honestos, pero con trucos ocultos.
 
-Para ilustrar lo que son los tókenes estafa y cómo identificarlos, vamos a ver un ejemplo de uno: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Este token intenta parecerse al token legítimo [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
+Para ilustrar lo que son los tókenes estafa y cómo identificarlos, vamos a ver un ejemplo de uno: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Este token intenta parecerse al token legítimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
 title="¿Qué es ARB?"
 contentPreview=''>
 
-Arbitrum es una organización que desarrolla y gestiona [rollups (o acumulaciones) optimistas](/developers/docs/scaling/optimistic-rollups/). Inicialmente, Arbitrum se fundó como una empresa con fines lucrativos, pero luego tomó medidas para descentralizarse. Como parte de ese proceso, emitió un [token de gobernanza negociable](/dao/#token-based-based-membership).
+Arbitrum es una organización que desarrolla y gestiona [optimistic rollups] (/developers/docs/scaling/optimistic-rollups/). Inicialmente, Arbitrum se fundó como una empresa con fines lucrativos, pero luego tomó medidas para descentralizarse. Como parte del proceso, han lanzado un [token de gobernanza] que admite transacciones (/dao/#token-based-membership).
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ La finalidad última de Ethereum es la descentralización. Esto significa que no
 title="¿Qué son los contratos inteligentes?"
 contentPreview=''>
 
-[Los contratos inteligentes](/developers/docs/smart-contracts/) son los programas que se ejecutan en la parte superior de la cadena de bloques Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.
+[Los contratos inteligentes](/developers/docs/smart-contracts/) son los programas que se ejecutan sobre la cadena de bloques de Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.
 
 </ExpandableCard>
 
@@ -55,7 +55,7 @@ Hay varios trucos que los creadores de tókenes estafa hacen para que parezcan l
 
 - **Propietarios legítimos**. Los tokens estafa a menudo regalan saldos significativos a direcciones que se puede esperar que sean titulares legítimos del token real.
 
-  Por ejemplo, retomemos el `wARB` de nuevo. [Alrededor del 16 % de los tókenes](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) están en manos de una dirección cuya nombre público es [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). Esta no _es_ una dirección falsa, realmente es la dirección que [desplegó el contrato ARB real en la red principal de Ethereum](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  Por ejemplo, retomemos el `wARB` de nuevo. [Alrededor del 16 % de los tókenes](https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders) están en manos de una dirección cuya nombre público es [Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F). Esta no _es_ una dirección falsa, es la dirección real en la que [desplegó el contrato ARB real en la red principal de Ethereum](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
   Debido a que el saldo ERC-20 de una dirección es parte del almacenamiento del contrato ERC-20, se puede especificar en el contrato para que sea lo que el desarrollador del contrato desee. También es posible que un contrato prohíba las transferencias para que los usuarios legítimos no puedan deshacerse de esos tókenes estafa.
 
@@ -94,4 +94,4 @@ Mientras haya valor en el mundo, va a haber estafadores que intenten robarlo par
 - Los tókenes estafa se hacen pasar por tókenes legítimos, pueden usar el mismo nombre, símbolo, etc.
 - Los tókenes estafa _no pueden_usar la misma dirección del contrato.
 - La mejor fuente para la dirección del token legítimo es la organización propietaria del token.
-- De lo contrario, puede usar aplicaciones populares y de confianza como [Uniswap](https://app.uniswap.org/#/swap) y [Etherscan](https://etherscan.io/).
+- De lo contrario, puede usar aplicaciones populares y de confianza como [Uniswap](https://app.uniswap.org/#/swap) y [Blockscout](https://eth.blockscout.com/).

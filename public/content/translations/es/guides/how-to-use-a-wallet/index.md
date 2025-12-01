@@ -1,5 +1,6 @@
 ---
 title: Cómo utilizar una cartera
+metaTitle: Cómo usar carteras de Ethereum | Guía detallada
 description: Una guía para explicar cómo enviar, recivir tókenes y conectarse con proyectos de web3.
 lang: es
 ---
@@ -62,15 +63,12 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 5. Confirme la solicitud en su cartera para establecer la conexión. ** Aceptar este mensaje no requiere gastar ETH **.
 6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puede encontrar algunos proyectos interesantes en nuestra [ página DApps](/apps/#explore). <br />
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Preguntas más frecuentes
 

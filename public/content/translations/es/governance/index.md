@@ -20,17 +20,17 @@ Ninguna persona controla el protocolo de Ethereum; sin embargo, eso no quita que
 
 ## Gobernanza de Ethereum {#ethereum-governance}
 
-La gobernanza de Ethereum es el proceso mediante el cual se realizan cambios en el protocolo. Es importante señalar que este proceso no está relacionado con el uso que la gente y las aplicaciones hacen del protocolo: Ethereum es una red pública. Cualquier individuo, independientemente de su procedencia, puede participar en actividades desarrolladas en la cadena de bloques. No hay reglas establecidas con respecto a quién puede o no puede crear una aplicación o realizar una transacción. Sin embargo, existe un proceso para proponer cambios en el protocolo central, sobre el que se ejecutan las aplicaciones descentralizadas. Puesto que tanta gente depende de la estabilidad de Ethereum, existen unos estrictos criterios de coordinación aplicables a los cambios fundamentales, que incluyen procesos sociales y técnicos. El objetivo es garantizar que cualquier cambio en Ethereum sea seguro y cuente con el respaldo unánime de la comunidad.
+La gobernanza de Ethereum es el proceso mediante el cual se realizan cambios en el protocolo. Es importante señalar que este proceso no está relacionado con el uso que la gente y las aplicaciones hacen del protocolo: Ethereum es una red pública. Cualquier persona de cualquier parte del mundo puede participar en actividades en cadena. No hay reglas establecidas con respecto a quién puede o no puede crear una aplicación o realizar una transacción. Sin embargo, existe un proceso para proponer cambios en el protocolo central, sobre el que se ejecutan las aplicaciones descentralizadas. Puesto que tanta gente depende de la estabilidad de Ethereum, existen unos estrictos criterios de coordinación aplicables a los cambios fundamentales, que incluyen procesos sociales y técnicos. El objetivo es garantizar que cualquier cambio en Ethereum sea seguro y cuente con el respaldo unánime de la comunidad.
 
-### Gobernanza «on-chain» frente a gobernanza «off-chain» {#on-chain-vs-off-chain}
+### Gobernanza en cadena frente a gobernanza fuera de cadena {#onchain-vs-offchain}
 
-La tecnología de cadenas de bloques abre la posibilidad a nuevas opciones de gobernanza, conocidas como gobernanza «on-chain» o dentro de la cadena. La gobernanza dentro de la cadena se da cuando las propuestas de cambios en el protocolo se deciden mediante los votos de las partes interesadas. Por lo general, estos actores son los tenedores de un token de gobernanza y la votación ocurre en la cadena de bloques. En algunas formas de gobernanza en cadena, los cambios de protocolo propuestos ya están escritos en código y se implementan automáticamente si las partes interesadas aprueban los cambios.
+La tecnología de cadena de bloques permite nuevas posibilidades de gobernanza, lo que se conoce como gobernanza en cadena. La gobernanza en cadena ocurre cuando propuestas de cambios en el protocolo se deciden por una votación de las partes interesadas, normalmente tenedores de un token de gobernanza, y la votación ocurre en la cadena de bloques. En algunas formas de gobernanza en cadena, los cambios de protocolo propuestos ya están escritos en código y se implementan automáticamente si las partes interesadas aprueban los cambios firmando una transacción.
 
-El enfoque opuesto, la gobernanza «off-chain» o externa a la cadena, consiste en que cualquier decisión de modificación del protocolo se produce a través de un proceso informal de debate social que, de aprobarse, se aplicaría en código.
+El enfoque opuesto, la gobernanza fuera de cadena, es cuando cualquier decisión de modificación del protocolo se produce a través de un proceso informal de debate social, que, de aprobarse, se implementaría en el código.
 
-**La gobernanza de Ethereum ocurre externa a la cadena** y una amplia variedad de actores intervienen en el proceso.
+**La gobernanza de Ethereum se realiza fuera de cadena** con una gran variedad de partes interesadas que intervienen en el proceso.
 
-_A pesar de que siguiendo el protocolo, la gobernanza de Ethereum se desarrolla externa a la cadena de bloques, muchos casos de uso que se ejecutan sobre la red Ethereum, como las DAO, se sirven de la gobernanza dentro de la cadena._
+_A pesar de que a nivel de protocolo la gobernanza de Ethereum se realiza fuera de cadena, muchos casos de uso construidos sobre Ethereum, como las DAO, se sirven de la gobernanza en cadena._
 
 <ButtonLink href="/dao/">
   Más información acerca de las DAO
@@ -44,7 +44,7 @@ En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple 
 
 - **Tenedores de ether**: personas que tienen una cantidad arbitraria de ETH. [Más información sobre ETH](/eth/).
 - **Usuarios de aplicaciones**: estas personas interactúan con aplicaciones en la cadena de bloques de Ethereum.
-- **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre DApps](/apps/).
+- **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre DApp](/apps/).
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).
 - **Autores de EIP**: estas personas proponen cambios en el protocolo Ethereum en calidad de propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»). [Más información sobre las EIP](/eips/).
 - **Validadores**: estas personas ejecutan nodos que pueden añadir nuevos bloques a la cadena de bloques de Ethereum.
@@ -118,7 +118,7 @@ Por lo general, los desacuerdos se tratan en discusiones extensas en foros de ac
 
 Las bifurcaciones se dan cuando hay mejoras técnicas o modificaciones que cambian las reglas del juego en el protocolo. Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) deben actualizar su software para implementar las nuevas reglas establecidas en la bifurcación.
 
-La bifurcación de una DAO surgió en respuesta al [ataque de una DAO en 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), donde un contrato inseguro de una [DAO](/glossary/#dao) fue drenado por más de 3,6 millones de ETH en un hack. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
+La bifurcación DAO surgió como respuesta al [ataque de DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) donde un contrato inseguro [DAO](/glossary/#dao) fue drenando más de 3,6 millones de ETH en un hackeo. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
 
 Esta acción fue votada por la comunidad Ethereum. Cualquier titular de ETH pudo votar a través de una transacción en [una plataforma de votación](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisión de bifurcar obtuvo más del 85 % de los votos.
 
@@ -152,7 +152,7 @@ El proceso de gobernanza de Ethereum usualmente cambia velocidad y eficiencia po
 
 Si bien la especificación y las implementaciones de desarrollo siempre han sido totalmente de código abierto, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
 
-Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/ethereum-forks/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
+Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/history/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
 <ButtonLink href="/roadmap/merge/">
   Más sobre la fusión
@@ -180,3 +180,5 @@ La gobernanza en Ethereum no está estrictamente definida. Muchos participantes 
 - [¿Qué es un desarrollador del núcleo de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Gobernanza, parte 2: La plutocracia todavía es mala](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html), _Vitalik Buterin_
 - [Más allá de la gobernanza de la votación de monedas](https://vitalik.eth.limo/general/2021/08/16/voting3.html), _Vitalik Buterin_
+- [Entender la gobernanza de las cadenas de bloques](https://research.2077.xyz/understanding-blockchain-governance), _2077 Research_
+- [El gobierno de Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/), _Christine Kim_

@@ -53,9 +53,9 @@ También requiere una configuración de hardware muy básica, y cierta comprensi
 </ExpandableCard>
 
 <ExpandableCard title="Gestión segura de claves" eventCategory="SoloStaking" eventName="clicked secure key management">
-De la misma manera que las claves privadas protegen su dirección de Ethereum, necesitará generar claves específicamente para su validador. Debe entender cómo proteger cualquier frase semilla o clave secreta de forma efectiva.{' '}
+De la misma manera que las claves privadas protegen su dirección de Ethereum, necesitará generar claves específicamente para su validador. Debe saber cómo mantener seguras y protegidas las frases semilla (de recuperación) o claves privadas.{' '}
 
-[Seguridad y prevención de estafa Ethereum](/security/)
+[Seguridad y prevención de estafas en Ethereum](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Mantenimiento" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -134,11 +134,15 @@ Un <em>validador</em> es una entidad virtual que vive en Ethereum y participa en
 </ExpandableCard>
 
 <ExpandableCard title="¿Puedo depositar más de 32 ETH?">
-Cada par de claves asociadas a un validador requieren exactamente 32 ETH para ser activadas. Más ETH depositado en un solo par de claves no incrementa el potencial de recompensas, ya que cada validador está limitado a un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efectivo</a> de 32 ETH. Esto significa que la participación se realiza en incrementos de 32 ETH, cada uno con su propio conjunto de claves y saldo.
+Sí, los validadores modernos son capaces de mantener hasta 2048 ETH. Más de 32 ETH se compondrán de manera escalonada, aumentando en incrementos de números enteros a medida que aumente su saldo real. A esto se le denomina su <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">balance efectivo</a>.
 
-No deposite más de 32 ETH para un solo validador. No aumentará sus recompensas. Si se ha establecido una dirección de retirada para el validador, cualquier exceso de fondos superior a 32 ETH se retirará automáticamente a esta dirección durante el próximo [barrido del validador](/staking/withdrawals/#validator-sweeping).
+Para incrementar el balance efectivo de una cuenta y así aumentar las recompensas, se debe cruzar un búfer de 0,25 ETH por encima de cualquier umbral de ETH completo. Por ejemplo, una cuenta con un saldo real de 32,9 y un saldo efectivo de 32 necesita ganar otro 0,35 de ETH para que su saldo real supere los 33,25 antes de activar un aumento del saldo efectivo.
 
-Si participar desde casa le parece demasiado exigente, considere utilizar un proveedor de [staking-as-a-service](/staking/saas/) o si busca participar con menos de 32 ETH investigue [grupos de participación](/staking/pools/).
+Este búfer también evita que un saldo efectivo caiga hasta que haya bajado 0,25 ETH por debajo de su saldo efectivo actual.
+
+Cada par de claves asociado con un validador requiere que se activen al menos 32 ETH. Cualquier saldo por encima de esta cantidad puede retirarse en cualquier momento a la dirección de retirada asociada, a través de una transacción firmada por esta dirección. Cualquier fondo que supere el saldo máximo efectivo se retirará automáticamente de forma periódica.
+
+Si participar desde casa requiere demasiadas condiciones, considere usar un proveedor de [participación como servicio](/staking/saas/), o, si tiene menos de 32  ETH, échele un vistazo a las [reservas de participaciones](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="¿Sufriré «recortes» si me desconecto? (En una palabra: No.)">
@@ -200,6 +204,7 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 - [Controbuir a la diversidad de clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Guía: Cómo comprar hardware para un validador de Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Paso a paso: Cómo unirse a la red de prueba de Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Consejos para la prevención de «recortes» de Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raúl Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

@@ -13,7 +13,7 @@ Los árboles de Verkle (una palabra combinada de «Vector commitment» o comprom
 
 ## Sin estado {#statelessness}
 
-Los árboles de Verkle son un paso crítico en el rumbo hacia los clientes de Ethereum sin estado. Los clientes sin estado son aquellos que no tienen que almacenar toda la base de datos estatal para validar los bloques entrantes. En lugar de usar su propia copia local del estado de Ethereum para verificar los bloques, los clientes sin estado usan un «testigo» de los datos del estado que llegan con el bloque. Un testigo es una colección de piezas individuales de los datos estatales que se requieren para ejecutar un conjunto particular de transacciones, y una prueba criptográfica de que el testigo es realmente parte de los datos completos. El testigo se utiliza _en lugar de_ de la base de datos de estado. Para que esto funcione, los testigos deben ser muy pequeños, para que puedan transmitirse de forma segura a través de la red a tiempo para que los validadores los procesen en un plazo de 12 segundos. La estructura de datos del estado actual no es adecuada, porque los testigos son demasiado grandes. Los árboles de Verkle resuelven el problema al habilitar pequeños testigos, eliminando una de las principales barreras de clientes sin estado.
+Los árboles de Verkle son un paso crítico en el rumbo hacia los clientes de Ethereum sin estado. Los clientes sin estado son aquellos que no tienen que almacenar toda la base de datos estatal para validar los bloques entrantes. En lugar de usar su propia copia local del estado de Ethereum para verificar los bloques, los clientes sin estado usan un «testigo» de los datos del estado que llegan con el bloque. Un testigo es una colección de piezas individuales de los datos de estado que se requieren para ejecutar un conjunto particular de transacciones, y una prueba criptográfica de que el testigo es realmente parte de los datos completos. El testigo se utiliza _en lugar de_ de la base de datos de estado. Para que esto funcione, los testigos deben ser muy pequeños, para que puedan transmitirse de forma segura a través de la red a tiempo para que los validadores los procesen en un plazo de 12 segundos. La estructura de datos del estado actual no es adecuada, porque los testigos son demasiado grandes. Los árboles de Verkle resuelven el problema al habilitar pequeños testigos, eliminando una de las principales barreras de clientes sin estado.
 
 <ExpandableCard title="¿Por qué queremos clientes sin estado?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
@@ -49,13 +49,15 @@ Los árboles de Verkle son `(llave, valor)` pares donde las llaves son elementos
 
 Las redes de prueba del árbol de Verkle ya están en funcionamiento, pero todavía se requieren sustanciales actualizaciones pendientes para los clientes en apoyo de los árboles de Verkle. Puede ayudar a acelerar el progreso implementando contratos en las redes de prueba o ejecutando clientes de la red de prueba.
 
+[Explore la red de prueba Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
+
 [Vea a Guillaume Ballet explicar la red de prueba Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (tenga en cuenta que la red de prueba Condrieu era de prueba de trabajo y ahora se ha sustituido por la red de prueba Verkle Gen Devnet 6).
 
 ## Más información {#further-reading}
 
 - [Árboles Verkle para la falta de estado](https://verkle.info/)
 - [Dankrad Feist explica los árboles Verkle en PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Árboles Verkle para el resto de nosotros](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
+- [Árboles Verkle para el resto de nosotros](https://research.2077.xyz/verkle-trees)
 - [Anatomía de una prueba Verkle](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet explica los árboles Verkle en ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Cómo los árboles de Verkle hacen que Ethereum sean claro y directo» por Guillaume Ballet en Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)

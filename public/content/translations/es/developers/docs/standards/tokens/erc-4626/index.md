@@ -16,6 +16,22 @@ ERC-4626 en bóvedas de rendimiento reducirá el esfuerzo de integración y desb
 
 El token ERC-4626 se describe en detalle en [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
+**Extensión de bóvedas asíncronas (ERC-7540)**
+
+ERC-4626 está optimizado para depósitos y reembolsos atómicos hasta cierto límite. Si se alcanza el límite, no se podrán enviar nuevos depósitos ni reembolsos. Esta limitación no funciona bien con ningún sistema de contrato inteligente con acciones asincrónas o retrasos como requisito previo para interactuar con la bóveda tokenizada (por ejemplo, protocolos de activos del mundo real, protocolos de préstamos no colateralizados, protocolos de préstamos entre cadenas, tókenes de participación líquida o módulos de seguridad de seguros).
+
+ERC-7540 amplía la utilidad de las bóvedas ERC-4626 para casos de uso asíncronos. La interfaz de bóveda existente (`deposit`/`withdraw`/`mintr`/`redeem`) se utiliza íntegramente para reclamar solicitudes asíncronas.
+
+La extensión ERC-7540 se describe en detalle en [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+
+**Extensión de bóveda multiactivos (ERC-7575)**
+
+Un caso de uso faltante que no es compatible con ERC-4626 son las bóvedas que tienen múltiples activos o puntos de entrada, como los tókenes de proveedores de liquidez (LP). Estos suelen ser difíciles de manejar o no cumplen con los requisitos, debido a la exigencia de que ERC-4626 sea un ERC-20.
+
+ERC-7575 agrega soporte para bóvedas con múltiples activos al externalizar la implementación del token ERC-20 de la implementación de ERC-4626.
+
+La extensión ERC-7575 se describe en detalle en [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
+
 ## Prerrequisitos {#prerequisites}
 
 Para comprender mejor esta página, recomendamos leer primero sobre [estándares de token](/developers/docs/standards/tokens/) y [ERC-20](/developers/docs/standards/tokens/erc-20/).
@@ -62,7 +78,7 @@ Esta función devuelve la cantidad de `assets` que serían intercambiados por la
 función maxDeposit(receptor de dirección) retornos de vista pública (uint256 maxAssets)
 ```
 
-Esta función devuelve la cantidad máxima de activos subyacentes que pueden depositarse en una sola llamada de depósito ([`deposit`](#deposit)) por parte del `receiver` (receptor).
+Esta función devuelve la cantidad máxima de activos subyacentes que se pueden depositar en una sola invocación[`deposit`](#deposit), con las acciones acuñadas para el `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -86,7 +102,7 @@ Esta función deposita `assets` de los tokens subyacentes en la bóveda y otorga
 función maxMint (receptor de dirección) devoluciones de vista pública (uint256 maxShares)
 ```
 
-Esta función devuelve la cantidad máxima de acciones que pueden mintearse en una sola llamada de [`mint`](#mint) (minteo) por parte del receptor (`receiver`).
+Esta función devuelve la cantidad máxima de acciones que se pueden acuñar en una sola invocación[`mint`](#mint), con las acciones acuñadas para el `receiver`.
 
 #### previewMint {#previewmint}
 
@@ -176,7 +192,7 @@ Devuelve la cantidad total de acciones de la bóveda que el `owner` tiene actual
 
 #### Evento de depósito
 
-**DEBE** ser emitido cuando se depositan tokens en la bóveda mediante los métodos [`mint`](#mint) y [`deposit`](#deposit)
+**DEBE** emitirse cuando se depositan tókenes en la bóveda mediante los métodos [`mint`](#mint) y [`deposit`](#deposit).
 
 ```solidity
 event Deposit(

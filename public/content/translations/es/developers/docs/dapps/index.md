@@ -1,5 +1,5 @@
 ---
-title: Introducción a las DApps
+title: Introducción técnica a las DApps
 description:
 lang: es
 ---

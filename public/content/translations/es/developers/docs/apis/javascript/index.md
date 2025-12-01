@@ -26,6 +26,8 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 Mediante proveedores, estas bibliotecas le permiten conectarse a Ethereum y leer sus datos, ya sea sobre JSON-RPC, INFURA, Etherscan, Alchemy o MetaMask.
 
+> **Advertencia:** Web3.js se archivó el 4 de marzo de 2025. [Leer el anuncio](https://blog.chainsafe.io/web3-js-sunset/). Plantéese adoptar el uso de bibliotecas alternativas como ethers.js o viem para nuevos proyectos.
+
 **Ejemplo de Ethers**
 
 ```js
@@ -258,6 +260,11 @@ ethers.utils.formatEther(balance)
 **light.js:** **_Una biblioteca de JS de alto nivel optimizada para clientes ligeros._**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+
+**Web3-wrapper:** **_Alternativa de Typescript para Web3.js._**
+
+- [Documentación](https://0x.org/docs/web3-wrapper#introduction)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
 **Alchemyweb3:** **_Wrapper en torno a Web3.js con reintentos automáticos y API mejoradas._**
 

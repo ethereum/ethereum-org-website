@@ -1,6 +1,6 @@
 ---
 title: Estándares de tokens
-description:
+description: Explore los estándares de tókenes de Ethereum, incluidos ERC-20, ERC-721 y ERC-1155, para tókenes fungibles y no fungibles.
 lang: es
 incomplete: true
 ---

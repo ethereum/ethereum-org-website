@@ -1,6 +1,6 @@
 ---
 title: Entornos de desarrollo integrados (IDE)
-description:
+description: Conozca más a fondo los IDE basados en la web y de escritorio para el desarrollo en Ethereum, incluidos Remix, VS Code y plugins populares.
 lang: es
 ---
 
@@ -37,7 +37,6 @@ La mayoría de los IDE establecidos han desarrollado complementos para mejorar l
 **Visual Studio Code:** **_IDE multiplataforma profesional con soporte oficial de Ethereum_ **
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Muestras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 

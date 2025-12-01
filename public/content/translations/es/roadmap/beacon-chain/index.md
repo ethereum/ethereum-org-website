@@ -34,14 +34,9 @@ La transición de Ethereum a la prueba de participación hace que la red sea sig
 
 Y usando la prueba de participación como un mecanismo de consenso es un componente fundamental para [la seguridad, respecto al medio ambiente y la escalabilidad de Ethereum que tenemos ahora](/roadmap/vision/).
 
-<Alert variant="update">
-<AlertEmoji text=":money_bag:"/>
-<AlertContent>
-<AlertDescription>
-  Si le interesa convertirse en validador y contribuir con la seguridad de Ethereum, [ obtenga más información sobre la participación](/staking/).
-</AlertDescription>
-</AlertContent>
-</Alert>
+<InfoBanner emoji=":money_bag:">
+  Si le interesa convertirse en un validador y ayudar a mantener la seguridad de Ethereum, [conozca más a fondo la participación](/staking/).
+</InfoBanner>
 
 ### Preparación para la fragmentación {#setting-up-for-sharding}
 

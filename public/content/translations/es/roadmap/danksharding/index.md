@@ -17,17 +17,17 @@ Gracias a **Danksharding** (es decir, a la fragmentación), Ethereum se conviert
 
 ProtoDanksharding, también conocido como [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), es una manera para que los [rollups](/layer-2/#rollups) añadan datos más baratos a los bloques. El nombre proviene de los investigadores que propusieron la idea: Protolambda y Dankrad Feist. Historicamente los rollups se habían visto limitados en la medida en que pueden abaratar las transacciones de los usuarios por el hecho de que publican sus transacciones en `CALLDATA`.
 
-Esto es caro porque es procesado por todos los nodos de Ethereum y reside en la cadena para siempre, aunque los rollups solo necesiten los datos durante un breve periodo de tiempo. ProtoDanksharding introduce los blobs de datos que se pueden enviar y adjuntar a los bloques. Los datos de estos blobs no son accesibles para la EVM y se eliminan automáticamente después un periodo de tiempo fijo (establecido en 4096 épocas en el momento de redactar este documento, es decir, unos 18 días). Esto significa que los rollups pueden enviar datos de forma más barata y trasladar el ahorro a los usuarios finales en la forma de transacciones más baratas.
+Es cara, porque la procesn todos los nodos de Ethereum y reside en la cadena para siempre, aunque los rollups solo necesiten los datos durante un breve periodo de tiempo. ProtoDanksharding introduce los blobs de datos que se pueden enviar y adjuntar a los bloques. Los datos de estos blobs no son accesibles para la EVM y se eliminan automáticamente después un periodo de tiempo fijo (establecido en 4096 épocas en el momento de redactar este documento, es decir, unos 18 días). Esto significa que los rollups pueden enviar datos de forma más barata y trasladar el ahorro a los usuarios finales en la forma de transacciones más baratas.
 
 <ExpandableCard title="¿Por qué los blobs hacen las acumulaciones más baratas?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
-Las acumulaciones son una forma de escalar en Ethereum por lotes de transacciones fuera de la cadena y después publicar los resultados en Ethereum. Una acumulación se compone básicamente de dos partes: de datos y de verificación de la ejecución. Los datos son la secuencia total de transacciones que procesa una acumulación para producir un cambio en el estado publicado por Ethereum. La verificación de ejecución es la reejecución de esas transacciones por algún actor honesto (un «proveedor») para asegurarse de que el cambio del estado propuesto sea correcto. Para realizar la comprobación de ejecución, los datos de la transacción deben estar disponibles durante el tiempo suficiente para que cualquiera puede descargarlos y verificarlos. Esto significa que el proveedor puede identificar y cuestionar cualquier mala conducta del secuenciador de acumulaciones. Sin embargo, no tiene que estar dispobible para siempre.
+Los rollups son una manera de escalar Ethereum agrupando transacciones fuera de cadena y luego publicando los resultados en Ethereum. Una acumulación se compone básicamente de dos partes: de datos y de verificación de la ejecución. Los datos son la secuencia total de transacciones que procesa una acumulación para producir un cambio en el estado publicado por Ethereum. La verificación de ejecución es la reejecución de esas transacciones por algún actor honesto (un «proveedor») para asegurarse de que el cambio del estado propuesto sea correcto. Para realizar la comprobación de ejecución, los datos de la transacción deben estar disponibles durante el tiempo suficiente para que cualquiera puede descargarlos y verificarlos. Esto significa que el proveedor puede identificar y cuestionar cualquier mala conducta del secuenciador de acumulaciones. Sin embargo, no tiene que estar dispobible para siempre.
 
 </ExpandableCard>
 
 <ExpandableCard title="¿Por qué es lícito eliminar los datos en masa?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
-Las acumulaciones envían compromisos a sus datos de transacción en cadena y también hacen que los datos estén disponibles en masas de datos. Esto significa que los proveedores pueden verificar que los compromisos son válidos y desafiar los datos que ellos creen que sea incorrectos. Dentro del nodo, el cliente de consenso mantiene las masas de datos. Los clientes de consenso certifican que ellos han visto los datos y que se están propagando por la red. Si los datos se mantuvieran para siempre, estos clientes se saturarían y sus requisitos para ejecutar los nodos serían ingentes. Por otro lado, los datos de eliminan de manera automática del nodo cada 18 días. Las certificaciones del cliente de consenso demuestran que los proveedores tenían suficientes oportunidades de comprobar los datos. Operadores de acumulaciones, usuarios y otros operadores pueden almacenar los datos actuales fuera de la cadena.
+Los rollups publican compromisos con sus datos de transacciones en cadena y también hacen que los datos estén disponibles en grandes objetos binarios. Esto significa que los proveedores pueden verificar que los compromisos son válidos y desafiar los datos que ellos creen que sea incorrectos. Dentro del nodo, el cliente de consenso mantiene las masas de datos. Los clientes de consenso certifican que ellos han visto los datos y que se están propagando por la red. Si los datos se mantuvieran para siempre, estos clientes se saturarían y sus requisitos para ejecutar los nodos serían ingentes. Por otro lado, los datos de eliminan de manera automática del nodo cada 18 días. Las certificaciones del cliente de consenso demuestran que los proveedores tenían suficientes oportunidades de comprobar los datos. L operadores de rollups, usuarios u otros actores pueden almacenar datos en sí fuera de cadena.
 
 </ExpandableCard>
 
@@ -47,7 +47,7 @@ La ceremonia KZG EIP-4844 estuvo abierta al público y decenas de miles de perso
 
 <ExpandableCard title="¿Para qué se utiliza el número aleatorio de la ceremonia KZG?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
-Cuando un rollup publica datos en un blob, proporciona un "compromiso" que publica en la cadena. Este compromiso es el resultado de evaluar un ajuste polinómico a los datos en ciertos puntos. Estos puntos vienen definidos por los números aleatorios generados en la ceremonia KZG. Los demostradores pueden luego evaluar el polinómico en los mismos puntos para comprobar los datos; si llegan a los mismos valores, entonces los datos son correctos.
+Cuando un rollup publica datos en un blob (gran objeto binario), adquiere el «compromiso» de que se publicará en cadena. Este compromiso es el resultado de evaluar un ajuste polinómico a los datos en ciertos puntos. Estos puntos vienen definidos por los números aleatorios generados en la ceremonia KZG. Los demostradores pueden luego evaluar el polinómico en los mismos puntos para comprobar los datos; si llegan a los mismos valores, entonces los datos son correctos.
 
 </ExpandableCard>
 
@@ -57,9 +57,9 @@ Si alguien conoce las ubicaciones aleatorias utilizadas para el compromiso, le r
 
 </ExpandableCard>
 
-<Alert variant="warning" className="mb-8">
+<InfoBanner isWarning mb={8}>
   Ni Danksharding ni Proto-Danksharding siguen el modelo tradicional de "sharding" que tiene como objetivo dividir la cadena de bloques en varias partes. Las cadenas de fragmentación ya no forman parte de la hoja de ruta. En su lugar, Danksharding utiliza el muestreo distribuido de datos en varias masas para escalar Ethereum. Su implementación es mucho más sencilla. A este modelo a veces se le denomina «fragmentación de datos».
-</Alert>
+</InfoBanner>
 
 ## ¿Qué es Danksharding? {#what-is-danksharding}
 

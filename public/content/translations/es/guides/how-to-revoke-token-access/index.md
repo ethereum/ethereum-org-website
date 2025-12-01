@@ -20,6 +20,8 @@ Existen varios sitios web que le permiten ver y revocar contratos inteligentes c
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Cointool](https://cointool.app/approve/eth) (múltiples redes)
 - [Revoke](https://revoke.cash/) (múltiples redes)
 - [Unrekt](https://app.unrekt.net/) (múltiples redes)
 - [EverRevoke](https://everrise.com/everrevoke/) (múltiples redes)
@@ -46,15 +48,12 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
 
  <br />
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Preguntas más frecuentes
 

@@ -70,7 +70,7 @@ Los recortes son una acción más grave que resulta en la eliminación forzada d
 - Certificar un bloque que «rodea» a otro (cambiando completamente la historia).
 - Por «doble votación» al certificar a dos candidatos para el mismo bloque.
 
-Si se detectan estas acciones, el validador se recorta. Esto significa que 1/32 de su ether apostado (hasta un máximo de 1 ether) se quema inmediatamente, luego comienza un período de eliminación de 36 días. Durante este período de eliminación, la participación del validador se desvanece gradualmente. En el punto medio (18.º día) se aplica una penalización adicional cuya magnitud se prorratea con el ether total en participación de todos los validadores recortados en los 36 días anteriores al evento de recorte. Esto significa que cuando se recortan más validadores, la magnitud del recorte aumenta. El recorte máximo es el balance efectivo completo de todos los validadores recortados (es decir, si hay muchos validadores que se recortan, podrían perder toda su participación). Por otro lado, un solo evento de recorte aislado solo quema una pequeña parte de la participación del validador. Esta penalización de punto medio que se prorratea con el número de validadores recortados se llama «pena de correlación».
+Si se detectan estas acciones, el validador se recorta. Esto quiere decir que 0,0078125 ETH se queman inmediatamente para un validador de 32 ETH (escalado linealmente con el balance activo), seguido de un periodo de eliminación de 36 días. Durante este período de eliminación, la participación del validador se desvanece gradualmente. En el punto medio (18.º día) se aplica una penalización adicional cuya magnitud se prorratea con el ether total en participación de todos los validadores recortados en los 36 días anteriores al evento de recorte. Esto significa que cuando se recortan más validadores, la magnitud del recorte aumenta. El recorte máximo es el balance efectivo completo de todos los validadores recortados (es decir, si hay muchos validadores que se recortan, podrían perder toda su participación). Por otro lado, un solo evento de recorte aislado solo quema una pequeña parte de la participación del validador. Esta penalización de punto medio que se prorratea con el número de validadores recortados se llama «pena de correlación».
 
 ## Pérdida por inactividad {#inactivity-leak}
 
@@ -84,6 +84,7 @@ El diseño de recompensa, penalización y recorte del mecanismo de consenso anim
 - [Incentivos en el protocolo híbrido Casper de Ethereum](https://arxiv.org/pdf/1903.04205.pdf)
 - [Especificaciones anotadas de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Consejos para la prevención de recortes en Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [EIP-7251 explicado: Aumento del saldo máximo efectivo para validadores](https://research.2077.xyz/eip-7251_Increase_MAX_EFFECTIVE_BALANCE)
 - [Análisis de las penalizaciones por recortes bajo EIP-7251](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Fuentes_

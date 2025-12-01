@@ -21,39 +21,190 @@ El diseño efectivo va más allá de la creación de interfaces de usuario visua
 
 Esta es una lista curada de investigaciones de usuarios realizadas en Web3 que pueden ayudar con las decisiones de diseño y productos, o servir de inspiración para llevar a cabo su propio estudio.
 
-| Área de interés                                                                           | Nombre                                                                                                                                                                                                  |
-|:----------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>                         | [CRADL: experiencia de usuario en criptomonedas](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                  |
-| <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>                         | [CRADL: introducción a las criptomonedas](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                                         |
-| <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>                         | [Informe de experiencia de usuario de Bitcoin](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                    |
-| <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>                         | [ConSensys: la situación de la percepción de Web3 por el mundo en 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                         |
-| <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>                         | [NEAR: Acelerar el recorrido hacia la adopción](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                                 |
-| <Tag status="tag">Participar (apostar)</Tag>                                  | [Participación: tendencias clave, conclusiones y predicciones, participante de Eth](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
-| <Tag status="tag">Participar (apostar)</Tag>                                  | [Participación aplicaciones múltiples](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)             |
-| <Tag variant="solid" status="error">DAO</Tag>                                                      | [Actualización de investigación de DAO 2022: ¿qué necesitan los constructores de DAO?](https://blog.aragon.org/2022-dao-research-update/)                                                               |
-| <Tag status="error">DeFi</Tag>                                                    | [El estado de Defi en 2024](https://stateofdefi.org/) (encuesta en curso)                                                                                                                               |
-| <Tag status="error">DeFi</Tag>                                                    | [Reservas de cobertura](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                                         |
-| <Tag status="error">DeFi</Tag>                                                    | [ConSensys: informe de investigación de usuarios de DeFi 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                              |
-| <Tag variant="solid">Metaverso</Tag>                                               | [Metaverso: informe de investigación de usuarios](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                                  |
-| <Tag variant="solid">Metaverso</Tag>                                               | [Going on Safari: investigación de usuarios en el metaverso](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)                |
-| <Tag variant="solid" status="tag">Estadísticas de experiencia del usuario en Ethereum.org</Tag> | [Panel de encuestas de usabilidad y satisfacción del usuario, Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                             |
+<table spaces-before="0">
+  <tr>
+    <th align="left">
+      Área de interés
+    </th>
+    
+    <th align="left">
+      Nombre
+    </th>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report">2024, el pulso de la reapropiación: sentimiento y & uso del consumidor criptográfico</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing">CRADL: experiencia de usuario en criptomonedas</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing">CRADL: introducción a las criptomonedas</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://github.com/patestevao/BitcoinUX-report/blob/master/report.md">Informe de experiencia de usuario de Bitcoin</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://consensys.io/insight-report/web3-and-crypto-global-survey-2023">ConSensys: la situación de la percepción de Web3 por el mundo en 2023</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="success">Incorporación de criptomonedas</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view">NEAR: Acelerar el recorrido hacia la adopción</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag status="tag">Participar (apostar)</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf">OpenUX: experiencia de usuario del operador de nodo de la reserva Rocket</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag status="tag">Participar (apostar)</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo">Participación: tendencias clave, conclusiones y predicciones, participante de Eth</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag status="tag">Participar (apostar)</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf">Participación aplicaciones múltiples</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="error">DAO</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://blog.aragon.org/2022-dao-research-update/">Actualización de investigación de DAO 2022: ¿qué necesitan los constructores de DAO?</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag status="error">DeFi</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool">Reservas de cobertura</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag status="error">DeFi</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf">ConSensys: informe de investigación de usuarios de DeFi 2022</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid">Metaverso</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000">Metaverso: informe de investigación de usuarios</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid">Metaverso</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube">Going on Safari: investigación de usuarios en el metaverso</a> (video, 27 min)
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left">
+      <Tag variant="solid" status="tag">Estadísticas de experiencia del usuario en Ethereum.org</Tag>
+    </td>
+    
+    <td align="left">
+      <a href="https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9">Panel de encuestas de usabilidad y satisfacción del usuario, Ethereum.org</a>
+    </td>
+  </tr>
+</table>
 
 ## Diseño para Web3 {#design-for-web3}
 
 - [Manual de diseño de UX Web3](https://web3ux.design/): guía práctica para diseñar aplicaciones web3
 - [Principios de diseño de Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1): marco de reglas de experiencia de usuario para dapps basadas en cadenas de bloques
 - [Principios de diseño de cadena de bloques](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e): lecciones aprendidas por el equipo de diseño de cadena de bloques de IBM
-- [Patrones de diseño en Web3](https://www.web3designpatterns.io/): biblioteca curada de patrones de diseño de productos web3 reales
-- [W3design.io](https://w3design.io/): biblioteca curada de flujos de interfaz de usuario de diferentes proyectos en el ecosistema
 - [Neueux.com](https://neueux.com/apps): biblioteca de interfaz de usuario de flujos de usuario con diversas opciones de filtrado
 - [Crisis de usabilidad de Web3: ¡lo que NECESITA saber!](https://www.youtube.com/watch?v=oBSXT_6YDzg): mesa redonda sobre los desventajas o problemas de la construcción de proyectos centrados en el desarrollador (video, 34 min)
+
+## Primeros pasos {#getting-started}
+
+- [ Heurísticas para Web3:](/developers/docs/design-and-ux/heuristics-for-web3/) 7 reglas heurísticas para el diseño de interfaces en Web3
+-  Mejores prácticas en el diseño de DEX:</> una guía para diseñar intercambios descentralizados</li> </ul> 
+  
+  
 
 ## Estudios de casos de diseño de Web3 {#design-case-studies}
 
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
-- [Manual de UX cripto](https://www.cryptouxhandbook.com/)
 - [Vender un NFT en OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 minutos)
+
+
 
 ## Bounties de diseño {#bounties}
 
@@ -61,17 +212,21 @@ Esta es una lista curada de investigaciones de usuarios realizadas en Web3 que p
 - [Hackatons de Buildbox](https://app.buidlbox.io/)
 - [Hackatons ETHGlobal](https://ethglobal.com/)
 
+
+
 ## DAO y comunidades de diseño {#design-daos-and-communities}
 
 Involúcrese en organizaciones profesionales impulsadas por la comunidad o únase a grupos de diseño para discutir temas y tendencias relacionados con el diseño y la investigación con otros miembros.
 
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
-- [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
+- [Web3Design de código abierto](https://www.web3designers.org/)
 
-## Sistemas de diseño {#design-systems}
+
+
+## Design Systems y otros recursos de diseño {#design-systems-and-resources}
 
 - [Diseño de Optimism](https://www.figma.com/@optimism) (Figma)
 - [Sistema de diseño de Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)

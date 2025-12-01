@@ -4,7 +4,7 @@ description: Una visión general para reducir la brecha a los desarrolladores
 lang: es
 ---
 
-Con la proliferación de las cadenas de bloques L1 y las soluciones de [escalamiento](/developers/docs/scaling/) L2, junto con el gran crecimiento del número de aplicaciones descentralizadas operando en varias cadenas o pasando a la modalidad multicadena, la necesidad por establecer comunicación y de poder mover activos a través de estás cadenas se han convertido en una parte esencial de la infraestructura de red. Existen diferentes tipos de puentes que hacen esto posible.
+Con la proliferación de las cadenas de bloques L1 y las soluciones de [escalamiento ](/developers/docs/scaling/) L2, junto con el gran crecimiento del número de aplicaciones descentralizadas operando en varias cadenas o pasando a la modalidad multicadena, la necesidad por establecer comunicación y de poder mover activos a través de estás cadenas se han convertido en una parte esencial de la infraestructura de red. Existen diferentes tipos de puentes que hacen esto posible.
 
 ## La necesidad de puentes {#need-for-bridges}
 
@@ -103,7 +103,7 @@ Si una dapp va por la ruta de integrar un puente o un agregador, hay diferentes 
 
 ### Implementar una dapp en múltiples cadenas {#deploying-a-dapp-on-multiple-chains}
 
-Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Para implementar una DApp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 #### Ejemplos:
 
@@ -121,12 +121,14 @@ Para monitorear la actividad de los contratos entre cadenas, los desarrolladores
 - [Antiguamente](https://tenderly.co/)
 
 ## Más información {#further-reading}
-
 - [Puntes de cadena de bloques](/bridges/): ethereum.org
-- [Puntes de cadena de bloques: crear redes de redes criptográficas](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 de septiembre de 2021, Dmitriy Berenzon
-- [El trilema de interoperabilidad](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) 1 de octubre de 2021, Arjun Bhuptani
-- [Clústeres: cómo los puentes de confianza y de confianza minimizada dan forma al panorama multicadena](https://blog.celestia.org/clusters/) 4 de octubre de 2021, Mustafa Al-Bassam
-- [LI.FI: con los puentes, la confianza es un espectro](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 de abril de 2022, Arjun Chand
+- [Marco de riesgo L2Beat Bridge](https://l2beat.com/bridges/summary)
+- [Puentes de cadena de bloques: construir redes de criptorredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 de septiembre de 2021, Dmitriy Berenzon
+- [El trilema de la interoperabilidad](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) 1 de octubre de 2021, Arjun Bhuptani
+- [Agrupaciones: cómo los puentes de confianza & y minimizados de confianza dan forma al panorama de múltiples cadenas](https://blog.celestia.org/clusters/) 4 de octubre de 2021, Mustafa Al-Bassam
+- [LI.FI: con puentes, la confianza es un espectro](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 de abril de 2022, Arjun Chand
+- [El estado de las soluciones de interoperabilidad de rollup](https://research.2077.xyz/the-state-of-rollup-interoperability) 20 de junio de 2024, Alex Hook
+- [Aprovechar la seguridad compartida para la interoperabilidad segura entre cadenas: comités estatales de Lagrange y más allá](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) 12 De Junio De 2024, Emmanuel Awosika
 
 Además, aquí hay algunas presentaciones útiles de [James Prestwich](https://twitter.com/_prestwich) que pueden ayudar a desarrollar una comprensión más profunda de los puentes:
 

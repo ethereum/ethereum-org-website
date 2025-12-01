@@ -65,15 +65,12 @@ La Web3 le otorga la propiedad de sus activos digitales de una manera sin preced
 
 Web3 permite la propiedad directa a través de [tokens no fungibles (NFT)](/glossary/#nft). Nadie, ni siquiera los creadores del juego, tienen el poder de quitarle la propiedad. Y, si deja de jugar, puede vender o intercambiar sus objetos del juego en mercados abiertos y recuperar su valor.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Saber más sobre NFT</div>
   <ButtonLink href="/nft/">
     Más información sobre NFT
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 #### Resistencia a la censura {#censorship-resistance}
 
@@ -93,15 +90,12 @@ La definición técnica de DAO consiste en [contratos inteligentes](/glossary/#s
 
 Sin embargo, las personas definen muchas comunidades Web3 como si fueran DAO. Todas estas comunidades tienen diferentes niveles de descentralización y automatización mediante código. En la actualidad, estamos explorando qué son las DAO y cómo podrían evolucionar en el futuro.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Más información sobre las DAO</div>
   <ButtonLink href="/dao/">
     Claves sobre las DAO
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ### Identidad {#identity}
 
@@ -162,6 +156,6 @@ Web3 no está definida rígidamente. Varios participantes de la comunidad tienen
 - [¿Por qué es Importante Web3?](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [¿Por qué es importante la Descentralización?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [El paisaje de la Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [El debate de Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
+- [El debate sobre Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

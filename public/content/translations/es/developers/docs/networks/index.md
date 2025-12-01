@@ -34,15 +34,11 @@ El ETH en las redes de prueba se supone que no tiene un valor real; sin embargo,
 
 #### ¿Qué red de prueba debo usar?
 
-Las dos redes públicas de prueba que los desarrolladores de clientes están manteniendo actualmente son Sepolia y Hoodi. Sepolia es una red de desarrolladores de contratos y aplicaciones para probar sus aplicaciones. La red Hoodi permite a los desarrolladores de protocolos probar actualizaciones de red y permite a los participantes hacer pruebas de ejecución de validadores.
+Las dos redes públicas de prueba que los desarrolladores de clientes están manteniendo actualmente son Sepolia y Hoodi. Sepolia es una red de desarrolladores de contratos y aplicaciones para probar sus aplicaciones. La red Hoodi permite a los desarrolladores de protocolos probar actualizaciones de red y permite a los participantes probar validadores en ejecución.
 
 #### Sepolia {#sepolia}
 
-****Sepolia es la red de prueba predeterminada recomendada para el desarrollo de aplicaciones. La red Sepolia utiliza un conjunto de validadores autorizados. Es bastante nueva, lo que significa que su estado e historia son bastante limitados. Esto significa que la red se sincroniza rápidamente y que ejecutar un nodo requiere menos almacenamiento. Esto es útil para los usuarios que quieren activar rápidamente un nodo e interactuar directamente con la red.
-
-- Conjunto de validadores cerrado, controlado por el cliente y equipos de prueba
-- Nueva red de prueba, menos aplicaciones implementadas que otras redes de prueba
-- Sincronización y ejecución rápidas en un nodo que requieren un espacio mínimo en el disco
+****Sepolia es la red de prueba predeterminada recomendada para el desarrollo de aplicaciones. La red Sepolia usa un conjunto de validadores que requiere permisos controlado por equipos de clientes y de pruebas.
 
 ##### Recursos
 
@@ -54,37 +50,85 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 
 ##### Faucets
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [Grifo de Sepolia de QuickNode](https://faucet.quicknode.com/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Faucet de cartera Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
-- [Faucet Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Faucet del ecosistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Grifo de prueba de trabajo](https://sepolia-faucet.pk910.de/)
+- [Grifo Sepolia de Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Grifo Sepolia de Infura](https://www.infura.io/faucet)
+- [Grifo Chainstack de Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Grifo del ecosistema de Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Grifo de Sepolia de Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
-_Nota: [la red de pruebas Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) y ha sido reemplazada por Hoodi. Por favor, considere la migración de sus aplicaciones a Sepolia._
+Hoodi es una red de prueba para probar la validación y la participación. La red Hoodi está abierta para usuarios que quieren ejecutar un validador en una red de pruebas. Los participantes que quieran probar actualizaciones del protocolo antes de que sean desplegadas en la red principal, por tanto, deberían usar Hoodi.
 
-Hoodi es una red de prueba para probar la validación y la participación. La red Hoodi está abierta a usuarios que quieren ejecutar un validador de red de pruebas. Los participantes que quieran probar las actualizaciones del protocolo antes de que se implementen en la red principal deben usar Hoodi.
-
-- Conjunto de validador abierto, los participantes pueden probar las actualizaciones de la red.
-- Estado grande, útil para probar interacciones complejas de contratos inteligentes.
-- Más tiempo para sincronizar y requiere más almacenamiento para ejecutar un nodo.
+- Conjunto de validador abierto, los participantes pueden probar las actualizaciones de la red
+- Estado grande, útil para probar interacciones complejas de contratos inteligentes
+- Tarda más en sincronizarse y requiere más almacenamiento para ejecutar un nodo
 
 ##### Recursos
 
 - [Sitio web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
-- [Explorer](https://explorer.hoodi.ethpandaops.io/)
-- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Explorador](https://explorer.hoodi.ethpandaops.io/)
+- [Sincronización de punto de control](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
+- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 
-- [Faucet Hoodi](https://hoodi.ethpandaops.io/)
+- [Grifo de Hoodi](https://hoodi.ethpandaops.io/)
+- [Grifo de prueba de trabajo](https://hoodi-faucet.pk910.de/)
 
-Para iniciar un validador en la red de prueba de Hoodi, utilice la [plataforma de lanzamiento de Hoodi](https://hoodi.launchpad.ethereum.org/en/).
+#### Ephemery {#ephemery}
+
+Ephemery es un tipo único de red de prueba que se reinicia por completo cada mes. El estado de ejecución y consenso vuelve a la génesis cada 28 días, lo que significa que cualquier cosa que suceda en la red de prueba es efímera. Esto lo convierte en idóneo para una prueba a corto plazo, arranque rápido de nodos y aplicaciones de «hola mundo» que no necesitan permanencia.
+
+- Estado siempre nuevo, pruebas a corto plazo de validadores y aplicaciones
+- Incluye solo un conjunto básico de contratos
+- Conjunto de validador abierto y de fácil acceso a grandes cantidades de fondos
+- Los requisitos de nodo más pequeños y la sincronización más rápida, &lt;5Gb de media
+
+##### Recursos
+
+- [Sitio web](https://ephemery.dev/)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [Chat de la comunidad](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [Explorador de baliza](https://beaconlight.ephemery.dev/)
+- [Sincronización de punto de control](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Lanzador](https://launchpad.ephemery.dev/)
+
+#### Faucets
+
+- [Grifo de Bordel](https://faucet.bordel.wtf/)
+- [Grifo Pk910 Pow](https://ephemery-faucet.pk910.de/)
+
+#### Holesky {#holesky}
+
+La red de pruebas Holesky se [descontinuará a partir de septiembre de 2025](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky). Los operadores de participación y los proveedores de infraestructura deberían usar Hoodi en su lugar para pruebas del validador.
+
+##### Recursos
+
+- [Sitio web](https://holesky.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/holesky)
+- [Otterscan](https://holesky.otterscan.io/)
+- [Etherscan](https://holesky.etherscan.io/)
+- [Blockscout](https://eth-holesky.blockscout.com/)
+
+##### Faucets
+
+- [Grifo de Holesky de QuickNode](https://faucet.quicknode.com/ethereum/holesky)
+- [Grifo de prueba de trabajo](https://holesky-faucet.pk910.de/)
+- [Grifo de Holesky de Alchemy](https://www.alchemy.com/faucets/ethereum-holesky)
+- [Grifo de Holesky de Chainstack](https://faucet.chainstack.com/holesky-testnet-faucet)
+- [Grifo del ecosistema de Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
+- [Grifo de Holesky de Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
+
+Para lanzar un validador de la red de prueba de Hoodi, use [el lanzador de Hoodi](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Redes de pruebas de Capa 2 {#layer-2-testnets}
 
@@ -94,27 +138,47 @@ Para iniciar un validador en la red de prueba de Hoodi, utilice la [plataforma d
 
 Una red de pruebas para [Arbitrum](https://arbitrum.io/).
 
+##### Recursos
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
+
 ##### Faucets
 
-- [Faucet Chainlink](https://faucets.chain.link/arbitrum-sepolia)
-- [Faucet Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Grifo Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Grifo Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Grifo de Arbitrum Sepolia de QuickNode](https://faucet.quicknode.com/arbitrum/sepolia)
+- [Grifo de Arbitrum Sepolia de Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Grifo de Arbitrum Sepolia de Chainlink](https://faucets.chain.link/arbitrum-sepolia)
 
-#### Optimism Sepolia {#optimistic-sepolia}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Una red de pruebas para [Optimism](https://www.optimism.io/).
 
+##### Recursos
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
+
 ##### Faucets
 
-- [Faucet Chainlink](https://faucets.chain.link/optimism-sepolia)
-- [Faucet Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Grifo Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Grifo Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Grifos de red de prueba](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
 Una red de prueba para [Starknet](https://www.starknet.io).
 
+##### Recursos
+
+- [Starkscan](https://sepolia.starkscan.co/)
+
 ##### Faucets
 
-- [Faucet Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Grifo Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Grifo de Starknet](https://starknet-faucet.vercel.app/)
+- [Grifo de Starknet Sepolia de Blast](https://blastapi.io/faucets/starknet-sepolia-eth)
 
 ## Redes privadas {#private-networks}
 
@@ -134,8 +198,8 @@ Si una red pública de Ethereum es como la red pública de internet, puede enten
 
 ## Herramientas relacionadas {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _lista de redes EVM para conectar carteras y proveedores a las ID de cadena y red apropiadas_
-- [Cadenas basadas en EVM](https://github.com/ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimentan la Chainlist_
+- [Lista de cadena](https://chainlist.org/) _lista de redes EVM para conectar carteras y proveedores a las ID de cadena y red apropiados_
+- [Cadenas basadas en EVM](https://github.com/ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimenta la lista de cadena_
 
 ## Más información {#further-reading}
 

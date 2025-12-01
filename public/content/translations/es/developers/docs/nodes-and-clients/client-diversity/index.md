@@ -31,7 +31,7 @@ La diversidad de clientes también ofrece una mayor resiliencia frente a los ata
 
 Un error en un cliente de consenso con más del 33 % de los nodos de Ethereum podría impedir que la capa de consenso finalizara, lo que significa que los usuarios no podrían confiar en que las transacciones no se revirtieran o cambiarían en algún momento. Esto podría ser bastante problemático para muchas de las aplicaciones contruidas en Ethereum, especialmente las DeFi.
 
-<Emoji text="🚨" me="1rem" /> Peor aún, un error crítico en un cliente con dos tercios de mayoría haría que la cadena se <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">dividiera y finalizara de manera incorrecta</a>, haciendo que un gran número de validadores se vieran involucrados en una cadena inválida. Si los validadores quisieran reincorporarse a la cadena correcta, se verían afectados por recortes o por un lento y costoso proceso de retirada y reactivación voluntaria. La magnitud de los recortes aumenta en función del número de nodos culpables, con un máximo de dos tercios de la mayoría (32 ETH) recortados.
+<Emoji text="🚨" className="me-4" /> Peor aún, un error crítico en un cliente con dos tercios de mayoría haría que la cadena se <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">dividiera y finalizara de manera incorrecta</a>, haciendo que un gran número de validadores se vieran involucrados en una cadena inválida. Si los validadores quisieran reincorporarse a la cadena correcta, se verían afectados por recortes o por un lento y costoso proceso de retirada y reactivación voluntaria. La magnitud de los recortes aumenta en función del número de nodos culpables, con un máximo de dos tercios de la mayoría (32 ETH) recortados.
 
 A pesar de que es poco probable que se den estas situaciones, el ecosistema de Ethereum puede mitigar dichos riesgos igualando la distribución de clientes a través de los nodos activos. Idóneamente, ningún cliente de consenso podría alcanzar una participación del 33 % del total de los nodos.
 
@@ -55,7 +55,7 @@ Hasta el momento, el foco de la discusión sobre la diversidad de clientes se ce
 
 ## Uso de clientes minoritarios {#use-minority-client}
 
-Para abordar la diversidad de clientes y escoger un cliente minoritario no solo se necesitan usuarios individuales, sino también reservas de minería/validación e instituciones como grandes DApps e intercambios para intercambiar clientes también. A pesar de ello, todos los usuarios pueden participar en el proceso de reequilibrar las disparidades actuales y normalizar el uso de todo el software disponible de Ethereum. Tras La Fusión, todos los operadores de nodo deberán ejecutar un cliente de ejecución y un cliente de consenso. Escoger alguna de las combinaciones de clientes sugeridas a continuación, ayudará a aumentar la diversidad de clientes.
+Abordar la diversidad de clientes requiere algo más que la elección de clientes minoritarios por parte de usuarios individuales: requiere que los grupos de validadores y las instituciones, como las principales dapps y plataformas de intercambio, también cambien de clientes. A pesar de ello, todos los usuarios pueden participar en el proceso de reequilibrar las disparidades actuales y normalizar el uso de todo el software disponible de Ethereum. Tras La Fusión, todos los operadores de nodo deberán ejecutar un cliente de ejecución y un cliente de consenso. Escoger alguna de las combinaciones de clientes sugeridas a continuación, ayudará a aumentar la diversidad de clientes.
 
 ### Clientes de ejecución {#execution-clients}
 
@@ -67,6 +67,8 @@ Para abordar la diversidad de clientes y escoger un cliente minoritario no solo 
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
+[Reth](https://reth.rs/)
+
 ### Clientes de consenso {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
@@ -77,7 +79,9 @@ Para abordar la diversidad de clientes y escoger un cliente minoritario no solo 
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://prysm.offchainlabs.com/docs/)
+[Prysm](https://docs.prylabs.network/docs/getting-started)
+
+[Grandine](https://docs.grandine.io/)
 
 Los usuarios técnicos pueden acelerar este proceso con tutoriales y documentación relacionada a clientes minoritarios, invitando a otros operadores de nodos a migrar alejándose de los clientes dominantes. Las guías para migrar a un cliente de consenso minoritario están disponibles en [clientdiversity.org](https://clientdiversity.org/).
 
@@ -88,7 +92,9 @@ Hay varios paneles que ofrecen estadísticas en tiempo real sobre la diversidad 
 **Capa de consenso:**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/) **/Capa de ejecución:**
+- [clientdiversity.org](https://clientdiversity.org/)
+
+**Capa de ejecución:**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)

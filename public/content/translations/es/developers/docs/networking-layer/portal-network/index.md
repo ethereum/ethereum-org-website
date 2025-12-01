@@ -55,11 +55,17 @@ Los beneficios de este diseño de red son:
 - reducir la dependencia de los proveedores centralizados
 - reducir el uso del ancho de banda de Internet
 - sincronización minimizada o cero
-- accesible a dispositivos con recursos limitados (\<1 GB de RAM, \<100 MB de espacio en disco, 1 CPU)
+- accesibilidad a dispositivos con recursos limitados (\<1 GB RAM, \<100 MB de espacio en disco, 1 CPU)
 
 El siguiente diagrama muestra las funciones de los clientes existentes que Portal Network puede entregar, lo que permite a los usuarios acceder a estas funciones en dispositivos de muy pocos recursos.
 
-![tabla de portal network](portal-network-table2.png)
+### Las redes del portal
+
+| Cliente ligero de baliza | Red de estado                   | Gossip de transacciones | Historial de la red |
+| ------------------------ | ------------------------------- | ----------------------- | ------------------- |
+| Cadena ligera de baliza  | Cuenta y contrato de almacenaje | Zona de espera ligera   | Encabezados         |
+| Datos del protocolo      |                                 |                         | Cuerpos de bloque   |
+|                          |                                 |                         | Recibos             |
 
 ## Diversidad de clientes por defecto {#client-diversity-as-default}
 
@@ -70,13 +76,13 @@ Los clientes de Portal Network son:
 - [Trin](https://github.com/ethereum/trin): escrito en Rust
 - [Fluffy](https://fluffy.guide): escrito en Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): escrito en Typescript
-- [Shisui](https://github.com/GrapeBaBa/shisui): escrito en Go
+- [Shisui](https://github.com/optimism-java/shisui): escrito en Go
 
 Tener múltiples implementaciones de clientes independientes mejora la resiliencia y la descentralización de la red Ethereum.
 
 Si un cliente experimenta problemas o vulnerabilidades, otros clientes pueden seguir funcionando sin problemas, evitando un solo punto de fallo. Además, diversas implementaciones de clientes fomentan la innovación y la competencia, impulsando mejoras y reduciendo el riesgo de monocultivo dentro del ecosistema.
 
-## Más información {#futher-reading}
+## Más información {#further-reading}
 
 - [El Portal Network(Piper Merriam en Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Discord de Portal Network](https://discord.gg/CFFnmE7Hbs)

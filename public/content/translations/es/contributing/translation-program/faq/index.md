@@ -56,7 +56,7 @@ Si quiere señalar que una cadena en particular necesita revisión, puede añadi
 
 ## ¿Qué es una memoria de traducción? {#translation-memory}
 
-La memoria de traducción (TM, por sus siglas en inglés) es una función de Crowdin que almacena todas las cadenas de traducciones previas de [ethereum.org](https://ethereum.org/). Cuando se traduce una cadena, automáticamente se guarda en la memoria de traducción de nuestro proyecto. ¡Esta puede ser una herramienta muy útil para ayudarle a ahorrar tiempo!
+La memoria de traducción (TM, por sus siglas en inglés) es una función de Crowdin que almacena en segmentos el texto de ethereum.org previamente traducido. Cuando se traduce una cadena, automáticamente se guarda en la memoria de traducción de nuestro proyecto. ¡Esta puede ser una herramienta muy útil para ayudarle a ahorrar tiempo!
 
 - Entre en la sección de sugerencias y podrá ver cómo han traducido otros traductores la misma cadena o una similar. Si encuentra una sugerencia con una alta tasa de coincidencia, puede asignarla pulsando sobre ella.
 - Si no hay nada en la lista, puede buscar en la TM traducciones realizadas previamente y reutilizarlas para mantener coherencia.
