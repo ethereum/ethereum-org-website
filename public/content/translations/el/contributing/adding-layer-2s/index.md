@@ -92,6 +92,6 @@ _Δεν θεωρούμε ότι ανήκουν στο επίπεδο 2 οι άλ
 
 Εάν θέλετε να προσθέσετε ένα επίπεδο 2 στο ethereum.org, δημιουργήστε ένα ζήτημα στο GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Δημιουργήστε ένα ζήτημα
 </ButtonLink>

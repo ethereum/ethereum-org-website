@@ -1,7 +1,7 @@
 ---
 title: AI agents
-metaTitle: Πράκτορες ΤΝ | Πράκτορες ΤΝ στο ethereum
-description: Μια επισκόπηση για πράκτορες ΤΝ στο ethereum
+metaTitle: Πράκτορες ΤΝ | Πράκτορες ΤΝ στο Ethereum
+description: Μια επισκόπηση για πράκτορες ΤΝ στο Ethereum
 lang: el
 template: use-cases
 emoji: ":robot:"
@@ -19,7 +19,7 @@ buttons:
     isSecondary: false
 ---
 
-Φανταστείτε να πλοηγείστε στο Ethereum με έναν βοηθό ΤΝ που μελετά τις τάσεις της αγοράς 24 ώρες το 24ωρο, απαντά σε ερωτήσεις και εκτελεί ακόμη και συναλλαγές για λογαριασμό σας. Καλώς ήρθατε στον κόσμο των πρακτόρων ΤΝ—έξυπνα συστήματα σχεδιασμένα να απλοποιούν την ψηφιακή σας ζωή.
+Φανταστείτε να πλοηγείστε στο Ethereum με έναν βοηθό ΤΝ που μελετά τις τάσεις της αγοράς στην αλυσίδα 24 ώρες το 24ωρο, απαντά σε ερωτήσεις και εκτελεί ακόμη και συναλλαγές για λογαριασμό σας. Καλώς ήρθατε στον κόσμο των πρακτόρων ΤΝ—έξυπνα συστήματα σχεδιασμένα να απλοποιούν την ψηφιακή σας ζωή.
 
 Στο Ethereum, βλέπουμε καινοτομίες πρακτόρων ΤΝ που κυμαίνονται από εικονικούς influencers και αυτόνομους δημιουργούς περιεχομένου έως πλατφόρμες ανάλυσης αγοράς σε πραγματικό χρόνο, ενδυναμώνοντας τους χρήστες παρέχοντας insights, ψυχαγωγία και λειτουργική αποδοτικότητα.
 
@@ -39,7 +39,7 @@ buttons:
 
 Αυτοί οι παράγοντες μετατρέπουν τους πράκτορες ΤΝ από απλά bots σε δυναμικά, αυτοβελτιούμενα συστήματα που προσφέρουν σημαντική αξία σε πολλούς τομείς:
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
   <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
   <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
@@ -60,15 +60,11 @@ buttons:
 Πράκτορες όπως η Luna ή το AIXBT ελέγχουν το δικό τους onchain πορτοφόλι ([το πορτοφόλι του AIXBT](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43), [το πορτοφόλι της Luna](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) επιτρέποντας τους να δίνουν φιλοδωρήματα σε θαυμαστές και να συμμετέχουν σε οικονομικές δραστηριότητες.
 
 Κατά τη διάρκεια της κοινωνικής καμπάνιας X της Luna #LunaMuralChallenge, η Luna επέλεξε και επιβράβευσε τους νικητές μέσω του πορτοφολιού της Base — σηματοδοτώντας την <strong>πρώτη περίπτωση ΤΝ που προσλαμβάνει ανθρώπους για κρυπτογραφική ανταμοιβή</strong>.
-<Alert variant="warning">
-<AlertEmoji text="💡" />
-<AlertContent>
-<AlertDescription>
+
+<InfoBanner isWarning emoji="💡">
 <p className="mt-0"><strong>Καλό να γνωρίζετε</strong></p>
 <p className="mt-2">Οι πράκτορες ΤΝ και τα σχετικά εργαλεία βρίσκονται ακόμη σε αρχικό στάδιο ανάπτυξης και είναι πολύ πειραματικά—χρησιμοποιήστε τα με προσοχή.</p>
-</AlertDescription>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Ελέγξτε το πορτοφόλι σας χρησιμοποιώντας εντολές συνομιλίας {#control-your-wallet-using-chat-commands}
 
