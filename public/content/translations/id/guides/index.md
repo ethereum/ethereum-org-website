@@ -12,13 +12,13 @@ Apakah Anda ingin memulai perjalanan Ethereum Anda? Panduan praktis kami menuntu
 
 1. [Cara "membuat" akun Ethereum](/guides/how-to-create-an-ethereum-account/) - Siapa pun dapat membuat dompet secara gratis. Panduan ini akan menunjukkan kepada Anda dari mana harus memulai.
 
-2. [Cara menggunakan dompet](/guides/how-to-use-a-wallet/) - Pengenalan fitur-fitur dasar dompet apa pun dan cara menggunakannya.
+2. [Cara menggunakan dompet](/guides/how-to-use-a-wallet/) - Pelajari cara mengirim dan menerima token di dompet Anda dan cara menghubungkan dompet dengan proyek.
 
 ## Dasar-dasar keamanan
 
 1. [Cara mencabut akses kontrak pintar ke dana kripto Anda](/guides/how-to-revoke-token-access/) - Jika Anda tiba-tiba melihat transaksi di dompet yang tidak Anda mulai, panduan ini akan mengajari Anda cara mencegah hal itu terjadi lagi.
 
-2. [Cara mengidentifikasi token penipuan](/guides/how-to-id-scam-tokens/) - Apa itu token penipuan, bagaimana token tersebut terlihat sah, dan bagaimana cara mengidentifikasinya untuk melindungi diri Anda sendiri dan menghindari penipuan.
+2. [Cara mengidentifikasi token penipuan](/guides/how-to-id-scam-tokens/) - Apa itu token penipuan? Bagaimana mereka membuat dirinya tampak legal, dan bagaimana Anda mengidentifikasi mereka untuk melindungi diri Anda dan menghindari penipuan?
 
 ## Menggunakan Ethereum
 

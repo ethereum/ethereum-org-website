@@ -10,7 +10,7 @@ lang: id
 
 Apakah Anda sedang mencari dukungan resmi Ethereum? Hal pertama yang harus Anda ketahui adalah bahwa Ethereum bersifat terdesentralisasi. Ini berarti tidak ada organisasi, entitas, atau orang sentral yang memiliki Ethereum, dan karena ini, tidak ada kanal dukungan resmi.
 
-Memahami sifat terdesentralisasi Ethereum sangat penting karena siapa pun yang mengklaim sebagai pemberi dukungan resmi Ethereum mungkin sedang mencoba menipu Anda! Perlindungan terbaik terhadap para penipu adalah mengedukasi diri Anda sendiri dan memperhatikan aspek keamanan dengan serius.
+Memahami sifat desentralisasi Ethereum sangat penting karena **siapa pun yang mengaku sebagai dukungan resmi Ethereum kemungkinan besar berusaha menipu Anda!** Perlindungan terbaik dari penipuan adalah dengan mendidik diri sendiri dan menjaga keamanan dengan serius.
 
 <DocLink href="/security/">
   Keamanan dan pencegahan penipuan Ethereum
@@ -20,67 +20,7 @@ Memahami sifat terdesentralisasi Ethereum sangat penting karena siapa pun yang m
   Pelajari tentang fundamental Ethereum
 </DocLink>
 
-Sekalipun kurang adanya dukungan resmi, banyak kelompok, komunitas, dan proyek di keseluruhan ekosistem Ethereum senang memberikan bantuan.
-
-## Dukungan dompet {#wallet-support}
-
-Mengalami masalah dengan dompet Anda? Kebanyakan dompet telah mendedikasikan tim dukungan yang dapat menolong:
-
-- [MetaMask](https://metamask.zendesk.com/hc/)
-- [Argent](https://support.argent.xyz/hc/)
-- [MyEtherWallet](https://help.myetherwallet.com/)
-
-_Ini bukanlah daftar yang lengkap. Perlu bantuan menemukan bantuan untuk dompet yang khusus? Bergabunglah dengan [discord ethereum.org](https://discord.gg/ethereum-org) dan kami akan mencoba menolong Anda._
-
-Sedang mencari dompet Ethereum? [Jelajahi daftar lengkap dompet Ethereum kami](/wallets/find-wallet/).
-
-## Membangun dapps {#building-support}
-
-Membangun dapat bisa saja sulit. Berikut adalah beberapa lingkungan yang berfokus pengembangan dengan para pengembang Ethereum berpengalaman yang senang memberikan bantuan.
-
-- [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
-- [StackExchange Ethereum](https://ethereum.stackexchange.com/)
-- [Universitas Web3](https://www.web3.university/)
-
-Anda juga dapat menemukan dokumentasi dan panduan pengembangan di bagian [Sumber pengembang Ethereum](/developers/) kami.
-
-### Perangkat {#dapp-tooling}
-
-Apakah pertanyaan Anda terkait dengan peralatan, proyek, atau pustaka tertentu? Kebanyakan proyek memiliki peladen atau forum obrolan yang dikhususkan untuk mendukung Anda.
-
-Berikut adalah beberapa contoh populer:
-
-- [Solidity](https://gitter.im/ethereum/solidity)
-- [ethers.js](https://discord.gg/6jyGVDK6Jx)
-- [web3.js](https://discord.gg/GsABYQu4sC)
-- [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Alchemy](http://alchemy.com/discord)
-
-## Menjalankan node {#node-support}
-
-Jika Anda menjalankan node atau validator, berikut adalah beberapa komunitas yang dikhususkan untuk menolong Anda memulai.
-
-- [Discord EthStaker](https://discord.gg/ethstaker)
-- [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
-
-Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkungan untuk publik di mana Anda dapat mendapatkan dukungan dan mengajukan pertanyaan.
-
-### Klien eksekusi {#execution-clients}
-
-- [Geth](https://discord.gg/FqDzupGyYf)
-- [Nethermind](https://discord.gg/YJx3pm8z5C)
-- [Besu](https://discord.gg/p8djYngzKN)
-- [Erigon](https://github.com/ledgerwatch/erigon/issues)
-
-### Klien konsensus {#consensus-clients}
-
-- [Prysm](https://discord.gg/prysmaticlabs)
-- [Nimbus](https://discord.gg/nSmEH3qgFv)
-- [Lighthouse](https://discord.gg/cyAszAh)
-- [Teku](https://discord.gg/7hPv2T6)
-- [Lodestar](https://discord.gg/aMxzVcr)
-
-Anda juga dapat [mempelajari cara menjalankan node di sini](/developers/docs/nodes-and-clients/run-a-node/).
+Meskipun tidak ada dukungan resmi, banyak kelompok, komunitas, dan proyek di seluruh ekosistem Ethereum bersedia membantu, dan Anda dapat menemukan banyak informasi dan sumber daya bermanfaat di halaman ini. Masih ada pertanyaan? Bergabunglah dengan [Discord ethereum.org](https://discord.gg/ethereum-org), dan kami akan mencoba membantu Anda.
 
 ## Pertanyaan yang sering diajukan {#faq}
 
@@ -104,4 +44,62 @@ Transaksi di Ethereum dapat terkadang mengalami kemacetan jika Anda telah mengir
 
 ### Bagaimana cara menambang Ethereum? {#mining-ethereum}
 
-Kami tidak menyarankan membeli peralatan menambang jika Anda belum menambang Ethereum. Di ~Q3/Q4 2022, [penggabungan](/roadmap/merge/) akan terjadi, yang mengalihkan Ethereum dari bukti kerja ke bukti taruhan. Perubahan ini berarti menambang Ethereum tidak akan mungkin lagi.
+Penambangan Ethereum tidak lagi memungkinkan. Penambangan dihentikan ketika Ethereum berpindah dari [bukti kerja](/glossary/#pow) ke [bukti taruhan](/glossary/#pos). Sekarang, Ethereum memiliki validator, bukan penambang. Siapa saja dapat [melakukan penaruhan](/glossary/#staking) ETH dan menerima imbalan penaruhan dengan menjalankan perangkat lunak validator untuk mengamankan jaringan.
+
+### Bagaimana cara menjadi staker / menjalankan validator? {#how-to-stake}
+
+Untuk menjadi seorang validator, Anda harus memasang taruhan 32 ETH di kontrak deposit Ethereum dan mengatur simpul validator. Informasi lebih lanjut tersedia di [halaman penaruhan](/staking) kami dan di [landasan peluncuran penaruhan](https://launchpad.ethereum.org/).
+
+## Membangun dapps {#building-support}
+
+Membangun dapat bisa saja sulit. Berikut adalah beberapa lingkungan yang berfokus pengembangan dengan para pengembang Ethereum berpengalaman yang senang memberikan bantuan.
+
+- [Alchemy University](https://university.alchemy.com/#starter_code)
+- [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
+- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
+- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
+- [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
+
+Anda juga dapat menemukan dokumentasi dan panduan pengembangan di bagian [Sumber pengembang Ethereum](/developers/) kami.
+
+### Perangkat {#dapp-tooling}
+
+Apakah pertanyaan Anda terkait dengan peralatan, proyek, atau pustaka tertentu? Kebanyakan proyek memiliki peladen atau forum obrolan yang dikhususkan untuk mendukung Anda.
+
+Berikut adalah beberapa contoh populer:
+
+- [Solidity](https://gitter.im/ethereum/solidity)
+- [ethers.js](https://discord.gg/6jyGVDK6Jx)
+- [web3.js](https://discord.gg/GsABYQu4sC)
+- [Hardhat](https://discord.gg/xtrMGhmbfZ)
+- [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
+
+## Menjalankan node {#node-support}
+
+Jika Anda menjalankan node atau validator, berikut adalah beberapa komunitas yang dikhususkan untuk menolong Anda memulai.
+
+- [Discord EthStaker](https://discord.gg/ethstaker)
+- [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
+
+Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkungan untuk publik di mana Anda dapat mendapatkan dukungan dan mengajukan pertanyaan.
+
+### Klien eksekusi {#execution-clients}
+
+- [Geth](https://discord.gg/FqDzupGyYf)
+- [Nethermind](https://discord.gg/YJx3pm8z5C)
+- [Besu](https://discord.gg/p8djYngzKN)
+- [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
+
+### Klien konsensus {#consensus-clients}
+
+- [Prysm](https://discord.gg/prysmaticlabs)
+- [Nimbus](https://discord.gg/nSmEH3qgFv)
+- [Lighthouse](https://discord.gg/cyAszAh)
+- [Teku](https://discord.gg/7hPv2T6)
+- [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
+
+Anda juga dapat [mempelajari cara menjalankan node di sini](/developers/docs/nodes-and-clients/run-a-node/).

@@ -1,6 +1,6 @@
 ---
 title: Penaruhan sebagai layanan
-description: Gambaran umum mengenai bagaimana cara memulai staking untuk pooled ETH
+description: Pelajari penaruhan sebagai layanan
 lang: id
 template: staking
 emoji: ":money_with_wings:"
@@ -74,7 +74,7 @@ Memperbarui kredensial penarikan adalah langkah yang diperlukan untuk mengaktifk
 </ExpandableCard>
 
 <ExpandableCard title="Kapan saya bisa menarik dana?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Penarikan penaruhan diimplementasikan dalam peningkatan Shanghai/Capella pada April 2023. Para penaruh perlu menyediakan alamat penarikan (jika tidak disediakan saat deposit awal), dan pembayaran imbalan akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
+Para penaruh perlu menyediakan alamat penarikan (jika tidak disediakan saat deposit awal), dan pembayaran imbalan akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
 
 Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci saldo ETH mereka yang tersisa untuk penarikan. Akun yang telah menyediakan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang disediakan selama sweep validator berikutnya.
 
@@ -86,7 +86,7 @@ Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi simpul Anda kepada 
 
 Setelah selesai proses pemotongan hadiah/keluar, dana tersebut akan ditransfer ke alamat penarikan yang ditetapkan untuk validator tersebut. Ini memerlukan menyediakan alamat penarikan untuk diaktifkan. Alamat penarikan mungkin telah disediakan saat deposit awal. Jika tidak, kunci penarikan validator harus digunakan untuk menandatangani pesan yang menyatakan alamat penarikan. Jika tidak ada alamat penarikan yang disediakan, dana akan tetap terkunci sampai alamat penarikan diberikan.
 
-Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika Anda lebih suka memiliki kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut tentang cara melakukan taruhan solo untuk ETH](/staking/solo/).
+Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika ingin memegang kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut cara melakukan solo stake untuk ETH Anda](/staking/solo/).
 </ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}

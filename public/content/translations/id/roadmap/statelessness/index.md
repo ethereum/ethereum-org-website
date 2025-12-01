@@ -14,9 +14,9 @@ Hard drive yang lebih murah dapat digunakan untuk menyimpan data yang lebih lama
 
 ## Mengurangi penyimpanan untuk simpul {#reducing-storage-for-nodes}
 
-Ada beberapa cara untuk mengurangi jumlah data yang harus disimpan oleh setiap simpul, masing-masing membutuhkan protokol inti Ethereum untuk diperbarui ke tingkat yang berbeda:
+Ada beberapa cara untuk mengurangi jumlah data yang harus disimpan oleh setiap simpul, yang masing-masing memerlukan pembaruan pada protokol inti Ethereum dalam berbagai tingkatan:
 
-- **Kadaluarsa riwayat**: memungkinkan simpul untuk menghapus data status yang lebih tua dari X blok, tetapi tidak mengubah cara penanganan data status oleh klien Ethereum
+- **Kedaluwarsa riwayat**: memungkinkan simpul menghapus data status yang lebih tua dari X blok, tetapi tidak mengubah cara penanganan data status oleh klien Ethereum.
 - **Kadaluwarsa status**: memungkinkan data status yang tidak sering digunakan menjadi tidak aktif. Data yang tidak aktif dapat diabaikan oleh klien sampai data tersebut dibangkitkan.
 - **Keadaan tanpa status yang lemah**: hanya produsen blok yang perlu mengakses data status lengkap, simpul lain dapat memverifikasi blok tanpa database status lokal.
 - **Keadaan tanpa status yang kuat**: tidak ada simpul yang perlu mengakses data status lengkap.
@@ -81,7 +81,7 @@ Keadaan tanpa status yang lemah sedang dalam tahap penelitian lanjutan, tetapi b
 
 ### Keadaan tanpa status yang kuat {#strong-statelessness}
 
-Tanpa kewarganegaraan yang kuat menghilangkan kebutuhan akan blok apa pun untuk menyimpan data negara. Sebagai gantinya, transaksi dikirim dengan saksi yang dapat diagregasi oleh produsen blok. Produsen blok kemudian bertanggung jawab untuk menyimpan hanya status yang diperlukan untuk menghasilkan saksi untuk akun yang relevan. Tanggung jawab untuk menyatakan hampir sepenuhnya berpindah ke pengguna, karena mereka mengirimkan saksi dan 'daftar akses' untuk menyatakan akun dan kunci penyimpanan mana yang berinteraksi dengan mereka. Hal ini akan memungkinkan simpul menjadi sangat ringan, namun ada konsekuensinya, termasuk membuatnya lebih sulit untuk bertransaksi dengan kontrak pintar.
+Keadaan tanpa status yang kuat menghilangkan kebutuhan akan simpul apa pun untuk menyimpan data. Sebagai gantinya, transaksi dikirim dengan saksi yang dapat diagregasi oleh produsen blok. Produsen blok kemudian bertanggung jawab untuk menyimpan hanya status yang diperlukan untuk menghasilkan saksi untuk akun yang relevan. Tanggung jawab untuk menyatakan hampir sepenuhnya berpindah ke pengguna, karena mereka mengirimkan saksi dan 'daftar akses' untuk menyatakan akun dan kunci penyimpanan mana yang berinteraksi dengan mereka. Hal ini akan memungkinkan simpul menjadi sangat ringan, namun ada konsekuensinya, termasuk membuatnya lebih sulit untuk bertransaksi dengan kontrak pintar.
 
 Keadaan tanpa status yang kuat telah diselidiki oleh para peneliti tetapi saat ini tidak diharapkan menjadi bagian dari peta perjalanan Ethereum - kemungkinan besar keadaan tanpa status yang lemah sudah cukup untuk kebutuhan penskalaan Ethereum.
 

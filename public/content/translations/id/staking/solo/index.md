@@ -1,6 +1,6 @@
 ---
-title: Lakukan taruhan solo untuk ETH Anda
-description: Berikut adalah gambaran buat kamu cara memulai solo penaruhan ETH
+title: Melakukan home stake untuk ETH Anda
+description: Gambaran umum tentang cara memulai home stake untuk Anda
 lang: id
 template: staking
 emoji: ":money_with_wings:"
@@ -13,32 +13,32 @@ summaryPoints:
   - Hapus kepercayaan, dan jangan pernah menyerahkan kendali atas kunci dana Anda
 ---
 
-## Apa yang dimaksud solo penaruhan? {#what-is-solo-staking}
+## Apa itu home stake? {#what-is-solo-staking}
 
-Solo penaruhan adalah tindakan [menjalankan simpul Ethereum](/run-a-node/) yang terhubung ke internet dan mendepositkan 32 ETH untuk mengaktifkan [validator](#faq), memberi Anda kemampuan untuk berpartisipasi secara langsung dalam konsensus jaringan.
+Home stake adalah aktivitas [menjalankan suatu simpul Ethereum](/run-a-node/) yang terhubung ke internet dan menyimpan 32 ETH untuk menjalankan [validator](#faq), sehingga Anda dapat berpartisipasi secara langsung dalam konsensus jaringan.
 
-**Solo penaruhan meningkatkan desentralisasi jaringan Ethereum**, menjadikan Ethereum lebih tahan sensor dan tangguh terhadap serangan. Metode penaruhan lain mungkin tidak membantu jaringan dengan cara yang sama. Penaruhan solo adalah pilihan staking terbaik untuk mengamankan Ethereum.
+**Home stake meningkatkan desentralisasi jaringan Ethereum**, yang membuat Ethereum lebih tahan sensor dan serangan. Metode penaruhan lain mungkin tidak membantu jaringan dengan cara yang sama. Home stake adalah opsi penaruhan terbaik untuk mengamankan Ethereum.
 
 Sebuah simpul Ethereum terdiri dari klien lapisan eksekusi (EL) dan juga klien lapisan konsensus (CL). Klien-klien ini adalah perangkat lunak yang bekerja bersama, bersama dengan seperangkat kunci tanda tangan yang sah, untuk memverifikasi transaksi dan blok, memberikan kesaksian terhadap kepala rantai yang benar, menggabungkan kesaksian, dan mengajukan blok.
 
-Para penaruh solo bertanggung jawab atas mengoperasikan perangkat keras yang diperlukan untuk menjalankan klien-klien ini. Sangat disarankan untuk menggunakan mesin khusus untuk ini yang Anda operasikan dari beranda - ini sangat bermanfaat untuk kesehatan jaringan.
+Pengguna home stake bertanggungjawab mengoperasikan perangkat keras yang diperlukan untuk menjalankan klien ini. Sangat disarankan untuk menggunakan mesin khusus untuk ini yang Anda operasikan dari beranda - ini sangat bermanfaat untuk kesehatan jaringan.
 
-Seorang penaruh solo menerima imbalan langsung dari protokol karena menjaga validator mereka berfungsi dengan baik dan tetap daring.
+Pengguna home stake menerima imbalan langsung dari protokol karena telah memastikan validator mereka berfungsi dengan baik dan daring.
 
-## Mengapa taruhan solo? {#why-stake-solo}
+## Apa keuntungan melakukan home stake? {#why-stake-solo}
 
-Penaruhan solo membawa tanggung jawab lebih besar tetapi memberikan Anda kendali maksimal atas dana dan pengaturan penaruhan Anda.
+Home stake memerlukan tanggung jawab yang lebih besar, tetapi memberikan kendali penuh atas dana dan pengaturan penaruhan Anda.
 
 <CardGrid>
   <Card title="Mendapatkan ETH yang baru" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Full control
 Pengaturan penuh" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Keamanan Jaringan" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Keamanan Jaringan" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Pertimbangan sebelum melakukan penaruhan solo {#considerations-before-staking-solo}
+## Pertimbangan sebelum melakukan home stake {#considerations-before-staking-solo}
 
-Seberapa pun kita berharap bahwa penaruhan solo dapat diakses dan bebas risiko bagi semua orang, kenyataannya tidak demikian. Ada beberapa pertimbangan praktis dan serius yang perlu diingat sebelum memutuskan untuk melakukan taruhan solo pada ETH Anda.
+Meskipun kami sangat ingin mengatakan bahwa home stake mudah diakses dan bebas risiko bagi semua orang, kenyataannya tidak demikian. Ada beberapa pertimbangan serius dan praktis yang perlu diingat sebelum memilih melakukan home stake untuk ETH Anda.
 
 <InfoGrid>
 <ExpandableCard title="Bacaan yang diperlukan" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -54,7 +54,7 @@ Ini juga memerlukan pengaturan perangkat keras yang sangat dasar, dan pemahaman 
 </ExpandableCard>
 
 <ExpandableCard title="Manajemen kunci Aman" eventCategory="SoloStaking" eventName="clicked secure key management">
-Sama seperti kunci pribadi yang mengamankan alamat Ethereum Anda, Anda perlu menghasilkan kunci-kunci khusus untuk validator Anda. Anda harus memahami bagaimana cara menjaga frasa benih atau kunci pribadi tetap aman dan terlindungi.{' '}
+Sama seperti kunci pribadi yang mengamankan alamat Ethereum Anda, Anda perlu menghasilkan kunci-kunci khusus untuk validator Anda. Anda harus memahami cara menjaga frasa benih atau kunci pribadi tetap aman dan terlindungi.{' '}
 
 [Keamanan Ethereum dan pencegahan penipuan](/security/)
 </ExpandableCard>
@@ -94,7 +94,7 @@ Landasan Peluncuran Penaruhan adalah aplikasi sumber terbuka yang akan membantu 
 
 ## Apa yang perlu dipertimbangkan dalam perangkat pengaturan simpul dan klien {#node-tool-considerations}
 
-Ada sejumlah perangkat dan layanan yang semakin banyak membantu Anda untuk melakukan taruhan solo ETH, tetapi masing-masing memiliki risiko dan manfaat yang berbeda.
+Ada banyak perangkat dan layanan yang bisa membantu Anda melakukan home stake ETH, tetapi setiap opsi memiliki manfaat dan risikonya sendiri.
 
 Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang signifikan yang mungkin dimiliki oleh perangkat penaruhan yang terdaftar. Gunakan bagian ini sebagai referensi untuk cara kami mendefinisikan atribut-atribut ini saat Anda memilih perangkat membantu perjalanan penaruhan Anda.
 
@@ -120,7 +120,7 @@ Perangkat ini dapat digunakan sebagai alternatif untuk [CLI Deposit Penaruhan](h
 
 Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
 
-## Jelajahi panduan penaruhan solo {#staking-guides}
+## Pelajari panduan untuk melakukan home stake {#staking-guides}
 
 <StakingGuides />
 
@@ -135,11 +135,15 @@ Seorang <em>validator</em> adalah entitas virtual yang ada di Ethereum dan berpa
 </ExpandableCard>
 
 <ExpandableCard title="Dapatkah saya melakukan deposit lebih dari 32 ETH?">
-Setiap pasangan kunci yang terkait dengan validator memerlukan persis 32 ETH untuk diaktifkan. Penambahan ETH lebih banyak ke satu set kunci tidak meningkatkan potensi imbalankarena setiap validator dibatasi oleh <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efektif</a> 32 ETH. Ini berarti bahwa penaruhan dilakukan dalam penambahan 32 ETH, masing-masing dengan set kunci dan saldo yang terpisah.
+Ya, akun validator modern mampu menampung hingga 2048 ETH. Tambahan ETH di atas 32 akan bertambah dengan cara bertahap, meningkat dalam kelipatan satu digit seiring dengan meningkatnya saldo Anda yang sebenarnya. Ini dikenal sebagai <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efektif</a> Anda.
 
-Jangan meletakkan lebih dari 32 ETH untuk satu validator. Ini tidak akan meningkatkan imbalan Anda. Jika alamat penarikan telah diatur untuk validator, dana yang berlebihan di atas 32 ETH akan secara otomatis ditarik ke alamat ini selama [pembersihan validator](/staking/withdrawals/#validator-sweeping) berikutnya.
+Untuk meningkatkan saldo efektif akun, dan dengan demikian meningkatkan imbalan, buffer 0,25 ETH di atas ambang batas ETH penuh harus dilewati. Misalnya, akun dengan saldo sebenarnya 32,9 dan saldo efektif 32 perlu mendapatkan 0,35 ETH lagi untuk membawa saldo sebenarnya di atas 33,25 sebelum memicu peningkatan saldo efektif.
 
-Jika penaruhan solo terlalu menantang bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/), atau jika Anda memiliki kurang dari 32 ETH, lihatlah [pool penaruhan](/staking/pools/).
+Buffer ini juga mencegah saldo efektif turun hingga mencapai 0,25 ETH di bawah saldo efektif saat ini.
+
+Setiap pasangan kunci yang terkait dengan validator membutuhkan minimal 32 ETH untuk diaktifkan. Saldo di atas ini dapat ditarik ke alamat penarikan yang terkait kapan saja melalui transaksi yang ditandatangani oleh alamat ini. Setiap dana yang melebihi saldo efektif maksimum akan secara otomatis ditarik secara berkala.
+
+Jika home staking tampaknya terlalu sulit bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/). Atau, jika Anda memiliki kurang dari 32 ETH, periksa [staking pool](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Apakah saya akan mengalami pemotongan jika saya offline? (tptb: Tidak.)">
@@ -201,6 +205,7 @@ Untuk membuka dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesa
 - [Membantu Keragaman Klien](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Klien keragaman pada Ethereum Lapisan konsensus](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Caranya: Berbelanja Untuk Ethereum Validator Perangkat Keras](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Langkah demi Langkah: Cara Bergabung dengan Jaringan Percobaan Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Tips Pencegahan Pemotongan Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

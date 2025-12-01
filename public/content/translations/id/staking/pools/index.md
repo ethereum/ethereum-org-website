@@ -1,6 +1,6 @@
 ---
 title: Penaruhan dari pengumpulan
-description: Gambaran umum mengenai bagaimana cara memulai penaruhan untuk ETH dikumpulkan
+description: Pelajari pool penaruhan
 lang: id
 template: staking
 emoji: ":money_with_wings:"
@@ -17,7 +17,7 @@ summaryPoints:
 
 Pool penaruhan adalah pendekatan kolaboratif yang memungkinkan banyak orang dengan jumlah ETH yang lebih kecil untuk mendapatkan 32 ETH yang diperlukan untuk mengaktifkan satu set kunci validator. Fungsionalitas pooling tidak didukung secara asli dalam protokol, sehingga solusi-solusi dibangun secara terpisah untuk mengatasi kebutuhan ini.
 
-Beberapa pool beroperasi menggunakan kontrak pintar, di mana dana dapat disimpan ke dalam kontrak, yang mengelola dan melacak taruhan Anda dengan aman, dan mengeluarkan token yang mewakili nilai tersebut. Pool lain mungkin tidak melibatkan kontrak pintar dan justru diatasi di luar rantai.
+Beberapa pool beroperasi menggunakan kontrak pintar, di mana dana dapat disimpan ke dalam kontrak, yang mengelola dan melacak taruhan Anda dengan aman, dan mengeluarkan token yang mewakili nilai tersebut. Beberapa pool lain mungkin tidak melibatkan kontrak pintar dan dikelola di luar rantai.
 
 ## Mengapa melakukan taruhan dengan pool? {#why-stake-with-a-pool}
 
@@ -26,7 +26,7 @@ Selain manfaat yang kami sebutkan dalam [pengantar tentang penaruhan](/staking/)
 <CardGrid>
   <Card title="Hambatan masuk yang rendah" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Taruhan hari ini" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Penaruhan token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Penaruhan token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
