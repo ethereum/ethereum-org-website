@@ -1,178 +1,171 @@
 ## Canonical redirects (intl-prefixed)
 
-/*/discord https://discord.gg/ethereum-org 301!
+/:locale/discord https://discord.gg/ethereum-org 301!
 
-/*/pdfs/* /:splat/ 301!
+/:locale/pdfs/* /:locale/ 301!
 
-/*/brand /:splat/assets/ 301!
+/:locale/brand /:locale/assets/ 301!
 
-/*/ethereum.html /:splat/what-is-ethereum/ 301!
+/:locale/ethereum.html /:locale/what-is-ethereum/ 301!
 
-/*/ether /:splat/eth/ 301!
+/:locale/ether /:locale/eth/ 301!
 
-/*/token /:splat/developers/ 301!
+/:locale/token /:locale/developers/ 301!
 
-/*/crowdsale /:splat/developers/ 301!
+/:locale/crowdsale /:locale/developers/ 301!
 
-/*/cli /:splat/developers/ 301!
+/:locale/cli /:locale/developers/ 301!
 
-/*/greeter /:splat/developers/ 301!
+/:locale/greeter /:locale/developers/ 301!
 
-/*/roadmap/vision/ /:splat/roadmap/ 301!
+/:locale/roadmap/vision/ /:locale/roadmap/ 301!
 
-/*/search /:splat/ 301!
+/:locale/search /:locale/ 301!
 
-/*/wallets/ /:splat/wallets/find-wallet/ 301!
-/*/wallets/find-wallet/* /:splat/wallets/find-wallet/:splat 200!
-/*/wallets/* /:splat/wallets/ 301!
+/:locale/wallets/ /:locale/wallets/find-wallet/ 301!
 
-/*/garden /:splat/roadmap/ 301!
+/:locale/wallets/find-wallet/* /:locale/wallets/find-wallet/:splat 200!
 
-/*/download /:splat/developers/docs/nodes-and-clients/ 301!
+/:locale/wallets/* /:locale/wallets/ 301!
 
-/*/how /:splat/guides/ 301!
+/:locale/garden /:locale/roadmap/ 301!
 
-# Remove /content prefix (legacy URLs)
+/:locale/download /:locale/developers/docs/nodes-and-clients/ 301!
+
+/:locale/how /:locale/guides/ 301!
+
+# Remove /content any usage of prefix
 /:locale/content/* /:locale/:splat 301!
 
 # Invalid nested apps paths → apps hub
 /:locale/apps/:app/* /:locale/apps/ 301!
 
-/*/nfts/ /:splat/nft/ 301!
+/:locale/nfts/ /:locale/nft/ 301!
 
-/*/daos/ /:splat/dao/ 301!
+/:locale/daos/ /:locale/dao/ 301!
 
-/*/layer2/ /:splat/layer-2/ 301!
+/:locale/layer2/ /:locale/layer-2/ 301!
 
-/*/grants/ /:splat/community/grants/ 301!
+/:locale/grants/ /:locale/community/grants/ 301!
 
 /no/* /nb/:splat 301!
 
 /ph/* /fil/:splat 301!
 
-/*/java/ /:splat/developers/docs/programming-languages/java/ 301!
+/:locale/java/ /:locale/developers/docs/programming-languages/java/ 301!
 
-/*/python/ /:splat/developers/docs/programming-languages/python/ 301!
+/:locale/python/ /:locale/developers/docs/programming-languages/python/ 301!
 
-/*/javascript/ /:splat/developers/docs/programming-languages/javascript/ 301!
+/:locale/javascript/ /:locale/developers/docs/programming-languages/javascript/ 301!
 
-/*/golang/ /:splat/developers/docs/programming-languages/golang/ 301!
+/:locale/golang/ /:locale/developers/docs/programming-languages/golang/ 301!
 
-/*/rust/ /:splat/developers/docs/programming-languages/rust/ 301!
+/:locale/rust/ /:locale/developers/docs/programming-languages/rust/ 301!
 
-/*/dot-net/ /:splat/developers/docs/programming-languages/dot-net/ 301!
+/:locale/dot-net/ /:locale/developers/docs/programming-languages/dot-net/ 301!
 
-/*/delphi/ /:splat/developers/docs/programming-languages/delphi/ 301!
+/:locale/delphi/ /:locale/developers/docs/programming-languages/delphi/ 301!
 
-/*/dart/ /:splat/developers/docs/programming-languages/dart/ 301!
+/:locale/dart/ /:locale/developers/docs/programming-languages/dart/ 301!
 
-## handled below with intl-prefixed rule
+/:locale/languages/ /:locale/community/language-resources/ 301!
 
-/*/languages/ /:splat/community/language-resources/ 301!
+/:locale/developers/docs/mining/ /:locale/developers/docs/consensus-mechanisms/pow/mining/ 301!
 
-/*/developers/docs/mining/ /:splat/developers/docs/consensus-mechanisms/pow/mining/ 301!
+/:locale/beginners /:locale/what-is-ethereum/ 301!
 
-/*/beginners /:splat/what-is-ethereum/ 301!
+/:locale/build /:locale/developers/learning-tools/ 301!
 
-/*/build /:splat/developers/learning-tools/ 301!
+/:locale/eth2/beacon-chain/ /:locale/upgrades/beacon-chain/ 301!
 
-/*/eth2/beacon-chain/ /:splat/upgrades/beacon-chain/ 301!
+/:locale/eth2/the-beacon-chain/ /:locale/upgrades/beacon-chain/ 301!
 
-/*/eth2/the-beacon-chain/ /:splat/upgrades/beacon-chain/ 301!
+/:locale/upgrades/the-beacon-chain/ /:locale/upgrades/beacon-chain/ 301!
 
-/*/upgrades/the-beacon-chain/ /:splat/upgrades/beacon-chain/ 301!
+/:locale/eth2/merge /:locale/upgrades/merge/ 301!
 
-/*/eth2/merge /:splat/upgrades/merge/ 301!
+/:locale/eth2/the-merge /:locale/upgrades/merge/ 301!
 
-/*/eth2/the-merge /:splat/upgrades/merge/ 301!
+/:locale/upgrades/the-merge /:locale/upgrades/merge/ 301!
 
-/*/upgrades/the-merge /:splat/upgrades/merge/ 301!
+/:locale/eth2/docking /:locale/upgrades/merge/ 301!
 
-/*/eth2/docking /:splat/upgrades/merge/ 301!
+/:locale/upgrades/docking /:locale/upgrades/merge/ 301!
 
-/*/upgrades/docking /:splat/upgrades/merge/ 301!
+/:locale/eth2/the-docking /:locale/upgrades/merge/ 301!
 
-/*/eth2/the-docking /:splat/upgrades/merge/ 301!
+/:locale/upgrades/the-docking /:locale/upgrades/merge/ 301!
 
-/*/upgrades/the-docking /:splat/upgrades/merge/ 301!
+/:locale/eth2/shard-chains/ /:locale/roadmap/danksharding/ 301!
 
-/*/eth2/shard-chains/ /:splat/roadmap/danksharding/ 301!
+/:locale/upgrades/shard-chains/ /:locale/roadmap/danksharding/ 301!
 
-/*/upgrades/shard-chains/ /:splat/roadmap/danksharding/ 301!
+/:locale/upgrades/sharding/ /:locale/roadmap/danksharding/ 301!
 
-/*/upgrades/sharding/ /:splat/roadmap/danksharding/ 301!
+/:locale/upgrades/merge /:locale/roadmap/merge/ 301!
 
-/*/upgrades/merge /:splat/roadmap/merge/ 301!
+/:locale/upgrades/merge/issuance /:locale/roadmap/merge/issuance 301!
 
-/*/upgrades/merge/issuance /:splat/roadmap/merge/issuance 301!
+/:locale/upgrades/beacon-chain /:locale/roadmap/beacon-chain 301!
 
-/*/upgrades/beacon-chain /:splat/roadmap/beacon-chain 301!
+/:locale/upgrades/vision/ /:locale/roadmap/ 301!
 
-/*/upgrades/vision/ /:splat/roadmap/ 301!
+/:locale/roadmap/vision/ /:locale/roadmap/ 301!
 
-/*/roadmap/vision/ /:splat/roadmap/ 301!
+/:locale/upgrades /:locale/roadmap 301!
 
-/*/upgrades /:splat/roadmap 301!
+/:locale/upgrades/get-involved /:locale/contributing 301!
 
-/*/upgrades/get-involved /:splat/contributing 301!
+/:locale/eth2/staking/ /:locale/staking/ 301!
 
-/*/eth2/staking/ /:splat/staking/ 301!
+/:locale/eth2/vision/ /:locale/roadmap/vision/ 301!
 
-/*/eth2/vision/ /:splat/roadmap/vision/ 301!
+/:locale/eth2/get-involved/ /:locale/upgrades/get-involved/ 301!
 
-/*/eth2/get-involved/ /:splat/upgrades/get-involved/ 301!
+/:locale/eth2/get-involved/bug-bounty/ /:locale/bug-bounty/ 301!
 
-/*/eth2/get-involved/bug-bounty/ /:splat/bug-bounty/ 301!
+/:locale/upgrades/get-involved/bug-bounty/ /:locale/bug-bounty/ 301!
 
-/*/upgrades/get-involved/bug-bounty/ /:splat/bug-bounty/ 301!
+/:locale/eth2/deposit-contract/ /:locale/staking/deposit-contract/ 301!
 
-/*/eth2/deposit-contract/ /:splat/staking/deposit-contract/ 301!
+/:locale/eth2 /:locale/upgrades/ 301!
 
-/*/eth2 /:splat/upgrades/ 301!
+/:locale/developers/docs/scaling/layer-2-rollups /:locale/developers/docs/scaling 301!
 
-/*/developers/docs/scaling/layer-2-rollups /:splat/developers/docs/scaling 301!
+/:locale/developers/docs/layer-2-scaling/ /:locale/layer-2/ 301!
 
-/*/developers/docs/layer-2-scaling/ /:splat/layer-2/ 301!
+/:locale/about/web-developer /:locale/about/#open-jobs 301!
 
-/*/about/web-developer /:splat/about/#open-jobs 301!
+/:locale/about/product-designer /:locale/about/#open-jobs 301!
 
-/*/about/product-designer /:splat/about/#open-jobs 301!
+/:locale/use /:locale/apps/ 301!
 
-/*/use /:splat/apps/ 301!
+/:locale/dapps /:locale/apps/ 301!
 
-# Exception: don't redirect developers/docs/dapps paths
-/*/developers/docs/dapps* /:splat/developers/docs/dapps:splat 200!
+/:locale/contributing/translation-program/translation-guide/ /:locale/contributing/translation-program/faq/ 301!
 
-/*/dapps /:splat/apps/ 301!
+/:locale/contributing/translation-program/content-versions/ /:locale/contributing/translation-program/ 301!
 
-## duplicates removed above; keep only one canonical rule per path
+/:locale/contributing/translation-program/content-buckets/ /:locale/contributing/translation-program/ 301!
 
-/*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!
+/:locale/developers/docs/smart-contracts/source-code-verification/ /:locale/developers/docs/smart-contracts/verifying/ 301!
 
-/*/contributing/translation-program/content-versions/ /:splat/contributing/translation-program/ 301!
+/:locale/developers/docs/smart-contracts/upgrading-smart-contracts/ /:locale/developers/docs/smart-contracts/upgrading/ 301!
 
-/*/contributing/translation-program/content-buckets/ /:splat/contributing/translation-program/ 301!
+/:locale/writing-cohort https://ethereumwriterscohort.carrd.co/ 301!
 
-/*/developers/docs/smart-contracts/source-code-verification/ /:splat/developers/docs/smart-contracts/verifying/ 301!
+/:locale/staking/withdraws /:locale/staking/withdrawals/ 301!
 
-/*/developers/docs/smart-contracts/upgrading-smart-contracts/ /:splat/developers/docs/smart-contracts/upgrading/ 301!
+/:locale/guides/how-to-register-an-ethereum-account /:locale/guides/how-to-create-an-ethereum-account/ 301!
 
-## handled below with intl-prefixed rule
+/:locale/deprecated-software /:locale/apps/ 301!
 
-/*/writing-cohort https://ethereumwriterscohort.carrd.co/ 301!
+/:locale/enterprise/private-ethereum/ /:locale/enterprise/ 301!
 
-/*/staking/withdraws /:splat/staking/withdrawals/ 301!
+/:locale/dashboards /:locale/resources 301!
 
-/*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
+/:locale/tds /:locale/trillion-dollar-security 301!
 
-/*/deprecated-software /:splat/apps/ 301!
+/:locale/10-years /:locale/10years 301!
 
-/*/enterprise/private-ethereum/ /:splat/enterprise/ 301!
-
-/*/dashboards /:splat/resources 301!
-
-/*/tds /:splat/trillion-dollar-security 301!
-
-/*/10-years /:splat/10years 301!
-
-/*/history /:splat/ethereum-forks 301!
+/:locale/history /:locale/ethereum-forks 301!
