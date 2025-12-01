@@ -40,15 +40,12 @@ Sesetengah apl akan meminta anda untuk menyimpan "frasa pemulihan" (kadangkala d
 **Sesiapa sahaja yang mengetahui frasa ini boleh mengawal semua dana.** Jangan sesekali kongsikan frasa ini dengan sesiapa. Frasa ini sepatutnya mengandungi 12 hingga 24 perkataan yang dijanakan secara warak (susunan perkataan adalah penting).
 
 <div>
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row justify-between items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div><b>Dompet telah dipasang?</b><br/>Pelajari cara untuk menggunakanannya.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cara menggunakan dompet
   </ButtonLink>
- </AlertContent>
-</Alert>
+</InfoBanner>
 </div>
 
 Berminat dengan panduan lain? Lihat panduan kami: [Panduan langkah demi langkah](/guides/)

@@ -7,7 +7,13 @@ hideEditButton: true
 
 # Acara akan datang {#events}
 
-** Setiap bulan, terdapat acara Ethereum utama di seluruh dunia. ** Cuba hadiri acara berhampiran anda untuk bertemu lebih ramai orang dalam komuniti ini, mengetahui tentang peluang pekerjaan dan membangunkan kemahiran baru.
+Acara Ethereum berlaku dengan kerap, daripada perhimpunan kecil dan santai hingga persidangan besar dan hackathon di seluruh dunia!
+
+Acara ini merupakan cara yang paling menyeronokkan dan menarik untuk belajar, berhubung dengan komuniti tempatan anda, menemui peluang, dan membangunkan kemahiran baharu.
+
+💡 Menganjurkan acara atau mempunyai inisiatif komuniti dalam fikiran? Hubungi pasukan Ethereum Everywhere untuk mendapatkan sokongan! → [Hubungi di sini](https://docs.google.com/forms/d/e/1FAIpQLSeA-W8iy2PJxrY3TD4lMYXyky_wLd4QB_7NRwqSxCd0e19MUg/viewform)
+
+Ingin menerokai acara Ethereum di kawasan anda? Lihatlah acara dan perjumpaan di bawah untuk mencari yang seterusnya untuk disertai!
 
 <UpcomingEventsList/>
 
