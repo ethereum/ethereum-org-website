@@ -95,6 +95,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Molecule：资助和为你的研究项目筹资](https://www.molecule.xyz/)
 - [VitaDAO：通过赞助的研究协议获取资金用于长寿研究](https://www.vitadao.com/)
 - [ResearchHub：发表科学成果及与同行对话](https://www.researchhub.com/)
+- [LabDAO：仿真折叠蛋白质](https://alphafodl.vercel.app/)
 - [dClimate 应用程序接口：查询由去中心化社区收集的气候数据](https://www.dclimate.net/)
 - [去中心化科学基金：去中心化出版工具构建者](https://descifoundation.org/)
 - [DeSci.World：用户浏览和参与去中心化科学的一站式商店](https://desci.world)

@@ -1,6 +1,6 @@
 ---
 title: Web2 与 Web3 的对比
-description:
+description: 对比中心化 Web2 服务与基于以太坊区块链技术的去中心化 Web3 应用。
 lang: zh
 ---
 

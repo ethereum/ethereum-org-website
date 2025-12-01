@@ -46,17 +46,15 @@ JavaScript是以太坊生态中最受欢迎的语言之一。 事实上，有一
 
 如果你倾向于阅读代码，下面的 JavaScript 代码可以很好地成为通读文档的替代方案。
 
-**参阅 monorepo**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
+**查看以太坊虚拟机 (EVM)**  
+[`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
 ### 节点和客户端 {#nodes-and-clients}
 
 目前正在开发的 Ethereumjs 客户端允许你发掘以太坊客户端如何使用你能理解的语言 (JavaScript) 工作！
 
-它曾经在独立的[`存储库`](https://github.com/ethereumjs/ethereumjs-client)中托管，然而，后来作为一个包整合进了 EthereumVM monorepo。
-
-**参阅客户端**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**查看客户端**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## 其它项目 {#other-projects}
 

@@ -61,19 +61,14 @@ CCRI 估计，以太坊的年化耗电量会因合并减少 **99.988%** 以上�
 
 Web3 原生公共物品融资平台，如 [Gitcoin](https://gitcoin.co) 举行气候回合，推动在以太坊应用程序层上形成环境意识。 通过制定这些计划（以及其他，例如[去中心化科学](/desci/)），以太坊正在成为一项对环境和社会有益的技术。
 
-<Alert variant="update">
-<AlertEmoji text=":evergreen_tree:" />
-<AlertContent>
-<AlertDescription>
+<InfoBanner emoji=":evergreen_tree:">
   如果你认为本页尚有可改进之处，请提出问题或拉取请求。 本页面上的统计数据是基于公开数据的估算值 - 它们不代表 ethereum.org 团队或以太坊基金会的官方声明或承诺。
-</AlertDescription>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## 延伸阅读 {#further-reading}
 
 - [剑桥区块链网络可持续性指数](https://ccaf.io/cbnsi/ethereum)
-- [白宫关于工作量证明区块链的报告](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [白宫关于工作量证明区块链的报告](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [以太坊排放量：一种自下而上的估算方法](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [以太坊能源消耗指数](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_

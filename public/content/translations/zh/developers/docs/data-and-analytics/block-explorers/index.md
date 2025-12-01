@@ -25,7 +25,6 @@ sidebarDepth: 3
 - [Ethplorer](https://ethplorer.io/) -_ 还支持中文、西班牙语、法语、土耳其语、俄语、韩语和越南语_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
 
 ## 开源工具 {#open-source-tools}
@@ -95,7 +94,7 @@ sidebarDepth: 3
 - 燃料限制 – 此交易可以消耗的最大燃料单位数
 - 消耗的燃料 – 交易消耗的实际燃料单位数量
 - 燃料价格 – 每燃料单位设定的价格
-- 随机数 – `from` 地址的交易号（请记住，它从 0 开始，所以随机数 ` 100` 实际上是该帐户提交的第 101 个交易
+- 随机数 – `from` 地址的交易号（请记住，它从 0 开始，所以随机数 ` 100` 实际上是该帐户提交的第 101 个交易）
 - 输入数据 – 交易所需的任何额外信息
 
 ### 帐户 {#accounts}
@@ -238,13 +237,12 @@ sidebarDepth: 3
 
 ## 区块浏览器 {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - 可以用来获取以太坊主网和 Sepolia 测试网数据的区块浏览器
-- [3xpl](https://3xpl.com/ethereum) - 无广告、开源的以太坊浏览器，允许你下载自己的数据集
-- [Beaconcha.in](https://beaconcha.in/) - 用于以太坊主网和 Sepolia 测试网的开源区块浏览器
+- [Etherscan](https://etherscan.io/) - 一个可用于获取以太坊主网和测试网数据的区块浏览器
+- [3xpl](https://3xpl.com/ethereum) - 一个可以下载数据集的无广告开源以太坊浏览器
+- [Beaconcha.in](https://beaconcha.in/) - 以太坊主网和测试网的开源区块浏览器
 - [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护性的以太坊浏览器。 也用于排序和过滤（内存池）数据
 - [Etherchain](https://www.etherchain.org/) - 以太坊主网的区块浏览器
 - [Ethplorer](https://ethplorer.io/) - 专注于以太坊主网和 Kovan 测试网代币的区块浏览器
-- [Rantom](https://rantom.app/) - 是一个好用的开源去中心化金融非同质化代币交易查看器，用于提供详细的交易信息。&
 - [Ethernow](https://www.ethernow.xyz/) - 一个实时交易浏览器，可让您查看以太坊主网预链层
 
 ## 延伸阅读 {#further-reading}

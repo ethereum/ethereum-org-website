@@ -1,6 +1,6 @@
 ---
 title: 智能合约库
-description:
+description: 探索可重用的智能合约库和构建块来加速你的以太坊开发项目。
 lang: zh
 ---
 

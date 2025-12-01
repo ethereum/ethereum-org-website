@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 #### 硬件 {#hardware}
 
-不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/network-types)来看，在云端运行大部分节点可能引发单点故障。
+不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/networkType/Hosting)来看，在云端运行大部分节点可能引发单点故障。
 
 以太坊客户端可以在你的计算机、笔记本电脑、服务器甚至单板计算机上运行。 虽然可以在你的个人计算机上运行客户端，但为你的节点配备一台专用机器可以显著提高其性能和安全性，同时最大限度地减少对你的主计算机的影响。
 
@@ -128,6 +128,7 @@ sidebarDepth: 2
 以下是一些可以帮助你安装和控制客户端的项目，只需单击几下即可：
 
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode 不仅仅可以在供应商提供的机器上安装。 该软件、实际的节点启动器和具有许多功能的控制中心可以在任意硬件上使用。
+- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - 最快捷、最简便的搭建全节点方式。 一行命令设置工具及节点管理图形用户界面。 免费。 开源。 以太坊的公共商品由独立质押者提供。 支持 ARM64 和 AMD64。
 - [eth-docker](https://eth-docker.net/) - 使用 Docker 进行的自动化设置专注于简便和安全的质押，它需要用户具备基本的终端和 Docker 知识。我们推荐进阶用户可以选择此项目。
 - [Stereum](https://stereum.net/ethereum-node-setup/) - 通过 SSH 连接在远程服务器上安装客户端的启动器，配备 GUI 设置指南、控制中心和许多其他功能。
 - [NiceNode](https://www.nicenode.xyz/) - 提供简便用户体验的启动器，可在你的计算机上运行节点。 只需选择客户端并单击几下即可启动它们。 仍在开发中。
@@ -296,7 +297,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/get-started/running-node/)。
+Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
 
@@ -365,7 +366,7 @@ nimbus_beacon_node \
 
 ##### 运行 Prysm
 
-Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)中找到。
+Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://docs.prylabs.network/docs/install/install-with-script)中找到。
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -444,7 +445,7 @@ _但是，共识层的验证者节点就需要一直在线。_验证者节点离
 
 #### 更新客户端 {#updating-clients}
 
-你应该通过安装最新的安全补丁、功能和[以太坊改进提案](/eips/)，让客户端软件更新到最新版本。 特别是在[硬分叉](/ethereum-forks/)之前，确保运行正确的客户端版本。
+你应该通过安装最新的安全补丁、功能和[以太坊改进提案](/eips/)，让客户端软件更新到最新版本。 特别是在[硬分叉](/history/)之前，确保运行正确的客户端版本。
 
 > 在重要的网络更新之前，以太坊基金会在其[博客](https://blog.ethereum.org)上发布相关文章。 你可以[订阅这些公告](https://blog.ethereum.org/category/protocol#subscribe)，以便在你的节点需要更新时收到邮件通知。
 
@@ -465,8 +466,9 @@ _但是，共识层的验证者节点就需要一直在线。_验证者节点离
 ## 延伸阅读 {#further-reading}
 
 - [以太坊质押指南](https://github.com/SomerEsat/ethereum-staking-guides) _ – Somer Esat，定期更新_
-- [指南 | 如何在主网上为以太坊质押设置验证者](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew，定期更新_
+- [指南| 如何在主网设置一个以太坊验证者](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew，定期更新_
 - [有关在测试网上运行验证者的 ETHStaker 指南](https://github.com/remyroy/ethstaker#guides) – _ETHStaker，定期更新_
+- [适用于以太坊节点的 AWS 区块链节点运行器示例应用程序](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS，定期更新_
 - [面向节点运营商的合并常见问题解答](https://notes.ethereum.org/@launchpad/node-faq-merge) - _2022 年 7 月_
 - [分析成为已验证以太坊全节点的硬件要求](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902)_ - Albert Palau，2018 年 9 月 24 日_
 - [运行以太坊全节点：勉励者指南](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux，2019 年 11 月 7 日_

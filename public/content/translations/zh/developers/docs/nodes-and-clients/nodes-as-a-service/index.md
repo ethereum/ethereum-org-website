@@ -64,9 +64,22 @@ sidebarDepth: 2
     - 集成了测试网水龙头访问权限
     - 拥有 1.8 万用户的活跃 Discord 构建者社区
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [相关文档](https://docs.allnodes.com/)
+  - 功能
+    - 在 Allnodes 投资组合页面上创建的 PublicNode 代币无速率限制。
+    - 提供在 [PublicNode](https://www.publicnode.com) 上的专注于隐私的免费 RPC 端点（支持 100+ 区块链）
+    - 为 90+ 区块链提供无速率限制的专用节点
+    - 为 30+ 区块链提供专用归档节点
+    - 在 3 个地区可用（美国、欧盟、亚洲）
+    - 在 [PublicNode](https://www.publicnode.com/snapshots) 上提供 100+ 区块链快照
+    - 提供全天候技术支持，正常运行时间 SLA 为 99.90%-99.98%（取决于套餐）。
+    - 按小时计费定价
+    - 使用信用卡、PayPal 或加密货币支付
+
 - [**All That Node**](https://allthatnode.com/)
   - [相关文档](https://docs.allthatnode.com/)
-  - 功能
+  - 特性
     - 免费套餐每天 50,000 个请求
     - 支持 40 多种协议
     - 支持 JSON-RPC（EVM、Tendermint）、REST 和 Websocket API
@@ -136,7 +149,7 @@ sidebarDepth: 2
 
 - [**Chainbase**](https://www.chainbase.com/)
   - [相关文档](https://docs.chainbase.com)
-  - 特性
+  - 功能
     - 高可用性、高速和可扩展的远程过程调用服务
     - 多链支持
     - 不收费
@@ -144,8 +157,8 @@ sidebarDepth: 2
     - 提供远程过程调用之外的区块链数据服务
 
 - [**ChainStack**](https://chainstack.com/)
-  - [相关文档](https://docs.chainstack.com/)
-  - 功能
+  - [文档](https://docs.chainstack.com/)
+  - 特性
     - 免费共享节点
     - 共享归档节点
     - GraphQL 支持
@@ -156,9 +169,22 @@ sidebarDepth: 2
     - 按小时计费定价
     - 全天候直接支持
 
+- [**DataHub**](https://datahub.figment.io)
+  - [相关文档](https://docs.figment.io/)
+  - 特性
+    - 每月 3 百万个请求的免费套餐选项
+    - RPC 、 HTTPS 和 WSS 端点
+    - 专用全节点和归档节点
+    - 自动扩容（容量折扣）
+    - 免费归档数据
+    - 服务分析
+    - 仪表板
+    - 全天候直接支持
+    - 加密货币支付（企业）
+
 - [**DRPC**](https://drpc.org/)
   - [相关文档](https://docs.drpc.org/)
-  - 特性
+  - 功能
     - 去中心化远程过程调用节点
     - 超过 15 个节点提供商
     - 节点平衡
@@ -184,7 +210,7 @@ sidebarDepth: 2
     - 技术支持
 
 - [**InfStones**](https://infstones.com/)
-  - 功能
+  - 特性
     - 免费套餐选项
     - 随时扩容
     - 分析
@@ -251,7 +277,7 @@ sidebarDepth: 2
     - 直接技术支持
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [相关文档](https://docs.nodereal.io/docs/introduction)
+  - [文档](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速而且可扩展的远程过程调用应用程序接口服务
     - 面向 Web3 开发者的增强型应用程序接口
@@ -312,7 +338,7 @@ sidebarDepth: 2
 
 - [**SenseiNode**](https://senseinode.com)
   - [文档](https://docs.senseinode.com/)
-  - 功能
+  - 特性
     - 专用和共享节点
     - 仪表板
     - 在拉丁美洲不同地区的多个托管服务提供商上托管 AWS

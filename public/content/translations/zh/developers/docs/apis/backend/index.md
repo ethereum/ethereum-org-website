@@ -55,6 +55,9 @@ lang: zh
 **Etherscan - 区块浏览器和交易应用程序接口**
 - [相关文档](https://docs.etherscan.io/)
 
+**Blockscout - 开源区块浏览器**
+- [相关文档](https://docs.blockscout.com/)
+
 **GetBlock -** **_ 用于 Web3 开发的区块链即服务_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -144,7 +147,7 @@ lang: zh
 **Chainstack -** **_共享及专用的以太坊节点即服务。_**
 
 - [chainstack.com](https://chainstack.com)
-- [相关文档](https://docs.chainbase.com/docs)
+- [相关文档](https://docs.chainstack.com/)
 - [以太坊应用程序接口参考](https://docs.chainstack.com/reference/ethereum-getting-started)
 
 **Coinbase 云节点 -** **_区块链基础设施应用程序接口。_**

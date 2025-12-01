@@ -80,6 +80,12 @@ Etherscan 是最常用的合约验证工具。 但是，Etherscan 的合约验�
 
 [更多关于在 Etherscan 上验证合约的信息](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327)。
 
+### Blockscout {#blockscout}
+
+[Blockscout](https://blockscout.com/) 是一个开源的区块链浏览器，它也为智能合约开发者和用户提供[智能合约验证服务](https://eth.blockscout.com/contract-verification)。 作为一个开源替代方案，Blockscout 提供了验证过程的透明性，并支持社区通过贡献来改进验证过程。
+
+与其他验证服务类似，Blockscout 允许你通过重新编译字节码并将其与已部署的合约比较来验证合约的源代码。 一旦验证通过，你的合约将收到验证状态，并且源代码将被公开以便审计和交互。 已验证的合约还将被列入Blockscout 的[已验证合约存储库](https://eth.blockscout.com/verified-contracts)，以便浏览和发现。
+
 ### Sourcify {#sourcify}
 
 [Sourcify](https://sourcify.dev/#/verifier) 是另一种用于验证开源和去中心化合约的工具。 它不是区块浏览器，只能在[不同的基于以太坊虚拟机的网络](https://docs.sourcify.dev/docs/chains)上验证合约。 它充当公共基础设施，作为其他工具的构建基础，旨在使用元数据文件中的[应用程序二进制接口](/developers/docs/smart-contracts/compiling/#web-applications)和 [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) 注释来实现更人性化的合约交互。

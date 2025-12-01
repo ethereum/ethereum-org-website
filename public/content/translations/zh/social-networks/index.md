@@ -74,26 +74,32 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 ## 以太坊上的 Web2 社交网络 {#web2-social-networks-and-ethereum}
 
-[Web3](/glossary/#web3) 原生社交平台并不是唯一试图将区块链技术融入社交媒体的平台。 许多中心化平台也计划将以太坊集成到他们的基础结构中：
+[Web3](/glossary/#web3) 原生社交平台并不是唯一试图将区块链技术融入社交媒体的平台。 许多中心化平台也正在探索或尝试将以太坊整合到其基础设施中：
 
 ### Reddit {#reddit}
 
-Reddit 提供[回赠式社区积分](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)，即 ERC-20 代币，用户可以通过发布优质内容或为在线社区 (subreddit) 做出贡献来赚取它们。 你可以在 subreddit 中兑换这些代币以获得独有的特权和福利。 对于此项目，Reddit 正与 Arbitrum 进行合作，后者是一个旨在扩展以太坊交易的[二层](/glossary/#layer-2)网络。
+- Reddit 之前试验过**社区积分**，这是一种 ERC-20 代币，用户可以通过发布优质内容和为特定在线社区（子版块）做出贡献来获取。 用户可以在子版块内兑换这些代币，以获取独家特权或进行交易。 Reddit 在该项目中使用了 Arbitrum Nova 网络，这是一个旨在扩展以太坊交易的 [2 层](/glossary/#layer-2)网络。
+- 社区积分计划在 r/CryptoCurrency 子版块中尤为活跃，推出了“Moons”代币；在 r/FortNiteBR 子版块中，则推出了“Bricks”代币。 由于这些代币位于区块链上，因此一旦被认领到用户的[钱包](/glossary/#wallet)中，它们就与 Reddit 这个平台无关。
+- 然而，**Reddit
 
-该程序已经上线，r/CryptoCurrency subreddit [运行其名为“Moons”的社区积分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)。 根据官方描述，Moons“奖励发布者、评论者和版主对 subreddit 的贡献。” 因为这些代币在区块链上进行交易（代币会直接进入用户钱包），代币与 Reddit 无关，因此其他人无法获取用户的代币。
-
-除了使用社区积分来解锁特殊功能外，用户还可以在交易所用它们换取法币。 此外，用户拥有的社区积分决定了他们对社区中决策过程的影响力。
+ 在 2023 年底正式停止了社区积分计划，并表示是由于可扩展性和资源挑战。 虽然代币仍然存在于区块链上，但 Reddit 不再积极支持或将其集成到其平台功能中。</li> </ul> 
+  
+  
 
 ## 延伸阅读 {#further-reading}
 
+
+
 ### 文章 {#articles}
 
-- [去中心化社交媒体：web3 社交堆栈指南](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
+- [去中心化社交媒体：Web3 社交堆栈指南](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [社交网络是去中心化的下一个大机遇](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 可能实现去中心化的社区推动社交网络](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [区块链社交媒体发展形势概述](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [区块链如何解决社交媒体的隐私问题](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
-- [社交网络的充分去中心化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) - _Varun Srinivasan_
+- [社交网络的充分去中心化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
+
+
 
 ### 视频 {#videos}
 
@@ -101,6 +107,8 @@ Reddit 提供[回赠式社区积分](https://cointelegraph.com/news/reddit-to-re
 - [DeSo 区块链希望将社交媒体去中心化](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
 - [去中心化社交媒体，以及 Balaji Srinivasan、Vitalik Buterin、Juan Benet 的未来](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
+
+
 ### 社区 {#communities}
 
-- [r/CryptoCurrency subreddit](https://www.reddit.com/r/CryptoCurrency/)
+- [r/CryptoCurrency 子版块](https://www.reddit.com/r/CryptoCurrency/)

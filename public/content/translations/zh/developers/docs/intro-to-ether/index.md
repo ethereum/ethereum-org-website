@@ -1,5 +1,5 @@
 ---
-title: 以太币简介
+title: 以太币技术介绍
 description: 开发者讲解以太币加密货币
 lang: zh
 ---
@@ -38,9 +38,9 @@ ETH 加密货币支持以太坊算力的定价机制。 当用户想要完成一
 
 除了通过区块奖励创建以太币，以太币也能通过“燃烧”过程销毁。 当 ETH 被燃烧掉，它也就永久退出流通。
 
-以太坊上的每一笔交易都会发生以太币销毁。 当用户为他们的交易支付费用时，网络根据交易需求设置的基础燃料费会被销毁。 以太币销毁再加上可变区块大小和最高燃料费，简化了以太坊上的交易费估算。 网络需求量高时，[区块](https://etherscan.io/block/12965263)燃烧的以太币数量可以多于铸造的以太币数量，有效地抵消了以太币的发行。
+以太坊上的每一笔交易都会发生以太币销毁。 当用户为他们的交易支付费用时，网络根据交易需求设置的基础燃料费会被销毁。 以太币销毁再加上可变区块大小和最高燃料费，简化了以太坊上的交易费估算。 网络需求量高时，[区块](https://eth.blockscout.com/block/22580057)燃烧的以太币数量可以多于铸造的以太币数量，有效地抵消了以太币发行。
 
-销毁基础费抑制区块生产者操纵交易的能力。 例如，如果区块生产者获得了基础费，他们可以免费添加自己的交易，并提高其他所有人的基础费。 或者，矿工可以将基础费退还给一些链下用户，造成交易费市场更加不透明和复杂。
+销毁基础费抑制区块生产者操纵交易的能力。 例如，如果区块生产者获得了基础费，他们可以免费添加自己的交易，并提高其他所有人的基础费。 反之，他们也可以通过链下方式向部分用户退还基础费用，但这会导致交易费市场更加不透明和复杂。
 
 ## ETH 面额 {#denominations}
 
@@ -67,11 +67,11 @@ Gwei（giga-wei 的缩写），常用于描述以太坊上的燃料费用。
 
 用户可以通过检查帐户的 `balance` 字段来查询任何[帐户](/developers/docs/accounts/)的以太币余额，该字段显示以太币持有数量（以 Wei 为单位）。
 
-[Etherscan](https://etherscan.io) 是一种常用工具，用于通过基于 Web 的应用程序检查地址余额。 例如，[此 Etherscan 页面](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae)显示以太坊基金会的余额。 也可以通过使用钱包或直接向节点提出请求来查询帐户余额。
+[Etherscan](https://etherscan.io) 和 [Blockscout](https://eth.blockscout.com) 是通过网页版应用程序检查地址余额的常用工具。 例如，[此 Blockscout 页面](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)显示以太坊基金会的余额。 也可以通过使用钱包或直接向节点提出请求来查询帐户余额。
 
 ## 延伸阅读 {#further-reading}
 
-- [定义 ETH 和以太坊](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [定义以太币和以太坊](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [以太坊白皮书](/whitepaper/)：以太坊原始提案 这份资料包括了对 ETH 及其创建动机的整体描述。
 - [Gwei 计算器](https://www.alchemy.com/gwei-calculator)：使用这个 Gwei 计算器可以轻松地换算 wei、Gwei 和 ETH。 只需输入任何数量的 wei、Gwei 或 ETH，就能够自动换算。
 

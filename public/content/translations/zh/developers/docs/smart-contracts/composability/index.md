@@ -1,6 +1,6 @@
 ---
 title: 智能合约的可组合性
-description:
+description: 了解智能合约如何像乐高积木那样，透过重用现有的组件来构建复杂的去中心化应用程序。
 lang: zh
 incomplete: true
 ---

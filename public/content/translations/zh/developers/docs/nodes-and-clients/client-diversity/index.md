@@ -55,7 +55,7 @@ sidebarDepth: 2
 
 ## 使用非主流客户端 {#use-minority-client}
 
-解决客户端多样性问题不仅需要个人用户选择非主流客户端，还需要矿池/验证者池以及主要去中心应用程序和交易所等机构改用客户端。 然而，所有用户都可以尽一份力量，纠正目前的失衡状况并且实现所有可用以太坊软件的使用正常化。 合并后，所有节点运营商都需要运行执行客户端和共识客户端。 选择下面建议的客户端组合将有助于提高客户端多样性。
+解决客户端多样性问题，不仅需要个人用户选择非主流客户端——还需要验证者池以及大型去中心化应用程序和交易所这样的机构也一同切换客户端。 然而，所有用户都可以尽一份力量，纠正目前的失衡状况并且实现所有可用以太坊软件的使用正常化。 合并后，所有节点运营商都需要运行执行客户端和共识客户端。 选择下面建议的客户端组合将有助于提高客户端多样性。
 
 ### 执行客户端 {#execution-clients}
 
@@ -67,6 +67,8 @@ sidebarDepth: 2
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
+[Reth](https://reth.rs/)
+
 ### 共识客户端 {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
@@ -77,7 +79,7 @@ sidebarDepth: 2
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://prysm.offchainlabs.com/docs/)
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 [Grandine](https://docs.grandine.io/)
 
@@ -90,7 +92,9 @@ sidebarDepth: 2
 **共识层：**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/) **执行层：**
+- [clientdiversity.org](https://clientdiversity.org/)
+
+**执行层：**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)

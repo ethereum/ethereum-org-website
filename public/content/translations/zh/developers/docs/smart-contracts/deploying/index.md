@@ -1,6 +1,6 @@
 ---
 title: 部署智能合约
-description:
+description: 了解如何将智能合约部署到以太坊网络，包括先决条件、工具，以及部署步骤。
 lang: zh
 ---
 

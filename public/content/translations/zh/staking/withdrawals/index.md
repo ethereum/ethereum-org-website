@@ -13,10 +13,6 @@ summaryPoints:
   - 完全退出质押的验证者将收到他们的剩余余额
 ---
 
-<UpgradeStatus dateKey="page-staking-withdrawals-when">
-2023 年 4 月 12 日进行的上海/卡佩拉升级已实现质押提款功能。&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>更多关于上海/卡佩拉升级的信息</a>
-</UpgradeStatus>
-
 **质押提款**是指将以太币从以太坊共识层（信标链）上的验证者帐户转移到可以进行交易的执行层。
 
 用户提供提款地址后，超过 32 个以太币的余额的**奖励支付**将自动定期发送到和每个验证者相关的提款地址。 用户还可以**完全退出质押**，解锁他们全部的验证者余额。
@@ -43,14 +39,9 @@ summaryPoints:
 
 为任何验证器帐户提供提款地址是一个必需的步骤，否则无法从其余额中提取以太币。
 
-<Alert variant="warning">
-<AlertEmoji text="⚠️"/>
-<AlertContent>
-<AlertDescription>
+<InfoBanner emoji="⚠️" isWarning>
   <strong>每个验证者帐户一次只能分配一个提款地址。</strong>一旦选择地址并提交到共识层，就无法撤消或再次更改。 在提交前，请仔细检查所提供地址的所有权和准确性。
-</AlertDescription>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 同时，如果你的助记符/助记词在离线时一直保持安全，没有受到任何损害。不提供提款地址<strong>不会给你的资金带来任何威胁</strong>。 未添加提款凭据只会将以太币保持锁定在验证者帐户中，直到提供提款地址为止。
 
@@ -64,13 +55,13 @@ summaryPoints:
 
 一旦帐户被标记为“可提款”，并且已提供提款凭据，用户除了等待之外，无需再做任何事情。 区块提议者会自动且持续地扫描是否有可退出资金，并在下一次<a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>扫描</a>期间将你帐户的余额全额转移（也称为“全额提款”）。
 
-## 何时启用质押提款？ {#when}
+## 质押提款在什么时候启用？ {#when}
 
-质押提款已经上线！ 提款功能已在 2023 年 4 月 12 日进行的上海/卡佩拉升级中实现。
+提款功能在 **2023 年 4 月 12 日** 作为上海/卡佩拉升级的一部分启用。
 
 上海/卡佩拉升级后，可以将之前质押的以太币收回到普通以太坊帐户中。 这就结束了质押流动性循环，并使以太坊向着建立一个可持续、可扩展、安全的去中心化生态系统迈进一步。
 
-- [更多关于以太坊历史的信息](/ethereum-forks/)
+- [更多关于以太坊历史的信息](/history/)
 - [更多关于以太坊路线图的信息](/roadmap/)
 
 ## 提款支付是如何运作的？ {#how-do-withdrawals-work}
@@ -87,16 +78,11 @@ summaryPoints:
 
 当验证者被安排提议下一个区块时，需要构建一个最多包含 16 个合格提款的提款队列。 首先从验证者索引 0 开始，根据协议规则判断该帐户是否有合格的提款，如果有，则将其添加到队列中。 被安排提议下一个区块的验证者将从上一个验证者离开的地方继续，无限期地按顺序进行。
 
-<Alert variant="update">
-<AlertEmoji text="🕛"/>
-<AlertContent>
-<AlertDescription>
+<InfoBanner emoji="🕛">
 想象一个模拟时钟。 时钟的指针指向小时，朝一个方向前进，不跳过任何小时，最后在达到最后一个数字后再次回到开始。<br/><br/>
 现在，想象这个时钟不再是 1 至 12，而是从 0 到 N<em>（在共识层上注册的验证者帐户的总数，截至 2023 年 1 月已超过 500,000 个）。</em><br/><br/>
 时钟的指针指向需要检查是否符合提款条件的下一个验证者。 它从 0 开始，不跳过任何帐户，一直前进。 当达到最后一个验证者时，循环从头开始继续。
-</AlertDescription>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 #### 检查帐户的提款 {#checking-an-account-for-withdrawals}
 
@@ -222,6 +208,7 @@ eventName="read more">
 
 - [质押启动板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：信标链提款推送操作](https://eips.ethereum.org/EIPS/eip-4895)
+- [以太坊牧猫人组织 - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94：质押以太币提取（测试）与 Potuz 和王筱维](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68：与 Alex Stokes 讨论 EIP-4895：信标链推送提款操作](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [了解验证者有效余额](https://www.attestant.io/posts/understanding-validator-effective-balance/)

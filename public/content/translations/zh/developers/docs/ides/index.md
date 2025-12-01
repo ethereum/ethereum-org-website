@@ -1,6 +1,6 @@
 ---
 title: 集成开发环境
-description:
+description: 了解更多用于以太坊开发的网页和桌面 IDE，包括 Remix、VS Code 和流行的插件。
 lang: zh
 ---
 

@@ -19,30 +19,39 @@ incomplete: true
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [2023 区块链报告中的 Python 状态](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 
 ## 初学者文章 {#beginner-articles}
 
+- [web3.py 概览](https://web3py.readthedocs.io/en/latest/overview.html)
+- [以太坊 Python 生态系统概览](https://snakecharmers.ethereum.org/python-ecosystem/)
 - [以太坊开发者指南 (Python)](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
-- [2023 区块链报告中的 Python 状态](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [值得一搏：以太坊 Python 黑客松指南](https://snakecharmers.ethereum.org/prize-worthy/)
 - [基于 Vyper 的智能合约简介](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [使用 Python 和 Brownie 部署你自己的 ERC20 代币](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [如何使用 Python Flask 开发 Ethereum 合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py 简介 · 面向 Python 开发者的以太坊资源](https://www.dappuniversity.com/articles/web3-py-intro)
 - [如何通过 Python 和 web3.py 调用智能合约函数？](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
 
+- [web3.py 之友：Ape 简介](https://snakecharmers.ethereum.org/intro-to-ape/)
 - [面向 Python 程序员的去中心化应用程序开发](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [创建 Python 以太坊接口：第 1 部分](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [基于 Python 的以太坊智能合约开发：完整（入门）教程](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [使用 Brownie 和 Python 部署智能合约](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [使用 Brownie 在 OpenSea 上创建非同质化代币](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
+- [web3.py 模式：实时事件订阅](https://snakecharmers.ethereum.org/subscriptions/)
+- [web3.py 模式：WebSocket 协议提供者（在 web3.py 中，WebSocketProvider 是一种与以太坊节点建立连接的方式，使用 WebSocket 协议（而不是 HTTP 或 IPC）。它的主要作用是让客户端能够实时接收区块链事件和数据，非常适合需要订阅事件或监听交易的应用场景。）](https://snakecharmers.ethereum.org/websocketprovider/)
 - [使用 Python 编译、部署和调用以太坊智能合约](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [使用 Slither 分析 Solidity 智能合约](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [Blockchain Fintech 教程：使用 Python 借贷和借贷](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
+
+## 已存档的文章
+
+- [使用 Python 和 Brownie 部署你自己的 ERC20 代币](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [使用 Brownie 和 Python 部署智能合约](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
+- [使用 Brownie 在 OpenSea 上创建非同质化代币](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## Python 项目和工具 {#python-projects-and-tools}
 
@@ -56,7 +65,7 @@ incomplete: true
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用程序函数_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _适用于 solc Solidity 编译器（支持 0.5.x）的 Python 装饰器_
 - [pymaker](https://github.com/makerdao/pymaker) - _面向 Maker 合约的 Python 应用程序接口_
-- [siwe](https://github.com/signinwithethereum/siwe-py) - _面向 Python 的以太坊登录服务 (siwe)_
+- [siwe](https://github.com/spruceid/siwe-py) - _面向 Python 的以太坊登录服务 (siwe)_
 - [用于以太坊集成的 Web3 去中心化金融](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一个 Python 包，具有适用于 ERC-20、Uniswap 和其他流行项目的现成集成_
 - [Wake](https://getwake.io) - _用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一体化 Python 框架（语言服务器 - [Solidity 工具](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)）_
 
@@ -75,7 +84,7 @@ incomplete: true
 以下基于以太坊的项目使用本页提到的工具。 相关的开源代码库可作为一个很好的参考，例如代码和最佳做法。
 
 - [Yearn Finance](https://yearn.finance/) 和 [Yearn Vault Contracts 库](https://github.com/yearn/yearn-vaults)
-- [Curve](https://curve.fi/) 和 [Curve 智能合约库](https://github.com/curvefi/curve-contract)
+- [Curve](https://www.curve.finance/) 和 [Curve 智能合约库](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) 和 [使用 Brownie 工具链的智能合约](https://github.com/Badger-Finance/badger-system)
 - [Sushiswap](https://sushi.com/) 使用 [Python 来管理和部署他们的归属合约](https://github.com/sushiswap/sushi-vesting-protocols)
 - 因 Alpha Homora 而知名的 [Alpha Finance](https://alphafinance.io/) 使用 [Brownie 来测试和部署他们的智能合约](https://github.com/AlphaFinanceLab/alpha-staking-contract)

@@ -43,14 +43,13 @@ lang: zh
 
 - [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lightthouse 的本地测试网](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [使用 Nimbus 的本地测试网](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公共以太坊测试链 {#public-beacon-testchains}
 
-以太坊还有两个维护中的公共测试网实现：Sepolia 和 Hoodi。 Sepolia 是推荐的应用程序开发标准测试网，具有封闭的验证器集以实现快速同步。 Hoodi 是一个用于验证和质押的测试网，它使用开放的验证器集，并允许任何人进行验证。
+以太坊还有两个维护中的公共测试网实现：Sepolia 和 Hoodi。 推荐使用获得长期支持的测试网 Hoodi，任何人都可以自由地在其上验证。 Sepolia 采用许可制的验证者集合，这意味着在该测试网中没有面向公众的新验证者访问权限。
 
-- [Hoodi 质押启动板](https://hoodi.launchpad.ethereum.org/en/)
-- [Sepolia 网站](https://sepolia.dev/)
-- [Hoodi 网站](https://hoodi.ethpandaops.io/)
+- [Hoodi 质押启动板](https://hoodi.launchpad.ethereum.org/)
 
 ### Kurtosis 以太坊包 {#kurtosis}
 

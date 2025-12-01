@@ -1,5 +1,5 @@
 ---
-title: 以太坊简介
+title: 以太币技术介绍
 description: 面向 dapp 开发者介绍以太坊的核心概念。
 lang: zh
 ---
@@ -108,6 +108,14 @@ lang: zh
 
 - [以太坊白皮书](/whitepaper/)
 - [那么，以太坊究竟是如何工作的？](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_（**注意**此资源仍然有价值，但请注意它早于[合并](/roadmap/merge)，因此仍然引用以太坊的工作量证明机制 - 实际上以太坊现在使用的是[权益证明](/developers/docs/consensus-mechanisms/pos)来保障安全）
+
+### 更愿意通过视频学习？ {#visual-learner}
+
+本系列视频对基本主题进行了深入探索：
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[以太坊基础知识播放列表](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 

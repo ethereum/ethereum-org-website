@@ -1,6 +1,6 @@
 ---
 title: 编程语言
-description:
+description: 探索各种编程语言的以太坊开发资源，包括 JavaScript、Python、Go、Rust 等等。
 lang: zh
 ---
 

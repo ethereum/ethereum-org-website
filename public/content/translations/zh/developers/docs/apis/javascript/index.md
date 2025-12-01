@@ -26,6 +26,8 @@ lang: zh
 
 使用提供程序，这些库允许你连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 Metamask。
 
+> **注意：**Web3.js 已于 2025 年 3 月 4 日弃用。 [阅读公告](https://blog.chainsafe.io/web3-js-sunset/)。 考虑为新项目使用如 ethers.js 或 viem 等其他库。
+
 **Ethers 示例**
 
 ```js
@@ -258,6 +260,11 @@ ethers.utils.formatEther(balance)
 **light.js -** **_针对轻客户端优化的高级响应式 JS 库。_**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+
+**Web3-wrapper -** **_可替代 Web3.js 的 Typescript。_**
+
+- [相关文档](https://0x.org/docs/web3-wrapper#introduction)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
 **Alchemyweb3 -** **_Web3.js 的包装器，带自动重试和增强的应用程序接口。_**
 

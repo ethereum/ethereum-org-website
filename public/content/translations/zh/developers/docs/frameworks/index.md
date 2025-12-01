@@ -63,7 +63,7 @@ lang: zh
 **Tenderly -** **_Web3 开发平台，可帮助区块链开发者构建、测试、调试、监测和操作智能合约并改善去中心化应用程序的用户体验。_**
 
 - [网站](https://tenderly.co/)
-- [相关文档](https://docs.tenderly.co/)
+- [相关文档](https://docs.tenderly.co/ethereum-development-practices)
 
 **The Graph -** **_ 用于高效查询区块链数据的图表。_**
 

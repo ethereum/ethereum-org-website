@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 最初为[以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [执行规范](https://github.com/ethereum/execution-specs/)
 - [共识规范](https://github.com/ethereum/consensus-specs)
-- 在各种[网络升级](/ethereum-forks/)中实现的[以太坊改进提案](https://eips.ethereum.org/)
+- 在各种[网络升级](/history/)中实现的[以太坊改进提案](https://eips.ethereum.org/)
 
 ### 跟踪网络中的节点 {#network-overview}
 
@@ -47,6 +47,7 @@ sidebarDepth: 2
 - [以太坊节点](https://ethernodes.org/)由 Bitfly 提供
 - [Nodewatch](https://www.nodewatch.io/) 由 Chainsafe 提供，爬取共识节点
 - [Monitoreth](https://monitoreth.io/) — 由 MigaLabs 开发的分布式网络监测工具
+- [网络健康周报](https://probelab.io) - 由 ProbeLab 提供，使用 [Nebula 爬虫](https://github.com/dennis-tra/nebula)和其他工具
 
 ## 节点类型 {#node-types}
 
@@ -65,7 +66,7 @@ sidebarDepth: 2
 
 归档节点是从创世块开始验证每个区块的全节点，它们从不删除任何下载的数据。
 
-- 存储全节点中保存的所有内容，并建立历史状态存档。 如果你想查询区块 #4,000,000 的帐户余额，或者想简单可靠地测试自己的一组交易而不使用跟踪挖掘它们，则需要归档节点。
+- 存储全节点中保存的所有内容，并建立历史状态存档。 若你需要查询诸如“区块 #4,000,000 处的帐户余额”这类信息，或是想直接且可靠地测试自己的交易集合（无需通过追踪功能验证交易），则需要用到它。
 - 这些数据以太字节为单位，这使得归档节点对普通用户的吸引力较低，但对于区块浏览器、钱包供应商和链分析等服务来说则很方便。
 
 以归档以外的任何方式同步客户端将导致区块链数据被修剪。 这意味着，不存在包含所有历史状态的归档，但全节点能够在需要时构建它们。
@@ -74,7 +75,7 @@ sidebarDepth: 2
 
 ### 轻节点 {#light-node}
 
-轻节点只下载区块头，而不会下载每个区块。 这些区块头包含区块内容的摘要信息。 轻节点会向全节点请求其所需的任何其他信息。 然后，轻节点可以根据区块头中的状态根独自验证收到的数据。 轻节点可以让用户加入以太坊网络，无需运行全节点所需的功能强大的硬件或高带宽。 最终，轻节点也许能在手机和嵌入式设备中运行。 轻节点不参与共识（即它们不能成为矿工/验证者），但可以访问功能和安全保障和全节点相同的以太坊区块链。
+轻节点只下载区块头，而不会下载每个区块。 这些区块头包含区块内容的摘要信息。 轻节点会向全节点请求其所需的任何其他信息。 然后，轻节点可以根据区块头中的状态根独自验证收到的数据。 轻节点可以让用户加入以太坊网络，无需运行全节点所需的功能强大的硬件或高带宽。 最终，轻节点也许能在手机和嵌入式设备中运行。 轻节点不参与共识过程（即无法作为验证者），但仍能访问以太坊区块链，且具备与全节点相同的功能及安全保障。
 
 轻客户端是以太坊积极发展的一个领域，我们预计很快就会看到共识层和执行层的新轻客户端。 一些潜在的途径可在[广播网络](https://www.ethportal.net/)上提供轻客户端数据。 这些途径的优点在于，广播网络可以支持轻节点网络而不需要全节点来处理请求。
 
@@ -196,7 +197,7 @@ EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多�
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Holesky、Pyrmont、Sepolia 等        |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
-| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Pyrmont、Sepolia 等 |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Pyrmont、Sepolia 等 |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Sepolia 等         |
 | [Grandine](https://docs.grandine.io/)                         | Rust语言     | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
 
@@ -222,7 +223,7 @@ Nimbus 是一种共识客户端实现，它用 Nim 语言编写，并依照 Apac
 
 Prysm 是一种功能齐全的开源共识客户端，它用 Go 语言编写，并依照 GPL-3.0 获得许可。 它具有可选的 Web 应用程序用户界面，并将单独质押人和机构用户的用户体验、相关文档和可配置性放在首位。
 
-访问 [Prysm 相关文档](https://prysm.offchainlabs.com/docs/)以了解更多信息。
+访问 [Prysm 相关文档](https://docs.prylabs.network/docs/getting-started/)以了解更多信息。
 
 ### Teku {#teku}
 

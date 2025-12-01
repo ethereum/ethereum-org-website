@@ -6,6 +6,11 @@ lang: zh
 
 # 包装以太币 (WETH) {#intro-to-weth}
 
+<Alert variant="update">
+<Emoji text="🎁" />
+<div>使用 [WrapETH.com](https://www.wrapeth.com/)，连接你的钱包，在任意链上封装或解封装以太币</div>
+</Alert>
+
 以太币 (ETH) 是以太坊的主要货币。 它被用于多种目的，比如作为货币进行质押，以及支付计算的燃料费。 **包装以太币实际上是以太币的升级形式，具有许多应用程序和 [ERC-20 代币](/glossary/#erc-20)所需的一些附加功能**，这些也是以太坊上的另一种数字资产。 为了使用这些代币，以太币必须遵循与它们相同的规则，也称为 ERC-20 标准。
 
 为了弥补这个缺口，包装以太币 (WETH) 诞生了。 **包装以太币是一个智能合约，你可以向其中存入任意数量的以太币，并收到铸造的对应数量的包装以太币**，后者符合 ERC-20 代币标准。 包装以太币是以太币的一种表示，允许你以 ERC-20 代币（而非原生资产以太币）的形式与以太币进行交互。 你仍需要使用原生以太币来支付燃气费，因此在将它们存入智能合约时，确保留下一些。
@@ -61,5 +66,5 @@ lang: zh
 ## 扩展阅读{#further-reading}
 
 - [WTF 是包装以太币吗？](https://weth.tkn.eth.limo/)
-- [Etherscan 上关于包装以太币代币的信息](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [在 Blockscout 上的 WETH 代币信息](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [包装以太币的形式化验证](https://zellic.io/blog/formal-verification-weth)

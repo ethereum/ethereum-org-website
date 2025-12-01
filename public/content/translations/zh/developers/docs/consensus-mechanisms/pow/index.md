@@ -6,14 +6,9 @@ lang: zh
 
 以太坊网络最初采用一种称为**[工作量证明 (PoW)](/developers/docs/consensus-mechanisms/pow)** 的共识机制。 这种机制允许以太坊网络的节点就以太坊区块链上记录的所有信息的状态达成共识，并防止某些产生经济影响的攻击。 然而，以太坊在 2022 年终结了工作量证明并开始采用[权益证明](/developers/docs/consensus-mechanisms/pos)。
 
-<Alert variant="update">
-<AlertEmoji text=":wave:"/>
-<AlertContent>
-<AlertDescription>
-    工作量证明现已弃用。 以太坊不再使用工作量证明作为其部分共识机制。 它改用权益证明。 阅读有关[权益证明](/developers/docs/consensus-mechanisms/pos/)和[质押](/staking/)的更多信息。
-</AlertDescription>
-</AlertContent>
-</Alert>
+<InfoBanner emoji=":wave:">
+    工作量证明现已弃用。 以太坊不再使用工作量证明作为其部分共识机制。 它改用权益证明。 阅读更多关于[权益证明](/developers/docs/consensus-mechanisms/pos/)和[质押](/staking/)的信息。
+</InfoBanner>
 
 ## 前提条件 {#prerequisites}
 
@@ -61,7 +56,7 @@ lang: zh
 
 工作量证明还负责向系统中发行新货币并激励矿工完成工作。
 
-自[君士坦丁堡升级](/ethereum-forks/#constantinople)以来，成功创建区块的矿工将获得两个新铸造的以太币及部分交易费作为奖励。 叔块也会获得 1.75 个以太币的补偿。 叔块是由一个矿工创建的有效区块，几乎与此同时另一个矿工创建了规范区块。要确定规范区块，最终取决于哪条链构建于第一个区块之上。 叔块通常是由于网络延迟而出现。
+自[君士坦丁堡升级](/history/#constantinople)以来，成功创建区块的矿工将获得两个新铸造的以太币及部分交易费作为奖励。 叔块也会获得 1.75 个以太币的补偿。 叔块是由一个矿工创建的有效区块，几乎与此同时另一个矿工创建了规范区块。要确定规范区块，最终取决于哪条链构建于第一个区块之上。 叔块通常是由于网络延迟而出现。
 
 ## 最终确定性 {#finality}
 

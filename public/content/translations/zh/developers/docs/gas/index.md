@@ -1,7 +1,7 @@
 ---
 title: 燃料和费用
 metaTitle: "以太坊燃料和费用：技术概览"
-description:
+description: 了解以太坊燃料费用，包括它们的计算方式，以及它们在网络安全和交易处理中所扮演的角色。
 lang: zh
 ---
 
@@ -106,7 +106,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 
 燃料限额是指你愿意在交易中消耗的最大燃料数量。 涉及[智能合约](/developers/docs/smart-contracts/)的更复杂交易需要进行更多的计算工作，因此相比简单的支付，它们需要更高的燃料限额。 标准以太币转账要求燃料限额为 21,000 单位燃料。
 
-例如，如果你对简单的以太币转账设置 50,000 单位燃料限额，以太坊虚拟机将消耗 21,000 单位，你将收到剩余的 29,000 单位。 然而，如果你设置的燃料太少，比如说，对于简单的以太币转账，设置燃料限额为 20,000 单位，以太坊虚拟机将消耗 20,000 单位燃料并尝试执行交易，但最后不会完成。 然后，以太坊虚拟机回滚所有变化，但由于验证者已经完成了价值 20k 单位燃料的工作，这些燃料就被消耗了。
+例如，如果你对简单的以太币转账设置 50,000 单位燃料限额，以太坊虚拟机将消耗 21,000 单位，你将收到剩余的 29,000 单位。 然而，如果你指定的燃料量过少，例如，对于一个简单的 ETH 转账，燃料限制设置为 20,000，则交易将在验证阶段失败。 该交易在被打包进区块之前会被拒绝，且不会消耗任何燃料。 反之，如果交易在执行过程中耗尽了燃料（例如，智能合约执行到一半时，耗尽了所有燃料），EVM 将回滚所有更改，但为执行该交易已完成的计算工作，仍会消耗提供的全部燃料。
 
 ## 为什么燃料费会变得如此高？ {#why-can-gas-fees-get-so-high}
 
@@ -123,6 +123,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 如果想要监控燃料价格，用较少的费用发送以太币，你可以使用多种不同的工具，例如：
 
 - [Etherscan 区块浏览器](https://etherscan.io/gastracker)_交易燃料价格估算器。_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _开源交易燃料价格估算器_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _监控与追踪以太坊和二层网络燃料价格，降低交易费用并节省开支_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支持类型 0 传统交易和类型 2 EIP-1559 交易的燃料估算 Chrome 插件。_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _按照你的当地货币计算主网、Arbitrum 和 Polygon 上进行的各类交易的燃料费。_
@@ -135,6 +136,8 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 
 - [以太坊 Gas 详解](https://defiprime.com/gas)
 - [减少智能合约的燃料消耗](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [权益证明与工作量证明](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [面向开发者的燃料优化策略](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 文档](https://eips.ethereum.org/EIPS/eip-1559)
-- [Tim Beiko 的 EIP-1559 资源](https://hackmd.io/@timbeiko/1559-resources)。
+- [Tim Beiko 的 EIP-1559 资源](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559：将科学与玩梗分开来看](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

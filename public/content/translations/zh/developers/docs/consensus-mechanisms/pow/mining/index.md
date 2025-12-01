@@ -4,14 +4,9 @@ description: 解释以太坊上挖矿的工作原理。
 lang: zh
 ---
 
-<Alert variant="update">
-<AlertEmoji text=":wave:"/>
-<AlertContent>
-<AlertDescription>
+<InfoBanner emoji=":wave:">
 工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 阅读更多关于<a href='/roadmap/merge/'>合并</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>权益证明</a>和<a href='/staking/'>质押</a>的信息。 此页面仅展示历史内容。
-</AlertDescription>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## 前提条件 {#prerequisites}
 

@@ -38,12 +38,12 @@ lang: zh
 
 我们能直观地感受到，**基于合约**的持久性使得数据不能被每个节点复制并永久存储，而必须根据合约协议进行维护。 这些是与多个节点达成的协议，这些节点承诺在一段时间内保存一份数据。 每当费用耗尽或数据更新时，就必须向这些节点续费，以保持数据的持续性。
 
-在大多数情况下，不是在链上储存所有数据，而是在链上存储定位数据的哈希值。 这样，整条链不需要扩大规模，就能保存所有数据。
+在大多数情况下，不是在链上储存所有数据，而是在链上存储数据对应位置的哈希值。 这样，整条链不需要扩大规模，就能保存所有数据。
 
 基于合约持久性的平台：
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
@@ -126,11 +126,11 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - [相关文档](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet 是一条去中心化的工作量证明链，专用于去中心化网络。_**
+**Sia - _利用密码学构建无需信任中介的云存储市场，使买卖双方可以直接进行交易。_**
 
-- [Skynet.net](https://siasky.net/)
-- [相关文档](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [相关文档](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _Filecoin 由星际文件系统背后的同一团队打造。 它是星际文件系统概念之上的一个激励层。_**
 

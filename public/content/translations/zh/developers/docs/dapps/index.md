@@ -1,5 +1,5 @@
 ---
-title: 去中心化应用程序简介
+title: 去中心化应用程序技术介绍
 description:
 lang: zh
 ---

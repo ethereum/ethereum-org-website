@@ -34,55 +34,99 @@ lang: zh
 
 #### 我应该使用哪个测试网？
 
-客户端开发者目前还在维护的两个公共测试网是 Sepolia 和 Hoodi。 Sepolia 是一个供合约和应用程序开发者测试其应用程序的网络。 Hoodi 网络是让协议开发者测试网络升级，并让质押人测试运行验证者。
+客户端开发者目前维护的两个公共测试网是 Sepolia 和 Hoodi。 Sepolia 是一个供合约和应用程序开发者测试其应用程序的网络。 Hoodi 网络允许协议开发者测试网络升级，同时让质押者测试运行验证节点。
 
 #### Sepolia {#sepolia}
 
-**Sepolia 是应用程序开发时推荐使用的默认测试网**。 Sepolia 网络使用一种需要许可的验证者设置。 它相对较新，即它的状态和历史记录都非常小。 这意味着网络可以快速同步，并且在其上运行节点需要的存储空间更少。 这对于希望快速启动节点并直接与网络交互的用户来讲，是非常有用的。
-
-- 封闭式验证者设置，由客户端和测试团队控制
-- 与其他测试网相比，新测试网部署的应用程序较少
-- 同步速度快，运行节点需要的磁盘空间最小
+**Sepolia 是应用程序开发时推荐使用的默认测试网**。 Sepolia 网络采用经授权的验证者组，该验证者组由客户端团队和测试团队共同控制。
 
 ##### 资源
 
 - [网站](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
-- [Etherscan 区块浏览器](https://sepolia.etherscan.io)
+- [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### 水龙头
 
-- [QuickNode Sepolia 水龙头](https://faucet.quicknode.com/drip)
+- [QuickNode Sepolia 水龙头](https://faucet.quicknode.com/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW 水龙头](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet 水龙头 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
+- [Alchemy Sepolia 水龙头](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [以太坊生态系统水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [以太坊生态水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Google Cloud Web3 Sepolia 水龙头](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
-_注意：[Goerli 测试网已弃用](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)，它已被 Hoodi 取代。 请考虑把你的应用程序迁移至 Sepolia。_
+Hoodi 是用于测试验证和质押的测试网。 Hoodi 网络对想要运行测试网验证者的用户开放。 因此，想在主网部署前测试协议升级的质押者应该使用 Hoodi网络。
 
-Hoodi 是用于测试验证和质押的测试网。 Hoodi 网络对想要运行测试网验证者的用户开放。 因此，希望在部署到主网之前测试协议升级的质押人应该使用 Hoodi。
-
-- 开放式验证者设置，质押者可以测试网络升级
-- 状态比较大，用于测试复杂的智能合约交互
+- 开放式验证者组，质押者可以测试网络升级
+- 大规模状态，用于测试复杂的智能合约交互
 - 同步时间更长，运行节点需要更多存储空间
 
 ##### 资源
 
 - [网站](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
-- [Explorer](https://explorer.hoodi.ethpandaops.io/)
-- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [浏览器](https://explorer.hoodi.ethpandaops.io/)
+- [检查点同步](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
+- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### 水龙头
 
 - [Hoodi 水龙头](https://hoodi.ethpandaops.io/)
+- [PoW 水龙头](https://hoodi-faucet.pk910.de/)
+
+#### Ephemery {#ephemery}
+
+Ephemery 是一种独特的测试网，每个月都会彻底重置。 执行和共识状态每 28 天回滚至创世状态，这意味着在测试网上发生的任何事情都是临时的。 这使其非常适合短期测试，节点快速启动以及开发无需数据持久性的 "hello world"（（入门级）应用程序。
+
+- 始终新鲜的状态，适用于验证者和应用程序的短期测试
+- 仅包含基本的合约集
+- 开放验证者集，能够轻松访问大量资金
+- 最低的节点要求和最快的同步速度，平均小于 5GB
+
+##### 资源
+
+- [网站](https://ephemery.dev/)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [社区聊天](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [信标浏览器](https://beaconlight.ephemery.dev/)
+- [检查点同步](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [启动板](https://launchpad.ephemery.dev/)
+
+#### 水龙头
+
+- [Bordel 水龙头](https://faucet.bordel.wtf/)
+- [Pk910 工作量证明水龙头](https://ephemery-faucet.pk910.de/)
+
+#### Holesky {#holesky}
+
+Holesky 测试网将于 [2025 年 9 月弃用](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky)。 质押运营商和基础设施提供商应该使用 Hoodi 进行验证者测试。
+
+##### 资源
+
+- [网站](https://holesky.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/holesky)
+- [Otterscan](https://holesky.otterscan.io/)
+- [Etherscan](https://holesky.etherscan.io/)
+- [Blockscout](https://eth-holesky.blockscout.com/)
+
+##### 水龙头
+
+- [QuickNode Holesky 水龙头](https://faucet.quicknode.com/ethereum/holesky)
+- [PoW 水龙头](https://holesky-faucet.pk910.de/)
+- [Alchemy Holesky 水龙头](https://www.alchemy.com/faucets/ethereum-holesky)
+- [Chainstack Holesky 水龙头](https://faucet.chainstack.com/holesky-testnet-faucet)
+- [以太坊生态水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
+- [Google Cloud Web3 Holesky 水龙头](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
 
 要在 Hoodi 测试网上启动验证者，请使用 [Hoodi 启动板](https://hoodi.launchpad.ethereum.org/en/)。
 
@@ -94,27 +138,47 @@ Hoodi 是用于测试验证和质押的测试网。 Hoodi 网络对想要运行�
 
 [Arbitrum](https://arbitrum.io/) 测试网。
 
+##### 资源
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
+
 ##### 水龙头
 
 - [Chainlink 水龙头](https://faucets.chain.link/arbitrum-sepolia)
 - [Alchemy 水龙头](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [QuickNode Arbitrum Sepolia 水龙头](https://faucet.quicknode.com/arbitrum/sepolia)
+- [Alchemy Arbitrum Sepolia 水龙头](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Chainlink Arbitrum Sepolia 水龙头](https://faucets.chain.link/arbitrum-sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
 
 [Optimism](https://www.optimism.io/) 测试网。
 
+##### 资源
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
+
 ##### 水龙头
 
 - [Chainlink 水龙头](https://faucets.chain.link/optimism-sepolia)
 - [Alchemy 水龙头](https://www.alchemy.com/faucets/optimism-sepolia)
+- [测试网水龙头](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
 [Starknet](https://www.starknet.io) 的测试网。
 
+##### 资源
+
+- [Starkscan](https://sepolia.starkscan.co/)
+
 ##### 水龙头
 
 - [Alchemy 水龙头](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Starknet 水龙头](https://starknet-faucet.vercel.app/)
+- [Blast Starknet Sepolia 水龙头](https://blastapi.io/faucets/starknet-sepolia-eth)
 
 ## 私有网络 {#private-networks}
 
@@ -134,10 +198,10 @@ Hoodi 是用于测试验证和质押的测试网。 Hoodi 网络对想要运行�
 
 ## 相关工具 {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _ 以太坊虚拟机网络的列表，可将钱包和提供者连接到相应的链 ID 和网络 ID_
-- [基于以太坊虚拟机的链](https://github.com/ethereum-lists/chains) _给 Chainlist 提供支持的 GitHub 链元数据存储库_
+- [区块链列表](https://chainlist.org/) _ 以太坊虚拟机网络的列表，可将钱包和提供商连接到相应的链 ID 和网络 ID_
+- [基于以太坊虚拟机的链](https://github.com/ethereum-lists/chains) _向区块链列表提供支持的 GitHub 链元数据存储库_
 
 ## 延伸阅读 {#further-reading}
 
-- [提案：可预测的以太坊测试网生命周期](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [提议：可预测的以太坊测试网生命周期](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [以太坊测试网的演变](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
