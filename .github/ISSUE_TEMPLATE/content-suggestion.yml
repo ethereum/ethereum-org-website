@@ -3,7 +3,6 @@ description: Suggest new content or improvements to existing pages on ethereum.o
 title: "[Content] <short summary>"
 labels:
   - content
-  - enhancement
 body:
   - type: markdown
     attributes:
@@ -16,7 +15,7 @@ body:
     id: page-url
     attributes:
       label: Affected page URL or path
-      description: Link to the page on ethereum.org or the path under src/content.
+      description: Link to the page on ethereum.org or the path to affected files.
       placeholder: "Example: https://ethereum.org/en/developers/ or src/content/developers/index.md"
     validations:
       required: true
@@ -47,8 +46,8 @@ body:
     id: proposed-change
     attributes:
       label: Proposed change
-      description: Describe what you would like to see instead. Draft text is very helpful.
-      placeholder: "Explain your suggestion or paste example wording."
+      description: Describe what you would like to see.
+      placeholder: "Explain your suggestion."
     validations:
       required: true
 
