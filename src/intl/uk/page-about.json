@@ -17,10 +17,19 @@
   "page-about-p-1": "З моменту запуску ethereum.org ми прагнемо забезпечувати прозорість нашої роботи. Це одна з наших основних цінностей, адже ми віримо, що прозорість має вирішальне значення для успіху Ethereum.",
   "page-about-p-2": "Ми використовуємо",
   "page-about-p-3": "як основний інструмент керування. Ми розділили завдання на 3 категорії:",
-  "page-about-p-4": "Ми робимо все можливе, щоб спільнота завжди була в курсі статусу того чи іншого завдання.",
+  "page-about-p-4": "  Ми робимо все можливе, щоб спільнота завжди була в курсі статусу того чи іншого завдання.",
   "page-about-p-5": "Завдання, які ми виконуємо.",
   "page-about-p-6": "Завдання на черзі.",
   "page-about-p-7": "Нещодавно завершені завдання.",
   "page-about-p-8": "Маєте ідею, як покращити ethereum.org? Ми залюбки з вами співпрацюватимемо!",
-  "page-what-is-ethereum-energy-consumption-chart-legend": "Щорічне споживання енергії в ТВт/рік"
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Річне споживання енергії в ТВт·год/рік",
+  "energy-consumption-chart-global-data-centers-label": "Глобальні центри обробки даних",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-gold-mining-cbeci-label": "Золотодобування",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Ігри в США",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS"
 }
