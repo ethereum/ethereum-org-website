@@ -26,6 +26,18 @@
 /*/wallets/find-wallet/* /:splat/wallets/find-wallet/:splat 200!
 /*/wallets/* /:splat/wallets/ 301!
 
+/*/garden /:splat/roadmap/ 301!
+
+/*/download /:splat/developers/docs/nodes-and-clients/ 301!
+
+/*/how /:splat/guides/ 301!
+
+# Remove /content prefix (legacy URLs)
+/:locale/content/* /:locale/:splat 301!
+
+# Invalid nested apps paths → apps hub
+/:locale/apps/:app/* /:locale/apps/ 301!
+
 /*/nfts/ /:splat/nft/ 301!
 
 /*/daos/ /:splat/dao/ 301!
