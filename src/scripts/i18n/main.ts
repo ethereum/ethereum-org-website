@@ -17,6 +17,7 @@ import {
   getPreTranslationStatus,
   postApplyPreTranslation,
 } from "./lib/crowdin/pre-translate"
+import { updatePromptFromFile } from "./lib/crowdin/prompt"
 import { getPromptModelKey } from "./lib/crowdin/prompt-model"
 import {
   awaitQaCompletion,
@@ -25,6 +26,7 @@ import {
   postQaCompletions,
   type QaCompletionJob,
   type QaIssue,
+  resolveCrowdinUserId,
   summarizeQaIssues,
 } from "./lib/crowdin/qa-completions"
 import { postCreateBranchFrom } from "./lib/github/branches"
@@ -124,6 +126,22 @@ async function main(options?: { allLangs: boolean }) {
   } else {
     // Normal flow: Start new pre-translation
     console.log(`\n[START] ========== Starting new pre-translation ==========`)
+
+    // Ensure Crowdin AI prompt content is synced from repo canonical file
+    try {
+      const userId = await resolveCrowdinUserId()
+      const promptPath = `${process.cwd()}/src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt`
+      await updatePromptFromFile(
+        Number(userId),
+        config.preTranslatePromptId,
+        promptPath
+      )
+      console.log(
+        "[PROMPT] ✓ Updated Crowdin pre-translate prompt from repo file"
+      )
+    } catch (e) {
+      console.warn("[PROMPT] Failed to update prompt; continuing:", e)
+    }
 
     // Fetch English files with limit + start offset
     const allEnglishFiles = await getAllEnglishFiles(
@@ -414,18 +432,12 @@ async function main(options?: { allLangs: boolean }) {
   )
   let modelKey: string | undefined
   try {
-    const userId = process.env.I18N_CROWDIN_USER_ID
-    if (userId) {
-      modelKey = await getPromptModelKey(
-        Number(userId),
-        config.preTranslatePromptId
-      )
-      console.log(`[MODEL-DETECTION] Current model: ${modelKey}`)
-    } else {
-      console.log(
-        `[MODEL-DETECTION] I18N_CROWDIN_USER_ID not set, skipping model detection`
-      )
-    }
+    const userId = await resolveCrowdinUserId()
+    modelKey = await getPromptModelKey(
+      Number(userId),
+      config.preTranslatePromptId
+    )
+    console.log(`[MODEL-DETECTION] Current model: ${modelKey}`)
   } catch (err) {
     console.warn(`[MODEL-DETECTION] Failed to detect model:`, err)
   }

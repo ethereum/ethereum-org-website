@@ -33,6 +33,20 @@ export async function postPrReviewComment(
   comment +=
     "This PR contains automated translations that need quality review.\n\n"
 
+  // Compact snapshot of canonical prompt rules and glossary/TM awareness
+  comment += "### Prompt Rules Snapshot\n\n"
+  comment += "Key non-negotiables for review:\n"
+  comment += "- Protected names include `ethereum.org`; do not change casing.\n"
+  comment += "- Header IDs `{#...}` must remain identical to English.\n"
+  comment +=
+    "- URL/path destinations must be preserved character-for-character (case, hyphens, slashes, fragments, query params). This also applies to links inside JSON strings.\n"
+  comment +=
+    '- JSON escaping: inside JSON values, escape quotes ("), backslashes (\\), newlines (\\n), tabs (\\t).\n\n'
+  comment +=
+    "Canonical prompt source: `src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt` (synced to Crowdin before pre-translation).\n\n"
+  comment +=
+    "Glossary/TM note: Community glossary/TM is synced from Supabase into Crowdin at the start of the run to guide terminology consistency.\n\n"
+
   if (copilotLangs.length > 0) {
     comment += "### @copilot\n\n"
     comment +=
